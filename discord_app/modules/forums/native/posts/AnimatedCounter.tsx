@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 createStyles.createStyles({
   container: {
     flex: 0,
@@ -47,7 +47,7 @@ let closure_16 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (cleanUp) => {
+  ? function AnimatedCount(cleanUp) {
       obj = state(height[6]);
       const cResult = obj.c(23);
       ({ count, formatter, state } = cleanUp);
@@ -251,7 +251,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         cleanUp,
       };
     }
-  : (state) => {
+  : function AnimatedCount(state) {
       state = state.state;
       const cleanUp = state.cleanUp;
       height = state.height;
@@ -290,7 +290,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       );
       let obj2 = state(height[8]);
       const tmp2 = cleanUp;
-      let fn = function y() {
+      let fn = function _() {
         obj = { transform: null };
         const obj2 = { translateY: null };
         const obj3 = spring;
@@ -375,7 +375,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (count) => {
+  ? function AnimatedCounterTransitionGroup(count) {
       const cResult = count(textColor[6]).c(34);
       count = count.count;
       const formatter = count.formatter;
@@ -461,7 +461,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      class Y {
+      class B {
         constructor(arg0, arg1, arg2, arg3) {
           obj = {
             formatter: closure_1,
@@ -476,7 +476,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           };
           springStandard = springConfig;
           tmp = jsx;
-          tmp2 = f56703;
+          tmp2 = AnimatedCount;
           if (null == springConfig) {
             tmp3 = closure_0;
             tmp4 = closure_2;
@@ -499,10 +499,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = textColor;
       cResult[10] = textStyle;
       cResult[11] = textVariant;
-      cResult[12] = Y;
+      cResult[12] = B;
       const tmp3Result = textVariant(textStyle.useState(tmp6), 2);
     }
-  : (count) => {
+  : function AnimatedCounterTransitionGroup(count) {
       count = count.count;
       const formatter = count.formatter;
       const textColor = count.textColor;
@@ -583,7 +583,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BasicCounter(arg0) {
       const cResult = c.c(8);
       ({ count, textStyle, textColor, textVariant, formatter } = arg0);
       if (cResult[0] === count) {
@@ -615,7 +615,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = formatterResult;
       tmp4 = formatterResult;
     }
-  : (arg0) => {
+  : function BasicCounter(arg0) {
       ({ count, textStyle, textColor, textVariant, formatter } = arg0);
       return React5(Text_Text.Text, {
         variant: textVariant,
@@ -630,7 +630,7 @@ let result = size.fileFinishedImporting("modules/forums/native/posts/AnimatedCou
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function AnimatedCounter(arg0) {
         const cResult = c.c(13);
         ({ count, springConfig, textStyle, animate, textColor, textVariant, formatter } = arg0);
         let str = "text-default";
@@ -689,7 +689,7 @@ export default noop.memo(
         }
         tmp4 = undefined === animate || animate;
       }
-    : (textColor) => {
+    : function AnimatedCounter(textColor) {
         ({ count, textStyle, animate } = textColor);
         if (animate === undefined) {
           animate = true;

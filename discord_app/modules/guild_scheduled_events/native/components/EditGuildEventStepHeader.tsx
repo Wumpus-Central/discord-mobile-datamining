@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({
   header: { alignItems: "center", paddingBottom: 24 },
   headerTitle: { marginTop: 8, marginBottom: 8 },
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function EditGuildEventStepHeader(arg0) {
       const cResult = c.c(10);
       ({ title, subtitle } = arg0);
       const tmp4 = closure_5();
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: title,
       };
     }
-  : (children) => {
+  : function EditGuildEventStepHeader(children) {
       const subtitle = children.subtitle;
       const tmp = closure_5();
       const obj = { style: tmp.header, children: null };

@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelVideoGuardErrorAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (title) => {
+  ? function VoicePanelVideoGuardErrorAlert(title) {
       const cResult = c.c(8);
       title = title.title;
       const dismissModalCallback = AlertModal.useDismissModalCallback();
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp16;
       tmp15 = tmp16;
     }
-  : (title) => {
+  : function VoicePanelVideoGuardErrorAlert(title) {
       const obj2 = { title: title.title, content: null, extraContent: null, actions: null };
       const intl = util.intl;
       obj2.content = intl.string(util.t.UoW002);

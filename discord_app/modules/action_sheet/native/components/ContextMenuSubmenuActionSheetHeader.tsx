@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({
   headerContainer: { paddingVertical: 12, paddingHorizontal: 16, alignItems: "flex-start" },
 });
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onBack) => {
+  ? function ContextMenuSubmenuActionSheetHeader(onBack) {
       const cResult = c.c(8);
       onBack = onBack.onBack;
       const tmp4 = closure_4();
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp13;
       tmp12 = tmp13;
     }
-  : (onBack) => {
+  : function ContextMenuSubmenuActionSheetHeader(onBack) {
       let fn = onBack.onBack;
       const obj = { style: closure_4().headerContainer, children: null };
       const obj2 = { label: null, onPress: null };

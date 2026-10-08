@@ -4,7 +4,7 @@ import c from "../../../_runtime/00576_c.js";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ApexExperiment = fn(1440);
+const ApexExperiment = fn(1452);
 let obj2 = {
   name: "2026-02-mana-playground-access",
   kind: "user",
@@ -17,7 +17,7 @@ obj2.variations = obj3;
 const apexExperiment = ApexExperiment.createApexExperiment(obj2);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function usePlaygroundAccessExperiment(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -29,7 +29,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return apexExperiment.useConfig(tmp2).enabled;
     }
-  : (location) => apexExperiment.useConfig({ location }).enabled;
+  : function usePlaygroundAccessExperiment(location) {
+      return apexExperiment.useConfig({ location }).enabled;
+    };
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 function getPlaygroundAccessExperiment(location) {
@@ -42,11 +44,11 @@ export default apexExperiment;
 export const usePlaygroundAccessExperiment = tmp3;
 export { getPlaygroundAccessExperiment };
 export const useHasPlaygroundAccess = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHasPlaygroundAccess(arg0) {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function c() {
+        const fn = function o() {
           return currentUser.getCurrentUser();
         };
         cResult[0] = items;
@@ -81,7 +83,7 @@ export const useHasPlaygroundAccess = ReactCompilerGating.isReactCompilerEnabled
       }
       return tmp7;
     }
-  : (arg0) => {
+  : function useHasPlaygroundAccess(arg0) {
       const items = [UserStore];
       const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
       let isStaffResult;

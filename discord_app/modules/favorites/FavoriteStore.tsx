@@ -92,8 +92,8 @@ function initializeFromUserSettings() {
   }
   return flag3;
 }
-const createChannelRecord = fn(2055).createChannelRecord;
-let closure_5 = fn(2065).FAVORITES_UNCATEGORIZED_PARENT_ID;
+const createChannelRecord = fn(2067).createChannelRecord;
+let closure_5 = fn(2077).FAVORITES_UNCATEGORIZED_PARENT_ID;
 const Constants = fn(1085);
 ({ ChannelTypes: metroRequire, FAVORITES: closure_7 } = Constants);
 let closure_12 = false;

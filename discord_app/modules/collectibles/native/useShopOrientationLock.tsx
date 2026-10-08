@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/useShopOrientationLock.tsx");
 
 export const useShopOrientationLock = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShopOrientationLock() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o() {
@@ -26,7 +26,7 @@ export const useShopOrientationLock = ReactCompilerGating.isReactCompilerEnabled
       }
       const effect = noop.useEffect(tmp2, tmp3);
     }
-  : () => {
+  : function useShopOrientationLock() {
       const effect = noop.useEffect(() => {
         applyOrientationLock.applyOrientationLock("PORTRAIT", true);
         return applyOrientationLock.restoreDefaultOrientationLock;

@@ -8,9 +8,9 @@ import utils_PlatformUtils from "../../../../discord_common/js/shared/utils/Plat
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import PremiumSubscription from "../PremiumSubscription.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import actions_BillingActionCreators from "../../billing/actions/BillingActionCreators.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
+import actions_BillingActionCreators from "../../billing/actions/BillingActionCreators.tsx";
 import TextStylesDefault from "../../rebrand/native/TextStyles.tsx";
 import SubscriptionPlanActionCreators from "../../../actions/SubscriptionPlanActionCreators.tsx";
 import PremiumBundledPlansUtils from "PremiumBundledPlansUtils.tsx";
@@ -21,12 +21,12 @@ import PaymentFlowStartedTriggerPoint from "../../experiments/trigger_points/Pay
 import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet.tsx";
 import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet.tsx";
 import TreasureChestBannerSpotIllustration from "../../../design/components/mana-assets/native/generated/TreasureChestBannerSpotIllustration.native.tsx";
-import _modDef13370 from "../../../../_runtime/metro/13370__.js";
-import _modDef13371 from "../../../../_runtime/metro/13371__.js";
-import _modDef13372 from "../../../../_runtime/metro/13372__.js";
-import _modDef13373 from "../../../../_runtime/metro/13373__.js";
-import _modDef13374 from "../../../../_runtime/metro/13374__.js";
-import _modDef13375 from "../../../../_runtime/metro/13375__.js";
+import _modDef13670 from "../../../../_runtime/metro/13670__.js";
+import _modDef13671 from "../../../../_runtime/metro/13671__.js";
+import _modDef13672 from "../../../../_runtime/metro/13672__.js";
+import _modDef13673 from "../../../../_runtime/metro/13673__.js";
+import _modDef13674 from "../../../../_runtime/metro/13674__.js";
+import _modDef13675 from "../../../../_runtime/metro/13675__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -57,7 +57,7 @@ function getPlanDescription(premiumTier) {
       const obj4 = { numSubscriptions: premiumTier.numPremiumGuild };
       formatToPlainStringResult = formatToPlainString(util.t.gDsyB9, obj4);
     } else {
-      if (premiumTier.premiumTier === closure_1_20.TIER_1) {
+      if (premiumTier.premiumTier === constants2.TIER_1) {
         let u6dBsN = util.t.sexoHq;
       } else {
         u6dBsN = util.t.u6dBsN;
@@ -81,7 +81,7 @@ function PlanSection(showBoostOnlyLabels) {
   c12 = undefined;
   const tmp = useNativeCheckoutStore((getCheckoutContextRecord) => getCheckoutContextRecord.getCheckoutContextRecord());
   closure_11 = tmp;
-  let isIOSResult = shouldShowModernBoostFlow(1370).isIOS();
+  let isIOSResult = shouldShowModernBoostFlow(1382).isIOS();
   if (isIOSResult) {
     isIOSResult = null != tmp;
   }
@@ -154,7 +154,7 @@ function PlanSection(showBoostOnlyLabels) {
   }, plan.productId));
   if (shouldShowModernBoostFlow) {
     let obj2 = { title: showBoostOnlyLabels.label, hasIcons: true, children: mapped };
-    let tmp7Result = closure_31(shouldShowModernBoostFlow(6081).TableRowGroup, obj2);
+    let tmp7Result = closure_31(shouldShowModernBoostFlow(6267).TableRowGroup, obj2);
   } else {
     let obj3 = { children: mapped };
     tmp7Result = closure_31(closure_7, obj3);
@@ -165,8 +165,8 @@ function withCurrentPlanAlternative(plans, productIdFromSubscription, productIdF
   if (null != productIdFromSubscription) {
     if (obj3.isValidBundleProductId(productIdFromSubscription)) {
       if (null == productIdFromSubscription2) {
-        let toggledIntervalProduct = tmp7(6925).getToggledIntervalProduct(productIdFromSubscription);
-        let tmp7Result = tmp7(6925);
+        let toggledIntervalProduct = tmp7(7114).getToggledIntervalProduct(productIdFromSubscription);
+        let tmp7Result = tmp7(7114);
       } else {
         toggledIntervalProduct = productIdFromSubscription;
       }
@@ -191,70 +191,70 @@ function withCurrentPlanAlternative(plans, productIdFromSubscription, productIdF
         })) {
           items = [];
           const arraySpreadResult = HermesBuiltin.arraySpread(plans, 0);
-          items[arraySpreadResult] = tmp7(6925).getPremiumBundledItemsFromProductId(toggledIntervalProduct);
+          items[arraySpreadResult] = tmp7(7114).getPremiumBundledItemsFromProductId(toggledIntervalProduct);
           tmp3 = items;
-          const tmp7Result2 = tmp7(6925);
+          const tmp7Result2 = tmp7(7114);
         }
       }
       return tmp3;
     }
-    obj3 = toggledIntervalProduct(6925);
+    obj3 = toggledIntervalProduct(7114);
   }
   return plans;
 }
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-let useNativeCheckoutStore = fn(6943).useNativeCheckoutStore;
-const PremiumPlanSelectStore = fn(13367);
+let useNativeCheckoutStore = fn(7132).useNativeCheckoutStore;
+const PremiumPlanSelectStore = fn(13667);
 ({ setIsPurchasing: closure_14, usePremiumPlanSelectStore: closure_15 } = PremiumPlanSelectStore);
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_16, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_17, PRICE_PLACEHOLDER: closure_18, PremiumSubscriptionSKUs: closure_19, PremiumTypes: closure_20, SubscriptionIntervalTypes: closure_21, SubscriptionPlans: closure_22 } = PremiumConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_23, AnalyticsObjects: closure_24, AnalyticsObjectTypes: closure_25, Fonts, HorizontalGradient: closure_26, PaymentGateways: closure_27, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
-const ColorConstants = fn(6951);
+const ColorConstants = fn(7140);
 ({ getPremiumGradientColor: closure_28, Gradients: closure_29 } = ColorConstants);
-const ItemPurchaseType = fn(4875).ItemPurchaseType;
+const ItemPurchaseType = fn(5069).ItemPurchaseType;
 const jsxProd = fn(21);
 ({ jsx: items, jsxs: closure_32, Fragment: closure_33 } = jsxProd);
-const createStyles = fn(4896);
-let obj = { header: null, row: null, rowDisabled: null, imgWumpusNitro: null, imgBoost: null, imgWumpusNitroBoost: null, imgWumpusNitroClassic: null, imgWumpusNitroClassicBoost: null, imgWumpusNitroTier0: null, rowText: null, rowPlanDescription: null, rowPlanDescriptionSubtext: null, rowPrice: null, purchasingSpinner: null, container: null, currentPlanGradient: null, currentPlanRow: null, loadingSpinnerContainer: null, offPlatformSubscriptionMessage: null, premiumHeaderLabel: null, boostContainer: null, boostRowIcon: null, nitroBanner: null, nitroBannerText: null, recommendedText: null };
+const createStyles = fn(5090);
+let obj2 = { header: null, row: null, rowDisabled: null, imgWumpusNitro: null, imgBoost: null, imgWumpusNitroBoost: null, imgWumpusNitroClassic: null, imgWumpusNitroClassicBoost: null, imgWumpusNitroTier0: null, rowText: null, rowPlanDescription: null, rowPlanDescriptionSubtext: null, rowPrice: null, purchasingSpinner: null, container: null, currentPlanGradient: null, currentPlanRow: null, loadingSpinnerContainer: null, offPlatformSubscriptionMessage: null, premiumHeaderLabel: null, boostContainer: null, boostRowIcon: null, nitroBanner: null, nitroBannerText: null, recommendedText: null };
 let obj3 = {};
 let merged = Object.assign(TextStylesDefault(Fonts.DISPLAY_EXTRABOLD, undefined, 24));
 obj3.marginTop = 16;
-obj3.color = fn(5627).DARK_WHITE_500_LIGHT_BLACK_500;
-obj.header = obj3;
-obj.row = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(5627).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
-obj.rowDisabled = { opacity: 0.5 };
-obj.imgWumpusNitro = { height: 40, width: 40 };
-obj.imgBoost = { height: 40, width: 40 };
-obj.imgWumpusNitroBoost = { width: 32, height: 32 };
-obj.imgWumpusNitroClassic = { width: 40, height: 40 };
-obj.imgWumpusNitroClassicBoost = { width: 32, height: 32 };
-obj.imgWumpusNitroTier0 = { width: 40, height: 40 };
-let obj4 = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(5627).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
-obj.rowText = { fontSize: 16, color: fn(5627).DARK_WHITE_500_LIGHT_BLACK_500 };
-obj.rowPlanDescription = { marginLeft: 12, fontFamily: Fonts.PRIMARY_SEMIBOLD, lineHeight: 20 };
-obj.rowPlanDescriptionSubtext = { fontSize: 12, marginLeft: 5, fontFamily: Fonts.PRIMARY_MEDIUM, fontWeight: "400" };
-obj.rowPrice = { marginLeft: "auto" };
-obj.purchasingSpinner = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" };
-obj.container = { marginHorizontal: 14.5, paddingBottom: 10 };
-let obj5 = { fontSize: 16, color: fn(5627).DARK_WHITE_500_LIGHT_BLACK_500 };
-obj.currentPlanGradient = { marginTop: 20, borderRadius: nativeDefault.radii.sm };
-obj.currentPlanRow = { marginTop: 0.5, marginRight: 0.5, marginLeft: 0.5, marginBottom: 0.5 };
-obj.loadingSpinnerContainer = { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" };
-obj.offPlatformSubscriptionMessage = { lineHeight: 20, marginTop: 40, margin: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING };
-obj.premiumHeaderLabel = { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING, marginTop: 8 };
+obj3.color = fn(5974).DARK_WHITE_500_LIGHT_BLACK_500;
+obj2.header = obj3;
+obj2.row = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(5974).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+obj2.rowDisabled = { opacity: 0.5 };
+obj2.imgWumpusNitro = { height: 40, width: 40 };
+obj2.imgBoost = { height: 40, width: 40 };
+obj2.imgWumpusNitroBoost = { width: 32, height: 32 };
+obj2.imgWumpusNitroClassic = { width: 40, height: 40 };
+obj2.imgWumpusNitroClassicBoost = { width: 32, height: 32 };
+obj2.imgWumpusNitroTier0 = { width: 40, height: 40 };
+let obj4 = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(5974).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+obj2.rowText = { fontSize: 16, color: fn(5974).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.rowPlanDescription = { marginLeft: 12, fontFamily: Fonts.PRIMARY_SEMIBOLD, lineHeight: 20 };
+obj2.rowPlanDescriptionSubtext = { fontSize: 12, marginLeft: 5, fontFamily: Fonts.PRIMARY_MEDIUM, fontWeight: "400" };
+obj2.rowPrice = { marginLeft: "auto" };
+obj2.purchasingSpinner = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" };
+obj2.container = { marginHorizontal: 14.5, paddingBottom: 10 };
+let obj5 = { fontSize: 16, color: fn(5974).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.currentPlanGradient = { marginTop: 20, borderRadius: nativeDefault.radii.sm };
+obj2.currentPlanRow = { marginTop: 0.5, marginRight: 0.5, marginLeft: 0.5, marginBottom: 0.5 };
+obj2.loadingSpinnerContainer = { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" };
+obj2.offPlatformSubscriptionMessage = { lineHeight: 20, marginTop: 40, margin: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING };
+obj2.premiumHeaderLabel = { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING, marginTop: 8 };
 let obj6 = { marginTop: 20, borderRadius: nativeDefault.radii.sm };
-obj.boostContainer = { rowGap: nativeDefault.space.PX_24 };
-obj.boostRowIcon = { width: 32, height: 32 };
+obj2.boostContainer = { rowGap: nativeDefault.space.PX_24 };
+obj2.boostRowIcon = { width: 32, height: 32 };
 let obj7 = { rowGap: nativeDefault.space.PX_24 };
-obj.nitroBanner = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING };
-obj.nitroBannerText = { textAlign: "center" };
+obj2.nitroBanner = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING };
+obj2.nitroBannerText = { textAlign: "center" };
 let obj8 = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING };
-obj.recommendedText = { color: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
-let closure_34 = createStyles.createStyles(obj);
+obj2.recommendedText = { color: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
+let closure_34 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostPurchaseNitroBanner() {
   const cResult = c.c(13);
   const tmp4 = closure_34();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -332,7 +332,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[8] = tmp18;
   cResult[9] = tmp22;
   tmp21 = tmp22;
-}) : (() => {
+}) : (function BoostPurchaseNitroBanner() {
   const tmp = closure_34();
   const obj = { align: "center", spacing: nativeDefault.space.PX_12, style: tmp.nitroBanner, children: null };
   items = [__initData4(TreasureChestBannerSpotIllustration.TreasureChestBannerSpotIllustration, { width: 117, height: 93, accessible: false }), ];
@@ -355,9 +355,9 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj.children = items;
   return __initData5(Stack_Stack.Stack, obj);
 });
-let closure_37 = { [_modDef13373]: "imgWumpusNitro", [_modDef13375]: "imgWumpusNitroBoost", [_modDef13372]: "imgWumpusNitroClassic", [_modDef13374]: "imgWumpusNitroClassicBoost", [_modDef13371]: "imgWumpusNitroTier0", [_modDef13370]: "imgBoost" };
+let closure_37 = { [_modDef13673]: "imgWumpusNitro", [_modDef13675]: "imgWumpusNitroBoost", [_modDef13672]: "imgWumpusNitroClassic", [_modDef13674]: "imgWumpusNitroClassicBoost", [_modDef13671]: "imgWumpusNitroTier0", [_modDef13670]: "imgBoost" };
 ReactCompilerGating = fn(558);
-let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostDeltaPriceTrailing(arg0) {
   const cResult = c.c(8);
   ({ price, interval } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -405,7 +405,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = price;
   cResult[3] = intl.format(AbOLNu, { price: tmp9 });
   const formatResult = intl.format(AbOLNu, { price: tmp9 });
-}) : ((arg0) => {
+}) : (function BoostDeltaPriceTrailing(arg0) {
   ({ price, interval } = arg0);
   const obj = { direction: "horizontal", align: "center", spacing: nativeDefault.space.PX_4, children: null };
   items = [__initData4(NitroWheelIcon.NitroWheelIcon, { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE }), ];
@@ -423,7 +423,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return __initData5(Stack_Stack.Stack, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? ((plan) => {
+let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanRow(plan) {
   const cResult = plan(subscription[20]).c(96);
   plan = plan.plan;
   const purchase = plan.purchase;
@@ -477,7 +477,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? ((plan) => {
     }
   }
   if (cResult[4] !== plan.productId) {
-    class K {
+    class X {
       constructor() {
         items = [, ];
         items[0] = closure_13.getProduct(plan.productId);
@@ -486,9 +486,9 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? ((plan) => {
       }
     }
     cResult[4] = plan.productId;
-    cResult[5] = K;
+    cResult[5] = X;
   } else {
-    class K {
+    class X {
       constructor() {
         items = [, ];
         items[0] = closure_13.getProduct(plan.productId);
@@ -517,7 +517,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? ((plan) => {
     }
   }
   useNativeCheckoutStore(Q);
-  const tmp16 = _slicedToArray(plan(subscription[34]).useStateFromStoresArray(tmp14, K), 2);
+  const tmp16 = _slicedToArray(plan(subscription[34]).useStateFromStoresArray(tmp14, X), 2);
   const premiumTier2DeltaPriceString = plan(subscription[35]).usePremiumTier2DeltaPriceString(plan, subscription, tmp16[0], tmp4);
   plan(subscription[36]);
   let interval = premiumTier2DeltaPriceString;
@@ -649,7 +649,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? ((plan) => {
   cResult[8] = tmp6;
   cResult[9] = tmp23;
   const tmpResult5 = plan(subscription[35]);
-}) : ((plan) => {
+}) : (function PlanRow(plan) {
   plan = plan.plan;
   ({ purchase: importDefault, subscription } = plan);
   let flag = plan.disabled;
@@ -721,21 +721,21 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? ((plan) => {
     tmp20 = 0 !== plan.numPremiumGuild;
   }
   if (null == plan.premiumTier) {
-    let tmp7Result = require("../../../../_runtime/metro/13370__.js");
+    let tmp7Result = require("../../../../_runtime/metro/13670__.js");
   } else if (0 !== plan.numPremiumGuild) {
     if (plan.premiumTier === closure_20.TIER_1) {
-      tmp7Result = require("../../../../_runtime/metro/13374__.js");
+      tmp7Result = require("../../../../_runtime/metro/13674__.js");
     } else {
-      tmp7Result = require("../../../../_runtime/metro/13375__.js");
+      tmp7Result = require("../../../../_runtime/metro/13675__.js");
     }
   } else {
     const premiumTier = plan.premiumTier;
     if (closure_20.TIER_0 === premiumTier) {
-      tmp7Result = require("../../../../_runtime/metro/13371__.js");
+      tmp7Result = require("../../../../_runtime/metro/13671__.js");
     } else if (closure_20.TIER_1 === premiumTier) {
-      tmp7Result = require("../../../../_runtime/metro/13372__.js");
+      tmp7Result = require("../../../../_runtime/metro/13672__.js");
     } else if (closure_20.TIER_2 === premiumTier) {
-      tmp7Result = require("../../../../_runtime/metro/13373__.js");
+      tmp7Result = require("../../../../_runtime/metro/13673__.js");
     }
   }
   const intl2 = tmp5(subscription[22]).intl;
@@ -895,7 +895,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? ((plan) => {
   tmp14 = require("useTheme")();
 });
 ReactCompilerGating = fn(558);
-let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? ((showCurrentPlan) => {
+let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? (function CurrentPlanRow(showCurrentPlan) {
   const cResult = c.c(13);
   ({ subscription, paymentGatewayPlanId, analyticsLoadId } = showCurrentPlan);
   const tmp4 = closure_34();
@@ -964,7 +964,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? ((showCurrentPla
     }
   }
   return null;
-}) : ((arg0) => {
+}) : (function CurrentPlanRow(arg0) {
   ({ subscription, paymentGatewayPlanId } = arg0);
   ({ analyticsLoadId, showCurrentPlan } = arg0);
   const tmp = closure_34();
@@ -1044,7 +1044,7 @@ items = [
   }
 ];
 ReactCompilerGating = fn(558);
-let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? ((string) => {
+let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanSectionHeader(string) {
   const cResult = c.c(3);
   string = string.string;
   const tmp4 = closure_34();
@@ -1060,12 +1060,12 @@ let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? ((string) => {
   cResult[2] = tmp6;
   tmp5 = tmp6;
   const obj2 = { style: tmp4.header, accessibilityRole: "header", children: string };
-}) : ((children) => {
+}) : (function PlanSectionHeader(children) {
   const tmp = closure_34();
   return __initData4(native.LegacyText, { style: closure_34().header, accessibilityRole: "header", children: children.string });
 });
 ReactCompilerGating = fn(558);
-let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLoadId) => {
+let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanSections(analyticsLoadId) {
   const cResult = subscription(analyticsLoadId[20]).c(35);
   ({ plans, subscription } = analyticsLoadId);
   ({ showCurrentPlan, isBoostPurchaseFlow } = analyticsLoadId);
@@ -1172,180 +1172,59 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLoadI
       }
       let recommendedBoostCount = tmp20;
       if (cResult[25] !== tmp5) {
-        class O {
-          constructor(arg0) {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj = closure_0(closure_2[47]);
-            isIOSResult = obj.isIOS();
-            tmp4 = !isIOSResult;
-            if (isIOSResult) {
-              tmp5 = closure_6;
-              tmp6 = null;
-              tmp4 = null == closure_6;
-            }
-            if (!tmp4) {
-              tmp7 = analyticsLoadId;
-              tmp8 = closure_6;
-              tmpResult = tmp(tmp2[48]);
-              tmp9 = null;
-              tmp4 = null != closure_6.getAvailablePlanForItems(tmpResult.getSubscriptionItemsForProduct(analyticsLoadId.productId));
-            }
-            return tmp4;
+        function isAvailableInOrder(productId) {
+          const isIOSResult = utils_PlatformUtils.isIOS();
+          let tmp4 = !isIOSResult;
+          if (isIOSResult) {
+            tmp4 = null == availablePlanForItems;
           }
+          if (!tmp4) {
+            tmp4 = null != availablePlanForItems.getAvailablePlanForItems(PremiumBundledPlansUtils.getSubscriptionItemsForProduct(productId.productId));
+            const tmpResult = PremiumBundledPlansUtils;
+          }
+          return tmp4;
         }
         cResult[25] = tmp5;
-        cResult[26] = O;
+        cResult[26] = isAvailableInOrder;
+        let tmp22 = isAvailableInOrder;
       } else {
-        class O {
-          constructor(arg0) {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj = closure_0(closure_2[47]);
-            isIOSResult = obj.isIOS();
-            tmp4 = !isIOSResult;
-            if (isIOSResult) {
-              tmp5 = closure_6;
-              tmp6 = null;
-              tmp4 = null == closure_6;
-            }
+        tmp22 = cResult[26];
+      }
+      closure_12 = tmp22;
+      const _Symbol = Symbol;
+      if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
+        function checkUpgradableFromBoostOnly(numPremiumGuild, arg1) {
+          if (null == arg1) {
+            return true;
+          } else {
+            const tmp3 = subscription(analyticsLoadId[56]).AppStorePremiumProductIdsToPremiumBundledItems[arg1];
+            let tmp4 = null != tmp3.premiumTier;
             if (!tmp4) {
-              tmp7 = analyticsLoadId;
-              tmp8 = closure_6;
-              tmpResult = tmp(tmp2[48]);
-              tmp9 = null;
-              tmp4 = null != closure_6.getAvailablePlanForItems(tmpResult.getSubscriptionItemsForProduct(analyticsLoadId.productId));
+              tmp4 = numPremiumGuild.numPremiumGuild >= tmp3.numPremiumGuild;
             }
             return tmp4;
           }
         }
-      }
-      closure_12 = O;
-      const _Symbol = Symbol;
-      if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-        class M {
-          constructor(arg0, arg1) {
-            if (null == arg1) {
-              flag = true;
-              return true;
-            } else {
-              tmp = subscription;
-              tmp2 = analyticsLoadId;
-              tmp3 = subscription(analyticsLoadId[56]).AppStorePremiumProductIdsToPremiumBundledItems[arg1];
-              tmp4 = null != tmp3.premiumTier;
-              if (!tmp4) {
-                tmp5 = analyticsLoadId;
-                tmp4 = analyticsLoadId.numPremiumGuild >= tmp3.numPremiumGuild;
-              }
-              return tmp4;
-            }
-          }
-        }
-        cResult[27] = M;
+        cResult[27] = checkUpgradableFromBoostOnly;
+        let tmp23 = checkUpgradableFromBoostOnly;
       } else {
-        class M {
-          constructor(arg0, arg1) {
-            if (null == arg1) {
-              flag = true;
-              return true;
-            } else {
-              tmp = subscription;
-              tmp2 = analyticsLoadId;
-              tmp3 = subscription(analyticsLoadId[56]).AppStorePremiumProductIdsToPremiumBundledItems[arg1];
-              tmp4 = null != tmp3.premiumTier;
-              if (!tmp4) {
-                tmp5 = analyticsLoadId;
-                tmp4 = analyticsLoadId.numPremiumGuild >= tmp3.numPremiumGuild;
-              }
-              return tmp4;
-            }
-          }
-        }
+        tmp23 = cResult[27];
       }
-      closure_13 = M;
+      closure_13 = tmp23;
       let tmp24 = plans;
       if (!isBoostPurchaseFlow) {
-        class M {
-          constructor(arg0, arg1) {
-            if (null == arg1) {
-              flag = true;
-              return true;
-            } else {
-              tmp = subscription;
-              tmp2 = analyticsLoadId;
-              tmp3 = subscription(analyticsLoadId[56]).AppStorePremiumProductIdsToPremiumBundledItems[arg1];
-              tmp4 = null != tmp3.premiumTier;
-              if (!tmp4) {
-                tmp5 = analyticsLoadId;
-                tmp4 = analyticsLoadId.numPremiumGuild >= tmp3.numPremiumGuild;
-              }
-              return tmp4;
-            }
-          }
-        }
+        let hasActiveTrial;
         if (subscription != null) {
-          class M {
-            constructor(arg0, arg1) {
-              if (null == arg1) {
-                flag = true;
-                return true;
-              } else {
-                tmp = subscription;
-                tmp2 = analyticsLoadId;
-                tmp3 = subscription(analyticsLoadId[56]).AppStorePremiumProductIdsToPremiumBundledItems[arg1];
-                tmp4 = null != tmp3.premiumTier;
-                if (!tmp4) {
-                  tmp5 = analyticsLoadId;
-                  tmp4 = analyticsLoadId.numPremiumGuild >= tmp3.numPremiumGuild;
-                }
-                return tmp4;
-              }
-            }
-          }
+          hasActiveTrial = subscription.hasActiveTrial;
         }
         tmp24 = plans;
-        if (true !== tmp25) {
-          class M {
-            constructor(arg0, arg1) {
-              if (null == arg1) {
-                flag = true;
-                return true;
-              } else {
-                tmp = subscription;
-                tmp2 = analyticsLoadId;
-                tmp3 = subscription(analyticsLoadId[56]).AppStorePremiumProductIdsToPremiumBundledItems[arg1];
-                tmp4 = null != tmp3.premiumTier;
-                if (!tmp4) {
-                  tmp5 = analyticsLoadId;
-                  tmp4 = analyticsLoadId.numPremiumGuild >= tmp3.numPremiumGuild;
-                }
-                return tmp4;
-              }
-            }
-          }
+        if (true !== hasActiveTrial) {
           tmp24 = withCurrentPlanAlternative(plans, productIdFromSubscription, tmp7);
         }
       }
       closure_14 = tmp24;
       if (!isBoostPurchaseFlow) {
-        class M {
-          constructor(arg0, arg1) {
-            if (null == arg1) {
-              flag = true;
-              return true;
-            } else {
-              tmp = subscription;
-              tmp2 = analyticsLoadId;
-              tmp3 = subscription(analyticsLoadId[56]).AppStorePremiumProductIdsToPremiumBundledItems[arg1];
-              tmp4 = null != tmp3.premiumTier;
-              if (!tmp4) {
-                tmp5 = analyticsLoadId;
-                tmp4 = analyticsLoadId.numPremiumGuild >= tmp3.numPremiumGuild;
-              }
-              return tmp4;
-            }
-          }
-        }
+        productIdFromSubscription = tmp7;
       }
       const _Symbol2 = Symbol;
       if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1386,7 +1265,7 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLoadI
             predicateResult = section.predicate(productId);
           }
           if (predicateResult) {
-            predicateResult = productId.premiumTier !== closure_3_20.TIER_1;
+            predicateResult = productId.premiumTier !== constants2.TIER_1;
           }
           if (predicateResult) {
             predicateResult = closure_12(productId);
@@ -1400,27 +1279,27 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLoadI
       const found = mapped.filter(G);
       const _Symbol3 = Symbol;
       if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
-        class X {
+        class K {
           constructor(arg0) {
             return "premium-and-premium-guild" === analyticsLoadId.section.id;
           }
         }
-        cResult[29] = X;
+        cResult[29] = K;
       } else {
-        class X {
+        class K {
           constructor(arg0) {
             return "premium-and-premium-guild" === analyticsLoadId.section.id;
           }
         }
       }
       if (tmp19) {
-        class X {
+        class K {
           constructor(arg0) {
             return "premium-and-premium-guild" === analyticsLoadId.section.id;
           }
         }
-        if (tmp31) {
-          class X {
+        if (tmp32) {
+          class K {
             constructor(arg0) {
               return "premium-and-premium-guild" === analyticsLoadId.section.id;
             }
@@ -1428,37 +1307,37 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLoadI
         }
       }
       if (tmp14) {
-        class X {
+        class K {
           constructor(arg0) {
             return "premium-and-premium-guild" === analyticsLoadId.section.id;
           }
         }
       }
       if (cResult[30] === num.container) {
-        class X {
+        class K {
           constructor(arg0) {
             return "premium-and-premium-guild" === analyticsLoadId.section.id;
           }
         }
         if (cResult[33] !== tmp19) {
-          class X {
+          class K {
             constructor(arg0) {
               return "premium-and-premium-guild" === analyticsLoadId.section.id;
             }
           }
           if (tmp19) {
-            class X {
+            class K {
               constructor(arg0) {
                 return "premium-and-premium-guild" === analyticsLoadId.section.id;
               }
             }
-            const tmp33 = closure_31(closure_35, {});
+            const tmp34 = closure_31(closure_35, {});
           }
           cResult[33] = tmp19;
-          cResult[34] = tmp33;
-          const tmp32 = tmp33;
+          cResult[34] = tmp34;
+          const tmp33 = tmp34;
         } else {
-          class X {
+          class K {
             constructor(arg0) {
               return "premium-and-premium-guild" === analyticsLoadId.section.id;
             }
@@ -1466,7 +1345,7 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLoadI
         }
         tmp19 = closure_32;
         let obj2 = { style: items, children: null };
-        items = [tmp32, , ];
+        items = [tmp33, , ];
         const obj3 = { subscription, paymentGatewayPlanId: tmp7, analyticsLoadId, showCurrentPlan };
         items[1] = closure_31(closure_41, obj3);
         items[2] = arr2.map((plans) => {
@@ -1483,7 +1362,7 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLoadI
           return __initData5(React5, obj2, section.id);
         });
         obj2.children = items;
-        const tmp38 = closure_32(productIdFromSubscription, obj2);
+        const tmp39 = closure_32(productIdFromSubscription, obj2);
         cResult[1] = analyticsLoadId;
         cResult[2] = tmp5;
         cResult[3] = isBoostPurchaseFlow;
@@ -1497,7 +1376,7 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLoadI
         cResult[10] = trackNewPaymentFlow;
         cResult[11] = trackPaymentFlowStep;
         num = 12;
-        cResult[12] = tmp38;
+        cResult[12] = tmp39;
       }
       const items1 = [num.container, tmp14];
       cResult[30] = num.container;
@@ -1508,13 +1387,13 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLoadI
     }
     recommendedBoostCount = null;
     if (tmp14) {
-      class X {
+      class K {
         constructor(arg0) {
           return "premium-and-premium-guild" === analyticsLoadId.section.id;
         }
       }
       if (!tmp16) {
-        class X {
+        class K {
           constructor(arg0) {
             return "premium-and-premium-guild" === analyticsLoadId.section.id;
           }
@@ -1529,7 +1408,7 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLoadI
   }
   shouldRemoveYearlyUpsell = isBoostPurchaseFlow;
   if (isBoostPurchaseFlow) {
-    class X {
+    class K {
       constructor(arg0) {
         return "premium-and-premium-guild" === analyticsLoadId.section.id;
       }
@@ -1537,13 +1416,13 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLoadI
     shouldRemoveYearlyUpsell = obj4.getShouldRemoveYearlyUpsell("PremiumPlanSelect");
   }
   if (!shouldRemoveYearlyUpsell) {
-    class X {
+    class K {
       constructor(arg0) {
         return "premium-and-premium-guild" === analyticsLoadId.section.id;
       }
     }
     if (subscription != null) {
-      class X {
+      class K {
         constructor(arg0) {
           return "premium-and-premium-guild" === analyticsLoadId.section.id;
         }
@@ -1551,7 +1430,7 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLoadI
     }
     let tmp13 = true === tmp12;
     if (tmp13) {
-      class X {
+      class K {
         constructor(arg0) {
           return "premium-and-premium-guild" === analyticsLoadId.section.id;
         }
@@ -1565,7 +1444,7 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLoadI
   cResult[17] = shouldRemoveYearlyUpsell;
   tmp10 = shouldRemoveYearlyUpsell;
   let obj = subscription(analyticsLoadId[20]);
-}) : ((showCurrentPlan) => {
+}) : (function PlanSections(showCurrentPlan) {
   ({ plans, subscription } = showCurrentPlan);
   const isBoostPurchaseFlow = showCurrentPlan.isBoostPurchaseFlow;
   const analyticsLoadId = showCurrentPlan.analyticsLoadId;
@@ -1670,7 +1549,7 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLoadI
         predicateResult = section.predicate(productId);
       }
       if (predicateResult) {
-        predicateResult = productId.premiumTier !== closure_3_20.TIER_1;
+        predicateResult = productId.premiumTier !== constants2.TIER_1;
       }
       if (predicateResult) {
         const isIOSResult = utils_PlatformUtils.isIOS();
@@ -1732,7 +1611,7 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLoadI
   obj7.children = items1;
   return closure_32(productIdFromSubscription, obj7);
 });
-let closure_46 = noop.forwardRef(function PremiumPlanSelect(isBoostPurchaseFlow, arg1) {
+function PremiumPlanSelect(isBoostPurchaseFlow) {
   ({ predicate, showCurrentPlan } = isBoostPurchaseFlow);
   if (showCurrentPlan === undefined) {
     showCurrentPlan = true;
@@ -1743,6 +1622,7 @@ let closure_46 = noop.forwardRef(function PremiumPlanSelect(isBoostPurchaseFlow,
   }
   ({ analyticsLocation, planId, applicationId } = isBoostPurchaseFlow);
   _require = applicationId;
+  let ref = isBoostPurchaseFlow.ref;
   importDefault = undefined;
   let basePurchaseFlowAnalyticsFields;
   let obj6;
@@ -1768,13 +1648,13 @@ let closure_46 = noop.forwardRef(function PremiumPlanSelect(isBoostPurchaseFlow,
     }
   }, items1);
   const tmp11 = require("useInitialValue")(() => application_id(basePurchaseFlowAnalyticsFields[49]).getNewAnalyticsLoadId());
-  let obj = require("initialize");
+  let obj2 = require("initialize");
   const tmp6 = handlePremiumPurchase;
-  let obj3 = { analyticsLoadId: tmp11, analyticsLocation: null, analyticsLocations: null };
+  let obj = { analyticsLoadId: tmp11, analyticsLocation: null, analyticsLocations: null };
   let merged = Object.assign(analyticsLocation);
-  obj3.analyticsLocation = { object: constants3.BUTTON_CTA, object_type: constants4.BUY };
-  obj3.analyticsLocations = analyticsLocations;
-  basePurchaseFlowAnalyticsFields = require("PremiumAnalyticsUtils").getBasePurchaseFlowAnalyticsFields(obj3);
+  obj.analyticsLocation = { object: constants3.BUTTON_CTA, object_type: constants4.BUY };
+  obj.analyticsLocations = analyticsLocations;
+  basePurchaseFlowAnalyticsFields = require("PremiumAnalyticsUtils").getBasePurchaseFlowAnalyticsFields(obj);
   if (null != planId) {
     let obj5 = { subscription_plan_id: planId };
     obj6 = obj5;
@@ -1789,7 +1669,7 @@ let closure_46 = noop.forwardRef(function PremiumPlanSelect(isBoostPurchaseFlow,
     const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(obj2);
   });
   const activeSubscription = useNativeCheckoutStore((activeSubscription) => ({ activeSubscription: activeSubscription.checkoutInitParameters.activeSubscription, order: activeSubscription.orderRecord })).activeSubscription;
-  let obj2 = require("PremiumAnalyticsUtils");
+  let obj3 = require("PremiumAnalyticsUtils");
   let obj4 = { object: constants3.BUTTON_CTA, object_type: constants4.BUY };
   handlePremiumPurchase = require("handlePremiumPurchase").useHandlePremiumPurchase();
   const tmp4Result = require("handlePremiumPurchase");
@@ -1860,8 +1740,8 @@ let closure_46 = noop.forwardRef(function PremiumPlanSelect(isBoostPurchaseFlow,
                 const obj7 = {
                   value: v3(modifySubscriptionItemsForProduct.map((planId) => {
                               const obj = { sku_id: null, subscription_plan_id: null, quantity: null, purchase_type: null };
-                              const obj2 = applicationId(4534);
-                              obj.sku_id = obj2.castPremiumSubscriptionAsSkuId(closure_1_1(4534).getSkuIdForPlan(planId.planId));
+                              const obj2 = applicationId(4726);
+                              obj.sku_id = obj2.castPremiumSubscriptionAsSkuId(closure_1_1(4726).getSkuIdForPlan(planId.planId));
                               ({ planId: obj.subscription_plan_id, quantity: obj.quantity } = planId);
                               obj.purchase_type = constants.SUBSCRIPTION;
                               return obj;
@@ -1929,20 +1809,20 @@ let closure_46 = noop.forwardRef(function PremiumPlanSelect(isBoostPurchaseFlow,
           }
           obj13.orderId = id;
           obj13.onPurchaseComplete = function onPurchaseComplete(paymentGateway) {
-            closure_1(5715).close();
+            closure_1(5298).close();
             if (paymentGateway.paymentGateway === constants.APPLE_ADVANCED_COMMERCE) {
               premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
               if (null == premiumTypeSubscription) {
                 const _Error = Error;
                 const error = new Error("PremiumActivatedAlert: no premium subscription in store post-activation");
                 const obj2 = { tags: { source: "showPremiumActivatedAlert.nullSubscription" } };
-                const result = premiumTypeSubscription(4549).captureBillingException(error, obj2);
-                const obj4 = premiumTypeSubscription(4549);
-                closure_1(5099).popWithKey(premiumTypeSubscription(6929).PREMIUM_KEY);
+                const result = premiumTypeSubscription(4741).captureBillingException(error, obj2);
+                const obj4 = premiumTypeSubscription(4741);
+                closure_1(5940).popWithKey(premiumTypeSubscription(7118).PREMIUM_KEY);
                 if (navigation.canGoBack()) {
                   navigation.goBack();
                 }
-                const tmpResult = closure_1(5099);
+                const tmpResult = closure_1(5940);
               } else {
                 const obj3 = {
                   importer() {
@@ -1950,11 +1830,11 @@ let closure_46 = noop.forwardRef(function PremiumPlanSelect(isBoostPurchaseFlow,
                       },
                   isDismissable: false
                 };
-                closure_1(5715).openLazy(obj3);
-                const tmpResult2 = closure_1(5715);
+                closure_1(5298).openLazy(obj3);
+                const tmpResult2 = closure_1(5298);
               }
             }
-            let obj = closure_1(5715);
+            let obj = closure_1(5298);
           };
           v3 = 3;
           c7 = 1;
@@ -1979,11 +1859,10 @@ let closure_46 = noop.forwardRef(function PremiumPlanSelect(isBoostPurchaseFlow,
       let obj9 = { style: tmp.loadingSpinnerContainer, children: closure_31(tmp4(tmp3[43]).ActivityIndicator, { animating: true, size: "large" }) };
       closure_31(orderRequired, obj9);
     }
-    let obj11 = arg1;
     if (isPaymentsBlocked) {
-      let obj10 = { ref: obj11, contentInset: null, children: null };
-      obj11 = { top: 40 };
-      obj10.contentInset = obj11;
+      let obj10 = { ref, contentInset: null, children: null };
+      ref = { top: 40 };
+      obj10.contentInset = ref;
       tmp2 = tmp2(tmp3[73]);
       tmp3 = closure_31(tmp2, {});
       obj10.children = tmp3;
@@ -1996,26 +1875,26 @@ let closure_46 = noop.forwardRef(function PremiumPlanSelect(isBoostPurchaseFlow,
         }
         let tmp25Result = null != first;
         if (tmp25Result) {
-          let obj12 = { children: null };
-          let obj13 = { style: tmp.premiumHeaderLabel, variant: "eyebrow", color: "text-default", accessibilityRole: "header", children: null };
+          let obj11 = { children: null };
+          let obj12 = { style: tmp.premiumHeaderLabel, variant: "eyebrow", color: "text-default", accessibilityRole: "header", children: null };
           let intl = tmp4(tmp3[22]).intl;
-          obj13.children = intl.string(tmp4(tmp3[22]).t.ITurwY);
-          const items4 = [closure_31(tmp4(tmp3[23]).Text, obj13), ];
-          let obj14 = { subscription: activeSubscription, renewalInvoicePreview: first };
-          items4[1] = closure_31(tmp4(tmp3[74]).PremiumSubscriptionHeader, obj14);
-          obj12.children = items4;
-          tmp25Result = closure_32(closure_33, obj12);
+          obj12.children = intl.string(tmp4(tmp3[22]).t.ITurwY);
+          const items4 = [closure_31(tmp4(tmp3[23]).Text, obj12), ];
+          let obj13 = { subscription: activeSubscription, renewalInvoicePreview: first };
+          items4[1] = closure_31(tmp4(tmp3[74]).PremiumSubscriptionHeader, obj13);
+          obj11.children = items4;
+          tmp25Result = closure_32(closure_33, obj11);
         }
-        const obj15 = { children: null };
+        let obj14 = { children: null };
         const items5 = [tmp25Result, ];
-        const obj16 = { style: tmp.offPlatformSubscriptionMessage, variant: "text-md/semibold", children: tmp4(tmp3[75]).getExternalManagementMessage(activeSubscription, { shouldAllowExternalManagement: true }) };
-        items5[1] = closure_31(tmp4(tmp3[23]).Text, obj16);
-        obj15.children = items5;
-        tmp25Result2 = closure_32(stateFromStores, obj15);
+        const obj15 = { style: tmp.offPlatformSubscriptionMessage, variant: "text-md/semibold", children: tmp4(tmp3[75]).getExternalManagementMessage(activeSubscription, { shouldAllowExternalManagement: true }) };
+        items5[1] = closure_31(tmp4(tmp3[23]).Text, obj15);
+        obj14.children = items5;
+        tmp25Result2 = closure_32(stateFromStores, obj14);
         const tmp4Result15 = tmp4(tmp3[75]);
       }
-      const obj17 = { ref: obj11, children: null };
-      const obj18 = {
+      const obj16 = { ref, children: null };
+      const obj17 = {
         subscription: activeSubscription,
         plans: tmp4(tmp3[48]).getPremiumBundlesWithPredicate(predicate),
         showCurrentPlan,
@@ -2039,15 +1918,15 @@ let closure_46 = noop.forwardRef(function PremiumPlanSelect(isBoostPurchaseFlow,
             },
         purchase: tmp22
       };
-      obj17.children = closure_31(closure_45, obj18);
-      tmp25Result2 = closure_31(stateFromStores, obj17);
+      obj16.children = closure_31(closure_45, obj17);
+      tmp25Result2 = closure_31(stateFromStores, obj16);
       const tmp4Result16 = tmp4(tmp3[48]);
     }
   }
   const tmp4Result12 = require("initialize");
-});
+}
 ReactCompilerGating = fn(558);
-let obj10 = {
+let obj14 = {
   id: "premium",
   getLabel() {
     const intl = util.intl;
@@ -2065,7 +1944,7 @@ let obj9 = { color: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/PremiumPlanSelect.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumPlanSelectWithOrderCTX(guildId) {
   _require = guildId;
   const cResult = require("c").c(39);
   closure_34();
@@ -2319,30 +2198,41 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           }
         }
       }
-      const fn2 = function k() {
-        if (mobileBoostingEnabled) {
-          if (null != stateFromStores2) {
-            const intl2 = util.intl;
-            const obj = { server: tmp3 };
-            let formatToPlainStringResult = intl2.formatToPlainString(util.t.LcefAL, obj);
+      class M {
+        constructor() {
+          if (closure_4) {
+            tmp4 = null;
+            if (null != closure_3) {
+              tmp6 = closure_0;
+              tmp7 = closure_2;
+              intl2 = closure_0(closure_2[22]).intl;
+              tmp8 = closure_0;
+              tmp9 = closure_2;
+              obj = { server: null };
+              obj.server = tmp3;
+              formatToPlainStringResult = intl2.formatToPlainString(closure_0(closure_2[22]).t.LcefAL, obj);
+            }
+            obj1 = { title: null };
+            obj1.title = formatToPlainStringResult;
+            tmp2Result = tmp2(obj1);
+            return;
           }
-          const obj2 = { title: formatToPlainStringResult };
-          tmp2(obj2);
+          intl = closure_0(closure_2[22]).intl;
+          formatToPlainStringResult = intl.string(closure_0(closure_2[22]).t.u95Dt4);
+          return;
         }
-        const intl = util.intl;
-        formatToPlainStringResult = intl.string(util.t.u95Dt4);
-      };
+      }
       const items6 = [navigation, tmp37, stateFromStores2];
       cResult[18] = stateFromStores2;
       cResult[19] = tmp37;
       cResult[20] = navigation;
-      cResult[21] = fn2;
+      cResult[21] = M;
       cResult[22] = items6;
       const tmpResult12 = tmp(tmp2[34]);
     }
   }
   tmpResult7 = require("utils/PlatformUtils");
-}) : ((isBoostPurchaseFlow) => {
+}) : (function PremiumPlanSelectWithOrderCTX(isBoostPurchaseFlow) {
   _require = isBoostPurchaseFlow;
   const tmp = closure_34();
   const navigation = require("useNavigation").useNavigation();
@@ -2443,7 +2333,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         };
         let obj6 = {};
         const merged = Object.assign(isBoostPurchaseFlow);
-        obj5.children = closure_31(closure_46, obj6);
+        obj5.children = closure_31(PremiumPlanSelect, obj6);
         return closure_31(navigation(tmp3[78]), obj5);
       }
       let str2 = "Android";

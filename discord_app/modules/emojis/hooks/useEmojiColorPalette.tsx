@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/hooks/useEmojiColorPalette.tsx");
 
 export const useEmojiColorPalette = ReactCompilerGating.isReactCompilerEnabled()
-  ? (colors) => {
+  ? function useEmojiColorPalette(colors) {
       const cResult = c.c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
@@ -63,7 +63,7 @@ export const useEmojiColorPalette = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = emojiColorPalette;
       const tmpResult4 = EmojiColorUtils;
     }
-  : (colors) => {
+  : function useEmojiColorPalette(colors) {
       const items = [AccessibilityStore];
       const stateFromStores = initialize.useStateFromStores(items, () => saturation.saturation);
       const items1 = [ThemeStore];

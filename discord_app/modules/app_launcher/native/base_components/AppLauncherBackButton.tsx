@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/base_components/AppLauncherBackButton.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import Link from "../../../../../_runtime/01491_Link.js";
+import Link from "../../../../../_runtime/01503_Link.js";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherBackButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPress) => {
+  ? function AppLauncherBackButton(onPress) {
       const cResult = c.c(8);
       onPress = onPress.onPress;
       const navigation = Link.useNavigation();
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp4 = cResult[1];
       }
-      const tmp6 = importDefault(tmp4 ? 6022 : 6025);
+      const tmp6 = importDefault(tmp4 ? 6208 : 6211);
       if (cResult[2] !== tmp4) {
         const intl = util.intl;
         const t = util.t;
@@ -63,13 +63,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = tmp12;
       }
     }
-  : (onPress) => {
+  : function AppLauncherBackButton(onPress) {
       const navigation = Link.useNavigation();
       const canGoBackResult = navigation.canGoBack();
       const obj2 = {
         size: "sm",
         variant: "secondary-overlay",
-        icon: importDefault(canGoBackResult ? 6022 : 6025),
+        icon: importDefault(canGoBackResult ? 6208 : 6211),
         onPress: onPress.onPress,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1.5,
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return jsx(IconButton.IconButton, {
         size: "sm",
         variant: "secondary-overlay",
-        icon: importDefault(canGoBackResult ? 6022 : 6025),
+        icon: importDefault(canGoBackResult ? 6208 : 6211),
         onPress: onPress.onPress,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1.5,

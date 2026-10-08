@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectiblesData.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCollectiblesData(arg0) {
       _require = arg0;
       const cResult = require("c").c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = obj2;
       const tmpResult2 = require("useStateFromStores");
     }
-  : (arg0) => {
+  : function useCollectiblesData(arg0) {
       _require = arg0;
       let items = [CollectiblesCategoryStore];
       const tmp = _slicedToArray(

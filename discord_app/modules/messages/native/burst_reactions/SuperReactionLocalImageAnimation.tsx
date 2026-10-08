@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SuperReactionLocalImageAnimation(arg0) {
       let tmp2 = dependencyMap;
       const cResult = c.c(10);
       if (cResult[0] !== arg0) {
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = obj3;
       tmp10 = obj3;
     }
-  : (arg0) => {
+  : function SuperReactionLocalImageAnimation(arg0) {
       let tmp = null;
       ({ localImageSource, animationSource } = arg0);
       const merged = Object.assign(arg0, Object.assign({ localImageSource: 0, animationSource: 0 }));

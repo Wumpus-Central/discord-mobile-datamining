@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Notifications.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function Notifications() {
       let tmp2 = dependencyMap;
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = initialize;
     }
-  : () => {
+  : function Notifications() {
       const items = [InAppNotificationStore];
       const stateFromStores = initialize.useStateFromStores(items, () => currentNotification.getCurrentNotification());
       let tmp3 = null;

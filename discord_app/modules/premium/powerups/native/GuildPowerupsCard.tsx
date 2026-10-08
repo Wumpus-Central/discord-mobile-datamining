@@ -10,7 +10,7 @@ require = fn;
 let closure_2 = ["children", "containerStyle", "status", "style"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { cardActive: null, cardExpiring: null, cardRemoving: null };
 let obj3 = { borderColor: null };
 let n = n_mod;
@@ -36,7 +36,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildPowerupsCard(arg0) {
       const cResult = c.c(18);
       if (cResult[0] !== arg0) {
         ({ children, containerStyle, status, style } = arg0);
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = items;
       tmp19 = items;
     }
-  : (status) => {
+  : function GuildPowerupsCard(status) {
       status = status.status;
       ({ children, containerStyle, style } = status);
       const merged = Object.assign(status, Object.assign({ children: 0, containerStyle: 0, status: 0, style: 0 }));

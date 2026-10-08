@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/WishlistItemCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function WishlistItemCard(arg0) {
       const cResult = c.c(22);
       if (cResult[0] !== arg0) {
         ({ sku, isOwned, source, wishlistOwnerId } = arg0);
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return null;
       }
     }
-  : (arg0) => {
+  : function WishlistItemCard(arg0) {
       ({ sku, isOwned, source, wishlistOwnerId } = arg0);
       const merged = Object.assign(arg0, Object.assign({ sku: 0, isOwned: 0, source: 0, wishlistOwnerId: 0 }));
       const productLine = sku.productLine;

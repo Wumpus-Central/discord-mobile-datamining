@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/EditUserProfileAvatar.tsx
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({
   editIcon: { position: "absolute", right: -3 },
   editButton: { position: "absolute", top: -8, right: -8 },
@@ -79,12 +79,12 @@ export default function EditUserProfileAvatar(user) {
   onPress = isUserProfileEditingRefresh.useCallback(() => {
     let obj2 = {
       showAnimatedAvatarUpsell,
-      handleRemoveAvatarSelect() {
+      handleRemoveAvatarSelect: function removeAvatar() {
         flag(flag2[11]).hideActionSheet();
         setPendingAvatar(null);
       },
       handleUploadAvatarSelect,
-      handleUploadGIFAvatarSelect() {
+      handleUploadGIFAvatarSelect: function uploadAvatarGIF() {
         flag(flag2[11]).hideActionSheet();
         const obj = flag(flag2[11]);
         const obj3 = { profileAssetType: null, selectionContext: null };
@@ -99,16 +99,16 @@ export default function EditUserProfileAvatar(user) {
     };
     let obj = ActionSheetActionCreatorsDefault;
     if (!flag) {
-      const fn = () => {
+      function editAvatarDecoration() {
         const result = user(flag2[16]).openAvatarDecorationActionSheet({
           user,
           currentAvatarDecoration,
           analyticsLocations,
         });
-      };
+      }
     }
-    obj2.handleEditAvatarDecorationSelect = fn;
-    const tmp3 = asyncRequireImpl(14453, dependencyMap.paths);
+    obj2.handleEditAvatarDecorationSelect = editAvatarDecoration;
+    const tmp3 = asyncRequireImpl(14681, dependencyMap.paths);
     obj2.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
     obj.openLazy(tmp3, "Change Avatar", obj2);
     const tmp2Result = ProfileCustomizationUtils;

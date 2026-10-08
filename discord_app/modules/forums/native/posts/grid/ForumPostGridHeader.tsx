@@ -9,11 +9,11 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ForumTimestampFormats = fn(6786).ForumTimestampFormats;
-const ChannelFlags = fn(2058).ChannelFlags;
+const ForumTimestampFormats = fn(6961).ForumTimestampFormats;
+const ChannelFlags = fn(2070).ChannelFlags;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({
   pinIcon: { marginEnd: 8 },
   container: { display: "flex", flexDirection: "column", marginBottom: 4 },
@@ -25,7 +25,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridHeader.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForumPostGridHeader(arg0) {
       const cResult = c.c(27);
       ({ thread, hasUnreads, isNew } = arg0);
       const tmp4 = closure_8();
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp9;
       tmp8 = tmp9;
     }
-  : (arg0) => {
+  : function ForumPostGridHeader(arg0) {
       ({ thread, hasUnreads, isNew } = arg0);
       const tmp = closure_8();
       let hasFlagResult = thread.hasFlag(ChannelFlags.PINNED);

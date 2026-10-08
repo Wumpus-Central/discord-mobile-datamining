@@ -1,8 +1,8 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelConnectButton.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import SelectedChannelActionCreatorsDefault from "../../../../../actions/SelectedChannelActionCreators.tsx";
 import useAlertStore from "../../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import SelectedChannelActionCreatorsDefault from "../../../../../actions/SelectedChannelActionCreators.tsx";
 import StageChannelModalActionCreators from "../../../../stage_channels/StageChannelModalActionCreators.tsx";
 import VoicePanelSpoilerAlert from "../../../../spoiler_channels/native/VoicePanelSpoilerAlert.tsx";
 import VoicePanelNoJoinPermissionsAlert from "../../alerts/VoicePanelNoJoinPermissionsAlert.tsx";
@@ -19,7 +19,7 @@ const VoicePanelNsfwAlertDefault = VoicePanelNsfwAlert;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   connectButton: {
     backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360,
@@ -39,7 +39,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelConnectButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (props) => {
+  ? function ConnectButton(props) {
       const cResult = channelId(canConnect[6]).c(28);
       props = props.props;
       const tmp4 = isChannelSpoilerGated();
@@ -651,7 +651,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = isAtMaxCapacity;
       tmp11 = tmp12;
     }
-  : (props) => {
+  : function ConnectButton(props) {
       let channelId;
       let guildId;
       let canConnect;

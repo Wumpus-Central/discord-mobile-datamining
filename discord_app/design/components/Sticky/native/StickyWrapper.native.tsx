@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sticky/native/StickyWrapper.native.tsx");
 
 export const StickyWrapper = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function StickyWrapper(arg0) {
       const cResult = c.c(9);
       ({ header, children, pointerEvents, style } = arg0);
       if (cResult[0] !== style) {
@@ -71,7 +71,7 @@ export const StickyWrapper = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp13;
       tmp12 = tmp13;
     }
-  : (header) => {
+  : function StickyWrapper(header) {
       header = header.header;
       const obj = { style: null, pointerEvents: header.pointerEvents, children: null };
       const items = [header.style, closure_5.wrapper];

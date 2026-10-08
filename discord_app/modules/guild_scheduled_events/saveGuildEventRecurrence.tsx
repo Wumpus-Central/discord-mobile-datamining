@@ -1,13 +1,13 @@
 // discord_app/modules/guild_scheduled_events/saveGuildEventRecurrence.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import ScheduleUtils from "utils/ScheduleUtils.tsx";
 import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators.tsx";
+import ScheduleUtils from "utils/ScheduleUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/saveGuildEventRecurrence.tsx");
 
-export default function saveGuildEventRecurrence(guild_id, nextRecurrenceIdInEvent, startDate, event_exception_id) {
-  const baseScheduleForRecurrence = ScheduleUtils.getBaseScheduleForRecurrence(nextRecurrenceIdInEvent, guild_id);
+export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_exception_id) {
+  const baseScheduleForRecurrence = ScheduleUtils.getBaseScheduleForRecurrence(c2, guild_id);
   startDate = null;
   if (!obj2.areDatesIdentical(baseScheduleForRecurrence.startDate, startDate.startDate)) {
     startDate = startDate.startDate;
@@ -44,11 +44,11 @@ export default function saveGuildEventRecurrence(guild_id, nextRecurrenceIdInEve
       }
       obj3.scheduled_end_time = toISOStringResult1;
       obj3.is_canceled = event_exception_id.is_canceled;
-      result1 = obj5.updateGuildEventException(obj3, guild_id.guild_id, guild_id.id, nextRecurrenceIdInEvent);
+      result1 = obj5.updateGuildEventException(obj3, guild_id.guild_id, guild_id.id, c2);
     }
     return result1;
   } else {
-    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(nextRecurrenceIdInEvent);
+    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(c2);
     const obj4 = {
       original_scheduled_start_time: null,
       scheduled_start_time: null,

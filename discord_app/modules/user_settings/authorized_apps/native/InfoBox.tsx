@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   infoBox: {
     borderRadius: nativeDefault.radii.xs,
@@ -53,7 +53,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/InfoBox.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function InfoBox(arg0) {
       const cResult = c.c(17);
       ({ children, style: infoBoxWarning, look } = arg0);
       if (undefined === look) {
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp11;
       cResult[6] = items3;
     }
-  : (look) => {
+  : function InfoBox(look) {
       let INFO = look.look;
       ({ children, style } = look);
       if (INFO === undefined) {

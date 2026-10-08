@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUsesLabel.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function InstantInviteUsesLabel(arg0) {
       const cResult = c.c(3);
       ({ uses, maxUses, style } = arg0);
       let combined = uses;
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp7;
       tmp6 = tmp7;
     }
-  : (style) => {
+  : function InstantInviteUsesLabel(style) {
       ({ uses, maxUses } = style);
       let combined = uses;
       if (0 !== maxUses) {

@@ -15,14 +15,14 @@ const View = fn(17).View;
 const BoostedGuildTiers = fn(1085).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   progressBarContainer: {
     display: "flex",
     alignItems: "center",
     width: "100%",
     marginTop: 40,
-    paddingHorizontal: fn(13408).MARKER_DIMENSIONS / 2 + 34,
+    paddingHorizontal: fn(13708).MARKER_DIMENSIONS / 2 + 34,
   },
   progressBar: { height: 54, maxWidth: 660, width: "100%" },
   progressBarScrubber: null,
@@ -35,12 +35,12 @@ let obj3 = {
   alignItems: "center",
   width: "100%",
   marginTop: 40,
-  paddingHorizontal: fn(13408).MARKER_DIMENSIONS / 2 + 34,
+  paddingHorizontal: fn(13708).MARKER_DIMENSIONS / 2 + 34,
 };
 obj2.progressBarScrubber = {
   height: 8,
-  top: fn(13408).MARKER_DIMENSIONS / 2 - 4,
-  marginHorizontal: fn(13408).MARKER_DIMENSIONS / 2 + 2,
+  top: fn(13708).MARKER_DIMENSIONS / 2 - 4,
+  marginHorizontal: fn(13708).MARKER_DIMENSIONS / 2 + 2,
 };
 let size = {
   borderRadius: 8,
@@ -78,8 +78,8 @@ const __initData6 = {
 const ReactCompilerGating = fn(558);
 let obj4 = {
   height: 8,
-  top: fn(13408).MARKER_DIMENSIONS / 2 - 4,
-  marginHorizontal: fn(13408).MARKER_DIMENSIONS / 2 + 2,
+  top: fn(13708).MARKER_DIMENSIONS / 2 - 4,
+  marginHorizontal: fn(13708).MARKER_DIMENSIONS / 2 + 2,
 };
 size = fn(2);
 let result = size.fileFinishedImporting(
@@ -87,7 +87,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function ProgressBar(guild) {
       const cResult = guild(sharedValue[10]).c(39);
       guild = guild.guild;
       let tmp4 = closure_10();
@@ -313,7 +313,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp24 = items5;
         }
       }
-      class P {
+      class H {
         constructor() {
           result = 100 * fillFactor;
           closure_0 = result;
@@ -338,10 +338,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = fillFactor;
       cResult[5] = stateFromStores;
       cResult[6] = sharedValue;
-      cResult[7] = P;
+      cResult[7] = H;
       cResult[8] = items6;
       tmp20 = items6;
-      tmp19 = P;
+      tmp19 = H;
       const obj2 = {
         BoostedGuildTiers,
         TIER_REACHED_OFFSET: 5,
@@ -350,7 +350,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         setRevealedTier: tmp12[1],
       };
     }
-  : (guild) => {
+  : function ProgressBar(guild) {
       guild = guild.guild;
       let stateFromStores;
       let sharedValue;

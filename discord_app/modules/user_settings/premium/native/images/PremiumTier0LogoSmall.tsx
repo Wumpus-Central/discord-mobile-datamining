@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
-import inlineStyles from "../../../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/07550_inlineStyles.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -14,7 +14,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/images/PremiumTier0LogoSmall.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PremiumTier0LogoSmall(arg0) {
       const cResult = c.c(7);
       ({ style, width, height } = arg0);
       const token = useToken.useToken(nativeDefault.colors.TEXT_STRONG);
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp10;
       tmp9 = tmp10;
     }
-  : (arg0) => {
+  : function PremiumTier0LogoSmall(arg0) {
       ({ style, width, height } = arg0);
       const token = useToken.useToken(nativeDefault.colors.TEXT_STRONG);
       const size = { style, width, height, viewBox: "0 0 48 9", fill: "none", children: null };

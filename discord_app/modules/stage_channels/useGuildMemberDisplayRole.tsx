@@ -35,7 +35,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useGuildMemberDisplayRole.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useGuildMemberDisplayRole(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(5);
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(504).useStateFromStores(first, tmp7, tmp8);
       }
-      const fn = function u() {
+      const fn = function n() {
         const items = [GuildStore, GuildMemberStore];
         return getHighestHoistedRole(closure_0, closure_1, items);
       };
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useGuildMemberDisplayRole(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       let items = [GuildStore, GuildMemberStore];

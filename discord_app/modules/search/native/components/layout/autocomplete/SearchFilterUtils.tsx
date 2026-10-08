@@ -1,15 +1,15 @@
 // discord_app/modules/search/native/components/layout/autocomplete/SearchFilterUtils.tsx
 import util from "../../../../../../intl/index.native.tsx";
 import AtIcon from "../../../../../../design/components/Icon/native/redesign/generated/AtIcon.tsx";
-import TrackingConstants from "../../../tracking/TrackingConstants.tsx";
-import RobotIcon from "../../../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import CalendarIcon from "../../../../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx";
+import TrackingConstants from "../../../tracking/TrackingConstants.tsx";
 import AttachmentIcon from "../../../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import UserIcon from "../../../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import CalendarPlusIcon from "../../../../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx";
 import SearchPlatformUtils from "../../../SearchPlatformUtils.tsx";
 import SearchTokens from "../../../../tokens/SearchTokens.tsx";
 import SearchPlatformActionCreatorsDefault from "../../../SearchPlatformActionCreators.tsx";
+import RobotIcon from "../../../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import ChannelListMagnifyingGlassIcon from "../../../../../../design/components/Icon/native/redesign/generated/ChannelListMagnifyingGlassIcon.tsx";
 import CalendarMinusIcon from "../../../../../../design/components/Icon/native/redesign/generated/CalendarMinusIcon.tsx";
 import SearchConstants from "../../../../SearchConstants.tsx";
@@ -215,7 +215,7 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(se
 export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(11988));
+  const keys = Object.keys(items(12061));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;

@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelFlags = fn(2058).ChannelFlags;
+const ChannelFlags = fn(2070).ChannelFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/threads/native/components/Thr
 
 export const AutoArchiveDurationOptions = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function AutoArchiveDurationOptions(arg0) {
         const cResult = require("c").c(27);
         ({ title, description, channel, selected, onSelectDuration } = arg0);
         if (cResult[0] === channel) {
@@ -95,16 +95,23 @@ export const AutoArchiveDurationOptions = noop.memo(
           tmp16 = cResult[15];
         }
         if (cResult[16] !== tmp12) {
-          const fn = function y(value) {
-            return jsx(TableRadioRow.TableRadioRow, { value: value.value, disabled, label: value.label }, value.value);
-          };
+          class T {
+            constructor(arg0) {
+              obj = { value: arg0.value, disabled: closure_0, label: arg0.label };
+              return jsx(closure_0(closure_1[8]).TableRadioRow, obj, arg0.value);
+            }
+          }
           cResult[16] = tmp12;
-          cResult[17] = fn;
-          let tmp18 = fn;
+          cResult[17] = T;
         } else {
-          tmp18 = cResult[17];
+          class T {
+            constructor(arg0) {
+              obj = { value: arg0.value, disabled: closure_0, label: arg0.label };
+              return jsx(closure_0(closure_1[8]).TableRadioRow, obj, arg0.value);
+            }
+          }
         }
-        const mapped = autoArchiveOptions.map(tmp18);
+        const mapped = autoArchiveOptions.map(T);
         cResult[0] = channel;
         cResult[1] = description;
         cResult[2] = onSelectDuration;
@@ -120,9 +127,9 @@ export const AutoArchiveDurationOptions = noop.memo(
         cResult[12] = mapped;
         const tmpResult = require("ThreadAutoArchive");
       }
-    : (channel) => {
+    : function AutoArchiveDurationOptions(channel) {
         channel = channel.channel;
-        _require = undefined;
+        let _require;
         ({ title, description, selected, onSelectDuration } = channel);
         const autoArchiveOptions = require("ThreadAutoArchive").getAutoArchiveOptions();
         let hasFlagResult = null != channel && channel.isForumPost();

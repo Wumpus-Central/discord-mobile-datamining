@@ -8,18 +8,18 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ExpressionPickerStore = fn(17257);
+const ExpressionPickerStore = fn(17538);
 ({ setSearchQuery: metroRequire, useExpressionPickerStore: closure_7 } = ExpressionPickerStore);
-const SoundboardPickerType = fn(5689).SoundboardPickerType;
+const SoundboardPickerType = fn(5426).SoundboardPickerType;
 const EXPRESSION_FOOTER_HEIGHT = fn(1085).EXPRESSION_FOOTER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   title: { marginBottom: 8 },
   container: { flex: 1, alignItems: "center" },
   header: {
-    paddingHorizontal: fn(17258).SOUND_ROW_HORIZONTAL_PADDING,
+    paddingHorizontal: fn(17539).SOUND_ROW_HORIZONTAL_PADDING,
     padding: nativeDefault.space.PX_8,
     width: "100%",
   },
@@ -28,7 +28,7 @@ let obj = {
 let closure_14 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  paddingHorizontal: fn(17258).SOUND_ROW_HORIZONTAL_PADDING,
+  paddingHorizontal: fn(17539).SOUND_ROW_HORIZONTAL_PADDING,
   padding: nativeDefault.space.PX_8,
   width: "100%",
 };
@@ -37,7 +37,7 @@ const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardS
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function SoundboardSoundPicker(channel) {
         const cResult = channel(ref[13]).c(64);
         channel = channel.channel;
         ({ analyticsSource, initialScrollLocation } = channel);
@@ -126,7 +126,7 @@ export default noop.memo(
         cResult[10] = channel(ref[17]).searchSounds(tmp19, availableSounds, stateFromStores, channel);
         const searchSoundsResult = channel(ref[17]).searchSounds(tmp19, availableSounds, stateFromStores, channel);
       }
-    : (channel) => {
+    : function SoundboardSoundPicker(channel) {
         channel = channel.channel;
         const initialScrollLocation = channel.initialScrollLocation;
         let stateFromStores;

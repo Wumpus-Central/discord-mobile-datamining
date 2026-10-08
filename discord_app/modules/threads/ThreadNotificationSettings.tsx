@@ -64,7 +64,7 @@ let result = size.fileFinishedImporting("modules/threads/ThreadNotificationSetti
 
 export { computeThreadNotificationSetting };
 export const useThreadNotificationSetting = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useThreadNotificationSetting(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -96,7 +96,7 @@ export const useThreadNotificationSetting = ReactCompilerGating.isReactCompilerE
       const obj = require("c");
       return require("initialize").useStateFromStores(first, N, tmp9);
     }
-  : (arg0) => {
+  : function useThreadNotificationSetting(arg0) {
       _require = arg0;
       const items = [JoinedThreadsStore, UserGuildSettingsStore, ChannelStore];
       const items1 = [arg0];

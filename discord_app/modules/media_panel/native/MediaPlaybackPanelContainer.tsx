@@ -1,6 +1,6 @@
 // discord_app/modules/media_panel/native/MediaPlaybackPanelContainer.tsx
 import c from "../../../../_runtime/00576_c.js";
-import _mod4500 from "../../../../_runtime/metro/04500__.js";
+import _mod4692 from "../../../../_runtime/metro/04692__.js";
 import MediaPlayerManager from "../../media/native/MediaPlayerManager.tsx";
 import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController.tsx";
 import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI.tsx";
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/media_panel/native/MediaPlayb
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function MediaPlaybackPanelContainer() {
         const cResult = c.c(3);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function t(showPip) {
@@ -66,7 +66,7 @@ export default noop.memo(
           first = cResult[0];
         }
         const tmpResult = MediaPlayerManager;
-        const mediaPlayerManagerStore = tmpResult.useMediaPlayerManagerStore(_mod4500.useShallow(first));
+        const mediaPlayerManagerStore = tmpResult.useMediaPlayerManagerStore(_mod4692.useShallow(first));
         if (cResult[1] !== mediaPlayerManagerStore) {
           let tmp7 = null;
           if (mediaPlayerManagerStore) {
@@ -81,7 +81,7 @@ export default noop.memo(
         }
         return tmp6;
       }
-    : () => {
+    : function MediaPlaybackPanelContainer() {
         const obj = MediaPlayerManager;
         let tmp2 = null;
         if (

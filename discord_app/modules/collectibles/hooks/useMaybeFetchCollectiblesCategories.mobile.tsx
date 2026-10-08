@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (paymentGateway, arg1) => {
+  ? function useMaybeFetchCollectiblesCategories(paymentGateway, arg1) {
       const cResult = c.c(8);
       paymentGateway = undefined;
       if (paymentGateway != null) {
@@ -18,7 +18,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DevSettingsStore];
-        const fn = function l() {
+        const fn = function n() {
           return {
             noCache: DevSettingsStore.get("shop_disable_cache"),
             includeUnpublished: DevSettingsStore.get("shop_include_unpublished"),
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = obj2;
       const tmpResult = initialize;
     }
-  : (paymentGateway, arg1) => {
+  : function useMaybeFetchCollectiblesCategories(paymentGateway, arg1) {
       paymentGateway = undefined;
       if (paymentGateway != null) {
         paymentGateway = paymentGateway.paymentGateway;

@@ -16,7 +16,7 @@ const CutoutShape = { Circle: "circle", RoundedRect: "rounded-rect" };
 let closure_9 = [];
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SolidCutout(arg0) {
       const obj = c;
       const cResult = obj.c(25);
       ({ backgroundColor: x, cutout } = arg0);
@@ -130,7 +130,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[15] = size1;
       tmp8 = size1;
     }
-  : (arg0) => {
+  : function SolidCutout(arg0) {
       ({ backgroundColor, cutout } = arg0);
       const style = [closure_12.solidCutout];
       if (cutout.shape === obj.Circle) {
@@ -168,7 +168,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (backgroundColor) => {
+  ? function SolidCutoutOverlay(backgroundColor) {
       const cResult = backgroundColor(576).c(7);
       backgroundColor = backgroundColor.backgroundColor;
       const cutouts = backgroundColor.cutouts;
@@ -202,7 +202,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = mapped;
       const obj = backgroundColor(576);
     }
-  : (arg0) => {
+  : function SolidCutoutOverlay(arg0) {
       ({ backgroundColor: require, cutouts } = arg0);
       return closure_6(closure_5, {
         pointerEvents: "none",
@@ -221,7 +221,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Icon/native/ClipView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ClipView(arg0) {
       const cResult = c.c(14);
       if (cResult[0] !== arg0) {
         ({ children, cutouts, style } = arg0);
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = tmp24;
       tmp21 = tmp24;
     }
-  : (cutouts) => {
+  : function ClipView(cutouts) {
       cutouts = cutouts.cutouts;
       ({ children, style } = cutouts);
       const merged = Object.assign(cutouts, Object.assign({ children: 0, cutouts: 0, style: 0 }));

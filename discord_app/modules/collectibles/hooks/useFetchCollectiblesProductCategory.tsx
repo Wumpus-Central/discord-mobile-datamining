@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProductCategory.tsx");
 
 export const useFetchCollectiblesProductCategory = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFetchCollectiblesProductCategory(arg0) {
       _require = arg0;
       const cResult = require("c").c(6);
       useMaybeFetchCollectiblesCategoriesDefault();
@@ -23,7 +23,7 @@ export const useFetchCollectiblesProductCategory = ReactCompilerGating.isReactCo
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function n() {
+        const fn = function l() {
           const items = [
             CollectiblesCategoryStore.isFetchingCategories,
             CollectiblesCategoryStore.getCategoryForProduct(closure_0),
@@ -52,7 +52,7 @@ export const useFetchCollectiblesProductCategory = ReactCompilerGating.isReactCo
       tmp11 = obj2;
       const tmp8 = _slicedToArray(require("useStateFromStores").useStateFromStoresArray(first, tmp7), 2);
     }
-  : (arg0) => {
+  : function useFetchCollectiblesProductCategory(arg0) {
       _require = arg0;
       useMaybeFetchCollectiblesCategoriesDefault();
       let items = [CollectiblesCategoryStore];

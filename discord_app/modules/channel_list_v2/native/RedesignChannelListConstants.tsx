@@ -47,9 +47,9 @@ export const getScaledChannelSubtitleHeight = function getScaledChannelSubtitleH
 export const getScaledCategoryRowHeight = function getScaledCategoryRowHeight(fontScale) {
   return useScaledTextLineHeight.scaleTextLineHeight(c5, fontScale) + 8 + 4;
 };
-export const getScaledChannelRowHeight = function getScaledChannelRowHeight(arg0) {
+export const getScaledChannelRowHeight = function getScaledChannelRowHeight(fontScale) {
   const sum = 8 + hairlineWidth;
-  return 2 * sum + useScaledTextLineHeight.scaleLineHeight(num, arg0);
+  return 2 * sum + useScaledTextLineHeight.scaleLineHeight(num, fontScale);
 };
 export const getScaledSearchBarHeight = function getScaledSearchBarHeight(fontScale) {
   return 24 + useScaledTextLineHeight.scaleTextLineHeight(c4, fontScale);

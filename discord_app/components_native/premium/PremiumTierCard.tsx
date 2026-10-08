@@ -2,24 +2,24 @@
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../ConstantsIOS.tsx";
 import PremiumUtils from "../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../_runtime/05387_LinearGradient.js";
 import Card from "../../design/components/Card/native/Card.native.tsx";
-import _modDef6955 from "../../../_runtime/metro/06955__.js";
-import _modDef6956 from "../../../_runtime/metro/06956__.js";
-import _modDef7749 from "../../../_runtime/metro/07749__.js";
-import _modDef10460 from "../../../_runtime/metro/10460__.js";
-import _modDef13392 from "../../../_runtime/metro/13392__.js";
-import _modDef13393 from "../../../_runtime/metro/13393__.js";
+import _modDef7144 from "../../../_runtime/metro/07144__.js";
+import _modDef7145 from "../../../_runtime/metro/07145__.js";
+import _modDef8070 from "../../../_runtime/metro/08070__.js";
+import _modDef10057 from "../../../_runtime/metro/10057__.js";
+import _modDef13692 from "../../../_runtime/metro/13692__.js";
+import _modDef13693 from "../../../_runtime/metro/13693__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-const getPremiumGradientColor = fn(6951).getPremiumGradientColor;
-const PremiumTypes = fn(1379).PremiumTypes;
+const getPremiumGradientColor = fn(7140).getPremiumGradientColor;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   header: { marginTop: 24, padding: 16 },
   textLogoTier0: { width: 158, height: 32 },
@@ -37,7 +37,7 @@ let obj2 = {
 };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-const obj3 = {
+let obj3 = {
   padding: 16,
   borderBottomRightRadius: nativeDefault.radii.xs,
   borderBottomLeftRadius: nativeDefault.radii.xs,
@@ -50,92 +50,228 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = premiumType(576).c(50);
       premiumType = premiumType.premiumType;
       ({ children, style } = premiumType);
-      const tmp2 = closure_10();
-      importDefault = tmp2;
+      const tmp4 = closure_10();
+      importDefault = tmp4;
       if (cResult[0] !== premiumType) {
-        const fn = function n() {
+        function getTextLogo() {
           if (PremiumTypes.TIER_0 === premiumType) {
-            return _modDef13392;
+            return _modDef13692;
           } else if (PremiumTypes.TIER_1 === premiumType) {
-            return _modDef13393;
+            return _modDef13693;
           } else if (PremiumTypes.TIER_2 === premiumType) {
-            return _modDef7749;
+            return _modDef8070;
           }
-        };
+        }
         cResult[0] = premiumType;
-        cResult[1] = fn;
+        cResult[1] = getTextLogo;
+        let tmp5 = getTextLogo;
+      } else {
+        tmp5 = cResult[1];
       }
       if (cResult[2] !== premiumType) {
-        class E {
-          constructor() {
-            tmp = premiumType;
-            tmp2 = PremiumTypes;
-            if (PremiumTypes.TIER_0 === premiumType) {
-              tmp7 = closure_1;
-              tmp8 = closure_2;
-              return closure_1(closure_2[12]);
-            } else if (tmp2.TIER_1 === tmp) {
-              tmp5 = closure_1;
-              tmp6 = closure_2;
-              return closure_1(closure_2[13]);
-            } else if (tmp2.TIER_2 === tmp) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              return closure_1(closure_2[14]);
-            } else {
-              return;
-            }
+        function getWumpus() {
+          if (PremiumTypes.TIER_0 === premiumType) {
+            return _modDef7144;
+          } else if (PremiumTypes.TIER_1 === premiumType) {
+            return _modDef7145;
+          } else if (PremiumTypes.TIER_2 === premiumType) {
+            return _modDef10057;
           }
         }
         cResult[2] = premiumType;
-        cResult[3] = E;
+        cResult[3] = getWumpus;
+        let tmp6 = getWumpus;
       } else {
-        class E {
-          constructor() {
-            tmp = premiumType;
-            tmp2 = PremiumTypes;
-            if (PremiumTypes.TIER_0 === premiumType) {
-              tmp7 = closure_1;
-              tmp8 = closure_2;
-              return closure_1(closure_2[12]);
-            } else if (tmp2.TIER_1 === tmp) {
-              tmp5 = closure_1;
-              tmp6 = closure_2;
-              return closure_1(closure_2[13]);
-            } else if (tmp2.TIER_2 === tmp) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              return closure_1(closure_2[14]);
-            } else {
-              return;
-            }
-          }
-        }
+        tmp6 = cResult[3];
       }
       if (cResult[4] === premiumType) {
-        class E {
-          constructor() {
-            tmp = premiumType;
-            tmp2 = PremiumTypes;
-            if (PremiumTypes.TIER_0 === premiumType) {
-              tmp7 = closure_1;
-              tmp8 = closure_2;
-              return closure_1(closure_2[12]);
-            } else if (tmp2.TIER_1 === tmp) {
-              tmp5 = closure_1;
-              tmp6 = closure_2;
-              return closure_1(closure_2[13]);
-            } else if (tmp2.TIER_2 === tmp) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              return closure_1(closure_2[14]);
-            } else {
-              return;
+        if (cResult[5] === tmp4.textLogoTier0) {
+          if (cResult[6] === tmp4.textLogoTier1) {
+            if (cResult[7] === tmp4.textLogoTier2) {
+              let tmp7 = cResult[8];
             }
+            if (cResult[9] === premiumType) {
+              if (cResult[10] === tmp4.wumpusLogoTier0) {
+                if (cResult[11] === tmp4.wumpusLogoTier1) {
+                  if (cResult[12] === tmp4.wumpusLogoTier2) {
+                    let tmp8 = cResult[13];
+                  }
+                  if (cResult[14] !== premiumType) {
+                    const tmp11 = getPremiumGradientColor(premiumType);
+                    cResult[14] = premiumType;
+                    cResult[15] = tmp11;
+                    let tmp9 = tmp11;
+                  } else {
+                    tmp9 = cResult[15];
+                  }
+                  if (cResult[16] !== premiumType) {
+                    const premiumTypeDisplayName = tmp(4726).getPremiumTypeDisplayName(premiumType);
+                    cResult[16] = premiumType;
+                    cResult[17] = premiumTypeDisplayName;
+                    let tmp12 = premiumTypeDisplayName;
+                    const tmpResult = tmp(4726);
+                  } else {
+                    tmp12 = cResult[17];
+                  }
+                  if (cResult[18] !== tmp7) {
+                    const tmp7Result = tmp7();
+                    cResult[18] = tmp7;
+                    cResult[19] = tmp7Result;
+                    let tmp14 = tmp7Result;
+                  } else {
+                    tmp14 = cResult[19];
+                  }
+                  if (cResult[20] !== tmp5) {
+                    const tmp5Result = tmp5();
+                    cResult[20] = tmp5;
+                    cResult[21] = tmp5Result;
+                    let tmp16 = tmp5Result;
+                  } else {
+                    tmp16 = cResult[21];
+                  }
+                  if (cResult[22] === tmp12) {
+                    if (cResult[23] === tmp14) {
+                      if (cResult[24] === tmp16) {
+                        let tmp18 = cResult[25];
+                      }
+                      if (cResult[26] === tmp4.header) {
+                        if (cResult[27] === tmp18) {
+                          if (cResult[28] === tmp9) {
+                            let tmp22 = cResult[29];
+                          }
+                          if (cResult[30] !== tmp8) {
+                            const tmp8Result = tmp8();
+                            cResult[30] = tmp8;
+                            cResult[31] = tmp8Result;
+                            let tmp27 = tmp8Result;
+                          } else {
+                            tmp27 = cResult[31];
+                          }
+                          if (cResult[32] === tmp4.wumpusLogo) {
+                            if (cResult[33] === tmp27) {
+                              let tmp29 = cResult[34];
+                            }
+                            if (cResult[35] !== tmp6) {
+                              const tmp6Result = tmp6();
+                              cResult[35] = tmp6;
+                              cResult[36] = tmp6Result;
+                              let tmp30 = tmp6Result;
+                            } else {
+                              tmp30 = cResult[36];
+                            }
+                            if (cResult[37] === tmp29) {
+                              if (cResult[38] === tmp30) {
+                                let tmp32 = cResult[39];
+                              }
+                              if (cResult[40] === children) {
+                                if (cResult[41] === tmp4.body) {
+                                  let tmp36 = cResult[42];
+                                }
+                                if (cResult[43] === tmp22) {
+                                  if (cResult[44] === tmp32) {
+                                    if (cResult[45] === tmp36) {
+                                      let tmp40 = cResult[46];
+                                    }
+                                    if (cResult[47] === tmp40) {
+                                      if (cResult[48] === style) {
+                                        let tmp44 = cResult[49];
+                                      }
+                                      return tmp44;
+                                    }
+                                    const obj2 = { variant: "surface-high", style, children: tmp40 };
+                                    const tmp46 = closure_7(tmp(6186).Card, obj2);
+                                    cResult[47] = tmp40;
+                                    cResult[48] = style;
+                                    cResult[49] = tmp46;
+                                    tmp44 = tmp46;
+                                  }
+                                }
+                                const obj3 = { children: null };
+                                const items = [tmp22, tmp32, tmp36];
+                                obj3.children = items;
+                                const tmp43 = closure_9(closure_8, obj3);
+                                cResult[43] = tmp22;
+                                cResult[44] = tmp32;
+                                cResult[45] = tmp36;
+                                cResult[46] = tmp43;
+                                tmp40 = tmp43;
+                              }
+                              const obj4 = { style: tmp4.body, children };
+                              const tmp39 = closure_7(closure_3, obj4);
+                              cResult[40] = children;
+                              cResult[41] = tmp4.body;
+                              cResult[42] = tmp39;
+                              tmp36 = tmp39;
+                            }
+                            const obj5 = {
+                              accessible: false,
+                              importantForAccessibility: "no",
+                              style: tmp29,
+                              source: tmp30,
+                            };
+                            const tmp35 = closure_7(closure_4, obj5);
+                            cResult[37] = tmp29;
+                            cResult[38] = tmp30;
+                            cResult[39] = tmp35;
+                            tmp32 = tmp35;
+                          }
+                          const items1 = [tmp4.wumpusLogo, tmp27];
+                          cResult[32] = tmp4.wumpusLogo;
+                          cResult[33] = tmp27;
+                          cResult[34] = items1;
+                          tmp29 = items1;
+                        }
+                      }
+                      const obj6 = {
+                        style: tmp4.header,
+                        start: tmp(1105).HorizontalGradient.START,
+                        end: tmp(1105).HorizontalGradient.END,
+                        colors: tmp9,
+                        children: tmp18,
+                      };
+                      const tmp26 = closure_7(LinearGradientDefault, obj6);
+                      cResult[26] = tmp4.header;
+                      cResult[27] = tmp18;
+                      cResult[28] = tmp9;
+                      cResult[29] = tmp26;
+                      tmp22 = tmp26;
+                    }
+                  }
+                  const obj7 = {
+                    accessible: true,
+                    accessibilityLabel: tmp12,
+                    accessibilityRole: "header",
+                    style: tmp14,
+                    source: tmp16,
+                  };
+                  const tmp21 = closure_7(closure_4, obj7);
+                  cResult[22] = tmp12;
+                  cResult[23] = tmp14;
+                  cResult[24] = tmp16;
+                  cResult[25] = tmp21;
+                  tmp18 = tmp21;
+                }
+              }
+            }
+            function getWumpusStyles() {
+              if (PremiumTypes.TIER_0 === premiumType) {
+                return closure_1.wumpusLogoTier0;
+              } else if (PremiumTypes.TIER_1 === premiumType) {
+                return closure_1.wumpusLogoTier1;
+              } else if (PremiumTypes.TIER_2 === premiumType) {
+                return closure_1.wumpusLogoTier2;
+              }
+            }
+            cResult[9] = premiumType;
+            cResult[10] = tmp4.wumpusLogoTier0;
+            cResult[11] = tmp4.wumpusLogoTier1;
+            cResult[12] = tmp4.wumpusLogoTier2;
+            cResult[13] = getWumpusStyles;
+            tmp8 = getWumpusStyles;
           }
         }
       }
-      const fn2 = function b() {
+      function getTextLogoStyles() {
         if (PremiumTypes.TIER_0 === premiumType) {
           return closure_1.textLogoTier0;
         } else if (PremiumTypes.TIER_1 === premiumType) {
@@ -143,12 +279,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else if (PremiumTypes.TIER_2 === premiumType) {
           return closure_1.textLogoTier2;
         }
-      };
+      }
       cResult[4] = premiumType;
-      cResult[5] = tmp2.textLogoTier0;
-      cResult[6] = tmp2.textLogoTier1;
-      cResult[7] = tmp2.textLogoTier2;
-      cResult[8] = fn2;
+      cResult[5] = tmp4.textLogoTier0;
+      cResult[6] = tmp4.textLogoTier1;
+      cResult[7] = tmp4.textLogoTier2;
+      cResult[8] = getTextLogoStyles;
+      tmp7 = getTextLogoStyles;
       const obj = premiumType(576);
     }
   : (premiumType) => {
@@ -180,11 +317,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2.style = textLogoTier2;
       if (PremiumTypes.TIER_0 === premiumType) {
-        let tmp5Result = _modDef13392;
+        let tmp5Result = _modDef13692;
       } else if (PremiumTypes.TIER_1 === premiumType) {
-        tmp5Result = _modDef13393;
+        tmp5Result = _modDef13693;
       } else if (PremiumTypes.TIER_2 === premiumType) {
-        tmp5Result = _modDef7749;
+        tmp5Result = _modDef8070;
       }
       obj2.source = tmp5Result;
       obj.children = React5(React4, obj2);
@@ -200,11 +337,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
       items1[1] = wumpusLogoTier2;
       if (PremiumTypes.TIER_0 === premiumType) {
-        let tmp5Result2 = _modDef6955;
+        let tmp5Result2 = _modDef7144;
       } else if (PremiumTypes.TIER_1 === premiumType) {
-        tmp5Result2 = _modDef6956;
+        tmp5Result2 = _modDef7145;
       } else if (PremiumTypes.TIER_2 === premiumType) {
-        tmp5Result2 = _modDef10460;
+        tmp5Result2 = _modDef10057;
       }
       const obj5 = { children: null };
       obj4.source = tmp5Result2;

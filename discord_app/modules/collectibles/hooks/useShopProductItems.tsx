@@ -106,7 +106,7 @@ export const getPurchasedItem = function getPurchasedItem(arg0, firstAvatarDecor
   return tmp;
 };
 export const useShopProductItems = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShopProductItems(arg0) {
       const cResult = c.c(2);
       if (cResult[0] !== arg0) {
         if (typeof ItemsSortingHat === "function") {
@@ -135,7 +135,7 @@ export const useShopProductItems = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp2;
     }
-  : (arg0) => {
+  : function useShopProductItems(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       return noop.useMemo(() => {

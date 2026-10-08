@@ -11,7 +11,7 @@ const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointForwardPreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (checkpointData) => {
+  ? function CheckpointForwardPreview(checkpointData) {
       const cResult = c.c(2);
       checkpointData = checkpointData.checkpointData;
       if (CheckpointVersions.V2025 === checkpointData.version) {
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return null;
       }
     }
-  : (checkpointData) => {
+  : function CheckpointForwardPreview(checkpointData) {
       checkpointData = checkpointData.checkpointData;
       if (CheckpointVersions.V2025 === checkpointData.version) {
         const obj = { checkpointData };

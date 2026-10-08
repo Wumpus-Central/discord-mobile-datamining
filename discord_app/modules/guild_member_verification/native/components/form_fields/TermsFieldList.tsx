@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   termsContainer: {
     padding: 16,
@@ -46,7 +46,7 @@ obj2.title = { marginBottom: 16 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TermsFieldListItem(arg0) {
       const cResult = c.c(17);
       ({ rowNumber, rowCount, rule, rulesChannelId } = arg0);
       const tmp4 = closure_8();
@@ -123,7 +123,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = formatToPlainStringResult;
       tmp7 = formatToPlainStringResult;
     }
-  : (rowNumber) => {
+  : function TermsFieldListItem(rowNumber) {
       rowNumber = rowNumber.rowNumber;
       ({ rowCount, rule, rulesChannelId } = rowNumber);
       const tmp = closure_8();
@@ -160,7 +160,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (rules) => {
+  ? function TermsFieldList(rules) {
       const cResult = rules(termsContainer[6]).c(20);
       rules = rules.rules;
       lastItem = rules.rulesChannelId;
@@ -278,7 +278,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn;
       let obj = rules(termsContainer[6]);
     }
-  : (rules) => {
+  : function TermsFieldList(rules) {
       rules = rules.rules;
       const rulesChannelId = rules.rulesChannelId;
       const tmp = closure_8();
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl = rules(1126).intl;
       obj2.children = intl.string(rules(1126).t.prJqwT);
       let items = [
-        closure_5(rules(4892).Text, obj2),
+        closure_5(rules(5086).Text, obj2),
         closure_5(View, {
           accessibilityRole: "list",
           children: rules.map((rule, index) => {

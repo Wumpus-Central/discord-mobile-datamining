@@ -11,7 +11,7 @@ function isGuildPowerupRollbackEnabledForSku(arg0, arg1) {
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, skuId, arg2) => {
+  ? function useGuildPowerupRollbackEnabled(arg0, skuId, arg2) {
       const cResult = c.c(3);
       const serverThemeRollbackEnabled = ServerThemeExperiment.useServerThemeRollbackEnabled(arg0, arg2);
       if (cResult[0] === serverThemeRollbackEnabled) {
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp6;
       tmp5 = tmp6;
     }
-  : (arg0, skuId, arg2) => {
+  : function useGuildPowerupRollbackEnabled(arg0, skuId, arg2) {
       const serverThemeRollbackEnabled = ServerThemeExperiment.useServerThemeRollbackEnabled(arg0, arg2);
       return skuId.skuId === Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID && serverThemeRollbackEnabled;
     };

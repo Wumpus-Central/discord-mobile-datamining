@@ -3,7 +3,7 @@ import LocaleStore from "../../../user_settings/LocaleStore.tsx";
 
 const obj = {};
 obj[fn(1085).RPCCommands.USER_SETTINGS_GET_LOCALE] = {
-  scope: fn(8025).OAuth2Scopes.IDENTIFY,
+  scope: fn(8433).OAuth2Scopes.IDENTIFY,
   handler() {
     return { locale: LocaleStore.locale };
   },

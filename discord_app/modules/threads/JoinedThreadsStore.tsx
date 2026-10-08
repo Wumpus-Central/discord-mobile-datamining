@@ -154,9 +154,9 @@ prototype["initialize"] = function initialize() {
 prototype["hasJoined"] = function hasJoined(id) {
   return id in obj;
 };
-prototype["joinTimestamp"] = function joinTimestamp(id) {
+prototype["joinTimestamp"] = function joinTimestamp(id2) {
   let joinTimestamp;
-  if (obj[id] != null) {
+  if (obj[id2] != null) {
     joinTimestamp = tmp.joinTimestamp;
   }
   return joinTimestamp;
@@ -301,7 +301,7 @@ obj = {
       if (null === guildId) {
         tmp3 = tmp5;
       } else if (isJoining) {
-        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "r" }, joinTimestamp: null };
+        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "create" }, joinTimestamp: null };
         const _Date = Date;
         const date = new Date();
         guildId = date;

@@ -13,7 +13,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/screen/native/useBaseAppContainerDimensions.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useBaseAppContainerDimensions() {
       const cResult = c.c(3);
       ({ height, width } = useWindowDimensionsDefault());
       const rect = useSafeAreaInsetsDefault();
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = size;
       tmp4 = size;
     }
-  : () => {
+  : function useBaseAppContainerDimensions() {
       let size = useWindowDimensionsDefault();
       const width = size.width;
       const height = size.height;

@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/hooks/usePlayingGameActivities.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function usePlayingGameActivities(arg0, arg1, arg2) {
       _require = arg0;
       importDefault = arg1;
       const cResult = require("c").c(7);
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function usePlayingGameActivities(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       let flag = arg2;

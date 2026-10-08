@@ -12,10 +12,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildHeaderActions.tsx");
 
 export const FavoritesGuildHeaderActionButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function FavoritesGuildHeaderActionButton() {
       const cResult = c.c(4);
       ({ isPreview, label, exitPreview } = useFavoritesGuildHeaderActionDefault());
-      const tmp4Result = importDefault(isPreview ? 6025 : 10992);
+      const tmp4Result = importDefault(isPreview ? 6211 : 11216);
       if (!isPreview) {
         exitPreview = FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet;
       }
@@ -42,12 +42,12 @@ export const FavoritesGuildHeaderActionButton = ReactCompilerGating.isReactCompi
       tmp7 = tmp8;
       const tmp5 = useFavoritesGuildHeaderActionDefault();
     }
-  : () => {
+  : function FavoritesGuildHeaderActionButton() {
       ({ isPreview, exitPreview, label } = useFavoritesGuildHeaderActionDefault());
       const obj = {
         variant: "secondary",
         size: "sm",
-        icon: importDefault(isPreview ? 6025 : 10992),
+        icon: importDefault(isPreview ? 6211 : 11216),
         onPress: null,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1,
@@ -60,7 +60,7 @@ export const FavoritesGuildHeaderActionButton = ReactCompilerGating.isReactCompi
       return jsx(IconButton.IconButton, {
         variant: "secondary",
         size: "sm",
-        icon: importDefault(isPreview ? 6025 : 10992),
+        icon: importDefault(isPreview ? 6211 : 11216),
         onPress: null,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1,

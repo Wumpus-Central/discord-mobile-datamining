@@ -26,7 +26,7 @@ const obj = {
   },
 };
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsBadgeDirectoryUpdatesEnabled(location) {
       const cResult = c.c(2);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -39,12 +39,14 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location: location.location }).enabled;
+  : function useIsBadgeDirectoryUpdatesEnabled(location) {
+      return closure_2.useConfig({ location: location.location }).enabled;
+    };
 const result = size.fileFinishedImporting("modules/badges/BadgeDirectoryUpdatesExperiment.tsx");
 
 export const useIsBadgeDirectoryUpdatesEnabled = tmp2;
 export const useIsBadgeDetailsSwipeEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsBadgeDetailsSwipeEnabled(location) {
       const cResult = c.c(2);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -58,7 +60,7 @@ export const useIsBadgeDetailsSwipeEnabled = ReactCompilerGating.isReactCompiler
       const config = closure_2.useConfig(tmp2);
       return config.enabled && config.swipeBetweenBadges;
     }
-  : (location) => {
+  : function useIsBadgeDetailsSwipeEnabled(location) {
       const config = closure_2.useConfig({ location: location.location });
       return config.enabled && config.swipeBetweenBadges;
     };

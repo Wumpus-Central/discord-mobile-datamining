@@ -1,15 +1,15 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx
-import thumbHashToRGBA from "../../../../../_runtime/15013_thumbHashToRGBA.js";
+import thumbHashToRGBA from "../../../../../_runtime/15275_thumbHashToRGBA.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const QuestDockMode = fn(5630).QuestDockMode;
-const QuestDockConstants = fn(14912);
+const QuestDockMode = fn(5977).QuestDockMode;
+const QuestDockConstants = fn(15174);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { image: null, overlay: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -34,10 +34,10 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function QuestDockBlurredHeaderPlaceholder(arg0) {
         const cResult = questDockWrapperSpecs(576).c(20);
         ({ layoutAnimation, layoutAnimatedStyle, opacityAnimatedStyle, placeholder } = arg0);
-        const context = noop.useContext(questDockWrapperSpecs(14913).QuestDockGestureContext);
+        const context = noop.useContext(questDockWrapperSpecs(15175).QuestDockGestureContext);
         const activeQuestDockMode = context.activeQuestDockMode;
         if (cResult[0] !== placeholder) {
           let thumbHashToDataURLResult = globalThis;
@@ -52,12 +52,12 @@ export default noop.memo(
             tmp6 = cResult[2];
           }
           const _Uint8Array = thumbHashToDataURLResult.Uint8Array;
-          thumbHashToDataURLResult = tmp(15013).thumbHashToDataURL(
+          thumbHashToDataURLResult = tmp(15275).thumbHashToDataURL(
             _Uint8Array.from(thumbHashToDataURLResult.atob(placeholder), tmp6),
           );
           cResult[0] = placeholder;
           cResult[1] = thumbHashToDataURLResult;
-          const tmpResult = tmp(15013);
+          const tmpResult = tmp(15275);
         } else {
           if (cResult[3] !== cResult[1]) {
             const obj2 = { uri: tmp5 };
@@ -98,7 +98,7 @@ export default noop.memo(
           O.__closure = obj3;
           O.__workletHash = 11176778421725;
           O.__initData = __initData;
-          const animatedStyle = tmp(4618).useAnimatedStyle(O);
+          const animatedStyle = tmp(4810).useAnimatedStyle(O);
           if (cResult[5] === animatedStyle) {
             if (cResult[6] === layoutAnimatedStyle) {
               if (cResult[7] === opacityAnimatedStyle) {
@@ -156,7 +156,7 @@ export default noop.memo(
                     tmp23[0] = tmp10.overlay;
                     tmp23[1] = opacityAnimatedStyle;
                     obj5.style = tmp23;
-                    const tmp24 = closure_6(activeQuestDockMode(6577), obj5);
+                    const tmp24 = closure_6(activeQuestDockMode(6753), obj5);
                     cResult[14] = opacityAnimatedStyle;
                     cResult[15] = tmp10.overlay;
                     cResult[16] = tmp24;
@@ -177,7 +177,7 @@ export default noop.memo(
                 }
                 obj6.style = tmp15;
                 obj6.layout = layoutAnimation;
-                const tmp19 = closure_6(activeQuestDockMode(4618).Image, obj6);
+                const tmp19 = closure_6(activeQuestDockMode(4810).Image, obj6);
                 cResult[10] = tmp8;
                 cResult[11] = layoutAnimation;
                 cResult[12] = tmp15;
@@ -193,11 +193,11 @@ export default noop.memo(
           cResult[8] = tmp10.image;
           cResult[9] = items;
           tmp15 = items;
-          const tmpResult2 = tmp(4618);
+          const tmpResult2 = tmp(4810);
         }
         const obj = questDockWrapperSpecs(576);
       }
-    : (arg0) => {
+    : function QuestDockBlurredHeaderPlaceholder(arg0) {
         ({ opacityAnimatedStyle, placeholder } = arg0);
         ({ layoutAnimation, layoutAnimatedStyle } = arg0);
         const context = noop.useContext(placeholder(activeQuestDockMode[8]).QuestDockGestureContext);

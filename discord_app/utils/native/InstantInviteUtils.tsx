@@ -8,7 +8,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let GuildChannelStore = fn(4513);
+let GuildChannelStore = fn(4705);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Permissions = fn(1085).Permissions;
@@ -262,7 +262,7 @@ export const shouldRenderInvite = function shouldRenderInvite(channels, guild) {
   return tmp6;
 };
 export const useShouldShowInviteInActionBar = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useShouldShowInviteInActionBar(id) {
       const _require = id;
       const cResult = require("c").c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -273,18 +273,18 @@ export const useShouldShowInviteInActionBar = ReactCompilerGating.isReactCompile
         first = cResult[0];
       }
       if (cResult[1] !== id.id) {
-        class N {
+        class S {
           constructor() {
             return closure_5.getChannels(closure_0.id);
           }
         }
         const items1 = [id.id];
         cResult[1] = id.id;
-        cResult[2] = N;
+        cResult[2] = S;
         cResult[3] = items1;
         let tmp7 = items1;
       } else {
-        class N {
+        class S {
           constructor() {
             return closure_5.getChannels(closure_0.id);
           }
@@ -292,22 +292,22 @@ export const useShouldShowInviteInActionBar = ReactCompilerGating.isReactCompile
         tmp7 = cResult[3];
       }
       const obj = require("c");
-      const stateFromStoresObject = require("initialize").useStateFromStoresObject(first, N, tmp7);
+      const stateFromStoresObject = require("initialize").useStateFromStoresObject(first, S, tmp7);
       if (id != null) {
-        class N {
+        class S {
           constructor() {
             return closure_5.getChannels(closure_0.id);
           }
         }
       }
       if (null != undefined) {
-        class N {
+        class S {
           constructor() {
             return closure_5.getChannels(closure_0.id);
           }
         }
         if (obj3.canViewInviteModal(PermissionStore, id)) {
-          class N {
+          class S {
             constructor() {
               return closure_5.getChannels(closure_0.id);
             }
@@ -316,46 +316,46 @@ export const useShouldShowInviteInActionBar = ReactCompilerGating.isReactCompile
         }
       }
       if (null == stateFromStoresObject) {
-        class N {
+        class S {
           constructor() {
             return closure_5.getChannels(closure_0.id);
           }
         }
         return true;
       } else {
-        class N {
+        class S {
           constructor() {
             return closure_5.getChannels(closure_0.id);
           }
         }
         if (null != arr4.find((channel) => PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel.channel))) {
-          class N {
+          class S {
             constructor() {
               return closure_5.getChannels(closure_0.id);
             }
           }
           return true;
         } else {
-          class N {
+          class S {
             constructor() {
               return closure_5.getChannels(closure_0.id);
             }
           }
           if (cResult[4] !== stateFromStoresObject[closure_4]) {
-            class N {
+            class S {
               constructor() {
                 return closure_5.getChannels(closure_0.id);
               }
             }
             if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-              class N {
+              class S {
                 constructor() {
                   return closure_5.getChannels(closure_0.id);
                 }
               }
               cResult[6] = tmp11;
             } else {
-              class N {
+              class S {
                 constructor() {
                   return closure_5.getChannels(closure_0.id);
                 }
@@ -365,7 +365,7 @@ export const useShouldShowInviteInActionBar = ReactCompilerGating.isReactCompile
             cResult[4] = arr3;
             cResult[5] = found;
           } else {
-            class N {
+            class S {
               constructor() {
                 return closure_5.getChannels(closure_0.id);
               }
@@ -376,7 +376,7 @@ export const useShouldShowInviteInActionBar = ReactCompilerGating.isReactCompile
       }
       const tmpResult = require("initialize");
     }
-  : (id) => {
+  : function useShouldShowInviteInActionBar(id) {
       const _require = id;
       const items = [GuildChannelStore];
       const items1 = [id.id];

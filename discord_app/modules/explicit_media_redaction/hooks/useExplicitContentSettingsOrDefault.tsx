@@ -9,7 +9,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useExplicitContentSettingOrDefault() {
       const cResult = c.c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserSettingsProtoStore];
@@ -93,7 +93,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp17 = obj5;
       const tmpResult = useStateFromStores;
     }
-  : () => {
+  : function useExplicitContentSettingOrDefault() {
       const items = [UserSettingsProtoStore];
       const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(items, () => {
         const textAndImages = settings.settings.textAndImages;
@@ -146,7 +146,7 @@ const result = size.fileFinishedImporting(
 
 export const useExplicitContentSettingOrDefault = tmp2;
 export const useGoreContentSettingOrDefault = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGoreContentSettingOrDefault() {
       const cResult = c.c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserSettingsProtoStore];
@@ -227,7 +227,7 @@ export const useGoreContentSettingOrDefault = ReactCompilerGating.isReactCompile
       tmp17 = obj5;
       const tmpResult = useStateFromStores;
     }
-  : () => {
+  : function useGoreContentSettingOrDefault() {
       const items = [UserSettingsProtoStore];
       const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(items, () => {
         const textAndImages = settings.settings.textAndImages;

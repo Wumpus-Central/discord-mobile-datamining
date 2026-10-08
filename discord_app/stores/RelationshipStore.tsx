@@ -92,12 +92,7 @@ let closure_14 = 0;
 const dependencyMap = {};
 let closure_16 = 0;
 let size = 0;
-let closure_19 = {
-  friends: "toCharArray$esjava$1",
-  blocked: "Symbol",
-  ignored: "IconComponent",
-  blockedOrIgnored: "Reflect",
-};
+let closure_19 = { friends: "code", blocked: "max", ignored: "shapes", blockedOrIgnored: "Array" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;

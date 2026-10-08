@@ -15,12 +15,12 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const useIntlLoaderStore = fn(2117).useIntlLoaderStore;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
-let closure_9 = fn(1379).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
+const useIntlLoaderStore = fn(2129).useIntlLoaderStore;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
+let closure_9 = fn(1391).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = {
     containerFloatingWrap: null,
@@ -79,7 +79,7 @@ let closure_12 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
 });
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHasSettingsBadge() {
       let tmp = PromotionsHooks.useUnseenOutboundPromotions().length > 0;
       const tmp2 = null != useTrialOffer.useTrialOffer(closure_9);
       const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(
@@ -94,7 +94,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp;
     }
-  : () => {
+  : function useHasSettingsBadge() {
       let tmp = PromotionsHooks.useUnseenOutboundPromotions().length > 0;
       const tmp2 = null != useTrialOffer.useTrialOffer(closure_9);
       const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(
@@ -122,7 +122,7 @@ function getFloatingNavBottomMargin(bottom) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouBannerDecorations.tsx");
 
-export default noop.memo((navigateToSettings) => {
+export default noop.memo(function YouBannerDecorations(navigateToSettings) {
   navigateToSettings = navigateToSettings.navigateToSettings;
   const navigateToPremium = navigateToSettings.navigateToPremium;
   let num = navigateToSettings.paddingBottom;

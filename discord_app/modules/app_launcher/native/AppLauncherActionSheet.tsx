@@ -3,8 +3,8 @@ import c from "../../../../_runtime/00576_c.js";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import ActionSheetContextDefault from "../../action_sheet/native/ActionSheetContext.tsx";
-import AppLauncherTypes from "../AppLauncherTypes.tsx";
 import AppLauncherContext from "AppLauncherContext.tsx";
+import AppLauncherTypes from "../AppLauncherTypes.tsx";
 import useDefaultAppLauncherWidth from "hooks/useDefaultAppLauncherWidth.tsx";
 import AppLauncherNavigatorDefault from "AppLauncherNavigator.tsx";
 import getAppDMApplication from "../../app_dms/getAppDMApplication.tsx";
@@ -12,11 +12,11 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const AppLauncherRouteName = fn(1489).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (chatInputRef) => {
+  ? function AppLauncherActionSheet(chatInputRef) {
       const cResult = c.c(21);
       chatInputRef = chatInputRef.chatInputRef;
       const channel = chatInputRef.channel;
@@ -36,31 +36,42 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[1];
       }
       if (cResult[2] !== chatInputRef) {
-        const fn = function y() {
-          const current = chatInputRef.current;
-          let applicationCommandManager;
-          if (current != null) {
-            applicationCommandManager = current.getApplicationCommandManager();
+        class L {
+          constructor() {
+            current = chatInputRef.current;
+            applicationCommandManager = undefined;
+            if (current != null) {
+              applicationCommandManager = current.getApplicationCommandManager();
+            }
+            return applicationCommandManager;
           }
-          return applicationCommandManager;
-        };
+        }
         cResult[2] = chatInputRef;
-        cResult[3] = fn;
-        let tmp10 = fn;
+        cResult[3] = L;
       } else {
-        tmp10 = cResult[3];
+        class L {
+          constructor() {
+            current = chatInputRef.current;
+            applicationCommandManager = undefined;
+            if (current != null) {
+              applicationCommandManager = current.getApplicationCommandManager();
+            }
+            return applicationCommandManager;
+          }
+        }
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        class E {
+        class L {
           constructor() {
-            current = closure_1.current;
+            current = chatInputRef.current;
+            applicationCommandManager = undefined;
             if (current != null) {
-              closeActionSheetResult = current.closeActionSheet();
+              applicationCommandManager = current.getApplicationCommandManager();
             }
-            return;
+            return applicationCommandManager;
           }
         }
-        class L {
+        class E {
           constructor() {
             current = closure_1.current;
             if (current != null) {
@@ -69,19 +80,20 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        cResult[4] = E;
-        cResult[5] = L;
+        cResult[4] = tmp13;
+        cResult[5] = E;
       } else {
-        class E {
+        class L {
           constructor() {
-            current = closure_1.current;
+            current = chatInputRef.current;
+            applicationCommandManager = undefined;
             if (current != null) {
-              closeActionSheetResult = current.closeActionSheet();
+              applicationCommandManager = current.getApplicationCommandManager();
             }
-            return;
+            return applicationCommandManager;
           }
         }
-        class L {
+        class E {
           constructor() {
             current = closure_1.current;
             if (current != null) {
@@ -91,17 +103,18 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      if (cResult[6] !== tmp10) {
-        class E {
+      if (cResult[6] !== L) {
+        class L {
           constructor() {
-            current = closure_1.current;
+            current = chatInputRef.current;
+            applicationCommandManager = undefined;
             if (current != null) {
-              closeActionSheetResult = current.closeActionSheet();
+              applicationCommandManager = current.getApplicationCommandManager();
             }
-            return;
+            return applicationCommandManager;
           }
         }
-        class L {
+        class E {
           constructor() {
             current = closure_1.current;
             if (current != null) {
@@ -110,32 +123,34 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        tmp14[1] = E;
-        tmp14[2] = L;
-        cResult[6] = tmp10;
-        cResult[7] = tmp14;
+        tmp15[1] = tmp13;
+        tmp15[2] = E;
+        cResult[6] = L;
+        cResult[7] = tmp15;
       } else {
-        class E {
+        class L {
           constructor() {
-            current = closure_1.current;
+            current = chatInputRef.current;
+            applicationCommandManager = undefined;
             if (current != null) {
-              closeActionSheetResult = current.closeActionSheet();
+              applicationCommandManager = current.getApplicationCommandManager();
             }
-            return;
+            return applicationCommandManager;
           }
         }
       }
       if (cResult[8] !== channel) {
-        class E {
+        class L {
           constructor() {
-            current = closure_1.current;
+            current = chatInputRef.current;
+            applicationCommandManager = undefined;
             if (current != null) {
-              closeActionSheetResult = current.closeActionSheet();
+              applicationCommandManager = current.getApplicationCommandManager();
             }
-            return;
+            return applicationCommandManager;
           }
         }
-        class L {
+        class E {
           constructor() {
             current = closure_1.current;
             if (current != null) {
@@ -144,41 +159,44 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        if (tmp17 != null) {
-          class E {
+        if (tmp18 != null) {
+          class L {
             constructor() {
-              current = closure_1.current;
+              current = chatInputRef.current;
+              applicationCommandManager = undefined;
               if (current != null) {
-                closeActionSheetResult = current.closeActionSheet();
+                applicationCommandManager = current.getApplicationCommandManager();
               }
-              return;
+              return applicationCommandManager;
             }
           }
         }
         cResult[8] = channel;
         cResult[9] = undefined;
       } else {
-        class E {
+        class L {
           constructor() {
-            current = closure_1.current;
+            current = chatInputRef.current;
+            applicationCommandManager = undefined;
             if (current != null) {
-              closeActionSheetResult = current.closeActionSheet();
+              applicationCommandManager = current.getApplicationCommandManager();
             }
-            return;
+            return applicationCommandManager;
           }
         }
       }
-      if (cResult[10] !== tmp16) {
-        class E {
+      if (cResult[10] !== tmp17) {
+        class L {
           constructor() {
-            current = closure_1.current;
+            current = chatInputRef.current;
+            applicationCommandManager = undefined;
             if (current != null) {
-              closeActionSheetResult = current.closeActionSheet();
+              applicationCommandManager = current.getApplicationCommandManager();
             }
-            return;
+            return applicationCommandManager;
           }
         }
-        class L {
+        class E {
           constructor() {
             current = closure_1.current;
             if (current != null) {
@@ -187,62 +205,64 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        tmp20[0] = AppLauncherRouteName.HOME;
-        tmp20[1] = tmp16;
-        cResult[10] = tmp16;
-        cResult[11] = tmp20;
+        tmp21[0] = AppLauncherRouteName.HOME;
+        tmp21[1] = tmp17;
+        cResult[10] = tmp17;
+        cResult[11] = tmp21;
       } else {
-        class E {
+        class L {
           constructor() {
-            current = closure_1.current;
+            current = chatInputRef.current;
+            applicationCommandManager = undefined;
             if (current != null) {
-              closeActionSheetResult = current.closeActionSheet();
+              applicationCommandManager = current.getApplicationCommandManager();
             }
-            return;
+            return applicationCommandManager;
           }
         }
       }
       if (cResult[12] === sharedValue) {
-        class E {
+        class L {
           constructor() {
-            current = closure_1.current;
+            current = chatInputRef.current;
+            applicationCommandManager = undefined;
             if (current != null) {
-              closeActionSheetResult = current.closeActionSheet();
+              applicationCommandManager = current.getApplicationCommandManager();
             }
-            return;
+            return applicationCommandManager;
           }
         }
       }
-      const ref3 = noop.useRef(tmp14);
+      const ref3 = noop.useRef(tmp15);
       cResult[12] = sharedValue;
       cResult[13] = sharedValue1;
       cResult[14] = tmp9;
-      cResult[15] = tmp20;
+      cResult[15] = tmp21;
       cResult[16] = defaultAppLauncherWidth;
       cResult[17] = jsx(AppLauncherNavigatorDefault, {
         bottomSheetIndex: sharedValue,
         bottomSheetPosition: sharedValue1,
         bottomSheetExpandReasonRef: ref1,
         context: tmp9,
-        chatInputRef: noop.useRef(tmp14),
+        chatInputRef: noop.useRef(tmp15),
         entrypoint: TEXT,
         keyboardCloseReasonRef: ref2,
         width: defaultAppLauncherWidth,
-        overrideParams: tmp20,
+        overrideParams: tmp21,
       });
-      const tmp21 = jsx(AppLauncherNavigatorDefault, {
+      const tmp22 = jsx(AppLauncherNavigatorDefault, {
         bottomSheetIndex: sharedValue,
         bottomSheetPosition: sharedValue1,
         bottomSheetExpandReasonRef: ref1,
         context: tmp9,
-        chatInputRef: noop.useRef(tmp14),
+        chatInputRef: noop.useRef(tmp15),
         entrypoint: TEXT,
         keyboardCloseReasonRef: ref2,
         width: defaultAppLauncherWidth,
-        overrideParams: tmp20,
+        overrideParams: tmp21,
       });
     }
-  : (arg0) => {
+  : function AppLauncherActionSheet(arg0) {
       ({ chatInputRef: require, channel } = arg0);
       const ref = noop.useRef(null);
       const sharedValue = ReanimatedRexport.useSharedValue(-1);
@@ -385,7 +405,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherActionSheet.tsx");
 
 export const useAppLauncherActionSheet = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAppLauncherActionSheet(arg0) {
       const cResult = c.c(5);
       [tmp4, tmp5] = noop.useState(false);
       require = tmp5;
@@ -426,7 +446,7 @@ export const useAppLauncherActionSheet = ReactCompilerGating.isReactCompilerEnab
       tmp6 = tmp7;
       const tmp3 = _slicedToArray(noop.useState(false), 2);
     }
-  : (arg0) => {
+  : function useAppLauncherActionSheet(arg0) {
       closure_0 = arg0;
       let tmp = _slicedToArray(noop.useState(false), 2);
       const first = tmp[0];

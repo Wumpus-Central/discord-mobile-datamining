@@ -96,7 +96,7 @@ export const filterOverrides = function filterOverrides(channelOverrides, arg1) 
   });
 };
 export const useShouldUseNewNotificationSystem = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShouldUseNewNotificationSystem() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserGuildSettingsStore];
@@ -112,7 +112,7 @@ export const useShouldUseNewNotificationSystem = ReactCompilerGating.isReactComp
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useShouldUseNewNotificationSystem() {
       const items = [UserGuildSettingsStore];
       return initialize.useStateFromStores(items, () => useNewNotifications.useNewNotifications);
     };

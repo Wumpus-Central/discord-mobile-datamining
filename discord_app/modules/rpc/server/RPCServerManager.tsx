@@ -8,6 +8,7 @@ import useThermalState from "../../device/useThermalState.tsx";
 import RPCHelpers from "../RPCHelpers.tsx";
 import transformUserDefault from "../helpers/transformUser.tsx";
 import ConjureVoiceSessionCoordinatorDefault from "../../conjure/voice/ConjureVoiceSessionCoordinator.tsx";
+import isPostMessageSocketDefault from "../helpers/isPostMessageSocket.tsx";
 import activityInstanceConnectedParticipants from "../helpers/activityInstanceConnectedParticipants.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import FramesStore from "../../frames/FramesStore.tsx";
@@ -24,7 +25,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 require = fn;
-const TransportTypes = fn(5323).TransportTypes;
+const TransportTypes = fn(5635).TransportTypes;
 const Constants = fn(1085);
 ({
   ActivityActionTypes: closure_17,
@@ -33,9 +34,9 @@ const Constants = fn(1085);
   RPCEvents: closure_20,
   RPCCloseCodes: closure_21,
 } = Constants);
-const ActivityLayoutMode = fn(2011).ActivityLayoutMode;
-const FrameLayoutModes = fn(8738).FrameLayoutModes;
-const MediaEngineContextTypes = fn(4921).MediaEngineContextTypes;
+const ActivityLayoutMode = fn(2023).ActivityLayoutMode;
+const FrameLayoutModes = fn(10613).FrameLayoutModes;
+const MediaEngineContextTypes = fn(5115).MediaEngineContextTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/RPCServerManager.tsx");
 class RPCServerManager {
@@ -213,12 +214,16 @@ class RPCServerManager {
           FOCUSED = ActivityLayoutMode.FOCUSED;
         }
         function targetsFrame(socket) {
-          let tmp = socket.socket.source.type === constants.POST_MESSAGE;
+          socket = socket.socket;
+          let tmp = isPostMessageSocketDefault(socket);
           if (tmp) {
-            frameByIframeId = frameByIframeId.getFrameByIframeId(socket.socket.source.iframeId);
+            frameByEmbeddedContext = frameByEmbeddedContext.getFrameByEmbeddedContext(
+              socket.context,
+              socket.source.iframeId,
+            );
             let id;
-            if (frameByIframeId != null) {
-              id = frameByIframeId.id;
+            if (frameByEmbeddedContext != null) {
+              id = frameByEmbeddedContext.id;
             }
             tmp = id === frameId;
           }
@@ -345,7 +350,7 @@ class RPCServerManager {
       const sockets = obj.rpcServer.sockets;
       const item = sockets.forEach((authorization) => {
         if (authorization.authorization.accessToken === accessToken) {
-          authorization.close(constants4.TOKEN_REVOKED, "Token revoked");
+          authorization.close(constants3.TOKEN_REVOKED, "Token revoked");
         }
       });
     };
@@ -385,7 +390,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(9064);
+            obj = obj(11142);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -400,7 +405,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(9064);
+            obj = obj(11142);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -415,7 +420,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(constants2.NONE, user);
           const rpcServer = tmp2.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(9064);
+            obj = obj(11142);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -430,17 +435,17 @@ class RPCServerManager {
         const set = new Set(updates.map((user) => user.user.id));
         function _loop() {
           relationshipType = relationshipType.getRelationshipType(item10023);
-          if (relationshipType === constants2.NONE) {
+          if (relationshipType === constants.NONE) {
             return 0;
           } else {
             const user = authStore.getUser(item10023);
             if (null == user) {
               return 0;
             } else {
-              obj = obj(9064);
+              obj = obj(11142);
               rpcServer = obj.transformBaseRelationship(relationshipType, user);
               rpcServer = rpcServer.rpcServer;
-              const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) =>
+              const result = rpcServer.dispatchToSubscriptions(constants2.RELATIONSHIP_UPDATE, {}, (socket) =>
                 closure_0(dependencyMap[24]).transformApplicationRelationship(closure_0, socket.socket.application.id),
               );
             }
@@ -457,17 +462,17 @@ class RPCServerManager {
       let rpcServer = obj;
       if (0 !== obj.rpcServer.subscriptions.length) {
         function _loop2() {
-          if (dependencyMap === constants2.NONE) {
+          if (dependencyMap === constants.NONE) {
             return 0;
           } else {
             const user = authStore.getUser(closure_1_1);
             if (null == user) {
               return 0;
             } else {
-              obj = obj(9064);
+              obj = obj(11142);
               rpcServer = obj.transformBaseRelationship(tmp, user);
               rpcServer = rpcServer.rpcServer;
-              const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) =>
+              const result = rpcServer.dispatchToSubscriptions(constants2.RELATIONSHIP_UPDATE, {}, (socket) =>
                 closure_0(dependencyMap[24]).transformApplicationRelationship(closure_0, socket.socket.application.id),
               );
             }
@@ -496,7 +501,7 @@ class RPCServerManager {
             closure_0 = obj.transformBaseRelationship(relationshipType, user);
             const rpcServer = tmp.rpcServer;
             const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-              obj = obj(9064);
+              obj = obj(11142);
               return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
             });
           }
@@ -618,20 +623,29 @@ prototype["init"] = function init() {
       application: app_id.application,
       source: app_id.source,
     };
-    AnalyticsUtilsDefault.track(constants.AUTHORIZED_APP_CONNECTED, {
+    AnalyticsUtilsDefault.track(constants2.AUTHORIZED_APP_CONNECTED, {
       app_id: app_id.application.id,
       transport: app_id.transport,
     });
   };
   this.rpcServer.onDisconnect = (id, reason) => {
     ConjureVoiceSessionCoordinatorDefault.releaseSocket(id.id);
-    DispatcherDefault.dispatch({
-      type: "RPC_APP_DISCONNECTED",
-      socketId: id.id,
-      application: id.application,
-      source: id.source,
-      reason,
-    });
+    const obj2 = { type: "RPC_APP_DISCONNECTED", socketId: id.id, application: id.application, reason };
+    const source = id.source;
+    if (source.type === constants.POST_MESSAGE) {
+      const obj3 = {};
+      const merged = Object.assign(obj2);
+      obj3.source = source;
+      obj3.context = id.context;
+      DispatcherDefault.dispatch(obj3);
+      const tmpResult = DispatcherDefault;
+    } else {
+      const obj4 = {};
+      const merged1 = Object.assign(obj2);
+      obj4.source = source;
+      DispatcherDefault.dispatch(obj4);
+      const tmpResult2 = DispatcherDefault;
+    }
   };
   const items = [ChannelStore, GuildMemberStore, PresenceStore, VoiceStateStore, MediaEngineStore, RTCConnectionStore];
   const batchedStoreListener = new self(504).BatchedStoreListener(items.concat(this.stores), () => {

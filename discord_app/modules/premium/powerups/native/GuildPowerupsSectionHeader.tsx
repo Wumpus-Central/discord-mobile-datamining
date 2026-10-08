@@ -17,7 +17,7 @@ let obj2 = { padding: nativeDefault.space.PX_16 };
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSectionHeader.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildPowerupsSectionHeader(arg0) {
       const cResult = c.c(9);
       ({ title, description } = arg0);
       const tmp4 = closure_5();
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp10;
       tmp9 = tmp10;
     }
-  : (arg0) => {
+  : function GuildPowerupsSectionHeader(arg0) {
       ({ title, description } = arg0);
       const tmp = closure_5();
       const obj2 = { style: tmp.headerContainer, children: null };

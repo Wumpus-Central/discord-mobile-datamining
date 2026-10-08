@@ -14,7 +14,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useStreamVolumeSettingValue() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
@@ -44,7 +44,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useStreamVolumeSettingValue() {
       let items = [ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
       return initialize.useStateFromStores(items, () => {
         const items = [ApplicationStreamingStore, AuthenticationStore];
@@ -64,9 +64,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return num;
       });
     };
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHasStreamVolumeSetting() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const config = MobileAudioOutputExperimentDefault.getConfig({ location: "StreamOutputVolumeSetting" });
@@ -93,7 +93,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }) && first.audioOutputPresent
       );
     }
-  : () => {
+  : function useHasStreamVolumeSetting() {
       const obj = MobileAudioOutputExperimentDefault;
       let items = [ApplicationStreamingStore, AuthenticationStore];
       return (
@@ -117,7 +117,7 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
     const intl = util.intl;
     return intl.string(util.t.pEAl4b);
   },
-  parent: fn(7645).MobileUserSettings.VOICE,
+  parent: fn(7966).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: tmp2,
   onValueChange: function onStreamValueSettingValueChange(arg0) {
@@ -135,7 +135,7 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
     AudioActionCreatorsDefault.setLocalVolume(tmp2.ownerId, arg0, BaseConnectionEvent.MediaEngineContextTypes.STREAM);
   },
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useHasStreamVolumeSetting() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const config = MobileAudioOutputExperimentDefault.getConfig({ location: "StreamOutputVolumeSetting" });
@@ -162,7 +162,7 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
           }) && first.audioOutputPresent
         );
       }
-    : () => {
+    : function useHasStreamVolumeSetting() {
         const obj = MobileAudioOutputExperimentDefault;
         let items = [ApplicationStreamingStore, AuthenticationStore];
         return (

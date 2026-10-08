@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/useLoginReset.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useLoginReset() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp2, tmp3);
     }
-  : () => {
+  : function useLoginReset() {
       const effect = noop.useEffect(
         () => () => {
           if (!authenticated.isAuthenticated()) {

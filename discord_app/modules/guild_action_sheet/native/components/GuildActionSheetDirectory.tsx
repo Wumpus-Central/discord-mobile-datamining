@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06119_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06298_BottomSheetModal.js";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildActionSheetActions from "GuildActionSheetActions.tsx";
 import GuildActionSheetHeaderDefault from "GuildActionSheetHeader.tsx";
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   actions: { paddingHorizontal: 16, gap: 24 },
@@ -24,7 +24,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetDirectory.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildActionSheetDirectory(arg0) {
       const cResult = c.c(19);
       ({ guild, expanded } = arg0);
       const tmp5 = closure_6();
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = tmp17;
       tmp16 = tmp17;
     }
-  : (arg0) => {
+  : function GuildActionSheetDirectory(arg0) {
       ({ guild, expanded } = arg0);
       if (expanded === undefined) {
         expanded = false;

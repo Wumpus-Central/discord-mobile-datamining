@@ -11,13 +11,13 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const GuildsBarConstants = fn(16262);
+const GuildsBarConstants = fn(16522);
 ({ GUILD_ITEM_HIT_SLOP: closure_8, useGuildWrapperSize: closure_9 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1085).EMPTY_NUX_SERVER;
-const MODE_CHANGE_PHYSICS = fn(10833).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(11182).MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_14 = createStyles.createStyles((width, arg1) => {
   const diff = width - 10;
   const obj = {
@@ -67,7 +67,7 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarItem
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function GuildsBarEmptyNUX() {
         const cResult = stateFromStores(token1[11]).c(36);
         let obj = stateFromStores(token1[11]);
         const token = stateFromStores(token1[12]).useToken(sharedValue(token1[8]).modules.mobile.GUILD_BAR_ITEM_SIZE);
@@ -89,38 +89,24 @@ export default noop.memo(
         const tmpResult = stateFromStores(token1[13]);
         sharedValue = stateFromStores(token1[14]).useSharedValue(false);
         if (cResult[2] !== sharedValue) {
-          class G {
-            constructor() {
-              result = closure_1.set(true);
-              return;
-            }
-          }
+          const fn2 = function w() {
+            const result = sharedValue.set(true);
+          };
           cResult[2] = sharedValue;
-          cResult[3] = G;
+          cResult[3] = fn2;
+          let tmp12 = fn2;
         } else {
-          class G {
-            constructor() {
-              result = closure_1.set(true);
-              return;
-            }
-          }
+          tmp12 = cResult[3];
         }
         if (cResult[4] !== sharedValue) {
-          class G {
-            constructor() {
-              result = closure_1.set(true);
-              return;
-            }
-          }
+          const fn3 = function f() {
+            const result = sharedValue.set(false);
+          };
           cResult[4] = sharedValue;
-          cResult[5] = tmp14;
+          cResult[5] = fn3;
+          let tmp13 = fn3;
         } else {
-          class G {
-            constructor() {
-              result = closure_1.set(true);
-              return;
-            }
-          }
+          tmp13 = cResult[5];
         }
         const tmpResult5 = stateFromStores(token1[14]);
         token1 = stateFromStores(token1[12]).useToken(tmp4(tmp2[8]).colors.BACKGROUND_SURFACE_HIGH);
@@ -149,141 +135,138 @@ export default noop.memo(
         const animatedStyle = tmpResult8.useAnimatedStyle(A);
         const enableHome = token2.useContext(tmp(tmp2[16]).HomeDrawerStateContext).enableHome;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          class G {
-            constructor() {
-              result = closure_1.set(true);
-              return;
-            }
-          }
-          tmp19[0] = handlePress;
-          cResult[6] = tmp19;
+          const obj4 = { onPress: handlePress };
+          cResult[6] = obj4;
+          let tmp17 = obj4;
         } else {
-          class G {
-            constructor() {
-              result = closure_1.set(true);
-              return;
-            }
-          }
+          tmp17 = cResult[6];
         }
-        sharedValue(token1[17])(tmp19);
+        const tmp19 = sharedValue(token1[17])(tmp17);
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          class G {
-            constructor() {
-              result = closure_1.set(true);
-              return;
-            }
-          }
-          const stringResult = obj9.string(tmp(tmp2[18]).t["3S2xmm"]);
+          const intl = tmp(tmp2[18]).intl;
+          const stringResult = intl.string(tmp(tmp2[18]).t["3S2xmm"]);
           cResult[7] = stringResult;
-          const tmp22 = stringResult;
+          let tmp20 = stringResult;
         } else {
-          class G {
-            constructor() {
-              result = closure_1.set(true);
-              return;
-            }
-          }
+          tmp20 = cResult[7];
         }
         if (cResult[8] !== stateFromStores) {
-          class G {
-            constructor() {
-              result = closure_1.set(true);
-              return;
-            }
-          }
-          tmp25[0] = stateFromStores;
+          const obj5 = { selected: stateFromStores };
           cResult[8] = stateFromStores;
-          cResult[9] = tmp25;
+          cResult[9] = obj5;
+          let tmp22 = obj5;
         } else {
-          class G {
-            constructor() {
-              result = closure_1.set(true);
-              return;
-            }
-          }
+          tmp22 = cResult[9];
         }
         if (cResult[10] === animatedStyle) {
-          class G {
-            constructor() {
-              result = closure_1.set(true);
-              return;
-            }
+          if (cResult[11] === tmp6.backdrop) {
+            let tmp23 = cResult[12];
           }
           if (cResult[13] !== tmp6.icon) {
-            class G {
-              constructor() {
-                result = closure_1.set(true);
-                return;
-              }
-            }
-            const obj4 = { style: tmp6.icon, source: tmp4(tmp2[19]), resizeMode: "contain" };
-            const tmp30 = closure_12(closure_5, obj4);
+            const obj6 = { style: tmp6.icon, source: tmp4(tmp2[19]), resizeMode: "contain" };
+            const tmp28 = closure_12(closure_5, obj6);
             cResult[13] = tmp6.icon;
-            cResult[14] = tmp30;
+            cResult[14] = tmp28;
+            let tmp25 = tmp28;
           } else {
-            class G {
-              constructor() {
-                result = closure_1.set(true);
-                return;
-              }
-            }
+            tmp25 = cResult[14];
           }
           if (cResult[15] !== (true === stateFromStores)) {
-            class G {
-              constructor() {
-                result = closure_1.set(true);
-                return;
-              }
-            }
-            const obj5 = { selected: tmp31 };
-            const tmp33 = closure_12(tmp(tmp2[20]).UnreadIndicator, obj5);
-            cResult[15] = tmp31;
-            cResult[16] = tmp33;
+            const obj7 = { selected: tmp29 };
+            const tmp32 = closure_12(tmp(tmp2[20]).UnreadIndicator, obj7);
+            cResult[15] = tmp29;
+            cResult[16] = tmp32;
+            let tmp30 = tmp32;
           } else {
-            class G {
-              constructor() {
-                result = closure_1.set(true);
-                return;
-              }
-            }
+            tmp30 = cResult[16];
           }
           if (cResult[17] === tmp6.guildIndicator) {
-            class G {
-              constructor() {
-                result = closure_1.set(true);
-                return;
-              }
+            if (cResult[18] === tmp30) {
+              let tmp33 = cResult[19];
             }
-            if (cResult[20] === G) {
-              class G {
-                constructor() {
-                  result = closure_1.set(true);
-                  return;
+            if (cResult[20] === tmp12) {
+              if (cResult[21] === tmp13) {
+                if (cResult[22] === tmp6.container) {
+                  if (cResult[23] === tmp33) {
+                    if (cResult[24] === tmp22) {
+                      if (cResult[25] === tmp23) {
+                        if (cResult[28] === enableHome) {
+                          if (cResult[29] === tmp19) {
+                            if (cResult[30] === tmp6.expandedChildren) {
+                              let tmp43 = cResult[31];
+                            }
+                            if (cResult[32] === tmp37) {
+                              if (cResult[33] === tmp6.root) {
+                                if (cResult[34] === tmp43) {
+                                  let tmp50 = cResult[35];
+                                }
+                                return tmp50;
+                              }
+                            }
+                            const obj8 = { style: tmp6.root, children: null };
+                            const items1 = [tmp37, tmp43];
+                            obj8.children = items1;
+                            const tmp52 = closure_13(tmp4(tmp2[21]), obj8);
+                            cResult[32] = tmp37;
+                            cResult[33] = tmp6.root;
+                            cResult[34] = tmp43;
+                            cResult[35] = tmp52;
+                            tmp50 = tmp52;
+                          }
+                        }
+                        let tmp44 = null;
+                        if (enableHome) {
+                          const obj9 = {};
+                          const merged = Object.assign(tmp19);
+                          obj9.style = tmp6.expandedChildren;
+                          obj9.collapsable = false;
+                          const obj10 = { title: null };
+                          const obj11 = {
+                            variant: "text-md/medium",
+                            color: "text-default",
+                            lineClamp: 1,
+                            children: null,
+                          };
+                          const intl2 = tmp(tmp2[18]).intl;
+                          obj11.children = intl2.string(tmp(tmp2[18]).t["3S2xmm"]);
+                          obj10.title = closure_12(tmp(tmp2[23]).Text, obj11);
+                          obj9.children = closure_12(tmp(tmp2[22]).HomeDrawerSharedItem, obj10);
+                          tmp44 = closure_12(tmp4(tmp2[21]), obj9);
+                          const tmp4Result = tmp4(tmp2[21]);
+                        }
+                        cResult[28] = enableHome;
+                        cResult[29] = tmp19;
+                        cResult[30] = tmp6.expandedChildren;
+                        cResult[31] = tmp44;
+                        tmp43 = tmp44;
+                      }
+                    }
+                  }
                 }
               }
             }
-            const obj6 = {
+            const obj12 = {
               style: tmp6.container,
-              onPressIn: G,
-              onPressOut: tmp14,
+              onPressIn: tmp12,
+              onPressOut: tmp13,
               onPress: handlePress,
               accessible: true,
               accessibilityRole: "button",
-              accessibilityLabel: tmp22,
-              accessibilityState: tmp25,
+              accessibilityLabel: tmp20,
+              accessibilityState: tmp22,
               hitSlop,
               children: null,
             };
-            const items1 = [tmp26, tmp28, tmp34];
-            obj6.children = items1;
-            cResult[20] = G;
-            cResult[21] = tmp14;
+            const items2 = [tmp23, tmp25, tmp33];
+            obj12.children = items2;
+            cResult[20] = tmp12;
+            cResult[21] = tmp13;
             cResult[22] = tmp6.container;
-            cResult[23] = tmp34;
-            cResult[24] = tmp25;
-            cResult[25] = tmp26;
-            cResult[26] = tmp28;
-            cResult[27] = closure_13(closure_4, obj6);
+            cResult[23] = tmp33;
+            cResult[24] = tmp22;
+            cResult[25] = tmp23;
+            cResult[26] = tmp25;
+            cResult[27] = closure_13(closure_4, obj12);
             class A {
               constructor() {
                 obj = closure_0(closure_2[15]);
@@ -297,21 +280,23 @@ export default noop.memo(
                 return obj1;
               }
             }
-            const tmp42 = closure_13(closure_4, obj6);
+            const tmp42 = closure_13(closure_4, obj12);
           }
-          const obj7 = { style: tmp6.guildIndicator, children: tmp32 };
-          const tmp37 = closure_12(closure_6, obj7);
+          const obj13 = { style: tmp6.guildIndicator, children: tmp30 };
+          const tmp36 = closure_12(closure_6, obj13);
           cResult[17] = tmp6.guildIndicator;
-          cResult[18] = tmp32;
-          cResult[19] = tmp37;
+          cResult[18] = tmp30;
+          cResult[19] = tmp36;
+          tmp33 = tmp36;
         }
-        const obj8 = { style: null };
-        const items2 = [tmp6.backdrop, animatedStyle];
-        obj8.style = items2;
-        const tmp27 = closure_12(sharedValue(token1[14]).View, obj8);
+        const obj14 = { style: null };
+        const items3 = [tmp6.backdrop, animatedStyle];
+        obj14.style = items3;
+        const tmp24 = closure_12(sharedValue(token1[14]).View, obj14);
         cResult[10] = animatedStyle;
         cResult[11] = tmp6.backdrop;
-        cResult[12] = tmp27;
+        cResult[12] = tmp24;
+        tmp23 = tmp24;
         const obj3 = {
           withSpring: stateFromStores(token1[15]).withSpring,
           selected: stateFromStores,
@@ -320,7 +305,7 @@ export default noop.memo(
           MODE_CHANGE_PHYSICS,
         };
       }
-    : () => {
+    : function GuildsBarEmptyNUX() {
         const token = stateFromStores(token1[12]).useToken(sharedValue(token1[8]).modules.mobile.GUILD_BAR_ITEM_SIZE);
         const tmp5 = closure_14(token, closure_9());
         let obj = stateFromStores(token1[12]);

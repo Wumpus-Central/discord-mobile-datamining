@@ -32,7 +32,7 @@ export const getIllustrationSource = function getIllustrationSource(theme, light
   return lightResult;
 };
 export const useIllustrationSource = ReactCompilerGating.isReactCompilerEnabled()
-  ? (fn) => {
+  ? function useIllustrationSource(fn) {
       const cResult = c.c(3);
       const theme = native.useThemeContext().theme;
       if (cResult[0] === fn) {
@@ -47,4 +47,6 @@ export const useIllustrationSource = ReactCompilerGating.isReactCompilerEnabled(
       cResult[2] = tmp3;
       tmp2 = tmp3;
     }
-  : (fn) => fn(native.useThemeContext().theme);
+  : function useIllustrationSource(fn) {
+      return fn(native.useThemeContext().theme);
+    };

@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = {
   button: {
     minWidth: 95,
@@ -59,7 +59,7 @@ obj2.labelSelected = { color: nativeDefault.unsafe_rawColors.BRAND_100 };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (item) => {
+  ? function OptionButton(item) {
       const cResult = c.c(20);
       item = item.item;
       ({ selected, onPress } = item);
@@ -159,7 +159,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       const tmpResult = useA11yRolesNative;
     }
-  : (item) => {
+  : function OptionButton(item) {
       item = item.item;
       ({ selected, onPress } = item);
       const tmp = closure_7();
@@ -200,7 +200,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = hasOwnProperty(Text_Text.Text, obj3);
       return hasOwnProperty(Pressables.PressableOpacity, obj2);
     };
-createStyles = fn(4896);
+createStyles = fn(5090);
 const obj9 = {
   row: { paddingVertical: 12, paddingHorizontal: 16 },
   label: null,
@@ -218,7 +218,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormSelect.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onChange) => {
+  ? function FormSelect(onChange) {
       const cResult = require("c").c(17);
       ({ label, options, value } = onChange);
       require = value;
@@ -305,7 +305,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = tmp9;
         tmp7 = tmp9;
       }
-      const fn = function l(item) {
+      function renderItem(item) {
         return hasOwnProperty(closure_8, {
           item: item.item,
           selected: item.item.value === value,
@@ -317,16 +317,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmp;
           },
         });
-      };
+      }
       cResult[0] = onChange;
       cResult[1] = value;
-      cResult[2] = fn;
-      tmp6 = fn;
+      cResult[2] = renderItem;
+      tmp6 = renderItem;
       const obj = require("c");
       tmp = require;
       tmp2 = onChange;
     }
-  : (onChange) => {
+  : function FormSelect(onChange) {
       ({ label, value } = onChange);
       require = value;
       onChange = onChange.onChange;

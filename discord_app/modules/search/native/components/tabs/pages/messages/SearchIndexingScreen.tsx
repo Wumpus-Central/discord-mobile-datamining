@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx
-import search_tracking_TrackingDefault from "../../../../tracking/Tracking.tsx";
+import tracking_TrackingDefault from "../../../../tracking/Tracking.tsx";
 import pages_ErrorScreenDefault from "../ErrorScreen.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
@@ -12,12 +12,12 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (searchContext) => {
+  ? function SearchIndexingScreen(searchContext) {
       const cResult = searchContext(576).c(7);
       searchContext = searchContext.searchContext;
       if (cResult[0] !== searchContext) {
         const fn = function s() {
-          search_tracking_TrackingDefault.trackSearchIndexing({ searchContext });
+          tracking_TrackingDefault.trackSearchIndexing({ searchContext });
         };
         const items = [searchContext];
         cResult[0] = searchContext;
@@ -31,11 +31,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp4, tmp5);
       if (cResult[3] !== searchContext) {
-        const indexingErrorText = searchContext(11987).getIndexingErrorText(searchContext);
+        const indexingErrorText = searchContext(12060).getIndexingErrorText(searchContext);
         cResult[3] = searchContext;
         cResult[4] = indexingErrorText;
         let tmp7 = indexingErrorText;
-        const tmpResult = searchContext(11987);
+        const tmpResult = searchContext(12060);
       } else {
         tmp7 = cResult[4];
       }
@@ -50,12 +50,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : (searchContext) => {
+  : function SearchIndexingScreen(searchContext) {
       searchContext = searchContext.searchContext;
       const items = [searchContext];
       const effect = noop.useEffect(() => {
-        search_tracking_TrackingDefault.trackSearchIndexing({ searchContext });
+        tracking_TrackingDefault.trackSearchIndexing({ searchContext });
       }, items);
-      const text = searchContext(11987).getIndexingErrorText(searchContext);
+      const text = searchContext(12060).getIndexingErrorText(searchContext);
       return jsx(pages_ErrorScreenDefault, { text });
     };

@@ -120,6 +120,7 @@ export const LinkingTypes = {
   GAME_PROFILE: "game-profile",
   MESSAGE_REQUESTS: "message-requests",
   AGE_VERIFICATION_AGEKEY_RETURN: "agekey-return",
+  CONJURE: "conjure",
 };
 export const ActivityPartyApplicationNames = { spotify: "Spotify" };
 export const CACHE_STORE_LAZY_KEY = "CacheStoreLazy";
@@ -151,7 +152,6 @@ export const UpsellTypes = {
   APP_ICONS: "app-icons",
   SOUNDBOARD: "soundboard",
   CLIENT_THEMES: "client-themes",
-  FOR_LATER: "for-later",
   SCHEDULED_MESSAGES: "scheduled-messages",
   STREAM_HIGH_QUALITY: "stream-high-quality",
   SHOP_MEMBER_PRICING: "shop-member-pricing",

@@ -19,13 +19,13 @@ const Constants = fn(1085);
   AnalyticsSections: closure_9,
   UpsellTypes: c10,
 } = Constants);
-const PremiumUpsellTypes = fn(1379).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUploadAvatar.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function useUploadAvatar(guildId) {
       const cResult = require("c").c(9);
       guildId = guildId.guildId;
       _require = guildId;
@@ -47,65 +47,34 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const stateFromStores = require("useStateFromStores").useStateFromStores(tmp5, A);
       if (cResult[2] !== analyticsLocations) {
-        class E {
-          constructor() {
-            obj = closure_1(closure_2[8]);
-            obj1 = {
-              initialUpsellKey: UpsellTypes.ANIMATED_AVATAR,
-              analyticsLocation: null,
-              analyticsProperties: null,
-              analyticsLocations,
-            };
-            obj5 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_OVERVIEW };
-            obj1.analyticsLocation = obj5;
-            obj6 = { type: PremiumUpsellTypes.ANIMATED_USER_AVATAR_MODAL };
-            obj1.analyticsProperties = obj6;
-            result = obj.handleShowUpsellAlert(obj1);
-            return;
-          }
-        }
+        const fn = function _() {
+          const obj2 = {
+            initialUpsellKey: constants3.ANIMATED_AVATAR,
+            analyticsLocation: { page: constants.USER_SETTINGS, section: constants2.SETTINGS_OVERVIEW },
+            analyticsProperties: { type: PremiumUpsellTypes.ANIMATED_USER_AVATAR_MODAL },
+            analyticsLocations,
+          };
+          const result = PremiumUpsellUtilsDefault.handleShowUpsellAlert(obj2);
+        };
         cResult[2] = analyticsLocations;
         class A {
           constructor() {
             return closure_1_5.getCurrentUser();
           }
         }
-        cResult[3] = E;
+        cResult[3] = fn;
+        let tmp9 = fn;
       } else {
-        class E {
-          constructor() {
-            obj = closure_1(closure_2[8]);
-            obj1 = {
-              initialUpsellKey: UpsellTypes.ANIMATED_AVATAR,
-              analyticsLocation: null,
-              analyticsProperties: null,
-              analyticsLocations,
-            };
-            obj5 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_OVERVIEW };
-            obj1.analyticsLocation = obj5;
-            obj6 = { type: PremiumUpsellTypes.ANIMATED_USER_AVATAR_MODAL };
-            obj1.analyticsProperties = obj6;
-            result = obj.handleShowUpsellAlert(obj1);
-            return;
-          }
-        }
+        tmp9 = cResult[3];
       }
+      closure_4 = tmp9;
       if (cResult[4] === guildId) {
-        class E {
-          constructor() {
-            obj = closure_1(closure_2[8]);
-            obj1 = {
-              initialUpsellKey: UpsellTypes.ANIMATED_AVATAR,
-              analyticsLocation: null,
-              analyticsProperties: null,
-              analyticsLocations,
-            };
-            obj5 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_OVERVIEW };
-            obj1.analyticsLocation = obj5;
-            obj6 = { type: PremiumUpsellTypes.ANIMATED_USER_AVATAR_MODAL };
-            obj1.analyticsProperties = obj6;
-            result = obj.handleShowUpsellAlert(obj1);
-            return;
+        if (cResult[5] === tmp4) {
+          if (cResult[6] === tmp9) {
+            if (cResult[7] === stateFromStores) {
+              let tmp10 = cResult[8];
+            }
+            return tmp10;
           }
         }
       }
@@ -141,12 +110,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let originalMd5;
                 closure_128_3 = undefined;
                 closure_128_4 = undefined;
-                analyticsLocations(4860).hideActionSheet();
-                const obj13 = analyticsLocations(4860);
+                analyticsLocations(5054).hideActionSheet();
+                const obj13 = analyticsLocations(5054);
                 const obj6 = { size };
                 c2 = 1;
                 c3 = 1;
-                const obj8 = { value: analyticsLocations(7287).openImagePicker(obj6), done: false };
+                const obj8 = { value: analyticsLocations(7741).openImagePicker(obj6), done: false };
                 return obj8;
               }
             } else if (arg0 === 1) {
@@ -165,32 +134,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 let canUseAnimatedAvatarResult = c2;
                 if (!c2) {
-                  canUseAnimatedAvatarResult = analyticsLocations(4534).canUseAnimatedAvatar(c3);
-                  const obj = analyticsLocations(4534);
+                  canUseAnimatedAvatarResult = analyticsLocations(4726).canUseAnimatedAvatar(c3);
+                  const obj = analyticsLocations(4726);
                 }
                 closure_128_3 = canUseAnimatedAvatarResult;
                 if (isGIF(base64)) {
                   if (!closure_128_3) {
-                    E();
+                    closure_1_4();
                   }
                 }
               }
               const obj10 = { imageUri: base64, description: null, originalMd5: null };
-              const obj2 = guildId(14435);
-              obj10.description = guildId(7851).generateAvatarDescription();
+              const obj2 = guildId(14660);
+              obj10.description = guildId(8269).generateAvatarDescription();
               obj10.originalMd5 = originalMd5;
               closure_128_4 = obj2.createPendingImage(obj10);
               if (c2) {
-                tmp30(7849).setTryItOutAvatar(closure_128_4);
-                const tmp30Result = tmp30(7849);
+                tmp30(8267).setTryItOutAvatar(closure_128_4);
+                const tmp30Result = tmp30(8267);
               } else {
                 const obj11 = { guildId, avatar: closure_128_4 };
-                tmp30(7846).setPendingChanges(obj11);
-                const tmp30Result2 = tmp30(7846);
-                const result = guildId(7848).announcePendingAvatarChange("set");
-                const obj7 = guildId(7848);
+                tmp30(8264).setPendingChanges(obj11);
+                const tmp30Result2 = tmp30(8264);
+                const result = guildId(8266).announcePendingAvatarChange("set");
+                const obj7 = guildId(8266);
               }
-              const obj4 = guildId(7851);
+              const obj4 = guildId(8269);
             }
           } catch (tmp40) {
             c3 = tmp;
@@ -198,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       });
-      const fn = function () {
+      function t5() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -207,15 +176,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      };
+      }
       cResult[4] = guildId;
       cResult[5] = undefined !== isTryItOut && isTryItOut;
-      cResult[6] = E;
+      cResult[6] = tmp9;
       cResult[7] = stateFromStores;
-      cResult[8] = fn;
+      cResult[8] = t5;
+      tmp10 = t5;
       const tmpResult = require("useStateFromStores");
     }
-  : (guildId) => {
+  : function useUploadAvatar(guildId) {
       guildId = guildId.guildId;
       let flag = guildId.isTryItOut;
       if (flag === undefined) {
@@ -271,12 +241,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let originalMd5;
                   closure_128_3 = undefined;
                   closure_128_4 = undefined;
-                  tmp2(4860).hideActionSheet();
-                  const obj13 = tmp2(4860);
+                  tmp2(5054).hideActionSheet();
+                  const obj13 = tmp2(5054);
                   const obj6 = { size };
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj8 = { value: tmp2(7287).openImagePicker(obj6), done: false };
+                  const obj8 = { value: tmp2(7741).openImagePicker(obj6), done: false };
                   return obj8;
                 }
               } else if (arg0 === 1) {
@@ -295,8 +265,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   let canUseAnimatedAvatarResult = closure_129_1;
                   if (!closure_129_1) {
-                    canUseAnimatedAvatarResult = tmp2(4534).canUseAnimatedAvatar(closure_129_3);
-                    const obj = tmp2(4534);
+                    canUseAnimatedAvatarResult = tmp2(4726).canUseAnimatedAvatar(closure_129_3);
+                    const obj = tmp2(4726);
                   }
                   closure_128_3 = canUseAnimatedAvatarResult;
                   if (isGIF(base64)) {
@@ -306,21 +276,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj10 = { imageUri: base64, description: null, originalMd5: null };
-                const obj2 = v0(14435);
-                obj10.description = v0(7851).generateAvatarDescription();
+                const obj2 = v0(14660);
+                obj10.description = v0(8269).generateAvatarDescription();
                 obj10.originalMd5 = originalMd5;
                 closure_128_4 = obj2.createPendingImage(obj10);
                 if (closure_129_1) {
-                  tmp30(7849).setTryItOutAvatar(closure_128_4);
-                  const tmp30Result = tmp30(7849);
+                  tmp30(8267).setTryItOutAvatar(closure_128_4);
+                  const tmp30Result = tmp30(8267);
                 } else {
                   const obj11 = { guildId: closure_129_0, avatar: closure_128_4 };
-                  tmp30(7846).setPendingChanges(obj11);
-                  const tmp30Result2 = tmp30(7846);
-                  const result = v0(7848).announcePendingAvatarChange("set");
-                  const obj7 = v0(7848);
+                  tmp30(8264).setPendingChanges(obj11);
+                  const tmp30Result2 = tmp30(8264);
+                  const result = v0(8266).announcePendingAvatarChange("set");
+                  const obj7 = v0(8266);
                 }
-                const obj4 = v0(7851);
+                const obj4 = v0(8269);
               }
             } catch (tmp40) {
               c3 = tmp;

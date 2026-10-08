@@ -7,22 +7,22 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import client_themes_ClientThemesUtils from "../../../client_themes/native/ClientThemesUtils.tsx";
 import useChatLayoutDefault from "../../../chat/native/useChatLayout.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
 import useYouBarTotalHeight from "hooks/useYouBarTotalHeight.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ClientThemesBackgroundStore from "../../../client_themes/ClientThemesBackgroundStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(14915).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(16262).GUILD_LIST_WIDTH;
+let closure_5 = fn(15177).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(16522).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ container: { position: "absolute", bottom: 0, left: 0, right: 0 } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useYouBarGradientBackground() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ClientThemesBackgroundStore];
@@ -44,7 +44,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return token;
     }
-  : () => {
+  : function useYouBarGradientBackground() {
       const items = [ClientThemesBackgroundStore];
       const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
       let token = null;
@@ -59,7 +59,7 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/You
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function YouBarFloatingShade() {
         const cResult = c.c(36);
         const tmp4 = closure_10();
         const youBarTotalHeight = useYouBarTotalHeight.useYouBarTotalHeight();
@@ -240,7 +240,7 @@ export default noop.memo(
         tmp16 = tmp17;
         const tmpResult4 = useToken;
       }
-    : () => {
+    : function YouBarFloatingShade() {
         const tmp = closure_10();
         const youBarTotalHeight = useYouBarTotalHeight.useYouBarTotalHeight();
         const sum = youBarTotalHeight + closure_5;

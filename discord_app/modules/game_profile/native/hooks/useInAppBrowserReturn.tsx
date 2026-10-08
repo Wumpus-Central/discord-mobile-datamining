@@ -10,7 +10,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/hooks/useInAppBrowserReturn.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (gameId) => {
+  ? function useInAppBrowserReturn(gameId) {
       const cResult = gameId(576).c(4);
       gameId = gameId.gameId;
       const scrollY = gameId.scrollY;
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp2 = fn;
       let obj = gameId(576);
     }
-  : (gameId) => {
+  : function useInAppBrowserReturn(gameId) {
       gameId = gameId.gameId;
       const scrollY = gameId.scrollY;
       const items = [gameId, scrollY];

@@ -18,8 +18,8 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 let c7 = "heading-md/semibold";
 let c8 = "text-sm/medium";
-let closure_9 = fn(14912).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
-const createStyles = fn(4896);
+let closure_9 = fn(15174).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({
   wrapper: {
     alignItems: "center",
@@ -40,7 +40,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function QuestDockEnrolledHeader() {
         const cResult = c.c(22);
         const questDockQuest = QuestDockCreativeContext.useQuestDockQuest();
         const tmp5 = closure_10();
@@ -158,7 +158,7 @@ export default noop.memo(
         cResult[2] = obj12;
         tmp9 = obj12;
       }
-    : () => {
+    : function QuestDockEnrolledHeader() {
         const questDockQuest = QuestDockCreativeContext.useQuestDockQuest();
         const tmp4 = closure_10();
         const questTaskDetails = hooks_QuestHooks.useQuestTaskDetails(questDockQuest);

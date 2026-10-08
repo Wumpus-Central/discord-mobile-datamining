@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/native/components/OngoingCallTimer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function OnGoingCallTimer(arg0) {
       const cResult = channelId(576).c(9);
       ({ style, channelId } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = tmp13;
       const tmpResult = channelId(504);
     }
-  : (style) => {
+  : function OnGoingCallTimer(style) {
       const channelId = style.channelId;
       const items = [CallStore];
       const items1 = [channelId];

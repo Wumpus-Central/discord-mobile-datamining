@@ -7,14 +7,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
-const UserProfileThemeTypes = fn(6714).UserProfileThemeTypes;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const UserProfileThemeTypes = fn(6891).UserProfileThemeTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ShopThisLookMarketingCoachmarkImage() {
       const cResult = c.c(3);
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -39,15 +39,17 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => (
-      <View style={closure_7().imageContainer}>
-        {jsx(BumpingFistsSpotIllustration.BumpingFistsSpotIllustration, {
-          width: 100,
-          height: 56,
-          resizeMode: "contain",
-        })}
-      </View>
-    );
+  : function ShopThisLookMarketingCoachmarkImage() {
+      return (
+        <View style={closure_7().imageContainer}>
+          {jsx(BumpingFistsSpotIllustration.BumpingFistsSpotIllustration, {
+            width: 100,
+            height: 56,
+            resizeMode: "contain",
+          })}
+        </View>
+      );
+    };
 ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -55,7 +57,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (visible) => {
+  ? function ShopThisLookMarketingCoachmark(visible) {
       const cResult = visible(onDismiss[7]).c(20);
       visible = visible.visible;
       onDismiss = visible.onDismiss;
@@ -66,26 +68,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp4 = cResult[2];
         }
         if (cResult[3] !== onDismiss) {
-          class E {
-            constructor() {
-              closure_3.current = true;
-              tmp = onDismiss(ContentDismissActionType.USER_DISMISS);
-              return;
-            }
-          }
+          const fn2 = function p() {
+            closure_3.current = true;
+            onDismiss(ContentDismissActionType.USER_DISMISS);
+          };
           cResult[3] = onDismiss;
-          cResult[4] = E;
+          cResult[4] = fn2;
+          let tmp5 = fn2;
         } else {
-          class E {
-            constructor() {
-              closure_3.current = true;
-              tmp = onDismiss(ContentDismissActionType.USER_DISMISS);
-              return;
-            }
-          }
+          tmp5 = cResult[4];
         }
         if (cResult[5] !== visible) {
-          class I {
+          class E {
             constructor() {
               if (visible) {
                 tmp = closure_0;
@@ -102,11 +96,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const items = [visible];
           cResult[5] = visible;
-          cResult[6] = I;
+          cResult[6] = E;
           cResult[7] = items;
           let tmp7 = items;
         } else {
-          class I {
+          class E {
             constructor() {
               if (visible) {
                 tmp = closure_0;
@@ -123,9 +117,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           tmp7 = cResult[7];
         }
-        const effect = obj2.useEffect(I, tmp7);
+        const effect = obj2.useEffect(E, tmp7);
         if (cResult[8] === onDismiss) {
-          class I {
+          class E {
             constructor() {
               if (visible) {
                 tmp = closure_0;
@@ -143,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const effect1 = obj2.useEffect(tmp9, tmp10);
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            class I {
+            class E {
               constructor() {
                 if (visible) {
                   tmp = closure_0;
@@ -166,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp14 = stringResult1;
             const tmp13 = stringResult;
           } else {
-            class I {
+            class E {
               constructor() {
                 if (visible) {
                   tmp = closure_0;
@@ -185,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol2 = Symbol;
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-            class L {
+            class D {
               constructor() {
                 return closure_1_6(closure_1_8, {});
               }
@@ -193,11 +187,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl2 = tmp(tmp2[10]).intl;
             const stringResult2 = intl2.string(tmp(tmp2[10]).t["bqZVd/"]);
             cResult[14] = stringResult2;
-            cResult[15] = L;
-            let tmp18 = L;
+            cResult[15] = D;
+            let tmp18 = D;
             const tmp17 = stringResult2;
           } else {
-            class L {
+            class D {
               constructor() {
                 return closure_1_6(closure_1_8, {});
               }
@@ -205,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp18 = cResult[15];
           }
           if (cResult[16] === tmp4) {
-            class L {
+            class D {
               constructor() {
                 return closure_1_6(closure_1_8, {});
               }
@@ -220,14 +214,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             buttonLabel: tmp17,
             buttonVariant: "primary",
             onButtonPress: tmp4,
-            onDismiss: E,
+            onDismiss: tmp5,
           };
           cResult[16] = tmp4;
-          cResult[17] = E;
+          cResult[17] = tmp5;
           cResult[18] = visible;
           cResult[19] = obj4;
         }
-        const fn2 = function f() {
+        const fn3 = function _() {
           return visible
             ? () => {
                 const result = visible(onDismiss[9]).trackShopThisLookMenuAction(
@@ -244,10 +238,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [visible, onDismiss];
         cResult[8] = onDismiss;
         cResult[9] = visible;
-        cResult[10] = fn2;
+        cResult[10] = fn3;
         cResult[11] = items1;
         tmp10 = items1;
-        tmp9 = fn2;
+        tmp9 = fn3;
       }
       const fn = function u() {
         closure_3.current = true;
@@ -264,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn;
       let obj = visible(onDismiss[7]);
     }
-  : (visible) => {
+  : function ShopThisLookMarketingCoachmark(visible) {
       visible = visible.visible;
       const onDismiss = visible.onDismiss;
       const onPress = visible.onPress;

@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupOnToggle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useGuildPowerupOnToggle(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(7);
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp6 = fn;
     }
-  : (arg0, arg1) => {
+  : function useGuildPowerupOnToggle(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
       [tmp2, _slicedToArray] = noop.useState(false);

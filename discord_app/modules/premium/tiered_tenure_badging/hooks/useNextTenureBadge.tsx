@@ -8,7 +8,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useNextTenureBadge.tsx");
 
 export const useNextTenureBadge = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useNextTenureBadge() {
       const tieredTenureBadgeData = useTenureBadging.useTieredTenureBadgeData();
       if (null == tieredTenureBadgeData) {
         return null;
@@ -26,7 +26,7 @@ export const useNextTenureBadge = ReactCompilerGating.isReactCompilerEnabled()
         return tmp7;
       }
     }
-  : () => {
+  : function useNextTenureBadge() {
       const tieredTenureBadgeData = useTenureBadging.useTieredTenureBadgeData();
       if (null == tieredTenureBadgeData) {
         return null;

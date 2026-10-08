@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sheet/native/useBottomSheetRef.tsx");
 
 export const useBottomSheetRef = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useBottomSheetRef() {
       const cResult = c.c(2);
       const ref = noop.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -32,7 +32,7 @@ export const useBottomSheetRef = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : () => {
+  : function useBottomSheetRef() {
       const ref = noop.useRef(null);
       const items = [ref];
       return {

@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/frames/panel/native/FramePane
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function FramePanelSystemUIManager() {
         const cResult = c.c(3);
         const context = noop.useContext(FramePanelStateContextDefault);
         ({ mode, wrapperDimensions } = context);
@@ -32,7 +32,7 @@ export default noop.memo(
         tmp5 = tmp6;
         const obj2 = { mode, isWindowLandscape: wrapperDimensions.isWindowLandscape };
       }
-    : () => {
+    : function FramePanelSystemUIManager() {
         const context = noop.useContext(FramePanelStateContextDefault);
         ({ mode, wrapperDimensions } = context);
         return jsx(ActivityPanelSystemUIManager.BaseActivityPanelSystemUIManager, {

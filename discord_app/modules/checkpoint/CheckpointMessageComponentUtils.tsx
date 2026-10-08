@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import util from "../../intl/index.native.tsx";
 import Server from "../../flow/Server.tsx";
-import _modDef3039 from "Checkpoint.messages.js";
+import _modDef3083 from "Checkpoint.messages.js";
 import CheckpointTrait from "../../../discord_common/js/shared/shared-constants/CheckpointTrait.tsx";
 import CheckpointCharacterAssets from "CheckpointCharacterAssets.tsx";
 import CheckpointConstants from "CheckpointConstants.tsx";
@@ -239,7 +239,7 @@ export const getCheckpointDataFromMessage = function getCheckpointDataFromMessag
 export const getCheckpointLabel = function getCheckpointLabel(checkpointDataFromMessage) {
   if (V2025.V2025 === checkpointDataFromMessage.version) {
     const intl = util.intl;
-    return intl.string(_modDef3039.goiR2u);
+    return intl.string(_modDef3083.goiR2u);
   } else {
     const V2026 = tmp.V2026;
     return null;

@@ -4,10 +4,10 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import TableRadioGroup from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import UserSettingsVoice from "UserSettingsVoice.tsx";
 import UserSettingsVoiceUtils from "UserSettingsVoiceUtils.tsx";
 import NoiseCancellationUtils from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   optionsParentContainer: { marginTop: 12 },
   optionsDescriptionContainer: { paddingTop: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_4 },
@@ -28,7 +28,7 @@ let obj2 = {
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function VoiceProcessingOptions() {
       const cResult = c.c(38);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -49,16 +49,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult3 = UserSettingsVoiceUtils;
       const noiseCancellationDeferredToSystem = NoiseCancellationUtils.useNoiseCancellationDeferredToSystem();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function h(arg0) {
+        function noiseCancellationChanged(arg0) {
           AudioActionCreatorsDefault.setNoiseCancellation(
             arg0 === require("UserSettingsVoiceUtils").NoiseSuppressionOpt.KRISP,
           );
           AudioActionCreatorsDefault.setNoiseSuppression(
             arg0 === require("UserSettingsVoiceUtils").NoiseSuppressionOpt.STANDARD,
           );
-        };
-        cResult[2] = fn2;
-        let tmp11 = fn2;
+        }
+        cResult[2] = noiseCancellationChanged;
+        let tmp11 = noiseCancellationChanged;
       } else {
         tmp11 = cResult[2];
       }
@@ -302,7 +302,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult4 = NoiseCancellationUtils;
     }
-  : () => {
+  : function VoiceProcessingOptions() {
       let krisp = closure_8();
       let EUNgko = require;
       let tmp = dependencyMap;
@@ -407,7 +407,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceProcessing.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsVoiceProcessing() {
       const cResult = inputMode(576).c(21);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MediaEngineStore];
@@ -452,10 +452,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = {
           label: tmp10,
           value: echoCancellation,
-          onValueChange: inputMode(9686).handleEchoCancellationChange,
+          onValueChange: inputMode(10875).handleEchoCancellationChange,
         };
-        obj2.children = closure_5(inputMode(6705).TableSwitchRow, obj3);
-        const tmp14 = closure_5(inputMode(9670).UserSettingsTableRowGroup, obj2);
+        obj2.children = closure_5(inputMode(6882).TableSwitchRow, obj3);
+        const tmp14 = closure_5(inputMode(10859).UserSettingsTableRowGroup, obj2);
         cResult[4] = echoCancellation;
         cResult[5] = tmp14;
         let tmp12 = tmp14;
@@ -487,9 +487,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           label: tmp19,
           subLabel: tmp20,
           value: automaticGainControl,
-          onValueChange: inputMode(9686).handleAutomaticGainControlChange,
+          onValueChange: inputMode(10875).handleAutomaticGainControlChange,
         };
-        const tmp25 = closure_5(inputMode(6705).TableSwitchRow, obj4);
+        const tmp25 = closure_5(inputMode(6882).TableSwitchRow, obj4);
         cResult[9] = automaticGainControl;
         cResult[10] = tmp25;
         let tmp23 = tmp25;
@@ -523,7 +523,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { hasIcons: false, children: null };
           const items2 = [tmp23, tmp26];
           obj6.children = items2;
-          const tmp31 = closure_6(inputMode(9670).UserSettingsTableRowGroup, obj6);
+          const tmp31 = closure_6(inputMode(10859).UserSettingsTableRowGroup, obj6);
           cResult[15] = tmp23;
           cResult[16] = tmp26;
           cResult[17] = tmp31;
@@ -541,7 +541,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj7.onValueChange = function onValueChange(vadUseKrisp) {
           return AudioActionCreatorsDefault.setMode(inputMode, { vadUseKrisp });
         };
-        tmp27 = closure_5(inputMode(6705).TableSwitchRow, obj7);
+        tmp27 = closure_5(inputMode(6882).TableSwitchRow, obj7);
       }
       cResult[11] = advancedVoiceActivitySupported;
       cResult[12] = inputMode;
@@ -550,7 +550,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp26 = tmp27;
       const tmpResult = inputMode(504);
     }
-  : () => {
+  : function UserSettingsVoiceProcessing() {
       const items = [MediaEngineStore];
       const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({
         echoCancellation: MediaEngineStore.getEchoCancellation(),

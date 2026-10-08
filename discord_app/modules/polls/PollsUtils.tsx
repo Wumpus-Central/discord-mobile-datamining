@@ -1,7 +1,7 @@
 // discord_app/modules/polls/PollsUtils.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
-import v1 from "../../../_runtime/01266_v1.js";
+import v1 from "../../../_runtime/01278_v1.js";
 import utils_StringUtils from "../../../discord_common/js/shared/utils/StringUtils.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import useMessageAuthor from "../messages/useMessageAuthor.tsx";
@@ -22,7 +22,7 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
     message.id,
     { id, name: "", animated: false },
     closure_9,
-    channel(7272).ReactionTypes.VOTE,
+    channel(7873).ReactionTypes.VOTE,
   );
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
@@ -104,7 +104,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(7468);
+const PollsConstants = fn(7943);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1085);
 ({ ChannelTypesSets: c10, Permissions: closure_11 } = Constants);
@@ -150,7 +150,7 @@ export const hasNonVoteReactions = function hasNonVoteReactions(message) {
   return false;
 };
 export const useCanPostPollsInChannel = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanPostPollsInChannel(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -194,7 +194,7 @@ export const useCanPostPollsInChannel = ReactCompilerGating.isReactCompilerEnabl
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useCanPostPollsInChannel(arg0) {
       _require = arg0;
       const items = [PermissionStore];
       return require("initialize").useStateFromStores(items, () => {

@@ -16,11 +16,11 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SubscriptionIntervalTypes = fn(1379).SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = fn(1391).SubscriptionIntervalTypes;
 const CurrencyCodes = fn(1096).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -70,7 +70,7 @@ obj2.backToTemplates = { alignSelf: "center" };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PriceOptionRow(arg0) {
       const cResult = c.c(19);
       ({ price, selected, onPress } = arg0);
       const tmp4 = closure_11();
@@ -92,7 +92,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === containerSelected) {
           let tmp8 = cResult[4];
         }
-        const tmp9Result = importDefault(selected ? 17935 : 16558);
+        const tmp9Result = importDefault(selected ? 18222 : 16813);
         if (cResult[5] === tmp4.rowStatusIcon) {
           if (cResult[6] === tmp9Result) {
             let tmp11 = cResult[7];
@@ -137,7 +137,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { style: tmp8, accessibilityRole, accessibilityState, onPress, children: null };
           const items = [tmp11, tmp18];
           obj6.children = items;
-          const tmp23 = v65535(TouchableHitBoxDefault, obj6);
+          const tmp23 = collapsed(TouchableHitBoxDefault, obj6);
           cResult[12] = accessibilityRole;
           cResult[13] = accessibilityState;
           cResult[14] = onPress;
@@ -161,7 +161,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = items1;
       const tmpResult = useA11yRolesNative;
     }
-  : (selected) => {
+  : function PriceOptionRow(selected) {
       selected = selected.selected;
       ({ price, onPress } = selected);
       const tmp = closure_11();
@@ -176,7 +176,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = containerSelected;
       const obj3 = { style: tmp.rowStatusIcon, source: null };
       const tmp7 = TouchableHitBoxDefault;
-      obj3.source = importDefault(selected ? 17935 : 16558);
+      obj3.source = importDefault(selected ? 18222 : 16813);
       const items1 = [options(FastImageDefault, obj3)];
       const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
       const intl = util.intl;
@@ -191,7 +191,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.children = intl.format(util.t.CgmBaG, obj5);
       items1[1] = options(Text_Text.Text, obj4);
       obj2.children = items1;
-      return v65535(tmp7, obj2);
+      return collapsed(tmp7, obj2);
     };
 ReactCompilerGating = fn(558);
 let obj6 = { borderRadius: nativeDefault.radii.xs };
@@ -201,7 +201,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (selectedTemplate) => {
+  ? function GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet(selectedTemplate) {
       const cResult = selectedTemplate(newPricesToPick[9]).c(43);
       selectedTemplate = selectedTemplate.selectedTemplate;
       const handleCreateFromTemplate = selectedTemplate.handleCreateFromTemplate;
@@ -295,42 +295,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp31 = cResult[22];
                 }
                 if (cResult[23] !== tmp7) {
-                  class G {
-                    constructor() {
-                      return closure_5();
-                    }
-                  }
+                  const fn = function z() {
+                    return closure_5();
+                  };
                   cResult[23] = tmp7;
-                  cResult[24] = G;
+                  cResult[24] = fn;
+                  let tmp34 = fn;
                 } else {
-                  class G {
-                    constructor() {
-                      return closure_5();
-                    }
-                  }
+                  tmp34 = cResult[24];
                 }
                 if (cResult[25] === tmp4.confirmButton) {
-                  class G {
-                    constructor() {
-                      return closure_5();
-                    }
+                  if (cResult[26] === tmp34) {
+                    let tmp35 = cResult[27];
                   }
                   const _Symbol4 = Symbol;
                   if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
-                    class G {
-                      constructor() {
-                        return closure_5();
-                      }
-                    }
-                    const tmp39 = closure_9(tmp(tmp2[20]).Spacer, { size: 24 });
-                    cResult[28] = tmp39;
-                    const tmp38 = tmp39;
+                    const tmp40 = closure_9(tmp(tmp2[20]).Spacer, { size: 24 });
+                    cResult[28] = tmp40;
+                    let tmp38 = tmp40;
                   } else {
-                    class G {
-                      constructor() {
-                        return closure_5();
-                      }
-                    }
+                    tmp38 = cResult[28];
                   }
                   const _Symbol5 = Symbol;
                   if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
@@ -360,9 +344,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj7 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
                     const intl3 = tmp(tmp2[14]).intl;
                     obj7.children = intl3.string(tmp(tmp2[14]).t.h26VOI);
-                    const tmp42 = closure_9(tmp(tmp2[17]).Text, obj7);
-                    cResult[30] = tmp42;
-                    const tmp41 = tmp42;
+                    const tmp43 = closure_9(tmp(tmp2[17]).Text, obj7);
+                    cResult[30] = tmp43;
+                    const tmp42 = tmp43;
                   } else {
                     class V {
                       constructor() {
@@ -378,10 +362,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         return obj.hideActionSheet();
                       }
                     }
-                    const obj8 = { onPress: V, style: tmp4.backToTemplates, activeOpacity: 0.5, children: tmp41 };
-                    const tmp45 = closure_9(closure_5, obj8);
+                    const obj8 = { onPress: V, style: tmp4.backToTemplates, activeOpacity: 0.5, children: tmp42 };
+                    const tmp46 = closure_9(closure_5, obj8);
                     cResult[31] = tmp4.backToTemplates;
-                    cResult[32] = tmp45;
+                    cResult[32] = tmp46;
                   } else {
                     class V {
                       constructor() {
@@ -399,22 +383,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj9 = { contentContainerStyle: tmp8, children: null };
-                  let items = [tmp11, tmp15, tmp21, tmp24, tmp27, tmp31, tmp35, tmp38, tmp43];
+                  let items = [tmp11, tmp15, tmp21, tmp24, tmp27, tmp31, tmp35, tmp38, tmp44];
                   obj9.children = items;
-                  const tmp48 = closure_10(tmp(tmp2[23]).BottomSheetScrollView, obj9);
+                  const tmp49 = closure_10(tmp(tmp2[23]).BottomSheetScrollView, obj9);
                   cResult[33] = tmp27;
                   cResult[34] = tmp35;
-                  cResult[35] = tmp43;
+                  cResult[35] = tmp44;
                   cResult[36] = tmp8;
                   cResult[37] = tmp11;
                   cResult[38] = tmp21;
-                  cResult[39] = tmp48;
+                  cResult[39] = tmp49;
                 }
-                const obj10 = { text: "Confirm New Price", pillStyle: tmp4.confirmButton, onPress: G, grow: true };
+                const obj10 = { text: "Confirm New Price", pillStyle: tmp4.confirmButton, onPress: tmp34, grow: true };
                 const tmp37 = closure_9(tmp(tmp2[21]).BaseTextButton, obj10);
                 cResult[25] = tmp4.confirmButton;
-                cResult[26] = G;
+                cResult[26] = tmp34;
                 cResult[27] = tmp37;
+                tmp35 = tmp37;
               }
             }
             if (cResult[20] !== first) {
@@ -425,7 +410,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               cResult[20] = first;
-              cResult[21] = A;
+              cResult[21] = E;
             } else {
               class V {
                 constructor() {
@@ -434,14 +419,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            const mapped = newPricesToPick.map(A);
+            const mapped = newPricesToPick.map(E);
             cResult[17] = newPricesToPick;
             cResult[18] = first;
             cResult[19] = mapped;
           }
         }
       }
-      const fn = function s() {
+      function handleSelectNewPrice() {
         const obj = {};
         const merged = Object.assign(selectedTemplate);
         const obj2 = {};
@@ -450,16 +435,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [obj2];
         obj.listings = items;
         handleCreateFromTemplate(obj, true);
-      };
+      }
       cResult[0] = handleCreateFromTemplate;
       cResult[1] = newPricesToPick;
       cResult[2] = first;
       cResult[3] = selectedTemplate;
-      cResult[4] = fn;
-      tmp7 = fn;
+      cResult[4] = handleSelectNewPrice;
+      tmp7 = handleSelectNewPrice;
       let obj = selectedTemplate(newPricesToPick[9]);
     }
-  : (selectedTemplate) => {
+  : function GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet(selectedTemplate) {
       selectedTemplate = selectedTemplate.selectedTemplate;
       ({ handleCreateFromTemplate: importDefault, newPricesToPick } = selectedTemplate);
       _slicedToArray = undefined;

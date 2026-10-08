@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/useHandleClaim.tsx");
 
 export const useHandleClaim = ReactCompilerGating.isReactCompilerEnabled()
-  ? (product) => {
+  ? function useHandleClaim(product) {
       const cResult = require("c").c(5);
       product = product.product;
       _require = product;
@@ -29,34 +29,34 @@ export const useHandleClaim = ReactCompilerGating.isReactCompilerEnabled()
       }
       _require = asyncGeneratorStep(async () => {
         const product = tmp3;
-        await product(7065).claimPremiumCollectiblesProduct(product.skuId);
+        await product(7251).claimPremiumCollectiblesProduct(product.skuId);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { key: "collectible shop claim error", content: null };
           const intl = product(1126).intl;
           obj7.content = intl.string(product(1126).t.CKsXk3);
-          stageCollectibleChangeForEditProfile(4574).open(obj7);
+          stageCollectibleChangeForEditProfile(4766).open(obj7);
           c4 = 3;
-          stageCollectibleChangeForEditProfile(4574);
+          stageCollectibleChangeForEditProfile(4766);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          stageCollectibleChangeForEditProfile(4860).hideAllActionSheets();
-          stageCollectibleChangeForEditProfile(4860);
-          stageCollectibleChangeForEditProfile(10826).open({
+          stageCollectibleChangeForEditProfile(5054).hideAllActionSheets();
+          stageCollectibleChangeForEditProfile(5054);
+          stageCollectibleChangeForEditProfile(11175).open({
             product,
             useCategoryImage: true,
             stageCollectibleChangeForEditProfile,
           });
-          stageCollectibleChangeForEditProfile(10826);
-          const collectiblesPurchases = product(7065).fetchCollectiblesPurchases();
+          stageCollectibleChangeForEditProfile(11175);
+          const collectiblesPurchases = product(7251).fetchCollectiblesPurchases();
           c3 = 0;
-          product(7065);
+          product(7251);
         }
         return value;
       });
-      const fn = function () {
+      function t1() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -65,13 +65,13 @@ export const useHandleClaim = ReactCompilerGating.isReactCompilerEnabled()
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      };
+      }
       cResult[0] = product;
       cResult[1] = stageCollectibleChangeForEditProfile;
-      cResult[2] = fn;
-      tmp2 = fn;
+      cResult[2] = t1;
+      tmp2 = t1;
     }
-  : (product) => {
+  : function useHandleClaim(product) {
       product = product.product;
       const require = product;
       const stageCollectibleChangeForEditProfile = product.stageCollectibleChangeForEditProfile;

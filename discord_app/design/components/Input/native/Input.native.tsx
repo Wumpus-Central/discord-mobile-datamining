@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   inputRow: {
     flexDirection: "row",
@@ -44,7 +44,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Input/native/Input.native.tsx");
 
 export const Input = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Input(arg0) {
       const cResult = c.c(26);
       const tmp4 = closure_5();
       ({ label, labelTrailing, labelId, description, errorMessage, children, containerStyle, required } = arg0);
@@ -189,7 +189,7 @@ export const Input = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = requiredFieldA11yName;
       const tmpResult2 = native;
     }
-  : (arg0) => {
+  : function Input(arg0) {
       const tmp = closure_5();
       ({ label, labelTrailing, labelId, description, errorMessage, required } = arg0);
       ({ children, containerStyle } = arg0);

@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2617 from "../../premium/gifting/GiftingBadge.messages.js";
+import _modDef2661 from "../../premium/gifting/GiftingBadge.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles((paddingTop) => {
   const obj = { header: null, closeButton: null, closeIcon: null };
   const rect = {
@@ -51,12 +51,12 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopGiftBadgePostPurchaseModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (giftBadgeProgress) => {
+  ? function CollectiblesShopGiftBadgePostPurchaseModal(giftBadgeProgress) {
       const cResult = c.c(17);
       giftBadgeProgress = giftBadgeProgress.giftBadgeProgress;
       const tmp5 = closure_8(useSafeAreaInsetsDefault().top);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function o() {
+        const fn = function t() {
           ModalActionCreatorsDefault.pop();
         };
         cResult[0] = fn;
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             children: null,
           };
           const intl2 = util.intl;
-          obj3.children = intl2.string(_modDef2617.roVAey);
+          obj3.children = intl2.string(_modDef2661.roVAey);
           const tmp17 = timestampProducer(Text_Text.Text, obj3);
           cResult[8] = tmp17;
           let tmp15 = tmp17;
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: tmp10,
       };
     }
-  : (currentProgress) => {
+  : function CollectiblesShopGiftBadgePostPurchaseModal(currentProgress) {
       const tmp = closure_8(useSafeAreaInsetsDefault().top);
       const callback = noop.useCallback(() => {
         ModalActionCreatorsDefault.pop();
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const intl2 = util.intl;
-      obj5.children = intl2.string(_modDef2617.roVAey);
+      obj5.children = intl2.string(_modDef2661.roVAey);
       items[1] = timestampProducer(Text_Text.Text, obj5);
       obj2.children = items;
       const items1 = [

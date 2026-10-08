@@ -123,7 +123,7 @@ const result = size.fileFinishedImporting("modules/forwarding/canForwardMessage.
 
 export { canForwardMessage };
 export const useCanForwardMessage = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanForwardMessage(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -146,7 +146,7 @@ export const useCanForwardMessage = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp9);
     }
-  : (arg0) => {
+  : function useCanForwardMessage(arg0) {
       _require = arg0;
       const items = [PermissionStore, GatedChannelStore, ChannelStore, GuildStore];
       return require("initialize").useStateFromStores(items, () =>

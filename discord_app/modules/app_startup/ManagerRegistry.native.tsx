@@ -509,7 +509,7 @@ const obj = {
       return require("RedesignNewUserManager").default;
     },
   },
-  NotificationPermissionManager: {
+  NotificationsManager: {
     actions: [
       "MESSAGE_CREATE",
       "MESSAGE_REACTION_ADD",
@@ -519,7 +519,7 @@ const obj = {
       "APP_STATE_UPDATE",
     ],
     inlineRequire() {
-      return require("NotificationPermissionManager").default;
+      return require("NotificationsManager").default;
     },
     neverLoadBeforeConnectionOpen: true,
   },
@@ -609,6 +609,12 @@ const obj = {
     actions: ["POST_CONNECTION_OPEN"],
     inlineRequire() {
       return require("RTCLatencyTestManager").default;
+    },
+  },
+  RTCReconnectTimeoutManager: {
+    actions: ["VOICE_STATE_UPDATES"],
+    inlineRequire() {
+      return require("RTCReconnectTimeoutManager").default;
     },
   },
   SavedMessagesManager: {

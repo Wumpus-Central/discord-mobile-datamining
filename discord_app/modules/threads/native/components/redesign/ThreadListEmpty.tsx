@@ -5,14 +5,14 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
-import _modDef11881 from "../../../../../../_runtime/metro/11881__.js";
+import _modDef11953 from "../../../../../../_runtime/metro/11953__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { flex: 1, justifyContent: "center", alignItems: "center" },
   iconWrapper: {
@@ -35,12 +35,12 @@ const result = size.fileFinishedImporting("modules/threads/native/components/red
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (onCreateThreadPress) => {
+    ? function ThreadListEmpty(onCreateThreadPress) {
         const cResult = c.c(17);
         onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
         const tmp4 = closure_6();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: _modDef11881, size: native.Icon.Sizes.MEDIUM };
+          const obj2 = { source: _modDef11953, size: native.Icon.Sizes.MEDIUM };
           const tmp8 = React4(native.Icon, obj2);
           cResult[0] = tmp8;
           let first = tmp8;
@@ -141,13 +141,13 @@ export default noop.memo(
         cResult[16] = tmp28;
         tmp27 = tmp28;
       }
-    : (onCreateThreadPress) => {
+    : function ThreadListEmpty(onCreateThreadPress) {
         onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
         const tmp = closure_6();
         const obj = { style: tmp.container, children: null };
         const obj2 = {
           style: tmp.iconWrapper,
-          children: React4(native.Icon, { source: _modDef11881, size: native.Icon.Sizes.MEDIUM }),
+          children: React4(native.Icon, { source: _modDef11953, size: native.Icon.Sizes.MEDIUM }),
         };
         const items = [React4(View, obj2), , ,];
         const obj4 = {

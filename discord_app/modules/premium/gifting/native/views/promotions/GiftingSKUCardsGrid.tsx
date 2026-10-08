@@ -14,15 +14,15 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const isAvatarDecorationRecord = fn(7071).isAvatarDecorationRecord;
-const isNameplateRecord = fn(1978).isNameplateRecord;
+const isAvatarDecorationRecord = fn(7257).isAvatarDecorationRecord;
+const isNameplateRecord = fn(1990).isNameplateRecord;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 100;
 let c10 = 150;
 const PX_12 = nativeDefault.space.PX_12;
 let closure_12 = 2 * nativeDefault.space.PX_24;
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj = { card: { width: 150, display: "flex", flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_16, borderWidth: 1, borderRadius: nativeDefault.radii.sm, overflow: "hidden", borderColor: nativeDefault.colors.BORDER_SUBTLE }, previewContainer: { display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: 100, overflow: "hidden" }, preview: null, selected: null, claimed: null, checkmark: null, textContainer: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -38,7 +38,7 @@ let obj5 = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.textContainer = { alignSelf: "stretch", paddingHorizontal: nativeDefault.space.PX_16, alignItems: "flex-start" };
 let closure_13 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((rewardSkuId) => {
+let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingSKUCard(rewardSkuId) {
   const cResult = c.c(46);
   rewardSkuId = rewardSkuId.rewardSkuId;
   ({ claimed, onSelect } = rewardSkuId);
@@ -71,7 +71,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((rewa
       }
       if (cResult[5] === tmp4.card) {
         if (cResult[8] === onSelect) {
-          class M {
+          class G {
             constructor() {
               return onSelect(rewardSkuId);
             }
@@ -94,7 +94,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((rewa
                       if (cResult[24] === tmp4.previewContainer) {
                         if (cResult[25] === tmp25) {
                           if (cResult[28] !== product.name) {
-                            class M {
+                            class G {
                               constructor() {
                                 return onSelect(rewardSkuId);
                               }
@@ -104,14 +104,14 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((rewa
                             cResult[29] = tmp33;
                             const obj4 = { variant: "heading-sm/bold", color: "mobile-text-heading-primary", lineClamp: 1, accessibilityRole: "header", children: null };
                           }
-                          class M {
+                          class G {
                             constructor() {
                               return onSelect(rewardSkuId);
                             }
                           }
                         }
                       }
-                      class M {
+                      class G {
                         constructor() {
                           return onSelect(rewardSkuId);
                         }
@@ -125,13 +125,13 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((rewa
                       cResult[26] = tmp22;
                       cResult[27] = tmp30;
                     }
-                    class M {
+                    class G {
                       constructor() {
                         return onSelect(rewardSkuId);
                       }
                     }
                     if (claimed) {
-                      class M {
+                      class G {
                         constructor() {
                           return onSelect(rewardSkuId);
                         }
@@ -144,7 +144,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((rewa
                     cResult[23] = tmp26;
                     tmp25 = tmp26;
                   }
-                  class M {
+                  class G {
                     constructor() {
                       return onSelect(rewardSkuId);
                     }
@@ -158,13 +158,13 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((rewa
                 }
               }
             }
-            class M {
+            class G {
               constructor() {
                 return onSelect(rewardSkuId);
               }
             }
             if (isNameplateRecord(first)) {
-              class M {
+              class G {
                 constructor() {
                   return onSelect(rewardSkuId);
                 }
@@ -173,7 +173,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((rewa
               tmp20[1] = isSelected;
               const tmp17 = React5(NameplateCardPreviewDefault, tmp20);
             } else {
-              class M {
+              class G {
                 constructor() {
                   return onSelect(rewardSkuId);
                 }
@@ -190,14 +190,14 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((rewa
           cResult[13] = items1;
           tmp14 = items1;
         }
-        class M {
+        class G {
           constructor() {
             return onSelect(rewardSkuId);
           }
         }
         cResult[8] = onSelect;
         cResult[9] = rewardSkuId;
-        cResult[10] = M;
+        cResult[10] = G;
       }
       const items2 = [tmp4.card, selected];
       cResult[5] = tmp4.card;
@@ -207,7 +207,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((rewa
   }
   let avatarSource;
   if (isSelected) {
-    class M {
+    class G {
       constructor() {
         return onSelect(rewardSkuId);
       }
@@ -219,7 +219,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((rewa
   cResult[4] = avatarSource;
   tmp7 = avatarSource;
   const tmpResult2 = useFetchCollectiblesProduct;
-}) : ((rewardSkuId) => {
+}) : (function GiftingSKUCard(rewardSkuId) {
   rewardSkuId = rewardSkuId.rewardSkuId;
   ({ claimed, onSelect: importDefault, isSelected } = rewardSkuId);
   const tmp = closure_13();
@@ -294,7 +294,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((rewa
   }
   const obj3 = rewardSkuId(isSelected[11]);
 }));
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_15 = createStyles.createStyles({ grid: { flexDirection: "column", alignSelf: "center", gap: PX_12 }, row: { flexDirection: "row", gap: PX_12 } });
 ReactCompilerGating = fn(558);
 let obj6 = { alignSelf: "stretch", paddingHorizontal: nativeDefault.space.PX_16, alignItems: "flex-start" };
@@ -302,7 +302,7 @@ let obj7 = { grid: { flexDirection: "column", alignSelf: "center", gap: PX_12 },
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUCardsGrid.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSelect) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingSKUCardsGrid(onSelect) {
   const cResult = claimableRewards(highlightedSkuId[8]).c(22);
   ({ rewardsToDisplay, claimableRewards } = onSelect);
   onSelect = onSelect.onSelect;
@@ -407,7 +407,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSelect) => {
   cResult[2] = chunkResult;
   arr = chunkResult;
   const tmp3Result = onSelect(highlightedSkuId[19]);
-}) : ((rewardsToDisplay) => {
+}) : (function GiftingSKUCardsGrid(rewardsToDisplay) {
   rewardsToDisplay = rewardsToDisplay.rewardsToDisplay;
   ({ claimableRewards: importDefault, onSelect: dependencyMap, highlightedSkuId: noop } = rewardsToDisplay);
   const tmp = closure_15();

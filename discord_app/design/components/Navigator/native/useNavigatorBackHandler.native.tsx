@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigatorBackHandler.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useNavigatorBackHandler(arg0) {
       let tmp = arg0;
       const cResult = onBeforeGoBack(navigation[2]).c(8);
       if (undefined === arg0) {
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = items;
       tmp7 = fn2;
     }
-  : () => {
+  : function useNavigatorBackHandler() {
       let tmp = arg0;
       if (arg0 === undefined) {
         tmp = closure_3;

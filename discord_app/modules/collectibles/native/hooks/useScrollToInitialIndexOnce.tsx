@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/hooks/use
 
 export const INITIAL_SCROLL_DELAY_MS = 100;
 export const useScrollToInitialIndexOnce = ReactCompilerGating.isReactCompilerEnabled()
-  ? (initialScrollIndex) => {
+  ? function useScrollToInitialIndexOnce(initialScrollIndex) {
       const cResult = c.c(7);
       initialScrollIndex = initialScrollIndex.initialScrollIndex;
       const shouldScroll = initialScrollIndex.shouldScroll;
@@ -66,7 +66,7 @@ export const useScrollToInitialIndexOnce = ReactCompilerGating.isReactCompilerEn
       tmp3 = items;
       tmp2 = fn;
     }
-  : (initialScrollIndex) => {
+  : function useScrollToInitialIndexOnce(initialScrollIndex) {
       initialScrollIndex = initialScrollIndex.initialScrollIndex;
       const shouldScroll = initialScrollIndex.shouldScroll;
       const flashListRef = initialScrollIndex.flashListRef;

@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { alignItems: "center", flexDirection: "column" },
   header: { justifyContent: "center", alignItems: "center", gap: 16, marginTop: 24, marginBottom: 32, width: "100%" },
@@ -60,7 +60,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/IntegrationTypeSelector.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (application) => {
+  ? function IntegrationTypeSelector(application) {
       const cResult = application(arr3[6]).c(35);
       application = application.application;
       const onSelect = application.onSelect;
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = onSelect(arr3[7]);
       const obj26 = { id: application.id, icon: application.icon };
     }
-  : (application) => {
+  : function IntegrationTypeSelector(application) {
       application = application.application;
       const onSelect = application.onSelect;
       const tmp = styles();

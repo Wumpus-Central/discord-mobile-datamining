@@ -14,21 +14,21 @@ const require = globalThis.__r;
 const AttachmentPreviewDefault = AttachmentPreview;
 
 const util = obj(1126);
-const InteractionComponentUtils = obj(5120);
-const FileSizeUtils = obj(5324);
-const TableRow = obj(6000);
-const FileUpIcon = obj(15380);
+const InteractionComponentUtils = obj(5432);
+const FileSizeUtils = obj(5636);
+const TableRow = obj(6184);
+const FileUpIcon = obj(15642);
 require = fn;
 const View = fn(17).View;
-const DraftType = fn(7044).DraftType;
+const DraftType = fn(7232).DraftType;
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({ defaultAttachmentIconWrapper: { width: 32, alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MainAreaCanUpload(arg0) {
       let obj = require;
       let fileUploadComponentSubtitle = dependencyMap;
       const cResult = c.c(9);
@@ -92,7 +92,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = options(TableRow.TableRow, obj5);
       const tmp9 = options(TableRow.TableRow, obj5);
     }
-  : (arg0) => {
+  : function MainAreaCanUpload(arg0) {
       ({ minValues, maxValues } = arg0);
       ({ openFilePicker, types, maxSizeBytes } = arg0);
       const obj2 = {
@@ -122,7 +122,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function MainAreaLimitReached() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { icon: null, label: null, subLabel: null, disabled: true, start: true, end: true };
@@ -140,7 +140,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => {
+  : function MainAreaLimitReached() {
       const obj = {
         icon: options(TableRow.TableRow.Icon, { IconComponent: CircleCheckIcon.CircleCheckIcon }),
         label: null,
@@ -157,7 +157,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (upload) => {
+  ? function File(upload) {
       const cResult = c.c(23);
       upload = upload.upload;
       const handleRemoveFile = upload.handleRemoveFile;
@@ -274,7 +274,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp9;
       const obj6 = { style: tmp4.defaultAttachmentIconWrapper, children: tmp5 };
     }
-  : (upload) => {
+  : function File(upload) {
       upload = upload.upload;
       const handleRemoveFile = upload.handleRemoveFile;
       const obj = { icon: null, label: null, trailing: null, start: true, end: true };
@@ -316,7 +316,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/native/actions/FileUploadActionComponent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (fileTypes) => {
+  ? function FileUploadActionComponent(fileTypes) {
       const cResult = require("c").c(44);
       ({ minValues, maxValues } = fileTypes);
       _require = maxValues;
@@ -342,22 +342,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== channelId) {
-        class S {
+        class A {
           constructor() {
             return closure_6.getChannel(channelId);
           }
         }
         cResult[1] = channelId;
-        cResult[2] = S;
+        cResult[2] = A;
       } else {
-        class S {
+        class A {
           constructor() {
             return closure_6.getChannel(channelId);
           }
         }
       }
       let obj2 = require("ComponentStateContext");
-      const stateFromStores = require("initialize").useStateFromStores(first, S);
+      const stateFromStores = require("initialize").useStateFromStores(first, A);
       channelId(customId[20])(null != stateFromStores, "FileUploadActionComponent requires a valid channel");
       let tmpResult = require("initialize");
       const fileTypeFiltering = require("FileTypeFiltering").useFileTypeFiltering(fileTypes.fileTypes);
@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       showInvalidFileTypeAlert = fileTypeFiltering.showInvalidFileTypeAlert;
       const mediaFilesAllowed = fileTypeFiltering.mediaFilesAllowed;
       if (cResult[3] !== stateFromStores.guild_id) {
-        class S {
+        class A {
           constructor() {
             return closure_6.getChannel(channelId);
           }
@@ -376,7 +376,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = effectiveUploadLimit;
         const tmpResult5 = tmp(tmp2[24]);
       } else {
-        class S {
+        class A {
           constructor() {
             return closure_6.getChannel(channelId);
           }
@@ -390,21 +390,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const currentUploads = fileUploadComponentState.currentUploads;
       const parents = componentStateContext.getParents(fileTypes);
       if (parents != null) {
-        class S {
+        class A {
           constructor() {
             return closure_6.getChannel(channelId);
           }
         }
       }
       if (undefined != null) {
-        class S {
+        class A {
           constructor() {
             return closure_6.getChannel(channelId);
           }
         }
       }
       if (undefined === require("Server").ComponentType.LABEL) {
-        class S {
+        class A {
           constructor() {
             return closure_6.getChannel(channelId);
           }
@@ -412,7 +412,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       channelId(customId[20])(null != undefined, "FileUploadActionComponent must be used within a label Component");
       if (cResult[5] === allowedExtensions.length) {
-        class S {
+        class A {
           constructor() {
             return closure_6.getChannel(channelId);
           }
@@ -537,7 +537,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       });
-      const fn = function () {
+      function t3() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -546,7 +546,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      };
+      }
       cResult[5] = allowedExtensions.length;
       cResult[6] = channelId;
       cResult[7] = tmp15;
@@ -556,10 +556,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = showInvalidFileTypeAlert;
       cResult[12] = uploadIds;
       cResult[13] = validateFilenames;
-      cResult[14] = fn;
+      cResult[14] = t3;
       const tmpResult6 = require("useFileUploadComponentState");
     }
-  : (maxValues) => {
+  : function FileUploadActionComponent(maxValues) {
       maxValues = maxValues.maxValues;
       _require = maxValues;
       const componentStateContext = require("ComponentStateContext").useComponentStateContext();
@@ -772,7 +772,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           extensions: allowedExtensions,
           uploadLimit: InteractionModal,
           onDismissKeyboard() {
-            return InteractionModal(10378).hideMediaKeyboardActionSheet();
+            return InteractionModal(9975).hideMediaKeyboardActionSheet();
           },
           onRestoreKeyboard: effectiveUploadLimit,
           onSelectFiles(arg0) {
@@ -805,7 +805,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const result = InteractionModal(customId[31]).hideMediaKeyboardActionSheet();
               if (item.isIncluded) {
                 const found = currentUploads.find((item) =>
-                  InteractionModal(7285).doesImageMatchUpload(item.node.image, item),
+                  InteractionModal(7739).doesImageMatchUpload(item.node.image, item),
                 );
                 if (null != found) {
                   callback1(found.id);
@@ -826,9 +826,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj.handleViewAllDialog(obj2);
             },
             onManageLimited() {
-              obj = InteractionModal(10377);
+              obj = InteractionModal(9974);
               const result = obj.handleLimitedPickerDialog({
-                onDismissKeyboard: InteractionModal(10378).hideMediaKeyboardActionSheet,
+                onDismissKeyboard: InteractionModal(9975).hideMediaKeyboardActionSheet,
                 onRestoreKeyboard,
               });
             },

@@ -9,7 +9,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsxs: c3, jsx: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   linkCalloutContainer: {
     maxHeight: 300,
@@ -37,7 +37,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_common/native/URLCallout.tsx");
 
 export const URLCallout = ReactCompilerGating.isReactCompilerEnabled()
-  ? (url) => {
+  ? function URLCallout(url) {
       const cResult = c.c(14);
       const tmp4 = closure_5();
       const urlParts = SharedStateUtils.useUrlParts(url.url);
@@ -103,7 +103,7 @@ export const URLCallout = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = tmp16;
       tmp15 = tmp16;
     }
-  : (url) => {
+  : function URLCallout(url) {
       const tmp = closure_5();
       const urlParts = SharedStateUtils.useUrlParts(url.url);
       const obj2 = { style: tmp.linkCalloutContainer, children: null };

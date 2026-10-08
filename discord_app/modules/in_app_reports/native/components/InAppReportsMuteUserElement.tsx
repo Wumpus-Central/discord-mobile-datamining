@@ -1,6 +1,6 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx
-import NicknameUtilsDefault from "../../../../utils/NicknameUtils.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
+import NicknameUtilsDefault from "../../../../utils/NicknameUtils.tsx";
 import SafetyToastsActionCreatorsDefault from "../../../safety_common/SafetyToastsActionCreators.native.tsx";
 import MuteSettingsUtils from "../../../main_tabs_v2/native/sidebar/details/screens/MuteSettingsUtils.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function MuteUserElement(user) {
       const cResult = user(reportId[7]).c(28);
       user = user.user;
       channelId = user.channelId;
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          class E {
+          class R {
             constructor() {
               tmp = closure_4(true);
               obj = closure_1(closure_2[11]);
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[13] = tmp4;
           cResult[14] = reportId;
           cResult[15] = user.id;
-          cResult[16] = E;
+          cResult[16] = R;
           const tmp18 = channelId(noop.useState(muted), 2);
         }
       }
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = name;
       let obj3 = channelId(reportId[9]);
     }
-  : (user) => {
+  : function MuteUserElement(user) {
       user = user.user;
       channelId = user.channelId;
       const reportId = user.reportId;

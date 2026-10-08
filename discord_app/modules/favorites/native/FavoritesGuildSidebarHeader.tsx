@@ -2,8 +2,8 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
-import _modDef3395 from "../intl/FavoritesGuild.messages.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import _modDef3439 from "../intl/FavoritesGuild.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
@@ -33,15 +33,15 @@ function EmptyBody() {
   }, []);
   let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef3395.Z3Hdr5, { onClick: callback });
+  obj.children = intl.format(_modDef3439.Z3Hdr5, { onClick: callback });
   return timestampProducer(Text_Text.Text, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16166).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16426).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = "heading-md/semibold";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
   divider: null,
@@ -96,7 +96,7 @@ obj2.placeholderBarLong = { width: nativeDefault.space.PX_128 };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PlaceholderRows() {
       const cResult = c.c(26);
       const tmp4 = closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -232,7 +232,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp10;
       tmp9 = tmp10;
     }
-  : () => {
+  : function PlaceholderRows() {
       const tmp = closure_10();
       const obj = {
         style: tmp.placeholderRows,
@@ -280,7 +280,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildSidebarHeader.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function FavoritesGuildSidebarHeader() {
       const cResult = c.c(14);
       const tmp4 = closure_10();
       const tmp5 = closure_5();
@@ -292,7 +292,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { variant, color: "mobile-text-heading-primary", children: null };
           const intl = util.intl;
-          obj2.children = intl.string(_modDef3395["1n0TGE"]);
+          obj2.children = intl.string(_modDef3439["1n0TGE"]);
           const tmp16 = timestampProducer(Text_Text.Heading, obj2);
           const tmp18 = timestampProducer(EmptyBody, {});
           cResult[3] = tmp16;
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp7;
       tmp6 = tmp7;
     }
-  : () => {
+  : function FavoritesGuildSidebarHeader() {
       const tmp = closure_10();
       const tmp2 = closure_5();
       const obj = { spacing: nativeDefault.space.PX_8, children: null };
@@ -372,7 +372,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { spacing: nativeDefault.space.PX_8, style: tmp.copy, children: null };
       const obj4 = { variant, color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
-      obj4.children = intl.string(_modDef3395["1n0TGE"]);
+      obj4.children = intl.string(_modDef3439["1n0TGE"]);
       const items1 = [timestampProducer(Text_Text.Heading, obj4), timestampProducer(EmptyBody, {})];
       obj3.children = items1;
       items[1] = React5(Stack_Stack.Stack, obj3);

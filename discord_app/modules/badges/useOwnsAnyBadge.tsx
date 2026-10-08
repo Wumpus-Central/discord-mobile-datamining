@@ -9,11 +9,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useOwnsAnyBadge.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useOwnsAnyBadge() {
       const cResult = stateFromStores(576).c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function s() {
+        const fn = function o() {
           currentUser = currentUser.getCurrentUser();
           let id;
           if (currentUser != null) {
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return stateFromStores1;
     }
-  : () => {
+  : function useOwnsAnyBadge() {
       const items = [UserStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
         currentUser = currentUser.getCurrentUser();

@@ -13,7 +13,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/hooks/useTrackShopCardImpression.tsx");
 
 export const useTrackShopCardImpression = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, skuId) => {
+  ? function useTrackShopCardImpression(arg0, skuId) {
       _require = arg0;
       importDefault = skuId;
       const cResult = require("c").c(17);
@@ -227,7 +227,7 @@ export const useTrackShopCardImpression = ReactCompilerGating.isReactCompilerEna
       cResult[12] = S;
       tmp16 = S;
     }
-  : (arg0, skuId) => {
+  : function useTrackShopCardImpression(arg0, skuId) {
       _require = arg0;
       importDefault = skuId;
       collectiblesAnalyticsContext = require("CollectiblesAnalyticsContext").useCollectiblesAnalyticsContext();

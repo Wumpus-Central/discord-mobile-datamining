@@ -7,8 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 const initialize = PressableOpacity(504);
-const Text_Text = PressableOpacity(4892);
-const Pressables = PressableOpacity(5916);
+const Text_Text = PressableOpacity(5086);
+const Pressables = PressableOpacity(6189);
 require = fn;
 function handleOpenEmailVerification() {
   EmailVerificationModalActionCreatorsDefault.open();
@@ -32,7 +32,7 @@ function getBannerText(stateFromStores) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   accountWarning: {
     backgroundColor: nativeDefault.unsafe_rawColors.RED_400,
@@ -75,7 +75,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsAccountUnverifiedHeader() {
       let PressableOpacity = require;
       let tmp = dependencyMap;
       const cResult = c.c(14);
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const PressableOpacityResult = initialize;
     }
-  : () => {
+  : function UserSettingsAccountUnverifiedHeader() {
       const tmp = closure_6();
       const items = [UserStore];
       const tmp4 = getBannerText(initialize.useStateFromStores(items, () => currentUser.getCurrentUser()));

@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({
   voiceStates: { paddingRight: 8 },
   voiceStatesCollapsed: { paddingRight: 0, flexDirection: "row", flexWrap: "wrap", alignItems: "center" },
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUsersItem.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VoiceUsersItem(arg0) {
       const cResult = c.c(6);
       ({ collapsed, children } = arg0);
       const tmp2 = closure_4();
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp3 = items;
     }
-  : (children) => {
+  : function VoiceUsersItem(children) {
       let voiceStatesCollapsed = children.collapsed;
       const tmp = closure_4();
       let voiceStates = !voiceStatesCollapsed;

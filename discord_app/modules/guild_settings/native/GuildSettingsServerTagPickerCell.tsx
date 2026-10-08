@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   cell: {
     alignItems: "center",
@@ -35,7 +35,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagPickerCell.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildSettingsServerTagPickerCell(arg0) {
       const cResult = c.c(19);
       ({ size, selected, accessibilityLabel, accessibilityRole, onPress, children } = arg0);
       let str = "radio";
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = tmp8;
       const tmpResult = useA11yRolesNative;
     }
-  : (accessibilityLabel) => {
+  : function GuildSettingsServerTagPickerCell(accessibilityLabel) {
       ({ size, selected, accessibilityRole } = accessibilityLabel);
       if (accessibilityRole === undefined) {
         accessibilityRole = "radio";

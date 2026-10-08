@@ -13,22 +13,22 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12341).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12437).useContactSyncModalStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     justifyContent: "center",
     paddingBottom: 44,
-    paddingTop: fn(6075).NAV_BAR_HEIGHT + 32,
+    paddingTop: fn(6261).NAV_BAR_HEIGHT + 32,
   },
 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DiscoverabilityLandingScene() {
       const cResult = navigation(allowPhone[10]).c(10);
       let obj = navigation(allowPhone[10]);
       const tmp = navigation;
@@ -102,7 +102,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = fn2;
       const tmpResult = tmp(allowPhone[12]);
     }
-  : () => {
+  : function DiscoverabilityLandingScene() {
       navigation = navigation(allowPhone[11]).useNavigation();
       let obj = navigation(allowPhone[11]);
       const tmp = allowPhone;
@@ -140,7 +140,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DiscoverabilityNameScene() {
       const cResult = allowPhone(576).c(9);
       const tmp3 = closure_8();
       let obj = allowPhone(576);
@@ -164,9 +164,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp5, tmp6);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function v(arg0) {
-          const result = allowPhone(12368).startContactSyncForDiscoverability(arg0);
-          const obj = allowPhone(12368);
-          const result1 = allowPhone(12368).closeDiscoverabilityModal(false);
+          const result = allowPhone(12464).startContactSyncForDiscoverability(arg0);
+          const obj = allowPhone(12464);
+          const result1 = allowPhone(12464).closeDiscoverabilityModal(false);
         };
         cResult[3] = fn2;
         let tmp8 = fn2;
@@ -199,7 +199,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp3.container, children: tmp9 };
       const tmp4 = useContactSyncModalStore();
     }
-  : () => {
+  : function DiscoverabilityNameScene() {
       const tmp = closure_8();
       ({ name, allowPhone } = useContactSyncModalStore());
       const items = [allowPhone];
@@ -210,9 +210,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       let obj = { style: tmp.container, children: null };
       const callback = noop.useCallback((arg0) => {
-        const result = allowPhone(12368).startContactSyncForDiscoverability(arg0);
-        const obj = allowPhone(12368);
-        const result1 = allowPhone(12368).closeDiscoverabilityModal(false);
+        const result = allowPhone(12464).startContactSyncForDiscoverability(arg0);
+        const obj = allowPhone(12464);
+        const result1 = allowPhone(12464).closeDiscoverabilityModal(false);
       }, []);
       const obj2 = { onNext: callback, loading: false, initialName: null };
       const tmp2 = useContactSyncModalStore();
@@ -225,7 +225,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DiscoverabilityModal() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = {};
@@ -281,7 +281,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function DiscoverabilityModal() {
       let obj = {
         screens: noop.useMemo(() => {
           const obj = {};

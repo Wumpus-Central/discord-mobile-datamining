@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
       const cResult = guildId(_location[4]).c(14);
       guildId = guildId.guildId;
       const groupListingId = guildId.groupListingId;
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== relevantSubscriptionListingIds) {
-        const fn = function l() {
+        const fn = function c() {
           let items = relevantSubscriptionListingIds;
           if (relevantSubscriptionListingIds == null) {
             items = [];
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = items2;
       tmp13 = R;
     }
-  : (guildId) => {
+  : function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
       guildId = guildId.guildId;
       const groupListingId = guildId.groupListingId;
       const _location = guildId.location;

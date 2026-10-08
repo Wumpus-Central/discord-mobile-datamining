@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import usePremiumPrimaryGradientColorsDefault from "../../premium/native/usePremiumPrimaryGradientColors.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const locations = [0.0065, 0.5046, 0.9196];
 let c8 = 110.47;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   wrapper: {
     backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
@@ -73,7 +73,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroCapBanner.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GroupDMNitroCapBanner(arg0) {
       const cResult = c.c(43);
       ({ children, trailing, showLeadingIcon, wrapperStyle } = arg0);
       const tmp5 = closure_9();
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = items5;
       const tmpResult = useToken;
     }
-  : (showLeadingIcon) => {
+  : function GroupDMNitroCapBanner(showLeadingIcon) {
       let flag = showLeadingIcon.showLeadingIcon;
       ({ children, trailing } = showLeadingIcon);
       if (flag === undefined) {

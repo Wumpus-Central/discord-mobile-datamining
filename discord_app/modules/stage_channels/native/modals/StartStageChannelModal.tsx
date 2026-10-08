@@ -8,9 +8,9 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
-import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
-import _modDef6591 from "../../../../../_runtime/metro/06591__.js";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
+import _modDef6767 from "../../../../../_runtime/metro/06767__.js";
 import HotspotStore2 from "../../../hotspot/index.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import StageSparkleDefault from "../components/StageSparkle.tsx";
@@ -28,14 +28,14 @@ function closeModal() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const StageChannelsConstants = fn(5578);
+const StageChannelsConstants = fn(5888);
 ({ MAX_STAGE_TOPIC_LENGTH: c10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: closure_11 } = StageChannelsConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let constants = fn(2057).GuildScheduledEventPrivacyLevel;
+let constants = fn(2069).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
-let obj = {
+const createStyles = fn(5090);
+let obj2 = {
   keyboardAwareView: { flex: 1 },
   closeButtonContainer: { right: 10 },
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -56,16 +56,16 @@ let obj = {
   ageVerificationNotice: null,
 };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.textInput = {
+obj2.textInput = {
   padding: 12,
   width: "100%",
   borderRadius: nativeDefault.radii.xs,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   marginBottom: 16,
 };
-obj.startButton = { marginTop: 16 };
-obj.error = { paddingTop: 8 };
-obj.optionExplanation = { lineHeight: 16, paddingTop: 8 };
+obj2.startButton = { marginTop: 16 };
+obj2.error = { paddingTop: 8 };
+obj2.optionExplanation = { lineHeight: 16, paddingTop: 8 };
 let obj4 = {
   padding: 12,
   width: "100%",
@@ -73,17 +73,17 @@ let obj4 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   marginBottom: 16,
 };
-obj.guildIcon = { borderRadius: nativeDefault.radii.md };
-obj.label = { display: "flex", alignItems: "center", flexDirection: "row" };
+obj2.guildIcon = { borderRadius: nativeDefault.radii.md };
+obj2.label = { display: "flex", alignItems: "center", flexDirection: "row" };
 let obj5 = { borderRadius: nativeDefault.radii.md };
-obj.pill = {
+obj2.pill = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
   paddingHorizontal: 4,
   paddingVertical: 2,
   marginStart: 8,
   borderRadius: nativeDefault.radii.xs,
 };
-obj.pillLabel = { textTransform: "uppercase" };
+obj2.pillLabel = { textTransform: "uppercase" };
 let obj6 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
   paddingHorizontal: 4,
@@ -91,7 +91,7 @@ let obj6 = {
   marginStart: 8,
   borderRadius: nativeDefault.radii.xs,
 };
-obj.notificationToggle = {
+obj2.notificationToggle = {
   marginTop: 16,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   borderRadius: nativeDefault.radii.sm,
@@ -101,11 +101,11 @@ let obj7 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   borderRadius: nativeDefault.radii.sm,
 };
-obj.ageVerificationNotice = { marginBottom: nativeDefault.space.PX_16 };
-let closure_16 = createStyles.createStyles(obj);
+obj2.ageVerificationNotice = { marginBottom: nativeDefault.space.PX_16 };
+let closure_16 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function NavigationBar(guild) {
       const cResult = c.c(7);
       const tmp4 = closure_16();
       if (null != guild.guild) {
@@ -127,7 +127,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol2 = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             const obj2 = { accessibilityRole: "button", accessibilityLabel: tmp7, onPress: closeModal, children: null };
-            const obj3 = { source: _modDef6591 };
+            const obj3 = { source: _modDef6767 };
             obj2.children = state(native.Icon, obj3);
             const tmp13 = state(Pressables.PressableOpacity, obj2);
             cResult[4] = tmp13;
@@ -150,7 +150,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = items;
       }
     }
-  : (guild) => {
+  : function NavigationBar(guild) {
       let tmp2 = null;
       if (null == guild.guild) {
         const obj = { style: null, children: null };
@@ -161,7 +161,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = util.intl;
         obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
         obj2.onPress = closeModal;
-        const obj3 = { source: _modDef6591 };
+        const obj3 = { source: _modDef6767 };
         obj2.children = state(native.Icon, obj3);
         obj.children = state(Pressables.PressableOpacity, obj2);
         tmp2 = state(React5, obj);
@@ -170,7 +170,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function HeaderIcon(guild) {
       let tmp2 = dependencyMap;
       const cResult = c.c(4);
       guild = guild.guild;
@@ -199,7 +199,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = tmp9;
       }
     }
-  : (guild) => {
+  : function HeaderIcon(guild) {
       guild = guild.guild;
       if (null == guild) {
         let tmp7 = state(StageSparkleDefault, {});
@@ -211,7 +211,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function NotificationToggle(arg0) {
       const cResult = c.c(17);
       ({ sendStartNotification, onToggle } = arg0);
       const tmp4 = closure_16();
@@ -307,7 +307,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp12;
       const tmpResult = initialize;
     }
-  : (arg0) => {
+  : function NotificationToggle(arg0) {
       ({ sendStartNotification, onToggle } = arg0);
       const tmp = closure_16();
       const items = [HotspotStore2.HotspotStore];
@@ -338,12 +338,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       return state(Form.FormRow, obj2);
     };
 let closure_20 = tmp5;
-let obj8 = { marginBottom: nativeDefault.space.PX_16 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/modals/StartStageChannelModal.tsx");
 
-export default noop.forwardRef((channel, arg1) => {
-  ({ guild, onStageStarted: require, onClose: importDefault } = channel);
+export default function StartStageChannelModal(arg0) {
+  ({ guild, onStageStarted: require, onClose: importDefault } = arg0);
   channel = undefined;
   first1 = undefined;
   _slicedToArray = undefined;
@@ -356,7 +355,7 @@ export default noop.forwardRef((channel, arg1) => {
   closure_12 = undefined;
   constants = undefined;
   let obj5;
-  let ref;
+  ref = undefined;
   c16 = undefined;
   onConfirmPress = async function _handleSave() {
     if (c5 === 2) {
@@ -390,21 +389,21 @@ export default noop.forwardRef((channel, arg1) => {
               if (null != first2) {
                 closure_2_8(true);
                 StageInstanceStore(null);
-                const result = tmp66(1881).dismissGlobalKeyboard();
+                const result = tmp66(1893).dismissGlobalKeyboard();
                 dependencyMap = 1;
                 if (null != memo) {
                   c4 = 3;
                   c5 = 1;
-                  const obj8 = { value: tmp66(8107).editStage(channel, first1, first2), done: false };
+                  const obj8 = { value: tmp66(7482).editStage(channel, first1, first2), done: false };
                   return obj8;
                 } else {
-                  obj5 = tmp66(8107);
+                  obj5 = tmp66(7482);
                   c4 = 2;
                   c5 = 1;
                   const obj9 = { value: obj5.startStage(channel, first1, first2, first3), done: false };
                   return obj9;
                 }
-                const obj4 = tmp66(1881);
+                const obj4 = tmp66(1893);
               }
             }
           }
@@ -412,7 +411,7 @@ export default noop.forwardRef((channel, arg1) => {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp66;
-            const aPIError = new closure_0(5319).APIError(closure_128_1);
+            const aPIError = new closure_0(5631).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_9(closure_128_0);
             closure_129_8(false);
@@ -427,8 +426,8 @@ export default noop.forwardRef((channel, arg1) => {
                   tmp8 = closure_129_13;
                 }
                 if (tmp8) {
-                  tmp66(6723).hideHotspot(closure_0(6719).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
-                  const obj2 = tmp66(6723);
+                  tmp66(6899).hideHotspot(closure_0(6895).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                  const obj2 = tmp66(6899);
                 }
               }
             } else if (arg0 === 1) {
@@ -468,8 +467,9 @@ export default noop.forwardRef((channel, arg1) => {
       }
     }
   };
+  ({ channel, ref } = arg0);
   let tmp = c16();
-  const imperativeHandle = first2.useImperativeHandle(arg1, () => ({
+  const imperativeHandle = first2.useImperativeHandle(ref, () => ({
     renderRightButton: function RightButton() {
       const obj = {
         style: c16().closeButtonContainer,
@@ -482,12 +482,12 @@ export default noop.forwardRef((channel, arg1) => {
       const tmp = c16();
       const intl = require("util").intl;
       obj.accessibilityLabel = intl.string(require("util").t.cpT0Cq);
-      obj.source = require("../../../../../_runtime/metro/06591__.js");
+      obj.source = require("../../../../../_runtime/metro/06767__.js");
       obj.onPress = onPress;
       return obj5(require("TouchableHitBox"), obj);
     },
   }));
-  const tmp4 = _slicedToArray(first2.useState(channel.channel), 2);
+  const tmp4 = _slicedToArray(first2.useState(channel), 2);
   channel = tmp4[0];
   const items = [channel.id];
   const memo = first2.useMemo(() => StageInstanceStore.getStageInstanceByChannel(first.id), items);
@@ -722,5 +722,5 @@ export default noop.forwardRef((channel, arg1) => {
     const tmp26Result2 = require("KeyboardAwareView");
   }
   return tmp31Result8;
-});
+}
 export const NotificationToggle = tmp5;

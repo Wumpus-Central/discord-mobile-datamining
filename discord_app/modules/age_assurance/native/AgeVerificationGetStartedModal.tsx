@@ -1,7 +1,7 @@
 // discord_app/modules/age_assurance/native/AgeVerificationGetStartedModal.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import AgeVerificationAnalyticsUtils from "../AgeVerificationAnalyticsUtils.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import GoogleWalletVerificationScreenDefault from "GoogleWalletVerificationScreen.tsx";
 import AgeVerificationIntroScreenDefault from "AgeVerificationIntroScreen.tsx";
 import AgeVerificationRetryScreenDefault from "AgeVerificationRetryScreen.tsx";
@@ -85,7 +85,7 @@ function getScreens(headerStyle, modalSessionId, entryPoint, classificationId, a
   return obj;
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" } };
 let closure_5 = createStyles.createStyles(obj2);
 let obj4 = {
@@ -100,7 +100,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationGetStartedModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (entryPoint) => {
+  ? function AgeVerificationGetStartedModal(entryPoint) {
       const cResult = entryPoint(EXPRESSIVE_PRIMARY[11]).c(17);
       entryPoint = entryPoint.entryPoint;
       ({ isRetry, useEmbeddedMethods, classificationId, onComplete } = entryPoint);
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp9;
       const obj = entryPoint(EXPRESSIVE_PRIMARY[11]);
     }
-  : (entryPoint) => {
+  : function AgeVerificationGetStartedModal(entryPoint) {
       entryPoint = entryPoint.entryPoint;
       const isRetry = entryPoint.isRetry;
       let flag = entryPoint.useEmbeddedMethods;

@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/createChannelStream.tsx
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
-import createConversationHeader from "../../conversations/native/createConversationHeader.tsx";
 import isNewMessageGroupDefault from "../isNewMessageGroup.tsx";
+import createConversationHeader from "../../conversations/native/createConversationHeader.tsx";
 import tryInjectMessage from "../tryInjectMessage.tsx";
 import PushFeedbackStore from "../../push_feedback/PushFeedbackStore.tsx";
 import EditMessageStore from "../../../stores/EditMessageStore.tsx";
@@ -10,7 +10,7 @@ import UploadStore from "../../../stores/UploadStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const RowGeneratorConstants = fn(7603);
+const RowGeneratorConstants = fn(7720);
 ({
   Changeset: metroRequire,
   LoadingType: closure_7,

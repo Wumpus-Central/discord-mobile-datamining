@@ -11,7 +11,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopPreviewVisible.tsx");
 
 export const useGuildShopPreviewVisible = ReactCompilerGating.isReactCompilerEnabled()
-  ? (features) => {
+  ? function useGuildShopPreviewVisible(features) {
       _require = features;
       const cResult = require("c").c(7);
       const obj = require("c");
@@ -101,7 +101,7 @@ export const useGuildShopPreviewVisible = ReactCompilerGating.isReactCompilerEna
       }
       return null != features && stateFromStores && !tmp10 && tmp16 && guildEligibleForGuildProducts && !result;
     }
-  : (features) => {
+  : function useGuildShopPreviewVisible(features) {
       _require = features;
       const result = require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(
         require("dismissible_content").DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW,
@@ -135,9 +135,9 @@ export const useGuildShopPreviewVisible = ReactCompilerGating.isReactCompilerEna
         CREATOR_MONETIZABLE_PROVISIONAL: arr2[1],
         ROLE_SUBSCRIPTIONS_ENABLED: arr2[2],
       } = constants2);
-      const guildEligibleForGuildProducts = tmp(6771).useGuildEligibleForGuildProducts(id);
+      const guildEligibleForGuildProducts = tmp(6947).useGuildEligibleForGuildProducts(id);
       let tmp9 = null != features;
-      const tmpResult = tmp(6771);
+      const tmpResult = tmp(6947);
       if (tmp9) {
         tmp9 = stateFromStores;
       }

@@ -4,7 +4,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2815 from "../../SafetyFlows.messages.js";
+import _modDef2859 from "../../SafetyFlows.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AuthenticationActionCreatorsDefault from "../../../../actions/AuthenticationActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -14,10 +14,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   row: {
-    height: fn(6075).NAV_BAR_HEIGHT,
+    height: fn(6261).NAV_BAR_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -26,7 +26,7 @@ let obj2 = {
   logOut: null,
 };
 let obj3 = {
-  height: fn(6075).NAV_BAR_HEIGHT,
+  height: fn(6261).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
@@ -40,7 +40,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx");
 
 export const ParentalConsentConnectionNavbar = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ParentalConsentConnectionNavbar() {
       const cResult = c.c(17);
       const tmp4 = closure_7();
       const top = useSafeAreaInsetsDefault().top;
@@ -76,7 +76,7 @@ export const ParentalConsentConnectionNavbar = ReactCompilerGating.isReactCompil
           return AuthenticationActionCreatorsDefault.logout("safety_flows_parental_consent_connection");
         };
         const intl = util.intl;
-        const stringResult = intl.string(_modDef2815["3HuGuY"]);
+        const stringResult = intl.string(_modDef2859["3HuGuY"]);
         cResult[4] = fn2;
         cResult[5] = stringResult;
         let tmp12 = stringResult;
@@ -148,7 +148,7 @@ export const ParentalConsentConnectionNavbar = ReactCompilerGating.isReactCompil
       tmp21 = tmp22;
       const tmpResult = initialize;
     }
-  : () => {
+  : function ParentalConsentConnectionNavbar() {
       const tmp = closure_7();
       const items = [UserStore];
       const stateFromStores = initialize.useStateFromStores(items, () => {
@@ -172,7 +172,7 @@ export const ParentalConsentConnectionNavbar = ReactCompilerGating.isReactCompil
         children: null,
       };
       const intl = util.intl;
-      obj4.children = intl.string(_modDef2815["3HuGuY"]);
+      obj4.children = intl.string(_modDef2859["3HuGuY"]);
       const items1 = [hasOwnProperty(Text_Text.Text, obj4)];
       let tmp5Result = null != stateFromStores;
       if (tmp5Result) {

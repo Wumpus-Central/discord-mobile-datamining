@@ -22,10 +22,10 @@ function getICYMIComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const YouBarNavigatorScreens = fn(10833).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11182).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(7568);
+const NativeStackNavigator = fn(9279);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -33,7 +33,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/Y
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function YouBarStackNavigator() {
         const cResult = c.c(19);
         const ref = noop.useRef(undefined);
         const items = [SelectedGuildStore];
@@ -123,7 +123,7 @@ export default noop.memo(
             const obj9 = { children: null };
             const items1 = [tmp17, tmp19, tmp25];
             obj9.children = items1;
-            const tmp34 = closure_1_11(v65535, obj9);
+            const tmp34 = closure_1_11(collapsed, obj9);
             cResult[12] = tmp17;
             cResult[13] = tmp19;
             cResult[14] = tmp25;
@@ -165,7 +165,7 @@ export default noop.memo(
         };
         const tmpResult2 = Navigator;
       }
-    : () => {
+    : function YouBarStackNavigator() {
         const ref = noop.useRef(undefined);
         let items = [SelectedGuildStore];
         const stateFromStores = current(accessibilityNativeStackOptions[10]).useStateFromStores(items, () =>
@@ -235,7 +235,7 @@ export default noop.memo(
             },
           });
           obj3.children = items;
-          return closure_2_11(v65535, obj3);
+          return closure_2_11(collapsed, obj3);
         }, items2);
         obj5.children = closure_9(Screen.Navigator, obj6);
         obj4.children = closure_9(current(accessibilityNativeStackOptions[16]).LayerScope, obj5);

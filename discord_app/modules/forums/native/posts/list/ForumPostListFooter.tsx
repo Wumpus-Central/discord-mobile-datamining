@@ -14,7 +14,7 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1085).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start" },
   dot: null,
@@ -33,7 +33,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostListFooter.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForumPostListFooter(arg0) {
       const cResult = c.c(22);
       ({ thread, firstMessage, hasUnreads, parentChannel } = arg0);
       const tmp4 = closure_8();
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp8;
       tmp7 = tmp8;
     }
-  : (parentChannel) => {
+  : function ForumPostListFooter(parentChannel) {
       ({ thread, firstMessage, hasUnreads } = parentChannel);
       const tmp = closure_8();
       const typingUserIds = useTypingUsersIds.useTypingUserIds(thread.id);

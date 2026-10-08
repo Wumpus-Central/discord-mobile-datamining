@@ -5,12 +5,12 @@ import useIsUsingClientThemeDefault from "useIsUsingClientTheme.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ none: { backgroundColor: "transparent" } });
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGradientBottom() {
       const cResult = c.c(2);
       const gradientValue = client_themes_ClientThemesUtils.useGradientValue(
         client_themes_ClientThemesUtils.GradientPercentage.END,
@@ -29,7 +29,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : () => {
+  : function useGradientBottom() {
       const gradientValue = client_themes_ClientThemesUtils.useGradientValue(
         client_themes_ClientThemesUtils.GradientPercentage.END,
       );
@@ -45,7 +45,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGradientTop() {
       const cResult = c.c(2);
       const gradientValue = client_themes_ClientThemesUtils.useGradientValue(
         client_themes_ClientThemesUtils.GradientPercentage.START,
@@ -64,7 +64,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : () => {
+  : function useGradientTop() {
       const gradientValue = client_themes_ClientThemesUtils.useGradientValue(
         client_themes_ClientThemesUtils.GradientPercentage.START,
       );
@@ -80,7 +80,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGradientMidpoint() {
       const cResult = c.c(2);
       const gradientValue = client_themes_ClientThemesUtils.useGradientValue(
         client_themes_ClientThemesUtils.GradientPercentage.MID,
@@ -99,7 +99,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : () => {
+  : function useGradientMidpoint() {
       const gradientValue = client_themes_ClientThemesUtils.useGradientValue(
         client_themes_ClientThemesUtils.GradientPercentage.MID,
       );
@@ -120,7 +120,7 @@ export const useGradientBottom = tmp2;
 export const useGradientTop = tmp3;
 export const useGradientMidpoint = tmp4;
 export const useClientThemesOverride = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useClientThemesOverride(arg0) {
       let tmp2;
       if (useIsUsingClientThemeDefault()) {
         let none = arg0;
@@ -131,7 +131,7 @@ export const useClientThemesOverride = ReactCompilerGating.isReactCompilerEnable
       }
       return tmp2;
     }
-  : (arg0) => {
+  : function useClientThemesOverride(arg0) {
       let tmp2;
       if (useIsUsingClientThemeDefault()) {
         let none = arg0;

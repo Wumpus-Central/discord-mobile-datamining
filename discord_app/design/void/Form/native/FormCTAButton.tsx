@@ -10,11 +10,11 @@ import TextStyles_mod from "../../../../modules/rebrand/native/TextStyles.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, Pressable: closure_4, Platform, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
-const FormConstants = fn(1192);
+const FormConstants = fn(1204);
 ({ ANDROID_FOREGROUND_RIPPLE: metroRequire, getThemedRippleConfig: closure_7 } = FormConstants);
 const Fonts = fn(1085).Fonts;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   rowButton: { paddingHorizontal: 16 },
   sectionBody: {},
@@ -41,7 +41,7 @@ let closure_9 = createStyles.createStyles(obj2);
 let obj6 = { BRAND: "brand", DANGER: "danger", WARNING: "warning" };
 const ReactCompilerGating = fn(558);
 const tmp10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FormCTAButton(arg0) {
       const cResult = c.c(39);
       ({ color, label, fontSize, alignLeft, disabled, loading, testID, style, onPress } = arg0);
       if (undefined === color) {
@@ -246,7 +246,7 @@ const tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       textDanger = tmp7.textDanger;
     }
-  : (children) => {
+  : function FormCTAButton(children) {
       let BRAND = children.color;
       if (undefined === BRAND) {
         BRAND = obj6.BRAND;

@@ -12,16 +12,16 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const MediaKeyboardConstants = fn(1614);
+const MediaKeyboardConstants = fn(1626);
 ({ HEADER_HANDLE_HEIGHT: metroRequire, MediaPickerActionSheetEngagedActions: closure_7 } = MediaKeyboardConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const MetaQuestUtils = fn(1615);
+const MetaQuestUtils = fn(1627);
 let closure_11 = MetaQuestUtils.isMetaQuest();
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 const IS_IOS = PlatformUtils.isIOS();
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   background: {
     backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -31,7 +31,7 @@ let obj = {
 let closure_13 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MediaKeyboardBackground(arg0) {
       const cResult = c.c(7);
       ({ pointerEvents, style } = arg0);
       const tmp4 = closure_13();
@@ -72,7 +72,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp7 = items;
     }
-  : (arg0) => {
+  : function MediaKeyboardBackground(arg0) {
       ({ pointerEvents, style } = arg0);
       const obj = {
         pointerEvents,
@@ -121,7 +121,7 @@ let result = size.fileFinishedImporting("modules/media_keyboard/native/component
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (onAccessibilityFocusRestore) => {
+    ? function MediaKeyboardBottomSheet(onAccessibilityFocusRestore) {
         const cResult = animatedIndex(onClose[11]).c(44);
         ({ accessoriesComponent, animatedIndex } = onAccessibilityFocusRestore);
         ({ animatedPosition, bottomSheetRef } = onAccessibilityFocusRestore);
@@ -141,16 +141,16 @@ export default noop.memo(
         noop = tmp8;
         bottomSheetRef(onClose[15])();
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-          class P {
+          class K {
             constructor(arg0) {
               obj = {};
               merged = Object.assign(onAccessibilityFocusRestore);
               return closure_9(closure_1_14, obj);
             }
           }
-          cResult[1] = P;
+          cResult[1] = K;
         } else {
-          class P {
+          class K {
             constructor(arg0) {
               obj = {};
               merged = Object.assign(onAccessibilityFocusRestore);
@@ -365,7 +365,7 @@ export default noop.memo(
               }
             }
           }
-          function ae() {
+          function ie() {
             if (closure_4) {
               if (null != bottomSheetRef.current) {
                 const current = bottomSheetRef.current;
@@ -388,7 +388,7 @@ export default noop.memo(
           cResult[10] = bottomSheetRef;
           cResult[11] = tmp8;
           cResult[12] = onClose;
-          cResult[13] = ae;
+          cResult[13] = ie;
           cResult[14] = items;
           const tmpResult4 = animatedIndex(onClose[24]);
         }
@@ -430,7 +430,7 @@ export default noop.memo(
         cResult[5] = F;
         let obj = animatedIndex(onClose[11]);
       }
-    : (animatedIndex) => {
+    : function MediaKeyboardBottomSheet(animatedIndex) {
         animatedIndex = animatedIndex.animatedIndex;
         const bottomSheetRef = animatedIndex.bottomSheetRef;
         const onClose = animatedIndex.onClose;
@@ -518,14 +518,14 @@ export default noop.memo(
           }
         }, items1);
         let obj2 = animatedIndex(onClose[21]);
-        class H {
+        class B {
           constructor() {
             return animatedIndex.get() >= 0;
           }
         }
-        H.__closure = { animatedIndex };
-        H.__workletHash = 2707510631878;
-        H.__initData = __initData4;
+        B.__closure = { animatedIndex };
+        B.__workletHash = 2707510631878;
+        B.__initData = __initData4;
         const fn = function w(arg0, arg1) {
           let tmp = closure_12;
           if (closure_12) {
@@ -543,7 +543,7 @@ export default noop.memo(
         fn.__closure = { IS_IOS, runOnJS: animatedIndex(onClose[24]).runOnJS, handleSheetOpenChange: callback3 };
         fn.__workletHash = 14150445095159;
         fn.__initData = __initData5;
-        const animatedReaction = tmp5Result.useAnimatedReaction(H, fn);
+        const animatedReaction = tmp5Result.useAnimatedReaction(B, fn);
         let obj3 = { IS_IOS, runOnJS: animatedIndex(onClose[24]).runOnJS, handleSheetOpenChange: callback3 };
         class J {
           constructor() {
@@ -553,7 +553,7 @@ export default noop.memo(
         J.__closure = { animatedIndex };
         J.__workletHash = 634522091630;
         J.__initData = __initData6;
-        class B {
+        class H {
           constructor(arg0, arg1) {
             if (animatedIndex !== arg1) {
               tmp = closure_0;
@@ -566,10 +566,10 @@ export default noop.memo(
           }
         }
         const tmp5Result2 = animatedIndex(onClose[24]);
-        B.__closure = { runOnJS: animatedIndex(onClose[24]).runOnJS, setAccessibilityViewIsModal: tmp13[1] };
-        B.__workletHash = 13476860564128;
-        B.__initData = __initData7;
-        const animatedReaction1 = tmp5Result2.useAnimatedReaction(J, B);
+        H.__closure = { runOnJS: animatedIndex(onClose[24]).runOnJS, setAccessibilityViewIsModal: tmp13[1] };
+        H.__workletHash = 13476860564128;
+        H.__initData = __initData7;
+        const animatedReaction1 = tmp5Result2.useAnimatedReaction(J, H);
         bottomSheetRef(onClose[25])(() => () => {
           if (null != ref.current) {
             const _clearTimeout = clearTimeout;
@@ -643,7 +643,7 @@ export default noop.memo(
         obj6.children = ref2(animatedIndex(onClose[27]).AccessibilityViewAnimated, {
           ref,
           nativeID: "media-keyboard-sheet",
-          onAccessibilityEscape() {
+          onAccessibilityEscape: function handleClose() {
             if (closure_3 != null) {
               tmp();
             }

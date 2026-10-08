@@ -159,7 +159,7 @@ function FederatedSocialModalScreen(onClose) {
 const WebBrowserType = fn(1085).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({
   container: { padding: 16 },
   description: { textAlign: "center" },
@@ -170,7 +170,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/FederatedSocialModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (platformType) => {
+  ? function FederatedSocialModal(platformType) {
       _require = platformType;
       const cResult = require("c").c(8);
       if (cResult[0] !== platformType.platformType) {
@@ -193,11 +193,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] !== platformType.onClose) {
-        const headerBackButton = tmp(6017).getHeaderBackButton(platformType.onClose);
+        const headerBackButton = tmp(6203).getHeaderBackButton(platformType.onClose);
         cResult[2] = platformType.onClose;
         cResult[3] = headerBackButton;
         let tmp10 = headerBackButton;
-        const tmpResult = tmp(6017);
+        const tmpResult = tmp(6203);
       } else {
         tmp10 = cResult[3];
       }
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
       };
     }
-  : (platformType) => {
+  : function FederatedSocialModal(platformType) {
       _require = platformType;
       value = PlatformsDefault.get(platformType.platformType);
       let name;

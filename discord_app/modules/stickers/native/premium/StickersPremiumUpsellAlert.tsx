@@ -7,9 +7,9 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
-import _modDef10150 from "../../../../../_runtime/metro/10150__.js";
-import _modDef10151 from "../../../../../_runtime/metro/10151__.js";
-import _modDef10152 from "../../../../../_runtime/metro/10152__.js";
+import _modDef9736 from "../../../../../_runtime/metro/09736__.js";
+import _modDef9737 from "../../../../../_runtime/metro/09737__.js";
+import _modDef9738 from "../../../../../_runtime/metro/09738__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, AnalyticsSections: closure_9, AnalyticsObjects: c10 } = Constants);
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({
   SubscriptionPlans: closure_11,
   NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_12,
@@ -28,7 +28,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let items = [
   {
-    icon: _modDef10150,
+    icon: _modDef9736,
     description() {
       const intl = util.intl;
       return intl.string(util.t.uAfKTe);
@@ -38,7 +38,7 @@ let items = [
   ,
 ];
 let obj = {
-  icon: _modDef10150,
+  icon: _modDef9736,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -46,28 +46,28 @@ let obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE,
 };
 items[1] = {
-  icon: _modDef10151,
+  icon: _modDef9737,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   },
 };
 let obj2 = {
-  icon: _modDef10151,
+  icon: _modDef9737,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   },
 };
 items[2] = {
-  icon: _modDef10152,
+  icon: _modDef9738,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
   },
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_GREEN,
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj5 = {
   alert: { paddingTop: 18 },
   shortHeightAlert: { height: 500 },
@@ -82,7 +82,7 @@ let obj5 = {
   imageHeader: null,
 };
 let obj3 = {
-  icon: _modDef10152,
+  icon: _modDef9738,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -121,7 +121,7 @@ obj5.imageHeader = { marginBottom: 12 };
 let closure_17 = createStyles.createStyles(obj5);
 let ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (perk) => {
+  ? function PerkRow(perk) {
       const cResult = c.c(17);
       perk = perk.perk;
       const tmp4 = closure_17();
@@ -198,7 +198,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp6 = items1;
     }
-  : (perk) => {
+  : function PerkRow(perk) {
       perk = perk.perk;
       const tmp = closure_17();
       items = [tmp.perkRow];
@@ -237,7 +237,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/premium/StickersPremiumUpsellAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function StickersPremiumUpsellAlert(arg0) {
       const cResult = analyticsLocation(576).c(38);
       ({ onClose, analyticsLocation } = arg0);
       const tmp4 = closure_17();
@@ -257,11 +257,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [tmp5, tmp6] = cResult;
       }
       const effect = noop.useEffect(tmp5, tmp6);
-      const tmp9 = analyticsLocations(8898)(closure_11.PREMIUM_MONTH_TIER_2);
+      const tmp9 = analyticsLocations(9331)(closure_11.PREMIUM_MONTH_TIER_2);
       if (tmp9 != null) {
         const priceString = tmp9.priceString;
       }
-      analyticsLocations = tmp8(6664)().analyticsLocations;
+      analyticsLocations = tmp8(6841)().analyticsLocations;
       if (cResult[2] === analyticsLocation) {
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
@@ -276,14 +276,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[6] = stringResult1;
         }
         let shortHeightAlert = null;
-        if (tmp8(1484)().height <= 580) {
+        if (tmp8(1496)().height <= 580) {
           shortHeightAlert = tmp4.shortHeightAlert;
         }
         if (cResult[7] === tmp4.alert) {
           const _Symbol3 = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            let obj2 = { source: tmp8(4815) };
-            const tmp19 = closure_14(analyticsLocation(1188).Icon, obj2);
+            let obj2 = { source: tmp8(5009) };
+            const tmp19 = closure_14(analyticsLocation(1200).Icon, obj2);
             cResult[10] = tmp19;
             let tmp17 = tmp19;
           } else {
@@ -291,7 +291,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[11] !== onClose) {
             let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: tmp17 };
-            const tmp22 = closure_14(analyticsLocation(5916).PressableOpacity, obj3);
+            const tmp22 = closure_14(analyticsLocation(6189).PressableOpacity, obj3);
             cResult[11] = onClose;
             cResult[12] = tmp22;
             let tmp20 = tmp22;
@@ -320,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return true;
                 }
               }
-              const obj4 = { source: tmp8(10153), style: tmp4.imageHeader };
+              const obj4 = { source: tmp8(9739), style: tmp4.imageHeader };
               const tmp30 = closure_14(closure_5, obj4);
               cResult[17] = tmp4.imageHeader;
               cResult[18] = tmp30;
@@ -390,7 +390,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const tmp41 = closure_14(closure_4, obj7);
                 cResult[25] = tmp4.perks;
                 cResult[26] = tmp41;
-                const tmp39 = tmp41;
               } else {
                 class K {
                   constructor() {
@@ -414,25 +413,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[27] = tmp4.content;
               cResult[28] = tmp28;
               cResult[29] = tmp34;
-              class M {
-                constructor() {
-                  obj = closure_1(closure_2[21]);
-                  obj1 = { location: null };
-                  obj5 = {};
-                  merged = Object.assign(analyticsLocation);
-                  obj5.section = AnalyticsSections.STICKER_PREMIUM_TIER_2_UPSELL_MODAL;
-                  obj5.object = AnalyticsObjects.BUTTON_CTA;
-                  obj1.location = obj5;
-                  trackResult = obj.track(AnalyticEvents.PREMIUM_PROMOTION_OPENED, obj1);
-                  obj6 = { analyticsLocations };
-                  tmp3 = closure_1(closure_2[22])(obj6);
-                  return;
-                }
-              }
+              cResult[30] = tmp39;
               cResult[31] = tmp47;
             }
             const obj10 = { style: tmp4.description, variant: "text-md/medium", children: tmp31 };
-            const tmp36 = closure_14(analyticsLocation(4892).Text, obj10);
+            const tmp36 = closure_14(analyticsLocation(5086).Text, obj10);
             cResult[21] = tmp4.description;
             cResult[22] = tmp31;
             cResult[23] = tmp36;
@@ -448,27 +433,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = shortHeightAlert;
         cResult[9] = items2;
       }
-      class M {
-        constructor() {
-          obj = closure_1(closure_2[21]);
-          obj1 = { location: null };
-          obj5 = {};
-          merged = Object.assign(analyticsLocation);
-          obj5.section = AnalyticsSections.STICKER_PREMIUM_TIER_2_UPSELL_MODAL;
-          obj5.object = AnalyticsObjects.BUTTON_CTA;
-          obj1.location = obj5;
-          trackResult = obj.track(AnalyticEvents.PREMIUM_PROMOTION_OPENED, obj1);
-          obj6 = { analyticsLocations };
-          tmp3 = closure_1(closure_2[22])(obj6);
-          return;
-        }
+      function onConfirm() {
+        const obj2 = { location: null };
+        const obj3 = {};
+        const merged = Object.assign(analyticsLocation);
+        obj3.section = options.STICKER_PREMIUM_TIER_2_UPSELL_MODAL;
+        obj3.object = constants2.BUTTON_CTA;
+        obj2.location = obj3;
+        AnalyticsUtilsDefault.track(constants.PREMIUM_PROMOTION_OPENED, obj2);
+        openPremiumModalDefault({ analyticsLocations });
       }
       cResult[2] = analyticsLocation;
       cResult[3] = analyticsLocations;
-      cResult[4] = M;
+      cResult[4] = onConfirm;
       let obj = analyticsLocation(576);
     }
-  : (arg0) => {
+  : function StickersPremiumUpsellAlert(arg0) {
       ({ onClose, analyticsLocation: require } = arg0);
       let analyticsLocations;
       const tmp = closure_17();
@@ -478,12 +458,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj = analyticsLocations(dependencyMap[16]);
         }
       }, []);
-      const tmp5 = analyticsLocations(8898)(closure_11.PREMIUM_MONTH_TIER_2);
+      const tmp5 = analyticsLocations(9331)(closure_11.PREMIUM_MONTH_TIER_2);
       let priceString;
       if (tmp5 != null) {
         priceString = tmp5.priceString;
       }
-      analyticsLocations = tmp3(6664)().analyticsLocations;
+      analyticsLocations = tmp3(6841)().analyticsLocations;
       let obj = {
         cancelText: null,
         confirmColor: null,
@@ -513,15 +493,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj.onCancel = onClose;
       items = [tmp.alert];
       let shortHeightAlert = null;
-      if (analyticsLocations(1484)().height <= 580) {
+      if (analyticsLocations(1496)().height <= 580) {
         shortHeightAlert = tmp.shortHeightAlert;
       }
       items[1] = shortHeightAlert;
       obj.style = items;
       let obj2 = { style: tmp.closeContainer, children: null };
       let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
-      const tmp3Result = analyticsLocations(5790);
-      obj3.children = closure_14(native.Icon, { source: analyticsLocations(4815) });
+      const tmp3Result = analyticsLocations(5394);
+      obj3.children = closure_14(native.Icon, { source: analyticsLocations(5009) });
       obj2.children = closure_14(Pressables.PressableOpacity, obj3);
       const items1 = [closure_14(closure_4, obj2)];
       const obj5 = {
@@ -531,8 +511,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         children: null,
       };
-      const obj4 = { source: analyticsLocations(4815) };
-      const items2 = [closure_14(closure_5, { source: analyticsLocations(10153), style: tmp.imageHeader }), ,];
+      const obj4 = { source: analyticsLocations(5009) };
+      const items2 = [closure_14(closure_5, { source: analyticsLocations(9739), style: tmp.imageHeader }), ,];
       const obj7 = { style: tmp.description, variant: "text-md/medium", children: null };
       const intl3 = util.intl;
       if (priceString == null) {
@@ -541,7 +521,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { children: null };
       obj7.children = intl3.format(util.t.TBsJfQ, { monthlyPrice: priceString });
       items2[1] = closure_14(Text_Text.Text, obj7);
-      const obj6 = { source: analyticsLocations(10153), style: tmp.imageHeader };
+      const obj6 = { source: analyticsLocations(9739), style: tmp.imageHeader };
       items2[2] = closure_14(closure_4, {
         style: tmp.perks,
         children: items.map((perk, index) =>

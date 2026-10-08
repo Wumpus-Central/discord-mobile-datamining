@@ -4,22 +4,22 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import ModalScreen from "../../../design/components/Modal/native/ModalScreen.native.tsx";
 import ModalContent from "../../../design/components/Modal/native/ModalContent.native.tsx";
-import ModalActionButton from "../../../design/components/Modal/native/ModalActionButton.native.tsx";
 import ModalFooter from "../../../design/components/Modal/native/ModalFooter.native.tsx";
+import ModalActionButton from "../../../design/components/Modal/native/ModalActionButton.native.tsx";
 import LogOutDisclaimerDefault from "LogOutDisclaimer.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ header: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/native/SafetyFlowTaskScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SafetyFlowTaskScreen(arg0) {
       const cResult = c.c(23);
       ({ ImageComponent, title, subtitle, subtitleColor, action, onAction, footer, children, submitting, withLogout } =
         arg0);
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: title,
       };
     }
-  : (action) => {
+  : function SafetyFlowTaskScreen(action) {
       ({ ImageComponent, subtitle, subtitleColor } = action);
       if (subtitleColor === undefined) {
         subtitleColor = "text-strong";

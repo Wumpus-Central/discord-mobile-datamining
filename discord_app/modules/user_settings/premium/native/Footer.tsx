@@ -6,14 +6,14 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment.tsx";
-import _modDef13319 from "../../../../../_runtime/metro/13319__.js";
+import _modDef13619 from "../../../../../_runtime/metro/13619__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   container: { flex: 1, flexDirection: "column", alignItems: "center", width: "100%" },
   footerText: { marginBottom: 24 },
@@ -25,7 +25,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/Footer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Footer(arg0) {
       const cResult = c.c(15);
       ({ style, showSubscribeButton } = arg0);
       const tmp4 = closure_7();
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   easterEggSpacing = tmp4.easterEggSpacing;
                 }
                 if (cResult[9] !== easterEggSpacing) {
-                  const obj2 = { style: easterEggSpacing, source: _modDef13319 };
+                  const obj2 = { style: easterEggSpacing, source: _modDef13619 };
                   const tmp19 = React4(FastImageDefault, obj2);
                   cResult[9] = easterEggSpacing;
                   cResult[10] = tmp19;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = items2;
       const tmp6Result = useOpenPremiumMarketingPaymentDefault(AnalyticsLocationDefault.PREMIUM_MARKETING_FOOTER);
     }
-  : (showSubscribeButton) => {
+  : function Footer(showSubscribeButton) {
       showSubscribeButton = showSubscribeButton.showSubscribeButton;
       const tmp = closure_7();
       useOpenPremiumMarketingPaymentDefault(AnalyticsLocationDefault.PREMIUM_MARKETING_FOOTER);
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         easterEggSpacing = tmp.easterEggSpacing;
       }
       const tmp2Result = FastImageDefault;
-      items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef13319 });
+      items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef13619 });
       obj.children = items2;
       return timestampProducer(View, obj);
     };

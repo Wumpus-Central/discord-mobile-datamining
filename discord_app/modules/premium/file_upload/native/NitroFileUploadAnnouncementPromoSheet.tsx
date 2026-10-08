@@ -1,15 +1,15 @@
 // discord_app/modules/premium/file_upload/native/NitroFileUploadAnnouncementPromoSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2621 from "../NitroFileUpload.messages.js";
+import _modDef2665 from "../NitroFileUpload.messages.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (markAsDismissed) => {
+  ? function NitroFileUploadAnnouncementPromoSheet(markAsDismissed) {
       const cResult = markAsDismissed(576).c(18);
       markAsDismissed = markAsDismissed.markAsDismissed;
       const tmp4 = closure_7();
@@ -40,37 +40,30 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = tmp5;
       if (cResult[2] !== tmp5) {
-        class I {
-          constructor() {
-            tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
-            return;
-          }
-        }
+        const fn2 = function h() {
+          closure_2(ContentDismissActionType.AUTO_DISMISS);
+        };
         cResult[2] = tmp5;
-        cResult[3] = I;
+        cResult[3] = fn2;
+        let tmp6 = fn2;
       } else {
-        class I {
-          constructor() {
-            tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
-            return;
-          }
-        }
+        tmp6 = cResult[3];
       }
       const obj = markAsDismissed(576);
-      const unmountEffect = markAsDismissed(5597).useUnmountEffect(I);
+      const unmountEffect = markAsDismissed(5392).useUnmountEffect(tmp6);
       if (cResult[4] !== tmp5) {
         class I {
           constructor() {
-            tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+            tmp = closure_2(ContentDismissActionType.USER_DISMISS);
             return;
           }
         }
         cResult[4] = tmp5;
-        cResult[5] = tmp9;
+        cResult[5] = I;
       } else {
         class I {
           constructor() {
-            tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+            tmp = closure_2(ContentDismissActionType.USER_DISMISS);
             return;
           }
         }
@@ -78,17 +71,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         class I {
           constructor() {
-            tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+            tmp = closure_2(ContentDismissActionType.USER_DISMISS);
             return;
           }
         }
-        const tmp11 = jsx(tmp(17160).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
-        cResult[6] = tmp11;
-        const tmp10 = tmp11;
+        const tmp10 = jsx(tmp(17441).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+        cResult[6] = tmp10;
+        const tmp9 = tmp10;
       } else {
         class I {
           constructor() {
-            tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+            tmp = closure_2(ContentDismissActionType.USER_DISMISS);
             return;
           }
         }
@@ -96,18 +89,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[7] !== tmp4.illustration) {
         class I {
           constructor() {
-            tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+            tmp = closure_2(ContentDismissActionType.USER_DISMISS);
             return;
           }
         }
-        const obj2 = { style: tmp4.illustration, children: tmp10 };
-        const tmp14 = <View style={tmp4.illustration}>{tmp10}</View>;
+        const obj2 = { style: tmp4.illustration, children: tmp9 };
+        const tmp13 = <View style={tmp4.illustration}>{tmp9}</View>;
         cResult[7] = tmp4.illustration;
-        cResult[8] = tmp14;
+        cResult[8] = tmp13;
       } else {
         class I {
           constructor() {
-            tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+            tmp = closure_2(ContentDismissActionType.USER_DISMISS);
             return;
           }
         }
@@ -115,91 +108,91 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
         class I {
           constructor() {
-            tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+            tmp = closure_2(ContentDismissActionType.USER_DISMISS);
             return;
           }
         }
-        const stringResult = obj4.string(_modDef2621.IyCdAU);
+        const stringResult = obj4.string(_modDef2665.IyCdAU);
         const intl = tmp(1126).intl;
-        const stringResult1 = intl.string(_modDef2621.LhfXZN);
+        const stringResult1 = intl.string(_modDef2665.LhfXZN);
         cResult[9] = stringResult;
         cResult[10] = stringResult1;
-        let tmp16 = stringResult1;
-        const tmp15 = stringResult;
+        let tmp15 = stringResult1;
+        const tmp14 = stringResult;
       } else {
         class I {
           constructor() {
-            tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+            tmp = closure_2(ContentDismissActionType.USER_DISMISS);
             return;
           }
         }
-        tmp16 = cResult[10];
+        tmp15 = cResult[10];
       }
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
         class I {
           constructor() {
-            tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+            tmp = closure_2(ContentDismissActionType.USER_DISMISS);
             return;
           }
         }
         const stringResult2 = obj5.string(tmp(1126).t["NX+WJN"]);
         cResult[11] = stringResult2;
-        const tmp20 = stringResult2;
+        const tmp19 = stringResult2;
       } else {
         class I {
           constructor() {
-            tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+            tmp = closure_2(ContentDismissActionType.USER_DISMISS);
             return;
           }
         }
       }
-      if (cResult[12] !== tmp9) {
+      if (cResult[12] !== I) {
         class I {
           constructor() {
-            tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+            tmp = closure_2(ContentDismissActionType.USER_DISMISS);
             return;
           }
         }
-        const obj3 = { grow: true, size: "lg", variant: "primary", text: tmp20, onPress: tmp9 };
-        const tmp23 = jsx(tmp(5601).Button, { grow: true, size: "lg", variant: "primary", text: tmp20, onPress: tmp9 });
-        cResult[12] = tmp9;
-        cResult[13] = tmp23;
+        const obj3 = { grow: true, size: "lg", variant: "primary", text: tmp19, onPress: I };
+        const tmp22 = jsx(tmp(5375).Button, { grow: true, size: "lg", variant: "primary", text: tmp19, onPress: I });
+        cResult[12] = I;
+        cResult[13] = tmp22;
       } else {
         class I {
           constructor() {
-            tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+            tmp = closure_2(ContentDismissActionType.USER_DISMISS);
             return;
           }
         }
       }
-      if (cResult[14] === tmp9) {
+      if (cResult[14] === I) {
         class I {
           constructor() {
-            tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+            tmp = closure_2(ContentDismissActionType.USER_DISMISS);
             return;
           }
         }
       }
-      const tmpResult = markAsDismissed(5597);
-      cResult[14] = tmp9;
-      cResult[15] = tmp12;
-      cResult[16] = tmp22;
-      cResult[17] = jsx(markAsDismissed(10058).PromoSheet, {
-        illustration: tmp12,
-        title: tmp15,
-        description: tmp16,
-        onDismiss: tmp9,
-        actions: tmp22,
+      const tmpResult = markAsDismissed(5392);
+      cResult[14] = I;
+      cResult[15] = tmp11;
+      cResult[16] = tmp21;
+      cResult[17] = jsx(markAsDismissed(10303).PromoSheet, {
+        illustration: tmp11,
+        title: tmp14,
+        description: tmp15,
+        onDismiss: I,
+        actions: tmp21,
       });
-      const tmp24 = jsx(markAsDismissed(10058).PromoSheet, {
-        illustration: tmp12,
-        title: tmp15,
-        description: tmp16,
-        onDismiss: tmp9,
-        actions: tmp22,
+      const tmp23 = jsx(markAsDismissed(10303).PromoSheet, {
+        illustration: tmp11,
+        title: tmp14,
+        description: tmp15,
+        onDismiss: I,
+        actions: tmp21,
       });
     }
-  : (markAsDismissed) => {
+  : function NitroFileUploadAnnouncementPromoSheet(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
       importDefault = noop.useRef(false);
       const items = [markAsDismissed];

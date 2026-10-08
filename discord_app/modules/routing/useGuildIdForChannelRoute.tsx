@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/useGuildIdForChannelRoute.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (getGuildId) => {
+  ? function useGuildIdForChannelRoute(getGuildId) {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SelectedGuildStore];
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = initialize;
     }
-  : (getGuildId) => {
+  : function useGuildIdForChannelRoute(getGuildId) {
       const items = [SelectedGuildStore];
       let stateFromStores = initialize.useStateFromStores(items, () => guildId.getGuildId());
       if (null == stateFromStores) {

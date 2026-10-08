@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsEligibleForTierTemplateUpsell(arg0) {
       _require = arg0;
       const cResult = require("c").c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -67,11 +67,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[4];
       }
       if (cResult[5] !== stateFromStores) {
-        const result = tmp(6773).canManageGuildRoleSubscriptions(stateFromStores);
+        const result = tmp(6949).canManageGuildRoleSubscriptions(stateFromStores);
         cResult[5] = stateFromStores;
         cResult[6] = result;
         let tmp17 = result;
-        const tmpResult4 = tmp(6773);
+        const tmpResult4 = tmp(6949);
       } else {
         tmp17 = cResult[6];
       }
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp10;
     }
-  : (arg0) => {
+  : function useIsEligibleForTierTemplateUpsell(arg0) {
       _require = arg0;
       const items = [GuildStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));

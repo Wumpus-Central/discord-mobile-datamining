@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = fn;
 const noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty } = noop);
-const ExperimentConstants = fn(4783);
+const ExperimentConstants = fn(4977);
 ({ ExperimentBuckets: closure_8, ExposureTypes: closure_9 } = ExperimentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/createExperiment.tsx");
@@ -213,9 +213,9 @@ export default function createExperiment(config) {
     const tmpResult2 = tmp(tmp2[5]);
   }
   return {
-    useExperiment(cResult) {
-      let obj = cResult2;
-      if (cResult2 === undefined) {
+    useExperiment(guildId) {
+      let obj = arg1;
+      if (arg1 === undefined) {
         obj = { autoTrackExposure: true };
       }
       closure_1 = undefined;
@@ -231,7 +231,7 @@ export default function createExperiment(config) {
       closure_1 = tmp;
       const id = flag.id;
       if ("guild" === flag.kind) {
-        guildExperimentDescriptor = authStore.getGuildExperimentDescriptor(id, cResult.guildId);
+        guildExperimentDescriptor = authStore.getGuildExperimentDescriptor(id, guildId.guildId);
       } else {
         guildExperimentDescriptor = authStore.getUserExperimentDescriptor(id);
       }
@@ -288,7 +288,7 @@ export default function createExperiment(config) {
       );
       closure_5 = tmp9[1];
       [tmp11, tmp12, tmp13] = trackAutoExposure(tmp9[0], 3);
-      const tmp14 = map(result3[7])(cResult);
+      const tmp14 = map(result3[7])(guildId);
       closure_6 = tmp14;
       let items = [flag, false !== obj.autoTrackExposure, tmp14, tmp8Result, tmp12, tmp13, flag2];
       subscribe(() => {

@@ -1,11 +1,11 @@
 // discord_app/modules/collectibles/native/ShopNitroUpsellPromoSheet.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import ButtonGroup from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import ButtonGroup from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
-import EntitlementFeatureNames from "../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 import PremiumUpsellUtils from "../../../utils/native/PremiumUpsellUtils.tsx";
+import EntitlementFeatureNames from "../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 import PremiumFeatureUpsellUtils from "../../premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx";
 import usePremiumFeatureUpsellGetNitroDefault from "../../premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx";
 import NitroUpsellButtonDefault from "../../premium/components/native/NitroUpsellButton.tsx";
@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/ShopNitroUpsellPromoSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ShopNitroUpsellPromoSheet(arg0) {
       const cResult = c.c(18);
       ({ analyticsLocations, title, description } = arg0);
       if (cResult[0] !== analyticsLocations) {
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6,
       );
     }
-  : (analyticsLocations) => {
+  : function ShopNitroUpsellPromoSheet(analyticsLocations) {
       analyticsLocations = analyticsLocations.analyticsLocations;
       if (analyticsLocations === undefined) {
         analyticsLocations = [];

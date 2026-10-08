@@ -20,7 +20,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onMentionablePress) => {
+  ? function AppLauncherMentionableListActionSheet(onMentionablePress) {
       const cResult = onMentionablePress(channel[5]).c(23);
       onMentionablePress = onMentionablePress.onMentionablePress;
       const onActionSheetDismiss = onMentionablePress.onActionSheetDismiss;
@@ -49,28 +49,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const effect = obj2.useEffect(tmp11, tmp12);
           if (cResult[6] !== onActionSheetDismiss) {
-            const fn2 = function _() {
+            function hideActionSheet() {
               ActionSheetActionCreatorsDefault.hideActionSheet(AppLauncherMentionableListActionSheet);
               onActionSheetDismiss();
-            };
+            }
             cResult[6] = onActionSheetDismiss;
-            cResult[7] = fn2;
-            let tmp14 = fn2;
+            cResult[7] = hideActionSheet;
+            let tmp14 = hideActionSheet;
           } else {
             tmp14 = cResult[7];
           }
           closure_10 = tmp14;
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn3 = function w(str) {
+            function handleQueryUpdate(str) {
               closure_5(str.toLowerCase());
               const current = ref.current;
               if (current != null) {
                 current.scrollToOffset({ offset: 0, animated: false });
               }
-            };
-            cResult[8] = fn3;
-            let tmp15 = fn3;
+            }
+            cResult[8] = handleQueryUpdate;
+            let tmp15 = handleQueryUpdate;
           } else {
             tmp15 = cResult[8];
           }
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       let obj4 = { option, onDismiss: onActionSheetDismiss, children: null };
                       const items1 = [tmp17];
-                      class P {
+                      class Item {
                         constructor(arg0) {
                           item = onMentionablePress.item;
                           index = onMentionablePress.index;
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                class P {
+                class Item {
                   constructor(arg0) {
                     item = onMentionablePress.item;
                     index = onMentionablePress.index;
@@ -312,7 +312,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          class P {
+          class Item {
             constructor(arg0) {
               item = onMentionablePress.item;
               index = onMentionablePress.index;
@@ -409,11 +409,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[10] = tmp14;
           cResult[11] = first2.length;
           cResult[12] = onMentionablePress;
-          cResult[13] = P;
-          tmp16 = P;
+          cResult[13] = Item;
+          tmp16 = Item;
         }
       }
-      const fn = function x() {
+      const fn = function v() {
         const applicationCommandOptionQueryOptions =
           ApplicationCommandUtils.getApplicationCommandOptionQueryOptions(option);
         const queryMentionResultsResult = AutocompleteUtilsDefault.queryMentionResults({
@@ -448,7 +448,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = items2;
       tmp11 = fn;
     }
-  : (channel) => {
+  : function AppLauncherMentionableListActionSheet(channel) {
       ({ onMentionablePress: require, onActionSheetDismiss } = channel);
       channel = channel.channel;
       const option = channel.option;
@@ -491,7 +491,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = { option, onDismiss: onActionSheetDismiss, children: null };
       const items1 = [
         ref(require("AppLauncherList").AppLauncherListSearchBar, {
-          onChange(str) {
+          onChange: function handleQueryUpdate(str) {
             closure_5(str.toLowerCase());
             const current = ref.current;
             if (current != null) {
@@ -506,7 +506,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = {
           ref,
           data: first1,
-          renderItem(item) {
+          renderItem: function Item(item) {
             item = item.item;
             const index = item.index;
             const obj = {

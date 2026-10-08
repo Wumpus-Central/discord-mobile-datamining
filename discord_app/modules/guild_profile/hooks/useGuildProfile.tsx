@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/hooks/useGuildProfile.tsx");
 
 export const useGuildProfile = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGuildProfile(arg0) {
       _require = arg0;
       const cResult = require("c").c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -22,7 +22,7 @@ export const useGuildProfile = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function n() {
+        const fn = function f() {
           return GuildProfileStore.getProfile(closure_0);
         };
         cResult[1] = arg0;
@@ -61,7 +61,7 @@ export const useGuildProfile = ReactCompilerGating.isReactCompilerEnabled()
           await closure_0(dependencyMap[6]).getGuildProfile(closure_0, tmp5);
           return value;
         });
-        const fn3 = function () {
+        function t4() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -70,10 +70,10 @@ export const useGuildProfile = ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[6] = arg0;
-        cResult[7] = fn3;
-        let tmp12 = fn3;
+        cResult[7] = t4;
+        let tmp12 = t4;
       } else {
         tmp12 = cResult[7];
       }
@@ -93,7 +93,7 @@ export const useGuildProfile = ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = obj2;
       const tmpResult2 = require("initialize");
     }
-  : (arg0) => {
+  : function useGuildProfile(arg0) {
       _require = arg0;
       const items = [GuildProfileStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () =>

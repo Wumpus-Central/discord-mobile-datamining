@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const NativeModules = _mod17.NativeModules;
 const ContactSyncScenes = ContactSyncConstants.ContactSyncScenes;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useBackHandlerSkipPhoneScreens(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(3);
@@ -22,7 +22,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(tmp4);
       }
-      const fn = function o() {
+      const fn = function c() {
         if (null != closure_1) {
           tmp();
         } else {
@@ -42,7 +42,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp4 = fn;
     }
-  : (arg0, arg1) => {
+  : function useBackHandlerSkipPhoneScreens(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(() => {
@@ -65,10 +65,10 @@ const result = size.fileFinishedImporting("modules/contact_sync/native/component
 
 export default tmp2;
 export const useBackHandlerMinimizeApp = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useBackHandlerMinimizeApp() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t() {
+        const fn = function s() {
           MinimizeApp = MinimizeApp.MinimizeApp;
           MinimizeApp.minimizeApp();
           return true;
@@ -81,7 +81,7 @@ export const useBackHandlerMinimizeApp = ReactCompilerGating.isReactCompilerEnab
       useNavigatorBackPressHandler.useNavigatorBackPressHandler(first);
       const tmpResult = useNavigatorBackPressHandler;
     }
-  : () => {
+  : function useBackHandlerMinimizeApp() {
       useNavigatorBackPressHandler.useNavigatorBackPressHandler(() => {
         MinimizeApp = MinimizeApp.MinimizeApp;
         MinimizeApp.minimizeApp();

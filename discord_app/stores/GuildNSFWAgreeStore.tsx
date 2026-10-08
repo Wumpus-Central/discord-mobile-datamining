@@ -2,7 +2,7 @@
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import AgeGateUtils from "../modules/age_gate/AgeGateUtils.tsx";
+import shouldAgeVerifyForAgeGate from "../modules/age_gate/shouldAgeVerifyForAgeGate.tsx";
 
 require = fn;
 const GuildNSFWAgreeStore = "GuildNSFWAgreeStore";
@@ -17,7 +17,7 @@ prototype["initialize"] = function initialize() {
 prototype["didAgree"] = function didAgree(arg0) {
   let tmp = null != arg0;
   if (tmp) {
-    const result = AgeGateUtils.shouldAgeVerifyForAgeGate();
+    const result = shouldAgeVerifyForAgeGate.shouldAgeVerifyForAgeGate();
     let tmp5 = !result;
     if (!result) {
       tmp5 = value[arg0] || false;

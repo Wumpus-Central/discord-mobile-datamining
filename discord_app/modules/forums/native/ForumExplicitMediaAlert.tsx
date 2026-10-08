@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16, alignItems: "stretch" },
   title: null,
@@ -31,7 +31,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/ForumExplicitMediaAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function ForumExplicitMediaAlert(channelId) {
       const cResult = channelId(onClose[6]).c(32);
       channelId = channelId.channelId;
       const messageId = channelId.messageId;
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = items2;
       const obj = channelId(onClose[6]);
     }
-  : (arg0) => {
+  : function ForumExplicitMediaAlert(arg0) {
       ({ channelId: require, messageId: importDefault, onClose } = arg0);
       const tmp = closure_6();
       const obj = { noDefaultButtons: true, style: tmp.container, onClose, children: null };

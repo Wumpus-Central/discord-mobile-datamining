@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelControlsModes = fn(11914).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
 const __initData = {
   code: "function useDrawerToggleTsx1(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}",
 };
@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/useDrawerToggle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useDrawerToggle(arg0) {
       _require = arg0;
       const cResult = require("c").c(12);
       const context = dismissPanel.useContext(controlsSpecs(connected[4]));
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       connected = context.connected;
       dismissPanel = context.dismissPanel;
       let obj = require("c");
-      const fn = function c() {
+      const fn = function l() {
         return controlsSpecs.get().mode === VoicePanelControlsModes.DRAWER;
       };
       fn.__closure = { controlsSpecs, VoicePanelControlsModes };
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn2 = function l() {
+      const fn2 = function c() {
         if (controlsSpecs.get().mode === VoicePanelControlsModes.DRAWER) {
           dismissPanel();
         } else {
@@ -95,13 +95,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = fn2;
       tmp7 = fn2;
     }
-  : (arg0) => {
+  : function useDrawerToggle(arg0) {
       _require = arg0;
       const context = dismissPanel.useContext(controlsSpecs(connected[4]));
       controlsSpecs = context.controlsSpecs;
       connected = context.connected;
       dismissPanel = context.dismissPanel;
-      const fn = function c() {
+      const fn = function l() {
         return controlsSpecs.get().mode === VoicePanelControlsModes.DRAWER;
       };
       fn.__closure = { controlsSpecs, VoicePanelControlsModes };

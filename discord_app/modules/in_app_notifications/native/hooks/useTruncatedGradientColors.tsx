@@ -13,7 +13,7 @@ let closure_4 = createStyles.createStyles({ gradient: { height: 40 } });
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/useTruncatedGradientColors.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useTruncatedGradientColors() {
       const cResult = c.c(10);
       const tmp3 = closure_4();
       const token = useToken.useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
@@ -59,9 +59,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = items;
       tmp10 = items;
     }
-  : () => {
+  : function useTruncatedGradientColors() {
       const tmp = closure_4();
-      token = token(4586).useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
+      token = token(4778).useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
       const obj2 = { gradientColors: null, gradientStyles: tmp.gradient };
       let items = [token];
       obj2.gradientColors = useMemo(() => {

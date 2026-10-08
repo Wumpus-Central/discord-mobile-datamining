@@ -75,7 +75,7 @@ const CountDownMessageTypes = {
 const result = size.fileFinishedImporting("modules/billing/hooks/useFPDurationLeft.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (toDate, arg1) => {
+  ? function useFPDurationLeft(toDate, arg1) {
       const obj = c;
       let cResult = obj.c(2);
       if (obj.SHORT_TIME_LEFT === arg1) {
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult = useCountdownDefault;
       roundFPCountdownUnits(cResult(tmp14, 60000));
     }
-  : (toDate, arg1) => {
+  : function useFPDurationLeft(toDate, arg1) {
       if (obj.SHORT_TIME_LEFT === arg1) {
         const time = { days: util.t["/wnvqA"], hours: util.t.Jsq0XN, minutes: util.t["SBd+Bs"] };
       } else if (obj.LONG_TIME_LEFT === arg1) {

@@ -5,9 +5,9 @@ import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.t
 import CircleCheckIcon from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
-import CheckmarkLargeBoldIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
 import SecureFramesUtils from "../SecureFramesUtils.tsx";
 import SecureFramesTracking from "../SecureFramesTracking.tsx";
+import CheckmarkLargeBoldIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
 import XLargeBoldIcon from "../../../design/components/Icon/native/redesign/generated/XLargeBoldIcon.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -17,7 +17,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9380);
+const SecureFramesConstants = fn(8801);
 ({
   AnalyticsSecureFramesUserVerification: closure_9,
   SECURE_FRAMES_PUBLIC_KEY_VERSION: c10,
@@ -26,7 +26,7 @@ const SecureFramesConstants = fn(9380);
 const AnalyticsLocations = fn(1085).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { iconContainer: null, icon: null, content: null, subtitle: null, buttons: null, helpMessage: null };
 let size = {
   height: 80,
@@ -49,7 +49,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/native/SecureFramesUserVerificationBottomSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function SecureFramesUserVerificationBottomSheet(userId) {
       const cResult = userId(fingerprintUserKey[11]).c(76);
       userId = userId.userId;
       const channelId = userId.channelId;
@@ -279,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj5 = { userId, channelId, userKey: fingerprintUserKey };
       const tmpResult = userId(fingerprintUserKey[12]);
     }
-  : (userId) => {
+  : function SecureFramesUserVerificationBottomSheet(userId) {
       userId = userId.userId;
       const channelId = userId.channelId;
       const fingerprint = userId.fingerprint;

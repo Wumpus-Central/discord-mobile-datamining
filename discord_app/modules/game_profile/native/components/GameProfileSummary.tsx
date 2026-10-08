@@ -8,14 +8,14 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ container: { flexDirection: "column" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSummary.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GameProfileSummary(arg0) {
       const cResult = trackAction(first[6]).c(19);
       ({ game, trackAction } = arg0);
       const tmp4 = closure_8();
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn2;
       const obj = trackAction(first[6]);
     }
-  : (arg0) => {
+  : function GameProfileSummary(arg0) {
       ({ game, trackAction } = arg0);
       first = undefined;
       _slicedToArray = undefined;

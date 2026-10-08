@@ -8,14 +8,14 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isEveryoneRole = fn(2107).isEveryoneRole;
+const isEveryoneRole = fn(2119).isEveryoneRole;
 const Permissions = fn(1085).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useInviteAssignableRoles(arg0) {
       _require = arg0;
       const cResult = require("c").c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp12;
     }
-  : (arg0) => {
+  : function useInviteAssignableRoles(arg0) {
       _require = arg0;
       const items = [GuildRoleStore, UserStore, PermissionStore];
       const items1 = [arg0];

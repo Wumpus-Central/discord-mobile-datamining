@@ -8,18 +8,18 @@ import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBac
 import PremiumRewardGradientDefault from "../PremiumRewardGradient.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const native = Button(1188);
-const Text_Text = Button(4892);
-const components_Button_Button = Button(5601);
-const QuestDockHooks = Button(14909);
+const native = Button(1200);
+const Text_Text = Button(5086);
+const components_Button_Button = Button(5375);
+const QuestDockHooks = Button(15171);
 require = fn;
 const View = fn(17).View;
-const QuestDockConstants = fn(14912);
+const QuestDockConstants = fn(15174);
 const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_BOTTOM;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const PX_80 = nativeDefault.space.PX_80;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   rewardTile: { borderRadius: nativeDefault.radii.lg },
   wrapper: {
@@ -85,7 +85,7 @@ fn(558);
 let obj7 = { alignSelf: "stretch", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function QuestDockBodyRewardTile(arg0) {
       const cResult = c.c(3);
       const tmp3 = closure_8();
       if (cResult[0] === arg0) {
@@ -105,7 +105,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp7;
       tmp4 = tmp7;
     }
-  : (arg0) => {
+  : function QuestDockBodyRewardTile(arg0) {
       const obj = {};
       const tmp = closure_8();
       const merged = Object.assign(arg0);
@@ -116,7 +116,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function QuestDockBodyQuestRewardTile(arg0) {
       const cResult = c.c(3);
       const tmp3 = closure_8();
       if (cResult[0] === arg0) {
@@ -136,7 +136,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp7;
       tmp4 = tmp7;
     }
-  : (arg0) => {
+  : function QuestDockBodyQuestRewardTile(arg0) {
       const obj = {};
       const tmp = closure_8();
       const merged = Object.assign(arg0);
@@ -150,7 +150,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function QuestDockInsetHeaderBody(arg0) {
         let Button = require;
         const cResult = c.c(58);
         ({
@@ -443,7 +443,7 @@ export default noop.memo(
         tmp10 = items7;
         const ButtonResult = QuestDockHooks;
       }
-    : (showBonusOrbsGradient) => {
+    : function QuestDockInsetHeaderBody(showBonusOrbsGradient) {
         ({ premiumRewardPerkPill, contentBadge, ctaText, onCtaPress, renderCtaIcon, ctaButtonVariant } =
           showBonusOrbsGradient);
         ({ rewardTile, title, description } = showBonusOrbsGradient);

@@ -8,11 +8,11 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ subLabel: { maxWidth: "100%", marginTop: 2 } });
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (thread) => {
+  ? function ThreadListTableRow(thread) {
       const cResult = c.c(14);
       thread = thread.thread;
       let id = thread.onPress;
@@ -79,7 +79,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = fn;
       }
     }
-  : (thread) => {
+  : function ThreadListTableRow(thread) {
       thread = thread.thread;
       const onPress = thread.onPress;
       ({ start, end } = thread);
@@ -106,7 +106,7 @@ const result = size.fileFinishedImporting("modules/threads/native/components/red
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (threadId) => {
+    ? function ConnectedThreadListTableRow(threadId) {
         const cResult = threadId(576).c(8);
         threadId = threadId.threadId;
         ({ onPress, start, end } = threadId);
@@ -148,7 +148,7 @@ export default noop.memo(
         }
         const tmpResult = threadId(504);
       }
-    : (threadId) => {
+    : function ConnectedThreadListTableRow(threadId) {
         threadId = threadId.threadId;
         ({ onPress, start, end } = threadId);
         const items = [ChannelStore];

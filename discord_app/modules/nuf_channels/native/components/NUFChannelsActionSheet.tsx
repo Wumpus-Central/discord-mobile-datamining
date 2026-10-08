@@ -5,14 +5,14 @@ import NUFTemplateV2Default from "NUFTemplateV2.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFChannelsActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (markAsDismissed) => {
+  ? function NUFChannelsActionSheet(markAsDismissed) {
       const cResult = markAsDismissed(576).c(13);
       markAsDismissed = markAsDismissed.markAsDismissed;
       if (cResult[0] !== markAsDismissed) {
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] !== markAsDismissed) {
-        const fn2 = function u() {
+        const fn2 = function h() {
           let tmpResult;
           if (markAsDismissed != null) {
             tmpResult = tmp(ContentDismissActionType.UNKNOWN);
@@ -85,14 +85,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp20;
       }
-      const tmp21 = jsx(markAsDismissed(6652).BottomSheet, { onDismiss: tmp5, startExpanded: true, children: tmp16 });
+      const tmp21 = jsx(markAsDismissed(6829).BottomSheet, { onDismiss: tmp5, startExpanded: true, children: tmp16 });
       cResult[10] = tmp5;
       cResult[11] = tmp16;
       cResult[12] = tmp21;
       tmp20 = tmp21;
       let obj = markAsDismissed(576);
     }
-  : (markAsDismissed) => {
+  : function NUFChannelsActionSheet(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
       const items = [markAsDismissed];
       const callback = noop.useCallback(() => {
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         CTALabel: null,
         onCTAPress: null,
       });
-      return jsx(markAsDismissed(6652).BottomSheet, {
+      return jsx(markAsDismissed(6829).BottomSheet, {
         onDismiss() {
           let tmpResult;
           if (markAsDismissed != null) {

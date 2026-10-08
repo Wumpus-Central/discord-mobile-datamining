@@ -10,7 +10,7 @@ const redux = noop.createContext(undefined);
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useEditStateContext() {
       const context = noop.useContext(closure_6);
       if (null == context) {
         const _Error = Error;
@@ -20,7 +20,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return context;
       }
     }
-  : () => {
+  : function useEditStateContext() {
       const context = noop.useContext(closure_6);
       if (null == context) {
         const _Error = Error;
@@ -35,7 +35,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/edit
 
 export const useEditStateContext = tmp2;
 export const EditStateContextProvider = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function EditStateContextProvider(children) {
       const cResult = c.c(6);
       if (cResult[0] !== children) {
         children = children.children;
@@ -61,8 +61,10 @@ export const EditStateContextProvider = ReactCompilerGating.isReactCompilerEnabl
       cResult[5] = tmp8;
       tmp7 = tmp8;
     }
-  : (children) => (
-      <redux.Provider value={Object.assign(children, Object.assign({ children: 0 }))}>
-        {children.children}
-      </redux.Provider>
-    );
+  : function EditStateContextProvider(children) {
+      return (
+        <redux.Provider value={Object.assign(children, Object.assign({ children: 0 }))}>
+          {children.children}
+        </redux.Provider>
+      );
+    };

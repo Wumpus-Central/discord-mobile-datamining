@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileOverscrollBanner.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileOverscrollBanner(arg0) {
       const cResult = c.c(20);
       if (cResult[0] !== arg0) {
         ({ bannerAnimatedStyle, bannerImageAnimatedStyle, blurAnimatedProps, showBlur, privateBanner } = arg0);
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp21 = tmp22;
       const tmpResult = PlatformUtils;
     }
-  : (arg0) => {
+  : function UserProfileOverscrollBanner(arg0) {
       ({ bannerAnimatedStyle, bannerImageAnimatedStyle, blurAnimatedProps, showBlur, privateBanner } = arg0);
       const merged = Object.assign(
         arg0,

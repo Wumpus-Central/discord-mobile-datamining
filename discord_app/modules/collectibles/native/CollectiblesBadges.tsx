@@ -4,16 +4,16 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
-import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import PremiumFeaturesBackgroundDefault from "../../user_settings/premium/native/PremiumFeaturesBackground.tsx";
+import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   badgeTextUppercase: { textTransform: "uppercase" },
   badgeSurfaceDarkMode: { backgroundColor: nativeDefault.colors.WHITE },
@@ -112,7 +112,7 @@ const obj10 = {
 };
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function NewBadge(style) {
       const cResult = c.c(9);
       style = style.style;
       const tmp4 = closure_7();
@@ -162,7 +162,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp5 = items;
     }
-  : (style) => {
+  : function NewBadge(style) {
       const tmp = closure_7();
       const obj = { style: null, children: null };
       const items = [tmp.newIconBadge, style.style];
@@ -180,7 +180,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function LockBadge(arg0) {
       let stringResult = dependencyMap;
       const cResult = c.c(6);
       ({ isNew, style: lockIconBadge } = arg0);
@@ -230,7 +230,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = newLockIconBadge;
       cResult[5] = tmp8;
     }
-  : (isNew) => {
+  : function LockBadge(isNew) {
       let flag = isNew.isNew;
       if (flag === undefined) {
         flag = false;
@@ -266,7 +266,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PremiumBadge(arg0) {
       let stringResult = dependencyMap;
       const cResult = c.c(6);
       ({ isNew, style: lockIconBadge } = arg0);
@@ -316,7 +316,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = newLockIconBadge;
       cResult[5] = tmp8;
     }
-  : (isNew) => {
+  : function PremiumBadge(isNew) {
       let flag = isNew.isNew;
       if (flag === undefined) {
         flag = false;
@@ -352,7 +352,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function LimitedTimeBadge(style) {
       const cResult = c.c(9);
       style = style.style;
       const tmp4 = closure_7();
@@ -402,7 +402,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp5 = items;
     }
-  : (style) => {
+  : function LimitedTimeBadge(style) {
       const tmp = closure_7();
       const obj = { style: null, children: null };
       const items = [tmp.limitedTimeBadge, style.style];
@@ -420,7 +420,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function IconBadgePill(arg0) {
       const cResult = c.c(10);
       ({ icon, accessibilityLabel, isDark } = arg0);
       const tmp2 = closure_7();
@@ -466,7 +466,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp4 = items;
     }
-  : (isDark) => {
+  : function IconBadgePill(isDark) {
       isDark = isDark.isDark;
       ({ icon, accessibilityLabel } = isDark);
       const tmp = closure_7();
@@ -489,7 +489,7 @@ export const PremiumBadge = tmp6;
 export const LimitedTimeBadge = tmp7;
 export const IconBadgePill = tmp8;
 export const IconTextBadge = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function IconTextBadge(arg0) {
       const cResult = c.c(14);
       ({ icon, label, isDark } = arg0);
       const tmp4 = closure_7();
@@ -555,7 +555,7 @@ export const IconTextBadge = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp6 = items1;
     }
-  : (isDark) => {
+  : function IconTextBadge(isDark) {
       isDark = isDark.isDark;
       ({ icon, label } = isDark);
       const tmp = closure_7();

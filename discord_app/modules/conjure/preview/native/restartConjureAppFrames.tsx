@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/preview/native/restartConjureAppFrames.tsx
-import FramesNativeManagerDefault from "../../../frames/native/FramesNativeManager.tsx";
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
+import FramesNativeManagerDefault from "../../../frames/native/FramesNativeManager.tsx";
 import FramesStore from "../../../frames/FramesStore.tsx";
 
 const size = fn(2);

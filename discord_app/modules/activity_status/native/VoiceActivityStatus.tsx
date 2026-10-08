@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ icon: { flexShrink: 0 } });
 const ReactCompilerGating = fn(558);
 function getVoiceActivityStatusText(voiceChannel) {
@@ -33,7 +33,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/VoiceActivityStatus.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VoiceActivityStatus(arg0) {
       let v9FaEzi = dependencyMap;
       const cResult = c.c(13);
       ({ channel, iconStyle, textStyle, maxFontSizeMultiplier, hideIcon, hideText } = arg0);
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp9;
       tmp8 = tmp9;
     }
-  : (hideText) => {
+  : function VoiceActivityStatus(hideText) {
       ({ channel, hideIcon } = hideText);
       ({ iconStyle, textStyle, maxFontSizeMultiplier } = hideText);
       if (hideIcon === undefined) {

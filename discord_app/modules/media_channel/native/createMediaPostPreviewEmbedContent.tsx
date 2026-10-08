@@ -6,9 +6,9 @@ import MediaPostThumbnailUtils from "../MediaPostThumbnailUtils.tsx";
 import MediaFormatTesters from "../../messages/MediaFormatTesters.tsx";
 import LinkUtils from "../../links/LinkUtils.tsx";
 import AgeVerificationUtils from "../../age_assurance/AgeVerificationUtils.tsx";
-import ExplicitMediaRedactionUtils from "../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import useAuthorWithProcessedColor from "../../messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "../../messages/native/renderer/system_messages/formatUsernameOnClick.tsx";
+import ExplicitMediaRedactionUtils from "../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import MediaPostEmbedStore2 from "../MediaPostEmbedStore.tsx";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import DevSettingsStore from "../../devtools/dev_settings/DevSettingsStore.tsx";
@@ -106,7 +106,7 @@ export default function createMediaPostPreviewEmbedContent(message, roleStyle, u
             if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
               const obj5 = {};
               const merged = Object.assign(mediaPostEmbedCommonData);
-              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(13104)).uri;
+              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(13382)).uri;
               obj5.footer = formatToPartsResult;
               obj5.ctaButtonColor = tmp11;
               return obj5;

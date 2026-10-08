@@ -5,13 +5,13 @@ const require = globalThis.__r;
 
 const require = fn;
 const NULL_STRING_GUILD_ID = fn(1085).NULL_STRING_GUILD_ID;
-const ChannelFlags = fn(2058).ChannelFlags;
+const ChannelFlags = fn(2070).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/useShowChannelOptInNotice.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (getGuildId) => {
+  ? function useShowChannelOptInNotice(getGuildId) {
       _require = getGuildId;
       const cResult = require("c").c(11);
       const obj = require("c");
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult2 = require("OnboardingHomeUtils");
     }
-  : (getGuildId) => {
+  : function useShowChannelOptInNotice(getGuildId) {
       _require = getGuildId;
       let guildId;
       if (getGuildId != null) {

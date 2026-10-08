@@ -1,6 +1,6 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx
-import NicknameUtilsDefault from "../../../../utils/NicknameUtils.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
+import NicknameUtilsDefault from "../../../../utils/NicknameUtils.tsx";
 import RelationshipActionCreatorsDefault from "../../../../actions/RelationshipActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function IgnoreUserElement(user) {
       const cResult = user(reportId[6]).c(28);
       user = user.user;
       const channelId = user.channelId;
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp16 = name;
       const obj4 = channelId(reportId[8]);
     }
-  : (user) => {
+  : function IgnoreUserElement(user) {
       user = user.user;
       const channelId = user.channelId;
       const reportId = user.reportId;

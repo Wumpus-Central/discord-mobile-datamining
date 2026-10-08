@@ -4,8 +4,8 @@ import c from "../../../../../_runtime/00576_c.js";
 import native from "../../../../design/void/native.tsx";
 import ForumLayout from "../../../../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import ForumHooks from "../../ForumHooks.tsx";
 import enhanced_role_colors_EnhancedRoleColorUtils from "../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
+import ForumHooks from "../../ForumHooks.tsx";
 import useChatWidthDefault from "../../../chat/native/useChatWidth.tsx";
 import ForumPostGridBody from "grid/ForumPostGridBody.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -13,10 +13,10 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useForumChannelStore = fn(11629).useForumChannelStore;
+const useForumChannelStore = fn(11693).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({
   authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 },
   roleDotContainer: { alignItems: "center", justifyContent: "center", marginEnd: 2, marginBottom: 4 },
@@ -25,7 +25,7 @@ let closure_8 = createStyles.createStyles({
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForumPostAuthor(arg0) {
       const cResult = c.c(11);
       ({ thread, hasUnreads, suffix, containerStyle, roleDotStyle, textStyle } = arg0);
       const forumPostAuthor = ForumHooks.useForumPostAuthor(thread);
@@ -103,7 +103,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = tmp9;
       }
     }
-  : (thread) => {
+  : function ForumPostAuthor(thread) {
       thread = thread.thread;
       ({ hasUnreads, suffix, containerStyle, roleDotStyle, textStyle } = thread);
       const forumPostAuthor = ForumHooks.useForumPostAuthor(thread);
@@ -158,14 +158,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (thread) => {
+  ? function useUsernameMaxWidth(thread) {
       let num = 158;
       if (useForumChannelStore(thread.thread.parent_id).layoutType === ForumLayout.ForumLayout.GRID) {
         num = 72;
       }
       return useChatWidthDefault() - ForumPostGridBody.GRID_HORIZONTAL_PADDING - num;
     }
-  : (thread) => {
+  : function useUsernameMaxWidth(thread) {
       let num = 158;
       if (useForumChannelStore(thread.thread.parent_id).layoutType === ForumLayout.ForumLayout.GRID) {
         num = 72;
@@ -174,7 +174,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForumPostUsername(arg0) {
       const cResult = c.c(35);
       ({
         thread,
@@ -200,14 +200,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp6 = closure_9(tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
-        class A {
+        class N {
           constructor() {
             return closure_1_4.roleStyle;
           }
         }
         cResult[2] = items;
-        cResult[3] = A;
-        let tmp8 = A;
+        cResult[3] = N;
+        let tmp8 = N;
         let tmp7 = items;
       } else {
         tmp7 = cResult[2];
@@ -219,7 +219,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[7] !== hasUnreads) {
             const tmp15 = hasUnreads ? {} : { opacity: 0.8 };
             cResult[7] = hasUnreads;
-            class A {
+            class N {
               constructor() {
                 return closure_1_4.roleStyle;
               }
@@ -228,7 +228,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             const processColorStringsArray =
               enhanced_role_colors_EnhancedRoleColorUtils.useProcessColorStringsArray(authorColors);
-            class A {
+            class N {
               constructor() {
                 return closure_1_4.roleStyle;
               }
@@ -248,7 +248,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                       if (cResult[17] === authorColors) {
                         if (cResult[18] === roleDotStyle) {
                           if (cResult[19] === stateFromStores) {
-                            class A {
+                            class N {
                               constructor() {
                                 return closure_1_4.roleStyle;
                               }
@@ -262,14 +262,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                     }
-                    class A {
+                    class N {
                       constructor() {
                         return closure_1_4.roleStyle;
                       }
                     }
                     if (tmp29) {
                       const obj3 = { style: null, children: null };
-                      class A {
+                      class N {
                         constructor() {
                           return closure_1_4.roleStyle;
                         }
@@ -290,7 +290,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const items2 = [, ,];
-                class A {
+                class N {
                   constructor() {
                     return closure_1_4.roleStyle;
                   }
@@ -303,7 +303,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[15] = items2;
               }
               const obj5 = { maxWidth: tmp6 };
-              class A {
+              class N {
                 constructor() {
                   return closure_1_4.roleStyle;
                 }
@@ -321,7 +321,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       if ("username" !== stateFromStores) {
         let obj6 = {};
         cResult[4] = authorColor;
-        class A {
+        class N {
           constructor() {
             return closure_1_4.roleStyle;
           }
@@ -332,7 +332,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       obj6 = { color: authorColor };
       const tmpResult = initialize;
     }
-  : (arg0) => {
+  : function ForumPostUsername(arg0) {
       ({ thread, authorId, authorName, authorColor, authorColors } = arg0);
       ({ containerStyle, roleDotStyle, textStyle, suffix, hasUnreads } = arg0);
       const tmp = closure_8();
@@ -393,7 +393,7 @@ const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPost
 
 export const ForumPostAuthor = tmp4;
 export const ForumPostMessageAuthor = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForumPostMessageAuthor(arg0) {
       const cResult = c.c(11);
       ({ thread, hasUnreads, suffix, containerStyle, roleDotStyle, textStyle, message } = arg0);
       const forumPostMessageAuthor = ForumHooks.useForumPostMessageAuthor(message, thread);
@@ -449,7 +449,7 @@ export const ForumPostMessageAuthor = ReactCompilerGating.isReactCompilerEnabled
       cResult[10] = tmp5;
       tmp4 = tmp5;
     }
-  : (thread) => {
+  : function ForumPostMessageAuthor(thread) {
       thread = thread.thread;
       ({ message, hasUnreads, suffix, containerStyle, roleDotStyle, textStyle } = thread);
       const forumPostMessageAuthor = ForumHooks.useForumPostMessageAuthor(message, thread);

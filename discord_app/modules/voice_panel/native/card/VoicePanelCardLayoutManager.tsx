@@ -18,7 +18,7 @@ function getTargetCardSize(windowWidth) {
   return Math.max(closure_1_8, (windowWidth - safeAreaLeft - safeAreaRight - gutter * (num - 1)) / num);
 }
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(11916);
+const VoicePanelConstants = fn(11989);
 const VoicePanelCardItemType = VoicePanelConstants.VoicePanelCardItemType;
 ({
   BASE_TARGET_CARD_SIZE: closure_8,
@@ -26,9 +26,9 @@ const VoicePanelCardItemType = VoicePanelConstants.VoicePanelCardItemType;
   VoicePanelCTACardDimensions: c10,
   VOICE_PANEL_CHUNK_DIVISOR: closure_11,
 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(11919);
+const VoicePanelCardConstants = fn(11992);
 ({ EDGE_GUTTER: closure_12, CALL_TILE_GUTTER: map1 } = VoicePanelCardConstants);
-const ParticipantTypes = fn(4917).ParticipantTypes;
+const ParticipantTypes = fn(5113).ParticipantTypes;
 let closure_15 = {
   id: "invalid",
   type: VoicePanelCardItemType.PARTICIPANT,
@@ -41,7 +41,7 @@ let closure_15 = {
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, getCardCoords) => {
+  ? function useCardLayoutCoordsSubscription(arg0, getCardCoords) {
       _require = arg0;
       const cResult = require("c").c(5);
       const obj = require("c");
@@ -84,7 +84,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = require("ReanimatedRexport");
       const obj3 = {};
     }
-  : (arg0, getCardCoords) => {
+  : function useCardLayoutCoordsSubscription(arg0, getCardCoords) {
       _require = arg0;
       let cardCoords = getCardCoords.getCardCoords(arg0);
       if (cardCoords == null) {
@@ -109,7 +109,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, getTargetDimensions) => {
+  ? function useTargetDimensionsSubscription(id, getTargetDimensions) {
       _require = id;
       const cResult = require("c").c(5);
       const obj = require("c");
@@ -144,7 +144,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = require("ReanimatedRexport");
       const obj3 = {};
     }
-  : (id, getTargetDimensions) => {
+  : function useTargetDimensionsSubscription(id, getTargetDimensions) {
       _require = id;
       const merged = Object.assign(getTargetDimensions.getTargetDimensions(id));
       sharedValue = require("ReanimatedRexport").useSharedValue({});
@@ -163,7 +163,7 @@ let set = new Set();
 let closure_17 = { enlargeSquare: false, fillAspectRatio: false };
 let obj4 = { match: null, layouts: null, global: true };
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (getLayoutKey) => {
+  ? function useManagerSubscription(getLayoutKey) {
       const cResult = c.c(4);
       if (cResult[0] !== getLayoutKey) {
         const layoutKey = getLayoutKey.getLayoutKey();
@@ -187,7 +187,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const layoutEffect = noop.useLayoutEffect(tmp6);
       return tmp5;
     }
-  : (getLayoutKey) => {
+  : function useManagerSubscription(getLayoutKey) {
       [tmp2, importDefault] = noop.useState(getLayoutKey.getLayoutKey());
       const layoutEffect = noop.useLayoutEffect(() =>
         getLayoutKey.subscribeToManager(() => closure_1_1(layoutKey.getLayoutKey())),
@@ -344,7 +344,7 @@ prototype["getTargetDimensions"] = function getTargetDimensions(id) {
   if (null == id) {
     let defaultTargetCoords = self.defaultTargetCoords;
   } else if (set.has(id)) {
-    defaultTargetCoords = v65535[id];
+    defaultTargetCoords = collapsed[id];
   } else {
     const targetDimensions = self.targetDimensions;
     defaultTargetCoords = targetDimensions.get(id);

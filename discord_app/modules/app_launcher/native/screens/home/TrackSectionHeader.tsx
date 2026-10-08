@@ -8,7 +8,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (section_name, num_items, num_visible_items, arg3) => {
+  ? function useTrackSectionHeader(section_name, num_items, num_visible_items, arg3) {
       const cResult = c.c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const entrypointResult = AppLauncherStore.entrypoint();
@@ -52,7 +52,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj3;
       tmp7 = obj3;
     }
-  : (section_name, num_items, num_visible_items, disableTrack) => {
+  : function useTrackSectionHeader(section_name, num_items, num_visible_items, disableTrack) {
       const obj = {
         type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW,
         name: discord_common_AnalyticsUtils.ImpressionNames.APP_LAUNCHER_SECTION,
@@ -67,11 +67,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/TrackSectionHeader.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (sectionName) => {
+  ? function TrackSectionHeader(sectionName) {
       closure_4(sectionName.sectionName, sectionName.numItems, sectionName.numVisibleItems, sectionName.viewed);
       return sectionName.children;
     }
-  : (sectionName) => {
+  : function TrackSectionHeader(sectionName) {
       closure_4(sectionName.sectionName, sectionName.numItems, sectionName.numVisibleItems, sectionName.viewed);
       return sectionName.children;
     };

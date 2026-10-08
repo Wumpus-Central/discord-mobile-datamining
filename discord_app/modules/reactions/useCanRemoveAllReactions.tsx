@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/useCanRemoveAllReactions.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanRemoveAllReactions(arg0) {
       _require = arg0;
       const cResult = require("c").c(5);
       const obj = require("c");
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       const obj2 = require("ThreadHooks");
     }
-  : (arg0) => {
+  : function useCanRemoveAllReactions(arg0) {
       _require = arg0;
       isActiveChannelOrUnarchivableThread = require("ThreadHooks").useIsActiveChannelOrUnarchivableThread(arg0);
       const obj = require("ThreadHooks");

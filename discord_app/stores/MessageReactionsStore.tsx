@@ -7,13 +7,6 @@ import UserRecord from "../records/UserRecord.tsx";
 import ChannelStore from "ChannelStore.tsx";
 import UserStore from "UserStore.tsx";
 
-function reactionKey(arg0, arg1, item10022) {
-  ({ name, id } = arg1);
-  if (id == null) {
-    id = "";
-  }
-  return "" + arg0 + ":" + name + ":" + id + ":" + item10022;
-}
 function handleReaction(userId) {
   userId = userId.userId;
   const ensureResult = prototype.ensure(userId.messageId, userId.emoji, userId.reactionType);
@@ -28,8 +21,7 @@ function handleReaction(userId) {
     users.delete(userId);
   }
 }
-const dependencyMap = {};
-const items = [fn(7272).ReactionTypes.NORMAL, fn(7272).ReactionTypes.BURST];
+let closure_6 = {};
 const prototype = function Reaction() {
   const obj = Object.create(new.target.prototype);
   obj.fetched = false;
@@ -42,7 +34,7 @@ prototype["ensure"] = function ensure(arg0, arg1, arg2) {
     id = "";
   }
   const combined = "" + arg0 + ":" + name + ":" + id + ":" + arg2;
-  let tmp3 = dependencyMap[combined];
+  let tmp3 = closure_6[combined];
   if (tmp3 == null) {
     if (typeof prototype === "function") {
       const obj = Object.create(prototype.prototype);
@@ -55,7 +47,7 @@ prototype["ensure"] = function ensure(arg0, arg1, arg2) {
       throw new TypeError("Trying to call a non-function");
     }
   }
-  dependencyMap[combined] = tmp3;
+  closure_6[combined] = tmp3;
   return tmp3;
 };
 const Store = initializeDefault.Store;
@@ -63,26 +55,6 @@ class MessageReactionsStore extends Store {}
 const prototype2 = MessageReactionsStore.prototype;
 prototype2["initialize"] = function initialize() {
   this.waitFor(ChannelStore, LurkingStore, UserStore);
-};
-prototype2["getKnownReactorIds"] = function getKnownReactorIds(arg0, arg1) {
-  const set = new Set();
-  const iter = arg1[Symbol.iterator]();
-  while (iter !== undefined) {
-    for (const item10022 of items) {
-      let tmp8 = dependencyMap[reactionKey(0, arg0, tmp2, item10022)];
-      if (null != tmp8) {
-        let users = tmp9.users;
-        let keys = users.keys();
-        for (const item10037 of keys) {
-          let addResult = set.add(item10037);
-          continue;
-        }
-      }
-      continue;
-    }
-    continue;
-  }
-  return set;
 };
 prototype2["getReactions"] = function getReactions(channelId, messageId, emoji, limit, VOTE) {
   const ensureResult = prototype.ensure(messageId, emoji, VOTE);

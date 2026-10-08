@@ -17,7 +17,7 @@ let closure_7 = {
   accessibilityElementsHidden: true,
   importantForAccessibility: "no-hide-descendants",
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     flex: 1,
@@ -46,7 +46,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/EmptyState/native/EmptyState.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (Illustration) => {
+  ? function EmptyState(Illustration) {
       const cResult = c.c(30);
       const tmp4 = closure_8();
       const themeContext = shared.useThemeContext();
@@ -213,7 +213,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp29 = items6;
       }
     }
-  : (Illustration) => {
+  : function EmptyState(Illustration) {
       const tmp = closure_8();
       const themeContext = shared.useThemeContext();
       let hasItem;

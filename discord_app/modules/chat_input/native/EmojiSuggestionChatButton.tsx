@@ -11,10 +11,10 @@ import ThemeStore from "../../user_settings/ThemeStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const ExpressionPickerViewType = fn(1229).ExpressionPickerViewType;
+const ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles((height) => {
   const obj = {
     wrapper: { height, width: height },
@@ -61,10 +61,10 @@ const __initData2 = {
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/EmojiSuggestionChatButton.tsx");
 
-export const EmojiSuggestionChatButton = noop.forwardRef((arg0, arg1) => {
+export const EmojiSuggestionChatButton = function EmojiSuggestionChatButton(arg0) {
   ({ active, onPress } = arg0);
-  ({ style, showKeyboardIcon } = arg0);
-  const merged = Object.assign(arg0, Object.assign({ style: 0, active: 0, showKeyboardIcon: 0, onPress: 0 }));
+  ({ style, showKeyboardIcon, ref } = arg0);
+  const merged = Object.assign(arg0, Object.assign({ style: 0, active: 0, showKeyboardIcon: 0, onPress: 0, ref: 0 }));
   let unlockedEmojis;
   let lockedEmojis;
   noop = undefined;
@@ -79,7 +79,7 @@ export const EmojiSuggestionChatButton = noop.forwardRef((arg0, arg1) => {
     merged,
     onPress(lockedEmojis[10]).MAX_SUGGESTIONS_LARGE,
     1,
-    arg1,
+    ref,
   );
   unlockedEmojis = emojiSuggestionBarState.unlockedEmojis;
   lockedEmojis = emojiSuggestionBarState.lockedEmojis;
@@ -123,7 +123,7 @@ export const EmojiSuggestionChatButton = noop.forwardRef((arg0, arg1) => {
     }
   }, items);
   const tmp2Result5 = onPress(tmp4Result2Result[11]);
-  class R {
+  class G {
     constructor() {
       obj = { opacity: closure_5.get(), transform: null };
       obj1 = { scale: closure_5.get() };
@@ -133,22 +133,22 @@ export const EmojiSuggestionChatButton = noop.forwardRef((arg0, arg1) => {
       return obj;
     }
   }
-  R.__closure = { emojiAnimationProgress: sharedValue };
-  R.__workletHash = 12888902078160;
-  R.__initData = __initData;
-  const animatedStyle = onPress(tmp4Result2Result[11]).useAnimatedStyle(R);
+  G.__closure = { emojiAnimationProgress: sharedValue };
+  G.__workletHash = 12888902078160;
+  G.__initData = __initData;
+  const animatedStyle = onPress(tmp4Result2Result[11]).useAnimatedStyle(G);
   const tmp2Result6 = onPress(tmp4Result2Result[11]);
-  class G {
+  class M {
     constructor() {
       obj = { opacity: 1 - closure_5.get() };
       return obj;
     }
   }
-  G.__closure = { emojiAnimationProgress: sharedValue };
-  G.__workletHash = 3538426469891;
-  G.__initData = __initData2;
+  M.__closure = { emojiAnimationProgress: sharedValue };
+  M.__workletHash = 3538426469891;
+  M.__initData = __initData2;
   const items1 = [onPress, unlockedEmojis, lockedEmojis];
-  const animatedStyle1 = onPress(tmp4Result2Result[11]).useAnimatedStyle(G);
+  const animatedStyle1 = onPress(tmp4Result2Result[11]).useAnimatedStyle(M);
   let obj3 = { style: null, children: null };
   const items2 = [tmp6.wrapper, style];
   obj3.style = items2;
@@ -209,4 +209,4 @@ export const EmojiSuggestionChatButton = noop.forwardRef((arg0, arg1) => {
     const tmp4Result4 = tmp4(tmp4Result2Result[20]);
   }
   const tmp2Result7 = onPress(tmp4Result2Result[11]);
-});
+};

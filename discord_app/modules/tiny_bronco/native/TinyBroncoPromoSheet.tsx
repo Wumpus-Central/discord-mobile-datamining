@@ -1,23 +1,23 @@
 // discord_app/modules/tiny_bronco/native/TinyBroncoPromoSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
-import _modDef3105 from "../TinyBronco.messages.js";
+import _modDef3149 from "../TinyBronco.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import AgeVerificationAnalyticsUtils from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import AgeVerificationActionCreatorsDefault from "../../age_assurance/AgeVerificationActionCreators.native.tsx";
-import AgeVerificationAnalyticsUtils from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import openTinyBroncoPromoSheet from "openTinyBroncoPromoSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Image = fn(17).Image;
-const TINY_BRONCO_BLOG_URL = fn(9435).TINY_BRONCO_BLOG_URL;
+const TINY_BRONCO_BLOG_URL = fn(5933).TINY_BRONCO_BLOG_URL;
 const Constants = fn(1085);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { illustration: null, actions: null };
 let size = { width: 198, height: 132, marginTop: nativeDefault.space.PX_16 };
 obj2.illustration = size;
@@ -28,41 +28,28 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoPromoSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (markAsDismissed) => {
+  ? function TinyBroncoPromoSheet(markAsDismissed) {
       const cResult = dismissOnce(576).c(36);
       closure_11();
       let obj = dismissOnce(576);
       const tmp = dismissOnce;
-      const isVerifiedTeen = dismissOnce(5108).useIsVerifiedTeen();
-      let obj2 = dismissOnce(5108);
-      dismissOnce = dismissOnce(14547).useDismissOnce(markAsDismissed.markAsDismissed);
+      const isVerifiedTeen = dismissOnce(5905).useIsVerifiedTeen();
+      let obj2 = dismissOnce(5905);
+      dismissOnce = dismissOnce(14808).useDismissOnce(markAsDismissed.markAsDismissed);
       if (cResult[0] !== dismissOnce) {
-        const fn = function o() {
+        const fn = function s() {
           dismissOnce(ContentDismissActionType.USER_DISMISS);
         };
         cResult[0] = dismissOnce;
         cResult[1] = fn;
       }
       if (cResult[2] !== dismissOnce) {
-        class N {
-          constructor() {
-            tmp = closure_0(ContentDismissActionType.USER_DISMISS);
-            obj = closure_1(closure_2[12]);
-            hideActionSheetResult = obj.hideActionSheet(closure_0(closure_2[13]).TINY_BRONCO_PROMO_SHEET_KEY);
-            return;
-          }
-        }
+        const fn2 = function h() {
+          dismissOnce(ContentDismissActionType.USER_DISMISS);
+          ActionSheetActionCreatorsDefault.hideActionSheet(openTinyBroncoPromoSheet.TINY_BRONCO_PROMO_SHEET_KEY);
+        };
         cResult[2] = dismissOnce;
-        cResult[3] = N;
-      } else {
-        class N {
-          constructor() {
-            tmp = closure_0(ContentDismissActionType.USER_DISMISS);
-            obj = closure_1(closure_2[12]);
-            hideActionSheetResult = obj.hideActionSheet(closure_0(closure_2[13]).TINY_BRONCO_PROMO_SHEET_KEY);
-            return;
-          }
-        }
+        cResult[3] = fn2;
       }
       if (cResult[4] !== dismissOnce) {
         class I {
@@ -92,115 +79,143 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[6] !== dismissOnce) {
-        class I {
+        class B {
           constructor() {
             tmp = closure_0(ContentDismissActionType.TAKE_ACTION);
             obj = closure_1(closure_2[12]);
             hideActionSheetResult = obj.hideActionSheet(closure_0(closure_2[13]).TINY_BRONCO_PROMO_SHEET_KEY);
             obj2 = closure_1(closure_2[14]);
-            obj1 = { entryPoint: closure_0(closure_2[15]).AgeVerificationModalEntryPoint.TINY_BRONCO_POPOVER };
-            result = obj2.showAgeVerificationGetStartedModal(obj1);
+            obj3 = closure_1(closure_2[16]);
+            openUrlResult = obj2.openUrl(obj3.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
             return;
           }
         }
         cResult[6] = dismissOnce;
-        cResult[7] = tmp11;
+        cResult[7] = B;
       } else {
-        class I {
+        class B {
           constructor() {
             tmp = closure_0(ContentDismissActionType.TAKE_ACTION);
             obj = closure_1(closure_2[12]);
             hideActionSheetResult = obj.hideActionSheet(closure_0(closure_2[13]).TINY_BRONCO_PROMO_SHEET_KEY);
             obj2 = closure_1(closure_2[14]);
-            obj1 = { entryPoint: closure_0(closure_2[15]).AgeVerificationModalEntryPoint.TINY_BRONCO_POPOVER };
-            result = obj2.showAgeVerificationGetStartedModal(obj1);
+            obj3 = closure_1(closure_2[16]);
+            openUrlResult = obj2.openUrl(obj3.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
             return;
           }
         }
       }
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        class M {
+        class B {
           constructor() {
-            obj = closure_1_1(closure_1_2[14]);
-            openUrlResult = obj.openUrl(closure_1_5);
+            tmp = closure_0(ContentDismissActionType.TAKE_ACTION);
+            obj = closure_1(closure_2[12]);
+            hideActionSheetResult = obj.hideActionSheet(closure_0(closure_2[13]).TINY_BRONCO_PROMO_SHEET_KEY);
+            obj2 = closure_1(closure_2[14]);
+            obj3 = closure_1(closure_2[16]);
+            openUrlResult = obj2.openUrl(obj3.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
             return;
           }
         }
-        cResult[8] = M;
+        cResult[8] = tmp12;
       } else {
-        class M {
+        class B {
           constructor() {
-            obj = closure_1_1(closure_1_2[14]);
-            openUrlResult = obj.openUrl(closure_1_5);
+            tmp = closure_0(ContentDismissActionType.TAKE_ACTION);
+            obj = closure_1(closure_2[12]);
+            hideActionSheetResult = obj.hideActionSheet(closure_0(closure_2[13]).TINY_BRONCO_PROMO_SHEET_KEY);
+            obj2 = closure_1(closure_2[14]);
+            obj3 = closure_1(closure_2[16]);
+            openUrlResult = obj2.openUrl(obj3.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
             return;
           }
         }
       }
       if (cResult[9] !== dismissOnce) {
-        class M {
+        class B {
           constructor() {
-            obj = closure_1_1(closure_1_2[14]);
-            openUrlResult = obj.openUrl(closure_1_5);
+            tmp = closure_0(ContentDismissActionType.TAKE_ACTION);
+            obj = closure_1(closure_2[12]);
+            hideActionSheetResult = obj.hideActionSheet(closure_0(closure_2[13]).TINY_BRONCO_PROMO_SHEET_KEY);
+            obj2 = closure_1(closure_2[14]);
+            obj3 = closure_1(closure_2[16]);
+            openUrlResult = obj2.openUrl(obj3.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
             return;
           }
         }
         cResult[9] = dismissOnce;
         cResult[10] = tmp14;
       } else {
-        class M {
+        class B {
           constructor() {
-            obj = closure_1_1(closure_1_2[14]);
-            openUrlResult = obj.openUrl(closure_1_5);
+            tmp = closure_0(ContentDismissActionType.TAKE_ACTION);
+            obj = closure_1(closure_2[12]);
+            hideActionSheetResult = obj.hideActionSheet(closure_0(closure_2[13]).TINY_BRONCO_PROMO_SHEET_KEY);
+            obj2 = closure_1(closure_2[14]);
+            obj3 = closure_1(closure_2[16]);
+            openUrlResult = obj2.openUrl(obj3.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
             return;
           }
         }
       }
-      if (cResult[11] === tmp11) {
-        class M {
+      if (cResult[11] === B) {
+        class B {
           constructor() {
-            obj = closure_1_1(closure_1_2[14]);
-            openUrlResult = obj.openUrl(closure_1_5);
+            tmp = closure_0(ContentDismissActionType.TAKE_ACTION);
+            obj = closure_1(closure_2[12]);
+            hideActionSheetResult = obj.hideActionSheet(closure_0(closure_2[13]).TINY_BRONCO_PROMO_SHEET_KEY);
+            obj2 = closure_1(closure_2[14]);
+            obj3 = closure_1(closure_2[16]);
+            openUrlResult = obj2.openUrl(obj3.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
             return;
           }
         }
       }
       const obj4 = { text: null, onPress: null };
       const intl = tmp(1126).intl;
-      const obj3 = dismissOnce(14547);
+      const obj3 = dismissOnce(14808);
       if (isVerifiedTeen) {
-        class M {
+        class B {
           constructor() {
-            obj = closure_1_1(closure_1_2[14]);
-            openUrlResult = obj.openUrl(closure_1_5);
+            tmp = closure_0(ContentDismissActionType.TAKE_ACTION);
+            obj = closure_1(closure_2[12]);
+            hideActionSheetResult = obj.hideActionSheet(closure_0(closure_2[13]).TINY_BRONCO_PROMO_SHEET_KEY);
+            obj2 = closure_1(closure_2[14]);
+            obj3 = closure_1(closure_2[16]);
+            openUrlResult = obj2.openUrl(obj3.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
             return;
           }
         }
         obj4.text = tmp15;
-        obj4.onPress = tmp11;
+        obj4.onPress = B;
         let tmp16 = obj4;
       } else {
-        class M {
+        class B {
           constructor() {
-            obj = closure_1_1(closure_1_2[14]);
-            openUrlResult = obj.openUrl(closure_1_5);
+            tmp = closure_0(ContentDismissActionType.TAKE_ACTION);
+            obj = closure_1(closure_2[12]);
+            hideActionSheetResult = obj.hideActionSheet(closure_0(closure_2[13]).TINY_BRONCO_PROMO_SHEET_KEY);
+            obj2 = closure_1(closure_2[14]);
+            obj3 = closure_1(closure_2[16]);
+            openUrlResult = obj2.openUrl(obj3.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
             return;
           }
         }
         obj4.onPress = tmp14;
         tmp16 = obj4;
       }
-      cResult[11] = tmp11;
+      cResult[11] = B;
       cResult[12] = tmp14;
       cResult[13] = isVerifiedTeen;
       cResult[14] = tmp16;
-      tmp15 = _modDef3105;
+      tmp15 = _modDef3149;
     }
-  : (markAsDismissed) => {
+  : function TinyBroncoPromoSheet(markAsDismissed) {
       let dismissOnce;
       const tmp = closure_11();
-      const isVerifiedTeen = dismissOnce(5108).useIsVerifiedTeen();
-      let obj = dismissOnce(5108);
-      dismissOnce = dismissOnce(14547).useDismissOnce(markAsDismissed.markAsDismissed);
+      const isVerifiedTeen = dismissOnce(5905).useIsVerifiedTeen();
+      let obj = dismissOnce(5905);
+      dismissOnce = dismissOnce(14808).useDismissOnce(markAsDismissed.markAsDismissed);
       const items = [dismissOnce];
       const items1 = [dismissOnce];
       const callback = noop.useCallback(() => {
@@ -238,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items4);
       const intl = dismissOnce(1126).intl;
       const string = intl.string;
-      const tmp13 = _modDef3105;
+      const tmp13 = _modDef3149;
       if (isVerifiedTeen) {
         obj3.text = string(tmp13["+7NlgO"]);
         obj3.onPress = callback3;
@@ -251,13 +266,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = obj3;
       }
       const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
-      let obj2 = dismissOnce(14547);
-      obj4.illustration = closure_9(Image, { source: tmp14(14548), style: tmp.illustration, resizeMode: "contain" });
+      let obj2 = dismissOnce(14808);
+      obj4.illustration = closure_9(Image, { source: tmp14(14809), style: tmp.illustration, resizeMode: "contain" });
       const intl2 = tmp2(1126).intl;
-      obj4.title = intl2.string(tmp14(3105).GdTVPF);
+      obj4.title = intl2.string(tmp14(3149).GdTVPF);
       const intl3 = tmp2(1126).intl;
       const format = intl3.format;
-      const tmp14Result = tmp14(3105);
+      const tmp14Result = tmp14(3149);
       if (isVerifiedTeen) {
         const obj6 = { handleOnConfirmAgeHook: callback2 };
         let formatResult = format(tmp14Result["Ga2z/E"], obj6);
@@ -268,13 +283,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.description = formatResult;
       obj4.onDismiss = callback;
       const obj8 = { size: "lg", style: tmp.actions, children: null };
-      const items5 = [closure_9(dismissOnce(5601).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress })];
+      const items5 = [closure_9(dismissOnce(5375).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress })];
       const obj10 = { size: "lg", variant: "secondary", text: null, onPress: null };
       const intl4 = tmp2(1126).intl;
       obj10.text = intl4.string(dismissOnce(1126).t["NX+WJN"]);
       obj10.onPress = callback1;
-      items5[1] = closure_9(dismissOnce(5601).Button, obj10);
+      items5[1] = closure_9(dismissOnce(5375).Button, obj10);
       obj8.children = items5;
-      obj4.actions = closure_10(dismissOnce(5599).ButtonGroup, obj8);
-      return closure_9(dismissOnce(10058).PromoSheet, obj4);
+      obj4.actions = closure_10(dismissOnce(5963).ButtonGroup, obj8);
+      return closure_9(dismissOnce(10303).PromoSheet, obj4);
     };

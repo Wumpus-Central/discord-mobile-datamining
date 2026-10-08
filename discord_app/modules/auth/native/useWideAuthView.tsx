@@ -7,11 +7,11 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/auth/native/useWideAuthView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useWideAuthView() {
       const tmp = useIsWindowLargeDefault();
       return MetaQuestUtils.isMetaQuest() || tmp;
     }
-  : () => {
+  : function useWideAuthView() {
       const tmp = useIsWindowLargeDefault();
       return MetaQuestUtils.isMetaQuest() || tmp;
     };

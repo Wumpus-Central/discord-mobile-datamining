@@ -10,10 +10,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ChannelFlags = fn(2058).ChannelFlags;
+const ChannelFlags = fn(2070).ChannelFlags;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({
   header: { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 },
   content: { flex: 1, marginBottom: 12 },
@@ -23,7 +23,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostList.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForumPostList(arg0) {
       const cResult = c.c(31);
       ({
         messageContent,
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = tmp12Result;
       const tmp5 = _slicedToArray(ForumTagHooks.useSomeAppliedTags(thread, 2), 2);
     }
-  : (arg0) => {
+  : function ForumPostList(arg0) {
       ({ firstMessage, hasUnreads, thread } = arg0);
       ({
         messageContent,

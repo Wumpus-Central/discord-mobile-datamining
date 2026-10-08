@@ -7,8 +7,8 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import InstantInviteActionCreatorsDefault from "../../../../../../actions/InstantInviteActionCreators.tsx";
 import IconActionButtonDefault from "../../../shared_components/IconActionButton.tsx";
-import _modDef13683 from "../../../../../../../_runtime/metro/13683__.js";
-import _modDef16062 from "../../../../../../../_runtime/metro/16062__.js";
+import _modDef13905 from "../../../../../../../_runtime/metro/13905__.js";
+import _modDef16322 from "../../../../../../../_runtime/metro/16322__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -229,8 +229,8 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1085).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const sum = fn(13116).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(4896);
+const sum = fn(12830).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(5090);
 let obj = {
   container: {
     height: sum,
@@ -277,7 +277,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function MessagesItemAddFriendsWidget() {
         const cResult = c.c(19);
         const tmp4 = closure_9();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -351,7 +351,7 @@ export default noop.memo(
           const obj4 = {
             style: actionIcon,
             variant: "filled",
-            source: _modDef13683,
+            source: _modDef13905,
             onPress: handleShare,
             accessibilityLabel: tmp14,
           };
@@ -374,7 +374,7 @@ export default noop.memo(
           const obj5 = {
             style: tmp4.actionIcon,
             variant: "filled",
-            source: _modDef16062,
+            source: _modDef16322,
             onPress: handleLink,
             accessibilityLabel: tmp22,
           };
@@ -419,7 +419,7 @@ export default noop.memo(
         cResult[14] = tmp31;
         tmp30 = tmp31;
       }
-    : () => {
+    : function MessagesItemAddFriendsWidget() {
         const tmp = closure_9();
         const obj = { style: tmp.container, collapsable: false, children: null };
         const callback = noop.useCallback(() => {
@@ -461,7 +461,7 @@ export default noop.memo(
         const obj5 = {
           style: tmp.actionIcon,
           variant: "filled",
-          source: _modDef13683,
+          source: _modDef13905,
           onPress: handleShare,
           accessibilityLabel: null,
         };
@@ -475,7 +475,7 @@ export default noop.memo(
           onPress: null,
           accessibilityLabel: null,
         };
-        obj6.source = _modDef16062;
+        obj6.source = _modDef16322;
         obj6.onPress = handleLink;
         const intl4 = util.intl;
         obj6.accessibilityLabel = intl4.string(util.t.WqhZss);

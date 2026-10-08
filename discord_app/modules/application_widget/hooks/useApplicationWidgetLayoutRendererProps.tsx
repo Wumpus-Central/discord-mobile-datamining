@@ -11,7 +11,7 @@ import LocaleStore from "../../user_settings/LocaleStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FetchState = fn(8726).FetchState;
+const FetchState = fn(13199).FetchState;
 const localizedStrings = [];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useApplicationWidgetLayoutRendererProps(arg0, arg1) {
       _require = arg0;
       importDefault = arg1;
       const cResult = require("c").c(34);
@@ -43,14 +43,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [LocaleStore];
-          class F {
-            constructor() {
-              return closure_1_8.locale;
-            }
-          }
+          const fn = function y() {
+            return locale.locale;
+          };
           cResult[4] = items1;
-          cResult[5] = F;
-          let tmp10 = F;
+          cResult[5] = fn;
+          let tmp10 = fn;
           let tmp9 = items1;
         } else {
           tmp9 = cResult[4];
@@ -60,11 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const stateFromStores1 = tmp(tmp2[8]).useStateFromStores(tmp9, tmp10);
         if (cResult[6] !== arg1) {
           const items2 = [arg1];
-          class F {
-            constructor() {
-              return closure_1_8.locale;
-            }
-          }
+          cResult[6] = arg1;
           cResult[7] = items2;
           let tmp13 = items2;
         } else {
@@ -82,11 +76,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[10] !== tmp19) {
           const tmp19Result = tmp19();
           cResult[10] = tmp19;
-          class F {
-            constructor() {
-              return closure_1_8.locale;
-            }
-          }
           cResult[11] = tmp19Result;
           let tmp20 = tmp19Result;
         } else {
@@ -95,182 +84,163 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           const items3 = [UserApplicationIdentityStore];
-          class F {
-            constructor() {
-              return closure_1_8.locale;
-            }
-          }
           cResult[12] = items3;
           let tmp22 = items3;
         } else {
           tmp22 = cResult[12];
         }
         if (cResult[13] !== arg0) {
-          class N {
+          class L {
             constructor() {
               return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
             }
           }
           cResult[13] = arg0;
-          class F {
-            constructor() {
-              return closure_1_8.locale;
-            }
-          }
-          cResult[14] = N;
+          cResult[14] = L;
         } else {
-          class N {
+          class L {
             constructor() {
               return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
             }
           }
         }
         const tmpResult4 = tmp(tmp2[8]);
-        const stateFromStores2 = tmp(tmp2[8]).useStateFromStores(tmp22, N);
+        const stateFromStores2 = tmp(tmp2[8]).useStateFromStores(tmp22, L);
         const _Symbol3 = Symbol;
         if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-          class N {
+          class L {
             constructor() {
               return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
             }
           }
           const items4 = [ApplicationAssetsV2Store];
-          class F {
-            constructor() {
-              return closure_1_8.locale;
-            }
-          }
           cResult[15] = items4;
           const tmp26 = items4;
         } else {
-          class N {
+          class L {
             constructor() {
               return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
             }
           }
         }
         if (cResult[16] !== arg1) {
-          class N {
+          class R {
             constructor() {
-              return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
+              return closure_5.getAssets(closure_1);
             }
           }
           cResult[16] = arg1;
-          class F {
-            constructor() {
-              return closure_1_8.locale;
-            }
-          }
-          cResult[17] = tmp28;
+          cResult[17] = R;
         } else {
-          class N {
+          class R {
             constructor() {
-              return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
+              return closure_5.getAssets(closure_1);
             }
           }
         }
         const tmpResult5 = tmp(tmp2[8]);
-        const stateFromStores3 = tmp(tmp2[8]).useStateFromStores(tmp26, tmp28);
+        const stateFromStores3 = tmp(tmp2[8]).useStateFromStores(tmp26, R);
         if (cResult[18] !== stateFromStores3) {
-          class N {
+          class R {
             constructor() {
-              return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
+              return closure_5.getAssets(closure_1);
             }
           }
-          class F {
-            constructor() {
-              return closure_1_8.locale;
+          if (stateFromStores3 == null) {
+            class R {
+              constructor() {
+                return closure_5.getAssets(closure_1);
+              }
             }
           }
-          const values = Object.values(tmp31);
+          const values = Object.values(tmp30);
           const found = values.filter(tmp(tmp2[11]).isNotNullish);
           cResult[18] = stateFromStores3;
           cResult[19] = found;
         } else {
-          class N {
+          class R {
             constructor() {
-              return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
+              return closure_5.getAssets(closure_1);
             }
           }
         }
         if (cResult[20] !== arg1) {
-          class N {
-            constructor() {
-              return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
+          class O {
+            constructor(arg0) {
+              obj = closure_0(closure_2[12]);
+              return obj.getApplicationAssetUrl(closure_1, arg0, arg0.metadata.width);
             }
           }
           cResult[20] = arg1;
-          class F {
-            constructor() {
-              return closure_1_8.locale;
-            }
-          }
-          cResult[21] = tmp34;
+          cResult[21] = O;
         } else {
-          class N {
-            constructor() {
-              return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
+          class O {
+            constructor(arg0) {
+              obj = closure_0(closure_2[12]);
+              return obj.getApplicationAssetUrl(closure_1, arg0, arg0.metadata.width);
             }
           }
         }
         if (first1 != null) {
-          class N {
-            constructor() {
-              return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
+          class O {
+            constructor(arg0) {
+              obj = closure_0(closure_2[12]);
+              return obj.getApplicationAssetUrl(closure_1, arg0, arg0.metadata.width);
             }
           }
         }
         if (cResult[22] !== undefined) {
-          class N {
-            constructor() {
-              return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
+          class O {
+            constructor(arg0) {
+              obj = closure_0(closure_2[12]);
+              return obj.getApplicationAssetUrl(closure_1, arg0, arg0.metadata.width);
             }
           }
           if (first1 != null) {
-            class N {
-              constructor() {
-                return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
+            class O {
+              constructor(arg0) {
+                obj = closure_0(closure_2[12]);
+                return obj.getApplicationAssetUrl(closure_1, arg0, arg0.metadata.width);
               }
             }
           }
-          if (tmp37 == null) {
-            class N {
-              constructor() {
-                return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
+          if (tmp35 == null) {
+            class O {
+              constructor(arg0) {
+                obj = closure_0(closure_2[12]);
+                return obj.getApplicationAssetUrl(closure_1, arg0, arg0.metadata.width);
               }
-            }
-          }
-          class F {
-            constructor() {
-              return closure_1_8.locale;
             }
           }
           if (first1 != null) {
-            class N {
-              constructor() {
-                return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
+            class O {
+              constructor(arg0) {
+                obj = closure_0(closure_2[12]);
+                return obj.getApplicationAssetUrl(closure_1, arg0, arg0.metadata.width);
               }
             }
           }
-          cResult[22] = tmp38;
-          cResult[23] = tmp37;
+          cResult[22] = undefined;
+          cResult[23] = tmp35;
         } else {
-          class N {
-            constructor() {
-              return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
+          class O {
+            constructor(arg0) {
+              obj = closure_0(closure_2[12]);
+              return obj.getApplicationAssetUrl(closure_1, arg0, arg0.metadata.width);
             }
           }
         }
-        if (cResult[24] === tmp30) {
-          class N {
-            constructor() {
-              return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
+        if (cResult[24] === tmp29) {
+          class O {
+            constructor(arg0) {
+              obj = closure_0(closure_2[12]);
+              return obj.getApplicationAssetUrl(closure_1, arg0, arg0.metadata.width);
             }
           }
         }
-        const obj3 = { data: tmp20, applicationAssets: tmp30, getApplicationAssetUrl: tmp34, localizedStrings };
-        cResult[24] = tmp30;
-        cResult[25] = tmp34;
+        const obj3 = { data: tmp20, applicationAssets: tmp29, getApplicationAssetUrl: O, localizedStrings };
+        cResult[24] = tmp29;
+        cResult[25] = O;
         cResult[26] = tmp20;
         cResult[27] = obj3;
         const tmpResult6 = tmp(tmp2[8]);
@@ -286,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = S;
       const obj2 = require("UserApplicationIdentityActionCreators");
     }
-  : (arg0, arg1) => {
+  : function useApplicationWidgetLayoutRendererProps(arg0, arg1) {
       _require = arg0;
       importDefault = arg1;
       const userApplicationIdentities = require("UserApplicationIdentityActionCreators").useUserApplicationIdentities(

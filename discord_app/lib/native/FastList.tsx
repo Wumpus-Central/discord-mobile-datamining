@@ -4,7 +4,7 @@ import discord_common_shallowEqual from "../../../discord_common/js/packages/sha
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import ReanimatedRexport2 from "../../modules/reanimated/ReanimatedRexport.tsx";
 import NativeViewDefault from "../../modules/core/native/NativeView.tsx";
-import BottomSheetModal from "../../../_runtime/06119_BottomSheetModal.js";
+import BottomSheetModal from "../../../_runtime/06298_BottomSheetModal.js";
 import refObjectUnionAsPropDefault from "../../modules/typescript/refObjectUnionAsProp.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -1118,7 +1118,7 @@ const __initData2 = {
 ReactCompilerGating = fn(558);
 let closure_21 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function FastListStickySectionRendererComponent(arg0) {
         const cResult = horizontal(items[8]).c(24);
         ({ layoutStart, layoutSize, horizontal } = arg0);
         ({ nextSectionLayoutPosition, scrollPosValue } = arg0);
@@ -1281,7 +1281,7 @@ let closure_21 = noop.memo(
           horizontal,
         };
       }
-    : (children) => {
+    : function FastListStickySectionRendererComponent(children) {
         ({ layoutStart, layoutSize, horizontal } = children);
         ({ nextSectionLayoutPosition, scrollPosValue } = children);
         ({ fastListInstance, section, debug, recyclerKey } = children);
@@ -1406,7 +1406,7 @@ let closure_22 = noop.memo(function _FastListSectionRenderer(disableWrapper) {
   fastListInstance = children(section, fastListInstance);
   section = [fastListInstance, false];
   obj4.children = section;
-  v65535(NativeViewDefault, obj4);
+  collapsed(NativeViewDefault, obj4);
 });
 let closure_23 = noop.memo(function _FastListSectionFooterRenderer(disableWrapper) {
   ({ layoutSize, fastListInstance, children, section, recyclerKey, horizontal } = disableWrapper);
@@ -1426,7 +1426,7 @@ let closure_23 = noop.memo(function _FastListSectionFooterRenderer(disableWrappe
   children = children(section, fastListInstance);
   section = [children, false];
   obj4.children = section;
-  v65535(NativeViewDefault, obj4);
+  collapsed(NativeViewDefault, obj4);
 });
 let closure_24 = noop.memo(function _FastListItemRenderer(disableWrapper) {
   ({ layoutSize, children, section, fastListInstance, item, recyclerKey, horizontal } = disableWrapper);
@@ -1451,7 +1451,7 @@ let closure_24 = noop.memo(function _FastListItemRenderer(disableWrapper) {
   }
   const items = [childrenResult1, false];
   obj3.children = items;
-  childrenResult = v65535(NativeViewDefault, obj3);
+  childrenResult = collapsed(NativeViewDefault, obj3);
 });
 let closure_25 = noop.memo(function _FastListHeaderFooterRenderer(disableWrapper) {
   ({ layoutSize, children, fastListInstance, recyclerKey, horizontal } = disableWrapper);
@@ -1471,7 +1471,7 @@ let closure_25 = noop.memo(function _FastListHeaderFooterRenderer(disableWrapper
   children = children(fastListInstance);
   fastListInstance = [children, false];
   obj4.children = fastListInstance;
-  v65535(NativeViewDefault, obj4);
+  collapsed(NativeViewDefault, obj4);
 });
 let closure_26 = noop.memo(function _FastListSpacer(layoutSize) {
   layoutSize = layoutSize.layoutSize;
@@ -2722,7 +2722,7 @@ prototype4["render"] = function render() {
     renderAccessoryResult = renderAccessory(self);
   }
   children[2] = renderAccessoryResult;
-  return v65535(__initData, { children });
+  return collapsed(__initData, { children });
 };
 FastList.defaultProps = {
   batchesToRender: 12,
@@ -2739,7 +2739,7 @@ const __initData4 = {
 };
 ReactCompilerGating = fn(558);
 let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (scrollViewRef) => {
+  ? function FastListScrollWorklet(scrollViewRef) {
       const cResult = scrollViewRef(horizontal[8]).c(10);
       scrollViewRef = scrollViewRef.scrollViewRef;
       const scrollPosValue = scrollViewRef.scrollPosValue;
@@ -2820,7 +2820,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       obj = scrollViewRef(horizontal[8]);
     }
-  : (scrollViewRef) => {
+  : function FastListScrollWorklet(scrollViewRef) {
       scrollViewRef = scrollViewRef.scrollViewRef;
       const scrollPosValue = scrollViewRef.scrollPosValue;
       const horizontal = scrollViewRef.horizontal;

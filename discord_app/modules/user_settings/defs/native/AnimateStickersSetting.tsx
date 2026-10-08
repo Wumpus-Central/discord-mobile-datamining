@@ -5,11 +5,11 @@ import UserSettings from "../../UserSettings.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const StickerAnimationSettings = fn(2031).StickerAnimationSettings;
+const StickerAnimationSettings = fn(2043).StickerAnimationSettings;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAnimateStickerSettingOptions() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { label: null, value: null };
@@ -34,8 +34,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      noop.useMemo(() => {
+  : function useAnimateStickerSettingOptions() {
+      return noop.useMemo(() => {
         const obj = { label: null, value: null };
         const intl = util.intl;
         obj.label = intl.string(util.t["Xp+X2U"]);
@@ -53,19 +53,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items[2] = obj3;
         return items;
       }, []);
+    };
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.R5nQkS);
   },
-  parent: fn(7645).MobileUserSettings.ACCESSIBILITY,
-  useValue: fn(2028).AnimateStickers.useSetting,
+  parent: fn(7966).MobileUserSettings.ACCESSIBILITY,
+  useValue: fn(2040).AnimateStickers.useSetting,
   onValueChange: function onAnimateStickerSettingValueChange(arg0) {
     const AnimateStickers = UserSettings.AnimateStickers;
     AnimateStickers.updateSetting(Number(arg0));
   },
   useOptions: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useAnimateStickerSettingOptions() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { label: null, value: null };
@@ -90,8 +91,8 @@ const radio = SettingBuilders.createRadio({
         }
         return first;
       }
-    : () =>
-        noop.useMemo(() => {
+    : function useAnimateStickerSettingOptions() {
+        return noop.useMemo(() => {
           const obj = { label: null, value: null };
           const intl = util.intl;
           obj.label = intl.string(util.t["Xp+X2U"]);
@@ -108,7 +109,8 @@ const radio = SettingBuilders.createRadio({
           obj3.value = constants.NEVER_ANIMATE;
           items[2] = obj3;
           return items;
-        }, []),
+        }, []);
+      },
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AnimateStickersSetting.tsx");

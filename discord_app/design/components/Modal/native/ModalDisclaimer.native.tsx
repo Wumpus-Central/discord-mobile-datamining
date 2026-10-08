@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({
   container: { flexDirection: "column", alignItems: "center" },
   disclaimer: { marginBottom: 12 },
@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/ModalDisclaimer.native.tsx");
 
 export const ModalDisclaimer = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function ModalDisclaimer(children) {
       const cResult = c.c(6);
       children = children.children;
       const tmp4 = closure_4();
@@ -49,7 +49,7 @@ export const ModalDisclaimer = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp6;
       const obj3 = { variant: "text-xs/medium", color: "text-muted", style: tmp4.disclaimer, children };
     }
-  : (children) => {
+  : function ModalDisclaimer(children) {
       const tmp = closure_4();
       const obj = {
         style: tmp.container,

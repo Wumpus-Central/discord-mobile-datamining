@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/useProfileTileGradient.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function useProfileTileGradient(userId) {
       const cResult = userId(isVideoBackgroundProfileFetchEnabled[3]).c(7);
       userId = userId.userId;
       const guildId = userId.guildId;
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = I;
       const tmpResult = userId(isVideoBackgroundProfileFetchEnabled[5]);
     }
-  : (userId) => {
+  : function useProfileTileGradient(userId) {
       userId = userId.userId;
       const guildId = userId.guildId;
       let isVideoBackgroundProfileFetchEnabled;

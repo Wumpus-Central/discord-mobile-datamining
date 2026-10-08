@@ -10,7 +10,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (kind, arg1) => {
+  ? function useExperimentAssignment(kind, arg1) {
       _require = kind;
       dependencyMap = arg1;
       const cResult = require("c").c(6);
@@ -31,7 +31,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn = function c() {
+      const fn = function p() {
         if (kind.system === ExperimentManager.ExperimentSystem.LEGACY) {
           const userExperimentDescriptor = ExperimentStore.getUserExperimentDescriptor(kind.name);
           let bucket;
@@ -56,7 +56,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useExperimentAssignment(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const items = [ExperimentStore, ApexExperimentStore];
@@ -100,7 +100,7 @@ const result = size.fileFinishedImporting("modules/experiments/client_override_h
 export const useExperimentAssignment = tmp2;
 export { getExperimentServerAssignment };
 export const useExperimentServerAssignment = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useExperimentServerAssignment(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(4);
@@ -117,7 +117,7 @@ export const useExperimentServerAssignment = ReactCompilerGating.isReactCompiler
         }
         return tmp(504).useStateFromStores(first, tmp7);
       }
-      const fn = function c() {
+      const fn = function p() {
         let name = closure_0;
         const items = [ExperimentStore, ApexExperimentStore];
         [obj, obj2] = items;
@@ -138,7 +138,7 @@ export const useExperimentServerAssignment = ReactCompilerGating.isReactCompiler
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useExperimentServerAssignment(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       let items = [ExperimentStore, ApexExperimentStore];

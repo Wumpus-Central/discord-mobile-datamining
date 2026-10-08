@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/ChatGDMCustomizeActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function ChatGDMCustomizeActionSheet(channelId) {
       const cResult = channelId(ref[3]).c(5);
       channelId = channelId.channelId;
       const tmp5 = onGoBack(ref[4])();
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp9;
       tmp8 = tmp9;
     }
-  : (channelId) => {
+  : function ChatGDMCustomizeActionSheet(channelId) {
       channelId = channelId.channelId;
       importDefault = undefined;
       dependencyMap = undefined;

@@ -106,7 +106,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useNote.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useNote(arg0) {
       _require = arg0;
       const cResult = require("c").c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = fn2;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useNote(arg0) {
       _require = arg0;
       const items = [NoteStore];
       let stateFromStores = require("initialize").useStateFromStores(items, () => NoteStore.getNote(closure_0));

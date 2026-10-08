@@ -30,11 +30,11 @@ function voiceChannelAppCandidates(stateFromStoresArray, stateFromStoresArray1, 
 }
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function useVoiceChannelAppOptions(guildId) {
       _require = guildId;
       const cResult = require("c").c(46);
       if (cResult[0] !== guildId) {
-        const fn = function l() {
+        const fn = function p() {
           ConjureActionCreators.listProjects(closure_0);
         };
         let items = [guildId];
@@ -50,7 +50,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp4, tmp5);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ConjureProjectStore];
-        const fn2 = function s() {
+        const fn2 = function c() {
           return closure_5.getOwnedProjects();
         };
         cResult[3] = items1;
@@ -237,12 +237,12 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
                   loadFailed: "error" === stateFromStores || tmp35,
                   fetchPhase: str,
                 };
-                const result = tmp(17020).voiceChannelAppListState(obj3);
+                const result = tmp(17301).voiceChannelAppListState(obj3);
                 cResult[31] = str;
                 cResult[32] = "error" === stateFromStores || tmp35;
                 cResult[33] = arr8.length > 0;
                 cResult[34] = result;
-                const tmpResult6 = tmp(17020);
+                const tmpResult6 = tmp(17301);
               }
               closure_130_0 = tmp21;
               let found = arr5.filter((item, index) =>
@@ -274,7 +274,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       arr5 = tmp16;
       const tmpResult4 = require("initialize");
     }
-  : (arg0) => {
+  : function useVoiceChannelAppOptions(arg0) {
       _require = arg0;
       let items = [arg0];
       const effect = noop.useEffect(() => {
@@ -453,7 +453,7 @@ export { voiceChannelAppCandidates };
 export { voiceChannelAppRows };
 export { voiceChannelAppIdsToFetch };
 export const useVoiceChannelAppSettingOptions = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useVoiceChannelAppSettingOptions(arg0, arg1) {
       closure_0 = arg1;
       const cResult = c.c(11);
       ({ options, listState } = closure_7(arg0));
@@ -530,7 +530,7 @@ export const useVoiceChannelAppSettingOptions = ReactCompilerGating.isReactCompi
       tmp7 = obj8;
       const tmpResult = useGetOrFetchApplications;
     }
-  : (arg0, arg1) => {
+  : function useVoiceChannelAppSettingOptions(arg0, arg1) {
       _require = arg1;
       const tmp = closure_7(arg0);
       options = tmp.options;

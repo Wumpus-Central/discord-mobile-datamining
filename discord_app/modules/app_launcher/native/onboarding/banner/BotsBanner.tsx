@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/BotsBanner.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (context) => {
+  ? function BotsBanner(context) {
       let tmp2 = dependencyMap;
       const cResult = c.c(11);
       context = context.context;
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = tmp7;
       const tmpResult = useBannerBots;
     }
-  : (context) => {
+  : function BotsBanner(context) {
       const bannerBots = useBannerBots.useBannerBots({ context: context.context });
       ({ firstBotApplication, secondBotApplication } = bannerBots);
       let tmp4Result = null;

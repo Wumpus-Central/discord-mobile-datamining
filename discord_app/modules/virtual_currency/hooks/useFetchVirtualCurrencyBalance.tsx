@@ -11,7 +11,7 @@ const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");
 
 export const useFetchVirtualCurrencyBalance = ReactCompilerGating.isReactCompilerEnabled()
-  ? (disableFetch) => {
+  ? function useFetchVirtualCurrencyBalance(disableFetch) {
       _require = disableFetch;
       const cResult = require("c").c(14);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -106,7 +106,7 @@ export const useFetchVirtualCurrencyBalance = ReactCompilerGating.isReactCompile
       tmp10 = fn2;
       const tmpResult = require("initialize");
     }
-  : (disableFetch) => {
+  : function useFetchVirtualCurrencyBalance(disableFetch) {
       _require = disableFetch;
       const items = [VirtualCurrencyStore];
       const isFetching = require("initialize").useStateFromStoresObject(items, () => ({

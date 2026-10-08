@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   rolesRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 4 },
 });
@@ -16,36 +16,29 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/accept_invite/native/InviteRolesList.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function InviteRolesList(arg0) {
       const cResult = guild(576).c(18);
       ({ invite, style } = arg0);
-      closure_7();
+      const tmp4 = closure_7();
       guild = invite.guild;
       const roles = invite.roles;
       if (null != guild) {
         if (null != roles) {
           if (0 !== roles.length) {
             if (cResult[4] !== guild) {
-              class R {
-                constructor(arg0) {
-                  obj = closure_0(closure_2[6]);
-                  return obj.inviteRoleToDisplayData(guild.id, arg0);
-                }
-              }
+              const fn = function x(id) {
+                return GuildRoleUtils.inviteRoleToDisplayData(guild.id, id);
+              };
               cResult[4] = guild;
-              cResult[5] = R;
+              cResult[5] = fn;
+              let tmp5 = fn;
             } else {
-              class R {
-                constructor(arg0) {
-                  obj = closure_0(closure_2[6]);
-                  return obj.inviteRoleToDisplayData(guild.id, arg0);
-                }
-              }
+              tmp5 = cResult[5];
             }
             const items = [];
             HermesBuiltin.arraySpread(roles, 0);
-            const sorted = items.sort(tmp(2110).sortInviteRoles);
-            const mapped = sorted.map(R);
+            const sorted = items.sort(tmp(2122).sortInviteRoles);
+            const mapped = sorted.map(tmp5);
             cResult[1] = guild;
             cResult[2] = roles;
             cResult[3] = mapped;
@@ -53,90 +46,73 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        class R {
-          constructor(arg0) {
-            obj = closure_0(closure_2[6]);
-            return obj.inviteRoleToDisplayData(guild.id, arg0);
-          }
-        }
-        cResult[0] = tmp5;
+        const items1 = [];
+        cResult[0] = items1;
+        let first = items1;
       } else {
-        class R {
-          constructor(arg0) {
-            obj = closure_0(closure_2[6]);
-            return obj.inviteRoleToDisplayData(guild.id, arg0);
-          }
-        }
+        first = cResult[0];
       }
       if (null != guild) {
-        class R {
-          constructor(arg0) {
-            obj = closure_0(closure_2[6]);
-            return obj.inviteRoleToDisplayData(guild.id, arg0);
-          }
-        }
-        if (0 !== tmp5.length) {
-          class R {
-            constructor(arg0) {
-              obj = closure_0(closure_2[6]);
-              return obj.inviteRoleToDisplayData(guild.id, arg0);
-            }
-          }
+        if (0 !== first.length) {
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            class R {
-              constructor(arg0) {
-                obj = closure_0(closure_2[6]);
-                return obj.inviteRoleToDisplayData(guild.id, arg0);
-              }
-            }
             const obj2 = { variant: "text-sm/semibold", color: "text-default", children: null };
             const intl = tmp(1126).intl;
             obj2.children = intl.string(tmp(1126).t.stcSfI);
-            const tmp14 = closure_5(tmp(4892).Text, obj2);
+            const tmp14 = closure_5(tmp(5086).Text, obj2);
             cResult[6] = tmp14;
+            let tmp12 = tmp14;
           } else {
-            class R {
-              constructor(arg0) {
-                obj = closure_0(closure_2[6]);
-                return obj.inviteRoleToDisplayData(guild.id, arg0);
-              }
-            }
+            tmp12 = cResult[6];
           }
           if (cResult[7] === guild) {
-            class R {
-              constructor(arg0) {
-                obj = closure_0(closure_2[6]);
-                return obj.inviteRoleToDisplayData(guild.id, arg0);
+            if (cResult[8] === first) {
+              if (cResult[12] === tmp4.rolesRow) {
+                if (cResult[13] === tmp16) {
+                  let tmp20 = cResult[14];
+                }
+                if (cResult[15] === style) {
+                  if (cResult[16] === tmp20) {
+                    let tmp24 = cResult[17];
+                  }
+                  return tmp24;
+                }
+                const obj3 = { spacing: 4, style, children: null };
+                const items2 = [tmp12, tmp20];
+                obj3.children = items2;
+                const tmp26 = closure_6(tmp(5373).Stack, obj3);
+                cResult[15] = style;
+                cResult[16] = tmp20;
+                cResult[17] = tmp26;
+                tmp24 = tmp26;
               }
+              const obj4 = { style: tmp15, children: cResult[9] };
+              const tmp23 = closure_5(View, obj4);
+              cResult[12] = tmp4.rolesRow;
+              cResult[13] = cResult[9];
+              cResult[14] = tmp23;
+              tmp20 = tmp23;
             }
           }
           if (cResult[10] !== guild) {
-            class R {
-              constructor(arg0) {
-                obj = closure_0(closure_2[6]);
-                return obj.inviteRoleToDisplayData(guild.id, arg0);
-              }
-            }
+            const fn2 = function b(role) {
+              return hasOwnProperty(RolePillDefault, { role, guildId: guild.id }, role.id);
+            };
             cResult[10] = guild;
-            cResult[11] = tmp16;
+            cResult[11] = fn2;
+            let tmp17 = fn2;
           } else {
-            class R {
-              constructor(arg0) {
-                obj = closure_0(closure_2[6]);
-                return obj.inviteRoleToDisplayData(guild.id, arg0);
-              }
-            }
+            tmp17 = cResult[11];
           }
-          const mapped1 = tmp5.map(tmp16);
+          const mapped1 = first.map(tmp17);
           cResult[7] = guild;
-          cResult[8] = tmp5;
+          cResult[8] = first;
           cResult[9] = mapped1;
         }
       }
       return null;
     }
-  : (invite) => {
+  : function InviteRolesList(invite) {
       invite = invite.invite;
       guild = invite.guild;
       const roles = invite.roles;
@@ -162,14 +138,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = { variant: "text-sm/semibold", color: "text-default", children: null };
           const intl = guild(1126).intl;
           obj2.children = intl.string(guild(1126).t.stcSfI);
-          const items1 = [closure_5(guild(4892).Text, obj2)];
+          const items1 = [closure_5(guild(5086).Text, obj2)];
           const obj3 = {
             style: tmp.rolesRow,
             children: memo.map((role) => hasOwnProperty(RolePillDefault, { role, guildId: guild.id }, role.id)),
           };
           items1[1] = closure_5(View, obj3);
           obj.children = items1;
-          tmp2 = closure_6(guild(5600).Stack, obj);
+          tmp2 = closure_6(guild(5373).Stack, obj);
         }
       }
       return tmp2;

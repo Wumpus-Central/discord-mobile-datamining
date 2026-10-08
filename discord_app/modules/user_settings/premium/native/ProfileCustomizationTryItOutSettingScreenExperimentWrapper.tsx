@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ProfileCustomizationTryItOutSettingScreenExperimentWrapper() {
       let tmp = dependencyMap;
       const cResult = c.c(2);
       if (obj2.useIsTryItOutMobileRefreshEnabled("ProfileCustomizationTryItOutSettingScreenExperimentWrapper")) {
@@ -39,14 +39,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2 = UserProfilePremiumTryItOutMobileRefreshExperiment;
     }
-  : () =>
-      jsx(
+  : function ProfileCustomizationTryItOutSettingScreenExperimentWrapper() {
+      return jsx(
         importDefault(
           UserProfilePremiumTryItOutMobileRefreshExperiment.useIsTryItOutMobileRefreshEnabled(
             "ProfileCustomizationTryItOutSettingScreenExperimentWrapper",
           )
-            ? 15711
-            : 15736,
+            ? 15991
+            : 15994,
         ),
         {},
       );
+    };

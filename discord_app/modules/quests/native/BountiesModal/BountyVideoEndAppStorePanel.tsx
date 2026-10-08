@@ -7,7 +7,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06326_LegacyBaseButton.js";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AppStoreOverlayContent from "../AppStoreOverlay/AppStoreOverlayContent.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -34,7 +34,7 @@ function BountyVideoEndAppStorePanelInner(metadata) {
   }, items);
   const unmountEffect = metadata(revealProgress[8]).useUnmountEffect(onPress);
   let obj = metadata(revealProgress[8]);
-  class A {
+  class H {
     constructor() {
       obj = { transform: null };
       obj1 = { translateY: null };
@@ -51,16 +51,16 @@ function BountyVideoEndAppStorePanelInner(metadata) {
     }
   }
   let obj2 = metadata(revealProgress[9]);
-  A.__closure = {
+  H.__closure = {
     interpolate: metadata(revealProgress[9]).interpolate,
     revealProgress,
     sheetHeight,
     Extrapolation: metadata(revealProgress[9]).Extrapolation,
   };
-  A.__workletHash = 2597568517005;
-  A.__initData = __initData;
+  H.__workletHash = 2597568517005;
+  H.__initData = __initData;
   let items1 = [metadata.storeUrl, onInstallPress];
-  const animatedStyle = obj2.useAnimatedStyle(A);
+  const animatedStyle = obj2.useAnimatedStyle(H);
   const callback1 = onDismiss.useCallback(() => {
     onInstallPress(AnalyticsActions.AppStoreOverlaySurfaces.MAIN_CTA);
     openURLDefault(metadata.storeUrl);
@@ -180,10 +180,10 @@ function BountyVideoEndAppStorePanelInner(metadata) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ACTION_SHEET_BORDER_RADIUS = fn(6653).ACTION_SHEET_BORDER_RADIUS;
+const ACTION_SHEET_BORDER_RADIUS = fn(6830).ACTION_SHEET_BORDER_RADIUS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   root: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 10 },
   panel: {
@@ -205,7 +205,7 @@ let obj3 = {
   overflow: "hidden",
   flexDirection: "column",
 };
-obj2.scrollContent = { paddingBottom: fn(10937).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
+obj2.scrollContent = { paddingBottom: fn(10588).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
 let closure_9 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function BountyVideoEndAppStorePanelTsx1(){const{interpolate,revealProgress,sheetHeight,Extrapolation}=this.__closure;return{transform:[{translateY:interpolate(revealProgress.get(),[0,1],[sheetHeight,0],Extrapolation.CLAMP)}]};}",
@@ -220,12 +220,12 @@ let closure_13 = {
   code: "function BountyVideoEndAppStorePanelTsx4(){const{dragStartProgress,revealProgress}=this.__closure;dragStartProgress.set(revealProgress.get());}",
 };
 const ReactCompilerGating = fn(558);
-let obj4 = { paddingBottom: fn(10937).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
+let obj4 = { paddingBottom: fn(10588).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountyVideoEndAppStorePanel.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BountyVideoEndAppStorePanel(arg0) {
       const cResult = c.c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ThemeStore];
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = tmp16;
       const tmpResult = initialize;
     }
-  : (arg0) => {
+  : function BountyVideoEndAppStorePanel(arg0) {
       const items = [ThemeStore];
       const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
       const obj2 = { theme: stateFromStores, children: null };

@@ -9,7 +9,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useRedactableMediaAttachmentsForMessage(arg0, arg1, arg2) {
       _require = arg0;
       dependencyMap = arg1;
       closure_2 = arg2;
@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const stateFromStores = tmp(573).useStateFromStores(first, tmp6);
         const tmpResult = tmp(573);
-        const enabledHarmTypesBitmaskForMessage = tmp(11316).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+        const enabledHarmTypesBitmaskForMessage = tmp(11491).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
         if (null == stateFromStores) {
           const _Symbol = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
@@ -85,7 +85,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[6] = arg2;
           cResult[7] = tmp11;
         }
-        const tmpResult2 = tmp(11316);
+        const tmpResult2 = tmp(11491);
       }
       const fn = function u() {
         return MessageStore.getMessage(closure_0, closure_1);
@@ -95,7 +95,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = fn;
       tmp6 = fn;
     }
-  : (arg0, arg1, arg2) => {
+  : function useRedactableMediaAttachmentsForMessage(arg0, arg1, arg2) {
       _require = arg0;
       dependencyMap = arg1;
       closure_2 = arg2;
@@ -129,7 +129,7 @@ const result = size.fileFinishedImporting(
 
 export const useRedactableMediaAttachmentsForMessage = tmp2;
 export const useRedactableMediaEmbedsForMessage = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useRedactableMediaEmbedsForMessage(arg0, arg1, arg2) {
       _require = arg0;
       dependencyMap = arg1;
       closure_2 = arg2;
@@ -147,7 +147,7 @@ export const useRedactableMediaEmbedsForMessage = ReactCompilerGating.isReactCom
         }
         const stateFromStores = tmp(573).useStateFromStores(first, tmp6);
         const tmpResult = tmp(573);
-        const enabledHarmTypesBitmaskForMessage = tmp(11316).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+        const enabledHarmTypesBitmaskForMessage = tmp(11491).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
         if (null == stateFromStores) {
           const _Symbol = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
@@ -205,7 +205,7 @@ export const useRedactableMediaEmbedsForMessage = ReactCompilerGating.isReactCom
           cResult[6] = enabledHarmTypesBitmaskForMessage;
           cResult[7] = tmp11;
         }
-        const tmpResult2 = tmp(11316);
+        const tmpResult2 = tmp(11491);
       }
       const fn = function u() {
         return MessageStore.getMessage(closure_0, closure_1);
@@ -215,7 +215,7 @@ export const useRedactableMediaEmbedsForMessage = ReactCompilerGating.isReactCom
       cResult[3] = fn;
       tmp6 = fn;
     }
-  : (arg0, arg1, arg2) => {
+  : function useRedactableMediaEmbedsForMessage(arg0, arg1, arg2) {
       _require = arg0;
       dependencyMap = arg1;
       closure_2 = arg2;

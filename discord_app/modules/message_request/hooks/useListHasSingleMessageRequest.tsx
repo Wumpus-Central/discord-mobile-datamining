@@ -7,7 +7,7 @@ const require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useListHasSingleMessageRequest() {
       const cResult = messageRequestsCount(stateFromStores[4]).c(6);
       const obj = messageRequestsCount(stateFromStores[4]);
       let tmp = messageRequestsCount;
@@ -63,7 +63,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = R;
       const tmpResult = tmp(stateFromStores[6]);
     }
-  : () => {
+  : function useListHasSingleMessageRequest() {
       messageRequestsCount = messageRequestsCount(stateFromStores[5]).useMessageRequestsCount();
       const ref = noop.useRef(messageRequestsCount);
       const obj = messageRequestsCount(stateFromStores[5]);
@@ -89,7 +89,7 @@ const result = size.fileFinishedImporting("modules/message_request/hooks/useList
 
 export const useListHasSingleMessageRequest = tmp2;
 export const useListHasSingleSpamMessageRequest = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useListHasSingleSpamMessageRequest() {
       const cResult = spamMessageRequestCount(stateFromStores[4]).c(6);
       const obj = spamMessageRequestCount(stateFromStores[4]);
       let tmp = spamMessageRequestCount;
@@ -145,7 +145,7 @@ export const useListHasSingleSpamMessageRequest = ReactCompilerGating.isReactCom
       tmp10 = R;
       const tmpResult = tmp(stateFromStores[6]);
     }
-  : () => {
+  : function useListHasSingleSpamMessageRequest() {
       spamMessageRequestCount = spamMessageRequestCount(stateFromStores[8]).useSpamMessageRequestCount();
       const ref = noop.useRef(spamMessageRequestCount);
       const obj = spamMessageRequestCount(stateFromStores[8]);

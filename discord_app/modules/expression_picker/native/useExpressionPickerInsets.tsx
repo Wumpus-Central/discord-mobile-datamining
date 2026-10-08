@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerInsets.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (hasCategories) => {
+  ? function useExpressionPickerInsets(hasCategories) {
       const cResult = c.c(6);
       const bottom = useSafeAreaInsetsDefault().bottom;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = obj4;
       tmp8 = obj4;
     }
-  : (hasCategories) => {
+  : function useExpressionPickerInsets(hasCategories) {
       const bottom = useSafeAreaInsetsDefault().bottom;
       const obj = { safeAreaStyle: null, safeAreaBottomKeyboardAware: null };
       const items = [bottom];

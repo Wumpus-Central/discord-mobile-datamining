@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("utils/LazyAPIPromise.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useLazyAPIPromise(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(9);
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = execFn;
       tmp6 = execFn;
     }
-  : (arg0, arg1) => {
+  : function useLazyAPIPromise(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
       noop = async function _execFn2() {

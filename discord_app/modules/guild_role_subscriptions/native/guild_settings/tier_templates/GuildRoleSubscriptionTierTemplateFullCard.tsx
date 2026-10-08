@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1, padding: 16 },
   subscriptionPlanTextStyle: null,
@@ -48,7 +48,7 @@ obj2.channelIcon = { marginEnd: 8 };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function SectionSeparator() {
       const cResult = c.c(6);
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -87,7 +87,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp15;
     }
-  : () => {
+  : function SectionSeparator() {
       const obj = { children: null };
       const items = [React4(native.Spacer, { size: 24 }), ,];
       const tmp = closure_7();
@@ -98,7 +98,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BenefitRow(arg0) {
       const cResult = c.c(11);
       ({ title, description } = arg0);
       const tmp4 = closure_7();
@@ -160,7 +160,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp11;
       tmp10 = tmp11;
     }
-  : (description) => {
+  : function BenefitRow(description) {
       description = description.description;
       const tmp = closure_7();
       const obj = { style: tmp.benefitRowContainer, children: null };
@@ -185,7 +185,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BenefitSection(arg0) {
       const cResult = c.c(6);
       ({ sectionTitle, children } = arg0);
       if (cResult[0] !== sectionTitle) {
@@ -219,7 +219,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp11;
       tmp10 = tmp11;
     }
-  : (arg0) => {
+  : function BenefitSection(arg0) {
       const obj = { children: null };
       ({ sectionTitle, children } = arg0);
       const items = [
@@ -243,7 +243,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildRoleSubscriptionTierTemplateFullCard(arg0) {
       const cResult = require("c").c(62);
       ({ template, guildId, handleSelectTemplateInPreview } = arg0);
       const tmp4 = closure_7();
@@ -305,7 +305,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[13] !== tmp18) {
               const obj6 = { variant: "text-sm/bold", color: "text-default", style: tmp18, children: tmp19 };
-              const tmp23 = closure_4(tmp(4892).Text, obj6);
+              const tmp23 = closure_4(tmp(5086).Text, obj6);
               cResult[13] = tmp18;
               cResult[14] = tmp23;
               let tmp21 = tmp23;
@@ -314,7 +314,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol3 = Symbol;
             if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp26 = closure_4(tmp(1188).Spacer, { size: 4 });
+              const tmp26 = closure_4(tmp(1200).Spacer, { size: 4 });
               cResult[15] = tmp26;
               let tmp24 = tmp26;
             } else {
@@ -325,8 +325,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
               const intl2 = tmp(1126).intl;
               obj7.children = intl2.string(tmp(1126).t.bCb3c8);
-              const tmp30 = closure_4(tmp(4892).Text, obj7);
-              const tmp31 = closure_4(tmp(1188).Spacer, { size: 24 });
+              const tmp30 = closure_4(tmp(5086).Text, obj7);
+              const tmp31 = closure_4(tmp(1200).Spacer, { size: 24 });
               cResult[16] = tmp30;
               cResult[17] = tmp31;
               let tmp28 = tmp31;
@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol7 = Symbol;
               if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp41 = closure_4(tmp(1188).Spacer, { size: 8 });
+                const tmp41 = closure_4(tmp(1200).Spacer, { size: 8 });
                 cResult[25] = tmp41;
                 let tmp39 = tmp41;
               } else {
@@ -401,7 +401,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           if (cResult[40] !== cResult[36]) {
                             const obj9 = { sectionTitle: tmp49, children: null };
                             const obj10 = { gap: 14, children: tmp51 };
-                            obj9.children = closure_4(tmp(9966).GappedList, obj10);
+                            obj9.children = closure_4(tmp(9493).GappedList, obj10);
                             const tmp58 = closure_4(closure_10, obj9);
                             cResult[40] = tmp51;
                             cResult[41] = tmp58;
@@ -454,7 +454,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             if (cResult[47] !== cResult[45]) {
                               const obj11 = { sectionTitle: tmp63, children: null };
                               const obj12 = { gap: 14, children: tmp65 };
-                              obj11.children = closure_4(tmp(9966).GappedList, obj12);
+                              obj11.children = closure_4(tmp(9493).GappedList, obj12);
                               const tmp72 = closure_4(closure_10, obj11);
                               cResult[47] = tmp65;
                               cResult[48] = tmp72;
@@ -486,7 +486,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         const items2 = [tmp8, tmp10, tmp73];
                                         obj14.children = items2;
                                         obj13.children = closure_6(View, obj14);
-                                        const tmp80 = closure_4(tmp(6652).BottomSheet, obj13);
+                                        const tmp80 = closure_4(tmp(6829).BottomSheet, obj13);
                                         cResult[57] = tmp4.container;
                                         cResult[58] = tmp8;
                                         cResult[59] = tmp73;
@@ -519,7 +519,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               tmp69,
                             ];
                             obj15.children = items3;
-                            const tmp75 = closure_6(tmp(6119).BottomSheetScrollView, obj15);
+                            const tmp75 = closure_6(tmp(6298).BottomSheetScrollView, obj15);
                             cResult[49] = tmp4.content;
                             cResult[50] = tmp21;
                             cResult[51] = tmp36;
@@ -577,7 +577,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj16 = { roleColor: role_color, roleImage: image, roleName: name, guildId };
-              const tmp44 = closure_4(tmp(18027).GuildRoleSubscriptionRolePreview, obj16);
+              const tmp44 = closure_4(tmp(18314).GuildRoleSubscriptionRolePreview, obj16);
               cResult[26] = guildId;
               cResult[27] = image;
               cResult[28] = name;
@@ -591,7 +591,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               style: tmp33,
               children: tmp34,
             };
-            const tmp38 = closure_4(tmp(4892).Text, obj17);
+            const tmp38 = closure_4(tmp(5086).Text, obj17);
             cResult[22] = typeConsolidationEyebrow.variant;
             cResult[23] = tmp33;
             cResult[24] = tmp38;
@@ -624,7 +624,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       let obj2 = require("useTypeConsolidationTextTransform");
     }
-  : (template) => {
+  : function GuildRoleSubscriptionTierTemplateFullCard(template) {
       template = template.template;
       ({ guildId, handleSelectTemplateInPreview } = template);
       const tmp = closure_7();

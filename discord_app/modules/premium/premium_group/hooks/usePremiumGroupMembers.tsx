@@ -11,7 +11,7 @@ const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembers.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function usePremiumGroupMembers(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(12);
       if (cResult[0] !== arg1) {
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp6;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PremiumGroupStore];
-        const fn = function b() {
+        const fn = function n() {
           return {
             premiumGroupMembers: PremiumGroupStore.getMembers(),
             isFetchingMembers: PremiumGroupStore.isFetchingMembers(),
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = U;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function usePremiumGroupMembers(arg0) {
       _require = arg0;
       let obj = arg1;
       if (arg1 === undefined) {

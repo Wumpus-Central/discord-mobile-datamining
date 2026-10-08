@@ -11,7 +11,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
 
 export const useCanGiftProduct = ReactCompilerGating.isReactCompilerEnabled()
-  ? (type) => {
+  ? function useCanGiftProduct(type) {
       const currentUser = useCurrentUser.useCurrentUser();
       let result = CollectiblesUtils.isPremiumCollectiblesProduct(type);
       const result1 = CollectiblesUtils.isFreeCollectiblesProduct(type);
@@ -43,7 +43,7 @@ export const useCanGiftProduct = ReactCompilerGating.isReactCompilerEnabled()
       }
       return !result;
     }
-  : (type) => {
+  : function useCanGiftProduct(type) {
       const currentUser = useCurrentUser.useCurrentUser();
       let result = CollectiblesUtils.isPremiumCollectiblesProduct(type);
       const result1 = CollectiblesUtils.isFreeCollectiblesProduct(type);

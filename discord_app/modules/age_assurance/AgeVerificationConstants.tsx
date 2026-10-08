@@ -1,16 +1,10 @@
 // discord_app/modules/age_assurance/AgeVerificationConstants.tsx
-import Constants from "../../Constants.tsx";
-import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
-import _modDef3073 from "AgeAssurance.messages.js";
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators.native.tsx";
+import _modDef3117 from "AgeAssurance.messages.js";
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-
-const HelpdeskArticles = Constants.HelpdeskArticles;
-let items = [AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.NSFW_GUILD];
-let obj = {
+const items = [AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.NSFW_GUILD];
+const obj = {
   FACIAL_AGE_ESTIMATION: 1,
   [1]: "FACIAL_AGE_ESTIMATION",
   ID_VERIFICATION: 2,
@@ -20,48 +14,16 @@ let obj = {
   GOOGLE_WALLET: 9,
   [9]: "GOOGLE_WALLET",
 };
-let obj2 = {};
+const obj2 = {};
 const set = new Set(items);
-obj2[obj.FACIAL_AGE_ESTIMATION] = { title: _modDef3073["2yLvkS"], description: _modDef3073.eJmat5 };
-let obj3 = { title: _modDef3073["2yLvkS"], description: _modDef3073.eJmat5 };
-obj2[obj.ID_VERIFICATION] = { title: _modDef3073.dwkwo0, description: _modDef3073.ZdmRwW };
-const obj4 = { title: _modDef3073.dwkwo0, description: _modDef3073.ZdmRwW };
-obj2[obj.GOOGLE_WALLET] = { title: _modDef3073.Y9sLpR, description: _modDef3073.dah4bF };
-let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationConstants.tsx");
+obj2[obj.FACIAL_AGE_ESTIMATION] = { title: _modDef3117["2yLvkS"], description: _modDef3117.eJmat5 };
+const obj3 = { title: _modDef3117["2yLvkS"], description: _modDef3117.eJmat5 };
+obj2[obj.ID_VERIFICATION] = { title: _modDef3117.dwkwo0, description: _modDef3117.ZdmRwW };
+const obj4 = { title: _modDef3117.dwkwo0, description: _modDef3117.ZdmRwW };
+obj2[obj.GOOGLE_WALLET] = { title: _modDef3117.Y9sLpR, description: _modDef3117.dah4bF };
+const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationConstants.tsx");
 
 export const FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS = set;
-export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetStartedSteps(arg0) {
-  _require = arg0;
-  let obj = { title: null, description: null };
-  const intl = require("util").intl;
-  obj.title = intl.string(require("util").t.HphYKp);
-  const intl2 = require("util").intl;
-  obj.description = intl2.string(require("util").t["GCZC+9"]);
-  const items = [obj, ,];
-  let obj2 = { title: null, description: null };
-  const intl3 = require("util").intl;
-  obj2.title = intl3.string(require("util").t.nkO4L3);
-  const intl4 = require("util").intl;
-  obj2.description = intl4.string(require("util").t.rHZFsH);
-  items[1] = obj2;
-  const obj3 = { title: null, description: null };
-  const intl5 = require("util").intl;
-  obj3.title = intl5.string(require("util").t.aVwLfn);
-  const intl6 = require("util").intl;
-  obj3.description = intl6.format(require("util").t.n5vd1E, {
-    handleOnHelpUrlHook() {
-      const obj = AgeVerificationActionCreatorsDefault;
-      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_SYSTEM_DMS));
-      const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(
-        closure_0,
-        AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.PRIMARY,
-        AgeVerificationAnalyticsUtils.AgeVerificationModalCta.SYSTEM_DMS_LEARN_MORE,
-      );
-    },
-  });
-  items[2] = obj3;
-  return items;
-};
 export const TRUSTED_PROVIDERS_URL =
   "https://discord.com/safety/age-assurance-on-discord-vendors-methods-and-your-data";
 export const FALLBACK_TEEN_AGE_RANGE = "13-17";

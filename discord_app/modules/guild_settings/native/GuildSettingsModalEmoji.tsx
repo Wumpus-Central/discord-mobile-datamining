@@ -24,8 +24,8 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let apply = apply_mod;
-let closure_12 = apply.throttle(fn(9952).fetchEmoji, 1000);
-const createStyles = fn(4896);
+let closure_12 = apply.throttle(fn(9479).fetchEmoji, 1000);
+const createStyles = fn(5090);
 let obj = {
   loadingContainer: { flex: 1, paddingTop: 40 },
   emptyState: { paddingTop: 30 },
@@ -93,7 +93,7 @@ const computeEmojiItems = apply.memoize((arr, stateFromStores) => {
 });
 let ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (headerDescription) => {
+  ? function ManageEmojisModal(headerDescription) {
       const cResult = guild(onSelectRolesForEmoji[14]).c(45);
       ({ computeEmojiItems, contentContainerStyle, disabled, guild } = headerDescription);
       headerDescription = headerDescription.headerDescription;
@@ -281,7 +281,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = emojiItems;
       const tmpResult2 = guild(onSelectRolesForEmoji[16]);
     }
-  : (disabled) => {
+  : function ManageEmojisModal(disabled) {
       let flag = disabled.disabled;
       ({ computeEmojiItems, contentContainerStyle } = disabled);
       if (flag === undefined) {
@@ -441,7 +441,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalEmoji.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildSettingsModalEmoji(guildId) {
       const cResult = guildId(stateFromStores[14]).c(18);
       guildId = guildId.guildId;
       ({ contentContainerStyle, isLandingScreen } = guildId);
@@ -567,7 +567,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = I;
       const tmpResult3 = guildId(stateFromStores[24]);
     }
-  : (contentContainerStyle) => {
+  : function GuildSettingsModalEmoji(contentContainerStyle) {
       ({ guildId: require, isLandingScreen } = contentContainerStyle);
       let stateFromStores;
       const items = [GuildStore];

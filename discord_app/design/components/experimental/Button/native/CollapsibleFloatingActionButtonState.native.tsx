@@ -13,7 +13,7 @@ const __initData2 = {
 };
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCollapsibleFloatingActionButtonState() {
       const cResult = c.c(2);
       const sharedValue = ReanimatedRexport.useSharedValue(0);
       if (cResult[0] !== sharedValue) {
@@ -26,7 +26,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : () => {
+  : function useCollapsibleFloatingActionButtonState() {
       const obj = { collapseText: ReanimatedRexport.useSharedValue(0) };
       return obj;
     };
@@ -37,7 +37,7 @@ let result = size.fileFinishedImporting(
 
 export const useCollapsibleFloatingActionButtonState = tmp2;
 export const useCollapsibleFloatingActionButtonScroll = ReactCompilerGating.isReactCompilerEnabled()
-  ? (collapseText, point) => {
+  ? function useCollapsibleFloatingActionButtonScroll(collapseText, point) {
       const cResult = c.c(4);
       collapseText = collapseText.collapseText;
       let num = 0;
@@ -93,7 +93,7 @@ export const useCollapsibleFloatingActionButtonScroll = ReactCompilerGating.isRe
       tmp5 = fn;
       const tmpResult = ReanimatedRexport;
     }
-  : (collapseText) => {
+  : function useCollapsibleFloatingActionButtonScroll(collapseText) {
       collapseText = collapseText.collapseText;
       let num = point;
       if (point === undefined) {

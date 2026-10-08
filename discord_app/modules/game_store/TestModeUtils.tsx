@@ -24,7 +24,7 @@ export const isAnyApplicationInTestMode = function isAnyApplicationInTestMode() 
   return isEnabled;
 };
 export const useIsTestModeForApplication = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsTestModeForApplication(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -35,7 +35,7 @@ export const useIsTestModeForApplication = ReactCompilerGating.isReactCompilerEn
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function l() {
+        const fn = function p() {
           let tmp2 = null != closure_0;
           if (tmp2) {
             let result = TestModeStore.inTestModeForApplication(closure_0);
@@ -59,7 +59,7 @@ export const useIsTestModeForApplication = ReactCompilerGating.isReactCompilerEn
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useIsTestModeForApplication(arg0) {
       _require = arg0;
       const items = [TestModeStore, DeveloperActivityShelfStore];
       const items1 = [arg0];

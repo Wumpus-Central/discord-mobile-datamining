@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function CheckpointEmojiStatsScreen() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp6 = jsx(CheckpointStatsScreenDefault, { name: "Emoji" });
@@ -22,4 +22,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => jsx(CheckpointStatsScreenDefault, { name: "Emoji" });
+  : function CheckpointEmojiStatsScreen() {
+      return jsx(CheckpointStatsScreenDefault, { name: "Emoji" });
+    };

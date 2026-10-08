@@ -559,7 +559,7 @@ const dependencyMap2 = {
   [AnalyticEvents.WEBSOCKET_MESSAGE_RECEIVED]: (data) => {
     data = data.data;
     if (null == data) {
-      let obj = { message_identity: "unknown", socket_kind: "Boolean" };
+      let obj = { message_identity: "unknown", socket_kind: "apply" };
     } else {
       const url = data.url;
       let tmp61 = null;

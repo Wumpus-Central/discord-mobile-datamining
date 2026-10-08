@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/chat_input/native/accessories
 
 export const ChatInputAccessibilityDivider = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function ChatInputAccessibilityDivider() {
         const cResult = c.c(2);
         let tmp4 = null;
         if (obj2.useIsScreenReaderEnabled()) {
@@ -59,7 +59,7 @@ export const ChatInputAccessibilityDivider = noop.memo(
         }
         return tmp4;
       }
-    : () => {
+    : function ChatInputAccessibilityDivider() {
         let tmp3 = null;
         if (obj.useIsScreenReaderEnabled()) {
           tmp3 = null;

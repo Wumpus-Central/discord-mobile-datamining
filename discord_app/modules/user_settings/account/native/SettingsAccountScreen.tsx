@@ -3,9 +3,9 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
+import WebAuthnActionCreators from "../../../webauthn/WebAuthnActionCreators.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import WebAuthnActionCreators from "../../../webauthn/WebAuthnActionCreators.tsx";
 import MFAUtils from "../../../../utils/MFAUtils.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SafetyHubActionCreatorsAll from "../../../safety_hub/SafetyHubActionCreators.tsx";
@@ -33,7 +33,7 @@ function getAccountSettings() {
   } = MobileUserSettings);
   obj.settings = items;
   const items1 = [obj, , ,];
-  const obj2 = { label: v65535(closure_15, {}), settings: null };
+  const obj2 = { label: collapsed(closure_15, {}), settings: null };
   const items2 = [, , , , ,];
   ({
     ACCOUNT_CHANGE_PASSWORD: arr3[0],
@@ -45,7 +45,7 @@ function getAccountSettings() {
   } = MobileUserSettings);
   obj2.settings = items2;
   items1[1] = obj2;
-  const obj3 = { label: v65535(closure_16, {}), settings: null };
+  const obj3 = { label: collapsed(closure_16, {}), settings: null };
   const items3 = [,];
   ({ ACCOUNT_AGE_GROUP: arr4[0], ACCOUNT_STANDING: arr4[1] } = MobileUserSettings);
   obj3.settings = items3;
@@ -60,11 +60,11 @@ function getAccountSettings() {
   return items1;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   upsellPasswordless: {
     marginBottom: 16,
@@ -77,18 +77,18 @@ let obj = {
 let closure_13 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PasswordlessUpsell() {
       const cResult = navigation(576).c(23);
       const tmp4 = closure_13();
       const obj = navigation(576);
-      navigation = navigation(1490).useNavigation();
+      navigation = navigation(1502).useNavigation();
       if (cResult[0] !== navigation) {
-        const fn = function t() {
+        function onPress() {
           navigation.push(UserSettingsSections.WEBAUTHN_REGISTER);
-        };
+        }
         cResult[0] = navigation;
-        cResult[1] = fn;
-        let tmp6 = fn;
+        cResult[1] = onPress;
+        let tmp6 = onPress;
       } else {
         tmp6 = cResult[1];
       }
@@ -108,7 +108,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] !== tmp4.upsellImagePasswordless) {
         const obj4 = { style: tmp8, children: null };
-        const obj5 = { source: tmp(14509), resizeMode: "contain", style: tmp4.upsellImagePasswordless };
+        const obj5 = { source: tmp(14769), resizeMode: "contain", style: tmp4.upsellImagePasswordless };
         obj4.children = closure_10(FastImageDefault, obj5);
         const tmp14 = closure_10(View, obj4);
         cResult[4] = tmp4.upsellImagePasswordless;
@@ -135,7 +135,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = { variant: "heading-lg/medium", color: "mobile-text-heading-primary", children: null };
         const intl = tmp(1126).intl;
         obj8.children = intl.string(tmp(1126).t["+Svv46"]);
-        const tmp19 = closure_10(tmp(4892).Heading, obj8);
+        const tmp19 = closure_10(tmp(5086).Heading, obj8);
         cResult[8] = tmp19;
         let tmp17 = tmp19;
       } else {
@@ -145,7 +145,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { variant: "text-md/normal", color: "text-muted", children: null };
         const intl2 = tmp(1126).intl;
         obj9.children = intl2.string(tmp(1126).t.S0g2K9);
-        const tmp22 = closure_10(tmp(4892).Text, obj9);
+        const tmp22 = closure_10(tmp(5086).Text, obj9);
         cResult[9] = tmp22;
         let tmp20 = tmp22;
       } else {
@@ -168,7 +168,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[12] !== tmp6) {
         const obj11 = { text: tmp24, onPress: tmp6, size: "sm" };
-        const tmp28 = closure_10(tmp(5601).Button, obj11);
+        const tmp28 = closure_10(tmp(5375).Button, obj11);
         cResult[12] = tmp6;
         cResult[13] = tmp28;
         let tmp26 = tmp28;
@@ -221,14 +221,14 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [tmp9, tmp33];
       obj17.children = items2;
       obj16.children = closure_11(View, obj17);
-      const tmp39 = closure_10(navigation(6002).Card, obj16);
+      const tmp39 = closure_10(navigation(6186).Card, obj16);
       cResult[17] = tmp33;
       cResult[18] = tmp9;
       cResult[19] = tmp39;
       tmp38 = tmp39;
-      const obj2 = navigation(1490);
+      const obj2 = navigation(1502);
     }
-  : () => {
+  : function PasswordlessUpsell() {
       const tmp = closure_13();
       _require = require("useNavigation").useNavigation();
       const obj2 = { style: tmp.upsellPasswordless, children: null };
@@ -237,7 +237,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: { width: 70, height: 70 }, children: null };
       const obj6 = { source: null, resizeMode: "contain", style: null };
       const obj = require("useNavigation");
-      obj6.source = require("../../../../../_runtime/metro/14509__.js");
+      obj6.source = require("../../../../../_runtime/metro/14769__.js");
       obj6.style = tmp.upsellImagePasswordless;
       obj5.children = closure_10(FastImageDefault, obj6);
       const items = [closure_10(View, obj5)];
@@ -271,7 +271,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AccountTwoFALabel() {
       const cResult = require("c").c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [WebAuthnStore];
@@ -324,7 +324,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { title: null };
         const intl = tmp(1126).intl;
         obj2.title = intl.string(tmp(1126).t.fuTmEJ);
-        const tmp20 = closure_10(tmp(6081).TableRowGroupTitle, obj2);
+        const tmp20 = closure_10(tmp(6267).TableRowGroupTitle, obj2);
         cResult[7] = tmp20;
         let tmp18 = tmp20;
       } else {
@@ -343,7 +343,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp21;
     }
-  : () => {
+  : function AccountTwoFALabel() {
       let items = [WebAuthnStore];
       const tmp3 = _slicedToArray(
         first(504).useStateFromStoresObject(items, () => {
@@ -355,7 +355,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       first = tmp3[0];
       closure_1 = tmp5;
       let obj = first(504);
-      const isUserVerified = first(14510).useIsUserVerified();
+      const isUserVerified = first(14770).useIsUserVerified();
       const items1 = [tmp3[1], first, isUserVerified];
       const memo = noop.useMemo(() => {
         let tmp = MFAUtils.hasWebAuthn && isUserVerified && closure_1;
@@ -379,13 +379,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { title: null };
       const intl = tmp(1126).intl;
       obj4.title = intl.string(first(1126).t.fuTmEJ);
-      items3[1] = closure_10(first(6081).TableRowGroupTitle, obj4);
+      items3[1] = closure_10(first(6267).TableRowGroupTitle, obj4);
       obj3.children = items3;
       return closure_11(closure_12, obj3);
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AccountStatusLabel() {
       const cResult = c.c(4);
       const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
       if (cResult[0] !== isTinyBroncoSettingsEnabled) {
@@ -397,7 +397,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         if (cResult[2] !== cResult[1]) {
           const obj3 = { title: tmp5 };
-          const tmp10 = v65535(TableRowGroup.TableRowGroupTitle, obj3);
+          const tmp10 = collapsed(TableRowGroup.TableRowGroupTitle, obj3);
           cResult[2] = tmp5;
           cResult[3] = tmp10;
           let tmp8 = tmp10;
@@ -407,17 +407,17 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp8;
       }
     }
-  : () => {
+  : function AccountStatusLabel() {
       const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
       const intl = util.intl;
       const t = util.t;
-      return v65535(TableRowGroup.TableRowGroupTitle, {
+      return collapsed(TableRowGroup.TableRowGroupTitle, {
         title: intl.string(isTinyBroncoSettingsEnabled ? t.GI2mea : t["16r9jm"]),
       });
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AccountSecurityPage() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { sections: getAccountSettings(), ListHeaderComponent: SettingsAccountHeaderDefault };
@@ -430,7 +430,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { node: first };
-        const tmp11 = v65535(SettingLayoutDefault, obj3);
+        const tmp11 = collapsed(SettingLayoutDefault, obj3);
         cResult[1] = tmp11;
         let tmp8 = tmp11;
       } else {
@@ -438,12 +438,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function AccountSecurityPage() {
       const node = noop.useMemo(() => {
         const obj = require("SettingBuilders");
         return obj.createList({ sections: getAccountSettings(), ListHeaderComponent: SettingsAccountHeaderDefault });
       }, []);
-      return v65535(SettingLayoutDefault, { node });
+      return collapsed(SettingLayoutDefault, { node });
     };
 ReactCompilerGating = fn(558);
 let obj3 = {
@@ -457,7 +457,7 @@ const result = size.fileFinishedImporting("modules/user_settings/account/native/
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function AccountSettingsScreen() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function t() {
@@ -470,7 +470,7 @@ export default noop.memo(
         }
         useMountEffectDefault(first);
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp8 = v65535(closure_18, {});
+          const tmp8 = collapsed(closure_18, {});
           cResult[1] = tmp8;
           let tmp5 = tmp8;
         } else {
@@ -478,10 +478,10 @@ export default noop.memo(
         }
         return tmp5;
       }
-    : () => {
+    : function AccountSettingsScreen() {
         useMountEffectDefault(() => {
           const safetyHubData = SafetyHubActionCreatorsAll.getSafetyHubData();
         });
-        return v65535(closure_18, {});
+        return collapsed(closure_18, {});
       },
 );

@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     display: "flex",
@@ -40,7 +40,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityGiftRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (gifterUserId) => {
+  ? function FamilyCenterActivityGiftRow(gifterUserId) {
       const cResult = c.c(26);
       ({ skuId, subscriptionPlanId, price, claimed, offeredAt, claimedAt } = gifterUserId);
       const tmp4 = closure_6();
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = purchaseDisplayInfo;
       const tmpResult2 = FamilyCenterActivityPurchaseRowUtils;
     }
-  : (arg0) => {
+  : function FamilyCenterActivityGiftRow(arg0) {
       ({ skuId, subscriptionPlanId } = arg0);
       ({ price, gifterUserId, claimed, offeredAt, claimedAt } = arg0);
       const tmp = closure_6();

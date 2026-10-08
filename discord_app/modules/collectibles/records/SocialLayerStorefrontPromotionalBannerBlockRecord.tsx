@@ -8,12 +8,15 @@ const prototype = function SocialLayerStorefrontPromotionalBannerBlockRecord(arg
   ({
     application_id: tmp.applicationId,
     header_text: tmp.headerText,
+    subheader_text: tmp.subheaderText,
     gradient_colors: tmp.gradientColors,
     gradient_angle: tmp.gradientAngle,
     sku_ids: tmp.skuIds,
     end_time: tmp.endTime,
     cta_type: tmp.ctaType,
     logo_url: tmp.logoUrl,
+    terms_url: tmp.termsUrl,
+    background_image_url: tmp.backgroundImageUrl,
   } = arg0);
   return obj;
 }.prototype;
@@ -24,12 +27,15 @@ prototype["fromServer"] = function fromServer(arg0) {
     ({
       application_id: tmp3.applicationId,
       header_text: tmp3.headerText,
+      subheader_text: tmp3.subheaderText,
       gradient_colors: tmp3.gradientColors,
       gradient_angle: tmp3.gradientAngle,
       sku_ids: tmp3.skuIds,
       end_time: tmp3.endTime,
       cta_type: tmp3.ctaType,
       logo_url: tmp3.logoUrl,
+      terms_url: tmp3.termsUrl,
+      background_image_url: tmp3.backgroundImageUrl,
     } = arg0);
     return obj;
   } else {

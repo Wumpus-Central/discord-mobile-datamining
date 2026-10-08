@@ -24,10 +24,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safe_area/useStableSafeAreaInsets.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useStableSafeAreaInsets() {
       const cResult = appEntryKey(576).c(5);
       let obj = appEntryKey(576);
-      appEntryKey = appEntryKey(1487).useAppEntryKey();
+      appEntryKey = appEntryKey(1499).useAppEntryKey();
       if (cResult[0] !== appEntryKey) {
         const fn = function n() {
           let DEFAULT_APP_ENTRY_KEY = appEntryKey;
@@ -48,24 +48,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp3 = cResult[1];
       }
-      const obj2 = appEntryKey(1487);
+      const obj2 = appEntryKey(1499);
       [tmp5, importDefault] = noop.useState(tmp3);
       if (cResult[2] !== appEntryKey) {
         const fn2 = function u() {
           return subscribeToSafeAreaInsetsDefault(() => {
             let DEFAULT_APP_ENTRY_KEY = closure_1_0;
             if (closure_1_0 === undefined) {
-              DEFAULT_APP_ENTRY_KEY = appEntryKey(1487).DEFAULT_APP_ENTRY_KEY;
+              DEFAULT_APP_ENTRY_KEY = appEntryKey(1499).DEFAULT_APP_ENTRY_KEY;
             }
             if (obj.isAndroid()) {
               let stableSafeAreaInsets =
                 NativeSafeAreaInsetsModuleDefault.getStableSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
             } else {
-              stableSafeAreaInsets = appEntryKey(1618).getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
-              const tmp4Result = appEntryKey(1618);
+              stableSafeAreaInsets = appEntryKey(1630).getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
+              const tmp4Result = appEntryKey(1630);
             }
             closure_1_1(stableSafeAreaInsets);
-            obj = appEntryKey(1369);
+            obj = appEntryKey(1381);
           }, appEntryKey);
         };
         const items = [appEntryKey];
@@ -81,8 +81,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp6, tmp7);
       return tmp5;
     }
-  : () => {
-      appEntryKey = appEntryKey(1487).useAppEntryKey();
+  : function useStableSafeAreaInsets() {
+      appEntryKey = appEntryKey(1499).useAppEntryKey();
       const tmp2 = _slicedToArray(
         noop.useState(() => {
           let DEFAULT_APP_ENTRY_KEY = appEntryKey;
@@ -106,17 +106,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           subscribeToSafeAreaInsetsDefault(() => {
             let DEFAULT_APP_ENTRY_KEY = closure_1_0;
             if (closure_1_0 === undefined) {
-              DEFAULT_APP_ENTRY_KEY = appEntryKey(1487).DEFAULT_APP_ENTRY_KEY;
+              DEFAULT_APP_ENTRY_KEY = appEntryKey(1499).DEFAULT_APP_ENTRY_KEY;
             }
             if (obj.isAndroid()) {
-              let stableSafeAreaInsets = closure_1(1630).getStableSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
-              const obj3 = closure_1(1630);
+              let stableSafeAreaInsets = closure_1(1642).getStableSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
+              const obj3 = closure_1(1642);
             } else {
-              stableSafeAreaInsets = appEntryKey(1618).getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
-              const tmp4Result = appEntryKey(1618);
+              stableSafeAreaInsets = appEntryKey(1630).getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
+              const tmp4Result = appEntryKey(1630);
             }
             closure_1_1(stableSafeAreaInsets);
-            obj = appEntryKey(1369);
+            obj = appEntryKey(1381);
           }, appEntryKey),
         items,
       );

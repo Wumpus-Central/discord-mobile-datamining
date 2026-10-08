@@ -1,11 +1,11 @@
 // discord_app/modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import transitionToChannel from "../../routing/transitionToChannel.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(12493).NOTIFICATION_PREVIEW_LINE_CLAMP;
+let closure_4 = fn(12589).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx");
@@ -40,7 +40,7 @@ export default function ForumThreadCreatedNotification(notification) {
   const callback1 = guild.useCallback(
     () =>
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(12510, dependencyMap.paths),
+        asyncRequireImpl(12606, dependencyMap.paths),
         { channelId: notification.parentChannel.id },
         "in-app-notification-settings-modal",
       ),

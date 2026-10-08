@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useIsInRestrictedHours.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsInRestrictedHours() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore, FamilyCenterStore];
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsInRestrictedHours() {
       const items = [UserStore, FamilyCenterStore];
       return initialize.useStateFromStores(items, () => currentUserInRestrictedHours.isCurrentUserInRestrictedHours());
     };

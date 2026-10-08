@@ -221,12 +221,12 @@ function buildReactionNotification(arg0) {
   }
 }
 const ScrollView = fn(17).ScrollView;
-const createChannelRecord = fn(2055).createChannelRecord;
+const createChannelRecord = fn(2067).createChannelRecord;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_12, InAppNotificationTypes } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -839,7 +839,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DevToolsInAppNotificationTestingScreen() {
       const cResult = first(576).c(12);
       const tmp4 = closure_16();
       let obj = first(576);
@@ -871,7 +871,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { size: nativeDefault.space.PX_16 };
-          const tmp14 = closure_14(tmp(1188).Spacer, obj3);
+          const tmp14 = closure_14(tmp(1200).Spacer, obj3);
           const mapped = closure_24.map((title) => {
             const obj = { children: null };
             const obj2 = {
@@ -884,15 +884,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj2.children = options.map((label) => {
               closure_0 = label;
               return closure_1_14(
-                first(6000).TableRow,
+                first(6184).TableRow,
                 {
                   label: label.label,
                   subLabel: label.subLabel,
-                  icon: closure_1_14(first(15429).BeakerIcon, {}),
+                  icon: closure_1_14(first(15691).BeakerIcon, {}),
                   onPress() {
                     return first(closure_0);
                   },
-                  trailing: closure_1_14(first(6007).TableRowArrow, {}),
+                  trailing: closure_1_14(first(6193).TableRowArrow, {}),
                 },
                 label.label,
               );
@@ -920,21 +920,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             children: items3.map((label) => {
               closure_0 = label;
               return closure_1_14(
-                first(6000).TableRow,
+                first(6184).TableRow,
                 {
                   label: label.label,
                   subLabel: label.subLabel,
-                  icon: closure_1_14(first(15429).BeakerIcon, {}),
+                  icon: closure_1_14(first(15691).BeakerIcon, {}),
                   onPress() {
                     return first(closure_0);
                   },
-                  trailing: closure_1_14(first(6007).TableRowArrow, {}),
+                  trailing: closure_1_14(first(6193).TableRowArrow, {}),
                 },
                 label.label,
               );
             }),
           };
-          const tmp20 = closure_14(tmp(6081).TableRowGroup, obj4);
+          const tmp20 = closure_14(tmp(6267).TableRowGroup, obj4);
           cResult[8] = tmp20;
           let tmp17 = tmp20;
         } else {
@@ -962,7 +962,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = items1;
       const tmp6 = useSafeAreaInsetsDefault();
     }
-  : () => {
+  : function DevToolsInAppNotificationTestingScreen() {
       const tmp = closure_16();
       _require = noop.useCallback((build) => {
         const buildResult = build.build();
@@ -988,15 +988,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj2.children = options.map((label) => {
             closure_0 = label;
             return closure_1_14(
-              closure_1_0(6000).TableRow,
+              closure_1_0(6184).TableRow,
               {
                 label: label.label,
                 subLabel: label.subLabel,
-                icon: closure_1_14(closure_1_0(15429).BeakerIcon, {}),
+                icon: closure_1_14(closure_1_0(15691).BeakerIcon, {}),
                 onPress() {
                   return closure_2_0(closure_0);
                 },
-                trailing: closure_1_14(closure_1_0(6007).TableRowArrow, {}),
+                trailing: closure_1_14(closure_1_0(6193).TableRowArrow, {}),
               },
               label.label,
             );
@@ -1012,15 +1012,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         hasIcons: true,
         children: items3.map((label) =>
           closure_1_14(
-            label(6000).TableRow,
+            label(6184).TableRow,
             {
               label: label.label,
               subLabel: label.subLabel,
-              icon: closure_1_14(label(15429).BeakerIcon, {}),
+              icon: closure_1_14(label(15691).BeakerIcon, {}),
               onPress() {
                 return label(label);
               },
-              trailing: closure_1_14(label(6007).TableRowArrow, {}),
+              trailing: closure_1_14(label(6193).TableRowArrow, {}),
             },
             label.label,
           ),

@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsDesignSystemText() {
       const cResult = c.c(5);
       const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
       if (cResult[0] !== token) {
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp10;
     }
-  : () => {
+  : function UserSettingsDesignSystemText() {
       let obj2 = { children: null };
       const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
       const obj3 = { spacing: nativeDefault.space.PX_24, style: { paddingHorizontal: token }, children: null };

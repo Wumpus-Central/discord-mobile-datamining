@@ -8,7 +8,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
 
 export const useTrackNavigatorScreenImpression = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, params) => {
+  ? function useTrackNavigatorScreenImpression(arg0, params) {
       const cResult = c.c(6);
       ({ impressionName, impressionProperties } = arg0);
       if (cResult[0] === impressionProperties) {
@@ -40,7 +40,7 @@ export const useTrackNavigatorScreenImpression = ReactCompilerGating.isReactComp
       cResult[2] = impressionPropertiesResult;
       tmp4 = impressionPropertiesResult;
     }
-  : (impressionProperties, params) => {
+  : function useTrackNavigatorScreenImpression(impressionProperties, params) {
       impressionProperties = impressionProperties.impressionProperties;
       let impressionPropertiesResult = impressionProperties;
       if (typeof impressionProperties === "function") {

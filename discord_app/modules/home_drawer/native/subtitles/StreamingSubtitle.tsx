@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/StreamingSubtitle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function StreamingSubtitle(arg0) {
       const cResult = c.c(5);
       ({ guildId, streamingUser } = arg0);
       if (cResult[0] === guildId) {
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = formatResult;
       tmp4 = formatResult;
     }
-  : (arg0) => {
+  : function StreamingSubtitle(arg0) {
       ({ guildId, streamingUser } = arg0);
       const obj = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null };
       const intl = util.intl;

@@ -72,8 +72,10 @@ export default {
                   }
                   obj5.scope = scope;
                   obj5.application_id = importDefault.application.id;
-                  obj5.socket_scope = importDefault.authorization.scopes.toString();
-                  tmp3(tmp54[5]).track(constants.RPC_SUBSCRIPTION_REQUESTED, obj5);
+                  const _Array = Array;
+                  const tmp83Result = tmp3(tmp54[5]);
+                  obj5.socket_scope = Array.from(importDefault.authorization.scopes).toString();
+                  tmp83Result.track(constants.RPC_SUBSCRIPTION_REQUESTED, obj5);
                   closure_128_1 = (function addPendingSubscription(importDefault, evt, args) {
                     const obj = { evt, args, cancelled: false };
                     value = closure_1_6.get(importDefault);
@@ -92,7 +94,7 @@ export default {
                     const obj7 = { value: events.getJoi(), done: false };
                     return obj7;
                   }
-                  const tmp83Result = tmp3(tmp54[5]);
+                  const str2 = Array.from(importDefault.authorization.scopes);
                 } else {
                   const obj8 = { errorCode: constants2.INVALID_PERMISSIONS };
                   const tmp22 = new tmp3(tmp54[3])(obj8, "Not authenticated or invalid scope");

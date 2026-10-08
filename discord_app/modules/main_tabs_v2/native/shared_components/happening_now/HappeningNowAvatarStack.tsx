@@ -13,11 +13,11 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(12871).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(13020).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let SPRING_CONFIG = { damping: 17, stiffness: 320, mass: 0.5 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles((arg0, marginLeft) => {
   const obj = {
     avatarStack: { flexDirection: "row" },
@@ -116,7 +116,7 @@ let result = size.fileFinishedImporting(
 );
 
 export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function HappeningNowAvatarStack(arg0) {
       const cResult = guildId(576).c(64);
       ({ users, guildId } = arg0);
       ({ isTyping, userLimit, userCount, isStage } = arg0);
@@ -127,7 +127,7 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
         num = userLimit;
       }
       if (undefined === avatarSize) {
-        avatarSize = tmp(1188).AvatarSizes.XSMALL_20;
+        avatarSize = tmp(1200).AvatarSizes.XSMALL_20;
       }
       let num2 = 2;
       if (undefined !== avatarBorderWidth) {
@@ -157,7 +157,7 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
       if (undefined !== isTyping && isTyping) {
         num6 = 1;
       }
-      const sharedValue = guildId(4618).useSharedValue(num6);
+      const sharedValue = guildId(4810).useSharedValue(num6);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [LocaleStore];
         class M {
@@ -173,7 +173,7 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
         tmp10 = cResult[2];
         tmp11 = cResult[3];
       }
-      const tmpResult = guildId(4618);
+      const tmpResult = guildId(4810);
       const stateFromStores = guildId(573).useStateFromStores(tmp10, tmp11);
       const tmpResult3 = guildId(573);
       class J {
@@ -186,8 +186,8 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
           return obj;
         }
       }
-      const tmpResult4 = guildId(4618);
-      J.__closure = { interpolate: guildId(4618).interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
+      const tmpResult4 = guildId(4810);
+      J.__closure = { interpolate: guildId(4810).interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
       J.__workletHash = 14140918847743;
       J.__initData = __initData;
       const animatedStyle = tmpResult4.useAnimatedStyle(J);
@@ -281,7 +281,7 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
       tmp16 = fn2;
       tmp15 = items1;
     }
-  : (userLimit) => {
+  : function HappeningNowAvatarStack(userLimit) {
       ({ users, guildId: require, isTyping } = userLimit);
       if (isTyping === undefined) {
         isTyping = false;
@@ -407,7 +407,7 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
         typingValue: sharedValue,
         ELLIPSIS_WIDTH: 28,
       };
-      class H {
+      class L {
         constructor() {
           num = 0;
           if (!isStage) {
@@ -439,7 +439,7 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
         }
       }
       const tmp6Result6 = require("ReanimatedRexport");
-      H.__closure = {
+      L.__closure = {
         isStage,
         extraUsers: diff,
         avatars: mapped,
@@ -449,9 +449,9 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
         withSpring: require("spring").withSpring,
         SPRING_CONFIG,
       };
-      H.__workletHash = 9687356498740;
-      H.__initData = __initData3;
-      const animatedStyle1 = tmp6Result6.useAnimatedStyle(H);
+      L.__workletHash = 9687356498740;
+      L.__initData = __initData3;
+      const animatedStyle1 = tmp6Result6.useAnimatedStyle(L);
       const obj5 = { style: null, children: null };
       if (isStage) {
         const items2 = [tmp3.stageAvatarStack, style];

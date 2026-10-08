@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/SelectApplicationActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SelectApplicationActionSheet(arg0) {
       const cResult = onSelectApplication(576).c(11);
       ({ applications, selectedApplicationId, onSelectApplication } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -29,19 +29,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== onSelectApplication) {
-        const fn = function h(dependencyMap) {
+        function handleChange(dependencyMap) {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           onSelectApplication(dependencyMap);
-        };
+        }
         cResult[1] = onSelectApplication;
-        cResult[2] = fn;
-        let tmp6 = fn;
+        cResult[2] = handleChange;
+        let tmp6 = handleChange;
       } else {
         tmp6 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { title: first };
-        const tmp9 = jsx(onSelectApplication(6651).BottomSheetTitleHeader, { title: first });
+        const tmp9 = jsx(onSelectApplication(6828).BottomSheetTitleHeader, { title: first });
         cResult[3] = tmp9;
         let tmp7 = tmp9;
       } else {
@@ -50,14 +50,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] !== applications) {
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn2 = function v(application) {
+          const fn = function f(application) {
             const obj = {
               value: application.id,
               label: application.name,
               icon: jsx(TableRowApplicationIconDefault, { application }),
             };
             return jsx(
-              onSelectApplication(6078).TableRadioRow,
+              onSelectApplication(6264).TableRadioRow,
               {
                 value: application.id,
                 label: application.name,
@@ -66,8 +66,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               application.id,
             );
           };
-          cResult[6] = fn2;
-          let tmp11 = fn2;
+          cResult[6] = fn;
+          let tmp11 = fn;
         } else {
           tmp11 = cResult[6];
         }
@@ -91,14 +91,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onChange: tmp6,
           children: cResult[5],
         };
-        obj3.children = jsx(onSelectApplication(6079).TableRadioGroup, {
+        obj3.children = jsx(onSelectApplication(6265).TableRadioGroup, {
           hasIcons: true,
           accessibilityLabel: first,
           defaultValue: selectedApplicationId,
           onChange: tmp6,
           children: cResult[5],
         });
-        const tmp16 = jsx(onSelectApplication(6708).ActionSheet, { header: tmp7, children: null });
+        const tmp16 = jsx(onSelectApplication(6885).ActionSheet, { header: tmp7, children: null });
         cResult[7] = tmp6;
         cResult[8] = selectedApplicationId;
         cResult[9] = cResult[5];
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = onSelectApplication(576);
     }
-  : (arg0) => {
+  : function SelectApplicationActionSheet(arg0) {
       ({ applications, selectedApplicationId, onSelectApplication: require } = arg0);
       const intl = util.intl;
       const stringResult = intl.string(util.t.FKSiso);
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         hasIcons: true,
         accessibilityLabel: stringResult,
         defaultValue: selectedApplicationId,
-        onChange(arg0) {
+        onChange: function handleChange(arg0) {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           require(arg0);
         },
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         hasIcons: true,
         accessibilityLabel: stringResult,
         defaultValue: selectedApplicationId,
-        onChange(arg0) {
+        onChange: function handleChange(arg0) {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           require(arg0);
         },

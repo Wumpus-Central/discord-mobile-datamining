@@ -78,7 +78,7 @@ export { BannerMode };
 export const BANNER_CONFIG_MOBILE = obj2;
 export { getBannerMode };
 export const useWishlistBannerConfig = ReactCompilerGating.isReactCompilerEnabled()
-  ? (wishlistInDmLength) => {
+  ? function useWishlistBannerConfig(wishlistInDmLength) {
       const obj = c;
       const cResult = obj.c(9);
       ({ totalUnownedWishlistItemCount, displayItems, recipientName } = wishlistInDmLength);
@@ -161,7 +161,7 @@ export const useWishlistBannerConfig = ReactCompilerGating.isReactCompilerEnable
         return tmp9;
       }
     }
-  : (totalUnownedWishlistItemCount) => {
+  : function useWishlistBannerConfig(totalUnownedWishlistItemCount) {
       totalUnownedWishlistItemCount = totalUnownedWishlistItemCount.totalUnownedWishlistItemCount;
       const wishlistInDmLength = totalUnownedWishlistItemCount.wishlistInDmLength;
       const displayItems = totalUnownedWishlistItemCount.displayItems;

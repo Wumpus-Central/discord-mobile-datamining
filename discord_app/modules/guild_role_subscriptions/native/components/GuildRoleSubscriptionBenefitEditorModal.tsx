@@ -15,12 +15,10 @@ import UserStore from "../../../../stores/UserStore.tsx";
 import GuildRoleSubscriptionBenefitEditorModalStateStore from "GuildRoleSubscriptionBenefitEditorModalStateStore.tsx";
 import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
-const require = globalThis.__r;
-
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildRoleSubscriptionsConstants = fn(15038);
+const GuildRoleSubscriptionsConstants = fn(15300);
 ({
   GuildRoleSubscriptionBenefitTypes: c10,
   MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: closure_11,
@@ -28,8 +26,8 @@ const GuildRoleSubscriptionsConstants = fn(15038);
 } = GuildRoleSubscriptionsConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
-let obj = {
+const createStyles = fn(5090);
+let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     display: "flex",
@@ -43,14 +41,14 @@ let obj = {
   deleteLabel: null,
 };
 let obj4 = {};
-const merged = Object.assign(TextStyles(fn(1085).Fonts.PRIMARY_SEMIBOLD, nativeDefault.unsafe_rawColors.RED_400, 16));
+let merged = Object.assign(TextStyles(fn(1085).Fonts.PRIMARY_SEMIBOLD, nativeDefault.unsafe_rawColors.RED_400, 16));
 obj4.marginStart = 8;
 obj4.lineHeight = 20;
-obj.deleteLabel = obj4;
-let closure_15 = createStyles.createStyles(obj);
+obj2.deleteLabel = obj4;
+let closure_15 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onDelete) => {
+  ? function DeleteButton(onDelete) {
       const cResult = c.c(13);
       onDelete = onDelete.onDelete;
       const tmp4 = closure_15();
@@ -113,7 +111,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp7 = items1;
     }
-  : (onDelete) => {
+  : function DeleteButton(onDelete) {
       const tmp = closure_15();
       const obj = { style: null, accessibilityRole: "button", onPress: onDelete.onDelete, children: null };
       const items = [FormStylesDefault().textInput, tmp.deleteButton];
@@ -133,20 +131,20 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj.children = items1;
       return state(Pressables.PressableOpacity, obj);
     };
-let obj3 = {
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  height: "100%",
-};
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModal.tsx",
 );
 
-export default noop.forwardRef((benefitType) => {
-  _require = benefitType;
+export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
+  const merged = Object.assign(arg0, Object.assign({ ref: 0 }));
+  value = undefined;
+  first1 = undefined;
+  _slicedToArray = undefined;
+  first2 = undefined;
+  closure_6 = undefined;
+  first4 = undefined;
+  GuildRoleSubscriptionBenefitEditorModalStateStore = undefined;
   constants = async function _handleSave() {
     if (c4 === 2) {
       c4 = 3;
@@ -181,11 +179,11 @@ export default noop.forwardRef((benefitType) => {
                 tmp18 = first3;
               }
               obj4.description = tmp18;
-              obj4.ref_type = benefitType.benefitType;
+              obj4.ref_type = merged.benefitType;
               obj4.ref_id = ref_id;
               c1 = 2;
               c4 = 1;
-              const obj5 = { value: benefitType.onSave(obj4), done: false };
+              const obj5 = { value: merged.onSave(obj4), done: false };
               return obj5;
             }
           }
@@ -235,14 +233,14 @@ export default noop.forwardRef((benefitType) => {
     }
     return value;
   };
-  const tmp = closure_15();
-  const tmp4 = value(13728)();
+  const tmp2 = closure_15();
+  const tmp5 = value(13950)();
   [value] = GuildRoleSubscriptionBenefitEditorModalStateStore.useNameState();
-  dependencyMap = tmp6;
+  dependencyMap = tmp7;
   [first1, _slicedToArray] = GuildRoleSubscriptionBenefitEditorModalStateStore.useEmojiIdState();
   [first2, closure_6] = GuildRoleSubscriptionBenefitEditorModalStateStore.useEmojiNameState();
-  const tmp9 = _slicedToArray(GuildRoleSubscriptionBenefitEditorModalStateStore.useDescriptionState(), 2);
-  const first3 = tmp9[0];
+  const tmp10 = _slicedToArray(GuildRoleSubscriptionBenefitEditorModalStateStore.useDescriptionState(), 2);
+  const first3 = tmp10[0];
   [first4, GuildRoleSubscriptionBenefitEditorModalStateStore] =
     GuildRoleSubscriptionBenefitEditorModalStateStore.useRefIdState();
   let num;
@@ -252,8 +250,8 @@ export default noop.forwardRef((benefitType) => {
   if (num == null) {
     num = 0;
   }
-  let tmp13 = num > 0;
-  if (!tmp13) {
+  let tmp14 = num > 0;
+  if (!tmp14) {
     let num2;
     if (first2 != null) {
       num2 = first2.length;
@@ -261,46 +259,46 @@ export default noop.forwardRef((benefitType) => {
     if (num2 == null) {
       num2 = 0;
     }
-    tmp13 = num2 > 0;
+    tmp14 = num2 > 0;
   }
-  if (!tmp13) {
-    if (benefitType.benefitType === constants.CHANNEL) {
-      const intl2 = require("util").intl;
-      let stringResult = intl2.string(require("util").t.Odqwp9);
-      let tmp20 = _require;
+  if (!tmp14) {
+    if (merged.benefitType === constants.CHANNEL) {
+      const intl2 = merged(1126).intl;
+      let stringResult = intl2.string(merged(1126).t.Odqwp9);
+      let tmp21 = merged;
     } else {
-      const intl = require("util").intl;
-      stringResult = intl.string(require("util").t["0rVUnI"]);
-      tmp20 = _require;
+      const intl = merged(1126).intl;
+      stringResult = intl.string(merged(1126).t["0rVUnI"]);
+      tmp21 = merged;
     }
-    if (benefitType.benefitType === constants.CHANNEL) {
-      const intl4 = tmp20(1126).intl;
-      let stringResult1 = intl4.string(tmp20(1126).t.GK18KJ);
+    if (merged.benefitType === constants.CHANNEL) {
+      const intl4 = tmp21(1126).intl;
+      let stringResult1 = intl4.string(tmp21(1126).t.GK18KJ);
     } else {
-      const intl3 = tmp20(1126).intl;
-      stringResult1 = intl3.string(tmp20(1126).t["kV54/Y"]);
+      const intl3 = tmp21(1126).intl;
+      stringResult1 = intl3.string(tmp21(1126).t["kV54/Y"]);
     }
-    if (benefitType.benefitType === constants.CHANNEL) {
-      const intl6 = tmp20(1126).intl;
-      let stringResult2 = intl6.string(tmp20(1126).t["DDUpp+"]);
+    if (merged.benefitType === constants.CHANNEL) {
+      const intl6 = tmp21(1126).intl;
+      let stringResult2 = intl6.string(tmp21(1126).t["DDUpp+"]);
     } else {
-      const intl5 = tmp20(1126).intl;
-      stringResult2 = intl5.string(tmp20(1126).t.NNqncc);
+      const intl5 = tmp21(1126).intl;
+      stringResult2 = intl5.string(tmp21(1126).t.NNqncc);
     }
-    if (benefitType.benefitType === constants.CHANNEL) {
+    if (merged.benefitType === constants.CHANNEL) {
       let obj = {
         channelId: first4,
-        guildId: benefitType.guildId,
+        guildId: merged.guildId,
         onChange: function handleChannelSelected(id) {
           closure_9(id.id);
           closure_2(useChannelName.computeChannelName(id, UserStore, RelationshipStore));
         },
       };
-      let tmp25 = closure_13(tmp2(17995), obj);
-      let tmp26 = closure_13;
+      let tmp26 = closure_13(tmp3(18282), obj);
+      let tmp27 = closure_13;
     } else {
       let obj2 = {
-        style: tmp4.textInput,
+        style: tmp5.textInput,
         showTopContainer: false,
         multiline: false,
         maxLength: maxLength2,
@@ -310,18 +308,18 @@ export default noop.forwardRef((benefitType) => {
         autoFocus: true,
         clearButtonVisibility: null,
       };
-      const intl9 = tmp20(1126).intl;
-      obj2.placeholder = intl9.string(tmp20(1126).t["kV54/Y"]);
-      obj2.onChange = tmp6;
-      obj2.clearButtonVisibility = tmp20(1188).ClearButtonVisibility.WITH_CONTENT;
-      tmp25 = closure_13(tmp20(8924).FormInput, obj2);
-      tmp26 = closure_13;
+      const intl9 = tmp21(1126).intl;
+      obj2.placeholder = intl9.string(tmp21(1126).t["kV54/Y"]);
+      obj2.onChange = tmp7;
+      obj2.clearButtonVisibility = tmp21(1200).ClearButtonVisibility.WITH_CONTENT;
+      tmp26 = closure_13(tmp21(8555).FormInput, obj2);
+      tmp27 = closure_13;
     }
-    let obj3 = { style: tmp.container, children: null };
+    let obj3 = { style: tmp2.container, children: null };
     let obj4 = {
       title: stringResult,
-      onClose: benefitType.onClose,
-      canSave: tmp13,
+      onClose: merged.onClose,
+      canSave: tmp14,
       onSave: function handleSave() {
         const self = this;
         const apply = closure_10.apply;
@@ -332,9 +330,9 @@ export default noop.forwardRef((benefitType) => {
         }
         return applyArgumentsResult;
       },
-      listingId: benefitType.listingId,
+      listingId: merged.listingId,
     };
-    const items = [tmp26(tmp2(17997), obj4)];
+    const items = [tmp27(tmp3(18284), obj4)];
     let obj5 = {
       keyboardShouldPersistTaps: "handled",
       showsVerticalScrollIndicator: false,
@@ -342,45 +340,45 @@ export default noop.forwardRef((benefitType) => {
       contentContainerStyle: null,
       children: null,
     };
-    const items1 = [tmp.scrollContainer];
-    const obj6 = { paddingBottom: value(1618)().bottom + 32 + 16 };
+    const items1 = [tmp2.scrollContainer];
+    const obj6 = { paddingBottom: value(1630)().bottom + 32 + 16 };
     items1[1] = obj6;
     obj5.contentContainerStyle = items1;
-    const obj7 = { style: tmp4.header, children: stringResult1 };
-    const items2 = [tmp26(tmp2(9490), obj7), tmp25, , , , ,];
-    const obj8 = { style: tmp4.header, children: null };
-    const intl7 = tmp20(1126).intl;
-    obj8.children = intl7.string(tmp20(1126).t.sMOuuS);
-    items2[2] = tmp26(tmp2(9490), obj8);
+    const obj7 = { style: tmp5.header, children: stringResult1 };
+    const items2 = [tmp27(tmp3(8654), obj7), tmp26, , , , ,];
+    const obj8 = { style: tmp5.header, children: null };
+    const intl7 = tmp21(1126).intl;
+    obj8.children = intl7.string(tmp21(1126).t.sMOuuS);
+    items2[2] = tmp27(tmp3(8654), obj8);
     const obj9 = { emoji: null, guildId: null, onChange: null };
     const obj10 = { emojiId: first1, emojiName: first2 };
     obj9.emoji = obj10;
-    obj9.guildId = benefitType.guildId;
+    obj9.guildId = merged.guildId;
     obj9.onChange = function handleSetEmoji(emojiId) {
       closure_4(emojiId.emojiId);
       closure_6(emojiId.emojiName);
     };
-    items2[3] = tmp26(tmp2(17998), obj9);
-    const obj11 = { style: tmp4.header, children: null };
-    const tmp28 = first2;
-    const tmp29 = closure_6;
-    const tmp2Result = tmp2(9490);
-    const intl8 = tmp20(1126).intl;
-    obj11.children = intl8.string(tmp20(1126).t["74JctW"]);
-    items2[4] = tmp26(tmp2(9490), obj11);
+    items2[3] = tmp27(tmp3(18285), obj9);
+    const obj11 = { style: tmp5.header, children: null };
+    const tmp29 = first2;
+    const tmp30 = closure_6;
+    const tmp3Result = tmp3(8654);
+    const intl8 = tmp21(1126).intl;
+    obj11.children = intl8.string(tmp21(1126).t["74JctW"]);
+    items2[4] = tmp27(tmp3(8654), obj11);
     const obj12 = {
-      style: tmp4.textInput,
+      style: tmp5.textInput,
       showTopContainer: false,
       multiline: true,
       maxLength,
       numberOfLines: 3,
       value: first3,
-      onChange: tmp9[1],
+      onChange: tmp10[1],
       placeholder: stringResult2,
     };
-    items2[5] = tmp26(tmp20(8924).FormInput, obj12);
-    let tmp26Result = null;
-    if (null != benefitType.onDelete) {
+    items2[5] = tmp27(tmp21(8555).FormInput, obj12);
+    let tmp27Result = null;
+    if (null != merged.onDelete) {
       const obj13 = {
         onDelete: function handleDelete() {
           const self = this;
@@ -393,15 +391,15 @@ export default noop.forwardRef((benefitType) => {
           return applyArgumentsResult;
         },
       };
-      tmp26Result = tmp26(closure_16, obj13);
+      tmp27Result = tmp27(closure_16, obj13);
     }
-    items2[6] = tmp26Result;
+    items2[6] = tmp27Result;
     obj5.children = items2;
-    items[1] = closure_14(tmp29, obj5);
+    items[1] = closure_14(tmp30, obj5);
     obj3.children = items;
-    return closure_14(tmp28, obj3);
-  } else if (benefitType.benefitType === constants.CHANNEL) {
-    let tmp15 = null != first4;
+    return closure_14(tmp29, obj3);
+  } else if (merged.benefitType === constants.CHANNEL) {
+    let tmp16 = null != first4;
   } else {
     let num3;
     if (value != null) {
@@ -410,6 +408,6 @@ export default noop.forwardRef((benefitType) => {
     if (num3 == null) {
       num3 = 0;
     }
-    tmp15 = num3 > 0;
+    tmp16 = num3 > 0;
   }
-});
+}

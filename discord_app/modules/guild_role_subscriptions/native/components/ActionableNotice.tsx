@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({
   container: { flexDirection: "row", paddingVertical: 12, alignItems: "center" },
   message: { marginEnd: 27, flex: 3 },
@@ -19,7 +19,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/ActionableNotice.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActionableNotice(arg0) {
       const cResult = c.c(17);
       ({ style, message, ctaMessage, onClick, submitting, disabled } = arg0);
       const tmp5 = closure_5();
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = items1;
       tmp4 = undefined !== disabled && disabled;
     }
-  : (arg0) => {
+  : function ActionableNotice(arg0) {
       ({ submitting, disabled } = arg0);
       ({ style, message, ctaMessage, onClick } = arg0);
       if (disabled === undefined) {

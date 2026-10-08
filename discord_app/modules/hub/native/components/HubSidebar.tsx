@@ -17,10 +17,10 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1085).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
-    marginVertical: fn(11711).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11776).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -29,7 +29,7 @@ let obj2 = {
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (active) => {
+  ? function HubItem(active) {
       const cResult = c.c(16);
       ({ IconComponent, label, handleItemClick, unreadCount } = active);
       const tmp4 = closure_9();
@@ -106,7 +106,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp7;
       tmp6 = tmp7;
     }
-  : (arg0) => {
+  : function HubItem(arg0) {
       ({ label, unreadCount } = arg0);
       ({ IconComponent, handleItemClick, active } = arg0);
       const ChannelModes = BaseChannelItem.ChannelModes;
@@ -129,19 +129,19 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         channelInfo: null,
       };
       const tmp = closure_9();
-      obj.name = React5(tmp5(12031).BaseChannelName, { name: label, mode: DEFAULT });
-      obj.icon = React5(tmp5(12031).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+      obj.name = React5(tmp5(12104).BaseChannelName, { name: label, mode: DEFAULT });
+      obj.icon = React5(tmp5(12104).BaseChannelIcon, { mode: DEFAULT, IconComponent });
       let tmp6Result = null;
       if (null != unreadCount) {
         const obj2 = { value: unreadCount };
-        tmp6Result = React5(tmp5(1188).Badge, obj2);
+        tmp6Result = React5(tmp5(1200).Badge, obj2);
       }
       obj.channelInfo = tmp6Result;
       return React5(BaseChannelItemDefault, obj);
     };
 ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11711).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11776).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -149,7 +149,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/hub/native/components/HubSidebar.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function HubSidebar(guild) {
       const cResult = guild(stateFromStoresObject[10]).c(35);
       guild = guild.guild;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -362,7 +362,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult6 = guild(stateFromStoresObject[14]);
     }
-  : (guild) => {
+  : function HubSidebar(guild) {
       guild = guild.guild;
       const items = [GuildChannelStore];
       const items1 = [guild.id];
@@ -384,7 +384,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp2;
       });
-      guild(16176);
+      guild(16436);
       let tmp9Result = null;
       if (null != stateFromStores) {
         let row = null;
@@ -393,10 +393,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj4 = { style: row, children: null };
         const obj5 = { guild };
-        const items4 = [closure_7(stateFromStores(16177), obj5), , ,];
+        const items4 = [closure_7(stateFromStores(16437), obj5), , ,];
         const obj6 = {
           active: stateFromStores1,
-          IconComponent: tmp(15439).CompassIcon,
+          IconComponent: tmp(15701).CompassIcon,
           label: null,
           handleItemClick: null,
           unreadCount: null,
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         obj6.unreadCount = tmp7;
         items4[1] = closure_7(closure_10, obj6);
-        const obj7 = { IconComponent: tmp(10991).PlusMediumIcon, label: null, handleItemClick: null };
+        const obj7 = { IconComponent: tmp(11215).PlusMediumIcon, label: null, handleItemClick: null };
         const intl2 = tmp(1126).intl;
         obj7.label = intl2.string(tmp(1126).t.emRpdS);
         obj7.handleItemClick = function handleItemClick() {
@@ -419,7 +419,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           });
         };
         items4[2] = closure_7(closure_10, obj7);
-        const obj8 = { IconComponent: tmp(4839).UserPlusIcon, label: null, handleItemClick: null };
+        const obj8 = { IconComponent: tmp(5033).UserPlusIcon, label: null, handleItemClick: null };
         const intl3 = tmp(1126).intl;
         obj8.label = intl3.string(tmp(1126).t.MJQOuJ);
         obj8.handleItemClick = function handleItemClick() {

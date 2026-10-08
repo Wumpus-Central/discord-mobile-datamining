@@ -11,7 +11,7 @@ import TextStyles from "../../rebrand/native/TextStyles.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { header: null, text: null };
 let obj3 = {};
 const merged = Object.assign(
@@ -27,7 +27,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quarantine/native/QuarantineModeInfoAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onClose) => {
+  ? function QuarantineModeInfoAlert(onClose) {
       const cResult = c.c(10);
       onClose = onClose.onClose;
       const tmp4 = closure_5();
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp16;
       tmp15 = tmp16;
     }
-  : (onClose) => {
+  : function QuarantineModeInfoAlert(onClose) {
       const tmp = closure_5();
       const obj = { onClose: onClose.onClose, children: null };
       const obj2 = { style: tmp.header, children: null };

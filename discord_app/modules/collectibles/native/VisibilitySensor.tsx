@@ -80,15 +80,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       View = tmp7;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn3 = function x() {
+        function stopWatching() {
           if (null !== ref.current) {
             const _clearInterval = clearInterval;
             clearInterval(ref.current);
             ref.current = null;
           }
-        };
-        cResult[5] = fn3;
-        let tmp8 = fn3;
+        }
+        cResult[5] = stopWatching;
+        let tmp8 = stopWatching;
       } else {
         tmp8 = cResult[5];
       }
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp16;
         }
       }
-      class K {
+      class E {
         constructor() {
           tmp = closure_6(width, height);
           return closure_7;
@@ -132,10 +132,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp7;
       cResult[7] = height;
       cResult[8] = width;
-      cResult[9] = K;
+      cResult[9] = E;
       cResult[10] = items2;
       tmp10 = items2;
-      tmp9 = K;
+      tmp9 = E;
     }
   : (onChange) => {
       onChange = onChange.onChange;

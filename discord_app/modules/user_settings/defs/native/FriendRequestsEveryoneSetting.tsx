@@ -12,9 +12,9 @@ const Constants = fn(1085);
 fn(558);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useFriendRequestsEveryoneSettingValue() {
       const cResult = c.c(2);
       const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
       const setting = FriendSourceFlagsSetting.useSetting();
@@ -29,8 +29,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5.all;
     }
-  : () => {
-      const FriendSourceFlagsSetting = setting(2028).FriendSourceFlagsSetting;
+  : function useFriendRequestsEveryoneSettingValue() {
+      const FriendSourceFlagsSetting = setting(2040).FriendSourceFlagsSetting;
       setting = FriendSourceFlagsSetting.useSetting();
       const items = [setting];
       return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).all;
@@ -40,9 +40,9 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7966).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useFriendRequestsEveryoneSettingValue() {
         const cResult = c.c(2);
         const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
         const setting = FriendSourceFlagsSetting.useSetting();
@@ -57,8 +57,8 @@ const toggle = SettingBuilders.createToggle({
         }
         return tmp5.all;
       }
-    : () => {
-        const FriendSourceFlagsSetting = setting(2028).FriendSourceFlagsSetting;
+    : function useFriendRequestsEveryoneSettingValue() {
+        const FriendSourceFlagsSetting = setting(2040).FriendSourceFlagsSetting;
         setting = FriendSourceFlagsSetting.useSetting();
         const items = [setting];
         return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).all;
@@ -72,7 +72,9 @@ const toggle = SettingBuilders.createToggle({
     }
     FriendSourceFlagsSetting.updateSetting(tmp3);
   },
-  useIsDisabled: () => useParentalControlSettings.useIsParentallyControlled(),
+  useIsDisabled() {
+    return useParentalControlSettings.useIsParentallyControlled();
+  },
 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsEveryoneSetting.tsx");

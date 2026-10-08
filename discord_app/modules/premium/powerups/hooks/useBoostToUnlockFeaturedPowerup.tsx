@@ -7,28 +7,28 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_7 = fn(4774).GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS;
+let closure_7 = fn(4968).GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS;
 const GuildFeatures = fn(1085).GuildFeatures;
-let items = [{ skuId: fn(4777).GUILD_POWERUP_LEVEL_1_SKU_ID, threshold: 1 }, , , , , ,];
-let obj = { skuId: fn(4777).GUILD_POWERUP_LEVEL_1_SKU_ID, threshold: 1 };
-items[1] = { skuId: fn(4777).GUILD_POWERUP_LEVEL_2_SKU_ID, threshold: 2 };
-const obj2 = { skuId: fn(4777).GUILD_POWERUP_LEVEL_2_SKU_ID, threshold: 2 };
-items[2] = { skuId: fn(4777).GUILD_POWERUP_LEVEL_3_SKU_ID, threshold: 2 };
-const obj3 = { skuId: fn(4777).GUILD_POWERUP_LEVEL_3_SKU_ID, threshold: 2 };
-items[3] = { skuId: fn(4777).GUILD_POWERUP_TAG_SKU_ID, threshold: 1 };
-const obj4 = { skuId: fn(4777).GUILD_POWERUP_TAG_SKU_ID, threshold: 1 };
-items[4] = { skuId: fn(4777).GUILD_POWERUP_ROLE_COLOR_SKU_ID, threshold: 1 };
-const obj5 = { skuId: fn(4777).GUILD_POWERUP_ROLE_COLOR_SKU_ID, threshold: 1 };
-items[5] = { skuId: fn(4777).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, threshold: 1 };
-const obj6 = { skuId: fn(4777).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, threshold: 1 };
-items[6] = { skuId: fn(4777).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 };
+let items = [{ skuId: fn(4971).GUILD_POWERUP_LEVEL_1_SKU_ID, threshold: 1 }, , , , , ,];
+let obj = { skuId: fn(4971).GUILD_POWERUP_LEVEL_1_SKU_ID, threshold: 1 };
+items[1] = { skuId: fn(4971).GUILD_POWERUP_LEVEL_2_SKU_ID, threshold: 2 };
+const obj2 = { skuId: fn(4971).GUILD_POWERUP_LEVEL_2_SKU_ID, threshold: 2 };
+items[2] = { skuId: fn(4971).GUILD_POWERUP_LEVEL_3_SKU_ID, threshold: 2 };
+const obj3 = { skuId: fn(4971).GUILD_POWERUP_LEVEL_3_SKU_ID, threshold: 2 };
+items[3] = { skuId: fn(4971).GUILD_POWERUP_TAG_SKU_ID, threshold: 1 };
+const obj4 = { skuId: fn(4971).GUILD_POWERUP_TAG_SKU_ID, threshold: 1 };
+items[4] = { skuId: fn(4971).GUILD_POWERUP_ROLE_COLOR_SKU_ID, threshold: 1 };
+const obj5 = { skuId: fn(4971).GUILD_POWERUP_ROLE_COLOR_SKU_ID, threshold: 1 };
+items[5] = { skuId: fn(4971).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, threshold: 1 };
+const obj6 = { skuId: fn(4971).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, threshold: 1 };
+items[6] = { skuId: fn(4971).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 };
 const ReactCompilerGating = fn(558);
-const obj7 = { skuId: fn(4777).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 };
+const obj7 = { skuId: fn(4971).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useBoostToUnlockFeaturedPowerup.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useBoostToUnlockFeaturedPowerup(arg0) {
       _require = arg0;
       const cResult = require("c").c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[4] !== arg0) {
-        class S {
+        class U {
           constructor() {
             guild = closure_5.getGuild(closure_0);
             hasItem = undefined;
@@ -85,9 +85,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[4] = arg0;
-        cResult[5] = S;
+        cResult[5] = U;
       } else {
-        class S {
+        class U {
           constructor() {
             guild = closure_5.getGuild(closure_0);
             hasItem = undefined;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult = require("initialize");
-      const stateFromStores1 = require("initialize").useStateFromStores(tmp8, S);
+      const stateFromStores1 = require("initialize").useStateFromStores(tmp8, U);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         class R {
           constructor() {
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           continue;
         }
         cResult[7] = tmp12;
-        cResult[8] = unlockedPowerups(7682)(arg0).available;
+        cResult[8] = unlockedPowerups(8003)(arg0).available;
         cResult[9] = stateFromStores1;
         cResult[10] = unlockedPowerups;
         cResult[11] = items2;
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult2 = require("initialize");
     }
-  : (arg0) => {
+  : function useBoostToUnlockFeaturedPowerup(arg0) {
       _require = arg0;
       items = [GuildPowerupsStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () =>

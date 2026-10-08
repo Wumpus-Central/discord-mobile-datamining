@@ -2,7 +2,7 @@
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import UrlDefault from "../../../_runtime/01373_Url.js";
+import UrlDefault from "../../../_runtime/01385_Url.js";
 import MarkupUtilsDefault from "../markup/MarkupUtils.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import useMessageAuthor from "../messages/useMessageAuthor.tsx";
@@ -171,12 +171,14 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
             let application2;
             closure_134_4 = undefined;
             closure_134_5 = undefined;
+            closure_134_6 = undefined;
             let id;
             let name;
             let icon;
             let coverImage;
             let flags;
             let parentId;
+            let bot;
             let embeddedSurfaces;
             application2 = application.getApplication(closure_1);
             if (typeof closure_2 === "string") {
@@ -186,8 +188,8 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
                   const items = [tmp21];
                 }
                 const obj4 = { closeCode: constants2.INVALID_ORIGIN };
-                const tmp54 = new RPCErrorDefault(obj4, "Invalid Origin");
-                throw tmp54;
+                const tmp67 = new RPCErrorDefault(obj4, "Invalid Origin");
+                throw tmp67;
               } else {
                 c7 = 1;
                 c8 = 1;
@@ -195,7 +197,16 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
                 return obj5;
               }
             }
-            if (null == application2) {
+            let tmp27 = closure_134_0.transport === closure_133_16.POST_MESSAGE;
+            if (tmp27) {
+              tmp27 = !closure_133_4.isHydrated(closure_134_1);
+            }
+            closure_134_5 = tmp27;
+            let tmp35 = null == application2;
+            if (!tmp35) {
+              tmp35 = closure_134_5;
+            }
+            if (tmp35) {
               closure_4 = closure_133_5;
               createFromServer = closure_133_5.createFromServer;
               c7 = 2;
@@ -203,15 +214,16 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
               const obj6 = { value: closure_133_30(closure_134_1), done: false };
               return obj6;
             } else {
-              closure_134_5 = application2;
-              id = closure_134_5.id;
-              name = closure_134_5.name;
-              icon = closure_134_5.icon;
-              coverImage = closure_134_5.coverImage;
-              flags = closure_134_5.flags;
-              parentId = closure_134_5.parentId;
-              embeddedSurfaces = closure_134_5.embeddedSurfaces;
-              const obj7 = { id, parentId, name, icon, coverImage, flags, embeddedSurfaces };
+              closure_134_6 = application2;
+              id = closure_134_6.id;
+              name = closure_134_6.name;
+              icon = closure_134_6.icon;
+              coverImage = closure_134_6.coverImage;
+              flags = closure_134_6.flags;
+              parentId = closure_134_6.parentId;
+              bot = closure_134_6.bot;
+              embeddedSurfaces = closure_134_6.embeddedSurfaces;
+              const obj7 = { id, parentId, name, icon, coverImage, flags, bot, embeddedSurfaces };
               closure_134_0.application = obj7;
               c8 = 3;
             }
@@ -242,9 +254,9 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
         c8 = 3;
         const obj = { value, done: true };
         return obj;
-      } catch (tmp56) {
+      } catch (tmp69) {
         c8 = tmp;
-        throw tmp56;
+        throw tmp69;
       }
     }
   })();
@@ -320,8 +332,8 @@ let closure_32 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(2055).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(5323);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(2067).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(5635);
 ({ RPC_LOCAL_SCOPE: closure_15, TransportTypes: closure_16 } = Constants);
 Constants = fn(1085);
 ({
@@ -408,9 +420,9 @@ export const containsSameValues = function containsSameValues(arg0, arg1) {
   return obj.isEqual(arg0, _modDef12.pick(arg1, Object.keys(arg0)));
 };
 export { validateOrigin };
-export const transformChannel = function transformChannel(channel, arg1) {
+export const transformChannel = function transformChannel(channel, result) {
   let nSFW = channel;
-  closure_1 = arg1;
+  closure_1 = result;
   const items = [];
   const guild_id = channel.getGuildId();
   const items1 = [constants3.GUILD_CATEGORY, ...GUILD_VOCAL_CHANNEL_TYPES];
@@ -465,7 +477,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
           throw error;
         } else {
           const obj = {
-            nick: closure_1(5048).getName(dependencyMap, id.id, user),
+            nick: closure_1(5405).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -474,7 +486,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9065)(user);
+          obj.user = closure_1(11143)(user);
           return obj;
         }
       });
@@ -556,11 +568,11 @@ export const hasMessageReadPermission = function hasMessageReadPermission(channe
   } else {
     application_id = channel.getApplicationId();
   }
-  let tmp2 = application_id === id;
-  if (!tmp2) {
-    tmp2 = scopes.indexOf(OAuth2Scopes.OAuth2Scopes.MESSAGES_READ) > -1;
+  let hasItem = application_id === id;
+  if (!hasItem) {
+    hasItem = scopes.has(OAuth2Scopes.OAuth2Scopes.MESSAGES_READ);
   }
-  return tmp2;
+  return hasItem;
 };
 export const getVoiceConnectionState = function getVoiceConnectionState(state) {
   if (constants5.RTC_CONNECTED !== state) {
@@ -605,8 +617,10 @@ export const processSocketThrottlers = function processSocketThrottlers() {
 };
 export const validateOriginAndUpdateSocket = function validateOriginAndUpdateSocket(authorization, arg1) {
   if (null == arg1) {
+    const _Set = Set;
     const items = [closure_1_15];
-    authorization.authorization.scopes = items;
+    const set = new Set(items);
+    authorization.authorization.scopes = set;
   }
 };
 export const getDeprecatedVoiceSettingsWithShortcut = function getDeprecatedVoiceSettingsWithShortcut(fn) {

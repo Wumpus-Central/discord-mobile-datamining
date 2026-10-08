@@ -1,7 +1,7 @@
 // discord_app/modules/guild_badge/GuildBadgeConstants.tsx
 import util from "../../intl/index.native.tsx";
-import BadgeCategory from "BadgeCategory.tsx";
 import GuildTraits from "GuildTraits.tsx";
+import BadgeCategory from "BadgeCategory.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_badge/GuildBadgeConstants.tsx");

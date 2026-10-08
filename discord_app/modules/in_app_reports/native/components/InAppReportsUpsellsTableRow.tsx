@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (description) => {
+  ? function InAppReportsUpsellsTableRow(description) {
       const cResult = c.c(7);
       ({ title, disabledTitle, variant, disabled, onPress, icon } = description);
       let str = "default";
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp8;
       tmp7 = tmp8;
     }
-  : (disabled) => {
+  : function InAppReportsUpsellsTableRow(disabled) {
       ({ title, disabledTitle, variant } = disabled);
       if (variant === undefined) {
         variant = "default";

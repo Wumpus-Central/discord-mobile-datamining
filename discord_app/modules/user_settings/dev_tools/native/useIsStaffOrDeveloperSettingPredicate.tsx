@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useStaffOrDeveloperSettingPredicate = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useStaffOrDeveloperSettingPredicate() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DeveloperExperimentStore];
@@ -27,7 +27,7 @@ export const useStaffOrDeveloperSettingPredicate = ReactCompilerGating.isReactCo
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useStaffOrDeveloperSettingPredicate() {
       const items = [DeveloperExperimentStore];
       return initialize.useStateFromStores(items, () => isDeveloper.isDeveloper);
     };

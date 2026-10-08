@@ -9,11 +9,11 @@ import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight.tsx"
 import ChatPlaceholderRowDefault from "ChatPlaceholderRow.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexportDefault = tmp14(4618);
+const ReanimatedRexportDefault = tmp14(4810);
 require = fn;
-let closure_4 = fn(9100).useChatInputContainerHeight;
+let closure_4 = fn(9318).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { placeholder: null };
 let obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -24,7 +24,7 @@ obj.placeholder = obj3;
 let closure_6 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useLinesForRowIndexCallback() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [];
@@ -53,7 +53,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : () => {
+  : function useLinesForRowIndexCallback() {
       noop.useRef([]);
       return noop.useCallback((arg0) => {
         let tmp2 = ref.current[arg0];
@@ -69,7 +69,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useBottomSafeAreaInset() {
       const cResult = c.c(4);
       const rect = useSafeAreaInsetsDefault();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -94,7 +94,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = obj3;
       tmp7 = obj3;
     }
-  : () => {
+  : function useBottomSafeAreaInset() {
       const rect = useSafeAreaInsetsDefault();
       const insets = useSafeAreaInsetsKeyboardAwareDefault({
         isKeyboardAwareOnAndroid: false,
@@ -108,7 +108,7 @@ const result = size.fileFinishedImporting("modules/chat/native/placeholder/ChatP
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (screenIndex) => {
+    ? function ChatPlaceholder(screenIndex) {
         let diff;
         let sum1;
         let sum2;
@@ -201,7 +201,7 @@ export default noop.memo(
         cResult[10] = sum1;
         tmp12 = items1;
       }
-    : (screenIndex) => {
+    : function ChatPlaceholder(screenIndex) {
         let height;
         let containerBottomInset;
         closure_4 = undefined;

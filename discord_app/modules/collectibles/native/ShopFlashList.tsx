@@ -4,20 +4,20 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import generated_NoResults from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
-import _mod8404 from "../../../../discord_common/js/packages/flash-list/index.js";
+import _mod8600 from "../../../../discord_common/js/packages/flash-list/index.js";
 import useScrollToInitialIndexOnce from "hooks/useScrollToInitialIndexOnce.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_4 = createStyles.createStyles(obj2);
 fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 const ReactCompilerGating = fn(558);
 const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ShopEmptyState() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { marginTop: 42 };
@@ -38,7 +38,7 @@ const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function ShopEmptyState() {
       const obj = { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null };
       const intl = util.intl;
       obj.body = intl.string(util.t.eAn6z2);
@@ -52,7 +52,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/ShopFlashList.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ShopFlashList(arg0) {
       const cResult = c.c(9);
       ({ data, renderItem, initialScrollIndex, getItemType } = arg0);
       const ref = noop.useRef(null);
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           getItemType,
           contentContainerStyle: tmp5.contentContainer,
         };
-        const tmp12 = jsx(_mod8404.FlashList, {
+        const tmp12 = jsx(_mod8600.FlashList, {
           ref,
           data,
           renderItem,
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj3;
       tmp7 = obj3;
     }
-  : (initialScrollIndex) => {
+  : function ShopFlashList(initialScrollIndex) {
       initialScrollIndex = initialScrollIndex.initialScrollIndex;
       ({ data, renderItem, getItemType } = initialScrollIndex);
       const ref = noop.useRef(null);
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flashListRef: ref,
         afterMs: useScrollToInitialIndexOnce.INITIAL_SCROLL_DELAY_MS,
       });
-      return jsx(_mod8404.FlashList, {
+      return jsx(_mod8600.FlashList, {
         ref,
         data,
         renderItem,

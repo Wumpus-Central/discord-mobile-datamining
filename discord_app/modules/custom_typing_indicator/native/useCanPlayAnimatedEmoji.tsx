@@ -9,14 +9,14 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/useCanPlayAnimatedEmoji.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCanPlayAnimatedEmoji() {
       const AnimateEmoji = UserSettings.AnimateEmoji;
       return (
         AnimateEmoji.useSetting() &&
         !noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled
       );
     }
-  : () => {
+  : function useCanPlayAnimatedEmoji() {
       const AnimateEmoji = UserSettings.AnimateEmoji;
       return (
         AnimateEmoji.useSetting() &&

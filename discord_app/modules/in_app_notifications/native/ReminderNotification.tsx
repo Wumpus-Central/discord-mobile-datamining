@@ -6,19 +6,19 @@ import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
-import showForLaterModal from "../../saved_messages/native/showForLaterModal.tsx";
 import SavedMessagesTypes from "../../saved_messages/SavedMessagesTypes.tsx";
 import InAppNotificationUtils from "InAppNotificationUtils.tsx";
 import MessagePreviewTextDefault from "MessagePreviewText.tsx";
 import MessageNotificationHeaderDefault from "MessageNotificationHeader.tsx";
 import MediaPreviewRightAccessory from "MediaPreviewRightAccessory.tsx";
+import showForLaterModal from "../../saved_messages/native/showForLaterModal.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(12493);
+const InAppNotificationConstants = fn(12589);
 ({
   IN_APP_NOTIFICATION_MAX_HEIGHT: closure_7,
   NOTIFICATION_PREVIEW_LINE_CLAMP: closure_8,
@@ -27,16 +27,16 @@ const InAppNotificationConstants = fn(12493);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_13 = createStyles.createStyles({
   cutoutIconContainer: { position: "absolute", right: 0, bottom: 0 },
   avatarContainer: { position: "relative" },
   rightAccessoryContainer: { marginLeft: RIGHT_ACCESSORY_LEFT_MARGIN },
 });
-let obj3 = { direction: fn(1188).CutoutDirection.BOTTOM_RIGHT, radius: 10, inset: -2 };
+let obj3 = { direction: fn(1200).CutoutDirection.BOTTOM_RIGHT, radius: 10, inset: -2 };
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function NotificationAvatar(arg0) {
       const cResult = c.c(10);
       ({ user, guildId } = arg0);
       const tmp4 = closure_13();
@@ -47,7 +47,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { size: "xs", color: nativeDefault.colors.ICON_SUBTLE };
-          const tmp11 = v65535(ClockIcon.ClockIcon, obj2);
+          const tmp11 = collapsed(ClockIcon.ClockIcon, obj2);
           cResult[3] = tmp11;
           let tmp8 = tmp11;
         } else {
@@ -55,7 +55,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[4] !== tmp4.cutoutIconContainer) {
           obj3 = { style: tmp4.cutoutIconContainer, children: tmp8 };
-          const tmp15 = v65535(View, obj3);
+          const tmp15 = collapsed(View, obj3);
           cResult[4] = tmp4.cutoutIconContainer;
           cResult[5] = tmp15;
           let tmp12 = tmp15;
@@ -80,29 +80,29 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp19;
         tmp16 = tmp19;
       }
-      const tmp6 = v65535(native.Avatar, { user, guildId, size: native.AvatarSizes.NORMAL, cutout: obj3 });
+      const tmp6 = collapsed(native.Avatar, { user, guildId, size: native.AvatarSizes.NORMAL, cutout: obj3 });
       cResult[0] = guildId;
       cResult[1] = user;
       cResult[2] = tmp6;
       tmp5 = tmp6;
       const obj5 = { user, guildId, size: native.AvatarSizes.NORMAL, cutout: obj3 };
     }
-  : (arg0) => {
+  : function NotificationAvatar(arg0) {
       ({ user, guildId } = arg0);
       const tmp = closure_13();
       const obj = { style: tmp.avatarContainer, children: null };
-      const items = [v65535(native.Avatar, { user, guildId, size: native.AvatarSizes.NORMAL, cutout: obj3 })];
+      const items = [collapsed(native.Avatar, { user, guildId, size: native.AvatarSizes.NORMAL, cutout: obj3 })];
       obj3 = { style: tmp.cutoutIconContainer, children: null };
       const obj2 = { user, guildId, size: native.AvatarSizes.NORMAL, cutout: obj3 };
-      obj3.children = v65535(ClockIcon.ClockIcon, { size: "xs", color: nativeDefault.colors.ICON_SUBTLE });
-      items[1] = v65535(View, obj3);
+      obj3.children = collapsed(ClockIcon.ClockIcon, { size: "xs", color: nativeDefault.colors.ICON_SUBTLE });
+      items[1] = collapsed(View, obj3);
       obj.children = items;
       return closure_1_11(View, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_16 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (message) => {
+    ? function RightAccessory(message) {
         const cResult = c.c(5);
         message = message.message;
         let rightAccessoryContainer = closure_13();
@@ -111,7 +111,7 @@ let closure_16 = noop.memo(
         } else {
           if (cResult[0] !== message) {
             obj3 = { message };
-            const tmp6 = v65535(MediaPreviewRightAccessory.MediaPreviewRightAccessory, obj3);
+            const tmp6 = collapsed(MediaPreviewRightAccessory.MediaPreviewRightAccessory, obj3);
             cResult[0] = message;
             cResult[1] = tmp6;
             let tmp4 = tmp6;
@@ -121,7 +121,7 @@ let closure_16 = noop.memo(
           if (cResult[2] === rightAccessoryContainer.rightAccessoryContainer) {
           }
           const obj4 = { style: rightAccessoryContainer.rightAccessoryContainer, children: tmp4 };
-          const tmp10 = v65535(View, obj4);
+          const tmp10 = collapsed(View, obj4);
           rightAccessoryContainer = rightAccessoryContainer.rightAccessoryContainer;
           cResult[2] = rightAccessoryContainer;
           cResult[3] = tmp4;
@@ -129,24 +129,26 @@ let closure_16 = noop.memo(
         }
         obj2 = InAppNotificationUtils;
       }
-    : (message) => {
+    : function RightAccessory(message) {
         message = message.message;
         const tmp = closure_13();
         let tmp4 = null;
         if (obj.useHasPreviewableMedia(message)) {
           const obj2 = { style: tmp.rightAccessoryContainer, children: null };
           obj3 = { message };
-          obj2.children = v65535(MediaPreviewRightAccessory.MediaPreviewRightAccessory, obj3);
-          tmp4 = v65535(View, obj2);
+          obj2.children = collapsed(MediaPreviewRightAccessory.MediaPreviewRightAccessory, obj3);
+          tmp4 = collapsed(View, obj2);
         }
         return tmp4;
       },
 );
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function NotificationBody(channel) {
+      let obj = dependencyMap;
       const cResult = channel(576).c(20);
       channel = channel.channel;
+      const message = channel.message;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
@@ -160,86 +162,112 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = channel.guild_id;
         cResult[2] = fn;
-        let tmp6 = fn;
+        let tmp5 = fn;
       } else {
-        tmp6 = cResult[2];
+        tmp5 = cResult[2];
       }
-      const obj = channel(576);
-      const stateFromStores = channel(504).useStateFromStores(first, tmp6);
+      const obj2 = channel(576);
+      const stateFromStores = channel(504).useStateFromStores(first, tmp5);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ChannelStore];
         cResult[3] = items1;
-        let tmp8 = items1;
+        let tmp7 = items1;
       } else {
-        tmp8 = cResult[3];
+        tmp7 = cResult[3];
       }
       if (cResult[4] !== channel.parent_id) {
-        class M {
-          constructor() {
-            return closure_5.getChannel(channel.parent_id);
-          }
-        }
+        const fn2 = function f() {
+          return ChannelStore.getChannel(channel.parent_id);
+        };
         cResult[4] = channel.parent_id;
-        cResult[5] = M;
+        cResult[5] = fn2;
+        let tmp9 = fn2;
       } else {
-        class M {
-          constructor() {
-            return closure_5.getChannel(channel.parent_id);
-          }
-        }
+        tmp9 = cResult[5];
       }
       const tmpResult = channel(504);
-      const stateFromStores1 = channel(504).useStateFromStores(tmp8, M);
-      const tmpResult3 = channel(504);
-      const hasPreviewableMedia = channel(12492).useHasPreviewableMedia(channel.message);
-      const tmp13 = channel.type === channel(1106).ChannelTypes.DM;
-      if (tmp13) {
-        class M {
-          constructor() {
-            return closure_5.getChannel(channel.parent_id);
-          }
-        }
+      const stateFromStores1 = channel(504).useStateFromStores(tmp7, tmp9);
+      const tmpResult4 = channel(504);
+      const hasPreviewableMedia = channel(12588).useHasPreviewableMedia(message);
+      const tmp12 = channel.type === channel(1106).ChannelTypes.DM;
+      let num7 = 1;
+      if (tmp12) {
+        num7 = closure_8;
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        class M {
-          constructor() {
-            return closure_5.getChannel(channel.parent_id);
-          }
-        }
-        const messagePreviewTextVariant = obj5.getMessagePreviewTextVariant();
+        const messagePreviewTextVariant = tmp(12588).getMessagePreviewTextVariant();
         cResult[6] = messagePreviewTextVariant;
+        let tmp13 = messagePreviewTextVariant;
+        const tmpResult6 = tmp(12588);
       } else {
-        class M {
-          constructor() {
-            return closure_5.getChannel(channel.parent_id);
-          }
-        }
+        tmp13 = cResult[6];
       }
       if (cResult[7] === channel) {
-        class M {
-          constructor() {
-            return closure_5.getChannel(channel.parent_id);
+        if (cResult[8] === stateFromStores) {
+          if (cResult[9] === tmp12) {
+            if (cResult[10] === stateFromStores1) {
+              let tmp15 = cResult[11];
+            }
+            if (cResult[12] === channel) {
+              if (cResult[13] === hasPreviewableMedia) {
+                if (cResult[14] === num7) {
+                  if (cResult[15] === message) {
+                    if (cResult[17] === tmp15) {
+                      if (cResult[18] === tmp19) {
+                        let tmp28 = cResult[19];
+                      }
+                      return tmp28;
+                    }
+                    obj3 = { children: null };
+                    const items2 = [tmp15, cResult[16]];
+                    obj3.children = items2;
+                    const tmp31 = closure_11(closure_12, obj3);
+                    cResult[17] = tmp15;
+                    cResult[18] = cResult[16];
+                    cResult[19] = tmp31;
+                    tmp28 = tmp31;
+                  }
+                }
+              }
+            }
+            if (!hasPreviewableMedia) {
+              if (null == message.poll) {
+                const obj4 = {
+                  channel,
+                  message,
+                  color: "text-default",
+                  layout: tmp(9248).ChannelListLayoutTypes.COZY,
+                  variant: tmp13,
+                  muted: false,
+                  lineClamp: num7,
+                };
+                let tmp22 = closure_10(tmp(12599).ChannelRowPreview, obj4);
+              }
+              cResult[12] = channel;
+              cResult[13] = hasPreviewableMedia;
+              cResult[14] = num7;
+              cResult[15] = message;
+              cResult[16] = tmp22;
+            }
+            obj = { message, lineClamp: num7, showMessageAuthor: true, maxHeight };
+            tmp22 = closure_10(MessagePreviewTextDefault, obj);
           }
         }
       }
       let tmp16 = null;
-      if (!tmp13) {
-        class M {
-          constructor() {
-            return closure_5.getChannel(channel.parent_id);
-          }
-        }
-        const obj2 = { channel, parentChannel: stateFromStores1, guild: stateFromStores, author: null };
-        tmp16 = closure_10(MessageNotificationHeaderDefault, obj2);
+      if (!tmp12) {
+        const obj5 = { channel, parentChannel: stateFromStores1, guild: stateFromStores, author: null };
+        tmp16 = closure_10(MessageNotificationHeaderDefault, obj5);
       }
       cResult[7] = channel;
       cResult[8] = stateFromStores;
-      cResult[9] = tmp13;
+      cResult[9] = tmp12;
       cResult[10] = stateFromStores1;
       cResult[11] = tmp16;
-      const tmpResult4 = channel(12492);
+      tmp15 = tmp16;
+      const tmpResult5 = channel(12588);
     }
-  : (channel) => {
+  : function NotificationBody(channel) {
       channel = channel.channel;
       const message = channel.message;
       const items = [GuildStore];
@@ -250,15 +278,15 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         ChannelStore.getChannel(channel.parent_id),
       );
       const obj2 = channel(504);
-      const hasPreviewableMedia = channel(12492).useHasPreviewableMedia(message);
+      const hasPreviewableMedia = channel(12588).useHasPreviewableMedia(message);
       const tmp6 = channel.type === channel(1106).ChannelTypes.DM;
       let num = 1;
       if (tmp6) {
         num = closure_8;
       }
-      obj3 = channel(12492);
+      obj3 = channel(12588);
       let tmp10 = null;
-      const messagePreviewTextVariant = channel(12492).getMessagePreviewTextVariant();
+      const messagePreviewTextVariant = channel(12588).getMessagePreviewTextVariant();
       if (!tmp6) {
         const obj4 = { channel, parentChannel: stateFromStores1, guild: stateFromStores, author: null };
         tmp10 = closure_10(MessageNotificationHeaderDefault, obj4);
@@ -270,12 +298,12 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             channel,
             message,
             color: "text-default",
-            layout: tmp(7525).ChannelListLayoutTypes.COZY,
+            layout: tmp(9248).ChannelListLayoutTypes.COZY,
             variant: messagePreviewTextVariant,
             muted: false,
             lineClamp: num,
           };
-          let tmp14 = closure_10(tmp(12503).ChannelRowPreview, obj5);
+          let tmp14 = closure_10(tmp(12599).ChannelRowPreview, obj5);
         }
         const obj6 = { children: null };
         items2[1] = tmp14;
@@ -284,7 +312,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       tmp14 = closure_10(MessagePreviewTextDefault, { message, lineClamp: num, showMessageAuthor: true, maxHeight });
       const obj7 = { message, lineClamp: num, showMessageAuthor: true, maxHeight };
-      const tmpResult = channel(12492);
+      const tmpResult = channel(12588);
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -292,7 +320,7 @@ const result = size.fileFinishedImporting("modules/in_app_notifications/native/R
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (notification) => {
+    ? function ReminderNotification(notification) {
         const cResult = notification(576).c(17);
         notification = notification.notification;
         ({ author, channel } = notification);
@@ -313,7 +341,7 @@ export default noop.memo(
             tmp8 = cResult[3];
           }
           if (cResult[4] !== notification) {
-            const fn = function p() {
+            const fn = function y() {
               ModalActionCreatorsDefault.popAll();
               showForLaterModal.showForLaterModal(SavedMessagesTypes.SavedMessageSortTypes.REMINDER);
               ({ savedMessage, author } = notification);
@@ -362,7 +390,7 @@ export default noop.memo(
               rightAccessory: tmp10,
               children: tmp14,
             };
-            const tmp20 = closure_10(tmp(12531).NotificationPressable, obj4);
+            const tmp20 = closure_10(tmp(12627).NotificationPressable, obj4);
             cResult[11] = tmp5;
             cResult[12] = notification;
             cResult[13] = tmp9;
@@ -386,7 +414,7 @@ export default noop.memo(
         let obj = notification(576);
         const obj6 = { user: author, guildId: channel.guild_id };
       }
-    : (notification) => {
+    : function ReminderNotification(notification) {
         notification = notification.notification;
         const channel = notification.channel;
         const message = notification.savedMessage.message;
@@ -410,7 +438,7 @@ export default noop.memo(
         }, items);
         let obj = { user: notification.author, guildId: channel.guild_id };
         const tmp2 = closure_10(closure_15, { user: notification.author, guildId: channel.guild_id });
-        return closure_10(notification(12531).NotificationPressable, {
+        return closure_10(notification(12627).NotificationPressable, {
           icon: closure_10(closure_15, { user: notification.author, guildId: channel.guild_id }),
           header: memo,
           onPress: callback,

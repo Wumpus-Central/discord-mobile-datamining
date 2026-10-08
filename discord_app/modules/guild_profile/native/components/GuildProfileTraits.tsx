@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 8 },
   trait: {
@@ -31,7 +31,7 @@ let obj2 = {
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (emoji) => {
+  ? function TraitEmoji(emoji) {
       const cResult = c.c(7);
       emoji = emoji.emoji;
       const tmp3 = closure_7();
@@ -71,7 +71,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = emojiURL;
       }
     }
-  : (emoji) => {
+  : function TraitEmoji(emoji) {
       emoji = emoji.emoji;
       if (null == emoji) {
         return null;
@@ -92,7 +92,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (trait) => {
+  ? function GuildProfileTraitView(trait) {
       const cResult = c.c(8);
       trait = trait.trait;
       const tmp4 = closure_7();
@@ -132,7 +132,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp13;
       tmp12 = tmp13;
     }
-  : (trait) => {
+  : function GuildProfileTraitView(trait) {
       trait = trait.trait;
       const obj = { style: closure_7().trait, children: null };
       const items = [
@@ -159,7 +159,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileTraits.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (profile) => {
+  ? function GuildProfileTraits(profile) {
       const cResult = c.c(10);
       let traits = profile.profile;
       const tmp2 = closure_7();
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp14 = tmp17;
       }
     }
-  : (profile) => {
+  : function GuildProfileTraits(profile) {
       profile = profile.profile;
       const items = [profile];
       const memo = noop.useMemo(() => {

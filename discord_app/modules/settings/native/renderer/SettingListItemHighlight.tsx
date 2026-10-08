@@ -11,7 +11,7 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { background: { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_HOVER } };
 let closure_7 = createStyles.createStyles(obj);
 const __initData = {
@@ -33,7 +33,7 @@ const result = size.fileFinishedImporting("modules/settings/native/renderer/Sett
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function SettingListItemHighlight(arg0) {
         const cResult = c.c(10);
         ({ start, end, style } = arg0);
         const tmp4 = closure_7();
@@ -94,17 +94,17 @@ export default noop.memo(
                 }
               }
               let obj2 = {
-                withSequence: tmp(4618).withSequence,
-                withDelay: tmp(4618).withDelay,
-                withTiming: tmp(4897).withTiming,
-                Easing: tmp(4618).Easing,
-                runOnJS: tmp(4618).runOnJS,
+                withSequence: tmp(4810).withSequence,
+                withDelay: tmp(4810).withDelay,
+                withTiming: tmp(5091).withTiming,
+                Easing: tmp(4810).Easing,
+                runOnJS: tmp(4810).runOnJS,
                 clearSelectedSearchResult,
               };
               O.__closure = obj2;
               O.__workletHash = 11780002409998;
               O.__initData = __initData;
-              const animatedStyle = tmp(4618).useAnimatedStyle(O);
+              const animatedStyle = tmp(4810).useAnimatedStyle(O);
               if (cResult[5] === animatedStyle) {
                 if (cResult[6] === tmp13) {
                   if (cResult[7] === style) {
@@ -125,7 +125,7 @@ export default noop.memo(
               cResult[8] = tmp4.background;
               cResult[9] = tmp20;
               tmp16 = tmp20;
-              const tmpResult = tmp(4618);
+              const tmpResult = tmp(4810);
             }
           }
         }
@@ -142,7 +142,7 @@ export default noop.memo(
         cResult[4] = obj4;
         tmp13 = obj4;
       }
-    : (start) => {
+    : function SettingListItemHighlight(start) {
         start = start.start;
         const end = start.end;
         const items = [end, start];

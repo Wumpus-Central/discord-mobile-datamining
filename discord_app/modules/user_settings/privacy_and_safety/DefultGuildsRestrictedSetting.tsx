@@ -6,7 +6,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/DefultGuildsRestrictedSetting.tsx");
 
 export const useDefaultGuildsRestricted = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDefaultGuildsRestricted() {
       const DefaultGuildsRestricted = UserSettings.DefaultGuildsRestricted;
       const setting = DefaultGuildsRestricted.useSetting();
       const DefaultGuildsRestrictedV2 = UserSettings.DefaultGuildsRestrictedV2;
@@ -17,7 +17,7 @@ export const useDefaultGuildsRestricted = ReactCompilerGating.isReactCompilerEna
       }
       return setting1;
     }
-  : () => {
+  : function useDefaultGuildsRestricted() {
       const DefaultGuildsRestricted = UserSettings.DefaultGuildsRestricted;
       const setting = DefaultGuildsRestricted.useSetting();
       const DefaultGuildsRestrictedV2 = UserSettings.DefaultGuildsRestrictedV2;

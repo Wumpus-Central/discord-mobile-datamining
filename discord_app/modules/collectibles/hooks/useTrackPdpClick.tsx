@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackPdpClick.tsx");
 
 export const useTrackPdpClick = ReactCompilerGating.isReactCompilerEnabled()
-  ? (skuId) => {
+  ? function useTrackPdpClick(skuId) {
       const cResult = skuId(analyticsLocations[3]).c(9);
       skuId = skuId.skuId;
       const productSkuIds = skuId.productSkuIds;
@@ -80,7 +80,7 @@ export const useTrackPdpClick = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = I;
       tmp7 = I;
     }
-  : (skuId) => {
+  : function useTrackPdpClick(skuId) {
       skuId = skuId.skuId;
       const productSkuIds = skuId.productSkuIds;
       const analyticsLocations = skuId.analyticsLocations;

@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useLegacyNoDateText.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useLegacyNoDateText(arg0) {
       [tmp2, tmp3] = noop.useState(chooseRandomLegacyNoDateText);
       const tmp4 = _slicedToArray(noop.useState(arg0), 2);
       if (arg0 !== tmp4[0]) {
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp2;
     }
-  : (arg0) => {
+  : function useLegacyNoDateText(arg0) {
       [tmp2, tmp3] = noop.useState(chooseRandomLegacyNoDateText);
       const tmp4 = _slicedToArray(noop.useState(arg0), 2);
       if (arg0 !== tmp4[0]) {

@@ -1,9 +1,7 @@
 // discord_app/modules/mfa/native/screens/BackupScreen.tsx
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import useWideAuthViewDefault from "../../../auth/native/useWideAuthView.tsx";
 import MFA from "../../../../../discord_common/js/shared/MFA.tsx";
-import ClipboardCopyInputDefault from "../components/ClipboardCopyInput.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -48,22 +46,22 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/screens/BackupScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BackupScreen(arg0) {
       const cResult = require("c").c(34);
       ({ mfaChallenge, finish } = arg0);
       _require = finish;
       const obj = require("c");
-      const tmp5 = useWideAuthViewDefault();
+      const tmp5 = require("useWideAuthView")();
       [tmp7, importDefault] = noop.useState(false);
-      [dependencyMap, asyncGeneratorStep] = noop.useState("");
+      [first, asyncGeneratorStep] = noop.useState("");
       const tmp6 = _slicedToArray(noop.useState(false), 2);
       [tmp10, _slicedToArray] = noop.useState(undefined);
       const tmp9 = _slicedToArray(noop.useState(undefined), 2);
-      [r10038, noop] = noop.useState(false);
-      [first, closure_7] = noop.useState(10);
-      if (cResult[0] !== first) {
+      [tmp12, noop] = noop.useState(false);
+      [first1, closure_7] = noop.useState(10);
+      if (cResult[0] !== first1) {
         const fn = function f() {
-          if (first > 0) {
+          if (first1 > 0) {
             const _setTimeout = setTimeout;
             const timeout = setTimeout(() => {
               closure_1_7((arg0) => arg0 - 1);
@@ -71,43 +69,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return () => clearTimeout(closure_0);
           }
         };
-        const items = [first];
-        cResult[0] = first;
+        const items = [first1];
+        cResult[0] = first1;
         cResult[1] = fn;
         cResult[2] = items;
-        let tmp15 = items;
-        let tmp14 = fn;
+        let tmp16 = items;
+        let tmp15 = fn;
       } else {
-        tmp14 = cResult[1];
-        tmp15 = cResult[2];
+        tmp15 = cResult[1];
+        tmp16 = cResult[2];
       }
-      const effect = noop.useEffect(tmp14, tmp15);
+      const effect = noop.useEffect(tmp15, tmp16);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        class C {
-          constructor(arg0) {
-            tmp = closure_3(arg0);
-            tmp2 = closure_4(undefined);
-            return;
-          }
+        function onChangeCode(arg0) {
+          closure_3(arg0);
+          _slicedToArray(undefined);
         }
-        cResult[3] = C;
+        cResult[3] = onChangeCode;
+        let tmp18 = onChangeCode;
       } else {
-        class C {
-          constructor(arg0) {
-            tmp = closure_3(arg0);
-            tmp2 = closure_4(undefined);
-            return;
-          }
-        }
+        tmp18 = cResult[3];
       }
       if (cResult[4] !== finish) {
-        class C {
-          constructor(arg0) {
-            tmp = closure_3(arg0);
-            tmp2 = closure_4(undefined);
-            return;
-          }
-        }
         _require = asyncGeneratorStep(async (arg0) => {
           closure_3 = tmp3;
           tmp31(undefined);
@@ -140,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           v0 = 0;
           return value;
         });
-        let fn2 = function () {
+        function t4() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -149,108 +132,155 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[4] = finish;
-        cResult[5] = fn2;
-        const tmp18 = fn2;
+        cResult[5] = t4;
+        let tmp19 = t4;
       } else {
-        class C {
-          constructor(arg0) {
-            tmp = closure_3(arg0);
-            tmp2 = closure_4(undefined);
-            return;
-          }
-        }
+        tmp19 = cResult[5];
       }
-      fn2 = tmp18;
+      closure_8 = tmp19;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        class C {
-          constructor(arg0) {
-            tmp = closure_3(arg0);
-            tmp2 = closure_4(undefined);
-            return;
-          }
-        }
-        const stringResult = obj3.string(tmp(1126).t.B2T1HD);
-        const intl = tmp(1126).intl;
-        const stringResult1 = intl.string(tmp(1126).t.c5J7O0);
+        const intl = tmp(tmp2[6]).intl;
+        const stringResult = intl.string(tmp(tmp2[6]).t.B2T1HD);
+        const intl2 = tmp(tmp2[6]).intl;
+        const stringResult1 = intl2.string(tmp(tmp2[6]).t.c5J7O0);
         cResult[6] = stringResult;
         cResult[7] = stringResult1;
+        let tmp22 = stringResult1;
+        let tmp21 = stringResult;
       } else {
-        class C {
-          constructor(arg0) {
-            tmp = closure_3(arg0);
-            tmp2 = closure_4(undefined);
-            return;
-          }
-        }
+        tmp21 = cResult[6];
+        tmp22 = cResult[7];
       }
-      if (cResult[8] !== first) {
-        class C {
-          constructor(arg0) {
-            tmp = closure_3(arg0);
-            tmp2 = closure_4(undefined);
-            return;
-          }
-        }
-        const tmp24 = getFormattedExplainer(first);
-        cResult[8] = first;
-        cResult[9] = tmp24;
+      if (cResult[8] !== first1) {
+        const tmp27 = getFormattedExplainer(first1);
+        cResult[8] = first1;
+        cResult[9] = tmp27;
+        let tmp25 = tmp27;
       } else {
-        class C {
-          constructor(arg0) {
-            tmp = closure_3(arg0);
-            tmp2 = closure_4(undefined);
-            return;
-          }
-        }
+        tmp25 = cResult[9];
       }
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        class C {
-          constructor(arg0) {
-            tmp = closure_3(arg0);
-            tmp2 = closure_4(undefined);
-            return;
-          }
-        }
-        const stringResult2 = obj4.string(tmp(1126).t["C/ZAw/"]);
-        const intl2 = tmp(1126).intl;
-        const stringResult3 = intl2.string(tmp(1126).t.fZSi1D);
+        const intl3 = tmp(tmp2[6]).intl;
+        const stringResult2 = intl3.string(tmp(tmp2[6]).t["C/ZAw/"]);
+        const intl4 = tmp(tmp2[6]).intl;
+        const stringResult3 = intl4.string(tmp(tmp2[6]).t.fZSi1D);
         cResult[10] = stringResult2;
         cResult[11] = stringResult3;
-        let tmp26 = stringResult3;
-        const tmp25 = stringResult2;
+        let tmp29 = stringResult3;
+        let tmp28 = stringResult2;
       } else {
-        class C {
-          constructor(arg0) {
-            tmp = closure_3(arg0);
-            tmp2 = closure_4(undefined);
-            return;
-          }
-        }
-        tmp26 = cResult[11];
+        tmp28 = cResult[10];
+        tmp29 = cResult[11];
       }
+      let tmp32 = tmp7;
       if (!tmp7) {
-        class C {
-          constructor(arg0) {
-            tmp = closure_3(arg0);
-            tmp2 = closure_4(undefined);
-            return;
-          }
-        }
+        tmp32 = tmp12;
       }
       if (cResult[12] === tmp10) {
-        class C {
-          constructor(arg0) {
-            tmp = closure_3(arg0);
-            tmp2 = closure_4(undefined);
-            return;
+        if (cResult[13] === tmp32) {
+          if (cResult[14] === tmp33) {
+            let tmp34 = cResult[15];
           }
+          if (cResult[16] === tmp34) {
+            if (cResult[17] === tmp25) {
+              let tmp37 = cResult[18];
+            }
+            const _Symbol = Symbol;
+            if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
+              const intl5 = tmp(tmp2[6]).intl;
+              const stringResult4 = intl5.string(tmp(tmp2[6]).t.geKm7t);
+              cResult[19] = stringResult4;
+              let tmp41 = stringResult4;
+            } else {
+              tmp41 = cResult[19];
+            }
+            let tmp43 = tmp7;
+            if (!tmp7) {
+              tmp43 = tmp12;
+            }
+            if (cResult[20] === first) {
+              if (cResult[21] === tmp19) {
+                let tmp44 = cResult[22];
+              }
+              if (!tmp7) {
+                tmp7 = tmp12;
+              }
+              if (!tmp7) {
+                tmp7 = first.length < tmp(tmp2[4]).BACKUP_CODE_MIN_LENGTH;
+              }
+              if (!tmp7) {
+                tmp7 = first1 > 0;
+              }
+              if (cResult[23] === tmp43) {
+                if (cResult[24] === tmp44) {
+                  if (cResult[25] === tmp7) {
+                    let tmp45 = cResult[26];
+                  }
+                  if (cResult[27] === finish) {
+                    if (cResult[28] === mfaChallenge) {
+                      let tmp48 = cResult[29];
+                    }
+                    if (cResult[30] === tmp37) {
+                      if (cResult[31] === tmp45) {
+                        if (cResult[32] === tmp48) {
+                          let tmp49 = cResult[33];
+                        }
+                        return tmp49;
+                      }
+                    }
+                    const obj3 = {
+                      headerText: tmp21,
+                      subtitle: tmp22,
+                      input: tmp37,
+                      submit: tmp45,
+                      screenProps: tmp48,
+                      mfaMethod: "backup",
+                    };
+                    const tmp51 = closure_7(require("MfaOptionScreen"), obj3);
+                    cResult[30] = tmp37;
+                    cResult[31] = tmp45;
+                    cResult[32] = tmp48;
+                    cResult[33] = tmp51;
+                    tmp49 = tmp51;
+                  }
+                  const obj4 = { mfaChallenge, finish };
+                  cResult[27] = finish;
+                  cResult[28] = mfaChallenge;
+                  cResult[29] = obj4;
+                  tmp48 = obj4;
+                }
+              }
+              const obj5 = { variant: "primary", text: tmp41, loading: tmp43, onPress: tmp44, disabled: tmp7 };
+              const tmp47 = closure_7(require("button"), obj5);
+              cResult[23] = tmp43;
+              cResult[24] = tmp44;
+              cResult[25] = tmp7;
+              cResult[26] = tmp47;
+              tmp45 = tmp47;
+            }
+            function ee() {
+              return closure_8(first);
+            }
+            cResult[20] = first;
+            cResult[21] = tmp19;
+            cResult[22] = ee;
+            tmp44 = ee;
+          }
+          const obj6 = { children: null };
+          const items1 = [tmp25, tmp34];
+          obj6.children = items1;
+          const tmp40 = first1(closure_8, obj6);
+          cResult[16] = tmp34;
+          cResult[17] = tmp25;
+          cResult[18] = tmp40;
+          tmp37 = tmp40;
         }
       }
-      const obj5 = {
-        label: tmp25,
-        placeholder: tmp26,
+      const obj7 = {
+        label: tmp28,
+        placeholder: tmp29,
         isValidClipboardCode,
         maxLength: null,
         onChangeCode: null,
@@ -259,19 +289,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         autoFocus: null,
       };
       const tmp11 = _slicedToArray(noop.useState(false), 2);
-      obj5.maxLength = require("MFA").BACKUP_CODE_MAX_LENGTH;
-      obj5.onChangeCode = C;
-      obj5.error = tmp10;
-      obj5.isDisabled = tmp7;
-      obj5.autoFocus = !tmp5;
-      const tmp4Result = ClipboardCopyInputDefault;
+      obj7.maxLength = require("MFA").BACKUP_CODE_MAX_LENGTH;
+      obj7.onChangeCode = tmp18;
+      obj7.error = tmp10;
+      obj7.isDisabled = tmp32;
+      obj7.autoFocus = !tmp5;
+      const tmp36 = closure_7(require("ClipboardCopyInput"), obj7);
       cResult[12] = tmp10;
-      cResult[13] = tmp7;
+      cResult[13] = tmp32;
       cResult[14] = !tmp5;
-      cResult[15] = closure_7(ClipboardCopyInputDefault, obj5);
-      const tmp32 = closure_7(ClipboardCopyInputDefault, obj5);
+      cResult[15] = tmp36;
+      tmp34 = tmp36;
+      const tmp4Result = require("ClipboardCopyInput");
     }
-  : (finish) => {
+  : function BackupScreen(finish) {
       finish = finish.finish;
       importDefault = undefined;
       first = undefined;

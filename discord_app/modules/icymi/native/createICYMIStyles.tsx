@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/icymi/native/createICYMIStyle
 
 export const createICYMIStyles = function createICYMIStyles(rect) {
   _require = require("createStyles").createStyles(rect);
-  return () => {
+  return function useStyles() {
     const items = [...arguments];
     const useContext = noop.useContext;
     const items1 = [useContext(ICYMIContext.ICYMIContext), ...items];

@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionEmojis.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useRoleSubscriptionEmojis(arg0) {
       _require = arg0;
       const cResult = require("c").c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function l() {
+        const fn = function u() {
           return EmojiStore.getGuildEmoji(closure_0);
         };
         const items1 = [arg0];
@@ -40,28 +40,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
       if (null != stateFromStores) {
         if (cResult[7] !== arg0) {
-          class S {
+          class E {
             constructor(arg0) {
               obj = closure_0(closure_1[5]);
               return obj.isRoleSubscriptionEmoji(arg0, closure_0);
             }
           }
           cResult[7] = arg0;
-          cResult[8] = S;
+          cResult[8] = E;
         } else {
-          class S {
+          class E {
             constructor(arg0) {
               obj = closure_0(closure_1[5]);
               return obj.isRoleSubscriptionEmoji(arg0, closure_0);
             }
           }
         }
-        const found = stateFromStores.filter(S);
+        const found = stateFromStores.filter(E);
         cResult[4] = stateFromStores;
         cResult[5] = arg0;
         cResult[6] = found;
       } else {
-        class S {
+        class E {
           constructor(arg0) {
             obj = closure_0(closure_1[5]);
             return obj.isRoleSubscriptionEmoji(arg0, closure_0);
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useRoleSubscriptionEmojis(arg0) {
       _require = arg0;
       items = [EmojiStore];
       const items1 = [arg0];

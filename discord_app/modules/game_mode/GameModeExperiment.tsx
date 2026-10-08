@@ -15,7 +15,7 @@ export const getGameModeExperimentConfig = function getGameModeExperimentConfig(
   return closure_2.getConfig({ location: location.location });
 };
 export const useGameModeExperimentConfig = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useGameModeExperimentConfig(location) {
       const cResult = c.c(2);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -28,4 +28,6 @@ export const useGameModeExperimentConfig = ReactCompilerGating.isReactCompilerEn
       }
       return closure_2.useConfig(tmp2);
     }
-  : (location) => closure_2.useConfig({ location: location.location });
+  : function useGameModeExperimentConfig(location) {
+      return closure_2.useConfig({ location: location.location });
+    };

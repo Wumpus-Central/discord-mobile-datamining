@@ -10,7 +10,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/channel/useTextareaPlaceholderAndLabels.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useTextareaPlaceholderAndLabels(arg0) {
       let stringResult = dependencyMap;
       const cResult = c.c(31);
       ({ channel, isReadonly, isCreatingThread } = arg0);
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = undefined !== isReadonly && isReadonly;
       tmp5 = undefined !== isCreatingThread && isCreatingThread;
     }
-  : (isCreatingThread) => {
+  : function useTextareaPlaceholderAndLabels(isCreatingThread) {
       ({ channel, isReadonly } = isCreatingThread);
       if (isReadonly === undefined) {
         isReadonly = false;

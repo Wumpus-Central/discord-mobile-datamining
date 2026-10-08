@@ -2,13 +2,13 @@
 import SnowflakeUtilsDefault from "../../../../../utils/SnowflakeUtils.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06147_LegacyBaseButton.js";
-import ReactionActionCreators from "../../../../reactions/ReactionActionCreators.tsx";
+import LegacyBaseButton from "../../../../../../_runtime/06326_LegacyBaseButton.js";
 import RowGeneratorDefault from "../../../../messages/native/renderer/RowGenerator.tsx";
+import ReactionActionCreators from "../../../../reactions/ReactionActionCreators.tsx";
 import RowGeneratorTypes from "../../../../messages/native/renderer/RowGeneratorTypes.tsx";
 import messages_MessagesUtils from "../../../../messages/native/MessagesUtils.tsx";
-import MessageDataSnowflakeUtils from "../../../../messages/native/snowflake/MessageDataSnowflakeUtils.tsx";
 import handleMessagesTapLink from "../../../../messages/native/handlers/handleMessagesTapLink.tsx";
+import MessageDataSnowflakeUtils from "../../../../messages/native/snowflake/MessageDataSnowflakeUtils.tsx";
 import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -44,13 +44,13 @@ obj.setOptions({
   forcedTheme: ThemeTypes.DARK,
   forceHideSimpleEmbedContent: true,
 });
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let closure_17 = createStyles.createStyles({
   dummyLayout: { position: "absolute", top: 0, left: -9999, width: "100%", opacity: 0 },
 });
 let ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (message) => {
+  ? function MeasureMessage(message) {
       const cResult = message(onMeasureTruncated[14]).c(16);
       message = message.message;
       const onMeasure = message.onMeasure;
@@ -118,7 +118,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn = function n(arg0) {
+      function generateChatItemProps(arg0) {
         message = arg0;
         return {
           onLayout(nativeEvent) {
@@ -142,18 +142,18 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           message,
           style: dummyLayout.dummyLayout,
         };
-      };
+      }
       cResult[0] = disableReactionCreates;
       cResult[1] = result;
       cResult[2] = message;
       cResult[3] = onMeasure;
       cResult[4] = onMeasureTruncated;
       cResult[5] = tmp3.dummyLayout;
-      cResult[6] = fn;
-      tmp5 = fn;
+      cResult[6] = generateChatItemProps;
+      tmp5 = generateChatItemProps;
       const obj2 = message(onMeasureTruncated[15]);
     }
-  : (message) => {
+  : function MeasureMessage(message) {
       message = message.message;
       const onMeasure = message.onMeasure;
       const onMeasureTruncated = message.onMeasureTruncated;
@@ -227,7 +227,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = items1;
       return closure_15(closure_14, obj2);
     };
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_19 = createStyles.createNativeStyleProperties({
   reactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT,
   reactionBorderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT,
@@ -236,7 +236,7 @@ let closure_19 = createStyles.createNativeStyleProperties({
   activeReactionBorderColor: nativeDefault.colors.REACTION_BORDER_REACTED_DEFAULT,
   activeReactionTextColor: nativeDefault.colors.REACTION_TEXT_REACTED_DEFAULT,
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj2 = {
   renderCodedLinks: false,
   renderGiftCode: false,
@@ -276,7 +276,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function MediaMessagePreview(channelId) {
       const cResult = channelId(onClose[14]).c(72);
       channelId = channelId.channelId;
       const messageId = channelId.messageId;
@@ -294,21 +294,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== channelId) {
-        const fn = function p() {
-          let channel;
-          if (null != channelId) {
-            channel = ChannelStore.getChannel(tmp);
+        class R {
+          constructor() {
+            channel = undefined;
+            if (null != channelId) {
+              tmp3 = closure_9;
+              channel = closure_9.getChannel(tmp);
+            }
+            return channel;
           }
-          return channel;
-        };
+        }
         cResult[1] = channelId;
-        cResult[2] = fn;
-        let tmp6 = fn;
+        cResult[2] = R;
       } else {
-        tmp6 = cResult[2];
+        class R {
+          constructor() {
+            channel = undefined;
+            if (null != channelId) {
+              tmp3 = closure_9;
+              channel = closure_9.getChannel(tmp);
+            }
+            return channel;
+          }
+        }
       }
       let obj = channelId(onClose[14]);
-      const stateFromStores = channelId(onClose[18]).useStateFromStores(first, tmp6);
+      const stateFromStores = channelId(onClose[18]).useStateFromStores(first, R);
       disableReactionCreates = messageId(tmp2[19])(stateFromStores).disableReactionCreates;
       const tmpResult = channelId(onClose[18]);
       [r10052, MessageStore] = onTapMessage(full.useState(false), 2);
@@ -319,18 +330,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const first1 = tmp11[0];
       closure_14 = tmp11[1];
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        class P {
+        class G {
           constructor() {
             tmp = closure_14(findNodeHandle(closure_12.current));
             return;
           }
         }
         const items1 = [];
-        cResult[3] = P;
+        cResult[3] = G;
         cResult[4] = items1;
         let tmp14 = items1;
       } else {
-        class P {
+        class G {
           constructor() {
             tmp = closure_14(findNodeHandle(closure_12.current));
             return;
@@ -338,21 +349,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp14 = cResult[4];
       }
-      const effect = full.useEffect(P, tmp14);
+      const effect = full.useEffect(G, tmp14);
       const tmp16 = closure_19(ref.ONYX);
       const reactionsTheme = tmp16;
       const tmp17 = closure_20(ref.ONYX);
       const editedColor = tmp17.editedColor;
       const seeMoreLabelColor = tmp17.seeMoreLabelColor;
       if (cResult[5] === animationDriver) {
-        class P {
+        class G {
           constructor() {
             tmp = closure_14(findNodeHandle(closure_12.current));
             return;
           }
         }
       }
-      function ae(message) {
+      function ne(message) {
         message.canAddNewReactions = !disableReactionCreates;
         message.contextType = RowGeneratorTypes.MessageContextType.MEDIA_VIEWER;
         message.reactTag = first1;
@@ -385,10 +396,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = full;
       cResult[10] = tmp16;
       cResult[11] = seeMoreLabelColor;
-      cResult[12] = ae;
+      cResult[12] = ne;
       const tmp9 = onTapMessage(full.useState(false), 2);
     }
-  : (channelId) => {
+  : function MediaMessagePreview(channelId) {
       channelId = channelId.channelId;
       const messageId = channelId.messageId;
       const onClose = channelId.onClose;

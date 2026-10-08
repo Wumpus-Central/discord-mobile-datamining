@@ -43,7 +43,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/useSortedDevToolsScreens.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSortedDevToolsScreens() {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DevToolsSettingsStore];
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function useSortedDevToolsScreens() {
       const items = [DevToolsSettingsStore];
       initialize.useStateFromStores(items, () => sortedScreenKeys.sortedScreenKeys);
       let sortedScreenKeys;

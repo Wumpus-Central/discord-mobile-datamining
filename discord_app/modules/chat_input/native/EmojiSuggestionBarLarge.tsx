@@ -6,6 +6,7 @@ import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import EmojiPickerListRow from "../../emoji_picker/native/components/EmojiPickerListRow.tsx";
 import openEmojiActionSheet2 from "../../emoji_picker/native/components/openEmojiActionSheet.tsx";
 import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils.tsx";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -17,13 +18,14 @@ function renderEmojiSuggestionBarLargeItem(key, arg1, transitionState, cleanUp) 
   const merged = Object.assign(arg1);
   obj.transitionState = transitionState;
   obj.cleanUp = cleanUp;
-  return <closure_11 key={key} />;
+  return <closure_13 key={key} />;
 }
-let View = fn(17).View;
-const IMAGE_SIZE = fn(9882).IMAGE_SIZE;
+let closure_3 = ["ref"];
+const View = fn(17).View;
+const IMAGE_SIZE = fn(9362).IMAGE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let closure_8 = createStyles.createStyles((arg0) => {
+const createStyles = fn(5090);
+let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { containerLargeWrapper: { overflow: "hidden" }, containerLarge: null, emptySlot: null };
   let str = "space-between";
   if (arg0) {
@@ -58,8 +60,8 @@ const __initData2 = {
   code: "function EmojiSuggestionBarLargeTsx2(){const{heightSv}=this.__closure;return{height:heightSv.get()};}",
 };
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function EmojiSuggestionBarLargeAnimated(arg0) {
       const cResult = c.c(12);
       ({
         reducedMotion: require,
@@ -70,10 +72,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         transitionState,
         cleanUp,
       } = arg0);
-      const tmp5 = _slicedToArray(noop.useState(0), 2);
-      _slicedToArray = tmp5[1];
+      const tmp5 = _slicedToArray(suggestionBarHeight.useState(0), 2);
+      closure_3 = tmp5[1];
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function h(nativeEvent) {
+        const fn = function o(nativeEvent) {
           closure_3(nativeEvent.nativeEvent.layout.width);
         };
         cResult[0] = fn;
@@ -81,16 +83,16 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const truncResult = Math.trunc(tmp5[0] / (suggestionBarHeight + nativeDefault.space.PX_6));
+      const truncResult = Math.trunc(tmp5[0] / (IMAGE_SIZE + nativeDefault.space.PX_6));
       const bound = Math.min(truncResult, 11);
-      const tmp10 = closure_8(truncResult > 11);
-      noop = tmp10;
+      const tmp10 = closure_10(truncResult > 11);
+      const emptySlot = tmp10;
       const sortEmojisForDisplayResult = EmojiSuggestionBarUtils.sortEmojisForDisplay(
         unlockedEmojis,
         lockedEmojis,
         bound,
       );
-      View = sortEmojisForDisplayResult;
+      _slicedToArray = sortEmojisForDisplayResult;
       let length = bound;
       if (truncResult > 11) {
         length = sortEmojisForDisplayResult.length;
@@ -98,16 +100,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = EmojiSuggestionBarUtils;
       suggestionBarHeight = EmojiSuggestionBarUtils.useSuggestionBarHeight(transitionState, cleanUp, 52);
       const tmpResult3 = EmojiSuggestionBarUtils;
-      class M {
-        constructor() {
-          obj = { height: closure_6.get() };
-          return obj;
-        }
-      }
-      M.__closure = { heightSv: suggestionBarHeight };
-      M.__workletHash = 5553872738815;
-      M.__initData = __initData;
-      const animatedStyle = ReanimatedRexport.useAnimatedStyle(M);
+      const fn2 = function w() {
+        return { height: suggestionBarHeight.get() };
+      };
+      fn2.__closure = { heightSv: suggestionBarHeight };
+      fn2.__workletHash = 5553872738815;
+      fn2.__initData = __initData;
+      const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn2);
       const tmp4Result = ReanimatedRexportDefault;
       if (cResult[1] === animatedStyle) {
         if (cResult[2] === tmp10.containerLargeWrapper) {
@@ -194,27 +193,27 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = items;
       const tmpResult4 = ReanimatedRexport;
     }
-  : (arg0) => {
+  : function EmojiSuggestionBarLargeAnimated(arg0) {
       ({ reducedMotion: require, handlePress: importDefault, handlePressEmojiUnavailable: dependencyMap } = arg0);
+      c3 = undefined;
       _slicedToArray = undefined;
-      noop = undefined;
       let suggestionBarHeight;
       ({ unlockedEmojis, lockedEmojis, transitionState, cleanUp } = arg0);
-      [tmp4, c3] = noop.useState(0);
-      const callback = noop.useCallback((nativeEvent) => {
+      [tmp4, c3] = suggestionBarHeight.useState(0);
+      const callback = suggestionBarHeight.useCallback((nativeEvent) => {
         _undefined(nativeEvent.nativeEvent.layout.width);
       }, []);
-      const truncResult = Math.trunc(tmp4 / (suggestionBarHeight + nativeDefault.space.PX_6));
+      const truncResult = Math.trunc(tmp4 / (IMAGE_SIZE + nativeDefault.space.PX_6));
       let length = Math.min(truncResult, 11);
-      const tmp8 = closure_8(truncResult > 11);
-      noop = tmp8;
-      const tmp3 = _slicedToArray(noop.useState(0), 2);
+      const tmp8 = closure_10(truncResult > 11);
+      const emptySlot = tmp8;
+      const tmp3 = _slicedToArray(suggestionBarHeight.useState(0), 2);
       const sortEmojisForDisplayResult = EmojiSuggestionBarUtils.sortEmojisForDisplay(
         unlockedEmojis,
         lockedEmojis,
         length,
       );
-      c5 = sortEmojisForDisplayResult;
+      _slicedToArray = sortEmojisForDisplayResult;
       if (truncResult > 11) {
         length = sortEmojisForDisplayResult.length;
       }
@@ -232,7 +231,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.style = items;
       const tmp9Result2 = ReanimatedRexport;
       obj2.children = (
-        <c5 style={tmp8.containerLarge} onLayout={callback}>
+        <View style={tmp8.containerLarge} onLayout={callback}>
           {Array.from({ length }, (arg0, index) => {
             if (null == _undefined2[index]) {
               const obj = { style: emptySlot.emptySlot };
@@ -271,7 +270,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               );
             }
           })}
-        </c5>
+        </View>
       );
       return jsx(ReanimatedRexportDefault.View, { style: null, children: null });
     };
@@ -279,72 +278,81 @@ ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/EmojiSuggestionBarLarge.tsx");
 
-export const EmojiSuggestionBarLarge = noop.forwardRef(
-  ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0, arg1) => {
-        const cResult = c.c(8);
-        let num = 3;
-        const emojiSuggestionBarState = EmojiSuggestionBarUtils.useEmojiSuggestionBarState(
-          arg0,
-          EmojiSuggestionBarUtils.MAX_SUGGESTIONS_LARGE,
-          3,
-          arg1,
-        );
-        ({ unlockedEmojis, lockedEmojis, reducedMotion, handlePress, handlePressEmojiUnavailable } =
-          emojiSuggestionBarState);
-        let num2 = 0;
-        if (0 === unlockedEmojis.length) {
-          if (num2 === lockedEmojis.length) {
-            if (cResult[6] !== undefined) {
-              const obj3 = { item: undefined, renderItem: renderEmojiSuggestionBarLargeItem };
-              const tmp10 = jsx(native.TransitionItem, {
-                item: undefined,
-                renderItem: renderEmojiSuggestionBarLargeItem,
-              });
-              cResult[6] = undefined;
-              cResult[7] = tmp10;
-              let tmp7 = tmp10;
-            } else {
-              tmp7 = cResult[7];
-            }
-            return tmp7;
-          }
-        }
-        if (cResult[0] === handlePress) {
-          if (cResult[1] === handlePressEmojiUnavailable) {
-            if (cResult[2] === lockedEmojis) {
-              if (cResult[3] === reducedMotion) {
-              }
-            }
-          }
-        }
-        const obj4 = { unlockedEmojis, lockedEmojis, reducedMotion, handlePress, handlePressEmojiUnavailable };
-        cResult[num2] = handlePress;
-        cResult[1] = handlePressEmojiUnavailable;
-        num2 = 2;
-        cResult[2] = lockedEmojis;
-        cResult[num] = reducedMotion;
-        cResult[4] = unlockedEmojis;
-        num = 5;
-        cResult[5] = obj4;
+export const EmojiSuggestionBarLarge = ReactCompilerGating.isReactCompilerEnabled()
+  ? function EmojiSuggestionBarLarge(ref) {
+      const cResult = c.c(11);
+      if (cResult[0] !== ref) {
+        const tmp8 = _objectWithoutProperties(ref.ref, closure_3);
+        cResult[0] = ref.ref;
+        cResult[1] = tmp8;
+        cResult[2] = ref.ref;
+        let tmp5 = ref;
+        let tmp4 = tmp8;
+      } else {
+        tmp4 = cResult[1];
+        tmp5 = cResult[2];
       }
-    : (arg0, arg1) => {
-        const emojiSuggestionBarState = EmojiSuggestionBarUtils.useEmojiSuggestionBarState(
-          arg0,
-          EmojiSuggestionBarUtils.MAX_SUGGESTIONS_LARGE,
-          3,
-          arg1,
-        );
-        const unlockedEmojis = emojiSuggestionBarState.unlockedEmojis;
-        const lockedEmojis = emojiSuggestionBarState.lockedEmojis;
-        const reducedMotion = emojiSuggestionBarState.reducedMotion;
-        const handlePress = emojiSuggestionBarState.handlePress;
-        const handlePressEmojiUnavailable = emojiSuggestionBarState.handlePressEmojiUnavailable;
-        const items = [unlockedEmojis, lockedEmojis, reducedMotion, handlePress, handlePressEmojiUnavailable];
-        const memo = noop.useMemo(
-          () => ({ unlockedEmojis, lockedEmojis, reducedMotion, handlePress, handlePressEmojiUnavailable }),
-          items,
-        );
-        return jsx(native.TransitionItem, { item: memo, renderItem: renderEmojiSuggestionBarLargeItem });
-      },
-);
+      let num4 = 3;
+      const emojiSuggestionBarState = EmojiSuggestionBarUtils.useEmojiSuggestionBarState(
+        tmp4,
+        EmojiSuggestionBarUtils.MAX_SUGGESTIONS_LARGE,
+        3,
+        tmp5,
+      );
+      ({ unlockedEmojis, lockedEmojis, reducedMotion, handlePress, handlePressEmojiUnavailable } =
+        emojiSuggestionBarState);
+      if (0 === unlockedEmojis.length) {
+        if (0 === lockedEmojis.length) {
+          if (cResult[9] !== undefined) {
+            const obj2 = { item: undefined, renderItem: renderEmojiSuggestionBarLargeItem };
+            const tmp15 = jsx(native.TransitionItem, {
+              item: undefined,
+              renderItem: renderEmojiSuggestionBarLargeItem,
+            });
+            cResult[9] = undefined;
+            cResult[10] = tmp15;
+            let tmp12 = tmp15;
+          } else {
+            tmp12 = cResult[10];
+          }
+          return tmp12;
+        }
+      }
+      if (cResult[3] === handlePress) {
+        if (cResult[4] === handlePressEmojiUnavailable) {
+          if (cResult[5] === lockedEmojis) {
+            if (cResult[6] === reducedMotion) {
+            }
+          }
+        }
+      }
+      const obj3 = { unlockedEmojis, lockedEmojis, reducedMotion, handlePress, handlePressEmojiUnavailable };
+      cResult[num4] = handlePress;
+      cResult[4] = handlePressEmojiUnavailable;
+      cResult[5] = lockedEmojis;
+      cResult[6] = reducedMotion;
+      cResult[7] = unlockedEmojis;
+      num4 = 8;
+      cResult[8] = obj3;
+      const tmpResult = EmojiSuggestionBarUtils;
+    }
+  : function EmojiSuggestionBarLarge(ref) {
+      const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+      const emojiSuggestionBarState = EmojiSuggestionBarUtils.useEmojiSuggestionBarState(
+        merged,
+        EmojiSuggestionBarUtils.MAX_SUGGESTIONS_LARGE,
+        3,
+        ref.ref,
+      );
+      const unlockedEmojis = emojiSuggestionBarState.unlockedEmojis;
+      const lockedEmojis = emojiSuggestionBarState.lockedEmojis;
+      const reducedMotion = emojiSuggestionBarState.reducedMotion;
+      const handlePress = emojiSuggestionBarState.handlePress;
+      const handlePressEmojiUnavailable = emojiSuggestionBarState.handlePressEmojiUnavailable;
+      const items = [unlockedEmojis, lockedEmojis, reducedMotion, handlePress, handlePressEmojiUnavailable];
+      const memo = noop.useMemo(
+        () => ({ unlockedEmojis, lockedEmojis, reducedMotion, handlePress, handlePressEmojiUnavailable }),
+        items,
+      );
+      return jsx(native.TransitionItem, { item: memo, renderItem: renderEmojiSuggestionBarLargeItem });
+    };

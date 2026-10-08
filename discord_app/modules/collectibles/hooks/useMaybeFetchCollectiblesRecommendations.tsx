@@ -10,7 +10,7 @@ const useEffect = _mod19.useEffect;
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesRecommendations.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useMaybeFetchCollectiblesRecommendations() {
       const cResult = isEditProfileCollectiblesOrderingEnabled(stateFromStores[4]).c(9);
       let obj = isEditProfileCollectiblesOrderingEnabled(stateFromStores[4]);
       isEditProfileCollectiblesOrderingEnabled = isEditProfileCollectiblesOrderingEnabled(
@@ -62,29 +62,37 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           stateFromStores1(tmp13, tmp14);
         }
       }
-      const fn3 = function h() {
-        let tmp = isEditProfileCollectiblesOrderingEnabled;
-        if (isEditProfileCollectiblesOrderingEnabled) {
-          tmp = null != stateFromStores;
+      class F {
+        constructor() {
+          tmp = closure_0;
+          if (closure_0) {
+            tmp2 = closure_1;
+            tmp3 = null;
+            tmp = null != closure_1;
+          }
+          if (tmp) {
+            tmp = closure_2;
+          }
+          if (tmp) {
+            tmp4 = closure_0;
+            tmp5 = closure_1;
+            obj = closure_0(closure_1[7]);
+            result = obj.maybeFetchCollectiblesRecommendations();
+          }
+          return;
         }
-        if (tmp) {
-          tmp = stateFromStores1;
-        }
-        if (tmp) {
-          const result = CollectiblesRecommendationActionCreators.maybeFetchCollectiblesRecommendations();
-        }
-      };
+      }
       const items2 = [isEditProfileCollectiblesOrderingEnabled, stateFromStores, stateFromStores1];
       cResult[4] = stateFromStores;
       cResult[5] = isEditProfileCollectiblesOrderingEnabled;
       cResult[6] = stateFromStores1;
-      cResult[7] = fn3;
+      cResult[7] = F;
       cResult[8] = items2;
       tmp14 = items2;
-      tmp13 = fn3;
+      tmp13 = F;
       const tmpResult2 = isEditProfileCollectiblesOrderingEnabled(stateFromStores[6]);
     }
-  : () => {
+  : function useMaybeFetchCollectiblesRecommendations() {
       isEditProfileCollectiblesOrderingEnabled = isEditProfileCollectiblesOrderingEnabled(
         stateFromStores[5],
       ).useIsEditProfileCollectiblesOrderingEnabled("edit_profile_preload");

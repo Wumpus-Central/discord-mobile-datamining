@@ -11,6 +11,8 @@ import GuildStore from "../../../../../../stores/GuildStore.tsx";
 import RelationshipStore from "../../../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function updateSettings(arg0, isThread, id2) {
   ({ muted, mute_config } = arg0);
@@ -56,17 +58,18 @@ const View = fn(17).View;
 const ChannelSettingsSections = fn(1085).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 },
   options: { marginBottom: 16 },
   trailing: { flexDirection: "row", alignItems: "center" },
   hint: { marginTop: 8, paddingHorizontal: 12 },
+  headerRightSpacer: { width: fn(9233).MIN_HEADER_HEIGHT },
 };
 let closure_13 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function UnmuteOptions(channel) {
       const cResult = channel(576).c(19);
       channel = channel.channel;
       ({ muteConfig, navigation } = channel);
@@ -78,8 +81,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj2 = { disableColor: true, source: navigation(11078) };
-            const tmp10 = closure_10(tmp(1188).Icon, obj2);
+            const obj2 = { disableColor: true, source: navigation(10441) };
+            const tmp10 = closure_10(tmp(1200).Icon, obj2);
             cResult[4] = tmp10;
             let tmp7 = tmp10;
           } else {
@@ -88,7 +91,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[5] !== channel) {
             const intl = tmp(1126).intl;
             const obj3 = { name: null };
-            const tmpResult = tmp(5049);
+            const tmpResult = tmp(5417);
             obj3.name = tmpResult.computeChannelName(channel, UserStore, RelationshipStore, true);
             const formatResult = intl.format(tmp(1126).t["eC+9rj"], obj3);
             cResult[5] = channel;
@@ -99,7 +102,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[7] !== tmp11) {
             const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp11 };
-            const tmp19 = closure_10(tmp(4892).Text, obj4);
+            const tmp19 = closure_10(tmp(5086).Text, obj4);
             cResult[7] = tmp11;
             cResult[8] = tmp19;
             let tmp17 = tmp19;
@@ -110,7 +113,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[10] === tmp17) {
               let tmp20 = cResult[11];
             }
-            const MuteSettingType = tmp(11079).MuteSettingType;
+            const MuteSettingType = tmp(10442).MuteSettingType;
             const tmp24 = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
             if (cResult[12] === muteConfig) {
               if (cResult[13] === tmp24) {
@@ -135,7 +138,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               tmp29 = tmp32;
             }
             const obj6 = { muteConfig, type: tmp24 };
-            const tmp28 = closure_10(navigation(11079), obj6);
+            const tmp28 = closure_10(navigation(10442), obj6);
             cResult[12] = muteConfig;
             cResult[13] = tmp24;
             cResult[14] = tmp28;
@@ -143,7 +146,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             const isPrivateResult = channel.isPrivate();
           }
           const obj7 = { icon: tmp7, label: tmp17, onPress: tmp5, start: true, end: true };
-          const tmp22 = closure_10(tmp(6000).TableRow, obj7);
+          const tmp22 = closure_10(tmp(6184).TableRow, obj7);
           cResult[9] = tmp5;
           cResult[10] = tmp17;
           cResult[11] = tmp22;
@@ -161,7 +164,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       const obj = channel(576);
     }
-  : (channel) => {
+  : function UnmuteOptions(channel) {
       channel = channel.channel;
       const navigation = channel.navigation;
       const items = [, ,];
@@ -174,20 +177,20 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj2 = { icon: null, label: null, onPress: null, start: true, end: true };
       const tmp = closure_13();
-      obj2.icon = closure_10(channel(1188).Icon, { disableColor: true, source: navigation(11078) });
+      obj2.icon = closure_10(channel(1200).Icon, { disableColor: true, source: navigation(10441) });
       const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       const intl = channel(1126).intl;
       const obj5 = { name: null };
-      const obj3 = { disableColor: true, source: navigation(11078) };
-      obj5.name = channel(5049).computeChannelName(channel, UserStore, RelationshipStore, true);
+      const obj3 = { disableColor: true, source: navigation(10441) };
+      obj5.name = channel(5417).computeChannelName(channel, UserStore, RelationshipStore, true);
       obj4.children = intl.format(channel(1126).t["eC+9rj"], obj5);
-      obj2.label = closure_10(channel(4892).Text, obj4);
+      obj2.label = closure_10(channel(5086).Text, obj4);
       obj2.onPress = callback;
-      const items1 = [closure_10(channel(6000).TableRow, obj2)];
+      const items1 = [closure_10(channel(6184).TableRow, obj2)];
       const obj7 = { muteConfig: channel.muteConfig, type: null };
-      const obj6 = channel(5049);
-      const tmp6 = navigation(11079);
-      const MuteSettingType = channel(11079).MuteSettingType;
+      const obj6 = channel(5417);
+      const tmp6 = navigation(10442);
+      const MuteSettingType = channel(10442).MuteSettingType;
       obj7.type = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
       items1[1] = closure_10(tmp6, obj7);
       obj.children = items1;
@@ -195,17 +198,17 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
-      const cResult = channel(navigation[14]).c(10);
+  ? function MuteOptions(channel) {
+      const cResult = channel(navigation[15]).c(10);
       channel = channel.channel;
       const applicationId = channel.applicationId;
       navigation = channel.navigation;
       const tmp4 = closure_13();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const muteOptions = tmp(tmp2[15]).getMuteOptions();
+        const muteOptions = tmp(tmp2[16]).getMuteOptions();
         cResult[0] = muteOptions;
         let first = muteOptions;
-        const tmpResult = tmp(tmp2[15]);
+        const tmpResult = tmp(tmp2[16]);
       } else {
         first = cResult[0];
       }
@@ -219,7 +222,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             const mapped = first.map((item, index) => {
               ({ label, duration: channel } = item);
               return closure_1_10(
-                channel(navigation[21]).TableRow,
+                channel(navigation[22]).TableRow,
                 {
                   label,
                   onPress() {
@@ -251,7 +254,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           tmp9 = tmp12;
         }
       }
-      const fn = function p(muteDurationSeconds) {
+      const fn = function h(muteDurationSeconds) {
         navigation.goBack();
         const result = MuteSettingsUtils.handleMuteSettingPress({
           channelId: channel.id,
@@ -267,16 +270,16 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = navigation;
       cResult[4] = fn;
       tmp6 = fn;
-      const obj = channel(navigation[14]);
+      const obj = channel(navigation[15]);
       tmp = channel;
       tmp2 = navigation;
     }
-  : (channel) => {
+  : function MuteOptions(channel) {
       channel = channel.channel;
       const applicationId = channel.applicationId;
       const navigation = channel.navigation;
       let memo;
-      memo = memo.useMemo(() => channel(navigation[15]).getMuteOptions(), []);
+      memo = memo.useMemo(() => channel(navigation[16]).getMuteOptions(), []);
       const items = [channel, navigation, applicationId];
       closure_4 = memo.useCallback((muteDurationSeconds) => {
         navigation.goBack();
@@ -295,7 +298,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         children: memo.map((item, index) => {
           ({ label, duration: channel } = item);
           return closure_1_10(
-            channel(navigation[21]).TableRow,
+            channel(navigation[22]).TableRow,
             {
               label,
               onPress() {
@@ -311,23 +314,23 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function NotificationSettingsButton(channel) {
       const cResult = channel(576).c(26);
       channel = channel.channel;
       ({ isMuted, isGuildMuted, messageNotifications, guildMessageNotifications } = channel);
       const tmp4 = closure_13();
       let obj = channel(576);
-      const navigation = channel(1490).useNavigation();
+      const navigation = channel(1502).useNavigation();
       if (cResult[0] === channel) {
         if (cResult[1] === navigation) {
           let tmp6 = cResult[2];
         }
         if (cResult[3] !== messageNotifications) {
-          const messageNotificationsText = tmp(9813).getMessageNotificationsText(messageNotifications);
+          const messageNotificationsText = tmp(10376).getMessageNotificationsText(messageNotifications);
           cResult[3] = messageNotifications;
           cResult[4] = messageNotificationsText;
           let tmp7 = messageNotificationsText;
-          const tmpResult = tmp(9813);
+          const tmpResult = tmp(10376);
         } else {
           tmp7 = cResult[4];
         }
@@ -342,7 +345,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[6] !== tmp7) {
           const obj3 = { variant: "text-md/medium", color: "text-muted", children: tmp7 };
-          const tmp14 = closure_10(tmp(4892).Text, obj3);
+          const tmp14 = closure_10(tmp(5086).Text, obj3);
           cResult[6] = tmp7;
           cResult[7] = tmp14;
           let tmp12 = tmp14;
@@ -351,7 +354,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol2 = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp17 = closure_10(tmp(6000).TableRow.Arrow, {});
+          const tmp17 = closure_10(tmp(6184).TableRow.Arrow, {});
           cResult[8] = tmp17;
           let tmp15 = tmp17;
         } else {
@@ -403,7 +406,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj6 = { isMuted, isGuildMuted, guildMessageNotifications };
-              const tmp28 = closure_10(tmp(11077).MuteSettingsHint, obj6);
+              const tmp28 = closure_10(tmp(10440).MuteSettingsHint, obj6);
               cResult[16] = guildMessageNotifications;
               cResult[17] = isGuildMuted;
               cResult[18] = isMuted;
@@ -412,7 +415,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj7 = { label: tmp10, onPress: tmp6, trailing: tmp18, disabled: tmp22, start: true, end: true };
-          const tmp25 = closure_10(tmp(6000).TableRow, obj7);
+          const tmp25 = closure_10(tmp(6184).TableRow, obj7);
           cResult[12] = tmp6;
           cResult[13] = tmp18;
           cResult[14] = tmp22;
@@ -439,14 +442,14 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = navigation;
       cResult[2] = fn;
       tmp6 = fn;
-      const obj2 = channel(1490);
+      const obj2 = channel(1502);
     }
-  : (guildMessageNotifications) => {
+  : function NotificationSettingsButton(guildMessageNotifications) {
       const channel = guildMessageNotifications.channel;
       ({ isMuted, isGuildMuted, messageNotifications } = guildMessageNotifications);
       let navigation;
       const tmp = closure_13();
-      navigation = channel(navigation[23]).useNavigation();
+      navigation = channel(navigation[24]).useNavigation();
       const items = [channel, navigation];
       const items1 = [messageNotifications];
       const callback = noop.useCallback(() => {
@@ -458,13 +461,13 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const memo = noop.useMemo(() => MuteSettingsUtils.getMessageNotificationsText(messageNotifications), items1);
       const obj2 = { label: null, onPress: null, trailing: null, disabled: null, start: true, end: true };
-      const intl = channel(navigation[18]).intl;
-      obj2.label = intl.string(channel(navigation[18]).t.h850Ss);
+      const intl = channel(navigation[19]).intl;
+      obj2.label = intl.string(channel(navigation[19]).t.h850Ss);
       obj2.onPress = callback;
       const obj3 = { style: tmp.trailing, children: null };
       const items2 = [
-        closure_10(channel(navigation[20]).Text, { variant: "text-md/medium", color: "text-muted", children: memo }),
-        closure_10(channel(navigation[21]).TableRow.Arrow, {}),
+        closure_10(channel(navigation[21]).Text, { variant: "text-md/medium", color: "text-muted", children: memo }),
+        closure_10(channel(navigation[22]).TableRow.Arrow, {}),
       ];
       obj3.children = items2;
       obj2.trailing = closure_11(View, obj3);
@@ -474,11 +477,11 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = { children: null };
       obj2.disabled = tmp11;
-      const items3 = [closure_10(channel(navigation[21]).TableRow, obj2)];
-      let obj = channel(navigation[23]);
+      const items3 = [closure_10(channel(navigation[22]).TableRow, obj2)];
+      let obj = channel(navigation[24]);
       items3[1] = closure_10(View, {
         style: tmp.hint,
-        children: closure_10(channel(navigation[25]).MuteSettingsHint, {
+        children: closure_10(channel(navigation[26]).MuteSettingsHint, {
           isMuted,
           isGuildMuted,
           guildMessageNotifications: guildMessageNotifications.guildMessageNotifications,
@@ -494,15 +497,15 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/det
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
-        const cResult = navigation(stateFromStores[14]).c(39);
+    ? function ConnectedChannelMuteScreen() {
+        const cResult = require("c").c(43);
+        let obj = require("c");
+        _require = closure_13();
         const tmp4 = closure_13();
-        const obj = navigation(stateFromStores[14]);
-        navigation = navigation(stateFromStores[23]).useNavigation();
-        const obj2 = navigation(stateFromStores[23]);
-        const route = navigation(stateFromStores[26]).useRoute();
-        const channelId = route.params.channelId;
-        const applicationId = route.params.applicationId;
+        const navigation = require("useNavigation").useNavigation();
+        const obj2 = require("useNavigation");
+        const route = require("Link").useRoute();
+        channelId = route.params.channelId;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ChannelStore];
           cResult[0] = items;
@@ -511,7 +514,7 @@ export default noop.memo(
           first = cResult[0];
         }
         if (cResult[1] !== channelId) {
-          const fn = function s() {
+          let fn = function s() {
             return ChannelStore.getChannel(channelId);
           };
           cResult[1] = channelId;
@@ -520,14 +523,14 @@ export default noop.memo(
         } else {
           tmp9 = cResult[2];
         }
-        const obj3 = navigation(stateFromStores[26]);
-        stateFromStores = navigation(stateFromStores[27]).useStateFromStores(first, tmp9);
+        const obj3 = require("Link");
+        const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp9);
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [GuildStore];
           cResult[3] = items1;
-          let tmp10 = items1;
+          let tmp11 = items1;
         } else {
-          tmp10 = cResult[3];
+          tmp11 = cResult[3];
         }
         let guild_id;
         if (stateFromStores != null) {
@@ -538,182 +541,69 @@ export default noop.memo(
           if (stateFromStores != null) {
             guild_id1 = stateFromStores.guild_id;
           }
-          const fn2 = function y() {
-            let guild_id;
-            if (stateFromStores != null) {
-              guild_id = stateFromStores.guild_id;
+          class I {
+            constructor() {
+              guild_id = undefined;
+              tmp = closure_6;
+              if (closure_3 != null) {
+                guild_id = closure_3.guild_id;
+              }
+              return closure_6.getGuild(guild_id);
             }
-            return GuildStore.getGuild(guild_id);
-          };
+          }
           cResult[4] = guild_id1;
-          cResult[5] = fn2;
-          let tmp13 = fn2;
+          cResult[5] = I;
+          let tmp14 = I;
         } else {
-          tmp13 = cResult[5];
+          tmp14 = cResult[5];
         }
-        const tmpResult = navigation(stateFromStores[27]);
-        const stateFromStores1 = navigation(stateFromStores[27]).useStateFromStores(tmp10, tmp13);
+        const tmpResult = require("useStateFromStores");
+        const stateFromStores1 = require("useStateFromStores").useStateFromStores(tmp11, tmp14);
         if (cResult[6] === stateFromStores) {
           if (cResult[7] === stateFromStores1) {
-            let tmp16 = cResult[8];
+            let tmp17 = cResult[8];
           }
-          noop = tmp16;
-          if (cResult[9] === stateFromStores) {
-            if (cResult[10] === stateFromStores1) {
-              let tmp18 = cResult[11];
-            }
-            closure_4 = tmp18;
-            if (cResult[12] === navigation) {
-              if (cResult[13] === tmp18) {
-                if (cResult[14] === tmp16) {
-                  let tmp20 = cResult[15];
-                }
-                const layoutEffect = noop.useLayoutEffect(tmp20);
-                if (cResult[16] !== channelId) {
-                  const muteSettings = tmp(tmp2[15]).getMuteSettings(channelId);
-                  cResult[16] = channelId;
-                  cResult[17] = muteSettings;
-                  let tmp23 = muteSettings;
-                  const tmpResult6 = tmp(tmp2[15]);
-                } else {
-                  tmp23 = cResult[17];
-                }
-                ({ muteConfig, messageNotifications, guildMessageNotifications, muted, guildMuted } = tmp23);
-                const bottom = channelId(tmp2[29])().bottom;
-                if (null == stateFromStores) {
-                  return null;
-                } else {
-                  if (cResult[18] !== bottom) {
-                    const obj4 = { paddingBottom: bottom };
-                    cResult[18] = bottom;
-                    cResult[19] = obj4;
-                    let tmp27 = obj4;
-                  } else {
-                    tmp27 = cResult[19];
-                  }
-                  if (cResult[20] === tmp4.container) {
-                    if (cResult[21] === tmp27) {
-                      let tmp28 = cResult[22];
-                    }
-                    if (cResult[23] === applicationId) {
-                      if (cResult[24] === stateFromStores) {
-                        if (cResult[25] === muted) {
-                          if (cResult[26] === muteConfig) {
-                            if (cResult[27] === navigation) {
-                              if (cResult[29] === stateFromStores) {
-                                if (cResult[30] === guildMessageNotifications) {
-                                  if (cResult[31] === guildMuted) {
-                                    if (cResult[32] === muted) {
-                                      if (cResult[33] === messageNotifications) {
-                                        let tmp35 = cResult[34];
-                                      }
-                                      if (cResult[35] === tmp29) {
-                                        if (cResult[36] === tmp35) {
-                                        }
-                                      }
-                                      const obj5 = { style: tmp28, children: null };
-                                      const items2 = [tmp29, tmp35];
-                                      obj5.children = items2;
-                                      const tmp43 = closure_11(closure_4, obj5);
-                                      cResult[35] = tmp29;
-                                      cResult[36] = tmp35;
-                                      cResult[37] = tmp28;
-                                      cResult[38] = tmp43;
-                                    }
-                                  }
-                                }
-                              }
-                              const isPrivateResult = stateFromStores.isPrivate();
-                              let tmp37 = !isPrivateResult;
-                              if (!isPrivateResult) {
-                                const obj6 = {
-                                  isMuted: muted,
-                                  isGuildMuted: guildMuted,
-                                  channel: stateFromStores,
-                                  messageNotifications,
-                                  guildMessageNotifications,
-                                };
-                                tmp37 = closure_10(closure_17, obj6);
-                              }
-                              cResult[29] = stateFromStores;
-                              cResult[30] = guildMessageNotifications;
-                              cResult[31] = guildMuted;
-                              cResult[32] = muted;
-                              cResult[33] = messageNotifications;
-                              cResult[34] = tmp37;
-                              tmp35 = tmp37;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    if (muted) {
-                      const obj7 = { channel: stateFromStores, applicationId, muteConfig, navigation };
-                      let tmp30Result = closure_10(closure_15, obj7);
-                    } else {
-                      const obj8 = { channel: stateFromStores, applicationId, navigation };
-                      tmp30Result = closure_10(closure_16, obj8);
-                    }
-                    cResult[23] = applicationId;
-                    cResult[24] = stateFromStores;
-                    cResult[25] = muted;
-                    cResult[26] = muteConfig;
-                    cResult[27] = navigation;
-                    cResult[28] = tmp30Result;
-                  }
-                  const items3 = [tmp4.container, tmp27];
-                  cResult[20] = tmp4.container;
-                  cResult[21] = tmp27;
-                  cResult[22] = items3;
-                  tmp28 = items3;
-                }
+          closure_4 = tmp17;
+          class I {
+            constructor() {
+              guild_id = undefined;
+              tmp = closure_6;
+              if (closure_3 != null) {
+                guild_id = closure_3.guild_id;
               }
+              return closure_6.getGuild(guild_id);
             }
-            const fn3 = function w() {
-              navigation.setOptions({
-                title: "" + title + " (" + subtitle + ")",
-                headerTitle() {
-                  return closure_2_10(navigation(stateFromStores[28]).GenericHeaderTitle, { title, subtitle });
-                },
-                headerTitleAlign: "center",
-              });
-            };
-            cResult[12] = navigation;
-            cResult[13] = tmp18;
-            cResult[14] = tmp16;
-            cResult[15] = fn3;
-            tmp20 = fn3;
           }
-          const muteSettingSublabel = tmp(tmp2[15]).getMuteSettingSublabel(stateFromStores, stateFromStores1);
+          const muteSettingSublabel = tmp(tmp2[16]).getMuteSettingSublabel(stateFromStores, stateFromStores1);
           cResult[9] = stateFromStores;
           cResult[10] = stateFromStores1;
           cResult[11] = muteSettingSublabel;
-          tmp18 = muteSettingSublabel;
-          const tmpResult7 = tmp(tmp2[15]);
+          const tmpResult5 = tmp(tmp2[16]);
         }
-        const tmpResult5 = navigation(stateFromStores[27]);
-        const muteSettingLabel = navigation(stateFromStores[15]).getMuteSettingLabel(stateFromStores, stateFromStores1);
+        const tmpResult4 = require("useStateFromStores");
+        const muteSettingLabel = require("MuteSettingsUtils").getMuteSettingLabel(stateFromStores, stateFromStores1);
         cResult[6] = stateFromStores;
         cResult[7] = stateFromStores1;
         cResult[8] = muteSettingLabel;
-        tmp16 = muteSettingLabel;
-        const tmpResult8 = navigation(stateFromStores[15]);
+        tmp17 = muteSettingLabel;
+        const tmpResult6 = require("MuteSettingsUtils");
       }
-    : () => {
+    : function ConnectedChannelMuteScreen() {
         const tmp = closure_13();
-        navigation = navigation(stateFromStores[23]).useNavigation();
-        const obj = navigation(stateFromStores[23]);
-        const route = navigation(stateFromStores[26]).useRoute();
-        const channelId = route.params.channelId;
+        _require = tmp;
+        const navigation = require("useNavigation").useNavigation();
+        let obj = require("useNavigation");
+        const route = require("Link").useRoute();
+        channelId = route.params.channelId;
         const applicationId = route.params.applicationId;
-        const obj2 = navigation(stateFromStores[26]);
+        const obj2 = require("Link");
         const items = [closure_5];
-        stateFromStores = navigation(stateFromStores[27]).useStateFromStores(items, () =>
+        const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
           ChannelStore.getChannel(channelId),
         );
-        const obj3 = navigation(stateFromStores[27]);
-        const items1 = [GuildStore];
-        const stateFromStores1 = navigation(stateFromStores[27]).useStateFromStores(items1, () => {
+        const obj3 = require("useStateFromStores");
+        const items1 = [closure_6];
+        const stateFromStores1 = require("useStateFromStores").useStateFromStores(items1, () => {
           let guild_id;
           if (stateFromStores != null) {
             guild_id = stateFromStores.guild_id;
@@ -721,61 +611,78 @@ export default noop.memo(
           return GuildStore.getGuild(guild_id);
         });
         const items2 = [stateFromStores, stateFromStores1];
-        closure_4 = stateFromStores1.useMemo(
+        closure_5 = stateFromStores.useMemo(
           () => MuteSettingsUtils.getMuteSettingLabel(stateFromStores, stateFromStores1),
           items2,
         );
         const items3 = [stateFromStores, stateFromStores1];
-        closure_5 = stateFromStores1.useMemo(
+        closure_6 = stateFromStores.useMemo(
           () => MuteSettingsUtils.getMuteSettingSublabel(stateFromStores, stateFromStores1),
           items3,
         );
-        const layoutEffect = stateFromStores1.useLayoutEffect(() => {
-          navigation.setOptions({
+        const obj5 = require("useStateFromStores");
+        let isIOSResult = require("PlatformUtils").isIOS();
+        if (isIOSResult) {
+          let isThreadResult;
+          if (stateFromStores != null) {
+            isThreadResult = stateFromStores.isThread();
+          }
+          isIOSResult = isThreadResult;
+        }
+        RelationshipStore = isIOSResult;
+        const layoutEffect = obj6.useLayoutEffect(() => {
+          const obj = {
             title: "" + title + " (" + subtitle + ")",
             headerTitle() {
-              return closure_2_10(navigation(stateFromStores[28]).GenericHeaderTitle, { title, subtitle });
+              return closure_2_10(closure_0(channelId[30]).GenericHeaderTitle, { title, subtitle });
             },
+            headerRight: null,
             headerTitleAlign: "center",
-          });
+          };
+          let fn;
+          if (isIOSResult) {
+            fn = () => closure_2_10(stateFromStores1, { style: closure_1_0.headerRightSpacer });
+          }
+          obj.headerRight = fn;
+          navigation.setOptions(obj);
         });
         const items4 = [channelId];
-        const memo = stateFromStores1.useMemo(() => MuteSettingsUtils.getMuteSettings(channelId), items4);
+        const memo = obj6.useMemo(() => MuteSettingsUtils.getMuteSettings(channelId), items4);
         const muted = memo.muted;
         ({ muteConfig, messageNotifications, guildMessageNotifications, guildMuted } = memo);
-        let tmp9Result = null;
+        let tmp12Result = null;
         if (null != stateFromStores) {
           const obj4 = { style: null, children: null };
           const items5 = [tmp.container];
-          const obj6 = { paddingBottom: tmp7 };
-          items5[1] = obj6;
+          const obj8 = { paddingBottom: tmp10 };
+          items5[1] = obj8;
           obj4.style = items5;
           if (muted) {
-            const obj7 = { channel: stateFromStores, applicationId, muteConfig, navigation };
-            let tmp11Result = closure_10(closure_15, obj7);
-            let tmp14 = closure_10;
+            const obj9 = { channel: stateFromStores, applicationId, muteConfig, navigation };
+            let tmp14Result = closure_10(closure_15, obj9);
+            let tmp17 = closure_10;
           } else {
-            const obj8 = { channel: stateFromStores, applicationId, navigation };
-            tmp11Result = closure_10(closure_16, obj8);
-            tmp14 = closure_10;
+            const obj10 = { channel: stateFromStores, applicationId, navigation };
+            tmp14Result = closure_10(closure_16, obj10);
+            tmp17 = closure_10;
           }
-          const items6 = [tmp11Result];
+          const items6 = [tmp14Result];
           const isPrivateResult = stateFromStores.isPrivate();
-          let tmp14Result = !isPrivateResult;
+          let tmp17Result = !isPrivateResult;
           if (!isPrivateResult) {
-            const obj9 = {
+            const obj11 = {
               isMuted: muted,
               isGuildMuted: guildMuted,
               channel: stateFromStores,
               messageNotifications,
               guildMessageNotifications,
             };
-            tmp14Result = tmp14(closure_17, obj9);
+            tmp17Result = tmp17(closure_17, obj11);
           }
-          items6[1] = tmp14Result;
+          items6[1] = tmp17Result;
           obj4.children = items6;
-          tmp9Result = closure_11(closure_4, obj4);
+          tmp12Result = closure_11(stateFromStores1, obj4);
         }
-        return tmp9Result;
+        return tmp12Result;
       },
 );

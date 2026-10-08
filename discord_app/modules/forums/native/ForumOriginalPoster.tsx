@@ -9,18 +9,18 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flexDirection: "row", alignItems: "center", justifyContent: "center" },
   opIcon: { borderRadius: nativeDefault.radii.sm, marginEnd: 8, paddingHorizontal: 4 },
   opIconBackground: null,
 };
 let obj3 = { borderRadius: nativeDefault.radii.sm, marginEnd: 8, paddingHorizontal: 4 };
-obj2.opIconBackground = { backgroundColor: fn(5627).DARK_BRAND_260_LIGHT_BRAND_200 };
+obj2.opIconBackground = { backgroundColor: fn(5974).DARK_BRAND_260_LIGHT_BRAND_200 };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ForumOriginalPoster() {
       const cResult = c.c(10);
       const tmp4 = closure_5();
       if (cResult[0] === tmp4.opIcon) {
@@ -80,7 +80,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp5 = items1;
     }
-  : () => {
+  : function ForumOriginalPoster() {
       const tmp = closure_5();
       const obj = { style: tmp.container, children: null };
       const obj2 = { style: null, children: null };

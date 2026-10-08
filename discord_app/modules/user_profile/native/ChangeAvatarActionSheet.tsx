@@ -8,8 +8,8 @@ import TableRow from "../../../design/components/TableRow/native/TableRow.native
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
+import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import UserProfileUpsellButtonDefault from "UserProfileUpsellButton.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1085).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   nitroWheel: { marginLeft: nativeDefault.space.PX_8 },
   sublabel: null,
@@ -58,7 +58,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/ChangeAvatarActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ChangeAvatarActionSheet(arg0) {
       const cResult = c.c(41);
       ({
         handleUploadAvatarSelect,
@@ -305,7 +305,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmpResult = initialize;
     }
-  : (showRemoveAvatar) => {
+  : function ChangeAvatarActionSheet(showRemoveAvatar) {
       ({ handleUploadGIFAvatarSelect, handleEditAvatarDecorationSelect, showAnimatedAvatarUpsell } = showRemoveAvatar);
       ({ handleUploadAvatarSelect, handleRemoveAvatarSelect } = showRemoveAvatar);
       if (showAnimatedAvatarUpsell === undefined) {

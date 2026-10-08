@@ -14,7 +14,7 @@ const useMemo = _mod19.useMemo;
 const result = size.fileFinishedImporting("modules/user_profile/useProfileThemeValues.native.tsx");
 
 export const useProfileThemeValues = ReactCompilerGating.isReactCompilerEnabled()
-  ? (theme) => {
+  ? function useProfileThemeValues(theme) {
       const cResult = c.c(15);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
@@ -108,7 +108,7 @@ export const useProfileThemeValues = ReactCompilerGating.isReactCompilerEnabled(
       }
       const tmpResult = useStateFromStores;
     }
-  : (theme) => {
+  : function useProfileThemeValues(theme) {
       _require = theme;
       const items = [AccessibilityStore];
       const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => saturation.saturation);

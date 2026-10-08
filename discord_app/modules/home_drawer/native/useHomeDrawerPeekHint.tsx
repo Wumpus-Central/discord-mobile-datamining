@@ -12,12 +12,12 @@ const require = globalThis.__r;
 
 require = fn;
 const ME = fn(1085).ME;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 let c8 = 2000;
-const Easing = fn(4618).Easing;
-const easing = Easing.inOut(fn(4618).Easing.cubic);
+const Easing = fn(4810).Easing;
+const easing = Easing.inOut(fn(4810).Easing.cubic);
 let closure_10 = [];
-let items = [fn(2036).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX];
+let items = [fn(2048).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX];
 let closure_13 = { code: "function useHomeDrawerPeekHintTsx2(isDragged,wasDragged){const{isPeekGranted,runOnJS,handleDrawerDragged}=this.__closure;if(!isPeekGranted||wasDragged==null){return;}if(isDragged&&!wasDragged){runOnJS(handleDrawerDragged)();}}" };
 let __initData = { code: "function useHomeDrawerPeekHintTsx3(){const{gestureState,panelX,PEEK_HINT_DRAWER_DRAG_THRESHOLD}=this.__closure;return gestureState.get().active&&panelX.get()>PEEK_HINT_DRAWER_DRAG_THRESHOLD;}" };
 let __initData2 = { code: "function useHomeDrawerPeekHintTsx4(isDragged,wasDragged){const{isPeekGranted,runOnJS,handleDrawerDragged}=this.__closure;if(!isPeekGranted||wasDragged==null)return;if(isDragged&&!wasDragged){runOnJS(handleDrawerDragged)();}}" };
@@ -26,7 +26,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/useHomeDrawerPeekHint.tsx");
 
 export const PEEK_HINT_DISTANCE = 40;
-export const useHomeDrawerPeekHint = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useHomeDrawerPeekHint = ReactCompilerGating.isReactCompilerEnabled() ? (function useHomeDrawerPeekHint(arg0, arg1) {
   _require = arg1;
   const cResult = require("c").c(26);
   const tmp4 = noteInteraction();
@@ -196,7 +196,7 @@ export const useHomeDrawerPeekHint = ReactCompilerGating.isReactCompilerEnabled(
   }
   tmp24 = closure_10;
   tmp13 = !require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX);
-}) : ((arg0, arg1) => {
+}) : (function useHomeDrawerPeekHint(arg0, arg1) {
   let tmp = arg0;
   _require = arg1;
   const tmp2 = noteInteraction();

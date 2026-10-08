@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileFixedBackground.tsx
 import c from "../../../../_runtime/00576_c.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import useUserProfileColors from "../hooks/native/useUserProfileColors.tsx";
 import useUserProfileGradientColors from "../hooks/native/useUserProfileGradientColors.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function UserProfileFixedBackground(arg0) {
         const cResult = c.c(20);
         ({ style, gradientHeight, bannerHeight } = arg0);
         const themeContext = native.useThemeContext();
@@ -128,7 +128,7 @@ export default noop.memo(
         cResult[3] = obj6;
         tmp5 = obj6;
       }
-    : (style) => {
+    : function UserProfileFixedBackground(style) {
         style = style.style;
         ({ gradientHeight, bannerHeight } = style);
         const themeContext = native.useThemeContext();

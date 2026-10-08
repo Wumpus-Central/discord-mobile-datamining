@@ -7,12 +7,12 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 let ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCoachmarkAssetReady(arg0) {
       const cResult = themeAndReducedMotionAwareAssetUrl(576).c(3);
       let obj = themeAndReducedMotionAwareAssetUrl(576);
       themeAndReducedMotionAwareAssetUrl =
-        themeAndReducedMotionAwareAssetUrl(10498).useThemeAndReducedMotionAwareAssetUrl(arg0);
-      let obj2 = themeAndReducedMotionAwareAssetUrl(10498);
+        themeAndReducedMotionAwareAssetUrl(10095).useThemeAndReducedMotionAwareAssetUrl(arg0);
+      let obj2 = themeAndReducedMotionAwareAssetUrl(10095);
       [tmp4, importDefault] = noop.useState(null);
       if (cResult[0] !== themeAndReducedMotionAwareAssetUrl) {
         const fn = function u() {
@@ -46,9 +46,9 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp5, tmp6);
       return null == themeAndReducedMotionAwareAssetUrl || tmp4 === themeAndReducedMotionAwareAssetUrl;
     }
-  : (arg0) => {
+  : function useCoachmarkAssetReady(arg0) {
       themeAndReducedMotionAwareAssetUrl =
-        themeAndReducedMotionAwareAssetUrl(10498).useThemeAndReducedMotionAwareAssetUrl(arg0);
+        themeAndReducedMotionAwareAssetUrl(10095).useThemeAndReducedMotionAwareAssetUrl(arg0);
       const tmp2 = _slicedToArray(noop.useState(null), 2);
       closure_1 = tmp2[1];
       const items = [themeAndReducedMotionAwareAssetUrl];
@@ -80,7 +80,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (asset, asset2) => {
+  ? function useGiftingPromotionAssetsReady(asset, asset2) {
       const cResult = c.c(3);
       asset = undefined;
       if (asset != null) {
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj2;
       tmp7 = obj2;
     }
-  : (asset, asset2) => {
+  : function useGiftingPromotionAssetsReady(asset, asset2) {
       asset = undefined;
       if (asset != null) {
         asset = asset.asset;

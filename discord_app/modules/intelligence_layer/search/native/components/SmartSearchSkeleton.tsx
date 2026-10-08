@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef3919 from "../../SmartSearch.messages.js";
+import _modDef4051 from "../../SmartSearch.messages.js";
 import AccessibilityPreferencesContext from "../../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
 import AILoader from "../../../../../design/visual-identities/ai/AILoader/AILoader.native.tsx";
 import AIShimmer from "../../../../../design/visual-identities/ai/AIShimmer/AIShimmer.native.tsx";
@@ -11,20 +11,20 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const AILoaderConstants = fn(14228);
+const AILoaderConstants = fn(14052);
 ({ AI_LOADER_CYCLE_MS: hasOwnProperty, AI_LOADER_REDUCED_MOTION_CYCLE_MS: metroRequire } = AILoaderConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let items = [
-  _modDef3919.Sb2fo2,
-  _modDef3919.rXNe0Z,
-  _modDef3919["22g6Ju"],
-  _modDef3919.IogGZY,
-  _modDef3919.UEnMJF,
-  _modDef3919.kk7BVL,
-  _modDef3919.UVa49v,
+  _modDef4051.Sb2fo2,
+  _modDef4051.rXNe0Z,
+  _modDef4051["22g6Ju"],
+  _modDef4051.IogGZY,
+  _modDef4051.UEnMJF,
+  _modDef4051.kk7BVL,
+  _modDef4051.UVa49v,
 ];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles((arg0) => {
   let num;
   if (arg0) {
@@ -65,12 +65,12 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (isCollapsed) => {
+    ? function SmartSearchSkeleton(isCollapsed) {
         const cResult = c.c(21);
         isCollapsed = isCollapsed.isCollapsed;
         const tmp4 = closure_10(isCollapsed);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          items = [_modDef3919.ffCCEe];
+          items = [_modDef4051.ffCCEe];
           HermesBuiltin.arraySpread(
             items.sort(() => Math.random() - 0.5),
             1,
@@ -201,14 +201,14 @@ export default noop.memo(
           tmp19 = tmp21;
         }
       }
-    : (isCollapsed) => {
+    : function SmartSearchSkeleton(isCollapsed) {
         isCollapsed = isCollapsed.isCollapsed;
         let reducedMotion;
         const tmp = closure_10(isCollapsed);
-        reducedMotion = noop.useContext(reducedMotion(4602).AccessibilityPreferencesContext).reducedMotion;
+        reducedMotion = noop.useContext(reducedMotion(4794).AccessibilityPreferencesContext).reducedMotion;
         items = [reducedMotion.enabled];
         const memo = noop.useMemo(() => {
-          items = [_modDef3919.ffCCEe, ...closure_1_9.sort(() => Math.random() - 0.5)];
+          items = [_modDef4051.ffCCEe, ...closure_1_9.sort(() => Math.random() - 0.5)];
           return items.map((item) => {
             const intl = reducedMotion(dependencyMap[10]).intl;
             return intl.string(item);
@@ -230,8 +230,8 @@ export default noop.memo(
         let obj = { style: tmp.block, children: null };
         let obj2 = { style: tmp.header, children: null };
         const items1 = [
-          closure_7(reducedMotion(14227).AILoader, { size: 12, color: "interactive-text-default" }),
-          closure_7(reducedMotion(14231).AIShimmer, {
+          closure_7(reducedMotion(14051).AILoader, { size: 12, color: "interactive-text-default" }),
+          closure_7(reducedMotion(14055).AIShimmer, {
             text: memo,
             variant: "text-sm/semibold",
             color: "interactive-text-default",

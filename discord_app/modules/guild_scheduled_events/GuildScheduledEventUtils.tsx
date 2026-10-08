@@ -1,6 +1,6 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef4467 from "../../../_runtime/metro/04467__.js";
+import _modDef4659 from "../../../_runtime/metro/04659__.js";
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -18,12 +18,12 @@ export const getNextShownUpcomingEventNoticeType = function getNextShownUpcoming
   arg2,
   flag,
 ) {
-  const obj = _modDef4467();
+  const obj = _modDef4659();
   const time = new Date(guildScheduledEvent.scheduled_start_time).getTime();
   const diff = time - React4;
   if (obj.isBetween(diff, time)) {
     if (null != arg1) {
-      const obj4 = _modDef4467(arg1);
+      const obj4 = _modDef4659(arg1);
       const isBetweenResult = obj4.isBetween(diff, time);
       let EVENT_STARTING_SOON;
       if (!isBetweenResult) {

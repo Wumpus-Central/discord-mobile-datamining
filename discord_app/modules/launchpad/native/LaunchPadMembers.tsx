@@ -13,7 +13,7 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   wrapper: { minHeight: 16 },
   listStyle: { flex: 0 },
@@ -26,12 +26,12 @@ const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadMem
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function LaunchPadMembers() {
         const cResult = c.c(28);
         const tmp4 = closure_7();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [SelectedChannelStore, ChannelStore];
-          const fn = function y() {
+          const fn = function h() {
             currentlySelectedChannelId = currentlySelectedChannelId.getCurrentlySelectedChannelId();
             channel = channel.getChannel(currentlySelectedChannelId);
             if (null != currentlySelectedChannelId) {
@@ -51,7 +51,7 @@ export default noop.memo(
                 }
               }
             }
-            return { channelId: "unicodeVersion", type: false };
+            return { channelId: "code", type: "man_with_veil_light_skin_tone" };
           };
           cResult[0] = items;
           cResult[1] = fn;
@@ -212,7 +212,7 @@ export default noop.memo(
         }
         const tmpResult = useStateFromStores;
       }
-    : () => {
+    : function LaunchPadMembers() {
         const tmp = closure_7();
         const items = [SelectedChannelStore, ChannelStore];
         const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(items, () => {
@@ -235,7 +235,7 @@ export default noop.memo(
               }
             }
           }
-          return { channelId: "unicodeVersion", type: false };
+          return { channelId: "code", type: "man_with_veil_light_skin_tone" };
         });
         if ("private" === stateFromStoresObject.type) {
           let obj2 = { style: tmp.wrapper, children: null };

@@ -8,7 +8,7 @@ const require = globalThis.__r;
 ({ useEffect: c3, useRef: closure_4 } = noop);
 let result = size.fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx");
 
-export const useCommunicationDisabledCountdownCleanup = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useCommunicationDisabledCountdownCleanup = ReactCompilerGating.isReactCompilerEnabled() ? (function useCommunicationDisabledCountdownCleanup(arg0) {
   _require = arg0;
   const cResult = require("c").c(15);
   if (cResult[0] !== arg0) {
@@ -58,7 +58,7 @@ export const useCommunicationDisabledCountdownCleanup = ReactCompilerGating.isRe
             }
           }
           const items = [guildId, userId, seconds, communicationDisabledUntil, arg0];
-          class T {
+          class D {
             constructor() {
               if (null != closure_0) {
                 tmp = guildId;
@@ -96,7 +96,7 @@ export const useCommunicationDisabledCountdownCleanup = ReactCompilerGating.isRe
         }
       }
     }
-    class T {
+    class D {
       constructor() {
         if (null != closure_0) {
           tmp = guildId;
@@ -129,10 +129,10 @@ export const useCommunicationDisabledCountdownCleanup = ReactCompilerGating.isRe
     cResult[5] = arg0;
     cResult[6] = seconds;
     cResult[7] = userId;
-    cResult[8] = T;
-    tmp14 = T;
+    cResult[8] = D;
+    tmp14 = D;
   }
-}) : ((arg0) => {
+}) : (function useCommunicationDisabledCountdownCleanup(arg0) {
   closure_0 = arg0;
   let obj = arg0;
   if (arg0 == null) {

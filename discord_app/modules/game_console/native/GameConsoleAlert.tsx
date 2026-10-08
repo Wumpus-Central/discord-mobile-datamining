@@ -6,7 +6,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   errorCodeText: { marginTop: 16 },
   alertBody: { marginTop: 0 },
@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/GameConsoleAlert.tsx");
 
 export const SelfDismissibleAlertBody = ReactCompilerGating.isReactCompilerEnabled()
-  ? (errorCodeMessage) => {
+  ? function SelfDismissibleAlertBody(errorCodeMessage) {
       const cResult = dismissCallback(stateFromStores[6]).c(22);
       ({ body, dismissCallback } = errorCodeMessage);
       errorCodeMessage = errorCodeMessage.errorCodeMessage;
@@ -124,7 +124,7 @@ export const SelfDismissibleAlertBody = ReactCompilerGating.isReactCompilerEnabl
       tmp8 = fn2;
       const tmpResult = dismissCallback(stateFromStores[7]);
     }
-  : (errorCodeMessage) => {
+  : function SelfDismissibleAlertBody(errorCodeMessage) {
       ({ body, dismissCallback } = errorCodeMessage);
       errorCodeMessage = errorCodeMessage.errorCodeMessage;
       let stateFromStores;

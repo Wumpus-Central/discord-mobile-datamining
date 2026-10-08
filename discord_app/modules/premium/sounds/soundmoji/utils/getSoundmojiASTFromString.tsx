@@ -1,7 +1,7 @@
 // discord_app/modules/premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx
 import AvatarUtils from "../../../../../utils/AvatarUtils.tsx";
-import SoundmojiRenderingExperiment from "../SoundmojiRenderingExperiment.tsx";
 import isSoundValidDefault from "isSoundValid.tsx";
+import SoundmojiRenderingExperiment from "../SoundmojiRenderingExperiment.tsx";
 import getSoundFromMessageDefault from "getSoundFromMessage.tsx";
 import getSoundStringDefault from "getSoundString.tsx";
 import SoundboardStore from "../../../../soundboard/SoundboardStore.tsx";

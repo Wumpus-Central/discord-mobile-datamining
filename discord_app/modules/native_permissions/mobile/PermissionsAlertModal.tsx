@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/native_permissions/mobile/PermissionsAlertModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PermissionsAlertModal(arg0) {
       const cResult = c.c(10);
       ({ title, body, onConfirm } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp16;
       tmp15 = tmp16;
     }
-  : (arg0) => {
+  : function PermissionsAlertModal(arg0) {
       ({ title, body, onConfirm } = arg0);
       const obj = { title, content: body, actions: null };
       const obj2 = { children: null };

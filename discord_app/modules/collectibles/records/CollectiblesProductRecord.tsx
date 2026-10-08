@@ -5,7 +5,7 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7070);
+const CollectiblesItemRecord = fn(7256);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } =
   CollectiblesItemRecord);
 let closure_7 = fn(1087).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
@@ -255,17 +255,17 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 summary: null,
                 styles: "Button",
                 type: "Array",
-                premiumType: "unicodeVersion",
-                items: "<string:858992908>",
-                categorySkuId: "<string:858993459>",
-                isCategoryReward: "<string:3678486499>",
-                prices: "<string:1358955069>",
-                previewAssets: "<string:858859638>",
-                googleSkuIds: "<string:858993459>",
-                eligibleOffers: "<string:1111483187>",
-                variants: "M11 6V5H9v1H7V5H5v1H4v3h1v1h2.01v1h2v-1H11V9h1V6h-1Z",
-                bundledProducts: "#fff",
-                isFirstParty: "<string:822790737>",
+                premiumType: "apply",
+                items: "<string:33554879>",
+                categorySkuId: "IMAGE_ONLY_ANSWERS",
+                isCategoryReward: "<string:2052129024>",
+                prices: 553217,
+                previewAssets: 34668544,
+                googleSkuIds: 12288116,
+                eligibleOffers: 245760,
+                variants: 256,
+                bundledProducts: 16384000,
+                isFirstParty: -470855424,
               };
               let str;
               if (first != null) {

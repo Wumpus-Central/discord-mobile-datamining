@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles(() => {
   const CONTROL_RADIO_ICON_SIZE_DEFAULT = nativeDefault.modules.mobile.CONTROL_RADIO_ICON_SIZE_DEFAULT;
   const CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT = nativeDefault.modules.mobile.CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT;
@@ -62,7 +62,7 @@ const __initData6 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (point) => {
+  ? function useRadioStyles(point) {
       _require = point;
       const cResult = require("c").c(4);
       const tmp4 = derivedValue1();
@@ -135,7 +135,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         T.__initData = __initData3;
         return tmp(tmp2[7]).useAnimatedStyle(T);
       }
-      const fn = function s() {
+      const fn = function l() {
         const result = sharedValue.set(closure_0);
       };
       const items = [point, sharedValue];
@@ -147,7 +147,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       const obj2 = require("ReanimatedRexport");
     }
-  : (point) => {
+  : function useRadioStyles(point) {
       _require = point;
       const tmp = derivedValue1();
       const selected = tmp.selected;
@@ -158,32 +158,25 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const result = sharedValue.set(closure_0);
       }, items);
       const obj = require("ReanimatedRexport");
-      class R {
-        constructor() {
-          tmp = closure_0;
-          tmp2 = closure_2;
-          obj = closure_0(closure_2[8]);
-          if (closure_3.get()) {
-            tmp4 = selected;
-            borderColor = selected.borderColor;
-          } else {
-            tmp3 = unselected;
-            borderColor = unselected.borderColor;
-          }
-          return obj.withSpring(borderColor, tmp(tmp2[9]).SUBTLE_SPRING, "animate-always");
+      const fn = function h() {
+        if (sharedValue.get()) {
+          let borderColor = selected.borderColor;
+        } else {
+          borderColor = unselected.borderColor;
         }
-      }
+        return spring.withSpring(borderColor, springPresets.SUBTLE_SPRING, "animate-always");
+      };
       const obj2 = require("ReanimatedRexport");
-      R.__closure = {
+      fn.__closure = {
         withSpring: require("spring").withSpring,
         selectedShared: sharedValue,
         selectedStyles: selected,
         unselectedStyles: unselected,
         SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
       };
-      R.__workletHash = 898669597880;
-      R.__initData = __initData4;
-      const derivedValue = obj2.useDerivedValue(R);
+      fn.__workletHash = 898669597880;
+      fn.__initData = __initData4;
+      const derivedValue = obj2.useDerivedValue(fn);
       const obj3 = {
         withSpring: require("spring").withSpring,
         selectedShared: sharedValue,
@@ -191,7 +184,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         unselectedStyles: unselected,
         SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
       };
-      const fn = function w() {
+      const fn2 = function w() {
         if (sharedValue.get()) {
           let backgroundColor = selected.backgroundColor;
         } else {
@@ -200,16 +193,16 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         return spring.withSpring(backgroundColor, springPresets.SUBTLE_SPRING, "animate-always");
       };
       const obj4 = require("ReanimatedRexport");
-      fn.__closure = {
+      fn2.__closure = {
         withSpring: require("spring").withSpring,
         selectedShared: sharedValue,
         selectedStyles: selected,
         unselectedStyles: unselected,
         SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
       };
-      fn.__workletHash = 8933067400601;
-      fn.__initData = __initData5;
-      derivedValue1 = obj4.useDerivedValue(fn);
+      fn2.__workletHash = 8933067400601;
+      fn2.__initData = __initData5;
+      derivedValue1 = obj4.useDerivedValue(fn2);
       const obj5 = {
         withSpring: require("spring").withSpring,
         selectedShared: sharedValue,
@@ -236,10 +229,10 @@ const __initData8 = {
 };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (useReducedMotion, selected) => {
+  ? function useRadioDotStyles(useReducedMotion, selected) {
       _require = useReducedMotion;
       closure_1 = selected;
-      const fn = function l() {
+      const fn = function s() {
         let num = 0.5;
         if (closure_0) {
           num = 1;
@@ -272,10 +265,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__initData = __initData7;
       return obj.useAnimatedStyle(fn);
     }
-  : (useReducedMotion, selected) => {
+  : function useRadioDotStyles(useReducedMotion, selected) {
       _require = useReducedMotion;
       closure_1 = selected;
-      const fn = function l() {
+      const fn = function s() {
         let num = 0.5;
         if (closure_0) {
           num = 1;
@@ -312,7 +305,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Forms/native/FormRadio.native.tsx");
 
 export const FormRadio = ReactCompilerGating.isReactCompilerEnabled()
-  ? (selected) => {
+  ? function FormRadio(selected) {
       const cResult = c.c(9);
       selected = selected.selected;
       const tmp3 = closure_5();
@@ -357,7 +350,7 @@ export const FormRadio = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp6 = items1;
     }
-  : (selected) => {
+  : function FormRadio(selected) {
       selected = selected.selected;
       const tmp = closure_5();
       const tmp2 = closure_12(selected);

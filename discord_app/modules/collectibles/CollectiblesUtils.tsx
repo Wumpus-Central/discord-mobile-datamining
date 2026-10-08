@@ -302,7 +302,7 @@ export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledPro
         return acc + num;
       }, 0);
     } else {
-      tmp(1369);
+      tmp(1381);
     }
     DEFAULT = constants3.DEFAULT;
     obj = require("PlatformUtils");
@@ -415,7 +415,7 @@ export const getProductDiscount = function getProductDiscount(product, hasShopDi
           return acc + num;
         }, 0);
       } else {
-        tmp(1369);
+        tmp(1381);
       }
       DEFAULT = constants3.DEFAULT;
       obj = require("PlatformUtils");
@@ -685,21 +685,21 @@ export const getDaysRemaining = function getDaysRemaining(date) {
     (Date.UTC(fullYear1, month1, date.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000,
   );
 };
-export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(date) {
-  let tmp = null != date;
+export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(stateFromStores) {
+  let tmp = null != stateFromStores;
   if (tmp) {
     const _Date = Date;
-    date = new Date();
+    const date = new Date();
     const _Date2 = Date;
     const fullYear = date.getFullYear();
     const month = date.getMonth();
     const _Date3 = Date;
-    const fullYear1 = date.getFullYear();
-    const month1 = date.getMonth();
+    const fullYear1 = stateFromStores.getFullYear();
+    const month1 = stateFromStores.getMonth();
     const _Math = Math;
     tmp =
       Math.floor(
-        (Date.UTC(fullYear1, month1, date.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000,
+        (Date.UTC(fullYear1, month1, stateFromStores.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000,
       ) <= options;
     const UTCResult = Date.UTC(fullYear, month, date.getDate());
   }

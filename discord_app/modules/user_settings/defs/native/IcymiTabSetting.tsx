@@ -13,9 +13,11 @@ import size from "../../../../../_runtime/metro/00002__.js";
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
 let ReactCompilerGating = ReactCompilerGating_mod;
-const fn = () => useLabFeatureDefault(ICYMIExperiment.ICYMI_LAB_FEATURE);
+function useICYMISettingValue() {
+  return useLabFeatureDefault(ICYMIExperiment.ICYMI_LAB_FEATURE);
+}
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useICYMIPredicate() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { location: "settings" };
@@ -27,7 +29,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const ICYMIStaffOnlyExperiment = ICYMIExperiment.ICYMIStaffOnlyExperiment;
       return ICYMIStaffOnlyExperiment.useConfig(first).enabled;
     }
-  : () => {
+  : function useICYMIPredicate() {
       const ICYMIStaffOnlyExperiment = ICYMIExperiment.ICYMIStaffOnlyExperiment;
       return ICYMIStaffOnlyExperiment.useConfig({ location: "settings" }).enabled;
     };
@@ -37,7 +39,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t.D4clKq);
   },
   parent: SettingsConstants.MobileUserSettings.ADVANCED,
-  useValue: fn,
+  useValue: useICYMISettingValue,
   onValueChange: function onICYMISettingValueChange(enabled) {
     let str = "show";
     if (enabled) {
@@ -57,7 +59,7 @@ const toggle = SettingBuilders.createToggle({
     const obj2 = { enabled };
   },
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useICYMIPredicate() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { location: "settings" };
@@ -69,7 +71,7 @@ const toggle = SettingBuilders.createToggle({
         const ICYMIStaffOnlyExperiment = ICYMIExperiment.ICYMIStaffOnlyExperiment;
         return ICYMIStaffOnlyExperiment.useConfig(first).enabled;
       }
-    : () => {
+    : function useICYMIPredicate() {
         const ICYMIStaffOnlyExperiment = ICYMIExperiment.ICYMIStaffOnlyExperiment;
         return ICYMIStaffOnlyExperiment.useConfig({ location: "settings" }).enabled;
       },

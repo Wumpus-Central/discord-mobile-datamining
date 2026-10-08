@@ -10,11 +10,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/shared/useConjureWindowFocused.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useConjureWindowFocused() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AppStateStore];
-        const fn = function s() {
+        const fn = function u() {
           return state.getState() === constants.ACTIVE;
         };
         cResult[0] = items;
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useConjureWindowFocused() {
       const items = [AppStateStore];
       return initialize.useStateFromStores(items, () => state.getState() === constants.ACTIVE);
     };

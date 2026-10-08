@@ -9,10 +9,10 @@ import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import CheckmarkLargeIcon from "../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../_runtime/05387_LinearGradient.js";
 import PremiumFeatureListDefault from "PremiumFeatureList.tsx";
-import _modDef13364 from "../../../_runtime/metro/13364__.js";
-import _modDef13365 from "../../../_runtime/metro/13365__.js";
+import _modDef13664 from "../../../_runtime/metro/13664__.js";
+import _modDef13665 from "../../../_runtime/metro/13665__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -20,13 +20,13 @@ import UserStore from "../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(6951).Gradients;
-const PremiumConstants = fn(1379);
+const Gradients = fn(7140).Gradients;
+const PremiumConstants = fn(1391);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_8, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_9 } =
   PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   title: { textAlign: "center" },
   subtitle: { lineHeight: 20, marginTop: 8, textAlign: "center" },
@@ -103,7 +103,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/PremiumSubscriptionUpsell.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PremiumSubscriptionUpsell(arg0) {
       const cResult = c.c(37);
       ({ onLearnMorePremium, style } = arg0);
       const tmp4 = closure_13();
@@ -132,8 +132,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[6] === tmp4.subtitle) {
               if (cResult[7] === tmp4.title) {
                 if (cResult[9] !== tmp4.upsellFeatureSubLogo) {
-                  const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef13364 };
-                  const tmp22 = v65535(React4, obj2);
+                  const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef13664 };
+                  const tmp22 = collapsed(React4, obj2);
                   cResult[9] = tmp4.upsellFeatureSubLogo;
                   cResult[10] = tmp22;
                   let tmp19 = tmp22;
@@ -141,8 +141,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp19 = cResult[10];
                 }
                 if (cResult[11] !== tmp4.upsellFeatureLogoTier2) {
-                  const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef13365 };
-                  const tmp26 = v65535(React4, obj4);
+                  const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef13665 };
+                  const tmp26 = collapsed(React4, obj4);
                   cResult[11] = tmp4.upsellFeatureLogoTier2;
                   cResult[12] = tmp26;
                   let tmp23 = tmp26;
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               text: tmp37,
                               onPress: onLearnMorePremium,
                             };
-                            const tmp41 = v65535(components_Button_Button.Button, obj5);
+                            const tmp41 = collapsed(components_Button_Button.Button, obj5);
                             cResult[24] = onLearnMorePremium;
                             cResult[25] = tmp41;
                             let tmp39 = tmp41;
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     return tmp51;
                                   }
                                   const obj6 = { style: tmp9, children: tmp46 };
-                                  const tmp54 = v65535(React3, obj6);
+                                  const tmp54 = collapsed(React3, obj6);
                                   cResult[34] = tmp46;
                                   cResult[35] = tmp9;
                                   cResult[36] = tmp54;
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             const tmp8Result = LinearGradientDefault;
                           }
                           const obj8 = { style: tmp4.upsellButton, children: tmp39 };
-                          const tmp45 = v65535(React3, obj8);
+                          const tmp45 = collapsed(React3, obj8);
                           cResult[26] = tmp4.upsellButton;
                           cResult[27] = tmp39;
                           cResult[28] = tmp45;
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const obj10 = { style: tmp4.upsellFeatureList, features: tmp27, labelStyle: null, rowStyle: null };
                 ({ upsellLabel: obj12.labelStyle, upsellRow: obj12.rowStyle } = tmp4);
-                const tmp32 = v65535(PremiumFeatureListDefault, obj10);
+                const tmp32 = collapsed(PremiumFeatureListDefault, obj10);
                 cResult[14] = tmp4.upsellFeatureList;
                 cResult[15] = tmp4.upsellLabel;
                 cResult[16] = tmp4.upsellRow;
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             };
             const intl2 = util.intl;
             obj13.children = intl2.string(util.t.YYfHlx);
-            const items3 = [v65535(Text_Text.Text, obj13)];
+            const items3 = [collapsed(Text_Text.Text, obj13)];
             const obj14 = {
               style: tmp4.subtitle,
               variant: "text-md/semibold",
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl3 = util.intl;
             const obj15 = { numFreeGuildSubscriptions };
             obj14.children = intl3.format(util.t.Af0zEZ, obj15);
-            items3[1] = v65535(Text_Text.Text, obj14);
+            items3[1] = collapsed(Text_Text.Text, obj14);
             obj11.children = items3;
             let tmp13 = __initData(closure_1_11, obj11);
           } else {
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             };
             const intl = util.intl;
             obj16.children = intl.string(util.t["qUl+K4"]);
-            tmp13 = v65535(Text_Text.Text, obj16);
+            tmp13 = collapsed(Text_Text.Text, obj16);
           }
           cResult[5] = title;
           ({ subtitle: tmp3[6], title } = tmp4);
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj3 = PremiumUtilsDefault;
     }
-  : (arg0) => {
+  : function PremiumSubscriptionUpsell(arg0) {
       ({ onLearnMorePremium, style } = arg0);
       let tmp = closure_13();
       let stringResult = dependencyMap;
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl3 = util.intl;
           obj6.children = intl3.string(util.t.YYfHlx);
-          const items2 = [v65535(Text_Text.Text, obj6)];
+          const items2 = [collapsed(Text_Text.Text, obj6)];
           const obj7 = {
             style: tmp.subtitle,
             variant: "text-md/semibold",
@@ -357,7 +357,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl4 = util.intl;
           const obj8 = { numFreeGuildSubscriptions };
           obj7.children = intl4.format(util.t.Af0zEZ, obj8);
-          items2[1] = v65535(Text_Text.Text, obj7);
+          items2[1] = collapsed(Text_Text.Text, obj7);
           obj5.children = items2;
           let tmp5Result1 = __initData(closure_1_11, obj5);
         } else {
@@ -370,19 +370,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl2 = util.intl;
           obj9.children = intl2.string(util.t["qUl+K4"]);
-          tmp5Result1 = v65535(Text_Text.Text, obj9);
+          tmp5Result1 = collapsed(Text_Text.Text, obj9);
         }
         const items3 = [tmp5Result1, ,];
         const obj10 = { style: tmp.upsellFeatures, children: null };
-        const obj11 = { style: tmp.upsellFeatureSubLogo, source: _modDef13364 };
-        const items4 = [v65535(React4, obj11), ,];
-        const obj12 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13365 };
-        items4[1] = v65535(React4, obj12);
+        const obj11 = { style: tmp.upsellFeatureSubLogo, source: _modDef13664 };
+        const items4 = [collapsed(React4, obj11), ,];
+        const obj12 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13665 };
+        items4[1] = collapsed(React4, obj12);
         const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
         intlResult1 = PremiumUtilsDefault;
         obj13.features = FEATURES_UPSELL_PREMIUM_TIER_2();
         ({ upsellLabel: obj14.labelStyle, upsellRow: obj14.rowStyle } = tmp);
-        items4[2] = v65535(PremiumFeatureListDefault, obj13);
+        items4[2] = collapsed(PremiumFeatureListDefault, obj13);
         obj10.children = items4;
         items3[1] = __initData(React3, obj10);
         const obj15 = { style: tmp.upsellButton, children: null };
@@ -391,13 +391,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stringResult = intl.string(util.t.fJOECn);
         obj16.text = stringResult;
         obj16.onPress = onLearnMorePremium;
-        tmp = v65535(components_Button_Button.Button, obj16);
+        tmp = collapsed(components_Button_Button.Button, obj16);
         obj15.children = tmp;
-        items3[2] = v65535(React3, obj15);
+        items3[2] = collapsed(React3, obj15);
         obj4.children = items3;
         obj4 = __initData(intlResult, obj4);
         obj3.children = obj4;
-        v65535(React3, obj3);
+        collapsed(React3, obj3);
         const intlResult2 = PremiumFeatureListDefault;
       }
       obj2 = PremiumUtilsDefault;

@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import SensitiveMediaExplicitRedactionSettingsUtils from "../../../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx";
-import ExplicitMediaRedactionUtils from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import ExplicitMediaRedactionUtils from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import useExplicitContentSettingsOrDefault from "../../../explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx";
 import ExplicitMediaRedactionNativeUtils from "../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
 import useSensitiveMediaSettingDisabled from "../../../explicit_media_redaction/hooks/useSensitiveMediaSettingDisabled.tsx";
@@ -17,7 +17,7 @@ function getTitle() {
   return intl.string(util.t["+uI23H"]);
 }
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useObscuredContentFriendsDmSettingValue() {
       const cResult = c.c(2);
       const explicitContentFriendDm =
         useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentFriendDm;
@@ -32,7 +32,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : () => {
+  : function useObscuredContentFriendsDmSettingValue() {
       const obj = useExplicitContentSettingsOrDefault;
       return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(
         obj.useExplicitContentSettingOrDefault().explicitContentFriendDm,
@@ -44,7 +44,7 @@ const pressable = SettingBuilders.createPressable({
     return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
   },
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useObscuredContentFriendsDmSettingValue() {
         const cResult = c.c(2);
         const explicitContentFriendDm =
           useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentFriendDm;
@@ -59,7 +59,7 @@ const pressable = SettingBuilders.createPressable({
         }
         return tmp4;
       }
-    : () => {
+    : function useObscuredContentFriendsDmSettingValue() {
         const obj = useExplicitContentSettingsOrDefault;
         return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(
           obj.useExplicitContentSettingOrDefault().explicitContentFriendDm,

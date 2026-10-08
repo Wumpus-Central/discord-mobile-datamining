@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function GuildRoleSubscriptionCancelSettingScreen() {
       const cResult = c.c(2);
       const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
       if (cResult[0] !== settingNavigationRoute.params) {
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : () => {
+  : function GuildRoleSubscriptionCancelSettingScreen() {
       const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
       const obj2 = {};
       const merged = Object.assign(settingNavigationRoute.params);

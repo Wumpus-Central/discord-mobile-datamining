@@ -3,8 +3,8 @@ import LoggerDefault from "../debug/Logger.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import DiscordNativeDefault from "../../lib/DiscordNative.tsx";
-import RequestGatewaySocketAll from "RequestGatewaySocket.tsx";
 import DiscordAppStateDefault from "../app_state/DiscordAppState.native.tsx";
+import RequestGatewaySocketAll from "RequestGatewaySocket.tsx";
 import GatewaySocketDefault from "GatewaySocket.tsx";
 import LocalPresenceStateManagerDefault from "LocalPresenceStateManager.tsx";
 import LocalVoiceStateManagerDefault from "LocalVoiceStateManager.tsx";
@@ -50,7 +50,7 @@ socket.handleIdentify = () => {
   }
   const obj2 = { hasToken: null != token };
 };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 if (PlatformUtils.isDesktop()) {
   const powerMonitor = DiscordNativeDefault.powerMonitor;
   powerMonitor.on("resume", () => {

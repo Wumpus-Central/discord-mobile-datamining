@@ -8,12 +8,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const GuildDirectoryConstants = fn(11947);
+const GuildDirectoryConstants = fn(12020);
 ({ getHubGuildTemplatesMap: metroRequire, HubGuildTemplateId: closure_7 } = GuildDirectoryConstants);
-const GuildDirectoryCreate = fn(11952).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12025).GuildDirectoryCreate;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({
   label: { marginTop: 16, marginLeft: 16, marginBottom: 8 },
   title: { marginBottom: 8, textAlign: "center" },
@@ -23,7 +23,7 @@ let closure_11 = createStyles.createStyles({
 });
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildTemplate) => {
+  ? function GuildTemplatesItem(guildTemplate) {
       const cResult = guildTemplate(576).c(9);
       guildTemplate = guildTemplate.guildTemplate;
       const onGuildTemplatePress = guildTemplate.onGuildTemplatePress;
@@ -54,7 +54,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { Icon: tmp3, message: guildTemplate.label, onPress: tmp4 };
-        const tmp8 = closure_9(onGuildTemplatePress(11974), obj2);
+        const tmp8 = closure_9(onGuildTemplatePress(12047), obj2);
         cResult[5] = guildTemplate.label;
         cResult[6] = tmp3;
         cResult[7] = tmp4;
@@ -70,10 +70,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn2;
       const obj = guildTemplate(576);
     }
-  : (guildTemplate) => {
+  : function GuildTemplatesItem(guildTemplate) {
       guildTemplate = guildTemplate.guildTemplate;
       const onGuildTemplatePress = guildTemplate.onGuildTemplatePress;
-      return closure_9(onGuildTemplatePress(11974), {
+      return closure_9(onGuildTemplatePress(12047), {
         Icon() {
           return options(native.Icon, {
             source: GuildDirectoryTemplatesIcons.GUILD_TEMPLATE_ICONS[guildTemplate.id],
@@ -93,7 +93,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryTemplates.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (directoryGuildName) => {
+  ? function GuildDirectoryTemplates(directoryGuildName) {
       const _require = directoryGuildName;
       const cResult = require("c").c(39);
       const tmp4 = closure_11();
@@ -108,25 +108,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== directoryGuildName) {
-        class C {
+        class I {
           constructor() {
             closure_1.current = closure_0;
             return;
           }
         }
         cResult[1] = directoryGuildName;
-        cResult[2] = C;
+        cResult[2] = I;
       } else {
-        class C {
+        class I {
           constructor() {
             closure_1.current = closure_0;
             return;
           }
         }
       }
-      const effect = noop.useEffect(C);
+      const effect = noop.useEffect(I);
       if (cResult[3] !== navigation) {
-        class I {
+        class C {
           constructor(arg0) {
             obj = { onHubGuildInfoSet: closure_1.current.onHubGuildInfoSet, guildTemplate: directoryGuildName };
             arr = closure_2.push(GuildDirectoryCreate.CREATE, obj);
@@ -134,9 +134,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[3] = navigation;
-        cResult[4] = I;
+        cResult[4] = C;
       } else {
-        class I {
+        class C {
           constructor(arg0) {
             obj = { onHubGuildInfoSet: closure_1.current.onHubGuildInfoSet, guildTemplate: directoryGuildName };
             arr = closure_2.push(GuildDirectoryCreate.CREATE, obj);
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const sum = require("useSafeAreaInsets")().bottom + 16;
       if (cResult[5] !== sum) {
-        class I {
+        class C {
           constructor(arg0) {
             obj = { onHubGuildInfoSet: closure_1.current.onHubGuildInfoSet, guildTemplate: directoryGuildName };
             arr = closure_2.push(GuildDirectoryCreate.CREATE, obj);
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = sum;
         cResult[6] = tmp14;
       } else {
-        class I {
+        class C {
           constructor(arg0) {
             obj = { onHubGuildInfoSet: closure_1.current.onHubGuildInfoSet, guildTemplate: directoryGuildName };
             arr = closure_2.push(GuildDirectoryCreate.CREATE, obj);
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       ({ header, title } = tmp4);
       if (cResult[7] !== directoryGuildName.directoryGuildName) {
-        class I {
+        class C {
           constructor(arg0) {
             obj = { onHubGuildInfoSet: closure_1.current.onHubGuildInfoSet, guildTemplate: directoryGuildName };
             arr = closure_2.push(GuildDirectoryCreate.CREATE, obj);
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = directoryGuildName.directoryGuildName;
         cResult[8] = formatResult;
       } else {
-        class I {
+        class C {
           constructor(arg0) {
             obj = { onHubGuildInfoSet: closure_1.current.onHubGuildInfoSet, guildTemplate: directoryGuildName };
             arr = closure_2.push(GuildDirectoryCreate.CREATE, obj);
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[9] === tmp4.title) {
-        class I {
+        class C {
           constructor(arg0) {
             obj = { onHubGuildInfoSet: closure_1.current.onHubGuildInfoSet, guildTemplate: directoryGuildName };
             arr = closure_2.push(GuildDirectoryCreate.CREATE, obj);
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-          class I {
+          class C {
             constructor(arg0) {
               obj = { onHubGuildInfoSet: closure_1.current.onHubGuildInfoSet, guildTemplate: directoryGuildName };
               arr = closure_2.push(GuildDirectoryCreate.CREATE, obj);
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[12] = stringResult;
           const tmp19 = stringResult;
         } else {
-          class I {
+          class C {
             constructor(arg0) {
               obj = { onHubGuildInfoSet: closure_1.current.onHubGuildInfoSet, guildTemplate: directoryGuildName };
               arr = closure_2.push(GuildDirectoryCreate.CREATE, obj);
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[13] !== tmp4.description) {
-          class I {
+          class C {
             constructor(arg0) {
               obj = { onHubGuildInfoSet: closure_1.current.onHubGuildInfoSet, guildTemplate: directoryGuildName };
               arr = closure_2.push(GuildDirectoryCreate.CREATE, obj);
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[13] = tmp4.description;
           cResult[14] = tmp22;
         } else {
-          class I {
+          class C {
             constructor(arg0) {
               obj = { onHubGuildInfoSet: closure_1.current.onHubGuildInfoSet, guildTemplate: directoryGuildName };
               arr = closure_2.push(GuildDirectoryCreate.CREATE, obj);
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[15] === tmp4.header) {
-          class I {
+          class C {
             constructor(arg0) {
               obj = { onHubGuildInfoSet: closure_1.current.onHubGuildInfoSet, guildTemplate: directoryGuildName };
               arr = closure_2.push(GuildDirectoryCreate.CREATE, obj);
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = tmp18;
       const obj3 = require("useNavigation");
     }
-  : (directoryGuildName) => {
+  : function GuildDirectoryTemplates(directoryGuildName) {
       const _require = directoryGuildName;
       const tmp = closure_11();
       importDefault = noop.useRef(directoryGuildName);

@@ -90,7 +90,7 @@ let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (username, arg1) => {
+  ? function useUserTag(username, arg1) {
       const cResult = c.c(2);
       const merged = Object.assign(closure_8);
       const merged1 = Object.assign(arg1);
@@ -109,7 +109,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = {};
       return presentUserTag(username, obj2, initialize.useStateFromStores(tmp6, tmp7));
     }
-  : (username, arg1) => {
+  : function useUserTag(username, arg1) {
       const merged = Object.assign(closure_8);
       const merged1 = Object.assign(arg1);
       const items = [StreamerModeStore];
@@ -121,7 +121,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useDirectMessageRecipient(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -153,7 +153,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useDirectMessageRecipient(arg0) {
       _require = arg0;
       const items = [UserStore];
       return require("initialize").useStateFromStores(items, () => {
@@ -193,7 +193,7 @@ function getName(username) {
     return combined;
   }
 }
-function useName(guildId) {
+function useName(username) {
   if (closure_10) {
     const cResult = c.c(5);
     let str4 = globalThis;
@@ -213,13 +213,13 @@ function useName(guildId) {
     const tmpResult = c;
     const stateFromStores = initialize.useStateFromStores(tmp14, tmp15);
     let tmp18 = null;
-    if (null != guildId) {
+    if (null != username) {
       if (cResult[2] === stateFromStores) {
       }
-      const obj5 = nameFromUser(guildId);
+      const obj5 = nameFromUser(username);
       let tmp21 = stateFromStores;
       if (stateFromStores) {
-        const username2 = guildId.username;
+        const username2 = username.username;
         tmp18 = username2 == tmp18;
         let toLocaleLowerCaseResult1;
         if (!tmp18) {
@@ -229,7 +229,7 @@ function useName(guildId) {
         const toLocaleLowerCaseResult = obj5.toLocaleLowerCase();
       }
       if (tmp21) {
-        tmp21 = "0" === guildId.discriminator;
+        tmp21 = "0" === username.discriminator;
       }
       let combined = obj5;
       if (tmp21) {
@@ -237,18 +237,18 @@ function useName(guildId) {
         combined = "" + obj5[0] + "\u2026";
       }
       cResult[2] = stateFromStores;
-      cResult[3] = guildId;
+      cResult[3] = username;
       cResult[4] = combined;
     }
     const tmpResult3 = initialize;
   } else {
     const items1 = [StreamerModeStore];
     const stateFromStores1 = initialize.useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
-    if (null != guildId) {
-      const obj2 = nameFromUser(guildId);
+    if (null != username) {
+      const obj2 = nameFromUser(username);
       let tmp8 = stateFromStores1;
       if (stateFromStores1) {
-        const username = guildId.username;
+        username = username.username;
         let toLocaleLowerCaseResult3;
         if (username != null) {
           toLocaleLowerCaseResult3 = username.toLocaleLowerCase();
@@ -257,7 +257,7 @@ function useName(guildId) {
         const toLocaleLowerCaseResult2 = obj2.toLocaleLowerCase();
       }
       if (tmp8) {
-        tmp8 = "0" === guildId.discriminator;
+        tmp8 = "0" === username.discriminator;
       }
       let combined1 = obj2;
       if (tmp8) {

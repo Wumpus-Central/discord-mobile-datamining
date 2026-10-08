@@ -23,7 +23,7 @@ export const getMobileMediaViewerShareExperimentEnabled = function getMobileMedi
   return apexExperiment.getConfig({ location: shareMediaSource }).enabled;
 };
 export const useMobileMediaViewerShareExperimentEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useMobileMediaViewerShareExperimentEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -35,4 +35,6 @@ export const useMobileMediaViewerShareExperimentEnabled = ReactCompilerGating.is
       }
       return apexExperiment.useConfig(tmp2).enabled;
     }
-  : (location) => apexExperiment.useConfig({ location }).enabled;
+  : function useMobileMediaViewerShareExperimentEnabled(location) {
+      return apexExperiment.useConfig({ location }).enabled;
+    };

@@ -45,9 +45,9 @@ function keyExtractor(type, arg1) {
   return id;
 }
 const View = fn(17).View;
-const getSection = fn(8827).getSection;
-const FetchState = fn(11696).FetchState;
-const AppLauncherNativeConstants = fn(1489);
+const getSection = fn(9186).getSection;
+const FetchState = fn(11761).FetchState;
+const AppLauncherNativeConstants = fn(1501);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
 const jsxProd = fn(21);
@@ -65,7 +65,7 @@ const array = new Array(6);
 let closure_17 = array.fill("placeholder");
 const array2 = new Array(3);
 let closure_18 = array2.fill({ type: obj.PLACERHOLDER });
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj3 = {
   sectionHeader: { marginBottom: 8 },
   list: {
@@ -99,7 +99,7 @@ obj3.loadingTextPlaceholder = {
   borderRadius: nativeDefault.radii.lg,
   alignSelf: "flex-start",
 };
-let obj5 = {
+let obj6 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
   height: 16,
   marginBottom: 4,
@@ -137,7 +137,7 @@ obj3.commandsCTAUnderlayColor = { color: nativeDefault.colors.BACKGROUND_SURFACE
 let closure_19 = createStyles.createStyles(obj3);
 let ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CommandRow(arg0) {
       const cResult = c.c(29);
       ({ context, command, application, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } =
         arg0);
@@ -154,7 +154,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp8 = null != tmp4;
         if (tmp8) {
           const obj2 = { iconSource: tmp4 };
-          tmp8 = v65535(EntityBorderAppIconDefault, obj2);
+          tmp8 = collapsed(EntityBorderAppIconDefault, obj2);
         }
         cResult[2] = tmp4;
         cResult[3] = tmp8;
@@ -243,7 +243,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                   onAccessibilityAction: tmp15,
                   trailing: tmp18,
                 };
-                const tmp24 = v65535(TableRow.TableRow, obj4);
+                const tmp24 = collapsed(TableRow.TableRow, obj4);
                 cResult[19] = tmp13;
                 cResult[20] = command.displayName;
                 cResult[21] = tmp6;
@@ -258,7 +258,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj5 = { hasOptions, sending, onPressSend };
-            const tmp21 = v65535(CommandRowButtonDefault, obj5);
+            const tmp21 = collapsed(CommandRowButtonDefault, obj5);
             cResult[15] = hasOptions;
             cResult[16] = onPressSend;
             cResult[17] = sending;
@@ -282,25 +282,25 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = obj6;
       tmp11 = obj6;
     }
-  : (arg0) => {
+  : function CommandRow(arg0) {
       ({ command, application } = arg0);
       let hasOptions;
       let onPressSend;
       ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-      const appLauncherIconSource = hasOptions(11679).getAppLauncherIconSource(application);
+      const appLauncherIconSource = hasOptions(11744).getAppLauncherIconSource(application);
       let tmp4 = null != appLauncherIconSource;
       if (tmp4) {
         const obj2 = { iconSource: appLauncherIconSource };
-        tmp4 = closure_10(onPressSend(11684), obj2);
+        tmp4 = closure_10(onPressSend(11749), obj2);
       }
-      obj = hasOptions(11679);
-      const tmpResult = hasOptions(11743);
+      obj = hasOptions(11744);
+      const tmpResult = hasOptions(11809);
       const commandRowSend = tmpResult.useCommandRowSend({
         command,
         context,
         beforeExecuteCommand,
         onExecuteCommand,
-        sectionName: hasOptions(8961).AppLauncherSectionName.SEARCH,
+        sectionName: hasOptions(11233).AppLauncherSectionName.SEARCH,
       });
       hasOptions = commandRowSend.hasOptions;
       onPressSend = commandRowSend.onPressSend;
@@ -339,20 +339,20 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         context,
         beforeExecuteCommand,
         onExecuteCommand,
-        sectionName: hasOptions(8961).AppLauncherSectionName.SEARCH,
+        sectionName: hasOptions(11233).AppLauncherSectionName.SEARCH,
       };
-      obj4.subLabel = hasOptions(8826).getSectionName(application);
+      obj4.subLabel = hasOptions(9185).getSectionName(application);
       obj4.start = isFirstRow;
       obj4.end = isLastRow;
       obj4.onPress = onPress;
       obj4.accessibilityActions = memo;
       obj4.onAccessibilityAction = callback;
-      obj4.trailing = closure_10(onPressSend(11743), { hasOptions, sending: commandRowSend.sending, onPressSend });
-      return closure_10(hasOptions(6000).TableRow, obj4);
+      obj4.trailing = closure_10(onPressSend(11809), { hasOptions, sending: commandRowSend.sending, onPressSend });
+      return closure_10(hasOptions(6184).TableRow, obj4);
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PlaceholderCommandRow(arg0) {
       const cResult = c.c(19);
       ({ isFirstRow, isLastRow } = arg0);
       const tmp6 = closure_19();
@@ -361,7 +361,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const placeholderWidth1 = usePlaceholderSize.usePlaceholderWidth(30, 90);
       if (cResult[0] !== tmp6.loadingCommandAppIcon) {
         const obj2 = { style: tmp6.loadingCommandAppIcon };
-        const tmp12 = v65535(View, obj2);
+        const tmp12 = collapsed(View, obj2);
         cResult[0] = tmp6.loadingCommandAppIcon;
         cResult[1] = tmp12;
         let tmp9 = tmp12;
@@ -397,21 +397,23 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn = function x() {};
-            cResult[12] = fn;
-            let tmp23 = fn;
+            class S {
+              constructor() {
+                return;
+              }
+            }
+            cResult[12] = S;
           } else {
-            tmp23 = cResult[12];
+            class S {
+              constructor() {
+                return;
+              }
+            }
           }
           if (cResult[13] === tmp4) {
-            if (cResult[14] === tmp5) {
-              if (cResult[15] === tmp9) {
-                if (cResult[16] === tmp15) {
-                  if (cResult[17] === tmp19) {
-                    let tmp24 = cResult[18];
-                  }
-                  return tmp24;
-                }
+            class S {
+              constructor() {
+                return;
               }
             }
           }
@@ -422,21 +424,20 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             subLabelLineClamp: 1,
             start: tmp4,
             end: tmp5,
-            onPress: tmp23,
+            onPress: S,
           };
-          const tmp26 = v65535(TableRow.TableRow, obj5);
+          const tmp26 = collapsed(TableRow.TableRow, obj5);
           cResult[13] = tmp4;
           cResult[14] = tmp5;
           cResult[15] = tmp9;
           cResult[16] = tmp15;
           cResult[17] = tmp19;
           cResult[18] = tmp26;
-          tmp24 = tmp26;
         }
         const obj6 = { style: null };
         const items = [tmp6.loadingTextPlaceholderSmall, tmp18];
         obj6.style = items;
-        const tmp22 = v65535(View, obj6);
+        const tmp22 = collapsed(View, obj6);
         cResult[9] = tmp6.loadingTextPlaceholderSmall;
         cResult[10] = tmp18;
         cResult[11] = tmp22;
@@ -445,14 +446,14 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { style: null };
       const items1 = [tmp6.loadingTextPlaceholder, tmp14];
       obj7.style = items1;
-      const tmp16 = v65535(View, obj7);
+      const tmp16 = collapsed(View, obj7);
       cResult[4] = tmp6.loadingTextPlaceholder;
       cResult[5] = tmp14;
       cResult[6] = tmp16;
       tmp15 = tmp16;
       const tmpResult2 = usePlaceholderSize;
     }
-  : (isFirstRow) => {
+  : function PlaceholderCommandRow(isFirstRow) {
       let flag = isFirstRow.isFirstRow;
       if (flag === undefined) {
         flag = false;
@@ -465,7 +466,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const placeholderWidth = usePlaceholderSize.usePlaceholderWidth(10, 50);
       const placeholderWidth1 = usePlaceholderSize.usePlaceholderWidth(30, 90);
       const obj3 = {
-        icon: v65535(View, { style: tmp.loadingCommandAppIcon }),
+        icon: collapsed(View, { style: tmp.loadingCommandAppIcon }),
         label: null,
         subLabel: null,
         subLabelLineClamp: 1,
@@ -478,21 +479,21 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: tmp.loadingCommandAppIcon };
       items[1] = { width: "" + placeholderWidth + "%" };
       obj5.style = items;
-      obj3.label = v65535(View, obj5);
+      obj3.label = collapsed(View, obj5);
       const obj7 = { style: null };
       const items1 = [tmp.loadingTextPlaceholderSmall];
       const obj6 = { width: "" + placeholderWidth + "%" };
       items1[1] = { width: "" + placeholderWidth1 + "%" };
       obj7.style = items1;
-      obj3.subLabel = v65535(View, obj7);
+      obj3.subLabel = collapsed(View, obj7);
       obj3.start = flag;
       obj3.end = flag2;
       obj3.onPress = function onPress() {};
-      return v65535(TableRow.TableRow, obj3);
+      return collapsed(TableRow.TableRow, obj3);
     };
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCommandsExpanded(arg0) {
       const cResult = c.c(6);
       [tmp3, require] = noop.useState(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -532,7 +533,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : (arg0) => {
+  : function useCommandsExpanded(arg0) {
       const tmp = _slicedToArray(noop.useState(false), 2);
       closure_0 = tmp[1];
       const items = [arg0];
@@ -546,10 +547,9 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         }, []),
       };
     };
-let obj10 = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 ReactCompilerGating = fn(558);
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (beforeExecuteCommand) => {
+  ? function CommandsExpandableList(beforeExecuteCommand) {
       const cResult = context(onPressCommand[10]).c(14);
       ({ commandData, context } = beforeExecuteCommand);
       beforeExecuteCommand = beforeExecuteCommand.beforeExecuteCommand;
@@ -597,11 +597,11 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       const fn = function t(arg0, arg1) {
         closure_0 = arg1;
         if (arg0 === placeholder) {
-          return (isLastRow) => v65535(closure_21, { isFirstRow: 0 === closure_0, isLastRow: isLastRow.isLastRow });
+          return (isLastRow) => collapsed(closure_21, { isFirstRow: 0 === closure_0, isLastRow: isLastRow.isLastRow });
         } else {
           ({ command: beforeExecuteCommand, application: onPressCommand } = arg0);
           return (isLastRow) =>
-            v65535(closure_20, {
+            collapsed(closure_20, {
               context,
               command,
               application,
@@ -626,7 +626,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       obj = context(onPressCommand[10]);
       tmp = onPressCommand;
     }
-  : (expandedOverride) => {
+  : function CommandsExpandableList(expandedOverride) {
       const commandData = expandedOverride.commandData;
       const context = expandedOverride.context;
       const beforeExecuteCommand = expandedOverride.beforeExecuteCommand;
@@ -672,7 +672,7 @@ let result = size.fileFinishedImporting(
   "modules/app_launcher/native/screens/search/SearchLocalAndGlobalContentView.tsx",
 );
 
-export const SearchLocalAndGlobalContentView = noop.forwardRef((context, arg1) => {
+export const SearchLocalAndGlobalContentView = function SearchLocalAndGlobalContentView(context) {
   context = context.context;
   const onScroll = context.onScroll;
   const entrypoint = context.entrypoint;
@@ -687,6 +687,7 @@ export const SearchLocalAndGlobalContentView = noop.forwardRef((context, arg1) =
   let callback2;
   let memo1;
   c16 = undefined;
+  ({ onSend, ref } = context);
   let tmp = closure_19();
   _slicedToArray = tmp;
   const tmp4 = onScroll(entrypoint[20])();
@@ -694,7 +695,7 @@ export const SearchLocalAndGlobalContentView = noop.forwardRef((context, arg1) =
   const tmp5 = commandResults();
   const navigation = tmp5;
   [query, setQuery] = noop.useState("");
-  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({ setQuery }));
+  const imperativeHandle = noop.useImperativeHandle(ref, () => ({ setQuery }));
   let id;
   if ("channel" === context.type) {
     id = context.channel.id;
@@ -920,7 +921,7 @@ export const SearchLocalAndGlobalContentView = noop.forwardRef((context, arg1) =
         context,
         beforeExecuteCommand: callback1,
         onPressCommand: callback,
-        onExecuteCommand: context.onSend,
+        onExecuteCommand: onSend,
         expanded: isCommandsExpanded,
       };
       items11[1] = tmp27(closure_24, obj7);
@@ -1014,4 +1015,4 @@ export const SearchLocalAndGlobalContentView = noop.forwardRef((context, arg1) =
     },
     query,
   );
-});
+};

@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles((arg0, height, marginBottom) => {
   if ("floating" === arg0) {
     const rect = { left: 0, right: 0, position: "absolute" };
@@ -57,7 +57,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetHeaderBar.native.tsx");
 
 export const ActionSheetHeaderBar = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActionSheetHeaderBar(arg0) {
       const cResult = c.c(21);
       ({ accessibilityLabel, style, tabStyle, onPress, variant } = arg0);
       if (cResult[0] !== accessibilityLabel) {
@@ -162,7 +162,7 @@ export const ActionSheetHeaderBar = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = items2;
       const tmpResult = useToken;
     }
-  : (accessibilityLabel) => {
+  : function ActionSheetHeaderBar(accessibilityLabel) {
       accessibilityLabel = accessibilityLabel.accessibilityLabel;
       if (accessibilityLabel === undefined) {
         const intl = util.intl;

@@ -10,15 +10,15 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 const util = Text(1126);
-const PremiumUtils = Text(4534);
-const Text_Text = Text(4892);
+const PremiumUtils = Text(4726);
+const Text_Text = Text(5086);
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1085);
 ({ SubscriptionStatusTypes: hasOwnProperty, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },
   externalSubtext: { marginTop: 8, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },
@@ -28,25 +28,17 @@ let obj2 = {
 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function GoogleManagementLink(arg0) {
       let Text = require;
       let tmp = dependencyMap;
-      const cResult = c.c(7);
+      const cResult = c.c(5);
       ({ style, subscription } = arg0);
       let tmp3 = null;
       if (obj2.isGooglePlayBillingSupported()) {
         tmp3 = null;
         if (subscription.isPurchasedViaGoogle) {
-          if (cResult[0] !== style) {
-            const items = [style];
-            cResult[0] = style;
-            cResult[1] = items;
-            let tmp4 = items;
-          } else {
-            tmp4 = cResult[1];
-          }
-          if (cResult[2] !== subscription.paymentGateway) {
+          if (cResult[0] !== subscription.paymentGateway) {
             const intl = util.intl;
             const obj3 = {
               onClick: PremiumUtils.getExternalSubscriptionMethodUrl(
@@ -55,34 +47,32 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               ),
             };
             const formatResult = intl.format(util.t["9NPc+O"], obj3);
-            cResult[2] = subscription.paymentGateway;
-            cResult[3] = formatResult;
-            let tmp5 = formatResult;
+            cResult[0] = subscription.paymentGateway;
+            cResult[1] = formatResult;
+            let tmp4 = formatResult;
             const TextResult = PremiumUtils;
           } else {
-            tmp5 = cResult[3];
+            tmp4 = cResult[1];
           }
-          if (cResult[4] === tmp4) {
+          if (cResult[2] === style) {
           }
           Text = Text_Text.Text;
-          const obj4 = { style: tmp4, variant: "text-sm/medium", color: "text-link", children: tmp5 };
+          const obj4 = { style, variant: "text-sm/medium", color: "text-link", children: tmp4 };
           tmp = timestampProducer(Text, obj4);
-          cResult[4] = tmp4;
-          cResult[5] = tmp5;
-          cResult[6] = tmp;
+          cResult[2] = style;
+          cResult[3] = tmp4;
+          cResult[4] = tmp;
         }
       }
       return tmp3;
     }
-  : (subscription) => {
+  : function GoogleManagementLink(subscription) {
       subscription = subscription.subscription;
       let tmp3 = null;
       if (obj.isGooglePlayBillingSupported()) {
         tmp3 = null;
         if (subscription.isPurchasedViaGoogle) {
-          const obj2 = { style: null, variant: "text-sm/medium", color: "text-link", children: null };
-          const items = [subscription.style];
-          obj2.style = items;
+          const obj2 = { style: subscription.style, variant: "text-sm/medium", color: "text-link", children: null };
           const intl = util.intl;
           const obj3 = {
             onClick: PremiumUtils.getExternalSubscriptionMethodUrl(
@@ -104,7 +94,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/PremiumBillingInfo.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PremiumBillingInfo(arg0) {
       const cResult = c.c(30);
       ({ style, subscription } = arg0);
       const tmp4 = closure_8();
@@ -271,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj10;
       tmp7 = obj10;
     }
-  : (subscription) => {
+  : function PremiumBillingInfo(subscription) {
       subscription = subscription.subscription;
       const tmp = closure_8();
       const obj = PremiumSubscriptionInvoice;

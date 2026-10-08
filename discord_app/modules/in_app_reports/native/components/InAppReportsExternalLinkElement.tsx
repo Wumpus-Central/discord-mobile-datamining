@@ -18,26 +18,26 @@ let closure_6 = createStyles.createStyles({
   headerText: { marginBottom: 8 },
 });
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (data) => {
+  ? function ExternalLinkItem(data) {
       const cResult = url(576).c(7);
       data = data.data;
       url = data.url;
       ({ link_text, link_description } = data);
       if (data.is_localized) {
         if (cResult[0] !== url) {
-          const fn = function t() {
+          function onLinkPress() {
             LinkingDefault.openURL(url);
-          };
+          }
           cResult[0] = url;
-          cResult[1] = fn;
-          let tmp5 = fn;
+          cResult[1] = onLinkPress;
+          let tmp5 = onLinkPress;
         } else {
           tmp5 = cResult[1];
         }
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { IconComponent: tmp(12738).LinkExternalMediumIcon };
-          const tmp9 = closure_4(tmp(6006).TableRowIcon, obj2);
+          const obj2 = { IconComponent: tmp(13406).LinkExternalMediumIcon };
+          const tmp9 = closure_4(tmp(6192).TableRowIcon, obj2);
           cResult[2] = tmp9;
           let tmp7 = tmp9;
         } else {
@@ -59,7 +59,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           arrow: false,
           accessibilityRole: "link",
         };
-        const tmp12 = closure_4(tmp(8926).RowButton, obj3);
+        const tmp12 = closure_4(tmp(8557).RowButton, obj3);
         cResult[3] = link_description;
         cResult[4] = link_text;
         cResult[5] = tmp5;
@@ -70,7 +70,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = url(576);
     }
-  : (data) => {
+  : function ExternalLinkItem(data) {
       data = data.data;
       const url = data.url;
       let tmp3 = null;
@@ -83,12 +83,12 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           arrow: false,
           accessibilityRole: "link",
         };
-        const obj2 = { IconComponent: url(12738).LinkExternalMediumIcon };
-        obj.trailing = closure_4(url(6006).TableRowIcon, obj2);
-        obj.onPress = function onPress() {
+        const obj2 = { IconComponent: url(13406).LinkExternalMediumIcon };
+        obj.trailing = closure_4(url(6192).TableRowIcon, obj2);
+        obj.onPress = function onLinkPress() {
           LinkingDefault.openURL(url);
         };
-        tmp3 = closure_4(url(8926).RowButton, obj);
+        tmp3 = closure_4(url(8557).RowButton, obj);
       }
       return tmp3;
     };
@@ -97,7 +97,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (elements) => {
+  ? function ExternalLinksElement(elements) {
       let hvVgAZ = dependencyMap;
       const cResult = c.c(14);
       elements = elements.elements;
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[7] !== elements) {
                     const _Symbol2 = Symbol;
                     if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-                      const fn2 = function v(data, arg1) {
+                      const fn2 = function f(data, arg1) {
                         return closure_1_4(closure_1_7, { data: data.data }, "external-link-" + arg1);
                       };
                       cResult[9] = fn2;
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return null;
     }
-  : (elements) => {
+  : function ExternalLinksElement(elements) {
       elements = elements.elements;
       const tmp = closure_6();
       let hvVgAZ = dependencyMap;

@@ -1,6 +1,6 @@
 // discord_app/modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx
 import c from "../../../../_runtime/00576_c.js";
-import LegacyBaseButton from "../../../../_runtime/06147_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/06326_LegacyBaseButton.js";
 import DiscordGestureHandlerRootViewNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/DiscordGestureHandlerRootViewNativeComponent.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DiscordGestureHandlerRootView(arg0) {
       const cResult = c.c(3);
       ({ children, style } = arg0);
       if (cResult[0] === children) {
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp6;
       tmp4 = tmp6;
     }
-  : (arg0) => {
+  : function DiscordGestureHandlerRootView(arg0) {
       ({ children, style } = arg0);
       const obj = { style: styles.flex, children: jsx(LegacyBaseButton.GestureHandlerRootView, { style, children }) };
       return jsx(DiscordGestureHandlerRootViewNativeComponentDefault, {

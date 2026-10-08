@@ -10,21 +10,21 @@ import useAllowFriendsFromMutualGuildsOnly from "../../content_and_social/useAll
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(15815);
+const UserSettingsSafetySelectedGuildStore = fn(16074);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } =
   UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11143).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+let closure_6 = fn(11263).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsDisabled() {
       let isParentallyControlled = useParentalControlSettings.useIsParentallyControlled();
       if (isParentallyControlled) {
         isParentallyControlled = tmp2 === closure_6;
       }
       return isParentallyControlled;
     }
-  : () => {
+  : function useIsDisabled() {
       let isParentallyControlled = useParentalControlSettings.useIsParentallyControlled();
       if (isParentallyControlled) {
         isParentallyControlled = tmp2 === closure_6;
@@ -33,7 +33,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useValue() {
       const cResult = c.c(3);
       const selectedGuildId = hasOwnProperty().selectedGuildId;
       let tmp2 = !DefultGuildsRestrictedSetting.useDefaultGuildsRestricted();
@@ -54,7 +54,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = hasItem;
       tmp3 = hasItem;
     }
-  : () => {
+  : function useValue() {
       const selectedGuildId = hasOwnProperty().selectedGuildId;
       const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
       const setting = RestrictedGuildIds.useSetting();
@@ -66,7 +66,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDescription() {
       const cResult = c.c(4);
       const allowFriendsFromMutualGuildsOnly =
         useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
@@ -98,7 +98,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         return cResult[3];
       }
     }
-  : () => {
+  : function useDescription() {
       const allowFriendsFromMutualGuildsOnly =
         useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
       if (hasOwnProperty().selectedGuildId === closure_6) {
@@ -123,9 +123,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         return stringResult;
       }
     };
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useTitle() {
       const cResult = c.c(2);
       const allowFriendsFromMutualGuildsOnly =
         useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
@@ -145,7 +145,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         return cResult[1];
       }
     }
-  : () => {
+  : function useTitle() {
       const allowFriendsFromMutualGuildsOnly =
         useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
       const intl = util.intl;
@@ -160,7 +160,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
     };
 const toggle = SettingBuilders.createToggle({
   useTitle: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useTitle() {
         const cResult = c.c(2);
         const allowFriendsFromMutualGuildsOnly =
           useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
@@ -180,7 +180,7 @@ const toggle = SettingBuilders.createToggle({
           return cResult[1];
         }
       }
-    : () => {
+    : function useTitle() {
         const allowFriendsFromMutualGuildsOnly =
           useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
         const intl = util.intl;
@@ -194,7 +194,7 @@ const toggle = SettingBuilders.createToggle({
         return stringResult;
       },
   useDescription: tmp5,
-  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7966).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: tmp4,
   onValueChange: function onAllowDirectMessagesFromServerMembersValueChange(arg0) {
     const tmp = closure_4();

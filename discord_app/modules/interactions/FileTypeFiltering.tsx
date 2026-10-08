@@ -47,7 +47,7 @@ let closure_9 = { jpg: ["jpeg", "jfif", "heic", "heif"], mov: ["mp4", "qt"] };
 let closure_10 = { jpg: ["jpeg", "jfif"], mp4: ["mov", "qt"] };
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function useFileTypesFormattedString(arr) {
       const cResult = c.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [LocaleStore];
@@ -75,7 +75,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp9;
       const tmpResult = initialize;
     }
-  : (arg0) => {
+  : function useFileTypesFormattedString(arg0) {
       _require = arg0;
       const items = [LocaleStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => locale.locale);
@@ -159,7 +159,7 @@ export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
   items3 = [];
 };
 export const useFileTypeFiltering = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function useFileTypeFiltering(arr) {
       const cResult = allowedExtensions(576).c(14);
       if (cResult[0] !== arr) {
         if (null != arr) {
@@ -321,7 +321,7 @@ export const useFileTypeFiltering = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = allowedExtensions(576);
     }
-  : (arg0) => {
+  : function useFileTypeFiltering(arg0) {
       closure_0 = arg0;
       let items = [arg0];
       const memo = noop.useMemo(() => {

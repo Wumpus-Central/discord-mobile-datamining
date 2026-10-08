@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useHasVideoPermission.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHasVideoPermission(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function l() {
+        const fn = function u() {
           let tmp = null != _private;
           if (tmp) {
             let isPrivateResult = _private.isPrivate();
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useHasVideoPermission(arg0) {
       _require = arg0;
       const items = [GuildStore, PermissionStore];
       const items1 = [arg0];

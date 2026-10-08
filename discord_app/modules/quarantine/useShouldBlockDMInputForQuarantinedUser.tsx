@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quarantine/useShouldBlockDMInputForQuarantinedUser.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (hasFlag, id) => {
+  ? function useShouldBlockDMInputForQuarantinedUser(hasFlag, id) {
       _require = id;
       const cResult = require("c").c(9);
       const obj = require("c");
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = tmp(504);
     }
-  : (hasFlag, arg1) => {
+  : function useShouldBlockDMInputForQuarantinedUser(hasFlag, arg1) {
       _require = arg1;
       const showConvoStarterInDM = require("useShowConvoStarterInDM").useShowConvoStarterInDM(arg1);
       require("initialize");

@@ -17,9 +17,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(2057).GuildScheduledEventEntityTypes;
+let closure_8 = fn(2069).GuildScheduledEventEntityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, cardStyle: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.cardStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -31,7 +31,7 @@ let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/c
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guild) => {
+    ? function EditGuildEventModal(guild) {
         const cResult = guild(first[9]).c(65);
         guild = guild.guild;
         const onCloseModal = guild.onCloseModal;
@@ -122,7 +122,7 @@ export default noop.memo(
               }
             }
           }
-          class B {
+          class M {
             constructor() {
               tmp = closure_3;
               obj = closure_2(closure_3[12]);
@@ -152,7 +152,7 @@ export default noop.memo(
           cResult[8] = first;
           cResult[9] = initialGuildEvent;
           cResult[10] = first1;
-          cResult[11] = B;
+          cResult[11] = M;
         }
         const tmp5 = onCloseModal(first[10])();
         const initialGuildEventData = guild(first[11]).getInitialGuildEventData(initialGuildEvent, targetChannel);
@@ -162,7 +162,7 @@ export default noop.memo(
         tmp6 = initialGuildEventData;
         const tmpResult2 = guild(first[11]);
       }
-    : (guild) => {
+    : function EditGuildEventModal(guild) {
         guild = guild.guild;
         let PREVIEW = guild;
         ({ onCloseModal: importDefault, initialGuildEvent } = guild);
@@ -211,7 +211,7 @@ export default noop.memo(
                 return { value: "IconComponent", done: null };
               } else {
                 if (!closure_128_5) {
-                  const AccessibilityAnnouncer = tmp4(4596).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = tmp4(4788).AccessibilityAnnouncer;
                   const intl = tmp4(1126).intl;
                   AccessibilityAnnouncer.announce(intl.string(tmp4(1126).t["5HzXO5"]));
                   closure_128_1();
@@ -221,7 +221,7 @@ export default noop.memo(
                     id = closure_128_2.id;
                   }
                 }
-                const AccessibilityAnnouncer2 = tmp4(4596).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer2 = tmp4(4788).AccessibilityAnnouncer;
                 const intl2 = tmp4(1126).intl;
                 AccessibilityAnnouncer2.announce(intl2.string(tmp4(1126).t["F9On+q"]));
               }

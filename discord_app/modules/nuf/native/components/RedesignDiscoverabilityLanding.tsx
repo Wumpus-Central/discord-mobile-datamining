@@ -8,7 +8,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import ContactSyncUtils from "../../../contact_sync/native/ContactSyncUtils.tsx";
-import _modDef12434 from "../../../../../_runtime/metro/12434__.js";
+import _modDef12530 from "../../../../../_runtime/metro/12530__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   topContainer: null,
@@ -43,7 +43,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/components/RedesignDiscoverabilityLanding.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onNext) => {
+  ? function RedesignDiscoverabilityLanding(onNext) {
       const cResult = c.c(31);
       const tmp4 = closure_7();
       onNext = onNext.onNext;
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp19 = cResult[9];
       }
       if (cResult[10] !== tmp4.image) {
-        const obj6 = { resizeMode: "contain", style: tmp4.image, source: _modDef12434 };
+        const obj6 = { resizeMode: "contain", style: tmp4.image, source: _modDef12530 };
         const tmp25 = hasOwnProperty(FastImageDefault, obj6);
         cResult[10] = tmp4.image;
         cResult[11] = tmp25;
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
         const intl4 = util.intl;
         const obj7 = {
-          learnMoreHook(children, arg1) {
+          learnMoreHook: function LearnMore(children, arg1) {
             return closure_1_5(
               Text_Text.Text,
               {
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[30] = tmp43;
       tmp42 = tmp43;
     }
-  : (onNext) => {
+  : function RedesignDiscoverabilityLanding(onNext) {
       const tmp = closure_7();
       const obj = {
         style: tmp.container,
@@ -259,14 +259,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         paddingHorizontal: nativeDefault.space.PX_16,
       };
       const obj3 = { style: tmp.topContainer };
-      obj6.source = _modDef12434;
+      obj6.source = _modDef12530;
       items[3] = hasOwnProperty(FastImageDefault, obj6);
       const obj7 = { style: tmp.info, variant: "text-sm/medium", color: "text-default", children: null };
       const intl3 = util.intl;
       const items1 = [intl3.string(util.t.ci12MJ), " "];
       const intl4 = util.intl;
       items1[2] = intl4.format(util.t.VcSQ4n, {
-        learnMoreHook(children, arg1) {
+        learnMoreHook: function LearnMore(children, arg1) {
           return closure_1_5(
             Text_Text.Text,
             {

@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ RefreshControl: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   searchWrap: null,
@@ -32,8 +32,8 @@ let size = {
   backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
   marginLeft: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.md,
-  height: fn(6113).InputHeights.MD,
-  width: fn(6113).InputHeights.MD,
+  height: fn(6293).InputHeights.MD,
+  width: fn(6293).InputHeights.MD,
   justifyContent: "center",
   alignItems: "center",
 };
@@ -50,7 +50,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsDebugLogs.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsDebugLogs() {
       const cResult = require("c").c(41);
       const tmp4 = closure_9();
       _require = tmp4;
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       closure_6 = tmp14;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        class B {
+        class A {
           constructor() {
             Storage = closure_0(closure_2[12]).Storage;
             str = Storage.get("debug-log-query", "");
@@ -114,9 +114,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return str;
           }
         }
-        cResult[5] = B;
+        cResult[5] = A;
       } else {
-        class B {
+        class A {
           constructor() {
             Storage = closure_0(closure_2[12]).Storage;
             str = Storage.get("debug-log-query", "");
@@ -127,12 +127,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp5Result3 = first1(noop.useState(B), 2);
+      const tmp5Result3 = first1(noop.useState(A), 2);
       const first2 = tmp5Result3[0];
       const tmp6 = first1(noop.useState(0), 2);
       [r10082, closure_8] = first1(noop.useState(tmp14), 2);
       if (cResult[6] === tmp14) {
-        class B {
+        class A {
           constructor() {
             Storage = closure_0(closure_2[12]).Storage;
             str = Storage.get("debug-log-query", "");
@@ -142,9 +142,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return str;
           }
         }
-        const effect = obj2.useEffect(T, items1);
+        const effect = obj2.useEffect(O, items1);
         if (cResult[10] === tmp4.code) {
-          class B {
+          class A {
             constructor() {
               Storage = closure_0(closure_2[12]).Storage;
               str = Storage.get("debug-log-query", "");
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-            class B {
+            class A {
               constructor() {
                 Storage = closure_0(closure_2[12]).Storage;
                 str = Storage.get("debug-log-query", "");
@@ -247,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[13] = stringResult;
             const tmp23 = stringResult;
           } else {
-            class B {
+            class A {
               constructor() {
                 Storage = closure_0(closure_2[12]).Storage;
                 str = Storage.get("debug-log-query", "");
@@ -259,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[14] !== first1) {
-            class B {
+            class A {
               constructor() {
                 Storage = closure_0(closure_2[12]).Storage;
                 str = Storage.get("debug-log-query", "");
@@ -324,7 +324,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[14] = first1;
             cResult[15] = tmp26;
           } else {
-            class B {
+            class A {
               constructor() {
                 Storage = closure_0(closure_2[12]).Storage;
                 str = Storage.get("debug-log-query", "");
@@ -336,7 +336,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[16] === first2) {
-            class B {
+            class A {
               constructor() {
                 Storage = closure_0(closure_2[12]).Storage;
                 str = Storage.get("debug-log-query", "");
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (cResult[19] === tmp4.searchField) {
-              class B {
+              class A {
                 constructor() {
                   Storage = closure_0(closure_2[12]).Storage;
                   str = Storage.get("debug-log-query", "");
@@ -397,7 +397,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (cResult[23] !== tmp4.shareButton) {
-                class B {
+                class A {
                   constructor() {
                     Storage = closure_0(closure_2[12]).Storage;
                     str = Storage.get("debug-log-query", "");
@@ -451,7 +451,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[23] = tmp4.shareButton;
                 cResult[24] = tmp37;
               } else {
-                class B {
+                class A {
                   constructor() {
                     Storage = closure_0(closure_2[12]).Storage;
                     str = Storage.get("debug-log-query", "");
@@ -463,7 +463,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (cResult[25] === tmp4.searchWrap) {
-                class B {
+                class A {
                   constructor() {
                     Storage = closure_0(closure_2[12]).Storage;
                     str = Storage.get("debug-log-query", "");
@@ -582,7 +582,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = tmp4.log;
         cResult[12] = R;
       }
-      class T {
+      class O {
         constructor() {
           if ("" !== closure_7) {
             tmp8 = globalThis;
@@ -622,11 +622,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items1 = [tmp14, first2];
       cResult[6] = tmp14;
       cResult[7] = first2;
-      cResult[8] = T;
+      cResult[8] = O;
       cResult[9] = items1;
       const tmp5Result4 = first1(noop.useState(tmp14), 2);
     }
-  : () => {
+  : function UserSettingsDebugLogs() {
       const tmp = closure_9();
       _require = tmp;
       [tmp6, importDefault] = sortOrder(noop.useState(0), 2);

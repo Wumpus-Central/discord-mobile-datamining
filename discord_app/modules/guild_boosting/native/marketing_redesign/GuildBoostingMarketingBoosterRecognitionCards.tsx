@@ -4,20 +4,20 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import HeartIcon from "../../../../design/components/Icon/native/redesign/generated/HeartIcon.tsx";
 import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
+import HeartIcon from "../../../../design/components/Icon/native/redesign/generated/HeartIcon.tsx";
 import BoostTier3Icon from "../../../../design/components/Icon/native/redesign/generated/BoostTier3Icon.tsx";
-import _modDef13423 from "../../../../../_runtime/metro/13423__.js";
-import _modDef13424 from "../../../../../_runtime/metro/13424__.js";
-import _modDef13425 from "../../../../../_runtime/metro/13425__.js";
-import _modDef13426 from "../../../../../_runtime/metro/13426__.js";
+import _modDef13723 from "../../../../../_runtime/metro/13723__.js";
+import _modDef13724 from "../../../../../_runtime/metro/13724__.js";
+import _modDef13725 from "../../../../../_runtime/metro/13725__.js";
+import _modDef13726 from "../../../../../_runtime/metro/13726__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = {
   card: {
     minHeight: 124,
@@ -37,7 +37,7 @@ let obj2 = {
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Card(arg0) {
       const cResult = c.c(12);
       const tmp4 = closure_6();
       ({ IconComponent, children } = arg0);
@@ -90,7 +90,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const obj5 = { style: tmp4.iconContainer, children: tmp5 };
     }
-  : (arg0) => {
+  : function Card(arg0) {
       const tmp = closure_6();
       const obj = { style: tmp.card, children: null };
       const obj2 = {
@@ -105,7 +105,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       obj.children = items;
       return hasOwnProperty(View, obj);
     };
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({
   container: { marginTop: 50, display: "flex", flexDirection: "column", alignItems: "center" },
   title: { textAlign: "center", marginHorizontal: 34 },
@@ -136,7 +136,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function GuildBoostingMarketingBoosterRecognitionCards() {
       const cResult = c.c(13);
       const tmp4 = closure_8();
       ({ container, title } = tmp4);
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { icon: _modDef13423, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
+        const obj3 = { icon: _modDef13723, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
         const intl2 = util.intl;
         obj3.children = intl2.string(util.t.TZigSO);
         const tmp14 = React4(closure_7, obj3);
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = { icon: _modDef13424, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
+        const obj4 = { icon: _modDef13724, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
         const intl3 = util.intl;
         obj4.children = intl3.string(util.t.hjQuV2);
         const tmp19 = React4(closure_7, obj4);
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = cResult[4];
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { icon: _modDef13425, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
+        const obj5 = { icon: _modDef13725, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
         const intl4 = util.intl;
         obj5.children = intl4.string(util.t["2RUcaM"]);
         const tmp24 = React4(closure_7, obj5);
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp20 = cResult[5];
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj6 = { icon: _modDef13426, IconComponent: HeartIcon.HeartIcon, children: null };
+        const obj6 = { icon: _modDef13726, IconComponent: HeartIcon.HeartIcon, children: null };
         const intl5 = util.intl;
         obj6.children = intl5.string(util.t.bJoZKV);
         const tmp29 = React4(closure_7, obj6);
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = tmp35;
       tmp34 = tmp35;
     }
-  : () => {
+  : function GuildBoostingMarketingBoosterRecognitionCards() {
       const tmp = closure_8();
       const obj = { style: tmp.container, children: null };
       const obj2 = { variant: "heading-xl/extrabold", style: tmp.title, children: null };
@@ -234,19 +234,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = intl.string(util.t.IzKs3o);
       const items = [React4(Text_Text.Heading, obj2)];
       const obj3 = { style: tmp.recognitionCardsContainer, children: null };
-      const obj4 = { icon: _modDef13423, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
+      const obj4 = { icon: _modDef13723, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
       const intl2 = util.intl;
       obj4.children = intl2.string(util.t.TZigSO);
       const items1 = [React4(closure_7, obj4), , ,];
-      const obj5 = { icon: _modDef13424, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
+      const obj5 = { icon: _modDef13724, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
       const intl3 = util.intl;
       obj5.children = intl3.string(util.t.hjQuV2);
       items1[1] = React4(closure_7, obj5);
-      const obj6 = { icon: _modDef13425, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
+      const obj6 = { icon: _modDef13725, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
       const intl4 = util.intl;
       obj6.children = intl4.string(util.t["2RUcaM"]);
       items1[2] = React4(closure_7, obj6);
-      const obj7 = { icon: _modDef13426, IconComponent: HeartIcon.HeartIcon, children: null };
+      const obj7 = { icon: _modDef13726, IconComponent: HeartIcon.HeartIcon, children: null };
       const intl5 = util.intl;
       obj7.children = intl5.string(util.t.bJoZKV);
       items1[3] = React4(closure_7, obj7);

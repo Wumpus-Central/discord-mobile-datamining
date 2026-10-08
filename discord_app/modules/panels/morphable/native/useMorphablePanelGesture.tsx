@@ -1,14 +1,14 @@
 // discord_app/modules/panels/morphable/native/useMorphablePanelGesture.tsx
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06326_LegacyBaseButton.js";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import MorphablePanelUtils from "MorphablePanelUtils.tsx";
 import triggerIOSHapticDefault from "triggerIOSHaptic.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MorphablePanelConstants = fn(11917);
+const MorphablePanelConstants = fn(11990);
 ({ IS_IOS: closure_4, MIN_PAN_GESTURE_MOVE: hasOwnProperty, MorphablePanelModes } = MorphablePanelConstants);
 ({
   PANEL_TAP_GESTURE_MAX_DISTANCE: closure_7,
@@ -62,7 +62,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/panels/morphable/native/useMorphablePanelGesture.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (mode) => {
+  ? function useMorphablePanelGesture(mode) {
       let onEndResult = mode;
       let RaceResult = onTapGestureStart;
       let flag;
@@ -531,7 +531,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         swipeRequiresPop: flag !== swipeRequiresPop && swipeRequiresPop,
       };
     }
-  : (mode) => {
+  : function useMorphablePanelGesture(mode) {
       mode = mode.mode;
       const onPanMinimizeGestureEnd = mode.onPanMinimizeGestureEnd;
       const onTapGestureStart = mode.onTapGestureStart;

@@ -12,7 +12,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_13 = createStyles.createStyles({ wrapper: { paddingBottom: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildBoostingMarketingOverview(guildId) {
       const cResult = guildId(stateFromStores[9]).c(53);
       closure_13();
       guildId = guildId.guildId;
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = fn2;
       const tmpResult4 = guildId(stateFromStores[11]);
     }
-  : (guildId) => {
+  : function GuildBoostingMarketingOverview(guildId) {
       guildId = guildId.guildId;
       const guildBoostSlots = guildId.guildBoostSlots;
       let tmp = closure_13();
@@ -248,9 +248,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       const effect1 = obj4.useEffect(() => {
         guildBoostSlots(stateFromStores[18]).wait(() => {
-          const premiumSubscriptionPlans = guildId(6770).fetchPremiumSubscriptionPlans();
-          const obj = guildId(6770);
-          const paymentSources = guildId(5411).fetchPaymentSources();
+          const premiumSubscriptionPlans = guildId(6946).fetchPremiumSubscriptionPlans();
+          const obj = guildId(6946);
+          const paymentSources = guildId(5720).fetchPaymentSources();
         });
       }, []);
       let tmp18 = null;

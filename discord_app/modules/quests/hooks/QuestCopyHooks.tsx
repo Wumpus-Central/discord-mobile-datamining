@@ -9,11 +9,11 @@ import QuestTaskUtils from "../utils/QuestTaskUtils.tsx";
 import QuestType from "../../../../discord_common/js/shared/shared-constants/QuestType.tsx";
 import GameProfileAnalyticUtils from "../../game_profile/GameProfileAnalyticUtils.tsx";
 import useOpenGameProfileModalDefault from "../../game_profile/hooks/useOpenGameProfileModal.tsx";
-import isActivitySupportedOnClientPlatformDefault from "../../activities/utils/isActivitySupportedOnClientPlatform.tsx";
 import QuestRewardUtils from "../utils/QuestRewardUtils.tsx";
 import QuestCopyUtils from "../utils/QuestCopyUtils.tsx";
 import hooks_QuestHooks from "QuestHooks.tsx";
 import MobileQuestVideoWatchCtaCopy from "../utils/MobileQuestVideoWatchCtaCopy.tsx";
+import isActivitySupportedOnClientPlatformDefault from "../../activities/utils/isActivitySupportedOnClientPlatform.tsx";
 import useInGameQuestConnectState from "../useInGameQuestConnectState.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -24,8 +24,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const util = v1votF6(1126);
-const utils_QuestUtils = v1votF6(7219);
-const SponsoredQuestUtils = v1votF6(10969);
+const utils_QuestUtils = v1votF6(7399);
+const SponsoredQuestUtils = v1votF6(11162);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);
@@ -423,13 +423,13 @@ function getSimplifiedQuestTaskType(quest) {
   PLAY = constants3.PLAY;
   obj = QuestTaskUtils;
 }
-const QuestConstants = fn(5630);
+const QuestConstants = fn(5977);
 ({ QuestsExperimentLocations: closure_8, ORBS_INTRO_QUEST_ID: closure_9, QuestVariants: c10 } = QuestConstants);
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestsInstructionsToWinReward(arg0) {
   const cResult = c.c(14);
   ({ quest, gameProfileSource, withoutMarkdown } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -509,7 +509,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp19 = obj3;
   }
   const tmpResult5 = hooks_QuestHooks;
-}) : ((arg0) => {
+}) : (function useQuestsInstructionsToWinReward(arg0) {
   ({ quest, gameProfileSource, withoutMarkdown } = arg0);
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -543,7 +543,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_14 = tmp4;
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest, arg1, questContent, sourceQuestContent) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestInstructionTitle(quest, arg1, questContent, sourceQuestContent) {
   let gbtCpW = require;
   let formatResult1 = dependencyMap;
   const cResult = c.c(30);
@@ -728,7 +728,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest, arg1, quest
   cResult[2] = sourceQuestContent;
   cResult[3] = obj14;
   tmp4 = obj14;
-}) : ((quest, arg1, questContent, sourceQuestContent) => {
+}) : (function useQuestInstructionTitle(quest, arg1, questContent, sourceQuestContent) {
   const targetMinutes = hooks_QuestHooks.useQuestTaskDetails(quest).targetMinutes;
   const thirdPartyTaskDetails = hooks_QuestHooks.useThirdPartyTaskDetails(quest);
   const connectedConsoleLinkOnClick = hooks_QuestHooks.useConnectedConsoleLinkOnClick({ quest, questContent, sourceQuestContent });
@@ -812,7 +812,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest, arg1, quest
   tmpResult7 = QuestTaskUtils;
 });
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest, sourceQuestContent, location, gameProfileSource, popoutTargetElementRef) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDescription(quest, sourceQuestContent, location, gameProfileSource, popoutTargetElementRef) {
   let lOVr0O = require;
   let formatToPlainStringResult = dependencyMap;
   const cResult = c.c(9);
@@ -863,7 +863,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest, sourceQuestCo
   cResult[5] = questTaskDetails;
   cResult[6] = obj4;
   tmp4 = obj4;
-}) : ((quest, sourceQuestContent, location, gameProfileSource, popoutTargetElementRef) => {
+}) : (function useQuestDescription(quest, sourceQuestContent, location, gameProfileSource, popoutTargetElementRef) {
   let formatToPlainStringResult = closure_14({ quest, taskDetails: hooks_QuestHooks.useQuestTaskDetails(quest), location, sourceQuestContent, popoutTargetElementRef, gameProfileSource });
   const userStatus = quest.userStatus;
   let claimedAt1;
@@ -884,7 +884,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest, sourceQuestCo
 });
 ReactCompilerGating = fn(558);
 const constants3 = { PLAY: 0, [0]: "PLAY", STREAM: 1, [1]: "STREAM", WATCH_VIDEO: 2, [2]: "WATCH_VIDEO", IN_GAME: 3, [3]: "IN_GAME" };
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestBarSubtitle(arg0) {
   const cResult = c.c(27);
   ({ quest, sourceQuestContent, popoutTargetElementRef, onGameSheetOpened, onGameSheetClosed, hasAlreadyLinked, onClickGameTitle, isExpanded, activeScreen } = arg0);
   const questFormattedDate = hooks_QuestHooks.useQuestFormattedDate(quest.config.rewardsConfig.rewardsExpireAt);
@@ -1085,7 +1085,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = questTaskDetails;
   cResult[8] = { quest, location: constants.QUESTS_BAR, taskDetails: questTaskDetails, sourceQuestContent, popoutTargetElementRef, onGameSheetOpened, onGameSheetClosed, gameProfileSource: GameProfileAnalyticUtils.GameProfileSources.QuestBar };
   const obj10 = { quest, location: constants.QUESTS_BAR, taskDetails: questTaskDetails, sourceQuestContent, popoutTargetElementRef, onGameSheetOpened, onGameSheetClosed, gameProfileSource: GameProfileAnalyticUtils.GameProfileSources.QuestBar };
-}) : ((arg0) => {
+}) : (function useQuestBarSubtitle(arg0) {
   ({ quest, hasAlreadyLinked, onClickGameTitle } = arg0);
   ({ isExpanded, sourceQuestContent, activeScreen, popoutTargetElementRef, onGameSheetOpened, onGameSheetClosed } = arg0);
   const questFormattedDate = hooks_QuestHooks.useQuestFormattedDate(quest.config.rewardsConfig.rewardsExpireAt);
@@ -1180,7 +1180,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmpResult = hooks_QuestHooks;
 });
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSimplifiedQuestTaskType(quest) {
   const cResult = c.c(2);
   if (cResult[0] !== quest) {
     const tmp4 = getSimplifiedQuestTaskType(quest);
@@ -1191,13 +1191,13 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
     tmp2 = cResult[1];
   }
   return tmp2;
-}) : ((arg0) => {
+}) : (function useSimplifiedQuestTaskType(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   return noop.useMemo(() => getSimplifiedQuestTaskType(closure_0), items);
 });
 ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((userStatus, arg1) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestBarTitle(userStatus, arg1) {
   const cResult = c.c(11);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [LocaleStore];
@@ -1317,7 +1317,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((userStatus, arg1) =>
     tmpResult12 = QuestTaskUtils;
   }
   const tmpResult10 = hooks_QuestHooks;
-}) : ((userStatus, arg1) => {
+}) : (function useQuestBarTitle(userStatus, arg1) {
   const items = [LocaleStore];
   const stateFromStores = initialize.useStateFromStores(items, () => locale.locale);
   const questTaskDetails = hooks_QuestHooks.useQuestTaskDetails(userStatus);
@@ -1380,7 +1380,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((userStatus, arg1) =>
   }
 });
 ReactCompilerGating = fn(558);
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePrimaryCtaCopy(arg0) {
   const cResult = c.c(11);
   ({ quest, application, shortText } = arg0);
   const tmp5 = closure_17(quest);
@@ -1501,7 +1501,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmpResult6 = utils_QuestUtils;
   }
   const tmpResult = hooks_QuestHooks;
-}) : ((arg0) => {
+}) : (function usePrimaryCtaCopy(arg0) {
   ({ quest, application, shortText } = arg0);
   if (shortText === undefined) {
     shortText = false;
@@ -1575,7 +1575,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
 });
 ReactCompilerGating = fn(558);
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((config) => {
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumExtendableCopy(config) {
   const cResult = c.c(4);
   const result = QuestRewardUtils.isCollectibleQuestRewardPremiumExtendable(config);
   if (cResult[0] !== config) {
@@ -1602,7 +1602,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((config) => {
     cResult[2] = tmp5;
     cResult[3] = stringResult;
   }
-}) : ((arg0) => {
+}) : (function usePremiumExtendableCopy(arg0) {
   _require = arg0;
   const items = [arg0];
   [][0] = arg0;
@@ -1687,7 +1687,7 @@ export const getRewardCodeRedemptionInstructions = function getRewardCodeRedempt
   }
   return tmp10;
 };
-export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
+export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? (function useModalCtaConfig(quest) {
   const cResult = require("c").c(15);
   quest = quest.quest;
   _require = quest;
@@ -1851,7 +1851,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
   cResult[5] = defaultOnClickCta;
   tmp4 = defaultOnClickCta;
   let obj = require("c");
-}) : ((quest) => {
+}) : (function useModalCtaConfig(quest) {
   quest = quest.quest;
   ({ questContent: importDefault, preCtaClick: dependencyMap, getImpressionId: asyncGeneratorStep, sourceQuestContent: _slicedToArray } = quest);
   noop = async function _defaultOnClickCta2() {
@@ -1896,14 +1896,14 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
           const obj = { value, done: true };
           return obj;
         } else {
-          const obj6 = { content: closure_128_1, ctaContent: tmp4(7225).QuestContentCTA.OPEN_GAME_LINK, impressionId: null, sourceQuestContent: null };
+          const obj6 = { content: closure_128_1, ctaContent: tmp4(7404).QuestContentCTA.OPEN_GAME_LINK, impressionId: null, sourceQuestContent: null };
           let tmp5;
           if (closure_128_3 != null) {
             tmp5 = closure_128_3();
           }
           obj6.impressionId = tmp5;
           obj6.sourceQuestContent = closure_128_4;
-          tmp4(10931).openGameLinkDirectly(closure_128_0, obj6);
+          tmp4(10582).openGameLinkDirectly(closure_128_0, obj6);
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }
@@ -1947,7 +1947,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
       obj3 = QuestTaskUtils;
     }
   }, items);
-  obj.ctaText = quest(10023).getExternalCtaLabel(quest);
+  obj.ctaText = quest(9554).getExternalCtaLabel(quest);
   obj.onClickCta = function defaultOnClickCta() {
     const self = this;
     const apply = closure_5.apply;

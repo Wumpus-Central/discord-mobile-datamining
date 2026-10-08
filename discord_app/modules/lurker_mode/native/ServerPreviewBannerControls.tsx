@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef6022 from "../../../../_runtime/metro/06022__.js";
+import _modDef6208 from "../../../../_runtime/metro/06208__.js";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import ServerPreviewPillDefault from "ServerPreviewPill.tsx";
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const MOBILE_GUILD_UPSELL_LIST = fn(1085).MOBILE_GUILD_UPSELL_LIST;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { row: null };
 const rect = {
   position: "absolute",
@@ -30,11 +30,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/lurker_mode/native/ServerPreviewBannerControls.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ServerPreviewBannerControls() {
       const cResult = c.c(5);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t() {
+        const fn = function n() {
           transitionToGuild.transitionToGuild(MOBILE_GUILD_UPSELL_LIST);
         };
         cResult[0] = fn;
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {
           size: "md",
           variant: "secondary-overlay",
-          icon: _modDef6022,
+          icon: _modDef6208,
           onPress: first,
           accessibilityLabel: null,
           maxFontSizeMultiplier: 1.5,
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp12;
     }
-  : () => {
+  : function ServerPreviewBannerControls() {
       const obj = { style: closure_8().row, children: null };
       const callback = noop.useCallback(() => {
         transitionToGuild.transitionToGuild(MOBILE_GUILD_UPSELL_LIST);
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = {
         size: "md",
         variant: "secondary-overlay",
-        icon: _modDef6022,
+        icon: _modDef6208,
         onPress: callback,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1.5,

@@ -15,7 +15,7 @@ let obj2 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 const result = size.fileFinishedImporting("modules/oauth2/native/AuthorizeFormSeparator.tsx");
 
 export const AuthorizeFormSeparator = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AuthorizeFormSeparator() {
       const cResult = c.c(2);
       const tmp2 = closure_4();
       if (cResult[0] !== tmp2.separator) {
@@ -29,4 +29,6 @@ export const AuthorizeFormSeparator = ReactCompilerGating.isReactCompilerEnabled
       }
       return tmp3;
     }
-  : () => <View style={closure_4().separator} />;
+  : function AuthorizeFormSeparator() {
+      return <View style={closure_4().separator} />;
+    };

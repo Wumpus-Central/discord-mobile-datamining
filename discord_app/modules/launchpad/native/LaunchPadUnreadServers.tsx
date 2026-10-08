@@ -12,14 +12,14 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 function renderHistorySection() {
-  return v65535(closure_15, {});
+  return collapsed(closure_15, {});
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const ChannelTypes = fn(1085).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   listWrapper: { marginTop: 8 },
   list: { marginBottom: 4, flexShrink: 0 },
@@ -42,7 +42,7 @@ let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_13 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guildId) => {
+    ? function GuildItemInner(guildId) {
         const cResult = guildId(576).c(14);
         guildId = guildId.guildId;
         ({ selected, onGuildSelect } = guildId);
@@ -93,7 +93,7 @@ let closure_13 = noop.memo(
             onLongPress: tmp5,
             backgroundColor: tmp3.maskStrokeStyle.backgroundColor,
           };
-          const tmp9 = closure_10(onGuildSelect(17420), obj3);
+          const tmp9 = closure_10(onGuildSelect(17702), obj3);
           cResult[5] = guildId;
           cResult[6] = tmp5;
           cResult[7] = tmp4;
@@ -111,7 +111,7 @@ let closure_13 = noop.memo(
         tmp4 = fn;
         const obj = guildId(576);
       }
-    : (guildId) => {
+    : function GuildItemInner(guildId) {
         guildId = guildId.guildId;
         onGuildSelect = guildId.onGuildSelect;
         const tmp = closure_12();
@@ -124,7 +124,7 @@ let closure_13 = noop.memo(
         const callback1 = noop.useCallback(() => {
           transitionToGuild.transitionToGuild(guildId);
         }, items1);
-        obj.children = closure_10(onGuildSelect(17420), {
+        obj.children = closure_10(onGuildSelect(17702), {
           size: 48,
           borderRadius: 16,
           guildId,
@@ -139,8 +139,8 @@ let closure_13 = noop.memo(
 ReactCompilerGating = fn(558);
 let closure_14 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channelId) => {
-        const cResult = channelId(stateFromStores1[10]).c(30);
+    ? function PrivateChannelItemInner(channelId) {
+        const cResult = channelId(stateFromStores1[10]).c(28);
         channelId = channelId.channelId;
         const tmp4 = closure_12();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -226,10 +226,10 @@ let closure_14 = noop.memo(
               guildId: "Array",
               size: tmp(tmp2[14]).AvatarSizes.LARGE_48,
             };
-            const tmp33 = closure_10(tmp(tmp2[14]).Avatar, obj2);
+            const tmp32 = closure_10(tmp(tmp2[14]).Avatar, obj2);
             cResult[9] = tmp4.privateChannelIcon;
             cResult[10] = stateFromStores1;
-            cResult[11] = tmp33;
+            cResult[11] = tmp32;
           }
         }
         let isGroupDMResult;
@@ -239,74 +239,66 @@ let closure_14 = noop.memo(
         if (isGroupDMResult) {
           if (cResult[12] !== stateFromStores) {
             let obj3 = { channel: stateFromStores, size: tmp(tmp2[14]).AvatarSizes.LARGE_48 };
-            const tmp30 = closure_10(stateFromStores(tmp2[15]), obj3);
+            const tmp29 = closure_10(stateFromStores(tmp2[15]), obj3);
             cResult[12] = stateFromStores;
-            cResult[13] = tmp30;
-            let tmp26 = tmp30;
-            const tmp29 = stateFromStores(tmp2[15]);
+            cResult[13] = tmp29;
+            let tmp25 = tmp29;
+            const tmp28 = stateFromStores(tmp2[15]);
           } else {
-            tmp26 = cResult[13];
+            tmp25 = cResult[13];
           }
-          let tmp18 = tmp26;
+          let tmp18 = tmp25;
         } else if (null != stateFromStores) {
-          if (cResult[14] !== tmp4.privateChannelIcon) {
-            const items3 = [tmp4.privateChannelIcon];
-            cResult[14] = tmp4.privateChannelIcon;
-            cResult[15] = items3;
-            let tmp19 = items3;
+          if (cResult[14] !== stateFromStores) {
+            const channelIconSource = tmp(tmp2[16]).getChannelIconSource(stateFromStores);
+            cResult[14] = stateFromStores;
+            cResult[15] = channelIconSource;
+            let tmp19 = channelIconSource;
+            const tmpResult6 = tmp(tmp2[16]);
           } else {
             tmp19 = cResult[15];
           }
-          if (cResult[16] !== stateFromStores) {
-            const channelIconSource = tmp(tmp2[16]).getChannelIconSource(stateFromStores);
-            cResult[16] = stateFromStores;
-            cResult[17] = channelIconSource;
-            let tmp20 = channelIconSource;
-            const tmpResult6 = tmp(tmp2[16]);
-          } else {
-            tmp20 = cResult[17];
-          }
-          if (cResult[18] === tmp19) {
-            if (cResult[19] === tmp20) {
-              let tmp22 = cResult[20];
+          if (cResult[16] === tmp4.privateChannelIcon) {
+            if (cResult[17] === tmp19) {
+              let tmp21 = cResult[18];
             }
-            tmp18 = tmp22;
+            tmp18 = tmp21;
           }
-          const obj4 = { style: tmp19, source: tmp20 };
-          const tmp25 = closure_10(stateFromStores(tmp2[17]), obj4);
-          cResult[18] = tmp19;
-          cResult[19] = tmp20;
-          cResult[20] = tmp25;
-          tmp22 = tmp25;
+          const obj4 = { style: tmp4.privateChannelIcon, source: tmp19 };
+          const tmp24 = closure_10(stateFromStores(tmp2[17]), obj4);
+          cResult[16] = tmp4.privateChannelIcon;
+          cResult[17] = tmp19;
+          cResult[18] = tmp24;
+          tmp21 = tmp24;
         }
-        if (cResult[21] === stateFromStores) {
-          if (cResult[22] === stateFromStores1) {
-            let tmp35 = cResult[23];
+        if (cResult[19] === stateFromStores) {
+          if (cResult[20] === stateFromStores1) {
+            let tmp34 = cResult[21];
           }
-          if (cResult[24] === stateFromStores2) {
-            if (cResult[25] === stateFromStores) {
-              if (cResult[26] === tmp35) {
-                if (cResult[27] === tmp18) {
-                  if (cResult[28] === tmp4) {
-                    let tmp36 = cResult[29];
+          if (cResult[22] === stateFromStores2) {
+            if (cResult[23] === stateFromStores) {
+              if (cResult[24] === tmp34) {
+                if (cResult[25] === tmp18) {
+                  if (cResult[26] === tmp4) {
+                    let tmp35 = cResult[27];
                   }
-                  return tmp36;
+                  return tmp35;
                 }
               }
             }
           }
-          let tmp38Result = null;
+          let tmp37Result = null;
           if (null != stateFromStores) {
             const obj5 = {
-              onPress: tmp35,
+              onPress: tmp34,
               style: tmp4.privateChannelWrapper,
               accessibilityRole: "button",
               accessible: true,
               children: null,
             };
-            const items4 = [tmp18];
-            let tmp40 = stateFromStores2 > 0;
-            if (tmp40) {
+            const items3 = [tmp18];
+            let tmp39 = stateFromStores2 > 0;
+            if (tmp39) {
               const obj6 = { style: tmp4.badgeWrapper, children: null };
               const obj7 = {
                 value: stateFromStores2,
@@ -314,40 +306,52 @@ let closure_14 = noop.memo(
                 backgroundColor: tmp4.maskStrokeStyle.backgroundColor,
               };
               obj6.children = closure_10(stateFromStores(tmp2[20]), obj7);
-              tmp40 = closure_10(closure_5, obj6);
+              tmp39 = closure_10(closure_5, obj6);
             }
-            items4[1] = tmp40;
-            obj5.children = items4;
-            tmp38Result = closure_11(closure_4, obj5);
+            items3[1] = tmp39;
+            obj5.children = items3;
+            tmp37Result = closure_11(closure_4, obj5);
           }
-          cResult[24] = stateFromStores2;
-          cResult[25] = stateFromStores;
-          cResult[26] = tmp35;
-          cResult[27] = tmp18;
-          cResult[28] = tmp4;
-          cResult[29] = tmp38Result;
-          tmp36 = tmp38Result;
+          cResult[22] = stateFromStores2;
+          cResult[23] = stateFromStores;
+          cResult[24] = tmp34;
+          cResult[25] = tmp18;
+          cResult[26] = tmp4;
+          cResult[27] = tmp37Result;
+          tmp35 = tmp37Result;
         }
-        const fn4 = function w() {
-          if (null != stateFromStores) {
-            if (stateFromStores.type === ChannelTypes.DM) {
-              if (null != stateFromStores1) {
-                const obj3 = { recipientIds: null };
-                const items = [tmp2.id];
-                obj3.recipientIds = items;
-                ChannelActionCreatorsDefault.openPrivateChannel(obj3);
+        class E {
+          constructor() {
+            tmp = closure_1;
+            if (null != closure_1) {
+              tmp9 = ChannelTypes;
+              if (tmp.type === ChannelTypes.DM) {
+                if (null != closure_2) {
+                  tmp6 = closure_1;
+                  tmp7 = closure_2;
+                  obj2 = closure_1(closure_2[18]);
+                  obj1 = { recipientIds: null };
+                  items = [];
+                  items[0] = tmp2.id;
+                  obj1.recipientIds = items;
+                  openPrivateChannelResult = obj2.openPrivateChannel(obj1);
+                }
               }
+              tmp3 = closure_0;
+              tmp4 = closure_2;
+              obj = closure_0(closure_2[19]);
+              transitionToChannelResult = obj.transitionToChannel(tmp.id, { navigationReplace: true });
             }
-            transitionToChannel.transitionToChannel(stateFromStores.id, { navigationReplace: true });
+            return;
           }
-        };
-        cResult[21] = stateFromStores;
-        cResult[22] = stateFromStores1;
-        cResult[23] = fn4;
-        tmp35 = fn4;
+        }
+        cResult[19] = stateFromStores;
+        cResult[20] = stateFromStores1;
+        cResult[21] = E;
+        tmp34 = E;
         const tmpResult5 = channelId(stateFromStores1[13]);
       }
-    : (channelId) => {
+    : function PrivateChannelItemInner(channelId) {
         channelId = channelId.channelId;
         let stateFromStores1;
         const tmp = closure_12();
@@ -428,9 +432,7 @@ let closure_14 = noop.memo(
           tmp9Result = closure_10(stateFromStores(tmp3[15]), obj8);
           const tmp15 = stateFromStores(tmp3[15]);
         } else if (null != stateFromStores) {
-          const obj9 = { style: null, source: null };
-          const items5 = [tmp.privateChannelIcon];
-          obj9.style = items5;
+          const obj9 = { style: tmp.privateChannelIcon, source: null };
           const tmp11 = stateFromStores(tmp3[17]);
           const channelIconSource = tmp2(tmp3[16]).getChannelIconSource(stateFromStores);
           obj9.source = channelIconSource;
@@ -442,12 +444,12 @@ let closure_14 = noop.memo(
 );
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function HistorySeparator() {
       const cResult = c.c(5);
       const tmp2 = closure_12();
       if (cResult[0] !== tmp2.guildHistorySeparator) {
         const obj2 = { style: tmp2.guildHistorySeparator };
-        const tmp6 = v65535(hasOwnProperty, obj2);
+        const tmp6 = collapsed(hasOwnProperty, obj2);
         cResult[0] = tmp2.guildHistorySeparator;
         cResult[1] = tmp6;
         let tmp3 = tmp6;
@@ -460,20 +462,20 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp7;
       }
-      const tmp8 = v65535(hasOwnProperty, { style: tmp2.guildHistorySeparatorWrapper, children: tmp3 });
+      const tmp8 = collapsed(hasOwnProperty, { style: tmp2.guildHistorySeparatorWrapper, children: tmp3 });
       cResult[2] = tmp2.guildHistorySeparatorWrapper;
       cResult[3] = tmp3;
       cResult[4] = tmp8;
       tmp7 = tmp8;
       const obj3 = { style: tmp2.guildHistorySeparatorWrapper, children: tmp3 };
     }
-  : () => {
+  : function HistorySeparator() {
       const tmp = closure_12();
       const obj = {
         style: tmp.guildHistorySeparatorWrapper,
-        children: v65535(hasOwnProperty, { style: tmp.guildHistorySeparator }),
+        children: collapsed(hasOwnProperty, { style: tmp.guildHistorySeparator }),
       };
-      return v65535(hasOwnProperty, obj);
+      return collapsed(hasOwnProperty, obj);
     };
 ReactCompilerGating = fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -482,7 +484,7 @@ const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadUnr
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (selectedGuildId) => {
+    ? function LaunchPadUnreadServers(selectedGuildId) {
         const cResult = selectedGuildId(unreadPrivateChannelIds[10]).c(28);
         selectedGuildId = selectedGuildId.selectedGuildId;
         const setSelectedGuild = selectedGuildId.setSelectedGuild;
@@ -522,7 +524,7 @@ export default noop.memo(
           const effect = obj3.useEffect(T, tmp7);
           obj3.useRef(null);
           if (cResult[5] !== visible) {
-            class H {
+            class W {
               constructor() {
                 if (visible) {
                   tmp = closure_8;
@@ -538,11 +540,11 @@ export default noop.memo(
             }
             const items1 = [visible];
             cResult[5] = visible;
-            cResult[6] = H;
+            cResult[6] = W;
             cResult[7] = items1;
             let tmp12 = items1;
           } else {
-            class H {
+            class W {
               constructor() {
                 if (visible) {
                   tmp = closure_8;
@@ -558,9 +560,9 @@ export default noop.memo(
             }
             tmp12 = cResult[7];
           }
-          const effect1 = obj3.useEffect(H, tmp12);
+          const effect1 = obj3.useEffect(W, tmp12);
           if (cResult[8] === guildHistory) {
-            class H {
+            class W {
               constructor() {
                 if (visible) {
                   tmp = closure_8;
@@ -653,7 +655,7 @@ export default noop.memo(
         tmp4 = fn;
         let obj2 = selectedGuildId(unreadPrivateChannelIds[21]);
       }
-    : (selectedGuildId) => {
+    : function LaunchPadUnreadServers(selectedGuildId) {
         selectedGuildId = selectedGuildId.selectedGuildId;
         const setSelectedGuild = selectedGuildId.setSelectedGuild;
         let prop = selectedGuildId.unreadPrivateChannelIds;
@@ -703,7 +705,7 @@ export default noop.memo(
             let tmp14 = null != tmp12;
             if (tmp14) {
               const obj2 = { channelId: tmp12 };
-              tmp14 = v65535(closure_14, obj2);
+              tmp14 = collapsed(closure_14, obj2);
             }
             return tmp14;
           } else if (arg0 >= 1) {
@@ -715,7 +717,7 @@ export default noop.memo(
             let tmp6 = null != tmp3;
             if (tmp6) {
               const obj = { guildId: tmp3, selected: selectedGuildId === tmp3, onGuildSelect };
-              tmp6 = v65535(closure_13, obj);
+              tmp6 = collapsed(closure_13, obj);
             }
             return tmp6;
           } else {

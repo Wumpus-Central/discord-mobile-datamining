@@ -101,12 +101,12 @@ function canBanMember(user, guild) {
   }
   return tmp4;
 }
-const GuildMemberFlags = fn(4501).GuildMemberFlags;
+const GuildMemberFlags = fn(4693).GuildMemberFlags;
 const Permissions = fn(1085).Permissions;
 let c9 = 86400000;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useGuildMemberAgeInRange(arg0, arg1, arg2) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = arg2;
@@ -127,7 +127,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           return require("initialize").useStateFromStores(first, tmp5, tmp6);
         }
       }
-      const fn = function u() {
+      const fn = function o() {
         return getGuildMemberAgeInRange(closure_0, closure_1, closure_2);
       };
       const items1 = [arg1, arg0, arg2];
@@ -139,7 +139,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = items1;
       tmp5 = fn;
     }
-  : (arg0, arg1, arg2) => {
+  : function useGuildMemberAgeInRange(arg0, arg1, arg2) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = arg2;
@@ -154,7 +154,7 @@ let closure_11 = tmp2;
 fn(558);
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useNewMemberBadge(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(10);
@@ -206,32 +206,22 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           tmp12 = cResult[7];
         }
         if (cResult[8] !== arg1) {
-          class F {
-            constructor() {
-              user = closure_6.getUser(closure_1);
-              bot = undefined;
-              if (user != null) {
-                bot = user.bot;
-              }
-              return bot;
+          const fn3 = function h() {
+            const user = UserStore.getUser(closure_1);
+            let bot;
+            if (user != null) {
+              bot = user.bot;
             }
-          }
+            return bot;
+          };
           cResult[8] = arg1;
-          cResult[9] = F;
+          cResult[9] = fn3;
+          let tmp14 = fn3;
         } else {
-          class F {
-            constructor() {
-              user = closure_6.getUser(closure_1);
-              bot = undefined;
-              if (user != null) {
-                bot = user.bot;
-              }
-              return bot;
-            }
-          }
+          tmp14 = cResult[9];
         }
         const tmpResult3 = tmp(504);
-        const stateFromStores2 = tmp(504).useStateFromStores(tmp12, F);
+        const stateFromStores2 = tmp(504).useStateFromStores(tmp12, tmp14);
         const tmpResult4 = tmp(504);
         return closure_11(arg0, { maxDaysOld: 7 }, arg1) && !stateFromStores1 && !stateFromStores2 && !stateFromStores;
       }
@@ -252,7 +242,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       let obj = require("c");
     }
-  : (arg0, arg1) => {
+  : function useNewMemberBadge(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const items = [GuildMemberStore];
@@ -294,7 +284,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useCanKickMember(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(4);
@@ -311,7 +301,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(504).useStateFromStores(first, tmp6);
       }
-      const fn = function u() {
+      const fn = function o() {
         const items = [PermissionStore];
         return canKickMember(closure_0, closure_1, items);
       };
@@ -322,7 +312,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useCanKickMember(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       let items = [PermissionStore];
@@ -333,7 +323,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useCanBanMember(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(4);
@@ -350,7 +340,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(504).useStateFromStores(first, tmp5);
       }
-      const fn = function o() {
+      const fn = function u() {
         return canBanMember(closure_0, closure_1);
       };
       cResult[1] = arg1;
@@ -360,7 +350,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useCanBanMember(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       return require("initialize").useStateFromStores([], () => canBanMember(closure_0, closure_1));
@@ -429,7 +419,7 @@ export const useCanBanMember = tmp5;
 export { canBanMember };
 export { hasBanMemberPerms };
 export const useCanManageMessages = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useCanManageMessages(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(4);
@@ -446,7 +436,7 @@ export const useCanManageMessages = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(504).useStateFromStores(first, tmp6);
       }
-      const fn = function u() {
+      const fn = function o() {
         const items = [PermissionStore];
         [obj2] = items;
         let canManageUserResult = null != nonUserBot && null != closure_1;
@@ -465,7 +455,7 @@ export const useCanManageMessages = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useCanManageMessages(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       let items = [PermissionStore];

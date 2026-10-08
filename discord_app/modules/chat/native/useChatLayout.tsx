@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/useChatLayout.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useChatLayout() {
       const cResult = c.c(3);
       const tmp2 = useWindowSizeClassifierDefault();
       const tmp3 = tmp2 >= useWindowSizeClassifier.WindowSizeClassifier.LARGE;
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj2;
       tmp5 = obj2;
     }
-  : () => {
+  : function useChatLayout() {
       const tmp = useWindowSizeClassifierDefault();
       closure_0 = tmp;
       const items = [tmp];

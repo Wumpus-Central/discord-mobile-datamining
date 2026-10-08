@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function EditGuildScheduledEventResetWarningAlert(arg0) {
       const cResult = c.c(7);
       ({ onClose, onConfirm } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp14;
       tmp12 = tmp14;
     }
-  : (arg0) => {
+  : function EditGuildScheduledEventResetWarningAlert(arg0) {
       ({ onClose, onConfirm } = arg0);
       const obj = {
         onClose,

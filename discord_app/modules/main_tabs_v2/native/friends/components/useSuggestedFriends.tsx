@@ -8,13 +8,13 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import FriendSuggestionStore from "../../../../friend_suggestions/FriendSuggestionStore.tsx";
 
 require = fn;
-const SuggestedFriendSource = fn(12363).SuggestedFriendSource;
+const SuggestedFriendSource = fn(12459).SuggestedFriendSource;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSuggestedFriends(arg0) {
       let obj = arg0;
       let sorted = dependencyMap;
       const cResult = c.c(15);
@@ -50,23 +50,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (flag) {
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          class G {
-            constructor(arg0) {
-              return arg0.source === closure_1_6.USER_SUGGESTIONS;
-            }
-          }
-          cResult[7] = G;
+          const fn2 = function p(source) {
+            return source.source === constants.USER_SUGGESTIONS;
+          };
+          cResult[7] = fn2;
+          let tmp11 = fn2;
         } else {
-          class G {
-            constructor(arg0) {
-              return arg0.source === closure_1_6.USER_SUGGESTIONS;
-            }
-          }
+          tmp11 = cResult[7];
         }
         const _Symbol2 = Symbol;
-        const found = arr4.filter(G);
+        const found = arr4.filter(tmp11);
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          class U {
+          class G {
             constructor(arg0) {
               obj = { user: arg0.user, friendSuggestionName: null, source: null, contactNames: null };
               name = arg0.name;
@@ -76,9 +71,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             }
           }
-          cResult[8] = U;
+          cResult[8] = G;
         } else {
-          class U {
+          class G {
             constructor(arg0) {
               obj = { user: arg0.user, friendSuggestionName: null, source: null, contactNames: null };
               name = arg0.name;
@@ -90,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const _Symbol3 = Symbol;
-        const mapped = stateFromStoresArray.map(U);
+        const mapped = stateFromStoresArray.map(G);
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           class C {
             constructor(arg0) {
@@ -179,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp8 = _slicedToArray(noop.useState(tmp7), 2);
     }
-  : (arg0) => {
+  : function useSuggestedFriends(arg0) {
       let obj = arg0;
       if (arg0 == null) {
         obj = {};
@@ -212,9 +207,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return _modDef12
             .unionBy(found, mapped, (user) => user.user.id)
             .sort((user, user2) => {
-              const name = added(4728).getName(user.user);
-              const obj = added(4728);
-              return name.localeCompare(added(4728).getName(user2.user));
+              const name = added(4922).getName(user.user);
+              const obj = added(4922);
+              return name.localeCompare(added(4922).getName(user2.user));
             });
         } else {
           return [];

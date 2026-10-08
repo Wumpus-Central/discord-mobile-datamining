@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingVertical: 1, backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND } };
 let closure_3 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostNewTag.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (containerStyle) => {
+  ? function ForumPostNewTag(containerStyle) {
       const cResult = c.c(3);
       containerStyle = containerStyle.containerStyle;
       const tmp4 = closure_3();
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp6;
       tmp5 = tmp6;
     }
-  : (containerStyle) => {
+  : function ForumPostNewTag(containerStyle) {
       const obj = { containerStyle: null, variant: "text-xs/bold", color: "badge-text-brand" };
       const items = [containerStyle.containerStyle, closure_3().container];
       obj.containerStyle = items;

@@ -10,11 +10,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 let closure_2 = ["title", "titleLeadingIcon", "titleIcon", "titleStyle", "trailingAction", "children", "style"];
 const View = fn(17).View;
-const Constants = fn(6714);
+const Constants = fn(6891);
 ({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   title: {
     marginBottom: nativeDefault.space.PX_12,
@@ -46,7 +46,7 @@ fn(558);
 let obj4 = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileFormRow(arg0) {
       const cResult = c.c(28);
       ({ label, sublabel, icon, hint, disabled, isDestructive, onPress, labelColor, arrow } = arg0);
       const tmp5 = closure_10();
@@ -181,7 +181,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = tmp7;
       const obj7 = { size, color: str };
     }
-  : (arg0) => {
+  : function UserProfileFormRow(arg0) {
       ({ label, sublabel, hint, isDestructive, labelColor, arrow } = arg0);
       ({ icon, disabled, onPress } = arg0);
       if (tmp6Result3 === undefined) {
@@ -238,7 +238,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function UserProfileCardRows(children) {
       const cResult = c.c(5);
       children = children.children;
       if (cResult[0] !== children) {
@@ -269,7 +269,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp8;
       }
     }
-  : (children) => {
+  : function UserProfileCardRows(children) {
       const obj = { children: null };
       const Children = noop.Children;
       obj.children = Children.map(children.children, (children, arg1) =>
@@ -281,7 +281,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileCard(arg0) {
       const cResult = c.c(21);
       if (cResult[0] !== arg0) {
         ({ title, titleLeadingIcon, titleIcon, titleStyle, trailingAction, children, style } = arg0);
@@ -383,7 +383,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[15] = tmp18Result2;
       tmp16 = tmp18Result2;
     }
-  : (arg0) => {
+  : function UserProfileCard(arg0) {
       ({ title, trailingAction } = arg0);
       ({ titleLeadingIcon, titleIcon, titleStyle, children, style } = arg0);
       const merged = Object.assign(

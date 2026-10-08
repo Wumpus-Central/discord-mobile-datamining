@@ -9,8 +9,7 @@ require = fn;
 function cacheBustParam() {
   return "x=" + Math.floor(new Date().getMinutes() / 5);
 }
-const Endpoints = fn(1085).Endpoints;
-const ChangelogPlatforms = fn(2102).ChangelogPlatforms;
+const ChangelogPlatforms = fn(2114).ChangelogPlatforms;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ChangeLogActionCreators.tsx");
 
@@ -28,15 +27,6 @@ export default {
   },
   setChangelogOverride(id) {
     DispatcherDefault.dispatch({ type: "CHANGE_LOG_SET_OVERRIDE", id });
-    if (null != id) {
-      const self = this;
-      this.sendChangelogMessage(id);
-    }
-  },
-  sendChangelogMessage(changelog_id) {
-    const HTTP = HTTPUtils.HTTP;
-    const request = { url: Endpoints.CHANGELOG_MESSAGES, body: { changelog_id }, rejectWithError: true };
-    HTTP.post(request);
   },
   fetchChangelogConfig() {
     const HTTP = HTTPUtils.HTTP;
@@ -77,7 +67,7 @@ export default {
         const _HermesInternal = HermesInternal;
         str = "?" + cacheBustParam();
       }
-      const HTTP = closure_0(1282).HTTP;
+      const HTTP = closure_0(1294).HTTP;
       const _HermesInternal2 = HermesInternal;
       yield HTTP.get({
         url: "https://cdn.discordapp.com/changelogs/" + MOBILE + "/" + closure_0 + "/" + tmp3 + ".json" + str,

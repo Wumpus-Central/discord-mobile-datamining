@@ -9,9 +9,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(9797).getInappropriateConversationsSafetyTips;
+let closure_4 = fn(10361).getInappropriateConversationsSafetyTips;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { safetyTipsContainer: { marginHorizontal: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsSafetyTipsActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SafetyToolsSafetyTipsActionSheet(arg0) {
       const cResult = c.c(11);
       ({ channelId, recipientId, warningId, warningType, onClose } = arg0);
       const tmp4 = closure_6();
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = tmp18;
       tmp17 = tmp18;
     }
-  : (arg0) => {
+  : function SafetyToolsSafetyTipsActionSheet(arg0) {
       ({ channelId, recipientId, warningId, warningType, onClose } = arg0);
       const obj = {
         hasHeaderBack: true,

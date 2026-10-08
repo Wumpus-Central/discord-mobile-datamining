@@ -1,6 +1,6 @@
 // discord_app/lib/uploader/webpConversion.tsx
 import LoggerDefault from "../../modules/debug/Logger.tsx";
-import MurmurHashV3Default from "../../../_runtime/01251_MurmurHashV3.js";
+import MurmurHashV3Default from "../../../_runtime/01263_MurmurHashV3.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;

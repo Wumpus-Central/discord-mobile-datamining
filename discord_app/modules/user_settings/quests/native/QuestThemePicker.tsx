@@ -10,11 +10,11 @@ import ThemeStore from "../../ThemeStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-let closure_8 = fn(1240).LEGACY_STANDARD_BACKGROUND_THEMES;
+let closure_8 = fn(1252).LEGACY_STANDARD_BACKGROUND_THEMES;
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   themeSection: { marginBottom: nativeDefault.space.PX_8 },
   themeSelector: null,
@@ -55,7 +55,7 @@ obj2.resetIcon = size1;
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function QuestThemePicker() {
       const cResult = require("c").c(54);
       const tmp4 = closure_12();
       _require = tmp4;
@@ -382,7 +382,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult5 = require("initialize");
     }
-  : () => {
+  : function QuestThemePicker() {
       const tmp = closure_12();
       _require = tmp;
       analyticsLocations = analyticsLocations(allMobileThemes[11])(

@@ -8,7 +8,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/keyboard/native/useCustomKeyboardHeight.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCustomKeyboardHeight() {
       const cResult = c.c(2);
       const appEntryKey = AppEntryKeyContext.useAppEntryKey();
       if (cResult[0] !== appEntryKey) {
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return KeyboardUIStoreDefault(tmp4);
     }
-  : () => {
+  : function useCustomKeyboardHeight() {
       closure_0 = AppEntryKeyContext.useAppEntryKey();
       return KeyboardUIStoreDefault((arg0) => arg0.byAppEntry[closure_0].customKeyboardHeight);
     };

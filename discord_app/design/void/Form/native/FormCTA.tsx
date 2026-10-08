@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const Fonts = fn(1096).Fonts;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   form: {
     borderRadius: nativeDefault.radii.xs,
@@ -58,7 +58,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormCTA.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FormCTA(arg0) {
       const cResult = completed(576).c(58);
       ({ style, title, titleStyle, subtitle, completed } = arg0);
       ({ iconSource, iconStyle, iconContainerStyle, trailing } = arg0);
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   trailing: tmp37,
                                   icon: tmp5,
                                 };
-                                const tmp41 = jsx(completed(8926).RowButton, {
+                                const tmp41 = jsx(completed(8557).RowButton, {
                                   arrow: false,
                                   onPress,
                                   onLongPress,
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 tmp39 = tmp41;
                               }
                               const obj4 = { style: tmp32, text: title };
-                              const tmp36 = jsx(trailing(6640).Label, { style: tmp32, text: title });
+                              const tmp36 = jsx(trailing(6817).Label, { style: tmp32, text: title });
                               cResult[21] = tmp32;
                               cResult[22] = title;
                               cResult[23] = tmp36;
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     trailing: tmp24,
                                     leading: tmp5,
                                   };
-                                  const tmp29 = jsx(trailing(6640), {
+                                  const tmp29 = jsx(trailing(6817), {
                                     start: true,
                                     end: true,
                                     variant,
@@ -265,7 +265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   tmp26 = tmp29;
                                 }
                                 const obj7 = { style: tmp19, text: title };
-                                const tmp23 = jsx(trailing(6640).Label, { style: tmp19, text: title });
+                                const tmp23 = jsx(trailing(6817).Label, { style: tmp19, text: title });
                                 cResult[43] = tmp19;
                                 cResult[44] = title;
                                 cResult[45] = tmp23;
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     items3[1] = completedText2;
                     obj8.style = items3;
                     obj8.text = subtitle;
-                    tmp13Result = jsx(trailing(6640).SubLabel, { style: null, text: null });
+                    tmp13Result = jsx(trailing(6817).SubLabel, { style: null, text: null });
                   }
                   cResult[10] = completed;
                   cResult[11] = tmp4.completedText;
@@ -308,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[14] = tmp13Result;
                   tmp11 = tmp13Result;
                 }
-                const fn = function h() {
+                function renderTrailing() {
                   if (completed) {
                     let tmp = jsx(FormCheckbox2.FormCheckbox, { checked: true });
                   } else {
@@ -318,11 +318,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   return tmp;
-                };
+                }
                 cResult[7] = completed;
                 cResult[8] = trailing;
-                cResult[9] = fn;
-                tmp10 = fn;
+                cResult[9] = renderTrailing;
+                tmp10 = renderTrailing;
               }
             }
           }
@@ -342,8 +342,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items5 = [tmp4.icon, iconStyle];
         obj10.style = items5;
         obj10.source = iconSource;
-        obj10.size = completed(1188).Icon.Sizes.CUSTOM;
-        obj9.children = jsx(completed(1188).Icon, { style: null, source: null, size: null, disableColor: true });
+        obj10.size = completed(1200).Icon.Sizes.CUSTOM;
+        obj9.children = jsx(completed(1200).Icon, { style: null, source: null, size: null, disableColor: true });
         tmp7Result = <View style={null}>{null}</View>;
       }
       cResult[0] = completed;
@@ -356,7 +356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp7Result;
       const obj = completed(576);
     }
-  : (arg0) => {
+  : function FormCTA(arg0) {
       ({ title, titleStyle, subtitle, completed, iconSource, trailing, onPress, onLongPress, variant } = arg0);
       ({ style, iconStyle, iconContainerStyle } = arg0);
       const tmp = closure_5();
@@ -418,7 +418,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj4.label = jsx(FormRowDefault.Label, { style: null, text: null });
         obj4.subLabel = tmp9Result;
         if (completed) {
-          FormCheckbox = FormCheckbox(5998).FormCheckbox;
+          FormCheckbox = FormCheckbox(6182).FormCheckbox;
           const obj7 = { checked: true };
           trailing = <FormCheckbox checked />;
         } else if (trailing == null) {

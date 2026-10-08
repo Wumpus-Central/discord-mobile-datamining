@@ -6,7 +6,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (selection) => {
+  ? function usePressEmojiHandler(selection) {
       const cResult = c.c(13);
       selection = selection.selection;
       const draftContent = selection.draftContent;
@@ -105,7 +105,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = obj2;
       tmp2 = obj2;
     }
-  : (selection) => {
+  : function usePressEmojiHandler(selection) {
       selection = selection.selection;
       const draftContent = selection.draftContent;
       const handleTextChange = selection.handleTextChange;
@@ -151,7 +151,7 @@ const result = size.fileFinishedImporting("modules/forums/native/composer/hooks/
 
 export const usePressEmojiHandler = tmp2;
 export const usePressGIFHandler = ReactCompilerGating.isReactCompilerEnabled()
-  ? (selection) => {
+  ? function usePressGIFHandler(selection) {
       const cResult = c.c(7);
       selection = selection.selection;
       const draftContent = selection.draftContent;
@@ -201,7 +201,7 @@ export const usePressGIFHandler = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = fn;
       tmp2 = fn;
     }
-  : (selection) => {
+  : function usePressGIFHandler(selection) {
       selection = selection.selection;
       const draftContent = selection.draftContent;
       const handleTextChange = selection.handleTextChange;

@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 let closure_3 = ["children"];
 const jsx = fn(21).jsx;
-const NativeStackNavigator = fn(7568);
+const NativeStackNavigator = fn(9279);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/Mod
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (titleIcon) => {
+    ? function ModalStackNavigator(titleIcon) {
         const cResult = title(accessibilityNativeStackOptions[5]).c(13);
         ({ screenKey, title } = titleIcon);
         titleIcon = titleIcon.titleIcon;
@@ -105,7 +105,7 @@ export default noop.memo(
         tmp3 = fn;
         const obj2 = title(accessibilityNativeStackOptions[6]);
       }
-    : (children) => {
+    : function ModalStackNavigator(children) {
         ({ screenKey, title: require, titleIcon: importDefault } = children);
         dependencyMap = Navigator.useAccessibilityNativeStackOptions();
         const obj2 = {

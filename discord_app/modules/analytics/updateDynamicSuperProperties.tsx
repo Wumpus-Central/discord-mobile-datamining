@@ -1,7 +1,7 @@
 // discord_app/modules/analytics/updateDynamicSuperProperties.tsx
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import SessionHeartbeatScheduler from "../analytics_sessions/SessionHeartbeatScheduler.tsx";
 import DiscordAppStateDefault from "../app_state/DiscordAppState.native.tsx";
+import SessionHeartbeatScheduler from "../analytics_sessions/SessionHeartbeatScheduler.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");

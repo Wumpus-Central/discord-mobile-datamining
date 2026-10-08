@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function QuestDockBlurredContentBackground(arg0) {
         const cResult = c.c(8);
         ({ layoutAnimatedStyle, opacityAnimatedStyle, layoutAnimation, blurTheme } = arg0);
         let str = "dark";
@@ -72,7 +72,7 @@ export default noop.memo(
         cResult[2] = items;
         tmp4 = items;
       }
-    : (blurTheme) => {
+    : function QuestDockBlurredContentBackground(blurTheme) {
         blurTheme = blurTheme.blurTheme;
         let str = "dark";
         ({ layoutAnimatedStyle, opacityAnimatedStyle, layoutAnimation } = blurTheme);

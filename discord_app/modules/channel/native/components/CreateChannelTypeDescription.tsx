@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(9262).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(8592).GuildProfileFetchStatus;
 const ChannelTypes = fn(1085).ChannelTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/native/components/CreateChannelTypeDescription.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CreateChannelTypeDescription(arg0) {
       let stringResult = dependencyMap;
       const cResult = c.c(6);
       ({ guildId, channelType } = arg0);
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items;
       tmp10 = items;
     }
-  : (guildId) => {
+  : function CreateChannelTypeDescription(guildId) {
       guildId = guildId.guildId;
       fetchGuildProfile = undefined;
       const guildProfile1 = useGuildProfile.useGuildProfile(guildId);

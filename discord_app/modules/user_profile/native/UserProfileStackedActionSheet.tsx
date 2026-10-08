@@ -18,7 +18,7 @@ let closure_5 = ["title", "children", "onBack"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   header: { flexDirection: "row", marginHorizontal: nativeDefault.space.PX_16 },
   headerSpacer: null,
@@ -37,7 +37,7 @@ fn(558);
 let obj4 = { marginHorizontal: nativeDefault.space.PX_16 };
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (data) => {
+  ? function UserProfileStackedActionSheetList(data) {
       const cResult = require("c").c(23);
       if (cResult[0] !== data) {
         data = data.data;
@@ -107,7 +107,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            class I {
+            class P {
               constructor(arg0) {
                 index = data.index;
                 obj = { item: data.item, index, start: 0 === index, end: index === closure_0.length - 1 };
@@ -121,7 +121,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             obj3.ItemSeparatorComponent = tmp12;
             obj3.contentContainerStyle = tmp15;
             obj3.renderItem = tmp16;
-            const tmp21 = closure_8(tmp(6119).BottomSheetFlatList, obj3);
+            const tmp21 = closure_8(tmp(6298).BottomSheetFlatList, obj3);
             cResult[16] = arr;
             cResult[17] = tmp5;
             cResult[18] = tmp10.list;
@@ -131,7 +131,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[22] = tmp21;
             tmp17 = tmp21;
           }
-          class I {
+          class P {
             constructor(arg0) {
               index = data.index;
               obj = { item: data.item, index, start: 0 === index, end: index === closure_0.length - 1 };
@@ -140,8 +140,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[13] = arr.length;
           cResult[14] = renderItem;
-          cResult[15] = I;
-          tmp16 = I;
+          cResult[15] = P;
+          tmp16 = P;
         }
       }
       const items = [tmp10.contentContainer, tmp14, tmp4];
@@ -152,7 +152,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = items;
       tmpResult = require("PlatformUtils");
     }
-  : (data) => {
+  : function UserProfileStackedActionSheetList(data) {
       data = data.data;
       const renderItem = data.renderItem;
       const merged = Object.assign(data, Object.assign({ data: 0, contentContainerStyle: 0, renderItem: 0 }));
@@ -170,18 +170,18 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (obj2.isAndroid()) {
         num = renderItem(587).space.PX_16;
       }
-      items[1] = { paddingBottom: renderItem(1618)().bottom + num };
+      items[1] = { paddingBottom: renderItem(1630)().bottom + num };
       items[2] = data.contentContainerStyle;
       obj.contentContainerStyle = items;
       obj.renderItem = function renderItem(index) {
         index = index.index;
         return renderItem({ item: index.item, index, start: 0 === index, end: index === data.length - 1 });
       };
-      return closure_8(data(6119).BottomSheetFlatList, obj);
+      return closure_8(data(6298).BottomSheetFlatList, obj);
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileStackedActionSheetSectionList(arg0) {
       const cResult = require("c").c(13);
       if (cResult[0] !== arg0) {
         ({ contentContainerStyle, renderItem } = arg0);
@@ -245,7 +245,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = tmp15;
       const obj = require("c");
     }
-  : (renderItem) => {
+  : function UserProfileStackedActionSheetSectionList(renderItem) {
       renderItem = renderItem.renderItem;
       const merged = Object.assign(renderItem, Object.assign({ contentContainerStyle: 0, renderItem: 0 }));
       const divider = closure_10();
@@ -259,13 +259,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
         return closure_2_8(Form.FormDivider, { style: divider.divider });
       };
-      return closure_8(renderItem(6119).BottomSheetSectionList, obj);
+      return closure_8(renderItem(6298).BottomSheetSectionList, obj);
     };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileStackedActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileStackedActionSheet(arg0) {
       const cResult = c.c(27);
       if (cResult[0] !== arg0) {
         ({ title, children, onBack } = arg0);
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = items1;
       tmp14 = items1;
     }
-  : (onBack) => {
+  : function UserProfileStackedActionSheet(onBack) {
       onBack = onBack.onBack;
       ({ title, children } = onBack);
       const merged = Object.assign(onBack, Object.assign({ title: 0, children: 0, onBack: 0 }));

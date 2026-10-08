@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import router_utils from "../../routing/router_utils.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3395 from "../intl/FavoritesGuild.messages.js";
+import _modDef3439 from "../intl/FavoritesGuild.messages.js";
 import FavoritesHooks from "../FavoritesHooks.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useFavoritesGuildHeaderAction() {
       let tmp2 = dependencyMap;
       const cResult = c.c(6);
       const hasAccess = FavoritesHooks.useFavoritesAccess().hasAccess;
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] !== hasAccess) {
         const intl = util.intl;
         if (hasAccess) {
-          tmp2 = _modDef3395;
+          tmp2 = _modDef3439;
           let ojM1xJ = tmp2.G9fGlP;
         } else {
           ojM1xJ = util.t.ojM1xJ;
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = obj3;
       }
     }
-  : () => {
+  : function useFavoritesGuildHeaderAction() {
       const hasAccess = FavoritesHooks.useFavoritesAccess().hasAccess;
       const obj2 = { isPreview: !hasAccess, label: null, exitPreview: null };
       const callback = noop.useCallback(() => {
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const intl = util.intl;
       if (hasAccess) {
-        let ojM1xJ = _modDef3395.G9fGlP;
+        let ojM1xJ = _modDef3439.G9fGlP;
       } else {
         ojM1xJ = util.t.ojM1xJ;
       }

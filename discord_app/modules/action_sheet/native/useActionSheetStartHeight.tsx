@@ -9,4 +9,6 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/action_sheet/native/useActionSheetStartHeight.tsx");
 
-export default () => useWindowDimensionsDefault().height * closure_2;
+export default function useActionSheetHeight() {
+  return useWindowDimensionsDefault().height * closure_2;
+}

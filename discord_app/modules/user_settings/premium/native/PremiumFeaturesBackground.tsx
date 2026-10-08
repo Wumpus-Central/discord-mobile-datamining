@@ -1,16 +1,16 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesBackground.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 let closure_3 = ["premiumType", "opacity", "children", "style"];
-const Gradients = fn(6951).Gradients;
-const PremiumTypes = fn(1379).PremiumTypes;
+const Gradients = fn(7140).Gradients;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   cardContainer: {
     display: "flex",
@@ -33,7 +33,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesBackground.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PremiumFeaturesBackground(arg0) {
       const cResult = num7(576).c(17);
       if (cResult[0] !== arg0) {
         ({ premiumType, opacity, children, style } = arg0);
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = mapped;
       let obj = num7(576);
     }
-  : (opacity) => {
+  : function PremiumFeaturesBackground(opacity) {
       let num = opacity.opacity;
       if (num === undefined) {
         num = 1;

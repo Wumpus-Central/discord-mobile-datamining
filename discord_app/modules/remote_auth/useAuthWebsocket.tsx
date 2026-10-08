@@ -19,7 +19,7 @@ const tmp3 = new LoggerDefault("useAuthWebsocket");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/remote_auth/useAuthWebsocket.tsx");
 
-export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (function useAuthWebsocket(arg0, arg1, arg2) {
   _require = arg0;
   importDefault = arg1;
   const cResult = require("c").c(25);
@@ -32,7 +32,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
   first = tmp6[0];
   noop = tmp8;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj3 = { step: tmp(15949).RemoteAuthStep.INITIALIZING };
+    let obj3 = { step: tmp(16209).RemoteAuthStep.INITIALIZING };
     cResult[0] = obj3;
     let first1 = obj3;
   } else {
@@ -94,62 +94,47 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
   const tmp19 = useStableCallbackDefault(R);
   closure_10 = tmp19;
   if (cResult[4] !== tmp19) {
-    class R {
+    class P {
       constructor() {
+        errorResult = closure_8.error("Could not complete Remote Auth login, trying to restart with a new Remote Auth session.");
         obj = { step: closure_0(closure_2[7]).RemoteAuthStep.INITIALIZING };
-        tmp = closure_7(obj);
-        if (closure_1) {
-          tmp6 = closure_3;
-          tmp7 = closure_3(() => { ... });
-        } else {
-          tmp2 = closure_8;
-          str = "document is not visible, will defer reconnection when document becomes visible.";
-          infoResult = closure_8.info("document is not visible, will defer reconnection when document becomes visible.");
-          tmp4 = closure_5;
-          flag = true;
-          tmp5 = closure_5(true);
+        tmp2 = closure_7(obj);
+        obj2 = closure_9;
+        if (!closure_9.pending) {
+          tmp3 = closure_10;
+          failResult = obj2.fail(closure_10);
         }
         return;
       }
     }
     cResult[4] = tmp19;
-    cResult[5] = tmp21;
+    cResult[5] = P;
   } else {
-    class R {
+    class P {
       constructor() {
+        errorResult = closure_8.error("Could not complete Remote Auth login, trying to restart with a new Remote Auth session.");
         obj = { step: closure_0(closure_2[7]).RemoteAuthStep.INITIALIZING };
-        tmp = closure_7(obj);
-        if (closure_1) {
-          tmp6 = closure_3;
-          tmp7 = closure_3(() => { ... });
-        } else {
-          tmp2 = closure_8;
-          str = "document is not visible, will defer reconnection when document becomes visible.";
-          infoResult = closure_8.info("document is not visible, will defer reconnection when document becomes visible.");
-          tmp4 = closure_5;
-          flag = true;
-          tmp5 = closure_5(true);
+        tmp2 = closure_7(obj);
+        obj2 = closure_9;
+        if (!closure_9.pending) {
+          tmp3 = closure_10;
+          failResult = obj2.fail(closure_10);
         }
         return;
       }
     }
   }
-  closure_11 = tmp21;
+  closure_11 = P;
   if (cResult[6] === arg1) {
-    class R {
+    class P {
       constructor() {
+        errorResult = closure_8.error("Could not complete Remote Auth login, trying to restart with a new Remote Auth session.");
         obj = { step: closure_0(closure_2[7]).RemoteAuthStep.INITIALIZING };
-        tmp = closure_7(obj);
-        if (closure_1) {
-          tmp6 = closure_3;
-          tmp7 = closure_3(() => { ... });
-        } else {
-          tmp2 = closure_8;
-          str = "document is not visible, will defer reconnection when document becomes visible.";
-          infoResult = closure_8.info("document is not visible, will defer reconnection when document becomes visible.");
-          tmp4 = closure_5;
-          flag = true;
-          tmp5 = closure_5(true);
+        tmp2 = closure_7(obj);
+        obj2 = closure_9;
+        if (!closure_9.pending) {
+          tmp3 = closure_10;
+          failResult = obj2.fail(closure_10);
         }
         return;
       }
@@ -187,7 +172,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
   cResult[9] = G;
   cResult[10] = items;
   const tmp5 = first(noop.useState(0), 2);
-}) : ((arg0, arg1) => {
+}) : (function useAuthWebsocket(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   let flag = arg2;
@@ -338,7 +323,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
                   encrypted_nonce = closure_129_1.encrypted_nonce;
                   c3 = 2;
                   c4 = 1;
-                  let obj5 = { value: info(15951).decryptNonce(closure_130_8(), encrypted_nonce), done: false };
+                  let obj5 = { value: info(16211).decryptNonce(closure_130_8(), encrypted_nonce), done: false };
                   return obj5;
                 } else if ("pending_remote_init" === op) {
                   closure_1_9.succeed();
@@ -346,26 +331,26 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
                   ComponentDispatch2.dispatch(constants.WAVE_EMPHASIZE);
                   c3 = 3;
                   c4 = 1;
-                  const obj6 = { value: info(15951).publicKeyFingerprint(closure_130_8()), done: false };
+                  const obj6 = { value: info(16211).publicKeyFingerprint(closure_130_8()), done: false };
                   return obj6;
                 } else if ("pending_login" === op) {
                   ticket = closure_129_1.ticket;
                   if (null == ticket) {
                     closure_1_11();
                   } else {
-                    let obj7 = { step: closure_2_0(15949).RemoteAuthStep.PENDING_LOGIN, ticket };
+                    let obj7 = { step: closure_2_0(16209).RemoteAuthStep.PENDING_LOGIN, ticket };
                     c7(obj7);
-                    const HTTP = closure_2_0(1282).HTTP;
+                    const HTTP = closure_2_0(1294).HTTP;
                     const request = { url: constants2.REMOTE_AUTH_LOGIN, body: null, oldFormErrors: true, rejectWithError: true };
                     let obj8 = { ticket };
                     request.body = obj8;
                     const postResult = HTTP.post(request);
                     HTTP.post(request).then((() => {
-                      closure_0 = closure_1_3(/* F155915 */ function() { ... });
+                      closure_0 = closure_1_3(/* F157466 */ function() { ... });
                       return () => { ... };
                     })()).catch(() => closure_1_11());
                     const nextPromise = HTTP.post(request).then((() => {
-                      closure_0 = closure_1_3(/* F155915 */ function() { ... });
+                      closure_0 = closure_1_3(/* F157466 */ function() { ... });
                       return () => { ... };
                     })());
                   }
@@ -377,7 +362,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
                   closure_129_6 = closure_129_1.encrypted_user_payload;
                   c3 = 4;
                   c4 = 1;
-                  const obj9 = { value: closure_2_0(15953).decodeEncodedUserRecord(closure_130_8(), closure_129_6), done: false };
+                  const obj9 = { value: closure_2_0(16213).decodeEncodedUserRecord(closure_130_8(), closure_129_6), done: false };
                   return obj9;
                 } else if ("cancel" === op) {
                   closure_130_1("remote auth handshake cancelled.");
@@ -457,7 +442,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
                   throw error;
                 } else {
                   closure_130_1("handshake complete awaiting remote auth.");
-                  const obj19 = { step: closure_2_0(15949).RemoteAuthStep.PENDING_REMOTE_INIT, fingerprint: closure_129_4 };
+                  const obj19 = { step: closure_2_0(16209).RemoteAuthStep.PENDING_REMOTE_INIT, fingerprint: closure_129_4 };
                   c7(obj19);
                   c4 = 3;
                   const obj20 = { value: undefined, done: true };
@@ -473,7 +458,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
               return obj21;
             } else {
               closure_129_7 = value;
-              let obj = { step: closure_2_0(15949).RemoteAuthStep.PENDING_TICKET, user: closure_129_7 };
+              let obj = { step: closure_2_0(16209).RemoteAuthStep.PENDING_TICKET, user: closure_129_7 };
               c7(obj);
               c4 = 3;
               const obj22 = { value: undefined, done: true };
@@ -526,7 +511,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
               closure_1 = tmp4;
               c2 = 1;
               c3 = 1;
-              const obj6 = { value: info(15951).generateRsaKeyPair(), done: false };
+              const obj6 = { value: info(16211).generateRsaKeyPair(), done: false };
               return obj6;
             }
           } else if (1 === tmp4) {
@@ -541,7 +526,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
               closure_129_3 = value;
               c2 = 2;
               c3 = 1;
-              const obj9 = { value: info(15951).serializePublicKey(closure_129_3), done: false };
+              const obj9 = { value: info(16211).serializePublicKey(closure_129_3), done: false };
               return obj9;
             }
           } else if (2 === tmp4) {
@@ -557,7 +542,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
               closure_0 = closure_129_1;
               c2 = 3;
               c3 = 1;
-              const obj11 = { value: info(15951).publicKeyFingerprint(closure_129_3), done: false };
+              const obj11 = { value: info(16211).publicKeyFingerprint(closure_129_3), done: false };
               return obj11;
             }
           } else if (arg0 === 1) {

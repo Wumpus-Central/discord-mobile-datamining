@@ -17,16 +17,16 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isMobileOverlaySupported = fn(9671).isMobileOverlaySupported;
-const guideURL = fn(9672).USER_SETTINGS_VOICE_GUILD_URL;
+const isMobileOverlaySupported = fn(10860).isMobileOverlaySupported;
+const guideURL = fn(10861).USER_SETTINGS_VOICE_GUILD_URL;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 16 }, tableRow: { marginTop: 12 } });
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserSettingsTableRowGroup(arg0) {
       const cResult = c.c(2);
       if (cResult[0] !== arg0) {
         const obj2 = {};
@@ -40,7 +40,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (arg0) => {
+  : function UserSettingsTableRowGroup(arg0) {
       const merged = Object.assign(arg0);
       return timestampProducer(TableRowGroup.TableRowGroup, {});
     };
@@ -48,7 +48,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoice.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsVoice() {
       const cResult = c.c(20);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[16] = tmp36;
       tmp35 = tmp36;
     }
-  : () => {
+  : function UserSettingsVoice() {
       const tmp = closure_8();
       let nonContextualStreamOutputPresent = MobileAudioOutputExperimentDefault.useConfig({
         location: "NewUserSettingsVoice",

@@ -9,14 +9,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ description: { marginBottom: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function HubEmailConnectionDescriptionActionsheet() {
       const cResult = c.c(10);
       const tmp4 = closure_4();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp19;
       tmp18 = tmp19;
     }
-  : () => {
+  : function HubEmailConnectionDescriptionActionsheet() {
       const tmp = closure_4();
       const obj = { children: null };
       const obj2 = { title: null };

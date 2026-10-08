@@ -8,9 +8,9 @@ import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDataSavingModeSettingValue() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UnsyncedUserSettingsStore];
@@ -26,7 +26,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useDataSavingModeSettingValue() {
       const items = [UnsyncedUserSettingsStore];
       return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
     };
@@ -35,9 +35,9 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.ix8XIj);
   },
-  parent: fn(7645).MobileUserSettings.CHAT,
+  parent: fn(7966).MobileUserSettings.CHAT,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useDataSavingModeSettingValue() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [UnsyncedUserSettingsStore];
@@ -53,7 +53,7 @@ const toggle = SettingBuilders.createToggle({
         }
         return initialize.useStateFromStores(tmp4, tmp5);
       }
-    : () => {
+    : function useDataSavingModeSettingValue() {
         const items = [UnsyncedUserSettingsStore];
         return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
       },

@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   item: {
     backgroundColor: "transparent",
@@ -31,7 +31,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/PremiumFeatureList.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (iconStyle) => {
+  ? function PremiumFeatureList(iconStyle) {
       const cResult = separator(iconStyle[8]).c(21);
       ({ features, style, separator } = iconStyle);
       iconStyle = iconStyle.iconStyle;
@@ -49,18 +49,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[17] === cResult[7]) {
                       if (cResult[18] === tmp4) {
                         if (cResult[19] === tmp5) {
-                          let tmp8 = cResult[20];
+                          let tmp13 = cResult[20];
                         }
-                        return tmp8;
+                        return tmp13;
                       }
                     }
                     let obj2 = { style: cResult[8], children: cResult[9] };
-                    const tmp10 = closure_4(cResult[7], obj2);
+                    const tmp15 = closure_4(cResult[7], obj2);
                     cResult[17] = cResult[7];
                     cResult[18] = cResult[8];
                     cResult[19] = cResult[9];
-                    cResult[20] = tmp10;
-                    tmp8 = tmp10;
+                    cResult[20] = tmp15;
+                    tmp13 = tmp15;
                   }
                 }
               }
@@ -69,28 +69,38 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        class L {
-          constructor(arg0) {
-            return !iconStyle.hidden;
-          }
-        }
-        cResult[10] = L;
+        const fn = function w(hidden) {
+          return !hidden.hidden;
+        };
+        cResult[10] = fn;
+        let tmp6 = fn;
       } else {
-        class L {
-          constructor(arg0) {
-            return !iconStyle.hidden;
-          }
-        }
+        tmp6 = cResult[10];
       }
-      const found = features.filter(L);
+      const found = features.filter(tmp6);
       if (cResult[11] === iconStyle) {
-        class L {
-          constructor(arg0) {
-            return !iconStyle.hidden;
+        if (cResult[12] === labelStyle) {
+          if (cResult[13] === rowStyle) {
+            if (cResult[14] === separator) {
+              if (cResult[15] === tmp2) {
+                let tmp8 = cResult[16];
+              }
+              const mapped = found.map(tmp8);
+              cResult[0] = features;
+              cResult[1] = iconStyle;
+              cResult[2] = labelStyle;
+              cResult[3] = rowStyle;
+              cResult[4] = separator;
+              cResult[5] = style;
+              cResult[6] = tmp2;
+              cResult[7] = tmp7;
+              cResult[8] = style;
+              cResult[9] = mapped;
+            }
           }
         }
       }
-      const fn = function x(color, id) {
+      const fn2 = function x(color, id) {
         const obj = { style: null, children: null };
         const items = [closure_4.item, rowStyle];
         obj.style = items;
@@ -128,10 +138,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = rowStyle;
       cResult[14] = separator;
       cResult[15] = tmp2;
-      cResult[16] = fn;
+      cResult[16] = fn2;
+      tmp8 = fn2;
       let obj = separator(iconStyle[8]);
     }
-  : (style) => {
+  : function PremiumFeatureList(style) {
       ({ features, separator: require, iconStyle: dependencyMap, labelStyle: noop, rowStyle: View } = style);
       closure_4 = closure_6();
       const found = features.filter((hidden) => !hidden.hidden);

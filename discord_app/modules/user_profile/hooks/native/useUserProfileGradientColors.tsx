@@ -15,7 +15,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileGradientColors.tsx");
 
 export const useUserProfileGradientColors = ReactCompilerGating.isReactCompilerEnabled()
-  ? (secondaryColor, secondaryColor, arg2) => {
+  ? function useUserProfileGradientColors(secondaryColor, secondaryColor, arg2) {
       const cResult = c.c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
@@ -82,7 +82,7 @@ export const useUserProfileGradientColors = ReactCompilerGating.isReactCompilerE
       tmp11 = userProfileGradientContainerColors;
       const tmpResult10 = UserProfileGradientUtils;
     }
-  : (arg0, arg1, arg2) => {
+  : function useUserProfileGradientColors(arg0, arg1, arg2) {
       _require = arg0;
       dependencyMap = arg1;
       noop = arg2;

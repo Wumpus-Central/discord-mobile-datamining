@@ -2,7 +2,7 @@
 import c from "../../../_runtime/00576_c.js";
 import ReactBatchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import SafeAreaConstants from "SafeAreaConstants.native.tsx";
-import _mod1621 from "../../../_runtime/metro/01621__.js";
+import _mod1633 from "../../../_runtime/metro/01633__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,12 +12,12 @@ const style = { position: "absolute", width: 0, height: 0 };
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function SafeAreaReporter() {
       const cResult = safeAreaInsets(576).c(9);
       let obj = safeAreaInsets(576);
-      safeAreaInsets = safeAreaInsets(1621).useSafeAreaInsets();
-      const obj2 = safeAreaInsets(1621);
-      const appEntryKey = safeAreaInsets(1487).useAppEntryKey();
+      safeAreaInsets = safeAreaInsets(1633).useSafeAreaInsets();
+      const obj2 = safeAreaInsets(1633);
+      const appEntryKey = safeAreaInsets(1499).useAppEntryKey();
       if (cResult[0] === appEntryKey) {
         if (cResult[1] === safeAreaInsets) {
           let tmp4 = cResult[2];
@@ -40,7 +40,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
           return tmp9;
         }
-        const fn2 = function y() {
+        const fn2 = function p() {
           if (!ref.current) {
             tmp.current = true;
             closure_0 = safeAreaInsets;
@@ -94,7 +94,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = fn2;
         tmp8 = fn2;
       }
-      const fn = function u() {
+      const fn = function f() {
         closure_0 = safeAreaInsets;
         closure_1 = appEntryKey;
         ReactBatchUpdates.batchUpdates(() => {
@@ -147,12 +147,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp5 = items;
       tmp4 = fn;
-      const obj3 = safeAreaInsets(1487);
+      const obj3 = safeAreaInsets(1499);
     }
-  : () => {
-      safeAreaInsets = safeAreaInsets(1621).useSafeAreaInsets();
-      let obj = safeAreaInsets(1621);
-      const appEntryKey = safeAreaInsets(1487).useAppEntryKey();
+  : function SafeAreaReporter() {
+      safeAreaInsets = safeAreaInsets(1633).useSafeAreaInsets();
+      let obj = safeAreaInsets(1633);
+      const appEntryKey = safeAreaInsets(1499).useAppEntryKey();
       const items = [safeAreaInsets, appEntryKey];
       const layoutEffect = noop.useLayoutEffect(() => {
         closure_0 = safeAreaInsets;
@@ -202,7 +202,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       dependencyMap = noop.useRef(false);
       const items1 = [safeAreaInsets, appEntryKey];
-      let obj2 = safeAreaInsets(1487);
+      let obj2 = safeAreaInsets(1499);
       return (
         <View
           style={style}
@@ -263,7 +263,7 @@ const result = size.fileFinishedImporting("modules/safe_area/SafeAreaProvider.na
 
 export const SafeAreaReporter = tmp2;
 export const SafeAreaProvider = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SafeAreaProvider(arg0) {
       const cResult = c.c(3);
       ({ children, style } = arg0);
       if (cResult[0] === children) {
@@ -272,7 +272,7 @@ export const SafeAreaProvider = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp4;
       }
-      const tmp5 = jsx(_mod1621.SafeAreaProvider, {
+      const tmp5 = jsx(_mod1633.SafeAreaProvider, {
         initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS,
         children,
         style,
@@ -283,9 +283,9 @@ export const SafeAreaProvider = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = tmp5;
       const obj2 = { initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS, children, style };
     }
-  : (arg0) => {
+  : function SafeAreaProvider(arg0) {
       ({ children, style } = arg0);
-      return jsx(_mod1621.SafeAreaProvider, {
+      return jsx(_mod1633.SafeAreaProvider, {
         initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS,
         children,
         style,

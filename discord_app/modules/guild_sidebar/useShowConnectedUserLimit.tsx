@@ -9,7 +9,7 @@ import size from "../../../_runtime/metro/00002__.js";
 let closure_3 = Constants.MAX_STAGE_VOICE_USER_LIMIT;
 let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useConnectedUserLimit(arg0) {
       ({ channel, video, considerMaxStageVoiceUserLimit } = arg0);
       const limit = useChannelVideoLimitDefault(channel).limit;
       let num = -1;
@@ -35,7 +35,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return num2;
     }
-  : (arg0) => {
+  : function useConnectedUserLimit(arg0) {
       ({ channel, video, considerMaxStageVoiceUserLimit } = arg0);
       if (considerMaxStageVoiceUserLimit === undefined) {
         considerMaxStageVoiceUserLimit = true;
@@ -67,7 +67,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_4 = tmp2;
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useConnectedUserLimitFormatted(arg0) {
       const cResult = c.c(6);
       ({ channel, video, userCount } = arg0);
       if (cResult[0] === channel) {
@@ -134,7 +134,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj2;
       tmp2 = obj2;
     }
-  : (channel) => {
+  : function useConnectedUserLimitFormatted(channel) {
       const userCount = channel.userCount;
       let str = closure_4({ channel: channel.channel, video: channel.video });
       if (str <= 0) {
@@ -191,7 +191,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 const result = size.fileFinishedImporting("modules/guild_sidebar/useShowConnectedUserLimit.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShowConnectedUserLimit(arg0) {
       const cResult = c.c(3);
       ({ channel, video } = arg0);
       if (cResult[0] === channel) {
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj2;
       tmp4 = obj2;
     }
-  : (channel) => {
+  : function useShowConnectedUserLimit(channel) {
       ({ locked, selected } = channel);
       return closure_4({ channel: channel.channel, video: channel.video }) > 0 && !locked && !selected;
     };

@@ -2,10 +2,10 @@
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import RPCErrorDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
+import isPostMessageSocketDefault from "../../helpers/isPostMessageSocket.tsx";
 import FramesStore from "../../../frames/FramesStore.tsx";
 
-const TransportTypes = fn(5323).TransportTypes;
-const OrientationLockState = fn(2011).OrientationLockState;
+const OrientationLockState = fn(2023).OrientationLockState;
 const Constants = fn(1096);
 const RPCErrors = Constants.RPCErrors;
 const size = fn(2);
@@ -52,37 +52,42 @@ export default {
     handler(arg0) {
       ({ socket, args } = arg0);
       ({ lock_state, picture_in_picture_lock_state } = args);
-      if (socket.source.type !== TransportTypes.POST_MESSAGE) {
-        const obj2 = { errorCode: RPCErrors.INVALID_COMMAND };
-        const _HermesInternal = HermesInternal;
-        const tmp182 = new RPCErrorDefault(obj2, 'command not available from "' + socket.source.type + '" transport');
-        throw tmp182;
-      } else {
+      if (isPostMessageSocketDefault(socket)) {
         const id = socket.application.id;
         if (null == id) {
-          const obj4 = { errorCode: RPCErrors.INVALID_COMMAND };
-          const tmp14 = new RPCErrorDefault(obj4, "No application.");
-          throw tmp14;
+          const obj2 = { errorCode: RPCErrors.INVALID_COMMAND };
+          const tmp18 = new RPCErrorDefault(obj2, "No application.");
+          throw tmp18;
         } else {
-          const frameByIframeId = FramesStore.getFrameByIframeId(socket.source.iframeId);
-          if (null != frameByIframeId) {
-            const obj5 = {
+          const frameByEmbeddedContext = FramesStore.getFrameByEmbeddedContext(socket.context, socket.source.iframeId);
+          if (null != frameByEmbeddedContext) {
+            const obj3 = {
               type: "FRAME_SET_ORIENTATION_LOCK_STATE",
-              frameId: frameByIframeId.id,
+              frameId: frameByEmbeddedContext.id,
               lockState: lock_state,
               pictureInPictureLockState: picture_in_picture_lock_state,
             };
-            DispatcherDefault.dispatch(obj5);
+            DispatcherDefault.dispatch(obj3);
+            const tmpResult = DispatcherDefault;
           }
-          const obj6 = {
+          const obj4 = {
             type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE",
             applicationId: id,
             lockState: lock_state,
             pictureInPictureLockState: picture_in_picture_lock_state,
-            gridLockState: tmp,
+            gridLockState: args.grid_lock_state,
           };
-          DispatcherDefault.dispatch(obj6);
+          DispatcherDefault.dispatch(obj4);
+          const tmpResult3 = DispatcherDefault;
         }
+      } else {
+        const obj = { errorCode: RPCErrors.INVALID_COMMAND };
+        const _HermesInternal = HermesInternal;
+        const tmpResult21 = new RPCErrorDefault(
+          obj,
+          'command not available from "' + socket.source.type + '" transport',
+        );
+        throw tmpResult21;
       }
     },
   },

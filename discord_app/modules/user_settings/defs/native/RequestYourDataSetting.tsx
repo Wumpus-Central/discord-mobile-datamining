@@ -4,12 +4,12 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _modDef4467 from "../../../../../_runtime/metro/04467__.js";
+import _modDef4659 from "../../../../../_runtime/metro/04659__.js";
 import UserSettingsAccountActionCreators from "../../../../actions/UserSettingsAccountActionCreators.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 import Constants from "../../../../Constants.tsx";
-import identity from "../../../../../_runtime/metro/01254__.js";
+import identity from "../../../../../_runtime/metro/01266__.js";
 import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
 import "ReactCompilerGating";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -18,21 +18,21 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 
 const initialize = tmp(504);
-const _mod4498 = tmp(4498);
-const HarvesterUtils = tmp(14683);
+const _mod4690 = tmp(4690);
+const HarvesterUtils = tmp(14944);
 const ActivityIndicator = _mod17.ActivityIndicator;
 ({ REQUEST_DATA_LIMIT_DAYS: hasOwnProperty, UserSettingsSections } = Constants);
 const jsx = jsxProd.jsx;
 let closure_7 = identity.createWithEqualityFn(() => ({ isRequesting: false, harvestRequest: null }));
 let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsHarvestRequestDisabled() {
       let tmp = require;
       let harvestDisabled = dependencyMap;
       const cResult = c.c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function s() {
+        const fn = function n() {
           return currentUser.getCurrentUser();
         };
         cResult[0] = items;
@@ -44,7 +44,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const stateFromStores = initialize.useStateFromStores(tmp3, tmp4);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function u(harvestRequest) {
+        const fn2 = function l(harvestRequest) {
           return harvestRequest.harvestRequest;
         };
         cResult[2] = fn2;
@@ -52,7 +52,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp7 = cResult[2];
       }
-      const tmp9 = closure_7(tmp7, _mod4498.shallow);
+      const tmp9 = closure_7(tmp7, _mod4690.shallow);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const fn3 = function c(isRequesting) {
           return isRequesting.isRequesting;
@@ -62,7 +62,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp10 = cResult[3];
       }
-      const tmp8Result = closure_7(tmp10, _mod4498.shallow);
+      const tmp8Result = closure_7(tmp10, _mod4690.shallow);
       if (null == stateFromStores) {
         return tmp12;
       } else {
@@ -83,10 +83,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = initialize;
     }
-  : () => {
+  : function useIsHarvestRequestDisabled() {
       const items = [UserStore];
       const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-      let harvestDisabledResult = closure_7((isRequesting) => isRequesting.isRequesting, _mod4498.shallow);
+      let harvestDisabledResult = closure_7((isRequesting) => isRequesting.isRequesting, _mod4690.shallow);
       let tmp6 = null == stateFromStores;
       if (!tmp6) {
         if (!harvestDisabledResult) {
@@ -100,7 +100,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_8 = tmp3;
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHarvestRequest() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(harvestRequest) {
@@ -111,12 +111,14 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_7(first, _mod4498.shallow);
+      return closure_7(first, _mod4690.shallow);
     }
-  : () => closure_7((harvestRequest) => harvestRequest.harvestRequest, _mod4498.shallow);
+  : function useHarvestRequest() {
+      return closure_7((harvestRequest) => harvestRequest.harvestRequest, _mod4690.shallow);
+    };
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsRequestingHarvestState() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(isRequesting) {
@@ -127,12 +129,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_7(first, _mod4498.shallow);
+      return closure_7(first, _mod4690.shallow);
     }
-  : () => closure_7((isRequesting) => isRequesting.isRequesting, _mod4498.shallow);
+  : function useIsRequestingHarvestState() {
+      return closure_7((isRequesting) => isRequesting.isRequesting, _mod4690.shallow);
+    };
 let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHarvestRequestSettingTrailing() {
       const cResult = c.c(2);
       const tmp2 = closure_10();
       if (cResult[0] !== tmp2) {
@@ -148,7 +152,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : () => {
+  : function useHarvestRequestSettingTrailing() {
       let tmp = null;
       if (closure_10()) {
         tmp = <ActivityIndicator />;
@@ -157,7 +161,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useRequestYourDataSettingDescription() {
       const cResult = c.c(4);
       const tmp4 = closure_9();
       const currentUser = UserStore.getCurrentUser();
@@ -180,10 +184,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] !== tmp4.created_at) {
           const _Symbol = Symbol;
           const forResult = Symbol.for("react.early_return_sentinel");
-          const addResult = _modDef4467(tmp4.created_at).add(hasOwnProperty, "days");
+          const addResult = _modDef4659(tmp4.created_at).add(hasOwnProperty, "days");
           let tmp11 = null;
           let formatToPlainStringResult;
-          if (!addResult.isBefore(_modDef4467())) {
+          if (!addResult.isBefore(_modDef4659())) {
             const intl = util.intl;
             const obj2 = { date: addResult.format("MMMM Do YYYY") };
             formatToPlainStringResult = intl.formatToPlainString(util.t.RNDlV9, obj2);
@@ -194,7 +198,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[3] = tmp11;
           let tmp6 = tmp11;
           let tmp5 = formatToPlainStringResult;
-          const obj3 = _modDef4467(tmp4.created_at);
+          const obj3 = _modDef4659(tmp4.created_at);
         } else {
           tmp5 = cResult[2];
           tmp6 = cResult[3];
@@ -206,7 +210,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp5;
       }
     }
-  : () => {
+  : function useRequestYourDataSettingDescription() {
       const tmp = closure_9();
       const currentUser = UserStore.getCurrentUser();
       if (null == currentUser) {
@@ -217,9 +221,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (null == tmp) {
         return null;
       } else {
-        const addResult = _modDef4467(tmp.created_at).add(hasOwnProperty, "days");
+        const addResult = _modDef4659(tmp.created_at).add(hasOwnProperty, "days");
         let formatToPlainStringResult = null;
-        if (!addResult.isBefore(_modDef4467())) {
+        if (!addResult.isBefore(_modDef4659())) {
           const intl = util.intl;
           const obj = { date: addResult.format("MMMM Do YYYY") };
           formatToPlainStringResult = intl.formatToPlainString(util.t.RNDlV9, obj);
@@ -228,7 +232,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
     };
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function usePreNavigationAction() {
       const cResult = c.c(2);
       const tmp2 = closure_8();
       closure_0 = tmp2;
@@ -249,7 +253,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : () => {
+  : function usePreNavigationAction() {
       closure_0 = closure_8();
       return (fn) => {
         let flag = !closure_0;
@@ -270,7 +274,7 @@ const route = SettingBuilders.createRoute({
   useDescription: tmp5,
   useIsDisabled: tmp3,
   usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function usePreNavigationAction() {
         const cResult = c.c(2);
         const tmp2 = closure_8();
         closure_0 = tmp2;
@@ -291,7 +295,7 @@ const route = SettingBuilders.createRoute({
         }
         return tmp3;
       }
-    : () => {
+    : function usePreNavigationAction() {
         closure_0 = closure_8();
         return (fn) => {
           let flag = !closure_0;
@@ -317,7 +321,7 @@ export const fetchHarvestStatus = function fetchHarvestStatus() {
   harvestStatus.then(
     (result) => {
       const body = result;
-      body(1259).batchUpdates(() => {
+      body(1271).batchUpdates(() => {
         state.setState({ isRequesting: false, harvestRequest: body.body });
       });
     },

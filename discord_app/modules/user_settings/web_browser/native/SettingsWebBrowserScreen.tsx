@@ -5,7 +5,7 @@ import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayou
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/user_settings/web_browser/nat
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function SettingsWebBrowserScreen() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { sections: null };
@@ -43,7 +43,7 @@ export default noop.memo(
         }
         return tmp7;
       }
-    : () => {
+    : function SettingsWebBrowserScreen() {
         const node = noop.useMemo(() => {
           const obj2 = { sections: null };
           const obj3 = { settings: null };

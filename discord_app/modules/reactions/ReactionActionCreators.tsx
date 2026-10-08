@@ -96,11 +96,11 @@ function makeURL(type) {
     name = emoji.name;
   }
   if (null == userId) {
-    let REACTIONSResult = v65535.REACTIONS(channelId, messageId, name);
+    let REACTIONSResult = collapsed.REACTIONS(channelId, messageId, name);
   } else if (useTypeEndpoint) {
-    REACTIONSResult = v65535.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
+    REACTIONSResult = collapsed.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
   } else {
-    REACTIONSResult = v65535.REACTION(channelId, messageId, name, userId);
+    REACTIONSResult = collapsed.REACTION(channelId, messageId, name, userId);
   }
   return REACTIONSResult;
 }
@@ -867,7 +867,7 @@ let closure_23 = async function _removeReaction(arg0) {
                     if (burst != null) {
                       burst = burst.burst;
                     }
-                    const AccessibilityAnnouncer = channelId(4735).AccessibilityAnnouncer;
+                    const AccessibilityAnnouncer = channelId(4929).AccessibilityAnnouncer;
                     intl = channelId(1126).intl;
                     if (!burst) {
                       const obj6 = { name: tmp2.name };

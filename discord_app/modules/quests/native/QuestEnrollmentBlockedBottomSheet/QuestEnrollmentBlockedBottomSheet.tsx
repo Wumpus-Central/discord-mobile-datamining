@@ -13,7 +13,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   heading: {
     display: "flex",
@@ -51,7 +51,7 @@ let obj4 = {
 };
 const ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (questEnrollmentBlockedUntil) => {
+  ? function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
       const cResult = c.c(21);
       questEnrollmentBlockedUntil = questEnrollmentBlockedUntil.questEnrollmentBlockedUntil;
       const tmp4 = closure_6();
@@ -169,7 +169,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         tmp31 = tmp34;
       }
     }
-  : (questEnrollmentBlockedUntil) => {
+  : function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
       questEnrollmentBlockedUntil = questEnrollmentBlockedUntil.questEnrollmentBlockedUntil;
       const tmp = closure_6();
       let date = questEnrollmentBlockedUntil;
@@ -212,7 +212,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (questId) => {
+  ? function QuestEnrollmentBlockedBottomSheetConnected(questId) {
       let QUEST_ENROLLMENT_BLOCKED_BOTTOM_SHEET = sourceQuestContent;
       const cResult = questId(sourceQuestContent[7]).c(12);
       questId = questId.questId;
@@ -245,10 +245,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[5] === sourceQuestContent) {
               let tmp7 = cResult[6];
             }
-            class C {
+            class B {
               constructor() {
                 obj = { questId, questEnrollmentBlockedUntil: closure_1, sourceQuestContent };
-                return jsx(f69381, obj);
+                return jsx(QuestEnrollmentBlockedBottomSheet, obj);
               }
             }
             const obj2 = {
@@ -280,21 +280,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[11] = tmp10;
           }
         }
-        class C {
+        class B {
           constructor() {
             obj = { questId, questEnrollmentBlockedUntil: closure_1, sourceQuestContent };
-            return jsx(f69381, obj);
+            return jsx(QuestEnrollmentBlockedBottomSheet, obj);
           }
         }
         cResult[3] = questEnrollmentBlockedUntil;
         cResult[4] = questId;
         cResult[5] = sourceQuestContent;
-        cResult[6] = C;
-        tmp7 = C;
+        cResult[6] = B;
+        tmp7 = B;
       }
       const tmpResult = questId(QUEST_ENROLLMENT_BLOCKED_BOTTOM_SHEET[8]);
     }
-  : (questContentPosition) => {
+  : function QuestEnrollmentBlockedBottomSheetConnected(questContentPosition) {
       ({ questId: require, questEnrollmentBlockedUntil: importDefault, sourceQuestContent } = questContentPosition);
       const items = [QuestStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => QuestStore.getQuest(questId));

@@ -5,9 +5,9 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const ParticipantTypes = fn(4917).ParticipantTypes;
+const ParticipantTypes = fn(5113).ParticipantTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { flex: 1, marginHorizontal: 4, marginVertical: 4 },
   media: { flex: 1, borderRadius: nativeDefault.radii.sm },
@@ -20,18 +20,18 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function MediaTile(channel) {
         const cResult = channel(576).c(23);
         channel = channel.channel;
         const participant = channel.participant;
         const size = channel.size;
         const tmp4 = closure_7();
         const obj = channel(576);
-        const speakerTileStyles = channel(9743).useSpeakerTileStyles();
-        const width = participant(1484)().width;
-        const obj2 = channel(9743);
+        const speakerTileStyles = channel(10944).useSpeakerTileStyles();
+        const width = participant(1496)().width;
+        const obj2 = channel(10944);
         const tmp6 = participant;
-        const isScreenLandscape = channel(5919).useIsScreenLandscape();
+        const isScreenLandscape = channel(8302).useIsScreenLandscape();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ChannelRTCStore];
           cResult[0] = items;
@@ -86,18 +86,18 @@ export default noop.memo(
                           hasRightSafeArea: false,
                           hasTopSafeArea: false,
                           participant: stateFromStores,
-                          avatarSize: tmp(1188).AvatarSizes.XLARGE,
+                          avatarSize: tmp(1200).AvatarSizes.XLARGE,
                           channel,
                           shrinkStreamEmptyState: false,
                           contentStyle: tmp4.media,
                         };
-                        const tmp22 = jsx(tmp6(9754), {
+                        const tmp22 = jsx(tmp6(10955), {
                           hasBottomSafeArea: false,
                           hasLeftSafeArea: false,
                           hasRightSafeArea: false,
                           hasTopSafeArea: false,
                           participant: stateFromStores,
-                          avatarSize: tmp(1188).AvatarSizes.XLARGE,
+                          avatarSize: tmp(1200).AvatarSizes.XLARGE,
                           channel,
                           shrinkStreamEmptyState: false,
                           contentStyle: tmp4.media,
@@ -107,7 +107,7 @@ export default noop.memo(
                         cResult[18] = tmp4.media;
                         cResult[19] = tmp22;
                         tmp19 = tmp22;
-                        const tmp6Result = tmp6(9754);
+                        const tmp6Result = tmp6(10955);
                       }
                     }
                     const items1 = [tmp28, tmp14, tmp16];
@@ -118,20 +118,20 @@ export default noop.memo(
                     tmp18 = items1;
                   }
                 }
-                const tileWidthStyle = tmp(9743).getTileWidthStyle(size, width, isScreenLandscape);
+                const tileWidthStyle = tmp(10944).getTileWidthStyle(size, width, isScreenLandscape);
                 cResult[8] = isScreenLandscape;
                 cResult[9] = size;
                 cResult[10] = width;
                 cResult[11] = tileWidthStyle;
                 tmp16 = tileWidthStyle;
-                const tmpResult3 = tmp(9743);
+                const tmpResult3 = tmp(10944);
               }
-              const sizeStyle = tmp(9743).getSizeStyle(size, speakerTileStyles);
+              const sizeStyle = tmp(10944).getSizeStyle(size, speakerTileStyles);
               cResult[5] = size;
               cResult[6] = speakerTileStyles;
               cResult[7] = sizeStyle;
               tmp14 = sizeStyle;
-              const tmpResult4 = tmp(9743);
+              const tmpResult4 = tmp(10944);
             }
           }
           return null;
@@ -146,18 +146,18 @@ export default noop.memo(
         cResult[4] = items2;
         tmp11 = items2;
         tmp10 = fn;
-        const obj3 = channel(5919);
+        const obj3 = channel(8302);
       }
-    : (channel) => {
+    : function MediaTile(channel) {
         channel = channel.channel;
         const participant = channel.participant;
         const size = channel.size;
         const tmp = closure_7();
-        const speakerTileStyles = channel(9743).useSpeakerTileStyles();
-        const obj = channel(9743);
+        const speakerTileStyles = channel(10944).useSpeakerTileStyles();
+        const obj = channel(10944);
         const tmp5 = participant;
-        const isScreenLandscape = channel(5919).useIsScreenLandscape();
-        const obj2 = channel(5919);
+        const isScreenLandscape = channel(8302).useIsScreenLandscape();
+        const obj2 = channel(8302);
         const items = [ChannelRTCStore];
         const items1 = [channel.id, participant.id];
         const stateFromStores = channel(504).useStateFromStores(
@@ -170,9 +170,9 @@ export default noop.memo(
           tmp8 = null;
           if (stateFromStores.type !== ParticipantTypes.ACTIVITY) {
             const obj4 = { style: null, children: null };
-            const items2 = [tmp.container, tmp2(9743).getSizeStyle(size, speakerTileStyles)];
-            const tmp2Result = tmp2(9743);
-            items2[2] = tmp2(9743).getTileWidthStyle(size, participant(1484)().width, isScreenLandscape);
+            const items2 = [tmp.container, tmp2(10944).getSizeStyle(size, speakerTileStyles)];
+            const tmp2Result = tmp2(10944);
+            items2[2] = tmp2(10944).getTileWidthStyle(size, participant(1496)().width, isScreenLandscape);
             obj4.style = items2;
             const obj5 = {
               hasBottomSafeArea: false,
@@ -185,11 +185,11 @@ export default noop.memo(
               shrinkStreamEmptyState: false,
               contentStyle: null,
             };
-            const tmp2Result2 = tmp2(9743);
-            obj5.avatarSize = tmp2(1188).AvatarSizes.XLARGE;
+            const tmp2Result2 = tmp2(10944);
+            obj5.avatarSize = tmp2(1200).AvatarSizes.XLARGE;
             obj5.channel = channel;
             obj5.contentStyle = tmp.media;
-            obj4.children = jsx(tmp5(9754), {
+            obj4.children = jsx(tmp5(10955), {
               hasBottomSafeArea: false,
               hasLeftSafeArea: false,
               hasRightSafeArea: false,
@@ -201,7 +201,7 @@ export default noop.memo(
               contentStyle: null,
             });
             tmp8 = <View style={null}>{null}</View>;
-            const tmp5Result = tmp5(9754);
+            const tmp5Result = tmp5(10955);
           }
         }
         return tmp8;

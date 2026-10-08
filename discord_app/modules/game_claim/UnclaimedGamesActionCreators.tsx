@@ -98,7 +98,7 @@ const fetchStore = initialize.createFetchStore(UnclaimedGamesStore, {
 });
 let ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useUnclaimedGameIdsForGuild(arg0, arg1) {
       let tmp2 = undefined === arg1;
       if (!tmp2) {
         tmp2 = arg1;
@@ -113,7 +113,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : (arg0) => {
+  : function useUnclaimedGameIdsForGuild(arg0) {
       let flag = arg1;
       if (arg1 === undefined) {
         flag = true;
@@ -160,14 +160,14 @@ export { fetchUnclaimedGames };
 export const useUnclaimedGames = fetchStore;
 export const useUnclaimedGameIdsForGuild = tmp4;
 export const useHasUnclaimedGames = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useHasUnclaimedGames(arg0, arg1) {
       let tmp2 = undefined === arg1;
       if (!tmp2) {
         tmp2 = arg1;
       }
       return closure_10(arg0, tmp2).length > 0;
     }
-  : (arg0) => {
+  : function useHasUnclaimedGames(arg0) {
       let flag = arg1;
       if (arg1 === undefined) {
         flag = true;

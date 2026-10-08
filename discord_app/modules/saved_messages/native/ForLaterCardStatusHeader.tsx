@@ -57,7 +57,7 @@ let obj3 = {
 const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterCardStatusHeader.tsx");
 
 export const ForLaterCardStatusHeader = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForLaterCardStatusHeader(arg0) {
       const cResult = c.c(19);
       ({ IconComponent, label, isCritical, lineClamp, actions } = arg0);
       const tmp5 = closure_6();
@@ -138,7 +138,7 @@ export const ForLaterCardStatusHeader = ReactCompilerGating.isReactCompilerEnabl
       cResult[2] = tmp8;
       tmp7 = tmp8;
     }
-  : (isCritical) => {
+  : function ForLaterCardStatusHeader(isCritical) {
       let flag = isCritical.isCritical;
       ({ IconComponent, label } = isCritical);
       if (flag === undefined) {

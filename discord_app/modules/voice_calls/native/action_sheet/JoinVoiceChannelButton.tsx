@@ -9,14 +9,14 @@ const require = fn;
 const View = fn(17).View;
 const Permissions = fn(1085).Permissions;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ container: { flexDirection: "row" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet/JoinVoiceChannelButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function JoinVoiceChannelButton(channel) {
       const cResult = channel(576).c(18);
       channel = channel.channel;
       const style = channel.style;
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== channel) {
-        const fn = function _() {
+        const fn = function h() {
           return !PermissionStore.can(Permissions.CONNECT, channel);
         };
         cResult[1] = channel;
@@ -72,56 +72,64 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp10 = tmp12;
         }
         if (cResult[6] !== channel.id) {
-          const fn2 = function x() {
-            const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
-            const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
-          };
-          cResult[6] = channel.id;
-          cResult[7] = fn2;
-          let tmp17 = fn2;
-        } else {
-          tmp17 = cResult[7];
-        }
-        if (cResult[8] === style) {
-          if (cResult[9] === tmp4.container) {
-            let tmp18 = cResult[10];
-          }
-          if (cResult[11] === tmp10) {
-            if (cResult[12] === flag) {
-              if (cResult[13] === tmp17) {
-                let tmp19 = cResult[14];
-              }
-              if (cResult[15] === tmp18) {
-                if (cResult[16] === tmp19) {
-                  let tmp22 = cResult[17];
-                }
-                return tmp22;
-              }
-              const obj2 = { style: tmp18, children: tmp19 };
-              const tmp25 = <View style={tmp18}>{tmp19}</View>;
-              cResult[15] = tmp18;
-              cResult[16] = tmp19;
-              cResult[17] = tmp25;
-              tmp22 = tmp25;
+          class N {
+            constructor() {
+              obj = closure_2(closure_3[11]);
+              result = obj.dismissGlobalKeyboard();
+              obj2 = closure_1(closure_3[12]);
+              voiceChannel = obj2.selectVoiceChannel(channel.id);
+              return;
             }
           }
-          const obj3 = { disabled: flag, text: tmp10, onPress: tmp17 };
-          const tmp21 = jsx(tmp(5601).Button, { disabled: flag, text: tmp10, onPress: tmp17 });
+          cResult[6] = channel.id;
+          cResult[7] = N;
+        } else {
+          class N {
+            constructor() {
+              obj = closure_2(closure_3[11]);
+              result = obj.dismissGlobalKeyboard();
+              obj2 = closure_1(closure_3[12]);
+              voiceChannel = obj2.selectVoiceChannel(channel.id);
+              return;
+            }
+          }
+        }
+        if (cResult[8] === style) {
+          class N {
+            constructor() {
+              obj = closure_2(closure_3[11]);
+              result = obj.dismissGlobalKeyboard();
+              obj2 = closure_1(closure_3[12]);
+              voiceChannel = obj2.selectVoiceChannel(channel.id);
+              return;
+            }
+          }
+          if (cResult[11] === tmp10) {
+            class N {
+              constructor() {
+                obj = closure_2(closure_3[11]);
+                result = obj.dismissGlobalKeyboard();
+                obj2 = closure_1(closure_3[12]);
+                voiceChannel = obj2.selectVoiceChannel(channel.id);
+                return;
+              }
+            }
+          }
+          const obj2 = { disabled: flag, text: tmp10, onPress: N };
+          const tmp21 = jsx(tmp(5375).Button, { disabled: flag, text: tmp10, onPress: N });
           cResult[11] = tmp10;
           cResult[12] = flag;
-          cResult[13] = tmp17;
+          cResult[13] = N;
           cResult[14] = tmp21;
-          tmp19 = tmp21;
         }
         const items1 = [tmp4.container, style];
         cResult[8] = style;
         cResult[9] = tmp4.container;
         cResult[10] = items1;
-        tmp18 = items1;
       }
       const tmpResult = channel(504);
     }
-  : (channel) => {
+  : function JoinVoiceChannelButton(channel) {
       channel = channel.channel;
       const tmp = closure_9();
       const tmp3 = useIsVoiceChannelFullDefault(channel);
@@ -152,6 +160,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
         const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
       }, items1);
-      obj2.children = jsx(channel(5601).Button, { disabled: flag, text: stringResult, onPress: callback });
+      obj2.children = jsx(channel(5375).Button, { disabled: flag, text: stringResult, onPress: callback });
       return <View style={null}>{null}</View>;
     };

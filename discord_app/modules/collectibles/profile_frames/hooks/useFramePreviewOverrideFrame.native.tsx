@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ProfileFrameRecord from "../../records/ProfileFrameRecord.tsx";
 
 require = fn;
-let closure_4 = fn(7885).useFramePreviewOverrideStore;
+let closure_4 = fn(8305).useFramePreviewOverrideStore;
 let c5 = "frame-preview-override";
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useFramePreviewOverrideFrame() {
       let PROFILE_FRAME = dependencyMap;
       const cResult = c.c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = tmp10;
       }
     }
-  : () => {
+  : function useFramePreviewOverrideFrame() {
       const tmp = closure_4((override) => override.override);
       closure_0 = tmp;
       const items = [tmp];

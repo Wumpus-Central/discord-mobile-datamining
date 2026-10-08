@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/settings/utils/notificationSettingsGuildFlagUtils.tsx
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils.tsx";
 import NotificationSettingsUtils from "../../../../utils/NotificationSettingsUtils.tsx";
 import NotificationSettingsModalActionCreatorsDefault from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils.tsx";
 import notificationSettingsFlagUtils from "notificationSettingsFlagUtils.tsx";
 import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
@@ -59,7 +59,7 @@ export const updateGuildPreset = function updateGuildPreset(guildId, arg1) {
   }
 };
 export const useGuildPresetSettings = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGuildPresetSettings(arg0) {
       _require = arg0;
       const cResult = require("c").c(13);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -130,7 +130,7 @@ export const useGuildPresetSettings = ReactCompilerGating.isReactCompilerEnabled
       tmp12 = presetFromSettingsResult;
       const tmpResult4 = require("notificationSettingsPresetUtils");
     }
-  : (arg0) => {
+  : function useGuildPresetSettings(arg0) {
       _require = arg0;
       const items = [UserGuildSettingsStore];
       const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>

@@ -36,7 +36,7 @@ let obj2 = {
 const result = size.fileFinishedImporting("modules/device/useThermalState.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useThermalState() {
       const obj = c;
       const cResult = obj.c(2);
       obj2 = ThermalUtilsDefault;
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return cResult[1];
       }
     }
-  : () => {
+  : function useThermalState() {
       const obj = ThermalUtilsDefault;
       const rawThermalState = obj.useRawThermalState();
       if (null == rawThermalState) {

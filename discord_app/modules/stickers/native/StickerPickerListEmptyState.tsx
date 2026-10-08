@@ -3,16 +3,16 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import BottomSheetModal from "../../../../_runtime/06119_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06298_BottomSheetModal.js";
 import useModalDismissGuardRefreshControl from "../../keyboard/native/useModalDismissGuardRefreshControl.tsx";
-import _modDef10160 from "../../../../_runtime/metro/10160__.js";
+import _modDef9746 from "../../../../_runtime/metro/09746__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const EXPRESSION_FOOTER_HEIGHT = fn(1085).EXPRESSION_FOOTER_HEIGHT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   emptyStateContainer: { padding: 0, flex: 1 },
   emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE },
@@ -28,7 +28,7 @@ const result = size.fileFinishedImporting("modules/stickers/native/StickerPicker
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (insetBottom) => {
+    ? function StickerPickerListEmptyState(insetBottom) {
         const cResult = c.c(14);
         ({ inActionSheet, insetTop } = insetBottom);
         const tmp4 = closure_7();
@@ -112,7 +112,7 @@ export default noop.memo(
             emptyStateContainer: obj5.containerStyle,
             emptyStateImage: obj5.imageStyle,
           } = tmp4);
-          obj4.source = _modDef10160;
+          obj4.source = _modDef9746;
           obj4.titleStyle = tmp12;
           const tmp16 = jsx(native.RefreshEmptyState, {
             body: tmp10,
@@ -135,7 +135,7 @@ export default noop.memo(
         cResult[2] = obj6;
         tmp6 = obj6;
       }
-    : (insetBottom) => {
+    : function StickerPickerListEmptyState(insetBottom) {
         ({ inActionSheet, insetTop } = insetBottom);
         insetBottom = insetBottom.insetBottom;
         const items = [insetBottom, insetTop];
@@ -144,9 +144,9 @@ export default noop.memo(
           items,
         );
         const tmp = closure_7();
-        const modalDismissGuardRefreshControl = insetTop(9938).useModalDismissGuardRefreshControl();
+        const modalDismissGuardRefreshControl = insetTop(9460).useModalDismissGuardRefreshControl();
         if (inActionSheet) {
-          let BottomSheetScrollView = insetTop(6119).BottomSheetScrollView;
+          let BottomSheetScrollView = insetTop(6298).BottomSheetScrollView;
         } else {
           BottomSheetScrollView = ScrollView;
         }
@@ -176,9 +176,9 @@ export default noop.memo(
           emptyStateContainer: obj3.containerStyle,
           emptyStateImage: obj3.imageStyle,
         } = tmp);
-        obj5.source = insetBottom(10160);
+        obj5.source = insetBottom(9746);
         obj5.titleStyle = { marginBottom: 0 };
-        obj2.children = jsx(insetTop(1188).RefreshEmptyState, {
+        obj2.children = jsx(insetTop(1200).RefreshEmptyState, {
           body: null,
           bodyStyle: null,
           containerStyle: null,

@@ -9,7 +9,7 @@ const View = fn(17).View;
 const Constants = fn(1085);
 ({ EXPRESSION_FOOTER_HEIGHT: metroRequire, NODE_SIZE } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { itemInner: null, fadedItemOpacity: { opacity: 0.5 } };
 let size = {
   justifyContent: "center",
@@ -39,7 +39,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (blockRef) => {
+  ? function EmojiPickerCategoriesUnicodeShortcutItem(blockRef) {
       let PressableOpacity = blockRef;
       let tmp = categoryIndex;
       const cResult = blockRef(categoryIndex[7]).c(17);
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         setUnicodeShortcutVisible: tmp3[1],
       };
     }
-  : (blockRef) => {
+  : function EmojiPickerCategoriesUnicodeShortcutItem(blockRef) {
       blockRef = blockRef.blockRef;
       const category = blockRef.category;
       const categoryIndex = blockRef.categoryIndex;
@@ -190,32 +190,38 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp = onPress(unicodeShortcutVisible.useState(false), 2);
       unicodeShortcutVisible = tmp[0];
       closure_5 = tmp3;
+      const fn = function f() {
+        return blockRef.get();
+      };
+      fn.__closure = { blockRef };
+      fn.__workletHash = 4231989001012;
+      fn.__initData = __initData3;
       class I {
-        constructor() {
-          return blockRef.get();
+        constructor(arg0, arg1) {
+          if (null != blockRef) {
+            tmp = arg1;
+            tmp2 = closure_0;
+            tmp3 = closure_2;
+            obj = closure_0(closure_2[9]);
+            if (!obj.cheapWorkletShallowEqual(blockRef, tmp)) {
+              tmp4 = categoryIndex;
+              tmp6 = closure_4;
+              num = 0;
+              result = categoryIndex * EXPRESSION_FOOTER_HEIGHT;
+              if (!closure_4) {
+                num = EXPRESSION_FOOTER_HEIGHT;
+              }
+              diff = blockRef.end - num;
+              tmp2Result = tmp2(tmp3[8]);
+              tmp8 = closure_5;
+              tmp9 = tmp2Result.runOnJS(closure_5)(result > diff);
+            }
+          }
+          return;
         }
       }
-      I.__closure = { blockRef };
-      I.__workletHash = 4231989001012;
-      I.__initData = __initData3;
-      const fn = function f(end, safeAreaState2) {
-        if (null != end) {
-          if (!obj.cheapWorkletShallowEqual(end, tmp)) {
-            let num = 0;
-            const result = categoryIndex * EXPRESSION_FOOTER_HEIGHT;
-            if (!first) {
-              num = EXPRESSION_FOOTER_HEIGHT;
-            }
-            const diff = end.end - num;
-            ReanimatedRexport.runOnJS(closure_5)(result > diff);
-            const tmp2Result = ReanimatedRexport;
-          }
-          obj = cheapWorkletShallowEqual;
-          tmp = safeAreaState2;
-        }
-      };
       let obj = blockRef(categoryIndex[8]);
-      fn.__closure = {
+      I.__closure = {
         cheapWorkletShallowEqual: blockRef(categoryIndex[9]).cheapWorkletShallowEqual,
         categoryIndex,
         EXPRESSION_FOOTER_HEIGHT,
@@ -223,9 +229,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         runOnJS: blockRef(categoryIndex[8]).runOnJS,
         setUnicodeShortcutVisible: tmp[1],
       };
-      fn.__workletHash = 929118758347;
-      fn.__initData = __initData4;
-      const animatedReaction = obj.useAnimatedReaction(I, fn);
+      I.__workletHash = 929118758347;
+      I.__initData = __initData4;
+      const animatedReaction = obj.useAnimatedReaction(fn, I);
       const obj2 = {
         cheapWorkletShallowEqual: blockRef(categoryIndex[9]).cheapWorkletShallowEqual,
         categoryIndex,

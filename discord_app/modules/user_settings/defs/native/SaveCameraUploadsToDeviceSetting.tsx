@@ -7,13 +7,13 @@ import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSaveCameraUploadsToDeviceValue() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UnsyncedUserSettingsStore];
-        const fn = function n() {
+        const fn = function o() {
           return UnsyncedUserSettingsStore.saveCameraUploadsToDevice;
         };
         cResult[0] = items;
@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useSaveCameraUploadsToDeviceValue() {
       const items = [UnsyncedUserSettingsStore];
       return initialize.useStateFromStores(items, () => UnsyncedUserSettingsStore.saveCameraUploadsToDevice);
     };
@@ -34,13 +34,13 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["99tBAC"]);
   },
-  parent: fn(7645).MobileUserSettings.CHAT,
+  parent: fn(7966).MobileUserSettings.CHAT,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useSaveCameraUploadsToDeviceValue() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [UnsyncedUserSettingsStore];
-          const fn = function n() {
+          const fn = function o() {
             return UnsyncedUserSettingsStore.saveCameraUploadsToDevice;
           };
           cResult[0] = items;
@@ -52,7 +52,7 @@ const toggle = SettingBuilders.createToggle({
         }
         return initialize.useStateFromStores(tmp4, tmp5);
       }
-    : () => {
+    : function useSaveCameraUploadsToDeviceValue() {
         const items = [UnsyncedUserSettingsStore];
         return initialize.useStateFromStores(items, () => UnsyncedUserSettingsStore.saveCameraUploadsToDevice);
       },

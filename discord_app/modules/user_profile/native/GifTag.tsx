@@ -29,7 +29,7 @@ let obj3 = { color: nativeDefault.unsafe_rawColors.PRIMARY_800 };
 const result = size.fileFinishedImporting("modules/user_profile/native/GifTag.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function GifTag(style) {
       const cResult = c.c(9);
       style = style.style;
       const tmp4 = closure_4();
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp5 = items;
     }
-  : (style) => {
+  : function GifTag(style) {
       const tmp = closure_4();
       const obj = { style: null, pointerEvents: "none", children: null };
       const items = [tmp.gifTag, style.style];

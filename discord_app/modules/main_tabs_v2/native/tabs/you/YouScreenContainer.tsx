@@ -6,14 +6,14 @@ import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.na
 import TabsPerformanceTracker from "../TabsPerformanceTracker.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const useWindowDimensionsDefault = tmp4(1484);
-const useChatLayoutDefault = tmp4(4745);
-const YouScreenDefault = tmp4(16979);
+const useWindowDimensionsDefault = tmp4(1496);
+const useChatLayoutDefault = tmp4(4939);
+const YouScreenDefault = tmp4(17260);
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(10833).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11182).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: {
     flex: 1,
@@ -46,7 +46,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (route) => {
+    ? function YouScreenContainer(route) {
         let tmp15Result = dependencyMap;
         const cResult = c.c(15);
         route = route.route;
@@ -134,7 +134,7 @@ export default noop.memo(
           return tmp6;
         }
       }
-    : (route) => {
+    : function YouScreenContainer(route) {
         route = route.route;
         let items1 = closure_6();
         let tmp5Result = dependencyMap;

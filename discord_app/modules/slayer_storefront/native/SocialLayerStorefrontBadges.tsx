@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   exclusiveBadge: {
     flexDirection: "row",
@@ -25,7 +25,7 @@ let obj2 = {
   exclusiveBadgeText: null,
 };
 let obj4 = { textTransform: "uppercase", fontSize: nativeDefault.space.PX_12, lineHeight: null };
-let PlatformUtils = fn(1369);
+let PlatformUtils = fn(1381);
 PlatformUtils = PlatformUtils.isAndroid();
 const space = nativeDefault.space;
 obj4.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;
@@ -46,7 +46,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontBadges.tsx");
 
 export const ExclusiveBadge = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ExclusiveBadge() {
       const cResult = c.c(7);
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -94,7 +94,7 @@ export const ExclusiveBadge = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp15;
       tmp14 = tmp15;
     }
-  : () => {
+  : function ExclusiveBadge() {
       const tmp = closure_6();
       const obj = { style: tmp.exclusiveBadge, children: null };
       const items = [React4(ClydeIcon.ClydeIcon, { size: "xs", color: nativeDefault.colors.WHITE })];

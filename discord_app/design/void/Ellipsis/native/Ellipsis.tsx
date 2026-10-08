@@ -15,7 +15,7 @@ let c8 = 233.33333333333334;
 let c9 = 116.66666666666667;
 let c10 = 0.4;
 let c11 = 0.75;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   typingIndicator: { justifyContent: "center", alignItems: "center", flexDirection: "row", marginRight: 4 },
   typingIndicatorDot: null,
@@ -43,7 +43,7 @@ const __initData2 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (delay) => {
+  ? function AnimatedEllipsisDot(delay) {
       const cResult = disableScale(sequenceStartDelay[7]).c(12);
       ({ dotStyle, disableScale } = delay);
       delay = delay.delay;
@@ -64,7 +64,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp8 = cResult[7];
                 }
                 const effect = sequenceEndDelay.useEffect(tmp7, tmp8);
-                const fn2 = function v() {
+                const fn2 = function b() {
                   const obj = { opacity: sharedValue.get(), transform: null };
                   let tmp;
                   if (!disableScale) {
@@ -171,7 +171,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       let obj3 = disableScale(sequenceStartDelay[8]);
     }
-  : (disableScale) => {
+  : function AnimatedEllipsisDot(disableScale) {
       disableScale = disableScale.disableScale;
       const delay = disableScale.delay;
       const sequenceStartDelay = disableScale.sequenceStartDelay;
@@ -264,7 +264,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (dotStyle) => {
+  ? function EllipsisDot(dotStyle) {
       const cResult = c.c(4);
       dotStyle = dotStyle.dotStyle;
       const tmp2 = closure_12();
@@ -290,7 +290,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp6;
       tmp5 = tmp6;
     }
-  : (dotStyle) => {
+  : function EllipsisDot(dotStyle) {
       const obj = { style: null };
       const items = [closure_12().typingIndicatorDot, { opacity }, dotStyle.dotStyle];
       obj.style = items;
@@ -302,14 +302,14 @@ let result = size.fileFinishedImporting("design/void/Ellipsis/native/Ellipsis.ts
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (dotStyle) => {
+    ? function Ellipsis(dotStyle) {
         const cResult = dotStyle(576).c(13);
         dotStyle = dotStyle.dotStyle;
         ({ style, disableScale } = dotStyle);
         const tmp4 = closure_12();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [AccessibilityStore];
-          const fn = function s() {
+          const fn = function u() {
             return useReducedMotion.useReducedMotion;
           };
           cResult[0] = items;
@@ -380,7 +380,7 @@ export default noop.memo(
         tmp9 = items2;
         const tmpResult = dotStyle(504);
       }
-    : (style) => {
+    : function Ellipsis(style) {
         ({ dotStyle: require, disableScale: importDefault } = style);
         const tmp = closure_12();
         const items = [AccessibilityStore];

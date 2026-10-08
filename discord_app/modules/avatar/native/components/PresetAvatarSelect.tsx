@@ -3,8 +3,8 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import defaultAvatar1Default from "../../images/defaultAvatar1.tsx";
 import defaultAvatar2Default from "../../images/defaultAvatar2.tsx";
 import defaultAvatar3Default from "../../images/defaultAvatar3.tsx";
@@ -144,7 +144,7 @@ items1[7] = {
     return intl.string(util.t.zpfUeg);
   },
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj10 = {
   container: { display: "flex", alignItems: "center", flex: 1 },
   buttonsContainer: { display: "flex", flexDirection: "row", marginTop: 20, justifyContent: "space-between" },
@@ -179,7 +179,7 @@ fn(558);
 const obj11 = { borderColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 const ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DefaultAvatarButton(arg0) {
       const cResult = c.c(17);
       ({ source, onSelect, selected, accessibilityLabel } = arg0);
       const tmp4 = closure_7();
@@ -263,7 +263,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp6 = items;
     }
-  : (selected) => {
+  : function DefaultAvatarButton(selected) {
       selected = selected.selected;
       ({ source, onSelect, accessibilityLabel } = selected);
       const tmp = closure_7();
@@ -292,7 +292,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/avatar/native/components/PresetAvatarSelect.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onAvatarSelect) => {
+  ? function PresetAvatarSelect(onAvatarSelect) {
       const cResult = onAvatarSelect(576).c(19);
       onAvatarSelect = onAvatarSelect.onAvatarSelect;
       const selectedAvatar = onAvatarSelect.selectedAvatar;
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
         let intl = tmp(1126).intl;
         obj2.children = intl.string(tmp(1126).t.yP28YL);
-        const tmp7 = closure_4(tmp(4892).Text, obj2);
+        const tmp7 = closure_4(tmp(5086).Text, obj2);
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -415,7 +415,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = mapped1;
       const obj = onAvatarSelect(576);
     }
-  : (arg0) => {
+  : function PresetAvatarSelect(arg0) {
       ({ onAvatarSelect: require, selectedAvatar: importDefault } = arg0);
       const tmp = closure_7();
       const obj = { style: tmp.container, accessibilityRole: "list", children: null };

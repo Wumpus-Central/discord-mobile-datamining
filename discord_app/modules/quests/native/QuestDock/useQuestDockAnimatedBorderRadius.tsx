@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (maxBorder, arg1) => {
+  ? function useQuestDockAnimatedBorderRadius(maxBorder, arg1) {
       _require = maxBorder;
       let num = 0;
       if (undefined !== arg1) {
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       fn.__initData = __initData;
       return obj.useDerivedValue(fn);
     }
-  : (maxBorder) => {
+  : function useQuestDockAnimatedBorderRadius(maxBorder) {
       _require = maxBorder;
       let num = arg1;
       if (arg1 === undefined) {

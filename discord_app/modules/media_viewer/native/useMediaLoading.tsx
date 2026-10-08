@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaLoading.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onLoad) => {
+  ? function useMediaLoading(onLoad) {
       const cResult = c.c(19);
       onLoad = onLoad.onLoad;
       const onError = onLoad.onError;
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_6 = noop.useRef("idle");
       noop.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function l() {
+        const fn = function o() {
           if (null != ref.current) {
             const _clearTimeout = clearTimeout;
             clearTimeout(ref.current);
@@ -311,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmp7 = _slicedToArray(noop.useState(0), 2);
     }
-  : (onLoad) => {
+  : function useMediaLoading(onLoad) {
       onLoad = onLoad.onLoad;
       const onError = onLoad.onError;
       const onLoadingVisible = onLoad.onLoadingVisible;

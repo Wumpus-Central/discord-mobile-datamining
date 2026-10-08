@@ -8,19 +8,19 @@ import PriceUtils from "../../../utils/PriceUtils.tsx";
 import SubscriptionPlanStore from "../../../stores/billing/SubscriptionPlanStore.tsx";
 
 require = fn;
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ PremiumSubscriptionSKUs: closure_4, SubscriptionPlans: hasOwnProperty } = PremiumConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/PromotionStringUtils.tsx");
 
 export const useFormatStringWithCommonPremiumParams = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function useFormatStringWithCommonPremiumParams(arr) {
       const cResult = c.c(3);
       let str = "...";
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SubscriptionPlanStore];
-        const fn = function u() {
+        const fn = function l() {
           return loadedForSKU.isLoadedForSKU(TIER_2.TIER_2);
         };
         cResult[0] = items;
@@ -49,7 +49,7 @@ export const useFormatStringWithCommonPremiumParams = ReactCompilerGating.isReac
       }
       return arr.replace(tmp11, str);
     }
-  : (arr) => {
+  : function useFormatStringWithCommonPremiumParams(arr) {
       let str = "...";
       const items = [SubscriptionPlanStore];
       const stateFromStores = initialize.useStateFromStores(items, () => loadedForSKU.isLoadedForSKU(TIER_2.TIER_2));

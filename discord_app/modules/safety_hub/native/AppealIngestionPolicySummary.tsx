@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   sectionTitle: { marginBottom: 8 },
   policy: { marginBottom: 16 },
@@ -41,7 +41,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionPolicySummary.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (classification) => {
+  ? function AppealIngestionPolicySummary(classification) {
       const cResult = c.c(21);
       classification = classification.classification;
       const tmp4 = closure_5();
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = items1;
       tmp16 = items1;
     }
-  : (classification) => {
+  : function AppealIngestionPolicySummary(classification) {
       classification = classification.classification;
       const tmp = closure_5();
       let description;

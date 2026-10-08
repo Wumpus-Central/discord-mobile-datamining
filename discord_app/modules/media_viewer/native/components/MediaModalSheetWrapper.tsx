@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModalSheetWrapper.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onCloseCallback) => {
+  ? function MediaModalSheetWrapper(onCloseCallback) {
       const cResult = require("c").c(11);
       if (cResult[0] !== onCloseCallback) {
         _require = onCloseCallback;
@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         _require = cResult[1];
         tmp4 = cResult[2];
       }
-      context = noop.useContext(context(6654));
+      context = noop.useContext(context(6831));
       if (cResult[3] !== context) {
         const fn = function f() {
           let transitionState;
@@ -50,40 +50,58 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp10, tmp11);
       if (cResult[6] !== tmp3) {
-        const fn2 = function b() {
-          if (closure_0 != null) {
-            tmp();
+        class M {
+          constructor() {
+            if (closure_0 != null) {
+              tmpResult = tmp();
+            }
+            obj = closure_1(closure_2[7]);
+            hideActionSheetResult = obj.hideActionSheet(MEDIA_MODAL_KEY);
+            return;
           }
-          ActionSheetActionCreatorsDefault.hideActionSheet(MEDIA_MODAL_KEY);
-        };
-        cResult[6] = tmp3;
-        cResult[7] = fn2;
-        let tmp13 = fn2;
-      } else {
-        tmp13 = cResult[7];
-      }
-      if (cResult[8] === tmp13) {
-        if (cResult[9] === tmp4) {
-          let tmp14 = cResult[10];
         }
-        return tmp14;
+        cResult[6] = tmp3;
+        cResult[7] = M;
+      } else {
+        class M {
+          constructor() {
+            if (closure_0 != null) {
+              tmpResult = tmp();
+            }
+            obj = closure_1(closure_2[7]);
+            hideActionSheetResult = obj.hideActionSheet(MEDIA_MODAL_KEY);
+            return;
+          }
+        }
+      }
+      if (cResult[8] === M) {
+        class M {
+          constructor() {
+            if (closure_0 != null) {
+              tmpResult = tmp();
+            }
+            obj = closure_1(closure_2[7]);
+            hideActionSheetResult = obj.hideActionSheet(MEDIA_MODAL_KEY);
+            return;
+          }
+        }
+        return tmp16;
       }
       const obj3 = {};
       const obj = require("c");
       const merged = Object.assign(tmp4);
-      obj3.onClose = tmp13;
-      const tmp17 = jsx(context(7974), {});
-      cResult[8] = tmp13;
+      obj3.onClose = M;
+      tmp16 = jsx(context(8391), {});
+      cResult[8] = M;
       cResult[9] = tmp4;
-      cResult[10] = tmp17;
-      tmp14 = tmp17;
-      const tmp8Result = context(7974);
+      cResult[10] = tmp16;
+      const tmp8Result = context(8391);
     }
-  : (onCloseCallback) => {
+  : function MediaModalSheetWrapper(onCloseCallback) {
       onCloseCallback = onCloseCallback.onCloseCallback;
       const merged = Object.assign(onCloseCallback, Object.assign({ onCloseCallback: 0 }));
       let context;
-      context = noop.useContext(context(6654));
+      context = noop.useContext(context(6831));
       const items = [context];
       const effect = noop.useEffect(() => {
         let transitionState;
@@ -104,5 +122,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = {};
       const merged1 = Object.assign(merged);
       obj.onClose = callback;
-      return jsx(context(7974), {});
+      return jsx(context(8391), {});
     };

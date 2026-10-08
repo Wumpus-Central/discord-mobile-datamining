@@ -4,7 +4,7 @@ import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../../UserSettings.tsx";
-import _modDef2847 from "../../../notifications/NotificationSettings.messages.js";
+import _modDef2891 from "../../../notifications/NotificationSettings.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import FocusModeUtils from "../../../notifications/FocusModeUtils.tsx";
 import notifications_NotificationSettingsUtils from "../../../notifications/NotificationSettingsUtils.tsx";
@@ -17,7 +17,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const AnalyticEvents = Constants.AnalyticEvents;
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useInAppNotificationsSettingValue() {
       const FocusMode = UserSettings.FocusMode;
       const setting = FocusMode.useSetting();
       const ShowInAppNotifications = UserSettings.ShowInAppNotifications;
@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return setting1;
     }
-  : () => {
+  : function useInAppNotificationsSettingValue() {
       const FocusMode = UserSettings.FocusMode;
       const setting = FocusMode.useSetting();
       const ShowInAppNotifications = UserSettings.ShowInAppNotifications;
@@ -48,7 +48,7 @@ let obj = {
   useIsDisabled: null,
 };
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useInAppNotificationsDescription() {
       const cResult = c.c(2);
       const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
       if (cResult[0] !== focusModeEnabled) {
@@ -65,7 +65,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function useInAppNotificationsDescription() {
       let stringResult;
       if (obj.useFocusModeEnabled()) {
         const intl = util.intl;
@@ -92,10 +92,10 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef2847.sH5mu9);
+  return intl.string(_modDef2891.sH5mu9);
 };
 obj3.useDescription = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useRedesignInAppNotificationsDescription() {
       let cIRG0s = dependencyMap;
       const cResult = c.c(2);
       const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
@@ -106,7 +106,7 @@ obj3.useDescription = ReactCompilerGating.isReactCompilerEnabled()
           cIRG0s = util.t.cIRG0s;
           let stringResult = string(cIRG0s);
         } else {
-          stringResult = string(_modDef2847["T/zMdV"]);
+          stringResult = string(_modDef2891["T/zMdV"]);
         }
         cResult[0] = focusModeEnabled;
         cResult[1] = stringResult;
@@ -114,14 +114,14 @@ obj3.useDescription = ReactCompilerGating.isReactCompilerEnabled()
         return cResult[1];
       }
     }
-  : () => {
+  : function useRedesignInAppNotificationsDescription() {
       const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
       const intl = util.intl;
       const string = intl.string;
       if (focusModeEnabled) {
         let stringResult = string(util.t.cIRG0s);
       } else {
-        stringResult = string(_modDef2847["T/zMdV"]);
+        stringResult = string(_modDef2891["T/zMdV"]);
       }
       return stringResult;
     };

@@ -19,22 +19,22 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const SearchTabs = fn(7524).SearchTabs;
+const SearchTabs = fn(9247).SearchTabs;
 const SearchTypes = fn(1085).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 let context = noop.createContext(undefined);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SearchTabsPage(arg0) {
       const cResult = searchContext(576).c(47);
       ({ tab, searchContext } = arg0);
       ({ isFocused, selectMediaTab, width } = arg0);
       const tmp4 = _slicedToArray(noop.useState(isFocused), 2);
       importDefault = tmp4[1];
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function h() {
+        const fn = function l() {
           const timerId = setTimeout(() => {
             closure_1_1(true);
           }, 10);
@@ -61,8 +61,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const stateFromStores = searchContext(504).useStateFromStores(tmp8, tmp10);
         const tmpResult = searchContext(504);
-        const isChannelSpoilerGated = searchContext(6842).useIsChannelSpoilerGated(stateFromStores);
-        searchContext(5106);
+        const isChannelSpoilerGated = searchContext(5949).useIsChannelSpoilerGated(stateFromStores);
+        searchContext(5930);
         if (tmp4[0]) {
           if (tab !== SearchTabs.MEMBERS) {
             if (searchContext.type === SearchTypes.GUILD_CHANNEL) {
@@ -206,7 +206,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           } else if (SearchTabs.THREADS === tab) {
             if (cResult[37] !== searchContext) {
               const obj12 = { searchContext };
-              const tmp29 = jsx(searchContext(16914).SearchTabsThreadScreen, { searchContext });
+              const tmp29 = jsx(searchContext(17195).SearchTabsThreadScreen, { searchContext });
               cResult[37] = searchContext;
               cResult[38] = tmp29;
               let tmp27 = tmp29;
@@ -252,7 +252,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           return null;
         }
-        const tmpResult3 = searchContext(6842);
+        const tmpResult3 = searchContext(5949);
       }
       const fn2 = function b() {
         if (searchContext.type === SearchTypes.GUILD_CHANNEL) {
@@ -266,7 +266,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn2;
       const obj = searchContext(576);
     }
-  : (selectMediaTab) => {
+  : function SearchTabsPage(selectMediaTab) {
       ({ tab, searchContext } = selectMediaTab);
       ({ isFocused, width } = selectMediaTab);
       importDefault = undefined;
@@ -285,8 +285,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         return ChannelStore.getChannel(channelId);
       });
       const obj = searchContext(504);
-      const isChannelSpoilerGated = searchContext(6842).useIsChannelSpoilerGated(stateFromStores);
-      searchContext(5106);
+      const isChannelSpoilerGated = searchContext(5949).useIsChannelSpoilerGated(stateFromStores);
+      searchContext(5930);
       if (tmp2) {
         if (tab !== SearchTabs.MEMBERS) {
           if (searchContext.type === SearchTypes.GUILD_CHANNEL) {
@@ -322,7 +322,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           return jsx(LinksScreenDefault, { tab, searchContext, isFocused, width });
         } else if (SearchTabs.THREADS === tab) {
           const obj12 = { searchContext };
-          return jsx(searchContext(16914).SearchTabsThreadScreen, { searchContext });
+          return jsx(searchContext(17195).SearchTabsThreadScreen, { searchContext });
         } else if (SearchTabs.MESSAGES === tab) {
           const obj26 = { tab, searchContext, isFocused };
           return jsx(MessagesScreenDefault, { tab, searchContext, isFocused });
@@ -335,14 +335,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         return null;
       }
-      const obj2 = searchContext(6842);
+      const obj2 = searchContext(5949);
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/SearchTabsPage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ConnectedSearchTabsPage(arg0) {
       const cResult = c.c(9);
       ({ tab, searchContext, width } = arg0);
       context = noop.useContext(context);
@@ -390,7 +390,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = tmp7;
       const obj3 = { isFocused: tmp5, selectMediaTab: context.selectMediaTab, tab, searchContext, width };
     }
-  : (tab) => {
+  : function ConnectedSearchTabsPage(tab) {
       tab = tab.tab;
       ({ searchContext, width } = tab);
       context = noop.useContext(context);

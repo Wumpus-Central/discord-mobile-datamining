@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   body: { flex: 1 },
   iconContainer: { marginRight: nativeDefault.space.PX_8 },
@@ -29,7 +29,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/NotificationContent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function NotificationContent(arg0) {
       let obj = dependencyMap;
       const cResult = c.c(21);
       ({ icon, children, accessoryLabelNode, rightAccessory, header } = arg0);
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp5;
       tmp4 = tmp5;
     }
-  : (arg0) => {
+  : function NotificationContent(arg0) {
       ({ icon, accessoryLabelNode, header } = arg0);
       ({ children, rightAccessory } = arg0);
       const tmp = closure_6();

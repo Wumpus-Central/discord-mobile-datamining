@@ -1,7 +1,7 @@
 // discord_app/modules/quests/utils/VideoQuestUtils.tsx
 import util from "../../../intl/index.native.tsx";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import QuestDataUtils from "QuestDataUtils.tsx";
+import QuestExpirationUtils from "QuestExpirationUtils.tsx";
 import AnalyticsActions from "../lib/analytics/AnalyticsActions.tsx";
 import QuestTaskUtils from "QuestTaskUtils.tsx";
 import QuestActionCreators from "../QuestActionCreators.tsx";
@@ -15,9 +15,9 @@ const portrait = "portrait";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
-export const getVideoQuestWatchCtaText = fn(10954).getVideoQuestWatchCtaText;
+export const getVideoQuestWatchCtaText = fn(10605).getVideoQuestWatchCtaText;
 export const sendVideoProgress = function sendVideoProgress(quest, currentTime) {
-  let isQuestExpiredResult = QuestDataUtils.isQuestExpired(quest);
+  let isQuestExpiredResult = QuestExpirationUtils.isQuestExpired(quest);
   if (!isQuestExpiredResult) {
     const userStatus = quest.userStatus;
     let enrolledAt;
@@ -134,7 +134,7 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
       tmp4 = null == completedAt;
     }
     if (tmp4) {
-      let isQuestExpiredResult = QuestDataUtils.isQuestExpired(quest);
+      let isQuestExpiredResult = QuestExpirationUtils.isQuestExpired(quest);
       if (!isQuestExpiredResult) {
         const userStatus3 = quest.userStatus;
         let enrolledAt1;

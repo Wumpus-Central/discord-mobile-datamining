@@ -7,13 +7,13 @@ import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore.tsx";
 
 require = fn;
-const FetchState = fn(4508).FetchState;
+const FetchState = fn(4700).FetchState;
 const jsx = fn(21).jsx;
 const redux = noop.createContext(undefined);
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGroupListingsFetchContext(arg0) {
       const cResult = c.c(3);
       const context = noop.useContext(closure_9);
       if (null == context) {
@@ -44,7 +44,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return context.listingsLoaded;
       }
     }
-  : (arg0) => {
+  : function useGroupListingsFetchContext(arg0) {
       const context = noop.useContext(closure_9);
       if (null == context) {
         let str = arg0;
@@ -68,7 +68,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/Grou
 
 export const useGroupListingsFetchContext = tmp2;
 export const GroupListingsFetchContextProvider = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GroupListingsFetchContextProvider(guildId) {
       const cResult = guildId(countryCode[6]).c(18);
       guildId = guildId.guildId;
       ({ children, includeSoftDeleted } = guildId);
@@ -76,7 +76,7 @@ export const GroupListingsFetchContextProvider = ReactCompilerGating.isReactComp
       const dontFetchWhileTrue = guildId.dontFetchWhileTrue;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [first];
-        const fn = function f() {
+        const fn = function p() {
           return first.isConnected();
         };
         cResult[0] = items;
@@ -96,7 +96,7 @@ export const GroupListingsFetchContextProvider = ReactCompilerGating.isReactComp
         tmp8 = cResult[2];
       }
       if (cResult[3] !== guildId) {
-        const fn2 = function x() {
+        const fn2 = function b() {
           if (null != guildId) {
             let FETCHED = GuildRoleSubscriptionsStore.getSubscriptionGroupListingsForGuildFetchState(tmp);
           } else {
@@ -181,7 +181,7 @@ export const GroupListingsFetchContextProvider = ReactCompilerGating.isReactComp
       tmp14 = fn3;
       const tmpResult2 = guildId(countryCode[7]);
     }
-  : (guildId) => {
+  : function GroupListingsFetchContextProvider(guildId) {
       guildId = guildId.guildId;
       const includeSoftDeleted = guildId.includeSoftDeleted;
       const countryCode = guildId.countryCode;

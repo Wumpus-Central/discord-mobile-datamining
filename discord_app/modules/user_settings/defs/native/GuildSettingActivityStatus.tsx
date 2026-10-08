@@ -11,7 +11,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 ({ getSelectedGuildId: c2, useUserSafetySettingsSelectedGuildStore: c3 } = UserSettingsSafetySelectedGuildStore);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useValue() {
       const cResult = c.c(3);
       const selectedGuildId = React3().selectedGuildId;
       const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
@@ -28,7 +28,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = hasItem;
       tmp2 = hasItem;
     }
-  : () => {
+  : function useValue() {
       const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
       const setting = ActivityRestrictedGuilds.useSetting();
       return !setting.includes(React3().selectedGuildId);
@@ -44,7 +44,7 @@ const toggle = SettingBuilders.createToggle({
   },
   parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useValue() {
         const cResult = c.c(3);
         const selectedGuildId = React3().selectedGuildId;
         const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
@@ -61,7 +61,7 @@ const toggle = SettingBuilders.createToggle({
         cResult[2] = hasItem;
         tmp2 = hasItem;
       }
-    : () => {
+    : function useValue() {
         const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
         const setting = ActivityRestrictedGuilds.useSetting();
         return !setting.includes(React3().selectedGuildId);

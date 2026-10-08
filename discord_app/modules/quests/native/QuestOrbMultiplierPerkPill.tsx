@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const start = { x: 0, y: 0 };
 const end = { x: 1, y: 0 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   fullGradientContainer: {
     borderRadius: nativeDefault.radii.round,
@@ -66,11 +66,11 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestOrbMultiplierPerkPill.tsx");
 
 export const QuestOrbMultiplierPerkPill = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPress) => {
+  ? function QuestOrbMultiplierPerkPill(onPress) {
       const cResult = onPress(questOrbRewardMultiplier[7]).c(43);
       onPress = onPress.onPress;
       const orbMultiplierEligibility = onPress.orbMultiplierEligibility;
-      closure_11();
+      const tmp4 = closure_11();
       const obj = onPress(questOrbRewardMultiplier[7]);
       const theme = onPress(questOrbRewardMultiplier[8]).useTheme();
       const obj2 = onPress(questOrbRewardMultiplier[8]);
@@ -81,7 +81,6 @@ export const QuestOrbMultiplierPerkPill = ReactCompilerGating.isReactCompilerEna
         ThemeTypes.DARK,
       );
       const obj4 = onPress(questOrbRewardMultiplier[10]);
-      const tmp7 = orbMultiplierEligibility;
       const token1 = onPress(questOrbRewardMultiplier[10]).useToken(
         orbMultiplierEligibility(questOrbRewardMultiplier[5]).colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_END,
         ThemeTypes.DARK,
@@ -110,6 +109,9 @@ export const QuestOrbMultiplierPerkPill = ReactCompilerGating.isReactCompilerEna
         tmp13 = cResult[3];
       }
       if (cResult[4] === tmp11) {
+        if (cResult[5] === tmp13) {
+          let tmp15 = cResult[6];
+        }
         const token3 = tmp(tmp2[10]).useToken(tmp7(tmp2[5]).colors.BACKGROUND_BRAND);
         const tmpResult6 = tmp(tmp2[10]);
         questOrbRewardMultiplier = tmp(tmp2[12]).useQuestOrbRewardMultiplier(onPress.questId);
@@ -122,99 +124,182 @@ export const QuestOrbMultiplierPerkPill = ReactCompilerGating.isReactCompilerEna
         } else {
           tmp18 = cResult[8];
         }
-        const tmpResult7 = tmp(tmp2[12]);
+        const tmp20 = orbMultiplierEligibility === tmp(tmp2[13]).QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS;
+        let tmp21 = token3;
         if (!tmp20) {
-          const str = "transparent";
+          let str = "transparent";
+          if (!isThemeDarkResult) {
+            str = token2;
+          }
+          tmp21 = str;
         }
         if (null == questOrbRewardMultiplier) {
           return null;
         } else {
           if (cResult[9] === questOrbRewardMultiplier) {
             if (cResult[10] === onPress) {
-              class C {
-                constructor() {
-                  if (null != closure_2) {
-                    tmp2 = closure_1;
-                    tmp3 = closure_2;
-                    tmp4 = orbMultiplierEligibility;
-                    tmp5 = closure_1(closure_2[14])(tmp, orbMultiplierEligibility);
-                    if (onPress != null) {
-                      tmp6 = onPress();
+              if (cResult[11] === orbMultiplierEligibility) {
+                let tmp23 = cResult[12];
+              }
+              if (cResult[13] === questOrbRewardMultiplier) {
+                if (cResult[14] === tmp18) {
+                  if (cResult[16] !== tmp20) {
+                    let tmp28 = !tmp20;
+                    if (!tmp20) {
+                      tmp28 = closure_6(tmp(tmp2[16]).NitroWheelIcon, { size: "xs", color: "white" });
                     }
+                    cResult[16] = tmp20;
+                    cResult[17] = tmp28;
+                    let tmp27 = tmp28;
+                  } else {
+                    tmp27 = cResult[17];
                   }
-                  return;
+                  if (cResult[18] !== cResult[15]) {
+                    const obj7 = { variant: "text-xs/semibold", color: "text-overlay-light", children: tmp24 };
+                    const tmp32 = closure_6(tmp(tmp2[17]).Text, obj7);
+                    cResult[18] = tmp24;
+                    cResult[19] = tmp32;
+                    let tmp30 = tmp32;
+                  } else {
+                    tmp30 = cResult[19];
+                  }
+                  if (cResult[20] === tmp27) {
+                    if (cResult[21] === tmp30) {
+                      let tmp33 = cResult[22];
+                    }
+                    if (cResult[23] !== tmp21) {
+                      const obj8 = { backgroundColor: tmp21 };
+                      cResult[23] = tmp21;
+                      cResult[24] = obj8;
+                      let tmp37 = obj8;
+                    } else {
+                      tmp37 = cResult[24];
+                    }
+                    if (cResult[25] === tmp4.fullGradientContainer) {
+                      if (cResult[26] === tmp37) {
+                        let tmp38 = cResult[27];
+                      }
+                      if (cResult[28] === tmp15) {
+                        if (cResult[29] === tmp20) {
+                          if (cResult[30] === tmp4.fullGradient) {
+                            let tmp39 = cResult[31];
+                          }
+                          if (cResult[32] === tmp33) {
+                            if (cResult[33] === tmp4.fullGradientContent) {
+                              let tmp44 = cResult[34];
+                            }
+                            if (cResult[35] === tmp38) {
+                              if (cResult[36] === tmp39) {
+                                if (cResult[37] === tmp44) {
+                                  let tmp48 = cResult[38];
+                                }
+                                if (cResult[39] === tmp23) {
+                                  if (cResult[40] === tmp48) {
+                                    if (cResult[41] === tmp24) {
+                                      let tmp52 = cResult[42];
+                                    }
+                                    return tmp52;
+                                  }
+                                }
+                                const obj9 = {
+                                  onPress: tmp23,
+                                  activeOpacity: 0.8,
+                                  accessibilityRole: "button",
+                                  accessibilityLabel: tmp24,
+                                  children: tmp48,
+                                };
+                                const tmp54 = closure_6(tmp(tmp2[19]).PressableOpacity, obj9);
+                                cResult[39] = tmp23;
+                                cResult[40] = tmp48;
+                                cResult[41] = tmp24;
+                                cResult[42] = tmp54;
+                                tmp52 = tmp54;
+                              }
+                            }
+                            const obj10 = { style: tmp38, children: null };
+                            const items = [tmp39, tmp44];
+                            obj10.children = items;
+                            const tmp51 = closure_8(closure_4, obj10);
+                            cResult[35] = tmp38;
+                            cResult[36] = tmp39;
+                            cResult[37] = tmp44;
+                            cResult[38] = tmp51;
+                            tmp48 = tmp51;
+                          }
+                          const obj11 = { style: tmp4.fullGradientContent, children: tmp33 };
+                          const tmp47 = closure_6(closure_4, obj11);
+                          cResult[32] = tmp33;
+                          cResult[33] = tmp4.fullGradientContent;
+                          cResult[34] = tmp47;
+                          tmp44 = tmp47;
+                        }
+                      }
+                      let tmp40 = !tmp20;
+                      if (!tmp20) {
+                        const obj12 = { style: tmp4.fullGradient, colors: tmp15, start, end };
+                        tmp40 = closure_6(tmp7(tmp2[18]), obj12);
+                      }
+                      cResult[28] = tmp15;
+                      cResult[29] = tmp20;
+                      cResult[30] = tmp4.fullGradient;
+                      cResult[31] = tmp40;
+                      tmp39 = tmp40;
+                    }
+                    const items1 = [tmp4.fullGradientContainer, tmp37];
+                    cResult[25] = tmp4.fullGradientContainer;
+                    cResult[26] = tmp37;
+                    cResult[27] = items1;
+                    tmp38 = items1;
+                  }
+                  const obj13 = { children: null };
+                  const items2 = [tmp27, tmp30];
+                  obj13.children = items2;
+                  const tmp36 = closure_8(closure_7, obj13);
+                  cResult[20] = tmp27;
+                  cResult[21] = tmp30;
+                  cResult[22] = tmp36;
+                  tmp33 = tmp36;
                 }
               }
               const intl = tmp(tmp2[15]).intl;
               const formatToPlainString = intl.formatToPlainString;
-              const t = tmp(tmp2[15]).t;
+              let t = tmp(tmp2[15]).t;
               if (tmp18) {
-                class C {
-                  constructor() {
-                    if (null != closure_2) {
-                      tmp2 = closure_1;
-                      tmp3 = closure_2;
-                      tmp4 = orbMultiplierEligibility;
-                      tmp5 = closure_1(closure_2[14])(tmp, orbMultiplierEligibility);
-                      if (onPress != null) {
-                        tmp6 = onPress();
-                      }
-                    }
-                    return;
-                  }
-                }
-                t[0] = questOrbRewardMultiplier;
+                t = { bonusOrbMultiplier: questOrbRewardMultiplier };
                 let formatToPlainStringResult = formatToPlainString(t.l2UfLG, t);
               } else {
-                class C {
-                  constructor() {
-                    if (null != closure_2) {
-                      tmp2 = closure_1;
-                      tmp3 = closure_2;
-                      tmp4 = orbMultiplierEligibility;
-                      tmp5 = closure_1(closure_2[14])(tmp, orbMultiplierEligibility);
-                      if (onPress != null) {
-                        tmp6 = onPress();
-                      }
-                    }
-                    return;
-                  }
-                }
-                formatToPlainStringResult = formatToPlainString(t["G+mKoo"], { bonusOrbMultiplier: null });
-                const obj7 = { bonusOrbMultiplier: null };
+                const obj14 = { bonusOrbMultiplier: questOrbRewardMultiplier };
+                formatToPlainStringResult = formatToPlainString(t["G+mKoo"], obj14);
               }
               cResult[13] = questOrbRewardMultiplier;
               cResult[14] = tmp18;
               cResult[15] = formatToPlainStringResult;
             }
           }
-          class C {
-            constructor() {
-              if (null != closure_2) {
-                tmp2 = closure_1;
-                tmp3 = closure_2;
-                tmp4 = orbMultiplierEligibility;
-                tmp5 = closure_1(closure_2[14])(tmp, orbMultiplierEligibility);
-                if (onPress != null) {
-                  tmp6 = onPress();
-                }
+          function handlePress() {
+            if (null != questOrbRewardMultiplier) {
+              openQuestOrbMultiplierPerkInfoActionSheetDefault(tmp, orbMultiplierEligibility);
+              if (onPress != null) {
+                onPress();
               }
-              return;
             }
           }
           cResult[9] = questOrbRewardMultiplier;
           cResult[10] = onPress;
           cResult[11] = orbMultiplierEligibility;
-          cResult[12] = C;
+          cResult[12] = handlePress;
+          tmp23 = handlePress;
         }
-        tmp20 = orbMultiplierEligibility === tmp(tmp2[13]).QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS;
+        const tmpResult7 = tmp(tmp2[12]);
       }
-      const items = [tmp11, tmp13];
+      const items3 = [tmp11, tmp13];
       cResult[4] = tmp11;
       cResult[5] = tmp13;
-      cResult[6] = items;
+      cResult[6] = items3;
+      tmp15 = items3;
+      const obj6 = onPress(questOrbRewardMultiplier[10]);
     }
-  : (questId) => {
+  : function QuestOrbMultiplierPerkPill(questId) {
       ({ onPress: require, orbMultiplierEligibility } = questId);
       let questOrbRewardMultiplier;
       const tmp = closure_11();
@@ -266,7 +351,7 @@ export const QuestOrbMultiplierPerkPill = ReactCompilerGating.isReactCompilerEna
         items2[1] = closure_6(Text_Text.Text, obj14);
         obj13.children = items2;
         const obj15 = {
-          onPress() {
+          onPress: function handlePress() {
             if (null != questOrbRewardMultiplier) {
               openQuestOrbMultiplierPerkInfoActionSheetDefault(tmp, orbMultiplierEligibility);
               if (require != null) {
@@ -286,7 +371,7 @@ export const QuestOrbMultiplierPerkPill = ReactCompilerGating.isReactCompilerEna
         obj16.style = items3;
         if (!tmp13) {
           const obj18 = { style: tmp.fullGradient, colors: items, start, end };
-          tmp21Result = tmp21(orbMultiplierEligibility(5612), obj18);
+          tmp21Result = tmp21(orbMultiplierEligibility(5387), obj18);
         }
         const items4 = [tmp21Result];
         const obj19 = { style: tmp.fullGradientContent, children: closure_8(closure_7, obj13) };

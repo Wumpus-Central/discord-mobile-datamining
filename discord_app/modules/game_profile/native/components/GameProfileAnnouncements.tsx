@@ -5,6 +5,7 @@ import util from "../../../../intl/index.native.tsx";
 import DateUtils from "../../../../utils/DateUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import CustomMarkupAll from "../../../markup/CustomMarkup.native.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
 import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
 import GameProfileActionCreatorsDefault from "../../GameProfileActionCreators.native.tsx";
@@ -20,15 +21,15 @@ const GameProfileSkeletonDefault = GameProfileSkeleton;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Image: hasOwnProperty, View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const MAX_VISIBLE_ANNOUNCEMENTS = fn(8391).MAX_VISIBLE_ANNOUNCEMENTS;
+({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
+const MAX_VISIBLE_ANNOUNCEMENTS = fn(8889).MAX_VISIBLE_ANNOUNCEMENTS;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-let c11 = 120;
-let c12 = 160;
-const PlatformUtils = fn(1369);
-let closure_14 = null;
-const createStyles = fn(4896);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let c10 = 120;
+let c11 = 160;
+const PlatformUtils = fn(1381);
+let closure_13 = null;
+const createStyles = fn(5090);
 let obj = {
   smallCardsScroller: { marginHorizontal: -nativeDefault.space.PX_16, overflow: "visible" },
   skeletonCardsScroller: null,
@@ -160,14 +161,14 @@ const size2 = {
   marginTop: "auto",
 };
 obj.skeletonCardMetadata = size2;
-let closure_16 = createStyles.createStyles(obj);
+let closure_15 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_17 = noop.memo(
+let closure_16 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function GameProfileAnnouncementCardSkeleton(arg0) {
         const cResult = c.c(25);
         ({ index, isWindowLarge } = arg0);
-        const tmp4 = closure_16();
+        const tmp4 = closure_15();
         const tmp5 = isWindowLarge ? tmp4.skeletonCardLarge : tmp4.skeletonCard;
         if (cResult[0] === tmp4.card) {
           if (cResult[1] === tmp5) {
@@ -184,7 +185,7 @@ let closure_17 = noop.memo(
               }
               if (cResult[9] !== tmp4.skeletonCardContent) {
                 const obj2 = { style: tmp4.skeletonCardContent };
-                const tmp16 = options(GameProfileSkeletonDefault, obj2);
+                const tmp16 = onPress(GameProfileSkeletonDefault, obj2);
                 cResult[9] = tmp4.skeletonCardContent;
                 cResult[10] = tmp16;
                 let tmp13 = tmp16;
@@ -193,7 +194,7 @@ let closure_17 = noop.memo(
               }
               if (cResult[11] !== tmp4.skeletonCardMetadata) {
                 const obj3 = { style: tmp4.skeletonCardMetadata };
-                const tmp20 = options(GameProfileSkeletonDefault, obj3);
+                const tmp20 = onPress(GameProfileSkeletonDefault, obj3);
                 cResult[11] = tmp4.skeletonCardMetadata;
                 cResult[12] = tmp20;
                 let tmp17 = tmp20;
@@ -218,7 +219,7 @@ let closure_17 = noop.memo(
                           return tmp28;
                         }
                         const obj4 = { style: tmp6, children: tmp25 };
-                        const tmp31 = options(timestampProducer, obj4);
+                        const tmp31 = onPress(hasOwnProperty, obj4);
                         cResult[22] = tmp6;
                         cResult[23] = tmp25;
                         cResult[24] = tmp31;
@@ -229,7 +230,7 @@ let closure_17 = noop.memo(
                   const obj5 = { animationDelayMs: result, style: tmp4.skeletonAnimationRoot, children: null };
                   const items = [tmp8, tmp21];
                   obj5.children = items;
-                  const tmp27 = v65535(GameProfileSkeleton.GameProfileSkeletonContainer, obj5);
+                  const tmp27 = options(GameProfileSkeleton.GameProfileSkeletonContainer, obj5);
                   cResult[17] = tmp4.skeletonAnimationRoot;
                   cResult[18] = result;
                   cResult[19] = tmp8;
@@ -241,7 +242,7 @@ let closure_17 = noop.memo(
               const obj6 = { style: tmp12, children: null };
               const items1 = [tmp13, tmp17];
               obj6.children = items1;
-              const tmp24 = v65535(timestampProducer, obj6);
+              const tmp24 = options(hasOwnProperty, obj6);
               cResult[13] = tmp12;
               cResult[14] = tmp13;
               cResult[15] = tmp17;
@@ -259,7 +260,7 @@ let closure_17 = noop.memo(
           const items3 = [,];
           ({ smallCardMedia: arr2[0], skeletonCardImage: arr2[1] } = tmp4);
           obj7.style = items3;
-          const tmp11 = options(GameProfileSkeletonDefault, obj7);
+          const tmp11 = onPress(GameProfileSkeletonDefault, obj7);
           cResult[3] = tmp4.skeletonCardImage;
           cResult[4] = tmp4.smallCardMedia;
           cResult[5] = tmp11;
@@ -271,9 +272,9 @@ let closure_17 = noop.memo(
         cResult[2] = items4;
         tmp6 = items4;
       }
-    : (arg0) => {
+    : function GameProfileAnnouncementCardSkeleton(arg0) {
         ({ index, isWindowLarge } = arg0);
-        const tmp = closure_16();
+        const tmp = closure_15();
         const items = [tmp.card];
         const obj = { style: items, children: null };
         items[1] = isWindowLarge ? tmp.skeletonCardLarge : tmp.skeletonCard;
@@ -286,34 +287,34 @@ let closure_17 = noop.memo(
         const items1 = [,];
         ({ smallCardMedia: arr2[0], skeletonCardImage: arr2[1] } = tmp);
         obj3.style = items1;
-        const items2 = [options(GameProfileSkeletonDefault, obj3)];
+        const items2 = [onPress(GameProfileSkeletonDefault, obj3)];
         const obj4 = { style: null, children: null };
         const items3 = [,];
         ({ cardBody: arr4[0], skeletonCardBody: arr4[1] } = tmp);
         obj4.style = items3;
         const items4 = [
-          options(GameProfileSkeletonDefault, { style: tmp.skeletonCardContent }),
-          options(GameProfileSkeletonDefault, { style: tmp.skeletonCardMetadata }),
+          onPress(GameProfileSkeletonDefault, { style: tmp.skeletonCardContent }),
+          onPress(GameProfileSkeletonDefault, { style: tmp.skeletonCardMetadata }),
         ];
         obj4.children = items4;
-        items2[1] = v65535(timestampProducer, obj4);
+        items2[1] = options(hasOwnProperty, obj4);
         obj2.children = items2;
-        obj.children = v65535(GameProfileSkeleton.GameProfileSkeletonContainer, obj2);
-        return options(timestampProducer, obj);
+        obj.children = options(GameProfileSkeleton.GameProfileSkeletonContainer, obj2);
+        return onPress(hasOwnProperty, obj);
       },
 );
 ReactCompilerGating = fn(558);
-let closure_18 = noop.memo(
+let closure_17 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function GameProfileAnnouncementsSkeleton() {
         const cResult = require("c").c(6);
-        const tmp4 = closure_16();
+        const tmp4 = closure_15();
         const tmp6 = useIsWindowLargeDefault();
         _require = tmp6;
         ({ skeletonCardsScroller, skeletonCardsContainer } = tmp4);
         if (cResult[0] !== tmp6) {
           const _Array = Array;
-          const arr = Array.from({ length: 3 }, (arg0, index) => options(closure_17, { index, isWindowLarge }, index));
+          const arr = Array.from({ length: 3 }, (arg0, index) => onPress(closure_16, { index, isWindowLarge }, index));
           cResult[0] = tmp6;
           cResult[1] = arr;
           let tmp7 = arr;
@@ -330,10 +331,10 @@ let closure_18 = noop.memo(
         }
         const obj = require("c");
         const tmp = _require;
-        const tmp11 = closure_9(tmp(8421).GameProfileSectionSkeleton, {
+        const tmp11 = onPress(tmp(8918).GameProfileSectionSkeleton, {
           showViewAllSkeleton: true,
           skeletonTitleWidth: 200,
-          children: closure_9(GameProfileSkeletonCardRowDefault, {
+          children: onPress(GameProfileSkeletonCardRowDefault, {
             style: skeletonCardsScroller,
             contentContainerStyle: skeletonCardsContainer,
             children: tmp7,
@@ -347,34 +348,34 @@ let closure_18 = noop.memo(
         const obj2 = {
           showViewAllSkeleton: true,
           skeletonTitleWidth: 200,
-          children: closure_9(GameProfileSkeletonCardRowDefault, {
+          children: onPress(GameProfileSkeletonCardRowDefault, {
             style: skeletonCardsScroller,
             contentContainerStyle: skeletonCardsContainer,
             children: tmp7,
           }),
         };
       }
-    : () => {
-        const tmp = closure_16();
+    : function GameProfileAnnouncementsSkeleton() {
+        const tmp = closure_15();
         _require = useIsWindowLargeDefault();
         const obj = { showViewAllSkeleton: true, skeletonTitleWidth: 200, children: null };
         const obj2 = {
           style: tmp.skeletonCardsScroller,
           contentContainerStyle: tmp.skeletonCardsContainer,
-          children: Array.from({ length: 3 }, (arg0, index) => options(closure_17, { index, isWindowLarge }, index)),
+          children: Array.from({ length: 3 }, (arg0, index) => onPress(closure_16, { index, isWindowLarge }, index)),
         };
-        obj.children = closure_9(GameProfileSkeletonCardRowDefault, obj2);
-        return closure_9(require("GameProfileSection").GameProfileSectionSkeleton, obj);
+        obj.children = onPress(GameProfileSkeletonCardRowDefault, obj2);
+        return onPress(require("GameProfileSection").GameProfileSectionSkeleton, obj);
       },
 );
 ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (message) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function EmbedAnnouncementCard(message) {
       const cResult = c.c(79);
       message = message.message;
       onPress = message.onPress;
       ({ guildId, channelId } = message);
-      const tmp4 = closure_16();
+      const tmp4 = closure_15();
       if (cResult[0] === channelId) {
         if (cResult[1] === guildId) {
           if (cResult[2] === message) {
@@ -403,7 +404,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 if (cResult[43] === tmp8.providerIconUrl) {
                   if (cResult[44] === tmp4.embedProviderIcon) {
-                    let tmp70 = cResult[45];
+                    let tmp69 = cResult[45];
                   }
                   let str4 = "";
                   if (null != tmp8.providerName) {
@@ -416,49 +417,49 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                     const dateFormatResult = DateUtils.dateFormat(date, "LL");
                     cResult[46] = message.timestamp;
                     cResult[47] = dateFormatResult;
-                    let tmp76 = dateFormatResult;
+                    let tmp75 = dateFormatResult;
                     const tmpResult = DateUtils;
                   } else {
-                    tmp76 = cResult[47];
+                    tmp75 = cResult[47];
                   }
                   if (cResult[48] === str4) {
-                    if (cResult[49] === tmp76) {
-                      let tmp82 = cResult[50];
+                    if (cResult[49] === tmp75) {
+                      let tmp81 = cResult[50];
                     }
                     if (cResult[51] === message.reactionCount) {
                       if (cResult[52] === tmp4.reactionInfo) {
-                        let tmp85 = cResult[53];
+                        let tmp84 = cResult[53];
                       }
                       if (cResult[54] === tmp4.metadataRow) {
-                        if (cResult[55] === tmp70) {
-                          if (cResult[56] === tmp82) {
-                            if (cResult[57] === tmp85) {
-                              let tmp99 = cResult[58];
+                        if (cResult[55] === tmp69) {
+                          if (cResult[56] === tmp81) {
+                            if (cResult[57] === tmp84) {
+                              let tmp98 = cResult[58];
                             }
                             if (cResult[59] === tmp5) {
                               if (cResult[60] === tmp9) {
-                                if (cResult[61] === tmp99) {
+                                if (cResult[61] === tmp98) {
                                   if (cResult[62] === tmp13) {
                                     if (cResult[63] === tmp14) {
                                       if (cResult[64] === tmp15) {
                                         if (cResult[65] === tmp16) {
-                                          let tmp103 = cResult[66];
+                                          let tmp102 = cResult[66];
                                         }
                                         if (cResult[67] === tmp6) {
-                                          if (cResult[68] === tmp103) {
+                                          if (cResult[68] === tmp102) {
                                             if (cResult[69] === tmp17) {
                                               if (cResult[70] === tmp18) {
-                                                let tmp106 = cResult[71];
+                                                let tmp105 = cResult[71];
                                               }
                                               if (cResult[72] === tmp7) {
                                                 if (cResult[73] === tmp10) {
                                                   if (cResult[74] === tmp11) {
-                                                    if (cResult[75] === tmp106) {
+                                                    if (cResult[75] === tmp105) {
                                                       if (cResult[76] === tmp19) {
                                                         if (cResult[77] === tmp20) {
-                                                          let tmp109 = cResult[78];
+                                                          let tmp108 = cResult[78];
                                                         }
-                                                        return tmp109;
+                                                        return tmp108;
                                                       }
                                                     }
                                                   }
@@ -469,30 +470,30 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                                                 onPress: tmp20,
                                                 accessibilityRole: tmp10,
                                                 accessibilityLabel: tmp11,
-                                                children: tmp106,
+                                                children: tmp105,
                                               };
-                                              const tmp111 = options(tmp7, obj3);
+                                              const tmp110 = onPress(tmp7, obj3);
                                               cResult[72] = tmp7;
                                               cResult[73] = tmp10;
                                               cResult[74] = tmp11;
-                                              cResult[75] = tmp106;
+                                              cResult[75] = tmp105;
                                               cResult[76] = tmp19;
                                               cResult[77] = tmp20;
-                                              cResult[78] = tmp111;
-                                              tmp109 = tmp111;
+                                              cResult[78] = tmp110;
+                                              tmp108 = tmp110;
                                             }
                                           }
                                         }
                                         const obj4 = { style: tmp17, children: null };
-                                        const items = [tmp18, tmp103];
+                                        const items = [tmp18, tmp102];
                                         obj4.children = items;
-                                        const tmp108 = v65535(tmp6, obj4);
+                                        const tmp107 = options(tmp6, obj4);
                                         cResult[67] = tmp6;
-                                        cResult[68] = tmp103;
+                                        cResult[68] = tmp102;
                                         cResult[69] = tmp17;
                                         cResult[70] = tmp18;
-                                        cResult[71] = tmp108;
-                                        tmp106 = tmp108;
+                                        cResult[71] = tmp107;
+                                        tmp105 = tmp107;
                                       }
                                     }
                                   }
@@ -500,42 +501,42 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                             const obj5 = { style: tmp9, children: null };
-                            const items1 = [tmp13, tmp14, tmp15, tmp16, tmp99];
+                            const items1 = [tmp13, tmp14, tmp15, tmp16, tmp98];
                             obj5.children = items1;
-                            const tmp105 = v65535(tmp5, obj5);
+                            const tmp104 = options(tmp5, obj5);
                             cResult[59] = tmp5;
                             cResult[60] = tmp9;
-                            cResult[61] = tmp99;
+                            cResult[61] = tmp98;
                             cResult[62] = tmp13;
                             cResult[63] = tmp14;
                             cResult[64] = tmp15;
                             cResult[65] = tmp16;
-                            cResult[66] = tmp105;
-                            tmp103 = tmp105;
+                            cResult[66] = tmp104;
+                            tmp102 = tmp104;
                           }
                         }
                       }
-                      const obj6 = { style: tmp112, children: null };
-                      const items2 = [tmp70, tmp82, tmp85];
+                      const obj6 = { style: tmp111, children: null };
+                      const items2 = [tmp69, tmp81, tmp84];
                       obj6.children = items2;
-                      const tmp102 = v65535(timestampProducer, obj6);
+                      const tmp101 = options(hasOwnProperty, obj6);
                       cResult[54] = tmp4.metadataRow;
-                      cResult[55] = tmp70;
-                      cResult[56] = tmp82;
-                      cResult[57] = tmp85;
-                      cResult[58] = tmp102;
-                      tmp99 = tmp102;
+                      cResult[55] = tmp69;
+                      cResult[56] = tmp81;
+                      cResult[57] = tmp84;
+                      cResult[58] = tmp101;
+                      tmp98 = tmp101;
                     }
-                    let tmp87Result = message.reactionCount > 0;
-                    if (tmp87Result) {
+                    let tmp86Result = message.reactionCount > 0;
+                    if (tmp86Result) {
                       const obj7 = { style: tmp4.reactionInfo, children: null };
                       const obj8 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-                      const items3 = [options(ReactionIcon.ReactionIcon, obj8)];
-                      let tmp92 = null != obj15;
-                      if (tmp92) {
-                        tmp92 = obj15.locale === util.intl.currentLocale;
+                      const items3 = [onPress(ReactionIcon.ReactionIcon, obj8)];
+                      let tmp91 = null != obj15;
+                      if (tmp91) {
+                        tmp91 = obj15.locale === util.intl.currentLocale;
                       }
-                      if (!tmp92) {
+                      if (!tmp91) {
                         const obj9 = { locale: util.intl.currentLocale, format: null };
                         const _Intl = Intl;
                         const numberFormat = new Intl.NumberFormat(util.intl.currentLocale);
@@ -545,36 +546,36 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj10 = { variant: "text-xs/medium", color: "text-muted", children: null };
                       const format = obj15.format;
                       obj10.children = format.format(message.reactionCount);
-                      items3[1] = options(Text_Text.Text, obj10);
+                      items3[1] = onPress(Text_Text.Text, obj10);
                       obj7.children = items3;
-                      tmp87Result = v65535(timestampProducer, obj7);
+                      tmp86Result = options(hasOwnProperty, obj7);
                     }
                     cResult[51] = message.reactionCount;
                     cResult[52] = tmp4.reactionInfo;
-                    cResult[53] = tmp87Result;
-                    tmp85 = tmp87Result;
+                    cResult[53] = tmp86Result;
+                    tmp84 = tmp86Result;
                   }
                   const obj11 = { variant: "text-xs/medium", color: "text-muted", children: null };
-                  const items4 = [str4, tmp76];
+                  const items4 = [str4, tmp75];
                   obj11.children = items4;
-                  const tmp84 = v65535(Text_Text.Text, obj11);
+                  const tmp83 = options(Text_Text.Text, obj11);
                   cResult[48] = str4;
-                  cResult[49] = tmp76;
-                  cResult[50] = tmp84;
-                  tmp82 = tmp84;
+                  cResult[49] = tmp75;
+                  cResult[50] = tmp83;
+                  tmp81 = tmp83;
                 }
-                let tmp72 = null != tmp8.providerIconUrl;
-                if (tmp72) {
+                let tmp71 = null != tmp8.providerIconUrl;
+                if (tmp71) {
                   const obj12 = { source: null, style: null };
                   const obj13 = { uri: tmp8.providerIconUrl };
                   obj12.source = obj13;
                   obj12.style = tmp4.embedProviderIcon;
-                  tmp72 = options(hasOwnProperty, obj12);
+                  tmp71 = onPress(FastImageDefault, obj12);
                 }
                 cResult[43] = tmp8.providerIconUrl;
                 cResult[44] = tmp4.embedProviderIcon;
-                cResult[45] = tmp72;
-                tmp70 = tmp72;
+                cResult[45] = tmp71;
+                tmp69 = tmp71;
               }
             }
           }
@@ -583,6 +584,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       if (null == parser) {
         parser = CustomMarkupAll.getParser();
       }
+      const obj14 = { guildId, channelId, mentionPillOffsetY: num };
       const media = message.media;
       let proxyUrl;
       if (media != null) {
@@ -599,7 +601,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[21] !== proxyUrl) {
         let posterUrl = null;
         if (null != proxyUrl) {
-          posterUrl = AnnouncementMessageUtils.getPosterUrl(proxyUrl, c12, c11);
+          posterUrl = AnnouncementMessageUtils.getPosterUrl(proxyUrl, c11, c10);
           const tmpResult2 = AnnouncementMessageUtils;
         }
         cResult[21] = proxyUrl;
@@ -621,7 +623,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp36;
       let tmp37;
       let tmp38 = null;
-      let tmp39;
+      let title;
       let str;
       let tmp40;
       let tmp41;
@@ -629,21 +631,13 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp43;
       if (null != embedSource) {
         if (cResult[23] !== embedSource.color) {
+          let tmp45;
           if (null != embedSource.color) {
             obj15 = { borderLeftColor: embedSource.color };
-            class M {
-              constructor() {
-                return onPress(message.id);
-              }
-            }
-          }
-          class M {
-            constructor() {
-              return onPress(message.id);
-            }
+            tmp45 = obj15;
           }
           cResult[23] = embedSource.color;
-          cResult[24] = undefined;
+          cResult[24] = tmp45;
           let tmp44 = tmp45;
         } else {
           tmp44 = cResult[24];
@@ -652,180 +646,135 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[26] === onPress) {
             let tmp48 = cResult[27];
           }
-          class M {
-            constructor() {
-              return onPress(message.id);
-            }
-          }
           if (cResult[28] !== embedSource.url) {
-            let tmp52 = null != embedSource.url;
-            if (tmp52) {
-              class M {
-                constructor() {
-                  return onPress(message.id);
-                }
-              }
-              tmp52 = options(Text_Text.Text, {
-                variant: "text-xs/medium",
-                color: "text-link",
-                lineClamp: 1,
-                children: null,
-              });
-              const obj16 = { variant: "text-xs/medium", color: "text-link", lineClamp: 1, children: null };
-            }
-            class M {
-              constructor() {
-                return onPress(message.id);
-              }
+            let tmp51 = null != embedSource.url;
+            if (tmp51) {
+              const obj16 = { variant: "text-xs/medium", color: "text-link", lineClamp: 1, children: embedSource.url };
+              tmp51 = onPress(Text_Text.Text, obj16);
             }
             cResult[28] = embedSource.url;
-            cResult[29] = tmp52;
-            let tmp51 = tmp52;
+            cResult[29] = tmp51;
+            let tmp50 = tmp51;
           } else {
-            tmp51 = cResult[29];
+            tmp50 = cResult[29];
           }
           if (cResult[30] === tmp44) {
             if (cResult[31] === tmp4.embedContentArea) {
-              let tmp54 = cResult[32];
+              let tmp53 = cResult[32];
             }
             if (cResult[33] === embedSource.authorIconUrl) {
               if (cResult[34] === embedSource.authorName) {
                 if (cResult[35] === tmp4.embedAuthorIcon) {
                   if (cResult[36] === tmp4.embedAuthorRow) {
-                    let tmp55 = cResult[37];
+                    let tmp54 = cResult[37];
                   }
                   if (cResult[38] === message.media) {
                     if (cResult[39] === tmp26) {
                       if (cResult[40] === tmp4.embedMedia) {
                         if (cResult[41] === tmp4.mediaImage) {
-                          let tmp63 = cResult[42];
+                          let tmp61 = cResult[42];
                         }
-                        class M {
-                          constructor() {
-                            return onPress(message.id);
-                          }
-                        }
-                        let tmp67 = message.body.length > 0;
-                        if (tmp67) {
+                        let tmp64 = null != message.title;
+                        if (tmp64) {
                           const obj17 = {
+                            variant: "text-md/semibold",
+                            color: "mobile-text-heading-primary",
+                            lineClamp: 2,
+                            children: tmp23(message.title, true, obj14),
+                          };
+                          tmp64 = onPress(Text_Text.Text, obj17);
+                        }
+                        let tmp66 = message.body.length > 0;
+                        if (tmp66) {
+                          const obj18 = {
                             variant: "text-sm/medium",
                             color: "text-default",
                             lineClamp: 3,
-                            children: null,
+                            children: tmp23(message.body, true, obj14),
                           };
-                          class M {
-                            constructor() {
-                              return onPress(message.id);
-                            }
-                          }
-                          obj17.children = tmp23(message.body, true, obj14);
-                          tmp67 = options(Text_Text.Text, obj17);
+                          tmp66 = onPress(Text_Text.Text, obj18);
                         }
                         str = "button";
-                        tmp34 = tmp67;
+                        tmp34 = tmp66;
                         tmp30 = tmp48;
                         tmp31 = tmp47;
-                        tmp32 = tmp51;
+                        tmp32 = tmp50;
                         cardBody = tmp4.cardBody;
-                        tmp35 = null != message.title;
-                        tmp36 = tmp63;
-                        tmp37 = tmp55;
+                        tmp35 = tmp64;
+                        tmp36 = tmp61;
+                        tmp37 = tmp54;
                         tmp38 = forResult;
-                        tmp39 = tmp49;
-                        tmp40 = tmp54;
+                        title = message.title;
+                        tmp40 = tmp53;
                         tmp41 = tmp46;
-                        tmp42 = timestampProducer;
-                        tmp43 = timestampProducer;
-                        const tmp66 = null != message.title;
+                        tmp42 = hasOwnProperty;
+                        tmp43 = hasOwnProperty;
                       }
                     }
                   }
-                  class M {
-                    constructor() {
-                      return onPress(message.id);
-                    }
-                  }
-                  if (tmp64) {
-                    const obj18 = { style: null, children: null };
-                    class M {
-                      constructor() {
-                        return onPress(message.id);
-                      }
-                    }
-                    const obj19 = {
+                  let tmp62 = null != message.media && null != tmp26;
+                  if (tmp62) {
+                    const obj19 = { style: tmp4.embedMedia, children: null };
+                    const obj20 = {
                       uri: tmp26,
                       placeholder: message.media.placeholder,
                       placeholderVersion: message.media.placeholderVersion,
                       style: tmp4.mediaImage,
                     };
-                    obj18.children = options(ImageWithPlaceholder.ImageWithPlaceholder, obj19);
-                    tmp64 = options(timestampProducer, obj18);
+                    obj19.children = onPress(ImageWithPlaceholder.ImageWithPlaceholder, obj20);
+                    tmp62 = onPress(hasOwnProperty, obj19);
                   }
                   cResult[38] = message.media;
                   cResult[39] = tmp26;
                   cResult[40] = tmp4.embedMedia;
                   cResult[41] = tmp4.mediaImage;
-                  cResult[42] = tmp64;
-                  tmp63 = tmp64;
+                  cResult[42] = tmp62;
+                  tmp61 = tmp62;
                 }
               }
             }
-            class M {
-              constructor() {
-                return onPress(message.id);
+            let tmp56Result = null != embedSource.authorName;
+            if (tmp56Result) {
+              const obj21 = { style: tmp4.embedAuthorRow, children: null };
+              let tmp57 = null != embedSource.authorIconUrl;
+              if (tmp57) {
+                const obj22 = { source: null, style: null };
+                const obj23 = { uri: embedSource.authorIconUrl };
+                obj22.source = obj23;
+                obj22.style = tmp4.embedAuthorIcon;
+                tmp57 = onPress(FastImageDefault, obj22);
               }
-            }
-            if (tmp57Result) {
-              const obj20 = { style: tmp4.embedAuthorRow, children: null };
-              class M {
-                constructor() {
-                  return onPress(message.id);
-                }
-              }
-              if (tmp58) {
-                class M {
-                  constructor() {
-                    return onPress(message.id);
-                  }
-                }
-                const obj21 = { uri: embedSource.authorIconUrl };
-                tmp61[0] = obj21;
-                tmp61[1] = tmp4.embedAuthorIcon;
-                tmp58 = options(hasOwnProperty, tmp61);
-              }
-              const items5 = [tmp58];
-              const obj22 = {
+              const items5 = [tmp57];
+              const obj24 = {
                 variant: "text-xs/semibold",
                 color: "text-strong",
                 lineClamp: 1,
                 children: embedSource.authorName,
               };
-              items5[1] = options(Text_Text.Text, obj22);
-              obj20.children = items5;
-              tmp57Result = v65535(timestampProducer, obj20);
+              items5[1] = onPress(Text_Text.Text, obj24);
+              obj21.children = items5;
+              tmp56Result = options(hasOwnProperty, obj21);
             }
             cResult[33] = embedSource.authorIconUrl;
             cResult[34] = embedSource.authorName;
             cResult[35] = tmp4.embedAuthorIcon;
             cResult[36] = tmp4.embedAuthorRow;
-            cResult[37] = tmp57Result;
-            tmp55 = tmp57Result;
+            cResult[37] = tmp56Result;
+            tmp54 = tmp56Result;
           }
           const items6 = [tmp4.embedContentArea, tmp44];
           cResult[30] = tmp44;
           cResult[31] = tmp4.embedContentArea;
           cResult[32] = items6;
-          tmp54 = items6;
+          tmp53 = items6;
         }
-        class M {
-          constructor() {
-            return onPress(message.id);
-          }
-        }
+        const fn = function _() {
+          return onPress(message.id);
+        };
         cResult[25] = message.id;
         cResult[26] = onPress;
-        cResult[27] = M;
-        tmp48 = M;
+        cResult[27] = fn;
+        tmp48 = fn;
       }
       cResult[0] = channelId;
       cResult[1] = guildId;
@@ -838,7 +787,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = embedSource;
       cResult[9] = tmp40;
       cResult[10] = str;
-      cResult[11] = tmp39;
+      cResult[11] = title;
       cResult[12] = tmp38;
       cResult[13] = tmp37;
       cResult[14] = tmp36;
@@ -857,7 +806,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = tmp36;
       tmp13 = tmp37;
       tmp12 = tmp38;
-      tmp11 = tmp39;
+      tmp11 = title;
       tmp10 = str;
       tmp9 = tmp40;
       tmp7 = tmp41;
@@ -865,14 +814,12 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp43;
       tmp8 = embedSource;
       forResult = Symbol.for("react.early_return_sentinel");
-      obj14 = { guildId, channelId, mentionPillOffsetY: num };
-      tmp23 = parser;
     }
-  : (message) => {
+  : function EmbedAnnouncementCard(message) {
       message = message.message;
       onPress = message.onPress;
       ({ guildId, channelId } = message);
-      const tmp = closure_16();
+      const tmp = closure_15();
       if (null == parser) {
         parser = CustomMarkupAll.getParser();
       }
@@ -892,7 +839,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let posterUrl = null;
       if (null != proxyUrl) {
-        posterUrl = AnnouncementMessageUtils.getPosterUrl(proxyUrl, c12, c11);
+        posterUrl = AnnouncementMessageUtils.getPosterUrl(proxyUrl, c11, c10);
       }
       if (posterUrl == null) {
         posterUrl = proxyUrl;
@@ -919,7 +866,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp13Result = null != embedSource.url;
         if (tmp13Result) {
           const obj7 = { variant: "text-xs/medium", color: "text-link", lineClamp: 1, children: embedSource.url };
-          tmp13Result = options(Text_Text.Text, obj7);
+          tmp13Result = tmp13(Text_Text.Text, obj7);
         }
         const items = [tmp13Result];
         const obj8 = { style: null, children: null };
@@ -934,7 +881,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             const obj11 = { uri: embedSource.authorIconUrl };
             obj10.source = obj11;
             obj10.style = tmp.embedAuthorIcon;
-            tmp13Result6 = options(hasOwnProperty, obj10);
+            tmp13Result6 = tmp13(FastImageDefault, obj10);
           }
           const items2 = [tmp13Result6];
           const obj12 = {
@@ -943,9 +890,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             lineClamp: 1,
             children: embedSource.authorName,
           };
-          items2[1] = options(Text_Text.Text, obj12);
+          items2[1] = tmp13(Text_Text.Text, obj12);
           obj9.children = items2;
-          tmp15Result = v65535(timestampProducer, obj9);
+          tmp15Result = options(hasOwnProperty, obj9);
         }
         const items3 = [tmp15Result, , , ,];
         let tmp13Result7 = null != message.media && null != posterUrl;
@@ -957,8 +904,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             placeholderVersion: message.media.placeholderVersion,
             style: tmp.mediaImage,
           };
-          obj13.children = options(ImageWithPlaceholder.ImageWithPlaceholder, obj14);
-          tmp13Result7 = options(timestampProducer, obj13);
+          obj13.children = tmp13(ImageWithPlaceholder.ImageWithPlaceholder, obj14);
+          tmp13Result7 = tmp13(hasOwnProperty, obj13);
         }
         items3[1] = tmp13Result7;
         let tmp13Result8 = null != message.title;
@@ -969,7 +916,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             lineClamp: 2,
             children: tmp4(message.title, true, obj2),
           };
-          tmp13Result8 = options(Text_Text.Text, obj15);
+          tmp13Result8 = tmp13(Text_Text.Text, obj15);
         }
         items3[2] = tmp13Result8;
         let tmp13Result9 = message.body.length > 0;
@@ -980,7 +927,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             lineClamp: 3,
             children: tmp4(message.body, true, obj2),
           };
-          tmp13Result9 = options(Text_Text.Text, obj16);
+          tmp13Result9 = tmp13(Text_Text.Text, obj16);
         }
         items3[3] = tmp13Result9;
         const obj17 = { style: tmp.metadataRow, children: null };
@@ -990,7 +937,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           const obj19 = { uri: embedSource.providerIconUrl };
           obj18.source = obj19;
           obj18.style = tmp.embedProviderIcon;
-          tmp13Result10 = options(hasOwnProperty, obj18);
+          tmp13Result10 = tmp13(FastImageDefault, obj18);
         }
         const items4 = [tmp13Result10, ,];
         let str2 = "";
@@ -1004,17 +951,17 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         const date = new Date(message.timestamp);
         items5[1] = DateUtils.dateFormat(date, "LL");
         obj20.children = items5;
-        items4[1] = v65535(Text_Text.Text, obj20);
+        items4[1] = options(Text_Text.Text, obj20);
         let tmp15Result2 = message.reactionCount > 0;
         if (tmp15Result2) {
           const obj21 = { style: tmp.reactionInfo, children: null };
           const obj22 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-          const items6 = [options(ReactionIcon.ReactionIcon, obj22)];
-          let tmp47 = null != obj15;
-          if (tmp47) {
-            tmp47 = obj15.locale === util.intl.currentLocale;
+          const items6 = [tmp13(ReactionIcon.ReactionIcon, obj22)];
+          let tmp49 = null != obj15;
+          if (tmp49) {
+            tmp49 = obj15.locale === util.intl.currentLocale;
           }
-          if (!tmp47) {
+          if (!tmp49) {
             const obj23 = { locale: util.intl.currentLocale, format: null };
             const _Intl = Intl;
             const numberFormat = new Intl.NumberFormat(util.intl.currentLocale);
@@ -1024,28 +971,28 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           const obj24 = { variant: "text-xs/medium", color: "text-muted", children: null };
           const format = obj15.format;
           obj24.children = format.format(message.reactionCount);
-          items6[1] = options(Text_Text.Text, obj24);
+          items6[1] = tmp13(Text_Text.Text, obj24);
           obj21.children = items6;
-          tmp15Result2 = v65535(timestampProducer, obj21);
+          tmp15Result2 = options(hasOwnProperty, obj21);
         }
         items4[2] = tmp15Result2;
         obj17.children = items4;
-        items3[4] = v65535(timestampProducer, obj17);
+        items3[4] = options(hasOwnProperty, obj17);
         obj8.children = items3;
-        items[1] = v65535(timestampProducer, obj8);
+        items[1] = options(hasOwnProperty, obj8);
         obj6.children = items;
-        obj5.children = v65535(timestampProducer, obj6);
-        return options(React5, obj5);
+        obj5.children = options(hasOwnProperty, obj6);
+        return onPress(timestampProducer, obj5);
       }
     };
 ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (message) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function MessageAnnouncementCard(message) {
       const cResult = c.c(56);
       message = message.message;
       onPress = message.onPress;
       ({ guildId, channelId } = message);
-      const tmp4 = closure_16();
+      const tmp4 = closure_15();
       if (cResult[0] === channelId) {
         if (cResult[1] === guildId) {
           if (cResult[2] === message.body) {
@@ -1059,14 +1006,14 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                           if (cResult[10] === tmp4.smallCardMedia) {
                             let tmp5 = cResult[11];
                             let tmp6 = cResult[12];
-                            let tmp7 = cResult[13];
-                            let tmp8 = cResult[14];
-                            let tmp9 = cResult[15];
-                            let tmp10 = cResult[16];
-                            let tmp11 = cResult[17];
+                            let cardBody = cResult[13];
+                            let tmp7 = cResult[14];
+                            let tmp8 = cResult[15];
+                            let tmp9 = cResult[16];
+                            let tmp10 = cResult[17];
                             let str = cResult[18];
-                            let tmp12 = cResult[19];
-                            let tmp13 = cResult[20];
+                            let tmp11 = cResult[19];
+                            let tmp12 = cResult[20];
                           }
                           if (cResult[31] !== message.timestamp) {
                             const _Date = Date;
@@ -1074,46 +1021,46 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                             const dateFormatResult = DateUtils.dateFormat(date, "LL");
                             cResult[31] = message.timestamp;
                             cResult[32] = dateFormatResult;
-                            let tmp33 = dateFormatResult;
+                            let tmp32 = dateFormatResult;
                             const tmpResult = DateUtils;
                           } else {
-                            tmp33 = cResult[32];
+                            tmp32 = cResult[32];
                           }
-                          if (cResult[33] !== tmp33) {
-                            const obj3 = { variant: "text-xs/medium", color: "text-muted", children: tmp33 };
-                            const tmp42 = options(Text_Text.Text, obj3);
-                            cResult[33] = tmp33;
-                            cResult[34] = tmp42;
-                            let tmp40 = tmp42;
+                          if (cResult[33] !== tmp32) {
+                            const obj3 = { variant: "text-xs/medium", color: "text-muted", children: tmp32 };
+                            const tmp41 = onPress(Text_Text.Text, obj3);
+                            cResult[33] = tmp32;
+                            cResult[34] = tmp41;
+                            let tmp39 = tmp41;
                           } else {
-                            tmp40 = cResult[34];
+                            tmp39 = cResult[34];
                           }
                           if (cResult[35] === message.reactionCount) {
                             if (cResult[36] === tmp4.reactionInfo) {
-                              let tmp43 = cResult[37];
+                              let tmp42 = cResult[37];
                             }
                             if (cResult[38] === tmp4.metadataRow) {
-                              if (cResult[39] === tmp40) {
-                                if (cResult[40] === tmp43) {
-                                  let tmp59 = cResult[41];
+                              if (cResult[39] === tmp39) {
+                                if (cResult[40] === tmp42) {
+                                  let tmp58 = cResult[41];
                                 }
                                 if (cResult[42] === tmp5) {
-                                  if (cResult[43] === tmp7) {
-                                    if (cResult[44] === tmp59) {
-                                      if (cResult[45] === tmp8) {
-                                        if (cResult[46] === tmp9) {
-                                          let tmp63 = cResult[47];
+                                  if (cResult[43] === cardBody) {
+                                    if (cResult[44] === tmp58) {
+                                      if (cResult[45] === tmp7) {
+                                        if (cResult[46] === tmp8) {
+                                          let tmp62 = cResult[47];
                                         }
                                         if (cResult[48] === tmp6) {
-                                          if (cResult[49] === tmp63) {
-                                            if (cResult[50] === tmp10) {
-                                              if (cResult[51] === tmp11) {
+                                          if (cResult[49] === tmp62) {
+                                            if (cResult[50] === tmp9) {
+                                              if (cResult[51] === tmp10) {
                                                 if (cResult[52] === str) {
-                                                  if (cResult[53] === tmp12) {
-                                                    if (cResult[54] === tmp13) {
-                                                      let tmp66 = cResult[55];
+                                                  if (cResult[53] === tmp11) {
+                                                    if (cResult[54] === tmp12) {
+                                                      let tmp65 = cResult[55];
                                                     }
-                                                    return tmp66;
+                                                    return tmp65;
                                                   }
                                                 }
                                               }
@@ -1121,61 +1068,61 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                                           }
                                         }
                                         const obj4 = {
-                                          style: tmp10,
-                                          onPress: tmp11,
+                                          style: tmp9,
+                                          onPress: tmp10,
                                           accessibilityRole: str,
-                                          accessibilityLabel: tmp12,
+                                          accessibilityLabel: tmp11,
                                           children: null,
                                         };
-                                        const items = [tmp13, tmp63];
+                                        const items = [tmp12, tmp62];
                                         obj4.children = items;
-                                        const tmp68 = v65535(tmp6, obj4);
+                                        const tmp67 = options(tmp6, obj4);
                                         cResult[48] = tmp6;
-                                        cResult[49] = tmp63;
-                                        cResult[50] = tmp10;
-                                        cResult[51] = tmp11;
+                                        cResult[49] = tmp62;
+                                        cResult[50] = tmp9;
+                                        cResult[51] = tmp10;
                                         cResult[52] = str;
-                                        cResult[53] = tmp12;
-                                        cResult[54] = tmp13;
-                                        cResult[55] = tmp68;
-                                        tmp66 = tmp68;
+                                        cResult[53] = tmp11;
+                                        cResult[54] = tmp12;
+                                        cResult[55] = tmp67;
+                                        tmp65 = tmp67;
                                       }
                                     }
                                   }
                                 }
-                                const obj5 = { style: tmp7, children: null };
-                                const items1 = [tmp8, tmp9, tmp59];
+                                const obj5 = { style: cardBody, children: null };
+                                const items1 = [tmp7, tmp8, tmp58];
                                 obj5.children = items1;
-                                const tmp65 = v65535(tmp5, obj5);
+                                const tmp64 = options(tmp5, obj5);
                                 cResult[42] = tmp5;
-                                cResult[43] = tmp7;
-                                cResult[44] = tmp59;
-                                cResult[45] = tmp8;
-                                cResult[46] = tmp9;
-                                cResult[47] = tmp65;
-                                tmp63 = tmp65;
+                                cResult[43] = cardBody;
+                                cResult[44] = tmp58;
+                                cResult[45] = tmp7;
+                                cResult[46] = tmp8;
+                                cResult[47] = tmp64;
+                                tmp62 = tmp64;
                               }
                             }
                             const obj6 = { style: tmp4.metadataRow, children: null };
-                            const items2 = [tmp40, tmp43];
+                            const items2 = [tmp39, tmp42];
                             obj6.children = items2;
-                            const tmp62 = v65535(timestampProducer, obj6);
+                            const tmp61 = options(hasOwnProperty, obj6);
                             cResult[38] = tmp4.metadataRow;
-                            cResult[39] = tmp40;
-                            cResult[40] = tmp43;
-                            cResult[41] = tmp62;
-                            tmp59 = tmp62;
+                            cResult[39] = tmp39;
+                            cResult[40] = tmp42;
+                            cResult[41] = tmp61;
+                            tmp58 = tmp61;
                           }
-                          let tmp45Result = message.reactionCount > 0;
-                          if (tmp45Result) {
+                          let tmp44Result = message.reactionCount > 0;
+                          if (tmp44Result) {
                             const obj7 = { style: tmp4.reactionInfo, children: null };
                             const obj8 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-                            const items3 = [options(ReactionIcon.ReactionIcon, obj8)];
-                            let tmp51 = null != obj15;
-                            if (tmp51) {
-                              tmp51 = obj15.locale === util.intl.currentLocale;
+                            const items3 = [onPress(ReactionIcon.ReactionIcon, obj8)];
+                            let tmp50 = null != obj15;
+                            if (tmp50) {
+                              tmp50 = obj15.locale === util.intl.currentLocale;
                             }
-                            if (!tmp51) {
+                            if (!tmp50) {
                               const obj9 = { locale: util.intl.currentLocale, format: null };
                               const _Intl = Intl;
                               const numberFormat = new Intl.NumberFormat(util.intl.currentLocale);
@@ -1185,14 +1132,14 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                             const obj10 = { variant: "text-xs/medium", color: "text-muted", children: null };
                             const format = obj15.format;
                             obj10.children = format.format(message.reactionCount);
-                            items3[1] = options(Text_Text.Text, obj10);
+                            items3[1] = onPress(Text_Text.Text, obj10);
                             obj7.children = items3;
-                            tmp45Result = v65535(timestampProducer, obj7);
+                            tmp44Result = options(hasOwnProperty, obj7);
                           }
                           cResult[35] = message.reactionCount;
                           cResult[36] = tmp4.reactionInfo;
-                          cResult[37] = tmp45Result;
-                          tmp43 = tmp45Result;
+                          cResult[37] = tmp44Result;
+                          tmp42 = tmp44Result;
                         }
                       }
                     }
@@ -1223,50 +1170,49 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[21] !== proxyUrl) {
         let posterUrl = null;
         if (null != proxyUrl) {
-          posterUrl = AnnouncementMessageUtils.getPosterUrl(proxyUrl, c12, c11);
+          posterUrl = AnnouncementMessageUtils.getPosterUrl(proxyUrl, c11, c10);
           const tmpResult2 = AnnouncementMessageUtils;
         }
         cResult[21] = proxyUrl;
         cResult[22] = posterUrl;
-        let tmp18 = posterUrl;
+        let tmp17 = posterUrl;
       } else {
-        tmp18 = cResult[22];
+        tmp17 = cResult[22];
       }
-      if (tmp18 == null) {
-        tmp18 = proxyUrl;
+      if (tmp17 == null) {
+        tmp17 = proxyUrl;
       }
       const card = tmp4.card;
       if (cResult[23] === message.id) {
         if (cResult[24] === onPress) {
-          let tmp23 = cResult[25];
+          let tmp22 = cResult[25];
         }
         const title = message.title;
         if (cResult[26] === message.media) {
-          if (cResult[27] === tmp18) {
+          if (cResult[27] === tmp17) {
             if (cResult[28] === tmp4.mediaImage) {
               if (cResult[29] === tmp4.smallCardMedia) {
-                let tmp24 = cResult[30];
+                let tmp23 = cResult[30];
               }
-              const cardBody = tmp4.cardBody;
-              let tmp29 = null != message.title;
-              if (tmp29) {
+              let tmp28 = null != message.title;
+              if (tmp28) {
                 const obj12 = {
                   variant: "text-md/semibold",
                   color: "mobile-text-heading-primary",
                   lineClamp: 2,
-                  children: tmp15(message.title, true, obj11),
+                  children: tmp14(message.title, true, obj11),
                 };
-                tmp29 = options(Text_Text.Text, obj12);
+                tmp28 = onPress(Text_Text.Text, obj12);
               }
-              let tmp31 = message.body.length > 0;
-              if (tmp31) {
+              let tmp30 = message.body.length > 0;
+              if (tmp30) {
                 const obj13 = {
                   variant: "text-sm/medium",
                   color: "text-default",
                   lineClamp: 3,
-                  children: tmp15(message.body, true, obj11),
+                  children: tmp14(message.body, true, obj11),
                 };
-                tmp31 = options(Text_Text.Text, obj13);
+                tmp30 = onPress(Text_Text.Text, obj13);
               }
               cResult[0] = channelId;
               cResult[1] = guildId;
@@ -1279,61 +1225,67 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[8] = tmp4.cardBody;
               cResult[9] = tmp4.mediaImage;
               cResult[10] = tmp4.smallCardMedia;
-              cResult[11] = timestampProducer;
-              cResult[12] = React5;
-              cResult[13] = cardBody;
-              cResult[14] = tmp29;
-              cResult[15] = tmp31;
+              cResult[11] = hasOwnProperty;
+              cResult[12] = timestampProducer;
+              class I {
+                constructor() {
+                  return onPress(message.id);
+                }
+              }
+              cResult[14] = tmp28;
+              cResult[15] = tmp30;
               cResult[16] = card;
-              cResult[17] = tmp23;
+              cResult[17] = tmp22;
               cResult[18] = "button";
               cResult[19] = title;
-              cResult[20] = tmp24;
-              tmp9 = tmp31;
-              tmp13 = tmp24;
-              tmp12 = title;
+              cResult[20] = tmp23;
+              tmp8 = tmp30;
+              tmp12 = tmp23;
+              tmp11 = title;
               str = "button";
-              tmp11 = tmp23;
-              tmp10 = card;
-              tmp8 = tmp29;
-              tmp7 = cardBody;
-              tmp6 = React5;
-              tmp5 = timestampProducer;
+              tmp10 = tmp22;
+              tmp9 = card;
+              tmp7 = tmp28;
+              cardBody = tmp4.cardBody;
+              tmp6 = timestampProducer;
+              tmp5 = hasOwnProperty;
             }
           }
         }
-        let tmp25 = null != message.media && null != tmp18;
-        if (tmp25) {
+        let tmp24 = null != message.media && null != tmp17;
+        if (tmp24) {
           const obj14 = { style: tmp4.smallCardMedia, children: null };
           obj15 = {
-            uri: tmp18,
+            uri: tmp17,
             placeholder: message.media.placeholder,
             placeholderVersion: message.media.placeholderVersion,
             style: tmp4.mediaImage,
           };
-          obj14.children = options(ImageWithPlaceholder.ImageWithPlaceholder, obj15);
-          tmp25 = options(timestampProducer, obj14);
+          obj14.children = onPress(ImageWithPlaceholder.ImageWithPlaceholder, obj15);
+          tmp24 = onPress(hasOwnProperty, obj14);
         }
         cResult[26] = message.media;
-        cResult[27] = tmp18;
+        cResult[27] = tmp17;
         cResult[28] = tmp4.mediaImage;
         cResult[29] = tmp4.smallCardMedia;
-        cResult[30] = tmp25;
-        tmp24 = tmp25;
+        cResult[30] = tmp24;
+        tmp23 = tmp24;
       }
-      const fn = function f() {
-        return onPress(message.id);
-      };
+      class I {
+        constructor() {
+          return onPress(message.id);
+        }
+      }
       cResult[23] = message.id;
       cResult[24] = onPress;
-      cResult[25] = fn;
-      tmp23 = fn;
+      cResult[25] = I;
+      tmp22 = I;
     }
-  : (message) => {
+  : function MessageAnnouncementCard(message) {
       message = message.message;
       onPress = message.onPress;
       ({ guildId, channelId } = message);
-      const tmp = closure_16();
+      const tmp = closure_15();
       if (null == parser) {
         parser = CustomMarkupAll.getParser();
       }
@@ -1353,7 +1305,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let posterUrl = null;
       if (null != proxyUrl) {
-        posterUrl = AnnouncementMessageUtils.getPosterUrl(proxyUrl, c12, c11);
+        posterUrl = AnnouncementMessageUtils.getPosterUrl(proxyUrl, c11, c10);
       }
       if (posterUrl == null) {
         posterUrl = proxyUrl;
@@ -1379,8 +1331,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           placeholderVersion: message.media.placeholderVersion,
           style: tmp.mediaImage,
         };
-        obj5.children = options(ImageWithPlaceholder.ImageWithPlaceholder, obj6);
-        tmp14 = options(timestampProducer, obj5);
+        obj5.children = onPress(ImageWithPlaceholder.ImageWithPlaceholder, obj6);
+        tmp14 = onPress(hasOwnProperty, obj5);
       }
       const items = [tmp14];
       const obj7 = { style: tmp.cardBody, children: null };
@@ -1392,7 +1344,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           lineClamp: 2,
           children: tmp4(message.title, true, obj2),
         };
-        tmp20 = options(Text_Text.Text, obj8);
+        tmp20 = onPress(Text_Text.Text, obj8);
       }
       const items1 = [tmp20, ,];
       let tmp24 = message.body.length > 0;
@@ -1403,19 +1355,19 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           lineClamp: 3,
           children: tmp4(message.body, true, obj2),
         };
-        tmp24 = options(Text_Text.Text, obj9);
+        tmp24 = onPress(Text_Text.Text, obj9);
       }
       items1[1] = tmp24;
       const obj10 = { style: tmp.metadataRow, children: null };
       const obj11 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const obj12 = DateUtils;
       obj11.children = obj12.dateFormat(new Date(message.timestamp), "LL");
-      const items2 = [options(Text_Text.Text, obj11)];
+      const items2 = [onPress(Text_Text.Text, obj11)];
       let tmp12Result = message.reactionCount > 0;
       if (tmp12Result) {
         const obj13 = { style: tmp.reactionInfo, children: null };
         const obj14 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-        const items3 = [options(ReactionIcon.ReactionIcon, obj14)];
+        const items3 = [tmp28(ReactionIcon.ReactionIcon, obj14)];
         let tmp35 = null != obj15;
         if (tmp35) {
           tmp35 = obj15.locale === util.intl.currentLocale;
@@ -1429,25 +1381,25 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         const obj16 = { variant: "text-xs/medium", color: "text-muted", children: null };
         const format = obj15.format;
         obj16.children = format.format(message.reactionCount);
-        items3[1] = options(Text_Text.Text, obj16);
+        items3[1] = tmp28(Text_Text.Text, obj16);
         obj13.children = items3;
-        tmp12Result = v65535(timestampProducer, obj13);
+        tmp12Result = options(hasOwnProperty, obj13);
       }
       items2[1] = tmp12Result;
       obj10.children = items2;
-      items1[2] = v65535(timestampProducer, obj10);
+      items1[2] = options(hasOwnProperty, obj10);
       obj7.children = items1;
-      items[1] = v65535(timestampProducer, obj7);
+      items[1] = options(hasOwnProperty, obj7);
       obj4.children = items;
-      return v65535(React5, obj4);
+      return options(timestampProducer, obj4);
     };
 ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (message) => {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function PollAnnouncementCard(message) {
       const cResult = message(576).c(56);
       message = message.message;
       let str = message.onPress;
-      const tmp4 = closure_16();
+      const tmp4 = closure_15();
       importAll = tmp4;
       const poll = message.poll;
       if (null == poll) {
@@ -1477,7 +1429,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                                   }
                                   if (cResult[38] !== tmp44) {
                                     const obj2 = { variant: "text-xs/medium", color: "text-muted", children: tmp44 };
-                                    const tmp53 = closure_9(tmp(4892).Text, obj2);
+                                    const tmp53 = onPress(tmp(5086).Text, obj2);
                                     cResult[38] = tmp44;
                                     cResult[39] = tmp53;
                                     let tmp51 = tmp53;
@@ -1516,7 +1468,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                                               accessibilityLabel: tmp16,
                                               children: tmp58,
                                             };
-                                            const tmp63 = closure_9(tmp7, obj3);
+                                            const tmp63 = onPress(tmp7, obj3);
                                             cResult[49] = tmp7;
                                             cResult[50] = tmp58;
                                             cResult[51] = tmp13;
@@ -1532,7 +1484,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                                     const obj4 = { style: tmp11, children: null };
                                     const items = [tmp12, tmp40, tmp54];
                                     obj4.children = items;
-                                    const tmp60 = closure_10(tmp6, obj4);
+                                    const tmp60 = closure_9(tmp6, obj4);
                                     cResult[43] = tmp6;
                                     cResult[44] = tmp40;
                                     cResult[45] = tmp54;
@@ -1542,7 +1494,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                                     tmp58 = tmp60;
                                   }
                                   const obj5 = { style: tmp43, children: tmp51 };
-                                  const tmp57 = closure_9(closure_6, obj5);
+                                  const tmp57 = onPress(closure_5, obj5);
                                   cResult[40] = tmp4.metadataRow;
                                   cResult[41] = tmp51;
                                   cResult[42] = tmp57;
@@ -1553,20 +1505,20 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                                 const _Date = Date;
                                 const date = new Date(message.timestamp);
                                 obj6.createdAt = date;
-                                obj6.expiryLabel = tmp(8439).getPollExpiryLabel(poll);
+                                obj6.expiryLabel = tmp(8925).getPollExpiryLabel(poll);
                                 const formatResult = intl2.format(tmp(1126).t.t0FTsH, obj6);
                                 cResult[35] = message.timestamp;
                                 cResult[36] = poll;
                                 cResult[37] = formatResult;
                                 tmp44 = formatResult;
-                                const tmpResult = tmp(8439);
+                                const tmpResult = tmp(8925);
                               }
                             }
                           }
                           const obj7 = { style: tmp9, children: null };
                           const items1 = [tmp10, tmp37];
                           obj7.children = items1;
-                          const tmp42 = closure_10(tmp5, obj7);
+                          const tmp42 = closure_9(tmp5, obj7);
                           cResult[30] = tmp5;
                           cResult[31] = tmp9;
                           cResult[32] = tmp10;
@@ -1585,7 +1537,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                           const intl = tmp(1126).intl;
                           const obj9 = { count: tmp8 };
                           obj8.children = intl.format(tmp(1126).t["mv/nIa"], obj9);
-                          tmp38 = closure_9(tmp(4892).Text, obj8);
+                          tmp38 = onPress(tmp(5086).Text, obj8);
                         }
                         cResult[27] = cResult[11];
                         cResult[28] = tmp4.pollMoreOptions;
@@ -1617,7 +1569,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               color: "mobile-text-heading-primary",
               children: poll.question.text,
             };
-            const tmp23 = closure_9(tmp(4892).Text, obj10);
+            const tmp23 = onPress(tmp(5086).Text, obj10);
             cResult[23] = poll.question.text;
             cResult[24] = tmp23;
             let tmp21 = tmp23;
@@ -1676,9 +1628,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[5] = tmp4.cardBody;
           cResult[6] = tmp4.pollAnswerOption;
           cResult[7] = tmp4.pollAnswers;
-          cResult[8] = closure_6;
-          cResult[9] = closure_6;
-          cResult[10] = closure_7;
+          cResult[8] = closure_5;
+          cResult[9] = closure_5;
+          cResult[10] = closure_6;
           cResult[11] = diff;
           cResult[12] = pollAnswers;
           cResult[13] = mapped;
@@ -1701,10 +1653,10 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = message(576);
     }
-  : (message) => {
+  : function PollAnnouncementCard(message) {
       message = message.message;
       onPress = message.onPress;
-      const tmp = closure_16();
+      const tmp = closure_15();
       const pollAnswerOption = tmp;
       const poll = message.poll;
       if (null == poll) {
@@ -1728,7 +1680,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: poll.question.text,
         };
-        const items = [closure_9(message(4892).Text, obj4), ,];
+        const items = [onPress(message(5086).Text, obj4), ,];
         const obj5 = { style: tmp.pollAnswers, children: null };
         const items1 = [
           substr.map((poll_media) => {
@@ -1737,13 +1689,13 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             if (str == null) {
               str = "";
             }
-            obj.children = options(Text_Text.Text, {
+            obj.children = onPress(Text_Text.Text, {
               variant: "text-sm/medium",
               color: "text-default",
               lineClamp: 1,
               children: str,
             });
-            return options(timestampProducer, obj, poll_media.answer_id);
+            return onPress(hasOwnProperty, obj, poll_media.answer_id);
           }),
         ];
         let tmp9Result = diff > 0;
@@ -1752,11 +1704,11 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           const intl = tmp13(1126).intl;
           const obj6 = { count: diff };
           obj.children = intl.format(tmp13(1126).t["mv/nIa"], obj6);
-          tmp9Result = closure_9(tmp13(4892).Text, obj);
+          tmp9Result = tmp9(tmp13(5086).Text, obj);
         }
         items1[1] = tmp9Result;
         obj5.children = items1;
-        items[1] = closure_10(closure_6, obj5);
+        items[1] = closure_9(closure_5, obj5);
         const obj7 = { style: tmp.metadataRow, children: null };
         const obj8 = { variant: "text-xs/medium", color: "text-muted", children: null };
         const intl2 = tmp13(1126).intl;
@@ -1764,25 +1716,25 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         const _Date = Date;
         const date = new Date(message.timestamp);
         obj9.createdAt = date;
-        obj9.expiryLabel = message(8439).getPollExpiryLabel(poll);
+        obj9.expiryLabel = message(8925).getPollExpiryLabel(poll);
         obj8.children = intl2.format(message(1126).t.t0FTsH, obj9);
-        obj7.children = closure_9(message(4892).Text, obj8);
-        items[2] = closure_9(closure_6, obj7);
+        obj7.children = onPress(message(5086).Text, obj8);
+        items[2] = onPress(closure_5, obj7);
         obj3.children = items;
-        obj2.children = closure_10(closure_6, obj3);
-        return closure_9(closure_7, obj2);
+        obj2.children = closure_9(closure_5, obj3);
+        return onPress(closure_6, obj2);
       }
     };
 ReactCompilerGating = fn(558);
-let closure_22 = noop.memo(
+let closure_21 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (message) => {
+    ? function AnnouncementCard(message) {
         const cResult = c.c(6);
         if (null != message.message.poll) {
           if (cResult[0] !== message) {
             const obj2 = {};
             const merged = Object.assign(message);
-            const tmp23 = options(closure_21, obj2);
+            const tmp23 = onPress(closure_20, obj2);
             cResult[0] = message;
             cResult[1] = tmp23;
           }
@@ -1790,7 +1742,7 @@ let closure_22 = noop.memo(
           if (cResult[2] !== message) {
             const obj3 = {};
             const merged1 = Object.assign(message);
-            const tmp15 = options(closure_19, obj3);
+            const tmp15 = onPress(closure_18, obj3);
             cResult[2] = message;
             cResult[3] = tmp15;
           }
@@ -1798,7 +1750,7 @@ let closure_22 = noop.memo(
           if (cResult[4] !== message) {
             const obj4 = {};
             const merged2 = Object.assign(message);
-            const tmp8 = options(closure_20, obj4);
+            const tmp8 = onPress(closure_19, obj4);
             cResult[4] = message;
             cResult[5] = tmp8;
             let tmp2 = tmp8;
@@ -1808,19 +1760,19 @@ let closure_22 = noop.memo(
           return tmp2;
         }
       }
-    : (message) => {
+    : function AnnouncementCard(message) {
         if (null != message.message.poll) {
           const obj2 = {};
           const merged = Object.assign(message);
-          let tmp6 = options(closure_21, obj2);
+          let tmp6 = onPress(closure_20, obj2);
         } else if (null != message.message.embedSource) {
           const obj3 = {};
           const merged1 = Object.assign(message);
-          tmp6 = options(closure_19, obj3);
+          tmp6 = onPress(closure_18, obj3);
         } else {
           const obj = {};
           const merged2 = Object.assign(message);
-          tmp6 = options(closure_20, obj);
+          tmp6 = onPress(closure_19, obj);
         }
         return tmp6;
       },
@@ -1831,18 +1783,18 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileAnnouncements.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (gameId) => {
+  ? function GameProfileAnnouncements(gameId) {
       const cResult = gameId(trackAction[10]).c(36);
       gameId = gameId.gameId;
       const invite = gameId.invite;
       const closeModal = gameId.closeModal;
       trackAction = gameId.trackAction;
       const scrollY = gameId.scrollY;
-      const tmp4 = closure_16();
-      const analyticsLocations = invite(trackAction[20])().analyticsLocations;
-      const tmp5 = invite(trackAction[21])(gameId, onPress);
+      const tmp4 = closure_15();
+      const analyticsLocations = invite(trackAction[21])().analyticsLocations;
+      const tmp5 = invite(trackAction[22])(gameId, guildId);
       ({ messages, channelId } = tmp5);
-      const guildId = tmp5.guildId;
+      guildId = tmp5.guildId;
       if (cResult[0] === analyticsLocations) {
         if (cResult[1] === channelId) {
           if (cResult[2] === closeModal) {
@@ -1888,10 +1840,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         tmp7 = closure_0;
                                         tmp8 = closure_3;
                                         tmp9 = trackAction(
-                                          closure_0(closure_3[22]).GameProfileTrackActionActions.AnnouncementsItem,
+                                          closure_0(closure_3[23]).GameProfileTrackActionActions.AnnouncementsItem,
                                         );
                                         tmp10 = closure_1;
-                                        obj = closure_1(closure_3[23]);
+                                        obj = closure_1(closure_3[24]);
                                         obj1 = { gameId: null, channelId: null, initialScrollOffset: null };
                                         tmp11 = gameId;
                                         obj1.gameId = gameId;
@@ -1915,7 +1867,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         obj4.messageId = gameId;
                                         tmp17 = analyticsLocations;
                                         obj4.analyticsLocationStack = analyticsLocations;
-                                        tmp18 = closure_1(closure_3[24])(obj4);
+                                        tmp18 = closure_1(closure_3[25])(obj4);
                                       }
                                       return;
                                     }
@@ -1947,10 +1899,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             tmp7 = closure_0;
                                             tmp8 = closure_3;
                                             tmp9 = trackAction(
-                                              closure_0(closure_3[22]).GameProfileTrackActionActions.AnnouncementsItem,
+                                              closure_0(closure_3[23]).GameProfileTrackActionActions.AnnouncementsItem,
                                             );
                                             tmp10 = closure_1;
-                                            obj = closure_1(closure_3[23]);
+                                            obj = closure_1(closure_3[24]);
                                             obj1 = { gameId: null, channelId: null, initialScrollOffset: null };
                                             tmp11 = gameId;
                                             obj1.gameId = gameId;
@@ -1974,7 +1926,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             obj4.messageId = gameId;
                                             tmp17 = analyticsLocations;
                                             obj4.analyticsLocationStack = analyticsLocations;
-                                            tmp18 = closure_1(closure_3[24])(obj4);
+                                            tmp18 = closure_1(closure_3[25])(obj4);
                                           }
                                           return;
                                         }
@@ -2005,11 +1957,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                               tmp7 = closure_0;
                                               tmp8 = closure_3;
                                               tmp9 = trackAction(
-                                                closure_0(closure_3[22]).GameProfileTrackActionActions
+                                                closure_0(closure_3[23]).GameProfileTrackActionActions
                                                   .AnnouncementsItem,
                                               );
                                               tmp10 = closure_1;
-                                              obj = closure_1(closure_3[23]);
+                                              obj = closure_1(closure_3[24]);
                                               obj1 = { gameId: null, channelId: null, initialScrollOffset: null };
                                               tmp11 = gameId;
                                               obj1.gameId = gameId;
@@ -2033,7 +1985,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                               obj4.messageId = gameId;
                                               tmp17 = analyticsLocations;
                                               obj4.analyticsLocationStack = analyticsLocations;
-                                              tmp18 = closure_1(closure_3[24])(obj4);
+                                              tmp18 = closure_1(closure_3[25])(obj4);
                                             }
                                             return;
                                           }
@@ -2082,11 +2034,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                         tmp7 = closure_0;
                                                         tmp8 = closure_3;
                                                         tmp9 = trackAction(
-                                                          closure_0(closure_3[22]).GameProfileTrackActionActions
+                                                          closure_0(closure_3[23]).GameProfileTrackActionActions
                                                             .AnnouncementsItem,
                                                         );
                                                         tmp10 = closure_1;
-                                                        obj = closure_1(closure_3[23]);
+                                                        obj = closure_1(closure_3[24]);
                                                         obj1 = {
                                                           gameId: null,
                                                           channelId: null,
@@ -2114,7 +2066,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                         obj4.messageId = gameId;
                                                         tmp17 = analyticsLocations;
                                                         obj4.analyticsLocationStack = analyticsLocations;
-                                                        tmp18 = closure_1(closure_3[24])(obj4);
+                                                        tmp18 = closure_1(closure_3[25])(obj4);
                                                       }
                                                       return;
                                                     }
@@ -2123,7 +2075,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                   class D {
                                                     constructor(arg0) {
                                                       obj = { message: gameId, onPress: closure_8, guildId, channelId };
-                                                      return jsx(closure_22, obj, gameId.id);
+                                                      return jsx(closure_21, obj, gameId.id);
                                                     }
                                                   }
                                                   cResult[33] = tmp6;
@@ -2156,11 +2108,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                     tmp7 = closure_0;
                                                     tmp8 = closure_3;
                                                     tmp9 = trackAction(
-                                                      closure_0(closure_3[22]).GameProfileTrackActionActions
+                                                      closure_0(closure_3[23]).GameProfileTrackActionActions
                                                         .AnnouncementsItem,
                                                     );
                                                     tmp10 = closure_1;
-                                                    obj = closure_1(closure_3[23]);
+                                                    obj = closure_1(closure_3[24]);
                                                     obj1 = { gameId: null, channelId: null, initialScrollOffset: null };
                                                     tmp11 = gameId;
                                                     obj1.gameId = gameId;
@@ -2184,7 +2136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                     obj4.messageId = gameId;
                                                     tmp17 = analyticsLocations;
                                                     obj4.analyticsLocationStack = analyticsLocations;
-                                                    tmp18 = closure_1(closure_3[24])(obj4);
+                                                    tmp18 = closure_1(closure_3[25])(obj4);
                                                   }
                                                   return;
                                                 }
@@ -2202,7 +2154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                               class D {
                                                 constructor(arg0) {
                                                   obj = { message: gameId, onPress: closure_8, guildId, channelId };
-                                                  return jsx(closure_22, obj, gameId.id);
+                                                  return jsx(closure_21, obj, gameId.id);
                                                 }
                                               }
                                               cResult[29] = tmp4.smallCardsContainer;
@@ -2244,11 +2196,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                 tmp7 = closure_0;
                                                 tmp8 = closure_3;
                                                 tmp9 = trackAction(
-                                                  closure_0(closure_3[22]).GameProfileTrackActionActions
+                                                  closure_0(closure_3[23]).GameProfileTrackActionActions
                                                     .AnnouncementsItem,
                                                 );
                                                 tmp10 = closure_1;
-                                                obj = closure_1(closure_3[23]);
+                                                obj = closure_1(closure_3[24]);
                                                 obj1 = { gameId: null, channelId: null, initialScrollOffset: null };
                                                 tmp11 = gameId;
                                                 obj1.gameId = gameId;
@@ -2272,7 +2224,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                 obj4.messageId = gameId;
                                                 tmp17 = analyticsLocations;
                                                 obj4.analyticsLocationStack = analyticsLocations;
-                                                tmp18 = closure_1(closure_3[24])(obj4);
+                                                tmp18 = closure_1(closure_3[25])(obj4);
                                               }
                                               return;
                                             }
@@ -2282,7 +2234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                           class D {
                                             constructor(arg0) {
                                               obj = { message: gameId, onPress: closure_8, guildId, channelId };
-                                              return jsx(closure_22, obj, gameId.id);
+                                              return jsx(closure_21, obj, gameId.id);
                                             }
                                           }
                                           cResult[23] = messages;
@@ -2292,7 +2244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       class D {
                                         constructor(arg0) {
                                           obj = { message: gameId, onPress: closure_8, guildId, channelId };
-                                          return jsx(closure_22, obj, gameId.id);
+                                          return jsx(closure_21, obj, gameId.id);
                                         }
                                       }
                                       cResult[25] = channelId;
@@ -2333,9 +2285,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           tmp6 = trackAction;
                           tmp7 = closure_0;
                           tmp8 = closure_3;
-                          tmp9 = trackAction(closure_0(closure_3[22]).GameProfileTrackActionActions.AnnouncementsItem);
+                          tmp9 = trackAction(closure_0(closure_3[23]).GameProfileTrackActionActions.AnnouncementsItem);
                           tmp10 = closure_1;
-                          obj = closure_1(closure_3[23]);
+                          obj = closure_1(closure_3[24]);
                           obj1 = { gameId: null, channelId: null, initialScrollOffset: null };
                           tmp11 = gameId;
                           obj1.gameId = gameId;
@@ -2359,7 +2311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           obj4.messageId = gameId;
                           tmp17 = analyticsLocations;
                           obj4.analyticsLocationStack = analyticsLocations;
-                          tmp18 = closure_1(closure_3[24])(obj4);
+                          tmp18 = closure_1(closure_3[25])(obj4);
                         }
                         return;
                       }
@@ -2416,18 +2368,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = fn;
       tmp6 = fn;
     }
-  : (gameId) => {
+  : function GameProfileAnnouncements(gameId) {
       gameId = gameId.gameId;
       const invite = gameId.invite;
       const closeModal = gameId.closeModal;
       const trackAction = gameId.trackAction;
       const scrollY = gameId.scrollY;
       channelId = undefined;
-      onPress = undefined;
-      const analyticsLocations = invite(trackAction[20])().analyticsLocations;
-      const tmp4 = invite(trackAction[21])(gameId, onPress);
+      let guildId;
+      const analyticsLocations = invite(trackAction[21])().analyticsLocations;
+      const tmp4 = invite(trackAction[22])(gameId, guildId);
       ({ messages, channelId } = tmp4);
-      const guildId = tmp4.guildId;
+      guildId = tmp4.guildId;
       const items = [trackAction, scrollY, closeModal, invite, guildId, channelId, analyticsLocations, gameId];
       ({ loading, hasFetched } = tmp4);
       const items1 = [trackAction, scrollY, closeModal, invite, guildId, channelId, analyticsLocations, gameId];
@@ -2481,7 +2433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       if (!hasFetched) {
         if (gameId.hasDiscordWebsite) {
-          let tmp6 = closure_9(closure_18, {});
+          let tmp6 = onPress(closure_17, {});
         }
         return tmp6;
       }
@@ -2506,12 +2458,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ({ smallCardsScroller: obj2.style, smallCardsContainer: obj2.contentContainerStyle } = tmp);
           const tmp2Result = tmp2(tmp3[13]);
           obj3.children = messages.map((message) =>
-            options(closure_22, { message, onPress, guildId, channelId }, message.id),
+            onPress(closure_21, { message, onPress, guildId, channelId }, message.id),
           );
-          obj.children = closure_9(tmp2(tmp3[25]), obj3);
-          tmp6 = closure_9(tmp2Result, obj);
-          const tmp2Result2 = tmp2(tmp3[25]);
+          obj.children = onPress(tmp2(tmp3[26]), obj3);
+          tmp6 = onPress(tmp2Result, obj);
+          const tmp2Result2 = tmp2(tmp3[26]);
         }
       }
-      tmp = closure_16();
+      tmp = closure_15();
     };

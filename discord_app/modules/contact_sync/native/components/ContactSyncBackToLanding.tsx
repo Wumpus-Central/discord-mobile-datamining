@@ -8,7 +8,7 @@ const require = globalThis.__r;
 let result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncBackToLanding.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ContactSyncBackToLanding(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       const obj = require("c");
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp6;
       tmp5 = tmp6;
     }
-  : (arg0) => {
+  : function ContactSyncBackToLanding(arg0) {
       _require = arg0;
       dependencyMap = require("useNavigation").useNavigation();
       const obj = require("useNavigation");

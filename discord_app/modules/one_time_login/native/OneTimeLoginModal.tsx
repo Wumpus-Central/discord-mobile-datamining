@@ -20,10 +20,10 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, Image: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ Routes: c10, AnalyticEvents: closure_11 } = Constants);
-let closure_12 = fn(1240).BACKGROUND_GRADIENT_PRESETS_MOBILE;
+let closure_12 = fn(1252).BACKGROUND_GRADIENT_PRESETS_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     padding: 24,
@@ -85,7 +85,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/one_time_login/native/OneTimeLoginModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (token) => {
+  ? function OneTimeLoginModal(token) {
       const cResult = require("c").c(46);
       token = token.token;
       _require = token;
@@ -443,7 +443,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return value;
         });
-        const fn = function () {
+        function t9() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -452,11 +452,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[14] = P;
         cResult[15] = S;
         cResult[16] = token;
-        cResult[17] = fn;
+        cResult[17] = t9;
       }
       let obj = require("c");
       if (tmpResult.isAndroid()) {
@@ -504,7 +504,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = str;
       tmpResult = require("utils/PlatformUtils");
     }
-  : (token) => {
+  : function OneTimeLoginModal(token) {
       token = token.token;
       onPress = undefined;
       const tmp = closure_15();
@@ -667,18 +667,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         angleOverride: 0,
         mixAmount: null,
       };
-      let obj3 = { dark: token(4702).OverlayOpacity.LEVEL_1 };
+      let obj3 = { dark: token(4896).OverlayOpacity.LEVEL_1 };
       obj2.mixAmount = obj3;
       const items6 = [closure_13(ThemedGradientDefault, obj2)];
       let obj4 = { style: tmp.container, children: null };
       let obj5 = { style: tmp.centerContent, children: null };
-      const items7 = [closure_13(callback3, { source: token(13691), style: tmp.logo })];
+      const items7 = [closure_13(callback3, { source: token(13913), style: tmp.logo })];
       const obj7 = { style: tmp.loadingContainer, children: null };
       const items8 = [closure_13(callback2, {})];
       const obj8 = { variant: "text-lg/semibold", children: null };
       let intl = token(1126).intl;
       obj8.children = intl.string(token(1126).t.W9uNdG);
-      items8[1] = closure_13(token(4892).Text, obj8);
+      items8[1] = closure_13(token(5086).Text, obj8);
       obj7.children = items8;
       items7[1] = closure_14(callback1, obj7);
       obj5.children = items7;
@@ -687,7 +687,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj10 = { variant: "text-sm/normal", children: null };
       let intl2 = token(1126).intl;
       obj10.children = intl2.string(token(1126).t["ZXe5/Y"]);
-      const items10 = [closure_13(token(4892).Text, obj10)];
+      const items10 = [closure_13(token(5086).Text, obj10)];
       const obj11 = {
         textColor: "text-default",
         text: null,
@@ -699,7 +699,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj11.text = intl3.string(token(1126).t.FIEwfG);
       obj11.onPress = onPress;
       obj11.textStyle = tmp.link;
-      items10[1] = closure_13(token(6436).LinkButton, obj11);
+      items10[1] = closure_13(token(6614).LinkButton, obj11);
       obj9.children = items10;
       items9[1] = closure_14(callback1, obj9);
       obj4.children = items9;

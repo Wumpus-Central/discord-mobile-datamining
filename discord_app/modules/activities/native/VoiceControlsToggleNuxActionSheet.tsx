@@ -8,14 +8,14 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const src = {
   videoURI: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.mp4",
 };
 let c11 = "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.png";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   videoContainer: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" },
   bottomSheetWrapper: { paddingHorizontal: 24 },
@@ -31,7 +31,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/native/VoiceControlsToggleNuxActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (markAsDismissed) => {
+  ? function VoiceControlsToggleActionSheet(markAsDismissed) {
       const cResult = markAsDismissed(isScreenLandscape[9]).c(37);
       markAsDismissed = markAsDismissed.markAsDismissed;
       const tmp4 = closure_12();
@@ -60,20 +60,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         num2 = c13;
       }
       if (cResult[2] !== isScreenLandscape) {
-        const fn = function w(arg0) {
+        function setWidth(arg0) {
           let result = arg0;
           if (isScreenLandscape) {
             result = arg0 / 2;
           }
           importDefault(result);
-        };
+        }
         cResult[2] = isScreenLandscape;
         class S {
           constructor() {
             return closure_1_6.useReducedMotion;
           }
         }
-        let tmp12 = fn;
+        let tmp12 = setWidth;
       } else {
         tmp12 = cResult[3];
       }
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = closure_8(require("common/Video"), size);
       const tmp16 = closure_8(require("common/Video"), size);
     }
-  : (markAsDismissed) => {
+  : function VoiceControlsToggleActionSheet(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
       importDefault = undefined;
       let isScreenLandscape;

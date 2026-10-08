@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 400;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   screen: { flex: 1, position: "relative" },
   container: {
@@ -117,7 +117,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingCompleted.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildOnboardingCompleted(guildId) {
       const cResult = guildId(onClose[11]).c(126);
       guildId = guildId.guildId;
       ({ prompts, completeOnboarding } = guildId);
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[15] = found;
       const tmpResult8 = guildId(onClose[13]);
     }
-  : (guildId) => {
+  : function GuildOnboardingCompleted(guildId) {
       guildId = guildId.guildId;
       ({ prompts, completeOnboarding } = guildId);
       const onClose = guildId.onClose;
@@ -545,13 +545,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             substr.map((role) => {
               const obj = {
                 style: role.role,
-                children: v65535(UserProfileRolesCard.RoleItem, {
+                children: collapsed(UserProfileRolesCard.RoleItem, {
                   role,
                   guildId: stateFromStores1.id,
                   disableInteraction: true,
                 }),
               };
-              return v65535(React4, obj, role.id);
+              return collapsed(React4, obj, role.id);
             }),
           ];
           let tmp21Result3 = null;

@@ -550,7 +550,7 @@ const dependencyMap = {};
 let closure_11 = {};
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useMaybeFetchChannelAffinitiesAndSummaries(arg0) {
       const cResult = stateFromStores(576).c(10);
       if (cResult[0] !== arg0) {
         let items = arg0;
@@ -644,7 +644,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn2;
       const tmpResult = stateFromStores(573);
     }
-  : () => {
+  : function useMaybeFetchChannelAffinitiesAndSummaries() {
       let items = arg0;
       if (arg0 === undefined) {
         items = [];

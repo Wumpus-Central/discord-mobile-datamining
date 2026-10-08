@@ -17,13 +17,13 @@ const MediaKeyboardItemDefault = MediaKeyboardItem;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-let closure_6 = fn(1614).InAppCameraUsedCameraPreviewTypes;
-let closure_7 = fn(6653).ACTION_SHEET_START_HEIGHT_RATIO;
-const NativePermissionStatus = fn(5105).NativePermissionStatus;
+let closure_6 = fn(1626).InAppCameraUsedCameraPreviewTypes;
+let closure_7 = fn(6830).ACTION_SHEET_START_HEIGHT_RATIO;
+const NativePermissionStatus = fn(7477).NativePermissionStatus;
 const jsx = fn(21).jsx;
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.PhotoLibraryHelper);
 const photoLibraryChanged = "photoLibraryChanged";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   listContainer: {
     backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -46,7 +46,7 @@ const __initData4 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (animatedIndex) => {
+  ? function useHasMediaKeyboardBottomSheetExpanded(animatedIndex) {
       _require = animatedIndex;
       let tmp = _slicedToArray(noop.useState(false), 2);
       closure_1 = tmp2;
@@ -75,7 +75,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const animatedReaction = obj2.useAnimatedReaction(fn, fn2);
       return tmp[0];
     }
-  : (animatedIndex) => {
+  : function useHasMediaKeyboardBottomSheetExpanded(animatedIndex) {
       _require = animatedIndex;
       let tmp = _slicedToArray(noop.useState(false), 2);
       closure_1 = tmp2;
@@ -123,7 +123,7 @@ let result = size.fileFinishedImporting("modules/media_keyboard/native/component
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function MediaKeyboardList(channel) {
         const cResult = channel(onPressCamera[12]).c(74);
         channel = channel.channel;
         const draftType = channel.draftType;
@@ -199,45 +199,34 @@ export default noop.memo(
             }
           }
         }
-        class J {
-          constructor() {
-            if (closure_14 !== includedUploadIds.AUTHORIZED) {
-              if (tmp !== includedUploadIds.LIMITED) {
-                return;
+        const fn2 = function z() {
+          draftType(onPressCamera[13]).refreshAssets({ batchSize: itemsPageSizeRef.current, extensions });
+          let addListenerResult;
+          if (uploadLimit != null) {
+            addListenerResult = uploadLimit.addListener(disableWhenReachedLimit, () => {
+              if (ref.current) {
+                const obj2 = { batchSize: ref2.current, extensions };
+                draftType(onPressCamera[13]).refreshAssets(obj2);
+                const obj = draftType(onPressCamera[13]);
               }
-            }
-            obj = draftType(onPressCamera[13]);
-            obj1 = { batchSize: itemsPageSizeRef.current, extensions };
-            refreshAssetsResult = obj.refreshAssets(obj1);
-            obj3 = uploadLimit;
-            addListenerResult = undefined;
-            if (uploadLimit != null) {
-              tmp4 = disableWhenReachedLimit;
-              addListenerResult = obj3.addListener(disableWhenReachedLimit, () => {
-                if (ref.current) {
-                  const obj2 = { batchSize: ref2.current, extensions };
-                  draftType(onPressCamera[13]).refreshAssets(obj2);
-                  const obj = draftType(onPressCamera[13]);
-                }
-              });
-            }
-            closure_0 = addListenerResult;
-            return () => {
-              if (addListenerResult != null) {
-                addListenerResult.remove();
-              }
-            };
+            });
           }
-        }
+          channel = addListenerResult;
+          return () => {
+            if (addListenerResult != null) {
+              addListenerResult.remove();
+            }
+          };
+        };
         const items1 = [first1, itemsPageSizeRef, extensions];
         cResult[3] = extensions;
         cResult[4] = itemsPageSizeRef;
         cResult[5] = first1;
-        cResult[6] = J;
+        cResult[6] = fn2;
         cResult[7] = items1;
         const tmpResult = tmp(onPressCamera[14]);
       }
-    : (channel) => {
+    : function MediaKeyboardList(channel) {
         channel = channel.channel;
         const draftType = channel.draftType;
         const onPressCamera = channel.onPressCamera;

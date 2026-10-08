@@ -115,7 +115,7 @@ const Constants = fn(1085);
 ({ Endpoints: closure_11, PriceSetAssignmentPurchaseTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 },
   inputRow: null,
@@ -129,7 +129,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/devtools/SlayerStorefrontDevTools.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function SlayerStorefrontDevTools() {
       const cResult = require("c").c(74);
       const tmp4 = closure_15();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -517,7 +517,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             let combined = "Fetch failed: " + tmp19;
           }
-          const sum = tmp6(587).space.PX_16 + arr2(6478)(first).insets.bottom;
+          const sum = tmp6(587).space.PX_16 + arr2(6656)(first).insets.bottom;
           if (cResult[32] !== sum) {
             class K {
               constructor() {
@@ -575,7 +575,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return closure_1_8.getCurrentUser();
               }
             }
-            const tmp49 = closure_13(tmp(6105).TextInput, obj4);
+            const tmp49 = closure_13(tmp(6283).TextInput, obj4);
             cResult[34] = str2;
             cResult[35] = tmp49;
           } else {
@@ -626,7 +626,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return closure_1_8.getCurrentUser();
                 }
               }
-              const tmp55 = closure_13(tmp(6105).TextInput, obj5);
+              const tmp55 = closure_13(tmp(6283).TextInput, obj5);
               cResult[39] = str;
               cResult[40] = tmp55;
             } else {
@@ -672,7 +672,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp61[1] = combined;
               const items5 = [tmp50, tmp56];
               tmp61[3] = items5;
-              const tmp62 = closure_14(tmp(6081).TableRowGroup, tmp61);
+              const tmp62 = closure_14(tmp(6267).TableRowGroup, tmp61);
               cResult[44] = combined;
               cResult[45] = tmp50;
               cResult[46] = tmp56;
@@ -699,8 +699,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         function se() {
           tmp34((skuId) => {
             const obj2 = { skuId, recipient: stateFromStores1 };
-            const result = closure_0(10544).openSocialLayerStorefrontProductGiftPurchaseSuccessModal(obj2);
-            const obj = closure_0(10544);
+            const result = closure_0(10141).openSocialLayerStorefrontProductGiftPurchaseSuccessModal(obj2);
+            const obj = closure_0(10141);
           });
         }
         cResult[23] = stateFromStores1;
@@ -741,8 +741,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp2(null);
                   tmp3(true);
                   const obj5 = { withGoogleSkuIds: null };
-                  const obj4 = length(10545);
-                  obj5.withGoogleSkuIds = length(1369).isAndroid();
+                  const obj4 = length(10142);
+                  obj5.withGoogleSkuIds = length(1381).isAndroid();
                   c4 = 1;
                   c5 = 1;
                   const obj7 = {
@@ -789,7 +789,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       });
-      const fn = function () {
+      function t12() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -798,13 +798,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      };
+      }
       cResult[16] = arr2;
       cResult[17] = arr;
-      cResult[18] = fn;
+      cResult[18] = t12;
       const tmpResult6 = require("initialize");
     }
-  : () => {
+  : function SlayerStorefrontDevTools() {
       const tmp = closure_15();
       [str, tmp6] = first(first1.useState(""), 2);
       const tmp4 = first;

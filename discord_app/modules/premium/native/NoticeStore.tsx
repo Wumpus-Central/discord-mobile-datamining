@@ -2,7 +2,7 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import Storage4 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import _modDef4467 from "../../../../_runtime/metro/04467__.js";
+import _modDef4659 from "../../../../_runtime/metro/04659__.js";
 import UserOfferStore from "../../../stores/billing/UserOfferStore.tsx";
 
 require = fn;
@@ -19,10 +19,10 @@ function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
       value = Storage.get(`${tmp10[PREMIUM_TIER_0_TRIAL_ENDING]}-untilAtLeast`);
       let tmp4 = null;
       if (null != value) {
-        tmp4 = _modDef4467(value);
+        tmp4 = _modDef4659(value);
       }
       if (null != tmp4) {
-        return tmp4.isAfter(_modDef4467());
+        return tmp4.isAfter(_modDef4659());
       }
     }
     let tmp6 = null != tmp11;
@@ -69,7 +69,7 @@ function updateNotice() {
     continue;
   }
 }
-const PremiumSubscriptionSKUs = fn(1379).PremiumSubscriptionSKUs;
+const PremiumSubscriptionSKUs = fn(1391).PremiumSubscriptionSKUs;
 const NoticeTypes = fn(1085).NoticeTypes;
 let c6 = null;
 let items = [,];

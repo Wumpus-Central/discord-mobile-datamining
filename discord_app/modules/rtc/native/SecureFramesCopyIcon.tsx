@@ -12,7 +12,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/native/SecureFramesCopyIcon.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (chunks) => {
+  ? function SecureFramesCopyIcon(chunks) {
       const cResult = require("c").c(8);
       chunks = chunks.chunks;
       if (cResult[0] !== chunks) {
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp9 = jsx(tmp(4849).CopyIcon, { size: "sm" });
+        const tmp9 = jsx(tmp(5043).CopyIcon, { size: "sm" });
         cResult[4] = tmp9;
         let tmp7 = tmp9;
       } else {
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== tmp6) {
         const obj2 = { icon: tmp7, variant: "secondary", onPress: tmp6, accessibilityLabel: tmp10, size: "sm" };
-        const tmp14 = jsx(tmp(7586).IconButton, {
+        const tmp14 = jsx(tmp(8106).IconButton, {
           icon: tmp7,
           variant: "secondary",
           onPress: tmp6,
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp12;
     }
-  : (chunks) => {
+  : function SecureFramesCopyIcon(chunks) {
       chunks = chunks.chunks;
       const items = [chunks];
       const memo = noop.useMemo(() => chunks.join(" "), items);

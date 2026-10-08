@@ -5,13 +5,13 @@ import WishlistUtils from "../WishlistUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const PremiumSubscriptionSKUs = fn(1379).PremiumSubscriptionSKUs;
+const PremiumSubscriptionSKUs = fn(1391).PremiumSubscriptionSKUs;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");
 
 export const useAddToWishlistGridItems = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAddToWishlistGridItems(arg0) {
       const cResult = c.c(17);
       ({ userId, wishlist, numWishlistItemsToRecommend, maxWishlistItemsToShow, source } = arg0);
       if (undefined === maxWishlistItemsToShow) {
@@ -37,7 +37,7 @@ export const useAddToWishlistGridItems = ReactCompilerGating.isReactCompilerEnab
             if (mapped == null) {
               mapped = [];
             }
-            set = new Set(mapped);
+            const set = new Set(mapped);
             let items2;
             if (wishlist != null) {
               items2 = wishlist.items;
@@ -73,41 +73,36 @@ export const useAddToWishlistGridItems = ReactCompilerGating.isReactCompilerEnab
             }
           }
           if (cResult[11] !== obj4) {
-            class R {
-              constructor(arg0) {
-                return !closure_0.has(arg0.id);
-              }
-            }
+            const fn = function w(id) {
+              return !obj4.has(id.id);
+            };
             cResult[11] = obj4;
-            cResult[12] = R;
+            cResult[12] = fn;
+            let tmp18 = fn;
           } else {
-            class R {
-              constructor(arg0) {
-                return !closure_0.has(arg0.id);
-              }
-            }
+            tmp18 = cResult[12];
           }
           const _Symbol = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-            class W {
+            class R {
               constructor(arg0) {
                 obj = { sku: arg0, itemSource: "recommendation" };
                 return obj;
               }
             }
-            cResult[13] = W;
+            cResult[13] = R;
           } else {
-            class W {
+            class R {
               constructor(arg0) {
                 obj = { sku: arg0, itemSource: "recommendation" };
                 return obj;
               }
             }
           }
-          const found = recommendations.filter(R);
-          const mapped1 = found.map(W);
+          const found = recommendations.filter(tmp18);
+          const mapped1 = found.map(R);
           if (tmp15) {
-            class W {
+            class R {
               constructor(arg0) {
                 obj = { sku: arg0, itemSource: "recommendation" };
                 return obj;
@@ -134,7 +129,7 @@ export const useAddToWishlistGridItems = ReactCompilerGating.isReactCompilerEnab
       cResult[3] = obj3;
       tmp4 = obj3;
     }
-  : (userId) => {
+  : function useAddToWishlistGridItems(userId) {
       const wishlist = userId.wishlist;
       ({ numWishlistItemsToRecommend, maxWishlistItemsToShow } = userId);
       if (maxWishlistItemsToShow === undefined) {

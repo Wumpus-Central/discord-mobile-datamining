@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelChatButton.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import ChatIcon from "../../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import NativeViewDefault from "../../../../core/native/NativeView.tsx";
+import ChatIcon from "../../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import trackVoicePanelTabOpened from "../trackVoicePanelTabOpened.tsx";
 import CircleWithCutoutDefault from "../../shared/CircleWithCutout.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -9,7 +9,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   iconContainer: {
     position: "absolute",
@@ -39,15 +39,15 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelChatButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (wrapperSpecs) => {
+  ? function ChatButton(wrapperSpecs) {
       const cResult = openTab(576).c(25);
       ({ props, openTab } = wrapperSpecs);
-      const context = noop.useContext(connected(11915));
+      const context = noop.useContext(connected(11988));
       connected = context.connected;
       const tmp6 = closure_7();
       let obj = openTab(576);
-      const voicePanelButtonStyles = openTab(17355).useVoicePanelButtonStyles(wrapperSpecs.wrapperSpecs);
-      const tmp8 = connected(17298)(context.channelId);
+      const voicePanelButtonStyles = openTab(17636).useVoicePanelButtonStyles(wrapperSpecs.wrapperSpecs);
+      const tmp8 = connected(17579)(context.channelId);
       const backgroundColor = voicePanelButtonStyles.iconBg.backgroundColor;
       if (cResult[0] === connected) {
         if (cResult[1] === openTab) {
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[8] !== voicePanelButtonStyles.iconFill.color) {
               const obj3 = { color: voicePanelButtonStyles.iconFill.color };
-              const tmp21 = closure_4(openTab(5862).ChatIcon, obj3);
+              const tmp21 = closure_4(openTab(8174).ChatIcon, obj3);
               cResult[8] = voicePanelButtonStyles.iconFill.color;
               cResult[9] = tmp21;
               let tmp19 = tmp21;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                       const element = { onPress: tmp9, props, accessibilityLabel: tmp11, children: tmp28 };
-                      const tmp34 = closure_4(tmp4(17356), element);
+                      const tmp34 = closure_4(tmp4(17637), element);
                       cResult[21] = tmp9;
                       cResult[22] = props;
                       cResult[23] = tmp28;
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items1 = [,];
                 ({ badge: arr[0], notificationBadge: arr[1] } = tmp6);
                 obj5.style = items1;
-                tmp26 = closure_4(tmp4(5983), obj5);
+                tmp26 = closure_4(tmp4(6166), obj5);
               }
               cResult[13] = tmp8;
               cResult[14] = tmp6.badge;
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp25 = tmp26;
             }
             const obj6 = { style: tmp6.iconContainer, children: tmp19 };
-            const tmp24 = closure_4(tmp4(5983), obj6);
+            const tmp24 = closure_4(tmp4(6166), obj6);
             cResult[10] = tmp6.iconContainer;
             cResult[11] = tmp19;
             cResult[12] = tmp24;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           badgeRadius: 5,
           scaleToPixelDensity: true,
         };
-        const tmp18 = closure_4(tmp4(17364), obj7);
+        const tmp18 = closure_4(tmp4(17645), obj7);
         cResult[4] = backgroundColor;
         cResult[5] = result;
         cResult[6] = null != tmp8;
@@ -174,9 +174,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = openTab;
       cResult[2] = fn;
       tmp9 = fn;
-      const obj2 = openTab(17355);
+      const obj2 = openTab(17636);
     }
-  : (props) => {
+  : function ChatButton(props) {
       props = props.props;
       const openTab = props.openTab;
       let connected;

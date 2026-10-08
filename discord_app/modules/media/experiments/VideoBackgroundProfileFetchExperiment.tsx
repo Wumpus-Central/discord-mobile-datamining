@@ -13,7 +13,7 @@ let closure_2 = ApexExperiment.createApexExperiment({
 const result = size.fileFinishedImporting("modules/media/experiments/VideoBackgroundProfileFetchExperiment.tsx");
 
 export const useIsVideoBackgroundProfileFetchEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsVideoBackgroundProfileFetchEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -25,4 +25,6 @@ export const useIsVideoBackgroundProfileFetchEnabled = ReactCompilerGating.isRea
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useIsVideoBackgroundProfileFetchEnabled(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };

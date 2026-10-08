@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildHideAction.tsx
 import router_utils from "../../routing/router_utils.tsx";
 import FavoritesUtils from "../FavoritesUtils.tsx";
-import _modDef3395 from "../intl/FavoritesGuild.messages.js";
+import _modDef3439 from "../intl/FavoritesGuild.messages.js";
 import FavoritesActionCreators from "../FavoritesActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
@@ -13,10 +13,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useFavoritesGuildHideAction() {
       const cResult = hasAccess(576).c(11);
       let obj = hasAccess(576);
-      hasAccess = hasAccess(10049).useFavoritesAccess().hasAccess;
+      hasAccess = hasAccess(10294).useFavoritesAccess().hasAccess;
       if (cResult[0] !== hasAccess) {
         const fn = function s() {
           if (hasAccess) {
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== hasAccess) {
         const intl = tmp(1126).intl;
         if (hasAccess) {
-          let ojM1xJ = _modDef3395["8FO0y9"];
+          let ojM1xJ = _modDef3439["8FO0y9"];
         } else {
           ojM1xJ = tmp(1126).t.ojM1xJ;
         }
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let stringResult1;
           if (hasAccess) {
             const intl2 = tmp(1126).intl;
-            stringResult1 = intl2.string(_modDef3395.FaHxWl);
+            stringResult1 = intl2.string(_modDef3439.FaHxWl);
           }
           cResult[4] = hasAccess;
           cResult[5] = stringResult1;
@@ -74,10 +74,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = obj3;
         tmp13 = obj3;
       }
-      let obj2 = hasAccess(10049);
+      let obj2 = hasAccess(10294);
     }
-  : () => {
-      hasAccess = hasAccess(10049).useFavoritesAccess().hasAccess;
+  : function useFavoritesGuildHideAction() {
+      hasAccess = hasAccess(10294).useFavoritesAccess().hasAccess;
       const items = [hasAccess];
       let obj2 = { isPreview: !hasAccess, label: null, subLabel: null, perform: null };
       const callback = noop.useCallback(() => {
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const intl = hasAccess(1126).intl;
       if (hasAccess) {
-        let ojM1xJ = _modDef3395["8FO0y9"];
+        let ojM1xJ = _modDef3439["8FO0y9"];
       } else {
         ojM1xJ = tmp(1126).t.ojM1xJ;
       }
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let stringResult;
       if (hasAccess) {
         const intl2 = tmp(1126).intl;
-        stringResult = intl2.string(_modDef3395.FaHxWl);
+        stringResult = intl2.string(_modDef3439.FaHxWl);
       }
       obj2.subLabel = stringResult;
       obj2.perform = callback;

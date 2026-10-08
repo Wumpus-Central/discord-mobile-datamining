@@ -16,7 +16,7 @@ let obj2 = {};
 const merged = Object.assign(CONJURE_MARKUP_OPTIONS);
 obj2.allowList = false;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj4 = { blocks: { gap: nativeDefault.space.PX_8 }, list: null, item: null, marker: null, itemText: null };
 let obj5 = { gap: nativeDefault.space.PX_8 };
 obj4.list = { gap: nativeDefault.space.PX_4 };
@@ -26,17 +26,17 @@ obj4.marker = { minWidth: nativeDefault.space.PX_20, marginRight: nativeDefault.
 obj4.itemText = { flex: 1 };
 let closure_10 = createStyles.createStyles(obj4);
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((source) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativeMarkdown(source) {
   const cResult = require("c").c(16);
   source = source.source;
   let tmp4 = closure_10();
   _require = tmp4;
   if (cResult[0] !== source) {
-    const splitMarkdownBlocksResult = tmp(16687).splitMarkdownBlocks(source);
+    const splitMarkdownBlocksResult = tmp(16956).splitMarkdownBlocks(source);
     cResult[0] = source;
     cResult[1] = splitMarkdownBlocksResult;
     marker = splitMarkdownBlocksResult;
-    const tmpResult = tmp(16687);
+    const tmpResult = tmp(16956);
   } else {
     marker = cResult[1];
   }
@@ -162,7 +162,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((source) => {
   tmp8 = T;
   let obj = require("c");
   tmp = _require;
-}) : ((source) => {
+}) : (function ConjureNativeMarkdown(source) {
   source = source.source;
   const tmp = closure_10();
   const list = tmp;
@@ -181,11 +181,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((source) => {
           const obj = { style: null, children: null };
           const items = [list.item, { paddingLeft: children.depth * PX_16 }];
           obj.style = items;
-          const obj3 = { style: list.marker, children: closure_2_5(source(4892).Text, { variant: "text-md/normal", color: "text-default", children: children.marker }) };
+          const obj3 = { style: list.marker, children: closure_2_5(source(5086).Text, { variant: "text-md/normal", color: "text-default", children: children.marker }) };
           const items1 = [closure_2_5(View, obj3), ];
           const obj5 = { style: list.itemText, children: null };
-          const obj6 = { variant: "text-md/normal", color: "text-default", children: closure_1(4883).parse(children.text, true, obj2) };
-          obj5.children = closure_2_5(source(4892).Text, obj6);
+          const obj6 = { variant: "text-md/normal", color: "text-default", children: closure_1(5077).parse(children.text, true, obj2) };
+          obj5.children = closure_2_5(source(5086).Text, obj6);
           items1[1] = closure_2_5(View, obj5);
           obj.children = items1;
           return closure_2_6(View, obj, index);
@@ -204,7 +204,7 @@ const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureNa
 
 export default tmp4;
 export { CONJURE_MARKUP_OPTIONS };
-export const ConjureRevealedMarkdown = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ConjureRevealedMarkdown = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureRevealedMarkdown(arg0) {
   const cResult = c.c(4);
   ({ streaming, source } = arg0);
   if (cResult[0] !== streaming) {
@@ -226,7 +226,7 @@ export const ConjureRevealedMarkdown = ReactCompilerGating.isReactCompilerEnable
     tmp5 = cResult[3];
   }
   return tmp5;
-}) : ((arg0) => {
+}) : (function ConjureRevealedMarkdown(arg0) {
   ({ source, streaming } = arg0);
   return hasOwnProperty(closure_11, { source: useConjureRevealedText.useConjureRevealedText(source, { streaming }).text });
 });

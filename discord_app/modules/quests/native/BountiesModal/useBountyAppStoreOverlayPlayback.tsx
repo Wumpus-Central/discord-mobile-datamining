@@ -16,7 +16,7 @@ export const getBountyVideoEndMode = function getBountyVideoEndMode(bounty) {
   return result ? BountyVideoEndMode.APP_STORE_LOOP : BountyVideoEndMode.END_CARD;
 };
 export const useBountyAppStoreOverlayPlayback = ReactCompilerGating.isReactCompilerEnabled()
-  ? (handleVideoPaused) => {
+  ? function useBountyAppStoreOverlayPlayback(handleVideoPaused) {
       const cResult = c.c(26);
       ({ bounty, sourceQuestContent, isActive, endMode, playerRef, handleVideoEnd } = handleVideoPaused);
       handleVideoPaused = handleVideoPaused.handleVideoPaused;
@@ -192,7 +192,7 @@ export const useBountyAppStoreOverlayPlayback = ReactCompilerGating.isReactCompi
       cResult[5] = obj3;
       tmp4 = obj3;
     }
-  : (handleVideoPaused) => {
+  : function useBountyAppStoreOverlayPlayback(handleVideoPaused) {
       ({ bounty, sourceQuestContent, isActive, endMode, handleVideoEnd } = handleVideoPaused);
       handleVideoPaused = handleVideoPaused.handleVideoPaused;
       const handleVideoResumed = handleVideoPaused.handleVideoResumed;

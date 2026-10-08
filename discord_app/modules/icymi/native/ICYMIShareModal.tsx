@@ -5,11 +5,11 @@ import util from "../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import ShareEventUtils from "../../guild_scheduled_events/utils/ShareEventUtils.tsx";
+import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import SearchableDestinationListDefault from "../../share/native/SearchableDestinationList.tsx";
 import useShareChatInputActions from "../../share/native/useShareChatInputActions.tsx";
 import ShareChatInputDefault from "../../share/native/ShareChatInput.tsx";
@@ -23,11 +23,11 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const AbortCodes = fn(1085).AbortCodes;
-const UserRowModes = fn(10605).UserRowModes;
-const MessageSendLocation = fn(4889).MessageSendLocation;
+const UserRowModes = fn(10202).UserRowModes;
+const MessageSendLocation = fn(5083).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 },
   headerRightContainer: null,
@@ -62,7 +62,7 @@ let obj5 = {
 };
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (event) => {
+  ? function GuildEventShareModal(event) {
       const cResult = c.c(9);
       event = event.event;
       if (cResult[0] === event.guild_id) {
@@ -111,7 +111,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { guildId: event.guild_id, guildEventId: event.id };
       const tmpResult = ShareEventUtils;
     }
-  : (event) => {
+  : function GuildEventShareModal(event) {
       event = event.event;
       const obj3 = { title: null, originDestinationId: null, linkText: null };
       const result = ShareEventUtils.SHARE_EVENT_DETAILS_LINK({ guildId: event.guild_id, guildEventId: event.id });
@@ -128,7 +128,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GravityShareFooter(arg0) {
       const cResult = c.c(29);
       ({ count, isSending, onSend } = arg0);
       const tmp4 = closure_13();
@@ -268,7 +268,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           tmp17 = items1;
         }
       }
-      class I {
+      class T {
         constructor() {
           tmp = onSend(closure_1);
           return;
@@ -276,11 +276,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       cResult[1] = text;
       cResult[2] = onSend;
-      cResult[3] = I;
-      tmp11 = I;
+      cResult[3] = T;
+      tmp11 = T;
       const tmpResult = useShareChatInputActions;
     }
-  : (arg0) => {
+  : function GravityShareFooter(arg0) {
       ({ count, isSending, onSend } = arg0);
       text = undefined;
       const tmp = closure_13();
@@ -340,7 +340,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (title) => {
+  ? function ICYMIShareModal(title) {
       const cResult = require("c").c(34);
       _require = title.title;
       ({ originDestinationId, linkText } = title);
@@ -533,7 +533,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = handleSendForwards;
       const tmp5 = first1(noop.useState(false), 2);
     }
-  : (originDestination) => {
+  : function ICYMIShareModal(originDestination) {
       const title = originDestination.title;
       ({ linkText: importDefault, forwardToChannel: dependencyMap } = originDestination);
       let first;
@@ -710,11 +710,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         num = rect.top;
       }
       obj4.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-      obj3 = title(1369);
-      obj4.headerLeft = tmp11(6017).getHeaderCloseButton(callback);
+      obj3 = title(1381);
+      obj4.headerLeft = tmp11(6203).getHeaderCloseButton(callback);
       ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } =
         tmp5);
-      const items1 = [closure_11(title(6026).Header, obj4), ,];
+      const items1 = [closure_11(title(6212).Header, obj4), ,];
       let obj5 = {
         rowMode: UserRowModes.TOGGLE,
         onSelectedDestinationChange: tmp[1],
@@ -723,7 +723,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         disableGradient: true,
         disableStickySections: true,
       };
-      const tmp11Result = tmp11(6017);
+      const tmp11Result = tmp11(6203);
       const sum = rect.bottom + nativeDefault.space.PX_8;
       obj5.insetEnd = sum + nativeDefault.space.PX_96;
       items1[1] = closure_11(SearchableDestinationListDefault, obj5);
@@ -751,7 +751,7 @@ let result = size.fileFinishedImporting("modules/icymi/native/ICYMIShareModal.ts
 export default tmp5;
 export const GuildEventShareModal = tmp3;
 export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
-  ? (content) => {
+  ? function GameShareModal(content) {
       const cResult = require("c").c(3);
       content = content.content;
       _require = content;
@@ -805,7 +805,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                   };
                   c5 = 2;
                   c6 = 1;
-                  const obj6 = { value: entry(16487).sendMessageWithEmbed(obj5), done: false };
+                  const obj6 = { value: entry(16747).sendMessageWithEmbed(obj5), done: false };
                   return obj6;
                 }
               } else if (1 === tmp7) {
@@ -869,7 +869,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : (content) => {
+  : function GameShareModal(content) {
       _require = content.content;
       let obj = { title: null, linkText: "", forwardToChannel: null };
       let intl = require("util").intl;
@@ -913,7 +913,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                 };
                 c5 = 2;
                 c6 = 1;
-                const obj7 = { value: entry(16487).sendMessageWithEmbed(obj6), done: false };
+                const obj7 = { value: entry(16747).sendMessageWithEmbed(obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp7) {

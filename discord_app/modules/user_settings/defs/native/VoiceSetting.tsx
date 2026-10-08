@@ -8,9 +8,9 @@ require = fn;
 const Constants = fn(1085);
 ({ InputModes: c3, UserSettingsSections } = Constants);
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useVoiceSettingTrailing() {
       let Q8gkVL = dependencyMap;
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -42,7 +42,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = initialize;
     }
-  : () => {
+  : function useVoiceSettingTrailing() {
       const items = [MediaEngineStore];
       if (obj.useStateFromStores(items, () => mode.getMode()) === constants.PUSH_TO_TALK) {
         const intl2 = util.intl;
@@ -59,9 +59,9 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.B1fFpf);
   },
   parent: null,
-  IconComponent: fn(9702).MicrophoneIcon,
+  IconComponent: fn(10891).MicrophoneIcon,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useVoiceSettingTrailing() {
         let Q8gkVL = dependencyMap;
         const cResult = c.c(4);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -93,7 +93,7 @@ const route = SettingBuilders.createRoute({
         }
         const tmpResult = initialize;
       }
-    : () => {
+    : function useVoiceSettingTrailing() {
         const items = [MediaEngineStore];
         if (obj.useStateFromStores(items, () => mode.getMode()) === constants.PUSH_TO_TALK) {
           const intl2 = util.intl;

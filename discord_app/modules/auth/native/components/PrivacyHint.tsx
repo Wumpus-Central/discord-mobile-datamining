@@ -11,12 +11,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
-const usePromoEmailConsentStore = fn(6090).usePromoEmailConsentStore;
-const useRegistrationUIStore = fn(15906).useRegistrationUIStore;
+const usePromoEmailConsentStore = fn(5937).usePromoEmailConsentStore;
+const useRegistrationUIStore = fn(16165).useRegistrationUIStore;
 const MarketingURLs = fn(1085).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({
   multiItem: { flexDirection: "column", gap: 16 },
   checkbox: { flexDirection: "row", alignItems: "flex-start", gap: 8 },
@@ -25,7 +25,7 @@ let closure_10 = createStyles.createStyles({
 });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function PrivacyPolicyDescription(style) {
       const cResult = c.c(3);
       style = style.style;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -49,7 +49,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp7;
     }
-  : (style) => {
+  : function PrivacyPolicyDescription(style) {
       const obj = { style: style.style, variant: "text-xs/medium", color: "text-muted", children: null };
       const intl = util.intl;
       obj.children = intl.format(util.t["KI+BSb"], {
@@ -60,7 +60,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PrivacyPolicyCheckbox(arg0) {
       const cResult = c.c(17);
       ({ consent, onToggleConsent, asCheckbox } = arg0);
       const tmp5 = closure_10();
@@ -160,7 +160,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp13Result;
       const tmpResult = useA11yRolesNative;
     }
-  : (onToggleConsent) => {
+  : function PrivacyPolicyCheckbox(onToggleConsent) {
       ({ consent, asCheckbox } = onToggleConsent);
       if (asCheckbox === undefined) {
         asCheckbox = false;
@@ -202,12 +202,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/PrivacyHint.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PrivacyHint(arg0) {
       const cResult = c.c(17);
       ({ consent, consentRequired, onToggleConsent } = arg0);
       let multiItem = closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function n(required) {
+        const fn = function c(required) {
           return required.required;
         };
         cResult[0] = fn;
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp11;
       const tmp4 = usePromoEmailConsentStore(first);
     }
-  : (arg0) => {
+  : function PrivacyHint(arg0) {
       ({ consent, consentRequired, onToggleConsent } = arg0);
       let items1 = closure_10();
       const tmp = usePromoEmailConsentStore((required) => required.required);

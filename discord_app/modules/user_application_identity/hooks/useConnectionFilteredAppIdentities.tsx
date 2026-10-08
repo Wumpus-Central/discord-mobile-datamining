@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(2013).APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS;
+let closure_3 = fn(2025).APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useConnectionFilteredAppIdentities(arg0, arg1) {
       const cResult = require("c").c(12);
       if (cResult[0] !== arg1) {
         let obj2 = arg1;
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = found;
       const tmpResult = require("UserApplicationIdentityActionCreators");
     }
-  : (arg0) => {
+  : function useConnectionFilteredAppIdentities(arg0) {
       let obj = arg1;
       if (arg1 === undefined) {
         obj = {};

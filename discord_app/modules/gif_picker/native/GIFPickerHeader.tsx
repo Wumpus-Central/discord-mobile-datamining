@@ -7,17 +7,17 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = SearchField(1126);
-const Text_Text = SearchField(4892);
-const Pressables = SearchField(5916);
-const SearchField2 = SearchField(6554);
-const GifProvider = SearchField(10104);
-const ChevronLargeLeftIcon = SearchField(10112);
+const Text_Text = SearchField(5086);
+const Pressables = SearchField(6189);
+const SearchField2 = SearchField(6730);
+const GifProvider = SearchField(9688);
+const ChevronLargeLeftIcon = SearchField(9697);
 require = fn;
 const View = fn(17).View;
 fn(1085).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { paddingVertical: nativeDefault.space.PX_8 },
   headerContainer: null,
@@ -28,14 +28,14 @@ let obj3 = { paddingVertical: nativeDefault.space.PX_8 };
 obj.headerContainer = {
   flexDirection: "row",
   justifyContent: "space-between",
-  gap: fn(10106).GIF_PICKER_GUTTER_SPACING,
+  gap: fn(9690).GIF_PICKER_GUTTER_SPACING,
 };
-let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10106).GIF_PICKER_GUTTER_SPACING };
+let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(9690).GIF_PICKER_GUTTER_SPACING };
 obj.header = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(6113).InputHeights.MD,
+  height: fn(6293).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
@@ -56,7 +56,7 @@ const __initData4 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (columnWidth) => {
+  ? function FavoritesSearch(columnWidth) {
       const cResult = columnWidth(ref[10]).c(29);
       columnWidth = columnWidth.columnWidth;
       const onQueryChange = columnWidth.onQueryChange;
@@ -276,7 +276,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = fn;
       const obj3 = columnWidth(ref[11]);
     }
-  : (columnWidth) => {
+  : function FavoritesSearch(columnWidth) {
       columnWidth = columnWidth.columnWidth;
       const onQueryChange = columnWidth.onQueryChange;
       let accessibilityElementsHidden;
@@ -404,7 +404,7 @@ let obj5 = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(6113).InputHeights.MD,
+  height: fn(6293).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
@@ -414,7 +414,7 @@ let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerHead
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function GIFPickerHeader(arg0) {
         let SearchField = require;
         let obj = dependencyMap;
         const cResult = c.c(13);
@@ -528,7 +528,7 @@ export default noop.memo(
         cResult[8] = headerContainer;
         cResult[9] = tmp16Result;
       }
-    : (arg0) => {
+    : function GIFPickerHeader(arg0) {
         ({ categoryType, onQueryClear } = arg0);
         ({ columnWidth, onQueryChange, onFavoritesQueryChange, searchInputRef } = arg0);
         const tmp = closure_10();

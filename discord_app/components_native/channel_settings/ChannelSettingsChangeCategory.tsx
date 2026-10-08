@@ -3,10 +3,10 @@ import _modDef38 from "../../../_runtime/metro/00038__.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../intl/index.native.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
-import useChannelName from "../../modules/channel/useChannelName.tsx";
-import Stack_Stack from "../../design/components/Stack/native/Stack.native.tsx";
-import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
+import Stack_Stack from "../../design/components/Stack/native/Stack.native.tsx";
+import useChannelName from "../../modules/channel/useChannelName.tsx";
+import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import TableRow from "../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import Form from "../../design/void/Form/native/index.tsx";
@@ -24,7 +24,7 @@ require = fn;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   screenContainer: {
     flex: 1,
@@ -313,14 +313,14 @@ prototype["render"] = function render() {
   obj.children = state(Stack_Stack.Stack, obj2);
   return __initData2(Form.Form, obj);
 };
-ChannelSettingsChangeCategory.contextType = fn(4595).ThemeContext;
+ChannelSettingsChangeCategory.contextType = fn(4787).ThemeContext;
 const ReactCompilerGating = fn(558);
 let obj4 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeCategory.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function ConnectedChannelSettingsChangeCategory(channelId) {
       const cResult = channelId(576).c(7);
       channelId = channelId.channelId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -343,9 +343,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = channelId(576);
       const stateFromStores = channelId(504).useStateFromStores(first, tmp6);
       const tmpResult = channelId(504);
-      const navigation = channelId(1490).useNavigation();
-      const tmpResult3 = channelId(1490);
-      const appChannelBotUserId = channelId(11245).useAppChannelBotUserId(stateFromStores);
+      const navigation = channelId(1502).useNavigation();
+      const tmpResult3 = channelId(1502);
+      const appChannelBotUserId = channelId(11360).useAppChannelBotUserId(stateFromStores);
       _modDef38(null != stateFromStores, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
       if (cResult[3] === appChannelBotUserId) {
         if (cResult[4] === stateFromStores) {
@@ -365,16 +365,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = navigation;
       cResult[6] = tmp12;
       tmp11 = tmp12;
-      const tmpResult4 = channelId(11245);
+      const tmpResult4 = channelId(11360);
     }
-  : (channelId) => {
+  : function ConnectedChannelSettingsChangeCategory(channelId) {
       channelId = channelId.channelId;
       const items = [ChannelStore];
       const channel = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
       const obj = channelId(504);
-      const navigation = channelId(1490).useNavigation();
-      const obj2 = channelId(1490);
-      const appChannelBotUserId = channelId(11245).useAppChannelBotUserId(channel);
+      const navigation = channelId(1502).useNavigation();
+      const obj2 = channelId(1502);
+      const appChannelBotUserId = channelId(11360).useAppChannelBotUserId(channel);
       _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
       return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
     };

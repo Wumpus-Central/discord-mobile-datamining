@@ -13,7 +13,7 @@ let closure_2 = ApexExperiment.createApexExperiment({
 const result = size.fileFinishedImporting("modules/tiny_bronco/TinyBroncoExperiment.tsx");
 
 export const useIsTinyBroncoEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsTinyBroncoEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -25,7 +25,9 @@ export const useIsTinyBroncoEnabled = ReactCompilerGating.isReactCompilerEnabled
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useIsTinyBroncoEnabled(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };
 export const isTinyBroncoEnabled = function isTinyBroncoEnabled(location) {
   return closure_2.getConfig({ location }).enabled;
 };

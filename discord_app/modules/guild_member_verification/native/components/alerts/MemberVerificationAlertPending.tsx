@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function MemberVerificationAlertPending(guildId) {
       const cResult = require("c").c(21);
       if (cResult[0] !== guildId) {
         guildId = guildId.guildId;
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[10] !== tmp5) {
           const obj2 = { variant: "secondary", text: tmp16, onPress: tmp5 };
-          const tmp20 = closure_6(tmp(5601).Button, obj2);
+          const tmp20 = closure_6(tmp(5375).Button, obj2);
           cResult[10] = tmp5;
           cResult[11] = tmp20;
           let tmp18 = tmp20;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[13] !== tmp10) {
           const obj3 = { text: tmp21, variant: "destructive", onPress: tmp10 };
-          const tmp25 = closure_6(tmp(5601).Button, obj3);
+          const tmp25 = closure_6(tmp(5375).Button, obj3);
           cResult[13] = tmp10;
           cResult[14] = tmp25;
           let tmp23 = tmp25;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj4 = {};
           const merged = Object.assign(tmp6);
-          obj4.icon = tmp(5935).ClipboardListIcon;
+          obj4.icon = tmp(6118).ClipboardListIcon;
           obj4.header = tmp12;
           obj4.subtitle = tmp13;
           obj4.buttons = tmp26;
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn;
       const obj = require("c");
     }
-  : (guildId) => {
+  : function MemberVerificationAlertPending(guildId) {
       guildId = guildId.guildId;
       const onClose = guildId.onClose;
       const merged = Object.assign(guildId, Object.assign({ guildId: 0, onClose: 0 }));
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj = {};
       const merged1 = Object.assign(merged);
-      obj.icon = guildId(5935).ClipboardListIcon;
+      obj.icon = guildId(6118).ClipboardListIcon;
       const intl = guildId(1126).intl;
       obj.header = intl.string(guildId(1126).t.zhfXbs);
       const intl2 = guildId(1126).intl;
@@ -155,13 +155,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl3 = guildId(1126).intl;
       obj3.text = intl3.string(guildId(1126).t.f293OM);
       obj3.onPress = onClose;
-      const items1 = [closure_6(guildId(5601).Button, obj3)];
+      const items1 = [closure_6(guildId(5375).Button, obj3)];
       const obj4 = { text: null, variant: "destructive", onPress: null };
       const intl4 = guildId(1126).intl;
       obj4.text = intl4.string(guildId(1126).t.mqtdmQ);
       obj4.onPress = callback;
-      items1[1] = closure_6(guildId(5601).Button, obj4);
+      items1[1] = closure_6(guildId(5375).Button, obj4);
       obj2.children = items1;
       obj.buttons = closure_8(closure_7, obj2);
-      return closure_6(onClose(5934), obj);
+      return closure_6(onClose(6117), obj);
     };

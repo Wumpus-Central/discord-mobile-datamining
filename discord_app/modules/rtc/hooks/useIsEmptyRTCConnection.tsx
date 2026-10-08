@@ -9,7 +9,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsStreamRTCConnectionEmpty(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -46,7 +46,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7);
     }
-  : (arg0) => {
+  : function useIsStreamRTCConnectionEmpty(arg0) {
       _require = arg0;
       const items = [StreamRTCConnectionStore, AuthenticationStore];
       return require("initialize").useStateFromStores(items, () => {
@@ -72,7 +72,7 @@ const result = size.fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnec
 
 export const useIsStreamRTCConnectionEmpty = tmp2;
 export const useIsCallRTCConnectionEmpty = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsCallRTCConnectionEmpty() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [RTCConnectionStore, AuthenticationStore];
@@ -98,7 +98,7 @@ export const useIsCallRTCConnectionEmpty = ReactCompilerGating.isReactCompilerEn
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsCallRTCConnectionEmpty() {
       const items = [RTCConnectionStore, AuthenticationStore];
       return initialize.useStateFromStores(items, () => {
         userIds = userIds.getUserIds();

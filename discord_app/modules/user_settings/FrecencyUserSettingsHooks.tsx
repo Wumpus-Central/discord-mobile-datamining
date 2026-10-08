@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/FrecencyUserSettingsHooks.tsx");
 
 export const useFrecencySettings = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFrecencySettings(arg0) {
       const cResult = require("c").c(5);
       _require = tmp4;
       if (cResult[0] !== (undefined === arg0 || arg0)) {
@@ -49,7 +49,7 @@ export const useFrecencySettings = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(tmp8, tmp9);
     }
-  : () => {
+  : function useFrecencySettings() {
       let flag = arg0;
       if (arg0 === undefined) {
         flag = true;

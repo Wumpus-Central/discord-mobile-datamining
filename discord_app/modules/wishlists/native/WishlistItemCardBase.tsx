@@ -8,8 +8,8 @@ import useToken from "../../../design/tokens/native/useToken.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import useUserProfileColors from "../../user_profile/hooks/native/useUserProfileColors.tsx";
-import useWishlistHooks from "../hooks/useWishlistHooks.tsx";
 import CheckmarkLargeBoldIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
+import useWishlistHooks from "../hooks/useWishlistHooks.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   card: {
     borderWidth: 1,
@@ -62,23 +62,23 @@ obj.lockBadge = obj6;
 let closure_8 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (toastText) => {
+  ? function SourceIcon(toastText) {
       const cResult = toastText(576).c(6);
       toastText = toastText.toastText;
       const tmp4 = closure_8();
       if (cResult[0] !== toastText) {
-        const fn = function o() {
+        function onPress() {
           ToastActionCreatorsDefault.open({ key: "WISHLIST_SOURCE_ICON", content: toastText });
-        };
+        }
         cResult[0] = toastText;
-        cResult[1] = fn;
-        let tmp5 = fn;
+        cResult[1] = onPress;
+        let tmp5 = onPress;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
-        const tmp9 = closure_5(tmp(8461).HeartIcon, obj2);
+        const tmp9 = closure_5(tmp(8947).HeartIcon, obj2);
         cResult[2] = tmp9;
         let tmp6 = tmp9;
       } else {
@@ -113,7 +113,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       };
       tmp = toastText;
     }
-  : (toastText) => {
+  : function SourceIcon(toastText) {
       toastText = toastText.toastText;
       const obj = {
         style: closure_8().sourceIcon,
@@ -123,7 +123,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         accessible: false,
         accessibilityElementsHidden: true,
         importantForAccessibility: "no-hide-descendants",
-        children: closure_5(toastText(8461).HeartIcon, {
+        children: closure_5(toastText(8947).HeartIcon, {
           color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT,
           size: "md",
         }),
@@ -144,7 +144,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/WishlistItemCardBase.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (source) => {
+  ? function WishlistItemCardBase(source) {
       const cResult = c.c(54);
       ({ onPress, accessibilityLabel, renderPreview, size, overlay, accessibilityHidden, recipientName } = source);
       let num = 170;
@@ -441,7 +441,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = obj16;
       const tmpResult = native;
     }
-  : (username) => {
+  : function WishlistItemCardBase(username) {
       ({ onPress, size } = username);
       ({ accessibilityLabel, renderPreview, source } = username);
       if (size === undefined) {

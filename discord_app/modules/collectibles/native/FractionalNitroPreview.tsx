@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/native/FractionalNitroPreview.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CheckmarkSmallIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
-import _modDef12994 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
+import _modDef13272 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
 import NitroIconDefault from "NitroIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -13,10 +13,10 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const VerticalGradient = fn(1085).VerticalGradient;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     flexDirection: "column",
@@ -54,7 +54,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FractionalNitroPreview.tsx");
 
 export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function FractionalNitroPreview() {
       const cResult = require("c").c(21);
       const tmp4 = closure_8();
       _require = tmp4;
@@ -68,8 +68,8 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
         obj2.legacyCopy = intl3.string(tmp(1126).t.xT1Vfn);
         const intl4 = tmp(1126).intl;
         const obj3 = { maxFileSize: null };
-        const tmpResult = tmp(7257);
-        obj3.maxFileSize = tmp(4534).getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
+        const tmpResult = tmp(7733);
+        obj3.maxFileSize = tmp(4726).getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
         obj2.rolloutCopy = intl4.formatToPlainString(tmp(1126).t.IDAfOy, obj3);
         items[2] = tmpResult.getNitroFileUploadRolloutCopy(obj2);
         const intl5 = tmp(1126).intl;
@@ -78,7 +78,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
         items[4] = intl6.string(tmp(1126).t.zTk8Ul);
         cResult[0] = items;
         let first = items;
-        const tmpResult2 = tmp(4534);
+        const tmpResult2 = tmp(4726);
       } else {
         first = cResult[0];
       }
@@ -101,7 +101,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
         tmp7 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { uri: _modDef12994 };
+        const obj5 = { uri: _modDef13272 };
         cResult[4] = obj5;
         let tmp12 = obj5;
       } else {
@@ -183,7 +183,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
       tmp28 = tmp29;
       let obj = require("c");
     }
-  : () => {
+  : function FractionalNitroPreview() {
       const tmp = closure_8();
       _require = tmp;
       const intl = require("util").intl;
@@ -223,7 +223,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
         end: VerticalGradient.END,
         style: tmp.gradient,
       };
-      obj8.uri = _modDef12994;
+      obj8.uri = _modDef13272;
       obj7.source = obj8;
       obj7.style = tmp.headerImage;
       items1[1] = closure_6(FastImageDefault, obj7);

@@ -11,7 +11,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");
 
 export const useDMMessageToReport = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, arg1, arg2) => {
+  ? function useDMMessageToReport(id, arg1, arg2) {
       const cResult = c.c(6);
       let isRelationshipTypeSpamReportable =
         useIsRelationshipTypeSpamReportable.useIsRelationshipTypeSpamReportable(arg1);
@@ -84,7 +84,7 @@ export const useDMMessageToReport = ReactCompilerGating.isReactCompilerEnabled()
       tmp18 = obj4;
       const tmpResult2 = useMessageRequestPreview;
     }
-  : (id, arg1, arg2) => {
+  : function useDMMessageToReport(id, arg1, arg2) {
       let isRelationshipTypeSpamReportable =
         useIsRelationshipTypeSpamReportable.useIsRelationshipTypeSpamReportable(arg1);
       let tmp6 = null;

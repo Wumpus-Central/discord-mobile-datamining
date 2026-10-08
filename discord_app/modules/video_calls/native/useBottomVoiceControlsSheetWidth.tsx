@@ -8,14 +8,14 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/video_calls/native/useBottomVoiceControlsSheetWidth.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useBottomVoiceControlsSheetWidth() {
       let width = useWindowDimensionsDefault().width;
       if (width > React3) {
         width = React2;
       }
       return width;
     }
-  : () => {
+  : function useBottomVoiceControlsSheetWidth() {
       let width = useWindowDimensionsDefault().width;
       if (width > React3) {
         width = React2;

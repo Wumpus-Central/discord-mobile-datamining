@@ -1,5 +1,5 @@
 // discord_app/modules/guild_automod/native/components/ApplicationTriggerFields.tsx
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -47,7 +47,7 @@ export default function ApplicationTriggerFields(rule) {
     tmp5Result = tmp5(tmp(tmp2[6]).TableRow.TrailingText, obj5);
   }
   obj4.trailing = tmp5Result;
-  obj4.onPress = function onPress() {
+  obj4.onPress = function handlePress() {
     if (null != guildBotApplications) {
       const obj2 = {
         applications: tmp,
@@ -70,7 +70,7 @@ export default function ApplicationTriggerFields(rule) {
         },
       };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(17749, dependencyMap.paths),
+        asyncRequireImpl(18036, dependencyMap.paths),
         "AutomodSelectApplication",
         obj2,
       );

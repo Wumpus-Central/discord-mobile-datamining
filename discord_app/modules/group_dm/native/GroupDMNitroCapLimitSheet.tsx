@@ -10,7 +10,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const number = fn(11228).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11343).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const Constants = fn(1085);
 ({
   AnalyticEvents: closure_7,
@@ -20,7 +20,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -50,13 +50,13 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroCapLimitSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function GroupDMNitroCapLimitSheet(location) {
       const cResult = _location(576).c(39);
       _location = location.location;
       closure_13();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
-        const fn = function _() {
+        const fn = function p() {
           return useReducedMotion.useReducedMotion;
         };
         cResult[0] = items;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = _location(576);
       const stateFromStores = _location(504).useStateFromStores(tmp5, tmp6);
       const tmpResult = _location(504);
-      const groupDMNitroAudience = _location(11226).useGroupDMNitroAudience();
+      const groupDMNitroAudience = _location(11341).useGroupDMNitroAudience();
       importDefault = "upgrade" === groupDMNitroAudience;
       if (cResult[2] !== _location) {
         class I {
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult2 = _location(11226);
+      const tmpResult2 = _location(11341);
       const onPress = usePremiumFeatureUpsellGetNitroDefault(false, I, constants3.IN_APP).onPress;
       if (cResult[4] === groupDMNitroAudience) {
         class I {
@@ -123,24 +123,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = {
         audience: groupDMNitroAudience,
         location: _location,
-        acquisitionStrategy: _location(11226).GroupDMNitroAcquisitionStrategy.CHECKOUT,
+        acquisitionStrategy: _location(11341).GroupDMNitroAcquisitionStrategy.CHECKOUT,
         onCheckout: onPress,
       };
       let obj2 = {
         audience: groupDMNitroAudience,
         location: _location,
-        acquisitionStrategy: _location(11226).GroupDMNitroAcquisitionStrategy.CHECKOUT,
+        acquisitionStrategy: _location(11341).GroupDMNitroAcquisitionStrategy.CHECKOUT,
         onCheckout: onPress,
       };
     }
-  : (location) => {
+  : function GroupDMNitroCapLimitSheet(location) {
       const _location = location.location;
       dependencyMap = undefined;
       const tmp = closure_13();
       const items = [AccessibilityStore];
       const stateFromStores = _location(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
       let obj = _location(504);
-      const groupDMNitroAudience = _location(11226).useGroupDMNitroAudience();
+      const groupDMNitroAudience = _location(11341).useGroupDMNitroAudience();
       importDefault = tmp6;
       const items1 = [_location];
       const callback = noop.useCallback(() => {
@@ -158,8 +158,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         loading = tmp9.loading;
       }
       const obj4 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null, onCheckout: null };
-      let obj2 = _location(11226);
-      obj4.acquisitionStrategy = _location(11226).GroupDMNitroAcquisitionStrategy.CHECKOUT;
+      let obj2 = _location(11341);
+      obj4.acquisitionStrategy = _location(11341).GroupDMNitroAcquisitionStrategy.CHECKOUT;
       obj4.onCheckout = tmp9.onPress;
       const tmp8ResultResult = useGroupDMNitroUpsellActionDefault(obj4);
       dependencyMap = tmp8ResultResult;
@@ -179,11 +179,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = tmp2(1126).intl;
       obj6.children = intl.formatToPlainString(_location(1126).t.IyBYPN, { number: number2 });
-      const items3 = [closure_11(_location(4892).Text, obj6), ,];
+      const items3 = [closure_11(_location(5086).Text, obj6), ,];
       const obj8 = { style: tmp.body, variant: "text-md/medium", color: "text-subtle", children: null };
       const intl2 = tmp2(1126).intl;
       obj8.children = intl2.formatToPlainString(_location(1126).t["Ae97n/"], { number });
-      items3[1] = closure_11(_location(4892).Text, obj8);
+      items3[1] = closure_11(_location(5086).Text, obj8);
       const obj10 = { style: tmp.buttons, children: null };
       const obj11 = {
         text: null,
@@ -200,9 +200,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { number: number2 };
       const obj9 = { number };
       const tmp8Result = useGroupDMNitroUpsellActionDefault;
-      obj11.text = intl3.string(_location(11226).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
-      const tmp2Result = _location(11226);
-      obj11.icon = closure_11(_location(8346).NitroWheelIcon, {
+      obj11.text = intl3.string(_location(11341).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
+      const tmp2Result = _location(11341);
+      obj11.icon = closure_11(_location(9005).NitroWheelIcon, {
         style: tmp.nitroWheelIcon,
         color: nativeDefault.unsafe_rawColors.WHITE,
         size: "custom",
@@ -215,15 +215,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj13 = { children: null };
       obj11.onPress = tmp16;
-      const items4 = [closure_11(_location(5601).Button, obj11)];
+      const items4 = [closure_11(_location(5375).Button, obj11)];
       const obj14 = { text: null, size: "lg", variant: "secondary", onPress: null, grow: true };
       const intl4 = tmp2(1126).intl;
       obj14.text = intl4.string(_location(1126).t.PUZmk4);
       obj14.onPress = callback;
-      items4[1] = closure_11(_location(5601).Button, obj14);
+      items4[1] = closure_11(_location(5375).Button, obj14);
       obj10.children = items4;
       items3[2] = closure_12(View, obj10);
       obj5.children = items3;
       obj13.children = closure_12(View, obj5);
-      return closure_11(_location(6652).BottomSheet, obj13);
+      return closure_11(_location(6829).BottomSheet, obj13);
     };

@@ -1,6 +1,6 @@
 // discord_app/modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx
 import c from "../../../../_runtime/00576_c.js";
-import LegacyBaseButton from "../../../../_runtime/06147_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/06326_LegacyBaseButton.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx");
 
 export const NonCollapsableGestureDetector = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function NonCollapsableGestureDetector(children) {
       const cResult = c.c(8);
       if (cResult[0] !== children) {
         children = children.children;
@@ -57,7 +57,7 @@ export const NonCollapsableGestureDetector = ReactCompilerGating.isReactCompiler
       cResult[7] = tmp16;
       tmp14 = tmp16;
     }
-  : (children) => {
+  : function NonCollapsableGestureDetector(children) {
       const obj = {};
       const merged = Object.assign(_objectWithoutProperties(children, closure_3));
       obj.children = (

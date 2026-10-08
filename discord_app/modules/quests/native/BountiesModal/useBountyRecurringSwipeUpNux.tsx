@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyRecurringSwipeUpNux.tsx");
 
 export const useBountyRecurringSwipeUpNux = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isEligible) => {
+  ? function useBountyRecurringSwipeUpNux(isEligible) {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { cooldownDurationMs };
@@ -43,7 +43,7 @@ export const useBountyRecurringSwipeUpNux = ReactCompilerGating.isReactCompilerE
         2,
       );
     }
-  : (isEligible) => {
+  : function useBountyRecurringSwipeUpNux(isEligible) {
       let prop = null;
       if (isEligible.isEligible) {
         prop = dismissible_content.DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX;

@@ -34,7 +34,7 @@ function blobToDataURI(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   titleWrapper: { flex: 0 },
   titleContainer: { justifyContent: "flex-start" },
@@ -59,7 +59,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/ProfileGIFSelectActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (profileAssetType) => {
+  ? function ProfileGIFSelectActionSheet(profileAssetType) {
       const cResult = require("c").c(17);
       profileAssetType = profileAssetType.profileAssetType;
       _require = profileAssetType;
@@ -288,7 +288,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = onPressGIF;
       let obj = require("c");
     }
-  : (arg0) => {
+  : function ProfileGIFSelectActionSheet(arg0) {
       ({ profileAssetType: require, selectionContext: importDefault, guildId: dependencyMap } = arg0);
       closure_3 = async function _onPressGIF2(arg0) {
         if (c5 === 2) {

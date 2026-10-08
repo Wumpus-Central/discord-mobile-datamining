@@ -53,14 +53,14 @@ function isVoicePanelParticipantFocusable(guildId, channelId, id2) {
     }
   }
 }
-const CallConstants = fn(4917);
+const CallConstants = fn(5113);
 ({ isActivityParticipant: metroRequire, isStreamParticipant: closure_7, isUserParticipant: closure_8 } = CallConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/utils/useIsVoicePanelParticipantFocusable.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useIsVoicePanelParticipantFocusable(arg0, arg1, arg2) {
       _require = arg0;
       dependencyMap = arg1;
       closure_2 = arg2;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1, arg2) => {
+  : function useIsVoicePanelParticipantFocusable(arg0, arg1, arg2) {
       _require = arg0;
       dependencyMap = arg1;
       closure_2 = arg2;

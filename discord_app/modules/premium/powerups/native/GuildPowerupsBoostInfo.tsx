@@ -24,7 +24,7 @@ let obj2 = { flex: 1, alignItems: "center", justifyContent: "center", paddingVer
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostInfo.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildPowerupsBoostInfo(arg0) {
       const cResult = c.c(21);
       ({ count, type } = arg0);
       const tmp4 = closure_7();
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = guildPowerupsBoostInfoText;
       const tmpResult = getGuildPowerupsBoostInfoText;
     }
-  : (arg0) => {
+  : function GuildPowerupsBoostInfo(arg0) {
       ({ count, type } = arg0);
       const tmp = closure_7();
       const manaTypeConsolidationExperiment =

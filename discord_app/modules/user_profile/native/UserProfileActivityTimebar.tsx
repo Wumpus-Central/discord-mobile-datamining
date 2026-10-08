@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   bar: {
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
@@ -47,7 +47,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityTimebar.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileActivityTimebar(arg0) {
       const cResult = c.c(27);
       ({ start, end, style } = arg0);
       const tmp4 = closure_6();
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj9;
       tmp5 = obj9;
     }
-  : (arg0) => {
+  : function UserProfileActivityTimebar(arg0) {
       ({ start, end, style } = arg0);
       const tmp = closure_6();
       const tmp2 = useActivityTimerDefault({ start, end });

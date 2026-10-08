@@ -4,19 +4,19 @@ import _modDef683 from "../../../_runtime/metro/00683__.js";
 import utils_ColorUtils from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import ColorUtils from "../../utils/ColorUtils.tsx";
 import shared from "../../design/shared.tsx";
-import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment.tsx";
 import isSystemMessageDefault from "isSystemMessage.tsx";
+import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
-const ThreadHooks = tmp(6782);
+const ThreadHooks = tmp(6958);
 require = fn;
-let closure_5 = fn(4889).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
+let closure_5 = fn(5083).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
 const Constants = fn(1085);
 ({ ChannelTypes: metroRequire, GuildFeatures: closure_7, MessageFlags: closure_8, Permissions: closure_9 } = Constants);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, location) => {
+  ? function useIsGuildOfficialMessagesEnabled(guildId, location) {
       _require = guildId;
       const cResult = require("c").c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -77,7 +77,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = obj2;
       const tmp2Result = require("initialize");
     }
-  : (arg0, location) => {
+  : function useIsGuildOfficialMessagesEnabled(arg0, location) {
       _require = arg0;
       const items = [GuildStore];
       const items1 = [arg0];
@@ -106,7 +106,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_10 = tmp3;
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useCanManageGuildOfficialMessages(arg0, arg1, arg2) {
       _require = arg1;
       const cResult = require("c").c(4);
       let stateFromStores = closure_10(arg0, arg2);
@@ -137,7 +137,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return stateFromStores;
     }
-  : (arg0, arg1, arg2) => {
+  : function useCanManageGuildOfficialMessages(arg0, arg1, arg2) {
       _require = arg1;
       let stateFromStores = closure_10(arg0, arg2);
       const items = [PermissionStore];
@@ -231,7 +231,7 @@ export const useIsGuildOfficialMessagesEnabled = tmp3;
 export { canManageGuildOfficialMessages };
 export const useCanManageGuildOfficialMessages = tmp4;
 export const useCanToggleGuildOfficialMessages = ReactCompilerGating.isReactCompilerEnabled()
-  ? (hasFlag, guild_id, arg2) => {
+  ? function useCanToggleGuildOfficialMessages(hasFlag, guild_id, arg2) {
       let tmp = require;
       let getIsActiveChannelOrUnarchivableThread = dependencyMap;
       const cResult = c.c(3);
@@ -266,7 +266,7 @@ export const useCanToggleGuildOfficialMessages = ReactCompilerGating.isReactComp
         cResult[2] = isActiveChannelOrUnarchivableThread;
       }
     }
-  : (hasFlag, guild_id, arg2) => {
+  : function useCanToggleGuildOfficialMessages(hasFlag, guild_id, arg2) {
       guild_id = guild_id.guild_id;
       const tmpResult = closure_11(guild_id, guild_id, arg2);
       let tmp3 = !tmpResult;

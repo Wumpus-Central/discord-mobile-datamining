@@ -19,10 +19,10 @@ function renderItem(key, state, transitionState, cleanUp) {
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCountFormatter() {
       const cResult = setting(576).c(2);
       let obj = setting(576);
-      setting = setting(2028).SearchResultExactCountEnabled.useSetting();
+      setting = setting(2040).SearchResultExactCountEnabled.useSetting();
       if (cResult[0] !== setting) {
         const fn = function t(toLocaleString) {
           if (!setting) {
@@ -42,8 +42,8 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : () => {
-      setting = setting(2028).SearchResultExactCountEnabled.useSetting();
+  : function useCountFormatter() {
+      setting = setting(2040).SearchResultExactCountEnabled.useSetting();
       const items = [setting];
       return noop.useCallback((toLocaleString) => {
         if (!setting) {
@@ -88,7 +88,7 @@ const __initData8 = {
 };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (state) => {
+  ? function AnimatedTabs(state) {
       const cResult = state(cleanUp[3]).c(14);
       state = state.state;
       const transitionState = state.transitionState;
@@ -276,7 +276,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         cleanUp,
       };
     }
-  : (state) => {
+  : function AnimatedTabs(state) {
       state = state.state;
       const transitionState = state.transitionState;
       const cleanUp = state.cleanUp;
@@ -406,7 +406,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/SearchTabsTransitionGroup.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (state) => {
+  ? function SearchTabsTransitionGroup(state) {
       const cResult = c.c(2);
       state = state.state;
       if (cResult[0] !== state) {
@@ -424,7 +424,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (state) => {
+  : function SearchTabsTransitionGroup(state) {
       const obj = { items: null, getItemKey, renderItem };
       const items = [state.state];
       obj.items = items;

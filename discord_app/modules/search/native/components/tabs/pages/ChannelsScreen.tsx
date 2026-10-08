@@ -1,7 +1,7 @@
 // discord_app/modules/search/native/components/tabs/pages/ChannelsScreen.tsx
 import util from "../../../../../../intl/index.native.tsx";
 import AccessibilityAnnouncer2 from "../../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
-import search_tracking_TrackingDefault from "../../../tracking/Tracking.tsx";
+import tracking_TrackingDefault from "../../../tracking/Tracking.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import SortedVoiceStateStore from "../../../../../../stores/views/SortedVoiceStateStore.tsx";
 import SearchGuildChannelTabStore from "../../../stores/SearchGuildChannelTabStore.tsx";
@@ -10,13 +10,13 @@ import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SearchConstants = fn(7524);
+const SearchConstants = fn(9247);
 ({
   EMPTY_VOICE_STATES: closure_7,
   SearchListItemTypes: closure_8,
   CHANNELS_ESTIMATED_ITEM_SIZE: closure_9,
 } = SearchConstants);
-let closure_10 = fn(7523).SearchResultContentEntityTypes;
+let closure_10 = fn(9246).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -24,7 +24,7 @@ let result = size.fileFinishedImporting("modules/search/native/components/tabs/p
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (searchContext) => {
+    ? function ChannelsScreen(searchContext) {
         const cResult = searchContext(stateFromStores[8]).c(53);
         searchContext = searchContext.searchContext;
         if (cResult[0] !== searchContext) {
@@ -214,7 +214,7 @@ export default noop.memo(
         cResult[26] = Y;
         const tmpResult14 = searchContext(stateFromStores[10]);
       }
-    : (searchContext) => {
+    : function ChannelsScreen(searchContext) {
         searchContext = searchContext.searchContext;
         let stateFromStores;
         let stateFromStores2;
@@ -285,7 +285,7 @@ export default noop.memo(
         const items8 = [onPressGuildTextChannel, searchContext];
         const callback = stateFromStores1.useCallback((channelId, index) => {
           onPressGuildTextChannel(channelId);
-          const result = search_tracking_TrackingDefault.trackSearchResultClicked({
+          const result = tracking_TrackingDefault.trackSearchResultClicked({
             searchContext,
             channelId,
             index,
@@ -295,7 +295,7 @@ export default noop.memo(
         const items9 = [onPressGuildVoiceChannel, searchContext];
         const callback1 = stateFromStores1.useCallback((channelId, index) => {
           onPressGuildVoiceChannel(channelId);
-          const result = search_tracking_TrackingDefault.trackSearchResultClicked({
+          const result = tracking_TrackingDefault.trackSearchResultClicked({
             searchContext,
             channelId,
             index,
@@ -348,7 +348,7 @@ export default noop.memo(
             items.push(element1);
             closure_0 = stateFromStores2;
             closure_1 = closure_5;
-            const sorted = stateFromStores1.sort((channel, channel2) => {
+            const sorted = stateFromStores1.sort(function sort(channel, channel2) {
               channel = channel.channel;
               let tmp = closure_0;
               let tmp3 = closure_0;

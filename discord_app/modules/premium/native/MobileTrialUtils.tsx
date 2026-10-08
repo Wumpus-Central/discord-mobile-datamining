@@ -14,7 +14,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const dependencyMap = PremiumConstants.PremiumSubscriptionSKUToPremiumType;
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShouldShowPremiumTrialUserSettingsAvatarBadge() {
       const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
       let tmp3 = null != premiumTrialOffer;
       const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(
@@ -32,7 +32,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : () => {
+  : function useShouldShowPremiumTrialUserSettingsAvatarBadge() {
       const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
       let tmp3 = null != premiumTrialOffer;
       const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(
@@ -52,7 +52,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function usePremiumTrialOfferPremiumType() {
       const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
       let skuId;
       if (premiumTrialOffer != null) {
@@ -63,7 +63,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return dependencyMap[skuId];
     }
-  : () => {
+  : function usePremiumTrialOfferPremiumType() {
       const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
       let skuId;
       if (premiumTrialOffer != null) {
@@ -79,7 +79,7 @@ let result = size.fileFinishedImporting("modules/premium/native/MobileTrialUtils
 export const useShouldShowPremiumTrialUserSettingsAvatarBadge = tmp2;
 export const usePremiumTrialOfferPremiumType = tmp3;
 export const useNitroTrialCtaOverride = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useNitroTrialCtaOverride(location) {
       const cResult = c.c(3);
       const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
       let subscriptionTrial;
@@ -114,7 +114,7 @@ export const useNitroTrialCtaOverride = ReactCompilerGating.isReactCompilerEnabl
         tmpResult = AndroidTwoWeekTrialsExperiment;
       }
     }
-  : (location) => {
+  : function useNitroTrialCtaOverride(location) {
       const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
       let subscriptionTrial;
       if (premiumTrialOffer != null) {

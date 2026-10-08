@@ -9,7 +9,7 @@ require = fn;
 function Layer(zIndex) {
   zIndex = zIndex.zIndex;
   _slicedToArray = undefined;
-  const context = noop.useContext(zIndex(6659).LayerContext);
+  const context = noop.useContext(zIndex(6836).LayerContext);
   dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
   _slicedToArray = noop.useRef(null);
   const items = [context];
@@ -47,7 +47,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Layers/native/LayerScope.native.tsx");
 
 export const LayerScope = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function LayerScope(arg0) {
       const cResult = c.c(7);
       ({ children, zIndex } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -88,7 +88,7 @@ export const LayerScope = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp11;
       tmp10 = tmp11;
     }
-  : (arg0) => {
+  : function LayerScope(arg0) {
       ({ children, zIndex } = arg0);
       const obj = {
         value: useInitialValueDefault(() => {

@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((left, marginTop) => {
   const obj = { container: null };
   const obj2 = {};
@@ -32,7 +32,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsEmptyChatPanel.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function MainTabsEmptyChatPanel() {
       const cResult = c.c(3);
       const drawerWidth = useDrawerWidth.useDrawerWidth();
       let container = closure_6(drawerWidth, useSafeAreaInsetsDefault().top);
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj3 = FavoritesHooks;
     }
-  : () => {
+  : function MainTabsEmptyChatPanel() {
       const drawerWidth = useDrawerWidth.useDrawerWidth();
       const tmp4 = closure_6(drawerWidth, useSafeAreaInsetsDefault().top);
       let tmp5 = null;

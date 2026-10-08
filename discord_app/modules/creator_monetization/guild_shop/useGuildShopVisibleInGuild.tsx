@@ -12,7 +12,7 @@ const GuildFeatures = Constants.GuildFeatures;
 let result = size.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx");
 
 export const useGuildShopVisibleInGuild = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useGuildShopVisibleInGuild(id) {
       c.c(5);
       id = undefined;
       if (id != null) {
@@ -38,7 +38,7 @@ export const useGuildShopVisibleInGuild = ReactCompilerGating.isReactCompilerEna
         ).shouldHideGuildPurchaseEntryPoints;
       return false;
     }
-  : (id) => {
+  : function useGuildShopVisibleInGuild(id) {
       id = undefined;
       if (id != null) {
         id = id.id;

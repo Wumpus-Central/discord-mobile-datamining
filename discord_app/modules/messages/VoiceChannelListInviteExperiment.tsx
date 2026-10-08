@@ -20,7 +20,7 @@ export const getVoiceChannelListInviteExperiment = function getVoiceChannelListI
   return closure_2.getCurrentConfig({ guildId: guildId.guildId, location: guildId.location });
 };
 export const useVoiceChannelListInviteExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useVoiceChannelListInviteExperiment(arg0) {
       const cResult = c.c(3);
       ({ guildId, location: _location } = arg0);
       if (cResult[0] === guildId) {
@@ -35,4 +35,6 @@ export const useVoiceChannelListInviteExperiment = ReactCompilerGating.isReactCo
       cResult[2] = obj2;
       tmp2 = obj2;
     }
-  : (guildId) => closure_2.useExperiment({ guildId: guildId.guildId, location: guildId.location });
+  : function useVoiceChannelListInviteExperiment(guildId) {
+      return closure_2.useExperiment({ guildId: guildId.guildId, location: guildId.location });
+    };

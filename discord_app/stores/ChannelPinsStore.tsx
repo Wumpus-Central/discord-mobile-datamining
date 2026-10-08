@@ -3,7 +3,7 @@ import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import MessageRecordUtils from "../modules/messages/MessageRecordUtils.tsx";
-import ExplicitMediaRedactionUtils from "../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import handleExplicitMediaScanTimeoutForMessage from "../modules/explicit_media_redaction/handleExplicitMediaScanTimeoutForMessage.tsx";
 import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
 import ChannelStore from "ChannelStore.tsx";
 import GuildMemberStore from "GuildMemberStore.tsx";
@@ -184,9 +184,10 @@ const channelPinsStore = new ChannelPinsStore(DispatcherDefault, {
       } else {
         const items = tmp.items;
         tmp.items = items.slice();
-        tmp.items[findIndexResult].message = ExplicitMediaRedactionUtils.handleExplicitMediaScanTimeoutForMessage(
-          tmp.items[findIndexResult].message,
-        );
+        tmp.items[findIndexResult].message =
+          handleExplicitMediaScanTimeoutForMessage.handleExplicitMediaScanTimeoutForMessage(
+            tmp.items[findIndexResult].message,
+          );
       }
     }
   },

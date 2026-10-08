@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/utils/useFrameBySurface.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useFrameBySurface(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(5);
@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(504).useStateFromStores(first, tmp6, tmp7);
       }
-      const fn = function s() {
+      const fn = function c() {
         if (null != closure_0) {
           return FramesStore.getFrameBySurface(tmp, closure_1);
         }
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useFrameBySurface(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const items = [FramesStore];

@@ -8,7 +8,7 @@ import TableRow from "../../../../../design/components/TableRow/native/TableRow.
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
 import NoResultsDefault from "../../shared_components/user_list/NoResults.tsx";
 import WumpusCouchSpotIllustration from "../../../../../design/components/mana-assets/native/generated/WumpusCouchSpotIllustration.native.tsx";
-import _modDef16424 from "../../../../../../_runtime/metro/16424__.js";
+import _modDef16684 from "../../../../../../_runtime/metro/16684__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GameRelationshipStore from "../../../../game_relationships/GameRelationshipStore.tsx";
 import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_8, flex: 1 },
   requestsButtonContainer: null,
@@ -42,7 +42,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendsScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function FriendsScreen() {
       const cResult = navigation(incoming[8]).c(57);
       let obj = navigation(incoming[8]);
       navigation = navigation(incoming[9]).useNavigation();
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[4] !== navigation) {
-        class F {
+        class T {
           constructor(arg0) {
             obj = { screen: "new-message", params: null };
             obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -112,9 +112,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[4] = navigation;
-        cResult[5] = F;
+        cResult[5] = T;
       } else {
-        class F {
+        class T {
           constructor(arg0) {
             obj = { screen: "new-message", params: null };
             obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        class F {
+        class T {
           constructor(arg0) {
             obj = { screen: "new-message", params: null };
             obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = items1;
         let tmp16 = items1;
       } else {
-        class F {
+        class T {
           constructor(arg0) {
             obj = { screen: "new-message", params: null };
             obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = outgoing.useEffect(tmp17, tmp16);
       if (cResult[8] === incoming) {
-        class F {
+        class T {
           constructor(arg0) {
             obj = { screen: "new-message", params: null };
             obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [];
       const sum = incoming + spam + pendingIgnored;
       if (sum <= 0) {
-        class F {
+        class T {
           constructor(arg0) {
             obj = { screen: "new-message", params: null };
             obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-        class F {
+        class T {
           constructor(arg0) {
             obj = { screen: "new-message", params: null };
             obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[14] = stringResult;
         const tmp20 = stringResult;
       } else {
-        class F {
+        class T {
           constructor(arg0) {
             obj = { screen: "new-message", params: null };
             obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -200,7 +200,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[15] === outgoing) {
-        class F {
+        class T {
           constructor(arg0) {
             obj = { screen: "new-message", params: null };
             obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[18] !== navigation) {
-          class F {
+          class T {
             constructor(arg0) {
               obj = { screen: "new-message", params: null };
               obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[18] = navigation;
           cResult[19] = tmp25;
         } else {
-          class F {
+          class T {
             constructor(arg0) {
               obj = { screen: "new-message", params: null };
               obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -233,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[20] === tmp22) {
-          class F {
+          class T {
             constructor(arg0) {
               obj = { screen: "new-message", params: null };
               obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[17] = formatToPlainStringResult;
       const tmpResult = navigation(incoming[14]);
     }
-  : () => {
+  : function FriendsScreen() {
       navigation = navigation(analyticsLocations[9]).useNavigation();
       let tmp2 = closure_9();
       importDefault = tmp2;
@@ -325,7 +325,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [];
         if (tmp2) {
           const obj = {
-            icon: _modDef16424,
+            icon: _modDef16684,
             IconComponent: SendMessageIcon.SendMessageIcon,
             iconVariant: "default",
             label: null,
@@ -374,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let v1IEawz = require;
           let obj9 = dependencyMap;
           let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-          const obj8 = { source: _modDef16424 };
+          const obj8 = { source: _modDef16684 };
           obj7.icon = React5(TableRow.TableRow.Icon, obj8);
           obj7.trailing = React5(TableRow.TableRow.Arrow, {});
           const intl5 = util.intl;

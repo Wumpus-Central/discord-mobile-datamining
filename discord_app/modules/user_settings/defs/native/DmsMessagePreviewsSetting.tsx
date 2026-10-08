@@ -10,10 +10,12 @@ require = fn;
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-fn = () => useMessagePreviews.useMessagePreviewSetting();
-const SettingBuilders = fn(11142);
+function useDMsMessagePreviewsValue() {
+  return useMessagePreviews.useMessagePreviewSetting();
+}
+const SettingBuilders = fn(11262);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDMsMessagePreviewsOptions() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { label: null, value: null };
@@ -38,8 +40,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      noop.useMemo(() => {
+  : function useDMsMessagePreviewsOptions() {
+      return noop.useMemo(() => {
         const obj = { label: null, value: null };
         const intl = util.intl;
         obj.label = intl.string(util.t["8K53DF"]);
@@ -57,19 +59,20 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         items[2] = obj3;
         return items;
       }, []);
+    };
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.OAOUoQ);
   },
-  parent: fn(7645).MobileUserSettings.APPEARANCE,
-  useValue: fn,
+  parent: fn(7966).MobileUserSettings.APPEARANCE,
+  useValue: useDMsMessagePreviewsValue,
   onValueChange: function onDMsMessagePreviewsValueChange(arg0) {
     const MessagePreviewSetting = UserSettings.MessagePreviewSetting;
     MessagePreviewSetting.updateSetting(arg0);
   },
   useOptions: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useDMsMessagePreviewsOptions() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { label: null, value: null };
@@ -94,8 +97,8 @@ const radio = SettingBuilders.createRadio({
         }
         return first;
       }
-    : () =>
-        noop.useMemo(() => {
+    : function useDMsMessagePreviewsOptions() {
+        return noop.useMemo(() => {
           const obj = { label: null, value: null };
           const intl = util.intl;
           obj.label = intl.string(util.t["8K53DF"]);
@@ -112,7 +115,8 @@ const radio = SettingBuilders.createRadio({
           obj3.value = ChannelListLayoutTypes.MessagePreviewTypes.NONE;
           items[2] = obj3;
           return items;
-        }, []),
+        }, []);
+      },
 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/DmsMessagePreviewsSetting.tsx");

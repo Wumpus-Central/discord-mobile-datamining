@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: null,
   contentContainer: null,
@@ -46,7 +46,7 @@ obj2.buttonsContainer = { flexDirection: "row", marginTop: nativeDefault.space.P
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function SafetyWarningBanner(channelId) {
       const cResult = channelId(senderId[6]).c(45);
       channelId = channelId.channelId;
       const warningId = channelId.warningId;
@@ -332,7 +332,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = fn2;
       let obj = channelId(senderId[6]);
     }
-  : (channelId) => {
+  : function SafetyWarningBanner(channelId) {
       channelId = channelId.channelId;
       const warningId = channelId.warningId;
       const senderId = channelId.senderId;

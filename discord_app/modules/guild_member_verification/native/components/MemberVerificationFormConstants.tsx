@@ -14,7 +14,7 @@ export const AVATAR_SIZE = 76;
 export const AVATAR_BORDER_WIDTH = 6;
 export const SCROLL_EVENT_TIMER_MS = 16;
 export const useBannerHeight = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useBannerHeight() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { ignoreKeyboard: true };
@@ -26,7 +26,7 @@ export const useBannerHeight = ReactCompilerGating.isReactCompilerEnabled()
       const size = useWindowDimensionsDefault(first);
       return Math.min(size.width, size.height) * c3;
     }
-  : () => {
+  : function useBannerHeight() {
       const size = useWindowDimensionsDefault({ ignoreKeyboard: true });
       return Math.min(size.width, size.height) * c3;
     };

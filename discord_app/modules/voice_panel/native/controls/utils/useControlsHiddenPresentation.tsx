@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (mode, wrapperSpecs, arg2) => {
+  ? function useControlsHiddenPresentation(mode, wrapperSpecs, arg2) {
       _require = mode;
       dependencyMap = wrapperSpecs;
       let obj = arg2;
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj5;
       tmp7 = obj5;
     }
-  : (mode, wrapperSpecs) => {
+  : function useControlsHiddenPresentation(mode, wrapperSpecs) {
       _require = mode;
       dependencyMap = wrapperSpecs;
       let obj = arg2;

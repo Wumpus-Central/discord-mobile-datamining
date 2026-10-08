@@ -10,10 +10,10 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const HAPPENING_NOW_CONTENT_HEIGHT = fn(15129).HAPPENING_NOW_CONTENT_HEIGHT;
+const HAPPENING_NOW_CONTENT_HEIGHT = fn(15391).HAPPENING_NOW_CONTENT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   placeholderContainer: { flexDirection: "row", alignItems: "center" },
   placeholderIcon: null,
@@ -49,7 +49,7 @@ const __initData2 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (duration) => {
+  ? function useBlinkStyle(duration) {
       const cResult = duration(sharedValue[7]).c(5);
       duration = duration.duration;
       const endOpacity = duration.endOpacity;
@@ -109,7 +109,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       let obj2 = duration(sharedValue[8]);
     }
-  : (duration) => {
+  : function useBlinkStyle(duration) {
       duration = duration.duration;
       const endOpacity = duration.endOpacity;
       let sharedValue;
@@ -157,7 +157,7 @@ let result = size.fileFinishedImporting(
 );
 
 export const HappeningNowCardPlaceholder = ReactCompilerGating.isReactCompilerEnabled()
-  ? (panelVariant) => {
+  ? function HappeningNowCardPlaceholder(panelVariant) {
       const cResult = c.c(24);
       panelVariant = panelVariant.panelVariant;
       let tmp3 = undefined !== panelVariant;
@@ -272,7 +272,7 @@ export const HappeningNowCardPlaceholder = ReactCompilerGating.isReactCompilerEn
       cResult[3] = items4;
       tmp7 = items4;
     }
-  : (panelVariant) => {
+  : function HappeningNowCardPlaceholder(panelVariant) {
       let flag = panelVariant.panelVariant;
       if (flag === undefined) {
         flag = false;

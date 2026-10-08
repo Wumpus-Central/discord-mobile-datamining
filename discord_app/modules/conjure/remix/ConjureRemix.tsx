@@ -1,5 +1,4 @@
 // discord_app/modules/conjure/remix/ConjureRemix.tsx
-import ConjureTypes from "../ConjureTypes.tsx";
 import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -40,18 +39,15 @@ let closure_9 = async function _remixConjureProjectInto(arg0) {
             let Cn8H0Y;
             closure_130_1 = null;
             c5 = 1;
-            const obj4 = { name: null, guild_id: null, install_scope: null, flags: null };
+            const obj4 = { name: null, guild_id: null, install_scope: null };
             const name = closure_0.name;
             const _HermesInternal = HermesInternal;
             obj4.name = "" + name.slice(0, 120) + closure_2_8;
             obj4.guild_id = guild_id;
             obj4.install_scope = closure_0.install_scope;
-            const obj13 = ConjureActionCreators;
-            const obj15 = ConjureTypes;
-            obj4.flags = obj15.conjureCreateFlags(ConjureTypes.projectUsesNativeAppChannels(closure_0));
             c6 = 2;
             c7 = 1;
-            const obj5 = { value: obj13.createProject(obj4), done: false };
+            const obj5 = { value: ConjureActionCreators.createProject(obj4), done: false };
             return obj5;
           }
         } else {
@@ -98,8 +94,8 @@ let closure_9 = async function _remixConjureProjectInto(arg0) {
             } else {
               c5 = 0;
               closure_131_5(closure_130_1);
-              const intl2 = closure_131_0(closure_131_2[5]).intl;
-              closure_131_7(closure_130_1, intl2.string(closure_131_1(closure_131_2[4]).jviD6Y), undefined, { remix: true });
+              const intl2 = closure_131_0(closure_131_2[4]).intl;
+              closure_131_7(closure_130_1, intl2.string(closure_131_1(closure_131_2[3]).jviD6Y), undefined, { remix: true });
               const obj11 = { ok: true, projectId: closure_130_1 };
               c7 = 3;
               const obj12 = { value: obj11, done: true };
@@ -114,13 +110,13 @@ let closure_9 = async function _remixConjureProjectInto(arg0) {
             return obj;
           }
           if (!(closure_130_3 instanceof closure_131_4)) {
-            Cn8H0Y = closure_131_1(closure_131_2[4]).Cn8H0Y;
-            const intl = closure_131_0(closure_131_2[5]).intl;
+            Cn8H0Y = closure_131_1(closure_131_2[3]).Cn8H0Y;
+            const intl = closure_131_0(closure_131_2[4]).intl;
             { ok: false, message: null }.message = intl.string(Cn8H0Y);
             c7 = 3;
             const obj14 = { ok: false, message: null };
           }
-          const kQerlZ = closure_131_1(closure_131_2[4]).kQerlZ;
+          const kQerlZ = closure_131_1(closure_131_2[3]).kQerlZ;
         }
       } catch (tmp39) {
         closure_4 = tmp39;
@@ -134,7 +130,7 @@ let closure_9 = async function _remixConjureProjectInto(arg0) {
     }
   })();
 };
-const ConjureConnectionStore = fn(12923);
+const ConjureConnectionStore = fn(13072);
 ({ ConjureRemixError: closure_4, ensureConnection: hasOwnProperty, remixProjectWorkspace: metroRequire, sendUserMessage: closure_7 } = ConjureConnectionStore);
 let c8 = " (Remix)";
 const size = fn(2);

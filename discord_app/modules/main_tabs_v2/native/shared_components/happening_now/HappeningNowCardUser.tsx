@@ -1,24 +1,24 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../../../stores/PresenceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(15129).HappeningNowCardTrackingType;
+let closure_7 = fn(15391).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
-const LARGE = fn(1188).AvatarSizes.LARGE;
-const createStyles = fn(4896);
+const LARGE = fn(1200).AvatarSizes.LARGE;
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({ content: { flex: 1, display: "flex", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx",
 );
 
-export default noop.memo((index) => {
+export default noop.memo(function HappeningNowCardUser(index) {
   index = index.index;
   const userId = index.userId;
   const guildId = index.guildId;
@@ -39,10 +39,10 @@ export default noop.memo((index) => {
     obj2.highlighted_user_ids = items;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stateFromStores) {
-      asyncRequireImpl(7861, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8279, dependencyMap.paths).then((result) =>
         result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(7861, dependencyMap.paths);
+      const promise = asyncRequireImpl(8279, dependencyMap.paths);
     }
   }, items2);
   let obj = index(guildId[10]);

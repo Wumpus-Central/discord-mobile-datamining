@@ -3,26 +3,26 @@ import util from "../../intl/index.native.tsx";
 import EnhancedRoleColorUtils from "../premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
-import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import MarkupLinkRule from "MarkupLinkRule.tsx";
 import useHasEnhancedRoleColors from "../premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
+import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import StaticRouteRendering from "StaticRouteRendering.tsx";
 import MarkupTextRuleDefault from "MarkupTextRule.tsx";
 import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule.tsx";
 import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule.tsx";
 import getSoundmojiASTFromString from "../premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx";
-import TimestampUtils from "TimestampUtils.tsx";
-import MarkupHeadingRuleDefault from "MarkupHeadingRule.tsx";
 import MarkupListRuleDefault from "MarkupListRule.tsx";
 import MarkupSubtextRuleDefault from "MarkupSubtextRule.tsx";
+import TimestampUtils from "TimestampUtils.tsx";
 import PlatformMarkupRulesDefault from "PlatformMarkupRules.native.tsx";
+import MarkupHeadingRuleDefault from "MarkupHeadingRule.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import _toArray from "../../../_runtime/00729__toArray.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import t_mod from "../../../_runtime/metro/01936__.js";
+import t_mod from "../../../_runtime/metro/01948__.js";
 import combineMarkupRules_mod from "combineMarkupRules.tsx";
 import "module_12";
 import apply_mod from "../../../_runtime/metro/00012__.js";
@@ -37,7 +37,7 @@ function parseLink(arg0) {
     const obj2 = { type: "text", content: arg0[1] };
     let obj3 = obj2;
   } else {
-    obj3 = { type: "link", content: null, target: null, title: "unicodeVersion" };
+    obj3 = { type: "link", content: null, target: null, title: "apply" };
     const obj4 = { type: "text", content: punycodeLinkResult.displayTarget };
     const items = [obj4];
     obj3.content = items;
@@ -194,31 +194,23 @@ function hydrateUserMention(everyoneOrHere, channelId) {
   return obj;
 }
 function hydrateStaticRouteLink(id, itemId, guildId) {
-  const result = StaticRouteRendering.staticRouteToTranslation(id);
-  if (null != guildId.guildId) {
-    guild = GuildStore.getGuild(guildId.guildId);
-  } else {
-    guild = null;
-    if (null != guildId.channelId) {
-      const channel = ChannelStore.getChannel(guildId.channelId);
-      guildId = undefined;
-      if (channel != null) {
-        guildId = channel.getGuildId();
-      }
-      guild = GuildStore.getGuild(guildId);
+  guildId = guildId.guildId;
+  if (guildId == null) {
+    const channel = ChannelStore.getChannel(guildId.channelId);
+    let guildId1;
+    if (channel != null) {
+      guildId1 = channel.getGuildId();
     }
+    guildId = guildId1;
   }
-  id = undefined;
-  if (guild != null) {
-    id = guild.id;
-  }
-  const result1 = StaticRouteRendering.staticRouteToItemString(GuildRoleStore, id, itemId, id);
+  const result = StaticRouteRendering.staticRouteToTranslation(id);
+  const result1 = StaticRouteRendering.staticRouteToItemString(GuildRoleStore, id, itemId, guildId);
   let str = "";
   if (null != result1) {
     const _HermesInternal = HermesInternal;
     str = " \u203A " + result1;
   }
-  const obj3 = {
+  const obj = {
     type: "staticRouteLink",
     content: null,
     mainContent: null,
@@ -229,36 +221,31 @@ function hydrateStaticRouteLink(id, itemId, guildId) {
     channelId: null,
   };
   const items = [{ type: "text", content: result + str }];
-  obj3.content = items;
-  let tmp11 = null;
+  obj.content = items;
+  let tmp6 = null;
   if (null != result) {
     const obj5 = { type: "text", content: result };
     const items1 = [obj5];
-    tmp11 = items1;
+    tmp6 = items1;
   }
-  obj3.mainContent = tmp11;
-  let tmp12 = null;
+  obj.mainContent = tmp6;
+  let tmp7 = null;
   if (null != result1) {
     const obj6 = { type: "text", content: result1 };
     const items2 = [obj6];
-    tmp12 = items2;
+    tmp7 = items2;
   }
-  obj3.itemContent = tmp12;
-  obj3.itemId = itemId;
-  obj3.id = id;
-  const channel1 = ChannelStore.getChannel(guildId.channelId);
-  let guildId1;
-  if (channel1 != null) {
-    guildId1 = channel1.getGuildId();
-  }
-  obj3.guildId = guildId1;
-  obj3.channelId = id;
-  return obj3;
+  obj.itemContent = tmp7;
+  obj.itemId = itemId;
+  obj.id = id;
+  obj.guildId = guildId;
+  obj.channelId = id;
+  return obj;
 }
 const Constants = fn(1085);
 ({ ID_REGEX: closure_9, MARKDOWN_SPOILER_REGEXP: c10, MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11 } = Constants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5795).SUB_COMMAND_KEY_SEPARATOR;
-const GAME_MENTION_RAW_RE = fn(5796).GAME_MENTION_RAW_RE;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5399).SUB_COMMAND_KEY_SEPARATOR;
+const GAME_MENTION_RAW_RE = fn(5400).GAME_MENTION_RAW_RE;
 const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
 const re15 = /^$|\n *$/;
 const re16 = /^ *>>> ?/;

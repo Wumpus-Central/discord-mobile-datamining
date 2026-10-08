@@ -6,27 +6,27 @@ import AvatarUtils from "../../../utils/AvatarUtils.tsx";
 import shared from "../../../design/shared.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import hasRichActivityDefault from "../../activities/utils/hasRichActivity.tsx";
-import StreamActionCreators from "../../../actions/StreamActionCreators.tsx";
 import useChannelNameDefault from "../../channel/useChannelName.tsx";
-import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
-import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUtils.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../actions/SelectedChannelActionCreators.tsx";
-import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import UserProfileCardDefault from "UserProfileCard.tsx";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
 import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
+import StreamActionCreators from "../../../actions/StreamActionCreators.tsx";
+import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUtils.tsx";
+import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
 import isStreamingDefault from "../../activities/utils/isStreaming.tsx";
 import isCrunchyrollActivityDefault from "../../activities/utils/isCrunchyrollActivity.tsx";
 import MaskedLinkUtils from "../../../utils/MaskedLinkUtils.tsx";
-import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
-import closeVoicePanelsDefault from "../../voice_panel/native/utils/closeVoicePanels.tsx";
 import getChannelA11yLabelDefault from "../../channel/getChannelA11yLabel.tsx";
 import isGameActivityDefault from "../../activities/utils/isGameActivity.tsx";
 import isListeningOnSpotifyDefault from "../../activities/utils/isListeningOnSpotify.tsx";
 import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon.tsx";
+import closeVoicePanelsDefault from "../../voice_panel/native/utils/closeVoicePanels.tsx";
 import UserActivitySpotify from "../../now_playing/native/UserActivitySpotify.tsx";
 import isOnXboxDefault from "../../activities/utils/isOnXbox.tsx";
 import isOnPlayStationDefault from "../../activities/utils/isOnPlayStation.tsx";
@@ -50,12 +50,12 @@ import SelfPresenceStore from "../../../stores/SelfPresenceStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 import UserProfileStore from "../UserProfileStore.tsx";
 
-const Text_Text = Text(4892);
+const Text_Text = Text(5086);
 require = fn;
 let user = ["children"];
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_7, TouchableWithoutFeedback: closure_8, View: closure_9 } = get_ActivityIndicator);
-const CARD_PADDING = fn(6714).CARD_PADDING;
+const CARD_PADDING = fn(6891).CARD_PADDING;
 const Constants = fn(1085);
 ({
   ActivityTypes: closure_19,
@@ -65,7 +65,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24, Fragment: closure_25 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   card: { gap: 12 },
   cardTitle: { marginBottom: 0 },
@@ -117,7 +117,7 @@ obj2.voiceSettingsDivider = {
   paddingHorizontal: CARD_PADDING,
 };
 obj2.voiceCallContent = { flex: 1, gap: 4 };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 12;
@@ -126,7 +126,7 @@ obj2.voiceCallNameIconWrapper = { width: 22, height: num, justifyContent: "cente
 let closure_26 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function ActivityCardText(children) {
       let Text = require;
       let tmp = dependencyMap;
       const cResult = c.c(8);
@@ -171,7 +171,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : (children) => {
+  : function ActivityCardText(children) {
       const merged = Object.assign(children, Object.assign({ children: 0 }));
       let trimmed = str;
       if (typeof children.children === "string") {
@@ -191,7 +191,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (href) => {
+  ? function MaybeLink(href) {
       const cResult = href(576).c(5);
       href = href.href;
       const children = href.children;
@@ -218,7 +218,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = href(576);
     }
-  : (href) => {
+  : function MaybeLink(href) {
       href = href.href;
       const children = href.children;
       let tmp = children;
@@ -236,7 +236,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function ActivityCardBody(user) {
       const cResult = user(onAction[20]).c(45);
       user = user.user;
       const activity = user.activity;
@@ -278,1129 +278,178 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                                     let tmp7 = cResult[19];
                                   }
                                   if (cResult[20] !== activity) {
-                                    class T {
-                                      constructor() {
-                                        tmp = closure_1;
-                                        obj = closure_2;
-                                        tmp2 = activity;
-                                        if (!closure_1(closure_2[25])(activity)) {
-                                          tmp3 = ActivityTypes;
-                                          if (tmp2.type !== ActivityTypes.WATCHING) {
-                                            if (tmp(obj[33])(tmp2)) {
-                                              if (!tmp(obj[34])(tmp2)) {
-                                                tmp4 = null;
-                                                if (null != tmp2.party) {
-                                                  return null;
-                                                }
+                                    function renderState() {
+                                      let obj = dependencyMap;
+                                      if (!isListeningOnSpotifyDefault(activity)) {
+                                        if (activity.type !== constants.WATCHING) {
+                                          if (isGameActivityDefault(activity)) {
+                                            if (!isEmbeddedActivityDefault(activity)) {
+                                              if (null != activity.party) {
+                                                return null;
                                               }
-                                            }
-                                            if (tmp(obj[33])(tmp2)) {
-                                              party = tmp2.party;
-                                              tmp11 = null;
-                                              size = undefined;
-                                              if (party != null) {
-                                                size = party.size;
-                                              }
-                                              tmp13 = null != size;
-                                              if (tmp13) {
-                                                num = 2;
-                                                tmp13 = tmp2.party.size.length >= 2;
-                                              }
-                                              str = "";
-                                              if (!tmp13) {
-                                                tmp18 = jsx;
-                                                tmp19 = f62299;
-                                                obj1 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                items = [,];
-                                                items[0] = tmp2.state;
-                                                items[1] = "";
-                                                str2 = " ";
-                                                obj1.children = items.join(" ");
-                                                return jsx(f62299, obj1);
-                                              } else {
-                                                num2 = 0;
-                                                if (0 === tmp2.party.size[1]) {
-                                                  tmp16 = closure_0;
-                                                  intl2 = closure_0(obj[26]).intl;
-                                                  obj = { count: null };
-                                                  obj.count = tmp2.party.size[0];
-                                                  formatToPlainStringResult = intl2.formatToPlainString(
-                                                    closure_0(obj[26]).t.IM4J4e,
-                                                    obj,
-                                                  );
-                                                } else {
-                                                  tmp14 = closure_0;
-                                                  intl = closure_0(obj[26]).intl;
-                                                  obj6 = { count: null, max: null };
-                                                  obj6.count = tmp2.party.size[0];
-                                                  obj6.max = tmp2.party.size[1];
-                                                  formatToPlainStringResult = intl.formatToPlainString(
-                                                    closure_0(obj[26]).t["u//9By"],
-                                                    obj6,
-                                                  );
-                                                }
-                                                tmp17 = formatToPlainStringResult;
-                                              }
-                                            } else {
-                                              tmp5 = jsx;
-                                              assets = tmp2.assets;
-                                              tmp7 = null;
-                                              large_url = undefined;
-                                              tmp6 = f62301;
-                                              if (assets != null) {
-                                                large_url = assets.large_url;
-                                              }
-                                              obj7 = { href: null, children: null };
-                                              obj7.href = large_url;
-                                              assets2 = tmp2.assets;
-                                              large_text = undefined;
-                                              tmp9 = f62299;
-                                              if (assets2 != null) {
-                                                large_text = assets2.large_text;
-                                              }
-                                              obj8 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                              obj8.children = large_text;
-                                              obj7.children = tmp5(tmp9, obj8);
-                                              return tmp5(tmp6, obj7);
                                             }
                                           }
+                                          if (isGameActivityDefault(activity)) {
+                                            const party = activity.party;
+                                            let size;
+                                            if (party != null) {
+                                              size = party.size;
+                                            }
+                                            let tmp13 = null != size;
+                                            if (tmp13) {
+                                              tmp13 = activity.party.size.length >= 2;
+                                            }
+                                            if (!tmp13) {
+                                              const obj2 = { variant: "text-xs/medium", lineClamp: 1, children: null };
+                                              const items = [activity.state, ""];
+                                              obj2.children = items.join(" ");
+                                              return closure_2_23(closure_27, obj2);
+                                            } else if (0 === activity.party.size[1]) {
+                                              const intl2 = util.intl;
+                                              obj = { count: activity.party.size[0] };
+                                              let formatToPlainStringResult = intl2.formatToPlainString(
+                                                util.t.IM4J4e,
+                                                obj,
+                                              );
+                                            } else {
+                                              const intl = util.intl;
+                                              const obj3 = {
+                                                count: activity.party.size[0],
+                                                max: activity.party.size[1],
+                                              };
+                                              formatToPlainStringResult = intl.formatToPlainString(
+                                                util.t["u//9By"],
+                                                obj3,
+                                              );
+                                            }
+                                          } else {
+                                            const assets = activity.assets;
+                                            let large_url;
+                                            if (assets != null) {
+                                              large_url = assets.large_url;
+                                            }
+                                            const obj4 = { href: large_url, children: null };
+                                            const assets2 = activity.assets;
+                                            let large_text;
+                                            if (assets2 != null) {
+                                              large_text = assets2.large_text;
+                                            }
+                                            const obj5 = {
+                                              variant: "text-xs/medium",
+                                              lineClamp: 1,
+                                              children: large_text,
+                                            };
+                                            obj4.children = closure_2_23(closure_27, obj5);
+                                            return closure_2_23(closure_28, obj4);
+                                          }
                                         }
-                                        return null;
                                       }
+                                      return null;
                                     }
                                     cResult[20] = activity;
-                                    cResult[21] = T;
+                                    cResult[21] = renderState;
+                                    let tmp8 = renderState;
                                   } else {
-                                    class T {
-                                      constructor() {
-                                        tmp = closure_1;
-                                        obj = closure_2;
-                                        tmp2 = activity;
-                                        if (!closure_1(closure_2[25])(activity)) {
-                                          tmp3 = ActivityTypes;
-                                          if (tmp2.type !== ActivityTypes.WATCHING) {
-                                            if (tmp(obj[33])(tmp2)) {
-                                              if (!tmp(obj[34])(tmp2)) {
-                                                tmp4 = null;
-                                                if (null != tmp2.party) {
-                                                  return null;
-                                                }
-                                              }
-                                            }
-                                            if (tmp(obj[33])(tmp2)) {
-                                              party = tmp2.party;
-                                              tmp11 = null;
-                                              size = undefined;
-                                              if (party != null) {
-                                                size = party.size;
-                                              }
-                                              tmp13 = null != size;
-                                              if (tmp13) {
-                                                num = 2;
-                                                tmp13 = tmp2.party.size.length >= 2;
-                                              }
-                                              str = "";
-                                              if (!tmp13) {
-                                                tmp18 = jsx;
-                                                tmp19 = f62299;
-                                                obj1 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                items = [,];
-                                                items[0] = tmp2.state;
-                                                items[1] = "";
-                                                str2 = " ";
-                                                obj1.children = items.join(" ");
-                                                return jsx(f62299, obj1);
-                                              } else {
-                                                num2 = 0;
-                                                if (0 === tmp2.party.size[1]) {
-                                                  tmp16 = closure_0;
-                                                  intl2 = closure_0(obj[26]).intl;
-                                                  obj = { count: null };
-                                                  obj.count = tmp2.party.size[0];
-                                                  formatToPlainStringResult = intl2.formatToPlainString(
-                                                    closure_0(obj[26]).t.IM4J4e,
-                                                    obj,
-                                                  );
-                                                } else {
-                                                  tmp14 = closure_0;
-                                                  intl = closure_0(obj[26]).intl;
-                                                  obj6 = { count: null, max: null };
-                                                  obj6.count = tmp2.party.size[0];
-                                                  obj6.max = tmp2.party.size[1];
-                                                  formatToPlainStringResult = intl.formatToPlainString(
-                                                    closure_0(obj[26]).t["u//9By"],
-                                                    obj6,
-                                                  );
-                                                }
-                                                tmp17 = formatToPlainStringResult;
-                                              }
-                                            } else {
-                                              tmp5 = jsx;
-                                              assets = tmp2.assets;
-                                              tmp7 = null;
-                                              large_url = undefined;
-                                              tmp6 = f62301;
-                                              if (assets != null) {
-                                                large_url = assets.large_url;
-                                              }
-                                              obj7 = { href: null, children: null };
-                                              obj7.href = large_url;
-                                              assets2 = tmp2.assets;
-                                              large_text = undefined;
-                                              tmp9 = f62299;
-                                              if (assets2 != null) {
-                                                large_text = assets2.large_text;
-                                              }
-                                              obj8 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                              obj8.children = large_text;
-                                              obj7.children = tmp5(tmp9, obj8);
-                                              return tmp5(tmp6, obj7);
-                                            }
-                                          }
-                                        }
-                                        return null;
-                                      }
-                                    }
+                                    tmp8 = cResult[21];
                                   }
                                   if (cResult[22] === tmp5) {
-                                    class T {
-                                      constructor() {
-                                        tmp = closure_1;
-                                        obj = closure_2;
-                                        tmp2 = activity;
-                                        if (!closure_1(closure_2[25])(activity)) {
-                                          tmp3 = ActivityTypes;
-                                          if (tmp2.type !== ActivityTypes.WATCHING) {
-                                            if (tmp(obj[33])(tmp2)) {
-                                              if (!tmp(obj[34])(tmp2)) {
-                                                tmp4 = null;
-                                                if (null != tmp2.party) {
-                                                  return null;
-                                                }
-                                              }
-                                            }
-                                            if (tmp(obj[33])(tmp2)) {
-                                              party = tmp2.party;
-                                              tmp11 = null;
-                                              size = undefined;
-                                              if (party != null) {
-                                                size = party.size;
-                                              }
-                                              tmp13 = null != size;
-                                              if (tmp13) {
-                                                num = 2;
-                                                tmp13 = tmp2.party.size.length >= 2;
-                                              }
-                                              str = "";
-                                              if (!tmp13) {
-                                                tmp18 = jsx;
-                                                tmp19 = f62299;
-                                                obj1 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                items = [,];
-                                                items[0] = tmp2.state;
-                                                items[1] = "";
-                                                str2 = " ";
-                                                obj1.children = items.join(" ");
-                                                return jsx(f62299, obj1);
-                                              } else {
-                                                num2 = 0;
-                                                if (0 === tmp2.party.size[1]) {
-                                                  tmp16 = closure_0;
-                                                  intl2 = closure_0(obj[26]).intl;
-                                                  obj = { count: null };
-                                                  obj.count = tmp2.party.size[0];
-                                                  formatToPlainStringResult = intl2.formatToPlainString(
-                                                    closure_0(obj[26]).t.IM4J4e,
-                                                    obj,
-                                                  );
-                                                } else {
-                                                  tmp14 = closure_0;
-                                                  intl = closure_0(obj[26]).intl;
-                                                  obj6 = { count: null, max: null };
-                                                  obj6.count = tmp2.party.size[0];
-                                                  obj6.max = tmp2.party.size[1];
-                                                  formatToPlainStringResult = intl.formatToPlainString(
-                                                    closure_0(obj[26]).t["u//9By"],
-                                                    obj6,
-                                                  );
-                                                }
-                                                tmp17 = formatToPlainStringResult;
-                                              }
-                                            } else {
-                                              tmp5 = jsx;
-                                              assets = tmp2.assets;
-                                              tmp7 = null;
-                                              large_url = undefined;
-                                              tmp6 = f62301;
-                                              if (assets != null) {
-                                                large_url = assets.large_url;
-                                              }
-                                              obj7 = { href: null, children: null };
-                                              obj7.href = large_url;
-                                              assets2 = tmp2.assets;
-                                              large_text = undefined;
-                                              tmp9 = f62299;
-                                              if (assets2 != null) {
-                                                large_text = assets2.large_text;
-                                              }
-                                              obj8 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                              obj8.children = large_text;
-                                              obj7.children = tmp5(tmp9, obj8);
-                                              return tmp5(tmp6, obj7);
-                                            }
-                                          }
-                                        }
-                                        return null;
-                                      }
+                                    if (cResult[23] === user.bot) {
+                                      let tmp10 = cResult[24];
                                     }
-                                    const content = tmp3.content;
                                     if (cResult[25] !== tmp6) {
-                                      class T {
-                                        constructor() {
-                                          tmp = closure_1;
-                                          obj = closure_2;
-                                          tmp2 = activity;
-                                          if (!closure_1(closure_2[25])(activity)) {
-                                            tmp3 = ActivityTypes;
-                                            if (tmp2.type !== ActivityTypes.WATCHING) {
-                                              if (tmp(obj[33])(tmp2)) {
-                                                if (!tmp(obj[34])(tmp2)) {
-                                                  tmp4 = null;
-                                                  if (null != tmp2.party) {
-                                                    return null;
-                                                  }
-                                                }
-                                              }
-                                              if (tmp(obj[33])(tmp2)) {
-                                                party = tmp2.party;
-                                                tmp11 = null;
-                                                size = undefined;
-                                                if (party != null) {
-                                                  size = party.size;
-                                                }
-                                                tmp13 = null != size;
-                                                if (tmp13) {
-                                                  num = 2;
-                                                  tmp13 = tmp2.party.size.length >= 2;
-                                                }
-                                                str = "";
-                                                if (!tmp13) {
-                                                  tmp18 = jsx;
-                                                  tmp19 = f62299;
-                                                  obj1 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                  items = [,];
-                                                  items[0] = tmp2.state;
-                                                  items[1] = "";
-                                                  str2 = " ";
-                                                  obj1.children = items.join(" ");
-                                                  return jsx(f62299, obj1);
-                                                } else {
-                                                  num2 = 0;
-                                                  if (0 === tmp2.party.size[1]) {
-                                                    tmp16 = closure_0;
-                                                    intl2 = closure_0(obj[26]).intl;
-                                                    obj = { count: null };
-                                                    obj.count = tmp2.party.size[0];
-                                                    formatToPlainStringResult = intl2.formatToPlainString(
-                                                      closure_0(obj[26]).t.IM4J4e,
-                                                      obj,
-                                                    );
-                                                  } else {
-                                                    tmp14 = closure_0;
-                                                    intl = closure_0(obj[26]).intl;
-                                                    obj6 = { count: null, max: null };
-                                                    obj6.count = tmp2.party.size[0];
-                                                    obj6.max = tmp2.party.size[1];
-                                                    formatToPlainStringResult = intl.formatToPlainString(
-                                                      closure_0(obj[26]).t["u//9By"],
-                                                      obj6,
-                                                    );
-                                                  }
-                                                  tmp17 = formatToPlainStringResult;
-                                                }
-                                              } else {
-                                                tmp5 = jsx;
-                                                assets = tmp2.assets;
-                                                tmp7 = null;
-                                                large_url = undefined;
-                                                tmp6 = f62301;
-                                                if (assets != null) {
-                                                  large_url = assets.large_url;
-                                                }
-                                                obj7 = { href: null, children: null };
-                                                obj7.href = large_url;
-                                                assets2 = tmp2.assets;
-                                                large_text = undefined;
-                                                tmp9 = f62299;
-                                                if (assets2 != null) {
-                                                  large_text = assets2.large_text;
-                                                }
-                                                obj8 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                obj8.children = large_text;
-                                                obj7.children = tmp5(tmp9, obj8);
-                                                return tmp5(tmp6, obj7);
-                                              }
-                                            }
-                                          }
-                                          return null;
-                                        }
-                                      }
+                                      const tmp6Result = tmp6();
                                       cResult[25] = tmp6;
-                                      cResult[26] = tmp12;
+                                      cResult[26] = tmp6Result;
+                                      let tmp12 = tmp6Result;
                                     } else {
-                                      class T {
-                                        constructor() {
-                                          tmp = closure_1;
-                                          obj = closure_2;
-                                          tmp2 = activity;
-                                          if (!closure_1(closure_2[25])(activity)) {
-                                            tmp3 = ActivityTypes;
-                                            if (tmp2.type !== ActivityTypes.WATCHING) {
-                                              if (tmp(obj[33])(tmp2)) {
-                                                if (!tmp(obj[34])(tmp2)) {
-                                                  tmp4 = null;
-                                                  if (null != tmp2.party) {
-                                                    return null;
-                                                  }
-                                                }
-                                              }
-                                              if (tmp(obj[33])(tmp2)) {
-                                                party = tmp2.party;
-                                                tmp11 = null;
-                                                size = undefined;
-                                                if (party != null) {
-                                                  size = party.size;
-                                                }
-                                                tmp13 = null != size;
-                                                if (tmp13) {
-                                                  num = 2;
-                                                  tmp13 = tmp2.party.size.length >= 2;
-                                                }
-                                                str = "";
-                                                if (!tmp13) {
-                                                  tmp18 = jsx;
-                                                  tmp19 = f62299;
-                                                  obj1 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                  items = [,];
-                                                  items[0] = tmp2.state;
-                                                  items[1] = "";
-                                                  str2 = " ";
-                                                  obj1.children = items.join(" ");
-                                                  return jsx(f62299, obj1);
-                                                } else {
-                                                  num2 = 0;
-                                                  if (0 === tmp2.party.size[1]) {
-                                                    tmp16 = closure_0;
-                                                    intl2 = closure_0(obj[26]).intl;
-                                                    obj = { count: null };
-                                                    obj.count = tmp2.party.size[0];
-                                                    formatToPlainStringResult = intl2.formatToPlainString(
-                                                      closure_0(obj[26]).t.IM4J4e,
-                                                      obj,
-                                                    );
-                                                  } else {
-                                                    tmp14 = closure_0;
-                                                    intl = closure_0(obj[26]).intl;
-                                                    obj6 = { count: null, max: null };
-                                                    obj6.count = tmp2.party.size[0];
-                                                    obj6.max = tmp2.party.size[1];
-                                                    formatToPlainStringResult = intl.formatToPlainString(
-                                                      closure_0(obj[26]).t["u//9By"],
-                                                      obj6,
-                                                    );
-                                                  }
-                                                  tmp17 = formatToPlainStringResult;
-                                                }
-                                              } else {
-                                                tmp5 = jsx;
-                                                assets = tmp2.assets;
-                                                tmp7 = null;
-                                                large_url = undefined;
-                                                tmp6 = f62301;
-                                                if (assets != null) {
-                                                  large_url = assets.large_url;
-                                                }
-                                                obj7 = { href: null, children: null };
-                                                obj7.href = large_url;
-                                                assets2 = tmp2.assets;
-                                                large_text = undefined;
-                                                tmp9 = f62299;
-                                                if (assets2 != null) {
-                                                  large_text = assets2.large_text;
-                                                }
-                                                obj8 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                obj8.children = large_text;
-                                                obj7.children = tmp5(tmp9, obj8);
-                                                return tmp5(tmp6, obj7);
-                                              }
-                                            }
-                                          }
-                                          return null;
-                                        }
-                                      }
+                                      tmp12 = cResult[26];
                                     }
                                     if (cResult[27] !== tmp7) {
-                                      class T {
-                                        constructor() {
-                                          tmp = closure_1;
-                                          obj = closure_2;
-                                          tmp2 = activity;
-                                          if (!closure_1(closure_2[25])(activity)) {
-                                            tmp3 = ActivityTypes;
-                                            if (tmp2.type !== ActivityTypes.WATCHING) {
-                                              if (tmp(obj[33])(tmp2)) {
-                                                if (!tmp(obj[34])(tmp2)) {
-                                                  tmp4 = null;
-                                                  if (null != tmp2.party) {
-                                                    return null;
-                                                  }
-                                                }
-                                              }
-                                              if (tmp(obj[33])(tmp2)) {
-                                                party = tmp2.party;
-                                                tmp11 = null;
-                                                size = undefined;
-                                                if (party != null) {
-                                                  size = party.size;
-                                                }
-                                                tmp13 = null != size;
-                                                if (tmp13) {
-                                                  num = 2;
-                                                  tmp13 = tmp2.party.size.length >= 2;
-                                                }
-                                                str = "";
-                                                if (!tmp13) {
-                                                  tmp18 = jsx;
-                                                  tmp19 = f62299;
-                                                  obj1 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                  items = [,];
-                                                  items[0] = tmp2.state;
-                                                  items[1] = "";
-                                                  str2 = " ";
-                                                  obj1.children = items.join(" ");
-                                                  return jsx(f62299, obj1);
-                                                } else {
-                                                  num2 = 0;
-                                                  if (0 === tmp2.party.size[1]) {
-                                                    tmp16 = closure_0;
-                                                    intl2 = closure_0(obj[26]).intl;
-                                                    obj = { count: null };
-                                                    obj.count = tmp2.party.size[0];
-                                                    formatToPlainStringResult = intl2.formatToPlainString(
-                                                      closure_0(obj[26]).t.IM4J4e,
-                                                      obj,
-                                                    );
-                                                  } else {
-                                                    tmp14 = closure_0;
-                                                    intl = closure_0(obj[26]).intl;
-                                                    obj6 = { count: null, max: null };
-                                                    obj6.count = tmp2.party.size[0];
-                                                    obj6.max = tmp2.party.size[1];
-                                                    formatToPlainStringResult = intl.formatToPlainString(
-                                                      closure_0(obj[26]).t["u//9By"],
-                                                      obj6,
-                                                    );
-                                                  }
-                                                  tmp17 = formatToPlainStringResult;
-                                                }
-                                              } else {
-                                                tmp5 = jsx;
-                                                assets = tmp2.assets;
-                                                tmp7 = null;
-                                                large_url = undefined;
-                                                tmp6 = f62301;
-                                                if (assets != null) {
-                                                  large_url = assets.large_url;
-                                                }
-                                                obj7 = { href: null, children: null };
-                                                obj7.href = large_url;
-                                                assets2 = tmp2.assets;
-                                                large_text = undefined;
-                                                tmp9 = f62299;
-                                                if (assets2 != null) {
-                                                  large_text = assets2.large_text;
-                                                }
-                                                obj8 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                obj8.children = large_text;
-                                                obj7.children = tmp5(tmp9, obj8);
-                                                return tmp5(tmp6, obj7);
-                                              }
-                                            }
-                                          }
-                                          return null;
-                                        }
-                                      }
+                                      const tmp7Result = tmp7();
                                       cResult[27] = tmp7;
-                                      cResult[28] = tmp14;
+                                      cResult[28] = tmp7Result;
+                                      let tmp14 = tmp7Result;
                                     } else {
-                                      class T {
-                                        constructor() {
-                                          tmp = closure_1;
-                                          obj = closure_2;
-                                          tmp2 = activity;
-                                          if (!closure_1(closure_2[25])(activity)) {
-                                            tmp3 = ActivityTypes;
-                                            if (tmp2.type !== ActivityTypes.WATCHING) {
-                                              if (tmp(obj[33])(tmp2)) {
-                                                if (!tmp(obj[34])(tmp2)) {
-                                                  tmp4 = null;
-                                                  if (null != tmp2.party) {
-                                                    return null;
-                                                  }
-                                                }
-                                              }
-                                              if (tmp(obj[33])(tmp2)) {
-                                                party = tmp2.party;
-                                                tmp11 = null;
-                                                size = undefined;
-                                                if (party != null) {
-                                                  size = party.size;
-                                                }
-                                                tmp13 = null != size;
-                                                if (tmp13) {
-                                                  num = 2;
-                                                  tmp13 = tmp2.party.size.length >= 2;
-                                                }
-                                                str = "";
-                                                if (!tmp13) {
-                                                  tmp18 = jsx;
-                                                  tmp19 = f62299;
-                                                  obj1 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                  items = [,];
-                                                  items[0] = tmp2.state;
-                                                  items[1] = "";
-                                                  str2 = " ";
-                                                  obj1.children = items.join(" ");
-                                                  return jsx(f62299, obj1);
-                                                } else {
-                                                  num2 = 0;
-                                                  if (0 === tmp2.party.size[1]) {
-                                                    tmp16 = closure_0;
-                                                    intl2 = closure_0(obj[26]).intl;
-                                                    obj = { count: null };
-                                                    obj.count = tmp2.party.size[0];
-                                                    formatToPlainStringResult = intl2.formatToPlainString(
-                                                      closure_0(obj[26]).t.IM4J4e,
-                                                      obj,
-                                                    );
-                                                  } else {
-                                                    tmp14 = closure_0;
-                                                    intl = closure_0(obj[26]).intl;
-                                                    obj6 = { count: null, max: null };
-                                                    obj6.count = tmp2.party.size[0];
-                                                    obj6.max = tmp2.party.size[1];
-                                                    formatToPlainStringResult = intl.formatToPlainString(
-                                                      closure_0(obj[26]).t["u//9By"],
-                                                      obj6,
-                                                    );
-                                                  }
-                                                  tmp17 = formatToPlainStringResult;
-                                                }
-                                              } else {
-                                                tmp5 = jsx;
-                                                assets = tmp2.assets;
-                                                tmp7 = null;
-                                                large_url = undefined;
-                                                tmp6 = f62301;
-                                                if (assets != null) {
-                                                  large_url = assets.large_url;
-                                                }
-                                                obj7 = { href: null, children: null };
-                                                obj7.href = large_url;
-                                                assets2 = tmp2.assets;
-                                                large_text = undefined;
-                                                tmp9 = f62299;
-                                                if (assets2 != null) {
-                                                  large_text = assets2.large_text;
-                                                }
-                                                obj8 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                obj8.children = large_text;
-                                                obj7.children = tmp5(tmp9, obj8);
-                                                return tmp5(tmp6, obj7);
-                                              }
-                                            }
-                                          }
-                                          return null;
-                                        }
-                                      }
+                                      tmp14 = cResult[28];
                                     }
-                                    if (cResult[29] !== T) {
-                                      class T {
-                                        constructor() {
-                                          tmp = closure_1;
-                                          obj = closure_2;
-                                          tmp2 = activity;
-                                          if (!closure_1(closure_2[25])(activity)) {
-                                            tmp3 = ActivityTypes;
-                                            if (tmp2.type !== ActivityTypes.WATCHING) {
-                                              if (tmp(obj[33])(tmp2)) {
-                                                if (!tmp(obj[34])(tmp2)) {
-                                                  tmp4 = null;
-                                                  if (null != tmp2.party) {
-                                                    return null;
-                                                  }
-                                                }
-                                              }
-                                              if (tmp(obj[33])(tmp2)) {
-                                                party = tmp2.party;
-                                                tmp11 = null;
-                                                size = undefined;
-                                                if (party != null) {
-                                                  size = party.size;
-                                                }
-                                                tmp13 = null != size;
-                                                if (tmp13) {
-                                                  num = 2;
-                                                  tmp13 = tmp2.party.size.length >= 2;
-                                                }
-                                                str = "";
-                                                if (!tmp13) {
-                                                  tmp18 = jsx;
-                                                  tmp19 = f62299;
-                                                  obj1 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                  items = [,];
-                                                  items[0] = tmp2.state;
-                                                  items[1] = "";
-                                                  str2 = " ";
-                                                  obj1.children = items.join(" ");
-                                                  return jsx(f62299, obj1);
-                                                } else {
-                                                  num2 = 0;
-                                                  if (0 === tmp2.party.size[1]) {
-                                                    tmp16 = closure_0;
-                                                    intl2 = closure_0(obj[26]).intl;
-                                                    obj = { count: null };
-                                                    obj.count = tmp2.party.size[0];
-                                                    formatToPlainStringResult = intl2.formatToPlainString(
-                                                      closure_0(obj[26]).t.IM4J4e,
-                                                      obj,
-                                                    );
-                                                  } else {
-                                                    tmp14 = closure_0;
-                                                    intl = closure_0(obj[26]).intl;
-                                                    obj6 = { count: null, max: null };
-                                                    obj6.count = tmp2.party.size[0];
-                                                    obj6.max = tmp2.party.size[1];
-                                                    formatToPlainStringResult = intl.formatToPlainString(
-                                                      closure_0(obj[26]).t["u//9By"],
-                                                      obj6,
-                                                    );
-                                                  }
-                                                  tmp17 = formatToPlainStringResult;
-                                                }
-                                              } else {
-                                                tmp5 = jsx;
-                                                assets = tmp2.assets;
-                                                tmp7 = null;
-                                                large_url = undefined;
-                                                tmp6 = f62301;
-                                                if (assets != null) {
-                                                  large_url = assets.large_url;
-                                                }
-                                                obj7 = { href: null, children: null };
-                                                obj7.href = large_url;
-                                                assets2 = tmp2.assets;
-                                                large_text = undefined;
-                                                tmp9 = f62299;
-                                                if (assets2 != null) {
-                                                  large_text = assets2.large_text;
-                                                }
-                                                obj8 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                obj8.children = large_text;
-                                                obj7.children = tmp5(tmp9, obj8);
-                                                return tmp5(tmp6, obj7);
-                                              }
-                                            }
-                                          }
-                                          return null;
-                                        }
-                                      }
-                                      cResult[29] = T;
-                                      cResult[30] = tmp16;
+                                    if (cResult[29] !== tmp8) {
+                                      const tmp8Result = tmp8();
+                                      cResult[29] = tmp8;
+                                      cResult[30] = tmp8Result;
+                                      let tmp16 = tmp8Result;
                                     } else {
-                                      class T {
-                                        constructor() {
-                                          tmp = closure_1;
-                                          obj = closure_2;
-                                          tmp2 = activity;
-                                          if (!closure_1(closure_2[25])(activity)) {
-                                            tmp3 = ActivityTypes;
-                                            if (tmp2.type !== ActivityTypes.WATCHING) {
-                                              if (tmp(obj[33])(tmp2)) {
-                                                if (!tmp(obj[34])(tmp2)) {
-                                                  tmp4 = null;
-                                                  if (null != tmp2.party) {
-                                                    return null;
-                                                  }
-                                                }
-                                              }
-                                              if (tmp(obj[33])(tmp2)) {
-                                                party = tmp2.party;
-                                                tmp11 = null;
-                                                size = undefined;
-                                                if (party != null) {
-                                                  size = party.size;
-                                                }
-                                                tmp13 = null != size;
-                                                if (tmp13) {
-                                                  num = 2;
-                                                  tmp13 = tmp2.party.size.length >= 2;
-                                                }
-                                                str = "";
-                                                if (!tmp13) {
-                                                  tmp18 = jsx;
-                                                  tmp19 = f62299;
-                                                  obj1 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                  items = [,];
-                                                  items[0] = tmp2.state;
-                                                  items[1] = "";
-                                                  str2 = " ";
-                                                  obj1.children = items.join(" ");
-                                                  return jsx(f62299, obj1);
-                                                } else {
-                                                  num2 = 0;
-                                                  if (0 === tmp2.party.size[1]) {
-                                                    tmp16 = closure_0;
-                                                    intl2 = closure_0(obj[26]).intl;
-                                                    obj = { count: null };
-                                                    obj.count = tmp2.party.size[0];
-                                                    formatToPlainStringResult = intl2.formatToPlainString(
-                                                      closure_0(obj[26]).t.IM4J4e,
-                                                      obj,
-                                                    );
-                                                  } else {
-                                                    tmp14 = closure_0;
-                                                    intl = closure_0(obj[26]).intl;
-                                                    obj6 = { count: null, max: null };
-                                                    obj6.count = tmp2.party.size[0];
-                                                    obj6.max = tmp2.party.size[1];
-                                                    formatToPlainStringResult = intl.formatToPlainString(
-                                                      closure_0(obj[26]).t["u//9By"],
-                                                      obj6,
-                                                    );
-                                                  }
-                                                  tmp17 = formatToPlainStringResult;
-                                                }
-                                              } else {
-                                                tmp5 = jsx;
-                                                assets = tmp2.assets;
-                                                tmp7 = null;
-                                                large_url = undefined;
-                                                tmp6 = f62301;
-                                                if (assets != null) {
-                                                  large_url = assets.large_url;
-                                                }
-                                                obj7 = { href: null, children: null };
-                                                obj7.href = large_url;
-                                                assets2 = tmp2.assets;
-                                                large_text = undefined;
-                                                tmp9 = f62299;
-                                                if (assets2 != null) {
-                                                  large_text = assets2.large_text;
-                                                }
-                                                obj8 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                obj8.children = large_text;
-                                                obj7.children = tmp5(tmp9, obj8);
-                                                return tmp5(tmp6, obj7);
-                                              }
-                                            }
-                                          }
-                                          return null;
-                                        }
-                                      }
+                                      tmp16 = cResult[30];
                                     }
                                     if (cResult[31] === activity) {
-                                      class T {
-                                        constructor() {
-                                          tmp = closure_1;
-                                          obj = closure_2;
-                                          tmp2 = activity;
-                                          if (!closure_1(closure_2[25])(activity)) {
-                                            tmp3 = ActivityTypes;
-                                            if (tmp2.type !== ActivityTypes.WATCHING) {
-                                              if (tmp(obj[33])(tmp2)) {
-                                                if (!tmp(obj[34])(tmp2)) {
-                                                  tmp4 = null;
-                                                  if (null != tmp2.party) {
-                                                    return null;
+                                      if (cResult[32] === tmp3.badges) {
+                                        if (cResult[33] === user.bot) {
+                                          let tmp18 = cResult[34];
+                                        }
+                                        if (cResult[35] === tmp3.content) {
+                                          if (cResult[36] === tmp16) {
+                                            if (cResult[37] === tmp18) {
+                                              if (cResult[38] === tmp12) {
+                                                if (cResult[39] === tmp14) {
+                                                  let tmp22 = cResult[40];
+                                                }
+                                                if (cResult[41] === tmp3.body) {
+                                                  if (cResult[42] === tmp22) {
+                                                    if (cResult[43] === tmp10) {
+                                                      let tmp26 = cResult[44];
+                                                    }
+                                                    return tmp26;
                                                   }
                                                 }
-                                              }
-                                              if (tmp(obj[33])(tmp2)) {
-                                                party = tmp2.party;
-                                                tmp11 = null;
-                                                size = undefined;
-                                                if (party != null) {
-                                                  size = party.size;
-                                                }
-                                                tmp13 = null != size;
-                                                if (tmp13) {
-                                                  num = 2;
-                                                  tmp13 = tmp2.party.size.length >= 2;
-                                                }
-                                                str = "";
-                                                if (!tmp13) {
-                                                  tmp18 = jsx;
-                                                  tmp19 = f62299;
-                                                  obj1 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                  items = [,];
-                                                  items[0] = tmp2.state;
-                                                  items[1] = "";
-                                                  str2 = " ";
-                                                  obj1.children = items.join(" ");
-                                                  return jsx(f62299, obj1);
-                                                } else {
-                                                  num2 = 0;
-                                                  if (0 === tmp2.party.size[1]) {
-                                                    tmp16 = closure_0;
-                                                    intl2 = closure_0(obj[26]).intl;
-                                                    obj = { count: null };
-                                                    obj.count = tmp2.party.size[0];
-                                                    formatToPlainStringResult = intl2.formatToPlainString(
-                                                      closure_0(obj[26]).t.IM4J4e,
-                                                      obj,
-                                                    );
-                                                  } else {
-                                                    tmp14 = closure_0;
-                                                    intl = closure_0(obj[26]).intl;
-                                                    obj6 = { count: null, max: null };
-                                                    obj6.count = tmp2.party.size[0];
-                                                    obj6.max = tmp2.party.size[1];
-                                                    formatToPlainStringResult = intl.formatToPlainString(
-                                                      closure_0(obj[26]).t["u//9By"],
-                                                      obj6,
-                                                    );
-                                                  }
-                                                  tmp17 = formatToPlainStringResult;
-                                                }
-                                              } else {
-                                                tmp5 = jsx;
-                                                assets = tmp2.assets;
-                                                tmp7 = null;
-                                                large_url = undefined;
-                                                tmp6 = f62301;
-                                                if (assets != null) {
-                                                  large_url = assets.large_url;
-                                                }
-                                                obj7 = { href: null, children: null };
-                                                obj7.href = large_url;
-                                                assets2 = tmp2.assets;
-                                                large_text = undefined;
-                                                tmp9 = f62299;
-                                                if (assets2 != null) {
-                                                  large_text = assets2.large_text;
-                                                }
-                                                obj8 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                obj8.children = large_text;
-                                                obj7.children = tmp5(tmp9, obj8);
-                                                return tmp5(tmp6, obj7);
+                                                let obj4 = { style: tmp9, children: null };
+                                                let items = [tmp10, tmp22];
+                                                obj4.children = items;
+                                                const tmp29 = closure_24(closure_9, obj4);
+                                                cResult[41] = tmp3.body;
+                                                cResult[42] = tmp22;
+                                                cResult[43] = tmp10;
+                                                cResult[44] = tmp29;
+                                                tmp26 = tmp29;
                                               }
                                             }
                                           }
-                                          return null;
                                         }
+                                        let obj5 = { style: tmp3.content, children: null };
+                                        let items1 = [tmp12, tmp14, tmp16, tmp18];
+                                        obj5.children = items1;
+                                        const tmp25 = closure_24(closure_9, obj5);
+                                        cResult[35] = tmp3.content;
+                                        cResult[36] = tmp16;
+                                        cResult[37] = tmp18;
+                                        cResult[38] = tmp12;
+                                        cResult[39] = tmp14;
+                                        cResult[40] = tmp25;
+                                        tmp22 = tmp25;
                                       }
                                     }
                                     const bot2 = user.bot;
-                                    let tmp18 = !bot2;
+                                    let tmp19 = !bot2;
                                     if (!bot2) {
-                                      class T {
-                                        constructor() {
-                                          tmp = closure_1;
-                                          obj = closure_2;
-                                          tmp2 = activity;
-                                          if (!closure_1(closure_2[25])(activity)) {
-                                            tmp3 = ActivityTypes;
-                                            if (tmp2.type !== ActivityTypes.WATCHING) {
-                                              if (tmp(obj[33])(tmp2)) {
-                                                if (!tmp(obj[34])(tmp2)) {
-                                                  tmp4 = null;
-                                                  if (null != tmp2.party) {
-                                                    return null;
-                                                  }
-                                                }
-                                              }
-                                              if (tmp(obj[33])(tmp2)) {
-                                                party = tmp2.party;
-                                                tmp11 = null;
-                                                size = undefined;
-                                                if (party != null) {
-                                                  size = party.size;
-                                                }
-                                                tmp13 = null != size;
-                                                if (tmp13) {
-                                                  num = 2;
-                                                  tmp13 = tmp2.party.size.length >= 2;
-                                                }
-                                                str = "";
-                                                if (!tmp13) {
-                                                  tmp18 = jsx;
-                                                  tmp19 = f62299;
-                                                  obj1 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                  items = [,];
-                                                  items[0] = tmp2.state;
-                                                  items[1] = "";
-                                                  str2 = " ";
-                                                  obj1.children = items.join(" ");
-                                                  return jsx(f62299, obj1);
-                                                } else {
-                                                  num2 = 0;
-                                                  if (0 === tmp2.party.size[1]) {
-                                                    tmp16 = closure_0;
-                                                    intl2 = closure_0(obj[26]).intl;
-                                                    obj = { count: null };
-                                                    obj.count = tmp2.party.size[0];
-                                                    formatToPlainStringResult = intl2.formatToPlainString(
-                                                      closure_0(obj[26]).t.IM4J4e,
-                                                      obj,
-                                                    );
-                                                  } else {
-                                                    tmp14 = closure_0;
-                                                    intl = closure_0(obj[26]).intl;
-                                                    obj6 = { count: null, max: null };
-                                                    obj6.count = tmp2.party.size[0];
-                                                    obj6.max = tmp2.party.size[1];
-                                                    formatToPlainStringResult = intl.formatToPlainString(
-                                                      closure_0(obj[26]).t["u//9By"],
-                                                      obj6,
-                                                    );
-                                                  }
-                                                  tmp17 = formatToPlainStringResult;
-                                                }
-                                              } else {
-                                                tmp5 = jsx;
-                                                assets = tmp2.assets;
-                                                tmp7 = null;
-                                                large_url = undefined;
-                                                tmp6 = f62301;
-                                                if (assets != null) {
-                                                  large_url = assets.large_url;
-                                                }
-                                                obj7 = { href: null, children: null };
-                                                obj7.href = large_url;
-                                                assets2 = tmp2.assets;
-                                                large_text = undefined;
-                                                tmp9 = f62299;
-                                                if (assets2 != null) {
-                                                  large_text = assets2.large_text;
-                                                }
-                                                obj8 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                obj8.children = large_text;
-                                                obj7.children = tmp5(tmp9, obj8);
-                                                return tmp5(tmp6, obj7);
-                                              }
-                                            }
-                                          }
-                                          return null;
-                                        }
-                                      }
-                                      let obj4 = { style: tmp3.badges, activity };
-                                      tmp18 = closure_23(activity(tmp[35]), obj4);
+                                      let obj6 = { style: tmp3.badges, activity };
+                                      tmp19 = closure_23(activity(tmp[35]), obj6);
                                     }
                                     cResult[31] = activity;
                                     cResult[32] = tmp3.badges;
                                     cResult[33] = user.bot;
-                                    cResult[34] = tmp18;
+                                    cResult[34] = tmp19;
+                                    tmp18 = tmp19;
                                   }
                                   const bot = user.bot;
+                                  let tmp5Result = !bot;
                                   if (!bot) {
-                                    class T {
-                                      constructor() {
-                                        tmp = closure_1;
-                                        obj = closure_2;
-                                        tmp2 = activity;
-                                        if (!closure_1(closure_2[25])(activity)) {
-                                          tmp3 = ActivityTypes;
-                                          if (tmp2.type !== ActivityTypes.WATCHING) {
-                                            if (tmp(obj[33])(tmp2)) {
-                                              if (!tmp(obj[34])(tmp2)) {
-                                                tmp4 = null;
-                                                if (null != tmp2.party) {
-                                                  return null;
-                                                }
-                                              }
-                                            }
-                                            if (tmp(obj[33])(tmp2)) {
-                                              party = tmp2.party;
-                                              tmp11 = null;
-                                              size = undefined;
-                                              if (party != null) {
-                                                size = party.size;
-                                              }
-                                              tmp13 = null != size;
-                                              if (tmp13) {
-                                                num = 2;
-                                                tmp13 = tmp2.party.size.length >= 2;
-                                              }
-                                              str = "";
-                                              if (!tmp13) {
-                                                tmp18 = jsx;
-                                                tmp19 = f62299;
-                                                obj1 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                                items = [,];
-                                                items[0] = tmp2.state;
-                                                items[1] = "";
-                                                str2 = " ";
-                                                obj1.children = items.join(" ");
-                                                return jsx(f62299, obj1);
-                                              } else {
-                                                num2 = 0;
-                                                if (0 === tmp2.party.size[1]) {
-                                                  tmp16 = closure_0;
-                                                  intl2 = closure_0(obj[26]).intl;
-                                                  obj = { count: null };
-                                                  obj.count = tmp2.party.size[0];
-                                                  formatToPlainStringResult = intl2.formatToPlainString(
-                                                    closure_0(obj[26]).t.IM4J4e,
-                                                    obj,
-                                                  );
-                                                } else {
-                                                  tmp14 = closure_0;
-                                                  intl = closure_0(obj[26]).intl;
-                                                  obj6 = { count: null, max: null };
-                                                  obj6.count = tmp2.party.size[0];
-                                                  obj6.max = tmp2.party.size[1];
-                                                  formatToPlainStringResult = intl.formatToPlainString(
-                                                    closure_0(obj[26]).t["u//9By"],
-                                                    obj6,
-                                                  );
-                                                }
-                                                tmp17 = formatToPlainStringResult;
-                                              }
-                                            } else {
-                                              tmp5 = jsx;
-                                              assets = tmp2.assets;
-                                              tmp7 = null;
-                                              large_url = undefined;
-                                              tmp6 = f62301;
-                                              if (assets != null) {
-                                                large_url = assets.large_url;
-                                              }
-                                              obj7 = { href: null, children: null };
-                                              obj7.href = large_url;
-                                              assets2 = tmp2.assets;
-                                              large_text = undefined;
-                                              tmp9 = f62299;
-                                              if (assets2 != null) {
-                                                large_text = assets2.large_text;
-                                              }
-                                              obj8 = { variant: "text-xs/medium", lineClamp: 1, children: null };
-                                              obj8.children = large_text;
-                                              obj7.children = tmp5(tmp9, obj8);
-                                              return tmp5(tmp6, obj7);
-                                            }
-                                          }
-                                        }
-                                        return null;
-                                      }
-                                    }
+                                    tmp5Result = tmp5();
                                   }
                                   cResult[22] = tmp5;
                                   cResult[23] = user.bot;
-                                  cResult[24] = !bot;
+                                  cResult[24] = tmp5Result;
+                                  tmp10 = tmp5Result;
                                 }
                               }
-                              const fn3 = function b() {
+                              function renderDescription() {
                                 if (isListeningOnSpotifyDefault(activity)) {
                                   let trimmed;
                                   if (activity.state != null) {
@@ -1438,14 +487,14 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                                   obj.children = closure_2_23(closure_27, obj4);
                                   return closure_2_23(closure_28, obj);
                                 }
-                              };
+                              }
                               cResult[16] = activity;
                               cResult[17] = onAction;
                               cResult[18] = user.id;
-                              cResult[19] = fn3;
-                              tmp7 = fn3;
+                              cResult[19] = renderDescription;
+                              tmp7 = renderDescription;
                             }
-                            const fn2 = function f() {
+                            function renderName() {
                               if (isListeningOnSpotifyDefault(activity)) {
                                 const obj2 = { variant: "text-md/semibold", children: null };
                                 const obj3 = {
@@ -1472,11 +521,11 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                                 tmp4Result = closure_2_23(closure_28, obj);
                               }
                               return tmp4Result;
-                            };
+                            }
                             cResult[13] = activity;
                             cResult[14] = onAction;
-                            cResult[15] = fn2;
-                            tmp6 = fn2;
+                            cResult[15] = renderName;
+                            tmp6 = renderName;
                           }
                         }
                       }
@@ -1488,7 +537,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn = function n() {
+      function renderImage() {
         if (null != largeImage) {
           if (isListeningOnSpotifyDefault(activity)) {
             const obj2 = {
@@ -1559,7 +608,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           }
           items2[1] = tmp23Result;
           obj.children = items2;
-          tmp48Result = closure_2_24(options, obj);
+          tmp48Result = dependencyMap(options, obj);
         } else {
           const obj13 = { style: null, children: null };
           const items3 = [,];
@@ -1572,7 +621,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           tmp48Result = closure_2_23(options, obj13);
           const isThemeDarkResult = shared.isThemeDark(theme);
         }
-      };
+      }
       cResult[0] = activity;
       cResult[1] = largeImage;
       cResult[2] = onAction;
@@ -1585,11 +634,11 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp3.smallImageBackground;
       cResult[10] = theme;
       cResult[11] = user.id;
-      cResult[12] = fn;
-      tmp5 = fn;
+      cResult[12] = renderImage;
+      tmp5 = renderImage;
       let obj3 = user(onAction[24]);
     }
-  : (user) => {
+  : function ActivityCardBody(user) {
       user = user.user;
       const activity = user.activity;
       const onAction = user.onAction;
@@ -1619,7 +668,6 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp24Result = closure_23(closure_27, obj4);
           let tmp29 = closure_27;
           let tmp30 = closure_23;
-          let tmp31 = closure_23;
         } else {
           const obj6 = { href: activity.details_url, children: null };
           if (tmp23(tmp2[33])(activity)) {
@@ -1635,7 +683,6 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           tmp24Result = closure_23(closure_28, obj6);
           tmp29 = closure_27;
           tmp30 = closure_23;
-          tmp31 = closure_23;
         }
         const items1 = [tmp24Result, , ,];
         if (activity(tmp2[25])(activity)) {
@@ -1660,29 +707,29 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
               tmp30Result = tmp30(tmp29, obj8);
             }
           }
-          let tmp30Result3 = tmp30Result;
+          let tmp30Result4 = tmp30Result;
         } else {
           state = activity.details;
-          let tmp33 = tmp23(tmp2[33])(activity);
-          if (!tmp33) {
-            tmp33 = null == activity.state;
+          let tmp32 = tmp23(tmp2[33])(activity);
+          if (!tmp32) {
+            tmp32 = null == activity.state;
           }
-          if (!tmp33) {
+          if (!tmp32) {
             state = activity.state;
           }
           const obj10 = { href: activity.state_url, children: null };
           const obj11 = { variant: "text-xs/medium", lineClamp: 1, children: state };
           obj10.children = tmp30(tmp29, obj11);
-          tmp30Result3 = tmp30(closure_28, obj10);
+          tmp30Result4 = tmp30(closure_28, obj10);
         }
-        items1[1] = tmp30Result3;
-        let tmp30Result4 = null;
+        items1[1] = tmp30Result4;
+        let tmp30Result5 = null;
         if (!activity(tmp2[25])(activity)) {
-          tmp30Result4 = null;
+          tmp30Result5 = null;
           if (activity.type !== constants.WATCHING) {
             if (tmp23(tmp2[33])(activity)) {
               if (!tmp23(tmp2[34])(activity)) {
-                tmp30Result4 = null;
+                tmp30Result5 = null;
               }
             }
             if (tmp23(tmp2[33])(activity)) {
@@ -1691,15 +738,15 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
               if (party != null) {
                 size = party.size;
               }
-              let tmp47 = null != size;
-              if (tmp47) {
-                tmp47 = activity.party.size.length >= 2;
+              let tmp46 = null != size;
+              if (tmp46) {
+                tmp46 = activity.party.size.length >= 2;
               }
-              if (!tmp47) {
+              if (!tmp46) {
                 const obj12 = { variant: "text-xs/medium", lineClamp: 1, children: null };
                 const items2 = [activity.state, ""];
                 obj12.children = items2.join(" ");
-                tmp30Result4 = tmp30(tmp29, obj12);
+                tmp30Result5 = tmp30(tmp29, obj12);
               } else if (0 === activity.party.size[1]) {
                 const intl3 = IM4J4e(tmp2[26]).intl;
                 IM4J4e = IM4J4e(tmp2[26]).t.IM4J4e;
@@ -1724,18 +771,18 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const obj16 = { variant: "text-xs/medium", lineClamp: 1, children: large_text };
               obj15.children = tmp30(tmp29, obj16);
-              tmp30Result4 = tmp30(closure_28, obj15);
+              tmp30Result5 = tmp30(closure_28, obj15);
             }
           }
         }
-        items1[2] = tmp30Result4;
+        items1[2] = tmp30Result5;
         const bot = user.bot;
-        let tmp31Result = !bot;
+        let tmp30Result6 = !bot;
         if (!bot) {
           const obj17 = { style: tmp.badges, activity };
-          tmp31Result = tmp31(tmp23(tmp2[35]), obj17);
+          tmp30Result6 = tmp30(tmp23(tmp2[35]), obj17);
         }
-        items1[3] = tmp31Result;
+        items1[3] = tmp30Result6;
         obj3.children = items1;
         items[1] = closure_24(closure_9, obj3);
         obj2.children = items;
@@ -1781,7 +828,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
             }
             items4[1] = tmp13Result;
             obj18.children = items4;
-            let tmp51Result = closure_24(closure_9, obj18);
+            let tmp50Result = closure_24(closure_9, obj18);
             const IM4J4eResult = IM4J4e(tmp2[29]);
           } else {
             const obj24 = { style: null, children: null };
@@ -1793,7 +840,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
             const colors = activity(tmp2[17]).colors;
             obj25.color = IM4J4e(tmp2[32]).isThemeDark(tmp5) ? colors.WHITE : colors.BLACK;
             obj24.children = closure_23(IM4J4e(tmp2[31]).UnknownGameIcon, obj25);
-            tmp51Result = closure_23(closure_9, obj24);
+            tmp50Result = closure_23(closure_9, obj24);
             const isThemeDarkResult = IM4J4e(tmp2[32]).isThemeDark(tmp5);
           }
         } else {
@@ -1826,14 +873,14 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
         obj28.style = largeImage;
         obj27.children = closure_23(tmp10, obj28);
         obj26.children = closure_23(closure_9, obj27);
-        tmp51Result = closure_23(closure_8, obj26);
+        tmp50Result = closure_23(closure_8, obj26);
         const IM4J4eResult3 = IM4J4e(tmp2[29]);
       }
       const obj = user(onAction[23]);
     };
 ReactCompilerGating = fn(558);
 let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function ActivityCard(user) {
       const cResult = user(activity[20]).c(71);
       user = user.user;
       const currentUser = user.currentUser;
@@ -1866,7 +913,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
               const tmp12 = tmp5(tmp2[41])(tmp11);
               closure_6 = tmp12;
               if (cResult[8] !== tmp12) {
-                class L {
+                class E {
                   constructor() {
                     if (null != closure_6) {
                       tmpResult = tmp();
@@ -1875,9 +922,9 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 cResult[8] = tmp12;
-                cResult[9] = L;
+                cResult[9] = E;
               } else {
-                class L {
+                class E {
                   constructor() {
                     if (null != closure_6) {
                       tmpResult = tmp();
@@ -1887,7 +934,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (cResult[10] === tmp10) {
-                class L {
+                class E {
                   constructor() {
                     if (null != closure_6) {
                       tmpResult = tmp();
@@ -1898,7 +945,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp5(tmp2[42])(tmp14);
                 const _Symbol = Symbol;
                 if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-                  class L {
+                  class E {
                     constructor() {
                       if (null != closure_6) {
                         tmpResult = tmp();
@@ -1907,7 +954,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const items = [GuildStore, VoiceStateStore, ChannelStore];
-                  class V {
+                  class F {
                     constructor() {
                       tmp = activity;
                       if (closure_1(closure_2[34])(activity)) {
@@ -1937,7 +984,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                   const tmp17 = items;
                 } else {
-                  class L {
+                  class E {
                     constructor() {
                       if (null != closure_6) {
                         tmpResult = tmp();
@@ -1947,7 +994,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 if (cResult[14] === activity) {
-                  class L {
+                  class E {
                     constructor() {
                       if (null != closure_6) {
                         tmpResult = tmp();
@@ -1955,10 +1002,10 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  const stateFromStores = tmp(tmp2[43]).useStateFromStores(tmp17, V);
+                  const stateFromStores = tmp(tmp2[43]).useStateFromStores(tmp17, F);
                   const _Symbol2 = Symbol;
                   if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-                    class L {
+                    class E {
                       constructor() {
                         if (null != closure_6) {
                           tmpResult = tmp();
@@ -1970,7 +1017,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                     cResult[17] = items1;
                     const tmp22 = items1;
                   } else {
-                    class L {
+                    class E {
                       constructor() {
                         if (null != closure_6) {
                           tmpResult = tmp();
@@ -1980,7 +1027,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   if (cResult[18] === activity.application_id) {
-                    class L {
+                    class E {
                       constructor() {
                         if (null != closure_6) {
                           tmpResult = tmp();
@@ -1990,7 +1037,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     const stateFromStores1 = tmp(tmp2[43]).useStateFromStores(tmp22, tmp24);
                     if (activity.type !== constants.CUSTOM_STATUS) {
-                      class L {
+                      class E {
                         constructor() {
                           if (null != closure_6) {
                             tmpResult = tmp();
@@ -2001,7 +1048,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     return null;
                   }
-                  class V {
+                  class F {
                     constructor() {
                       tmp = activity;
                       if (closure_1(closure_2[34])(activity)) {
@@ -2034,7 +1081,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[20] = tmp24;
                   const tmpResult = tmp(tmp2[43]);
                 }
-                class V {
+                class F {
                   constructor() {
                     tmp = activity;
                     if (closure_1(closure_2[34])(activity)) {
@@ -2064,7 +1111,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 cResult[14] = activity;
                 cResult[15] = user.id;
-                cResult[16] = V;
+                cResult[16] = F;
               }
               let obj2 = { userId: user.id, onAction: tmp10 };
               cResult[10] = tmp10;
@@ -2095,7 +1142,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = obj4;
       const tmp7 = currentUser(activity[37]);
     }
-  : (user) => {
+  : function ActivityCard(user) {
       user = user.user;
       ({ currentUser, activity } = user);
       const voiceChannel = user.voiceChannel;
@@ -2103,23 +1150,23 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       closure_3 = undefined;
       const tmp = closure_26();
       let obj = dependencyMap;
-      const tmp3 = activity(12856)(activity);
-      const analyticsLocations = activity(6664)(activity(6688).USER_PROFILE_LIVE_ACTIVITY_CARD).analyticsLocations;
+      const tmp3 = activity(13005)(activity);
+      const analyticsLocations = activity(6841)(activity(6865).USER_PROFILE_LIVE_ACTIVITY_CARD).analyticsLocations;
       let id;
-      const tmp4 = activity(6664);
+      const tmp4 = activity(6841);
       if (voiceChannel != null) {
         id = voiceChannel.id;
       }
-      const tmp5Result = activity(12862)({ display: "live", voiceChannelId: id, user, activity, analyticsLocations });
+      const tmp5Result = activity(13011)({ display: "live", voiceChannelId: id, user, activity, analyticsLocations });
       dependencyMap = tmp5Result;
       const application_id = activity.application_id;
-      const tmp5 = activity(12862);
-      const tmp2Result = activity(8353);
+      const tmp5 = activity(13011);
+      const tmp2Result = activity(8851);
       let PlayOnSpotifyButton = user;
       const tmp2ResultResult = tmp2Result({
         location: "User Profile Activity Card",
         applicationId: application_id,
-        source: user(8352).GameProfileSources.UserProfile,
+        source: user(8850).GameProfileSources.UserProfile,
         trackEntryPointImpression: true,
         sourceUserId: user.id,
       });
@@ -2130,11 +1177,11 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
           tmp();
         }
       }, items);
-      activity(12863)({ userId: user.id, onAction: tmp5Result });
+      activity(13012)({ userId: user.id, onAction: tmp5Result });
       const obj2 = {
         location: "User Profile Activity Card",
         applicationId: application_id,
-        source: user(8352).GameProfileSources.UserProfile,
+        source: user(8850).GameProfileSources.UserProfile,
         trackEntryPointImpression: true,
         sourceUserId: user.id,
       };
@@ -2202,19 +1249,19 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
             if (platformIcon != null) {
               whitePNG = platformIcon.whitePNG;
             }
-            obj10.source = PlayOnSpotifyButton(1402).makeSource(whitePNG);
-            obj10.size = PlayOnSpotifyButton(1188).IconSizes.SMALL_14;
-            tmp33Result = closure_23(PlayOnSpotifyButton(1188).Icon, obj10);
-            const PlayOnSpotifyButtonResult = PlayOnSpotifyButton(1402);
+            obj10.source = PlayOnSpotifyButton(1414).makeSource(whitePNG);
+            obj10.size = PlayOnSpotifyButton(1200).IconSizes.SMALL_14;
+            tmp33Result = closure_23(PlayOnSpotifyButton(1200).Icon, obj10);
+            const PlayOnSpotifyButtonResult = PlayOnSpotifyButton(1414);
           }
           obj9.titleIcon = tmp33Result;
           const obj11 = { user, activity, application: stateFromStores1, onAction: tmp5Result };
           const items4 = [closure_23(closure_29, obj11), , ,];
           let tmp33Result5 = null;
-          if (activity(12849)(activity)) {
+          if (activity(12998)(activity)) {
             ({ start, end } = activity.timestamps);
             const obj12 = { start, end };
-            tmp33Result5 = closure_23(activity(12864), obj12);
+            tmp33Result5 = closure_23(activity(13013), obj12);
           }
           items4[1] = tmp33Result5;
           let tmp33Result6 = null;
@@ -2227,23 +1274,23 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                 onAction: tmp5Result,
                 style: tmp.voiceChannelDivider,
               };
-              tmp33Result6 = closure_23(activity(12866), obj13);
+              tmp33Result6 = closure_23(activity(13015), obj13);
             }
           }
           items4[2] = tmp33Result6;
           let tmp33Result7 = null;
           if (user.id !== currentUser.id) {
-            if (activity(10638)(activity)) {
-              PlayOnSpotifyButton = PlayOnSpotifyButton(12874).PlayOnSpotifyButton;
+            if (activity(10238)(activity)) {
+              PlayOnSpotifyButton = PlayOnSpotifyButton(13023).PlayOnSpotifyButton;
               obj = { activity, onAction: tmp5Result };
               tmp33Result7 = closure_23(PlayOnSpotifyButton, obj);
-            } else if (activity(7242)(activity)) {
+            } else if (activity(7421)(activity)) {
               const obj14 = { user, currentUser, activity, application: stateFromStores1, onAction: tmp5Result };
-              tmp33Result7 = closure_23(PlayOnSpotifyButton(12874).JoinActivityButton, obj14);
+              tmp33Result7 = closure_23(PlayOnSpotifyButton(13023).JoinActivityButton, obj14);
             } else {
-              if (activity(10632)(activity)) {
+              if (activity(10230)(activity)) {
                 let supported_platforms = activity.supported_platforms;
-                const currentActivityGamePlatform = PlayOnSpotifyButton(12877).getCurrentActivityGamePlatform();
+                const currentActivityGamePlatform = PlayOnSpotifyButton(13026).getCurrentActivityGamePlatform();
                 if (supported_platforms == null) {
                   supported_platforms = [];
                 }
@@ -2264,17 +1311,17 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                             application: stateFromStores1,
                             onAction: tmp5Result,
                           };
-                          tmp33Result7 = closure_23(PlayOnSpotifyButton(12874).JoinGameActivityButton, obj15);
+                          tmp33Result7 = closure_23(PlayOnSpotifyButton(13023).JoinGameActivityButton, obj15);
                         }
                       }
                     }
                   }
                 }
-                const PlayOnSpotifyButtonResult1 = PlayOnSpotifyButton(12877);
+                const PlayOnSpotifyButtonResult1 = PlayOnSpotifyButton(13026);
               }
-              if (activity(7942)(activity)) {
+              if (activity(8360)(activity)) {
                 const obj16 = { activity, onAction: tmp5Result };
-                tmp33Result7 = closure_23(PlayOnSpotifyButton(12874).WatchActivityButton, obj16);
+                tmp33Result7 = closure_23(PlayOnSpotifyButton(13023).WatchActivityButton, obj16);
               } else {
                 if (null != activity.buttons) {
                   if (activity.buttons.length > 0) {
@@ -2291,35 +1338,35 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 tmp33Result7 = null;
-                if (!activity(4937)(activity)) {
-                  if (!activity(12844)(activity)) {
+                if (!activity(5107)(activity)) {
+                  if (!activity(12991)(activity)) {
                     tmp33Result7 = null;
-                    if (activity(12845)(activity)) {
+                    if (activity(12992)(activity)) {
                       const obj18 = { type: constants3.PLAYSTATION, onAction: tmp5Result };
-                      tmp33Result7 = closure_23(PlayOnSpotifyButton(12874).ConnectPlatformButton, obj18);
+                      tmp33Result7 = closure_23(PlayOnSpotifyButton(13023).ConnectPlatformButton, obj18);
                     }
                   }
                 }
                 const obj19 = { type: constants3.XBOX, onAction: tmp5Result };
-                tmp33Result7 = closure_23(PlayOnSpotifyButton(12874).ConnectPlatformButton, obj19);
+                tmp33Result7 = closure_23(PlayOnSpotifyButton(13023).ConnectPlatformButton, obj19);
               }
             }
           }
           items4[3] = tmp33Result7;
           obj9.children = items4;
-          obj9 = closure_24(activity(6713), obj9);
+          obj9 = closure_24(activity(6890), obj9);
           obj7.children = obj9;
-          obj7 = closure_23(PlayOnSpotifyButton(5916).PressableOpacity, obj7);
+          obj7 = closure_23(PlayOnSpotifyButton(6189).PressableOpacity, obj7);
           obj6.children = obj7;
-          closure_23(PlayOnSpotifyButton(6664).AnalyticsLocationProvider, obj6);
-          const tmp2Result2 = activity(6713);
+          closure_23(PlayOnSpotifyButton(6841).AnalyticsLocationProvider, obj6);
+          const tmp2Result2 = activity(6890);
         }
       }
       return tmp15;
     };
 ReactCompilerGating = fn(558);
 let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function StreamActivityCard(user) {
       const cResult = user(activity[20]).c(73);
       user = user.user;
       const stream = user.stream;
@@ -2396,7 +1443,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = cResult[6];
       }
       if (cResult[7] !== stream.guildId) {
-        class E {
+        class L {
           constructor() {
             return closure_13.getGuild(stream.guildId);
           }
@@ -2411,18 +1458,18 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_17.isInChannel(id);
           }
         }
-        cResult[8] = E;
+        cResult[8] = L;
       } else {
-        class E {
+        class L {
           constructor() {
             return closure_13.getGuild(stream.guildId);
           }
         }
       }
       const tmpResult7 = user(activity[43]);
-      const stateFromStores2 = user(activity[43]).useStateFromStores(tmp15, E);
+      const stateFromStores2 = user(activity[43]).useStateFromStores(tmp15, L);
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        class E {
+        class L {
           constructor() {
             return closure_13.getGuild(stream.guildId);
           }
@@ -2441,14 +1488,14 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = items3;
         const tmp19 = items3;
       } else {
-        class E {
+        class L {
           constructor() {
             return closure_13.getGuild(stream.guildId);
           }
         }
       }
       if (cResult[10] !== user.id) {
-        class U {
+        class B {
           constructor() {
             return closure_15.findActivity(
               user.id,
@@ -2466,9 +1513,9 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_17.isInChannel(id);
           }
         }
-        cResult[11] = U;
+        cResult[11] = B;
       } else {
-        class U {
+        class B {
           constructor() {
             return closure_15.findActivity(
               user.id,
@@ -2478,9 +1525,9 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult8 = user(activity[43]);
-      const stateFromStores3 = user(activity[43]).useStateFromStores(tmp19, U);
+      const stateFromStores3 = user(activity[43]).useStateFromStores(tmp19, B);
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-        class U {
+        class B {
           constructor() {
             return closure_15.findActivity(
               user.id,
@@ -2502,7 +1549,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[12] = items4;
         const tmp22 = items4;
       } else {
-        class U {
+        class B {
           constructor() {
             return closure_15.findActivity(
               user.id,
@@ -2630,7 +1677,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { display: "live", voiceChannelId: undefined, user, stream, analyticsLocations };
       const tmp25Result = stream(activity[37]);
     }
-  : (user) => {
+  : function StreamActivityCard(user) {
       user = user.user;
       const stream = user.stream;
       const activity = user.activity;
@@ -2735,7 +1782,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
         mode: "a",
         stream,
         disabled: !_slicedToArray(tmp2Result2.useCanWatchStream(stateFromStores), 1)[0],
-        onPress() {
+        onPress: function handlePressImage() {
           closure_4({ action: "PRESS_IMAGE" });
           const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(stream.channelId);
           const result = StreamActionCreators.watchStreamAndTransitionToStream(stream);
@@ -2784,7 +1831,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VoiceCallActivityCard(arg0) {
       const cResult = channel(576).c(56);
       ({ user, channel } = arg0);
       ({ isInChannel, style } = arg0);
@@ -2904,14 +1951,14 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { display: "voice", activity: tmp19, voiceChannelId: channel.id, user, analyticsLocations };
       const tmp5ResultResult = useAnalyticsLocationsDefault(AnalyticsLocationDefault.USER_PROFILE_VOICE_ACTIVITY_CARD);
     }
-  : (arg0) => {
+  : function VoiceCallActivityCard(arg0) {
       ({ user, channel } = arg0);
       let stateFromStores;
       dependencyMap = undefined;
       ({ isInChannel, style } = arg0);
       const tmp = closure_26();
-      const tmp5 = stateFromStores(5049)(channel);
-      const tmp4 = stateFromStores(12867)(channel);
+      const tmp5 = stateFromStores(5417)(channel);
+      const tmp4 = stateFromStores(13016)(channel);
       const items = [GuildStore];
       stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
       let obj = channel(504);
@@ -2924,11 +1971,11 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
         return isPrivateResult;
       });
       let obj2 = channel(504);
-      const tmp9 = stateFromStores(6664);
-      ({ newestAnalyticsLocation: c2, analyticsLocations } = stateFromStores(6664)(
-        stateFromStores(6688).USER_PROFILE_VOICE_ACTIVITY_CARD,
+      const tmp9 = stateFromStores(6841);
+      ({ newestAnalyticsLocation: c2, analyticsLocations } = stateFromStores(6841)(
+        stateFromStores(6865).USER_PROFILE_VOICE_ACTIVITY_CARD,
       ));
-      const tmp11 = stateFromStores(12862)({
+      const tmp11 = stateFromStores(13011)({
         display: "voice",
         activity: { type: "VOICE" },
         voiceChannelId: channel.id,
@@ -2936,7 +1983,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
         analyticsLocations,
       });
       closure_3 = tmp11;
-      stateFromStores(12863)({ userId: user.id, onAction: tmp11 });
+      stateFromStores(13012)({ userId: user.id, onAction: tmp11 });
       const obj5 = { style: null, title: null, titleStyle: null, children: null };
       const items2 = [tmp.card, style];
       obj5.style = items2;
@@ -2948,7 +1995,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
         analyticsLocations,
       };
       const obj4 = { userId: user.id, onAction: tmp11 };
-      const tmp9Result = stateFromStores(6664)(stateFromStores(6688).USER_PROFILE_VOICE_ACTIVITY_CARD);
+      const tmp9Result = stateFromStores(6841)(stateFromStores(6865).USER_PROFILE_VOICE_ACTIVITY_CARD);
       if (!channel.isDM()) {
         if (!channel.isGroupDM()) {
           const intl = channel(1126).intl;
@@ -2970,7 +2017,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
           id = stateFromStores.id;
         }
         obj7.guildId = id;
-        const items3 = [closure_23(tmp2(12881), obj7)];
+        const items3 = [closure_23(tmp2(13030), obj7)];
         const obj8 = { style: tmp.voiceCallContent, children: null };
         if (stateFromStores1) {
           const obj9 = {
@@ -2981,7 +2028,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
             children: null,
           };
           const obj10 = { channel };
-          obj9.accessibilityLabel = tmp2(9295)(obj10);
+          obj9.accessibilityLabel = tmp2(8626)(obj10);
           const intl3 = channel(1126).intl;
           obj9.accessibilityHint = intl3.string(channel(1126).t["9C444m"]);
           obj9.onPress = function onPress() {
@@ -2993,19 +2040,19 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
           const obj11 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
           const obj12 = { style: tmp.voiceCallNameIconWrapper, children: null };
           const obj13 = { channel, size: "sm", color: "mobile-text-heading-primary" };
-          obj12.children = closure_23(tmp2(10641), obj13);
+          obj12.children = closure_23(tmp2(10241), obj13);
           const items4 = [closure_23(closure_9, obj12), tmp5];
           obj11.children = items4;
-          obj9.children = closure_24(channel(4892).Text, obj11);
-          let tmp13Result = closure_23(channel(5916).PressableOpacity, obj9);
+          obj9.children = closure_24(channel(5086).Text, obj11);
+          let tmp13Result = closure_23(channel(6189).PressableOpacity, obj9);
         } else {
           const obj14 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
           const obj15 = { style: tmp.voiceCallNameIconWrapper, children: null };
           const obj16 = { channel, size: "sm", color: "mobile-text-heading-primary" };
-          obj15.children = closure_23(tmp2(10641), obj16);
+          obj15.children = closure_23(tmp2(10241), obj16);
           const items5 = [closure_23(closure_9, obj15), tmp5];
           obj14.children = items5;
-          tmp13Result = closure_24(channel(4892).Text, obj14);
+          tmp13Result = closure_24(channel(5086).Text, obj14);
         }
         const items6 = [tmp13Result];
         let tmp18Result2 = null;
@@ -3032,8 +2079,8 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
           const intl6 = channel(1126).intl;
           const obj20 = { guildName: stateFromStores.name };
           obj19.children = intl6.format(channel(1126).t["hq/Qze"], obj20);
-          obj17.children = closure_23(channel(4892).Text, obj19);
-          tmp18Result2 = closure_23(channel(5916).PressableOpacity, obj17);
+          obj17.children = closure_23(channel(5086).Text, obj19);
+          tmp18Result2 = closure_23(channel(6189).PressableOpacity, obj17);
         }
         items6[1] = tmp18Result2;
         obj8.children = items6;
@@ -3041,13 +2088,13 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
         obj6.children = items3;
         const items7 = [closure_24(closure_9, obj6)];
         const obj21 = { channel, isInChannel, onAction: tmp11 };
-        items7[1] = closure_23(channel(12874).VoiceChannelButtons, obj21);
+        items7[1] = closure_23(channel(13023).VoiceChannelButtons, obj21);
         obj5.children = items7;
         return closure_24(tmp14, obj5);
       }
       const intl2 = channel(1126).intl;
       stringResult = intl2.string(channel(1126).t["9FaEzi"]);
-      tmp14 = stateFromStores(6713);
+      tmp14 = stateFromStores(6890);
     };
 ReactCompilerGating = fn(558);
 let obj6 = {
@@ -3062,7 +2109,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivity.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function UserProfileActivity(user) {
       const cResult = user(style[20]).c(70);
       user = user.user;
       const currentUser = user.currentUser;
@@ -3088,7 +2135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp10 = cResult[3];
         }
         if (cResult[4] !== voiceChannel) {
-          class I {
+          class C {
             constructor() {
               isInChannelResult = null != voiceChannel;
               if (isInChannelResult) {
@@ -3099,9 +2146,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[4] = voiceChannel;
-          cResult[5] = I;
+          cResult[5] = C;
         } else {
-          class I {
+          class C {
             constructor() {
               isInChannelResult = null != voiceChannel;
               if (isInChannelResult) {
@@ -3112,11 +2159,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const stateFromStores = tmp(style[43]).useStateFromStores(tmp10, I);
+        const stateFromStores = tmp(style[43]).useStateFromStores(tmp10, C);
         closure_8 = tmp14;
         const _Symbol2 = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          class I {
+          class C {
             constructor() {
               isInChannelResult = null != voiceChannel;
               if (isInChannelResult) {
@@ -3130,7 +2177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[6] = items1;
           const tmp15 = items1;
         } else {
-          class I {
+          class C {
             constructor() {
               isInChannelResult = null != voiceChannel;
               if (isInChannelResult) {
@@ -3142,7 +2189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if ((cResult[7] === user.id) === currentUser.id) {
-          class I {
+          class C {
             constructor() {
               isInChannelResult = null != voiceChannel;
               if (isInChannelResult) {
@@ -3152,10 +2199,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return isInChannelResult;
             }
           }
-          const stateFromStores1 = tmp(style[43]).useStateFromStores(tmp15, E);
+          const stateFromStores1 = tmp(style[43]).useStateFromStores(tmp15, L);
           const _Symbol3 = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            class I {
+            class C {
               constructor() {
                 isInChannelResult = null != voiceChannel;
                 if (isInChannelResult) {
@@ -3169,7 +2216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[10] = items2;
             const tmp19 = items2;
           } else {
-            class I {
+            class C {
               constructor() {
                 isInChannelResult = null != voiceChannel;
                 if (isInChannelResult) {
@@ -3283,7 +2330,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const tmpResult4 = tmp(style[43]);
         }
-        class E {
+        class L {
           constructor() {
             if (closure_8) {
               tmp4 = closure_16;
@@ -3299,7 +2346,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[7] = user.id === currentUser.id;
         cResult[8] = user.id;
-        cResult[9] = E;
+        cResult[9] = L;
         const tmpResult = tmp(style[43]);
       }
       let obj2 = { userId: user.id, guildId };
@@ -3309,7 +2356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = obj2;
       const tmp6 = currentUser(style[75])(user.id);
     }
-  : (guildId) => {
+  : function UserProfileActivity(guildId) {
       user = guildId.user;
       const currentUser = guildId.currentUser;
       const style = guildId.style;

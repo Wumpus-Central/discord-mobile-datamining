@@ -10,11 +10,11 @@ import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, useWindowDimensions: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(7524);
+const SearchConstants = fn(9247);
 ({ FILE_OR_LINK_IMAGE_BUFFER: closure_7, SearchFileTypes: closure_8 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/search/native/components/list
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (data) => {
+    ? function FileGridItem(data) {
         const cResult = data(imageStyle[11]).c(47);
         data = data.data;
         const onPress = data.onPress;
@@ -328,7 +328,7 @@ export default noop.memo(
         tmp10 = avatarSource;
         let tmpResult = data(imageStyle[12]);
       }
-    : (containerStyle) => {
+    : function FileGridItem(containerStyle) {
         const data = containerStyle.data;
         const onPress = containerStyle.onPress;
         const imageStyle = containerStyle.imageStyle;

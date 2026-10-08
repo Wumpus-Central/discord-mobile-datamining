@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/components/utils/useUsernameRegistrationStep.tsx
 import util from "../../../../../intl/index.native.tsx";
-import Link from "../../../../../../_runtime/01491_Link.js";
+import Link from "../../../../../../_runtime/01503_Link.js";
 import UniqueUsernamesTypes from "../../../../unique_usernames/UniqueUsernamesTypes.tsx";
 import RegistrationStepsUtils from "../../RegistrationStepsUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -10,8 +10,8 @@ import UniqueUsernamesStore from "../../../../unique_usernames/UniqueUsernamesSt
 const require = globalThis.__r;
 
 require = fn;
-const useRegistrationUIStore = fn(15906).useRegistrationUIStore;
-const RegistrationConstants = fn(15907);
+const useRegistrationUIStore = fn(16165).useRegistrationUIStore;
+const RegistrationConstants = fn(16166);
 ({ authStateToRegisterTransitionStep: closure_7, RegistrationTransitionActionTypes: closure_8 } =
   RegistrationConstants);
 const size = fn(2);

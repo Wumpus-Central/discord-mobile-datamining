@@ -17,11 +17,11 @@ import PresenceStore from "../../../stores/PresenceStore.tsx";
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(9100).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(9318).updateShouldShowJumpToPresentButton;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function useMessageAuthorActivities(arr) {
       const cResult = require("c").c(6);
       if (cResult[0] !== arr) {
         let obj2 = {};
@@ -62,7 +62,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStoresObject(tmp6, tmp8, tmp9);
     }
-  : (arg0) => {
+  : function useMessageAuthorActivities(arg0) {
       _require = arg0;
       const items = [arg0];
       const memo = noop.useMemo(() => {
@@ -85,7 +85,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function useFetchMessageApplications(arr) {
       const cResult = require("c").c(8);
       if (cResult[0] !== arr) {
         const _Set = Set;
@@ -145,7 +145,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp13, tmp14);
       let obj = require("c");
     }
-  : (arg0) => {
+  : function useFetchMessageApplications(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       const memo = noop.useMemo(() => {
@@ -174,7 +174,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFetchVoiceChannelInviteStartTimes(arg0) {
       _require = arg0;
       const cResult = require("c").c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -227,7 +227,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const effect = noop.useEffect(tmp10, tmp11);
       }
-      const fn2 = function h() {
+      const fn2 = function v() {
         const values = closure_0.values();
         const iter = values[Symbol.iterator]();
         const nextResult = iter.next();
@@ -260,7 +260,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn2;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useFetchVoiceChannelInviteStartTimes(arg0) {
       _require = arg0;
       const items = [GuildStore, GuildAvailabilityStore];
       const items1 = [arg0];
@@ -319,7 +319,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useScrollState() {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = {
@@ -363,7 +363,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : () => {
+  : function useScrollState() {
       const tmp = _slicedToArray(
         noop.useState({
           animated: false,
@@ -467,7 +467,7 @@ export const useChatUpdatesQueue = function useChatUpdatesQueue(ref5, callback) 
   return memo;
 };
 export const useMessagesState = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useMessagesState() {
       const cResult = c.c(3);
       [tmp3, tmp4] = noop.useState(false);
       const tmp2 = _slicedToArray(noop.useState(false), 2);
@@ -489,7 +489,7 @@ export const useMessagesState = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj2;
       tmp8 = obj2;
     }
-  : () => {
+  : function useMessagesState() {
       [tmp2, tmp3] = noop.useState(false);
       const tmp4 = _slicedToArray(noop.useState(false), 2);
       return {

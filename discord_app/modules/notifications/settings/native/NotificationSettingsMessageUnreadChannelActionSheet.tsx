@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1085).UserNotificationSettings;
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 let closure_6 = fn(1095).ChannelNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function NotificationSettingsMessageUnreadChannelActionSheet(channel) {
       _require = channel;
       const cResult = require("c").c(9);
       let obj = require("c");
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = fn;
       let obj2 = require("notficationSettingsChannelFlagUtils");
     }
-  : (channel) => {
+  : function NotificationSettingsMessageUnreadChannelActionSheet(channel) {
       _require = channel;
       const channelPresetSettings = require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(
         channel.channel,

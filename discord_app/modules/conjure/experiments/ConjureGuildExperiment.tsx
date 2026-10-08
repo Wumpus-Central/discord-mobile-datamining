@@ -27,7 +27,7 @@ function hasConjureGuild(arg0, location) {
   return false;
 }
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
-const ApexExperiment = fn(1440);
+const ApexExperiment = fn(1452);
 let closure_4 = ApexExperiment.createApexExperiment({
   name: "2026-07-vibegrations-guild",
   kind: "guild",
@@ -43,7 +43,7 @@ let obj2 = {
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 };
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsConjureGuildEnabled(arg0) {
       const cResult = c.c(3);
       ({ guildId, location: _location } = arg0);
       if (guildId == null) {
@@ -61,7 +61,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj2;
       tmp2 = obj2;
     }
-  : (location) => {
+  : function useIsConjureGuildEnabled(location) {
       let guildId = location.guildId;
       if (guildId == null) {
         guildId = EMPTY_STRING_SNOWFLAKE_ID;
@@ -75,18 +75,18 @@ export const useIsConjureGuildEnabled = tmp2;
 export { isConjureGuildEnabled };
 export { hasConjureGuild };
 export const useHasConjureGuild = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHasConjureGuild(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [GuildStore, tmp(1440).ApexExperimentStore];
+        const items = [GuildStore, tmp(1452).ApexExperimentStore];
         cResult[0] = items;
         let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function l() {
+        const fn = function o() {
           return hasConjureGuild(Object.values(GuildStore.getGuilds()), closure_0);
         };
         const items1 = [arg0];
@@ -102,7 +102,7 @@ export const useHasConjureGuild = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7);
     }
-  : (arg0) => {
+  : function useHasConjureGuild(arg0) {
       _require = arg0;
       const items = [GuildStore, require("ApexExperiment").ApexExperimentStore];
       const items1 = [arg0];

@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_claim/useGameClaimCoachmark.tsx");
 
 export const useCanShowGameClaimCoachmark = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function useCanShowGameClaimCoachmark(guildId) {
       _require = guildId;
       const cResult = require("c").c(4);
       const obj = require("c");
@@ -49,7 +49,7 @@ export const useCanShowGameClaimCoachmark = ReactCompilerGating.isReactCompilerE
       }
       return gameClaimCoachmarkEnabled;
     }
-  : (guildId) => {
+  : function useCanShowGameClaimCoachmark(guildId) {
       _require = guildId;
       let gameClaimCoachmarkEnabled = require("GameClaimCoachmarkExperiment").useGameClaimCoachmarkEnabled(
         guildId,

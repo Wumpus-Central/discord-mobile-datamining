@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils.tsx";
+import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage.tsx";
 
 require = fn;
 function handleSearchMessagesSuccess(data) {
@@ -55,7 +55,7 @@ const explicitMediaSearchStore = new ExplicitMediaSearchStore(DispatcherDefault,
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function handleScanTimeout(channelId) {
     const combined = "" + channelId.channelId + ":" + channelId.messageId;
     if (null != dependencyMap[combined]) {
-      dependencyMap[combined] = ExplicitMediaRedactionUtils.handleExplicitMediaScanTimeoutForMessage(tmp2);
+      dependencyMap[combined] = handleExplicitMediaScanTimeoutForMessage.handleExplicitMediaScanTimeoutForMessage(tmp2);
     }
   },
 });

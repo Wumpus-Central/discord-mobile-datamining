@@ -7,13 +7,13 @@ import ApplicationWidgetConfigStore from "../ApplicationWidgetConfigStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FetchState = fn(8729).FetchState;
+const FetchState = fn(12380).FetchState;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useApplicationWidgetConfigs(arg0) {
       _require = arg0;
       const cResult = require("c").c(21);
       const DeveloperMode = require("UserSettings").DeveloperMode;
@@ -62,23 +62,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = cResult[4];
       }
       if (cResult[5] !== arg0) {
-        const fn2 = function _() {
-          return closure_0.filter((item) => fetchState.getFetchState(item) === constants.NOT_FETCHED);
-        };
+        class C {
+          constructor() {
+            return closure_0.filter((item) => fetchState.getFetchState(item) === constants.NOT_FETCHED);
+          }
+        }
         cResult[5] = arg0;
         class S {
           constructor() {
             return closure_3.getDeveloperFetchState();
           }
         }
-        cResult[6] = fn2;
-        let tmp15 = fn2;
+        cResult[6] = C;
       } else {
-        tmp15 = cResult[6];
+        class C {
+          constructor() {
+            return closure_0.filter((item) => fetchState.getFetchState(item) === constants.NOT_FETCHED);
+          }
+        }
       }
       const tmpResult4 = require("initialize");
-      const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp13, tmp15);
+      const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp13, C);
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+        class C {
+          constructor() {
+            return closure_0.filter((item) => fetchState.getFetchState(item) === constants.NOT_FETCHED);
+          }
+        }
         const items3 = [stateFromStores1];
         class S {
           constructor() {
@@ -86,15 +96,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[7] = items3;
-        let tmp17 = items3;
+        const tmp17 = items3;
       } else {
-        tmp17 = cResult[7];
+        class C {
+          constructor() {
+            return closure_0.filter((item) => fetchState.getFetchState(item) === constants.NOT_FETCHED);
+          }
+        }
       }
       if (cResult[8] !== arg0) {
-        class T {
+        class C {
           constructor() {
-            mapped = closure_0.map((item) => config.getConfig(item));
-            return mapped.filter(closure_0(closure_1[6]).isNotNullish);
+            return closure_0.filter((item) => fetchState.getFetchState(item) === constants.NOT_FETCHED);
           }
         }
         cResult[8] = arg0;
@@ -103,17 +116,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_3.getDeveloperFetchState();
           }
         }
-        cResult[9] = T;
+        cResult[9] = tmp19;
       } else {
-        class T {
+        class C {
           constructor() {
-            mapped = closure_0.map((item) => config.getConfig(item));
-            return mapped.filter(closure_0(closure_1[6]).isNotNullish);
+            return closure_0.filter((item) => fetchState.getFetchState(item) === constants.NOT_FETCHED);
           }
         }
       }
       const tmpResult5 = require("initialize");
-      const stateFromStoresArray1 = require("initialize").useStateFromStoresArray(tmp17, T);
+      const stateFromStoresArray1 = require("initialize").useStateFromStoresArray(tmp17, tmp19);
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
@@ -184,30 +196,40 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn3 = function b() {
-        if (stateFromStores !== FetchState.NOT_FETCHED) {
-          if (tmp !== FetchState.FETCHING) {
-            if (!setting) {
-              for (const item10012 of stateFromStoresArray) {
-                let obj = ApplicationWidgetConfigActions;
-                let widgetConfigs = obj.fetchWidgetConfigs(item10012);
-                let catchPromise = widgetConfigs.catch(() => {});
-                continue;
+      class W {
+        constructor() {
+          tmp2 = FetchState;
+          if (closure_2 !== FetchState.NOT_FETCHED) {
+            if (tmp !== tmp2.FETCHING) {
+              tmp3 = closure_1;
+              if (!closure_1) {
+                tmp5 = closure_4;
+                tmp6 = closure_4;
+                for (const item10012 of closure_4) {
+                  tmp7 = closure_0;
+                  tmp8 = closure_1;
+                  obj = closure_0(closure_1[7]);
+                  widgetConfigs = obj.fetchWidgetConfigs(item10012);
+                  catchPromise = widgetConfigs.catch(() => {});
+                  continue;
+                }
+              } else if (closure_3 !== tmp2.NOT_FETCHED) {
               }
             }
           }
+          return;
         }
-      };
+      }
       const items6 = [stateFromStores1, stateFromStores, stateFromStoresArray, setting];
       cResult[15] = stateFromStores1;
       cResult[16] = stateFromStores;
       cResult[17] = stateFromStoresArray;
       cResult[18] = setting;
-      cResult[19] = fn3;
+      cResult[19] = W;
       cResult[20] = items6;
       const tmpResult6 = require("initialize");
     }
-  : (arg0) => {
+  : function useApplicationWidgetConfigs(arg0) {
       _require = arg0;
       const DeveloperMode = require("UserSettings").DeveloperMode;
       setting = DeveloperMode.useSetting();

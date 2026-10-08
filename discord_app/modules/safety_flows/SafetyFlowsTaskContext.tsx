@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/safety_flows/SafetyFlowsTaskC
 
 export const SafetyFlowTaskContext = context;
 export const useSafetyFlowTask = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSafetyFlowTask() {
       context = noop.useContext(context);
       if (null == context) {
         const _Error = Error;
@@ -18,7 +18,7 @@ export const useSafetyFlowTask = ReactCompilerGating.isReactCompilerEnabled()
         return context;
       }
     }
-  : () => {
+  : function useSafetyFlowTask() {
       context = noop.useContext(context);
       if (null == context) {
         const _Error = Error;

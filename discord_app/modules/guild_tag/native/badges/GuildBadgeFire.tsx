@@ -1,6 +1,6 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeFire.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07550_inlineStyles.js";
 import GuildBadgeUtils from "GuildBadgeUtils.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -21,7 +21,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeFire.tsx");
 
 export const GuildBadgeFire = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildBadgeFire(arg0) {
       const cResult = c.c(36);
       if (cResult[0] !== arg0) {
         ({ width, height, primaryTintColor } = arg0);
@@ -219,7 +219,7 @@ export const GuildBadgeFire = ReactCompilerGating.isReactCompilerEnabled()
       cResult[35] = tmp51;
       tmp49 = tmp51;
     }
-  : (primaryTintColor) => {
+  : function GuildBadgeFire(primaryTintColor) {
       let num = primaryTintColor.width;
       if (num === undefined) {
         num = 24;

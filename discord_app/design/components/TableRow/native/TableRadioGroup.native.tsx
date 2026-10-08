@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("design/components/TableRow/native/Tab
 
 export const TableRadioGroupContext = context;
 export const TableRadioGroup = ReactCompilerGating.isReactCompilerEnabled()
-  ? (groupRef) => {
+  ? function TableRadioGroup(groupRef) {
       const cResult = onChange(576).c(26);
       ({ children, value, defaultValue, onChange } = groupRef);
       ({ title, description, helperText, hasIcons, accessibilityLabel } = groupRef);
@@ -40,7 +40,7 @@ export const TableRadioGroup = ReactCompilerGating.isReactCompilerEnabled()
             let tmp9 = cResult[4];
           }
           const imperativeHandle = mapped.useImperativeHandle(groupRef.groupRef, tmp8, tmp9);
-          context = mapped.useContext(onChange(6080).RedesignCompatContext);
+          context = mapped.useContext(onChange(6266).RedesignCompatContext);
           if (cResult[5] === tmp4) {
             if (cResult[6] === onChange) {
               let tmp12 = cResult[7];
@@ -85,7 +85,7 @@ export const TableRadioGroup = ReactCompilerGating.isReactCompilerEnabled()
                     hasIcons,
                     children: cResult[13],
                   };
-                  const tmp19 = context(onChange(6081).TableRowGroup, obj3);
+                  const tmp19 = context(onChange(6267).TableRowGroup, obj3);
                   cResult[16] = accessibilityLabel;
                   cResult[17] = description;
                   cResult[18] = hasIcons;
@@ -155,7 +155,7 @@ export const TableRadioGroup = ReactCompilerGating.isReactCompilerEnabled()
           tmp12 = fn2;
         }
       }
-      const fn = function u() {
+      const fn = function s() {
         return {
           setValue(arg0) {
             if (!closure_1_1) {
@@ -180,7 +180,7 @@ export const TableRadioGroup = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = fn;
       const tmp6 = _slicedToArray(noop.useState(tmp5), 2);
     }
-  : (arg0) => {
+  : function TableRadioGroup(arg0) {
       ({ value, defaultValue, onChange } = arg0);
       _slicedToArray = undefined;
       noop = undefined;
@@ -221,7 +221,7 @@ export const TableRadioGroup = ReactCompilerGating.isReactCompilerEnabled()
         }),
         items,
       );
-      jsx = obj.useContext(onChange(6080).RedesignCompatContext);
+      jsx = obj.useContext(onChange(6266).RedesignCompatContext);
       const items1 = [undefined !== value, onChange];
       onSelect = obj.useCallback((arg0) => {
         if (!closure_1) {
@@ -250,7 +250,7 @@ export const TableRadioGroup = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp4 = type;
       });
-      obj2.children = jsx(onChange(6081).TableRowGroup, {
+      obj2.children = jsx(onChange(6267).TableRowGroup, {
         accessibilityRole: "radiogroup",
         accessibilityLabel,
         title,

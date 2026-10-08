@@ -11,7 +11,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, arg1, size) => {
+  ? function useHighlightedCreatorGuildDetails(id, arg1, size) {
       const cResult = c.c(28);
       ({ isLoading, error, highlightedCreatorDetails } = useFetchHighlightedCreatorGuildDetailsDefault(id));
       let store_page;
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       arr = found;
       const tmp4 = useFetchHighlightedCreatorGuildDetailsDefault(id);
     }
-  : (id, arg1, size) => {
+  : function useHighlightedCreatorGuildDetails(id, arg1, size) {
       closure_0 = arg1;
       const tmp3 = store_page(memo[4])(id);
       ({ isLoading, highlightedCreatorDetails } = tmp3);

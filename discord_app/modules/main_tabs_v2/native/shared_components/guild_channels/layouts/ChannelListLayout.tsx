@@ -48,7 +48,7 @@ export const isLayoutCozy = function isLayoutCozy(messagesTabLayout) {
   );
 };
 export const useMessagesTabLayout = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useMessagesTabLayout(arg0) {
       const ChannelListLayoutSetting = UserSettings.ChannelListLayoutSetting;
       const setting = ChannelListLayoutSetting.useSetting();
       const ChannelListLayoutTypes = ChannelListLayoutTypes2.ChannelListLayoutTypes;
@@ -61,7 +61,7 @@ export const useMessagesTabLayout = ReactCompilerGating.isReactCompilerEnabled()
       }
       return COZY;
     }
-  : (arg0) => {
+  : function useMessagesTabLayout(arg0) {
       const ChannelListLayoutSetting = UserSettings.ChannelListLayoutSetting;
       const setting = ChannelListLayoutSetting.useSetting();
       const ChannelListLayoutTypes = ChannelListLayoutTypes2.ChannelListLayoutTypes;

@@ -9,11 +9,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/hooks/useIsRemote.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsRemote() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GameConsoleStore];
-        const fn = function n() {
+        const fn = function s() {
           return null != remoteSessionId.getRemoteSessionId() || null != remoteSessionId.getAwaitingRemoteSessionInfo();
         };
         cResult[0] = items;
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsRemote() {
       const items = [GameConsoleStore];
       return initialize.useStateFromStores(
         items,

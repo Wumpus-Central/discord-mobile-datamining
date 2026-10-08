@@ -8,13 +8,13 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isGuildOwner = fn(2070).isGuildOwner;
-let closure_8 = fn(4519).MemberSafetyPagePermissions;
+const isGuildOwner = fn(2082).isGuildOwner;
+let closure_8 = fn(4711).MemberSafetyPagePermissions;
 const Constants = fn(1085);
 ({ GuildFeatures: closure_9, Permissions: c10 } = Constants);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanAccessMemberSafetyPage(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -45,7 +45,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useCanAccessMemberSafetyPage(arg0) {
       _require = arg0;
       let items = [GuildStore, UserStore];
       const items1 = [arg0];
@@ -65,7 +65,7 @@ let closure_11 = tmp3;
 fn(558);
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanAccessBulkBanningFeature(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       let stateFromStores = closure_11(arg0);
@@ -100,7 +100,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return stateFromStores;
     }
-  : (arg0) => {
+  : function useCanAccessBulkBanningFeature(arg0) {
       _require = arg0;
       let stateFromStores = closure_11(arg0);
       let items = [GuildStore, UserStore];
@@ -122,7 +122,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanAccessInviteCodeFeature(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -133,7 +133,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function o() {
+        const fn = function c() {
           guild = GuildStore.getGuild(closure_0);
           let canResult = null != guild;
           if (canResult) {
@@ -154,7 +154,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useCanAccessInviteCodeFeature(arg0) {
       _require = arg0;
       const items = [GuildStore, PermissionStore];
       const items1 = [arg0];
@@ -239,7 +239,7 @@ export const useCanAccessMemberSafetyPage = tmp3;
 export const useCanAccessBulkBanningFeature = tmp4;
 export const useCanAccessInviteCodeFeature = tmp5;
 export const useCanBulkBanUser = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useCanBulkBanUser(arg0, arg1, arg2) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = arg2;
@@ -283,7 +283,7 @@ export const useCanBulkBanUser = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1, arg2) => {
+  : function useCanBulkBanUser(arg0, arg1, arg2) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = arg2;

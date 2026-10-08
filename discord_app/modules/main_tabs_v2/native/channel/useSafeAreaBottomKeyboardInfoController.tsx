@@ -4,7 +4,7 @@ import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let MetaQuestUtils = fn(1615);
+let MetaQuestUtils = fn(1627);
 MetaQuestUtils = MetaQuestUtils.isMetaQuest();
 const __initData = {
   code: 'function useSafeAreaBottomKeyboardInfoControllerTsx1(e_1){const{runOnJS,KeyboardStateDebugging,IS_SYSTEM_KEYBOARD_EXTERNAL,keyboardOverlapsCurrentAppEntry,keyboardOpenedHeight}=this.__closure;runOnJS(KeyboardStateDebugging.keyboardControllerWorkletEvent)("onStart",e_1.height);if(IS_SYSTEM_KEYBOARD_EXTERNAL){return;}if(e_1.height>0&&keyboardOverlapsCurrentAppEntry.get()){keyboardOpenedHeight.set(e_1.height);}}',
@@ -25,7 +25,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSafeAreaBottomKeyboardInfoController() {
       const cResult = appEntryKey(sharedValue1[6]).c(14);
       let obj = appEntryKey(sharedValue1[6]);
       appEntryKey = appEntryKey(sharedValue1[7]).useAppEntryKey();
@@ -273,7 +273,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp18 = fn;
       const tmpResult7 = appEntryKey(sharedValue1[9]);
     }
-  : () => {
+  : function useSafeAreaBottomKeyboardInfoController() {
       appEntryKey = appEntryKey(keyboardOpenOrOpening[7]).useAppEntryKey();
       let num = 0;
       if (!MetaQuestUtils) {
@@ -410,7 +410,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const tmpResult7 = appEntryKey(keyboardOpenOrOpening[9]);
       let obj2 = { onStart: null, onEnd: null };
-      const fn = function o(height) {
+      const fn = function n(height) {
         ReanimatedRexport.runOnJS(KeyboardStateDebuggingDefault.keyboardControllerWorkletEvent)(
           "onStart",
           height.height,
@@ -436,7 +436,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       fn.__workletHash = 7252585223001;
       fn.__initData = __initData3;
       obj2.onStart = fn;
-      const fn2 = function n(height) {
+      const fn2 = function o(height) {
         ReanimatedRexport.runOnJS(KeyboardStateDebuggingDefault.keyboardControllerWorkletEvent)("onEnd", height.height);
         if (!MetaQuestUtils) {
           value = height.height > 0;

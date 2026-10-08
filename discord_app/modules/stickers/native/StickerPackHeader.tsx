@@ -1,24 +1,24 @@
 // discord_app/modules/stickers/native/StickerPackHeader.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef10136 from "../../../../_runtime/metro/10136__.js";
-import _modDef10137 from "../../../../_runtime/metro/10137__.js";
+import _modDef9721 from "../../../../_runtime/metro/09721__.js";
+import _modDef9722 from "../../../../_runtime/metro/09722__.js";
 import StickerPackBannerDefault from "StickerPackBanner.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = PressableOpacity(1126);
-const native = PressableOpacity(1188);
-const Text_Text = PressableOpacity(4892);
-const StickersUtils = PressableOpacity(5435);
-const Pressables = PressableOpacity(5916);
+const native = PressableOpacity(1200);
+const Text_Text = PressableOpacity(5086);
+const StickersUtils = PressableOpacity(5745);
+const Pressables = PressableOpacity(6189);
 require = fn;
 const View = fn(17).View;
-const StickerPickerConstants = fn(10095);
+const StickerPickerConstants = fn(9679);
 ({ PADDING_VERTICAL, PADDING_HORIZONTAL } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
 let result = 2 * PADDING_VERTICAL;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   section: {
     paddingTop: PADDING_VERTICAL,
@@ -67,7 +67,7 @@ const result1 = size.fileFinishedImporting("modules/stickers/native/StickerPackH
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function StickerPackHeader(arg0) {
         let PressableOpacity = require;
         let obj = dependencyMap;
         const cResult = c.c(46);
@@ -256,7 +256,7 @@ export default noop.memo(
                   tmp15 = tmp18;
                 }
                 const obj13 = {
-                  source: _modDef10137,
+                  source: _modDef9722,
                   style: section.premiumIcon,
                   size: native.Icon.Sizes.EXTRA_SMALL,
                   color: section.icon.color,
@@ -273,7 +273,7 @@ export default noop.memo(
           if (result) {
             const obj14 = { style: section.iconContainer, children: null };
             const obj16 = {
-              source: _modDef10136,
+              source: _modDef9721,
               style: section.animatedIcon,
               size: native.Icon.Sizes.EXTRA_SMALL,
               color: section.icon.color,
@@ -308,7 +308,7 @@ export default noop.memo(
           children: stickerPack.name,
         };
       }
-    : (withDescription) => {
+    : function StickerPackHeader(withDescription) {
         ({ stickerPack, style, onPress, withBanner } = withDescription);
         if (withBanner === undefined) {
           withBanner = false;
@@ -334,7 +334,7 @@ export default noop.memo(
         if (result) {
           const obj5 = { style: tmp.iconContainer, children: null };
           const obj6 = {
-            source: _modDef10136,
+            source: _modDef9721,
             style: tmp.animatedIcon,
             size: native.Icon.Sizes.EXTRA_SMALL,
             color: tmp.icon.color,
@@ -352,7 +352,7 @@ export default noop.memo(
           children: stickerPack.name,
         };
         obj7.children = React4(native.Icon, {
-          source: _modDef10137,
+          source: _modDef9722,
           style: tmp.premiumIcon,
           size: native.Icon.Sizes.EXTRA_SMALL,
           color: tmp.icon.color,

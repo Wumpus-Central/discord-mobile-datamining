@@ -19,7 +19,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -38,7 +38,7 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/Main
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function MainTabsNavigatorPanel() {
         const cResult = navigation(drawerWidth[9]).c(113);
         isNavigatorPanelsBesideChannelList();
         let obj = navigation(drawerWidth[9]);
@@ -58,11 +58,11 @@ export default noop.memo(
               let obj = require;
               let result = dependencyMap;
               if (isChatLockedOpen) {
-                obj = obj(15965);
+                obj = obj(16225);
                 result = obj.convertPortraitToLandscapeScreens();
               } else {
-                obj(4751).dismissKeyboard();
-                const objResult = obj(4751);
+                obj(4945).dismissKeyboard();
+                const objResult = obj(4945);
                 const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
               }
               closure_4.current = true;
@@ -93,7 +93,7 @@ export default noop.memo(
         const first1 = tmp13[0];
         noop.useRef(first1);
         if (cResult[3] !== first1) {
-          class I {
+          class P {
             constructor() {
               closure_8.current = closure_7;
               return;
@@ -101,11 +101,11 @@ export default noop.memo(
           }
           const items1 = [first1];
           cResult[3] = first1;
-          cResult[4] = I;
+          cResult[4] = P;
           cResult[5] = items1;
           let tmp22 = items1;
         } else {
-          class I {
+          class P {
             constructor() {
               closure_8.current = closure_7;
               return;
@@ -113,7 +113,7 @@ export default noop.memo(
           }
           tmp22 = cResult[5];
         }
-        const effect = obj4.useEffect(I, tmp22);
+        const effect = obj4.useEffect(P, tmp22);
         if (cResult[6] !== navigation) {
           class F {
             constructor() {
@@ -505,7 +505,7 @@ export default noop.memo(
         cResult[20] = ie;
         const tmp17Result2 = _slicedToArray(noop.useState(tmp29), 2);
       }
-    : () => {
+    : function MainTabsNavigatorPanel() {
         let tmp = closure_13();
         navigation = navigation(drawerWidth[10]).useNavigation();
         let tmp6 = isChatLockedOpen(drawerWidth[11])();
@@ -522,11 +522,11 @@ export default noop.memo(
             let obj = require;
             let result = dependencyMap;
             if (isChatLockedOpen) {
-              obj = obj(15965);
+              obj = obj(16225);
               result = obj.convertPortraitToLandscapeScreens();
             } else {
-              obj(4751).dismissKeyboard();
-              const objResult = obj(4751);
+              obj(4945).dismissKeyboard();
+              const objResult = obj(4945);
               const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
             }
             closure_4.current = true;
@@ -780,7 +780,7 @@ export default noop.memo(
             let tmp = null;
             if (isChatBesideChannelList) {
               const obj = { translateX, maxWidth, isChatLockedOpen };
-              tmp = v65535(ChannelScreenAnimatedFrameDefault, obj);
+              tmp = collapsed(ChannelScreenAnimatedFrameDefault, obj);
             }
             return tmp;
           }, items11);

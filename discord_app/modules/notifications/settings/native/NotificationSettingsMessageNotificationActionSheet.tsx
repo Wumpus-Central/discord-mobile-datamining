@@ -14,7 +14,7 @@ const View = fn(17).View;
 const UserNotificationSettings = fn(1085).UserNotificationSettings;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   sheet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   header: { padding: 24, paddingTop: 0 },
@@ -33,7 +33,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (value) => {
+  ? function NotificationSettingsMessageNotificationActionSheet(value) {
       const cResult = c.c(26);
       const tmp4 = closure_7();
       if (cResult[0] !== value.value) {
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const obj11 = { style: tmp4.header, children: tmp5 };
     }
-  : (defaultValue) => {
+  : function NotificationSettingsMessageNotificationActionSheet(defaultValue) {
       const tmp = closure_7();
       const obj = { startExpanded: true, backgroundStyles: tmp.sheet, children: null };
       const obj2 = {

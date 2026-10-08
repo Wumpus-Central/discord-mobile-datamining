@@ -9,11 +9,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx");
 
 export const useSecureFramesVerifiedUserIds = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSecureFramesVerifiedUserIds() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [VerifiedKeyStore];
-        const fn = function o() {
+        const fn = function u() {
           return userIds.getUserIds();
         };
         cResult[0] = items;
@@ -25,7 +25,7 @@ export const useSecureFramesVerifiedUserIds = ReactCompilerGating.isReactCompile
       }
       return initialize.useStateFromStoresArray(tmp4, tmp5);
     }
-  : () => {
+  : function useSecureFramesVerifiedUserIds() {
       const items = [VerifiedKeyStore];
       return initialize.useStateFromStoresArray(items, () => userIds.getUserIds());
     };

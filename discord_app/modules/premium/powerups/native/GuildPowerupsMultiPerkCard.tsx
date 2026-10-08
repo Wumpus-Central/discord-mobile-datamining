@@ -10,14 +10,14 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildPowerupsMultiPerkCard(guildId) {
       const cResult = guildId(576).c(17);
       guildId = guildId.guildId;
       const listing = guildId.listing;
-      const tmp5 = listing(12223)(guildId, listing);
+      const tmp5 = listing(12302)(guildId, listing);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
-        const fn = function u() {
+        const fn = function l() {
           return useReducedMotion.useReducedMotion;
         };
         cResult[0] = items;
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === listing.powerups) {
           let tmp11 = cResult[4];
         }
-        const tmp12 = tmp4(12247)(tmp11);
+        const tmp12 = tmp4(12326)(tmp11);
         if (cResult[5] === guildId) {
           if (cResult[6] === listing) {
             let tmp13 = cResult[7];
@@ -57,6 +57,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
+              class P {
+                constructor() {
+                  obj = { guildId, listing };
+                  tmp = closure_1(closure_2[8])(obj);
+                  return;
+                }
+              }
               const obj2 = {
                 title: null,
                 description: null,
@@ -73,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               ({ status: obj3.status, costDecorator: obj3.costDecorator } = tmp12);
               obj2.onPress = tmp13;
               obj2.badge = tmp5.badge;
-              const tmp18 = jsx(tmp4(12245), {
+              const tmp17 = jsx(tmp4(12324), {
                 title: null,
                 description: null,
                 cost: null,
@@ -91,19 +98,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[13] = tmp12.costDecorator;
               cResult[14] = tmp12.status;
               cResult[15] = tmp15;
-              cResult[16] = tmp18;
-              tmp16 = tmp18;
+              cResult[16] = tmp17;
+              tmp16 = tmp17;
             }
           }
-          return null;
+          class P {
+            constructor() {
+              obj = { guildId, listing };
+              tmp = closure_1(closure_2[8])(obj);
+              return;
+            }
+          }
         }
-        const fn2 = function w() {
-          openGuildPowerupsMultiPerkBottomSheetDefault({ guildId, listing });
-        };
+        class P {
+          constructor() {
+            obj = { guildId, listing };
+            tmp = closure_1(closure_2[8])(obj);
+            return;
+          }
+        }
         cResult[5] = guildId;
         cResult[6] = listing;
-        cResult[7] = fn2;
-        tmp13 = fn2;
+        cResult[7] = P;
+        tmp13 = P;
       }
       const obj5 = { guildId, powerups: listing.powerups };
       cResult[2] = guildId;
@@ -112,13 +129,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = obj5;
       const obj = guildId(576);
     }
-  : (guildId) => {
+  : function GuildPowerupsMultiPerkCard(guildId) {
       guildId = guildId.guildId;
       const listing = guildId.listing;
-      let badge = listing(12223)(guildId, listing);
+      let badge = listing(12302)(guildId, listing);
       const items = [AccessibilityStore];
       const stateFromStores = guildId(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-      costDecorator = listing(12247)({ guildId, powerups: listing.powerups });
+      costDecorator = listing(12326)({ guildId, powerups: listing.powerups });
       const items1 = [guildId, listing];
       let tmp5 = null;
       if (null != costDecorator) {
@@ -143,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj5.onPress = tmp4;
           badge = badge.badge;
           obj5.badge = badge;
-          jsx(listing(12245), {
+          jsx(listing(12324), {
             title: null,
             description: null,
             cost: null,

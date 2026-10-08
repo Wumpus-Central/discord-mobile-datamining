@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { safetyToolsButton: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -19,7 +19,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/SafetyToolsButton.tsx");
 
 export const SafetyToolsButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function SafetyToolsButton(channelId) {
       const cResult = channelId(warningId[7]).c(42);
       channelId = channelId.channelId;
       const recipientId = channelId.recipientId;
@@ -221,7 +221,7 @@ export const SafetyToolsButton = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = T;
       let tmp7 = warningType(safetyToolsButtonTooltipForChannel.useState(false), 2);
     }
-  : (channelId) => {
+  : function SafetyToolsButton(channelId) {
       channelId = channelId.channelId;
       const recipientId = channelId.recipientId;
       const warningId = channelId.warningId;

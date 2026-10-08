@@ -9,10 +9,10 @@ const BadgeDefault = Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(11711).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(5078).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(11776).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/launchpad/native/shared/Unrea
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function UnreadBadge(arg0) {
         const cResult = c.c(7);
         ({ unread, resolvedUnreadSetting, muted } = arg0);
         const tmp4 = closure_7();
@@ -60,8 +60,7 @@ export default noop.memo(
             num3 = 1;
           }
           const obj4 = { opacity: num3 };
-          const items1 = [obj4];
-          obj3.badgeStyle = items1;
+          obj3.badgeStyle = obj4;
           obj2.children = jsx(BadgeDefault, { classic: true, size: null, badgeStyle: null });
           tmp11Result = <View style={null}>{null}</View>;
         }
@@ -74,7 +73,7 @@ export default noop.memo(
         tmp9 = tmp11Result;
         const tmpResult = useFontScale;
       }
-    : (arg0) => {
+    : function UnreadBadge(arg0) {
         ({ unread, resolvedUnreadSetting, muted } = arg0);
         const tmp4 = getLayoutStylesDefault();
         useFontScale;
@@ -94,8 +93,7 @@ export default noop.memo(
             num2 = 1;
           }
           const obj3 = { opacity: num2 };
-          const items1 = [obj3];
-          obj2.badgeStyle = items1;
+          obj2.badgeStyle = obj3;
           obj.children = jsx(BadgeDefault, { classic: true, size: null, badgeStyle: null });
           tmp9Result = <View style={null}>{null}</View>;
           const tmp2Result = BadgeDefault;

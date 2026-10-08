@@ -5,13 +5,13 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
-import _modDef3137 from "../../age_assurance/ManualReview.messages.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import _modDef3181 from "../../age_assurance/ManualReview.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import MonitoringAgentDefault from "../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
-import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import ManualReviewActionCreators from "../../age_assurance/ManualReviewActionCreators.tsx";
 import SafetyHubActionCreatorsAll from "../SafetyHubActionCreators.tsx";
@@ -22,7 +22,7 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 
 const require = globalThis.__r;
 
-const useShouldShowInitialGoogleWalletBanner = hyh4ls(14569);
+const useShouldShowInitialGoogleWalletBanner = hyh4ls(14830);
 require = fn;
 function handleLogInClick() {
   AuthenticationActionCreatorsDefault.closeSuspendedUser();
@@ -35,14 +35,14 @@ function handleManualReviewClick() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(8126).AgeCheckStatus;
+const AgeCheckStatus = fn(5921).AgeCheckStatus;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function RetryBanner() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { messageType: native.HelpMessageTypes.ERROR, button: null, children: null };
@@ -61,7 +61,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => {
+  : function RetryBanner() {
       const obj = { messageType: native.HelpMessageTypes.ERROR, button: null, children: null };
       const obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
       const intl = util.intl;
@@ -74,7 +74,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AgeCheckLoadingBanner() {
       const cResult = c.c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SafetyHubStore];
@@ -109,7 +109,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = initialize;
     }
-  : () => {
+  : function AgeCheckLoadingBanner() {
       const items = [SafetyHubStore];
       const stateFromStores = initialize.useStateFromStores(items, () =>
         isExpressiveModalV2Enabled.getIsExpressiveModalV2Enabled(),
@@ -122,7 +122,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ManualOrAutomatedReviewBanner() {
       const cResult = require("c").c(5);
       const tmp4 = closure_22();
       _require = tmp4;
@@ -131,7 +131,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = tmp(1126).intl;
         obj2.text = intl.string(tmp(1126).t.IcA9iD);
         obj2.onPress = handleRetryClick;
-        const tmp8 = closure_12(tmp(5601).Button, obj2);
+        const tmp8 = closure_12(tmp(5375).Button, obj2);
         cResult[0] = tmp8;
         let first = tmp8;
       } else {
@@ -154,7 +154,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             );
           },
         };
-        const formatResult = intl2.format(_modDef3137.vPoM8y, obj3);
+        const formatResult = intl2.format(_modDef3181.vPoM8y, obj3);
         cResult[1] = tmp4;
         cResult[2] = formatResult;
         let tmp9 = formatResult;
@@ -162,8 +162,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[2];
       }
       if (cResult[3] !== tmp9) {
-        const obj4 = { messageType: tmp(1188).HelpMessageTypes.ERROR, button: first, children: tmp9 };
-        const tmp14 = closure_12(tmp(1188).HelpMessage, obj4);
+        const obj4 = { messageType: tmp(1200).HelpMessageTypes.ERROR, button: first, children: tmp9 };
+        const tmp14 = closure_12(tmp(1200).HelpMessage, obj4);
         cResult[3] = tmp9;
         cResult[4] = tmp14;
         let tmp12 = tmp14;
@@ -172,7 +172,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp12;
     }
-  : () => {
+  : function ManualOrAutomatedReviewBanner() {
       _require = closure_22();
       const obj = { messageType: require("native").HelpMessageTypes.ERROR, button: null, children: null };
       const obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
@@ -181,7 +181,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.onPress = handleRetryClick;
       obj.button = closure_12(require("components/Button/Button").Button, obj2);
       const intl2 = require("util").intl;
-      obj.children = intl2.format(_modDef3137.vPoM8y, {
+      obj.children = intl2.format(_modDef3181.vPoM8y, {
         manualReviewHook(children, arg1) {
           return __initData(
             Text_Text.Text,
@@ -200,7 +200,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ManualReviewBanner() {
       let stringResult = dependencyMap;
       const cResult = c.c(4);
       const availableAgeVerificationMethods = useAvailableAgeVerificationMethods.useAvailableAgeVerificationMethods();
@@ -252,7 +252,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : () => {
+  : function ManualReviewBanner() {
       const availableAgeVerificationMethods = useAvailableAgeVerificationMethods.useAvailableAgeVerificationMethods();
       const methods = availableAgeVerificationMethods.methods;
       if (availableAgeVerificationMethods.loading) {
@@ -281,7 +281,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AutomatedUnderageAppealStatus() {
       let hyh4ls = require;
       let formatResult = dependencyMap;
       const cResult = c.c(12);
@@ -399,7 +399,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const hyh4lsResult1 = useShouldShowInitialGoogleWalletBanner;
     }
-  : () => {
+  : function AutomatedUnderageAppealStatus() {
       const items = [SafetyHubStore];
       const stateFromStores = initialize.useStateFromStores(items, () => ageCheckStatus.getAgeCheckStatus());
       useShouldShowInitialGoogleWalletBanner;
@@ -460,7 +460,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj7 = {
   container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 },
   loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" },
@@ -501,7 +501,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(14571, dependencyMap.paths),
+          asyncRequireImpl(14832, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );

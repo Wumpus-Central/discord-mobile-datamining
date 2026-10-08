@@ -11,7 +11,7 @@ const useMemo = _mod19.useMemo;
 const result = size.fileFinishedImporting("modules/soundboard/useGuildIdsToFetchSoundsFor.tsx");
 
 export const useGuildIdsToFetchSoundsFor = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGuildIdsToFetchSoundsFor() {
       const cResult = c.c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
@@ -54,7 +54,7 @@ export const useGuildIdsToFetchSoundsFor = ReactCompilerGating.isReactCompilerEn
       tmp11 = found;
       const tmpResult2 = useStateFromStores;
     }
-  : () => {
+  : function useGuildIdsToFetchSoundsFor() {
       const items = [GuildStore];
       stateFromStoresArray = stateFromStoresArray(stateFromStores[5]).useStateFromStoresArray(items, () =>
         guildIds.getGuildIds(),

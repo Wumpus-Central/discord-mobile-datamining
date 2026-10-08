@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const MessageBlockColors = { RED: 0, [0]: "RED", YELLOW: 1, [1]: "YELLOW" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((arg0) => {
   if (obj.RED === arg0) {
     obj = {
@@ -45,7 +45,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/MessageBlock.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function MessageBlock(children) {
       const cResult = c.c(6);
       children = children.children;
       const tmp4 = closure_6(children.color);
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp6;
       const obj3 = { style: tmp4.text, children };
     }
-  : (children) => {
+  : function MessageBlock(children) {
       const tmp = closure_6(children.color);
       const obj = {
         style: tmp.container,

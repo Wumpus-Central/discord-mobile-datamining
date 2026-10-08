@@ -111,9 +111,8 @@ export default function getJankScreenName() {
   if (null != rootState) {
     while (true) {
       let index = rootState.index;
-      let tmp2 = rootState;
       if (index == null) {
-        index = tmp2.routes.length - 1;
+        index = rootState.routes.length - 1;
       }
       let tmp3 = rootState.routes[index];
       if (null == tmp3) {
@@ -131,8 +130,8 @@ export default function getJankScreenName() {
           break;
         }
         let items1 = [];
-        let tmp5 = tmp2;
-        if (null != tmp2) {
+        let tmp5 = rootState;
+        if (null != rootState) {
           while (true) {
             let index2 = tmp5.index;
             if (index2 == null) {
@@ -151,53 +150,88 @@ export default function getJankScreenName() {
             }
           }
         }
-        let obj7 = { focused: items.concat(items1), rendered: null };
+        let obj7 = { focused: items.concat(items1), rendered: null, chatScreens: null };
         let items2 = [];
-        if (null != tmp2) {
+        let tmp9 = rootState;
+        if (null != rootState) {
           while (true) {
-            let index3 = tmp2.index;
+            let index3 = tmp9.index;
             if (index3 == null) {
-              index3 = tmp2.routes.length - 1;
+              index3 = tmp9.routes.length - 1;
             }
-            let tmp10 = tmp2.routes[index3];
+            let tmp11 = tmp9.routes[index3];
             let name;
-            if (tmp10 != null) {
-              name = tmp10.name;
+            if (tmp11 != null) {
+              name = tmp11.name;
             }
-            let tmp13 = tmp10;
+            let tmp14 = tmp11;
             if (name === channel) {
-              let routes = tmp2.routes;
-              let found = routes.find((name) => name.name === tabs);
+              let routes1 = tmp9.routes;
+              let found = routes1.find((name) => name.name === tabs);
               if (found == null) {
-                found = tmp10;
+                found = tmp11;
               }
-              tmp13 = found;
+              tmp14 = found;
             }
-            if (null == tmp13) {
+            if (null == tmp14) {
               break;
             } else {
               let obj8 = { name: null, key: null, params: null };
-              ({ name: obj6.name, key: obj6.key, params: obj6.params } = tmp13);
+              ({ name: obj6.name, key: obj6.key, params: obj6.params } = tmp14);
               let arr3 = items2.push(obj8);
-              if (null == tmp13.state) {
+              if (null == tmp14.state) {
                 break;
               }
             }
           }
         }
         obj7.rendered = items.concat(items2);
+        ({ routes, index: index4 } = rootState);
+        if (index4 == null) {
+          index4 = rootState.routes.length - 1;
+        }
+        let substr = routes.slice(0, index4 + 1);
+        let found1 = substr.filter((name) => name.name === channel);
+        let mapped = found1.map((params) => {
+          params = params.params;
+          let guildId;
+          if (params != null) {
+            guildId = params.guildId;
+          }
+          let channelId;
+          if (params != null) {
+            channelId = params.channelId;
+          }
+          let showCreateThread;
+          if (params != null) {
+            showCreateThread = params.showCreateThread;
+          }
+          let str = "";
+          if (true === showCreateThread) {
+            str = "/thread";
+          }
+          return "" + guildId + "/" + channelId + str;
+        });
+        let str = ",";
+        obj7.chatScreens = mapped.join(",");
         ({ focused, rendered } = obj7);
         if (0 === focused.length) {
-          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "unicodeVersion" };
-          let obj15 = obj9;
+          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "Array", chatScreens: "encodedBodySize" };
+          let obj10 = obj9;
         } else {
-          obj15 = { screen: resolveScreenName(focused), expectedScreenIds: null, focusedRoute: null };
-          let mapped = rendered.map((key) => key.key);
-          let str = ",";
-          obj15.expectedScreenIds = mapped.join(",");
-          obj15.focusedRoute = focused[focused.length - 1];
+          obj10 = {
+            screen: resolveScreenName(focused),
+            expectedScreenIds: null,
+            focusedRoute: null,
+            chatScreens: null,
+          };
+          let mapped1 = rendered.map((key) => key.key);
+          let str2 = ",";
+          obj10.expectedScreenIds = mapped1.join(",");
+          obj10.focusedRoute = focused[focused.length - 1];
+          obj10.chatScreens = tmp17;
         }
-        return obj15;
+        return obj10;
       }
     }
   }

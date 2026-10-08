@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useAccountLinkStepTracking = ReactCompilerGating.isReactCompilerEnabled()
-  ? (platform_type, location_stack) => {
+  ? function useAccountLinkStepTracking(platform_type, location_stack) {
       _require = platform_type;
       const cResult = require("c").c(7);
       dependencyMap = noop.useRef(null);
@@ -71,7 +71,7 @@ export const useAccountLinkStepTracking = ReactCompilerGating.isReactCompilerEna
       tmp2 = fn;
       let obj = require("c");
     }
-  : (platform_type, location_stack) => {
+  : function useAccountLinkStepTracking(platform_type, location_stack) {
       noop.useRef(null);
       let items = [location_stack, platform_type];
       const items1 = [location_stack, platform_type];

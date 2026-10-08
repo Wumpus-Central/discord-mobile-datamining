@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNoJoinPermissionsAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function VoicePanelNoJoinPermissionsAlert() {
       const cResult = c.c(6);
       const dismissModalCallback = AlertModal.useDismissModalCallback();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp15;
     }
-  : () => {
+  : function VoicePanelNoJoinPermissionsAlert() {
       const obj2 = { header: jsx(VoicePanelLockedIconDefault, {}), title: null, content: null, actions: null };
       const intl = util.intl;
       obj2.title = intl.string(util.t["7/2/3M"]);

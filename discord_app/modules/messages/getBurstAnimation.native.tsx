@@ -4,184 +4,184 @@ import asyncGeneratorStepDefault from "../../../_runtime/00005_asyncGeneratorSte
 const items = [
   {
     load() {
-      return closure_0(7425);
+      return closure_0(7900);
     },
   },
   {
     load() {
-      return closure_0(7426);
+      return closure_0(7901);
     },
   },
   {
     load() {
-      return closure_0(7427);
+      return closure_0(7902);
     },
   },
   {
     load() {
-      return closure_0(7428);
+      return closure_0(7903);
     },
   },
   {
     load() {
-      return closure_0(7429);
+      return closure_0(7904);
     },
   },
   {
     load() {
-      return closure_0(7430);
+      return closure_0(7905);
     },
   },
   {
     load() {
-      return closure_0(7431);
+      return closure_0(7906);
     },
   },
   {
     load() {
-      return closure_0(7432);
+      return closure_0(7907);
     },
   },
   {
     load() {
-      return closure_0(7433);
+      return closure_0(7908);
     },
   },
   {
     load() {
-      return closure_0(7434);
+      return closure_0(7909);
     },
   },
   {
     load() {
-      return closure_0(7435);
+      return closure_0(7910);
     },
   },
   {
     load() {
-      return closure_0(7436);
+      return closure_0(7911);
     },
   },
   {
     load() {
-      return closure_0(7437);
+      return closure_0(7912);
     },
   },
   {
     load() {
-      return closure_0(7438);
+      return closure_0(7913);
     },
   },
   {
     load() {
-      return closure_0(7439);
+      return closure_0(7914);
     },
   },
   {
     load() {
-      return closure_0(7440);
+      return closure_0(7915);
     },
   },
   {
     load() {
-      return closure_0(7441);
+      return closure_0(7916);
     },
   },
   {
     load() {
-      return closure_0(7442);
+      return closure_0(7917);
     },
   },
 ];
 const items1 = [
   {
     load() {
-      return closure_0(7443);
+      return closure_0(7918);
     },
   },
   {
     load() {
-      return closure_0(7444);
+      return closure_0(7919);
     },
   },
   {
     load() {
-      return closure_0(7445);
+      return closure_0(7920);
     },
   },
   {
     load() {
-      return closure_0(7446);
+      return closure_0(7921);
     },
   },
   {
     load() {
-      return closure_0(7447);
+      return closure_0(7922);
     },
   },
   {
     load() {
-      return closure_0(7448);
+      return closure_0(7923);
     },
   },
   {
     load() {
-      return closure_0(7449);
+      return closure_0(7924);
     },
   },
   {
     load() {
-      return closure_0(7450);
+      return closure_0(7925);
     },
   },
   {
     load() {
-      return closure_0(7451);
+      return closure_0(7926);
     },
   },
   {
     load() {
-      return closure_0(7452);
+      return closure_0(7927);
     },
   },
   {
     load() {
-      return closure_0(7453);
+      return closure_0(7928);
     },
   },
   {
     load() {
-      return closure_0(7454);
+      return closure_0(7929);
     },
   },
   {
     load() {
-      return closure_0(7455);
+      return closure_0(7930);
     },
   },
   {
     load() {
-      return closure_0(7456);
+      return closure_0(7931);
     },
   },
   {
     load() {
-      return closure_0(7457);
+      return closure_0(7932);
     },
   },
   {
     load() {
-      return closure_0(7458);
+      return closure_0(7933);
     },
   },
   {
     load() {
-      return closure_0(7459);
+      return closure_0(7934);
     },
   },
   {
     load() {
-      return closure_0(7460);
+      return closure_0(7935);
     },
   },
 ];
@@ -256,7 +256,7 @@ let closure_0 = asyncGeneratorStepDefault(function* (arg0, arg1, arg2) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/getBurstAnimation.native.tsx");
 
-export const getBurstAnimation = function () {
+export const getBurstAnimation = function getBurstAnimation() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

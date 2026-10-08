@@ -9,11 +9,11 @@ require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsVoicePanelShowing() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore, RTCConnectionStore];
-        const fn = function o() {
+        const fn = function s() {
           channel = channel.getChannel(channelId.getChannelId());
           return null != channel && !channel.isGuildStageVoice();
         };
@@ -26,7 +26,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return useStateFromStores.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsVoicePanelShowing() {
       const items = [ChannelStore, RTCConnectionStore];
       return useStateFromStores.useStateFromStores(items, () => {
         channel = channel.getChannel(channelId.getChannelId());
@@ -35,7 +35,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsVoicePanelFullscreen() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n(isVoicePanelFullscreen) {
@@ -48,14 +48,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return VoicePanelStore(first);
     }
-  : () => VoicePanelStore((isVoicePanelFullscreen) => isVoicePanelFullscreen.isVoicePanelFullscreen());
+  : function useIsVoicePanelFullscreen() {
+      return VoicePanelStore((isVoicePanelFullscreen) => isVoicePanelFullscreen.isVoicePanelFullscreen());
+    };
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsVoicePanelOpen(arg0) {
       closure_0 = arg0;
       const cResult = c.c(2);
       if (cResult[0] !== arg0) {
-        const fn = function t(isChannelOpen) {
+        const fn = function l(isChannelOpen) {
           return isChannelOpen.isChannelOpen(closure_0);
         };
         cResult[0] = arg0;
@@ -66,13 +68,13 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return VoicePanelStore(tmp2);
     }
-  : (arg0) => {
+  : function useIsVoicePanelOpen(arg0) {
       closure_0 = arg0;
       return VoicePanelStore((isChannelOpen) => isChannelOpen.isChannelOpen(closure_0));
     };
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsAnyVoicePanelOpen() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n(isAnyVoicePanelOpen) {
@@ -85,7 +87,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return VoicePanelStore(first);
     }
-  : () => VoicePanelStore((isAnyVoicePanelOpen) => isAnyVoicePanelOpen.isAnyVoicePanelOpen());
+  : function useIsAnyVoicePanelOpen() {
+      return VoicePanelStore((isAnyVoicePanelOpen) => isAnyVoicePanelOpen.isAnyVoicePanelOpen());
+    };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/VoicePanelUtils.native.tsx");
 
@@ -94,11 +98,11 @@ export const useIsVoicePanelFullscreen = tmp3;
 export const useIsVoicePanelOpen = tmp4;
 export const useIsAnyVoicePanelOpen = tmp5;
 export const useIsVoicePanelMounted = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsVoicePanelMounted(arg0) {
       closure_0 = arg0;
       const cResult = c.c(2);
       if (cResult[0] !== arg0) {
-        const fn = function t(isMounted) {
+        const fn = function l(isMounted) {
           return isMounted.isMounted(closure_0);
         };
         cResult[0] = arg0;
@@ -109,7 +113,7 @@ export const useIsVoicePanelMounted = ReactCompilerGating.isReactCompilerEnabled
       }
       return VoicePanelStore(tmp2);
     }
-  : (arg0) => {
+  : function useIsVoicePanelMounted(arg0) {
       closure_0 = arg0;
       return VoicePanelStore((isMounted) => isMounted.isMounted(closure_0));
     };

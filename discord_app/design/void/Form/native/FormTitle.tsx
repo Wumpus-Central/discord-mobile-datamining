@@ -9,17 +9,17 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, Platform } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let PlatformUtils = fn(1369);
+let PlatformUtils = fn(1381);
 let num = 58;
 if (PlatformUtils.isAndroid()) {
   num = 48;
 }
-PlatformUtils = fn(1369);
+PlatformUtils = fn(1381);
 let num2 = 48;
 if (PlatformUtils.isAndroid()) {
   num2 = 56;
 }
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj4 = {
   titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 },
   horizontalPadding: { paddingHorizontal: 16 },
@@ -36,7 +36,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormTitle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FormTitle(arg0) {
       const cResult = c.c(20);
       ({ title, icon, numberOfLines, uppercaseTitle, thinTitle, error, inset, viewStyle, textStyle } = arg0);
       let thinTitle2 = undefined !== thinTitle && thinTitle;
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items2;
       tmp7 = items2;
     }
-  : (thinTitle) => {
+  : function FormTitle(thinTitle) {
       ({ title, uppercaseTitle } = thinTitle);
       ({ icon, numberOfLines } = thinTitle);
       if (uppercaseTitle === undefined) {

@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
-import _modDef10137 from "../../../../../_runtime/metro/10137__.js";
+import _modDef9722 from "../../../../../_runtime/metro/09722__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -92,11 +92,11 @@ function getChatSettings() {
   return items1;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   card: {
     marginTop: 8,
@@ -110,10 +110,10 @@ let obj2 = {
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function VideoUploadQualityNitroUpsell() {
       const cResult = stackNavigation(576).c(9);
       const obj = stackNavigation(576);
-      stackNavigation = stackNavigation(1490).useStackNavigation();
+      stackNavigation = stackNavigation(1502).useStackNavigation();
       const tmp5 = closure_11();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore, SubscriptionStore];
@@ -132,7 +132,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp6, tmp7] = cResult;
       }
-      const obj2 = stackNavigation(1490);
+      const obj2 = stackNavigation(1502);
       const stateFromStores = stackNavigation(573).useStateFromStores(tmp6, tmp7);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
@@ -140,7 +140,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.children = intl.format(tmp(1126).t["Up+hSO"], {
           supportURL: "https://support.discord.com/hc/articles/9665451164951",
         });
-        const tmp13 = closure_9(tmp(4892).Text, obj3);
+        const tmp13 = closure_9(tmp(5086).Text, obj3);
         cResult[2] = tmp13;
         let tmp11 = tmp13;
       } else {
@@ -172,11 +172,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = { style: tmp5.cardContent, children: null };
         const obj8 = {
           style: tmp5.cardIcon,
-          source: _modDef10137,
-          size: tmp(1188).Icon.Sizes.SMALL,
+          source: _modDef9722,
+          size: tmp(1200).Icon.Sizes.SMALL,
           color: nativeDefault.unsafe_rawColors.PRIMARY_400,
         };
-        const items2 = [closure_9(tmp(1188).Icon, obj8)];
+        const items2 = [closure_9(tmp(1200).Icon, obj8)];
         const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
         const intl2 = tmp(1126).intl;
         const obj10 = {
@@ -186,10 +186,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           },
         };
         obj9.children = intl2.format(tmp(1126).t.uW1zul, obj10);
-        items2[1] = closure_9(tmp(4892).Text, obj9);
+        items2[1] = closure_9(tmp(5086).Text, obj9);
         obj7.children = items2;
         obj6.children = closure_10(View, obj7);
-        obj5.children = closure_9(tmp(6002).Card, obj6);
+        obj5.children = closure_9(tmp(6186).Card, obj6);
         tmp15 = closure_9(View, obj5);
       }
       cResult[3] = stackNavigation;
@@ -199,7 +199,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = tmp15;
       const tmpResult = stackNavigation(573);
     }
-  : () => {
+  : function VideoUploadQualityNitroUpsell() {
       _require = require("useNavigation").useStackNavigation();
       const tmp3 = closure_11();
       const obj = require("useNavigation");
@@ -222,11 +222,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { style: tmp3.cardContent, children: null };
         const obj7 = {
           style: tmp3.cardIcon,
-          source: _modDef10137,
-          size: tmp(1188).Icon.Sizes.SMALL,
+          source: _modDef9722,
+          size: tmp(1200).Icon.Sizes.SMALL,
           color: nativeDefault.unsafe_rawColors.PRIMARY_400,
         };
-        const items2 = [closure_9(tmp(1188).Icon, obj7)];
+        const items2 = [closure_9(tmp(1200).Icon, obj7)];
         const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
         const intl2 = tmp(1126).intl;
         const obj9 = {
@@ -236,10 +236,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           },
         };
         obj8.children = intl2.format(tmp(1126).t.uW1zul, obj9);
-        items2[1] = closure_9(tmp(4892).Text, obj8);
+        items2[1] = closure_9(tmp(5086).Text, obj8);
         obj6.children = items2;
         obj5.children = closure_10(View, obj6);
-        obj4.children = closure_9(tmp(6002).Card, obj5);
+        obj4.children = closure_9(tmp(6186).Card, obj5);
         tmp7Result = closure_9(View, obj4);
       }
       children[1] = tmp7Result;
@@ -256,7 +256,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/chat/native/SettingsChatScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (route) => {
+  ? function SettingsChatScreen(route) {
       const cResult = c.c(4);
       route = route.route;
       let initialSetting;
@@ -302,7 +302,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp10;
     }
-  : (route) => {
+  : function SettingsChatScreen(route) {
       route = route.route;
       let initialSetting;
       if (route != null) {

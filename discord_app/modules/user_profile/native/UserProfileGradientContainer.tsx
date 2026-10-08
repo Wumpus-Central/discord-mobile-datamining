@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/UserProfileGradientContainer.tsx
 import c from "../../../../_runtime/00576_c.js";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import useUserProfileGradientColors from "../hooks/native/useUserProfileGradientColors.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function UserProfileGradientContainer(arg0) {
         const cResult = c.c(4);
         ({ containerStyle, children, primaryColor, secondaryColor, fallbackBackground } = arg0);
         const userProfileGradientColors = useUserProfileGradientColors.useUserProfileGradientColors(
@@ -35,7 +35,7 @@ export default noop.memo(
         cResult[3] = tmp5;
         tmp4 = tmp5;
       }
-    : (arg0) => {
+    : function UserProfileGradientContainer(arg0) {
         ({ primaryColor, secondaryColor, fallbackBackground, containerStyle, children } = arg0);
         const colors = useUserProfileGradientColors.useUserProfileGradientColors(
           primaryColor,

@@ -12,7 +12,7 @@ let closure_3 = GuildPowerupsConstants.GUILD_THEME_POWERUP_BOOST_PRICE;
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShouldShowGuildThemeMemberCoachmark(arg0) {
       const tmp = useHasAllocateBoostPermissionDefault(arg0);
       let serverThemeEnabled = ServerThemeExperiment.useServerThemeEnabled(
         arg0,
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : (arg0) => {
+  : function useShouldShowGuildThemeMemberCoachmark(arg0) {
       const tmp = useHasAllocateBoostPermissionDefault(arg0);
       let serverThemeEnabled = ServerThemeExperiment.useServerThemeEnabled(
         arg0,

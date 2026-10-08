@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({
   container: { padding: 16 },
   row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
@@ -23,7 +23,7 @@ let items = [
 ];
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DemoRow(arg0) {
       const cResult = c.c(6);
       ({ label, children } = arg0);
       const tmp4 = closure_6();
@@ -54,7 +54,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp9;
       tmp8 = tmp9;
     }
-  : (arg0) => {
+  : function DemoRow(arg0) {
       ({ label, children } = arg0);
       const obj = { style: closure_6().row, children: null };
       items = [React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: label }), children];
@@ -68,7 +68,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsDesignSystemAILoader() {
       const cResult = c.c(4);
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp15;
     }
-  : () => {
+  : function UserSettingsDesignSystemAILoader() {
       let obj = { contentContainerStyle: closure_6().container, children: null };
       const obj2 = { spacing: 24, children: null };
       const obj3 = { children: null };

@@ -31,12 +31,12 @@ import GuildRoleConnectionEligibilityStore from "../GuildRoleConnectionEligibili
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const OperatorTypes = fn(6686).OperatorTypes;
+const OperatorTypes = fn(6863).OperatorTypes;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flexDirection: "column", alignItems: "center", padding: 16 },
   header: {
@@ -86,7 +86,7 @@ obj2.botTag = { marginLeft: 4 };
 let closure_19 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PopoutCheck(arg0) {
       const cResult = c.c(19);
       ({ connectionType, connectionMetadataField, operator, value, description } = arg0);
       let popoutCheck = closure_19();
@@ -180,7 +180,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[18] = tmp23;
       }
     }
-  : (arg0) => {
+  : function PopoutCheck(arg0) {
       ({ operator, value, description } = arg0);
       ({ connectionType, connectionMetadataField } = arg0);
       const tmp = closure_19();
@@ -221,7 +221,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function PopoutChecks(guildId) {
       const cResult = guildId(576).c(2);
       guildId = guildId.guildId;
       importDefault = closure_19();
@@ -238,7 +238,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       _slicedToArray = groupByResult;
       const keys = Object.keys(groupByResult);
       closure_4 = keys.length - 1;
-      const roleColor = guildId(4586).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
+      const roleColor = guildId(4778).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
       const mapped = keys.map((item, index) => {
         const found = arr.filter((operator) => null != operator.operator);
         const found1 = arr.find((application) => null != application.application);
@@ -343,7 +343,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (guildId) => {
+  : function PopoutChecks(guildId) {
       guildId = guildId.guildId;
       importDefault = closure_19();
       dependencyMap = useThemeDefault();
@@ -358,8 +358,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       c3 = groupByResult;
       const keys = Object.keys(groupByResult);
       closure_4 = keys.length - 1;
-      const roleColor = guildId(4586).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
-      let obj2 = guildId(4586);
+      const roleColor = guildId(4778).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
+      let obj2 = guildId(4778);
       return closure_16(closure_18, {
         children: keys.map((item, index) => {
           const found = arr.filter((operator) => null != operator.operator);
@@ -473,7 +473,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/connections/native/ConnectionsRoleMessageBadgeActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function ConnectionsRoleMessageBadgeActionSheet(userId) {
       const cResult = userId(channelId[15]).c(78);
       userId = userId.userId;
       const roleId = userId.roleId;
@@ -670,7 +670,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp16 = L;
       const tmpResult4 = userId(channelId[32]);
     }
-  : (userId) => {
+  : function ConnectionsRoleMessageBadgeActionSheet(userId) {
       userId = userId.userId;
       const roleId = userId.roleId;
       const channelId = userId.channelId;
@@ -781,7 +781,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (!hasItem) {
                 const obj15 = { style: tmp.button, children: null };
                 const obj16 = {
-                  onPress() {
+                  onPress: function handleGetRoles() {
                     ActionSheetActionCreatorsDefault.hideActionSheet("ConnectionsRoleMessageBadgeActionSheet");
                     const result = GuildRoleConnectionsModalActionCreators.openGuildRoleConnectionsModal({ guildId });
                   },
@@ -799,7 +799,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (someResult) {
                 const obj17 = { style: tmp.button, children: null };
                 const obj18 = {
-                  onPress() {
+                  onPress: function handleViewAll() {
                     showUserProfileActionSheetDefault({
                       userId,
                       channelId,

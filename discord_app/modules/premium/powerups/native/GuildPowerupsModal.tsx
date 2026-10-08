@@ -9,11 +9,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildPowerupsConstants = fn(4774);
+const GuildPowerupsConstants = fn(4968);
 ({ BoostInfoType: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   headerLeftContainer: null,
@@ -56,7 +56,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildPowerupsModal(guildId) {
       const cResult = guildId(autoOpenRequestId[7]).c(66);
       guildId = guildId.guildId;
       ({ analyticsLocation, autoOpenPerkId } = guildId);
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       tmp9 = autoOpenPerkId(autoOpenRequestId[12])();
     }
-  : (guildId) => {
+  : function GuildPowerupsModal(guildId) {
       guildId = guildId.guildId;
       ({ analyticsLocation, autoOpenPerkId } = guildId);
       const autoOpenRequestId = guildId.autoOpenRequestId;

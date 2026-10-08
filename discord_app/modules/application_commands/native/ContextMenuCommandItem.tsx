@@ -13,7 +13,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { commandIcon: null, loadingIcon: null, loadingName: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
 obj2.commandIcon = size;
@@ -33,7 +33,7 @@ let obj4 = {
 };
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ContextMenuCommandLoadingItem(arg0) {
       const cResult = c.c(11);
       ({ start, end } = arg0);
       const tmp4 = closure_6();
@@ -90,7 +90,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp12;
       tmp11 = tmp12;
     }
-  : (arg0) => {
+  : function ContextMenuCommandLoadingItem(arg0) {
       ({ start, end } = arg0);
       const tmp = closure_6();
       const obj = { label: null, icon: null, start: null, end: null };
@@ -111,7 +111,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ContextMenuCommandEmptyItem(arg0) {
       const cResult = c.c(8);
       ({ start, end } = arg0);
       const tmp4 = closure_6();
@@ -153,7 +153,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp8;
       tmp7 = tmp8;
     }
-  : (arg0) => {
+  : function ContextMenuCommandEmptyItem(arg0) {
       ({ start, end } = arg0);
       const obj = { label: null, icon: null, start: null, end: null };
       const intl = util.intl;
@@ -169,7 +169,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ContextMenuCommandAppItem(arg0) {
       const cResult = c.c(11);
       ({ section, onPress, start, end } = arg0);
       const tmp4 = closure_6();
@@ -219,7 +219,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp8;
       tmp7 = tmp8;
     }
-  : (section) => {
+  : function ContextMenuCommandAppItem(section) {
       section = section.section;
       ({ onPress, start, end } = section);
       const tmp = closure_6();
@@ -240,7 +240,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandItem.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ContextMenuCommandItem(arg0) {
       const cResult = c.c(16);
       ({ item, onPress, section, start, end } = arg0);
       const tmp4 = closure_6();
@@ -345,7 +345,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = formatToPlainStringResult;
       const obj4 = { applicationName: name1, commandName: item.displayName };
     }
-  : (item) => {
+  : function ContextMenuCommandItem(item) {
       item = item.item;
       const section = item.section;
       ({ onPress, start, end } = item);
@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const tmp = closure_6();
       const tmp5 = item;
-      const applicationCommandsIconSource = item(11874).getApplicationCommandsIconSource(section);
+      const applicationCommandsIconSource = item(11946).getApplicationCommandsIconSource(section);
       const obj2 = {
         accessibilityLabel: memo,
         onPress,
@@ -379,13 +379,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp8Result = null != applicationCommandsIconSource;
       if (tmp8Result) {
         const obj3 = { style: tmp.commandIcon, source: applicationCommandsIconSource };
-        tmp8Result = jsx(section(5981), { style: tmp.commandIcon, source: applicationCommandsIconSource });
+        tmp8Result = jsx(section(6164), { style: tmp.commandIcon, source: applicationCommandsIconSource });
       }
       obj2.icon = tmp8Result;
-      obj2.trailing = jsx(tmp5(4847).SendMessageIcon, {});
+      obj2.trailing = jsx(tmp5(5041).SendMessageIcon, {});
       obj2.start = start;
       obj2.end = end;
-      return jsx(item(6000).TableRow, {
+      return jsx(item(6184).TableRow, {
         accessibilityLabel: memo,
         onPress,
         label: item.displayName,

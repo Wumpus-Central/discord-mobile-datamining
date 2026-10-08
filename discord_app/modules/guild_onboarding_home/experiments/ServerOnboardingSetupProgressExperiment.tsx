@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useServerOnboardingSetupProgressExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useServerOnboardingSetupProgressExperiment(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -31,4 +31,6 @@ export const useServerOnboardingSetupProgressExperiment = ReactCompilerGating.is
       }
       return closure_2.useConfig(tmp2);
     }
-  : (location) => closure_2.useConfig({ location });
+  : function useServerOnboardingSetupProgressExperiment(location) {
+      return closure_2.useConfig({ location });
+    };

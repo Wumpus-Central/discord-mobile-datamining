@@ -10,10 +10,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const number = fn(11228).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11343).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -41,7 +41,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroCapInfoActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function GroupDMNitroCapInfoActionSheet() {
       const cResult = c.c(15);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[14] = tmp25;
       tmp24 = tmp25;
     }
-  : () => {
+  : function GroupDMNitroCapInfoActionSheet() {
       const tmp = closure_8();
       const callback = noop.useCallback(() => {
         ActionSheetActionCreatorsDefault.hideActionSheet();

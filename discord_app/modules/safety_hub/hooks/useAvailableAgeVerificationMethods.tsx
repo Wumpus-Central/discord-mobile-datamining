@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useAvailableAgeVerificationMethods.tsx");
 
 export const useAvailableAgeVerificationMethods = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAvailableAgeVerificationMethods() {
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = { methods: null, loading: true };
@@ -22,7 +22,7 @@ export const useAvailableAgeVerificationMethods = ReactCompilerGating.isReactCom
       const tmp3 = _slicedToArray(noop.useState(first), 2);
       _require = tmp3[1];
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function h() {
+        const fn = function l() {
           c0 = false;
           const ageVerificationMethodsV2SuspendedUser = _true(
             dependencyMap[4],
@@ -42,7 +42,7 @@ export const useAvailableAgeVerificationMethods = ReactCompilerGating.isReactCom
               footerMessage: methods.footerMessage,
               outageBannerMessage: methods.outageBannerMessage,
             };
-            return _true(8147).getAvailableMethodsV2(methods.methods);
+            return _true(7528).getAvailableMethodsV2(methods.methods);
           });
           ageVerificationMethodsV2SuspendedUser
             .then((methods) => {
@@ -59,7 +59,7 @@ export const useAvailableAgeVerificationMethods = ReactCompilerGating.isReactCom
                 footerMessage: methods.footerMessage,
                 outageBannerMessage: methods.outageBannerMessage,
               };
-              return _true(8147).getAvailableMethodsV2(methods.methods);
+              return _true(7528).getAvailableMethodsV2(methods.methods);
             })
             .then((methods) => {
               if (!c0) {
@@ -88,7 +88,7 @@ export const useAvailableAgeVerificationMethods = ReactCompilerGating.isReactCom
       const effect = noop.useEffect(tmp4, tmp5);
       return tmp3[0];
     }
-  : () => {
+  : function useAvailableAgeVerificationMethods() {
       [tmp2, require] = noop.useState({ methods: null, loading: true });
       const effect = noop.useEffect(() => {
         c0 = false;
@@ -109,7 +109,7 @@ export const useAvailableAgeVerificationMethods = ReactCompilerGating.isReactCom
             footerMessage: methods.footerMessage,
             outageBannerMessage: methods.outageBannerMessage,
           };
-          return _true(8147).getAvailableMethodsV2(methods.methods);
+          return _true(7528).getAvailableMethodsV2(methods.methods);
         });
         ageVerificationMethodsV2SuspendedUser
           .then((methods) => {
@@ -126,7 +126,7 @@ export const useAvailableAgeVerificationMethods = ReactCompilerGating.isReactCom
               footerMessage: methods.footerMessage,
               outageBannerMessage: methods.outageBannerMessage,
             };
-            return _true(8147).getAvailableMethodsV2(methods.methods);
+            return _true(7528).getAvailableMethodsV2(methods.methods);
           })
           .then((methods) => {
             if (!c0) {

@@ -10,10 +10,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { cardShadow: null, flaggedContent: null, sectionContainer: null };
-const native = fn(1188);
-obj2.cardShadow = native.generateBoxShadowStyle(fn(1188).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1200);
+obj2.cardShadow = native.generateBoxShadowStyle(fn(1200).FOUR_DP_ELEVATION_SHADOW_PARAMS);
 obj2.flaggedContent = {
   borderWidth: 1,
   borderRadius: nativeDefault.radii.sm,
@@ -36,7 +36,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/ClassificationEvidence.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (flaggedContent) => {
+  ? function ClassificationEvidence(flaggedContent) {
       const cResult = c.c(12);
       flaggedContent = flaggedContent.flaggedContent;
       let sectionContainer = closure_6();
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = items1;
       }
     }
-  : (flaggedContent) => {
+  : function ClassificationEvidence(flaggedContent) {
       flaggedContent = flaggedContent.flaggedContent;
       const tmp = closure_6();
       let tmp2 = null;

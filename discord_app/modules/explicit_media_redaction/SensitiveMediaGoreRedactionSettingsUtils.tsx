@@ -165,5 +165,9 @@ export const updateGoreContentSetting = function updateGoreContentSetting(arg0) 
   const obj2 = {};
 };
 export const useSensitiveContentFilterHelpArticle = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => HelpdeskArticles.EXPLICIT_MEDIA_REDACTION
-  : () => noop.useMemo(() => constants.EXPLICIT_MEDIA_REDACTION, []);
+  ? function useSensitiveContentFilterHelpArticle() {
+      return HelpdeskArticles.EXPLICIT_MEDIA_REDACTION;
+    }
+  : function useSensitiveContentFilterHelpArticle() {
+      return noop.useMemo(() => constants.EXPLICIT_MEDIA_REDACTION, []);
+    };

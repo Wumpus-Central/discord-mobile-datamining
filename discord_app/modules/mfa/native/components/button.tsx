@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/components/button.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MFAButton(arg0) {
       const cResult = c.c(2);
       if (cResult[0] !== arg0) {
         const obj2 = { size: "lg" };
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (arg0) => {
+  : function MFAButton(arg0) {
       const merged = Object.assign(arg0);
       return jsx(components_Button_Button.Button, { size: "lg" });
     };

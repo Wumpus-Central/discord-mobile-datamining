@@ -13,7 +13,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHasDmSafetyAlertsSetting() {
       const cResult = c.c(2);
       let flag = useUserIsConsideredAdultDefault();
       if (flag == null) {
@@ -47,7 +47,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function useHasDmSafetyAlertsSetting() {
       let flag = useUserIsConsideredAdultDefault();
       if (flag == null) {
         flag = true;
@@ -80,7 +80,7 @@ const toggle = SettingBuilders.createToggle({
   useValue: useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault,
   onValueChange: updateDmSafetyAlertsSetting.updateDmSafetyAlertsSetting,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useHasDmSafetyAlertsSetting() {
         const cResult = c.c(2);
         let flag = useUserIsConsideredAdultDefault();
         if (flag == null) {
@@ -114,7 +114,7 @@ const toggle = SettingBuilders.createToggle({
         }
         return tmp8;
       }
-    : () => {
+    : function useHasDmSafetyAlertsSetting() {
         let flag = useUserIsConsideredAdultDefault();
         if (flag == null) {
           flag = true;

@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useDispatchOpenActivity.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (connectedEmbeddedActivity) => {
+  ? function useDispatchOpenActivity(connectedEmbeddedActivity) {
       const cResult = connectedEmbeddedActivity(576).c(4);
       connectedEmbeddedActivity = connectedEmbeddedActivity.connectedEmbeddedActivity;
       let applicationId;
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = fn;
       let obj = connectedEmbeddedActivity(576);
     }
-  : (connectedEmbeddedActivity) => {
+  : function useDispatchOpenActivity(connectedEmbeddedActivity) {
       connectedEmbeddedActivity = connectedEmbeddedActivity.connectedEmbeddedActivity;
       let applicationId;
       if (connectedEmbeddedActivity != null) {

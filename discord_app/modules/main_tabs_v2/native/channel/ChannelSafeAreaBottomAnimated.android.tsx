@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channelId) => {
+    ? function ChannelSafeAreaBottom(channelId) {
         const cResult = c.c(5);
         const tmp4 = useChannelSafeAreaHeightSharedValueDefault();
         closure_0 = tmp4;
@@ -60,7 +60,7 @@ export default noop.memo(
         cResult[4] = tmp13;
         tmp12 = tmp13;
       }
-    : (channelId) => {
+    : function ChannelSafeAreaBottom(channelId) {
         const tmp = useChannelSafeAreaHeightSharedValueDefault();
         closure_0 = tmp;
         const tmp2 = useChannelSafeAreaBottomStylesDefault(channelId.channelId);

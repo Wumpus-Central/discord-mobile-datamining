@@ -88,16 +88,16 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const NativeStackNavigator = fn(7568);
+const NativeStackNavigator = fn(9279);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
 let ReactCompilerGating = fn(558);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { wrap: null, container: null, title: null, balancePillContainer: null };
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function OrbsFlowTestModal() {
       const cResult = accessibilityNativeStackOptions(576).c(5);
       let obj = accessibilityNativeStackOptions(576);
-      accessibilityNativeStackOptions = accessibilityNativeStackOptions(6503).useAccessibilityNativeStackOptions();
+      accessibilityNativeStackOptions = accessibilityNativeStackOptions(6679).useAccessibilityNativeStackOptions();
       if (cResult[0] !== accessibilityNativeStackOptions) {
         const fn = function n(navigation) {
           const obj = {
@@ -145,7 +145,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : () => {
+  : function OrbsFlowTestModal() {
       _require = require("Navigator").useAccessibilityNativeStackOptions();
       const obj2 = {
         screenOptions(navigation) {
@@ -186,7 +186,7 @@ obj.balancePillContainer = {
 let closure_12 = createStyles.createStyles(obj);
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function BalanceWidgetMenuSection() {
       const cResult = c.c(6);
       const tmp4 = closure_12();
       if (cResult[0] !== tmp4.title) {
@@ -214,13 +214,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { spacing: 16, style: tmp4.container, children: null };
       const items = [tmp5, tmp8];
       obj3.children = items;
-      const tmp13 = v65535(Stack_Stack.Stack, obj3);
+      const tmp13 = collapsed(Stack_Stack.Stack, obj3);
       cResult[3] = tmp4.container;
       cResult[4] = tmp5;
       cResult[5] = tmp13;
       tmp12 = tmp13;
     }
-  : () => {
+  : function BalanceWidgetMenuSection() {
       const tmp = closure_12();
       const obj = { spacing: 16, style: tmp.container, children: null };
       const items = [
@@ -228,11 +228,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         options(BalanceWidgetMenuDefault, {}),
       ];
       obj.children = items;
-      return v65535(Stack_Stack.Stack, obj);
+      return collapsed(Stack_Stack.Stack, obj);
     };
 ReactCompilerGating = fn(558);
 const component = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function OrbsFlowTest() {
       const cResult = c.c(12);
       const tmp4 = closure_12();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -275,7 +275,7 @@ const component = ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { style: tmp4.wrap, contentContainerStyle: tmp7, children: null };
             const items = [tmp8, tmp9, tmp10];
             obj4.children = items;
-            obj3.children = v65535(React5, obj4);
+            obj3.children = collapsed(React5, obj4);
             const tmp21 = options(LayerScope.LayerScope, obj3);
             cResult[9] = tmp4.wrap;
             cResult[10] = tmp7;
@@ -297,7 +297,7 @@ const component = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = obj5;
       tmp7 = obj5;
     }
-  : () => {
+  : function OrbsFlowTest() {
       const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
       const obj = { children: null };
       const obj2 = {
@@ -316,7 +316,7 @@ const component = ReactCompilerGating.isReactCompilerEnabled()
         options(OrbCheckoutMenuDefault, {}),
       ];
       obj2.children = items;
-      obj.children = v65535(React5, obj2);
+      obj.children = collapsed(React5, obj2);
       return options(LayerScope.LayerScope, obj);
     };
 const obj7 = {

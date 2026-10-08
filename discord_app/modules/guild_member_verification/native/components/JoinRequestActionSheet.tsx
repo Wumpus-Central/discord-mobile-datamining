@@ -12,7 +12,7 @@ const View = fn(17).View;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({
   container: { flex: 1 },
   profileContainer: { position: "relative" },
@@ -20,7 +20,7 @@ let closure_11 = createStyles.createStyles({
 });
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (joinRequest) => {
+  ? function JoinRequestActionSheet(joinRequest) {
       const cResult = joinRequest(userId[9]).c(59);
       joinRequest = joinRequest.joinRequest;
       closure_11();
@@ -53,41 +53,23 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const bottomSheetRef1 = tmp(tmp2[12]).useBottomSheetRef();
         ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
         guildId.useRef(null);
+        const obj4 = guildId;
         const tmpResult8 = tmp(tmp2[12]);
         const sharedValue = tmp(tmp2[13]).useSharedValue(0);
         if (cResult[5] !== sharedValue) {
-          class R {
-            constructor(arg0) {
-              result = closure_5.set(joinRequest.nativeEvent.contentOffset.y);
-              return;
-            }
-          }
+          const fn2 = function b(nativeEvent) {
+            const result = sharedValue.set(nativeEvent.nativeEvent.contentOffset.y);
+          };
           cResult[5] = sharedValue;
-          cResult[6] = R;
-        } else {
-          class R {
-            constructor(arg0) {
-              result = closure_5.set(joinRequest.nativeEvent.contentOffset.y);
-              return;
-            }
-          }
+          cResult[6] = fn2;
         }
         if (cResult[7] === tmp11Result) {
-          class R {
-            constructor(arg0) {
-              result = closure_5.set(joinRequest.nativeEvent.contentOffset.y);
-              return;
-            }
+          if (cResult[8] === stateFromStores) {
+            let tmp19 = cResult[9];
           }
-          ({ theme, primaryColor, secondaryColor } = tmp10(tmp2[14])(tmp20));
+          ({ theme, primaryColor, secondaryColor } = tmp10(tmp2[14])(tmp19));
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            class R {
-              constructor(arg0) {
-                result = closure_5.set(joinRequest.nativeEvent.contentOffset.y);
-                return;
-              }
-            }
             const items1 = [sharedValue];
             class F {
               constructor() {
@@ -96,54 +78,27 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
             cResult[10] = items1;
             cResult[11] = F;
-            let tmp23 = F;
-            const tmp22 = items1;
+            let tmp22 = F;
+            let tmp21 = items1;
           } else {
-            class R {
-              constructor(arg0) {
-                result = closure_5.set(joinRequest.nativeEvent.contentOffset.y);
-                return;
-              }
-            }
-            tmp23 = cResult[11];
+            tmp21 = cResult[10];
+            tmp22 = cResult[11];
           }
-          const tmp21 = tmp10(tmp2[14])(tmp20);
-          const stateFromStores1 = tmp(tmp2[10]).useStateFromStores(tmp22, tmp23);
+          const tmp20 = tmp10(tmp2[14])(tmp19);
+          const stateFromStores1 = tmp(tmp2[10]).useStateFromStores(tmp21, tmp22);
           const tmpResult10 = tmp(tmp2[10]);
           const tmp25 = tmp10(tmp2[15])();
           const profileThemeValues = tmp(tmp2[16]).useProfileThemeValues(theme);
           const tmpResult11 = tmp(tmp2[16]);
           const token = tmp(tmp2[17]).useToken(tmp10(tmp2[18]).colors.INTERACTIVE_TEXT_HOVER, theme);
           if (stateFromStores1) {
-            class R {
-              constructor(arg0) {
-                result = closure_5.set(joinRequest.nativeEvent.contentOffset.y);
-                return;
-              }
-            }
+            let prop;
             if (!tmp28) {
-              class R {
-                constructor(arg0) {
-                  result = closure_5.set(joinRequest.nativeEvent.contentOffset.y);
-                  return;
-                }
-              }
+              prop = profileThemeValues.overlaySyncedWithUserTheme;
             }
-          } else {
-            class R {
-              constructor(arg0) {
-                result = closure_5.set(joinRequest.nativeEvent.contentOffset.y);
-                return;
-              }
-            }
-            if (!tmp28) {
-              class R {
-                constructor(arg0) {
-                  result = closure_5.set(joinRequest.nativeEvent.contentOffset.y);
-                  return;
-                }
-              }
-            }
+            let overlay = prop;
+          } else if (!tmp28) {
+            overlay = profileThemeValues.overlay;
           }
           const tmpResult12 = tmp(tmp2[17]);
           const token1 = tmp(tmp2[17]).useToken(
@@ -151,56 +106,162 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             tmp25,
           );
           if (cResult[12] === token1) {
-            class R {
-              constructor(arg0) {
-                result = closure_5.set(joinRequest.nativeEvent.contentOffset.y);
-                return;
-              }
-            }
-          }
-          if (null != secondaryColor) {
-            class R {
-              constructor(arg0) {
-                result = closure_5.set(joinRequest.nativeEvent.contentOffset.y);
-                return;
-              }
-            }
-            if (null != profileThemeValues) {
-              class R {
-                constructor(arg0) {
-                  result = closure_5.set(joinRequest.nativeEvent.contentOffset.y);
-                  return;
+            if (cResult[13] === profileThemeValues) {
+              if (cResult[14] === secondaryColor) {
+                if (cResult[17] === guildId) {
+                  if (cResult[18] === joinRequest.applicationStatus) {
+                    if (cResult[19] === joinRequest.userId) {
+                      let tmp34 = cResult[20];
+                      let tmp35 = cResult[21];
+                    }
+                    const effect = obj4.useEffect(tmp35, tmp34);
+                    class Y {
+                      constructor() {
+                        obj = closure_0(closure_2[21]);
+                        obj1 = {
+                          guildId,
+                          applicationStatus: joinRequest.applicationStatus,
+                          applicationUserId: joinRequest.userId,
+                        };
+                        result = obj.trackMemberApplicationViewed(obj1);
+                        return;
+                      }
+                    }
+                    class Q {
+                      constructor() {
+                        obj = closure_4;
+                        tmp = null == closure_4;
+                        if (!tmp) {
+                          isNonUserBotResult = obj.isNonUserBot();
+                          if (isNonUserBotResult) {
+                            tmp3 = closure_1;
+                            tmp4 = closure_2;
+                            isNonUserBotResult = !closure_1(closure_2[22])(obj.id);
+                          }
+                          tmp = isNonUserBotResult;
+                        }
+                        if (!tmp) {
+                          tmp5 = closure_1;
+                          tmp6 = closure_2;
+                          tmp8 = guildId;
+                          num = 80;
+                          tmp7 = closure_1(closure_2[23]);
+                          obj1 = {
+                            type: "action_sheet",
+                            withMutualGuilds: true,
+                            withMutualFriends: true,
+                            dispatchWait: true,
+                            guildId: null,
+                          };
+                          obj1.guildId = guildId;
+                          tmp7Result = tmp7(obj.id, obj.getAvatarURL(guildId, 80), obj1);
+                        }
+                        return;
+                      }
+                    }
+                    const items2 = [guildId, stateFromStores];
+                    cResult[22] = guildId;
+                    cResult[23] = stateFromStores;
+                    cResult[24] = Q;
+                    cResult[25] = items2;
+                  }
                 }
-              }
-              if (null != tmp30) {
-                class R {
-                  constructor(arg0) {
-                    result = closure_5.set(joinRequest.nativeEvent.contentOffset.y);
+                class Y {
+                  constructor() {
+                    obj = closure_0(closure_2[21]);
+                    obj1 = {
+                      guildId,
+                      applicationStatus: joinRequest.applicationStatus,
+                      applicationUserId: joinRequest.userId,
+                    };
+                    result = obj.trackMemberApplicationViewed(obj1);
                     return;
                   }
                 }
-                const int2hex = tmp34.int2hex;
-                tmp(tmp2[20]);
                 class F {
                   constructor() {
                     return closure_5.syncProfileThemeWithUserTheme;
                   }
                 }
+                tmp36[0] = guildId;
+                ({ applicationStatus: tmp36[1], userId: tmp36[2] } = joinRequest);
+                cResult[17] = guildId;
+                cResult[18] = joinRequest.applicationStatus;
+                cResult[19] = joinRequest.userId;
+                cResult[20] = tmp36;
+                cResult[21] = Y;
+                tmp35 = Y;
+                tmp34 = tmp36;
+              }
+            }
+          }
+          let tmp32 = token1;
+          if (null != secondaryColor) {
+            tmp32 = token1;
+            if (null != profileThemeValues) {
+              tmp32 = token1;
+              if (null != overlay) {
+                const int2hex = tmp(tmp2[19]).int2hex;
+                class Y {
+                  constructor() {
+                    obj = closure_0(closure_2[21]);
+                    obj1 = {
+                      guildId,
+                      applicationStatus: joinRequest.applicationStatus,
+                      applicationUserId: joinRequest.userId,
+                    };
+                    result = obj.trackMemberApplicationViewed(obj1);
+                    return;
+                  }
+                }
+                class Q {
+                  constructor() {
+                    obj = closure_4;
+                    tmp = null == closure_4;
+                    if (!tmp) {
+                      isNonUserBotResult = obj.isNonUserBot();
+                      if (isNonUserBotResult) {
+                        tmp3 = closure_1;
+                        tmp4 = closure_2;
+                        isNonUserBotResult = !closure_1(closure_2[22])(obj.id);
+                      }
+                      tmp = isNonUserBotResult;
+                    }
+                    if (!tmp) {
+                      tmp5 = closure_1;
+                      tmp6 = closure_2;
+                      tmp8 = guildId;
+                      num = 80;
+                      tmp7 = closure_1(closure_2[23]);
+                      obj1 = {
+                        type: "action_sheet",
+                        withMutualGuilds: true,
+                        withMutualFriends: true,
+                        dispatchWait: true,
+                        guildId: null,
+                      };
+                      obj1.guildId = guildId;
+                      tmp7Result = tmp7(obj.id, obj.getAvatarURL(guildId, 80), obj1);
+                    }
+                    return;
+                  }
+                }
+                const tmpResult14 = tmp(tmp2[19]);
               }
             }
           }
           cResult[12] = token1;
           cResult[13] = profileThemeValues;
           cResult[14] = secondaryColor;
-          cResult[15] = tmp30;
-          cResult[16] = token1;
+          cResult[15] = overlay;
+          cResult[16] = tmp32;
           const tmpResult13 = tmp(tmp2[17]);
         }
         let obj2 = { user: stateFromStores, displayProfile: tmp11Result };
         cResult[7] = tmp11Result;
         cResult[8] = stateFromStores;
         cResult[9] = obj2;
-        tmp20 = obj2;
+        tmp19 = obj2;
         const tmpResult9 = tmp(tmp2[13]);
       }
       const fn = function y() {
@@ -210,16 +271,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return user;
       };
-      const items2 = [user, userId];
+      const items3 = [user, userId];
       cResult[1] = user;
       cResult[2] = userId;
       cResult[3] = fn;
-      cResult[4] = items2;
-      tmp8 = items2;
+      cResult[4] = items3;
+      tmp8 = items3;
       tmp7 = fn;
       const obj = joinRequest(userId[9]);
     }
-  : (joinRequest) => {
+  : function JoinRequestActionSheet(joinRequest) {
       joinRequest = joinRequest.joinRequest;
       let sharedValue;
       let tmp = closure_11();

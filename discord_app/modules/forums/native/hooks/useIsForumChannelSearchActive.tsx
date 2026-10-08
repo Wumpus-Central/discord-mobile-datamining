@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/hooks/useIsForumChannelSearchActive.tsx");
 
 export const useIsForumChannelSearchActive = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsForumChannelSearchActive(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       const obj = require("c");
@@ -24,7 +24,7 @@ export const useIsForumChannelSearchActive = ReactCompilerGating.isReactCompiler
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function l() {
+        const fn = function s() {
           let searchQuery = null;
           if (null != closure_0) {
             searchQuery = ForumSearchStore.getSearchQuery(tmp);
@@ -42,7 +42,7 @@ export const useIsForumChannelSearchActive = ReactCompilerGating.isReactCompiler
       }
       return canSearchForumPostsByChannelId;
     }
-  : (arg0) => {
+  : function useIsForumChannelSearchActive(arg0) {
       _require = arg0;
       let canSearchForumPostsByChannelId =
         require("useCanSearchForumPostsByChannelId").useCanSearchForumPostsByChannelId(arg0);

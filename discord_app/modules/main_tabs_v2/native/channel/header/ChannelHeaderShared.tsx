@@ -7,12 +7,12 @@ import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
-import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import ManaTypeConsolidationExperiment from "../../../../design/ManaTypeConsolidationExperiment.tsx";
+import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import _modDef13131 from "../../../../../../_runtime/metro/13131__.js";
+import _modDef12846 from "../../../../../../_runtime/metro/12846__.js";
 import GuildActionSheetMemberCountDefault from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -23,7 +23,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles(() => {
   const obj = {
     wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 },
@@ -58,7 +58,7 @@ let closure_11 = createStyles.createStyles(() => {
 });
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TitleWrapper(arg0) {
       const cResult = c.c(14);
       ({ children, onPress, headerAccessibilityLabel, titleContentHeight } = arg0);
       let wrapper = closure_11();
@@ -140,7 +140,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp4 = _slicedToArray(noop.useState(undefined), 2);
     }
-  : (headerAccessibilityLabel) => {
+  : function TitleWrapper(headerAccessibilityLabel) {
       ({ children, onPress, titleContentHeight } = headerAccessibilityLabel);
       c1 = undefined;
       const tmp = closure_11();
@@ -174,7 +174,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ChannelTitle(arg0) {
       const cResult = c.c(22);
       ({ title, accessibleTitle, subtitle, disableArrow, userId, guildId: channelNameContainer, icon } = arg0);
       const tmp5 = closure_11();
@@ -246,7 +246,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp13 = !tmp4;
                   if (!tmp4) {
                     const obj6 = {
-                      source: _modDef13131,
+                      source: _modDef12846,
                       size: native.Icon.Sizes.REFRESH_SMALL_16,
                       style: tmp5.arrowIcon,
                     };
@@ -300,7 +300,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = userId;
       cResult[6] = tmp9;
     }
-  : (guildId) => {
+  : function ChannelTitle(guildId) {
       ({ title, accessibleTitle, subtitle, disableArrow } = guildId);
       if (disableArrow === undefined) {
         disableArrow = false;
@@ -349,7 +349,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = tmp8;
       let tmp5Result = !disableArrow;
       if (!disableArrow) {
-        const obj6 = { source: _modDef13131, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+        const obj6 = { source: _modDef12846, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
         tmp5Result = tmp5(native.Icon, obj6);
       }
       items[2] = tmp5Result;
@@ -366,7 +366,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function GroupDMIcon(channel) {
       const cResult = c.c(2);
       channel = channel.channel;
       if (cResult[0] !== channel) {
@@ -380,13 +380,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (channel) => {
+  : function GroupDMIcon(channel) {
       const obj = { size: native.AvatarSizes.REFRESH_MEDIUM_32, channel: channel.channel };
       return closure_1_8(GroupDMAvatarDefault, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (status) => {
+  ? function UserAvatar(status) {
       const cResult = c.c(6);
       ({ user, isMobileOnline, isVROnline } = status);
       const tmp4 = closure_11();
@@ -426,7 +426,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp7;
       tmp6 = tmp7;
     }
-  : (user) => {
+  : function UserAvatar(user) {
       user = user.user;
       ({ status, isMobileOnline, isVROnline } = user);
       const obj = {
@@ -452,7 +452,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ChannelIconRaw(arg0) {
       const cResult = c.c(5);
       ({ icon, IconComponent } = arg0);
       const token = useToken.useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
@@ -479,7 +479,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp5;
       cResult[4] = tmp7;
     }
-  : (IconComponent) => {
+  : function ChannelIconRaw(IconComponent) {
       IconComponent = IconComponent.IconComponent;
       const token = useToken.useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
       if (null != IconComponent) {
@@ -497,7 +497,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MemberCountText(arg0) {
       const cResult = c.c(11);
       ({ presenceCount, memberCount, withSeparator, leadingAccessoryWidth } = arg0);
       let str = "online";
@@ -533,7 +533,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { children: null };
               const items = [tmp5, tmp7];
               obj2.children = items;
-              const tmp13 = options(v65535, obj2);
+              const tmp13 = options(collapsed, obj2);
               cResult[8] = tmp5;
               cResult[9] = tmp7;
               cResult[10] = tmp13;
@@ -566,7 +566,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp6;
       tmpResult = ManaTypeConsolidationExperiment;
     }
-  : (arg0) => {
+  : function MemberCountText(arg0) {
       ({ presenceCount, memberCount } = arg0);
       let str = "online";
       ({ withSeparator, leadingAccessoryWidth } = arg0);
@@ -595,11 +595,11 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6Result = closure_1_8(Text_Text.Text, obj3);
       }
       children[1] = tmp6Result;
-      return options(v65535, { children });
+      return options(collapsed, { children });
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function ParentChannelSubTitle(channel) {
       const cResult = c.c(8);
       channel = channel.channel;
       const tmp4 = closure_11();
@@ -646,7 +646,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp14;
       tmp13 = tmp14;
     }
-  : (channel) => {
+  : function ParentChannelSubTitle(channel) {
       channel = channel.channel;
       const obj = {
         lineClamp: 1,
@@ -668,7 +668,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function EmptyIcon() {
       const cResult = c.c(2);
       const tmp2 = closure_11();
       if (cResult[0] !== tmp2.channelIconWrapper) {
@@ -682,7 +682,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : () => closure_1_8(View, { style: closure_11().channelIconWrapper });
+  : function EmptyIcon() {
+      return closure_1_8(View, { style: closure_11().channelIconWrapper });
+    };
 function renderChannelIconRaw(icon, IconComponent) {
   return closure_1_8(closure_16, { icon, IconComponent });
 }

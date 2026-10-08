@@ -8,7 +8,7 @@ const ChannelTypes = Constants.ChannelTypes;
 const result = size.fileFinishedImporting("modules/app_channels/useAppChannelApplication.tsx");
 
 export const useAppChannelApplication = ReactCompilerGating.isReactCompilerEnabled()
-  ? (type) => {
+  ? function useAppChannelApplication(type) {
       type = undefined;
       if (type != null) {
         type = type.type;
@@ -19,7 +19,7 @@ export const useAppChannelApplication = ReactCompilerGating.isReactCompilerEnabl
       }
       return ApplicationActionCreators.useApplication(application_id).data;
     }
-  : (type) => {
+  : function useAppChannelApplication(type) {
       type = undefined;
       if (type != null) {
         type = type.type;

@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
   borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
@@ -40,7 +40,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMessagePreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (message) => {
+  ? function MessagePreview(message) {
       const cResult = c.c(19);
       message = message.message;
       const tmp4 = closure_6();
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = items1;
       tmp13 = items1;
     }
-  : (message) => {
+  : function MessagePreview(message) {
       const tmp = closure_6();
       const obj2 = { style: tmp.container, children: null };
       const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };

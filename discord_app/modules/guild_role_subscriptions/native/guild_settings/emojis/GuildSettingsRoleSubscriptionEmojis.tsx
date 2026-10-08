@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/emojis/GuildSettingsRoleSubscriptionEmojis.tsx
 import c from "../../../../../../_runtime/00576_c.js";
-import asyncRequireImpl from "../../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import RoleSubscriptionEmojiUtils from "../../../RoleSubscriptionEmojiUtils.tsx";
 import GuildSettingsRoleSubscriptionContainerDefault from "../GuildSettingsRoleSubscriptionContainer.tsx";
@@ -12,15 +12,15 @@ import apply from "../../../../../../_runtime/metro/00012__.js";
 require = fn;
 function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
   guildId = guildId.guildId;
-  const roleSubscriptionSettingsDisabled = guildId(17967).useRoleSubscriptionSettingsDisabled();
-  let obj = guildId(17967);
+  const roleSubscriptionSettingsDisabled = guildId(18254).useRoleSubscriptionSettingsDisabled();
+  let obj = guildId(18254);
   const items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   if (null == stateFromStores) {
     return null;
   } else {
     const intl = tmp(1126).intl;
-    const obj3 = { maxSlots: stateFromStores(18021)(stateFromStores) };
+    const obj3 = { maxSlots: stateFromStores(18308)(stateFromStores) };
     const obj4 = {
       guild: stateFromStores,
       headerDescription: intl.formatToPlainString(tmp(1126).t.H9Jxp6, obj3),
@@ -36,17 +36,17 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
             closure_1 = arg1;
             const obj = ActionSheetActionCreatorsDefault;
             obj.openLazy(
-              asyncRequireImpl(18022, dependencyMap.paths),
+              asyncRequireImpl(18309, dependencyMap.paths),
               "role-subscription-emoji-" + stateFromStores.id,
               {
                 guildId: stateFromStores.id,
                 emoji,
                 onSave(arg0) {
-                  stateFromStores(4860).hideActionSheet();
+                  stateFromStores(5054).hideActionSheet();
                   closure_0(arg0);
                 },
                 onCancel() {
-                  stateFromStores(4860).hideActionSheet();
+                  stateFromStores(5054).hideActionSheet();
                   const error = new Error("User cancelled");
                   closure_1(error);
                 },
@@ -58,7 +58,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
       },
       disabled: roleSubscriptionSettingsDisabled,
     };
-    return jsx(tmp(17779).ManageEmojisModal, {
+    return jsx(tmp(18066).ManageEmojisModal, {
       guild: stateFromStores,
       headerDescription: intl.formatToPlainString(tmp(1126).t.H9Jxp6, obj3),
       computeEmojiItems,
@@ -73,17 +73,17 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
             closure_1 = arg1;
             const obj = ActionSheetActionCreatorsDefault;
             obj.openLazy(
-              asyncRequireImpl(18022, dependencyMap.paths),
+              asyncRequireImpl(18309, dependencyMap.paths),
               "role-subscription-emoji-" + stateFromStores.id,
               {
                 guildId: stateFromStores.id,
                 emoji,
                 onSave(arg0) {
-                  stateFromStores(4860).hideActionSheet();
+                  stateFromStores(5054).hideActionSheet();
                   closure_0(arg0);
                 },
                 onCancel() {
-                  stateFromStores(4860).hideActionSheet();
+                  stateFromStores(5054).hideActionSheet();
                   const error = new Error("User cancelled");
                   closure_1(error);
                 },
@@ -127,7 +127,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildSettingsRoleSubscriptionEmojis(guildId) {
       const cResult = c.c(5);
       guildId = guildId.guildId;
       if (cResult[0] !== guildId) {
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp8;
       tmp7 = tmp8;
     }
-  : (guildId) => {
+  : function GuildSettingsRoleSubscriptionEmojis(guildId) {
       guildId = guildId.guildId;
       const obj = { guildId, children: <GuildSettingsRoleSubscriptionEmojisInner guildId={guildId} /> };
       return jsx(GuildSettingsRoleSubscriptionContainerDefault, {

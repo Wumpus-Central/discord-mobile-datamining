@@ -12,7 +12,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const TooltipArrowDirections = { UP: "UP", DOWN: "DOWN" };
 let obj2 = { CENTER: "CENTER", RIGHT: "RIGHT", LEFT: "LEFT" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj4 = {
   container: {
     padding: 10,
@@ -53,7 +53,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("design/void/Tooltip/native/Tooltip.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Tooltip(arg0) {
       const obj = c;
       const cResult = obj.c(40);
       ({
@@ -284,7 +284,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = tmp17;
       }
     }
-  : (arrowHeight) => {
+  : function Tooltip(arrowHeight) {
       ({ arrowStyle, label, title, arrowWidth } = arrowHeight);
       ({ style, containerStyle, labelStyle, children } = arrowHeight);
       if (arrowWidth === undefined) {

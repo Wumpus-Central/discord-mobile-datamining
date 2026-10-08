@@ -3,8 +3,8 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useIsPrivateAudioOnlyCallDefault from "../useIsPrivateAudioOnlyCall.tsx";
-import useIsActivityFocusedDefault from "../../../activities/useIsActivityFocused.tsx";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
+import useIsActivityFocusedDefault from "../../../activities/useIsActivityFocused.tsx";
 import HomeIndicatorDefault from "../../../voice_panel/native/HomeIndicator.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ActionSheetStore from "../../../action_sheet/native/ActionSheetStore.tsx";
@@ -13,7 +13,7 @@ import GameConsoleStore from "../../../game_console/GameConsoleStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallStore = fn(9086);
+const ChannelCallStore = fn(10333);
 ({
   useChannelCallStore: metroRequire,
   focusTimeout: closure_7,
@@ -25,7 +25,7 @@ const jsxProd = fn(21);
 const context = noop.createContext({ reveal: true });
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, id) => {
+  ? function useRevealProviderValue(arg0, id) {
       const cResult = c.c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ActionSheetStore];
@@ -102,7 +102,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp20 = obj2;
       const tmpResult3 = initialize;
     }
-  : (arg0, id) => {
+  : function useRevealProviderValue(arg0, id) {
       let tmp = arg0;
       const items = [ActionSheetStore];
       const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => null != key.getKey());
@@ -133,7 +133,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       stateFromStores1 = tmp;
       const tmp8 = useIsActivityFocusedDefault(id.id);
-      const tmp10 = tmp2(1369).isIOS() && tmp8;
+      const tmp10 = tmp2(1381).isIOS() && tmp8;
       importDefault = tmp10;
       const items2 = [tmp, tmp10];
       return noop.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures }), items2);
@@ -144,7 +144,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/RevealProvider.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function RevealProvider(channel) {
       const cResult = require("c").c(15);
       ({ children, showStatus, useThemedBarStyle } = channel);
       let tmp3 = undefined !== showStatus;
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7 = closure_13(tmp6, channel.channel);
       ({ reveal, prefersDeferringSystemGestures } = tmp7);
       if (cResult[1] !== tmp6) {
-        class F {
+        class D {
           constructor() {
             if (closure_0) {
               tmp3 = resetFocusTimer;
@@ -179,11 +179,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const items = [tmp6];
         cResult[1] = tmp6;
-        cResult[2] = F;
+        cResult[2] = D;
         cResult[3] = items;
         let tmp9 = items;
       } else {
-        class F {
+        class D {
           constructor() {
             if (closure_0) {
               tmp3 = resetFocusTimer;
@@ -197,9 +197,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp9 = cResult[3];
       }
-      const effect = noop.useEffect(F, tmp9);
+      const effect = noop.useEffect(D, tmp9);
       if (!tmp4) {
-        class F {
+        class D {
           constructor() {
             if (closure_0) {
               tmp3 = resetFocusTimer;
@@ -212,7 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       } else {
-        class F {
+        class D {
           constructor() {
             if (closure_0) {
               tmp3 = resetFocusTimer;
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (!reveal) {
-        class F {
+        class D {
           constructor() {
             if (closure_0) {
               tmp3 = resetFocusTimer;
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (!reveal) {
-        class F {
+        class D {
           constructor() {
             if (closure_0) {
               tmp3 = resetFocusTimer;
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[4] === str) {
-        class F {
+        class D {
           constructor() {
             if (closure_0) {
               tmp3 = resetFocusTimer;
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[7] === prefersDeferringSystemGestures) {
-          class F {
+          class D {
             constructor() {
               if (closure_0) {
                 tmp3 = resetFocusTimer;
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[10] === children) {
-            class F {
+            class D {
               constructor() {
                 if (closure_0) {
                   tmp3 = resetFocusTimer;
@@ -316,7 +316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp4 = undefined !== useThemedBarStyle && useThemedBarStyle;
     }
-  : (showStatus) => {
+  : function RevealProvider(showStatus) {
       let flag = showStatus.showStatus;
       ({ channel, children } = showStatus);
       if (flag === undefined) {

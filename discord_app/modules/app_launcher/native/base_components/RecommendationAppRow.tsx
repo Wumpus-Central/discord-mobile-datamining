@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/RecommendationAppRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RecommendationAppRow(arg0) {
       const cResult = c.c(11);
       ({ application, onPress, isFirstRow, isLastRow, showsPromoted } = arg0);
       if (cResult[0] === application.bot) {
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = applicationIconSource;
       const obj4 = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
     }
-  : (onPress) => {
+  : function RecommendationAppRow(onPress) {
       ({ application, isFirstRow } = onPress);
       if (isFirstRow === undefined) {
         isFirstRow = false;

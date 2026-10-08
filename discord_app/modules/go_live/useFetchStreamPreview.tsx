@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/useFetchStreamPreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useFetchStreamPreview(arg0, arg1, arg2) {
       _require = arg0;
       dependencyMap = arg1;
       closure_2 = arg2;
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[14] = fn3;
       const tmpResult4 = require("initialize");
     }
-  : (arg0, arg1, arg2) => {
+  : function useFetchStreamPreview(arg0, arg1, arg2) {
       _require = arg0;
       dependencyMap = arg1;
       noop = arg2;

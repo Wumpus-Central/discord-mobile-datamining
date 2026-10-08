@@ -227,6 +227,7 @@ import SecureFramesPersistentCodesSettingDefault from "../../defs/native/SecureF
 import SecureFramesVerifiedDevicesSettingDefault from "../../defs/native/SecureFramesVerifiedDevicesSetting.tsx";
 import UseDataForQuestsSetting from "../../defs/native/UseDataForQuestsSetting.tsx";
 import UseDataForQuests3PSetting from "../../defs/native/UseDataForQuests3PSetting.tsx";
+import PinotSettingsLazy from "../../../pinot/native/PinotSettingsLazy.tsx";
 import SponsoredContentPreferencesSettingDefault from "../../defs/native/SponsoredContentPreferencesSetting.tsx";
 import ManageSponsoredContentSettingDefault from "../../defs/native/ManageSponsoredContentSetting.tsx";
 import DisableStreamPreviewsSettingDefault from "../../defs/native/DisableStreamPreviewsSetting.tsx";
@@ -517,6 +518,8 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   SECURE_FRAMES_VERIFIED_DEVICES,
   USE_DATA_FOR_QUESTS,
   USE_DATA_FOR_QUESTS_3P,
+  PINOT_MEMBER_SETTING,
+  PINOT_MEMBER_SETTING_SAVE,
   USE_DATA_FOR_QUESTS_SPONSORED_CONTENT,
   USE_DATA_FOR_QUESTS_3P_SPONSORED_CONTENT,
   SPONSORED_CONTENT_PREFERENCES,
@@ -546,7 +549,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_GUILDS,
   PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS,
   PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS,
-  PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_FRIENDS_DMS,
 } = MobileUserSettings);
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const frozen = Object.freeze({
@@ -787,6 +789,8 @@ const frozen = Object.freeze({
   [SECURE_FRAMES_VERIFIED_DEVICES]: SecureFramesVerifiedDevicesSettingDefault,
   [USE_DATA_FOR_QUESTS]: UseDataForQuestsSettingDefault,
   [USE_DATA_FOR_QUESTS_3P]: UseDataForQuests3PSettingDefault,
+  [PINOT_MEMBER_SETTING]: PinotSettingsLazy.PinotMemberSetting,
+  [PINOT_MEMBER_SETTING_SAVE]: PinotSettingsLazy.PinotMemberSettingSave,
   [USE_DATA_FOR_QUESTS_SPONSORED_CONTENT]: UseDataForQuestsSetting.UseDataForQuestsSponsoredContentSetting,
   [USE_DATA_FOR_QUESTS_3P_SPONSORED_CONTENT]: UseDataForQuests3PSetting.UseDataForQuests3PSponsoredContentSetting,
   [SPONSORED_CONTENT_PREFERENCES]: SponsoredContentPreferencesSettingDefault,
@@ -817,7 +821,8 @@ const frozen = Object.freeze({
   [PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS]: ParentalControlsExplicitMediaFiltersFriendsDMsSettingDefault,
   [PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS]:
     ParentalControlsExplicitMediaFiltersNonFriendsDMsSettingDefault,
-  [PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_FRIENDS_DMS]: ParentalControlsGoreMediaFiltersFriendsDMsSettingDefault,
+  [MobileUserSettings.PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_FRIENDS_DMS]:
+    ParentalControlsGoreMediaFiltersFriendsDMsSettingDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_NON_FRIENDS_DMS]:
     ParentalControlsGoreMediaFiltersNonFriendsDMsSettingDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_STATISTICS]: ParentalControlsUseDataToImproveDiscordSettingDefault,

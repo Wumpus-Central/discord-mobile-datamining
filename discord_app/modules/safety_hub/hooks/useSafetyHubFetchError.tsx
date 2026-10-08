@@ -9,11 +9,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubFetchError.tsx");
 
 export const useSafetyHubFetchError = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSafetyHubFetchError() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SafetyHubStore];
-        const fn = function s() {
+        const fn = function u() {
           return fetchError.getFetchError();
         };
         cResult[0] = items;
@@ -25,7 +25,7 @@ export const useSafetyHubFetchError = ReactCompilerGating.isReactCompilerEnabled
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useSafetyHubFetchError() {
       const items = [SafetyHubStore];
       return initialize.useStateFromStores(items, () => fetchError.getFetchError());
     };

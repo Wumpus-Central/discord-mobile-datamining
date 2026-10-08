@@ -10,7 +10,7 @@ const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupRollbackSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildPowerupRollbackSheet(arg0) {
       const cResult = c.c(8);
       ({ header, body, ctaText, onCtaPress, onDismiss } = arg0);
       if (cResult[0] === ctaText) {
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp5;
       tmp4 = tmp5;
     }
-  : (ctaText) => {
+  : function GuildPowerupRollbackSheet(ctaText) {
       ctaText = ctaText.ctaText;
       ({ header, body, onCtaPress, onDismiss } = ctaText);
       const obj = { title: header, description: body, onDismiss, actions: null };

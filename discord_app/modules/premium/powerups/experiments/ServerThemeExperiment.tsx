@@ -31,7 +31,7 @@ const items = [
 obj.treatments = items;
 let experiment = createExperiment.createExperiment(obj);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, location) => {
+  ? function useServerThemeEnabled(guildId, location) {
       const cResult = c.c(11);
       if (cResult[0] === guildId) {
         if (cResult[1] === location) {
@@ -92,7 +92,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj4;
       tmp4 = obj4;
     }
-  : (guildId, location) => {
+  : function useServerThemeEnabled(guildId, location) {
       experiment = experiment.useExperiment({ guildId, location }, { autoTrackExposure: false });
       const ServerThemeApexShadowExperiment = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment;
       let tmp3 = guildId;
@@ -166,7 +166,7 @@ export const getServerThemeRollbackEnabled = function getServerThemeRollbackEnab
   return currentConfig.rollbackEnabled;
 };
 export const useServerThemeRollbackEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, location) => {
+  ? function useServerThemeRollbackEnabled(guildId, location) {
       const cResult = c.c(11);
       if (cResult[0] === guildId) {
         if (cResult[1] === location) {
@@ -227,7 +227,7 @@ export const useServerThemeRollbackEnabled = ReactCompilerGating.isReactCompiler
       cResult[2] = obj4;
       tmp4 = obj4;
     }
-  : (guildId, location) => {
+  : function useServerThemeRollbackEnabled(guildId, location) {
       experiment = experiment.useExperiment({ guildId, location }, { autoTrackExposure: false });
       const ServerThemeApexShadowExperiment = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment;
       let tmp3 = guildId;

@@ -9,10 +9,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const SmartSearchConstants = fn(11982);
+const SmartSearchConstants = fn(12055);
 ({ SUGGESTED_SEARCHES_WINDOW_SIZE: hasOwnProperty, SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT } = SmartSearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { iconCircle: null, text: null, compactLabel: null };
 let size = {
   width: 48,
@@ -32,7 +32,7 @@ let result = size.fileFinishedImporting("modules/intelligence_layer/search/nativ
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (suggestedSearch) => {
+    ? function SuggestedSearchRow(suggestedSearch) {
         const cResult = suggestedSearch(suggestionSource[7]).c(21);
         suggestedSearch = suggestedSearch.suggestedSearch;
         const smartSearchQuery = suggestedSearch.smartSearchQuery;
@@ -175,7 +175,7 @@ export default noop.memo(
         tmp5 = fn;
         let obj = suggestedSearch(suggestionSource[7]);
       }
-    : (suggestedSearch) => {
+    : function SuggestedSearchRow(suggestedSearch) {
         suggestedSearch = suggestedSearch.suggestedSearch;
         const smartSearchQuery = suggestedSearch.smartSearchQuery;
         const suggestionSource = suggestedSearch.suggestionSource;

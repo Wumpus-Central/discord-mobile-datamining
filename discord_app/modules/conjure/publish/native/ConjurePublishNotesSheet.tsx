@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/native/ConjurePublishNotesSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ConjureUtils from "../../shared/ConjureUtils.tsx";
 import ChannelPickerActionSheetDefault from "../../../channel/native/ChannelPickerActionSheet.tsx";
@@ -17,12 +17,12 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let closure_9 = fn(4513).GUILD_SELECTABLE_CHANNELS_KEY;
-const MessageSendLocation = fn(4889).MessageSendLocation;
+let closure_9 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
+const MessageSendLocation = fn(5083).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const ConjurePublishNotesSheet = "ConjurePublishNotesSheet";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_17 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom },
@@ -219,7 +219,7 @@ export default function ConjurePublishNotesSheet(guildId) {
     const obj4 = { title: null };
     const obj = ActionSheetActionCreators;
     const intl = util.intl;
-    obj4.title = intl.string(_modDef3753.Gd63Fl);
+    obj4.title = intl.string(_modDef3827.Gd63Fl);
     obj3.header = obj4;
     obj3.guild = GuildStore.getGuild(guildId);
     obj3.channels = stateFromStores;
@@ -273,8 +273,8 @@ export default function ConjurePublishNotesSheet(guildId) {
                     const _HermesInternal = HermesInternal;
                     combined = "" + trimmed + tmp34;
                   }
-                  const parsed = tmp3(7179).parse(found, combined);
-                  const tmp31Result = tmp3(6978);
+                  const parsed = tmp3(7358).parse(found, combined);
+                  const tmp31Result = tmp3(7167);
                   const obj5 = { location: constants.CONJURE_PATCH_NOTES };
                   c3 = 2;
                   c4 = 1;
@@ -303,10 +303,10 @@ export default function ConjurePublishNotesSheet(guildId) {
                 ok = closure_128_0.ok;
               }
               if (false !== ok) {
-                const result = guildId(16590).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
+                const result = guildId(16845).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
                 closure_129_21();
                 dependencyMap = 0;
-                const obj = guildId(16590);
+                const obj = guildId(16845);
               }
             }
             const _Error = Error;

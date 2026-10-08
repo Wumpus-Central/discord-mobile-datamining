@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _modDef2847 from "../../../notifications/NotificationSettings.messages.js";
+import _modDef2891 from "../../../notifications/NotificationSettings.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import MobileNotifSettings from "../../notifications/native/codegen/MobileNotifSettings.tsx";
 import AndroidNotificationSettingsStore from "../../notifications/native/stores/AndroidNotificationSettingsStore.tsx";
@@ -16,7 +16,7 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
 let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHasAndroidMessageNotificationsSetting() {
       const cResult = c.c(2);
       const tmp4 = React3();
       if (cResult[0] !== tmp4) {
@@ -33,7 +33,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function useHasAndroidMessageNotificationsSetting() {
       const tmp = React3();
       let isAndroidResult = PlatformUtils.isAndroid();
       if (isAndroidResult) {
@@ -41,15 +41,18 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return isAndroidResult;
     };
-const fn = () => {
+function useAndroidMessageNotificationsSettingValue() {
   let flag = React3();
   if (flag == null) {
     flag = false;
   }
   return flag;
-};
+}
 let closure_4 = tmp4;
-const obj = { useValue: fn, onValueChange: setAndroidMessageNotificationsEnabled };
+const obj = {
+  useValue: useAndroidMessageNotificationsSettingValue,
+  onValueChange: setAndroidMessageNotificationsEnabled,
+};
 let SettingBuilders = SettingBuilders_mod;
 const obj2 = {};
 const merged = Object.assign(obj);
@@ -71,11 +74,11 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef2847.odJXYJ);
+  return intl.string(_modDef2891.odJXYJ);
 };
 obj3.useDescription = function useDescription() {
   const intl = util.intl;
-  return intl.string(_modDef2847["+jwUmI"]);
+  return intl.string(_modDef2891["+jwUmI"]);
 };
 obj3.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
 obj3.usePredicate = function usePredicate() {
@@ -91,6 +94,6 @@ const toggle1 = SettingBuilders.createToggle(obj3);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidMessageNotificationsSetting.tsx");
 
 export default toggle;
-export const useAndroidMessageNotificationsSettingValue = fn;
+export { useAndroidMessageNotificationsSettingValue };
 export const useHasAndroidMessageNotificationsSetting = tmp4;
 export const RedesignAndroidMessageNotificationsSetting = toggle1;

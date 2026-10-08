@@ -1,6 +1,6 @@
 // discord_app/modules/client_themes/images/native/SynchronizeIconNative.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07550_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -13,7 +13,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/images/native/SynchronizeIconNative.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SynchronizeIcon(arg0) {
       const cResult = c.c(7);
       ({ fill, iconStyles } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp12;
       tmp11 = tmp12;
     }
-  : (iconStyles) => {
+  : function SynchronizeIcon(iconStyles) {
       const fill = iconStyles.fill;
       const size = {
         style: iconStyles.iconStyles,

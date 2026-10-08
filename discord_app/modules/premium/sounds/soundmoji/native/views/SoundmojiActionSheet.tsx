@@ -6,21 +6,21 @@ import getSoundboardEmojiUrlDefault from "../../../../../soundboard/native/utils
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const util = BottomSheet(1126);
-const Text_Text = BottomSheet(4892);
-const getSoundmojiASTFromString = BottomSheet(5808);
-const Sheet_BottomSheet = BottomSheet(6652);
+const Text_Text = BottomSheet(5086);
+const getSoundmojiASTFromString = BottomSheet(5423);
+const Sheet_BottomSheet = BottomSheet(6829);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 },
   soundmojiContainer: { flexDirection: "row", alignItems: "center" },
   emoji: null,
   textContainer: null,
 };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 32;
@@ -36,7 +36,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/native/views/SoundmojiActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SoundmojiActionSheet(arg0) {
       BottomSheet = require;
       let tmp = dependencyMap;
       const cResult = c.c(21);
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = soundmojiFromMessage;
       const BottomSheetResult = getSoundmojiASTFromString;
     }
-  : (guildId) => {
+  : function SoundmojiActionSheet(guildId) {
       guildId = guildId.guildId;
       const channelId = guildId.channelId;
       const messageId = guildId.messageId;

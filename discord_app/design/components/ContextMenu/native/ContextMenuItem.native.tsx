@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = ReanimatedRexport.createAnimatedComponent(Pressable);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = {
     container: {
@@ -88,7 +88,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuItem.native.tsx");
 
 export const ContextMenuItem = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ContextMenuItem(arg0) {
       const cResult = index(pan[8]).c(42);
       ({ label, IconComponent, trailingIndicator, iconSource, start, end, index } = arg0);
       ({ state, onPress, variant, accessibilityRole } = arg0);
@@ -408,7 +408,7 @@ export const ContextMenuItem = ReactCompilerGating.isReactCompilerEnabled()
         SUBTLE_SPRING: index(pan[11]).SUBTLE_SPRING,
       };
     }
-  : (accessibilityRole) => {
+  : function ContextMenuItem(accessibilityRole) {
       ({ IconComponent, trailingIndicator, iconSource, start, end, index } = accessibilityRole);
       ({ state, variant } = accessibilityRole);
       ({ label, lastInSection, onPress } = accessibilityRole);

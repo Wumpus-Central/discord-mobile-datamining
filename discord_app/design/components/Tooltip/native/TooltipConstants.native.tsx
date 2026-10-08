@@ -2,6 +2,8 @@
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const TOOLTIP_SPRING = {
   overshootClamping: true,
   damping: 35,
@@ -10,25 +12,37 @@ const TOOLTIP_SPRING = {
   restDisplacementThreshold: 0.001,
 };
 const __initData = {
-  code: "function TooltipConstantsNativeTsx1(visible,cleanUp){const{withSpring,translateY,TOOLTIP_SPRING}=this.__closure;return{transform:[{translateY:withSpring(visible===1?0:translateY,TOOLTIP_SPRING,'respect-motion-settings',cleanUp)}],opacity:withSpring(visible,TOOLTIP_SPRING,'respect-motion-settings',cleanUp)};}",
+  code: "function TooltipConstantsNativeTsx1(visible,cleanUp){const{withSpring,translate,TOOLTIP_SPRING,isHorizontal}=this.__closure;const offset=withSpring(visible===1?0:translate,TOOLTIP_SPRING,'respect-motion-settings',cleanUp);return{transform:isHorizontal?[{translateX:offset}]:[{translateY:offset}],opacity:withSpring(visible,TOOLTIP_SPRING,'respect-motion-settings',cleanUp)};}",
 };
 const result = size.fileFinishedImporting("design/components/Tooltip/native/TooltipConstants.native.tsx");
 
 export const tooltipEnterExitAnimation = function tooltipEnterExitAnimation(position) {
-  let num = -8;
+  let tmp2 = tmp;
+  if ("left" !== position) {
+    tmp2 = "right" === position;
+  }
+  _require = tmp2;
   if ("top" === position) {
-    num = 8;
+    let num = 8;
+  } else {
+    num = -8;
   }
   const fn = function o(value, fn) {
-    const obj2 = { transform: null, opacity: null };
-    const items = [{ translateY: spring.withSpring(0, closure_2, "respect-motion-settings", fn) }];
-    obj2.transform = items;
-    const obj3 = { translateY: spring.withSpring(0, closure_2, "respect-motion-settings", fn) };
-    obj2.opacity = spring.withSpring(value, closure_2, "respect-motion-settings", fn);
-    return obj2;
+    const withSpringResult = spring.withSpring(0, closure_2, "respect-motion-settings", fn);
+    if (closure_0) {
+      const obj2 = { translateX: withSpringResult };
+      const items = [obj2];
+      let items1 = items;
+    } else {
+      const obj3 = { translateY: withSpringResult };
+      items1 = [obj3];
+    }
+    const obj4 = { transform: items1, opacity: null };
+    obj4.opacity = spring.withSpring(value, closure_2, "respect-motion-settings", fn);
+    return obj4;
   };
-  fn.__closure = { withSpring: num(5604).withSpring, translateY: num, TOOLTIP_SPRING };
-  fn.__workletHash = 7727487832145;
+  fn.__closure = { withSpring: require("spring").withSpring, translate: num, TOOLTIP_SPRING, isHorizontal: tmp2 };
+  fn.__workletHash = 12524569976242;
   fn.__initData = __initData;
   return fn;
 };

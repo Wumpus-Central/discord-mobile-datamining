@@ -1,8 +1,8 @@
 // discord_app/modules/game_update/native/GameUpdatePlatformIcon.tsx
 import c from "../../../../_runtime/00576_c.js";
 import MobilePhoneIcon from "../../../design/components/Icon/native/redesign/generated/MobilePhoneIcon.tsx";
-import PlatformType from "../../../../discord_common/js/shared/shared-constants/PlatformType.tsx";
 import AppleNeutralIcon from "../../../design/components/Icon/native/redesign/generated/AppleNeutralIcon.tsx";
+import PlatformType from "../../../../discord_common/js/shared/shared-constants/PlatformType.tsx";
 import XboxNeutralIcon from "../../../design/components/Icon/native/redesign/generated/XboxNeutralIcon.tsx";
 import ScreenIcon from "../../../design/components/Icon/native/redesign/generated/ScreenIcon.tsx";
 import PlaystationNeutralIcon from "../../../design/components/Icon/native/redesign/generated/PlaystationNeutralIcon.tsx";
@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_update/native/GameUpdatePlatformIcon.tsx");
 
 export const GameUpdatePlatformIcon = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GameUpdatePlatformIcon(arg0) {
       const cResult = c.c(18);
       ({ platform, size, color } = arg0);
       let str = "xs";
@@ -105,7 +105,7 @@ export const GameUpdatePlatformIcon = ReactCompilerGating.isReactCompilerEnabled
         return null;
       }
     }
-  : (color) => {
+  : function GameUpdatePlatformIcon(color) {
       ({ platform, size } = color);
       if (size === undefined) {
         size = "xs";

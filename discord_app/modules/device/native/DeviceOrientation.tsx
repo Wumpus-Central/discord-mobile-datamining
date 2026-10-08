@@ -3,7 +3,7 @@ import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactB
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import get_ActivityIndicator_mod from "../../../../_runtime/metro/08019__.js";
+import get_ActivityIndicator_mod from "../../../../_runtime/metro/08427__.js";
 
 const require = globalThis.__r;
 
@@ -244,7 +244,9 @@ function lockOrientation(PORTRAIT, flag) {
     });
   }
 }
-fn = () => obj3().orientation;
+function useOrientation() {
+  return obj3().orientation;
+}
 const size = fn(2);
 const result4 = size.fileFinishedImporting("modules/device/native/DeviceOrientation.tsx");
 
@@ -260,9 +262,9 @@ export const getOrientation = function getOrientation() {
 export const getOrientationLock = function getOrientationLock() {
   return obj3.getState().orientationLock;
 };
-export const useOrientation = fn;
+export { useOrientation };
 export const useOrientationListener = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useOrientationListener(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] !== arg0) {
@@ -281,7 +283,7 @@ export const useOrientationListener = ReactCompilerGating.isReactCompilerEnabled
       }
       const effect = noop.useEffect(tmp2, tmp3);
     }
-  : (arg0) => {
+  : function useOrientationListener(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       const effect = noop.useEffect(() => obj3.subscribe(closure_0), items);

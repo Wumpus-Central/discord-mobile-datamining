@@ -5,16 +5,16 @@ import useGuildApplicationDefault from "../../../applications/useGuildApplicatio
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
-const PlaceholderDefault = tmp3(17923);
-const GuildSettingsRoleSubscriptionWelcomeViewDefault = tmp3(17924);
+const PlaceholderDefault = tmp3(18210);
+const GuildSettingsRoleSubscriptionWelcomeViewDefault = tmp3(18211);
 require = fn;
 const Constants = fn(1085);
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
-const ApplicationTypes = fn(1360).ApplicationTypes;
+const ApplicationTypes = fn(1372).ApplicationTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
       let tmp = dependencyMap;
       const cResult = c.c(3);
       guild = guild.guild;
@@ -55,7 +55,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       tmp4 = useGuildApplicationDefault(guild.id, ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS);
     }
-  : (guild) => {
+  : function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
       guild = guild.guild;
       const str = useNavigation.useNavigation();
       if (tmp3.loading) {
@@ -86,7 +86,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildSettingsRoleSubscriptionsEmpty(guildId) {
       let tmp2 = dependencyMap;
       const cResult = guildId(576).c(6);
       guildId = guildId.guildId;
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== guildId) {
-        const fn = function n() {
+        const fn = function u() {
           return GuildStore.getGuild(guildId);
         };
         cResult[1] = guildId;
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = guildId(504);
     }
-  : (guildId) => {
+  : function GuildSettingsRoleSubscriptionsEmpty(guildId) {
       guildId = guildId.guildId;
       const items = [GuildStore];
       const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));

@@ -4,6 +4,7 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import TrackingUtils from "TrackingUtils.tsx";
 import ThreadAnalyticsUtils from "../../app_analytics/ThreadAnalyticsUtils.tsx";
+import getChannelOpenedMetadata from "../../app_analytics/track/channel_opened/getChannelOpenedMetadata.tsx";
 import trackChannelOpenedClickstreamDefault from "../../app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import DraftStore from "../../../stores/DraftStore.tsx";
@@ -13,7 +14,7 @@ import ForumSearchStore from "../ForumSearchStore.tsx";
 const AppAnalyticsUtilsDefault = AppAnalyticsUtils;
 
 require = fn;
-const DraftType = fn(7044).DraftType;
+const DraftType = fn(7232).DraftType;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, AnalyticsSections: closure_9 } = Constants);
 let size = fn(2);
@@ -299,7 +300,7 @@ export const trackForumPostSidebarViewed = function trackForumPostSidebarViewed(
   const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(channelId.guild_id));
   const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channelId));
   const merged2 = Object.assign(ThreadAnalyticsUtils.collectThreadMetadata(channelId, true));
-  const merged3 = Object.assign(AppAnalyticsUtils.getChannelOpenedMetadata(channelId.id));
+  const merged3 = Object.assign(getChannelOpenedMetadata.getChannelOpenedMetadata(channelId.id));
   obj2.channel_view = "Split View";
   obj2.platform = PlatformUtils.getPlatform();
   obj.trackWithMetadata(constants.CHANNEL_OPENED, obj2);

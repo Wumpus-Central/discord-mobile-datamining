@@ -43,7 +43,7 @@ function getConsoleInfo(type) {
 }
 const PlatformTypes = fn(1085).PlatformTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   consoleIconContainer: {
     borderRadius: nativeDefault.radii.round,
@@ -69,14 +69,14 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelConsoleFacepile.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function VoicePanelConsoleFacepile() {
       const cResult = require("c").c(8);
       const tmp4 = closure_6();
       _require = tmp4;
       const arr = useGameConsoleAccountsDefault();
       if (cResult[0] !== arr) {
         const mapped = arr.map(getConsoleInfo);
-        const found = mapped.filter(tmp(1375).isNotNullish);
+        const found = mapped.filter(tmp(1387).isNotNullish);
         cResult[0] = arr;
         cResult[1] = found;
         let tmp5 = found;
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp9;
         }
         const obj2 = { items: tmp5, renderItem: tmp8, offsetAmount: -3 };
-        const tmp11 = jsx(tmp(1188).SummarizedIconRow, { items: tmp5, renderItem: tmp8, offsetAmount: -3 });
+        const tmp11 = jsx(tmp(1200).SummarizedIconRow, { items: tmp5, renderItem: tmp8, offsetAmount: -3 });
         cResult[5] = tmp5;
         cResult[6] = tmp8;
         cResult[7] = tmp11;
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = fn;
       let obj = require("c");
     }
-  : () => {
+  : function VoicePanelConsoleFacepile() {
       let tmp = closure_6();
       _require = tmp;
       const tmp2 = useGameConsoleAccountsDefault();

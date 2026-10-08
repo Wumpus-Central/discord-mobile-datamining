@@ -6,13 +6,13 @@ import ConjureLiveReloadStore from "ConjureLiveReloadStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let sendLiveReload = fn(12923).sendLiveReload;
+let sendLiveReload = fn(13072).sendLiveReload;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/live_reload/useConjureLiveReloadSetting.tsx");
 
 export const useConjureLiveReloadSetting = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useConjureLiveReloadSetting(arg0) {
       _require = arg0;
       const cResult = require("c").c(17);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -206,7 +206,7 @@ export const useConjureLiveReloadSetting = ReactCompilerGating.isReactCompilerEn
         enabled = stateFromStores.enabled;
       }
     }
-  : (arg0) => {
+  : function useConjureLiveReloadSetting(arg0) {
       _require = arg0;
       const items = [closure_5];
       const items1 = [arg0];

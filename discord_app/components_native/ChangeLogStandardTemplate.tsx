@@ -3,7 +3,7 @@ import c from "../../_runtime/00576_c.js";
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import native from "../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
-import _mod1936 from "../../_runtime/metro/01936__.js";
+import _mod1948 from "../../_runtime/metro/01948__.js";
 import getLocalizedLinkDefault from "../modules/links/getLocalizedLink.tsx";
 import LinkingDefault from "../lib/native/Linking.tsx";
 import MarkupUtilsDefault from "../modules/markup/MarkupUtils.tsx";
@@ -18,9 +18,9 @@ const Constants = fn(1085);
 ({ LocalizedLinks: closure_7, SOCIAL_LINKS: closure_8, AnalyticEvents: closure_9, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let closure_12 = createStyles.createStyleProperties({ added: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE, fixed: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, progress: nativeDefault.colors.TEXT_FEEDBACK_WARNING, improved: nativeDefault.colors.TEXT_BRAND });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj3 = { flex: { flex: 1 }, container: null, footer: null, scrollViewContainer: null, lheading: null, lheadingText: null, lheadingLine: null, bulletPoint: null, listItem: null, listText: null };
 let obj = { added: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE, fixed: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, progress: nativeDefault.colors.TEXT_FEEDBACK_WARNING, improved: nativeDefault.colors.TEXT_BRAND };
 obj3.container = { padding: 18, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -37,7 +37,7 @@ let obj6 = { flexDirection: "row", justifyContent: "center", borderTopWidth: Sty
 obj3.listText = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, lineHeight: 18, flex: 1 };
 let closure_13 = createStyles.createStyles(obj3);
 let ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((className) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function LHeading(className) {
   const cResult = c.c(18);
   className = className.className;
   const children = className.children;
@@ -62,7 +62,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((className) => 
           }
           if (cResult[12] !== tmp13) {
             let obj2 = { style: tmp13 };
-            const tmp18 = v65535(React4, obj2);
+            const tmp18 = collapsed(React4, obj2);
             cResult[12] = tmp13;
             cResult[13] = tmp18;
             let tmp15 = tmp18;
@@ -94,7 +94,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((className) => 
         tmp13 = tmp6Result;
       }
       const obj4 = { accessibilityRole: "header", style: tmp8, children };
-      const tmp12 = v65535(native.LegacyText, obj4);
+      const tmp12 = collapsed(native.LegacyText, obj4);
       cResult[6] = children;
       cResult[7] = tmp8;
       cResult[8] = tmp12;
@@ -106,7 +106,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((className) => 
     cResult[5] = tmp6Result2;
     tmp8 = tmp6Result2;
   }
-  const fn = function n(arg0, arg1) {
+  function getStyles(arg0, arg1) {
     closure_0 = arg1;
     if (null != closure_0) {
       const parts = str.split(" ");
@@ -124,12 +124,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((className) => 
       return mapped.concat(arg0);
     }
     str = closure_0;
-  };
+  }
   cResult[0] = className;
   cResult[1] = tmp5;
-  cResult[2] = fn;
-  tmp6 = fn;
-}) : ((children) => {
+  cResult[2] = getStyles;
+  tmp6 = getStyles;
+}) : (function LHeading(children) {
   closure_12();
   let obj = { style: closure_13().lheading, children: null };
   c0 = true;
@@ -149,7 +149,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((className) => 
     });
     combined = mapped.concat(tmp5);
   }
-  const items = [v65535(native.LegacyText, { accessibilityRole: "header", style: combined, children: children.children }), ];
+  const items = [collapsed(native.LegacyText, { accessibilityRole: "header", style: combined, children: children.children }), ];
   c0 = false;
   let combined1;
   if (null != children.className) {
@@ -167,7 +167,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((className) => 
     });
     combined1 = mapped1.concat(tmp7);
   }
-  items[1] = v65535(React4, { style: combined1 });
+  items[1] = collapsed(React4, { style: combined1 });
   obj.children = items;
   return closure_1_11(React4, obj);
 });
@@ -178,7 +178,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ch
   const tmp2 = closure_13();
   if (cResult[0] !== tmp2.bulletPoint) {
     const obj2 = { style: tmp2.bulletPoint };
-    const tmp6 = v65535(React4, obj2);
+    const tmp6 = collapsed(React4, obj2);
     cResult[0] = tmp2.bulletPoint;
     cResult[1] = tmp6;
     let tmp3 = tmp6;
@@ -212,7 +212,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ch
       tmp13 = tmp16;
     }
     const obj4 = { style: tmp2.listText, children: tmp7 };
-    const tmp12 = v65535(React4, obj4);
+    const tmp12 = collapsed(React4, obj4);
     cResult[5] = tmp2.listText;
     cResult[6] = tmp7;
     cResult[7] = tmp12;
@@ -231,7 +231,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ch
   children = children.children;
   const tmp = closure_13();
   const obj = { style: tmp.listItem, children: null };
-  const items = [v65535(React4, { style: tmp.bulletPoint }), ];
+  const items = [collapsed(React4, { style: tmp.bulletPoint }), ];
   const obj3 = { style: tmp.listText, children: null };
   let childrenResult = children;
   if (typeof children === "function") {
@@ -239,12 +239,12 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ch
     childrenResult = children(obj4);
   }
   obj3.children = childrenResult;
-  items[1] = v65535(React4, obj3);
+  items[1] = collapsed(React4, obj3);
   obj.children = items;
   return closure_1_11(React4, obj);
 }));
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((target) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkInner(target) {
   const cResult = target(576).c(10);
   target = target.target;
   ({ className, children } = target);
@@ -263,7 +263,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((target) => {
   let obj = target(576);
   const stateFromStores = target(573).useStateFromStores(tmp4, tmp5);
   let tmpResult = target(573);
-  const changelog = target(7775).useChangelog(target.changelogId, stateFromStores).changelog;
+  const changelog = target(8096).useChangelog(target.changelogId, stateFromStores).changelog;
   let date;
   if (changelog != null) {
     date = changelog.date;
@@ -286,7 +286,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((target) => {
         }
       }
       let obj2 = { accessibilityRole: "link", style: className, onPress: tmp10, children };
-      const tmp15 = closure_10(tmp(1188).LegacyText, obj2);
+      const tmp15 = closure_10(tmp(1200).LegacyText, obj2);
       cResult[6] = children;
       cResult[7] = className;
       cResult[8] = tmp10;
@@ -303,7 +303,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((target) => {
   if (changelog != null) {
     revision1 = changelog.revision;
   }
-  class R {
+  class L {
     constructor() {
       tmp2 = closure_2;
       tmp = closure_1;
@@ -339,17 +339,17 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((target) => {
   }
   cResult[3] = revision1;
   cResult[4] = target;
-  cResult[5] = R;
-  tmp10 = R;
-  const tmpResult2 = target(7775);
-}) : ((target) => {
+  cResult[5] = L;
+  tmp10 = L;
+  const tmpResult2 = target(8096);
+}) : (function LinkInner(target) {
   target = target.target;
   ({ changelogId, className, children } = target);
   const items = [LocaleStore];
   const stateFromStores = target(573).useStateFromStores(items, () => locale.locale);
   let obj = target(573);
-  const changelog = target(7775).useChangelog(changelogId, stateFromStores).changelog;
-  return closure_10(target(1188).LegacyText, {
+  const changelog = target(8096).useChangelog(changelogId, stateFromStores).changelog;
+  return closure_10(target(1200).LegacyText, {
     accessibilityRole: "link",
     style: className,
     onPress() {
@@ -373,7 +373,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((target) => {
       obj.track(constants.CHANGE_LOG_CTA_CLICKED, { change_log_id: "" + date + ":" + num, cta_type: "inline_link", target });
       const obj2 = { change_log_id: "" + date + ":" + num, cta_type: "inline_link", target };
       const tmpResult = LinkingDefault;
-      tmpResult.openURL(_mod1936.sanitizeUrl(target));
+      tmpResult.openURL(_mod1948.sanitizeUrl(target));
     },
     children
   });
@@ -393,7 +393,7 @@ function changelogRules(changelogId, arg1) {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.changelogId = onScroll;
-      return v65535(closure_16, obj);
+      return collapsed(closure_16, obj);
     };
     obj3.ListItem = ListItem;
     obj3.LHeading = Heading;
@@ -408,7 +408,7 @@ function changelogRules(changelogId, arg1) {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.changelogId = onScroll;
-      return v65535(closure_16, obj);
+      return collapsed(closure_16, obj);
     };
     obj5.ListItem = ListItem;
     obj5.LHeading = Heading;
@@ -428,7 +428,7 @@ function getRenderChangelog(id) {
           const obj = {};
           const merged = Object.assign(arg0);
           obj.changelogId = onScroll;
-          return v65535(closure_16, obj);
+          return collapsed(closure_16, obj);
         },
       ListItem,
       LHeading: Heading,
@@ -468,7 +468,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
         const obj = {};
         const merged = Object.assign(arg0);
         obj.changelogId = onScroll;
-        return v65535(closure_16, obj);
+        return collapsed(closure_16, obj);
       };
       obj4.ListItem = ListItem;
       obj4.LHeading = Heading;
@@ -491,13 +491,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
             }
             const _Symbol = Symbol;
             if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj5 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(7780).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+              const obj5 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8108).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
               const intl = onScroll(1126).intl;
               obj5.accessibilityLabel = intl.string(onScroll(1126).t["/lXfom"]);
               obj5.onPress = function onPress() {
                 LinkingDefault.openURL(getLocalizedLinkDefault(constants.TWITTER));
               };
-              const tmp24 = closure_10(onScroll(7586).IconButton, obj5);
+              const tmp24 = closure_10(onScroll(8106).IconButton, obj5);
               cResult[10] = tmp24;
               let tmp22 = tmp24;
             } else {
@@ -505,13 +505,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
             }
             const _Symbol2 = Symbol;
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj6 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(7782).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+              const obj6 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8110).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
               const intl2 = onScroll(1126).intl;
               obj6.accessibilityLabel = intl2.string(onScroll(1126).t["h0or/l"]);
               obj6.onPress = function onPress() {
                 LinkingDefault.openURL(constants2.FACEBOOK_URL);
               };
-              const tmp27 = closure_10(onScroll(7586).IconButton, obj6);
+              const tmp27 = closure_10(onScroll(8106).IconButton, obj6);
               cResult[11] = tmp27;
               let tmp25 = tmp27;
             } else {
@@ -519,13 +519,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
             }
             const _Symbol3 = Symbol;
             if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj7 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(7784).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+              const obj7 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8112).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
               const intl3 = onScroll(1126).intl;
               obj7.accessibilityLabel = intl3.string(onScroll(1126).t["5uVPyf"]);
               obj7.onPress = function onPress() {
                 LinkingDefault.openURL(constants2.INSTAGRAM_URL);
               };
-              const tmp30 = closure_10(onScroll(7586).IconButton, obj7);
+              const tmp30 = closure_10(onScroll(8106).IconButton, obj7);
               cResult[12] = tmp30;
               let tmp28 = tmp30;
             } else {
@@ -535,7 +535,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
               const obj8 = { bottom: true, style: tmp4.footer, children: null };
               const items = [tmp22, tmp25, tmp28];
               obj8.children = items;
-              const tmp33 = closure_11(onScroll(6626).SafeAreaPaddingView, obj8);
+              const tmp33 = closure_11(onScroll(6803).SafeAreaPaddingView, obj8);
               cResult[13] = tmp4.footer;
               cResult[14] = tmp33;
               let tmp31 = tmp33;
@@ -601,7 +601,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
       const obj = {};
       const merged = Object.assign(arg0);
       obj.changelogId = onScroll;
-      return v65535(closure_16, obj);
+      return collapsed(closure_16, obj);
     };
     obj6.ListItem = ListItem;
     obj6.LHeading = Heading;
@@ -613,29 +613,29 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   obj2.children = items1;
   const items2 = [closure_11(closure_5, obj2), ];
   const obj7 = { bottom: true, style: tmp.footer, children: null };
-  const obj8 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(7780).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  const obj8 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8108).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
   const intl = onScroll(1126).intl;
   obj8.accessibilityLabel = intl.string(onScroll(1126).t["/lXfom"]);
   obj8.onPress = function onPress() {
     LinkingDefault.openURL(getLocalizedLinkDefault(constants.TWITTER));
   };
-  const items3 = [closure_10(onScroll(7586).IconButton, obj8), , ];
-  const obj9 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(7782).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  const items3 = [closure_10(onScroll(8106).IconButton, obj8), , ];
+  const obj9 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8110).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
   const intl2 = onScroll(1126).intl;
   obj9.accessibilityLabel = intl2.string(onScroll(1126).t["h0or/l"]);
   obj9.onPress = function onPress() {
     LinkingDefault.openURL(constants2.FACEBOOK_URL);
   };
-  items3[1] = closure_10(onScroll(7586).IconButton, obj9);
-  const obj10 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(7784).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  items3[1] = closure_10(onScroll(8106).IconButton, obj9);
+  const obj10 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8112).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
   const intl3 = onScroll(1126).intl;
   obj10.accessibilityLabel = intl3.string(onScroll(1126).t["5uVPyf"]);
   obj10.onPress = function onPress() {
     LinkingDefault.openURL(constants2.INSTAGRAM_URL);
   };
-  items3[2] = closure_10(onScroll(7586).IconButton, obj10);
+  items3[2] = closure_10(onScroll(8106).IconButton, obj10);
   obj7.children = items3;
-  items2[1] = closure_11(onScroll(6626).SafeAreaPaddingView, obj7);
+  items2[1] = closure_11(onScroll(6803).SafeAreaPaddingView, obj7);
   obj.children = items2;
   return closure_11(closure_4, obj);
 }));

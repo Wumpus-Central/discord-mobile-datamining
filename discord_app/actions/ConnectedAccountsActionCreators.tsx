@@ -23,7 +23,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("actions/ConnectedAccountsActionCreators.tsx");
 
 export default {
-  fetch: fn(5572).fetchConnectedAccounts,
+  fetch: fn(5882).fetchConnectedAccounts,
   authorize(arg0) {
     closure_0 = arg0;
     let obj = arg1;
@@ -79,7 +79,7 @@ export default {
       return closure_129_0;
     })();
   },
-  callback: fn(5573).postConnectionCallback,
+  callback: fn(5883).postConnectionCallback,
   connect(arg0, arg1, name, location, friend_sync) {
     const request = {
       url: timestampProducer.CONNECTION(arg0, arg1),

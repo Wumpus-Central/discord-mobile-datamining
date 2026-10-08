@@ -9,11 +9,11 @@ import SelectedChannelStore from "../../../../../stores/SelectedChannelStore.tsx
 import EmbeddedActivitiesStore from "../../../EmbeddedActivitiesStore.tsx";
 
 require = fn;
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsActivityPanelFullscreen() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [EmbeddedActivitiesStore];
@@ -36,7 +36,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsActivityPanelFullscreen() {
       const items = [EmbeddedActivitiesStore];
       return initialize.useStateFromStores(items, () => {
         const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(
@@ -96,11 +96,11 @@ export const isActivityPanelFullscreen = function isActivityPanelFullscreen() {
 export { isConnectedToActivityInText };
 export const useIsActivityPanelFullscreen = tmp2;
 export const useIsConnectedToActivityInText = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsConnectedToActivityInText() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [EmbeddedActivitiesStore, ChannelStore, SelectedChannelStore];
-        const fn = function l() {
+        const fn = function s() {
           connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
           let flag = false;
           if (null != connectedActivityLocation) {
@@ -139,7 +139,7 @@ export const useIsConnectedToActivityInText = ReactCompilerGating.isReactCompile
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsConnectedToActivityInText() {
       const items = [EmbeddedActivitiesStore, ChannelStore, SelectedChannelStore];
       return initialize.useStateFromStores(items, () => {
         connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();

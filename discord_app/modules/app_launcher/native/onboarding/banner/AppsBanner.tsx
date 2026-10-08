@@ -8,7 +8,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({
   rocketIconContainer: { position: "absolute", top: -20 },
   rocketIcon: { width: 90, height: 90 },
@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppsBanner.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AppsBaner() {
       const cResult = c.c(8);
       const tmp4 = closure_5();
       if (cResult[0] !== tmp4.rocketIcon) {
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const obj4 = { style: tmp4.rocketIconContainer, children: tmp5 };
     }
-  : () => {
+  : function AppsBaner() {
       const tmp = closure_5();
       const obj = {
         style: tmp.rocketIconContainer,

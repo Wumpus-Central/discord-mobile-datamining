@@ -2,7 +2,7 @@
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef8537 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroCoinStackSpotIllustration-2x.png.js";
+import _modDef9022 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroCoinStackSpotIllustration-2x.png.js";
 import ReactCompilerGating from "../../../../../modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting(
 );
 
 export const NitroCoinStackSpotIllustration = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function NitroCoinStackSpotIllustration(arg0) {
       const cResult = c.c(9);
       ({ accessible, accessibilityLabel, resizeMode, width, height, scale } = arg0);
       let num = 288;
@@ -28,7 +28,7 @@ export const NitroCoinStackSpotIllustration = ReactCompilerGating.isReactCompile
         num3 = scale;
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef8537 };
+        const obj2 = { uri: _modDef9022 };
         cResult[0] = obj2;
         let first = obj2;
       } else {
@@ -66,13 +66,13 @@ export const NitroCoinStackSpotIllustration = ReactCompilerGating.isReactCompile
         cResult[8] = tmp11;
         tmp8 = tmp11;
       }
-      const items = [{ width: result, height: result1 }];
+      const size = { width: result, height: result1 };
       cResult[1] = result;
       cResult[2] = result1;
-      cResult[3] = items;
-      tmp7 = items;
+      cResult[3] = size;
+      tmp7 = size;
     }
-  : (width) => {
+  : function NitroCoinStackSpotIllustration(width) {
       let num = width.width;
       ({ accessible, accessibilityLabel, resizeMode } = width);
       if (num === undefined) {
@@ -94,11 +94,9 @@ export const NitroCoinStackSpotIllustration = ReactCompilerGating.isReactCompile
         accessibilityLabel: null,
         resizeMode: null,
       };
-      const obj2 = { uri: _modDef8537 };
+      const obj2 = { uri: _modDef9022 };
       obj.source = obj2;
-      const size = { width: num * num3, height: num2 * num3 };
-      const items = [size];
-      obj.style = items;
+      obj.style = { width: num * num3, height: num2 * num3 };
       obj.accessible = accessible;
       obj.accessibilityLabel = accessibilityLabel;
       obj.resizeMode = resizeMode;

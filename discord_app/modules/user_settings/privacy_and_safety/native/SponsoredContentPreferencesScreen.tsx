@@ -29,7 +29,7 @@ function useSponsoredContentSettings() {
   items1[2] = obj7;
   return items1;
 }
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -39,7 +39,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function SponsoredContentPreferencesScreen() {
       const cResult = c.c(4);
       const tmp4 = useSponsoredContentSettings();
       if (cResult[0] !== tmp4) {
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp7;
     }
-  : () => {
+  : function SponsoredContentPreferencesScreen() {
       const tmp = useSponsoredContentSettings();
       const sections = tmp;
       const items = [tmp];

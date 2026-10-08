@@ -22,10 +22,10 @@ import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
 const StatusTypes = fn(1085).StatusTypes;
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   pressable: { flex: 1 },
   pressableUnderlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE },
@@ -33,7 +33,7 @@ let obj = {
 let closure_15 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function UserResult(user) {
       const cResult = user(576).c(76);
       user = user.user;
       ({ comparator, channel, lastMessage, unread, mentionCount, muted, isTyping } = user);
@@ -46,7 +46,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== user.id) {
-        class I {
+        class P {
           constructor() {
             obj = closure_1(closure_2[15]);
             obj1 = { recipientIds: null };
@@ -58,9 +58,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[1] = user.id;
-        cResult[2] = I;
+        cResult[2] = P;
       } else {
-        class I {
+        class P {
           constructor() {
             obj = closure_1(closure_2[15]);
             obj1 = { recipientIds: null };
@@ -74,9 +74,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = user(576);
       const tmp6 = undefined !== muted && muted;
-      const fontScale = user(5609).useFontScale();
+      const fontScale = user(5382).useFontScale();
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        class I {
+        class P {
           constructor() {
             obj = closure_1(closure_2[15]);
             obj1 = { recipientIds: null };
@@ -98,7 +98,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp15 = V;
         const tmp14 = items;
       } else {
-        class I {
+        class P {
           constructor() {
             obj = closure_1(closure_2[15]);
             obj1 = { recipientIds: null };
@@ -111,10 +111,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp15 = cResult[4];
       }
-      const tmpResult = user(5609);
+      const tmpResult = user(5382);
       const stateFromStores = user(504).useStateFromStores(tmp14, tmp15);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        class I {
+        class P {
           constructor() {
             obj = closure_1(closure_2[15]);
             obj1 = { recipientIds: null };
@@ -135,7 +135,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = items1;
         let tmp18 = items1;
       } else {
-        class I {
+        class P {
           constructor() {
             obj = closure_1(closure_2[15]);
             obj1 = { recipientIds: null };
@@ -151,7 +151,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult4 = user(504);
       const stateFromStores1 = user(504).useStateFromStores(tmp18, tmp19);
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        class I {
+        class P {
           constructor() {
             obj = closure_1(closure_2[15]);
             obj1 = { recipientIds: null };
@@ -171,7 +171,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = items2;
         const tmp21 = items2;
       } else {
-        class I {
+        class P {
           constructor() {
             obj = closure_1(closure_2[15]);
             obj1 = { recipientIds: null };
@@ -287,7 +287,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       renderChannelPressableWrapperDefault;
-      const PressableHighlight = tmp(5916).PressableHighlight;
+      const PressableHighlight = tmp(6189).PressableHighlight;
       if (cResult[36] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
@@ -464,7 +464,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           typing: tmp7,
           autoStatusCutout: true,
         };
-        const tmp42 = closure_12(tmp(1188).Avatar, obj3);
+        const tmp42 = closure_12(tmp(1200).Avatar, obj3);
         cResult[46] = isMobileOnline;
         cResult[47] = tmp7;
         cResult[48] = isVROnline;
@@ -507,7 +507,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[43] = tmp36;
       const tmpResult6 = user(504);
     }
-  : (user) => {
+  : function UserResult(user) {
       user = user.user;
       ({ comparator, channel, lastMessage, unread } = user);
       if (unread === undefined) {
@@ -534,8 +534,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.recipientIds = items;
         ChannelActionCreatorsDefault.openPrivateChannel(obj2);
       }, items);
-      const fontScale = user(5609).useFontScale();
-      const obj = user(5609);
+      const fontScale = user(5382).useFontScale();
+      const obj = user(5382);
       const items1 = [LocaleStore];
       const stateFromStores = user(504).useStateFromStores(items1, () => locale.locale);
       let obj2 = user(504);
@@ -558,8 +558,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let relativeTimestamp = null;
       if (null != extractTimestampResult) {
-        relativeTimestamp = tmp6(7139).getRelativeTimestamp(extractTimestampResult);
-        const tmp6Result = tmp6(7139);
+        relativeTimestamp = tmp6(6064).getRelativeTimestamp(extractTimestampResult);
+        const tmp6Result = tmp6(6064);
       }
       let str = "text-muted";
       if (unread) {
@@ -585,8 +585,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         isMobileOnline,
         isVROnline,
         status: null,
-        streaming: "cd2d5c0ef187afb877c9d94c96dd5098",
-        style: "GoLiveModal.compiled.messages",
+        streaming: "ab73d432ae6a8f8295cabeed571180b6",
+        style: "cs.messages.ab73d432ae6a8f8295cabeed571180b6.compiled.messages",
         size: "jsona",
         animate: "Mobile NUX Post Reg",
         typing: "Skip avatar modal",
@@ -613,7 +613,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj7.animate = tmp21;
       obj7.typing = flag2;
-      items5[1] = closure_12(user(1188).Avatar, obj7);
+      items5[1] = closure_12(user(1200).Avatar, obj7);
       const obj6 = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
       const tmp2Result6 = renderChannelWrapperDefault;
       if (comparator == null) {
@@ -638,9 +638,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             message: lastMessage,
             color: str,
             muted: flag,
-            layout: tmp6(7525).ChannelListLayoutTypes.COMPACT,
+            layout: tmp6(9248).ChannelListLayoutTypes.COMPACT,
           };
-          tmp14Result = closure_12(tmp6(12503).ChannelRowPreview, obj9);
+          tmp14Result = closure_12(tmp6(12599).ChannelRowPreview, obj9);
         }
       }
       const obj10 = { children: null };
@@ -654,11 +654,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       items5[2] = renderChannelContentDefault(obj8);
       obj10.children = items5;
       obj5.children = tmp2Result6(closure_14(closure_13, obj10), { fontScale });
-      return tmp2Result5(closure_12(user(5916).PressableHighlight, obj5));
+      return tmp2Result5(closure_12(user(6189).PressableHighlight, obj5));
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function UserResultWithChannel(user) {
       const cResult = user(576).c(17);
       user = user.user;
       const channel = user.channel;
@@ -682,7 +682,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = user(576);
       const stateFromStores = user(504).useStateFromStores(first, tmp6);
       const tmpResult = user(504);
-      const baseChannelUnreadBadgeState = user(16325).useBaseChannelUnreadBadgeState(channel, stateFromStores);
+      const baseChannelUnreadBadgeState = user(16585).useBaseChannelUnreadBadgeState(channel, stateFromStores);
       ({ unread, mentionCount } = baseChannelUnreadBadgeState);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [TypingStore];
@@ -704,7 +704,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp13 = cResult[8];
         }
-        const tmp15 = channel(15152)(channel, tmp13);
+        const tmp15 = channel(15414)(channel, tmp13);
         if (cResult[9] === channel) {
           if (cResult[10] === stateFromStores1) {
             if (cResult[11] === tmp15) {
@@ -741,16 +741,16 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         tmp16 = tmp22;
         const tmpResult4 = tmp(504);
       }
-      const fn2 = function b() {
+      const fn2 = function h() {
         return TypingStore.isTyping(channel.id, user.id);
       };
       cResult[4] = channel.id;
       cResult[5] = user.id;
       cResult[6] = fn2;
       tmp11 = fn2;
-      const tmpResult3 = user(16325);
+      const tmpResult3 = user(16585);
     }
-  : (arg0) => {
+  : function UserResultWithChannel(arg0) {
       ({ user: require, channel } = arg0);
       const items = [UserGuildSettingsStore];
       const stateFromStores = initialize.useStateFromStores(items, () =>
@@ -766,7 +766,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = {};
       const merged = Object.assign(arg0);
       obj4.channel = channel;
-      obj4.lastMessage = channel(15152)(channel, { unread });
+      obj4.lastMessage = channel(15414)(channel, { unread });
       obj4.unread = unread;
       obj4.mentionCount = mentionCount;
       obj4.muted = stateFromStores;
@@ -780,7 +780,7 @@ const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadSea
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (user) => {
+    ? function LaunchPadSearchResultUser(user) {
         const cResult = user(576).c(9);
         user = user.user;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -858,7 +858,7 @@ export default noop.memo(
         cResult[8] = tmp16;
         const tmpResult2 = user(504);
       }
-    : (user) => {
+    : function LaunchPadSearchResultUser(user) {
         user = user.user;
         const items = [ChannelStore];
         closure_1 = user(504).useStateFromStores(items, () => ChannelStore.getDMFromUserId(user.id));

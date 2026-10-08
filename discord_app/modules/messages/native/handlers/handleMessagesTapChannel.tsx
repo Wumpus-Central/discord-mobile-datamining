@@ -401,13 +401,13 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
     }
   }
 };
-const isGuildVocalChannelType = fn(2055).isGuildVocalChannelType;
-const isGuildLurker = fn(2070).isGuildLurker;
+const isGuildVocalChannelType = fn(2067).isGuildVocalChannelType;
+const isGuildLurker = fn(2082).isGuildLurker;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_12, GuildFeatures: map1, Permissions: closure_14, Routes: closure_15 } = Constants);
-const StaticChannelRoute = fn(2058).StaticChannelRoute;
-const GuildOnboardingTab = fn(6603).GuildOnboardingTab;
-let closure_18 = fn(6599).CHANNELS_AND_ROLES_MODAL_KEY;
+const StaticChannelRoute = fn(2070).StaticChannelRoute;
+const GuildOnboardingTab = fn(6779).GuildOnboardingTab;
+let closure_18 = fn(6775).CHANNELS_AND_ROLES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapChannel.tsx");
 

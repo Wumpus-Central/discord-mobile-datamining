@@ -18,7 +18,7 @@ import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const IMAGE_SIZE = fn(9882).IMAGE_SIZE;
+const IMAGE_SIZE = fn(9362).IMAGE_SIZE;
 const Constants = fn(1085);
 ({
   AnalyticsObjects: hasOwnProperty,
@@ -26,10 +26,10 @@ const Constants = fn(1085);
   AnalyticsSections: closure_7,
   UpsellTypes: closure_8,
 } = Constants);
-const EmojiConstants = fn(1380);
+const EmojiConstants = fn(1392);
 ({ EmojiDisabledReasons: closure_9, EmojiIntention: c10 } = EmojiConstants);
-const MIN_MARGIN = fn(1229).MIN_MARGIN;
-const PremiumUpsellTypes = fn(1379).PremiumUpsellTypes;
+const MIN_MARGIN = fn(1241).MIN_MARGIN;
+const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 const ReactCompilerGating = fn(558);
@@ -38,7 +38,7 @@ let result = size.fileFinishedImporting("modules/emoji_picker/native/components/
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guildId) => {
+    ? function EmojiPickerList(guildId) {
         const cResult = emojiPickerListRef(guildId[8]).c(71);
         ({ bottomSheetIndex, categories, categoryIndexActive, emojiPickerListRef } = guildId);
         ({ emojis, channel } = guildId);
@@ -685,7 +685,7 @@ export default noop.memo(
         tmp11 = items1;
         tmp10 = I;
       }
-    : (analyticsObject) => {
+    : function EmojiPickerList(analyticsObject) {
         ({ bottomSheetIndex, emojiPickerListRef } = analyticsObject);
         ({ emojis, channel } = analyticsObject);
         let guildId = analyticsObject.guildId;

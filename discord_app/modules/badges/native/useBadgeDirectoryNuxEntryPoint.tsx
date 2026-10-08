@@ -4,13 +4,13 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/useBadgeDirectoryNuxEntryPoint.tsx");
 
 export const useBadgeDirectoryNuxEntryPoint = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useBadgeDirectoryNuxEntryPoint(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(5);
@@ -38,7 +38,7 @@ export const useBadgeDirectoryNuxEntryPoint = ReactCompilerGating.isReactCompile
       cResult[2] = fn;
       tmp3 = fn;
     }
-  : (arg0, arg1) => {
+  : function useBadgeDirectoryNuxEntryPoint(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
       const obj = { entryPointRef: noop.useRef(null), onOpenBadgeDirectory: null };

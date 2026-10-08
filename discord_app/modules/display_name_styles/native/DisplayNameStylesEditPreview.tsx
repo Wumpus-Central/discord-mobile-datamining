@@ -5,12 +5,12 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import utils from "../../collectibles/nameplates/utils.tsx";
-import _modDef2911 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2955 from "../intl/DisplayNameStyles.messages.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import useAvatarDecoration from "../../collectibles/avatar_decorations/useAvatarDecoration.tsx";
 import usePendingAvatarSettingsDefault from "../../user_profile/hooks/usePendingAvatarSettings.tsx";
 import ProfileCustomizationUtils from "../../profile_customization/ProfileCustomizationUtils.tsx";
-import useAvatarDecoration from "../../collectibles/avatar_decorations/useAvatarDecoration.tsx";
 import UsernameWithEffectsDefault from "UsernameWithEffects.tsx";
 import types from "../types.tsx";
 import UserProfilePreviewDefault from "../../user_profile/native/UserProfilePreview.tsx";
@@ -22,7 +22,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   previewSection: {
     marginBottom: nativeDefault.space.PX_24,
@@ -87,7 +87,7 @@ let obj5 = {
 };
 const ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ChatPreview(arg0) {
       const cResult = c.c(33);
       ({ user, displayName, displayNameStyles, guildId } = arg0);
       const tmp4 = closure_8();
@@ -178,7 +178,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                         if (tmp34 === Symbol.for("react.memo_cache_sentinel")) {
                           const intl = util.intl;
-                          const stringResult = intl.string(_modDef2911.h5Cuej);
+                          const stringResult = intl.string(_modDef2955.h5Cuej);
                           class I {
                             constructor() {
                               return closure_1_5.useReducedMotion;
@@ -308,7 +308,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         animate: !stateFromStores,
       };
     }
-  : (arg0) => {
+  : function ChatPreview(arg0) {
       ({ user, guildId } = arg0);
       ({ displayName, displayNameStyles } = arg0);
       const tmp = closure_8();
@@ -369,7 +369,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const items3 = [React5(View, obj6)];
       const obj9 = { variant: "text-md/normal", color: "text-default", style: tmp.chatMessageText, children: null };
       const intl = util.intl;
-      obj9.children = intl.string(_modDef2911.h5Cuej);
+      obj9.children = intl.string(_modDef2955.h5Cuej);
       items3[1] = timestampProducer(Text_Text.Text, obj9);
       obj5.children = items3;
       items1[1] = React5(View, obj5);
@@ -380,7 +380,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesEditPreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DisplayNameStylesEditPreview(arg0) {
       const cResult = c.c(35);
       ({ user, displayName, guildId, selectedFontId, selectedEffectId, selectedColors } = arg0);
       const tmp4 = closure_8();
@@ -406,7 +406,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = util.intl;
-            const stringResult = intl.string(_modDef2911.zoh6MT);
+            const stringResult = intl.string(_modDef2955.zoh6MT);
             cResult[6] = stringResult;
             let tmp10 = stringResult;
           } else {
@@ -543,7 +543,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = obj9;
       tmp8 = obj9;
     }
-  : (selectedEffectId) => {
+  : function DisplayNameStylesEditPreview(selectedEffectId) {
       ({ user, displayName, guildId, selectedFontId } = selectedEffectId);
       selectedEffectId = selectedEffectId.selectedEffectId;
       const selectedColors = selectedEffectId.selectedColors;
@@ -571,7 +571,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: null,
       };
       const intl = util.intl;
-      obj4.accessibilityLabel = intl.string(_modDef2911.zoh6MT);
+      obj4.accessibilityLabel = intl.string(_modDef2955.zoh6MT);
       const items1 = [timestampProducer(UserProfilePreviewDefault, obj4), ,];
       items1[1] = timestampProducer(View, {
         style: tmp.chatPreviewWrapper,

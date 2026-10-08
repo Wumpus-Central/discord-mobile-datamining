@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useMessagesSpecs() {
       const cResult = c.c(13);
       const fontScale = useFontScale.useFontScale();
       const messagesHeaderHeight = MessagesHeader.getMessagesHeaderHeight(fontScale);
@@ -83,9 +83,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = obj4;
       tmp17 = obj4;
     }
-  : () => {
-      fontScale = fontScale(5609).useFontScale();
-      top = top(1618)().top;
+  : function useMessagesSpecs() {
+      fontScale = fontScale(5382).useFontScale();
+      top = top(1630)().top;
       const items = [fontScale, top];
       return noop.useMemo(() => {
         const messagesHeaderHeight = MessagesHeader.getMessagesHeaderHeight(fontScale);

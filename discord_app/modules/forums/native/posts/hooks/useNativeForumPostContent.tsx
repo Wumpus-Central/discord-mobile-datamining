@@ -13,7 +13,7 @@ let closure_4 = createStyles.createStyles({ italics: { fontStyle: "italic" } });
 const result = size.fileFinishedImporting("modules/forums/native/posts/hooks/useNativeForumPostContent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useNativeForumPostContent(arg0) {
       const cResult = c.c(20);
       ({ message, messageContent, senderModifier } = arg0);
       ({ messageLoaded, isMessageDeleted } = arg0);
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = null != message && message.ignored;
       }
     }
-  : (arg0) => {
+  : function useNativeForumPostContent(arg0) {
       ({ message, messageContent, senderModifier } = arg0);
       ({ messageLoaded, isMessageDeleted } = arg0);
       const tmp = closure_4();

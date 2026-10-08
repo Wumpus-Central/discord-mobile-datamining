@@ -43,8 +43,8 @@ function handleCacheActionPress(text) {
     obj2.open(obj4);
     tmp6 = importDefault;
   }
-  tmp6(4860).hideActionSheet(CacheActionsActionSheet);
-  const tmp6Result = tmp6(4860);
+  tmp6(5054).hideActionSheet(CacheActionsActionSheet);
+  const tmp6Result = tmp6(5054);
 }
 const useState = fn(19).useState;
 const jsxProd = fn(21);
@@ -53,7 +53,7 @@ const CacheActionsActionSheet = "CacheActionsActionSheet";
 fn(558);
 const ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function CacheActionsActionSheet() {
       const cResult = require("c").c(25);
       let obj = require("c");
       const diskUsageMeasurement = require("CacheActionsDiskUsageSection").useDiskUsageMeasurement();
@@ -67,7 +67,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = { title: null };
         let intl = tmp(1126).intl;
         obj3.title = intl.string(tmp(1126).t.ZVZVwR);
-        const tmp10 = closure_7(tmp(6651).BottomSheetTitleHeader, obj3);
+        const tmp10 = closure_7(tmp(6828).BottomSheetTitleHeader, obj3);
         const intl2 = tmp(1126).intl;
         const stringResult = intl2.string(tmp(1126).t.AVZpFH);
         cResult[0] = tmp10;
@@ -78,7 +78,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp7, tmp8] = cResult;
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp15 = closure_7(tmp(15380).FileUpIcon, {});
+        const tmp15 = closure_7(tmp(15642).FileUpIcon, {});
         const intl3 = tmp(1126).intl;
         const stringResult1 = intl3.string(tmp(1126).t["/GUaXh"]);
         cResult[2] = tmp15;
@@ -117,7 +117,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   c1 = 1;
                   dependencyMap = 1;
-                  const obj5 = { value: tmp2(15416).writeCaches(), done: false };
+                  const obj5 = { value: tmp2(15678).writeCaches(), done: false };
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -139,7 +139,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         });
-        const fn = function () {
+        function t4() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -148,15 +148,15 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
-        cResult[4] = fn;
-        let tmp17 = fn;
+        }
+        cResult[4] = t4;
+        let tmp17 = t4;
       } else {
         tmp17 = cResult[4];
       }
       if (cResult[5] !== first) {
         let obj4 = { icon: tmp12, label: tmp13, disabled: first, onPress: tmp17 };
-        const tmp21 = closure_7(tmp(6000).TableRow, obj4);
+        const tmp21 = closure_7(tmp(6184).TableRow, obj4);
         cResult[5] = first;
         cResult[6] = tmp21;
         let tmp19 = tmp21;
@@ -170,7 +170,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp29 = closure_7(tmp(15417).FileWarningIcon, { color: "text-feedback-critical" });
+            const tmp29 = closure_7(tmp(15679).FileWarningIcon, { color: "text-feedback-critical" });
             const intl5 = tmp(1126).intl;
             const stringResult2 = intl5.string(tmp(1126).t.tgwiMO);
             cResult[11] = tmp29;
@@ -208,13 +208,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      v1(15413).clearCaches();
-                      const obj5 = v1(15413);
-                      tmp2(15416).clearCaches();
-                      const obj6 = tmp2(15416);
+                      v1(15675).clearCaches();
+                      const obj5 = v1(15675);
+                      tmp2(15678).clearCaches();
+                      const obj6 = tmp2(15678);
                       v1 = 1;
                       dependencyMap = 1;
-                      const obj4 = { value: tmp2(4857).browserManagerClearWebsiteData(), done: false };
+                      const obj4 = { value: tmp2(5051).browserManagerClearWebsiteData(), done: false };
                       return obj4;
                     }
                   } else if (arg0 === 1) {
@@ -236,7 +236,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             });
-            const fn2 = function () {
+            function t9() {
               const self = this;
               const apply = closure_0.apply;
               if (typeof apply === "unknown") {
@@ -245,15 +245,15 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 applyArgumentsResult = apply(self, arguments);
               }
               return applyArgumentsResult;
-            };
-            cResult[13] = fn2;
-            let tmp31 = fn2;
+            }
+            cResult[13] = t9;
+            let tmp31 = t9;
           } else {
             tmp31 = cResult[13];
           }
           if (cResult[14] !== first) {
             let obj5 = { variant: "danger", icon: tmp26, label: tmp27, disabled: first, onPress: tmp31 };
-            const tmp35 = closure_7(tmp(6000).TableRow, obj5);
+            const tmp35 = closure_7(tmp(6184).TableRow, obj5);
             cResult[14] = first;
             cResult[15] = tmp35;
             let tmp33 = tmp35;
@@ -286,7 +286,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               const obj7 = { header: tmp7, dismissAccessibilityLabel: tmp8, children: null };
               const items = [tmp36, tmp39];
               obj7.children = items;
-              const tmp46 = closure_8(tmp(6708).ActionSheet, obj7);
+              const tmp46 = closure_8(tmp(6885).ActionSheet, obj7);
               cResult[22] = tmp36;
               cResult[23] = tmp39;
               cResult[24] = tmp46;
@@ -296,7 +296,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { hasIcons: true, children: null };
           const items1 = [tmp19, tmp22, tmp33];
           obj8.children = items1;
-          const tmp38 = closure_8(tmp(6081).TableRowGroup, obj8);
+          const tmp38 = closure_8(tmp(6267).TableRowGroup, obj8);
           cResult[16] = tmp33;
           cResult[17] = tmp19;
           cResult[18] = tmp22;
@@ -307,7 +307,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp24Result2 = null != DiskUsageManagerDefault.calculateSize;
       if (tmp24Result2) {
         const obj9 = {
-          icon: closure_7(tmp(11814).FileIcon, {}),
+          icon: closure_7(tmp(11882).FileIcon, {}),
           label: null,
           trailing: null,
           disabled: null,
@@ -319,14 +319,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         obj9.label = intl4.string(isCalculating ? t.Ynmbie : t.iAFGRu);
         let tmp24Result = null;
         if (isCalculating) {
-          tmp24Result = closure_7(tmp(5975).ActivityIndicator, { size: "small", accessible: false });
+          tmp24Result = closure_7(tmp(6158).ActivityIndicator, { size: "small", accessible: false });
         }
         obj9.trailing = tmp24Result;
         obj9.disabled = first;
         const obj10 = { busy: isCalculating, disabled: first };
         obj9.accessibilityState = obj10;
         obj9.onPress = handleCalculateSize;
-        tmp24Result2 = closure_7(tmp(6000).TableRow, obj9);
+        tmp24Result2 = closure_7(tmp(6184).TableRow, obj9);
       }
       cResult[7] = handleCalculateSize;
       cResult[8] = first;
@@ -335,7 +335,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp22 = tmp24Result2;
       let obj2 = require("CacheActionsDiskUsageSection");
     }
-  : () => {
+  : function CacheActionsActionSheet() {
       const diskUsageMeasurement = CacheActionsDiskUsageSection.useDiskUsageMeasurement();
       ({ diskUsageState, isCalculating } = diskUsageMeasurement);
       const tmp4 = _slicedToArray(useState(false), 2);
@@ -509,9 +509,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = items1;
       return closure_1_8(ActionSheet.ActionSheet, obj2);
     };
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCacheActionsPredicate() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GatewayConnectionStore];
@@ -530,7 +530,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = initialize;
       return DeveloperMode.useSetting() && stateFromStores;
     }
-  : () => {
+  : function useCacheActionsPredicate() {
       const items = [GatewayConnectionStore];
       const stateFromStores = initialize.useStateFromStores(items, () => connected.isConnected());
       const DeveloperMode = UserSettings.DeveloperMode;
@@ -542,12 +542,12 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(15417).FileWarningIcon,
+  IconComponent: fn(15679).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_11 }), CacheActionsActionSheet);
   },
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useCacheActionsPredicate() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [GatewayConnectionStore];
@@ -566,7 +566,7 @@ const pressable = SettingBuilders.createPressable({
         const tmpResult = initialize;
         return DeveloperMode.useSetting() && stateFromStores;
       }
-    : () => {
+    : function useCacheActionsPredicate() {
         const items = [GatewayConnectionStore];
         const stateFromStores = initialize.useStateFromStores(items, () => connected.isConnected());
         const DeveloperMode = UserSettings.DeveloperMode;

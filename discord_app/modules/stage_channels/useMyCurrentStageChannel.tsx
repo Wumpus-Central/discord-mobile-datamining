@@ -10,11 +10,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannel.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useMyCurrentStageChannel() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SelectedChannelStore, ChannelStore];
-        const fn = function u() {
+        const fn = function l() {
           voiceChannelId = voiceChannelId.getVoiceChannelId();
           if (null != voiceChannelId) {
             channel = channel.getChannel(voiceChannelId);
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useMyCurrentStageChannel() {
       const items = [SelectedChannelStore, ChannelStore];
       return initialize.useStateFromStores(items, () => {
         voiceChannelId = voiceChannelId.getVoiceChannelId();

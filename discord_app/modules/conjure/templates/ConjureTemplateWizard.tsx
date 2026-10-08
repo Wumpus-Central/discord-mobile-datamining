@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/templates/ConjureTemplateWizard.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3827 from "../intl/ConjureUntranslated.messages.js";
 import ConjureUtils from "../shared/ConjureUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -55,7 +55,7 @@ export const canLeaveConjureWizardQuestion = function canLeaveConjureWizardQuest
 };
 export const conjureTemplateStartMessage = function conjureTemplateStartMessage(name) {
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef3753["/qSx7+"], { templateName: name, locale: util.intl.currentLocale });
+  return intl.formatToPlainString(_modDef3827["/qSx7+"], { templateName: name, locale: util.intl.currentLocale });
 };
 export const conjureTemplateWizardGuilds = function conjureTemplateWizardGuilds(
   guildsArray,
@@ -118,9 +118,9 @@ export const conjureWizardServerCopy = function conjureWizardServerCopy(stateFro
   if (server == null) {
     const obj = { title: null, hint: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3753.vcxYIA);
+    obj.title = intl.string(_modDef3827.vcxYIA);
     const intl2 = util.intl;
-    obj.hint = intl2.string(_modDef3753.auUHPZ);
+    obj.hint = intl2.string(_modDef3827.auUHPZ);
     server = obj;
   }
   return server;

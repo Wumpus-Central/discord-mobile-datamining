@@ -1,6 +1,6 @@
 // discord_app/modules/guild_settings_picker/native/components/GuildPicker.tsx
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -14,18 +14,18 @@ export default function GuildPicker(isGuildIncluded) {
   const guildId = isGuildIncluded.guildId;
   const onChange = isGuildIncluded.onChange;
   dependencyMap = undefined;
-  ({ options: c2, selectedGuild } = onChange(13725)({
+  ({ options: c2, selectedGuild } = onChange(13947)({
     isGuildIncluded: isGuildIncluded.isGuildIncluded,
     selectedGuildId: guildId,
   }));
   let name;
-  const tmp2 = onChange(13725)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
+  const tmp2 = onChange(13947)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
   if (selectedGuild != null) {
     name = selectedGuild.name;
   }
   let obj = {
     label: name,
-    onPress() {
+    onPress: function handleSelectGuild() {
       const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
       const obj = ActionSheetActionCreatorsDefault;
       const intl = util.intl;
@@ -42,15 +42,15 @@ export default function GuildPicker(isGuildIncluded) {
         });
       };
       obj2.selectedItem = guildId;
-      obj.openLazy(asyncRequireImpl(8978, dependencyMap.paths), GuildPicker, obj2);
+      obj.openLazy(asyncRequireImpl(8529, dependencyMap.paths), GuildPicker, obj2);
     },
     placeholder: null,
   };
   let intl = guildId(1126).intl;
   obj.placeholder = intl.string(guildId(1126).t.etZ9tX);
-  return jsx(onChange(13726), {
+  return jsx(onChange(13948), {
     label: name,
-    onPress() {
+    onPress: function handleSelectGuild() {
       const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
       const obj = ActionSheetActionCreatorsDefault;
       const intl = util.intl;
@@ -67,7 +67,7 @@ export default function GuildPicker(isGuildIncluded) {
         });
       };
       obj2.selectedItem = guildId;
-      obj.openLazy(asyncRequireImpl(8978, dependencyMap.paths), GuildPicker, obj2);
+      obj.openLazy(asyncRequireImpl(8529, dependencyMap.paths), GuildPicker, obj2);
     },
     placeholder: null,
   });

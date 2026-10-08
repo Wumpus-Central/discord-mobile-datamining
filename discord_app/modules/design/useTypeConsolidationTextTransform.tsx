@@ -8,18 +8,18 @@ const style = { textTransform: "none" };
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
 let ReactCompilerGating = ReactCompilerGating_mod;
-const fn = (AcceptGuildTemplate) => {
+function useTypeConsolidationTextTransform(AcceptGuildTemplate) {
   let tmp;
   if (obj.useManaTypeConsolidationExperiment(AcceptGuildTemplate)) {
     tmp = closure_2;
   }
   return tmp;
-};
+}
 const result1 = size.fileFinishedImporting("modules/design/useTypeConsolidationTextTransform.tsx");
 
-export const useTypeConsolidationTextTransform = fn;
+export { useTypeConsolidationTextTransform };
 export const useTypeConsolidationEyebrow = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, variant) => {
+  ? function useTypeConsolidationEyebrow(arg0, variant) {
       const cResult = c.c(3);
       const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment(arg0);
       if (cResult[0] === variant) {
@@ -37,7 +37,7 @@ export const useTypeConsolidationEyebrow = ReactCompilerGating.isReactCompilerEn
       cResult[1] = manaTypeConsolidationExperiment;
       cResult[2] = obj4;
     }
-  : (arg0, variant) => {
+  : function useTypeConsolidationEyebrow(arg0, variant) {
       if (obj.useManaTypeConsolidationExperiment(arg0)) {
         const obj2 = { variant: "experimental/body-sm/medium", style };
         let obj3 = obj2;

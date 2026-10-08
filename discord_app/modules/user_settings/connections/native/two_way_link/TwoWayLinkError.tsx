@@ -6,7 +6,7 @@ import Stack_Stack from "../../../../../design/components/Stack/native/Stack.nat
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "TwoWayLinkStyles.tsx";
-import _modDef8794 from "../../../../../../_runtime/metro/08794__.js";
+import _modDef9163 from "../../../../../../_runtime/metro/09163__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,20 +14,20 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ image: { width: 254, height: 127, marginBottom: 32 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkError.tsx");
 
 export const TwoWayLinkError = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TwoWayLinkError(arg0) {
       const cResult = c.c(30);
       ({ onClose, title, body, onRetry } = arg0);
       const tmp4 = closure_7();
       const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
       if (cResult[0] !== tmp4.image) {
-        const obj3 = { source: _modDef8794, style: tmp4.image };
+        const obj3 = { source: _modDef9163, style: tmp4.image };
         const tmp10 = hasOwnProperty(React3, obj3);
         cResult[0] = tmp4.image;
         cResult[1] = tmp10;
@@ -173,14 +173,14 @@ export const TwoWayLinkError = ReactCompilerGating.isReactCompilerEnabled()
         children: title,
       };
     }
-  : (arg0) => {
+  : function TwoWayLinkError(arg0) {
       ({ onClose, title, body, onRetry } = arg0);
       const tmp = closure_7();
       const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
       const obj2 = { style: twoWayLinkStyles.container, children: null };
       const obj3 = { style: twoWayLinkStyles.content, children: null };
       const items = [
-        hasOwnProperty(React3, { source: _modDef8794, style: tmp.image }),
+        hasOwnProperty(React3, { source: _modDef9163, style: tmp.image }),
         hasOwnProperty(Text_Text.Text, {
           variant: "heading-xl/extrabold",
           color: "mobile-text-heading-primary",

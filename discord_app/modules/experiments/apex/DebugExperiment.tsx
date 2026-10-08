@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/experiments/apex/DebugExperim
 export default apexExperiment;
 export const DebugExperiment = apexExperiment;
 export const useDebugExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDebugExperiment() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { location: "debug_experiment" };
@@ -25,4 +25,6 @@ export const useDebugExperiment = ReactCompilerGating.isReactCompilerEnabled()
       }
       return apexExperiment.useConfig(first);
     }
-  : () => apexExperiment.useConfig({ location: "debug_experiment" });
+  : function useDebugExperiment() {
+      return apexExperiment.useConfig({ location: "debug_experiment" });
+    };

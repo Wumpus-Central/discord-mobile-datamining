@@ -3,18 +3,18 @@ import c from "../../../../../_runtime/00576_c.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const native = ThemedIcon(1188);
+const native = ThemedIcon(1200);
 require = fn;
 let closure_2 = ["style", "color", "themedColor"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ icon: { opacity: 0.6 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormIcon.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FormIcon(arg0) {
       let ThemedIcon = require;
       let tmp = dependencyMap;
       const cResult = c.c(19);
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = items1;
       }
     }
-  : (color) => {
+  : function FormIcon(color) {
       ({ style, themedColor } = color);
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0, themedColor: 0 }));
       const tmp2 = closure_5();

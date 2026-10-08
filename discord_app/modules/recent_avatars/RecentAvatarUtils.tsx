@@ -4,7 +4,7 @@ import util from "../../intl/index.native.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import ImageLoaderUtils from "../image_upload/ImageLoaderUtils.tsx";
-import _modDef1478 from "../../../_runtime/metro/01478__.js";
+import _modDef1490 from "../../../_runtime/metro/01490__.js";
 import ProfilePendingImageTypes from "../profile_customization/ProfilePendingImageTypes.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -57,7 +57,7 @@ function getArchivedAvatarURL(allowWebp) {
     }
     const ARCHIVED_AVATARResult = Endpoints.ARCHIVED_AVATAR(userId, avatarId, storageHash, str2);
     const _HermesInternal2 = HermesInternal;
-    return "" + combined + ARCHIVED_AVATARResult + "?" + _modDef1478.stringify(obj2);
+    return "" + combined + ARCHIVED_AVATARResult + "?" + _modDef1490.stringify(obj2);
   }
   str2 = "jpg";
   if (null != window.GLOBAL_ENV.CDN_HOST) {

@@ -1,12 +1,12 @@
 // discord_app/modules/game_console/native/getConsoleIcon.tsx
 import Constants from "../../../Constants.tsx";
 import CallConstants from "../../calls/CallConstants.tsx";
-import _modDef8786 from "../../../../_runtime/metro/08786__.js";
-import _modDef9477 from "../../../../_runtime/metro/09477__.js";
+import _modDef10963 from "../../../../_runtime/metro/10963__.js";
+import _modDef10964 from "../../../../_runtime/metro/10964__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const VoicePlatforms = CallConstants.VoicePlatforms;
-const obj = { [XBOX]: _modDef8786, [PLAYSTATION]: _modDef9477, [PLAYSTATION_STAGING]: _modDef9477 };
+const obj = { [XBOX]: _modDef10963, [PLAYSTATION]: _modDef10964, [PLAYSTATION_STAGING]: _modDef10964 };
 ({ XBOX, PLAYSTATION, PLAYSTATION_STAGING } = Constants.PlatformTypes);
 const result = size.fileFinishedImporting("modules/game_console/native/getConsoleIcon.tsx");
 
@@ -15,11 +15,11 @@ export default function getConsoleIcon(arg0) {
 }
 export const getConsoleIconForVoicePlatform = function getConsoleIconForVoicePlatform(voicePlatform) {
   if (voicePlatform === VoicePlatforms.XBOX) {
-    let tmp2 = _modDef8786;
+    let tmp2 = _modDef10963;
   } else {
     tmp2 = null;
     if (voicePlatform === tmp.PLAYSTATION) {
-      tmp2 = _modDef9477;
+      tmp2 = _modDef10964;
     }
   }
   return tmp2;

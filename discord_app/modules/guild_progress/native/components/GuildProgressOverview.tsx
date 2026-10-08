@@ -6,7 +6,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import showSimpleActionSheet from "../../../action_sheet/native/showSimpleActionSheet.tsx";
-import _modDef9615 from "../../../../../_runtime/metro/09615__.js";
+import _modDef10808 from "../../../../../_runtime/metro/10808__.js";
 import GuildProgressUtils from "../GuildProgressUtils.tsx";
 import GuildProgressActionCreatorsDefault from "../../GuildProgressActionCreators.tsx";
 import GuildProgressBarDefault from "GuildProgressBar.tsx";
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { padding: 16 },
   horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
@@ -41,7 +41,7 @@ let obj3 = {
 };
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildProgressOverviewView(arg0) {
       const cResult = c.c(25);
       ({ titleStyle, onPress, onLongPress, title, subtitle, percentComplete } = arg0);
       const tmp4 = closure_7();
@@ -63,7 +63,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol = Symbol;
               if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj2 = { source: _modDef9615 };
+                const obj2 = { source: _modDef10808 };
                 const tmp20 = hasOwnProperty(native.Icon, obj2);
                 cResult[12] = tmp20;
                 let tmp17 = tmp20;
@@ -154,7 +154,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items3;
       tmp5 = items3;
     }
-  : (arg0) => {
+  : function GuildProgressOverviewView(arg0) {
       ({ titleStyle, onPress, onLongPress, title, subtitle, percentComplete } = arg0);
       const tmp = closure_7();
       const obj = {
@@ -180,7 +180,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj3.children = items1;
-      const items2 = [timestampProducer(View, obj3), hasOwnProperty(native.Icon, { source: _modDef9615 })];
+      const items2 = [timestampProducer(View, obj3), hasOwnProperty(native.Icon, { source: _modDef10808 })];
       obj2.children = items2;
       const items3 = [
         timestampProducer(View, obj2),
@@ -194,11 +194,11 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressOverview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function GuildProgressOverview(guild) {
       const cResult = guild(completed[7]).c(19);
       guild = guild.guild;
       ({ titleStyle, longPressDisabled, resume } = guild);
-      importDefault = tmp4;
+      closure_1 = tmp4;
       let obj = guild(completed[7]);
       const guildProgressStep = guild(completed[8]).useGuildProgressStep(guild);
       ({ percentComplete, subtitle, completed } = guildProgressStep);
@@ -219,20 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[10] !== tmp5) {
               let intl = tmp(completed[11]).intl;
               const string = intl.string;
-              class I {
-                constructor() {
-                  if (!completed) {
-                    tmp = closure_1;
-                    tmp2 = closure_2;
-                    obj = closure_1(closure_2[9]);
-                    tmp3 = guild;
-                    progress = obj.createProgress(guild.id);
-                  }
-                  obj2 = closure_0(closure_2[8]);
-                  openActionSheetResult = obj2.openActionSheet(guild);
-                  return;
-                }
-              }
+              let NzxWjb = tmp(completed[11]).t;
               if (tmp5) {
                 NzxWjb = NzxWjb.NzxWjb;
                 let stringResult = string(NzxWjb);
@@ -256,20 +243,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              class I {
-                constructor() {
-                  if (!completed) {
-                    tmp = closure_1;
-                    tmp2 = closure_2;
-                    obj = closure_1(closure_2[9]);
-                    tmp3 = guild;
-                    progress = obj.createProgress(guild.id);
-                  }
-                  obj2 = closure_0(closure_2[8]);
-                  openActionSheetResult = obj2.openActionSheet(guild);
-                  return;
-                }
-              }
               let obj2 = {
                 titleStyle,
                 onPress: tmp12,
@@ -278,37 +251,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 subtitle,
                 percentComplete,
               };
-              const tmp18 = closure_5(closure_8, obj2);
+              const tmp19 = closure_5(closure_8, obj2);
               cResult[12] = tmp11;
               cResult[13] = tmp12;
               cResult[14] = percentComplete;
               cResult[15] = subtitle;
               cResult[16] = cResult[11];
               cResult[17] = titleStyle;
-              cResult[18] = tmp18;
-              tmp16 = tmp18;
+              cResult[18] = tmp19;
+              tmp16 = tmp19;
             }
           }
-          class I {
-            constructor() {
-              if (!completed) {
-                tmp = closure_1;
-                tmp2 = closure_2;
-                obj = closure_1(closure_2[9]);
-                tmp3 = guild;
-                progress = obj.createProgress(guild.id);
-              }
-              obj2 = closure_0(closure_2[8]);
-              openActionSheetResult = obj2.openActionSheet(guild);
-              return;
+          function openProgressSheet() {
+            if (!completed) {
+              const progress = GuildProgressActionCreatorsDefault.createProgress(guild.id);
             }
+            GuildProgressUtils.openActionSheet(guild);
           }
           cResult[7] = completed;
           cResult[8] = guild;
-          cResult[9] = I;
-          tmp12 = I;
+          cResult[9] = openProgressSheet;
+          tmp12 = openProgressSheet;
         }
-        const fn2 = function c() {
+        function handleLongPress() {
           if (!closure_1) {
             const obj2 = { key: "GuildProgressOverviewLongPress", options: null, hasIcons: false };
             const obj3 = { label: null, onPress: null };
@@ -321,13 +286,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj2.options = items;
             const result = showSimpleActionSheet.showSimpleActionSheet(obj2);
           }
-        };
+        }
         cResult[4] = guild.id;
         cResult[5] = tmp4;
-        cResult[6] = fn2;
-        tmp11 = fn2;
+        cResult[6] = handleLongPress;
+        tmp11 = handleLongPress;
       }
-      const fn = function n() {
+      const fn = function o() {
         if (completed) {
           const result = GuildProgressActionCreatorsDefault.markCompletedProgressSeen(guild.id);
         }
@@ -341,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       const tmpResult = guild(completed[8]);
     }
-  : (guild) => {
+  : function GuildProgressOverview(guild) {
       guild = guild.guild;
       let flag = guild.longPressDisabled;
       if (flag === undefined) {
@@ -363,13 +328,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       let obj2 = {
         titleStyle: guild.titleStyle,
-        onPress() {
+        onPress: function openProgressSheet() {
           if (!completed) {
             const progress = GuildProgressActionCreatorsDefault.createProgress(guild.id);
           }
           GuildProgressUtils.openActionSheet(guild);
         },
-        onLongPress() {
+        onLongPress: function handleLongPress() {
           if (!flag) {
             const obj2 = { key: "GuildProgressOverviewLongPress", options: null, hasIcons: false };
             const obj3 = { label: null, onPress: null };

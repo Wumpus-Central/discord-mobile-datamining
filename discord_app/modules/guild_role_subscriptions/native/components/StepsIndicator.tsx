@@ -10,7 +10,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flexDirection: "row", alignItems: "center", justifyContent: "center" },
   node: { width: 20, height: 20, borderRadius: 10, marginHorizontal: -2 },
@@ -32,7 +32,7 @@ const __initData2 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function StepNode(arg0) {
       const cResult = isCurrent(num2[7]).c(14);
       ({ label, isCurrent } = arg0);
       ({ isDone, useReducedMotion } = arg0);
@@ -157,7 +157,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         Easing: isCurrent(num2[8]).Easing,
       };
     }
-  : (isCurrent) => {
+  : function StepNode(isCurrent) {
       isCurrent = isCurrent.isCurrent;
       let sharedValue;
       let num2;
@@ -241,7 +241,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/StepsIndicator.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function StepsIndicator(arg0) {
       let sum;
       const cResult = c.c(12);
       ({ current, style, total } = arg0);
@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = items2;
       const tmpResult = initialize;
     }
-  : (current) => {
+  : function StepsIndicator(current) {
       current = current.current;
       const total = current.total;
       let stateFromStores;

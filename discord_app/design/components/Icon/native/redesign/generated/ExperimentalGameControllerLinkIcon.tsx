@@ -2,7 +2,7 @@
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod8423 from "../../../../../../../_runtime/metro/08423__.js";
+import _mod8920 from "../../../../../../../_runtime/metro/08920__.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const ExperimentalGameControllerLinkIcon = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ExperimentalGameControllerLinkIcon(arg0) {
       const cResult = c.c(9);
       if (cResult[0] !== arg0) {
         ({ style, color } = arg0);
@@ -37,7 +37,7 @@ export const ExperimentalGameControllerLinkIcon = ReactCompilerGating.isReactCom
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod8423;
+        const tmpResult = _mod8920;
         cResult[4] = tmpResult;
         let tmp10 = tmpResult;
       } else {
@@ -60,7 +60,7 @@ export const ExperimentalGameControllerLinkIcon = ReactCompilerGating.isReactCom
       tmp12 = tmp14;
       const obj2 = { source: tmp10, color: INTERACTIVE_ICON_DEFAULT, style: tmp5 };
     }
-  : (color) => {
+  : function ExperimentalGameControllerLinkIcon(color) {
       let INTERACTIVE_ICON_DEFAULT = color.color;
       if (INTERACTIVE_ICON_DEFAULT === undefined) {
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
@@ -68,7 +68,7 @@ export const ExperimentalGameControllerLinkIcon = ReactCompilerGating.isReactCom
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
       const merged1 = Object.assign(merged);
       return jsx(BaseIconImage.BaseIconImage, {
-        source: _mod8423,
+        source: _mod8920,
         color: INTERACTIVE_ICON_DEFAULT,
         style: color.style,
       });

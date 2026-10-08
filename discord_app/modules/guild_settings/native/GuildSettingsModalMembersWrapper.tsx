@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSe
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guildId) => {
+    ? function GuildSettingsModalMembersWrapper(guildId) {
         let tmp = dependencyMap;
         const cResult = c.c(4);
         guildId = guildId.guildId;
@@ -38,10 +38,10 @@ export default noop.memo(
         }
         obj2 = canReviewGuildMemberApplications;
       }
-    : (guildId) => {
+    : function GuildSettingsModalMembersWrapper(guildId) {
         guildId = guildId.guildId;
         return jsx(
-          importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 16565 : 16567),
+          importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 16820 : 16822),
           { guildId },
         );
       },

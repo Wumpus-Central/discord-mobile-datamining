@@ -2,7 +2,7 @@
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import util from "../../intl/index.native.tsx";
-import _modDef2521 from "FamilyCenter.messages.js";
+import _modDef2565 from "FamilyCenter.messages.js";
 import PriceUtils from "../../utils/PriceUtils.tsx";
 import utils_PriceUtils from "../../../discord_common/js/shared/utils/PriceUtils.tsx";
 import SpendingLimitUtils from "SpendingLimitUtils.tsx";
@@ -36,7 +36,7 @@ function getSpendingLimitDisplayState(amount, arg1) {
         const obj3 = { kind: "close-to-limit", monthlyText: formatRateResult, remainingText: null };
         const intl = util.intl;
         const obj4 = { amount: PriceUtils.formatPrice(diff, currency) };
-        obj3.remainingText = intl.formatToPlainString(_modDef2521["+Q+bU1"], obj4);
+        obj3.remainingText = intl.formatToPlainString(_modDef2565["+Q+bU1"], obj4);
         let obj = obj3;
         const tmp5Result = PriceUtils;
       } else {
@@ -46,11 +46,11 @@ function getSpendingLimitDisplayState(amount, arg1) {
     }
   }
 }
-const SubscriptionIntervalTypes = fn(1379).SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = fn(1391).SubscriptionIntervalTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSpendingLimitFromUserSettings() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserSettingsProtoStore];
@@ -82,7 +82,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5, undefined, SpendingLimitUtils.spendingLimitEqual);
     }
-  : () => {
+  : function useSpendingLimitFromUserSettings() {
       const items = [UserSettingsProtoStore];
       return initialize.useStateFromStores(
         items,
@@ -116,11 +116,11 @@ export const useSpendingLimitFromUserSettings = tmp2;
 export const CLOSE_TO_LIMIT_THRESHOLD_MAJOR_UNITS = 10;
 export { getSpendingLimitDisplayState };
 export const useSpendingLimitDisplayState = ReactCompilerGating.isReactCompilerEnabled()
-  ? (amount) => {
+  ? function useSpendingLimitDisplayState(amount) {
       const cResult = c.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FamilyCenterStore];
-        const fn = function u() {
+        const fn = function s() {
           return monthlyPurchases.getMonthlyPurchases();
         };
         cResult[0] = items;
@@ -151,7 +151,7 @@ export const useSpendingLimitDisplayState = ReactCompilerGating.isReactCompilerE
       tmp8 = tmp9;
       const tmpResult = initialize;
     }
-  : (amount) => {
+  : function useSpendingLimitDisplayState(amount) {
       const items = [FamilyCenterStore];
       const stateFromStores = initialize.useStateFromStores(items, () => monthlyPurchases.getMonthlyPurchases());
       let num;

@@ -6,7 +6,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef6591 from "../../../../../_runtime/metro/06591__.js";
+import _modDef6767 from "../../../../../_runtime/metro/06767__.js";
 import GuildEventCardDefault from "GuildEventCard.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -18,13 +18,13 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildScheduledEventsConstants = fn(2057);
+const GuildScheduledEventsConstants = fn(2069);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } =
   GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(9210).START_EVENT_MODAL_KEY;
+const START_EVENT_MODAL_KEY = fn(8490).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   mainContainer: {
     flex: 1,
@@ -71,7 +71,7 @@ obj2.headerPrivacyLevel = { textAlign: "center", lineHeight: 18 };
 let closure_14 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onClose) => {
+  ? function NavigationBar(onClose) {
       const cResult = c.c(6);
       onClose = onClose.onClose;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -93,7 +93,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { source: _modDef6591 };
+        const obj2 = { source: _modDef6767 };
         const tmp10 = __initData(native.Icon, obj2);
         cResult[3] = tmp10;
         let tmp7 = tmp10;
@@ -113,7 +113,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp11;
     }
-  : (onClose) => {
+  : function NavigationBar(onClose) {
       onClose = onClose.onClose;
       const obj = { children: null };
       const obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
@@ -122,13 +122,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.onPress = function onPress() {
         return onClose();
       };
-      obj2.children = __initData(native.Icon, { source: _modDef6591 });
+      obj2.children = __initData(native.Icon, { source: _modDef6767 });
       obj.children = __initData(Pressables.PressableOpacity, obj2);
       return __initData(View, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (event) => {
+  ? function StartEventHeader(event) {
       const cResult = c.c(10);
       event = event.event;
       const tmp4 = closure_14();
@@ -189,7 +189,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = tmp11;
       const obj4 = { style: tmp4.headerTitle, variant: "text-md/medium", color: "text-default", children: event.name };
     }
-  : (children) => {
+  : function StartEventHeader(children) {
       const tmp = closure_14();
       const obj = { style: tmp.header, children: null };
       const obj2 = {
@@ -214,7 +214,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (event) => {
+  ? function PreviewEventCard(event) {
       const cResult = c.c(3);
       event = event.event;
       const tmp3 = closure_14();
@@ -236,7 +236,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = tmp5;
       const obj2 = { event, hideControls: true, style: tmp3.previewCard, hideAgeVerificationNotice: true };
     }
-  : (event) => {
+  : function PreviewEventCard(event) {
       const tmp = closure_14();
       return __initData(GuildEventCardDefault, {
         event: event.event,
@@ -259,12 +259,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/StartEventModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (event) => {
+  ? function StartEventModal(event) {
       const cResult = require("c").c(58);
       event = event.event;
       _require = event;
       const onCloseActionSheet = event.onCloseActionSheet;
-      closure_14();
+      const tmp4 = closure_14();
       guild_id = event.guild_id;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
@@ -286,106 +286,257 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(first, tmp7);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const items1 = [ChannelStore];
+        const items1 = [closure_7];
         cResult[3] = items1;
         let tmp9 = items1;
       } else {
         tmp9 = cResult[3];
       }
       if (cResult[4] !== event.channel_id) {
-        class G {
-          constructor() {
-            return closure_7.getChannel(closure_0.channel_id);
-          }
-        }
+        const fn2 = function w() {
+          return ChannelStore.getChannel(channel_id.channel_id);
+        };
         cResult[4] = event.channel_id;
-        cResult[5] = G;
+        cResult[5] = fn2;
+        let tmp11 = fn2;
       } else {
-        class G {
-          constructor() {
-            return closure_7.getChannel(closure_0.channel_id);
-          }
-        }
+        tmp11 = cResult[5];
       }
       if (cResult[6] !== event) {
-        class G {
-          constructor() {
-            return closure_7.getChannel(closure_0.channel_id);
-          }
-        }
-        tmp13[0] = event;
+        const items2 = [event];
         cResult[6] = event;
-        cResult[7] = tmp13;
+        cResult[7] = items2;
+        let tmp12 = items2;
       } else {
-        class G {
-          constructor() {
-            return closure_7.getChannel(closure_0.channel_id);
-          }
-        }
+        tmp12 = cResult[7];
       }
       const tmpResult = require("initialize");
-      const stateFromStores1 = require("initialize").useStateFromStores(tmp9, G, tmp13);
+      let stateFromStores1 = require("initialize").useStateFromStores(tmp9, tmp11, tmp12);
       const tmpResult3 = require("initialize");
       if (stateFromStores1 == null) {
-        class G {
-          constructor() {
-            return closure_7.getChannel(closure_0.channel_id);
-          }
-        }
+        stateFromStores1 = stateFromStores;
       }
       const canManageGuildEvent =
         require("useManageResourcePermissions").useManageResourcePermissions(stateFromStores1).canManageGuildEvent;
       if (cResult[8] === canManageGuildEvent) {
-        class G {
-          constructor() {
-            return closure_7.getChannel(closure_0.channel_id);
-          }
+        if (cResult[9] === event) {
+          let tmp14 = cResult[10];
         }
-        asyncGeneratorStep = tmp15;
-        const tmp21 = first1(noop.useState(event.entity_type === constants.STAGE_INSTANCE), 2);
-        first1 = tmp21[0];
-        noop = tmp21[1];
-        const tmp24 = first1(onCloseActionSheet(tmp2[22])(), 2);
-        const first2 = tmp24[0];
-        ({ loading, error } = tmp24[1]);
+        asyncGeneratorStep = tmp14;
+        const tmp20 = first1(noop.useState(event.entity_type === constants.STAGE_INSTANCE), 2);
+        first1 = tmp20[0];
+        noop = tmp20[1];
+        const tmp23 = first1(onCloseActionSheet(tmp2[22])(), 2);
+        const first2 = tmp23[0];
+        ({ loading, error } = tmp23[1]);
         if (cResult[11] !== onCloseActionSheet) {
-          class F {
-            constructor(arg0) {
-              tmp = undefined !== event && event;
-              obj = closure_1(closure_2[11]);
-              popWithKeyResult = obj.popWithKey(START_EVENT_MODAL_KEY);
-              if (onCloseActionSheet != null) {
-                tmp3 = onCloseActionSheet(tmp);
-              }
-              return;
+          function onCloseModal(arg0) {
+            ModalActionCreatorsDefault.popWithKey(START_EVENT_MODAL_KEY);
+            if (onCloseActionSheet != null) {
+              onCloseActionSheet(tmp);
             }
           }
           cResult[11] = onCloseActionSheet;
-          cResult[12] = F;
+          cResult[12] = onCloseModal;
+          let tmp25 = onCloseModal;
         } else {
-          class F {
-            constructor(arg0) {
-              tmp = undefined !== event && event;
-              obj = closure_1(closure_2[11]);
-              popWithKeyResult = obj.popWithKey(START_EVENT_MODAL_KEY);
-              if (onCloseActionSheet != null) {
-                tmp3 = onCloseActionSheet(tmp);
-              }
-              return;
-            }
-          }
+          tmp25 = cResult[12];
         }
-        ChannelStore = F;
-        if (cResult[13] === tmp15) {
-          class F {
-            constructor(arg0) {
-              tmp = undefined !== event && event;
-              obj = closure_1(closure_2[11]);
-              popWithKeyResult = obj.popWithKey(START_EVENT_MODAL_KEY);
-              if (onCloseActionSheet != null) {
-                tmp3 = onCloseActionSheet(tmp);
+        closure_7 = tmp25;
+        if (cResult[13] === tmp14) {
+          if (cResult[14] === event) {
+            if (cResult[15] === first1) {
+              if (cResult[16] === tmp25) {
+                if (cResult[17] === first2) {
+                  let tmp26 = cResult[18];
+                }
+                const _Symbol = Symbol;
+                if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
+                  function handleToggleNotifyMembers() {
+                    closure_5((arg0) => !arg0);
+                  }
+                  cResult[19] = handleToggleNotifyMembers;
+                  let tmp28 = handleToggleNotifyMembers;
+                } else {
+                  tmp28 = cResult[19];
+                }
+                if (cResult[20] !== tmp25) {
+                  let obj2 = { onClose: tmp25 };
+                  const tmp32 = closure_12(closure_15, obj2);
+                  cResult[20] = tmp25;
+                  cResult[21] = tmp32;
+                  let tmp29 = tmp32;
+                } else {
+                  tmp29 = cResult[21];
+                }
+                if (cResult[22] !== event) {
+                  let obj3 = { event };
+                  const tmp37 = closure_12(closure_16, obj3);
+                  let obj4 = { event };
+                  const tmp39 = closure_12(closure_17, obj4);
+                  cResult[22] = event;
+                  cResult[23] = tmp37;
+                  cResult[24] = tmp39;
+                  let tmp34 = tmp39;
+                  let tmp33 = tmp37;
+                } else {
+                  tmp33 = cResult[23];
+                  tmp34 = cResult[24];
+                }
+                if (cResult[25] === tmp4.headerContainer) {
+                  if (cResult[26] === tmp33) {
+                    if (cResult[27] === tmp34) {
+                      let tmp40 = cResult[28];
+                    }
+                    if (cResult[29] === event.channel_id) {
+                      if (cResult[30] === event.entity_type) {
+                        let tmp45 = cResult[31];
+                      }
+                      if (cResult[32] === first1) {
+                        if (cResult[33] === tmp17) {
+                          let tmp49 = cResult[34];
+                        }
+                        if (cResult[35] !== error) {
+                          let tmp53 = null;
+                          if (null != error) {
+                            let obj5 = {
+                              variant: "text-sm/medium",
+                              color: "text-feedback-critical",
+                              children: error.getAnyErrorMessage(),
+                            };
+                            tmp53 = closure_12(tmp(tmp2[18]).Text, obj5);
+                          }
+                          cResult[35] = error;
+                          cResult[36] = tmp53;
+                          let tmp52 = tmp53;
+                        } else {
+                          tmp52 = cResult[36];
+                        }
+                        const _Symbol2 = Symbol;
+                        if (cResult[37] === Symbol.for("react.memo_cache_sentinel")) {
+                          const intl = tmp(tmp2[14]).intl;
+                          const stringResult = intl.string(tmp(tmp2[14]).t.cK1GGY);
+                          cResult[37] = stringResult;
+                          let tmp55 = stringResult;
+                        } else {
+                          tmp55 = cResult[37];
+                        }
+                        if (cResult[38] === tmp26) {
+                          if (cResult[39] === loading) {
+                            let tmp57 = cResult[40];
+                          }
+                          if (cResult[41] === tmp4.buttonContainer) {
+                            if (cResult[42] === tmp52) {
+                              if (cResult[43] === tmp57) {
+                                let tmp60 = cResult[44];
+                              }
+                              if (cResult[45] === tmp4.footerContainer) {
+                                if (cResult[46] === tmp45) {
+                                  if (cResult[47] === tmp49) {
+                                    if (cResult[48] === tmp60) {
+                                      let tmp64 = cResult[49];
+                                    }
+                                    if (cResult[50] === tmp4.container) {
+                                      if (cResult[51] === tmp40) {
+                                        if (cResult[52] === tmp64) {
+                                          let tmp68 = cResult[53];
+                                        }
+                                        if (cResult[54] === tmp4.mainContainer) {
+                                          if (cResult[55] === tmp29) {
+                                            if (cResult[56] === tmp68) {
+                                              let tmp72 = cResult[57];
+                                            }
+                                            return tmp72;
+                                          }
+                                        }
+                                        const rect = {
+                                          top: true,
+                                          bottom: true,
+                                          style: tmp4.mainContainer,
+                                          children: null,
+                                        };
+                                        const items3 = [tmp29, tmp68];
+                                        rect.children = items3;
+                                        const tmp74 = closure_13(tmp(tmp2[26]).SafeAreaPaddingView, rect);
+                                        cResult[54] = tmp4.mainContainer;
+                                        cResult[55] = tmp29;
+                                        cResult[56] = tmp68;
+                                        cResult[57] = tmp74;
+                                        tmp72 = tmp74;
+                                      }
+                                    }
+                                    const obj6 = { style: tmp4.container, children: null };
+                                    const items4 = [tmp40, tmp64];
+                                    obj6.children = items4;
+                                    const tmp71 = closure_13(first2, obj6);
+                                    cResult[50] = tmp4.container;
+                                    cResult[51] = tmp40;
+                                    cResult[52] = tmp64;
+                                    cResult[53] = tmp71;
+                                    tmp68 = tmp71;
+                                  }
+                                }
+                              }
+                              const obj7 = { style: tmp44, children: null };
+                              const items5 = [tmp45, tmp49, tmp60];
+                              obj7.children = items5;
+                              const tmp67 = closure_13(first2, obj7);
+                              cResult[45] = tmp4.footerContainer;
+                              cResult[46] = tmp45;
+                              cResult[47] = tmp49;
+                              cResult[48] = tmp60;
+                              cResult[49] = tmp67;
+                              tmp64 = tmp67;
+                            }
+                          }
+                          const obj8 = { style: tmp4.buttonContainer, children: null };
+                          const items6 = [tmp52, tmp57];
+                          obj8.children = items6;
+                          const tmp63 = closure_13(first2, obj8);
+                          cResult[41] = tmp4.buttonContainer;
+                          cResult[42] = tmp52;
+                          cResult[43] = tmp57;
+                          cResult[44] = tmp63;
+                          tmp60 = tmp63;
+                        }
+                        const obj9 = { variant: "active", text: tmp55, onPress: tmp26, disabled: loading, loading };
+                        const tmp59 = closure_12(tmp(tmp2[25]).Button, obj9);
+                        cResult[38] = tmp26;
+                        cResult[39] = loading;
+                        cResult[40] = tmp59;
+                        tmp57 = tmp59;
+                      }
+                      let tmp50 = null;
+                      if (tmp17) {
+                        const obj10 = { sendStartNotification: first1, onToggle: tmp28 };
+                        tmp50 = closure_12(tmp(tmp2[24]).NotificationToggle, obj10);
+                      }
+                      cResult[32] = first1;
+                      cResult[33] = tmp17;
+                      cResult[34] = tmp50;
+                      tmp49 = tmp50;
+                    }
+                    let hasItem = set.has(event.entity_type);
+                    if (hasItem) {
+                      const obj11 = { channelId: event.channel_id };
+                      hasItem = closure_12(tmp22(tmp2[23]), obj11);
+                    }
+                    cResult[29] = event.channel_id;
+                    cResult[30] = event.entity_type;
+                    cResult[31] = hasItem;
+                    tmp45 = hasItem;
+                  }
+                }
+                const obj12 = { style: tmp4.headerContainer, children: null };
+                const items7 = [tmp33, tmp34];
+                obj12.children = items7;
+                const tmp43 = closure_13(first2, obj12);
+                cResult[25] = tmp4.headerContainer;
+                cResult[26] = tmp33;
+                cResult[27] = tmp34;
+                cResult[28] = tmp43;
+                tmp40 = tmp43;
               }
-              return;
             }
           }
         }
@@ -413,7 +564,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c0 = 3;
                   const obj3 = { value, done: true };
                   return obj3;
-                } else if (asyncGeneratorStep) {
+                } else if (closure_1_3) {
                   const obj4 = {
                     onSuccess() {
                       return closure_1_7(true);
@@ -424,7 +575,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj5 = { value: first2(c0, first1, obj4), done: false };
                   return obj5;
                 } else {
-                  F(false);
+                  closure_1_7(false);
                 }
               } else if (arg0 === 1) {
                 c0 = 3;
@@ -452,21 +603,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return applyArgumentsResult;
         }
-        cResult[13] = tmp15;
+        cResult[13] = tmp14;
         cResult[14] = event;
         cResult[15] = first1;
-        cResult[16] = F;
+        cResult[16] = tmp25;
         cResult[17] = first2;
         cResult[18] = handleStart;
-        const tmp18 = event.entity_type === constants.STAGE_INSTANCE;
+        tmp26 = handleStart;
+        tmp22 = onCloseActionSheet;
       }
       const canManageGuildEventResult = canManageGuildEvent(event);
       cResult[8] = canManageGuildEvent;
       cResult[9] = event;
       cResult[10] = canManageGuildEventResult;
+      tmp14 = canManageGuildEventResult;
       const tmpResult4 = require("useManageResourcePermissions");
     }
-  : (event) => {
+  : function StartEventModal(event) {
       event = event.event;
       const onCloseActionSheet = event.onCloseActionSheet;
       closure_3 = undefined;

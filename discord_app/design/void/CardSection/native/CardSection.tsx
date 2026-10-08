@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingTop: 16, paddingHorizontal: 16 }, title: null, card: null };
 obj2.title = TextStyles(fn(1085).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.TEXT_SUBTLE, 12, {
   uppercase: true,
@@ -31,7 +31,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/CardSection/native/CardSection.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CardSection(arg0) {
       const cResult = c.c(18);
       ({ title, children, headerComponent, titleStyle, cardStyle, style, accessibilityRole, accessibilityLabel } =
         arg0);
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items3;
       tmp4 = items3;
     }
-  : (arg0) => {
+  : function CardSection(arg0) {
       ({ title, children, headerComponent } = arg0);
       ({ titleStyle, cardStyle, style, accessibilityRole, accessibilityLabel } = arg0);
       const tmp = closure_6();

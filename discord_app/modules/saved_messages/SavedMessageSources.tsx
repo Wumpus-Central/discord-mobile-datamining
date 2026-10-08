@@ -4,7 +4,6 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageSources.tsx");
 
 export const SavedMessageSources = {
-  REACTION_BUTTON: "reaction_button",
   CONTEXT_MENU: "context_menu",
   LONG_PRESS_ACTION_SHEET: "long_press_action_sheet",
   MESSAGE_TOOLBAR: "message_toolbar",

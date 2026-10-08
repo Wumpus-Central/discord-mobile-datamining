@@ -3,8 +3,8 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import Icon from "../../../../design/void/Icon/native/Icon.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
+import Icon from "../../../../design/void/Icon/native/Icon.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
 import InfoBoxDefault from "../../authorized_apps/native/InfoBox.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -23,7 +23,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectedApplicationIdentity.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (identity) => {
+  ? function ConnectedApplicationIdentity(identity) {
       const cResult = require("c").c(44);
       identity = identity.identity;
       _require = identity;
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (profile3 != null) {
               connection_visible1 = profile3.connection_visible;
             }
-            const fn2 = function () {
+            function t4() {
               const self = this;
               const apply = closure_0.apply;
               if (typeof apply === "unknown") {
@@ -280,11 +280,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 applyArgumentsResult = apply(self, arguments);
               }
               return applyArgumentsResult;
-            };
+            }
             cResult[10] = connection_visible1;
             cResult[11] = identity.provider_issued_user_id;
-            cResult[12] = fn2;
-            tmp19 = fn2;
+            cResult[12] = t4;
+            tmp19 = t4;
           }
           const obj12 = { id: identity.application_id, icon: null, size: null, botIconFirst: false };
           let icon1;
@@ -356,7 +356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = fn;
       const tmp7 = _slicedToArray(noop.useState(flag), 2);
     }
-  : (identity) => {
+  : function ConnectedApplicationIdentity(identity) {
       identity = identity.identity;
       _require = identity;
       const token = identity.token;

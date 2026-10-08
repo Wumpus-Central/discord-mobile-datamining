@@ -7,7 +7,7 @@ import ClientThemesBackgroundStore from "../../client_themes/ClientThemesBackgro
 import ThemeStore from "../ThemeStore.tsx";
 
 require = fn;
-const ThemeConstants = fn(1196);
+const ThemeConstants = fn(1208);
 ({ SystemTheme: hasOwnProperty, SystemThemeState: metroRequire } = ThemeConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/SameAsDeviceThemeUtils.tsx");

@@ -50,7 +50,7 @@ prototype["setRetryAfter"] = function setRetryAfter(retryAfter) {
 };
 const ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (colors) => {
+  ? function useMemoArray(colors) {
       const tmp = _slicedToArray(React5(colors), 2);
       const first = tmp[0];
       let result = colors === first;
@@ -62,7 +62,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : (colors) => {
+  : function useMemoArray(colors) {
       const tmp = _slicedToArray(React5(colors), 2);
       const first = tmp[0];
       let result = colors === first;

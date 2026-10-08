@@ -7,7 +7,7 @@ require = fn;
 const ReactCompilerGating = fn(558);
 function getCommandContext(type) {
   if ("contextless" === type.type) {
-    let obj = { channel: "start", guild: "unicodeVersion" };
+    let obj = { channel: "Array", guild: "Reflect" };
   } else {
     obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
   }
@@ -18,11 +18,11 @@ const result = size.fileFinishedImporting("modules/app_launcher/hooks/useCommand
 
 export { getCommandContext };
 export const useCommandContext = ReactCompilerGating.isReactCompilerEnabled()
-  ? (type) => {
+  ? function useCommandContext(type) {
       const cResult = c.c(2);
       if (cResult[0] !== type) {
         if ("contextless" === type.type) {
-          let obj2 = { channel: "start", guild: "unicodeVersion" };
+          let obj2 = { channel: "Array", guild: "Reflect" };
         } else {
           obj2 = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
         }
@@ -32,12 +32,12 @@ export const useCommandContext = ReactCompilerGating.isReactCompilerEnabled()
         return cResult[1];
       }
     }
-  : (arg0) => {
+  : function useCommandContext(arg0) {
       const type = arg0;
       const items = [arg0];
       return noop.useMemo(() => {
         if ("contextless" === type.type) {
-          let obj = { channel: "start", guild: "unicodeVersion" };
+          let obj = { channel: "Array", guild: "Reflect" };
         } else {
           obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
         }

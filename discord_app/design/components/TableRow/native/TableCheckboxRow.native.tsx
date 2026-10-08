@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TableRow/native/TableCheckboxRow.native.tsx");
 
 export const TableCheckboxRow = ReactCompilerGating.isReactCompilerEnabled()
-  ? (checked) => {
+  ? function TableCheckboxRow(checked) {
       const cResult = c.c(35);
       if (cResult[0] !== checked) {
         checked = checked.checked;
@@ -187,7 +187,7 @@ export const TableCheckboxRow = ReactCompilerGating.isReactCompilerEnabled()
       tmp17 = T;
       const tmpResult = ReanimatedRexport;
     }
-  : (checked) => {
+  : function TableCheckboxRow(checked) {
       checked = checked.checked;
       ({ label, subLabel, disabled } = checked);
       if (disabled === undefined) {

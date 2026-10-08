@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import useChannelName from "../../../channel/useChannelName.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import useChannelName from "../../../channel/useChannelName.tsx";
 import StageMusicActionCreators from "../../../stage_channels/StageMusicActionCreators.tsx";
 import useMyCurrentStageChannelRoleDefault from "../../../stage_channels/useMyCurrentStageChannelRole.tsx";
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs.tsx";
@@ -25,21 +25,21 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11916);
+const VoicePanelConstants = fn(11989);
 let MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({
   UI_SHOW_HIDE_PHYSICS: closure_16,
   VoicePanelModes: closure_17,
   DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18,
 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(11919).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(11914).VoicePanelControlsModes;
-const ParticipantTypes = fn(4917).ParticipantTypes;
+const EDGE_GUTTER = fn(11992).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
+const ParticipantTypes = fn(5113).ParticipantTypes;
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 const OPACITY_TIMING = { duration: 300 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   headerWrapper: {
     zIndex: 1,
@@ -113,7 +113,7 @@ const __initData6 = {
 let ReactCompilerGating = fn(558);
 let closure_35 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (isHeaderHidden) => {
+    ? function HeaderBlur(isHeaderHidden) {
         const cResult = isHeaderHidden(focused[21]).c(17);
         isHeaderHidden = isHeaderHidden.isHeaderHidden;
         const scrollPosition = isHeaderHidden.scrollPosition;
@@ -247,7 +247,7 @@ let closure_35 = noop.memo(
           HEADER_CHANGE_PHYSICS: obj4,
         };
       }
-    : (isHeaderHidden) => {
+    : function HeaderBlur(isHeaderHidden) {
         isHeaderHidden = isHeaderHidden.isHeaderHidden;
         const scrollPosition = isHeaderHidden.scrollPosition;
         const focused = isHeaderHidden.focused;
@@ -342,7 +342,7 @@ const __initData10 = {
 ReactCompilerGating = fn(558);
 let closure_40 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function FocusedSpeakingDot() {
         const cResult = id(controlsSpecs[21]).c(12);
         id = AuthenticationStore.getId();
         const context = derivedValue.useContext(focused(controlsSpecs[27]));
@@ -475,7 +475,7 @@ let closure_40 = noop.memo(
         tmp8 = fn;
         const obj3 = id(controlsSpecs[22]);
       }
-    : () => {
+    : function FocusedSpeakingDot() {
         const id = AuthenticationStore.getId();
         const context = derivedValue.useContext(focused(controlsSpecs[27]));
         focused = context.focused;
@@ -531,7 +531,7 @@ let closure_40 = noop.memo(
 );
 ReactCompilerGating = fn(558);
 let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function MusicMuteButton(channelId) {
       const cResult = stateFromStores(576).c(10);
       channelId = channelId.channelId;
       const tmp5 = useMyCurrentStageChannelRoleDefault(channelId);
@@ -568,7 +568,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[2] = stateFromStores;
             cResult[3] = stringResult;
           } else {
-            const tmp4Result = importDefault(stateFromStores ? 9583 : 9585);
+            const tmp4Result = importDefault(stateFromStores ? 10778 : 10234);
             if (cResult[4] !== stateFromStores) {
               const fn2 = function p() {
                 return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
@@ -599,7 +599,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return null;
     }
-  : (channelId) => {
+  : function MusicMuteButton(channelId) {
       channelId = channelId.channelId;
       let stateFromStores;
       const tmp3 = useMyCurrentStageChannelRoleDefault(channelId);
@@ -623,7 +623,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj3 = {
             accessibilityLabel: stringResult,
-            icon: importDefault(stateFromStores ? 9583 : 9585),
+            icon: importDefault(stateFromStores ? 10778 : 10234),
             onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             },
@@ -682,7 +682,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/header/Voice
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (wrapperOffset) => {
+    ? function VoicePanelHeader(wrapperOffset) {
         const cResult = wrapperOffset(channelId[21]).c(99);
         wrapperOffset = wrapperOffset.wrapperOffset;
         const gestureState = wrapperOffset.gestureState;
@@ -1493,7 +1493,7 @@ export default noop.memo(
         cResult[7] = stringResult;
         const tmpResult24 = wrapperOffset(channelId[46]);
       }
-    : (wrapperOffset) => {
+    : function VoicePanelHeader(wrapperOffset) {
         wrapperOffset = wrapperOffset.wrapperOffset;
         const gestureState = wrapperOffset.gestureState;
         const layout = wrapperOffset.layout;

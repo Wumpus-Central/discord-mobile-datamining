@@ -213,7 +213,7 @@ function getScreens() {
       };
       const intl = guildTemplate(1126).intl;
       obj.customTitle = intl.string(guildTemplate(1126).t["5HZu07"]);
-      return closure_14(closure_1(11975), obj);
+      return closure_14(closure_1(12048), obj);
     },
   };
   const obj5 = {
@@ -242,7 +242,7 @@ function getScreens() {
       };
       const intl = guildTemplate(1126).intl;
       obj.customTitle = intl.string(guildTemplate(1126).t["5HZu07"]);
-      return closure_14(closure_1(11975), obj);
+      return closure_14(closure_1(12048), obj);
     },
   };
   impressionProperties[constants.JOIN_SERVER] = {
@@ -338,7 +338,7 @@ function getScreens() {
       };
       const intl = guildId(1126).intl;
       obj.buttonText = intl.string(guildId(1126).t["uHXB+F"]);
-      return closure_14(closure_1(12429), obj);
+      return closure_14(closure_1(12525), obj);
     },
   };
   const obj9 = {
@@ -362,21 +362,21 @@ function getScreens() {
 const Keyboard = fn(17).Keyboard;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, AnalyticsSections: closure_8, NOOP: closure_9 } = Constants);
-const GuildTemplateId = fn(12371).GuildTemplateId;
-const CreateGuildConstants = fn(6475);
+const GuildTemplateId = fn(12467).GuildTemplateId;
+const CreateGuildConstants = fn(6653);
 ({
   CreateGuildModalStates: closure_11,
   GuildTemplateTriggers: closure_12,
   NUXGuildTemplatesAnalytics: map1,
 } = CreateGuildConstants);
 const jsx = fn(21).jsx;
-let impressionProperties = { impression_group: fn(1260).ImpressionGroups.GUILD_ADD_FLOW };
+let impressionProperties = { impression_group: fn(1272).ImpressionGroups.GUILD_ADD_FLOW };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/components/NUFGuildTemplates.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function NUFGuildTemplates() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp6 = getScreens();
@@ -403,7 +403,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp7;
     }
-  : () => {
+  : function NUFGuildTemplates() {
       const obj = {
         screens: noop.useMemo(() => getScreens(), []),
         onWillFocus: Keyboard.dismiss,

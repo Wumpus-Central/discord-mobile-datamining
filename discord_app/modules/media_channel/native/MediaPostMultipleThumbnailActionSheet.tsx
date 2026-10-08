@@ -5,10 +5,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 },
   topContainer: null,
@@ -63,7 +63,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/native/MediaPostMultipleThumbnailActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (markAsDismissed) => {
+  ? function MediaPostThumbnailActionSheet(markAsDismissed) {
       const cResult = markAsDismissed(576).c(37);
       markAsDismissed = markAsDismissed.markAsDismissed;
       const tmp4 = closure_7();
@@ -95,8 +95,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
           const intl = tmp(1126).intl;
           obj3.children = intl.string(tmp(1126).t.ews2pj);
-          const tmp12 = closure_5(tmp(4892).Text, obj3);
-          const tmp13 = closure_5(tmp(1188).Checkbox, { selected: true });
+          const tmp12 = closure_5(tmp(5086).Text, obj3);
+          const tmp13 = closure_5(tmp(1200).Checkbox, { selected: true });
           cResult[7] = tmp12;
           cResult[8] = tmp13;
           let tmp10 = tmp13;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               style: tmp4.title,
               children: tmp22,
             };
-            const tmp26 = closure_5(tmp(4892).Text, obj5);
+            const tmp26 = closure_5(tmp(5086).Text, obj5);
             cResult[15] = tmp4.title;
             cResult[16] = tmp26;
             let tmp24 = tmp26;
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol3 = Symbol;
           if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp29 = closure_5(tmp(1188).Spacer, { size: 12 });
+            const tmp29 = closure_5(tmp(1200).Spacer, { size: 12 });
             cResult[17] = tmp29;
             let tmp27 = tmp29;
           } else {
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[19] !== tmp4.description) {
             const obj6 = { variant: "text-md/normal", color: "text-default", style: tmp4.description, children: tmp30 };
-            const tmp34 = closure_5(tmp(4892).Text, obj6);
+            const tmp34 = closure_5(tmp(5086).Text, obj6);
             cResult[19] = tmp4.description;
             cResult[20] = tmp34;
             let tmp32 = tmp34;
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol5 = Symbol;
           if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp37 = closure_5(tmp(1188).Spacer, { size: 48 });
+            const tmp37 = closure_5(tmp(1200).Spacer, { size: 48 });
             cResult[21] = tmp37;
             let tmp35 = tmp37;
           } else {
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return markAsDismissed(ContentDismissActionType.UNKNOWN);
               },
             };
-            const tmp42 = closure_5(tmp(5601).Button, obj7);
+            const tmp42 = closure_5(tmp(5375).Button, obj7);
             cResult[23] = markAsDismissed;
             cResult[24] = tmp42;
             let tmp40 = tmp42;
@@ -219,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return tmp50;
                     }
                     const obj8 = { backdropOpacity: 0.8, onDismiss: tmp5, children: tmp46 };
-                    const tmp52 = closure_5(tmp(6652).BottomSheet, obj8);
+                    const tmp52 = closure_5(tmp(6829).BottomSheet, obj8);
                     cResult[34] = tmp5;
                     cResult[35] = tmp46;
                     cResult[36] = tmp52;
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj10 = { contentContainerStyle: tmp7, children: null };
           const items1 = [tmp18, tmp24, tmp27, tmp32, tmp35, tmp40];
           obj10.children = items1;
-          const tmp45 = closure_6(tmp(6119).BottomSheetScrollView, obj10);
+          const tmp45 = closure_6(tmp(6298).BottomSheetScrollView, obj10);
           cResult[25] = tmp24;
           cResult[26] = tmp32;
           cResult[27] = tmp40;
@@ -261,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = items2;
       const obj = markAsDismissed(576);
     }
-  : (markAsDismissed) => {
+  : function MediaPostThumbnailActionSheet(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
       const tmp = closure_7();
       const obj = {
@@ -281,8 +281,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl = markAsDismissed(1126).intl;
       obj6.children = intl.string(markAsDismissed(1126).t.ews2pj);
       const items1 = [
-        closure_5(markAsDismissed(4892).Text, obj6),
-        closure_5(markAsDismissed(1188).Checkbox, { selected: true }),
+        closure_5(markAsDismissed(5086).Text, obj6),
+        closure_5(markAsDismissed(1200).Checkbox, { selected: true }),
       ];
       obj5.children = items1;
       obj4.children = closure_6(View, obj5);
@@ -295,22 +295,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl2 = markAsDismissed(1126).intl;
       obj7.children = intl2.string(markAsDismissed(1126).t.WJisip);
-      items2[1] = closure_5(markAsDismissed(4892).Text, obj7);
-      items2[2] = closure_5(markAsDismissed(1188).Spacer, { size: 12 });
+      items2[1] = closure_5(markAsDismissed(5086).Text, obj7);
+      items2[2] = closure_5(markAsDismissed(1200).Spacer, { size: 12 });
       const obj8 = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
       const intl3 = markAsDismissed(1126).intl;
       obj8.children = intl3.string(markAsDismissed(1126).t.X6ZH6d);
-      items2[3] = closure_5(markAsDismissed(4892).Text, obj8);
-      items2[4] = closure_5(markAsDismissed(1188).Spacer, { size: 48 });
+      items2[3] = closure_5(markAsDismissed(5086).Text, obj8);
+      items2[4] = closure_5(markAsDismissed(1200).Spacer, { size: 48 });
       const obj9 = { text: null, grow: true, onPress: null };
       const intl4 = markAsDismissed(1126).intl;
       obj9.text = intl4.string(markAsDismissed(1126).t["NX+WJN"]);
       obj9.onPress = function onPress() {
         return markAsDismissed(ContentDismissActionType.UNKNOWN);
       };
-      items2[5] = closure_5(markAsDismissed(5601).Button, obj9);
+      items2[5] = closure_5(markAsDismissed(5375).Button, obj9);
       obj3.children = items2;
-      obj2.children = closure_6(markAsDismissed(6119).BottomSheetScrollView, obj3);
+      obj2.children = closure_6(markAsDismissed(6298).BottomSheetScrollView, obj3);
       obj.children = closure_5(View, obj2);
-      return closure_5(markAsDismissed(6652).BottomSheet, obj);
+      return closure_5(markAsDismissed(6829).BottomSheet, obj);
     };

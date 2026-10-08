@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useInappropriateConversationBannerForChannel = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, location) => {
+  ? function useInappropriateConversationBannerForChannel(arg0, location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -55,7 +55,7 @@ export const useInappropriateConversationBannerForChannel = ReactCompilerGating.
       }
       const tmpResult5 = useInappropriateConversationWarningsForChannel;
     }
-  : (arg0, location) => {
+  : function useInappropriateConversationBannerForChannel(arg0, location) {
       const isEligibleForInappropriateConversationWarning =
         SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location });
       const obj2 = { location };

@@ -43,7 +43,7 @@ const result = size.fileFinishedImporting("modules/guild_member_verification/hoo
 
 export { shouldShowMembershipVerificationGate };
 export const useShowMemberVerificationGate = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShowMemberVerificationGate(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -75,7 +75,7 @@ export const useShowMemberVerificationGate = ReactCompilerGating.isReactCompiler
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp8, tmp9);
     }
-  : (arg0) => {
+  : function useShowMemberVerificationGate(arg0) {
       _require = arg0;
       let items = [GuildStore, UserStore, GuildMemberStore];
       const items1 = [arg0];

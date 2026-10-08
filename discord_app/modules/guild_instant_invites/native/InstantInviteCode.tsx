@@ -4,8 +4,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import useChannelName from "../../channel/useChannelName.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
+import useChannelName from "../../channel/useChannelName.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import TextIcon2 from "../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import CountDownDefault from "../../../components_native/common/CountDown.tsx";
@@ -15,15 +15,15 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(2055).createChannelRecordFromInvite;
+let closure_5 = fn(2067).createChannelRecordFromInvite;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { flex: { flex: 1 }, channel: { flex: 0 }, time: { color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function InstantInviteDetails(arg0) {
       const cResult = c.c(18);
       ({ channel, expiresAt } = arg0);
       const tmp4 = closure_10();
@@ -122,7 +122,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp17;
       tmp16 = tmp17;
     }
-  : (arg0) => {
+  : function InstantInviteDetails(arg0) {
       ({ channel, expiresAt } = arg0);
       const tmp = closure_10();
       let TextIcon = utils_ChannelUtils.getSimpleChannelIconComponent(channel);
@@ -165,7 +165,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteCode.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (invite) => {
+  ? function InstantInviteCode(invite) {
       const cResult = c.c(15);
       invite = invite.invite;
       const tmp4 = closure_10();
@@ -230,20 +230,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp14;
       tmp13 = tmp14;
     }
-  : (invite) => {
+  : function InstantInviteCode(invite) {
       invite = invite.invite;
       const items = [invite.channel];
       const obj = { style: closure_10().flex, children: null };
       const memo = noop.useMemo(() => closure_5(invite.channel), items);
       const obj2 = { children: null };
       const items1 = [
-        closure_8(invite(4892).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }),
+        closure_8(invite(5086).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }),
       ];
       const obj3 = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
       const tmp = closure_10();
       items1[1] = closure_8(closure_11, { channel: memo, expiresAt: invite.getExpiresAt() });
       obj2.children = items1;
-      obj.children = closure_9(invite(5600).Stack, obj2);
+      obj.children = closure_9(invite(5373).Stack, obj2);
       return closure_8(View, obj);
     };
 export const InstantInviteDetails = tmp3;

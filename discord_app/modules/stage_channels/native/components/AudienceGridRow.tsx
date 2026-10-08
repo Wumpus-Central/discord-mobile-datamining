@@ -6,10 +6,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const MAX_AUDIENCE_ROW_LIMIT = fn(5578).MAX_AUDIENCE_ROW_LIMIT;
+const MAX_AUDIENCE_ROW_LIMIT = fn(5888).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   rowContainer: {
     flex: 1,
@@ -21,7 +21,7 @@ let closure_7 = createStyles.createStyles({
 });
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (count) => {
+  ? function BlankAudience(count) {
       const cResult = c.c(2);
       count = count.count;
       if (cResult[0] !== count) {
@@ -37,7 +37,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp2;
     }
-  : (count) => {
+  : function BlankAudience(count) {
       count = count.count;
       const items = [];
       for (let num = 0; num < count; num = num + 1) {
@@ -52,7 +52,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function AudienceGridRow(channel) {
         const cResult = channel(576).c(18);
         channel = channel.channel;
         ({ participants, renderBlankAudience, theme } = channel);
@@ -137,7 +137,7 @@ export default noop.memo(
         tmp6 = items1;
         const obj = channel(576);
       }
-    : (theme) => {
+    : function AudienceGridRow(theme) {
         ({ channel: require, participants, renderBlankAudience } = theme);
         if (renderBlankAudience === undefined) {
           renderBlankAudience = true;

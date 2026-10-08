@@ -20,7 +20,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/screens/PasswordScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PasswordScreen(arg0) {
       const cResult = c.c(33);
       ({ mfaChallenge, finish } = arg0);
       closure_0 = finish;
@@ -209,7 +209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp16 = sendPassword;
       const tmp14 = _slicedToArray(noop.useState(false), 2);
     }
-  : (finish) => {
+  : function PasswordScreen(finish) {
       finish = finish.finish;
       importDefault = undefined;
       let first;

@@ -8,7 +8,7 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useFontScale from "../../screen/native/useFontScale.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef6645 from "../../../../_runtime/metro/06645__.js";
+import _modDef6822 from "../../../../_runtime/metro/06822__.js";
 import ChannelListLayout from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
 import AvatarDuoPile from "../../../design/components/Pile/native/AvatarDuoPile.native.tsx";
 import ChannelPressableWrapper from "../../main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx";
@@ -18,10 +18,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const Sections = fn(12363).Sections;
+const Sections = fn(12459).Sections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles((layout) => {
   const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
   const sizeStyle = ChannelListLayout.makeSizeStyle(layoutStyles.icon.wrapper.size);
@@ -80,7 +80,7 @@ let closure_10 = createStyles.createStyles((layout) => {
 fn(558);
 const ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForYouShowAllRow(arg0) {
       const cResult = c.c(43);
       ({ children, count, onPress, panelVariant } = arg0);
       const messagesTabLayout = ChannelListLayout.useMessagesTabLayout(tmp4);
@@ -219,7 +219,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj8 = {
                     style: tmp6.icon,
                     color: tmp6.iconColor.color,
-                    source: _modDef6645,
+                    source: _modDef6822,
                     size: native.IconSizes.CUSTOM,
                   };
                   const tmp33 = React5(native.Icon, obj8);
@@ -272,7 +272,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = items1;
       const tmpResult7 = useFontScale;
     }
-  : (panelVariant) => {
+  : function ForYouShowAllRow(panelVariant) {
       panelVariant = panelVariant.panelVariant;
       ({ children, count, onPress } = panelVariant);
       if (panelVariant === undefined) {
@@ -323,7 +323,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       items1[2] = React5(native.Icon, {
         style: tmp4.icon,
         color: tmp4.iconColor.color,
-        source: _modDef6645,
+        source: _modDef6822,
         size: native.IconSizes.CUSTOM,
       });
       obj9.children = items1;
@@ -334,7 +334,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_center/native/ForYouShowAllRow.tsx");
 
 export const ForYouSuggestedFriendShowAllRow = ReactCompilerGating.isReactCompilerEnabled()
-  ? (suggestedFriends) => {
+  ? function ForYouSuggestedFriendShowAllRow(suggestedFriends) {
       const cResult = suggestedFriends(messagesTabLayout[10]).c(13);
       suggestedFriends = suggestedFriends.suggestedFriends;
       const panelVariant = suggestedFriends.panelVariant;
@@ -369,42 +369,20 @@ export const ForYouSuggestedFriendShowAllRow = ReactCompilerGating.isReactCompil
           }
         }
         if (cResult[6] !== messagesTabLayout) {
-          class C {
-            constructor(arg0) {
-              tmp = jsx;
-              obj = {
-                user: suggestedFriends.user,
-                guildId: "Array",
-                size: "function pnpm_presetsTs1(event){return{transform:[{translateX:event.translationX}]};}",
-              };
-              obj2 = closure_0(closure_2[6]);
-              isLayoutCompactResult = obj2.isLayoutCompact(closure_2);
-              AvatarSizes = closure_0(closure_2[13]).AvatarSizes;
-              obj.size = isLayoutCompactResult ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;
-              return tmp(closure_0(closure_2[13]).Avatar, obj, suggestedFriends.user.id);
-            }
-          }
+          const fn2 = function y(user) {
+            const obj = { user: user.user, guildId: "Array", size: "p\u0314" };
+            const AvatarSizes = native.AvatarSizes;
+            obj.size = ChannelListLayout.isLayoutCompact(messagesTabLayout) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;
+            return React5(native.Avatar, obj, user.user.id);
+          };
           cResult[6] = messagesTabLayout;
-          cResult[7] = C;
+          cResult[7] = fn2;
+          let tmp9 = fn2;
         } else {
-          class C {
-            constructor(arg0) {
-              tmp = jsx;
-              obj = {
-                user: suggestedFriends.user,
-                guildId: "Array",
-                size: "function pnpm_presetsTs1(event){return{transform:[{translateX:event.translationX}]};}",
-              };
-              obj2 = closure_0(closure_2[6]);
-              isLayoutCompactResult = obj2.isLayoutCompact(closure_2);
-              AvatarSizes = closure_0(closure_2[13]).AvatarSizes;
-              obj.size = isLayoutCompactResult ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;
-              return tmp(closure_0(closure_2[13]).Avatar, obj, suggestedFriends.user.id);
-            }
-          }
+          tmp9 = cResult[7];
         }
         const substr = suggestedFriends.slice(2, 4);
-        const mapped = substr.map(C);
+        const mapped = substr.map(tmp9);
         cResult[3] = messagesTabLayout;
         cResult[4] = suggestedFriends;
         cResult[5] = mapped;
@@ -424,7 +402,7 @@ export const ForYouSuggestedFriendShowAllRow = ReactCompilerGating.isReactCompil
       tmp7 = fn;
       const tmpResult2 = suggestedFriends(messagesTabLayout[6]);
     }
-  : (suggestedFriends) => {
+  : function ForYouSuggestedFriendShowAllRow(suggestedFriends) {
       suggestedFriends = suggestedFriends.suggestedFriends;
       let flag = suggestedFriends.panelVariant;
       if (flag === undefined) {
@@ -450,11 +428,7 @@ export const ForYouSuggestedFriendShowAllRow = ReactCompilerGating.isReactCompil
         children: noop.useMemo(() => {
           const substr = suggestedFriends.slice(2, 4);
           return substr.map((user) => {
-            const obj = {
-              user: user.user,
-              guildId: "Array",
-              size: "function pnpm_presetsTs1(event){return{transform:[{translateX:event.translationX}]};}",
-            };
+            const obj = { user: user.user, guildId: "Array", size: "p\u0314" };
             const obj2 = suggestedFriends(messagesTabLayout[6]);
             const AvatarSizes = suggestedFriends(messagesTabLayout[13]).AvatarSizes;
             obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2)

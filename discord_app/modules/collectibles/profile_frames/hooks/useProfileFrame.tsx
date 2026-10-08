@@ -5,13 +5,13 @@ import CollectiblesPurchaseStore from "../../CollectiblesPurchaseStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isProfileFrameRecord = fn(7073).isProfileFrameRecord;
+const isProfileFrameRecord = fn(7259).isProfileFrameRecord;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useProfileFrame.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useProfileFrame(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function l() {
+        const fn = function n() {
           if (null != closure_0) {
             const product = CollectiblesCategoryStore.getProduct(closure_0);
             let first;
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7);
     }
-  : (arg0) => {
+  : function useProfileFrame(arg0) {
       _require = arg0;
       const items = [CollectiblesCategoryStore, CollectiblesPurchaseStore];
       return require("initialize").useStateFromStores(items, () => {

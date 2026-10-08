@@ -5,11 +5,12 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
+import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
@@ -82,7 +83,7 @@ let items = [
     return intl.string(util.t.YolGh4);
   },
 ];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 },
   text: null,
@@ -97,7 +98,7 @@ obj.buttons = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center"
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function EmptyState(arg0) {
       const cResult = c.c(14);
       ({ heading, bodyText, children } = arg0);
       const tmp4 = closure_10();
@@ -169,7 +170,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         children: heading,
       };
     }
-  : (arg0) => {
+  : function EmptyState(arg0) {
       ({ heading, bodyText, children } = arg0);
       const tmp = closure_10();
       const obj = { style: tmp.container, children: null };
@@ -194,7 +195,7 @@ let obj5 = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", g
 ReactCompilerGating = fn(558);
 const memoResult = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (user) => {
+    ? function UserProfileActivityEmptyOtherUser(user) {
         const cResult = name(576).c(19);
         user = user.user;
         ({ guildId, channelId } = user);
@@ -206,20 +207,33 @@ const memoResult = noop.memo(
               let tmp6 = cResult[4];
             }
             if (cResult[5] !== tmp5) {
-              const fn = function f() {
-                let sampleResult = _mod12.sample(items);
-                if (sampleResult == null) {
-                  sampleResult = items[0];
+              class T {
+                constructor() {
+                  obj = closure_0(closure_2[12]);
+                  tmp = closure_9;
+                  sampleResult = obj.sample(closure_9);
+                  if (sampleResult == null) {
+                    sampleResult = tmp[0];
+                  }
+                  return sampleResult(closure_0);
                 }
-                return sampleResult(name);
-              };
+              }
               cResult[5] = tmp5;
-              cResult[6] = fn;
-              let tmp9 = fn;
+              cResult[6] = T;
             } else {
-              tmp9 = cResult[6];
+              class T {
+                constructor() {
+                  obj = closure_0(closure_2[12]);
+                  tmp = closure_9;
+                  sampleResult = obj.sample(closure_9);
+                  if (sampleResult == null) {
+                    sampleResult = tmp[0];
+                  }
+                  return sampleResult(closure_0);
+                }
+              }
             }
-            const first = _slicedToArray(noop.useState(tmp9), 1)[0];
+            const first = _slicedToArray(noop.useState(T), 1)[0];
             if (cResult[7] !== user.id) {
               class A {
                 constructor() {
@@ -284,7 +298,7 @@ const memoResult = noop.memo(
                 }
               }
               const obj4 = { size: "sm", variant: "secondary", text: tmp15, onPress: A };
-              const tmp18 = closure_7(tmp(5601).Button, obj4);
+              const tmp18 = closure_7(tmp(5375).Button, obj4);
               cResult[10] = A;
               cResult[11] = tmp18;
             } else {
@@ -337,7 +351,7 @@ const memoResult = noop.memo(
           }
         }
         let obj = name(576);
-        name = user(5048).getName(guildId, channelId, user);
+        name = user(5405).getName(guildId, channelId, user);
         const intl = tmp(1126).intl;
         const formatToPlainStringResult = intl.formatToPlainString(name(1126).t.sjSitP, { name });
         cResult[0] = channelId;
@@ -346,16 +360,16 @@ const memoResult = noop.memo(
         cResult[3] = name;
         cResult[4] = formatToPlainStringResult;
         tmp6 = formatToPlainStringResult;
-        let obj2 = user(5048);
+        let obj2 = user(5405);
       }
-    : (user) => {
+    : function UserProfileActivityEmptyOtherUser(user) {
         user = user.user;
         let name;
         ({ guildId, channelId } = user);
         const tmp = closure_10();
-        name = name(5048).getName(guildId, channelId, user);
+        name = name(5405).getName(guildId, channelId, user);
         const intl = user(1126).intl;
-        let obj = name(5048);
+        let obj = name(5405);
         items = [user.id];
         let obj2 = {
           heading: intl.formatToPlainString(user(1126).t.sjSitP, { name }),
@@ -381,7 +395,7 @@ const memoResult = noop.memo(
         const intl2 = user(1126).intl;
         obj4.text = intl2.string(user(1126).t["g33r/P"]);
         obj4.onPress = callback;
-        obj3.children = closure_7(user(5601).Button, obj4);
+        obj3.children = closure_7(user(5375).Button, obj4);
         obj2.children = closure_7(View, obj3);
         return closure_7(closure_11, obj2);
       },
@@ -392,13 +406,13 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export const UserProfileActivityEmptyOtherUser = memoResult;
 export const UserProfileActivityEmptyCurrentUser = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function UserProfileActivityEmptyCurrentUser() {
         const cResult = c.c(6);
         const tmp4 = closure_10();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function t() {
             ActionSheetActionCreatorsDefault.hideAllActionSheets();
-            openUserSettings.openUserSettings({ screen: constants.CONNECTIONS });
+            require("openUserSettings").openUserSettings({ screen: constants.CONNECTIONS });
           };
           cResult[0] = fn;
           let first = fn;
@@ -442,11 +456,11 @@ export const UserProfileActivityEmptyCurrentUser = noop.memo(
         }
         return tmp13;
       }
-    : () => {
+    : function UserProfileActivityEmptyCurrentUser() {
         let obj = { heading: null, bodyText: null, children: null };
         const callback = noop.useCallback(() => {
           ActionSheetActionCreatorsDefault.hideAllActionSheets();
-          openUserSettings.openUserSettings({ screen: constants.CONNECTIONS });
+          require("openUserSettings").openUserSettings({ screen: constants.CONNECTIONS });
         }, []);
         const intl = util.intl;
         obj.heading = intl.string(util.t.VB6LWY);

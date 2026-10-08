@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimationPreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BurstReactionAnimationPreview(arg0) {
       let tmp = dependencyMap;
       const cResult = c.c(4);
       ({ channelId, emoji, messageId, reactionType } = arg0);
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = tmp;
       }
     }
-  : (arg0) => {
+  : function BurstReactionAnimationPreview(arg0) {
       ({ channelId, emoji, messageId, reactionType } = arg0);
       let tmp2 = null;
       if (reactionType === MessageReactionsTypes.ReactionTypes.BURST) {

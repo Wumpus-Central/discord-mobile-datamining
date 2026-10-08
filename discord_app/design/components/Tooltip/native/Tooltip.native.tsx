@@ -10,9 +10,10 @@ const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ON_PRESS_SPRING = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { position: "absolute", alignItems: "center" },
+  horizontalContainer: { flexDirection: "row" },
   textContainer: {
     paddingHorizontal: nativeDefault.space.PX_8,
     paddingVertical: nativeDefault.space.PX_4,
@@ -26,6 +27,8 @@ let obj2 = {
   arrow: null,
   bottomArrow: null,
   topArrow: null,
+  leftArrow: null,
+  rightArrow: null,
 };
 let size = {
   width: 0,
@@ -39,18 +42,20 @@ let size = {
 obj2.arrow = size;
 obj2.bottomArrow = { borderLeftWidth: 6, borderRightWidth: 6, borderTopWidth: 6 };
 obj2.topArrow = { borderLeftWidth: 6, borderRightWidth: 6, borderBottomWidth: 6 };
+obj2.leftArrow = { borderTopWidth: 6, borderBottomWidth: 6, borderRightWidth: 6 };
+obj2.rightArrow = { borderTopWidth: 6, borderBottomWidth: 6, borderLeftWidth: 6 };
 let closure_9 = createStyles.createStyles(obj2);
 const __initData = {
   code: 'function TooltipNativeTsx1(){const{withSpring,interpolateColor,pressed,backgroundColor,backgroundColorPressed,ON_PRESS_SPRING}=this.__closure;return{backgroundColor:withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,"animate-always")};}',
 };
 const __initData2 = {
-  code: 'function TooltipNativeTsx2(){const{withSpring,interpolateColor,pressed,backgroundColor,backgroundColorPressed,ON_PRESS_SPRING}=this.__closure;return{borderTopColor:withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,"animate-always"),borderBottomColor:withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,"animate-always")};}',
+  code: 'function TooltipNativeTsx2(){const{withSpring,interpolateColor,pressed,backgroundColor,backgroundColorPressed,ON_PRESS_SPRING,isHorizontal}=this.__closure;const color=withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,"animate-always");return{borderTopColor:isHorizontal?"transparent":color,borderBottomColor:isHorizontal?"transparent":color,borderLeftColor:isHorizontal?color:"transparent",borderRightColor:isHorizontal?color:"transparent"};}',
 };
 const __initData3 = {
   code: "function TooltipNativeTsx3(){const{withSpring,interpolateColor,pressed,backgroundColor,backgroundColorPressed,ON_PRESS_SPRING}=this.__closure;return{backgroundColor:withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,'animate-always')};}",
 };
 const __initData4 = {
-  code: "function TooltipNativeTsx4(){const{withSpring,interpolateColor,pressed,backgroundColor,backgroundColorPressed,ON_PRESS_SPRING}=this.__closure;return{borderTopColor:withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,'animate-always'),borderBottomColor:withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,'animate-always')};}",
+  code: "function TooltipNativeTsx4(){const{withSpring,interpolateColor,pressed,backgroundColor,backgroundColorPressed,ON_PRESS_SPRING,isHorizontal}=this.__closure;const color=withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,'animate-always');return{borderTopColor:isHorizontal?'transparent':color,borderBottomColor:isHorizontal?'transparent':color,borderLeftColor:isHorizontal?color:'transparent',borderRightColor:isHorizontal?color:'transparent'};}",
 };
 const ReactCompilerGating = fn(558);
 let obj3 = {
@@ -66,8 +71,8 @@ size = fn(2);
 let result = size.fileFinishedImporting("design/components/Tooltip/native/Tooltip.native.tsx");
 
 export const Tooltip = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const cResult = sharedValue(token1[7]).c(43);
+  ? function Tooltip(arg0) {
+      const cResult = sharedValue(token1[7]).c(48);
       ({ targetMeasurements, surfaceMeasurements, label, position, onPress } = arg0);
       closure_9();
       let obj = sharedValue(token1[7]);
@@ -78,7 +83,7 @@ export const Tooltip = ReactCompilerGating.isReactCompilerEnabled()
       const tmp6 = token;
       token1 = sharedValue(token1[9]).useToken(token(token1[5]).colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE);
       if (cResult[0] !== sharedValue) {
-        const fn = function _() {
+        const fn = function h() {
           const result = sharedValue.set(1);
         };
         cResult[0] = sharedValue;
@@ -101,30 +106,46 @@ export const Tooltip = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      let obj4 = sharedValue(token1[9]);
+      const obj4 = sharedValue(token1[9]);
       [tmp12, _slicedToArray] = noop.useState(null);
       const tmp11 = _slicedToArray(noop.useState(null), 2);
-      ({ adjustmentX, tooltipX, tooltipY } = tmp6(token1[10])(
+      ({ adjustmentX, adjustmentY, tooltipX, tooltipY } = tmp6(token1[10])(
         tmp12,
         surfaceMeasurements,
         targetMeasurements,
         position,
         4,
       ));
+      let tmp15 = tmp14;
+      if ("left" !== position) {
+        class T {
+          constructor() {
+            result = closure_0.set(0);
+            return;
+          }
+        }
+        tmp15 = "right" === position;
+      }
+      noop = tmp15;
       const tmp13 = tmp6(token1[10])(tmp12, surfaceMeasurements, targetMeasurements, position, 4);
-      const fn2 = function x() {
-        const obj = { backgroundColor: null };
-        const obj2 = spring;
-        const items = [token, token1];
-        obj.backgroundColor = obj2.withSpring(
-          ReanimatedRexport.interpolateColor(sharedValue.get(), [0, 1], items),
-          closure_8,
-          "animate-always",
-        );
-        return obj;
-      };
+      class O {
+        constructor() {
+          obj = { backgroundColor: null };
+          obj2 = closure_0(closure_2[11]);
+          obj3 = closure_0(closure_2[8]);
+          items = [,];
+          items[0] = closure_1;
+          items[1] = closure_2;
+          obj.backgroundColor = obj2.withSpring(
+            obj3.interpolateColor(closure_0.get(), [0, 1], items),
+            closure_8,
+            "animate-always",
+          );
+          return obj;
+        }
+      }
       const tmpResult = sharedValue(token1[8]);
-      fn2.__closure = {
+      O.__closure = {
         withSpring: sharedValue(token1[11]).withSpring,
         interpolateColor: sharedValue(token1[8]).interpolateColor,
         pressed: sharedValue,
@@ -132,9 +153,9 @@ export const Tooltip = ReactCompilerGating.isReactCompilerEnabled()
         backgroundColorPressed: token1,
         ON_PRESS_SPRING,
       };
-      fn2.__workletHash = 15323606626185;
-      fn2.__initData = __initData;
-      const animatedStyle = tmpResult.useAnimatedStyle(fn2);
+      O.__workletHash = 15323606626185;
+      O.__initData = __initData;
+      const animatedStyle = tmpResult.useAnimatedStyle(O);
       const obj5 = {
         withSpring: sharedValue(token1[11]).withSpring,
         interpolateColor: sharedValue(token1[8]).interpolateColor,
@@ -143,72 +164,95 @@ export const Tooltip = ReactCompilerGating.isReactCompilerEnabled()
         backgroundColorPressed: token1,
         ON_PRESS_SPRING,
       };
-      class I {
-        constructor() {
-          obj = { borderTopColor: null, borderBottomColor: null };
-          obj2 = closure_0(closure_2[11]);
-          obj3 = closure_0(closure_2[8]);
-          items = [,];
-          items[0] = closure_1;
-          items[1] = closure_2;
-          obj.borderTopColor = obj2.withSpring(
-            obj3.interpolateColor(closure_0.get(), [0, 1], items),
-            closure_8,
-            "animate-always",
-          );
-          obj4 = closure_0(closure_2[11]);
-          obj5 = closure_0(closure_2[8]);
-          items1 = [,];
-          items1[0] = closure_1;
-          items1[1] = closure_2;
-          obj.borderBottomColor = obj4.withSpring(
-            obj5.interpolateColor(closure_0.get(), [0, 1], items1),
-            closure_8,
-            "animate-always",
-          );
-          return obj;
+      const fn2 = function v() {
+        const obj = spring;
+        const items = [token, token1];
+        const withSpringResult = obj.withSpring(
+          ReanimatedRexport.interpolateColor(sharedValue.get(), [0, 1], items),
+          closure_8,
+          "animate-always",
+        );
+        let str = "transparent";
+        let str2 = "transparent";
+        if (!closure_4) {
+          str2 = withSpringResult;
         }
-      }
+        const obj3 = { borderTopColor: str2, borderBottomColor: null, borderLeftColor: null, borderRightColor: null };
+        let tmp3 = str;
+        if (!closure_4) {
+          tmp3 = withSpringResult;
+        }
+        obj3.borderBottomColor = tmp3;
+        let tmp4 = str;
+        if (closure_4) {
+          tmp4 = withSpringResult;
+        }
+        obj3.borderLeftColor = tmp4;
+        if (closure_4) {
+          str = withSpringResult;
+        }
+        obj3.borderRightColor = str;
+        return obj3;
+      };
       const tmpResult2 = sharedValue(token1[8]);
-      I.__closure = {
+      fn2.__closure = {
         withSpring: sharedValue(token1[11]).withSpring,
         interpolateColor: sharedValue(token1[8]).interpolateColor,
         pressed: sharedValue,
         backgroundColor: token,
         backgroundColorPressed: token1,
         ON_PRESS_SPRING,
+        isHorizontal: tmp15,
       };
-      I.__workletHash = 6345133227978;
-      I.__initData = __initData2;
-      const animatedStyle1 = tmpResult2.useAnimatedStyle(I);
+      fn2.__workletHash = 4511400204486;
+      fn2.__initData = __initData2;
+      const animatedStyle1 = tmpResult2.useAnimatedStyle(fn2);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        class T {
-          constructor() {
-            result = closure_0.set(0);
+        class I {
+          constructor(arg0) {
+            nativeEvent = arg0.nativeEvent;
+            size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
+            tmp = closure_3(size);
             return;
           }
         }
-        cResult[4] = tmp17;
+        cResult[4] = I;
       } else {
-        class T {
-          constructor() {
-            result = closure_0.set(0);
+        class I {
+          constructor(arg0) {
+            nativeEvent = arg0.nativeEvent;
+            size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
+            tmp = closure_3(size);
+            return;
+          }
+        }
+      }
+      if (tmp15) {
+        class I {
+          constructor(arg0) {
+            nativeEvent = arg0.nativeEvent;
+            size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
+            tmp = closure_3(size);
             return;
           }
         }
       }
       if (null != tmp12) {
-        class T {
-          constructor() {
-            result = closure_0.set(0);
+        class I {
+          constructor(arg0) {
+            nativeEvent = arg0.nativeEvent;
+            size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
+            tmp = closure_3(size);
             return;
           }
         }
       }
       if (cResult[5] === 0) {
-        class T {
-          constructor() {
-            result = closure_0.set(0);
+        class I {
+          constructor(arg0) {
+            nativeEvent = arg0.nativeEvent;
+            size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
+            tmp = closure_3(size);
             return;
           }
         }
@@ -225,24 +269,24 @@ export const Tooltip = ReactCompilerGating.isReactCompilerEnabled()
         backgroundColor: token,
         backgroundColorPressed: token1,
         ON_PRESS_SPRING,
+        isHorizontal: tmp15,
       };
     }
-  : (targetMeasurements) => {
+  : function Tooltip(targetMeasurements) {
       ({ surfaceMeasurements, label, position, onPress } = targetMeasurements);
       let sharedValue;
       let token;
       let token1;
       _slicedToArray = undefined;
+      noop = undefined;
       const tmp = closure_9();
-      let num = 0;
       sharedValue = sharedValue(token1[8]).useSharedValue(0);
       let obj = sharedValue(token1[8]);
-      const tmp2 = sharedValue;
       token = sharedValue(token1[9]).useToken(token(token1[5]).colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT);
       let obj2 = sharedValue(token1[9]);
       token1 = sharedValue(token1[9]).useToken(token(token1[5]).colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE);
       let items = [sharedValue];
-      let items1 = [sharedValue];
+      const items1 = [sharedValue];
       const callback = noop.useCallback(() => {
         const result = sharedValue.set(1);
       }, items);
@@ -251,16 +295,16 @@ export const Tooltip = ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       let obj3 = sharedValue(token1[9]);
       [tmp11, c3] = noop.useState(null);
-      const tmp10 = _slicedToArray(noop.useState(null), 2);
-      ({ adjustmentX, tooltipX, tooltipY } = token(token1[10])(
-        tmp11,
-        surfaceMeasurements,
-        targetMeasurements.targetMeasurements,
-        position,
-        4,
-      ));
       const tmp12 = token(token1[10])(tmp11, surfaceMeasurements, targetMeasurements.targetMeasurements, position, 4);
-      class P {
+      ({ adjustmentX, adjustmentY } = tmp12);
+      let tmp14 = tmp13;
+      ({ tooltipX, tooltipY } = tmp12);
+      if ("left" !== position) {
+        tmp14 = "right" === position;
+      }
+      noop = tmp14;
+      const tmp10 = _slicedToArray(noop.useState(null), 2);
+      class R {
         constructor() {
           obj = { backgroundColor: null };
           obj2 = closure_0(closure_2[11]);
@@ -276,53 +320,7 @@ export const Tooltip = ReactCompilerGating.isReactCompilerEnabled()
           return obj;
         }
       }
-      let obj4 = sharedValue(token1[8]);
-      P.__closure = {
-        withSpring: sharedValue(token1[11]).withSpring,
-        interpolateColor: sharedValue(token1[8]).interpolateColor,
-        pressed: sharedValue,
-        backgroundColor: token,
-        backgroundColorPressed: token1,
-        ON_PRESS_SPRING,
-      };
-      P.__workletHash = 17276673117291;
-      P.__initData = __initData3;
-      const animatedStyle = obj4.useAnimatedStyle(P);
-      const obj5 = {
-        withSpring: sharedValue(token1[11]).withSpring,
-        interpolateColor: sharedValue(token1[8]).interpolateColor,
-        pressed: sharedValue,
-        backgroundColor: token,
-        backgroundColorPressed: token1,
-        ON_PRESS_SPRING,
-      };
-      class R {
-        constructor() {
-          obj = { borderTopColor: null, borderBottomColor: null };
-          obj2 = closure_0(closure_2[11]);
-          obj3 = closure_0(closure_2[8]);
-          items = [,];
-          items[0] = closure_1;
-          items[1] = closure_2;
-          obj.borderTopColor = obj2.withSpring(
-            obj3.interpolateColor(closure_0.get(), [0, 1], items),
-            closure_8,
-            "animate-always",
-          );
-          obj4 = closure_0(closure_2[11]);
-          obj5 = closure_0(closure_2[8]);
-          items1 = [,];
-          items1[0] = closure_1;
-          items1[1] = closure_2;
-          obj.borderBottomColor = obj4.withSpring(
-            obj5.interpolateColor(closure_0.get(), [0, 1], items1),
-            closure_8,
-            "animate-always",
-          );
-          return obj;
-        }
-      }
-      const obj6 = sharedValue(token1[8]);
+      const tmp2Result = sharedValue(token1[8]);
       R.__closure = {
         withSpring: sharedValue(token1[11]).withSpring,
         interpolateColor: sharedValue(token1[8]).interpolateColor,
@@ -331,10 +329,67 @@ export const Tooltip = ReactCompilerGating.isReactCompilerEnabled()
         backgroundColorPressed: token1,
         ON_PRESS_SPRING,
       };
-      R.__workletHash = 5305172198540;
-      R.__initData = __initData4;
-      const animatedStyle1 = obj6.useAnimatedStyle(R);
-      const obj8 = {
+      R.__workletHash = 17276673117291;
+      R.__initData = __initData3;
+      const animatedStyle = tmp2Result.useAnimatedStyle(R);
+      const obj4 = {
+        withSpring: sharedValue(token1[11]).withSpring,
+        interpolateColor: sharedValue(token1[8]).interpolateColor,
+        pressed: sharedValue,
+        backgroundColor: token,
+        backgroundColorPressed: token1,
+        ON_PRESS_SPRING,
+      };
+      class P {
+        constructor() {
+          obj = closure_0(closure_2[11]);
+          obj2 = closure_0(closure_2[8]);
+          items = [,];
+          items[0] = closure_1;
+          items[1] = closure_2;
+          withSpringResult = obj.withSpring(
+            obj2.interpolateColor(closure_0.get(), [0, 1], items),
+            closure_8,
+            "animate-always",
+          );
+          tmp2 = closure_4;
+          str = "transparent";
+          str2 = "transparent";
+          if (!closure_4) {
+            str2 = withSpringResult;
+          }
+          obj1 = { borderTopColor: str2, borderBottomColor: null, borderLeftColor: null, borderRightColor: null };
+          tmp3 = str;
+          if (!tmp2) {
+            tmp3 = withSpringResult;
+          }
+          obj1.borderBottomColor = tmp3;
+          tmp4 = str;
+          if (tmp2) {
+            tmp4 = withSpringResult;
+          }
+          obj1.borderLeftColor = tmp4;
+          if (tmp2) {
+            str = withSpringResult;
+          }
+          obj1.borderRightColor = str;
+          return obj1;
+        }
+      }
+      const tmp2Result2 = sharedValue(token1[8]);
+      P.__closure = {
+        withSpring: sharedValue(token1[11]).withSpring,
+        interpolateColor: sharedValue(token1[8]).interpolateColor,
+        pressed: sharedValue,
+        backgroundColor: token,
+        backgroundColorPressed: token1,
+        ON_PRESS_SPRING,
+        isHorizontal: tmp14,
+      };
+      P.__workletHash = 17324086721760;
+      P.__initData = __initData4;
+      const animatedStyle1 = tmp2Result2.useAnimatedStyle(P);
+      const obj6 = {
         disabled: null == onPress,
         onPress,
         onLayout(nativeEvent) {
@@ -349,48 +404,76 @@ export const Tooltip = ReactCompilerGating.isReactCompilerEnabled()
         style: null,
         children: null,
       };
-      const items2 = [tmp.container];
+      const items2 = [tmp.container, ,];
+      let horizontalContainer;
+      if (tmp14) {
+        horizontalContainer = tmp.horizontalContainer;
+      }
+      items2[1] = horizontalContainer;
+      let num = 0;
       if (null != tmp11) {
         num = 1;
       }
-      items2[1] = { opacity: num, top: tooltipY, left: tooltipX };
-      obj8.style = items2;
-      let tmp17 = "bottom" === position;
-      if (tmp17) {
-        const obj9 = { style: null };
+      items2[2] = { opacity: num, top: tooltipY, left: tooltipX };
+      obj6.style = items2;
+      if ("bottom" === position) {
+        const obj7 = { style: null };
         const items3 = [, , ,];
-        ({ arrow: arr4[0], topArrow: arr4[1] } = tmp);
-        const obj10 = { left: -adjustmentX };
-        items3[2] = obj10;
+        ({ arrow: arr5[0], topArrow: arr5[1] } = tmp);
+        const obj8 = { left: -adjustmentX };
+        items3[2] = obj8;
         items3[3] = animatedStyle1;
-        obj9.style = items3;
-        tmp17 = closure_6(tmp5(tmp3[8]).View, obj9);
+        obj7.style = items3;
+        let tmp20 = closure_6(tmp5(tmp3[8]).View, obj7);
+      } else {
+        tmp20 = null;
+        if ("right" === position) {
+          const obj9 = { style: null };
+          const items4 = [, , ,];
+          ({ arrow: arr4[0], leftArrow: arr4[1] } = tmp);
+          const obj10 = { top: -adjustmentY };
+          items4[2] = obj10;
+          items4[3] = animatedStyle1;
+          obj9.style = items4;
+          tmp20 = closure_6(tmp5(tmp3[8]).View, obj9);
+        }
       }
-      const items4 = [tmp17, ,];
+      const items5 = [tmp20, ,];
       const obj11 = {
         style: null,
-        children: closure_6(tmp2(token1[12]).Text, {
+        children: closure_6(sharedValue(token1[12]).Text, {
           style: tmp.text,
           variant: "text-xs/bold",
           color: "text-overlay-light",
           children: label,
         }),
       };
-      const items5 = [tmp.textContainer, animatedStyle];
-      obj11.style = items5;
-      items4[1] = closure_6(token(token1[8]).View, obj11);
-      let tmp19Result = "top" === position;
-      if (tmp19Result) {
+      const items6 = [tmp.textContainer, animatedStyle];
+      obj11.style = items6;
+      items5[1] = closure_6(token(token1[8]).View, obj11);
+      if ("top" === position) {
         const obj13 = { style: null };
-        const items6 = [, , ,];
-        ({ arrow: arr7[0], bottomArrow: arr7[1] } = tmp);
+        const items7 = [, , ,];
+        ({ arrow: arr9[0], bottomArrow: arr9[1] } = tmp);
         const obj14 = { left: -adjustmentX };
-        items6[2] = obj14;
-        items6[3] = animatedStyle1;
-        obj13.style = items6;
-        tmp19Result = closure_6(tmp5(tmp3[8]).View, obj13);
+        items7[2] = obj14;
+        items7[3] = animatedStyle1;
+        obj13.style = items7;
+        let tmp23Result = closure_6(tmp5(tmp3[8]).View, obj13);
+      } else {
+        tmp23Result = null;
+        if (tmp13) {
+          const obj15 = { style: null };
+          const items8 = [, , ,];
+          ({ arrow: arr8[0], rightArrow: arr8[1] } = tmp);
+          const obj16 = { top: -adjustmentY };
+          items8[2] = obj16;
+          items8[3] = animatedStyle1;
+          obj15.style = items8;
+          tmp23Result = closure_6(tmp5(tmp3[8]).View, obj15);
+        }
       }
-      items4[2] = tmp19Result;
-      obj8.children = items4;
-      return closure_7(Pressable, obj8);
+      items5[2] = tmp23Result;
+      obj6.children = items5;
+      return closure_7(Pressable, obj6);
     };

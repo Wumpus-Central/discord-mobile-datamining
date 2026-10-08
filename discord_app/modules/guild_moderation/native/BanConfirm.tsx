@@ -113,7 +113,7 @@ items[6] = {
     return intl.string(util.t.FA7IUk);
   }
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj8 = { container: null, iconLabelBlock: null, iconStyles: null, blurb: null, redText: null, errorText: null };
 let obj7 = {
   value: 7 * DurationsDefault.Seconds.DAY,
@@ -139,7 +139,7 @@ let obj15 = { marginBottom: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_moderation/native/BanConfirm.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function BanConfirm(guildId) {
   const cResult = guildId(onBan[11]).c(22);
   guildId = guildId.guildId;
   const userId = guildId.userId;
@@ -286,7 +286,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
   cResult[13] = stateFromStores1;
   cResult[14] = M;
   const tmp21 = stateFromStores(stateFromStores1.useState(V), 2);
-}) : ((arg0) => {
+}) : (function BanConfirm(arg0) {
   ({ guildId: require, userId: importDefault, onBan } = arg0);
   let stateFromStores1;
   c7 = undefined;
@@ -316,7 +316,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
       const obj5 = { paddingHorizontal: require("native").space.PX_24, paddingBottom: insets.bottom };
       obj4.contentContainerStyle = obj5;
       const obj6 = { style: tmp.iconLabelBlock, children: null };
-      const obj7 = { style: tmp.iconStyles, source: require("../../../../_runtime/metro/11477__.js"), resizeMode: "contain" };
+      const obj7 = { style: tmp.iconStyles, source: require("../../../../_runtime/metro/11461__.js"), resizeMode: "contain" };
       const items4 = [closure_10(ref, obj7), , ];
       const obj8 = { style: tmp.redText, variant: "text-md/semibold", children: null };
       const intl = require("util").intl;

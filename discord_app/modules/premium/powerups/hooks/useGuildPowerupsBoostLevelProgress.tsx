@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostLevelProgress.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGuildPowerupBoostLevelProgress(arg0) {
       _require = arg0;
       const cResult = require("c").c(6);
       const obj = require("c");
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       if (cResult[4] !== arg0) {
-        class G {
+        class P {
           constructor() {
             guild = closure_3.getGuild(closure_0);
             hasItem = undefined;
@@ -69,9 +69,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[4] = arg0;
-        cResult[5] = G;
+        cResult[5] = P;
       } else {
-        class G {
+        class P {
           constructor() {
             guild = closure_3.getGuild(closure_0);
             hasItem = undefined;
@@ -86,8 +86,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = require("initialize");
       let num7 = 0;
-      if (!tmpResult2.useStateFromStores(tmp9, G)) {
-        class G {
+      if (!tmpResult2.useStateFromStores(tmp9, P)) {
+        class P {
           constructor() {
             guild = closure_3.getGuild(closure_0);
             hasItem = undefined;
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return num7 + tmp4.available;
     }
-  : (arg0) => {
+  : function useGuildPowerupBoostLevelProgress(arg0) {
       _require = arg0;
       const tmp = useGuildPowerupsBoostCountDefault(arg0);
       const items = [GuildStore];

@@ -9,7 +9,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import GuildScheduledEventStore from "GuildScheduledEventStore.tsx";
 
 require = fn;
-const GuildScheduledEventsConstants = fn(2057);
+const GuildScheduledEventsConstants = fn(2069);
 ({
   ENTITY_TYPES_REQUIRED_CHANNEL_ID: metroRequire,
   ENTITY_TYPES_REQUIRED_ENTITY_METADATA: closure_7,
@@ -25,7 +25,7 @@ export default {
   startEvent(arg0, arg1) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: v65535.GUILD_EVENT(arg1, arg0),
+      url: collapsed.GUILD_EVENT(arg1, arg0),
       body: { status: constants.ACTIVE },
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
@@ -34,7 +34,7 @@ export default {
   endEvent(arg0, arg1) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: v65535.GUILD_EVENT(arg1, arg0),
+      url: collapsed.GUILD_EVENT(arg1, arg0),
       body: { status: constants.COMPLETED },
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
@@ -71,7 +71,7 @@ export default {
       recurrence_rule: EditGuildEventUtils.recurrenceRuleToServer(entityType.recurrenceRule),
     };
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: v65535.GUILD_EVENT(arg2, arg0), body: obj2, rejectWithError: null };
+    const request = { url: collapsed.GUILD_EVENT(arg2, arg0), body: obj2, rejectWithError: null };
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     return HTTP.patch(request);
   },
@@ -89,7 +89,7 @@ export default {
       recurrence_rule: EditGuildEventUtils.recurrenceRuleToServer(name.recurrenceRule),
     };
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: v65535.GUILD_EVENTS_FOR_GUILD(id), body: obj, rejectWithError: null };
+    const request = { url: collapsed.GUILD_EVENTS_FOR_GUILD(id), body: obj, rejectWithError: null };
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     return HTTP.post(request);
   },
@@ -97,9 +97,9 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     return (async () => {
-      await tmp5(5329).httpGetWithCountryCodeQuery({
+      await tmp5(5640).httpGetWithCountryCodeQuery({
         url: closure_1_10.GUILD_EVENT(tmp5, tmp2),
-        rejectWithError: tmp5(1282).rejectWithMigratedError(),
+        rejectWithError: tmp5(1294).rejectWithMigratedError(),
       });
       const body = value.body;
       tmp2(584).dispatch({ type: "FETCH_GUILD_EVENT", guildScheduledEvent: body });
@@ -109,9 +109,9 @@ export default {
   fetchGuildEventsForGuild(guild_id) {
     closure_0 = guild_id;
     return (async () => {
-      await tmp5(5329).httpGetWithCountryCodeQuery({
+      await tmp5(5640).httpGetWithCountryCodeQuery({
         url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5),
-        rejectWithError: tmp5(1282).rejectWithMigratedError(),
+        rejectWithError: tmp5(1294).rejectWithMigratedError(),
       });
       const body = value.body;
       tmp2(584).dispatch({ type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: closure_129_0, guildScheduledEvents: body });
@@ -147,7 +147,7 @@ export default {
   cancelGuildEvent(arg0, arg1) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: v65535.GUILD_EVENT(arg1, arg0),
+      url: collapsed.GUILD_EVENT(arg1, arg0),
       body: { status: constants.CANCELED },
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
@@ -155,7 +155,7 @@ export default {
   },
   deleteGuildEvent(arg0, c1) {
     const HTTP = HTTPUtils.HTTP;
-    const obj = { url: v65535.GUILD_EVENT(c1, arg0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const obj = { url: collapsed.GUILD_EVENT(c1, arg0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.del(obj);
   },
   getGuildEventsForCurrentUser(arg0) {
@@ -186,13 +186,13 @@ export default {
               return obj3;
             } else {
               let body;
-              const HTTP = tmp5(1282).HTTP;
+              const HTTP = tmp5(1294).HTTP;
               const request = { url: constants.USER_GUILD_EVENTS, query: null, rejectWithError: null };
               const obj4 = { guild_ids: null };
               const items = [tmp5];
               obj4.guild_ids = items;
               request.query = obj4;
-              request.rejectWithError = tmp5(1282).rejectWithMigratedError();
+              request.rejectWithError = tmp5(1294).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
               const obj5 = { value: HTTP.get(request), done: false };
@@ -569,7 +569,7 @@ export default {
               closure_128_0 = undefined;
               if (null != tmp5) {
                 if (null != closure_2) {
-                  const HTTP = tmp5(1282).HTTP;
+                  const HTTP = tmp5(1294).HTTP;
                   const request = {
                     url: closure_1_10.GUILD_EVENT_USERS(closure_2, tmp5, tmp2),
                     query: null,
@@ -577,7 +577,7 @@ export default {
                   };
                   const obj4 = { limit, with_member: true };
                   request.query = obj4;
-                  request.rejectWithError = tmp5(1282).rejectWithMigratedError();
+                  request.rejectWithError = tmp5(1294).rejectWithMigratedError();
                   dependencyMap = 1;
                   c3 = 1;
                   const obj5 = { value: HTTP.get(request), done: false };
@@ -620,7 +620,7 @@ export default {
     ({ original_scheduled_start_time, scheduled_start_time, scheduled_end_time, is_canceled } = arg0);
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: v65535.GUILD_EVENT_EXCEPTIONS(guild_id, id),
+      url: collapsed.GUILD_EVENT_EXCEPTIONS(guild_id, id),
       body: { original_scheduled_start_time, scheduled_start_time, scheduled_end_time, is_canceled },
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
@@ -630,7 +630,7 @@ export default {
     ({ scheduled_start_time, scheduled_end_time, is_canceled } = arg0);
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: v65535.GUILD_EVENT_EXCEPTION(guild_id, id, c2),
+      url: collapsed.GUILD_EVENT_EXCEPTION(guild_id, id, c2),
       body: { scheduled_start_time, scheduled_end_time, is_canceled },
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
@@ -639,7 +639,7 @@ export default {
   deleteGuildEventException(guild_id, id, event_exception_id) {
     const HTTP = HTTPUtils.HTTP;
     const obj = {
-      url: v65535.GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id),
+      url: collapsed.GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id),
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
     return HTTP.del(obj);

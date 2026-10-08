@@ -10,11 +10,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(6714);
+const Constants = fn(6891);
 ({ AVATAR_CONTAINER_SIZE, AVATAR_CUSTOM_STATUS_GAP } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   statusPreviewContainer: {
     flexDirection: "row",
@@ -41,7 +41,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCustomStatusActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function UserProfileCustomStatusActionSheet(user) {
       const cResult = user(576).c(26);
       user = user.user;
       ({ previewEmoji, previewText } = user);
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== user.id) {
-        const fn = function o() {
+        const fn = function u() {
           const currentUser = UserStore.getCurrentUser();
           let id;
           if (currentUser != null) {
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = stateFromStores;
       cResult[7] = stringResult;
     }
-  : (user) => {
+  : function UserProfileCustomStatusActionSheet(user) {
       user = user.user;
       ({ guildId, channelId, previewEmoji, previewText } = user);
       const tmp = closure_7();

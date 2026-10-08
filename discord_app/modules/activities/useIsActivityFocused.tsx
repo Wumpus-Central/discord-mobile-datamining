@@ -27,7 +27,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useIsActivityFocused.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsActivityFocused(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function s() {
+        const fn = function o() {
           const selectedParticipant = ChannelRTCStore.getSelectedParticipant(closure_0);
           const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
           let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7);
     }
-  : (arg0) => {
+  : function useIsActivityFocused(arg0) {
       _require = arg0;
       const items = [ChannelRTCStore, EmbeddedActivitiesStore];
       return require("initialize").useStateFromStores(items, () => {

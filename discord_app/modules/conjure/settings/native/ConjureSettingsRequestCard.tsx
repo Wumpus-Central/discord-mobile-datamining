@@ -7,41 +7,22 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const ConjureSettingsSheetDefault = ConjureSettingsSheet;
 
 require = fn;
-const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = {
-  card: {
-    backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
-    borderWidth: 1,
-    borderColor: nativeDefault.colors.BORDER_SUBTLE,
-    borderRadius: nativeDefault.radii.md,
-    padding: nativeDefault.space.PX_12,
-    marginTop: nativeDefault.space.PX_8,
-    gap: nativeDefault.space.PX_8,
-  },
-};
-let closure_7 = createStyles.createStyles(obj2);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(5090);
+let obj2 = { card: { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 } };
+let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = {
-  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
-  borderWidth: 1,
-  borderColor: nativeDefault.colors.BORDER_SUBTLE,
-  borderRadius: nativeDefault.radii.md,
-  padding: nativeDefault.space.PX_12,
-  marginTop: nativeDefault.space.PX_8,
-  gap: nativeDefault.space.PX_8,
-};
+let obj3 = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/settings/native/ConjureSettingsRequestCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (projectId) => {
+  ? function ConjureSettingsRequestCard(projectId) {
       const cResult = projectId(576).c(16);
       projectId = projectId.projectId;
       let note = projectId.request;
-      const tmp4 = closure_7();
+      const tmp4 = closure_6();
       if (cResult[0] === projectId) {
         if (cResult[1] === note.keys) {
           if (cResult[2] === note.note) {
@@ -51,8 +32,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
             const intl = tmp(1126).intl;
-            obj2.children = intl.string(note(3753)["jZjP+I"]);
-            const tmp10 = closure_5(tmp(4892).Text, obj2);
+            obj2.children = intl.string(note(3827)["jZjP+I"]);
+            const tmp10 = closure_4(tmp(5086).Text, obj2);
             cResult[4] = tmp10;
             let tmp7 = tmp10;
           } else {
@@ -61,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[5] !== note.note) {
             if (null == note.note) {
               const intl2 = tmp(1126).intl;
-              let note2 = intl2.string(note(3753).XuOf5s);
+              let note2 = intl2.string(note(3827).XuOf5s);
               note = note.note;
               cResult[5] = note;
               cResult[6] = note2;
@@ -70,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             if (cResult[7] !== cResult[6]) {
               const obj3 = { variant: "text-sm/normal", color: "text-default", children: tmp11 };
-              const tmp17 = closure_5(tmp(4892).Text, obj3);
+              const tmp17 = closure_4(tmp(5086).Text, obj3);
               cResult[7] = tmp11;
               cResult[8] = tmp17;
               let tmp15 = tmp17;
@@ -80,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol2 = Symbol;
             if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
               const intl3 = tmp(1126).intl;
-              const stringResult = intl3.string(note(3753).d49riY);
+              const stringResult = intl3.string(note(3827).d49riY);
               cResult[9] = stringResult;
               let tmp18 = stringResult;
             } else {
@@ -88,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[10] !== tmp5) {
               const obj4 = { variant: "secondary", size: "sm", onPress: tmp5, text: tmp18 };
-              const tmp23 = closure_5(tmp(5601).Button, obj4);
+              const tmp23 = closure_4(tmp(5375).Button, obj4);
               cResult[10] = tmp5;
               cResult[11] = tmp23;
               let tmp21 = tmp23;
@@ -106,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj5 = { style: tmp4.card, children: null };
             const items = [tmp7, tmp15, tmp21];
             obj5.children = items;
-            const tmp27 = closure_6(View, obj5);
+            const tmp27 = closure_5(note(16948), obj5);
             cResult[12] = tmp4.card;
             cResult[13] = tmp15;
             cResult[14] = tmp21;
@@ -115,9 +96,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn = function o() {
+      const fn = function n() {
         const obj2 = {
-          content: hasOwnProperty(ConjureSettingsSheetDefault, {
+          content: React4(ConjureSettingsSheetDefault, {
             projectId,
             scopeKeys: note.keys,
             note: note.note,
@@ -135,14 +116,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       const obj = projectId(576);
     }
-  : (projectId) => {
+  : function ConjureSettingsRequestCard(projectId) {
       projectId = projectId.projectId;
       const request = projectId.request;
       const items = [projectId, request];
-      const obj = { style: closure_7().card, children: null };
       const callback = noop.useCallback(() => {
         const obj2 = {
-          content: hasOwnProperty(ConjureSettingsSheetDefault, {
+          content: React4(ConjureSettingsSheetDefault, {
             projectId,
             scopeKeys: request.keys,
             note: request.note,
@@ -153,24 +133,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         ActionSheetActionCreators.showActionSheet(obj2);
       }, items);
+      const obj = { style: closure_6().card, children: null };
+      const tmp = closure_6();
       let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
       const intl = projectId(1126).intl;
-      obj2.children = intl.string(request(3753)["jZjP+I"]);
-      const items1 = [closure_5(projectId(4892).Text, obj2), ,];
+      obj2.children = intl.string(request(3827)["jZjP+I"]);
+      const items1 = [closure_4(projectId(5086).Text, obj2), ,];
       if (null != request.note) {
         if ("" !== request.note) {
           let note = request.note;
         }
         const obj3 = { variant: "text-sm/normal", color: "text-default", children: note };
-        items1[1] = closure_5(tmp9, obj3);
+        items1[1] = closure_4(tmp9, obj3);
         const obj4 = { variant: "secondary", size: "sm", onPress: callback, text: null };
-        const intl3 = tmp6(1126).intl;
-        obj4.text = intl3.string(tmp8(3753).d49riY);
-        items1[2] = closure_5(tmp6(5601).Button, obj4);
+        const intl3 = tmp8(1126).intl;
+        obj4.text = intl3.string(tmp4(3827).d49riY);
+        items1[2] = closure_4(tmp8(5375).Button, obj4);
         obj.children = items1;
-        return closure_6(View, obj);
+        return closure_5(tmp6, obj);
       }
-      const intl2 = tmp6(1126).intl;
-      note = intl2.string(tmp8(3753).XuOf5s);
-      const tmp = closure_7();
+      const intl2 = tmp8(1126).intl;
+      note = intl2.string(tmp4(3827).XuOf5s);
+      tmp6 = request(16948);
     };

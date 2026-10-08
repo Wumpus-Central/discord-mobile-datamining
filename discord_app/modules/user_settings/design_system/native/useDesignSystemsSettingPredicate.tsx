@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useDesignSystemsSettingPredicate = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDesignSystemsSettingPredicate() {
       let staffOrDeveloperSettingPredicate =
         useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
       if (!staffOrDeveloperSettingPredicate) {
@@ -16,7 +16,7 @@ export const useDesignSystemsSettingPredicate = ReactCompilerGating.isReactCompi
       }
       return staffOrDeveloperSettingPredicate;
     }
-  : () => {
+  : function useDesignSystemsSettingPredicate() {
       let staffOrDeveloperSettingPredicate =
         useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
       if (!staffOrDeveloperSettingPredicate) {

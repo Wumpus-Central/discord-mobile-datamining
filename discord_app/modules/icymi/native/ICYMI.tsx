@@ -5,7 +5,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import ChannelTypes from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import client_themes_ClientThemesUtils from "../../client_themes/native/ClientThemesUtils.tsx";
 import useColorThemeBackgroundDefault from "../../client_themes/native/useColorThemeBackground.tsx";
@@ -13,13 +13,13 @@ import CircleInformationIcon from "../../../design/components/Icon/native/redesi
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import useIsWindowLargeDefault from "../../screen/native/useIsWindowLarge.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import ICYMITypes from "../ICYMITypes.tsx";
 import ICYMIActionCreatorsDefault from "../ICYMIActionCreators.tsx";
+import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
 import FiltersHorizontalIcon from "../../../design/components/Icon/native/redesign/generated/FiltersHorizontalIcon.tsx";
 import notifications_Notifications from "../../main_tabs_v2/native/tabs/notifications/Notifications.tsx";
 import BackIconWithBadge from "../../main_tabs_v2/native/shared_components/BackIconWithBadge.tsx";
@@ -142,7 +142,7 @@ function ICYMI(inNestedNavigator) {
       hasOpenedEnoughTimesResult = ICYMIStore.hasOpenedEnoughTimes();
     }
     if (hasOpenedEnoughTimesResult) {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16459, dependencyMap.paths), "ICYMIFeedbackSheet", {});
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16719, dependencyMap.paths), "ICYMIFeedbackSheet", {});
     }
   }, items6);
   const ref = handleOnRefresh.useRef(null);
@@ -188,7 +188,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       let obj = {
         scrollToTop() {
-          isFocused(7505).showForLaterModal(isFocused(7506).SavedMessageSortTypes.BOOKMARK);
+          isFocused(12656).showForLaterModal(isFocused(9633).SavedMessageSortTypes.BOOKMARK);
         },
       };
       ref1.current = obj;
@@ -372,11 +372,11 @@ function keyExtractor(id) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, RefreshControl: metroRequire } = get_ActivityIndicator);
-let closure_12 = fn(16433).NUM_GUILDS_EXTENDED_ONBOARDING;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+let closure_12 = fn(16693).NUM_GUILDS_EXTENDED_ONBOARDING;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_17 = createStyles.createStyles((paddingTop) => {
   const obj = {
     containerOuterTablet: {
@@ -389,7 +389,7 @@ let closure_17 = createStyles.createStyles((paddingTop) => {
   };
   return obj;
 });
-const createICYMIStyles = fn(16434);
+const createICYMIStyles = fn(16694);
 let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = {
     container: { flex: 1, flexShrink: 1, flexGrow: 1 },
@@ -483,7 +483,7 @@ let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
 });
 let ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function InfoButton() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = {
@@ -512,8 +512,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      state(IconButton.IconButton, {
+  : function InfoButton() {
+      return state(IconButton.IconButton, {
         accessibilityLabel: "button",
         variant: "tertiary",
         size: "sm",
@@ -531,9 +531,10 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           require("NativeICYMIUtils").pushICYMIInfoModal({ extendedOnboarding: true });
         },
       });
+    };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ICYMIHeaderTextWrapper() {
       const cResult = c.c(4);
       const tmp4 = closure_18();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -577,7 +578,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp13;
     }
-  : () => {
+  : function ICYMIHeaderTextWrapper() {
       const tmp = closure_18();
       return state(hasOwnProperty, {
         style: closure_18().headerText,
@@ -605,7 +606,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let closure_22 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (inNestedNavigator) => {
+    ? function Header(inNestedNavigator) {
         const cResult = c.c(24);
         inNestedNavigator = inNestedNavigator.inNestedNavigator;
         const tmp4 = closure_18();
@@ -741,7 +742,7 @@ let closure_22 = noop.memo(
         obj9.children = tmp14Result;
         state(Pressables.PressableOpacity, obj9);
       }
-    : (inNestedNavigator) => {
+    : function Header(inNestedNavigator) {
         inNestedNavigator = inNestedNavigator.inNestedNavigator;
         const tmp = closure_18();
         let obj = dependencyMap;
@@ -794,7 +795,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/ICYMI.tsx");
 
 export const ICYMITab = ReactCompilerGating.isReactCompilerEnabled()
-  ? (route) => {
+  ? function ICYMITab(route) {
       const cResult = c.c(16);
       route = route.route;
       const tmp5 = useColorThemeBackgroundDefault();
@@ -897,7 +898,7 @@ export const ICYMITab = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj8;
       const tmpResult = initialize;
     }
-  : (route) => {
+  : function ICYMITab(route) {
       route = route.route;
       _require = undefined;
       importDefault = undefined;

@@ -8,7 +8,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/safe_area/useSafeAreaInsets.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSafeAreaInsets() {
       const cResult = c.c(2);
       const appEntryKey = AppEntryKeyContext.useAppEntryKey();
       if (cResult[0] !== appEntryKey) {
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return SafeAreaStoreDefault(tmp4);
     }
-  : () => {
+  : function useSafeAreaInsets() {
       closure_0 = AppEntryKeyContext.useAppEntryKey();
       return SafeAreaStoreDefault((arg0) => arg0.byAppEntry[closure_0].safeAreaInsets);
     };

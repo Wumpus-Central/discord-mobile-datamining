@@ -7,7 +7,7 @@ import Record from "../../lib/Record.tsx";
 import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 
 require = fn;
-const createExecutable = fn(2009).createExecutable;
+const createExecutable = fn(2021).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {
@@ -227,8 +227,8 @@ prototype["getScreenshotURLs"] = function getScreenshotURLs(arg0) {
   const mapped = screenshotUrls.map((item, index) => self.getScreenshotURL(index, closure_0));
   return mapped.filter(GlobalUtils.isNotNullish);
 };
-prototype["getCompanyByRole"] = function getCompanyByRole(DEVELOPER) {
-  closure_0 = DEVELOPER;
+prototype["getCompanyByRole"] = function getCompanyByRole(PUBLISHER) {
+  closure_0 = PUBLISHER;
   const companies = this.companies;
   let found;
   if (companies != null) {

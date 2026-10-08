@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MoreYouCanDoRow(arg0) {
       const cResult = c.c(7);
       ({ title, description, variant, onClick, icon, disabled } = arg0);
       if (cResult[0] === description) {
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp5;
       tmp4 = tmp5;
     }
-  : (arg0) => {
+  : function MoreYouCanDoRow(arg0) {
       ({ title, description, variant, onClick, icon, disabled } = arg0);
       return jsx(TableRow.TableRow, { label, subLabel, onPress, icon, variant, disabled });
     };

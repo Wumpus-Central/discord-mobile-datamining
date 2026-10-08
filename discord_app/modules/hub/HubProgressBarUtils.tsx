@@ -21,11 +21,11 @@ function convertHubProgressFlagSetToSet(stateFromStores) {
   }
   return set;
 }
-const HUB_PROGRESS_STEP_ORDER = fn(9505).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(8671).HUB_PROGRESS_STEP_ORDER;
 const PlatformTypes = fn(1085).PlatformTypes;
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useContactSyncEverEnabled() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConnectedAccountsStore];
@@ -41,13 +41,13 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useContactSyncEverEnabled() {
       const items = [ConnectedAccountsStore];
       return initialize.useStateFromStores(items, () => null != localAccount.getLocalAccount(constants.CONTACTS));
     };
 ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCompletedStepsFromSettings(arg0) {
       _require = arg0;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -58,7 +58,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function o() {
+        const fn = function n() {
           let num = 0;
           if (null != closure_0) {
             const guilds = UserSettingsProtoStore.settings.guilds;
@@ -93,7 +93,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : (arg0) => {
+  : function useCompletedStepsFromSettings(arg0) {
       _require = arg0;
       const items = [UserSettingsProtoStore];
       stateFromStores = require("initialize").useStateFromStores(items, () => {
@@ -138,7 +138,7 @@ export const getHubProgressTitleForStep = function getHubProgressTitleForStep(ne
   }
 };
 export const useHubProgressBarCompletedSteps = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useHubProgressBarCompletedSteps(id) {
       const cResult = c.c(2);
       id = undefined;
       if (id != null) {
@@ -155,7 +155,7 @@ export const useHubProgressBarCompletedSteps = ReactCompilerGating.isReactCompil
         cResult[1] = set;
       }
     }
-  : (id) => {
+  : function useHubProgressBarCompletedSteps(id) {
       id = undefined;
       if (id != null) {
         id = id.id;

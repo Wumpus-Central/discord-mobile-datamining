@@ -9,7 +9,7 @@ let ApexExperiment = ApexExperiment_mod;
 const obj = {
   name: "2026-03-overlay-default-keybind",
   kind: "user",
-  defaultConfig: { keybindOverride: "r" },
+  defaultConfig: { keybindOverride: "create" },
   variations: null,
 };
 let obj2 = { 1: null, 2: { keybindOverride: "ctrl+tab" }, 3: { keybindOverride: "alt+x" } };
@@ -43,7 +43,7 @@ obj6[1] = { enabled: true };
 obj5.variations = obj6;
 const apexExperiment2 = ApexExperiment.createApexExperiment(obj5);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useOverlayChat(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -55,7 +55,9 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return apexExperiment1.useConfig(tmp2);
     }
-  : (location) => apexExperiment1.useConfig({ location });
+  : function useOverlayChat(location) {
+      return apexExperiment1.useConfig({ location });
+    };
 function getOverlayChatConfig(location) {
   return apexExperiment1.getConfig({ location });
 }
@@ -74,7 +76,7 @@ export const useOverlayChat = tmp4;
 export const OverlayStreamerModeExperiment = apexExperiment2;
 export { getOverlayStreamerModeConfig };
 export const useOverlayStreamerMode = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useOverlayStreamerMode(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -86,7 +88,9 @@ export const useOverlayStreamerMode = ReactCompilerGating.isReactCompilerEnabled
       }
       return apexExperiment2.useConfig(tmp2).enabled;
     }
-  : (location) => apexExperiment2.useConfig({ location }).enabled;
+  : function useOverlayStreamerMode(location) {
+      return apexExperiment2.useConfig({ location }).enabled;
+    };
 export const trackOverlayInitializedExperiments = function trackOverlayInitializedExperiments() {
   const config = apexExperiment1.getConfig({ location: "OVERLAY_INITIALIZED" });
   const config1 = apexExperiment2.getConfig({ location: "OVERLAY_INITIALIZED" });

@@ -2,8 +2,8 @@
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod10997 from "../../../../../../../_runtime/metro/10997__.js";
-import _mod10998 from "../../../../../../../_runtime/metro/10998__.js";
+import _mod11221 from "../../../../../../../_runtime/metro/11221__.js";
+import _mod11222 from "../../../../../../../_runtime/metro/11222__.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx");
 
 export const CirclePlusIcon = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CirclePlusIcon(arg0) {
       const cResult = c.c(21);
       if (cResult[0] !== arg0) {
         ({ style, secondaryColor, color } = arg0);
@@ -45,7 +45,7 @@ export const CirclePlusIcon = ReactCompilerGating.isReactCompilerEnabled()
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod10997;
+        const tmpResult = _mod11221;
         cResult[5] = tmpResult;
         let tmp11 = tmpResult;
       } else {
@@ -58,7 +58,7 @@ export const CirclePlusIcon = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmpResult2 = _mod10998;
+            const tmpResult2 = _mod11222;
             cResult[10] = tmpResult2;
             let tmp16 = tmpResult2;
           } else {
@@ -120,7 +120,7 @@ export const CirclePlusIcon = ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = tmp15;
       const obj5 = { source: tmp11, color: str, style: tmp5 };
     }
-  : (color) => {
+  : function CirclePlusIcon(color) {
       ({ style, secondaryColor } = color);
       if (secondaryColor === undefined) {
         secondaryColor = "transparent";
@@ -133,9 +133,9 @@ export const CirclePlusIcon = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { children: null };
       const merged1 = Object.assign(merged);
       const items = [
-        timestampProducer(BaseIconImage.BaseIconImage, { source: _mod10997, color: secondaryColor, style }),
+        timestampProducer(BaseIconImage.BaseIconImage, { source: _mod11221, color: secondaryColor, style }),
       ];
-      const obj3 = { source: _mod10998, color: INTERACTIVE_ICON_DEFAULT, style: null };
+      const obj3 = { source: _mod11222, color: INTERACTIVE_ICON_DEFAULT, style: null };
       const items1 = [style];
       const items2 = [];
       items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

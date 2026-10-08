@@ -1,7 +1,7 @@
 // discord_app/utils/SKUUtils.tsx
 import util from "../intl/index.native.tsx";
 import PlatformUtils from "PlatformUtils.tsx";
-import _modDef4467 from "../../_runtime/metro/04467__.js";
+import _modDef4659 from "../../_runtime/metro/04659__.js";
 import matchPathCompat from "../modules/routing/matchPathCompat.tsx";
 import StoreUtils from "StoreUtils.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
@@ -10,15 +10,15 @@ require = fn;
 const Constants = fn(1085);
 const GameGenres = Constants.GameGenres;
 ({ SKUTypes: hasOwnProperty, Routes: metroRequire, SKUProductLines: closure_7 } = Constants);
+const merged = Object.assign(GameGenres);
 let closure_8 = {};
 let closure_9 = {};
-const merged = Object.assign(GameGenres);
-const frozen = Object.freeze({ ALL: -1 });
-const keys = Object.keys(frozen);
-const item = keys.forEach((item) => {
-  const replaced = item.toLowerCase().replace(/_/g, "-");
-  closure_8[replaced] = frozen[item];
-  closure_9[frozen[item]] = replaced;
+const entries = Object.entries(Object.freeze({ ALL: -1 }));
+const item = entries.forEach((item) => {
+  [str, tmp] = item;
+  const replaced = str.toLowerCase().replace(/_/g, "-");
+  closure_8[replaced] = tmp;
+  closure_9[tmp] = replaced;
 });
 const items = [
   ["YYYY-MM-DD", "MMMM DD, Y"],
@@ -283,7 +283,7 @@ export const getReadablePreorderReleaseDate = function getReadablePreorderReleas
     let num = 0;
     if (0 < items.length) {
       [tmp3, tmp4] = items[num];
-      const obj = _modDef4467(preorderApproximateReleaseDate, tmp3, true);
+      const obj = _modDef4659(preorderApproximateReleaseDate, tmp3, true);
       while (!obj.isValid()) {
         num = num + 1;
       }

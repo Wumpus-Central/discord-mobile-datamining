@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/useTypingText.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function useTypingText(channelId) {
       let lJ9sZX = channelId;
       let formatResult2 = typingUserIds;
       const cResult = channelId(typingUserIds[3]).c(16);
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       let obj = channelId(typingUserIds[3]);
     }
-  : (channelId) => {
+  : function useTypingText(channelId) {
       channelId = channelId.channelId;
       const guildId = channelId.guildId;
       const typingUserIds = channelId.typingUserIds;

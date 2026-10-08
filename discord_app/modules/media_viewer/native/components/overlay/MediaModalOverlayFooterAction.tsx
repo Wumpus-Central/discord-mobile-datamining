@@ -2,8 +2,8 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
-import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import VisualEffectViewDefault from "../../../../visual_effect_view/native/VisualEffectView.tsx";
+import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import MediaViewerThumbnailsDefault from "../MediaViewerThumbnails.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 },
   buttonContainer: null,
@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const MediaModalOverlayFooterAction = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MediaModalOverlayFooterAction(arg0) {
       const cResult = c.c(15);
       ({ footerAction, sliderElement, syncer } = arg0);
       const tmp4 = closure_8();
@@ -108,7 +108,7 @@ export const MediaModalOverlayFooterAction = ReactCompilerGating.isReactCompiler
       cResult[4] = tmp9Result;
       tmp7 = tmp9Result;
     }
-  : (arg0) => {
+  : function MediaModalOverlayFooterAction(arg0) {
       ({ footerAction, sliderElement, syncer } = arg0);
       const tmp = closure_8();
       const rect = { bottom: true, left: true, right: true, style: tmp.container, children: null };

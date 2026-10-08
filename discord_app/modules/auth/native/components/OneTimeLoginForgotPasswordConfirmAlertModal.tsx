@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function OneTimeLoginForgotPasswordConfirmAlertModal() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function OneTimeLoginForgotPasswordConfirmAlertModal() {
       const obj = { title: null, content: null, actions: null };
       const intl = util.intl;
       obj.title = intl.string(util.t["6Ecyts"]);

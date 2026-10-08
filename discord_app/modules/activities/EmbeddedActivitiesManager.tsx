@@ -2,27 +2,27 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import ComponentDispatchUtils from "../../utils/ComponentDispatchUtils.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../_runtime/01266_v1.js";
+import v1 from "../../../_runtime/01278_v1.js";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import StringUtils from "../../utils/StringUtils.tsx";
 import embeddedActivityLocationUtils from "utils/embeddedActivityLocationUtils.tsx";
 import ChannelRTCActionCreatorsDefault from "../../actions/ChannelRTCActionCreators.tsx";
+import ThermalUtilsDefault from "../device/ThermalUtils.native.tsx";
 import MonitoringAgentDefault from "../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import AnalyticsLocationDefault from "../app_analytics/AnalyticsLocation.tsx";
 import ApplicationFlagUtils from "../applications/utils/ApplicationFlagUtils.tsx";
 import CommandPermissionContext from "../application_commands/CommandPermissionContext.tsx";
-import getPlatformDefault from "utils/getPlatform.tsx";
+import isVoiceEmbeddedActivityDefault from "utils/isVoiceEmbeddedActivity.tsx";
+import QuestMatchingUtils from "../quests/utils/QuestMatchingUtils.tsx";
 import getURLForApplication from "getURLForApplication.tsx";
-import getShelfItemDataDefault from "getShelfItemData.tsx";
-import ThermalUtilsDefault from "../device/ThermalUtils.native.tsx";
 import FramesActionCreatorsDefault from "../frames/FramesActionCreators.native.tsx";
+import getPlatformDefault from "utils/getPlatform.tsx";
+import getShelfItemDataDefault from "getShelfItemData.tsx";
 import tryLaunchAsFrame from "utils/tryLaunchAsFrame.tsx";
 import pendingFrameLaunch from "utils/pendingFrameLaunch.tsx";
 import EmbeddedActivityLocationKind from "../../../discord_common/js/shared/shared-constants/EmbeddedActivityLocationKind.tsx";
-import isVoiceEmbeddedActivityDefault from "utils/isVoiceEmbeddedActivity.tsx";
 import activityLaunchErrorUtils from "utils/activityLaunchErrorUtils.tsx";
-import QuestMatchingUtils from "../quests/utils/QuestMatchingUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
 import ChannelRTCStore from "../calls/ChannelRTCStore.tsx";
@@ -645,7 +645,7 @@ let closure_32 = async function _trackFrameSessionStartFailed(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(2055).GUILD_VOCAL_CHANNEL_TYPES;
+const GUILD_VOCAL_CHANNEL_TYPES = fn(2067).GUILD_VOCAL_CHANNEL_TYPES;
 const Constants = fn(1085);
 ({
   AnalyticEvents: closure_15,
@@ -670,7 +670,7 @@ class EmbeddedActivitiesManager extends tmp3 {
       const iter = values[Symbol.iterator]();
       while (iter !== undefined) {
         ({ location: _location, applicationId } = nextResult);
-        let obj2 = applyArgumentsResult(4504);
+        let obj2 = applyArgumentsResult(4696);
         let embeddedActivityLocationChannelId = obj2.getEmbeddedActivityLocationChannelId(_location);
         let tmp8 = embeddedActivityLocationChannelId;
         let tmp9 = null != embeddedActivityLocationChannelId;
@@ -941,7 +941,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                     if (getChannel !== closure_131_1) {
                       c5 = 2;
                       c6 = 1;
-                      const obj5 = { value: getChannel(6665).fetchApplication(closure_131_1), done: false };
+                      const obj5 = { value: getChannel(6842).fetchApplication(closure_131_1), done: false };
                       return obj5;
                     }
                   } else {
@@ -964,7 +964,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                   const intl = applyArgumentsResult(1126).intl;
                   closure_132_1.showLaunchErrorModal(intl.string(applyArgumentsResult(1126).t.UXoQTp));
                 }
-                obj25 = applyArgumentsResult(9045);
+                obj25 = applyArgumentsResult(10658);
               }
             } else {
               if (3 === getChannel) {
@@ -980,11 +980,11 @@ class EmbeddedActivitiesManager extends tmp3 {
                   activityConfigs = closure_131_9.activityConfigs;
                   applications = closure_131_9.applications;
                   const obj9 = { applicationId: closure_131_1, activityConfigs, applications };
-                  if (null == getChannel(9016)(obj9)) {
+                  if (null == getChannel(10628)(obj9)) {
                     const obj11 = { guildId: closure_131_8, force: true };
                     c5 = 4;
                     c6 = 1;
-                    const obj12 = { value: applyArgumentsResult(9026).fetchShelf(obj11), done: false };
+                    const obj12 = { value: applyArgumentsResult(10635).fetchShelf(obj11), done: false };
                     return obj12;
                   }
                 }
@@ -1003,7 +1003,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                     activityConfigs: closure_131_12.activityConfigs,
                     applications: closure_131_12.applications,
                   };
-                  getChannel(9016)(obj16);
+                  getChannel(10628)(obj16);
                 }
               } else if (5 === getChannel) {
                 if (arg0 === 1) {
@@ -1053,7 +1053,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 obj18.inviterUserId = closure_131_4;
                 c5 = 6;
                 c6 = 1;
-                const obj20 = { value: applyArgumentsResult(9081).maybeJoinEmbeddedActivity(obj18), done: false };
+                const obj20 = { value: applyArgumentsResult(10664).maybeJoinEmbeddedActivity(obj18), done: false };
                 return obj20;
               } else {
                 const obj21 = {
@@ -1065,7 +1065,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 };
                 c5 = 5;
                 c6 = 1;
-                const obj22 = { value: getChannel(10959)(obj21), done: false };
+                const obj22 = { value: getChannel(11125)(obj21), done: false };
                 return obj22;
               }
             }
@@ -1086,13 +1086,13 @@ class EmbeddedActivitiesManager extends tmp3 {
               const obj23 = { guildId: closure_131_8 };
               c5 = 3;
               c6 = 1;
-              const obj24 = { value: applyArgumentsResult(9026).fetchShelf(obj23), done: false };
+              const obj24 = { value: applyArgumentsResult(10635).fetchShelf(obj23), done: false };
               return obj24;
             } else {
               const intl2 = applyArgumentsResult(1126).intl;
               closure_132_1.showLaunchErrorModal(intl2.string(applyArgumentsResult(1126).t.uGDCcw));
             }
-            tmp56 = getChannel(9080);
+            tmp56 = getChannel(10663);
           }
         } catch (tmp89) {
           c6 = tmp;
@@ -1135,13 +1135,13 @@ class EmbeddedActivitiesManager extends tmp3 {
     applyArgumentsResult.handleInteractionQueue = function handleInteractionQueue(arg0) {
       ({ nonce, data } = arg0);
       if (null == dependencyMap2[data.applicationId]) {
-        if (data.interactionType === applyArgumentsResult(5126).InteractionTypes.APPLICATION_COMMAND) {
+        if (data.interactionType === applyArgumentsResult(5438).InteractionTypes.APPLICATION_COMMAND) {
           const items = [AnalyticsLocationDefault.INTERACTION_APPLICATION_COMMAND];
           let tmp2 = items;
-        } else if (data.interactionType === applyArgumentsResult(5126).InteractionTypes.MESSAGE_COMPONENT) {
+        } else if (data.interactionType === applyArgumentsResult(5438).InteractionTypes.MESSAGE_COMPONENT) {
           const items1 = [AnalyticsLocationDefault.INTERACTION_MESSAGE_COMPONENT];
           tmp2 = items1;
-        } else if (data.interactionType === applyArgumentsResult(5126).InteractionTypes.MODAL_SUBMIT) {
+        } else if (data.interactionType === applyArgumentsResult(5438).InteractionTypes.MODAL_SUBMIT) {
           const items2 = [AnalyticsLocationDefault.INTERACTION_MODAL_SUBMIT];
           tmp2 = items2;
         }

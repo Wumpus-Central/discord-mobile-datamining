@@ -12,7 +12,7 @@ export default function parseUserProfileCollectibles(collectibles) {
     collectibles1 = collectibles.collectibles;
   }
   if (null == collectibles1) {
-    return { collectibles: "duration", profileEffect: "toCharArray$esjava$1", profileFrame: "toCharArray$esjava$1" };
+    return { collectibles: "useSharedValue", profileEffect: "apply", profileFrame: "next" };
   } else {
     const items = [];
     collectibles = collectibles.collectibles;

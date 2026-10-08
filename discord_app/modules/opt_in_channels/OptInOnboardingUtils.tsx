@@ -1,9 +1,9 @@
 // discord_app/modules/opt_in_channels/OptInOnboardingUtils.tsx
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import isOptInEnabled from "isOptInEnabled.tsx";
 import GuildOnboardingActionCreatorsDefault from "../guild_onboarding/GuildOnboardingActionCreators.tsx";
 import OptInChannelsActionCreators from "OptInChannelsActionCreators.tsx";
-import isOptInEnabled from "isOptInEnabled.tsx";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 import GuildChannelStore_mod from "../../stores/GuildChannelStore.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
@@ -41,10 +41,10 @@ function optIntoAllChannelsForExistingMember(id, arg1) {
   const obj2 = GuildOnboardingActionCreatorsDefault;
   const result = obj2.onboardExistingMember(id, new Set(mapped));
 }
-let GuildChannelStore = fn(4513);
+let GuildChannelStore = fn(4705);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_4, GUILD_VOCAL_CHANNELS_KEY: hasOwnProperty } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const GuildMemberFlags = fn(4501).GuildMemberFlags;
+const GuildMemberFlags = fn(4693).GuildMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInOnboardingUtils.tsx");
 

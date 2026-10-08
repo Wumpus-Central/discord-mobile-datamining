@@ -5,7 +5,7 @@ import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import Patterns from "../../../../../_runtime/04863_Patterns.js";
+import Patterns from "../../../../../_runtime/05057_Patterns.js";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
@@ -58,9 +58,9 @@ function doRewardEarnedHapticFeedback() {
   const tmp7Result = Patterns;
 }
 let View = fn(17).View;
-const QuestConstants = fn(5630);
+const QuestConstants = fn(5977);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(14831);
+const BountiesModalConstants = fn(15092);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -71,7 +71,7 @@ let c18 = 0.5625;
 const initialProgress = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
 let ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useBountiesModalVideoLayout() {
       const cResult = c.c(6);
       ({ width, height } = useWindowDimensionsDefault());
       const rect = useSafeAreaInsetsDefault();
@@ -110,11 +110,11 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = size;
       tmp11 = size;
     }
-  : () => {
-      let size = height(1484)();
+  : function useBountiesModalVideoLayout() {
+      let size = height(1496)();
       const width = size.width;
       height = size.height;
-      const tmp = height(1618)();
+      const tmp = height(1630)();
       dependencyMap = tmp;
       const items = [width, height, , , ,];
       ({ top: arr[2], bottom: arr[3], left: arr[4], right: arr[5] } = tmp);
@@ -140,7 +140,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         return size;
       }, items);
     };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_21 = createStyles.createStyles(() => {
   const obj = {
     videoWrapper: { position: "absolute" },
@@ -157,7 +157,7 @@ let closure_21 = createStyles.createStyles(() => {
 });
 ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (bounty) => {
+  ? function BountiesModalContentInner(bounty) {
       const cResult = require("c").c(117);
       bounty = bounty.bounty;
       _require = bounty;
@@ -212,8 +212,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                               const stateFromStores = tmp(504).useStateFromStores(tmp18, F);
                               const tmpResult = tmp(504);
-                              const balance = tmp(8541).useFetchVirtualCurrencyBalance().balance;
-                              const tmpResult2 = tmp(8541);
+                              const balance = tmp(9026).useFetchVirtualCurrencyBalance().balance;
+                              const tmpResult2 = tmp(9026);
                               [tmp25, _slicedToArray] = noop.useState(null);
                               if (tmp25 == null) {
                                 class F {
@@ -387,7 +387,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                                   }
                                 }
                               });
-                              const fn = function () {
+                              function t13() {
                                 const self = this;
                                 const apply = closure_0.apply;
                                 if (typeof apply === "unknown") {
@@ -396,10 +396,10 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                                   applyArgumentsResult = apply(self, arguments);
                                 }
                                 return applyArgumentsResult;
-                              };
+                              }
                               cResult[29] = bounty.id;
                               cResult[30] = sourceQuestContent;
-                              cResult[31] = fn;
+                              cResult[31] = t13;
                               const tmp24 = _slicedToArray(noop.useState(null), 2);
                             }
                           }
@@ -466,7 +466,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = size1;
       let obj = require("c");
     }
-  : (bounty) => {
+  : function BountiesModalContentInner(bounty) {
       bounty = bounty.bounty;
       const sourceQuestContent = bounty.sourceQuestContent;
       const dismissVideoEndAppStoreOverlay = bounty.dismissVideoEndAppStoreOverlay;
@@ -876,14 +876,14 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BountiesModalContentWithAppStore(arg0) {
       const cResult = sharedValue(576).c(30);
       ({ bounty, sourceQuestContent } = arg0);
       const height = useWindowDimensionsDefault().height;
       const size = closure_20();
       let obj = sharedValue(576);
-      sharedValue = sharedValue(4618).useSharedValue(0);
-      let obj2 = sharedValue(4618);
+      sharedValue = sharedValue(4810).useSharedValue(0);
+      let obj2 = sharedValue(4810);
       [tmp4, importDefault] = noop.useState(null);
       dependencyMap = noop.useRef(null);
       bounty = noop.useRef(0);
@@ -899,7 +899,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[6] = tmp10;
             }
             if (cResult[7] !== sharedValue) {
-              class B {
+              class R {
                 constructor(arg0) {
                   closure_3.current = Date.now();
                   closure_2.current = arg0;
@@ -918,9 +918,9 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               cResult[7] = sharedValue;
-              cResult[8] = B;
+              cResult[8] = R;
             } else {
-              class B {
+              class R {
                 constructor(arg0) {
                   closure_3.current = Date.now();
                   closure_2.current = arg0;
@@ -1061,12 +1061,12 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
               videoEndPeekProgress: sharedValue,
               videoEndPeekTargetScale: tmp6,
               isVideoEndAppStoreOverlayVisible: tmp5,
-              showVideoEndAppStoreOverlay: B,
+              showVideoEndAppStoreOverlay: R,
               dismissVideoEndAppStoreOverlay: Q,
             };
             cResult[11] = Q;
             cResult[12] = tmp5;
-            cResult[13] = B;
+            cResult[13] = R;
             cResult[14] = sharedValue;
             cResult[15] = tmp6;
             cResult[16] = obj3;
@@ -1087,7 +1087,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { windowHeight: height, videoTop: size.top, videoWidth: size.width, videoHeight: size.height };
       const tmp3 = _slicedToArray(noop.useState(null), 2);
     }
-  : (arg0) => {
+  : function BountiesModalContentWithAppStore(arg0) {
       importDefault = undefined;
       let sharedValue;
       c3 = undefined;
@@ -1118,7 +1118,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const items1 = [height];
       const items2 = [sharedValue];
-      const memo1 = noop.useMemo(() => v65535(height), items1);
+      const memo1 = noop.useMemo(() => collapsed(height), items1);
       const showVideoEndAppStoreOverlay = noop.useCallback((current) => {
         closure_5.current = Date.now();
         closure_4.current = current;
@@ -1187,7 +1187,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalContent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (bountyId) => {
+  ? function BountiesModalContent(bountyId) {
       let VIDEO_MODAL_MOBILE = bounty;
       const cResult = bountyId(bounty[11]).c(16);
       bountyId = bountyId.bountyId;
@@ -1217,7 +1217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   class C {
                     constructor() {
                       obj = { bounty: closure_3, sourceQuestContent };
-                      return jsx(f68883, obj);
+                      return jsx(BountiesModalContentWithAppStore, obj);
                     }
                   }
                   let obj3 = { theme: ThemeTypes.DARK, children: null };
@@ -1247,7 +1247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 class C {
                   constructor() {
                     obj = { bounty: closure_3, sourceQuestContent };
-                    return jsx(f68883, obj);
+                    return jsx(BountiesModalContentWithAppStore, obj);
                   }
                 }
                 cResult[9] = id;
@@ -1299,7 +1299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = fn;
       let obj = bountyId(bounty[11]);
     }
-  : (bountyId) => {
+  : function BountiesModalContent(bountyId) {
       bountyId = bountyId.bountyId;
       const sourceQuestContent = bountyId.sourceQuestContent;
       _slicedToArray = undefined;

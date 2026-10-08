@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   pill: {
     alignItems: "center",
@@ -41,7 +41,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function QuestDockLimitedTimePill() {
         const cResult = c.c(7);
         const tmp4 = closure_6();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -84,7 +84,7 @@ export default noop.memo(
         cResult[6] = tmp15;
         tmp14 = tmp15;
       }
-    : () => {
+    : function QuestDockLimitedTimePill() {
         const tmp = closure_6();
         const obj = { style: tmp.pill, accessible: true, accessibilityRole: "text", children: null };
         const items = [React4(TimerIcon.TimerIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT })];

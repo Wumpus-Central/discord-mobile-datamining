@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import SensitiveMediaGoreRedactionSettingsUtils from "../../../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
-import ExplicitMediaRedactionUtils from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import ExplicitMediaRedactionUtils from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import useExplicitContentSettingsOrDefault from "../../../explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx";
 import ExplicitMediaRedactionNativeUtils from "../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
 import useSensitiveMediaSettingDisabled from "../../../explicit_media_redaction/hooks/useSensitiveMediaSettingDisabled.tsx";
@@ -12,7 +12,7 @@ import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.t
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGoreContentNonFriendsDmSettingValue() {
       const cResult = c.c(2);
       const goreContentNonFriendDm =
         useExplicitContentSettingsOrDefault.useGoreContentSettingOrDefault().goreContentNonFriendDm;
@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : () => {
+  : function useGoreContentNonFriendsDmSettingValue() {
       const obj = useExplicitContentSettingsOrDefault;
       return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(
         obj.useGoreContentSettingOrDefault().goreContentNonFriendDm,

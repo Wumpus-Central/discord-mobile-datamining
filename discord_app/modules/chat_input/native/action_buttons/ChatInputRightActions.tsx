@@ -11,10 +11,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const enterDelayMs = fn(11589).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(11652).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles(() => {
   const obj = {
     container: {
@@ -27,225 +27,221 @@ let closure_9 = createStyles.createStyles(() => {
   return obj;
 });
 let ReactCompilerGating = fn(558);
-const forwardRefResult = noop.forwardRef(
-  ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel, arg1) => {
-        let merged = dependencyMap;
-        const cResult = channel(576).c(23);
-        channel = channel.channel;
-        ({ keyboardType, showKeyboardIcon, shouldShowGiftButton, onPressAction } = channel);
-        ({ onPressExpression, suggestedExpressions, suggestedExpressionsRef } = channel);
-        const obj = channel(576);
-        const token = channel(4586).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-        const obj2 = channel(4586);
-        const sum =
-          token + 2 * channel(4586).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-        dependencyMap = sum;
-        const tmp7 = closure_9();
-        const _slicedToArray = tmp7;
-        const obj3 = channel(4586);
-        [tmp9, noop] = noop.useState(true);
-        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function h() {
-            return {
-              onDismissActions() {
-                return closure_1_4(false);
-              },
-              onShowActions() {
-                return closure_1_4(true);
-              },
-            };
-          };
-          const items = [];
-          cResult[0] = fn;
-          cResult[1] = items;
-          tmp10 = fn;
-          tmp11 = items;
-        } else {
-          [tmp10, tmp11] = cResult;
-        }
-        const imperativeHandle = noop.useImperativeHandle(arg1, tmp10, tmp11);
-        if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj5 = {};
-          cResult[2] = obj5;
-          let tmp13 = obj5;
-        } else {
-          tmp13 = cResult[2];
-        }
-        if (cResult[3] === sum) {
-          if (cResult[4] === channel) {
-            if (cResult[5] === onPressAction) {
-              if (cResult[6] === tmp7.leftSlot) {
-                let tmp14 = cResult[7];
-              }
-              if (cResult[8] === tmp14) {
-                if (cResult[9] === shouldShowGiftButton) {
-                  if (cResult[10] === tmp9) {
-                    let tmp15 = cResult[11];
-                  }
-                  if (cResult[12] === channel) {
-                    if (cResult[13] === keyboardType) {
-                      if (cResult[14] === onPressExpression) {
-                        if (cResult[15] === showKeyboardIcon) {
-                          if (cResult[16] === suggestedExpressions) {
-                            if (cResult[17] === suggestedExpressionsRef) {
-                              if (cResult[19] === tmp7.container) {
-                                if (cResult[20] === tmp15) {
-                                  if (cResult[21] === tmp19) {
-                                    let tmp28 = cResult[22];
-                                  }
-                                  return tmp28;
-                                }
-                              }
-                              const obj6 = { style: tmp7.container, children: null };
-                              const items1 = [tmp15, cResult[18]];
-                              obj6.children = items1;
-                              const tmp31 = closure_8(View, obj6);
-                              cResult[19] = tmp7.container;
-                              cResult[20] = tmp15;
-                              cResult[21] = cResult[18];
-                              cResult[22] = tmp31;
-                              tmp28 = tmp31;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                  if (null != suggestedExpressions) {
-                    const obj7 = {
-                      ref: suggestedExpressionsRef,
-                      active: keyboardType === tmp(1616).KeyboardTypes.EXPRESSION,
-                      showKeyboardIcon,
-                      onPress: onPressExpression,
-                      channel,
-                    };
-                    merged = Object.assign(suggestedExpressions);
-                    let tmp23 = closure_7(tmp(12087).EmojiSuggestionChatButton, obj7);
-                  } else {
-                    const obj8 = {
-                      active: keyboardType === tmp(1616).KeyboardTypes.EXPRESSION,
-                      showKeyboardIcon,
-                      onPress: onPressExpression,
-                    };
-                    tmp23 = closure_7(onPressAction(11812), obj8);
-                    const tmp4Result = onPressAction(11812);
-                  }
-                  cResult[12] = channel;
-                  cResult[13] = keyboardType;
-                  cResult[14] = onPressExpression;
-                  cResult[15] = showKeyboardIcon;
-                  cResult[16] = suggestedExpressions;
-                  cResult[17] = suggestedExpressionsRef;
-                  cResult[18] = tmp23;
-                }
-              }
-              let tmp17Result = null;
-              if (shouldShowGiftButton) {
-                let tmp18;
-                if (tmp9) {
-                  tmp18 = tmp13;
-                }
-                const obj9 = { item: tmp18, renderItem: tmp14 };
-                tmp17Result = closure_7(tmp(4595).TransitionItem, obj9);
-              }
-              cResult[8] = tmp14;
-              cResult[9] = shouldShowGiftButton;
-              cResult[10] = tmp9;
-              cResult[11] = tmp17Result;
-              tmp15 = tmp17Result;
-            }
-          }
-        }
-        class U {
-          constructor(arg0, arg1, arg2, arg3) {
-            obj = {
-              state: arg2,
-              cleanup: arg3,
-              channel,
-              onPress: onPressAction,
-              wrapperStyle: closure_3.leftSlot,
-              slotWidth: closure_2,
-            };
-            return jsx(f60201, obj, channel);
-          }
-        }
-        cResult[3] = sum;
-        cResult[4] = channel;
-        cResult[5] = onPressAction;
-        cResult[6] = tmp7.leftSlot;
-        cResult[7] = U;
-        tmp14 = U;
-        const tmp8 = _slicedToArray(noop.useState(true), 2);
-      }
-    : (channel, arg1) => {
-        channel = channel.channel;
-        ({ keyboardType, showKeyboardIcon, onPressAction } = channel);
-        ({ onPressExpression, suggestedExpressions } = channel);
-        noop = undefined;
-        ({ shouldShowGiftButton, suggestedExpressionsRef } = channel);
-        const token = channel(4586).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-        const obj = channel(4586);
-        const sum =
-          token + 2 * channel(4586).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-        dependencyMap = sum;
-        const tmp6 = closure_9();
-        const _slicedToArray = tmp6;
-        const tmp7 = _slicedToArray(noop.useState(true), 2);
-        noop = tmp7[1];
-        const imperativeHandle = noop.useImperativeHandle(
-          arg1,
-          () => ({
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function ChatInputRightActions(channel) {
+      let merged = dependencyMap;
+      const cResult = channel(576).c(23);
+      channel = channel.channel;
+      ({ keyboardType, showKeyboardIcon, shouldShowGiftButton, onPressAction } = channel);
+      ({ onPressExpression, suggestedExpressions, suggestedExpressionsRef, ref } = channel);
+      const obj = channel(576);
+      const token = channel(4778).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+      const obj2 = channel(4778);
+      const sum = token + 2 * channel(4778).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+      dependencyMap = sum;
+      const tmp7 = closure_9();
+      const _slicedToArray = tmp7;
+      const obj3 = channel(4778);
+      [tmp9, noop] = noop.useState(true);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function l() {
+          return {
             onDismissActions() {
               return closure_1_4(false);
             },
             onShowActions() {
               return closure_1_4(true);
             },
-          }),
-          [],
-        );
-        const items = [channel, onPressAction, sum, tmp6.leftSlot];
-        const memo = noop.useMemo(() => ({}), []);
-        const obj3 = { style: tmp6.container, children: null };
-        let tmp14Result = null;
-        if (shouldShowGiftButton) {
-          let tmp15;
-          if (tmp7[0]) {
-            tmp15 = memo;
+          };
+        };
+        const items = [];
+        cResult[0] = fn;
+        cResult[1] = items;
+        tmp10 = fn;
+        tmp11 = items;
+      } else {
+        [tmp10, tmp11] = cResult;
+      }
+      const imperativeHandle = noop.useImperativeHandle(ref, tmp10, tmp11);
+      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj5 = {};
+        cResult[2] = obj5;
+        let tmp13 = obj5;
+      } else {
+        tmp13 = cResult[2];
+      }
+      if (cResult[3] === sum) {
+        if (cResult[4] === channel) {
+          if (cResult[5] === onPressAction) {
+            if (cResult[6] === tmp7.leftSlot) {
+              let tmp14 = cResult[7];
+            }
+            if (cResult[8] === tmp14) {
+              if (cResult[9] === shouldShowGiftButton) {
+                if (cResult[10] === tmp9) {
+                  let tmp15 = cResult[11];
+                }
+                if (cResult[12] === channel) {
+                  if (cResult[13] === keyboardType) {
+                    if (cResult[14] === onPressExpression) {
+                      if (cResult[15] === showKeyboardIcon) {
+                        if (cResult[16] === suggestedExpressions) {
+                          if (cResult[17] === suggestedExpressionsRef) {
+                            if (cResult[19] === tmp7.container) {
+                              if (cResult[20] === tmp15) {
+                                if (cResult[21] === tmp19) {
+                                  let tmp28 = cResult[22];
+                                }
+                                return tmp28;
+                              }
+                            }
+                            const obj6 = { style: tmp7.container, children: null };
+                            const items1 = [tmp15, cResult[18]];
+                            obj6.children = items1;
+                            const tmp31 = closure_8(View, obj6);
+                            cResult[19] = tmp7.container;
+                            cResult[20] = tmp15;
+                            cResult[21] = cResult[18];
+                            cResult[22] = tmp31;
+                            tmp28 = tmp31;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                if (null != suggestedExpressions) {
+                  const obj7 = {
+                    ref: suggestedExpressionsRef,
+                    active: keyboardType === tmp(1628).KeyboardTypes.EXPRESSION,
+                    showKeyboardIcon,
+                    onPress: onPressExpression,
+                    channel,
+                  };
+                  merged = Object.assign(suggestedExpressions);
+                  let tmp23 = closure_7(tmp(12162).EmojiSuggestionChatButton, obj7);
+                } else {
+                  const obj8 = {
+                    active: keyboardType === tmp(1628).KeyboardTypes.EXPRESSION,
+                    showKeyboardIcon,
+                    onPress: onPressExpression,
+                  };
+                  tmp23 = closure_7(onPressAction(11879), obj8);
+                  const tmp4Result = onPressAction(11879);
+                }
+                cResult[12] = channel;
+                cResult[13] = keyboardType;
+                cResult[14] = onPressExpression;
+                cResult[15] = showKeyboardIcon;
+                cResult[16] = suggestedExpressions;
+                cResult[17] = suggestedExpressionsRef;
+                cResult[18] = tmp23;
+              }
+            }
+            let tmp17Result = null;
+            if (shouldShowGiftButton) {
+              let tmp18;
+              if (tmp9) {
+                tmp18 = tmp13;
+              }
+              const obj9 = { item: tmp18, renderItem: tmp14 };
+              tmp17Result = closure_7(tmp(4787).TransitionItem, obj9);
+            }
+            cResult[8] = tmp14;
+            cResult[9] = shouldShowGiftButton;
+            cResult[10] = tmp9;
+            cResult[11] = tmp17Result;
+            tmp15 = tmp17Result;
           }
-          const obj4 = { item: tmp15, renderItem: tmp10 };
-          tmp14Result = closure_7(tmp(4595).TransitionItem, obj4);
         }
-        const items1 = [tmp14Result];
-        if (null != suggestedExpressions) {
-          const obj5 = {
-            ref: suggestedExpressionsRef,
-            active: keyboardType === tmp(1616).KeyboardTypes.EXPRESSION,
-            showKeyboardIcon,
-            onPress: onPressExpression,
+      }
+      class U {
+        constructor(arg0, arg1, arg2, arg3) {
+          obj = {
+            state: arg2,
+            cleanup: arg3,
             channel,
+            onPress: onPressAction,
+            wrapperStyle: closure_3.leftSlot,
+            slotWidth: closure_2,
           };
-          const merged = Object.assign(suggestedExpressions);
-          let tmp18 = closure_7(tmp(12087).EmojiSuggestionChatButton, obj5);
-        } else {
-          const obj6 = {
-            active: keyboardType === tmp(1616).KeyboardTypes.EXPRESSION,
-            showKeyboardIcon,
-            onPress: onPressExpression,
-          };
-          tmp18 = closure_7(onPressAction(11812), obj6);
-          const tmp3Result = onPressAction(11812);
+          return jsx(LeftSlot, obj, channel);
         }
-        items1[1] = tmp18;
-        obj3.children = items1;
-        return closure_8(View, obj3);
-      },
-);
-forwardRefResult.displayName = "ChatInputRightActions";
+      }
+      cResult[3] = sum;
+      cResult[4] = channel;
+      cResult[5] = onPressAction;
+      cResult[6] = tmp7.leftSlot;
+      cResult[7] = U;
+      tmp14 = U;
+      const tmp8 = _slicedToArray(noop.useState(true), 2);
+    }
+  : function ChatInputRightActions(channel) {
+      channel = channel.channel;
+      ({ keyboardType, showKeyboardIcon, onPressAction } = channel);
+      ({ onPressExpression, suggestedExpressions } = channel);
+      noop = undefined;
+      ({ shouldShowGiftButton, suggestedExpressionsRef, ref } = channel);
+      const token = channel(4778).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+      const obj = channel(4778);
+      const sum = token + 2 * channel(4778).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+      dependencyMap = sum;
+      const tmp6 = closure_9();
+      const _slicedToArray = tmp6;
+      const obj2 = channel(4778);
+      [tmp8, c4] = noop.useState(true);
+      const imperativeHandle = noop.useImperativeHandle(
+        ref,
+        () => ({
+          onDismissActions() {
+            return closure_1_4(false);
+          },
+          onShowActions() {
+            return closure_1_4(true);
+          },
+        }),
+        [],
+      );
+      const items = [channel, onPressAction, sum, tmp6.leftSlot];
+      const memo = noop.useMemo(() => ({}), []);
+      const obj3 = { style: tmp6.container, children: null };
+      let tmp15Result = null;
+      if (shouldShowGiftButton) {
+        let tmp16;
+        if (tmp8) {
+          tmp16 = memo;
+        }
+        const obj4 = { item: tmp16, renderItem: tmp11 };
+        tmp15Result = closure_7(tmp(4787).TransitionItem, obj4);
+      }
+      const items1 = [tmp15Result];
+      if (null != suggestedExpressions) {
+        const obj5 = {
+          ref: suggestedExpressionsRef,
+          active: keyboardType === tmp(1628).KeyboardTypes.EXPRESSION,
+          showKeyboardIcon,
+          onPress: onPressExpression,
+          channel,
+        };
+        const merged = Object.assign(suggestedExpressions);
+        let tmp19 = closure_7(tmp(12162).EmojiSuggestionChatButton, obj5);
+      } else {
+        const obj6 = {
+          active: keyboardType === tmp(1628).KeyboardTypes.EXPRESSION,
+          showKeyboardIcon,
+          onPress: onPressExpression,
+        };
+        tmp19 = closure_7(onPressAction(11879), obj6);
+        const tmp3Result = onPressAction(11879);
+      }
+      items1[1] = tmp19;
+      obj3.children = items1;
+      return closure_8(View, obj3);
+    };
+tmp3.displayName = "ChatInputRightActions";
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function LeftSlot(arg0) {
       const cResult = c.c(19);
       ({ state, cleanup, channel, onPress, slotWidth, wrapperStyle } = arg0);
       const tmp4 = state !== native.TransitionStates.YEETED;
@@ -305,7 +301,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 channel,
                 onPress,
                 styleButton: "Reflect",
-                shouldShowThread: "M13 0H3.00002H2.99996H2.00002V2H3.00002V1H13V2H14V0H13Z",
+                shouldShowThread: "MakerNoteSafety",
               };
               const tmp15 = React5(ChatInputActionButtonGiftOrThreadDefault, obj4);
               cResult[12] = channel;
@@ -330,7 +326,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = obj5;
       tmp6 = obj5;
     }
-  : (state) => {
+  : function LeftSlot(state) {
       state = state.state;
       ({ cleanup, channel, onPress, slotWidth, wrapperStyle } = state);
       const obj = {
@@ -360,11 +356,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         channel,
         onPress,
         styleButton: "Reflect",
-        shouldShowThread: "M13 0H3.00002H2.99996H2.00002V2H3.00002V1H13V2H14V0H13Z",
+        shouldShowThread: "MakerNoteSafety",
       });
       return React5(ReanimatedRexportDefault.View, obj2);
     };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputRightActions.tsx");
 
-export default noop.memo(forwardRefResult);
+export default noop.memo(tmp3);

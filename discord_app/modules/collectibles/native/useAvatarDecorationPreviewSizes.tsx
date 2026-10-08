@@ -8,7 +8,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 let result = size.fileFinishedImporting("modules/collectibles/native/useAvatarDecorationPreviewSizes.tsx");
 
 export const useAvatarDecorationPreviewSizes = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAvatarDecorationPreviewSizes() {
       const cResult = c.c(3);
       const size = useWindowDimensionsDefault();
       const result = (2 * Math.min(size.width, size.height)) / 3;
@@ -25,7 +25,7 @@ export const useAvatarDecorationPreviewSizes = ReactCompilerGating.isReactCompil
       cResult[2] = obj2;
       tmp4 = obj2;
     }
-  : () => {
+  : function useAvatarDecorationPreviewSizes() {
       const size = useWindowDimensionsDefault();
       const result = (2 * Math.min(size.width, size.height)) / 3;
       return { avatarDecorationSize: result, avatarSize: result * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio };

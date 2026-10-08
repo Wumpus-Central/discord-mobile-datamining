@@ -21,18 +21,18 @@ const View = fn(17).View;
 const Constants = fn(1085);
 ({ Permissions: c10, AnalyticsSections: closure_11, InstantInviteSources: closure_12 } = Constants);
 const jsx = fn(21).jsx;
-let closure_14 = { listActionRenderer: "start", listActionHeight: "unicodeVersion" };
-const createStyles = fn(4896);
-let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10612).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
+let closure_14 = { listActionRenderer: "Array", listActionHeight: "Reflect" };
+const createStyles = fn(5090);
+let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10209).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const ReactCompilerGating = fn(558);
-let obj2 = { wrapper: { paddingTop: fn(10612).USERS_LIST_PADDING_BETWEEN_SECTIONS } };
+let obj2 = { wrapper: { paddingTop: fn(10209).USERS_LIST_PADDING_BETWEEN_SECTIONS } };
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx",
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function useMemberListAction(channel) {
       const cResult = channel(576).c(40);
       channel = channel.channel;
       const disable = channel.disable;
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== channel) {
-        const fn = function p() {
+        const fn = function b() {
           let isDMResult;
           if (channel != null) {
             isDMResult = channel.isDM();
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (channel != null) {
           id = channel.id;
         }
-        id(6553)();
+        id(6729)();
         [r10096, dependencyMap] = noop.useState(undefined);
         const _Symbol = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = result;
       const tmpResult = channel(573);
     }
-  : (channel) => {
+  : function useMemberListAction(channel) {
       channel = channel.channel;
       let flag = channel.disable;
       if (flag === undefined) {

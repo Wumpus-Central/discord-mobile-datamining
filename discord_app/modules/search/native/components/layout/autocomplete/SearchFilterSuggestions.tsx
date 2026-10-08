@@ -20,37 +20,31 @@ function getSuggestionsKey(arr) {
 }
 let closure_3 = ["text", "searchTokenType", "onPress"];
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(7523).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9246).SearchFilterAddLocations;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { card: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.card = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchFilterPrefixRow(text) {
   const cResult = c.c(22);
   if (cResult[0] !== text) {
     text = text.text;
     closure_1 = text;
     ({ searchTokenType, onPress } = text);
-    _require = onPress;
+    closure_0 = onPress;
     const tmp10 = _objectWithoutProperties(text, closure_3);
     cResult[0] = text;
     cResult[1] = onPress;
-    class O {
-      constructor() {
-        tmp = closure_0(closure_1);
-        return;
-      }
-    }
     cResult[2] = searchTokenType;
     cResult[3] = tmp10;
     cResult[4] = text;
     let tmp6 = tmp10;
     let tmp5 = searchTokenType;
   } else {
-    _require = cResult[1];
+    closure_0 = cResult[1];
     tmp5 = cResult[2];
     tmp6 = cResult[3];
     closure_1 = cResult[4];
@@ -110,32 +104,24 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
       }
     }
     const obj3 = { icon: tmp13, onPress: tmp18, label: tmp19, subLabel: tmp16 };
-    class O {
-      constructor() {
-        tmp = closure_0(closure_1);
-        return;
-      }
-    }
-    const tmp26 = jsx(TableRow.TableRow, { icon: tmp13, onPress: tmp18, label: tmp19, subLabel: tmp16 });
+    const merged = Object.assign(tmp6);
+    const tmp27 = jsx(TableRow.TableRow, { icon: tmp13, onPress: tmp18, label: tmp19, subLabel: tmp16 });
     cResult[16] = tmp18;
     cResult[17] = tmp13;
     cResult[18] = tmp16;
     cResult[19] = tmp19;
     cResult[20] = tmp6;
-    cResult[21] = tmp26;
-    tmp22 = tmp26;
+    cResult[21] = tmp27;
+    tmp22 = tmp27;
   }
-  class O {
-    constructor() {
-      tmp = closure_0(closure_1);
-      return;
-    }
-  }
+  const fn = function x() {
+    closure_0(closure_1);
+  };
   cResult[11] = onPress;
   cResult[12] = tmp7;
-  cResult[13] = O;
-  tmp18 = O;
-}) : ((text) => {
+  cResult[13] = fn;
+  tmp18 = fn;
+}) : (function SearchFilterPrefixRow(text) {
   text = text.text;
   const require = text;
   const searchTokenType = text.searchTokenType;
@@ -164,7 +150,7 @@ let closure_14 = { code: "function SearchFilterSuggestionsTsx2(finished){const{s
 const __initData2 = { code: "function SearchFilterSuggestionsTsx3(){const{withSpring,opacity,springStandard,state,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withSpring(opacity.get(),springStandard,'respect-motion-settings',function(finished){if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}),transform:[{translateY:withSpring(opacity.get()===1?0:-15,springStandard)}]};}" };
 let closure_16 = { code: "function SearchFilterSuggestionsTsx4(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}" };
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((cleanUp) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedEnterExitContainer(cleanUp) {
   const cResult = state(sharedValue[9]).c(7);
   ({ children, state } = cleanUp);
   cleanUp = cleanUp.cleanUp;
@@ -238,7 +224,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((cleanUp) => {
   tmp6 = items;
   tmp5 = fn2;
   let obj4 = { withSpring: state(sharedValue[14]).withSpring, opacity: sharedValue, springStandard: state(sharedValue[15]).springStandard, state, TransitionStates: state(sharedValue[16]).TransitionStates, runOnJS: state(sharedValue[13]).runOnJS, cleanUp };
-}) : ((children) => {
+}) : (function AnimatedEnterExitContainer(children) {
   state = children.state;
   const cleanUp = children.cleanUp;
   let sharedValue;
@@ -296,7 +282,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, b
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterSuggestions.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SearchFilterSuggestions(searchContext) {
   const cResult = searchContext(suggestionsMounted[9]).c(22);
   searchContext = searchContext.searchContext;
   const containerStyle = searchContext.containerStyle;
@@ -324,16 +310,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
       let tmp11 = cResult[4];
     }
     const effect = obj4.useEffect(tmp10, tmp11);
-    class A {
+    class C {
       constructor() {
         return dismissed.get();
       }
     }
     const obj5 = { dismissed };
-    A.__closure = obj5;
-    A.__workletHash = 9561648889325;
-    A.__initData = __initData3;
-    class C {
+    C.__closure = obj5;
+    C.__workletHash = 9561648889325;
+    C.__initData = __initData3;
+    class F {
       constructor(arg0) {
         if (searchContext) {
           tmp = closure_0;
@@ -347,10 +333,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
       }
     }
     const obj6 = { runOnJS: tmp(tmp2[13]).runOnJS, setSuggestions: tmp9, EMPTY_SEARCH_FILTER_ROWS };
-    C.__closure = obj6;
-    C.__workletHash = 15816192405109;
-    C.__initData = __initData4;
-    const animatedReaction = tmp(tmp2[13]).useAnimatedReaction(A, C);
+    F.__closure = obj6;
+    F.__workletHash = 15816192405109;
+    F.__initData = __initData4;
+    const animatedReaction = tmp(tmp2[13]).useAnimatedReaction(C, F);
     if (cResult[5] === first1.length) {
       if (cResult[6] === suggestionsMounted) {
         let tmp17 = cResult[7];
@@ -372,7 +358,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
             } else {
               items2 = [];
             }
-            class A {
+            class C {
               constructor() {
                 return dismissed.get();
               }
@@ -394,10 +380,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
                   obj = { state: arg2, cleanUp: arg3, children: null };
                   obj1 = { ref: suggestionsRef, style: closure_7, collapsable: false, children: arg1.map(() => { ... }) };
                   obj.children = jsx(View, obj1);
-                  return jsx(f75268, obj, searchContext);
+                  return jsx(AnimatedEnterExitContainer, obj, searchContext);
                 }
               }
-              class A {
+              class C {
                 constructor() {
                   return dismissed.get();
                 }
@@ -407,7 +393,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
               tmp27[2] = getSuggestionsKey;
               const tmp29 = jsx(tmp(tmp2[16]).TransitionGroup, tmp27);
               cResult[19] = tmp23;
-              class C {
+              class F {
                 constructor(arg0) {
                   if (searchContext) {
                     tmp = closure_0;
@@ -429,10 +415,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
                 obj = { state: arg2, cleanUp: arg3, children: null };
                 obj1 = { ref: suggestionsRef, style: closure_7, collapsable: false, children: arg1.map(() => { ... }) };
                 obj.children = jsx(View, obj1);
-                return jsx(f75268, obj, searchContext);
+                return jsx(AnimatedEnterExitContainer, obj, searchContext);
               }
             }
-            class A {
+            class C {
               constructor() {
                 return dismissed.get();
               }
@@ -443,7 +429,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
             tmp25 = W;
           }
         }
-        class A {
+        class C {
           constructor() {
             return dismissed.get();
           }
@@ -452,7 +438,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
         tmp22[1] = containerStyle;
         cResult[11] = containerStyle;
         cResult[12] = tmp4.card;
-        class C {
+        class F {
           constructor(arg0) {
             if (searchContext) {
               tmp = closure_0;
@@ -467,7 +453,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
         }
         tmp21 = tmp22;
       }
-      class A {
+      class C {
         constructor() {
           return dismissed.get();
         }
@@ -476,7 +462,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
       cResult[8] = first1;
       cResult[9] = suggestionsMounted;
       cResult[10] = tmp19;
-      class C {
+      class F {
         constructor(arg0) {
           if (searchContext) {
             tmp = closure_0;
@@ -490,7 +476,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
         }
       }
     }
-    class F {
+    class A {
       constructor() {
         result = suggestionsMounted.set(closure_5.length > 0);
         return;
@@ -498,8 +484,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
     }
     cResult[5] = first1.length;
     cResult[6] = suggestionsMounted;
-    cResult[7] = F;
-    tmp17 = F;
+    cResult[7] = A;
+    tmp17 = A;
     const tmpResult = tmp(tmp2[13]);
   }
   class D {
@@ -516,17 +502,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
   tmp11 = items3;
   tmp10 = D;
   const obj3 = searchContext(suggestionsMounted[18]);
-}) : ((searchContext) => {
+}) : (function SearchFilterSuggestions(searchContext) {
   searchContext = searchContext.searchContext;
   const containerStyle = searchContext.containerStyle;
   const tmp = closure_10();
   dependencyMap = tmp;
-  const searchSuggestionsContext = searchContext(16810).useSearchSuggestionsContext();
+  const searchSuggestionsContext = searchContext(17089).useSearchSuggestionsContext();
   const suggestionsRef = searchSuggestionsContext.suggestionsRef;
   const suggestionsMounted = searchSuggestionsContext.suggestionsMounted;
   const dismissed = searchSuggestionsContext.dismissed;
-  let obj = searchContext(16810);
-  const validFilterTokens = searchContext(16819).useValidFilterTokens(searchContext);
+  let obj = searchContext(17089);
+  const validFilterTokens = searchContext(17098).useValidFilterTokens(searchContext);
   const tmp4 = suggestionsMounted(validFilterTokens.useState([]), 2);
   const first = tmp4[0];
   closure_8 = tmp6;
@@ -564,7 +550,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
     }
     constants(closure_1_18);
   }), items);
-  let obj2 = searchContext(16819);
+  let obj2 = searchContext(17098);
   const fn = function _() {
     return dismissed.get();
   };
@@ -576,8 +562,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
       ReanimatedRexport.runOnJS(closure_8)(closure_18);
     }
   };
-  const obj3 = searchContext(4618);
-  fn2.__closure = { runOnJS: searchContext(4618).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS };
+  const obj3 = searchContext(4810);
+  fn2.__closure = { runOnJS: searchContext(4810).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS };
   fn2.__workletHash = 4958389658939;
   fn2.__initData = __initData6;
   const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
@@ -615,5 +601,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
       return memo(closure_1_11, {}, text.text);
     })}</View></closure_17>;
   }, items4);
-  return memo(searchContext(4595).TransitionGroup, { items: memo1, renderItem: callback, getItemKey: getSuggestionsKey });
+  return memo(searchContext(4787).TransitionGroup, { items: memo1, renderItem: callback, getItemKey: getSuggestionsKey });
 }));

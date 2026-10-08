@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   header: { alignItems: "center", paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_16 },
   reactionPill: null,
@@ -68,7 +68,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/native/ReactionEmojiOptionsActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function ReactionEmojiOptionsActionSheet(channelId) {
       const cResult = channelId(emoji[9]).c(75);
       channelId = channelId.channelId;
       const messageId = channelId.messageId;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tidaWebformEnabled = messageId(emoji[11]).useExperiment(tmp6, tmp7).tidaWebformEnabled;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SelectedGuildStore];
-        const fn = function y() {
+        const fn = function j() {
           return guildId.getGuildId();
         };
         cResult[2] = items;
@@ -258,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp21 = !stateFromStores2;
       const tmpResult6 = channelId(emoji[12]);
     }
-  : (channelId) => {
+  : function ReactionEmojiOptionsActionSheet(channelId) {
       channelId = channelId.channelId;
       const messageId = channelId.messageId;
       ({ reaction, canRemoveReactions } = channelId);

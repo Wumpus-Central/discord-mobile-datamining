@@ -10,9 +10,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 17199;
+    let tmp4 = 17480;
   } else {
-    tmp4 = 17205;
+    tmp4 = 17486;
   }
   return React5(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }
@@ -24,7 +24,7 @@ function wrapChildren(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_12 = [];
@@ -32,7 +32,7 @@ let closure_13 = ["pip"];
 let closure_14 = ["activity"];
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (context) => {
+  ? function BaseActivityPanelUI(context) {
       const cResult = c.c(8);
       ({ renderActivityOrPIP, renderActivityPanelSystemUIManager } = context);
       const mode = noop.useContext(context.context).mode;
@@ -76,7 +76,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       tmp6 = closure_12;
     }
-  : (context) => {
+  : function BaseActivityPanelUI(context) {
       ({ renderActivityOrPIP, renderActivityPanelSystemUIManager } = context);
       const mode = noop.useContext(context.context).mode;
       const tmp = useIsConnectedToVoiceChannelDefault();
@@ -94,7 +94,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { children: null };
       const items1 = [
         renderActivityPanelSystemUIManager(),
-        closure_7(mode(4595).TransitionGroup, {
+        closure_7(mode(4787).TransitionGroup, {
           items: memo,
           renderItem: renderActivityOrPIP,
           getItemKey: getKey,
@@ -102,7 +102,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj.children = items1;
-      return closure_8(mode(6658).LayerScope, obj);
+      return closure_8(mode(6835).LayerScope, obj);
     };
 let closure_15 = tmp4;
 ReactCompilerGating = fn(558);
@@ -110,7 +110,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelUI.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ActivityPanelUI() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t() {
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : () => {
+  : function ActivityPanelUI() {
       const renderActivityPanelSystemUIManager = noop.useCallback(
         () => closure_1_7(ActivityPanelSystemUIManagerDefault, {}),
         [],

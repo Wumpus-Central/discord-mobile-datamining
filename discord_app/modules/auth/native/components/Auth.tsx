@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useWideAuthViewDefault from "../useWideAuthView.tsx";
 import BackgroundImageDefault from "atoms/BackgroundImage.tsx";
-import StackNavigator from "../../../../../_runtime/06505_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/06681_StackNavigator.js";
 import RegistrationHandoff from "../RegistrationHandoff.tsx";
 import RegistrationUtils from "../RegistrationUtils.tsx";
 import useIsHCaptchaModalOpenTracking from "utils/useIsHCaptchaModalOpenTracking.tsx";
@@ -14,11 +14,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import MultiAccountStore from "../../../multi_account/MultiAccountStore.tsx";
 
 const util = PX_24(1126);
-const utils_PlatformUtils = PX_24(1370);
-const KeyboardChatScrollView = PX_24(1632);
-const WideAuthScrollContext = PX_24(6468);
-const Navigator = PX_24(6503);
-const _mod15957 = PX_24(15957);
+const utils_PlatformUtils = PX_24(1382);
+const KeyboardChatScrollView = PX_24(1644);
+const WideAuthScrollContext = PX_24(6646);
+const Navigator = PX_24(6679);
+const _mod16217 = PX_24(16217);
 require = fn;
 function getInitialAuthRouteStack() {
   if (!obj.hasRegistrationHandoff()) {
@@ -38,7 +38,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1085).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(15905);
+let RegistrationStepsUtils = fn(16164);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(
@@ -93,13 +93,13 @@ const screens = Object.fromEntries(
   }),
 );
 let num = 540;
-if (fn(6446).hasWebAuthn) {
+if (fn(6624).hasWebAuthn) {
   num = 600;
 }
 let obj = {};
 obj[AuthStates.LOGIN] = num;
 obj[AuthStates.MFA] = 600;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj3 = {
   transparent: { backgroundColor: "transparent" },
   cardContainer: { flex: 1, position: "relative", backgroundColor: "transparent" },
@@ -129,7 +129,7 @@ obj3.wideHeader = {
 let closure_16 = createStyles.createStyles(obj3);
 const ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function NavigatorWithCaptchaHook() {
       let PX_24 = require;
       let PX_16 = dependencyMap;
       obj = c;
@@ -156,113 +156,106 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       [tmp12, tmp13] = noop.useState(false);
       importDefault = tmp22Result;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        class O {
-          constructor(arg0) {
-            return arg0.height;
-          }
-        }
-        cResult[2] = O;
+        const fn2 = function _(height) {
+          return height.height;
+        };
+        cResult[2] = fn2;
+        let tmp14 = fn2;
       } else {
-        class O {
-          constructor(arg0) {
-            return arg0.height;
-          }
-        }
+        tmp14 = cResult[2];
       }
       const tmp5Result = _slicedToArray(noop.useState(false), 2);
-      wideHeaderFlat = KeyboardChatScrollView.useKeyboardState(O);
+      wideHeaderFlat = KeyboardChatScrollView.useKeyboardState(tmp14);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        class O {
-          constructor(arg0) {
-            return arg0.height;
+        const fn3 = function x(arg0) {
+          let name;
+          if (arg0 != null) {
+            if (arg0.routes[arg0.index] != null) {
+              name = tmp3.name;
+            }
           }
-        }
-        cResult[3] = tmp16;
-        let obj9 = tmp16;
+          if (name == null) {
+            name = null;
+          }
+          require(name);
+          tmp22Result(false);
+        };
+        cResult[3] = fn3;
+        let obj13 = fn3;
       } else {
-        class O {
-          constructor(arg0) {
-            return arg0.height;
-          }
-        }
+        obj13 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        class O {
-          constructor(arg0) {
-            return arg0.height;
-          }
-        }
-        const obj4 = { backgroundImageSource: _mod15957, backgroundImageCover: true };
-        const tmp19 = closure_9(tmp3(6470), obj4);
+        const obj4 = { backgroundImageSource: _mod16217, backgroundImageCover: true };
+        const tmp19 = closure_9(tmp3(6648), obj4);
         cResult[4] = tmp19;
-        const tmp17 = tmp19;
-        const tmp3Result = tmp3(6470);
+        let tmp16 = tmp19;
+        const tmp3Result = tmp3(6648);
       } else {
-        class O {
-          constructor(arg0) {
-            return arg0.height;
-          }
-        }
+        tmp16 = cResult[4];
       }
       if (cResult[5] === wideHeaderFlat > 200) {
-        class O {
-          constructor(arg0) {
-            return arg0.height;
-          }
-        }
-      }
-      const items1 = [tmp17];
-      if (tmp4) {
-        class O {
-          constructor(arg0) {
-            return arg0.height;
-          }
-        }
-        tmp27[0] = tmp22Result;
-        const items2 = [wideOuterContainer.wideOuterContainer];
-        let tmp30 = null;
-        if (tmp15) {
-          class O {
-            constructor(arg0) {
-              return arg0.height;
-            }
-          }
-          tmp31[0] = wideHeaderFlat;
-          tmp30 = tmp31;
-        }
-        const obj5 = { style: null, children: null };
-        items2[1] = tmp30;
-        obj5.style = items2;
-        const items3 = [wideOuterContainer.wideCard, ,];
-        let tmp32 = null;
-        if (null != tmp7) {
-          class O {
-            constructor(arg0) {
-              return arg0.height;
-            }
-          }
-          if (obj[tmp7] == null) {
-            class O {
-              constructor(arg0) {
-                return arg0.height;
+        if (cResult[6] === tmp7) {
+          if (cResult[7] === first) {
+            if (cResult[8] === tmp12) {
+              if (cResult[9] === tmp4) {
+                if (cResult[10] === wideHeaderFlat) {
+                  if (cResult[11] === wideOuterContainer.cardContainer) {
+                    if (cResult[12] === wideOuterContainer.transparent) {
+                      if (cResult[13] === wideOuterContainer.wideCard) {
+                        if (cResult[14] === wideOuterContainer.wideHeader) {
+                          if (cResult[15] === wideOuterContainer.wideHeaderFlat) {
+                            if (cResult[16] === wideOuterContainer.wideOuterContainer) {
+                              return cResult[17];
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
-          const obj6 = { height: obj[tmp7] };
-          tmp32 = obj6;
         }
-        items3[1] = tmp32;
+      }
+      const items1 = [tmp16];
+      if (tmp4) {
+        const obj5 = { value: tmp22Result, children: null };
+        const items2 = [wideOuterContainer.wideOuterContainer];
+        let tmp28 = null;
         if (tmp15) {
-          class O {
-            constructor(arg0) {
-              return arg0.height;
-            }
-          }
+          const obj6 = { paddingBottom: wideHeaderFlat };
+          tmp28 = obj6;
         }
-        const obj7 = { style: null, children: null };
-        items3[2] = null;
-        obj7.style = items3;
-        const obj8 = {
+        const obj8 = { style: null, children: null };
+        items2[1] = tmp28;
+        obj8.style = items2;
+        const items3 = [wideOuterContainer.wideCard, ,];
+        let tmp29 = null;
+        if (null != tmp7) {
+          let num4 = obj[tmp7];
+          if (num4 == null) {
+            num4 = 520;
+          }
+          const obj9 = { height: num4 };
+          tmp29 = obj9;
+        }
+        items3[1] = tmp29;
+        let obj10 = null;
+        if (tmp15) {
+          obj10 = {
+            maxHeight: "100%",
+            height: "100%",
+            marginTop: 32,
+            borderBottomLeftRadius: 0,
+            borderBottomRightRadius: 0,
+          };
+        }
+        const obj11 = { style: null, children: null };
+        items3[2] = obj10;
+        obj11.style = items3;
+        const obj12 = {
           screens,
           containerStyle: wideOuterContainer.cardContainer,
           viewStyle: null,
@@ -276,51 +269,48 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           headerLeftContainerStyle: null,
           disableHeaderAnimation: true,
         };
+        let transparent = null;
         if (tmp7 === AuthStates.WELCOME) {
-          class O {
-            constructor(arg0) {
-              return arg0.height;
-            }
-          }
+          transparent = wideOuterContainer.transparent;
         }
-        obj8.viewStyle = null;
-        obj8.initialRouteStack = first;
-        obj8.onWillFocus = closure_5.dismiss;
-        obj8.onStateChange = obj9;
-        obj8.headerStyle = tmp12 ? wideOuterContainer.wideHeader : wideOuterContainer.wideHeaderFlat;
+        obj12.viewStyle = transparent;
+        obj12.initialRouteStack = first;
+        obj12.onWillFocus = closure_5.dismiss;
+        obj12.onStateChange = obj13;
+        obj12.headerStyle = tmp12 ? wideOuterContainer.wideHeader : wideOuterContainer.wideHeaderFlat;
+        let num5 = 20;
         if (PX_24Result1.isAndroid()) {
-          class O {
-            constructor(arg0) {
-              return arg0.height;
-            }
-          }
+          num5 = tmp3(587).space.PX_12;
         }
-        obj9 = { paddingLeft: 20, paddingTop: null, paddingBottom: null };
+        obj13 = { paddingLeft: num5, paddingTop: null, paddingBottom: null };
         PX_24 = tmp3(587).space.PX_24;
-        obj9.paddingTop = PX_24;
+        obj13.paddingTop = PX_24;
         PX_16 = tmp3(587).space.PX_16;
-        obj9.paddingBottom = PX_16;
-        obj8.headerLeftContainerStyle = obj9;
-        obj7.children = closure_9(Navigator.Navigator, obj8);
-        obj5.children = closure_9(closure_6, obj7);
-        tmp22Result = closure_9(closure_6, obj5);
-        tmp27[1] = tmp22Result;
-        let tmp22Result2 = closure_9(WideAuthScrollContext.WideAuthScrollContext.Provider, tmp27);
+        obj13.paddingBottom = PX_16;
+        obj12.headerLeftContainerStyle = obj13;
+        obj11.children = closure_9(Navigator.Navigator, obj12);
+        obj8.children = closure_9(closure_6, obj11);
+        tmp22Result = closure_9(closure_6, obj8);
+        obj5.children = tmp22Result;
+        let tmp22Result2 = closure_9(WideAuthScrollContext.WideAuthScrollContext.Provider, obj5);
         PX_24Result1 = utils_PlatformUtils;
       } else {
-        class O {
-          constructor(arg0) {
-            return arg0.height;
-          }
-        }
-        tmp23[0] = RegistrationStepsUtils;
-        ({ transparent: tmp23[1], transparent: tmp23[2] } = wideOuterContainer);
+        const obj14 = {
+          screens: RegistrationStepsUtils,
+          viewStyle: null,
+          containerStyle: null,
+          headerBackTitle: null,
+          initialRouteStack: null,
+          onWillFocus: null,
+          headerStyle: null,
+        };
+        ({ transparent: obj7.viewStyle, transparent: obj7.containerStyle } = wideOuterContainer);
         const intl = util.intl;
-        tmp23[3] = intl.string(util.t["13/7kX"]);
-        tmp23[4] = first;
-        tmp23[5] = closure_5.dismiss;
-        tmp23[6] = { borderBottomWidth: 0 };
-        tmp22Result2 = closure_9(Navigator.Navigator, tmp23);
+        obj14.headerBackTitle = intl.string(util.t["13/7kX"]);
+        obj14.initialRouteStack = first;
+        obj14.onWillFocus = closure_5.dismiss;
+        obj14.headerStyle = { borderBottomWidth: 0 };
+        tmp22Result2 = closure_9(Navigator.Navigator, obj14);
       }
       items1[1] = tmp22Result2;
       const PX_24Result = KeyboardChatScrollView;
@@ -340,7 +330,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[17] = closure_11(closure_10, { children: items1 });
       const tmp20Result = closure_11(closure_10, { children: items1 });
     }
-  : () => {
+  : function NavigatorWithCaptchaHook() {
       obj = useIsHCaptchaModalOpenTracking;
       const isHCaptchaModalOpenTracking = obj.useIsHCaptchaModalOpenTracking();
       const tmp6 = closure_16();
@@ -368,7 +358,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         closure_1(false);
       }, []);
       const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-      obj3.backgroundImageSource = _mod15957;
+      obj3.backgroundImageSource = _mod16217;
       const children = [closure_9(BackgroundImageDefault, obj3)];
       if (tmp5) {
         const obj5 = { value: tmp11, children: null };
@@ -474,7 +464,7 @@ export default noop.memo(function Auth() {
     AuthManagerDefault.initialize();
     return () => closure_1_1(dependencyMap[25]).terminate();
   }, []);
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(6997).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7185).trackAppUIViewed(), []);
   useOrientationLockDefault();
   closure_0 = noop.useRef(undefined);
   return closure_9(context.Provider, {

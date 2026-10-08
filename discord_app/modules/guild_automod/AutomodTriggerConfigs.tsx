@@ -4,7 +4,7 @@ import guild_automod_PermissionUtils from "PermissionUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(11487);
+const Constants = fn(11473);
 ({ AutomodActionType, AutomodEventType, AutomodTriggerType } = Constants);
 const mentionTotalLimit = Constants.MENTION_SPAM_LIMIT_DEFAULT;
 let obj = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha" };
@@ -236,7 +236,7 @@ export const validateRuleByTriggerConfigOrThrow = function validateRuleByTrigger
   }
 };
 export const useAvailableTriggerTypes = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAvailableTriggerTypes(arg0) {
       const cResult = isUserProfileRuleEnabled(isApplicationRuleEnabled[4]).c(3);
       const obj = isUserProfileRuleEnabled(isApplicationRuleEnabled[4]);
       isUserProfileRuleEnabled = isUserProfileRuleEnabled(isApplicationRuleEnabled[5]).useIsUserProfileRuleEnabled(
@@ -288,7 +288,7 @@ export const useAvailableTriggerTypes = ReactCompilerGating.isReactCompilerEnabl
       cResult[2] = reduced;
       tmp4 = reduced;
     }
-  : (arg0) => {
+  : function useAvailableTriggerTypes(arg0) {
       isUserProfileRuleEnabled = isUserProfileRuleEnabled(isApplicationRuleEnabled[5]).useIsUserProfileRuleEnabled(
         arg0,
       );

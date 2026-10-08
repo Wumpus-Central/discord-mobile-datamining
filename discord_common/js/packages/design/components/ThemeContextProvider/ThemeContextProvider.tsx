@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const ThemeContextProvider = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ThemeContextProvider(arg0) {
       const cResult = c.c(15);
       ({
         children,
@@ -126,7 +126,7 @@ export const ThemeContextProvider = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = themedContext;
       const tmpResult = ThemeContext;
     }
-  : (children) => {
+  : function ThemeContextProvider(children) {
       let theme = children.theme;
       let primaryColor = children.primaryColor;
       let secondaryColor = children.secondaryColor;

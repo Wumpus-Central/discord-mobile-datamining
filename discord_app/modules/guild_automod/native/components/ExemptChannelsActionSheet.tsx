@@ -1,7 +1,7 @@
 // discord_app/modules/guild_automod/native/components/ExemptChannelsActionSheet.tsx
-import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import getFlattedChannelListDefault from "../../../channel/getFlattedChannelList.tsx";
+import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildCategoryStore from "../../../../stores/GuildCategoryStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -18,7 +18,7 @@ function getChannelOptionName(name) {
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useChannelOptions(arg0) {
       _require = arg0;
       let mapped = dependencyMap;
       const cResult = require("c").c(8);
@@ -103,7 +103,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useChannelOptions(arg0) {
       _require = arg0;
       const items = [GuildCategoryStore];
       const items1 = [arg0];
@@ -134,7 +134,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/ExemptChannelsActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function ExemptChannelsActionSheet(guildId) {
       const cResult = guildId(576).c(13);
       guildId = guildId.guildId;
       ({ exemptChannels, onSave } = guildId);
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp16 = jsx(stateFromStores(17756), {
+      const tmp16 = jsx(stateFromStores(18043), {
         title: tmp11,
         searchPlaceholder: tmp12,
         listId: "automod-exempt-channels",
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmpResult = guildId(504);
     }
-  : (guildId) => {
+  : function ExemptChannelsActionSheet(guildId) {
       guildId = guildId.guildId;
       ({ exemptChannels, onSave } = guildId);
       const items = [GuildStore];
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.renderLabel = getChannelOptionName;
       obj2.renderIcon = callback;
       obj2.onSave = onSave;
-      return jsx(stateFromStores(17756), {
+      return jsx(stateFromStores(18043), {
         title: null,
         searchPlaceholder: null,
         listId: "automod-exempt-channels",

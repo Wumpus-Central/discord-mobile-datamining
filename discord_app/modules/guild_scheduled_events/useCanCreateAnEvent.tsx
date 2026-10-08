@@ -8,14 +8,14 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4513).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4705).GUILD_VOCAL_CHANNELS_KEY;
 const Permissions = fn(1085).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useCanCreateAnEvent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useCanCreateAnEvent(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(5);
@@ -33,40 +33,64 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(504).useStateFromStores(first, tmp8, tmp9);
       }
-      const fn = function _() {
-        guild = GuildStore.getGuild(closure_0);
-        if (!PermissionStore.can(Permissions.ADMINISTRATOR, guild)) {
-          if (!PermissionStore.can(Permissions.CREATE_EVENTS, guild)) {
-            const tmp8 = GuildChannelStore.getChannels(closure_0)[GUILD_VOCAL_CHANNELS_KEY];
-            const iter = tmp8[Symbol.iterator]();
-            while (iter !== undefined) {
-              let channel = iter.next().channel;
-              if (null == closure_1) {
-                let obj2 = useManageResourcePermissions;
-                if (PermissionStore.can(_slicedToArray(obj2.attachChannelPermissions(channel), 1)[0], channel)) {
-                  iter.return();
-                  let flag = true;
-                  return true;
+      class C {
+        constructor() {
+          tmp = closure_0;
+          guild = closure_5.getGuild(closure_0);
+          obj = closure_6;
+          tmp3 = closure_6;
+          tmp4 = Permissions;
+          if (!closure_6.can(Permissions.ADMINISTRATOR, guild)) {
+            tmp5 = tmp3;
+            if (!obj.can(tmp4.CREATE_EVENTS, guild)) {
+              tmp6 = closure_3;
+              tmp7 = GUILD_VOCAL_CHANNELS_KEY;
+              tmp8 = closure_3.getChannels(tmp)[GUILD_VOCAL_CHANNELS_KEY];
+              tmp9 = tmp8;
+              iter = tmp8[Symbol.iterator]();
+              num = 1;
+              tmp10 = null;
+              tmp11 = tmp8;
+              tmp12 = iter;
+              while (iter !== undefined) {
+                channel = iter.next().channel;
+                if (null == closure_1) {
+                  tmp15 = closure_0;
+                  tmp16 = closure_1;
+                  obj2 = closure_0(closure_1[7]);
+                  tmp17 = channel;
+                  tmp18 = closure_2;
+                  tmp19 = closure_6;
+                  tmp20 = closure_6;
+                  if (closure_6.can(closure_2(obj2.attachChannelPermissions(channel), 1)[0], channel)) {
+                    tmp21 = iter;
+                    iter.return();
+                    flag = true;
+                    return true;
+                  }
+                } else {
+                  tmp14 = channel;
                 }
+                continue;
               }
-              continue;
+              flag2 = false;
+              return false;
             }
-            return false;
           }
+          return true;
         }
-        return true;
-      };
+      }
       const items1 = [arg0, arg1];
       cResult[1] = arg1;
       cResult[2] = arg0;
-      cResult[3] = fn;
+      cResult[3] = C;
       cResult[4] = items1;
       tmp9 = items1;
-      tmp8 = fn;
+      tmp8 = C;
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useCanCreateAnEvent(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const items = [GuildStore, GuildChannelStore, PermissionStore];

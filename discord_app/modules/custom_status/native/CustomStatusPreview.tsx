@@ -1,17 +1,17 @@
 // discord_app/modules/custom_status/native/CustomStatusPreview.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(6714);
+const Constants = fn(6891);
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: hasOwnProperty, UserProfileThemeTypes: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
     flex: 1,
@@ -59,17 +59,15 @@ export default function CustomStatusPreview(user) {
   const callback = noop.useCallback(() => {
     ChatInputUtils.dismissKeyboard();
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(10852, dependencyMap.paths),
+      asyncRequireImpl(10503, dependencyMap.paths),
       "UserProfileCustomStatusActionSheet",
       { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji },
       "stack",
     );
   }, items);
   const obj2 = { theme, primaryColor, secondaryColor, children: null };
-  const obj3 = { style: null, children: null };
-  const items1 = [tmp7.profileContainer];
-  obj3.style = items1;
-  const items2 = [
+  const obj3 = { style: tmp7.profileContainer, children: null };
+  const items1 = [
     closure_7(pendingStatusText(pendingStatusEmoji[16]), {
       user,
       displayProfile: tmp3,
@@ -78,7 +76,7 @@ export default function CustomStatusPreview(user) {
     }),
     ,
   ];
-  const items3 = [
+  const items2 = [
     closure_7(pendingStatusText(pendingStatusEmoji[17]), {
       user,
       backgroundColor: avatarBackground,
@@ -92,8 +90,8 @@ export default function CustomStatusPreview(user) {
     containerStyle: null,
     children: null,
   };
-  const items4 = [, ,];
-  ({ profileContentWrapper: arr5[0], profileContent: arr5[1] } = tmp8);
+  const items3 = [, ,];
+  ({ profileContentWrapper: arr4[0], profileContent: arr4[1] } = tmp8);
   let tmp15 = "" !== pendingStatusText;
   let obj = user(pendingStatusEmoji[10]);
   if (!tmp15) {
@@ -107,9 +105,9 @@ export default function CustomStatusPreview(user) {
     const obj5 = { paddingTop };
     tmp16 = obj5;
   }
-  items4[2] = tmp16;
-  obj4.containerStyle = items4;
-  const items5 = [
+  items3[2] = tmp16;
+  obj4.containerStyle = items3;
+  const items4 = [
     closure_7(pendingStatusText(pendingStatusEmoji[19]), {
       hasCustomProfileTheme: null != primaryColor,
       style: tmp8.customStatusBubble,
@@ -146,11 +144,11 @@ export default function CustomStatusPreview(user) {
   obj7.pronouns = pronouns;
   obj7.badges = tmp4;
   obj7.badgeContainerBackground = containerBackground;
-  items5[1] = closure_7(pendingStatusText(pendingStatusEmoji[20]), obj7);
-  obj4.children = items5;
-  items3[1] = closure_8(tmp14, obj4);
-  obj8.children = items3;
-  items2[1] = closure_8(View, obj8);
+  items4[1] = closure_7(pendingStatusText(pendingStatusEmoji[20]), obj7);
+  obj4.children = items4;
+  items2[1] = closure_8(tmp14, obj4);
+  obj8.children = items2;
+  items1[1] = closure_8(View, obj8);
   let profileEffect;
   if (tmp3 != null) {
     profileEffect = tmp3.profileEffect;
@@ -165,8 +163,8 @@ export default function CustomStatusPreview(user) {
     tmp11Result = closure_7(tmp(tmp2[21]), obj9);
     const tmpResult2 = tmp(tmp2[21]);
   }
-  items2[2] = tmp11Result;
-  obj3.children = items2;
+  items1[2] = tmp11Result;
+  obj3.children = items1;
   obj2.children = closure_8(View, obj3);
   return closure_7(user(pendingStatusEmoji[15]).ThemeContextProvider, obj2);
 }

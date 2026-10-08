@@ -2,7 +2,7 @@
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import native from "../design/void/native.tsx";
 import LinkingDefault from "../lib/native/Linking.tsx";
-import _modDef8788 from "../../_runtime/metro/08788__.js";
+import _modDef10911 from "../../_runtime/metro/10911__.js";
 import SurveyActionCreators from "../actions/SurveyActionCreators.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../_runtime/metro/00019__.js";
@@ -13,14 +13,14 @@ const require = globalThis.__r;
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ confirmIcon: { marginLeft: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/MobileSurvey.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function MobileSurvey() {
       const cResult = require("c").c(19);
       const tmp4 = closure_8();
       _require = tmp4;
@@ -146,42 +146,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[11] !== tmp4.confirmIcon) {
-            class L {
+            class C {
               constructor() {
-                obj = {
-                  style: closure_0.confirmIcon,
-                  color: closure_1(closure_2[14]).unsafe_rawColors.WHITE,
-                  size: closure_0(closure_2[13]).Icon.Sizes.SMALL,
-                  source: closure_1(closure_2[15]),
-                };
-                return jsx(closure_0(closure_2[13]).Icon, obj);
+                obj = closure_0(closure_2[10]);
+                return obj.surveyHide(closure_1.key, true);
               }
             }
             cResult[11] = tmp4.confirmIcon;
-            cResult[12] = L;
+            cResult[12] = tmp17;
           } else {
-            class L {
+            class C {
               constructor() {
-                obj = {
-                  style: closure_0.confirmIcon,
-                  color: closure_1(closure_2[14]).unsafe_rawColors.WHITE,
-                  size: closure_0(closure_2[13]).Icon.Sizes.SMALL,
-                  source: closure_1(closure_2[15]),
-                };
-                return jsx(closure_0(closure_2[13]).Icon, obj);
+                obj = closure_0(closure_2[10]);
+                return obj.surveyHide(closure_1.key, true);
               }
             }
           }
           if (cResult[13] === stateFromStores.cta) {
-            class L {
+            class C {
               constructor() {
-                obj = {
-                  style: closure_0.confirmIcon,
-                  color: closure_1(closure_2[14]).unsafe_rawColors.WHITE,
-                  size: closure_0(closure_2[13]).Icon.Sizes.SMALL,
-                  source: closure_1(closure_2[15]),
-                };
-                return jsx(closure_0(closure_2[13]).Icon, obj);
+                obj = closure_0(closure_2[10]);
+                return obj.surveyHide(closure_1.key, true);
               }
             }
           }
@@ -191,22 +176,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cancelText: tmp12,
             onConfirm: tmp14,
             onCancel: C,
-            renderConfirmRightIcon: L,
+            renderConfirmRightIcon: tmp17,
           };
-          const tmp20 = jsx(stateFromStores(5790), {
+          const tmp21 = jsx(stateFromStores(5394), {
             body: _prompt,
             confirmText: cta,
             cancelText: tmp12,
             onConfirm: tmp14,
             onCancel: C,
-            renderConfirmRightIcon: L,
+            renderConfirmRightIcon: tmp17,
           });
           cResult[13] = stateFromStores.cta;
           cResult[14] = stateFromStores.prompt;
           cResult[15] = tmp14;
           cResult[16] = C;
-          cResult[17] = L;
-          cResult[18] = tmp20;
+          cResult[17] = tmp17;
+          cResult[18] = tmp21;
         }
         const fn3 = function k() {
           LinkingDefault.openURL(stateFromStores.url);
@@ -217,21 +202,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = fn3;
         tmp14 = fn3;
       } else {
-        class L {
+        class C {
           constructor() {
-            obj = {
-              style: closure_0.confirmIcon,
-              color: closure_1(closure_2[14]).unsafe_rawColors.WHITE,
-              size: closure_0(closure_2[13]).Icon.Sizes.SMALL,
-              source: closure_1(closure_2[15]),
-            };
-            return jsx(closure_0(closure_2[13]).Icon, obj);
+            obj = closure_0(closure_2[10]);
+            return obj.surveyHide(closure_1.key, true);
           }
         }
       }
       const tmpResult = require("initialize");
     }
-  : () => {
+  : function MobileSurvey() {
       _require = closure_8();
       const items = [SurveyStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => currentSurvey.getCurrentSurvey());
@@ -324,10 +304,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             style: confirmIcon.confirmIcon,
             color: nativeDefault.unsafe_rawColors.WHITE,
             size: native.Icon.Sizes.SMALL,
-            source: _modDef8788,
+            source: _modDef10911,
           });
         };
-        tmp5 = jsx(stateFromStores(5790), {
+        tmp5 = jsx(stateFromStores(5394), {
           body: null,
           confirmText: null,
           cancelText: null,
@@ -335,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onCancel: null,
           renderConfirmRightIcon: null,
         });
-        const tmp8 = stateFromStores(5790);
+        const tmp8 = stateFromStores(5394);
       }
       return tmp5;
     };

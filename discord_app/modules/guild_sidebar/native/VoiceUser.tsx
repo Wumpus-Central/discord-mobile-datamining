@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUser.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function VoiceUserConnected(channel) {
       const cResult = channel(sessionId[9]).c(43);
       channel = channel.channel;
       const user = channel.user;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const tmpResult5 = tmp(tmp2[10]);
           const stateFromStores1 = tmp(tmp2[10]).useStateFromStores(tmp16, R);
-          class O {
+          class A {
             constructor() {
               return closure_4.getStreamForUser(user.id, channel.getGuildId());
             }
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     });
                   }
                 }
-                class O {
+                class A {
                   constructor() {
                     return closure_4.getStreamForUser(user.id, channel.getGuildId());
                   }
@@ -374,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const items5 = [user.id];
-              class O {
+              class A {
                 constructor() {
                   return closure_4.getStreamForUser(user.id, channel.getGuildId());
                 }
@@ -386,7 +386,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp29 = items5;
             }
             cResult[17] = tmp7;
-            class O {
+            class A {
               constructor() {
                 return closure_4.getStreamForUser(user.id, channel.getGuildId());
               }
@@ -407,15 +407,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp22 = fn;
           const tmpResult6 = tmp(tmp2[10]);
         }
-        class O {
+        class A {
           constructor() {
             return closure_4.getStreamForUser(user.id, channel.getGuildId());
           }
         }
         cResult[6] = channel;
         cResult[7] = user.id;
-        cResult[8] = O;
-        tmp14 = O;
+        cResult[8] = A;
+        tmp14 = A;
         const tmpResult = tmp(tmp2[10]);
       }
       class P {
@@ -440,7 +440,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = P;
       let obj = channel(sessionId[9]);
     }
-  : (channel) => {
+  : function VoiceUserConnected(channel) {
       channel = channel.channel;
       const user = channel.user;
       const sessionId = channel.sessionId;

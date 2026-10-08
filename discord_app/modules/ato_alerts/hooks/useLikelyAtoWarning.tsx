@@ -11,7 +11,7 @@ const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;
 const result = size.fileFinishedImporting("modules/ato_alerts/hooks/useLikelyAtoWarning.tsx");
 
 export const useLikelyAtoWarning = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useLikelyAtoWarning(arg0) {
       const isSpamMessageRequest = useIsSpamMessageRequest.useIsSpamMessageRequest(arg0);
       const isMessageRequest = useIsMessageRequest.useIsMessageRequest(arg0);
       const channelSafetyWarning = useChannelSafetyWarning.useChannelSafetyWarning(arg0, SafetyWarningTypes.LIKELY_ATO);
@@ -27,7 +27,7 @@ export const useLikelyAtoWarning = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (arg0) => {
+  : function useLikelyAtoWarning(arg0) {
       const isSpamMessageRequest = useIsSpamMessageRequest.useIsSpamMessageRequest(arg0);
       const isMessageRequest = useIsMessageRequest.useIsMessageRequest(arg0);
       const channelSafetyWarning = useChannelSafetyWarning.useChannelSafetyWarning(arg0, SafetyWarningTypes.LIKELY_ATO);

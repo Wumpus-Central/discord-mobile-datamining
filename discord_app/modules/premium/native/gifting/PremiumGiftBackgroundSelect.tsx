@@ -12,7 +12,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(17).ScrollView);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   scrollView: { flex: 1, marginTop: nativeDefault.space.PX_24 },
   contentContainer: { justifyContent: "center" },
@@ -26,7 +26,7 @@ const __initData2 = {
 };
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GiftBackgroundSelect(arg0) {
       const cResult = first(sharedValue[8]).c(25);
       ({ giftStyle, withConsistentHeight } = arg0);
       const tmp5 = closure_9();
@@ -65,7 +65,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp15 = cResult[6];
           }
           if (cResult[7] !== first) {
-            const fn3 = function x(arg0) {
+            const fn3 = function k(arg0) {
               if (null == first) {
                 closure_1(arg0);
               }
@@ -161,7 +161,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn;
       const tmpResult = first(sharedValue[4]);
     }
-  : (giftStyle) => {
+  : function GiftBackgroundSelect(giftStyle) {
       let flag = giftStyle.withConsistentHeight;
       if (flag === undefined) {
         flag = true;
@@ -177,7 +177,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const result = sharedValue.set(null != first);
       }, items);
       let obj = first(sharedValue[4]);
-      class C {
+      class N {
         constructor() {
           tmp = closure_0;
           tmp2 = closure_2;
@@ -193,14 +193,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       let obj2 = first(sharedValue[4]);
-      C.__closure = {
+      N.__closure = {
         STANDARD_EASING: first(sharedValue[11]).STANDARD_EASING,
         withTiming: first(sharedValue[10]).withTiming,
         visibility: sharedValue,
       };
-      C.__workletHash = 8385596820679;
-      C.__initData = __initData2;
-      const animatedStyle = obj2.useAnimatedStyle(C);
+      N.__workletHash = 8385596820679;
+      N.__initData = __initData2;
+      const animatedStyle = obj2.useAnimatedStyle(N);
       const items1 = [
         closure_5(require("PremiumGiftBackgroundAnimation"), {
           giftStyle: giftStyle.giftStyle,
@@ -242,7 +242,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelect.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PremiumGiftBackgroundSelect() {
       const cResult = c.c(3);
       const nativeGiftContext = NativeGiftContext.useNativeGiftContext();
       ({ giftStyle, setGiftStyle } = nativeGiftContext);
@@ -258,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp4;
       tmp3 = tmp4;
     }
-  : () => {
+  : function PremiumGiftBackgroundSelect() {
       const nativeGiftContext = NativeGiftContext.useNativeGiftContext();
       return hasOwnProperty(closure_12, {
         giftStyle: nativeGiftContext.giftStyle,

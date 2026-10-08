@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/settings/native/useConjureAppSettingsForm.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ConjureUtils from "../../shared/ConjureUtils.tsx";
 import ChannelPickerActionSheetDefault from "../../../channel/native/ChannelPickerActionSheet.tsx";
@@ -18,7 +18,7 @@ import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
 
 require = fn;
 let View = fn(17).View;
-let ConjureConnectionStore = fn(12923);
+let ConjureConnectionStore = fn(13072);
 ({
   requestProjectRebuild: closure_12,
   sendUserMessage: map1,
@@ -28,7 +28,7 @@ let ConjureConnectionStore = ConjureConnectionStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 const ConjureSettingsChannelSheet = "ConjureSettingsChannelSheet";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, secretRow: null, secretRowInfo: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.secretRow = {
@@ -272,7 +272,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             obj3.channels = channels;
             obj3.selectedChannel = found;
             const intl = util.intl;
-            obj3.noChannelOptionLabel = intl.string(_modDef3753["jtBVV+"]);
+            obj3.noChannelOptionLabel = intl.string(_modDef3827["jtBVV+"]);
             obj3.onSelect = function onSelect(id) {
               let str;
               if (id != null) {
@@ -832,9 +832,9 @@ export default function useConjureAppSettingsForm(projectId) {
                   if (application_id == null) {
                     _null = null;
                   }
-                  _null2(9010)(_null);
+                  _null2(12376)(_null);
                   let prop;
-                  const tmp19 = _null2(9010);
+                  const tmp19 = _null2(12376);
                   if (project2 != null) {
                     prop = project2.preview_application_id;
                   }
@@ -842,8 +842,8 @@ export default function useConjureAppSettingsForm(projectId) {
                   if (prop == null) {
                     _null2 = null;
                   }
-                  _null2(9010)(_null2);
-                  const tmp27 = _null2(9010);
+                  _null2(12376)(_null2);
+                  const tmp27 = _null2(12376);
                 }
                 c5 = 0;
                 closure_131_12(false);
@@ -852,7 +852,7 @@ export default function useConjureAppSettingsForm(projectId) {
               closure_1_12(closure_131_0);
             }
             const intl = _null(1126).intl;
-            closure_1_13(closure_131_0, intl.string(_null2(3753)["08bsJL"]));
+            closure_1_13(closure_131_0, intl.string(_null2(3827)["08bsJL"]));
           }
         } catch (tmp67) {
           closure_4 = tmp67;

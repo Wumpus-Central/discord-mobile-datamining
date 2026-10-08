@@ -10,7 +10,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const sum = 56 + nativeDefault.space.PX_8;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8 }, upsell: null, content: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj2.upsell = {
@@ -42,7 +42,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PremiumExpressionPickerSearchUpsell(arg0) {
       const cResult = c.c(17);
       ({ body, ctaText, icon, loading, onPress } = arg0);
       const tmp4 = closure_5();
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp9;
       tmp8 = tmp9;
     }
-  : (arg0) => {
+  : function PremiumExpressionPickerSearchUpsell(arg0) {
       ({ body, ctaText, icon, loading, onPress } = arg0);
       const tmp = closure_5();
       const obj = { style: tmp.container, collapsable: false, children: null };

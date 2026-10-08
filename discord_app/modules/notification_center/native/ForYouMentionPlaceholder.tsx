@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   placeholder: { flexDirection: "row", marginBottom: 16, marginHorizontal: 24 },
   placeholderImage: null,
@@ -65,7 +65,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_center/native/ForYouMentionPlaceholder.tsx");
 
 export const ForYouMentionPlaceholder = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ForYouMentionPlaceholder() {
       const cResult = require("c").c(22);
       const tmp4 = closure_7();
       _require = tmp4;
@@ -92,17 +92,20 @@ export const ForYouMentionPlaceholder = ReactCompilerGating.isReactCompilerEnabl
       obj2.easing = Easing.inOut(require("ReanimatedRexport").Easing.ease);
       const result = sharedValue.set(tmpResult6.withRepeat(require("timing").withTiming(0.7, obj2), -1, true));
       const tmpResult7 = require("timing");
-      const fn2 = function w() {
-        let opacity = 0.7;
-        if (!stateFromStores) {
-          opacity = sharedValue.get();
+      class T {
+        constructor() {
+          opacity = 0.7;
+          if (!closure_1) {
+            tmp = closure_2;
+            opacity = closure_2.get();
+          }
+          return { opacity };
         }
-        return { opacity };
-      };
-      fn2.__closure = { reducedMotion: stateFromStores, opacity: sharedValue };
-      fn2.__workletHash = 8828208724188;
-      fn2.__initData = __initData;
-      const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(fn2);
+      }
+      T.__closure = { reducedMotion: stateFromStores, opacity: sharedValue };
+      T.__workletHash = 8828208724188;
+      T.__initData = __initData;
+      const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(T);
       if (cResult[2] === animatedStyle) {
         if (cResult[3] === tmp4.placeholder) {
           let tmp11 = cResult[4];
@@ -197,7 +200,7 @@ export const ForYouMentionPlaceholder = ReactCompilerGating.isReactCompilerEnabl
       tmp11 = items4;
       const tmpResult8 = require("ReanimatedRexport");
     }
-  : () => {
+  : function ForYouMentionPlaceholder() {
       const tmp = closure_7();
       _require = tmp;
       let items = [AccessibilityStore];

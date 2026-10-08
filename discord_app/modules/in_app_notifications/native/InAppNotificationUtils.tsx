@@ -2,13 +2,13 @@
 import _mod12 from "../../../../_runtime/metro/00012__.js";
 import c from "../../../../_runtime/00576_c.js";
 import DurationsDefault from "../../../utils/Durations.tsx";
-import v1 from "../../../../_runtime/01266_v1.js";
+import v1 from "../../../../_runtime/01278_v1.js";
 import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
 import isForwardMessageDefault from "../../forwarding/isForwardMessage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const REACTION_MILESTONE_COUNTS = fn(12493).REACTION_MILESTONE_COUNTS;
+const REACTION_MILESTONE_COUNTS = fn(12589).REACTION_MILESTONE_COUNTS;
 const Constants = fn(1085);
 ({
   AnalyticEvents: hasOwnProperty,
@@ -86,7 +86,7 @@ export const getNotificationDuration = function getNotificationDuration(ALERT) {
   return 5 * DurationsDefault.Millis.SECOND;
 };
 export const useHasPreviewableMedia = ReactCompilerGating.isReactCompilerEnabled()
-  ? (hasFlag) => {
+  ? function useHasPreviewableMedia(hasFlag) {
       const cResult = c.c(2);
       if (cResult[0] !== hasFlag) {
         let hasFlagResult = hasFlag.hasFlag(constants4.IS_VOICE_MESSAGE);
@@ -138,7 +138,7 @@ export const useHasPreviewableMedia = ReactCompilerGating.isReactCompilerEnabled
       }
       return tmp3;
     }
-  : (arg0) => {
+  : function useHasPreviewableMedia(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       return noop.useMemo(() => {

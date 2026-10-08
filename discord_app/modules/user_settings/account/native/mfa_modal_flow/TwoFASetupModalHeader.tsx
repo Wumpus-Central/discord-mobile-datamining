@@ -6,7 +6,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   pageMarkerContainer: { flex: 1, alignItems: "center", justifyContent: "space-between", flexDirection: "row" },
   circleIcon: null,
@@ -46,7 +46,7 @@ let result = size.fileFinishedImporting(
 
 export const PageMarker = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function PageMarker(arg0) {
         const cResult = filledCircle(576).c(20);
         ({ numMarkers, currentPage: filledCircle } = arg0);
         const tmp2 = closure_5();
@@ -137,7 +137,7 @@ export const PageMarker = noop.memo(
         tmp4 = fn;
         const obj = filledCircle(576);
       }
-    : (arg0) => {
+    : function PageMarker(arg0) {
         ({ numMarkers, currentPage: require } = arg0);
         const tmp = closure_5();
         closure_1 = tmp;

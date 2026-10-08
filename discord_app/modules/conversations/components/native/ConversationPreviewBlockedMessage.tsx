@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (reason) => {
+  ? function ConversationPreviewBlockedMessage(reason) {
       const cResult = c.c(9);
       reason = reason.reason;
       if (cResult[0] !== reason) {
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = tmp18;
       }
     }
-  : (reason) => {
+  : function ConversationPreviewBlockedMessage(reason) {
       const obj = { direction: "horizontal", spacing: nativeDefault.space.PX_8, align: "center", children: null };
       if ("blocked" === reason.reason) {
         let EyeSlashIcon = DenyIcon.DenyIcon;

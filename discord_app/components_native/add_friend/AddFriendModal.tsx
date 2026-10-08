@@ -20,10 +20,10 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, Fonts } = Constants);
-const ContactPermissions = fn(12342).ContactPermissions;
+const ContactPermissions = fn(12438).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { headerText: null, subheaderText: null, input: null, otherOptionsContainer: null, rowContainer: null };
 let obj3 = {};
 let merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
@@ -38,7 +38,7 @@ obj2.rowContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_H
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onSkip) => {
+  ? function AddFriendModalScene(onSkip) {
       const cResult = onSkip(contactSyncAccount[11]).c(32);
       onSkip = onSkip.onSkip;
       const sourceMetadata = onSkip.sourceMetadata;
@@ -91,7 +91,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         closure_5 = I;
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          class F {
+          class M {
             constructor() {
               currentUser = closure_1_7.getCurrentUser();
               userTag = undefined;
@@ -119,9 +119,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          cResult[7] = F;
+          cResult[7] = M;
         } else {
-          class F {
+          class M {
             constructor() {
               currentUser = closure_1_7.getCurrentUser();
               userTag = undefined;
@@ -150,9 +150,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        closure_6 = F;
+        closure_6 = M;
         if (cResult[8] === I) {
-          class F {
+          class M {
             constructor() {
               currentUser = closure_1_7.getCurrentUser();
               userTag = undefined;
@@ -183,7 +183,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           const layoutEffect = obj4.useLayoutEffect(tmp17, tmp18);
           const _Symbol2 = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            class F {
+            class M {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 userTag = undefined;
@@ -215,7 +215,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[12] = stringResult;
             const tmp20 = stringResult;
           } else {
-            class F {
+            class M {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 userTag = undefined;
@@ -245,7 +245,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[13] !== tmp4.headerText) {
-            class F {
+            class M {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 userTag = undefined;
@@ -284,7 +284,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[13] = tmp4.headerText;
             cResult[14] = tmp23;
           } else {
-            class F {
+            class M {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 userTag = undefined;
@@ -315,7 +315,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol3 = Symbol;
           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-            class F {
+            class M {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 userTag = undefined;
@@ -347,7 +347,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[15] = stringResult1;
             const tmp24 = stringResult1;
           } else {
-            class F {
+            class M {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 userTag = undefined;
@@ -377,7 +377,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[16] !== tmp4.subheaderText) {
-            class F {
+            class M {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 userTag = undefined;
@@ -415,7 +415,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[16] = tmp4.subheaderText;
             cResult[17] = tmp27;
           } else {
-            class F {
+            class M {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 userTag = undefined;
@@ -445,7 +445,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[18] !== tmp4.input) {
-            class F {
+            class M {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 userTag = undefined;
@@ -478,7 +478,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[18] = tmp4.input;
             cResult[19] = tmp29;
           } else {
-            class F {
+            class M {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 userTag = undefined;
@@ -509,7 +509,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol4 = Symbol;
           if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-            class F {
+            class M {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 userTag = undefined;
@@ -544,7 +544,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[20] = tmp31;
             const tmp30 = tmp31;
           } else {
-            class F {
+            class M {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 userTag = undefined;
@@ -574,7 +574,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[21] === tmp9) {
-            class F {
+            class M {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 userTag = undefined;
@@ -603,7 +603,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (cResult[24] === tmp4.otherOptionsContainer) {
-              class F {
+              class M {
                 constructor() {
                   currentUser = closure_1_7.getCurrentUser();
                   userTag = undefined;
@@ -632,7 +632,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (cResult[27] === tmp26) {
-                class F {
+                class M {
                   constructor() {
                     currentUser = closure_1_7.getCurrentUser();
                     userTag = undefined;
@@ -681,7 +681,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
           let tmp33 = null;
           if (tmp9) {
-            class F {
+            class M {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 userTag = undefined;
@@ -728,7 +728,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           };
           navigation.setOptions(obj);
         };
-        const items2 = [I, F, navigation];
+        const items2 = [I, M, navigation];
         cResult[8] = I;
         cResult[9] = navigation;
         cResult[10] = fn2;
@@ -737,7 +737,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         tmp18 = items2;
         const tmpResult2 = tmp(tmp2[16]);
       }
-      const fn = function x() {
+      const fn = function b() {
         AnalyticsUtilsDefault.track(constants.FRIEND_ADD_VIEWED, sourceMetadata);
         const result = ContactSyncUtils.checkContactPermissions();
         result.then((result) => {
@@ -759,7 +759,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn;
       const tmp8 = _slicedToArray(navigation.useState(!tmp6), 2);
     }
-  : (onSkip) => {
+  : function AddFriendModalScene(onSkip) {
       onSkip = onSkip.onSkip;
       const sourceMetadata = onSkip.sourceMetadata;
       let contactSyncAccount;
@@ -871,7 +871,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("components_native/add_friend/AddFriendModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (initialParams) => {
+  ? function AddFriendModal(initialParams) {
       const cResult = c.c(5);
       const top = useSafeAreaInsetsDefault().top;
       if (cResult[0] !== initialParams) {
@@ -897,7 +897,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp5;
       }
-      const tmp6 = v65535(Navigator.Navigator, {
+      const tmp6 = collapsed(Navigator.Navigator, {
         screens: tmp4,
         initialRouteName: "ADD_FRIEND",
         headerStatusBarHeight: top,
@@ -907,7 +907,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp6;
       tmp5 = tmp6;
     }
-  : (initialParams) => {
+  : function AddFriendModal(initialParams) {
       _require = initialParams;
       const items = [initialParams];
       const screens = noop.useMemo(() => {

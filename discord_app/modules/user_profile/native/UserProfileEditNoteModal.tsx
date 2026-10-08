@@ -14,7 +14,7 @@ require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsModalPresented() {
       const cResult = c.c(3);
       const navigation = useNavigation.useNavigation();
       [tmp4, importDefault] = noop.useState(false);
@@ -39,7 +39,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp5, tmp6);
       return tmp4;
     }
-  : () => {
+  : function useIsModalPresented() {
       const navigation = useNavigation.useNavigation();
       const tmp2 = _slicedToArray(noop.useState(false), 2);
       closure_1 = tmp2[1];
@@ -60,7 +60,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditNoteModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function UserProfileEditNoteModal(userId) {
       const cResult = userId(onBack[4]).c(15);
       userId = userId.userId;
       const onSave = userId.onSave;
@@ -68,15 +68,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_6();
       shouldFocusInput = tmp4;
       if (cResult[0] !== onBack) {
-        const fn = function t() {
+        function handleClose() {
           ModalActionCreatorsDefault.pop();
           if (onBack != null) {
             onBack();
           }
-        };
+        }
         cResult[0] = onBack;
-        cResult[1] = fn;
-        let tmp5 = fn;
+        cResult[1] = handleClose;
+        let tmp5 = handleClose;
       } else {
         tmp5 = cResult[1];
       }
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = S;
       let obj = userId(onBack[4]);
     }
-  : (arg0) => {
+  : function UserProfileEditNoteModal(arg0) {
       ({ userId: require, onSave: importDefault, onBack: dependencyMap } = arg0);
       function handleClose() {
         ModalActionCreatorsDefault.pop();
@@ -209,7 +209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
         const intl = userId(1126).intl;
         obj.children = intl.string(userId(1126).t.sHHsOM);
-        return jsx(userId(4892).Text, {
+        return jsx(userId(5086).Text, {
           variant: "redesign/heading-18/bold",
           accessibilityRole: "header",
           children: null,

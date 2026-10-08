@@ -14,7 +14,7 @@ let items = [
   nativeDefault.colors.TEXT_FEEDBACK_WARNING,
   nativeDefault.colors.TEXT_FEEDBACK_INFO,
 ];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "flex-start", paddingVertical: nativeDefault.space.PX_4 },
   glyphGutter: { width: 40, marginRight: 12, alignItems: "center" },
@@ -48,7 +48,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/native/ConjureNativeStatusLine.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (line) => {
+  ? function ConjureNativeStatusLine(line) {
       let PressableOpacity = line;
       let tmp = glyph;
       const cResult = line(glyph[6]).c(28);
@@ -247,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = fn;
       tmp17 = fn;
     }
-  : (live) => {
+  : function ConjureNativeStatusLine(live) {
       const line = live.line;
       let flag = live.settled;
       if (flag === undefined) {

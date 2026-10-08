@@ -71,7 +71,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useMuteStates.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function useMuteStates(channel) {
       _require = channel;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStoresObject(first, tmp10);
     }
-  : (channel) => {
+  : function useMuteStates(channel) {
       _require = channel;
       const items = [AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore];
       return require("initialize").useStateFromStoresObject(items, () =>

@@ -6,13 +6,13 @@ import ConjureChatStore from "../chat/ConjureChatStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const interruptTurn = fn(12923).interruptTurn;
+const interruptTurn = fn(13072).interruptTurn;
 let c6 = 2400;
 let c7 = 5000;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useConjureControlPhase(arg0) {
       const cResult = first(576).c(3);
       const obj = first(576);
       [tmp3, tmp4] = noop.useState(arg0);
@@ -23,7 +23,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7(!arg0);
       }
       if (cResult[0] !== first) {
-        const fn = function o() {
+        const fn = function n() {
           if (timeout) {
             const _setTimeout = setTimeout;
             timeout = setTimeout(() => closure_1_1(false), closure_1_6);
@@ -51,7 +51,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return str;
     }
-  : (arg0) => {
+  : function useConjureControlPhase(arg0) {
       [tmp2, tmp3] = noop.useState(arg0);
       [first] = noop.useState(false);
       closure_1 = tmp6;
@@ -84,7 +84,7 @@ export const CONJURE_CONTROL_HANDOFF_MS = 2400;
 export const CONJURE_CONTROL_STOP_RETRY_MS = 5000;
 export const useConjureControlPhase = tmp2;
 export const useConjureControlStop = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useConjureControlStop(arg0) {
       _require = arg0;
       const cResult = require("c").c(11);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -120,7 +120,7 @@ export const useConjureControlStop = ReactCompilerGating.isReactCompilerEnabled(
         }
       }
       if (cResult[3] !== first1) {
-        class T {
+        class S {
           constructor() {
             if (closure_1) {
               tmp = globalThis;
@@ -135,11 +135,11 @@ export const useConjureControlStop = ReactCompilerGating.isReactCompilerEnabled(
         }
         const items1 = [first1];
         cResult[3] = first1;
-        cResult[4] = T;
+        cResult[4] = S;
         cResult[5] = items1;
         let tmp15 = items1;
       } else {
-        class T {
+        class S {
           constructor() {
             if (closure_1) {
               tmp = globalThis;
@@ -154,65 +154,61 @@ export const useConjureControlStop = ReactCompilerGating.isReactCompilerEnabled(
         }
         tmp15 = cResult[5];
       }
-      const effect = noop.useEffect(T, tmp15);
+      const effect = noop.useEffect(S, tmp15);
       if (cResult[6] !== arg0) {
         class T {
           constructor() {
-            if (closure_1) {
-              tmp = globalThis;
-              _setTimeout = setTimeout;
-              tmp2 = closure_1_7;
-              closure_0 = setTimeout(() => closure_1_2(false), closure_1_7);
-              return () => clearTimeout(closure_0);
-            } else {
-              return;
+            if (null != closure_0) {
+              tmp2 = closure_2;
+              flag = true;
+              tmp3 = closure_2(true);
+              tmp4 = interruptTurn;
+              tmp5 = interruptTurn(tmp);
             }
+            return;
           }
         }
         cResult[6] = arg0;
-        cResult[7] = tmp18;
+        cResult[7] = T;
       } else {
         class T {
           constructor() {
-            if (closure_1) {
-              tmp = globalThis;
-              _setTimeout = setTimeout;
-              tmp2 = closure_1_7;
-              closure_0 = setTimeout(() => closure_1_2(false), closure_1_7);
-              return () => clearTimeout(closure_0);
-            } else {
-              return;
+            if (null != closure_0) {
+              tmp2 = closure_2;
+              flag = true;
+              tmp3 = closure_2(true);
+              tmp4 = interruptTurn;
+              tmp5 = interruptTurn(tmp);
             }
+            return;
           }
         }
       }
       if (stateFromStores) {
         class T {
           constructor() {
-            if (closure_1) {
-              tmp = globalThis;
-              _setTimeout = setTimeout;
-              tmp2 = closure_1_7;
-              closure_0 = setTimeout(() => closure_1_2(false), closure_1_7);
-              return () => clearTimeout(closure_0);
-            } else {
-              return;
+            if (null != closure_0) {
+              tmp2 = closure_2;
+              flag = true;
+              tmp3 = closure_2(true);
+              tmp4 = interruptTurn;
+              tmp5 = interruptTurn(tmp);
             }
+            return;
           }
         }
       }
       if (cResult[8] === first1) {
         class T {
           constructor() {
-            if (closure_1) {
-              tmp = globalThis;
-              _setTimeout = setTimeout;
-              tmp2 = closure_1_7;
-              closure_0 = setTimeout(() => closure_1_2(false), closure_1_7);
-              return () => clearTimeout(closure_0);
-            } else {
-              return;
+            if (null != closure_0) {
+              tmp2 = closure_2;
+              flag = true;
+              tmp3 = closure_2(true);
+              tmp4 = interruptTurn;
+              tmp5 = interruptTurn(tmp);
             }
+            return;
           }
         }
         return obj2;
@@ -223,7 +219,7 @@ export const useConjureControlStop = ReactCompilerGating.isReactCompilerEnabled(
       cResult[10] = obj2;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useConjureControlStop(arg0) {
       _require = arg0;
       const items = [ConjureChatStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => {

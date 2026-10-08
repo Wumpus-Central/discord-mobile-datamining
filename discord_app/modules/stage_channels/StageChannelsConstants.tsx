@@ -7,7 +7,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const HelpdeskArticles = Constants.HelpdeskArticles;
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelsConstants.tsx");
 
-export const MAX_STAGE_TOPIC_LENGTH = 240;
+export const MAX_STAGE_TOPIC_LENGTH = 120;
 export const MAX_AUDIENCE_ROW_LIMIT = 4;
 export const STAGE_APPLICATION_ID = "834488117758001152";
 export const REQUEST_TO_SPEAK_SHEET_KEY = "request-to-speak-list";

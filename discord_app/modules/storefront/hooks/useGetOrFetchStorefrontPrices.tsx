@@ -6,7 +6,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (applicationId) => {
+  ? function useGetOrFetchStorefrontPricesForApplicationId(applicationId) {
       const cResult = applicationId(576).c(3);
       applicationId = applicationId.applicationId;
       if (cResult[0] !== applicationId) {
@@ -29,7 +29,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp2, tmp3);
     }
-  : (applicationId) => {
+  : function useGetOrFetchStorefrontPricesForApplicationId(applicationId) {
       applicationId = applicationId.applicationId;
       const items = [applicationId];
       const effect = noop.useEffect(() => {
@@ -44,7 +44,7 @@ const result = size.fileFinishedImporting("modules/storefront/hooks/useGetOrFetc
 
 export const useGetOrFetchStorefrontPricesForApplicationId = tmp2;
 export const useGetOrFetchStorefrontPricesForSkuIds = ReactCompilerGating.isReactCompilerEnabled()
-  ? (skuIds) => {
+  ? function useGetOrFetchStorefrontPricesForSkuIds(skuIds) {
       const cResult = skuIds(576).c(3);
       skuIds = skuIds.skuIds;
       if (cResult[0] !== skuIds) {
@@ -66,7 +66,7 @@ export const useGetOrFetchStorefrontPricesForSkuIds = ReactCompilerGating.isReac
       }
       const effect = noop.useEffect(tmp2, tmp3);
     }
-  : (skuIds) => {
+  : function useGetOrFetchStorefrontPricesForSkuIds(skuIds) {
       skuIds = skuIds.skuIds;
       const items = [skuIds];
       const effect = noop.useEffect(() => {

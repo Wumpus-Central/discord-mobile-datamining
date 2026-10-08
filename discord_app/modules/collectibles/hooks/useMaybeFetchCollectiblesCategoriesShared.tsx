@@ -18,7 +18,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategoriesShared.tsx");
 
 export const useMaybeFetchCollectiblesCategoriesShared = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2, arg3) => {
+  ? function useMaybeFetchCollectiblesCategoriesShared(arg0, arg1, arg2, arg3) {
       _require = arg0;
       dependencyMap = arg1;
       _slicedToArray = arg2;
@@ -39,8 +39,8 @@ export const useMaybeFetchCollectiblesCategoriesShared = ReactCompilerGating.isR
       let obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(tmp5, tmp6);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const items1 = [CollectiblesCategoryStore];
-        class E {
+        const items1 = [lastSuccessfulFetch];
+        class F {
           constructor() {
             tmp = closure_6;
             items = [, , , , , ,];
@@ -59,8 +59,8 @@ export const useMaybeFetchCollectiblesCategoriesShared = ReactCompilerGating.isR
           }
         }
         cResult[2] = items1;
-        cResult[3] = E;
-        let tmp10 = E;
+        cResult[3] = F;
+        let tmp10 = F;
         let tmp9 = items1;
       } else {
         tmp9 = cResult[2];
@@ -70,7 +70,7 @@ export const useMaybeFetchCollectiblesCategoriesShared = ReactCompilerGating.isR
       const tmp12 = _slicedToArray(require("initialize").useStateFromStoresArray(tmp9, tmp10), 7);
       [r10048, tmp13] = tmp12;
       ExperimentStore = tmp13;
-      CollectiblesCategoryStore = tmp14;
+      lastSuccessfulFetch = tmp14;
       closure_7 = tmp15;
       closure_8 = tmp16;
       skipNumCategories = tmp17;
@@ -88,7 +88,7 @@ export const useMaybeFetchCollectiblesCategoriesShared = ReactCompilerGating.isR
                           let tmp19 = cResult[15];
                         }
                         closure_3(tmp18, tmp19);
-                        class E {
+                        class F {
                           constructor() {
                             tmp = closure_6;
                             items = [, , , , , ,];
@@ -111,22 +111,22 @@ export const useMaybeFetchCollectiblesCategoriesShared = ReactCompilerGating.isR
                             return items;
                           }
                         }
-                        const fn2 = function b() {
-                          const obj = {};
-                          const merged = Object.assign(closure_0);
-                          obj.variantsReturnStyle = ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP;
-                          obj.includeBundles = true;
-                          obj.skipNumCategories = skipNumCategories;
-                          const collectiblesCategories = CollectiblesActionCreators.fetchCollectiblesCategories(
-                            obj,
-                            undefined,
-                            closure_2,
-                          );
-                        };
+                        class O {
+                          constructor() {
+                            obj = {};
+                            merged = Object.assign(closure_0);
+                            obj.variantsReturnStyle = closure_0(closure_1[8]).ShopVariantsReturnStyle.VARIANTS_GROUP;
+                            obj.includeBundles = true;
+                            obj.skipNumCategories = closure_9;
+                            obj2 = closure_0(closure_1[9]);
+                            collectiblesCategories = obj2.fetchCollectiblesCategories(obj, undefined, closure_2);
+                            return;
+                          }
+                        }
                         cResult[16] = arg0;
                         cResult[17] = arg2;
                         cResult[18] = tmp17;
-                        cResult[19] = fn2;
+                        cResult[19] = O;
                       }
                     }
                   }
@@ -136,56 +136,39 @@ export const useMaybeFetchCollectiblesCategoriesShared = ReactCompilerGating.isR
           }
         }
       }
-      class O {
-        constructor() {
-          if (!closure_3) {
-            tmp = closure_4;
-            if (closure_4) {
-              tmp2 = closure_6;
-              if (!closure_6.isFetchingCategories) {
-                tmp3 = globalThis;
-                _Date = Date;
-                tmp4 = closure_7;
-                tmp5 = closure_8;
-                _Boolean = Boolean;
-                tmp7 = closure_6;
-                tmp6 = Date.now() - closure_7 < closure_8;
-                if (!Boolean(closure_6)) {
-                  obj = {};
-                  tmp8 = closure_0;
-                  tmp9 = obj;
-                  merged = Object.assign(closure_0);
-                  tmp11 = closure_0;
-                  tmp12 = closure_1;
-                  obj.variantsReturnStyle = closure_0(closure_1[8]).ShopVariantsReturnStyle.VARIANTS_GROUP;
-                  flag = true;
-                  obj.includeBundles = true;
-                  tmp13 = closure_9;
-                  obj.skipNumCategories = closure_9;
-                  obj2 = closure_0(closure_1[9]);
-                  tmp14 = closure_5;
-                  result = obj2.areRequestOptionsEqual(closure_5, obj);
-                  _Date2 = Date;
-                  tmp16 = !result;
-                  tmp17 = closure_8;
-                  tmp18 = closure_7;
-                  tmp19 = !tmp16;
-                  if (result) {
-                    tmp19 = Date.now() - closure_8 < closure_7;
-                  }
-                  if (!tmp19) {
-                    tmp11Result = tmp11(tmp12[9]);
-                    tmp20 = closure_1;
-                    tmp21 = closure_2;
-                    collectiblesCategories = tmp11Result.fetchCollectiblesCategories(obj, closure_1, closure_2);
-                  }
+      const fn2 = function b() {
+        if (!closure_3) {
+          if (stateFromStores) {
+            if (!CollectiblesCategoryStore.isFetchingCategories) {
+              const _Date = Date;
+              const _Boolean = Boolean;
+              Date.now() - closure_7 < closure_2_8;
+              if (!Boolean(closure_6)) {
+                const obj = {};
+                const merged = Object.assign(closure_0);
+                obj.variantsReturnStyle = ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP;
+                obj.includeBundles = true;
+                obj.skipNumCategories = skipNumCategories;
+                const result = CollectiblesActionCreators.areRequestOptionsEqual(closure_5, obj);
+                const _Date2 = Date;
+                let tmp19 = !!result;
+                if (result) {
+                  tmp19 = Date.now() - closure_8 < React5;
                 }
+                if (!tmp19) {
+                  const collectiblesCategories = CollectiblesActionCreators.fetchCollectiblesCategories(
+                    obj,
+                    closure_1,
+                    closure_2,
+                  );
+                  const tmp11Result = CollectiblesActionCreators;
+                }
+                const tmp16 = !result;
               }
             }
           }
-          return;
         }
-      }
+      };
       const items2 = [
         undefined !== arg3 && arg3,
         stateFromStores,
@@ -208,12 +191,13 @@ export const useMaybeFetchCollectiblesCategoriesShared = ReactCompilerGating.isR
       cResult[11] = arg2;
       cResult[12] = undefined !== arg3 && arg3;
       cResult[13] = tmp12[6];
-      cResult[14] = O;
+      cResult[14] = fn2;
       cResult[15] = items2;
       tmp19 = items2;
-      tmp18 = O;
+      tmp18 = fn2;
+      const tmpResult2 = require("initialize");
     }
-  : (arg0, arg1, arg2) => {
+  : function useMaybeFetchCollectiblesCategoriesShared(arg0, arg1, arg2) {
       _require = arg0;
       dependencyMap = arg1;
       _slicedToArray = arg2;

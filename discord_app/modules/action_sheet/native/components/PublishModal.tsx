@@ -10,20 +10,20 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   alertContainer: { paddingTop: 16 },
   alertLoading: { paddingTop: 62, paddingBottom: 46 },
-  alertBodyText: { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(5627).DARK_PRIMARY_300_LIGHT_PRIMARY_400 },
+  alertBodyText: { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(5974).DARK_PRIMARY_300_LIGHT_PRIMARY_400 },
 };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(5627).DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
+let obj3 = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(5974).DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/action_sheet/native/components/PublishModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function PublishModal(channelId) {
       const cResult = c.c(10);
       const tmp4 = closure_7();
       const tmp5 = _slicedToArray(useChannelFollowerStatsDefault(channelId.channelId), 2);
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = tmp13Result;
       }
     }
-  : (channelId) => {
+  : function PublishModal(channelId) {
       const tmp = closure_7();
       const tmp3 = _slicedToArray(useChannelFollowerStatsDefault(channelId.channelId), 2);
       const first = tmp3[0];

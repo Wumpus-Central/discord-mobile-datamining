@@ -7,10 +7,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CHECKPOINT_NAV_HEIGHT = fn(5121).CHECKPOINT_NAV_HEIGHT;
+const CHECKPOINT_NAV_HEIGHT = fn(5433).CHECKPOINT_NAV_HEIGHT;
 const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({
   container: { height: "100%", width: "100%" },
   scroll: { width: "100%" },
@@ -21,7 +21,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function CheckpointScreen(children) {
       const cResult = c.c(15);
       children = children.children;
       const tmp2 = closure_9();
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj4;
       tmp7 = obj4;
     }
-  : (children) => {
+  : function CheckpointScreen(children) {
       const tmp = closure_9();
       const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
       const items = [, , ,];

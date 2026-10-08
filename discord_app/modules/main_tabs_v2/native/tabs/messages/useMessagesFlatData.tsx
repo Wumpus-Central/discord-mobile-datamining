@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesFlatData.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, listItemHeight) => {
+  ? function useMessagesFlatData(arg0, listItemHeight) {
       const cResult = c.c(10);
       listItemHeight = listItemHeight.listItemHeight;
       ({ channels, channelFavorites, renderHeader, sections } = arg0);
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (channels, listItemHeight) => {
+  : function useMessagesFlatData(channels, listItemHeight) {
       listItemHeight = listItemHeight.listItemHeight;
       channels = undefined;
       channels = channels.channels;

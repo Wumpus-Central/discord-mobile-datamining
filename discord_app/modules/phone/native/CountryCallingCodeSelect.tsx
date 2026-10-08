@@ -1,15 +1,15 @@
 // discord_app/modules/phone/native/CountryCallingCodeSelect.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import fuzzysearchDefault from "../../../../_runtime/05709_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/06099_fuzzysearch.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const getI18NCountryName = fn(5111).getI18NCountryName;
+const getI18NCountryName = fn(5908).getI18NCountryName;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -31,7 +31,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/phone/native/CountryCallingCodeSelect.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onCountrySelected) => {
+  ? function CountryCallingCodeSelect(onCountrySelected) {
       const cResult = onCountrySelected(first[8]).c(28);
       onCountrySelected = onCountrySelected.onCountrySelected;
       const onClose = onCountrySelected.onClose;
@@ -57,13 +57,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp12 = onClose(first[11])();
       if (cResult[1] !== first) {
-        const fn = function x(str) {
+        function filterSpacesAndPluses(str) {
           const replaced = str.replace(/\+|\s/g, "");
           return replaced.startsWith(first.replace(/\+|\s/g, ""));
-        };
+        }
         cResult[1] = first;
-        cResult[2] = fn;
-        let tmp13 = fn;
+        cResult[2] = filterSpacesAndPluses;
+        let tmp13 = filterSpacesAndPluses;
       } else {
         tmp13 = cResult[2];
       }
@@ -333,7 +333,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       arr2 = items1;
       const tmp7 = num8(noop.useState(""), 2);
     }
-  : (onCountrySelected) => {
+  : function CountryCallingCodeSelect(onCountrySelected) {
       onCountrySelected = onCountrySelected.onCountrySelected;
       const onClose = onCountrySelected.onClose;
       let first;

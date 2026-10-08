@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "center", gap: 2 },
   star: null,
@@ -31,7 +31,7 @@ obj2.starFillMask = rect;
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (fillAmount) => {
+  ? function FractionalStar(fillAmount) {
       const cResult = c.c(10);
       fillAmount = fillAmount.fillAmount;
       const tmp4 = closure_6();
@@ -90,7 +90,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp10;
       tmp9 = tmp10;
     }
-  : (fillAmount) => {
+  : function FractionalStar(fillAmount) {
       fillAmount = fillAmount.fillAmount;
       const tmp = closure_6();
       const obj = {
@@ -126,14 +126,14 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStarRating.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (fillAmounts) => {
+  ? function AppStoreOverlayStarRating(fillAmounts) {
       const cResult = c.c(6);
       fillAmounts = fillAmounts.fillAmounts;
       const tmp2 = closure_6();
       if (cResult[0] !== fillAmounts) {
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function u(fillAmount, arg1) {
+          const fn = function p(fillAmount, arg1) {
             return closure_1_4(closure_1_7, { fillAmount }, arg1);
           };
           cResult[2] = fn;
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = tmp12;
       }
     }
-  : (fillAmounts) => {
+  : function AppStoreOverlayStarRating(fillAmounts) {
       fillAmounts = fillAmounts.fillAmounts;
       return React4(View, {
         style: closure_6().row,

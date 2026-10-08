@@ -1,7 +1,7 @@
 // discord_app/modules/quests/utils/QuestUtils.tsx
+import StreamPermissionUtils from "../../go_live/utils/StreamPermissionUtils.tsx";
 import QuestTaskUtils from "QuestTaskUtils.tsx";
 import QuestSharePolicy from "../../../../discord_common/js/shared/shared-constants/QuestSharePolicy.tsx";
-import StreamPermissionUtils from "../../go_live/utils/StreamPermissionUtils.tsx";
 import QuestType2 from "../../../../discord_common/js/shared/shared-constants/QuestType.tsx";
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -27,7 +27,7 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, MOBILE_ACTIVITY_QUEST) {
   return new Set(nextResult.config.features).has(MOBILE_ACTIVITY_QUEST);
 }
-const QuestConstants = fn(5630);
+const QuestConstants = fn(5977);
 ({ DISCORD_APPLICATION_ID: closure_8, QuestVariants: closure_9, RewardFilterTypes: c10 } = QuestConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");
@@ -71,8 +71,8 @@ export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEn
 export const isShareableQuest = function isShareableQuest(config) {
   return config.sharePolicy !== QuestSharePolicy.QuestSharePolicy.NOT_SHAREABLE;
 };
-export const isStreamingAndCanWatch = function isStreamingAndCanWatch(arg0, stateFromStores) {
-  let first = null != arg0 && null != stateFromStores;
+export const isStreamingAndCanWatch = function isStreamingAndCanWatch(channelId, stateFromStores) {
+  let first = null != channelId && null != stateFromStores;
   if (first) {
     const obj = StreamPermissionUtils;
     first = obj.canWatchStream(stateFromStores, VoiceStateStore, GuildStore, PermissionStore, GameConsoleStore)[0];

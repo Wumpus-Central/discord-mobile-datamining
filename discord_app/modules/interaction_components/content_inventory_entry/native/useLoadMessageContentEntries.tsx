@@ -714,10 +714,10 @@ function isMessageRenderable(message) {
   }
   return true;
 }
-const ImageSizes = fn(2011).ImageSizes;
-const promiseDeduper = new fn(8731).PromiseDeduper();
-const promiseDeduper3 = new fn(8731).PromiseDeduper();
-const promiseDeduper4 = new fn(8731).PromiseDeduper();
+const ImageSizes = fn(2023).ImageSizes;
+const promiseDeduper = new fn(11281).PromiseDeduper();
+const promiseDeduper3 = new fn(11281).PromiseDeduper();
+const promiseDeduper4 = new fn(11281).PromiseDeduper();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -777,7 +777,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp27 = cResult[4];
       }
       const tmp19Result = _slicedToArray(set2.useState(tmp21), 2);
-      const colorStore = tmp(7826).useColorStore(tmp27);
+      const colorStore = tmp(8244).useColorStore(tmp27);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         _require = asyncGeneratorStep(async (arg0, arg1) => {
           if (c7 === 2) {
@@ -1095,7 +1095,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = arr2;
       cResult[13] = arr;
       cResult[14] = set2;
-      const tmpResult = tmp(7826);
+      const tmpResult = tmp(8244);
     }
   : function useLoadMessageContentEntries(arg0) {
       closure_1 = first1.useRef(new Map());

@@ -12,7 +12,7 @@ require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   titleWrapper: {
     position: "absolute",
@@ -22,7 +22,7 @@ let obj = {
     justifyContent: "center",
     alignItems: "center",
     padding: 16,
-    height: fn(11914).CONTROLS_DRAWER_HEADER_SIZE,
+    height: fn(11987).CONTROLS_DRAWER_HEADER_SIZE,
   },
   titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 },
   titlePillBG: null,
@@ -43,7 +43,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/controls/V
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function VoicePanelControlsDrawerTitle(arg0) {
         const cResult = c.c(18);
         ({ title, shown } = arg0);
         ({ disablePill, style, blurStyle } = arg0);
@@ -151,7 +151,7 @@ export default noop.memo(
         tmp8 = items2;
         const tmpResult2 = ReanimatedRexport;
       }
-    : (children) => {
+    : function VoicePanelControlsDrawerTitle(children) {
         let shown = children.shown;
         let flag = children.disablePill;
         if (flag === undefined) {
@@ -161,7 +161,7 @@ export default noop.memo(
         const tmp = closure_6();
         const sharedValue = ReanimatedRexport.useSharedValue(true);
         let backgroundColor = tmp.titlePillBG.backgroundColor;
-        const fn = function p() {
+        const fn = function w() {
           if (null != shown) {
             value = shown.get();
           } else {

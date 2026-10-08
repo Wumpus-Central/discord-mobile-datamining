@@ -38,7 +38,7 @@ function replaceUsernameVariable(message, str, username) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   relativeContainer: { position: "relative" },
   welcomeContainer: {
@@ -120,7 +120,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/HomeWelcomeMessage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function HomeWelcomeMessage(guildId) {
       const cResult = guildId(stateFromStores2[9]).c(74);
       guildId = guildId.guildId;
       closure_10();
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp26 = cResult[12];
         }
         if (cResult[13] !== guildId) {
-          class M {
+          class E {
             constructor() {
               return closure_5.getGuild(guildId);
             }
@@ -302,31 +302,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return closure_1_6.getCurrentUser();
             }
           }
-          cResult[14] = M;
+          cResult[14] = E;
         } else {
-          class M {
+          class E {
             constructor() {
               return closure_5.getGuild(guildId);
             }
           }
         }
         const tmp24 = tmp19(tmp2[12])(tmp23);
-        const stateFromStores3 = tmp(tmp2[10]).useStateFromStores(tmp26, M);
+        const stateFromStores3 = tmp(tmp2[10]).useStateFromStores(tmp26, E);
         if (stateFromStores1 != null) {
-          class M {
+          class E {
             constructor() {
               return closure_5.getGuild(guildId);
             }
           }
         }
         if (cResult[15] !== undefined) {
-          class M {
+          class E {
             constructor() {
               return closure_5.getGuild(guildId);
             }
           }
           if (stateFromStores1 != null) {
-            class M {
+            class E {
               constructor() {
                 return closure_5.getGuild(guildId);
               }
@@ -348,7 +348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (stateFromStores1 != null) {
-            class M {
+            class E {
               constructor() {
                 return closure_5.getGuild(guildId);
               }
@@ -357,14 +357,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[15] = tmp33;
           cResult[16] = tmp32;
         } else {
-          class M {
+          class E {
             constructor() {
               return closure_5.getGuild(guildId);
             }
           }
         }
         if (cResult[17] === guildId) {
-          class M {
+          class E {
             constructor() {
               return closure_5.getGuild(guildId);
             }
@@ -386,7 +386,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[20] === stateFromStores2) {
-            class M {
+            class E {
               constructor() {
                 return closure_5.getGuild(guildId);
               }
@@ -407,7 +407,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (cResult[23] === stateFromStores2) {
-              class M {
+              class E {
                 constructor() {
                   return closure_5.getGuild(guildId);
                 }
@@ -429,7 +429,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               const name = obj8.useName(stateFromStores);
               if (null != stateFromStores1) {
-                class M {
+                class E {
                   constructor() {
                     return closure_5.getGuild(guildId);
                   }
@@ -470,7 +470,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[20] = stateFromStores2;
           if (stateFromStores3 != null) {
-            class M {
+            class E {
               constructor() {
                 return closure_5.getGuild(guildId);
               }
@@ -520,7 +520,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp23 = obj3;
       const tmp20 = stateFromStores1(stateFromStores2[11]);
     }
-  : (guildId) => {
+  : function HomeWelcomeMessage(guildId) {
       guildId = guildId.guildId;
       let stateFromStores2;
       let stateFromStores3;

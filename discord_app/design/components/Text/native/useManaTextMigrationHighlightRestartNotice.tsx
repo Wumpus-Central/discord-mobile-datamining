@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useManaTextMigrationHighlightRestartNotice = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useManaTextMigrationHighlightRestartNotice() {
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DevSettingsStore];
@@ -31,7 +31,7 @@ export const useManaTextMigrationHighlightRestartNotice = ReactCompilerGating.is
       const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
       _require = noop.useRef(true);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function h() {
+        const fn2 = function c() {
           if (ref.current) {
             tmp.current = false;
           } else {
@@ -57,7 +57,7 @@ export const useManaTextMigrationHighlightRestartNotice = ReactCompilerGating.is
       const effect = noop.useEffect(tmp8, tmp9);
       const tmpResult = require("initialize");
     }
-  : () => {
+  : function useManaTextMigrationHighlightRestartNotice() {
       const items = [DevSettingsStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () =>
         DevSettingsStore.get("highlight_mana_text"),

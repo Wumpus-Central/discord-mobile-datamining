@@ -6,13 +6,13 @@ import AuthorizedAppsStore from "../../oauth2/AuthorizedAppsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const FetchState = fn(6609).FetchState;
+const FetchState = fn(6786).FetchState;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useAuthorizedSlayerApplications(arg0, arg1) {
       _require = arg0;
       importDefault = arg1;
       const cResult = require("c").c(16);
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
       }
       if (cResult[3] !== arg0) {
-        const fn2 = function f() {
+        const fn2 = function h() {
           if (closure_0) {
             let newestTokensForNonChildrenApplications =
               AuthorizedAppsStore.getNewestTokensForNonChildrenApplications();
@@ -58,53 +58,63 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != stateFromStores1) {
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn3 = function v(application) {
-            return closure_0(dependencyMap[5]).isSocialLayerSDKAuthorization(
-              application.application,
-              application.scopes,
-            );
-          };
-          cResult[8] = fn3;
-          let found = fn3;
+          class F {
+            constructor(arg0) {
+              obj = closure_0(closure_1_2[5]);
+              return obj.isSocialLayerSDKAuthorization(arg0.application, arg0.scopes);
+            }
+          }
+          cResult[8] = F;
+          let found = F;
         } else {
-          found = cResult[8];
+          class F {
+            constructor(arg0) {
+              obj = closure_0(closure_1_2[5]);
+              return obj.isSocialLayerSDKAuthorization(arg0.application, arg0.scopes);
+            }
+          }
         }
         const _Symbol2 = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          class A {
+          class F {
             constructor(arg0) {
-              return arg0.application;
+              obj = closure_0(closure_1_2[5]);
+              return obj.isSocialLayerSDKAuthorization(arg0.application, arg0.scopes);
             }
           }
-          cResult[9] = A;
+          cResult[9] = tmp14;
         } else {
-          class A {
+          class F {
             constructor(arg0) {
-              return arg0.application;
+              obj = closure_0(closure_1_2[5]);
+              return obj.isSocialLayerSDKAuthorization(arg0.application, arg0.scopes);
             }
           }
         }
         found = stateFromStores1.filter(found);
-        const mapped = found.map(A);
+        const mapped = found.map(tmp14);
         cResult[6] = stateFromStores1;
         cResult[7] = mapped;
       } else {
-        class A {
+        class F {
           constructor(arg0) {
-            return arg0.application;
+            obj = closure_0(closure_1_2[5]);
+            return obj.isSocialLayerSDKAuthorization(arg0.application, arg0.scopes);
           }
         }
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          class A {
+          class F {
             constructor(arg0) {
-              return arg0.application;
+              obj = closure_0(closure_1_2[5]);
+              return obj.isSocialLayerSDKAuthorization(arg0.application, arg0.scopes);
             }
           }
           cResult[5] = tmp12;
         } else {
-          class A {
+          class F {
             constructor(arg0) {
-              return arg0.application;
+              obj = closure_0(closure_1_2[5]);
+              return obj.isSocialLayerSDKAuthorization(arg0.application, arg0.scopes);
             }
           }
         }
@@ -124,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[10] = arg1;
           cResult[11] = E;
           cResult[12] = items2;
-          let tmp18 = items2;
+          let tmp19 = items2;
         } else {
           class E {
             constructor() {
@@ -137,11 +147,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          tmp18 = cResult[12];
+          tmp19 = cResult[12];
         }
-        const effect = noop.useEffect(E, tmp18);
-        let tmp22 = stateFromStores !== FetchState.FETCHED;
-        if (tmp22) {
+        const effect = noop.useEffect(E, tmp19);
+        let tmp23 = stateFromStores !== FetchState.FETCHED;
+        if (tmp23) {
           class E {
             constructor() {
               if (!closure_1) {
@@ -153,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          if (!tmp23) {
+          if (!tmp24) {
             class E {
               constructor() {
                 if (!closure_1) {
@@ -166,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          tmp22 = tmp23;
+          tmp23 = tmp24;
         }
         if (cResult[13] === tmp12) {
           class E {
@@ -180,17 +190,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          return tmp24;
+          return tmp25;
         }
-        const obj2 = { showLoadingIndicator: tmp22, slayerSdkApplications: tmp12 };
+        const obj2 = { showLoadingIndicator: tmp23, slayerSdkApplications: tmp12 };
         cResult[13] = tmp12;
-        cResult[14] = tmp22;
+        cResult[14] = tmp23;
         cResult[15] = obj2;
-        tmp24 = obj2;
+        tmp25 = obj2;
       }
       const tmpResult2 = require("initialize");
     }
-  : (arg0, arg1) => {
+  : function useAuthorizedSlayerApplications(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       let items = [AuthorizedAppsStore];

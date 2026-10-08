@@ -1,30 +1,26 @@
 // discord_app/utils/native/NetworkUtils.tsx
 import LoggerDefault from "../../modules/debug/Logger.tsx";
-import Constants from "../../Constants.tsx";
-import configure_mod from "../../../_runtime/01470_configure.js";
-import size from "../../../_runtime/metro/00002__.js";
+import configure2 from "../../../_runtime/01482_configure.js";
 
+const configure_mod = configure2;
+
+require = fn;
 function notifyListeners(isConnected) {
   isConnected = isConnected.isConnected;
   ({ type, details } = isConnected);
   obj = { type, effectiveSpeed: null, serviceProvider: null };
   let cellularGeneration = null;
-  if (type === NetworkConnectionTypes.CELLULAR) {
+  if (type === configure2.NetInfoStateType.cellular) {
     cellularGeneration = details.cellularGeneration;
   }
   obj.effectiveSpeed = cellularGeneration;
   let carrier = null;
-  if (type === NetworkConnectionTypes.CELLULAR) {
+  if (type === configure2.NetInfoStateType.cellular) {
     carrier = details.carrier;
   }
   obj.serviceProvider = carrier;
   obj.log(
-    "Network status changed: isConnected:" +
-      isConnected +
-      " type:" +
-      isConnected.type +
-      " speed:" +
-      obj.cellularGeneration,
+    "Network status changed: isConnected:" + isConnected + " type:" + isConnected.type + " speed:" + obj.effectiveSpeed,
   );
   const item = isConnected
     ? closure_4
@@ -38,7 +34,6 @@ function notifyListeners(isConnected) {
   const item1 = closure_6.forEach((fn) => fn(obj));
   const arr = isConnected ? closure_4 : closure_5;
 }
-const NetworkConnectionTypes = Constants.NetworkConnectionTypes;
 let obj = new LoggerDefault("NetworkUtils");
 obj.enableNativeLogger(true);
 let closure_4 = [];
@@ -53,6 +48,7 @@ configure.then((isConnected) => {
     flag = false;
   }
 });
+const size = fn(2);
 const result = size.fileFinishedImporting("utils/native/NetworkUtils.tsx");
 
 export default {
@@ -140,12 +136,12 @@ export default {
       ({ type, details } = result);
       obj = { type, effectiveSpeed: null, serviceProvider: null };
       let cellularGeneration = null;
-      if (type === constants.CELLULAR) {
+      if (type === configure2.NetInfoStateType.cellular) {
         cellularGeneration = details.cellularGeneration;
       }
       obj.effectiveSpeed = cellularGeneration;
       let carrier = null;
-      if (type === constants.CELLULAR) {
+      if (type === configure2.NetInfoStateType.cellular) {
         carrier = details.carrier;
       }
       obj.serviceProvider = carrier;

@@ -7,13 +7,13 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import BookCheckIcon from "../../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import ForumIcon from "../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
 import GameControllerIcon from "../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
-import RobotIcon from "../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
-import MusicIcon from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import FoodIcon from "../../../../design/components/Icon/native/redesign/generated/FoodIcon.tsx";
 import BicycleIcon from "../../../../design/components/Icon/native/redesign/generated/BicycleIcon.tsx";
 import TvIcon from "../../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
-import PencilSparkleIcon from "../../../../design/components/Icon/native/redesign/generated/PencilSparkleIcon.tsx";
+import MusicIcon from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import PiggyBankIcon from "../../../../design/components/Icon/native/redesign/generated/PiggyBankIcon.tsx";
+import PencilSparkleIcon from "../../../../design/components/Icon/native/redesign/generated/PencilSparkleIcon.tsx";
+import RobotIcon from "../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import ICYMIAnalytics2 from "../../ICYMIAnalytics.tsx";
 import PaintPaletteIcon from "../../../../design/components/Icon/native/redesign/generated/PaintPaletteIcon.tsx";
 import ScienceIcon from "../../../../design/components/Icon/native/redesign/generated/ScienceIcon.tsx";
@@ -27,41 +27,41 @@ import GuildDiscoveryCategoryStore from "../../../global_discovery_servers/Guild
 require = fn;
 function primaryCategoryToEmojiIcon(categoryid) {
   if (GuildPrimaryCategory.GAMING === categoryid) {
-    return v65535(GameControllerIcon.GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(GameControllerIcon.GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.ENTERTAINMENT === categoryid) {
-    return v65535(TvIcon.TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(TvIcon.TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.GENERAL_CHATTING === categoryid) {
-    return v65535(ForumIcon.ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(ForumIcon.ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.SCIENCE_AND_TECH === categoryid) {
-    return v65535(ScienceIcon.ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(ScienceIcon.ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.MUSIC === categoryid) {
-    return v65535(MusicIcon.MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(MusicIcon.MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.EDUCATION === categoryid) {
-    return v65535(BookCheckIcon.BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(BookCheckIcon.BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.CREATIVE_ARTS === categoryid) {
-    return v65535(PaintPaletteIcon.PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(PaintPaletteIcon.PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FINANCE === categoryid) {
-    return v65535(PiggyBankIcon.PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(PiggyBankIcon.PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.BOTS === categoryid) {
-    return v65535(RobotIcon.RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(RobotIcon.RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.SPORTS === categoryid) {
-    return v65535(MedalIcon.MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(MedalIcon.MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.TRAVEL_AND_FOOD === categoryid) {
-    return v65535(FoodIcon.FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(FoodIcon.FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FASHION_AND_BEAUTY === categoryid) {
-    return v65535(PaintbrushThinIcon.PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(PaintbrushThinIcon.PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FITNESS_AND_HEALTH === categoryid) {
-    return v65535(BicycleIcon.BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(BicycleIcon.BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (16 === categoryid) {
-    return v65535(PencilSparkleIcon.PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(PencilSparkleIcon.PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(16461).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(16721).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
   footer: null,
@@ -112,7 +112,7 @@ obj2.scrollContentContainer = { paddingTop: nativeDefault.space.PX_24 };
 let closure_14 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function WordTopic(arg0) {
       const cResult = c.c(14);
       ({ topic, categoryid } = arg0);
       ({ selected, handlePress } = arg0);
@@ -160,7 +160,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj3 = { accessibilityRole, accessibilityState, variant: str, text: topic, onPress: tmp9, icon: tmp4 };
-          const tmp12 = v65535(components_Button_Button.Button, obj3);
+          const tmp12 = collapsed(components_Button_Button.Button, obj3);
           cResult[7] = accessibilityRole;
           cResult[8] = accessibilityState;
           cResult[9] = tmp4;
@@ -180,7 +180,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = useA11yRolesNative;
     }
-  : (categoryid) => {
+  : function WordTopic(categoryid) {
       categoryid = categoryid.categoryid;
       ({ selected, handlePress: importDefault } = categoryid);
       const tmp = primaryCategoryToEmojiIcon(categoryid);
@@ -205,7 +205,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           return importDefault(categoryid);
         };
         obj2.icon = tmp;
-        tmp8Result = v65535(components_Button_Button.Button, obj2);
+        tmp8Result = collapsed(components_Button_Button.Button, obj2);
       }
       return tmp8Result;
     };
@@ -219,7 +219,7 @@ export default function ICYMITopicsScreen() {
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp6[1];
   const set = new Set();
-  const navigation = first(1490).useNavigation();
+  const navigation = first(1502).useNavigation();
   const items = [navigation, first];
   const callback = noop.useCallback(
     navigation(function* () {
@@ -302,7 +302,7 @@ export default function ICYMITopicsScreen() {
     }),
     items,
   );
-  let obj = first(1490);
+  let obj = first(1502);
   const items1 = [GuildDiscoveryCategoryStore];
   const stateFromStoresArray = first(504).useStateFromStoresArray(items1, () => allCategories.getAllCategories());
   const items2 = [first];
@@ -326,11 +326,11 @@ export default function ICYMITopicsScreen() {
   let obj3 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = first(1126).intl;
   obj3.children = intl.string(first(1126).t.Y5d99L);
-  const children = [closure_10(first(4892).Text, obj3), , , ,];
+  const children = [closure_10(first(5086).Text, obj3), , , ,];
   const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
   const intl2 = first(1126).intl;
   obj4.children = intl2.string(first(1126).t.MGZsfv);
-  children[1] = closure_10(first(4892).Text, obj4);
+  children[1] = closure_10(first(5086).Text, obj4);
   children[2] = closure_10(closure_6, { style: tmp.separator });
   let obj6 = {
     showsVerticalScrollIndicator: false,
@@ -345,7 +345,7 @@ export default function ICYMITopicsScreen() {
   obj6.children = closure_10(closure_6, {
     style: tmp.topicsContainer,
     children: stateFromStoresArray.map((categoryId) =>
-      v65535(
+      collapsed(
         closure_15,
         {
           selected: first.has(categoryId.categoryId),
@@ -368,7 +368,7 @@ export default function ICYMITopicsScreen() {
     const intl3 = tmp7(1126).intl;
     obj11.text = intl3.string(tmp7(1126).t.PDTjLN);
     obj11.onPress = callback;
-    obj9.children = closure_10(tmp7(5601).Button, obj11);
+    obj9.children = closure_10(tmp7(5375).Button, obj11);
     tmp12Result = closure_10(closure_6, obj9);
   }
   children[4] = tmp12Result;

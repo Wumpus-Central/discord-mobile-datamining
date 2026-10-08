@@ -11,7 +11,7 @@ require = fn;
 function onClose() {
   ModalActionCreatorsDefault.popWithKey(SHARE_SCREEN_MODAL_KEY);
 }
-const SHARE_SCREEN_MODAL_KEY = fn(13680).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(13902).SHARE_SCREEN_MODAL_KEY;
 const jsx = fn(21).jsx;
 let closure_9 = new LoggerDefault("ShareScreenModal");
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareScreenModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (shareId) => {
+  ? function ShareScreenModal(shareId) {
       const cResult = channelId(attachmentManifest[9]).c(20);
       ({ text, channelId } = shareId);
       shareId = shareId.shareId;
@@ -324,7 +324,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = fn;
       const tmp6 = stateFromStores(noop.useState(null), 2);
     }
-  : (text) => {
+  : function ShareScreenModal(text) {
       text = text.text;
       require = text;
       const channelId = text.channelId;

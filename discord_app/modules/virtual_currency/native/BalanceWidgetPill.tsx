@@ -12,10 +12,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
-    minHeight: fn(5607).SMALL_BUTTON_HEIGHT,
+    minHeight: fn(5380).SMALL_BUTTON_HEIGHT,
     borderRadius: nativeDefault.radii.round,
     justifyContent: "center",
     alignItems: "center",
@@ -30,7 +30,7 @@ let obj2 = {
   balanceText: null,
 };
 let obj4 = { color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, textAlign: "right", lineHeight: null };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;
@@ -40,7 +40,7 @@ obj2.balanceText = obj4;
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BalanceWidgetPill(arg0) {
       const cResult = c.c(31);
       ({ initialRenderedBalance, balance, style } = arg0);
       let tmp4 = null;
@@ -183,7 +183,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj9;
       tmp6 = obj9;
     }
-  : (initialRenderedBalance) => {
+  : function BalanceWidgetPill(initialRenderedBalance) {
       let prop = initialRenderedBalance.initialRenderedBalance;
       if (prop === undefined) {
         prop = null;

@@ -8,7 +8,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((arg0) => {
   let str = "row";
   if (arg0) {
@@ -24,7 +24,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Button/native/TwinButtons.native.tsx");
 
 export const TwinButtons = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function TwinButtons(children) {
       const cResult = require("c").c(8);
       let button = children.children;
       let obj = require("c");
@@ -72,7 +72,7 @@ export const TwinButtons = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = mapped;
       const obj2 = require("useFontScale");
     }
-  : (children) => {
+  : function TwinButtons(children) {
       _require = undefined;
       let tmp = closure_6(require("useFontScale").useFontScale() > 1.2);
       _require = tmp;

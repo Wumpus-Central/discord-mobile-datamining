@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/native/useStartProviderConnection.tsx");
 
 export const useStartProviderConnection = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useStartProviderConnection(arg0) {
       const cResult = require("c").c(8);
       let obj = require("c");
       const providerConnection = require("useProviderConnection").useProviderConnection(arg0);
@@ -105,7 +105,7 @@ export const useStartProviderConnection = ReactCompilerGating.isReactCompilerEna
             }
           }
         });
-        const fn = function () {
+        function t0() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -114,10 +114,10 @@ export const useStartProviderConnection = ReactCompilerGating.isReactCompilerEna
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[0] = startConnection;
-        cResult[1] = fn;
-        let tmp3 = fn;
+        cResult[1] = t0;
+        let tmp3 = t0;
       } else {
         tmp3 = cResult[1];
       }
@@ -143,7 +143,7 @@ export const useStartProviderConnection = ReactCompilerGating.isReactCompilerEna
       tmp5 = obj3;
       let obj2 = require("useProviderConnection");
     }
-  : (arg0) => {
+  : function useStartProviderConnection(arg0) {
       const providerConnection = require("useProviderConnection").useProviderConnection(arg0);
       const startConnection = providerConnection.startConnection;
       ({ loading, hasConnection, canConnect, account } = providerConnection);

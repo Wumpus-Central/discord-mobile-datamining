@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useGuildRoleMemberCounts.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useGuildRoleMemberCounts(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(7);
       let num = 0;
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = fn2;
       let obj = require("c");
     }
-  : (arg0) => {
+  : function useGuildRoleMemberCounts(arg0) {
       _require = arg0;
       let num = arg1;
       if (arg1 === undefined) {

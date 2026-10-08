@@ -10,7 +10,7 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
 let ReactCompilerGating = ReactCompilerGating_mod;
-const fn = () => {
+function useYouBarHorizontalMargin() {
   if (useSafeAreaInsetsDefault().bottom > 0) {
     if (obj.isIOS()) {
       let tmp3 = React3;
@@ -18,18 +18,20 @@ const fn = () => {
     return tmp3;
   }
   tmp3 = React4;
-};
+}
 const result1 = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx");
 
-export const useYouBarHorizontalMargin = fn;
+export { useYouBarHorizontalMargin };
 export const useYouBarBottomMargin = ReactCompilerGating.isReactCompilerEnabled()
-  ? () =>
-      Math.max(
-        useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_OFFSET_MINIMUM),
-        useSafeAreaInsetsDefault().bottom,
-      )
-  : () =>
-      Math.max(
+  ? function useYouBarBottomMargin() {
+      return Math.max(
         useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_OFFSET_MINIMUM),
         useSafeAreaInsetsDefault().bottom,
       );
+    }
+  : function useYouBarBottomMargin() {
+      return Math.max(
+        useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_OFFSET_MINIMUM),
+        useSafeAreaInsetsDefault().bottom,
+      );
+    };

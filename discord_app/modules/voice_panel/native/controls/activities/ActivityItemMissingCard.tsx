@@ -9,7 +9,7 @@ require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { loadingActivity: null, disabledActivity: null };
 let size = {
   width: "100%",
@@ -24,7 +24,7 @@ obj.disabledActivity = size1;
 let closure_8 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (activity) => {
+  ? function ActivityItemEmptyCard(activity) {
       const cResult = require("c").c(23);
       activity = activity.activity;
       _require = activity;
@@ -172,7 +172,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       });
-      const fn = function () {
+      function t2() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -181,17 +181,17 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      };
+      }
       cResult[2] = activity.launchId;
       cResult[3] = analyticsLocations;
       cResult[4] = application;
       cResult[5] = channelId;
-      cResult[6] = fn;
-      tmp9 = fn;
+      cResult[6] = t2;
+      tmp9 = t2;
       let obj = require("c");
       tmp = _require;
     }
-  : (activity) => {
+  : function ActivityItemEmptyCard(activity) {
       activity = activity.activity;
       const application = activity.application;
       let channelId;
@@ -291,7 +291,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/controls/act
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function ActivityItemMissingCard(arg0) {
         let obj = dependencyMap;
         const cResult = c.c(4);
         ({ activity, application } = arg0);
@@ -316,7 +316,7 @@ export default noop.memo(
         obj = { style: tmp2.loadingActivity, children: timestampProducer(ActivityIndicator, { size: "large" }) };
         tmp5 = timestampProducer(NativeViewDefault, obj);
       }
-    : (arg0) => {
+    : function ActivityItemMissingCard(arg0) {
         ({ activity, application } = arg0);
         if (null != activity) {
           if (null != application) {

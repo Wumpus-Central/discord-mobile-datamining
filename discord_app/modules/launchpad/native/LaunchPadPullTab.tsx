@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Pressable = fn(17).Pressable;
-const LaunchPadConstants = fn(11138);
+const LaunchPadConstants = fn(11258);
 ({ LAUNCH_PAD_MARGIN: closure_4, LAUNCH_PAD_PULL_TAB_BORDER_RADIUS } = LaunchPadConstants);
 const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT;
 ({
@@ -18,9 +18,9 @@ const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT
   LAUNCH_PAD_PULL_TAB_WIDTH,
   LAUNCH_PAD_SPRING_CONFIG: closure_11,
 } = LaunchPadConstants);
-const CHAT_INPUT_HEIGHT = fn(11589).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(11652).CHAT_INPUT_HEIGHT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { pullTab: null, pullTabButton: null, pullTabOpened: null, pullTabClosed: null };
 let size = {
   position: "absolute",
@@ -59,7 +59,7 @@ const __initData4 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (launchPadSharedState) => {
+  ? function useLaunchPadPullTabKeyboardListener(launchPadSharedState) {
       launchPadSharedState = launchPadSharedState.launchPadSharedState;
       const launchPadPullTabState = launchPadSharedState.launchPadPullTabState;
       const updaters = launchPadSharedState.updaters;
@@ -137,7 +137,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       fn2.__initData = __initData2;
       const animatedReaction = obj2.useAnimatedReaction(fn, fn2);
     }
-  : (launchPadSharedState) => {
+  : function useLaunchPadPullTabKeyboardListener(launchPadSharedState) {
       launchPadSharedState = launchPadSharedState.launchPadSharedState;
       const launchPadPullTabState = launchPadSharedState.launchPadPullTabState;
       const updaters = launchPadSharedState.updaters;
@@ -228,7 +228,7 @@ let result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadPullT
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (launchPadSharedState) => {
+    ? function LaunchPadPullTab(launchPadSharedState) {
         const cResult = launchPadSharedState(gestureState[11]).c(20);
         launchPadSharedState = launchPadSharedState.launchPadSharedState;
         const launchPadPullTabState = launchPadSharedState.launchPadPullTabState;
@@ -1062,7 +1062,7 @@ export default noop.memo(
         tmp7 = obj6;
         let obj = launchPadSharedState(gestureState[11]);
       }
-    : (launchPadSharedState) => {
+    : function LaunchPadPullTab(launchPadSharedState) {
         launchPadSharedState = launchPadSharedState.launchPadSharedState;
         const launchPadPullTabState = launchPadSharedState.launchPadPullTabState;
         const gestureState = launchPadSharedState.gestureState;

@@ -9,11 +9,11 @@ import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const NO_ACTIVITIES = fn(2050).NO_ACTIVITIES;
+const NO_ACTIVITIES = fn(2062).NO_ACTIVITIES;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useEmbeddedAppsForChannel(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return closure_8(require("initialize").useStateFromStoresArray(first, tmp6), arg1);
     }
-  : (arg0, arg1) => {
+  : function useEmbeddedAppsForChannel(arg0, arg1) {
       _require = arg0;
       const items = [EmbeddedActivitiesStore];
       return closure_8(
@@ -64,13 +64,13 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr, arg1) => {
+  ? function useEmbeddedApps(arr, arg1) {
       _require = arg1;
       const cResult = require("c").c(15);
       if (cResult[0] !== arr) {
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function s(applicationId) {
+          const fn = function o(applicationId) {
             return applicationId.applicationId;
           };
           cResult[2] = fn;
@@ -177,7 +177,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           return tmp13;
         });
-        const found = mapped1.filter(tmp26(1375).isNotNullish);
+        const found = mapped1.filter(tmp26(1387).isNotNullish);
         cResult[10] = tmp8;
         cResult[11] = stateFromStoresArray;
         cResult[12] = arr;
@@ -188,7 +188,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = require("c");
     }
-  : (arr, arg1) => {
+  : function useEmbeddedApps(arr, arg1) {
       _require = arr;
       importDefault = arg1;
       let mapped = arr.map((applicationId) => applicationId.applicationId);
@@ -253,7 +253,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_8 = tmp4;
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useEmbeddedAppsByChannel(arg0) {
       _require = arg0;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -305,7 +305,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp7;
     }
-  : (arg0) => {
+  : function useEmbeddedAppsByChannel(arg0) {
       _require = arg0;
       let items = [EmbeddedActivitiesStore];
       const tmp = closure_8(
@@ -346,7 +346,7 @@ export default tmp2;
 export const useEmbeddedAppsByChannel = tmp3;
 export const useEmbeddedApps = tmp4;
 export const useEmbeddedAppsWithPresence = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useEmbeddedAppsWithPresence(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -357,7 +357,7 @@ export const useEmbeddedAppsWithPresence = ReactCompilerGating.isReactCompilerEn
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function o() {
+        const fn = function s() {
           const map = new Map();
           const item = closure_0.forEach((embeddedActivity) => {
             value = undefined;
@@ -412,7 +412,7 @@ export const useEmbeddedAppsWithPresence = ReactCompilerGating.isReactCompilerEn
       let obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7, require("initialize").statesWillNeverBeEqual);
     }
-  : (arg0) => {
+  : function useEmbeddedAppsWithPresence(arg0) {
       _require = arg0;
       const items = [PresenceStore];
       const items1 = [arg0];

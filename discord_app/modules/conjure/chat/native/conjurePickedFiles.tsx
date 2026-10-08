@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/chat/native/conjurePickedFiles.tsx
-import UploadPlatform from "../../../media_uploads/UploadPlatform.tsx";
 import UploadDefault from "../../../../lib/uploader/Upload.tsx";
+import UploadPlatform from "../../../media_uploads/UploadPlatform.tsx";
 import utils_UploadUtils from "../../../../utils/native/UploadUtils.tsx";
 import ImagePickerDefault from "../../../image/native/ImagePicker.tsx";
 import conjureAttachmentDrafts from "../conjureAttachmentDrafts.tsx";

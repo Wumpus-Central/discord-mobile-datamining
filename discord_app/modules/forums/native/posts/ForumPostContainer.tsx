@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   childContainer: { position: "relative", minHeight: 110, padding: 12 },
   card: { marginBottom: 12 },
@@ -21,7 +21,7 @@ let obj = {
   },
 };
 let closure_6 = createStyles.createStyles(obj);
-const ReanimatedHelperTypes = fn(6578);
+const ReanimatedHelperTypes = fn(6754);
 const redux = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue(false));
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
@@ -34,7 +34,7 @@ let obj3 = {
 };
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForumPostPressableContainer(arg0) {
       const cResult = c.c(20);
       ({ threadId, children, style } = arg0);
       const tmp4 = closure_6();
@@ -142,7 +142,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = items;
       const tmp8 = useNativeForumPostHandlersDefault(tmp7);
     }
-  : (arg0) => {
+  : function ForumPostPressableContainer(arg0) {
       ({ threadId, children, style } = arg0);
       const tmp = closure_6();
       const sharedValue = ReanimatedRexport.useSharedValue(false);
@@ -192,14 +192,16 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         </redux.Provider>
       );
     };
-fn = () => noop.useContext(closure_7);
+function useForumPostContainerPressedIn() {
+  return noop.useContext(closure_7);
+}
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/forums/native/posts/ForumPostContainer.tsx");
 
-export const useForumPostContainerPressedIn = fn;
+export { useForumPostContainerPressedIn };
 export const ForumPostPressableContainer = tmp3;
 export const ForumPostDisabledContainer = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForumPostDisabledContainer(arg0) {
       const cResult = c.c(6);
       ({ children, style } = arg0);
       const tmp2 = closure_6();
@@ -230,7 +232,7 @@ export const ForumPostDisabledContainer = ReactCompilerGating.isReactCompilerEna
       cResult[2] = items;
       tmp3 = items;
     }
-  : (arg0) => {
+  : function ForumPostDisabledContainer(arg0) {
       ({ children, style } = arg0);
       const obj = { style: null, pointerEvents: "none", children: null };
       const items = [closure_6().disabledContainer, style];

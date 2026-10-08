@@ -20,7 +20,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (contentClassification) => {
+  ? function useGameProfileObscured(contentClassification) {
       const cResult = c.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = result;
       const tmpResult = initialize;
     }
-  : (contentClassification) => {
+  : function useGameProfileObscured(contentClassification) {
       initialize;
       [][0] = UserStore;
       let result = null != contentClassification;

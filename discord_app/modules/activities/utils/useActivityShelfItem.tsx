@@ -5,8 +5,8 @@ import Server from "../../../flow/Server.tsx";
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils.tsx";
 import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
 import ApplicationFlagUtils from "../../applications/utils/ApplicationFlagUtils.tsx";
-import getPlatformDefault from "getPlatform.tsx";
 import canLaunchContextlessFrame from "../../frames/utils/canLaunchContextlessFrame.tsx";
+import getPlatformDefault from "getPlatform.tsx";
 import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication.tsx";
 import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity.tsx";
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground.tsx";
@@ -47,8 +47,8 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = customId({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(6664)().analyticsLocations;
-  closure_14 = context(9167)();
+  analyticsLocations = context(6841)().analyticsLocations;
+  closure_14 = context(10733)();
   obj = canLaunchContextlessFrame;
   closure_15 = obj.canLaunchContextlessFrame(application);
   if (null == application) {
@@ -306,14 +306,14 @@ function useOnActivityItemSelected(arg0) {
       : undefined;
   }
 }
-const STAFF_RELEASE_PHASES = fn(2011).STAFF_RELEASE_PHASES;
+const STAFF_RELEASE_PHASES = fn(2023).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1085).ApplicationFlags;
-const MAIN_SURFACE = fn(8738).MAIN_SURFACE;
+const MAIN_SURFACE = fn(10613).MAIN_SURFACE;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (applicationId) => {
+  ? function useActivityAction(applicationId) {
       const obj = c;
       const cResult = obj.c(2);
       ({ context, fetchesApplication } = applicationId);
@@ -368,7 +368,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = useGetOrFetchApplications;
     }
-  : (applicationId) => {
+  : function useActivityAction(applicationId) {
       ({ context, fetchesApplication } = applicationId);
       if (fetchesApplication === undefined) {
         fetchesApplication = true;
@@ -429,7 +429,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useActivityShelfItem.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useActivityShelfItem(arg0) {
       const cResult = c.c(37);
       ({
         activityItem,
@@ -650,7 +650,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = obj5;
       tmp10 = obj5;
     }
-  : (backgroundResolution) => {
+  : function useActivityShelfItem(backgroundResolution) {
       ({ activityItem, context, assetNames } = backgroundResolution);
       ({ locationObject, onActivityItemSelected, embeddedActivitiesManager } = backgroundResolution);
       if (assetNames === undefined) {

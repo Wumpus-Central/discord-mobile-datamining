@@ -3,25 +3,22 @@ import discord_common_shallowEqual from "../../../discord_common/js/packages/sha
 import _modDef683 from "../../../_runtime/metro/00683__.js";
 import utils_ColorUtils from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import DisplayNameEffect from "../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
-import DisplayNameFont from "../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 const require = globalThis.__r;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1395);
+const DisplayNameStylesConstants = fn(1407);
 ({
   DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4,
   DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty,
-  FLYWHEEL_EFFECTS: metroRequire,
-  FLYWHEEL_FONTS: closure_7,
-  getColorPresetsForEffect: closure_8,
+  getColorPresetsForEffect: metroRequire,
 } = DisplayNameStylesConstants);
 let items = [
-  fn(1396).DisplayNameEffect.NEON,
-  fn(1396).DisplayNameEffect.TOON,
-  fn(1396).DisplayNameEffect.POP,
-  fn(1396).DisplayNameEffect.GUMMY,
+  fn(1408).DisplayNameEffect.NEON,
+  fn(1408).DisplayNameEffect.TOON,
+  fn(1408).DisplayNameEffect.POP,
+  fn(1408).DisplayNameEffect.GUMMY,
 ];
 const set = new Set(items);
 const items1 = [
@@ -61,7 +58,7 @@ export const areDisplayNameStylesEqual = function areDisplayNameStylesEqual(font
 };
 export const isSolidPresetColor = function isSolidPresetColor(arg0, arg1) {
   closure_0 = arg0;
-  return closure_1_8(arg1).some((item) => item[0] === closure_0);
+  return timestampProducer(arg1).some((item) => item[0] === closure_0);
 };
 export const resolveSolidColor = function resolveSolidColor(arg0, arg1, arg2) {
   let tmp = arg1;
@@ -69,7 +66,7 @@ export const resolveSolidColor = function resolveSolidColor(arg0, arg1, arg2) {
     tmp = arg0;
   } else {
     closure_0 = arg0;
-    closure_1_8(arg2);
+    timestampProducer(arg2);
   }
   return tmp;
 };
@@ -77,7 +74,7 @@ export const resolveSolidPresetSeed = function resolveSolidPresetSeed(selectedCo
   let first = selectedColor;
   closure_0 = selectedColor;
   if (!obj.some((item) => item[0] === closure_0)) {
-    first = closure_1_8(selectedEffectId)[0][0];
+    first = timestampProducer(selectedEffectId)[0][0];
   }
   return first;
 };
@@ -181,7 +178,7 @@ export const generateRandomDisplayNameStyles = function generateRandomDisplayNam
   visibleEffectOrder,
 ) {
   const tmp = visibleEffectOrder[Math.floor(Math, Math.random(Math) * visibleEffectOrder.length)];
-  const arr = closure_1_8(tmp);
+  const arr = timestampProducer(tmp);
   const obj = {
     fontId: visibleFontOrder[Math.floor(Math, Math.random(Math) * visibleFontOrder.length)],
     effectId: tmp,
@@ -190,36 +187,6 @@ export const generateRandomDisplayNameStyles = function generateRandomDisplayNam
   const items = [...arr[Math.floor(Math, Math.random(Math) * arr.length)]];
   obj.colors = items;
   return obj;
-};
-export const applyFlywheelViewingFallback = function applyFlywheelViewingFallback(
-  fontId,
-  isDisplayNameStylesFlywheelViewersEnabled,
-) {
-  if (!isDisplayNameStylesFlywheelViewersEnabled) {
-    if (null != fontId) {
-      if (React5.includes(fontId.fontId)) {
-        fontId = DisplayNameFont.DisplayNameFont.DEFAULT;
-      } else {
-        fontId = fontId.fontId;
-      }
-      if (timestampProducer.includes(fontId.effectId)) {
-        let effectId = DisplayNameEffect.DisplayNameEffect.SOLID;
-      } else {
-        effectId = fontId.effectId;
-      }
-      if (fontId !== fontId.fontId) {
-        const obj = {};
-        const merged = Object.assign(fontId);
-        obj.fontId = fontId;
-        obj.effectId = effectId;
-        let tmp7 = obj;
-      } else {
-        tmp7 = fontId;
-      }
-      return tmp7;
-    }
-  }
-  return fontId;
 };
 export const hasNonLatinLetters = function hasNonLatinLetters(displayName) {
   if (null == displayName) {

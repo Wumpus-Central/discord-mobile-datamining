@@ -26,7 +26,7 @@ function Subblocks(style) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({
   container: {
     display: "flex",
@@ -54,7 +54,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FeaturedBlock.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (featuredBlock) => {
+  ? function FeaturedBlock(featuredBlock) {
       const cResult = c.c(9);
       featuredBlock = featuredBlock.featuredBlock;
       const tmp4 = closure_5();
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = tmp7;
       const obj4 = { featuredBlock, style: tmp4.featuredSubblock };
     }
-  : (featuredBlock) => {
+  : function FeaturedBlock(featuredBlock) {
       const tmp = closure_5();
       const obj = {
         value: useAnalyticsLocationsDefault(AnalyticsLocationDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK)

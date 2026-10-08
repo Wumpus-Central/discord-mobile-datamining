@@ -1,7 +1,7 @@
 // discord_app/modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import GuildOnboardingHomeSettingsStore from "../GuildOnboardingHomeSettingsStore.tsx";
@@ -9,11 +9,11 @@ import GuildOnboardingMemberActionStore from "../GuildOnboardingMemberActionStor
 
 require = fn;
 const View = fn(17).View;
-const StaticChannelRoute = fn(2058).StaticChannelRoute;
-const GuildMemberFlags = fn(4501).GuildMemberFlags;
+const StaticChannelRoute = fn(2070).StaticChannelRoute;
+const GuildMemberFlags = fn(4693).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { padding: 16 },
   horizontal: { flexDirection: "row", alignItems: "center" },
@@ -39,7 +39,7 @@ obj2.progressForeground = {
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (percent) => {
+  ? function ProgressBar(percent) {
       const cResult = c.c(11);
       const tmp3 = closure_12();
       const combined = "" + percent.percent + "%";
@@ -65,7 +65,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[6] !== tmp6) {
           const obj3 = { style: tmp6, colors: tmp7, useAngle: true, angle: -90 };
-          const tmp11 = v65535(LinearGradientDefault, obj3);
+          const tmp11 = collapsed(LinearGradientDefault, obj3);
           cResult[6] = tmp6;
           cResult[7] = tmp11;
           let tmp8 = tmp11;
@@ -79,7 +79,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp12;
         }
         const obj4 = { style: tmp3.progressBackground, children: tmp8 };
-        const tmp15 = v65535(View, obj4);
+        const tmp15 = collapsed(View, obj4);
         cResult[8] = tmp3.progressBackground;
         cResult[9] = tmp8;
         cResult[10] = tmp15;
@@ -91,7 +91,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp6 = items1;
     }
-  : (percent) => {
+  : function ProgressBar(percent) {
       const tmp = closure_12();
       const obj = { style: tmp.progressBackground, children: null };
       const obj2 = { style: null, colors: null, useAngle: true, angle: -90 };
@@ -100,8 +100,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = obj3;
       obj2.style = items;
       obj2.colors = ["rgba(103, 203, 134, 1)", "rgba(59, 165, 92, 1)"];
-      obj.children = v65535(LinearGradientDefault, obj2);
-      return v65535(View, obj);
+      obj.children = collapsed(LinearGradientDefault, obj2);
+      return collapsed(View, obj);
     };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx");

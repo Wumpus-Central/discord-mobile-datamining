@@ -1,7 +1,7 @@
 // discord_app/modules/billing/actions/BillingActionCreators.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef4467 from "../../../../_runtime/metro/04467__.js";
+import _modDef4659 from "../../../../_runtime/metro/04659__.js";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import BillingSharedActionCreators from "BillingSharedActionCreators.tsx";
 import BillingPaymentGatewayActionCreators from "BillingPaymentGatewayActionCreators.tsx";
@@ -45,7 +45,11 @@ let closure_20 = async function _deletePaymentSource(arg0) {
           DispatcherDefault.dispatch({ type: "BILLING_PAYMENT_SOURCE_REMOVE_START" });
           c4 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj5 = { url: v65535.BILLING_PAYMENT_SOURCE(closure_0), oldFormErrors: true, rejectWithError: false };
+          const obj5 = {
+            url: collapsed.BILLING_PAYMENT_SOURCE(closure_0),
+            oldFormErrors: true,
+            rejectWithError: false,
+          };
           c5 = 2;
           c6 = 1;
           const obj6 = { value: HTTP.del(obj5), done: false };
@@ -293,7 +297,11 @@ let closure_23 = async function _fetchPaymentSource(arg0) {
           closure_129_1 = undefined;
           c4 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj4 = { url: v65535.BILLING_PAYMENT_SOURCE(closure_0), oldFormErrors: true, rejectWithError: false };
+          const obj4 = {
+            url: collapsed.BILLING_PAYMENT_SOURCE(closure_0),
+            oldFormErrors: true,
+            rejectWithError: false,
+          };
           c5 = 2;
           c6 = 1;
           const obj6 = { value: HTTP.get(obj4), done: false };
@@ -578,12 +586,12 @@ let closure_28 = async function _fetchSubscriptions() {
           closure_128_0 = lastLazyPerkSync;
           let tmp36 = null == lastLazyPerkSync;
           if (!tmp36) {
-            tmp36 = _modDef4467().diff(lastLazyPerkSync, "hours") >= 1;
-            const obj6 = _modDef4467();
+            tmp36 = _modDef4659().diff(lastLazyPerkSync, "hours") >= 1;
+            const obj6 = _modDef4659();
           }
           if (tmp36) {
             FULL_RESYNC = constants2.FULL_RESYNC;
-            closure_128_0 = _modDef4467();
+            closure_128_0 = _modDef4659();
           }
           const HTTP = HTTPUtils.HTTP;
           const request = {
@@ -1486,7 +1494,7 @@ let closure_38 = async function _voidPendingPayment(arg0) {
           return obj3;
         } else {
           const HTTP = HTTPUtils.HTTP;
-          const obj4 = { url: v65535.BILLING_PAYMENTS_VOID(closure_0), oldFormErrors: true, rejectWithError: false };
+          const obj4 = { url: collapsed.BILLING_PAYMENTS_VOID(closure_0), oldFormErrors: true, rejectWithError: false };
           c2 = 1;
           c1 = 1;
           const obj5 = { value: HTTP.post(obj4), done: false };
@@ -1902,7 +1910,7 @@ let Constants = fn(1085);
   REDIRECTED_PAYMENT_SOURCES: closure_12,
   SubscriptionStatusTypes: map1,
 } = Constants);
-const UserLazyPerkSyncLevels = fn(4545).UserLazyPerkSyncLevels;
+const UserLazyPerkSyncLevels = fn(4737).UserLazyPerkSyncLevels;
 Constants = fn(1096);
 ({
   ADYEN_PAYMENT_SOURCES: closure_15,
@@ -2160,7 +2168,7 @@ export const popupBridgeCallback = function popupBridgeCallback(paymentSourceTyp
   paymentSourceType = paymentSourceType.paymentSourceType;
   ({ state, path, query, insecure } = paymentSourceType);
   DispatcherDefault.dispatch({ type: "BILLING_POPUP_BRIDGE_CALLBACK_START", paymentSourceType });
-  const HTTP = paymentSourceType(1282).HTTP;
+  const HTTP = paymentSourceType(1294).HTTP;
   const request = {
     url: closure_10.BILLING_POPUP_BRIDGE_CALLBACK(paymentSourceType),
     body: { state, path, query, insecure },
@@ -2184,17 +2192,21 @@ export const fetchIpCountryCode = function fetchIpCountryCode() {
 };
 export const fetchPaymentSourceCreationContext = function fetchPaymentSourceCreationContext() {
   const HTTP = HTTPUtils.HTTP;
-  return HTTP.get({ url: v65535.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT, oldFormErrors: true, rejectWithError: false });
+  return HTTP.get({
+    url: collapsed.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT,
+    oldFormErrors: true,
+    rejectWithError: false,
+  });
 };
 export const clearAndFetchPaymentSourceCreationContext = function clearAndFetchPaymentSourceCreationContext() {
   DispatcherDefault.dispatch({ type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_START" });
   const HTTP = HTTPUtils.HTTP;
   value = HTTP.get({
-    url: v65535.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT,
+    url: collapsed.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT,
     oldFormErrors: true,
     rejectWithError: false,
   });
-  let obj2 = { url: v65535.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT, oldFormErrors: true, rejectWithError: false };
+  let obj2 = { url: collapsed.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT, oldFormErrors: true, rejectWithError: false };
   value
     .then((body) => {
       body = body.body;

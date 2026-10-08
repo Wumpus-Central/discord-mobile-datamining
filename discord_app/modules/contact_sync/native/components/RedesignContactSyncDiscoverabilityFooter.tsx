@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RedesignContactSyncDiscoverabilityFooter(arg0) {
       const cResult = c.c(5);
       ({ discoverabilityEnabled, onValueChanged } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
       };
     }
-  : (arg0) => {
+  : function RedesignContactSyncDiscoverabilityFooter(arg0) {
       ({ discoverabilityEnabled, onValueChanged } = arg0);
       const obj = { hasIcons: false, helperText: null, children: null };
       const intl = util.intl;

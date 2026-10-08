@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useSelectStage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSelectStage() {
       const cResult = require("c").c(11);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SelectedChannelStore];
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return value;
         });
-        const fn2 = function () {
+        function t5() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -108,9 +108,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[6] = first;
-        cResult[7] = fn2;
+        cResult[7] = t5;
       } else {
         class S {
           constructor() {
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = items3;
       const tmpResult = require("initialize");
     }
-  : () => {
+  : function useSelectStage() {
       const items = [SelectedChannelStore];
       const stateFromStores = require("initialize").useStateFromStores(
         items,

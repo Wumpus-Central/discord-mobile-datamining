@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import discord_common_shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import c from "../../../_runtime/00576_c.js";
-import identity from "../../../_runtime/metro/01254__.js";
+import identity from "../../../_runtime/metro/01266__.js";
 import "ReactCompilerGating";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -45,7 +45,7 @@ let closure_4 = identity.createWithEqualityFn((arg0) => {
   };
 });
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useMessagePollInteractions(arg0) {
       closure_0 = arg0;
       const cResult = c.c(2);
       if (cResult[0] !== arg0) {
@@ -67,7 +67,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_4(tmp3, discord_common_shallowEqualDefault);
     }
-  : (arg0) => {
+  : function useMessagePollInteractions(arg0) {
       closure_0 = arg0;
       return closure_4((arg0) => {
         const pollsByMessageId = arg0;
@@ -84,7 +84,7 @@ const result = size.fileFinishedImporting("modules/polls/PollsInteractionStore.t
 
 export const useMessagePollInteractions = tmp2;
 export const useChannelPollInteractions = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useChannelPollInteractions(arg0) {
       _require = arg0;
       const cResult = require("c").c(2);
       if (cResult[0] !== arg0) {
@@ -103,7 +103,7 @@ export const useChannelPollInteractions = ReactCompilerGating.isReactCompilerEna
       }
       return closure_4(tmp3, discord_common_shallowEqualDefault);
     }
-  : (arg0) => {
+  : function useChannelPollInteractions(arg0) {
       closure_0 = arg0;
       return closure_4((arg0) => {
         let tmp = arg0.pollsByChannelId[closure_0];

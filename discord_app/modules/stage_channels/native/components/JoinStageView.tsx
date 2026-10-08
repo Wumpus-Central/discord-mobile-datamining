@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/JoinStageView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function JoinStageView(channel) {
       const cResult = c.c(14);
       channel = channel.channel;
       const stageParticipants = StageChannelParticipantStoreHooks.useStageParticipants(
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = participantNamesText;
       const tmpResult = StageChannelUtils;
     }
-  : (channel) => {
+  : function JoinStageView(channel) {
       channel = channel.channel;
       const stageParticipants = StageChannelParticipantStoreHooks.useStageParticipants(
         channel.id,

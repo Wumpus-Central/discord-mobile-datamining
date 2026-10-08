@@ -216,7 +216,7 @@ let closure_18 = async function _settleAppStoreAgeSignalReport() {
           c0 = 3;
           const obj4 = { value, done: true };
           return obj4;
-        } else if (null != v65535) {
+        } else if (null != collapsed) {
           const items = [tmp13, require("TimeUtils").sleep(15000)];
           c1 = 1;
           c0 = 1;
@@ -258,8 +258,8 @@ export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalRepor
   if (tmp3) {
     let result = require("AppStoreAgeSignalSupport").isAppStoreAgeSignalSupported();
     if (result) {
-      result = tmp4(5587).shouldCollectAppStoreSignal();
-      const tmp4Result = tmp4(5587);
+      result = tmp4(5918).shouldCollectAppStoreSignal();
+      const tmp4Result = tmp4(5918);
     }
     tmp3 = result;
     const obj = require("AppStoreAgeSignalSupport");

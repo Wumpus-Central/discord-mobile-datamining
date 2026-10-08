@@ -3,8 +3,8 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
 import util from "../../../../intl/index.native.tsx";
-import ChatIcon from "../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
+import ChatIcon from "../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import VoicePanelIconButtonDefault from "../shared/VoicePanelIconButton.tsx";
 import useChatBadgeDefault from "../hooks/useChatBadge.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ require = fn;
 const ComponentActions = fn(1085).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { badgeContainer: { position: "absolute", top: -2, right: -2 }, badge: null, notificationBadge: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round };
 obj2.badge = size;
@@ -25,7 +25,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelHeaderChatButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function VoicePanelHeaderChatButton(channelId) {
       const cResult = c.c(7);
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp13;
       tmp12 = tmp13;
     }
-  : (channelId) => {
+  : function VoicePanelHeaderChatButton(channelId) {
       const tmp = closure_7();
       const callback = noop.useCallback(() => {
         const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;

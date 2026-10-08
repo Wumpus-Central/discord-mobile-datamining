@@ -3,8 +3,8 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
-import _modDef3233 from "../PremiumGroup.messages.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import _modDef3277 from "../PremiumGroup.messages.js";
 import PremiumGroupConstants from "../PremiumGroupConstants.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -17,8 +17,8 @@ function handlePress() {
   const obj2 = { aboutText: null };
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
-  const tmp = asyncRequireImpl(13340, dependencyMap.paths);
-  obj2.aboutText = intl.formatToPlainString(_modDef3233["5xN/C1"], { premiumGroupProductName: closure_5() });
+  const tmp = asyncRequireImpl(13640, dependencyMap.paths);
+  obj2.aboutText = intl.formatToPlainString(_modDef3277["5xN/C1"], { premiumGroupProductName: closure_5() });
   obj.openLazy(tmp, "PremiumGroupEducationActionSheet", obj2);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
@@ -54,7 +54,7 @@ let obj2 = {
 const result = size.fileFinishedImporting("modules/premium/premium_group/native/BoostingUnavailablePill.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function BoostingUnavailablePill(style) {
       const cResult = c.c(12);
       style = style.style;
       const tmp4 = closure_7();
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp5 = items;
     }
-  : (style) => {
+  : function BoostingUnavailablePill(style) {
       const tmp = closure_7();
       const obj = { activeOpacity: 0.7, onPress: handlePress, children: null };
       const obj2 = { style: null, children: null };

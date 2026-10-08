@@ -39,7 +39,7 @@ let closure_5 = async function _readFile(arg0) {
               if (!obj.isAndroid()) {
                 return closure_1_1(1162).getConstants().SharedDirPath;
               }
-              obj = closure_1_0(1369);
+              obj = closure_1_0(1381);
             }
             if ("cache" === arg0) {
               let DocumentsDirPath = closure_1_1(1162).getConstants().CacheDirPath;
@@ -134,11 +134,11 @@ export const writeFile = function writeFile(cache, combined2, arg2, utf8) {
 export const moveFile = function moveFile(arg0, arg1, arg2) {
   return NativeFileModuleDefault.moveFile(arg0, arg1, arg2);
 };
-export const removeFile = function removeFile(cache, filePathForGif) {
-  return NativeFileModuleDefault.removeFile(cache, filePathForGif);
+export const removeFile = function removeFile(cache, combined) {
+  return NativeFileModuleDefault.removeFile(cache, combined);
 };
-export const clearFolder = function clearFolder(cache, c5) {
-  return NativeFileModuleDefault.clearFolder(cache, c5);
+export const clearFolder = function clearFolder(cache, combined1) {
+  return NativeFileModuleDefault.clearFolder(cache, combined1);
 };
 export const readFile = function readFile() {
   const self = this;

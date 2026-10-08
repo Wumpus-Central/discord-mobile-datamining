@@ -9,13 +9,13 @@ import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import useChannelNameDefault from "../../channel/useChannelName.tsx";
-import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import GuildOnboardingHomeTypes from "../GuildOnboardingHomeTypes.tsx";
-import _modDef11428 from "../../../../_runtime/metro/11428__.js";
-import _modDef11928 from "../../../../_runtime/metro/11928__.js";
+import _modDef11411 from "../../../../_runtime/metro/11411__.js";
+import _modDef12001 from "../../../../_runtime/metro/12001__.js";
 import MemberActionUtils from "../MemberActionUtils.tsx";
-import _modDef11931 from "../../../../_runtime/metro/11931__.js";
+import _modDef12004 from "../../../../_runtime/metro/12004__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -26,10 +26,10 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 require = fn;
 const View = fn(17).View;
 let Routes = fn(1085).Routes;
-const EMOJI_URL_BASE_SIZE = fn(1380).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   animatedContainer: { overflow: "hidden" },
   measurement: { opacity: 0, position: "absolute" },
@@ -82,7 +82,7 @@ obj.icon = { tintColor: nativeDefault.colors.WHITE };
 let closure_15 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (action) => {
+  ? function ActionChannelInfo(action) {
       let stringResult = dependencyMap;
       const cResult = action(576).c(8);
       action = action.action;
@@ -94,7 +94,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== action.channelId) {
-        const fn = function l() {
+        const fn = function o() {
           return ChannelStore.getChannel(action.channelId);
         };
         cResult[1] = action.channelId;
@@ -116,7 +116,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           stringResult = intl3.string(tmp(1126).t.J90oLW);
           obj3.channelName = stringResult;
           obj2.children = intl2.format(tmp(1126).t.MkzlDL, obj3);
-          const tmp16 = closure_12(tmp(4892).Text, obj2);
+          const tmp16 = closure_12(tmp(5086).Text, obj2);
           cResult[3] = tmp16;
         }
       } else {
@@ -132,7 +132,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[6] !== tmp9) {
           const obj5 = { variant: "text-xxs/normal", color: "text-default", children: tmp9 };
-          const tmp13 = closure_12(tmp(4892).Text, obj5);
+          const tmp13 = closure_12(tmp(5086).Text, obj5);
           cResult[6] = tmp9;
           cResult[7] = tmp13;
           let tmp11 = tmp13;
@@ -143,7 +143,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = action(573);
     }
-  : (action) => {
+  : function ActionChannelInfo(action) {
       action = action.action;
       const items = [ChannelStore];
       const stateFromStores = action(573).useStateFromStores(items, () => ChannelStore.getChannel(action.channelId));
@@ -162,18 +162,18 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { channelName: tmp4 };
         obj4.children = intl.format(tmp(1126).t.MkzlDL, obj5);
       }
-      return closure_12(action(4892).Text, obj4);
+      return closure_12(action(5086).Text, obj4);
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (emoji) => {
+  ? function ChannelActionEmoji(emoji) {
       let Text = id;
       const cResult = id(576).c(18);
       emoji = emoji.emoji;
       const tmp3 = closure_15();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { size: Text(1188).Icon.Sizes.REFRESH_SMALL_16, source: _modDef11428 };
-        const tmp7 = closure_12(Text(1188).Icon, obj2);
+        const obj2 = { size: Text(1200).Icon.Sizes.REFRESH_SMALL_16, source: _modDef11411 };
+        const tmp7 = closure_12(Text(1200).Icon, obj2);
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -264,7 +264,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           if (null != obj10.getByName(obj11.convertSurrogateToName(textEmoji, false))) {
             if (cResult[15] === textEmoji) {
             }
-            Text = Text(4892).Text;
+            Text = Text(5086).Text;
             const obj9 = { style: tmp3.textEmoji, variant: "heading-lg/normal", children: textEmoji };
             const tmp20 = closure_12(Text, obj9);
             cResult[15] = textEmoji;
@@ -278,13 +278,13 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const TextResult = Text(573);
     }
-  : (emoji) => {
+  : function ChannelActionEmoji(emoji) {
       emoji = emoji.emoji;
       let id;
       const tmp = closure_15();
       const obj = {
         style: tmp.emojiPlaceholder,
-        children: closure_12(id(1188).Icon, { size: id(1188).Icon.Sizes.REFRESH_SMALL_16, source: _modDef11428 }),
+        children: closure_12(id(1200).Icon, { size: id(1200).Icon.Sizes.REFRESH_SMALL_16, source: _modDef11411 }),
       };
       const tmp6 = closure_12(View, obj);
       id = undefined;
@@ -294,7 +294,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       if (emoji != null) {
         const name = emoji.name;
       }
-      const obj2 = { size: id(1188).Icon.Sizes.REFRESH_SMALL_16, source: _modDef11428 };
+      const obj2 = { size: id(1200).Icon.Sizes.REFRESH_SMALL_16, source: _modDef11411 };
       const items = [EmojiStore];
       const items1 = [id];
       const stateFromStores = id(573).useStateFromStores(
@@ -326,7 +326,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           tmp2Result = tmp6;
           if (null != tmp5Result5.getByName(tmp5Result6.convertSurrogateToName(name, false))) {
             const obj6 = { style: tmp.textEmoji, variant: "heading-lg/normal", children: name };
-            tmp2Result = closure_12(tmp3(4892).Text, obj6);
+            tmp2Result = closure_12(tmp3(5086).Text, obj6);
           }
           tmp5Result6 = UnicodeEmojisDefault;
         }
@@ -347,7 +347,7 @@ const __initData4 = {
 };
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function MemberActionChatInputBanner(channel) {
       const cResult = channel(channelAction[13]).c(51);
       channel = channel.channel;
       const tmp4 = closure_15();
@@ -364,7 +364,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       const nextMemberAction = channel(channelAction[23]).useNextMemberAction(channel.guild_id, channelId);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [useReducedMotion];
-        const fn = function u() {
+        const fn = function s() {
           return useReducedMotion.useReducedMotion;
         };
         cResult[0] = items;
@@ -598,7 +598,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                         return;
                       }
                     }
-                    const fn2 = function $() {
+                    function renderAction() {
                       let tmp3Result = null;
                       if (null != channelAction) {
                         const obj = { style: closure_1.container, children: null };
@@ -620,7 +620,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                         items[1] = __initData2(View, obj3);
                         let tmp6Result = completed;
                         if (completed) {
-                          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef11931 };
+                          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef12004 };
                           tmp6Result = __initData(native.Icon, obj6);
                         }
                         items[2] = tmp6Result;
@@ -628,7 +628,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                         tmp3Result = __initData2(View, obj);
                       }
                       return tmp3Result;
-                    };
+                    }
                     class J {
                       constructor() {
                         obj = { height: null };
@@ -660,13 +660,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                     cResult[18] = tmp4.container;
                     cResult[19] = tmp4.text;
                     cResult[20] = tmp4.wrap;
-                    cResult[21] = fn2;
+                    cResult[21] = renderAction;
                   }
                   const tmpResult8 = tmp(tmp2[25]);
                 }
               }
             }
-            class M {
+            class L {
               constructor() {
                 if (completed) {
                   tmp = closure_4;
@@ -687,10 +687,10 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[9] = sharedValue1;
             cResult[10] = nextMemberAction;
             cResult[11] = first1;
-            cResult[12] = M;
+            cResult[12] = L;
             cResult[13] = items1;
             tmp24 = items1;
-            tmp23 = M;
+            tmp23 = L;
           }
         }
       }
@@ -720,7 +720,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       tmp20 = R;
       const tmpResult6 = channel(channelAction[25]);
     }
-  : (channel) => {
+  : function MemberActionChatInputBanner(channel) {
       channel = channel.channel;
       let channelAction;
       let nextMemberAction;
@@ -785,35 +785,28 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         const result1 = sharedValue1.set(0);
       }, items2);
       const tmp2Result6 = channel(channelAction[25]);
-      class B {
-        constructor() {
-          obj = { height: null };
-          if (closure_5) {
-            tmp7 = closure_11;
-            obj.height = closure_11.get();
-            tmp6 = obj;
-          } else {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj2 = closure_0(closure_2[25]);
-            tmp3 = completed;
-            num = 200;
-            if (completed) {
-              num = 800;
-            }
-            tmpResult = tmp(tmp2[26]);
-            tmp4 = closure_11;
-            obj1 = { duration: 400, easing: null };
-            value = closure_11.get();
-            obj1.easing = tmp(tmp2[18]).DECELERATED_EASING;
-            obj.height = obj2.withDelay(num, tmpResult.withTiming(value, obj1));
-            tmp6 = obj;
+      const fn = function z() {
+        const obj = { height: null };
+        if (stateFromStores) {
+          obj.height = sharedValue.get();
+          let tmp6 = obj;
+        } else {
+          let num = 200;
+          if (completed) {
+            num = 800;
           }
-          return tmp6;
+          const obj2 = ReanimatedRexport;
+          const obj3 = { duration: 400, easing: null };
+          value = sharedValue.get();
+          obj3.easing = native.DECELERATED_EASING;
+          obj.height = obj2.withDelay(num, timing.withTiming(value, obj3));
+          tmp6 = obj;
+          const tmpResult = timing;
         }
-      }
+        return tmp6;
+      };
       const tmp2Result7 = channel(channelAction[25]);
-      B.__closure = {
+      fn.__closure = {
         useReducedMotion: stateFromStores,
         height: sharedValue,
         withDelay: channel(channelAction[25]).withDelay,
@@ -821,9 +814,9 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         withTiming: channel(channelAction[26]).withTiming,
         DECELERATED_EASING: channel(channelAction[18]).DECELERATED_EASING,
       };
-      B.__workletHash = 15931594863971;
-      B.__initData = __initData3;
-      const animatedStyle = tmp2Result7.useAnimatedStyle(B);
+      fn.__workletHash = 15931594863971;
+      fn.__initData = __initData3;
+      const animatedStyle = tmp2Result7.useAnimatedStyle(fn);
       let obj3 = {
         useReducedMotion: stateFromStores,
         height: sharedValue,
@@ -906,7 +899,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             items[1] = __initData2(View, obj3);
             let tmp6Result = completed;
             if (completed) {
-              const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef11931 };
+              const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef12004 };
               tmp6Result = __initData(native.Icon, obj6);
             }
             items[2] = tmp6Result;
@@ -966,7 +959,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                 obj3.children = items1;
                 items[1] = __initData2(View, obj3);
                 const obj7 = { style: closure_1.circle, children: null };
-                const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef11928 };
+                const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef12001 };
                 obj7.children = __initData(native.Icon, obj8);
                 items[2] = __initData(View, obj7);
                 obj.children = items;
@@ -1004,11 +997,11 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 const memoResult = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function MemberActionChatInputBannerGuarded(channel) {
         const cResult = channel(576).c(5);
         channel = channel.channel;
         const obj = channel(576);
-        const canSeeOnboardingHome = channel(6737).useCanSeeOnboardingHome(channel.guild_id);
+        const canSeeOnboardingHome = channel(6911).useCanSeeOnboardingHome(channel.guild_id);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [GuildMemberStore];
           cResult[0] = items;
@@ -1017,7 +1010,7 @@ const memoResult = noop.memo(
           first = cResult[0];
         }
         if (cResult[1] !== channel.guild_id) {
-          const fn = function l() {
+          const fn = function o() {
             const selfMember = GuildMemberStore.getSelfMember(channel.guild_id);
             let isPending;
             if (selfMember != null) {
@@ -1031,7 +1024,7 @@ const memoResult = noop.memo(
         } else {
           tmp7 = cResult[2];
         }
-        const obj2 = channel(6737);
+        const obj2 = channel(6911);
         const stateFromStores = channel(573).useStateFromStores(first, tmp7);
         const tmpResult = channel(573);
         let tmp9 = null;
@@ -1051,10 +1044,10 @@ const memoResult = noop.memo(
         }
         return tmp9;
       }
-    : (channel) => {
+    : function MemberActionChatInputBannerGuarded(channel) {
         channel = channel.channel;
-        const canSeeOnboardingHome = channel(6737).useCanSeeOnboardingHome(channel.guild_id);
-        const obj = channel(6737);
+        const canSeeOnboardingHome = channel(6911).useCanSeeOnboardingHome(channel.guild_id);
+        const obj = channel(6911);
         const items = [GuildMemberStore];
         const stateFromStores = channel(573).useStateFromStores(items, () => {
           const selfMember = GuildMemberStore.getSelfMember(channel.guild_id);
@@ -1087,7 +1080,7 @@ let result = size.fileFinishedImporting("modules/guild_onboarding_home/native/Me
 export const MemberActionChatInputBannerGuarded = memoResult;
 export const MemberActionsChatInputBannerGuardedOuter = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function ChatInputMemberActions(channel) {
         const cResult = c.c(2);
         channel = channel.channel;
         const memberActionsForChannel = MemberActionUtils.useMemberActionsForChannel(channel.guild_id, channel);
@@ -1115,7 +1108,7 @@ export const MemberActionsChatInputBannerGuardedOuter = noop.memo(
           cResult[1] = tmp12;
         }
       }
-    : (channel) => {
+    : function ChatInputMemberActions(channel) {
         channel = channel.channel;
         const memberActionsForChannel = MemberActionUtils.useMemberActionsForChannel(channel.guild_id, channel);
         ({ channelAction, completed } = memberActionsForChannel);

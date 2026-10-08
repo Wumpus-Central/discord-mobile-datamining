@@ -16,20 +16,20 @@ import ApplicationCommandTypes from "../../../../application_commands/Applicatio
 import Upload from "../../../../../lib/uploader/Upload.tsx";
 import utils_UploadUtils from "../../../../../utils/native/UploadUtils.tsx";
 import AppLauncherUtils from "../../../utils/AppLauncherUtils.tsx";
-import AppLauncherTypes from "../../../AppLauncherTypes.tsx";
 import MediaKeyboardUtils from "../../../../media_keyboard/native/MediaKeyboardUtils.tsx";
 import showMediaKeyboardActionSheet from "../../../../media_keyboard/native/showMediaKeyboardActionSheet.tsx";
 import AppLauncherContext from "../../AppLauncherContext.tsx";
+import AppLauncherTypes from "../../../AppLauncherTypes.tsx";
 import ApplicationCommandOptionValueParser from "../../../../chat_input/native/ApplicationCommandOptionValueParser.tsx";
 import AppLauncherNativeUtils from "../../AppLauncherNativeUtils.tsx";
-import _modDef11752 from "../../../../../../_runtime/metro/11752__.js";
-import _modDef11753 from "../../../../../../_runtime/metro/11753__.js";
+import _modDef11818 from "../../../../../../_runtime/metro/11818__.js";
+import _modDef11819 from "../../../../../../_runtime/metro/11819__.js";
 import AppLauncherCommandViewHeader from "AppLauncherCommandViewHeader.tsx";
 import ApplicationCommandValidationUtils from "../../../../application_commands/ApplicationCommandValidationUtils.tsx";
 import application_commands_ApplicationCommandValidationUtils from "../../../../application_commands/native/ApplicationCommandValidationUtils.tsx";
 import CommandOptionViewDefault from "CommandOptionView.tsx";
-import _modDef11833 from "../../../../../../_runtime/metro/11833__.js";
-import _modDef11834 from "../../../../../../_runtime/metro/11834__.js";
+import _modDef11918 from "../../../../../../_runtime/metro/11918__.js";
+import _modDef11919 from "../../../../../../_runtime/metro/11919__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -994,7 +994,7 @@ function AppLauncherCommandViewInner(command) {
   } else if (hasPermissions) {
     let obj4 = {
       ref,
-      contentContainerStyle: null,
+      contentContainerStyle: tmp.optionsContainer,
       scrollIndicatorInsets: null,
       scrollToOverflowEnabled: true,
       onContentSizeChange: null,
@@ -1007,8 +1007,6 @@ function AppLauncherCommandViewInner(command) {
       automaticallyAdjustsScrollIndicatorInsets: false,
       children: null,
     };
-    const items17 = [tmp.optionsContainer];
-    obj4.contentContainerStyle = items17;
     let obj5 = { bottom: sum1 };
     obj4.scrollIndicatorInsets = obj5;
     obj4.onContentSizeChange = callback11;
@@ -1016,11 +1014,11 @@ function AppLauncherCommandViewInner(command) {
     obj4.onLayout = callback10;
     let obj6 = { style: tmp.commandNameContainer, children: null };
     let obj7 = { variant: "heading-lg/bold", color: "text-default", children: command.displayName };
-    const items18 = [ref6(tmp3(tmp4[51]).Text, obj7)];
+    const items17 = [ref6(tmp3(tmp4[51]).Text, obj7)];
     let obj8 = { variant: "heading-sm/medium", color: "text-default", children: command.displayDescription };
-    items18[1] = ref6(tmp3(tmp4[51]).Text, obj8);
-    obj6.children = items18;
-    const items19 = [ref7(closure_7, obj6), , , , ,];
+    items17[1] = ref6(tmp3(tmp4[51]).Text, obj8);
+    obj6.children = items17;
+    const items18 = [ref7(closure_7, obj6), , , , ,];
     let tmp74Result = tmp64;
     if (tmp64) {
       let obj9 = {
@@ -1060,14 +1058,14 @@ function AppLauncherCommandViewInner(command) {
             obj.setFocusedOption = setFocusedOption;
             obj.command = command;
             obj.optionValues = optionValues;
-            return closure_2_20(tmp2, obj, option.name);
+            return constants2(tmp2, obj, option.name);
           }
           NONE = constants.NONE;
         }),
       };
       tmp74Result = tmp74(tmp73, obj9);
     }
-    items19[1] = tmp74Result;
+    items18[1] = tmp74Result;
     let tmp74Result3 = !tmp64;
     if (!tmp64) {
       tmp74Result3 = tmp66;
@@ -1080,7 +1078,7 @@ function AppLauncherCommandViewInner(command) {
       obj10.children = tmp74(tmp3(tmp4[51]).Text, obj11);
       tmp74Result3 = tmp74(tmp73, obj10);
     }
-    items19[2] = tmp74Result3;
+    items18[2] = tmp74Result3;
     let tmp74Result4 = !tmp66;
     if (!tmp66) {
       const obj12 = { style: tmp.noOptionCalloutContainer, children: null };
@@ -1090,7 +1088,7 @@ function AppLauncherCommandViewInner(command) {
       obj12.children = tmp74(tmp3(tmp4[51]).Text, obj13);
       tmp74Result4 = tmp74(tmp73, obj12);
     }
-    items19[3] = tmp74Result4;
+    items18[3] = tmp74Result4;
     if (tmp71Result) {
       const obj14 = { children: null };
       const obj15 = {
@@ -1101,7 +1099,7 @@ function AppLauncherCommandViewInner(command) {
       };
       const intl3 = tmp3(tmp4[23]).intl;
       obj15.children = intl3.string(tmp3(tmp4[23]).t["5C107K"]);
-      const items20 = [tmp74(tmp3(tmp4[51]).Text, obj15), ,];
+      const items19 = [tmp74(tmp3(tmp4[51]).Text, obj15), ,];
       const obj16 = {
         style: tmp.optionalOptionsContainer,
         onLayout: callback8,
@@ -1137,23 +1135,23 @@ function AppLauncherCommandViewInner(command) {
           obj.autoFocusType = current.has(option.name) ? constants.NONE : constants.OPTIONAL_OPTION_ADDED;
           const current2 = ref10.current;
           obj.isPreSelectedOption = current2.has(option.name);
-          return closure_2_20(CommandOptionViewDefault, obj, option.name);
+          return constants2(CommandOptionViewDefault, obj, option.name);
         }),
       };
-      items20[1] = tmp74(tmp73, obj16);
+      items19[1] = tmp74(tmp73, obj16);
       const obj17 = { layout: tmp3(tmp4[53]).LayoutAnimation, collapsable: false, children: null };
       const obj18 = { style: tmp.optionalOptionList, options: tmp20, onSelectOption: callback9 };
       obj17.children = tmp74(tmp31(tmp4[54]), obj18);
-      items20[2] = tmp74(tmp31(tmp4[17]).View, obj17);
-      obj14.children = items20;
+      items19[2] = tmp74(tmp31(tmp4[17]).View, obj17);
+      obj14.children = items19;
       tmp71Result = tmp71(tmp72, obj14);
     }
     const obj19 = { children: null };
-    items19[4] = tmp71Result;
+    items18[4] = tmp71Result;
     const obj20 = { size: sum1 };
-    items19[5] = ref6(tmp3(tmp4[55]).Spacer, obj20);
-    obj4.children = items19;
-    const items21 = [ref7(BottomSheetScrollView, obj4)];
+    items18[5] = ref6(tmp3(tmp4[55]).Spacer, obj20);
+    obj4.children = items18;
+    const items20 = [ref7(BottomSheetScrollView, obj4)];
     const obj21 = {
       enableSubmit: tmp23[0],
       onSubmit: callback4,
@@ -1162,8 +1160,8 @@ function AppLauncherCommandViewInner(command) {
       isSending: sharedValue,
       footerStickyInsetBottom: sum2,
     };
-    items21[1] = ref6(first1, obj21);
-    obj19.children = items21;
+    items20[1] = ref6(first1, obj21);
+    obj19.children = items20;
     tmp71Result2 = tmp71(tmp72, obj19);
     tmp68 = tmp74;
   } else {
@@ -1172,7 +1170,7 @@ function AppLauncherCommandViewInner(command) {
     tmp71Result2 = ref6(closure_35, obj22);
   }
   const obj23 = { style: tmp.container, children: null };
-  const items22 = [
+  const items21 = [
     tmp68(command(sectionName[13]).AppLauncherCommandViewHeader, {
       command,
       onPressBack: callback,
@@ -1181,14 +1179,14 @@ function AppLauncherCommandViewInner(command) {
     }),
     tmp71Result2,
   ];
-  obj23.children = items22;
+  obj23.children = items21;
   return ref7(closure_7, obj23);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ActivityIndicator: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const ApplicationCommandIndexStore = fn(8827);
+const ApplicationCommandIndexStore = fn(9186);
 ({ useContextIndexState: closure_11, useUserIndexState: closure_12 } = ApplicationCommandIndexStore);
-const AppLauncherNativeConstants = fn(1489);
+const AppLauncherNativeConstants = fn(1501);
 ({
   AppLauncherOptionAutoFocusType: closure_14,
   useAppLauncherNavigation: closure_15,
@@ -1196,10 +1194,10 @@ const AppLauncherNativeConstants = fn(1489);
 } = AppLauncherNativeConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_16, NOOP: closure_17, VerticalGradient: closure_18 } = Constants);
-const MediaKeyboardTarget = fn(1614).MediaKeyboardTarget;
+const MediaKeyboardTarget = fn(1626).MediaKeyboardTarget;
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21, Fragment: closure_22 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND },
   optionsContainer: null,
@@ -1223,7 +1221,7 @@ let obj2 = {
 };
 let obj3 = { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj2.optionsContainer = {
-  paddingTop: fn(11792).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
+  paddingTop: fn(11859).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
   paddingHorizontal: DEFAULT_CONTENT_PADDING,
   paddingBottom: DEFAULT_CONTENT_PADDING,
   backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -1244,7 +1242,7 @@ obj2.submitButton = { flex: 1, overflow: "hidden" };
 obj2.optionalOptionsSectionTitle = { marginTop: 36 };
 obj2.optionalOptionList = { marginTop: 12 };
 let obj4 = {
-  paddingTop: fn(11792).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
+  paddingTop: fn(11859).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
   paddingHorizontal: DEFAULT_CONTENT_PADDING,
   paddingBottom: DEFAULT_CONTENT_PADDING,
   backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -1277,11 +1275,11 @@ let obj6 = {
   borderRadius: nativeDefault.radii.lg,
 };
 obj2.emptyStateContainer = {
-  paddingTop: fn(11792).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
+  paddingTop: fn(11859).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
   flex: 1,
 };
 obj2.failureStateButtonWrapper = { marginTop: 24, alignSelf: "center" };
-let obj7 = { paddingTop: fn(11792).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
+let obj7 = { paddingTop: fn(11859).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
 obj2.failureStateButtonPill = { borderRadius: nativeDefault.radii.xxl, paddingHorizontal: 12, paddingVertical: 8 };
 obj2.commandNameContainer = { alignItems: "center", justifyContent: "center", textAlign: "center" };
 let obj8 = { borderRadius: nativeDefault.radii.xxl, paddingHorizontal: 12, paddingVertical: 8 };
@@ -1301,7 +1299,7 @@ let closure_27 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isSending) => {
+  ? function AppLauncherCommandViewFooter(isSending) {
       const cResult = onHeightChange(stateFromStores[15]).c(37);
       ({ onSubmit, animatedStyle, onHeightChange } = isSending);
       isSending = isSending.isSending;
@@ -1346,9 +1344,9 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
               tmp14 = closure_0;
               tmp15 = closure_3;
               fn = function e() {
-                const obj = onHeightChange(4618);
-                return onHeightChange(4618).runOnJS(onHeightChange(4861).triggerHapticFeedback)(
-                  onHeightChange(4861).HapticFeedbackTypes.IMPACT_LIGHT,
+                const obj = onHeightChange(4810);
+                return onHeightChange(4810).runOnJS(onHeightChange(5055).triggerHapticFeedback)(
+                  onHeightChange(5055).HapticFeedbackTypes.IMPACT_LIGHT,
                 );
               };
               obj13 = { runOnJS: null, triggerHapticFeedback: null, HapticFeedbackTypes: null };
@@ -1588,7 +1586,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
         isSending,
       };
     }
-  : (arg0) => {
+  : function AppLauncherCommandViewFooter(arg0) {
       ({ onHeightChange: require, isSending } = arg0);
       let stateFromStores;
       isPressedDown = undefined;
@@ -1609,9 +1607,9 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { translateX: null };
           const obj9 = timing;
           const fn = function e() {
-            const obj = closure_1_0(4618);
-            return closure_1_0(4618).runOnJS(closure_1_0(4861).triggerHapticFeedback)(
-              closure_1_0(4861).HapticFeedbackTypes.IMPACT_LIGHT,
+            const obj = closure_1_0(4810);
+            return closure_1_0(4810).runOnJS(closure_1_0(5055).triggerHapticFeedback)(
+              closure_1_0(5055).HapticFeedbackTypes.IMPACT_LIGHT,
             );
           };
           const obj7 = {
@@ -1739,7 +1737,7 @@ let __initData4 = {
 };
 ReactCompilerGating = fn(558);
 let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (command) => {
+  ? function AppLauncherCommandView(command) {
       const cResult = command(loading[15]).c(21);
       command = command.command;
       ({ context, section, preSelectedCommand, analyticsLocation, installOnDemand, sectionName, expandBottomSheet } =
@@ -1914,7 +1912,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = P;
       const tmpResult = command(loading[26]);
     }
-  : (command) => {
+  : function AppLauncherCommandView(command) {
       command = command.command;
       ({ context, section, preSelectedCommand, analyticsLocation, sectionName, expandBottomSheet } = command);
       let loading;
@@ -1994,7 +1992,7 @@ fn(558);
 let obj9 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 ReactCompilerGating = fn(558);
 let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel, commandId, _location, sectionName) => {
+  ? function usePreSelectedCommand(channel, commandId, _location, sectionName) {
       _require = _location;
       const cResult = require("c").c(28);
       if (cResult[0] !== channel) {
@@ -2205,7 +2203,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       tmp17 = fn;
       let obj3 = command(descriptor[58]);
     }
-  : (channel, commandId, _location, sectionName) => {
+  : function usePreSelectedCommand(channel, commandId, _location, sectionName) {
       _require = _location;
       commandId = undefined;
       if (commandId != null) {
@@ -2318,14 +2316,14 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function LoadingState() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = {
           style: { flex: 1, justifyContent: "center", alignItems: "center" },
-          children: closure_1_20(closure_1_8, { size: "large" }),
+          children: constants2(closure_1_8, { size: "large" }),
         };
-        const tmp6 = closure_1_20(React5, obj2);
+        const tmp6 = constants2(React5, obj2);
         cResult[0] = tmp6;
         let first = tmp6;
       } else {
@@ -2333,14 +2331,15 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      closure_1_20(React5, {
+  : function LoadingState() {
+      return constants2(React5, {
         style: { flex: 1, justifyContent: "center", alignItems: "center" },
-        children: closure_1_20(closure_1_8, { size: "large" }),
+        children: constants2(closure_1_8, { size: "large" }),
       });
+    };
 ReactCompilerGating = fn(558);
 let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPressBack) => {
+  ? function NotFoundState(onPressBack) {
       const cResult = c.c(13);
       onPressBack = onPressBack.onPressBack;
       const tmp4 = closure_23();
@@ -2385,7 +2384,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
               return tmp18;
             }
             const obj3 = { style: emptyStateContainer, children: tmp14 };
-            const tmp21 = closure_1_20(React5, obj3);
+            const tmp21 = constants2(React5, obj3);
             cResult[10] = tmp4.emptyStateContainer;
             cResult[11] = tmp14;
             cResult[12] = tmp21;
@@ -2393,20 +2392,20 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj4 = {
             style: emptyState,
-            lightSource: _modDef11833,
-            darkSource: _modDef11834,
+            lightSource: _modDef11918,
+            darkSource: _modDef11919,
             title: tmp6,
             body: tmp7,
             children: tmp12,
           };
-          const tmp17 = closure_1_20(native.EmptyState, obj4);
+          const tmp17 = constants2(native.EmptyState, obj4);
           cResult[7] = tmp4.emptyState;
           cResult[8] = tmp12;
           cResult[9] = tmp17;
           tmp14 = tmp17;
         }
       }
-      const tmp13 = closure_1_20(BaseTextButton.BaseTextButton, {
+      const tmp13 = constants2(BaseTextButton.BaseTextButton, {
         shrink: true,
         size: "sm",
         variant: "secondary",
@@ -2421,7 +2420,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp13;
       tmp12 = tmp13;
     }
-  : (onPress) => {
+  : function NotFoundState(onPress) {
       const tmp = closure_23();
       const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
         AppLauncherTypes.AppLauncherEmptyStateType.COMMAND_NOT_FOUND,
@@ -2429,8 +2428,8 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp.emptyStateContainer, children: null };
       const obj3 = {
         style: tmp.emptyState,
-        lightSource: _modDef11833,
-        darkSource: _modDef11834,
+        lightSource: _modDef11918,
+        darkSource: _modDef11919,
         title: null,
         body: null,
         children: null,
@@ -2450,13 +2449,13 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl3 = util.intl;
       obj4.text = intl3.string(util.t["/g10LC"]);
-      obj3.children = closure_1_20(BaseTextButton.BaseTextButton, obj4);
-      obj2.children = closure_1_20(native.EmptyState, obj3);
-      return closure_1_20(React5, obj2);
+      obj3.children = constants2(BaseTextButton.BaseTextButton, obj4);
+      obj2.children = constants2(native.EmptyState, obj3);
+      return constants2(React5, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function NoPermsState(arg0) {
       const cResult = c.c(22);
       ({ onPressBack, command } = arg0);
       const tmp4 = closure_23();
@@ -2465,7 +2464,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
       );
       if (cResult[0] !== command.displayName) {
         const obj3 = { variant: "heading-lg/bold", color: "text-default", children: command.displayName };
-        const tmp8 = closure_1_20(Text_Text.Text, obj3);
+        const tmp8 = constants2(Text_Text.Text, obj3);
         cResult[0] = command.displayName;
         cResult[1] = tmp8;
         let tmp6 = tmp8;
@@ -2474,7 +2473,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== command.displayDescription) {
         const obj4 = { variant: "heading-sm/medium", color: "text-default", children: command.displayDescription };
-        const tmp11 = closure_1_20(Text_Text.Text, obj4);
+        const tmp11 = constants2(Text_Text.Text, obj4);
         cResult[2] = command.displayDescription;
         cResult[3] = tmp11;
         let tmp9 = tmp11;
@@ -2539,13 +2538,13 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const obj6 = {
                 style: tmp4.emptyState,
-                lightSource: _modDef11752,
-                darkSource: _modDef11753,
+                lightSource: _modDef11818,
+                darkSource: _modDef11819,
                 title: tmp15,
                 body: tmp16,
                 children: tmp21,
               };
-              const tmp27 = closure_1_20(native.EmptyState, obj6);
+              const tmp27 = constants2(native.EmptyState, obj6);
               cResult[15] = tmp4.emptyState;
               cResult[16] = tmp21;
               cResult[17] = tmp27;
@@ -2561,7 +2560,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
             style: failureStateButtonWrapper,
             text: tmp19,
           };
-          const tmp23 = closure_1_20(BaseTextButton.BaseTextButton, obj7);
+          const tmp23 = constants2(BaseTextButton.BaseTextButton, obj7);
           cResult[11] = onPressBack;
           cResult[12] = tmp4.failureStateButtonPill;
           cResult[13] = tmp4.failureStateButtonWrapper;
@@ -2579,7 +2578,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp13;
       tmp12 = tmp13;
     }
-  : (command) => {
+  : function NoPermsState(command) {
       command = command.command;
       const tmp = closure_23();
       const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
@@ -2588,12 +2587,12 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp.emptyStateContainer, children: null };
       const obj3 = { style: tmp.commandNameContainer, children: null };
       const items = [
-        closure_1_20(Text_Text.Text, {
+        constants2(Text_Text.Text, {
           variant: "heading-lg/bold",
           color: "text-default",
           children: command.displayName,
         }),
-        closure_1_20(Text_Text.Text, {
+        constants2(Text_Text.Text, {
           variant: "heading-sm/medium",
           color: "text-default",
           children: command.displayDescription,
@@ -2603,8 +2602,8 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [guild(React5, obj3)];
       const obj6 = {
         style: tmp.emptyState,
-        lightSource: _modDef11752,
-        darkSource: _modDef11753,
+        lightSource: _modDef11818,
+        darkSource: _modDef11819,
         title: null,
         body: null,
         children: null,
@@ -2624,8 +2623,8 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl3 = util.intl;
       obj7.text = intl3.string(util.t["/g10LC"]);
-      obj6.children = closure_1_20(BaseTextButton.BaseTextButton, obj7);
-      items1[1] = closure_1_20(native.EmptyState, obj6);
+      obj6.children = constants2(BaseTextButton.BaseTextButton, obj7);
+      items1[1] = constants2(native.EmptyState, obj6);
       obj2.children = items1;
       return guild(React5, obj2);
     };
@@ -2635,7 +2634,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (route) => {
+  ? function AppLauncherCommandViewScreen(route) {
       const cResult = c.c(10);
       ({
         command,
@@ -2678,7 +2677,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           expandBottomSheet,
           onCommandExecuted,
         };
-        const tmp5 = closure_1_20(closure_31, obj2);
+        const tmp5 = constants2(closure_31, obj2);
         cResult[0] = analyticsLocation;
         cResult[1] = command;
         cResult[2] = context;
@@ -2691,7 +2690,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp5;
       }
     }
-  : (route) => {
+  : function AppLauncherCommandViewScreen(route) {
       const context = route.route.params.context;
       let tmp9 = null;
       if (null != context) {
@@ -2706,7 +2705,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           expandBottomSheet: tmp7,
           onCommandExecuted: tmp8,
         };
-        tmp9 = closure_1_20(closure_31, obj);
+        tmp9 = constants2(closure_31, obj);
       }
       return tmp9;
     };

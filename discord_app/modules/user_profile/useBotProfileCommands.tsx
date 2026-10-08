@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useBotProfileCommands(arg0, arg1, arg2) {
       const cResult = c.c(5);
       const accessibleCommandsForApplication = ApplicationCommandQueryApiAll.useAccessibleCommandsForApplication(
         arg0,
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj3;
       tmp6 = obj3;
     }
-  : (arg0, arg1, arg2) => {
+  : function useBotProfileCommands(arg0, arg1, arg2) {
       const accessibleCommandsForApplication = ApplicationCommandQueryApiAll.useAccessibleCommandsForApplication(
         arg0,
         arg1,

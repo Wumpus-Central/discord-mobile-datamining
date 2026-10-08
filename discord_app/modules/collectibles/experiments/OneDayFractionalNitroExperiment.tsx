@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/collectibles/experiments/OneD
 
 export default apexExperiment;
 export const useOneDayFractionalNitroEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useOneDayFractionalNitroEnabled(location) {
       const cResult = c.c(4);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -36,7 +36,7 @@ export const useOneDayFractionalNitroEnabled = ReactCompilerGating.isReactCompil
       const tmp4 = PremiumGroupExperimentDefault(tmp3);
       return apexExperiment.useConfig(tmp5) && !PremiumGroupExperimentDefault(tmp3);
     }
-  : (location) => {
+  : function useOneDayFractionalNitroEnabled(location) {
       const obj = { location };
       const obj2 = { location };
       const tmp = PremiumGroupExperimentDefault({ location });

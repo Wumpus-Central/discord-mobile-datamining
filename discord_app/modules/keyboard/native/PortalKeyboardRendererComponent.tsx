@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboar
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function PortalKeyboardRendererComponent(arg0) {
         const cResult = c.c(19);
         ({ item, state, cleanUp } = arg0);
         ({ channelId, chatInputRef, type } = item);
@@ -142,7 +142,7 @@ export default noop.memo(
         }
         return null;
       }
-    : (item) => {
+    : function PortalKeyboardRendererComponent(item) {
         item = item.item;
         const channelId = item.channelId;
         ({ chatInputRef, type } = item);

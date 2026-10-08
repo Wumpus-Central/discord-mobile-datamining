@@ -12,8 +12,8 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let closure_7 = fn(9617).CALL_ACTION_BAR_HEIGHT + 8;
-const createStyles = fn(4896);
+let closure_7 = fn(10810).CALL_ACTION_BAR_HEIGHT + 8;
+const createStyles = fn(5090);
 let obj2 = {
   scrollView: { flex: 1 },
   container: { paddingHorizontal: 16, alignItems: "center" },
@@ -29,7 +29,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageViewWithPrompts.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function StageViewWithPrompts(arg0) {
       const cResult = c.c(25);
       ({ title, body, children } = arg0);
       const tmp4 = styles();
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = obj7;
       const tmp5 = useSafeAreaInsetsDefault();
     }
-  : (arg0) => {
+  : function StageViewWithPrompts(arg0) {
       ({ title, body, children } = arg0);
       const tmp = styles();
       const obj = { style: tmp.scrollView, contentContainerStyle: null, alwaysBounceVertical: false, children: null };

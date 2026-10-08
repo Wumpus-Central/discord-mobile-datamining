@@ -21,13 +21,13 @@ let obj = {
   CONTEXT_MENU_OPENED: "number_context_menu_opened",
 };
 let obj2 = {
-  guildId: "duration",
+  guildId: "emoji",
   channelId: "toCharArray$esjava$1",
   channelType: "toCharArray$esjava$1",
   numMediaItems: "Array",
-  hasMediaOptions: "unicodeVersion",
-  source: "onDoubleTapMessage",
-  incrementableActions: "i96lO+",
+  hasMediaOptions: "code",
+  source: "<string:1895895546>",
+  incrementableActions: "e",
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(

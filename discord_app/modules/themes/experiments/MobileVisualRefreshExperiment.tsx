@@ -31,7 +31,7 @@ const obj = {
   },
 };
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsMobileVisualRefreshExperimentEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -43,14 +43,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useIsMobileVisualRefreshExperimentEnabled(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/themes/experiments/MobileVisualRefreshExperiment.tsx");
 
 export default tmp3;
 export const MobileVisualRefreshExperiment = tmp2;
 export const useMobileVisualRefreshConfig = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useMobileVisualRefreshConfig(location) {
       const cResult = c.c(2);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -63,7 +65,9 @@ export const useMobileVisualRefreshConfig = ReactCompilerGating.isReactCompilerE
       }
       return closure_2.useConfig(tmp2);
     }
-  : (location) => closure_2.useConfig({ location: location.location });
+  : function useMobileVisualRefreshConfig(location) {
+      return closure_2.useConfig({ location: location.location });
+    };
 export const isMobileVisualRefreshEnabled = function isMobileVisualRefreshEnabled(location) {
   return closure_2.getConfig({ location }).enabled;
 };

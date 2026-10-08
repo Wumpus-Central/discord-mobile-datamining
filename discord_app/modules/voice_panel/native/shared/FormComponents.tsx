@@ -7,12 +7,12 @@ import UserUtils from "../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import CallActionCreatorsDefault from "../../../../actions/CallActionCreators.tsx";
 import StreamerApplicationSelectors from "../../../go_live/utils/StreamerApplicationSelectors.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import VoiceStateIcons from "VoiceStateIcons.tsx";
 import GuildTagDefault from "../../../guild_tag/native/GuildTag.tsx";
 import ShieldLockIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldLockIcon.tsx";
-import CallActionCreatorsDefault from "../../../../actions/CallActionCreators.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../../stores/PresenceStore.tsx";
@@ -21,7 +21,7 @@ require = fn;
 let closure_3 = ["style"];
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { marginHorizontal: 16 },
   voiceBadgesContainer: { flexDirection: "row" },
@@ -46,7 +46,7 @@ let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VoiceBadges(arg0) {
       const cResult = c.c(12);
       ({ muteDeafenIconState, videoIconState } = arg0);
       const tmp4 = closure_9();
@@ -106,7 +106,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp6;
       tmp5 = tmp6;
     }
-  : (arg0) => {
+  : function VoiceBadges(arg0) {
       ({ muteDeafenIconState, videoIconState } = arg0);
       const tmp = closure_9();
       const obj = { style: tmp.voiceBadgesContainer, children: null };
@@ -198,7 +198,7 @@ export const VoicePanelFormSection = function VoicePanelFormSection(style) {
   }
 };
 export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function MemberRowItem(user) {
       const cResult = user(nick[7]).c(48);
       user = user.user;
       const channelId = user.channelId;
@@ -292,7 +292,7 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled()
                     return obj.getStreamerActivityByUserId(id, closure_6);
                   }
                 }
-                const fn2 = function q() {
+                function renderLabel() {
                   let name = nick;
                   if (nick == null) {
                     name = UserUtils.getName(user);
@@ -322,7 +322,7 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled()
                   items[2] = tmp9Result;
                   obj2.children = items;
                   return closure_2_8(NativeViewDefault, obj2);
-                };
+                }
                 cResult[17] = displayNameStylesFont;
                 cResult[18] = isUserSecureFramesVerified;
                 cResult[19] = nick;
@@ -331,7 +331,7 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[22] = tmp7.icon;
                 cResult[23] = tmp7.memberRow;
                 cResult[24] = user;
-                cResult[25] = fn2;
+                cResult[25] = renderLabel;
               } else {
                 class W {
                   constructor() {
@@ -403,7 +403,7 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = obj6;
       const tmpResult6 = user(nick[13]);
     }
-  : (user) => {
+  : function MemberRowItem(user) {
       user = user.user;
       const channelId = user.channelId;
       let flag = user.selfStream;

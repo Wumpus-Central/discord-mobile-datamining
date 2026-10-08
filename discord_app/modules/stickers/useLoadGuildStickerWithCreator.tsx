@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/useLoadGuildStickerWithCreator.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useLoadGuildStickersWithCreator(arg0) {
       _require = arg0;
       const cResult = require("c").c(14);
       let obj = require("c");
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const abortController = new AbortController();
           const signal = abortController.signal;
           closure_0 = asyncGeneratorStep(async () => {
-            await _null(10125).fetchGuildStickersWithCreator(_null, c1);
+            await _null(9710).fetchGuildStickersWithCreator(_null, c1);
             if (1 === tmp7) {
               c3 = 0;
               signal("error");
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[6] !== stateFromStores) {
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            class E {
+            class W {
               constructor(arg0) {
                 user = closure_1_5.getUser(arg0.user_id);
                 tmp2 = arg0;
@@ -106,9 +106,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return tmp2;
               }
             }
-            cResult[8] = E;
+            cResult[8] = W;
           } else {
-            class E {
+            class W {
               constructor(arg0) {
                 user = closure_1_5.getUser(arg0.user_id);
                 tmp2 = arg0;
@@ -124,11 +124,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const mapped = stateFromStores.map(E);
+          const mapped = stateFromStores.map(W);
           cResult[6] = stateFromStores;
           cResult[7] = mapped;
         } else {
-          class E {
+          class W {
             constructor(arg0) {
               user = closure_1_5.getUser(arg0.user_id);
               tmp2 = arg0;
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[9] === tmp5) {
-            class E {
+            class W {
               constructor(arg0) {
                 user = closure_1_5.getUser(arg0.user_id);
                 tmp2 = arg0;
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp17 = obj3;
         }
       } else {
-        class E {
+        class W {
           constructor(arg0) {
             user = closure_1_5.getUser(arg0.user_id);
             tmp2 = arg0;
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = tmp(504);
     }
-  : (arg0) => {
+  : function useLoadGuildStickersWithCreator(arg0) {
       _require = arg0;
       [tmp2, dependencyMap] = noop.useState("loading");
       const tmp = _slicedToArray(noop.useState("loading"), 2);

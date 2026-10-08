@@ -2,16 +2,16 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import resolvedValuesFromUserApplicationIdentityProfile from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import UserProfileApplicationWidgetSkeletons from "../../user_profile/native/UserProfileApplicationWidgetSkeletons.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c2, View: c3 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   root: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 },
   image: null,
@@ -56,7 +56,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
       const cResult = c.c(68);
       ({ bottomConfig, resolveFieldValue } = arg0);
       const tmp4 = closure_6();
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   range.now = num16;
                   obj6.accessibilityValue = range;
                   obj6.children = tmp36;
-                  const tmp39Result = React4(React3, obj6);
+                  const tmp39Result = React4(View, obj6);
                   const textContent = tmp4.textContent;
                   if (cResult[43] === tmp8.status) {
                     if (cResult[44] === tmp8.text) {
@@ -298,9 +298,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 cResult[22] = tmp4.textContent;
                                 cResult[23] = tmp4.textLeft;
                                 cResult[24] = current;
-                                cResult[25] = React3;
-                                cResult[26] = React3;
-                                cResult[27] = React3;
+                                cResult[25] = View;
+                                cResult[26] = View;
+                                cResult[27] = View;
                                 cResult[28] = tmp39Result;
                                 cResult[29] = root;
                                 cResult[30] = tmp28;
@@ -315,16 +315,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 tmp19 = tmp28;
                                 tmp18 = root;
                                 tmp17 = tmp39Result;
-                                tmp16 = React3;
-                                tmp15 = React3;
-                                tmp14 = React3;
+                                tmp16 = View;
+                                tmp15 = View;
+                                tmp14 = View;
                               }
                             }
                           }
                           const obj8 = { style: tmp4.textLeft, children: null };
                           const items5 = [tmp41, cResult[48]];
                           obj8.children = items5;
-                          const tmp49 = hasOwnProperty(React3, obj8);
+                          const tmp49 = hasOwnProperty(View, obj8);
                           cResult[49] = tmp4.textLeft;
                           cResult[50] = tmp41;
                           cResult[51] = cResult[48];
@@ -365,7 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj11 = { style: null };
                 const items6 = [tmp4.progress, tmp35];
                 obj11.style = items6;
-                const tmp38 = React4(React3, obj11);
+                const tmp38 = React4(View, obj11);
                 cResult[40] = tmp4.progress;
                 cResult[41] = tmp35;
                 cResult[42] = tmp38;
@@ -377,7 +377,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj13 = { uri: tmp6.media.url };
               obj12.source = obj13;
               obj12.style = tmp4.image;
-              let tmp30 = React4(React2, obj12);
+              let tmp30 = React4(FastImageDefault, obj12);
             } else {
               const obj14 = { style: tmp4.image };
               tmp30 = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj14);
@@ -415,7 +415,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fieldValue;
       tmp6 = fieldValue;
     }
-  : (arg0) => {
+  : function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
       ({ bottomConfig, resolveFieldValue } = arg0);
       const tmp = closure_6();
       const objective = bottomConfig.components.objective;
@@ -458,7 +458,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { uri: fieldValue.media.url };
         obj4.source = obj5;
         obj4.style = tmp.image;
-        let tmp14 = React4(React2, obj4);
+        let tmp14 = React4(FastImageDefault, obj4);
         let tmp15 = React4;
       } else {
         const obj6 = { style: tmp.image };
@@ -496,8 +496,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let str = globalThis;
       items4[1] = { width: "" + progressPercentage + "%" };
       obj9.style = items4;
-      obj8.children = tmp15(React3, obj9);
-      const items5 = [tmp15(React3, obj8)];
+      obj8.children = tmp15(View, obj9);
+      const items5 = [tmp15(View, obj8)];
       const obj11 = { style: tmp.textContent, children: null };
       const obj12 = { style: tmp.textLeft, children: null };
       if ("value" === singleStringOrSkeleton.status) {
@@ -520,7 +520,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       items6[1] = tmp15Result3;
       obj12.children = items6;
-      const items7 = [hasOwnProperty(React3, obj12)];
+      const items7 = [hasOwnProperty(View, obj12)];
       if (null != iter) {
         const obj15 = { variant: "text-sm/medium", lineClamp: 1, style: tmp.progressText, children: null };
         if (null != iter2) {
@@ -542,11 +542,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           widthChars: 4,
         });
         obj11.children = items7;
-        items5[1] = hasOwnProperty(React3, obj11);
+        items5[1] = hasOwnProperty(View, obj11);
         obj7.children = items5;
-        items3[1] = hasOwnProperty(React3, obj7);
+        items3[1] = hasOwnProperty(View, obj7);
         obj3.children = items3;
-        return hasOwnProperty(React3, obj3);
+        return hasOwnProperty(View, obj3);
       }
       const obj10 = { width: "" + progressPercentage + "%" };
     };

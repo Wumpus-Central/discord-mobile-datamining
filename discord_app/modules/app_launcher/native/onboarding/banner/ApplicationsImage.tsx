@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   appIconContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
@@ -43,7 +43,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/ApplicationsImage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ApplicationsImage(arg0) {
       const cResult = c.c(25);
       ({ firstApplication, secondApplication } = arg0);
       const tmp4 = closure_7();
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp10;
       tmp9 = tmp10;
     }
-  : (arg0) => {
+  : function ApplicationsImage(arg0) {
       ({ firstApplication, secondApplication } = arg0);
       const tmp = closure_7();
       let appLauncherIconSource = null;

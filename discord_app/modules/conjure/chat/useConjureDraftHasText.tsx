@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/useConjureDraftHasText.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useConjureDraftHasText(arg0) {
       _require = arg0;
       const cResult = require("c").c(8);
       if (cResult[0] !== arg0) {
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const tmp6 = _slicedToArray(noop.useState(arg0), 2);
     }
-  : (arg0) => {
+  : function useConjureDraftHasText(arg0) {
       closure_0 = arg0;
       [tmp2, tmp3] = noop.useState(() => "" !== ConjureComposerDraftStore.getDraft(closure_0).trim());
       const tmp4 = _slicedToArray(noop.useState(arg0), 2);

@@ -7,9 +7,9 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAutoVoiceSensitivitySettingValue() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MediaEngineStore];
@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useAutoVoiceSensitivitySettingValue() {
       const items = [MediaEngineStore];
       return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().autoThreshold);
     };
@@ -34,9 +34,9 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.Z4oaN0);
   },
-  parent: fn(7645).MobileUserSettings.VOICE,
+  parent: fn(7966).MobileUserSettings.VOICE,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useAutoVoiceSensitivitySettingValue() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [MediaEngineStore];
@@ -52,7 +52,7 @@ const toggle = SettingBuilders.createToggle({
         }
         return initialize.useStateFromStores(tmp4, tmp5);
       }
-    : () => {
+    : function useAutoVoiceSensitivitySettingValue() {
         const items = [MediaEngineStore];
         return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().autoThreshold);
       },

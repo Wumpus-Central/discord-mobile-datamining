@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesBannerBackground.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../_runtime/00576_c.js";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import common_Video from "../../../components_native/common/Video.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesBannerB
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function BountiesBannerBackground(arg0) {
         const cResult = c.c(12);
         ({ children, style, uri } = arg0);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -98,7 +98,7 @@ export default noop.memo(
         };
         const tmpResult = initialize;
       }
-    : (arg0) => {
+    : function BountiesBannerBackground(arg0) {
         ({ children, style, uri } = arg0);
         const items = [AccessibilityStore];
         const obj2 = { style, children: null };

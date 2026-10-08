@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/MessageRequestEmpty.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (bodyText) => {
+  ? function MessageRequestEmpty(bodyText) {
       const cResult = c.c(2);
       bodyText = bodyText.bodyText;
       if (cResult[0] !== bodyText) {
@@ -25,4 +25,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (body) => jsx(native.EmptyState, { Illustration: Pending.Pending, body: body.bodyText });
+  : function MessageRequestEmpty(body) {
+      return jsx(native.EmptyState, { Illustration: Pending.Pending, body: body.bodyText });
+    };

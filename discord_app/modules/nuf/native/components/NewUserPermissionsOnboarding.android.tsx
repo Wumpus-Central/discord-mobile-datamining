@@ -11,11 +11,11 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   scrollContainer: { minHeight: "100%" },
   container: { flexGrow: 1, alignItems: "center", justifyContent: "center" },
-  alertContainer: { paddingTop: 80 + fn(6075).NAV_BAR_HEIGHT },
+  alertContainer: { paddingTop: 80 + fn(6261).NAV_BAR_HEIGHT },
   alert: null,
   alertContent: null,
   alertTitle: null,
@@ -24,7 +24,7 @@ let obj2 = {
   primaryButtonContainer: null,
   trailing: null,
 };
-let obj3 = { paddingTop: 80 + fn(6075).NAV_BAR_HEIGHT };
+let obj3 = { paddingTop: 80 + fn(6261).NAV_BAR_HEIGHT };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj2.alert = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -57,7 +57,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/components/NewUserPermissionsOnboarding.android.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function NewUserPermissionsOnboarding(arg0) {
       const cResult = c.c(45);
       ({ title, subtitle, header, trailing, loading, showSkip, onAllow, onDontAllow } = arg0);
       const tmp5 = closure_6();
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp12;
       const obj14 = { style: tmp5.alertTitle, variant: "heading-lg/bold", color: "text-default", children: title };
     }
-  : (showSkip) => {
+  : function NewUserPermissionsOnboarding(showSkip) {
       let flag = showSkip.showSkip;
       ({ title, subtitle, header, trailing, loading } = showSkip);
       if (flag === undefined) {

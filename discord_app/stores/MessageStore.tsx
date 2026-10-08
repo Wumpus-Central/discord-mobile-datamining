@@ -13,7 +13,7 @@ import InteractionTypes from "../../discord_common/js/shared/shared-constants/In
 import ChannelMessagesDefault from "../lib/ChannelMessages.tsx";
 import IOSPushNotificationRawPayloadFixExperiment from "../modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx";
 import GatewayConnectionStore from "../modules/gateway/GatewayConnectionStore.tsx";
-import ExplicitMediaRedactionUtils from "../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import handleExplicitMediaScanTimeoutForMessage from "../modules/explicit_media_redaction/handleExplicitMediaScanTimeoutForMessage.tsx";
 import MessageQueue from "../lib/MessageQueue.tsx";
 import canEditMessageDefault from "../modules/messages/canEditMessage.tsx";
 import GuildAutomodMessageStoreUtils from "../modules/guild_automod/GuildAutomodMessageStoreUtils.tsx";
@@ -994,7 +994,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
       if (value.has(messageId)) {
         const updateResult = value.update(
           messageId,
-          ExplicitMediaRedactionUtils.handleExplicitMediaScanTimeoutForMessage,
+          handleExplicitMediaScanTimeoutForMessage.handleExplicitMediaScanTimeoutForMessage,
         );
         ChannelMessagesDefault.commit(updateResult);
         const tmpResult = ChannelMessagesDefault;
@@ -1061,7 +1061,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    const orCreate = mutation(5438).getOrCreate(ids.channelId);
+    const orCreate = mutation(5748).getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
@@ -1110,14 +1110,14 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(5438).commit(tmp3);
+        tmp(5748).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });
-        const tmpResult2 = tmp(5438);
+        const tmpResult2 = tmp(5748);
       }
     }
-    let obj = mutation(5438);
+    let obj = mutation(5748);
   },
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);

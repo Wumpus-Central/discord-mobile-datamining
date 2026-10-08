@@ -1,6 +1,7 @@
 // discord_app/modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx
 import _mod17 from "../../../../../../_runtime/metro/00017__.js";
 import Constants from "../../../../../Constants.tsx";
+import shouldAgeVerifyForAgeGate from "../../../../age_gate/shouldAgeVerifyForAgeGate.tsx";
 import AgeGateUtils from "../../../../age_gate/AgeGateUtils.tsx";
 import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import VoiceChannelBadgeExperiment from "../../../../channel/VoiceChannelBadgeExperiment.tsx";
@@ -31,7 +32,7 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
             uri = assetSource.uri;
           }
           if (null != uri) {
-            let result = AgeGateUtils.shouldAgeVerifyForAgeGate();
+            let result = shouldAgeVerifyForAgeGate.shouldAgeVerifyForAgeGate();
             if (result) {
               result = AgeGateUtils.shouldShowAgeGateForChannelId(channel.id);
               const tmpResult4 = AgeGateUtils;
@@ -51,7 +52,7 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
                 return obj2;
               }
             }
-            const tmpResult3 = AgeGateUtils;
+            const tmpResult3 = shouldAgeVerifyForAgeGate;
           }
           const tmpResult = utils_ChannelUtils;
         }

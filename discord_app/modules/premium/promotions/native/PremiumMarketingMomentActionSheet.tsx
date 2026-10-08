@@ -9,10 +9,10 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 require = fn;
 let View = fn(17).View;
 const AnalyticsPages = fn(1085).AnalyticsPages;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     display: "flex",
@@ -56,8 +56,8 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/native/PremiumMarketingMomentActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (markAsDismissed) => {
-      const cResult = markAsDismissed(promotionId[9]).c(58);
+  ? function PremiumMarketingMomentActionSheet(markAsDismissed) {
+      const cResult = markAsDismissed(promotionId[9]).c(50);
       markAsDismissed = markAsDismissed.markAsDismissed;
       const bottomSheetData = markAsDismissed.bottomSheetData;
       ({ componentId, promotionId } = markAsDismissed);
@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = tmp9;
         cResult[9] = fn2;
       }
-      class T {
+      class S {
         constructor(arg0) {
           tmp = markAsDismissed(markAsDismissed);
           obj = closure_1(closure_2[12]);
@@ -203,11 +203,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       cResult[2] = markAsDismissed;
       cResult[3] = promotionId;
-      cResult[4] = T;
-      tmp9 = T;
+      cResult[4] = S;
+      tmp9 = S;
       const tmpResult = markAsDismissed(promotionId[10]);
     }
-  : (component_id) => {
+  : function PremiumMarketingMomentActionSheet(component_id) {
       const markAsDismissed = component_id.markAsDismissed;
       const bottomSheetData = component_id.bottomSheetData;
       const promotionId = component_id.promotionId;
@@ -287,9 +287,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         bottomSheetData.helpArticleId,
       );
       const obj5 = { onDismiss: callback2, children: null };
-      const obj6 = { style: null, children: null };
-      const items4 = [tmp.container];
-      obj6.style = items4;
+      const obj6 = { style: tmp.container, children: null };
       const tmp2Result = markAsDismissed(promotionId[17]);
       if (tmp2Result2.getFile(obj7).isVideo) {
         const size = {
@@ -314,20 +312,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj9.style = tmp.image;
         tmp14Result = closure_8(tmp5(tmp3[20]), obj9);
       }
-      const items5 = [tmp14Result, , ,];
-      const obj11 = {
-        style: null,
-        color: "mobile-text-heading-primary",
-        variant: "heading-lg/extrabold",
-        children: bottomSheetData.header,
-      };
-      const items6 = [tmp.header];
-      obj11.style = items6;
-      items5[1] = closure_8(markAsDismissed(promotionId[21]).Text, obj11);
-      const obj12 = { style: null, color: "text-default", variant: "text-sm/normal", children: null };
-      const items7 = [tmp.body];
-      obj12.style = items7;
-      const items8 = [bottomSheetData.body, " "];
+      const items4 = [
+        tmp14Result,
+        closure_8(markAsDismissed(promotionId[21]).Text, {
+          style: tmp.header,
+          color: "mobile-text-heading-primary",
+          variant: "heading-lg/extrabold",
+          children: bottomSheetData.header,
+        }),
+        ,
+      ];
+      const obj12 = { style: tmp.body, color: "text-default", variant: "text-sm/normal", children: null };
+      const items5 = [bottomSheetData.body, " "];
       let tmp14Result2 = null != helpArticleLinkProps;
       if (tmp14Result2) {
         const obj14 = {
@@ -341,14 +337,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         tmp14Result2 = closure_8(tmp2(tmp3[21]).Text, obj14);
       }
-      items8[2] = tmp14Result2;
-      obj12.children = items8;
-      items5[2] = closure_9(markAsDismissed(promotionId[21]).Text, obj12);
-      const obj15 = { style: null, children: null };
-      const items9 = [tmp.buttonContainer];
-      obj15.style = items9;
+      items5[2] = tmp14Result2;
+      obj12.children = items5;
+      items4[2] = closure_9(markAsDismissed(promotionId[21]).Text, obj12);
+      const obj15 = { style: tmp.buttonContainer, children: null };
       const button3 = bottomSheetData.button;
       let copy;
+      const obj11 = {
+        style: tmp.header,
+        color: "mobile-text-heading-primary",
+        variant: "heading-lg/extrabold",
+        children: bottomSheetData.header,
+      };
       obj7 = { uri: bottomSheetData.assetUrl };
       tmp2Result2 = markAsDismissed(promotionId[18]);
       if (button3 != null) {
@@ -359,8 +359,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         copy = intl.string(tmp2(tmp3[23]).t.J61px0);
       }
       obj15.children = closure_8(bottomSheetData(promotionId[24]), { text: copy, onPress: callback1 });
-      items5[3] = closure_8(callback, obj15);
-      obj6.children = items5;
+      items4[3] = closure_8(callback, obj15);
+      obj6.children = items4;
       obj5.children = closure_9(callback, obj6);
       return closure_8(markAsDismissed(promotionId[25]).BottomSheet, obj5);
     };

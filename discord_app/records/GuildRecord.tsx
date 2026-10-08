@@ -58,6 +58,7 @@ let obj = {
   gameApplicationIds: null,
   officialMessageColor: null,
   incidentsData: null,
+  linkedGameOrganization: null,
 };
 const frozen = Object.freeze(obj);
 const result = size.fileFinishedImporting("records/GuildRecord.tsx");

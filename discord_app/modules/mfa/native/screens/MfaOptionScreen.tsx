@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/screens/MfaOptionScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (mfaMethod) => {
+  ? function MFAOptionScreen(mfaMethod) {
       const cResult = c.c(34);
       ({ headerText, headerImage, subtitle, input, submit, screenProps, error, content } = mfaMethod);
       const tmp5 = useWideAuthViewDefault();
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: headerText,
       };
     }
-  : (arg0) => {
+  : function MFAOptionScreen(arg0) {
       ({ headerImage, subtitle, screenProps, error } = arg0);
       ({ headerText, input, submit, mfaMethod, content } = arg0);
       const tmp3 = useWideAuthViewDefault();

@@ -10,7 +10,7 @@ const Permissions = fn(1085).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (selectedChannelIds) => {
+  ? function usePromptHelpText(selectedChannelIds) {
       const cResult = selectedRoleIds(selectedChannelIds[8]).c(23);
       ({ guild, prompt: _prompt, selectedRoleIds } = selectedChannelIds);
       selectedChannelIds = selectedChannelIds.selectedChannelIds;
@@ -75,115 +75,108 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[20] === tmp16) {
                 if (cResult[21] === tmp17) {
-                  let tmp27 = cResult[22];
+                  let tmp26 = cResult[22];
                 }
-                return tmp27;
+                return tmp26;
               }
               const obj2 = { helpText: tmp16, helpTextAdditional: tmp17 };
               cResult[20] = tmp16;
               cResult[21] = tmp17;
               cResult[22] = obj2;
-              tmp27 = obj2;
+              tmp26 = obj2;
             }
           }
         }
         const _Symbol2 = Symbol;
         if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-          class T {
-            constructor(arg0) {
-              return "@" + selectedChannelIds.name;
-            }
-          }
-          cResult[14] = T;
+          const fn3 = function k(name) {
+            return "@" + name.name;
+          };
+          cResult[14] = fn3;
+          let tmp18 = fn3;
         } else {
-          class T {
-            constructor(arg0) {
-              return "@" + selectedChannelIds.name;
-            }
-          }
+          tmp18 = cResult[14];
         }
-        let mapped = stateFromStoresArray.map(T);
+        let mapped = stateFromStoresArray.map(tmp18);
+        let singleSelect1;
         if (_prompt != null) {
-          class T {
-            constructor(arg0) {
-              return "@" + selectedChannelIds.name;
-            }
-          }
+          singleSelect1 = _prompt.singleSelect;
         }
-        if (cResult[15] !== undefined) {
-          class T {
-            constructor(arg0) {
-              return "@" + selectedChannelIds.name;
-            }
-          }
+        if (cResult[15] !== singleSelect1) {
+          let singleSelect2;
           if (_prompt != null) {
-            class T {
-              constructor(arg0) {
-                return "@" + selectedChannelIds.name;
-              }
-            }
+            singleSelect2 = _prompt.singleSelect;
           }
           let str = "";
-          if (!tmp22) {
-            class T {
-              constructor(arg0) {
-                return "@" + selectedChannelIds.name;
-              }
-            }
-            str = obj4.string(selectedRoleIds(tmp2[6]).t.JshhEl);
+          if (!singleSelect2) {
+            const intl = selectedRoleIds(tmp2[6]).intl;
+            str = intl.string(selectedRoleIds(tmp2[6]).t.JshhEl);
           }
+          let singleSelect3;
           if (_prompt != null) {
-            class T {
-              constructor(arg0) {
-                return "@" + selectedChannelIds.name;
-              }
-            }
+            singleSelect3 = _prompt.singleSelect;
           }
-          cResult[15] = undefined;
+          cResult[15] = singleSelect3;
           cResult[16] = str;
+          let tmp20 = str;
         } else {
-          class T {
-            constructor(arg0) {
-              return "@" + selectedChannelIds.name;
-            }
-          }
+          tmp20 = cResult[16];
         }
         if (0 === stateFromStoresArray1.length) {
-          class T {
-            constructor(arg0) {
-              return "@" + selectedChannelIds.name;
+          if (mapped.length > 0) {
+            let str5 = "";
+            if (0 !== mapped.length) {
+              const intl4 = selectedRoleIds(tmp2[6]).intl;
+              const obj3 = { count: mapped.length, extraCount: null, role1: null, role2: null, itemHook: null };
+              const _Math3 = Math;
+              obj3.extraCount = Math.max(mapped.length - 2, 0);
+              [obj6.role1, obj6.role2] = mapped;
+              obj3.itemHook = itemHook;
+              str5 = intl4.format(selectedRoleIds(tmp2[6]).t.Kj5GIT, obj3);
             }
+            tmp20 = str5;
+            let str3 = "";
           }
           cResult[8] = itemHook;
+          let singleSelect4;
           if (_prompt != null) {
-            class T {
-              constructor(arg0) {
-                return "@" + selectedChannelIds.name;
-              }
-            }
+            singleSelect4 = _prompt.singleSelect;
           }
-          cResult[9] = undefined;
+          cResult[9] = singleSelect4;
           cResult[10] = stateFromStoresArray1;
           cResult[11] = stateFromStoresArray;
-          cResult[12] = tmp21;
+          cResult[12] = tmp20;
           cResult[13] = str3;
           tmp17 = str3;
-          tmp16 = tmp21;
+          tmp16 = tmp20;
         }
+        let str2 = "";
+        str3 = "";
         if (stateFromStoresArray1.length > 0) {
-          class T {
-            constructor(arg0) {
-              return "@" + selectedChannelIds.name;
+          if (cResult[17] === itemHook) {
+            if (cResult[18] === stateFromStoresArray1) {
+              let tmp23 = cResult[19];
+            }
+            str3 = str2;
+            tmp20 = tmp23;
+            if (mapped.length > 0) {
+              if (0 !== mapped.length) {
+                const intl3 = selectedRoleIds(tmp2[6]).intl;
+                const obj7 = { count: mapped.length, extraCount: null, role1: null, role2: null, itemHook: null };
+                const _Math2 = Math;
+                obj7.extraCount = Math.max(mapped.length - 2, 0);
+                [obj5.role1, obj5.role2] = mapped;
+                obj7.itemHook = itemHook;
+                str2 = intl3.format(selectedRoleIds(tmp2[6]).t.cJZxWf, obj7);
+              }
+              str3 = str2;
+              tmp20 = tmp23;
             }
           }
           let formatResult = str2;
           if (0 !== stateFromStoresArray1.length) {
-            class T {
-              constructor(arg0) {
-                return "@" + selectedChannelIds.name;
-              }
-            }
-            const obj3 = {
+            const intl2 = selectedRoleIds(tmp2[6]).intl;
+            const obj11 = {
               count: stateFromStoresArray1.length,
               extraCount: null,
               channel1: null,
@@ -191,18 +184,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               itemHook: null,
             };
             const _Math = Math;
-            obj3.extraCount = Math.max(stateFromStoresArray1.length - 2, 0);
-            [obj6.channel1, obj6.channel2] = stateFromStoresArray1;
-            obj3.itemHook = itemHook;
-            formatResult = obj5.format(selectedRoleIds(tmp2[6]).t.Rj841R, obj3);
+            obj11.extraCount = Math.max(stateFromStoresArray1.length - 2, 0);
+            [obj4.channel1, obj4.channel2] = stateFromStoresArray1;
+            obj11.itemHook = itemHook;
+            formatResult = intl2.format(selectedRoleIds(tmp2[6]).t.Rj841R, obj11);
           }
           cResult[17] = itemHook;
           cResult[18] = stateFromStoresArray1;
           cResult[19] = formatResult;
+          tmp23 = formatResult;
         }
         const tmpResult2 = selectedRoleIds(tmp2[9]);
       }
-      const fn = function f() {
+      const fn = function p() {
         if (null != id) {
           let manyRoles = GuildRoleStore.getManyRoles(tmp, selectedRoleIds);
         } else {
@@ -219,7 +213,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       const obj = selectedRoleIds(selectedChannelIds[8]);
     }
-  : (arg0) => {
+  : function usePromptHelpText(arg0) {
       ({ guild, prompt: _prompt, selectedRoleIds } = arg0);
       ({ selectedChannelIds: dependencyMap, itemHook } = arg0);
       let id;
@@ -325,7 +319,7 @@ const result = size.fileFinishedImporting("modules/guild_onboarding/usePromptHel
 
 export default tmp2;
 export const useCustomizeCommunityPromptHelpText = ReactCompilerGating.isReactCompilerEnabled()
-  ? (selectedChannelIds) => {
+  ? function useCustomizeCommunityPromptHelpText(selectedChannelIds) {
       const cResult = selectedRoleIds(selectedChannelIds[8]).c(25);
       ({ guild, prompt: _prompt, selectedRoleIds } = selectedChannelIds);
       selectedChannelIds = selectedChannelIds.selectedChannelIds;
@@ -393,11 +387,11 @@ export const useCustomizeCommunityPromptHelpText = ReactCompilerGating.isReactCo
                     const obj2 = { helpText: tmp16, helpTextAdditional: "" };
                     cResult[23] = tmp16;
                     cResult[24] = obj2;
-                    let tmp26 = obj2;
+                    let tmp24 = obj2;
                   } else {
-                    tmp26 = cResult[24];
+                    tmp24 = cResult[24];
                   }
-                  return tmp26;
+                  return tmp24;
                 }
               }
             }
@@ -405,55 +399,81 @@ export const useCustomizeCommunityPromptHelpText = ReactCompilerGating.isReactCo
         }
         const _Symbol2 = Symbol;
         if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn3 = function k(name) {
-            return "@" + name.name;
-          };
-          cResult[15] = fn3;
-          let tmp17 = fn3;
+          class N {
+            constructor(arg0) {
+              return "@" + selectedChannelIds.name;
+            }
+          }
+          cResult[15] = N;
         } else {
-          tmp17 = cResult[15];
+          class N {
+            constructor(arg0) {
+              return "@" + selectedChannelIds.name;
+            }
+          }
         }
-        let mapped = stateFromStoresArray.map(tmp17);
-        let singleSelect1;
+        let mapped = stateFromStoresArray.map(N);
         if (_prompt != null) {
-          singleSelect1 = _prompt.singleSelect;
+          class N {
+            constructor(arg0) {
+              return "@" + selectedChannelIds.name;
+            }
+          }
         }
-        if (cResult[16] !== singleSelect1) {
-          let singleSelect2;
+        if (cResult[16] !== undefined) {
+          class N {
+            constructor(arg0) {
+              return "@" + selectedChannelIds.name;
+            }
+          }
           if (_prompt != null) {
-            singleSelect2 = _prompt.singleSelect;
+            class N {
+              constructor(arg0) {
+                return "@" + selectedChannelIds.name;
+              }
+            }
           }
           let str = "";
-          if (!singleSelect2) {
-            const intl = selectedRoleIds(tmp2[6]).intl;
-            str = intl.string(selectedRoleIds(tmp2[6]).t.JshhEl);
+          if (!tmp20) {
+            class N {
+              constructor(arg0) {
+                return "@" + selectedChannelIds.name;
+              }
+            }
+            str = obj4.string(selectedRoleIds(tmp2[6]).t.JshhEl);
           }
-          let singleSelect3;
           if (_prompt != null) {
-            singleSelect3 = _prompt.singleSelect;
+            class N {
+              constructor(arg0) {
+                return "@" + selectedChannelIds.name;
+              }
+            }
           }
-          cResult[16] = singleSelect3;
+          cResult[16] = undefined;
           cResult[17] = str;
           let formatResult = str;
         } else {
-          formatResult = cResult[17];
+          class N {
+            constructor(arg0) {
+              return "@" + selectedChannelIds.name;
+            }
+          }
         }
         if (0 === stateFromStoresArray1.length) {
-          if (mapped.length > 0) {
-            const intl4 = selectedRoleIds(tmp2[6]).intl;
-            const obj3 = { count: mapped.length, extraCount: null, role1: null, role2: null, itemHook: null };
-            const _Math4 = Math;
-            obj3.extraCount = Math.max(mapped.length - 2, 0);
-            [obj6.role1, obj6.role2] = mapped;
-            obj3.itemHook = itemHook;
-            formatResult = intl4.format(selectedRoleIds(tmp2[6]).t.vdtNYa, obj3);
+          class N {
+            constructor(arg0) {
+              return "@" + selectedChannelIds.name;
+            }
           }
           cResult[8] = itemHook;
-          let singleSelect4;
           if (_prompt != null) {
-            singleSelect4 = _prompt.singleSelect;
+            class N {
+              constructor(arg0) {
+                return "@" + selectedChannelIds.name;
+              }
+            }
           }
-          cResult[9] = singleSelect4;
+          cResult[9] = undefined;
           cResult[10] = stateFromStoresArray1[0];
           cResult[11] = stateFromStoresArray1[1];
           cResult[12] = stateFromStoresArray1.length;
@@ -462,41 +482,19 @@ export const useCustomizeCommunityPromptHelpText = ReactCompilerGating.isReactCo
           tmp16 = formatResult;
         }
         if (stateFromStoresArray1.length > 0) {
-          if (0 === mapped.length) {
-            if (cResult[18] === itemHook) {
-              if (cResult[19] === stateFromStoresArray1[0]) {
-                if (cResult[20] === stateFromStoresArray1[1]) {
-                  if (cResult[21] === stateFromStoresArray1.length) {
-                    let tmp23 = cResult[22];
-                  }
-                  formatResult = tmp23;
-                }
-              }
+          class N {
+            constructor(arg0) {
+              return "@" + selectedChannelIds.name;
             }
-            const intl3 = selectedRoleIds(tmp2[6]).intl;
-            const obj7 = {
-              count: stateFromStoresArray1.length,
-              extraCount: null,
-              channel1: null,
-              channel2: null,
-              itemHook: null,
-            };
-            const _Math3 = Math;
-            obj7.extraCount = Math.max(stateFromStoresArray1.length - 2, 0);
-            [obj5.channel1, obj5.channel2] = stateFromStoresArray1;
-            obj7.itemHook = itemHook;
-            const formatResult1 = intl3.format(selectedRoleIds(tmp2[6]).t.ZKywGU, obj7);
-            cResult[18] = itemHook;
-            cResult[19] = stateFromStoresArray1[0];
-            cResult[20] = stateFromStoresArray1[1];
-            cResult[21] = stateFromStoresArray1.length;
-            cResult[22] = formatResult1;
-            tmp23 = formatResult1;
           }
         }
         if (tmp22) {
-          const intl2 = selectedRoleIds(tmp2[6]).intl;
-          const obj11 = {
+          class N {
+            constructor(arg0) {
+              return "@" + selectedChannelIds.name;
+            }
+          }
+          const obj3 = {
             channelCount: stateFromStoresArray1.length,
             extraChannelCount: null,
             channel1: null,
@@ -508,19 +506,19 @@ export const useCustomizeCommunityPromptHelpText = ReactCompilerGating.isReactCo
             role2: null,
           };
           const _Math = Math;
-          obj11.extraChannelCount = Math.max(stateFromStoresArray1.length - 2, 0);
-          [obj4.channel1, obj4.channel2] = stateFromStoresArray1;
-          obj11.itemHook = itemHook;
-          obj11.roleCount = mapped.length;
+          obj3.extraChannelCount = Math.max(stateFromStoresArray1.length - 2, 0);
+          [obj6.channel1, obj6.channel2] = stateFromStoresArray1;
+          obj3.itemHook = itemHook;
+          obj3.roleCount = mapped.length;
           const _Math2 = Math;
-          obj11.extraRoleCount = Math.max(mapped.length - 2, 0);
-          [obj4.role1, obj4.role2] = mapped;
-          formatResult = intl2.format(selectedRoleIds(tmp2[6]).t.WewRHM, obj11);
+          obj3.extraRoleCount = Math.max(mapped.length - 2, 0);
+          [obj6.role1, obj6.role2] = mapped;
+          formatResult = obj5.format(selectedRoleIds(tmp2[6]).t.WewRHM, obj3);
         }
         tmp22 = stateFromStoresArray1.length > 0 && mapped.length > 0;
         const tmpResult2 = selectedRoleIds(tmp2[9]);
       }
-      const fn = function f() {
+      const fn = function p() {
         if (null != id) {
           let manyRoles = GuildRoleStore.getManyRoles(tmp, selectedRoleIds);
         } else {
@@ -537,7 +535,7 @@ export const useCustomizeCommunityPromptHelpText = ReactCompilerGating.isReactCo
       tmp7 = fn;
       const obj = selectedRoleIds(selectedChannelIds[8]);
     }
-  : (arg0) => {
+  : function useCustomizeCommunityPromptHelpText(arg0) {
       ({ guild, prompt: _prompt, selectedRoleIds } = arg0);
       ({ selectedChannelIds: dependencyMap, itemHook } = arg0);
       let id;

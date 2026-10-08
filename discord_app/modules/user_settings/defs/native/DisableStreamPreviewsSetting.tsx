@@ -18,7 +18,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t.jTNPHM);
   },
   parent: SettingsConstants.MobileUserSettings.VOICE,
-  useValue: () => {
+  useValue() {
     const DisableStreamPreviews = UserSettings.DisableStreamPreviews;
     let flag = DisableStreamPreviews.useSetting();
     if (flag == null) {

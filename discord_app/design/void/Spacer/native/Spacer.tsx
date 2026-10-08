@@ -15,7 +15,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("design/void/Spacer/native/Spacer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Spacer(arg0) {
       const cResult = c.c(5);
       ({ size, pointerEvents } = arg0);
       if (cResult[0] !== size) {
@@ -38,4 +38,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp6;
       tmp5 = tmp6;
     }
-  : (pointerEvents) => <View style={closure_4(pointerEvents.size)} pointerEvents={pointerEvents.pointerEvents} />;
+  : function Spacer(pointerEvents) {
+      return <View style={closure_4(pointerEvents.size)} pointerEvents={pointerEvents.pointerEvents} />;
+    };

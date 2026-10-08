@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/SecureFramesDeeplinkExperiment.tsx");
 
 export const useSecureFramesDeeplinkExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useSecureFramesDeeplinkExperiment(location) {
       const cResult = c.c(3);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -38,7 +38,9 @@ export const useSecureFramesDeeplinkExperiment = ReactCompilerGating.isReactComp
       }
       return closure_2.useExperiment(tmp2, tmp3);
     }
-  : (location) => closure_2.useExperiment({ location: location.location }, { autoTrackExposure: true });
+  : function useSecureFramesDeeplinkExperiment(location) {
+      return closure_2.useExperiment({ location: location.location }, { autoTrackExposure: true });
+    };
 export const getSecureFramesDeeplinkExperiment = function getSecureFramesDeeplinkExperiment(location) {
   return closure_2.getCurrentConfig({ location: location.location }, { autoTrackExposure: true });
 };

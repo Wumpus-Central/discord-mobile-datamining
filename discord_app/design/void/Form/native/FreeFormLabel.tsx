@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FreeFormLabel.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FreeFormLabel(arg0) {
       const cResult = c.c(4);
       ({ children, style, nativeID } = arg0);
       if (cResult[0] === children) {
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp5;
       tmp4 = tmp5;
     }
-  : (arg0) => {
+  : function FreeFormLabel(arg0) {
       ({ children, style, nativeID } = arg0);
       return jsx(Text_Text.Text, { style, variant: "text-sm/semibold", color: "text-muted", nativeID, children });
     };

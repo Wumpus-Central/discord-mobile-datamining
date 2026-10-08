@@ -6,11 +6,11 @@ import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const Features = fn(4921).Features;
+const Features = fn(5115).Features;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSidechainCompressionSettingValue() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MediaEngineStore];
@@ -26,7 +26,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useSidechainCompressionSettingValue() {
       const items = [MediaEngineStore];
       return initialize.useStateFromStores(items, () => sidechainCompression.getSidechainCompression());
     };
@@ -35,12 +35,12 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["/jwMtn"]);
   },
-  parent: fn(7645).MobileUserSettings.VOICE,
+  parent: fn(7966).MobileUserSettings.VOICE,
   usePredicate() {
     return MediaEngineStore.supports(Features.SIDECHAIN_COMPRESSION);
   },
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useSidechainCompressionSettingValue() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [MediaEngineStore];
@@ -56,7 +56,7 @@ const toggle = SettingBuilders.createToggle({
         }
         return initialize.useStateFromStores(tmp4, tmp5);
       }
-    : () => {
+    : function useSidechainCompressionSettingValue() {
         const items = [MediaEngineStore];
         return initialize.useStateFromStores(items, () => sidechainCompression.getSidechainCompression());
       },

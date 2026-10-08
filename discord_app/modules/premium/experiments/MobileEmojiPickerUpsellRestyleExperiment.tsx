@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/premium/experiments/MobileEmo
 
 export const MobileEmojiPickerUpsellRestyleExperiment = apexExperiment;
 export const useMobileEmojiPickerUpsellRestyleEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useMobileEmojiPickerUpsellRestyleEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -31,7 +31,9 @@ export const useMobileEmojiPickerUpsellRestyleEnabled = ReactCompilerGating.isRe
       }
       return apexExperiment.useConfig(tmp2);
     }
-  : (location) => apexExperiment.useConfig({ location });
+  : function useMobileEmojiPickerUpsellRestyleEnabled(location) {
+      return apexExperiment.useConfig({ location });
+    };
 export const getMobileEmojiPickerUpsellRestyleEnabledForFeature =
   function getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, location) {
     let config = items.includes(featureName);

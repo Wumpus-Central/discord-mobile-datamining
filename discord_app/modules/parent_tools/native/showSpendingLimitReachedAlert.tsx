@@ -1,8 +1,8 @@
 // discord_app/modules/parent_tools/native/showSpendingLimitReachedAlert.tsx
 import BillingError from "../../../errors/BillingError.tsx";
-import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators.tsx";
-import V6OrEarlierAPIError from "../../../errors/index.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
+import V6OrEarlierAPIError from "../../../errors/index.tsx";
+import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators.tsx";
 import LayerActionCreators from "../../../actions/LayerActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -20,8 +20,8 @@ export const isSpendingLimitError = function isSpendingLimitError(billingError) 
   return tmp3;
 };
 export const showSpendingLimitReachedAlert = function showSpendingLimitReachedAlert() {
-  activeLinkUserIds = activeLinkUserIds(8328).getActiveLinkUserIds();
-  let obj = activeLinkUserIds(8328);
+  activeLinkUserIds = activeLinkUserIds(7711).getActiveLinkUserIds();
+  let obj = activeLinkUserIds(7711);
   const obj3 = { title: null, body: null, isDismissable: true };
   const intl = activeLinkUserIds(1126).intl;
   obj3.title = intl.string(activeLinkUserIds(1126).t.QJKKrT);

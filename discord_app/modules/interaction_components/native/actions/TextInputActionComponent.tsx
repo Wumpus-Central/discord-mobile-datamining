@@ -3,12 +3,12 @@ import c from "../../../../../_runtime/00576_c.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const Server = Input(1985);
-const TextField2 = Input(6107);
-const Input2 = Input(6430);
-const TextAreaField2 = Input(6588);
-const ComponentStateContext = Input(7806);
-const InteractionModalUtils = Input(17565);
+const Server = Input(1997);
+const Input2 = Input(6284);
+const TextField2 = Input(6287);
+const TextAreaField2 = Input(6764);
+const ComponentStateContext = Input(8225);
+const InteractionModalUtils = Input(17847);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/interaction_components/native
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (type) => {
+    ? function TextInputActionComponent(type) {
         let Input = require;
         let tmp = dependencyMap;
         const cResult = c.c(26);
@@ -68,7 +68,7 @@ export default noop.memo(
                               }
                               cResult[17] = tmp13;
                               cResult[18] = tmp26;
-                              class S {
+                              class A {
                                 constructor() {
                                   iter = state;
                                   type = undefined;
@@ -94,7 +94,7 @@ export default noop.memo(
                                 }
                                 cResult[19] = tmp13;
                                 cResult[20] = tmp20;
-                                class S {
+                                class A {
                                   constructor() {
                                     iter = state;
                                     type = undefined;
@@ -134,7 +134,7 @@ export default noop.memo(
                                 </Input>
                               );
                               cResult[21] = tmp14;
-                              class S {
+                              class A {
                                 constructor() {
                                   iter = state;
                                   type = undefined;
@@ -174,7 +174,7 @@ export default noop.memo(
                 obj5.status = str;
                 obj5.defaultValue = first;
                 obj5.onChange = tmp11;
-                class S {
+                class A {
                   constructor() {
                     iter = state;
                     type = undefined;
@@ -201,7 +201,7 @@ export default noop.memo(
               }
               cResult[7] = executeStateUpdate;
               cResult[8] = type;
-              class S {
+              class A {
                 constructor() {
                   iter = state;
                   type = undefined;
@@ -215,7 +215,7 @@ export default noop.memo(
               tmp11 = F;
             }
           }
-          class S {
+          class A {
             constructor() {
               iter = state;
               type = undefined;
@@ -228,8 +228,8 @@ export default noop.memo(
           cResult[3] = value;
           cResult[4] = state;
           cResult[5] = type;
-          cResult[6] = S;
-          tmp7 = S;
+          cResult[6] = A;
+          tmp7 = A;
           const InputResult1 = InteractionModalUtils;
         }
         let tmp4;
@@ -242,7 +242,7 @@ export default noop.memo(
         cResult[2] = tmp4;
         tmp3 = tmp4;
       }
-    : (type) => {
+    : function TextInputActionComponent(type) {
         type = type.type;
         ({ style, label, value } = type);
         dependencyMap = value;

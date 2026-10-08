@@ -13,14 +13,14 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ image: { width: 300, height: 200, alignSelf: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activate_device/native/ActivateDeviceSuccess.tsx");
 
 export const ActivateDeviceSuccess = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActivateDeviceSuccess(arg0) {
       const cResult = c.c(17);
       ({ data, onComplete, successImage } = arg0);
       const tmp4 = closure_7();
@@ -148,7 +148,7 @@ export const ActivateDeviceSuccess = ReactCompilerGating.isReactCompilerEnabled(
         tmp13 = tmp14;
       }
     }
-  : (onComplete) => {
+  : function ActivateDeviceSuccess(onComplete) {
       ({ data, successImage } = onComplete);
       if (null != data.twoWayLinkCode) {
         const intl2 = util.intl;

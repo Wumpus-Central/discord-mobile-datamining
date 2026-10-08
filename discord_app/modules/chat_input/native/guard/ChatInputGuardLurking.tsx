@@ -12,7 +12,7 @@ import LurkingStore from "../../../lurker_mode/LurkingStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const TextAreaCta = fn(11589).TextAreaCta;
+const TextAreaCta = fn(11652).TextAreaCta;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, JoinGuildSources: closure_9 } = Constants);
 const jsx = fn(21).jsx;
@@ -22,7 +22,7 @@ let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInp
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function ChatInputGuardLurking(channel) {
         const cResult = channel(576).c(29);
         channel = channel.channel;
         if (cResult[0] !== channel) {
@@ -78,7 +78,7 @@ export default noop.memo(
         const stateFromStoresObject = channel(504).useStateFromStoresObject(tmp6, T, tmp9);
         ({ isLurking, lurkingSource } = stateFromStoresObject);
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          class G {
+          class L {
             constructor() {
               obj = channel(closure_1_3[9]);
               history = obj.getHistory();
@@ -86,9 +86,9 @@ export default noop.memo(
               return;
             }
           }
-          cResult[6] = G;
+          cResult[6] = L;
         } else {
-          class G {
+          class L {
             constructor() {
               obj = channel(closure_1_3[9]);
               history = obj.getHistory();
@@ -98,7 +98,7 @@ export default noop.memo(
           }
         }
         if (cResult[7] === channel.id) {
-          class G {
+          class L {
             constructor() {
               obj = channel(closure_1_3[9]);
               history = obj.getHistory();
@@ -107,7 +107,7 @@ export default noop.memo(
             }
           }
           if (cResult[10] !== tmp4) {
-            class I {
+            class R {
               constructor() {
                 tmp = closure_1;
                 if (null != closure_1) {
@@ -154,9 +154,9 @@ export default noop.memo(
               }
             }
             cResult[10] = tmp4;
-            cResult[11] = I;
+            cResult[11] = R;
           } else {
-            class I {
+            class R {
               constructor() {
                 tmp = closure_1;
                 if (null != closure_1) {
@@ -204,7 +204,7 @@ export default noop.memo(
             }
           }
           if (lurkingSource != null) {
-            class I {
+            class R {
               constructor() {
                 tmp = closure_1;
                 if (null != closure_1) {
@@ -252,7 +252,7 @@ export default noop.memo(
             }
           }
           if (undefined === constants2.DIRECTORY_ENTRY) {
-            class I {
+            class R {
               constructor() {
                 tmp = closure_1;
                 if (null != closure_1) {
@@ -299,7 +299,7 @@ export default noop.memo(
               }
             }
             if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-              class I {
+              class R {
                 constructor() {
                   tmp = closure_1;
                   if (null != closure_1) {
@@ -353,7 +353,7 @@ export default noop.memo(
               let tmp17 = stringResult1;
               const tmp16 = stringResult;
             } else {
-              class I {
+              class R {
                 constructor() {
                   tmp = closure_1;
                   if (null != closure_1) {
@@ -403,7 +403,7 @@ export default noop.memo(
             }
             const _Symbol = Symbol;
             if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-              class I {
+              class R {
                 constructor() {
                   tmp = closure_1;
                   if (null != closure_1) {
@@ -453,7 +453,7 @@ export default noop.memo(
               cResult[14] = stringResult2;
               const tmp20 = stringResult2;
             } else {
-              class I {
+              class R {
                 constructor() {
                   tmp = closure_1;
                   if (null != closure_1) {
@@ -500,8 +500,8 @@ export default noop.memo(
                 }
               }
             }
-            if (cResult[15] !== I) {
-              class I {
+            if (cResult[15] !== R) {
+              class R {
                 constructor() {
                   tmp = closure_1;
                   if (null != closure_1) {
@@ -551,23 +551,23 @@ export default noop.memo(
                 type: "button-action",
                 message: tmp16,
                 buttonSecondaryText: tmp17,
-                buttonSecondaryOnPress: G,
+                buttonSecondaryOnPress: L,
                 buttonPrimaryText: tmp20,
-                buttonPrimaryOnPress: I,
+                buttonPrimaryOnPress: R,
               };
               const tmp24 = jsx(ChatInputGuardDefault, {
                 type: "button-action",
                 message: tmp16,
                 buttonSecondaryText: tmp17,
-                buttonSecondaryOnPress: G,
+                buttonSecondaryOnPress: L,
                 buttonPrimaryText: tmp20,
-                buttonPrimaryOnPress: I,
+                buttonPrimaryOnPress: R,
               });
-              cResult[15] = I;
+              cResult[15] = R;
               cResult[16] = tmp24;
               const tmp22 = tmp24;
             } else {
-              class I {
+              class R {
                 constructor() {
                   tmp = closure_1;
                   if (null != closure_1) {
@@ -616,7 +616,7 @@ export default noop.memo(
             }
             return tmp22;
           } else {
-            class I {
+            class R {
               constructor() {
                 tmp = closure_1;
                 if (null != closure_1) {
@@ -688,7 +688,7 @@ export default noop.memo(
         cResult[9] = E;
         const tmpResult = channel(504);
       }
-    : (channel) => {
+    : function ChatInputGuardLurking(channel) {
         channel = channel.channel;
         let guildId = channel.getGuildId();
         const items = [LurkingStore];
@@ -764,7 +764,7 @@ export default noop.memo(
           const intl8 = tmp2(1126).intl;
           obj2.buttonPrimaryText = intl8.string(tmp2(1126).t.RLch70);
           obj2.buttonPrimaryOnPress = callback2;
-          let tmp15Result = jsx(guildId(12105), {
+          let tmp15Result = jsx(guildId(12183), {
             type: "button-action",
             message: null,
             buttonSecondaryText: null,
@@ -772,7 +772,7 @@ export default noop.memo(
             buttonPrimaryText: null,
             buttonPrimaryOnPress: null,
           });
-          const tmp14 = guildId(12105);
+          const tmp14 = guildId(12183);
         } else {
           if (channel.isReadonlyAnnouncementsChannel) {
             let obj3 = {
@@ -808,8 +808,8 @@ export default noop.memo(
             obj4.buttonPrimaryText = intl2.string(tmp2(1126).t.RLch70);
             obj4.buttonPrimaryOnPress = callback2;
           }
-          tmp15Result = jsx(guildId(12105), obj4);
-          const tmp17 = guildId(12105);
+          tmp15Result = jsx(guildId(12183), obj4);
+          const tmp17 = guildId(12183);
         }
         return tmp15Result;
       },

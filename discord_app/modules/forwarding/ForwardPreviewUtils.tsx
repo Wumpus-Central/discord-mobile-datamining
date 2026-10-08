@@ -8,7 +8,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");
 
 export const useForwardPreviewContent = ReactCompilerGating.isReactCompilerEnabled()
-  ? (message) => {
+  ? function useForwardPreviewContent(message) {
       const cResult = message(channel[2]).c(20);
       message = message.message;
       channel = message.channel;
@@ -170,7 +170,7 @@ export const useForwardPreviewContent = ReactCompilerGating.isReactCompilerEnabl
           }
           tmpResult = tmp(tmp2[4]);
         }
-        const fn2 = function v() {
+        const fn2 = function w() {
           let shouldStripEmbedsResult = null != channel;
           if (shouldStripEmbedsResult) {
             shouldStripEmbedsResult = !EmbedUtils.canEmbedLinks(tmp, PermissionStore);
@@ -189,7 +189,7 @@ export const useForwardPreviewContent = ReactCompilerGating.isReactCompilerEnabl
       tmp = message;
       tmp2 = channel;
     }
-  : (message) => {
+  : function useForwardPreviewContent(message) {
       message = message.message;
       ({ channel: dependencyMap, forwardOptions } = message);
       let onlyEmbedIndices;

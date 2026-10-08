@@ -9,7 +9,7 @@ import PromotionsStore from "../../promotions/PromotionsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const Constants = fn(1085);
 ({
   AnalyticsSections: hasOwnProperty,
@@ -88,7 +88,7 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
         analyticsLocations,
         premiumType: onPaymentDismiss.TIER_2,
         onPaymentSuccess,
-        onPaymentDismiss(arg0) {
+        onPaymentDismiss: function handlePaymentDismiss(arg0) {
           ({ productId, isSuccess } = arg0);
           if (onPaymentDismiss != null) {
             const obj = { productId, isSuccess };

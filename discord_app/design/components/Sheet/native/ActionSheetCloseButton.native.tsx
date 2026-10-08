@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetCloseButton.native.tsx");
 
 export const ActionSheetCloseButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPress) => {
+  ? function ActionSheetCloseButton(onPress) {
       const cResult = c.c(6);
       onPress = onPress.onPress;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -67,7 +67,7 @@ export const ActionSheetCloseButton = ReactCompilerGating.isReactCompilerEnabled
         children: tmp8,
       };
     }
-  : (arg0) => {
+  : function ActionSheetCloseButton(arg0) {
       ({ onPress, variant } = arg0);
       const obj = {
         accessibilityRole: "button",

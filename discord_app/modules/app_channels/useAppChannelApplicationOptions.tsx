@@ -1,8 +1,8 @@
 // discord_app/modules/app_channels/useAppChannelApplicationOptions.tsx
 import c from "../../../_runtime/00576_c.js";
 import ApplicationActionCreators from "../applications/ApplicationActionCreators.tsx";
-import EmbeddedSurfaceType from "../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import useGuildEmbeddedApplications from "../applications/useGuildEmbeddedApplications.tsx";
+import EmbeddedSurfaceType from "../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -24,7 +24,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/useAppChannelApplicationOptions.tsx");
 
 export const useAppChannelApplicationOptions = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2, arg3) => {
+  ? function useAppChannelApplicationOptions(arg0, arg1, arg2, arg3) {
       const cResult = c.c(8);
       const tmp4 = undefined !== arg3 && arg3;
       let tmp5;
@@ -86,7 +86,7 @@ export const useAppChannelApplicationOptions = ReactCompilerGating.isReactCompil
       tmp9 = sorted;
       tmp10 = null == data2 || items1.some((application) => application.application.id === data2.id);
     }
-  : (arg0, arg1, arg2) => {
+  : function useAppChannelApplicationOptions(arg0, arg1, arg2) {
       let flag = arg3;
       if (arg3 === undefined) {
         flag = false;

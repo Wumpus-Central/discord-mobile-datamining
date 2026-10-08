@@ -2,8 +2,8 @@
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod4799 from "../../../../../../../_runtime/metro/04799__.js";
-import _mod4800 from "../../../../../../../_runtime/metro/04800__.js";
+import _mod4993 from "../../../../../../../_runtime/metro/04993__.js";
+import _mod4994 from "../../../../../../../_runtime/metro/04994__.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx");
 
 export const CircleCheckIcon = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CircleCheckIcon(arg0) {
       const cResult = c.c(21);
       if (cResult[0] !== arg0) {
         ({ style, secondaryColor, color } = arg0);
@@ -45,7 +45,7 @@ export const CircleCheckIcon = ReactCompilerGating.isReactCompilerEnabled()
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod4799;
+        const tmpResult = _mod4993;
         cResult[5] = tmpResult;
         let tmp11 = tmpResult;
       } else {
@@ -58,7 +58,7 @@ export const CircleCheckIcon = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmpResult2 = _mod4800;
+            const tmpResult2 = _mod4994;
             cResult[10] = tmpResult2;
             let tmp16 = tmpResult2;
           } else {
@@ -120,7 +120,7 @@ export const CircleCheckIcon = ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = tmp15;
       const obj5 = { source: tmp11, color: str, style: tmp5 };
     }
-  : (color) => {
+  : function CircleCheckIcon(color) {
       ({ style, secondaryColor } = color);
       if (secondaryColor === undefined) {
         secondaryColor = "transparent";
@@ -133,9 +133,9 @@ export const CircleCheckIcon = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { children: null };
       const merged1 = Object.assign(merged);
       const items = [
-        timestampProducer(BaseIconImage.BaseIconImage, { source: _mod4799, color: secondaryColor, style }),
+        timestampProducer(BaseIconImage.BaseIconImage, { source: _mod4993, color: secondaryColor, style }),
       ];
-      const obj3 = { source: _mod4800, color: INTERACTIVE_ICON_DEFAULT, style: null };
+      const obj3 = { source: _mod4994, color: INTERACTIVE_ICON_DEFAULT, style: null };
       const items1 = [style];
       const items2 = [];
       items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

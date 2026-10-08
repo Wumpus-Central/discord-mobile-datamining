@@ -13,11 +13,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useConnectGuardianGate.tsx");
 
 export const useConnectGuardianGate = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useConnectGuardianGate() {
       const cResult = require("c").c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FamilyCenterStore];
-        const fn = function s() {
+        const fn = function l() {
           return { linkCode: FamilyCenterStore.getLinkCode(), expiresAt: FamilyCenterStore.getLinkCodeExpiresAt() };
         };
         cResult[0] = items;
@@ -250,7 +250,7 @@ export const useConnectGuardianGate = ReactCompilerGating.isReactCompilerEnabled
       }
       const tmp8Result = _slicedToArray(noop.useState(tmp10), 2);
     }
-  : () => {
+  : function useConnectGuardianGate() {
       const items = [FamilyCenterStore];
       const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({
         linkCode: FamilyCenterStore.getLinkCode(),

@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import client_themes_ClientThemesUtils from "../../client_themes/native/ClientThemesUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ChatInputScrimGradient(arg0) {
       const cResult = c.c(23);
       ({ gradientHeight, inline, scrimBase } = arg0);
       const tmp4 = undefined !== inline && inline;
@@ -145,7 +145,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = items2;
       tmpResult6 = useToken;
     }
-  : (scrimBase) => {
+  : function ChatInputScrimGradient(scrimBase) {
       ({ gradientHeight, inline } = scrimBase);
       if (inline === undefined) {
         inline = false;
@@ -205,7 +205,7 @@ let result = size.fileFinishedImporting("modules/chat_input/native/ChatInputScri
 
 export const ChatInputScrimGradient = tmp4;
 export const useChatInputFloatingOverlayStyle = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useChatInputFloatingOverlayStyle() {
       const cResult = c.c(2);
       const result = -useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT) / 2;
       if (cResult[0] !== result) {
@@ -218,7 +218,7 @@ export const useChatInputFloatingOverlayStyle = ReactCompilerGating.isReactCompi
       }
       return tmp3;
     }
-  : () => {
+  : function useChatInputFloatingOverlayStyle() {
       const obj = {
         marginTop: -useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT) / 2,
         overflow: "visible",

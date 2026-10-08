@@ -3,13 +3,13 @@ import c from "../../../../../_runtime/00576_c.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const UserProfileAnalyticsTypes = fn(7865).UserProfileAnalyticsTypes;
+const UserProfileAnalyticsTypes = fn(8283).UserProfileAnalyticsTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (profileEffectSkuId) => {
+  ? function useUserProfileAnalyticsProperties(profileEffectSkuId) {
       const cResult = c.c(27);
       ({ userId, user, channelId, guildId, displayProfile, guildMember, type } = profileEffectSkuId);
       if (type == null) {
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = obj4;
       tmp14 = obj4;
     }
-  : (userId) => {
+  : function useUserProfileAnalyticsProperties(userId) {
       userId = userId.userId;
       const user = userId.user;
       const channelId = userId.channelId;

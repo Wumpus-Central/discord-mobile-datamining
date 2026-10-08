@@ -2,7 +2,7 @@
 import c from "../../../_runtime/00576_c.js";
 import Constants from "../../Constants.tsx";
 import ChannelConstants from "../channel/ChannelConstants.tsx";
-import _mod4716 from "../../../_runtime/metro/04716__.js";
+import _mod4910 from "../../../_runtime/metro/04910__.js";
 import RouteUtils from "../routing/RouteUtils.tsx";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -12,7 +12,7 @@ const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useIsViewingPremiumMemberships.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsViewingPremiumMemberships() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const RouteParam = RouteUtils.RouteParam;
@@ -22,11 +22,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return null != _mod4716.useRouteMatch(first);
+      return null != _mod4910.useRouteMatch(first);
     }
-  : () => {
+  : function useIsViewingPremiumMemberships() {
       const RouteParam = RouteUtils.RouteParam;
       return (
-        null != _mod4716.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS))
+        null != _mod4910.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS))
       );
     };

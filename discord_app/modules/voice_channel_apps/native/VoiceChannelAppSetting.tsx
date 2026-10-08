@@ -1,6 +1,6 @@
 // discord_app/modules/voice_channel_apps/native/VoiceChannelAppSetting.tsx
 import c from "../../../../_runtime/00576_c.js";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useVoiceChannelApp from "../useVoiceChannelApp.tsx";
 import VoiceChannelAppActionSheet from "VoiceChannelAppActionSheet.tsx";
@@ -43,10 +43,10 @@ function VoiceChannelAppRow(guildId) {
     tmp8Result = jsx(tmp5(tmp3[10]), { application: found.iconApplication });
   }
   obj3.icon = tmp8Result;
-  obj3.onPress = function onPress() {
+  obj3.onPress = function handlePress() {
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(17021, dependencyMap.paths),
+      asyncRequireImpl(17302, dependencyMap.paths),
       VoiceChannelAppActionSheet.VOICE_CHANNEL_APP_ACTION_SHEET_KEY,
       { guildId, selectedApplicationId: application_id, onChange },
     );
@@ -71,7 +71,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_channel_apps/native/VoiceChannelAppSetting.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VoiceChannelAppSetting(arg0) {
       const cResult = c.c(4);
       ({ channel, guildId, onChange } = arg0);
       if (!obj2.useCanConfigureVoiceChannelApp(channel)) {
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2 = useVoiceChannelApp;
     }
-  : (channel) => {
+  : function VoiceChannelAppSetting(channel) {
       channel = channel.channel;
       ({ guildId, onChange } = channel);
       let tmp = null;

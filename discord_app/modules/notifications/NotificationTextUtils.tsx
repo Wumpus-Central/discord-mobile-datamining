@@ -10,16 +10,16 @@ import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import RootNavigationRef from "../main_tabs_v2/RootNavigationRef.native.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
-import AgeGateUtils from "../age_gate/AgeGateUtils.tsx";
 import isMessageMentioned from "../messages/isMessageMentioned.tsx";
+import AgeGateUtils from "../age_gate/AgeGateUtils.tsx";
+import isChannelFocused from "../panels/isChannelFocused.native.tsx";
 import isSystemMessageDefault from "../messages/isSystemMessage.tsx";
+import ThreadNotificationSettings from "../threads/ThreadNotificationSettings.tsx";
 import isForwardMessage from "../forwarding/isForwardMessage.tsx";
 import MessageParserDefault from "../messages/MessageParser.tsx";
 import IsolateString from "../bidi/IsolateString.tsx";
 import SystemMessageUtilsDefault from "../../utils/SystemMessageUtils.tsx";
 import getDisplayFilenameDefault from "../messages/getDisplayFilename.tsx";
-import ThreadNotificationSettings from "../threads/ThreadNotificationSettings.tsx";
-import isChannelFocused from "../panels/isChannelFocused.native.tsx";
 import ChannelVisibilityUtils from "../channel/ChannelVisibilityUtils.tsx";
 import FocusModeUtils from "FocusModeUtils.tsx";
 import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
@@ -162,7 +162,7 @@ function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
     return _TD0la;
   }
 }
-const ChannelRecord = fn(2055);
+const ChannelRecord = fn(2067);
 ({ GUILD_VOCAL_CHANNEL_TYPES: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
 const Constants = fn(1085);
 ({
@@ -174,7 +174,7 @@ const Constants = fn(1085);
   StatusTypes: closure_26,
   UserFlags: closure_27,
 } = Constants);
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
 const ThreadMemberFlags = fn(1125).ThreadMemberFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -711,7 +711,7 @@ export const allowInAppNotifications = function allowInAppNotifications() {
   }
 };
 export const useAllowInAppNotifications = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAllowInAppNotifications() {
       const cResult = c.c(2);
       const ShowInAppNotifications = UserSettings.ShowInAppNotifications;
       const setting = ShowInAppNotifications.useSetting();
@@ -738,7 +738,7 @@ export const useAllowInAppNotifications = ReactCompilerGating.isReactCompilerEna
       }
       return tmp10;
     }
-  : () => {
+  : function useAllowInAppNotifications() {
       const ShowInAppNotifications = UserSettings.ShowInAppNotifications;
       const setting = ShowInAppNotifications.useSetting();
       const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();

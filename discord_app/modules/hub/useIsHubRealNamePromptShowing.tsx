@@ -10,13 +10,13 @@ const require = globalThis.__r;
 
 const require = fn;
 const GuildFeatures = fn(1085).GuildFeatures;
-const GuildPrompts = fn(12461).GuildPrompts;
+const GuildPrompts = fn(12557).GuildPrompts;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsHubRealNamePromptShowing(arg0) {
       _require = arg0;
       const cResult = require("c").c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const effect = noop.useEffect(tmp11, tmp12);
         return true === stateFromStores;
       }
-      class E {
+      class R {
         constructor() {
           tmp2 = null != closure_0;
           tmp = closure_0;
@@ -96,13 +96,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [stateFromStores, arg0];
       cResult[3] = arg0;
       cResult[4] = stateFromStores;
-      cResult[5] = E;
+      cResult[5] = R;
       cResult[6] = items1;
       tmp12 = items1;
-      tmp11 = E;
+      tmp11 = R;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useIsHubRealNamePromptShowing(arg0) {
       _require = arg0;
       const items = [GuildStore, GuildPromptsStore, UserStore, GuildMemberStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => {

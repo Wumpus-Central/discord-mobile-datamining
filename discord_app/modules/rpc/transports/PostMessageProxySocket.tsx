@@ -8,7 +8,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const RPCCloseCodes = Constants.RPCCloseCodes;
 class WindowProxySocket extends tmp2 {
   constructor(arg0) {
-    ({ postMessageToRPCClient, encoding, logger } = global);
+    ({ context, postMessageToRPCClient, encoding, logger } = global);
     ({ postClose, onSendingToRPCClient } = global);
     tmp3 = new WindowProxySocket(
       global.source,
@@ -18,6 +18,7 @@ class WindowProxySocket extends tmp2 {
       tmp,
       new.target,
       new.target,
+      context,
       postMessageToRPCClient,
       logger,
     );
@@ -55,6 +56,7 @@ class WindowProxySocket extends tmp2 {
         throw tmp11;
       } else {
         tmp4 = tmp3;
+        tmp3.context = context;
         tmp3.postMessageToRPCClient = postMessageToRPCClient;
         tmp3.logger = logger;
         tmp3.postClose = postClose;

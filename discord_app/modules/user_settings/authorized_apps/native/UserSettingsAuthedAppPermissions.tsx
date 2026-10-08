@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   container: { paddingHorizontal: 16, paddingVertical: 24 },
   permissionContainer: { flexDirection: "row", marginTop: 8 },
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (oauth2Token) => {
+  ? function UserSettingsAuthedAppPermissions(oauth2Token) {
       const cResult = require("c").c(12);
       oauth2Token = oauth2Token.oauth2Token;
       const tmp2 = closure_7();
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn = function s() {
+      function renderPermissions() {
         let items = [];
         const iter = scopes[Symbol.iterator]();
         const nextResult = iter.next();
@@ -131,18 +131,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         children[3] = mapped;
         return closure_1_6(closure_1_4, { children });
-      };
+      }
       cResult[0] = application;
       cResult[1] = disclosures;
       cResult[2] = scopes;
       cResult[3] = tmp2.permissionContainer;
       cResult[4] = tmp2.permissionIcon;
       cResult[5] = tmp2.permissionText;
-      cResult[6] = fn;
-      tmp3 = fn;
+      cResult[6] = renderPermissions;
+      tmp3 = renderPermissions;
       let obj = require("c");
     }
-  : (oauth2Token) => {
+  : function UserSettingsAuthedAppPermissions(oauth2Token) {
       c1 = undefined;
       c2 = undefined;
       c3 = undefined;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ application: c1, scopes: c2, disclosures: c3 } = oauth2Token.oauth2Token);
       return closure_5(c3, {
         contentContainerStyle: tmp.container,
-        children: (() => {
+        children: (function renderPermissions() {
           let items = [];
           const iter = _undefined2[Symbol.iterator]();
           const nextResult = iter.next();
@@ -183,12 +183,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children[2] = items.map((children, index) => {
             const obj = { style: items.permissionContainer, children: null };
             items = [,];
-            items[0] = closure_2_5(items(4798).CircleCheckIcon, {
+            items[0] = closure_2_5(items(4992).CircleCheckIcon, {
               style: items.permissionIcon,
               size: "xs",
               color: c1(587).colors.STATUS_POSITIVE,
             });
-            items[1] = closure_2_5(items(4892).Text, {
+            items[1] = closure_2_5(items(5086).Text, {
               style: items.permissionText,
               variant: "text-sm/normal",
               color: "text-default",

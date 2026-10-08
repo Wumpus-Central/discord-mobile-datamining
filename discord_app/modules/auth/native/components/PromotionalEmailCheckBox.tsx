@@ -6,11 +6,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
-const PromoEmailConsentStore = fn(6090);
+const PromoEmailConsentStore = fn(5937);
 ({ usePromoEmailConsentStore: closure_4, setPromoEmailConsentChecked: hasOwnProperty } = PromoEmailConsentStore);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({
   checkboxRow: { flexDirection: "row", alignItems: "flex-start", gap: 8 },
   checkboxLabel: { flex: 1 },
@@ -20,7 +20,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/PromotionalEmailCheckBox.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PromotionalEmailCheckBox(arg0) {
       const cResult = require("c").c(22);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { checked: tmp6Result };
-          const tmp16 = closure_6(tmp(5998).FormCheckbox, obj2);
+          const tmp16 = closure_6(tmp(6182).FormCheckbox, obj2);
           cResult[6] = tmp6Result;
           cResult[7] = tmp16;
         } else {
@@ -141,14 +141,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: tmp4.checkboxLabel,
           children: promoEmailOptInLabel,
         };
-        const tmp19 = closure_6(tmp(4892).Text, obj4);
+        const tmp19 = closure_6(tmp(5086).Text, obj4);
         cResult[8] = promoEmailOptInLabel;
         cResult[9] = tmp4.checkboxLabel;
         cResult[10] = tmp19;
       }
       const tmpResult2 = require("usePromoEmailOptInLabel");
     }
-  : (style) => {
+  : function PromotionalEmailCheckBox(style) {
       const tmp = closure_8();
       const tmp3 = closure_4((checked) => checked.checked);
       _require = tmp3;
@@ -174,14 +174,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: null,
         };
         const obj5 = { checked: tmp3 };
-        const items = [closure_6(tmp4(5998).FormCheckbox, obj5)];
+        const items = [closure_6(tmp4(6182).FormCheckbox, obj5)];
         const obj6 = {
           variant: "text-xs/medium",
           color: "text-muted",
           style: tmp.checkboxLabel,
           children: promoEmailOptInLabel,
         };
-        items[1] = closure_6(tmp4(4892).Text, obj6);
+        items[1] = closure_6(tmp4(5086).Text, obj6);
         obj4.children = items;
         obj3.children = closure_7(closure_3, obj4);
         tmp8 = closure_6(closure_2, obj3);

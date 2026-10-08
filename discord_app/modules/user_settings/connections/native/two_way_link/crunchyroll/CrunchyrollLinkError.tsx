@@ -7,7 +7,7 @@ import TwoWayLinkError from "../TwoWayLinkError.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const constants = fn(8809).CrunchyrollLinkModalScenes;
+const constants = fn(9167).CrunchyrollLinkModalScenes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onClose) => {
+  ? function CrunchyrollLinkDiscordError(onClose) {
       const cResult = c.c(5);
       onClose = onClose.onClose;
       const navigation = useNavigation.useNavigation();
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp11;
       tmp10 = tmp11;
     }
-  : (onClose) => {
+  : function CrunchyrollLinkDiscordError(onClose) {
       const navigation = useNavigation.useNavigation();
       const connectRetry = useConnectRetry.useConnectRetry(navigation, constants.PRE_CONNECT);
       const obj3 = { title: null, body: null, onClose: null, onRetry: null };

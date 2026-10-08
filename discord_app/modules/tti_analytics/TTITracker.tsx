@@ -1007,18 +1007,20 @@ prototype5["setInterstitial"] = function setInterstitial(setInterstitialResult2)
   loggerCallback();
 };
 prototype5["addLocalMessages"] = function addLocalMessages(arg0, length) {
-  let size;
   const self = this;
   const cachedChannelCounts = this.cachedChannelCounts;
   const result = cachedChannelCounts.set(arg0, length);
   if (this.cachedChannelCounts.size > 100) {
-    do {
-      let cachedChannelCounts2 = self.cachedChannelCounts;
-      let iter = cachedChannelCounts2.keys();
+    const cachedChannelCounts2 = self.cachedChannelCounts;
+    const iter2 = cachedChannelCounts2.keys().next();
+    while (!iter2.done) {
       let cachedChannelCounts3 = self.cachedChannelCounts;
-      let deleteResult = cachedChannelCounts3.delete(iter.next().value);
-      size = self.cachedChannelCounts.size;
-    } while (size > 100);
+      let deleteResult = cachedChannelCounts3.delete(iter2.value);
+      if (self.cachedChannelCounts.size <= 100) {
+        break;
+      }
+    }
+    const iter = cachedChannelCounts2.keys();
   }
 };
 prototype5["attachReadyPayloadProperties"] = function attachReadyPayloadProperties(readyProperties) {
@@ -1501,7 +1503,7 @@ prototype5["serializeTTITracker"] = function serializeTTITracker(appFirstVisible
   return obj;
 };
 const tTITracker = new TTITracker();
-let size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/tti_analytics/TTITracker.tsx");
 
 export default tTITracker;

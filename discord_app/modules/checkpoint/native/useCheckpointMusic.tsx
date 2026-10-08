@@ -10,11 +10,11 @@ const AppState = _mod17.AppState;
 const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointMusic.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCheckpointMusic() {
       const cResult = stateFromStores(576).c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [CheckpointStore];
-        const fn = function l() {
+        const fn = function s() {
           return CheckpointStore.isMuted;
         };
         cResult[0] = items;
@@ -30,11 +30,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function v() {
           let num = 1;
-          const obj = stateFromStores(9575);
+          const obj = stateFromStores(10770);
           if (CheckpointStore.isMuted) {
             num = 0;
           }
-          const sound = obj.createSound(ref(15548), "vibing_wumpus", num);
+          const sound = obj.createSound(ref(15810), "vibing_wumpus", num);
           ref.current = sound;
           sound.loop();
           ref = AppState.addEventListener("change", (event) => {
@@ -83,17 +83,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_3(tmp12, tmp13);
       const tmpResult = stateFromStores(504);
     }
-  : () => {
+  : function useCheckpointMusic() {
       const items = [CheckpointStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () => CheckpointStore.isMuted);
       closure_4(null);
       closure_3(() => {
         let num = 1;
-        const obj = stateFromStores(9575);
+        const obj = stateFromStores(10770);
         if (CheckpointStore.isMuted) {
           num = 0;
         }
-        const sound = obj.createSound(ref(15548), "vibing_wumpus", num);
+        const sound = obj.createSound(ref(15810), "vibing_wumpus", num);
         ref.current = sound;
         sound.loop();
         ref = AppState.addEventListener("change", (event) => {

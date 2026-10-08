@@ -7,9 +7,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const SpoilerRenderSetting = fn(1085).SpoilerRenderSetting;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShowSpoilersOptions() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { label: null, value: null };
@@ -34,8 +34,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      noop.useMemo(() => {
+  : function useShowSpoilersOptions() {
+      return noop.useMemo(() => {
         const obj = { label: null, value: null };
         const intl = util.intl;
         obj.label = intl.string(util.t["KFH/me"]);
@@ -53,19 +53,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items[2] = obj3;
         return items;
       }, []);
+    };
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.QgwmVz);
   },
-  parent: fn(7645).MobileUserSettings.CHAT,
-  useValue: fn(2028).RenderSpoilers.useSetting,
+  parent: fn(7966).MobileUserSettings.CHAT,
+  useValue: fn(2040).RenderSpoilers.useSetting,
   onValueChange: function onShowSpoilersChange(arg0) {
     const RenderSpoilers = UserSettings.RenderSpoilers;
     RenderSpoilers.updateSetting(arg0);
   },
   useOptions: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useShowSpoilersOptions() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { label: null, value: null };
@@ -90,8 +91,8 @@ const radio = SettingBuilders.createRadio({
         }
         return first;
       }
-    : () =>
-        noop.useMemo(() => {
+    : function useShowSpoilersOptions() {
+        return noop.useMemo(() => {
           const obj = { label: null, value: null };
           const intl = util.intl;
           obj.label = intl.string(util.t["KFH/me"]);
@@ -108,7 +109,8 @@ const radio = SettingBuilders.createRadio({
           obj3.value = constants.IF_MODERATOR;
           items[2] = obj3;
           return items;
-        }, []),
+        }, []);
+      },
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ShowSpoilersSetting.tsx");

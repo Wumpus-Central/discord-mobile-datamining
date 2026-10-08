@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/useFastestListUnexpectedItemSizeCallback.android.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFastestListUnexpectedItemSizeCallback(arg0) {
       _require = arg0;
       const cResult = require("c").c(2);
       if (cResult[0] !== arg0) {
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp2;
     }
-  : (arg0) => {
+  : function useFastestListUnexpectedItemSizeCallback(arg0) {
       const items = [arg0];
       return noop.useCallback((nativeEvent) => {
         nativeEvent = nativeEvent.nativeEvent;

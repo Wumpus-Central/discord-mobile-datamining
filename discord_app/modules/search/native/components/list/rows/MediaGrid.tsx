@@ -5,14 +5,14 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(7524);
+const SearchConstants = fn(9247);
 ({
   SEARCH_LIST_HORIZONTAL_PADDING,
   MEDIA_NUM_COLUMNS: hasOwnProperty,
   MEDIA_ITEM_GAP_WIDTH: metroRequire,
 } = SearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { paddingLeft: SEARCH_LIST_HORIZONTAL_PADDING - 2, paddingRight: SEARCH_LIST_HORIZONTAL_PADDING + 4 },
 };
@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/MediaGrid.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (media) => {
+  ? function MediaGrid(media) {
       const cResult = media(onPress[6]).c(11);
       media = media.media;
       const mediaSize = media.mediaSize;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       let obj = media(onPress[6]);
     }
-  : (media) => {
+  : function MediaGrid(media) {
       media = media.media;
       const mediaSize = media.mediaSize;
       const onPress = media.onPress;

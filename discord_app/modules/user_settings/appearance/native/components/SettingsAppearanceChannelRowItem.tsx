@@ -11,7 +11,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1085).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   channelItemContainer: {
     flexDirection: "row",
@@ -53,14 +53,14 @@ obj2.channelItemTop = {
   alignItems: "center",
 };
 let closure_6 = createStyles.createStyles(obj2);
-let obj6 = { direction: fn(1188).CutoutDirection.BOTTOM_RIGHT, radius: null, imageType: null, inset: -4 };
-const native = fn(1188);
-let num = native.getStatusSize(fn(1188).AvatarSizes.LARGE_48);
+let obj6 = { direction: fn(1200).CutoutDirection.BOTTOM_RIGHT, radius: null, imageType: null, inset: -4 };
+const native = fn(1200);
+let num = native.getStatusSize(fn(1200).AvatarSizes.LARGE_48);
 if (num == null) {
   num = 0;
 }
 obj6.radius = num / 2 + 4;
-obj6.imageType = fn(1188).CutoutType.CIRCULAR;
+obj6.imageType = fn(1200).CutoutType.CIRCULAR;
 const ReactCompilerGating = fn(558);
 let obj5 = {
   flexDirection: "row",
@@ -74,7 +74,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ChannelRowItem(arg0) {
       const cResult = c.c(39);
       ({ animatedStyles, title, timestamp, preview, avatar1, avatar2, status, isUnread } = arg0);
       if (undefined === status) {
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp9;
       tmp8 = tmp9;
     }
-  : (isUnread) => {
+  : function ChannelRowItem(isUnread) {
       ({ animatedStyles, preview, avatar1, avatar2, status } = isUnread);
       ({ title, timestamp } = isUnread);
       if (status === undefined) {
@@ -299,13 +299,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6 = { style: tmp2.channelItemContent, children: null };
       const obj7 = { style: tmp2.channelItemTop, children: null };
       const items3 = [
-        React4(tmp6(4892).Text, {
+        React4(tmp6(5086).Text, {
           animated: true,
           style: flag ? animatedStyles.textNormal : animatedStyles.textMuted,
           variant: "redesign/channel-title/semibold",
           children: title,
         }),
-        React4(tmp6(4892).Text, {
+        React4(tmp6(5086).Text, {
           animated: true,
           style: animatedStyles.textMuted,
           variant: "text-xs/medium",
@@ -330,7 +330,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         animatedStyles.style = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
         animatedStyles.children = preview;
-        React4(tmp6(4892).Text, animatedStyles);
+        React4(tmp6(5086).Text, animatedStyles);
         const tmp12 = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
       }
       const obj8 = {

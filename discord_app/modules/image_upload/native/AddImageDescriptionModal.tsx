@@ -9,10 +9,10 @@ import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(7044).DraftType;
+const DraftType = fn(7232).DraftType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   imageContainer: null,
@@ -28,7 +28,7 @@ obj2.placeholderText = { color: nativeDefault.colors.TEXT_MUTED };
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function AddDescription(id) {
       const cResult = channelId(stateFromStores[9]).c(43);
       ({ source, channelId } = id);
       id = id.id;
@@ -141,9 +141,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj2 = {};
                   const merged = Object.assign(dependencyMap);
                   obj2.description = ref.current;
-                  id(8842).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-                  const obj = id(8842);
-                  id(11049).close();
+                  id(9201).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+                  const obj = id(9201);
+                  id(12793).close();
                 },
               );
               let merged = Object.assign(arg0);
@@ -171,7 +171,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = R;
       let obj = channelId(stateFromStores[9]);
     }
-  : (id) => {
+  : function AddDescription(id) {
       ({ source, channelId } = id);
       id = id.id;
       let stateFromStores;
@@ -232,9 +232,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = {};
                 const merged = Object.assign(dependencyMap);
                 obj2.description = ref.current;
-                id(8842).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-                const obj = id(8842);
-                id(11049).close();
+                id(9201).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+                const obj = id(9201);
+                id(12793).close();
               },
             );
             let merged = Object.assign(arg0);
@@ -287,7 +287,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/image_upload/native/AddImageDescriptionModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (source) => {
+  ? function AddImageDescriptionModal(source) {
       const cResult = source(id[9]).c(5);
       source = source.source;
       const channelId = source.channelId;
@@ -312,7 +312,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         screenKey: "addImageDescriptionModal",
         title: first,
         render() {
-          return v65535(closure_13, { source, channelId, id });
+          return collapsed(closure_13, { source, channelId, id });
         },
       });
       cResult[1] = channelId;
@@ -321,13 +321,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp7;
       tmp6 = tmp7;
     }
-  : (arg0) => {
+  : function AddImageDescriptionModal(arg0) {
       ({ source: require, channelId: importDefault, id: dependencyMap } = arg0);
       const obj = { screenKey: "addImageDescriptionModal", title: null, render: null };
       const intl = util.intl;
       obj.title = intl.string(util.t["5S2AK+"]);
       obj.render = function render() {
-        return v65535(closure_13, { source, channelId, id });
+        return collapsed(closure_13, { source, channelId, id });
       };
       return closure_10(ModalStackNavigatorDefault, obj);
     };

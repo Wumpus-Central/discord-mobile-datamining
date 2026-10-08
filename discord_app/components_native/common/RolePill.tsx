@@ -12,7 +12,7 @@ const Constants = fn(1085);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_4, MAX_VISUAL_ROLE_LENGTH: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { marginRight: 4, marginBottom: 4, borderRadius: nativeDefault.radii.xs },
   pill: null,
@@ -54,17 +54,17 @@ size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/RolePill.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (role) => {
+  ? function RolePill(role) {
       const cResult = verifiedContainer(576).c(30);
       verifiedContainer = role.role;
       ({ guildId, color, disableInteraction } = role);
-      const DeveloperMode = verifiedContainer(2028).DeveloperMode;
+      const DeveloperMode = verifiedContainer(2040).DeveloperMode;
       const setting = DeveloperMode.useSetting();
       if (cResult[0] === guildId) {
         if (cResult[1] === verifiedContainer.id) {
           let tmp5 = cResult[2];
         }
-        const roleIconProps = tmp(6692).useRoleIconProps(tmp5);
+        const roleIconProps = tmp(6869).useRoleIconProps(tmp5);
         if (cResult[3] !== verifiedContainer.name) {
           let name = verifiedContainer.name;
           importDefault = name;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             color: "interactive-text-active",
                             children: tmp7,
                           };
-                          const tmp37 = closure_6(tmp(4892).Text, obj2);
+                          const tmp37 = closure_6(tmp(5086).Text, obj2);
                           cResult[18] = tmp7;
                           cResult[19] = tmp37;
                           let tmp35 = tmp37;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 accessible: false,
                                 children: tmp38,
                               };
-                              const tmp44 = closure_6(tmp(5916).PressableHighlight, obj3);
+                              const tmp44 = closure_6(tmp(6189).PressableHighlight, obj3);
                               cResult[25] = tmp12;
                               cResult[26] = tmp14.container;
                               cResult[27] = tmp15;
@@ -218,15 +218,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[13] = undefined !== guild_connections;
           cResult[14] = tmp18Result;
         }
-        const fn = function f() {
+        function handlePress() {
           ClipboardUtils.copy(verifiedContainer.id);
           ToastUtils.roleIdCopied(closure_1);
-        };
+        }
         cResult[5] = tmp7;
         cResult[6] = verifiedContainer.id;
-        cResult[7] = fn;
-        tmp12 = fn;
-        const tmpResult = tmp(6692);
+        cResult[7] = handlePress;
+        tmp12 = handlePress;
+        const tmpResult = tmp(6869);
       }
       const obj11 = { guildId, roleId: verifiedContainer.id, size: 12 };
       cResult[0] = guildId;
@@ -235,12 +235,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = obj11;
       let obj = verifiedContainer(576);
     }
-  : (role) => {
+  : function RolePill(role) {
       role = role.role;
       ({ guildId, color } = role);
-      const DeveloperMode = role(2028).DeveloperMode;
+      const DeveloperMode = role(2040).DeveloperMode;
       const setting = DeveloperMode.useSetting();
-      const roleIconProps = role(6692).useRoleIconProps({ guildId, roleId: role.id, size: 12 });
+      const roleIconProps = role(6869).useRoleIconProps({ guildId, roleId: role.id, size: 12 });
       let name = role.name;
       let combined = name;
       if (role.name.length > closure_5) {
@@ -287,8 +287,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         obj5.guildId = guildId;
         obj5.roleColor = color;
-        let tmp10Result = closure_6(combined(6709), obj5);
-        const tmp15 = combined(6709);
+        let tmp10Result = closure_6(combined(6886), obj5);
+        const tmp15 = combined(6886);
       } else {
         const items = [tmp9.bubble];
         if (null != color) {
@@ -308,17 +308,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { style: tmp9.roleIcon, children: null };
         const obj10 = {};
         const merged = Object.assign(roleIconProps);
-        obj9.children = closure_6(combined(6711), obj10);
+        obj9.children = closure_6(combined(6888), obj10);
         tmp10Result2 = closure_6(View, obj9);
-        const tmp18 = combined(6711);
+        const tmp18 = combined(6888);
       }
       items1[1] = tmp10Result2;
-      items1[2] = closure_6(role(4892).Text, {
+      items1[2] = closure_6(role(5086).Text, {
         variant: "text-xs/semibold",
         color: "interactive-text-active",
         children: name,
       });
       obj4.children = items1;
       obj3.children = closure_7(View, obj4);
-      return closure_6(role(5916).PressableHighlight, obj3);
+      return closure_6(role(6189).PressableHighlight, obj3);
     };

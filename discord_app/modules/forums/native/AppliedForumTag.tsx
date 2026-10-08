@@ -14,10 +14,10 @@ import EmojiStore from "../../emojis/EmojiStore.tsx";
 require = fn;
 let closure_3 = ["ref"];
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1380).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   pill: {
     height: 24,
@@ -49,7 +49,7 @@ const obj3 = {
 };
 const ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (hasUnreads) => {
+  ? function AppliedForumTag(hasUnreads) {
       const cResult = containerStyle(name[9]).c(17);
       ({ tag, containerStyle } = hasUnreads);
       const tmp4 = closure_10();
@@ -65,7 +65,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== emojiId) {
-        const fn = function x() {
+        const fn = function b() {
           let usableCustomEmojiById = null;
           if (null != emojiId) {
             usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(tmp);
@@ -187,7 +187,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = I;
       const tmpResult = containerStyle(name[10]);
     }
-  : (hasUnreads) => {
+  : function AppliedForumTag(hasUnreads) {
       ({ tag, containerStyle: require } = hasUnreads);
       dependencyMap = undefined;
       c3 = undefined;
@@ -261,7 +261,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/AppliedForumTag.tsx");
 
 export const AppliedForumTagPill = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AppliedForumTagPill(arg0) {
       const cResult = c.c(11);
       ({ tag, hasUnreads, containerStyle, disableEndMargin } = arg0);
       const tmp2 = closure_10();
@@ -303,7 +303,7 @@ export const AppliedForumTagPill = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = disableEndMargin ? tmp2.disableEndMargin : {};
       const tmp4 = disableEndMargin ? tmp2.disableEndMargin : {};
     }
-  : (arg0) => {
+  : function AppliedForumTagPill(arg0) {
       ({ tag, hasUnreads, containerStyle, disableEndMargin } = arg0);
       const tmp = closure_10();
       const obj = { tag, hasUnreads, containerStyle: null };

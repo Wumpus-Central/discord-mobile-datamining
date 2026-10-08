@@ -4,13 +4,13 @@ import ChannelRTCStore from "../calls/ChannelRTCStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isStreamParticipant = fn(4917).isStreamParticipant;
+const isStreamParticipant = fn(5113).isStreamParticipant;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useIsStreamFocused.tsx");
 
 export const useIsStreamFocused = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsStreamFocused(arg0) {
       _require = arg0;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -21,7 +21,7 @@ export const useIsStreamFocused = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function s() {
+        const fn = function n() {
           let selectedParticipant = null;
           if (null != closure_0) {
             selectedParticipant = ChannelRTCStore.getSelectedParticipant(tmp);
@@ -49,7 +49,7 @@ export const useIsStreamFocused = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : (arg0) => {
+  : function useIsStreamFocused(arg0) {
       _require = arg0;
       const items = [ChannelRTCStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => {

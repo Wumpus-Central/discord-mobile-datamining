@@ -1,16 +1,16 @@
 // discord_app/modules/user_profile/native/UserProfilePremiumTryItOutUpsell.tsx
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
-import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
+import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const PROFILE_SIDE_PADDING = fn(6714).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(6891).PROFILE_SIDE_PADDING;
 const jsx = fn(21).jsx;
 let c6 = 0.9;
 const FLOATING_UPSELL_SPRING = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles((bottom) => {
   const obj = {
     container: { position: "absolute", bottom, start: 0, end: 0 },
@@ -35,15 +35,15 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePremiumTryItOutUpsell.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (isVisible) => {
+  ? function UserProfilePremiumTryItOutUpsell(isVisible) {
       const cResult = isVisible(576).c(16);
       isVisible = isVisible.isVisible;
       const onPreviewPremium = isVisible.onPreviewPremium;
       let obj = isVisible(576);
-      analyticsLocations = analyticsLocations(6664)(
-        analyticsLocations(6688).USER_SETTINGS_TRY_OUT_PREMIUM,
+      analyticsLocations = analyticsLocations(6841)(
+        analyticsLocations(6865).USER_SETTINGS_TRY_OUT_PREMIUM,
       ).analyticsLocations;
-      const tmp6 = closure_8(analyticsLocations(1618)().bottom);
+      const tmp6 = closure_8(analyticsLocations(1630)().bottom);
       if (cResult[0] !== analyticsLocations) {
         const fn = function n() {
           const obj = {
@@ -58,8 +58,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp7 = cResult[1];
       }
-      const tmp5 = analyticsLocations(6664);
-      class P {
+      const tmp5 = analyticsLocations(6841);
+      class L {
         constructor() {
           value = isVisible.get();
           tmp2 = closure_0;
@@ -90,20 +90,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return obj1;
         }
       }
-      const tmpResult = isVisible(4618);
-      P.__closure = {
+      const tmpResult = isVisible(4810);
+      L.__closure = {
         isVisible,
-        withSpring: isVisible(5604).withSpring,
+        withSpring: isVisible(5374).withSpring,
         FLOATING_UPSELL_SPRING,
         DISMISSED_TRANSLATE_Y: 60,
         DISMISSED_SCALE,
       };
-      P.__workletHash = 7434922701119;
-      P.__initData = __initData;
-      const animatedStyle = tmpResult.useAnimatedStyle(P);
+      L.__workletHash = 7434922701119;
+      L.__initData = __initData;
+      const animatedStyle = tmpResult.useAnimatedStyle(L);
       let obj2 = {
         isVisible,
-        withSpring: isVisible(5604).withSpring,
+        withSpring: isVisible(5374).withSpring,
         FLOATING_UPSELL_SPRING,
         DISMISSED_TRANSLATE_Y: 60,
         DISMISSED_SCALE,
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       T.__closure = { isVisible };
       T.__workletHash = 5163998995941;
       T.__initData = __initData2;
-      const animatedProps = isVisible(4618).useAnimatedProps(T);
+      const animatedProps = isVisible(4810).useAnimatedProps(T);
       if (cResult[2] === animatedStyle) {
         if (cResult[3] === tmp6.container) {
           let tmp10 = cResult[4];
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj4 = { animatedProps, style: tmp10, children: tmp16 };
-            const tmp21 = jsx(tmp4(4618).View, { animatedProps, style: tmp10, children: tmp16 });
+            const tmp21 = jsx(tmp4(4810).View, { animatedProps, style: tmp10, children: tmp16 });
             cResult[12] = animatedProps;
             cResult[13] = tmp10;
             cResult[14] = tmp16;
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onButtonPress: onPreviewPremium,
           buttonVariant: "primary",
         };
-        const tmp18 = jsx(tmp4(14490), {
+        const tmp18 = jsx(tmp4(14750), {
           style: tmp6.card,
           text: tmp11,
           buttonText: tmp14,
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           buttonVariant: "primary",
         });
         cResult[8] = onPreviewPremium;
-        class P {
+        class L {
           constructor() {
             value = isVisible.get();
             tmp2 = closure_0;
@@ -229,15 +229,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp6.container;
       cResult[4] = items;
       tmp10 = items;
-      const tmpResult2 = isVisible(4618);
+      const tmpResult2 = isVisible(4810);
     }
-  : (isVisible) => {
+  : function UserProfilePremiumTryItOutUpsell(isVisible) {
       isVisible = isVisible.isVisible;
       let analyticsLocations;
-      analyticsLocations = analyticsLocations(6664)(
-        analyticsLocations(6688).USER_SETTINGS_TRY_OUT_PREMIUM,
+      analyticsLocations = analyticsLocations(6841)(
+        analyticsLocations(6865).USER_SETTINGS_TRY_OUT_PREMIUM,
       ).analyticsLocations;
-      const tmp2 = closure_8(analyticsLocations(1618)().bottom);
+      const tmp2 = closure_8(analyticsLocations(1630)().bottom);
       let items = [analyticsLocations];
       const callback = noop.useCallback(() => {
         const obj = {
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         openPremiumModalDefault(obj);
       }, items);
-      const tmp = analyticsLocations(6664);
+      const tmp = analyticsLocations(6841);
       const fn = function c() {
         value = isVisible.get();
         let num = 0;
@@ -270,10 +270,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj2.transform = items;
         return obj2;
       };
-      let obj = isVisible(4618);
+      let obj = isVisible(4810);
       fn.__closure = {
         isVisible,
-        withSpring: isVisible(5604).withSpring,
+        withSpring: isVisible(5374).withSpring,
         FLOATING_UPSELL_SPRING,
         DISMISSED_TRANSLATE_Y: 60,
         DISMISSED_SCALE,
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle = obj.useAnimatedStyle(fn);
       let obj2 = {
         isVisible,
-        withSpring: isVisible(5604).withSpring,
+        withSpring: isVisible(5374).withSpring,
         FLOATING_UPSELL_SPRING,
         DISMISSED_TRANSLATE_Y: 60,
         DISMISSED_SCALE,
@@ -307,23 +307,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       E.__closure = { isVisible };
       E.__workletHash = 15404222413955;
       E.__initData = __initData4;
-      const animatedProps = isVisible(4618).useAnimatedProps(E);
+      const animatedProps = isVisible(4810).useAnimatedProps(E);
       const obj4 = { animatedProps, style: null, children: null };
       const items1 = [tmp2.container, animatedStyle];
       obj4.style = items1;
       const obj5 = { style: tmp2.card, text: null, buttonText: null, onButtonPress: null, buttonVariant: "primary" };
-      let obj3 = isVisible(4618);
+      let obj3 = isVisible(4810);
       const intl = isVisible(1126).intl;
       obj5.text = intl.format(isVisible(1126).t.TmfgI2, { onClick: callback });
       const intl2 = isVisible(1126).intl;
       obj5.buttonText = intl2.string(isVisible(1126).t.PxUx8e);
       obj5.onButtonPress = isVisible.onPreviewPremium;
-      obj4.children = jsx(analyticsLocations(14490), {
+      obj4.children = jsx(analyticsLocations(14750), {
         style: tmp2.card,
         text: null,
         buttonText: null,
         onButtonPress: null,
         buttonVariant: "primary",
       });
-      return jsx(analyticsLocations(4618).View, { animatedProps, style: null, children: null });
+      return jsx(analyticsLocations(4810).View, { animatedProps, style: null, children: null });
     };

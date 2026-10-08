@@ -2,12 +2,12 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import AgeVerificationAnalyticsUtils from "../../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import KeyIcon from "../../../../../design/components/Icon/native/redesign/generated/KeyIcon.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../../age_assurance/AgeVerificationActionCreators.native.tsx";
-import AgeVerificationAnalyticsUtils from "../../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeVerificationURLActionCreators from "../../../../age_assurance/AgeVerificationURLActionCreators.tsx";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -64,7 +64,7 @@ let closure_9 = async function _showAgeVerificationTestModal() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -74,7 +74,7 @@ let obj4 = { padding: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsAgeVerificationScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsAgeVerificationScreen() {
   const cResult = c.c(10);
   const tmp4 = closure_7();
   const sum = tmp4.content.padding + useSafeAreaInsetsDefault().bottom;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = tmp6;
   cResult[4] = items1;
   tmp7 = items1;
-}) : (() => {
+}) : (function DevToolsAgeVerificationScreen() {
   const tmp = closure_7();
   let obj = { style: tmp.container, contentContainerStyle: null, children: null };
   const items = [tmp.content, { paddingBottom: tmp.content.padding + useSafeAreaInsetsDefault().bottom }];

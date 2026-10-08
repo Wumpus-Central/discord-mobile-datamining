@@ -46,7 +46,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useCanToggleCommunicationDisableOnUser(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(5);
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useCanToggleCommunicationDisableOnUser(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       let items = [UserStore, GuildStore, PermissionStore];

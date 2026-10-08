@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsScreen.tsx
 import c from "../../../../../../_runtime/00576_c.js";
-import Link from "../../../../../../_runtime/01491_Link.js";
+import Link from "../../../../../../_runtime/01503_Link.js";
 import useBaseAppContainerDimensionsDefault from "../../../../screen/native/useBaseAppContainerDimensions.tsx";
 import ChannelDetailsDefault from "ChannelDetails.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -13,14 +13,14 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/d
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (navigation) => {
+    ? function ChannelDetailsScreen(navigation) {
         const cResult = c.c(8);
         navigation = navigation.navigation;
         const route = Link.useRoute();
         const channelId = route.params.channelId;
         const width = useBaseAppContainerDimensionsDefault().width;
         if (cResult[0] !== navigation) {
-          const fn = function o() {
+          const fn = function s() {
             navigation.goBack();
           };
           cResult[0] = navigation;
@@ -57,7 +57,7 @@ export default noop.memo(
         cResult[7] = tmp9;
         tmp8 = tmp9;
       }
-    : (navigation) => {
+    : function ChannelDetailsScreen(navigation) {
         navigation = navigation.navigation;
         const route = Link.useRoute();
         const items = [navigation];

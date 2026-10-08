@@ -51,7 +51,7 @@ function computeEntryState(arg0) {
 }
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, arg1) => {
+  ? function useFetchResolvedAbsent(id, arg1) {
       const cResult = c.c(2);
       if (cResult[0] !== id) {
         const obj2 = { id, sawFetch: false };
@@ -84,7 +84,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp12;
     }
-  : (id, arg1) => {
+  : function useFetchResolvedAbsent(id, arg1) {
       [tmp2, tmp3] = noop.useState({ id, sawFetch: false });
       let flag = tmp2.sawFetch;
       if (tmp2.id !== id) {
@@ -112,10 +112,10 @@ let closure_9 = tmp2;
 fn(558);
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAbsentIds(arg0) {
       const cResult = first1(576).c(14);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function l() {
+        const fn = function c() {
           return new Set();
         };
         cResult[0] = fn;
@@ -207,7 +207,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = someResult;
       tmp6 = mapped1;
     }
-  : (arg0) => {
+  : function useAbsentIds(arg0) {
       const tmp = _slicedToArray(
         noop.useState(() => new Set()),
         2,
@@ -269,7 +269,7 @@ let result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectib
 
 export const useFetchResolvedAbsent = tmp2;
 export const useCollectiblesShopProduct = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useCollectiblesShopProduct(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(49);
       if (cResult[0] !== arg1) {
@@ -388,34 +388,23 @@ export const useCollectiblesShopProduct = ReactCompilerGating.isReactCompilerEna
             }
           }
         }
-        class A {
-          constructor() {
-            tmp = needsCategory;
-            if (needsCategory) {
-              tmp2 = c5;
-              str = "";
-              tmp = "" !== c5;
-            }
-            if (tmp) {
-              tmp3 = closure_0;
-              tmp4 = closure_1;
-              CollectiblesShopManager = closure_0(closure_1[8]).CollectiblesShopManager;
-              tmp5 = c5;
-              items = [];
-              items[0] = c5;
-              obj = { includeUnpublished: null };
-              tmp6 = includeUnpublished;
-              obj.includeUnpublished = includeUnpublished;
-              collections = CollectiblesShopManager.requestCollections(items, obj);
-            }
-            return;
+        const fn2 = function _() {
+          let tmp = closure_1;
+          if (closure_1) {
+            tmp = "" !== str3;
           }
-        }
+          if (tmp) {
+            const CollectiblesShopManager = CollectiblesShopManager2.CollectiblesShopManager;
+            const items = [str3];
+            const obj = { includeUnpublished };
+            const collections = CollectiblesShopManager.requestCollections(items, obj);
+          }
+        };
         const items2 = [tmp5, str3, tmp7];
         cResult[10] = str3;
         cResult[11] = tmp7;
         cResult[12] = tmp5;
-        cResult[13] = A;
+        cResult[13] = fn2;
         cResult[14] = items2;
         let tmpResult = tmp(504);
       }
@@ -436,7 +425,7 @@ export const useCollectiblesShopProduct = ReactCompilerGating.isReactCompilerEna
       let obj = require("c");
       tmp = _require;
     }
-  : (arg0) => {
+  : function useCollectiblesShopProduct(arg0) {
       _require = arg0;
       let obj = arg1;
       if (arg1 === undefined) {

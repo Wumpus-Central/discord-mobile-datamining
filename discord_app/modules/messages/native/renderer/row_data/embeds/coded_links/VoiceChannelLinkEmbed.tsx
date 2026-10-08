@@ -3,8 +3,8 @@ import util from "../../../../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../../../../utils/PlatformUtils.tsx";
 import AvatarUtilsDefault from "../../../../../../../utils/AvatarUtils.tsx";
 import useChannelName from "../../../../../../channel/useChannelName.tsx";
-import utils_ChannelUtils from "../../../../../../../utils/native/ChannelUtils.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
+import utils_ChannelUtils from "../../../../../../../utils/native/ChannelUtils.tsx";
 import _slicedToArray from "../../../../../../../../_runtime/metro/00032__.js";
 import ChannelStore from "../../../../../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../../../../../stores/GuildStore.tsx";
@@ -14,9 +14,9 @@ import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const Image = fn(17).Image;
-const getGuildAcronym = fn(2070).getGuildAcronym;
+const getGuildAcronym = fn(2082).getGuildAcronym;
 const Permissions = fn(1085).Permissions;
-const InviteTypes = fn(7239).InviteTypes;
+const InviteTypes = fn(7418).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx",

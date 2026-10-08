@@ -8,7 +8,7 @@ import ApplicationRecord from "../../../records/ApplicationRecord.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ApplicationTypes = fn(1360).ApplicationTypes;
+const ApplicationTypes = fn(1372).ApplicationTypes;
 const ReactCompilerGating = fn(558);
 function getAuthorizationApp(type) {
   if (null == type) {
@@ -45,7 +45,7 @@ const result = size.fileFinishedImporting("modules/application_account_linking/h
 
 export { getAuthorizationApp };
 export const useAuthorizationApp = ReactCompilerGating.isReactCompilerEnabled()
-  ? (getOfficialApplicationId) => {
+  ? function useAuthorizationApp(getOfficialApplicationId) {
       const cResult = c.c(4);
       if (cResult[0] !== getOfficialApplicationId) {
         let officialApplicationId;
@@ -105,7 +105,7 @@ export const useAuthorizationApp = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : (getOfficialApplicationId) => {
+  : function useAuthorizationApp(getOfficialApplicationId) {
       _require = getOfficialApplicationId;
       let officialApplicationId;
       if (null != getOfficialApplicationId) {

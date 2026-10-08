@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/utils/native/useFocus.native.tsx");
 
 export const useFocus = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useFocus() {
       const cResult = c.c(3);
       [tmp3, require] = noop.useState(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,7 +38,7 @@ export const useFocus = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function useFocus() {
       const tmp = _slicedToArray(noop.useState(false), 2);
       closure_0 = tmp[1];
       return {

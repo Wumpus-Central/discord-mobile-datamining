@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, header: null, skeletonTitle: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.header = {
@@ -51,7 +51,7 @@ let obj5 = {
 };
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GameProfileSectionSkeleton(arg0) {
       const cResult = c.c(22);
       ({ animationDelayMs, children, headerStyle, showViewAllSkeleton, skeletonTitleWidth, style } = arg0);
       const tmp4 = closure_6();
@@ -150,7 +150,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items4;
       tmp5 = items4;
     }
-  : (showViewAllSkeleton) => {
+  : function GameProfileSectionSkeleton(showViewAllSkeleton) {
       showViewAllSkeleton = showViewAllSkeleton.showViewAllSkeleton;
       ({ animationDelayMs, children, headerStyle, skeletonTitleWidth, style } = showViewAllSkeleton);
       const tmp = closure_6();
@@ -183,7 +183,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSection.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GameProfileSection(arg0) {
       const cResult = c.c(18);
       ({ children, headerStyle, onPressViewAll, style, title } = arg0);
       const tmp4 = closure_6();
@@ -273,7 +273,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items3;
       tmp5 = items3;
     }
-  : (onPressViewAll) => {
+  : function GameProfileSection(onPressViewAll) {
       onPressViewAll = onPressViewAll.onPressViewAll;
       ({ children, headerStyle, style, title } = onPressViewAll);
       const tmp = closure_6();

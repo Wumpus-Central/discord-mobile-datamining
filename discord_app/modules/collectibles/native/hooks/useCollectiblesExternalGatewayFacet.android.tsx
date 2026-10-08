@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (cResult) => {
+  ? function useCollectiblesExternalGatewayFacet(cResult) {
       cResult = c.c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = collectibleGoogleSkuId;
       const tmpResult2 = collectibles_CollectiblesUtils;
     }
-  : (arg0) => {
+  : function useCollectiblesExternalGatewayFacet(arg0) {
       _require = arg0;
       let items = [UserStore];
       stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());

@@ -4,25 +4,25 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import StageChannelModalActionCreators from "../../StageChannelModalActionCreators.tsx";
 import StageChannelActionCreatorExtras from "../../StageChannelActionCreatorExtras.native.tsx";
 import StageChannelActionCreators from "../../StageChannelActionCreators.tsx";
+import StageChannelModalActionCreators from "../../StageChannelModalActionCreators.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
-import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
-import CallBarActionAll from "../../../video_calls/native/components/CallBarAction.tsx";
-import _modDef9328 from "../../../../../_runtime/metro/09328__.js";
+import _modDef8636 from "../../../../../_runtime/metro/08636__.js";
 import CallsUtils from "../../../voice_calls/native/CallsUtils.tsx";
-import _modDef9573 from "../../../../../_runtime/metro/09573__.js";
+import CallBarActionAll from "../../../video_calls/native/components/CallBarAction.tsx";
+import _modDef10768 from "../../../../../_runtime/metro/10768__.js";
 import StageMusicActionCreators from "../../StageMusicActionCreators.tsx";
 import shouldShowEndStageModalDefault from "../../shouldShowEndStageModal.tsx";
-import _modDef9588 from "../../../../../_runtime/metro/09588__.js";
-import _modDef9615 from "../../../../../_runtime/metro/09615__.js";
+import _modDef10781 from "../../../../../_runtime/metro/10781__.js";
+import _modDef10808 from "../../../../../_runtime/metro/10808__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -33,12 +33,12 @@ const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
 require = fn;
 const View = fn(17).View;
-let closure_10 = fn(5578).REQUEST_TO_SPEAK_SHEET_KEY;
+let closure_10 = fn(5888).REQUEST_TO_SPEAK_SHEET_KEY;
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const AgeVerificationSpeakerActionSheet = "AgeVerificationSpeakerActionSheet";
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = {
   actionBarCTAContainer: { position: "relative" },
   imageStyle: { tintColor: nativeDefault.colors.WHITE },
@@ -77,7 +77,7 @@ fn(558);
 let obj6 = { tintColor: nativeDefault.unsafe_rawColors.BLUE_345 };
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function MoveToAudienceButton(channel) {
       const cResult = channel(576).c(6);
       channel = channel.channel;
       const isSmallSize = channel.isSmallSize;
@@ -108,7 +108,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = channel(576);
       const tmp8 = closure_12(CallBarActionAll.ActionButton, {
         accessibilityLabel: first,
-        source: _modDef9573,
+        source: _modDef10768,
         onPress: tmp6,
         isSmallSize,
       });
@@ -116,14 +116,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp6;
       cResult[5] = tmp8;
       tmp7 = tmp8;
-      const obj2 = { accessibilityLabel: first, source: _modDef9573, onPress: tmp6, isSmallSize };
+      const obj2 = { accessibilityLabel: first, source: _modDef10768, onPress: tmp6, isSmallSize };
     }
-  : (channel) => {
+  : function MoveToAudienceButton(channel) {
       channel = channel.channel;
       const obj = { accessibilityLabel: null, source: null, onPress: null, isSmallSize: null };
       const intl = channel(1126).intl;
       obj.accessibilityLabel = intl.string(channel(1126).t.ezLpY6);
-      obj.source = _modDef9573;
+      obj.source = _modDef10768;
       obj.onPress = function onPress() {
         const result = StageChannelActionCreators.audienceAckRequestToSpeak(channel, true);
       };
@@ -132,7 +132,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isSmallSize) => {
+  ? function MusicMuteButton(isSmallSize) {
       const cResult = stateFromStores(576).c(13);
       isSmallSize = isSmallSize.isSmallSize;
       const tmp4 = closure_15();
@@ -165,11 +165,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[2] = stateFromStores;
           cResult[3] = stringResult;
         } else {
-          const tmp13 = importDefault(stateFromStores ? 9580 : 9581);
+          const tmp13 = importDefault(stateFromStores ? 10775 : 10776);
           if (stateFromStores) {
-            let MusicIcon = tmp(9582).MusicSlashIcon;
+            let MusicIcon = tmp(10777).MusicSlashIcon;
           } else {
-            MusicIcon = tmp(9584).MusicIcon;
+            MusicIcon = tmp(10233).MusicIcon;
           }
           if (cResult[4] !== stateFromStores) {
             const fn2 = function y() {
@@ -216,9 +216,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         return null;
       }
-      tmpResult2 = stateFromStores(9574);
+      tmpResult2 = stateFromStores(10769);
     }
-  : (arg0) => {
+  : function MusicMuteButton(arg0) {
       let stateFromStores;
       ({ channel, isSmallSize } = arg0);
       let imageStyle = closure_15();
@@ -239,17 +239,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj3 = {
           accessibilityLabel: stringResult,
-          source: importDefault(stateFromStores ? 9580 : 9581),
+          source: importDefault(stateFromStores ? 10775 : 10776),
           IconComponent: null,
           imageStyle: null,
           onPress: null,
           isSmallSize: null,
         };
         if (stateFromStores) {
-          tmpResult = tmp(9582);
+          tmpResult = tmp(10777);
           let MusicIcon = tmpResult.MusicSlashIcon;
         } else {
-          MusicIcon = tmp(9584).MusicIcon;
+          MusicIcon = tmp(10233).MusicIcon;
         }
         obj3.IconComponent = MusicIcon;
         imageStyle = imageStyle.imageStyle;
@@ -260,17 +260,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.isSmallSize = isSmallSize;
         closure_12(CallBarActionAll.ActionButton, obj3);
       }
-      obj2 = stateFromStores(9574);
+      obj2 = stateFromStores(10769);
     };
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj7 = { container: null, header: null, title: null, footer: null };
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function DisconnectStageButton(channel) {
       const cResult = channel(576).c(6);
       channel = channel.channel;
       const isSmallSize = channel.isSmallSize;
       if (cResult[0] !== channel) {
-        const fn = function n() {
+        function handleStageDisconnect() {
           if (shouldShowEndStageModalDefault(channel)) {
             StageChannelActionCreatorExtras.openEndStageModal(channel);
             const tmp3Result = StageChannelActionCreatorExtras;
@@ -278,10 +278,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             CallsUtils.handleDisconnect(channel);
             const tmp3Result2 = CallsUtils;
           }
-        };
+        }
         cResult[0] = channel;
-        cResult[1] = fn;
-        let tmp4 = fn;
+        cResult[1] = handleStageDisconnect;
+        let tmp4 = handleStageDisconnect;
       } else {
         tmp4 = cResult[1];
       }
@@ -302,8 +302,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = channel(576);
       const tmp8 = closure_12(CallBarActionAll.PrimaryActionButton, {
         accessibilityLabel: tmp5,
-        source: _modDef9588,
-        IconComponent: channel(9589).DoorExitIcon,
+        source: _modDef10781,
+        IconComponent: channel(10782).DoorExitIcon,
         onPress: tmp4,
         isSmallSize,
       });
@@ -313,20 +313,20 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = tmp8;
       const obj2 = {
         accessibilityLabel: tmp5,
-        source: _modDef9588,
-        IconComponent: channel(9589).DoorExitIcon,
+        source: _modDef10781,
+        IconComponent: channel(10782).DoorExitIcon,
         onPress: tmp4,
         isSmallSize,
       };
     }
-  : (channel) => {
+  : function DisconnectStageButton(channel) {
       channel = channel.channel;
       const obj = { accessibilityLabel: null, source: null, IconComponent: null, onPress: null, isSmallSize: null };
       const intl = channel(1126).intl;
       obj.accessibilityLabel = intl.string(channel(1126).t.SMKyih);
-      obj.source = _modDef9588;
-      obj.IconComponent = channel(9589).DoorExitIcon;
-      obj.onPress = function onPress() {
+      obj.source = _modDef10781;
+      obj.IconComponent = channel(10782).DoorExitIcon;
+      obj.onPress = function handleStageDisconnect() {
         if (shouldShowEndStageModalDefault(channel)) {
           StageChannelActionCreatorExtras.openEndStageModal(channel);
           const tmp3Result = StageChannelActionCreatorExtras;
@@ -346,13 +346,13 @@ obj7.footer = { gap: nativeDefault.space.PX_12 };
 let closure_16 = createStyles.createStyles(obj7);
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onClose) => {
+  ? function AgeVerificationSpeakerActionSheet(onClose) {
       const cResult = onClose(576).c(31);
       onClose = onClose.onClose;
       const tmp4 = closure_16();
       const bottom = useSafeAreaInsetsDefault().bottom;
       if (cResult[0] !== onClose) {
-        const fn = function n() {
+        function handleAction() {
           const obj = AgeVerificationActionCreatorsDefault;
           const result = obj.showAgeVerificationGetStartedModal({
             entryPoint:
@@ -364,263 +364,164 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
               AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
           };
           ActionSheetActionCreatorsDefault.hideActionSheet();
-        };
+        }
         cResult[0] = onClose;
-        cResult[1] = fn;
-        let tmp5 = fn;
+        cResult[1] = handleAction;
+        let tmp5 = handleAction;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] !== onClose) {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
+        function handleDismiss() {
+          onClose();
+          ActionSheetActionCreatorsDefault.hideActionSheet();
         }
         cResult[2] = onClose;
-        cResult[3] = S;
+        cResult[3] = handleDismiss;
+        let tmp6 = handleDismiss;
       } else {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
+        tmp6 = cResult[3];
       }
       if (cResult[4] !== bottom) {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
-        tmp8[0] = bottom;
+        let obj2 = { paddingBottom: bottom };
         cResult[4] = bottom;
-        cResult[5] = tmp8;
+        cResult[5] = obj2;
+        let tmp7 = obj2;
       } else {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
+        tmp7 = cResult[5];
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
-        const tmp10 = closure_12(tmp(6085).TrafficConeSpotIllustration, { width: 120, height: 120 });
+        const tmp10 = closure_12(tmp(6271).TrafficConeSpotIllustration, { width: 120, height: 120 });
         cResult[6] = tmp10;
-        const tmp9 = tmp10;
+        let tmp8 = tmp10;
       } else {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
+        tmp8 = cResult[6];
       }
       if (cResult[7] !== tmp4.header) {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
-        let obj2 = { style: tmp4.header, children: tmp9 };
-        const tmp13 = closure_12(View, obj2);
+        const obj3 = { style: tmp4.header, children: tmp8 };
+        const tmp14 = closure_12(View, obj3);
         cResult[7] = tmp4.header;
-        cResult[8] = tmp13;
+        cResult[8] = tmp14;
+        let tmp11 = tmp14;
       } else {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
+        tmp11 = cResult[8];
       }
       ({ container, title } = tmp4);
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
-        const stringResult = obj3.string(tmp(1126).t.zvubnM);
+        const intl = tmp(1126).intl;
+        const stringResult = intl.string(tmp(1126).t.zvubnM);
         cResult[9] = stringResult;
-        const tmp14 = stringResult;
+        let tmp15 = stringResult;
       } else {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
+        tmp15 = cResult[9];
       }
       if (cResult[10] !== tmp4.title) {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
         const obj4 = {
           variant: "heading-lg/bold",
           color: "mobile-text-heading-primary",
           style: title,
-          children: tmp14,
+          children: tmp15,
         };
-        const tmp17 = closure_12(tmp(4892).Text, obj4);
+        const tmp19 = closure_12(tmp(5086).Text, obj4);
         cResult[10] = tmp4.title;
-        cResult[11] = tmp17;
+        cResult[11] = tmp19;
+        let tmp17 = tmp19;
       } else {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
+        tmp17 = cResult[11];
       }
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
-        const stringResult1 = obj5.string(tmp(1126).t.KXVgjt);
+        const intl2 = tmp(1126).intl;
+        const stringResult1 = intl2.string(tmp(1126).t.KXVgjt);
         cResult[12] = stringResult1;
-        const tmp18 = stringResult1;
+        let tmp20 = stringResult1;
       } else {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
+        tmp20 = cResult[12];
       }
       if (cResult[13] !== tmp5) {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
-        const obj6 = { size: "lg", onPress: tmp5, text: tmp18 };
-        const tmp21 = closure_12(tmp(5601).Button, obj6);
+        const obj5 = { size: "lg", onPress: tmp5, text: tmp20 };
+        const tmp24 = closure_12(tmp(5375).Button, obj5);
         cResult[13] = tmp5;
-        cResult[14] = tmp21;
+        cResult[14] = tmp24;
+        let tmp22 = tmp24;
       } else {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
+        tmp22 = cResult[14];
       }
       if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
-        const stringResult2 = obj7.string(tmp(1126).t.WAI6xu);
+        const intl3 = tmp(1126).intl;
+        const stringResult2 = intl3.string(tmp(1126).t.WAI6xu);
         cResult[15] = stringResult2;
-        const tmp22 = stringResult2;
+        let tmp25 = stringResult2;
       } else {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
+        tmp25 = cResult[15];
       }
-      if (cResult[16] !== S) {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
-        const obj8 = { size: "lg", onPress: S, text: tmp22, variant: "secondary" };
-        const tmp25 = closure_12(tmp(5601).Button, obj8);
-        cResult[16] = S;
-        cResult[17] = tmp25;
+      if (cResult[16] !== tmp6) {
+        const obj6 = { size: "lg", onPress: tmp6, text: tmp25, variant: "secondary" };
+        const tmp29 = closure_12(tmp(5375).Button, obj6);
+        cResult[16] = tmp6;
+        cResult[17] = tmp29;
+        let tmp27 = tmp29;
       } else {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
-          }
-        }
+        tmp27 = cResult[17];
       }
       if (cResult[18] === tmp4.footer) {
-        class S {
-          constructor() {
-            tmp = onClose();
-            obj = closure_1(closure_3[32]);
-            hideActionSheetResult = obj.hideActionSheet();
-            return;
+        if (cResult[19] === tmp22) {
+          if (cResult[20] === tmp27) {
+            let tmp30 = cResult[21];
           }
+          if (cResult[22] === tmp4.container) {
+            if (cResult[23] === tmp30) {
+              if (cResult[24] === tmp17) {
+                let tmp32 = cResult[25];
+              }
+              if (cResult[26] === tmp6) {
+                if (cResult[27] === tmp32) {
+                  if (cResult[28] === tmp7) {
+                    if (cResult[29] === tmp11) {
+                      let tmp36 = cResult[30];
+                    }
+                    return tmp36;
+                  }
+                }
+              }
+              const obj7 = {
+                startExpanded: true,
+                onDismiss: tmp6,
+                contentStyles: tmp7,
+                header: tmp11,
+                children: tmp32,
+              };
+              const tmp38 = closure_12(tmp(6885).ActionSheet, obj7);
+              cResult[26] = tmp6;
+              cResult[27] = tmp32;
+              cResult[28] = tmp7;
+              cResult[29] = tmp11;
+              cResult[30] = tmp38;
+              tmp36 = tmp38;
+            }
+          }
+          const obj8 = { style: container, children: null };
+          const items = [tmp17, tmp30];
+          obj8.children = items;
+          const tmp35 = closure_13(View, obj8);
+          cResult[22] = tmp4.container;
+          cResult[23] = tmp30;
+          cResult[24] = tmp17;
+          cResult[25] = tmp35;
+          tmp32 = tmp35;
         }
       }
       const obj9 = { style: tmp4.footer, children: null };
-      const items = [tmp20, tmp24];
-      obj9.children = items;
-      let obj = onClose(576);
+      const items1 = [tmp22, tmp27];
+      obj9.children = items1;
+      const tmp31 = closure_13(View, obj9);
       cResult[18] = tmp4.footer;
-      cResult[19] = tmp20;
-      cResult[20] = tmp24;
-      cResult[21] = closure_13(View, obj9);
-      const tmp26 = closure_13(View, obj9);
+      cResult[19] = tmp22;
+      cResult[20] = tmp27;
+      cResult[21] = tmp31;
+      tmp30 = tmp31;
+      let obj = onClose(576);
     }
-  : (onClose) => {
+  : function AgeVerificationSpeakerActionSheet(onClose) {
       onClose = onClose.onClose;
       function handleDismiss() {
         onClose();
@@ -633,7 +534,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         contentStyles: { paddingBottom: useSafeAreaInsetsDefault().bottom },
         header: closure_12(View, {
           style: tmp.header,
-          children: closure_12(onClose(6085).TrafficConeSpotIllustration, { width: 120, height: 120 }),
+          children: closure_12(onClose(6271).TrafficConeSpotIllustration, { width: 120, height: 120 }),
         }),
         children: null,
       };
@@ -646,11 +547,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = onClose(1126).intl;
       obj4.children = intl.string(onClose(1126).t.zvubnM);
-      const items = [closure_12(onClose(4892).Text, obj4)];
+      const items = [closure_12(onClose(5086).Text, obj4)];
       const obj5 = { style: tmp.footer, children: null };
       const obj6 = {
         size: "lg",
-        onPress() {
+        onPress: function handleAction() {
           const obj = AgeVerificationActionCreatorsDefault;
           const result = obj.showAgeVerificationGetStartedModal({
             entryPoint:
@@ -667,16 +568,16 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl2 = onClose(1126).intl;
       obj6.text = intl2.string(onClose(1126).t.KXVgjt);
-      const items1 = [closure_12(onClose(5601).Button, obj6)];
+      const items1 = [closure_12(onClose(5375).Button, obj6)];
       const obj7 = { size: "lg", onPress: handleDismiss, text: null, variant: "secondary" };
       const intl3 = onClose(1126).intl;
       obj7.text = intl3.string(onClose(1126).t.WAI6xu);
-      items1[1] = closure_12(onClose(5601).Button, obj7);
+      items1[1] = closure_12(onClose(5375).Button, obj7);
       obj5.children = items1;
       items[1] = closure_13(View, obj5);
       obj3.children = items;
       obj.children = closure_13(View, obj3);
-      return closure_12(onClose(6708).ActionSheet, obj);
+      return closure_12(onClose(6885).ActionSheet, obj);
     };
 let closure_17 = tmp6;
 fn(558);
@@ -698,7 +599,7 @@ const __initData2 = {
   code: "function StageActionBarButtonsTsx2(){const{withSpring,show,actionBarAnimationConfig}=this.__closure;return{marginTop:withSpring(show?0:20,actionBarAnimationConfig),opacity:withSpring(show?1:0,actionBarAnimationConfig)};}",
 };
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RequestToSpeakButton(arg0) {
       const cResult = require("c").c(17);
       ({ channel, isSmallSize } = arg0);
       let obj = require("c");
@@ -791,7 +692,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const tmpResult = tmp(tmp2[47]);
           }
-          const fn2 = function l() {
+          function handlePress() {
             if (shouldAgeVerifyToSpeakForCurrentUser) {
               const obj2 = {
                 entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
@@ -800,11 +701,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
             } else {
               tmp7();
             }
-          };
+          }
           cResult[5] = tmp7;
           cResult[6] = shouldAgeVerifyToSpeakForCurrentUser;
-          cResult[7] = fn2;
-          tmp17 = fn2;
+          cResult[7] = handlePress;
+          tmp17 = handlePress;
         }
       }
       const fn = function s() {
@@ -834,7 +735,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = fn;
       const obj4 = require("useStageSpeakingForCurrentUser");
     }
-  : (channel) => {
+  : function RequestToSpeakButton(channel) {
       channel = channel.channel;
       _require = undefined;
       let first;
@@ -905,7 +806,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       obj5.IconComponent = HandRequestSpeakIcon;
       obj5.onPress = tmp13
         ? NOOP
-        : () => {
+        : function handlePress() {
             if (shouldAgeVerifyToSpeakForCurrentUser) {
               const obj2 = {
                 entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
@@ -921,7 +822,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (show) => {
+  ? function AnimatedPrompt(show) {
       const cResult = show(576).c(9);
       show = show.show;
       ({ children, style } = show);
@@ -941,7 +842,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = show(576);
       const stateFromStores = show(504).useStateFromStores(tmp5, tmp6);
       const tmpResult = show(504);
-      const fn2 = function p() {
+      const fn2 = function f() {
         let num = 20;
         if (show) {
           num = 0;
@@ -954,8 +855,8 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.opacity = spring.withSpring(num2, closure_19);
         return obj2;
       };
-      const tmpResult2 = show(4618);
-      fn2.__closure = { withSpring: show(5604).withSpring, show, actionBarAnimationConfig };
+      const tmpResult2 = show(4810);
+      fn2.__closure = { withSpring: show(5374).withSpring, show, actionBarAnimationConfig };
       fn2.__workletHash = 5255980384921;
       fn2.__initData = __initData;
       let animatedStyle;
@@ -987,9 +888,9 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = animatedStyle;
       cResult[5] = items1;
       tmp10 = items1;
-      let obj2 = { withSpring: show(5604).withSpring, show, actionBarAnimationConfig };
+      let obj2 = { withSpring: show(5374).withSpring, show, actionBarAnimationConfig };
     }
-  : (show) => {
+  : function AnimatedPrompt(show) {
       show = show.show;
       ({ children, style } = show);
       const tmp = closure_15();
@@ -1009,8 +910,8 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.opacity = spring.withSpring(num2, closure_19);
         return obj2;
       };
-      let obj2 = show(4618);
-      fn.__closure = { withSpring: show(5604).withSpring, show, actionBarAnimationConfig };
+      let obj2 = show(4810);
+      fn.__closure = { withSpring: show(5374).withSpring, show, actionBarAnimationConfig };
       fn.__workletHash = 295263961338;
       fn.__initData = __initData2;
       const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -1025,7 +926,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_22 = tmp9;
 ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function ChatButton(channel) {
       const cResult = channel(576).c(21);
       channel = channel.channel;
       const isSmallSize = channel.isSmallSize;
@@ -1057,9 +958,9 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStoresObject = channel(504).useStateFromStoresObject(first, tmp6, tmp7);
       ({ unreadCount, mentionCount } = stateFromStoresObject);
       const tmpResult = channel(504);
-      const isVoiceChannelLocked = channel(9613).useIsVoiceChannelLocked(channel);
-      const tmpResult3 = channel(9613);
-      const voiceChatNavigationContext = channel(9123).useVoiceChatNavigationContext();
+      const isVoiceChannelLocked = channel(10806).useIsVoiceChannelLocked(channel);
+      const tmpResult3 = channel(10806);
+      const voiceChatNavigationContext = channel(10339).useVoiceChatNavigationContext();
       let openChat;
       if (voiceChatNavigationContext != null) {
         openChat = voiceChatNavigationContext.openChat;
@@ -1094,13 +995,13 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = {
               imageStyle: tmp13,
               accessibilityLabel: tmp14,
-              IconComponent: tmp(5862).ChatIcon,
-              source: isVoiceChannelLocked(9614),
+              IconComponent: tmp(8174).ChatIcon,
+              source: isVoiceChannelLocked(10807),
               onPress: tmp12,
               appearsDisabled: isVoiceChannelLocked,
               isSmallSize,
             };
-            const tmp21 = closure_12(openChat(9112).ActionButton, obj3);
+            const tmp21 = closure_12(openChat(10685).ActionButton, obj3);
             cResult[17] = isSmallSize;
             cResult[18] = isVoiceChannelLocked;
             cResult[19] = tmp12;
@@ -1141,13 +1042,13 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           isMentioned: mentionCount > 0,
           imageStyle: tmp23,
           accessibilityLabel: tmp24,
-          IconComponent: tmp(5862).ChatIcon,
-          source: isVoiceChannelLocked(9614),
+          IconComponent: tmp(8174).ChatIcon,
+          source: isVoiceChannelLocked(10807),
           onPress: tmp12,
           appearsDisabled: isVoiceChannelLocked,
           isSmallSize,
         };
-        const tmp31 = closure_12(openChat(9112).NotifiedActionButton, obj5);
+        const tmp31 = closure_12(openChat(10685).NotifiedActionButton, obj5);
         cResult[9] = isSmallSize;
         cResult[10] = isVoiceChannelLocked;
         cResult[11] = tmp12;
@@ -1156,20 +1057,20 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[14] = tmp31;
         tmp27 = tmp31;
       }
-      const fn2 = function h() {
+      function onPress() {
         if (!isVoiceChannelLocked) {
           if (openChat != null) {
             tmp();
           }
         }
-      };
+      }
       cResult[4] = isVoiceChannelLocked;
       cResult[5] = openChat;
-      cResult[6] = fn2;
-      tmp12 = fn2;
-      const tmpResult4 = channel(9123);
+      cResult[6] = onPress;
+      tmp12 = onPress;
+      const tmpResult4 = channel(10339);
     }
-  : (channel) => {
+  : function ChatButton(channel) {
       channel = channel.channel;
       const isSmallSize = channel.isSmallSize;
       const items = [ReadStateStore];
@@ -1184,9 +1085,9 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       );
       ({ unreadCount, mentionCount } = stateFromStoresObject);
       const obj = channel(504);
-      const isVoiceChannelLocked = channel(9613).useIsVoiceChannelLocked(channel);
-      const obj2 = channel(9613);
-      const voiceChatNavigationContext = channel(9123).useVoiceChatNavigationContext();
+      const isVoiceChannelLocked = channel(10806).useIsVoiceChannelLocked(channel);
+      const obj2 = channel(10806);
+      const voiceChatNavigationContext = channel(10339).useVoiceChatNavigationContext();
       let openChat;
       if (voiceChatNavigationContext != null) {
         openChat = voiceChatNavigationContext.openChat;
@@ -1213,12 +1114,12 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           obj4.imageStyle = obj5;
           const intl2 = tmp(1126).intl;
           obj4.accessibilityLabel = intl2.string(tmp(1126).t.ZXxLQg);
-          obj4.IconComponent = tmp(5862).ChatIcon;
-          obj4.source = isVoiceChannelLocked(9614);
+          obj4.IconComponent = tmp(8174).ChatIcon;
+          obj4.source = isVoiceChannelLocked(10807);
           obj4.onPress = onPress;
           obj4.appearsDisabled = isVoiceChannelLocked;
           obj4.isSmallSize = isSmallSize;
-          let tmp7Result = closure_12(openChat(9112).ActionButton, obj4);
+          let tmp7Result = closure_12(openChat(10685).ActionButton, obj4);
         }
         return tmp7Result;
       }
@@ -1236,21 +1137,21 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         appearsDisabled: null,
         isSmallSize: null,
       };
-      const obj3 = channel(9123);
+      const obj3 = channel(10339);
       obj6.imageStyle = { tintColor: isVoiceChannelLocked(587).unsafe_rawColors.WHITE };
       const intl = tmp(1126).intl;
       obj6.accessibilityLabel = intl.string(channel(1126).t.ZXxLQg);
-      obj6.IconComponent = channel(5862).ChatIcon;
-      obj6.source = isVoiceChannelLocked(9614);
+      obj6.IconComponent = channel(8174).ChatIcon;
+      obj6.source = isVoiceChannelLocked(10807);
       obj6.onPress = onPress;
       obj6.appearsDisabled = isVoiceChannelLocked;
       obj6.isSmallSize = isSmallSize;
-      tmp7Result = closure_12(openChat(9112).NotifiedActionButton, obj6);
+      tmp7Result = closure_12(openChat(10685).NotifiedActionButton, obj6);
       const obj7 = { tintColor: isVoiceChannelLocked(587).unsafe_rawColors.WHITE };
     };
 ReactCompilerGating = fn(558);
 let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function StartStagePrompt(channel) {
       const cResult = channel(576).c(10);
       channel = channel.channel;
       const isLive = channel.isLive;
@@ -1286,14 +1187,14 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj2 = {
           onPress: tmp5,
-          iconSource: isLive(5828),
+          iconSource: isLive(8143),
           iconStyle: tmp4.promptIconStyle,
           style,
           completed: isLive,
           title: tmp7,
           subtitle: tmp8,
         };
-        const tmp14 = closure_12(tmp(8924).FormCTA, obj2);
+        const tmp14 = closure_12(tmp(8555).FormCTA, obj2);
         cResult[5] = tmp5;
         cResult[6] = isLive;
         cResult[7] = style;
@@ -1301,26 +1202,26 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp14;
         tmp11 = tmp14;
       }
-      const fn = function n() {
+      function handleStartStage() {
         if (!isLive) {
           const result = StageChannelActionCreatorExtras.openStageChannelSettings(channel);
         }
-      };
+      }
       cResult[0] = channel;
       cResult[1] = isLive;
-      cResult[2] = fn;
-      tmp5 = fn;
+      cResult[2] = handleStartStage;
+      tmp5 = handleStartStage;
       let obj = channel(576);
     }
-  : (style) => {
+  : function StartStagePrompt(style) {
       ({ channel: require, isLive } = style);
       let obj = {
-        onPress() {
+        onPress: function handleStartStage() {
           if (!isLive) {
             const result = StageChannelActionCreatorExtras.openStageChannelSettings(_require);
           }
         },
-        iconSource: isLive(5828),
+        iconSource: isLive(8143),
         iconStyle: closure_15().promptIconStyle,
         style: style.style,
         completed: isLive,
@@ -1336,7 +1237,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_23 = tmp11;
 ReactCompilerGating = fn(558);
 let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AnimatedStartStagePrompt(arg0) {
       const cResult = isLive(first1[12]).c(19);
       ({ channel, style } = arg0);
       const obj = isLive(first1[12]);
@@ -1505,7 +1406,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = fn;
       const obj2 = isLive(first1[57]);
     }
-  : (channel) => {
+  : function AnimatedStartStagePrompt(channel) {
       channel = channel.channel;
       let isLive;
       show = undefined;
@@ -1570,18 +1471,18 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function JoinStagePrompt(channel) {
       const cResult = channel(576).c(9);
       channel = channel.channel;
       const style = channel.style;
       const tmp4 = closure_15();
       if (cResult[0] !== channel) {
-        const fn = function n() {
+        function handleJoinStage() {
           StageChannelModalActionCreators.connectAndOpen(channel);
-        };
+        }
         cResult[0] = channel;
-        cResult[1] = fn;
-        let tmp5 = fn;
+        cResult[1] = handleJoinStage;
+        let tmp5 = handleJoinStage;
       } else {
         tmp5 = cResult[1];
       }
@@ -1610,9 +1511,9 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj = channel(576);
-      const tmp11 = closure_12(channel(8924).FormCTA, {
+      const tmp11 = closure_12(channel(8555).FormCTA, {
         onPress: tmp5,
-        iconSource: _modDef9328,
+        iconSource: _modDef8636,
         iconStyle,
         iconContainerStyle,
         style,
@@ -1627,7 +1528,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = tmp11;
       const obj2 = {
         onPress: tmp5,
-        iconSource: _modDef9328,
+        iconSource: _modDef8636,
         iconStyle,
         iconContainerStyle,
         style,
@@ -1635,13 +1536,13 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
         subtitle: tmp7,
       };
     }
-  : (channel) => {
+  : function JoinStagePrompt(channel) {
       channel = channel.channel;
       const obj = {
-        onPress() {
+        onPress: function handleJoinStage() {
           StageChannelModalActionCreators.connectAndOpen(channel);
         },
-        iconSource: _modDef9328,
+        iconSource: _modDef8636,
         iconStyle: null,
         iconContainerStyle: null,
         style: channel.style,
@@ -1653,7 +1554,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       obj.title = intl.string(channel(1126).t["7vb2cc"]);
       const intl2 = channel(1126).intl;
       obj.subtitle = intl2.string(channel(1126).t.lyCW4E);
-      return closure_12(channel(8924).FormCTA, obj);
+      return closure_12(channel(8555).FormCTA, obj);
     };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/components/StageActionBarButtons.tsx");
@@ -1666,15 +1567,15 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
   const isSmallSize = channel.isSmallSize;
   let analyticsLocations;
   function handleOpenAudienceList() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9591, dependencyMap.paths), closure_10, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10784, dependencyMap.paths), closure_10, {
       channelId: channel.id,
       analyticsLocations,
     });
   }
-  analyticsLocations = analyticsLocations(6664)().analyticsLocations;
-  const stageParticipantsCount = channel(5595).useStageParticipantsCount(
+  analyticsLocations = analyticsLocations(6841)().analyticsLocations;
+  const stageParticipantsCount = channel(5961).useStageParticipantsCount(
     channel.id,
-    channel(5589).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY,
+    channel(5955).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY,
   );
   if (stageParticipantsCount > 0) {
     const obj2 = {
@@ -1689,10 +1590,10 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
     const intl = tmp3(1126).intl;
     const obj3 = { count: stageParticipantsCount };
     obj2.accessibilityLabel = intl.formatToPlainString(tmp3(1126).t.OhK58v, obj3);
-    obj2.source = tmp(9602);
+    obj2.source = tmp(10795);
     const obj4 = { tintColor: tmp(587).unsafe_rawColors.WHITE };
     obj2.imageStyle = obj4;
-    obj2.IconComponent = tmp3(9603).HandRequestSpeakListIcon;
+    obj2.IconComponent = tmp3(10796).HandRequestSpeakListIcon;
     obj2.onPress = handleOpenAudienceList;
     obj2.notifications = stageParticipantsCount;
     obj2.isSmallSize = isSmallSize;
@@ -1708,10 +1609,10 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
     };
     const intl2 = tmp3(1126).intl;
     obj5.accessibilityLabel = intl2.string(tmp3(1126).t.KJnyvh);
-    obj5.source = tmp(9602);
+    obj5.source = tmp(10795);
     const obj6 = { tintColor: tmp(587).unsafe_rawColors.WHITE };
     obj5.imageStyle = obj6;
-    obj5.IconComponent = tmp3(9603).HandRequestSpeakListIcon;
+    obj5.IconComponent = tmp3(10796).HandRequestSpeakListIcon;
     obj5.onPress = handleOpenAudienceList;
     obj5.isSmallSize = isSmallSize;
     tmp7 = closure_12(CallBarActionAll.ActionButton, obj5);
@@ -1726,7 +1627,7 @@ export const AnimatedStartStagePrompt = tmp10;
 export const StartStagePrompt = tmp11;
 export const JoinStagePrompt = tmp12;
 export const ContinueToStagePrompt = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onContinue) => {
+  ? function ContinueToStagePrompt(onContinue) {
       const cResult = c.c(12);
       onContinue = onContinue.onContinue;
       const tmp4 = closure_15();
@@ -1754,7 +1655,7 @@ export const ContinueToStagePrompt = ReactCompilerGating.isReactCompilerEnabled(
         const obj4 = { children: null };
         const obj5 = {
           style: tmp4.continueIcon,
-          source: _modDef9615,
+          source: _modDef10808,
           size: native.Icon.Sizes.SMALL,
           disableColor: true,
         };
@@ -1795,7 +1696,7 @@ export const ContinueToStagePrompt = ReactCompilerGating.isReactCompilerEnabled(
       cResult[8] = tmp17;
       tmp16 = tmp17;
     }
-  : (onContinue) => {
+  : function ContinueToStagePrompt(onContinue) {
       const tmp = closure_15();
       const obj = { accessibilityRole: "button", onPress: onContinue.onContinue, children: null };
       const obj2 = { style: tmp.continueContainer, children: null };
@@ -1808,7 +1709,7 @@ export const ContinueToStagePrompt = ReactCompilerGating.isReactCompilerEnabled(
       const obj5 = {
         children: __initData(native.Icon, {
           style: tmp.continueIcon,
-          source: _modDef9615,
+          source: _modDef10808,
           size: native.Icon.Sizes.SMALL,
           disableColor: true,
         }),

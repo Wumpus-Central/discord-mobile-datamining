@@ -20,12 +20,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
-const GameProfileHeaderDefault = tmp5(8393);
+const GameProfileHeaderDefault = tmp5(8891);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     flex: 1,
@@ -45,7 +45,7 @@ obj2.body = {
   paddingVertical: nativeDefault.space.PX_16,
   paddingHorizontal: nativeDefault.space.PX_16,
   gap: nativeDefault.space.PX_32,
-  maxWidth: fn(8391).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(8889).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };
@@ -54,7 +54,7 @@ let obj4 = {
   paddingVertical: nativeDefault.space.PX_16,
   paddingHorizontal: nativeDefault.space.PX_16,
   gap: nativeDefault.space.PX_32,
-  maxWidth: fn(8391).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(8889).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };
@@ -66,7 +66,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onHeaderHeightMeasured) => {
+  ? function GameProfileView(onHeaderHeightMeasured) {
       const cResult = c.c(87);
       ({
         game,
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onHeightMeasured: onHeaderHeightMeasured,
       });
     }
-  : (arg0) => {
+  : function GameProfileView(arg0) {
       ({ game, viewId, source, trackAction, closeModal, scrollY, websiteButtons, onStoreLinksMeasured } = arg0);
       ({ invite, onGuildInviteResolved, onHeaderHeightMeasured } = arg0);
       const tmp = closure_7();

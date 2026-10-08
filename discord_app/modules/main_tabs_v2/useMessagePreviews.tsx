@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useMessagePreviewSetting(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -55,7 +55,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useMessagePreviewSetting(arg0) {
       _require = arg0;
       const items = [UserSettingsProtoStore];
       return require("initialize").useStateFromStores(items, () => {
@@ -90,7 +90,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/useMessagePreviews.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild_id, arg1) => {
+  ? function useMessagePreview(guild_id, arg1) {
       _require = guild_id;
       const cResult = require("c").c(3);
       ({ unread, disabled } = arg1);
@@ -122,10 +122,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         disabled = useIsNsfwGatedDefault(guild_id);
       }
       if (!disabled) {
-        disabled = tmp4 === tmp(7525).MessagePreviewTypes.NONE;
+        disabled = tmp4 === tmp(9248).MessagePreviewTypes.NONE;
       }
       if (!disabled) {
-        let tmp10 = tmp4 === tmp(7525).MessagePreviewTypes.UNREADS;
+        let tmp10 = tmp4 === tmp(9248).MessagePreviewTypes.UNREADS;
         if (tmp10) {
           if (unread == null) {
             unread = stateFromStores;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return useLatestChannelMessageDefault(guild_id, disabled);
     }
-  : (guild_id, arg1) => {
+  : function useMessagePreview(guild_id, arg1) {
       _require = guild_id;
       ({ unread, disabled } = arg1);
       const tmp = closure_5(guild_id.guild_id);
@@ -152,10 +152,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         disabled = useIsNsfwGatedDefault(guild_id);
       }
       if (!disabled) {
-        disabled = tmp === tmp2(7525).MessagePreviewTypes.NONE;
+        disabled = tmp === tmp2(9248).MessagePreviewTypes.NONE;
       }
       if (!disabled) {
-        let tmp6 = tmp === tmp2(7525).MessagePreviewTypes.UNREADS;
+        let tmp6 = tmp === tmp2(9248).MessagePreviewTypes.UNREADS;
         if (tmp6) {
           if (unread == null) {
             unread = stateFromStores;

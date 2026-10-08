@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_moderation/native/KickConfirmModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function KickConfirmModal(userId) {
       const cResult = guildId(onGoBack[3]).c(7);
       ({ cancelButtonCallback, guildId } = userId);
       userId = userId.userId;
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp9;
       tmp8 = tmp9;
     }
-  : (onBeforeGoBack) => {
+  : function KickConfirmModal(onBeforeGoBack) {
       ({ guildId: require, userId: importDefault } = onBeforeGoBack);
       let onGoBack;
       onGoBack = require("useNavigatorBackHandler")({ onBeforeGoBack: onBeforeGoBack.cancelButtonCallback }).onGoBack;

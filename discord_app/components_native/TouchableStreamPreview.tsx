@@ -1,10 +1,10 @@
 // discord_app/components_native/TouchableStreamPreview.tsx
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
+import ChannelRTCActionCreatorsDefault from "../actions/ChannelRTCActionCreators.tsx";
+import SelectedChannelActionCreatorsDefault from "../actions/SelectedChannelActionCreators.tsx";
 import StreamKeyUtils from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import StreamActionCreators from "../actions/StreamActionCreators.tsx";
-import ChannelRTCActionCreatorsDefault from "../actions/ChannelRTCActionCreators.tsx";
 import transitionToStreamDefault from "../modules/go_live/utils/transitionToStream.native.tsx";
-import SelectedChannelActionCreatorsDefault from "../actions/SelectedChannelActionCreators.tsx";
 import noop from "../../_runtime/metro/00019__.js";
 import GameConsoleStore from "../modules/game_console/GameConsoleStore.tsx";
 import ApplicationStreamingStore from "../stores/ApplicationStreamingStore.tsx";
@@ -21,13 +21,13 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const Permissions = fn(1085).Permissions;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { touchable: { borderRadius: 5, overflow: "hidden" }, ctaWrapper: null, ctaBackground: null, ctaText: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj3.alignItems = "center";
 obj3.justifyContent = "center";
-const ColorUtils = fn(4733);
+const ColorUtils = fn(4927);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.7);
 obj2.ctaWrapper = obj3;
 obj2.ctaBackground = {
@@ -42,7 +42,7 @@ obj2.ctaText = { lineHeight: 20 };
 let closure_14 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPress) => {
+  ? function StreamPreviewContainer(onPress) {
       const cResult = disableTransition(stream[15]).c(43);
       ({ style, disableTransition } = onPress);
       onPress = onPress.onPress;
@@ -73,24 +73,24 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = cResult[2];
       }
       if (cResult[3] !== channel) {
-        class P {
+        class R {
           constructor() {
             return !closure_10.can(Permissions.CONNECT, channel);
           }
         }
         cResult[3] = channel;
-        cResult[4] = P;
+        cResult[4] = R;
       } else {
-        class P {
+        class R {
           constructor() {
             return !closure_10.can(Permissions.CONNECT, channel);
           }
         }
       }
       let tmpResult = disableTransition(stream[17]);
-      const stateFromStores1 = disableTransition(stream[17]).useStateFromStores(tmp11, P);
+      const stateFromStores1 = disableTransition(stream[17]).useStateFromStores(tmp11, R);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        class P {
+        class R {
           constructor() {
             return !closure_10.can(Permissions.CONNECT, channel);
           }
@@ -98,7 +98,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         tmp16[0] = VoiceStateStore;
         cResult[5] = tmp16;
       } else {
-        class P {
+        class R {
           constructor() {
             return !closure_10.can(Permissions.CONNECT, channel);
           }
@@ -247,7 +247,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = items3;
       const tmpResult5 = disableTransition(stream[17]);
     }
-  : (disableTransition) => {
+  : function StreamPreviewContainer(disableTransition) {
       disableTransition = disableTransition.disableTransition;
       const onPress = disableTransition.onPress;
       const stream = disableTransition.stream;
@@ -372,7 +372,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("components_native/TouchableStreamPreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function VoiceChannelSettingsStreamPreview(guildId) {
       _require = guildId;
       const cResult = require("c").c(11);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -441,7 +441,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       const obj = require("c");
     }
-  : (arg0) => {
+  : function VoiceChannelSettingsStreamPreview(arg0) {
       _require = arg0;
       const items = [ApplicationStreamingStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () =>

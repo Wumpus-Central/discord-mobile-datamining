@@ -10,7 +10,7 @@ require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useOngoingCallStatus(arg0, arg1, arg2) {
       _require = arg0;
       let xNeSms = first;
       const cResult = require("c").c(11);
@@ -309,7 +309,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       stringResult1 = intl.string(xNeSms);
       const tmpResult = require("initialize");
     }
-  : (arg0, arg1) => {
+  : function useOngoingCallStatus(arg0, arg1) {
       _require = arg0;
       let flag = arg2;
       if (arg2 === undefined) {
@@ -371,7 +371,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/native/components/OngoingCallStatusLabel.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function OngoingCallStatusLabel(arg0) {
       const cResult = c.c(3);
       ({ style, useAllAloneText } = arg0);
       let tmp5 = undefined === useAllAloneText;
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp8;
       tmp7 = tmp8;
     }
-  : (useAllAloneText) => {
+  : function OngoingCallStatusLabel(useAllAloneText) {
       let flag = useAllAloneText.useAllAloneText;
       ({ style, channel, voiceState } = useAllAloneText);
       if (flag === undefined) {

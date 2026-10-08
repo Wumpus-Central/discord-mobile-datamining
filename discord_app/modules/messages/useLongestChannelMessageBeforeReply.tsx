@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useLongestChannelMessageBeforeReply.tsx");
 
 export const useLongestChannelMessageBeforeReply = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useLongestChannelMessageBeforeReply(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(5);
@@ -63,7 +63,7 @@ export const useLongestChannelMessageBeforeReply = ReactCompilerGating.isReactCo
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useLongestChannelMessageBeforeReply(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const items = [MessageStore];

@@ -11,22 +11,22 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const EMOJI_URL_BASE_SIZE = fn(1380).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   toastEmoji: { marginLeft: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_8 },
   toastEmojiCustom: { width: 24, height: 24 },
   toastEmojiText: null,
   toastText: null,
 };
-let PlatformUtils = fn(1369);
+let PlatformUtils = fn(1381);
 let num = 16;
 if (PlatformUtils.isIOS()) {
   num = 24;
 }
 let obj5 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1369);
+PlatformUtils = fn(1381);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 32;
@@ -39,7 +39,7 @@ obj2.toastText = { marginRight: nativeDefault.space.PX_12, marginVertical: nativ
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (emoji) => {
+  ? function ToastEmoji(emoji) {
       const cResult = c.c(13);
       emoji = emoji.emoji;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -128,7 +128,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = url;
       const tmpResult = initialize;
     }
-  : (emoji) => {
+  : function ToastEmoji(emoji) {
       emoji = emoji.emoji;
       const items = [AccessibilityStore];
       const stateFromStores = emoji(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
@@ -163,7 +163,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2.name = str;
       obj2.src = memo;
-      return jsx(stateFromStores(6632), {
+      return jsx(stateFromStores(6809), {
         style: tmp2.toastEmoji,
         fastImageStyle: tmp2.toastEmojiCustom,
         textEmojiStyle: tmp2.toastEmojiText,
@@ -174,7 +174,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_8 = tmp2;
 ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (emoji) => {
+  ? function ToastText(emoji) {
       const cResult = c.c(5);
       emoji = emoji.emoji;
       const tmp4 = closure_7();
@@ -200,7 +200,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp8;
       tmp7 = tmp8;
     }
-  : (emoji) => {
+  : function ToastText(emoji) {
       const obj = { variant: "text-sm/normal", style: closure_7().toastText, children: null };
       const intl = util.intl;
       obj.children = intl.format(util.t.nKY0Fl, { emojiName: emoji.emoji.name });
@@ -239,12 +239,12 @@ export { getToastEmojiEntity };
 export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
   emoji = emoji.emoji;
   if (obj.getIsScreenReaderEnabled()) {
-    const AccessibilityAnnouncer = tmp(4596).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = tmp(4788).AccessibilityAnnouncer;
     const intl2 = tmp(1126).intl;
     const obj2 = { emojiName: emoji.name };
     AccessibilityAnnouncer.announce(intl2.formatToPlainString(tmp(1126).t.nKY0Fl, obj2));
   } else {
-    const designSystemsNotificationComponents = tmp(4580).getDesignSystemsNotificationComponents(
+    const designSystemsNotificationComponents = tmp(4772).getDesignSystemsNotificationComponents(
       "showDoubleTapEmojiUpdatedToast",
     );
     const obj3 = ToastActionCreatorsDefault;
@@ -291,7 +291,7 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
       };
       obj3.open(obj10);
     }
-    const tmpResult = tmp(4580);
+    const tmpResult = tmp(4772);
   }
-  obj = emoji(5777);
+  obj = emoji(5360);
 };

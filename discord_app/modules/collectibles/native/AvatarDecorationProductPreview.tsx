@@ -9,7 +9,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({
   fullSizePreview: { flex: 1, alignItems: "center", justifyContent: "center" },
 });
@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/AvatarDecorationProductPreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (product) => {
+  ? function AvatarDecorationProductPreview(product) {
       const cResult = c.c(9);
       const tmp4 = closure_4();
       const currentUser = useCurrentUser.useCurrentUser();
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = tmp10;
       }
     }
-  : (product) => {
+  : function AvatarDecorationProductPreview(product) {
       const tmp = closure_4();
       const currentUser = useCurrentUser.useCurrentUser();
       const firstAvatarDecoration = useShopProductItems.useShopProductItems(product.product).firstAvatarDecoration;

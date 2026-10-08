@@ -83,9 +83,9 @@ function handleCacheLoadedLazyNoCache() {
 }
 let lastChannel = null;
 const bound = Math.max(25, 25, 1);
-let extendedMemoryLru = new fn(7002).ExtendedMemoryLru(750, 500);
+let extendedMemoryLru = new fn(7190).ExtendedMemoryLru(750, 500);
 let global = extendedMemoryLru;
-let lru = new fn(7003).Lru(15);
+let lru = new fn(7191).Lru(15);
 let c9 = false;
 let SaveableChannelsStore;
 class SaveableChannelsStore extends tmp3 {
@@ -184,23 +184,34 @@ SaveableChannelsStore["mergeSnapshot"] = function mergeSnapshot(snapshot) {
   }
   obj = lastChannel;
   const items = [snapshot.channels, obj.values()];
-  for (const item10036 of items) {
-    for (const item10041 of item10036) {
-      if (!item10041.fallback) {
-        let putResult = global.put(item10041.channelId, item10041);
+  for (const item10038 of items) {
+    for (const item10043 of item10038) {
+      if (!item10043.fallback) {
+        let putResult = global.put(item10043.channelId, item10043);
       }
       continue;
     }
     continue;
   }
+  const set = new Set();
   const items1 = [snapshot.penalized, lru.keys()];
-  for (const item10059 of items1) {
-    for (const item10064 of item10059) {
-      let putResult1 = lru.put(item10064, null);
+  for (const item10067 of items1) {
+    for (const item10072 of item10067) {
+      let putResult1 = lru.put(item10072, null);
+      if (null != putResult1) {
+        let addResult = set.add(tmp14[0]);
+      }
       continue;
     }
     continue;
   }
+  for (const item10087 of tmp9) {
+    if (!lru.has(item10087)) {
+      let deleteResult = global.delete(item10087);
+    }
+    continue;
+  }
+  const tmp9 = set;
 };
 SaveableChannelsStore["recordChannel"] = function recordChannel(id) {
   const basicChannel = ChannelStore.getBasicChannel(id);
@@ -212,12 +223,13 @@ SaveableChannelsStore["recordChannel"] = function recordChannel(id) {
       }
       const obj = { guildId: guild_id, channelId: id, channelType: basicChannel.type };
       global.put(id, obj);
-      if (tmp8Result.isLimitedChannel(basicChannel)) {
-        if (null != lru.put(id, null)) {
-          global.delete(id);
+      if (tmp9Result.isLimitedChannel(basicChannel)) {
+        const putResult1 = lru.put(id, null);
+        if (null != putResult1) {
+          global.delete(putResult1[0]);
         }
       }
-      tmp8Result = isLimitedChannel;
+      tmp9Result = isLimitedChannel;
     }
     obj3 = isReadableChannel;
   }
@@ -226,35 +238,35 @@ SaveableChannelsStore["deleteChannel"] = function deleteChannel(arg0) {
   global.delete(arg0);
 };
 SaveableChannelsStore["deleteGuild"] = function deleteGuild(arg0) {
-  for (const item10009 of allValuesResult) {
-    if (item10009.guildId === arg0) {
-      let deleteResult = global.delete(tmp2.channelId);
+  const items = [...global.allValues()];
+  for (const item10013 of items) {
+    if (item10013.guildId === arg0) {
+      let deleteResult = global.delete(tmp.channelId);
     }
     continue;
   }
-  const allValuesResult = global.allValues();
 };
 SaveableChannelsStore["dropUnreachableChannels"] = function dropUnreachableChannels() {
-  const keys = global.keys();
-  for (const item10008 of keys) {
-    let basicChannel = ChannelStore.getBasicChannel(item10008);
+  const items = [...global.allKeys()];
+  for (const item10012 of items) {
+    let basicChannel = ChannelStore.getBasicChannel(item10012);
     let obj = isReadableChannel;
     if (!obj.isReadableChannel(basicChannel)) {
-      let deleteChannelResult = SaveableChannelsStore.deleteChannel(item10008);
+      let deleteChannelResult = SaveableChannelsStore.deleteChannel(item10012);
     }
     continue;
   }
 };
 SaveableChannelsStore["deleteUnreadableGuildChannels"] = function deleteUnreadableGuildChannels(arg0) {
-  const values = global.values();
-  for (const item10009 of values) {
-    let isReadableChannelIdResult = arg0 !== item10009.guildId;
+  const items = [...global.allValues()];
+  for (const item10013 of items) {
+    let isReadableChannelIdResult = arg0 !== item10013.guildId;
     if (!isReadableChannelIdResult) {
       let obj = isReadableChannel;
-      isReadableChannelIdResult = obj.isReadableChannelId(item10009.channelId);
+      isReadableChannelIdResult = obj.isReadableChannelId(item10013.channelId);
     }
     if (!isReadableChannelIdResult) {
-      let deleteChannelResult = SaveableChannelsStore.deleteChannel(item10009.channelId);
+      let deleteChannelResult = SaveableChannelsStore.deleteChannel(item10013.channelId);
     }
     continue;
   }

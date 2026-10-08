@@ -20,7 +20,7 @@ let closure_6 = createStyles.createStyles({
 const result = size.fileFinishedImporting("design/components/Checkbox/native/Checkbox.native.tsx");
 
 export const Checkbox = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onToggle) => {
+  ? function Checkbox(onToggle) {
       const cResult = c.c(32);
       ({ label, description, required, checked } = onToggle);
       onToggle = onToggle.onToggle;
@@ -192,7 +192,7 @@ export const Checkbox = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = L;
       const tmpResult = useA11yRolesNative;
     }
-  : (onToggle) => {
+  : function Checkbox(onToggle) {
       ({ label, description, required, checked } = onToggle);
       onToggle = onToggle.onToggle;
       const tmp = closure_6();

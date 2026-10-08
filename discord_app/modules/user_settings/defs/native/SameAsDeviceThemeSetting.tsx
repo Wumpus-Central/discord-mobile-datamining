@@ -7,9 +7,9 @@ import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSameAsDeviceThemeValue() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ThemeStore];
@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useSameAsDeviceThemeValue() {
       const items = [ThemeStore];
       return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
     };
@@ -34,9 +34,9 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.c445ix);
   },
-  parent: fn(7645).MobileUserSettings.APPEARANCE,
+  parent: fn(7966).MobileUserSettings.APPEARANCE,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useSameAsDeviceThemeValue() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ThemeStore];
@@ -52,7 +52,7 @@ const toggle = SettingBuilders.createToggle({
         }
         return initialize.useStateFromStores(tmp4, tmp5);
       }
-    : () => {
+    : function useSameAsDeviceThemeValue() {
         const items = [ThemeStore];
         return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
       },

@@ -11,14 +11,14 @@ let closure_3 = ["aspectRatio", "style"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const dependencyMap = { "21/9": 2.3333333333333335, "16/9": 1.7777777777777777, "6/4": 1.5, "2/1": 2, "1/1": 1 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({
   container: { width: "100%", justifyContent: "center", alignItems: "center", overflow: "hidden" },
   image: { width: "100%", height: "100%" },
 });
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (src) => {
+  ? function ImageGraphic(src) {
       const cResult = c.c(3);
       src = src.src;
       const tmp3 = closure_9();
@@ -40,7 +40,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = tmp5;
       const obj2 = { source: src, style: tmp3.image, resizeMode: "contain", accessibilityElementsHidden: true };
     }
-  : (source) => {
+  : function ImageGraphic(source) {
       const tmp = closure_9();
       return jsx(FastImageDefault, {
         source: source.src,
@@ -51,7 +51,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RiveGraphic(arg0) {
       const cResult = c.c(9);
       ({ rive, riveProps } = arg0);
       if (cResult[0] !== riveProps) {
@@ -95,7 +95,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp6;
       tmp4 = tmp6;
     }
-  : (riveProps) => {
+  : function RiveGraphic(riveProps) {
       riveProps = riveProps.riveProps;
       if (riveProps === undefined) {
         riveProps = {};
@@ -113,7 +113,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Graphic/native/Graphic.native.tsx");
 
 export const Graphic = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Graphic(arg0) {
       const cResult = c.c(17);
       if (cResult[0] !== arg0) {
         ({ aspectRatio, style } = arg0);
@@ -195,7 +195,7 @@ export const Graphic = ReactCompilerGating.isReactCompilerEnabled()
       }
       tmpResult = native;
     }
-  : (aspectRatio) => {
+  : function Graphic(aspectRatio) {
       let str = aspectRatio.aspectRatio;
       if (str === undefined) {
         str = "16/9";

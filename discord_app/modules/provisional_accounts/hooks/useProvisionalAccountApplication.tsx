@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useProvisionalAccountApplication(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = require("initialize");
       return require("useGetOrFetchApplications").useGetOrFetchApplication(stateFromStores);
     }
-  : (arg0) => {
+  : function useProvisionalAccountApplication(arg0) {
       _require = arg0;
       const items = [GameRelationshipStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => {

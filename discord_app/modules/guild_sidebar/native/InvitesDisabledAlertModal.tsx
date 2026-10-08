@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/InvitesDisabledAlertModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function InvitesDisabledAlertModal() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function InvitesDisabledAlertModal() {
       const obj = { title: null, content: null, actions: null };
       const intl = util.intl;
       obj.title = intl.string(util.t.LpUfEt);

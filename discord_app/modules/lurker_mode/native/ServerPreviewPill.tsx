@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   pill: {
     paddingHorizontal: 10,
@@ -32,7 +32,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/lurker_mode/native/ServerPreviewPill.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ServerPreviewPill() {
       const cResult = c.c(6);
       const tmp4 = closure_4();
       ({ pill, text } = tmp4);
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp11;
       tmp10 = tmp11;
     }
-  : () => {
+  : function ServerPreviewPill() {
       const tmp = closure_4();
       const obj = { style: tmp.pill, accessibilityRole: "text", children: null };
       const obj2 = { variant: "text-xs/bold", style: tmp.text, children: null };

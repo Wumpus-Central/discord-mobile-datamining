@@ -18,7 +18,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   containerInner: { flex: 1, padding: 20, justifyContent: "center", alignItems: "center" },
@@ -65,7 +65,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/Overview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function Overview() {
       const cResult = require("c").c(30);
       let tmp4 = closure_13();
       _require = tmp4;
@@ -217,8 +217,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp27 = tmp30;
         }
       }
-      const fn2 = function v() {
-        return v65535(closure_2_11, {
+      const fn2 = function b() {
+        return collapsed(closure_2_11, {
           children: stateFromStores.map((item) => {
             if (item === constants.CAPTCHA) {
               let obj = { text: null, onPress: null, grow: true };
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = fn2;
       const tmp11 = stateFromStores(navigation[14]);
     }
-  : () => {
+  : function Overview() {
       const tmp = closure_13();
       _require = tmp;
       const items = [UserRequiredActionStore];
@@ -304,7 +304,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj4 = { style: tmp.containerInner, children: null };
       const callback = noop.useCallback(
         () =>
-          v65535(closure_2_11, {
+          collapsed(closure_2_11, {
             children: stateFromStores.map((item) => {
               if (item === constants.CAPTCHA) {
                 let obj = { text: null, onPress: null, grow: true };

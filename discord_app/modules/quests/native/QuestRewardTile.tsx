@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestRewardTile.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function QuestRewardTile(arg0) {
       const cResult = c.c(18);
       if (cResult[0] !== arg0) {
         ({ quest, accessibilityLabelPrefix } = arg0);
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj4 = found;
       }
     }
-  : (quest) => {
+  : function QuestRewardTile(quest) {
       quest = quest.quest;
       const merged = Object.assign(quest, Object.assign({ quest: 0, accessibilityLabelPrefix: 0 }));
       const items = [quest];

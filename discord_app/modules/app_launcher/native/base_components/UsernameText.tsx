@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/UsernameText.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UsernameText(arg0) {
       const cResult = c.c(27);
       ({ user, guildId, variant, color } = arg0);
       let str = "text-md/medium";
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj7;
       tmp4 = obj7;
     }
-  : (color) => {
+  : function UsernameText(color) {
       ({ user, variant } = color);
       if (variant === undefined) {
         variant = "text-md/medium";

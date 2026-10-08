@@ -3,8 +3,8 @@ import SnowflakeUtilsDefault from "../../../../utils/SnowflakeUtils.tsx";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import transitionToChannel from "../../../routing/transitionToChannel.tsx";
-import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import useFontScale from "../../../screen/native/useFontScale.tsx";
+import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ChannelListLayoutTypes from "../../../main_tabs_v2/ChannelListLayoutTypes.tsx";
 import openChannelLongPressActionSheet from "../../../channel/native/openChannelLongPressActionSheet.tsx";
@@ -18,11 +18,11 @@ import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper.
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, navigationReplace) => {
+  ? function usePrivateChannelPressEvents(id, navigationReplace) {
       _require = id;
       const cResult = require("c").c(8);
       if (cResult[0] === id.id) {
@@ -59,7 +59,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp2 = fn;
     }
-  : (id, navigationReplace) => {
+  : function usePrivateChannelPressEvents(id, navigationReplace) {
       const user = id;
       const obj = { onPress: null, onLongPress: null };
       const items = [id.id, navigationReplace];
@@ -73,7 +73,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       );
       return obj;
     };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   pressable: { flex: 1 },
   pressableUnderlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE },
@@ -86,7 +86,7 @@ const result = size.fileFinishedImporting("modules/launchpad/native/shared/DMCha
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function DMChannel(arg0) {
         const cResult = c.c(23);
         ({ channel, muted, navigationReplace } = arg0);
         const tmp6 = closure_7();
@@ -238,7 +238,7 @@ export default noop.memo(
         const obj7 = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted: undefined !== muted && muted };
         const tmpResult2 = useFontScale;
       }
-    : (navigationReplace) => {
+    : function DMChannel(navigationReplace) {
         ({ channel, muted } = navigationReplace);
         if (muted === undefined) {
           muted = false;

@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/native/components/RequestToSpeakParticipantList.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import StageChannelActionCreators from "../../StageChannelActionCreators.tsx";
+import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { paddingVertical: 4, flexDirection: "column", minHeight: 288, flex: 1 },
   listContainer: { paddingVertical: 4, flexDirection: "column", flex: 1 },
@@ -52,10 +52,10 @@ obj2.emptyBody = { textAlign: "center" };
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (participant) => {
+  ? function RequestToSpeakParticipant(participant) {
       const cResult = participant(analyticsLocations[7]).c(54);
       participant = participant.participant;
-      channel = participant.channel;
+      const channel = participant.channel;
       ({ onGrantRequest, onDenyRequest } = participant);
       const tmp4 = closure_6();
       analyticsLocations = channel(analyticsLocations[8])().analyticsLocations;
@@ -299,31 +299,31 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           obj3 = items5;
         }
       }
-      const fn = function o() {
+      function handleUserProfile() {
         showUserProfileActionSheetDefault({
           userId: participant.user.id,
           channelId: channel.id,
           isVoiceContext: true,
           sourceAnalyticsLocations: analyticsLocations,
         });
-      };
+      }
       cResult[0] = analyticsLocations;
       cResult[1] = channel.id;
       cResult[2] = participant.user.id;
-      cResult[3] = fn;
-      tmp6 = fn;
+      cResult[3] = handleUserProfile;
+      tmp6 = handleUserProfile;
       const obj = participant(analyticsLocations[7]);
     }
-  : (participant) => {
+  : function RequestToSpeakParticipant(participant) {
       participant = participant.participant;
-      channel = participant.channel;
+      const channel = participant.channel;
       let analyticsLocations;
       ({ onGrantRequest, onDenyRequest } = participant);
       const tmp = closure_6();
       analyticsLocations = channel(analyticsLocations[8])().analyticsLocations;
       const obj = { style: tmp.participantItemContainer, children: null };
       const obj2 = {
-        onPress() {
+        onPress: function handleUserProfile() {
           showUserProfileActionSheetDefault({
             userId: participant.user.id,
             channelId: channel.id,
@@ -409,9 +409,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/components/RequestToSpeakParticipantList.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function RequestToSpeakParticipantList(channel) {
       const cResult = channel(sortedRequestToSpeakParticipants[7]).c(34);
       channel = channel.channel;
+      const height = channel.height;
       const tmp4 = closure_6();
       importDefault = tmp4;
       let obj = channel(sortedRequestToSpeakParticipants[7]);
@@ -419,23 +420,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         sortedRequestToSpeakParticipants[19],
       ).useSortedRequestToSpeakParticipants(channel.id);
       if (cResult[0] !== channel) {
-        const fn = function o(user) {
+        function handleGrantRequest(user) {
           StageChannelActionCreators.setUserSuppress(channel, user.user.id, false);
-        };
+        }
         cResult[0] = channel;
-        cResult[1] = fn;
-        let tmp5 = fn;
+        cResult[1] = handleGrantRequest;
+        let tmp5 = handleGrantRequest;
       } else {
         tmp5 = cResult[1];
       }
       closure_3 = tmp5;
       if (cResult[2] !== channel) {
-        const fn2 = function x(user) {
+        function handleDenyRequest(user) {
           StageChannelActionCreators.setUserSuppress(channel, user.user.id, true);
-        };
+        }
         cResult[2] = channel;
-        cResult[3] = fn2;
-        let tmp6 = fn2;
+        cResult[3] = handleDenyRequest;
+        let tmp6 = handleDenyRequest;
       } else {
         tmp6 = cResult[3];
       }
@@ -520,100 +521,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[21] === tmp4.emptyParticipant) {
                   let tmp7 = cResult[22];
                 }
-                class C {
-                  constructor(arg0, arg1) {
-                    tmp = closure_2[arg1];
-                    closure_0 = tmp;
-                    if (null == tmp) {
-                      tmp6 = closure_4;
-                      tmp7 = closure_3;
-                      obj1 = { style: null };
-                      tmp8 = closure_1;
-                      obj1.style = closure_1.emptyParticipant;
-                      tmp5 = closure_4(closure_3, obj1);
-                    } else {
-                      tmp2 = closure_4;
-                      tmp3 = closure_1_7;
-                      obj = { participant: null, channel: null, onGrantRequest: null, onDenyRequest: null };
-                      obj.participant = tmp;
-                      tmp4 = closure_0;
-                      obj.channel = closure_0;
-                      obj.onGrantRequest = function onGrantRequest() {
-                        return closure_3(closure_0);
-                      };
-                      obj.onDenyRequest = function onDenyRequest() {
-                        return closure_4(closure_0);
-                      };
-                      tmp5 = closure_4(closure_1_7, obj, tmp.user.id);
-                    }
-                    return tmp5;
-                  }
+                if (cResult[23] !== height) {
+                  const obj7 = { height };
+                  cResult[23] = height;
+                  cResult[24] = obj7;
+                  let tmp8 = obj7;
+                } else {
+                  tmp8 = cResult[24];
                 }
                 if (cResult[25] === tmp4.listContainer) {
                   if (cResult[26] === tmp8) {
                     let tmp9 = cResult[27];
                   }
-                  class C {
-                    constructor(arg0, arg1) {
-                      tmp = closure_2[arg1];
-                      closure_0 = tmp;
-                      if (null == tmp) {
-                        tmp6 = closure_4;
-                        tmp7 = closure_3;
-                        obj1 = { style: null };
-                        tmp8 = closure_1;
-                        obj1.style = closure_1.emptyParticipant;
-                        tmp5 = closure_4(closure_3, obj1);
-                      } else {
-                        tmp2 = closure_4;
-                        tmp3 = closure_1_7;
-                        obj = { participant: null, channel: null, onGrantRequest: null, onDenyRequest: null };
-                        obj.participant = tmp;
-                        tmp4 = closure_0;
-                        obj.channel = closure_0;
-                        obj.onGrantRequest = function onGrantRequest() {
-                          return closure_3(closure_0);
-                        };
-                        obj.onDenyRequest = function onDenyRequest() {
-                          return closure_4(closure_0);
-                        };
-                        tmp5 = closure_4(closure_1_7, obj, tmp.user.id);
-                      }
-                      return tmp5;
-                    }
-                  }
                   const sum = sortedRequestToSpeakParticipants.length + 1;
                   if (cResult[28] !== sum) {
-                    const items1 = [];
-                    class C {
-                      constructor(arg0, arg1) {
-                        tmp = closure_2[arg1];
-                        closure_0 = tmp;
-                        if (null == tmp) {
-                          tmp6 = closure_4;
-                          tmp7 = closure_3;
-                          obj1 = { style: null };
-                          tmp8 = closure_1;
-                          obj1.style = closure_1.emptyParticipant;
-                          tmp5 = closure_4(closure_3, obj1);
-                        } else {
-                          tmp2 = closure_4;
-                          tmp3 = closure_1_7;
-                          obj = { participant: null, channel: null, onGrantRequest: null, onDenyRequest: null };
-                          obj.participant = tmp;
-                          tmp4 = closure_0;
-                          obj.channel = closure_0;
-                          obj.onGrantRequest = function onGrantRequest() {
-                            return closure_3(closure_0);
-                          };
-                          obj.onDenyRequest = function onDenyRequest() {
-                            return closure_4(closure_0);
-                          };
-                          tmp5 = closure_4(closure_1_7, obj, tmp.user.id);
-                        }
-                        return tmp5;
-                      }
-                    }
+                    const items1 = [sum];
                     cResult[28] = sum;
                     cResult[29] = items1;
                     let tmp11 = items1;
@@ -622,49 +544,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   if (cResult[30] === tmp7) {
                     if (cResult[31] === tmp9) {
-                      class C {
-                        constructor(arg0, arg1) {
-                          tmp = closure_2[arg1];
-                          closure_0 = tmp;
-                          if (null == tmp) {
-                            tmp6 = closure_4;
-                            tmp7 = closure_3;
-                            obj1 = { style: null };
-                            tmp8 = closure_1;
-                            obj1.style = closure_1.emptyParticipant;
-                            tmp5 = closure_4(closure_3, obj1);
-                          } else {
-                            tmp2 = closure_4;
-                            tmp3 = closure_1_7;
-                            obj = { participant: null, channel: null, onGrantRequest: null, onDenyRequest: null };
-                            obj.participant = tmp;
-                            tmp4 = closure_0;
-                            obj.channel = closure_0;
-                            obj.onGrantRequest = function onGrantRequest() {
-                              return closure_3(closure_0);
-                            };
-                            obj.onDenyRequest = function onDenyRequest() {
-                              return closure_4(closure_0);
-                            };
-                            tmp5 = closure_4(closure_1_7, obj, tmp.user.id);
-                          }
-                          return tmp5;
-                        }
+                      if (cResult[32] === tmp11) {
+                        let tmp12 = cResult[33];
                       }
+                      return tmp12;
                     }
                   }
-                  const obj7 = {
+                  const obj8 = {
                     style: tmp9,
                     itemSize: 64,
                     renderItem: tmp7,
                     keyboardShouldPersistTaps: "always",
                     sections: tmp11,
                   };
-                  const tmp15 = closure_4(require("FastList"), obj7);
+                  const tmp15 = closure_4(require("FastList"), obj8);
                   cResult[30] = tmp7;
                   cResult[31] = tmp9;
                   cResult[32] = tmp11;
                   cResult[33] = tmp15;
+                  tmp12 = tmp15;
                 }
                 const items2 = [tmp4.listContainer, tmp8];
                 cResult[25] = tmp4.listContainer;
@@ -675,46 +573,37 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        class C {
-          constructor(arg0, arg1) {
-            tmp = closure_2[arg1];
-            closure_0 = tmp;
-            if (null == tmp) {
-              tmp6 = closure_4;
-              tmp7 = closure_3;
-              obj1 = { style: null };
-              tmp8 = closure_1;
-              obj1.style = closure_1.emptyParticipant;
-              tmp5 = closure_4(closure_3, obj1);
-            } else {
-              tmp2 = closure_4;
-              tmp3 = closure_1_7;
-              obj = { participant: null, channel: null, onGrantRequest: null, onDenyRequest: null };
-              obj.participant = tmp;
-              tmp4 = closure_0;
-              obj.channel = closure_0;
-              obj.onGrantRequest = function onGrantRequest() {
+        function renderRow(arg0, arg1) {
+          channel = tmp;
+          if (null == sortedRequestToSpeakParticipants[arg1]) {
+            const obj2 = { style: emptyParticipant.emptyParticipant };
+            let tmp5 = closure_4(closure_3, obj2);
+          } else {
+            const obj = {
+              participant: tmp,
+              channel,
+              onGrantRequest() {
                 return closure_3(closure_0);
-              };
-              obj.onDenyRequest = function onDenyRequest() {
+              },
+              onDenyRequest() {
                 return closure_4(closure_0);
-              };
-              tmp5 = closure_4(closure_1_7, obj, tmp.user.id);
-            }
-            return tmp5;
+              },
+            };
+            tmp5 = closure_4(closure_1_7, obj, tmp.user.id);
           }
+          return tmp5;
         }
         cResult[17] = channel;
         cResult[18] = tmp6;
         cResult[19] = tmp5;
         cResult[20] = sortedRequestToSpeakParticipants;
         cResult[21] = tmp4.emptyParticipant;
-        cResult[22] = C;
-        tmp7 = C;
+        cResult[22] = renderRow;
+        tmp7 = renderRow;
       }
       let obj2 = channel(sortedRequestToSpeakParticipants[19]);
     }
-  : (channel) => {
+  : function RequestToSpeakParticipantList(channel) {
       channel = channel.channel;
       let sortedRequestToSpeakParticipants;
       const tmp = closure_6();
@@ -754,7 +643,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = { height: channel.height };
         items1[1] = obj7;
         obj6.style = items1;
-        obj6.renderItem = function renderItem(arg0, arg1) {
+        obj6.renderItem = function renderRow(arg0, arg1) {
           channel = tmp;
           if (null == sortedRequestToSpeakParticipants[arg1]) {
             const obj2 = { style: emptyParticipant.emptyParticipant };

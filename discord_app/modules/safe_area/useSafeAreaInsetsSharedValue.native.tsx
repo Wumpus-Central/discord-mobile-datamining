@@ -47,10 +47,10 @@ const tmp5 = (() => {
 })();
 const result = size.fileFinishedImporting("modules/safe_area/useSafeAreaInsetsSharedValue.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSafeAreaInsetsSharedValue() {
   obj = AppEntryKeyContext;
   return obj[obj.useAppEntryKey(obj)];
-}) : (() => {
+}) : (function useSafeAreaInsetsSharedValue() {
   obj = AppEntryKeyContext;
   return obj[obj.useAppEntryKey(obj)];
 });

@@ -8,14 +8,14 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionThanks.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AppealIngestionThanks() {
       const cResult = c.c(6);
       const tmp4 = closure_4();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp12;
       const obj4 = { style: tmp4.container, children: tmp8 };
     }
-  : () => {
+  : function AppealIngestionThanks() {
       const tmp = closure_4();
       const obj = { children: null };
       const obj2 = {

@@ -12,10 +12,10 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["ref"];
-const EMOJI_URL_BASE_SIZE = fn(1380).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   pill: {
     display: "flex",
@@ -61,7 +61,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/AvailableForumTag.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (tag) => {
+  ? function AvailableForumTag(tag) {
       const cResult = tag(disabled[8]).c(27);
       tag = tag.tag;
       onPress = tag.onPress;
@@ -302,23 +302,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp10 = arr2;
         }
       }
-      class R {
-        constructor() {
-          if (!disabled) {
-            tmp = onPress;
-            tmp2 = tag;
-            tmp3 = onPress(tag);
-          }
-          return;
+      function handlePress() {
+        if (!disabled) {
+          onPress(tag);
         }
       }
       cResult[3] = disabled;
       cResult[4] = onPress;
       cResult[5] = tag;
-      cResult[6] = R;
-      tmp9 = R;
+      cResult[6] = handlePress;
+      tmp9 = handlePress;
     }
-  : (tag) => {
+  : function AvailableForumTag(tag) {
       tag = tag.tag;
       ({ onPress: importDefault, disabled } = tag);
       const selected = tag.selected;

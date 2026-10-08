@@ -10,7 +10,7 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/actions/CheckboxActionComponent.tsx");
 
-export default noop.memo((type) => {
+export default noop.memo(function CheckboxActionComponent(type) {
   type = type.type;
   const componentStateContext = ComponentStateContext.useComponentStateContext();
   _modDef38(null != componentStateContext, "CheckboxActionComponent must be rendered inside a ComponentStateContext");
@@ -48,7 +48,7 @@ export default noop.memo((type) => {
     label: tmp11.label,
     description: tmp11.description,
     checked: memo,
-    onToggle(value) {
+    onToggle: function onChange(value) {
       executeStateUpdate({ type, value });
     },
   });

@@ -15,7 +15,7 @@ let closure_5 = module_570.create((arg0) => {
   _require = arg0;
   function updateScreenReaderEnabled(event) {
     closure_0 = event;
-    closure_0(1259).batchUpdates(() => screenReaderEnabled((screenReaderEnabled) => {
+    closure_0(1271).batchUpdates(() => screenReaderEnabled((screenReaderEnabled) => {
       let tmp = screenReaderEnabled;
       if (screenReaderEnabled.screenReaderEnabled !== screenReaderEnabled) {
         const Storage = screenReaderEnabled(510).Storage;
@@ -29,7 +29,7 @@ let closure_5 = module_570.create((arg0) => {
   let result = AccessibilityInfo.isScreenReaderEnabled();
   result.then(updateScreenReaderEnabled).catch(() => {
     c0 = false;
-    closure_0(1259).batchUpdates(() => screenReaderEnabled((screenReaderEnabled) => {
+    closure_0(1271).batchUpdates(() => screenReaderEnabled((screenReaderEnabled) => {
       let tmp = screenReaderEnabled;
       if (screenReaderEnabled.screenReaderEnabled !== screenReaderEnabled) {
         const Storage = screenReaderEnabled(510).Storage;
@@ -61,4 +61,6 @@ export const addScreenReaderEnabledListener = function addScreenReaderEnabledLis
 export const getIsScreenReaderEnabled = function getIsScreenReaderEnabled() {
   return closure_5.getState().screenReaderEnabled;
 };
-export const useIsScreenReaderEnabled = () => closure_5(SCREEN_READER_ENABLED_GETTER);
+export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
+  return closure_5(SCREEN_READER_ENABLED_GETTER);
+};

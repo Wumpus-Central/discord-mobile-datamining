@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (type, guildId, arg2) => {
+  ? function useThrottledDispatch(type, guildId, arg2) {
       _require = type;
       dependencyMap = arg2;
       const cResult = require("c").c(10);
@@ -64,7 +64,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = throttleResult;
       tmp4 = throttleResult;
     }
-  : (arg0, arg1, arg2) => {
+  : function useThrottledDispatch(arg0, arg1, arg2) {
       closure_0 = arg0;
       closure_1 = arg1;
       closure_2 = arg2;
@@ -87,7 +87,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useMemberCount(arg0) {
       _require = arg0;
       const cResult = require("c").c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -98,7 +98,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function s() {
+        const fn = function c() {
           let num = GuildMemberCountStore.getMemberCount(closure_0);
           if (num == null) {
             num = 0;
@@ -133,7 +133,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = require("initialize");
       return require("initialize").useStateFromStores(tmp8, tmp10);
     }
-  : (arg0) => {
+  : function useMemberCount(arg0) {
       _require = arg0;
       const items = [GuildMemberCountStore];
       closure_6(
@@ -153,7 +153,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useOnlineCount(arg0) {
       _require = arg0;
       const cResult = require("c").c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -164,7 +164,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function s() {
+        const fn = function c() {
           let num = GuildMemberCountStore.getOnlineCount(closure_0);
           if (num == null) {
             num = 0;
@@ -199,7 +199,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = require("initialize");
       return require("initialize").useStateFromStores(tmp8, tmp10);
     }
-  : (arg0) => {
+  : function useOnlineCount(arg0) {
       _require = arg0;
       const items = [GuildMemberCountStore];
       closure_6(
@@ -222,7 +222,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/useGuildHeaderCounts.tsx");
 
 export const useGuildHeaderCounts = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGuildHeaderCounts(arg0) {
       _require = arg0;
       const cResult = require("c").c(7);
       const tmp4 = closure_7(arg0);
@@ -262,7 +262,7 @@ export const useGuildHeaderCounts = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = obj2;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useGuildHeaderCounts(arg0) {
       _require = arg0;
       const obj = { memberCount: closure_7(arg0), onlineCount: closure_8(arg0), activeChannelsCount: null };
       const items = [GuildHeaderCountsStore];

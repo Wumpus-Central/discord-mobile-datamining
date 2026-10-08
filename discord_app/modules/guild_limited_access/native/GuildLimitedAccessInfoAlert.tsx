@@ -10,10 +10,10 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import TextStyles from "../../rebrand/native/TextStyles.tsx";
 
 require = fn;
-const helpdeskArticle = fn(13661).GUILD_LIMITED_ACCESS_HC_LINK;
+const helpdeskArticle = fn(5901).GUILD_LIMITED_ACCESS_HC_LINK;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { header: null, text: null };
 let obj3 = {};
 const merged = Object.assign(
@@ -29,7 +29,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_limited_access/native/GuildLimitedAccessInfoAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildLimitedAccessInfoAlert(arg0) {
       const cResult = c.c(13);
       ({ guildId, onClose } = arg0);
       const tmp4 = closure_7();
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp18 = tmp19;
       const obj6 = { style: tmp4.text, variant: "text-md/medium", children: tmp8 };
     }
-  : (arg0) => {
+  : function GuildLimitedAccessInfoAlert(arg0) {
       ({ guildId, onClose } = arg0);
       const tmp = closure_7();
       const intl = util.intl;

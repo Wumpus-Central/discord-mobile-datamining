@@ -12,10 +12,10 @@ const Constants = fn(1085);
   ChatInputComponentViewedTypes: metroRequire,
   VerticalGradient: closure_7,
 } = Constants);
-const EmojiIntention = fn(1380).EmojiIntention;
+const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { flex: 1 },
   list: { overflow: "hidden", flex: 1 },
@@ -49,7 +49,7 @@ const result = size.fileFinishedImporting("modules/emoji_picker/native/component
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function EmojiPicker(arg0) {
         const cResult = channel(handleTextChange[9]).c(60);
         ({ bottomSheetRef, bottomSheetIndex, channel } = arg0);
         ({ onPressEmoji, onBackspace, inPortalKeyboard, suggestedEmojis } = arg0);
@@ -279,7 +279,7 @@ export default noop.memo(
         tmp5 = fn;
         const obj = channel(handleTextChange[9]);
       }
-    : (inPortalKeyboard) => {
+    : function EmojiPicker(inPortalKeyboard) {
         ({ bottomSheetIndex, channel } = inPortalKeyboard);
         inPortalKeyboard = inPortalKeyboard.inPortalKeyboard;
         let handleTextChange;

@@ -10,7 +10,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function useRoleIconProps(guildId) {
       const cResult = guildId(roleId[4]).c(10);
       guildId = guildId.guildId;
       roleId = guildId.roleId;
@@ -67,7 +67,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn = function u() {
+      const fn = function c() {
         let tmp3 = role;
         if (GuildStore !== undefined) {
           if (GuildRoleStore !== undefined) {
@@ -107,7 +107,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       const obj = guildId(roleId[4]);
     }
-  : (guildId) => {
+  : function useRoleIconProps(guildId) {
       guildId = guildId.guildId;
       const roleId = guildId.roleId;
       let num = guildId.size;
@@ -216,7 +216,7 @@ const result = size.fileFinishedImporting("modules/roles/useRoleIconProps.tsx");
 export const useRoleIconProps = tmp2;
 export { getRoleIconProps };
 export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, role) => {
+  ? function useRoleIconPropsForPreview(guildId, role) {
       _require = guildId;
       dependencyMap = role;
       const cResult = require("c").c(7);
@@ -236,20 +236,20 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
         if (cResult[5] !== stateFromStores) {
           let tmp12;
           if (null != stateFromStores) {
-            const roleIconData = tmp(6693).getRoleIconData(stateFromStores, undefined);
+            const roleIconData = tmp(6870).getRoleIconData(stateFromStores, undefined);
             if (null != roleIconData) {
               const obj2 = {
                 src: roleIconData.customIconSrc,
                 name: null,
                 roleId: null,
                 size: "Array",
-                unicodeEmoji: false,
+                unicodeEmoji: "hasIcon",
               };
               ({ name: obj4.name, id: obj4.roleId } = stateFromStores);
               obj2.unicodeEmoji = roleIconData.unicodeEmoji;
               tmp12 = obj2;
             }
-            const tmpResult2 = tmp(6693);
+            const tmpResult2 = tmp(6870);
           }
           cResult[5] = stateFromStores;
           cResult[6] = tmp12;
@@ -259,7 +259,7 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
         }
         return tmp10;
       }
-      const fn = function c() {
+      const fn = function t() {
         ({ guildId, roleId, role, guild } = { guildId, role });
         if (GuildStore !== undefined) {
           if (GuildRoleStore !== undefined) {
@@ -298,7 +298,7 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
       tmp7 = fn;
       let obj = require("c");
     }
-  : (guildId, role) => {
+  : function useRoleIconPropsForPreview(guildId, role) {
       _require = guildId;
       dependencyMap = role;
       const items = [GuildStore, GuildRoleStore];
@@ -348,7 +348,7 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
               name: null,
               roleId: null,
               size: "Array",
-              unicodeEmoji: false,
+              unicodeEmoji: "hasIcon",
             };
             ({ name: obj2.name, id: obj2.roleId } = stateFromStores);
             obj3.unicodeEmoji = roleIconData.unicodeEmoji;

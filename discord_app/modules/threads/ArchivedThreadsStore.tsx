@@ -6,7 +6,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import ThreadSortOrder from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
 import ThreadSearchTagSetting from "../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
 import ForumUtils from "../forums/ForumUtils.tsx";
-import tracking_Tracking from "../forums/tracking/Tracking.tsx";
+import Tracking from "../forums/tracking/Tracking.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
@@ -106,14 +106,14 @@ function resortListState(value) {
     const tmp7Result = _modDef12(ChannelStore.getAllThreadsForParent(value.channelId));
     value.threads = mapped.reverse().value();
     let iter = mapped.reverse();
-  } else if (sortOrder === sortOrder(2061).ThreadSortOrder.LATEST_ACTIVITY) {
+  } else if (sortOrder === sortOrder(2073).ThreadSortOrder.LATEST_ACTIVITY) {
     id = id.id;
     let id2 = ReadStateStore.lastMessageId(id);
   } else {
     id2 = id.id;
   }
 }
-const ALL_CHANNEL_TYPES = fn(2055).ALL_CHANNEL_TYPES;
+const ALL_CHANNEL_TYPES = fn(2067).ALL_CHANNEL_TYPES;
 const map = new Map();
 let closure_12 = [];
 const Store = initializeDefault.Store;
@@ -347,7 +347,7 @@ const archivedThreadsStore = new ArchivedThreadsStore(DispatcherDefault, {
           const _Array2 = Array;
           obj.filterTagIds = Array.from(tagFilter.tagFilter);
           obj.sortOrder = tagFilter.sortOrder;
-          const result = tracking_Tracking.trackForumMorePostsLoaded(obj);
+          const result = Tracking.trackForumMorePostsLoaded(obj);
         }
         resortListState(value);
         value.hasMore = tagFilter.hasMore;

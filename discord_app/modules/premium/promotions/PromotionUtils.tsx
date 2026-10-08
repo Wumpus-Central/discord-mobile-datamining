@@ -72,10 +72,10 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          const HTTP = closure_132_0(closure_132_2[8]).HTTP;
+          const HTTP = closure_132_0(closure_132_2[7]).HTTP;
           const obj5 = {
             url: closure_132_9.CLAIM_OUTBOUND_PROMOTION_CODE(closure_131_0),
-            rejectWithError: closure_132_0(closure_132_2[8]).rejectWithMigratedError(),
+            rejectWithError: closure_132_0(closure_132_2[7]).rejectWithMigratedError(),
           };
           c5 = 2;
           c6 = 1;
@@ -98,7 +98,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
           ANDROID = closure_132_10.ANDROID;
         }
         closure_131_6 = ANDROID;
-        obj9 = closure_132_0(closure_132_2[9]);
+        obj9 = closure_132_0(closure_132_2[8]);
         const obj8 = {
           platform: closure_131_6,
           status: closure_131_4.status,
@@ -117,7 +117,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
           partner = null;
         }
         obj8.partner = partner;
-        closure_132_1(closure_132_2[10]).track(closure_132_8.OUTBOUND_PROMOTION_CLAIMED, obj8);
+        closure_132_1(closure_132_2[9]).track(closure_132_8.OUTBOUND_PROMOTION_CLAIMED, obj8);
         c6 = 3;
         const obj10 = { value: closure_132_11(body), done: true };
         return obj10;
@@ -128,10 +128,9 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
     }
   }
 };
-const PromotionFlags = fn(1379).PromotionFlags;
+const PromotionFlags = fn(1391).PromotionFlags;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, Platforms: c10 } = Constants);
-const ActivityPlatform = fn(2011).ActivityPlatform;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/PromotionUtils.tsx");
 

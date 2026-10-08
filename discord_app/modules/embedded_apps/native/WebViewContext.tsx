@@ -10,7 +10,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const context = noop.createContext(0);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({
   placeholderWebView: { width: 2, height: 2, position: "absolute", opacity: 0 },
 });
@@ -20,13 +20,13 @@ const result = size.fileFinishedImporting("modules/embedded_apps/native/WebViewC
 
 export const WebViewContext = context;
 export const WebViewContextProvider = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function WebViewContextProvider(children) {
       const cResult = c.c(7);
       children = children.children;
       const tmp2 = closure_8();
       [tmp4, require] = noop.useState(0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function b(_nativeTag) {
+        const fn = function u(_nativeTag) {
           if (_nativeTag) {
             require(_nativeTag._nativeTag);
           }
@@ -64,7 +64,7 @@ export const WebViewContextProvider = ReactCompilerGating.isReactCompilerEnabled
       tmp10 = tmp11;
       const tmp3 = _slicedToArray(noop.useState(0), 2);
     }
-  : (children) => {
+  : function WebViewContextProvider(children) {
       const tmp2 = _slicedToArray(noop.useState(0), 2);
       closure_0 = tmp3;
       const items = [tmp2[1]];

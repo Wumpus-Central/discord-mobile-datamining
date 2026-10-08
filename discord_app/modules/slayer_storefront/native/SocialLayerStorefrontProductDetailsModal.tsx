@@ -28,7 +28,7 @@ import n_mod from "../../../../_runtime/metro/00683__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const SlayerShopPDPCTAType = fn(10547).SlayerShopPDPCTAType;
+const SlayerShopPDPCTAType = fn(10144).SlayerShopPDPCTAType;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, PaymentGateways: closure_12, PriceSetAssignmentPurchaseTypes: map1 } = Constants);
 const jsxProd = fn(21);
@@ -40,7 +40,7 @@ let n = n_mod;
 const alphaResult = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25);
 const importDefaultResult1Result = n(nativeDefault.unsafe_rawColors.BRAND_500);
 let closure_17 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0).hex();
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { flex: 1 },
   header: null,
@@ -78,7 +78,7 @@ let obj = {
 };
 const alphaResult1 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0);
 obj.header = {
-  height: fn(6075).NAV_BAR_HEIGHT,
+  height: fn(6261).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: nativeDefault.space.PX_8,
@@ -88,7 +88,7 @@ obj.header = {
 };
 obj.headerTitle = { flexShrink: 1 };
 let obj2 = {
-  height: fn(6075).NAV_BAR_HEIGHT,
+  height: fn(6261).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: nativeDefault.space.PX_8,
@@ -171,15 +171,15 @@ obj.legalCopy = { display: "flex", flexDirection: "column", gap: nativeDefault.s
 let obj19 = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_4 };
 obj.hero = {
   marginHorizontal: nativeDefault.space.PX_16,
-  height: fn(10548).MOBILE_HERO_HEIGHT_PX,
+  height: fn(10145).MOBILE_HERO_HEIGHT_PX,
   borderRadius: nativeDefault.radii.md,
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj.heroLandscape = { flex: 1, minHeight: 140, height: "body" };
+obj.heroLandscape = { flex: 1, minHeight: 140, height: "round" };
 let obj20 = {
   marginHorizontal: nativeDefault.space.PX_16,
-  height: fn(10548).MOBILE_HERO_HEIGHT_PX,
+  height: fn(10145).MOBILE_HERO_HEIGHT_PX,
   borderRadius: nativeDefault.radii.md,
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -191,7 +191,7 @@ obj.exclusiveBadgeContainer = { paddingHorizontal: nativeDefault.space.PX_16 };
 let closure_18 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function HeroMedia(arg0) {
       const cResult = c.c(31);
       ({ mediaItem, landscape } = arg0);
       const tmp4 = closure_18();
@@ -322,7 +322,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp5 = items1;
     }
-  : (arg0) => {
+  : function HeroMedia(arg0) {
       ({ mediaItem, landscape } = arg0);
       const tmp = closure_18();
       const items = [tmp.hero];
@@ -366,7 +366,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function InGameItemTag() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
@@ -380,7 +380,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => {
+  : function InGameItemTag() {
       const obj = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl = util.intl;
       obj.children = intl.string(util.t.V91tvy);
@@ -388,7 +388,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (sku) => {
+  ? function ProductPriceSection(sku) {
       const cResult = c.c(11);
       sku = sku.sku;
       let priceSection = closure_18();
@@ -445,7 +445,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = StorefrontNativeUtils;
     }
-  : (sku) => {
+  : function ProductPriceSection(sku) {
       const tmp = closure_18();
       const userPrice = StorefrontNativeUtils.useFormattedSKUPrice({
         sku: sku.sku,
@@ -466,7 +466,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onSelectIndex) => {
+  ? function BundleThumbnailRow(onSelectIndex) {
       const cResult = items(onSelectIndex[14]).c(29);
       items = onSelectIndex.items;
       ({ mediaItems, selectedIndex: thumbnailSelected } = onSelectIndex);
@@ -512,7 +512,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                             let obj3 = { style: tmp4.section, children: null };
                             let items1 = [tmp7, tmp15];
                             obj3.children = items1;
-                            class P {
+                            class C {
                               constructor(arg0, arg1) {
                                 closure_0 = arg1;
                                 tmp = closure_0[arg1];
@@ -584,7 +584,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                           };
                           const tmp18 = closure_14(closure_5, obj4);
                           cResult[23] = tmp4.bundleThumbnailRow;
-                          class P {
+                          class C {
                             constructor(arg0, arg1) {
                               closure_0 = arg1;
                               tmp = closure_0[arg1];
@@ -670,7 +670,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                       cResult[5] = items;
                       cResult[6] = mediaItems;
                       cResult[7] = thumbnailSelected;
-                      class P {
+                      class C {
                         constructor(arg0, arg1) {
                           closure_0 = arg1;
                           tmp = closure_0[arg1];
@@ -742,7 +742,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        class P {
+        class C {
           constructor(arg0, arg1) {
             closure_0 = arg1;
             tmp = closure_0[arg1];
@@ -809,8 +809,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[19] = tmp4.thumbnailInner;
         cResult[20] = tmp4.thumbnailInnerSelected;
         cResult[21] = tmp4.thumbnailSelected;
-        cResult[22] = P;
-        tmp12 = P;
+        cResult[22] = C;
+        tmp12 = C;
       }
       const fn = function l(arg0) {
         trackPDPClick(SlayerShopPDPCTAType.CAROUSEL_ITEM);
@@ -822,7 +822,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       let obj = items(onSelectIndex[14]);
     }
-  : (trackPDPClick) => {
+  : function BundleThumbnailRow(trackPDPClick) {
       ({ items: require, mediaItems, selectedIndex: importDefault, onSelectIndex } = trackPDPClick);
       trackPDPClick = trackPDPClick.trackPDPClick;
       const tmp = closure_18();
@@ -896,7 +896,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (sku) => {
+  ? function SKUNameAndDescriptionSection(sku) {
       const cResult = c.c(8);
       sku = sku.sku;
       let section = closure_18();
@@ -942,7 +942,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2 = StringUtils;
     }
-  : (sku) => {
+  : function SKUNameAndDescriptionSection(sku) {
       sku = sku.sku;
       const tmp = closure_18();
       let tmp5Result = null;
@@ -965,7 +965,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ItemDetailsSection(arg0) {
       const cResult = c.c(20);
       ({ selectedItem, applicationId } = arg0);
       const tmp4 = closure_18();
@@ -1097,7 +1097,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = assetURL;
       tmp5 = assetURL;
     }
-  : (selectedItem) => {
+  : function ItemDetailsSection(selectedItem) {
       selectedItem = selectedItem.selectedItem;
       const tmp = closure_18();
       let assetURL = null;
@@ -1166,7 +1166,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (skuId) => {
+  ? function SocialLayerStorefrontProductDetailsModal(skuId) {
       const cResult = skuId(mobileStoreFront[14]).c(163);
       skuId = skuId.skuId;
       const analyticsLocations = skuId.analyticsLocations;
@@ -1185,40 +1185,26 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== skuId) {
-        class S {
-          constructor() {
-            return closure_8.get(skuId);
-          }
-        }
+        const fn = function b() {
+          return SKUStore.get(skuId);
+        };
         cResult[1] = skuId;
-        cResult[2] = S;
+        cResult[2] = fn;
+        let tmp11 = fn;
       } else {
-        class S {
-          constructor() {
-            return closure_8.get(skuId);
-          }
-        }
+        tmp11 = cResult[2];
       }
       let obj3 = require("NativePaymentHooks");
-      const stateFromStores = skuId(mobileStoreFront[26]).useStateFromStores(first, S);
+      const stateFromStores = skuId(mobileStoreFront[26]).useStateFromStores(first, tmp11);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            return closure_8.get(skuId);
-          }
-        }
         const items1 = [SKUStore];
         cResult[3] = items1;
-        const tmp13 = items1;
+        let tmp13 = items1;
       } else {
-        class S {
-          constructor() {
-            return closure_8.get(skuId);
-          }
-        }
+        tmp13 = cResult[3];
       }
       if (cResult[4] !== skuId) {
-        class F {
+        class N {
           constructor() {
             obj = closure_8;
             tmp = skuId;
@@ -1227,9 +1213,9 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[4] = skuId;
-        cResult[5] = F;
+        cResult[5] = N;
       } else {
-        class F {
+        class N {
           constructor() {
             obj = closure_8;
             tmp = skuId;
@@ -1239,10 +1225,10 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult = skuId(mobileStoreFront[26]);
-      const stateFromStores1 = skuId(mobileStoreFront[26]).useStateFromStores(tmp13, F);
+      const stateFromStores1 = skuId(mobileStoreFront[26]).useStateFromStores(tmp13, N);
       const tmpResult5 = skuId(mobileStoreFront[26]);
       if (stateFromStores != null) {
-        class F {
+        class N {
           constructor() {
             obj = closure_8;
             tmp = skuId;
@@ -1254,7 +1240,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       const getOrFetchApplication = skuId(mobileStoreFront[27]).useGetOrFetchApplication(undefined);
       const tmpResult6 = skuId(mobileStoreFront[27]);
       if (getOrFetchApplication == null) {
-        class F {
+        class N {
           constructor() {
             obj = closure_8;
             tmp = skuId;
@@ -1265,7 +1251,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const hasAlreadyLinked = require("useStartAuthorize")(getOrFetchApplication).hasAlreadyLinked;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        class F {
+        class N {
           constructor() {
             obj = closure_8;
             tmp = skuId;
@@ -1281,10 +1267,10 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[6] = items2;
         cResult[7] = X;
-        let tmp19 = X;
-        const tmp18 = items2;
+        let tmp20 = X;
+        const tmp19 = items2;
       } else {
-        class F {
+        class N {
           constructor() {
             obj = closure_8;
             tmp = skuId;
@@ -1292,16 +1278,16 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp2;
           }
         }
-        tmp19 = cResult[7];
+        tmp20 = cResult[7];
       }
       let tmp5Result = require("useStartAuthorize");
-      const stateFromStores2 = skuId(mobileStoreFront[26]).useStateFromStores(tmp18, tmp19);
+      const stateFromStores2 = skuId(mobileStoreFront[26]).useStateFromStores(tmp19, tmp20);
       const tmpResult7 = skuId(mobileStoreFront[26]);
       const cardImageURL = skuId(mobileStoreFront[29]).getCardImageURL(stateFromStores);
       const tmpResult8 = skuId(mobileStoreFront[29]);
       [r10099, r10100] = stateFromStores(stateFromStores1.useState(0), 2);
       if (cResult[8] !== analyticsLocations) {
-        class F {
+        class N {
           constructor() {
             obj = closure_8;
             tmp = skuId;
@@ -1310,7 +1296,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (analyticsLocations == null) {
-          class F {
+          class N {
             constructor() {
               obj = closure_8;
               tmp = skuId;
@@ -1324,9 +1310,9 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_9.getSkuAssets();
           }
         }
-        cResult[9] = tmp24;
+        cResult[9] = tmp25;
       } else {
-        class F {
+        class N {
           constructor() {
             obj = closure_8;
             tmp = skuId;
@@ -1335,8 +1321,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      if (cResult[10] !== tmp24) {
-        class F {
+      if (cResult[10] !== tmp25) {
+        class N {
           constructor() {
             obj = closure_8;
             tmp = skuId;
@@ -1349,12 +1335,12 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_9.getSkuAssets();
           }
         }
-        tmp26[HermesBuiltin.arraySpread(tmp24, 0)] = tmp5(tmp2[30]).SLAYER_STOREFRONT_NATIVE_PDP;
-        cResult[10] = tmp24;
-        cResult[11] = tmp26;
-        const arraySpreadResult = HermesBuiltin.arraySpread(tmp24, 0);
+        tmp27[HermesBuiltin.arraySpread(tmp25, 0)] = tmp5(tmp2[30]).SLAYER_STOREFRONT_NATIVE_PDP;
+        cResult[10] = tmp25;
+        cResult[11] = tmp27;
+        const arraySpreadResult = HermesBuiltin.arraySpread(tmp25, 0);
       } else {
-        class F {
+        class N {
           constructor() {
             obj = closure_8;
             tmp = skuId;
@@ -1363,9 +1349,9 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      location_stack = tmp26;
-      if (cResult[12] === tmp26) {
-        class F {
+      location_stack = tmp27;
+      if (cResult[12] === tmp27) {
+        class N {
           constructor() {
             obj = closure_8;
             tmp = skuId;
@@ -1374,7 +1360,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (stateFromStores != null) {
-          class F {
+          class N {
             constructor() {
               obj = closure_8;
               tmp = skuId;
@@ -1389,9 +1375,9 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      cResult[12] = tmp26;
+      cResult[12] = tmp27;
       if (stateFromStores != null) {
-        class F {
+        class N {
           constructor() {
             obj = closure_8;
             tmp = skuId;
@@ -1421,9 +1407,9 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = undefined;
       cResult[14] = skuId;
       cResult[15] = J;
-      const tmp22 = stateFromStores(stateFromStores1.useState(0), 2);
+      const tmp23 = stateFromStores(stateFromStores1.useState(0), 2);
     }
-  : (skuId) => {
+  : function SocialLayerStorefrontProductDetailsModal(skuId) {
       skuId = skuId.skuId;
       const analyticsLocations = skuId.analyticsLocations;
       let stateFromStores2;
@@ -1435,11 +1421,11 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       c12 = undefined;
       const tmp = closure_18();
       dependencyMap = tmp;
-      const rect = analyticsLocations(1618)();
-      const isScreenLandscape = skuId(5919).useIsScreenLandscape();
-      let obj = skuId(5919);
-      const mobileStoreFront = analyticsLocations(8900).useMobileStoreFront();
-      let obj2 = analyticsLocations(8900);
+      const rect = analyticsLocations(1630)();
+      const isScreenLandscape = skuId(8302).useIsScreenLandscape();
+      let obj = skuId(8302);
+      const mobileStoreFront = analyticsLocations(9333).useMobileStoreFront();
+      let obj2 = analyticsLocations(9333);
       let items = [trackPDPClick];
       const stateFromStores = skuId(504).useStateFromStores(items, () => SKUStore.get(skuId));
       let obj3 = skuId(504);
@@ -1453,13 +1439,13 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores != null) {
         applicationId1 = stateFromStores.applicationId;
       }
-      const getOrFetchApplication = skuId(6670).useGetOrFetchApplication(applicationId1);
+      const getOrFetchApplication = skuId(6847).useGetOrFetchApplication(applicationId1);
       let tmp12 = getOrFetchApplication;
-      const obj5 = skuId(6670);
+      const obj5 = skuId(6847);
       if (getOrFetchApplication == null) {
         tmp12 = null;
       }
-      const tmp2Result = analyticsLocations(6667);
+      const tmp2Result = analyticsLocations(6844);
       const items2 = [skuAssets];
       stateFromStores2 = skuId(504).useStateFromStores(items2, () => skuAssets.getSkuAssets());
       const items3 = [stateFromStores];
@@ -1475,7 +1461,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [...items, AnalyticsLocationDefault.SLAYER_STOREFRONT_NATIVE_PDP];
         return items1;
       }, items4);
-      analyticsLocations(5597)(() => {
+      analyticsLocations(5392)(() => {
         const obj2 = {
           location_stack: memo1,
           type: SocialLayerStorefrontNativeActionCreators.SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY,
@@ -1712,7 +1698,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         }
         obj = BillingPlatformUtils;
       }, items9);
-      const OTPACOMOrderExperiment = tmp4(8899).OTPACOMOrderExperiment;
+      const OTPACOMOrderExperiment = tmp4(9332).OTPACOMOrderExperiment;
       let enabled = OTPACOMOrderExperiment.useConfig({ location: "SocialLayerStorefrontProductDetailsModal" }).enabled;
       const tmp15Result6 = mobileStoreFront(stateFromStores.useState(0), 2);
       if (tmp4Result6.isIOS()) {
@@ -1741,7 +1727,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         obj6.orderRequired = enabled;
         const items10 = [skuId];
         obj6.skuIds = items10;
-        obj6.onOrderRetryCancellation = tmp4(10544).closeSocialLayerStorefrontProductDetailsModal;
+        obj6.onOrderRetryCancellation = tmp4(10141).closeSocialLayerStorefrontProductDetailsModal;
         const obj8 = {
           is_gift: false,
           location_stack: memo1,
@@ -1775,19 +1761,19 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           onPurchaseComplete: callback2,
           onPurchaseError: callback1,
         };
-        obj6.children = closure_14(tmp4(10555).HeadlessSlayerStorefrontPurchaseRunner, obj9);
-        tmp43Result = closure_14(tmp2(10551), obj6, skuId);
-        const tmp2Result2 = tmp2(10551);
+        obj6.children = closure_14(tmp4(10152).HeadlessSlayerStorefrontPurchaseRunner, obj9);
+        tmp43Result = closure_14(tmp2(10148), obj6, skuId);
+        const tmp2Result2 = tmp2(10148);
       }
       const items11 = [skuId, memo1, trackPDPClick];
       if (null == stateFromStores) {
         return null;
       } else {
-        let result = tmp4(6746).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
+        let result = tmp4(6922).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
         const intl4 = tmp4(1126).intl;
         const stringResult = intl4.string(tmp4(1126).t.boqtTA);
-        const tmp4Result7 = tmp4(6746);
-        let result1 = tmp4(4547).isSocialLayerStorefrontGiftingSupported();
+        const tmp4Result7 = tmp4(6922);
+        let result1 = tmp4(4739).isSocialLayerStorefrontGiftingSupported();
         if (null != tmp25) {
           const obj10 = { mediaItem: tmp25, landscape: isScreenLandscape };
           let tmp49 = closure_14(closure_19, obj10);
@@ -1795,12 +1781,12 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           tmp49 = null;
           if (null != memo) {
             const obj11 = { sku: stateFromStores };
-            tmp49 = closure_14(tmp2(8514), obj11);
+            tmp49 = closure_14(tmp2(8998), obj11);
           }
         }
         let tmp53 = null;
         if (stateFromStores.exclusive) {
-          const obj12 = { style: tmp.exclusiveBadgeContainer, children: closure_14(tmp4(10559).ExclusiveBadge, {}) };
+          const obj12 = { style: tmp.exclusiveBadgeContainer, children: closure_14(tmp4(10156).ExclusiveBadge, {}) };
           tmp53 = closure_14(memo1, obj12);
         }
         let tmp56 = null;
@@ -1838,8 +1824,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             children: null,
           };
           const intl = tmp4(1126).intl;
-          obj18.children = intl.string(tmp2(3623).gndWN7);
-          tmp65Result = closure_14(tmp4(4892).Text, obj18);
+          obj18.children = intl.string(tmp2(3697).gndWN7);
+          tmp65Result = closure_14(tmp4(5086).Text, obj18);
         }
         items13[1] = tmp65Result;
         const obj19 = { style: tmp.footerButtonRow, children: null };
@@ -1858,11 +1844,11 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         }
         obj21.disabled = tmp68;
         obj21.onPress = callback3;
-        obj20.children = closure_14(tmp4(5601).Button, obj21);
+        obj20.children = closure_14(tmp4(5375).Button, obj21);
         const items14 = [closure_14(memo1, obj20)];
         if (result1) {
           const obj22 = {
-            icon: tmp2(7763),
+            icon: tmp2(8084),
             variant: "primary",
             size: "lg",
             disabled: tmp28,
@@ -1872,7 +1858,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           const intl2 = tmp4(1126).intl;
           obj22.accessibilityLabel = intl2.string(tmp4(1126).t.QAZA5f);
           obj22.onPress = tmp48;
-          result1 = closure_14(tmp4(7586).IconButton, obj22);
+          result1 = closure_14(tmp4(8106).IconButton, obj22);
         }
         items14[1] = result1;
         obj19.children = items14;
@@ -1880,7 +1866,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         if (result) {
           const obj23 = { style: tmp.legalCopy, children: null };
           const obj24 = { shouldAppendDisclaimer: false === tmp2Result(tmp12).hasAlreadyLinked };
-          const mobileFinePrintMessageForApplication = tmp4(10562).getMobileFinePrintMessageForApplication(
+          const mobileFinePrintMessageForApplication = tmp4(10159).getMobileFinePrintMessageForApplication(
             getOrFetchApplication,
             stringResult,
             obj24,
@@ -1893,13 +1879,13 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             ),
           );
           result = closure_14(tmp64, obj23);
-          const tmp4Result9 = tmp4(10562);
+          const tmp4Result9 = tmp4(10159);
         }
         items13[3] = result;
         obj15.children = items13;
         const tmp63Result = closure_15(memo1, obj15);
         const items15 = [tmp.container];
-        const tmp4Result8 = tmp4(4547);
+        const tmp4Result8 = tmp4(4739);
         let num3 = 0;
         if (!tmp4Result10.isIOS()) {
           num3 = rect.top;
@@ -1911,7 +1897,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         const items16 = [tmp43Result, , ,];
         const obj27 = { style: tmp.header, children: null };
         const obj28 = {
-          onPress: tmp4(10544).closeSocialLayerStorefrontProductDetailsModal,
+          onPress: tmp4(10141).closeSocialLayerStorefrontProductDetailsModal,
           backImage() {
             return state(XSmallIcon.XSmallIcon, { size: "md", style: closeButtonIcon.closeButtonIcon });
           },
@@ -1920,7 +1906,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const intl3 = tmp4(1126).intl;
         obj28.accessibilityLabel = intl3.string(tmp4(1126).t.cpT0Cq);
-        const items17 = [closure_14(tmp4(6026).HeaderBackButton, obj28)];
+        const items17 = [closure_14(tmp4(6212).HeaderBackButton, obj28)];
         const obj29 = {
           variant: "heading-lg/bold",
           color: "mobile-text-heading-primary",
@@ -1932,7 +1918,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           name = getOrFetchApplication.name;
         }
         obj29.children = name;
-        items17[1] = closure_14(tmp4(4892).Heading, obj29);
+        items17[1] = closure_14(tmp4(5086).Heading, obj29);
         obj27.children = items17;
         items16[1] = closure_15(memo1, obj27);
         const obj30 = { style: tmp.scrollContainer, children: null };
@@ -1941,7 +1927,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           const obj31 = { style: stateFromStores2.absoluteFill, colors: null, pointerEvents: "none" };
           const items18 = [closure_16, closure_17];
           obj31.colors = items18;
-          exclusive = closure_14(tmp2(5612), obj31);
+          exclusive = closure_14(tmp2(5387), obj31);
         }
         const items19 = [exclusive];
         if (isScreenLandscape) {
@@ -1993,7 +1979,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         obj25.children = items16;
         return closure_15(memo1, obj25);
       }
-      tmp4Result6 = skuId(1369);
+      tmp4Result6 = skuId(1381);
     };
 ReactCompilerGating = fn(558);
 let obj22 = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -2003,7 +1989,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function WrappedSocialLayerStorefrontProductDetailsModal(arg0) {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [];
@@ -2026,7 +2012,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : (arg0) => {
+  : function WrappedSocialLayerStorefrontProductDetailsModal(arg0) {
       const obj = { skuIDs: [], activeSubscription: null, children: null };
       const merged = Object.assign(arg0);
       obj.children = state(closure_25, {});

@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({
   container: { marginLeft: 8, flex: 1, flexDirection: "row" },
   tag: { flexDirection: "row", alignItems: "center", paddingLeft: 8 },
@@ -24,7 +24,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUserNameItem.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VoiceUserNameItem(arg0) {
       const cResult = c.c(32);
       ({ member, user, guildId, isGuest, color, variant } = arg0);
       const tmp4 = closure_8();
@@ -52,15 +52,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [r10063, _slicedToArray] = noop.useState(0);
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          class C {
+          class N {
             constructor(arg0) {
               tmp = closure_0(arg0.nativeEvent.layout.width);
               return;
             }
           }
-          cResult[5] = C;
+          cResult[5] = N;
         } else {
-          class C {
+          class N {
             constructor(arg0) {
               tmp = closure_0(arg0.nativeEvent.layout.width);
               return;
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj6;
       tmp5 = obj6;
     }
-  : (arg0) => {
+  : function VoiceUserNameItem(arg0) {
       ({ member, user, isGuest } = arg0);
       c0 = undefined;
       c1 = undefined;

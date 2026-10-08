@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useVideoQuestClickCtaAndMaybeCloseModal = ReactCompilerGating.isReactCompilerEnabled()
-  ? (quest) => {
+  ? function useVideoQuestClickCtaAndMaybeCloseModal(quest) {
       const cResult = quest(sourceQuestContent[2]).c(5);
       quest = quest.quest;
       const onClose = quest.onClose;
@@ -30,7 +30,7 @@ export const useVideoQuestClickCtaAndMaybeCloseModal = ReactCompilerGating.isRea
           }
         }
       }
-      const fn = function n(content) {
+      const fn = function s(content) {
         const obj = URLUtilsDefault;
         if (obj.isDiscordUrl(obj2.getCtaLink(quest.config), true)) {
           onClose();
@@ -57,7 +57,7 @@ export const useVideoQuestClickCtaAndMaybeCloseModal = ReactCompilerGating.isRea
       cResult[4] = fn;
       tmp3 = fn;
     }
-  : (quest) => {
+  : function useVideoQuestClickCtaAndMaybeCloseModal(quest) {
       quest = quest.quest;
       const onClose = quest.onClose;
       const sourceQuestContent = quest.sourceQuestContent;

@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function CollectiblesShopScreen() {
       const cResult = c.c(4);
       const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
       const shopOrientationLock = useShopOrientationLock.useShopOrientationLock();
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp13;
       tmp12 = tmp13;
     }
-  : () => {
+  : function CollectiblesShopScreen() {
       const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
       const shopOrientationLock = useShopOrientationLock.useShopOrientationLock();
       const giftCardMobileConsumptionHalfsheet =

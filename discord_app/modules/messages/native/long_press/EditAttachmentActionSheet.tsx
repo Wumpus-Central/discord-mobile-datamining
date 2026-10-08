@@ -18,7 +18,7 @@ import MessageStore from "../../../../stores/MessageStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_7 = fn(4889).LEGACY_SPOILER_ATTACHMENT_PREFIX;
+let closure_7 = fn(5083).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 let MessageAttachmentFlags = fn(1085).MessageAttachmentFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -27,7 +27,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/long_press/EditAttachmentActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (message) => {
+  ? function EditAttachmentActionSheet(message) {
       const cResult = require("c").c(44);
       message = message.message;
       _require = message;
@@ -79,15 +79,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol2 = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function z() {
+          function showError() {
             const intl = util.intl;
             const stringResult = intl.string(util.t.fEptJP);
             closure_1_7(stringResult);
             const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
             AccessibilityAnnouncer.announce(stringResult);
-          };
-          cResult[8] = fn;
-          let tmp27 = fn;
+          }
+          cResult[8] = showError;
+          let tmp27 = showError;
         } else {
           tmp27 = cResult[8];
         }
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = hasFlagResult;
       const tmp12 = first1(first2.useState(str), 2);
     }
-  : (arg0) => {
+  : function EditAttachmentActionSheet(arg0) {
       ({ message: require, attachment } = arg0);
       dependencyMap = undefined;
       value = undefined;
@@ -516,7 +516,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7Result3 = first1(first2.useState(false), 2);
       first2 = tmp7Result3[0];
       closure_6 = tmp7Result3[1];
-      const tmp5 = attachment(7951)(attachment);
+      const tmp5 = attachment(8369)(attachment);
       [tmp17, c7] = first1(first2.useState(), 2);
       let intl = util.intl;
       let stringResult = intl.string(util.t.Y8ujqr);

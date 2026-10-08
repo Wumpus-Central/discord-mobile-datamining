@@ -38,7 +38,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/native/GoogleWalletVerificationScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onClose) => {
+  ? function GoogleWalletVerificationScreen(onClose) {
       const cResult = require("c").c(24);
       onClose = onClose.onClose;
       _require = onClose;
@@ -423,7 +423,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return value;
         });
-        const fn2 = function () {
+        function t4() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -432,11 +432,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[6] = tmp10;
         cResult[7] = tmp8;
-        cResult[8] = fn2;
-        tmp11 = fn2;
+        cResult[8] = t4;
+        tmp11 = t4;
         const tmpResult = tmp(tmp2[8]);
       }
       class A {
@@ -454,7 +454,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = A;
       const tmp6 = _slicedToArray(noop.useState(first), 2);
     }
-  : (onClose) => {
+  : function GoogleWalletVerificationScreen(onClose) {
       onClose = onClose.onClose;
       const onComplete = onClose.onComplete;
       const modalSessionId = onClose.modalSessionId;

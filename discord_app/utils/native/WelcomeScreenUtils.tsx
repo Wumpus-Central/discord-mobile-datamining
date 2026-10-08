@@ -1,5 +1,5 @@
 // discord_app/utils/native/WelcomeScreenUtils.tsx
-import asyncRequireImpl from "../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 import WelcomeScreenActionCreators from "../../modules/welcome_screen/WelcomeScreenActionCreators.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -10,21 +10,21 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const NO_WELCOME_SCREEN = fn(12464).NO_WELCOME_SCREEN;
+const NO_WELCOME_SCREEN = fn(12560).NO_WELCOME_SCREEN;
 let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "a" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/native/WelcomeScreenUtils.tsx");
 
 export const useShowWelcomeModal = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useShowWelcomeModal(arg0, arg1) {
       _require = arg0;
       importDefault = arg1;
       const cResult = require("c").c(9);
       let obj = require("c");
       const tmp = _require;
       const tmp2 = welcomeModalChannelId;
-      welcomeModalChannelId = require("../../../_runtime/metro/04716__.js").useLocation().welcomeModalChannelId;
+      welcomeModalChannelId = require("../../../_runtime/metro/04910__.js").useLocation().welcomeModalChannelId;
       const tmp4 = require("useWelcomeScreenEnabled")(arg1, arg0);
       noop = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -43,37 +43,22 @@ export const useShowWelcomeModal = ReactCompilerGating.isReactCompilerEnabled()
             const stateFromStoresObject = tmp(tmp2[8]).useStateFromStoresObject(first, tmp9);
             shouldFetchGuildId = stateFromStoresObject.shouldFetchGuildId;
             if (cResult[6] !== shouldFetchGuildId) {
-              class F {
-                constructor() {
-                  if (null != shouldFetchGuildId) {
-                    tmp2 = closure_0;
-                    tmp3 = closure_2;
-                    obj = closure_0(closure_2[9]);
-                    welcomeScreen = obj.fetchWelcomeScreen(tmp);
-                  }
-                  return;
+              const fn2 = function v() {
+                if (null != shouldFetchGuildId) {
+                  const welcomeScreen = WelcomeScreenActionCreators.fetchWelcomeScreen(tmp);
                 }
-              }
+              };
               const items1 = [shouldFetchGuildId];
               cResult[6] = shouldFetchGuildId;
-              cResult[7] = F;
+              cResult[7] = fn2;
               cResult[8] = items1;
               let tmp12 = items1;
+              let tmp11 = fn2;
             } else {
-              class F {
-                constructor() {
-                  if (null != shouldFetchGuildId) {
-                    tmp2 = closure_0;
-                    tmp3 = closure_2;
-                    obj = closure_0(closure_2[9]);
-                    welcomeScreen = obj.fetchWelcomeScreen(tmp);
-                  }
-                  return;
-                }
-              }
+              tmp11 = cResult[7];
               tmp12 = cResult[8];
             }
-            const effect = noop.useEffect(F, tmp12);
+            const effect = noop.useEffect(tmp11, tmp12);
             return stateFromStoresObject.welcomeScreenModalVisible;
           }
         }
@@ -118,14 +103,14 @@ export const useShowWelcomeModal = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp4;
       cResult[5] = fn;
       tmp9 = fn;
-      let obj2 = require("../../../_runtime/metro/04716__.js");
+      let obj2 = require("../../../_runtime/metro/04910__.js");
     }
-  : (arg0, arg1) => {
+  : function useShowWelcomeModal(arg0, arg1) {
       _require = arg0;
       importDefault = arg1;
-      welcomeModalChannelId = require("../../../_runtime/metro/04716__.js").useLocation().welcomeModalChannelId;
+      welcomeModalChannelId = require("../../../_runtime/metro/04910__.js").useLocation().welcomeModalChannelId;
       noop = require("useWelcomeScreenEnabled")(arg1, arg0);
-      let obj = require("../../../_runtime/metro/04716__.js");
+      let obj = require("../../../_runtime/metro/04910__.js");
       const items = [GuildStore, shouldFetchGuildId, GuildChannelStore];
       const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
         if (closure_3) {
@@ -173,7 +158,7 @@ export const useShowWelcomeModal = ReactCompilerGating.isReactCompilerEnabled()
 export const openWelcomeActionSheet = function openWelcomeActionSheet(onHide) {
   const guildId = onHide.guildId;
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(12467, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, {
+  obj.openLazy(asyncRequireImpl(12563, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, {
     guildId,
     onHide: onHide.onHide,
   });

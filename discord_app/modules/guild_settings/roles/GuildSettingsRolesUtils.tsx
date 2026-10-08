@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
-import fuzzysearchDefault from "../../../../_runtime/05709_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/06099_fuzzysearch.js";
 import GuildUtilsDefault from "../../../utils/GuildUtils.tsx";
 import GuildRoleMemberActionCreators from "../GuildRoleMemberActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,11 +12,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(17822).GuildSettingsRoleEditSections;
+const constants = fn(18109).GuildSettingsRoleEditSections;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useGuildMembers(arg0, arg1) {
       _require = arg0;
       importDefault = arg1;
       const cResult = require("c").c(13);
@@ -42,93 +42,45 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = cResult[5];
         }
         if (cResult[6] !== stateFromStoresArray) {
-          class R {
-            constructor() {
-              return closure_2.reduce((acc, userId) => {
-                user = user.getUser(userId.userId);
-                if (null != user) {
-                  acc[userId.userId] = user;
-                }
-                return acc;
-              }, {});
-            }
-          }
+          const fn2 = function b() {
+            return stateFromStoresArray.reduce((acc, userId) => {
+              user = user.getUser(userId.userId);
+              if (null != user) {
+                acc[userId.userId] = user;
+              }
+              return acc;
+            }, {});
+          };
           const items2 = [stateFromStoresArray];
           cResult[6] = stateFromStoresArray;
-          cResult[7] = R;
+          cResult[7] = fn2;
           cResult[8] = items2;
           let tmp14 = items2;
+          let tmp13 = fn2;
         } else {
-          class R {
-            constructor() {
-              return closure_2.reduce((acc, userId) => {
-                user = user.getUser(userId.userId);
-                if (null != user) {
-                  acc[userId.userId] = user;
-                }
-                return acc;
-              }, {});
-            }
-          }
+          tmp13 = cResult[7];
           tmp14 = cResult[8];
         }
         const tmpResult = tmp(tmp3[7]);
-        const stateFromStoresObject = tmp(tmp3[7]).useStateFromStoresObject(tmp11, R, tmp14);
+        const stateFromStoresObject = tmp(tmp3[7]).useStateFromStoresObject(tmp11, tmp13, tmp14);
         if (cResult[9] === arg0) {
-          class R {
-            constructor() {
-              return closure_2.reduce((acc, userId) => {
-                user = user.getUser(userId.userId);
-                if (null != user) {
-                  acc[userId.userId] = user;
-                }
-                return acc;
-              }, {});
+          if (cResult[10] === stateFromStoresObject) {
+            if (cResult[11] === stateFromStoresArray) {
+              let tmp17 = cResult[12];
             }
+            return tmp17;
           }
         }
         const items3 = [];
         const iter = stateFromStoresArray[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
-          class R {
-            constructor() {
-              return closure_2.reduce((acc, userId) => {
-                user = user.getUser(userId.userId);
-                if (null != user) {
-                  acc[userId.userId] = user;
-                }
-                return acc;
-              }, {});
-            }
-          }
+          let tmp23 = nextResult;
           let tmp24 = stateFromStoresObject[nextResult.userId];
           let obj4 = tmp24;
           if (null != tmp24) {
-            class R {
-              constructor() {
-                return closure_2.reduce((acc, userId) => {
-                  user = user.getUser(userId.userId);
-                  if (null != user) {
-                    acc[userId.userId] = user;
-                  }
-                  return acc;
-                }, {});
-              }
-            }
             let nick = tmp23.nick;
             if (nick == null) {
-              class R {
-                constructor() {
-                  return closure_2.reduce((acc, userId) => {
-                    user = user.getUser(userId.userId);
-                    if (null != user) {
-                      acc[userId.userId] = user;
-                    }
-                    return acc;
-                  }, {});
-                }
-              }
               let obj5 = require("UserUtils");
               nick = obj5.getName(obj4);
             }
@@ -161,9 +113,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = stateFromStoresObject;
         cResult[11] = stateFromStoresArray;
         cResult[12] = items3;
+        tmp17 = items3;
         const tmpResult2 = tmp(tmp3[7]);
       }
-      const fn = function c() {
+      const fn = function l() {
         const members = GuildMemberStore.getMembers(closure_0);
         let found = members;
         if (null != closure_1) {
@@ -180,7 +133,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       const obj = require("c");
     }
-  : (arg0, arg1) => {
+  : function useGuildMembers(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       let items = [GuildMemberStore];
@@ -259,14 +212,14 @@ let closure_8 = tmp2;
 fn(558);
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, current) => {
+  ? function useGuildRoleMembers(arg0, arg1, current) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = current;
       const cResult = require("c").c(8);
       noop = noop.useRef(current);
       if (cResult[0] !== current) {
-        const fn = function o() {
+        const fn = function n() {
           closure_3.current = current;
         };
         cResult[0] = current;
@@ -283,19 +236,25 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const effect1 = obj2.useEffect(tmp4, tmp5);
         if (cResult[6] !== arg1) {
-          const fn3 = function v(roles) {
-            roles = roles.roles;
-            return roles.includes(closure_1);
-          };
+          class R {
+            constructor(arg0) {
+              roles = arg0.roles;
+              return roles.includes(closure_1);
+            }
+          }
           cResult[6] = arg1;
-          cResult[7] = fn3;
-          let tmp7 = fn3;
+          cResult[7] = R;
         } else {
-          tmp7 = cResult[7];
+          class R {
+            constructor(arg0) {
+              roles = arg0.roles;
+              return roles.includes(closure_1);
+            }
+          }
         }
-        return closure_8(arg0, tmp7);
+        return closure_8(arg0, R);
       }
-      const fn2 = function l() {
+      const fn2 = function c() {
         const membersForRole = GuildRoleMemberActionCreators.requestMembersForRole(closure_0, closure_1);
         membersForRole.catch(ref.current);
       };
@@ -308,7 +267,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn2;
       const obj = require("c");
     }
-  : (arg0, arg1, current) => {
+  : function useGuildRoleMembers(arg0, arg1, current) {
       closure_0 = arg0;
       closure_1 = arg1;
       noop = noop.useRef(current);
@@ -337,7 +296,7 @@ export const MAX_PREFETCH_MEMBER_COUNT = 1000;
 export const useGuildMembers = tmp2;
 export const useGuildRoleMembers = tmp3;
 export const useQueryGuildMembers = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useQueryGuildMembers(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(4);
@@ -349,7 +308,7 @@ export const useQueryGuildMembers = ReactCompilerGating.isReactCompilerEnabled()
         }
         const effect = noop.useEffect(tmp2, tmp3);
       }
-      const fn = function n() {
+      const fn = function o() {
         const members = GuildUtilsDefault.requestMembers(closure_0, closure_1, 200);
         let current = "" === closure_1;
         if (!current) {
@@ -370,7 +329,7 @@ export const useQueryGuildMembers = ReactCompilerGating.isReactCompilerEnabled()
       tmp2 = fn;
       let obj = require("c");
     }
-  : (arg0, arg1) => {
+  : function useQueryGuildMembers(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
       noop.useRef(false);

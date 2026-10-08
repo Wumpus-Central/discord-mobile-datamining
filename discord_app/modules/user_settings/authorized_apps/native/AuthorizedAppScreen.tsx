@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/AuthorizedAppScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AuthorizedAppScreen() {
       const cResult = c.c(6);
       const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
       const stackNavigation = useNavigation.useStackNavigation();
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = items;
       tmp5 = fn;
     }
-  : () => {
+  : function AuthorizedAppScreen() {
       const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
       const stackNavigation = useNavigation.useStackNavigation();
       const items = [stackNavigation, settingNavigationRoute.params.oauth2Token.application.name];

@@ -28,7 +28,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayableBoardWidgets.tsx");
 
 export const useDisplayableBoardWidgets = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useDisplayableBoardWidgets(arg0) {
       const cResult = c.c(2);
       const arr = useUserProfileWidgetsDefault(arg0);
       if (cResult[0] !== arr) {
@@ -41,7 +41,7 @@ export const useDisplayableBoardWidgets = ReactCompilerGating.isReactCompilerEna
       }
       return tmp2;
     }
-  : (arg0) => {
+  : function useDisplayableBoardWidgets(arg0) {
       const tmp = useUserProfileWidgetsDefault(arg0);
       closure_0 = tmp;
       const items = [tmp];

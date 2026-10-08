@@ -15,7 +15,7 @@ const jsxProd = fn(21);
 let c6 = "conjure-message-actions";
 const ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (content) => {
+  ? function ConjureMessageActionSheet(content) {
       const cResult = content(onRestoreVersion[5]).c(19);
       content = content.content;
       const userId = content.userId;
@@ -237,7 +237,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp9;
       let obj = content(onRestoreVersion[5]);
     }
-  : (content) => {
+  : function ConjureMessageActionSheet(content) {
       content = content.content;
       const userId = content.userId;
       const onRestoreVersion = content.onRestoreVersion;

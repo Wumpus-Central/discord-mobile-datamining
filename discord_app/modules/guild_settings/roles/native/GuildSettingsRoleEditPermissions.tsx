@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import BigFlagUtilsAll from "../../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import PermissionUtilsAll from "../../../../utils/PermissionUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -15,12 +15,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Keyboard: closure_7, SectionList: closure_8 } = get_ActivityIndicator);
-let isGuildOwner = fn(2070).isGuildOwner;
+let isGuildOwner = fn(2082).isGuildOwner;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   emptyState: { backgroundColor: "transparent", paddingTop: 40 },
   sectionSeparator: { height: nativeDefault.space.PX_24 },
@@ -78,11 +78,11 @@ export default function GuildSettingsRoleEditPermission(guild) {
     const intl = guild(1126).intl;
     let obj5 = { onTemplateOpen: null };
     let obj6 = {
-      onClick() {
+      onClick: function handleTemplateOpen() {
         React5.dismiss();
         const obj = ActionSheetActionCreatorsDefault;
         obj.openLazy(
-          asyncRequireImpl(17850, dependencyMap.paths),
+          asyncRequireImpl(18137, dependencyMap.paths),
           "role-permission-templates-" + guild.id + "-" + role.id,
           { permissionsEdited, onPermissionsChanged, guildId: guild.id },
         );
@@ -91,11 +91,11 @@ export default function GuildSettingsRoleEditPermission(guild) {
     };
     obj5.onTemplateOpen = obj6;
     obj4.children = intl.format(guild(1126).t.ZhSOBy, obj5);
-    tmp18Result = closure_14(guild(4892).Text, obj4);
+    tmp18Result = closure_14(guild(5086).Text, obj4);
   }
   canResult = PermissionUtilsAll.can({ permission: constants2.ADMINISTRATOR, user: currentUser, context: guild });
   const tmp18Result3 = closure_14(closure_6, { children: tmp18Result });
-  const guildPermissionSpec = role(17035).generateGuildPermissionSpec(guild);
+  const guildPermissionSpec = role(17316).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -108,11 +108,11 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(17847), { role }), , ,];
+  const children = [closure_14(role(18134), { role }), , ,];
   const obj7 = {
-    children: closure_14(guild(6554).SearchField, {
+    children: closure_14(guild(6730).SearchField, {
       size: "md",
-      onChange(str) {
+      onChange: function handleSearchQuery(str) {
         closure_8(str);
         let current = "" === str.trimStart();
         if (!current) {
@@ -196,7 +196,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
           children: closure_1_14(guild(onPermissionsChanged[24]).TableRowGroupTitle, { title }),
         });
       },
-      SectionSeparatorComponent(leadingItem) {
+      SectionSeparatorComponent: function renderSectionSeparator(leadingItem) {
         let tmp = null;
         if (null != leadingItem.leadingItem) {
           const obj = { style: closure_4.sectionSeparator };
@@ -215,12 +215,12 @@ export default function GuildSettingsRoleEditPermission(guild) {
     };
     let tmp18Result4 = closure_14(closure_8, obj9);
   } else {
-    const obj10 = { Illustration: tmp27(9275).NoResultsAlt, style: null, bodyStyle: null, body: null };
+    const obj10 = { Illustration: tmp27(8606).NoResultsAlt, style: null, bodyStyle: null, body: null };
     ({ emptyState: obj11.style, emptyStateText: obj11.bodyStyle } = tmp);
     const intl2 = tmp27(1126).intl;
     const obj12 = { query };
     obj10.body = intl2.format(tmp27(1126).t.Psh5OO, obj12);
-    tmp18Result4 = closure_14(tmp27(1188).EmptyState, obj10);
+    tmp18Result4 = closure_14(tmp27(1200).EmptyState, obj10);
   }
   children[3] = tmp18Result4;
   return closure_16(closure_15, { children });

@@ -3,7 +3,7 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import Server from "../../flow/Server.tsx";
-import fuzzysearchDefault from "../../../_runtime/05709_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/06099_fuzzysearch.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -18,7 +18,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = { rows: [], sections: [] };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -36,7 +36,7 @@ obj.containerSearchBar = { paddingVertical: nativeDefault.space.PX_8 };
 let closure_16 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (enabled) => {
+  ? function useGuildMemberData(enabled) {
       const cResult = c.c(13);
       ({ permissionOverwrites, guildId, searchQuery } = enabled);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -134,7 +134,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_15;
     }
-  : (enabled) => {
+  : function useGuildMemberData(enabled) {
       enabled = enabled.enabled;
       const permissionOverwrites = enabled.permissionOverwrites;
       const guildId = enabled.guildId;
@@ -197,7 +197,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function useGuildRoleData(channel) {
       const cResult = channel(576).c(12);
       channel = channel.channel;
       ({ sortedGuildRoles, searchQuery } = channel);
@@ -255,7 +255,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_15;
     }
-  : (enabled) => {
+  : function useGuildRoleData(enabled) {
       enabled = enabled.enabled;
       const channel = enabled.channel;
       const sortedGuildRoles = enabled.sortedGuildRoles;
@@ -295,7 +295,7 @@ let result = size.fileFinishedImporting("components_native/channel_settings/Chan
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channelId) => {
+    ? function ChannelSettingsPermissionsList(channelId) {
         const cResult = channelId(stateFromStores[12]).c(44);
         channelId = channelId.channelId;
         const type = channelId.type;
@@ -332,7 +332,7 @@ export default noop.memo(
           tmp12 = cResult[3];
         }
         if (cResult[4] !== stateFromStores) {
-          class N {
+          class B {
             constructor() {
               obj = closure_3;
               guildId = undefined;
@@ -349,11 +349,11 @@ export default noop.memo(
           }
           const items2 = [stateFromStores];
           cResult[4] = stateFromStores;
-          cResult[5] = N;
+          cResult[5] = B;
           cResult[6] = items2;
           let tmp15 = items2;
         } else {
-          class N {
+          class B {
             constructor() {
               obj = closure_3;
               guildId = undefined;
@@ -371,10 +371,10 @@ export default noop.memo(
           tmp15 = cResult[6];
         }
         const tmpResult = channelId(stateFromStores[13]);
-        const stateFromStoresObject = channelId(stateFromStores[13]).useStateFromStoresObject(tmp12, N, tmp15);
+        const stateFromStoresObject = channelId(stateFromStores[13]).useStateFromStoresObject(tmp12, B, tmp15);
         guildId = stateFromStoresObject.guildId;
         if (stateFromStores != null) {
-          class N {
+          class B {
             constructor() {
               obj = closure_3;
               guildId = undefined;
@@ -391,7 +391,7 @@ export default noop.memo(
           }
         }
         if (cResult[7] === guildId) {
-          class N {
+          class B {
             constructor() {
               obj = closure_3;
               guildId = undefined;
@@ -425,7 +425,7 @@ export default noop.memo(
         };
         const tmpResult2 = channelId(stateFromStores[13]);
       }
-    : (channelId) => {
+    : function ChannelSettingsPermissionsList(channelId) {
         channelId = channelId.channelId;
         const type = channelId.type;
         let stateFromStores;

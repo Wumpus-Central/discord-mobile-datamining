@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormSubLabel.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FormSubLabel(arg0) {
       const cResult = c.c(6);
       ({ text, numberOfLines, style, accessible, color } = arg0);
       let str = "text-subtle";
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp5;
       tmp4 = tmp5;
     }
-  : (color) => {
+  : function FormSubLabel(color) {
       color = color.color;
       ({ text, numberOfLines, style, accessible } = color);
       if (color === undefined) {

@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({
   title: { textAlign: "center" },
   body: { marginTop: 8, textAlign: "center", lineHeight: 18 },
@@ -16,18 +16,18 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/SMSBackupWarningAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onConfirm) => {
+  ? function SMSBackupWarningAlert(onConfirm) {
       const cResult = onConfirm(576).c(15);
       onConfirm = onConfirm.onConfirm;
       const tmp4 = closure_5();
       if (cResult[0] !== onConfirm) {
-        const fn = function c() {
+        function handleConfirm() {
           onConfirm();
           actions_AlertActionCreatorsDefault.close();
-        };
+        }
         cResult[0] = onConfirm;
-        cResult[1] = fn;
-        let tmp5 = fn;
+        cResult[1] = handleConfirm;
+        let tmp5 = handleConfirm;
       } else {
         tmp5 = cResult[1];
       }
@@ -45,11 +45,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function h() {
+        const fn = function y() {
           return actions_AlertActionCreatorsDefault.close();
         };
-        cResult[4] = fn2;
-        let tmp10 = fn2;
+        cResult[4] = fn;
+        let tmp10 = fn;
       } else {
         tmp10 = cResult[4];
       }
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp11,
         };
-        const tmp15 = closure_3(tmp(4892).Text, obj2);
+        const tmp15 = closure_3(tmp(5086).Text, obj2);
         cResult[6] = tmp4.title;
         cResult[7] = tmp15;
         let tmp13 = tmp15;
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[9] !== tmp4.body) {
         const obj3 = { style: tmp4.body, variant: "text-sm/medium", color: "text-default", children: tmp16 };
-        const tmp20 = closure_3(tmp(4892).Text, obj3);
+        const tmp20 = closure_3(tmp(5086).Text, obj3);
         cResult[9] = tmp4.body;
         cResult[10] = tmp20;
         let tmp18 = tmp20;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp21 = tmp22;
       const obj = onConfirm(576);
     }
-  : (onConfirm) => {
+  : function SMSBackupWarningAlert(onConfirm) {
       onConfirm = onConfirm.onConfirm;
       const tmp = closure_5();
       const obj = { cancelText: null, confirmText: null, onConfirm: null, onCancel: null, children: null };
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj.cancelText = intl.string(onConfirm(1126).t["ETE/oC"]);
       const intl2 = onConfirm(1126).intl;
       obj.confirmText = intl2.string(onConfirm(1126).t.N86XcP);
-      obj.onConfirm = function onConfirm() {
+      obj.onConfirm = function handleConfirm() {
         onConfirm();
         actions_AlertActionCreatorsDefault.close();
       };
@@ -136,11 +136,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl3 = onConfirm(1126).intl;
       obj2.children = intl3.string(onConfirm(1126).t.Ed4XQB);
-      const items = [closure_3(onConfirm(4892).Text, obj2)];
+      const items = [closure_3(onConfirm(5086).Text, obj2)];
       const obj3 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
       const intl4 = onConfirm(1126).intl;
       obj3.children = intl4.string(onConfirm(1126).t.EDU2Eg);
-      items[1] = closure_3(onConfirm(4892).Text, obj3);
+      items[1] = closure_3(onConfirm(5086).Text, obj3);
       obj.children = items;
       return closure_4(common_AlertDefault, obj);
     };

@@ -4,13 +4,13 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(15907).RegistrationTransitionActionTypes;
+let closure_3 = fn(16166).RegistrationTransitionActionTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/useAuthFlowBackHandler.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (step) => {
+  ? function useAuthFlowBackHandler(step) {
       _require = step;
       const cResult = require("c").c(3);
       context = noop.useContext(require("Auth").TrackRegistrationContext);
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp5 = fn;
     }
-  : (step) => {
+  : function useAuthFlowBackHandler(step) {
       _require = step;
       dependencyMap = noop.useContext(require("Auth").TrackRegistrationContext);
       require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(() => {

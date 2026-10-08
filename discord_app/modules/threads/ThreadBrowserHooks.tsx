@@ -17,13 +17,13 @@ import JoinedThreadsStore from "JoinedThreadsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(12447).useShouldShowResolvedFlagsForChannel;
+let closure_5 = fn(12543).useShouldShowResolvedFlagsForChannel;
 const Permissions = fn(1096).Permissions;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild_id) => {
-      const _require = guild_id;
+  ? function useActiveThreadIds(guild_id) {
+      _require = guild_id;
       let valueResult = dependencyMap;
       const cResult = require("c").c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -95,8 +95,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       tmp = _require;
     }
-  : (arg0) => {
-      const _require = arg0;
+  : function useActiveThreadIds(arg0) {
+      _require = arg0;
       const items = [PermissionStore, ActiveThreadsStore, ChannelStore];
       const items1 = [,];
       ({ guild_id: arr2[0], id: arr2[1] } = arg0);
@@ -125,7 +125,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_13 = tmp3;
 ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useTrackThreadBrowserTab() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function a() {
@@ -141,14 +141,14 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp2, tmp3);
     }
-  : () => {
+  : function useTrackThreadBrowserTab() {
       const effect = noop.useEffect(() => {
         const result = require("ThreadUtils").trackThreadBrowserTab();
       }, []);
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useActiveThreads(arg0) {
       const cResult = require("c").c(7);
       const tmp4 = closure_13(arg0);
       _require = tmp4;
@@ -197,9 +197,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         2,
       );
     }
-  : (arg0) => {
+  : function useActiveThreads(arg0) {
       const tmp = closure_13(arg0);
-      const _require = tmp;
+      _require = tmp;
       const items = [JoinedThreadsStore];
       const items1 = [tmp];
       const tmp2 = _slicedToArray(
@@ -215,8 +215,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const _require = arg0;
+  ? function useActiveGuildThreads(arg0) {
+      _require = arg0;
       let valueResult = dependencyMap;
       const cResult = require("c").c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -286,8 +286,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmpResult = require("initialize");
     }
-  : (arg0) => {
-      const _require = arg0;
+  : function useActiveGuildThreads(arg0) {
+      _require = arg0;
       const items = [PermissionStore, ActiveThreadsStore, ChannelStore];
       const items1 = [arg0];
       const stateFromStoresArray = require("initialize").useStateFromStoresArray(
@@ -322,8 +322,8 @@ export const useActiveThreadIds = tmp3;
 export const useActiveThreads = tmp4;
 export const useActiveGuildThreads = tmp5;
 export const useArchivedThreads = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isModeratorReportChannel, sortOrder, tagFilter, tagSetting) => {
-      const _require = isModeratorReportChannel;
+  ? function useArchivedThreads(isModeratorReportChannel, sortOrder, tagFilter, tagSetting) {
+      _require = isModeratorReportChannel;
       importDefault = sortOrder;
       dependencyMap = tagFilter;
       const cResult = require("c").c(49);
@@ -363,38 +363,44 @@ export const useArchivedThreads = ReactCompilerGating.isReactCompilerEnabled()
                           let tmp10 = cResult[15];
                         }
                         current = tmp10;
-                        noop.useRef(tmp10);
+                        ActiveThreadsStore = noop.useRef(tmp10);
                         if (cResult[16] !== tmp10) {
-                          class F {
+                          class L {
                             constructor() {
                               closure_9.current = closure_8;
                               return;
                             }
                           }
                           cResult[16] = tmp10;
-                          cResult[17] = F;
+                          cResult[17] = L;
                         } else {
-                          class F {
+                          class L {
                             constructor() {
                               closure_9.current = closure_8;
                               return;
                             }
                           }
                         }
-                        const effect = noop.useEffect(F);
+                        const effect = noop.useEffect(L);
                         if (cResult[18] !== isInitialLoad) {
                           class F {
                             constructor() {
-                              closure_9.current = closure_8;
+                              if (isInitialLoad) {
+                                tmp = closure_9;
+                                currentResult = closure_9.current();
+                              }
                               return;
                             }
                           }
                           cResult[18] = isInitialLoad;
-                          cResult[19] = tmp14;
+                          cResult[19] = F;
                         } else {
                           class F {
                             constructor() {
-                              closure_9.current = closure_8;
+                              if (isInitialLoad) {
+                                tmp = closure_9;
+                                currentResult = closure_9.current();
+                              }
                               return;
                             }
                           }
@@ -402,13 +408,16 @@ export const useArchivedThreads = ReactCompilerGating.isReactCompilerEnabled()
                         if (cResult[20] === isModeratorReportChannel.id) {
                           class F {
                             constructor() {
-                              closure_9.current = closure_8;
+                              if (isInitialLoad) {
+                                tmp = closure_9;
+                                currentResult = closure_9.current();
+                              }
                               return;
                             }
                           }
                         }
                         const items1 = [isModeratorReportChannel.id, , , ,];
-                        class M {
+                        class A {
                           constructor() {
                             tmp = closure_0;
                             canResult = closure_7.can(Permissions.READ_MESSAGE_HISTORY, closure_0);
@@ -455,24 +464,14 @@ export const useArchivedThreads = ReactCompilerGating.isReactCompilerEnabled()
                         cResult[22] = showResolvedFlags;
                         cResult[23] = sortOrder;
                         cResult[24] = tagFilter;
-                        class E {
-                          constructor() {
-                            obj = {
-                              loading: closure_10.isLoading(closure_0.id, closure_1, closure_2, closure_3),
-                              isInitialLoad: closure_10.getIsInitialLoad(closure_0.id, closure_1, closure_2, closure_3),
-                              canLoadMore: closure_10.getCanLoadMore(closure_0.id, closure_1, closure_2, closure_3),
-                              nextOffset: closure_10.getNextOffset(closure_0.id, closure_1, closure_2, closure_3),
-                            };
-                            return obj;
-                          }
-                        }
+                        cResult[25] = items1;
                       }
                     }
                   }
                 }
               }
             }
-            class M {
+            class A {
               constructor() {
                 tmp = closure_0;
                 canResult = closure_7.can(Permissions.READ_MESSAGE_HISTORY, closure_0);
@@ -518,45 +517,41 @@ export const useArchivedThreads = ReactCompilerGating.isReactCompilerEnabled()
             cResult[12] = sortOrder;
             cResult[13] = tagFilter;
             cResult[14] = tagSetting;
-            class E {
-              constructor() {
-                obj = {
-                  loading: closure_10.isLoading(closure_0.id, closure_1, closure_2, closure_3),
-                  isInitialLoad: closure_10.getIsInitialLoad(closure_0.id, closure_1, closure_2, closure_3),
-                  canLoadMore: closure_10.getCanLoadMore(closure_0.id, closure_1, closure_2, closure_3),
-                  nextOffset: closure_10.getNextOffset(closure_0.id, closure_1, closure_2, closure_3),
-                };
-                return obj;
-              }
-            }
-            cResult[15] = M;
-            tmp10 = M;
+            cResult[15] = A;
+            tmp10 = A;
             let tmpResult = tmp(504);
           }
         }
       }
-      class E {
-        constructor() {
-          obj = {
-            loading: closure_10.isLoading(closure_0.id, closure_1, closure_2, closure_3),
-            isInitialLoad: closure_10.getIsInitialLoad(closure_0.id, closure_1, closure_2, closure_3),
-            canLoadMore: closure_10.getCanLoadMore(closure_0.id, closure_1, closure_2, closure_3),
-            nextOffset: closure_10.getNextOffset(closure_0.id, closure_1, closure_2, closure_3),
-          };
-          return obj;
-        }
-      }
+      const fn = function _() {
+        return {
+          loading: ArchivedThreadsStore.isLoading(isModeratorReportChannel.id, closure_1, closure_2, closure_3),
+          isInitialLoad: ArchivedThreadsStore.getIsInitialLoad(
+            isModeratorReportChannel.id,
+            closure_1,
+            closure_2,
+            closure_3,
+          ),
+          canLoadMore: ArchivedThreadsStore.getCanLoadMore(
+            isModeratorReportChannel.id,
+            closure_1,
+            closure_2,
+            closure_3,
+          ),
+          nextOffset: ArchivedThreadsStore.getNextOffset(isModeratorReportChannel.id, closure_1, closure_2, closure_3),
+        };
+      };
       cResult[3] = isModeratorReportChannel.id;
       cResult[4] = sortOrder;
       cResult[5] = tagFilter;
       cResult[6] = tagSetting;
-      cResult[7] = E;
-      tmp8 = E;
+      cResult[7] = fn;
+      tmp8 = fn;
       let obj = require("c");
       tmp = _require;
     }
-  : (isModeratorReportChannel, sortOrder, tagFilter, tagSetting) => {
-      const _require = isModeratorReportChannel;
+  : function useArchivedThreads(isModeratorReportChannel, sortOrder, tagFilter, tagSetting) {
+      _require = isModeratorReportChannel;
       dependencyMap = tagFilter;
       const result = isModeratorReportChannel.isModeratorReportChannel();
       noop = result;

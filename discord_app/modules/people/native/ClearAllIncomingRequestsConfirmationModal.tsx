@@ -1,10 +1,10 @@
 // discord_app/modules/people/native/ClearAllIncomingRequestsConfirmationModal.tsx
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/people/native/ClearAllIncomingRequestsConfirmationModal.tsx");
 
 export default function openClearAllIncomingRequestsConfirmationModal(incomingPendingRequestCount) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9454, dependencyMap.paths), { incomingPendingRequestCount });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7012, dependencyMap.paths), { incomingPendingRequestCount });
 }

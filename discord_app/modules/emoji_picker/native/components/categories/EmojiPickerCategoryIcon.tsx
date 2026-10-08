@@ -1,11 +1,10 @@
 // discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import ClockIcon from "../../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
-import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import FlagIcon from "../../../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
 import TrophyIcon from "../../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
 import ReactionIcon from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import HeartIcon from "../../../../../design/components/Icon/native/redesign/generated/HeartIcon.tsx";
+import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import GameControllerIcon from "../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import StarIcon from "../../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import LightbulbIcon from "../../../../../design/components/Icon/native/redesign/generated/LightbulbIcon.tsx";
@@ -13,10 +12,11 @@ import NatureIcon from "../../../../../design/components/Icon/native/redesign/ge
 import FoodIcon from "../../../../../design/components/Icon/native/redesign/generated/FoodIcon.tsx";
 import BicycleIcon from "../../../../../design/components/Icon/native/redesign/generated/BicycleIcon.tsx";
 import ObjectIcon from "../../../../../design/components/Icon/native/redesign/generated/ObjectIcon.tsx";
+import FlagIcon from "../../../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EmojiCategories = fn(5649).EmojiCategories;
+const EmojiCategories = fn(5996).EmojiCategories;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -26,7 +26,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (id) => {
+    ? function EmojiPickerCategoryIcon(id) {
         const cResult = c.c(13);
         id = id.id;
         if (EmojiCategories.TOP_GUILD_EMOJI === id) {
@@ -164,7 +164,7 @@ export default noop.memo(
           return tmp6;
         }
       }
-    : (id) => {
+    : function EmojiPickerCategoryIcon(id) {
         id = id.id;
         if (EmojiCategories.TOP_GUILD_EMOJI === id) {
           return jsx(TrophyIcon.TrophyIcon, {});

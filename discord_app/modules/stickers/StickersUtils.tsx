@@ -25,7 +25,7 @@ function getStickerExtensionFromFormatType(format_type) {
     throw error;
   }
 }
-const StickersConstants = fn(2031);
+const StickersConstants = fn(2043);
 ({
   DEFAULT_STICKER_DIMENSIONS: closure_4,
   STICKER_APPLICATION_ID: hasOwnProperty,
@@ -36,7 +36,7 @@ const API_ENDPOINT = GLOBAL_ENV.API_ENDPOINT;
 const MEDIA_PROXY_ENDPOINT = GLOBAL_ENV.MEDIA_PROXY_ENDPOINT;
 ({ PROJECT_ENV: c10, ASSET_ENDPOINT } = GLOBAL_ENV);
 const CDN_HOST = GLOBAL_ENV.CDN_HOST;
-const values = Object.values(fn(5436).StickerExtensions);
+const values = Object.values(fn(5746).StickerExtensions);
 const decodeURIComponentResult = decodeURIComponent(Endpoints.STICKER_ASSET("[\\d]+", "(" + values.join("|") + ")"));
 const regExp = new RegExp(
   "(" +
@@ -133,7 +133,7 @@ export const getStickerAssetUrl = (format_type, arg1) => {
       if (tmp3 === StickersTypes.StickerExtensions.WEBP) {
         str3 = "&quality=lossless";
       }
-      if ("development" !== v65535) {
+      if ("development" !== collapsed) {
         if (format_type.format_type === StickersTypes.StickerFormat.LOTTIE) {
           const _location3 = location;
           const _HermesInternal4 = HermesInternal;
@@ -215,7 +215,7 @@ export const getStickerPackBannerAssetUrl = function getStickerPackBannerAssetUr
   }
 };
 export const isStickerAssetUrl = function isStickerAssetUrl(str) {
-  return null != str.match("development" !== v65535 ? regExp : regExp1);
+  return null != str.match("development" !== collapsed ? regExp : regExp1);
 };
 export const isStickerPackAnimated = function isStickerPackAnimated(stickerPack) {
   const stickers = stickerPack.stickers;

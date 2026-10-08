@@ -7,14 +7,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 let closure_2 = ["size", "children", "style"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ container: { paddingVertical: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/ButtonGroup/native/ButtonGroup.native.tsx");
 
 export const ButtonGroup = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ButtonGroup(arg0) {
       const cResult = c.c(13);
       if (cResult[0] !== arg0) {
         ({ size, children, style } = arg0);
@@ -76,7 +76,7 @@ export const ButtonGroup = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = items;
       tmp12 = items;
     }
-  : (size) => {
+  : function ButtonGroup(size) {
       let str = size.size;
       if (str === undefined) {
         str = "md";

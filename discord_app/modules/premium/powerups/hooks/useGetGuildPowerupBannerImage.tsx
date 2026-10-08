@@ -25,7 +25,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (animatedImageUrl, arg1, arg2) => {
+  ? function useGetGuildPowerupBannerImage(animatedImageUrl, arg1, arg2) {
       const cResult = c.c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = initialize;
     }
-  : (animatedImageUrl, arg1, arg2) => {
+  : function useGetGuildPowerupBannerImage(animatedImageUrl, arg1, arg2) {
       initialize;
       [][0] = AccessibilityStore;
       if (null != animatedImageUrl) {

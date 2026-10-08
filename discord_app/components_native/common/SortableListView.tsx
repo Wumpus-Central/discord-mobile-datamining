@@ -15,9 +15,9 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let height = Dimensions.get("window").height;
-const v65535 = -5;
+const collapsed = -5;
 let closure_11 = { x: 0, y: 0 };
-let closure_12 = noop.memo((current) => {
+let closure_12 = noop.memo(function Row(current) {
   ({ hovering, rowData, active, renderActiveDivider, hideContent, renderRow, onPressOut } = current);
   closure_1 = noop.useRef(current);
   noop.useRef(null);
@@ -90,7 +90,7 @@ let closure_12 = noop.memo((current) => {
 const ReactCompilerGating = fn(558);
 let closure_13 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (listPageY) => {
+    ? function SortRow(listPageY) {
         const cResult = c.c(16);
         ({ sortRowStyle, rowData, renderRow, pan, frameHeight } = listPageY);
         const diff = listPageY.listPageY - listPageY.wrapperPageY;
@@ -160,7 +160,7 @@ let closure_13 = noop.memo(
         cResult[2] = rect;
         tmp3 = rect;
       }
-    : (listPageY) => {
+    : function SortRow(listPageY) {
         ({ rowData, pan, frameHeight } = listPageY);
         listPageY = listPageY.listPageY;
         const wrapperPageY = listPageY.wrapperPageY;

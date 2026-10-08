@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AppLauncherOnboardingBanner(arg0) {
       const cResult = c.c(5);
       ({ context, visibleContent } = arg0);
       if (dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return null;
       }
     }
-  : (arg0) => {
+  : function AppLauncherOnboardingBanner(arg0) {
       ({ context, visibleContent } = arg0);
       if (dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
         const obj2 = { context };

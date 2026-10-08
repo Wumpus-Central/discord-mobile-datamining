@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
-import SettingSearchSessionAnalyticsManagerDefault from "../../../settings/tracking/SettingSearchSessionAnalyticsManager.tsx";
 import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
+import SettingSearchSessionAnalyticsManagerDefault from "../../../settings/tracking/SettingSearchSessionAnalyticsManager.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AppStateStore from "../../../../stores/native/AppStateStore.tsx";
 import UserSettingSearchStore from "../../UserSettingSearchStore.tsx";
@@ -12,7 +12,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx");
 
 export const useAutoSettingsSearchSessionAnalytics = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAutoSettingsSearchSessionAnalytics() {
       const cResult = stateFromStores(576).c(13);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AppStateStore];
@@ -237,7 +237,7 @@ export const useAutoSettingsSearchSessionAnalytics = ReactCompilerGating.isReact
       tmp12 = fn3;
       const tmpResult = stateFromStores(504);
     }
-  : () => {
+  : function useAutoSettingsSearchSessionAnalytics() {
       const items = [AppStateStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
         state = state.getState();

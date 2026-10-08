@@ -14,17 +14,17 @@ import timingPresets from "../../../design/animation/reanimated/timing/timingPre
 import Card from "../../../design/components/Card/native/Card.native.tsx";
 import EyeSlashIcon2 from "../../../design/components/Icon/native/redesign/generated/EyeSlashIcon.tsx";
 import EyeIcon from "../../../design/components/Icon/native/redesign/generated/EyeIcon.tsx";
-import ContextMenu from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
-import ContextMenuState from "../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
-import ContextMenuConstants from "../../../design/components/ContextMenu/native/ContextMenuConstants.native.tsx";
 import UserProfileAnalyticsUtils from "../../user_profile/UserProfileAnalyticsUtils.tsx";
 import BadgeDirectoryActionCreators from "../BadgeDirectoryActionCreators.tsx";
 import native from "../../../design/components/experimental/native.tsx";
-import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
+import ContextMenu from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
+import ContextMenuState from "../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
+import ContextMenuConstants from "../../../design/components/ContextMenu/native/ContextMenuConstants.native.tsx";
 import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
-import roundToNearestPixelDefault from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
+import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import BadgeCatalogIconDefault from "BadgeCatalogIcon.tsx";
 import BadgeUtils from "../BadgeUtils.tsx";
+import roundToNearestPixelDefault from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
 import PendingBadgeSettings from "../PendingBadgeSettings.tsx";
 import BadgeGrid from "BadgeGrid.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -42,14 +42,14 @@ const Constants = fn(1085);
   AnalyticsPages: c10,
   AnalyticsSections: closure_11,
 } = Constants);
-let closure_12 = fn(6653).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
-const PremiumUpsellTypes = fn(1379).PremiumUpsellTypes;
+let closure_12 = fn(6830).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let c16 = 1.05;
 let c17 = 80;
 let c18 = 16.666666666666668;
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj = {
   gridInset: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   grid: null,
@@ -83,7 +83,7 @@ obj.messageText = { textAlign: "center" };
 let closure_19 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (badge) => {
+  ? function BadgeVisibilityMenu(badge) {
       const cResult = c.c(16);
       badge = badge.badge;
       ({ index, onSetHidden } = badge);
@@ -166,7 +166,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = fn;
       }
     }
-  : (badge) => {
+  : function BadgeVisibilityMenu(badge) {
       badge = badge.badge;
       const onSetHidden = badge.onSetHidden;
       let flag = badge.hidden;
@@ -202,7 +202,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = children;
       return state(ContextMenu.ContextMenu, obj2);
     };
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj10 = {
   position: { position: "absolute" },
   fill: { flex: 1 },
@@ -257,8 +257,8 @@ let obj14 = {
   textAlign: "center",
 };
 getSlotOffset.__closure = {
-  BADGE_GRID_COLUMNS: fn(14465).BADGE_GRID_COLUMNS,
-  BADGE_GRID_GAP: fn(14465).BADGE_GRID_GAP,
+  BADGE_GRID_COLUMNS: fn(14693).BADGE_GRID_COLUMNS,
+  BADGE_GRID_GAP: fn(14693).BADGE_GRID_GAP,
 };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = {
@@ -266,7 +266,7 @@ getSlotOffset.__initData = {
 };
 ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (badge) => {
+  ? function BadgeTileContent(badge) {
       const cResult = c.c(20);
       badge = badge.badge;
       const tmp4 = closure_21();
@@ -384,7 +384,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         tmp17 = items1;
       }
     }
-  : (badge) => {
+  : function BadgeTileContent(badge) {
       badge = badge.badge;
       const tmp = closure_21();
       let flag = badge.hidden;
@@ -435,7 +435,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let closure_24 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (badge) => {
+    ? function FixedBadgeTile(badge) {
         const cResult = badge(alwaysVisible[15]).c(26);
         badge = badge.badge;
         const index = badge.index;
@@ -450,22 +450,22 @@ let closure_24 = noop.memo(
           ({ x, y } = tmp5);
           if (cResult[3] === badge) {
             if (cResult[4] === onPress) {
-              let tmp8 = cResult[5];
+              let tmp9 = cResult[5];
             }
-            closure_4 = tmp8;
+            closure_4 = tmp9;
             if (cResult[6] === tileSize) {
               if (cResult[7] === x) {
                 if (cResult[8] === y) {
-                  let tmp9 = cResult[9];
+                  let tmp10 = cResult[9];
                 }
                 if (cResult[10] === tmp4.position) {
-                  if (cResult[11] === tmp9) {
+                  if (cResult[11] === tmp10) {
                     let tmp11 = cResult[12];
                   }
-                  style = tmp11;
+                  const style = tmp11;
                   if (cResult[13] === alwaysVisible) {
                     if (cResult[14] === badge) {
-                      if (cResult[15] === tmp8) {
+                      if (cResult[15] === tmp9) {
                         if (cResult[16] === index) {
                           if (cResult[17] === tmp11) {
                             let tmp12 = cResult[18];
@@ -482,304 +482,100 @@ let closure_24 = noop.memo(
                                   }
                                 }
                               }
-                              class E {
-                                constructor(arg0) {
-                                  closure_0 = badge;
-                                  tmp = jsx;
-                                  tmp2 = closure_0;
-                                  tmp3 = closure_2;
-                                  ref = undefined;
-                                  if (badge != null) {
-                                    ref = badge.ref;
-                                  }
-                                  obj = { ref, accessibilityLabel: null };
-                                  tmp5 = badge;
-                                  tmp6 = index;
-                                  intl = tmp2(tmp3[16]).intl;
-                                  t = tmp2(tmp3[16]).t;
-                                  obj1 = { badgeName: tmp5.name, position: tmp6 + 1 };
-                                  obj.accessibilityLabel = intl.formatToPlainString(
-                                    badge.hidden ? t["dXg/Dl"] : t["21W3EN"],
-                                    obj1,
-                                  );
-                                  tmp7 = alwaysVisible;
-                                  stringResult = undefined;
-                                  if (alwaysVisible) {
-                                    intl2 = tmp2(tmp3[16]).intl;
-                                    tmp2Result = tmp2(tmp3[24]);
-                                    stringResult = intl2.string(tmp2Result.getAlwaysVisibleCopy(tmp8));
-                                  }
-                                  obj5 = { accessibilityRole: "button", accessibilityHint: stringResult };
-                                  merged = Object.assign(obj5);
-                                  accessibilityActions = undefined;
-                                  if (badge != null) {
-                                    accessibilityActions = badge.accessibilityActions;
-                                  }
-                                  obj.accessibilityActions = accessibilityActions;
-                                  prop = undefined;
-                                  if (badge != null) {
-                                    prop = badge.onAccessibilityAction;
-                                  }
-                                  obj.onAccessibilityAction = prop;
-                                  if (tmp7) {
-                                    onPress = closure_4;
-                                  } else if (badge != null) {
-                                    onPress = badge.onPress;
-                                  }
-                                  obj.onPress = onPress;
-                                  fn = undefined;
-                                  if (null != badge) {
-                                    fn = (arg0) => {
-                                      const result = badge(alwaysVisible[11]).triggerHapticFeedback(
-                                        badge(alwaysVisible[12]).CONTEXT_MENU_OPEN_HAPTIC,
-                                      );
-                                      onLongPress = onLongPress.onLongPress;
-                                      if (onLongPress != null) {
-                                        onLongPress(arg0);
-                                      }
-                                    };
-                                  }
-                                  obj.onLongPress = fn;
-                                  obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
-                                  obj.style = closure_5;
-                                  obj.children = tmp(f67509, { badge: tmp5, alwaysVisible: tmp7 });
-                                  return tmp(closure_0(closure_2[25]).PressableScale, obj);
-                                }
-                              }
-                              tmp17[0] = badge;
-                              tmp17[1] = index;
-                              tmp17[2] = onSetHidden;
-                              tmp17[3] = tmp12;
-                              const tmp18 = closure_14(closure_20, tmp17);
+                              const obj2 = { badge, index, onSetHidden, children: tmp12 };
+                              const tmp17 = closure_14(closure_20, obj2);
                               cResult[21] = badge;
                               cResult[22] = index;
                               cResult[23] = onSetHidden;
                               cResult[24] = tmp12;
-                              cResult[25] = tmp18;
-                              tmp14 = tmp18;
+                              cResult[25] = tmp17;
+                              tmp14 = tmp17;
                             }
                           }
                           if (cResult[19] !== tmp12) {
                             const tmp12Result = tmp12(null);
-                            class E {
-                              constructor(arg0) {
-                                closure_0 = badge;
-                                tmp = jsx;
-                                tmp2 = closure_0;
-                                tmp3 = closure_2;
-                                ref = undefined;
-                                if (badge != null) {
-                                  ref = badge.ref;
-                                }
-                                obj = { ref, accessibilityLabel: null };
-                                tmp5 = badge;
-                                tmp6 = index;
-                                intl = tmp2(tmp3[16]).intl;
-                                t = tmp2(tmp3[16]).t;
-                                obj1 = { badgeName: tmp5.name, position: tmp6 + 1 };
-                                obj.accessibilityLabel = intl.formatToPlainString(
-                                  badge.hidden ? t["dXg/Dl"] : t["21W3EN"],
-                                  obj1,
-                                );
-                                tmp7 = alwaysVisible;
-                                stringResult = undefined;
-                                if (alwaysVisible) {
-                                  intl2 = tmp2(tmp3[16]).intl;
-                                  tmp2Result = tmp2(tmp3[24]);
-                                  stringResult = intl2.string(tmp2Result.getAlwaysVisibleCopy(tmp8));
-                                }
-                                obj5 = { accessibilityRole: "button", accessibilityHint: stringResult };
-                                merged = Object.assign(obj5);
-                                accessibilityActions = undefined;
-                                if (badge != null) {
-                                  accessibilityActions = badge.accessibilityActions;
-                                }
-                                obj.accessibilityActions = accessibilityActions;
-                                prop = undefined;
-                                if (badge != null) {
-                                  prop = badge.onAccessibilityAction;
-                                }
-                                obj.onAccessibilityAction = prop;
-                                if (tmp7) {
-                                  onPress = closure_4;
-                                } else if (badge != null) {
-                                  onPress = badge.onPress;
-                                }
-                                obj.onPress = onPress;
-                                fn = undefined;
-                                if (null != badge) {
-                                  fn = (arg0) => {
-                                    const result = badge(alwaysVisible[11]).triggerHapticFeedback(
-                                      badge(alwaysVisible[12]).CONTEXT_MENU_OPEN_HAPTIC,
-                                    );
-                                    onLongPress = onLongPress.onLongPress;
-                                    if (onLongPress != null) {
-                                      onLongPress(arg0);
-                                    }
-                                  };
-                                }
-                                obj.onLongPress = fn;
-                                obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
-                                obj.style = closure_5;
-                                obj.children = tmp(f67509, { badge: tmp5, alwaysVisible: tmp7 });
-                                return tmp(closure_0(closure_2[25]).PressableScale, obj);
-                              }
-                            }
+                            cResult[19] = tmp12;
                             cResult[20] = tmp12Result;
-                          }
-                          class E {
-                            constructor(arg0) {
-                              closure_0 = badge;
-                              tmp = jsx;
-                              tmp2 = closure_0;
-                              tmp3 = closure_2;
-                              ref = undefined;
-                              if (badge != null) {
-                                ref = badge.ref;
-                              }
-                              obj = { ref, accessibilityLabel: null };
-                              tmp5 = badge;
-                              tmp6 = index;
-                              intl = tmp2(tmp3[16]).intl;
-                              t = tmp2(tmp3[16]).t;
-                              obj1 = { badgeName: tmp5.name, position: tmp6 + 1 };
-                              obj.accessibilityLabel = intl.formatToPlainString(
-                                badge.hidden ? t["dXg/Dl"] : t["21W3EN"],
-                                obj1,
-                              );
-                              tmp7 = alwaysVisible;
-                              stringResult = undefined;
-                              if (alwaysVisible) {
-                                intl2 = tmp2(tmp3[16]).intl;
-                                tmp2Result = tmp2(tmp3[24]);
-                                stringResult = intl2.string(tmp2Result.getAlwaysVisibleCopy(tmp8));
-                              }
-                              obj5 = { accessibilityRole: "button", accessibilityHint: stringResult };
-                              merged = Object.assign(obj5);
-                              accessibilityActions = undefined;
-                              if (badge != null) {
-                                accessibilityActions = badge.accessibilityActions;
-                              }
-                              obj.accessibilityActions = accessibilityActions;
-                              prop = undefined;
-                              if (badge != null) {
-                                prop = badge.onAccessibilityAction;
-                              }
-                              obj.onAccessibilityAction = prop;
-                              if (tmp7) {
-                                onPress = closure_4;
-                              } else if (badge != null) {
-                                onPress = badge.onPress;
-                              }
-                              obj.onPress = onPress;
-                              fn = undefined;
-                              if (null != badge) {
-                                fn = (arg0) => {
-                                  const result = badge(alwaysVisible[11]).triggerHapticFeedback(
-                                    badge(alwaysVisible[12]).CONTEXT_MENU_OPEN_HAPTIC,
-                                  );
-                                  onLongPress = onLongPress.onLongPress;
-                                  if (onLongPress != null) {
-                                    onLongPress(arg0);
-                                  }
-                                };
-                              }
-                              obj.onLongPress = fn;
-                              obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
-                              obj.style = closure_5;
-                              obj.children = tmp(f67509, { badge: tmp5, alwaysVisible: tmp7 });
-                              return tmp(closure_0(closure_2[25]).PressableScale, obj);
-                            }
                           }
                         }
                       }
                     }
                   }
-                  class E {
-                    constructor(arg0) {
-                      closure_0 = badge;
-                      tmp = jsx;
-                      tmp2 = closure_0;
-                      tmp3 = closure_2;
-                      ref = undefined;
-                      if (badge != null) {
-                        ref = badge.ref;
-                      }
-                      obj = { ref, accessibilityLabel: null };
-                      tmp5 = badge;
-                      tmp6 = index;
-                      intl = tmp2(tmp3[16]).intl;
-                      t = tmp2(tmp3[16]).t;
-                      obj1 = { badgeName: tmp5.name, position: tmp6 + 1 };
-                      obj.accessibilityLabel = intl.formatToPlainString(badge.hidden ? t["dXg/Dl"] : t["21W3EN"], obj1);
-                      tmp7 = alwaysVisible;
-                      stringResult = undefined;
-                      if (alwaysVisible) {
-                        intl2 = tmp2(tmp3[16]).intl;
-                        tmp2Result = tmp2(tmp3[24]);
-                        stringResult = intl2.string(tmp2Result.getAlwaysVisibleCopy(tmp8));
-                      }
-                      obj5 = { accessibilityRole: "button", accessibilityHint: stringResult };
-                      merged = Object.assign(obj5);
-                      accessibilityActions = undefined;
-                      if (badge != null) {
-                        accessibilityActions = badge.accessibilityActions;
-                      }
-                      obj.accessibilityActions = accessibilityActions;
-                      prop = undefined;
-                      if (badge != null) {
-                        prop = badge.onAccessibilityAction;
-                      }
-                      obj.onAccessibilityAction = prop;
-                      if (tmp7) {
-                        onPress = closure_4;
-                      } else if (badge != null) {
-                        onPress = badge.onPress;
-                      }
-                      obj.onPress = onPress;
-                      fn = undefined;
-                      if (null != badge) {
-                        fn = (arg0) => {
-                          const result = badge(alwaysVisible[11]).triggerHapticFeedback(
-                            badge(alwaysVisible[12]).CONTEXT_MENU_OPEN_HAPTIC,
-                          );
-                          onLongPress = onLongPress.onLongPress;
-                          if (onLongPress != null) {
-                            onLongPress(arg0);
-                          }
-                        };
-                      }
-                      obj.onLongPress = fn;
-                      obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
-                      obj.style = closure_5;
-                      obj.children = tmp(f67509, { badge: tmp5, alwaysVisible: tmp7 });
-                      return tmp(closure_0(closure_2[25]).PressableScale, obj);
+                  function renderTile(ref) {
+                    let onLongPress = ref;
+                    ref = undefined;
+                    if (ref != null) {
+                      ref = ref.ref;
                     }
+                    const obj = { ref, accessibilityLabel: null };
+                    const intl = util.intl;
+                    const t = util.t;
+                    obj.accessibilityLabel = intl.formatToPlainString(badge.hidden ? t["dXg/Dl"] : t["21W3EN"], {
+                      badgeName: badge.name,
+                      position: index + 1,
+                    });
+                    let stringResult;
+                    if (alwaysVisible) {
+                      const intl2 = util.intl;
+                      stringResult = intl2.string(BadgeUtils.getAlwaysVisibleCopy(tmp8));
+                      const tmp2Result = BadgeUtils;
+                    }
+                    const merged = Object.assign({ accessibilityRole: "button", accessibilityHint: stringResult });
+                    let accessibilityActions;
+                    if (ref != null) {
+                      accessibilityActions = ref.accessibilityActions;
+                    }
+                    obj.accessibilityActions = accessibilityActions;
+                    let prop;
+                    if (ref != null) {
+                      prop = ref.onAccessibilityAction;
+                    }
+                    obj.onAccessibilityAction = prop;
+                    if (alwaysVisible) {
+                      onPress = closure_4;
+                    } else if (ref != null) {
+                      onPress = ref.onPress;
+                    }
+                    obj.onPress = onPress;
+                    let fn;
+                    if (null != ref) {
+                      fn = (arg0) => {
+                        const result = badge(alwaysVisible[11]).triggerHapticFeedback(
+                          badge(alwaysVisible[12]).CONTEXT_MENU_OPEN_HAPTIC,
+                        );
+                        onLongPress = onLongPress.onLongPress;
+                        if (onLongPress != null) {
+                          onLongPress(arg0);
+                        }
+                      };
+                    }
+                    obj.onLongPress = fn;
+                    obj.delayLongPress = ContextMenuConstants.CONTEXT_MENU_LONG_PRESS_DURATION_MS;
+                    obj.style = style;
+                    obj.children = state(closure_23, { badge, alwaysVisible });
+                    return state(native.PressableScale, obj);
                   }
                   cResult[13] = alwaysVisible;
                   cResult[14] = badge;
-                  cResult[15] = tmp8;
+                  cResult[15] = tmp9;
                   cResult[16] = index;
                   cResult[17] = tmp11;
-                  cResult[18] = E;
-                  tmp12 = E;
+                  cResult[18] = renderTile;
+                  tmp12 = renderTile;
                 }
-                const items = [, tmp9];
+                const items = [tmp4.position, tmp10];
                 cResult[10] = tmp4.position;
-                cResult[11] = tmp9;
+                cResult[11] = tmp10;
                 cResult[12] = items;
                 tmp11 = items;
               }
             }
-            tmp10[0] = x;
-            tmp10[1] = y;
-            tmp10[2] = tileSize;
-            tmp10[3] = tileSize;
+            const size = { left: x, top: y, width: tileSize, height: tileSize };
             cResult[6] = tileSize;
             cResult[7] = x;
             cResult[8] = y;
-            cResult[9] = tmp10;
-            tmp9 = tmp10;
+            cResult[9] = size;
+            tmp10 = size;
           }
           let fn = function h() {
             onPress(badge);
@@ -787,73 +583,12 @@ let closure_24 = noop.memo(
           cResult[3] = badge;
           cResult[4] = onPress;
           cResult[5] = fn;
-          tmp8 = fn;
+          tmp9 = fn;
         }
         if (typeof getSlotOffset === "function") {
           const point = { x: null, y: null };
           let result = index % tmp(alwaysVisible[13]).BADGE_GRID_COLUMNS;
           point.x = result * (tileSize + tmp(alwaysVisible[13]).BADGE_GRID_GAP);
-          class E {
-            constructor(arg0) {
-              closure_0 = badge;
-              tmp = jsx;
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              ref = undefined;
-              if (badge != null) {
-                ref = badge.ref;
-              }
-              obj = { ref, accessibilityLabel: null };
-              tmp5 = badge;
-              tmp6 = index;
-              intl = tmp2(tmp3[16]).intl;
-              t = tmp2(tmp3[16]).t;
-              obj1 = { badgeName: tmp5.name, position: tmp6 + 1 };
-              obj.accessibilityLabel = intl.formatToPlainString(badge.hidden ? t["dXg/Dl"] : t["21W3EN"], obj1);
-              tmp7 = alwaysVisible;
-              stringResult = undefined;
-              if (alwaysVisible) {
-                intl2 = tmp2(tmp3[16]).intl;
-                tmp2Result = tmp2(tmp3[24]);
-                stringResult = intl2.string(tmp2Result.getAlwaysVisibleCopy(tmp8));
-              }
-              obj5 = { accessibilityRole: "button", accessibilityHint: stringResult };
-              merged = Object.assign(obj5);
-              accessibilityActions = undefined;
-              if (badge != null) {
-                accessibilityActions = badge.accessibilityActions;
-              }
-              obj.accessibilityActions = accessibilityActions;
-              prop = undefined;
-              if (badge != null) {
-                prop = badge.onAccessibilityAction;
-              }
-              obj.onAccessibilityAction = prop;
-              if (tmp7) {
-                onPress = closure_4;
-              } else if (badge != null) {
-                onPress = badge.onPress;
-              }
-              obj.onPress = onPress;
-              fn = undefined;
-              if (null != badge) {
-                fn = (arg0) => {
-                  const result = badge(alwaysVisible[11]).triggerHapticFeedback(
-                    badge(alwaysVisible[12]).CONTEXT_MENU_OPEN_HAPTIC,
-                  );
-                  onLongPress = onLongPress.onLongPress;
-                  if (onLongPress != null) {
-                    onLongPress(arg0);
-                  }
-                };
-              }
-              obj.onLongPress = fn;
-              obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
-              obj.style = closure_5;
-              obj.children = tmp(f67509, { badge: tmp5, alwaysVisible: tmp7 });
-              return tmp(closure_0(closure_2[25]).PressableScale, obj);
-            }
-          }
           const _Math = Math;
           const rounded = Math.floor(index / tmp(alwaysVisible[13]).BADGE_GRID_COLUMNS);
           point.y = rounded * (tileSize + tmp(alwaysVisible[13]).BADGE_GRID_GAP);
@@ -866,7 +601,7 @@ let closure_24 = noop.memo(
         }
         let obj = badge(alwaysVisible[15]);
       }
-    : (badge) => {
+    : function FixedBadgeTile(badge) {
         badge = badge.badge;
         const index = badge.index;
         ({ tileSize, alwaysVisible } = badge);
@@ -1025,7 +760,7 @@ const __initData12 = {
 ReactCompilerGating = fn(558);
 let closure_49 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (badge) => {
+    ? function DraggableBadgeTile(badge) {
         const cResult = badge(tileSize[15]).c(75);
         badge = badge.badge;
         let index = badge.index;
@@ -1413,7 +1148,7 @@ let closure_49 = noop.memo(
         tmp5 = fn;
         const tmp4 = closure_21();
       }
-    : (badge) => {
+    : function DraggableBadgeTile(badge) {
         badge = badge.badge;
         let index = badge.index;
         const tileSize = badge.tileSize;

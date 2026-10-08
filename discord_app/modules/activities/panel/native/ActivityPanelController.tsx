@@ -16,12 +16,12 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import EmbeddedActivitiesStore from "../../EmbeddedActivitiesStore.tsx";
 
 require = fn;
-const Constants = fn(2011);
+const Constants = fn(2023);
 ({ OrientationLockState: closure_11, ACTIVITY_LOCKED_ASPECT_RATIO: closure_12 } = Constants);
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
 const jsx = fn(21).jsx;
 let closure_15 = { x: 0, y: 0, gestureActive: false };
-const FunctionUtils = fn(2026);
+const FunctionUtils = fn(2038);
 let closure_16 = FunctionUtils.cachedFunction((arg0, arg1, arg2, arg3) => {
   ({ width, height } = arg0);
   if (constants.LANDSCAPE === arg2) {
@@ -77,7 +77,7 @@ const __initData4 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (wrapperOffset) => {
+  ? function useAppFreeze(wrapperOffset) {
       _require = wrapperOffset;
       const cResult = require("c").c(5);
       let obj = require("c");
@@ -134,7 +134,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = fn3;
       const obj5 = { runOnJS: require("ReanimatedRexport").runOnJS, setWrapperGestureInProgress: tmp3[1] };
     }
-  : (wrapperOffset) => {
+  : function useAppFreeze(wrapperOffset) {
       _require = wrapperOffset;
       const isActivityPanelFullscreen = require("ActivityPanelUtils").useIsActivityPanelFullscreen();
       const tmp2 = id(noop.useState(false), 2);
@@ -174,7 +174,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isConnected) => {
+  ? function useActivityOrientationState(isConnected) {
       const cResult = isConnected(orientationLockStateForApp[12]).c(13);
       isConnected = isConnected.isConnected;
       const selectedMode = isConnected.selectedMode;
@@ -251,7 +251,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = fn;
       let obj = isConnected(orientationLockStateForApp[12]);
     }
-  : (isConnected) => {
+  : function useActivityOrientationState(isConnected) {
       isConnected = isConnected.isConnected;
       const selectedMode = isConnected.selectedMode;
       const isVoicePanelFullscreen = isConnected.isVoicePanelFullscreen;
@@ -274,7 +274,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isActivityConnected) => {
+  ? function useSafeAreaLock(isActivityConnected) {
       const cResult = isActivityConnected(id[12]).c(6);
       isActivityConnected = isActivityConnected.isActivityConnected;
       const isActivityFocused = isActivityConnected.isActivityFocused;
@@ -317,7 +317,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = fn;
       let obj = isActivityConnected(id[12]);
     }
-  : (isActivityConnected) => {
+  : function useSafeAreaLock(isActivityConnected) {
       isActivityConnected = isActivityConnected.isActivityConnected;
       const isActivityFocused = isActivityConnected.isActivityFocused;
       const isVoicePanelFullscreen = isActivityConnected.isVoicePanelFullscreen;
@@ -341,7 +341,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BaseActivityPanelController(arg0) {
       const cResult = mode(sharedValue1[12]).c(44);
       ({ children, context, orientationLockStateForApp, mode } = arg0);
       ({ hasConnectedActivity, connectedActivityAppId } = arg0);
@@ -1048,7 +1048,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = defaultOrientationLockState;
       const obj3 = mode(sharedValue1[14]);
     }
-  : (updateActivityPanelMode) => {
+  : function BaseActivityPanelController(updateActivityPanelMode) {
       ({ orientationLockStateForApp, mode } = updateActivityPanelMode);
       ({ hasConnectedActivity, connectedActivityAppId } = updateActivityPanelMode);
       updateActivityPanelMode = updateActivityPanelMode.updateActivityPanelMode;
@@ -1176,7 +1176,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelController.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function ActivityPanelController(children) {
       const cResult = mode(576).c(14);
       children = children.children;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1259,7 +1259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = {
-          context: connectedActivityInTextChannelId(17197),
+          context: connectedActivityInTextChannelId(17478),
           orientationLockStateForApp,
           mode,
           hasConnectedActivity,
@@ -1270,7 +1270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         const tmp19 = (
           <closure_24
-            context={connectedActivityInTextChannelId(17197)}
+            context={connectedActivityInTextChannelId(17478)}
             orientationLockStateForApp={orientationLockStateForApp}
             mode={mode}
             hasConnectedActivity={hasConnectedActivity}
@@ -1310,7 +1310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn2;
       const tmpResult = mode(504);
     }
-  : (children) => {
+  : function ActivityPanelController(children) {
       let mode;
       const items = [EmbeddedActivitiesStore, ApplicationStore];
       const stateFromStoresObject = mode(504).useStateFromStoresObject(items, () => {
@@ -1373,7 +1373,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = mode(504);
       return (
         <closure_24
-          context={connectedActivityInTextChannelId(17197)}
+          context={connectedActivityInTextChannelId(17478)}
           orientationLockStateForApp={orientationLockStateForApp}
           mode={mode}
           hasConnectedActivity={hasConnectedActivity}

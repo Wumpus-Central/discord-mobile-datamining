@@ -2,8 +2,8 @@
 import c from "../../../../_runtime/00576_c.js";
 import UserSettings from "../UserSettings.tsx";
 import AgeVerificationUtils from "../../age_assurance/AgeVerificationUtils.tsx";
-import RegionalFeatureConfigUtils from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeGatedFeature from "../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import RegionalFeatureConfigUtils from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import useNSFWAllowed from "useNSFWAllowed.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -11,7 +11,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useViewNsfwCommandsOrDefault() {
       const cResult = c.c(5);
       const ViewNsfwCommands = UserSettings.ViewNsfwCommands;
       const setting = ViewNsfwCommands.useSetting();
@@ -53,7 +53,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp8;
       tmp6 = tmp8;
     }
-  : () => {
+  : function useViewNsfwCommandsOrDefault() {
       const ViewNsfwCommands = UserSettings.ViewNsfwCommands;
       let flag = ViewNsfwCommands.useSetting();
       const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
@@ -101,7 +101,7 @@ const result = size.fileFinishedImporting(
 export { resolveNsfwTogglesWithDefaults };
 export const useViewNsfwCommandsOrDefault = tmp2;
 export const useViewNsfwGuildsOrDefault = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useViewNsfwGuildsOrDefault() {
       const cResult = c.c(5);
       const ViewNsfwGuilds = UserSettings.ViewNsfwGuilds;
       const setting = ViewNsfwGuilds.useSetting();
@@ -143,7 +143,7 @@ export const useViewNsfwGuildsOrDefault = ReactCompilerGating.isReactCompilerEna
       cResult[4] = tmp8;
       tmp6 = tmp8;
     }
-  : () => {
+  : function useViewNsfwGuildsOrDefault() {
       const ViewNsfwGuilds = UserSettings.ViewNsfwGuilds;
       let flag = ViewNsfwGuilds.useSetting();
       const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();

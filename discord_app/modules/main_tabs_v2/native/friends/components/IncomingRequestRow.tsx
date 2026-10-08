@@ -27,13 +27,13 @@ let closure_3 = [
 let user = ["user"];
 let closure_5 = ["user", "application"];
 let closure_6 = ["user", "applicationId"];
-const UserRowModes = fn(10605).UserRowModes;
+const UserRowModes = fn(10202).UserRowModes;
 const RelationshipTypes = fn(1085).RelationshipTypes;
 const jsx = fn(21).jsx;
 const constants = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function IncomingRequestRow(user) {
       const cResult = require("c").c(57);
       if (cResult[0] !== user) {
         user = user.user;
@@ -84,7 +84,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const sharedValue = require("ReanimatedRexport").useSharedValue(false);
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
-        const fn = function x() {
+        const fn = function w() {
           return useReducedMotion.useReducedMotion;
         };
         cResult[12] = items;
@@ -209,7 +209,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                           tmp35 = cResult[29];
                         }
                         if (cResult[30] !== tmp9) {
-                          const fn3 = function k() {
+                          const fn3 = function h() {
                             return ApplicationStore.getApplication(closure_1);
                           };
                           class M {
@@ -309,7 +309,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                             const tmp42 = jsx(
-                              tmp33(12309),
+                              tmp33(12407),
                               { application: null, textVariant: "text-xs/medium", iconSize: 12 },
                               stateFromStores1.id,
                             );
@@ -424,7 +424,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                                     acceptRequestAccessibilityLabel: tmp4,
                                     ignoreRequestAccessibilityLabel: tmp10,
                                   };
-                                  const tmp51 = jsx(tmp(16966).IncomingRequestRowActions, {
+                                  const tmp51 = jsx(tmp(17247).IncomingRequestRowActions, {
                                     user: tmp14,
                                     pressed: sharedValue,
                                     applicationId: tmp9,
@@ -454,7 +454,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                             actionStatusAccessibilityLabel: tmp6,
                             animate: tmp44,
                           };
-                          const tmp47 = jsx(tmp(16422).ActionStatusSubLabel, {
+                          const tmp47 = jsx(tmp(16682).ActionStatusSubLabel, {
                             actioned: sharedValue,
                             label: str,
                             actionStatus: tmp7,
@@ -636,7 +636,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[21] = tmp14;
         cResult[22] = tmp28;
       }
-      const fn2 = function w() {
+      const fn2 = function x() {
         const result = sharedValue.set(closure_0);
       };
       const items3 = [tmp5, sharedValue];
@@ -648,7 +648,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       tmp23 = fn2;
       const tmpResult3 = require("useStateFromStores");
     }
-  : (user) => {
+  : function IncomingRequestRow(user) {
       user = user.user;
       const applicationId = user.applicationId;
       const accepted = user.accepted;
@@ -772,7 +772,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
 fn(558);
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function IncomingGameFriendRequestRow(arg0) {
       const cResult = require("c").c(26);
       if (cResult[0] !== arg0) {
         ({ user, application } = arg0);
@@ -908,7 +908,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = formatToPlainStringResult3;
       const obj8 = { name: userTag, applicationName: application.name };
     }
-  : (arg0) => {
+  : function IncomingGameFriendRequestRow(arg0) {
       ({ user, application } = arg0);
       const merged = Object.assign(arg0, Object.assign({ user: 0, application: 0 }));
       const userTag = UserUtilsDefault.useUserTag(user);
@@ -963,7 +963,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function IncomingFriendRequestRow(user) {
       const cResult = c.c(19);
       if (cResult[0] !== user) {
         user = user.user;
@@ -1068,7 +1068,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         ignoreRequestAccessibilityLabel: tmp18,
       };
     }
-  : (user) => {
+  : function IncomingFriendRequestRow(user) {
       user = user.user;
       const merged = Object.assign(user, Object.assign({ user: 0 }));
       const userTag = UserUtilsDefault.useUserTag(user);
@@ -1107,7 +1107,7 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/com
 
 export const IncomingFriendRequestRow = tmp2;
 export const ConnectedIncomingGameFriendRequestRow = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ConnectedIncomingGameFriendRequestRow(arg0) {
       const cResult = require("c").c(11);
       if (cResult[0] !== arg0) {
         ({ user, applicationId } = arg0);
@@ -1160,7 +1160,7 @@ export const ConnectedIncomingGameFriendRequestRow = ReactCompilerGating.isReact
       }
       const tmpResult = require("useStateFromStores");
     }
-  : (applicationId) => {
+  : function ConnectedIncomingGameFriendRequestRow(applicationId) {
       applicationId = applicationId.applicationId;
       let tmp = null;
       const merged = Object.assign(applicationId, Object.assign({ user: 0, applicationId: 0 }));

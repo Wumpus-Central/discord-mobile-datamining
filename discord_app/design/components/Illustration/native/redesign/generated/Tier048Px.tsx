@@ -1,7 +1,7 @@
 // discord_app/design/components/Illustration/native/redesign/generated/Tier048Px.tsx
 import c from "../../../../../../../_runtime/00576_c.js";
 import shared from "../../../../../shared.tsx";
-import _mod7916 from "../../index.tsx";
+import _mod8335 from "../../index.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -9,57 +9,57 @@ const Image = fn(17).Image;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useTier048PxSource() {
       const cResult = c.c(2);
       const theme = shared.useThemeContext().theme;
       if (cResult[0] !== theme) {
         const obj3 = {
           dark() {
-            return require("../../../../../../../_runtime/metro/13333__.js");
+            return require("../../../../../../../_runtime/metro/13633__.js");
           },
           darker() {
-            return require("../../../../../../../_runtime/metro/13334__.js");
+            return require("../../../../../../../_runtime/metro/13634__.js");
           },
           light() {
-            return require("../../../../../../../_runtime/metro/13335__.js");
+            return require("../../../../../../../_runtime/metro/13635__.js");
           },
         };
-        const illustrationSource = _mod7916.getIllustrationSource(theme, obj3);
+        const illustrationSource = _mod8335.getIllustrationSource(theme, obj3);
         cResult[0] = theme;
         cResult[1] = illustrationSource;
         let tmp4 = illustrationSource;
-        const tmpResult = _mod7916;
+        const tmpResult = _mod8335;
       } else {
         tmp4 = cResult[1];
       }
       return tmp4;
     }
-  : () => {
+  : function useTier048PxSource() {
       const obj = shared;
-      return _mod7916.getIllustrationSource(obj.useThemeContext().theme, {
+      return _mod8335.getIllustrationSource(obj.useThemeContext().theme, {
         dark() {
-          return require("../../../../../../../_runtime/metro/13333__.js");
+          return require("../../../../../../../_runtime/metro/13633__.js");
         },
         darker() {
-          return require("../../../../../../../_runtime/metro/13334__.js");
+          return require("../../../../../../../_runtime/metro/13634__.js");
         },
         light() {
-          return require("../../../../../../../_runtime/metro/13335__.js");
+          return require("../../../../../../../_runtime/metro/13635__.js");
         },
       });
     };
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 function getTier048PxSource(theme) {
-  return _mod7916.getIllustrationSource(theme, {
+  return _mod8335.getIllustrationSource(theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/13333__.js");
+      return require("../../../../../../../_runtime/metro/13633__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/13334__.js");
+      return require("../../../../../../../_runtime/metro/13634__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/13335__.js");
+      return require("../../../../../../../_runtime/metro/13635__.js");
     },
   });
 }
@@ -69,7 +69,7 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export { getTier048PxSource };
 export const useTier048PxSource = tmp3;
 export const Tier048Px = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Tier048Px(arg0) {
       const cResult = c.c(3);
       const tmp2 = closure_4();
       if (cResult[0] === arg0) {
@@ -87,7 +87,7 @@ export const Tier048Px = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp5;
       tmp3 = tmp5;
     }
-  : (arg0) => {
+  : function Tier048Px(arg0) {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.source = closure_4();

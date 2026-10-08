@@ -1,5 +1,5 @@
 // discord_app/modules/rtc/hooks/useSecureFramesUserVerifiedKeysCount.tsx
-import _mod9363 from "../../../../discord_common/js/packages/libdave/index.tsx";
+import _mod8785 from "../../../../discord_common/js/packages/libdave/index.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import VerifiedKeyStore from "../VerifiedKeyStore.tsx";
 
@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesUserVerifiedKeysCount.tsx");
 
 export const useSecureFramesUserVerifiedKeysCount = ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function useSecureFramesUserVerifiedKeysCount(userId) {
       const cResult = userId(576).c(7);
       userId = userId.userId;
       const keyToOmit = userId.keyToOmit;
@@ -50,14 +50,14 @@ export const useSecureFramesUserVerifiedKeysCount = ReactCompilerGating.isReactC
       } else if (cResult[0] !== keyToOmit) {
         const _Uint8Array = Uint8Array;
         const uint8Array = new Uint8Array(keyToOmit);
-        const serializeKeyResult = tmp(9363).serializeKey(uint8Array);
+        const serializeKeyResult = tmp(8785).serializeKey(uint8Array);
         cResult[0] = keyToOmit;
         cResult[1] = serializeKeyResult;
-        const tmpResult2 = tmp(9363);
+        const tmpResult2 = tmp(8785);
       }
       const obj = userId(576);
     }
-  : (userId) => {
+  : function useSecureFramesUserVerifiedKeysCount(userId) {
       userId = userId.userId;
       const keyToOmit = userId.keyToOmit;
       let memo;
@@ -68,7 +68,7 @@ export const useSecureFramesUserVerifiedKeysCount = ReactCompilerGating.isReactC
         } else {
           const _Uint8Array = Uint8Array;
           const uint8Array = new Uint8Array(keyToOmit);
-          return _mod9363.serializeKey(uint8Array);
+          return _mod8785.serializeKey(uint8Array);
         }
       }, items);
       const items1 = [VerifiedKeyStore];

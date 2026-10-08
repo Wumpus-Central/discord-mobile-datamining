@@ -9,7 +9,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerFeaturedGameNames.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGameServerFeaturedGameNames() {
       const cResult = c.c(3);
       const data = useGame.useGame(React2).data;
       const data2 = useGame.useGame(React3).data;
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj4;
       tmp2 = obj4;
     }
-  : () => {
+  : function useGameServerFeaturedGameNames() {
       const data = useGame.useGame(React2).data;
       const data2 = useGame.useGame(React3).data;
       let str;

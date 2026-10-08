@@ -10,7 +10,7 @@ require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGradientColors() {
       const cResult = c.c(5);
       const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
       if (cResult[0] !== token) {
@@ -34,8 +34,8 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items;
       tmp7 = items;
     }
-  : () => {
-      token = token(4586).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  : function useGradientColors() {
+      token = token(4778).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
       let items = [token];
       return noop.useMemo(() => {
         const items = [token, ColorUtils.hexWithOpacity(token, 0)];
@@ -47,7 +47,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/SearchTabsGradient.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (state) => {
+  ? function SearchTabsGradient(state) {
       const cResult = c.c(3);
       state = state.state;
       const tmp3 = closure_5();
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp5;
       tmp4 = tmp5;
     }
-  : (state) => {
+  : function SearchTabsGradient(state) {
       const colors = closure_5();
       return jsx(TabsGradientDefault, { state: state.state, colors });
     };

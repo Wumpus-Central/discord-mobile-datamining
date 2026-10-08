@@ -96,7 +96,7 @@ function PoolIdInput(onSubmit) {
   );
   let obj = { spacing: 4, style: tmp.inputContainer, children: null };
   const items1 = [
-    v65535(TextInput.TextInput, {
+    collapsed(TextInput.TextInput, {
       size: "md",
       placeholder: "Enter Pool ID",
       onChange: tmp2[1],
@@ -105,7 +105,7 @@ function PoolIdInput(onSubmit) {
       autoComplete: "off",
       clearable: true,
     }),
-    v65535(TextInput.TextInput, {
+    collapsed(TextInput.TextInput, {
       size: "md",
       secureTextEntry: true,
       placeholder: "Enter Password",
@@ -123,7 +123,7 @@ function PoolIdInput(onSubmit) {
   if (!tmp11) {
     tmp11 = tmp7;
   }
-  items1[2] = v65535(components_Button_Button.Button, {
+  items1[2] = collapsed(components_Button_Button.Button, {
     size: "md",
     variant: "primary",
     text: "Get Pool",
@@ -139,25 +139,25 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let items = [
-  fn(11448).UserIcon,
-  fn(8952).ShieldIcon,
-  fn(10779).GiftIcon,
-  fn(15435).AchievementsIcon,
-  fn(11547).PiggyBankIcon,
-  fn(15437).TreehouseIcon,
-  fn(9651).SpeedometerIcon,
-  fn(15439).CompassIcon,
-  fn(13670).SignPostIcon,
-  fn(15441).CarIcon,
-  fn(15443).TrainIcon,
-  fn(15445).TeacupIcon,
-  fn(15447).InventoryIcon,
-  fn(9974).FoodIcon,
-  fn(15449).BurgerIcon,
-  fn(15451).MagicDoorIcon,
-  fn(15453).PawPrintIcon,
-  fn(15455).RecordPlayerIcon,
-  fn(6893).SettingsIcon,
+  fn(11431).UserIcon,
+  fn(10386).ShieldIcon,
+  fn(11561).GiftIcon,
+  fn(15697).AchievementsIcon,
+  fn(11562).PiggyBankIcon,
+  fn(15699).TreehouseIcon,
+  fn(10846).SpeedometerIcon,
+  fn(15701).CompassIcon,
+  fn(13892).SignPostIcon,
+  fn(15703).CarIcon,
+  fn(15705).TrainIcon,
+  fn(15707).TeacupIcon,
+  fn(15709).InventoryIcon,
+  fn(9501).FoodIcon,
+  fn(15711).BurgerIcon,
+  fn(15713).MagicDoorIcon,
+  fn(15715).PawPrintIcon,
+  fn(15717).RecordPlayerIcon,
+  fn(7082).SettingsIcon,
 ];
 let closure_13 = [
   "text-default",
@@ -167,7 +167,7 @@ let closure_13 = [
   "text-link",
   "text-brand",
 ];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   contentContainer: null,
@@ -180,7 +180,7 @@ obj2.inputContainer = { marginBottom: nativeDefault.space.PX_16 };
 let closure_14 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (pool) => {
+  ? function UserActionSheet(pool) {
       let map = str;
       let TableRowGroup = dependencyMap;
       const cResult = str(576).c(29);
@@ -197,7 +197,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
         dependencyMap = tmp12;
         if (cResult[10] !== str.id) {
-          const fn = function w(arg0) {
+          const fn = function k(arg0) {
             ActionSheetActionCreatorsDefault.hideActionSheet("generated-test-users");
             GeneratedTestUserActionCreators.loginAsGeneratedUser(str.id, arg0);
           };
@@ -208,7 +208,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           tmp15 = cResult[11];
         }
         closure_3 = tmp15;
-        BottomSheet = map(6652).BottomSheet;
+        BottomSheet = map(6829).BottomSheet;
         const _HermesInternal = HermesInternal;
         const combined = "" + usersForPool.length + " users";
         if (cResult[12] === str.summary) {
@@ -223,11 +223,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             tmp21 = cResult[15];
           }
-          TableRowGroup = map(6081).TableRowGroup;
+          TableRowGroup = map(6267).TableRowGroup;
           map = usersForPool.map;
           const mapped = map((id, arg1) => {
             const obj = {
-              icon: closure_1_10(str(11448).UserIcon, { size: "md" }),
+              icon: closure_1_10(str(11431).UserIcon, { size: "md" }),
               label: null,
               subLabel: null,
               onPress() {
@@ -241,12 +241,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             ({ username: obj.label, email: obj.subLabel } = id);
             let tmp2Result;
             if (id.id === dependencyMap) {
-              tmp2Result = closure_1_10(str(4583).CheckmarkLargeIcon, { size: "md", color: "text-feedback-positive" });
+              tmp2Result = closure_1_10(str(4775).CheckmarkLargeIcon, { size: "md", color: "text-feedback-positive" });
             }
             obj.trailing = tmp2Result;
             obj.start = 0 === arg1;
             obj.end = arg1 === usersForPool.length - 1;
-            return closure_1_10(str(6000).TableRow, obj, id.id);
+            return closure_1_10(str(6184).TableRow, obj, id.id);
           });
           cResult[0] = str;
           cResult[1] = TableRowGroup;
@@ -260,7 +260,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = tmp17;
         }
         const obj3 = { title: str.summary, subtitle: combined };
-        const tmp19 = closure_10(map(6651).BottomSheetTitleHeader, obj3);
+        const tmp19 = closure_10(map(6828).BottomSheetTitleHeader, obj3);
         cResult[12] = str.summary;
         cResult[13] = combined;
         cResult[14] = tmp19;
@@ -315,7 +315,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = str(576);
     }
-  : (pool) => {
+  : function UserActionSheet(pool) {
       pool = pool.pool;
       const usersForPool = GeneratedTestUsersStore.getUsersForPool(pool.id);
       dependencyMap = AuthenticationStore.getId();
@@ -325,7 +325,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         GeneratedTestUserActionCreators.loginAsGeneratedUser(pool.id, arg0);
       }, items);
       let obj = {
-        header: closure_10(pool(6651).BottomSheetTitleHeader, {
+        header: closure_10(pool(6828).BottomSheetTitleHeader, {
           title: pool.summary,
           subtitle: "" + usersForPool.length + " users",
         }),
@@ -335,12 +335,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { title: pool.summary, subtitle: "" + usersForPool.length + " users" };
       obj3.style = { paddingHorizontal: usersForPool(587).space.PX_12 };
       const obj4 = { paddingHorizontal: usersForPool(587).space.PX_12 };
-      obj3.children = closure_10(pool(6081).TableRowGroup, {
+      obj3.children = closure_10(pool(6267).TableRowGroup, {
         title: "Select User to Login As",
         hasIcons: true,
         children: usersForPool.map((id, index) => {
           const obj = {
-            icon: closure_1_10(pool(11448).UserIcon, { size: "md" }),
+            icon: closure_1_10(pool(11431).UserIcon, { size: "md" }),
             label: null,
             subLabel: null,
             onPress() {
@@ -354,20 +354,20 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           ({ username: obj.label, email: obj.subLabel } = id);
           let tmp2Result;
           if (id.id === dependencyMap) {
-            tmp2Result = closure_1_10(pool(4583).CheckmarkLargeIcon, { size: "md", color: "text-feedback-positive" });
+            tmp2Result = closure_1_10(pool(4775).CheckmarkLargeIcon, { size: "md", color: "text-feedback-positive" });
           }
           obj.trailing = tmp2Result;
           obj.start = 0 === index;
           obj.end = index === usersForPool.length - 1;
-          return closure_1_10(pool(6000).TableRow, obj, id.id);
+          return closure_1_10(pool(6184).TableRow, obj, id.id);
         }),
       });
       obj.children = closure_10(closure_6, obj3);
-      return closure_10(pool(6652).BottomSheet, obj);
+      return closure_10(pool(6829).BottomSheet, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (pool) => {
+  ? function PoolUsers(pool) {
       const cResult = pool(576).c(14);
       pool = pool.pool;
       ({ start, end } = pool);
@@ -386,7 +386,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         class I {
           constructor() {
             obj = closure_1(closure_2[33]);
-            obj1 = { default: f70641 };
+            obj1 = { default: UserActionSheet };
             obj4 = { pool };
             openLazyResult = obj.openLazy(Promise.resolve(obj1), "generated-test-users", obj4);
             return;
@@ -398,7 +398,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         class I {
           constructor() {
             obj = closure_1(closure_2[33]);
-            obj1 = { default: f70641 };
+            obj1 = { default: UserActionSheet };
             obj4 = { pool };
             openLazyResult = obj.openLazy(Promise.resolve(obj1), "generated-test-users", obj4);
             return;
@@ -409,7 +409,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         class I {
           constructor() {
             obj = closure_1(closure_2[33]);
-            obj1 = { default: f70641 };
+            obj1 = { default: UserActionSheet };
             obj4 = { pool };
             openLazyResult = obj.openLazy(Promise.resolve(obj1), "generated-test-users", obj4);
             return;
@@ -421,7 +421,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           class I {
             constructor() {
               obj = closure_1(closure_2[33]);
-              obj1 = { default: f70641 };
+              obj1 = { default: UserActionSheet };
               obj4 = { pool };
               openLazyResult = obj.openLazy(Promise.resolve(obj1), "generated-test-users", obj4);
               return;
@@ -429,7 +429,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { icon: tmp9, label: summary, subLabel: combined, arrow: true, onPress: I, start, end };
-        const tmp14 = closure_10(tmp(6000).TableRow, obj2);
+        const tmp14 = closure_10(tmp(6184).TableRow, obj2);
         cResult[7] = end;
         cResult[8] = I;
         cResult[9] = start;
@@ -445,7 +445,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = pool(576);
       tmp = pool;
     }
-  : (pool) => {
+  : function PoolUsers(pool) {
       pool = pool.pool;
       const id = pool.id;
       ({ start, end } = pool);
@@ -456,7 +456,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           pool,
         });
       }, items);
-      return closure_10(pool(6000).TableRow, {
+      return closure_10(pool(6184).TableRow, {
         icon: closure_10(items[Number(undefined, id) % items.length], {
           size: "md",
           color: closure_13[Number(undefined, id) % closure_13.length],
@@ -477,7 +477,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DevToolsGeneratedTestUsersScreen() {
       const cResult = stateFromStoresArray(576).c(25);
       const tmp4 = closure_14();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -556,7 +556,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         });
-        const fn2 = function () {
+        function t3() {
           const self = this;
           const apply = stateFromStoresArray.apply;
           if (typeof apply === "unknown") {
@@ -565,9 +565,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
-        cResult[3] = fn2;
-        let tmp10 = fn2;
+        }
+        cResult[3] = t3;
+        let tmp10 = t3;
       } else {
         tmp10 = cResult[3];
       }
@@ -596,7 +596,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[10] !== stateFromStoresArray.length) {
           let tmp20 = 0 === stateFromStoresArray.length;
           if (tmp20) {
-            tmp20 = closure_10(tmp(6000).TableRow, { label: "No pools available." });
+            tmp20 = closure_10(tmp(6184).TableRow, { label: "No pools available." });
           }
           cResult[10] = stateFromStoresArray.length;
           cResult[11] = tmp20;
@@ -606,16 +606,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[12] !== stateFromStoresArray) {
           if (cResult[14] !== stateFromStoresArray.length) {
-            const fn3 = function x(pool, arg1) {
-              return v65535(
+            const fn2 = function w(pool, arg1) {
+              return collapsed(
                 closure_17,
                 { pool, start: 0 === arg1, end: arg1 === stateFromStoresArray.length - 1 },
                 pool.id,
               );
             };
             cResult[14] = stateFromStoresArray.length;
-            cResult[15] = fn3;
-            let tmp23 = fn3;
+            cResult[15] = fn2;
+            let tmp23 = fn2;
           } else {
             tmp23 = cResult[15];
           }
@@ -656,9 +656,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { title: "Generated Test User Pools", hasIcons: true, children: null };
           const items2 = [tmp19, cResult[13]];
           obj8.children = items2;
-          items1[1] = closure_11(tmp(6081).TableRowGroup, obj8);
+          items1[1] = closure_11(tmp(6267).TableRowGroup, obj8);
           obj7.children = items1;
-          const tmp28 = closure_11(tmp(5600).Stack, obj7);
+          const tmp28 = closure_11(tmp(5373).Stack, obj7);
           cResult[16] = cResult[13];
           cResult[17] = tmp19;
           cResult[18] = tmp28;
@@ -672,7 +672,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = items3;
       const tmpResult = stateFromStoresArray(504);
     }
-  : () => {
+  : function DevToolsGeneratedTestUsersScreen() {
       const tmp = closure_14();
       items = [GeneratedTestUsersStore];
       stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
@@ -754,20 +754,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [closure_10(PoolIdInput, { onSubmit: callback })];
       let tmp5Result = 0 === stateFromStoresArray.length;
       if (tmp5Result) {
-        tmp5Result = closure_10(stateFromStoresArray(6000).TableRow, { label: "No pools available." });
+        tmp5Result = closure_10(stateFromStoresArray(6184).TableRow, { label: "No pools available." });
       }
       let obj5 = { spacing: 16, children: null };
       const obj6 = { title: "Generated Test User Pools", hasIcons: true, children: null };
       const items3 = [
         tmp5Result,
         stateFromStoresArray.map((pool, index) =>
-          v65535(closure_17, { pool, start: 0 === index, end: index === stateFromStoresArray.length - 1 }, pool.id),
+          collapsed(closure_17, { pool, start: 0 === index, end: index === stateFromStoresArray.length - 1 }, pool.id),
         ),
       ];
       obj6.children = items3;
-      items2[1] = closure_11(stateFromStoresArray(6081).TableRowGroup, obj6);
+      items2[1] = closure_11(stateFromStoresArray(6267).TableRowGroup, obj6);
       obj5.children = items2;
-      obj3.children = closure_11(stateFromStoresArray(5600).Stack, obj5);
+      obj3.children = closure_11(stateFromStoresArray(5373).Stack, obj5);
       obj2.children = closure_10(closure_7, obj3);
       return closure_10(closure_6, obj2);
     };

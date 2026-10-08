@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/AccessibilityFocusView/native/AccessibilityFocusView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AccessibilityFocusView(arg0) {
       const cResult = c.c(8);
       if (cResult[0] !== arg0) {
         ({ onAccessibilityFocus, onAccessibilityBlur } = arg0);
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp12;
       tmp9 = tmp12;
     }
-  : (arg0) => {
+  : function AccessibilityFocusView(arg0) {
       ({ onAccessibilityFocus, onAccessibilityBlur } = arg0);
       const merged = Object.assign(arg0, Object.assign({ onAccessibilityFocus: 0, onAccessibilityBlur: 0 }));
       const obj = {};

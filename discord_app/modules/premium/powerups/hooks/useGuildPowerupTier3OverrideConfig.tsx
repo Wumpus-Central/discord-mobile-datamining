@@ -1,5 +1,5 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx
-import _modDef2553 from "../GuildPowerups.messages.js";
+import _modDef2597 from "../GuildPowerups.messages.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGuildPowerupTier3OverrideConfig(arg0) {
       _require = arg0;
       let intl = _require;
       let stringResult = dependencyMap;
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { shouldShow: true, text: null };
           intl = intl(1126).intl;
-          stringResult = intl.string(_modDef2553.l9n4QZ);
+          stringResult = intl.string(_modDef2597.l9n4QZ);
           obj2.text = stringResult;
           cResult[4] = obj2;
         }
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       intlResult = intl(504);
     }
-  : (arg0) => {
+  : function useGuildPowerupTier3OverrideConfig(arg0) {
       _require = arg0;
       const items = [GuildStore];
       if (
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ) {
         const obj2 = { shouldShow: true, text: null };
         const intl = require("util").intl;
-        obj2.text = intl.string(_modDef2553.l9n4QZ);
+        obj2.text = intl.string(_modDef2597.l9n4QZ);
         let obj3 = obj2;
       } else {
         obj3 = { shouldShow: false, text: "" };

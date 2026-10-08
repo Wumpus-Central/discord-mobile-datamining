@@ -5,7 +5,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import DisplayNameEffect from "../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import GummyStripesDefault from "effects/GummyStripes.tsx";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
@@ -22,7 +22,7 @@ let size = size_mod;
 const result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (colors) => {
+  ? function DisplayNameStylesColorSwatch(colors) {
       const cResult = c.c(24);
       colors = colors.colors;
       const tmp4 = closure_5();
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[8] !== colors) {
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn = function _(color) {
+            const fn = function p(color) {
               return utils_ColorUtils.int2hex(color);
             };
             cResult[10] = fn;
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = str;
       }
     }
-  : (colors) => {
+  : function DisplayNameStylesColorSwatch(colors) {
       colors = colors.colors;
       const tmp = closure_5();
       if (colors.effectId === DisplayNameEffect.DisplayNameEffect.GUMMY) {

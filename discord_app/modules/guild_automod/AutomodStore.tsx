@@ -1,5 +1,5 @@
 // discord_app/modules/guild_automod/AutomodStore.tsx
-import _mod4498 from "../../../_runtime/metro/04498__.js";
+import _mod4690 from "../../../_runtime/metro/04690__.js";
 import SystemRulesUtils from "SystemRulesUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -8,10 +8,10 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(11487).AutomodTriggerType;
+const AutomodTriggerType = fn(11473).AutomodTriggerType;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
-const identity = fn(1254);
+const identity = fn(1266);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   dependencyMap = arg1;
@@ -52,7 +52,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         mapped[HermesBuiltin.arraySpread(found, 0)] = guildId;
       }
       someResult = items.some((id) => id.id === closure_1_2);
-      guildId(1259).batchUpdates(() => {
+      guildId(1271).batchUpdates(() => {
         obj = { rules: null, error: null };
         const obj2 = {};
         const merged = Object.assign(rules);
@@ -79,7 +79,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         acc[NumberResult] = items.filter((id) => id.id !== closure_1_0);
         return acc;
       }, {});
-      closure_0(1259).batchUpdates(() => {
+      closure_0(1271).batchUpdates(() => {
         const obj = { rules: null, error: null };
         const obj2 = {};
         const merged = Object.assign(rules);
@@ -204,7 +204,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       }
     }
   });
-  obj.syncRules = function () {
+  obj.syncRules = function syncRules() {
     const self = this;
     const apply = closure_2.apply;
     if (typeof apply === "unknown") {
@@ -219,7 +219,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSyncAutomodRulesEffect(arg0) {
       const cResult = require("c").c(8);
       _require = arg0;
       let first;
@@ -230,7 +230,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const items = [,];
           ({ syncRules: arr[0], fetching: arr[1] } = arg0);
           return items;
-        }, require("../../../_runtime/metro/04498__.js").shallow),
+        }, require("../../../_runtime/metro/04690__.js").shallow),
         2,
       );
       first = tmp3[0];
@@ -309,7 +309,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       [tmp7, tmp8] = first(items, 2);
       _require = tmp8;
       if (cResult[0] !== tmp8) {
-        const fn = function n() {
+        const fn = function o() {
           (async () => {
             if (c0 === 2) {
               c0 = 3;
@@ -388,7 +388,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = items3;
       const tmp6 = first(items, 2);
     }
-  : (arg0) => {
+  : function useSyncAutomodRulesEffect(arg0) {
       _require = arg0;
       const tmp = first(noop.useState(false), 2);
       dependencyMap = tmp[1];
@@ -397,7 +397,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const items = [,];
           ({ syncRules: arr[0], fetching: arr[1] } = arg0);
           return items;
-        }, require("../../../_runtime/metro/04498__.js").shallow),
+        }, require("../../../_runtime/metro/04690__.js").shallow),
         2,
       );
       first = tmp2[0];
@@ -536,7 +536,7 @@ function useSyncAutomodRules(arg0) {
       const items = [,];
       ({ syncRules: arr[0], fetching: arr[1] } = arg0);
       return items;
-    }, _mod4498.shallow),
+    }, _mod4690.shallow),
     2,
   );
   const first = tmp2[0];
@@ -631,7 +631,7 @@ export const getRuleCountByTriggerType = function getRuleCountByTriggerType(guil
 export { useSyncAutomodRules };
 export const useSyncAutomodRulesEffect = tmp3;
 export const useAutomodRulesList = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAutomodRulesList(arg0) {
       _require = arg0;
       const cResult = require("c").c(2);
       if (cResult[0] !== arg0) {
@@ -652,9 +652,9 @@ export const useAutomodRulesList = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp4 = cResult[1];
       }
-      return withEqualityFn(tmp4, require("../../../_runtime/metro/04498__.js").shallow);
+      return withEqualityFn(tmp4, require("../../../_runtime/metro/04690__.js").shallow);
     }
-  : (arg0) => {
+  : function useAutomodRulesList(arg0) {
       _require = arg0;
       return withEqualityFn((updateRule) => {
         let tmp = closure_0;
@@ -666,5 +666,5 @@ export const useAutomodRulesList = ReactCompilerGating.isReactCompilerEnabled()
           obj = {};
         }
         return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-      }, require("../../../_runtime/metro/04498__.js").shallow);
+      }, require("../../../_runtime/metro/04690__.js").shallow);
     };

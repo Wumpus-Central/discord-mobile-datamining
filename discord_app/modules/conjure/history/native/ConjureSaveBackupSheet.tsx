@@ -6,11 +6,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(12923).createDatabaseRestorePoint;
+let closure_6 = fn(13072).createDatabaseRestorePoint;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjureSaveBackupSheet = "ConjureSaveBackupSheet";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: { paddingBottom: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -19,7 +19,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/history/native/ConjureSaveBackupSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (projectId) => {
+  ? function ConjureSaveBackupSheet(projectId) {
       const cResult = projectId(onSaved[8]).c(28);
       projectId = projectId.projectId;
       const environment = projectId.environment;
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = fn;
       const tmp9 = value(noop.useState(false), 2);
     }
-  : (projectId) => {
+  : function ConjureSaveBackupSheet(projectId) {
       projectId = projectId.projectId;
       const environment = projectId.environment;
       const onSaved = projectId.onSaved;

@@ -47,7 +47,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useIsFavoritesGuildVisible.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsFavoritesGuildVisible(arg0) {
       const cResult = require("c").c(8);
       _require = tmp4;
       const obj = require("c");
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = items1;
       tmp10 = fn;
     }
-  : () => {
+  : function useIsFavoritesGuildVisible() {
       let flag = arg0;
       if (arg0 === undefined) {
         flag = true;

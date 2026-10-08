@@ -6,8 +6,8 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import GameConsoleActionCreators from "../GameConsoleActionCreators.tsx";
-import _modDef9470 from "../../../../_runtime/metro/09470__.js";
-import _modDef9471 from "../../../../_runtime/metro/09471__.js";
+import _modDef10906 from "../../../../_runtime/metro/10906__.js";
+import _modDef10907 from "../../../../_runtime/metro/10907__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 const ComponentActions = fn(1085).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { padding: 16, justifyContent: "center", paddingBottom: 90 },
   loading: { minHeight: 56 },
@@ -54,7 +54,7 @@ obj2.infoBox = { marginTop: 8 };
 let closure_15 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TransferFooter(arg0) {
       const cResult = c.c(8);
       ({ onPress, transferring } = arg0);
       const tmp4 = closure_15();
@@ -102,7 +102,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp10;
       tmp9 = tmp10;
     }
-  : (arg0) => {
+  : function TransferFooter(arg0) {
       ({ onPress, transferring } = arg0);
       const obj = { bottom: true, style: closure_15().footerContainer, children: null };
       const obj2 = { loading: transferring, disabled: null, onPress: null, text: null, grow: true };
@@ -118,13 +118,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DeviceOption(arg0) {
       const cResult = c.c(12);
       ({ name, platform } = arg0);
       const tmp4 = closure_15();
       ({ deviceOption, deviceIcon } = tmp4);
       if (cResult[0] !== platform) {
-        const tmp7 = _modDef9470;
+        const tmp7 = _modDef10906;
         cResult[0] = platform;
         cResult[1] = tmp7;
         let tmp5 = tmp7;
@@ -175,11 +175,11 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp9;
       tmp8 = tmp9;
     }
-  : (children) => {
+  : function DeviceOption(children) {
       const tmp = closure_15();
       const obj = { style: tmp.deviceOption, children: null };
       const items = [
-        __initData(closure_1_8, { style: tmp.deviceIcon, source: _modDef9470 }),
+        __initData(closure_1_8, { style: tmp.deviceIcon, source: _modDef10906 }),
         __initData(Text_Text.Text, {
           style: tmp.deviceText,
           color: "mobile-text-heading-primary",
@@ -192,11 +192,11 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function EmptyState() {
       const cResult = c.c(13);
       const tmp4 = closure_15();
       if (cResult[0] !== tmp4.emptyArt) {
-        const obj2 = { source: _modDef9471, style: tmp4.emptyArt };
+        const obj2 = { source: _modDef10907, style: tmp4.emptyArt };
         const tmp9 = __initData(closure_1_8, obj2);
         cResult[0] = tmp4.emptyArt;
         cResult[1] = tmp9;
@@ -264,10 +264,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = tmp21;
       tmp20 = tmp21;
     }
-  : () => {
+  : function EmptyState() {
       const tmp = closure_15();
       const obj = { style: tmp.emptyContainer, children: null };
-      const items = [__initData(closure_1_8, { source: _modDef9471, style: tmp.emptyArt }), ,];
+      const items = [__initData(closure_1_8, { source: _modDef10907, style: tmp.emptyArt }), ,];
       const obj3 = {
         style: tmp.emptyHeader,
         variant: "heading-md/extrabold",
@@ -294,7 +294,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/game_console/native/GameConsoleDeviceListActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (platform) => {
+  ? function GameConsoleListActionSheet(platform) {
       const cResult = require("c").c(50);
       platform = platform.platform;
       _require = platform;
@@ -327,24 +327,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       if (cResult[4] !== platform) {
-        class P {
+        class F {
           constructor() {
             return closure_10.getFetchingDevices(closure_0);
           }
         }
         cResult[4] = platform;
-        cResult[5] = P;
+        cResult[5] = F;
       } else {
-        class P {
+        class F {
           constructor() {
             return closure_10.getFetchingDevices(closure_0);
           }
         }
       }
       const tmpResult = require("initialize");
-      const stateFromStores1 = require("initialize").useStateFromStores(tmp9, P);
+      const stateFromStores1 = require("initialize").useStateFromStores(tmp9, F);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        class P {
+        class F {
           constructor() {
             return closure_10.getFetchingDevices(closure_0);
           }
@@ -353,7 +353,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = items2;
         const tmp13 = items2;
       } else {
-        class P {
+        class F {
           constructor() {
             return closure_10.getFetchingDevices(closure_0);
           }
@@ -388,7 +388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_10.getLastSelectedDeviceByPlatform(closure_0);
           }
         }
-        const effect = obj5.useEffect(H, items3);
+        const effect = obj5.useEffect(G, items3);
         if (cResult[13] !== platform) {
           class R {
             constructor() {
@@ -482,7 +482,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[18] = first1;
         cResult[19] = handleTransferVoice;
       }
-      class H {
+      class G {
         constructor() {
           values = Object.values(closure_2);
           if (1 === values.length) {
@@ -501,11 +501,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items3 = [stateFromStores, stateFromStores2];
       cResult[9] = stateFromStores;
       cResult[10] = stateFromStores2;
-      cResult[11] = H;
+      cResult[11] = G;
       cResult[12] = items3;
       const tmp18 = first1(noop.useState(false), 2);
     }
-  : (arg0) => {
+  : function GameConsoleListActionSheet(arg0) {
       ({ platform: require, channel: importDefault } = arg0);
       let stateFromStores;
       value = undefined;
@@ -541,7 +541,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 v1 = 1;
                 dependencyMap = 1;
                 const obj4 = {
-                  value: tmp4(9468).transferToPlaystationWithAlert(
+                  value: tmp4(10904).transferToPlaystationWithAlert(
                     _require,
                     stateFromStores[_slicedToArray],
                     importDefault,
@@ -558,7 +558,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj5 = { value, done: true };
               return obj5;
             } else {
-              v1(4860).hideActionSheet();
+              v1(5054).hideActionSheet();
               const ComponentDispatch = tmp4(1121).ComponentDispatch;
               ComponentDispatch.dispatch(constants.TOGGLE_CALL_CONTROL_DRAWER);
               dependencyMap = 3;

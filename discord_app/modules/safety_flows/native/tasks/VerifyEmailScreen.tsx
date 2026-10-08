@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         });
-        const fn = function () {
+        function t0() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -113,10 +113,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[0] = onTaskComplete;
-        cResult[1] = fn;
-        let tmp9 = fn;
+        cResult[1] = t0;
+        let tmp9 = t0;
       } else {
         tmp9 = cResult[1];
       }

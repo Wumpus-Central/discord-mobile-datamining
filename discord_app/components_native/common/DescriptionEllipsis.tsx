@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { topicEllipsis: null, topicEllipsisDot: null };
 let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
@@ -28,7 +28,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/DescriptionEllipsis.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DescriptionEllipsis(arg0) {
       const cResult = c.c(17);
       ({ style, dotStyle } = arg0);
       const tmp2 = closure_5();
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items4;
       tmp3 = items4;
     }
-  : (dotStyle) => {
+  : function DescriptionEllipsis(dotStyle) {
       dotStyle = dotStyle.dotStyle;
       const tmp = closure_5();
       const obj = { style: null, children: null };

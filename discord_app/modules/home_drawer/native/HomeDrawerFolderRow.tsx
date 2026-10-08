@@ -14,14 +14,14 @@ const View = fn(17).View;
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_13 = createStyles.createStyles({
   title: { flexDirection: "row", alignItems: "center", gap: 4 },
   titleText: { flexShrink: 1 },
 });
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (folder) => {
+  ? function Wrapper(folder) {
       const cResult = length(stateFromStoresArray1[11]).c(42);
       length = folder.folder;
       const tmp4 = closure_13();
@@ -60,149 +60,63 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       if (cResult[4] !== stateFromStoresArray[0]) {
-        class F {
-          constructor() {
-            first = closure_1[0];
-            tmp2 = undefined;
-            if (null != first) {
-              tmp3 = closure_6;
-              guild = closure_6.getGuild(first);
-              name = undefined;
-              if (guild != null) {
-                name = guild.name;
-              }
-              tmp2 = name;
+        const fn2 = function _() {
+          const first = stateFromStoresArray[0];
+          let tmp2;
+          if (null != first) {
+            guild = GuildStore.getGuild(first);
+            let name;
+            if (guild != null) {
+              name = guild.name;
             }
-            return tmp2;
+            tmp2 = name;
           }
-        }
+          return tmp2;
+        };
         cResult[4] = stateFromStoresArray[0];
-        cResult[5] = F;
+        cResult[5] = fn2;
+        let tmp11 = fn2;
       } else {
-        class F {
-          constructor() {
-            first = closure_1[0];
-            tmp2 = undefined;
-            if (null != first) {
-              tmp3 = closure_6;
-              guild = closure_6.getGuild(first);
-              name = undefined;
-              if (guild != null) {
-                name = guild.name;
-              }
-              tmp2 = name;
-            }
-            return tmp2;
-          }
-        }
+        tmp11 = cResult[5];
       }
       const tmpResult = length(stateFromStoresArray1[12]);
-      const stateFromStores = length(stateFromStoresArray1[12]).useStateFromStores(tmp9, F);
+      const stateFromStores = length(stateFromStoresArray1[12]).useStateFromStores(tmp9, tmp11);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        class F {
-          constructor() {
-            first = closure_1[0];
-            tmp2 = undefined;
-            if (null != first) {
-              tmp3 = closure_6;
-              guild = closure_6.getGuild(first);
-              name = undefined;
-              if (guild != null) {
-                name = guild.name;
-              }
-              tmp2 = name;
-            }
-            return tmp2;
-          }
-        }
         const items2 = [GuildReadStateStore, UserGuildSettingsStore];
         cResult[6] = items2;
         let tmp13 = items2;
       } else {
-        class F {
-          constructor() {
-            first = closure_1[0];
-            tmp2 = undefined;
-            if (null != first) {
-              tmp3 = closure_6;
-              guild = closure_6.getGuild(first);
-              name = undefined;
-              if (guild != null) {
-                name = guild.name;
-              }
-              tmp2 = name;
-            }
-            return tmp2;
-          }
-        }
+        tmp13 = cResult[6];
       }
       if (cResult[7] !== length.guildIds) {
-        class N {
-          constructor() {
-            guildIds = folder.guildIds;
-            return guildIds.filter((item) => {
-              const isMutedResult = muted.isMuted(item);
-              let hasUnreadResult = !isMutedResult;
-              if (!isMutedResult) {
-                hasUnreadResult = closure_1_5.hasUnread(item);
-              }
-              return hasUnreadResult;
-            });
-          }
-        }
+        const fn3 = function w() {
+          const guildIds = length.guildIds;
+          return guildIds.filter((item) => {
+            const isMutedResult = muted.isMuted(item);
+            let hasUnreadResult = !isMutedResult;
+            if (!isMutedResult) {
+              hasUnreadResult = closure_1_5.hasUnread(item);
+            }
+            return hasUnreadResult;
+          });
+        };
         cResult[7] = length.guildIds;
-        cResult[8] = N;
+        cResult[8] = fn3;
+        let tmp16 = fn3;
       } else {
-        class N {
-          constructor() {
-            guildIds = folder.guildIds;
-            return guildIds.filter((item) => {
-              const isMutedResult = muted.isMuted(item);
-              let hasUnreadResult = !isMutedResult;
-              if (!isMutedResult) {
-                hasUnreadResult = closure_1_5.hasUnread(item);
-              }
-              return hasUnreadResult;
-            });
-          }
-        }
+        tmp16 = cResult[8];
       }
       const tmpResult6 = length(stateFromStoresArray1[12]);
-      stateFromStoresArray1 = length(stateFromStoresArray1[12]).useStateFromStoresArray(tmp13, N);
+      stateFromStoresArray1 = length(stateFromStoresArray1[12]).useStateFromStoresArray(tmp13, tmp16);
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        class N {
-          constructor() {
-            guildIds = folder.guildIds;
-            return guildIds.filter((item) => {
-              const isMutedResult = muted.isMuted(item);
-              let hasUnreadResult = !isMutedResult;
-              if (!isMutedResult) {
-                hasUnreadResult = closure_1_5.hasUnread(item);
-              }
-              return hasUnreadResult;
-            });
-          }
-        }
         const items3 = [GuildStore];
         cResult[9] = items3;
-        const tmp16 = items3;
+        let tmp17 = items3;
       } else {
-        class N {
-          constructor() {
-            guildIds = folder.guildIds;
-            return guildIds.filter((item) => {
-              const isMutedResult = muted.isMuted(item);
-              let hasUnreadResult = !isMutedResult;
-              if (!isMutedResult) {
-                hasUnreadResult = closure_1_5.hasUnread(item);
-              }
-              return hasUnreadResult;
-            });
-          }
-        }
+        tmp17 = cResult[9];
       }
       if (cResult[10] !== stateFromStoresArray1[0]) {
-        class T {
+        class G {
           constructor() {
             first = closure_2[0];
             tmp2 = undefined;
@@ -219,9 +133,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[10] = stateFromStoresArray1[0];
-        cResult[11] = T;
+        cResult[11] = G;
       } else {
-        class T {
+        class G {
           constructor() {
             first = closure_2[0];
             tmp2 = undefined;
@@ -239,9 +153,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult7 = length(stateFromStoresArray1[12]);
-      const stateFromStores1 = length(stateFromStoresArray1[12]).useStateFromStores(tmp16, T);
+      const stateFromStores1 = length(stateFromStoresArray1[12]).useStateFromStores(tmp17, G);
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-        class T {
+        class G {
           constructor() {
             first = closure_2[0];
             tmp2 = undefined;
@@ -259,9 +173,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const items4 = [VoiceStateStore, GuildStore, UserGuildSettingsStore];
         cResult[12] = items4;
-        const tmp19 = items4;
+        const tmp21 = items4;
       } else {
-        class T {
+        class G {
           constructor() {
             first = closure_2[0];
             tmp2 = undefined;
@@ -279,431 +193,191 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[13] !== length.guildIds) {
-        class O {
+        class G {
           constructor() {
-            guildIds = folder.guildIds;
-            return guildIds.filter((item) => {
-              closure_0 = item;
-              if (closure_8.isMuted(item)) {
-                return false;
-              } else {
-                guild = guild.getGuild(item);
-                if (guild != null) {
-                  const afkChannelId = guild.afkChannelId;
-                }
-                const _Set = Set;
-                const set = new Set();
-                const _Object = Object;
-                const values = Object.values(voiceStates.getVoiceStates(item));
-                for (const item10027 of values) {
-                  let tmp13 = null != item10027.channelId;
-                  if (tmp13) {
-                    tmp13 = item10027.channelId !== afkChannelId;
-                  }
-                  if (tmp13) {
-                    let addResult = set.add(item10027.channelId);
-                  }
-                  continue;
-                }
-                const items = [];
-                HermesBuiltin.arraySpread(set, 0);
-                return items.some((item) => {
-                  const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                  let tmp3 = !isCategoryMutedResult;
-                  if (!isCategoryMutedResult) {
-                    tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                  }
-                  return tmp3;
-                });
+            first = closure_2[0];
+            tmp2 = undefined;
+            if (null != first) {
+              tmp3 = closure_6;
+              guild = closure_6.getGuild(first);
+              name = undefined;
+              if (guild != null) {
+                name = guild.name;
               }
-            });
+              tmp2 = name;
+            }
+            return tmp2;
           }
         }
         cResult[13] = length.guildIds;
-        cResult[14] = O;
+        cResult[14] = tmp25;
       } else {
-        class O {
+        class G {
           constructor() {
-            guildIds = folder.guildIds;
-            return guildIds.filter((item) => {
-              closure_0 = item;
-              if (closure_8.isMuted(item)) {
-                return false;
-              } else {
-                guild = guild.getGuild(item);
-                if (guild != null) {
-                  const afkChannelId = guild.afkChannelId;
-                }
-                const _Set = Set;
-                const set = new Set();
-                const _Object = Object;
-                const values = Object.values(voiceStates.getVoiceStates(item));
-                for (const item10027 of values) {
-                  let tmp13 = null != item10027.channelId;
-                  if (tmp13) {
-                    tmp13 = item10027.channelId !== afkChannelId;
-                  }
-                  if (tmp13) {
-                    let addResult = set.add(item10027.channelId);
-                  }
-                  continue;
-                }
-                const items = [];
-                HermesBuiltin.arraySpread(set, 0);
-                return items.some((item) => {
-                  const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                  let tmp3 = !isCategoryMutedResult;
-                  if (!isCategoryMutedResult) {
-                    tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                  }
-                  return tmp3;
-                });
+            first = closure_2[0];
+            tmp2 = undefined;
+            if (null != first) {
+              tmp3 = closure_6;
+              guild = closure_6.getGuild(first);
+              name = undefined;
+              if (guild != null) {
+                name = guild.name;
               }
-            });
+              tmp2 = name;
+            }
+            return tmp2;
           }
         }
       }
       const tmpResult8 = length(stateFromStoresArray1[12]);
-      let stateFromStoresArray2 = length(stateFromStoresArray1[12]).useStateFromStoresArray(tmp19, O);
+      let stateFromStoresArray2 = length(stateFromStoresArray1[12]).useStateFromStoresArray(tmp21, tmp25);
       if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-        class O {
+        class G {
           constructor() {
-            guildIds = folder.guildIds;
-            return guildIds.filter((item) => {
-              closure_0 = item;
-              if (closure_8.isMuted(item)) {
-                return false;
-              } else {
-                guild = guild.getGuild(item);
-                if (guild != null) {
-                  const afkChannelId = guild.afkChannelId;
-                }
-                const _Set = Set;
-                const set = new Set();
-                const _Object = Object;
-                const values = Object.values(voiceStates.getVoiceStates(item));
-                for (const item10027 of values) {
-                  let tmp13 = null != item10027.channelId;
-                  if (tmp13) {
-                    tmp13 = item10027.channelId !== afkChannelId;
-                  }
-                  if (tmp13) {
-                    let addResult = set.add(item10027.channelId);
-                  }
-                  continue;
-                }
-                const items = [];
-                HermesBuiltin.arraySpread(set, 0);
-                return items.some((item) => {
-                  const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                  let tmp3 = !isCategoryMutedResult;
-                  if (!isCategoryMutedResult) {
-                    tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                  }
-                  return tmp3;
-                });
+            first = closure_2[0];
+            tmp2 = undefined;
+            if (null != first) {
+              tmp3 = closure_6;
+              guild = closure_6.getGuild(first);
+              name = undefined;
+              if (guild != null) {
+                name = guild.name;
               }
-            });
+              tmp2 = name;
+            }
+            return tmp2;
           }
         }
         const items5 = [GuildStore];
         cResult[15] = items5;
-        const tmp23 = items5;
+        const tmp26 = items5;
       } else {
-        class O {
+        class G {
           constructor() {
-            guildIds = folder.guildIds;
-            return guildIds.filter((item) => {
-              closure_0 = item;
-              if (closure_8.isMuted(item)) {
-                return false;
-              } else {
-                guild = guild.getGuild(item);
-                if (guild != null) {
-                  const afkChannelId = guild.afkChannelId;
-                }
-                const _Set = Set;
-                const set = new Set();
-                const _Object = Object;
-                const values = Object.values(voiceStates.getVoiceStates(item));
-                for (const item10027 of values) {
-                  let tmp13 = null != item10027.channelId;
-                  if (tmp13) {
-                    tmp13 = item10027.channelId !== afkChannelId;
-                  }
-                  if (tmp13) {
-                    let addResult = set.add(item10027.channelId);
-                  }
-                  continue;
-                }
-                const items = [];
-                HermesBuiltin.arraySpread(set, 0);
-                return items.some((item) => {
-                  const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                  let tmp3 = !isCategoryMutedResult;
-                  if (!isCategoryMutedResult) {
-                    tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                  }
-                  return tmp3;
-                });
+            first = closure_2[0];
+            tmp2 = undefined;
+            if (null != first) {
+              tmp3 = closure_6;
+              guild = closure_6.getGuild(first);
+              name = undefined;
+              if (guild != null) {
+                name = guild.name;
               }
-            });
+              tmp2 = name;
+            }
+            return tmp2;
           }
         }
       }
       if (cResult[16] !== stateFromStoresArray2[0]) {
-        class O {
+        class E {
           constructor() {
-            guildIds = folder.guildIds;
-            return guildIds.filter((item) => {
-              closure_0 = item;
-              if (closure_8.isMuted(item)) {
-                return false;
-              } else {
-                guild = guild.getGuild(item);
-                if (guild != null) {
-                  const afkChannelId = guild.afkChannelId;
-                }
-                const _Set = Set;
-                const set = new Set();
-                const _Object = Object;
-                const values = Object.values(voiceStates.getVoiceStates(item));
-                for (const item10027 of values) {
-                  let tmp13 = null != item10027.channelId;
-                  if (tmp13) {
-                    tmp13 = item10027.channelId !== afkChannelId;
-                  }
-                  if (tmp13) {
-                    let addResult = set.add(item10027.channelId);
-                  }
-                  continue;
-                }
-                const items = [];
-                HermesBuiltin.arraySpread(set, 0);
-                return items.some((item) => {
-                  const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                  let tmp3 = !isCategoryMutedResult;
-                  if (!isCategoryMutedResult) {
-                    tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                  }
-                  return tmp3;
-                });
+            first = closure_3[0];
+            tmp2 = undefined;
+            if (null != first) {
+              tmp3 = closure_6;
+              guild = closure_6.getGuild(first);
+              name = undefined;
+              if (guild != null) {
+                name = guild.name;
               }
-            });
+              tmp2 = name;
+            }
+            return tmp2;
           }
         }
         cResult[16] = stateFromStoresArray2[0];
-        cResult[17] = tmp25;
+        cResult[17] = E;
       } else {
-        class O {
+        class E {
           constructor() {
-            guildIds = folder.guildIds;
-            return guildIds.filter((item) => {
-              closure_0 = item;
-              if (closure_8.isMuted(item)) {
-                return false;
-              } else {
-                guild = guild.getGuild(item);
-                if (guild != null) {
-                  const afkChannelId = guild.afkChannelId;
-                }
-                const _Set = Set;
-                const set = new Set();
-                const _Object = Object;
-                const values = Object.values(voiceStates.getVoiceStates(item));
-                for (const item10027 of values) {
-                  let tmp13 = null != item10027.channelId;
-                  if (tmp13) {
-                    tmp13 = item10027.channelId !== afkChannelId;
-                  }
-                  if (tmp13) {
-                    let addResult = set.add(item10027.channelId);
-                  }
-                  continue;
-                }
-                const items = [];
-                HermesBuiltin.arraySpread(set, 0);
-                return items.some((item) => {
-                  const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                  let tmp3 = !isCategoryMutedResult;
-                  if (!isCategoryMutedResult) {
-                    tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                  }
-                  return tmp3;
-                });
+            first = closure_3[0];
+            tmp2 = undefined;
+            if (null != first) {
+              tmp3 = closure_6;
+              guild = closure_6.getGuild(first);
+              name = undefined;
+              if (guild != null) {
+                name = guild.name;
               }
-            });
+              tmp2 = name;
+            }
+            return tmp2;
           }
         }
       }
       const tmpResult9 = length(stateFromStoresArray1[12]);
-      const stateFromStores2 = length(stateFromStoresArray1[12]).useStateFromStores(tmp23, tmp25);
+      const stateFromStores2 = length(stateFromStoresArray1[12]).useStateFromStores(tmp26, E);
       if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-        class O {
+        class E {
           constructor() {
-            guildIds = folder.guildIds;
-            return guildIds.filter((item) => {
-              closure_0 = item;
-              if (closure_8.isMuted(item)) {
-                return false;
-              } else {
-                guild = guild.getGuild(item);
-                if (guild != null) {
-                  const afkChannelId = guild.afkChannelId;
-                }
-                const _Set = Set;
-                const set = new Set();
-                const _Object = Object;
-                const values = Object.values(voiceStates.getVoiceStates(item));
-                for (const item10027 of values) {
-                  let tmp13 = null != item10027.channelId;
-                  if (tmp13) {
-                    tmp13 = item10027.channelId !== afkChannelId;
-                  }
-                  if (tmp13) {
-                    let addResult = set.add(item10027.channelId);
-                  }
-                  continue;
-                }
-                const items = [];
-                HermesBuiltin.arraySpread(set, 0);
-                return items.some((item) => {
-                  const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                  let tmp3 = !isCategoryMutedResult;
-                  if (!isCategoryMutedResult) {
-                    tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                  }
-                  return tmp3;
-                });
+            first = closure_3[0];
+            tmp2 = undefined;
+            if (null != first) {
+              tmp3 = closure_6;
+              guild = closure_6.getGuild(first);
+              name = undefined;
+              if (guild != null) {
+                name = guild.name;
               }
-            });
+              tmp2 = name;
+            }
+            return tmp2;
           }
         }
-        const tmp29 = closure_11(NOOP, { size: "xs" });
-        cResult[18] = tmp29;
-        const tmp28 = tmp29;
+        const tmp31 = closure_11(NOOP, { size: "xs" });
+        cResult[18] = tmp31;
+        const tmp30 = tmp31;
       } else {
-        class O {
+        class E {
           constructor() {
-            guildIds = folder.guildIds;
-            return guildIds.filter((item) => {
-              closure_0 = item;
-              if (closure_8.isMuted(item)) {
-                return false;
-              } else {
-                guild = guild.getGuild(item);
-                if (guild != null) {
-                  const afkChannelId = guild.afkChannelId;
-                }
-                const _Set = Set;
-                const set = new Set();
-                const _Object = Object;
-                const values = Object.values(voiceStates.getVoiceStates(item));
-                for (const item10027 of values) {
-                  let tmp13 = null != item10027.channelId;
-                  if (tmp13) {
-                    tmp13 = item10027.channelId !== afkChannelId;
-                  }
-                  if (tmp13) {
-                    let addResult = set.add(item10027.channelId);
-                  }
-                  continue;
-                }
-                const items = [];
-                HermesBuiltin.arraySpread(set, 0);
-                return items.some((item) => {
-                  const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                  let tmp3 = !isCategoryMutedResult;
-                  if (!isCategoryMutedResult) {
-                    tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                  }
-                  return tmp3;
-                });
+            first = closure_3[0];
+            tmp2 = undefined;
+            if (null != first) {
+              tmp3 = closure_6;
+              guild = closure_6.getGuild(first);
+              name = undefined;
+              if (guild != null) {
+                name = guild.name;
               }
-            });
+              tmp2 = name;
+            }
+            return tmp2;
           }
         }
       }
       if (cResult[19] !== length.folderName) {
-        class O {
+        class E {
           constructor() {
-            guildIds = folder.guildIds;
-            return guildIds.filter((item) => {
-              closure_0 = item;
-              if (closure_8.isMuted(item)) {
-                return false;
-              } else {
-                guild = guild.getGuild(item);
-                if (guild != null) {
-                  const afkChannelId = guild.afkChannelId;
-                }
-                const _Set = Set;
-                const set = new Set();
-                const _Object = Object;
-                const values = Object.values(voiceStates.getVoiceStates(item));
-                for (const item10027 of values) {
-                  let tmp13 = null != item10027.channelId;
-                  if (tmp13) {
-                    tmp13 = item10027.channelId !== afkChannelId;
-                  }
-                  if (tmp13) {
-                    let addResult = set.add(item10027.channelId);
-                  }
-                  continue;
-                }
-                const items = [];
-                HermesBuiltin.arraySpread(set, 0);
-                return items.some((item) => {
-                  const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                  let tmp3 = !isCategoryMutedResult;
-                  if (!isCategoryMutedResult) {
-                    tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                  }
-                  return tmp3;
-                });
+            first = closure_3[0];
+            tmp2 = undefined;
+            if (null != first) {
+              tmp3 = closure_6;
+              guild = closure_6.getGuild(first);
+              name = undefined;
+              if (guild != null) {
+                name = guild.name;
               }
-            });
+              tmp2 = name;
+            }
+            return tmp2;
           }
         }
         if (stringResult == null) {
-          class O {
+          class E {
             constructor() {
-              guildIds = folder.guildIds;
-              return guildIds.filter((item) => {
-                closure_0 = item;
-                if (closure_8.isMuted(item)) {
-                  return false;
-                } else {
-                  guild = guild.getGuild(item);
-                  if (guild != null) {
-                    const afkChannelId = guild.afkChannelId;
-                  }
-                  const _Set = Set;
-                  const set = new Set();
-                  const _Object = Object;
-                  const values = Object.values(voiceStates.getVoiceStates(item));
-                  for (const item10027 of values) {
-                    let tmp13 = null != item10027.channelId;
-                    if (tmp13) {
-                      tmp13 = item10027.channelId !== afkChannelId;
-                    }
-                    if (tmp13) {
-                      let addResult = set.add(item10027.channelId);
-                    }
-                    continue;
-                  }
-                  const items = [];
-                  HermesBuiltin.arraySpread(set, 0);
-                  return items.some((item) => {
-                    const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                    let tmp3 = !isCategoryMutedResult;
-                    if (!isCategoryMutedResult) {
-                      tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                    }
-                    return tmp3;
-                  });
+              first = closure_3[0];
+              tmp2 = undefined;
+              if (null != first) {
+                tmp3 = closure_6;
+                guild = closure_6.getGuild(first);
+                name = undefined;
+                if (guild != null) {
+                  name = guild.name;
                 }
-              });
+                tmp2 = name;
+              }
+              return tmp2;
             }
           }
           stringResult = obj8.string(tmp(tmp2[14]).t["JQ/1n3"]);
@@ -711,253 +385,109 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[19] = length.folderName;
         cResult[20] = stringResult;
       } else {
-        class O {
+        class E {
           constructor() {
-            guildIds = folder.guildIds;
-            return guildIds.filter((item) => {
-              closure_0 = item;
-              if (closure_8.isMuted(item)) {
-                return false;
-              } else {
-                guild = guild.getGuild(item);
-                if (guild != null) {
-                  const afkChannelId = guild.afkChannelId;
-                }
-                const _Set = Set;
-                const set = new Set();
-                const _Object = Object;
-                const values = Object.values(voiceStates.getVoiceStates(item));
-                for (const item10027 of values) {
-                  let tmp13 = null != item10027.channelId;
-                  if (tmp13) {
-                    tmp13 = item10027.channelId !== afkChannelId;
-                  }
-                  if (tmp13) {
-                    let addResult = set.add(item10027.channelId);
-                  }
-                  continue;
-                }
-                const items = [];
-                HermesBuiltin.arraySpread(set, 0);
-                return items.some((item) => {
-                  const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                  let tmp3 = !isCategoryMutedResult;
-                  if (!isCategoryMutedResult) {
-                    tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                  }
-                  return tmp3;
-                });
+            first = closure_3[0];
+            tmp2 = undefined;
+            if (null != first) {
+              tmp3 = closure_6;
+              guild = closure_6.getGuild(first);
+              name = undefined;
+              if (guild != null) {
+                name = guild.name;
               }
-            });
+              tmp2 = name;
+            }
+            return tmp2;
           }
         }
       }
       if (cResult[21] === tmp4.titleText) {
-        class O {
+        class E {
           constructor() {
-            guildIds = folder.guildIds;
-            return guildIds.filter((item) => {
-              closure_0 = item;
-              if (closure_8.isMuted(item)) {
-                return false;
-              } else {
-                guild = guild.getGuild(item);
-                if (guild != null) {
-                  const afkChannelId = guild.afkChannelId;
-                }
-                const _Set = Set;
-                const set = new Set();
-                const _Object = Object;
-                const values = Object.values(voiceStates.getVoiceStates(item));
-                for (const item10027 of values) {
-                  let tmp13 = null != item10027.channelId;
-                  if (tmp13) {
-                    tmp13 = item10027.channelId !== afkChannelId;
-                  }
-                  if (tmp13) {
-                    let addResult = set.add(item10027.channelId);
-                  }
-                  continue;
-                }
-                const items = [];
-                HermesBuiltin.arraySpread(set, 0);
-                return items.some((item) => {
-                  const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                  let tmp3 = !isCategoryMutedResult;
-                  if (!isCategoryMutedResult) {
-                    tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                  }
-                  return tmp3;
-                });
+            first = closure_3[0];
+            tmp2 = undefined;
+            if (null != first) {
+              tmp3 = closure_6;
+              guild = closure_6.getGuild(first);
+              name = undefined;
+              if (guild != null) {
+                name = guild.name;
               }
-            });
+              tmp2 = name;
+            }
+            return tmp2;
           }
         }
         if (cResult[24] === tmp4.title) {
-          class O {
+          class E {
             constructor() {
-              guildIds = folder.guildIds;
-              return guildIds.filter((item) => {
-                closure_0 = item;
-                if (closure_8.isMuted(item)) {
-                  return false;
-                } else {
-                  guild = guild.getGuild(item);
-                  if (guild != null) {
-                    const afkChannelId = guild.afkChannelId;
-                  }
-                  const _Set = Set;
-                  const set = new Set();
-                  const _Object = Object;
-                  const values = Object.values(voiceStates.getVoiceStates(item));
-                  for (const item10027 of values) {
-                    let tmp13 = null != item10027.channelId;
-                    if (tmp13) {
-                      tmp13 = item10027.channelId !== afkChannelId;
-                    }
-                    if (tmp13) {
-                      let addResult = set.add(item10027.channelId);
-                    }
-                    continue;
-                  }
-                  const items = [];
-                  HermesBuiltin.arraySpread(set, 0);
-                  return items.some((item) => {
-                    const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                    let tmp3 = !isCategoryMutedResult;
-                    if (!isCategoryMutedResult) {
-                      tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                    }
-                    return tmp3;
-                  });
+              first = closure_3[0];
+              tmp2 = undefined;
+              if (null != first) {
+                tmp3 = closure_6;
+                guild = closure_6.getGuild(first);
+                name = undefined;
+                if (guild != null) {
+                  name = guild.name;
                 }
-              });
+                tmp2 = name;
+              }
+              return tmp2;
             }
           }
           if (cResult[27] === stateFromStoresArray2.length) {
-            class O {
+            class E {
               constructor() {
-                guildIds = folder.guildIds;
-                return guildIds.filter((item) => {
-                  closure_0 = item;
-                  if (closure_8.isMuted(item)) {
-                    return false;
-                  } else {
-                    guild = guild.getGuild(item);
-                    if (guild != null) {
-                      const afkChannelId = guild.afkChannelId;
-                    }
-                    const _Set = Set;
-                    const set = new Set();
-                    const _Object = Object;
-                    const values = Object.values(voiceStates.getVoiceStates(item));
-                    for (const item10027 of values) {
-                      let tmp13 = null != item10027.channelId;
-                      if (tmp13) {
-                        tmp13 = item10027.channelId !== afkChannelId;
-                      }
-                      if (tmp13) {
-                        let addResult = set.add(item10027.channelId);
-                      }
-                      continue;
-                    }
-                    const items = [];
-                    HermesBuiltin.arraySpread(set, 0);
-                    return items.some((item) => {
-                      const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                      let tmp3 = !isCategoryMutedResult;
-                      if (!isCategoryMutedResult) {
-                        tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                      }
-                      return tmp3;
-                    });
+                first = closure_3[0];
+                tmp2 = undefined;
+                if (null != first) {
+                  tmp3 = closure_6;
+                  guild = closure_6.getGuild(first);
+                  name = undefined;
+                  if (guild != null) {
+                    name = guild.name;
                   }
-                });
+                  tmp2 = name;
+                }
+                return tmp2;
               }
             }
           }
           const intl = tmp(tmp2[14]).intl;
           const obj2 = { num: length.guildIds.length };
           if (stateFromStoresArray.length > 0) {
-            class O {
+            class E {
               constructor() {
-                guildIds = folder.guildIds;
-                return guildIds.filter((item) => {
-                  closure_0 = item;
-                  if (closure_8.isMuted(item)) {
-                    return false;
-                  } else {
-                    guild = guild.getGuild(item);
-                    if (guild != null) {
-                      const afkChannelId = guild.afkChannelId;
-                    }
-                    const _Set = Set;
-                    const set = new Set();
-                    const _Object = Object;
-                    const values = Object.values(voiceStates.getVoiceStates(item));
-                    for (const item10027 of values) {
-                      let tmp13 = null != item10027.channelId;
-                      if (tmp13) {
-                        tmp13 = item10027.channelId !== afkChannelId;
-                      }
-                      if (tmp13) {
-                        let addResult = set.add(item10027.channelId);
-                      }
-                      continue;
-                    }
-                    const items = [];
-                    HermesBuiltin.arraySpread(set, 0);
-                    return items.some((item) => {
-                      const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                      let tmp3 = !isCategoryMutedResult;
-                      if (!isCategoryMutedResult) {
-                        tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                      }
-                      return tmp3;
-                    });
+                first = closure_3[0];
+                tmp2 = undefined;
+                if (null != first) {
+                  tmp3 = closure_6;
+                  guild = closure_6.getGuild(first);
+                  name = undefined;
+                  if (guild != null) {
+                    name = guild.name;
                   }
-                });
+                  tmp2 = name;
+                }
+                return tmp2;
               }
             }
             if (null != stateFromStores) {
-              class O {
+              class E {
                 constructor() {
-                  guildIds = folder.guildIds;
-                  return guildIds.filter((item) => {
-                    closure_0 = item;
-                    if (closure_8.isMuted(item)) {
-                      return false;
-                    } else {
-                      guild = guild.getGuild(item);
-                      if (guild != null) {
-                        const afkChannelId = guild.afkChannelId;
-                      }
-                      const _Set = Set;
-                      const set = new Set();
-                      const _Object = Object;
-                      const values = Object.values(voiceStates.getVoiceStates(item));
-                      for (const item10027 of values) {
-                        let tmp13 = null != item10027.channelId;
-                        if (tmp13) {
-                          tmp13 = item10027.channelId !== afkChannelId;
-                        }
-                        if (tmp13) {
-                          let addResult = set.add(item10027.channelId);
-                        }
-                        continue;
-                      }
-                      const items = [];
-                      HermesBuiltin.arraySpread(set, 0);
-                      return items.some((item) => {
-                        const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                        let tmp3 = !isCategoryMutedResult;
-                        if (!isCategoryMutedResult) {
-                          tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                        }
-                        return tmp3;
-                      });
+                  first = closure_3[0];
+                  tmp2 = undefined;
+                  if (null != first) {
+                    tmp3 = closure_6;
+                    guild = closure_6.getGuild(first);
+                    name = undefined;
+                    if (guild != null) {
+                      name = guild.name;
                     }
-                  });
+                    tmp2 = name;
+                  }
+                  return tmp2;
                 }
               }
               const obj3 = { guildName: stateFromStores, count: stateFromStoresArray.length - 1 };
@@ -983,129 +513,57 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             str2 = "text-voice-connected";
           }
           if (stateFromStoresArray2.length <= 0) {
-            class O {
+            class E {
               constructor() {
-                guildIds = folder.guildIds;
-                return guildIds.filter((item) => {
-                  closure_0 = item;
-                  if (closure_8.isMuted(item)) {
-                    return false;
-                  } else {
-                    guild = guild.getGuild(item);
-                    if (guild != null) {
-                      const afkChannelId = guild.afkChannelId;
-                    }
-                    const _Set = Set;
-                    const set = new Set();
-                    const _Object = Object;
-                    const values = Object.values(voiceStates.getVoiceStates(item));
-                    for (const item10027 of values) {
-                      let tmp13 = null != item10027.channelId;
-                      if (tmp13) {
-                        tmp13 = item10027.channelId !== afkChannelId;
-                      }
-                      if (tmp13) {
-                        let addResult = set.add(item10027.channelId);
-                      }
-                      continue;
-                    }
-                    const items = [];
-                    HermesBuiltin.arraySpread(set, 0);
-                    return items.some((item) => {
-                      const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                      let tmp3 = !isCategoryMutedResult;
-                      if (!isCategoryMutedResult) {
-                        tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                      }
-                      return tmp3;
-                    });
+                first = closure_3[0];
+                tmp2 = undefined;
+                if (null != first) {
+                  tmp3 = closure_6;
+                  guild = closure_6.getGuild(first);
+                  name = undefined;
+                  if (guild != null) {
+                    name = guild.name;
                   }
-                });
+                  tmp2 = name;
+                }
+                return tmp2;
               }
             }
-            if (tmp40) {
-              class O {
+            if (tmp42) {
+              class E {
                 constructor() {
-                  guildIds = folder.guildIds;
-                  return guildIds.filter((item) => {
-                    closure_0 = item;
-                    if (closure_8.isMuted(item)) {
-                      return false;
-                    } else {
-                      guild = guild.getGuild(item);
-                      if (guild != null) {
-                        const afkChannelId = guild.afkChannelId;
-                      }
-                      const _Set = Set;
-                      const set = new Set();
-                      const _Object = Object;
-                      const values = Object.values(voiceStates.getVoiceStates(item));
-                      for (const item10027 of values) {
-                        let tmp13 = null != item10027.channelId;
-                        if (tmp13) {
-                          tmp13 = item10027.channelId !== afkChannelId;
-                        }
-                        if (tmp13) {
-                          let addResult = set.add(item10027.channelId);
-                        }
-                        continue;
-                      }
-                      const items = [];
-                      HermesBuiltin.arraySpread(set, 0);
-                      return items.some((item) => {
-                        const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                        let tmp3 = !isCategoryMutedResult;
-                        if (!isCategoryMutedResult) {
-                          tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                        }
-                        return tmp3;
-                      });
+                  first = closure_3[0];
+                  tmp2 = undefined;
+                  if (null != first) {
+                    tmp3 = closure_6;
+                    guild = closure_6.getGuild(first);
+                    name = undefined;
+                    if (guild != null) {
+                      name = guild.name;
                     }
-                  });
+                    tmp2 = name;
+                  }
+                  return tmp2;
                 }
               }
             }
             formatResult1 = formatResult;
             str2 = "text-muted";
-            if (tmp40) {
-              class O {
+            if (tmp42) {
+              class E {
                 constructor() {
-                  guildIds = folder.guildIds;
-                  return guildIds.filter((item) => {
-                    closure_0 = item;
-                    if (closure_8.isMuted(item)) {
-                      return false;
-                    } else {
-                      guild = guild.getGuild(item);
-                      if (guild != null) {
-                        const afkChannelId = guild.afkChannelId;
-                      }
-                      const _Set = Set;
-                      const set = new Set();
-                      const _Object = Object;
-                      const values = Object.values(voiceStates.getVoiceStates(item));
-                      for (const item10027 of values) {
-                        let tmp13 = null != item10027.channelId;
-                        if (tmp13) {
-                          tmp13 = item10027.channelId !== afkChannelId;
-                        }
-                        if (tmp13) {
-                          let addResult = set.add(item10027.channelId);
-                        }
-                        continue;
-                      }
-                      const items = [];
-                      HermesBuiltin.arraySpread(set, 0);
-                      return items.some((item) => {
-                        const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                        let tmp3 = !isCategoryMutedResult;
-                        if (!isCategoryMutedResult) {
-                          tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                        }
-                        return tmp3;
-                      });
+                  first = closure_3[0];
+                  tmp2 = undefined;
+                  if (null != first) {
+                    tmp3 = closure_6;
+                    guild = closure_6.getGuild(first);
+                    name = undefined;
+                    if (guild != null) {
+                      name = guild.name;
                     }
-                  });
+                    tmp2 = name;
+                  }
+                  return tmp2;
                 }
               }
               const obj5 = { guildName: stateFromStores1, count: stateFromStoresArray1.length - 1 };
@@ -1113,77 +571,53 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               str2 = "text-muted";
             }
           } else {
-            class O {
+            class E {
               constructor() {
-                guildIds = folder.guildIds;
-                return guildIds.filter((item) => {
-                  closure_0 = item;
-                  if (closure_8.isMuted(item)) {
-                    return false;
-                  } else {
-                    guild = guild.getGuild(item);
-                    if (guild != null) {
-                      const afkChannelId = guild.afkChannelId;
-                    }
-                    const _Set = Set;
-                    const set = new Set();
-                    const _Object = Object;
-                    const values = Object.values(voiceStates.getVoiceStates(item));
-                    for (const item10027 of values) {
-                      let tmp13 = null != item10027.channelId;
-                      if (tmp13) {
-                        tmp13 = item10027.channelId !== afkChannelId;
-                      }
-                      if (tmp13) {
-                        let addResult = set.add(item10027.channelId);
-                      }
-                      continue;
-                    }
-                    const items = [];
-                    HermesBuiltin.arraySpread(set, 0);
-                    return items.some((item) => {
-                      const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
-                      let tmp3 = !isCategoryMutedResult;
-                      if (!isCategoryMutedResult) {
-                        tmp3 = !closure_2_8.isChannelMuted(closure_0, item);
-                      }
-                      return tmp3;
-                    });
+                first = closure_3[0];
+                tmp2 = undefined;
+                if (null != first) {
+                  tmp3 = closure_6;
+                  guild = closure_6.getGuild(first);
+                  name = undefined;
+                  if (guild != null) {
+                    name = guild.name;
                   }
-                });
+                  tmp2 = name;
+                }
+                return tmp2;
               }
             }
           }
           formatResult = intl.format(tmp(tmp2[14]).t.knOfkb, obj2);
         }
         const obj6 = { style: tmp4.title, children: null };
-        const items6 = [tmp28, tmp33];
+        const items6 = [tmp30, tmp35];
         obj6.children = items6;
-        const tmp38 = closure_12(View, obj6);
+        const tmp40 = closure_12(View, obj6);
         cResult[24] = tmp4.title;
-        cResult[25] = tmp33;
-        cResult[26] = tmp38;
+        cResult[25] = tmp35;
+        cResult[26] = tmp40;
       }
-      const tmp34 = closure_11(length(stateFromStoresArray1[15]).Text, {
+      const tmp36 = closure_11(length(stateFromStoresArray1[15]).Text, {
         variant: "text-md/medium",
         style: tmp4.titleText,
         lineClamp: 1,
         color: "text-default",
-        children: tmp30,
+        children: tmp32,
       });
       cResult[21] = tmp4.titleText;
-      cResult[22] = tmp30;
-      cResult[23] = tmp34;
+      cResult[22] = tmp32;
+      cResult[23] = tmp36;
       const obj7 = {
         variant: "text-md/medium",
         style: tmp4.titleText,
         lineClamp: 1,
         color: "text-default",
-        children: tmp30,
+        children: tmp32,
       };
       const tmpResult10 = length(stateFromStoresArray1[12]);
     }
-  : (folder) => {
+  : function Wrapper(folder) {
       folder = folder.folder;
       let stateFromStoresArray;
       let stateFromStoresArray2;
@@ -1388,7 +822,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerFolderRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (folderId) => {
+  ? function HomeDrawerFolderExpandedChildren(folderId) {
       const cResult = folderId(576).c(7);
       folderId = folderId.folderId;
       const expanded = folderId.expanded;
@@ -1422,7 +856,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[3];
       }
-      const MobileHomeDrawerExperiment = tmp(4748).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = tmp(4942).MobileHomeDrawerExperiment;
       let tmp10 = null;
       if (null != stateFromStores) {
         tmp10 = null;
@@ -1441,7 +875,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp10;
     }
-  : (folderId) => {
+  : function HomeDrawerFolderExpandedChildren(folderId) {
       folderId = folderId.folderId;
       const items = [SortedGuildStore];
       const stateFromStores = folderId(504).useStateFromStores(items, () => {
@@ -1451,7 +885,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return guildFolderById;
       });
-      const MobileHomeDrawerExperiment = folderId(4748).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = folderId(4942).MobileHomeDrawerExperiment;
       let tmp3 = null;
       if (null != stateFromStores) {
         tmp3 = null;

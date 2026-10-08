@@ -11,7 +11,7 @@ import GuildChannelStore from "../../../../../stores/GuildChannelStore.tsx";
 
 require = fn;
 let View = fn(17).View;
-const HubProgressBarConstants = fn(9505);
+const HubProgressBarConstants = fn(8671);
 ({ HUB_PROGRESS_ACTION_SHEET_ID: metroRequire, HUB_PROGRESS_NUM_TOTAL_STEPS: closure_7 } = HubProgressBarConstants);
 const Constants = fn(1085);
 ({
@@ -20,12 +20,12 @@ const Constants = fn(1085);
   InstantInviteSources: c10,
   Routes: closure_11,
 } = Constants);
-const constants4 = fn(11952).DirectoryChannelScrollBehavior;
-const GuildProgressConstants = fn(12140);
+let closure_12 = fn(12025).DirectoryChannelScrollBehavior;
+const GuildProgressConstants = fn(12219);
 ({ AnalyticsActions: map1, AnalyticsSetupTypes: closure_14 } = GuildProgressConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_17 = createStyles.createStyles({
   container: { padding: 16 },
   footer: { marginTop: 12, display: "flex", alignItems: "center" },
@@ -35,18 +35,15 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/hub/native/components/progress_bar/HubProgressActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
-      const cResult = guild(hubProgressBarCompletedSteps[11]).c(54);
+  ? function HubProgressActionSheet(guild) {
+      const cResult = guild(hubProgressBarCompletedSteps[11]).c(52);
       guild = guild.guild;
       const analyticsSource = guild.analyticsSource;
-      let tmp4 = closure_17();
       let obj = guild(hubProgressBarCompletedSteps[11]);
+      let tmp4 = closure_17();
       hubProgressBarCompletedSteps = guild(hubProgressBarCompletedSteps[12]).useHubProgressBarCompletedSteps(guild);
       const size = hubProgressBarCompletedSteps.size;
-      const bound = Math.max(
-        guild(hubProgressBarCompletedSteps[13]).MIN_PROGRESS_PERCENT,
-        (100 * size) / num_total_actions,
-      );
+      const bound = Math.max(guild(hubProgressBarCompletedSteps[13]).MIN_PROGRESS_PERCENT, (100 * size) / total);
       View = size.useRef(analyticsSource);
       if (cResult[0] !== analyticsSource) {
         const fn = function u() {
@@ -86,254 +83,130 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect1 = obj3.useEffect(R, tmp11);
       if (cResult[5] !== guild.id) {
-        class A {
+        class R {
           constructor() {
-            tmp = guild;
-            defaultChannel = closure_5.getDefaultChannel(guild.id);
-            if (null != defaultChannel) {
-              tmp3 = closure_0;
-              tmp4 = closure_2;
-              obj = closure_0(closure_2[15]);
-              tmp5 = Routes;
-              obj1 = { state: null };
-              obj5 = { scrollBehavior: null };
-              tmp6 = closure_12;
-              obj5.scrollBehavior = closure_12.GUILD_LIST_TOP;
-              obj1.state = obj5;
-              transitionToResult = obj.transitionTo(Routes.CHANNEL(tmp.id, defaultChannel.id), obj1);
-              tmp8 = closure_1;
-              obj4 = closure_1(closure_2[8]);
-              tmp9 = closure_6;
-              hideActionSheetResult = obj4.hideActionSheet(closure_6);
-            }
+            obj = closure_1(closure_2[14]);
+            obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+            trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
             return;
           }
         }
         cResult[5] = guild.id;
-        cResult[6] = A;
+        cResult[6] = tmp14;
       } else {
-        class A {
+        class R {
           constructor() {
-            tmp = guild;
-            defaultChannel = closure_5.getDefaultChannel(guild.id);
-            if (null != defaultChannel) {
-              tmp3 = closure_0;
-              tmp4 = closure_2;
-              obj = closure_0(closure_2[15]);
-              tmp5 = Routes;
-              obj1 = { state: null };
-              obj5 = { scrollBehavior: null };
-              tmp6 = closure_12;
-              obj5.scrollBehavior = closure_12.GUILD_LIST_TOP;
-              obj1.state = obj5;
-              transitionToResult = obj.transitionTo(Routes.CHANNEL(tmp.id, defaultChannel.id), obj1);
-              tmp8 = closure_1;
-              obj4 = closure_1(closure_2[8]);
-              tmp9 = closure_6;
-              hideActionSheetResult = obj4.hideActionSheet(closure_6);
-            }
+            obj = closure_1(closure_2[14]);
+            obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+            trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
             return;
           }
         }
       }
       if (cResult[7] !== guild) {
-        class A {
+        class R {
           constructor() {
-            tmp = guild;
-            defaultChannel = closure_5.getDefaultChannel(guild.id);
-            if (null != defaultChannel) {
-              tmp3 = closure_0;
-              tmp4 = closure_2;
-              obj = closure_0(closure_2[15]);
-              tmp5 = Routes;
-              obj1 = { state: null };
-              obj5 = { scrollBehavior: null };
-              tmp6 = closure_12;
-              obj5.scrollBehavior = closure_12.GUILD_LIST_TOP;
-              obj1.state = obj5;
-              transitionToResult = obj.transitionTo(Routes.CHANNEL(tmp.id, defaultChannel.id), obj1);
-              tmp8 = closure_1;
-              obj4 = closure_1(closure_2[8]);
-              tmp9 = closure_6;
-              hideActionSheetResult = obj4.hideActionSheet(closure_6);
-            }
+            obj = closure_1(closure_2[14]);
+            obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+            trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
             return;
           }
         }
         cResult[7] = guild;
-        cResult[8] = tmp15;
+        cResult[8] = tmp16;
       } else {
-        class A {
+        class R {
           constructor() {
-            tmp = guild;
-            defaultChannel = closure_5.getDefaultChannel(guild.id);
-            if (null != defaultChannel) {
-              tmp3 = closure_0;
-              tmp4 = closure_2;
-              obj = closure_0(closure_2[15]);
-              tmp5 = Routes;
-              obj1 = { state: null };
-              obj5 = { scrollBehavior: null };
-              tmp6 = closure_12;
-              obj5.scrollBehavior = closure_12.GUILD_LIST_TOP;
-              obj1.state = obj5;
-              transitionToResult = obj.transitionTo(Routes.CHANNEL(tmp.id, defaultChannel.id), obj1);
-              tmp8 = closure_1;
-              obj4 = closure_1(closure_2[8]);
-              tmp9 = closure_6;
-              hideActionSheetResult = obj4.hideActionSheet(closure_6);
-            }
+            obj = closure_1(closure_2[14]);
+            obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+            trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
             return;
           }
         }
       }
       if (cResult[9] !== hubProgressBarCompletedSteps) {
-        class L {
+        class R {
           constructor() {
-            tmp2 = closure_2;
-            tmp = closure_0;
-            if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-              tmpResult = tmp(tmp2[18]);
-              tmp3 = AnalyticsLocations;
-              openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-              tmp5 = closure_1;
-              obj2 = closure_1(tmp2[8]);
-              tmp6 = closure_6;
-              hideActionSheetResult = obj2.hideActionSheet(closure_6);
-            }
+            obj = closure_1(closure_2[14]);
+            obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+            trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
             return;
           }
         }
         cResult[9] = hubProgressBarCompletedSteps;
-        cResult[10] = L;
+        cResult[10] = tmp18;
       } else {
-        class L {
+        class R {
           constructor() {
-            tmp2 = closure_2;
-            tmp = closure_0;
-            if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-              tmpResult = tmp(tmp2[18]);
-              tmp3 = AnalyticsLocations;
-              openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-              tmp5 = closure_1;
-              obj2 = closure_1(tmp2[8]);
-              tmp6 = closure_6;
-              hideActionSheetResult = obj2.hideActionSheet(closure_6);
-            }
+            obj = closure_1(closure_2[14]);
+            obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+            trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
             return;
           }
         }
       }
       if (cResult[11] === guild.id) {
-        class L {
+        class R {
           constructor() {
-            tmp2 = closure_2;
-            tmp = closure_0;
-            if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-              tmpResult = tmp(tmp2[18]);
-              tmp3 = AnalyticsLocations;
-              openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-              tmp5 = closure_1;
-              obj2 = closure_1(tmp2[8]);
-              tmp6 = closure_6;
-              hideActionSheetResult = obj2.hideActionSheet(closure_6);
-            }
+            obj = closure_1(closure_2[14]);
+            obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+            trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
             return;
           }
         }
         if (cResult[14] !== (100 === bound)) {
-          class L {
+          class R {
             constructor() {
-              tmp2 = closure_2;
-              tmp = closure_0;
-              if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                tmpResult = tmp(tmp2[18]);
-                tmp3 = AnalyticsLocations;
-                openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                tmp5 = closure_1;
-                obj2 = closure_1(tmp2[8]);
-                tmp6 = closure_6;
-                hideActionSheetResult = obj2.hideActionSheet(closure_6);
-              }
+              obj = closure_1(closure_2[14]);
+              obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+              trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
               return;
             }
           }
-          if (tmp18) {
-            class L {
+          if (tmp20) {
+            class R {
               constructor() {
-                tmp2 = closure_2;
-                tmp = closure_0;
-                if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                  tmpResult = tmp(tmp2[18]);
-                  tmp3 = AnalyticsLocations;
-                  openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                  tmp5 = closure_1;
-                  obj2 = closure_1(tmp2[8]);
-                  tmp6 = closure_6;
-                  hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                }
+                obj = closure_1(closure_2[14]);
+                obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                 return;
               }
             }
             const stringResult = obj4.string(tmp(tmp2[20]).t);
           } else {
-            class L {
+            class R {
               constructor() {
-                tmp2 = closure_2;
-                tmp = closure_0;
-                if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                  tmpResult = tmp(tmp2[18]);
-                  tmp3 = AnalyticsLocations;
-                  openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                  tmp5 = closure_1;
-                  obj2 = closure_1(tmp2[8]);
-                  tmp6 = closure_6;
-                  hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                }
+                obj = closure_1(closure_2[14]);
+                obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                 return;
               }
             }
           }
-          cResult[14] = tmp18;
+          cResult[14] = tmp20;
           cResult[15] = stringResult;
         } else {
-          class L {
+          class R {
             constructor() {
-              tmp2 = closure_2;
-              tmp = closure_0;
-              if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                tmpResult = tmp(tmp2[18]);
-                tmp3 = AnalyticsLocations;
-                openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                tmp5 = closure_1;
-                obj2 = closure_1(tmp2[8]);
-                tmp6 = closure_6;
-                hideActionSheetResult = obj2.hideActionSheet(closure_6);
-              }
+              obj = closure_1(closure_2[14]);
+              obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+              trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
               return;
             }
           }
           const container = tmp4.container;
           if (cResult[16] !== size) {
-            class L {
+            class R {
               constructor() {
-                tmp2 = closure_2;
-                tmp = closure_0;
-                if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                  tmpResult = tmp(tmp2[18]);
-                  tmp3 = AnalyticsLocations;
-                  openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                  tmp5 = closure_1;
-                  obj2 = closure_1(tmp2[8]);
-                  tmp6 = closure_6;
-                  hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                }
+                obj = closure_1(closure_2[14]);
+                obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                 return;
               }
             }
             const obj6 = {
               numFinished: size,
-              total: num_total_actions,
+              total,
               stepsHook(children, arg1) {
                 return closure_1_15(
                   guild(hubProgressBarCompletedSteps[21]).Text,
@@ -346,538 +219,307 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[16] = size;
             cResult[17] = formatResult;
           } else {
-            class L {
+            class R {
               constructor() {
-                tmp2 = closure_2;
-                tmp = closure_0;
-                if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                  tmpResult = tmp(tmp2[18]);
-                  tmp3 = AnalyticsLocations;
-                  openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                  tmp5 = closure_1;
-                  obj2 = closure_1(tmp2[8]);
-                  tmp6 = closure_6;
-                  hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                }
+                obj = closure_1(closure_2[14]);
+                obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                 return;
               }
             }
           }
-          if (cResult[18] === tmp22) {
-            class L {
+          if (cResult[18] === tmp24) {
+            class R {
               constructor() {
-                tmp2 = closure_2;
-                tmp = closure_0;
-                if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                  tmpResult = tmp(tmp2[18]);
-                  tmp3 = AnalyticsLocations;
-                  openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                  tmp5 = closure_1;
-                  obj2 = closure_1(tmp2[8]);
-                  tmp6 = closure_6;
-                  hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                }
+                obj = closure_1(closure_2[14]);
+                obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                 return;
               }
             }
             const _Symbol = Symbol;
             if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-              class L {
+              class R {
                 constructor() {
-                  tmp2 = closure_2;
-                  tmp = closure_0;
-                  if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                    tmpResult = tmp(tmp2[18]);
-                    tmp3 = AnalyticsLocations;
-                    openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                    tmp5 = closure_1;
-                    obj2 = closure_1(tmp2[8]);
-                    tmp6 = closure_6;
-                    hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                  }
+                  obj = closure_1(closure_2[14]);
+                  obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                  trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                   return;
                 }
               }
               const stringResult1 = obj8.string(tmp(tmp2[20]).t.iNR25n);
               cResult[21] = stringResult1;
-              const tmp27 = stringResult1;
+              const tmp29 = stringResult1;
             } else {
-              class L {
+              class R {
                 constructor() {
-                  tmp2 = closure_2;
-                  tmp = closure_0;
-                  if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                    tmpResult = tmp(tmp2[18]);
-                    tmp3 = AnalyticsLocations;
-                    openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                    tmp5 = closure_1;
-                    obj2 = closure_1(tmp2[8]);
-                    tmp6 = closure_6;
-                    hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                  }
+                  obj = closure_1(closure_2[14]);
+                  obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                  trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                   return;
                 }
               }
             }
             if (cResult[22] !== hubProgressBarCompletedSteps) {
-              class L {
+              class R {
                 constructor() {
-                  tmp2 = closure_2;
-                  tmp = closure_0;
-                  if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                    tmpResult = tmp(tmp2[18]);
-                    tmp3 = AnalyticsLocations;
-                    openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                    tmp5 = closure_1;
-                    obj2 = closure_1(tmp2[8]);
-                    tmp6 = closure_6;
-                    hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                  }
+                  obj = closure_1(closure_2[14]);
+                  obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                  trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                   return;
                 }
               }
-              const tmp30Result = tmp30(tmp(tmp2[17]).HubProgressStep.JOIN_GUILD);
+              const tmp32Result = tmp32(tmp(tmp2[17]).HubProgressStep.JOIN_GUILD);
               cResult[22] = hubProgressBarCompletedSteps;
-              cResult[23] = tmp30Result;
+              cResult[23] = tmp32Result;
             } else {
-              class L {
+              class R {
                 constructor() {
-                  tmp2 = closure_2;
-                  tmp = closure_0;
-                  if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                    tmpResult = tmp(tmp2[18]);
-                    tmp3 = AnalyticsLocations;
-                    openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                    tmp5 = closure_1;
-                    obj2 = closure_1(tmp2[8]);
-                    tmp6 = closure_6;
-                    hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                  }
+                  obj = closure_1(closure_2[14]);
+                  obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                  trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                   return;
                 }
               }
             }
-            if (cResult[24] === A) {
-              class L {
+            if (cResult[24] === tmp14) {
+              class R {
                 constructor() {
-                  tmp2 = closure_2;
-                  tmp = closure_0;
-                  if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                    tmpResult = tmp(tmp2[18]);
-                    tmp3 = AnalyticsLocations;
-                    openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                    tmp5 = closure_1;
-                    obj2 = closure_1(tmp2[8]);
-                    tmp6 = closure_6;
-                    hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                  }
+                  obj = closure_1(closure_2[14]);
+                  obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                  trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                   return;
                 }
               }
               const _Symbol2 = Symbol;
               if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-                class L {
+                class R {
                   constructor() {
-                    tmp2 = closure_2;
-                    tmp = closure_0;
-                    if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                      tmpResult = tmp(tmp2[18]);
-                      tmp3 = AnalyticsLocations;
-                      openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                      tmp5 = closure_1;
-                      obj2 = closure_1(tmp2[8]);
-                      tmp6 = closure_6;
-                      hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                    }
+                    obj = closure_1(closure_2[14]);
+                    obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                    trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                     return;
                   }
                 }
                 const stringResult2 = obj10.string(tmp(tmp2[20]).t["3NlTYU"]);
                 cResult[27] = stringResult2;
-                const tmp39 = stringResult2;
+                const tmp41 = stringResult2;
               } else {
-                class L {
+                class R {
                   constructor() {
-                    tmp2 = closure_2;
-                    tmp = closure_0;
-                    if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                      tmpResult = tmp(tmp2[18]);
-                      tmp3 = AnalyticsLocations;
-                      openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                      tmp5 = closure_1;
-                      obj2 = closure_1(tmp2[8]);
-                      tmp6 = closure_6;
-                      hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                    }
+                    obj = closure_1(closure_2[14]);
+                    obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                    trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                     return;
                   }
                 }
               }
               if (cResult[28] !== hubProgressBarCompletedSteps) {
-                class L {
+                class R {
                   constructor() {
-                    tmp2 = closure_2;
-                    tmp = closure_0;
-                    if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                      tmpResult = tmp(tmp2[18]);
-                      tmp3 = AnalyticsLocations;
-                      openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                      tmp5 = closure_1;
-                      obj2 = closure_1(tmp2[8]);
-                      tmp6 = closure_6;
-                      hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                    }
+                    obj = closure_1(closure_2[14]);
+                    obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                    trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                     return;
                   }
                 }
-                const tmp42Result = tmp42(tmp(tmp2[17]).HubProgressStep.INVITE_USER);
+                const tmp44Result = tmp44(tmp(tmp2[17]).HubProgressStep.INVITE_USER);
                 cResult[28] = hubProgressBarCompletedSteps;
-                cResult[29] = tmp42Result;
+                cResult[29] = tmp44Result;
               } else {
-                class L {
+                class R {
                   constructor() {
-                    tmp2 = closure_2;
-                    tmp = closure_0;
-                    if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                      tmpResult = tmp(tmp2[18]);
-                      tmp3 = AnalyticsLocations;
-                      openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                      tmp5 = closure_1;
-                      obj2 = closure_1(tmp2[8]);
-                      tmp6 = closure_6;
-                      hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                    }
+                    obj = closure_1(closure_2[14]);
+                    obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                    trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                     return;
                   }
                 }
               }
-              if (cResult[30] === tmp15) {
-                class L {
+              if (cResult[30] === tmp16) {
+                class R {
                   constructor() {
-                    tmp2 = closure_2;
-                    tmp = closure_0;
-                    if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                      tmpResult = tmp(tmp2[18]);
-                      tmp3 = AnalyticsLocations;
-                      openContactSyncModalResult = tmpResult.openContactSyncModal({}, AnalyticsLocations.HUB_PROGRESS);
-                      tmp5 = closure_1;
-                      obj2 = closure_1(tmp2[8]);
-                      tmp6 = closure_6;
-                      hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                    }
+                    obj = closure_1(closure_2[14]);
+                    obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                    trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                     return;
                   }
                 }
                 const _Symbol3 = Symbol;
                 if (cResult[33] === Symbol.for("react.memo_cache_sentinel")) {
-                  class L {
+                  class R {
                     constructor() {
-                      tmp2 = closure_2;
-                      tmp = closure_0;
-                      if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                        tmpResult = tmp(tmp2[18]);
-                        tmp3 = AnalyticsLocations;
-                        openContactSyncModalResult = tmpResult.openContactSyncModal(
-                          {},
-                          AnalyticsLocations.HUB_PROGRESS,
-                        );
-                        tmp5 = closure_1;
-                        obj2 = closure_1(tmp2[8]);
-                        tmp6 = closure_6;
-                        hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                      }
+                      obj = closure_1(closure_2[14]);
+                      obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                      trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                       return;
                     }
                   }
                   const stringResult3 = obj12.string(tmp(tmp2[20]).t.HFvFte);
                   cResult[33] = stringResult3;
-                  const tmp51 = stringResult3;
+                  const tmp53 = stringResult3;
                 } else {
-                  class L {
+                  class R {
                     constructor() {
-                      tmp2 = closure_2;
-                      tmp = closure_0;
-                      if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                        tmpResult = tmp(tmp2[18]);
-                        tmp3 = AnalyticsLocations;
-                        openContactSyncModalResult = tmpResult.openContactSyncModal(
-                          {},
-                          AnalyticsLocations.HUB_PROGRESS,
-                        );
-                        tmp5 = closure_1;
-                        obj2 = closure_1(tmp2[8]);
-                        tmp6 = closure_6;
-                        hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                      }
+                      obj = closure_1(closure_2[14]);
+                      obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                      trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                       return;
                     }
                   }
                 }
                 if (cResult[34] !== hubProgressBarCompletedSteps) {
-                  class L {
+                  class R {
                     constructor() {
-                      tmp2 = closure_2;
-                      tmp = closure_0;
-                      if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                        tmpResult = tmp(tmp2[18]);
-                        tmp3 = AnalyticsLocations;
-                        openContactSyncModalResult = tmpResult.openContactSyncModal(
-                          {},
-                          AnalyticsLocations.HUB_PROGRESS,
-                        );
-                        tmp5 = closure_1;
-                        obj2 = closure_1(tmp2[8]);
-                        tmp6 = closure_6;
-                        hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                      }
+                      obj = closure_1(closure_2[14]);
+                      obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                      trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                       return;
                     }
                   }
-                  const tmp54Result = tmp54(tmp(tmp2[17]).HubProgressStep.CONTACT_SYNC);
+                  const tmp56Result = tmp56(tmp(tmp2[17]).HubProgressStep.CONTACT_SYNC);
                   cResult[34] = hubProgressBarCompletedSteps;
-                  cResult[35] = tmp54Result;
+                  cResult[35] = tmp56Result;
                 } else {
-                  class L {
+                  class R {
                     constructor() {
-                      tmp2 = closure_2;
-                      tmp = closure_0;
-                      if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                        tmpResult = tmp(tmp2[18]);
-                        tmp3 = AnalyticsLocations;
-                        openContactSyncModalResult = tmpResult.openContactSyncModal(
-                          {},
-                          AnalyticsLocations.HUB_PROGRESS,
-                        );
-                        tmp5 = closure_1;
-                        obj2 = closure_1(tmp2[8]);
-                        tmp6 = closure_6;
-                        hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                      }
+                      obj = closure_1(closure_2[14]);
+                      obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                      trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                       return;
                     }
                   }
                 }
-                if (cResult[36] === L) {
-                  class L {
+                if (cResult[36] === tmp18) {
+                  class R {
                     constructor() {
-                      tmp2 = closure_2;
-                      tmp = closure_0;
-                      if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                        tmpResult = tmp(tmp2[18]);
-                        tmp3 = AnalyticsLocations;
-                        openContactSyncModalResult = tmpResult.openContactSyncModal(
-                          {},
-                          AnalyticsLocations.HUB_PROGRESS,
-                        );
-                        tmp5 = closure_1;
-                        obj2 = closure_1(tmp2[8]);
-                        tmp6 = closure_6;
-                        hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                      }
+                      obj = closure_1(closure_2[14]);
+                      obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                      trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                       return;
                     }
                   }
-                  if (cResult[39] !== tmp4.footer) {
-                    class L {
+                  if (cResult[39] === tmp20) {
+                    class R {
                       constructor() {
-                        tmp2 = closure_2;
-                        tmp = closure_0;
-                        if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                          tmpResult = tmp(tmp2[18]);
-                          tmp3 = AnalyticsLocations;
-                          openContactSyncModalResult = tmpResult.openContactSyncModal(
-                            {},
-                            AnalyticsLocations.HUB_PROGRESS,
-                          );
-                          tmp5 = closure_1;
-                          obj2 = closure_1(tmp2[8]);
-                          tmp6 = closure_6;
-                          hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                        }
-                        return;
-                      }
-                    }
-                    tmp64[0] = tmp4.footer;
-                    cResult[39] = tmp4.footer;
-                    cResult[40] = tmp64;
-                  } else {
-                    class L {
-                      constructor() {
-                        tmp2 = closure_2;
-                        tmp = closure_0;
-                        if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                          tmpResult = tmp(tmp2[18]);
-                          tmp3 = AnalyticsLocations;
-                          openContactSyncModalResult = tmpResult.openContactSyncModal(
-                            {},
-                            AnalyticsLocations.HUB_PROGRESS,
-                          );
-                          tmp5 = closure_1;
-                          obj2 = closure_1(tmp2[8]);
-                          tmp6 = closure_6;
-                          hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                        }
+                        obj = closure_1(closure_2[14]);
+                        obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                        trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                         return;
                       }
                     }
                   }
-                  if (cResult[41] === tmp18) {
-                    class L {
+                  if (tmp20) {
+                    class R {
                       constructor() {
-                        tmp2 = closure_2;
-                        tmp = closure_0;
-                        if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                          tmpResult = tmp(tmp2[18]);
-                          tmp3 = AnalyticsLocations;
-                          openContactSyncModalResult = tmpResult.openContactSyncModal(
-                            {},
-                            AnalyticsLocations.HUB_PROGRESS,
-                          );
-                          tmp5 = closure_1;
-                          obj2 = closure_1(tmp2[8]);
-                          tmp6 = closure_6;
-                          hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                        }
-                        return;
-                      }
-                    }
-                  }
-                  if (tmp18) {
-                    class L {
-                      constructor() {
-                        tmp2 = closure_2;
-                        tmp = closure_0;
-                        if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                          tmpResult = tmp(tmp2[18]);
-                          tmp3 = AnalyticsLocations;
-                          openContactSyncModalResult = tmpResult.openContactSyncModal(
-                            {},
-                            AnalyticsLocations.HUB_PROGRESS,
-                          );
-                          tmp5 = closure_1;
-                          obj2 = closure_1(tmp2[8]);
-                          tmp6 = closure_6;
-                          hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                        }
+                        obj = closure_1(closure_2[14]);
+                        obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                        trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                         return;
                       }
                     }
                     const intl2 = tmp(tmp2[20]).intl;
                     tmp68[0] = intl2.string(tmp(tmp2[20]).t["0/5zhg"]);
-                    tmp68[1] = F;
+                    tmp68[1] = tmp19;
                     let tmp65Result = closure_15(tmp(tmp2[27]).Button, tmp68);
                   } else {
-                    class L {
+                    class R {
                       constructor() {
-                        tmp2 = closure_2;
-                        tmp = closure_0;
-                        if (!closure_2.has(closure_0(closure_2[17]).HubProgressStep.CONTACT_SYNC)) {
-                          tmpResult = tmp(tmp2[18]);
-                          tmp3 = AnalyticsLocations;
-                          openContactSyncModalResult = tmpResult.openContactSyncModal(
-                            {},
-                            AnalyticsLocations.HUB_PROGRESS,
-                          );
-                          tmp5 = closure_1;
-                          obj2 = closure_1(tmp2[8]);
-                          tmp6 = closure_6;
-                          hideActionSheetResult = obj2.hideActionSheet(closure_6);
-                        }
+                        obj = closure_1(closure_2[14]);
+                        obj1 = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: closure_4.current };
+                        trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
                         return;
                       }
                     }
-                    tmp66[1] = F;
+                    tmp66[1] = tmp19;
                     const obj7 = { variant: "text-sm/medium", color: "text-default", children: null };
                     const intl = tmp(tmp2[20]).intl;
                     obj7.children = intl.string(tmp(tmp2[20]).t["9E36wf"]);
                     tmp66[2] = closure_15(tmp(tmp2[21]).Text, obj7);
                     tmp65Result = closure_15(tmp(tmp2[28]).PressableOpacity, tmp66);
                   }
-                  cResult[41] = tmp18;
-                  cResult[42] = F;
-                  cResult[43] = tmp65Result;
+                  cResult[39] = tmp20;
+                  cResult[40] = tmp19;
+                  cResult[41] = tmp65Result;
                 }
                 const obj9 = {
-                  onPress: L,
+                  onPress: tmp18,
                   source: analyticsSource(tmp2[26]),
-                  title: tmp51,
-                  isCompleted: tmp53,
-                  analyticsSetupType: constants6.HUB_PROGRESS,
-                  analyticsAction: constants5.CONTACT_SYNC,
+                  title: tmp53,
+                  isCompleted: tmp55,
+                  analyticsSetupType: constants5.HUB_PROGRESS,
+                  analyticsAction: constants4.CONTACT_SYNC,
                 };
-                const tmp62 = closure_15(analyticsSource(tmp2[23]), obj9);
-                cResult[36] = L;
-                cResult[37] = tmp53;
-                cResult[38] = tmp62;
-                const tmp59 = analyticsSource(tmp2[23]);
+                const tmp64 = closure_15(analyticsSource(tmp2[23]), obj9);
+                cResult[36] = tmp18;
+                cResult[37] = tmp55;
+                cResult[38] = tmp64;
+                const tmp61 = analyticsSource(tmp2[23]);
               }
               const obj11 = {
-                onPress: tmp15,
+                onPress: tmp16,
                 source: analyticsSource(tmp2[25]),
-                title: tmp39,
-                isCompleted: tmp41,
-                analyticsSetupType: constants6.HUB_PROGRESS,
-                analyticsAction: constants5.INVITE,
+                title: tmp41,
+                isCompleted: tmp43,
+                analyticsSetupType: constants5.HUB_PROGRESS,
+                analyticsAction: constants4.INVITE,
               };
-              const tmp50 = closure_15(analyticsSource(tmp2[23]), obj11);
-              cResult[30] = tmp15;
-              cResult[31] = tmp41;
-              cResult[32] = tmp50;
-              const tmp47 = analyticsSource(tmp2[23]);
+              const tmp52 = closure_15(analyticsSource(tmp2[23]), obj11);
+              cResult[30] = tmp16;
+              cResult[31] = tmp43;
+              cResult[32] = tmp52;
+              const tmp49 = analyticsSource(tmp2[23]);
             }
             const obj13 = {
-              onPress: A,
+              onPress: tmp14,
               source: analyticsSource(tmp2[24]),
-              title: tmp27,
-              isCompleted: tmp29,
-              analyticsSetupType: constants6.HUB_PROGRESS,
-              analyticsAction: constants5.JOIN_GUILD,
+              title: tmp29,
+              isCompleted: tmp31,
+              analyticsSetupType: constants5.HUB_PROGRESS,
+              analyticsAction: constants4.JOIN_GUILD,
             };
-            const tmp38 = closure_15(analyticsSource(tmp2[23]), obj13);
-            cResult[24] = A;
-            cResult[25] = tmp29;
-            cResult[26] = tmp38;
-            const tmp35 = analyticsSource(tmp2[23]);
+            const tmp40 = closure_15(analyticsSource(tmp2[23]), obj13);
+            cResult[24] = tmp14;
+            cResult[25] = tmp31;
+            cResult[26] = tmp40;
+            const tmp37 = analyticsSource(tmp2[23]);
           }
-          const obj14 = { title: tmp19, subtitle: tmp22 };
-          const tmp26 = closure_15(tmp(tmp2[22]).GuildProgressHeader, obj14);
-          cResult[18] = tmp22;
-          cResult[19] = tmp19;
-          cResult[20] = tmp26;
+          const obj14 = { title: tmp21, subtitle: tmp24 };
+          const tmp28 = closure_15(tmp(tmp2[22]).GuildProgressHeader, obj14);
+          cResult[18] = tmp24;
+          cResult[19] = tmp21;
+          cResult[20] = tmp28;
         }
       }
-      class F {
-        constructor() {
-          obj = closure_1(closure_2[14]);
-          obj1 = {
-            setup_type: AnalyticsSetupTypes.HUB_PROGRESS,
-            action: AnalyticsActions.DISMISS,
-            num_total_actions: closure_7,
-            num_actions_completed: size,
-          };
-          trackResult = obj.track(AnalyticEvents.SERVER_SETUP_CTA_CLICKED, obj1);
-          obj3 = closure_0(closure_2[19]);
-          skipHubProgressResult = obj3.skipHubProgress(guild.id);
-          obj4 = closure_1(closure_2[8]);
-          hideActionSheetResult = obj4.hideActionSheet(closure_6);
-          return;
-        }
+      function handleFinishPress() {
+        AnalyticsUtilsDefault.track(constants.SERVER_SETUP_CTA_CLICKED, {
+          setup_type: constants5.HUB_PROGRESS,
+          action: constants4.DISMISS,
+          num_total_actions,
+          num_actions_completed: size,
+        });
+        const obj2 = {
+          setup_type: constants5.HUB_PROGRESS,
+          action: constants4.DISMISS,
+          num_total_actions,
+          num_actions_completed: size,
+        };
+        HubProgressActionCreators.skipHubProgress(guild.id);
+        ActionSheetActionCreatorsDefault.hideActionSheet(timestampProducer);
       }
       cResult[11] = guild.id;
       cResult[12] = size;
-      cResult[13] = F;
+      cResult[13] = handleFinishPress;
       let obj2 = guild(hubProgressBarCompletedSteps[12]);
     }
-  : (guild) => {
+  : function HubProgressActionSheet(guild) {
       guild = guild.guild;
       const analyticsSource = guild.analyticsSource;
       let hubProgressBarCompletedSteps;
       const tmp = closure_17();
       hubProgressBarCompletedSteps = guild(hubProgressBarCompletedSteps[12]).useHubProgressBarCompletedSteps(guild);
       const size = hubProgressBarCompletedSteps.size;
-      const tmp5 =
-        100 ===
-        Math.max(guild(hubProgressBarCompletedSteps[13]).MIN_PROGRESS_PERCENT, (100 * size) / num_total_actions);
+      const tmp5 = 100 === Math.max(guild(hubProgressBarCompletedSteps[13]).MIN_PROGRESS_PERCENT, (100 * size) / total);
       const ref = size.useRef(analyticsSource);
       const effect = size.useEffect(() => {
         closure_4.current = analyticsSource;
@@ -900,14 +542,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       function handleFinishPress() {
         AnalyticsUtilsDefault.track(constants.SERVER_SETUP_CTA_CLICKED, {
-          setup_type: constants6.HUB_PROGRESS,
-          action: constants5.DISMISS,
+          setup_type: constants5.HUB_PROGRESS,
+          action: constants4.DISMISS,
           num_total_actions,
           num_actions_completed: size,
         });
         const obj2 = {
-          setup_type: constants6.HUB_PROGRESS,
-          action: constants5.DISMISS,
+          setup_type: constants5.HUB_PROGRESS,
+          action: constants4.DISMISS,
           num_total_actions,
           num_actions_completed: size,
         };
@@ -919,7 +561,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = tmp2(tmp3[20]).intl;
       obj3.subtitle = intl2.format(guild(hubProgressBarCompletedSteps[20]).t.l6iRLs, {
         numFinished: size,
-        total: num_total_actions,
+        total,
         stepsHook(children, arg1) {
           return closure_1_15(
             guild(hubProgressBarCompletedSteps[21]).Text,
@@ -930,7 +572,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       const items1 = [closure_15(guild(hubProgressBarCompletedSteps[22]).GuildProgressHeader, obj3), , , ,];
       const obj5 = {
-        onPress() {
+        onPress: function handleJoinGuildPress() {
           const defaultChannel = GuildChannelStore.getDefaultChannel(guild.id);
           if (null != defaultChannel) {
             const obj2 = { state: null };
@@ -949,7 +591,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = guild(hubProgressBarCompletedSteps[12]);
       let obj4 = {
         numFinished: size,
-        total: num_total_actions,
+        total,
         stepsHook(children, arg1) {
           return closure_1_15(
             guild(hubProgressBarCompletedSteps[21]).Text,
@@ -964,11 +606,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj5.isCompleted = hubProgressBarCompletedSteps.has(
         guild(hubProgressBarCompletedSteps[17]).HubProgressStep.JOIN_GUILD,
       );
-      obj5.analyticsSetupType = constants6.HUB_PROGRESS;
-      obj5.analyticsAction = constants5.JOIN_GUILD;
+      obj5.analyticsSetupType = constants5.HUB_PROGRESS;
+      obj5.analyticsAction = constants4.JOIN_GUILD;
       items1[1] = closure_15(analyticsSource(hubProgressBarCompletedSteps[23]), obj5);
       const obj6 = {
-        onPress() {
+        onPress: function handleInvitePress() {
           const defaultChannel = GuildChannelStore.getDefaultChannel(guild.id);
           const channels = GuildChannelStore.getChannels(guild.id);
           if (tmp4) {
@@ -990,11 +632,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.isCompleted = hubProgressBarCompletedSteps.has(
         guild(hubProgressBarCompletedSteps[17]).HubProgressStep.INVITE_USER,
       );
-      obj6.analyticsSetupType = constants6.HUB_PROGRESS;
-      obj6.analyticsAction = constants5.INVITE;
+      obj6.analyticsSetupType = constants5.HUB_PROGRESS;
+      obj6.analyticsAction = constants4.INVITE;
       items1[2] = closure_15(analyticsSource(hubProgressBarCompletedSteps[23]), obj6);
       const obj7 = {
-        onPress() {
+        onPress: function handleContactSyncPress() {
           if (!hubProgressBarCompletedSteps.has(preloaded_user_settings.HubProgressStep.CONTACT_SYNC)) {
             ContactSyncModalActionCreators.openContactSyncModal({}, constants2.HUB_PROGRESS);
             const tmpResult = ContactSyncModalActionCreators;
@@ -1014,12 +656,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj7.isCompleted = hubProgressBarCompletedSteps.has(
         guild(hubProgressBarCompletedSteps[17]).HubProgressStep.CONTACT_SYNC,
       );
-      obj7.analyticsSetupType = constants6.HUB_PROGRESS;
-      obj7.analyticsAction = constants5.CONTACT_SYNC;
+      obj7.analyticsSetupType = constants5.HUB_PROGRESS;
+      obj7.analyticsAction = constants4.CONTACT_SYNC;
       items1[3] = closure_15(analyticsSource(hubProgressBarCompletedSteps[23]), obj7);
-      const obj8 = { style: null, children: null };
-      const items2 = [tmp.footer];
-      obj8.style = items2;
+      const obj8 = { style: tmp.footer, children: null };
       if (tmp5) {
         const obj9 = { text: null, onPress: null };
         const intl7 = tmp2(tmp3[20]).intl;

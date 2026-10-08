@@ -16,8 +16,8 @@ get_ActivityIndicator = fn(17);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1188).Icon);
-const createStyles = fn(4896);
+let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1200).Icon);
+const createStyles = fn(5090);
 let obj = { container: { gap: nativeDefault.space.PX_24, alignItems: "center" }, textCentered: { textAlign: "center" }, labelGroup: null, titleContainer: null, floatingNuxContainer: null, floatingNux: null, arrowLeft: null, uppercase: null, selectionBorder: null, a11yThemeList: null, a11yThemeListScroll: null };
 let obj3 = { gap: nativeDefault.space.PX_24, alignItems: "center" };
 obj.labelGroup = { gap: nativeDefault.space.PX_4, alignItems: "center" };
@@ -46,7 +46,7 @@ let obj6 = { position: "absolute", left: nativeDefault.space.PX_24 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceThemeCarousel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((themes) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsAppearanceThemeCarousel(themes) {
   const cResult = themes(isPreview[10]).c(92);
   themes = themes.themes;
   const currentThemeIndex = themes.currentThemeIndex;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((themes) => {
         return themes.theme === closure_7.ONYX;
       }
     }
-    const effect = deviceWidth.useEffect(P, items);
+    const effect = deviceWidth.useEffect(D, items);
     if (cResult[5] !== onThemeSelected) {
       class S {
         constructor(arg0) {
@@ -100,42 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((themes) => {
         }
       }
       debounceResult = currentThemeIndex(tmp2[12]).debounce(onThemeSelected, 180);
-      class W {
-        constructor(arg0, arg1) {
-          rounded = Math.round(arg1);
-          if (rounded !== closure_8.current) {
-            tmp3 = closure_0;
-            tmp4 = closure_2;
-            obj = closure_0(closure_2[13]);
-            result = obj.triggerHapticFeedback(closure_0(closure_2[13]).HapticFeedbackTypes.IMPACT_LIGHT);
-            tmp2.current = rounded;
-            tmp6 = closure_12;
-            tmp7 = closure_12(rounded);
-          }
-          if (hasOnyxNux) {
-            tmp8 = closure_6;
-            _Math = Math;
-            tmp9 = deviceWidth;
-            tmp10 = closure_9;
-            num = 2;
-            tmp11 = arg1 < closure_9 + Math.ceil(deviceWidth / (closure_6.THEME_ITEM_WIDTH + closure_6.THEME_ITEM_HORIZONTAL_MARGIN)) / 2;
-            if (tmp11) {
-              tmp12 = closure_11;
-              flag = true;
-              result1 = closure_11.set(true);
-            }
-            tmp15 = closure_11;
-            tmp14 = closure_10;
-            value = closure_11.get();
-            tmp17 = !value;
-            if (!value) {
-              tmp17 = !tmp11;
-            }
-            result2 = closure_10.set(tmp17);
-          }
-          return;
-        }
-      }
+      cResult[5] = onThemeSelected;
       cResult[6] = debounceResult;
       const obj6 = currentThemeIndex(tmp2[12]);
     } else {
@@ -153,40 +118,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((themes) => {
         }
       }
     }
-    class W {
-      constructor(arg0, arg1) {
-        rounded = Math.round(arg1);
-        if (rounded !== closure_8.current) {
-          tmp3 = closure_0;
-          tmp4 = closure_2;
-          obj = closure_0(closure_2[13]);
-          result = obj.triggerHapticFeedback(closure_0(closure_2[13]).HapticFeedbackTypes.IMPACT_LIGHT);
-          tmp2.current = rounded;
-          tmp6 = closure_12;
-          tmp7 = closure_12(rounded);
+    function onProgressChange(arg0, arg1) {
+      const rounded = Math.round(arg1);
+      if (rounded !== ref.current) {
+        const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
+        tmp2.current = rounded;
+        debounceResult(rounded);
+      }
+      if (hasOnyxNux) {
+        const _Math = Math;
+        const tmp11 = arg1 < num2 + Math.ceil(deviceWidth / (SettingsAppearanceConstants.THEME_ITEM_WIDTH + SettingsAppearanceConstants.THEME_ITEM_HORIZONTAL_MARGIN)) / 2;
+        if (tmp11) {
+          const result1 = sharedValue1.set(true);
         }
-        if (hasOnyxNux) {
-          tmp8 = closure_6;
-          _Math = Math;
-          tmp9 = deviceWidth;
-          tmp10 = closure_9;
-          num = 2;
-          tmp11 = arg1 < closure_9 + Math.ceil(deviceWidth / (closure_6.THEME_ITEM_WIDTH + closure_6.THEME_ITEM_HORIZONTAL_MARGIN)) / 2;
-          if (tmp11) {
-            tmp12 = closure_11;
-            flag = true;
-            result1 = closure_11.set(true);
-          }
-          tmp15 = closure_11;
-          tmp14 = closure_10;
-          value = closure_11.get();
-          tmp17 = !value;
-          if (!value) {
-            tmp17 = !tmp11;
-          }
-          result2 = closure_10.set(tmp17);
+        value = sharedValue1.get();
+        let tmp17 = !value;
+        if (!value) {
+          tmp17 = !tmp11;
         }
-        return;
+        const result2 = sharedValue.set(tmp17);
       }
     }
     cResult[7] = deviceWidth;
@@ -195,21 +145,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((themes) => {
     cResult[10] = sharedValue;
     cResult[11] = tmp12;
     cResult[12] = num2;
-    cResult[13] = W;
+    cResult[13] = onProgressChange;
   }
-  class P {
+  class D {
     constructor() {
-      closure_0 = setTimeout(() => { ... }, 5500);
-      return () => { ... };
+      closure_0 = setTimeout(() => {
+        const result = sharedValue.set(false);
+        const result1 = sharedValue1.set(true);
+      }, 5500);
+      return () => clearTimeout(closure_0);
     }
   }
   items = [sharedValue, sharedValue1];
   cResult[1] = sharedValue1;
   cResult[2] = sharedValue;
-  cResult[3] = P;
+  cResult[3] = D;
   cResult[4] = items;
   const tmpResult2 = themes(isPreview[5]);
-}) : ((themes) => {
+}) : (function SettingsAppearanceThemeCarousel(themes) {
   themes = themes.themes;
   const currentThemeIndex = themes.currentThemeIndex;
   const isPreview = themes.isPreview;
@@ -218,9 +171,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((themes) => {
   const tmp = closure_12();
   const isScreenReaderEnabled = themes(isPreview[11]).useIsScreenReaderEnabled();
   deviceWidth.useRef(null);
-  deviceWidth.useRef(defaultIndex);
+  const ref = deviceWidth.useRef(defaultIndex);
   const items = [themes];
-  ref = deviceWidth.useMemo(() => {
+  closure_8 = deviceWidth.useMemo(() => {
     const findIndexResult = themes.findIndex((theme) => theme.theme === constants.ONYX);
     let num = 0;
     if (findIndexResult >= 0) {
@@ -278,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((themes) => {
     });
   }, items3);
   let obj3 = themes(isPreview[5]);
-  class D {
+  class P {
     constructor() {
       tmp = closure_0;
       tmp2 = closure_2;
@@ -298,18 +251,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((themes) => {
     }
   }
   const obj4 = themes(isPreview[5]);
-  D.__closure = { withTiming: themes(isPreview[17]).withTiming, isOnyxNuxVisible: sharedValue, timingStandard: themes(isPreview[18]).timingStandard };
-  D.__workletHash = 16840053984177;
-  D.__initData = __initData;
-  const animatedStyle = obj4.useAnimatedStyle(D);
+  P.__closure = { withTiming: themes(isPreview[17]).withTiming, isOnyxNuxVisible: sharedValue, timingStandard: themes(isPreview[18]).timingStandard };
+  P.__workletHash = 16840053984177;
+  P.__initData = __initData;
+  const animatedStyle = obj4.useAnimatedStyle(P);
   let tmp13 = null;
   if (themes[currentThemeIndex].type !== themes(isPreview[14]).ClientThemeType.STANDARD_BACKGROUND_THEME) {
     const obj7 = { source: currentThemeIndex(tmp3[19]), style: animatedStyles.iconHeaderSecondary, size: tmp2(tmp3[6]).IconSizes.SMALL_20 };
-    tmp13 = ref(closure_11, obj7);
+    tmp13 = closure_8(closure_11, obj7);
   }
   const items4 = [tmp13, ];
   const obj8 = { animated: true, style: animatedStyles.headerPrimary, variant: "heading-sm/semibold", children: themes[currentThemeIndex].getName() };
-  items4[1] = ref(themes(isPreview[20]).Text, obj8);
+  items4[1] = closure_8(themes(isPreview[20]).Text, obj8);
   { style: tmp.titleContainer, children: null }.children = items4;
   if (!isScreenReaderEnabled) {
     if (!tmp2(tmp3[21]).isThumbstickScrollDevice) {

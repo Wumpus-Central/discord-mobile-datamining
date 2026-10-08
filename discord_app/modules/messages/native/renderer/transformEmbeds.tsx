@@ -5,8 +5,8 @@ import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import DateUtils from "../../../../utils/DateUtils.tsx";
 import MediaFormatTesters from "../../MediaFormatTesters.tsx";
-import AgeVerificationUtils from "../../../age_assurance/AgeVerificationUtils.tsx";
 import EmbedUtils from "../../../../utils/EmbedUtils.tsx";
+import AgeVerificationUtils from "../../../age_assurance/AgeVerificationUtils.tsx";
 import ObscuredMediaUtils from "../../../explicit_media_redaction/ObscuredMediaUtils.tsx";
 import ExplicitMediaRedactionModels from "../../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
 import renderer_EmbedUtils from "EmbedUtils.tsx";
@@ -249,8 +249,8 @@ export default function transformEmbeds(arg0) {
                         const mapped1 = fields.map((rawName) => {
                           let result = null;
                           if (null != rawName.rawName) {
-                            result = channelId(7772).parseEmbedTitleMarkup(rawName.rawName, channelId);
-                            const obj = channelId(7772);
+                            result = channelId(8093).parseEmbedTitleMarkup(rawName.rawName, channelId);
+                            const obj = channelId(8093);
                           }
                           let result1 = null;
                           if (null != rawName.rawValue) {
@@ -263,8 +263,8 @@ export default function transformEmbeds(arg0) {
                               showListsAndHeaders,
                               showMaskedLinks,
                             };
-                            result1 = channelId(7772).parseEmbedDescriptionMarkup(obj3);
-                            const obj2 = channelId(7772);
+                            result1 = channelId(8093).parseEmbedDescriptionMarkup(obj3);
+                            const obj2 = channelId(8093);
                           }
                           const obj4 = {};
                           const merged = Object.assign(rawName);

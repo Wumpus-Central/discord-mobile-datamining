@@ -1,6 +1,6 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
 import c from "../../../../_runtime/00576_c.js";
-import _mod4498 from "../../../../_runtime/metro/04498__.js";
+import _mod4690 from "../../../../_runtime/metro/04690__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
@@ -14,16 +14,16 @@ function getItemPreviewKey(id) {
 function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
-const GuildsNodeType = fn(5623).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(16262).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(5968).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(16522).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({
   dragPreview: { position: "absolute", left: 0 },
   animatedPreviewStyle: { position: "absolute" },
   dragPreviewHome: { right: 0 },
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -59,7 +59,7 @@ let closure_18 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (dragRegion) => {
+  ? function PreviewItem(dragRegion) {
       const cResult = dragRegion(dropComplete[7]).c(11);
       dragRegion = dragRegion.dragRegion;
       const draggedHeight = dragRegion.draggedHeight;
@@ -189,9 +189,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               id: -1,
               parentId: "Reflect",
               name: "Array",
-              color: "apply",
-              expanded: false,
-              children: false,
+              color: "bm",
+              expanded: "Array",
+              children: "toCharArray$esjava$1",
             };
             const items = [overNode];
             element.children = items;
@@ -258,7 +258,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         dropComplete,
       };
     }
-  : (dragRegion) => {
+  : function PreviewItem(dragRegion) {
       dragRegion = dragRegion.dragRegion;
       const draggedHeight = dragRegion.draggedHeight;
       ({ draggedNode, dropComplete } = dragRegion);
@@ -379,9 +379,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               id: -1,
               parentId: "Reflect",
               name: "Array",
-              color: "apply",
-              expanded: false,
-              children: false,
+              color: "bm",
+              expanded: "Array",
+              children: "toCharArray$esjava$1",
             };
             const items = [tmp2];
             element.children = items;
@@ -434,7 +434,7 @@ let closure_25 = {
 };
 ReactCompilerGating = fn(558);
 let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (cleanUp) => {
+  ? function AnimatedItemPreview(cleanUp) {
       const cResult = transitionState(sharedValue[7]).c(19);
       ({ node, transitionState } = cleanUp);
       cleanUp = cleanUp.cleanUp;
@@ -457,7 +457,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         name = !tmp9;
       }
       let obj4 = transitionState(sharedValue[9]);
-      let fn = function p() {
+      let fn = function w() {
         value = sharedValue.get();
         let num = 1;
         if (isFolder) {
@@ -638,7 +638,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = items;
         tmp15 = items;
       }
-      const fn2 = function w() {
+      const fn2 = function p() {
         let num = 1;
         if (transitionState === native.TransitionStates.YEETED) {
           num = 0;
@@ -660,7 +660,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         cleanUp,
       };
     }
-  : (cleanUp) => {
+  : function AnimatedItemPreview(cleanUp) {
       ({ node, transitionState } = cleanUp);
       cleanUp = cleanUp.cleanUp;
       let sharedValue;
@@ -836,7 +836,7 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarDrag
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function GuildsBarDragPreview() {
         const cResult = c.c(3);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function t(arg0) {
@@ -891,12 +891,12 @@ export default noop.memo(
                     overState: null,
                     overNode: null,
                     dropPosition: "o",
-                    gestureState: "alle sekunti",
-                    scrollPosition: "alle {{count}} sekuntia",
+                    gestureState: "Commit SHA",
+                    scrollPosition: "id",
                     dragRegion: null,
-                    windowSize: "\u{1F6B4}",
+                    windowSize: "\u{1F9D1}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FE}",
                     dropComplete: true,
-                    listInsets: 6,
+                    listInsets: null,
                   };
                   ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                   obj.overState = state;
@@ -922,7 +922,7 @@ export default noop.memo(
         } else {
           first = cResult[0];
         }
-        const tmp5 = GuildsBarDnDStore(first, _mod4498.shallow);
+        const tmp5 = GuildsBarDnDStore(first, _mod4690.shallow);
         if (cResult[1] !== tmp5) {
           let tmp7 = null;
           if (null != tmp5) {
@@ -938,7 +938,7 @@ export default noop.memo(
         }
         return tmp6;
       }
-    : () => {
+    : function GuildsBarDragPreview() {
         const tmp = GuildsBarDnDStore((arg0) => {
           ({
             dragSpecs,
@@ -991,12 +991,12 @@ export default noop.memo(
                   overState: null,
                   overNode: null,
                   dropPosition: "o",
-                  gestureState: "alle sekunti",
-                  scrollPosition: "alle {{count}} sekuntia",
+                  gestureState: "Commit SHA",
+                  scrollPosition: "id",
                   dragRegion: null,
-                  windowSize: "\u{1F6B4}",
+                  windowSize: "\u{1F9D1}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FE}",
                   dropComplete: true,
-                  listInsets: 6,
+                  listInsets: null,
                 };
                 ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                 obj.overState = state;
@@ -1016,7 +1016,7 @@ export default noop.memo(
             }
             return null;
           }
-        }, _mod4498.shallow);
+        }, _mod4690.shallow);
         let tmp2 = null;
         if (null != tmp) {
           let obj = {};

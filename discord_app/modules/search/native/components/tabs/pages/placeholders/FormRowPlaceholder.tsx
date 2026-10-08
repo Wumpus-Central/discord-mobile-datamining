@@ -9,14 +9,14 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   itemContainer: {
     flexDirection: "row",
     paddingHorizontal: 16,
     overflow: "hidden",
     height: 64,
-    paddingVertical: fn(7524).SEARCH_ROW_TAP_STATE_PADDING,
+    paddingVertical: fn(9247).SEARCH_ROW_TAP_STATE_PADDING,
     alignItems: "center",
   },
   avatar: null,
@@ -57,7 +57,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function FormRowPlaceholderItem(style) {
       const cResult = c.c(18);
       style = style.style;
       const tmp3 = closure_6();
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items2;
       tmp5 = items2;
     }
-  : (style) => {
+  : function FormRowPlaceholderItem(style) {
       const tmp = closure_6();
       const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(true);
       const obj2 = { style: null, pointerEvents: "none", children: null };

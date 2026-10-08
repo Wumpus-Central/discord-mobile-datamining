@@ -1,5 +1,5 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidModalActionCreators.native.tsx
-import asyncRequireImpl from "../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
 import GuildAntiRaidConstants from "GuildAntiRaidConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -9,9 +9,9 @@ const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidM
 
 export const openReportRaidModal = function openReportRaidModal(id) {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(13798, dependencyMap.paths),
+    asyncRequireImpl(14023, dependencyMap.paths),
     {
-      onCloseModal() {
+      onCloseModal: function handleClose() {
         ModalActionCreatorsDefault.popWithKey(closure_1_3);
       },
       guildId: id,

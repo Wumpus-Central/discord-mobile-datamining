@@ -6,10 +6,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8108).SafetySettingsNoticeAction;
+let closure_4 = fn(7015).SafetySettingsNoticeAction;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   blockedIgnoredRedirect: {
     display: "flex",
@@ -40,7 +40,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_common/native/SafetySettingsNotice.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (noticeType) => {
+  ? function SafetySettingsNotice(noticeType) {
       const cResult = labelHook(noticeType[7]).c(17);
       ({ label, labelHook } = noticeType);
       noticeType = noticeType.noticeType;
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = fn2;
       const obj = labelHook(noticeType[7]);
     }
-  : (noticeType) => {
+  : function SafetySettingsNotice(noticeType) {
       ({ label, labelHook } = noticeType);
       noticeType = noticeType.noticeType;
       const count = noticeType.count;

@@ -3,16 +3,16 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons.tsx";
 import ApplicationWidgetMarkupUtils from "../../application_widget/ApplicationWidgetMarkupUtils.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c2, View: c3 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   fieldTextRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
   fieldIcon: { width: 16, height: 16 },
@@ -56,7 +56,7 @@ export const formatDurationNarrow = function formatDurationNarrow(value) {
   return items.join(" ");
 };
 export const FieldText = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FieldText(arg0) {
       const cResult = c.c(17);
       ({ field, variant, color, skeletonWidthChars } = arg0);
       const tmp4 = closure_6();
@@ -100,7 +100,7 @@ export const FieldText = ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { style: tmp23, children: null };
                 const items = [tmp7, tmp10];
                 obj3.children = items;
-                const tmp18 = hasOwnProperty(React3, obj3);
+                const tmp18 = hasOwnProperty(View, obj3);
                 cResult[13] = tmp4.fieldTextRow;
                 cResult[14] = tmp7;
                 cResult[15] = tmp10;
@@ -113,7 +113,7 @@ export const FieldText = ReactCompilerGating.isReactCompilerEnabled()
                 const obj5 = { uri: field.icon.url };
                 obj4.source = obj5;
                 obj4.style = tmp4.fieldIcon;
-                tmp12 = React4(React2, obj4);
+                tmp12 = React4(FastImageDefault, obj4);
               }
               cResult[10] = field.icon;
               cResult[11] = tmp4.fieldIcon;
@@ -138,7 +138,7 @@ export const FieldText = ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult = ApplicationWidgetMarkupUtils;
       }
     }
-  : (arg0) => {
+  : function FieldText(arg0) {
       ({ field, variant } = arg0);
       ({ color, skeletonWidthChars } = arg0);
       const tmp = closure_6();
@@ -159,10 +159,10 @@ export const FieldText = ReactCompilerGating.isReactCompilerEnabled()
           const obj7 = { uri: field.icon.url };
           obj.source = obj7;
           obj.style = tmp.fieldIcon;
-          tmp11Result = React4(React2, obj);
+          tmp11Result = React4(FastImageDefault, obj);
         }
         items[1] = tmp11Result;
         obj3.children = items;
-        tmp9Result = hasOwnProperty(React3, obj3);
+        tmp9Result = hasOwnProperty(View, obj3);
       }
     };

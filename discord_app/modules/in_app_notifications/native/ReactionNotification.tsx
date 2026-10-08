@@ -5,15 +5,15 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import transitionToChannel from "../../routing/transitionToChannel.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import isForwardMessageDefault from "../../forwarding/isForwardMessage.tsx";
-import ForumPostReactionButton from "../../forums/native/posts/reactions/ForumPostReactionButton.tsx";
 import GroupDMAvatarDefault from "../../group_dm/native/GroupDMAvatar.tsx";
+import ForumPostReactionButton from "../../forums/native/posts/reactions/ForumPostReactionButton.tsx";
 import InAppNotificationUtils from "InAppNotificationUtils.tsx";
 import InAppNotificationActionCreatorsDefault from "../../../actions/native/InAppNotificationActionCreators.tsx";
 import useTruncatedGradientColorsDefault from "hooks/useTruncatedGradientColors.tsx";
@@ -43,10 +43,10 @@ function ReactorNotificationIcon(notification) {
         }
         obj2.guildId = id;
         obj2.size = native.AvatarSizes.NORMAL;
-        let tmp28Result = v65535(native.Avatar, obj2);
+        let tmp28Result = collapsed(native.Avatar, obj2);
       } else {
         const obj3 = { guild: guild2, size: GuildIcon.GuildIconSizes.NORMAL, style: tmp22.guildIcon };
-        tmp28Result = v65535(GuildIconDefault, obj3);
+        tmp28Result = collapsed(GuildIconDefault, obj3);
       }
       cResult[2] = guild2;
       cResult[3] = tmp22;
@@ -57,7 +57,7 @@ function ReactorNotificationIcon(notification) {
       const obj5 = { channel: channel2, size: null };
       NORMAL = native.AvatarSizes.NORMAL;
       obj5.size = NORMAL;
-      const tmp35 = v65535(GroupDMAvatarDefault, obj5);
+      const tmp35 = collapsed(GroupDMAvatarDefault, obj5);
       cResult[0] = channel2;
       cResult[1] = tmp35;
     }
@@ -66,7 +66,7 @@ function ReactorNotificationIcon(notification) {
     if (notification.isMilestone) {
       if (channel.isGroupDM()) {
         const obj6 = { channel, size: native.AvatarSizes.NORMAL };
-        let tmp10Result = v65535(GroupDMAvatarDefault, obj6);
+        let tmp10Result = collapsed(GroupDMAvatarDefault, obj6);
       }
       return tmp10Result;
     }
@@ -78,16 +78,16 @@ function ReactorNotificationIcon(notification) {
       }
       obj7.guildId = id1;
       obj7.size = native.AvatarSizes.NORMAL;
-      tmp10Result = v65535(native.Avatar, obj7);
+      tmp10Result = collapsed(native.Avatar, obj7);
     } else {
       const obj = { guild, size: GuildIcon.GuildIconSizes.NORMAL, style: tmp2.guildIcon };
-      tmp10Result = v65535(GuildIconDefault, obj);
+      tmp10Result = collapsed(GuildIconDefault, obj);
     }
     tmp2 = closure_13();
   }
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(12493);
+const InAppNotificationConstants = fn(12589);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Constants = fn(1085);
@@ -95,7 +95,7 @@ const Constants = fn(1085);
 const Fonts = fn(1096).Fonts;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   newContainerRoleDot: { paddingRight: 4, paddingTop: 0 },
   container: { flexDirection: "column" },
@@ -104,14 +104,14 @@ let obj2 = {
   italic: null,
   guildIcon: null,
 };
-let PlatformUtils = fn(1370);
+let PlatformUtils = fn(1382);
 let tmp5;
 if (!PlatformUtils.isIOS()) {
   let items = [{ translateY: 2 }];
   tmp5 = items;
 }
 obj2.imageEmoji = { height: 16, width: 16, transform: tmp5 };
-PlatformUtils = fn(1370);
+PlatformUtils = fn(1382);
 obj2.italic = {
   fontStyle: "italic",
   fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC,
@@ -124,7 +124,7 @@ obj2.guildIcon = { borderRadius: nativeDefault.radii.sm };
 let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (hasMessageContent) => {
+  ? function useReactionSystemText(hasMessageContent) {
       const cResult = reaction(setting[11]).c(57);
       ({ message, reaction } = hasMessageContent);
       hasMessageContent = hasMessageContent.hasMessageContent;
@@ -416,7 +416,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (null == id) {
               const obj2 = { style: italic.italic, variant: "text-sm/normal", children: reaction.emoji.name };
-              return v65535(Text_Text.Text, obj2, reaction.emoji.name);
+              return collapsed(Text_Text.Text, obj2, reaction.emoji.name);
             }
           }
           let id1;
@@ -438,7 +438,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           ({ textEmoji: obj3.textEmojiStyle, imageEmoji: obj3.fastImageStyle } = italic);
           obj7.src = emojiURL;
           obj7.name = reaction.emoji.name;
-          return v65535(EmojiDefault, obj7);
+          return collapsed(EmojiDefault, obj7);
         }
       };
       cResult[0] = setting;
@@ -449,7 +449,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = fn;
       tmp6 = fn;
     }
-  : (message) => {
+  : function useReactionSystemText(message) {
       message = message.message;
       const reaction = message.reaction;
       const hasMessageContent = message.hasMessageContent;
@@ -479,7 +479,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (null == id) {
               const obj2 = { style: italic.italic, variant: "text-sm/normal", children: reaction.emoji.name };
-              return v65535(Text_Text.Text, obj2, reaction.emoji.name);
+              return collapsed(Text_Text.Text, obj2, reaction.emoji.name);
             }
           }
           let id1;
@@ -501,7 +501,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           ({ textEmoji: obj3.textEmojiStyle, imageEmoji: obj3.fastImageStyle } = italic);
           obj7.src = emojiURL;
           obj7.name = reaction.emoji.name;
-          return v65535(EmojiDefault, obj7);
+          return collapsed(EmojiDefault, obj7);
         }
       }, items);
       const items1 = [emojiHook, hasMessageContent, message, previewableMedia];
@@ -600,7 +600,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ReactionNotificationBody(arg0) {
       const cResult = c.c(15);
       ({ text, secondaryText, hasMessageContent, messagePreview } = arg0);
       const tmp4 = closure_13();
@@ -626,7 +626,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               lineClamp,
               children: secondaryText,
             };
-            tmp11 = v65535(Text_Text.Text, obj2);
+            tmp11 = collapsed(Text_Text.Text, obj2);
           }
           cResult[4] = secondaryText;
           cResult[5] = tmp11;
@@ -672,7 +672,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               gradientStyles,
               gradientColors,
             };
-            tmp16 = v65535(ChannelRowPreview.NativeChannelRowPreview, obj4);
+            tmp16 = collapsed(ChannelRowPreview.NativeChannelRowPreview, obj4);
           }
         }
         cResult[6] = gradientColors;
@@ -682,7 +682,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = tmp16;
         tmp14 = tmp16;
       }
-      const tmp9 = v65535(Text_Text.Text, {
+      const tmp9 = collapsed(Text_Text.Text, {
         variant: first,
         color: "text-default",
         style: tmp4.italic,
@@ -695,14 +695,14 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { variant: first, color: "text-default", style: tmp4.italic, children: text };
       const tmp7 = useTruncatedGradientColorsDefault();
     }
-  : (arg0) => {
+  : function ReactionNotificationBody(arg0) {
       ({ secondaryText, messagePreview } = arg0);
       ({ text, hasMessageContent } = arg0);
       const tmp = closure_13();
       const messagePreviewTextVariant = InAppNotificationUtils.getMessagePreviewTextVariant();
       ({ gradientColors, gradientStyles } = useTruncatedGradientColorsDefault());
       const children = [
-        v65535(Text_Text.Text, {
+        collapsed(Text_Text.Text, {
           variant: messagePreviewTextVariant,
           color: "text-default",
           style: tmp.italic,
@@ -718,7 +718,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           lineClamp,
           children: secondaryText,
         };
-        tmp8Result = v65535(Text_Text.Text, obj3);
+        tmp8Result = collapsed(Text_Text.Text, obj3);
       }
       children[1] = tmp8Result;
       let tmp8Result2 = null;
@@ -733,7 +733,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             gradientStyles,
             gradientColors,
           };
-          tmp8Result2 = v65535(ChannelRowPreview.NativeChannelRowPreview, obj4);
+          tmp8Result2 = collapsed(ChannelRowPreview.NativeChannelRowPreview, obj4);
         }
       }
       children[2] = tmp8Result2;
@@ -741,7 +741,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ReactionNotificationBodyWrapper(arg0) {
       const cResult = c.c(26);
       ({ message, reaction, reactionCount } = arg0);
       let tmp4 = message.embeds.length > 0;
@@ -786,7 +786,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[11] !== tmp24) {
                 const obj4 = { text: tmp24 };
-                const tmp29 = v65535(closure_15, obj4);
+                const tmp29 = collapsed(closure_15, obj4);
                 cResult[11] = tmp24;
                 cResult[12] = tmp29;
                 let tmp26 = tmp29;
@@ -808,7 +808,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj5 = { text: cResult[15], secondaryText, hasMessageContent: tmp6, messagePreview: message };
-                  const tmp23 = v65535(closure_15, obj5);
+                  const tmp23 = collapsed(closure_15, obj5);
                   cResult[16] = tmp6;
                   cResult[17] = message;
                   cResult[18] = secondaryText;
@@ -842,7 +842,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj7 = { text, secondaryText, hasMessageContent: tmp6, messagePreview: message };
-              const tmp16 = v65535(closure_15, obj7);
+              const tmp16 = collapsed(closure_15, obj7);
               cResult[21] = tmp6;
               cResult[22] = message;
               cResult[23] = secondaryText;
@@ -872,7 +872,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp7;
       tmp6 = tmp7;
     }
-  : (arg0) => {
+  : function ReactionNotificationBodyWrapper(arg0) {
       ({ message, reactionCount } = arg0);
       let tmp = message.embeds.length > 0;
       ({ reaction, renderAnnouncementText, isMilestone } = arg0);
@@ -897,7 +897,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = util.intl;
         const obj4 = { count: reactionCount };
         obj3.text = intl2.format(util.t.Tqk79E, obj4);
-        return v65535(closure_15, obj3);
+        return collapsed(closure_15, obj3);
       } else if (isMilestone) {
         const intl = util.intl;
         const format = intl.format;
@@ -910,10 +910,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           formatResult = format(t.vfYN5b, obj6);
         }
         const obj7 = { text: formatResult, secondaryText, hasMessageContent: tmp3, messagePreview: message };
-        return v65535(closure_15, obj7);
+        return collapsed(closure_15, obj7);
       } else {
         const obj8 = { text: tmp4.text, secondaryText, hasMessageContent: tmp3, messagePreview: message };
-        return v65535(closure_15, obj8);
+        return collapsed(closure_15, obj8);
       }
       obj2 = useGetInitialMessagePreview;
     };
@@ -1039,7 +1039,7 @@ export default function ReactionNotification(notification) {
   const callback1 = obj2.useCallback(
     () =>
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(12510, dependencyMap.paths),
+        asyncRequireImpl(12606, dependencyMap.paths),
         { channelId: id },
         "in-app-notification-settings-modal",
       ),

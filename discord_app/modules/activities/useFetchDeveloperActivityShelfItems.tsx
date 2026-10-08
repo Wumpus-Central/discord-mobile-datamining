@@ -4,13 +4,13 @@ import noop from "../../../_runtime/metro/00019__.js";
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore.tsx";
 
 require = fn;
-const DevShelfFetchState = fn(8546).DevShelfFetchState;
+const DevShelfFetchState = fn(9031).DevShelfFetchState;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
 
 export const useFetchDeveloperActivityShelfItems = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useFetchDeveloperActivityShelfItems() {
       const cResult = isActivitiesEnabledForCurrentPlatform(first[3]).c(8);
       let obj = isActivitiesEnabledForCurrentPlatform(first[3]);
       isActivitiesEnabledForCurrentPlatform = isActivitiesEnabledForCurrentPlatform(
@@ -26,7 +26,7 @@ export const useFetchDeveloperActivityShelfItems = ReactCompilerGating.isReactCo
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DeveloperActivityShelfStore];
-        const fn = function f() {
+        const fn = function v() {
           return fetchState.getFetchState();
         };
         const items1 = [];
@@ -51,28 +51,36 @@ export const useFetchDeveloperActivityShelfItems = ReactCompilerGating.isReactCo
         const effect = stateFromStores.useEffect(tmp12, tmp13);
         return null;
       }
-      const fn2 = function h() {
-        let tmp = isActivitiesEnabledForCurrentPlatform;
-        if (isActivitiesEnabledForCurrentPlatform) {
-          tmp = first;
+      class S {
+        constructor() {
+          tmp = closure_0;
+          if (closure_0) {
+            tmp = closure_1;
+          }
+          if (tmp) {
+            tmp2 = closure_2;
+            tmp3 = DevShelfFetchState;
+            tmp = closure_2 === DevShelfFetchState.INITIALIZED;
+          }
+          if (tmp) {
+            tmp4 = closure_0;
+            tmp5 = closure_1;
+            obj = closure_0(closure_1[7]);
+            developerApplications = obj.fetchDeveloperApplications();
+          }
+          return;
         }
-        if (tmp) {
-          tmp = stateFromStores === DevShelfFetchState.INITIALIZED;
-        }
-        if (tmp) {
-          const developerApplications = EmbeddedActivitiesActionCreators.fetchDeveloperApplications();
-        }
-      };
+      }
       const items2 = [isActivitiesEnabledForCurrentPlatform, stateFromStores, first];
       cResult[4] = isActivitiesEnabledForCurrentPlatform;
       cResult[5] = stateFromStores;
-      cResult[6] = fn2;
+      cResult[6] = S;
       cResult[7] = items2;
       tmp13 = items2;
-      tmp12 = fn2;
+      tmp12 = S;
       const tmpResult = isActivitiesEnabledForCurrentPlatform(first[6]);
     }
-  : () => {
+  : function useFetchDeveloperActivityShelfItems() {
       isActivitiesEnabledForCurrentPlatform = isActivitiesEnabledForCurrentPlatform(
         setting[4],
       ).useIsActivitiesEnabledForCurrentPlatform();

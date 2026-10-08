@@ -13,7 +13,7 @@ let closure_2 = ApexExperiment.createApexExperiment({
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointExperiment.tsx");
 
 export const useIsCheckpointEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsCheckpointEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -25,7 +25,9 @@ export const useIsCheckpointEnabled = ReactCompilerGating.isReactCompilerEnabled
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useIsCheckpointEnabled(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };
 export const getIsCheckpointEnabled = function getIsCheckpointEnabled(transformCheckpoint2026CardComponent) {
   return closure_2.getConfig({ location: transformCheckpoint2026CardComponent }).enabled;
 };

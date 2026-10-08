@@ -24,7 +24,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function HeadlessCollectiblesPurchaseFlow(arg0) {
       const cResult = c.c(24);
       ({ product, attempt, analyticsLocations, onBuySettled, stageCollectibleChangeForEditProfile } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp9;
       tmpResult2 = PlatformUtils;
     }
-  : (arg0) => {
+  : function HeadlessCollectiblesPurchaseFlow(arg0) {
       ({ product, analyticsLocations } = arg0);
       ({ attempt, onBuySettled, stageCollectibleChangeForEditProfile } = arg0);
       const OTPACOMOrderExperiment = ACOMExperiments.OTPACOMOrderExperiment;

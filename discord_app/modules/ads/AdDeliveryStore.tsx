@@ -55,24 +55,15 @@ Object.defineProperty(prototype, "deliveryAdDecisionByPlacement", {
   },
   set: undefined,
 });
-prototype["getNoFillForPlacement"] = function getNoFillForPlacement(arg0, arg1) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
-  let flag = obj.includeExpired;
-  if (flag === undefined) {
-    flag = false;
-  }
+prototype["getNoFillForPlacement"] = function getNoFillForPlacement(arg0) {
   value = map.get(arg0);
   let tmp2 = null;
   if (null != value) {
-    if (flag) {
-      let tmp5 = value;
-    } else {
-      const _Date = Date;
-      const sum = value.fetchedAt + value.ttlMillis;
-      tmp5 = null;
+    const _Date = Date;
+    const sum = value.fetchedAt + value.ttlMillis;
+    let tmp5 = null;
+    if (sum >= Date.now()) {
+      tmp5 = value;
     }
     tmp2 = tmp5;
   }
@@ -117,8 +108,16 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
     const result = map.set(placement.placement, true);
   },
   QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: function handleFetchQuestToDeliverSuccess(arg0) {
-    ({ creative, placement, adDecisionData, responseTtlSeconds, metadataSealed, trafficMetadataSealed, fetchedAt } =
-      arg0);
+    ({
+      creative,
+      noFillAdContentId,
+      placement,
+      adDecisionData,
+      responseTtlSeconds,
+      metadataSealed,
+      trafficMetadataSealed,
+      fetchedAt,
+    } = arg0);
     ({ quest, isNoFill, adContext, provenanceMetadataSealed } = arg0);
     closure_4 = Date.now();
     map = new Map(map);
@@ -134,6 +133,7 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
         if (null != decision_id) {
           const obj = {
             decisionId: adDecisionData.decision_id,
+            adContentId: noFillAdContentId,
             metadataSealed,
             trafficMetadataSealed,
             fetchedAt,

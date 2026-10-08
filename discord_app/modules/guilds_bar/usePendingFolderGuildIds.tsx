@@ -21,7 +21,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/usePendingFolderGuildIds.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function usePendingFolderGuildIds() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [UserGuildJoinRequestStore, GuildStore];
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStoresArray(tmp4, tmp5);
     }
-  : () => {
+  : function usePendingFolderGuildIds() {
       let items = [UserGuildJoinRequestStore, GuildStore];
       return initialize.useStateFromStoresArray(items, () => {
         const items = [UserGuildJoinRequestStore, GuildStore];

@@ -6,16 +6,16 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 let _default = fn(17).View;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 if (PlatformUtils.isIOS()) {
-  _default = fn(12317).default;
+  _default = fn(12415).default;
 }
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/a11y/native/PortalAccessibilityWorkaroundView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PortalAccessibilityWorkaroundView(arg0) {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = null;
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : (arg0) => {
+  : function PortalAccessibilityWorkaroundView(arg0) {
       let obj2 = null;
       if (obj.isIOS()) {
         obj2 = { accessibilityLabel: " ", accessible: false };

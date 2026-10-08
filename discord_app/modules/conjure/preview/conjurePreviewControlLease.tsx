@@ -37,7 +37,7 @@ const set2 = new Set();
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useConjureControlTuning(arg0) {
       _require = arg0;
       const cResult = require("c").c(2);
       if (cResult[0] !== arg0) {
@@ -56,7 +56,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return noop.useSyncExternalStore(subscribeConjureControl, tmp2, tmp2);
     }
-  : (arg0) => {
+  : function useConjureControlTuning(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       const callback = noop.useCallback(() => {
@@ -341,7 +341,7 @@ export const subscribeConjureControlReleased = function subscribeConjureControlR
   };
 };
 export const useConjureControlActive = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useConjureControlActive(arg0) {
       _require = arg0;
       const cResult = require("c").c(2);
       if (cResult[0] !== arg0) {
@@ -368,7 +368,7 @@ export const useConjureControlActive = ReactCompilerGating.isReactCompilerEnable
       }
       return noop.useSyncExternalStore(subscribeConjureControl, tmp2, tmp2);
     }
-  : (arg0) => {
+  : function useConjureControlActive(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       const callback = noop.useCallback(() => {

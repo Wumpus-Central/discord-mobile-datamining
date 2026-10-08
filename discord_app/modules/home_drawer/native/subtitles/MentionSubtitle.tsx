@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/MentionSubtitle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MentionSubtitle(arg0) {
       const cResult = c.c(16);
       ({ guild, channel, channelName, count } = arg0);
       const subtitleStyles = useSubtitleStyles.useSubtitleStyles();
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = channelIconComponentWithGuild;
       tmp5 = channelIconComponentWithGuild;
     }
-  : (channel) => {
+  : function MentionSubtitle(channel) {
       channel = channel.channel;
       ({ guild, channelName, count } = channel);
       const subtitleStyles = useSubtitleStyles.useSubtitleStyles();

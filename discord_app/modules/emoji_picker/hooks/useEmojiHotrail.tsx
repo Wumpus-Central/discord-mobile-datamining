@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EMOJI_ROW_SIZE = fn(5649).EMOJI_ROW_SIZE;
+const EMOJI_ROW_SIZE = fn(5996).EMOJI_ROW_SIZE;
 const ReactCompilerGating = fn(558);
 function getEmojiHotrail(arg0) {
   ({ topEmojis, newlyAddedEmojis, rowSize } = arg0);
@@ -21,7 +21,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/hooks/useEmojiHotrail.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useEmojiHotrail(arg0) {
       const cResult = c.c(2);
       if (cResult[0] !== arg0) {
         ({ topEmojis, newlyAddedEmojis, rowSize } = arg0);
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp2;
     }
-  : (arg0) => {
+  : function useEmojiHotrail(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       return noop.useMemo(() => {

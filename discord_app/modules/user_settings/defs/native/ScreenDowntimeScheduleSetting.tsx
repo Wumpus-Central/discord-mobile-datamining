@@ -8,14 +8,14 @@ import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.t
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function usePredicate() {
       let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
       if (hasActiveParentLinks) {
         hasActiveParentLinks = obj.useHasActiveParentLinks();
       }
       return hasActiveParentLinks;
     }
-  : () => {
+  : function usePredicate() {
       let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
       if (hasActiveParentLinks) {
         hasActiveParentLinks = obj.useHasActiveParentLinks();
@@ -38,14 +38,14 @@ const toggle = SettingBuilders.createToggle({
     return EnableScreenDowntimeScheduleNotifications.updateSetting(arg0);
   },
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function usePredicate() {
         let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
         if (hasActiveParentLinks) {
           hasActiveParentLinks = obj.useHasActiveParentLinks();
         }
         return hasActiveParentLinks;
       }
-    : () => {
+    : function usePredicate() {
         let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
         if (hasActiveParentLinks) {
           hasActiveParentLinks = obj.useHasActiveParentLinks();

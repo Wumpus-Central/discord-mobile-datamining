@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   content: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_12 },
   topBar: null,
@@ -33,7 +33,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/SharePreparingModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onCancel) => {
+  ? function SharePreparingModal(onCancel) {
       const cResult = c.c(19);
       onCancel = onCancel.onCancel;
       const tmp4 = closure_7();
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = tmp21;
       tmp20 = tmp21;
     }
-  : (onCancel) => {
+  : function SharePreparingModal(onCancel) {
       onCancel = onCancel.onCancel;
       const tmp = closure_7();
       const items = [onCancel];

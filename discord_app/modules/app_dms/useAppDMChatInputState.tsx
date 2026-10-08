@@ -10,20 +10,20 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const useQueryState = fn(8827).useQueryState;
+const useQueryState = fn(9186).useQueryState;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
 let items = [
-  fn(1985).ApplicationCommandType.PRIMARY_ENTRY_POINT,
-  fn(1985).ApplicationCommandType.CHAT,
-  fn(1985).ApplicationCommandType.MESSAGE,
-  fn(1985).ApplicationCommandType.USER,
+  fn(1997).ApplicationCommandType.PRIMARY_ENTRY_POINT,
+  fn(1997).ApplicationCommandType.CHAT,
+  fn(1997).ApplicationCommandType.MESSAGE,
+  fn(1997).ApplicationCommandType.USER,
 ];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_dms/useAppDMChatInputState.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (context) => {
+  ? function useAppDMChatInputState(context) {
       const cResult = require("c").c(32);
       const channel = context.context.channel;
       let tmp4 = null;
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = null;
         if (true === channel.isDM()) {
           if (cResult[0] !== channel) {
-            const user = UserStore.getUser(channel.getRecipientId());
+            user = UserStore.getUser(channel.getRecipientId());
             cResult[0] = channel;
             cResult[1] = user;
             let tmp5 = user;
@@ -65,23 +65,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (tmp4 != null) {
           id1 = tmp4.id;
         }
-        const fn = function y() {
-          let id;
-          if (user != null) {
-            id = user.id;
+        class M {
+          constructor() {
+            id = undefined;
+            tmp = closure_5;
+            if (closure_0 != null) {
+              id = closure_0.id;
+            }
+            return closure_5.getAppIdForBotUserId(id);
           }
-          return ApplicationStore.getAppIdForBotUserId(id);
-        };
+        }
         cResult[3] = id1;
-        cResult[4] = fn;
-        let tmp12 = fn;
+        cResult[4] = M;
+        let tmp12 = M;
       } else {
         tmp12 = cResult[4];
       }
       let obj = require("c");
-      let stateFromStores = require("initialize").useStateFromStores(tmp9, tmp12);
+      const stateFromStores = require("initialize").useStateFromStores(tmp9, tmp12);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const items1 = [UserProfileStore];
+        const items1 = [];
+        class M {
+          constructor() {
+            id = undefined;
+            tmp = closure_5;
+            if (closure_0 != null) {
+              id = closure_0.id;
+            }
+            return closure_5.getAppIdForBotUserId(id);
+          }
+        }
         cResult[5] = items1;
         let tmp15 = items1;
       } else {
@@ -108,7 +121,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmp2;
           }
         }
-        cResult[6] = tmp4;
+        class M {
+          constructor() {
+            id = undefined;
+            tmp = closure_5;
+            if (closure_0 != null) {
+              id = closure_0.id;
+            }
+            return closure_5.getAppIdForBotUserId(id);
+          }
+        }
         cResult[7] = E;
       } else {
         class E {
@@ -177,7 +199,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        stateFromStores = tmp19;
+        class M {
+          constructor() {
+            id = undefined;
+            tmp = closure_5;
+            if (closure_0 != null) {
+              id = closure_0.id;
+            }
+            return closure_5.getAppIdForBotUserId(id);
+          }
+        }
       }
       if (cResult[8] === stateFromStores) {
         class E {
@@ -200,29 +231,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmp2;
           }
         }
-        if (tmp4 != null) {
-          class E {
-            constructor() {
-              tmp = closure_0;
-              tmp2 = undefined;
-              if (null !== closure_0) {
-                id = undefined;
-                tmp3 = closure_6;
-                if (tmp != null) {
-                  id = tmp.id;
-                }
-                userProfile = closure_6.getUserProfile(id);
-                application = undefined;
-                if (userProfile != null) {
-                  application = userProfile.application;
-                }
-                tmp2 = application;
-              }
-              return tmp2;
+        class M {
+          constructor() {
+            id = undefined;
+            tmp = closure_5;
+            if (closure_0 != null) {
+              id = closure_0.id;
             }
+            return closure_5.getAppIdForBotUserId(id);
           }
         }
-        if (cResult[9] === tmp20) {
+        if (cResult[9] === tmp19) {
           class E {
             constructor() {
               tmp = closure_0;
@@ -265,9 +284,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return tmp2;
             }
           }
-          const effect = noop.useEffect(fn2, tmp21);
+          class M {
+            constructor() {
+              id = undefined;
+              tmp = closure_5;
+              if (closure_0 != null) {
+                id = closure_0.id;
+              }
+              return closure_5.getAppIdForBotUserId(id);
+            }
+          }
           if (cResult[14] !== tmp4) {
-            class U {
+            class D {
               constructor() {
                 tmp = closure_0;
                 id = undefined;
@@ -285,10 +313,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            cResult[14] = tmp4;
-            cResult[15] = U;
+            class M {
+              constructor() {
+                id = undefined;
+                tmp = closure_5;
+                if (closure_0 != null) {
+                  id = closure_0.id;
+                }
+                return closure_5.getAppIdForBotUserId(id);
+              }
+            }
+            cResult[15] = D;
           } else {
-            class U {
+            class D {
               constructor() {
                 tmp = closure_0;
                 id = undefined;
@@ -308,7 +345,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (tmp4 != null) {
-            class U {
+            class D {
               constructor() {
                 tmp = closure_0;
                 id = undefined;
@@ -328,7 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[16] !== undefined) {
-            class U {
+            class D {
               constructor() {
                 tmp = closure_0;
                 id = undefined;
@@ -346,11 +383,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            tmp26[0] = tmp24;
-            cResult[16] = tmp24;
-            cResult[17] = tmp26;
+            tmp24[0] = tmp22;
+            class M {
+              constructor() {
+                id = undefined;
+                tmp = closure_5;
+                if (closure_0 != null) {
+                  id = closure_0.id;
+                }
+                return closure_5.getAppIdForBotUserId(id);
+              }
+            }
+            cResult[16] = tmp22;
+            cResult[17] = tmp24;
           } else {
-            class U {
+            class D {
               constructor() {
                 tmp = closure_0;
                 id = undefined;
@@ -369,9 +416,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const effect1 = noop.useEffect(U, tmp26);
+          const effect = noop.useEffect(D, tmp24);
           if (cResult[18] !== channel) {
-            class U {
+            class D {
               constructor() {
                 tmp = closure_0;
                 id = undefined;
@@ -389,11 +436,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            tmp29[0] = channel;
+            tmp27[0] = channel;
+            class M {
+              constructor() {
+                id = undefined;
+                tmp = closure_5;
+                if (closure_0 != null) {
+                  id = closure_0.id;
+                }
+                return closure_5.getAppIdForBotUserId(id);
+              }
+            }
             cResult[18] = channel;
-            cResult[19] = tmp29;
+            cResult[19] = tmp27;
           } else {
-            class U {
+            class D {
               constructor() {
                 tmp = closure_0;
                 id = undefined;
@@ -414,7 +471,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-            class U {
+            class D {
               constructor() {
                 tmp = closure_0;
                 id = undefined;
@@ -432,10 +489,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            tmp31[0] = items;
-            cResult[20] = tmp31;
+            class M {
+              constructor() {
+                id = undefined;
+                tmp = closure_5;
+                if (closure_0 != null) {
+                  id = closure_0.id;
+                }
+                return closure_5.getAppIdForBotUserId(id);
+              }
+            }
+            cResult[20] = tmp29;
           } else {
-            class U {
+            class D {
               constructor() {
                 tmp = closure_0;
                 id = undefined;
@@ -455,7 +521,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (tmp4 != null) {
-            class U {
+            class D {
               constructor() {
                 tmp = closure_0;
                 id = undefined;
@@ -475,7 +541,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[21] === stateFromStores) {
-            class U {
+            class D {
               constructor() {
                 tmp = closure_0;
                 id = undefined;
@@ -493,9 +559,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            const tmp37 = useQueryState(tmp29, tmp31, tmp35);
+            class M {
+              constructor() {
+                id = undefined;
+                tmp = closure_5;
+                if (closure_0 != null) {
+                  id = closure_0.id;
+                }
+                return closure_5.getAppIdForBotUserId(id);
+              }
+            }
             if (cResult[24] === stateFromStores) {
-              class U {
+              class D {
                 constructor() {
                   tmp = closure_0;
                   id = undefined;
@@ -513,8 +588,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              if (cResult[27] !== tmp38) {
-                class U {
+              if (cResult[27] !== tmp36) {
+                class D {
                   constructor() {
                     tmp = closure_0;
                     id = undefined;
@@ -532,8 +607,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
-                if (null != tmp38) {
-                  class U {
+                if (null != tmp36) {
+                  class D {
                     constructor() {
                       tmp = closure_0;
                       id = undefined;
@@ -551,12 +626,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  const fromServer = ApplicationRecord.createFromServer(tmp38);
+                  const fromServer = ApplicationRecord.createFromServer(tmp36);
                 }
-                cResult[27] = tmp38;
+                class M {
+                  constructor() {
+                    id = undefined;
+                    tmp = closure_5;
+                    if (closure_0 != null) {
+                      id = closure_0.id;
+                    }
+                    return closure_5.getAppIdForBotUserId(id);
+                  }
+                }
+                cResult[27] = tmp36;
                 cResult[28] = fromServer;
               } else {
-                class U {
+                class D {
                   constructor() {
                     tmp = closure_0;
                     id = undefined;
@@ -575,9 +660,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              const useGetOrFetchApplication = tmp(6670).useGetOrFetchApplication;
-              if (null == tmp41) {
-                class U {
+              class M {
+                constructor() {
+                  id = undefined;
+                  tmp = closure_5;
+                  if (closure_0 != null) {
+                    id = closure_0.id;
+                  }
+                  return closure_5.getAppIdForBotUserId(id);
+                }
+              }
+              const useGetOrFetchApplication = tmp41.useGetOrFetchApplication;
+              if (null == tmp39) {
+                class D {
                   constructor() {
                     tmp = closure_0;
                     id = undefined;
@@ -596,8 +691,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              if (tmp41 == null) {
-                class U {
+              if (tmp39 == null) {
+                class D {
                   constructor() {
                     tmp = closure_0;
                     id = undefined;
@@ -616,8 +711,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              if (tmp41 == null) {
-                class U {
+              if (tmp39 == null) {
+                class D {
                   constructor() {
                     tmp = closure_0;
                     id = undefined;
@@ -637,7 +732,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (tmp4 != null) {
-                class U {
+                class D {
                   constructor() {
                     tmp = closure_0;
                     id = undefined;
@@ -657,7 +752,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (undefined == null) {
-                class U {
+                class D {
                   constructor() {
                     tmp = closure_0;
                     id = undefined;
@@ -676,8 +771,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              if (cResult[29] === tmp41) {
-                class U {
+              if (cResult[29] === tmp39) {
+                class D {
                   constructor() {
                     tmp = closure_0;
                     id = undefined;
@@ -695,16 +790,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
-                return tmp45;
+                return tmp43;
               }
-              let obj2 = { application: tmp41, isAppDM: undefined };
-              cResult[29] = tmp41;
+              let obj2 = { application: tmp39, isAppDM: undefined };
+              cResult[29] = tmp39;
               cResult[30] = undefined;
               cResult[31] = obj2;
-              tmp45 = obj2;
-              const tmpResult4 = tmp(6670);
+              tmp43 = obj2;
             }
-            const descriptors = tmp37.descriptors;
+            const descriptors = tmp35.descriptors;
             const found = descriptors.find((application) => {
               application = application.application;
               let id;
@@ -714,7 +808,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return id === stateFromStores;
             });
             if (found != null) {
-              class U {
+              class D {
                 constructor() {
                   tmp = closure_0;
                   id = undefined;
@@ -734,24 +828,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[24] = stateFromStores;
-            cResult[25] = tmp37.descriptors;
+            cResult[25] = tmp35.descriptors;
             cResult[26] = undefined;
           }
           const obj3 = { applicationId: stateFromStores, allowFetch: null != undefined, allowApplicationState: true };
           cResult[21] = stateFromStores;
           cResult[22] = null != undefined;
           cResult[23] = obj3;
-          tmp35 = obj3;
         }
         const items2 = [tmp4, stateFromStores];
         cResult[11] = stateFromStores;
         cResult[12] = tmp4;
         cResult[13] = items2;
-        tmp21 = items2;
       }
       cResult[8] = stateFromStores;
       if (tmp4 != null) {
-        class U {
+        class D {
           constructor() {
             tmp = closure_0;
             id = undefined;
@@ -770,7 +862,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      fn2 = function b() {
+      const fn = function b() {
         if (null == stateFromStores) {
           let id;
           if (user != null) {
@@ -783,10 +875,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       };
       cResult[9] = undefined;
-      cResult[10] = fn2;
-      const tmpResult3 = require("initialize");
+      cResult[10] = fn;
+      const tmpResult2 = require("initialize");
     }
-  : (context) => {
+  : function useAppDMChatInputState(context) {
       let stateFromStores;
       let application;
       const channel = context.context.channel;
@@ -794,7 +886,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const memo = application.useMemo(() => {
         if (null != channel) {
           if (true === channel.isDM()) {
-            const user = UserStore.getUser(channel.getRecipientId());
+            user = UserStore.getUser(channel.getRecipientId());
             let tmp3 = null;
             if (undefined !== user) {
               tmp3 = null;

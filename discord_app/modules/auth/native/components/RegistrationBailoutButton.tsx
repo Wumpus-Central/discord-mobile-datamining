@@ -6,14 +6,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_3 = createStyles.createStyles({ bail: { marginBottom: 16, marginLeft: "auto", marginRight: "auto" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/RegistrationBailoutButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onBail) => {
+  ? function RegistrationBailoutButton(onBail) {
       const cResult = c.c(4);
       onBail = onBail.onBail;
       const tmp4 = closure_3();
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onPress: onBail,
       };
     }
-  : (onBail) => {
+  : function RegistrationBailoutButton(onBail) {
       const obj = { shrink: true, text: null, size: null, look: null, color: null, style: null, onPress: null };
       const intl = util.intl;
       obj.text = intl.string(util.t.CZ7wvG);

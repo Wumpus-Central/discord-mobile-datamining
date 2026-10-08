@@ -12,7 +12,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/hooks/usePreviewDisabledGuild.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function usePreviewDisabledGuild(arg0) {
       _require = arg0;
       const cResult = require("c").c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function c() {
+        const fn = function s() {
           return GuildStore.getGuild(closure_0);
         };
         cResult[1] = arg0;
@@ -42,109 +42,61 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[3];
       }
       if (cResult[4] !== arg0) {
-        class S {
-          constructor() {
-            value = closure_5.get(closure_0);
-            guild = undefined;
-            if (value != null) {
-              guild = value.guild;
-            }
-            return guild;
+        const fn2 = function v() {
+          value = MemberVerificationFormStore.get(closure_0);
+          guild = undefined;
+          if (value != null) {
+            guild = value.guild;
           }
-        }
+          return guild;
+        };
         cResult[4] = arg0;
-        cResult[5] = S;
+        cResult[5] = fn2;
+        let tmp10 = fn2;
       } else {
-        class S {
-          constructor() {
-            value = closure_5.get(closure_0);
-            guild = undefined;
-            if (value != null) {
-              guild = value.guild;
-            }
-            return guild;
-          }
-        }
+        tmp10 = cResult[5];
       }
       const tmpResult = require("initialize");
-      const stateFromStores1 = require("initialize").useStateFromStores(tmp8, S);
+      const stateFromStores1 = require("initialize").useStateFromStores(tmp8, tmp10);
       if (cResult[6] !== arg0) {
-        class S {
-          constructor() {
-            value = closure_5.get(closure_0);
-            guild = undefined;
-            if (value != null) {
-              guild = value.guild;
-            }
-            return guild;
+        const fn3 = function _() {
+          if (null != closure_0) {
+            const verificationForm = MemberVerificationActionCreatorsDefault.fetchVerificationForm(tmp);
           }
-        }
+        };
         const items2 = [arg0];
         cResult[6] = arg0;
-        cResult[7] = tmp14;
+        cResult[7] = fn3;
         cResult[8] = items2;
         let tmp13 = items2;
+        let tmp12 = fn3;
       } else {
-        class S {
-          constructor() {
-            value = closure_5.get(closure_0);
-            guild = undefined;
-            if (value != null) {
-              guild = value.guild;
-            }
-            return guild;
-          }
-        }
+        tmp12 = cResult[7];
         tmp13 = cResult[8];
       }
-      const effect = noop.useEffect(tmp14, tmp13);
+      const effect = noop.useEffect(tmp12, tmp13);
       if (cResult[9] === stateFromStores) {
-        class S {
-          constructor() {
-            value = closure_5.get(closure_0);
-            guild = undefined;
-            if (value != null) {
-              guild = value.guild;
-            }
-            return guild;
-          }
+        if (cResult[10] === stateFromStores1) {
+          let tmp15 = cResult[11];
         }
-        return tmp16;
+        return tmp15;
       }
-      let tmp17 = stateFromStores;
+      let tmp16 = stateFromStores;
       if (stateFromStores == null) {
-        class S {
-          constructor() {
-            value = closure_5.get(closure_0);
-            guild = undefined;
-            if (value != null) {
-              guild = value.guild;
-            }
-            return guild;
-          }
-        }
+        let result = null;
         if (null != stateFromStores1) {
-          class S {
-            constructor() {
-              value = closure_5.get(closure_0);
-              guild = undefined;
-              if (value != null) {
-                guild = value.guild;
-              }
-              return guild;
-            }
-          }
-          const result = obj4.fromVerificationGateGuild(stateFromStores1);
+          result = tmp(2078).fromVerificationGateGuild(stateFromStores1);
+          const tmpResult4 = tmp(2078);
         }
-        tmp17 = result;
+        tmp16 = result;
       }
       cResult[9] = stateFromStores;
       cResult[10] = stateFromStores1;
-      cResult[11] = tmp17;
-      tmp16 = tmp17;
-      const tmpResult2 = require("initialize");
+      cResult[11] = tmp16;
+      tmp15 = tmp16;
+      const tmpResult3 = require("initialize");
     }
-  : (arg0) => {
+  : function usePreviewDisabledGuild(arg0) {
       _require = arg0;
       const items = [GuildStore];
       let stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
@@ -168,8 +120,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores == null) {
         let result = null;
         if (null != stateFromStores1) {
-          result = tmp(2066).fromVerificationGateGuild(stateFromStores1);
-          const tmpResult = tmp(2066);
+          result = tmp(2078).fromVerificationGateGuild(stateFromStores1);
+          const tmpResult = tmp(2078);
         }
         stateFromStores = result;
       }

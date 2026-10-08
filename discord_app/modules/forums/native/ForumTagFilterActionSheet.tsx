@@ -2,19 +2,19 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
-import tracking_Tracking from "../tracking/Tracking.tsx";
+import Tracking from "../tracking/Tracking.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import EmojiStore from "../../emojis/EmojiStore.tsx";
 
 require = fn;
-const ForumChannelStore = fn(11629);
+const ForumChannelStore = fn(11693);
 ({ useForumChannelStore: metroRequire, useForumChannelStoreApi: closure_7 } = ForumChannelStore);
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);
 const jsx = fn(21).jsx;
 let c12 = 18;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_13 = createStyles.createStyles({
   emoji: { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" },
   imageEmoji: { height: 18, width: 18 },
@@ -23,7 +23,7 @@ let closure_13 = createStyles.createStyles({
 fn(558);
 const ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (emojiId) => {
+  ? function EmojiIcon(emojiId) {
       const cResult = emojiId(576).c(11);
       emojiId = emojiId.emojiId;
       let str = emojiId.emojiName;
@@ -36,7 +36,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== emojiId) {
-        const fn = function o() {
+        const fn = function n() {
           let usableCustomEmojiById = null;
           if (null != emojiId) {
             usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(tmp);
@@ -103,7 +103,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmpResult = emojiId(504);
     }
-  : (arg0) => {
+  : function EmojiIcon(arg0) {
       ({ emojiId: require, emojiName } = arg0);
       const tmp = closure_13();
       const items = [EmojiStore];
@@ -146,54 +146,214 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/ForumTagFilterActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
-      const cResult = channel(first[8]).c(29);
-      channel = channel.channel;
-      const tagFilter = closure_6(channel.id).tagFilter;
-      const tmp2 = closure_7();
-      importDefault = tmp2;
+  ? function ForumPostTagsActionSheet(channel) {
+      const cResult = availableTags(first[8]).c(29);
+      availableTags = channel.channel;
+      const tagFilter = closure_6(availableTags.id).tagFilter;
+      const tmp4 = closure_7();
+      importDefault = tmp4;
       if (cResult[0] !== tagFilter) {
         let _Set = Set;
         let set = new Set(tagFilter);
         cResult[0] = tagFilter;
         cResult[1] = set;
-        let tmp3 = set;
+        let tmp5 = set;
       } else {
-        tmp3 = cResult[1];
+        tmp5 = cResult[1];
       }
-      [first, _slicedToArray] = noop.useState(tmp3);
-      if (cResult[2] === channel.guild_id) {
-        if (cResult[3] === channel.id) {
+      [first, _slicedToArray] = noop.useState(tmp5);
+      if (cResult[2] === availableTags.guild_id) {
+        if (cResult[3] === availableTags.id) {
           if (cResult[4] === first) {
-            let tmp12 = cResult[5];
+            let tmp14 = cResult[5];
           }
-          noop = tmp12;
+          noop = tmp14;
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            class F {
-              constructor() {
-                set = new Set();
-                tmp2 = closure_3(set);
-                return;
-              }
+            function handleClear() {
+              closure_3(new Set());
             }
-            cResult[6] = F;
+            cResult[6] = handleClear;
+            let tmp16 = handleClear;
           } else {
-            class F {
-              constructor() {
-                set = new Set();
-                tmp2 = closure_3(set);
-                return;
-              }
-            }
+            tmp16 = cResult[6];
           }
-          if (cResult[7] === channel.id) {
-            class F {
-              constructor() {
-                set = new Set();
-                tmp2 = closure_3(set);
-                return;
+          if (cResult[7] === availableTags.id) {
+            if (cResult[8] === first) {
+              if (cResult[9] === tmp4) {
+                let tmp17 = cResult[10];
               }
+              const unmountEffect = tmp(tmp2[10]).useUnmountEffect(tmp17);
+              const _Symbol2 = Symbol;
+              if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+                let intl = tmp(tmp2[11]).intl;
+                const stringResult = intl.string(tmp(tmp2[11]).t.TdqRTh);
+                cResult[11] = stringResult;
+                let tmp19 = stringResult;
+              } else {
+                tmp19 = cResult[11];
+              }
+              if (cResult[12] !== first.size) {
+                let str2 = " ";
+                if (first.size > 0) {
+                  const intl2 = tmp(tmp2[11]).intl;
+                  let obj2 = { count: first.size };
+                  str2 = intl2.formatToPlainString(tmp(tmp2[11]).t["/FzHJK"], obj2);
+                }
+                cResult[12] = first.size;
+                cResult[13] = str2;
+                let tmp21 = str2;
+              } else {
+                tmp21 = cResult[13];
+              }
+              const _Symbol3 = Symbol;
+              class H {
+                constructor() {
+                  state = closure_1.getState();
+                  setTagFilterResult = state.setTagFilter(channel.id, closure_2);
+                  return;
+                }
+              }
+              if (tmp22 === Symbol.for("react.memo_cache_sentinel")) {
+                const obj3 = { onPress: tmp16, label: null };
+                const intl3 = tmp(tmp2[11]).intl;
+                obj3.label = intl3.string(tmp(tmp2[11]).t.VkKicb);
+                const tmp25 = jsx(tmp(tmp2[12]).ActionSheetHeaderPressableText, { onPress: tmp16, label: null });
+                class H {
+                  constructor() {
+                    state = closure_1.getState();
+                    setTagFilterResult = state.setTagFilter(channel.id, closure_2);
+                    return;
+                  }
+                }
+                cResult[14] = tmp25;
+                let tmp23 = tmp25;
+              } else {
+                tmp23 = cResult[14];
+              }
+              if (cResult[15] !== tmp21) {
+                let obj4 = { title: tmp19, subtitle: tmp21, leading: tmp23 };
+                const tmp28 = jsx(tmp(tmp2[13]).BottomSheetTitleHeader, {
+                  title: tmp19,
+                  subtitle: tmp21,
+                  leading: tmp23,
+                });
+                cResult[15] = tmp21;
+                class H {
+                  constructor() {
+                    state = closure_1.getState();
+                    setTagFilterResult = state.setTagFilter(channel.id, closure_2);
+                    return;
+                  }
+                }
+                cResult[16] = tmp28;
+                let tmp26 = tmp28;
+              } else {
+                tmp26 = cResult[16];
+              }
+              if (cResult[17] === availableTags.availableTags) {
+                if (cResult[18] === first) {
+                  if (cResult[19] === tmp14) {
+                    if (cResult[24] !== cResult[20]) {
+                      const obj5 = { children: null };
+                      const obj6 = { hasIcons: true, children: tmp29 };
+                      obj5.children = jsx(tmp(tmp2[16]).TableRowGroup, { hasIcons: true, children: tmp29 });
+                      const tmp35 = jsx(tmp(tmp2[15]).BottomSheetScrollView, { children: null });
+                      class H {
+                        constructor() {
+                          state = closure_1.getState();
+                          setTagFilterResult = state.setTagFilter(channel.id, closure_2);
+                          return;
+                        }
+                      }
+                      cResult[25] = tmp35;
+                      let tmp33 = tmp35;
+                    } else {
+                      tmp33 = cResult[25];
+                    }
+                    if (cResult[26] === tmp33) {
+                      if (cResult[27] === tmp26) {
+                        let tmp36 = cResult[28];
+                      }
+                      return tmp36;
+                    }
+                    const obj7 = { scrollable: true, header: tmp26, children: tmp33 };
+                    class H {
+                      constructor() {
+                        state = closure_1.getState();
+                        setTagFilterResult = state.setTagFilter(channel.id, closure_2);
+                        return;
+                      }
+                    }
+                    cResult[26] = tmp33;
+                    cResult[27] = tmp26;
+                    class L {
+                      constructor(arg0) {
+                        closure_0 = channel;
+                        obj = {
+                          icon: null,
+                          label: channel.name,
+                          accessibilityLabel: null,
+                          checked: null,
+                          onPress: null,
+                        };
+                        obj1 = { emojiId: channel.emojiId, emojiName: channel.emojiName };
+                        obj.icon = closure_1_11(closure_1_14, obj1);
+                        intl = channel(closure_2[11]).intl;
+                        obj4 = { tagName: channel.name };
+                        obj.accessibilityLabel = intl.formatToPlainString(channel(closure_2[11]).t.tXXD6v, obj4);
+                        obj.checked = closure_2.has(channel.id);
+                        obj.onPress = function onPress() {
+                          return closure_4(closure_0);
+                        };
+                        return closure_1_11(channel(closure_2[14]).TableCheckboxRow, obj, channel.id);
+                      }
+                    }
+                    tmp36 = jsx(tmp(tmp2[17]).ActionSheet, { scrollable: true, header: tmp26, children: tmp33 });
+                    const tmp38 = jsx(tmp(tmp2[17]).ActionSheet, { scrollable: true, header: tmp26, children: tmp33 });
+                  }
+                }
+              }
+              if (cResult[21] === first) {
+                if (cResult[22] === tmp14) {
+                  let tmp30 = cResult[23];
+                }
+                const availableTags1 = availableTags.availableTags;
+                const mapped = availableTags1.map(tmp30);
+                availableTags = availableTags.availableTags;
+                cResult[17] = availableTags;
+                cResult[18] = first;
+                class H {
+                  constructor() {
+                    state = closure_1.getState();
+                    setTagFilterResult = state.setTagFilter(channel.id, closure_2);
+                    return;
+                  }
+                }
+                cResult[19] = tmp14;
+                cResult[20] = mapped;
+              }
+              class L {
+                constructor(arg0) {
+                  closure_0 = channel;
+                  obj = { icon: null, label: channel.name, accessibilityLabel: null, checked: null, onPress: null };
+                  obj1 = { emojiId: channel.emojiId, emojiName: channel.emojiName };
+                  obj.icon = closure_1_11(closure_1_14, obj1);
+                  intl = channel(closure_2[11]).intl;
+                  obj4 = { tagName: channel.name };
+                  obj.accessibilityLabel = intl.formatToPlainString(channel(closure_2[11]).t.tXXD6v, obj4);
+                  obj.checked = closure_2.has(channel.id);
+                  obj.onPress = function onPress() {
+                    return closure_4(closure_0);
+                  };
+                  return closure_1_11(channel(closure_2[14]).TableCheckboxRow, obj, channel.id);
+                }
+              }
+              cResult[21] = first;
+              cResult[22] = tmp14;
+              cResult[23] = L;
+              tmp30 = L;
+              const tmpResult = tmp(tmp2[10]);
             }
           }
           class H {
@@ -203,13 +363,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          cResult[7] = channel.id;
+          cResult[7] = availableTags.id;
           cResult[8] = first;
-          cResult[9] = tmp2;
+          cResult[9] = tmp4;
           cResult[10] = H;
+          tmp17 = H;
         }
       }
-      const fn = function _(arg0) {
+      function toggleTag(arg0) {
         let obj = arg0;
         if (null != arg0) {
           let FORUM_CHANNEL_HEADER = globalThis;
@@ -221,7 +382,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             set.add(obj.id);
           }
           const obj4 = { guildId: null, channelId: null, tagId: null, filterTagIds: null, added: null, location: null };
-          ({ guild_id: obj3.guildId, id: obj3.channelId } = channel);
+          ({ guild_id: obj3.guildId, id: obj3.channelId } = availableTags);
           obj4.tagId = obj.id;
           const _Array = FORUM_CHANNEL_HEADER.Array;
           obj4.filterTagIds = _Array.from(set);
@@ -231,18 +392,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj.section = FORUM_CHANNEL_HEADER;
           obj.object = constants.CHANNEL_TAG;
           obj4.location = obj;
-          const result = tracking_Tracking.trackForumTagFilterClicked(obj4);
+          const result = Tracking.trackForumTagFilterClicked(obj4);
           closure_3(set);
         }
-      };
-      cResult[2] = channel.guild_id;
-      cResult[3] = channel.id;
+      }
+      cResult[2] = availableTags.guild_id;
+      cResult[3] = availableTags.id;
       cResult[4] = first;
-      cResult[5] = fn;
-      tmp12 = fn;
-      let obj = channel(first[8]);
+      cResult[5] = toggleTag;
+      tmp14 = toggleTag;
+      let obj = availableTags(first[8]);
     }
-  : (channel) => {
+  : function ForumPostTagsActionSheet(channel) {
       channel = channel.channel;
       first = undefined;
       _slicedToArray = undefined;
@@ -265,7 +426,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj4 = { scrollable: true, header: null, children: null };
       obj2.subtitle = str;
       const obj5 = {
-        onPress() {
+        onPress: function handleClear() {
           closure_3(new Set());
         },
         label: null,
@@ -273,7 +434,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl3 = tmp4(tmp5[11]).intl;
       obj5.label = intl3.string(channel(first[11]).t.VkKicb);
       obj2.leading = jsx(channel(first[12]).ActionSheetHeaderPressableText, {
-        onPress() {
+        onPress: function handleClear() {
           closure_3(new Set());
         },
         label: null,
@@ -323,7 +484,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj.section = FORUM_CHANNEL_HEADER;
             obj.object = constants.CHANNEL_TAG;
             obj4.location = obj;
-            const result = tracking_Tracking.trackForumTagFilterClicked(obj4);
+            const result = Tracking.trackForumTagFilterClicked(obj4);
             closure_3(set);
           }
         };

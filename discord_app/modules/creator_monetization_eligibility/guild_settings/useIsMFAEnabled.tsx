@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useIsMFAEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsMFAEnabled() {
       const cResult = c.c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -30,7 +30,7 @@ export const useIsMFAEnabled = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = useStateFromStores.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [GuildSettingsStore];
-        const fn2 = function c() {
+        const fn2 = function b() {
           return props.getProps().mfaLevel;
         };
         cResult[2] = items1;
@@ -63,7 +63,7 @@ export const useIsMFAEnabled = ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = obj2;
       const tmpResult2 = useStateFromStores;
     }
-  : () => {
+  : function useIsMFAEnabled() {
       const items = [UserStore];
       const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
       const items1 = [GuildSettingsStore];

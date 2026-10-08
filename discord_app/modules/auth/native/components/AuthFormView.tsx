@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
@@ -55,7 +55,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/AuthFormView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AuthFormView(arg0) {
       const cResult = c.c(45);
       ({ children, headerText, subHeader, contentStyle, backgroundImageSource, backgroundImageCover } = arg0);
       const tmp4 = useWideAuthViewDefault();
@@ -277,7 +277,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = items4;
       }
     }
-  : (arg0) => {
+  : function AuthFormView(arg0) {
       ({ children, headerText, subHeader, contentStyle } = arg0);
       ({ backgroundImageSource, backgroundImageCover } = arg0);
       const tmp3 = useWideAuthViewDefault();

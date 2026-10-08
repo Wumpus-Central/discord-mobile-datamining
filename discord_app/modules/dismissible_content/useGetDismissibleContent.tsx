@@ -34,8 +34,8 @@ function useGetVisibleContent(cResult, stateFromStores, groupName, version, id) 
   closure_6 = tmp6;
   let result = null != cResult;
   if (result) {
-    result = tmp2(2037).isDismissibleContentBlockedByOverlay(cResult, first, tmp6);
-    const tmp2Result = tmp2(2037);
+    result = tmp2(2049).isDismissibleContentBlockedByOverlay(cResult, first, tmp6);
+    const tmp2Result = tmp2(2049);
   }
   let obj = require("OverlayTrackingUtils");
   const items = [ref];
@@ -162,14 +162,14 @@ function canShowTimeRecurringContent(arg0, lastDismissedAtMs, numTimesDismissed,
   }
   return hasLoadedResult;
 }
-const removeCandidateContent = fn(2042).removeCandidateContent;
+const removeCandidateContent = fn(2055).removeCandidateContent;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const UserSettingsTypes = fn(1095).UserSettingsTypes;
 fn(558);
 let closure_13 = {};
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGetRecurringDismissibleContentState(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -207,7 +207,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useGetRecurringDismissibleContentState(arg0) {
       _require = arg0;
       const items = [UserSettingsProtoStore];
       return require("initialize").useStateFromStores(items, () => {
@@ -231,7 +231,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, groupName) => {
+  ? function useGetDismissibleContent(arg0, groupName) {
       _require = groupName;
       const cResult = require("c").c(18);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -280,17 +280,17 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               return closure_1_6.getGuildId();
             }
           }
-          const tmp21 = useGetVisibleContent(cResult[6], stateFromStores1, groupName);
+          const tmp20 = useGetVisibleContent(cResult[6], stateFromStores1, groupName);
           if (cResult[11] === cResult[6]) {
             if (cResult[12] === groupName) {
               if (cResult[13] === stateFromStores1) {
-                let tmp22 = cResult[14];
+                let tmp21 = cResult[14];
               }
-              if (cResult[15] === tmp22) {
-                if (cResult[16] === tmp21) {
-                  let tmp23 = cResult[17];
+              if (cResult[15] === tmp21) {
+                if (cResult[16] === tmp20) {
+                  let tmp22 = cResult[17];
                 }
-                return tmp23;
+                return tmp22;
               }
               const items2 = [,];
               class C {
@@ -298,8 +298,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   return closure_1_6.getGuildId();
                 }
               }
-              items2[1] = tmp22;
-              class N {
+              items2[1] = tmp21;
+              class T {
                 constructor(arg0, arg1) {
                   if (null != closure_2) {
                     tmp2 = arg0;
@@ -319,12 +319,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              cResult[16] = tmp21;
+              cResult[16] = tmp20;
               cResult[17] = items2;
-              tmp23 = items2;
+              tmp22 = items2;
             }
           }
-          class N {
+          class T {
             constructor(arg0, arg1) {
               if (null != closure_2) {
                 tmp2 = arg0;
@@ -347,36 +347,29 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[11] = cResult[6];
           cResult[12] = groupName;
           cResult[13] = stateFromStores1;
-          cResult[14] = N;
-          tmp22 = N;
+          cResult[14] = T;
+          tmp21 = T;
         }
       }
       found1 = null;
       if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
         if (null != stateFromStores) {
           if (cResult[9] !== stateFromStores) {
-            class T {
-              constructor(arg0) {
-                obj = closure_0(closure_2[16]);
-                return !obj.hasBit(closure_1, arg0);
-              }
-            }
+            const fn2 = function _(CHANNEL_NOTICE_INVITE) {
+              return !Uint8ArrayUtils.hasBit(stateFromStores, CHANNEL_NOTICE_INVITE);
+            };
             cResult[9] = stateFromStores;
             class C {
               constructor() {
                 return closure_1_6.getGuildId();
               }
             }
-            cResult[10] = T;
+            cResult[10] = fn2;
+            let tmp14 = fn2;
           } else {
-            class T {
-              constructor(arg0) {
-                obj = closure_0(closure_2[16]);
-                return !obj.hasBit(closure_1, arg0);
-              }
-            }
+            tmp14 = cResult[10];
           }
-          const found = newUserDismissibleContent.find(T);
+          const found = newUserDismissibleContent.find(tmp14);
           found1 = found;
           class C {
             constructor() {
@@ -390,7 +383,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[5] = newUserDismissibleContent;
-        class N {
+        class T {
           constructor(arg0, arg1) {
             if (null != closure_2) {
               tmp2 = arg0;
@@ -413,31 +406,28 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = null;
       }
       if (cResult[7] !== stateFromStores) {
-        class T {
-          constructor(arg0) {
-            obj = closure_0(closure_2[16]);
-            return !obj.hasBit(closure_1, arg0);
+        const fn3 = function v(CHANNEL_NOTICE_INVITE) {
+          let tmp2 = null == stateFromStores;
+          if (!tmp2) {
+            tmp2 = !Uint8ArrayUtils.hasBit(tmp, CHANNEL_NOTICE_INVITE);
           }
-        }
+          return tmp2;
+        };
         cResult[7] = stateFromStores;
         class C {
           constructor() {
             return closure_1_6.getGuildId();
           }
         }
-        cResult[8] = tmp17;
+        cResult[8] = fn3;
+        let tmp16 = fn3;
       } else {
-        class T {
-          constructor(arg0) {
-            obj = closure_0(closure_2[16]);
-            return !obj.hasBit(closure_1, arg0);
-          }
-        }
+        tmp16 = cResult[8];
       }
-      found1 = newUserDismissibleContent.find(tmp17);
+      found1 = newUserDismissibleContent.find(tmp16);
       const tmpResult4 = require("NewUserDismissibleContentRegistry");
     }
-  : (arg0, groupName) => {
+  : function useGetDismissibleContent(arg0, groupName) {
       _require = groupName;
       const items = [UserSettingsProtoStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => {
@@ -483,7 +473,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, version, groupName) => {
+  ? function useGetVersionedDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, version, groupName) {
       _require = version;
       let result = _require;
       const cResult = require("c").c(14);
@@ -527,7 +517,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            const fn2 = function _(dismissAction, forceTrack) {
+            const fn2 = function v(dismissAction, forceTrack) {
               if (null != c2) {
                 const obj2 = { dismissAction, groupName, guildId: stateFromStores, forceTrack, version };
                 const result = DismissibleContentUtils.markVersionedDismissibleContentAsDismissed(tmp, version, obj2);
@@ -550,7 +540,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = version;
         cResult[5] = tmp9;
       } else {
-        result = result(4726).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+        result = result(4920).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
           tmp9 = null;
           if (null != lastDismissedVersion) {
@@ -565,7 +555,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             tmp9 = tmp13;
           }
         }
-        const resultResult1 = result(4726);
+        const resultResult1 = result(4920);
       }
       let tmp14 = null;
       if (!result) {
@@ -579,7 +569,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp14;
       const resultResult = result(504);
     }
-  : (PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, version, groupName) => {
+  : function useGetVersionedDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, version, groupName) {
       _require = version;
       const lastDismissedVersion = closure_14(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE).lastDismissedVersion;
       const items = [SelectedGuildStore];
@@ -629,7 +619,11 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, cooldownDurationMs, groupName) => {
+  ? function useGetTimeRecurringDismissibleContent(
+      PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
+      cooldownDurationMs,
+      groupName,
+    ) {
       _require = groupName;
       const cResult = require("c").c(14);
       let obj = require("c");
@@ -673,7 +667,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp19 = items1;
               }
             }
-            const fn2 = function _(dismissAction, forceTrack) {
+            const fn2 = function v(dismissAction, forceTrack) {
               if (null != closure_1) {
                 const obj2 = { dismissAction, groupName, guildId: stateFromStores, forceTrack };
                 const result = DismissibleContentUtils.markTimeRecurringDismissibleContentAsDismissed(tmp, obj2);
@@ -712,7 +706,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp10;
       const tmpResult = require("initialize");
     }
-  : (PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, cooldownDurationMs, groupName) => {
+  : function useGetTimeRecurringDismissibleContent(
+      PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
+      cooldownDurationMs,
+      groupName,
+    ) {
       _require = groupName;
       ({ lastDismissedAtMs, numTimesDismissed } = closure_14(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE));
       const tmp = closure_14(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
@@ -735,7 +733,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         dependencyMap = tmp10;
         tmp5 = tmp10;
-        tmp2Result = tmp2(4726);
+        tmp2Result = tmp2(4920);
       }
       const items1 = [useGetVisibleContent(tmp5, stateFromStores, groupName)];
       const items2 = [tmp5, groupName, stateFromStores];
@@ -749,7 +747,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, id, groupName) => {
+  ? function useGetSnowflakeBoundDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, id, groupName) {
       _require = id;
       importDefault = groupName;
       let result = _require;
@@ -794,7 +792,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            const fn2 = function _(dismissAction, forceTrack) {
+            const fn2 = function v(dismissAction, forceTrack) {
               if (null != c2) {
                 const obj2 = { dismissAction, groupName, guildId: stateFromStores, forceTrack };
                 const result = DismissibleContentUtils.markSnowflakeBoundDismissibleContentAsDismissed(
@@ -821,7 +819,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = id;
         cResult[5] = tmp8;
       } else {
-        result = result(4726).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+        result = result(4920).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
           tmp8 = null;
           if (null != lastDismissedObjectId) {
@@ -837,7 +835,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             tmp8 = tmp12;
           }
         }
-        const resultResult1 = result(4726);
+        const resultResult1 = result(4920);
       }
       let tmp14 = null;
       if (!result) {
@@ -853,7 +851,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp14;
       const resultResult = result(504);
     }
-  : (PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, id, groupName) => {
+  : function useGetSnowflakeBoundDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, id, groupName) {
       _require = id;
       importDefault = groupName;
       const lastDismissedObjectId = closure_14(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE).lastDismissedObjectId;
@@ -906,7 +904,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, id, stateFromStores, groupName) => {
+  ? function useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(
+      PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
+      id,
+      stateFromStores,
+      groupName,
+    ) {
       _require = id;
       importDefault = stateFromStores;
       dependencyMap = groupName;
@@ -971,7 +974,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            const fn2 = function _(dismissAction, forceTrack) {
+            const fn2 = function v(dismissAction, forceTrack) {
               if (null != c3) {
                 const obj = DismissibleContentUnsafeUtils;
                 const obj2 = { dismissAction, groupName, guildId, forceTrack };
@@ -1000,7 +1003,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = id;
         cResult[6] = tmp11;
       } else {
-        result = result(4726).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+        result = result(4920).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
           tmp11 = null;
           if (null != lastDismissedObjectId) {
@@ -1016,7 +1019,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             tmp11 = tmp15;
           }
         }
-        const resultResult1 = result(4726);
+        const resultResult1 = result(4920);
       }
       let tmp17 = null;
       if (!result) {
@@ -1032,7 +1035,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp17;
       const resultResult = result(504);
     }
-  : (PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, id, stateFromStores, groupName) => {
+  : function useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(
+      PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
+      id,
+      stateFromStores,
+      groupName,
+    ) {
       _require = id;
       importDefault = stateFromStores;
       dependencyMap = groupName;
@@ -1108,7 +1116,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, cooldownDurationMs, id, groupName) => {
+  ? function useGetTimeRecurringSnowflakeBoundDismissibleContent(
+      THIRD_PARTY_OUTBOUND_PROMO_NAGBAR,
+      cooldownDurationMs,
+      id,
+      groupName,
+    ) {
       _require = id;
       const cResult = require("c").c(14);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1172,12 +1185,12 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = null;
       let result = null == THIRD_PARTY_OUTBOUND_PROMO_NAGBAR;
       if (!result) {
-        result = tmp(2037).isTimeRecurringSnowflakeBoundDismissibleContentDismissed(
+        result = tmp(2049).isTimeRecurringSnowflakeBoundDismissibleContentDismissed(
           THIRD_PARTY_OUTBOUND_PROMO_NAGBAR,
           id,
           cooldownDurationMs,
         );
-        const tmpResult2 = tmp(2037);
+        const tmpResult2 = tmp(2049);
       }
       let tmp10 = null;
       if (!result) {
@@ -1190,7 +1203,12 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp10;
       const tmpResult = require("initialize");
     }
-  : (THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, cooldownDurationMs, id, groupName) => {
+  : function useGetTimeRecurringSnowflakeBoundDismissibleContent(
+      THIRD_PARTY_OUTBOUND_PROMO_NAGBAR,
+      cooldownDurationMs,
+      id,
+      groupName,
+    ) {
       _require = id;
       const items = [SelectedGuildStore];
       stateFromStores = require("initialize").useStateFromStores(items, () => guildId.getGuildId());
@@ -1221,7 +1239,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, stateFromStores, groupName) => {
+  ? function useGetSingleUseGuildDismissibleContent_UNSAFE(arg0, stateFromStores, groupName) {
       _require = stateFromStores;
       importDefault = groupName;
       const cResult = require("c").c(17);
@@ -1249,19 +1267,19 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] === stateFromStores) {
         if (cResult[4] === newUserDismissibleContent) {
           found1 = tmp8;
-          const tmp16 = useGetVisibleContent(cResult[5], stateFromStores, groupName);
+          const tmp17 = useGetVisibleContent(cResult[5], stateFromStores, groupName);
           if (cResult[10] === cResult[5]) {
             if (cResult[11] === groupName) {
               if (cResult[12] === stateFromStores) {
-                let tmp17 = cResult[13];
+                let tmp18 = cResult[13];
               }
-              if (cResult[14] === tmp17) {
-                if (cResult[15] === tmp16) {
-                  let tmp18 = cResult[16];
+              if (cResult[14] === tmp18) {
+                if (cResult[15] === tmp17) {
+                  let tmp19 = cResult[16];
                 }
-                return tmp18;
+                return tmp19;
               }
-              const items1 = [tmp16, tmp17];
+              const items1 = [tmp17, tmp18];
               class E {
                 constructor(arg0, arg1) {
                   if (null != closure_2) {
@@ -1282,9 +1300,9 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              cResult[15] = tmp16;
+              cResult[15] = tmp17;
               cResult[16] = items1;
-              tmp18 = items1;
+              tmp19 = items1;
             }
           }
           class E {
@@ -1311,7 +1329,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[11] = groupName;
           cResult[12] = stateFromStores;
           cResult[13] = E;
-          tmp17 = E;
+          tmp18 = E;
         }
       }
       found1 = null;
@@ -1319,20 +1337,31 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp9 = null;
         if (null != stateFromStores) {
           if (cResult[8] !== stateFromStores) {
-            const fn2 = function v(arg0) {
-              let tmp = null == stateFromStores[arg0];
-              if (!tmp) {
-                tmp = false === stateFromStores[arg0].dismissed;
+            class G {
+              constructor(arg0) {
+                tmp = null == closure_3[arg0];
+                if (!tmp) {
+                  flag = false;
+                  tmp = false === closure_3[arg0].dismissed;
+                }
+                return tmp;
               }
-              return tmp;
-            };
+            }
             cResult[8] = stateFromStores;
-            cResult[9] = fn2;
-            let tmp10 = fn2;
+            cResult[9] = G;
           } else {
-            tmp10 = cResult[9];
+            class G {
+              constructor(arg0) {
+                tmp = null == closure_3[arg0];
+                if (!tmp) {
+                  flag = false;
+                  tmp = false === closure_3[arg0].dismissed;
+                }
+                return tmp;
+              }
+            }
           }
-          const found = newUserDismissibleContent.find(tmp10);
+          const found = newUserDismissibleContent.find(G);
           found1 = found;
           tmp9 = found;
         }
@@ -1361,23 +1390,34 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = tmp9;
       }
       if (cResult[6] !== stateFromStores) {
-        const fn3 = function f(arg0) {
-          let tmp2 = null == stateFromStores || null == stateFromStores[arg0];
-          if (!tmp2) {
-            tmp2 = false === stateFromStores[arg0].dismissed;
+        class G {
+          constructor(arg0) {
+            tmp = null == closure_3[arg0];
+            if (!tmp) {
+              flag = false;
+              tmp = false === closure_3[arg0].dismissed;
+            }
+            return tmp;
           }
-          return tmp2;
-        };
+        }
         cResult[6] = stateFromStores;
-        cResult[7] = fn3;
-        let tmp12 = fn3;
+        cResult[7] = tmp13;
       } else {
-        tmp12 = cResult[7];
+        class G {
+          constructor(arg0) {
+            tmp = null == closure_3[arg0];
+            if (!tmp) {
+              flag = false;
+              tmp = false === closure_3[arg0].dismissed;
+            }
+            return tmp;
+          }
+        }
       }
-      found1 = newUserDismissibleContent.find(tmp12);
+      found1 = newUserDismissibleContent.find(tmp13);
       const tmpResult2 = require("NewUserDismissibleContentRegistry");
     }
-  : (arg0, stateFromStores, groupName) => {
+  : function useGetSingleUseGuildDismissibleContent_UNSAFE(arg0, stateFromStores, groupName) {
       _require = stateFromStores;
       const items = [UserSettingsProtoStore];
       stateFromStores = require("initialize").useStateFromStores(items, () =>
@@ -1425,7 +1465,12 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, stateFromStores, cooldownDurationMs, groupName) => {
+  ? function useGetTimeRecurringGuildDismissibleContent_UNSAFE(
+      PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
+      stateFromStores,
+      cooldownDurationMs,
+      groupName,
+    ) {
       _require = stateFromStores;
       const cResult = require("c").c(15);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1492,7 +1537,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp27 = items1;
               }
             }
-            const fn2 = function _(dismissAction, forceTrack) {
+            const fn2 = function v(dismissAction, forceTrack) {
               if (null != closure_2) {
                 const obj2 = { dismissAction, groupName, guildId, forceTrack };
                 const result = DismissibleContentUnsafeUtils.UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed(
@@ -1513,7 +1558,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = null;
       let tmp14 = null;
       if (null != PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE) {
-        const tmp15 = !tmp(4726).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+        const tmp15 = !tmp(4920).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         let lastDismissedAtMs1;
         if (tmp8 != null) {
           lastDismissedAtMs1 = tmp8.lastDismissedAtMs;
@@ -1524,7 +1569,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         }
         dependencyMap = tmp22;
         tmp14 = tmp22;
-        const tmpResult2 = tmp(4726);
+        const tmpResult2 = tmp(4920);
       }
       cResult[3] = PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
       let lastDismissedAtMs2;
@@ -1537,7 +1582,12 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp14;
       const tmpResult = require("initialize");
     }
-  : (PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, stateFromStores, cooldownDurationMs, groupName) => {
+  : function useGetTimeRecurringGuildDismissibleContent_UNSAFE(
+      PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
+      stateFromStores,
+      cooldownDurationMs,
+      groupName,
+    ) {
       _require = stateFromStores;
       const items = [UserSettingsProtoStore];
       stateFromStores = require("initialize").useStateFromStores(items, () =>
@@ -1602,7 +1652,7 @@ export const useGetTimeRecurringSnowflakeBoundDismissibleContent = tmp7;
 export const useGetSingleUseGuildDismissibleContent_UNSAFE = tmp8;
 export const useGetTimeRecurringGuildDismissibleContent_UNSAFE = tmp9;
 export const useDangerouslyPeekDismissibleContents = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function useDangerouslyPeekDismissibleContents(arr) {
       const cResult = stateFromStores(576).c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserSettingsProtoStore];
@@ -1648,7 +1698,7 @@ export const useDangerouslyPeekDismissibleContents = ReactCompilerGating.isReact
       cResult[4] = found;
       const tmpResult = stateFromStores(504);
     }
-  : (arr) => {
+  : function useDangerouslyPeekDismissibleContents(arr) {
       const items = [UserSettingsProtoStore];
       _require = require("initialize").useStateFromStores(items, () => {
         const userContent = settings.settings.userContent;

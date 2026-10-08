@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   wrapper: {
     display: "flex",
@@ -34,7 +34,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/ResourceChannelButtons.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function ResourceChannelButtons(channel) {
       const cResult = channel(first[7]).c(22);
       channel = channel.channel;
       const obj = channel(first[7]);
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = fn;
       const obj3 = channel(first[9]);
     }
-  : (channel) => {
+  : function ResourceChannelButtons(channel) {
       channel = channel.channel;
       first = undefined;
       noop = undefined;

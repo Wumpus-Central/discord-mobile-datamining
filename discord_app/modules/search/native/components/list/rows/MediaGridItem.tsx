@@ -8,10 +8,10 @@ import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty, useWindowDimensions: metroRequire } = get_ActivityIndicator);
-const SearchMediaTypes = fn(7524).SearchMediaTypes;
+const SearchMediaTypes = fn(9247).SearchMediaTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: {
     borderRadius: nativeDefault.radii.xs,
@@ -40,7 +40,7 @@ let result = size.fileFinishedImporting("modules/search/native/components/list/r
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (media) => {
+    ? function MediaGridItem(media) {
         const cResult = media(ref[8]).c(63);
         media = media.media;
         ({ size, containerStyle, onPress } = media);
@@ -219,7 +219,7 @@ export default noop.memo(
         cResult[5] = avatarSource;
         const tmpResult = media(ref[9]);
       }
-    : (media) => {
+    : function MediaGridItem(media) {
         media = media.media;
         let size = media.size;
         const onPress = media.onPress;

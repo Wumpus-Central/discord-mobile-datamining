@@ -21,10 +21,11 @@ function calculatePositionDeltas(arg0) {
       logger.warn("Object IDs in the old ordering and the new ordering are not the same.", joined, joined1);
       return [];
     } else {
-      const obj2 = {};
+      const _Map = Map;
+      const map = new Map();
       for (let num = 0; num < length; num = num + 1) {
         let idGetterResult = idGetter(oldOrdering[num]);
-        obj2[idGetterResult] = existingPositionGetter(oldOrdering[num]);
+        let result = map.set(idGetterResult, existingPositionGetter(oldOrdering[num]));
       }
       const items = [];
       for (let num2 = 0; num2 < length; num2 = num2 + 1) {
@@ -33,8 +34,8 @@ function calculatePositionDeltas(arg0) {
         if (!ascending) {
           diff = length - 1 - num2;
         }
-        let tmp5 = obj2[idGetterResult1] === diff && existingPositionGetter(newOrdering[num2]) === diff;
-        if (!tmp5) {
+        let tmp6 = map.get(idGetterResult1) === diff && existingPositionGetter(newOrdering[num2]) === diff;
+        if (!tmp6) {
           let obj = { id: idGetterResult1, position: diff };
           let arr = items.push(obj);
         }
@@ -80,7 +81,7 @@ function getPositionUpdates(arg0) {
 }
 const logger = new LoggerDefault("DragAndDropUtils");
 const size = fn(2);
-const result = size.fileFinishedImporting("utils/DragAndDropUtils.tsx");
+let result = size.fileFinishedImporting("utils/DragAndDropUtils.tsx");
 
 export default { moveItemFromTo, calculatePositionDeltas, getPositionUpdates };
 export { calculatePositionDeltas };

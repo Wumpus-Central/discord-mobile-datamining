@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/a11y/native/useAnnounceAsyncCompletion.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAnnounceAsyncCompletion() {
       const cResult = require("c").c(3);
       _require = noop.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (undefined !== polite) {
             str = polite;
           }
-          const AccessibilityAnnouncer = ref(4735).AccessibilityAnnouncer;
+          const AccessibilityAnnouncer = ref(4929).AccessibilityAnnouncer;
           AccessibilityAnnouncer.announce(intl, str);
           if (obj.isIOS()) {
             if (tmpResult.getIsScreenReaderEnabled()) {
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return resolved;
           }
           resolved = Promise.resolve();
-          obj = intl(1369);
+          obj = intl(1381);
         };
         cResult[2] = fn2;
         let tmp5 = fn2;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function useAnnounceAsyncCompletion() {
       noop.useRef(null);
       const effect = noop.useEffect(
         () => () => {
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (polite === undefined) {
           str = "assertive";
         }
-        const AccessibilityAnnouncer = ref(4735).AccessibilityAnnouncer;
+        const AccessibilityAnnouncer = ref(4929).AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(intl, str);
         if (obj.isIOS()) {
           if (tmpResult.getIsScreenReaderEnabled()) {
@@ -136,6 +136,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return resolved;
         }
         resolved = Promise.resolve();
-        obj = intl(1369);
+        obj = intl(1381);
       }, []);
     };

@@ -29,7 +29,7 @@ export default function YouSettingsCoachmark(buttonRef) {
       tmp9 = cResult[1];
       tmp10 = cResult[2];
     }
-    obj3 = obj3(9895);
+    obj3 = obj3(9375);
     coachmark = obj3.useCoachmark(tmp9, tmp10);
   } else {
     const merged = Object.assign(buttonRef, Object.assign({ buttonRef: 0 }));
@@ -38,7 +38,7 @@ export default function YouSettingsCoachmark(buttonRef) {
   }
 }
 export const useYouSettingsCoachmark = ReactCompilerGating.isReactCompilerEnabled()
-  ? (disabled) => {
+  ? function useYouSettingsCoachmark(disabled) {
       const cResult = c.c(2);
       disabled = disabled.disabled;
       if (cResult[0] !== disabled) {
@@ -55,7 +55,7 @@ export const useYouSettingsCoachmark = ReactCompilerGating.isReactCompilerEnable
       }
       return referralProgramCoachmark;
     }
-  : (disabled) => {
+  : function useYouSettingsCoachmark(disabled) {
       let referralProgramCoachmark = useReferralProgramCoachmark.useReferralProgramCoachmark({
         disabled: disabled.disabled,
       });

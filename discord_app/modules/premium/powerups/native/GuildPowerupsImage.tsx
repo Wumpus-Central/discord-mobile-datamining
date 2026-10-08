@@ -8,7 +8,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({
   image: { width: "75%", height: "100%", alignSelf: "center", resizeMode: "contain" },
 });
@@ -17,14 +17,14 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsImage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildPowerupsImage(arg0) {
       let obj = dependencyMap;
       const cResult = c.c(8);
       ({ imageUrl, isAnimated, style } = arg0);
       let image = closure_5();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
-        const fn = function l() {
+        const fn = function n() {
           return useReducedMotion.useReducedMotion;
         };
         cResult[0] = items;
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj.style = items2;
       tmp10 = jsx(FastImageDefault, { style: null, source: { uri: imageUrl } });
     }
-  : (style) => {
+  : function GuildPowerupsImage(style) {
       ({ imageUrl, isAnimated } = style);
       if (isAnimated === undefined) {
         isAnimated = true;

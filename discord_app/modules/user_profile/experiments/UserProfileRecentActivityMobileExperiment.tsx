@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useIsRecentActivityMobileEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsRecentActivityMobileEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -31,4 +31,6 @@ export const useIsRecentActivityMobileEnabled = ReactCompilerGating.isReactCompi
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useIsRecentActivityMobileEnabled(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };

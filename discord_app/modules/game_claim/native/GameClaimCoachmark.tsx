@@ -4,12 +4,12 @@ import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import ButtonConstants from "../../../design/components/Button/native/ButtonConstants.native.tsx";
-import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
-import useGameNameAndCoverImageDefault from "../../games/hooks/useGameNameAndCoverImage.tsx";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
+import useGameNameAndCoverImageDefault from "../../games/hooks/useGameNameAndCoverImage.tsx";
 import GameClaimCardStack from "GameClaimCardStack.tsx";
 import UnclaimedGamesActionCreators from "../UnclaimedGamesActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -22,13 +22,13 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1085);
 ({ GuildFeatures: hasOwnProperty, RelativeMarketingURLs: metroRequire } = Constants);
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 let closure_12 = 2 * nativeDefault.space.PX_12;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   card: { padding: nativeDefault.space.PX_12 },
   closeButton: null,
@@ -60,12 +60,12 @@ let result = size.fileFinishedImporting("modules/game_claim/native/GameClaimCoac
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function GameClaimCoachmark(arg0) {
         const cResult = markAsDismissed(576).c(36);
         ({ guild, markAsDismissed } = arg0);
         const tmp4 = closure_13();
         let obj = markAsDismissed(576);
-        let first = markAsDismissed(16156).useUnclaimedGameIdsForGuild(guild.id)[0];
+        let first = markAsDismissed(16416).useUnclaimedGameIdsForGuild(guild.id)[0];
         if (first == null) {
           first = null;
         }
@@ -77,7 +77,7 @@ export default noop.memo(
         } else {
           first1 = cResult[0];
         }
-        const obj2 = markAsDismissed(16156);
+        const obj2 = markAsDismissed(16416);
         ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(first, first1));
         if (null == coverImageUrl) {
           return null;
@@ -109,7 +109,7 @@ export default noop.memo(
           }
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp18 = closure_8(markAsDismissed(6024).XSmallIcon, { size: "sm", color: "text-default" });
+            const tmp18 = closure_8(markAsDismissed(6210).XSmallIcon, { size: "sm", color: "text-default" });
             cResult[5] = tmp18;
             let tmp16 = tmp18;
           } else {
@@ -154,7 +154,7 @@ export default noop.memo(
                   if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
                     const intl4 = markAsDismissed(1126).intl;
                     const stringResult2 = intl4.string(markAsDismissed(1126).t["2u6ZlY"]);
-                    const tmp38 = closure_8(markAsDismissed(8296).LinkExternalSmallIcon, {
+                    const tmp38 = closure_8(markAsDismissed(7679).LinkExternalSmallIcon, {
                       size: "xs",
                       color: "white",
                     });
@@ -202,9 +202,9 @@ export default noop.memo(
                                 v1 = 1;
                                 v3 = 1;
                                 const obj5 = {
-                                  value: v1(6830).redirectDeveloperPortalWithHandoffToken(
+                                  value: v1(7024).redirectDeveloperPortalWithHandoffToken(
                                     constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                                    v3(6834).LoginHandoffSource.GAME_CLAIM,
+                                    v3(7028).LoginHandoffSource.GAME_CLAIM,
                                   ),
                                   done: false,
                                 };
@@ -228,7 +228,7 @@ export default noop.memo(
                         }
                       }),
                     };
-                    const tmp42 = closure_8(markAsDismissed(5601).Button, obj5);
+                    const tmp42 = closure_8(markAsDismissed(5375).Button, obj5);
                     cResult[24] = markAsDismissed;
                     cResult[25] = tmp42;
                     let tmp39 = tmp42;
@@ -256,7 +256,7 @@ export default noop.memo(
                     const obj6 = { variant: "secondary", style: tmp4.card, children: null };
                     const items = [tmp19, tmp22, tmp27, tmp31, tmp43];
                     obj6.children = items;
-                    const tmp49 = closure_9(markAsDismissed(6002).Card, obj6);
+                    const tmp49 = closure_9(markAsDismissed(6186).Card, obj6);
                     cResult[29] = tmp4.card;
                     cResult[30] = tmp27;
                     cResult[31] = tmp31;
@@ -274,7 +274,7 @@ export default noop.memo(
                   tmp43 = tmp46;
                 }
                 const obj8 = { variant: "text-sm/normal", color: "text-overlay-light", style: tmp30, children: tmp10 };
-                const tmp33 = closure_8(markAsDismissed(4892).Text, obj8);
+                const tmp33 = closure_8(markAsDismissed(5086).Text, obj8);
                 cResult[19] = tmp10;
                 cResult[20] = tmp30;
                 cResult[21] = tmp33;
@@ -293,14 +293,14 @@ export default noop.memo(
               style: tmp4.centeredText,
               children: tmp25,
             };
-            const tmp29 = closure_8(markAsDismissed(4892).Text, obj9);
+            const tmp29 = closure_8(markAsDismissed(5086).Text, obj9);
             cResult[13] = tmp4.centeredText;
             cResult[14] = tmp25;
             cResult[15] = tmp29;
             tmp27 = tmp29;
           }
           const obj10 = { accessibilityRole: "button", onPress: tmp15, style: tmp4.closeButton, children: tmp16 };
-          const tmp21 = closure_8(markAsDismissed(5916).PressableOpacity, obj10);
+          const tmp21 = closure_8(markAsDismissed(6189).PressableOpacity, obj10);
           cResult[6] = tmp4.closeButton;
           cResult[7] = tmp15;
           cResult[8] = tmp21;
@@ -308,7 +308,7 @@ export default noop.memo(
         }
         const tmp9 = useGameNameAndCoverImageDefault(first, first1);
       }
-    : (arg0) => {
+    : function GameClaimCoachmark(arg0) {
         ({ guild, markAsDismissed: require } = arg0);
         const tmp = closure_13();
         let first = UnclaimedGamesActionCreators.useUnclaimedGameIdsForGuild(guild.id)[0];
@@ -392,9 +392,9 @@ export default noop.memo(
                     v1 = 1;
                     v3 = 1;
                     const obj5 = {
-                      value: v1(6830).redirectDeveloperPortalWithHandoffToken(
+                      value: v1(7024).redirectDeveloperPortalWithHandoffToken(
                         constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                        v3(6834).LoginHandoffSource.GAME_CLAIM,
+                        v3(7028).LoginHandoffSource.GAME_CLAIM,
                       ),
                       done: false,
                     };

@@ -15,7 +15,7 @@ const __initData2 = {
 const result = size.fileFinishedImporting("modules/autocompleter/native/useAutocompleteAnimatedHeightStyles.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (height, arg1) => {
+  ? function useAutocompleteAnimatedHeightStyles(height, arg1) {
       _require = height;
       isScreenIndexFrozenSharedValue = require("ScreenIndexFrozen").useIsScreenIndexFrozenSharedValue(arg1);
       let obj = require("ScreenIndexFrozen");
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       fn.__initData = __initData;
       return obj2.useAnimatedStyle(fn);
     }
-  : (height, arg1) => {
+  : function useAutocompleteAnimatedHeightStyles(height, arg1) {
       _require = height;
       isScreenIndexFrozenSharedValue = require("ScreenIndexFrozen").useIsScreenIndexFrozenSharedValue(arg1);
       let obj = require("ScreenIndexFrozen");

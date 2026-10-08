@@ -53,7 +53,7 @@ export const handleNoiseSuppressionChange = function handleNoiseSuppressionChang
 export { NoiseSuppressionOpt };
 export { getSelectedNoiseSuppressionOption };
 export const useSelectedNoiseSuppressionOption = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSelectedNoiseSuppressionOption() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MediaEngineStore];
@@ -78,7 +78,7 @@ export const useSelectedNoiseSuppressionOption = ReactCompilerGating.isReactComp
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useSelectedNoiseSuppressionOption() {
       const items = [MediaEngineStore];
       return initialize.useStateFromStores(items, () => {
         const noiseSuppression = MediaEngineStore.getNoiseSuppression();

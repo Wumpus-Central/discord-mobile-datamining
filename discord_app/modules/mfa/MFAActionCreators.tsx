@@ -12,5 +12,11 @@ export const openMFAModal = function openMFAModal(methods, arg1, cancel) {
   _require = arg1;
   methods = methods.methods;
   methods.methods = methods.filter((type) => Object.hasOwn(SELECT_NAMES, type.type));
-  require("MFAModal").openMFAModal(methods, (arg0) => MFA.trySubmit(arg0, closure_0), cancel);
+  require("MFAModal").openMFAModal(
+    methods,
+    function finish(arg0) {
+      return MFA.trySubmit(arg0, closure_0);
+    },
+    cancel,
+  );
 };

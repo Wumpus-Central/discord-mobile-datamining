@@ -12,7 +12,7 @@ let closure_7 = [];
 let closure_8 = [];
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr, isPrivate) => {
+  ? function useMissingActivities(arr, isPrivate) {
       const cResult = stateFromStoresArray(items3[5]).c(13);
       if (cResult[0] === isPrivate) {
         if (cResult[1] === arr) {
@@ -160,7 +160,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp = stateFromStoresArray;
       tmp2 = items3;
     }
-  : (arg0, arg1) => {
+  : function useMissingActivities(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       let items = [arg0, arg1];
@@ -284,7 +284,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useSubscribeMissingActivities.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useSubscribeMissingActivities(arg0, arg1) {
       const cResult = c.c(6);
       [tmp3, tmp4] = closure_9(arg0, arg1);
       const require = tmp4;
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items1;
       tmp8 = items1;
     }
-  : (arg0, arg1) => {
+  : function useSubscribeMissingActivities(arg0, arg1) {
       const tmp = _slicedToArray(closure_9(arg0, arg1), 2);
       closure_0 = tmp2;
       const items = [tmp[1]];

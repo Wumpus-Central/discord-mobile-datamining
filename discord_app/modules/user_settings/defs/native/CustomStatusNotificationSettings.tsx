@@ -38,7 +38,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t["/+OQEs"]);
   },
   parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
-  useValue: () => {
+  useValue() {
     const CustomStatusPushNotifications = UserSettings.CustomStatusPushNotifications;
     const setting = CustomStatusPushNotifications.useSetting();
     return setting !== preloaded_user_settings.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;

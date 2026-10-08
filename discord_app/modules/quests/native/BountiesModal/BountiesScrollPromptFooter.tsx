@@ -17,10 +17,10 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 require = fn;
 let closure_3 = ["visible"];
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(5630).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5977).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles(() => {
   const obj = {
     root: { position: "absolute", bottom: 0, left: 0, right: 0 },
@@ -41,7 +41,7 @@ let entering = function n(value) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings") };
   return obj;
 };
-entering.__closure = { withTiming: fn(4897).withTiming, timingStandard: fn(4900).timingStandard };
+entering.__closure = { withTiming: fn(5091).withTiming, timingStandard: fn(5094).timingStandard };
 entering.__workletHash = 11416950434629;
 entering.__initData = {
   code: "function BountiesScrollPromptFooterTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}",
@@ -50,15 +50,15 @@ let fn2 = function o(value, fn) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings", fn) };
   return obj;
 };
-let obj2 = { withTiming: fn(4897).withTiming, timingStandard: fn(4900).timingStandard };
-fn2.__closure = { withTiming: fn(4897).withTiming, timingStandard: fn(4900).timingStandard };
+let obj2 = { withTiming: fn(5091).withTiming, timingStandard: fn(5094).timingStandard };
+fn2.__closure = { withTiming: fn(5091).withTiming, timingStandard: fn(5094).timingStandard };
 fn2.__workletHash = 9928471408966;
 fn2.__initData = {
   code: "function BountiesScrollPromptFooterTsx2(visible,cleanUp){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};}",
 };
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BountiesScrollPromptFooterContent(arg0) {
       const cResult = c.c(30);
       ({ children, onContentLayout, zIndex, opacityStyle, visibilityOpacityStyle } = arg0);
       const tmp4 = closure_11();
@@ -149,7 +149,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj5 = { style: tmp15, pointerEvents: "none", children: null };
                       const items1 = [tmp20, tmp24];
                       obj5.children = items1;
-                      const tmp29 = v65535(ReanimatedRexportDefault.View, obj5);
+                      const tmp29 = collapsed(ReanimatedRexportDefault.View, obj5);
                       cResult[26] = tmp20;
                       cResult[27] = tmp24;
                       cResult[28] = tmp15;
@@ -195,7 +195,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = items4;
       const tmpResult = initialize;
     }
-  : (zIndex) => {
+  : function BountiesScrollPromptFooterContent(zIndex) {
       zIndex = zIndex.zIndex;
       const opacityStyle = zIndex.opacityStyle;
       ({ children, onContentLayout, visibilityOpacityStyle } = zIndex);
@@ -225,7 +225,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores) {
         str = "halt";
       }
-      obj3.children = closure_9(zIndex(4668).BountiesScrollGradientRive, {
+      obj3.children = closure_9(zIndex(4860).BountiesScrollGradientRive, {
         stateMachine: "State Machine 1",
         fit: "fill",
         alignment: "bottom-center",
@@ -240,12 +240,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       return closure_10(ReanimatedRexportDefault.View, obj2);
     };
 ReactCompilerGating = fn(558);
-let obj3 = { withTiming: fn(4897).withTiming, timingStandard: fn(4900).timingStandard };
+let obj3 = { withTiming: fn(5091).withTiming, timingStandard: fn(5094).timingStandard };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollPromptFooter.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (visible) => {
+  ? function BountiesScrollPromptFooter(visible) {
       const cResult = c.c(15);
       if (cResult[0] !== visible) {
         visible = visible.visible;
@@ -265,7 +265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         );
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
-        entering = function v() {
+        entering = function h() {
           return useReducedMotion.useReducedMotion;
         };
         cResult[3] = items;
@@ -346,7 +346,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult4 = useVisibilityTransition;
     }
-  : (visible) => {
+  : function BountiesScrollPromptFooter(visible) {
       visible = visible.visible;
       let merged = Object.assign(visible, Object.assign({ visible: 0 }));
       const isBountiesModalTransitionsRefactorEnabled =

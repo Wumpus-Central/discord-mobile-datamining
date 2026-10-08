@@ -3,16 +3,16 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import common_AlertDefault from "../../../components_native/common/Alert.tsx";
-import _modDef8788 from "../../../../_runtime/metro/08788__.js";
+import _modDef10911 from "../../../../_runtime/metro/10911__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 require = fn;
-const GameConsoleConstants = fn(8781);
+const GameConsoleConstants = fn(9127);
 ({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: closure_4 } = GameConsoleConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { externalLinkIcon: null };
 let size = { tintColor: nativeDefault.colors.WHITE, width: 20, height: 20, marginLeft: 8 };
 obj2.externalLinkIcon = size;
@@ -22,7 +22,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/XboxInstallAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function XboxInstallAlert(arg0) {
       const cResult = require("c").c(10);
       const tmp4 = closure_6();
       _require = tmp4;
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] !== tmp4.externalLinkIcon) {
         const fn = function _() {
-          return jsx(native.Icon, { source: _modDef8788, style: closure_0.externalLinkIcon });
+          return jsx(native.Icon, { source: _modDef10911, style: closure_0.externalLinkIcon });
         };
         cResult[4] = tmp4.externalLinkIcon;
         cResult[5] = fn;
@@ -58,8 +58,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function u() {
-          const obj = closure_0(1369);
-          const isAndroidResult = closure_0(1369).isAndroid();
+          const obj = closure_0(1381);
+          const isAndroidResult = closure_0(1381).isAndroid();
           const openURL = LinkingDefault.openURL;
           if (isAndroidResult) {
             openURL(closure_1_3);
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp18;
       tmp15 = tmp18;
     }
-  : (arg0) => {
+  : function XboxInstallAlert(arg0) {
       _require = closure_6();
       let obj = {};
       const merged = Object.assign(arg0);
@@ -108,11 +108,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj.cancelText = intl4.string(require("util").t.kYaBOg);
       obj.fillCancelText = true;
       obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
-        return jsx(native.Icon, { source: _modDef8788, style: closure_0.externalLinkIcon });
+        return jsx(native.Icon, { source: _modDef10911, style: closure_0.externalLinkIcon });
       };
       obj.onConfirm = function onConfirm() {
-        const obj = closure_0(1369);
-        const isAndroidResult = closure_0(1369).isAndroid();
+        const obj = closure_0(1381);
+        const isAndroidResult = closure_0(1381).isAndroid();
         const openURL = LinkingDefault.openURL;
         if (isAndroidResult) {
           openURL(closure_1_3);

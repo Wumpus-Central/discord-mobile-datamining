@@ -14,10 +14,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -41,14 +41,14 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetsBoardEditNotice.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserProfileWidgetsBoardEditNotice() {
       const cResult = require("c").c(4);
       const tmp4 = closure_7();
       _require = tmp4;
       const tmp6 = UserProfileSharedStylesDefault();
       importDefault = tmp6;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let items = [tmp(2036).DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
+        let items = [tmp(2048).DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
         cResult[0] = items;
         let first = items;
       } else {
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       tmp = _require;
     }
-  : () => {
+  : function UserProfileWidgetsBoardEditNotice() {
       _require = closure_7();
       importDefault = UserProfileSharedStylesDefault();
       let obj = { contentTypes: null, bypassAutoDismiss: true, children: null };

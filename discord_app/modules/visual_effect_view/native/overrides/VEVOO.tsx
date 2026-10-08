@@ -14,7 +14,7 @@ const ScrollView = fn(17).ScrollView;
 const DEV_WIDGET_SIZE = fn(585).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 const styles = createStyles.createStyles({
   zeroPadding: { paddingVertical: 0, paddingHorizontal: 0 },
   zeroPaddingVertical: { paddingVertical: 0 },
@@ -22,7 +22,7 @@ const styles = createStyles.createStyles({
   zeroHeight: { height: 0 },
   enabledSwitchStyle: { alignSelf: "flex-start" },
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj = { wrapper: null, scrollView: null, scrollViewContent: null, close: null };
 let size = {
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
@@ -52,7 +52,7 @@ const __initData2 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VisualEffectViewOverrideOverlay_(arg0) {
       const cResult = require("c").c(18);
       ({ onClose, x } = arg0);
       _require = x;
@@ -170,7 +170,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = items2;
       let obj2 = require("ReanimatedRexport");
     }
-  : (arg0) => {
+  : function VisualEffectViewOverrideOverlay_(arg0) {
       const x = arg0.x;
       _require = x;
       const y = arg0.y;
@@ -232,7 +232,7 @@ const result = size.fileFinishedImporting("modules/visual_effect_view/native/ove
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function VisualEffectViewOverrideOverlay(arg0) {
         const cResult = c.c(5);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [DevSettingsStore];
@@ -269,7 +269,7 @@ export default noop.memo(
         }
         tmpResult = initialize;
       }
-    : (arg0) => {
+    : function VisualEffectViewOverrideOverlay(arg0) {
         const items = [DevSettingsStore];
         let tmp = null;
         if (obj.useStateFromStores(items, () => DevSettingsStore.get("visual_effect_view_overrides"))) {

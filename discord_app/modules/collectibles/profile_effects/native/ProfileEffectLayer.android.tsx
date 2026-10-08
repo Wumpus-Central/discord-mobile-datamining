@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/collectibles/profile_effects/na
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (paused) => {
+    ? function ProfileEffectLayerAndroid(paused) {
         const cResult = c.c(17);
         ({ layerConfig, animate } = paused);
         paused = paused.paused;
@@ -84,7 +84,7 @@ export default noop.memo(
             const tmpResult = ProfileEffectUtils;
           }
         }
-        const fn = function u() {
+        const fn = function f() {
           if (animate) {
             if (!paused) {
               aPNGPlayerControls.play();
@@ -101,7 +101,7 @@ export default noop.memo(
         tmp7 = items1;
         tmp6 = fn;
       }
-    : (paused) => {
+    : function ProfileEffectLayerAndroid(paused) {
         ({ layerConfig, animate } = paused);
         paused = paused.paused;
         const width = paused.width;

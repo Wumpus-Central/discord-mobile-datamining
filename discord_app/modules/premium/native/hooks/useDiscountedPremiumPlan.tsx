@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumPlan.tsx");
 
 export const useDiscountedPremiumPlan = ReactCompilerGating.isReactCompilerEnabled()
-  ? (discount, arr) => {
+  ? function useDiscountedPremiumPlan(discount, arr) {
       const cResult = require("c").c(14);
       if (null == discount) {
         dependencyMap = null;
@@ -103,7 +103,7 @@ export const useDiscountedPremiumPlan = ReactCompilerGating.isReactCompilerEnabl
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useDiscountedPremiumPlan(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const items = [arg0, arg1];

@@ -5,7 +5,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef8816 from "../../../../../../../_runtime/metro/08816__.js";
+import _modDef9174 from "../../../../../../../_runtime/metro/09174__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ image: { width: 232, height: 108, marginBottom: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -22,14 +22,14 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onClose) => {
+  ? function CrunchyrollLinkDiscordSuccess(onClose) {
       const cResult = c.c(26);
       onClose = onClose.onClose;
       const tmp4 = closure_7();
       const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
       ({ container, content } = twoWayLinkStyles);
       if (cResult[0] !== tmp4.image) {
-        const obj3 = { source: _modDef8816, style: tmp4.image };
+        const obj3 = { source: _modDef9174, style: tmp4.image };
         const tmp10 = hasOwnProperty(React3, obj3);
         cResult[0] = tmp4.image;
         cResult[1] = tmp10;
@@ -159,12 +159,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = tmp22;
       tmp21 = tmp22;
     }
-  : (onClose) => {
+  : function CrunchyrollLinkDiscordSuccess(onClose) {
       const tmp = closure_7();
       const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
       const obj2 = { style: twoWayLinkStyles.container, children: null };
       const obj3 = { style: twoWayLinkStyles.content, children: null };
-      const items = [hasOwnProperty(React3, { source: _modDef8816, style: tmp.image }), ,];
+      const items = [hasOwnProperty(React3, { source: _modDef9174, style: tmp.image }), ,];
       const obj5 = {
         variant: "heading-xl/extrabold",
         color: "mobile-text-heading-primary",

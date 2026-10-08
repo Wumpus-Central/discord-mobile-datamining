@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/images/OnboardingAppsRocket.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07550_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/images/OnboardingAppsRocket.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SvgComponent(arg0) {
       const cResult = c.c(25);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp25 = React3(inlineStyles.Path, {
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp57;
     }
-  : (arg0) => {
+  : function SvgComponent(arg0) {
       const obj = { fill: "none" };
       const merged = Object.assign(arg0);
       const items = [

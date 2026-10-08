@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useIsAllowGameFriendDMsSettingVisible = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsAllowGameFriendDMsSettingVisible() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GameRelationshipStore];
@@ -27,7 +27,7 @@ export const useIsAllowGameFriendDMsSettingVisible = ReactCompilerGating.isReact
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsAllowGameFriendDMsSettingVisible() {
       const items = [GameRelationshipStore];
       return initialize.useStateFromStores(items, () => gameRelationshipCount.getGameRelationshipCount() > 0);
     };

@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipEnabler.android.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (disabled) => {
+  ? function useExternalPIPEnabler(disabled) {
       const cResult = disabled(576).c(4);
       disabled = disabled.disabled;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = disabled(576);
       return disabled(504).useStateFromStoresObject(first, tmp8, tmp9);
     }
-  : (disabled) => {
+  : function useExternalPIPEnabler(disabled) {
       disabled = disabled.disabled;
       const items = [ChannelRTCStore, RTCConnectionStore, AuthenticationStore];
       const items1 = [disabled];

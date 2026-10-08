@@ -38,7 +38,7 @@ function getName(guildId, arg1, id) {
 }
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useName(arg0, arg1, arg2) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = arg2;
@@ -69,7 +69,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1, arg2) => {
+  : function useName(arg0, arg1, arg2) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = arg2;

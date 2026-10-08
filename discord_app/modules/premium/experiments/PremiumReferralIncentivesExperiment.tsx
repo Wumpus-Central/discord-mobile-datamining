@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/premium/experiments/PremiumRe
 export default apexExperiment;
 export const ReferralRewardType = obj;
 export const usePremiumReferralIncentivesVariant = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function usePremiumReferralIncentivesVariant(location) {
       const cResult = c.c(6);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -53,7 +53,7 @@ export const usePremiumReferralIncentivesVariant = ReactCompilerGating.isReactCo
       cResult[5] = obj3;
       tmp5 = obj3;
     }
-  : (location) => {
+  : function usePremiumReferralIncentivesVariant(location) {
       const config = apexExperiment.useConfig({ location });
       return {
         referralRewardType: config.referralRewardType,

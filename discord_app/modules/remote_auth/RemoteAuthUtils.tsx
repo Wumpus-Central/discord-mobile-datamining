@@ -43,16 +43,3 @@ export const decodeEncodedUserRecord = function decodeEncodedUserRecord() {
   }
   return applyArgumentsResult;
 };
-export const base64Encode = function base64Encode(arg0) {
-  const uint8Array = new Uint8Array(arg0);
-  const items = [...uint8Array];
-  const str = btoa(String.fromCharCode.apply(items));
-  const str2 = btoa(String.fromCharCode.apply(items)).replace(/\//g, "_");
-  return btoa(String.fromCharCode.apply(items))
-    .replace(/\//g, "_")
-    .replace(/\+/g, "-")
-    .replace(/={1,2}$/, "");
-};
-export const base64Decode = function base64Decode(placeholder) {
-  return Uint8Array.from(atob(placeholder), (str) => str.charCodeAt(0));
-};

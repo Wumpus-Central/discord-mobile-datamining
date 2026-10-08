@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useVideoSpinnerTimer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useVideoSpinnerTimer(location) {
       const cResult = _location(videoSpinnerContext[3]).c(10);
       _location = location.location;
       videoSpinnerContext = location.videoSpinnerContext;
@@ -45,15 +45,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn2 = function _() {
-        if (!closure_5) {
-          if (loading) {
-            first.onSpinnerStarted();
-          } else if (null != streamId) {
-            first.trackSpinnerDuration(videoSpinnerContext, userId, tmp2);
+      class T {
+        constructor() {
+          if (!paused) {
+            tmp = loading;
+            if (loading) {
+              tmp8 = closure_6;
+              onSpinnerStartedResult = closure_6.onSpinnerStarted();
+            } else {
+              tmp3 = null;
+              if (null != streamId) {
+                tmp4 = closure_6;
+                tmp5 = videoSpinnerContext;
+                tmp6 = userId;
+                trackSpinnerDurationResult = closure_6.trackSpinnerDuration(videoSpinnerContext, userId, tmp2);
+              }
+            }
           }
+          return;
         }
-      };
+      }
       const items = [loading, undefined !== paused && paused, streamId, first, videoSpinnerContext, userId];
       cResult[2] = loading;
       cResult[3] = undefined !== paused && paused;
@@ -61,12 +72,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = userId;
       cResult[6] = videoSpinnerContext;
       cResult[7] = first;
-      cResult[8] = fn2;
+      cResult[8] = T;
       cResult[9] = items;
       tmp6 = items;
-      tmp5 = fn2;
+      tmp5 = T;
     }
-  : (userId) => {
+  : function useVideoSpinnerTimer(userId) {
       ({ location: require, videoSpinnerContext } = userId);
       userId = userId.userId;
       const streamId = userId.streamId;

@@ -3,6 +3,8 @@ import c from "../../../../../../../_runtime/00576_c.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -11,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useBenchmarkResults() {
       const cResult = c.c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [];
@@ -36,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function v(arg0) {
+        const fn2 = function k(arg0) {
           closure_0 = arg0;
           closure_0((arg0) => {
             ref.current = ref.current + 1;
@@ -51,41 +53,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            return closure_0([]);
-          }
-        }
-        cResult[3] = S;
+        const fn3 = function h() {
+          return require([]);
+        };
+        cResult[3] = fn3;
+        let tmp7 = fn3;
       } else {
-        class S {
-          constructor() {
-            return closure_0([]);
-          }
-        }
+        tmp7 = cResult[3];
       }
       if (cResult[4] !== tmp4) {
-        class S {
-          constructor() {
-            return closure_0([]);
-          }
-        }
-        tmp9[0] = tmp4;
-        tmp9[1] = tmp5;
-        tmp9[2] = tmp6;
-        tmp9[3] = S;
+        const obj2 = { results: tmp4, addMount: tmp5, addScroll: tmp6, clear: tmp7 };
         cResult[4] = tmp4;
-        cResult[5] = tmp9;
+        cResult[5] = obj2;
+        let tmp8 = obj2;
       } else {
-        class S {
-          constructor() {
-            return closure_0([]);
-          }
-        }
+        tmp8 = cResult[5];
       }
-      return tmp9;
+      return tmp8;
     }
-  : () => {
+  : function useBenchmarkResults() {
       const tmp = _slicedToArray(noop.useState([]), 2);
       closure_0 = tmp[1];
       closure_1 = noop.useRef(0);

@@ -1,6 +1,6 @@
 // discord_app/modules/guilds_bar/moveGuildNode.tsx
-import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import UserSettingsActionCreators from "../../actions/UserSettingsActionCreators.tsx";
+import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import SortedGuildStore from "../../stores/SortedGuildStore.tsx";
 
 require = fn;

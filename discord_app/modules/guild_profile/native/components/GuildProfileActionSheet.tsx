@@ -8,12 +8,12 @@ import GuildProfileStore from "../../GuildProfileStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const GuildProfileFetchStatus = fn(9262).GuildProfileFetchStatus;
-const INVALID_ACCESS_ERROR_CODE = fn(9411).INVALID_ACCESS_ERROR_CODE;
+const GuildProfileFetchStatus = fn(8592).GuildProfileFetchStatus;
+const INVALID_ACCESS_ERROR_CODE = fn(8832).INVALID_ACCESS_ERROR_CODE;
 const VerticalGradient = fn(1085).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   loadingContainer: { paddingTop: 40 },
   footerContainer: { paddingHorizontal: 16, paddingVertical: 40 },
@@ -26,7 +26,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildProfileActionSheet(guildId) {
       const cResult = guildId(analyticsLocations[9]).c(53);
       guildId = guildId.guildId;
       ({ context, inviteKey } = guildId);
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_6.getErrorCode(guildId);
           }
         }
-        const effect = noop.useEffect(G, items2);
+        const effect = noop.useEffect(V, items2);
         if (cResult[7] !== fetchGuildProfile) {
           class E {
             constructor() {
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      class G {
+      class V {
         constructor() {
           obj = closure_0(closure_2[17]);
           result = obj.trackGuildProfileViewed(guildId, analyticsLocations);
@@ -174,11 +174,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items2 = [guildId, analyticsLocations];
       cResult[3] = analyticsLocations;
       cResult[4] = guildId;
-      cResult[5] = G;
+      cResult[5] = V;
       cResult[6] = items2;
       const tmpResult6 = guildId(analyticsLocations[13]);
     }
-  : (guildId) => {
+  : function GuildProfileActionSheet(guildId) {
       guildId = guildId.guildId;
       fetchGuildProfile = undefined;
       let analyticsLocations;

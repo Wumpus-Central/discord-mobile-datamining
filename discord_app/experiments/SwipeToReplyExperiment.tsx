@@ -8,7 +8,7 @@ const LaunchPadTypes = LaunchPadConstants.LaunchPadTypes;
 const result = size.fileFinishedImporting("experiments/SwipeToReplyExperiment.tsx");
 
 export const useIsMessageSwipeActionsEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsMessageSwipeActionsEnabled() {
       const tmp = useLaunchPadTypeDefault() === LaunchPadTypes.GESTURE_FULL;
       let tmp2 = !tmp;
       if (!tmp) {
@@ -16,7 +16,7 @@ export const useIsMessageSwipeActionsEnabled = ReactCompilerGating.isReactCompil
       }
       return tmp2;
     }
-  : () => {
+  : function useIsMessageSwipeActionsEnabled() {
       const tmp = useLaunchPadTypeDefault() === LaunchPadTypes.GESTURE_FULL;
       let tmp2 = !tmp;
       if (!tmp) {

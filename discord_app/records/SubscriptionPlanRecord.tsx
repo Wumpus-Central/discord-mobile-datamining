@@ -1,7 +1,7 @@
 // discord_app/records/SubscriptionPlanRecord.tsx
 import Record from "../lib/Record.tsx";
 
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ PremiumSubscriptionSKUs: closure_0, PremiumTypes: closure_1, SubscriptionPlans: c2 } = PremiumConstants);
 let SubscriptionPlanRecord;
 class SubscriptionPlanRecord extends tmp2 {

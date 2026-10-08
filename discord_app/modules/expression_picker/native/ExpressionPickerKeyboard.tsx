@@ -7,7 +7,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const KEYBOARD_ANIMATION_CONFIG = fn(11664).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(11729).KEYBOARD_ANIMATION_CONFIG;
 const jsx = fn(21).jsx;
 let __initData = {
   code: "function ExpressionPickerKeyboardTsx1(){const{bottomSheetIndex}=this.__closure;return Math.max(bottomSheetIndex.get(),0)>0;}",
@@ -27,7 +27,7 @@ let result = size.fileFinishedImporting("modules/expression_picker/native/Expres
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (onClose) => {
+    ? function ExpressionPickerKeyboard(onClose) {
         const cResult = chatInputRef(transitionState[5]).c(37);
         ({ channel, chatInputRef } = onClose);
         onClose = onClose.onClose;
@@ -200,12 +200,11 @@ export default noop.memo(
         cResult[10] = V;
         const tmpResult4 = chatInputRef(transitionState[6]);
       }
-    : (channel) => {
+    : function ExpressionPickerKeyboard(channel) {
         const chatInputRef = channel.chatInputRef;
         const onClose = channel.onClose;
         const transitionState = channel.transitionState;
         let ref;
-        let derivedValue;
         const sharedValue = chatInputRef(transitionState[6]).useSharedValue(-1);
         let obj = chatInputRef(transitionState[6]);
         const sharedValue1 = chatInputRef(transitionState[6]).useSharedValue(0);
@@ -257,24 +256,25 @@ export default noop.memo(
         const minimum = tmp12.minimum;
         const maximum = tmp12.maximum;
         const obj4 = chatInputRef(transitionState[11]);
+        const fn = function b() {
+          return Math.max(sharedValue.get(), 0) > 0;
+        };
+        fn.__closure = { bottomSheetIndex: sharedValue };
+        fn.__workletHash = 17590128332378;
+        fn.__initData = maximum;
+        const derivedValue = chatInputRef(transitionState[6]).useDerivedValue(fn);
+        const obj5 = chatInputRef(transitionState[6]);
         class S {
           constructor() {
-            return Math.max(closure_3.get(), 0) > 0;
+            obj = { height: closure_10.get() ? maximum : minimum };
+            return obj;
           }
         }
-        S.__closure = { bottomSheetIndex: sharedValue };
-        S.__workletHash = 17590128332378;
-        S.__initData = maximum;
-        derivedValue = chatInputRef(transitionState[6]).useDerivedValue(S);
-        const obj5 = chatInputRef(transitionState[6]);
-        const fn = function b() {
-          return { height: derivedValue.get() ? maximum : minimum };
-        };
-        fn.__closure = { bottomSheetExpandingOrExpanded: derivedValue, maximum, minimum };
-        fn.__workletHash = 7280607865186;
-        fn.__initData = derivedValue;
+        S.__closure = { bottomSheetExpandingOrExpanded: derivedValue, maximum, minimum };
+        S.__workletHash = 7280607865186;
+        S.__initData = derivedValue;
         const items4 = [isScreenReaderEnabled, chatInputRef];
-        const animatedStyle = chatInputRef(transitionState[6]).useAnimatedStyle(fn);
+        const animatedStyle = chatInputRef(transitionState[6]).useAnimatedStyle(S);
         const items5 = [first, onClose, transitionState];
         const callback4 = ref.useCallback(() => {
           closure_7(true);

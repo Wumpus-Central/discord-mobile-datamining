@@ -11,11 +11,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/MarketingComponentHooks.tsx");
 
 export const useThemeAndReducedMotionAwareAssetUrl = ReactCompilerGating.isReactCompilerEnabled()
-  ? (lightStaticUrl, arg1) => {
+  ? function useThemeAndReducedMotionAwareAssetUrl(lightStaticUrl, arg1) {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
-        const fn = function u() {
+        const fn = function s() {
           return useReducedMotion.useReducedMotion;
         };
         cResult[0] = items;
@@ -34,7 +34,7 @@ export const useThemeAndReducedMotionAwareAssetUrl = ReactCompilerGating.isReact
       }
       const tmpResult = initialize;
     }
-  : (lightStaticUrl, arg1) => {
+  : function useThemeAndReducedMotionAwareAssetUrl(lightStaticUrl, arg1) {
       const tmp2 = useThemeDefault();
       const items = [AccessibilityStore];
       const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);

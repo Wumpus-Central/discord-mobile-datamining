@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/u
 export const RECAP_SNAP_EPSILON = 2;
 export { getRevealProgress };
 export const useBountiesRecapScroll = ReactCompilerGating.isReactCompilerEnabled()
-  ? (listRef) => {
+  ? function useBountiesRecapScroll(listRef) {
       const cResult = listRef(enabled[2]).c(17);
       listRef = listRef.listRef;
       enabled = listRef.enabled;
@@ -137,7 +137,7 @@ export const useBountiesRecapScroll = ReactCompilerGating.isReactCompilerEnabled
         cResult[10] = B;
         tmp4 = B;
       }
-      const fn2 = function c() {
+      const fn2 = function f() {
         closure_3(offsets.lastBounty);
       };
       cResult[2] = offsets.lastBounty;
@@ -145,7 +145,7 @@ export const useBountiesRecapScroll = ReactCompilerGating.isReactCompilerEnabled
       cResult[4] = fn2;
       let obj = listRef(enabled[2]);
     }
-  : (listRef) => {
+  : function useBountiesRecapScroll(listRef) {
       listRef = listRef.listRef;
       const enabled = listRef.enabled;
       const offsets = listRef.offsets;

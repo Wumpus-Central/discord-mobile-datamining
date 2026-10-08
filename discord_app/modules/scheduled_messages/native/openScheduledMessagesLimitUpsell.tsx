@@ -6,9 +6,5 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/scheduled_messages/native/openScheduledMessagesLimitUpsell.tsx");
 
 export default function openScheduledMessagesLimitUpsell(items) {
-  openPremiumUpsellActionSheetDefault(
-    EntitlementFeatureNames.EntitlementFeatureNames.SCHEDULED_MESSAGES,
-    undefined,
-    items,
-  );
+  openPremiumUpsellActionSheetDefault(EntitlementFeatureNames.EntitlementFeatureNames.SCHEDULED_MESSAGES, items);
 }

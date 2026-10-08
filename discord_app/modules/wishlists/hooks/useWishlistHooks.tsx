@@ -24,11 +24,11 @@ function getUserWishlistKey(userId, arg1) {
   return combined;
 }
 let useEffect = fn(19).useEffect;
-const getWishlistSkuIds = fn(8465).getWishlistSkuIds;
+const getWishlistSkuIds = fn(8951).getWishlistSkuIds;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (wishlistId) => {
+  ? function useFetchWishlist(wishlistId) {
       const cResult = wishlistId(USER_PROFILE[8]).c(25);
       wishlistId = wishlistId.wishlistId;
       const userId = wishlistId.userId;
@@ -237,7 +237,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = wishlistId(USER_PROFILE[10]);
     }
-  : (wishlistId) => {
+  : function useFetchWishlist(wishlistId) {
       wishlistId = wishlistId.wishlistId;
       ({ userId: importDefault, source } = wishlistId);
       if (source === undefined) {
@@ -328,8 +328,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_12 = tmp3;
 ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (wishlistIdsAndUsers) => {
-      const cResult = wishlistIdsAndUsers(obj2[8]).c(27);
+  ? function useFetchWishlists(wishlistIdsAndUsers) {
+      const cResult = wishlistIdsAndUsers(obj3[8]).c(27);
       wishlistIdsAndUsers = wishlistIdsAndUsers.wishlistIdsAndUsers;
       let USER_PROFILE = wishlistIdsAndUsers.source;
       if (undefined === USER_PROFILE) {
@@ -363,8 +363,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      let obj = wishlistIdsAndUsers(obj2[8]);
-      const stateFromStoresArray = wishlistIdsAndUsers(obj2[10]).useStateFromStoresArray(first, tmp6, tmp7);
+      let obj = wishlistIdsAndUsers(obj3[8]);
+      const stateFromStoresArray = wishlistIdsAndUsers(obj3[10]).useStateFromStoresArray(first, tmp6, tmp7);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [WishlistStore];
         cResult[4] = items2;
@@ -373,213 +373,160 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[4];
       }
       if (cResult[5] !== wishlistIdsAndUsers) {
-        class F {
-          constructor() {
-            return wishlistIdsAndUsers.some((wishlistId) => {
-              wishlistId = wishlistId.wishlistId;
-              let isFetchingResult = null != wishlistId;
-              if (isFetchingResult) {
-                isFetchingResult = fetching.isFetching(wishlistId);
-              }
-              return isFetchingResult;
-            });
-          }
-        }
+        const fn2 = function v() {
+          return wishlistIdsAndUsers.some((wishlistId) => {
+            wishlistId = wishlistId.wishlistId;
+            let isFetchingResult = null != wishlistId;
+            if (isFetchingResult) {
+              isFetchingResult = fetching.isFetching(wishlistId);
+            }
+            return isFetchingResult;
+          });
+        };
         const items3 = [wishlistIdsAndUsers];
         cResult[5] = wishlistIdsAndUsers;
-        cResult[6] = F;
+        cResult[6] = fn2;
         cResult[7] = items3;
         let tmp12 = items3;
+        let tmp11 = fn2;
       } else {
-        class F {
-          constructor() {
-            return wishlistIdsAndUsers.some((wishlistId) => {
-              wishlistId = wishlistId.wishlistId;
-              let isFetchingResult = null != wishlistId;
-              if (isFetchingResult) {
-                isFetchingResult = fetching.isFetching(wishlistId);
-              }
-              return isFetchingResult;
-            });
-          }
-        }
+        tmp11 = cResult[6];
         tmp12 = cResult[7];
       }
-      const tmpResult = wishlistIdsAndUsers(obj2[10]);
-      const stateFromStores = wishlistIdsAndUsers(obj2[10]).useStateFromStores(tmp9, F, tmp12);
+      const tmpResult = wishlistIdsAndUsers(obj3[10]);
+      const stateFromStores = wishlistIdsAndUsers(obj3[10]).useStateFromStores(tmp9, tmp11, tmp12);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        class F {
-          constructor() {
-            return wishlistIdsAndUsers.some((wishlistId) => {
-              wishlistId = wishlistId.wishlistId;
-              let isFetchingResult = null != wishlistId;
-              if (isFetchingResult) {
-                isFetchingResult = fetching.isFetching(wishlistId);
-              }
-              return isFetchingResult;
-            });
-          }
-        }
         const items4 = [WishlistStore];
         cResult[8] = items4;
         let tmp14 = items4;
       } else {
-        class F {
-          constructor() {
-            return wishlistIdsAndUsers.some((wishlistId) => {
-              wishlistId = wishlistId.wishlistId;
-              let isFetchingResult = null != wishlistId;
-              if (isFetchingResult) {
-                isFetchingResult = fetching.isFetching(wishlistId);
-              }
-              return isFetchingResult;
-            });
-          }
-        }
+        tmp14 = cResult[8];
       }
       if (cResult[9] !== wishlistIdsAndUsers) {
-        class F {
-          constructor() {
-            return wishlistIdsAndUsers.some((wishlistId) => {
-              wishlistId = wishlistId.wishlistId;
-              let isFetchingResult = null != wishlistId;
-              if (isFetchingResult) {
-                isFetchingResult = fetching.isFetching(wishlistId);
-              }
-              return isFetchingResult;
-            });
-          }
-        }
+        const fn3 = function y() {
+          return wishlistIdsAndUsers.map((wishlistId) => {
+            wishlistId = wishlistId.wishlistId;
+            error = undefined;
+            if (null != wishlistId) {
+              error = error.getError(wishlistId);
+            }
+            return error;
+          });
+        };
         const items5 = [wishlistIdsAndUsers];
         cResult[9] = wishlistIdsAndUsers;
         cResult[10] = items5;
-        cResult[11] = tmp17;
-        let tmp16 = tmp17;
-        let tmp15 = items5;
+        cResult[11] = fn3;
+        let tmp17 = fn3;
+        let tmp16 = items5;
       } else {
-        class F {
-          constructor() {
-            return wishlistIdsAndUsers.some((wishlistId) => {
-              wishlistId = wishlistId.wishlistId;
-              let isFetchingResult = null != wishlistId;
-              if (isFetchingResult) {
-                isFetchingResult = fetching.isFetching(wishlistId);
-              }
-              return isFetchingResult;
-            });
-          }
-        }
-        tmp16 = cResult[11];
+        tmp16 = cResult[10];
+        tmp17 = cResult[11];
       }
-      const tmpResult4 = wishlistIdsAndUsers(obj2[10]);
-      const stateFromStoresArray1 = wishlistIdsAndUsers(obj2[10]).useStateFromStoresArray(tmp14, tmp16, tmp15);
+      const tmpResult4 = wishlistIdsAndUsers(obj3[10]);
+      const stateFromStoresArray1 = wishlistIdsAndUsers(obj3[10]).useStateFromStoresArray(tmp14, tmp17, tmp16);
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-        class F {
-          constructor() {
-            return wishlistIdsAndUsers.some((wishlistId) => {
-              wishlistId = wishlistId.wishlistId;
-              let isFetchingResult = null != wishlistId;
-              if (isFetchingResult) {
-                isFetchingResult = fetching.isFetching(wishlistId);
-              }
-              return isFetchingResult;
-            });
-          }
-        }
         const items6 = [UserProfileStore];
         cResult[12] = items6;
         let tmp19 = items6;
       } else {
-        class F {
-          constructor() {
-            return wishlistIdsAndUsers.some((wishlistId) => {
-              wishlistId = wishlistId.wishlistId;
-              let isFetchingResult = null != wishlistId;
-              if (isFetchingResult) {
-                isFetchingResult = fetching.isFetching(wishlistId);
-              }
-              return isFetchingResult;
-            });
-          }
-        }
+        tmp19 = cResult[12];
       }
       if (cResult[13] !== wishlistIdsAndUsers) {
-        class U {
-          constructor() {
-            return wishlistIdsAndUsers.map((wishlistId) => {
-              wishlistId = wishlistId.wishlistId;
-              let tmp2;
-              if (null != wishlistId) {
-                wishlistSettings = wishlistSettings.getWishlistSettings(tmp, wishlistId);
-                let updated_at;
-                if (wishlistSettings != null) {
-                  updated_at = wishlistSettings.updated_at;
-                }
-                tmp2 = updated_at;
+        const fn4 = function b() {
+          return wishlistIdsAndUsers.map((wishlistId) => {
+            wishlistId = wishlistId.wishlistId;
+            let tmp2;
+            if (null != wishlistId) {
+              wishlistSettings = wishlistSettings.getWishlistSettings(tmp, wishlistId);
+              let updated_at;
+              if (wishlistSettings != null) {
+                updated_at = wishlistSettings.updated_at;
               }
-              return tmp2;
-            });
-          }
-        }
-        cResult[13] = wishlistIdsAndUsers;
-        cResult[14] = U;
-      } else {
-        class U {
-          constructor() {
-            return wishlistIdsAndUsers.map((wishlistId) => {
-              wishlistId = wishlistId.wishlistId;
-              let tmp2;
-              if (null != wishlistId) {
-                wishlistSettings = wishlistSettings.getWishlistSettings(tmp, wishlistId);
-                let updated_at;
-                if (wishlistSettings != null) {
-                  updated_at = wishlistSettings.updated_at;
-                }
-                tmp2 = updated_at;
-              }
-              return tmp2;
-            });
-          }
-        }
-      }
-      const tmpResult5 = wishlistIdsAndUsers(obj2[10]);
-      const stateFromStoresArray2 = wishlistIdsAndUsers(obj2[10]).useStateFromStoresArray(tmp19, U);
-      if (cResult[15] === wishlistIdsAndUsers) {
-        class U {
-          constructor() {
-            return wishlistIdsAndUsers.map((wishlistId) => {
-              wishlistId = wishlistId.wishlistId;
-              let tmp2;
-              if (null != wishlistId) {
-                wishlistSettings = wishlistSettings.getWishlistSettings(tmp, wishlistId);
-                let updated_at;
-                if (wishlistSettings != null) {
-                  updated_at = wishlistSettings.updated_at;
-                }
-                tmp2 = updated_at;
-              }
-              return tmp2;
-            });
-          }
-        }
-        noop = tmp22;
-        if (cResult[18] === USER_PROFILE) {
-          class U {
-            constructor() {
-              return wishlistIdsAndUsers.map((wishlistId) => {
-                wishlistId = wishlistId.wishlistId;
-                let tmp2;
-                if (null != wishlistId) {
-                  wishlistSettings = wishlistSettings.getWishlistSettings(tmp, wishlistId);
-                  let updated_at;
-                  if (wishlistSettings != null) {
-                    updated_at = wishlistSettings.updated_at;
-                  }
-                  tmp2 = updated_at;
-                }
-                return tmp2;
-              });
+              tmp2 = updated_at;
             }
+            return tmp2;
+          });
+        };
+        cResult[13] = wishlistIdsAndUsers;
+        cResult[14] = fn4;
+        let tmp21 = fn4;
+      } else {
+        tmp21 = cResult[14];
+      }
+      const tmpResult5 = wishlistIdsAndUsers(obj3[10]);
+      const stateFromStoresArray2 = wishlistIdsAndUsers(obj3[10]).useStateFromStoresArray(tmp19, tmp21);
+      if (cResult[15] === wishlistIdsAndUsers) {
+        if (cResult[16] === stateFromStoresArray2) {
+          obj3 = cResult[17];
+        }
+        noop = tmp23;
+        if (cResult[18] === USER_PROFILE) {
+          if (cResult[19] === wishlistIdsAndUsers) {
+            if (cResult[20] === tmp23) {
+              let tmp25 = cResult[21];
+              let tmp26 = cResult[22];
+            }
+            useEffect(tmp25, tmp26);
+            class L {
+              constructor() {
+                tmp = wishlistIdsAndUsers;
+                iter = wishlistIdsAndUsers[Symbol.iterator]();
+                nextResult = iter.next();
+                while (iter !== undefined) {
+                  wishlistId = nextResult.wishlistId;
+                  tmp3 = wishlistId;
+                  userId = nextResult.userId;
+                  if (null != wishlistId) {
+                    obj2 = closure_9;
+                    tmp23 = wishlistId;
+                    if (!closure_9.isFetching(tmp3)) {
+                      tmp4 = wishlistId;
+                      if (null == obj2.getError(tmp3)) {
+                        tmp5 = wishlistId;
+                        wishlist = obj2.getWishlist(tmp3);
+                        updatedAt = obj2.getUpdatedAt(tmp3);
+                        tmp8 = closure_4;
+                        tmp9 = getUserWishlistKey;
+                        tmp10 = userId;
+                        tmp11 = closure_4[getUserWishlistKey(0, userId, tmp3)];
+                        tmp12 = null == wishlist;
+                        if (!tmp12) {
+                          tmp13 = tmp11;
+                          tmp14 = null != tmp11;
+                          if (tmp14) {
+                            tmp15 = updatedAt;
+                            tmp16 = tmp11;
+                            tmp14 = updatedAt !== tmp11;
+                          }
+                          tmp12 = tmp14;
+                        }
+                        if (tmp12) {
+                          tmp17 = closure_1;
+                          tmp18 = closure_2;
+                          obj = closure_1(closure_2[11]);
+                          tmp19 = wishlistId;
+                          tmp20 = tmp11;
+                          tmp21 = USER_PROFILE;
+                          wishlist1 = obj.fetchWishlist(tmp3, tmp11, USER_PROFILE);
+                        }
+                      }
+                    }
+                  }
+                  continue;
+                }
+                return;
+              }
+            }
+            const obj2 = {
+              wishlists: stateFromStoresArray,
+              isFetching: stateFromStores,
+              errors: stateFromStoresArray1,
+            };
+            cResult[23] = stateFromStoresArray1;
+            cResult[24] = stateFromStores;
+            cResult[25] = stateFromStoresArray;
+            cResult[26] = obj2;
           }
         }
         class L {
@@ -632,14 +579,16 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const items7 = [wishlistIdsAndUsers, USER_PROFILE, tmp22];
+        const items7 = [wishlistIdsAndUsers, USER_PROFILE, tmp23];
         cResult[18] = USER_PROFILE;
         cResult[19] = wishlistIdsAndUsers;
-        cResult[20] = tmp22;
+        cResult[20] = tmp23;
         cResult[21] = L;
         cResult[22] = items7;
+        tmp26 = items7;
+        tmp25 = L;
       }
-      obj2 = {};
+      obj3 = {};
       const item = wishlistIdsAndUsers.forEach((item, index) => {
         ({ userId, wishlistId } = item);
         let tmp = stateFromStoresArray2;
@@ -652,15 +601,15 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             combined = "" + userId + ":default";
           }
           tmp = tmp[index];
-          obj2[combined] = tmp;
+          obj3[combined] = tmp;
         }
       });
       cResult[15] = wishlistIdsAndUsers;
       cResult[16] = stateFromStoresArray2;
-      cResult[17] = obj2;
-      const tmpResult6 = wishlistIdsAndUsers(obj2[10]);
+      cResult[17] = obj3;
+      const tmpResult6 = wishlistIdsAndUsers(obj3[10]);
     }
-  : (wishlistIdsAndUsers) => {
+  : function useFetchWishlists(wishlistIdsAndUsers) {
       wishlistIdsAndUsers = wishlistIdsAndUsers.wishlistIdsAndUsers;
       let USER_PROFILE = wishlistIdsAndUsers.source;
       if (USER_PROFILE === undefined) {
@@ -787,7 +736,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useIsSkuInWishlist(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(4);
@@ -818,7 +767,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useIsSkuInWishlist(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const items = [WishlistStore];
@@ -832,7 +781,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isSocialLayerStorefrontEnabled) => {
+  ? function useShouldShowWishlistInDMGifting(isSocialLayerStorefrontEnabled) {
       const cResult = giftRecipient(576).c(12);
       ({ isGift, giftRecipient } = isSocialLayerStorefrontEnabled);
       isSocialLayerStorefrontEnabled = isSocialLayerStorefrontEnabled.isSocialLayerStorefrontEnabled;
@@ -925,7 +874,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp17 = cResult[11];
         }
         const wishlist = closure_12(tmp17).wishlist;
-        giftRecipient(8483);
+        giftRecipient(8969);
         let flag2 = false;
         if (true === isGift) {
           flag2 = false;
@@ -949,7 +898,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp17 = obj3;
       const tmpResult = giftRecipient(504);
     }
-  : (isGift) => {
+  : function useShouldShowWishlistInDMGifting(isGift) {
       isGift = isGift.isGift;
       const giftRecipient = isGift.giftRecipient;
       let flag = isGift.isSocialLayerStorefrontEnabled;
@@ -1031,7 +980,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFetchWishlistAndProfileInfoForUser(arg0) {
       _require = arg0;
       const cResult = require("c").c(19);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1128,41 +1077,30 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      class F {
-        constructor() {
-          tmp = null != closure_0;
-          if (tmp) {
-            tmp2 = userProfile;
-            tmp = null == userProfile;
-          }
-          if (tmp) {
-            tmp3 = closure_1;
-            tmp = null != closure_1;
-          }
-          if (tmp) {
-            tmp4 = userProfile;
-            tmp = null == userProfile;
-          }
-          if (tmp) {
-            tmp5 = closure_1;
-            tmp6 = closure_2;
-            tmp8 = closure_1;
-            num = 80;
-            tmp7 = closure_1(closure_2[14]);
-            tmp7Result = tmp7(closure_1.id, closure_1.getAvatarURL(null, 80));
-          }
-          return;
+      const fn2 = function v() {
+        let tmp = null != closure_0;
+        if (tmp) {
+          tmp = null == userProfile;
         }
-      }
+        if (tmp) {
+          tmp = null != stateFromStores;
+        }
+        if (tmp) {
+          tmp = null == userProfile;
+        }
+        if (tmp) {
+          maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(null, 80));
+        }
+      };
       const items3 = [stateFromStores, arg0, userProfile];
       cResult[7] = stateFromStores;
       cResult[8] = arg0;
       cResult[9] = userProfile;
-      cResult[10] = F;
+      cResult[10] = fn2;
       cResult[11] = items3;
       const tmpResult2 = require("initialize");
     }
-  : (userId) => {
+  : function useFetchWishlistAndProfileInfoForUser(userId) {
       _require = userId;
       const items = [UserStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(closure_0));
@@ -1223,11 +1161,11 @@ export const useFetchWishlist = tmp3;
 export const useIsSkuInWishlist = tmp4;
 export const useShouldShowWishlistInDMGifting = tmp5;
 export const useCurrentUserWishlist = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCurrentUserWishlist() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AuthenticationStore];
-        const fn = function s() {
+        const fn = function t() {
           return id.getId();
         };
         cResult[0] = items;
@@ -1239,7 +1177,7 @@ export const useCurrentUserWishlist = ReactCompilerGating.isReactCompilerEnabled
       }
       return closure_13(initialize.useStateFromStores(tmp4, tmp5));
     }
-  : () => {
+  : function useCurrentUserWishlist() {
       const items = [AuthenticationStore];
       return closure_13(initialize.useStateFromStores(items, () => id.getId()));
     };

@@ -13,7 +13,7 @@ let closure_3 = ["steps", "onWillFocus"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { height: "100%" }, stepContainer: null };
 const rect = {
   flexDirection: "column",
@@ -22,7 +22,7 @@ const rect = {
   top: 0,
   left: 0,
   right: 0,
-  height: fn(6075).NAV_BAR_HEIGHT,
+  height: fn(6261).NAV_BAR_HEIGHT,
 };
 obj2.stepContainer = rect;
 let closure_10 = createStyles.createStyles(obj2);
@@ -31,7 +31,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/StepModal.native.tsx");
 
 export const StepModal = ReactCompilerGating.isReactCompilerEnabled()
-  ? (steps) => {
+  ? function StepModal(steps) {
       const cResult = c.c(28);
       if (cResult[0] !== steps) {
         steps = steps.steps;
@@ -148,7 +148,7 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled()
         cResult[12] = tmp21;
         tmp16 = tmp21;
       }
-      const fn = function y(arg0) {
+      const fn = function _(arg0) {
         let num;
         if (closure_1 != null) {
           num = closure_1.indexOf(tmp.name);
@@ -167,7 +167,7 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = fn;
       const tmp11 = _slicedToArray(noop.useState(0), 2);
     }
-  : (steps) => {
+  : function StepModal(steps) {
       steps = steps.steps;
       const onWillFocus = steps.onWillFocus;
       const merged = Object.assign(steps, Object.assign({ steps: 0, onWillFocus: 0 }));
@@ -177,7 +177,7 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled()
       closure_2 = tmp4[1];
       const items = [onWillFocus, steps];
       const obj = { style: tmp2.container, children: null };
-      const callback = noop.useCallback((onDidFocus) => {
+      const callback = noop.useCallback((arg0) => {
         let num;
         if (steps != null) {
           num = steps.indexOf(tmp.name);
@@ -187,7 +187,7 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled()
         }
         closure_2(num);
         if (onWillFocus != null) {
-          onWillFocus(onDidFocus);
+          onWillFocus(arg0);
         }
       }, items);
       const obj2 = {};

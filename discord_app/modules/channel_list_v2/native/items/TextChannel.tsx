@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import RoutingSourcesDefault from "../../../routing/RoutingSources.tsx";
 import transitionToChannel from "../../../routing/transitionToChannel.tsx";
-import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import useChannelRoleSubscriptionStatus from "../../../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
+import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import openChannelLongPressActionSheet from "../../../channel/native/openChannelLongPressActionSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
@@ -15,11 +15,11 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11711);
+const RedesignChannelListConstants = fn(11776);
 ({ CHANNEL_MARGIN_VERTICAL: closure_11, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_15 = createStyles.createStyles((arg0, arg1) => {
   const obj = {
     container: {
@@ -74,7 +74,7 @@ let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/Te
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function TextChannel(channel) {
         const cResult = channel(id[17]).c(71);
         channel = channel.channel;
         ({ muted, selected, subtitle, isSuggestedSection } = channel);
@@ -328,7 +328,7 @@ export default noop.memo(
         tmp13 = S;
         let obj = channel(id[17]);
       }
-    : (channel) => {
+    : function TextChannel(channel) {
         channel = channel.channel;
         ({ muted, selected, subtitle, isSuggestedSection } = channel);
         const tmp = closure_15(muted, selected);

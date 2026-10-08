@@ -2,14 +2,14 @@
 import c from "../../../../_runtime/00576_c.js";
 import EmojiUtilsDefault from "../../../utils/EmojiUtils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef6633 from "../../../../_runtime/metro/06633__.js";
-import _modDef6634 from "../../../../_runtime/metro/06634__.js";
+import _modDef6810 from "../../../../_runtime/metro/06810__.js";
+import _modDef6811 from "../../../../_runtime/metro/06811__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
-const native = LegacyText(1188);
-const PlatformUtils = LegacyText(1369);
-const shared = LegacyText(4735);
+const native = LegacyText(1200);
+const PlatformUtils = LegacyText(1381);
+const shared = LegacyText(4929);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/native/Emoji.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Emoji(arg0) {
       let LegacyText = require;
       const cResult = c.c(14);
       ({ src, name, style, textEmojiStyle, fastImageStyle, forceTextEmoji, adjustsFontSizeToFit, onError } = arg0);
@@ -63,9 +63,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 onError: null,
               };
               if (LegacyTextResult.isThemeDark(ThemeStore.theme)) {
-                let tmp9Result = _modDef6633;
+                let tmp9Result = _modDef6810;
               } else {
-                tmp9Result = _modDef6634;
+                tmp9Result = _modDef6811;
               }
               obj5.placeholder = tmp9Result;
               const obj6 = { uri: tmp2 };
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp2 = uRL;
       LegacyTextResult1 = PlatformUtils;
     }
-  : (arg0) => {
+  : function Emoji(arg0) {
       ({ src, name } = arg0);
       ({ style, textEmojiStyle, fastImageStyle, forceTextEmoji, adjustsFontSizeToFit, onError } = arg0);
       let uRL = src;
@@ -129,9 +129,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               onError: null,
             };
             if (tmpResult.isThemeDark(ThemeStore.theme)) {
-              let tmp9Result = _modDef6633;
+              let tmp9Result = _modDef6810;
             } else {
-              tmp9Result = _modDef6634;
+              tmp9Result = _modDef6811;
             }
             obj4.placeholder = tmp9Result;
             const obj5 = { uri: uRL };

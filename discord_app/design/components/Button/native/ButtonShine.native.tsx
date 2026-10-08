@@ -21,7 +21,7 @@ const __initData2 = {
 };
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (width, arg1) => {
+  ? function useShineEffectStyles(width, arg1) {
       _require = width;
       const cResult = require("c").c(3);
       let obj = require("c");
@@ -142,7 +142,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj8;
       tmp6 = obj8;
     }
-  : (width, arg1) => {
+  : function useShineEffectStyles(width, arg1) {
       _require = width;
       const buttonTextColorStyles = require("ButtonHooks").useButtonTextColorStyles(arg1);
       let obj = require("ButtonHooks");
@@ -240,7 +240,7 @@ const result = size.fileFinishedImporting("design/components/Button/native/Butto
 
 export const useShineEffectStyles = tmp2;
 export const ButtonShine = ReactCompilerGating.isReactCompilerEnabled()
-  ? (variant) => {
+  ? function ButtonShine(variant) {
       const cResult = c.c(12);
       const tmp3 = _slicedToArray(noop.useState(null), 2);
       closure_0 = tmp3[1];
@@ -298,7 +298,7 @@ export const ButtonShine = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = items;
       const tmp4 = closure_12(tmp3[0], variant.variant);
     }
-  : (variant) => {
+  : function ButtonShine(variant) {
       const tmp = _slicedToArray(noop.useState(null), 2);
       closure_0 = tmp[1];
       const tmp2 = closure_12(tmp[0], variant.variant);

@@ -8,12 +8,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useLatch.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useLatch(arg0) {
       closure_0 = arg0;
       const cResult = c.c(5);
       noop.useRef(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function n(current) {
+        const fn = function u(current) {
           closure_1.current = current;
           return current;
         };
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (arg0) => {
+  : function useLatch(arg0) {
       closure_0 = arg0;
       noop.useRef(false);
       const obj = {

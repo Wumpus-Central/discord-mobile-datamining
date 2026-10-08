@@ -37,7 +37,7 @@ let obj2 = {
 };
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useStableVoiceParticipant(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(5);
@@ -56,35 +56,29 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult = tmp(504);
         return tmpResult.useStateFromStores(first, tmp7, tmp8, isStableVoiceStateEqual);
       }
-      class E {
-        constructor() {
-          if (null != closure_0) {
-            tmp2 = closure_4;
-            tmp3 = closure_1;
-            voiceState = closure_4.getVoiceState(closure_1, tmp);
-            if (null != voiceState) {
-              obj = { deaf: null, selfDeaf: null, mute: null, isLocalMute: null, selfMute: null };
-              ({ deaf: obj.deaf, selfDeaf: obj.selfDeaf, mute: obj.mute } = voiceState);
-              tmp5 = closure_3;
-              obj.isLocalMute = closure_3.isLocalMute(voiceState.userId);
-              obj.selfMute = voiceState.selfMute;
-              return obj;
-            }
+      const fn = function s() {
+        if (null != closure_0) {
+          const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
+          if (null != voiceState) {
+            const obj = { deaf: null, selfDeaf: null, mute: null, isLocalMute: null, selfMute: null };
+            ({ deaf: obj.deaf, selfDeaf: obj.selfDeaf, mute: obj.mute } = voiceState);
+            obj.isLocalMute = MediaEngineStore.isLocalMute(voiceState.userId);
+            obj.selfMute = voiceState.selfMute;
+            return obj;
           }
-          return;
         }
-      }
+      };
       const items1 = [arg0, arg1];
       cResult[1] = arg1;
       cResult[2] = arg0;
-      cResult[3] = E;
+      cResult[3] = fn;
       cResult[4] = items1;
       tmp8 = items1;
-      tmp7 = E;
+      tmp7 = fn;
       let obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useStableVoiceParticipant(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const items = [MediaEngineStore, VoiceStateStore];
@@ -111,7 +105,7 @@ let closure_8 = tmp2;
 fn(558);
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useStableVideoState(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(5);
@@ -129,45 +123,38 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(504).useStateFromStoresObject(first, tmp7, tmp8);
       }
-      class E {
-        constructor() {
-          tmp = closure_0;
-          if (null != closure_0) {
-            tmp3 = closure_4;
-            tmp4 = closure_1;
-            voiceState = closure_4.getVoiceState(closure_1, tmp);
-          }
-          if (null != tmp) {
-            if (null != voiceState) {
-              obj = closure_3;
-              obj1 = { selfVideo: null, localVideoDisabledState: null };
-              obj1.selfVideo = voiceState.selfVideo;
-              tmp5 = null;
-              if (closure_3.isLocalVideoDisabled(voiceState.userId)) {
-                str = "manual";
-                if (obj.isLocalVideoAutoDisabled(voiceState.userId)) {
-                  str = "auto";
-                }
-                tmp5 = str;
-              }
-              obj1.localVideoDisabledState = tmp5;
-              return obj1;
-            }
-          }
-          return { selfVideo: false, localVideoDisabledState: null };
+      const fn = function s() {
+        if (null != closure_0) {
+          const voiceState = VoiceStateStore.getVoiceState(closure_1, closure_0);
         }
-      }
+        if (null != closure_0) {
+          if (null != voiceState) {
+            obj2 = { selfVideo: voiceState.selfVideo, localVideoDisabledState: null };
+            let tmp5 = null;
+            if (MediaEngineStore.isLocalVideoDisabled(voiceState.userId)) {
+              let str = "manual";
+              if (MediaEngineStore.isLocalVideoAutoDisabled(voiceState.userId)) {
+                str = "auto";
+              }
+              tmp5 = str;
+            }
+            obj2.localVideoDisabledState = tmp5;
+            return obj2;
+          }
+        }
+        return { selfVideo: false, localVideoDisabledState: null };
+      };
       const items1 = [arg1, arg0];
       cResult[1] = arg1;
       cResult[2] = arg0;
-      cResult[3] = E;
+      cResult[3] = fn;
       cResult[4] = items1;
       tmp8 = items1;
-      tmp7 = E;
+      tmp7 = fn;
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useStableVideoState(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const items = [MediaEngineStore, VoiceStateStore];
@@ -201,7 +188,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_9 = tmp4;
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useMuteDeafenIconState(arg0, arg1) {
       const tmp = closure_8(arg0, arg1);
       if (null == tmp) {
         return null;
@@ -220,7 +207,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (arg0, arg1) => {
+  : function useMuteDeafenIconState(arg0, arg1) {
       const tmp = closure_8(arg0, arg1);
       if (null == tmp) {
         return null;
@@ -248,7 +235,7 @@ export const useStableVoiceParticipant = tmp2;
 export const useMuteDeafenIconState = tmp3;
 export const useStableVideoState = tmp4;
 export const useVideoIconState = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useVideoIconState(arg0, arg1) {
       const tmp = closure_9(arg0, arg1);
       let tmp2 = null;
       if (null != tmp) {
@@ -264,7 +251,7 @@ export const useVideoIconState = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp2;
     }
-  : (arg0, arg1) => {
+  : function useVideoIconState(arg0, arg1) {
       const tmp = closure_9(arg0, arg1);
       let tmp2 = null;
       if (null != tmp) {

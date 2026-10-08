@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles(() => {
   const obj = {
     divider: {
@@ -24,7 +24,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/Divider.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function Divider() {
       const cResult = c.c(2);
       const tmp2 = closure_5();
       if (cResult[0] !== tmp2.divider) {
@@ -38,7 +38,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : () => <View style={closure_5().divider} />;
+  : function Divider() {
+      return <View style={closure_5().divider} />;
+    };
 export const DIVIDER_MARGIN_TOP = 8;
 export const DIVIDER_MARGIN_BOTTOM = 8;
 export const DIVIDER_HEIGHT = 17;

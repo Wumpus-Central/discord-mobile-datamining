@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/useParentalConsentWarning.tsx");
 
 export const useParentalConsentWarning = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useParentalConsentWarning() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ParentalConsentWarningStore];
@@ -25,7 +25,7 @@ export const useParentalConsentWarning = ReactCompilerGating.isReactCompilerEnab
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useParentalConsentWarning() {
       const items = [ParentalConsentWarningStore];
       return initialize.useStateFromStores(items, () => warning.getWarning());
     };

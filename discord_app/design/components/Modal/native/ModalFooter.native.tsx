@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({
   footer: { flexDirection: "column", paddingVertical: 16, paddingHorizontal: 24 },
 });
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/ModalFooter.native.tsx");
 
 export const ModalFooter = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function ModalFooter(children) {
       const cResult = c.c(3);
       children = children.children;
       const tmp2 = closure_4();
@@ -30,4 +30,6 @@ export const ModalFooter = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp4;
       tmp3 = tmp4;
     }
-  : (children) => <View style={closure_4().footer}>{children.children}</View>;
+  : function ModalFooter(children) {
+      return <View style={closure_4().footer}>{children.children}</View>;
+    };

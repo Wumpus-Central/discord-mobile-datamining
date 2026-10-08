@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
-import _modDef13428 from "../../../../../_runtime/metro/13428__.js";
-import _mod13429 from "../../../../../_runtime/metro/13429__.js";
-import _modDef13430 from "../../../../../_runtime/metro/13430__.js";
+import _modDef13728 from "../../../../../_runtime/metro/13728__.js";
+import _mod13729 from "../../../../../_runtime/metro/13729__.js";
+import _modDef13730 from "../../../../../_runtime/metro/13730__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   wrapper: { marginTop: 50 },
   heading: { marginBottom: 20, textAlign: "center" },
@@ -62,7 +62,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13428 });
+      return timestampProducer(React3, { style, source: _modDef13728 });
     },
   },
   {
@@ -75,7 +75,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod13429, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod13729, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return timestampProducer(LottieAnimationViewDefault, obj);
     },
   },
@@ -89,7 +89,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13430 });
+      return timestampProducer(React3, { style, source: _modDef13730 });
     },
   },
 ];
@@ -116,7 +116,7 @@ let obj4 = {
     return intl.string(util.t.HTvLGu);
   },
   getGraphic(style) {
-    return timestampProducer(React3, { style, source: _modDef13428 });
+    return timestampProducer(React3, { style, source: _modDef13728 });
   },
 };
 size = fn(2);
@@ -125,7 +125,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function GuildBoostingMarketingTopPerksCards() {
       const cResult = require("c").c(16);
       const tmp4 = closure_8();
       _require = tmp4;
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: first,
         };
-        const tmp9 = closure_6(tmp(4892).Heading, obj2);
+        const tmp9 = closure_6(tmp(5086).Heading, obj2);
         cResult[1] = tmp4.heading;
         cResult[2] = tmp9;
         let tmp7 = tmp9;
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 contentContainerStyle: tmp10,
                 children: tmp11,
               };
-              const tmp16 = closure_6(tmp(12242).MarketingCardsScroller, obj4);
+              const tmp16 = closure_6(tmp(12321).MarketingCardsScroller, obj4);
               cResult[9] = tmp4.scrollerContent;
               cResult[10] = tmp11;
               cResult[11] = tmp16;
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = mapped;
       let obj = require("c");
     }
-  : () => {
+  : function GuildBoostingMarketingTopPerksCards() {
       const tmp = closure_8();
       _require = tmp;
       let obj = { style: tmp.wrapper, children: null };

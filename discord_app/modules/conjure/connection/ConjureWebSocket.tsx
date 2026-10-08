@@ -159,6 +159,19 @@ prototype["sendLoadHistory"] = function sendLoadHistory(olderHistoryCursor) {
     socket.send(JSON.stringify(obj));
   }
 };
+prototype["sendRefreshBrowserSessions"] = function sendRefreshBrowserSessions() {
+  const self = this;
+  let tmp = null != this.socket;
+  if (tmp) {
+    const _WebSocket = WebSocket;
+    tmp = self.socket.readyState === WebSocket.OPEN;
+  }
+  if (tmp) {
+    const socket = self.socket;
+    const _JSON = JSON;
+    socket.send(JSON.stringify({ type: "refresh_browser_sessions" }));
+  }
+};
 prototype["sendDebugStatusRequest"] = function sendDebugStatusRequest() {
   const self = this;
   if (null != this.socket) {

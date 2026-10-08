@@ -9,11 +9,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/useNSFWAllowed.tsx");
 
 export const useNSFWAllowed = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useNSFWAllowed() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function s() {
+        const fn = function l() {
           currentUser = currentUser.getCurrentUser();
           let nsfwAllowed;
           if (currentUser != null) {
@@ -33,7 +33,7 @@ export const useNSFWAllowed = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useNSFWAllowed() {
       const items = [UserStore];
       return initialize.useStateFromStores(items, () => {
         currentUser = currentUser.getCurrentUser();

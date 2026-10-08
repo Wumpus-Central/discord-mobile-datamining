@@ -58,7 +58,7 @@ function getEmbeddedActivityLaunchability(arg0) {
     return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL;
   }
 }
-let closure_6 = fn(2011).SUPPORTED_ACTIVITIES_CHANNEL_TYPES;
+let closure_6 = fn(2023).SUPPORTED_ACTIVITIES_CHANNEL_TYPES;
 const Permissions = fn(1085).Permissions;
 const EmbeddedActivityLaunchability = {
   CAN_LAUNCH: 0,
@@ -90,7 +90,7 @@ export const getEmbeddedActivityLaunchabilityForChannel = function getEmbeddedAc
   return getEmbeddedActivityLaunchability({ channelId, ChannelStore, GuildStore, PermissionStore, VoiceStateStore });
 };
 export const useEmbeddedActivityLaunchability = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function useEmbeddedActivityLaunchability(channelId) {
       const _require = channelId;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -101,7 +101,7 @@ export const useEmbeddedActivityLaunchability = ReactCompilerGating.isReactCompi
         first = cResult[0];
       }
       if (cResult[1] !== channelId) {
-        class S {
+        class A {
           constructor() {
             obj = {
               channelId: closure_0,
@@ -115,11 +115,11 @@ export const useEmbeddedActivityLaunchability = ReactCompilerGating.isReactCompi
         }
         const items1 = [channelId];
         cResult[1] = channelId;
-        cResult[2] = S;
+        cResult[2] = A;
         cResult[3] = items1;
         let tmp10 = items1;
       } else {
-        class S {
+        class A {
           constructor() {
             obj = {
               channelId: closure_0,
@@ -134,9 +134,9 @@ export const useEmbeddedActivityLaunchability = ReactCompilerGating.isReactCompi
         tmp10 = cResult[3];
       }
       const obj = require("c");
-      return require("initialize").useStateFromStores(first, S, tmp10);
+      return require("initialize").useStateFromStores(first, A, tmp10);
     }
-  : (channelId) => {
+  : function useEmbeddedActivityLaunchability(channelId) {
       const _require = channelId;
       const items = [ChannelStore, GuildStore, PermissionStore, VoiceStateStore];
       const items1 = [channelId];

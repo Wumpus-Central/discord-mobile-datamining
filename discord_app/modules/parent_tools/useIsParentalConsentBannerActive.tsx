@@ -8,7 +8,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
 
 export const useIsParentalConsentBannerActive = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsParentalConsentBannerActive() {
       const cResult = c.c(2);
       const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
       let surfaces1;
@@ -35,7 +35,7 @@ export const useIsParentalConsentBannerActive = ReactCompilerGating.isReactCompi
       }
       return true === tmp6;
     }
-  : () => {
+  : function useIsParentalConsentBannerActive() {
       const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
       let hasItem;
       if (parentalConsentWarning != null) {

@@ -2,7 +2,7 @@
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import Constants from "../../../../discord_common/js/shared/Constants.tsx";
 import native from "../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import GuildRecord from "../../../records/GuildRecord.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import DesignSystemsNotificationComponentsExperiment from "../../design/DesignSystemsNotificationComponentsExperiment.tsx";
@@ -73,7 +73,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
     const obj8 = {
       accessibilityRole: "button",
       accessibilityLabel: guild.name,
-      onPress() {
+      onPress: function handlePress() {
         onAction({ action: "PRESS_VOICE_CHANNEL_ICON" });
         const designSystemsNotificationComponents =
           DesignSystemsNotificationComponentsExperiment.getDesignSystemsNotificationComponents(
@@ -123,7 +123,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
     obj10.accessibilityLabel = tmp2(tmp3[22])(obj11);
     const intl2 = tmp4(tmp3[15]).intl;
     obj10.accessibilityHint = intl2.string(tmp4(tmp3[15]).t["9C444m"]);
-    obj10.onPress = function onPress() {
+    obj10.onPress = function handlePress_0() {
       onAction({ action: "OPEN_VOICE_CHANNEL" });
       PrivateChannelCallUtils.openGuildVoiceModal(channel, newestAnalyticsLocation);
       ActionSheetActionCreatorsDefault.hideAllActionSheets();
@@ -145,10 +145,10 @@ export default function UserProfileActivityVoiceChannel(guild) {
   const obj15 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
   const intl3 = tmp4(tmp3[15]).intl;
   obj15.accessibilityLabel = intl3.formatToPlainString(guild(onAction[15]).t.e95u3C, { count: users.length });
-  obj15.onPress = function onPress() {
+  obj15.onPress = function handlePressAvatars() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(12868, dependencyMap.paths),
+      asyncRequireImpl(13017, dependencyMap.paths),
       "UserProfileActivityVoiceChannelUsers",
       {
         users,

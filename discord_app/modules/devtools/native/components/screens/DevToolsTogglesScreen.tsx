@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ToastActionCreatorsDefault from "../../../../toast/native/ToastActionCreators.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/05709_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/06099_fuzzysearch.js";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -26,10 +26,10 @@ function fuzzySearchToggle(str, str2, str3) {
   return tmp;
 }
 const ScrollView = fn(17).ScrollView;
-const CATEGORY_LABELS = fn(4895).CATEGORY_LABELS;
+const CATEGORY_LABELS = fn(5089).CATEGORY_LABELS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 },
   container: null,
@@ -39,7 +39,7 @@ obj2.container = { paddingVertical: nativeDefault.space.PX_16 };
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (toggleName) => {
+  ? function ToggleTableRow(toggleName) {
       const cResult = toggleName(576).c(11);
       toggleName = toggleName.toggleName;
       const description = toggleName.description;
@@ -70,7 +70,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             onPress: tmp4,
             trailing: tmp5,
           };
-          const tmp10 = closure_9(tmp(6000).TableRow, obj2, toggleName);
+          const tmp10 = closure_9(tmp(6184).TableRow, obj2, toggleName);
           cResult[6] = description;
           cResult[7] = tmp4;
           cResult[8] = tmp5;
@@ -79,7 +79,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           tmp8 = tmp10;
         }
         const obj3 = { value, onValueChange };
-        const tmp7 = closure_9(tmp(6706).FormSwitch, obj3);
+        const tmp7 = closure_9(tmp(6883).FormSwitch, obj3);
         cResult[3] = onValueChange;
         cResult[4] = value;
         cResult[5] = tmp7;
@@ -94,12 +94,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn;
       const obj = toggleName(576);
     }
-  : (toggleName) => {
+  : function ToggleTableRow(toggleName) {
       toggleName = toggleName.toggleName;
       const description = toggleName.description;
       ({ value, onValueChange } = toggleName);
       return closure_9(
-        toggleName(6000).TableRow,
+        toggleName(6184).TableRow,
         {
           label: description,
           labelLineClamp: 1,
@@ -108,14 +108,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           onPress() {
             ToastActionCreatorsDefault.open({ content: description, key: toggleName });
           },
-          trailing: closure_9(toggleName(6706).FormSwitch, { value, onValueChange }),
+          trailing: closure_9(toggleName(6883).FormSwitch, { value, onValueChange }),
         },
         toggleName,
       );
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useFilteredDevTogglesForCategory(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(5);
@@ -134,7 +134,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult = tmp(504);
         return tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(504).statesWillNeverBeEqual);
       }
-      const fn = function s() {
+      const fn = function c() {
         return DevSettingsStore.allByCategory(closure_0).filter((item) => {
           const tmp = _slicedToArray(item, 3);
           let tmp2 = 0 === closure_1_1.length;
@@ -161,7 +161,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       const obj = require("c");
     }
-  : (arg0, arg1) => {
+  : function useFilteredDevTogglesForCategory(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const items = [DevSettingsStore];
@@ -179,7 +179,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (title) => {
+  ? function DevTogglesForCategory(title) {
       const cResult = c.c(6);
       title = title.title;
       const arr = closure_14(title.category, title.query);
@@ -189,7 +189,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (cResult[0] !== arr) {
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function o(arg0) {
+          const fn = function n(arg0) {
             const tmp = closure_3(arg0, 3);
             const toggleName = tmp[0];
             return closure_9(
@@ -229,7 +229,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = tmp11;
       }
     }
-  : (category) => {
+  : function DevTogglesForCategory(category) {
       const arr = closure_14(category.category, category.query);
       let tmp = null;
       if (0 !== arr.length) {
@@ -262,7 +262,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsTogglesScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DevToolsTogglesScreen() {
       const cResult = first1(576).c(24);
       const tmp4 = closure_12();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7 = _slicedToArray(noop.useState(""), 2);
       first1 = tmp7[0];
       let obj = first1(576);
-      const manaTextMigrationHighlightRestartNotice = first1(14278).useManaTextMigrationHighlightRestartNotice();
+      const manaTextMigrationHighlightRestartNotice = first1(14102).useManaTextMigrationHighlightRestartNotice();
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DesignTogglesStore];
         cResult[1] = items;
@@ -284,85 +284,279 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[1];
       }
       if (cResult[2] !== first1) {
-        const fn = function f() {
-          return DesignTogglesStore.allWithDescriptions().filter((item) => {
-            const tmp = _slicedToArray(item, 3);
-            let tmp2 = 0 === length.length;
-            if (!tmp2) {
-              const formatted = length.toLowerCase();
-              let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
-              if (!tmp3ResultResult) {
-                const formatted1 = length.toLowerCase();
-                tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
-                const tmp3Result = fuzzysearchDefault;
+        class C {
+          constructor() {
+            allWithDescriptionsResult = closure_6.allWithDescriptions();
+            return allWithDescriptionsResult.filter((item) => {
+              const tmp = _slicedToArray(item, 3);
+              let tmp2 = 0 === length.length;
+              if (!tmp2) {
+                const formatted = length.toLowerCase();
+                let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                if (!tmp3ResultResult) {
+                  const formatted1 = length.toLowerCase();
+                  tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                  const tmp3Result = fuzzysearchDefault;
+                }
+                tmp2 = tmp3ResultResult;
               }
-              tmp2 = tmp3ResultResult;
-            }
-            return tmp2;
-          });
-        };
+              return tmp2;
+            });
+          }
+        }
         const items1 = [first1];
         cResult[2] = first1;
-        cResult[3] = fn;
+        cResult[3] = C;
         cResult[4] = items1;
         let tmp13 = items1;
-        let tmp12 = fn;
       } else {
-        tmp12 = cResult[3];
+        class C {
+          constructor() {
+            allWithDescriptionsResult = closure_6.allWithDescriptions();
+            return allWithDescriptionsResult.filter((item) => {
+              const tmp = _slicedToArray(item, 3);
+              let tmp2 = 0 === length.length;
+              if (!tmp2) {
+                const formatted = length.toLowerCase();
+                let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                if (!tmp3ResultResult) {
+                  const formatted1 = length.toLowerCase();
+                  tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                  const tmp3Result = fuzzysearchDefault;
+                }
+                tmp2 = tmp3ResultResult;
+              }
+              return tmp2;
+            });
+          }
+        }
         tmp13 = cResult[4];
       }
-      const tmpResult = first1(14278);
-      const stateFromStores = first1(504).useStateFromStores(tmp10, tmp12, tmp13, tmp(504).statesWillNeverBeEqual);
+      const tmpResult = first1(14102);
+      const stateFromStores = first1(504).useStateFromStores(tmp10, C, tmp13, tmp(504).statesWillNeverBeEqual);
       const sum = nativeDefault.space.PX_16 + useSafeAreaInsetsKeyboardAwareDefault(first).insets.bottom;
       if (cResult[5] !== sum) {
-        const obj3 = { paddingBottom: sum };
+        class C {
+          constructor() {
+            allWithDescriptionsResult = closure_6.allWithDescriptions();
+            return allWithDescriptionsResult.filter((item) => {
+              const tmp = _slicedToArray(item, 3);
+              let tmp2 = 0 === length.length;
+              if (!tmp2) {
+                const formatted = length.toLowerCase();
+                let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                if (!tmp3ResultResult) {
+                  const formatted1 = length.toLowerCase();
+                  tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                  const tmp3Result = fuzzysearchDefault;
+                }
+                tmp2 = tmp3ResultResult;
+              }
+              return tmp2;
+            });
+          }
+        }
+        tmp16[0] = sum;
         cResult[5] = sum;
-        cResult[6] = obj3;
-        let tmp15 = obj3;
+        cResult[6] = tmp16;
       } else {
-        tmp15 = cResult[6];
+        class C {
+          constructor() {
+            allWithDescriptionsResult = closure_6.allWithDescriptions();
+            return allWithDescriptionsResult.filter((item) => {
+              const tmp = _slicedToArray(item, 3);
+              let tmp2 = 0 === length.length;
+              if (!tmp2) {
+                const formatted = length.toLowerCase();
+                let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                if (!tmp3ResultResult) {
+                  const formatted1 = length.toLowerCase();
+                  tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                  const tmp3Result = fuzzysearchDefault;
+                }
+                tmp2 = tmp3ResultResult;
+              }
+              return tmp2;
+            });
+          }
+        }
       }
       if (cResult[7] === tmp4.container) {
-        if (cResult[8] === tmp15) {
-          let tmp16 = cResult[9];
+        class C {
+          constructor() {
+            allWithDescriptionsResult = closure_6.allWithDescriptions();
+            return allWithDescriptionsResult.filter((item) => {
+              const tmp = _slicedToArray(item, 3);
+              let tmp2 = 0 === length.length;
+              if (!tmp2) {
+                const formatted = length.toLowerCase();
+                let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                if (!tmp3ResultResult) {
+                  const formatted1 = length.toLowerCase();
+                  tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                  const tmp3Result = fuzzysearchDefault;
+                }
+                tmp2 = tmp3ResultResult;
+              }
+              return tmp2;
+            });
+          }
         }
         const _Symbol = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj4 = {
+          class C {
+            constructor() {
+              allWithDescriptionsResult = closure_6.allWithDescriptions();
+              return allWithDescriptionsResult.filter((item) => {
+                const tmp = _slicedToArray(item, 3);
+                let tmp2 = 0 === length.length;
+                if (!tmp2) {
+                  const formatted = length.toLowerCase();
+                  let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                  if (!tmp3ResultResult) {
+                    const formatted1 = length.toLowerCase();
+                    tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                    const tmp3Result = fuzzysearchDefault;
+                  }
+                  tmp2 = tmp3ResultResult;
+                }
+                return tmp2;
+              });
+            }
+          }
+          const obj3 = {
             label: "Clear All",
             variant: "danger",
             onPress() {
-              first1(15602).clearAll();
-              const obj = first1(15602);
-              first1(15584).clearAll();
+              first1(15882).clearAll();
+              const obj = first1(15882);
+              first1(15864).clearAll();
             },
             arrow: true,
           };
-          const tmp19 = closure_9(tmp(6000).TableRow, obj4);
+          const tmp19 = closure_9(tmp(6184).TableRow, obj3);
           cResult[10] = tmp19;
-          let tmp17 = tmp19;
+          const tmp18 = tmp19;
         } else {
-          tmp17 = cResult[10];
+          class C {
+            constructor() {
+              allWithDescriptionsResult = closure_6.allWithDescriptions();
+              return allWithDescriptionsResult.filter((item) => {
+                const tmp = _slicedToArray(item, 3);
+                let tmp2 = 0 === length.length;
+                if (!tmp2) {
+                  const formatted = length.toLowerCase();
+                  let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                  if (!tmp3ResultResult) {
+                    const formatted1 = length.toLowerCase();
+                    tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                    const tmp3Result = fuzzysearchDefault;
+                  }
+                  tmp2 = tmp3ResultResult;
+                }
+                return tmp2;
+              });
+            }
+          }
         }
         const _Symbol2 = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj5 = { title: "Actions", hasIcons: false, children: null };
-          const items2 = [tmp17];
-          const obj6 = { label: null };
-          const obj7 = { size: "md", placeholder: "Search design toggles", onChange: tmp7[1] };
-          obj6.label = closure_9(tmp(6554).SearchField, obj7);
-          items2[1] = closure_9(tmp(6000).TableRow, obj6);
-          obj5.children = items2;
-          const tmp23 = closure_10(tmp(6081).TableRowGroup, obj5);
-          cResult[11] = tmp23;
-          let tmp20 = tmp23;
+          class C {
+            constructor() {
+              allWithDescriptionsResult = closure_6.allWithDescriptions();
+              return allWithDescriptionsResult.filter((item) => {
+                const tmp = _slicedToArray(item, 3);
+                let tmp2 = 0 === length.length;
+                if (!tmp2) {
+                  const formatted = length.toLowerCase();
+                  let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                  if (!tmp3ResultResult) {
+                    const formatted1 = length.toLowerCase();
+                    tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                    const tmp3Result = fuzzysearchDefault;
+                  }
+                  tmp2 = tmp3ResultResult;
+                }
+                return tmp2;
+              });
+            }
+          }
+          const obj4 = { title: "Actions", hasIcons: false, children: null };
+          const items2 = [tmp18];
+          const obj5 = { label: null };
+          const obj6 = { size: "md", placeholder: "Search design toggles", onChange: tmp7[1] };
+          obj5.label = closure_9(tmp(6730).SearchField, obj6);
+          items2[1] = closure_9(tmp(6184).TableRow, obj5);
+          obj4.children = items2;
+          const tmp22 = closure_10(tmp(6267).TableRowGroup, obj4);
+          cResult[11] = tmp22;
+          const tmp20 = tmp22;
         } else {
-          tmp20 = cResult[11];
+          class C {
+            constructor() {
+              allWithDescriptionsResult = closure_6.allWithDescriptions();
+              return allWithDescriptionsResult.filter((item) => {
+                const tmp = _slicedToArray(item, 3);
+                let tmp2 = 0 === length.length;
+                if (!tmp2) {
+                  const formatted = length.toLowerCase();
+                  let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                  if (!tmp3ResultResult) {
+                    const formatted1 = length.toLowerCase();
+                    tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                    const tmp3Result = fuzzysearchDefault;
+                  }
+                  tmp2 = tmp3ResultResult;
+                }
+                return tmp2;
+              });
+            }
+          }
         }
         if (cResult[12] !== stateFromStores) {
-          let tmp25 = null;
+          class C {
+            constructor() {
+              allWithDescriptionsResult = closure_6.allWithDescriptions();
+              return allWithDescriptionsResult.filter((item) => {
+                const tmp = _slicedToArray(item, 3);
+                let tmp2 = 0 === length.length;
+                if (!tmp2) {
+                  const formatted = length.toLowerCase();
+                  let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                  if (!tmp3ResultResult) {
+                    const formatted1 = length.toLowerCase();
+                    tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                    const tmp3Result = fuzzysearchDefault;
+                  }
+                  tmp2 = tmp3ResultResult;
+                }
+                return tmp2;
+              });
+            }
+          }
+          let tmp24 = null;
           if (stateFromStores.length > 0) {
-            const obj8 = {
+            class C {
+              constructor() {
+                allWithDescriptionsResult = closure_6.allWithDescriptions();
+                return allWithDescriptionsResult.filter((item) => {
+                  const tmp = _slicedToArray(item, 3);
+                  let tmp2 = 0 === length.length;
+                  if (!tmp2) {
+                    const formatted = length.toLowerCase();
+                    let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                    if (!tmp3ResultResult) {
+                      const formatted1 = length.toLowerCase();
+                      tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                      const tmp3Result = fuzzysearchDefault;
+                    }
+                    tmp2 = tmp3ResultResult;
+                  }
+                  return tmp2;
+                });
+              }
+            }
+            const obj7 = {
               title: "Design Toggles",
               hasIcons: false,
               children: stateFromStores.map((item) => {
@@ -375,84 +569,200 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     description: tmp[2],
                     value: tmp[1],
                     onValueChange(arg0) {
-                      return first1(15602).toggle(first, arg0);
+                      return first1(15882).toggle(first, arg0);
                     },
                   },
                   toggleName,
                 );
               }),
             };
-            tmp25 = closure_9(tmp(6081).TableRowGroup, obj8);
+            tmp24 = closure_9(tmp(6267).TableRowGroup, obj7);
           }
           cResult[12] = stateFromStores;
-          cResult[13] = tmp25;
-          let tmp24 = tmp25;
+          cResult[13] = tmp24;
         } else {
-          tmp24 = cResult[13];
+          class C {
+            constructor() {
+              allWithDescriptionsResult = closure_6.allWithDescriptions();
+              return allWithDescriptionsResult.filter((item) => {
+                const tmp = _slicedToArray(item, 3);
+                let tmp2 = 0 === length.length;
+                if (!tmp2) {
+                  const formatted = length.toLowerCase();
+                  let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                  if (!tmp3ResultResult) {
+                    const formatted1 = length.toLowerCase();
+                    tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                    const tmp3Result = fuzzysearchDefault;
+                  }
+                  tmp2 = tmp3ResultResult;
+                }
+                return tmp2;
+              });
+            }
+          }
         }
         const _Symbol3 = Symbol;
         if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-          const _Object = Object;
-          const entries = Object.entries(CATEGORY_LABELS);
-          cResult[14] = entries;
-          let arr6 = entries;
-        } else {
-          arr6 = cResult[14];
-        }
-        if (cResult[15] !== first1) {
-          const mapped = arr6.map((item) => {
-            const tmp = _slicedToArray(item, 2);
-            const first = tmp[0];
-            return options(closure_15, { category: parseInt(first), title: tmp[1], query: first1 }, first);
-          });
-          cResult[15] = first1;
-          cResult[16] = mapped;
-          let tmp29 = mapped;
-        } else {
-          tmp29 = cResult[16];
-        }
-        if (cResult[17] === tmp24) {
-          if (cResult[18] === tmp29) {
-            let tmp31 = cResult[19];
-          }
-          if (cResult[20] === tmp4.wrap) {
-            if (cResult[21] === tmp31) {
-              if (cResult[22] === tmp16) {
-                let tmp34 = cResult[23];
-              }
-              return tmp34;
+          class C {
+            constructor() {
+              allWithDescriptionsResult = closure_6.allWithDescriptions();
+              return allWithDescriptionsResult.filter((item) => {
+                const tmp = _slicedToArray(item, 3);
+                let tmp2 = 0 === length.length;
+                if (!tmp2) {
+                  const formatted = length.toLowerCase();
+                  let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                  if (!tmp3ResultResult) {
+                    const formatted1 = length.toLowerCase();
+                    tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                    const tmp3Result = fuzzysearchDefault;
+                  }
+                  tmp2 = tmp3ResultResult;
+                }
+                return tmp2;
+              });
             }
           }
-          const obj9 = { style: tmp4.wrap, contentContainerStyle: tmp16, children: tmp31 };
-          const tmp37 = closure_9(ScrollView, obj9);
-          cResult[20] = tmp4.wrap;
-          cResult[21] = tmp31;
-          cResult[22] = tmp16;
-          cResult[23] = tmp37;
-          tmp34 = tmp37;
+          const entries = Object.entries(CATEGORY_LABELS);
+          cResult[14] = entries;
+        } else {
+          class C {
+            constructor() {
+              allWithDescriptionsResult = closure_6.allWithDescriptions();
+              return allWithDescriptionsResult.filter((item) => {
+                const tmp = _slicedToArray(item, 3);
+                let tmp2 = 0 === length.length;
+                if (!tmp2) {
+                  const formatted = length.toLowerCase();
+                  let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                  if (!tmp3ResultResult) {
+                    const formatted1 = length.toLowerCase();
+                    tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                    const tmp3Result = fuzzysearchDefault;
+                  }
+                  tmp2 = tmp3ResultResult;
+                }
+                return tmp2;
+              });
+            }
+          }
         }
-        const obj10 = { spacing: 16, children: null };
-        const items3 = [tmp20, tmp24, tmp29];
-        obj10.children = items3;
-        const tmp33 = closure_10(tmp(5600).Stack, obj10);
-        cResult[17] = tmp24;
+        if (cResult[15] !== first1) {
+          class C {
+            constructor() {
+              allWithDescriptionsResult = closure_6.allWithDescriptions();
+              return allWithDescriptionsResult.filter((item) => {
+                const tmp = _slicedToArray(item, 3);
+                let tmp2 = 0 === length.length;
+                if (!tmp2) {
+                  const formatted = length.toLowerCase();
+                  let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                  if (!tmp3ResultResult) {
+                    const formatted1 = length.toLowerCase();
+                    tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                    const tmp3Result = fuzzysearchDefault;
+                  }
+                  tmp2 = tmp3ResultResult;
+                }
+                return tmp2;
+              });
+            }
+          }
+          cResult[15] = first1;
+          cResult[16] = tmp29;
+        } else {
+          class C {
+            constructor() {
+              allWithDescriptionsResult = closure_6.allWithDescriptions();
+              return allWithDescriptionsResult.filter((item) => {
+                const tmp = _slicedToArray(item, 3);
+                let tmp2 = 0 === length.length;
+                if (!tmp2) {
+                  const formatted = length.toLowerCase();
+                  let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                  if (!tmp3ResultResult) {
+                    const formatted1 = length.toLowerCase();
+                    tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                    const tmp3Result = fuzzysearchDefault;
+                  }
+                  tmp2 = tmp3ResultResult;
+                }
+                return tmp2;
+              });
+            }
+          }
+        }
+        if (cResult[17] === tmp23) {
+          class C {
+            constructor() {
+              allWithDescriptionsResult = closure_6.allWithDescriptions();
+              return allWithDescriptionsResult.filter((item) => {
+                const tmp = _slicedToArray(item, 3);
+                let tmp2 = 0 === length.length;
+                if (!tmp2) {
+                  const formatted = length.toLowerCase();
+                  let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                  if (!tmp3ResultResult) {
+                    const formatted1 = length.toLowerCase();
+                    tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                    const tmp3Result = fuzzysearchDefault;
+                  }
+                  tmp2 = tmp3ResultResult;
+                }
+                return tmp2;
+              });
+            }
+          }
+          if (cResult[20] === tmp4.wrap) {
+            class C {
+              constructor() {
+                allWithDescriptionsResult = closure_6.allWithDescriptions();
+                return allWithDescriptionsResult.filter((item) => {
+                  const tmp = _slicedToArray(item, 3);
+                  let tmp2 = 0 === length.length;
+                  if (!tmp2) {
+                    const formatted = length.toLowerCase();
+                    let tmp3ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
+                    if (!tmp3ResultResult) {
+                      const formatted1 = length.toLowerCase();
+                      tmp3ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+                      const tmp3Result = fuzzysearchDefault;
+                    }
+                    tmp2 = tmp3ResultResult;
+                  }
+                  return tmp2;
+                });
+              }
+            }
+          }
+          const obj8 = { style: tmp4.wrap, contentContainerStyle: tmp17, children: tmp30 };
+          const tmp36 = closure_9(ScrollView, obj8);
+          cResult[20] = tmp4.wrap;
+          cResult[21] = tmp30;
+          cResult[22] = tmp17;
+          cResult[23] = tmp36;
+        }
+        const obj9 = { spacing: 16, children: null };
+        const items3 = [tmp20, tmp23, tmp29];
+        obj9.children = items3;
+        const tmp32 = closure_10(tmp(5373).Stack, obj9);
+        cResult[17] = tmp23;
         cResult[18] = tmp29;
-        cResult[19] = tmp33;
-        tmp31 = tmp33;
+        cResult[19] = tmp32;
       }
-      const items4 = [tmp4.container, tmp15];
+      const items4 = [tmp4.container, tmp16];
       cResult[7] = tmp4.container;
-      cResult[8] = tmp15;
+      cResult[8] = tmp16;
       cResult[9] = items4;
-      tmp16 = items4;
       const tmpResult2 = first1(504);
     }
-  : () => {
+  : function DevToolsTogglesScreen() {
       let tmp = closure_12();
       const tmp3 = _slicedToArray(noop.useState(""), 2);
       const query = tmp3[0];
-      const manaTextMigrationHighlightRestartNotice = query(14278).useManaTextMigrationHighlightRestartNotice();
-      let obj = query(14278);
+      const manaTextMigrationHighlightRestartNotice = query(14102).useManaTextMigrationHighlightRestartNotice();
+      let obj = query(14102);
       const tmp5 = query;
       const items = [DesignTogglesStore];
       const items1 = [query];
@@ -488,13 +798,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.contentContainerStyle = items2;
       const obj5 = { title: "Actions", hasIcons: false, children: null };
       const items3 = [
-        closure_9(query(6000).TableRow, {
+        closure_9(query(6184).TableRow, {
           label: "Clear All",
           variant: "danger",
           onPress() {
-            first(15602).clearAll();
-            const obj = first(15602);
-            first(15584).clearAll();
+            first(15882).clearAll();
+            const obj = first(15882);
+            first(15864).clearAll();
           },
           arrow: true,
         }),
@@ -508,21 +818,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         label: "Clear All",
         variant: "danger",
         onPress() {
-          first(15602).clearAll();
-          const obj = first(15602);
-          first(15584).clearAll();
+          first(15882).clearAll();
+          const obj = first(15882);
+          first(15864).clearAll();
         },
         arrow: true,
       };
-      items3[1] = closure_9(query(6000).TableRow, {
-        label: closure_9(query(6554).SearchField, {
+      items3[1] = closure_9(query(6184).TableRow, {
+        label: closure_9(query(6730).SearchField, {
           size: "md",
           placeholder: "Search design toggles",
           onChange: tmp3[1],
         }),
       });
       obj5.children = items3;
-      const items4 = [closure_10(query(6081).TableRowGroup, obj5), ,];
+      const items4 = [closure_10(query(6267).TableRowGroup, obj5), ,];
       let tmp7Result = null;
       if (stateFromStores.length > 0) {
         const obj8 = {
@@ -537,14 +847,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 description: tmp3,
                 value: tmp2,
                 onValueChange(arg0) {
-                  return first(15602).toggle(query, arg0);
+                  return first(15882).toggle(query, arg0);
                 },
               },
               tmp,
             );
           }),
         };
-        tmp7Result = closure_9(tmp5(6081).TableRowGroup, obj8);
+        tmp7Result = closure_9(tmp5(6267).TableRowGroup, obj8);
       }
       const obj9 = { spacing: 16, children: null };
       items4[1] = tmp7Result;
@@ -554,6 +864,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return options(closure_15, { category: parseInt(tmp), title: tmp2, query }, tmp);
       });
       obj9.children = items4;
-      obj3.children = closure_10(query(5600).Stack, obj9);
+      obj3.children = closure_10(query(5373).Stack, obj9);
       return closure_9(ScrollView, obj3);
     };

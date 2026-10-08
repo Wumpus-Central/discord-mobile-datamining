@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useShouldShowInitialSafetyToolsButtonTooltip = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShouldShowInitialSafetyToolsButtonTooltip(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       const obj = require("c");
@@ -41,7 +41,7 @@ export const useShouldShowInitialSafetyToolsButtonTooltip = ReactCompilerGating.
       const tmpResult = tmp(504);
       return null != inappropriateConversationSafetyToolsWarningForChannel && !tmp(504).useStateFromStores(first, tmp7);
     }
-  : (arg0) => {
+  : function useShouldShowInitialSafetyToolsButtonTooltip(arg0) {
       _require = arg0;
       const inappropriateConversationSafetyToolsWarningForChannel =
         require("useInappropriateConversationSafetyToolsWarningForChannel").useInappropriateConversationSafetyToolsWarningForChannel(

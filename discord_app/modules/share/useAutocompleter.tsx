@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/useAutocompleter.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (searchOptions) => {
+  ? function useAutocompleter(searchOptions) {
       const cResult = searchOptions(576).c(14);
       searchOptions = searchOptions.searchOptions;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = searchOptions(576);
       [tmp5, importDefault] = noop.useState(first);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function o() {
+        const fn = function c() {
           const obj = new sortByMatchScoreDefault((results, query) => {
             closure_1_1({ results, query });
           });
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = E;
       const tmp4 = _slicedToArray(noop.useState(first), 2);
     }
-  : (searchOptions) => {
+  : function useAutocompleter(searchOptions) {
       searchOptions = searchOptions.searchOptions;
       importDefault = undefined;
       [tmp2, c1] = noop.useState({ results: [], query: "" });

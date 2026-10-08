@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/TypingSubtitle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TypingSubtitle(arg0) {
       const cResult = c.c(17);
       ({ guild, channel, channelName, text } = arg0);
       const subtitleStyles = useSubtitleStyles.useSubtitleStyles();
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = channelIconComponentWithGuild;
       tmp5 = channelIconComponentWithGuild;
     }
-  : (arg0) => {
+  : function TypingSubtitle(arg0) {
       ({ channel, channelName } = arg0);
       ({ guild, text } = arg0);
       const subtitleStyles = useSubtitleStyles.useSubtitleStyles();

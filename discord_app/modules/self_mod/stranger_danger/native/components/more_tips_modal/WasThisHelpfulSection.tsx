@@ -3,18 +3,18 @@ import nativeDefault from "../../../../../../../discord_common/js/packages/token
 import util from "../../../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../../../toast/native/ToastActionCreators.tsx";
 import DesignSystemsNotificationComponentsExperiment from "../../../../../design/DesignSystemsNotificationComponentsExperiment.tsx";
-import _modDef8951 from "../../../../../../../_runtime/metro/08951__.js";
-import ShieldIcon from "../../../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
 import SafetyWarningUtils from "../../../../shared/SafetyWarningUtils.tsx";
 import ChannelSafetyWarningsActionCreators from "../../../../ChannelSafetyWarningsActionCreators.tsx";
+import ShieldIcon from "../../../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
+import _modDef10387 from "../../../../../../../_runtime/metro/10387__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import ChannelSafetyWarningsStore from "../../../../ChannelSafetyWarningsStore.tsx";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const constants = fn(9799).SafetyWarningFeedbackTypes;
-const Constants = fn(9797);
+const constants = fn(10266).SafetyWarningFeedbackTypes;
+const Constants = fn(10361);
 ({
   DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8,
   TOAST_SHIELD_ICON_COLOR: closure_9,
@@ -23,7 +23,7 @@ const Constants = fn(9797);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flexDirection: "column", alignItems: "center" },
   buttonsContainer: { flexDirection: "row", marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 },
@@ -68,7 +68,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function WasThisHelpfulSection(channelId) {
       const cResult = channelId(senderId[8]).c(44);
       channelId = channelId.channelId;
       const warningId = channelId.warningId;
@@ -190,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   let obj5 = { style: tmp19, disabled: tmp17, onPress: L, accessibilityLabel: tmp21, children: tmp24 };
-                  class S {
+                  class A {
                     constructor(arg0, arg1) {
                       tmp = closure_0;
                       tmp2 = closure_2;
@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items1 = [tmp4.buttonsBackground, tmp18];
                 cResult[11] = tmp4.buttonsBackground;
                 cResult[12] = tmp18;
-                class S {
+                class A {
                   constructor(arg0, arg1) {
                     tmp = closure_0;
                     tmp2 = closure_2;
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        class S {
+        class A {
           constructor(arg0, arg1) {
             tmp = closure_0;
             tmp2 = closure_2;
@@ -379,8 +379,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = senderId;
         cResult[7] = tmp4.toastContainer;
         cResult[8] = warningId;
-        cResult[9] = S;
-        tmp12 = S;
+        cResult[9] = A;
+        tmp12 = A;
         let tmpResult = tmp(tmp2[9]);
       }
       const fn = function u() {
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       let obj = channelId(senderId[8]);
     }
-  : (channelId) => {
+  : function WasThisHelpfulSection(channelId) {
       channelId = channelId.channelId;
       const warningId = channelId.warningId;
       const senderId = channelId.senderId;
@@ -425,7 +425,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           warningId,
           feedbackType,
         );
-        const tmp6 = feedbackType === constants.UPVOTE ? v65535 : closure_2_8;
+        const tmp6 = feedbackType === constants.UPVOTE ? collapsed : closure_2_8;
         const designSystemsNotificationComponents =
           DesignSystemsNotificationComponentsExperiment.getDesignSystemsNotificationComponents(
             "WasThisHelpfulSectionNative",
@@ -450,7 +450,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl = util.intl;
           obj4.content = intl.string(util.t["gd/Yqs"]);
-          obj4.icon = _modDef8951;
+          obj4.icon = _modDef10387;
           obj4.IconComponent = ShieldIcon.ShieldIcon;
           obj4.iconColor = iconColor;
           obj4.containerStyle = toastContainer.toastContainer;

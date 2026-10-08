@@ -12,11 +12,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/ApplicationFrecencyHooks.tsx");
 
 export const useSortApplicationsViaFrecency = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr, arr2) => {
+  ? function useSortApplicationsViaFrecency(arr, arr2) {
       _require = arr;
       const cResult = require("c").c(31);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function l() {
+        const fn = function p() {
           const FrecencyUserSettingsActionCreators = closure_0(stateFromStores[5]).FrecencyUserSettingsActionCreators;
           const ifUncached = FrecencyUserSettingsActionCreators.loadIfUncached(str.FRECENCY_AND_FAVORITES_SETTINGS);
         };
@@ -270,7 +270,7 @@ export const useSortApplicationsViaFrecency = ReactCompilerGating.isReactCompile
       arr4 = tmp14;
       const tmpResult = require("initialize");
     }
-  : (arg0, arg1) => {
+  : function useSortApplicationsViaFrecency(arg0, arg1) {
       _require = arg0;
       const effect = memo.useEffect(() => {
         const FrecencyUserSettingsActionCreators = closure_0(stateFromStores[5]).FrecencyUserSettingsActionCreators;

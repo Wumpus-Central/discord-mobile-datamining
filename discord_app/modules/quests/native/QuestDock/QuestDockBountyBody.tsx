@@ -13,7 +13,7 @@ import BountiesModalTypes from "../BountiesModal/BountiesModalTypes.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(5630).QuestDockMode;
+const QuestDockMode = fn(5977).QuestDockMode;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -21,7 +21,7 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDo
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function QuestDockBountyBody() {
         const cResult = questDockBounty(getQuestImpressionId[4]).c(25);
         let obj = questDockBounty(getQuestImpressionId[4]);
         questDockBounty = questDockBounty(getQuestImpressionId[6]).useQuestDockBounty();
@@ -48,15 +48,39 @@ export default noop.memo(
           }
         } else {
           if (cResult[1] !== num) {
-            const tmpResult = tmp(tmp2[11]);
+            class I {
+              constructor() {
+                obj = closure_0(closure_2[13]);
+                obj1 = {
+                  type: closure_0(closure_2[14]).AdUserActionType.CLICK_INTERNAL,
+                  adCreativeType: closure_0(closure_2[15]).AdCreativeType.BOUNTY,
+                  adCreativeId: closure_0.id,
+                  questContentCTA: closure_0(closure_2[16]).QuestContentCTA.START_BOUNTY,
+                  surfaceId: closure_0(closure_2[17]).QuestContent.QUEST_BAR_MOBILE,
+                  sourceQuestContent: closure_0(closure_2[17]).QuestContent.QUEST_BAR_MOBILE,
+                  impressionId: closure_2(),
+                };
+                captureAdUserActionResult = obj.captureAdUserAction(obj1);
+                obj3 = closure_1(closure_2[18]);
+                obj5 = {
+                  bountyId: closure_0.id,
+                  sourceQuestContent: closure_0(closure_2[17]).QuestContent.QUEST_BAR_MOBILE,
+                  variant: closure_0(closure_2[19]).BountiesModalVariant.SINGLE_VIDEO,
+                  bounty: closure_0,
+                };
+                showModalResult = obj3.showModal(obj5);
+                tmp3 = setRestingQuestDockMode(QuestDockMode.COLLAPSED);
+                return;
+              }
+            }
             const obj5 = { progressSeconds: 0, targetSeconds: num };
-            const bountyWatchCtaText = tmpResult.getBountyWatchCtaText(
-              tmp(tmp2[12]).getWatchVideoTaskDetailsFromProgress(obj5),
+            const bountyWatchCtaText = tmp(tmp2[11]).getBountyWatchCtaText(
+              obj6.getWatchVideoTaskDetailsFromProgress(obj5),
             );
             cResult[1] = num;
             cResult[2] = bountyWatchCtaText;
             let tmp7 = bountyWatchCtaText;
-            const tmpResult2 = tmp(tmp2[12]);
+            const tmpResult = tmp(tmp2[11]);
           } else {
             tmp7 = cResult[2];
           }
@@ -68,7 +92,7 @@ export default noop.memo(
               if (cResult[7] === questDockBounty.cta) {
                 if (cResult[8] === questDockBounty.id) {
                   if (cResult[9] === getQuestImpressionId) {
-                    let tmp15 = cResult[10];
+                    let tmp14 = cResult[10];
                   }
                   class E {
                     constructor() {
@@ -93,7 +117,7 @@ export default noop.memo(
                   }
                   if (cResult[11] === !isRendered) {
                     if (cResult[12] === isRendered) {
-                      let tmp17 = cResult[13];
+                      let tmp16 = cResult[13];
                     }
                     class E {
                       constructor() {
@@ -114,7 +138,7 @@ export default noop.memo(
                       }
                     }
                     if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-                      const tmp23 = jsx(tmp4(tmp2[23]), {});
+                      const tmp22 = jsx(tmp4(tmp2[23]), {});
                       class E {
                         constructor() {
                           obj = closure_0(closure_2[20]);
@@ -133,10 +157,10 @@ export default noop.memo(
                           return;
                         }
                       }
-                      cResult[14] = tmp23;
-                      let tmp21 = tmp23;
+                      cResult[14] = tmp22;
+                      let tmp20 = tmp22;
                     } else {
-                      tmp21 = cResult[14];
+                      tmp20 = cResult[14];
                     }
                     let str3 = questDockBounty.productName;
                     if (str3 == null) {
@@ -163,23 +187,23 @@ export default noop.memo(
                           return;
                         }
                       }
-                      cResult[15] = tmp25;
-                      let tmp24 = tmp25;
+                      cResult[15] = tmp24;
+                      let tmp23 = tmp24;
                     } else {
-                      tmp24 = cResult[15];
+                      tmp23 = cResult[15];
                     }
                     if (cResult[16] === questDockBounty.cta.buttonLabel) {
-                      if (cResult[17] === tmp15) {
-                        let tmp26 = cResult[18];
+                      if (cResult[17] === tmp14) {
+                        let tmp25 = cResult[18];
                       }
                       if (cResult[19] === tmp7) {
                         if (cResult[20] === tmp13) {
-                          if (cResult[21] === tmp17) {
+                          if (cResult[21] === tmp16) {
                             if (cResult[22] === str3) {
-                              if (cResult[23] === tmp26) {
-                                let tmp29 = cResult[24];
+                              if (cResult[23] === tmp25) {
+                                let tmp28 = cResult[24];
                               }
-                              return tmp29;
+                              return tmp28;
                             }
                           }
                         }
@@ -202,60 +226,60 @@ export default noop.memo(
                           return;
                         }
                       }
-                      const obj6 = {
-                        rewardTile: tmp17,
-                        contentBadge: tmp21,
+                      const obj7 = {
+                        rewardTile: tmp16,
+                        contentBadge: tmp20,
                         title: str3,
-                        description: tmp24,
+                        description: tmp23,
                         ctaText: tmp7,
                         onCtaPress: tmp13,
                         ctaButtonVariant: "primary",
-                        secondaryCta: tmp26,
+                        secondaryCta: tmp25,
                       };
-                      const tmp30 = jsx(tmp4(tmp2[21]), {
-                        rewardTile: tmp17,
-                        contentBadge: tmp21,
+                      const tmp29 = jsx(tmp4(tmp2[21]), {
+                        rewardTile: tmp16,
+                        contentBadge: tmp20,
                         title: str3,
-                        description: tmp24,
+                        description: tmp23,
                         ctaText: tmp7,
                         onCtaPress: tmp13,
                         ctaButtonVariant: "primary",
-                        secondaryCta: tmp26,
+                        secondaryCta: tmp25,
                       });
                       cResult[19] = tmp7;
                       cResult[20] = tmp13;
-                      cResult[21] = tmp17;
+                      cResult[21] = tmp16;
                       cResult[22] = str3;
-                      cResult[23] = tmp26;
-                      cResult[24] = tmp30;
-                      tmp29 = tmp30;
+                      cResult[23] = tmp25;
+                      cResult[24] = tmp29;
+                      tmp28 = tmp29;
                     }
-                    const obj7 = {
+                    const obj8 = {
                       variant: "secondary-overlay",
                       size: "md",
                       icon: tmp4(tmp2[25]),
                       accessibilityLabel: questDockBounty.cta.buttonLabel,
-                      onPress: tmp15,
+                      onPress: tmp14,
                     };
-                    const tmp28 = jsx(tmp(tmp2[24]).IconButton, {
+                    const tmp27 = jsx(tmp(tmp2[24]).IconButton, {
                       variant: "secondary-overlay",
                       size: "md",
                       icon: tmp4(tmp2[25]),
                       accessibilityLabel: questDockBounty.cta.buttonLabel,
-                      onPress: tmp15,
+                      onPress: tmp14,
                     });
                     cResult[16] = questDockBounty.cta.buttonLabel;
-                    cResult[17] = tmp15;
-                    cResult[18] = tmp28;
-                    tmp26 = tmp28;
+                    cResult[17] = tmp14;
+                    cResult[18] = tmp27;
+                    tmp25 = tmp27;
                   }
-                  const obj8 = {
+                  const obj9 = {
                     assetUrl: tmp4(tmp2[22]),
                     isAnimatedAsset: true,
                     paused: !isRendered,
                     withAnimation: isRendered,
                   };
-                  const tmp19 = jsx(tmp(tmp2[21]).QuestDockBodyRewardTile, {
+                  const tmp18 = jsx(tmp(tmp2[21]).QuestDockBodyRewardTile, {
                     assetUrl: tmp4(tmp2[22]),
                     isAnimatedAsset: true,
                     paused: !isRendered,
@@ -263,8 +287,8 @@ export default noop.memo(
                   });
                   cResult[11] = !isRendered;
                   cResult[12] = isRendered;
-                  cResult[13] = tmp19;
-                  tmp17 = tmp19;
+                  cResult[13] = tmp18;
+                  tmp16 = tmp18;
                 }
               }
               class E {
@@ -289,18 +313,43 @@ export default noop.memo(
               cResult[8] = questDockBounty.id;
               cResult[9] = getQuestImpressionId;
               cResult[10] = E;
-              tmp15 = E;
+              tmp14 = E;
+            }
+          }
+          class I {
+            constructor() {
+              obj = closure_0(closure_2[13]);
+              obj1 = {
+                type: closure_0(closure_2[14]).AdUserActionType.CLICK_INTERNAL,
+                adCreativeType: closure_0(closure_2[15]).AdCreativeType.BOUNTY,
+                adCreativeId: closure_0.id,
+                questContentCTA: closure_0(closure_2[16]).QuestContentCTA.START_BOUNTY,
+                surfaceId: closure_0(closure_2[17]).QuestContent.QUEST_BAR_MOBILE,
+                sourceQuestContent: closure_0(closure_2[17]).QuestContent.QUEST_BAR_MOBILE,
+                impressionId: closure_2(),
+              };
+              captureAdUserActionResult = obj.captureAdUserAction(obj1);
+              obj3 = closure_1(closure_2[18]);
+              obj5 = {
+                bountyId: closure_0.id,
+                sourceQuestContent: closure_0(closure_2[17]).QuestContent.QUEST_BAR_MOBILE,
+                variant: closure_0(closure_2[19]).BountiesModalVariant.SINGLE_VIDEO,
+                bounty: closure_0,
+              };
+              showModalResult = obj3.showModal(obj5);
+              tmp3 = setRestingQuestDockMode(QuestDockMode.COLLAPSED);
+              return;
             }
           }
           cResult[3] = questDockBounty;
           cResult[4] = getQuestImpressionId;
           cResult[5] = setRestingQuestDockMode;
-          cResult[6] = tmp14;
-          tmp13 = tmp14;
+          cResult[6] = I;
+          tmp13 = I;
         }
         const obj4 = questDockBounty(getQuestImpressionId[9]);
       }
-    : () => {
+    : function QuestDockBountyBody() {
         const isRendered = noop.useContext(setRestingQuestDockMode(getQuestImpressionId[5])).isRendered;
         questDockBounty = questDockBounty(getQuestImpressionId[6]).useQuestDockBounty();
         let obj = questDockBounty(getQuestImpressionId[6]);

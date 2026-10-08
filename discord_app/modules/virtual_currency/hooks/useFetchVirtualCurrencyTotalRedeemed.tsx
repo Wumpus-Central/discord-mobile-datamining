@@ -11,12 +11,12 @@ const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyTotalRedeemed.tsx");
 
 export const useFetchVirtualCurrencyTotalRedeemed = ReactCompilerGating.isReactCompilerEnabled()
-  ? (disableFetch) => {
+  ? function useFetchVirtualCurrencyTotalRedeemed(disableFetch) {
       _require = disableFetch;
       const cResult = require("c").c(16);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [error];
-        const fn = function n() {
+        const fn = function u() {
           return {
             totalRedeemed: error.totalRedeemed,
             isFetching: error.isFetchingTotalRedeemed,
@@ -89,7 +89,7 @@ export const useFetchVirtualCurrencyTotalRedeemed = ReactCompilerGating.isReactC
       if (disableFetch != null) {
         disableFetch2 = disableFetch.disableFetch;
       }
-      const fn2 = function u() {
+      const fn2 = function s() {
         disableFetch = undefined;
         if (disableFetch != null) {
           disableFetch = disableFetch.disableFetch;
@@ -112,7 +112,7 @@ export const useFetchVirtualCurrencyTotalRedeemed = ReactCompilerGating.isReactC
       cResult[6] = fn2;
       tmp10 = fn2;
     }
-  : (disableFetch) => {
+  : function useFetchVirtualCurrencyTotalRedeemed(disableFetch) {
       _require = disableFetch;
       const items = [error];
       const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({

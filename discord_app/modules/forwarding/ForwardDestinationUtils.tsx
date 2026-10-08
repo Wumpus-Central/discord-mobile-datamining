@@ -14,7 +14,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelRecord = fn(2055);
+const ChannelRecord = fn(2067);
 ({
   ChannelRecordBase: hasOwnProperty,
   isGuildChannelType: metroRequire,
@@ -25,11 +25,11 @@ const Constants = fn(1085);
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function useSelectedDestinationChannel(arr) {
       const cResult = require("c").c(8);
       if (cResult[0] !== arr) {
-        const mapped = arr.map(tmp(10724).getChannelIdFromDestinationId);
-        const found = mapped.find(tmp(1375).isNotNullish);
+        const mapped = arr.map(tmp(11577).getChannelIdFromDestinationId);
+        const found = mapped.find(tmp(1387).isNotNullish);
         cResult[0] = arr;
         cResult[1] = found;
         let tmp4 = found;
@@ -74,9 +74,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp11;
     }
-  : (arr) => {
-      const mapped = arr.map(found(10724).getChannelIdFromDestinationId);
-      found = mapped.find(found(1375).isNotNullish);
+  : function useSelectedDestinationChannel(arr) {
+      const mapped = arr.map(found(11577).getChannelIdFromDestinationId);
+      found = mapped.find(found(1387).isNotNullish);
       const items = [ChannelStore];
       const items1 = [found];
       const stateFromStores = found(504).useStateFromStores(items, () => ChannelStore.getChannel(found), items1);
@@ -92,7 +92,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSelectedDestinationNames(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -112,8 +112,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               if (null != user) {
                 nickname = nickname.getNickname(user.id);
                 if (nickname == null) {
-                  nickname = closure_1_1(4728).getName(user);
-                  const obj2 = closure_1_1(4728);
+                  nickname = closure_1_1(4922).getName(user);
+                  const obj2 = closure_1_1(4922);
                 }
                 tmp13 = nickname;
               }
@@ -122,7 +122,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               channel = channel.getChannel(id);
               let channelName = null;
               if (null != channel) {
-                const obj = closure_1_0(5049);
+                const obj = closure_1_0(5417);
                 channelName = obj.computeChannelName(channel, user, nickname, true);
               }
               return channelName;
@@ -143,7 +143,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       return require("initialize").useStateFromStoresArray(first, tmp8, tmp9);
     }
-  : (arg0) => {
+  : function useSelectedDestinationNames(arg0) {
       _require = arg0;
       const items = [UserStore, ChannelStore, RelationshipStore];
       const items1 = [arg0];
@@ -158,8 +158,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               if (null != user) {
                 nickname = nickname.getNickname(user.id);
                 if (nickname == null) {
-                  nickname = closure_1_1(4728).getName(user);
-                  const obj2 = closure_1_1(4728);
+                  nickname = closure_1_1(4922).getName(user);
+                  const obj2 = closure_1_1(4922);
                 }
                 tmp13 = nickname;
               }
@@ -168,7 +168,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               channel = channel.getChannel(id);
               let channelName = null;
               if (null != channel) {
-                const obj = closure_1_0(5049);
+                const obj = closure_1_0(5417);
                 channelName = obj.computeChannelName(channel, user, nickname, true);
               }
               return channelName;
@@ -218,7 +218,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
     if (null != channel) {
       if (obj.isChannelOrGuildNSFW(channel)) {
         if (tmp2) {
-          tmp12(5106);
+          tmp12(5930);
         }
         const obj2 = { label: null, lineClamp: 2 };
         const intl = tmp12(1126).intl;
@@ -234,10 +234,10 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           if (currentUser != null) {
             nsfwAllowed = currentUser.nsfwAllowed;
           }
-          let result = tmp12(5108).shouldShowTiggerPawtect();
+          let result = tmp12(5905).shouldShowTiggerPawtect();
           if (result) {
-            result = tmp12(5587).isFeatureAgeGated(tmp12(5588).AgeGatedFeature.AGE_GATED_SPACES);
-            const tmp12Result10 = tmp12(5587);
+            result = tmp12(5918).isFeatureAgeGated(tmp12(5917).AgeGatedFeature.AGE_GATED_SPACES);
+            const tmp12Result10 = tmp12(5918);
           }
           let tmp19 = !tmp18;
           if (false !== nsfwAllowed) {
@@ -250,9 +250,9 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
             }).disableAgeRestrictedDestinations;
           }
           flag2 = disableAgeRestrictedDestinations;
-          const tmp12Result9 = tmp12(5108);
+          const tmp12Result9 = tmp12(5905);
         }
-        tmp12Result8 = tmp12(5106);
+        tmp12Result8 = tmp12(5930);
       }
       if (flag2) {
         const obj3 = { label: null, lineClamp: 2 };
@@ -279,9 +279,9 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
                 obj5.label = intl3.string(tmp12(1126).t.Wr4RIX);
                 return obj5;
               }
-              tmp12Result12 = tmp12(5433);
+              tmp12Result12 = tmp12(5743);
             }
-            tmp12Result11 = tmp12(5433);
+            tmp12Result11 = tmp12(5743);
           } else {
             const messageSnapshots2 = components.messageSnapshots;
           }
@@ -292,14 +292,14 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
               obj6.label = intl4.string(tmp12(1126).t.Wr4RIX);
               return obj6;
             }
-            tmp12Result13 = tmp12(5433);
+            tmp12Result13 = tmp12(5743);
           }
           const items = [];
           const messageSnapshots3 = components.messageSnapshots;
-          const tmp12Result14 = tmp12(5435);
+          const tmp12Result14 = tmp12(5745);
           HermesBuiltin.arraySpread(
             messageSnapshots3.flatMap((message) => type(dependencyMap[14]).getMessageStickers(message.message)),
-            HermesBuiltin.arraySpread(tmp12(5435).getMessageStickers(components), 0),
+            HermesBuiltin.arraySpread(tmp12(5745).getMessageStickers(components), 0),
           );
           if (items.length > 0) {
             if (!PermissionStore.can(constants2.USE_EXTERNAL_STICKERS, type)) {
@@ -334,7 +334,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           } else {
             const messageSnapshots4 = components.messageSnapshots;
           }
-          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(5435).getMessageStickers(components), 0);
+          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(5745).getMessageStickers(components), 0);
         }
       }
       obj = require("AgeGateUtils");
@@ -344,7 +344,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
 export { isRatelimitedInChannel };
 export const useSelectedDestinationNames = tmp5;
 export const useDestinationNamesWithSlowmode = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useDestinationNamesWithSlowmode(arg0) {
       _require = arg0;
       const cResult = require("c").c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -396,7 +396,7 @@ export const useDestinationNamesWithSlowmode = ReactCompilerGating.isReactCompil
         tmp10 = cResult[4];
       }
       if (cResult[5] !== stateFromStoresArray) {
-        const fn2 = function p() {
+        const fn2 = function f() {
           return stateFromStoresArray.map((item) =>
             closure_1_0(closure_1_2[25]).computeChannelName(item, closure_1_11, closure_1_10, true),
           );
@@ -414,7 +414,7 @@ export const useDestinationNamesWithSlowmode = ReactCompilerGating.isReactCompil
       const tmpResult = require("initialize");
       return require("initialize").useStateFromStoresArray(tmp10, tmp13, tmp14);
     }
-  : (arg0) => {
+  : function useDestinationNamesWithSlowmode(arg0) {
       _require = arg0;
       const items = [ChannelStore, PermissionStore];
       const items1 = [arg0];

@@ -33,7 +33,7 @@ function getContentCategory() {
   items1[1] = obj2;
   return items1;
 }
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -42,7 +42,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsSensitiveContentFilters() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { sections: null };
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : () => {
+  : function UserSettingsSensitiveContentFilters() {
       const node = noop.useMemo(() => {
         const obj2 = { sections: null };
         const items = [...closure_1_6()];

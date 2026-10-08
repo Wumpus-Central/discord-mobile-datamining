@@ -9,14 +9,14 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ header: { alignSelf: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/provisional_accounts/native/ProvisionalAccountNoCallAllowed.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ProvisionalAccountNoCallAllowed() {
       const cResult = c.c(7);
       const tmp4 = closure_5();
       if (cResult[0] !== tmp4.header) {
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp17;
     }
-  : () => {
+  : function ProvisionalAccountNoCallAllowed() {
       const obj = { header: null, title: null, content: null, actions: null };
       const tmp = closure_5();
       obj.header = jsx(CircleErrorIcon.CircleErrorIcon, { size: "lg", style: closure_5().header });

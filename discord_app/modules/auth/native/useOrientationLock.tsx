@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/useOrientationLock.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function usePortraitOrientationOnly() {
       const cResult = require("c").c(3);
       const tmp2 = useWideAuthViewDefault();
       _require = tmp2;
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp3, tmp4);
     }
-  : () => {
+  : function usePortraitOrientationOnly() {
       const tmp = useWideAuthViewDefault();
       closure_0 = tmp;
       const items = [tmp];

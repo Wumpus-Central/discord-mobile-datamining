@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/BlockedPaymentsCountryActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function BlockedPaymentsCountryActionSheet() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { children: jsx(BlockedPaymentsCountryDisplayDefault, {}) };
@@ -23,4 +23,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => jsx(Sheet_BottomSheet.BottomSheet, { children: jsx(BlockedPaymentsCountryDisplayDefault, {}) });
+  : function BlockedPaymentsCountryActionSheet() {
+      return jsx(Sheet_BottomSheet.BottomSheet, { children: jsx(BlockedPaymentsCountryDisplayDefault, {}) });
+    };

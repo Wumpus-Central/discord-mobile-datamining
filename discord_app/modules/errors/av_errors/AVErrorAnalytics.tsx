@@ -2,8 +2,8 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import ProcessUtilsDefault from "../../../utils/ProcessUtils.native.tsx";
 import CrossPlatformNativeUtilsDefault from "../../../utils/CrossPlatformNativeUtils.native.tsx";
-import VideoQualityStats from "../../../lib/VideoQualityStats.tsx";
 import WindowVisibilityVideoManager2 from "../../../lib/WindowVisibilityVideoManager.tsx";
+import VideoQualityStats from "../../../lib/VideoQualityStats.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import MediaEngineStatsStore from "../../media_engine/MediaEngineStatsStore.tsx";
 import ApplicationStreamingSettingsStore from "../../../stores/ApplicationStreamingSettingsStore.tsx";
@@ -80,9 +80,9 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   }
   return null;
 }
-const getSystemAnalyticsInfo = fn(4941).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(7425).getSystemAnalyticsInfo;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const Constants = fn(4921);
+const Constants = fn(5115);
 ({ MediaEngineContextTypes: closure_14, SIMULCAST_HQ_QUALITY: closure_15 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");

@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     paddingVertical: 16,
@@ -47,10 +47,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/NoPermsState.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function EmptyState() {
       const cResult = c.c(10);
       const tmp4 = closure_7();
-      const tmp5Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11752 : 11753);
+      const tmp5Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11818 : 11819);
       const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
         AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
       );
@@ -102,9 +102,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: tmp4.image, resizeMode: "contain", source: tmp5Result };
       const tmpResult = AppLauncherNativeUtils;
     }
-  : () => {
+  : function EmptyState() {
       const tmp = closure_7();
-      const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11752 : 11753);
+      const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11818 : 11819);
       const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
         AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
       );

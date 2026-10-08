@@ -11,7 +11,7 @@ if ("default" in resolveAssetSource) {
   resolveAssetSource = resolveAssetSource.default;
 }
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onLoadStart: true, onProgress: true, onError: true, onLoad: true, onLoadEnd: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = { source: { process: resolveAssetSource }, resizeMode: true, tintColor: _mod26.colorAttribute, placeholder: true, enableAnimation: true, paused: true, manualPlayback: true, fade: true, usesSmallCache: true };
+__INTERNAL_VIEW_CONFIG.validAttributes = { source: { process: resolveAssetSource }, resizeMode: true, tintColor: _mod26.colorAttribute, blurRadius: true, placeholder: true, autoPlay: true, enableAnimation: true, paused: true, fadeDuration: true, usesSmallCache: true };
 const value = module_65.get("DCDFastImageView", () => obj);
 const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/FastImageNativeComponent.tsx");
 

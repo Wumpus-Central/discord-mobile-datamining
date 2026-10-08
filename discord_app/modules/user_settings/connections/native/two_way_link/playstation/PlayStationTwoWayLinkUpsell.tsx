@@ -6,14 +6,14 @@ import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators.tsx";
 import OneWayToTwoWayLinkUpsell2 from "../OneWayToTwoWayLinkUpsell.tsx";
-import _modDef14793 from "../../../../../../../_runtime/metro/14793__.js";
+import _modDef15054 from "../../../../../../../_runtime/metro/15054__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Constants = fn(1085);
 ({ HelpdeskArticles: c3, AnalyticsLocations: closure_4, PlatformTypes: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const PlayStationTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PlayStationTwoWayLinkUpsell() {
       const cResult = c.c(8);
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -42,8 +42,8 @@ export const PlayStationTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEn
         [tmp5, tmp6, tmp7] = cResult;
       }
       if (cResult[3] !== tmp4.upsellImage) {
-        const obj4 = { style: tmp4.upsellImage, source: _modDef14793, resizeMode: "contain" };
-        const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef14793, resizeMode: "contain" });
+        const obj4 = { style: tmp4.upsellImage, source: _modDef15054, resizeMode: "contain" };
+        const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef15054, resizeMode: "contain" });
         cResult[3] = tmp4.upsellImage;
         cResult[4] = tmp17;
         let tmp13 = tmp17;
@@ -51,41 +51,66 @@ export const PlayStationTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEn
         tmp13 = cResult[4];
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function u() {
-          const items = [constants.RELINK_UPSELL];
-          return PlayStationLinkModalActionCreatorsDefault.showModal(items, constants2.PLAYSTATION);
-        };
-        cResult[5] = fn;
-        let tmp18 = fn;
+        class T {
+          constructor() {
+            obj = closure_1_1(closure_1_2[11]);
+            items = [];
+            items[0] = closure_1_4.RELINK_UPSELL;
+            return obj.showModal(items, closure_1_5.PLAYSTATION);
+          }
+        }
+        cResult[5] = T;
       } else {
-        tmp18 = cResult[5];
+        class T {
+          constructor() {
+            obj = closure_1_1(closure_1_2[11]);
+            items = [];
+            items[0] = closure_1_4.RELINK_UPSELL;
+            return obj.showModal(items, closure_1_5.PLAYSTATION);
+          }
+        }
       }
       if (cResult[6] !== tmp13) {
+        class T {
+          constructor() {
+            obj = closure_1_1(closure_1_2[11]);
+            items = [];
+            items[0] = closure_1_4.RELINK_UPSELL;
+            return obj.showModal(items, closure_1_5.PLAYSTATION);
+          }
+        }
         const obj5 = {
           title: tmp6,
           body: tmp7,
           img: tmp13,
           newIndicatorDismissibleContent: dismissible_content.DismissibleContent.PS_ONE_WAY_RECONNECT,
-          onPress: tmp18,
+          onPress: T,
         };
-        const tmp21 = (
+        const tmp20 = (
           <tmp5
             title={tmp6}
             body={tmp7}
             img={tmp13}
             newIndicatorDismissibleContent={dismissible_content.DismissibleContent.PS_ONE_WAY_RECONNECT}
-            onPress={tmp18}
+            onPress={T}
           />
         );
         cResult[6] = tmp13;
-        cResult[7] = tmp21;
-        let tmp19 = tmp21;
+        cResult[7] = tmp20;
+        const tmp19 = tmp20;
       } else {
-        tmp19 = cResult[7];
+        class T {
+          constructor() {
+            obj = closure_1_1(closure_1_2[11]);
+            items = [];
+            items[0] = closure_1_4.RELINK_UPSELL;
+            return obj.showModal(items, closure_1_5.PLAYSTATION);
+          }
+        }
       }
       return tmp19;
     }
-  : () => {
+  : function PlayStationTwoWayLinkUpsell() {
       const tmp = closure_7();
       const articleURL = HelpdeskUtilsDefault.getArticleURL(constants.PS_CONNECTION);
       const obj2 = { title: null, body: null, img: null, newIndicatorDismissibleContent: null, onPress: null };
@@ -94,7 +119,7 @@ export const PlayStationTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEn
       const intl2 = util.intl;
       obj2.body = intl2.format(util.t.lTZBit, { help_article: articleURL });
       const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
-      obj3.source = _modDef14793;
+      obj3.source = _modDef15054;
       obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
       obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.PS_ONE_WAY_RECONNECT;
       obj2.onPress = function onPress() {

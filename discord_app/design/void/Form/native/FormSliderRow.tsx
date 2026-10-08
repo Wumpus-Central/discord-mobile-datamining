@@ -1,19 +1,19 @@
 // discord_app/design/void/Form/native/FormSliderRow.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import FormRowDefault from "FormRow.tsx";
-import _modDef7963 from "../../../../../_runtime/metro/07963__.js";
+import _modDef8380 from "../../../../../_runtime/metro/08380__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const Text_Text = Card(4892);
-const Card2 = Card(6002);
-const RedesignCompat = Card(6080);
+const Text_Text = Card(5086);
+const Card2 = Card(6186);
+const RedesignCompat = Card(6266);
 require = fn;
 let closure_3 = ["label", "trailing"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({
   labels: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
   slider: { marginStart: -4, marginTop: 8 },
@@ -23,7 +23,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormSliderRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FormSliderRow(arg0) {
       let Card = require;
       let tmp = dependencyMap;
       const cResult = c.c(24);
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = {};
             const merged = Object.assign(tmp4);
             obj4.style = tmp10.slider;
-            const tmp41 = React5(_modDef7963, obj4);
+            const tmp41 = React5(_modDef8380, obj4);
             cResult[10] = tmp4;
             cResult[11] = tmp10.slider;
             cResult[12] = tmp41;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[19] !== tmp4) {
             const obj6 = {};
             const merged1 = Object.assign(tmp4);
-            const tmp22 = React5(_modDef7963, obj6);
+            const tmp22 = React5(_modDef8380, obj6);
             cResult[19] = tmp4;
             cResult[20] = tmp22;
             let tmp15 = tmp22;
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = tmp14;
       }
     }
-  : (arg0) => {
+  : function FormSliderRow(arg0) {
       ({ label, trailing } = arg0);
       const merged = Object.assign(arg0, Object.assign({ label: 0, trailing: 0 }));
       const context = noop.useContext(RedesignCompat.RedesignCompatContext);
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = {};
         const merged1 = Object.assign(merged);
         obj5.style = tmp5.slider;
-        items1[1] = React5(_modDef7963, obj5);
+        items1[1] = React5(_modDef8380, obj5);
         obj2.children = items1;
         let tmp6Result = closure_1_8(Card2.Card, obj2);
       } else {
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items2 = [React5(FormRowDefault, obj6)];
         const obj7 = {};
         const merged2 = Object.assign(merged);
-        items2[1] = React5(_modDef7963, obj7);
+        items2[1] = React5(_modDef8380, obj7);
         obj.children = items2;
         tmp6Result = closure_1_8(options, obj);
       }

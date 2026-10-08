@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/components/useModalPanGesture.tsx
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -15,7 +15,7 @@ const __initData = { code: "function useModalPanGestureTsx7(){const{onStart,runO
 const __initData2 = { code: "function useModalPanGestureTsx8(){const{runOnJS,ModalActionCreators}=this.__closure;runOnJS(ModalActionCreators.pop)();}" };
 let result = size.fileFinishedImporting("modules/video_calls/native/components/useModalPanGesture.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((thresholdTranslate) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useModalPanGesture(thresholdTranslate) {
   const cResult = maxTranslate(height[1]).c(7);
   ({ thresholdVelocity, maxTranslate } = thresholdTranslate);
   thresholdTranslate = thresholdTranslate.thresholdTranslate;
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thresholdTransla
   cResult[5] = translateY;
   cResult[6] = useModalPanGestureTsx2;
   tmp5 = useModalPanGestureTsx2;
-}) : ((thresholdVelocity) => {
+}) : (function useModalPanGesture(thresholdVelocity) {
   let num = thresholdVelocity.thresholdVelocity;
   if (num === undefined) {
     num = 500;

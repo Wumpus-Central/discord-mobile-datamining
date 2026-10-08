@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ShineAnimationConfig = Object.freeze({ FLASH_TIME_PERCENT: 0.72, FLASH_DURATION_PERCENT: 0.08 });
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { overflow: "hidden" }, shineContainer: null, shine: null, shineInner: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.shineContainer = {};
@@ -42,7 +42,7 @@ let result = size.fileFinishedImporting("components_native/premium/ShineAnimatio
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function ShineAnimation(arg0) {
         const cResult = sharedValue(hexResult1[6]).c(24);
         ({ source, style } = arg0);
         const tmp4 = closure_9();
@@ -227,7 +227,7 @@ export default noop.memo(
           flashEndColor: hexResult1,
         };
       }
-    : (arg0) => {
+    : function ShineAnimation(arg0) {
         let sharedValue;
         importDefault = undefined;
         let hexResult1;

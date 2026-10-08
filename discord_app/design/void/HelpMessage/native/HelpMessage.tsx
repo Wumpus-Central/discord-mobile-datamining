@@ -27,7 +27,7 @@ function getIcon(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_8, borderWidth: 1, borderStyle: "solid", gap: nativeDefault.space.PX_8 },
   row: { display: "flex", flexDirection: "row", alignItems: "center" },
@@ -71,7 +71,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/HelpMessage/native/HelpMessage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function HelpMessage(arg0) {
       const cResult = c.c(21);
       ({ children, messageType, textVariant, textColor, borderRadius, button } = arg0);
       let str = "text-sm/medium";
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items2;
       tmp8 = items2;
     }
-  : (children) => {
+  : function HelpMessage(children) {
       ({ messageType, textVariant } = children);
       if (textVariant === undefined) {
         textVariant = "text-sm/medium";

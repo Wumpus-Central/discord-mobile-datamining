@@ -65,8 +65,8 @@ export const planVersions = function planVersions(memo) {
   }
   return map;
 };
-export const planCardExpanded = function planCardExpanded(c19, render_id, arg2) {
-  value = c19.get(render_id);
+export const planCardExpanded = function planCardExpanded(c18, render_id, arg2) {
+  value = c18.get(render_id);
   if (value == null) {
     value = !arg2;
   }

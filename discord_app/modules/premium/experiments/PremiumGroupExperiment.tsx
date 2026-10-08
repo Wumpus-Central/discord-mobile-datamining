@@ -13,7 +13,7 @@ let closure_2 = ApexExperiment.createApexExperiment({
 const result = size.fileFinishedImporting("modules/premium/experiments/PremiumGroupExperiment.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function usePremiumGroupExperiment(location) {
       const cResult = c.c(2);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -26,4 +26,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location: location.location }).enabled;
+  : function usePremiumGroupExperiment(location) {
+      return closure_2.useConfig({ location: location.location }).enabled;
+    };

@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, id) => {
+  ? function useGiftCodeErrorMessage(arg0, id) {
       _require = arg0;
       const cResult = require("c").c(11);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult2 = require("initialize");
     }
-  : (arg0, id) => {
+  : function useGiftCodeErrorMessage(arg0, id) {
       _require = arg0;
       let items = [GiftCodeStore];
       [first] = require("initialize").useStateFromStoresArray(items, () => {

@@ -51,7 +51,7 @@ export const canReactToMessage = function canReactToMessage(message, channel) {
   return canReactToMessageInternal(message, channel, items);
 };
 export const useCanReactToMessage = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useCanReactToMessage(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(4);
@@ -85,7 +85,7 @@ export const useCanReactToMessage = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useCanReactToMessage(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       let items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];

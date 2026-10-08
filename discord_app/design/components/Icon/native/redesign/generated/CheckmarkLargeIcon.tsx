@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod4584 from "../../../../../../../_runtime/metro/04584__.js";
+import _mod4776 from "../../../../../../../_runtime/metro/04776__.js";
 import BaseIconImage from "../../BaseIconImage.tsx";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx");
 
 export const CheckmarkLargeIcon = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CheckmarkLargeIcon(arg0) {
       const cResult = c.c(9);
       if (cResult[0] !== arg0) {
         ({ style, color } = arg0);
@@ -35,7 +35,7 @@ export const CheckmarkLargeIcon = ReactCompilerGating.isReactCompilerEnabled()
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod4584;
+        const tmpResult = _mod4776;
         cResult[4] = tmpResult;
         let tmp10 = tmpResult;
       } else {
@@ -58,7 +58,7 @@ export const CheckmarkLargeIcon = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = tmp14;
       const obj2 = { source: tmp10, color: INTERACTIVE_ICON_DEFAULT, style: tmp5 };
     }
-  : (color) => {
+  : function CheckmarkLargeIcon(color) {
       let INTERACTIVE_ICON_DEFAULT = color.color;
       if (INTERACTIVE_ICON_DEFAULT === undefined) {
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
@@ -66,7 +66,7 @@ export const CheckmarkLargeIcon = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
       const merged1 = Object.assign(merged);
       return jsx(BaseIconImage.BaseIconImage, {
-        source: _mod4584,
+        source: _mod4776,
         color: INTERACTIVE_ICON_DEFAULT,
         style: color.style,
       });

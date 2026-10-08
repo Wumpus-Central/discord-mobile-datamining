@@ -13,7 +13,7 @@ const View = fn(17).View;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     width: "100%",
@@ -54,7 +54,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function ChatBeginningRowJoinRequest(channelId) {
       const cResult = require("c").c(32);
       channelId = channelId.channelId;
       let obj = require("c");
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return null;
     }
-  : (channelId) => {
+  : function ChatBeginningRowJoinRequest(channelId) {
       channelId = channelId.channelId;
       let joinRequest;
       let joinRequestGuild;

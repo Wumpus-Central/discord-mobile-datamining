@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useVisibilityTransition.tsx");
 
 export const useVisibilityTransition = ReactCompilerGating.isReactCompilerEnabled()
-  ? (visible) => {
+  ? function useVisibilityTransition(visible) {
       const cResult = visible(entranceTiming[3]).c(3);
       visible = visible.visible;
       entranceTiming = visible.entranceTiming;
@@ -86,7 +86,7 @@ export const useVisibilityTransition = ReactCompilerGating.isReactCompilerEnable
       cResult[2] = obj3;
       tmp11 = obj3;
     }
-  : (visible) => {
+  : function useVisibilityTransition(visible) {
       visible = visible.visible;
       const entranceTiming = visible.entranceTiming;
       const exitTiming = visible.exitTiming;

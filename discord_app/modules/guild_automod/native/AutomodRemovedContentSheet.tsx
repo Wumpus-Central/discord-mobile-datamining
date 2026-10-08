@@ -15,7 +15,7 @@ const View = fn(17).View;
 const MessageFlags = fn(1085).MessageFlags;
 const jsx = fn(21).jsx;
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: null, blockedMessage: null };
 const tmp2 = new RowGeneratorDefault();
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -36,7 +36,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/AutomodRemovedContentSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (action) => {
+  ? function AutomodRemovedContentSheet(action) {
       const cResult = c.c(18);
       const tmp4 = closure_8();
       ({ message, thread, notice } = action.action);
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp19 = tmp21;
       }
     }
-  : (action) => {
+  : function AutomodRemovedContentSheet(action) {
       action = action.action;
       const tmp = closure_8();
       let message = action.message;
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         name = thread.name;
       }
       let obj2 = {
-        header: jsx(message(6651).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
+        header: jsx(message(6828).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
         children: null,
       };
       obj.subtitle = name;
@@ -212,7 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp4Result = <View style={tmp.blockedMessage}>{null}</View>;
       } else {
         const obj6 = { variant: "text-md/normal", color: "text-default", children: action.notice };
-        tmp4Result = jsx(tmp5(4892).Text, {
+        tmp4Result = jsx(tmp5(5086).Text, {
           variant: "text-md/normal",
           color: "text-default",
           children: action.notice,
@@ -220,8 +220,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj3.children = tmp4Result;
       obj2.children = <View style={tmp.content}>{null}</View>;
-      return jsx(message(6708).ActionSheet, {
-        header: jsx(message(6651).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
+      return jsx(message(6885).ActionSheet, {
+        header: jsx(message(6828).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
         children: null,
       });
     };

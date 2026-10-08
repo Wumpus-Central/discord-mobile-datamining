@@ -20,9 +20,29 @@ export const isValidCustomTypingIndicatorEmojiSelection = function isValidCustom
   }
   return tmp;
 };
-export const getEffectiveCustomTypingIndicatorAnimation = function getEffectiveCustomTypingIndicatorAnimation(emojis) {
-  if (3 === emojis.emojis.length) {
-    let UNSPECIFIED = emojis.animation;
+export const getCustomTypingIndicatorEmojisKey = function getCustomTypingIndicatorEmojisKey(emojis) {
+  const mapped = emojis.map((id) => {
+    let str;
+    if (id != null) {
+      str = id.id;
+    }
+    if (str == null) {
+      let name;
+      if (id != null) {
+        name = id.name;
+      }
+      str = name;
+    }
+    if (str == null) {
+      str = "";
+    }
+    return str;
+  });
+  return mapped.join(":");
+};
+export const getEffectiveCustomTypingIndicatorAnimation = function getEffectiveCustomTypingIndicatorAnimation(config) {
+  if (3 === config.emojis.length) {
+    let UNSPECIFIED = config.animation;
   } else {
     UNSPECIFIED = user.TypingIndicatorAnimation.UNSPECIFIED;
   }

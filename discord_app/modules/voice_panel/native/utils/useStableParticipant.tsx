@@ -22,7 +22,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(4917).ParticipantTypes;
+const ParticipantTypes = fn(5113).ParticipantTypes;
 const ReactCompilerGating = fn(558);
 function isStableStreamParticipant(participant) {
   let type;
@@ -57,7 +57,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, arg1, arg2) => {
+  ? function useStableParticipant(id, arg1, arg2) {
       _require = id;
       closure_1 = arg1;
       dependencyMap = arg2;
@@ -95,8 +95,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 userAvatarDecoration: null,
                 streamId: "Set",
                 ringing: null,
-                hasVideo: 465.988,
-                isSelf: -136,
+                hasVideo: 0,
+                isSelf: 1,
               };
               id = AuthenticationStore.getId();
               obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       tmp = _require;
     }
-  : (id, arg1, arg2) => {
+  : function useStableParticipant(id, arg1, arg2) {
       _require = id;
       closure_1 = arg1;
       dependencyMap = arg2;
@@ -212,8 +212,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   userAvatarDecoration: null,
                   streamId: "Set",
                   ringing: null,
-                  hasVideo: 465.988,
-                  isSelf: -136,
+                  hasVideo: 0,
+                  isSelf: 1,
                 };
                 id = AuthenticationStore.getId();
                 obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);

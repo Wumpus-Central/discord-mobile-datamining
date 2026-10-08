@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
-import _modDef4815 from "../../../../../_runtime/metro/04815__.js";
+import _modDef5009 from "../../../../../_runtime/metro/05009__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   header: {
     flexDirection: "row",
@@ -35,7 +35,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function EditGuildEventModalNavbar(arg0) {
       const cResult = c.c(40);
       ({ screen, onClose } = arg0);
       const tmp4 = closure_7();
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           const obj5 = {
                             accessibilityLabel: tmp35,
                             onPress: onClose,
-                            source: _modDef4815,
+                            source: _modDef5009,
                             style: tmp4.rightButton,
                           };
                           const tmp40 = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj5);
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp22 = items2;
       const tmp15 = _slicedToArray(items1, 2);
     }
-  : (screen) => {
+  : function EditGuildEventModalNavbar(screen) {
       screen = screen.screen;
       const tmp = closure_7();
       const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow(
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = util.intl;
       obj6.accessibilityLabel = intl2.string(util.t.cpT0Cq);
       obj6.onPress = screen.onClose;
-      obj6.source = _modDef4815;
+      obj6.source = _modDef5009;
       obj6.style = tmp.rightButton;
       obj5.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj6);
       items1[2] = hasOwnProperty(View, obj5);

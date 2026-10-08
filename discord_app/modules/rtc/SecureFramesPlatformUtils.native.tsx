@@ -1,16 +1,16 @@
 // discord_app/modules/rtc/SecureFramesPlatformUtils.native.tsx
 import util from "../../intl/index.native.tsx";
 import native from "../../design/void/native.tsx";
-import asyncRequireImpl from "../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
-import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../actions/native/AlertActionCreators.tsx";
+import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
 import safeTransitionToDefault from "../links/safeTransitionTo.native.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 
 require = fn;
-const SecureFramesConstants = fn(9380);
+const SecureFramesConstants = fn(8801);
 ({
   SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY: hasOwnProperty,
   SECURE_FRAMES_STREAM_VERIFICATION_BOTTOM_SHEET_KEY: metroRequire,
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/rtc/SecureFramesPlatformUtils
 
 export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9394, dependencyMap.paths), timestampProducer, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8815, dependencyMap.paths), timestampProducer, {
       streamKey,
       channelId,
     });
@@ -31,7 +31,7 @@ export default {
   openSecureFramesUserVerificationModal(id, id2, fn) {
     if (fn()) {
       const obj2 = { userId: id, channelId: id2 };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9384, dependencyMap.paths), obj2, React5);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8805, dependencyMap.paths), obj2, React5);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
@@ -68,7 +68,7 @@ export default {
       if (null != channel) {
         safeTransitionToDefault(options.CHANNEL(guildId, channelId));
         const obj = { userId, channelId, guildId, fingerprint };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9397, dependencyMap.paths), hasOwnProperty, obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8818, dependencyMap.paths), hasOwnProperty, obj);
       }
     }
     const obj3 = { title: null, body: null };

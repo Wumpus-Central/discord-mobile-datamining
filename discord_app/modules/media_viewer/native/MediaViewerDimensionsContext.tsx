@@ -10,7 +10,7 @@ const redux = noop.createContext(null);
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function MediaViewerDimensionsProvider(children) {
       const cResult = c.c(4);
       children = children.children;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -33,20 +33,24 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp6;
       tmp5 = tmp6;
     }
-  : (children) => (
-      <redux.Provider value={useWindowDimensionsDefault({ ignoreKeyboard: true })}>{children.children}</redux.Provider>
-    );
+  : function MediaViewerDimensionsProvider(children) {
+      return (
+        <redux.Provider value={useWindowDimensionsDefault({ ignoreKeyboard: true })}>
+          {children.children}
+        </redux.Provider>
+      );
+    };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/MediaViewerDimensionsContext.tsx");
 
 export const MediaViewerDimensionsProvider = tmp2;
 export const useMediaViewerDimensions = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useMediaViewerDimensions() {
       const context = noop.useContext(closure_5);
       _modDef38(null != context, "useMediaViewerDimensions must be used inside MediaViewerDimensionsProvider");
       return context;
     }
-  : () => {
+  : function useMediaViewerDimensions() {
       const context = noop.useContext(closure_5);
       _modDef38(null != context, "useMediaViewerDimensions must be used inside MediaViewerDimensionsProvider");
       return context;

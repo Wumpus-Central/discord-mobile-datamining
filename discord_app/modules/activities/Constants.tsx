@@ -118,7 +118,6 @@ export const ActivityFeedbackReasons = {
   OTHER: "OTHER",
 };
 export const ActivityIntent = { PLAY: 0, [0]: "PLAY", SPECTATE: 1, [1]: "SPECTATE" };
-export const ActivityPlatform = { DESKTOP: "desktop", MOBILE: "mobile" };
 export const ActivityTooltipName = {
   BETRAYAL_MARKETING_TOOLTIP: "BETRAYAL_MARKETING_TOOLTIP",
   FISHINGTON_MARKETING_TOOLTIP: "FISHINGTON_MARKETING_TOOLTIP",

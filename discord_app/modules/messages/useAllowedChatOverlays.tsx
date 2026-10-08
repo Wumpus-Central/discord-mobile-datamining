@@ -7,8 +7,8 @@ import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
 require = fn;
-const ChatOverlays = fn(11091).ChatOverlays;
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const ChatOverlays = fn(10455).ChatOverlays;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
 const no_text_activity = "no_text_activity";
 let obj = { no_text_activity: null };
 let items = [, ,];
@@ -32,7 +32,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useAllowedChatOverlays.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAllowedChatOverlays() {
       obj = c;
       const cResult = obj.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult3 = useStateFromStores;
     }
-  : () => {
+  : function useAllowedChatOverlays() {
       obj = useStateFromStores;
       const items = [EmbeddedActivitiesStore];
       const stateFromStores = obj.useStateFromStores(items, () => EmbeddedActivitiesStore.getCurrentEmbeddedActivity());

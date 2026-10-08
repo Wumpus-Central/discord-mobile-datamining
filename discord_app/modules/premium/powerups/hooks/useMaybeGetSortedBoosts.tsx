@@ -16,7 +16,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useMaybeGetSortedBoosts(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(37);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -105,7 +105,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
-                class G {
+                class A {
                   constructor() {
                     set = new Set();
                     closure_0 = set;
@@ -145,7 +145,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  class G {
+                  class A {
                     constructor() {
                       set = new Set();
                       closure_0 = set;
@@ -200,7 +200,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  class G {
+                  class A {
                     constructor() {
                       set = new Set();
                       closure_0 = set;
@@ -221,7 +221,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                   }
-                  class R {
+                  class N {
                     constructor() {
                       tmp = closure_4 === length && closure_6;
                       if (!tmp) {
@@ -241,7 +241,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[32] = stateFromStores;
                   cResult[33] = arg0;
                   cResult[34] = stateFromStores1;
-                  cResult[35] = R;
+                  cResult[35] = N;
                   cResult[36] = items5;
                 }
               }
@@ -254,7 +254,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              class G {
+              class A {
                 constructor() {
                   set = new Set();
                   closure_0 = set;
@@ -276,7 +276,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               tmp19 = M;
               const tmpResult2 = tmp(504);
             }
-            class G {
+            class A {
               constructor() {
                 set = new Set();
                 closure_0 = set;
@@ -292,10 +292,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             const items6 = [arg0, cResult[8]];
             cResult[13] = arg0;
             cResult[14] = cResult[8];
-            cResult[15] = G;
+            cResult[15] = A;
             cResult[16] = items6;
             tmp17 = items6;
-            tmp16 = G;
+            tmp16 = A;
           }
         }
       }
@@ -347,7 +347,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       obj3 = stateFromStores;
       const tmpResult = require("initialize");
     }
-  : (arg0, arg1) => {
+  : function useMaybeGetSortedBoosts(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const items = [stateFromStoresArray1];
@@ -451,7 +451,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMay
 
 export default tmp2;
 export const useGetBoostUserConfig = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useGetBoostUserConfig(id) {
       _require = id;
       const cResult = require("c").c(14);
       if (cResult[0] !== id.id) {
@@ -515,7 +515,7 @@ export const useGetBoostUserConfig = ReactCompilerGating.isReactCompilerEnabled(
       if (user2 != null) {
         username2 = user2.username;
       }
-      const fn = function n() {
+      const fn = function a() {
         const member = GuildMemberStore.getMember(id.guildId, id.userId);
         let nick = GuildMemberStore.getNick(id.guildId, id.userId);
         if (nick == null) {
@@ -556,7 +556,7 @@ export const useGetBoostUserConfig = ReactCompilerGating.isReactCompilerEnabled(
       let obj = require("c");
       tmp = _require;
     }
-  : (id) => {
+  : function useGetBoostUserConfig(id) {
       _require = id;
       const date = new Date(SnowflakeUtilsDefault.extractTimestamp(id.id));
       const items = [GuildMemberStore];

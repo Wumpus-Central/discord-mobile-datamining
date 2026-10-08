@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   errorContainer: {
     display: "flex",
@@ -54,142 +54,139 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/SafetyHubErrorActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      const cResult = c.c(20);
+  ? function SafetyHubErrorActionSheet() {
+      const cResult = c.c(16);
       const tmp4 = closure_7();
       const tmp6 = useSafetyHubLoadingDefault();
-      if (cResult[0] !== tmp4.errorContainer) {
-        const items = [tmp4.errorContainer];
-        cResult[0] = tmp4.errorContainer;
-        cResult[1] = items;
-        let tmp7 = items;
-      } else {
-        tmp7 = cResult[1];
-      }
-      if (cResult[2] !== tmp4.redesignErrorIconContainer) {
-        const items1 = [tmp4.redesignErrorIconContainer];
-        cResult[2] = tmp4.redesignErrorIconContainer;
-        cResult[3] = items1;
-        let tmp8 = items1;
-      } else {
-        tmp8 = cResult[3];
-      }
-      if (cResult[4] !== tmp4.redesignErrorIcon) {
+      if (cResult[0] !== tmp4.redesignErrorIcon) {
         const obj2 = {
           size: "custom",
           color: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT,
-          style: null,
+          style: tmp4.redesignErrorIcon,
         };
-        const items2 = [tmp4.redesignErrorIcon];
-        obj2.style = items2;
-        const tmp11 = hasOwnProperty(CircleXIcon.CircleXIcon, obj2);
-        cResult[4] = tmp4.redesignErrorIcon;
-        cResult[5] = tmp11;
-        let tmp9 = tmp11;
+        const tmp9 = hasOwnProperty(CircleXIcon.CircleXIcon, obj2);
+        cResult[0] = tmp4.redesignErrorIcon;
+        cResult[1] = tmp9;
+        let tmp7 = tmp9;
       } else {
-        tmp9 = cResult[5];
+        tmp7 = cResult[1];
       }
-      if (cResult[6] === tmp8) {
-        if (cResult[7] === tmp9) {
-          let tmp12 = cResult[8];
+      if (cResult[2] === tmp4.redesignErrorIconContainer) {
+        if (cResult[3] === tmp7) {
+          let tmp10 = cResult[4];
         }
         const _Symbol = Symbol;
-        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+        if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { variant: "heading-lg/normal", children: null };
           const intl = util.intl;
           obj3.children = intl.string(util.t.TDRvqs);
-          const tmp17 = hasOwnProperty(Text_Text.Text, obj3);
-          cResult[9] = tmp17;
-          let tmp15 = tmp17;
+          const tmp15 = hasOwnProperty(Text_Text.Text, obj3);
+          cResult[5] = tmp15;
+          let tmp13 = tmp15;
         } else {
-          tmp15 = cResult[9];
+          tmp13 = cResult[5];
         }
-        if (cResult[10] === tmp7) {
-          if (cResult[11] === tmp12) {
-            let tmp18 = cResult[12];
+        if (cResult[6] === tmp4.errorContainer) {
+          if (cResult[7] === tmp10) {
+            let tmp16 = cResult[8];
           }
           const _Symbol2 = Symbol;
-          if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn = function _() {
-              return SafetyHubActionCreatorsAll.getSafetyHubData();
-            };
+          if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+            class C {
+              constructor() {
+                obj = closure_1_2(closure_1_3[11]);
+                return obj.getSafetyHubData();
+              }
+            }
             const intl2 = util.intl;
             const stringResult = intl2.string(util.t.R1AN4F);
-            cResult[13] = fn;
-            cResult[14] = stringResult;
-            let tmp23 = stringResult;
-            let tmp22 = fn;
+            cResult[9] = C;
+            cResult[10] = stringResult;
+            let tmp21 = stringResult;
           } else {
-            tmp22 = cResult[13];
-            tmp23 = cResult[14];
-          }
-          if (cResult[15] !== tmp6) {
-            const obj4 = { onPress: tmp22, text: tmp23, loading: tmp6, disabled: tmp6 };
-            const tmp27 = hasOwnProperty(components_Button_Button.Button, obj4);
-            cResult[15] = tmp6;
-            cResult[16] = tmp27;
-            let tmp25 = tmp27;
-          } else {
-            tmp25 = cResult[16];
-          }
-          if (cResult[17] === tmp18) {
-            if (cResult[18] === tmp25) {
-              let tmp28 = cResult[19];
+            class C {
+              constructor() {
+                obj = closure_1_2(closure_1_3[11]);
+                return obj.getSafetyHubData();
+              }
             }
-            return tmp28;
+            tmp21 = cResult[10];
+          }
+          if (cResult[11] !== tmp6) {
+            class C {
+              constructor() {
+                obj = closure_1_2(closure_1_3[11]);
+                return obj.getSafetyHubData();
+              }
+            }
+            const obj4 = { onPress: C, text: tmp21, loading: tmp6, disabled: tmp6 };
+            const tmp24 = hasOwnProperty(components_Button_Button.Button, obj4);
+            cResult[11] = tmp6;
+            cResult[12] = tmp24;
+          } else {
+            class C {
+              constructor() {
+                obj = closure_1_2(closure_1_3[11]);
+                return obj.getSafetyHubData();
+              }
+            }
+          }
+          if (cResult[13] === tmp16) {
+            class C {
+              constructor() {
+                obj = closure_1_2(closure_1_3[11]);
+                return obj.getSafetyHubData();
+              }
+            }
+            return tmp25;
           }
           const obj5 = { children: null };
-          const items3 = [tmp18, tmp25];
-          obj5.children = items3;
-          const tmp30 = timestampProducer(Sheet_BottomSheet.BottomSheet, obj5);
-          cResult[17] = tmp18;
-          cResult[18] = tmp25;
-          cResult[19] = tmp30;
-          tmp28 = tmp30;
+          const items = [tmp16, tmp23];
+          obj5.children = items;
+          const tmp27 = timestampProducer(Sheet_BottomSheet.BottomSheet, obj5);
+          cResult[13] = tmp16;
+          cResult[14] = tmp23;
+          cResult[15] = tmp27;
+          tmp25 = tmp27;
         }
-        const obj6 = { style: tmp7, children: null };
-        const items4 = [tmp12, tmp15];
-        obj6.children = items4;
-        const tmp21 = timestampProducer(View, obj6);
-        cResult[10] = tmp7;
-        cResult[11] = tmp12;
-        cResult[12] = tmp21;
-        tmp18 = tmp21;
+        const obj6 = { style: tmp4.errorContainer, children: null };
+        const items1 = [tmp10, tmp13];
+        obj6.children = items1;
+        const tmp19 = timestampProducer(View, obj6);
+        cResult[6] = tmp4.errorContainer;
+        cResult[7] = tmp10;
+        cResult[8] = tmp19;
+        tmp16 = tmp19;
       }
-      const tmp13 = hasOwnProperty(View, { style: tmp8, children: tmp9 });
-      cResult[6] = tmp8;
-      cResult[7] = tmp9;
-      cResult[8] = tmp13;
-      tmp12 = tmp13;
+      const tmp11 = hasOwnProperty(View, { style: tmp4.redesignErrorIconContainer, children: tmp7 });
+      cResult[2] = tmp4.redesignErrorIconContainer;
+      cResult[3] = tmp7;
+      cResult[4] = tmp11;
+      tmp10 = tmp11;
+      const obj7 = { style: tmp4.redesignErrorIconContainer, children: tmp7 };
     }
-  : (arg0) => {
+  : function SafetyHubErrorActionSheet(arg0) {
       if (arg0 == null) {
         throw new TypeError("Cannot destructure 'undefined' or 'null'.");
       } else {
         const tmp2 = closure_7();
         const tmp5 = useSafetyHubLoadingDefault();
         const obj = { children: null };
-        const obj2 = { style: null, children: null };
-        const items = [tmp2.errorContainer];
-        obj2.style = items;
-        const obj3 = { style: null, children: null };
-        const items1 = [tmp2.redesignErrorIconContainer];
-        obj3.style = items1;
+        const obj2 = { style: tmp2.errorContainer, children: null };
+        const obj3 = { style: tmp2.redesignErrorIconContainer, children: null };
         const obj4 = {
           size: "custom",
           color: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT,
-          style: null,
+          style: tmp2.redesignErrorIcon,
         };
-        const items2 = [tmp2.redesignErrorIcon];
-        obj4.style = items2;
         obj3.children = hasOwnProperty(CircleXIcon.CircleXIcon, obj4);
-        const items3 = [hasOwnProperty(View, obj3)];
+        const items = [hasOwnProperty(View, obj3)];
         const obj5 = { variant: "heading-lg/normal", children: null };
         const intl = util.intl;
         obj5.children = intl.string(util.t.TDRvqs);
-        items3[1] = hasOwnProperty(Text_Text.Text, obj5);
-        obj2.children = items3;
-        const items4 = [timestampProducer(View, obj2)];
+        items[1] = hasOwnProperty(Text_Text.Text, obj5);
+        obj2.children = items;
+        const items1 = [timestampProducer(View, obj2)];
         const obj6 = {
           onPress() {
             return SafetyHubActionCreatorsAll.getSafetyHubData();
@@ -202,8 +199,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj6.text = intl2.string(util.t.R1AN4F);
         obj6.loading = tmp5;
         obj6.disabled = tmp5;
-        items4[1] = hasOwnProperty(components_Button_Button.Button, obj6);
-        obj.children = items4;
+        items1[1] = hasOwnProperty(components_Button_Button.Button, obj6);
+        obj.children = items1;
         return timestampProducer(Sheet_BottomSheet.BottomSheet, obj);
       }
     };

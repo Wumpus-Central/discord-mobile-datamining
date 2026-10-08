@@ -68,7 +68,7 @@ const jsxProd = fn(21);
 const Manifest = ClientInfoUtils.getConstants();
 const ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ClientClientInfoActionSheet() {
       const cResult = c.c(17);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = { title: null };
@@ -262,7 +262,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp48;
     }
-  : () => {
+  : function ClientClientInfoActionSheet() {
       let obj = { header: null, startExpanded: true, children: null };
       let obj2 = { title: null };
       const intl = util.intl;
@@ -360,18 +360,18 @@ function getClientInfoString(ReleaseChannel) {
   }
   return str;
 }
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(5935).ClipboardListIcon,
+  IconComponent: fn(6118).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_8 }), "ClientClientInfoActionSheet");
   },
-  usePredicate: fn(2028).DeveloperMode.useSetting,
+  usePredicate: fn(2040).DeveloperMode.useSetting,
   withArrow: true,
 });
 const size = fn(2);

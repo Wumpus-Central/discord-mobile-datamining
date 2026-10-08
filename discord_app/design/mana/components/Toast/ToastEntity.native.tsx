@@ -4,12 +4,12 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const utils_StringUtils = Text(2019);
-const Text_Text = Text(4892);
+const utils_StringUtils = Text(2031);
+const Text_Text = Text(5086);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   entity: { flexShrink: 0, width: 24, height: 24, alignItems: "center", justifyContent: "center", overflow: "hidden" },
   image: { width: 24, height: 24 },
@@ -27,7 +27,7 @@ fn(558);
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 const ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ToastEntityContent(arg0) {
       let Text = require;
       let tmp = dependencyMap;
       const cResult = c.c(35);
@@ -200,7 +200,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = tmp7;
       }
     }
-  : (arg0) => {
+  : function ToastEntityContent(arg0) {
       ({ entity, styles } = arg0);
       const type = entity.type;
       if ("emoji" === type) {
@@ -275,7 +275,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/mana/components/Toast/ToastEntity.native.tsx");
 
 export const ToastEntity = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ToastEntity(arg0) {
       const cResult = c.c(11);
       ({ entity, style } = arg0);
       const tmp2 = closure_5();
@@ -339,7 +339,7 @@ export const ToastEntity = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items;
       tmp5 = items;
     }
-  : (entity) => {
+  : function ToastEntity(entity) {
       entity = entity.entity;
       const tmp = closure_5();
       if ("avatar" === entity.type) {

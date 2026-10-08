@@ -7,7 +7,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -30,7 +30,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/options/boolean/AppLauncherBooleanOption.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPress) => {
+  ? function AppLauncherBooleanOption(onPress) {
       const cResult = c.c(14);
       ({ style, option, initialValue } = onPress);
       onPress = onPress.onPress;
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items;
       tmp8 = items;
     }
-  : (arg0) => {
+  : function AppLauncherBooleanOption(arg0) {
       ({ initialValue: require, onPress: dependencyMap } = arg0);
       selected = undefined;
       closure_3 = undefined;

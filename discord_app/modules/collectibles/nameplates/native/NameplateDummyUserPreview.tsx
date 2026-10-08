@@ -13,23 +13,23 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG = {};
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1188).AvatarSizes.XSMALL_20] = {
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1200).AvatarSizes.XSMALL_20] = {
   padding: nativeDefault.space.PX_4,
   avatarMarginRight: nativeDefault.space.PX_4,
   placeholderBarHeight: 6,
 };
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1188).AvatarSizes.XSMALL] = {
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1200).AvatarSizes.XSMALL] = {
   padding: 6,
   avatarMarginRight: 6,
   placeholderBarHeight: 8,
 };
 let obj2 = { padding: nativeDefault.space.PX_4, avatarMarginRight: nativeDefault.space.PX_4, placeholderBarHeight: 6 };
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1188).AvatarSizes.NORMAL] = {
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1200).AvatarSizes.NORMAL] = {
   padding: nativeDefault.space.PX_8,
   avatarMarginRight: nativeDefault.space.PX_8,
   placeholderBarHeight: 14,
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles((arg0, arg1) => {
   obj = {
     container: {
@@ -91,7 +91,7 @@ const result = size.fileFinishedImporting("modules/collectibles/nameplates/nativ
 
 export { NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG };
 export const NameplateDummyUserPreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function NameplateDummyUserPreview(arg0) {
       const cResult = c.c(26);
       ({ width, hideAvatar, avatarSize, nameplate, style, animate } = arg0);
       if (undefined === avatarSize) {
@@ -100,7 +100,7 @@ export const NameplateDummyUserPreview = ReactCompilerGating.isReactCompilerEnab
       const tmp6 = closure_8(avatarSize, undefined !== hideAvatar && hideAvatar);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ThemeStore];
-        const fn = function v() {
+        const fn = function p() {
           return themes.isThemeDark(theme.theme);
         };
         cResult[0] = items;
@@ -118,7 +118,7 @@ export const NameplateDummyUserPreview = ReactCompilerGating.isReactCompilerEnab
             if (cResult[7] === tmp6.nameplate) {
               let tmp13 = cResult[8];
             }
-            const tmp17 = importDefault(tmp11 ? 8509 : 8510);
+            const tmp17 = importDefault(tmp11 ? 8993 : 8994);
             if (cResult[9] === avatarSize) {
               if (cResult[10] === tmp6.avatar) {
                 if (cResult[11] === tmp17) {
@@ -202,7 +202,7 @@ export const NameplateDummyUserPreview = ReactCompilerGating.isReactCompilerEnab
       tmp12 = items3;
       const tmp4 = undefined !== hideAvatar && hideAvatar;
     }
-  : (hideAvatar) => {
+  : function NameplateDummyUserPreview(hideAvatar) {
       let flag = hideAvatar.hideAvatar;
       if (flag === undefined) {
         flag = false;
@@ -228,7 +228,7 @@ export const NameplateDummyUserPreview = ReactCompilerGating.isReactCompilerEnab
       const obj4 = { style: tmp3.avatarContainer, children: null };
       const obj3 = { nameplate, fullOpacity: true, style: tmp3.nameplate, animate };
       obj4.children = hasOwnProperty(native.Avatar, {
-        source: importDefault(stateFromStores ? 8509 : 8510),
+        source: importDefault(stateFromStores ? 8993 : 8994),
         size: NORMAL,
         "aria-hidden": true,
         style: tmp3.avatar,

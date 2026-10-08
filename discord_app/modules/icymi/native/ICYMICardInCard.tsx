@@ -4,8 +4,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import TextIcon2 from "../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
+import TextIcon2 from "../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import ClipView from "../../../design/components/Icon/native/ClipView.tsx";
 import openDetailsActionSheet from "util/openDetailsActionSheet.tsx";
 import getIconForChannel from "util/getIconForChannel.tsx";
@@ -22,7 +22,7 @@ const View = fn(17).View;
 const DEFAULT_ROLE_COLOR_HEX = fn(1085).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createICYMIStyles = fn(16434);
+const createICYMIStyles = fn(16694);
 let closure_12 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = {
     container: { marginTop: marginHorizontal.margin },
@@ -88,7 +88,7 @@ let closure_12 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
 });
 const ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CutoutGuildIconWithUserCustom(arg0) {
       const cResult = c.c(11);
       ({ guild, author } = arg0);
       const tmp4 = closure_12();
@@ -134,7 +134,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { style: first, children: null };
           const items1 = [tmp7, tmp13];
           obj4.children = items1;
-          const tmp18 = v65535(View, obj4);
+          const tmp18 = collapsed(View, obj4);
           cResult[8] = tmp7;
           cResult[9] = tmp13;
           cResult[10] = tmp18;
@@ -161,7 +161,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         size: native.AvatarSizes.XSMALL_20,
       };
     }
-  : (guild) => {
+  : function CutoutGuildIconWithUserCustom(guild) {
       guild = guild.guild;
       const obj = { style: { width: 40, height: 40 }, children: null };
       const obj2 = { cutouts: null, children: null };
@@ -183,7 +183,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         size: native.AvatarSizes.XSMALL_20,
       });
       obj.children = items1;
-      return v65535(View, obj);
+      return collapsed(View, obj);
     };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/ICYMICardInCard.tsx");
@@ -410,9 +410,9 @@ export default function ICYMICardInCard(message) {
               };
               items2[1] = options(Text_Text.Text, obj9);
               obj7.children = items2;
-              items1[2] = v65535(View, obj7);
+              items1[2] = collapsed(View, obj7);
               obj2.children = items1;
-              return v65535(View, obj2);
+              return collapsed(View, obj2);
             }
           }
         }
@@ -447,13 +447,13 @@ export default function ICYMICardInCard(message) {
       };
       items5[1] = options(Text_Text.Text, obj15);
       obj14.children = items5;
-      items4[1] = v65535(View, obj14);
+      items4[1] = collapsed(View, obj14);
       obj12.children = items4;
-      tmp13 = v65535(closure_2_11, obj12);
+      tmp13 = collapsed(closure_2_11, obj12);
     }
     items3[1] = tmp13;
     obj10.children = items3;
-    return v65535(View, obj10);
+    return collapsed(View, obj10);
   }, items8);
   const items10 = [fontScale, ,];
   ({ channelNameAndAccessoryLarge: arr11[1], channelNameAndAccessory: arr11[2] } = tmp);

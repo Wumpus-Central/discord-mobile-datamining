@@ -6,14 +6,14 @@ import AdContentSeenStore from "../AdContentSeenStore.tsx";
 import QuestStore from "../QuestStore.tsx";
 
 require = fn;
-const QuestsExperimentLocations = fn(5630).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5977).QuestsExperimentLocations;
 const DAY = DurationsDefault.Millis.DAY;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/hooks/useHasNewAdContent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHasNewAdContent() {
       const cResult = enabled(stateFromStoresArray[6]).c(13);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { location: QuestsExperimentLocations.YOU_TAB_PROFILE_HEADER };
@@ -66,63 +66,166 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = cResult[5];
       }
       if (cResult[6] !== stateFromStoresArray) {
-        const fn2 = function b() {
-          for (const item10005 of stateFromStoresArray) {
-            if (AdContentSeenStore.hasSeen(AdCreativeType.AdCreativeType.QUEST, item10005)) {
-              continue;
-            } else {
-              obj.return();
-              let flag = true;
-              return true;
+        class A {
+          constructor() {
+            for (const item10005 of closure_1) {
+              tmp = closure_3;
+              tmp2 = closure_0;
+              tmp3 = closure_1;
+              if (closure_3.hasSeen(closure_0(closure_1[10]).AdCreativeType.QUEST, item10005)) {
+                continue;
+              } else {
+                tmp4 = obj;
+                obj.return();
+                flag = true;
+                return true;
+              }
             }
+            return false;
           }
-          return false;
-        };
+        }
         const items3 = [stateFromStoresArray];
         cResult[6] = stateFromStoresArray;
-        cResult[7] = fn2;
+        cResult[7] = A;
         cResult[8] = items3;
         let tmp14 = items3;
-        let tmp13 = fn2;
       } else {
-        tmp13 = cResult[7];
+        class A {
+          constructor() {
+            for (const item10005 of closure_1) {
+              tmp = closure_3;
+              tmp2 = closure_0;
+              tmp3 = closure_1;
+              if (closure_3.hasSeen(closure_0(closure_1[10]).AdCreativeType.QUEST, item10005)) {
+                continue;
+              } else {
+                tmp4 = obj;
+                obj.return();
+                flag = true;
+                return true;
+              }
+            }
+            return false;
+          }
+        }
         tmp14 = cResult[8];
       }
       const tmpResult = enabled(stateFromStoresArray[9]);
-      const stateFromStores = enabled(stateFromStoresArray[9]).useStateFromStores(tmp11, tmp13, tmp14);
+      const stateFromStores = enabled(stateFromStoresArray[9]).useStateFromStores(tmp11, A, tmp14);
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { cooldownDurationMs: DAY };
-        cResult[9] = obj3;
-        let tmp16 = obj3;
+        class A {
+          constructor() {
+            for (const item10005 of closure_1) {
+              tmp = closure_3;
+              tmp2 = closure_0;
+              tmp3 = closure_1;
+              if (closure_3.hasSeen(closure_0(closure_1[10]).AdCreativeType.QUEST, item10005)) {
+                continue;
+              } else {
+                tmp4 = obj;
+                obj.return();
+                flag = true;
+                return true;
+              }
+            }
+            return false;
+          }
+        }
+        tmp17[0] = DAY;
+        cResult[9] = tmp17;
       } else {
-        tmp16 = cResult[9];
+        class A {
+          constructor() {
+            for (const item10005 of closure_1) {
+              tmp = closure_3;
+              tmp2 = closure_0;
+              tmp3 = closure_1;
+              if (closure_3.hasSeen(closure_0(closure_1[10]).AdCreativeType.QUEST, item10005)) {
+                continue;
+              } else {
+                tmp4 = obj;
+                obj.return();
+                flag = true;
+                return true;
+              }
+            }
+            return false;
+          }
+        }
       }
       const tmpResult3 = enabled(stateFromStoresArray[9]);
-      let prop = null;
       if (stateFromStores) {
-        prop = null;
+        class A {
+          constructor() {
+            for (const item10005 of closure_1) {
+              tmp = closure_3;
+              tmp2 = closure_0;
+              tmp3 = closure_1;
+              if (closure_3.hasSeen(closure_0(closure_1[10]).AdCreativeType.QUEST, item10005)) {
+                continue;
+              } else {
+                tmp4 = obj;
+                obj.return();
+                flag = true;
+                return true;
+              }
+            }
+            return false;
+          }
+        }
         if (enabled) {
-          prop = tmp(tmp2[12]).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
+          class A {
+            constructor() {
+              for (const item10005 of closure_1) {
+                tmp = closure_3;
+                tmp2 = closure_0;
+                tmp3 = closure_1;
+                if (closure_3.hasSeen(closure_0(closure_1[10]).AdCreativeType.QUEST, item10005)) {
+                  continue;
+                } else {
+                  tmp4 = obj;
+                  obj.return();
+                  flag = true;
+                  return true;
+                }
+              }
+              return false;
+            }
+          }
         }
       }
-      const tmp19 = _slicedToArray(
-        enabled(stateFromStoresArray[11]).useSelectedTimeRecurringDismissibleContent(prop, tmp16, undefined, true),
+      const tmp20 = _slicedToArray(
+        enabled(stateFromStoresArray[11]).useSelectedTimeRecurringDismissibleContent(null, tmp17, undefined, true),
         2,
       );
-      if (cResult[10] === tmp19[1]) {
-        if (cResult[11] === tmp21) {
-          let tmp22 = cResult[12];
+      if (cResult[10] === tmp20[1]) {
+        class A {
+          constructor() {
+            for (const item10005 of closure_1) {
+              tmp = closure_3;
+              tmp2 = closure_0;
+              tmp3 = closure_1;
+              if (closure_3.hasSeen(closure_0(closure_1[10]).AdCreativeType.QUEST, item10005)) {
+                continue;
+              } else {
+                tmp4 = obj;
+                obj.return();
+                flag = true;
+                return true;
+              }
+            }
+            return false;
+          }
         }
-        return tmp22;
+        return obj3;
       }
-      const obj4 = { showBadge: null != tmp19[0], dismissBadge: tmp19[1] };
-      cResult[10] = tmp19[1];
-      cResult[11] = null != tmp19[0];
-      cResult[12] = obj4;
-      tmp22 = obj4;
+      obj3 = { showBadge: null != tmp20[0], dismissBadge: tmp20[1] };
+      cResult[10] = tmp20[1];
+      cResult[11] = null != tmp20[0];
+      cResult[12] = obj3;
       const tmpResult4 = enabled(stateFromStoresArray[11]);
     }
-  : () => {
+  : function useHasNewAdContent() {
       const MobileQuestHomeRedDotNotificationExperiment = enabled(
         stateFromStoresArray[7],
       ).MobileQuestHomeRedDotNotificationExperiment;

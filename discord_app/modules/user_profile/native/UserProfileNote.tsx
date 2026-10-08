@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileNote.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function UserProfileNote(userId) {
       const cResult = userId(trackUserProfileAction[3]).c(15);
       userId = userId.userId;
       const onBack = userId.onBack;
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn = function o() {
+      function handlePress() {
         ActionSheetActionCreatorsDefault.hideActionSheet();
         openEditNoteModalDefault({
           userId,
@@ -114,15 +114,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return trackUserProfileAction({ action: "SET_NOTE" });
           },
         });
-      };
+      }
       cResult[0] = onBack;
       cResult[1] = trackUserProfileAction;
       cResult[2] = userId;
-      cResult[3] = fn;
-      tmp5 = fn;
+      cResult[3] = handlePress;
+      tmp5 = handlePress;
       const obj2 = userId(trackUserProfileAction[4]);
     }
-  : (userId) => {
+  : function UserProfileNote(userId) {
       userId = userId.userId;
       const onBack = userId.onBack;
       let trackUserProfileAction;
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stringResult = string(t["1ZZtts"]);
       }
       obj2.accessibilityHint = stringResult;
-      obj2.onPress = function onPress() {
+      obj2.onPress = function handlePress() {
         ActionSheetActionCreatorsDefault.hideActionSheet();
         openEditNoteModalDefault({
           userId,

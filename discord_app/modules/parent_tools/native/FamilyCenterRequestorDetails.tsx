@@ -11,17 +11,17 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 },
   avatar: {
-    borderRadius: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.NORMAL] / 2,
+    borderRadius: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.NORMAL] / 2,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   },
   detailsContainer: null,
 };
 let obj3 = {
-  borderRadius: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.NORMAL] / 2,
+  borderRadius: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.NORMAL] / 2,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
 obj2.detailsContainer = {
@@ -42,7 +42,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterRequestorDetails.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (otherUser) => {
+  ? function FamilyCenterRequestorDetails(otherUser) {
       const cResult = c.c(15);
       otherUser = otherUser.otherUser;
       const tmp4 = closure_6();
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp7;
       tmp6 = tmp7;
     }
-  : (otherUser) => {
+  : function FamilyCenterRequestorDetails(otherUser) {
       otherUser = otherUser.otherUser;
       const tmp = closure_6();
       const obj2 = { style: tmp.container, children: null };

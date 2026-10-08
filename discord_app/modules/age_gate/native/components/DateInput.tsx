@@ -1,6 +1,6 @@
 // discord_app/modules/age_gate/native/components/DateInput.tsx
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
-import _modDef4467 from "../../../../../_runtime/metro/04467__.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import _modDef4659 from "../../../../../_runtime/metro/04659__.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -12,13 +12,13 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_gate/native/components/DateInput.tsx");
 
-export default noop.forwardRef((date, arg1) => {
+export default function DateInput(date) {
   date = date.date;
   ({ onChangeDate: importDefault, label } = date);
-  let ref;
+  let ref1;
   function updateDate(arg0) {
     importDefault(arg0);
-    const current = ref.current;
+    const current = ref1.current;
     if (current != null) {
       current.blur();
     }
@@ -39,23 +39,23 @@ export default noop.forwardRef((date, arg1) => {
       toDateResult = date.toDate();
     }
     if (toDateResult == null) {
-      const obj4 = _modDef4467();
+      const obj4 = _modDef4659();
       const result = obj4.set("year", obj4.year() - 10);
       toDateResult = obj4.toDate();
     }
     obj2.startDate = toDateResult;
-    const obj5 = _modDef4467();
+    const obj5 = _modDef4659();
     const result1 = obj5.set("year", obj5.year() - 3);
     obj2.maximumDate = obj5.toDate();
-    const obj6 = _modDef4467();
+    const obj6 = _modDef4659();
     const result2 = obj6.set("year", obj6.year() - 100);
     obj2.minimumDate = obj6.toDate();
-    obj.openLazy(asyncRequireImpl(9229, dependencyMap.paths), "DatePicker", obj2);
-    const tmp4 = asyncRequireImpl(9229, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(8537, dependencyMap.paths), "DatePicker", obj2);
+    const tmp4 = asyncRequireImpl(8537, dependencyMap.paths);
   }
-  ({ style, error } = date);
-  ref = ref.useRef(null);
-  const imperativeHandle = ref.useImperativeHandle(arg1, () => ({
+  ({ style, error, ref } = date);
+  ref1 = ref1.useRef(null);
+  const imperativeHandle = ref1.useImperativeHandle(ref, () => ({
     focus() {
       openDatePicker();
     },
@@ -64,14 +64,14 @@ export default noop.forwardRef((date, arg1) => {
   if (date != null) {
     formatResult = date.format("L");
   }
-  let obj = require("../../../../../_runtime/metro/04467__.js")();
+  let obj = require("../../../../../_runtime/metro/04659__.js")();
   let result = obj.set("year", obj.year() - 10);
   let tmp4 = label;
-  const tmp5 = require("../../../../../_runtime/metro/04467__.js");
-  const formatResult1 = require("../../../../../_runtime/metro/04467__.js")(obj.toDate()).format("L");
+  const tmp5 = require("../../../../../_runtime/metro/04659__.js");
+  const formatResult1 = require("../../../../../_runtime/metro/04659__.js")(obj.toDate()).format("L");
   let obj2 = {
     style,
-    ref,
+    ref: ref1,
     value: null,
     placeholder: null,
     returnKeyType: "next",
@@ -86,7 +86,7 @@ export default noop.forwardRef((date, arg1) => {
     error: null,
   };
   let str2 = formatResult;
-  const tmp5Result = require("../../../../../_runtime/metro/04467__.js")(obj.toDate());
+  const tmp5Result = require("../../../../../_runtime/metro/04659__.js")(obj.toDate());
   const tmp8 = openDatePicker;
   if (formatResult == null) {
     str2 = "";
@@ -103,4 +103,4 @@ export default noop.forwardRef((date, arg1) => {
   obj2.label = label;
   obj2.error = error;
   return tmp8(require("FreeFormInputGroup"), obj2);
-});
+}

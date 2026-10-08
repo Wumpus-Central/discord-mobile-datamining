@@ -10,7 +10,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForwardStaffToNonStaffWarningModal(arg0) {
       const cResult = c.c(11);
       ({ onConfirm, onBack } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = tmp19;
       tmp18 = tmp19;
     }
-  : (arg0) => {
+  : function ForwardStaffToNonStaffWarningModal(arg0) {
       ({ onConfirm, onBack } = arg0);
       const obj = { title: null, content: null, actions: null };
       const intl = util.intl;

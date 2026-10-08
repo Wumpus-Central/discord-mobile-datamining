@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/CountrySelectModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function CountrySelectModal() {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { COUNTRY_SELECT: null };
@@ -24,10 +24,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj3.render = function render() {
           return closure_1_4(closure_1_1(dependencyMap[5]), {
             onClose() {
-              return closure_1_1(5099).pop();
+              return closure_1_1(5940).pop();
             },
             onCountrySelected(countryCode) {
-              return closure_1_1(6549).setCountryCode(countryCode);
+              return closure_1_1(6725).setCountryCode(countryCode);
             },
           });
         };
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
           return () => {
-            closure_1_1(6541).runAfterInteractions(closure_1_1(6580).setCountrySelectorClosed, 400);
+            closure_1_1(6717).runAfterInteractions(closure_1_1(6756).setCountrySelectorClosed, 400);
           };
         };
         const items = [];
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : () => {
+  : function CountrySelectModal() {
       const screens = noop.useMemo(() => {
         const obj = { COUNTRY_SELECT: null };
         const obj2 = { title: null, headerLeft: null, render: null };
@@ -74,10 +74,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj2.render = function render() {
           return closure_1_4(closure_1_1(dependencyMap[5]), {
             onClose() {
-              return closure_1_1(5099).pop();
+              return closure_1_1(5940).pop();
             },
             onCountrySelected(countryCode) {
-              return closure_1_1(6549).setCountryCode(countryCode);
+              return closure_1_1(6725).setCountryCode(countryCode);
             },
           });
         };
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const effect = noop.useEffect(
         () => () => {
-          closure_1_1(6541).runAfterInteractions(closure_1_1(6580).setCountrySelectorClosed, 400);
+          closure_1_1(6717).runAfterInteractions(closure_1_1(6756).setCountrySelectorClosed, 400);
         },
         [],
       );

@@ -7,7 +7,9 @@ const jsx = fn(21).jsx;
 let context = noop.createContext(null);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const useCollectiblesAnalyticsContext = () => noop.useContext(context);
+function useCollectiblesAnalyticsContext() {
+  return noop.useContext(context);
+}
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/collectibles/CollectiblesAnalyticsContext.tsx");
@@ -15,10 +17,10 @@ const result1 = size.fileFinishedImporting("modules/collectibles/CollectiblesAna
 export const CollectiblesAnalyticsContext = context;
 export { useCollectiblesAnalyticsContext };
 export const CollectiblesAnalyticsProvider = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CollectiblesAnalyticsProvider(arg0) {
       const cResult = c.c(6);
       ({ newValue, children } = arg0);
-      if (typeof fn === "function") {
+      if (typeof useCollectiblesAnalyticsContext === "function") {
         context = noop.useContext(context);
         if (cResult[0] === newValue) {
           if (cResult[1] === context) {
@@ -48,10 +50,10 @@ export const CollectiblesAnalyticsProvider = ReactCompilerGating.isReactCompiler
         throw new TypeError("Trying to call a non-function");
       }
     }
-  : (newValue) => {
+  : function CollectiblesAnalyticsProvider(newValue) {
       newValue = newValue.newValue;
       context = undefined;
-      if (typeof fn === "function") {
+      if (typeof useCollectiblesAnalyticsContext === "function") {
         context = noop.useContext(context);
         const items = [context, newValue];
         const obj = {

@@ -6,8 +6,8 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_1 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(4896);
-let obj = {
+const createStyles = fn(5090);
+let obj2 = {
   divider: {
     marginLeft: 0,
     height: StyleSheet.hairlineWidth,
@@ -15,27 +15,20 @@ let obj = {
     marginTop: -1 * StyleSheet.hairlineWidth,
   },
 };
-let closure_4 = createStyles.createStyles(obj);
-const obj3 = {
-  marginLeft: 0,
-  height: StyleSheet.hairlineWidth,
-  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
-  marginTop: -1 * StyleSheet.hairlineWidth,
-};
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Menu/native/MenuGroup.tsx");
 
-export const MenuGroup = noop.forwardRef((arg0, ref) => {
-  noop = ref;
-  ({ style, children } = arg0);
+export const MenuGroup = function MenuGroup(ref) {
+  ({ style, children } = ref.ref);
   const obj = { style, children: null };
-  let tmp4 = null === ref;
+  let tmp4 = null == ref;
   if (tmp4) {
     let obj2 = { style: tmp.divider };
     tmp4 = closure_2(closure_1, obj2);
   }
   const items = [tmp4];
-  const Children = noop.Children;
+  const Children = ref.Children;
   items[1] = Children.map(children, (label, arg1) => {
     let cloneElementResult = label;
     if (0 === arg1) {
@@ -49,4 +42,4 @@ export const MenuGroup = noop.forwardRef((arg0, ref) => {
   });
   obj.children = items;
   return closure_3(closure_1, obj);
-});
+};

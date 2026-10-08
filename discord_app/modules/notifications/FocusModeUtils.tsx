@@ -7,9 +7,9 @@ import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 
 const require = globalThis.__r;
 
-const AlertActionCreatorsDefault = tmp5(5714);
+const AlertActionCreatorsDefault = tmp5(5297);
 require = fn;
-const constants = fn(4528).NotificationSettingsUpdateType;
+const constants = fn(4720).NotificationSettingsUpdateType;
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, StatusTypes: metroRequire } = Constants);
 const ReactCompilerGating = fn(558);
@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/FocusModeUtils.tsx");
 
 export const useFocusModeEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useFocusModeEnabled() {
       const cResult = c.c(3);
       const FocusMode = UserSettings.FocusMode;
       const setting = FocusMode.useSetting();
@@ -48,7 +48,7 @@ export const useFocusModeEnabled = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp5;
       tmp4 = tmp5;
     }
-  : () => {
+  : function useFocusModeEnabled() {
       const FocusMode = UserSettings.FocusMode;
       let setting = FocusMode.useSetting();
       const FocusModeExpiresAtSetting = UserSettings.FocusModeExpiresAtSetting;

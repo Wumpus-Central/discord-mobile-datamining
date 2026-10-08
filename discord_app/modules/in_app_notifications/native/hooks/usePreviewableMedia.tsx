@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import MediaFormatTesters from "../../../messages/MediaFormatTesters.tsx";
 import isForwardMessageDefault from "../../../forwarding/isForwardMessage.tsx";
-import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07550_inlineStyles.js";
 import CirclePlayIcon from "../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import FileIcon from "../../../../design/components/Icon/native/redesign/generated/FileIcon.tsx";
 import WaveformIcon from "../../../../design/components/Icon/native/redesign/generated/WaveformIcon.tsx";
@@ -159,7 +159,7 @@ const PreviewableMediaTypes = {
   GIF: "gif",
   VOICE_MESSAGE: "voice_message",
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj3 = { voiceMessageIconOverlay: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -171,7 +171,7 @@ obj3.voiceMessageIconOverlay = obj4;
 let closure_11 = createStyles.createStyles(obj3);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function VoiceMessageIcon() {
       const cResult = c.c(10);
       const tmp4 = closure_11();
       const token = useToken.useToken(nativeDefault.colors.BACKGROUND_MOD_STRONG);
@@ -235,7 +235,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp10;
       const tmp5Result = inlineStylesDefault;
     }
-  : () => {
+  : function VoiceMessageIcon() {
       const tmp = closure_11();
       const token = useToken.useToken(nativeDefault.colors.BACKGROUND_MOD_STRONG);
       const obj3 = { children: null };
@@ -263,7 +263,7 @@ const result = size.fileFinishedImporting("modules/in_app_notifications/native/h
 
 export { PreviewableMediaTypes };
 export const usePreviewableMedia = ReactCompilerGating.isReactCompilerEnabled()
-  ? (message) => {
+  ? function usePreviewableMedia(message) {
       const cResult = c.c(4);
       if (cResult[0] !== message) {
         const items = [];
@@ -298,7 +298,7 @@ export const usePreviewableMedia = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : (message) => {
+  : function usePreviewableMedia(message) {
       let items = [message];
       return noop.useMemo(() => {
         const items = [];

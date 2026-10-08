@@ -50,7 +50,7 @@ export const getAppChannelBotUserId = function getAppChannelBotUserId(c18) {
   return tmp2;
 };
 export const useAppChannelBotUserId = ReactCompilerGating.isReactCompilerEnabled()
-  ? (type) => {
+  ? function useAppChannelBotUserId(type) {
       const cResult = c.c(3);
       const appChannelApplication = useAppChannelApplication.useAppChannelApplication(type);
       if (cResult[0] === appChannelApplication) {
@@ -84,7 +84,7 @@ export const useAppChannelBotUserId = ReactCompilerGating.isReactCompilerEnabled
       cResult[2] = tmp4;
       tmp3 = tmp4;
     }
-  : (type) => {
+  : function useAppChannelBotUserId(type) {
       const appChannelApplication = useAppChannelApplication.useAppChannelApplication(type);
       let tmp2;
       if (null != type) {

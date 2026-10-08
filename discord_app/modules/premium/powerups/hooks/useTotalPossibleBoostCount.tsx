@@ -17,7 +17,7 @@ const useMemo = _mod19.useMemo;
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useTotalPossibleBoostCount.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useTotalPossibleBoostCount(arg0) {
       let tmp = arg0;
       const id = arg0;
       const cResult = c.c(5);
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = closure_1;
       }
     }
-  : (arg0) => {
+  : function useTotalPossibleBoostCount(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       return useMemo(() => {

@@ -174,7 +174,7 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
           closure_128_1 = undefined;
           closure_128_2 = undefined;
           (function onUploadIntlDataRequestStart() {
-            closure_1_0(1259).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
+            closure_1_0(1271).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
           })();
           if (obj11.isIOS()) {
             let ANDROID_APP = constants.IOS_APP;
@@ -200,7 +200,7 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
       } else if (1 === tmp9) {
         c3 = 0;
         (function onUploadIntlDataRequestFinish() {
-          closure_1_0(1259).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          closure_1_0(1271).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
           const timerId = setTimeout(
             () => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })),
             5000,
@@ -218,7 +218,7 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
           closure_129_1(closure_129_3[14]).open(obj4);
           c3 = 0;
           (function onUploadIntlDataRequestFinish() {
-            closure_1_0(1259).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+            closure_1_0(1271).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
             const timerId = setTimeout(
               () => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })),
               5000,
@@ -233,7 +233,7 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
           } else if (arg0 === 2) {
             c3 = 0;
             (function onUploadIntlDataRequestFinish() {
-              closure_1_0(1259).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+              closure_1_0(1271).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
               const timerId = setTimeout(
                 () => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })),
                 5000,
@@ -274,7 +274,7 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
         }
         c3 = 0;
         (function onUploadIntlDataRequestFinish() {
-          closure_1_0(1259).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          closure_1_0(1271).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
           const timerId = setTimeout(
             () => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })),
             5000,
@@ -305,16 +305,18 @@ const module_570 = fn(570);
 let closure_9 = module_570.create(() => ({ isDisabled: false, isUploading: false }));
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f70470 = () => {};
+function useIsUploadingIntlData() {}
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-fn = () => closure_9().isDisabled;
-const SettingBuilders = fn(11142);
+function useIsUploadIntlDataDisabled() {
+  return closure_9().isDisabled;
+}
+const SettingBuilders = fn(11262);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useUploadIntlDataTrailing() {
       const cResult = c.c(2);
-      if (typeof f70470 === "function") {
+      if (typeof useIsUploadingIntlData === "function") {
         const isUploading = closure_9().isUploading;
         if (cResult[0] !== isUploading) {
           let tmp4 = null;
@@ -332,8 +334,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         throw new TypeError("Trying to call a non-function");
       }
     }
-  : () => {
-      if (typeof f70470 === "function") {
+  : function useUploadIntlDataTrailing() {
+      if (typeof useIsUploadingIntlData === "function") {
         let tmp2 = null;
         if (closure_9().isUploading) {
           tmp2 = <ActivityIndicator />;
@@ -348,7 +350,7 @@ const pressable = SettingBuilders.createPressable({
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(15380).FileUpIcon,
+  IconComponent: fn(15642).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_12.apply;
@@ -359,11 +361,11 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(14666).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(14927).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useUploadIntlDataTrailing() {
         const cResult = c.c(2);
-        if (typeof f70470 === "function") {
+        if (typeof useIsUploadingIntlData === "function") {
           const isUploading = closure_9().isUploading;
           if (cResult[0] !== isUploading) {
             let tmp4 = null;
@@ -381,8 +383,8 @@ const pressable = SettingBuilders.createPressable({
           throw new TypeError("Trying to call a non-function");
         }
       }
-    : () => {
-        if (typeof f70470 === "function") {
+    : function useUploadIntlDataTrailing() {
+        if (typeof useIsUploadingIntlData === "function") {
           let tmp2 = null;
           if (closure_9().isUploading) {
             tmp2 = <ActivityIndicator />;
@@ -392,7 +394,7 @@ const pressable = SettingBuilders.createPressable({
           throw new TypeError("Trying to call a non-function");
         }
       },
-  useIsDisabled: fn,
+  useIsDisabled: useIsUploadIntlDataDisabled,
 });
 const size = fn(2);
 const result2 = size.fileFinishedImporting("modules/user_settings/defs/native/UploadIntlDataSetting.tsx");

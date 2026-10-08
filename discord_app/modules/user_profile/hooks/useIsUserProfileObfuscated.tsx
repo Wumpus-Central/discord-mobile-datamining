@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useIsUserProfileObfuscated.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useIsUserProfileObfuscated(id) {
       _require = id;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== id.id) {
-        const fn = function t() {
+        const fn = function l() {
           return UserProfileStore.getUserProfile(id.id);
         };
         cResult[1] = id.id;
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : (flags) => {
+  : function useIsUserProfileObfuscated(flags) {
       _require = flags;
       const items = [UserProfileStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () =>

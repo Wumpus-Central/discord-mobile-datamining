@@ -3,12 +3,12 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useFieldLabelA11yNative from "../../../../../discord_common/js/packages/design/hooks/useFieldLabelA11yNative.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
+import Input from "../../Input/native/Input.native.tsx";
 import getRequiredFieldA11yName from "../../Input/native/getRequiredFieldA11yName.native.tsx";
 import useTextField from "../../TextField/native/useTextField.native.tsx";
 import InputFieldContainer from "../../Input/native/InputFieldContainer.native.tsx";
-import propsForNativeTextInput from "../../Input/native/propsForNativeTextInput.native.tsx";
 import NativeTextInput from "../../Input/native/NativeTextInput.native.tsx";
-import Input from "../../Input/native/Input.native.tsx";
+import propsForNativeTextInput from "../../Input/native/propsForNativeTextInput.native.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -16,7 +16,7 @@ require = fn;
 let closure_3 = ["labelId", "accessibilityLabel"];
 let closure_4 = ["labelId", "accessibilityLabel"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -44,8 +44,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TextInput/native/GhostInput.native.tsx");
 
 export const GhostInput = ReactCompilerGating.isReactCompilerEnabled()
-  ? (size) => {
-      const cResult = c.c(29);
+  ? function GhostInput(size) {
+      const cResult = c.c(27);
       if (cResult[0] !== size.size) {
         const obj2 = { size: size.size };
         cResult[0] = size.size;
@@ -99,30 +99,22 @@ export const GhostInput = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[12] === required) {
             let tmp21 = cResult[13];
           }
-          if (cResult[14] !== tmp6.input) {
-            const items = [tmp6.input];
-            cResult[14] = tmp6.input;
-            cResult[15] = items;
-            let tmp24 = items;
-          } else {
-            tmp24 = cResult[15];
-          }
-          if (cResult[16] === tmp7) {
-            if (cResult[17] === innerRef) {
-              if (cResult[18] === tmp11) {
-                if (cResult[19] === inputStyles.placeholderText.color) {
-                  if (cResult[20] === tmp19) {
-                    if (cResult[21] === tmp21) {
-                      if (cResult[22] === tmp24) {
-                        let tmp25 = cResult[23];
+          if (cResult[14] === tmp7) {
+            if (cResult[15] === tmp6.input) {
+              if (cResult[16] === innerRef) {
+                if (cResult[17] === tmp11) {
+                  if (cResult[18] === inputStyles.placeholderText.color) {
+                    if (cResult[19] === tmp19) {
+                      if (cResult[20] === tmp21) {
+                        let tmp24 = cResult[21];
                       }
-                      if (cResult[24] === tmp12) {
-                        if (cResult[25] === size) {
-                          if (cResult[26] === tmp18) {
-                            if (cResult[27] === tmp25) {
-                              let tmp34 = cResult[28];
+                      if (cResult[22] === tmp12) {
+                        if (cResult[23] === size) {
+                          if (cResult[24] === tmp18) {
+                            if (cResult[25] === tmp24) {
+                              let tmp33 = cResult[26];
                             }
-                            return tmp34;
+                            return tmp33;
                           }
                         }
                       }
@@ -130,14 +122,14 @@ export const GhostInput = ReactCompilerGating.isReactCompilerEnabled()
                       const merged = Object.assign(size);
                       obj3.labelId = tmp12;
                       obj3.containerStyle = tmp18;
-                      obj3.children = tmp25;
-                      const tmp39 = jsx(Input.Input, {});
-                      cResult[24] = tmp12;
-                      cResult[25] = size;
-                      cResult[26] = tmp18;
-                      cResult[27] = tmp25;
-                      cResult[28] = tmp39;
-                      tmp34 = tmp39;
+                      obj3.children = tmp24;
+                      const tmp38 = jsx(Input.Input, {});
+                      cResult[22] = tmp12;
+                      cResult[23] = size;
+                      cResult[24] = tmp18;
+                      cResult[25] = tmp24;
+                      cResult[26] = tmp38;
+                      tmp33 = tmp38;
                     }
                   }
                 }
@@ -149,20 +141,20 @@ export const GhostInput = ReactCompilerGating.isReactCompilerEnabled()
           const merged2 = Object.assign(tmp11);
           obj4.accessibilityLabel = tmp21;
           obj4.ref = innerRef;
-          obj4.style = tmp24;
+          obj4.style = tmp6.input;
           obj4.placeholderTextColor = inputStyles.placeholderText.color;
           obj4.spellCheck = false;
           obj4.autoFocus = tmp7;
-          const tmp33 = jsx(NativeTextInput.NativeTextInput, {});
-          cResult[16] = tmp7;
-          cResult[17] = innerRef;
-          cResult[18] = tmp11;
-          cResult[19] = inputStyles.placeholderText.color;
-          cResult[20] = tmp19;
-          cResult[21] = tmp21;
-          cResult[22] = tmp24;
-          cResult[23] = tmp33;
-          tmp25 = tmp33;
+          const tmp32 = jsx(NativeTextInput.NativeTextInput, {});
+          cResult[14] = tmp7;
+          cResult[15] = tmp6.input;
+          cResult[16] = innerRef;
+          cResult[17] = tmp11;
+          cResult[18] = inputStyles.placeholderText.color;
+          cResult[19] = tmp19;
+          cResult[20] = tmp21;
+          cResult[21] = tmp32;
+          tmp24 = tmp32;
         }
         let requiredFieldA11yName = getRequiredFieldA11yName.getRequiredFieldA11yName(tmp10, required);
         if (requiredFieldA11yName == null) {
@@ -174,14 +166,14 @@ export const GhostInput = ReactCompilerGating.isReactCompilerEnabled()
         tmp21 = requiredFieldA11yName;
         const tmpResult8 = getRequiredFieldA11yName;
       }
-      const items1 = [size.containerStyle, prop];
+      const items = [size.containerStyle, prop];
       cResult[6] = size.containerStyle;
       cResult[7] = prop;
-      cResult[8] = items1;
-      tmp18 = items1;
+      cResult[8] = items;
+      tmp18 = items;
       const tmpResult6 = useTextField;
     }
-  : (size) => {
+  : function GhostInput(size) {
       const inputStyles = InputFieldContainer.useInputStyles({ size: size.size });
       const tmp4 = closure_7(size.size, size.status);
       const autoFocus = size.autoFocus;
@@ -219,8 +211,7 @@ export const GhostInput = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj4.accessibilityLabel = requiredFieldA11yName;
       obj4.ref = innerRef;
-      const items1 = [tmp4.input];
-      obj4.style = items1;
+      obj4.style = tmp4.input;
       obj4.placeholderTextColor = inputStyles.placeholderText.color;
       obj4.spellCheck = false;
       obj4.autoFocus = tmp5;

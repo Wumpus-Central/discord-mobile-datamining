@@ -8,7 +8,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ClockIcon from "../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
 import TextStylesDefault from "../../../rebrand/native/TextStyles.tsx";
 import PremiumFeaturesBackgroundDefault from "../../../user_settings/premium/native/PremiumFeaturesBackground.tsx";
 import usePremiumFeaturesDefault from "../../../user_settings/premium/native/utils/usePremiumFeatures.tsx";
@@ -31,7 +31,7 @@ const require = globalThis.__r;
 require = fn;
 let closure_3 = ["premiumType", "onPress", "style", "claimableRewards", "isSelected", "variant"];
 const View = fn(17).View;
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ PremiumTypes: closure_7, SubscriptionIntervalTypes: closure_8 } = PremiumConstants);
 const Constants = fn(1096);
 ({ Fonts: closure_9, ThemeTypes: c10 } = Constants);
@@ -62,7 +62,7 @@ const obj13 = { marginTop: nativeDefault.space.PX_24 };
 obj12.compact = { marginTop: nativeDefault.space.PX_12 };
 const obj14 = { marginTop: nativeDefault.space.PX_12 };
 obj12.smallCompact = { marginTop: nativeDefault.space.PX_8 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_17 = createStyles.createStyles(() => {
   obj = { card: null, logo: null, pricing: null, featureTitle: null, features: null, button: null, featureIcon: null, featureText: null, promotionDetailsContainer: null, countdownBadge: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -91,7 +91,7 @@ let closure_17 = createStyles.createStyles(() => {
 fn(558);
 const obj15 = { marginTop: nativeDefault.space.PX_8 };
 const ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((isLargeSize) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGiftPlanSelectPromotionDetails(isLargeSize) {
   const cResult = c.c(25);
   ({ config, numClaimableRewards, isSelected, onPress } = isLargeSize);
   const tmp4 = closure_17(isLargeSize.isLargeSize);
@@ -254,7 +254,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((isLargeSize) =
   cResult[6] = tmp15;
   tmp14 = tmp15;
   const tmpResult4 = SlayerStorefrontTimeUtils;
-}) : ((config) => {
+}) : (function PremiumGiftPlanSelectPromotionDetails(config) {
   config = config.config;
   ({ numClaimableRewards, isSelected, onPress } = config);
   const tmp = closure_17(config.isLargeSize);
@@ -309,7 +309,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((isLargeSize) =
   obj4.children = __initData(tmp11, obj5);
   return closure_1_11(native.ThemeContextProvider, obj4);
 });
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGiftFeaturesCard(arg0) {
   const cResult = c.c(66);
   if (cResult[0] !== arg0) {
     ({ premiumType, onPress, style, claimableRewards, isSelected, variant } = arg0);
@@ -460,7 +460,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[11] = tmp18.card;
   cResult[12] = items3;
   const tmpResult = initialize;
-}) : ((variant) => {
+}) : (function PremiumGiftFeaturesCard(variant) {
   ({ premiumType, onPress, style, claimableRewards, isSelected } = variant);
   if (isSelected === undefined) {
     isSelected = true;
@@ -549,7 +549,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftFeaturesCard.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGiftFeaturesCard(arg0) {
   const cResult = c.c(66);
   if (cResult[0] !== arg0) {
     ({ premiumType, onPress, style, claimableRewards, isSelected, variant } = arg0);
@@ -700,7 +700,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[11] = tmp18.card;
   cResult[12] = items3;
   const tmpResult = initialize;
-}) : ((variant) => {
+}) : (function PremiumGiftFeaturesCard(variant) {
   ({ premiumType, onPress, style, claimableRewards, isSelected } = variant);
   if (isSelected === undefined) {
     isSelected = true;

@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useMediaModalFooterBackground() {
       const cResult = c.c(5);
       const tmp2 = _modDef683;
       const tmp2Result = tmp2(useToken.useToken(nativeDefault.colors.THEME_LOCKED_BLUR_FALLBACK));
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj3;
       tmp8 = obj3;
     }
-  : () => {
+  : function useMediaModalFooterBackground() {
       const tmp = _modDef683;
       const tmp2 = _slicedToArray(tmp(useToken.useToken(nativeDefault.colors.THEME_LOCKED_BLUR_FALLBACK)).rgba(), 4);
       return {

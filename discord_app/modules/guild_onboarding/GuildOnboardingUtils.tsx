@@ -4,8 +4,8 @@ import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import FlagUtilsAll from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import StringUtils from "../../utils/StringUtils.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
-import isRoleRequiredDefault from "../channel/isRoleRequired.tsx";
 import DefaultChannelUtils from "DefaultChannelUtils.tsx";
+import isRoleRequiredDefault from "../channel/isRoleRequired.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ConnectedAccountsStore from "../../stores/ConnectedAccountsStore.tsx";
 import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
@@ -78,16 +78,16 @@ function areStatesEqual(arg0, arg1) {
   }
   return tmp;
 }
-let closure_7 = fn(4513).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(6603).OnboardingConnectionType;
+let closure_7 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
+const OnboardingConnectionType = fn(6779).OnboardingConnectionType;
 const Constants = fn(1085);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
-const GuildMemberFlags = fn(4501).GuildMemberFlags;
+const GuildMemberFlags = fn(4693).GuildMemberFlags;
 let date = new Date(1682488800000);
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGuildOnboardingSettingsAvailable(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -124,7 +124,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7);
     }
-  : (arg0) => {
+  : function useGuildOnboardingSettingsAvailable(arg0) {
       _require = arg0;
       const items = [GuildStore, PermissionStore];
       return require("initialize").useStateFromStores(items, () => {
@@ -147,7 +147,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arr, arr2) => {
+  ? function useChannelCoverageForOnboarding(arg0, arr, arr2) {
       _require = arg0;
       const cResult = require("c").c(8);
       let filter = globalThis;
@@ -239,7 +239,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = items1;
       const set = new filter.Set();
     }
-  : (arg0, arr, arr2) => {
+  : function useChannelCoverageForOnboarding(arg0, arr, arr2) {
       _require = arg0;
       const items = [GuildChannelStore];
       arr2 = require("initialize").useStateFromStores(items, () => GuildChannelStore.getChannels(closure_0))[closure_7];
@@ -293,7 +293,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsChattableChannel(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -339,7 +339,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useIsChattableChannel(arg0) {
       _require = arg0;
       const items = [ChannelStore];
       return require("initialize").useStateFromStores(items, () => {
@@ -617,7 +617,7 @@ export const getChattableDefaultChannels = function getChattableDefaultChannels(
   return items;
 };
 export const useChattableDefaultChannels = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useChattableDefaultChannels(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -688,7 +688,7 @@ export const useChattableDefaultChannels = ReactCompilerGating.isReactCompilerEn
       let obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useChattableDefaultChannels(arg0, arg1) {
       _require = arg0;
       let items = [GuildChannelStore];
       let items1 = [arg0, arg1];

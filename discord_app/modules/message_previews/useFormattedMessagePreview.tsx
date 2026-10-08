@@ -380,7 +380,7 @@ const result = size.fileFinishedImporting("modules/message_previews/useFormatted
 
 export { isMessageContentPreviewable };
 export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? (author, id) => {
+  ? function useFormattedMessagePreview(author, id) {
       const _require = author;
       const cResult = require("c").c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -454,7 +454,7 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
           currentUserId: stateFromStores,
           authorNick: stringResult,
           otherUser: stateFromStores1,
-          otherUserNick: tmp(5311).useNullableUserAuthor(stateFromStores1, id).nick,
+          otherUserNick: tmp(5623).useNullableUserAuthor(stateFromStores1, id).nick,
           isBlocked,
           isIgnored,
           isCallActive: tmp10,
@@ -477,7 +477,7 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
       tmp18 = I;
       const tmpResult4 = require("initialize");
     }
-  : (author, channel) => {
+  : function useFormattedMessagePreview(author, channel) {
       const _require = author;
       const items = [RelationshipStore];
       const items1 = [author.author.id];

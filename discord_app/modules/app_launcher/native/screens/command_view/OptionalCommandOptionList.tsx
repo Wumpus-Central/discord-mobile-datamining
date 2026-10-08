@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function OptionalCommandOptionList(style) {
       const cResult = onSelectOption(576).c(10);
       ({ options, onSelectOption } = style);
       style = style.style;
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[1] === options) {
             if (cResult[5] !== cResult[2]) {
               let obj2 = { hasIcons: false, children: tmp4 };
-              const tmp10 = jsx(onSelectOption(6081).TableRowGroup, { hasIcons: false, children: tmp4 });
+              const tmp10 = jsx(onSelectOption(6267).TableRowGroup, { hasIcons: false, children: tmp4 });
               cResult[5] = tmp4;
               cResult[6] = tmp10;
               let tmp8 = tmp10;
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj2.onPress = function onPress() {
               return onSelectOption(closure_0);
             };
-            obj.trailing = jsx(onSelectOption(5601).Button, {
+            obj.trailing = jsx(onSelectOption(5375).Button, {
               accessibilityRole: "none",
               variant: "tertiary",
               size: "sm",
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               onPress: null,
             });
             return jsx(
-              onSelectOption(6000).TableRow,
+              onSelectOption(6184).TableRow,
               {
                 onPress() {
                   return onSelectOption(closure_0);
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = onSelectOption(576);
     }
-  : (arg0) => {
+  : function OptionalCommandOptionList(arg0) {
       ({ options, onSelectOption: require } = arg0);
       let tmp2 = null;
       if (0 !== options.length) {

@@ -12,11 +12,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useCanSpeakInChannel.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanCurrentUserSpeakInChannel(arg0) {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AuthenticationStore];
-        const fn = function o() {
+        const fn = function u() {
           return id.getId();
         };
         cResult[0] = items;
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE
       );
     }
-  : (arg0) => {
+  : function useCanCurrentUserSpeakInChannel(arg0) {
       const items = [AuthenticationStore];
       const stateFromStores = initialize.useStateFromStores(items, () => id.getId());
       return (

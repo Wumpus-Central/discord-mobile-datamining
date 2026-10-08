@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/regis
 export const registerGuildVisibilityMethod = function registerGuildVisibilityMethod(fastListRef) {
   const current = fastListRef.current;
   if (null != current) {
-    closure_1(() => {
+    closure_1(function getVisibleGuildIds() {
       if (null == current) {
         return [];
       } else {
@@ -64,7 +64,7 @@ export const registerFastListChannelVisibilityMethod = function registerFastList
   closure_0 = guildChannels;
   const current = ref.current;
   if (null != current) {
-    React(() => {
+    React(function getVisibleChannelIds() {
       if (null == containerSize) {
         return [];
       } else {

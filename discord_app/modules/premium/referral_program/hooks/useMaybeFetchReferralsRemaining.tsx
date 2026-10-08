@@ -7,14 +7,14 @@ import ReferralTrialStore from "../../ReferralTrialStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ PremiumTypes: metroRequire, FractionalPremiumStates: closure_7 } = PremiumConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
 
 export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useMaybeFetchReferralsRemaining(arg0) {
       const cResult = require("c").c(11);
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -49,23 +49,42 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
                 let tmp17 = cResult[10];
               }
               const effect = noop.useEffect(tmp16, tmp17);
+              class S {
+                constructor() {
+                  tmp = closure_1;
+                  if (closure_1) {
+                    tmp2 = closure_0;
+                    tmp = !closure_0;
+                  }
+                  if (tmp) {
+                    tmp3 = closure_5;
+                    result = closure_5.checkAndFetchReferralsRemaining();
+                  }
+                  return;
+                }
+              }
             }
-            const fn2 = function y() {
-              let tmp = closure_1;
-              if (closure_1) {
-                tmp = !closure_0;
+            class S {
+              constructor() {
+                tmp = closure_1;
+                if (closure_1) {
+                  tmp2 = closure_0;
+                  tmp = !closure_0;
+                }
+                if (tmp) {
+                  tmp3 = closure_5;
+                  result = closure_5.checkAndFetchReferralsRemaining();
+                }
+                return;
               }
-              if (tmp) {
-                const result = ReferralTrialStore.checkAndFetchReferralsRemaining();
-              }
-            };
+            }
             const items1 = [tmp12, tmp4];
             cResult[7] = tmp4;
             cResult[8] = tmp12;
-            cResult[9] = fn2;
+            cResult[9] = S;
             cResult[10] = items1;
             tmp17 = items1;
-            tmp16 = fn2;
+            tmp16 = S;
           }
         }
       }
@@ -75,8 +94,8 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
       }
       let fetched = true === verified;
       if (fetched) {
-        fetched = tmp(1976).isPremiumExactly(stateFromStores, closure_6.TIER_2);
-        const tmpResult6 = tmp(1976);
+        fetched = tmp(1988).isPremiumExactly(stateFromStores, closure_6.TIER_2);
+        const tmpResult6 = tmp(1988);
       }
       if (fetched) {
         fetched = tmp11.fetched;
@@ -98,7 +117,7 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
       tmp12 = fetched;
       const tmpResult5 = require("PremiumSubscriptionTrialUtil");
     }
-  : () => {
+  : function useMaybeFetchReferralsRemaining() {
       let flag = arg0;
       if (arg0 === undefined) {
         flag = false;
@@ -108,18 +127,18 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
       const stateFromStores = flag(504).useStateFromStores(items, () => currentUser.getCurrentUser());
       const obj = flag(504);
       let tmp = flag;
-      const hasDiscountApplied = flag(7740).useHasDiscountApplied();
-      const obj2 = flag(7740);
-      const hasActiveTrial = flag(7741).useHasActiveTrial();
-      const tmp6 = fetched(6908)();
+      const hasDiscountApplied = flag(8061).useHasDiscountApplied();
+      const obj2 = flag(8061);
+      const hasActiveTrial = flag(8062).useHasActiveTrial();
+      const tmp6 = fetched(7097)();
       let verified;
       if (stateFromStores != null) {
         verified = stateFromStores.verified;
       }
       fetched = true === verified;
       if (fetched) {
-        fetched = tmp(1976).isPremiumExactly(stateFromStores, closure_6.TIER_2);
-        const tmpResult = tmp(1976);
+        fetched = tmp(1988).isPremiumExactly(stateFromStores, closure_6.TIER_2);
+        const tmpResult = tmp(1988);
       }
       if (fetched) {
         fetched = tmp6.fetched;
@@ -143,5 +162,5 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
           const result = ReferralTrialStore.checkAndFetchReferralsRemaining();
         }
       }, items1);
-      const obj3 = flag(7741);
+      const obj3 = flag(8062);
     };

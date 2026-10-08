@@ -21,7 +21,7 @@ obj.contentContainer = { padding: nativeDefault.space.PX_16 };
 let closure_7 = createStyles.createStyles(obj);
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (entry) => {
+  ? function CacheLogEntry(entry) {
       const cResult = c.c(13);
       entry = entry.entry;
       if (cResult[0] !== entry.startTime) {
@@ -136,7 +136,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = items;
       obj3 = items;
     }
-  : (entry) => {
+  : function CacheLogEntry(entry) {
       entry = entry.entry;
       let str = entry.before;
       const combined = "" + new Date(entry.startTime).toLocaleString();
@@ -209,7 +209,7 @@ let obj3 = { padding: nativeDefault.space.PX_16 };
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsLocalMessageCache.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DevToolsLocalMessageCache() {
       const cResult = c.c(6);
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -279,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp17 = tmp18;
       const obj9 = { style: tmp4.container, contentContainerStyle: tmp4.contentContainer, children: tmp12 };
     }
-  : () => {
+  : function DevToolsLocalMessageCache() {
       const tmp = closure_7();
       const obj = { style: tmp.container, contentContainerStyle: tmp.contentContainer, children: null };
       const obj2 = { spacing: 8, children: null };

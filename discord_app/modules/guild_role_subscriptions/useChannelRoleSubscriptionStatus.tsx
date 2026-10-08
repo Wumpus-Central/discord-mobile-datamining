@@ -50,7 +50,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useChannelRoleSubscriptionStatus(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStoresObject(first, tmp8, tmp9);
     }
-  : (arg0) => {
+  : function useChannelRoleSubscriptionStatus(arg0) {
       _require = arg0;
       const items = [ChannelStore, GatedChannelStore, PermissionStore];
       const items1 = [arg0];

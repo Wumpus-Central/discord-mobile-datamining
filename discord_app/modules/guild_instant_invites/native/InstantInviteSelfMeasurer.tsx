@@ -8,7 +8,7 @@ const InstantInviteDefault = InstantInvite;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ container: { position: "absolute", opacity: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/guild_instant_invites/native/
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (type) => {
+    ? function InstantInviteSelfMeasurer(type) {
         let data = dependencyMap;
         const cResult = c.c(13);
         ({ containerStyle, item, onMeasured } = type);
@@ -100,7 +100,7 @@ export default noop.memo(
         cResult[2] = fn;
         tmp4 = fn;
       }
-    : (type) => {
+    : function InstantInviteSelfMeasurer(type) {
         ({ item, onMeasured } = type);
         let str = type.type;
         if (str === undefined) {

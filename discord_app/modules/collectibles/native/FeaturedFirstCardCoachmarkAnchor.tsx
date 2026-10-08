@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FeaturedFirstCardCoachmarkAnchor.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function FeaturedFirstCardCoachmarkAnchor(children) {
       const cResult = c.c(4);
       children = children.children;
       const ref = noop.useRef(null);
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp12;
     }
-  : (children) => {
+  : function FeaturedFirstCardCoachmarkAnchor(children) {
       const ref = noop.useRef(null);
       const obj = { collapsable: false, children: null };
       const items = [

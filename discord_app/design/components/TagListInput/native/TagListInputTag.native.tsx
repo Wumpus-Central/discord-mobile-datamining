@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles(() => {
   const obj = {
     tagWrapper: {
@@ -61,7 +61,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TagListInput/native/TagListInputTag.native.tsx");
 
 export const TagListInputTagComponent = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TagListInputTagComponent(arg0) {
       const cResult = c.c(26);
       ({ tag, selected, onPress } = arg0);
       ({ start, end } = arg0);
@@ -130,7 +130,7 @@ export const TagListInputTagComponent = ReactCompilerGating.isReactCompilerEnabl
       cResult[8] = items;
       const tmp10 = useAccessibilityPressDefault(A, tmp7);
     }
-  : (end) => {
+  : function TagListInputTagComponent(end) {
       ({ tag, selected, onPress: require, start } = end);
       if (start === undefined) {
         start = false;

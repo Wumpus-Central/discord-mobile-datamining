@@ -1,8 +1,8 @@
 // discord_app/modules/spoiler_channels/native/VoicePanelSpoilerAlert.tsx
 import util from "../../../intl/index.native.tsx";
+import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../actions/SelectedChannelActionCreators.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
-import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/spoiler_channels/native/VoicePanelSpoilerAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function VoicePanelSpoilerAlert(channelId) {
       const cResult = channelId(dismissModalCallback[3]).c(17);
       channelId = channelId.channelId;
       const onConnect = channelId.onConnect;
@@ -25,12 +25,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp5 = cResult[3];
           }
           if (cResult[4] !== dismissModalCallback) {
-            const fn2 = function f() {
+            function handleDisagree() {
               dismissModalCallback();
-            };
+            }
             cResult[4] = dismissModalCallback;
-            cResult[5] = fn2;
-            let tmp6 = fn2;
+            cResult[5] = handleDisagree;
+            let tmp6 = handleDisagree;
           } else {
             tmp6 = cResult[5];
           }
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp22 = tmp25;
         }
       }
-      const fn = function o() {
+      function handleAgree() {
         GuildActionCreatorsDefault.spoilerAgree(channelId);
         if (null != onConnect) {
           onConnect();
@@ -111,15 +111,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const tmpResult = SelectedChannelActionCreatorsDefault;
         }
         dismissModalCallback();
-      };
+      }
       cResult[0] = channelId;
       cResult[1] = onConnect;
       cResult[2] = dismissModalCallback;
-      cResult[3] = fn;
-      tmp5 = fn;
+      cResult[3] = handleAgree;
+      tmp5 = handleAgree;
       const obj2 = channelId(dismissModalCallback[4]);
     }
-  : (arg0) => {
+  : function VoicePanelSpoilerAlert(arg0) {
       ({ channelId: require, onConnect: importDefault } = arg0);
       dependencyMap = AlertModal.useDismissModalCallback();
       const obj2 = { title: null, content: null, actions: null };
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { children: null };
       const obj4 = {
         variant: "primary",
-        onPress() {
+        onPress: function handleAgree() {
           GuildActionCreatorsDefault.spoilerAgree(require);
           if (null != closure_1_1) {
             closure_1_1();
@@ -147,7 +147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [closure_3(AlertModal.AlertActionButton, obj4, "confirm")];
       const obj5 = {
         variant: "secondary",
-        onPress() {
+        onPress: function handleDisagree() {
           closure_2();
         },
         text: null,

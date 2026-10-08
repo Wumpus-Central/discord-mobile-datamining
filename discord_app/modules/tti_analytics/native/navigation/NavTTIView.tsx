@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function NavTTIMeasuredView(children) {
       const cResult = c.c(12);
       if (cResult[0] !== children) {
         ({ measurementProps, onLayout } = children);
@@ -32,6 +32,17 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const tmp8 = _objectWithoutProperties(children, closure_2);
         cResult[0] = children;
         cResult[1] = children;
+        class T {
+          constructor(arg0) {
+            if (onLayout != null) {
+              tmpResult = tmp(children);
+            }
+            if (closure_0 != null) {
+              tmp3Result = tmp3(children);
+            }
+            return;
+          }
+        }
         cResult[2] = measurementProps;
         cResult[3] = onLayout;
         cResult[4] = tmp8;
@@ -64,7 +75,17 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {};
         const merged = Object.assign(tmp5);
         obj2.onLayout = tmp4;
-        obj2.children = tmp2;
+        class T {
+          constructor(arg0) {
+            if (onLayout != null) {
+              tmpResult = tmp(children);
+            }
+            if (closure_0 != null) {
+              tmp3Result = tmp3(children);
+            }
+            return;
+          }
+        }
         const tmp17 = state(View, obj2);
         cResult[8] = tmp2;
         cResult[9] = tmp4;
@@ -72,20 +93,23 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = tmp17;
         tmp11 = tmp17;
       }
-      const fn = function v(arg0) {
-        if (onLayout2 != null) {
-          tmp(arg0);
+      class T {
+        constructor(arg0) {
+          if (onLayout != null) {
+            tmpResult = tmp(children);
+          }
+          if (closure_0 != null) {
+            tmp3Result = tmp3(children);
+          }
+          return;
         }
-        if (closure_0 != null) {
-          tmp3(arg0);
-        }
-      };
+      }
       cResult[5] = onLayout2;
       cResult[6] = tmp4;
-      cResult[7] = fn;
-      tmp9 = fn;
+      cResult[7] = T;
+      tmp9 = T;
     }
-  : (onLayout) => {
+  : function NavTTIMeasuredView(onLayout) {
       onLayout = onLayout.onLayout;
       ({ measurementProps, children } = onLayout);
       const merged = Object.assign(onLayout, Object.assign({ measurementProps: 0, onLayout: 0, children: 0 }));
@@ -110,7 +134,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (name) => {
+  ? function IncludedNavTTIView(name) {
       const cResult = c.c(6);
       if (cResult[0] !== name) {
         name = name.name;
@@ -141,7 +165,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = tmp12;
       const tmpResult = useComponentRenderSpan;
     }
-  : (name) => {
+  : function IncludedNavTTIView(name) {
       const merged = Object.assign(name, Object.assign({ name: 0 }));
       const obj2 = {};
       const navigationTTIRegionMeasurement = useComponentRenderSpan.useNavigationTTIRegionMeasurement(
@@ -154,7 +178,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VisualizedNavTTIViewContent(arg0) {
       const cResult = c.c(23);
       ({ props, measurementProps, hierarchy } = arg0);
       if (cResult[0] !== props) {
@@ -264,7 +288,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = tmp13;
       const obj7 = { value: hierarchy.contextValue, children: props.children };
     }
-  : (measurementProps) => {
+  : function VisualizedNavTTIViewContent(measurementProps) {
       ({ props, hierarchy } = measurementProps);
       ({ tracking, descendantTracking } = props);
       let str = props.name;
@@ -295,7 +319,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function VisualizedIncludedNavTTIView(children) {
       const cResult = c.c(8);
       const Children = noop.Children;
       const tmp4 = Children.count(children.children) > 0;
@@ -339,7 +363,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = obj3;
       tmp5 = obj3;
     }
-  : (name) => {
+  : function VisualizedIncludedNavTTIView(name) {
       const obj2 = { name: name.name, tracking: name.tracking, hasChildren: null };
       const Children = noop.Children;
       obj2.hasChildren = Children.count(name.children) > 0;
@@ -352,7 +376,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (name) => {
+  ? function VisualizedExcludedNavTTIView(name) {
       const cResult = c.c(11);
       if (cResult[0] !== name) {
         let str = name.name;
@@ -415,7 +439,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = obj3;
       tmp7 = obj3;
     }
-  : (name) => {
+  : function VisualizedExcludedNavTTIView(name) {
       let str = name.name;
       if (str == null) {
         str = "(unnamed)";
@@ -440,7 +464,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (tracking) => {
+  ? function VisualizedNavTTIView(tracking) {
       const cResult = c.c(2);
       if (cResult[0] !== tracking) {
         if ("include" === tracking.tracking) {
@@ -458,7 +482,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         return cResult[1];
       }
     }
-  : (tracking) => {
+  : function VisualizedNavTTIView(tracking) {
       if ("include" === tracking.tracking) {
         const obj2 = {};
         const merged = Object.assign(tracking);
@@ -475,7 +499,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavTTIView.tsx");
 
 export const NavTTIView = ReactCompilerGating.isReactCompilerEnabled()
-  ? (tracking) => {
+  ? function NavTTIView(tracking) {
       const cResult = c.c(16);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DevSettingsStore];
@@ -562,7 +586,7 @@ export const NavTTIView = ReactCompilerGating.isReactCompilerEnabled()
       }
       tmpResult = initialize;
     }
-  : (tracking) => {
+  : function NavTTIView(tracking) {
       const items = [DevSettingsStore];
       if (obj.useStateFromStores(items, () => DevSettingsStore.get("navigation_tti_visualizer"))) {
         const obj2 = {};

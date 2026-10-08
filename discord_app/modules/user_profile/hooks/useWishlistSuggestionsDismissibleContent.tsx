@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserProfileStore from "../UserProfileStore.tsx";
 
 const require = fn;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const cooldownDurationMs = 90 * DurationsDefault.Millis.DAY;
 let closure_7 = 90 * DurationsDefault.Millis.DAY;
 const ReactCompilerGating = fn(558);
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useWishlistSuggestionsDismissibleContent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function useWishlistSuggestionsDismissibleContent(userId) {
       const cResult = userId(wishlist[6]).c(13);
       userId = userId.userId;
       wishlist = userId.wishlist;
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = I;
       const tmp6 = _slicedToArray(noop.useState(false), 2);
     }
-  : (userId) => {
+  : function useWishlistSuggestionsDismissibleContent(userId) {
       userId = userId.userId;
       const wishlist = userId.wishlist;
       let hasFetchedWishlist = userId.hasFetchedWishlist;

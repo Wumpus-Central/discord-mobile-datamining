@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1087).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   card: {
     overflow: "hidden",
@@ -41,7 +41,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestHomeOrbShopRewardCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (product) => {
+  ? function QuestHomeOrbShopRewardCard(product) {
       let PressableOpacity = require;
       let tmp = analyticsLocations;
       const cResult = require("c").c(44);
@@ -381,7 +381,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = obj8;
       const PressableOpacityResult2 = PressableOpacity(tmp[14]);
     }
-  : (product) => {
+  : function QuestHomeOrbShopRewardCard(product) {
       product = product.product;
       const require = product;
       let COLLECTIBLES_SHOP_CARD_WIDTH = product.cardWidth;

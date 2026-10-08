@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/markup_v2/NativeMarkdownExper
 
 export const NativeMarkdownExperiment = apexExperiment;
 export const useNativeMarkdown = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useNativeMarkdown(location) {
       const cResult = c.c(2);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -27,4 +27,6 @@ export const useNativeMarkdown = ReactCompilerGating.isReactCompilerEnabled()
       }
       return apexExperiment.useConfig(tmp2);
     }
-  : (location) => apexExperiment.useConfig({ location: location.location });
+  : function useNativeMarkdown(location) {
+      return apexExperiment.useConfig({ location: location.location });
+    };

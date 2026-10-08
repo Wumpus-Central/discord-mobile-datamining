@@ -246,7 +246,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/activate_device/useDeviceCodeAuthorizeCallback.tsx");
 
 export const useDeviceCodeAuthorizeCallback = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useDeviceCodeAuthorizeCallback(arg0, arg1, arg2) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = arg2;
@@ -380,7 +380,7 @@ export const useDeviceCodeAuthorizeCallback = ReactCompilerGating.isReactCompile
           }
         }
       });
-      const fn = function () {
+      function t0() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -389,14 +389,14 @@ export const useDeviceCodeAuthorizeCallback = ReactCompilerGating.isReactCompile
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      };
+      }
       cResult[0] = arg0;
       cResult[1] = arg1;
       cResult[2] = arg2;
-      cResult[3] = fn;
-      tmp2 = fn;
+      cResult[3] = t0;
+      tmp2 = t0;
     }
-  : (arg0, arg1, arg2) => {
+  : function useDeviceCodeAuthorizeCallback(arg0, arg1, arg2) {
       closure_1 = arg1;
       closure_2 = arg2;
       closure_0 = asyncGeneratorStep(async (arg0, arg1) => {

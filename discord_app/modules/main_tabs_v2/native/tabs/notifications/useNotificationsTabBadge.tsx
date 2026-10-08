@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useNotificationsTabBadge() {
       const cResult = c.c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [NotificationCenterItemsStore];
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = initialize;
     }
-  : () => {
+  : function useNotificationsTabBadge() {
       const items = [NotificationCenterItemsStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () => localItems.localItems);
       const items1 = [stateFromStores];

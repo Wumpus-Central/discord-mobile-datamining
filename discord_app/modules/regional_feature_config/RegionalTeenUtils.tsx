@@ -7,15 +7,15 @@ import RegionalFeatureConfigStore from "RegionalFeatureConfigStore.tsx";
 
 require = fn;
 let items = ["GB", "AU"];
-HermesBuiltin.arraySpread(fn(5113).CountryCodesSets.EU_COUNTRIES, 2);
+HermesBuiltin.arraySpread(fn(5910).CountryCodesSets.EU_COUNTRIES, 2);
 const set = new Set(items);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useUserCountryCode() {
       const cResult = stateFromStores(576).c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [RegionalFeatureConfigStore];
-        const fn = function s() {
+        const fn = function u() {
           return userCountryCode.getUserCountryCode();
         };
         cResult[0] = items;
@@ -46,7 +46,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp8, tmp9);
       return stateFromStores;
     }
-  : () => {
+  : function useUserCountryCode() {
       const items = [RegionalFeatureConfigStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () => userCountryCode.getUserCountryCode());
       const items1 = [stateFromStores];
@@ -60,7 +60,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_5 = tmp4;
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (has) => {
+  ? function useIsTeenInCountrySet(has) {
       const cResult = c.c(4);
       const tmp2 = closure_5();
       const userIsTeen = useUserIsTeen.useUserIsTeen();
@@ -85,7 +85,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = hasItem;
       tmp4 = hasItem;
     }
-  : (has) => {
+  : function useIsTeenInCountrySet(has) {
       const tmp = closure_5();
       let userIsTeen = useUserIsTeen.useUserIsTeen();
       if (userIsTeen) {
@@ -104,4 +104,6 @@ const result1 = size.fileFinishedImporting("modules/regional_feature_config/Regi
 
 export const useUserCountryCode = tmp4;
 export const useIsTeenInCountrySet = tmp5;
-export const useIsTeenInStrictCountry = () => closure_6(set);
+export const useIsTeenInStrictCountry = function useIsTeenInStrictCountry() {
+  return closure_6(set);
+};

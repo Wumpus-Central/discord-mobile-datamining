@@ -12,7 +12,7 @@ function setUseEntranceAnimationState(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => obj5.setState(closure_0));
 }
-let obj = { duration: 300, easing: fn(1188).STANDARD_EASING };
+let obj = { duration: 300, easing: fn(1200).STANDARD_EASING };
 const module_570 = fn(570);
 const obj5 = module_570.create(() => ({ isComplete: false }));
 let closure_7 = {
@@ -33,7 +33,7 @@ let result = size.fileFinishedImporting("modules/media_viewer/native/useEntrance
 
 export const useEntranceAnimationState = obj5;
 export const useEntranceAnimation = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useEntranceAnimation(arg0) {
       _require = arg0;
       const cResult = require("c").c(9);
       obj = require("c");
@@ -78,9 +78,9 @@ export const useEntranceAnimation = ReactCompilerGating.isReactCompilerEnabled()
               obj3 = closure_0(closure_1[7]);
               tmp6 = closure_4;
               fn = function t() {
-                closure_0(4618).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
-                obj = closure_0(4618);
-                closure_0(4618).runOnJS(incrementLoads)();
+                closure_0(4810).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
+                obj = closure_0(4810);
+                closure_0(4810).runOnJS(incrementLoads)();
               };
               obj1 = { runOnJS: null, setUseEntranceAnimationState: null, incrementLoads: null };
               obj1.runOnJS = closure_0(closure_1[8]).runOnJS;
@@ -119,9 +119,9 @@ export const useEntranceAnimation = ReactCompilerGating.isReactCompilerEnabled()
               obj3 = closure_0(closure_1[7]);
               tmp6 = closure_4;
               fn = function t() {
-                closure_0(4618).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
-                obj = closure_0(4618);
-                closure_0(4618).runOnJS(incrementLoads)();
+                closure_0(4810).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
+                obj = closure_0(4810);
+                closure_0(4810).runOnJS(incrementLoads)();
               };
               obj1 = { runOnJS: null, setUseEntranceAnimationState: null, incrementLoads: null };
               obj1.runOnJS = closure_0(closure_1[8]).runOnJS;
@@ -159,9 +159,9 @@ export const useEntranceAnimation = ReactCompilerGating.isReactCompilerEnabled()
               obj3 = closure_0(closure_1[7]);
               tmp6 = closure_4;
               fn = function t() {
-                closure_0(4618).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
-                obj = closure_0(4618);
-                closure_0(4618).runOnJS(incrementLoads)();
+                closure_0(4810).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
+                obj = closure_0(4810);
+                closure_0(4810).runOnJS(incrementLoads)();
               };
               obj1 = { runOnJS: null, setUseEntranceAnimationState: null, incrementLoads: null };
               obj1.runOnJS = closure_0(closure_1[8]).runOnJS;
@@ -194,7 +194,7 @@ export const useEntranceAnimation = ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { loads: tmp3, handleLoadStart: tmp5, handleError: J, handleLoad: J };
       const tmp2 = incrementLoads(noop.useState(0), 2);
     }
-  : (arg0) => {
+  : function useEntranceAnimation(arg0) {
       closure_0 = arg0;
       [tmp2, dependencyMap] = incrementLoads(noop.useState(0), 2);
       incrementLoads = noop.useCallback(() => {
@@ -219,9 +219,9 @@ export const useEntranceAnimation = ReactCompilerGating.isReactCompilerEnabled()
           ReactBatchUpdates.batchUpdates(() => state.setState({ isComplete: false }));
           const obj3 = timing;
           const fn = function t() {
-            closure_0(4618).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
-            obj = closure_0(4618);
-            closure_0(4618).runOnJS(incrementLoads)();
+            closure_0(4810).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
+            obj = closure_0(4810);
+            closure_0(4810).runOnJS(incrementLoads)();
           };
           const obj4 = { runOnJS: ReanimatedRexport.runOnJS, setUseEntranceAnimationState, incrementLoads };
           fn.__closure = obj4;

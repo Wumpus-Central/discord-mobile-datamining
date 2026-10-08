@@ -12,12 +12,12 @@ const HighlightSettings = fn(1085).HighlightSettings;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function Row(guildId) {
       const cResult = guildId(576).c(15);
       guildId = guildId.guildId;
       ({ isStart, isEnd } = guildId);
       if (cResult[0] !== guildId) {
-        const fn = function n(arg0) {
+        const fn = function l(arg0) {
           const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
           const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(
             guildId,
@@ -95,7 +95,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { label: name, icon: tmp14, value: !muted, onValueChange: tmp4, start: isStart, end: isEnd };
-        const tmp20 = jsx(tmp(6705).TableSwitchRow, {
+        const tmp20 = jsx(tmp(6882).TableSwitchRow, {
           label: name,
           icon: tmp14,
           value: !muted,
@@ -114,7 +114,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = guildId(504);
     }
-  : (guildId) => {
+  : function Row(guildId) {
       guildId = guildId.guildId;
       const items = [guildId];
       ({ isStart, isEnd } = guildId);
@@ -158,7 +158,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           start: isStart,
           end: isEnd,
         };
-        return jsx(tmp2(6705).TableSwitchRow, {
+        return jsx(tmp2(6882).TableSwitchRow, {
           label: guild.name,
           icon: jsx(GuildIconDefault, { guild }),
           value: !muted,
@@ -177,13 +177,13 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsHighlightNotifications() {
       let Form = stateFromStoresArray;
       let tmp = dependencyMap;
       const cResult = stateFromStoresArray(576).c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SortedGuildStore];
-        const fn = function l() {
+        const fn = function n() {
           return flattenedGuildIds.getFlattenedGuildIds();
         };
         cResult[0] = items;
@@ -219,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else if (0 === stateFromStoresArray.length) {
         return null;
       } else if (cResult[6] !== tmp6) {
-        Form = Form(8924).Form;
+        Form = Form(8555).Form;
         const obj2 = { children: tmp6 };
         tmp = <Form>{tmp6}</Form>;
         cResult[6] = tmp6;
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const FormResult = Form(504);
     }
-  : () => {
+  : function UserSettingsHighlightNotifications() {
       const items = [SortedGuildStore];
       stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () =>
         flattenedGuildIds.getFlattenedGuildIds(),
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp4 = null;
       if (0 !== stateFromStoresArray.length) {
         const obj2 = { children: tmp3 };
-        tmp4 = jsx(stateFromStoresArray(8924).Form, { children: tmp3 });
+        tmp4 = jsx(stateFromStoresArray(8555).Form, { children: tmp3 });
       }
       return tmp4;
     };

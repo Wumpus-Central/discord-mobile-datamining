@@ -12,15 +12,15 @@ import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
 import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
 import AdAnalyticsInterfaceExperiment from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
-import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef7589 from "../../../../_runtime/metro/07589__.js";
 import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
+import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
+import _modDef8746 from "../../../../_runtime/metro/08746__.js";
 import QuestActionCreators from "../QuestActionCreators.tsx";
 import QuestCopyUtils from "../utils/QuestCopyUtils.tsx";
 import QuestUtils from "QuestUtils.native.tsx";
 import QuestPlatformUtils from "../utils/QuestPlatformUtils.tsx";
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx";
-import _modDef14971 from "../../../../_runtime/metro/14971__.js";
+import _modDef15233 from "../../../../_runtime/metro/15233__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import QuestStore from "../QuestStore.tsx";
@@ -29,7 +29,7 @@ require = fn;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(_objectWithoutProperties(ref, closure_3));
-  obj.icon = _modDef7589;
+  obj.icon = _modDef8746;
   obj.variant = "secondary";
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.CAgr1w);
@@ -46,7 +46,7 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestContextMenu.
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function QuestContextMenu(arg0) {
         const cResult = quest(handleProgress[9]).c(89);
         ({ children, quest } = arg0);
         ({ showShareLink, additionalItems, sourceQuestContent } = arg0);
@@ -126,27 +126,19 @@ export default noop.memo(
                             return obj.manuallyStartConsoleQuest(quest.id, true);
                           }
                         }
-                        class D {
+                        class H {
                           constructor() {
-                            if (closure_7) {
-                              tmp = closure_0;
-                              tmp2 = closure_2;
-                              obj = closure_0(closure_2[15]);
-                              tmp3 = quest;
-                              obj1 = { content: null, ctaContent: null, impressionId: null, sourceQuestContent: null };
-                              obj1.content = closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE;
-                              obj1.ctaContent = closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_COPY_LINK;
-                              tmp4 = closure_6;
-                              obj1.impressionId = closure_6();
-                              tmp5 = sourceQuestContent;
-                              obj1.sourceQuestContent = sourceQuestContent;
-                              copyShareLinkResult = obj.copyShareLink(quest.id, obj1);
-                              AccessibilityAnnouncer = closure_0(closure_2[22]).AccessibilityAnnouncer;
-                              intl = closure_0(closure_2[7]).intl;
-                              announceResult = AccessibilityAnnouncer.announce(
-                                intl.string(closure_0(closure_2[7]).t["+5kSoW"]),
-                              );
-                            }
+                            obj = closure_1(closure_2[23]);
+                            obj1 = { creative: null, isTargetedDisclosure: false, trackingCtx: null };
+                            obj5 = { type: closure_0(closure_2[24]).AdCreativeType.QUEST, quest };
+                            obj1.creative = obj5;
+                            obj6 = {
+                              content: closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE,
+                              ctaContent: closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE,
+                              sourceQuestContent,
+                            };
+                            obj1.trackingCtx = obj6;
+                            showModalResult = obj.showModal(obj1);
                             return;
                           }
                         }
@@ -166,27 +158,19 @@ export default noop.memo(
                           }
                         }
                       }
-                      class D {
+                      class H {
                         constructor() {
-                          if (closure_7) {
-                            tmp = closure_0;
-                            tmp2 = closure_2;
-                            obj = closure_0(closure_2[15]);
-                            tmp3 = quest;
-                            obj1 = { content: null, ctaContent: null, impressionId: null, sourceQuestContent: null };
-                            obj1.content = closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE;
-                            obj1.ctaContent = closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_COPY_LINK;
-                            tmp4 = closure_6;
-                            obj1.impressionId = closure_6();
-                            tmp5 = sourceQuestContent;
-                            obj1.sourceQuestContent = sourceQuestContent;
-                            copyShareLinkResult = obj.copyShareLink(quest.id, obj1);
-                            AccessibilityAnnouncer = closure_0(closure_2[22]).AccessibilityAnnouncer;
-                            intl = closure_0(closure_2[7]).intl;
-                            announceResult = AccessibilityAnnouncer.announce(
-                              intl.string(closure_0(closure_2[7]).t["+5kSoW"]),
-                            );
-                          }
+                          obj = closure_1(closure_2[23]);
+                          obj1 = { creative: null, isTargetedDisclosure: false, trackingCtx: null };
+                          obj5 = { type: closure_0(closure_2[24]).AdCreativeType.QUEST, quest };
+                          obj1.creative = obj5;
+                          obj6 = {
+                            content: closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE,
+                            ctaContent: closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE,
+                            sourceQuestContent,
+                          };
+                          obj1.trackingCtx = obj6;
+                          showModalResult = obj.showModal(obj1);
                           return;
                         }
                       }
@@ -207,27 +191,19 @@ export default noop.memo(
                       cResult[27] = tmp18;
                       cResult[28] = obj2;
                     }
-                    class D {
+                    class H {
                       constructor() {
-                        if (closure_7) {
-                          tmp = closure_0;
-                          tmp2 = closure_2;
-                          obj = closure_0(closure_2[15]);
-                          tmp3 = quest;
-                          obj1 = { content: null, ctaContent: null, impressionId: null, sourceQuestContent: null };
-                          obj1.content = closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE;
-                          obj1.ctaContent = closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_COPY_LINK;
-                          tmp4 = closure_6;
-                          obj1.impressionId = closure_6();
-                          tmp5 = sourceQuestContent;
-                          obj1.sourceQuestContent = sourceQuestContent;
-                          copyShareLinkResult = obj.copyShareLink(quest.id, obj1);
-                          AccessibilityAnnouncer = closure_0(closure_2[22]).AccessibilityAnnouncer;
-                          intl = closure_0(closure_2[7]).intl;
-                          announceResult = AccessibilityAnnouncer.announce(
-                            intl.string(closure_0(closure_2[7]).t["+5kSoW"]),
-                          );
-                        }
+                        obj = closure_1(closure_2[23]);
+                        obj1 = { creative: null, isTargetedDisclosure: false, trackingCtx: null };
+                        obj5 = { type: closure_0(closure_2[24]).AdCreativeType.QUEST, quest };
+                        obj1.creative = obj5;
+                        obj6 = {
+                          content: closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE,
+                          ctaContent: closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE,
+                          sourceQuestContent,
+                        };
+                        obj1.trackingCtx = obj6;
+                        showModalResult = obj.showModal(obj1);
                         return;
                       }
                     }
@@ -240,30 +216,8 @@ export default noop.memo(
                     }
                     cResult[19] = quest;
                     cResult[20] = sourceQuestContent;
-                    cResult[21] = tmp22;
+                    cResult[21] = H;
                   }
-                }
-              }
-              class D {
-                constructor() {
-                  if (closure_7) {
-                    tmp = closure_0;
-                    tmp2 = closure_2;
-                    obj = closure_0(closure_2[15]);
-                    tmp3 = quest;
-                    obj1 = { content: null, ctaContent: null, impressionId: null, sourceQuestContent: null };
-                    obj1.content = closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE;
-                    obj1.ctaContent = closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_COPY_LINK;
-                    tmp4 = closure_6;
-                    obj1.impressionId = closure_6();
-                    tmp5 = sourceQuestContent;
-                    obj1.sourceQuestContent = sourceQuestContent;
-                    copyShareLinkResult = obj.copyShareLink(quest.id, obj1);
-                    AccessibilityAnnouncer = closure_0(closure_2[22]).AccessibilityAnnouncer;
-                    intl = closure_0(closure_2[7]).intl;
-                    announceResult = AccessibilityAnnouncer.announce(intl.string(closure_0(closure_2[7]).t["+5kSoW"]));
-                  }
-                  return;
                 }
               }
               class S {
@@ -275,7 +229,7 @@ export default noop.memo(
               cResult[15] = tmp16;
               cResult[16] = quest.id;
               cResult[17] = sourceQuestContent;
-              cResult[18] = D;
+              cResult[18] = tmp21;
             }
           }
           class S {
@@ -305,7 +259,7 @@ export default noop.memo(
         tmp16 = isShareableQuestResult;
         const tmpResult7 = quest(handleProgress[14]);
       }
-    : (children) => {
+    : function QuestContextMenu(children) {
         children = children.children;
         if (children === undefined) {
           children = stateFromStores;
@@ -436,7 +390,7 @@ export default noop.memo(
           const intl = util.intl;
           obj2.label = intl.string(util.t.GcsZKJ);
           obj2.action = callback2;
-          obj2.iconSource = _modDef14971;
+          obj2.iconSource = _modDef15233;
           items[1] = obj2;
           if (flag) {
             const obj3 = { label: null, IconComponent: null, action: null };

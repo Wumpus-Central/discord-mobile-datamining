@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let c12 = 30;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_13 = createStyles.createStyles((height, height2) => {
   const obj = {
     container: { alignSelf: "flex-start", height },
@@ -34,7 +34,7 @@ let closure_13 = createStyles.createStyles((height, height2) => {
 fn(558);
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AIShimmerInner(arg0) {
       const cResult = sharedValue(first[7]).c(48);
       ({
         text,
@@ -258,7 +258,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       tmp17 = fn;
       const tmp13 = _slicedToArray(bound.useState(0), 2);
     }
-  : (arg0) => {
+  : function AIShimmerInner(arg0) {
       ({ variant, color, glyphColor, trailingWidth } = arg0);
       let sharedValue;
       pass = undefined;
@@ -404,7 +404,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ShimmerLayers(arg0) {
       const cResult = c.c(82);
       ({
         pass,
@@ -574,7 +574,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                                                                                 };
                                                                                 const items = [tmp28, tmp32, tmp56];
                                                                                 obj6.children = items;
-                                                                                const tmp63 = v65535(
+                                                                                const tmp63 = collapsed(
                                                                                   ReanimatedRexportDefault.View,
                                                                                   obj6,
                                                                                 );
@@ -768,7 +768,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = obj16;
       tmp4 = obj16;
     }
-  : (pass) => {
+  : function ShimmerLayers(pass) {
       pass = pass.pass;
       ({
         animationProgress,
@@ -866,7 +866,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ShimmerTextSlot(arg0) {
       const cResult = c.c(56);
       ({ text, shiftedText, variant, color, animationWidth, clippingWindowWidth, animatedStyles, styles } = arg0);
       if (cResult[0] !== clippingWindowWidth) {
@@ -973,7 +973,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                             const obj7 = { children: null };
                                             const items = [tmp15, tmp36];
                                             obj7.children = items;
-                                            const tmp43 = v65535(closure_1_11, obj7);
+                                            const tmp43 = collapsed(closure_1_11, obj7);
                                             cResult[53] = tmp36;
                                             cResult[54] = tmp15;
                                             cResult[55] = tmp43;
@@ -1078,7 +1078,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items5;
       tmp5 = items5;
     }
-  : (arg0) => {
+  : function ShimmerTextSlot(arg0) {
       ({ variant, color, animationWidth, clippingWindowWidth, animatedStyles, styles } = arg0);
       const obj = { children: null };
       ({ text, shiftedText } = arg0);
@@ -1115,7 +1115,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.children = options(ReanimatedRexportDefault.View, obj5);
       items2[1] = options(ReanimatedRexportDefault.View, obj4);
       obj.children = items2;
-      return v65535(closure_1_11, obj);
+      return collapsed(closure_1_11, obj);
     };
 const __initData = {
   code: "function AIShimmerNativeTsx1(){const{animationProgress,BAND_UPDATES_PER_PASS,bandGlyphsAt,slotCount,glyphChoices,overshootInSlots}=this.__closure;const totalProgress=animationProgress.get();const passProgress=totalProgress-Math.floor(totalProgress);const updateStep=Math.floor(passProgress*BAND_UPDATES_PER_PASS)/BAND_UPDATES_PER_PASS;return bandGlyphsAt(updateStep,slotCount,glyphChoices,overshootInSlots);}",
@@ -1132,7 +1132,7 @@ const __initData4 = {
 ReactCompilerGating = fn(558);
 let closure_21 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (animationProgress) => {
+    ? function GlyphBand(animationProgress) {
         const cResult = animationProgress(overshootInSlots[7]).c(5);
         animationProgress = animationProgress.animationProgress;
         const slotCount = animationProgress.slotCount;
@@ -1204,7 +1204,7 @@ let closure_21 = noop.memo(
         cResult[4] = tmp9;
         tmp8 = tmp9;
       }
-    : (animationProgress) => {
+    : function GlyphBand(animationProgress) {
         animationProgress = animationProgress.animationProgress;
         const slotCount = animationProgress.slotCount;
         const overshootInSlots = animationProgress.overshootInSlots;
@@ -1302,7 +1302,7 @@ const __initData16 = {
 };
 ReactCompilerGating = fn(558);
 let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (animationProgress) => {
+  ? function useAnimatedSlotStyles(animationProgress) {
       const cResult = animationProgress(animationWidth[7]).c(6);
       animationProgress = animationProgress.animationProgress;
       const slot = animationProgress.slot;
@@ -1452,7 +1452,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = obj10;
       tmp8 = obj10;
     }
-  : (animationProgress) => {
+  : function useAnimatedSlotStyles(animationProgress) {
       animationProgress = animationProgress.animationProgress;
       const slot = animationProgress.slot;
       const animationWidth = animationProgress.animationWidth;
@@ -1619,7 +1619,7 @@ const __initData26 = {
 };
 ReactCompilerGating = fn(558);
 let closure_45 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (animationProgress) => {
+  ? function useAnimatedBandStyles(animationProgress) {
       const cResult = animationProgress(animationWidth[7]).c(5);
       animationProgress = animationProgress.animationProgress;
       const crossFadeOpacity = animationProgress.crossFadeOpacity;
@@ -1721,7 +1721,7 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj8;
       tmp7 = obj8;
     }
-  : (animationProgress) => {
+  : function useAnimatedBandStyles(animationProgress) {
       animationProgress = animationProgress.animationProgress;
       const crossFadeOpacity = animationProgress.crossFadeOpacity;
       const animationWidth = animationProgress.animationWidth;
@@ -1806,7 +1806,7 @@ let result = size.fileFinishedImporting("design/visual-identities/ai/AIShimmer/A
 
 export const AIShimmer = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function AIShimmer(arg0) {
         const cResult = c.c(12);
         if (cResult[0] !== arg0) {
           ({ variant, delay, initialDelay, duration } = arg0);
@@ -1880,7 +1880,7 @@ export const AIShimmer = noop.memo(
           duration: AI_TEXT_EFFECT_DEFAULT_DURATION,
         };
       }
-    : (variant) => {
+    : function AIShimmer(variant) {
         let str = variant.variant;
         if (str === undefined) {
           str = "text-md/normal";

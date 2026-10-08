@@ -12,14 +12,14 @@ require = fn;
 const jsx = fn(21).jsx;
 const module_570 = fn(570);
 const obj5 = module_570.create(() => ({ controls: "Reflect", paused: true }));
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, portal, controls) => {
+  ? function useVideoControls(arg0, portal, controls) {
       _require = arg0;
       importDefault = controls;
       const cResult = require("c").c(19);
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   const effect = obj3.useEffect(tmp17, tmp18);
                   if (cResult[11] !== arg0) {
-                    class V {
+                    class C {
                       constructor() {
                         obj = closure_0(closure_2[14]);
                         removeSpoilerResult = obj.removeSpoiler(closure_0);
@@ -77,9 +77,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                     cResult[11] = arg0;
-                    cResult[12] = V;
+                    cResult[12] = C;
                   } else {
-                    class V {
+                    class C {
                       constructor() {
                         obj = closure_0(closure_2[14]);
                         removeSpoilerResult = obj.removeSpoiler(closure_0);
@@ -88,23 +88,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   if (result) {
-                    class V {
+                    class C {
                       constructor() {
                         obj = closure_0(closure_2[14]);
                         removeSpoilerResult = obj.removeSpoiler(closure_0);
                         return;
                       }
                     }
-                    const obj2 = { style: tmp4.slider, controls, paused: tmp10, setPaused: tmp11, onPlayPress: V };
+                    const obj2 = { style: tmp4.slider, controls, paused: tmp10, setPaused: tmp11, onPlayPress: C };
                     const tmp23 = videoURI(tmp13(tmp2[15]), obj2, videoURI);
                     cResult[13] = controls;
-                    cResult[14] = V;
+                    cResult[14] = C;
                     cResult[15] = tmp10;
                     cResult[16] = tmp4.slider;
                     cResult[17] = videoURI;
                     cResult[18] = tmp23;
                   } else {
-                    class V {
+                    class C {
                       constructor() {
                         obj = closure_0(closure_2[14]);
                         removeSpoilerResult = obj.removeSpoiler(closure_0);
@@ -118,23 +118,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn2 = function y() {
-        if (closure_5 !== closure_0) {
-          if (null != tmp) {
-            if (null != videoURI) {
-              if (closure_7 !== tmp3) {
-                controls.seek(0);
-                let tmp6 = mediaItemHasSpoiler;
-                if (!mediaItemHasSpoiler) {
-                  tmp6 = stateFromStores;
+      class V {
+        constructor() {
+          if (closure_5 !== closure_0) {
+            tmp2 = null;
+            if (null != tmp) {
+              if (null != videoURI) {
+                tmp4 = closure_7;
+                if (closure_7 !== tmp3) {
+                  obj = closure_1;
+                  num = 0;
+                  seekResult = closure_1.seek(0);
+                  tmp6 = closure_4;
+                  if (!closure_4) {
+                    tmp6 = closure_2;
+                  }
+                  pauseResult = obj.pause(tmp6);
+                  tmp8 = closure_3;
+                  tmp9 = closure_3(tmp6);
                 }
-                controls.pause(tmp6);
-                tmp11(tmp6);
               }
             }
           }
+          return;
         }
-      };
+      }
       const items1 = [controls, videoURI, stateFromStores, tmp16, mediaItemHasSpoiler, tmp14, arg0];
       cResult[2] = controls;
       cResult[3] = mediaItemHasSpoiler;
@@ -143,13 +151,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp16;
       cResult[7] = videoURI;
       cResult[8] = stateFromStores;
-      cResult[9] = fn2;
+      cResult[9] = V;
       cResult[10] = items1;
       tmp18 = items1;
-      tmp17 = fn2;
+      tmp17 = V;
       const tmpResult3 = require("useMediaItemHasSpoiler");
     }
-  : (arg0, portal, controls) => {
+  : function useVideoControls(arg0, portal, controls) {
       _require = arg0;
       importDefault = controls;
       const tmp = closure_8();

@@ -11,8 +11,8 @@ const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const colors = ["rgba(0,0,0,0)", "rgba(0,0,0,0.7)", "rgba(0,0,0,1)"];
-let closure_9 = 5000 + fn(4900).timingSlowDuration;
-const createStyles = fn(4896);
+let closure_9 = 5000 + fn(5094).timingSlowDuration;
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { scrollIndicator: null, scrollIndicatorContent: null, scrollIndicatorText: null };
   const rect = { position: "absolute", left: 0, right: 0, bottom: 0, height: "45%", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
@@ -23,7 +23,7 @@ let closure_10 = createStyles.createStyles(() => {
   return obj;
 });
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAnimationTiming(enabled) {
   const cResult = enabled(576).c(5);
   enabled = enabled.enabled;
   const tmp2 = _slicedToArray(noop.useState(true), 2);
@@ -91,7 +91,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
     tmp11 = cResult[4];
   }
   return tmp11;
-}) : ((enabled) => {
+}) : (function useAnimationTiming(enabled) {
   let visible = enabled.enabled;
   const tmp = _slicedToArray(noop.useState(true), 2);
   closure_1 = tmp2;
@@ -151,7 +151,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollIndicatorOverlay.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesScrollIndicatorOverlay(enabled) {
   const cResult = enabled(visible[8]).c(30);
   enabled = enabled.enabled;
   const isEndCardVisible = enabled.isEndCardVisible;
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
     tmp8(false);
   };
   const tmp6 = _slicedToArray(animationCallbackJSThread.useState(visible), 2);
-  class A {
+  class H {
     constructor() {
       tmp = closure_0;
       tmp2 = closure_2;
@@ -204,10 +204,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
     }
   }
   let tmpResult = enabled(visible[9]);
-  A.__closure = { withTiming: enabled(visible[10]).withTiming, visible, enabled, timingSlow: enabled(visible[4]).timingSlow, timingStandard: enabled(visible[4]).timingStandard, runOnJS: enabled(visible[9]).runOnJS, animationCallbackJSThread };
-  A.__workletHash = 2517455700007;
-  A.__initData = __initData;
-  const animatedStyle = tmpResult.useAnimatedStyle(A);
+  H.__closure = { withTiming: enabled(visible[10]).withTiming, visible, enabled, timingSlow: enabled(visible[4]).timingSlow, timingStandard: enabled(visible[4]).timingStandard, runOnJS: enabled(visible[9]).runOnJS, animationCallbackJSThread };
+  H.__workletHash = 2517455700007;
+  H.__initData = __initData;
+  const animatedStyle = tmpResult.useAnimatedStyle(H);
   const obj3 = { withTiming: enabled(visible[10]).withTiming, visible, enabled, timingSlow: enabled(visible[4]).timingSlow, timingStandard: enabled(visible[4]).timingStandard, runOnJS: enabled(visible[9]).runOnJS, animationCallbackJSThread };
   class F {
     constructor() {
@@ -375,7 +375,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
   cResult[4] = items5;
   tmp15 = items5;
   const obj5 = { withTiming: enabled(visible[10]).withTiming, visible, timingStandard: enabled(visible[4]).timingStandard };
-}) : ((enabled) => {
+}) : (function BountiesScrollIndicatorOverlay(enabled) {
   enabled = enabled.enabled;
   const isEndCardVisible = enabled.isEndCardVisible;
   _slicedToArray = undefined;
@@ -423,7 +423,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
   B.__initData = __initData5;
   const animatedStyle = obj2.useAnimatedStyle(B);
   const obj3 = { withTiming: enabled(visible[10]).withTiming, visible, enabled, timingSlow: enabled(visible[4]).timingSlow, timingStandard: enabled(visible[4]).timingStandard, runOnJS: enabled(visible[9]).runOnJS, animationCallbackJSThread };
-  class D {
+  class A {
     constructor() {
       tmp = closure_0;
       tmp2 = closure_2;
@@ -450,12 +450,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
     }
   }
   const obj4 = enabled(visible[9]);
-  D.__closure = { withTiming: enabled(visible[10]).withTiming, visible, isEndCardVisible, enabled, timingStandard: enabled(visible[4]).timingStandard, timingSlow: enabled(visible[4]).timingSlow };
-  D.__workletHash = 12078789622246;
-  D.__initData = __initData7;
-  const animatedStyle1 = obj4.useAnimatedStyle(D);
+  A.__closure = { withTiming: enabled(visible[10]).withTiming, visible, isEndCardVisible, enabled, timingStandard: enabled(visible[4]).timingStandard, timingSlow: enabled(visible[4]).timingSlow };
+  A.__workletHash = 12078789622246;
+  A.__initData = __initData7;
+  const animatedStyle1 = obj4.useAnimatedStyle(A);
   const obj5 = { withTiming: enabled(visible[10]).withTiming, visible, isEndCardVisible, enabled, timingStandard: enabled(visible[4]).timingStandard, timingSlow: enabled(visible[4]).timingSlow };
-  class H {
+  class D {
     constructor() {
       tmp = closure_0;
       tmp2 = closure_2;
@@ -473,10 +473,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
     }
   }
   const obj6 = enabled(visible[9]);
-  H.__closure = { withTiming: enabled(visible[10]).withTiming, visible, timingStandard: enabled(visible[4]).timingStandard };
-  H.__workletHash = 9473289168623;
-  H.__initData = __initData8;
-  const animatedStyle2 = obj6.useAnimatedStyle(H);
+  D.__closure = { withTiming: enabled(visible[10]).withTiming, visible, timingStandard: enabled(visible[4]).timingStandard };
+  D.__workletHash = 9473289168623;
+  D.__initData = __initData8;
+  const animatedStyle2 = obj6.useAnimatedStyle(D);
   const obj8 = { style: null, pointerEvents: "none", children: null };
   let items = [tmp.scrollIndicator, enabled.opacityStyle];
   obj8.style = items;

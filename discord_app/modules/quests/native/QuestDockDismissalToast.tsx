@@ -1,15 +1,15 @@
 // discord_app/modules/quests/native/QuestDockDismissalToast.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef4821 from "../../../../_runtime/metro/04821__.js";
-import _modDef11928 from "../../../../_runtime/metro/11928__.js";
+import _modDef5015 from "../../../../_runtime/metro/05015__.js";
+import _modDef12001 from "../../../../_runtime/metro/12001__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles(() => {
   const obj = { toastArrowForwardIconContainer: { height: 6, width: 16 }, toastArrowForwardIcon: null };
   const size = {
@@ -29,7 +29,7 @@ let closure_6 = createStyles.createStyles(() => {
 });
 const ReactCompilerGating = fn(558);
 const content = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function QuestDockDismissalNotification() {
       const cResult = require("c").c(4);
       const tmp4 = closure_6();
       _require = tmp4;
@@ -39,11 +39,11 @@ const content = ReactCompilerGating.isReactCompilerEnabled()
           arrowHook() {
             const obj = {
               style: closure_0.toastArrowForwardIconContainer,
-              children: <React3 resizeMode="contain" source={_modDef11928} style={closure_0.toastArrowForwardIcon} />,
+              children: <React3 resizeMode="contain" source={_modDef12001} style={closure_0.toastArrowForwardIcon} />,
             };
             return (
               <React4 style={closure_0.toastArrowForwardIconContainer}>
-                <React3 resizeMode="contain" source={_modDef11928} style={closure_0.toastArrowForwardIcon} />
+                <React3 resizeMode="contain" source={_modDef12001} style={closure_0.toastArrowForwardIcon} />
               </React4>
             );
           },
@@ -57,7 +57,7 @@ const content = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== tmp5) {
         const obj3 = { color: "mobile-text-heading-primary", variant: "text-sm/semibold", children: tmp5 };
-        const tmp9 = jsx(tmp(4892).Text, {
+        const tmp9 = jsx(tmp(5086).Text, {
           color: "mobile-text-heading-primary",
           variant: "text-sm/semibold",
           children: tmp5,
@@ -70,7 +70,7 @@ const content = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp7;
     }
-  : () => {
+  : function QuestDockDismissalNotification() {
       _require = closure_6();
       let obj = { color: "mobile-text-heading-primary", variant: "text-sm/semibold", children: null };
       const intl = require("util").intl;
@@ -78,11 +78,11 @@ const content = ReactCompilerGating.isReactCompilerEnabled()
         arrowHook() {
           const obj = {
             style: closure_0.toastArrowForwardIconContainer,
-            children: <React3 resizeMode="contain" source={_modDef11928} style={closure_0.toastArrowForwardIcon} />,
+            children: <React3 resizeMode="contain" source={_modDef12001} style={closure_0.toastArrowForwardIcon} />,
           };
           return (
             <React4 style={closure_0.toastArrowForwardIconContainer}>
-              <React3 resizeMode="contain" source={_modDef11928} style={closure_0.toastArrowForwardIcon} />
+              <React3 resizeMode="contain" source={_modDef12001} style={closure_0.toastArrowForwardIcon} />
             </React4>
           );
         },
@@ -98,5 +98,5 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDockDismis
 
 export const displayQuestDismissalToast = function displayQuestDismissalToast() {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "QUEST_BAR_DISMISS_TOAST", content, icon: _modDef4821, position: "bottom" });
+  obj.open({ key: "QUEST_BAR_DISMISS_TOAST", content, icon: _modDef5015, position: "bottom" });
 };

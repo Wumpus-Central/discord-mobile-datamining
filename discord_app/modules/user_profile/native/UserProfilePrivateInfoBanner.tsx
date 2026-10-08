@@ -31,7 +31,7 @@ let obj2 = {
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrivateInfoBanner.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfilePrivateInfoBanner(arg0) {
       const cResult = c.c(12);
       ({ username, containerBackground } = arg0);
       const tmp4 = closure_4();
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items;
       tmp8 = items;
     }
-  : (username) => {
+  : function UserProfilePrivateInfoBanner(username) {
       const containerBackground = username.containerBackground;
       const items = [closure_4().banner];
       let tmp3 = null != containerBackground;

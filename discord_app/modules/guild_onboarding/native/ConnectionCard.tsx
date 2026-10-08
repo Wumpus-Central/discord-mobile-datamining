@@ -5,14 +5,14 @@ import ProviderConnectionCardDefault from "ProviderConnectionCard.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const OnboardingConnectionType = fn(6603).OnboardingConnectionType;
+const OnboardingConnectionType = fn(6779).OnboardingConnectionType;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/ConnectionCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ConnectionCard(arg0) {
       const cResult = c.c(8);
       ({ connection, guildId, location: _location } = arg0);
       const connection_type = connection.connection_type;
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return null;
       }
     }
-  : (arg0) => {
+  : function ConnectionCard(arg0) {
       ({ connection, guildId, location: _location } = arg0);
       const connection_type = connection.connection_type;
       if (OnboardingConnectionType.APPLICATION === connection_type) {

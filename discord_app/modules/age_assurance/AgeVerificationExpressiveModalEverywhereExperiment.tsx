@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useIsAgeVerificationExpressiveModalEverywhereEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsAgeVerificationExpressiveModalEverywhereEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -31,7 +31,9 @@ export const useIsAgeVerificationExpressiveModalEverywhereEnabled = ReactCompile
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useIsAgeVerificationExpressiveModalEverywhereEnabled(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };
 export const isAgeVerificationExpressiveModalEverywhereEnabled =
   function isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint) {
     return closure_2.getConfig({ location: entryPoint }).enabled;

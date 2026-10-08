@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1, flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
 };
@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/ModalScreen.native.tsx");
 
 export const ModalScreen = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ModalScreen(arg0) {
       const cResult = c.c(11);
       ({ backgroundColor, children } = arg0);
       const tmp2 = closure_5();
@@ -70,7 +70,7 @@ export const ModalScreen = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj3;
       tmp3 = obj3;
     }
-  : (children) => {
+  : function ModalScreen(children) {
       let backgroundColor = children.backgroundColor;
       const tmp = closure_5();
       const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;

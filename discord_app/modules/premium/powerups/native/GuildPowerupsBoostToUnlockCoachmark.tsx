@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostToUnlockCoachmark.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildPowerupsBoostToUnlockCoachmark(arg0) {
       const cResult = c.c(3);
       ({ powerup, markAsDismissed } = arg0);
       if (cResult[0] === markAsDismissed) {
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj2;
       tmp6 = obj2;
     }
-  : (powerup) => {
+  : function GuildPowerupsBoostToUnlockCoachmark(powerup) {
       powerup = powerup.powerup;
       const markAsDismissed = powerup.markAsDismissed;
       const items = [powerup, markAsDismissed];
@@ -43,6 +43,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
         items,
       );
-      markAsDismissed(16135)(targetRef, guildId, memo);
+      markAsDismissed(16395)(targetRef, guildId, memo);
       return null;
     };

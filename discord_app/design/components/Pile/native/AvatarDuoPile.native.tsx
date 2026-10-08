@@ -16,7 +16,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("design/components/Pile/native/AvatarDuoPile.native.tsx");
 
 export const AvatarDuoPile = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AvatarDuoPile(arg0) {
       const cResult = c.c(12);
       if (cResult[0] !== arg0) {
         ({ size, children } = arg0);
@@ -82,7 +82,7 @@ export const AvatarDuoPile = ReactCompilerGating.isReactCompilerEnabled()
         tmp18 = tmp20;
       }
     }
-  : (size) => {
+  : function AvatarDuoPile(size) {
       size = size.size;
       const merged = Object.assign(size, Object.assign({ size: 0, children: 0 }));
       if ("aria-label" in merged) {

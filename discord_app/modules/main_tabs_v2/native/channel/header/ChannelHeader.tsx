@@ -14,14 +14,14 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 require = fn;
 const ComponentActions = fn(1085).ComponentActions;
-const StaticChannelRoute = fn(2058).StaticChannelRoute;
+const StaticChannelRoute = fn(2070).StaticChannelRoute;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ChannelHeader.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function ChannelHeader(channelId) {
       const cResult = channelId(576).c(27);
       channelId = channelId.channelId;
       ({ screenIndex, isNavigationScreen, pressable, isGuildMemberCountVisible, showCreateThread } = channelId);
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = undefined === pressable || pressable;
       const stateFromStores = channelId(573).useStateFromStores(first, tmp9);
       const tmpResult = channelId(573);
-      const isChannelContentGated = channelId(5106).useIsChannelContentGated(stateFromStores);
+      const isChannelContentGated = channelId(5930).useIsChannelContentGated(stateFromStores);
       let tmp11 = !isChannelContentGated;
       if (!isChannelContentGated) {
         tmp11 = tmp4;
@@ -208,9 +208,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult2 = channelId(5106);
+      const tmpResult2 = channelId(5930);
     }
-  : (channelId) => {
+  : function ChannelHeader(channelId) {
       channelId = channelId.channelId;
       ({ screenIndex, isNavigationScreen, pressable } = channelId);
       if (pressable === undefined) {
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [ChannelStore];
       const stateFromStores = channelId(573).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
       const obj = channelId(573);
-      const isChannelContentGated = channelId(5106).useIsChannelContentGated(stateFromStores);
+      const isChannelContentGated = channelId(5930).useIsChannelContentGated(stateFromStores);
       let tmp4 = !isChannelContentGated;
       if (!isChannelContentGated) {
         tmp4 = pressable;

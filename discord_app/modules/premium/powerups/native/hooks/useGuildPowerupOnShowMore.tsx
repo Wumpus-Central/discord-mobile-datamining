@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowMore.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, arg1) => {
+  ? function useGuildPowerupOnShowMore(guildId, arg1) {
       _require = guildId;
       closure_1 = arg1;
       const cResult = require("c").c(3);
@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp2;
       }
-      const fn = function n() {
+      const fn = function l() {
         if (null != closure_1) {
           const obj = { guildId, powerup: tmp };
           openGuildPowerupsBottomSheetDefault(obj);
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp2 = fn;
     }
-  : (guildId, arg1) => {
+  : function useGuildPowerupOnShowMore(guildId, arg1) {
       closure_1 = arg1;
       const items = [guildId, arg1];
       return noop.useCallback(() => {

@@ -6,15 +6,15 @@ import RoleSubscriptionSettingsDisabledContext from "../../RoleSubscriptionSetti
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
-const ErrorBlockDefault = tmp13(11866);
-const WarningNoticeDefault = tmp13(17926);
+const ErrorBlockDefault = tmp13(11938);
+const WarningNoticeDefault = tmp13(18213);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const GuildFeatures = fn(1085).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({
   container: { flex: 1 },
   warningBlockContainer: { marginHorizontal: 16, marginTop: 16 },
@@ -22,7 +22,7 @@ let closure_9 = createStyles.createStyles({
 });
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function ApplicationRejectedNotice(guildId) {
       let tmp2 = dependencyMap;
       const cResult = guildId(576).c(20);
       guildId = guildId.guildId;
@@ -185,7 +185,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp14 = useOnboardingMonetizationEnableFlowDefault(stateFromStores);
     }
-  : (guildId) => {
+  : function ApplicationRejectedNotice(guildId) {
       guildId = guildId.guildId;
       const tmp = closure_9();
       const items = [GuildStore];
@@ -247,7 +247,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildSettingsRoleSubscription(arg0) {
       const cResult = c.c(9);
       ({ guildId, children } = arg0);
       let container = closure_9();
@@ -296,7 +296,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2 = GroupListingsFetchContext;
     }
-  : (arg0) => {
+  : function GuildSettingsRoleSubscription(arg0) {
       ({ guildId, children } = arg0);
       const tmp = closure_9();
       if (obj.useGroupListingsFetchContext()) {
@@ -318,7 +318,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildSettingsRoleSubscriptionContainer(guildId) {
       const cResult = c.c(8);
       if (cResult[0] !== guildId) {
         const obj2 = {};
@@ -357,7 +357,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp12;
       const obj4 = { guildId: guildId.guildId, children: tmp4 };
     }
-  : (guildId) => {
+  : function GuildSettingsRoleSubscriptionContainer(guildId) {
       const obj = { guildId: guildId.guildId, refetchOnMount: true, children: null };
       const obj2 = { guildId: guildId.guildId, children: null };
       const merged = Object.assign(guildId);

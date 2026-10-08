@@ -61,11 +61,11 @@ function renderSearchResultsSection() {
   return options(closure_16, obj);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const scrollIndicatorInsets = { bottom: 24 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   listContainer: { minHeight: 16 },
   list: { flex: -1, marginTop: 8 },
@@ -83,7 +83,7 @@ let closure_13 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_14 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guild) => {
+    ? function Guild(guild) {
         const cResult = guild(576).c(35);
         guild = guild.guild;
         const tmp4 = closure_13();
@@ -95,117 +95,121 @@ let closure_14 = noop.memo(
           first = cResult[0];
         }
         if (cResult[1] !== guild.id) {
-          const fn = function b() {
-            transitionToGuild.transitionToGuild(guild.id);
-          };
+          class I {
+            constructor() {
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
+            }
+          }
           cResult[1] = guild.id;
-          cResult[2] = fn;
+          cResult[2] = I;
+        } else {
+          class I {
+            constructor() {
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
+            }
+          }
         }
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+          class I {
+            constructor() {
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
+            }
+          }
           const items = [GuildReadStateStore];
           cResult[3] = items;
-          let tmp9 = items;
+          const tmp9 = items;
         } else {
-          tmp9 = cResult[3];
+          class I {
+            constructor() {
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
+            }
+          }
         }
         if (cResult[4] !== guild.id) {
-          class R {
+          class I {
             constructor() {
-              obj = {
-                unread: closure_6.hasUnread(guild.id),
-                mentionCount: closure_6.getMentionCount(guild.id),
-                isMentionLowImportance: closure_6.getIsMentionLowImportance(guild.id),
-              };
-              return obj;
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
             }
           }
           cResult[4] = guild.id;
-          cResult[5] = R;
+          cResult[5] = tmp11;
         } else {
-          class R {
+          class I {
             constructor() {
-              obj = {
-                unread: closure_6.hasUnread(guild.id),
-                mentionCount: closure_6.getMentionCount(guild.id),
-                isMentionLowImportance: closure_6.getIsMentionLowImportance(guild.id),
-              };
-              return obj;
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
             }
           }
         }
         const obj = guild(576);
-        const stateFromStoresObject = guild(504).useStateFromStoresObject(tmp9, R);
+        const stateFromStoresObject = guild(504).useStateFromStoresObject(tmp9, tmp11);
         ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
         const tmpResult = guild(504);
-        const fontScale = guild(5609).useFontScale();
+        const fontScale = guild(5382).useFontScale();
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          class R {
+          class I {
             constructor() {
-              obj = {
-                unread: closure_6.hasUnread(guild.id),
-                mentionCount: closure_6.getMentionCount(guild.id),
-                isMentionLowImportance: closure_6.getIsMentionLowImportance(guild.id),
-              };
-              return obj;
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
             }
           }
           const items1 = [LocaleStore];
-          const fn2 = function _() {
+          const fn = function _() {
             return locale.locale;
           };
           cResult[6] = items1;
-          cResult[7] = fn2;
-          let tmp15 = fn2;
+          cResult[7] = fn;
+          let tmp15 = fn;
           const tmp14 = items1;
         } else {
-          class R {
+          class I {
             constructor() {
-              obj = {
-                unread: closure_6.hasUnread(guild.id),
-                mentionCount: closure_6.getMentionCount(guild.id),
-                isMentionLowImportance: closure_6.getIsMentionLowImportance(guild.id),
-              };
-              return obj;
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
             }
           }
           tmp15 = cResult[7];
         }
-        const tmpResult3 = guild(5609);
+        const tmpResult3 = guild(5382);
         const stateFromStores = guild(504).useStateFromStores(tmp14, tmp15);
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          class R {
+          class I {
             constructor() {
-              obj = {
-                unread: closure_6.hasUnread(guild.id),
-                mentionCount: closure_6.getMentionCount(guild.id),
-                isMentionLowImportance: closure_6.getIsMentionLowImportance(guild.id),
-              };
-              return obj;
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
             }
           }
           tmp18[0] = first.container.borderRadius;
           cResult[8] = tmp18;
         } else {
-          class R {
+          class I {
             constructor() {
-              obj = {
-                unread: closure_6.hasUnread(guild.id),
-                mentionCount: closure_6.getMentionCount(guild.id),
-                isMentionLowImportance: closure_6.getIsMentionLowImportance(guild.id),
-              };
-              return obj;
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
             }
           }
         }
         if (cResult[9] !== tmp4.pressable) {
-          class R {
+          class I {
             constructor() {
-              obj = {
-                unread: closure_6.hasUnread(guild.id),
-                mentionCount: closure_6.getMentionCount(guild.id),
-                isMentionLowImportance: closure_6.getIsMentionLowImportance(guild.id),
-              };
-              return obj;
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
             }
           }
           tmp20[0] = tmp4.pressable;
@@ -213,26 +217,20 @@ let closure_14 = noop.memo(
           cResult[9] = tmp4.pressable;
           cResult[10] = tmp20;
         } else {
-          class R {
+          class I {
             constructor() {
-              obj = {
-                unread: closure_6.hasUnread(guild.id),
-                mentionCount: closure_6.getMentionCount(guild.id),
-                isMentionLowImportance: closure_6.getIsMentionLowImportance(guild.id),
-              };
-              return obj;
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
             }
           }
         }
         if (cResult[11] !== unread) {
-          class R {
+          class I {
             constructor() {
-              obj = {
-                unread: closure_6.hasUnread(guild.id),
-                mentionCount: closure_6.getMentionCount(guild.id),
-                isMentionLowImportance: closure_6.getIsMentionLowImportance(guild.id),
-              };
-              return obj;
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
             }
           }
           const obj2 = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
@@ -240,26 +238,20 @@ let closure_14 = noop.memo(
           cResult[11] = unread;
           cResult[12] = tmp24;
         } else {
-          class R {
+          class I {
             constructor() {
-              obj = {
-                unread: closure_6.hasUnread(guild.id),
-                mentionCount: closure_6.getMentionCount(guild.id),
-                isMentionLowImportance: closure_6.getIsMentionLowImportance(guild.id),
-              };
-              return obj;
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
             }
           }
         }
         if (cResult[13] !== tmp4.guildIcon) {
-          class R {
+          class I {
             constructor() {
-              obj = {
-                unread: closure_6.hasUnread(guild.id),
-                mentionCount: closure_6.getMentionCount(guild.id),
-                isMentionLowImportance: closure_6.getIsMentionLowImportance(guild.id),
-              };
-              return obj;
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
             }
           }
           tmp26[0] = tmp4.guildIcon;
@@ -267,37 +259,28 @@ let closure_14 = noop.memo(
           cResult[13] = tmp4.guildIcon;
           cResult[14] = tmp26;
         } else {
-          class R {
+          class I {
             constructor() {
-              obj = {
-                unread: closure_6.hasUnread(guild.id),
-                mentionCount: closure_6.getMentionCount(guild.id),
-                isMentionLowImportance: closure_6.getIsMentionLowImportance(guild.id),
-              };
-              return obj;
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
             }
           }
         }
         if (cResult[15] === guild) {
-          class R {
+          class I {
             constructor() {
-              obj = {
-                unread: closure_6.hasUnread(guild.id),
-                mentionCount: closure_6.getMentionCount(guild.id),
-                isMentionLowImportance: closure_6.getIsMentionLowImportance(guild.id),
-              };
-              return obj;
+              obj = closure_0(closure_2[12]);
+              transitionToGuildResult = obj.transitionToGuild(guild.id);
+              return;
             }
           }
           if (cResult[18] === guild.name) {
-            class R {
+            class I {
               constructor() {
-                obj = {
-                  unread: closure_6.hasUnread(guild.id),
-                  mentionCount: closure_6.getMentionCount(guild.id),
-                  isMentionLowImportance: closure_6.getIsMentionLowImportance(guild.id),
-                };
-                return obj;
+                obj = closure_0(closure_2[12]);
+                transitionToGuildResult = obj.transitionToGuild(guild.id);
+                return;
               }
             }
           }
@@ -318,7 +301,7 @@ let closure_14 = noop.memo(
         cResult[17] = closure_9(GuildIconDefault, { size: first.icon.guildIconSize, guild, style: tmp26 });
         const tmp27 = closure_9(GuildIconDefault, { size: first.icon.guildIconSize, guild, style: tmp26 });
       }
-    : (guild) => {
+    : function Guild(guild) {
         guild = guild.guild;
         const tmp = closure_13();
         const tmp2 = getLayoutStylesDefault();
@@ -334,8 +317,8 @@ let closure_14 = noop.memo(
         }));
         ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
         const obj = guild(504);
-        const fontScale = guild(5609).useFontScale();
-        const obj2 = guild(5609);
+        const fontScale = guild(5382).useFontScale();
+        const obj2 = guild(5382);
         const items2 = [LocaleStore];
         const stateFromStores = guild(504).useStateFromStores(items2, () => locale.locale);
         const obj3 = guild(504);
@@ -368,13 +351,13 @@ let closure_14 = noop.memo(
         items4[2] = renderChannelContentDefault(obj8);
         obj5.children = items4;
         obj4.children = tmp8(closure_11(closure_10, obj5), { fontScale });
-        return tmp7(closure_9(guild(5916).PressableHighlight, obj4));
+        return tmp7(closure_9(guild(6189).PressableHighlight, obj4));
       },
 );
 ReactCompilerGating = fn(558);
 let closure_16 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function CategoryItemInner(arg0) {
         const cResult = c.c(8);
         ({ name, onPress, note } = arg0);
         const tmp4 = closure_13();
@@ -415,7 +398,7 @@ let closure_16 = noop.memo(
         tmp6 = renderCategoryItemResult;
         const tmpResult = RedesignCategory;
       }
-    : (arg0) => {
+    : function CategoryItemInner(arg0) {
         ({ name, onPress, note } = arg0);
         const tmp = closure_13();
         categoryStyles = RedesignCategory.useCategoryStyles();
@@ -436,7 +419,7 @@ let obj5 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE
 ReactCompilerGating = fn(558);
 const memoResult = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (history) => {
+    ? function InitialResultsInner(history) {
         const cResult = history(toggleExpandedHistory[10]).c(33);
         history = history.history;
         const unreads = history.unreads;
@@ -568,7 +551,7 @@ const memoResult = noop.memo(
         cResult[6] = E;
         const tmpResult = tmp(toggleExpandedHistory[13]);
       }
-    : (history) => {
+    : function InitialResultsInner(history) {
         history = history.history;
         const unreads = history.unreads;
         const toggleExpandedHistory = history.toggleExpandedHistory;
@@ -702,7 +685,7 @@ let result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadSearc
 export const InitialResults = memoResult;
 export const SearchResults = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (results) => {
+    ? function SearchResultsInner(results) {
         const cResult = results(ref[10]).c(19);
         results = results.results;
         const query = results.query;
@@ -718,152 +701,75 @@ export const SearchResults = noop.memo(
           ref = noop.useRef(null);
           const _Symbol = Symbol;
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-            class I {
-              constructor() {
-                current = closure_2.current;
-                if (current != null) {
-                  scrollToTop = current.scrollToTop;
-                  if (scrollToTop != null) {
-                    flag = false;
-                    scrollToTopResult = scrollToTop(false);
-                  }
+            const fn2 = function b() {
+              const current = ref.current;
+              if (current != null) {
+                const scrollToTop = current.scrollToTop;
+                if (scrollToTop != null) {
+                  scrollToTop(false);
                 }
-                return;
               }
-            }
-            cResult[3] = I;
+            };
+            cResult[3] = fn2;
+            let tmp11 = fn2;
           } else {
-            class I {
-              constructor() {
-                current = closure_2.current;
-                if (current != null) {
-                  scrollToTop = current.scrollToTop;
-                  if (scrollToTop != null) {
-                    flag = false;
-                    scrollToTopResult = scrollToTop(false);
-                  }
-                }
-                return;
-              }
-            }
+            tmp11 = cResult[3];
           }
           if (cResult[4] !== query) {
-            class I {
-              constructor() {
-                current = closure_2.current;
-                if (current != null) {
-                  scrollToTop = current.scrollToTop;
-                  if (scrollToTop != null) {
-                    flag = false;
-                    scrollToTopResult = scrollToTop(false);
-                  }
-                }
-                return;
-              }
-            }
-            tmp13[0] = query;
+            const items = [query];
             cResult[4] = query;
-            cResult[5] = tmp13;
+            cResult[5] = items;
+            let tmp12 = items;
           } else {
-            class I {
-              constructor() {
-                current = closure_2.current;
-                if (current != null) {
-                  scrollToTop = current.scrollToTop;
-                  if (scrollToTop != null) {
-                    flag = false;
-                    scrollToTopResult = scrollToTop(false);
-                  }
-                }
-                return;
-              }
-            }
+            tmp12 = cResult[5];
           }
-          const effect = noop.useEffect(I, tmp13);
+          const effect = noop.useEffect(tmp11, tmp12);
           const _Symbol2 = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            class I {
-              constructor() {
-                current = closure_2.current;
-                if (current != null) {
-                  scrollToTop = current.scrollToTop;
-                  if (scrollToTop != null) {
-                    flag = false;
-                    scrollToTopResult = scrollToTop(false);
-                  }
-                }
-                return;
-              }
-            }
-            cResult[6] = tmp16;
+            const tmp15 = tmp6(tmp2[11])();
+            cResult[6] = tmp15;
+            let tmp14 = tmp15;
           } else {
-            class I {
-              constructor() {
-                current = closure_2.current;
-                if (current != null) {
-                  scrollToTop = current.scrollToTop;
-                  if (scrollToTop != null) {
-                    flag = false;
-                    scrollToTopResult = scrollToTop(false);
-                  }
-                }
-                return;
-              }
-            }
+            tmp14 = cResult[6];
           }
-          noop = tmp16;
+          noop = tmp14;
           const fontScale = tmp(tmp2[14]).useFontScale();
           if (cResult[7] === fontScale) {
-            class I {
-              constructor() {
-                current = closure_2.current;
-                if (current != null) {
-                  scrollToTop = current.scrollToTop;
-                  if (scrollToTop != null) {
-                    flag = false;
-                    scrollToTopResult = scrollToTop(false);
-                  }
-                }
-                return;
-              }
+            if (cResult[8] === results) {
+              let tmp17 = cResult[9];
             }
             if (cResult[10] === height) {
-              class I {
-                constructor() {
-                  current = closure_2.current;
-                  if (current != null) {
-                    scrollToTop = current.scrollToTop;
-                    if (scrollToTop != null) {
-                      flag = false;
-                      scrollToTopResult = scrollToTop(false);
+              if (cResult[11] === tmp17) {
+                if (cResult[12] === tmp7) {
+                  if (cResult[13] === results.length) {
+                    if (cResult[14] === tmp4.list) {
+                      let tmp18 = cResult[15];
                     }
+                    if (cResult[16] === tmp4.listContainer) {
+                      if (cResult[17] === tmp18) {
+                        let tmp23 = cResult[18];
+                      }
+                      return tmp23;
+                    }
+                    const obj4 = { style: tmp4.listContainer, children: tmp18 };
+                    const tmp26 = closure_9(fontScale, obj4);
+                    cResult[16] = tmp4.listContainer;
+                    cResult[17] = tmp18;
+                    cResult[18] = tmp26;
+                    tmp23 = tmp26;
                   }
-                  return;
                 }
               }
             }
-            let tmp20 = null;
+            let tmp19 = null;
             if (results.length > 0) {
-              class I {
-                constructor() {
-                  current = closure_2.current;
-                  if (current != null) {
-                    scrollToTop = current.scrollToTop;
-                    if (scrollToTop != null) {
-                      flag = false;
-                      scrollToTopResult = scrollToTop(false);
-                    }
-                  }
-                  return;
-                }
-              }
-              const obj4 = {
+              const obj5 = {
                 ref,
                 optimizeListItemRender: true,
                 batchesToRender: 6,
                 style: tmp4.list,
-                sectionSize: tmp16.category.height,
-                itemSize: tmp18,
+                sectionSize: tmp14.category.height,
+                itemSize: tmp17,
                 renderSection: renderSearchResultsSection,
                 renderItem: tmp7,
                 sections: null,
@@ -872,27 +778,28 @@ export const SearchResults = noop.memo(
                 chunkBase: null,
                 keyboardShouldPersistTaps: "always",
               };
-              const items = [results.length];
-              obj4.sections = items;
-              obj4.scrollIndicatorInsets = scrollIndicatorInsets;
-              obj4.chunkBase = height;
-              tmp20 = closure_9(tmp6(tmp2[32]), obj4);
+              const items1 = [results.length];
+              obj5.sections = items1;
+              obj5.scrollIndicatorInsets = scrollIndicatorInsets;
+              obj5.chunkBase = height;
+              tmp19 = closure_9(tmp6(tmp2[32]), obj5);
             }
             cResult[10] = height;
-            cResult[11] = tmp18;
+            cResult[11] = tmp17;
             cResult[12] = tmp7;
             cResult[13] = results.length;
             cResult[14] = tmp4.list;
-            cResult[15] = tmp20;
+            cResult[15] = tmp19;
+            tmp18 = tmp19;
           }
-          const fn2 = function _(arg0, arg1) {
+          const fn3 = function _(arg0, arg1) {
             if (null == arg1) {
               return 0;
             } else {
               let tmp3 = dependencyMap;
               if (results[arg1].type === sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL) {
                 tmp3 = getScaledChannelRowHeightDefault(fontScale);
-                let diff = tmp3 + tmp16.voiceUsers.height - 2;
+                let diff = tmp3 + voiceUsers.voiceUsers.height - 2;
               } else {
                 diff = getScaledChannelRowHeightDefault(fontScale);
               }
@@ -900,7 +807,8 @@ export const SearchResults = noop.memo(
           };
           cResult[7] = fontScale;
           cResult[8] = results;
-          cResult[9] = fn2;
+          cResult[9] = fn3;
+          tmp17 = fn3;
           const tmpResult = tmp(tmp2[14]);
         }
         const fn = function l(arg0, arg1) {
@@ -911,9 +819,8 @@ export const SearchResults = noop.memo(
         cResult[2] = fn;
         tmp7 = fn;
         const obj2 = results(ref[27]);
-        tmp6 = categoryStyles;
       }
-    : (results) => {
+    : function SearchResultsInner(results) {
         results = results.results;
         let ref;
         noop = undefined;

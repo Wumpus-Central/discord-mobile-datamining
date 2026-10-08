@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useCanConnect.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanConnect(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       return require("initialize").useStateFromStoresObject(first, C, tmp10);
     }
-  : (arg0) => {
+  : function useCanConnect(arg0) {
       _require = arg0;
       const items = [ChannelStore, PermissionStore, GuildStore, VoiceStateStore];
       const items1 = [arg0];

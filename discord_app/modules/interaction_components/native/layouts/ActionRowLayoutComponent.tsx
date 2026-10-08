@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/layouts/ActionRowLayoutComponent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActionRowLayoutComponent(arg0) {
       const cResult = c.c(5);
       ({ components, renderComponents } = arg0);
       let tmp2 = null;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp2;
     }
-  : (components) => {
+  : function ActionRowLayoutComponent(components) {
       components = components.components;
       let tmp2 = null;
       if (null != components) {

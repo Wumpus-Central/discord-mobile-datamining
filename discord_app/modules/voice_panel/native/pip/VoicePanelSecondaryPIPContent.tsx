@@ -7,12 +7,12 @@ import FramesStore from "../../../frames/FramesStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 const require = fn;
-const ActivityLayoutMode = fn(2011).ActivityLayoutMode;
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
-const FramesConstants = fn(8738);
+const ActivityLayoutMode = fn(2023).ActivityLayoutMode;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
+const FramesConstants = fn(10613);
 ({ asLaunched: closure_9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: closure_11 } = FramesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_13 = createStyles.createStyles({
   activityContainer: { flex: 1 },
   wrapper: { position: "absolute", left: "50%", top: "50%" },
@@ -34,7 +34,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelSecondaryPIPContent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function VoicePanelSecondaryPIPContent() {
       let PIP = windowDimensions;
       const cResult = windowDimensions(connectedEmbeddedActivityChannelId[10]).c(23);
       windowDimensions = pipOrientationLockState.useContext(
@@ -417,7 +417,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         windowDimensions,
       };
     }
-  : () => {
+  : function VoicePanelSecondaryPIPContent() {
       let tmp = pIPState;
       let obj = connectedEmbeddedActivityChannelId;
       const windowDimensions = pipOrientationLockState.useContext(

@@ -4,11 +4,11 @@ import AccessibilityAnnouncer2 from "../../../../../../../discord_common/js/pack
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-const Text_Text = tmp(4892);
+const Text_Text = tmp(5086);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({
   container: { justifyContent: "center", alignItems: "center", height: "100%", display: "flex" },
   text: { textAlign: "center", width: "75%" },
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/search/native/components/tabs
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (text) => {
+    ? function ErrorScreen(text) {
         const cResult = c.c(15);
         text = text.text;
         require = text;
@@ -95,7 +95,7 @@ export default noop.memo(
         cResult[8] = items1;
         tmp10 = items1;
       }
-    : (text) => {
+    : function ErrorScreen(text) {
         text = text.text;
         require = text;
         const tmp = closure_6();

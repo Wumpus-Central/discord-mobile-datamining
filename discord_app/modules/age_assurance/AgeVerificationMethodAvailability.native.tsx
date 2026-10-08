@@ -46,7 +46,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationMethodAvailability.native.tsx");
 
 export const useAvailableMethodsV2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function useAvailableMethodsV2(arr) {
       const cResult = c.c(6);
       [tmp5, require] = noop.useState(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -107,7 +107,7 @@ export const useAvailableMethodsV2 = ReactCompilerGating.isReactCompilerEnabled(
       tmp11 = found;
       const tmp4 = _slicedToArray(noop.useState(false), 2);
     }
-  : (arg0) => {
+  : function useAvailableMethodsV2(arg0) {
       closure_0 = arg0;
       const tmp = memo(noop.useState(false), 2);
       const first = tmp[0];

@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import Portal from "../../../../_runtime/04758_Portal.js";
+import Portal from "../../../../_runtime/04952_Portal.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,7 +12,7 @@ const modal = "modal";
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function PortalKeyboard(children) {
       const cResult = c.c(3);
       children = children.children;
       if (obj2.useIsModalOpen()) {
@@ -36,7 +36,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = c3;
       obj2 = NavigationRouteUtils;
     }
-  : (children) => {
+  : function PortalKeyboard(children) {
       if (obj.useIsModalOpen()) {
         if (tmpResult.isIOS()) {
           let tmp3 = modal;
@@ -63,7 +63,7 @@ export const PORTAL_HOST_NAME_DEFAULT = "default";
 export const PORTAL_HOST_NAME_MODAL = "modal";
 export const PortalKeyboard = tmp3;
 export const PortalKeyboardHost = ReactCompilerGating.isReactCompilerEnabled()
-  ? (name) => {
+  ? function PortalKeyboardHost(name) {
       const cResult = c.c(2);
       name = name.name;
       if (undefined === name) {
@@ -80,7 +80,7 @@ export const PortalKeyboardHost = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (name) => {
+  : function PortalKeyboardHost(name) {
       name = name.name;
       if (name === undefined) {
         name = c3;

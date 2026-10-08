@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/useDrawerState.tsx");
 
 export const useDrawerOpen = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useDrawerOpen(arg0) {
       const cResult = require("c").c(7);
       _require = tmp4;
       let obj = require("c");
@@ -29,7 +29,7 @@ export const useDrawerOpen = ReactCompilerGating.isReactCompilerEnabled()
           const effect = noop.useEffect(tmp10, tmp11);
           return tmp9;
         }
-        const fn2 = function v() {
+        const fn2 = function l() {
           if (handleStateChange) {
             handleStateChange = function handleStateChange(data) {
               state = data.data.state;
@@ -109,7 +109,7 @@ export const useDrawerOpen = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       const tmpResult = require("Link");
     }
-  : () => {
+  : function useDrawerOpen() {
       let flag = arg0;
       if (arg0 === undefined) {
         flag = true;

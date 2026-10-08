@@ -8,8 +8,8 @@ import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx
 import ActivityIndicator_ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import CheckmarkSmallIcon2 from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
-import ContextMenu from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
 import SuspiciousDownloadUtils from "../../suspicious_downloads/SuspiciousDownloadUtils.tsx";
+import ContextMenu from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
 import openPlaintextFilePreview from "openPlaintextFilePreview.tsx";
 import SuspiciousDownloadModalActionCreatorsDefault from "../../suspicious_downloads/SuspiciousDownloadModalActionCreators.native.tsx";
 import useDownloadedFile from "../useDownloadedFile.tsx";
@@ -26,7 +26,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const constants = { PREVIEW: "PREVIEW" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   loadingContainer: { flex: 1, alignItems: "center", justifyContent: "center" },
@@ -43,7 +43,7 @@ obj2.errorContainer = { flex: 1, alignItems: "center", justifyContent: "center",
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PlaintextFilePreviewContent(arg0) {
       const cResult = c.c(21);
       ({ url, wordWrap } = arg0);
       const tmp4 = closure_11();
@@ -176,7 +176,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         scrollerContent = tmp12;
       }
     }
-  : (arg0) => {
+  : function PlaintextFilePreviewContent(arg0) {
       ({ url, wordWrap } = arg0);
       const tmp = closure_11();
       const downloadedFile = useDownloadedFile.useDownloadedFile(url, undefined);
@@ -242,7 +242,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/media/native/PlaintextFilePreviewModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (url) => {
+  ? function PlaintextFilePreviewModal(url) {
       const cResult = url(wordWrap[14]).c(23);
       url = url.url;
       const tmp4 = closure_11();
@@ -261,131 +261,90 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         CheckmarkSmallIcon = tmp(tmp2[19]).CheckmarkSmallIcon;
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        class M {
-          constructor() {
-            return closure_3((arg0) => !arg0);
-          }
-        }
-        cResult[1] = M;
+        const fn = function p() {
+          return closure_3((arg0) => !arg0);
+        };
+        cResult[1] = fn;
+        let tmp10 = fn;
       } else {
-        class M {
-          constructor() {
-            return closure_3((arg0) => !arg0);
-          }
-        }
+        tmp10 = cResult[1];
       }
       if (cResult[2] !== CheckmarkSmallIcon) {
-        class M {
-          constructor() {
-            return closure_3((arg0) => !arg0);
-          }
-        }
-        tmp12[0] = first1;
-        tmp12[1] = CheckmarkSmallIcon;
-        tmp12[2] = M;
+        let obj2 = { label: first1, trailingIndicator: CheckmarkSmallIcon, action: tmp10 };
         cResult[2] = CheckmarkSmallIcon;
-        cResult[3] = tmp12;
+        cResult[3] = obj2;
+        let tmp11 = obj2;
       } else {
-        class M {
-          constructor() {
-            return closure_3((arg0) => !arg0);
-          }
-        }
+        tmp11 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        class M {
-          constructor() {
-            return closure_3((arg0) => !arg0);
-          }
-        }
-        const stringResult1 = obj2.string(tmp(tmp2[17]).t["1WjMbC"]);
+        const intl2 = tmp(tmp2[17]).intl;
+        const stringResult1 = intl2.string(tmp(tmp2[17]).t["1WjMbC"]);
         cResult[4] = stringResult1;
-        const tmp13 = stringResult1;
+        let tmp12 = stringResult1;
       } else {
-        class M {
-          constructor() {
-            return closure_3((arg0) => !arg0);
-          }
-        }
+        tmp12 = cResult[4];
       }
       if (cResult[5] !== url) {
-        class M {
-          constructor() {
-            return closure_3((arg0) => !arg0);
-          }
-        }
-        tmp16[0] = tmp13;
-        tmp16[1] = function action() {
-          if (null == obj.isSuspiciousDownload(url)) {
-            LinkingDefault.openURL(url);
-          } else {
-            SuspiciousDownloadModalActionCreatorsDefault.show(url);
-          }
-          obj = SuspiciousDownloadUtils;
+        let obj3 = {
+          label: tmp12,
+          action() {
+            if (null == obj.isSuspiciousDownload(url)) {
+              LinkingDefault.openURL(url);
+            } else {
+              SuspiciousDownloadModalActionCreatorsDefault.show(url);
+            }
+            obj = SuspiciousDownloadUtils;
+          },
         };
         cResult[5] = url;
-        cResult[6] = tmp16;
+        cResult[6] = obj3;
+        let tmp14 = obj3;
       } else {
-        class M {
-          constructor() {
-            return closure_3((arg0) => !arg0);
-          }
-        }
+        tmp14 = cResult[6];
       }
-      if (cResult[7] === tmp12) {
-        class M {
-          constructor() {
-            return closure_3((arg0) => !arg0);
-          }
+      if (cResult[7] === tmp11) {
+        if (cResult[8] === tmp14) {
+          let tmp15 = cResult[9];
         }
-        const _objectWithoutProperties = tmp17;
+        items = tmp15;
         const _Symbol = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          class M {
-            constructor() {
-              return closure_3((arg0) => !arg0);
-            }
-          }
-          const headerCloseButton = obj3.getHeaderCloseButton(closeModal);
+          const headerCloseButton = tmp(tmp2[20]).getHeaderCloseButton(closeModal);
           cResult[10] = headerCloseButton;
-        } else {
-          class M {
-            constructor() {
-              return closure_3((arg0) => !arg0);
-            }
-          }
+          const tmpResult = tmp(tmp2[20]);
         }
-        if (cResult[11] !== tmp17) {
-          class N {
+        if (cResult[11] !== tmp15) {
+          class A {
             constructor() {
               obj = {
                 items: closure_4,
                 children(ref) {
-                  const obj = { IconComponent: url(7588).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+                  const obj = { IconComponent: url(9180).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
                   const intl = url(1126).intl;
                   obj.accessibilityLabel = intl.string(url(1126).t.PdRCRg);
                   obj.ref = ref.ref;
                   const merged = Object.assign(items(ref, closure_1_3));
-                  return closure_1_9(url(6890).HeaderActionButton, obj);
+                  return closure_1_9(url(7079).HeaderActionButton, obj);
                 },
               };
               return jsx(closure_0(closure_2[21]).ContextMenu, obj);
             }
           }
-          cResult[11] = tmp17;
-          cResult[12] = N;
+          cResult[11] = tmp15;
+          cResult[12] = A;
         } else {
-          class N {
+          class A {
             constructor() {
               obj = {
                 items: closure_4,
                 children(ref) {
-                  const obj = { IconComponent: url(7588).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+                  const obj = { IconComponent: url(9180).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
                   const intl = url(1126).intl;
                   obj.accessibilityLabel = intl.string(url(1126).t.PdRCRg);
                   obj.ref = ref.ref;
                   const merged = Object.assign(items(ref, closure_1_3));
-                  return closure_1_9(url(6890).HeaderActionButton, obj);
+                  return closure_1_9(url(7079).HeaderActionButton, obj);
                 },
               };
               return jsx(closure_0(closure_2[21]).ContextMenu, obj);
@@ -393,43 +352,44 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[13] === tmp4.container) {
-          class N {
+          class A {
             constructor() {
               obj = {
                 items: closure_4,
                 children(ref) {
-                  const obj = { IconComponent: url(7588).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+                  const obj = { IconComponent: url(9180).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
                   const intl = url(1126).intl;
                   obj.accessibilityLabel = intl.string(url(1126).t.PdRCRg);
                   obj.ref = ref.ref;
                   const merged = Object.assign(items(ref, closure_1_3));
-                  return closure_1_9(url(6890).HeaderActionButton, obj);
+                  return closure_1_9(url(7079).HeaderActionButton, obj);
                 },
               };
               return jsx(closure_0(closure_2[21]).ContextMenu, obj);
             }
           }
         }
-        class F {
+        class N {
           constructor() {
             obj = { style: closure_1.container, children: null };
             obj1 = { url, wordWrap: closure_2 };
-            obj.children = jsx(f57246, obj1);
+            obj.children = jsx(PlaintextFilePreviewContent, obj1);
             return jsx(View, obj);
           }
         }
         cResult[13] = tmp4.container;
         cResult[14] = url;
         cResult[15] = wordWrap;
-        cResult[16] = F;
+        cResult[16] = N;
       }
-      items = [tmp12, tmp16];
-      cResult[7] = tmp12;
-      cResult[8] = tmp16;
+      items = [tmp11, tmp14];
+      cResult[7] = tmp11;
+      cResult[8] = tmp14;
       cResult[9] = items;
+      tmp15 = items;
       let obj = url(wordWrap[14]);
     }
-  : (url) => {
+  : function PlaintextFilePreviewModal(url) {
       url = url.url;
       const fileName = url.fileName;
       let memo;
@@ -479,12 +439,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               items,
               children(ref) {
                 const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-                const obj = { IconComponent: url(7588).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+                const obj = { IconComponent: url(9180).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
                 const intl = url(1126).intl;
                 obj.accessibilityLabel = intl.string(url(1126).t.PdRCRg);
                 obj.ref = ref.ref;
                 const merged1 = Object.assign(merged);
-                return closure_1_9(url(6890).HeaderActionButton, obj);
+                return closure_1_9(url(7079).HeaderActionButton, obj);
               },
             });
           },
@@ -500,5 +460,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj[constants.PREVIEW] = obj2;
         return obj;
       }, items1);
-      return jsx(url(10989).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
+      return jsx(url(11213).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
     };

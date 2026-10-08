@@ -17,7 +17,7 @@ const tmp2 = new RowGeneratorDefault();
 const result = size.fileFinishedImporting("modules/messages/native/long_press/LongPressMessageChatItemPreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (message) => {
+  ? function LongPressMessageChatItemPreview(message) {
       const cResult = c.c(3);
       message = message.message;
       const tmp3 = closure_4();
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp6;
       tmp4 = tmp6;
     }
-  : (message) => {
+  : function LongPressMessageChatItemPreview(message) {
       const obj = {
         rowGenerator,
         message: message.message,

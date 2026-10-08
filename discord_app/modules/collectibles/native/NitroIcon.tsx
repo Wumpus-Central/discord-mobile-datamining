@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/native/NitroIcon.tsx
 import c from "../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/07550_inlineStyles.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -12,7 +12,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/NitroIcon.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function NitroIcon(arg0) {
       const cResult = c.c(6);
       ({ width, height, color } = arg0);
       let num = 106;
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp8;
       tmp7 = tmp8;
     }
-  : (width) => {
+  : function NitroIcon(width) {
       let num = width.width;
       if (num === undefined) {
         num = 106;

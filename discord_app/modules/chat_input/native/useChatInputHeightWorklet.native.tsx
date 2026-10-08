@@ -30,7 +30,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/useChatInputHeightWorklet.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (textFieldHeight) => {
+  ? function useChatInputHeightWorklet(textFieldHeight) {
       const cResult = textFieldHeight(sharedValue[3]).c(14);
       textFieldHeight = textFieldHeight.textFieldHeight;
       const textFieldMinHeight = textFieldHeight.textFieldMinHeight;
@@ -213,7 +213,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         textFieldMinHeight,
       };
     }
-  : (textFieldHeight) => {
+  : function useChatInputHeightWorklet(textFieldHeight) {
       textFieldHeight = textFieldHeight.textFieldHeight;
       const textFieldMinHeight = textFieldHeight.textFieldMinHeight;
       let sharedValue;

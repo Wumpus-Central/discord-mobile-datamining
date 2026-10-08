@@ -4,8 +4,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import shared from "../../../design/shared.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import ButtonGroup from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import ButtonGroup from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -13,10 +13,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(5630).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(5977).QuestHomeSortMethods;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, bodyContainer: { flex: 1, minHeight: 0 }, footerInline: null, footer: null, footerButtonGroup: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.footerInline = { paddingTop: nativeDefault.space.PX_16 };
@@ -26,7 +26,7 @@ obj2.footerButtonGroup = { paddingBottom: 0 };
 let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = [];
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function FilterFooter(arg0) {
   const cResult = c.c(19);
   ({ onConfirm, onReset, onLayout, inline } = arg0);
   footerInline = undefined !== inline && inline;
@@ -119,7 +119,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   ({ footer: tmp3[2], footerInline } = tmp4);
   cResult[3] = footerInline;
   cResult[4] = footerInline1;
-}) : ((inline) => {
+}) : (function FilterFooter(inline) {
   let flag = inline.inline;
   ({ onConfirm, onReset, onLayout } = inline);
   if (flag === undefined) {
@@ -155,7 +155,7 @@ let obj5 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestHomeSortingFilteringBottomSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSortMethodChange) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHomeSortingFilteringBottomSheet(onSortMethodChange) {
   const cResult = onSortMethodChange(first[8]).c(44);
   onSortMethodChange = onSortMethodChange.onSortMethodChange;
   const onFiltersChange = onSortMethodChange.onFiltersChange;
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSortMethodChan
     first2 = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    class A {
+    class Q {
       constructor(arg0, arg1) {
         closure_0 = onSortMethodChange;
         closure_1 = arg1;
@@ -195,9 +195,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSortMethodChan
         return;
       }
     }
-    cResult[1] = A;
+    cResult[1] = Q;
   } else {
-    class A {
+    class Q {
       constructor(arg0, arg1) {
         closure_0 = onSortMethodChange;
         closure_1 = arg1;
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSortMethodChan
       }
     }
   }
-  closure_8 = A;
+  closure_8 = Q;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     class M {
       constructor() {
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSortMethodChan
   cResult[6] = first;
   cResult[7] = L;
   const tmp8 = _slicedToArray(first1.useState(0), 2);
-}) : ((onSortMethodChange) => {
+}) : (function QuestHomeSortingFilteringBottomSheet(onSortMethodChange) {
   onSortMethodChange = onSortMethodChange.onSortMethodChange;
   const onFiltersChange = onSortMethodChange.onFiltersChange;
   ({ initialSortMethod, initialFilters } = onSortMethodChange);
@@ -365,13 +365,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSortMethodChan
       options = heading.options;
       obj.children = options.map((item, index) => {
         const obj = {
-          label: onSortMethodChange(10023).getFilterTypeText(item.filter),
+          label: onSortMethodChange(9554).getFilterTypeText(item.filter),
           onPress(arg0) {
             return closure_2_8(closure_0, arg0);
           },
           checked: closure_4.some((group) => group.group === item.group && group.filter === arr.filter)
         };
-        return ref(onSortMethodChange(5997).TableCheckboxRow, obj, index);
+        return ref(onSortMethodChange(6181).TableCheckboxRow, obj, index);
       });
       return ref(TableRowGroup.TableRowGroup, obj, index);
     })

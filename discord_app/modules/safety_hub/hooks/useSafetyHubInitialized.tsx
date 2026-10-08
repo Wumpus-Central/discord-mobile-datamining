@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubInitialized.tsx");
 
 export const useSafetyHubInitialized = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSafetyHubInitialized() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SafetyHubStore];
@@ -25,7 +25,7 @@ export const useSafetyHubInitialized = ReactCompilerGating.isReactCompilerEnable
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useSafetyHubInitialized() {
       const items = [SafetyHubStore];
       return initialize.useStateFromStores(items, () => initialized.isInitialized());
     };

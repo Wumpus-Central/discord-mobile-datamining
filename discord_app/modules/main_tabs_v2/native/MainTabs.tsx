@@ -3,8 +3,8 @@ import c from "../../../../_runtime/00576_c.js";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import useColorThemeBackgroundDefault from "../../client_themes/native/useColorThemeBackground.tsx";
-import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
 import useActiveTheme from "../../client_themes/native/useActiveTheme.tsx";
+import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
 import MainTabsNavigatorPanelDefault from "panels/MainTabsNavigatorPanel.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ container: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/MainTabs.
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function MainTabs() {
         const cResult = c.c(15);
         const tmp5 = useColorThemeBackgroundDefault();
         const isCustomThemeActive = useActiveTheme.useIsCustomThemeActive();
@@ -90,7 +90,7 @@ export default noop.memo(
         tmp9 = obj6;
         const tmp8 = useSafeAreaInsetsDefault();
       }
-    : () => {
+    : function MainTabs() {
         const tmp = useColorThemeBackgroundDefault();
         const isCustomThemeActive = useActiveTheme.useIsCustomThemeActive();
         const rect = useSafeAreaInsetsDefault();

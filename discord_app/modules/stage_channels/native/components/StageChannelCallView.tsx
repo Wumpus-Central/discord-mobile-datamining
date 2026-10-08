@@ -13,11 +13,11 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
 function CONTROL_PADDING_PX(arg0) {}
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ container: { flex: 1, paddingHorizontal: 12 } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function StageChannelCallBackground(children) {
       const cResult = c.c(8);
       children = children.children;
       const tmp4 = closure_7();
@@ -62,7 +62,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = items;
       const tmpResult = StageChannelAnimationUtils;
     }
-  : (arg0) => {
+  : function StageChannelCallBackground(arg0) {
       ({ children, channelId } = arg0);
       StageChannelAnimationUtils;
       if (typeof CONTROL_PADDING_PX === "function") {
@@ -87,7 +87,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function StageChannelCallView(channel) {
       const cResult = c.c(6);
       channel = channel.channel;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp12;
       const obj4 = { channelId: channel.id, children: tmp7 };
     }
-  : (channel) => {
+  : function StageChannelCallView(channel) {
       channel = channel.channel;
       const obj = { children: null };
       const items = [

@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -46,7 +46,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const GuildRoleSubscriptionRolePreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildRoleSubscriptionRolePreview(arg0) {
       const cResult = c.c(40);
       ({ content, style, textStyle, roleColor, roleImage, roleName, guildId } = arg0);
       if (cResult[0] !== content) {
@@ -64,7 +64,7 @@ export const GuildRoleSubscriptionRolePreview = ReactCompilerGating.isReactCompi
       const tmp6 = closure_8();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function f() {
+        const fn = function w() {
           return currentUser.getCurrentUser();
         };
         cResult[2] = items;
@@ -231,7 +231,7 @@ export const GuildRoleSubscriptionRolePreview = ReactCompilerGating.isReactCompi
       cResult[6] = items4;
       tmp13 = items4;
     }
-  : (content) => {
+  : function GuildRoleSubscriptionRolePreview(content) {
       content = content.content;
       if (content === undefined) {
         const intl = util.intl;

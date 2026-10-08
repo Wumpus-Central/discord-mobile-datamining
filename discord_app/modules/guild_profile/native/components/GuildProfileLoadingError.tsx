@@ -6,7 +6,7 @@ import useToken from "../../../../design/tokens/native/useToken.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import WarningIcon from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import GuildProfileView from "GuildProfileView.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -20,7 +20,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileLoadingError.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onRetry) => {
+  ? function GuildProfileLoadingError(onRetry) {
       const cResult = c.c(30);
       onRetry = onRetry.onRetry;
       const styles = GuildProfileView.useStyles();
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = backgroundForProfile;
       const tmpResult = GuildProfileView;
     }
-  : (onPress) => {
+  : function GuildProfileLoadingError(onPress) {
       const styles = GuildProfileView.useStyles();
       const tmp2 = useThemeDefault();
       const obj3 = { style: styles.container, children: null };

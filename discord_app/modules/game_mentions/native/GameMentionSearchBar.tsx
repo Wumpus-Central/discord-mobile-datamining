@@ -3,8 +3,8 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
+import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import useGameMentionSearchBarHeight from "../hooks/native/useGameMentionSearchBarHeight.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND },
   headerRow: null,
@@ -25,20 +25,20 @@ obj.headerRow = {
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 16,
-  paddingVertical: fn(12046).GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL,
+  paddingVertical: fn(12119).GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL,
 };
 obj.icon = { marginRight: 12 };
 let obj4 = {
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 16,
-  paddingVertical: fn(12046).GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL,
+  paddingVertical: fn(12119).GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL,
 };
 obj.description = {
   paddingHorizontal: 16,
-  paddingBottom: fn(12046).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM,
+  paddingBottom: fn(12119).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM,
 };
-let obj5 = { paddingHorizontal: 16, paddingBottom: fn(12046).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM };
+let obj5 = { paddingHorizontal: 16, paddingBottom: fn(12119).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM };
 obj.divider = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
 let closure_5 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -48,7 +48,7 @@ const result = size.fileFinishedImporting("modules/game_mentions/native/GameMent
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function GameMentionSearchBar() {
         const cResult = c.c(18);
         const tmp4 = closure_5();
         if (cResult[0] !== tmp4.icon) {
@@ -148,7 +148,7 @@ export default noop.memo(
         cResult[5] = tmp12;
         tmp11 = tmp12;
       }
-    : () => {
+    : function GameMentionSearchBar() {
         const tmp = closure_5();
         const obj = { style: tmp.container, children: null };
         const obj2 = { accessible: true, accessibilityRole: "header", children: null };

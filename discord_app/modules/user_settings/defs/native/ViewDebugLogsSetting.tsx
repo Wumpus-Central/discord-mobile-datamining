@@ -29,7 +29,7 @@ const Keyboard = _mod17.Keyboard;
 const ViewDebugLogsActionSheet = "ViewDebugLogsActionSheet";
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (screenKey) => {
+  ? function ViewDebugLogsActionSheetRow(screenKey) {
       const cResult = title(render[5]).c(8);
       ({ icon, title } = screenKey);
       screenKey = screenKey.screenKey;
@@ -74,10 +74,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = title(render[5]);
       tmp2 = render;
     }
-  : (icon) => {
+  : function ViewDebugLogsActionSheetRow(icon) {
       const title = icon.title;
       ({ screenKey: importDefault, render: dependencyMap } = icon);
-      return closure_5(title(6704).ActionSheetRow, {
+      return closure_5(title(6881).ActionSheetRow, {
         icon: icon.icon,
         label: title,
         onPress() {
@@ -94,7 +94,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ViewDebugLogsActionSheet() {
       const cResult = c.c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { title: null };
@@ -185,7 +185,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp21;
     }
-  : () => {
+  : function ViewDebugLogsActionSheet() {
       const obj = { header: null, children: null };
       const obj2 = { title: null };
       const intl = util.intl;

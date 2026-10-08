@@ -6,11 +6,11 @@ require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useMountEffect(arg0) {
       const cResult = c.c(2);
       noop.useRef(arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function u() {
+        const fn = function f() {
           return ref.current();
         };
         const items = [];
@@ -23,17 +23,17 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp2, tmp3);
     }
-  : (arg0) => {
+  : function useMountEffect(arg0) {
       noop.useRef(arg0);
       const effect = noop.useEffect(() => ref.current(), []);
     };
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useMountLayoutEffect(arg0) {
       const cResult = c.c(2);
       noop.useRef(arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function u() {
+        const fn = function f() {
           return ref.current();
         };
         const items = [];
@@ -46,7 +46,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const layoutEffect = noop.useLayoutEffect(tmp2, tmp3);
     }
-  : (arg0) => {
+  : function useMountLayoutEffect(arg0) {
       noop.useRef(arg0);
       const layoutEffect = noop.useLayoutEffect(() => ref.current(), []);
     };
@@ -56,11 +56,11 @@ const result = size.fileFinishedImporting("../discord_common/js/shared/hooks/use
 export default tmp2;
 export const useMountLayoutEffect = tmp3;
 export const useUnmountEffect = ReactCompilerGating.isReactCompilerEnabled()
-  ? (current) => {
+  ? function useUnmountEffect(current) {
       const cResult = c.c(4);
       closure_1 = noop.useRef(current);
       if (cResult[0] !== current) {
-        const fn = function u() {
+        const fn = function f() {
           closure_1.current = current;
         };
         cResult[0] = current;
@@ -71,7 +71,7 @@ export const useUnmountEffect = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp2);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function f() {
+        const fn2 = function c() {
           return () => {
             ref.current();
           };
@@ -87,7 +87,7 @@ export const useUnmountEffect = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect1 = noop.useEffect(tmp4, tmp5);
     }
-  : (current) => {
+  : function useUnmountEffect(current) {
       closure_1 = noop.useRef(current);
       const effect = noop.useEffect(() => {
         closure_1.current = current;

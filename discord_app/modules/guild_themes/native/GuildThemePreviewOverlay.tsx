@@ -1,6 +1,6 @@
 // discord_app/modules/guild_themes/native/GuildThemePreviewOverlay.tsx
 import c from "../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/07550_inlineStyles.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/native/GuildThemePreviewOverlay.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildThemePreviewOverlay(arg0) {
       const cResult = c.c(17);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp7 = React3(inlineStyles.Path, {
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp43;
     }
-  : (arg0) => {
+  : function GuildThemePreviewOverlay(arg0) {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.preserveAspectRatio = "none";

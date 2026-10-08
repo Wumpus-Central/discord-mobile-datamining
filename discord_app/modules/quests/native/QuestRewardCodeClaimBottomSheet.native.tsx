@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef4813 from "../../../../_runtime/metro/04813__.js";
+import _modDef5007 from "../../../../_runtime/metro/05007__.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import QuestRewardUtils from "../utils/QuestRewardUtils.tsx";
@@ -14,10 +14,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const REWARD_CODE_PLACEHOLDER = fn(5630).REWARD_CODE_PLACEHOLDER;
+const REWARD_CODE_PLACEHOLDER = fn(5977).REWARD_CODE_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     wrapper: { display: "flex", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 },
@@ -30,7 +30,7 @@ let closure_10 = createStyles.createStyles((paddingBottom) => {
 });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (quest) => {
+  ? function QuestRewardCodeClaimBottomSheet(quest) {
       const cResult = quest(hasError[8]).c(85);
       quest = quest.quest;
       ({ questContent, questContentPosition, sourceQuestContent } = quest);
@@ -75,7 +75,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj2 = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
                     const intl = util.intl;
                     obj2.content = intl.string(util.t.CKsXk3);
-                    obj2.icon = _modDef4813;
+                    obj2.icon = _modDef5007;
                     ToastActionCreatorsDefault.open(obj2);
                     ActionSheetActionCreatorsDefault.hideActionSheet();
                   }
@@ -157,14 +157,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                                     if (null != rewardCode) {
                                       ClipboardUtils.copy(tmp.code, () => {
                                         const designSystemsNotificationComponents = quest(
-                                          4580,
+                                          4772,
                                         ).getDesignSystemsNotificationComponents("QuestRewardCodeClaimBottomSheet");
-                                        const obj2 = rewardCode(4574);
+                                        const obj2 = rewardCode(4766);
                                         if (designSystemsNotificationComponents) {
                                           const obj3 = { text: null, icon: null };
                                           const intl2 = quest(1126).intl;
                                           obj3.text = intl2.string(quest(1126).t.MSaeTe);
-                                          obj3.icon = quest(4849).CopyIcon;
+                                          obj3.icon = quest(5043).CopyIcon;
                                           obj2.openMana("TOAST_QUEST_REWARD_CODE_COPIED", obj3);
                                         } else {
                                           const obj4 = {
@@ -179,7 +179,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                                           };
                                           obj2.open(obj4);
                                         }
-                                        const obj = quest(4580);
+                                        const obj = quest(4772);
                                       });
                                     }
                                   };
@@ -548,7 +548,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = obj20;
       const tmpResult = quest(hasError[10]);
     }
-  : (quest) => {
+  : function QuestRewardCodeClaimBottomSheet(quest) {
       quest = quest.quest;
       const questContent = quest.questContent;
       let rewardCode;
@@ -581,7 +581,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
           const intl = util.intl;
           obj2.content = intl.string(util.t.CKsXk3);
-          obj2.icon = _modDef4813;
+          obj2.icon = _modDef5007;
           ToastActionCreatorsDefault.open(obj2);
           ActionSheetActionCreatorsDefault.hideActionSheet();
         }
@@ -654,15 +654,15 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const callback = obj3.useCallback(() => {
         if (null != rewardCode) {
           ClipboardUtils.copy(tmp.code, () => {
-            const designSystemsNotificationComponents = quest(4580).getDesignSystemsNotificationComponents(
+            const designSystemsNotificationComponents = quest(4772).getDesignSystemsNotificationComponents(
               "QuestRewardCodeClaimBottomSheet",
             );
-            const obj2 = rewardCode(4574);
+            const obj2 = rewardCode(4766);
             if (designSystemsNotificationComponents) {
               const obj3 = { text: null, icon: null };
               const intl2 = quest(1126).intl;
               obj3.text = intl2.string(quest(1126).t.MSaeTe);
-              obj3.icon = quest(4849).CopyIcon;
+              obj3.icon = quest(5043).CopyIcon;
               obj2.openMana("TOAST_QUEST_REWARD_CODE_COPIED", obj3);
             } else {
               const obj4 = { key: "TOAST_QUEST_REWARD_CODE_COPIED", content: null, icon: null };
@@ -673,7 +673,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               };
               obj2.open(obj4);
             }
-            const obj = quest(4580);
+            const obj = quest(4772);
           });
         }
       }, items4);
@@ -798,7 +798,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestRewardCodeClaimBottomSheet.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (questId) => {
+  ? function QuestRewardCodeClaimBottomSheetConnected(questId) {
       const cResult = questId(questContentPosition[8]).c(14);
       questId = questId.questId;
       const questContent = questId.questContent;
@@ -881,7 +881,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : (questContentPosition) => {
+  : function QuestRewardCodeClaimBottomSheetConnected(questContentPosition) {
       ({ questId: require, questContent } = questContentPosition);
       questContentPosition = questContentPosition.questContentPosition;
       const sourceQuestContent = questContentPosition.sourceQuestContent;

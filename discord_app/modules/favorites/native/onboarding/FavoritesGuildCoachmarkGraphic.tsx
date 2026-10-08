@@ -20,7 +20,7 @@ let obj2 = { alignItems: "center", justifyContent: "center", gap: nativeDefault.
 const result = size.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkGraphic.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function FavoritesGuildCoachmarkGraphic() {
       const cResult = c.c(6);
       const tmp4 = closure_5();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp12;
       tmp11 = tmp12;
     }
-  : () => {
+  : function FavoritesGuildCoachmarkGraphic() {
       const tmp = closure_5();
       const obj = { style: tmp.container, children: null };
       const items = [

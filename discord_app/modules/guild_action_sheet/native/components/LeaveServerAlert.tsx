@@ -10,7 +10,7 @@ const GuildFeatures = Constants.GuildFeatures;
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/LeaveServerAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function LeaveServerAlert(guild) {
       const cResult = guild(576).c(16);
       guild = guild.guild;
       if (cResult[0] !== guild.features) {
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[7] !== tmp11) {
           const obj3 = { variant: "destructive", onPress: tmp11, text: tmp13 };
-          const tmp17 = closure_4(tmp(5720).AlertActionButton, obj3, "confirm");
+          const tmp17 = closure_4(tmp(5303).AlertActionButton, obj3, "confirm");
           cResult[7] = tmp11;
           cResult[8] = tmp17;
           let tmp15 = tmp17;
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { variant: "secondary", text: null };
           const intl4 = tmp(1126).intl;
           obj4.text = intl4.string(tmp(1126).t.gm1Vej);
-          const tmp20 = closure_4(tmp(5720).AlertActionButton, obj4, "cancel");
+          const tmp20 = closure_4(tmp(5303).AlertActionButton, obj4, "cancel");
           cResult[9] = tmp20;
           let tmp18 = tmp20;
         } else {
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { children: null };
           const items = [tmp15, tmp18];
           obj5.children = items;
-          const tmp23 = closure_5(tmp(5720).AlertActions, obj5);
+          const tmp23 = closure_5(tmp(5303).AlertActions, obj5);
           cResult[10] = tmp15;
           cResult[11] = tmp23;
           let tmp21 = tmp23;
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj6 = { title: cResult[1], content: tmp9, actions: tmp21 };
-        const tmp26 = closure_4(tmp(5720).AlertModal, obj6);
+        const tmp26 = closure_4(tmp(5303).AlertModal, obj6);
         cResult[12] = cResult[1];
         cResult[13] = tmp9;
         cResult[14] = tmp21;
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = guild(576);
     }
-  : (guild) => {
+  : function LeaveServerAlert(guild) {
       guild = guild.guild;
       const features = guild.features;
       const hasItem = features.has(GuildFeatures.HUB);
@@ -131,12 +131,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl3 = tmp2(1126).intl;
       obj4.text = intl3.string(guild(1126).t.p89ACt);
-      const items = [closure_4(guild(5720).AlertActionButton, obj4, "confirm")];
+      const items = [closure_4(guild(5303).AlertActionButton, obj4, "confirm")];
       const obj5 = { variant: "secondary", text: null };
       const intl4 = tmp2(1126).intl;
       obj5.text = intl4.string(guild(1126).t.gm1Vej);
-      items[1] = closure_4(guild(5720).AlertActionButton, obj5, "cancel");
+      items[1] = closure_4(guild(5303).AlertActionButton, obj5, "cancel");
       obj3.children = items;
-      obj.actions = closure_5(guild(5720).AlertActions, obj3);
-      return closure_4(guild(5720).AlertModal, obj);
+      obj.actions = closure_5(guild(5303).AlertActions, obj3);
+      return closure_4(guild(5303).AlertModal, obj);
     };

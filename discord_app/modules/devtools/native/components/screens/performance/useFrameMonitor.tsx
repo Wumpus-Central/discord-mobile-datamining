@@ -11,15 +11,15 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/useFrameMonitor.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (current) => {
+  ? function useFrameMonitor(current) {
       _require = current;
       const cResult = require("c").c(9);
       let obj = require("c");
-      [tmp3, dependencyMap] = noop.useState(false);
-      _slicedToArray = noop.useRef(null);
+      [tmp3, dependencyMap] = ref(noop.useState(false), 2);
+      const tmp2 = ref(noop.useState(false), 2);
       noop = noop.useRef(current);
       if (cResult[0] !== current) {
-        const fn = function c() {
+        const fn = function o() {
           closure_3.current = current;
         };
         const items = [current];
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        class R {
+        class M {
           constructor() {
             current = closure_2.current;
             if (null != current) {
@@ -63,9 +63,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        cResult[4] = R;
+        cResult[4] = M;
       } else {
-        class R {
+        class M {
           constructor() {
             current = closure_2.current;
             if (null != current) {
@@ -84,86 +84,69 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class R {
           constructor() {
-            current = closure_2.current;
-            if (null != current) {
-              closure_2.current = null;
-              tmp2 = closure_1;
-              flag = false;
-              stopResult = current.stop();
-              tmp3 = closure_1(false);
-              tmp4 = closure_3;
-              currentResult = closure_3.current(stopResult);
-            }
-            return;
+            return () => {
+              current = ref.current;
+              if (current != null) {
+                current.stop();
+              }
+              ref.current = null;
+            };
           }
         }
         const items1 = [];
-        cResult[5] = tmp11;
+        cResult[5] = R;
         cResult[6] = items1;
         let tmp10 = items1;
       } else {
         class R {
           constructor() {
-            current = closure_2.current;
-            if (null != current) {
-              closure_2.current = null;
-              tmp2 = closure_1;
-              flag = false;
-              stopResult = current.stop();
-              tmp3 = closure_1(false);
-              tmp4 = closure_3;
-              currentResult = closure_3.current(stopResult);
-            }
-            return;
+            return () => {
+              current = ref.current;
+              if (current != null) {
+                current.stop();
+              }
+              ref.current = null;
+            };
           }
         }
         tmp10 = cResult[6];
       }
-      const effect1 = obj2.useEffect(tmp11, tmp10);
+      const effect1 = obj2.useEffect(R, tmp10);
       if (cResult[7] !== tmp3) {
         class R {
           constructor() {
-            current = closure_2.current;
-            if (null != current) {
-              closure_2.current = null;
-              tmp2 = closure_1;
-              flag = false;
-              stopResult = current.stop();
-              tmp3 = closure_1(false);
-              tmp4 = closure_3;
-              currentResult = closure_3.current(stopResult);
-            }
-            return;
+            return () => {
+              current = ref.current;
+              if (current != null) {
+                current.stop();
+              }
+              ref.current = null;
+            };
           }
         }
-        tmp14[0] = tmp3;
-        tmp14[1] = tmp7;
-        tmp14[2] = R;
+        tmp13[0] = tmp3;
+        tmp13[1] = tmp7;
+        tmp13[2] = M;
         cResult[7] = tmp3;
-        cResult[8] = tmp14;
+        cResult[8] = tmp13;
       } else {
         class R {
           constructor() {
-            current = closure_2.current;
-            if (null != current) {
-              closure_2.current = null;
-              tmp2 = closure_1;
-              flag = false;
-              stopResult = current.stop();
-              tmp3 = closure_1(false);
-              tmp4 = closure_3;
-              currentResult = closure_3.current(stopResult);
-            }
-            return;
+            return () => {
+              current = ref.current;
+              if (current != null) {
+                current.stop();
+              }
+              ref.current = null;
+            };
           }
         }
       }
-      return tmp14;
+      return tmp13;
     }
-  : (current) => {
-      const monitoring = _slicedToArray(noop.useState(false), 2);
+  : function useFrameMonitor(current) {
+      const monitoring = ref(noop.useState(false), 2);
       closure_1 = monitoring[1];
-      _slicedToArray = noop.useRef(null);
       noop = noop.useRef(current);
       const items = [current];
       const effect = noop.useEffect(() => {

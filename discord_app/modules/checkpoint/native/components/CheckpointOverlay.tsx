@@ -19,7 +19,7 @@ const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointOverlay.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (route) => {
+  ? function CheckpointOverlay(route) {
       const cResult = c.c(10);
       route = route.route;
       if (route === CheckpointNavigation.CheckpointRoute.HOME) {
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult = CheckpointNavigation;
       }
     }
-  : (route) => {
+  : function CheckpointOverlay(route) {
       route = route.route;
       if (route === CheckpointNavigation.CheckpointRoute.HOME) {
         return jsx(CheckpointWelcomeScreenDefault, {});

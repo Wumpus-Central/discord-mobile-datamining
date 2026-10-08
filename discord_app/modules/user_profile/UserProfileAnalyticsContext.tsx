@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/UserProfileAnalyticsContext.tsx
 import c from "../../../_runtime/00576_c.js";
-import v1 from "../../../_runtime/01266_v1.js";
+import v1 from "../../../_runtime/01278_v1.js";
 import useAnalyticsLocationsDefault from "../app_analytics/useAnalyticsLocations.tsx";
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -11,7 +11,7 @@ let context = noop.createContext(null);
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCreateUserProfileAnalyticsContext(arg0) {
       const cResult = c.c(10);
       ({ layout, userId, guildId, channelId, messageId, roleId, sourceSessionId, showGuildProfile } = arg0);
       const context = noop.useContext(closure_5);
@@ -69,7 +69,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = obj2;
       tmp8 = obj2;
     }
-  : (layout) => {
+  : function useCreateUserProfileAnalyticsContext(layout) {
       layout = layout.layout;
       const userId = layout.userId;
       const guildId = layout.guildId;
@@ -182,10 +182,10 @@ export const UserProfileAnalyticsProvider = (children) => {
 };
 export const useCreateUserProfileAnalyticsContext = tmp2;
 export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useUserProfileAnalyticsContext() {
       const cResult = context(576).c(18);
       context = noop.useContext(closure_5);
-      analyticsLocations = analyticsLocations(6664)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6841)().analyticsLocations;
       if (cResult[0] === analyticsLocations) {
         if (cResult[1] === context) {
           let tmp3 = cResult[2];
@@ -214,7 +214,7 @@ export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompile
                   }
                 }
               }
-              class P {
+              class I {
                 constructor(arg0) {
                   tmp = closure_0;
                   if (null != closure_0) {
@@ -249,7 +249,7 @@ export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompile
               cResult[17] = tmp10;
               tmp9 = tmp10;
             }
-            class P {
+            class I {
               constructor(arg0) {
                 tmp = closure_0;
                 if (null != closure_0) {
@@ -273,8 +273,8 @@ export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompile
             }
             cResult[9] = analyticsLocations;
             cResult[10] = context;
-            cResult[11] = P;
-            tmp8 = P;
+            cResult[11] = I;
+            tmp8 = I;
           }
           cResult[6] = analyticsLocations;
           cResult[7] = context;
@@ -286,7 +286,7 @@ export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompile
         cResult[5] = tmp5;
         tmp4 = tmp5;
       }
-      const fn = function o(arg0) {
+      const fn = function s(arg0) {
         if (null != context) {
           const obj2 = { analyticsLocations };
           const merged = Object.assign(context);
@@ -299,9 +299,9 @@ export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompile
       cResult[2] = fn;
       tmp3 = fn;
     }
-  : () => {
+  : function useUserProfileAnalyticsContext() {
       const context = noop.useContext(closure_5);
-      analyticsLocations = analyticsLocations(6664)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6841)().analyticsLocations;
       let obj = {
         context,
         trackUserProfileAction: null,

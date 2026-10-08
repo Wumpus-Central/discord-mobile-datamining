@@ -25,7 +25,7 @@ function LeftAlignedHeaderTitle(children) {
   if (usePersistentBadge != null) {
     persistentBadge = usePersistentBadge();
   }
-  const tmp5 = v65535(Text_Text.Heading, {
+  const tmp5 = collapsed(Text_Text.Heading, {
     lineClamp: 1,
     variant: "redesign/heading-18/bold",
     color: "mobile-text-heading-primary",
@@ -38,7 +38,7 @@ function LeftAlignedHeaderTitle(children) {
     const obj = { style: tmp.headerContainerRow, children: null };
     const items = [tmp5];
     const obj2 = { badge: persistentBadge };
-    items[1] = v65535(closure_14, obj2);
+    items[1] = collapsed(closure_14, obj2);
     obj.children = items;
     tmp6 = closure_1_11(View, obj);
   }
@@ -49,9 +49,9 @@ const Constants = fn(1085);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(7568);
+const NativeStackNavigator = fn(9279);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   headerContainer: null,
@@ -85,13 +85,13 @@ obj.backIcon = { borderRadius: nativeDefault.radii.round, marginTop: nativeDefau
 let closure_13 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (badge) => {
+  ? function SettingHeaderBadge(badge) {
       const cResult = c.c(1);
       if (badge.badge.badgeType === SettingRendererTypes.SettingsBadgeType.BETA) {
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { size: native.BetaSizes.SMALL };
-          const tmp7 = v65535(native.BetaTag, obj2);
+          const tmp7 = collapsed(native.BetaTag, obj2);
           cResult[0] = tmp7;
           let first = tmp7;
         } else {
@@ -100,10 +100,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         return first;
       }
     }
-  : (badge) => {
+  : function SettingHeaderBadge(badge) {
       if (badge.badge.badgeType === SettingRendererTypes.SettingsBadgeType.BETA) {
         const obj = { size: native.BetaSizes.SMALL };
-        return v65535(native.BetaTag, obj);
+        return collapsed(native.BetaTag, obj);
       }
     };
 ReactCompilerGating = fn(558);
@@ -113,8 +113,8 @@ let result = size.fileFinishedImporting("modules/user_settings/core/native/Setti
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
-        const cResult = require("c").c(58);
+    ? function SettingsNavigator() {
+        const cResult = require("c").c(54);
         const tmp4 = closure_13();
         _require = tmp4;
         let obj = require("c");
@@ -221,60 +221,16 @@ export default noop.memo(
         }
         const tmpResult8 = require("useCommonTriggerPoint");
         const stateFromStores = require("useStateFromStores").useStateFromStores(tmp18, tmp19);
-        const tmp21 = onClose(navigation.useState(false), 2)[1];
-        View = tmp21;
-        if (cResult[8] !== tmp21) {
-          class O {
-            constructor() {
-              tmp = closure_5((arg0) => !arg0);
-              return;
-            }
-          }
-          cResult[8] = tmp21;
-          class E {
-            constructor() {
-              return closure_6.locale;
-            }
-          }
-          cResult[9] = O;
-        } else {
-          class O {
-            constructor() {
-              tmp = closure_5((arg0) => !arg0);
-              return;
-            }
-          }
-        }
-        if (cResult[10] !== stateFromStores) {
-          class O {
-            constructor() {
-              tmp = closure_5((arg0) => !arg0);
-              return;
-            }
-          }
-          tmp24[0] = stateFromStores;
-          class E {
-            constructor() {
-              return closure_6.locale;
-            }
-          }
-          cResult[11] = tmp24;
-        } else {
-          class O {
-            constructor() {
-              tmp = closure_5((arg0) => !arg0);
-              return;
-            }
-          }
-        }
-        const layoutEffect = obj5.useLayoutEffect(O, tmp24);
         const tmpResult9 = require("useStateFromStores");
         const analyticsLocations = screen(params1[20])(screen(tmp2[21]).USER_SETTINGS).analyticsLocations;
-        if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-          class O {
+        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+          class T {
             constructor() {
-              tmp = closure_5((arg0) => !arg0);
-              return;
+              return () => {
+                if (onClose != null) {
+                  tmp();
+                }
+              };
             }
           }
           const settingScreens = obj7.getSettingScreens();
@@ -285,15 +241,18 @@ export default noop.memo(
           }
           const arr4 = settingScreens;
         } else {
-          class O {
+          class T {
             constructor() {
-              tmp = closure_5((arg0) => !arg0);
-              return;
+              return () => {
+                if (onClose != null) {
+                  tmp();
+                }
+              };
             }
           }
         }
-        if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          class W {
+        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+          class N {
             constructor() {
               obj = closure_0(params[23]);
               return obj.trackAppUIViewed();
@@ -305,24 +264,23 @@ export default noop.memo(
               return closure_6.locale;
             }
           }
-          cResult[14] = W;
-          let tmp30 = W;
-          const tmp29 = items3;
+          cResult[10] = items3;
+          let tmp25 = items3;
         } else {
-          class W {
+          class N {
             constructor() {
               obj = closure_0(params[23]);
               return obj.trackAppUIViewed();
             }
           }
-          tmp30 = cResult[14];
+          tmp25 = cResult[10];
         }
-        const layoutEffect1 = obj5.useLayoutEffect(tmp30, tmp29);
-        if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-          class D {
+        const layoutEffect = obj5.useLayoutEffect(N, tmp25);
+        if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+          class N {
             constructor() {
-              obj = OVERVIEW(params[24]);
-              return obj.validate();
+              obj = closure_0(params[23]);
+              return obj.trackAppUIViewed();
             }
           }
           const items4 = [];
@@ -331,38 +289,39 @@ export default noop.memo(
               return closure_6.locale;
             }
           }
-          cResult[16] = items4;
-          let tmp33 = items4;
+          cResult[12] = tmp29;
+          let tmp28 = tmp29;
+          const tmp27 = items4;
         } else {
-          class D {
+          class N {
             constructor() {
-              obj = OVERVIEW(params[24]);
-              return obj.validate();
+              obj = closure_0(params[23]);
+              return obj.trackAppUIViewed();
             }
           }
-          tmp33 = cResult[16];
+          tmp28 = cResult[12];
         }
-        const effect2 = obj5.useEffect(D, tmp33);
-        const tmp27 = screen(params1[20]);
+        const effect2 = obj5.useEffect(tmp28, tmp27);
+        const tmp22 = screen(params1[20]);
         const accessibilityNativeStackOptions = require("Navigator").useAccessibilityNativeStackOptions();
         const tmpResult10 = require("Navigator");
         const accessibilityNativeStackFocusTracking =
           require("useAccessibilityNativeStackFocusTracking").useAccessibilityNativeStackFocusTracking();
         ({ beforeRemove, transitionStart } = accessibilityNativeStackFocusTracking);
         const tmpResult11 = require("useAccessibilityNativeStackFocusTracking");
-        const token = require("useToken").useToken(tmp26(tmp2[9]).colors.MOBILE_ACTIONSHEET_BACKGROUND);
+        const token = require("useToken").useToken(tmp21(tmp2[9]).colors.MOBILE_ACTIONSHEET_BACKGROUND);
         const tmpResult12 = require("useToken");
-        const token1 = require("useToken").useToken(tmp26(tmp2[9]).colors.BORDER_SUBTLE);
-        if (cResult[17] === token) {
-          class D {
+        const token1 = require("useToken").useToken(tmp21(tmp2[9]).colors.BORDER_SUBTLE);
+        if (cResult[13] === token) {
+          class N {
             constructor() {
-              obj = OVERVIEW(params[24]);
-              return obj.validate();
+              obj = closure_0(params[23]);
+              return obj.trackAppUIViewed();
             }
           }
-          LocaleStore = tmp39;
-          if (cResult[20] !== tmp4.backIcon) {
-            class J {
+          View = tmp35;
+          if (cResult[16] !== tmp4.backIcon) {
+            class X {
               constructor(arg0) {
                 closure_0 = arg0;
                 return () => {
@@ -384,23 +343,23 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = v65535(View, obj3);
-                  obj.children = v65535(Pressables.PressableOpacity, obj2);
-                  return v65535(View, obj);
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
                 };
               }
             }
-            cResult[20] = tmp4.backIcon;
+            cResult[16] = tmp4.backIcon;
             class E {
               constructor() {
                 return closure_6.locale;
               }
             }
-            cResult[21] = J;
+            cResult[17] = X;
           } else {
-            class J {
+            class X {
               constructor(arg0) {
                 closure_0 = arg0;
                 return () => {
@@ -422,11 +381,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = v65535(View, obj3);
-                  obj.children = v65535(Pressables.PressableOpacity, obj2);
-                  return v65535(View, obj);
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
                 };
               }
             }
@@ -436,48 +395,111 @@ export default noop.memo(
               return closure_6.locale;
             }
           }
-          if (cResult[22] !== navigation) {
-            class Y {
-              constructor() {
-                obj = closure_4;
-                if (closure_4.canGoBack()) {
-                  goBackResult = obj.goBack();
-                }
-                return;
+          if (cResult[18] !== navigation) {
+            class X {
+              constructor(arg0) {
+                closure_0 = arg0;
+                return () => {
+                  const obj = { collapsable: false, children: null };
+                  const obj2 = {
+                    onPress() {
+                      return navigation.goBack();
+                    },
+                    accessible: true,
+                    accessibilityRole: "button",
+                    accessibilityLabel: null,
+                    hitSlop: null,
+                    children: null,
+                  };
+                  const intl = util.intl;
+                  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                  obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                  const obj3 = {
+                    style: navigation.backIcon,
+                    importantForAccessibility: "no-hide-descendants",
+                    accessibilityElementsHidden: true,
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                  };
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
+                };
               }
             }
-            cResult[22] = navigation;
+            cResult[18] = navigation;
             class E {
               constructor() {
                 return closure_6.locale;
               }
             }
-            cResult[23] = Y;
+            cResult[19] = tmp38;
           } else {
-            class Y {
-              constructor() {
-                obj = closure_4;
-                if (closure_4.canGoBack()) {
-                  goBackResult = obj.goBack();
-                }
-                return;
+            class X {
+              constructor(arg0) {
+                closure_0 = arg0;
+                return () => {
+                  const obj = { collapsable: false, children: null };
+                  const obj2 = {
+                    onPress() {
+                      return navigation.goBack();
+                    },
+                    accessible: true,
+                    accessibilityRole: "button",
+                    accessibilityLabel: null,
+                    hitSlop: null,
+                    children: null,
+                  };
+                  const intl = util.intl;
+                  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                  obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                  const obj3 = {
+                    style: navigation.backIcon,
+                    importantForAccessibility: "no-hide-descendants",
+                    accessibilityElementsHidden: true,
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                  };
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
+                };
               }
             }
           }
           const _Symbol = Symbol;
-          if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
-            class Y {
-              constructor() {
-                obj = closure_4;
-                if (closure_4.canGoBack()) {
-                  goBackResult = obj.goBack();
-                }
-                return;
+          if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
+            class X {
+              constructor(arg0) {
+                closure_0 = arg0;
+                return () => {
+                  const obj = { collapsable: false, children: null };
+                  const obj2 = {
+                    onPress() {
+                      return navigation.goBack();
+                    },
+                    accessible: true,
+                    accessibilityRole: "button",
+                    accessibilityLabel: null,
+                    hitSlop: null,
+                    children: null,
+                  };
+                  const intl = util.intl;
+                  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                  obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                  const obj3 = {
+                    style: navigation.backIcon,
+                    importantForAccessibility: "no-hide-descendants",
+                    accessibilityElementsHidden: true,
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                  };
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
+                };
               }
             }
-            tmp43[0] = function transitionEnd(data) {
+            tmp40[0] = function transitionEnd(data) {
               let isActive = data.data.closing;
-              state = UserSettingSearchStore.getState();
+              state = listeners.getState();
               if (isActive) {
                 isActive = state.isActive;
               }
@@ -485,7 +507,7 @@ export default noop.memo(
                 isActive = "" === state.query;
               }
               if (isActive) {
-                UserSettingSearchStore.setState({ isActive: false });
+                listeners.setState({ isActive: false });
               }
             };
             class E {
@@ -494,34 +516,76 @@ export default noop.memo(
               }
             }
           } else {
-            class Y {
-              constructor() {
-                obj = closure_4;
-                if (closure_4.canGoBack()) {
-                  goBackResult = obj.goBack();
-                }
-                return;
+            class X {
+              constructor(arg0) {
+                closure_0 = arg0;
+                return () => {
+                  const obj = { collapsable: false, children: null };
+                  const obj2 = {
+                    onPress() {
+                      return navigation.goBack();
+                    },
+                    accessible: true,
+                    accessibilityRole: "button",
+                    accessibilityLabel: null,
+                    hitSlop: null,
+                    children: null,
+                  };
+                  const intl = util.intl;
+                  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                  obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                  const obj3 = {
+                    style: navigation.backIcon,
+                    importantForAccessibility: "no-hide-descendants",
+                    accessibilityElementsHidden: true,
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                  };
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
+                };
               }
             }
           }
           const _Symbol2 = Symbol;
-          if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-            class Y {
-              constructor() {
-                obj = closure_4;
-                if (closure_4.canGoBack()) {
-                  goBackResult = obj.goBack();
-                }
-                return;
+          if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
+            class X {
+              constructor(arg0) {
+                closure_0 = arg0;
+                return () => {
+                  const obj = { collapsable: false, children: null };
+                  const obj2 = {
+                    onPress() {
+                      return navigation.goBack();
+                    },
+                    accessible: true,
+                    accessibilityRole: "button",
+                    accessibilityLabel: null,
+                    hitSlop: null,
+                    children: null,
+                  };
+                  const intl = util.intl;
+                  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                  obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                  const obj3 = {
+                    style: navigation.backIcon,
+                    importantForAccessibility: "no-hide-descendants",
+                    accessibilityElementsHidden: true,
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                  };
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
+                };
               }
             }
-            tmp45[0] = function transitionEnd(data) {
+            tmp42[0] = function transitionEnd(data) {
               let closing = data.data.closing;
               if (closing) {
-                closing = null != UserSettingSearchStore.getField("selected");
+                closing = null != listeners.getField("selected");
               }
               if (closing) {
-                UserSettingSearchStore.setState({ selected: null });
+                listeners.setState({ selected: null });
               }
             };
             class E {
@@ -530,27 +594,69 @@ export default noop.memo(
               }
             }
           } else {
-            class Y {
-              constructor() {
-                obj = closure_4;
-                if (closure_4.canGoBack()) {
-                  goBackResult = obj.goBack();
-                }
-                return;
+            class X {
+              constructor(arg0) {
+                closure_0 = arg0;
+                return () => {
+                  const obj = { collapsable: false, children: null };
+                  const obj2 = {
+                    onPress() {
+                      return navigation.goBack();
+                    },
+                    accessible: true,
+                    accessibilityRole: "button",
+                    accessibilityLabel: null,
+                    hitSlop: null,
+                    children: null,
+                  };
+                  const intl = util.intl;
+                  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                  obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                  const obj3 = {
+                    style: navigation.backIcon,
+                    importantForAccessibility: "no-hide-descendants",
+                    accessibilityElementsHidden: true,
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                  };
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
+                };
               }
             }
           }
-          const listeners = tmp45;
+          UserSettingSearchStore = tmp42;
           const autoSettingsSearchSessionAnalytics = tmp(tmp2[31]).useAutoSettingsSearchSessionAnalytics();
           const _Symbol3 = Symbol;
-          if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
-            class Y {
-              constructor() {
-                obj = closure_4;
-                if (closure_4.canGoBack()) {
-                  goBackResult = obj.goBack();
-                }
-                return;
+          if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
+            class X {
+              constructor(arg0) {
+                closure_0 = arg0;
+                return () => {
+                  const obj = { collapsable: false, children: null };
+                  const obj2 = {
+                    onPress() {
+                      return navigation.goBack();
+                    },
+                    accessible: true,
+                    accessibilityRole: "button",
+                    accessibilityLabel: null,
+                    hitSlop: null,
+                    children: null,
+                  };
+                  const intl = util.intl;
+                  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                  obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                  const obj3 = {
+                    style: navigation.backIcon,
+                    importantForAccessibility: "no-hide-descendants",
+                    accessibilityElementsHidden: true,
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                  };
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
+                };
               }
             }
             class E {
@@ -558,124 +664,313 @@ export default noop.memo(
                 return closure_6.locale;
               }
             }
-            const tmp48 = closure_10(tmp26(tmp2[32]), {});
+            const tmp45 = closure_10(tmp21(tmp2[32]), {});
           } else {
-            class Y {
-              constructor() {
-                obj = closure_4;
-                if (closure_4.canGoBack()) {
-                  goBackResult = obj.goBack();
-                }
-                return;
+            class X {
+              constructor(arg0) {
+                closure_0 = arg0;
+                return () => {
+                  const obj = { collapsable: false, children: null };
+                  const obj2 = {
+                    onPress() {
+                      return navigation.goBack();
+                    },
+                    accessible: true,
+                    accessibilityRole: "button",
+                    accessibilityLabel: null,
+                    hitSlop: null,
+                    children: null,
+                  };
+                  const intl = util.intl;
+                  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                  obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                  const obj3 = {
+                    style: navigation.backIcon,
+                    importantForAccessibility: "no-hide-descendants",
+                    accessibilityElementsHidden: true,
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                  };
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
+                };
               }
             }
           }
           const _Symbol4 = Symbol;
           const statusBarSpacer = tmp4.statusBarSpacer;
-          if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-            class Y {
-              constructor() {
-                obj = closure_4;
-                if (closure_4.canGoBack()) {
-                  goBackResult = obj.goBack();
-                }
-                return;
+          if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
+            class X {
+              constructor(arg0) {
+                closure_0 = arg0;
+                return () => {
+                  const obj = { collapsable: false, children: null };
+                  const obj2 = {
+                    onPress() {
+                      return navigation.goBack();
+                    },
+                    accessible: true,
+                    accessibilityRole: "button",
+                    accessibilityLabel: null,
+                    hitSlop: null,
+                    children: null,
+                  };
+                  const intl = util.intl;
+                  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                  obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                  const obj3 = {
+                    style: navigation.backIcon,
+                    importantForAccessibility: "no-hide-descendants",
+                    accessibilityElementsHidden: true,
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                  };
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
+                };
               }
             }
-            cResult[27] = tmp50;
+            cResult[23] = tmp47;
             class E {
               constructor() {
                 return closure_6.locale;
               }
             }
           } else {
-            class Y {
-              constructor() {
-                obj = closure_4;
-                if (closure_4.canGoBack()) {
-                  goBackResult = obj.goBack();
-                }
-                return;
+            class X {
+              constructor(arg0) {
+                closure_0 = arg0;
+                return () => {
+                  const obj = { collapsable: false, children: null };
+                  const obj2 = {
+                    onPress() {
+                      return navigation.goBack();
+                    },
+                    accessible: true,
+                    accessibilityRole: "button",
+                    accessibilityLabel: null,
+                    hitSlop: null,
+                    children: null,
+                  };
+                  const intl = util.intl;
+                  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                  obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                  const obj3 = {
+                    style: navigation.backIcon,
+                    importantForAccessibility: "no-hide-descendants",
+                    accessibilityElementsHidden: true,
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                  };
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
+                };
               }
             }
           }
           const _Symbol5 = Symbol;
-          if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
-            class Y {
-              constructor() {
-                obj = closure_4;
-                if (closure_4.canGoBack()) {
-                  goBackResult = obj.goBack();
-                }
-                return;
+          if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
+            class X {
+              constructor(arg0) {
+                closure_0 = arg0;
+                return () => {
+                  const obj = { collapsable: false, children: null };
+                  const obj2 = {
+                    onPress() {
+                      return navigation.goBack();
+                    },
+                    accessible: true,
+                    accessibilityRole: "button",
+                    accessibilityLabel: null,
+                    hitSlop: null,
+                    children: null,
+                  };
+                  const intl = util.intl;
+                  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                  obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                  const obj3 = {
+                    style: navigation.backIcon,
+                    importantForAccessibility: "no-hide-descendants",
+                    accessibilityElementsHidden: true,
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                  };
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
+                };
               }
             }
-            cResult[28] = tmp52;
+            cResult[24] = tmp49;
             class E {
               constructor() {
                 return closure_6.locale;
               }
             }
           } else {
-            class Y {
-              constructor() {
-                obj = closure_4;
-                if (closure_4.canGoBack()) {
-                  goBackResult = obj.goBack();
-                }
-                return;
+            class X {
+              constructor(arg0) {
+                closure_0 = arg0;
+                return () => {
+                  const obj = { collapsable: false, children: null };
+                  const obj2 = {
+                    onPress() {
+                      return navigation.goBack();
+                    },
+                    accessible: true,
+                    accessibilityRole: "button",
+                    accessibilityLabel: null,
+                    hitSlop: null,
+                    children: null,
+                  };
+                  const intl = util.intl;
+                  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                  obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                  const obj3 = {
+                    style: navigation.backIcon,
+                    importantForAccessibility: "no-hide-descendants",
+                    accessibilityElementsHidden: true,
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                  };
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
+                };
               }
             }
           }
-          if (cResult[29] !== accessibilityNativeStackOptions) {
-            class Y {
-              constructor() {
-                obj = closure_4;
-                if (closure_4.canGoBack()) {
-                  goBackResult = obj.goBack();
-                }
-                return;
+          if (cResult[25] !== accessibilityNativeStackOptions) {
+            class X {
+              constructor(arg0) {
+                closure_0 = arg0;
+                return () => {
+                  const obj = { collapsable: false, children: null };
+                  const obj2 = {
+                    onPress() {
+                      return navigation.goBack();
+                    },
+                    accessible: true,
+                    accessibilityRole: "button",
+                    accessibilityLabel: null,
+                    hitSlop: null,
+                    children: null,
+                  };
+                  const intl = util.intl;
+                  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                  obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                  const obj3 = {
+                    style: navigation.backIcon,
+                    importantForAccessibility: "no-hide-descendants",
+                    accessibilityElementsHidden: true,
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                  };
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
+                };
               }
             }
-            tmp54[1] = tmp49;
-            tmp54[3] = tmp51;
+            tmp51[1] = tmp46;
+            tmp51[3] = tmp48;
             class E {
               constructor() {
                 return closure_6.locale;
               }
             }
             let merged = Object.assign(accessibilityNativeStackOptions);
-            cResult[29] = accessibilityNativeStackOptions;
-            cResult[30] = tmp54;
+            cResult[25] = accessibilityNativeStackOptions;
+            cResult[26] = tmp51;
           } else {
-            class Y {
-              constructor() {
-                obj = closure_4;
-                if (closure_4.canGoBack()) {
-                  goBackResult = obj.goBack();
-                }
-                return;
+            class X {
+              constructor(arg0) {
+                closure_0 = arg0;
+                return () => {
+                  const obj = { collapsable: false, children: null };
+                  const obj2 = {
+                    onPress() {
+                      return navigation.goBack();
+                    },
+                    accessible: true,
+                    accessibilityRole: "button",
+                    accessibilityLabel: null,
+                    hitSlop: null,
+                    children: null,
+                  };
+                  const intl = util.intl;
+                  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                  obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                  const obj3 = {
+                    style: navigation.backIcon,
+                    importantForAccessibility: "no-hide-descendants",
+                    accessibilityElementsHidden: true,
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                  };
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
+                };
               }
             }
           }
-          if (cResult[31] === beforeRemove) {
-            class Y {
-              constructor() {
-                obj = closure_4;
-                if (closure_4.canGoBack()) {
-                  goBackResult = obj.goBack();
-                }
-                return;
+          if (cResult[27] === beforeRemove) {
+            class X {
+              constructor(arg0) {
+                closure_0 = arg0;
+                return () => {
+                  const obj = { collapsable: false, children: null };
+                  const obj2 = {
+                    onPress() {
+                      return navigation.goBack();
+                    },
+                    accessible: true,
+                    accessibilityRole: "button",
+                    accessibilityLabel: null,
+                    hitSlop: null,
+                    children: null,
+                  };
+                  const intl = util.intl;
+                  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                  obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                  const obj3 = {
+                    style: navigation.backIcon,
+                    importantForAccessibility: "no-hide-descendants",
+                    accessibilityElementsHidden: true,
+                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                  };
+                  obj2.children = collapsed(View, obj3);
+                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                  return collapsed(View, obj);
+                };
               }
             }
-            if (cResult[34] === tmp39) {
-              class Y {
-                constructor() {
-                  obj = closure_4;
-                  if (closure_4.canGoBack()) {
-                    goBackResult = obj.goBack();
-                  }
-                  return;
+            if (cResult[30] === tmp35) {
+              class X {
+                constructor(arg0) {
+                  closure_0 = arg0;
+                  return () => {
+                    const obj = { collapsable: false, children: null };
+                    const obj2 = {
+                      onPress() {
+                        return navigation.goBack();
+                      },
+                      accessible: true,
+                      accessibilityRole: "button",
+                      accessibilityLabel: null,
+                      hitSlop: null,
+                      children: null,
+                    };
+                    const intl = util.intl;
+                    obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                    obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                    const obj3 = {
+                      style: navigation.backIcon,
+                      importantForAccessibility: "no-hide-descendants",
+                      accessibilityElementsHidden: true,
+                      children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    };
+                    obj2.children = collapsed(View, obj3);
+                    obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                    return collapsed(View, obj);
+                  };
                 }
               }
               const _Symbol6 = Symbol;
@@ -684,14 +979,35 @@ export default noop.memo(
                   return closure_6.locale;
                 }
               }
-              if (cResult[38] !== tmp58) {
-                class Y {
-                  constructor() {
-                    obj = closure_4;
-                    if (closure_4.canGoBack()) {
-                      goBackResult = obj.goBack();
-                    }
-                    return;
+              if (cResult[34] !== tmp55) {
+                class X {
+                  constructor(arg0) {
+                    closure_0 = arg0;
+                    return () => {
+                      const obj = { collapsable: false, children: null };
+                      const obj2 = {
+                        onPress() {
+                          return navigation.goBack();
+                        },
+                        accessible: true,
+                        accessibilityRole: "button",
+                        accessibilityLabel: null,
+                        hitSlop: null,
+                        children: null,
+                      };
+                      const intl = util.intl;
+                      obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                      obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                      const obj3 = {
+                        style: navigation.backIcon,
+                        importantForAccessibility: "no-hide-descendants",
+                        accessibilityElementsHidden: true,
+                        children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                      };
+                      obj2.children = collapsed(View, obj3);
+                      obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                      return collapsed(View, obj);
+                    };
                   }
                 }
                 let obj3 = { name: null, options: null, listeners: null, getComponent: null };
@@ -701,31 +1017,73 @@ export default noop.memo(
                   }
                 }
                 obj3.name = constants2.OVERVIEW;
-                obj3.options = tmp58;
-                obj3.listeners = tmp43;
-                obj3.getComponent = tmp60;
-                const tmp63 = closure_10(Screen.Screen, obj3);
-                cResult[38] = tmp58;
-                cResult[39] = tmp63;
+                obj3.options = tmp55;
+                obj3.listeners = tmp40;
+                obj3.getComponent = tmp57;
+                const tmp60 = closure_10(Screen.Screen, obj3);
+                cResult[34] = tmp55;
+                cResult[35] = tmp60;
               } else {
-                class Y {
-                  constructor() {
-                    obj = closure_4;
-                    if (closure_4.canGoBack()) {
-                      goBackResult = obj.goBack();
-                    }
-                    return;
+                class X {
+                  constructor(arg0) {
+                    closure_0 = arg0;
+                    return () => {
+                      const obj = { collapsable: false, children: null };
+                      const obj2 = {
+                        onPress() {
+                          return navigation.goBack();
+                        },
+                        accessible: true,
+                        accessibilityRole: "button",
+                        accessibilityLabel: null,
+                        hitSlop: null,
+                        children: null,
+                      };
+                      const intl = util.intl;
+                      obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                      obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                      const obj3 = {
+                        style: navigation.backIcon,
+                        importantForAccessibility: "no-hide-descendants",
+                        accessibilityElementsHidden: true,
+                        children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                      };
+                      obj2.children = collapsed(View, obj3);
+                      obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                      return collapsed(View, obj);
+                    };
                   }
                 }
               }
-              if (cResult[40] === tmp39) {
-                class Y {
-                  constructor() {
-                    obj = closure_4;
-                    if (closure_4.canGoBack()) {
-                      goBackResult = obj.goBack();
-                    }
-                    return;
+              if (cResult[36] === tmp35) {
+                class X {
+                  constructor(arg0) {
+                    closure_0 = arg0;
+                    return () => {
+                      const obj = { collapsable: false, children: null };
+                      const obj2 = {
+                        onPress() {
+                          return navigation.goBack();
+                        },
+                        accessible: true,
+                        accessibilityRole: "button",
+                        accessibilityLabel: null,
+                        hitSlop: null,
+                        children: null,
+                      };
+                      const intl = util.intl;
+                      obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+                      obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
+                      const obj3 = {
+                        style: navigation.backIcon,
+                        importantForAccessibility: "no-hide-descendants",
+                        accessibilityElementsHidden: true,
+                        children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                      };
+                      obj2.children = collapsed(View, obj3);
+                      obj.children = collapsed(Pressables.PressableOpacity, obj2);
+                      return collapsed(View, obj);
+                    };
                   }
                 }
               }
@@ -738,7 +1096,7 @@ export default noop.memo(
                   options(navigation) {
                     const obj = {
                       title: SettingRendererUtils.getSettingTitle(first),
-                      headerLeft: UserSettingSearchStore(navigation.navigation),
+                      headerLeft: LocaleStore(navigation.navigation),
                       headerBackVisible: false,
                       contentStyle,
                       headerShadowVisible: null,
@@ -784,13 +1142,13 @@ export default noop.memo(
                 obj.listeners = listeners;
                 return closure_1_10(Screen.Screen, obj, first);
               });
-              cResult[40] = tmp39;
-              cResult[41] = J;
-              cResult[42] = params1;
-              cResult[43] = screen;
-              cResult[44] = mapped;
+              cResult[36] = tmp35;
+              cResult[37] = X;
+              cResult[38] = params1;
+              cResult[39] = screen;
+              cResult[40] = mapped;
             }
-            function de(navigation) {
+            function re(navigation) {
               const obj = {
                 title: null,
                 headerLeft: null,
@@ -800,7 +1158,7 @@ export default noop.memo(
               };
               const intl = util.intl;
               obj.title = intl.string(util.t["3D5yo/"]);
-              obj.headerLeft = UserSettingSearchStore(navigation.navigation);
+              obj.headerLeft = LocaleStore(navigation.navigation);
               obj.contentStyle = contentStyle;
               return obj;
             }
@@ -809,23 +1167,23 @@ export default noop.memo(
                 return closure_6.locale;
               }
             }
-            cResult[34] = tmp39;
-            cResult[35] = J;
-            cResult[36] = de;
+            cResult[30] = tmp35;
+            cResult[31] = X;
+            cResult[32] = re;
           }
           let obj4 = { beforeRemove, transitionStart };
-          cResult[31] = beforeRemove;
-          cResult[32] = transitionStart;
-          cResult[33] = obj4;
+          cResult[27] = beforeRemove;
+          cResult[28] = transitionStart;
+          cResult[29] = obj4;
           const tmpResult14 = tmp(tmp2[31]);
         }
         const obj6 = { backgroundColor: token, borderTopWidth: 1, borderTopColor: token1 };
-        cResult[17] = token;
-        cResult[18] = token1;
-        cResult[19] = obj6;
+        cResult[13] = token;
+        cResult[14] = token1;
+        cResult[15] = obj6;
         const tmpResult13 = require("useToken");
       }
-    : () => {
+    : function SettingsNavigator() {
         const tmp = closure_13();
         _require = tmp;
         const route = require("Link").useRoute();
@@ -868,30 +1226,25 @@ export default noop.memo(
           items1,
         );
         const tmp2Result8 = require("useCommonTriggerPoint");
-        const items2 = [obj2];
-        const stateFromStores = require("useStateFromStores").useStateFromStores(items2, () => obj2.locale);
-        closure_5 = onClose(noop.useState(false), 2)[1];
-        const items3 = [stateFromStores];
-        const layoutEffect = noop.useLayoutEffect(() => {
-          closure_5((arg0) => !arg0);
-        }, items3);
+        const items2 = [closure_6];
+        const stateFromStores = require("useStateFromStores").useStateFromStores(items2, () => closure_6.locale);
         const tmp2Result9 = require("useStateFromStores");
         const memo = noop.useMemo(() => closure_0(params1[22]).getSettingScreens(), []);
-        const layoutEffect1 = noop.useLayoutEffect(() => closure_0(params1[23]).trackAppUIViewed(), []);
+        const layoutEffect = noop.useLayoutEffect(() => closure_0(params1[23]).trackAppUIViewed(), []);
         const effect2 = noop.useEffect(() => screen(params1[24]).validate(), []);
-        const tmp14 = screen(params1[20]);
+        const tmp13 = screen(params1[20]);
         const accessibilityNativeStackOptions = require("Navigator").useAccessibilityNativeStackOptions();
         const tmp2Result10 = require("Navigator");
         const accessibilityNativeStackFocusTracking =
           require("useAccessibilityNativeStackFocusTracking").useAccessibilityNativeStackFocusTracking();
-        obj2 = { backgroundColor: null, borderTopWidth: 1, borderTopColor: null };
+        let obj2 = { backgroundColor: null, borderTopWidth: 1, borderTopColor: null };
         ({ beforeRemove, transitionStart } = accessibilityNativeStackFocusTracking);
         const tmp2Result11 = require("useAccessibilityNativeStackFocusTracking");
         obj2.backgroundColor = require("useToken").useToken(screen(params1[9]).colors.MOBILE_ACTIONSHEET_BACKGROUND);
         const tmp2Result12 = require("useToken");
         obj2.borderTopColor = require("useToken").useToken(screen(params1[9]).colors.BORDER_SUBTLE);
-        const items4 = [tmp.backIcon];
-        closure_7 = noop.useCallback(
+        const items3 = [tmp.backIcon];
+        closure_6 = noop.useCallback(
           (navigation) => () => {
             const obj = { collapsable: false, children: null };
             obj2 = {
@@ -911,13 +1264,13 @@ export default noop.memo(
               style: navigation.backIcon,
               importantForAccessibility: "no-hide-descendants",
               accessibilityElementsHidden: true,
-              children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+              children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
             };
-            obj2.children = v65535(View, obj3);
-            obj.children = v65535(Pressables.PressableOpacity, obj2);
-            return v65535(View, obj);
+            obj2.children = collapsed(View, obj3);
+            obj.children = collapsed(Pressables.PressableOpacity, obj2);
+            return collapsed(View, obj);
           },
-          items4,
+          items3,
         );
         const memo1 = noop.useMemo(
           () => ({
@@ -942,10 +1295,10 @@ export default noop.memo(
             transitionEnd(data) {
               let closing = data.data.closing;
               if (closing) {
-                closing = null != closure_1_7.getField("selected");
+                closing = null != listeners.getField("selected");
               }
               if (closing) {
-                closure_1_7.setState({ selected: null });
+                listeners.setState({ selected: null });
               }
             },
           }),
@@ -954,12 +1307,12 @@ export default noop.memo(
         const tmp2Result13 = require("useToken");
         const autoSettingsSearchSessionAnalytics =
           require("useAutoSettingsSearchSessionAnalytics").useAutoSettingsSearchSessionAnalytics();
-        let obj3 = { value: tmp14(screen(params1[21]).USER_SETTINGS).analyticsLocations, children: null };
-        const items5 = [closure_10(screen(params1[32]), {})];
+        let obj3 = { value: tmp13(screen(params1[21]).USER_SETTINGS).analyticsLocations, children: null };
+        const items4 = [closure_10(screen(params1[32]), {})];
         let obj4 = {
           style: tmp.statusBarSpacer,
           accessible: false,
-          onAccessibilityEscape() {
+          onAccessibilityEscape: function handleAccessibilityEscape() {
             if (navigation.canGoBack()) {
               navigation.goBack();
             }
@@ -984,7 +1337,7 @@ export default noop.memo(
         };
         obj5.screenListeners = { beforeRemove, transitionStart };
         obj5.initialRouteName = screen;
-        const items6 = [
+        const items5 = [
           closure_10(Screen.Screen, {
             name: constants2.OVERVIEW,
             options(navigation) {
@@ -997,7 +1350,7 @@ export default noop.memo(
               };
               const intl = util.intl;
               obj.title = intl.string(util.t["3D5yo/"]);
-              obj.headerLeft = closure_7(navigation.navigation);
+              obj.headerLeft = closure_6(navigation.navigation);
               obj.contentStyle = obj2;
               return obj;
             },
@@ -1020,7 +1373,7 @@ export default noop.memo(
                 };
                 obj2 = SettingRendererUtils;
                 obj.title = obj2.getSettingTitle(closure_1_0);
-                obj.headerLeft = closure_7(navigation.navigation);
+                obj.headerLeft = closure_6(navigation.navigation);
                 obj.contentStyle = obj2;
                 const navigationOptions = component.navigationOptions;
                 let flag;
@@ -1064,10 +1417,10 @@ export default noop.memo(
             return closure_1_10(Screen.Screen, obj, tmp);
           }),
         ];
-        obj5.children = items6;
+        obj5.children = items5;
         obj4.children = closure_11(Screen.Navigator, obj5);
-        items5[1] = closure_10(closure_5, obj4);
-        obj3.children = items5;
+        items4[1] = closure_10(obj2, obj4);
+        obj3.children = items4;
         return closure_11(require("useAnalyticsLocations").AnalyticsLocationProvider, obj3);
       },
 );

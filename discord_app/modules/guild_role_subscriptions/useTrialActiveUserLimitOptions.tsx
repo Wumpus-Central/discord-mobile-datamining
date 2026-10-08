@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useTrialActiveUserLimitOptions.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useTrialActiveUserLimitOptions() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { value: null, label: null };
@@ -29,8 +29,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      noop.useMemo(() => {
+  : function useTrialActiveUserLimitOptions() {
+      return noop.useMemo(() => {
         const obj = { value: null, label: null };
         const intl = util.intl;
         obj.label = intl.string(util.t.zHfL6o);
@@ -43,3 +43,4 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ];
         return items;
       }, []);
+    };

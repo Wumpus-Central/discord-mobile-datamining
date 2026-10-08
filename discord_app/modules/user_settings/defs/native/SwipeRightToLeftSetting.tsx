@@ -12,7 +12,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSwipeRightToLeftSettingTrailing() {
       let stringResult = dependencyMap;
       const cResult = c.c(2);
       const SwipeRightToLeftModeSetting = UserSettings.SwipeRightToLeftModeSetting;
@@ -38,7 +38,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : () => {
+  : function useSwipeRightToLeftSettingTrailing() {
       const SwipeRightToLeftModeSetting = UserSettings.SwipeRightToLeftModeSetting;
       const setting = SwipeRightToLeftModeSetting.useSetting();
       if (setting === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY) {
@@ -60,7 +60,7 @@ const route = SettingBuilders.createRoute({
   },
   parent: SettingsConstants.MobileUserSettings.CHAT,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useSwipeRightToLeftSettingTrailing() {
         let stringResult = dependencyMap;
         const cResult = c.c(2);
         const SwipeRightToLeftModeSetting = UserSettings.SwipeRightToLeftModeSetting;
@@ -86,7 +86,7 @@ const route = SettingBuilders.createRoute({
           }
         }
       }
-    : () => {
+    : function useSwipeRightToLeftSettingTrailing() {
         const SwipeRightToLeftModeSetting = UserSettings.SwipeRightToLeftModeSetting;
         const setting = SwipeRightToLeftModeSetting.useSetting();
         if (setting === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY) {

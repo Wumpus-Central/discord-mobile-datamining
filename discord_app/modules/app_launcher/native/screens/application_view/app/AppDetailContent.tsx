@@ -20,18 +20,18 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandIndexStore = fn(8827);
+const ApplicationCommandIndexStore = fn(9186);
 ({ useContextIndexState: closure_7, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
-const AppLauncherNativeConstants = fn(1489);
+const AppLauncherNativeConstants = fn(1501);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_12 = fn(5795).DISCOVERY_COMMANDS_QUERY_LIMIT;
+let closure_12 = fn(5399).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
-  headerSpacer: { height: fn(11768).EXPANDED_HEADER_HEIGHT - fn(11768).SHEET_HANDLE_CONTAINER_HEIGHT },
+  headerSpacer: { height: fn(11835).EXPANDED_HEADER_HEIGHT - fn(11835).SHEET_HANDLE_CONTAINER_HEIGHT },
   list: { paddingHorizontal: DEFAULT_CONTENT_PADDING },
   commandsHeaderContainer: {
     flexDirection: "row",
@@ -49,7 +49,7 @@ let obj2 = {
   loadingTextPlaceholderSmall: null,
   noCommandsTextContainer: null,
 };
-let obj3 = { height: fn(11768).EXPANDED_HEADER_HEIGHT - fn(11768).SHEET_HANDLE_CONTAINER_HEIGHT };
+let obj3 = { height: fn(11835).EXPANDED_HEADER_HEIGHT - fn(11835).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = {
@@ -104,7 +104,7 @@ const array = new Array(6);
 let closure_18 = array.fill({ type: obj10.PLACEHOLDER });
 let ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PlaceholderCommandRow(arg0) {
       const cResult = c.c(15);
       ({ isFirstRow, isLastRow } = arg0);
       const tmp6 = closure_16();
@@ -176,7 +176,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp12;
       const tmpResult2 = usePlaceholderSize;
     }
-  : (isFirstRow) => {
+  : function PlaceholderCommandRow(isFirstRow) {
       let flag = isFirstRow.isFirstRow;
       if (flag === undefined) {
         flag = false;
@@ -206,7 +206,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (command) => {
+  ? function CommandRow(command) {
       const cResult = require("c").c(43);
       command = command.command;
       _require = command;
@@ -501,7 +501,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       let obj2 = require("AppLauncherContext");
     }
-  : (command) => {
+  : function CommandRow(command) {
       command = command.command;
       _require = command;
       ({ onPressCommand: importDefault, context } = command);
@@ -634,7 +634,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       let obj2 = require("CommandRowButton");
-      return closure_13(tmp(6000).TableRow, {
+      return closure_13(tmp(6184).TableRow, {
         start: isFirstRow,
         end: isLastRow,
         label: command.displayName,
@@ -958,8 +958,8 @@ export default function AppDetailContent(context) {
       if (canSort) {
         const obj17 = {
           sortOrder: tmp7.sortOrder,
-          onSortOptionPress(dependencyMap) {
-            _undefined(dependencyMap);
+          onSortOptionPress: function handleSortOptionPress(arg0) {
+            _undefined(arg0);
           },
         };
         canSort = tmp26(tmp2(tmp3[36]), obj17);
@@ -1001,7 +1001,7 @@ export default function AppDetailContent(context) {
       onPressBack,
       scrollOffsetY: lockableScrollableContentOffsetY,
       showsAddCTA: tmp11,
-      onAddAppMenuClick(installAppProps) {
+      onAddAppMenuClick: function handleAddAppMenuClick(installAppProps) {
         installAppProps = installAppProps.installAppProps;
         let obj2;
         application(sectionName[37]).hideActionSheet();

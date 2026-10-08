@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06119_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06298_BottomSheetModal.js";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import ActionSheetHeaderBar from "../../../../design/components/Sheet/native/ActionSheetHeaderBar.native.tsx";
 import useBottomSheetRef from "../../../../design/components/Sheet/native/useBottomSheetRef.tsx";
@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   actions: { paddingHorizontal: 16, gap: 24 },
@@ -31,7 +31,7 @@ const result = size.fileFinishedImporting("modules/guild_action_sheet/native/com
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function GuildActionSheet(arg0) {
         const cResult = c.c(36);
         ({ guild, expanded } = arg0);
         const tmp5 = closure_6();
@@ -202,7 +202,7 @@ export default noop.memo(
         tmp31 = tmp32;
         tmpResult2 = PlatformUtils;
       }
-    : (arg0) => {
+    : function GuildActionSheet(arg0) {
         ({ guild, expanded } = arg0);
         if (expanded === undefined) {
           expanded = false;

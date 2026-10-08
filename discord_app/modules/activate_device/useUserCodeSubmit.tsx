@@ -23,13 +23,13 @@ function verifyUserCodeStatusToErrorMessage(status) {
   }
   return stringResult;
 }
-const OAuthConstants = fn(13712).OAuthConstants;
+const OAuthConstants = fn(13934).OAuthConstants;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activate_device/useUserCodeSubmit.tsx");
 
 export const useUserCodeSubmit = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useUserCodeSubmit(arg0, arg1, arg2) {
       _require = arg0;
       dependencyMap = arg1;
       asyncGeneratorStep = arg2;
@@ -65,7 +65,7 @@ export const useUserCodeSubmit = ReactCompilerGating.isReactCompilerEnabled()
             cResult[11] = obj3;
             tmp10 = obj3;
           }
-          const fn2 = function h() {
+          const fn = function h() {
             if (length.length === OAuthConstants.USER_CODE_LENGTH) {
               closure_5();
             } else {
@@ -75,10 +75,10 @@ export const useUserCodeSubmit = ReactCompilerGating.isReactCompilerEnabled()
           const items = [arg0, tmp6];
           cResult[4] = tmp6;
           cResult[5] = arg0;
-          cResult[6] = fn2;
+          cResult[6] = fn;
           cResult[7] = items;
           tmp8 = items;
-          tmp7 = fn2;
+          tmp7 = fn;
         }
       }
       _require = asyncGeneratorStep(async () => {
@@ -119,7 +119,7 @@ export const useUserCodeSubmit = ReactCompilerGating.isReactCompilerEnabled()
         v0 = 0;
         return value;
       });
-      const fn = function () {
+      function t0() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -128,15 +128,15 @@ export const useUserCodeSubmit = ReactCompilerGating.isReactCompilerEnabled()
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      };
+      }
       cResult[0] = arg2;
       cResult[1] = arg1;
       cResult[2] = arg0;
-      cResult[3] = fn;
-      tmp6 = fn;
+      cResult[3] = t0;
+      tmp6 = t0;
       const tmp4 = _slicedToArray(noop.useState(null), 2);
     }
-  : (arg0, arg1, arg2) => {
+  : function useUserCodeSubmit(arg0, arg1, arg2) {
       closure_1 = arg1;
       asyncGeneratorStep = arg2;
       const submitting = _slicedToArray(noop.useState(false), 2);

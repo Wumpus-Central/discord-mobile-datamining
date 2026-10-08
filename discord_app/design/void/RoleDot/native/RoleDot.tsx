@@ -7,12 +7,12 @@ import useFontScale from "../../../../modules/screen/native/useFontScale.tsx";
 import useHasEnhancedRoleColorsDefault from "../../../../modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const LinearGradientDefault = tmp5(5612);
+const LinearGradientDefault = tmp5(5387);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flexShrink: 0 },
   background: { position: "relative" },
@@ -36,9 +36,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("design/void/RoleDot/native/RoleDot.tsx");
 
 export const RoleDot = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
-      let items3 = dependencyMap;
-      const cResult = c.c(35);
+  ? function RoleDot(guildId) {
+      let items2 = dependencyMap;
+      const cResult = c.c(33);
       ({ color, colors, size, background, containerStyles } = guildId);
       let str = "normal";
       if (undefined !== size) {
@@ -71,64 +71,56 @@ export const RoleDot = ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[9] === backgroundColor) {
                     let tmp14 = cResult[10];
                   }
-                  if (cResult[11] !== dot.borderBase) {
-                    const items = [dot.borderBase];
-                    cResult[11] = dot.borderBase;
-                    cResult[12] = items;
-                    let tmp15 = items;
-                  } else {
-                    tmp15 = cResult[12];
-                  }
-                  if (cResult[13] !== color) {
+                  if (cResult[11] !== color) {
                     const obj2 = { backgroundColor: color };
-                    cResult[13] = color;
-                    cResult[14] = obj2;
-                    let tmp17 = obj2;
+                    cResult[11] = color;
+                    cResult[12] = obj2;
+                    let tmp16 = obj2;
                   } else {
-                    tmp17 = cResult[14];
+                    tmp16 = cResult[12];
                   }
-                  if (cResult[15] === dot2.border) {
-                    if (cResult[16] === dot.borderColor) {
-                      if (cResult[17] === tmp17) {
-                        let tmp18 = cResult[18];
+                  if (cResult[13] === dot2.border) {
+                    if (cResult[14] === dot.borderColor) {
+                      if (cResult[15] === tmp16) {
+                        let tmp17 = cResult[16];
                       }
-                      if (cResult[19] === tmp18) {
-                        if (cResult[20] === tmp15) {
-                          let tmp22 = cResult[21];
+                      if (cResult[17] === dot.borderBase) {
+                        if (cResult[18] === tmp17) {
+                          let tmp21 = cResult[19];
                         }
-                        if (cResult[22] === color) {
-                          if (cResult[23] === colors) {
-                            if (cResult[24] === dot2.dot) {
-                              if (cResult[25] === tmp6) {
-                                if (cResult[26] === dot.dot) {
-                                  if (cResult[28] === tmp22) {
-                                    if (cResult[29] === tmp26) {
-                                      if (cResult[30] === tmp14) {
-                                        let tmp33 = cResult[31];
+                        if (cResult[20] === color) {
+                          if (cResult[21] === colors) {
+                            if (cResult[22] === dot2.dot) {
+                              if (cResult[23] === tmp6) {
+                                if (cResult[24] === dot.dot) {
+                                  if (cResult[26] === tmp21) {
+                                    if (cResult[27] === tmp25) {
+                                      if (cResult[28] === tmp14) {
+                                        let tmp32 = cResult[29];
                                       }
-                                      if (cResult[32] === tmp33) {
-                                        if (cResult[33] === tmp12) {
-                                          let tmp37 = cResult[34];
+                                      if (cResult[30] === tmp32) {
+                                        if (cResult[31] === tmp12) {
+                                          let tmp36 = cResult[32];
                                         }
-                                        return tmp37;
+                                        return tmp36;
                                       }
-                                      const obj3 = { style: tmp12, children: tmp33 };
-                                      const tmp40 = React4(View, obj3);
-                                      cResult[32] = tmp33;
-                                      cResult[33] = tmp12;
-                                      cResult[34] = tmp40;
-                                      tmp37 = tmp40;
+                                      const obj3 = { style: tmp12, children: tmp32 };
+                                      const tmp39 = React4(View, obj3);
+                                      cResult[30] = tmp32;
+                                      cResult[31] = tmp12;
+                                      cResult[32] = tmp39;
+                                      tmp36 = tmp39;
                                     }
                                   }
                                   const obj4 = { style: tmp14, children: null };
-                                  const items1 = [tmp22, cResult[27]];
-                                  obj4.children = items1;
-                                  const tmp36 = hasOwnProperty(View, obj4);
-                                  cResult[28] = tmp22;
-                                  cResult[29] = cResult[27];
-                                  cResult[30] = tmp14;
-                                  cResult[31] = tmp36;
-                                  tmp33 = tmp36;
+                                  const items = [tmp21, cResult[25]];
+                                  obj4.children = items;
+                                  const tmp35 = hasOwnProperty(View, obj4);
+                                  cResult[26] = tmp21;
+                                  cResult[27] = cResult[25];
+                                  cResult[28] = tmp14;
+                                  cResult[29] = tmp35;
+                                  tmp32 = tmp35;
                                 }
                               }
                             }
@@ -136,66 +128,66 @@ export const RoleDot = ReactCompilerGating.isReactCompilerEnabled()
                         }
                         if (tmp6) {
                           if (null != colors) {
-                            cResult[22] = color;
-                            cResult[23] = colors;
+                            cResult[20] = color;
+                            cResult[21] = colors;
                             dot2 = dot2.dot;
-                            cResult[24] = dot2;
-                            cResult[25] = tmp6;
+                            cResult[22] = dot2;
+                            cResult[23] = tmp6;
                             dot = dot.dot;
-                            cResult[26] = dot;
-                            cResult[27] = tmp27Result;
+                            cResult[24] = dot;
+                            cResult[25] = tmp26Result;
                           }
                           tmp5 = LinearGradientDefault;
                           const obj5 = { colors: null, start: null, end: null, style: null };
-                          const items2 = [, ,];
-                          ({ primaryColor: arr7[0], secondaryColor: arr7[1], tertiaryColor: arr7[2] } = colors);
-                          obj5.colors = items2.filter(GlobalUtils.isNotNullish);
+                          const items1 = [, ,];
+                          ({ primaryColor: arr6[0], secondaryColor: arr6[1], tertiaryColor: arr6[2] } = colors);
+                          obj5.colors = items1.filter(GlobalUtils.isNotNullish);
                           obj5.start = { x: 0, y: 0 };
                           obj5.end = { x: 1, y: 0 };
-                          items3 = [dot.dot, dot2.dot];
-                          obj5.style = items3;
-                          tmp27Result = React4(tmp5, obj5);
+                          items2 = [dot.dot, dot2.dot];
+                          obj5.style = items2;
+                          tmp26Result = React4(tmp5, obj5);
                         }
-                        const items4 = [dot.dot, dot2.dot];
+                        const items3 = [dot.dot, dot2.dot];
                         const obj6 = { style: null };
                         const obj7 = { backgroundColor: color };
-                        items4[2] = obj7;
-                        obj6.style = items4;
-                        tmp27Result = React4(View, obj6);
+                        items3[2] = obj7;
+                        obj6.style = items3;
+                        tmp26Result = React4(View, obj6);
                       }
-                      const obj8 = { style: tmp15, children: tmp18 };
-                      const tmp25 = React4(View, obj8);
-                      cResult[19] = tmp18;
-                      cResult[20] = tmp15;
-                      cResult[21] = tmp25;
-                      tmp22 = tmp25;
+                      const obj8 = { style: dot.borderBase, children: tmp17 };
+                      const tmp24 = React4(View, obj8);
+                      cResult[17] = dot.borderBase;
+                      cResult[18] = tmp17;
+                      cResult[19] = tmp24;
+                      tmp21 = tmp24;
                     }
                   }
                   const obj9 = { style: null };
-                  const items5 = [dot.borderColor, dot2.border, tmp17];
-                  obj9.style = items5;
-                  const tmp21 = React4(View, obj9);
-                  cResult[15] = dot2.border;
-                  cResult[16] = dot.borderColor;
-                  cResult[17] = tmp17;
-                  cResult[18] = tmp21;
-                  tmp18 = tmp21;
+                  const items4 = [dot.borderColor, dot2.border, tmp16];
+                  obj9.style = items4;
+                  const tmp20 = React4(View, obj9);
+                  cResult[13] = dot2.border;
+                  cResult[14] = dot.borderColor;
+                  cResult[15] = tmp16;
+                  cResult[16] = tmp20;
+                  tmp17 = tmp20;
                 }
               }
-              const items6 = [dot.background, backgroundColor, dot2.background];
+              const items5 = [dot.background, backgroundColor, dot2.background];
               cResult[7] = dot2.background;
               cResult[8] = dot.background;
               cResult[9] = backgroundColor;
-              cResult[10] = items6;
-              tmp14 = items6;
+              cResult[10] = items5;
+              tmp14 = items5;
             }
           }
-          const items7 = [dot.container, dot2.container, containerStyles];
+          const items6 = [dot.container, dot2.container, containerStyles];
           cResult[3] = containerStyles;
           cResult[4] = dot2.container;
           cResult[5] = dot.container;
-          cResult[6] = items7;
-          tmp12 = items7;
+          cResult[6] = items6;
+          tmp12 = items6;
         }
       }
       let num = 16;
@@ -229,7 +221,7 @@ export const RoleDot = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj11;
       tmpResult2 = PlatformUtils;
     }
-  : (background) => {
+  : function RoleDot(background) {
       ({ color, colors, size } = background);
       if (size === undefined) {
         size = "normal";
@@ -278,33 +270,31 @@ export const RoleDot = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: items1, children: null };
       items1[1] = backgroundColor;
       items1[2] = size1;
-      const obj5 = { style: null, children: null };
-      const items2 = [tmp.borderBase];
-      obj5.style = items2;
-      const items3 = [tmp.borderColor, { height: sum, width: sum }, { backgroundColor: color }];
-      obj5.children = React4(View, { style: items3 });
-      const items4 = [React4(View, obj5)];
+      const obj5 = { style: tmp.borderBase, children: null };
+      const items2 = [tmp.borderColor, { height: sum, width: sum }, { backgroundColor: color }];
+      obj5.children = React4(View, { style: items2 });
+      const items3 = [React4(View, obj5)];
       if (tmp6) {
         if (null != colors) {
           if (null != colors.secondaryColor) {
             const obj6 = { colors: null, start: null, end: null, style: null };
-            const items5 = [, ,];
-            ({ primaryColor: arr7[0], secondaryColor: arr7[1], tertiaryColor: arr7[2] } = colors);
-            obj6.colors = items5.filter(GlobalUtils.isNotNullish);
+            const items4 = [, ,];
+            ({ primaryColor: arr6[0], secondaryColor: arr6[1], tertiaryColor: arr6[2] } = colors);
+            obj6.colors = items4.filter(GlobalUtils.isNotNullish);
             obj6.start = { x: 0, y: 0 };
             obj6.end = { x: 1, y: 0 };
-            const items6 = [tmp.dot, size2];
-            obj6.style = items6;
+            const items5 = [tmp.dot, size2];
+            obj6.style = items5;
             let tmp12Result = React4(LinearGradientDefault, obj6);
             const tmp5Result = LinearGradientDefault;
           }
-          items4[1] = tmp12Result;
-          obj4.children = items4;
+          items3[1] = tmp12Result;
+          obj4.children = items3;
           obj3.children = hasOwnProperty(View, obj4);
           return React4(View, obj3);
         }
       }
-      const items7 = [tmp.dot, size2, { backgroundColor: color }];
-      tmp12Result = React4(View, { style: items7 });
+      const items6 = [tmp.dot, size2, { backgroundColor: color }];
+      tmp12Result = React4(View, { style: items6 });
       tmp2Result = PlatformUtils;
     };

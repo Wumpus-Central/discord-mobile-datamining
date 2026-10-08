@@ -15,13 +15,13 @@ import RoleTierEditStore from "../RoleTierEditStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(15038);
+const GuildRoleSubscriptionsConstants = fn(15300);
 ({ GuildRoleSubscriptionsTierScenes: metroRequire, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7 } =
   GuildRoleSubscriptionsConstants);
 const UPLOAD_BANNER_SIZE = fn(1085).UPLOAD_BANNER_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles({
   coverPhoto: { height: 114, width: "100%" },
   coverDescription: { marginTop: 16 },
@@ -29,7 +29,7 @@ let closure_12 = createStyles.createStyles({
 });
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Content(arg0) {
       const cResult = c.c(32);
       ({ cover, setCover, description, setDescription } = arg0);
       const tmp4 = closure_12();
@@ -144,7 +144,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj7 = { children: null };
                       const items = [tmp10, tmp21, tmp25, tmp30, tmp35];
                       obj7.children = items;
-                      const tmp42 = v65535(closure_1_11, obj7);
+                      const tmp42 = collapsed(closure_1_11, obj7);
                       cResult[26] = tmp25;
                       cResult[27] = tmp30;
                       cResult[28] = tmp35;
@@ -178,7 +178,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             const obj9 = { style: tmp13, children: null };
             const items1 = [tmp14, tmp18];
             obj9.children = items1;
-            const tmp24 = v65535(View, obj9);
+            const tmp24 = collapsed(View, obj9);
             cResult[11] = tmp4.paddedContainer;
             cResult[12] = tmp14;
             cResult[13] = tmp18;
@@ -214,7 +214,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         size: 114,
       };
     }
-  : (arg0) => {
+  : function Content(arg0) {
       ({ cover, setCover, description, setDescription } = arg0);
       const tmp = closure_12();
       const tmp2 = FormStylesDefault();
@@ -243,7 +243,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       obj6.children = intl2.string(util.t["0ng4rB"]);
       items1[1] = options(Text_Text.Text, obj6);
       obj4.children = items1;
-      items[1] = v65535(View, obj4);
+      items[1] = collapsed(View, obj4);
       items[2] = options(FormSeparatorDefault, { style: tmp.paddedContainer });
       const obj8 = { style: tmp2.header, children: null };
       const obj5 = {
@@ -277,7 +277,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       obj9.disabled = roleSubscriptionSettingsDisabled;
       items[4] = options(Form.FormInput, obj9);
       obj2.children = items;
-      return v65535(closure_1_11, obj2);
+      return collapsed(closure_1_11, obj2);
     };
 let closure_13 = tmp5;
 ReactCompilerGating = fn(558);
@@ -287,7 +287,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildRoleSubscriptionTierDetailsModal(arg0) {
       const cResult = c.c(12);
       [tmp5, tmp6] = RoleTierEditStore.useGroupCoverState();
       const tmp4 = _slicedToArray(RoleTierEditStore.useGroupCoverState(), 2);
@@ -357,7 +357,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = tmp17;
       const tmp7 = _slicedToArray(RoleTierEditStore.useGroupDescriptionState(), 2);
     }
-  : (arg0) => {
+  : function GuildRoleSubscriptionTierDetailsModal(arg0) {
       [tmp2, tmp3] = RoleTierEditStore.useGroupCoverState();
       [first, obj2.setDescription] = RoleTierEditStore.useGroupDescriptionState();
       let tmp5 = first.length > 0;

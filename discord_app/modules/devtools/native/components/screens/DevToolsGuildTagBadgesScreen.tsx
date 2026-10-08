@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagConstants = fn(7614);
+const GuildTagConstants = fn(7860);
 ({
   GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: metroRequire,
   GUILD_TAG_BADGE_PALETTE_PRESETS,
@@ -28,7 +28,7 @@ let closure_9 = found.map((item) => {
   return { name, value };
 });
 let items = [
-  { label: "Untinted", primary: "enabled", secondary: "Object" },
+  { label: "Untinted", primary: "end", secondary: "Object" },
   ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary, index) => ({
     label: "P" + index + 1,
     primary: primary.primary,
@@ -36,7 +36,7 @@ let items = [
   })),
 ];
 const dependencyMap2 = [24, 48, 72];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   contentContainer: null,
@@ -79,7 +79,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DevToolsGuildTagBadgesScreen() {
       const cResult = require("c").c(29);
       const tmp4 = closure_12();
       _require = tmp4;
@@ -259,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       arr = items;
       let obj = require("c");
     }
-  : () => {
+  : function DevToolsGuildTagBadgesScreen() {
       const tmp = closure_12();
       _require = tmp;
       [first, _slicedToArray] = noop.useState(1);

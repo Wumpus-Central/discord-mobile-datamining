@@ -11,7 +11,7 @@ _mod19.useCallback;
 const result = size.fileFinishedImporting("hooks/useCountdown.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (expiresAt, arg1, arg2, arg3) => {
+  ? function useCountdown(expiresAt, arg1, arg2, arg3) {
       _require = expiresAt;
       importDefault = arg2;
       const cResult = require("c").c(7);
@@ -22,11 +22,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp4;
       if (cResult[0] !== expiresAt) {
         const _Date = Date;
-        const diffAsUnitsResult = tmp(4558).diffAsUnits(Date.now(), expiresAt);
+        const diffAsUnitsResult = tmp(4750).diffAsUnits(Date.now(), expiresAt);
         cResult[0] = expiresAt;
         cResult[1] = diffAsUnitsResult;
         let tmp5 = diffAsUnitsResult;
-        const tmpResult = tmp(4558);
+        const tmpResult = tmp(4750);
       } else {
         tmp5 = cResult[1];
       }
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = fn;
       tmp9 = fn;
     }
-  : (expiresAt) => {
+  : function useCountdown(expiresAt) {
       _require = expiresAt;
       let num = arg1;
       if (arg1 === undefined) {

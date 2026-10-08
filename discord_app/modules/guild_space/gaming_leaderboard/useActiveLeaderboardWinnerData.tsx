@@ -34,7 +34,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboard/useActiveLeaderboardWinnerData.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useActiveLeaderboardWinnerData(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(5);
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useActiveLeaderboardWinnerData(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const items = [GuildMemberStore];

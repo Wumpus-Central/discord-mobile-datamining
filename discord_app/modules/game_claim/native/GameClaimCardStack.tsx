@@ -1,13 +1,13 @@
 // discord_app/modules/game_claim/native/GameClaimCardStack.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import PlusSmallIcon from "../../../design/components/Icon/native/redesign/generated/PlusSmallIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import n_mod from "../../../../_runtime/metro/00683__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c2, View: c3 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const sum = nativeDefault.space.PX_12 + nativeDefault.space.PX_8 + 96;
@@ -23,7 +23,7 @@ let n = n_mod;
 const hexResult1 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25).hex();
 const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.BRAND_500);
 const alphaResult2 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.35);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: null, gameCard: null, gameImage: null, addCard: null, addIconWrapper: null };
 const hexResult2 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.35).hex();
 obj.container = {
@@ -92,7 +92,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/game_claim/native/GameClaimCardStack.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (imageSrc) => {
+  ? function GameClaimCardStack(imageSrc) {
       const cResult = c.c(18);
       imageSrc = imageSrc.imageSrc;
       const tmp4 = closure_6();
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[9] !== tmp4.addIconWrapper) {
             const obj3 = { style: tmp4.addIconWrapper, children: tmp13 };
-            const tmp19 = React4(React3, obj3);
+            const tmp19 = React4(View, obj3);
             cResult[9] = tmp4.addIconWrapper;
             cResult[10] = tmp19;
             let tmp16 = tmp19;
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { style: tmp4.container, children: null };
             const items = [tmp8, tmp20];
             obj4.children = items;
-            const tmp27 = hasOwnProperty(React3, obj4);
+            const tmp27 = hasOwnProperty(View, obj4);
             cResult[14] = tmp4.container;
             cResult[15] = tmp8;
             cResult[16] = tmp20;
@@ -152,43 +152,47 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp24 = tmp27;
           }
           const obj5 = { style: tmp4.addCard, children: tmp16 };
-          const tmp23 = React4(React3, obj5);
+          const tmp23 = React4(View, obj5);
           cResult[11] = tmp4.addCard;
           cResult[12] = tmp16;
           cResult[13] = tmp23;
           tmp20 = tmp23;
         }
         const obj6 = { style: tmp4.gameCard, children: tmp6 };
-        const tmp11 = React4(React3, obj6);
+        const tmp11 = React4(View, obj6);
         cResult[5] = tmp4.gameCard;
         cResult[6] = tmp6;
         cResult[7] = tmp11;
         tmp8 = tmp11;
       }
-      const tmp7 = React4(React2, { style: tmp4.gameImage, source: tmp5, resizeMode: "cover" });
+      const tmp7 = React4(FastImageDefault, { style: tmp4.gameImage, source: tmp5, resizeMode: "cover" });
       cResult[2] = tmp4.gameImage;
       cResult[3] = tmp5;
       cResult[4] = tmp7;
       tmp6 = tmp7;
       const obj7 = { style: tmp4.gameImage, source: tmp5, resizeMode: "cover" };
     }
-  : (uri) => {
+  : function GameClaimCardStack(uri) {
       const tmp = closure_6();
       const obj = { style: tmp.container, children: null };
       const obj2 = {
         style: tmp.gameCard,
-        children: React4(React2, { style: tmp.gameImage, source: { uri: uri.imageSrc }, resizeMode: "cover" }),
+        children: React4(FastImageDefault, {
+          style: tmp.gameImage,
+          source: { uri: uri.imageSrc },
+          resizeMode: "cover",
+        }),
       };
-      const items = [React4(React3, obj2)];
+      const items = [React4(View, obj2)];
       const obj4 = {
         style: tmp.addCard,
-        children: React4(React3, {
+        children: React4(View, {
           style: tmp.addIconWrapper,
           children: React4(PlusSmallIcon.PlusSmallIcon, { size: "sm", color: "text-brand" }),
         }),
       };
-      items[1] = React4(React3, obj4);
+      items[1] = React4(View, obj4);
       obj.children = items;
-      return hasOwnProperty(React3, obj);
+      return hasOwnProperty(View, obj);
     };
 export const CARD_STACK_HEIGHT = sum1;

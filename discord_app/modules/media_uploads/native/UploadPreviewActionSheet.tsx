@@ -12,12 +12,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(7044).DraftType;
+const DraftType = fn(7232).DraftType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(6653).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6830).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   contentContainer: { padding: 16 },
   imageWrap: {
@@ -46,7 +46,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_uploads/native/UploadPreviewActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onAdd) => {
+  ? function UploadPreviewActionSheet(onAdd) {
       const cResult = onAdd(onRemove[10]).c(77);
       onAdd = onAdd.onAdd;
       const onEdit = onAdd.onEdit;
@@ -120,14 +120,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const fn = function q() {
+        function markSpoiler() {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           UploadAttachmentActionCreatorsDefault.update(channelId, id, DraftType.ChannelMessage, { spoiler: !spoiler });
-        };
+        }
         cResult[8] = channelId;
         cResult[9] = spoiler;
         cResult[10] = id;
-        cResult[11] = fn;
+        cResult[11] = markSpoiler;
       }
       if (cResult[6] !== diff) {
         class O {
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp7 = onEdit(onRemove[11]);
     }
-  : (onAdd) => {
+  : function UploadPreviewActionSheet(onAdd) {
       onAdd = onAdd.onAdd;
       const onEdit = onAdd.onEdit;
       const onRemove = onAdd.onRemove;
@@ -270,9 +270,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           })
           .catch((error) => {
             if ("E_PICKER_CANCELLED" !== error.code) {
-              const obj2 = { key: "CROP_ERROR", IconComponent: width(4806).CircleErrorIcon, content: error.message };
-              height(4574).open(obj2);
-              const obj = height(4574);
+              const obj2 = { key: "CROP_ERROR", IconComponent: width(5000).CircleErrorIcon, content: error.message };
+              height(4766).open(obj2);
+              const obj = height(4766);
             }
           });
       }, items3);
@@ -407,7 +407,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (tmp14) {
             const obj16 = {
               icon: tmp22(tmp6(tmp4[36]).SpoilerIcon, {}),
-              onPress() {
+              onPress: function markSpoiler() {
                 ActionSheetActionCreatorsDefault.hideActionSheet();
                 UploadAttachmentActionCreatorsDefault.update(channelId, id, DraftType.ChannelMessage, {
                   spoiler: !spoiler,

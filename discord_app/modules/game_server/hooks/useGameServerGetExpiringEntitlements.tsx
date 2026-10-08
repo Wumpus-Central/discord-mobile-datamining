@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGameServerGetExpiringEntitlements(arg0) {
       _require = arg0;
       const cResult = require("c").c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function s() {
+        const fn = function l() {
           return GameServerStore.getStateForGuild(closure_0);
         };
         cResult[1] = arg0;
@@ -47,8 +47,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const values = Object.values(entitlements1);
         if (0 !== values.length) {
-          let expiringGuildEntitlements = tmp(12167).getExpiringGuildEntitlements(values);
-          const tmpResult2 = tmp(12167);
+          let expiringGuildEntitlements = tmp(12246).getExpiringGuildEntitlements(values);
+          const tmpResult2 = tmp(12246);
         } else {
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : (arg0) => {
+  : function useGameServerGetExpiringEntitlements(arg0) {
       _require = arg0;
       let items = [GameServerStore];
       stateFromStores = require("initialize").useStateFromStores(items, () =>

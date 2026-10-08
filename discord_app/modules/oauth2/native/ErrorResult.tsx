@@ -3,10 +3,10 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
-import _modDef8745 from "../../../../_runtime/metro/08745__.js";
+import _modDef9145 from "../../../../_runtime/metro/09145__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     flex: 1,
@@ -44,12 +44,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/ErrorResult.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ErrorResult(arg0) {
       const cResult = c.c(17);
       ({ error, hideFooter } = arg0);
       const tmp4 = closure_7();
       if (cResult[0] !== tmp4.image) {
-        const obj2 = { source: _modDef8745, style: tmp4.image };
+        const obj2 = { source: _modDef9145, style: tmp4.image };
         const tmp9 = hasOwnProperty(React3, obj2);
         cResult[0] = tmp4.image;
         cResult[1] = tmp9;
@@ -131,12 +131,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = tmp14;
       const obj6 = { style: tmp4.text, variant: "text-md/medium", children: tmp10 };
     }
-  : (error) => {
+  : function ErrorResult(error) {
       error = error.error;
       const tmp = closure_7();
       const obj = { bottom: true, style: tmp.container, children: null };
       const obj2 = { style: tmp.inner, children: null };
-      const items = [hasOwnProperty(React3, { source: _modDef8745, style: tmp.image })];
+      const items = [hasOwnProperty(React3, { source: _modDef9145, style: tmp.image })];
       const obj4 = { style: tmp.text, variant: "text-md/medium", children: null };
       if (error == null) {
         const intl = util.intl;

@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/trigger_points/useCommonTriggerPoint.tsx");
 
 export const useCommonTriggerPoint = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCommonTriggerPoint(arg0) {
       _require = arg0;
       const cResult = require("c").c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -56,7 +56,7 @@ export const useCommonTriggerPoint = ReactCompilerGating.isReactCompilerEnabled(
       tmp11 = items1;
       const tmp7 = _slicedToArray(require("initialize").useStateFromStoresArray(tmp4, tmp5), 2);
     }
-  : (arg0) => {
+  : function useCommonTriggerPoint(arg0) {
       _require = arg0;
       let items = [ExperimentStore];
       const obj = require("initialize");

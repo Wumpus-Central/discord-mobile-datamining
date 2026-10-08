@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/game_organization_invites/Lin
 
 export const LinkedGameOrgInvitesExperiment = apexExperiment;
 export const useLinkedGameOrgInvitesEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useLinkedGameOrgInvitesEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -30,7 +30,9 @@ export const useLinkedGameOrgInvitesEnabled = ReactCompilerGating.isReactCompile
       }
       return apexExperiment.useConfig(tmp2).enabled;
     }
-  : (location) => apexExperiment.useConfig({ location }).enabled;
+  : function useLinkedGameOrgInvitesEnabled(location) {
+      return apexExperiment.useConfig({ location }).enabled;
+    };
 export const getLinkedGameOrgInvitesEnabled = function getLinkedGameOrgInvitesEnabled(MessageCodedLinkManager) {
   return apexExperiment.getConfig({ location: MessageCodedLinkManager }).enabled;
 };

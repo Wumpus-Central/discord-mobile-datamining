@@ -1,24 +1,24 @@
 // discord_app/modules/guild/native/GuildBadgeV2.tsx
 import c from "../../../../_runtime/00576_c.js";
-import BadgeCategory from "../../guild_badge/BadgeCategory.tsx";
 import GuildTraits from "../../guild_badge/GuildTraits.tsx";
+import BadgeCategory from "../../guild_badge/BadgeCategory.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const native = Icon(1188);
-const shared = Icon(4735);
-const GuildBadgeImageSource = Icon(8428);
+const native = Icon(1200);
+const shared = Icon(4929);
+const GuildBadgeImageSource = Icon(8842);
 require = fn;
 let closure_2 = ["guild", "size"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ icon: { marginRight: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildBadgeV2(arg0) {
       let Icon = require;
       let tmp = dependencyMap;
       const cResult = c.c(12);
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const IconResult = shared;
     }
-  : (arg0) => {
+  : function GuildBadgeV2(arg0) {
       ({ guild, size } = arg0);
       if (size === undefined) {
         size = native.Icon.Sizes.MEDIUM;

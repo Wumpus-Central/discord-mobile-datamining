@@ -113,6 +113,7 @@ import ChannelSafetyWarningsStore from "../self_mod/ChannelSafetyWarningsStore.t
 import VoiceChannelBlockedUserStore from "../shared_space_warnings/VoiceChannelBlockedUserStore.tsx";
 import SocialLayerStorefrontConfigManager from "../slayer_storefront/SocialLayerStorefrontConfigManager.tsx";
 import SocialLayerStorefrontStore from "../slayer_storefront/SocialLayerStorefrontStore.tsx";
+import SpatialAudioStore from "../spatial_audio/SpatialAudioStore.tsx";
 import SpotifyStore from "../spotify/SpotifyStore.tsx";
 import StageChannelParticipantStore from "../stage_channels/StageChannelParticipantStore.tsx";
 import StageChannelRoleStore from "../stage_channels/StageChannelRoleStore.tsx";

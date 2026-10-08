@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/screen/useWindowDimensions.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useWindowDimensions(arg0) {
       let tmp = arg0;
       const cResult = c.c(3);
       if (undefined === arg0) {
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp2Result = AppEntryKeyContext;
     }
-  : () => {
+  : function useWindowDimensions() {
       let tmp = arg0;
       if (arg0 === undefined) {
         tmp = closure_4;

@@ -1,23 +1,23 @@
 // discord_app/modules/forums/native/composer/ForumComposerModalActionCreators.tsx
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
-import tracking_Tracking from "../../tracking/Tracking.tsx";
+import Tracking from "../../tracking/Tracking.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 let c3 = "create-forum-post";
 let result = size.fileFinishedImporting("modules/forums/native/composer/ForumComposerModalActionCreators.tsx");
 
 export const openCreateForumPostModal = function openCreateForumPostModal(guildId) {
-  const result = tracking_Tracking.trackMobileForumComposerOpened({
+  const result = Tracking.trackMobileForumComposerOpened({
     guildId: guildId.guildId,
     channelId: guildId.parentChannelId,
     location: guildId.analyticsLocationObject,
   });
   if (!tmp4) {
     ({ guildId: obj4.guildId, parentChannelId: obj4.channelId } = guildId);
-    const result1 = tracking_Tracking.trackForumCreateNewPostStarted({ guildId: null, channelId: null });
+    const result1 = Tracking.trackForumCreateNewPostStarted({ guildId: null, channelId: null });
     const obj3 = { guildId: null, channelId: null };
-    const tmpResult = tracking_Tracking;
+    const tmpResult = Tracking;
   }
   const obj2 = {
     guildId: guildId.guildId,
@@ -25,7 +25,7 @@ export const openCreateForumPostModal = function openCreateForumPostModal(guildI
     location: guildId.analyticsLocationObject,
   };
   tmp4 = null != guildId.isEdit && guildId.isEdit;
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10073, dependencyMap.paths), guildId, c3);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9644, dependencyMap.paths), guildId, c3);
 };
 export const closeCreateForumPostModal = function closeCreateForumPostModal() {
   let flag = arg0;
@@ -33,7 +33,7 @@ export const closeCreateForumPostModal = function closeCreateForumPostModal() {
     flag = false;
   }
   if (!flag) {
-    const result = tracking_Tracking.trackMobileForumComposerDismissed();
+    const result = Tracking.trackMobileForumComposerDismissed();
   }
   ModalActionCreatorsDefault.popWithKey(c3);
 };

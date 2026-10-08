@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemAlertModal.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import AlertModal from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DemoModal() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         closure_0 = asyncGeneratorStep(async () => {
@@ -66,7 +66,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         });
-        const fn = function () {
+        function t0() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -75,9 +75,9 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
-        cResult[0] = fn;
-        let first = fn;
+        }
+        cResult[0] = t0;
+        let first = t0;
       } else {
         first = cResult[0];
       }
@@ -110,7 +110,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : () => {
+  : function DemoModal() {
       const callback = noop.useCallback(
         asyncGeneratorStep(async () => {
           if (c0 === 2) {
@@ -178,7 +178,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         actions: null,
       });
     };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, flex: 1, alignItems: "center" } });
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -187,7 +187,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsDesignSystemAlertModal() {
       const cResult = c.c(3);
       const tmp4 = closure_9();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : () => {
+  : function UserSettingsDesignSystemAlertModal() {
       const obj = { children: null };
       const obj2 = {
         style: closure_9().container,

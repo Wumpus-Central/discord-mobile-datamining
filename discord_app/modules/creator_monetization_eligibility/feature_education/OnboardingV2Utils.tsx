@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useCanSeeCreatorMonetizationOnboardingV2Upsell = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanSeeCreatorMonetizationOnboardingV2Upsell(arg0) {
       _require = arg0;
       const cResult = require("c").c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -97,7 +97,7 @@ export const useCanSeeCreatorMonetizationOnboardingV2Upsell = ReactCompilerGatin
       }
       const tmpResult4 = require("GuildRoleSubscriptionSettingUtils");
     }
-  : (arg0) => {
+  : function useCanSeeCreatorMonetizationOnboardingV2Upsell(arg0) {
       _require = arg0;
       items = [GuildStore];
       stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));

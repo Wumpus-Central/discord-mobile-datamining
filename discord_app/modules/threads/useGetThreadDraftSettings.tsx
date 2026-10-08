@@ -8,7 +8,7 @@ const require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGetThreadDraftSettings(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -41,7 +41,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useGetThreadDraftSettings(arg0) {
       _require = arg0;
       const items = [DraftStore];
       return require("initialize").useStateFromStores(items, () => {
@@ -63,7 +63,7 @@ const result = size.fileFinishedImporting("modules/threads/useGetThreadDraftSett
 
 export default tmp2;
 export const useHasThreadDraft = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHasThreadDraft(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -96,7 +96,7 @@ export const useHasThreadDraft = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useHasThreadDraft(arg0) {
       _require = arg0;
       const items = [DraftStore];
       return require("initialize").useStateFromStores(items, () => {

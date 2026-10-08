@@ -5,8 +5,8 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import Suspender from "../../../../../_runtime/05328_Suspender.js";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import Suspender from "../../../../../_runtime/05745_Suspender.js";
 import ReanimatedNativeViewDefault from "../../../core/native/ReanimatedNativeView.tsx";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
@@ -25,17 +25,17 @@ function renderCard(key, item, transitionState, cleanUp) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11916);
+const VoicePanelConstants = fn(11989);
 ({
   LAYOUT_PHYSICS: closure_8,
   VoicePanelModes: closure_9,
   UI_SHOW_HIDE_PHYSICS,
   VOICE_PANEL_CHUNK_DIVISOR,
 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11914).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17235).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(11919).EDGE_GUTTER;
-const isUserParticipant = fn(4917).isUserParticipant;
+const VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17516).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11992).EDGE_GUTTER;
+const isUserParticipant = fn(5113).isUserParticipant;
 const jsx = fn(21).jsx;
 let SCALE_PHYSICS = {};
 const merged = Object.assign(UI_SHOW_HIDE_PHYSICS);
@@ -56,7 +56,7 @@ const __initData4 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (viewableChunks) => {
+  ? function useViewableChunkState(viewableChunks) {
       _require = viewableChunks;
       let tmp = _slicedToArray(noop.useState(closure_18), 2);
       closure_1 = tmp[1];
@@ -98,7 +98,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       const animatedReaction = obj.useAnimatedReaction(fn, fn2);
       return tmp[0];
     }
-  : (viewableChunks) => {
+  : function useViewableChunkState(viewableChunks) {
       _require = viewableChunks;
       [tmp2, importDefault] = noop.useState(closure_18);
       const updateValueIfChange = noop.useCallback((arg0) => {
@@ -148,7 +148,7 @@ const __initData6 = {
 };
 ReactCompilerGating = fn(558);
 let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (freeze) => {
+  ? function useSpacerStyles(freeze) {
       _require = freeze;
       const context = contentDimensions.useContext(connected(controlsSpecs[14]));
       connected = context.connected;
@@ -263,7 +263,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__initData = __initData5;
       return obj2.useAnimatedStyle(fn);
     }
-  : (freeze) => {
+  : function useSpacerStyles(freeze) {
       _require = freeze;
       const context = contentDimensions.useContext(connected(controlsSpecs[14]));
       connected = context.connected;
@@ -380,10 +380,10 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useLazyContentFreeze() {
       const cResult = mode(576).c(6);
       const obj = mode(576);
-      mode = mode(17236).usePIPState().mode;
+      mode = mode(17517).usePIPState().mode;
       const ref = noop.useRef(mode === VoicePanelPIPModes.IN_APP);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = {};
@@ -407,7 +407,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
           tmp8 = cResult[5];
         }
         const effect = noop.useEffect(tmp7, tmp8);
-        return mode === VoicePanelPIPModes.IN_APP && ref(5980)(ref);
+        return mode === VoicePanelPIPModes.IN_APP && ref(6163)(ref);
       }
       const fn = function l() {
         if (timeout === constants.IN_APP) {
@@ -429,10 +429,10 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = mode;
       cResult[3] = fn;
       tmp7 = fn;
-      const obj2 = mode(17236);
+      const obj2 = mode(17517);
     }
-  : () => {
-      mode = mode(17236).usePIPState().mode;
+  : function useLazyContentFreeze() {
+      mode = mode(17517).usePIPState().mode;
       const ref = noop.useRef(mode === VoicePanelPIPModes.IN_APP);
       dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
       const items = [mode];
@@ -452,12 +452,12 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
           ref.current = false;
         }
       }, items);
-      const obj = mode(17236);
-      return mode === VoicePanelPIPModes.IN_APP && ref(5980)(ref);
+      const obj = mode(17517);
+      return mode === VoicePanelPIPModes.IN_APP && ref(6163)(ref);
     };
 ReactCompilerGating = fn(558);
 let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function CardContentFreezer(children) {
       const cResult = c.c(8);
       children = children.children;
       const tmp4 = closure_27();
@@ -498,7 +498,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp12;
       tmp11 = tmp12;
     }
-  : (children) => {
+  : function CardContentFreezer(children) {
       children = children.children;
       const tmp = closure_27();
       const freeze = tmp;
@@ -532,12 +532,12 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePa
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (viewableChunks) => {
+    ? function VoicePanelCardView(viewableChunks) {
         const cResult = channelId(576).c(11);
-        channelId = noop.useContext(stateFromStoresArray(11915)).channelId;
+        channelId = noop.useContext(stateFromStoresArray(11988)).channelId;
         let obj = channelId(576);
         const tmp4 = closure_23(viewableChunks.viewableChunks);
-        const chunkedParticipants = channelId(17329).useChunkedParticipants(channelId, tmp4);
+        const chunkedParticipants = channelId(17610).useChunkedParticipants(channelId, tmp4);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ChannelRTCStore];
           cResult[0] = items;
@@ -560,7 +560,7 @@ export default noop.memo(
           tmp8 = cResult[2];
           tmp9 = cResult[3];
         }
-        const obj3 = channelId(17329);
+        const obj3 = channelId(17610);
         stateFromStoresArray = channelId(504).useStateFromStoresArray(first, tmp8, tmp9);
         dependencyMap = noop.useRef(stateFromStoresArray);
         if (cResult[4] !== stateFromStoresArray) {
@@ -702,7 +702,7 @@ export default noop.memo(
               getItemKey: getCardKey,
               lazyCleanUpDelay: 1000,
             };
-            obj4.children = jsx(tmp(4595).TransitionGroup, {
+            obj4.children = jsx(tmp(4787).TransitionGroup, {
               items: chunkedParticipants,
               renderItem: renderCard,
               getItemKey: getCardKey,
@@ -753,7 +753,7 @@ export default noop.memo(
         cResult[8] = items2;
         let tmpResult = channelId(504);
       }
-    : (viewableChunks) => {
+    : function VoicePanelCardView(viewableChunks) {
         let chunkedParticipants;
         let stateFromStoresArray;
         const channelId = noop.useContext(chunkedParticipants(stateFromStoresArray[14])).channelId;

@@ -9,9 +9,9 @@ const require = globalThis.__r;
 const require = fn;
 let closure_3 = ["option", "children", "contentContainerStyles", "scrollable", "startExpanded"];
 const View = fn(17).View;
-const DEFAULT_CONTENT_PADDING = fn(1489).DEFAULT_CONTENT_PADDING;
+const DEFAULT_CONTENT_PADDING = fn(1501).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   actionSheetBackground: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND },
   titleContainer: { backgroundColor: "transparent" },
@@ -28,7 +28,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AppLauncherCommandOptionActionSheet(arg0) {
       const cResult = require("c").c(32);
       if (cResult[0] !== arg0) {
         ({ option, children, contentContainerStyles, scrollable, startExpanded } = arg0);
@@ -69,7 +69,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
             }
           },
         };
-        obj3.children = jsx(tmp(6703).ActionSheetCloseButton, {
+        obj3.children = jsx(tmp(6880).ActionSheetCloseButton, {
           onPress() {
             ActionSheetActionCreatorsDefault.hideActionSheet();
             onDismiss = onDismiss.onDismiss;
@@ -86,7 +86,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
         tmp17 = cResult[9];
       }
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp23 = jsx(tmp(1188).Spacer, { size: 24 });
+        const tmp23 = jsx(tmp(1200).Spacer, { size: 24 });
         cResult[10] = tmp23;
         let tmp21 = tmp23;
       } else {
@@ -131,7 +131,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
                     obj5.startExpanded = tmp14;
                     obj5.header = tmp24;
                     obj5.children = tmp27;
-                    const tmp36 = jsx(tmp(6652).BottomSheet, {}, tmp6.name);
+                    const tmp36 = jsx(tmp(6829).BottomSheet, {}, tmp6.name);
                     cResult[24] = tmp6.name;
                     cResult[25] = tmp7;
                     cResult[26] = tmp13;
@@ -187,7 +187,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
         trailing: tmp21,
       };
     }
-  : (startExpanded) => {
+  : function AppLauncherCommandOptionActionSheet(startExpanded) {
       ({ option, scrollable } = startExpanded);
       ({ children, contentContainerStyles } = startExpanded);
       if (scrollable === undefined) {
@@ -218,7 +218,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
       };
       const obj4 = {
         style: { alignSelf: "flex-start" },
-        children: jsx(merged(6703).ActionSheetCloseButton, {
+        children: jsx(merged(6880).ActionSheetCloseButton, {
           onPress() {
             ActionSheetActionCreatorsDefault.hideActionSheet();
             const onDismiss = merged.onDismiss;
@@ -230,7 +230,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
       };
       obj3.leading = (
         <View style={{ alignSelf: "flex-start" }}>
-          {jsx(merged(6703).ActionSheetCloseButton, {
+          {jsx(merged(6880).ActionSheetCloseButton, {
             onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
               const onDismiss = merged.onDismiss;
@@ -242,8 +242,8 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
         </View>
       );
       ({ displayName: obj2.title, displayDescription: obj2.subtitle } = option);
-      obj3.trailing = jsx(merged(1188).Spacer, { size: 24 });
-      obj.header = jsx(merged(6651).BottomSheetTitleHeader, {
+      obj3.trailing = jsx(merged(1200).Spacer, { size: 24 });
+      obj.header = jsx(merged(6828).BottomSheetTitleHeader, {
         titleContainerStyle: tmp2.titleContainer,
         titleWrapperStyle: tmp2.titleWrapper,
         subtitleStyle: tmp2.subtitleWrapper,
@@ -256,5 +256,5 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
       const items = [tmp2.contentContainer, contentContainerStyles];
       obj9.style = items;
       obj.children = <View style={null}>{children}</View>;
-      return jsx(merged(6652).BottomSheet, {}, option.name);
+      return jsx(merged(6829).BottomSheet, {}, option.name);
     };

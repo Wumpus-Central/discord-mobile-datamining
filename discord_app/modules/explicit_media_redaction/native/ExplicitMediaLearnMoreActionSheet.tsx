@@ -4,18 +4,18 @@ import util from "../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
-import ExplicitMediaRedactionUtils from "../ExplicitMediaRedactionUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "../../age_assurance/AgeVerificationActionCreators.native.tsx";
+import ExplicitMediaRedactionUtils from "../ExplicitMediaRedactionUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(7123).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_5 = fn(6979).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const Constants = fn(1085);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     paddingVertical: nativeDefault.space.PX_24,
@@ -180,7 +180,7 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   const obj10 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl6 = tmp4(tmp2[10]).intl;
   obj10.text = intl6.string(channelId(attachmentId[10]).t.bmbHPA);
-  obj10.onPress = function onPress() {
+  obj10.onPress = function handleDismissButtonPress() {
     callback(ExplicitMediaRedactionUtils.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };

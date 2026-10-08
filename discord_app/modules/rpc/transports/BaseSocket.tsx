@@ -11,7 +11,9 @@ class BaseSocket {
     merged = Object.assign({ id: null, authorization: null, application: null, abortController: null });
     obj2 = closure_0(closure_1[1]);
     merged[0] = obj2.uniqueId();
-    obj1 = { authing: false, scopes: [], accessToken: null, expires: null };
+    obj1 = { authing: false, scopes: null, accessToken: null, expires: null };
+    set = new Set();
+    obj1.scopes = set;
     date = new Date(0);
     obj1.expires = date;
     merged[1] = obj1;

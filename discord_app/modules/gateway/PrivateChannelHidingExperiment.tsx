@@ -28,7 +28,7 @@ export const isChannelMetadataObfuscationEnabled = function isChannelMetadataObf
   return closure_2.getConfig({ location: dependencyMap }).enableObfuscation;
 };
 export const useIsChannelMetadataObfuscationEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsChannelMetadataObfuscationEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -40,7 +40,9 @@ export const useIsChannelMetadataObfuscationEnabled = ReactCompilerGating.isReac
       }
       return closure_2.useConfig(tmp2).enableObfuscation;
     }
-  : (location) => closure_2.useConfig({ location }).enableObfuscation;
+  : function useIsChannelMetadataObfuscationEnabled(location) {
+      return closure_2.useConfig({ location }).enableObfuscation;
+    };
 export const isChannelMetadataIntegrityCheckEnabled = function isChannelMetadataIntegrityCheckEnabled(
   scheduleIntegrityCheck,
 ) {

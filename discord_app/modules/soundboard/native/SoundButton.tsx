@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_7 = ReanimatedRexport.createAnimatedComponent(View);
 const SPRING_CONFIG = { damping: 10, stiffness: 300, mass: 1 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   button: null,
   buttonPressed: null,
@@ -33,7 +33,7 @@ let obj = {
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.button = {
   marginTop: 4,
-  height: fn(17258).SOUND_BUTTON_HEIGHT,
+  height: fn(17539).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",
@@ -45,7 +45,7 @@ obj.button = {
 };
 let obj2 = {
   marginTop: 4,
-  height: fn(17258).SOUND_BUTTON_HEIGHT,
+  height: fn(17539).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",
@@ -69,7 +69,7 @@ const rect = {
   borderRadius: nativeDefault.radii.lg - 2,
 };
 obj.playingBackground = rect;
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 24;
@@ -100,10 +100,10 @@ const size1 = {
 obj.lock = size1;
 let closure_9 = createStyles.createStyles(obj);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(5916).PressableOpacity);
+let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(6189).PressableOpacity);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAnimationSharedValuesAndHandlers(arg0) {
       closure_0 = arg0;
       const cResult = c.c(20);
       const sharedValue = ReanimatedRexport2.useSharedValue(0);
@@ -190,7 +190,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = fn3;
       tmp6 = fn3;
     }
-  : (arg0) => {
+  : function useAnimationSharedValuesAndHandlers(arg0) {
       closure_0 = arg0;
       const sharedValue = ReanimatedRexport2.useSharedValue(0);
       const sharedValue1 = ReanimatedRexport2.useSharedValue(0);
@@ -223,7 +223,7 @@ const __initData2 = {
 };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (animationConfig) => {
+  ? function useAnimation(animationConfig) {
       _require = animationConfig;
       const fn = function t() {
         const pressed = animationConfig.sharedValues.pressed;
@@ -288,7 +288,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__initData = __initData;
       return obj.useAnimatedStyle(fn);
     }
-  : (animationConfig) => {
+  : function useAnimation(animationConfig) {
       _require = animationConfig;
       const fn = function t() {
         const pressed = animationConfig.sharedValues.pressed;
@@ -355,7 +355,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SoundButtonEmoji(arg0) {
       const cResult = c.c(21);
       ({ sound, sharedValues } = arg0);
       const tmp3 = closure_9();
@@ -452,7 +452,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = items;
       tmp11 = items;
     }
-  : (arg0) => {
+  : function SoundButtonEmoji(arg0) {
       ({ sound, sharedValues } = arg0);
       const tmp = closure_9();
       const obj = { style: null, children: null };
@@ -486,7 +486,7 @@ let result = size.fileFinishedImporting("modules/soundboard/native/SoundButton.t
 
 export const SoundButton = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (sound) => {
+    ? function SoundButtonComponent(sound) {
         const cResult = sound(soundGridLocation[10]).c(56);
         sound = sound.sound;
         const channel = sound.channel;
@@ -624,7 +624,7 @@ export const SoundButton = noop.memo(
                                                                     );
                                                                     cResult[53] = tmp38;
                                                                     cResult[54] = tmp42;
-                                                                    class E {
+                                                                    class G {
                                                                       constructor() {
                                                                         tmp = closure_1(closure_2[20])(
                                                                           channel,
@@ -675,7 +675,7 @@ export const SoundButton = noop.memo(
                                                 children: null,
                                               };
                                               const items1 = [tmp25, ,];
-                                              class E {
+                                              class G {
                                                 constructor() {
                                                   tmp = closure_1(closure_2[20])(
                                                     channel,
@@ -748,7 +748,7 @@ export const SoundButton = noop.memo(
                           }
                         }
                         const items3 = [tmp6.button, tmp20, buttonPressed, tmp17, , ,];
-                        class E {
+                        class G {
                           constructor() {
                             tmp = closure_1(closure_2[20])(
                               channel,
@@ -773,7 +773,7 @@ export const SoundButton = noop.memo(
                       }
                     }
                   }
-                  class E {
+                  class G {
                     constructor() {
                       tmp = closure_1(closure_2[20])(
                         channel,
@@ -788,8 +788,8 @@ export const SoundButton = noop.memo(
                   cResult[11] = channel;
                   cResult[12] = sound;
                   cResult[13] = soundGridLocation;
-                  cResult[14] = E;
-                  tmp19 = E;
+                  cResult[14] = G;
+                  tmp19 = G;
                 }
               }
             }
@@ -819,7 +819,7 @@ export const SoundButton = noop.memo(
         tmp10 = fn;
         const tmpResult2 = sound(soundGridLocation[18]);
       }
-    : (sound) => {
+    : function SoundButtonComponent(sound) {
         sound = sound.sound;
         const channel = sound.channel;
         const soundGridLocation = sound.soundGridLocation;

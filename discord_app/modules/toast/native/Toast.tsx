@@ -8,12 +8,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const native = Icon(1188);
+const native = Icon(1200);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null, multilineContainer: null, contentContainer: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj2.container = {
@@ -41,7 +41,7 @@ obj2.contentContainer = { marginLeft: 8, flexShrink: 1 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ToastIcon(arg0) {
       let Icon = require;
       let tmp = dependencyMap;
       const cResult = c.c(13);
@@ -100,7 +100,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = recolorLegacyIcon;
       cResult[2] = obj7;
     }
-  : (recolorLegacyIcon) => {
+  : function ToastIcon(recolorLegacyIcon) {
       ({ icon, IconComponent, iconColor } = recolorLegacyIcon);
       if (iconColor == null) {
         iconColor = "mobile-text-heading-primary";
@@ -130,7 +130,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ToastContent(arg0) {
       const cResult = c.c(9);
       ({ content, onTextLayout } = arg0);
       const tmp4 = closure_8();
@@ -180,7 +180,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = tmp7;
       }
     }
-  : (content) => {
+  : function ToastContent(content) {
       content = content.content;
       const tmp = closure_8();
       if (typeof content === "function") {
@@ -205,7 +205,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/toast/native/Toast.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Toast(arg0) {
       const cResult = c.c(16);
       ({ icon, iconColor, IconComponent, content, containerStyle, recolorLegacyIcon } = arg0);
       const tmp2 = closure_8();
@@ -285,7 +285,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = items1;
       const tmp3 = _slicedToArray(noop.useState(false), 2);
     }
-  : (arg0) => {
+  : function Toast(arg0) {
       c0 = undefined;
       ({ icon, iconColor, IconComponent, content, containerStyle, recolorLegacyIcon } = arg0);
       const tmp = closure_8();

@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/AppLauncherNativeConstants.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
-import _modDef1613 from "../../../../_runtime/metro/01613__.js";
+import _modDef1625 from "../../../../_runtime/metro/01625__.js";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -9,14 +9,16 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
 
-export const APP_LAUNCHER_BUILT_IN_SECTION_ICON = _modDef1613;
+export const APP_LAUNCHER_BUILT_IN_SECTION_ICON = _modDef1625;
 export const AppLauncherRouteName = {
   HOME: "home",
   APPLICATION_VIEW: "application_view",
   COMMAND_VIEW: "command_view",
   APP_LIST_VIEW: "app_list_view",
 };
-export const useAppLauncherNavigation = () => useNavigation.useNativeStackNavigation();
+export const useAppLauncherNavigation = function useAppLauncherNavigation() {
+  return useNavigation.useNativeStackNavigation();
+};
 export const AppLauncherOptionAutoFocusType = {
   NONE: 0,
   [0]: "NONE",

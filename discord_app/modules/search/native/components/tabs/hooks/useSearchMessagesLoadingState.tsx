@@ -6,7 +6,7 @@ import SearchMessageStore from "../../../../SearchMessageStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-let closure_4 = fn(7524).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
+let closure_4 = fn(9247).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useSearchMessagesLoadingState = ReactCompilerGating.isReactCompilerEnabled()
-  ? (searchContext) => {
+  ? function useSearchMessagesLoadingState(searchContext) {
       const cResult = searchContext(tab[4]).c(8);
       searchContext = searchContext.searchContext;
       tab = searchContext.tab;
@@ -75,7 +75,7 @@ export const useSearchMessagesLoadingState = ReactCompilerGating.isReactCompiler
       tmp4 = obj2;
       const obj = searchContext(tab[4]);
     }
-  : (arg0) => {
+  : function useSearchMessagesLoadingState(arg0) {
       ({ searchContext: require, tab: dependencyMap } = arg0);
       ({ placeholderHeight, numColumns } = arg0);
       closure_2 = usePlaceholderStyles.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });

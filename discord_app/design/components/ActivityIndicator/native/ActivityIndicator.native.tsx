@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/ActivityIndicator/native/ActivityIndicator.native.tsx");
 
 export const ActivityIndicator = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActivityIndicator(arg0) {
       const cResult = c.c(9);
       if (cResult[0] !== arg0) {
         ({ size, animating } = arg0);
@@ -62,7 +62,7 @@ export const ActivityIndicator = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp13;
       tmpResult = useToken;
     }
-  : (size) => {
+  : function ActivityIndicator(size) {
       let str = size.size;
       if (str === undefined) {
         str = "large";

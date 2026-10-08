@@ -11,11 +11,11 @@ const result = size.fileFinishedImporting(
 );
 
 export const useTrackAppLauncherItemImpressionOnFirstView = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useTrackAppLauncherItemImpressionOnFirstView() {
       const cResult = entrypoint(576).c(6);
       let obj = entrypoint(576);
       const tmp = entrypoint;
-      entrypoint = entrypoint(11007).useAppLauncherContext().entrypoint;
+      entrypoint = entrypoint(11232).useAppLauncherContext().entrypoint;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const _Set = Set;
         const set = new Set();
@@ -35,8 +35,8 @@ export const useTrackAppLauncherItemImpressionOnFirstView = ReactCompilerGating.
       } else {
         tmp9 = cResult[1];
       }
-      let obj2 = entrypoint(11007);
-      const focusEffect = tmp(1491).useFocusEffect(tmp9);
+      let obj2 = entrypoint(11232);
+      const focusEffect = tmp(1503).useFocusEffect(tmp9);
       if (cResult[2] !== entrypoint) {
         const fn2 = function p(itemKey) {
           itemKey = itemKey.itemKey;
@@ -80,12 +80,12 @@ export const useTrackAppLauncherItemImpressionOnFirstView = ReactCompilerGating.
       }
       return tmp12;
     }
-  : () => {
-      entrypoint = entrypoint(11007).useAppLauncherContext().entrypoint;
-      let obj = entrypoint(11007);
+  : function useTrackAppLauncherItemImpressionOnFirstView() {
+      entrypoint = entrypoint(11232).useAppLauncherContext().entrypoint;
+      let obj = entrypoint(11232);
       dependencyMap = noop.useRef(new Set());
       const set = new Set();
-      const focusEffect = entrypoint(1491).useFocusEffect(
+      const focusEffect = entrypoint(1503).useFocusEffect(
         noop.useCallback(() => {
           const current = ref.current;
           current.clear();

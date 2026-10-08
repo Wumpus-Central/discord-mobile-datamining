@@ -15,10 +15,10 @@ const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ Image: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4896);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(5090);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   scrollContainer: null,
@@ -31,10 +31,10 @@ let obj4 = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 
 obj2.buttonRow = { gap: nativeDefault.space.PX_8 };
 let size = { width: 64, height: 64, borderRadius: nativeDefault.radii.sm };
 obj2.rewardImage = size;
-let closure_14 = createStyles.createStyles(obj2);
+let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function useDeauthorize(arg0) {
       _require = arg0;
       const cResult = require("c").c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -81,7 +81,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = obj2;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useDeauthorize(arg0) {
       _require = arg0;
       const items = [AuthorizedAppsStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () =>
@@ -106,16 +106,16 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DevToolsAccountLinkingScreen() {
       const cResult = first(stateFromStores[11]).c(68);
-      const tmp4 = closure_14();
+      const tmp4 = closure_13();
       require("useSafeAreaInsets")();
       const tmp7 = getOrFetchApplication(startAuthorization.useState(""), 2);
       first = tmp7[0];
       importDefault = tmp7[1];
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SelectedGuildStore];
-        const fn = function p() {
+        const fn = function u() {
           return guildId.getGuildId();
         };
         cResult[0] = items;
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = cResult[2];
       }
       if (cResult[3] !== stateFromStores) {
-        const fn2 = function k() {
+        const fn2 = function x() {
           return GuildStore.getGuild(stateFromStores);
         };
         cResult[3] = stateFromStores;
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (getOrFetchApplication != null) {
           linkedGames1 = getOrFetchApplication.linkedGames;
         }
-        class P {
+        class B {
           constructor() {
             found = undefined;
             if (closure_3 != null) {
@@ -214,15 +214,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[9] = linkedGames1;
-        cResult[10] = P;
-        let tmp25 = P;
+        cResult[10] = B;
+        let tmp25 = B;
       } else {
         tmp25 = cResult[10];
       }
       const tmpResult5 = first(stateFromStores[15]);
       const stateFromStoresArray = first(stateFromStores[12]).useStateFromStoresArray(tmp22, tmp25);
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        class P {
+        class B {
           constructor() {
             found = undefined;
             if (closure_3 != null) {
@@ -250,13 +250,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (connectionApp != null) {
         id = connectionApp.id;
       }
-      closure_15(id);
+      closure_14(id);
       let id1;
       if (connectionApp != null) {
         id1 = connectionApp.id;
       }
       if (cResult[12] === id1) {
-        class P {
+        class B {
           constructor() {
             found = undefined;
             if (closure_3 != null) {
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const sum = tmp37 + tmp5(tmp2[9]).space.PX_16;
         if (cResult[15] !== sum) {
           const obj3 = { paddingBottom: sum };
-          class P {
+          class B {
             constructor() {
               found = undefined;
               if (closure_3 != null) {
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[17] === tmp4.scrollContainer) {
           const TableRowGroup = tmp(tmp2[17]).TableRowGroup;
-          class P {
+          class B {
             constructor() {
               found = undefined;
               if (closure_3 != null) {
@@ -335,18 +335,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 };
                 let tmpResult;
                 if (name === name.id) {
-                  tmpResult = closure_1_12(first(stateFromStores[19]).Text, {
+                  tmpResult = closure_1_11(first(stateFromStores[19]).Text, {
                     variant: "text-sm/semibold",
                     children: "Selected",
                   });
                 }
                 obj.trailing = tmpResult;
-                return closure_1_12(first(stateFromStores[18]).TableRow, obj, name.id);
+                return closure_1_11(first(stateFromStores[18]).TableRow, obj, name.id);
               });
             } else {
-              mapped = closure_12(tmp(tmp2[18]).TableRow, { label: "No official games" });
+              mapped = closure_11(tmp(tmp2[18]).TableRow, { label: "No official games" });
             }
-            class P {
+            class B {
               constructor() {
                 found = undefined;
                 if (closure_3 != null) {
@@ -363,8 +363,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           } else {
-            const tmp43 = closure_12(tmp(tmp2[18]).TableRow, { label: "No guild selected" });
-            class P {
+            const tmp43 = closure_11(tmp(tmp2[18]).TableRow, { label: "No guild selected" });
+            class B {
               constructor() {
                 found = undefined;
                 if (closure_3 != null) {
@@ -381,7 +381,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj4 = { title: combined, hasIcons: false, children: tmp43 };
-            const tmp48 = closure_12(TableRowGroup, obj4);
+            const tmp48 = closure_11(TableRowGroup, obj4);
             cResult[20] = TableRowGroup;
             cResult[21] = combined;
             cResult[22] = tmp43;
@@ -407,7 +407,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return name;
         });
-        class P {
+        class B {
           constructor() {
             found = undefined;
             if (closure_3 != null) {
@@ -433,8 +433,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[14] = "N/A";
       const tmpResult6 = first(stateFromStores[12]);
     }
-  : () => {
-      const tmp = closure_14();
+  : function DevToolsAccountLinkingScreen() {
+      const tmp = closure_13();
       const tmp5 = getOrFetchApplication(noop.useState(""), 2);
       value = tmp5[0];
       importDefault = tmp7;
@@ -454,8 +454,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = value(504);
       let found = useGetOrFetchApplicationsDefault(gameApplicationIds).filter((item) => null != item);
       const arr4 = useGetOrFetchApplicationsDefault(gameApplicationIds);
-      getOrFetchApplication = value(6670).useGetOrFetchApplication(value);
-      const tmp8Result = value(6670);
+      getOrFetchApplication = value(6847).useGetOrFetchApplication(value);
+      const tmp8Result = value(6847);
       const items2 = [ApplicationStore];
       const stateFromStoresArray = value(504).useStateFromStoresArray(items2, () => {
         let found;
@@ -480,7 +480,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp8Result2 = value(504);
       let str = "N/A";
       let str2 = "N/A";
-      ({ canDeauthorize, deauthorize } = closure_15(id));
+      ({ canDeauthorize, deauthorize } = closure_14(id));
       if (stateFromStoresArray.length > 0) {
         let mapped = stateFromStoresArray.map((id) => {
           id = undefined;
@@ -499,7 +499,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj3 = { style: tmp.container, contentContainerStyle: null, children: null };
       const items3 = [tmp.scrollContainer];
-      const tmp12Result = closure_15(id);
+      const tmp12Result = closure_14(id);
       items3[1] = { paddingBottom: tmp4.bottom + nativeDefault.space.PX_16 };
       obj3.contentContainerStyle = items3;
       let name;
@@ -522,26 +522,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             };
             let tmpResult;
             if (name === name.id) {
-              tmpResult = closure_1_12(first(dependencyMap[19]).Text, {
+              tmpResult = closure_1_11(first(dependencyMap[19]).Text, {
                 variant: "text-sm/semibold",
                 children: "Selected",
               });
             }
             obj.trailing = tmpResult;
-            return closure_1_12(first(dependencyMap[18]).TableRow, obj, name.id);
+            return closure_1_11(first(dependencyMap[18]).TableRow, obj, name.id);
           });
         } else {
-          mapped1 = closure_12(tmp8(6000).TableRow, { label: "No official games" });
+          mapped1 = closure_11(tmp8(6184).TableRow, { label: "No official games" });
         }
       } else {
-        obj5.children = closure_12(tmp8(6000).TableRow, { label: "No guild selected" });
-        const items4 = [closure_12(tmp8(6081).TableRowGroup, obj5), , ,];
+        obj5.children = closure_11(tmp8(6184).TableRow, { label: "No guild selected" });
+        const items4 = [closure_11(tmp8(6267).TableRowGroup, obj5), , ,];
         const obj6 = { style: null, children: null };
         const obj7 = { padding: tmp2(587).space.PX_12 };
         obj6.style = obj7;
         const obj8 = { label: "Application ID", value, onChange: tmp7 };
-        obj6.children = closure_12(tmp8(6105).TextInput, obj8);
-        const items5 = [closure_12(closure_7, obj6), ,];
+        obj6.children = closure_11(tmp8(6283).TextInput, obj8);
+        const items5 = [closure_11(closure_6, obj6), ,];
         if (null != getOrFetchApplication) {
           str = getOrFetchApplication.name;
         }
@@ -549,13 +549,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj10 = { label: null };
         let _HermesInternal = HermesInternal;
         obj10.label = "Name: " + str;
-        items5[1] = closure_12(tmp8(6000).TableRow, obj10);
+        items5[1] = closure_11(tmp8(6184).TableRow, obj10);
         const obj11 = { label: null };
         const _HermesInternal2 = HermesInternal;
         obj11.label = "Linked Games: " + str2;
-        items5[2] = closure_12(tmp8(6000).TableRow, obj11);
+        items5[2] = closure_11(tmp8(6184).TableRow, obj11);
         obj9.children = items5;
-        items4[1] = closure_13(tmp8(6081).TableRowGroup, obj9);
+        items4[1] = closure_12(tmp8(6267).TableRowGroup, obj9);
         let str6 = "text-feedback-critical";
         if (debug.hasConnectionEntrypointUrl) {
           str6 = "text-feedback-positive";
@@ -567,8 +567,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj13 = { label: "Connection Entrypoint URL", trailing: null };
         obj12.children = str7;
-        obj13.trailing = closure_12(tmp8(4892).Text, obj12);
-        const items6 = [closure_12(tmp8(6000).TableRow, obj13), ,];
+        obj13.trailing = closure_11(tmp8(5086).Text, obj12);
+        const items6 = [closure_11(tmp8(6184).TableRow, obj13), ,];
         let str8 = "text-muted";
         if (hasAlreadyLinked) {
           str8 = "text-feedback-positive";
@@ -581,8 +581,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj15 = { title: "Authorization", hasIcons: false, children: null };
         const obj16 = { label: "Already Linked", trailing: null };
         obj14.children = str9;
-        obj16.trailing = closure_12(tmp8(4892).Text, obj14);
-        items6[1] = closure_12(tmp8(6000).TableRow, obj16);
+        obj16.trailing = closure_11(tmp8(5086).Text, obj14);
+        items6[1] = closure_11(tmp8(6184).TableRow, obj16);
         const obj17 = { style: tmp.buttonRow, children: null };
         const obj18 = {
           disabled: !tmp11.canStartAuthorization,
@@ -592,18 +592,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           variant: "primary",
           text: "Start Authorization",
         };
-        const items7 = [closure_12(tmp8(5601).Button, obj18)];
+        const items7 = [closure_11(tmp8(5375).Button, obj18)];
         const obj19 = {
           disabled: !canDeauthorize,
           onPress: deauthorize,
           variant: "critical-primary",
           text: "Deauthorize",
         };
-        items7[1] = closure_12(tmp8(5601).Button, obj19);
+        items7[1] = closure_11(tmp8(5375).Button, obj19);
         obj17.children = items7;
-        items6[2] = closure_13(closure_7, obj17);
+        items6[2] = closure_12(closure_6, obj17);
         obj15.children = items6;
-        items4[2] = closure_13(tmp8(6081).TableRowGroup, obj15);
+        items4[2] = closure_12(tmp8(6267).TableRowGroup, obj15);
         let prop;
         if (connectionApp != null) {
           prop = connectionApp.applicationAccountLinkBenefitConfig;
@@ -619,8 +619,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj23 = { uri: connectionApp.applicationAccountLinkBenefitConfig.reward_image };
             obj22.source = obj23;
             obj22.style = tmp.rewardImage;
-            obj20.children = closure_12(connectionApp, obj22);
-            tmp17Result = closure_12(closure_7, obj20);
+            obj20.children = closure_11(tmp2(6164), obj22);
+            tmp17Result = closure_11(closure_6, obj20);
           }
           const items8 = [tmp17Result];
           let str10 = connectionApp.applicationAccountLinkBenefitConfig.reward_name;
@@ -631,13 +631,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj25 = { label: null };
           const _HermesInternal3 = HermesInternal;
           obj25.label = "Reward: " + str10;
-          items8[1] = closure_12(tmp8(6000).TableRow, obj25);
+          items8[1] = closure_11(tmp8(6184).TableRow, obj25);
           obj24.children = items8;
-          tmp15Result = closure_13(tmp8(6081).TableRowGroup, obj24);
+          tmp15Result = closure_12(tmp8(6267).TableRowGroup, obj24);
         }
         items4[3] = tmp15Result;
         obj3.children = items4;
-        return closure_13(closure_6, obj3);
+        return closure_12(connectionApp, obj3);
       }
       const obj4 = { paddingBottom: tmp4.bottom + nativeDefault.space.PX_16 };
     };

@@ -19,14 +19,14 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, contentContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.contentContainer = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
 let closure_9 = createStyles.createStyles(obj2);
-const InteractionComponentUtils = fn(5120);
+const InteractionComponentUtils = fn(5432);
 let obj6 = {
-  type: fn(1985).ComponentType.STRING_SELECT,
+  type: fn(1997).ComponentType.STRING_SELECT,
   custom_id: "test",
   max_values: 1,
   min_values: 1,
@@ -43,14 +43,14 @@ obj6.options = items;
 let items1 = [obj6];
 let obj4 = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
 items1[1] = {
-  type: fn(1985).ComponentType.TEXT_DISPLAY,
+  type: fn(1997).ComponentType.TEXT_DISPLAY,
   content:
     "hello world! :eyes: **bold** `code` https://cdn.discordapp.com/attachments/1408191424968523819/1408191500277387274/advaith.webp\nhttps://discord.com [google](https://google.com) ||spoiler|| <t:1755730638:t> <a:wumpus_party:393564669765353483>",
 };
 const transformComponentsResult = InteractionComponentUtils.transformComponents(items1);
 let c10 = transformComponentsResult;
 let obj7 = {
-  type: fn(1985).ComponentType.TEXT_DISPLAY,
+  type: fn(1997).ComponentType.TEXT_DISPLAY,
   content:
     "hello world! :eyes: **bold** `code` https://cdn.discordapp.com/attachments/1408191424968523819/1408191500277387274/advaith.webp\nhttps://discord.com [google](https://google.com) ||spoiler|| <t:1755730638:t> <a:wumpus_party:393564669765353483>",
 };
@@ -58,7 +58,7 @@ let obj7 = {
 const modal = "modal";
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Select(arg0) {
       const cResult = c.c(20);
       ({ type, title } = arg0);
       [tmp5, require] = noop.useState(false);
@@ -214,7 +214,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = obj9;
       const tmp4 = _slicedToArray(noop.useState(false), 2);
     }
-  : (children) => {
+  : function Select(children) {
       const type = children.type;
       c0 = undefined;
       [tmp2, c0] = noop.useState(false);
@@ -282,7 +282,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DevToolsComponentsTestingScreen() {
       const cResult = c.c(7);
       const tmp4 = closure_9();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -362,7 +362,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp26 = tmp27;
       const obj12 = { style: tmp4.wrap, contentContainerStyle: tmp4.contentContainer, children: tmp22 };
     }
-  : () => {
+  : function DevToolsComponentsTestingScreen() {
       const tmp = closure_9();
       const obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: null };
       const obj2 = { spacing: 16, children: null };

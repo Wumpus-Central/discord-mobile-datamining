@@ -7,7 +7,7 @@ import TwoWayLinkError from "../TwoWayLinkError.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const constants = fn(8798).PlayStationLinkModalScenes;
+const constants = fn(9150).PlayStationLinkModalScenes;
 const AbortCodes = fn(1085).AbortCodes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const PlayStationLinkError = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PlayStationLinkError(arg0) {
       const cResult = c.c(7);
       ({ onClose, errorCode } = arg0);
       const navigation = useNavigation.useNavigation();
@@ -64,7 +64,7 @@ export const PlayStationLinkError = ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = tmp15;
       }
     }
-  : (arg0) => {
+  : function PlayStationLinkError(arg0) {
       ({ onClose, errorCode } = arg0);
       const navigation = useNavigation.useNavigation();
       const connectRetry = useConnectRetry.useConnectRetry(navigation, constants.PRE_CONNECT);

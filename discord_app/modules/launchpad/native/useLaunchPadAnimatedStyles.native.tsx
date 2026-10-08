@@ -34,7 +34,7 @@ const __initData4 = {
 let result = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadAnimatedStyles.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (launchPadSharedState) => {
+  ? function useLaunchpadAnimatedStyles(launchPadSharedState) {
       const cResult = launchPadSharedState(launchPadShown[4]).c(12);
       launchPadSharedState = launchPadSharedState.launchPadSharedState;
       const gestureState = launchPadSharedState.gestureState;
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp7 = items1;
     }
-  : (launchPadSharedState) => {
+  : function useLaunchpadAnimatedStyles(launchPadSharedState) {
       launchPadSharedState = launchPadSharedState.launchPadSharedState;
       const gestureState = launchPadSharedState.gestureState;
       const launchPadShown = launchPadSharedState.launchPadShown;

@@ -6,7 +6,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsEligible() {
       const cResult = c.c(2);
       const isExperimentEligible = HolidayEventsConfigDefault.useIsExperimentEligible();
       if (cResult[0] !== isExperimentEligible) {
@@ -24,7 +24,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function useIsEligible() {
       const isExperimentEligible = HolidayEventsConfigDefault.useIsExperimentEligible();
       const timestamp = Date.now();
       return (
@@ -52,7 +52,7 @@ let obj = {
 };
 let ReactCompilerGating = ReactCompilerGating_mod;
 obj.useHolidaySoundpack = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHolidaySoundpack() {
       const cResult = c.c(2);
       const tmp3 = closure_3();
       if (cResult[0] !== tmp3) {
@@ -78,7 +78,7 @@ obj.useHolidaySoundpack = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : () => {
+  : function useHolidaySoundpack() {
       let tmp = null;
       if (closure_3()) {
         tmp = null;

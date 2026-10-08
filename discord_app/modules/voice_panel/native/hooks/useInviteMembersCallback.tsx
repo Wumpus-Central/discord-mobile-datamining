@@ -14,7 +14,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useInviteMembersCallback.tsx");
 
 export const useInviteMembersCallback = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useInviteMembersCallback(arg0) {
       _require = arg0;
       const cResult = require("c").c(2);
       if (cResult[0] !== arg0) {
@@ -38,7 +38,7 @@ export const useInviteMembersCallback = ReactCompilerGating.isReactCompilerEnabl
       }
       return tmp2;
     }
-  : (arg0) => {
+  : function useInviteMembersCallback(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       return noop.useCallback(() => {

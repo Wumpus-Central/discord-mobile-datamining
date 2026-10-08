@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/hooks/useFieldLabelA11yNative.tsx");
 
 export const useFieldLabelA11yNative = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFieldLabelA11yNative(arg0) {
       const cResult = c.c(8);
       ({ label, accessibilityLabel } = arg0);
       const id = noop.useId();
@@ -58,7 +58,7 @@ export const useFieldLabelA11yNative = ReactCompilerGating.isReactCompilerEnable
       cResult[3] = tmp9;
       tmp8 = tmp9;
     }
-  : (arg0) => {
+  : function useFieldLabelA11yNative(arg0) {
       ({ label, accessibilityLabel } = arg0);
       const id = noop.useId();
       let tmp3 = tmp2;

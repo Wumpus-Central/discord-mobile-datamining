@@ -7,12 +7,12 @@ import ModalActionCreatorsDefault from "../actions/ModalActionCreators.tsx";
 import FastImageDefault from "common/FastImage.tsx";
 import NavigatorHeader from "../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import Navigator from "../design/components/Navigator/native/Navigator.native.tsx";
+import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate.tsx";
 import openMediaModal from "../modules/media_viewer/native/components/openMediaModal.tsx";
 import common_VideoDefault from "common/Video.tsx";
-import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef10136 from "../../_runtime/metro/10136__.js";
-import _modDef15385 from "../../_runtime/metro/15385__.js";
+import _modDef9721 from "../../_runtime/metro/09721__.js";
+import _modDef15647 from "../../_runtime/metro/15647__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -21,11 +21,11 @@ function hideChangeLog() {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const CHANGELOG_MODAL_KEY = fn(2102).CHANGELOG_MODAL_KEY;
+const CHANGELOG_MODAL_KEY = fn(2114).CHANGELOG_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 0.5625;
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = {
   video: { alignSelf: "center" },
   videoWrapper: { marginBottom: 8 },
@@ -50,7 +50,7 @@ obj2.playButton = size;
 obj2.playIcon = { width: 21, height: 21 };
 obj2.empty = { width: "100%", height: 240, alignItems: "center", paddingTop: 48 };
 let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj4 = { bulletPoint: null, listItem: null, listText: null, listItemContent: null };
 let size1 = {
   width: 7,
@@ -84,7 +84,7 @@ ListItem.prototype["render"] = function render() {
   obj.children = items;
   return closure_1_8(View, obj);
 };
-ListItem.contextType = fn(4595).ThemeContext;
+ListItem.contextType = fn(4787).ThemeContext;
 const PureComponent2 = noop.PureComponent;
 class ChangeLog extends PureComponent2 {
   constructor() {
@@ -198,7 +198,7 @@ prototype["renderVideo"] = function renderVideo() {
         },
         useLocalHTML: true,
       };
-      const items = [closure_7(_modDef15385, obj4)];
+      const items = [closure_7(_modDef15647, obj4)];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -248,14 +248,14 @@ prototype["renderVideo"] = function renderVideo() {
     const obj10 = {
       accessibilityLabel: "Play Video",
       accessibilityRole: "button",
-      source: _modDef10136,
+      source: _modDef9721,
       onPress: self.playVideo,
       style: tmp.playButton,
-      iconSize: tmp18(1188).IconSizes.CUSTOM,
+      iconSize: tmp18(1200).IconSizes.CUSTOM,
       iconStyle: tmp.playIcon,
     };
     obj9.children = closure_7(TouchableHitBoxDefault, obj10);
-    tmp12Result = closure_7(tmp18(5916).PressableOpacity, obj9);
+    tmp12Result = closure_7(tmp18(6189).PressableOpacity, obj9);
     const tmp15Result = TouchableHitBoxDefault;
   }
   items1[1] = tmp12Result;
@@ -270,10 +270,10 @@ prototype["render"] = function render() {
   obj.onScroll = this.handleScroll;
   return React5(ChangeLogStandardTemplateDefault, obj);
 };
-ChangeLog.contextType = fn(4595).ThemeContext;
+ChangeLog.contextType = fn(4787).ThemeContext;
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useVideoDimensions() {
       const cResult = c.c(3);
       const size = useWindowDimensionsDefault();
       let diff = size.width - 36;
@@ -295,7 +295,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = size1;
       tmp7 = size1;
     }
-  : () => {
+  : function useVideoDimensions() {
       const size = useWindowDimensionsDefault();
       let diff = size.width - 36;
       const result = diff * c9;
@@ -309,7 +309,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onClose) => {
+  ? function ChangeLogScreen(onClose) {
       const cResult = changelog(navigation[20]).c(24);
       onClose = onClose.onClose;
       let obj = changelog(navigation[20]);
@@ -466,7 +466,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = changelog(navigation[23]);
     }
-  : (onClose) => {
+  : function ChangeLogScreen(onClose) {
       let fn = onClose.onClose;
       let changelog;
       let navigation;
@@ -555,7 +555,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("components_native/ChangeLogModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ChangelogModal() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { CHANGELOG: null };
@@ -583,7 +583,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : () => {
+  : function ChangelogModal() {
       const screens = noop.useMemo(() => {
         const obj = { CHANGELOG: null };
         const obj2 = {

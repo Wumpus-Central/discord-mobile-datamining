@@ -9,7 +9,7 @@ require = fn;
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
 let closure_4 = ReanimatedRexport.createAnimatedComponent(Text);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles((fontSize, color) => {
   const obj = {
     glyph: {
@@ -28,7 +28,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/visual-identities/ai/AIGlyphText.native.tsx");
 
 export const AIGlyphText = ReactCompilerGating.isReactCompilerEnabled()
-  ? (size) => {
+  ? function AIGlyphText(size) {
       const cResult = c.c(10);
       ({ color, allowFontScaling, animated, numberOfLines, ellipsizeMode, style, children } = size);
       let str = "text-default";
@@ -87,7 +87,7 @@ export const AIGlyphText = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = items;
       const tmpResult = useToken;
     }
-  : (color) => {
+  : function AIGlyphText(color) {
       let str = color.color;
       if (str === undefined) {
         str = "text-default";

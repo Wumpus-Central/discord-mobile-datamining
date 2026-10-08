@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/VoicePanelContainer.tsx
 import c from "../../../../_runtime/00576_c.js";
-import _mod4498 from "../../../../_runtime/metro/04498__.js";
+import _mod4690 from "../../../../_runtime/metro/04690__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import VoicePanelUIDefault from "VoicePanelUI.tsx";
 import VoicePanelControllerDefault from "VoicePanelController.tsx";
@@ -25,7 +25,7 @@ function renderVoicePanel(arg0, channelId, transitionState, transitionCleanUp) {
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function VoicePanel(channelId) {
       _require = channelId;
       const cResult = require("c").c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -76,7 +76,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp15;
       tmp12 = tmp15;
     }
-  : (arg0) => {
+  : function VoicePanel(arg0) {
       _require = arg0;
       const items = [ChannelStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => {
@@ -100,7 +100,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanel
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function VoicePanelContainer() {
         const cResult = c.c(3);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function n(channels) {
@@ -111,7 +111,7 @@ export default noop.memo(
         } else {
           first = cResult[0];
         }
-        const tmp5 = VoicePanelStore(first, _mod4498.shallow);
+        const tmp5 = VoicePanelStore(first, _mod4690.shallow);
         if (cResult[1] !== tmp5) {
           const obj2 = { items: tmp5, getItemKey: getChannelKey, renderItem: renderVoicePanel };
           const tmp10 = jsx(native.TransitionGroup, {
@@ -127,10 +127,10 @@ export default noop.memo(
         }
         return tmp6;
       }
-    : () => {
-        const tmp = VoicePanelStore((channels) => Array.from(channels.channels), _mod4498.shallow);
+    : function VoicePanelContainer() {
+        const tmp = VoicePanelStore((channels) => Array.from(channels.channels), _mod4690.shallow);
         return jsx(native.TransitionGroup, {
-          items: VoicePanelStore((channels) => Array.from(channels.channels), _mod4498.shallow),
+          items: VoicePanelStore((channels) => Array.from(channels.channels), _mod4690.shallow),
           getItemKey: getChannelKey,
           renderItem: renderVoicePanel,
         });

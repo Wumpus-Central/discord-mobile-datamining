@@ -1,7 +1,7 @@
 // discord_common/js/packages/http-utils/HTTPUtils.tsx
 import logger_Logger from "../logger/Logger.tsx";
 import BackoffDefault from "../backoff/Backoff.tsx";
-import _createForOfIteratorHelperDefault from "../../../../_runtime/01283__createForOfIteratorHelper.js";
+import _createForOfIteratorHelperDefault from "../../../../_runtime/01295__createForOfIteratorHelper.js";
 import V8APIError from "V8APIError.tsx";
 import convertSkemaError from "convertSkemaError.tsx";
 import stringifyErrors from "stringifyErrors.tsx";
@@ -219,11 +219,11 @@ function sendRequest(method, signal, arg2, fn, fn2, cause) {
                   if (body2 != null) {
                     code = body2.code;
                   }
-                  if (code === method(1336).INVALID_FORM_BODY_ERROR_CODE) {
+                  if (code === method(1348).INVALID_FORM_BODY_ERROR_CODE) {
                     const errors = response.body.errors;
                     if (null != errors) {
-                      response.body = tmp17(1337).convertSkemaError(errors);
-                      const tmp17Result = tmp17(1337);
+                      response.body = tmp17(1349).convertSkemaError(errors);
+                      const tmp17Result = tmp17(1349);
                     }
                   }
                   tmp17 = method;

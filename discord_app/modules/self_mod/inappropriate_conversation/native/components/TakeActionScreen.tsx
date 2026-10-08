@@ -1,8 +1,8 @@
 // discord_app/modules/self_mod/inappropriate_conversation/native/components/TakeActionScreen.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
-import SafetyToastsActionCreatorsDefault from "../../../../safety_common/SafetyToastsActionCreators.native.tsx";
 import RelationshipActionCreatorsDefault from "../../../../../actions/RelationshipActionCreators.tsx";
+import SafetyToastsActionCreatorsDefault from "../../../../safety_common/SafetyToastsActionCreators.native.tsx";
 import SafetyWarningUtils from "../../../shared/SafetyWarningUtils.tsx";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 require = fn;
 let useState = fn(19).useState;
 const View = fn(17).View;
-const Constants = fn(9797);
+const Constants = fn(10361);
 ({
   MODAL_LOCATION_CONTEXT_MOBILE: c10,
   NOFILTR_URL: closure_11,
@@ -25,7 +25,7 @@ const Constants = fn(9797);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 },
   toastContainer: null,
@@ -46,7 +46,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (senderId) => {
+  ? function TakeActionButtons(senderId) {
       const cResult = require("c").c(45);
       senderId = senderId.senderId;
       _require = senderId;
@@ -164,8 +164,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             () => {
                               dependencyMap(true);
                               const designSystemsNotificationComponents =
-                                closure_0(4580).getDesignSystemsNotificationComponents("TakeActionScreen");
-                              const obj2 = c1(4574);
+                                closure_0(4772).getDesignSystemsNotificationComponents("TakeActionScreen");
+                              const obj2 = c1(4766);
                               if (designSystemsNotificationComponents) {
                                 const obj3 = { text: null, variant: "success" };
                                 const intl2 = closure_0(1126).intl;
@@ -181,16 +181,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 };
                                 const intl = closure_0(1126).intl;
                                 obj4.content = intl.string(closure_0(1126).t.gn2c6X);
-                                obj4.IconComponent = closure_0(4798).CircleCheckIcon;
+                                obj4.IconComponent = closure_0(4992).CircleCheckIcon;
                                 obj4.iconColor = iconColor;
                                 obj4.containerStyle = toastContainer.toastContainer;
                                 obj2.open(obj4);
                               }
-                              const obj = closure_0(4580);
+                              const obj = closure_0(4772);
                             },
                             () => {
                               const intl = closure_1_0(1126).intl;
-                              closure_1_0(4573).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
+                              closure_1_0(4765).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
                             },
                           ),
                           done: false,
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               });
-              const fn3 = function () {
+              function t6() {
                 const self = this;
                 const apply = closure_0.apply;
                 if (typeof apply === "unknown") {
@@ -226,15 +226,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   applyArgumentsResult = apply(self, arguments);
                 }
                 return applyArgumentsResult;
-              };
+              }
               cResult[12] = channelId;
               cResult[13] = lastChannelMessage;
               cResult[14] = senderId;
               cResult[15] = setReported;
               cResult[16] = tmp4.toastContainer;
               cResult[17] = trackAnalyticsEvent;
-              cResult[18] = fn3;
-              tmp17 = fn3;
+              cResult[18] = t6;
+              tmp17 = t6;
             }
           }
           class X {
@@ -266,7 +266,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = trackAnalyticsEvent;
       cResult[7] = fn2;
     }
-  : (senderId) => {
+  : function TakeActionButtons(senderId) {
       senderId = senderId.senderId;
       const channelId = senderId.channelId;
       ({ isReported, setReported } = senderId);
@@ -338,13 +338,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   v1 = 1;
                   dependencyMap = 1;
                   const obj5 = {
-                    value: tmp4(8312).submitReportForInappropriateConversationSafetyAlert(
+                    value: tmp4(7695).submitReportForInappropriateConversationSafetyAlert(
                       lastChannelMessage,
                       () => {
                         dependencyMap(true);
                         const designSystemsNotificationComponents =
-                          closure_0(4580).getDesignSystemsNotificationComponents("TakeActionScreen");
-                        const obj2 = c1(4574);
+                          closure_0(4772).getDesignSystemsNotificationComponents("TakeActionScreen");
+                        const obj2 = c1(4766);
                         if (designSystemsNotificationComponents) {
                           const obj3 = { text: null, variant: "success" };
                           const intl2 = closure_0(1126).intl;
@@ -360,16 +360,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           };
                           const intl = closure_0(1126).intl;
                           obj4.content = intl.string(closure_0(1126).t.gn2c6X);
-                          obj4.IconComponent = closure_0(4798).CircleCheckIcon;
+                          obj4.IconComponent = closure_0(4992).CircleCheckIcon;
                           obj4.iconColor = iconColor;
                           obj4.containerStyle = toastContainer.toastContainer;
                           obj2.open(obj4);
                         }
-                        const obj = closure_0(4580);
+                        const obj = closure_0(4772);
                       },
                       () => {
                         const intl = closure_1_0(1126).intl;
-                        closure_1_0(4573).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
+                        closure_1_0(4765).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
                       },
                     ),
                     done: false,
@@ -383,9 +383,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 throw value;
               } else if (arg0 !== 2) {
                 closure_128_6(false);
-                const result = v1(8113).showReportSuccessToast(closure_128_0, closure_128_1);
-                closure_128_3(tmp4(9811).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
-                let obj = v1(8113);
+                const result = v1(7014).showReportSuccessToast(closure_128_0, closure_128_1);
+                closure_128_3(tmp4(10374).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+                let obj = v1(7014);
               }
               dependencyMap = 3;
               const obj6 = { value, done: true };

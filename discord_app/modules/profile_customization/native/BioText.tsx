@@ -10,10 +10,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const Pressable = fn(17).Pressable;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const CHANGELOG_URL = fn(2102).CHANGELOG_URL;
+const CHANGELOG_URL = fn(2114).CHANGELOG_URL;
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({
   text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 },
   span: {
@@ -35,17 +35,17 @@ let closure_10 = createStyles.createStyles({
 });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function LinkButton(arg0) {
       const cResult = c.c(8);
       ({ lineClamp, text } = arg0);
       const tmp4 = closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function c() {
+        function handlePress() {
           LinkingDefault.openURL(target);
           AnalyticsUtilsDefault.track(constants.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target });
-        };
-        cResult[0] = fn;
-        let first = fn;
+        }
+        cResult[0] = handlePress;
+        let first = handlePress;
       } else {
         first = cResult[0];
       }
@@ -78,11 +78,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp7;
       tmp6 = tmp7;
     }
-  : (arg0) => {
+  : function LinkButton(arg0) {
       ({ lineClamp, text } = arg0);
       const tmp = closure_10();
       let obj = {
-        onPress() {
+        onPress: function handlePress() {
           LinkingDefault.openURL(target);
           AnalyticsUtilsDefault.track(constants.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target });
         },
@@ -100,7 +100,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/BioText.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BioText(arg0) {
       const cResult = lineClamp(576).c(26);
       ({ placeholder, bio, lineClamp } = arg0);
       ({ userId, textVariant } = arg0);
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj4 = { variant: str, color: str3, lineClamp, style: tmp4.span, children: tmp20 };
-                const tmp24 = closure_8(lineClamp(4892).Text, obj4, "changelog-cta");
+                const tmp24 = closure_8(lineClamp(5086).Text, obj4, "changelog-cta");
                 cResult[11] = lineClamp;
                 cResult[12] = tmp4.span;
                 cResult[13] = str3;
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { variant: str, color: str4, lineClamp, style: tmp4.text, children: null };
           const items1 = [tmp15, "\n"];
           obj5.children = items1;
-          const tmp19 = closure_7(lineClamp(4892).Text, obj5, "changelog-bio");
+          const tmp19 = closure_7(lineClamp(5086).Text, obj5, "changelog-bio");
           cResult[4] = lineClamp;
           cResult[5] = tmp4.text;
           cResult[6] = str4;
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj6 = { variant: str, color: str2, lineClamp, style: tmp4.text, children: tmp5 };
-          const tmp13 = closure_8(lineClamp(4892).Text, obj6);
+          const tmp13 = closure_8(lineClamp(5086).Text, obj6);
           cResult[20] = lineClamp;
           cResult[21] = tmp4.text;
           cResult[22] = str2;
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = lineClamp(576);
       const obj7 = { linkVariant: str, textVariant: str, customEmojiOffsetY: null };
-      const tmpResult = lineClamp(8971);
+      const tmpResult = lineClamp(11225);
       let num;
       if (tmpResult2.isAndroid()) {
         num = 3;
@@ -251,9 +251,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = str;
       cResult[2] = parseBioReactResult;
       tmp5 = parseBioReactResult;
-      tmpResult2 = lineClamp(1369);
+      tmpResult2 = lineClamp(1381);
     }
-  : (lineClamp) => {
+  : function BioText(lineClamp) {
       ({ placeholder, bio } = lineClamp);
       lineClamp = lineClamp.lineClamp;
       ({ userId, textVariant } = lineClamp);

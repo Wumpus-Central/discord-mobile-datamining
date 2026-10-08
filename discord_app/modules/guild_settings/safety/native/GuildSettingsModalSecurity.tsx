@@ -9,12 +9,12 @@ import GuildSettingsStore from "../../GuildSettingsStore.tsx";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(2070).isGuildOwnerWithRequiredMfaLevel;
+let closure_6 = fn(2082).isGuildOwnerWithRequiredMfaLevel;
 const Constants = fn(1085);
 ({ GuildFeatures: c10, MFALevels: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   wrapper: { flex: 1, justifyContent: "space-between", paddingTop: 99 },
   center: {
@@ -38,7 +38,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalSecurity.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildSettingsModalSecurity(guildId) {
       const cResult = guildId(576).c(51);
       guildId = guildId.guildId;
       const contentContainerStyle = guildId.contentContainerStyle;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[5] === stateFromStores) {
         if (cResult[6] === stateFromStores1) {
           dependencyMap = cResult[7];
-          class M {
+          class D {
             constructor() {
               if (null == closure_1) {
                 return;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let tmp23 = cResult[14];
             }
             const _Symbol = Symbol;
-            class M {
+            class D {
               constructor() {
                 if (null == closure_1) {
                   return;
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
               const string = tmp(1126).intl.string;
-              class M {
+              class D {
                 constructor() {
                   if (null == closure_1) {
                     return;
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[15] = tmp27;
             }
             if (cResult[16] !== tmp4.label) {
-              class M {
+              class D {
                 constructor() {
                   if (null == closure_1) {
                     return;
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return closure_1_9.getProps().mfaLevel;
                 }
               }
-              const tmp30 = closure_12(tmp(4892).Text, {
+              const tmp30 = closure_12(tmp(5086).Text, {
                 style: null,
                 variant: "text-md/medium",
                 color: "mobile-text-heading-primary",
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[18] !== tmp13) {
               const string2 = tmp(1126).intl.string;
-              class M {
+              class D {
                 constructor() {
                   if (null == closure_1) {
                     return;
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[18] = tmp13;
               cResult[19] = tmp32;
             } else {
-              class M {
+              class D {
                 constructor() {
                   if (null == closure_1) {
                     return;
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       if (cResult[26] === tmp36) {
                         let tmp39 = cResult[27];
                       }
-                      class M {
+                      class D {
                         constructor() {
                           if (null == closure_1) {
                             return;
@@ -292,7 +292,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       if (tmp41 !== features2) {
                         if (stateFromStores != null) {
                           const features3 = stateFromStores.features;
-                          class M {
+                          class D {
                             constructor() {
                               if (null == closure_1) {
                                 return;
@@ -311,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             }
                           }
                         }
-                        class M {
+                        class D {
                           constructor() {
                             if (null == closure_1) {
                               return;
@@ -351,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               let tmp47 = cResult[34];
                             }
                             if (cResult[35] !== tmp4.image) {
-                              class M {
+                              class D {
                                 constructor() {
                                   if (null == closure_1) {
                                     return;
@@ -374,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   return closure_1_9.getProps().mfaLevel;
                                 }
                               }
-                              tmp54[0] = stateFromStores(14594);
+                              tmp54[0] = stateFromStores(14855);
                               tmp54[1] = tmp4.image;
                               const tmp55 = closure_12(closure_5, tmp54);
                               cResult[35] = tmp4.image;
@@ -383,7 +383,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             } else {
                               tmp51 = cResult[36];
                             }
-                            class M {
+                            class D {
                               constructor() {
                                 if (null == closure_1) {
                                   return;
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             }
                             if (tmp56 === Symbol.for("react.memo_cache_sentinel")) {
                               const obj3 = { variant: "text-sm/medium", color: "text-muted", children: null };
-                              class M {
+                              class D {
                                 constructor() {
                                   if (null == closure_1) {
                                     return;
@@ -439,7 +439,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               tmp57 = cResult[37];
                             }
                             if (cResult[38] !== tmp4.infoWrapper) {
-                              class M {
+                              class D {
                                 constructor() {
                                   if (null == closure_1) {
                                     return;
@@ -481,7 +481,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       let tmp70 = cResult[47];
                                     }
                                     const _Symbol2 = Symbol;
-                                    class M {
+                                    class D {
                                       constructor() {
                                         if (null == closure_1) {
                                           return;
@@ -505,7 +505,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       }
                                     }
                                     if (cResult[49] !== tmp70) {
-                                      class M {
+                                      class D {
                                         constructor() {
                                           if (null == closure_1) {
                                             return;
@@ -541,7 +541,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     return tmp73;
                                   }
                                 }
-                                class M {
+                                class D {
                                   constructor() {
                                     if (null == closure_1) {
                                       return;
@@ -598,7 +598,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       cResult[34] = tmp50;
                       tmp47 = tmp50;
                     }
-                    class M {
+                    class D {
                       constructor() {
                         if (null == closure_1) {
                           return;
@@ -631,7 +631,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj8 = { text: cResult[19], disabled: !tmp14, variant: tmp35, onPress: tmp22, shrink: true };
-              const tmp38 = closure_12(tmp(5601).Button, obj8);
+              const tmp38 = closure_12(tmp(5375).Button, obj8);
               cResult[20] = tmp22;
               cResult[21] = cResult[19];
               cResult[22] = !tmp14;
@@ -640,7 +640,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp36 = tmp38;
             }
           }
-          class M {
+          class D {
             constructor() {
               if (null == closure_1) {
                 return;
@@ -669,7 +669,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[14] = tmp24;
           tmp23 = tmp24;
         }
-        class M {
+        class D {
           constructor() {
             if (null == closure_1) {
               return;
@@ -694,8 +694,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[9] = stateFromStores;
         cResult[10] = tmp13;
-        cResult[11] = M;
-        tmp22 = M;
+        cResult[11] = D;
+        tmp22 = D;
       }
       const currentUser = UserStore.getCurrentUser();
       dependencyMap = tmp16;
@@ -710,7 +710,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmp18) {
         if (tmp16) {
           const features = stateFromStores.features;
-          class M {
+          class D {
             constructor() {
               if (null == closure_1) {
                 return;
@@ -729,7 +729,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        class M {
+        class D {
           constructor() {
             if (null == closure_1) {
               return;
@@ -755,7 +755,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = tmp18;
       const tmpResult2 = guildId(504);
     }
-  : (guildId) => {
+  : function GuildSettingsModalSecurity(guildId) {
       guildId = guildId.guildId;
       const tmp = closure_15();
       const items = [GuildStore];
@@ -800,7 +800,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = tmp2(1126).intl;
       obj5.children = intl.string(guildId(1126).t.Wi9LEV);
-      const items4 = [closure_12(guildId(4892).Text, obj5), ,];
+      const items4 = [closure_12(guildId(5086).Text, obj5), ,];
       const obj6 = { style: tmp.button, children: null };
       const intl2 = tmp2(1126).intl;
       const string = intl2.string;
@@ -817,7 +817,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj7.variant = str;
       obj7.onPress = callback;
-      obj6.children = closure_12(guildId(5601).Button, obj7);
+      obj6.children = closure_12(guildId(5375).Button, obj7);
       items4[1] = closure_12(closure_4, obj6);
       let hasItem;
       if (stateFromStores != null) {
@@ -829,7 +829,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
         const intl3 = tmp2(1126).intl;
         obj8.children = intl3.string(tmp2(1126).t["KG1V/E"]);
-        tmp17Result = closure_12(tmp2(4892).Text, obj8);
+        tmp17Result = closure_12(tmp2(5086).Text, obj8);
       }
       const obj9 = { children: null };
       items4[2] = tmp17Result;
@@ -838,18 +838,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj10 = { style: tmp.center, children: null };
       let obj2 = guildId(504);
       const items6 = [
-        closure_12(closure_5, { source: stateFromStores(14594), style: tmp.image, resizeMode: "contain" }),
+        closure_12(closure_5, { source: stateFromStores(14855), style: tmp.image, resizeMode: "contain" }),
       ];
       const obj12 = { style: tmp.infoWrapper, children: null };
       const obj13 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl4 = tmp2(1126).intl;
       obj13.children = intl4.format(guildId(1126).t["FK0+iX"], {});
-      obj12.children = closure_12(guildId(4892).Text, obj13);
+      obj12.children = closure_12(guildId(5086).Text, obj13);
       items6[1] = closure_12(closure_4, obj12);
       obj10.children = items6;
       items5[1] = closure_13(closure_4, obj10);
       obj3.children = items5;
-      const items7 = [closure_13(closure_4, obj3), closure_12(guildId(6543).NavScrim, {})];
+      const items7 = [closure_13(closure_4, obj3), closure_12(guildId(6719).NavScrim, {})];
       obj9.children = items7;
       return closure_13(closure_14, obj9);
     };

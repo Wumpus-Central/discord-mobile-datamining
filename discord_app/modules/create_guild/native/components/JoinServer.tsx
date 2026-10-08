@@ -5,19 +5,19 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const CreateGuildConstants = fn(6475);
+const CreateGuildConstants = fn(6653);
 ({ CreateGuildModalStates: hasOwnProperty, NUXGuildTemplatesAnalytics: metroRequire } = CreateGuildConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(6075).NAV_BAR_HEIGHT } };
+const createStyles = fn(5090);
+let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(6261).NAV_BAR_HEIGHT } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-const obj3 = { marginTop: fn(6075).NAV_BAR_HEIGHT };
+const obj3 = { marginTop: fn(6261).NAV_BAR_HEIGHT };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/create_guild/native/components/JoinServer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (initialRoute) => {
+  ? function JoinServerContainer(initialRoute) {
       const cResult = initialRoute(_location[7]).c(23);
       initialRoute = initialRoute.initialRoute;
       const onClose = initialRoute.onClose;
@@ -42,11 +42,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const layoutEffect = obj2.useLayoutEffect(tmp12, tmp13);
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn2 = function p(arg0) {
+            function handleInviteChange(arg0) {
               closure_4(arg0);
-            };
-            cResult[5] = fn2;
-            let tmp16 = fn2;
+            }
+            cResult[5] = handleInviteChange;
+            let tmp16 = handleInviteChange;
           } else {
             tmp16 = cResult[5];
           }
@@ -85,91 +85,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       const rect = { top: true, left: true, right: true, style: tmp18, children: tmp21 };
                       const tmp27 = navigation(tmp(tmp2[14]).SafeAreaPaddingView, rect);
-                      class V {
-                        constructor() {
-                          str = closure_3.trim();
-                          if ("" !== str) {
-                            tmp3 = closure_6;
-                            flag2 = true;
-                            tmp4 = closure_6(true);
-                            tmp5 = closure_5;
-                            flag3 = false;
-                            tmp6 = closure_5(false);
-                            str2 = "/";
-                            parts = str.split("/");
-                            arr1 = parts.pop();
-                            tmp8 = closure_1;
-                            tmp9 = closure_2;
-                            obj = closure_1(closure_2[11]);
-                            str3 = location;
-                            tmp10 = null;
-                            if (location == null) {
-                              str3 = "Join Guild Modal";
-                            }
-                            invite = obj.resolveInvite(arr1, str3);
-                            nextPromise = invite.then(() => {
-                              closure_1_6(false);
-                            });
-                            tmp12 = closure_7;
-                            tmp13 = CreateGuildModalStates;
-                            obj1 = { code: null };
-                            obj1.code = arr1;
-                            arr2 = closure_7.push(CreateGuildModalStates.ACCEPT_INVITE, obj1);
-                          } else {
-                            tmp = closure_5;
-                            flag = true;
-                            tmp2 = closure_5(true);
-                          }
-                          return;
-                        }
-                      }
+                      cResult[20] = tmp18;
                       cResult[21] = tmp21;
                       cResult[22] = tmp27;
                       tmp25 = tmp27;
                     }
                   }
                 }
-                const obj4 = { inviteString, error: tmp19, submitting: null, onInviteChange: null, onDone: null };
-                class V {
-                  constructor() {
-                    str = closure_3.trim();
-                    if ("" !== str) {
-                      tmp3 = closure_6;
-                      flag2 = true;
-                      tmp4 = closure_6(true);
-                      tmp5 = closure_5;
-                      flag3 = false;
-                      tmp6 = closure_5(false);
-                      str2 = "/";
-                      parts = str.split("/");
-                      arr1 = parts.pop();
-                      tmp8 = closure_1;
-                      tmp9 = closure_2;
-                      obj = closure_1(closure_2[11]);
-                      str3 = location;
-                      tmp10 = null;
-                      if (location == null) {
-                        str3 = "Join Guild Modal";
-                      }
-                      invite = obj.resolveInvite(arr1, str3);
-                      nextPromise = invite.then(() => {
-                        closure_1_6(false);
-                      });
-                      tmp12 = closure_7;
-                      tmp13 = CreateGuildModalStates;
-                      obj1 = { code: null };
-                      obj1.code = arr1;
-                      arr2 = closure_7.push(CreateGuildModalStates.ACCEPT_INVITE, obj1);
-                    } else {
-                      tmp = closure_5;
-                      flag = true;
-                      tmp2 = closure_5(true);
-                    }
-                    return;
-                  }
-                }
-                obj4.onInviteChange = tmp16;
-                obj4.onDone = tmp17;
+                const obj4 = { inviteString, error: tmp19, submitting: tmp10, onInviteChange: tmp16, onDone: tmp17 };
                 const tmp24 = navigation(onClose(tmp2[13]), obj4);
                 cResult[15] = tmp17;
                 cResult[16] = inviteString;
@@ -181,95 +104,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const items = [,];
               ({ flex: arr2[0], contentContainer: arr2[1] } = tmp4);
               cResult[10] = tmp4.contentContainer;
-              class V {
-                constructor() {
-                  str = closure_3.trim();
-                  if ("" !== str) {
-                    tmp3 = closure_6;
-                    flag2 = true;
-                    tmp4 = closure_6(true);
-                    tmp5 = closure_5;
-                    flag3 = false;
-                    tmp6 = closure_5(false);
-                    str2 = "/";
-                    parts = str.split("/");
-                    arr1 = parts.pop();
-                    tmp8 = closure_1;
-                    tmp9 = closure_2;
-                    obj = closure_1(closure_2[11]);
-                    str3 = location;
-                    tmp10 = null;
-                    if (location == null) {
-                      str3 = "Join Guild Modal";
-                    }
-                    invite = obj.resolveInvite(arr1, str3);
-                    nextPromise = invite.then(() => {
-                      closure_1_6(false);
-                    });
-                    tmp12 = closure_7;
-                    tmp13 = CreateGuildModalStates;
-                    obj1 = { code: null };
-                    obj1.code = arr1;
-                    arr2 = closure_7.push(CreateGuildModalStates.ACCEPT_INVITE, obj1);
-                  } else {
-                    tmp = closure_5;
-                    flag = true;
-                    tmp2 = closure_5(true);
-                  }
-                  return;
-                }
-              }
+              cResult[11] = tmp4.flex;
               cResult[12] = items;
               tmp18 = items;
             }
           }
-          class V {
-            constructor() {
-              str = closure_3.trim();
-              if ("" !== str) {
-                tmp3 = closure_6;
-                flag2 = true;
-                tmp4 = closure_6(true);
-                tmp5 = closure_5;
-                flag3 = false;
-                tmp6 = closure_5(false);
-                str2 = "/";
-                parts = str.split("/");
-                arr1 = parts.pop();
-                tmp8 = closure_1;
-                tmp9 = closure_2;
-                obj = closure_1(closure_2[11]);
-                str3 = location;
-                tmp10 = null;
-                if (location == null) {
-                  str3 = "Join Guild Modal";
-                }
-                invite = obj.resolveInvite(arr1, str3);
-                nextPromise = invite.then(() => {
-                  closure_1_6(false);
-                });
-                tmp12 = closure_7;
-                tmp13 = CreateGuildModalStates;
-                obj1 = { code: null };
-                obj1.code = arr1;
-                arr2 = closure_7.push(CreateGuildModalStates.ACCEPT_INVITE, obj1);
-              } else {
-                tmp = closure_5;
-                flag = true;
-                tmp2 = closure_5(true);
+          function handleJoinServer() {
+            const str = first.trim();
+            if ("" !== str) {
+              closure_1_6(true);
+              closure_1_5(false);
+              const parts = str.split("/");
+              const arr = parts.pop();
+              let str3 = _location;
+              if (_location == null) {
+                str3 = "Join Guild Modal";
               }
-              return;
+              const invite = InstantInviteActionCreatorsDefault.resolveInvite(arr, str3);
+              invite.then(() => {
+                closure_1_6(false);
+              });
+              const obj2 = { code: arr };
+              navigation.push(constants.ACCEPT_INVITE, obj2);
+            } else {
+              closure_1_5(true);
             }
           }
           cResult[6] = _location;
           cResult[7] = navigation;
           cResult[8] = inviteString;
-          cResult[9] = V;
-          tmp17 = V;
+          cResult[9] = handleJoinServer;
+          tmp17 = handleJoinServer;
         }
       }
       const fn = function f() {
-        if (initialRoute === hasOwnProperty.JOIN_SERVER) {
+        if (initialRoute === constants.JOIN_SERVER) {
           let headerCloseButton = NavigatorHeader.getHeaderCloseButton(() => {
             initialRoute(_location[10]).trackNUFStep(closure_2_6.STEP_GUILD_JOIN, closure_2_6.STEP_FRIEND_LIST, {
               skip: true,
@@ -292,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = items1;
       tmp12 = fn;
     }
-  : (initialRoute) => {
+  : function JoinServerContainer(initialRoute) {
       initialRoute = initialRoute.initialRoute;
       const onClose = initialRoute.onClose;
       const location = initialRoute.location;
@@ -310,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const navigation = initialRoute(location[8]).useNavigation();
       const items = [navigation, initialRoute, onClose];
       const layoutEffect = noop.useLayoutEffect(() => {
-        if (initialRoute === hasOwnProperty.JOIN_SERVER) {
+        if (initialRoute === constants.JOIN_SERVER) {
           let headerCloseButton = NavigatorHeader.getHeaderCloseButton(() => {
             initialRoute(location[10]).trackNUFStep(constants.STEP_GUILD_JOIN, constants.STEP_FRIEND_LIST, {
               skip: true,
@@ -337,10 +206,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2.error = stringResult;
       obj2.submitting = tmp6[0];
-      obj2.onInviteChange = function onInviteChange(arg0) {
+      obj2.onInviteChange = function handleInviteChange(arg0) {
         closure_4(arg0);
       };
-      obj2.onDone = function onDone() {
+      obj2.onDone = function handleJoinServer() {
         const str = first.trim();
         if ("" !== str) {
           closure_6(true);
@@ -356,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             closure_1_6(false);
           });
           const obj2 = { code: arr };
-          navigation.push(hasOwnProperty.ACCEPT_INVITE, obj2);
+          navigation.push(constants.ACCEPT_INVITE, obj2);
         } else {
           _undefined(true);
         }

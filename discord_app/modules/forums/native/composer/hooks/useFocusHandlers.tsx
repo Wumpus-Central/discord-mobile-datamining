@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/forums/native/composer/hooks/
 
 export { PostComposerInputs };
 export const useFocusHandlers = ReactCompilerGating.isReactCompilerEnabled()
-  ? (titleInput) => {
+  ? function useFocusHandlers(titleInput) {
       const obj = titleInput(contentInput[3]);
       const cResult = obj.c(12);
       titleInput = titleInput.titleInput;
@@ -42,7 +42,7 @@ export const useFocusHandlers = ReactCompilerGating.isReactCompilerEnabled()
               tmp7 = obj2;
             }
           }
-          const fn2 = function b() {
+          function blurLastInput() {
             if (obj.TITLE === first) {
               const current2 = titleInput.current;
               if (current2 != null) {
@@ -54,15 +54,15 @@ export const useFocusHandlers = ReactCompilerGating.isReactCompilerEnabled()
                 current.blur();
               }
             }
-          };
+          }
           cResult[4] = contentInput;
           cResult[5] = focusedInput;
           cResult[6] = titleInput;
-          cResult[7] = fn2;
-          tmp6 = fn2;
+          cResult[7] = blurLastInput;
+          tmp6 = blurLastInput;
         }
       }
-      const fn = function c() {
+      function focusLastInput() {
         if (obj.TITLE === first) {
           const current2 = titleInput.current;
           if (current2 != null) {
@@ -74,14 +74,14 @@ export const useFocusHandlers = ReactCompilerGating.isReactCompilerEnabled()
             current.focus();
           }
         }
-      };
+      }
       cResult[0] = contentInput;
       cResult[1] = focusedInput;
       cResult[2] = titleInput;
-      cResult[3] = fn;
-      tmp5 = fn;
+      cResult[3] = focusLastInput;
+      tmp5 = focusLastInput;
     }
-  : (arg0) => {
+  : function useFocusHandlers(arg0) {
       ({ titleInput: require, contentInput: dependencyMap } = arg0);
       let focusedInput;
       const tmp = focusedInput(noop.useState(obj.TITLE), 2);

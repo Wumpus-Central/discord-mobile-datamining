@@ -17,7 +17,7 @@ export const getIsScreenLandscape = function getIsScreenLandscape() {
   return DimensionsStore.getState().byAppEntry[str].screenIsLandscape;
 };
 export const useIsScreenLandscape = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsScreenLandscape() {
       const cResult = c.c(2);
       const appEntryKey = AppEntryKeyContext.useAppEntryKey();
       if (cResult[0] !== appEntryKey) {
@@ -32,7 +32,7 @@ export const useIsScreenLandscape = ReactCompilerGating.isReactCompilerEnabled()
       }
       return DimensionsStore(tmp3);
     }
-  : () => {
+  : function useIsScreenLandscape() {
       const appEntryKey = AppEntryKeyContext.useAppEntryKey();
       const items = [appEntryKey];
       return DimensionsStore(noop.useCallback((arg0) => arg0.byAppEntry[appEntryKey].screenIsLandscape, items));

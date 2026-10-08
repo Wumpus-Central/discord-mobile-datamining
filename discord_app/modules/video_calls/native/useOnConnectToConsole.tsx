@@ -36,7 +36,7 @@ let result = size.fileFinishedImporting("modules/video_calls/native/useOnConnect
 
 export { onConnectToConsole };
 export const useOnConnectToConsole = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useOnConnectToConsole(arg0, arg1) {
       _require = arg0;
       const twoWayLink = arg1;
       const cResult = require("c").c(3);
@@ -70,7 +70,7 @@ export const useOnConnectToConsole = ReactCompilerGating.isReactCompilerEnabled(
       cResult[2] = fn;
       tmp2 = fn;
     }
-  : (arg0, arg1) => {
+  : function useOnConnectToConsole(arg0, arg1) {
       closure_0 = arg0;
       const twoWayLink = arg1;
       let items = [arg0, arg1];

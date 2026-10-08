@@ -5,7 +5,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const MidjourneyOnboardingConstants = fn(13689);
+const MidjourneyOnboardingConstants = fn(13911);
 ({ MIDJOURNEY_BOT_ID: closure_4, MIDJOURNEY_GUILD_ID: hasOwnProperty } = MidjourneyOnboardingConstants);
 const ReactCompilerGating = fn(558);
 function isMidjourneyOnboardingFlow() {
@@ -36,7 +36,7 @@ const result = size.fileFinishedImporting("modules/midjourney_onboarding/Midjour
 
 export { isMidjourneyOnboardingFlow };
 export const useIsMidjourneyOnboardingFlow = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsMidjourneyOnboardingFlow() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
@@ -68,7 +68,7 @@ export const useIsMidjourneyOnboardingFlow = ReactCompilerGating.isReactCompiler
       }
       return initialize.useStateFromStores(tmp4, tmp5, tmp6);
     }
-  : () => {
+  : function useIsMidjourneyOnboardingFlow() {
       const items = [GuildStore];
       return initialize.useStateFromStores(items, () => {
         guildStore = { guildStore }.guildStore;

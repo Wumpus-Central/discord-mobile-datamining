@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/hooks/useNameplate.tsx");
 
 export const useNameplate = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function useNameplate(user) {
       let nameplate3 = user;
       let nameplate = guildId;
       const cResult = user(guildId[3]).c(7);
@@ -80,7 +80,7 @@ export const useNameplate = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       const obj = user(guildId[3]);
     }
-  : (user) => {
+  : function useNameplate(user) {
       user = user.user;
       const guildId = user.guildId;
       const items = [GuildMemberStore];

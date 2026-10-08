@@ -3,7 +3,7 @@ import LoggerDefault from "../modules/debug/Logger.tsx";
 import initialize from "../../discord_common/js/packages/flux/index.tsx";
 import c from "../../_runtime/00576_c.js";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _mod5427 from "../../_runtime/metro/05427__.js";
+import _mod5736 from "../../_runtime/metro/05736__.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
@@ -13,7 +13,7 @@ function getStripe() {
   if (null != React2) {
     let resolved = Promise.resolve(React2);
   } else {
-    const stripe = _mod5427.loadStripe(constants.STRIPE.KEY);
+    const stripe = _mod5736.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((result) => {
       closure_2 = result;
       return result;
@@ -401,7 +401,7 @@ export const authenticatePaymentIntentForPaymentId = function authenticatePaymen
 };
 export { getStripeElementLocale };
 export const useStripeLocale = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useStripeLocale() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [LocaleStore];
@@ -422,7 +422,7 @@ export const useStripeLocale = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useStripeLocale() {
       const items = [LocaleStore];
       return initialize.useStateFromStores(items, () => {
         locale = locale.locale;

@@ -1,6 +1,6 @@
 // discord_app/modules/intelligence_layer/search/native/useSearchHostSurface.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Link from "../../../../../_runtime/01491_Link.js";
+import Link from "../../../../../_runtime/01503_Link.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import SearchNavigatorConstants from "../../../search/native/components/navigator/SearchNavigatorConstants.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -10,7 +10,7 @@ const SearchNavigatorScreens = SearchNavigatorConstants.SearchNavigatorScreens;
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSearchHostSurface.tsx");
 
 export const useSearchHostSurfaceColor = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSearchHostSurfaceColor() {
       const route = Link.useRoute();
       if (route.name === SearchNavigatorScreens.SEARCH_TABS) {
         let MOBILE_ACTIONSHEET_BACKGROUND = nativeDefault.colors.BACKGROUND_BASE_LOW;
@@ -19,7 +19,7 @@ export const useSearchHostSurfaceColor = ReactCompilerGating.isReactCompilerEnab
       }
       return useToken.useToken(MOBILE_ACTIONSHEET_BACKGROUND);
     }
-  : () => {
+  : function useSearchHostSurfaceColor() {
       const route = Link.useRoute();
       if (route.name === SearchNavigatorScreens.SEARCH_TABS) {
         let MOBILE_ACTIONSHEET_BACKGROUND = nativeDefault.colors.BACKGROUND_BASE_LOW;

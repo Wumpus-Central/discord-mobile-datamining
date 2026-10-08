@@ -1,5 +1,5 @@
 // discord_common/js/packages/design/components/Rive/native/RiveTypes.tsx
-import DataBindByName from "../../../../../../../_runtime/04613_DataBindByName.js";
+import DataBindByName from "../../../../../../../_runtime/04805_DataBindByName.js";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
 const obj = {

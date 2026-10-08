@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProduct.tsx");
 
 export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, includeBundles) => {
+  ? function useFetchCollectiblesProduct(arg0, includeBundles) {
       _require = arg0;
       dependencyMap = includeBundles;
       const cResult = require("c").c(28);
@@ -109,7 +109,7 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
             }
           }
         }
-        tmp20 = tmp21 === tmp(1980).CollectiblesItemType.BUNDLE;
+        tmp20 = tmp21 === tmp(1992).CollectiblesItemType.BUNDLE;
       }
       if (tmp20) {
         class L {
@@ -190,7 +190,7 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
       cResult[16] = E;
       const tmpResult4 = require("useStateFromStores");
     }
-  : (arg0, includeBundles) => {
+  : function useFetchCollectiblesProduct(arg0, includeBundles) {
       _require = arg0;
       dependencyMap = includeBundles;
       let items = [state];
@@ -231,7 +231,7 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
         if (product != null) {
           type = product.type;
         }
-        tmp10 = type === tmp(1980).CollectiblesItemType.BUNDLE;
+        tmp10 = type === tmp(1992).CollectiblesItemType.BUNDLE;
       }
       if (tmp10) {
         tmp10 = 0 === product.items.length;

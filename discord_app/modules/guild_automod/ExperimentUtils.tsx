@@ -7,7 +7,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/guild_automod/ExperimentUtils.tsx");
 
 export const useIsApplicationRuleEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function useIsApplicationRuleEnabled(guildId) {
       const cResult = c.c(4);
       if (cResult[0] !== guildId) {
         const obj2 = { guildId, location: "automod_settings" };
@@ -32,7 +32,7 @@ export const useIsApplicationRuleEnabled = ReactCompilerGating.isReactCompilerEn
       }
       return enabled;
     }
-  : (guildId) => {
+  : function useIsApplicationRuleEnabled(guildId) {
       const AutomodApplicationRules = AutomodExperiment.AutomodApplicationRules;
       let enabled = AutomodApplicationRules.useConfig({ guildId, location: "automod_settings" }).enabled;
       if (!enabled) {

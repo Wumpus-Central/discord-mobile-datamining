@@ -50,7 +50,7 @@ function isChannelSpoilerGated(channel) {
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGetSpoilerGatingChannelId(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -106,7 +106,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useGetSpoilerGatingChannelId(arg0) {
       _require = arg0;
       const items = [ChannelSpoilerAgreeStore, ChannelStore];
       const items1 = [arg0];
@@ -149,7 +149,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsChannelSpoilerGated(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -176,7 +176,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useIsChannelSpoilerGated(arg0) {
       _require = arg0;
       const items = [ChannelSpoilerAgreeStore, ChannelStore];
       const items1 = [arg0];
@@ -193,7 +193,7 @@ export const useGetSpoilerGatingChannelId = tmp2;
 export { isChannelSpoilerGated };
 export const useIsChannelSpoilerGated = tmp3;
 export const useShouldShowSpoilerGateForChannelId = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShouldShowSpoilerGateForChannelId(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -220,7 +220,7 @@ export const useShouldShowSpoilerGateForChannelId = ReactCompilerGating.isReactC
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useShouldShowSpoilerGateForChannelId(arg0) {
       _require = arg0;
       const items = [ChannelStore, ChannelSpoilerAgreeStore];
       const items1 = [arg0];

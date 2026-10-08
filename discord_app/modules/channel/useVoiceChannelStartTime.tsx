@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/useVoiceChannelStartTime.tsx");
 
 export const useStartTime = ReactCompilerGating.isReactCompilerEnabled()
-  ? (type) => {
+  ? function useStartTime(type) {
       _require = type;
       const cResult = require("c").c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -65,7 +65,7 @@ export const useStartTime = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const items1 = [stateFromStores];
-        const fn = function f() {
+        const fn = function h() {
           return stateFromStores.isConnected();
         };
         cResult[3] = items1;
@@ -139,7 +139,7 @@ export const useStartTime = ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = items2;
       const tmpResult2 = require("initialize");
     }
-  : (type) => {
+  : function useStartTime(type) {
       _require = type;
       const items = [VoiceChannelStartTimeStore, closure_4];
       const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({

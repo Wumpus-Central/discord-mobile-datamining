@@ -3,7 +3,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(5630).BOUNTY_CTA_TIMER_MILLISECONDS;
+let closure_4 = fn(5977).BOUNTY_CTA_TIMER_MILLISECONDS;
 const BountyVideoEndMode = {
   END_CARD: "END_CARD",
   END_CARD_WITH_CTA: "END_CARD_WITH_CTA",
@@ -16,7 +16,7 @@ let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/use
 
 export { BountyVideoEndMode };
 export const useBountiesModalTiming = ReactCompilerGating.isReactCompilerEnabled()
-  ? (endMode) => {
+  ? function useBountiesModalTiming(endMode) {
       const cResult = endMode(rewardDurationMs[4]).c(32);
       endMode = endMode.endMode;
       rewardDurationMs = endMode.rewardDurationMs;
@@ -101,11 +101,11 @@ export const useBountiesModalTiming = ReactCompilerGating.isReactCompilerEnabled
                   }
                   const _Symbol = Symbol;
                   if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-                    function oe() {
+                    function ie() {
                       closure_1_11(true);
                     }
-                    cResult[14] = oe;
-                    let tmp21 = oe;
+                    cResult[14] = ie;
+                    let tmp21 = ie;
                   } else {
                     tmp21 = cResult[14];
                   }
@@ -283,7 +283,7 @@ export const useBountiesModalTiming = ReactCompilerGating.isReactCompilerEnabled
       tmp8 = fn;
       const tmp6 = onRewardEarned(onVideoProgress.useState(tmp2), 2);
     }
-  : (endMode) => {
+  : function useBountiesModalTiming(endMode) {
       endMode = endMode.endMode;
       const rewardDurationMs = endMode.rewardDurationMs;
       ({ isCompleted, onRewardEarned } = endMode);

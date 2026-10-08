@@ -7,7 +7,9 @@ const jsx = fn(21).jsx;
 let context = noop.createContext(null);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const useWishlistAnalyticsContext = () => noop.useContext(context);
+function useWishlistAnalyticsContext() {
+  return noop.useContext(context);
+}
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/wishlists/WishlistAnalyticsContext.tsx");
@@ -15,10 +17,10 @@ const result1 = size.fileFinishedImporting("modules/wishlists/WishlistAnalyticsC
 export const WishlistAnalyticsContext = context;
 export { useWishlistAnalyticsContext };
 export const WishlistAnalyticsProvider = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function WishlistAnalyticsProvider(arg0) {
       const cResult = c.c(6);
       ({ newValue, children } = arg0);
-      if (typeof fn === "function") {
+      if (typeof useWishlistAnalyticsContext === "function") {
         context = noop.useContext(context);
         if (cResult[0] === newValue) {
           if (cResult[1] === context) {
@@ -48,9 +50,9 @@ export const WishlistAnalyticsProvider = ReactCompilerGating.isReactCompilerEnab
         throw new TypeError("Trying to call a non-function");
       }
     }
-  : (newValue) => {
+  : function WishlistAnalyticsProvider(newValue) {
       newValue = newValue.newValue;
-      if (typeof fn === "function") {
+      if (typeof useWishlistAnalyticsContext === "function") {
         const obj = {};
         const merged = Object.assign(noop.useContext(context));
         const merged1 = Object.assign(newValue);

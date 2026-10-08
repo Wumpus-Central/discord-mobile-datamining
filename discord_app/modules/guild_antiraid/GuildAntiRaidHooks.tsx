@@ -49,13 +49,13 @@ function getFirstGuildIncidentId(guildId) {
   }
   return null;
 }
-let closure_10 = fn(7697).IncidentAlertModeratorPermissions;
+let closure_10 = fn(8018).IncidentAlertModeratorPermissions;
 const Constants = fn(1085);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_11, GuildFeatures: closure_12 } = Constants);
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useFirstGuildIncidentId() {
       const cResult = stateFromStores1(576).c(11);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -150,7 +150,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp2Result4 = stateFromStores1(573);
     }
-  : () => {
+  : function useFirstGuildIncidentId() {
       const items = [UserStore];
       const stateFromStores = stateFromStores1(573).useStateFromStores(items, () => currentUser.getCurrentUser());
       const obj = stateFromStores1(573);
@@ -171,7 +171,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp16 = tmp15;
           if (null != tmp15) {
             let tmp18 = stateFromStores1;
-            let obj8 = stateFromStores1(7696);
+            let obj8 = stateFromStores1(8017);
             if (obj8.hasDetectedActivity(tmp16)) {
               let obj5 = BigFlagUtilsAll;
               let obj6 = PermissionUtilsAll;
@@ -182,7 +182,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 return nextResult.id;
               }
             } else {
-              let tmp18Result = tmp18(7696);
+              let tmp18Result = tmp18(8017);
             }
           }
         }
@@ -192,7 +192,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGuildIncidentsState(arg0) {
       _require = arg0;
       const cResult = require("c").c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -203,7 +203,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function o() {
+        const fn = function u() {
           guild = GuildStore.getGuild(closure_0);
           if (null == guild) {
             return false;
@@ -250,8 +250,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] !== stateFromStores1) {
         let isUnderLockdownResult = null != stateFromStores1;
         if (isUnderLockdownResult) {
-          isUnderLockdownResult = tmp(7696).isUnderLockdown(stateFromStores1);
-          const tmpResult4 = tmp(7696);
+          isUnderLockdownResult = tmp(8017).isUnderLockdown(stateFromStores1);
+          const tmpResult4 = tmp(8017);
         }
         cResult[6] = stateFromStores1;
         cResult[7] = isUnderLockdownResult;
@@ -279,7 +279,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp16 = obj2;
       const tmpResult3 = require("useStateFromStores");
     }
-  : (arg0) => {
+  : function useGuildIncidentsState(arg0) {
       _require = arg0;
       const items = [GuildStore, PermissionStore];
       const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
@@ -312,15 +312,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       };
       let isUnderLockdownResult = null != stateFromStores1;
       if (isUnderLockdownResult) {
-        isUnderLockdownResult = tmp(7696).isUnderLockdown(stateFromStores1);
-        const tmpResult = tmp(7696);
+        isUnderLockdownResult = tmp(8017).isUnderLockdown(stateFromStores1);
+        const tmpResult = tmp(8017);
       }
       obj3.isUnderLockdown = isUnderLockdownResult;
       return obj3;
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useDisabledActions(id) {
       const cResult = id(576).c(13);
       id = undefined;
       if (id != null) {
@@ -433,7 +433,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = id(573);
     }
-  : (id) => {
+  : function useDisabledActions(id) {
       id = undefined;
       if (id != null) {
         id = id.id;
@@ -567,7 +567,7 @@ export const getDisabledActions = function getDisabledActions(id) {
 };
 export const useDisabledActions = tmp5;
 export const useShowAntiRaidInGuildNotifSettings = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShowAntiRaidInGuildNotifSettings(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -578,7 +578,7 @@ export const useShowAntiRaidInGuildNotifSettings = ReactCompilerGating.isReactCo
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function o() {
+        const fn = function u() {
           guild = GuildStore.getGuild(closure_0);
           return GuildAntiRaidPermissionsUtils.canReportRaid(guild, PermissionStore);
         };
@@ -591,7 +591,7 @@ export const useShowAntiRaidInGuildNotifSettings = ReactCompilerGating.isReactCo
       const obj = require("c");
       return require("useStateFromStores").useStateFromStores(first, tmp7);
     }
-  : (arg0) => {
+  : function useShowAntiRaidInGuildNotifSettings(arg0) {
       _require = arg0;
       const items = [PermissionStore, GuildStore];
       return require("useStateFromStores").useStateFromStores(items, () => {

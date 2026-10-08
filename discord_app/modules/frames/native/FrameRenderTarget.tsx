@@ -3,14 +3,14 @@ import c from "../../../../_runtime/00576_c.js";
 import useFramePoolBorrowDefault from "useFramePoolBorrow.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const WebView = WebViewTarget(7983);
+const WebView = WebViewTarget(7511);
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ target: { flex: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useMemoizedPresentation(arg0) {
       const cResult = c.c(4);
       ({ layoutMode, portraitSafeAreasConfig, landscapeSafeAreasConfig } = arg0);
       if (cResult[0] === landscapeSafeAreasConfig) {
@@ -28,7 +28,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = obj2;
       tmp2 = obj2;
     }
-  : (layoutMode) => {
+  : function useMemoizedPresentation(layoutMode) {
       layoutMode = layoutMode.layoutMode;
       const portraitSafeAreasConfig = layoutMode.portraitSafeAreasConfig;
       const landscapeSafeAreasConfig = layoutMode.landscapeSafeAreasConfig;
@@ -40,7 +40,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FrameRenderTarget.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FrameRenderTarget(arg0) {
       let WebViewTarget = require;
       let tmp = dependencyMap;
       const cResult = c.c(4);
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp4 = useFramePoolBorrowDefault(frameId, level, closure_6(presentation));
     }
-  : (arg0) => {
+  : function FrameRenderTarget(arg0) {
       ({ frameId, level, presentation } = arg0);
       const tmp = closure_5();
       const tmp2 = closure_6(presentation);

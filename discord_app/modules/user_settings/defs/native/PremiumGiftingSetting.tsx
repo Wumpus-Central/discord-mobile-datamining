@@ -13,7 +13,7 @@ const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCanNavigateToPaymentSetting() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t() {
@@ -32,8 +32,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      noop.useCallback(() => {
+  : function useCanNavigateToPaymentSetting() {
+      return noop.useCallback(() => {
         const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
         let flag = !isPaymentsBlocked;
         if (isPaymentsBlocked) {
@@ -42,9 +42,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return flag;
       }, []);
-const SettingBuilders = fn(11142);
+    };
+const SettingBuilders = fn(11262);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function usePremiumGiftingSettingTrailing() {
       const cResult = c.c(2);
       const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
       if (cResult[0] !== unseenOutboundPromotions.length) {
@@ -58,7 +59,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : () => {
+  : function usePremiumGiftingSettingTrailing() {
       const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
       return jsx(native.Badge, { value: unseenOutboundPromotions.length });
     };
@@ -68,13 +69,13 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(10779).GiftIcon,
+  IconComponent: fn(11561).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },
   usePreNavigationAction: tmp2,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function usePremiumGiftingSettingTrailing() {
         const cResult = c.c(2);
         const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
         if (cResult[0] !== unseenOutboundPromotions.length) {
@@ -88,7 +89,7 @@ const route = SettingBuilders.createRoute({
         }
         return tmp4;
       }
-    : () => {
+    : function usePremiumGiftingSettingTrailing() {
         const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
         return jsx(native.Badge, { value: unseenOutboundPromotions.length });
       },

@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import themes from "../../../design/utils/shared/themes.tsx";
 import useTheme from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -11,18 +11,18 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   const obj2 = { wrapper: null, cloudsImage: null, cloudsImageLight: null, gradient: null, solidBackground: null };
-  const merged1 = Object.assign(arg0 ? { top: "r" } : { bottom: "r" });
+  const merged1 = Object.assign(arg0 ? { top: "create" } : { bottom: "create" });
   obj.height = 380;
   obj.zIndex = 1;
   obj2.wrapper = obj;
   const obj3 = {};
   const merged2 = Object.assign(absoluteFillObject.absoluteFillObject);
-  const merged3 = Object.assign(arg0 ? { top: "r" } : { bottom: "r" });
+  const merged3 = Object.assign(arg0 ? { top: "create" } : { bottom: "create" });
   if (arg0) {
     let obj4 = {};
   } else {
@@ -54,7 +54,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestModalContentCloudBackground.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function QuestModalContentCloudBackground(arg0) {
       const cResult = c.c(21);
       ({ align, style, imgStyle, resizeMode } = arg0);
       solidBackground = "bottom";
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[11] === tmp16) {
                     let tmp17 = cResult[12];
                   }
-                  const tmp18Result = importDefault(tmp6 ? 14947 : 14948);
+                  const tmp18Result = importDefault(tmp6 ? 15209 : 15210);
                   if (cResult[13] === str) {
                     if (cResult[14] === tmp17) {
                       if (cResult[15] === tmp18Result) {
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = items2;
       const tmpResult = useTheme;
     }
-  : (align) => {
+  : function QuestModalContentCloudBackground(align) {
       align = align.align;
       let str = "bottom";
       if (undefined !== align) {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { style: null, source: null, resizeMode: null };
         const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
         obj6.style = items2;
-        obj6.source = importDefault(isThemeDarkResult ? 14947 : 14948);
+        obj6.source = importDefault(isThemeDarkResult ? 15209 : 15210);
         obj6.resizeMode = str2;
         items1[1] = hasOwnProperty(FastImageDefault, obj6);
         obj3.children = items1;

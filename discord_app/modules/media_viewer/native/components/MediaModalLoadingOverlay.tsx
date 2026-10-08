@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ActivityIndicator: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { loader: null, loaderIndicator: null, loaderText: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting("modules/media_viewer/native/component
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function MediaModalLoadingOverlay(arg0) {
         let stringResult = dependencyMap;
         const cResult = c.c(11);
         ({ style, status, progress } = arg0);
@@ -104,7 +104,7 @@ export default noop.memo(
         cResult[2] = items2;
         tmp4 = items2;
       }
-    : (progress) => {
+    : function MediaModalLoadingOverlay(progress) {
         progress = progress.progress;
         ({ style, status } = progress);
         const tmp = closure_7();

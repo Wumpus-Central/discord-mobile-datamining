@@ -3,12 +3,12 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
-import _modDef17360 from "../../../../../_runtime/metro/17360__.js";
+import _modDef17641 from "../../../../../_runtime/metro/17641__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null, icon: null };
 let size = {
   alignItems: "center",
@@ -27,12 +27,12 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelLockedIcon.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function VoicePanelLockedIcon() {
       const cResult = c.c(5);
       const tmp4 = closure_4();
       if (cResult[0] !== tmp4.icon) {
-        const obj2 = { style: tmp4.icon, source: _modDef17360, size: native.IconSizes.LARGE };
-        const tmp8 = jsx(native.Icon, { style: tmp4.icon, source: _modDef17360, size: native.IconSizes.LARGE });
+        const obj2 = { style: tmp4.icon, source: _modDef17641, size: native.IconSizes.LARGE };
+        const tmp8 = jsx(native.Icon, { style: tmp4.icon, source: _modDef17641, size: native.IconSizes.LARGE });
         cResult[0] = tmp4.icon;
         cResult[1] = tmp8;
         let tmp5 = tmp8;
@@ -52,9 +52,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const obj3 = { style: tmp4.container, children: tmp5 };
     }
-  : () => {
+  : function VoicePanelLockedIcon() {
       const tmp = closure_4();
       const obj = { style: tmp.container, children: null };
-      obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef17360, size: native.IconSizes.LARGE });
+      obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef17641, size: native.IconSizes.LARGE });
       return <tmp2 style={tmp.container}>{null}</tmp2>;
     };

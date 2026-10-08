@@ -9,13 +9,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(8738);
+const FramesConstants = fn(10613);
 ({
   asLaunched: hasOwnProperty,
   FrameLayoutModes: metroRequire,
   getPipOrientationLockStateForFrame: closure_7,
 } = FramesConstants);
-const portraitSafeAreasConfig = fn(17200).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+const portraitSafeAreasConfig = fn(17481).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -23,12 +23,12 @@ const result = size.fileFinishedImporting("modules/frames/panel/native/FramePane
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function FramePanelPIPView(arg0) {
         const cResult = c.c(13);
         ({ transitionState, transitionCleanUp } = arg0);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [FramesStore];
-          const fn = function f() {
+          const fn = function u() {
             return closure_1_5(mainFrame.getMainFrame());
           };
           cResult[0] = items;
@@ -110,7 +110,7 @@ export default noop.memo(
         tmp12 = tmp13;
         const tmpResult2 = ActivityPanelPIPView;
       }
-    : (transitionState) => {
+    : function FramePanelPIPView(transitionState) {
         transitionState = transitionState.transitionState;
         const transitionCleanUp = transitionState.transitionCleanUp;
         let stateFromStores;

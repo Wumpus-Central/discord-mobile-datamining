@@ -7,11 +7,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const lineClamp = fn(12493).NOTIFICATION_PREVIEW_LINE_CLAMP;
+const lineClamp = fn(12589).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const Constants = fn(1085);
 ({ InAppNotificationTypes: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { iconContainer: null };
 let size = {
   width: 48,
@@ -29,14 +29,14 @@ const result = size.fileFinishedImporting("modules/in_app_notifications/native/R
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (notification) => {
+    ? function RestrictedHoursWarningNotification(notification) {
         const cResult = type(576).c(15);
         notification = notification.notification;
         const tmp4 = closure_9();
         type = notification.type;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           let obj2 = { size: "sm", color: nativeDefault.colors.WHITE };
-          const tmp8 = jsx(tmp(12559).ThemeDarkIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+          const tmp8 = jsx(tmp(12690).ThemeDarkIcon, { size: "sm", color: nativeDefault.colors.WHITE });
           cResult[0] = tmp8;
           let first = tmp8;
         } else {
@@ -60,73 +60,136 @@ export default noop.memo(
           tmp13 = cResult[4];
         }
         if (cResult[5] !== type) {
-          const fn = function b() {
-            if (type === constants.RESTRICTED_SCHEDULE_UPDATED) {
-              ModalActionCreatorsDefault.popAll();
-              InAppNotificationActionCreatorsDefault.clearNotification();
+          class N {
+            constructor() {
+              if (type === InAppNotificationTypes.RESTRICTED_SCHEDULE_UPDATED) {
+                tmp = closure_1;
+                tmp2 = closure_2;
+                obj = closure_1(closure_2[10]);
+                popAllResult = obj.popAll();
+                obj2 = closure_1(closure_2[11]);
+                clearNotificationResult = obj2.clearNotification();
+              }
+              obj3 = closure_0(closure_2[12]);
+              obj1 = { screen: UserSettingsSections.FAMILY_CENTER };
+              openUserSettingsResult = obj3.openUserSettings(obj1);
+              return;
             }
-            openUserSettings.openUserSettings({ screen: constants2.FAMILY_CENTER });
-            const obj4 = { screen: constants2.FAMILY_CENTER };
-          };
+          }
           cResult[5] = type;
-          cResult[6] = fn;
-          let tmp14 = fn;
+          cResult[6] = N;
         } else {
-          tmp14 = cResult[6];
+          class N {
+            constructor() {
+              if (type === InAppNotificationTypes.RESTRICTED_SCHEDULE_UPDATED) {
+                tmp = closure_1;
+                tmp2 = closure_2;
+                obj = closure_1(closure_2[10]);
+                popAllResult = obj.popAll();
+                obj2 = closure_1(closure_2[11]);
+                clearNotificationResult = obj2.clearNotification();
+              }
+              obj3 = closure_0(closure_2[12]);
+              obj1 = { screen: UserSettingsSections.FAMILY_CENTER };
+              openUserSettingsResult = obj3.openUserSettings(obj1);
+              return;
+            }
+          }
         }
         if (cResult[7] !== notification.subtitle) {
+          class N {
+            constructor() {
+              if (type === InAppNotificationTypes.RESTRICTED_SCHEDULE_UPDATED) {
+                tmp = closure_1;
+                tmp2 = closure_2;
+                obj = closure_1(closure_2[10]);
+                popAllResult = obj.popAll();
+                obj2 = closure_1(closure_2[11]);
+                clearNotificationResult = obj2.clearNotification();
+              }
+              obj3 = closure_0(closure_2[12]);
+              obj1 = { screen: UserSettingsSections.FAMILY_CENTER };
+              openUserSettingsResult = obj3.openUserSettings(obj1);
+              return;
+            }
+          }
           const obj5 = {
             variant: "redesign/message-preview/medium",
             color: "text-subtle",
             lineClamp,
             children: notification.subtitle,
           };
-          const tmp18 = jsx(tmp(4892).Text, {
+          const tmp17 = jsx(tmp(5086).Text, {
             variant: "redesign/message-preview/medium",
             color: "text-subtle",
             lineClamp,
             children: notification.subtitle,
           });
           cResult[7] = notification.subtitle;
-          cResult[8] = tmp18;
-          let tmp15 = tmp18;
+          cResult[8] = tmp17;
         } else {
-          tmp15 = cResult[8];
-        }
-        if (cResult[9] === tmp13) {
-          if (cResult[10] === tmp9) {
-            if (cResult[11] === notification) {
-              if (cResult[12] === tmp14) {
-                if (cResult[13] === tmp15) {
-                  let tmp19 = cResult[14];
-                }
-                return tmp19;
+          class N {
+            constructor() {
+              if (type === InAppNotificationTypes.RESTRICTED_SCHEDULE_UPDATED) {
+                tmp = closure_1;
+                tmp2 = closure_2;
+                obj = closure_1(closure_2[10]);
+                popAllResult = obj.popAll();
+                obj2 = closure_1(closure_2[11]);
+                clearNotificationResult = obj2.clearNotification();
               }
+              obj3 = closure_0(closure_2[12]);
+              obj1 = { screen: UserSettingsSections.FAMILY_CENTER };
+              openUserSettingsResult = obj3.openUserSettings(obj1);
+              return;
             }
           }
         }
-        const tmp20 = jsx(type(12531).NotificationPressable, {
-          icon: tmp9,
-          header: tmp13,
-          children: tmp15,
-          onPress: tmp14,
-          notification,
-        });
+        if (cResult[9] === tmp13) {
+          class N {
+            constructor() {
+              if (type === InAppNotificationTypes.RESTRICTED_SCHEDULE_UPDATED) {
+                tmp = closure_1;
+                tmp2 = closure_2;
+                obj = closure_1(closure_2[10]);
+                popAllResult = obj.popAll();
+                obj2 = closure_1(closure_2[11]);
+                clearNotificationResult = obj2.clearNotification();
+              }
+              obj3 = closure_0(closure_2[12]);
+              obj1 = { screen: UserSettingsSections.FAMILY_CENTER };
+              openUserSettingsResult = obj3.openUserSettings(obj1);
+              return;
+            }
+          }
+        }
+        let obj = type(576);
         cResult[9] = tmp13;
         cResult[10] = tmp9;
         cResult[11] = notification;
-        cResult[12] = tmp14;
+        cResult[12] = N;
         cResult[13] = tmp15;
-        cResult[14] = tmp20;
-        tmp19 = tmp20;
-        let obj = type(576);
+        cResult[14] = jsx(type(12627).NotificationPressable, {
+          icon: tmp9,
+          header: tmp13,
+          children: tmp15,
+          onPress: N,
+          notification,
+        });
+        const tmp18 = jsx(type(12627).NotificationPressable, {
+          icon: tmp9,
+          header: tmp13,
+          children: tmp15,
+          onPress: N,
+          notification,
+        });
       }
-    : (notification) => {
+    : function RestrictedHoursWarningNotification(notification) {
         notification = notification.notification;
         const type = notification.type;
         let obj = {
           style: closure_9().iconContainer,
-          children: jsx(notification(12559).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE }),
+          children: jsx(notification(12690).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE }),
         };
         const items = [notification.title];
         let obj2 = { size: "sm", color: type(587).colors.WHITE };
@@ -143,11 +206,11 @@ export default noop.memo(
         let obj3 = {
           icon: (
             <View style={closure_9().iconContainer}>
-              {jsx(notification(12559).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}
+              {jsx(notification(12690).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}
             </View>
           ),
           header: memo,
-          children: jsx(notification(4892).Text, {
+          children: jsx(notification(5086).Text, {
             variant: "redesign/message-preview/medium",
             color: "text-subtle",
             lineClamp,
@@ -156,14 +219,14 @@ export default noop.memo(
           onPress: callback,
           notification,
         };
-        return jsx(notification(12531).NotificationPressable, {
+        return jsx(notification(12627).NotificationPressable, {
           icon: (
             <View style={closure_9().iconContainer}>
-              {jsx(notification(12559).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}
+              {jsx(notification(12690).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}
             </View>
           ),
           header: memo,
-          children: jsx(notification(4892).Text, {
+          children: jsx(notification(5086).Text, {
             variant: "redesign/message-preview/medium",
             color: "text-subtle",
             lineClamp,

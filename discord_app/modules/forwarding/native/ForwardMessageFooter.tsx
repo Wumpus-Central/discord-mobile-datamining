@@ -5,14 +5,14 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import DraftStore from "../../../stores/DraftStore.tsx";
 
 const require = fn;
-const DraftType = fn(7044).DraftType;
+const DraftType = fn(7232).DraftType;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/native/ForwardMessageFooter.tsx");
 
 export const ForwardMessageFooter = ReactCompilerGating.isReactCompilerEnabled()
-  ? (message) => {
+  ? function ForwardMessageFooter(message) {
       const cResult = message(trackForwardEditContextMessageOnce[5]).c(42);
       message = message.message;
       ({ forwardOptions, sendLabel, selectedDestinations, isSending, onSend } = message);
@@ -360,7 +360,7 @@ export const ForwardMessageFooter = ReactCompilerGating.isReactCompilerEnabled()
       obj5 = noop;
       const tmpResult = message(trackForwardEditContextMessageOnce[8]);
     }
-  : (message) => {
+  : function ForwardMessageFooter(message) {
       message = message.message;
       ({ selectedDestinations, isSending, onSend } = message);
       let trackForwardEditContextMessageOnce;

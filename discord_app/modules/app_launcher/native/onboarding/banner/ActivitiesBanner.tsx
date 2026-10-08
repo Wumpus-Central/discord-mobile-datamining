@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/ActivitiesBanner.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (context) => {
+  ? function ActivitiesBanner(context) {
       let tmp2 = dependencyMap;
       const cResult = c.c(10);
       context = context.context;
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp9;
       const tmp5 = _slicedToArray(useActivityApplications.useActivityApplications(tmp4), 2);
     }
-  : (context) => {
+  : function ActivitiesBanner(context) {
       const obj2 = { guildId: context.context.channel.guild_id, fetchesShelf: false };
       [tmp4, tmp5] = useActivityApplications.useActivityApplications({
         guildId: context.context.channel.guild_id,

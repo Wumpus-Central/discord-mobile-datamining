@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import Link from "../../../../../_runtime/01491_Link.js";
+import Link from "../../../../../_runtime/01503_Link.js";
 import RootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -28,11 +28,11 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(10666).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(9829).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(9581).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(10392).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { paddingHorizontal: 16, paddingVertical: 24 },
   section: { marginBottom: 24 },
@@ -46,7 +46,7 @@ obj2.warningIcon = size;
 let closure_19 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (text) => {
+  ? function WarningLabel(text) {
       const cResult = c.c(8);
       text = text.text;
       const tmp4 = closure_19();
@@ -86,7 +86,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp13;
       tmp12 = tmp13;
     }
-  : (children) => {
+  : function WarningLabel(children) {
       const tmp = closure_19();
       const obj = { style: tmp.warningContainer, children: null };
       const items = [
@@ -102,11 +102,11 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (application) => {
+  ? function AuthorizedAppTwoWay(application) {
       const cResult = navigation(576).c(7);
       application = application.application;
       const obj = navigation(576);
-      navigation = navigation(1490).useNavigation();
+      navigation = navigation(1502).useNavigation();
       if (cResult[0] !== navigation) {
         const fn = function t() {
           const CommonActions = Link.CommonActions;
@@ -142,12 +142,12 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp5;
       cResult[4] = formatResult;
       tmp6 = formatResult;
-      const obj2 = navigation(1490);
+      const obj2 = navigation(1502);
       const obj4 = { applicationName: application.name, onConnectionPress: tmp5 };
     }
-  : (application) => {
+  : function AuthorizedAppTwoWay(application) {
       let navigation;
-      navigation = navigation(1490).useNavigation();
+      navigation = navigation(1502).useNavigation();
       const items = [navigation];
       const obj2 = { text: null };
       const callback = noop.useCallback(() => {
@@ -163,7 +163,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (application) => {
+  ? function ParentApp(application) {
       const cResult = c.c(4);
       application = application.application;
       if (cResult[0] !== application.name) {
@@ -187,7 +187,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : (application) => {
+  : function ParentApp(application) {
       const obj = { text: null };
       const intl = util.intl;
       obj.text = intl.format(util.t.j4B7EW, { applicationName: application.application.name });

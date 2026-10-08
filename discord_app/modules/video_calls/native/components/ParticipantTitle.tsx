@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { usernameText: { fontSize: 14, color: nativeDefault.colors.WHITE } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/ParticipantTitle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ParticipantTitle(arg0) {
       const cResult = c.c(9);
       ({ channel, participant, style } = arg0);
       const tmp4 = closure_4();
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp5 = items;
     }
-  : (arg0) => {
+  : function ParticipantTitle(arg0) {
       ({ channel, participant, style } = arg0);
       const obj = { style: null, numberOfLines: 1, children: getParticipantTitleDefault(channel, participant) };
       const items = [closure_4().usernameText, style];

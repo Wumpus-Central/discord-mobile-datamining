@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_3 = createStyles.createStyles({ crButton: { marginVertical: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const GuildPremiumRoleSubscribeButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPress) => {
+  ? function GuildPremiumRoleSubscribeButton(onPress) {
       const cResult = c.c(4);
       onPress = onPress.onPress;
       const tmp4 = closure_3();
@@ -45,7 +45,7 @@ export const GuildPremiumRoleSubscribeButton = ReactCompilerGating.isReactCompil
       tmp7 = tmp8;
       const obj2 = { text: first, onPress, style: tmp4.crButton, disabled: true };
     }
-  : (onPress) => {
+  : function GuildPremiumRoleSubscribeButton(onPress) {
       const obj = { text: null, onPress: null, style: null, disabled: true };
       const intl = util.intl;
       obj.text = intl.string(util.t.BEeXib);

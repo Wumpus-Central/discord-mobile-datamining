@@ -4,7 +4,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../intl/index.native.tsx";
 import native from "../../design/void/native.tsx";
-import asyncRequireImpl from "../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUnsafeUtils from "../../modules/dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { paddingTop: 24, paddingBottom: 24, paddingLeft: 12, paddingRight: 12 },
   fill: null,
@@ -58,7 +58,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("components_native/reactions/BurstReactionFirstSendActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BurstReactionFirstSendActionSheet(arg0) {
       const cResult = c.c(28);
       ({ emoji, channelId, messageId } = arg0);
       const tmp4 = closure_6();
@@ -200,7 +200,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp9;
       tmp7 = tmp9;
     }
-  : (arg0) => {
+  : function BurstReactionFirstSendActionSheet(arg0) {
       ({ emoji, channelId, messageId } = arg0);
       const tmp = closure_6();
       const obj = getDeviceSpecificString;
@@ -260,7 +260,7 @@ export const openBurstReactionFirstSendActionSheet = function openBurstReactionF
     const tmp4Result = DismissibleContentUnsafeUtils;
     const obj4 = { channelId, messageId, emoji };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(7462, dependencyMap.paths),
+      asyncRequireImpl(7937, dependencyMap.paths),
       "BurstReactionFirstSendActionSheet",
       obj4,
     );

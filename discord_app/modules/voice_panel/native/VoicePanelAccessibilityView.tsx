@@ -6,15 +6,15 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let closure_2 = ["style", "pointerEvents", "nativeID", "accessibilityViewIsModal", "onAccessibilityEscape"];
-const VoicePanelPIPModes = fn(17235).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(17516).VoicePanelPIPModes;
 const jsx = fn(21).jsx;
-let closure_6 = noop.memo(fn(5774).AccessibilityViewAnimated);
+let closure_6 = noop.memo(fn(5357).AccessibilityViewAnimated);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VoicePanelAccessibilityView(arg0) {
       const cResult = c.c(14);
       if (cResult[0] !== arg0) {
         ({ style, pointerEvents, nativeID, accessibilityViewIsModal, onAccessibilityEscape } = arg0);
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       tmpResult = VoicePanelPIPStateContext;
     }
-  : (pointerEvents) => {
+  : function VoicePanelAccessibilityView(pointerEvents) {
       let str = pointerEvents.pointerEvents;
       if (str === undefined) {
         str = "box-none";

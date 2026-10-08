@@ -16,7 +16,7 @@ const MuteSettingType = {
   CATEGORY: 3,
   [3]: "CATEGORY",
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({
   formHintText: { lineHeight: 18, marginBottom: 8, marginTop: 8, paddingHorizontal: 16 },
 });
@@ -25,7 +25,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MutedUntilText(arg0) {
       const obj = c;
       const cResult = obj.c(13);
       ({ muteConfig, type } = arg0);
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp19 = tmp21;
       }
     }
-  : (arg0) => {
+  : function MutedUntilText(arg0) {
       ({ muteConfig, type } = arg0);
       const tmp = closure_4();
       if (null != muteConfig) {
@@ -190,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             );
           };
           obj2.children = intl5.format(N2NXMd, obj3);
-          return jsx(tmp15(4892).Text, {
+          return jsx(tmp15(5086).Text, {
             style: tmp.formHintText,
             variant: "text-sm/medium",
             color: "text-muted",
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return null;
       }
       obj = { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: stringResult };
-      return jsx(tmp3(4892).Text, {
+      return jsx(tmp3(5086).Text, {
         style: tmp.formHintText,
         variant: "text-sm/medium",
         color: "text-muted",

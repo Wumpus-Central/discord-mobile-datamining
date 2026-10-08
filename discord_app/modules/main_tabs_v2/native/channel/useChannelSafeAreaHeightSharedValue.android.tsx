@@ -16,7 +16,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useChannelSafeAreaHeightSharedValue() {
       const tmp = keyboardOpenOrOpening(keyboardOpenedHeight[1])();
       _require = tmp;
       const tmp2 = keyboardOpenOrOpening(keyboardOpenedHeight[2])();
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       fn.__initData = keyboardTypeSharedValue;
       return obj6.useDerivedValue(fn);
     }
-  : () => {
+  : function useChannelSafeAreaHeightSharedValue() {
       const tmp = keyboardOpenOrOpening(keyboardOpenedHeight[1])();
       _require = tmp;
       const tmp2 = keyboardOpenOrOpening(keyboardOpenedHeight[2])();

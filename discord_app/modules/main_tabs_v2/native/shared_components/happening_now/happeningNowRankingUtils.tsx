@@ -7,7 +7,7 @@ import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 const _modDef12 = _mod12;
 
 require = fn;
-const HappeningNowConstants = fn(15129);
+const HappeningNowConstants = fn(15391);
 ({
   HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: hasOwnProperty,
   HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: metroRequire,
@@ -108,7 +108,7 @@ export const filterHappeningNowCards = function filterHappeningNowCards(length) 
 };
 export const sortHappeningNowCards = function sortHappeningNowCards(result) {
   const items = [
-    (kind) => {
+    function bigCardsFirst(kind) {
       switch (kind.kind) {
         case "placeholder":
           let tmp = closure_1_5;
@@ -185,7 +185,7 @@ export const sortHappeningNowCards = function sortHappeningNowCards(result) {
           GlobalUtils.assertNever(kind);
       }
     },
-    (voiceState) => {
+    function containsNonDiscoverableVoiceStates(voiceState) {
       let flag = false;
       if ("voiceState" in voiceState) {
         flag = false;

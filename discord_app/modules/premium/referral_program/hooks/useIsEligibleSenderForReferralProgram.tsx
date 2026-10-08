@@ -12,13 +12,13 @@ const result = size.fileFinishedImporting(
 );
 
 export const useIsEligibleSenderForReferralProgram = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsEligibleSenderForReferralProgram(arg0) {
       const cResult = c.c(2);
       const tmp4 = undefined !== arg0 && arg0;
       const maybeFetchReferralsRemaining = useMaybeFetchReferralsRemaining.useMaybeFetchReferralsRemaining(tmp4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReferralTrialStore];
-        const fn = function l() {
+        const fn = function n() {
           return isEligibleToSendReferrals.getIsEligibleToSendReferrals();
         };
         cResult[0] = items;
@@ -31,7 +31,7 @@ export const useIsEligibleSenderForReferralProgram = ReactCompilerGating.isReact
       const tmpResult = useMaybeFetchReferralsRemaining;
       return initialize.useStateFromStores(tmp6, tmp7);
     }
-  : () => {
+  : function useIsEligibleSenderForReferralProgram() {
       let flag = arg0;
       if (arg0 === undefined) {
         flag = false;

@@ -7,7 +7,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let result = null;
 if (!PlatformUtils.isAndroid()) {
   result = fn(17).requireNativeComponent("DCDMessageLoadingSpinner");
@@ -17,7 +17,7 @@ const size = fn(2);
 const result1 = size.fileFinishedImporting("components_native/common/MessageLoadingSpinner.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (color) => {
+  ? function MessageLoadingSpinner(color) {
       const cResult = c.c(3);
       color = color.color;
       if (color == null) {
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp9;
       obj2 = useToken;
     }
-  : (color) => {
+  : function MessageLoadingSpinner(color) {
       color = color.color;
       if (color == null) {
         color = obj.useToken(nativeDefault.colors.BACKGROUND_BRAND);

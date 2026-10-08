@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     padding: 10,
@@ -18,7 +18,7 @@ let obj2 = {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: fn(5627).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+    backgroundColor: fn(5974).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
   },
   icon: { marginRight: 10 },
   text: { flexShrink: 1 },
@@ -32,13 +32,13 @@ let obj3 = {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  backgroundColor: fn(5627).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+  backgroundColor: fn(5974).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
 };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/PaymentFlowWarningMessage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function PaymentFlowWarningMessage(children) {
       const cResult = c.c(9);
       const tmp4 = closure_6();
       if (cResult[0] !== tmp4.icon) {
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const obj3 = { variant: "text-sm/medium", style: tmp4.text, children: children.message };
     }
-  : (children) => {
+  : function PaymentFlowWarningMessage(children) {
       const tmp = closure_6();
       const obj = { style: tmp.container, children: null };
       const size = { style: tmp.icon, color: nativeDefault.unsafe_rawColors.YELLOW_300, width: 16, height: 16 };

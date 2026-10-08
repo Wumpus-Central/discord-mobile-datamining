@@ -5,7 +5,7 @@ import DispatcherDefault from "../../../../Dispatcher.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2617 from "../../../premium/gifting/GiftingBadge.messages.js";
+import _modDef2661 from "../../../premium/gifting/GiftingBadge.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GiftCodeUtils from "../../../../utils/GiftCodeUtils.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
@@ -16,7 +16,7 @@ import useStoreConnectionErrorAlertDefault from "../../../premium/native/useStor
 import BadgeId from "../../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import BadgeDirectoryActionCreators from "../../../badges/BadgeDirectoryActionCreators.tsx";
 import PremiumFeaturesCards from "PremiumFeaturesCards.tsx";
-import _modDef13382 from "../../../../../_runtime/metro/13382__.js";
+import _modDef13682 from "../../../../../_runtime/metro/13682__.js";
 import OutboundPromotionCardDefault from "../../../../components_native/premium/OutboundPromotionCard.tsx";
 import EntitlementGiftGroupCardDefault from "../../../../components_native/premium/EntitlementGiftGroupCard.tsx";
 import PremiumTierCardDefault from "../../../../components_native/premium/PremiumTierCard.tsx";
@@ -35,28 +35,28 @@ get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ UserSettingsSections: c10, AnalyticsPages: closure_11 } = Constants);
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ PremiumTypes: closure_12, SubscriptionPlans: map1 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(4896);
-let obj = { scrollView: { paddingHorizontal: nativeDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL }, giftingSettingsContainer: { flex: 1 }, inventorySectionWrapper: { flex: 1 }, giftPurchaseSectionWrapper: { flex: 1, paddingTop: 36, paddingBottom: 16 }, emptyGiftLinks: null, emptyImage: null, emptyGiftHeader: null, emptyGiftDescription: null, emptyGiftInformation: null, titleWrapper: null, cardText: null, tierCard: null, giftPurchaseButton: null, buttonWrapper: null, loading: null, warningMargins: null };
+const createStyles = fn(5090);
+let obj2 = { scrollView: { paddingHorizontal: nativeDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL }, giftingSettingsContainer: { flex: 1 }, inventorySectionWrapper: { flex: 1 }, giftPurchaseSectionWrapper: { flex: 1, paddingTop: 36, paddingBottom: 16 }, emptyGiftLinks: null, emptyImage: null, emptyGiftHeader: null, emptyGiftDescription: null, emptyGiftInformation: null, titleWrapper: null, cardText: null, tierCard: null, giftPurchaseButton: null, buttonWrapper: null, loading: null, warningMargins: null };
 let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL };
-obj.emptyGiftLinks = { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 16, borderWidth: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
-obj.emptyImage = { marginRight: 18 };
-obj.emptyGiftHeader = { lineHeight: 20 };
-obj.emptyGiftDescription = { flex: 1 };
-obj.emptyGiftInformation = { marginTop: 8 };
-obj.titleWrapper = { paddingTop: 28, paddingBottom: 8 };
-obj.cardText = { lineHeight: 18 };
-obj.tierCard = { marginTop: 16 };
-obj.giftPurchaseButton = { marginTop: 8, height: 40 };
-obj.buttonWrapper = { marginTop: 16 };
-obj.loading = { marginTop: 32 };
-obj.warningMargins = { marginHorizontal: 16 };
-let closure_17 = createStyles.createStyles(obj);
+obj2.emptyGiftLinks = { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 16, borderWidth: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+obj2.emptyImage = { marginRight: 18 };
+obj2.emptyGiftHeader = { lineHeight: 20 };
+obj2.emptyGiftDescription = { flex: 1 };
+obj2.emptyGiftInformation = { marginTop: 8 };
+obj2.titleWrapper = { paddingTop: 28, paddingBottom: 8 };
+obj2.cardText = { lineHeight: 18 };
+obj2.tierCard = { marginTop: 16 };
+obj2.giftPurchaseButton = { marginTop: 8, height: 40 };
+obj2.buttonWrapper = { marginTop: 16 };
+obj2.loading = { marginTop: 32 };
+obj2.warningMargins = { marginHorizontal: 16 };
+let closure_17 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingSectionTitle(title) {
   const cResult = c.c(2);
   title = title.title;
   if (cResult[0] !== title) {
@@ -69,16 +69,18 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((title) => state(TableRowGroup.TableRowGroupTitle, { title: title.title }));
+}) : (function GiftingSectionTitle(title) {
+  return state(TableRowGroup.TableRowGroupTitle, { title: title.title });
+});
 ReactCompilerGating = fn(558);
 let obj4 = { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 16, borderWidth: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/UserSettingsPremiumGifting.tsx");
 
-export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((recipientUserId, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsPremiumGifting(recipientUserId) {
   const cResult = recipientUserId(576).c(93);
   recipientUserId = recipientUserId.recipientUserId;
-  const analyticsLocation = recipientUserId.analyticsLocation;
+  ({ analyticsLocation, ref } = recipientUserId);
   if (cResult[0] !== analyticsLocation) {
     let tmp5 = analyticsLocation;
     if (undefined === analyticsLocation) {
@@ -96,7 +98,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   dependencyMap = tmp7;
   useStoreConnectionErrorAlertDefault();
   let obj = recipientUserId(576);
-  const navigation = recipientUserId(1490).useNavigation();
+  const navigation = recipientUserId(1502).useNavigation();
   const bottom = useSafeAreaInsetsDefault().bottom;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [enabled];
@@ -113,60 +115,90 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     tmp10 = cResult[2];
     tmp11 = cResult[3];
   }
-  let tmpResult = recipientUserId(1490);
+  let tmpResult = recipientUserId(1502);
   const stateFromStoresArray = recipientUserId(504).useStateFromStoresArray(tmp10, tmp11);
   if (cResult[4] !== stateFromStoresArray) {
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const fn = function w(skuId) {
-        return recipientUserId(closure_2[17]).makeComboId(skuId.skuId, skuId.subscriptionPlanId, skuId.giftStyle);
-      };
-      cResult[6] = fn;
+      class W {
+        constructor(arg0) {
+          obj = recipientUserId(closure_2[17]);
+          return obj.makeComboId(recipientUserId.skuId, recipientUserId.subscriptionPlanId, recipientUserId.giftStyle);
+        }
+      }
+      cResult[6] = W;
       class U {
         constructor() {
           return enabled.getGiftable();
         }
       }
     } else {
-      const tmp14 = cResult[6];
+      class W {
+        constructor(arg0) {
+          obj = recipientUserId(closure_2[17]);
+          return obj.makeComboId(recipientUserId.skuId, recipientUserId.subscriptionPlanId, recipientUserId.giftStyle);
+        }
+      }
     }
     class U {
       constructor() {
         return enabled.getGiftable();
       }
     }
-    const groupByResult = obj5.groupBy(stateFromStoresArray, tmp14);
+    const groupByResult = obj5.groupBy(stateFromStoresArray, tmp15);
     cResult[4] = stateFromStoresArray;
     cResult[5] = groupByResult;
   } else {
-    noop = cResult[5];
-    tmp(6936);
+    class W {
+      constructor(arg0) {
+        obj = recipientUserId(closure_2[17]);
+        return obj.makeComboId(recipientUserId.skuId, recipientUserId.subscriptionPlanId, recipientUserId.giftStyle);
+      }
+    }
+    noop = tmp14;
+    tmp(7125);
     class U {
       constructor() {
         return enabled.getGiftable();
       }
     }
-    const outboundPromotions = tmp(13381).useOutboundPromotions();
+    const outboundPromotions = tmp(13681).useOutboundPromotions();
     const promotionsLoaded = outboundPromotions.promotionsLoaded;
     const activeOutboundPromotions = outboundPromotions.activeOutboundPromotions;
     closure_7 = outboundPromotions.claimedEndedOutboundPromotions;
     BadgeDirectoryStore = outboundPromotions.claimedOutboundPromotionCodeMap;
     const _Symbol2 = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      cResult[7] = { location: "gift_inventory" };
+      class W {
+        constructor(arg0) {
+          obj = recipientUserId(closure_2[17]);
+          return obj.makeComboId(recipientUserId.skuId, recipientUserId.subscriptionPlanId, recipientUserId.giftStyle);
+        }
+      }
+      cResult[7] = tmp21;
       class U {
         constructor() {
           return enabled.getGiftable();
         }
       }
-      let obj3 = { location: "gift_inventory" };
     } else {
-      const tmp19 = cResult[7];
+      class W {
+        constructor(arg0) {
+          obj = recipientUserId(closure_2[17]);
+          return obj.makeComboId(recipientUserId.skuId, recipientUserId.subscriptionPlanId, recipientUserId.giftStyle);
+        }
+      }
     }
-    const GiftingBadgeExperiment = tmp(10484).GiftingBadgeExperiment;
-    enabled = GiftingBadgeExperiment.useConfig(tmp19).enabled;
+    const GiftingBadgeExperiment = tmp(10081).GiftingBadgeExperiment;
+    enabled = GiftingBadgeExperiment.useConfig(tmp20).enabled;
     const _Symbol3 = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+      class W {
+        constructor(arg0) {
+          obj = recipientUserId(closure_2[17]);
+          return obj.makeComboId(recipientUserId.skuId, recipientUserId.subscriptionPlanId, recipientUserId.giftStyle);
+        }
+      }
       let items1 = [BadgeDirectoryStore];
       class Z {
         constructor() {
@@ -175,29 +207,34 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
       }
       cResult[8] = items1;
       cResult[9] = Z;
-      let tmp21 = Z;
-      let tmp20 = items1;
+      let tmp23 = Z;
+      const tmp22 = items1;
     } else {
-      tmp20 = cResult[8];
-      tmp21 = cResult[9];
+      class W {
+        constructor(arg0) {
+          obj = recipientUserId(closure_2[17]);
+          return obj.makeComboId(recipientUserId.skuId, recipientUserId.subscriptionPlanId, recipientUserId.giftStyle);
+        }
+      }
+      tmp23 = cResult[9];
     }
-    const tmpResult8 = tmp(13381);
-    const stateFromStores = tmp(504).useStateFromStores(tmp20, tmp21);
-    const tmp25 = navigation(noop.useState(false), 2);
-    closure_10 = tmp25[0];
-    constants2 = tmp25[1];
+    const tmpResult8 = tmp(13681);
+    const stateFromStores = tmp(504).useStateFromStores(tmp22, tmp23);
+    const tmp26 = navigation(noop.useState(false), 2);
+    closure_10 = tmp26[0];
+    constants2 = tmp26[1];
     const tmpResult9 = tmp(504);
-    const subscriptionPlansLoaded = tmp(13224).useSubscriptionPlansLoaded();
+    const subscriptionPlansLoaded = tmp(13524).useSubscriptionPlansLoaded();
     const _Symbol4 = Symbol;
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
       class X {
         constructor() {
           obj = closure_1(closure_2[24]);
           waitResult = obj.wait(() => {
-            const giftableEntitlements = recipientUserId(6915).fetchGiftableEntitlements();
+            const giftableEntitlements = recipientUserId(7104).fetchGiftableEntitlements();
             giftableEntitlements.then(() => { ... });
-            const obj = recipientUserId(6915);
-            closure_1(6938).init();
+            const obj = recipientUserId(7104);
+            closure_1(7127).init();
           });
           return;
         }
@@ -209,24 +246,24 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
         }
       }
       cResult[11] = X;
-      let tmp28 = X;
-      const tmp27 = items2;
+      let tmp29 = X;
+      const tmp28 = items2;
     } else {
       class X {
         constructor() {
           obj = closure_1(closure_2[24]);
           waitResult = obj.wait(() => {
-            const giftableEntitlements = recipientUserId(6915).fetchGiftableEntitlements();
+            const giftableEntitlements = recipientUserId(7104).fetchGiftableEntitlements();
             giftableEntitlements.then(() => { ... });
-            const obj = recipientUserId(6915);
-            closure_1(6938).init();
+            const obj = recipientUserId(7104);
+            closure_1(7127).init();
           });
           return;
         }
       }
-      tmp28 = cResult[11];
+      tmp29 = cResult[11];
     }
-    const effect = obj9.useEffect(tmp28, tmp27);
+    const effect = obj8.useEffect(tmp29, tmp28);
     if (cResult[12] !== enabled) {
       class J {
         constructor() {
@@ -248,7 +285,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
       cResult[12] = enabled;
       cResult[13] = J;
       cResult[14] = items3;
-      let tmp31 = items3;
+      let tmp32 = items3;
     } else {
       class J {
         constructor() {
@@ -261,9 +298,9 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           return;
         }
       }
-      tmp31 = cResult[14];
+      tmp32 = cResult[14];
     }
-    const effect1 = obj9.useEffect(J, tmp31);
+    const effect1 = obj8.useEffect(J, tmp32);
     if (cResult[15] !== navigation) {
       class J {
         constructor() {
@@ -282,7 +319,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           return closure_8.getBadgeById(recipientUserId(closure_2[22]).BadgeId.GIFTING);
         }
       }
-      cResult[16] = tmp34;
+      cResult[16] = tmp35;
     } else {
       class J {
         constructor() {
@@ -296,7 +333,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
         }
       }
     }
-    const onClick = tmp34;
+    const onClick = tmp35;
     if (cResult[17] !== navigation) {
       class J {
         constructor() {
@@ -315,7 +352,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           return closure_8.getBadgeById(recipientUserId(closure_2[22]).BadgeId.GIFTING);
         }
       }
-      cResult[18] = tmp36;
+      cResult[18] = tmp37;
     } else {
       class J {
         constructor() {
@@ -329,7 +366,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
         }
       }
     }
-    const onClick2 = tmp36;
+    const onClick2 = tmp37;
     if (cResult[19] === tmp7.emptyGiftDescription) {
       class J {
         constructor() {
@@ -343,9 +380,9 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
         }
       }
     }
-    function st() {
+    function renderEmptyState() {
       const obj = { style: closure_2.emptyGiftLinks, children: null };
-      const items = [state(hasOwnProperty, { style: closure_2.emptyImage, source: _modDef13382 }), ];
+      const items = [state(hasOwnProperty, { style: closure_2.emptyImage, source: _modDef13682 }), ];
       const obj3 = { style: closure_2.emptyGiftDescription, accessible: true, children: null };
       const obj4 = { style: closure_2.emptyGiftHeader, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
@@ -365,12 +402,12 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     cResult[21] = tmp7.emptyGiftInformation;
     cResult[22] = tmp7.emptyGiftLinks;
     cResult[23] = tmp7.emptyImage;
-    cResult[24] = st;
-    const tmpResult10 = tmp(13224);
+    cResult[24] = renderEmptyState;
+    const tmpResult10 = tmp(13524);
   }
   const tmpResult6 = recipientUserId(504);
-}) : ((arg0, ref) => {
-  ({ recipientUserId, analyticsLocation } = arg0);
+}) : (function UserSettingsPremiumGifting(ref) {
+  ({ recipientUserId, analyticsLocation } = ref);
   if (analyticsLocation === undefined) {
     let obj = { page: constants2.GIFTING_SETTINGS };
     analyticsLocation = obj;
@@ -582,4 +619,4 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     tmp17Result8 = closure_15(closure_6, obj11);
   }
   return tmp17Result8;
-}));
+});

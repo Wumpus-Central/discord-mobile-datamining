@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/create_guild/native/components/ListSelectionItem.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ListSelectionItem(arg0) {
       const cResult = c.c(6);
       ({ Icon, message, onPress } = arg0);
       if (cResult[0] !== Icon) {
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp8;
       tmp7 = tmp8;
     }
-  : (arg0) => {
+  : function ListSelectionItem(arg0) {
       ({ Icon, message, onPress } = arg0);
       return jsx(TableRow.TableRow, { onPress, label: message, icon: <Icon size={24} /> });
     };

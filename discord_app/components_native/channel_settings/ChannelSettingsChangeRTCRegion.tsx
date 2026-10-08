@@ -14,7 +14,7 @@ import RegionStore from "../../stores/RegionStore.tsx";
 require = fn;
 const jsx = fn(21).jsx;
 const AUTOMATIC_RTC_REGION = "AUTOMATIC_RTC_REGION";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_16 },
 };
@@ -91,7 +91,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
     c0 = null;
     tmp = null;
   }
-  self(10075).updateChannel({ rtcRegion: tmp });
+  self(9648).updateChannel({ rtcRegion: tmp });
   self.setState({ submitting: true }, () => {
     ChannelSettingsActionCreatorsDefault.saveChannel(self.props.channel.id, { rtcRegion });
   });
@@ -116,7 +116,7 @@ prototype["render"] = function render() {
   const tmp = closure_8(this.context);
   return jsx(Form.Form, { style: closure_8(this.context).form, children: this.renderRegions() });
 };
-ChannelSettingsChangeRTCRegion.contextType = fn(4595).ThemeContext;
+ChannelSettingsChangeRTCRegion.contextType = fn(4787).ThemeContext;
 const ReactCompilerGating = fn(558);
 const obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -126,7 +126,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function ConnectedChannelSettingsChangeRTCRegion(channelId) {
       const cResult = channelId(576).c(5);
       channelId = channelId.channelId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== channelId) {
-        const fn = function o() {
+        const fn = function s() {
           return ChannelStore.getChannel(channelId);
         };
         cResult[1] = channelId;
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : (channelId) => {
+  : function ConnectedChannelSettingsChangeRTCRegion(channelId) {
       channelId = channelId.channelId;
       const items = [ChannelStore];
       const channel = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));

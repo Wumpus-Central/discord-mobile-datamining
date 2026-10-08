@@ -4,7 +4,7 @@ import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const createExperiment = fn(4780);
+const createExperiment = fn(4974);
 let obj2 = {
   kind: "guild",
   id: "2026-06_guild_rooms",
@@ -68,7 +68,7 @@ export const getGuildRoomsConfig = function getGuildRoomsConfig(guildId, disable
   return closure_3.getCurrentConfig(guildId, obj);
 };
 export const useGuildRoomsExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, disable) => {
+  ? function useGuildRoomsExperiment(guildId, disable) {
       _require = guildId;
       const cResult = require("c").c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -123,7 +123,7 @@ export const useGuildRoomsExperiment = ReactCompilerGating.isReactCompilerEnable
       tmp9 = obj2;
       const tmpResult = require("initialize");
     }
-  : (guildId, disable) => {
+  : function useGuildRoomsExperiment(guildId, disable) {
       _require = guildId;
       const items = [GuildMemberStore];
       const items1 = [guildId.guildId];

@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useStartEvent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useStartEvent() {
       const cResult = require("c").c(4);
       const obj = require("c");
       [tmp3, closure_0] = noop.useState(false);
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (1 === tmp8) {
             c6 = 0;
             closure_131_3 = closure_5;
-            const aPIError = new closure_0(5319).APIError(closure_131_3);
+            const aPIError = new closure_0(5631).APIError(closure_131_3);
             closure_131_4 = aPIError;
             closure_1(closure_131_4);
             closure_0(false);
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               c7 = 4;
               c8 = 1;
-              return { value: closure_0(9486).navigateToEvent(closure_131_0, closure_131_2), done: false };
+              return { value: closure_0(8650).navigateToEvent(closure_131_0, closure_131_2), done: false };
             }
           } else if (4 === tmp8) {
             if (arg0 === 1) {
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               c7 = 5;
               c8 = 1;
-              return { value: closure_0(9486).postStartActions(closure_131_0, closure_131_2), done: false };
+              return { value: closure_0(8650).postStartActions(closure_131_0, closure_131_2), done: false };
             }
           } else if (arg0 === 1) {
             c8 = 3;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = items;
       const tmp4 = _slicedToArray(noop.useState(null), 2);
     }
-  : () => {
+  : function useStartEvent() {
       closure_2 = async function _startEvent2(arg0, arg1, arg2) {
         closure_0 = arg0;
         closure_1 = arg1;
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c7 = 3;
                   c8 = 1;
                   const obj7 = {
-                    value: closure_1(9485).preStartEventActions(closure_131_0, closure_131_3),
+                    value: closure_1(8649).preStartEventActions(closure_131_0, closure_131_3),
                     done: false,
                   };
                   return obj7;
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (2 === tmp7) {
                   c6 = 0;
                   closure_131_5 = closure_5;
-                  const aPIError = new closure_0(5319).APIError(closure_131_5);
+                  const aPIError = new closure_0(5631).APIError(closure_131_5);
                   closure_131_4 = aPIError;
                   closure_132_1(closure_131_4);
                   closure_132_0(false);
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     c7 = 4;
                     c8 = 1;
                     const obj10 = {
-                      value: closure_1(9485).setEventAsActive(closure_131_0, closure_131_1),
+                      value: closure_1(8649).setEventAsActive(closure_131_0, closure_131_1),
                       done: false,
                     };
                     return obj10;
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   } else {
                     c7 = 5;
                     c8 = 1;
-                    const obj13 = { value: closure_0(9486).navigateToEvent(closure_131_0, closure_131_2), done: false };
+                    const obj13 = { value: closure_0(8650).navigateToEvent(closure_131_0, closure_131_2), done: false };
                     return obj13;
                   }
                 } else if (5 === tmp7) {
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     c7 = 6;
                     c8 = 1;
                     const obj15 = {
-                      value: closure_0(9486).postStartActions(closure_131_0, closure_131_2),
+                      value: closure_0(8650).postStartActions(closure_131_0, closure_131_2),
                       done: false,
                     };
                     return obj15;

@@ -13,7 +13,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/group_dm/native/useGroupDMNitroUpsellAction.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (audience) => {
+  ? function useGroupDMNitroUpsellAction(audience) {
       const cResult = audience(acquisitionStrategy[3]).c(5);
       audience = audience.audience;
       const _location = audience.location;
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = fn;
       tmp3 = fn;
     }
-  : (audience) => {
+  : function useGroupDMNitroUpsellAction(audience) {
       audience = audience.audience;
       const _location = audience.location;
       const acquisitionStrategy = audience.acquisitionStrategy;

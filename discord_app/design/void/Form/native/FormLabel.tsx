@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormLabel.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FormLabel(arg0) {
       const cResult = c.c(6);
       ({ text, numberOfLines, style, accessible, color } = arg0);
       let num = 0;
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp5;
       tmp4 = tmp5;
     }
-  : (children) => {
+  : function FormLabel(children) {
       let lineClamp = children.numberOfLines;
       if (lineClamp === undefined) {
         lineClamp = 0;

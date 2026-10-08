@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { scrollView: { flex: 1 }, dataConfirmation: { marginTop: nativeDefault.space.PX_8 }, container: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8 };
 obj2.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -26,7 +26,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityPage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function FamilyCenterActivityPage() {
       const cResult = c.c(10);
       const tmp4 = closure_8();
       let activeLinkUserIds = useUserLinks.useActiveLinkUserIds();
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = activeLinkUserIds;
       cResult[3] = tmp12;
     }
-  : () => {
+  : function FamilyCenterActivityPage() {
       const tmp = closure_8();
       const obj2 = { style: tmp.scrollView, children: null };
       const activeLinkUserIds = useUserLinks.useActiveLinkUserIds();

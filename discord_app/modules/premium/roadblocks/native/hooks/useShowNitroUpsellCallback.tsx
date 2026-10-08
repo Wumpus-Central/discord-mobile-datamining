@@ -9,7 +9,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/roadblocks/native/hooks/useShowNitroUpsellCallback.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShowNitroUpsellCallback() {
       const cResult = c.c(5);
       const sharedValue = ReanimatedRexport.useSharedValue(false);
       if (cResult[0] !== sharedValue) {
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj3;
       tmp4 = obj3;
     }
-  : () => {
+  : function useShowNitroUpsellCallback() {
       const sharedValue = ReanimatedRexport.useSharedValue(false);
       const items = [sharedValue];
       return {

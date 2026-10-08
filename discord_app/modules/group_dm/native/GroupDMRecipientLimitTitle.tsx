@@ -15,14 +15,14 @@ get_ActivityIndicator = fn(17);
 const MAX_GROUP_DM_PARTICIPANTS = fn(1085).MAX_GROUP_DM_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   title: { textAlign: "center", fontSize: 18 },
   subtitleRow: { alignSelf: "center", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
   subtitle: { textAlign: "center" },
   nitroWheelIcon: null,
 };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let tmp5;
 if (PlatformUtils.isAndroid()) {
   let items = [{ translateY: 2 }];
@@ -36,7 +36,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMRecipientLimitTitle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GroupDMRecipientLimitTitle(arg0) {
       const cResult = c.c(30);
       ({ title, memberCount, recipientLimit } = arg0);
       const tmp4 = closure_9();
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = formatToPlainStringResult;
       tmp13 = formatToPlainStringResult;
     }
-  : (arg0) => {
+  : function GroupDMRecipientLimitTitle(arg0) {
       ({ title, memberCount, recipientLimit } = arg0);
       const tmp = closure_9();
       const groupDMNitroAudience = GroupDMNitroUpsellModel.useGroupDMNitroAudience();

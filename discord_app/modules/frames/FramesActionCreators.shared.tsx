@@ -1,5 +1,6 @@
 // discord_app/modules/frames/FramesActionCreators.shared.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
+import getChannelIdForEmbeddedSurfaceDefault from "../embedded_apps/utils/getChannelIdForEmbeddedSurface.tsx";
 import leaveCurrentEmbeddedActivity from "../activities/utils/leaveCurrentEmbeddedActivity.tsx";
 import EmbeddedActivitiesActionCreators from "../activities/EmbeddedActivitiesActionCreators.tsx";
 import getFrameRequestSurfaceTypeDefault from "utils/getFrameRequestSurfaceType.tsx";
@@ -8,9 +9,9 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import FramesStore from "FramesStore.tsx";
 
 require = fn;
-let closure_11 = async function _launchFrame(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
+let closure_10 = async function _launchFrame(arg0) {
+  if (c7 === 2) {
+    c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp6 === 3) {
     if (arg0 === 1) {
@@ -23,156 +24,170 @@ let closure_11 = async function _launchFrame(arg0) {
     }
   } else {
     try {
-      c6 = 2;
-      if (0 === c5) {
+      c7 = 2;
+      if (0 === c6) {
         if (arg0 === 1) {
-          c6 = 3;
+          c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          c7 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
+          closure_3 = tmp3;
+          closure_2 = tmp7;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
           ({
-            applicationId: closure_129_0,
-            surface: closure_129_1,
-            customId: closure_129_2,
-            referrerId: closure_129_3,
-            analyticsContext: closure_129_4,
-            hostWindowKey: closure_129_5,
+            applicationId: closure_130_0,
+            surface: closure_130_1,
+            launch: closure_130_2,
+            analyticsContext: closure_130_3,
+            hostWindowKey: closure_130_4,
+            showErrorModal,
           } = closure_0);
-          closure_129_6 = undefined;
+          if (showErrorModal === undefined) {
+            showErrorModal = true;
+          }
+          closure_130_5 = showErrorModal;
+          closure_130_6 = undefined;
           let frame;
-          closure_129_8 = undefined;
-          closure_129_9 = undefined;
-          closure_129_10 = undefined;
-          c5 = 1;
+          closure_130_8 = undefined;
+          closure_130_9 = undefined;
+          closure_130_10 = undefined;
           c6 = 1;
+          c7 = 1;
           return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
-          c6 = 3;
+          c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c6 = 3;
+          c7 = 3;
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          closure_129_6 = closure_130_9(closure_129_0, closure_129_1);
-          frame = closure_130_4.getFrame(closure_129_6);
+          closure_130_6 = closure_131_8(closure_130_0, closure_130_1);
+          frame = closure_131_4.getFrame(closure_130_6);
           if (null != frame) {
-            if (frame.intent === closure_130_5.MAIN) {
-              closure_130_14(closure_129_6);
-              const obj7 = { frameId: closure_129_6, layoutMode: closure_130_6.FOCUSED };
-              closure_130_15(obj7);
+            if (frame.intent === closure_131_5.MAIN) {
+              closure_131_13(closure_130_6);
+              const obj7 = { frameId: closure_130_6, layoutMode: closure_131_6.FOCUSED };
+              closure_131_14(obj7);
             }
-            c6 = 3;
-            const obj10 = { value: closure_129_6, done: true };
+            c7 = 3;
+            const obj10 = { value: closure_130_6, done: true };
             return obj10;
           } else {
-            if (closure_130_8(closure_129_1) === closure_130_5.MAIN) {
-              const result = closure_130_0(closure_130_2[4]).leaveCurrentEmbeddedActivity();
-              closure_130_12();
-              const obj8 = closure_130_0(closure_130_2[4]);
+            if (closure_131_7(closure_130_1) === closure_131_5.MAIN) {
+              const result = closure_131_0(closure_131_2[4]).leaveCurrentEmbeddedActivity();
+              closure_131_11();
+              const obj8 = closure_131_0(closure_131_2[4]);
             }
             const obj12 = {
               type: "FRAME_LAUNCH_START",
-              applicationId: closure_129_0,
-              frameId: closure_129_6,
-              surface: closure_129_1,
+              applicationId: closure_130_0,
+              frameId: closure_130_6,
+              surface: closure_130_1,
+              hostWindowKey: closure_130_4,
             };
-            closure_130_1(closure_130_2[5]).dispatch(obj12);
-            c4 = 1;
-            const obj9 = closure_130_1(closure_130_2[5]);
-            const obj11 = closure_130_0(closure_130_2[6]);
-            c5 = 4;
-            c6 = 1;
+            closure_131_1(closure_131_2[5]).dispatch(obj12);
+            c5 = 1;
+            const obj9 = closure_131_1(closure_131_2[5]);
+            const obj11 = closure_131_0(closure_131_2[6]);
+            c6 = 3;
+            c7 = 1;
             const obj13 = {
               value: obj11.createProxyTicket(
-                closure_129_0,
-                closure_130_7(closure_129_1),
-                closure_130_1(closure_130_2[7])(closure_129_1),
+                closure_130_0,
+                closure_131_1(closure_131_2[7])(closure_130_1),
+                closure_131_1(closure_131_2[8])(closure_130_1),
               ),
               done: false,
             };
             return obj13;
           }
         }
-      } else if (2 === tmp7) {
-        c4 = 0;
-        closure_129_11 = closure_3;
-        closure_129_9 = closure_130_1(closure_130_2[8])();
-        c5 = 3;
-        c6 = 1;
-        const obj14 = {
-          value: closure_130_0(closure_130_2[9]).getActivityLaunchErrorInfo(closure_129_11, closure_129_0),
-          done: false,
-        };
-        return obj14;
-      } else if (3 === tmp7) {
-        if (arg0 === 1) {
-          c6 = 3;
+      } else {
+        if (2 === tmp7) {
+          c5 = 0;
+          closure_130_11 = closure_4;
+          if (closure_130_5) {
+            closure_130_9 = closure_131_1(closure_131_2[9])();
+            c6 = 4;
+            c7 = 1;
+            const obj14 = {
+              value: closure_131_0(closure_131_2[10]).getActivityLaunchErrorInfo(closure_130_11, closure_130_0),
+              done: false,
+            };
+            return obj14;
+          }
+        } else if (3 === tmp7) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 0;
+            c7 = 3;
+            const obj15 = { value, done: true };
+            return obj15;
+          } else {
+            closure_130_8 = value;
+            const obj16 = {
+              type: "FRAME_LAUNCH",
+              applicationId: closure_130_0,
+              frameId: closure_130_6,
+              surface: closure_130_1,
+              proxyTicket: closure_130_8,
+              analyticsContext: closure_130_3,
+              launch: null,
+              hostWindowKey: null,
+            };
+            let launch = closure_130_2;
+            if (closure_130_2 == null) {
+              launch = {};
+            }
+            obj16.launch = launch;
+            obj16.hostWindowKey = closure_130_4;
+            closure_131_1(closure_131_2[5]).dispatch(obj16);
+            c5 = 0;
+            c7 = 3;
+            const obj17 = { value: closure_130_6, done: true };
+            return obj17;
+          }
+        } else if (arg0 === 1) {
+          c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c6 = 3;
-          const obj15 = { value, done: true };
-          return obj15;
+          c7 = 3;
+          const obj = { value, done: true };
+          return obj;
         } else {
-          closure_129_10 = value;
-          closure_129_9.showLaunchErrorModal(closure_129_10.message);
-          const obj16 = {
-            type: "FRAME_LAUNCH_FAIL",
-            applicationId: closure_129_0,
-            frameId: closure_129_6,
-            error: closure_129_11,
-            analyticsContext: closure_129_4,
-          };
-          closure_130_1(closure_130_2[5]).dispatch(obj16);
-          throw closure_129_11;
+          closure_130_10 = value;
+          closure_130_9.showLaunchErrorModal(closure_130_10.message);
         }
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 0;
-        c6 = 3;
-        const obj17 = { value, done: true };
-        return obj17;
-      } else {
-        closure_129_8 = value;
         const obj19 = {
-          type: "FRAME_LAUNCH",
-          applicationId: closure_129_0,
-          frameId: closure_129_6,
-          surface: closure_129_1,
-          proxyTicket: closure_129_8,
-          customId: closure_129_2,
-          referrerId: closure_129_3,
-          analyticsContext: closure_129_4,
-          hostWindowKey: closure_129_5,
+          type: "FRAME_LAUNCH_FAIL",
+          applicationId: closure_130_0,
+          frameId: closure_130_6,
+          error: closure_130_11,
+          analyticsContext: closure_130_3,
         };
-        closure_130_1(closure_130_2[5]).dispatch(obj19);
-        c4 = 0;
-        c6 = 3;
-        const obj = { value: closure_129_6, done: true };
-        return obj;
+        closure_131_1(closure_131_2[5]).dispatch(obj19);
+        throw closure_130_11;
       }
-    } catch (tmp70) {
-      closure_3 = tmp70;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp70;
+    } catch (tmp78) {
+      closure_4 = tmp78;
+      if (tmp4 === c5) {
+        c7 = tmp2;
+        throw tmp78;
       } else {
-        c5 = tmp;
+        c6 = tmp;
       }
     }
   }
@@ -248,7 +263,7 @@ function updateFrameLayoutMode(frameId) {
     DispatcherDefault.dispatch(obj2);
   }
 }
-let closure_16 = async function _refreshProxyTicket() {
+let closure_15 = async function _refreshProxyTicket() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
@@ -301,7 +316,7 @@ let closure_16 = async function _refreshProxyTicket() {
               const obj7 = {
                 value: obj22.createProxyTicket(
                   applicationId,
-                  closure_2_7(surface),
+                  getChannelIdForEmbeddedSurfaceDefault(surface),
                   getFrameRequestSurfaceTypeDefault(surface),
                 ),
                 done: false,
@@ -322,11 +337,11 @@ let closure_16 = async function _refreshProxyTicket() {
         } else if (2 === tmp9) {
           c4 = 1;
           closure_129_5 = closure_3;
-          closure_129_3 = closure_130_1(closure_130_2[8])();
+          closure_129_3 = closure_130_1(closure_130_2[9])();
           c5 = 3;
           c6 = 1;
           const obj10 = {
-            value: closure_130_0(closure_130_2[9]).getActivityLaunchErrorInfo(closure_129_5, closure_129_1),
+            value: closure_130_0(closure_130_2[10]).getActivityLaunchErrorInfo(closure_129_5, closure_129_1),
             done: false,
           };
           return obj10;
@@ -410,21 +425,20 @@ let closure_16 = async function _refreshProxyTicket() {
     }
   })();
 };
-const FramesConstants = fn(8738);
+const FramesConstants = fn(10613);
 ({
   FrameIntent: hasOwnProperty,
   FrameLayoutModes: metroRequire,
-  getChannelIdForSurface: closure_7,
-  getFrameIntentForSurface: closure_8,
-  makeFrameId: closure_9,
+  getFrameIntentForSurface: closure_7,
+  makeFrameId: closure_8,
 } = FramesConstants);
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
 
 export const launchFrame = function launchFrame() {
   const self = this;
-  const apply = closure_11.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -473,7 +487,7 @@ export const detachFrameHostWindow = function detachFrameHostWindow(frameId, win
 };
 export const refreshProxyTicket = function refreshProxyTicket() {
   const self = this;
-  const apply = closure_16.apply;
+  const apply = closure_15.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

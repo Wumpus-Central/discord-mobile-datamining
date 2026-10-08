@@ -2,9 +2,9 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import router_utils from "../routing/router_utils.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef4467 from "../../../_runtime/metro/04467__.js";
+import _modDef4659 from "../../../_runtime/metro/04659__.js";
 import useChannelName from "../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../_runtime/05709_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/06099_fuzzysearch.js";
 import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
 import ChannelListState from "../guild_sidebar/ChannelListState.tsx";
 import RecentChannelsActionCreators from "../recent_channels/RecentChannelsActionCreators.tsx";
@@ -23,14 +23,14 @@ function setIndex(arg0, index) {
 }
 const Constants = fn(1085);
 ({ Routes: closure_9, ChannelTypes: c10 } = Constants);
-const ChannelConstants = fn(2058);
+const ChannelConstants = fn(2070);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7058).ChannelListGuildActionRow;
-const ReadStateTypes = fn(5078).ReadStateTypes;
+const ChannelListGuildActionRow = fn(7245).ChannelListGuildActionRow;
+const ReadStateTypes = fn(5972).ReadStateTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, _categories, arg2, rowHeight) => {
+  ? function useChannelBrowserSections(arg0, _categories, arg2, rowHeight) {
       _require = arg0;
       importDefault = _categories;
       dependencyMap = arg2;
@@ -141,7 +141,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = E;
       const tmpResult = tmp(504);
     }
-  : (arg0, _categories, arg2, rowHeight) => {
+  : function useChannelBrowserSections(arg0, _categories, arg2, rowHeight) {
       _require = arg0;
       closure_1 = _categories;
       dependencyMap = arg2;
@@ -319,7 +319,7 @@ export const clearRecentChannels = function clearRecentChannels(arg0, arr) {
 };
 export const useChannelBrowserSections = tmp4;
 export const useChannelBrowserChannelCount = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useChannelBrowserChannelCount(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -364,7 +364,7 @@ export const useChannelBrowserChannelCount = ReactCompilerGating.isReactCompiler
       }
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useChannelBrowserChannelCount(arg0) {
       _require = arg0;
       const items = [GuildCategoryStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () =>
@@ -394,7 +394,7 @@ export const useChannelBrowserChannelCount = ReactCompilerGating.isReactCompiler
     };
 export const getActiveAgoTimestamp = function getActiveAgoTimestamp(id) {
   const intl = util.intl;
-  const tmp = _modDef4467;
+  const tmp = _modDef4659;
   let lastMessageIdResult = ReadStateStore.lastMessageId(id);
   if (lastMessageIdResult == null) {
     lastMessageIdResult = id;

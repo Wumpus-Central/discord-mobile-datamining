@@ -33,7 +33,7 @@ let obj2 = { fontFamily: Constants.Fonts.PRIMARY_BOLD, color: nativeDefault.colo
 const result = size.fileFinishedImporting("modules/media/native/Caption.tsx");
 
 export const Caption = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Caption(arg0) {
       const cResult = c.c(12);
       ({ label, style, textStyle } = arg0);
       const tmp4 = closure_4();
@@ -81,7 +81,7 @@ export const Caption = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp5 = items1;
     }
-  : (arg0) => {
+  : function Caption(arg0) {
       ({ label, style, textStyle } = arg0);
       const tmp = closure_4();
       const obj = { style: null, children: null };

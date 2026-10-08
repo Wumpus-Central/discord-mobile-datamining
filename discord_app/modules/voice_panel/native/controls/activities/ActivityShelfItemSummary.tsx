@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   ongoingActivityContainer: {
     position: "absolute",
@@ -37,7 +37,7 @@ let obj3 = {
   backgroundColor: null,
   marginBottom: 8,
 };
-const ColorUtils = fn(4733);
+const ColorUtils = fn(4927);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.64);
 obj2.overlayActivityName = obj3;
 obj2.overlayActivityNameText = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -46,7 +46,7 @@ obj2.ellipsis = { flex: 1, flexShrink: 1, flexGrow: 0, justifyContent: "center",
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ParticipantsSummary(arg0) {
       const cResult = c.c(4);
       ({ applicationId, channelId } = arg0);
       const tmp5 = useActivityUsersDefault(applicationId, channelId);
@@ -79,7 +79,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : (arg0) => {
+  : function ParticipantsSummary(arg0) {
       ({ applicationId, channelId } = arg0);
       const obj = {
         users: useActivityUsersDefault(applicationId, channelId),
@@ -103,7 +103,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActivityShelfItemSummary(arg0) {
       const cResult = c.c(22);
       ({ channelId, applicationId, applicationName, submitting } = arg0);
       const tmp5 = closure_7();
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp9;
       const tmpResult = ButtonPill;
     }
-  : (submitting) => {
+  : function ActivityShelfItemSummary(submitting) {
       let flag = submitting.submitting;
       ({ channelId, applicationId, applicationName } = submitting);
       if (flag === undefined) {

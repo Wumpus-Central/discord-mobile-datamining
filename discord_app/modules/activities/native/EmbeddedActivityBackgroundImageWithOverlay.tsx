@@ -1,6 +1,7 @@
 // discord_app/modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useEmbeddedActivityBackgroundDefault from "../utils/useEmbeddedActivityBackground.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -9,20 +10,21 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ImageBackground: hasOwnProperty, View: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(5090);
 let obj2 = { overlay: { flex: 1, opacity: 0.6, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_9 = createStyles.createStyles(obj2);
 const names = ["embedded_background"];
 const ReactCompilerGating = fn(558);
 let obj3 = { flex: 1, opacity: 0.6, backgroundColor: nativeDefault.colors.BLACK };
-const size = fn(2);
+let size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const cResult = c.c(12);
+  ? function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
+      const cResult = c.c(16);
       ({ application, dimensionsStyle, borderRadius, resizeMode } = arg0);
       let str = "contain";
       if (undefined !== resizeMode) {
@@ -47,87 +49,99 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const url = useEmbeddedActivityBackgroundDefault(tmp6).url;
       if (cResult[2] !== url) {
-        const obj3 = { uri: tmp8 };
-        cResult[2] = tmp8;
+        const obj3 = { uri: tmp9 };
+        cResult[2] = tmp9;
         cResult[3] = obj3;
-        let tmp9 = obj3;
+        let tmp10 = obj3;
       } else {
-        tmp9 = cResult[3];
+        tmp10 = cResult[3];
       }
-      if (cResult[4] === tmp9) {
-        if (cResult[5] === url) {
-          if (cResult[6] === borderRadius) {
-            if (cResult[7] === dimensionsStyle) {
-              if (cResult[8] === tmp5) {
-                if (cResult[9] === str) {
-                  if (cResult[10] === tmp3) {
-                    let tmp10 = cResult[11];
+      if (cResult[4] !== dimensionsStyle) {
+        let flattenResult = timestampProducer.flatten(dimensionsStyle);
+        if (flattenResult == null) {
+          flattenResult = {};
+        }
+        cResult[4] = dimensionsStyle;
+        cResult[5] = flattenResult;
+        let tmp11 = flattenResult;
+      } else {
+        tmp11 = cResult[5];
+      }
+      ({ width, height } = tmp11);
+      if (cResult[6] === tmp10) {
+        if (cResult[7] === url) {
+          if (cResult[8] === borderRadius) {
+            if (cResult[9] === dimensionsStyle) {
+              if (cResult[10] === height) {
+                if (cResult[11] === tmp5) {
+                  if (cResult[12] === str) {
+                    if (cResult[13] === tmp3) {
+                      if (cResult[14] === width) {
+                        let tmp13 = cResult[15];
+                      }
+                      return tmp13;
+                    }
                   }
-                  return tmp10;
                 }
               }
             }
           }
         }
       }
-      let tmp14Result = null;
+      let tmp18Result = null;
       if (!tmp5) {
-        tmp14Result = null;
+        tmp18Result = null;
         if (null != url) {
-          tmp14Result = null;
+          tmp18Result = null;
           if ("" !== url) {
-            const obj4 = {
-              resizeMode: str,
-              source: tmp9,
-              style: null,
-              imageStyle: null,
-              onError: null,
-              children: null,
-            };
             let absoluteFillObject = dimensionsStyle;
             if (dimensionsStyle == null) {
-              absoluteFillObject = React5.absoluteFillObject;
+              absoluteFillObject = timestampProducer.absoluteFillObject;
             }
-            obj4.style = absoluteFillObject;
-            const obj5 = { borderRadius };
-            obj4.imageStyle = obj5;
-            obj4.onError = function onError() {
+            const obj4 = { style: absoluteFillObject, children: null };
+            const obj5 = { resizeMode: str, source: tmp10, style: null, onError: null };
+            const items = [timestampProducer.absoluteFill];
+            const size = { width, height, borderRadius };
+            items[1] = size;
+            obj5.style = items;
+            obj5.onError = function onError() {
               return require(true);
             };
+            const items1 = [React5(FastImageDefault, obj5)];
             const obj6 = { style: null };
-            const items = [tmp3.overlay];
+            const items2 = [tmp3.overlay];
             const obj7 = { borderRadius };
-            items[1] = obj7;
-            obj6.style = items;
-            obj4.children = <timestampProducer style={null} />;
-            tmp14Result = (
-              <hasOwnProperty resizeMode={str} source={tmp9} style={null} imageStyle={null} onError={null}>
-                {null}
-              </hasOwnProperty>
-            );
+            items2[1] = obj7;
+            obj6.style = items2;
+            items1[1] = React5(hasOwnProperty, obj6);
+            obj4.children = items1;
+            tmp18Result = closure_1_8(hasOwnProperty, obj4);
           }
         }
       }
-      cResult[4] = tmp9;
-      cResult[5] = url;
-      cResult[6] = borderRadius;
-      cResult[7] = dimensionsStyle;
-      cResult[8] = tmp5;
-      cResult[9] = str;
-      cResult[10] = tmp3;
-      cResult[11] = tmp14Result;
-      tmp10 = tmp14Result;
+      cResult[6] = tmp10;
+      cResult[7] = url;
+      cResult[8] = borderRadius;
+      cResult[9] = dimensionsStyle;
+      cResult[10] = height;
+      cResult[11] = tmp5;
+      cResult[12] = str;
+      cResult[13] = tmp3;
+      cResult[14] = width;
+      cResult[15] = tmp18Result;
+      tmp13 = tmp18Result;
       const tmp4 = _slicedToArray(noop.useState(false), 2);
     }
-  : (arg0) => {
+  : function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
       ({ application, dimensionsStyle, borderRadius, resizeMode } = arg0);
       if (resizeMode === undefined) {
         resizeMode = "contain";
       }
-      const tmp2 = _slicedToArray(noop.useState(false), 2);
-      closure_0 = tmp2[1];
-      let str;
+      c0 = undefined;
       const tmp = closure_9();
+      [tmp3, c0] = noop.useState(false);
+      let str;
+      const tmp2 = _slicedToArray(noop.useState(false), 2);
       if (application != null) {
         str = application.id;
       }
@@ -135,37 +149,40 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         str = "";
       }
       const url = useEmbeddedActivityBackgroundDefault({ applicationId: str, names, size: 1024 }).url;
-      let tmp7Result = null;
-      if (!tmp2[0]) {
-        tmp7Result = null;
+      let flattenResult = timestampProducer.flatten(dimensionsStyle);
+      if (flattenResult == null) {
+        flattenResult = {};
+      }
+      let tmp13Result = null;
+      if (!tmp3) {
+        tmp13Result = null;
         if (null != url) {
-          tmp7Result = null;
+          tmp13Result = null;
           if ("" !== url) {
-            const obj2 = { resizeMode, source: null, style: null, imageStyle: null, onError: null, children: null };
-            const obj3 = { uri: url };
-            obj2.source = obj3;
+            let absoluteFillObject = dimensionsStyle;
             if (dimensionsStyle == null) {
-              dimensionsStyle = React5.absoluteFillObject;
+              absoluteFillObject = timestampProducer.absoluteFillObject;
             }
-            obj2.style = dimensionsStyle;
-            const obj4 = { borderRadius };
-            obj2.imageStyle = obj4;
-            obj2.onError = function onError() {
-              return closure_0(true);
+            const obj2 = { style: absoluteFillObject, children: null };
+            const obj3 = { resizeMode, source: { uri: url }, style: null, onError: null };
+            const items = [timestampProducer.absoluteFill];
+            const size = { width: tmp9, height: tmp10, borderRadius };
+            items[1] = size;
+            obj3.style = items;
+            obj3.onError = function onError() {
+              return _undefined(true);
             };
-            const obj5 = { style: null };
-            const items = [tmp.overlay];
-            const obj6 = { borderRadius };
-            items[1] = obj6;
-            obj5.style = items;
-            obj2.children = <timestampProducer style={null} />;
-            tmp7Result = (
-              <hasOwnProperty resizeMode={resizeMode} source={null} style={null} imageStyle={null} onError={null}>
-                {null}
-              </hasOwnProperty>
-            );
+            const items1 = [React5(FastImageDefault, obj3)];
+            const obj4 = { style: null };
+            const items2 = [tmp.overlay];
+            const obj5 = { borderRadius };
+            items2[1] = obj5;
+            obj4.style = items2;
+            items1[1] = React5(hasOwnProperty, obj4);
+            obj2.children = items1;
+            tmp13Result = closure_1_8(hasOwnProperty, obj2);
           }
         }
       }
-      return tmp7Result;
+      return tmp13Result;
     };

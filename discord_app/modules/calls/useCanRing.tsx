@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/useCanRing.tsx");
 
 export const useCanRing = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, arg1) => {
+  ? function useCanRing(id, arg1) {
       _require = id;
       dependencyMap = arg1;
       const cResult = require("c").c(11);
@@ -175,7 +175,7 @@ export const useCanRing = ReactCompilerGating.isReactCompilerEnabled()
       }
       return stateFromStores2;
     }
-  : (bot, arg1) => {
+  : function useCanRing(bot, arg1) {
       _require = bot;
       dependencyMap = arg1;
       const items = [ChannelStore];

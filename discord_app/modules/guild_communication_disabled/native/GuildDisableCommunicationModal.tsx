@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildDisableCommunicationModal(guildId) {
       const cResult = guildId(onGoBack[3]).c(12);
       guildId = guildId.guildId;
       const user = guildId.user;
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp9 = tmp11;
           }
         }
-        const fn = function b() {
+        const fn = function f() {
           return jsx(GuildDisableCommunicationDefault, { user, guildId, onClose: onGoBack });
         };
         cResult[5] = guildId;
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = formatToPlainStringResult;
       const tmp5Result = user(onGoBack[6]);
     }
-  : (onBeforeGoBack) => {
+  : function GuildDisableCommunicationModal(onBeforeGoBack) {
       const guildId = onBeforeGoBack.guildId;
       const user = onBeforeGoBack.user;
       let onGoBack;

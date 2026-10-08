@@ -115,7 +115,7 @@ const NOOP = fn(1096).NOOP;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   carousel: { marginHorizontal: -nativeDefault.space.PX_16 },
   carouselContent: null,
@@ -151,7 +151,7 @@ obj2.playIconWrapper = obj7;
 let closure_14 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (media) => {
+  ? function AppStoreOverlayScreenshotItem(media) {
       const cResult = media(mediaViewerSources[10]).c(23);
       media = media.media;
       const index = media.index;
@@ -331,7 +331,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = C;
         tmp9 = C;
       }
-      const fn = function z(nativeEvent) {
+      const fn = function f(nativeEvent) {
         const mediaSizeFromLoadEvent = AppStoreOverlayMediaSize.getMediaSizeFromLoadEvent(nativeEvent);
         if (null != mediaSizeFromLoadEvent) {
           recordMediaSize(media.url, mediaSizeFromLoadEvent);
@@ -343,7 +343,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = fn;
       let obj = media(mediaViewerSources[10]);
     }
-  : (media) => {
+  : function AppStoreOverlayScreenshotItem(media) {
       media = media.media;
       const index = media.index;
       const mediaViewerSources = media.mediaViewerSources;
@@ -394,7 +394,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AppStoreOverlayMediaCarouselItem(arg0) {
       const cResult = c.c(13);
       ({ media, index, mediaViewerSources, tileSize, recordMediaSize, onGetGamePress } = arg0);
       const type = media.type;
@@ -414,7 +414,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { media, index, mediaViewerSources, tileSize, recordMediaSize, onGetGamePress };
-        const tmp9 = v65535(closure_16, obj2);
+        const tmp9 = collapsed(closure_16, obj2);
         cResult[0] = index;
         cResult[1] = media;
         cResult[2] = mediaViewerSources;
@@ -437,7 +437,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { media, index, mediaViewerSources, tileSize, onGetGamePress };
-        const tmp5 = v65535(AppStoreOverlayTrailerItem, obj3);
+        const tmp5 = collapsed(AppStoreOverlayTrailerItem, obj3);
         cResult[7] = index;
         cResult[8] = media;
         cResult[9] = mediaViewerSources;
@@ -447,15 +447,15 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         tmp2 = tmp5;
       }
     }
-  : (arg0) => {
+  : function AppStoreOverlayMediaCarouselItem(arg0) {
       ({ media, index, mediaViewerSources, tileSize, onGetGamePress } = arg0);
       const type = media.type;
       if ("screenshot" === type) {
         const obj2 = { media, index, mediaViewerSources, tileSize, recordMediaSize: tmp, onGetGamePress };
-        return v65535(closure_16, obj2);
+        return collapsed(closure_16, obj2);
       } else if ("trailer" === type) {
         const obj = { media, index, mediaViewerSources, tileSize, onGetGamePress };
-        return v65535(AppStoreOverlayTrailerItem, obj);
+        return collapsed(AppStoreOverlayTrailerItem, obj);
       }
     };
 ReactCompilerGating = fn(558);
@@ -469,7 +469,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaCarousel.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onCarouselScroll) => {
+  ? function AppStoreOverlayMediaCarousel(onCarouselScroll) {
       const cResult = onGetGamePress(sizes[10]).c(43);
       ({ media, onGetGamePress } = onCarouselScroll);
       onCarouselScroll = onCarouselScroll.onCarouselScroll;
@@ -501,21 +501,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[6] === media) {
             if (cResult[7] === sizes) {
               noop.useRef(0);
-              const tmp19 = recordMediaSize(noop.useState(0), 2);
-              const first = tmp19[0];
-              closure_8 = tmp19[1];
+              const tmp18 = recordMediaSize(noop.useState(0), 2);
+              const first = tmp18[0];
+              AccessibilityStore = tmp18[1];
               const length = media.length;
               const _Symbol2 = Symbol;
               if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-                class O {
+                class A {
                   constructor() {
                     closure_6.current = 0;
                     return;
                   }
                 }
-                cResult[11] = O;
+                cResult[11] = A;
               } else {
-                class O {
+                class A {
                   constructor() {
                     closure_6.current = 0;
                     return;
@@ -523,45 +523,45 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (cResult[12] !== length) {
-                class O {
+                class A {
                   constructor() {
                     closure_6.current = 0;
                     return;
                   }
                 }
-                tmp24[0] = length;
+                tmp23[0] = length;
                 cResult[12] = length;
-                cResult[13] = tmp24;
+                cResult[13] = tmp23;
               } else {
-                class O {
+                class A {
                   constructor() {
                     closure_6.current = 0;
                     return;
                   }
                 }
               }
-              const effect = noop.useEffect(O, tmp24);
+              const effect = noop.useEffect(A, tmp23);
               const _Symbol3 = Symbol;
               if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-                class O {
-                  constructor() {
-                    closure_6.current = 0;
+                class E {
+                  constructor(arg0) {
+                    tmp = closure_8(onCarouselScroll.nativeEvent.layout.width);
                     return;
                   }
                 }
-                cResult[14] = tmp27;
+                cResult[14] = E;
               } else {
-                class O {
-                  constructor() {
-                    closure_6.current = 0;
+                class E {
+                  constructor(arg0) {
+                    tmp = closure_8(onCarouselScroll.nativeEvent.layout.width);
                     return;
                   }
                 }
               }
               if (cResult[15] === length) {
-                class O {
-                  constructor() {
-                    closure_6.current = 0;
+                class E {
+                  constructor(arg0) {
+                    tmp = closure_8(onCarouselScroll.nativeEvent.layout.width);
                     return;
                   }
                 }
@@ -652,23 +652,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[9] !== sizes) {
-            class O {
-              constructor() {
-                closure_6.current = 0;
+            class E {
+              constructor(arg0) {
+                tmp = closure_8(onCarouselScroll.nativeEvent.layout.width);
                 return;
               }
             }
             cResult[9] = sizes;
-            cResult[10] = tmp15;
+            cResult[10] = O;
           } else {
-            class O {
-              constructor() {
-                closure_6.current = 0;
+            class E {
+              constructor(arg0) {
+                tmp = closure_8(onCarouselScroll.nativeEvent.layout.width);
                 return;
               }
             }
           }
-          const mapped1 = media.map(tmp15);
+          const mapped1 = media.map(O);
           cResult[6] = media;
           cResult[7] = sizes;
           cResult[8] = mapped1;
@@ -728,7 +728,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = onGetGamePress(sizes[10]);
       tmp2 = sizes;
     }
-  : (media) => {
+  : function AppStoreOverlayMediaCarousel(media) {
       media = media.media;
       ({ onGetGamePress: importDefault, onCarouselScroll } = media);
       let recordMediaSize;
@@ -936,7 +936,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj.tileSize = AppStoreOverlayMediaSize.getMediaTileSize(value);
           obj.recordMediaSize = recordMediaSize;
           obj.onGetGamePress = onGetGamePress;
-          return v65535(closure_18, obj, "" + media.type + "-" + index);
+          return collapsed(closure_18, obj, "" + media.type + "-" + index);
         });
         obj2.children = length(memo1, obj5);
         tmp15 = length(tmp3(tmp4[19]).GestureDetector, obj2);

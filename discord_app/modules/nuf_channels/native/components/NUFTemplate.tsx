@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, Image: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { padding: 16, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   title: { textAlign: "center", marginBottom: 8 },
@@ -24,7 +24,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFTemplate.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function NUFActionSheetTemplate(arg0) {
       const cResult = c.c(18);
       ({ title, description, imageSrc, onCTAPress, CTALabel } = arg0);
       const tmp4 = closure_6();
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: title,
       };
     }
-  : (arg0) => {
+  : function NUFActionSheetTemplate(arg0) {
       ({ title, description, imageSrc, onCTAPress, CTALabel } = arg0);
       const tmp = closure_6();
       const obj = { style: tmp.container, children: null };

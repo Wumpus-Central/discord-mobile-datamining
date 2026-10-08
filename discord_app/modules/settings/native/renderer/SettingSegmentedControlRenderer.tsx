@@ -12,10 +12,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const NodeType = fn(11143).NodeType;
+const NodeType = fn(11263).NodeType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   controlContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -35,7 +35,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (node) => {
+  ? function SettingSegmentedControl(node) {
       const cResult = defaultIndex(576).c(23);
       node = node.node;
       defaultIndex = node.defaultIndex;
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = C;
       const tmp4 = _slicedToArray(noop.useState(0), 2);
     }
-  : (node) => {
+  : function SettingSegmentedControl(node) {
       _require = undefined;
       settings = undefined;
       dependencyMap = undefined;
@@ -212,13 +212,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const memo = noop.useMemo(() => {
         const items = [];
         const item = settings.forEach((id) => {
-          const tmp = items(14425).SETTING_RENDERER_CONFIG[id];
+          const tmp = items(14651).SETTING_RENDERER_CONFIG[id];
           settings(38)(tmp.type === constants.ROUTE, "Invalid setting type for segmented control: " + id);
           const screen = tmp.screen;
           const obj = { label: null, id: null, page: null };
           const component = screen.getComponent();
           const tmp2 = settings(38);
-          obj.label = items(14519).getSettingTitle(id);
+          obj.label = items(14779).getSettingTitle(id);
           obj.id = id;
           obj.page = closure_2_8(component, {});
           items.push(obj);

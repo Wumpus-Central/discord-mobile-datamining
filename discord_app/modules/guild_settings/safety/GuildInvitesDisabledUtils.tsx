@@ -7,7 +7,7 @@ const Constants = fn(1085);
 ({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useInvitesDisabledPermission(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,7 +38,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7);
     }
-  : (arg0) => {
+  : function useInvitesDisabledPermission(arg0) {
       _require = arg0;
       const items = [PermissionStore];
       const items1 = [arg0];
@@ -57,7 +57,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_6 = tmp3;
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (features) => {
+  ? function useInvitesDisabled(features) {
       _require = features;
       const cResult = require("c").c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -123,7 +123,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = hasItem;
       const tmpResult = require("initialize");
     }
-  : (features) => {
+  : function useInvitesDisabled(features) {
       _require = features;
       const items = [GuildIncidentsStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => {
@@ -163,14 +163,14 @@ const result = size.fileFinishedImporting("modules/guild_settings/safety/GuildIn
 export const useInvitesDisabledPermission = tmp3;
 export const useInvitesDisabled = tmp4;
 export const useShouldShowInvitesDisabledNotif = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShouldShowInvitesDisabledNotif(arg0) {
       let tmp = closure_6(arg0);
       if (tmp) {
         tmp = closure_7(arg0);
       }
       return tmp;
     }
-  : (arg0) => {
+  : function useShouldShowInvitesDisabledNotif(arg0) {
       let tmp = closure_6(arg0);
       if (tmp) {
         tmp = closure_7(arg0);

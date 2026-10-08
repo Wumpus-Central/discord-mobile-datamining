@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     position: "absolute",
@@ -45,7 +45,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/ChannelScreenAnimatedFrame.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (translateX) => {
+  ? function ChannelScreenAnimatedFrame(translateX) {
       const cResult = translateX(isChatLockedOpen[5]).c(8);
       translateX = translateX.translateX;
       const maxWidth = translateX.maxWidth;
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = items;
       const obj4 = translateX(isChatLockedOpen[10]);
     }
-  : (translateX) => {
+  : function ChannelScreenAnimatedFrame(translateX) {
       translateX = translateX.translateX;
       const maxWidth = translateX.maxWidth;
       const isChatLockedOpen = translateX.isChatLockedOpen;

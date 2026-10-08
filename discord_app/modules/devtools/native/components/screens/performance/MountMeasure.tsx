@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/MountMeasure.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (batchKey) => {
+  ? function MountMeasure(batchKey) {
       const cResult = c.c(10);
       batchKey = batchKey.batchKey;
       const onMeasure = batchKey.onMeasure;
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[9] = tmp10;
           tmp7 = tmp10;
         }
-        const fn2 = function c() {
+        const fn2 = function s() {
           return onMeasure(batchKey);
         };
         cResult[3] = batchKey;
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = fn2;
         const tmpResult = useMountEffect;
       }
-      const fn = function s() {
+      const fn = function u() {
         return onCancel(batchKey);
       };
       cResult[0] = batchKey;
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp4 = fn;
     }
-  : (arg0) => {
+  : function MountMeasure(arg0) {
       ({ batchKey: require, onMeasure: dependencyMap, onCancel: View } = arg0);
       ({ style, children } = arg0);
       const unmountEffect = useMountEffect.useUnmountEffect(() => View(require));

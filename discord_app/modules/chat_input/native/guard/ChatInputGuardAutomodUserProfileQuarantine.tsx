@@ -7,7 +7,7 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 
 require = fn;
-const GuildMemberFlags = fn(4501).GuildMemberFlags;
+const GuildMemberFlags = fn(4693).GuildMemberFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guildId) => {
+    ? function ChatInputGuardAutomodUserProfileQuarantine(guildId) {
         const cResult = guildId(576).c(17);
         guildId = guildId.guildId;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -28,28 +28,58 @@ export default noop.memo(
           first = cResult[0];
         }
         if (cResult[1] !== guildId) {
-          const fn = function c() {
-            if (null == guildId) {
-              const _Set = Set;
-              const set = new Set();
-              return set;
-            } else {
-              const id = AuthenticationStore.getId();
-              return AutomodPermissionUtils.getAutomodQuarantinedGuildMemberFlags(GuildMemberStore.getMember(tmp, id));
+          class A {
+            constructor() {
+              if (null == guildId) {
+                tmp7 = globalThis;
+                _Set = Set;
+                tmp8 = new.target;
+                tmp9 = new.target;
+                set = new Set();
+                tmp11 = set;
+                return set;
+              } else {
+                tmp2 = closure_4;
+                tmp4 = closure_0;
+                tmp5 = closure_2;
+                id = closure_4.getId();
+                obj = closure_0(closure_2[7]);
+                tmp6 = closure_5;
+                return obj.getAutomodQuarantinedGuildMemberFlags(closure_5.getMember(tmp, id));
+              }
             }
-          };
+          }
           const items1 = [guildId];
           cResult[1] = guildId;
-          cResult[2] = fn;
+          cResult[2] = A;
           cResult[3] = items1;
           let tmp8 = items1;
-          let tmp7 = fn;
         } else {
-          tmp7 = cResult[2];
+          class A {
+            constructor() {
+              if (null == guildId) {
+                tmp7 = globalThis;
+                _Set = Set;
+                tmp8 = new.target;
+                tmp9 = new.target;
+                set = new Set();
+                tmp11 = set;
+                return set;
+              } else {
+                tmp2 = closure_4;
+                tmp4 = closure_0;
+                tmp5 = closure_2;
+                id = closure_4.getId();
+                obj = closure_0(closure_2[7]);
+                tmp6 = closure_5;
+                return obj.getAutomodQuarantinedGuildMemberFlags(closure_5.getMember(tmp, id));
+              }
+            }
+          }
           tmp8 = cResult[3];
         }
         const obj = guildId(576);
-        const stateFromStores = guildId(504).useStateFromStores(first, tmp7, tmp8);
+        const stateFromStores = guildId(504).useStateFromStores(first, A, tmp8);
         if (cResult[4] !== guildId) {
           class R {
             constructor() {
@@ -172,7 +202,7 @@ export default noop.memo(
                   return;
                 }
               }
-              const tmp20 = jsx(tmp(12136).ChatXIcon, {});
+              const tmp20 = jsx(tmp(12215).ChatXIcon, {});
               cResult[12] = tmp20;
               const tmp19 = tmp20;
             } else {
@@ -209,7 +239,7 @@ export default noop.memo(
         }
         const tmpResult = guildId(504);
       }
-    : (guildId) => {
+    : function ChatInputGuardAutomodUserProfileQuarantine(guildId) {
         guildId = guildId.guildId;
         const items = [AuthenticationStore, GuildMemberStore];
         const items1 = [guildId];
@@ -232,7 +262,7 @@ export default noop.memo(
           const result = GuildAutomodActionActionCreators.openAutomodProfileQuarantineAlert(guildId);
         }, items2);
         const obj = guildId(504);
-        const automodReason = guildId(4521).getAutomodReason(stateFromStores);
+        const automodReason = guildId(4713).getAutomodReason(stateFromStores);
         if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
           const intl2 = tmp(1126).intl;
           let stringResult = intl2.string(tmp(1126).t.Viksoo);
@@ -254,8 +284,8 @@ export default noop.memo(
           icon: null,
           message: null,
         };
-        const obj2 = guildId(4521);
-        obj3.icon = jsx(guildId(12136).ChatXIcon, {});
+        const obj2 = guildId(4713);
+        obj3.icon = jsx(guildId(12215).ChatXIcon, {});
         obj3.message = stringResult1;
         return jsx(ChatInputGuardDefault, {
           type: "simple-action",

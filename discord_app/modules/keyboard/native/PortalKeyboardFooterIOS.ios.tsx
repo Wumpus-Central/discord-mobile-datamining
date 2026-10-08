@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { keyboardStickyFooter: null };
 const rect = {
   position: "absolute",
@@ -32,7 +32,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardFooterIOS.ios.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (animatedSheetIndex) => {
+  ? function PortalKeyboardFooterIOS(animatedSheetIndex) {
       const cResult = animatedSheetIndex(bottom[5]).c(8);
       animatedSheetIndex = animatedSheetIndex.animatedSheetIndex;
       ({ portalHostName, followSystemKeyboard } = animatedSheetIndex);
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp10 = items;
     }
-  : (animatedSheetIndex) => {
+  : function PortalKeyboardFooterIOS(animatedSheetIndex) {
       animatedSheetIndex = animatedSheetIndex.animatedSheetIndex;
       let str = animatedSheetIndex.portalHostName;
       if (str === undefined) {
@@ -136,13 +136,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let animatedStyle;
       const tmp = progress();
       dependencyMap = tmp;
-      const bottom = flag(1618)().bottom;
-      const reanimatedKeyboardAnimation = animatedSheetIndex(1632).useReanimatedKeyboardAnimation();
+      const bottom = flag(1630)().bottom;
+      const reanimatedKeyboardAnimation = animatedSheetIndex(1644).useReanimatedKeyboardAnimation();
       const height = reanimatedKeyboardAnimation.height;
       progress = reanimatedKeyboardAnimation.progress;
-      let obj = animatedSheetIndex(1632);
-      const keyboardTypeSharedValue = animatedSheetIndex(4753).useKeyboardTypeSharedValue();
-      let obj2 = animatedSheetIndex(4753);
+      let obj = animatedSheetIndex(1644);
+      const keyboardTypeSharedValue = animatedSheetIndex(4947).useKeyboardTypeSharedValue();
+      let obj2 = animatedSheetIndex(4947);
       const fn = function b() {
         ReanimatedRexport;
         [0][1] = bottom;
@@ -167,14 +167,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.transform = items2;
         const tmpResult = ReanimatedRexport;
       };
-      let obj3 = animatedSheetIndex(4618);
+      let obj3 = animatedSheetIndex(4810);
       fn.__closure = {
-        interpolate: animatedSheetIndex(4618).interpolate,
+        interpolate: animatedSheetIndex(4810).interpolate,
         progress,
         bottom,
         followSystemKeyboard: flag,
         keyboardType: keyboardTypeSharedValue,
-        KeyboardTypes: animatedSheetIndex(1616).KeyboardTypes,
+        KeyboardTypes: animatedSheetIndex(1628).KeyboardTypes,
         animatedSheetIndex,
         height,
         EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(1105).EXPRESSION_FOOTER_HEIGHT,
@@ -188,18 +188,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return items;
       }, items);
       let obj4 = {
-        interpolate: animatedSheetIndex(4618).interpolate,
+        interpolate: animatedSheetIndex(4810).interpolate,
         progress,
         bottom,
         followSystemKeyboard: flag,
         keyboardType: keyboardTypeSharedValue,
-        KeyboardTypes: animatedSheetIndex(1616).KeyboardTypes,
+        KeyboardTypes: animatedSheetIndex(1628).KeyboardTypes,
         animatedSheetIndex,
         height,
         EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(1105).EXPRESSION_FOOTER_HEIGHT,
       };
-      return height(flag(4618).View, {
+      return height(flag(4810).View, {
         style: memo,
-        children: height(animatedSheetIndex(4758).PortalHost, { name: str }),
+        children: height(animatedSheetIndex(4952).PortalHost, { name: str }),
       });
     };

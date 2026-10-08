@@ -11,7 +11,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/useDisallowSwipeExit.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useDisallowSwipeExit(arg0) {
       closure_0 = arg0;
       const cResult = c.c(5);
       const disallowGesture = noop.useContext(MainTabsNavigatorPanelContextDefault).disallowGesture;
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = items;
       tmp4 = fn;
     }
-  : (arg0) => {
+  : function useDisallowSwipeExit(arg0) {
       closure_0 = arg0;
       const disallowGesture = noop.useContext(MainTabsNavigatorPanelContextDefault).disallowGesture;
       const context = noop.useContext(MainTabsNavigatorPanelContext.MainTabsChannelScreenStackContext);

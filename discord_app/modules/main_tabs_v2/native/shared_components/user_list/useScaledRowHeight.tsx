@@ -8,7 +8,7 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useScaledRowHeightData() {
       const cResult = c.c(3);
       const fontScale = useFontScale.useFontScale();
       const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT);
@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj5;
       tmp7 = obj5;
     }
-  : () => {
+  : function useScaledRowHeightData() {
       const fontScale = useFontScale.useFontScale();
       const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT);
       const token1 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_CONTENT_HEIGHT);
@@ -41,5 +41,7 @@ const result1 = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/user_list/useScaledRowHeight.tsx",
 );
 
-export default () => closure_3().rowHeight;
+export default function useScaledRowHeight() {
+  return closure_3().rowHeight;
+}
 export const useScaledRowHeightData = tmp2;

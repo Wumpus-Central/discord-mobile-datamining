@@ -6,7 +6,7 @@ import useTrialOffer from "../useTrialOffer.tsx";
 import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 
 require = fn;
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: c3,
   PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: closure_4,
@@ -17,7 +17,7 @@ const PremiumConstants = fn(1379);
 } = PremiumConstants);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useGetTrialOffer(arg0, arg1) {
       const trialOffer = useTrialOffer.useTrialOffer(arg0);
       const values = Object.values(ProductIds.TrialIdToProductOfferId[arg0]);
       let tmp2 = null;
@@ -26,7 +26,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp2;
     }
-  : (arg0, arg1) => {
+  : function useGetTrialOffer(arg0, arg1) {
       const trialOffer = useTrialOffer.useTrialOffer(arg0);
       const values = Object.values(ProductIds.TrialIdToProductOfferId[arg0]);
       let tmp2 = null;
@@ -42,23 +42,21 @@ const result = size.fileFinishedImporting(
 );
 
 export const useAndroidAndLegacyIOSPremiumTrialOfferCandidates = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAndroidAndLegacyIOSPremiumTrialOfferCandidates() {
       const cResult = c.c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [IAPStore];
-        class R {
-          constructor() {
-            obj = { isFetchingProducts: closure_1_2.isFetchingProducts(), offerIds: closure_1_2.getOfferIds() };
-            return obj;
-          }
-        }
+        const fn = function l() {
+          return { isFetchingProducts: IAPStore.isFetchingProducts(), offerIds: IAPStore.getOfferIds() };
+        };
         cResult[0] = items;
-        cResult[1] = R;
+        cResult[1] = fn;
         tmp4 = items;
+        tmp5 = fn;
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const offerIds = useStateFromStores.useStateFromStoresObject(tmp4, R).offerIds;
+      const offerIds = useStateFromStores.useStateFromStoresObject(tmp4, tmp5).offerIds;
       const tmp7 = closure_9(timestampProducer, offerIds);
       const tmp8 = closure_9(React3, offerIds);
       const tmp9 = closure_9(React4, offerIds);
@@ -91,7 +89,7 @@ export const useAndroidAndLegacyIOSPremiumTrialOfferCandidates = ReactCompilerGa
       tmp13 = found;
       const tmpResult = useStateFromStores;
     }
-  : () => {
+  : function useAndroidAndLegacyIOSPremiumTrialOfferCandidates() {
       const items = [IAPStore];
       const offerIds = useStateFromStores.useStateFromStoresObject(items, () => ({
         isFetchingProducts: IAPStore.isFetchingProducts(),

@@ -8,10 +8,10 @@ const BadgeDefault = Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(11711).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(5078).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(11776).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" },
   unreadBadgePanel: { marginLeft: -16 },
@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (panelVariant) => {
+    ? function ChannelUnreadBadge(panelVariant) {
         panelVariant = panelVariant.panelVariant;
         let tmp = undefined !== panelVariant;
         ({ unread, resolvedUnreadSetting, muted, isThread, layout, launchpad } = panelVariant);
@@ -57,14 +57,13 @@ export default noop.memo(
             num2 = 1;
           }
           const obj4 = { opacity: num2 };
-          const items1 = [obj4];
-          obj3.badgeStyle = items1;
+          obj3.badgeStyle = obj4;
           obj2.children = jsx(BadgeDefault, { classic: tmp, size: null, badgeStyle: null });
           tmp9Result = <View style={null}>{null}</View>;
         }
         return tmp9Result;
       }
-    : (panelVariant) => {
+    : function ChannelUnreadBadge(panelVariant) {
         let flag = panelVariant.panelVariant;
         ({ unread, resolvedUnreadSetting, muted, isThread, layout, launchpad } = panelVariant);
         if (flag === undefined) {
@@ -96,8 +95,7 @@ export default noop.memo(
             num2 = 1;
           }
           const obj4 = { opacity: num2 };
-          const items1 = [obj4];
-          obj3.badgeStyle = items1;
+          obj3.badgeStyle = obj4;
           obj2.children = jsx(BadgeDefault, { classic: flag, size: null, badgeStyle: null });
           tmp8Result = <View style={null}>{null}</View>;
         }

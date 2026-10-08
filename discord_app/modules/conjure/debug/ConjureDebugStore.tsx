@@ -5,6 +5,7 @@ import ConjureTypes from "../ConjureTypes.tsx";
 
 require = fn;
 let closure_2 = [];
+let closure_3 = [];
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
@@ -12,6 +13,7 @@ const map3 = new Map();
 const map4 = new Map();
 const map5 = new Map();
 const map6 = new Map();
+const map7 = new Map();
 const Store = initializeDefault.Store;
 class ConjureDebugStore extends Store {}
 const prototype = ConjureDebugStore.prototype;
@@ -64,6 +66,25 @@ prototype["getForceCompactionState"] = function getForceCompactionState(projectI
   }
   return str;
 };
+prototype["getTimingTraces"] = function getTimingTraces(projectId) {
+  value = map7.get(projectId);
+  if (value == null) {
+    value = closure_3;
+  }
+  return value;
+};
+prototype["getTimingTrace"] = function getTimingTrace(projectId, traceId) {
+  closure_0 = traceId;
+  value = map7.get(projectId);
+  let found;
+  if (value != null) {
+    found = value.find((id) => id.id === closure_0);
+  }
+  if (found == null) {
+    found = null;
+  }
+  return found;
+};
 const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     if (0 === map.size) {
@@ -73,7 +94,9 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
             if (0 === map4.size) {
               if (0 === map5.size) {
                 if (0 === map6.size) {
-                  return false;
+                  if (0 === map7.size) {
+                    return false;
+                  }
                 }
               }
             }
@@ -88,6 +111,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     map4.clear();
     map5.clear();
     map6.clear();
+    map7.clear();
   },
   CONJURE_DEBUG_STATUS_REQUESTED: function handleStatusRequested(projectId) {
     const result = map1.set(projectId.projectId, "loading");
@@ -187,6 +211,17 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     }
     const result = map6.set(id.projectId, substr);
   },
+  CONJURE_DEBUG_TIMING_TRACE: function handleTimingTrace(arg0) {
+    ({ projectId, trace } = arg0);
+    let items = map7.get(projectId);
+    if (items == null) {
+      items = [];
+    }
+    const found = items.filter((id) => id.id !== trace.id);
+    const combined = found.concat(trace);
+    const sorted = combined.sort((started_at, started_at2) => started_at.started_at - started_at2.started_at);
+    const result = map7.set(projectId, sorted.slice(-100));
+  },
   CONJURE_CHAT_USAGE_SET: function handleChatUsageSet(turn) {
     turn = turn.turn;
     if (0 === obj.runeCount(turn.total)) {
@@ -205,6 +240,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     map4.delete(projectId);
     map5.delete(projectId);
     map6.delete(projectId);
+    map7.delete(projectId);
   },
 });
 const size = fn(2);

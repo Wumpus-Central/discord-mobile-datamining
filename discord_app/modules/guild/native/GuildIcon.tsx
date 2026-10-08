@@ -4,8 +4,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_5 = fn(5979).ExpressionSourceGuildRecord;
-const GuildRecord = fn(2070);
+let closure_5 = fn(6162).ExpressionSourceGuildRecord;
+const GuildRecord = fn(2082);
 ({ getGuildIconSource: metroRequire, getGuildAcronym: closure_7 } = GuildRecord);
 const Fonts = fn(1085).Fonts;
 const jsx = fn(21).jsx;
@@ -51,7 +51,7 @@ let obj2 = {
   [GuildIconSizes.XLARGE]: 64,
   [GuildIconSizes.XXLARGE]: 80,
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj3 = { guildIcon: { justifyContent: "center", alignItems: "center", overflow: "hidden" } };
 obj3[GuildIconSizes.XXXSMALL] = { width: 10, height: 10, borderRadius: 3.3333333333333335 };
 obj3[GuildIconSizes.XXSMALL_12] = { width: 12, height: 12, borderRadius: 4 };
@@ -332,7 +332,7 @@ export default noop.memo(function GuildIconInner(guild) {
     let tmp40Result = tmp40(tmp13(tmp14[12]), obj4);
     const tmp13Result = tmp13(tmp14[12]);
   } else {
-    const obj6 = { style: wrapperStyle, source: tmp15, onLoadEnd: null, fade: false };
+    const obj6 = { style: wrapperStyle, source: tmp15, onLoadEnd: null, fadeDuration: 0 };
     let tmp42;
     if (null != loadingStyle) {
       tmp42 = tmp38;

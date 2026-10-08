@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { title: { marginTop: nativeDefault.space.PX_24, textAlign: "center" }, description: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24, textAlign: "center" };
 obj2.description = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
@@ -21,7 +21,7 @@ fn(558);
 let obj4 = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PremiumGiftDMSuccessActions() {
       const cResult = onClose(navigation[6]).c(9);
       let obj = onClose(navigation[6]);
       const nativeGiftContext = onClose(navigation[7]).useNativeGiftContext();
@@ -83,7 +83,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       const obj3 = onClose(navigation[8]);
     }
-  : () => {
+  : function PremiumGiftDMSuccessActions() {
       const nativeGiftContext = onClose(navigation[7]).useNativeGiftContext();
       onClose = nativeGiftContext.onClose;
       const prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
@@ -111,7 +111,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftDMPurchaseSuccess.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PremiumGiftDMSuccessBody() {
       const cResult = c.c(12);
       const tmp4 = closure_8();
       const giftStyle = NativeGiftContext.useNativeGiftContext().giftStyle;
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = tmp21;
       tmp20 = tmp21;
     }
-  : () => {
+  : function PremiumGiftDMSuccessBody() {
       const tmp = closure_8();
       const obj2 = { children: null };
       const items = [

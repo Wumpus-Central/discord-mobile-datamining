@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useLoadGuildPowerups.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useLoadGuildPowerups(arg0) {
       _require = arg0;
       const cResult = require("c").c(7);
       let obj = require("c");
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const effect1 = noop.useEffect(tmp6, tmp7);
       }
-      const fn = function o() {
+      const fn = function t() {
         if (gameServerEnabled) {
           const gameServerCatalog = GameServerActionCreators.fetchGameServerCatalog(closure_0);
         }
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = fn;
       const obj2 = require("GameServerExperiment");
     }
-  : (arg0) => {
+  : function useLoadGuildPowerups(arg0) {
       _require = arg0;
       gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(arg0, "useLoadGuildPowerups");
       const items = [arg0, gameServerEnabled];

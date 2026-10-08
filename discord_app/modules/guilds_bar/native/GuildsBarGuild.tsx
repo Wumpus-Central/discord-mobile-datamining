@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
+import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import getGuildsBarGuildMenuItemsDefault from "utils/getGuildsBarGuildMenuItems.tsx";
 import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx";
@@ -16,14 +16,14 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 
 require = fn;
-const GuildRecord = fn(2070);
+const GuildRecord = fn(2082);
 ({ getGuildIconSource: closure_4, getGuildIconURL: hasOwnProperty } = GuildRecord);
-const useItemDragState = fn(16265).useItemDragState;
-const TRANSITION_PHYSICS = fn(16262).TRANSITION_PHYSICS;
+const useItemDragState = fn(16525).useItemDragState;
+const TRANSITION_PHYSICS = fn(16522).TRANSITION_PHYSICS;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_14, jsxs: closure_15, jsx: closure_16 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { guildIcon: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -43,7 +43,7 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarGuil
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guildId) => {
+    ? function GuildsBarGuild(guildId) {
         const cResult = guildId(drawerOpen[14]).c(87);
         guildId = guildId.guildId;
         ({ isDragPreview, hideExpandedChildren } = guildId);
@@ -99,53 +99,83 @@ export default noop.memo(
           }
         }
         if (cResult[3] !== guildId) {
-          class P {
-            constructor(arg0) {
-              closure_3.current = guildId;
-              return;
+          class B {
+            constructor() {
+              obj = {
+                selected: closure_9.getGuildId() === guildId,
+                isUnavailable: closure_6.isUnavailable(guildId),
+                unread: closure_7.hasUnread(guildId),
+                mentionCount: closure_7.getMentionCount(guildId),
+                isMentionLowImportance: closure_7.getIsMentionLowImportance(guildId),
+              };
+              return obj;
             }
           }
           const items1 = [guildId];
           cResult[3] = guildId;
-          cResult[4] = tmp15;
+          cResult[4] = B;
           cResult[5] = items1;
           let tmp14 = items1;
         } else {
-          class P {
-            constructor(arg0) {
-              closure_3.current = guildId;
-              return;
+          class B {
+            constructor() {
+              obj = {
+                selected: closure_9.getGuildId() === guildId,
+                isUnavailable: closure_6.isUnavailable(guildId),
+                unread: closure_7.hasUnread(guildId),
+                mentionCount: closure_7.getMentionCount(guildId),
+                isMentionLowImportance: closure_7.getIsMentionLowImportance(guildId),
+              };
+              return obj;
             }
           }
           tmp14 = cResult[5];
         }
         const tmpResult5 = guildId(drawerOpen[18]);
-        const stateFromStoresObject = guildId(drawerOpen[20]).useStateFromStoresObject(tmp10, tmp15, tmp14);
+        const stateFromStoresObject = guildId(drawerOpen[20]).useStateFromStoresObject(tmp10, B, tmp14);
         const selected = stateFromStoresObject.selected;
         const isUnavailable = stateFromStoresObject.isUnavailable;
         ({ mentionCount, unread } = stateFromStoresObject);
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          class P {
-            constructor(arg0) {
-              closure_3.current = guildId;
-              return;
+          class B {
+            constructor() {
+              obj = {
+                selected: closure_9.getGuildId() === guildId,
+                isUnavailable: closure_6.isUnavailable(guildId),
+                unread: closure_7.hasUnread(guildId),
+                mentionCount: closure_7.getMentionCount(guildId),
+                isMentionLowImportance: closure_7.getIsMentionLowImportance(guildId),
+              };
+              return obj;
             }
           }
           const items2 = [GuildStore];
           cResult[6] = items2;
         } else {
-          class P {
-            constructor(arg0) {
-              closure_3.current = guildId;
-              return;
+          class B {
+            constructor() {
+              obj = {
+                selected: closure_9.getGuildId() === guildId,
+                isUnavailable: closure_6.isUnavailable(guildId),
+                unread: closure_7.hasUnread(guildId),
+                mentionCount: closure_7.getMentionCount(guildId),
+                isMentionLowImportance: closure_7.getIsMentionLowImportance(guildId),
+              };
+              return obj;
             }
           }
         }
         if (cResult[7] === guildId) {
-          class P {
-            constructor(arg0) {
-              closure_3.current = guildId;
-              return;
+          class B {
+            constructor() {
+              obj = {
+                selected: closure_9.getGuildId() === guildId,
+                isUnavailable: closure_6.isUnavailable(guildId),
+                unread: closure_7.hasUnread(guildId),
+                mentionCount: closure_7.getMentionCount(guildId),
+                isMentionLowImportance: closure_7.getIsMentionLowImportance(guildId),
+              };
+              return obj;
             }
           }
         }
@@ -177,7 +207,7 @@ export default noop.memo(
         cResult[11] = fn;
         const tmpResult6 = guildId(drawerOpen[20]);
       }
-    : (guildId) => {
+    : function GuildsBarGuild(guildId) {
         guildId = guildId.guildId;
         let flag = guildId.isDragPreview;
         if (flag === undefined) {
@@ -382,7 +412,7 @@ export default noop.memo(
         ({ accessibilityActions, onAccessibilityAction } = memo2);
         const obj6 = guildId(drawerOpen[20]);
         const sharedValue = guildId(drawerOpen[31]).useSharedValue(guildId);
-        class D {
+        class G {
           constructor(arg0) {
             value = dragDropInProgress.get();
             if (value) {
@@ -430,7 +460,7 @@ export default noop.memo(
           }
         }
         const obj7 = guildId(drawerOpen[31]);
-        D.__closure = {
+        G.__closure = {
           dragDropInProgress,
           sharedId: sharedValue,
           guildId,
@@ -438,10 +468,10 @@ export default noop.memo(
           withSpring: guildId(drawerOpen[32]).withSpring,
           TRANSITION_PHYSICS: stateFromStores1,
         };
-        D.__workletHash = 15285764080325;
-        D.__initData = __initData;
+        G.__workletHash = 15285764080325;
+        G.__initData = __initData;
         const items8 = [guildId, sharedValue, isDragTarget, dragDropInProgress];
-        const callback1 = noop.useCallback(D, items8);
+        const callback1 = noop.useCallback(G, items8);
         const obj9 = {
           id: guildId,
           draggedItemSize: itemSize,

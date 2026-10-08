@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SmartSearchContent.tsx");
 
 export const SmartSearchContent = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SmartSearchContent(arg0) {
       const cResult = c.c(8);
       ({ smartSearchQuery, hasKeywordResults, entry, isCollapsed } = arg0);
       const status = entry.status;
@@ -62,7 +62,7 @@ export const SmartSearchContent = ReactCompilerGating.isReactCompilerEnabled()
         return tmp4;
       }
     }
-  : (arg0) => {
+  : function SmartSearchContent(arg0) {
       ({ smartSearchQuery, entry } = arg0);
       const status = entry.status;
       ({ hasKeywordResults, isCollapsed } = arg0);

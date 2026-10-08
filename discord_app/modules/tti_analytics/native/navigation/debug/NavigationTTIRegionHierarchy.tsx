@@ -67,7 +67,7 @@ let result = size.fileFinishedImporting(
 export const NavigationTTIRegionHierarchyContext = context;
 export { getNavigationTTIRegionHierarchyViolation };
 export const useNavigationTTIRegionHierarchy = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useNavigationTTIRegionHierarchy(arg0) {
       const cResult = c.c(17);
       ({ name: require, tracking, descendantTracking, hasChildren } = arg0);
       dependencyMap = noop.useId();
@@ -94,7 +94,7 @@ export const useNavigationTTIRegionHierarchy = ReactCompilerGating.isReactCompil
       }
       const sum = num3 + 1;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        class C {
+        class I {
           constructor(arg0, arg1) {
             closure_0 = arg0;
             closure_1 = arg1;
@@ -127,10 +127,10 @@ export const useNavigationTTIRegionHierarchy = ReactCompilerGating.isReactCompil
             return;
           }
         }
-        cResult[1] = C;
-        let num4 = C;
+        cResult[1] = I;
+        let num4 = I;
       } else {
-        class C {
+        class I {
           constructor(arg0, arg1) {
             closure_0 = arg0;
             closure_1 = arg1;
@@ -165,7 +165,7 @@ export const useNavigationTTIRegionHierarchy = ReactCompilerGating.isReactCompil
         }
       }
       if (cResult[2] !== sum) {
-        class C {
+        class I {
           constructor(arg0, arg1) {
             closure_0 = arg0;
             closure_1 = arg1;
@@ -203,7 +203,7 @@ export const useNavigationTTIRegionHierarchy = ReactCompilerGating.isReactCompil
         cResult[num2] = sum;
         cResult[3] = tmp7;
       } else {
-        class C {
+        class I {
           constructor(arg0, arg1) {
             closure_0 = arg0;
             closure_1 = arg1;
@@ -244,7 +244,7 @@ export const useNavigationTTIRegionHierarchy = ReactCompilerGating.isReactCompil
       const tmp5 = context(noop.useState(false), 2);
       obj3 = num2[Symbol.iterator]();
     }
-  : (name) => {
+  : function useNavigationTTIRegionHierarchy(name) {
       name = name.name;
       ({ tracking, descendantTracking, hasChildren } = name);
       noop = undefined;

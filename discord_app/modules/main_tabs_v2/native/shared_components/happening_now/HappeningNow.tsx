@@ -4,7 +4,7 @@ import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06147_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/06326_LegacyBaseButton.js";
 import updateSharedValueIfChanged from "../../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import HappeningNowAnalytics from "HappeningNowAnalytics.tsx";
 import happeningNowRankingUtils from "happeningNowRankingUtils.tsx";
@@ -19,6 +19,7 @@ import HappeningNowCardActiveChannelDefault from "HappeningNowCardActiveChannel.
 import HappeningNowCardUserDefault from "HappeningNowCardUser.tsx";
 import HappeningNowActions from "HappeningNowActions.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -160,58 +161,72 @@ function keyExtractor(kind) {
 function getItemType(kind) {
   return kind.kind;
 }
+let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15129);
-({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: closure_7, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8, HAPPENING_NOW_PANELS_CONTAINER_PADDING, HappeningNowKindIds: closure_9 } = HappeningNowConstants);
+({ ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
+const HappeningNowConstants = fn(15391);
+({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: closure_9, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: c10, HAPPENING_NOW_PANELS_CONTAINER_PADDING, HappeningNowKindIds: closure_11 } = HappeningNowConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
-const ReanimatedHelperTypes = fn(6578);
+const ReanimatedHelperTypes = fn(6754);
 const context = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue([]));
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { containerInner: { paddingLeft: HAPPENING_NOW_PANELS_CONTAINER_PADDING, paddingRight: HAPPENING_NOW_PANELS_CONTAINER_PADDING }, loading: { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 } };
-let closure_13 = createStyles.createStyles(obj);
-const Gesture = fn(6147).Gesture;
+let closure_15 = createStyles.createStyles(obj);
+const Gesture = fn(6326).Gesture;
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 };
 const gesture = Gesture.Native().disallowInterruption(true);
 const maintainVisibleContentPosition = { disabled: true };
 let ReactCompilerGating = fn(558);
-const forwardRefResult = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
-  const cResult = c.c(3);
-  if (cResult[0] === arg0) {
-    if (cResult[1] === ref) {
-      let tmp4 = cResult[2];
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function HappeningNowScrollView(ref) {
+  const cResult = c.c(6);
+  if (cResult[0] !== ref) {
+    const tmp8 = _objectWithoutProperties(ref.ref, closure_3);
+    cResult[0] = ref.ref;
+    cResult[1] = tmp8;
+    cResult[2] = ref.ref;
+    let tmp5 = ref;
+    let tmp4 = tmp8;
+  } else {
+    tmp4 = cResult[1];
+    tmp5 = cResult[2];
+  }
+  if (cResult[3] === tmp4) {
+    if (cResult[4] === tmp5) {
+      let tmp9 = cResult[5];
     }
-    return tmp4;
+    return tmp9;
   }
   const obj2 = { gesture, children: null };
-  const merged = Object.assign(arg0);
-  obj2.children = <hasOwnProperty ref={ref} />;
-  const tmp6 = jsx(LegacyBaseButton.GestureDetector, { gesture, children: null });
-  cResult[0] = arg0;
-  cResult[1] = ref;
-  cResult[2] = tmp6;
-  tmp4 = tmp6;
-  const obj3 = { ref };
-}) : ((arg0, ref) => {
+  const merged = Object.assign(tmp4);
+  obj2.children = <React5 ref={tmp5} />;
+  const tmp11 = jsx(LegacyBaseButton.GestureDetector, { gesture, children: null });
+  cResult[3] = tmp4;
+  cResult[4] = tmp5;
+  cResult[5] = tmp11;
+  tmp9 = tmp11;
+  const obj3 = { ref: tmp5 };
+}) : (function HappeningNowScrollView(ref) {
+  const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const obj = { gesture, children: null };
-  const merged = Object.assign(arg0);
-  obj.children = <hasOwnProperty ref={ref} />;
+  const merged1 = Object.assign(merged);
+  obj.children = <React5 ref={ref.ref} />;
   return jsx(LegacyBaseButton.GestureDetector, { gesture, children: null });
-}));
-forwardRefResult.displayName = "HappeningNowScrollView";
+});
+const renderScrollComponent = tmp5;
+tmp5.displayName = "HappeningNowScrollView";
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isFocused, arg1) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackActivityCardsView(isFocused, arg1) {
   _require = isFocused;
   importDefault = arg1;
   const cResult = require("c").c(10);
   isFocused = isFocused.isFocused;
   closure_3 = noop.useRef(isFocused);
   if (cResult[0] !== arg1) {
-    const fn = function o() {
+    const fn = function c() {
       const obj = { context: "messages", num_cards: closure_3.current.data.length, max_viewed_card_index: Math.min(ref.current, closure_3.current.data.length), card_types: null };
       const data = closure_3.current.data;
-      obj.card_types = data.map((item) => closure_1_9[item.kind]);
+      obj.card_types = data.map((item) => closure_1_11[item.kind]);
       const merged = Object.assign(HappeningNowAnalytics.getAffinityProperties(closure_3.current.data));
       return obj;
     };
@@ -222,7 +237,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isFocused, arg
     tmp3 = cResult[1];
   }
   const tmp5 = require("useStableCallback")(tmp3);
-  noop = tmp5;
+  closure_4 = tmp5;
   if (cResult[2] !== isFocused) {
     const fn2 = function p() {
       closure_3.current = current;
@@ -233,15 +248,15 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isFocused, arg
   } else {
     tmp6 = cResult[3];
   }
-  const effect = obj2.useEffect(tmp6);
+  const effect = noop.useEffect(tmp6);
   if (cResult[4] === tmp5) {
     if (cResult[5] === isFocused) {
       let tmp8 = cResult[6];
       let tmp9 = cResult[7];
     }
-    const effect1 = obj2.useEffect(tmp8, tmp9);
+    const effect1 = noop.useEffect(tmp8, tmp9);
     if (cResult[8] !== tmp5) {
-      const fn4 = function _() {
+      const fn4 = function h() {
         return () => {
           current = ref.current;
           const loading = current.loading;
@@ -250,8 +265,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isFocused, arg
             tmp = current.data.length > 0;
           }
           if (tmp) {
-            closure_1(isFocused[14]).track(constants.ACTIVITY_CARDS_VIEWED, closure_1_4());
-            const obj = closure_1(isFocused[14]);
+            closure_1(isFocused[15]).track(constants.ACTIVITY_CARDS_VIEWED, closure_1_4());
+            const obj = closure_1(isFocused[15]);
           }
         };
       };
@@ -261,7 +276,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isFocused, arg
     } else {
       tmp11 = cResult[9];
     }
-    require("useMountEffect")(tmp11);
+    tmp4(tmp[16])(tmp11);
   }
   const fn3 = function v() {
     let tmp = !isFocused;
@@ -285,7 +300,9 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isFocused, arg
   cResult[7] = items;
   tmp9 = items;
   tmp8 = fn3;
-}) : ((isFocused, arg1) => {
+  let obj = require("c");
+  tmp4 = importDefault;
+}) : (function useTrackActivityCardsView(isFocused, arg1) {
   let current = isFocused;
   importDefault = arg1;
   isFocused = isFocused.isFocused;
@@ -293,11 +310,11 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isFocused, arg
   let tmp = require("useStableCallback")(() => {
     const obj = { context: "messages", num_cards: closure_3.current.data.length, max_viewed_card_index: Math.min(ref.current, closure_3.current.data.length), card_types: null };
     const data = closure_3.current.data;
-    obj.card_types = data.map((item) => closure_1_9[item.kind]);
+    obj.card_types = data.map((item) => closure_1_11[item.kind]);
     const merged = Object.assign(HappeningNowAnalytics.getAffinityProperties(closure_3.current.data));
     return obj;
   });
-  noop = tmp;
+  closure_4 = tmp;
   const effect = noop.useEffect(() => {
     closure_3.current = current;
   });
@@ -325,8 +342,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isFocused, arg
       tmp = current.data.length > 0;
     }
     if (tmp) {
-      closure_1(isFocused[14]).track(constants.ACTIVITY_CARDS_VIEWED, closure_1_4());
-      const obj = closure_1(isFocused[14]);
+      closure_1(isFocused[15]).track(constants.ACTIVITY_CARDS_VIEWED, closure_1_4());
+      const obj = closure_1(isFocused[15]);
     }
   });
 });
@@ -335,35 +352,36 @@ const NativeResult = Gesture.Native();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function HappeningNow(listRef) {
   const cResult = listRef(576).c(46);
   listRef = listRef.listRef;
-  const tmp4 = closure_13();
+  const tmp4 = closure_15();
   const obj = listRef(576);
-  const isFocused = listRef(1491).useIsFocused();
+  const isFocused = listRef(1503).useIsFocused();
   if (cResult[0] !== isFocused) {
-    const obj3 = { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: "SET_SOUNDPACK", isFocused };
+    const obj3 = { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: "OTA Test", isFocused };
     cResult[0] = isFocused;
     cResult[1] = obj3;
     let tmp6 = obj3;
   } else {
     tmp6 = cResult[1];
   }
-  const obj2 = listRef(1491);
+  const obj2 = listRef(1503);
   const tmp7 = isFocused;
-  const tmp8 = ref;
-  [arr, tmp10] = ref(isFocused(16024)(listRef.cards, tmp6), 2);
+  const tmp8 = _slicedToArray;
+  [arr, tmp10] = isFocused(16284)(listRef.cards, tmp6);
   dependencyMap = tmp10;
-  const tmp9 = ref(isFocused(16024)(listRef.cards, tmp6), 2);
-  const analyticsLocations = isFocused(6664)(isFocused(6688).ACTIVITIES_HAPPENING_NOW).analyticsLocations;
+  const tmp9 = _slicedToArray(isFocused(16284)(listRef.cards, tmp6), 2);
+  const analyticsLocations = isFocused(6841)(isFocused(6865).ACTIVITIES_HAPPENING_NOW).analyticsLocations;
   let num3 = 0;
-  ref = noop.useRef(0);
+  const obj4 = sharedValue;
+  const tmp11 = isFocused(6841);
   if (cResult[2] === length) {
     if (cResult[3] === isFocused) {
       if (cResult[4] === tmp10) {
         let tmp13 = cResult[5];
       }
-      closure_17(tmp13, ref);
+      closure_19(tmp13, ref);
       if (cResult[6] === isFocused) {
         if (cResult[7] === listRef) {
           let tmp16 = cResult[8];
@@ -371,7 +389,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
         }
         const effect = obj4.useEffect(tmp16, tmp17);
         const _Symbol = Symbol;
-        class S {
+        class N {
           constructor() {
             if (!closure_1) {
               tmp = listRef;
@@ -388,42 +406,42 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
           }
         }
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          class V {
+          class A {
             constructor(arg0) {
-              obj = listRef(closure_2[20]);
-              return obj.cardSize(listRef) === closure_1_8;
+              obj = listRef(closure_2[21]);
+              return obj.cardSize(listRef) === closure_1_10;
             }
           }
-          cResult[10] = V;
+          cResult[10] = A;
         } else {
-          class V {
+          class A {
             constructor(arg0) {
-              obj = listRef(closure_2[20]);
-              return obj.cardSize(listRef) === closure_1_8;
+              obj = listRef(closure_2[21]);
+              return obj.cardSize(listRef) === closure_1_10;
             }
           }
         }
-        const findIndexResult = length.findIndex(V);
-        noop = findIndexResult;
+        const findIndexResult = length.findIndex(A);
+        _slicedToArray = findIndexResult;
         let num9 = Infinity;
         if (findIndexResult >= num3) {
-          class V {
+          class A {
             constructor(arg0) {
-              obj = listRef(closure_2[20]);
-              return obj.cardSize(listRef) === closure_1_8;
+              obj = listRef(closure_2[21]);
+              return obj.cardSize(listRef) === closure_1_10;
             }
           }
-          num9 = closure_7 * findIndexResult;
+          num9 = closure_9 * findIndexResult;
         }
         if (cResult[11] === findIndexResult) {
-          class V {
+          class A {
             constructor(arg0) {
-              obj = listRef(closure_2[20]);
-              return obj.cardSize(listRef) === closure_1_8;
+              obj = listRef(closure_2[21]);
+              return obj.cardSize(listRef) === closure_1_10;
             }
           }
-          const first = tmp8(tmp7(16032)(num9, D), 2)[0];
-          class S {
+          const first = tmp8(tmp7(16292)(num9, D), 2)[0];
+          class N {
             constructor() {
               if (!closure_1) {
                 tmp = listRef;
@@ -440,15 +458,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
             }
           }
           if (cResult[14] !== length) {
-            class V {
+            class A {
               constructor(arg0) {
-                obj = listRef(closure_2[20]);
-                return obj.cardSize(listRef) === closure_1_8;
+                obj = listRef(closure_2[21]);
+                return obj.cardSize(listRef) === closure_1_10;
               }
             }
             let result = obj6.filterHappeningNowCards(length);
-            const result1 = tmp(16031).sortHappeningNowCards(result);
-            class S {
+            const result1 = tmp(16291).sortHappeningNowCards(result);
+            class N {
               constructor() {
                 if (!closure_1) {
                   tmp = listRef;
@@ -466,17 +484,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
             }
             cResult[14] = length;
             cResult[15] = result1;
-            const tmpResult = tmp(16031);
+            const tmpResult = tmp(16291);
           } else {
-            class V {
+            class A {
               constructor(arg0) {
-                obj = listRef(closure_2[20]);
-                return obj.cardSize(listRef) === closure_1_8;
+                obj = listRef(closure_2[21]);
+                return obj.cardSize(listRef) === closure_1_10;
               }
             }
           }
-          const tmp8Result = tmp8(tmp7(16032)(num9, D), 2);
-          const happeningNowScrollSnapping = tmp(16032).useHappeningNowScrollSnapping(listRef);
+          const tmp8Result = tmp8(tmp7(16292)(num9, D), 2);
+          const happeningNowScrollSnapping = tmp(16292).useHappeningNowScrollSnapping(listRef);
           if (cResult[16] !== tmp10) {
             class Y {
               constructor(arg0) {
@@ -485,7 +503,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
               }
             }
             cResult[16] = tmp10;
-            class S {
+            class N {
               constructor() {
                 if (!closure_1) {
                   tmp = listRef;
@@ -509,19 +527,19 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
               }
             }
           }
-          const tmpResult3 = tmp(16032);
-          const sharedValue = tmp(4618).useSharedValue([]);
+          const tmpResult3 = tmp(16292);
+          sharedValue = tmp(4810).useSharedValue([]);
           if (cResult[18] !== sharedValue) {
             class X {
               constructor(arg0) {
                 viewableItems = listRef.viewableItems;
-                obj = closure_0(closure_2[23]);
+                obj = closure_0(closure_2[24]);
                 result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
                 return;
               }
             }
             cResult[18] = sharedValue;
-            class S {
+            class N {
               constructor() {
                 if (!closure_1) {
                   tmp = listRef;
@@ -541,7 +559,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
             class X {
               constructor(arg0) {
                 viewableItems = listRef.viewableItems;
-                obj = closure_0(closure_2[23]);
+                obj = closure_0(closure_2[24]);
                 result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
                 return;
               }
@@ -551,12 +569,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
             constructor(arg0, arg1) {
               sum = arg1 + listRef;
               if (sum < closure_5) {
-                tmp6 = closure_7;
-                sum1 = sum / closure_7 | 0;
+                tmp6 = closure_9;
+                sum1 = sum / closure_9 | 0;
               } else {
                 tmp3 = closure_4;
-                tmp4 = closure_8;
-                sum1 = closure_4 + ((sum - tmp2) / closure_8 | 0);
+                tmp4 = closure_10;
+                sum1 = closure_4 + ((sum - tmp2) / closure_10 | 0);
               }
               if (sum1 > closure_3.current) {
                 closure_3.current = sum1;
@@ -568,7 +586,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
             class X {
               constructor(arg0) {
                 viewableItems = listRef.viewableItems;
-                obj = closure_0(closure_2[23]);
+                obj = closure_0(closure_2[24]);
                 result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
                 return;
               }
@@ -578,13 +596,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
             class X {
               constructor(arg0) {
                 viewableItems = listRef.viewableItems;
-                obj = closure_0(closure_2[23]);
+                obj = closure_0(closure_2[24]);
                 result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
                 return;
               }
             }
             const obj5 = { index: 0, loading: tmp10, fullwidth: true, panelVariant: true };
-            class S {
+            class N {
               constructor() {
                 if (!closure_1) {
                   tmp = listRef;
@@ -609,12 +627,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
               constructor(arg0, arg1) {
                 sum = arg1 + listRef;
                 if (sum < closure_5) {
-                  tmp6 = closure_7;
-                  sum1 = sum / closure_7 | 0;
+                  tmp6 = closure_9;
+                  sum1 = sum / closure_9 | 0;
                 } else {
                   tmp3 = closure_4;
-                  tmp4 = closure_8;
-                  sum1 = closure_4 + ((sum - tmp2) / closure_8 | 0);
+                  tmp4 = closure_10;
+                  sum1 = closure_4 + ((sum - tmp2) / closure_10 | 0);
                 }
                 if (sum1 > closure_3.current) {
                   closure_3.current = sum1;
@@ -627,7 +645,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
             class X {
               constructor(arg0) {
                 viewableItems = listRef.viewableItems;
-                obj = closure_0(closure_2[23]);
+                obj = closure_0(closure_2[24]);
                 result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
                 return;
               }
@@ -636,12 +654,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
               class X {
                 constructor(arg0) {
                   viewableItems = listRef.viewableItems;
-                  obj = closure_0(closure_2[23]);
+                  obj = closure_0(closure_2[24]);
                   result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
                   return;
                 }
               }
-              class S {
+              class N {
                 constructor() {
                   if (!closure_1) {
                     tmp = listRef;
@@ -663,7 +681,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
               class X {
                 constructor(arg0) {
                   viewableItems = listRef.viewableItems;
-                  obj = closure_0(closure_2[23]);
+                  obj = closure_0(closure_2[24]);
                   result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
                   return;
                 }
@@ -673,13 +691,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
               class X {
                 constructor(arg0) {
                   viewableItems = listRef.viewableItems;
-                  obj = closure_0(closure_2[23]);
+                  obj = closure_0(closure_2[24]);
                   result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
                   return;
                 }
               }
             }
-            class S {
+            class N {
               constructor() {
                 if (!closure_1) {
                   tmp = listRef;
@@ -700,12 +718,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
               constructor(arg0, arg1) {
                 sum = arg1 + listRef;
                 if (sum < closure_5) {
-                  tmp6 = closure_7;
-                  sum1 = sum / closure_7 | 0;
+                  tmp6 = closure_9;
+                  sum1 = sum / closure_9 | 0;
                 } else {
                   tmp3 = closure_4;
-                  tmp4 = closure_8;
-                  sum1 = closure_4 + ((sum - tmp2) / closure_8 | 0);
+                  tmp4 = closure_10;
+                  sum1 = closure_4 + ((sum - tmp2) / closure_10 | 0);
                 }
                 if (sum1 > closure_3.current) {
                   closure_3.current = sum1;
@@ -720,7 +738,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
             obj7.onViewableItemsChanged = tmp33;
             obj7.keyExtractor = keyExtractor;
             obj7.getItemType = getItemType;
-            const tmp41 = jsx(tmp(8404).FlashList, { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: first, maintainVisibleContentPosition, snapToInterval: tmp25, snapToOffsets: null, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null });
+            const tmp41 = jsx(tmp(8600).FlashList, { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: first, maintainVisibleContentPosition, snapToInterval: tmp25, snapToOffsets: null, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null });
             cResult[31] = tmp33;
             cResult[32] = first;
             cResult[33] = tmp26;
@@ -731,18 +749,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
             cResult[38] = tmp4.containerInner;
             cResult[39] = tmp41;
           }
-          const tmpResult4 = tmp(4618);
+          const tmpResult4 = tmp(4810);
         }
         class D {
           constructor(arg0, arg1) {
             sum = arg1 + listRef;
             if (sum < closure_5) {
-              tmp6 = closure_7;
-              sum1 = sum / closure_7 | 0;
+              tmp6 = closure_9;
+              sum1 = sum / closure_9 | 0;
             } else {
               tmp3 = closure_4;
-              tmp4 = closure_8;
-              sum1 = closure_4 + ((sum - tmp2) / closure_8 | 0);
+              tmp4 = closure_10;
+              sum1 = closure_4 + ((sum - tmp2) / closure_10 | 0);
             }
             if (sum1 > closure_3.current) {
               closure_3.current = sum1;
@@ -754,7 +772,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
         cResult[12] = num9;
         cResult[13] = D;
       }
-      class S {
+      class N {
         constructor() {
           if (!closure_1) {
             tmp = listRef;
@@ -775,7 +793,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
       cResult[7] = listRef;
       cResult[9] = items;
       tmp17 = items;
-      tmp16 = S;
+      tmp16 = N;
     }
   }
   const obj8 = { data: length, isFocused, loading: tmp10 };
@@ -784,27 +802,26 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
   cResult[4] = tmp10;
   cResult[5] = obj8;
   tmp13 = obj8;
-  obj4 = noop;
-  const tmp11 = isFocused(6664);
-}) : ((listRef) => {
+  ref = sharedValue.useRef(0);
+}) : (function HappeningNow(listRef) {
   listRef = listRef.listRef;
   let children;
-  _slicedToArray = undefined;
   let ref;
+  let num;
   let sharedValue;
   let callback2;
-  const tmp = closure_13();
-  const isFocused = listRef(children[16]).useIsFocused();
-  const tmp7 = _slicedToArray(isFocused(children[17])(listRef.cards, { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: "SET_SOUNDPACK", isFocused }), 2);
+  const tmp = closure_15();
+  const isFocused = listRef(children[17]).useIsFocused();
+  const tmp7 = ref(isFocused(children[18])(listRef.cards, { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: "OTA Test", isFocused }), 2);
   children = tmp7[0];
-  _slicedToArray = tmp8;
-  let obj = listRef(children[16]);
+  const loading = tmp8;
+  let obj = listRef(children[17]);
   const tmp5 = isFocused;
-  const tmp6 = _slicedToArray;
-  ref = ref.useRef(0);
-  closure_17({ data: children, isFocused, loading: tmp7[1] }, ref);
+  const tmp6 = ref;
+  ref = num.useRef(0);
+  closure_19({ data: children, isFocused, loading: tmp7[1] }, ref);
   const items = [isFocused, listRef];
-  const effect = ref.useEffect(() => {
+  const effect = num.useEffect(() => {
     if (!isFocused) {
       const current = listRef.current;
       if (current != null) {
@@ -813,71 +830,68 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
       ref.current = 0;
     }
   }, items);
-  const findIndexResult = children.findIndex((item) => listRef(first[20]).cardSize(item) === callback2);
+  const findIndexResult = children.findIndex((item) => listRef(first[21]).cardSize(item) === closure_1_10);
   c5 = findIndexResult;
-  let num = Infinity;
+  num = Infinity;
   if (findIndexResult >= 0) {
-    num = sharedValue * findIndexResult;
+    num = snapToInterval * findIndexResult;
   }
   const items1 = [findIndexResult, num];
   const callback = obj2.useCallback((arg0, arg1) => {
     const sum = arg1 + arg0;
     if (sum < num) {
-      let sum1 = sum / React5 | 0;
+      let sum1 = sum / options | 0;
     } else {
-      sum1 = c5 + ((sum - tmp2) / closure_2_8 | 0);
+      sum1 = c5 + ((sum - tmp2) / collapsed | 0);
     }
     if (sum1 > ref.current) {
       ref.current = sum1;
     }
   }, items1);
-  const tmp6Result = tmp6(tmp5(children[21])(num, callback), 2);
-  if (tmp6Result[1]) {
-    const tmp17 = sharedValue;
-  }
+  const tmp9 = isFocused(children[19]);
   const items2 = [children];
   const memo = obj2.useMemo(() => {
     const result = happeningNowRankingUtils.filterHappeningNowCards(first);
     return happeningNowRankingUtils.sortHappeningNowCards(result);
   }, items2);
-  const tmp9 = isFocused(children[18]);
+  const tmp6Result = tmp6(tmp5(children[22])(num, callback), 2);
   const items3 = [tmp7[1]];
-  const happeningNowScrollSnapping = listRef(children[21]).useHappeningNowScrollSnapping(listRef);
+  const happeningNowScrollSnapping = listRef(children[22]).useHappeningNowScrollSnapping(listRef);
   const callback1 = obj2.useCallback((index) => renderCard(index.item, { index: index.index, loading, panelVariant: true }), items3);
-  const tmp2Result = listRef(children[21]);
-  sharedValue = listRef(children[22]).useSharedValue([]);
+  const tmp2Result = listRef(children[22]);
+  sharedValue = listRef(children[23]).useSharedValue([]);
   const items4 = [sharedValue];
   callback2 = obj2.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
-    const result = updateSharedValueIfChanged.updateSharedValueArrayIfChanged(sharedValue, viewableItems.map((item) => closure_1_19(item.item)));
+    const result = updateSharedValueIfChanged.updateSharedValueArrayIfChanged(sharedValue, viewableItems.map((item) => closure_1_21(item.item)));
   }, items4);
   const items5 = [callback2];
   const memo1 = obj2.useMemo(() => _mod12.debounce(callback2, 130), items5);
   if (0 === children.length) {
     if (!tmp8) {
-      return <num />;
+      return <callback2 />;
     }
   }
   if (!tmp7[1]) {
     const obj3 = { value: sharedValue, children: null };
-    const obj4 = { value: tmp9(isFocused(children[19]).ACTIVITIES_HAPPENING_NOW).analyticsLocations, children: null };
-    const obj5 = { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: tmp6Result[0], maintainVisibleContentPosition, snapToInterval: tmp17, snapToOffsets: happeningNowScrollSnapping, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null };
-    const intl = tmp2(tmp3[25]).intl;
-    obj5.accessibilityLabel = intl.string(tmp2(tmp3[25]).t["1+boPi"]);
+    const obj4 = { value: tmp9(isFocused(children[20]).ACTIVITIES_HAPPENING_NOW).analyticsLocations, children: null };
+    const obj5 = { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: tmp6Result[0], maintainVisibleContentPosition, snapToInterval, snapToOffsets: happeningNowScrollSnapping, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null };
+    const intl = tmp2(tmp3[26]).intl;
+    obj5.accessibilityLabel = intl.string(tmp2(tmp3[26]).t["1+boPi"]);
     obj5.contentContainerStyle = tmp.containerInner;
     obj5.data = memo;
     obj5.renderItem = callback1;
     obj5.onViewableItemsChanged = memo1;
     obj5.keyExtractor = keyExtractor;
     obj5.getItemType = getItemType;
-    obj4.children = jsx(tmp2(tmp3[26]).FlashList, { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: tmp6Result[0], maintainVisibleContentPosition, snapToInterval: tmp17, snapToOffsets: happeningNowScrollSnapping, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null });
-    obj3.children = jsx(tmp2(tmp3[18]).AnalyticsLocationProvider, { value: tmp9(isFocused(children[19]).ACTIVITIES_HAPPENING_NOW).analyticsLocations, children: null });
+    obj4.children = jsx(tmp2(tmp3[27]).FlashList, { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: tmp6Result[0], maintainVisibleContentPosition, snapToInterval, snapToOffsets: happeningNowScrollSnapping, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null });
+    obj3.children = jsx(tmp2(tmp3[19]).AnalyticsLocationProvider, { value: tmp9(isFocused(children[20]).ACTIVITIES_HAPPENING_NOW).analyticsLocations, children: null });
     <context.Provider value={sharedValue}>{null}</context.Provider>;
   }
   const obj6 = { style: tmp.loading, children: null };
   children = renderCard(children.length > 0 ? children[0] : { kind: "placeholder", index: 0 }, { index: 0, loading: tmp8, fullwidth: true, panelVariant: true });
   obj6.children = children;
-  <num style={tmp.loading}>{null}</num>;
-  const tmp2Result2 = listRef(children[22]);
+  <callback2 style={tmp.loading}>{null}</callback2>;
+  const tmp2Result2 = listRef(children[23]);
 }));
 export const ViewableHappeningNowCardKeysContext = context;

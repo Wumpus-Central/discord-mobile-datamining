@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   loading: { marginVertical: 80 },
   body: { alignItems: "center" },
@@ -73,7 +73,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("components_native/premium/OutboundPromotionClaimAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onCancel) => {
+  ? function OutboundPromotionClaimAlert(onCancel) {
       const cResult = onCancel(code[7]).c(51);
       onCancel = onCancel.onCancel;
       const onClaim = onCancel.onClaim;
@@ -527,7 +527,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = fn;
       const tmp11 = onClaim(code[9]);
     }
-  : (onCancel) => {
+  : function OutboundPromotionClaimAlert(onCancel) {
       onCancel = onCancel.onCancel;
       const onClaim = onCancel.onClaim;
       const code = onCancel.code;

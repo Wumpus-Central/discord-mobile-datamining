@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
-import _modDef16322 from "../../../../_runtime/metro/16322__.js";
+import _modDef16582 from "../../../../_runtime/metro/16582__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildAvailabilityStore from "../../../stores/GuildAvailabilityStore.tsx";
 
@@ -10,7 +10,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   unavailableGuilds: {
     marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
@@ -36,7 +36,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarIt
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function GuildsBarItemUnavailableGuilds() {
         const cResult = stateFromStores(576).c(13);
         let unavailableGuilds = closure_7();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -111,8 +111,8 @@ export default noop.memo(
                 return;
               }
             }
-            const obj3 = { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef16322 };
-            const tmp14 = <closure_3 style={unavailableGuilds.unavailableGuildsIcon} source={_modDef16322} />;
+            const obj3 = { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef16582 };
+            const tmp14 = <closure_3 style={unavailableGuilds.unavailableGuildsIcon} source={_modDef16582} />;
             cResult[6] = unavailableGuilds.unavailableGuildsIcon;
             cResult[7] = tmp14;
           } else {
@@ -171,7 +171,7 @@ export default noop.memo(
         }
         const tmpResult = stateFromStores(504);
       }
-    : () => {
+    : function GuildsBarItemUnavailableGuilds() {
         const tmp = closure_7();
         const items = [GuildAvailabilityStore];
         stateFromStores = stateFromStores(504).useStateFromStores(
@@ -199,8 +199,8 @@ export default noop.memo(
             AlertActionCreatorsDefault.show(obj2);
           };
           obj2.style = tmp.unavailableGuilds;
-          const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef16322 };
-          obj2.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16322} />;
+          const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef16582 };
+          obj2.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16582} />;
           tmp5 = (
             <closure_4 accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>
               {null}

@@ -10,7 +10,7 @@ const Permissions = fn(1085).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function useCanManageGuildDirectoryEntry(guildId) {
       _require = guildId;
       const cResult = require("c").c(16);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -21,99 +21,150 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== guildId.guildId) {
-        const fn = function l() {
-          return GuildStore.getGuild(guildId.guildId);
-        };
+        class S {
+          constructor() {
+            return closure_3.getGuild(closure_0.guildId);
+          }
+        }
         cResult[1] = guildId.guildId;
-        cResult[2] = fn;
-        let tmp6 = fn;
+        cResult[2] = S;
       } else {
-        tmp6 = cResult[2];
+        class S {
+          constructor() {
+            return closure_3.getGuild(closure_0.guildId);
+          }
+        }
       }
       const obj = require("c");
-      stateFromStores = require("initialize").useStateFromStores(first, tmp6);
+      stateFromStores = require("initialize").useStateFromStores(first, S);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        class S {
+          constructor() {
+            return closure_3.getGuild(closure_0.guildId);
+          }
+        }
         const items1 = [stateFromStores1];
         cResult[3] = items1;
-        let tmp8 = items1;
+        const tmp8 = items1;
       } else {
-        tmp8 = cResult[3];
+        class S {
+          constructor() {
+            return closure_3.getGuild(closure_0.guildId);
+          }
+        }
       }
       if (cResult[4] !== guildId.channelId) {
-        const fn2 = function _() {
-          return ChannelStore.getChannel(guildId.channelId);
-        };
+        class S {
+          constructor() {
+            return closure_3.getGuild(closure_0.guildId);
+          }
+        }
         cResult[4] = guildId.channelId;
-        cResult[5] = fn2;
-        let tmp10 = fn2;
+        cResult[5] = tmp10;
       } else {
-        tmp10 = cResult[5];
+        class S {
+          constructor() {
+            return closure_3.getGuild(closure_0.guildId);
+          }
+        }
       }
       const tmpResult = require("initialize");
       stateFromStores1 = require("initialize").useStateFromStores(tmp8, tmp10);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+        class S {
+          constructor() {
+            return closure_3.getGuild(closure_0.guildId);
+          }
+        }
         const items2 = [PermissionStore];
         cResult[6] = items2;
-        let tmp12 = items2;
+        const tmp12 = items2;
       } else {
-        tmp12 = cResult[6];
-      }
-      if (cResult[7] !== stateFromStores) {
-        const fn3 = function f() {
-          return PermissionStore.can(Permissions.ADMINISTRATOR, stateFromStores);
-        };
-        cResult[7] = stateFromStores;
-        cResult[8] = fn3;
-        let tmp14 = fn3;
-      } else {
-        tmp14 = cResult[8];
-      }
-      const tmpResult4 = require("initialize");
-      const stateFromStores2 = require("initialize").useStateFromStores(tmp12, tmp14);
-      if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        const items3 = [PermissionStore];
-        cResult[9] = items3;
-        let tmp16 = items3;
-      } else {
-        tmp16 = cResult[9];
-      }
-      if (cResult[10] !== stateFromStores1) {
-        const fn4 = function v() {
-          return PermissionStore.can(Permissions.MANAGE_MESSAGES, stateFromStores1);
-        };
-        cResult[10] = stateFromStores1;
-        cResult[11] = fn4;
-        let tmp18 = fn4;
-      } else {
-        tmp18 = cResult[11];
-      }
-      const tmpResult5 = require("initialize");
-      const stateFromStores3 = require("initialize").useStateFromStores(tmp16, tmp18);
-      let tmp20 = stateFromStores2;
-      if (!stateFromStores2) {
-        tmp20 = stateFromStores3;
-      }
-      let tmp21 = stateFromStores2;
-      if (!stateFromStores2) {
-        tmp21 = stateFromStores3;
-      }
-      if (cResult[12] === stateFromStores2) {
-        if (cResult[13] === tmp20) {
-          if (cResult[14] === tmp21) {
-            let tmp22 = cResult[15];
+        class S {
+          constructor() {
+            return closure_3.getGuild(closure_0.guildId);
           }
-          return tmp22;
         }
       }
-      const obj2 = { isEntryAdmin: stateFromStores2, canEdit: tmp20, canRemove: tmp21 };
+      if (cResult[7] !== stateFromStores) {
+        class I {
+          constructor() {
+            return closure_4.can(Permissions.ADMINISTRATOR, closure_1);
+          }
+        }
+        cResult[7] = stateFromStores;
+        cResult[8] = I;
+      } else {
+        class I {
+          constructor() {
+            return closure_4.can(Permissions.ADMINISTRATOR, closure_1);
+          }
+        }
+      }
+      const tmpResult4 = require("initialize");
+      const stateFromStores2 = require("initialize").useStateFromStores(tmp12, I);
+      if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+        class I {
+          constructor() {
+            return closure_4.can(Permissions.ADMINISTRATOR, closure_1);
+          }
+        }
+        const items3 = [PermissionStore];
+        cResult[9] = items3;
+        const tmp15 = items3;
+      } else {
+        class I {
+          constructor() {
+            return closure_4.can(Permissions.ADMINISTRATOR, closure_1);
+          }
+        }
+      }
+      if (cResult[10] !== stateFromStores1) {
+        class I {
+          constructor() {
+            return closure_4.can(Permissions.ADMINISTRATOR, closure_1);
+          }
+        }
+        cResult[10] = stateFromStores1;
+        cResult[11] = tmp17;
+      } else {
+        class I {
+          constructor() {
+            return closure_4.can(Permissions.ADMINISTRATOR, closure_1);
+          }
+        }
+      }
+      const tmpResult5 = require("initialize");
+      const stateFromStores3 = require("initialize").useStateFromStores(tmp15, tmp17);
+      if (!stateFromStores2) {
+        class I {
+          constructor() {
+            return closure_4.can(Permissions.ADMINISTRATOR, closure_1);
+          }
+        }
+      }
+      if (!stateFromStores2) {
+        class I {
+          constructor() {
+            return closure_4.can(Permissions.ADMINISTRATOR, closure_1);
+          }
+        }
+      }
+      if (cResult[12] === stateFromStores2) {
+        class I {
+          constructor() {
+            return closure_4.can(Permissions.ADMINISTRATOR, closure_1);
+          }
+        }
+      }
       cResult[12] = stateFromStores2;
-      cResult[13] = tmp20;
-      cResult[14] = tmp21;
-      cResult[15] = obj2;
-      tmp22 = obj2;
+      cResult[13] = stateFromStores2;
+      cResult[14] = stateFromStores2;
+      cResult[15] = { isEntryAdmin: stateFromStores2, canEdit: stateFromStores2, canRemove: stateFromStores2 };
+      const obj2 = { isEntryAdmin: stateFromStores2, canEdit: stateFromStores2, canRemove: stateFromStores2 };
       const tmpResult6 = require("initialize");
     }
-  : (arg0) => {
+  : function useCanManageGuildDirectoryEntry(arg0) {
       _require = arg0;
       const items = [GuildStore];
       dependencyMap = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0.guildId));
@@ -147,7 +198,7 @@ const result = size.fileFinishedImporting("modules/directory_channels/useCanMana
 
 export default tmp2;
 export const useCanCreateOrAddGuildInDirectory = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanCreateOrAddGuildInDirectory(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -170,7 +221,7 @@ export const useCanCreateOrAddGuildInDirectory = ReactCompilerGating.isReactComp
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useCanCreateOrAddGuildInDirectory(arg0) {
       _require = arg0;
       const items = [PermissionStore];
       return require("initialize").useStateFromStores(items, () =>

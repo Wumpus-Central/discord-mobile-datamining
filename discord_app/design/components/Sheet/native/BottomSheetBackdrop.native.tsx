@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ container: { flex: 1 } });
 let closure_5 = {
   code: "function BottomSheetBackdropNativeTsx1(){const{runOnJS,handleOnPress}=this.__closure;runOnJS(handleOnPress)();}",
@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting("design/components/Sheet/native/Bottom
 
 export const BottomSheetBackdrop = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (animatedIndex) => {
+    ? function BottomSheetBackdropComponent(animatedIndex) {
         const cResult = animatedIndex(onPress[4]).c(19);
         animatedIndex = animatedIndex.animatedIndex;
         ({ opacity, appearsOnIndex, disappearsOnIndex, pressBehavior, onPress } = animatedIndex);
@@ -65,7 +65,7 @@ export const BottomSheetBackdrop = noop.memo(
                     ReanimatedRexport.runOnJS(closure_8)();
                   };
                   const obj2 = { runOnJS: null, handleOnPress: null };
-                  class G {
+                  class C {
                     constructor() {
                       obj = { opacity: null };
                       obj2 = closure_0(closure_1[7]);
@@ -90,7 +90,7 @@ export const BottomSheetBackdrop = noop.memo(
                 } else {
                   tmp7 = cResult[7];
                 }
-                class G {
+                class C {
                   constructor() {
                     obj = { opacity: null };
                     obj2 = closure_0(closure_1[7]);
@@ -110,10 +110,10 @@ export const BottomSheetBackdrop = noop.memo(
                   appearsOnIndex: num2,
                   opacity: num,
                 };
-                G.__closure = obj3;
-                G.__workletHash = 1140766381376;
-                G.__initData = snapToIndex;
-                const animatedStyle = tmp(tmp2[7]).useAnimatedStyle(G);
+                C.__closure = obj3;
+                C.__workletHash = 1140766381376;
+                C.__initData = snapToIndex;
+                const animatedStyle = tmp(tmp2[7]).useAnimatedStyle(C);
                 if (cResult[8] === animatedStyle) {
                   if (cResult[9] === style) {
                     if (cResult[10] === tmp4.container) {
@@ -131,7 +131,7 @@ export const BottomSheetBackdrop = noop.memo(
                           return tmp18;
                         }
                       }
-                      class G {
+                      class C {
                         constructor() {
                           obj = { opacity: null };
                           obj2 = closure_0(closure_1[7]);
@@ -151,7 +151,7 @@ export const BottomSheetBackdrop = noop.memo(
                       tmp18 = tmp19;
                     }
                     const obj4 = { blur: "none", style: null, onDismiss: null, "aria-hidden": true };
-                    class G {
+                    class C {
                       constructor() {
                         obj = { opacity: null };
                         obj2 = closure_0(closure_1[7]);
@@ -203,7 +203,7 @@ export const BottomSheetBackdrop = noop.memo(
         cResult[5] = fn;
         tmp6 = fn;
       }
-    : (animatedIndex) => {
+    : function BottomSheetBackdropComponent(animatedIndex) {
         animatedIndex = animatedIndex.animatedIndex;
         let num = animatedIndex.opacity;
         if (num === undefined) {
@@ -259,24 +259,30 @@ export const BottomSheetBackdrop = noop.memo(
         I.__initData = __initData;
         const obj2 = { runOnJS: animatedIndex(num[7]).runOnJS, handleOnPress: onDismiss };
         const onEndResult = TapResult.onEnd(I);
-        const fn = function y() {
-          const obj = { opacity: null };
-          const items = [-1, num3, num2];
-          const items1 = [0, 0, num];
-          obj.opacity = ReanimatedRexport.interpolate(animatedIndex.get(), items, items1);
-          return obj;
-        };
+        class S {
+          constructor() {
+            obj = { opacity: null };
+            obj2 = closure_0(closure_1[7]);
+            items = [-1];
+            items[1] = c3;
+            items[2] = c2;
+            items1 = [0, 0];
+            items1[2] = c1;
+            obj.opacity = obj2.interpolate(animatedIndex.get(), items, items1);
+            return obj;
+          }
+        }
         const obj4 = animatedIndex(num[7]);
-        fn.__closure = {
+        S.__closure = {
           interpolate: animatedIndex(num[7]).interpolate,
           animatedIndex,
           disappearsOnIndex: num3,
           appearsOnIndex: num2,
           opacity: num,
         };
-        fn.__workletHash = 17214781637254;
-        fn.__initData = snapToIndex;
-        animatedStyle = obj4.useAnimatedStyle(fn);
+        S.__workletHash = 17214781637254;
+        S.__initData = snapToIndex;
+        animatedStyle = obj4.useAnimatedStyle(S);
         let items1 = [tmp.container, style, animatedStyle];
         const memo = num2.useMemo(() => {
           const items = [container.container, style, animatedStyle];

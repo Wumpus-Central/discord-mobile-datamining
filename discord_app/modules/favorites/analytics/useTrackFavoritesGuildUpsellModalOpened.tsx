@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildUpsellModalOpened.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (source) => {
+  ? function useTrackFavoritesGuildUpsellModalOpened(source) {
       _require = source;
       const cResult = require("c").c(5);
       const obj = require("c");
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : (source) => {
+  : function useTrackFavoritesGuildUpsellModalOpened(source) {
       const items = [source];
       const effect = noop.useEffect(() => {
         AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_UPSELL_MODAL_OPENED, { source });

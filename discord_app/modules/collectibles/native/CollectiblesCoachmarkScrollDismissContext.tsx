@@ -14,13 +14,15 @@ const redux = noop.createContext({
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-fn = () => noop.useContext(closure_5);
+function useCollectiblesCoachmarkScrollDismissContext() {
+  return noop.useContext(closure_5);
+}
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/collectibles/native/CollectiblesCoachmarkScrollDismissContext.tsx");
 
-export const useCollectiblesCoachmarkScrollDismissContext = fn;
+export { useCollectiblesCoachmarkScrollDismissContext };
 export const CollectiblesCoachmarkScrollDismissProvider = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function CollectiblesCoachmarkScrollDismissProvider(children) {
       const cResult = c.c(5);
       children = children.children;
       noop.useRef(null);
@@ -81,7 +83,7 @@ export const CollectiblesCoachmarkScrollDismissProvider = ReactCompilerGating.is
       }
       return tmp5;
     }
-  : (children) => {
+  : function CollectiblesCoachmarkScrollDismissProvider(children) {
       noop.useRef(null);
       noop.useRef(null);
       const registerDismiss = noop.useCallback((current) => {

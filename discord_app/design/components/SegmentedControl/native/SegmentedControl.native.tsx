@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 let c8 = 0.04;
 let c9 = 0.9;
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles((borderRadius, paddingVertical) => {
   const obj = {
     scrollContentContainer: { flexGrow: 1 },
@@ -97,7 +97,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControl.native.tsx");
 
 export const SegmentedControl = ReactCompilerGating.isReactCompilerEnabled()
-  ? (state) => {
+  ? function SegmentedControl(state) {
       const cResult = state(activeIndex[6]).c(46);
       state = state.state;
       ({ variant, keyboardShouldPersistTaps } = state);
@@ -313,7 +313,7 @@ export const SegmentedControl = ReactCompilerGating.isReactCompilerEnabled()
         SELECTED_INDICATOR_SPRING: sharedValue,
       };
     }
-  : (keyboardShouldPersistTaps) => {
+  : function SegmentedControl(keyboardShouldPersistTaps) {
       state = keyboardShouldPersistTaps.state;
       let str = keyboardShouldPersistTaps.variant;
       if (str === undefined) {
@@ -586,13 +586,13 @@ export const SegmentedControl = ReactCompilerGating.isReactCompilerEnabled()
               label,
               state,
               pressed,
-              onPress() {
+              onPress: function handlePress() {
                 setActiveIndex(closure_0);
               },
-              onPressIn() {
+              onPressIn: function handlePressIn() {
                 const result = pressed.set(closure_0);
               },
-              onPressOut() {
+              onPressOut: function handlePressOut() {
                 const result = pressed.set(-1);
               },
               icon: null,

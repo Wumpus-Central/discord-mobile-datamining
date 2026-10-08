@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/ChannelRow.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4467 from "../../../../../../_runtime/metro/04467__.js";
+import _modDef4659 from "../../../../../../_runtime/metro/04659__.js";
 import DateUtils from "../../../../../utils/DateUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
@@ -22,11 +22,11 @@ const useChannelNameDefault = useChannelName;
 require = fn;
 let closure_3 = ["channel", "mode", "selected", "disabled", "onPress", "onLongPress", "trailing", "subLabel", "label"];
 const View = fn(17).View;
-const UserRowModes = fn(10605).UserRowModes;
-const ReadStateTypes = fn(5078).ReadStateTypes;
+const UserRowModes = fn(10202).UserRowModes;
+const ReadStateTypes = fn(5972).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   guildIcon: { flexShrink: 0, flexGrow: 0 },
   subLabel: { display: "flex", flexDirection: "row", alignItems: "center" },
@@ -42,7 +42,7 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_comp
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function ChannelRow(channel) {
         const cResult = require("c").c(58);
         if (cResult[0] !== channel) {
           channel = channel.channel;
@@ -238,8 +238,8 @@ export default noop.memo(
               }
               obj2.guild = stateFromStores;
               obj2.channel = tmp4;
-              obj2.size = tmp(10751).GuildIconWithChannelTypeSizes.SMALL_32;
-              const tmp34 = closure_14(tmp(10751).GuildIconWithChannelType, obj2);
+              obj2.size = tmp(11616).GuildIconWithChannelTypeSizes.SMALL_32;
+              const tmp34 = closure_14(tmp(11616).GuildIconWithChannelType, obj2);
             }
             cResult[26] = tmp4;
             cResult[27] = stateFromStores;
@@ -279,7 +279,7 @@ export default noop.memo(
         cResult[22] = V;
         const tmpResult4 = require("initialize");
       }
-    : (channel) => {
+    : function ChannelRow(channel) {
         channel = channel.channel;
         let NONE = channel.mode;
         if (NONE === undefined) {
@@ -428,7 +428,7 @@ export default noop.memo(
               const obj6 = {
                 variant: "text-xs/medium",
                 color: "text-subtle",
-                children: DateUtils.calendarFormatCompact(_modDef4467(tmp14)),
+                children: DateUtils.calendarFormatCompact(_modDef4659(tmp14)),
               };
               items1[1] = state(Text_Text.Text, obj6);
               obj4.children = items1;

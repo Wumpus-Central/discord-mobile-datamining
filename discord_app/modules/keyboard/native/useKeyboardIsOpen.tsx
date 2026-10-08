@@ -39,7 +39,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/keyboard/native/useKeyboardIsOpen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useKeyboardIsOpen(arg0) {
       let tmp = arg0;
       const cResult = require("c").c(3);
       if (undefined === arg0) {
@@ -53,9 +53,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === tmp5) {
           let tmp7 = cResult[2];
         }
-        return appEntryKey(1488)(tmp7);
+        return appEntryKey(1500)(tmp7);
       }
-      const fn = function t(arg0) {
+      const fn = function o(arg0) {
         const systemKeyboardOpen = tmp.systemKeyboardOpen;
         if (closure_0) {
           let tmp3 = systemKeyboardOpen;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       const tmp2Result = require("AppEntryKeyContext");
     }
-  : () => {
+  : function useKeyboardIsOpen() {
       let tmp = arg0;
       if (arg0 === undefined) {
         tmp = closure_4;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (flag === undefined) {
         flag = false;
       }
-      importDefault = flag(1487).useAppEntryKey();
+      importDefault = flag(1499).useAppEntryKey();
       return KeyboardUIStoreDefault((arg0) => {
         const systemKeyboardOpen = tmp.systemKeyboardOpen;
         if (flag) {

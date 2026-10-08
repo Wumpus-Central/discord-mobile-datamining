@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 },
   lastTypingUser: { marginEnd: 0 },
@@ -60,7 +60,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostTypingUsers.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (hasUnreads) => {
+  ? function ForumPostTypingUsers(hasUnreads) {
       const cResult = require("c").c(32);
       ({ thread, typingUserIds } = hasUnreads);
       const tmp4 = guildId1();
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const forumPostContainerPressedIn = tmp(tmp2[9]).useForumPostContainerPressedIn();
           const tmp8 = facepileUsers;
           const tmpResult = tmp(tmp2[9]);
-          class I {
+          class U {
             constructor() {
               obj = { borderColor: closure_4.value ? color : color };
               return obj;
@@ -97,10 +97,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             borderColorPressed: color2,
             borderColor: color,
           };
-          I.__closure = obj3;
-          I.__workletHash = 6320844933544;
-          I.__initData = __initData;
-          const animatedStyle = tmp(tmp2[10]).useAnimatedStyle(I);
+          U.__closure = obj3;
+          U.__workletHash = 6320844933544;
+          U.__initData = __initData;
+          const animatedStyle = tmp(tmp2[10]).useAnimatedStyle(U);
           let str = "text-muted";
           if (hasUnreads.hasUnreads) {
             str = "text-default";
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             let items = [tmp15, tmp30, tmp33];
                             obj5.children = items;
                             const tmp38 = animatedStyle(tmp13, obj5);
-                            class I {
+                            class U {
                               constructor() {
                                 obj = { borderColor: closure_4.value ? color : color };
                                 return obj;
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           lineClamp: 1,
                           children: null,
                         };
-                        class I {
+                        class U {
                           constructor() {
                             obj = { borderColor: closure_4.value ? color : color };
                             return obj;
@@ -259,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = obj7;
       const obj2 = require("ForumHooks");
     }
-  : (hasUnreads) => {
+  : function ForumPostTypingUsers(hasUnreads) {
       ({ thread, typingUserIds } = hasUnreads);
       let color;
       let guildId;

@@ -15,8 +15,8 @@ import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import UserProfileCardDefault from "UserProfileCard.tsx";
 import MaskedLinkUtils from "../../../utils/MaskedLinkUtils.tsx";
 import ConnectionMetadataVanityItems from "../../connections/native/ConnectionMetadataVanityItems.tsx";
-import _modDef11210 from "../../../../_runtime/metro/11210__.js";
-import _modDef11211 from "../../../../_runtime/metro/11211__.js";
+import _modDef11327 from "../../../../_runtime/metro/11327__.js";
+import _modDef11328 from "../../../../_runtime/metro/11328__.js";
 import useUserProfileApplicationRoleConnectionsDefault from "../hooks/useUserProfileApplicationRoleConnections.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -49,29 +49,29 @@ function generateMetadataForPlatform(arg0) {
   }
 }
 const View = fn(17).View;
-let Constants = fn(6714);
+let Constants = fn(6891);
 ({ CARD_ROWS_ICON_SIZE: closure_7, CARD_ROWS_ICON_SIZE_VARIANT: closure_8, CARD_PADDING } = Constants);
 Constants = fn(1085);
 ({ AnalyticEvents: closure_9, PlatformTypes: c10 } = Constants);
-const MetadataFields = fn(6686).MetadataFields;
+const MetadataFields = fn(6863).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const REFRESH_SMALL_16 = fn(1188).Icon.Sizes.REFRESH_SMALL_16;
-let native = fn(1188);
+const REFRESH_SMALL_16 = fn(1200).Icon.Sizes.REFRESH_SMALL_16;
+let native = fn(1200);
 const iconSize = native.getIconSize(REFRESH_SMALL_16);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { cardContainer: { paddingBottom: CARD_PADDING - 12 }, refreshCardTitle: { marginBottom: nativeDefault.space.PX_8 }, connectedAccountName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, linkIcon: { marginEnd: 4 }, connectedAccountNameText: { flexShrink: 1 }, verifiedIconContainer: { height: iconSize, width: iconSize }, verifiedIcon: { position: "absolute", left: 0, top: 0 }, connectionMetadata: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", overflow: "hidden" }, metadataItem: null, poweredByContainer: null, applicationIcon: null };
 let obj4 = { paddingBottom: CARD_PADDING - 12 };
 let obj5 = { marginBottom: nativeDefault.space.PX_8 };
 obj.metadataItem = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj.poweredByContainer = { flexDirection: "row", alignItems: "center", marginTop: 6 };
 let obj7 = { borderRadius: null };
-native = fn(1188);
-obj7.borderRadius = native.getIconSize(fn(1188).Icon.Sizes.MEDIUM);
+native = fn(1200);
+obj7.borderRadius = native.getIconSize(fn(1200).Icon.Sizes.MEDIUM);
 obj.applicationIcon = obj7;
 let closure_16 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function VerifiedIcon(arg0) {
   const cResult = c.c(12);
   ({ theme, isTwitterVerifiedAccount } = arg0);
   const tmp5 = closure_16();
@@ -118,7 +118,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         cResult[11] = tmp24;
         tmp21 = tmp24;
       }
-      const obj4 = { source: _modDef11211, color: WHITE };
+      const obj4 = { source: _modDef11328, color: WHITE };
       const merged = Object.assign(tmp6);
       const tmp20 = __initData(native2.Icon, obj4);
       cResult[5] = WHITE;
@@ -126,7 +126,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[7] = tmp20;
       tmp15 = tmp20;
     }
-    const obj5 = { source: _modDef11210, color: PLATFORM_TWITTER };
+    const obj5 = { source: _modDef11327, color: PLATFORM_TWITTER };
     const merged1 = Object.assign(tmp6);
     const tmp14 = __initData(native2.Icon, obj5);
     cResult[2] = PLATFORM_TWITTER;
@@ -136,7 +136,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   WHITE = nativeDefault.unsafe_rawColors.WHITE;
   tmpResult2 = shared;
-}) : ((arg0) => {
+}) : (function VerifiedIcon(arg0) {
   ({ theme, isTwitterVerifiedAccount } = arg0);
   if (isTwitterVerifiedAccount === undefined) {
     isTwitterVerifiedAccount = false;
@@ -152,10 +152,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     const obj3 = { style: tmp.verifiedIconContainer, children: null };
-    const obj4 = { source: _modDef11210, color: PLATFORM_TWITTER };
+    const obj4 = { source: _modDef11327, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     const items = [__initData(native2.Icon, obj4), ];
-    const obj5 = { source: _modDef11211, color: WHITE };
+    const obj5 = { source: _modDef11328, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = __initData(native2.Icon, obj5);
     obj3.children = items;
@@ -165,7 +165,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp2Result = shared;
 });
 ReactCompilerGating = fn(558);
-let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function UserAccountConnection(userId) {
   const cResult = userId(trackUserProfileAction[13]).c(65);
   userId = userId.userId;
   const account = userId.account;
@@ -223,7 +223,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
                           let obj8 = cResult[24];
                         }
                         const joined = obj8.join(", ");
-                        class U {
+                        class D {
                           constructor() {
                             if (null != closure_4) {
                               tmp2 = trackUserProfileAction;
@@ -278,7 +278,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
                             }
                           }
                           let obj2 = { variant: token, color: null, style: null, lineClamp: 2, children: null };
-                          class U {
+                          class D {
                             constructor() {
                               if (null != closure_4) {
                                 tmp2 = trackUserProfileAction;
@@ -390,7 +390,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
                     if (tmp22 != null) {
                       name2 = tmp22.name;
                     }
-                    class U {
+                    class D {
                       constructor() {
                         if (null != closure_4) {
                           tmp2 = trackUserProfileAction;
@@ -430,7 +430,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
                       if (tmp22 != null) {
                         name3 = tmp22.name;
                       }
-                      class U {
+                      class D {
                         constructor() {
                           if (null != closure_4) {
                             tmp2 = trackUserProfileAction;
@@ -469,7 +469,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
                         }
                         tmp38[0] = tmp9;
                         const formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[28]).t["9rfonh"], tmp38);
-                        class U {
+                        class D {
                           constructor() {
                             if (null != closure_4) {
                               tmp2 = trackUserProfileAction;
@@ -509,7 +509,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
                     }
                   }
                   cResult[18] = account.name;
-                  class U {
+                  class D {
                     constructor() {
                       if (null != closure_4) {
                         tmp2 = trackUserProfileAction;
@@ -532,7 +532,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
                 }
               }
             }
-            class U {
+            class D {
               constructor() {
                 if (null != closure_4) {
                   tmp2 = trackUserProfileAction;
@@ -554,7 +554,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
             cResult[13] = account.type;
             cResult[14] = tmp20;
             cResult[16] = userId;
-            cResult[17] = U;
+            cResult[17] = D;
           }
           tmp6(tmp2[20]);
           noop = tmp22;
@@ -621,7 +621,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
     }
     obj3.metadata = metadata;
     obj3.style = tmp5.metadataItem;
-    class U {
+    class D {
       constructor() {
         if (null != closure_4) {
           tmp2 = trackUserProfileAction;
@@ -653,7 +653,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
   tmp10 = metadata;
   tmp9 = tmp11;
   const tmpResult7 = userId(trackUserProfileAction[14]);
-}) : ((userId) => {
+}) : (function UserAccountConnection(userId) {
   userId = userId.userId;
   const account = userId.account;
   ({ theme, showMetadata } = userId);
@@ -835,12 +835,12 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
   return closure_12(userId(trackUserProfileAction[32]).TableRow, obj13);
 }));
 ReactCompilerGating = fn(558);
-let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
+let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function UserAccountApplicationConnection(application) {
   const cResult = trackUserProfileAction(576).c(19);
   application = application.application;
   const tmp4 = closure_16();
   let obj = trackUserProfileAction(576);
-  trackUserProfileAction = trackUserProfileAction(7872).useUserProfileAnalyticsContext().trackUserProfileAction;
+  trackUserProfileAction = trackUserProfileAction(8290).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (cResult[0] !== application) {
     const iconSource = application.getIconSource(closure_7);
     cResult[0] = application;
@@ -910,13 +910,13 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((appl
             return;
           }
         }
-        tmp18 = closure_12(tmp(6000).TableRow, obj5);
-        const tmp20 = closure_12(tmp(6000).TableRow, obj5);
+        tmp18 = closure_12(tmp(6184).TableRow, obj5);
+        const tmp20 = closure_12(tmp(6184).TableRow, obj5);
       }
       let tmp15;
       if (null != tmp5) {
         const obj6 = { size, source: tmp5, style: tmp4.applicationIcon };
-        tmp15 = closure_12(tmp(4585).BaseIconImage, obj6);
+        tmp15 = closure_12(tmp(4777).BaseIconImage, obj6);
       }
       cResult[10] = tmp5;
       cResult[11] = tmp4;
@@ -947,8 +947,8 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((appl
   cResult[3] = trackUserProfileAction;
   cResult[4] = C;
   tmp8 = C;
-  let obj2 = trackUserProfileAction(7872);
-}) : ((application) => {
+  let obj2 = trackUserProfileAction(8290);
+}) : (function UserAccountApplicationConnection(application) {
   application = application.application;
   let str;
   const tmp = closure_16();
@@ -995,7 +995,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((appl
   return closure_12(application(str[32]).TableRow, obj2);
 }));
 ReactCompilerGating = fn(558);
-const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((applicationRoleConnection) => {
+const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function UserAccountConnection(applicationRoleConnection) {
   const cResult = c.c(28);
   applicationRoleConnection = applicationRoleConnection.applicationRoleConnection;
   const tmp4 = closure_16();
@@ -1134,7 +1134,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ap
   cResult[4] = applicationIconSource;
   tmp6 = applicationIconSource;
   const obj11 = { id: applicationRoleConnection.application.id, icon: applicationRoleConnection.application.icon };
-}) : ((applicationRoleConnection) => {
+}) : (function UserAccountConnection(applicationRoleConnection) {
   applicationRoleConnection = applicationRoleConnection.applicationRoleConnection;
   const tmp = closure_16();
   const roleConnectionMetadataItems = ConnectionMetadataVanityItems.generateRoleConnectionMetadataItems(applicationRoleConnection);
@@ -1190,7 +1190,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ap
 fn(558);
 let obj6 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileAccountConnectionsCard(userId) {
   const cResult = userId(stateFromStores[13]).c(25);
   userId = userId.userId;
   const style = userId.style;
@@ -1307,11 +1307,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     cResult[13] = M;
   }
   return null;
-}) : ((userId) => {
+}) : (function UserProfileAccountConnectionsCard(userId) {
   userId = userId.userId;
   const tmp = closure_16();
-  const theme = userId(4595).useThemeContext().theme;
-  const obj = userId(4595);
+  const theme = userId(4787).useThemeContext().theme;
+  const obj = userId(4787);
   const items = [LocaleStore];
   dependencyMap = userId(504).useStateFromStores(items, () => locale2.locale);
   const obj2 = userId(504);
@@ -1319,7 +1319,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(12953)(userId));
+  ({ connections, appIdentities } = theme(13232)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(appIdentities.map((application) => {
@@ -1334,8 +1334,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     obj4.title = intl.string(tmp2(1126).t["3fe7U5"]);
     obj4.titleStyle = tmp.refreshCardTitle;
     const obj5 = { hasIcons: true, children: items2 };
-    obj4.children = closure_12(tmp2(6081).TableRowGroup, obj5);
-    return closure_12(tmp5(6713), obj4);
+    obj4.children = closure_12(tmp2(6267).TableRowGroup, obj5);
+    return closure_12(tmp5(6890), obj4);
   }
   return null;
 });
@@ -1344,7 +1344,7 @@ let result = size.fileFinishedImporting("modules/user_profile/native/UserProfile
 
 export const ApplicationRoleConnection = memoResult;
 export const UserProfileAccountConnectionsCard = tmp7;
-export const UserProfileApplicationRoleConnectionsCard = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export const UserProfileApplicationRoleConnectionsCard = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileApplicationRoleConnectionsCard(style) {
   const cResult = c.c(15);
   style = style.style;
   const tmp4 = closure_16();
@@ -1425,7 +1425,7 @@ export const UserProfileApplicationRoleConnectionsCard = ReactCompilerGating.isR
     }
   }
   return null;
-}) : ((arg0) => {
+}) : (function UserProfileApplicationRoleConnectionsCard(arg0) {
   ({ userId, style } = arg0);
   const tmp = closure_16();
   const arr = useUserProfileApplicationRoleConnectionsDefault(userId);

@@ -6,10 +6,10 @@ const require = globalThis.__r;
 
 const require = fn;
 let items = [
-  fn(7138).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS,
-  fn(7138).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED,
-  fn(7138).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
-  fn(7138).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED,
+  fn(6063).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS,
+  fn(6063).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED,
+  fn(6063).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
+  fn(6063).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED,
 ];
 let set = new Set(items);
 const ReactCompilerGating = fn(558);
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useGetOrFetchNotificationCenterItemsApplications = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function useGetOrFetchNotificationCenterItemsApplications(arr) {
       const cResult = require("c").c(2);
       if (cResult[0] !== arr) {
         const _Set = Set;
@@ -45,9 +45,9 @@ export const useGetOrFetchNotificationCenterItemsApplications = ReactCompilerGat
       } else {
         _require = cResult[1];
       }
-      return set(6670)(tmp3);
+      return set(6847)(tmp3);
     }
-  : (arg0) => {
+  : function useGetOrFetchNotificationCenterItemsApplications(arg0) {
       closure_0 = arg0;
       let items = [arg0];
       const memo = noop.useMemo(() => {

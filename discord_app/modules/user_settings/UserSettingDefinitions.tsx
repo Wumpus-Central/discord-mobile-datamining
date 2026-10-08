@@ -18,7 +18,7 @@ export const defineProtoSetting = function defineProtoSetting(
   arg4,
 ) {
   let getSetting = textAndImages;
-  let f85776 = activityRestrictedGuildIds;
+  let f86653 = activityRestrictedGuildIds;
   dependencyMap = explicitContentFromProto;
   closure_3 = explicitContentToProto;
   let obj = arg4;
@@ -38,12 +38,12 @@ export const defineProtoSetting = function defineProtoSetting(
   getSetting = function getSetting() {
     let tmp3;
     if (UserSettingsProtoStore.settings[getSetting] != null) {
-      tmp3 = tmp2[f85776];
+      tmp3 = tmp2[f86653];
     }
     return explicitContentFromProto(tmp3);
   };
   const obj2 = getSetting(558);
-  f85776 = (favorites) => {
+  f86653 = (favorites) => {
     closure_0 = favorites;
     const PreloadedUserSettingsActionCreators = getSetting(
       explicitContentFromProto[6],
@@ -51,7 +51,7 @@ export const defineProtoSetting = function defineProtoSetting(
     return PreloadedUserSettingsActionCreators.updateAsync(
       closure_0,
       async (arg0) => {
-        arg0[f85776] = closure_3(closure_0, arg0[f85776]);
+        arg0[f86653] = closure_3(closure_0, arg0[f86653]);
       },
       INFREQUENT_USER_ACTION,
     );
@@ -63,7 +63,7 @@ export const defineProtoSetting = function defineProtoSetting(
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f85782(tmp2);
+      return f86659(tmp2);
     },
     useSetting: getSetting(558).isReactCompilerEnabled()
       ? () => {
@@ -86,7 +86,7 @@ export const defineProtoSetting = function defineProtoSetting(
 export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, animateEmoji) {
   closure_2 = animateEmoji;
   function getSetting() {
-    const tmp = SelectivelySyncedUserSettingsStore.getState()[f85779];
+    const tmp = SelectivelySyncedUserSettingsStore.getState()[updateSetting];
     let setting;
     if (tmp != null) {
       setting = tmp.settings[closure_2];
@@ -96,8 +96,8 @@ export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, an
     }
     return setting;
   }
-  const f85779 = (arg0) => {
-    if (SelectivelySyncedUserSettingsStore.shouldSync(f85779)) {
+  function updateSetting(arg0) {
+    if (SelectivelySyncedUserSettingsStore.shouldSync(updateSetting)) {
       let updateSettingResult = getSetting.updateSetting(arg0);
     } else {
       const obj2 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };
@@ -106,20 +106,20 @@ export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, an
       const obj5 = {};
       obj5[closure_2] = arg0;
       obj4.settings = obj5;
-      obj3[f85779] = obj4;
+      obj3[updateSetting] = obj4;
       obj2.changes = obj3;
       DispatcherDefault.dispatch(obj2);
       updateSettingResult = Promise.resolve();
     }
     return updateSettingResult;
-  };
+  }
   return {
     getSetting,
     useSetting() {
       const setting = getSetting.useSetting();
       const items = [SelectivelySyncedUserSettingsStore];
       let stateFromStores = initialize.useStateFromStores(items, () => {
-        const tmp = state.getState()[closure_1_1];
+        const tmp = state.getState()[updateSetting];
         let tmp2;
         if (tmp != null) {
           tmp2 = tmp.settings[animateEmoji];
@@ -136,7 +136,7 @@ export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, an
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f85782(tmp2);
+      return f86659(tmp2);
     },
   };
 }
@@ -150,9 +150,9 @@ export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, ar
     }
     return setting;
   }
-  const f85782 = (arg0) => {
+  const f86659 = (arg0) => {
     const obj2 = { type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: null };
-    const items = [f85782];
+    const items = [f86659];
     obj2.settings = items;
     DispatcherDefault.dispatch(obj2);
     return getSetting.updateSetting(arg0);
@@ -172,7 +172,7 @@ export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, ar
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f85782(tmp2);
+      return f86659(tmp2);
     },
   };
 }

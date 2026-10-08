@@ -21,7 +21,7 @@ export const getVoiceUserAffinitySortType = function getVoiceUserAffinitySortTyp
   return apexExperiment.getConfig({ location }).sortType;
 };
 export const useVoiceUserAffinitySortType = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useVoiceUserAffinitySortType(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -33,4 +33,6 @@ export const useVoiceUserAffinitySortType = ReactCompilerGating.isReactCompilerE
       }
       return apexExperiment.useConfig(tmp2).sortType;
     }
-  : (location) => apexExperiment.useConfig({ location }).sortType;
+  : function useVoiceUserAffinitySortType(location) {
+      return apexExperiment.useConfig({ location }).sortType;
+    };

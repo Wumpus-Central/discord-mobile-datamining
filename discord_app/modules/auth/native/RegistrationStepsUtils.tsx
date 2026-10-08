@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/RegistrationStepsUtils.tsx
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import Link from "../../../../_runtime/01491_Link.js";
+import Link from "../../../../_runtime/01503_Link.js";
 import LoginDefault from "components/Login.tsx";
 import WelcomeDefault from "components/Welcome.tsx";
 import RegistrationUtils from "RegistrationUtils.tsx";
@@ -59,7 +59,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
           options();
           const tmp22 = getNextAuthState(closure_0);
           if (null != tmp22) {
-            const obj4 = { step: v65535(closure_0), toStep: v65535(tmp22), actionType: constants.SUCCESS };
+            const obj4 = { step: collapsed(closure_0), toStep: collapsed(tmp22), actionType: constants.SUCCESS };
             dependencyMap(obj4);
             const StackActions = Link.StackActions;
             importDefault.dispatch(StackActions.push(tmp22));
@@ -146,10 +146,10 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   }
   return value;
 };
-const usePromoEmailConsentStore = fn(6090).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(15906);
+const usePromoEmailConsentStore = fn(5937).usePromoEmailConsentStore;
+const RegistrationUIStore = fn(16165);
 ({ setRegistrationErrors: metroRequire, setSubmitting: closure_7, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(15907);
+const RegistrationConstants = fn(16166);
 ({ authStateToRegisterTransitionStep: c10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const AuthStates = fn(1085).AuthStates;
 const jsx = fn(21).jsx;
@@ -303,7 +303,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     headerTitle,
     render(arg0, arg1) {
       closure_0 = arg1;
-      return closure_15(closure_1(6552), {
+      return closure_15(closure_1(6728), {
         onClose() {
           return closure_0.pop();
         },
@@ -420,7 +420,7 @@ export const getPreviousRegistrationTransitionStep = function getPreviousRegistr
     }
   }
   if (null != tmp3) {
-    return v65535(tmp3);
+    return collapsed(tmp3);
   }
 };
 export const getNextRegistrationTransitionStep = function getNextRegistrationTransitionStep(arg0) {
@@ -432,7 +432,7 @@ export const getNextRegistrationTransitionStep = function getNextRegistrationTra
     }
   }
   if (null != tmp2) {
-    return v65535(tmp2);
+    return collapsed(tmp2);
   }
 };
 export const handleNextOrSubmitRegistration = function handleNextOrSubmitRegistration() {

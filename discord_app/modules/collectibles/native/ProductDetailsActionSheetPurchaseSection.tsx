@@ -2,12 +2,16 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
+import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import ReleaseChannelUtils from "../../../utils/ReleaseChannelUtils.native.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import OrbsIcon from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
 import openGiftModal from "openGiftModal.tsx";
@@ -32,32 +36,32 @@ function VCButton(balance) {
   let color;
   const tmp = closure_17();
   noop = tmp;
-  const virtualCurrencyData = balance(13005).useVirtualCurrencyData(product, flag);
+  const virtualCurrencyData = balance(13283).useVirtualCurrencyData(product, flag);
   ({ price, canAfford } = virtualCurrencyData);
-  let obj = balance(13005);
-  let isPartiallyOwnedBundle = balance(8564).useProductDisableState(product.skuId).isDisabled;
-  let obj2 = balance(8564);
+  let obj = balance(13283);
+  let isPartiallyOwnedBundle = balance(9048).useProductDisableState(product.skuId).isDisabled;
+  let obj2 = balance(9048);
   if (!isPartiallyOwnedBundle) {
     isPartiallyOwnedBundle = !canAfford;
   }
   if (!isPartiallyOwnedBundle) {
     isPartiallyOwnedBundle = obj3.useProductPurchaseState(product).isPartiallyOwnedBundle;
   }
-  obj3 = balance(8529);
-  navigation = balance(1490).useNavigation();
+  obj3 = balance(9014);
+  navigation = balance(1502).useNavigation();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const items = [navigation, product, balance, analyticsLocations, stageCollectibleChangeForEditProfile];
   closure_7 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(13008, dependencyMap.paths),
+      asyncRequireImpl(13286, dependencyMap.paths),
       {
         skuId: product.skuId,
         analyticsLocations,
         onCheckoutSuccess(arg0) {
-          const collectiblesPurchases = balance(7065).fetchCollectiblesPurchases();
-          const obj = balance(7065);
-          product(5099).popWithKey(ORB_CHECKOUT_MODAL);
+          const collectiblesPurchases = balance(7251).fetchCollectiblesPurchases();
+          const obj = balance(7251);
+          product(5940).popWithKey(ORB_CHECKOUT_MODAL);
           if (product.skuId === constants.ORB_PROFILE_BADGE) {
             const obj3 = {
               modalKey,
@@ -66,8 +70,8 @@ function VCButton(balance) {
               },
               orbBalancePriorToPurchase,
             };
-            product(5099).pushLazy(balance(1987)(13012, dependencyMap.paths), obj3, modalKey);
-            const tmp4Result = product(5099);
+            product(5940).pushLazy(balance(1999)(13290, dependencyMap.paths), obj3, modalKey);
+            const tmp4Result = product(5940);
           } else {
             const ALL = balance(1088).FractionalPremiumSKUsSets.ALL;
             if (ALL.has(product.skuId)) {
@@ -79,7 +83,7 @@ function VCButton(balance) {
               };
               const first = arg0.entitlements[0];
               let flag;
-              const tmp4Result3 = product(4860);
+              const tmp4Result3 = product(5054);
               if (first != null) {
                 flag = first.consumed;
               }
@@ -89,18 +93,18 @@ function VCButton(balance) {
               obj4.consumed = flag;
               obj4.onPressExplorePerks = function onPressExplorePerks() {
                 navigation.navigate(constants2.PREMIUM);
-                product(4860).hideActionSheet();
+                product(5054).hideActionSheet();
               };
               obj4.onPressViewCredits = function onPressViewCredits() {
                 navigation.navigate(constants2.PREMIUM_MANAGE_PLAN);
-                product(4860).hideActionSheet();
+                product(5054).hideActionSheet();
               };
               tmp4Result3.openLazy(
-                balance(1987)(13013, dependencyMap.paths),
+                balance(1999)(13291, dependencyMap.paths),
                 "FractionalNitroCollectedActionSheet",
                 obj4,
               );
-              const tmp10 = balance(1987)(13013, dependencyMap.paths);
+              const tmp10 = balance(1999)(13291, dependencyMap.paths);
             } else {
               const obj5 = {
                 product,
@@ -109,11 +113,11 @@ function VCButton(balance) {
                 orbBalancePriorToPurchase,
                 stageCollectibleChangeForEditProfile,
               };
-              product(10826).open(obj5);
-              const tmp4Result4 = product(10826);
+              product(11175).open(obj5);
+              const tmp4Result4 = product(11175);
             }
           }
-          const obj2 = product(5099);
+          const obj2 = product(5940);
         },
       },
       ORB_CHECKOUT_MODAL,
@@ -171,23 +175,23 @@ function VCButton(balance) {
       str2 = "secondary";
     }
     obj8.variant = str2;
-    obj7.children = closure_13(tmp2(5602).BaseTextButton, obj8);
+    obj7.children = closure_13(tmp2(5376).BaseTextButton, obj8);
     return closure_13(navigation, obj7);
   }
-  const tmp2Result = balance(1490);
+  const tmp2Result = balance(1502);
 }
 const View = fn(17).View;
 const CollectiblesShopConstants = fn(1087);
 ({ EXTERNAL_PRODUCT_SKU_IDS: closure_7, ShopCtaEnum: closure_8 } = CollectiblesShopConstants);
 const Constants = fn(1085);
 ({ MarketingURLs: closure_9, UserSettingsSections: c10 } = Constants);
-const RootNavigatorScreen = fn(10833).RootNavigatorScreen;
-const PremiumTypes = fn(1379).PremiumTypes;
+const RootNavigatorScreen = fn(11182).RootNavigatorScreen;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const ORB_BADGE_COLLECTED_MODAL = "ORB_BADGE_COLLECTED_MODAL";
 const ORB_CHECKOUT_MODAL = "ORB_CHECKOUT_MODAL";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
@@ -214,7 +218,7 @@ obj2.orbsButtonText = { flexShrink: 1 };
 let closure_17 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (product) => {
+  ? function GiftButton(product) {
       const cResult = require("c").c(11);
       product = product.product;
       require = product;
@@ -284,7 +288,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = fn;
       let obj = require("c");
     }
-  : (onTrackPress) => {
+  : function GiftButton(onTrackPress) {
       ({ product: require, analyticsLocations: importDefault, variant } = onTrackPress);
       if (variant === undefined) {
         variant = "primary";
@@ -311,7 +315,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PurchaseDisclaimer(arg0) {
       const cResult = c.c(6);
       ({ product, buyButtonLabel } = arg0);
       const tmp4 = closure_17();
@@ -348,7 +352,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = formatResult;
       tmp5 = formatResult;
     }
-  : (arg0) => {
+  : function PurchaseDisclaimer(arg0) {
       ({ product, buyButtonLabel } = arg0);
       const obj = {
         style: closure_17().disclaimer,
@@ -371,8 +375,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetPurchaseSection.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (product) => {
-      const cResult = require("c").c(57);
+  ? function ProductDetailsActionSheetPurchaseSection(product) {
+      const cResult = require("c").c(58);
       product = product.product;
       require = product;
       const analyticsLocations = product.analyticsLocations;
@@ -380,7 +384,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const onStartPurchase = product.onStartPurchase;
       const onTrackPress = product.onTrackPress;
       const stageCollectibleChangeForEditProfile = product.stageCollectibleChangeForEditProfile;
-      let tmp4 = canUseNow();
+      let tmp4 = isApplying();
       closure_6 = tmp4;
       let obj = require("c");
       const currentUser = require("useCurrentUser").useCurrentUser();
@@ -433,7 +437,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = product;
         cResult[8] = result;
         let tmp16 = result;
-        const tmpResult11 = tmp(tmp2[39]);
+        const tmpResult12 = tmp(tmp2[39]);
       } else {
         tmp16 = cResult[8];
       }
@@ -442,7 +446,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = product;
         cResult[10] = result1;
         let tmp18 = result1;
-        const tmpResult12 = tmp(tmp2[39]);
+        const tmpResult13 = tmp(tmp2[39]);
       } else {
         tmp18 = cResult[10];
       }
@@ -451,7 +455,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = product;
         cResult[12] = result2;
         let tmp20 = result2;
-        const tmpResult13 = tmp(tmp2[40]);
+        const tmpResult14 = tmp(tmp2[40]);
       } else {
         tmp20 = cResult[12];
       }
@@ -465,37 +469,44 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp22 = tmp23;
       }
       isPremiumSubscriber = tmp22;
-      const tmpResult10 = require("useIsPremiumSubscriber");
+      const tmpResult11 = require("useIsPremiumSubscriber");
       const balance = require("../../virtual_currency/hooks/index.tsx").useFetchVirtualCurrencyBalance().balance;
-      const tmpResult14 = require("../../virtual_currency/hooks/index.tsx");
+      const tmpResult15 = require("../../virtual_currency/hooks/index.tsx");
+      let obj11 = analyticsLocations(isBuying[42]);
+      const tmp25 =
+        require("ShopStandalonePdpMobileExperiment").useIsShopStandalonePdpMobileEnabled(
+          "product_details_action_sheet",
+        ) && !obj11.useNativeIAPPayments().nativePaymentsConnected;
+      closure_14 = tmp25;
+      const tmpResult16 = require("ShopStandalonePdpMobileExperiment");
       const canAfford = require("useVirtualCurrencyData").useVirtualCurrencyData(product, tmp13).canAfford;
       if (cResult[13] === analyticsLocations) {
         if (cResult[14] === product) {
           if (cResult[15] === stageCollectibleChangeForEditProfile) {
-            let tmp24 = cResult[16];
+            let tmp26 = cResult[16];
           }
-          const handleUseNow1 = tmp(tmp2[42]).useHandleUseNow(tmp24);
+          const handleUseNow1 = tmp(tmp2[44]).useHandleUseNow(tmp26);
           const handleUseNow = handleUseNow1.handleUseNow;
-          const isApplying = handleUseNow1.isApplying;
-          canUseNow = handleUseNow1.canUseNow;
+          isApplying = handleUseNow1.isApplying;
+          const canUseNow = handleUseNow1.canUseNow;
           const handleEditProfile = handleUseNow1.handleEditProfile;
           if (cResult[17] === product) {
             if (cResult[18] === stageCollectibleChangeForEditProfile) {
-              let tmp26 = cResult[19];
+              let tmp28 = cResult[19];
             }
-            const handleClaim = tmp(tmp2[43]).useHandleClaim(tmp26).handleClaim;
+            const handleClaim = tmp(tmp2[45]).useHandleClaim(tmp28).handleClaim;
             if (tmp16) {
               tmp16 = !isPremiumSubscriber;
             }
             if (tmp16) {
               tmp16 = !tmp18;
             }
-            closure_20 = tmp16;
-            const tmpResult17 = tmp(tmp2[43]);
-            const canGiftProduct = tmp(tmp2[44]).useCanGiftProduct(product);
-            let PX_16 = analyticsLocations(tmp2[45])().bottom;
+            closure_21 = tmp16;
+            const tmpResult19 = tmp(tmp2[45]);
+            const canGiftProduct = tmp(tmp2[46]).useCanGiftProduct(product);
+            let PX_16 = tmp24(tmp2[47])().bottom;
             if (cResult[20] !== product.type) {
-              function ee() {
+              function getBuyButtonLabel() {
                 if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
                   const intl6 = util.intl;
                   let stringResult = intl6.string(util.t.V1AWw0);
@@ -518,82 +529,84 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return stringResult;
               }
               cResult[20] = product.type;
-              cResult[21] = ee;
-              let tmp29 = ee;
+              cResult[21] = getBuyButtonLabel;
+              let tmp30 = getBuyButtonLabel;
             } else {
-              tmp29 = cResult[21];
+              tmp30 = cResult[21];
             }
-            closure_22 = tmp29;
+            closure_23 = tmp30;
             if (cResult[22] === analyticsLocations) {
               if (cResult[23] === balance) {
                 if (cResult[24] === tmp22) {
                   if (cResult[25] === canAfford) {
                     if (cResult[26] === canUseNow) {
-                      if (cResult[27] === tmp29) {
+                      if (cResult[27] === tmp30) {
                         if (cResult[28] === handleClaim) {
                           if (cResult[29] === handleEditProfile) {
                             if (cResult[30] === handleUseNow) {
                               if (cResult[31] === tmp13) {
                                 if (cResult[32] === isApplying) {
-                                  if (cResult[33] === isBuying) {
-                                    if (cResult[34] === first1) {
-                                      if (cResult[35] === canGiftProduct) {
-                                        if (cResult[36] === tmp20) {
-                                          if (cResult[37] === isPartiallyOwnedBundle) {
-                                            if (cResult[38] === isPurchased) {
-                                              if (cResult[39] === onStartPurchase) {
-                                                if (cResult[40] === onTrackPress) {
-                                                  if (cResult[41] === product) {
-                                                    if (cResult[42] === tmp16) {
-                                                      if (cResult[43] === stageCollectibleChangeForEditProfile) {
-                                                        if (cResult[44] === tmp4.buttonContainer) {
-                                                          if (cResult[45] === tmp4.purchaseSection) {
-                                                            let tmp30 = cResult[46];
-                                                          }
-                                                          if (PX_16 == null) {
-                                                            PX_16 = tmp28(tmp2[10]).space.PX_16;
-                                                          }
-                                                          if (cResult[47] !== PX_16) {
-                                                            let obj4 = { paddingBottom: PX_16 };
-                                                            cResult[47] = PX_16;
-                                                            cResult[48] = obj4;
-                                                            let tmp32 = obj4;
-                                                          } else {
-                                                            tmp32 = cResult[48];
-                                                          }
-                                                          if (cResult[49] === tmp4.container) {
-                                                            if (cResult[50] === tmp32) {
-                                                              let tmp33 = cResult[51];
+                                  if (cResult[33] === tmp25) {
+                                    if (cResult[34] === isBuying) {
+                                      if (cResult[35] === first1) {
+                                        if (cResult[36] === canGiftProduct) {
+                                          if (cResult[37] === tmp20) {
+                                            if (cResult[38] === isPartiallyOwnedBundle) {
+                                              if (cResult[39] === isPurchased) {
+                                                if (cResult[40] === onStartPurchase) {
+                                                  if (cResult[41] === onTrackPress) {
+                                                    if (cResult[42] === product) {
+                                                      if (cResult[43] === tmp16) {
+                                                        if (cResult[44] === stageCollectibleChangeForEditProfile) {
+                                                          if (cResult[45] === tmp4.buttonContainer) {
+                                                            if (cResult[46] === tmp4.purchaseSection) {
+                                                              let tmp31 = cResult[47];
                                                             }
-                                                            if (cResult[52] !== tmp30) {
-                                                              const tmp30Result = tmp30();
-                                                              cResult[52] = tmp30;
-                                                              cResult[53] = tmp30Result;
-                                                              let tmp34 = tmp30Result;
+                                                            if (PX_16 == null) {
+                                                              PX_16 = tmp24(tmp2[10]).space.PX_16;
+                                                            }
+                                                            if (cResult[48] !== PX_16) {
+                                                              let obj4 = { paddingBottom: PX_16 };
+                                                              cResult[48] = PX_16;
+                                                              cResult[49] = obj4;
+                                                              let tmp33 = obj4;
                                                             } else {
-                                                              tmp34 = cResult[53];
+                                                              tmp33 = cResult[49];
                                                             }
-                                                            if (cResult[54] === tmp33) {
-                                                              if (cResult[55] === tmp34) {
-                                                                let tmp36 = cResult[56];
+                                                            if (cResult[50] === tmp4.container) {
+                                                              if (cResult[51] === tmp33) {
+                                                                let tmp34 = cResult[52];
                                                               }
-                                                              return tmp36;
+                                                              if (cResult[53] !== tmp31) {
+                                                                const tmp31Result = tmp31();
+                                                                cResult[53] = tmp31;
+                                                                cResult[54] = tmp31Result;
+                                                                let tmp35 = tmp31Result;
+                                                              } else {
+                                                                tmp35 = cResult[54];
+                                                              }
+                                                              if (cResult[55] === tmp34) {
+                                                                if (cResult[56] === tmp35) {
+                                                                  let tmp37 = cResult[57];
+                                                                }
+                                                                return tmp37;
+                                                              }
+                                                              let obj5 = { style: tmp34, children: tmp35 };
+                                                              const tmp40 = balance(
+                                                                stageCollectibleChangeForEditProfile,
+                                                                obj5,
+                                                              );
+                                                              cResult[55] = tmp34;
+                                                              cResult[56] = tmp35;
+                                                              cResult[57] = tmp40;
+                                                              tmp37 = tmp40;
                                                             }
-                                                            let obj5 = { style: tmp33, children: tmp34 };
-                                                            let tmp39 = balance(
-                                                              stageCollectibleChangeForEditProfile,
-                                                              obj5,
-                                                            );
-                                                            cResult[54] = tmp33;
-                                                            cResult[55] = tmp34;
-                                                            cResult[56] = tmp39;
-                                                            tmp36 = tmp39;
+                                                            let items2 = [tmp4.container, tmp33];
+                                                            cResult[50] = tmp4.container;
+                                                            cResult[51] = tmp33;
+                                                            cResult[52] = items2;
+                                                            tmp34 = items2;
                                                           }
-                                                          let items2 = [tmp4.container, tmp32];
-                                                          cResult[49] = tmp4.container;
-                                                          cResult[50] = tmp32;
-                                                          cResult[51] = items2;
-                                                          tmp33 = items2;
                                                         }
                                                       }
                                                     }
@@ -617,13 +630,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            function ne() {
+            function children() {
               if (isPurchased) {
                 let tmp59Result = product.type !== CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
                 if (tmp59Result) {
-                  const obj2 = { style: closure_6.buttonContainer, children: null };
+                  let obj2 = { style: closure_6.buttonContainer, children: null };
                   if (canUseNow) {
-                    const obj3 = { loading: isApplying, text: null, onPress: null, size: "lg", grow: true };
+                    let obj3 = { loading: isApplying, text: null, onPress: null, size: "lg", grow: true };
                     const intl3 = util.intl;
                     obj3.text = intl3.string(util.t.MAS7uK);
                     obj3.onPress = function onPress() {
@@ -635,7 +648,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     let obj4 = obj3;
                   } else {
                     obj4 = { text: null, onPress: null, size: "lg", grow: true };
-                    const intl2 = util.intl;
+                    let intl2 = util.intl;
                     obj4.text = intl2.string(util.t["2p2aYz"]);
                     obj4.onPress = function onPress() {
                       if (onTrackPress != null) {
@@ -647,7 +660,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const items = [__initData2(components_Button_Button.Button, obj4)];
                   let tmp75 = canGiftProduct;
                   if (canGiftProduct) {
-                    const obj5 = { product, analyticsLocations, onTrackPress };
+                    let obj5 = { product, analyticsLocations, onTrackPress };
                     tmp75 = __initData2(closure_18, obj5);
                   }
                   items[1] = tmp75;
@@ -655,12 +668,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp59Result = state(View, obj2);
                 }
                 return tmp59Result;
-              } else if (closure_20) {
+              } else if (closure_21) {
                 const obj6 = { onTrackPress };
                 return __initData2(UnlockWithNitroButton.UnlockWithNitroButton, obj6);
               } else if (isPremiumSubscriber) {
                 const obj7 = { text: null, loading: null, onPress: null, size: "lg", grow: true };
-                const intl = util.intl;
+                let intl = util.intl;
                 obj7.text = intl.string(util.t.zp6caO);
                 obj7.loading = first1;
                 obj7.onPress = function onPress() {
@@ -671,8 +684,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 };
                 return __initData2(components_Button_Button.Button, obj7);
               } else {
-                const tmp4 = closure_22();
-                const obj = { style: closure_6.purchaseSection, children: null };
+                const tmp4 = closure_23();
+                let obj = { style: closure_6.purchaseSection, children: null };
                 let tmp9 = canAfford;
                 if (canAfford) {
                   const obj8 = {
@@ -695,7 +708,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       if (onTrackPress != null) {
                         tmp(isPartiallyOwnedBundle.BUY_WITH_FIAT);
                       }
-                      onStartPurchase();
+                      if (closure_1_14) {
+                        const obj2 = product(isBuying[51]);
+                        const text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj2.isIOS()}`;
+                        const obj3 = { tags: { source: "standalone_pdp" } };
+                        analyticsLocations(isBuying[50]).captureMessage(
+                          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj2.isIOS()}`} isStable: ${product(isBuying[52]).isStable}`,
+                          obj3,
+                        );
+                        const obj = analyticsLocations(isBuying[50]);
+                        const obj5 = { title: null, body: null, hideActionSheet: false };
+                        const intl = product(isBuying[16]).intl;
+                        obj5.title = intl.string(product(isBuying[16]).t.zrhHH3);
+                        const intl2 = product(isBuying[16]).intl;
+                        obj5.body = intl2.string(product(isBuying[16]).t.PjfUXe);
+                        analyticsLocations(isBuying[53]).show(obj5);
+                        const obj4 = analyticsLocations(isBuying[53]);
+                      } else {
+                        onStartPurchase();
+                      }
                     },
                     disabled: null,
                     variant: null,
@@ -756,36 +787,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[24] = tmp22;
             cResult[25] = canAfford;
             cResult[26] = canUseNow;
-            cResult[27] = tmp29;
+            cResult[27] = tmp30;
             cResult[28] = handleClaim;
             cResult[29] = handleEditProfile;
             cResult[30] = handleUseNow;
             cResult[31] = tmp13;
             cResult[32] = isApplying;
-            cResult[33] = isBuying;
-            cResult[34] = first1;
-            cResult[35] = canGiftProduct;
-            cResult[36] = tmp20;
-            cResult[37] = isPartiallyOwnedBundle;
-            cResult[38] = isPurchased;
-            cResult[39] = onStartPurchase;
-            cResult[40] = onTrackPress;
-            cResult[41] = product;
-            cResult[42] = tmp16;
-            cResult[43] = stageCollectibleChangeForEditProfile;
-            cResult[44] = tmp4.buttonContainer;
-            cResult[45] = tmp4.purchaseSection;
-            cResult[46] = ne;
-            tmp30 = ne;
-            tmp28 = analyticsLocations;
-            const tmpResult18 = tmp(tmp2[44]);
+            cResult[33] = tmp25;
+            cResult[34] = isBuying;
+            cResult[35] = first1;
+            cResult[36] = canGiftProduct;
+            cResult[37] = tmp20;
+            cResult[38] = isPartiallyOwnedBundle;
+            cResult[39] = isPurchased;
+            cResult[40] = onStartPurchase;
+            cResult[41] = onTrackPress;
+            cResult[42] = product;
+            cResult[43] = tmp16;
+            cResult[44] = stageCollectibleChangeForEditProfile;
+            cResult[45] = tmp4.buttonContainer;
+            cResult[46] = tmp4.purchaseSection;
+            cResult[47] = children;
+            tmp31 = children;
+            const tmpResult20 = tmp(tmp2[46]);
           }
           let obj7 = { product, stageCollectibleChangeForEditProfile };
           cResult[17] = product;
           cResult[18] = stageCollectibleChangeForEditProfile;
           cResult[19] = obj7;
-          tmp26 = obj7;
-          const tmpResult16 = tmp(tmp2[42]);
+          tmp28 = obj7;
+          const tmpResult18 = tmp(tmp2[44]);
         }
       }
       let obj8 = { product, analyticsLocations, stageCollectibleChangeForEditProfile };
@@ -793,28 +824,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[14] = product;
       cResult[15] = stageCollectibleChangeForEditProfile;
       cResult[16] = obj8;
-      tmp24 = obj8;
+      tmp26 = obj8;
     }
-  : (product) => {
+  : function ProductDetailsActionSheetPurchaseSection(product) {
       product = product.product;
       require = product;
       ({ analyticsLocations, isBuying, onStartPurchase: importDefault, onTrackPress } = product);
       const stageCollectibleChangeForEditProfile = product.stageCollectibleChangeForEditProfile;
-      _slicedToArray = undefined;
-      c4 = undefined;
+      c5 = undefined;
+      c6 = undefined;
       const tmp = closure_17();
       const currentUser = require("useCurrentUser").useCurrentUser();
-      const obj = require("useCurrentUser");
+      let obj = require("useCurrentUser");
       const productPurchaseState = require("useProductPurchaseState").useProductPurchaseState(product);
       ({ isPartiallyOwnedBundle, isPurchased } = productPurchaseState);
-      const obj2 = require("useProductPurchaseState");
-      let items = [CollectiblesPurchaseStore];
+      let obj2 = require("useProductPurchaseState");
+      let items = [c6];
       const items1 = [product];
-      const obj3 = require("initialize");
+      let obj3 = require("initialize");
       const isPremiumSubscriber = require("useIsPremiumSubscriber").useIsPremiumSubscriber(PremiumTypes.TIER_2);
-      const obj4 = require("useIsPremiumSubscriber");
+      let obj4 = require("useIsPremiumSubscriber");
       const canUseShopDiscountsResult = require("PremiumUtils").canUseShopDiscounts(currentUser);
-      const obj5 = require("PremiumUtils");
+      let obj5 = require("PremiumUtils");
       const result = require("CollectiblesUtils").isPremiumCollectiblesProduct(product);
       const obj6 = require("CollectiblesUtils");
       const result1 = require("CollectiblesUtils").isFreeCollectiblesProduct(product);
@@ -823,73 +854,79 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = require("CollectiblesProductUtils");
       const balance = require("../../virtual_currency/hooks/index.tsx").useFetchVirtualCurrencyBalance().balance;
       const obj9 = require("../../virtual_currency/hooks/index.tsx");
+      const nativePaymentsConnected = require("NativePaymentHooks").useNativeIAPPayments().nativePaymentsConnected;
+      const obj10 = require("NativePaymentHooks");
+      closure_4 = require("ShopStandalonePdpMobileExperiment").useIsShopStandalonePdpMobileEnabled(
+        "product_details_action_sheet",
+      );
+      const obj11 = require("ShopStandalonePdpMobileExperiment");
       const canAfford = require("useVirtualCurrencyData").useVirtualCurrencyData(
         product,
         canUseShopDiscountsResult,
       ).canAfford;
-      const obj10 = require("useVirtualCurrencyData");
+      const obj12 = require("useVirtualCurrencyData");
       const handleUseNow = require("useHandleUseNow").useHandleUseNow({
         product,
         analyticsLocations,
         stageCollectibleChangeForEditProfile,
       });
-      ({ handleUseNow: c3, handleEditProfile: c4, isApplying, canUseNow } = handleUseNow);
-      const obj11 = require("useHandleUseNow");
+      ({ handleUseNow: c5, handleEditProfile: c6, isApplying, canUseNow } = handleUseNow);
+      const obj13 = require("useHandleUseNow");
       const handleClaim = require("useHandleClaim").useHandleClaim({
         product,
         stageCollectibleChangeForEditProfile,
       }).handleClaim;
-      const obj12 = require("useHandleClaim");
+      const obj14 = require("useHandleClaim");
       let canGiftProduct = require("useCanGiftProduct").useCanGiftProduct(product);
       let PX_16 = require("useSafeAreaInsets")().bottom;
       const items2 = [tmp.container];
       if (PX_16 == null) {
         PX_16 = require("native").space.PX_16;
       }
-      const obj14 = { style: items2, children: null };
+      const obj16 = { style: items2, children: null };
       items2[1] = { paddingBottom: PX_16 };
       if (isPurchased) {
         let tmp29Result = product.type !== tmp2(onTrackPress[34]).CollectiblesItemType.EXTERNAL_SKU;
         if (tmp29Result) {
-          const obj15 = { style: tmp.buttonContainer, children: null };
+          const obj17 = { style: tmp.buttonContainer, children: null };
           if (canUseNow) {
-            const obj16 = { loading: isApplying, text: null, onPress: null, size: "lg", grow: true };
+            const obj18 = { loading: isApplying, text: null, onPress: null, size: "lg", grow: true };
             const intl9 = tmp2(onTrackPress[16]).intl;
-            obj16.text = intl9.string(tmp2(onTrackPress[16]).t.MAS7uK);
-            obj16.onPress = function onPress() {
+            obj18.text = intl9.string(tmp2(onTrackPress[16]).t.MAS7uK);
+            obj18.onPress = function onPress() {
               if (onTrackPress != null) {
                 tmp(constants.USE_NOW);
               }
               _undefined();
             };
-            let obj17 = obj16;
+            let obj19 = obj18;
           } else {
-            obj17 = { text: null, onPress: null, size: "lg", grow: true };
+            obj19 = { text: null, onPress: null, size: "lg", grow: true };
             const intl8 = tmp2(onTrackPress[16]).intl;
-            obj17.text = intl8.string(tmp2(onTrackPress[16]).t["2p2aYz"]);
-            obj17.onPress = function onPress() {
+            obj19.text = intl8.string(tmp2(onTrackPress[16]).t["2p2aYz"]);
+            obj19.onPress = function onPress() {
               if (onTrackPress != null) {
                 tmp(constants.EDIT_PROFILE);
               }
               _undefined2();
             };
           }
-          const items3 = [closure_13(tmp2(onTrackPress[46]).Button, obj17)];
+          const items3 = [closure_13(tmp2(onTrackPress[48]).Button, obj19)];
           if (canGiftProduct) {
-            const obj18 = { product, analyticsLocations, onTrackPress };
-            canGiftProduct = closure_13(closure_18, obj18);
+            const obj20 = { product, analyticsLocations, onTrackPress };
+            canGiftProduct = closure_13(closure_18, obj20);
           }
           items3[1] = canGiftProduct;
-          obj15.children = items3;
-          tmp29Result = closure_14(tmp15, obj15);
+          obj17.children = items3;
+          tmp29Result = closure_14(tmp15, obj17);
         }
         let tmp18Result1 = tmp29Result;
       } else {
         if (result) {
           if (!isPremiumSubscriber) {
             if (!result1) {
-              const obj19 = { onTrackPress };
-              tmp18Result1 = closure_13(tmp2(onTrackPress[47]).UnlockWithNitroButton, obj19);
+              const obj21 = { onTrackPress };
+              tmp18Result1 = closure_13(tmp2(onTrackPress[49]).UnlockWithNitroButton, obj21);
             }
           }
         }
@@ -907,36 +944,53 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl3 = tmp2(onTrackPress[16]).intl;
             stringResult = intl3.string(tmp2(onTrackPress[16]).t.AQ0Veg);
           } else if (product.type === tmp2(onTrackPress[34]).CollectiblesItemType.PROFILE_FRAME) {
-            const intl2 = tmp2(onTrackPress[16]).intl;
+            let intl2 = tmp2(onTrackPress[16]).intl;
             stringResult = intl2.string(tmp2(onTrackPress[16]).t.BlSW1e);
           } else {
-            const intl = tmp2(onTrackPress[16]).intl;
+            let intl = tmp2(onTrackPress[16]).intl;
             stringResult = intl.string(tmp2(onTrackPress[16]).t.AQ0Veg);
           }
-          const obj20 = { style: tmp.purchaseSection, children: null };
+          const obj22 = { style: tmp.purchaseSection, children: null };
           let tmp14Result5 = canAfford;
           if (canAfford) {
-            const obj21 = {
+            const obj23 = {
               product,
               hasShopDiscount: canUseShopDiscountsResult,
               balance,
               onTrackPress,
               stageCollectibleChangeForEditProfile,
             };
-            tmp14Result5 = closure_13(VCButton, obj21);
+            tmp14Result5 = closure_13(VCButton, obj23);
           }
           const items4 = [tmp14Result5, , ,];
           let tmp18Result = !result2;
           if (!result2) {
-            const obj22 = { style: tmp.buttonContainer, children: null };
-            const obj23 = {
+            const obj24 = { style: tmp.buttonContainer, children: null };
+            const obj25 = {
               loading: isBuying,
               text: stringResult,
               onPress() {
                 if (onTrackPress != null) {
                   tmp(constants.BUY_WITH_FIAT);
                 }
-                importDefault();
+                if (closure_4) {
+                  if (!nativePaymentsConnected) {
+                    const obj2 = PlatformUtils;
+                    const text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj2.isIOS()}`;
+                    const obj3 = { tags: { source: "standalone_pdp" } };
+                    SentryUtilsDefault.captureMessage(
+                      `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj2.isIOS()}`} isStable: ${ReleaseChannelUtils.isStable}`,
+                      obj3,
+                    );
+                    const obj5 = { title: null, body: null, hideActionSheet: false };
+                    const intl = util.intl;
+                    obj5.title = intl.string(util.t.zrhHH3);
+                    const intl2 = util.intl;
+                    obj5.body = intl2.string(util.t.PjfUXe);
+                    actions_AlertActionCreatorsDefault.show(obj5);
+                  }
+                }
+                closure_1_1();
               },
               disabled: null,
               variant: null,
@@ -946,54 +1000,54 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (!isPartiallyOwnedBundle) {
               isPartiallyOwnedBundle = isBuying;
             }
-            obj23.disabled = isPartiallyOwnedBundle;
+            obj25.disabled = isPartiallyOwnedBundle;
             let str = "primary";
             let str2 = "primary";
             if (canAfford) {
               str2 = "secondary";
             }
-            obj23.variant = str2;
-            const items5 = [closure_13(tmp2(onTrackPress[46]).Button, obj23)];
+            obj25.variant = str2;
+            const items5 = [closure_13(tmp2(onTrackPress[48]).Button, obj25)];
             let tmp14Result6 = canGiftProduct;
             if (canGiftProduct) {
-              const obj24 = { product, analyticsLocations, variant: null, onTrackPress: null };
+              const obj26 = { product, analyticsLocations, variant: null, onTrackPress: null };
               if (canAfford) {
                 str = "secondary";
               }
-              obj24.variant = str;
-              obj24.onTrackPress = onTrackPress;
-              tmp14Result6 = closure_13(closure_18, obj24);
+              obj26.variant = str;
+              obj26.onTrackPress = onTrackPress;
+              tmp14Result6 = closure_13(closure_18, obj26);
             }
             items5[1] = tmp14Result6;
-            obj22.children = items5;
-            tmp18Result = closure_14(tmp15, obj22);
+            obj24.children = items5;
+            tmp18Result = closure_14(tmp15, obj24);
           }
           items4[1] = tmp18Result;
           let tmp14Result7 = !canAfford;
           if (!canAfford) {
-            const obj25 = {
+            const obj27 = {
               product,
               hasShopDiscount: canUseShopDiscountsResult,
               balance,
               onTrackPress,
               stageCollectibleChangeForEditProfile,
             };
-            tmp14Result7 = closure_13(VCButton, obj25);
+            tmp14Result7 = closure_13(VCButton, obj27);
           }
           items4[2] = tmp14Result7;
           let tmp14Result8 = !result2;
           if (!result2) {
-            const obj26 = { product, buyButtonLabel: stringResult };
-            tmp14Result8 = closure_13(closure_20, obj26);
+            const obj28 = { product, buyButtonLabel: stringResult };
+            tmp14Result8 = closure_13(closure_20, obj28);
           }
           items4[3] = tmp14Result8;
-          obj20.children = items4;
-          tmp18Result1 = closure_14(tmp15, obj20);
+          obj22.children = items4;
+          tmp18Result1 = closure_14(tmp15, obj22);
         }
-        const obj27 = { text: null, loading: null, onPress: null, size: "lg", grow: true };
+        const obj29 = { text: null, loading: null, onPress: null, size: "lg", grow: true };
         const intl7 = tmp2(onTrackPress[16]).intl;
-        obj27.text = intl7.string(tmp2(onTrackPress[16]).t.zp6caO);
-        obj27.loading = _slicedToArray(
+        obj29.text = intl7.string(tmp2(onTrackPress[16]).t.zp6caO);
+        obj29.loading = nativePaymentsConnected(
           obj3.useStateFromStoresArray(
             items,
             () => {
@@ -1004,14 +1058,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ),
           1,
         )[0];
-        obj27.onPress = function onPress() {
+        obj29.onPress = function onPress() {
           if (onTrackPress != null) {
             tmp(constants.ADD_TO_COLLECTION);
           }
           handleClaim();
         };
-        tmp18Result1 = closure_13(tmp2(onTrackPress[46]).Button, obj27);
+        tmp18Result1 = closure_13(tmp2(onTrackPress[48]).Button, obj29);
       }
-      obj14.children = tmp18Result1;
-      return closure_13(handleClaim, obj14);
+      obj16.children = tmp18Result1;
+      return closure_13(c5, obj16);
     };

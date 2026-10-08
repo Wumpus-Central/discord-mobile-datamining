@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   skeleton: { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL },
 };
@@ -17,7 +17,7 @@ let c5 = 0.46;
 const obj3 = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function ImageSkeleton(style) {
       const cResult = c.c(3);
       style = style.style;
       const tmp2 = closure_4();
@@ -36,7 +36,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp4;
       tmp3 = tmp4;
     }
-  : (style) => {
+  : function ImageSkeleton(style) {
       const obj = { style: null };
       const items = [closure_4().skeleton, style.style];
       obj.style = items;
@@ -48,7 +48,7 @@ let result = size.fileFinishedImporting("modules/user_profile/native/UserProfile
 export const ImageSkeleton = tmp3;
 export const APPROX_CHAR_WIDTH_RATIO = 0.46;
 export const TextSkeleton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (widthChars) => {
+  ? function TextSkeleton(widthChars) {
       const cResult = c.c(6);
       widthChars = widthChars.widthChars;
       let num = 15;
@@ -84,7 +84,7 @@ export const TextSkeleton = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = size;
       tmp8 = size;
     }
-  : (widthChars) => {
+  : function TextSkeleton(widthChars) {
       let num = widthChars.widthChars;
       if (num === undefined) {
         num = 15;

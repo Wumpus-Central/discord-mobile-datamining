@@ -16,7 +16,7 @@ const require = globalThis.__r;
 const useEffect = _mod19.useEffect;
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsReportToModEnabled(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function l() {
+        const fn = function s() {
           if (null == closure_0) {
             return false;
           } else {
@@ -53,7 +53,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useIsReportToModEnabled(arg0) {
       _require = arg0;
       const items = [GuildStore];
       return require("initialize").useStateFromStores(items, () => {
@@ -74,7 +74,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useReportToModChannelId(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -85,7 +85,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function l() {
+        const fn = function s() {
           guild = null;
           if (null != closure_0) {
             guild = GuildStore.getGuild(tmp);
@@ -109,7 +109,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useReportToModChannelId(arg0) {
       _require = arg0;
       const items = [GuildStore];
       return require("initialize").useStateFromStores(items, () => {
@@ -139,7 +139,7 @@ export const useIsModeratorReportPostChannel = function useIsModeratorReportPost
   return ReportToModUtils.isModeratorReportPostChannel(isModeratorReportChannel);
 };
 export const useLoadReportedMessage = ReactCompilerGating.isReactCompilerEnabled()
-  ? (messageReference) => {
+  ? function useLoadReportedMessage(messageReference) {
       const cResult = messageReference(576).c(7);
       messageReference = messageReference.messageReference;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -150,7 +150,7 @@ export const useLoadReportedMessage = ReactCompilerGating.isReactCompilerEnabled
         first = cResult[0];
       }
       if (cResult[1] !== messageReference) {
-        const fn = function s() {
+        const fn = function l() {
           let message = null;
           if (null != messageReference) {
             message = MessageStore.getMessage(messageReference.channel_id, messageReference.message_id);
@@ -172,7 +172,7 @@ export const useLoadReportedMessage = ReactCompilerGating.isReactCompilerEnabled
         }
         useEffect(tmp8, tmp9);
       }
-      const fn2 = function h() {
+      const fn2 = function p() {
         let tmp = null == stateFromStores;
         if (tmp) {
           tmp = null != messageReference;
@@ -193,7 +193,7 @@ export const useLoadReportedMessage = ReactCompilerGating.isReactCompilerEnabled
       tmp8 = fn2;
       const tmpResult = messageReference(504);
     }
-  : (messageReference) => {
+  : function useLoadReportedMessage(messageReference) {
       messageReference = messageReference.messageReference;
       const items = [MessageStore];
       const stateFromStores = messageReference(504).useStateFromStores(items, () => {

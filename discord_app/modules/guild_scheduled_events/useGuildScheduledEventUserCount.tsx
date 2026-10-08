@@ -11,7 +11,7 @@ const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildScheduledEventUserCount.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useGuildScheduledEventUserCount(arg0, arg1, arg2) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = arg2;
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmp8;
           }
         }
-        const fn2 = function v() {
+        const fn2 = function f() {
           let tmp2 = null != closure_0;
           if (tmp2) {
             tmp2 = null != closure_1;
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1, arg2) => {
+  : function useGuildScheduledEventUserCount(arg0, arg1, arg2) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = arg2;

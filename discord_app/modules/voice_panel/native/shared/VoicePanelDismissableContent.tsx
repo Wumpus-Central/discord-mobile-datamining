@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -9,10 +9,10 @@ const require = globalThis.__r;
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(17242, dependencyMap.paths);
+  return asyncRequireImpl(17523, dependencyMap.paths);
 }
-const VoicePanelModes = fn(11916).VoicePanelModes;
-const isActivityParticipant = fn(4917).isActivityParticipant;
+const VoicePanelModes = fn(11989).VoicePanelModes;
+const isActivityParticipant = fn(5113).isActivityParticipant;
 const jsx = fn(21).jsx;
 const VoiceControlToggleNuxActionSheet = "VoiceControlToggleNuxActionSheet";
 const __initData = {
@@ -33,7 +33,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/shared/Voi
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function VoicePanelDismissibleContent() {
         let ACTIVITIES_MOBILE_PIP_FAB_NUX = require;
         const cResult = require("c").c(5);
         const context = handleFocusChange.useContext(focused(mode[10]));
@@ -184,7 +184,7 @@ export default noop.memo(
         }
         const obj4 = { runOnJS: require("ReanimatedRexport").runOnJS, handleFocusChange };
       }
-    : () => {
+    : function VoicePanelDismissibleContent() {
         const context = handleFocusChange.useContext(focused(mode[10]));
         const channelId = context.channelId;
         focused = context.focused;

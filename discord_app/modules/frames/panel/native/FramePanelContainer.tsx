@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../FramesStore.tsx";
 
 require = fn;
-const isLaunched = fn(8738).isLaunched;
+const isLaunched = fn(10613).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const FrameActivities = "FrameActivities";
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/frames/panel/native/FramePane
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function FramePanelContainer() {
         const cResult = c.c(4);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [FramesStore];
@@ -52,7 +52,7 @@ export default noop.memo(
         }
         return tmp8;
       }
-    : () => {
+    : function FramePanelContainer() {
         const items = [FramesStore];
         let tmp2 = null;
         if (obj.useStateFromStores(items, () => isLaunched(mainFrame.getMainFrame()))) {

@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetReportButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function UserProfileWidgetReportButton(userId) {
       const cResult = userId(576).c(7);
       userId = userId.userId;
       const widget = userId.widget;
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj.accessibilityRole = "button";
             const intl = userId(1126).intl;
             obj.accessibilityLabel = intl.string(userId(1126).t.xpSHSk);
-            obj.children = jsx(userId(7588).MoreHorizontalIcon, { size: "sm", color: widget(587).colors.TEXT_MUTED });
+            obj.children = jsx(userId(9180).MoreHorizontalIcon, { size: "sm", color: widget(587).colors.TEXT_MUTED });
             return <Pressable ref={ref.ref} />;
           };
           cResult[4] = fn;
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] !== tmp6) {
           const obj2 = { items: tmp6, children: tmp7 };
-          const tmp10 = jsx(tmp(7590).ContextMenu, { items: tmp6, children: tmp7 });
+          const tmp10 = jsx(tmp(9297).ContextMenu, { items: tmp6, children: tmp7 });
           cResult[5] = tmp6;
           cResult[6] = tmp10;
           let tmp8 = tmp10;
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         {
           label: first,
           variant: "destructive",
-          IconComponent: userId(8348).FlagIcon,
+          IconComponent: userId(9507).FlagIcon,
           action() {
             return showReportModalForUserWidget.showReportModalForUserWidget(userId, widget);
           },
@@ -80,13 +80,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = {
         label: first,
         variant: "destructive",
-        IconComponent: userId(8348).FlagIcon,
+        IconComponent: userId(9507).FlagIcon,
         action() {
           return showReportModalForUserWidget.showReportModalForUserWidget(userId, widget);
         },
       };
     }
-  : (arg0) => {
+  : function UserProfileWidgetReportButton(arg0) {
       ({ userId: require, widget: importDefault } = arg0);
       let obj = { label: null, variant: "destructive", IconComponent: null, action: null };
       let intl = util.intl;

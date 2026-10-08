@@ -3,15 +3,15 @@ import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import EmbeddedActivitiesNativeManagerDefault from "../../native/EmbeddedActivitiesNativeManager.tsx";
-import _modDef9590 from "../../../../../_runtime/metro/09590__.js";
+import _modDef10783 from "../../../../../_runtime/metro/10783__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPress) => {
+  ? function BaseLeaveActivityButton(onPress) {
       const cResult = c.c(4);
       onPress = onPress.onPress;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -29,7 +29,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== onPress) {
         const obj2 = {
           onPress,
-          icon: _modDef9590,
+          icon: _modDef10783,
           text: tmp4,
           accessibilityLabel: tmp5,
           variant: "destructive",
@@ -38,7 +38,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const tmp11 = jsx(components_Button_Button.Button, {
           onPress,
-          icon: _modDef9590,
+          icon: _modDef10783,
           text: tmp4,
           accessibilityLabel: tmp5,
           variant: "destructive",
@@ -53,10 +53,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : (onPress) => {
+  : function BaseLeaveActivityButton(onPress) {
       const obj = {
         onPress: onPress.onPress,
-        icon: _modDef9590,
+        icon: _modDef10783,
         text: null,
         accessibilityLabel: null,
         variant: "destructive",
@@ -69,7 +69,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       obj.accessibilityLabel = intl2.string(util.t.k0Aph0);
       return jsx(components_Button_Button.Button, {
         onPress: onPress.onPress,
-        icon: _modDef9590,
+        icon: _modDef10783,
         text: null,
         accessibilityLabel: null,
         variant: "destructive",
@@ -84,7 +84,7 @@ const result = size.fileFinishedImporting("modules/activities/panel/native/Leave
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (selfEmbeddedActivity) => {
+    ? function LeaveActivityButton(selfEmbeddedActivity) {
         const cResult = selfEmbeddedActivity(576).c(4);
         selfEmbeddedActivity = selfEmbeddedActivity.selfEmbeddedActivity;
         const setMode = selfEmbeddedActivity.setMode;
@@ -139,7 +139,7 @@ export default noop.memo(
         cResult[3] = tmp5;
         tmp4 = tmp5;
       }
-    : (arg0) => {
+    : function LeaveActivityButton(arg0) {
         ({ selfEmbeddedActivity: require, setMode: importDefault } = arg0);
         return (
           <closure_5

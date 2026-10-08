@@ -5,13 +5,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRecord from "../../../../records/MessageRecord.tsx";
 
 require = fn;
-const MessageSnapshotRecord = fn(4526).MessageSnapshotRecord;
+const MessageSnapshotRecord = fn(4718).MessageSnapshotRecord;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/useGetInitialMessagePreview.tsx");
 
 export const useGetInitialMessagePreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? (message) => {
+  ? function useGetInitialMessagePreview(message) {
       const cResult = c.c(4);
       message = message.message;
       if (cResult[0] !== message) {
@@ -59,7 +59,7 @@ export const useGetInitialMessagePreview = ReactCompilerGating.isReactCompilerEn
       }
       return tmp3;
     }
-  : (message) => {
+  : function useGetInitialMessagePreview(message) {
       message = message.message;
       const items = [message];
       return noop.useMemo(() => {

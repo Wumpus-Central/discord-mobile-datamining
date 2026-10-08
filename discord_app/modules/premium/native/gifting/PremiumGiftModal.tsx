@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftModal.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2617 from "../../gifting/GiftingBadge.messages.js";
+import _modDef2661 from "../../gifting/GiftingBadge.messages.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
@@ -24,19 +24,19 @@ const PremiumGiftScreens = {
   GIFTING_BADGE: "GiftingBadgePostPurchase",
 };
 let obj2 = {
-  [PLAN_SELECT]: fn(10407).PaymentFlowStep.SKU_SELECT,
-  [REWARD_SELECT]: fn(10407).PaymentFlowStep.REWARD_SKU_SELECT,
-  [CUSTOMIZATION]: fn(10407).PaymentFlowStep.PLAN_SELECT,
-  [SUCCESS]: fn(10407).PaymentFlowStep.CONFIRM,
-  [GIFTING_BADGE]: fn(10407).PaymentFlowStep.CONFIRM,
+  [PLAN_SELECT]: fn(10004).PaymentFlowStep.SKU_SELECT,
+  [REWARD_SELECT]: fn(10004).PaymentFlowStep.REWARD_SKU_SELECT,
+  [CUSTOMIZATION]: fn(10004).PaymentFlowStep.PLAN_SELECT,
+  [SUCCESS]: fn(10004).PaymentFlowStep.CONFIRM,
+  [GIFTING_BADGE]: fn(10004).PaymentFlowStep.CONFIRM,
 };
 ({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = PremiumGiftScreens);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj4 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
 let closure_9 = createStyles.createStyles(obj4);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, pop, arg2) => {
+  ? function useGetScreens(arg0, pop, arg2) {
       _require = arg2;
       const cResult = require("c").c(40);
       const tmp4 = closure_9();
@@ -158,12 +158,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const intl = tmp(1126).intl;
         tmp16[0] = intl.string(tmp(1126).t["JCFN/y"]);
-        tmp16[1] = tmp(6017).getHeaderCloseButton(pop);
+        tmp16[1] = tmp(6203).getHeaderCloseButton(pop);
         tmp16[2] = tmp4.header;
         tmp16[3] = function render() {
-          return jsx(isLoadingWishlist(10408), { shouldUseDMWishlistGiftingDesign: true, isLoadingWishlist: false });
+          return jsx(isLoadingWishlist(10005), { shouldUseDMWishlistGiftingDesign: true, isLoadingWishlist: false });
         };
-        const tmpResult6 = tmp(6017);
+        const tmpResult6 = tmp(6203);
       } else {
         class S {
           constructor() {
@@ -187,7 +187,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp16;
       const tmpResult5 = require("useWishlistHooks");
     }
-  : (arg0, pop, arg2) => {
+  : function useGetScreens(arg0, pop, arg2) {
       _require = arg2;
       const tmp = closure_9();
       const obj = require("initialize");
@@ -217,7 +217,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { title: null, headerLeft: null, headerStyle: null, render: null };
         const intl = tmp2(1126).intl;
         obj4.title = intl.string(tmp2(1126).t["JCFN/y"]);
-        obj4.headerLeft = tmp2(6017).getHeaderCloseButton(pop);
+        obj4.headerLeft = tmp2(6203).getHeaderCloseButton(pop);
         obj4.headerStyle = tmp.header;
         obj4.render = function render() {
           return jsx(PremiumGiftPlanSelectDefault, {
@@ -226,7 +226,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           });
         };
         let obj5 = obj4;
-        const tmp2Result = tmp2(6017);
+        const tmp2Result = tmp2(6203);
       } else {
         obj5 = {
           title: "",
@@ -264,11 +264,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         render: null,
       };
       if (arg0 === obj.REWARD_SELECT) {
-        let headerCloseButton = tmp2(6017).getHeaderCloseButton(pop);
-        const tmp2Result7 = tmp2(6017);
+        let headerCloseButton = tmp2(6203).getHeaderCloseButton(pop);
+        const tmp2Result7 = tmp2(6203);
       } else {
-        headerCloseButton = tmp2(6017).getHeaderBackButton();
-        const tmp2Result8 = tmp2(6017);
+        headerCloseButton = tmp2(6203).getHeaderBackButton();
+        const tmp2Result8 = tmp2(6203);
       }
       obj7.headerLeft = headerCloseButton;
       obj7.headerStyle = tmp.header;
@@ -278,11 +278,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       };
       obj6[obj.REWARD_SELECT] = obj7;
       if (arg0 === obj.CUSTOMIZATION) {
-        let headerCloseButton1 = tmp2(6017).getHeaderCloseButton(pop);
-        const tmp2Result9 = tmp2(6017);
+        let headerCloseButton1 = tmp2(6203).getHeaderCloseButton(pop);
+        const tmp2Result9 = tmp2(6203);
       } else {
-        headerCloseButton1 = tmp2(6017).getHeaderBackButton();
-        const tmp2Result10 = tmp2(6017);
+        headerCloseButton1 = tmp2(6203).getHeaderBackButton();
+        const tmp2Result10 = tmp2(6203);
       }
       obj6[obj.CUSTOMIZATION] = {
         title: "",
@@ -302,7 +302,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       obj6[obj.SUCCESS] = obj8;
       const obj9 = { title: null, headerLeft: null, headerTransparent: true, headerStyle: null, render: null };
       const intl2 = tmp2(1126).intl;
-      obj9.title = intl2.string(_modDef2617.roVAey);
+      obj9.title = intl2.string(_modDef2661.roVAey);
       const tmp2Result11 = require("NavigatorHeader");
       obj9.headerLeft = require("NavigatorHeader").getHeaderCloseButton(pop);
       obj9.headerStyle = { backgroundColor: "transparent", shadowColor: "transparent" };
@@ -311,9 +311,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           currentProgress: currentProgress.currentProgress,
           onSendGift() {
             obj2 = { analyticsLocations: null };
-            const items = [closure_1_1(6688).GIFTING_BADGE_POST_PURCHASE];
+            const items = [closure_1_1(6865).GIFTING_BADGE_POST_PURCHASE];
             obj2.analyticsLocations = items;
-            closure_1_0(10405).openGiftModal(obj2);
+            closure_1_0(10002).openGiftModal(obj2);
           },
         });
       };
@@ -326,7 +326,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PremiumGiftModal(arg0) {
       const cResult = onDismiss(576).c(26);
       ({
         recipientUserId,
@@ -356,7 +356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (initialRoute != null) {
             if (cResult[5] !== onDismiss) {
-              class P {
+              class A {
                 constructor() {
                   arr = closure_1(closure_2[24]);
                   arr1 = arr.pop();
@@ -367,9 +367,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               cResult[5] = onDismiss;
-              cResult[6] = P;
+              cResult[6] = A;
             } else {
-              class P {
+              class A {
                 constructor() {
                   arr = closure_1(closure_2[24]);
                   arr1 = arr.pop();
@@ -380,12 +380,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            const tmp14 = closure_10(initialRoute, P, recipientUserId);
+            const tmp14 = closure_10(initialRoute, A, recipientUserId);
             [tmp19, tmp20] = noop.useState(obj2[initialRoute]);
             importDefault = tmp20;
             const tmp18 = _slicedToArray(noop.useState(obj2[initialRoute]), 2);
             if (tmpResult.isPremiumGiftingSupported()) {
-              class P {
+              class A {
                 constructor() {
                   arr = closure_1(closure_2[24]);
                   arr1 = arr.pop();
@@ -396,7 +396,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-                class P {
+                class A {
                   constructor() {
                     arr = closure_1(closure_2[24]);
                     arr1 = arr.pop();
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 cResult[8] = tmp25;
               } else {
-                class P {
+                class A {
                   constructor() {
                     arr = closure_1(closure_2[24]);
                     arr1 = arr.pop();
@@ -420,7 +420,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (cResult[9] === initialRoute) {
-                class P {
+                class A {
                   constructor() {
                     arr = closure_1(closure_2[24]);
                     arr1 = arr.pop();
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 if (cResult[12] === tmp19) {
-                  class P {
+                  class A {
                     constructor() {
                       arr = closure_1(closure_2[24]);
                       arr1 = arr.pop();
@@ -442,7 +442,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   if (cResult[15] === tmp7) {
-                    class P {
+                    class A {
                       constructor() {
                         arr = closure_1(closure_2[24]);
                         arr1 = arr.pop();
@@ -456,17 +456,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   obj2 = {
                     basePurchaseAnalytics: tmp7,
                     recipientUserId,
-                    onClose: P,
+                    onClose: A,
                     setCurrentAnalyticsStep: tmp20,
                     premiumType,
                     planInterval,
                     initialOrder: order,
                     children: tmp29,
                   };
-                  const tmp34 = jsx(onDismiss(10443).NativeGiftContextProvider, {
+                  const tmp34 = jsx(onDismiss(10040).NativeGiftContextProvider, {
                     basePurchaseAnalytics: tmp7,
                     recipientUserId,
-                    onClose: P,
+                    onClose: A,
                     setCurrentAnalyticsStep: tmp20,
                     premiumType,
                     planInterval,
@@ -474,7 +474,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     children: tmp29,
                   });
                   cResult[15] = tmp7;
-                  cResult[16] = P;
+                  cResult[16] = A;
                   cResult[17] = order;
                   cResult[18] = planInterval;
                   cResult[19] = premiumType;
@@ -483,13 +483,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[22] = tmp34;
                 }
                 const obj3 = { currentStep: tmp19, children: tmp26 };
-                const tmp31 = jsx(tmp4(11031), { currentStep: tmp19, children: tmp26 });
+                const tmp31 = jsx(tmp4(12778), { currentStep: tmp19, children: tmp26 });
                 cResult[12] = tmp19;
                 cResult[13] = tmp26;
                 cResult[14] = tmp31;
               }
               const obj4 = { initialRouteName: initialRoute, screens: tmp14, onStateChange: tmp25 };
-              const tmp28 = jsx(onDismiss(6503).Navigator, {
+              const tmp28 = jsx(onDismiss(6679).Navigator, {
                 initialRouteName: initialRoute,
                 screens: tmp14,
                 onStateChange: tmp25,
@@ -498,7 +498,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[10] = tmp14;
               cResult[11] = tmp28;
             } else {
-              class P {
+              class A {
                 constructor() {
                   arr = closure_1(closure_2[24]);
                   arr1 = arr.pop();
@@ -509,7 +509,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-                class P {
+                class A {
                   constructor() {
                     arr = closure_1(closure_2[24]);
                     arr1 = arr.pop();
@@ -522,12 +522,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj5 = { title: null };
                 const intl = onDismiss(1126).intl;
                 obj5.title = intl.string(onDismiss(1126).t["JCFN/y"]);
-                const tmp23 = jsx(tmp4(10567), { title: null });
+                const tmp23 = jsx(tmp4(10164), { title: null });
                 cResult[7] = tmp23;
                 const tmp21 = tmp23;
-                const tmp4Result = tmp4(10567);
+                const tmp4Result = tmp4(10164);
               } else {
-                class P {
+                class A {
                   constructor() {
                     arr = closure_1(closure_2[24]);
                     arr1 = arr.pop();
@@ -540,9 +540,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               return tmp21;
             }
-            tmpResult = onDismiss(4547);
+            tmpResult = onDismiss(4739);
           } else {
-            class P {
+            class A {
               constructor() {
                 arr = closure_1(closure_2[24]);
                 arr1 = arr.pop();
@@ -556,7 +556,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj = onDismiss(576);
-      const basePurchaseFlowAnalyticsFields = onDismiss(10407).getBasePurchaseFlowAnalyticsFields({
+      const basePurchaseFlowAnalyticsFields = onDismiss(10004).getBasePurchaseFlowAnalyticsFields({
         isGift: true,
         analyticsLoadId: tmp6,
         analyticsLocation,
@@ -567,9 +567,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = analyticsLocations;
       cResult[4] = basePurchaseFlowAnalyticsFields;
       tmp7 = basePurchaseFlowAnalyticsFields;
-      const tmpResult2 = onDismiss(10407);
+      const tmpResult2 = onDismiss(10004);
     }
-  : (analyticsLocations) => {
+  : function PremiumGiftModal(analyticsLocations) {
       ({ recipientUserId, premiumType, analyticsLocation } = analyticsLocations);
       analyticsLocations = analyticsLocations.analyticsLocations;
       ({ initialRoute, onDismiss } = analyticsLocations);

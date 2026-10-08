@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumPlanSelectSettingScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PremiumPlanSelectSettingScreen() {
       const cResult = c.c(2);
       const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
       if (cResult[0] !== settingNavigationRoute.params) {
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : () => {
+  : function PremiumPlanSelectSettingScreen() {
       const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
       const obj2 = {};
       const merged = Object.assign(settingNavigationRoute.params);

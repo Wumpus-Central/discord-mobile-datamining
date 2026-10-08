@@ -11,10 +11,10 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 
 require = fn;
-const GuildRecord = fn(2070);
+const GuildRecord = fn(2082);
 ({ getGuildIconSource: hasOwnProperty, getGuildIconURL: metroRequire } = GuildRecord);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { guildIcon: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -28,7 +28,7 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guildId) => {
+    ? function GuildsBarPendingGuild(guildId) {
         const cResult = guildId(stateFromStores[9]).c(51);
         guildId = guildId.guildId;
         closure_10();
@@ -235,7 +235,7 @@ export default noop.memo(
             const tmp31 = tmp7(tmp2[15])(tmp30);
           }
         }
-        class C {
+        class B {
           constructor() {
             joinRequestGuild = closure_4.getJoinRequestGuild(guildId);
             tmp2 = undefined;
@@ -273,12 +273,12 @@ export default noop.memo(
         cResult[11] = token;
         cResult[12] = stateFromStores;
         cResult[13] = items6;
-        cResult[14] = C;
-        tmp22 = C;
+        cResult[14] = B;
+        tmp22 = B;
         tmp21 = items6;
         const tmpResult8 = guildId(stateFromStores[12]);
       }
-    : (guildId) => {
+    : function GuildsBarPendingGuild(guildId) {
         guildId = guildId.guildId;
         let token;
         let stateFromStores;
@@ -425,7 +425,7 @@ export default noop.memo(
           styles: null,
           externalChildren: null,
           expandedChildren: null,
-          children: "cry",
+          children: "passthroughCount",
         };
         let str = guildName;
         const tmp2Result2 = guildId(stateFromStores[21]);
@@ -471,7 +471,7 @@ export default noop.memo(
           styles: null,
           externalChildren: null,
           expandedChildren: null,
-          children: "cry",
+          children: "passthroughCount",
         });
       },
 );

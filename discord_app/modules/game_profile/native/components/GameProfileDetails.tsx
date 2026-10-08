@@ -11,10 +11,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8037).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8445).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { gap: nativeDefault.space.PX_8 },
   headerText: null,
@@ -64,7 +64,7 @@ obj2.linksContainer = { flexDirection: "row", alignItems: "center", gap: nativeD
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (url) => {
+  ? function GameProfileWebsiteButton(url) {
       const cResult = action(576).c(8);
       ({ icon, action } = url);
       ({ title, trackAction } = url);
@@ -108,7 +108,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = fn;
       const obj = action(576);
     }
-  : (action) => {
+  : function GameProfileWebsiteButton(action) {
       action = action.action;
       const trackAction = action.trackAction;
       const url = action.url;
@@ -131,11 +131,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileDetails.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GameProfileDetails(arg0) {
       const cResult = trackAction(576).c(71);
       ({ game: platformsContainer, trackAction } = arg0);
       const tmp4 = closure_10();
-      importDefault = tmp4;
+      closure_1 = tmp4;
       if (null != platformsContainer) {
         if (cResult[1] === platformsContainer) {
           if (cResult[2] === tmp4.linksContainer) {
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let joined;
           if (platformsContainer != null) {
             const genres1 = platformsContainer.genres;
-            const mapped = genres1.map(trackAction(8394).getGenreText);
+            const mapped = genres1.map(trackAction(8892).getGenreText);
             joined = mapped.join(", ");
           }
           let genres2;
@@ -195,270 +195,247 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[13] !== platformsContainer) {
           let companyByRole;
           if (platformsContainer != null) {
-            companyByRole = platformsContainer.getCompanyByRole(trackAction(1985).GameCompanyRole.PUBLISHER);
+            companyByRole = platformsContainer.getCompanyByRole(trackAction(1997).GameCompanyRole.PUBLISHER);
           }
           const _Symbol2 = Symbol;
           if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn = function w(name) {
-              return name.name;
-            };
-            cResult[16] = fn;
-            let tmp19 = fn;
+            class P {
+              constructor(arg0) {
+                return arg0.name;
+              }
+            }
+            cResult[16] = P;
           } else {
-            tmp19 = cResult[16];
+            class P {
+              constructor(arg0) {
+                return arg0.name;
+              }
+            }
           }
-          const mapped1 = companyByRole.map(tmp19);
+          const mapped1 = companyByRole.map(P);
           const joined1 = mapped1.join(", ");
           cResult[13] = platformsContainer;
           cResult[14] = companyByRole;
           cResult[15] = joined1;
         } else {
-          let length = cResult[14];
+          class P {
+            constructor(arg0) {
+              return arg0.name;
+            }
+          }
           if (null != cResult[15]) {
+            class P {
+              constructor(arg0) {
+                return arg0.name;
+              }
+            }
             if ("" !== tmp16) {
-              if (cResult[17] !== length.length) {
-                if (1 !== length.length) {
-                  const intl4 = trackAction(1126).intl;
-                  let stringResult1 = intl4.string(trackAction(1126).t.Hc7Enk);
-                } else {
-                  const intl3 = trackAction(1126).intl;
-                  stringResult1 = intl3.string(trackAction(1126).t["4Byy/G"]);
+              class P {
+                constructor(arg0) {
+                  return arg0.name;
                 }
-                length = length.length;
-                cResult[17] = length;
-                cResult[18] = stringResult1;
-              } else {
-                if (cResult[19] === tmp16) {
-                  if (cResult[20] === tmp23) {
-                    let tmp26 = cResult[21];
-                  }
-                  items.push(tmp26);
-                }
-                let obj3 = { label: cResult[18], value: tmp16 };
-                cResult[19] = tmp16;
-                cResult[20] = cResult[18];
-                cResult[21] = obj3;
-                tmp26 = obj3;
               }
             }
           }
           if (cResult[22] !== platformsContainer) {
-            let companyByRole1;
+            class P {
+              constructor(arg0) {
+                return arg0.name;
+              }
+            }
             if (platformsContainer != null) {
-              companyByRole1 = platformsContainer.getCompanyByRole(trackAction(1985).GameCompanyRole.DEVELOPER);
+              class P {
+                constructor(arg0) {
+                  return arg0.name;
+                }
+              }
+              const tmp24Result = tmp24(trackAction(1997).GameCompanyRole.DEVELOPER);
             }
             const _Symbol3 = Symbol;
             if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-              const fn2 = function k(name) {
-                return name.name;
-              };
-              cResult[25] = fn2;
-              let tmp31 = fn2;
+              class S {
+                constructor(arg0) {
+                  return arg0.name;
+                }
+              }
+              cResult[25] = S;
             } else {
-              tmp31 = cResult[25];
+              class S {
+                constructor(arg0) {
+                  return arg0.name;
+                }
+              }
             }
-            const mapped2 = companyByRole1.map(tmp31);
+            const mapped2 = tmp24Result.map(S);
             const joined2 = mapped2.join(", ");
             cResult[22] = platformsContainer;
-            cResult[23] = companyByRole1;
+            cResult[23] = tmp24Result;
             cResult[24] = joined2;
           } else {
-            let length1 = cResult[23];
+            class S {
+              constructor(arg0) {
+                return arg0.name;
+              }
+            }
             if (null != cResult[24]) {
-              if ("" !== tmp28) {
-                if (cResult[26] !== length1.length) {
-                  if (1 !== length1.length) {
-                    const intl6 = trackAction(1126).intl;
-                    let stringResult2 = intl6.string(trackAction(1126).t.KATEJB);
-                  } else {
-                    const intl5 = trackAction(1126).intl;
-                    stringResult2 = intl5.string(trackAction(1126).t.na3PT0);
+              class S {
+                constructor(arg0) {
+                  return arg0.name;
+                }
+              }
+              if ("" !== tmp23) {
+                class S {
+                  constructor(arg0) {
+                    return arg0.name;
                   }
-                  length1 = length1.length;
-                  cResult[26] = length1;
-                  cResult[27] = stringResult2;
-                } else {
-                  if (cResult[28] === tmp28) {
-                    if (cResult[29] === tmp35) {
-                      let tmp38 = cResult[30];
-                    }
-                    items.push(tmp38);
-                  }
-                  const obj4 = { label: cResult[27], value: tmp28 };
-                  cResult[28] = tmp28;
-                  cResult[29] = cResult[27];
-                  cResult[30] = obj4;
-                  tmp38 = obj4;
                 }
               }
             }
-            let firstReleaseDate;
             if (platformsContainer != null) {
-              firstReleaseDate = platformsContainer.firstReleaseDate;
+              class S {
+                constructor(arg0) {
+                  return arg0.name;
+                }
+              }
             }
-            if (null != firstReleaseDate) {
-              if ("" !== firstReleaseDate) {
-                const _Symbol5 = Symbol;
+            if (null != undefined) {
+              class S {
+                constructor(arg0) {
+                  return arg0.name;
+                }
+              }
+              if ("" !== tmp30) {
+                class S {
+                  constructor(arg0) {
+                    return arg0.name;
+                  }
+                }
+                const _Symbol4 = Symbol;
                 if (cResult[31] === Symbol.for("react.memo_cache_sentinel")) {
-                  const intl7 = trackAction(1126).intl;
-                  const stringResult3 = intl7.string(trackAction(1126).t.H3mPDT);
-                  cResult[31] = stringResult3;
-                  let tmp41 = stringResult3;
+                  class S {
+                    constructor(arg0) {
+                      return arg0.name;
+                    }
+                  }
+                  const stringResult1 = obj6.string(trackAction(1126).t.H3mPDT);
+                  cResult[31] = stringResult1;
+                  const tmp31 = stringResult1;
                 } else {
-                  tmp41 = cResult[31];
+                  class S {
+                    constructor(arg0) {
+                      return arg0.name;
+                    }
+                  }
                 }
-                if (cResult[32] !== firstReleaseDate) {
+                if (cResult[32] !== tmp30) {
+                  class S {
+                    constructor(arg0) {
+                      return arg0.name;
+                    }
+                  }
                   const _Date = Date;
-                  const date = new Date(firstReleaseDate);
-                  const dateFormatResult = tmp5(4558).dateFormat(date, "LL");
-                  cResult[32] = firstReleaseDate;
+                  const date = new Date(tmp30);
+                  const dateFormatResult = tmp5(4750).dateFormat(date, "LL");
+                  cResult[32] = tmp30;
                   cResult[33] = dateFormatResult;
-                  let tmp43 = dateFormatResult;
-                  const obj8 = tmp5(4558);
+                  const obj7 = tmp5(4750);
                 } else {
-                  tmp43 = cResult[33];
+                  class S {
+                    constructor(arg0) {
+                      return arg0.name;
+                    }
+                  }
                 }
-                if (cResult[34] !== tmp43) {
-                  const obj5 = { label: tmp41, value: tmp43 };
-                  cResult[34] = tmp43;
-                  cResult[35] = obj5;
-                  let tmp51 = obj5;
+                if (cResult[34] !== tmp33) {
+                  class S {
+                    constructor(arg0) {
+                      return arg0.name;
+                    }
+                  }
+                  tmp41[0] = tmp31;
+                  tmp41[1] = tmp33;
+                  cResult[34] = tmp33;
+                  cResult[35] = tmp41;
                 } else {
-                  tmp51 = cResult[35];
+                  class S {
+                    constructor(arg0) {
+                      return arg0.name;
+                    }
+                  }
                 }
-                items.push(tmp51);
+                items.push(tmp41);
               }
             }
-            let platforms;
             if (platformsContainer != null) {
-              platforms = platformsContainer.platforms;
+              class S {
+                constructor(arg0) {
+                  return arg0.name;
+                }
+              }
             }
-            if (null != platforms) {
-              if (platforms.length > 0) {
-                if (cResult[36] !== platformsContainer.platforms.length) {
-                  if (1 !== platformsContainer.platforms.length) {
-                    const intl9 = trackAction(1126).intl;
-                    let stringResult4 = intl9.string(trackAction(1126).t.PNqxNe);
-                  } else {
-                    const intl8 = trackAction(1126).intl;
-                    stringResult4 = intl8.string(trackAction(1126).t["UxAag+"]);
+            if (null != undefined) {
+              class S {
+                constructor(arg0) {
+                  return arg0.name;
+                }
+              }
+              if (tmp43.length > 0) {
+                class S {
+                  constructor(arg0) {
+                    return arg0.name;
                   }
-                  cResult[36] = platformsContainer.platforms.length;
-                  cResult[37] = stringResult4;
-                } else if (cResult[38] !== platforms) {
-                  const _Symbol4 = Symbol;
-                  if (cResult[40] === Symbol.for("react.memo_cache_sentinel")) {
-                    class F {
-                      constructor(arg0) {
-                        obj = { platform: arg0, size: "md", color: closure_1(closure_1_3[5]).colors.ICON_SUBTLE };
-                        return closure_1_8(trackAction(closure_1_3[13]).GameUpdatePlatformIcon, obj, arg0);
-                      }
-                    }
-                    cResult[40] = F;
-                  } else {
-                    class F {
-                      constructor(arg0) {
-                        obj = { platform: arg0, size: "md", color: closure_1(closure_1_3[5]).colors.ICON_SUBTLE };
-                        return closure_1_8(trackAction(closure_1_3[13]).GameUpdatePlatformIcon, obj, arg0);
-                      }
-                    }
-                  }
-                  const mapped3 = platforms.map(F);
-                  cResult[38] = platforms;
-                  cResult[39] = mapped3;
-                } else {
-                  class F {
-                    constructor(arg0) {
-                      obj = { platform: arg0, size: "md", color: closure_1(closure_1_3[5]).colors.ICON_SUBTLE };
-                      return closure_1_8(trackAction(closure_1_3[13]).GameUpdatePlatformIcon, obj, arg0);
-                    }
-                  }
-                  if (cResult[41] === tmp4.platformsContainer) {
-                    class F {
-                      constructor(arg0) {
-                        obj = { platform: arg0, size: "md", color: closure_1(closure_1_3[5]).colors.ICON_SUBTLE };
-                        return closure_1_8(trackAction(closure_1_3[13]).GameUpdatePlatformIcon, obj, arg0);
-                      }
-                    }
-                    if (cResult[44] === tmp54) {
-                      class F {
-                        constructor(arg0) {
-                          obj = { platform: arg0, size: "md", color: closure_1(closure_1_3[5]).colors.ICON_SUBTLE };
-                          return closure_1_8(trackAction(closure_1_3[13]).GameUpdatePlatformIcon, obj, arg0);
-                        }
-                      }
-                      items.push(tmp67);
-                    }
-                    const obj6 = { label: tmp54, value: tmp63 };
-                    cResult[44] = tmp54;
-                    cResult[45] = tmp63;
-                    cResult[46] = obj6;
-                    tmp67 = obj6;
-                  }
-                  const obj7 = { style: tmp57, children: tmp58 };
-                  const tmp66 = closure_8(closure_5, obj7);
-                  cResult[41] = tmp4.platformsContainer;
-                  cResult[42] = tmp58;
-                  cResult[43] = tmp66;
                 }
               }
             }
             let found;
             if (platformsContainer != null) {
-              class F {
+              class S {
                 constructor(arg0) {
-                  obj = { platform: arg0, size: "md", color: closure_1(closure_1_3[5]).colors.ICON_SUBTLE };
-                  return closure_1_8(trackAction(closure_1_3[13]).GameUpdatePlatformIcon, obj, arg0);
+                  return arg0.name;
                 }
               }
-              if (tmp70 != null) {
-                class F {
+              if (tmp45 != null) {
+                class S {
                   constructor(arg0) {
-                    obj = { platform: arg0, size: "md", color: closure_1(closure_1_3[5]).colors.ICON_SUBTLE };
-                    return closure_1_8(trackAction(closure_1_3[13]).GameUpdatePlatformIcon, obj, arg0);
+                    return arg0.name;
                   }
                 }
-                found = arr6.filter((item) => null != item);
+                found = arr5.filter((item) => null != item);
               }
             }
             if (found == null) {
-              class F {
+              class S {
                 constructor(arg0) {
-                  obj = { platform: arg0, size: "md", color: closure_1(closure_1_3[5]).colors.ICON_SUBTLE };
-                  return closure_1_8(trackAction(closure_1_3[13]).GameUpdatePlatformIcon, obj, arg0);
+                  return arg0.name;
                 }
               }
             }
             if (null != found) {
-              class F {
+              class S {
                 constructor(arg0) {
-                  obj = { platform: arg0, size: "md", color: closure_1(closure_1_3[5]).colors.ICON_SUBTLE };
-                  return closure_1_8(trackAction(closure_1_3[13]).GameUpdatePlatformIcon, obj, arg0);
+                  return arg0.name;
                 }
               }
               if (found.length > 0) {
-                class F {
+                class S {
                   constructor(arg0) {
-                    obj = { platform: arg0, size: "md", color: closure_1(closure_1_3[5]).colors.ICON_SUBTLE };
-                    return closure_1_8(trackAction(closure_1_3[13]).GameUpdatePlatformIcon, obj, arg0);
+                    return arg0.name;
                   }
                 }
-                const _Symbol6 = Symbol;
+                const _Symbol5 = Symbol;
                 if (cResult[47] === Symbol.for("react.memo_cache_sentinel")) {
-                  class F {
+                  class S {
                     constructor(arg0) {
-                      obj = { platform: arg0, size: "md", color: closure_1(closure_1_3[5]).colors.ICON_SUBTLE };
-                      return closure_1_8(trackAction(closure_1_3[13]).GameUpdatePlatformIcon, obj, arg0);
+                      return arg0.name;
                     }
                   }
-                  const stringResult5 = obj12.string(trackAction(1126).t["Oj3o1/"]);
-                  cResult[47] = stringResult5;
-                  const tmp71 = stringResult5;
+                  const stringResult2 = obj8.string(trackAction(1126).t["Oj3o1/"]);
+                  cResult[47] = stringResult2;
+                  const tmp46 = stringResult2;
                 } else {
-                  class F {
+                  class S {
                     constructor(arg0) {
-                      obj = { platform: arg0, size: "md", color: closure_1(closure_1_3[5]).colors.ICON_SUBTLE };
-                      return closure_1_8(trackAction(closure_1_3[13]).GameUpdatePlatformIcon, obj, arg0);
+                      return arg0.name;
                     }
                   }
                 }
@@ -467,7 +444,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     constructor(arg0) {
                       url = arg0.url;
                       obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                      return jsx(f47856, obj, url);
+                      return jsx(GameProfileWebsiteButton, obj, url);
                     }
                   }
                   cResult[48] = trackAction;
@@ -477,34 +454,34 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     constructor(arg0) {
                       url = arg0.url;
                       obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                      return jsx(f47856, obj, url);
+                      return jsx(GameProfileWebsiteButton, obj, url);
                     }
                   }
                 }
-                const obj9 = { style: tmp4.linksContainer, children: found.map(Z) };
-                const tmp76 = closure_8(closure_5, obj9);
-                if (cResult[50] !== tmp76) {
+                let obj3 = { style: tmp4.linksContainer, children: found.map(Z) };
+                const tmp51 = closure_8(closure_5, obj3);
+                if (cResult[50] !== tmp51) {
                   class Z {
                     constructor(arg0) {
                       url = arg0.url;
                       obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                      return jsx(f47856, obj, url);
+                      return jsx(GameProfileWebsiteButton, obj, url);
                     }
                   }
-                  tmp78[0] = tmp71;
-                  tmp78[1] = tmp76;
-                  cResult[50] = tmp76;
-                  cResult[51] = tmp78;
+                  tmp53[0] = tmp46;
+                  tmp53[1] = tmp51;
+                  cResult[50] = tmp51;
+                  cResult[51] = tmp53;
                 } else {
                   class Z {
                     constructor(arg0) {
                       url = arg0.url;
                       obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                      return jsx(f47856, obj, url);
+                      return jsx(GameProfileWebsiteButton, obj, url);
                     }
                   }
                 }
-                items.push(tmp78);
+                items.push(tmp53);
               }
             }
             if (items.length <= 0) {
@@ -512,7 +489,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 constructor(arg0) {
                   url = arg0.url;
                   obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                  return jsx(f47856, obj, url);
+                  return jsx(GameProfileWebsiteButton, obj, url);
                 }
               }
               cResult[1] = platformsContainer;
@@ -525,58 +502,58 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 constructor(arg0) {
                   url = arg0.url;
                   obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                  return jsx(f47856, obj, url);
+                  return jsx(GameProfileWebsiteButton, obj, url);
                 }
               }
-              const _Symbol7 = Symbol;
+              const _Symbol6 = Symbol;
               if (cResult[52] === Symbol.for("react.memo_cache_sentinel")) {
                 class Z {
                   constructor(arg0) {
                     url = arg0.url;
                     obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                    return jsx(f47856, obj, url);
+                    return jsx(GameProfileWebsiteButton, obj, url);
                   }
                 }
-                const stringResult6 = obj14.string(trackAction(1126).t["BwQ+9e"]);
-                const intl10 = trackAction(1126).intl;
-                const obj10 = { igdbLink: IGDB_ATTRIBUTION_LINK };
-                const formatResult = intl10.format(trackAction(1126).t.XPFZVl, obj10);
-                cResult[52] = stringResult6;
+                const stringResult3 = obj10.string(trackAction(1126).t["BwQ+9e"]);
+                const intl3 = trackAction(1126).intl;
+                const obj4 = { igdbLink: IGDB_ATTRIBUTION_LINK };
+                const formatResult = intl3.format(trackAction(1126).t.XPFZVl, obj4);
+                cResult[52] = stringResult3;
                 cResult[53] = formatResult;
-                let tmp81 = formatResult;
-                const tmp80 = stringResult6;
+                let tmp56 = formatResult;
+                const tmp55 = stringResult3;
               } else {
                 class Z {
                   constructor(arg0) {
                     url = arg0.url;
                     obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                    return jsx(f47856, obj, url);
+                    return jsx(GameProfileWebsiteButton, obj, url);
                   }
                 }
-                tmp81 = cResult[53];
+                tmp56 = cResult[53];
               }
-              if (cResult[54] !== tmp81) {
+              if (cResult[54] !== tmp56) {
                 class Z {
                   constructor(arg0) {
                     url = arg0.url;
                     obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                    return jsx(f47856, obj, url);
+                    return jsx(GameProfileWebsiteButton, obj, url);
                   }
                 }
-                tmp86[0] = tmp80;
-                tmp86[1] = tmp81;
-                cResult[54] = tmp81;
-                cResult[55] = tmp86;
+                tmp61[0] = tmp55;
+                tmp61[1] = tmp56;
+                cResult[54] = tmp56;
+                cResult[55] = tmp61;
               } else {
                 class Z {
                   constructor(arg0) {
                     url = arg0.url;
                     obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                    return jsx(f47856, obj, url);
+                    return jsx(GameProfileWebsiteButton, obj, url);
                   }
                 }
               }
-              items.push(tmp86);
+              items.push(tmp61);
             }
           }
         }
@@ -585,7 +562,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           constructor(arg0) {
             url = arg0.url;
             obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-            return jsx(f47856, obj, url);
+            return jsx(GameProfileWebsiteButton, obj, url);
           }
         }
         const _Symbol = Symbol;
@@ -594,7 +571,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             constructor(arg0) {
               url = arg0.url;
               obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-              return jsx(f47856, obj, url);
+              return jsx(GameProfileWebsiteButton, obj, url);
             }
           }
           cResult[0] = tmp5;
@@ -603,7 +580,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             constructor(arg0) {
               url = arg0.url;
               obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-              return jsx(f47856, obj, url);
+              return jsx(GameProfileWebsiteButton, obj, url);
             }
           }
         }
@@ -612,7 +589,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             constructor(arg0) {
               url = arg0.url;
               obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-              return jsx(f47856, obj, url);
+              return jsx(GameProfileWebsiteButton, obj, url);
             }
           }
         } else {
@@ -620,28 +597,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             constructor(arg0) {
               url = arg0.url;
               obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-              return jsx(f47856, obj, url);
+              return jsx(GameProfileWebsiteButton, obj, url);
             }
           }
-          const _Symbol8 = Symbol;
+          const _Symbol7 = Symbol;
           ({ container, headerText } = tmp4);
           if (cResult[56] === Symbol.for("react.memo_cache_sentinel")) {
             class Z {
               constructor(arg0) {
                 url = arg0.url;
                 obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                return jsx(f47856, obj, url);
+                return jsx(GameProfileWebsiteButton, obj, url);
               }
             }
-            const stringResult7 = obj16.string(trackAction(1126).t["7OjmmH"]);
-            cResult[56] = stringResult7;
-            const tmp89 = stringResult7;
+            const stringResult4 = obj12.string(trackAction(1126).t["7OjmmH"]);
+            cResult[56] = stringResult4;
+            const tmp64 = stringResult4;
           } else {
             class Z {
               constructor(arg0) {
                 url = arg0.url;
                 obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                return jsx(f47856, obj, url);
+                return jsx(GameProfileWebsiteButton, obj, url);
               }
             }
           }
@@ -650,24 +627,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               constructor(arg0) {
                 url = arg0.url;
                 obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                return jsx(f47856, obj, url);
+                return jsx(GameProfileWebsiteButton, obj, url);
               }
             }
-            const obj11 = {
+            const obj5 = {
               variant: "heading-sm/semibold",
               color: "mobile-text-heading-primary",
               style: headerText,
-              children: tmp89,
+              children: tmp64,
             };
-            const tmp92 = closure_8(trackAction(4892).Text, obj11);
+            const tmp67 = closure_8(trackAction(5086).Text, obj5);
             cResult[57] = tmp4.headerText;
-            cResult[58] = tmp92;
+            cResult[58] = tmp67;
           } else {
             class Z {
               constructor(arg0) {
                 url = arg0.url;
                 obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                return jsx(f47856, obj, url);
+                return jsx(GameProfileWebsiteButton, obj, url);
               }
             }
           }
@@ -676,11 +653,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               constructor(arg0) {
                 url = arg0.url;
                 obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                return jsx(f47856, obj, url);
+                return jsx(GameProfileWebsiteButton, obj, url);
               }
             }
           }
-          const mapped4 = tmp5.map((children, index) => {
+          const mapped3 = tmp5.map((children, index) => {
             const items = [closure_1.detailsRow];
             let prop = null;
             if (arr.length > 1) {
@@ -719,12 +696,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[60] = tmp4.detailsRow;
           cResult[61] = tmp4.detailsRowBottomBorder;
           cResult[62] = tmp4.detailsRowValue;
-          cResult[63] = mapped4;
+          cResult[63] = mapped3;
         }
       }
       let obj = trackAction(576);
     }
-  : (game) => {
+  : function GameProfileDetails(game) {
       game = game.game;
       const trackAction = game.trackAction;
       const tmp = closure_10();
@@ -802,7 +779,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const websites = game.websites;
                     if (websites != null) {
                       const mapped3 = websites.map((item) =>
-                        trackAction(8583)(item, trackAction(587).colors.ICON_SUBTLE),
+                        trackAction(9067)(item, trackAction(587).colors.ICON_SUBTLE),
                       );
                       found = mapped3.filter((item) => null != item);
                     }
@@ -855,7 +832,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     style: closure_2.platformsContainer,
                     children: platforms.map((platform) =>
                       closure_1_8(
-                        game(8576).GameUpdatePlatformIcon,
+                        game(9060).GameUpdatePlatformIcon,
                         { platform, size: "md", color: trackAction(587).colors.ICON_SUBTLE },
                         platform,
                       ),

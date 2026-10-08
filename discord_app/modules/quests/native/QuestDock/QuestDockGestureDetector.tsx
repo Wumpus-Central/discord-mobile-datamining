@@ -2,13 +2,13 @@
 import c from "../../../../../_runtime/00576_c.js";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06326_LegacyBaseButton.js";
 import QuestDockUtils from "QuestDockUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(5630).QuestDockMode;
-const QuestDockConstants = fn(14912);
+const QuestDockMode = fn(5977).QuestDockMode;
+const QuestDockConstants = fn(15174);
 ({
   QUEST_DOCK_COLLAPSED_HEIGHT: hasOwnProperty,
   QUEST_DOCK_CLOSED_HEIGHT: metroRequire,
@@ -62,7 +62,7 @@ const __initData8 = {
 };
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useQuestDockSwipeGesture() {
       const cResult = questDockExpandHandler(activeQuestDockMode[5]).c(43);
       let obj = questDockExpandHandler(activeQuestDockMode[5]);
       const questDockCreative = questDockExpandHandler(activeQuestDockMode[6]).useQuestDockCreative();
@@ -1061,7 +1061,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = fn;
       let obj10 = questDockExpandHandler(activeQuestDockMode[14]);
     }
-  : () => {
+  : function useQuestDockSwipeGesture() {
       const questDockCreative = questDockExpandHandler(activeQuestDockMode[6]).useQuestDockCreative();
       let obj = questDockExpandHandler(activeQuestDockMode[6]);
       questDockExpandHandler = questDockExpandHandler(activeQuestDockMode[7]).useQuestDockExpandHandler(
@@ -1128,7 +1128,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const PanResult = Gesture.Pan();
         const manualActivationResult = Gesture.Pan().manualActivation(false);
         let result = Gesture.Pan().manualActivation(false).maxPointers(1).shouldCancelWhenOutside(false);
-        class G {
+        class R {
           constructor(arg0) {
             result = closure_1_11.set(0);
             point = {
@@ -1144,15 +1144,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        G.__closure = {
+        R.__closure = {
           touchMoveCount: sharedValue1,
           initialGestureOffset: sharedValue,
           questDockWrapperSpecs,
           restingQuestDockMode,
           QuestDockMode,
         };
-        G.__workletHash = 16021508659358;
-        G.__initData = __initData4;
+        R.__workletHash = 16021508659358;
+        R.__initData = __initData4;
         const maxPointersResult = Gesture.Pan().manualActivation(false).maxPointers(1);
         const obj = {
           touchMoveCount: sharedValue1,
@@ -1236,7 +1236,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         };
-        const onTouchesDownResult = result.onTouchesDown(G);
+        const onTouchesDownResult = result.onTouchesDown(R);
         fn.__closure = {
           State: LegacyBaseButton.State,
           initialGestureOffset: sharedValue,
@@ -1398,7 +1398,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           activeQuestDockMode,
           QuestDockMode,
           QUEST_DOCK_GESTURE_EXPANDED_EXCESS_HEIGHT_FACTOR: value2,
-          QUEST_DOCK_GESTURE_MODE_TRANSITION_HEIGHT: v65535,
+          QUEST_DOCK_GESTURE_MODE_TRANSITION_HEIGHT: collapsed,
           questDockWrapperSpecs,
           youBarHeight: youBarTotalHeight,
           getQuestDockExpandedWidth: QuestDockUtils.getQuestDockExpandedWidth,
@@ -1426,7 +1426,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           activeQuestDockMode,
           QuestDockMode,
           QUEST_DOCK_GESTURE_EXPANDED_EXCESS_HEIGHT_FACTOR: value2,
-          QUEST_DOCK_GESTURE_MODE_TRANSITION_HEIGHT: v65535,
+          QUEST_DOCK_GESTURE_MODE_TRANSITION_HEIGHT: collapsed,
           questDockWrapperSpecs,
           youBarHeight: youBarTotalHeight,
           getQuestDockExpandedWidth: QuestDockUtils.getQuestDockExpandedWidth,
@@ -1562,7 +1562,7 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDo
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (children) => {
+    ? function QuestDockGestureDetector(children) {
         const cResult = c.c(3);
         const tmp4 = closure_30();
         if (cResult[0] === tmp4) {
@@ -1578,7 +1578,7 @@ export default noop.memo(
         tmp5 = tmp6;
         const obj2 = { gesture: tmp4, children: children.children };
       }
-    : (children) => {
+    : function QuestDockGestureDetector(children) {
         const tmp = closure_30();
         return jsx(LegacyBaseButton.GestureDetector, { gesture: closure_30(), children: children.children });
       },

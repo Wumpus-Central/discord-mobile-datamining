@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/hooks/useGeoForUser.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGeoForUser() {
       const cResult = stateFromStores2(576).c(15);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [IAPStore];
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp18 = items3;
       const tmpResult4 = stateFromStores2(504);
     }
-  : () => {
+  : function useGeoForUser() {
       const items = [IAPStore];
       const stateFromStores = stateFromStores2(504).useStateFromStores(items, () => {
         product = product.getProduct(stateFromStores2(dependencyMap[6]).ProductIds.PREMIUM_TIER_2_MONTHLY);

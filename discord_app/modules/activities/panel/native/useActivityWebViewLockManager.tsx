@@ -24,7 +24,7 @@ export default function useActivityWebViewLockManager() {
     }
     const set = new Set();
     const map = new Map();
-    return () => {
+    return function useActivityWebviewLock() {
       const id = getCanRender.useId();
       closure_0 = id;
       let tmp2 = map(getCanRender.useState(() => {

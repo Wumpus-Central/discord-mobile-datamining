@@ -10,7 +10,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = [0, 60, 120, 180, 240, 300, 360];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { justifyContent: "center", alignItems: "center" },
   containerFullWidth: { alignSelf: "stretch", overflow: "visible" },
@@ -55,7 +55,7 @@ const __initData6 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (hue, barWidth, onPanUpdate, onPanFinalize) => {
+  ? function useHuePickerGesture(hue, barWidth, onPanUpdate, onPanFinalize) {
       _require = hue;
       dependencyMap = onPanUpdate;
       closure_3 = onPanFinalize;
@@ -72,7 +72,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 ReanimatedRexport.runOnJS(tmp)();
               }
             };
-            const obj2 = { onPanFinalize, runOnJS: tmp(4618).runOnJS };
+            const obj2 = { onPanFinalize, runOnJS: tmp(4810).runOnJS };
             fn3.__closure = obj2;
             fn3.__workletHash = 2479115151384;
             fn3.__initData = __initData3;
@@ -87,7 +87,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[9] === tmp6) {
                 let tmp8 = cResult[10];
               }
-              const panGesture = tmp(6147).usePanGesture(tmp8);
+              const panGesture = tmp(6326).usePanGesture(tmp8);
               if (cResult[11] !== panGesture) {
                 const obj3 = { gesture: panGesture };
                 cResult[11] = panGesture;
@@ -162,7 +162,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         runOnJS: require("ReanimatedRexport").runOnJS,
       };
     }
-  : (hue, barWidth, onPanUpdate, onPanFinalize) => {
+  : function useHuePickerGesture(hue, barWidth, onPanUpdate, onPanFinalize) {
       _require = hue;
       dependencyMap = onPanUpdate;
       closure_3 = onPanFinalize;
@@ -247,7 +247,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/color_picker/native/HuePicker.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (hue) => {
+  ? function HuePicker(hue) {
       const cResult = hue(num2[7]).c(42);
       hue = hue.hue;
       ({ style, colorBarInnerStyle, sliderStyle, onPanUpdate, onPanFinalize, saturation, lightness, fullWidth } = hue);
@@ -471,7 +471,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = mapped;
       const tmpResult8 = hue(num2[9]);
     }
-  : (hue) => {
+  : function HuePicker(hue) {
       hue = hue.hue;
       ({ onPanUpdate, onPanFinalize, saturation } = hue);
       ({ style, colorBarInnerStyle, sliderStyle } = hue);

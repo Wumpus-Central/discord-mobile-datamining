@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef2653 from "../../../report_to_mod/ReportToMod.messages.js";
+import _modDef2697 from "../../../report_to_mod/ReportToMod.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 0, alignSelf: "stretch", paddingBottom: 12 },
   paddingHorizontal: { paddingHorizontal: 16 },
@@ -43,7 +43,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBottomButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (button) => {
+  ? function InAppReportsBottomButton(button) {
       const cResult = c.c(34);
       button = button.button;
       const onPress = button.onPress;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol4 = Symbol;
           if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
             const intl6 = util.intl;
-            const stringResult2 = intl6.string(_modDef2653.ZUyreS);
+            const stringResult2 = intl6.string(_modDef2697.ZUyreS);
             cResult[1] = stringResult2;
           }
         } else {
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl7 = util.intl;
             const string = intl7.string;
             if (isModeratorReport) {
-              let stringResult5 = string(_modDef2653.psKFdJ);
+              let stringResult5 = string(_modDef2697.psKFdJ);
             } else {
               stringResult5 = string(util.t.h6D8Vy);
             }
@@ -259,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (button) => {
+  : function InAppReportsBottomButton(button) {
       button = button.button;
       ({ onPress: importDefault, isModeratorReport } = button);
       ({ disabled, hasError } = button);
@@ -272,7 +272,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl2 = util.intl;
           const string = intl2.string;
           if (isModeratorReport) {
-            let stringResult = string(_modDef2653.ZUyreS);
+            let stringResult = string(_modDef2697.ZUyreS);
           } else {
             const intl3 = util.intl;
             const stringResult1 = string(util.t["G+vU89"]);
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl4 = util.intl;
           const string2 = intl4.string;
           if (isModeratorReport) {
-            let string2Result = string2(_modDef2653.psKFdJ);
+            let string2Result = string2(_modDef2697.psKFdJ);
           } else {
             string2Result = string2(util.t.h6D8Vy);
           }

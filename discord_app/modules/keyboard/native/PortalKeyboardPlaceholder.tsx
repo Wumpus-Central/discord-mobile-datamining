@@ -16,7 +16,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((arg0, arg1, arg2, arg3) => {
   let absoluteFillObject = null;
   if (obj.isIOS()) {
@@ -62,7 +62,7 @@ let closure_6 = createStyles.createStyles((arg0, arg1, arg2, arg3) => {
 });
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (keyboardType) => {
+  ? function PortalKeyboardPlaceholderInner(keyboardType) {
       const cResult = c.c(3);
       const rect = useSafeAreaInsetsDefault();
       const tmp2 = useIsWindowLargeDefault();
@@ -89,7 +89,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp7;
       tmp6 = tmp7;
     }
-  : (keyboardType) => {
+  : function PortalKeyboardPlaceholderInner(keyboardType) {
       const rect = useSafeAreaInsetsDefault();
       const tmp = useIsWindowLargeDefault();
       const tmp2 = useWindowDimensionsDefault();
@@ -110,7 +110,7 @@ const result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboar
 
 export const PORTAL_KEYBOARD_PLACEHOLDER_INSTANCE = jsx(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function PortalKeyboardPlaceholder() {
         const cResult = c.c(2);
         const tmp4 = useKeyboardTypeDefault();
         let num = 0;
@@ -136,7 +136,7 @@ export const PORTAL_KEYBOARD_PLACEHOLDER_INSTANCE = jsx(
         }
         return tmp6;
       }
-    : () => {
+    : function PortalKeyboardPlaceholder() {
         const tmp2 = useKeyboardTypeDefault();
         let isAndroidResult = useSystemKeyboardHeightDefault() > 0;
         if (isAndroidResult) {

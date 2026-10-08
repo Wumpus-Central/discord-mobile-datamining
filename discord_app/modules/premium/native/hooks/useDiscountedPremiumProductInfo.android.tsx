@@ -14,7 +14,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumProductInfo.android.tsx");
 
 export const useDiscountedPremiumProductInfo = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useDiscountedPremiumProductInfo(arg0, arg1) {
       const cResult = c.c(12);
       const discountedPremiumPlan = useDiscountedPremiumPlan.useDiscountedPremiumPlan(arg0, arg1);
       ({ discountedPlan, discountedProduct } = discountedPremiumPlan);
@@ -72,22 +72,22 @@ export const useDiscountedPremiumProductInfo = ReactCompilerGating.isReactCompil
                 }
               }
               if (cResult[6] !== subscriptionOffers1) {
-                class I {
+                class C {
                   constructor(arg0) {
                     return arg0.offerId === closure_0;
                   }
                 }
                 cResult[6] = subscriptionOffers1;
-                cResult[7] = I;
+                cResult[7] = C;
               } else {
-                class I {
+                class C {
                   constructor(arg0) {
                     return arg0.offerId === closure_0;
                   }
                 }
               }
               const subscriptionOffers = discountedProduct.subscriptionOffers;
-              const found = subscriptionOffers.find(I);
+              const found = subscriptionOffers.find(C);
               cResult[3] = subscriptionOffers1;
               subscriptionOffers1 = discountedProduct.subscriptionOffers;
               cResult[4] = subscriptionOffers1;
@@ -102,7 +102,7 @@ export const useDiscountedPremiumProductInfo = ReactCompilerGating.isReactCompil
       cResult[2] = formatPriceResult;
       tmp5 = formatPriceResult;
     }
-  : (arg0, arg1) => {
+  : function useDiscountedPremiumProductInfo(arg0, arg1) {
       _require = arg0;
       const discountedPremiumPlan = require("useDiscountedPremiumPlan").useDiscountedPremiumPlan(arg0, arg1);
       discountedProduct = discountedPremiumPlan.discountedProduct;

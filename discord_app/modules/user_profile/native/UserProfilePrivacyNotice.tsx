@@ -14,15 +14,15 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const preloaded_user_settings = PRIVATE_PROFILE_INLINE_NOTICE(1197);
-const dismissible_content = PRIVATE_PROFILE_INLINE_NOTICE(2036);
+const preloaded_user_settings = PRIVATE_PROFILE_INLINE_NOTICE(1209);
+const dismissible_content = PRIVATE_PROFILE_INLINE_NOTICE(2048);
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1085).UserSettingsSections;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
@@ -41,7 +41,7 @@ let obj2 = {
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function usePrivacyNoticeContentTypes() {
       let PRIVATE_PROFILE_INLINE_NOTICE = require;
       let items = dependencyMap;
       const cResult = c.c(2);
@@ -69,7 +69,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : () => {
+  : function usePrivacyNoticeContentTypes() {
       userIsTeen = userIsTeen(setting[12]).useUserIsTeen();
       const ProfileVisibility = userIsTeen(setting[13]).ProfileVisibility;
       setting = ProfileVisibility.useSetting();
@@ -96,14 +96,14 @@ let obj3 = {
 };
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsPrivacyNoticeVisible() {
       const tmp = closure_10();
       return (
         _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(tmp), 1)[0] ===
         dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE
       );
     }
-  : () => {
+  : function useIsPrivacyNoticeVisible() {
       const tmp = closure_10();
       return (
         _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(tmp), 1)[0] ===
@@ -114,7 +114,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrivacyNotice.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserProfilePrivacyNotice() {
       const cResult = require("c").c(35);
       const tmp4 = closure_9();
       const obj = require("c");
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ProfileVisibility = require("UserSettings").ProfileVisibility;
       let str = ProfileVisibility.useSetting();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function n(children, arg1) {
+        const fn = function s(children, arg1) {
           return closure_1_7(
             closure_0(dependencyMap[16]).Text,
             {
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                         const _Symbol3 = Symbol;
                         if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                          const tmp38 = closure_7(tmp(6024).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
+                          const tmp38 = closure_7(tmp(6210).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
                           cResult[25] = tmp38;
                           let tmp36 = tmp38;
                         } else {
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           style: tmp4.closeButton,
                           children: tmp36,
                         };
-                        const tmp41 = closure_7(tmp(5916).PressableOpacity, obj4);
+                        const tmp41 = closure_7(tmp(6189).PressableOpacity, obj4);
                         cResult[26] = tmp4.closeButton;
                         cResult[27] = tmp35;
                         cResult[28] = tmp41;
@@ -242,18 +242,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        if (tmp(1197).ProfileVisibility.FRIENDS_ONLY === str) {
+        if (tmp(1209).ProfileVisibility.FRIENDS_ONLY === str) {
           let dqQ7AN = tmp(1126).t["0UBDvq"];
-        } else if (tmp(1197).ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === str) {
+        } else if (tmp(1209).ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === str) {
           dqQ7AN = tmp(1126).t["9AvQO/"];
         } else {
-          const FRIENDS_AND_ALL_GUILDS = tmp(1197).ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
+          const FRIENDS_AND_ALL_GUILDS = tmp(1209).ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
           dqQ7AN = tmp(1126).t.dqQ7AN;
         }
         const container = tmp4.container;
         const _Symbol = Symbol;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp19 = closure_7(tmp(4818).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" });
+          const tmp19 = closure_7(tmp(5012).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" });
           cResult[13] = tmp19;
           let str2 = tmp19;
         } else {
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp20 = cResult[15];
         }
-        const Text = tmp(4892).Text;
+        const Text = tmp(5086).Text;
         const text = tmp4.text;
         const intl = tmp(1126).intl;
         const obj7 = { privacySettingsLink: first };
@@ -291,7 +291,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj2 = require("useSelectedDismissibleContent");
     }
-  : () => {
+  : function UserProfilePrivacyNotice() {
       const tmp = closure_9();
       const tmp2 = closure_10();
       [tmp6, require] = useSelectedDismissibleContent.useSelectedDismissibleContent(tmp2);

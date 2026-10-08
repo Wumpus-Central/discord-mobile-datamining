@@ -73,7 +73,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (incomingRequestCount) => {
+  ? function ClearAllIncomingRequestsAlertModal(incomingRequestCount) {
       const cResult = c.c(7);
       incomingRequestCount = incomingRequestCount.incomingRequestCount;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp16;
     }
-  : (incomingRequestCount) => {
+  : function ClearAllIncomingRequestsAlertModal(incomingRequestCount) {
       const obj = { title: null, content: null, actions: null };
       const intl = util.intl;
       obj.title = intl.string(util.t.z2pFjo);

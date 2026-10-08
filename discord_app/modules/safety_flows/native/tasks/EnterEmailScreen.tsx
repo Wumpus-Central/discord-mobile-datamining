@@ -1,5 +1,5 @@
 // discord_app/modules/safety_flows/native/tasks/EnterEmailScreen.tsx
-import _modDef2815 from "../../SafetyFlows.messages.js";
+import _modDef2859 from "../../SafetyFlows.messages.js";
 import types from "../../types.tsx";
 import SafetyFlowTaskScreenDefault from "../SafetyFlowTaskScreen.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -14,17 +14,17 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/EnterEmailScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function EnterEmailScreen() {
       const cResult = navigation(576).c(9);
       const obj = navigation(576);
-      navigation = navigation(1490).useNavigation();
+      navigation = navigation(1502).useNavigation();
       const tmp5 = _slicedToArray(noop.useState(""), 2);
       const first = tmp5[0];
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(_modDef2815.bFbsV6);
+        const stringResult = intl.string(_modDef2859.bFbsV6);
         const intl2 = tmp(1126).intl;
-        const stringResult1 = intl2.string(_modDef2815.RRBNpv);
+        const stringResult1 = intl2.string(_modDef2859.RRBNpv);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp7 = stringResult;
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [tmp7, tmp8] = cResult;
       }
       if (cResult[2] !== navigation) {
-        const fn = function c() {
+        const fn = function o() {
           navigation.push(types.SafetyFlowScreens.VERIFY_EMAIL);
         };
         cResult[2] = navigation;
@@ -45,8 +45,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] !== first) {
         const obj3 = { children: null };
         const obj4 = { label: "Email", value: first, onChange: tmp5[1] };
-        obj3.children = jsx(tmp(6105).TextInput, { label: "Email", value: first, onChange: tmp5[1] });
-        const tmp15 = jsx(tmp(5600).Stack, { children: null });
+        obj3.children = jsx(tmp(6283).TextInput, { label: "Email", value: first, onChange: tmp5[1] });
+        const tmp15 = jsx(tmp(5373).Stack, { children: null });
         cResult[4] = first;
         cResult[5] = tmp15;
         let tmp13 = tmp15;
@@ -64,18 +64,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp13;
       cResult[8] = tmp17;
       tmp16 = tmp17;
-      const obj2 = navigation(1490);
+      const obj2 = navigation(1502);
     }
-  : () => {
+  : function EnterEmailScreen() {
       _require = require("useNavigation").useNavigation();
       const obj = require("useNavigation");
       [tmp2, tmp3] = noop.useState("");
       const obj2 = { title: null, action: null, onAction: null, children: null };
       const tmp = _slicedToArray(noop.useState(""), 2);
       const intl = require("util").intl;
-      obj2.title = intl.string(_modDef2815.bFbsV6);
+      obj2.title = intl.string(_modDef2859.bFbsV6);
       const intl2 = require("util").intl;
-      obj2.action = intl2.string(_modDef2815.RRBNpv);
+      obj2.action = intl2.string(_modDef2859.RRBNpv);
       obj2.onAction = function onAction() {
         closure_0.push(types.SafetyFlowScreens.VERIFY_EMAIL);
       };

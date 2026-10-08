@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarMe
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function GuildsBarMessages() {
         const cResult = c.c(13);
         const guildsBarAnimatedWrapperStyles = GuildsBarAnimatedItemWrapper.useGuildsBarAnimatedWrapperStyles();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -130,7 +130,7 @@ export default noop.memo(
         tmp21 = tmp22;
         const tmp11 = useGuildsBarBottomRightBadgeDefault(tmp9);
       }
-    : () => {
+    : function GuildsBarMessages() {
         const guildsBarAnimatedWrapperStyles = GuildsBarAnimatedItemWrapper.useGuildsBarAnimatedWrapperStyles();
         const items = [SelectedGuildStore];
         const stateFromStores = initialize.useStateFromStores(items, () => {
@@ -151,10 +151,10 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "Grant Channel Access",
-          externalChildren: "Manage Channel Access",
-          expandedChildren: "Guild Scheduled Event Invite Button Embed",
-          children: "PUSH_FEEDBACK_RECEIVED_NOTIFICATION",
+          label: "ICYMI_FEEDBACK_GIVEN",
+          externalChildren: "CLEAR_ICYMI_READ_STATES",
+          expandedChildren: "ICYMI_JOINED_RECOMMENDED_GUILD",
+          children: "ICYMI_SET_VIDEOS_MUTED",
         };
         const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
         const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -171,10 +171,10 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "Grant Channel Access",
-          externalChildren: "Manage Channel Access",
-          expandedChildren: "Guild Scheduled Event Invite Button Embed",
-          children: "PUSH_FEEDBACK_RECEIVED_NOTIFICATION",
+          label: "ICYMI_FEEDBACK_GIVEN",
+          externalChildren: "CLEAR_ICYMI_READ_STATES",
+          expandedChildren: "ICYMI_JOINED_RECOMMENDED_GUILD",
+          children: "ICYMI_SET_VIDEOS_MUTED",
         });
       },
 );

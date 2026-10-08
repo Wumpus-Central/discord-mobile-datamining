@@ -14,7 +14,7 @@ import RTCConnectionStore from "../../../../stores/RTCConnectionStore.tsx";
 
 require = fn;
 const InputModes = fn(1085).InputModes;
-const StaticChannelRoute = fn(2058).StaticChannelRoute;
+const StaticChannelRoute = fn(2070).StaticChannelRoute;
 const constants = {
   LURKER: "lurker",
   VOICE: "voice",
@@ -25,7 +25,7 @@ const constants = {
   APPS: "apps",
   NONE: "none",
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = {
     lurker: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
@@ -37,7 +37,7 @@ let closure_12 = createStyles.createStyles((backgroundColor) => {
 });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useChannelSafeAreaBottomType(arg0) {
       _require = arg0;
       const cResult = require("c").c(6);
       const tmp4 = null != require("useCreateThreadViewProps")(arg0);
@@ -62,7 +62,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      class I {
+      class S {
         constructor() {
           tmp = closure_0;
           channel = closure_6.getChannel(closure_0);
@@ -163,13 +163,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp4;
       cResult[3] = tmp5;
       cResult[4] = needSubscriptionToAccess;
-      cResult[5] = I;
-      tmp12 = I;
+      cResult[5] = S;
+      tmp12 = S;
       const obj = require("c");
       tmp = _require;
       tmp2 = needSubscriptionToAccess;
     }
-  : (arg0) => {
+  : function useChannelSafeAreaBottomType(arg0) {
       _require = arg0;
       importDefault = null != require("useCreateThreadViewProps")(arg0);
       needSubscriptionToAccess = require("useChannelRoleSubscriptionStatus")(arg0).needSubscriptionToAccess;
@@ -249,7 +249,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useChannelSafeAreaBottomStyles(arg0) {
       const cResult = c.c(9);
       let backgroundColor = useToken.useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
       const gradientBottom = ClientThemesOverrides.useGradientBottom();
@@ -316,10 +316,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return prop;
     }
-  : (arg0) => {
-      const token = gradientBottom(4586).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
-      let obj = gradientBottom(4586);
-      gradientBottom = gradientBottom(7518).useGradientBottom();
+  : function useChannelSafeAreaBottomStyles(arg0) {
+      const token = gradientBottom(4778).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
+      let obj = gradientBottom(4778);
+      gradientBottom = gradientBottom(9241).useGradientBottom();
       let backgroundColor1;
       if (gradientBottom != null) {
         backgroundColor1 = gradientBottom.backgroundColor;

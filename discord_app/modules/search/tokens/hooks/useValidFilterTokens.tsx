@@ -8,7 +8,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useValidOrderedFilterTokens(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -19,7 +19,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function n() {
+        const fn = function l() {
           const items = [StreamerModeStore];
           return SearchTokenStreamerModeUtils.getValidOrderedFilterTokens(closure_0, items);
         };
@@ -32,7 +32,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStoresArray(first, tmp6);
     }
-  : (arg0) => {
+  : function useValidOrderedFilterTokens(arg0) {
       _require = arg0;
       let items = [StreamerModeStore];
       return require("initialize").useStateFromStoresArray(items, () => {
@@ -45,7 +45,7 @@ const result = size.fileFinishedImporting("modules/search/tokens/hooks/useValidF
 
 export const useValidOrderedFilterTokens = tmp2;
 export const useValidFilterTokens = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useValidFilterTokens(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -56,7 +56,7 @@ export const useValidFilterTokens = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function n() {
+        const fn = function l() {
           const items = [StreamerModeStore];
           return SearchTokenStreamerModeUtils.getValidFilterTokens(closure_0, items);
         };
@@ -73,7 +73,7 @@ export const useValidFilterTokens = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7, require("SetUtils").areSetsEqual);
     }
-  : (arg0) => {
+  : function useValidFilterTokens(arg0) {
       _require = arg0;
       let items = [StreamerModeStore];
       const items1 = [arg0];

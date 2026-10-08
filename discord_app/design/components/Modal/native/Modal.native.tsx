@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/Modal.native.tsx");
 
 export const Modal = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Modal(arg0) {
       const cResult = c.c(5);
       const sum = NavigatorConstants.NAV_BAR_HEIGHT + useSafeAreaInsetsDefault().top;
       if (cResult[0] !== sum) {
@@ -39,7 +39,7 @@ export const Modal = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = tmp9;
       const tmp4 = useSafeAreaInsetsDefault();
     }
-  : (arg0) => {
+  : function Modal(arg0) {
       const obj = {};
       const merged = Object.assign(arg0);
       const tmp = useSafeAreaInsetsDefault();

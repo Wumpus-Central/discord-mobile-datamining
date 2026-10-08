@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/SelectMenuNativeComponent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (model) => {
+  ? function SelectMenuNativeComponent(model) {
       const cResult = c.c(9);
       if (cResult[0] !== model) {
         model = model.model;
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp15;
       tmp12 = tmp15;
     }
-  : (model) => {
+  : function SelectMenuNativeComponent(model) {
       const merged = Object.assign(model, Object.assign({ model: 0 }));
       const obj = {};
       const merged1 = Object.assign(merged);

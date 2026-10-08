@@ -4,14 +4,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = tmp(1126);
-const Text_Text = tmp(4892);
-const ImageWarningIcon = tmp(5872);
-const ObscuredSurfaceContext = tmp(8389);
+const Text_Text = tmp(5086);
+const ImageWarningIcon = tmp(8184);
+const ObscuredSurfaceContext = tmp(8887);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { position: "relative", overflow: "hidden" },
   content: { pointerEvents: "none", userSelect: "none" },
@@ -60,7 +60,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_common/native/ObscuredSurface.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (obscured) => {
+  ? function ObscuredSurface(obscured) {
       const cResult = c.c(23);
       ({ heading, description, children } = obscured);
       let container = closure_6();
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = tmp7;
       }
     }
-  : (obscured) => {
+  : function ObscuredSurface(obscured) {
       ({ heading, description, children } = obscured);
       const tmp = closure_6();
       let tmp3Result = children;

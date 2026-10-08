@@ -8,7 +8,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({
   search: {
     flex: 1,
@@ -16,7 +16,7 @@ let closure_5 = createStyles.createStyles({
     flexDirection: "row",
     alignItems: "center",
     paddingStart: 4,
-    height: fn(7510).MIN_HEADER_HEIGHT,
+    height: fn(9233).MIN_HEADER_HEIGHT,
   },
 });
 const ReactCompilerGating = fn(558);
@@ -27,7 +27,7 @@ let obj = {
     flexDirection: "row",
     alignItems: "center",
     paddingStart: 4,
-    height: fn(7510).MIN_HEADER_HEIGHT,
+    height: fn(9233).MIN_HEADER_HEIGHT,
   },
 };
 const size = fn(2);
@@ -35,7 +35,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/h
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function ForumChannelHeader(arg0) {
         const cResult = c.c(14);
         ({
           channelId,
@@ -109,7 +109,7 @@ export default noop.memo(
         }
         obj2 = useIsForumChannelSearchActive;
       }
-    : (arg0) => {
+    : function ForumChannelHeader(arg0) {
         ({ channelId, guildId } = arg0);
         ({ screenIndex, pressable, isGuildMemberCountVisible, isNavigationScreen, searchPlaceholder } = arg0);
         const tmp = closure_5();

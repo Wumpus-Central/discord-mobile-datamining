@@ -6,14 +6,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ text: { alignSelf: "flex-start" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostMessageContent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (hasUnreads) => {
+  ? function ForumPostMessageContent(hasUnreads) {
       const cResult = c.c(15);
       ({ messageContent, message, isMessageDeleted, messageLoaded, lineClamp, senderModifier } = hasUnreads);
       let num = 2;
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = obj3;
       tmp5 = obj3;
     }
-  : (senderModifier) => {
+  : function ForumPostMessageContent(senderModifier) {
       let num = senderModifier.lineClamp;
       ({ messageContent, message, isMessageDeleted, hasUnreads, messageLoaded } = senderModifier);
       if (num === undefined) {

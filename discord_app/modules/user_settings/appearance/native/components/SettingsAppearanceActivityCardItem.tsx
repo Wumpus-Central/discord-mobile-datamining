@@ -12,7 +12,7 @@ const ClipViewDefault = ClipView;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15129);
+const HappeningNowConstants = fn(15391);
 ({
   HAPPENING_NOW_BADGE_SIZE,
   HAPPENING_NOW_CONTENT_HEIGHT,
@@ -23,8 +23,8 @@ const HappeningNowConstants = fn(15129);
 } = HappeningNowConstants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(1188).Icon);
-const createStyles = fn(4896);
+let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(1200).Icon);
+const createStyles = fn(5090);
 let obj = {
   card: {
     borderRadius: nativeDefault.radii.lg,
@@ -109,8 +109,8 @@ obj.userCounter = {
   alignItems: "center",
   justifyContent: "center",
   marginLeft: -4,
-  height: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.XSMALL_20],
-  minWidth: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.XSMALL_20],
+  height: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.XSMALL_20],
+  minWidth: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.XSMALL_20],
   borderRadius: nativeDefault.radii.round,
   paddingHorizontal: 4,
   paddingTop: 1,
@@ -122,8 +122,8 @@ let obj6 = {
   alignItems: "center",
   justifyContent: "center",
   marginLeft: -4,
-  height: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.XSMALL_20],
-  minWidth: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.XSMALL_20],
+  height: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.XSMALL_20],
+  minWidth: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.XSMALL_20],
   borderRadius: nativeDefault.radii.round,
   paddingHorizontal: 4,
   paddingTop: 1,
@@ -134,7 +134,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (kind) => {
+  ? function ActivityCardItem(kind) {
       const cResult = num5(substr[10]).c(62);
       ({ title, subtitle, image, avatars, animatedStyles } = kind);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -453,7 +453,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = mapped;
       const tmpResult = num5(substr[11]);
     }
-  : (arg0) => {
+  : function ActivityCardItem(arg0) {
       ({ avatars, animatedStyles } = arg0);
       _require = undefined;
       let num3;

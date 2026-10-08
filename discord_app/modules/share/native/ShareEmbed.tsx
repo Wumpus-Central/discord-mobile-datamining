@@ -3,14 +3,14 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -46,7 +46,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareEmbed.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ShareEmbed(arg0) {
       const cResult = c.c(31);
       ({ embed, isLoadingEmbed, isRevamp } = arg0);
       const tmp4 = closure_8();
@@ -168,19 +168,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let tmp42Result = null != tmp5;
                 if (tmp42Result) {
                   const obj6 = { style: tmp4.thumbnail, source: tmp5, resizeMode: "cover" };
-                  tmp42Result = hasOwnProperty(React3, obj6);
+                  tmp42Result = hasOwnProperty(FastImageDefault, obj6);
                 }
                 const obj7 = { children: null };
                 const items1 = [tmp42Result];
                 const obj8 = { style: tmp4.contentContainer, children: null };
                 const items2 = [null, tmp29, tmp33, tmp37];
                 obj8.children = items2;
-                items1[1] = timestampProducer(React4, obj8);
+                items1[1] = timestampProducer(View, obj8);
                 obj7.children = items1;
                 tmp46Result = timestampProducer(React5, obj7);
               }
               obj5.children = tmp46Result;
-              let tmp42Result2 = hasOwnProperty(React4, obj5);
+              let tmp42Result2 = hasOwnProperty(View, obj5);
             } else {
               tmp42Result2 = null;
             }
@@ -247,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj11 = { style: tmp4.authorView, children: null };
             const items3 = [tmp16, tmp20];
             obj11.children = items3;
-            const tmp26 = timestampProducer(React4, obj11);
+            const tmp26 = timestampProducer(View, obj11);
             cResult[9] = tmp4.authorView;
             cResult[10] = tmp16;
             cResult[11] = tmp20;
@@ -258,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj12 = { style: tmp4.authorThumbnail, source: null, resizeMode: "cover" };
             const obj13 = { uri: icon_url };
             obj12.source = obj13;
-            tmp17 = hasOwnProperty(React3, obj12);
+            tmp17 = hasOwnProperty(FastImageDefault, obj12);
           }
           cResult[4] = icon_url;
           cResult[5] = tmp4.authorThumbnail;
@@ -272,13 +272,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = tmp12;
       }
     }
-  : (embed) => {
+  : function ShareEmbed(embed) {
       embed = embed.embed;
       const isLoadingEmbed = embed.isLoadingEmbed;
+      let memo3;
       let tmp = closure_8();
-      noop = tmp;
+      dependencyMap = tmp;
       let items = [embed];
-      const memo = noop.useMemo(() => {
+      const memo = memo3.useMemo(() => {
         if (null != embed) {
           const thumbnail = embed.thumbnail;
           let url;
@@ -300,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
       const items1 = [isLoadingEmbed, tmp];
-      let memo1 = noop.useMemo(() => {
+      let memo1 = memo3.useMemo(() => {
         let tmp = null;
         if (isLoadingEmbed) {
           const obj = { style: closure_2.loadingSpinner };
@@ -310,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       const items2 = [embed, tmp];
       const items3 = [embed];
-      const memo2 = noop.useMemo(() => {
+      const memo2 = memo3.useMemo(() => {
         let author;
         if (embed != null) {
           author = embed.author;
@@ -328,7 +329,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { style: tmp4.authorThumbnail, source: null, resizeMode: "cover" };
             const obj3 = { uri: icon_url };
             obj2.source = obj3;
-            tmp5 = hasOwnProperty(React3, obj2);
+            tmp5 = hasOwnProperty(FastImageDefault, obj2);
           }
           const items = [tmp5];
           const obj4 = {
@@ -340,10 +341,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           items[1] = hasOwnProperty(Text_Text.Text, obj4);
           obj.children = items;
-          return timestampProducer(React4, obj);
+          return timestampProducer(View, obj);
         }
       }, items2);
-      const memo3 = noop.useMemo(() => {
+      memo3 = memo3.useMemo(() => {
         let title;
         if (embed != null) {
           title = embed.title;
@@ -364,7 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items3);
       const items4 = [embed, memo3];
       [][0] = embed;
-      const memo4 = noop.useMemo(() => {
+      const memo4 = memo3.useMemo(() => {
         if (embed != null) {
           const description = embed.description;
         }
@@ -398,19 +399,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp9Result = null != memo;
           if (tmp9Result) {
             let obj2 = { style: tmp.thumbnail, source: memo, resizeMode: "cover" };
-            tmp9Result = closure_5(memo3, obj2);
+            tmp9Result = closure_5(isLoadingEmbed(6164), obj2);
           }
           let obj3 = { children: null };
           const items6 = [tmp9Result];
           let obj4 = { style: tmp.contentContainer, children: null };
           const items7 = [memo2, memo3, memo4, tmp7];
           obj4.children = items7;
-          items6[1] = closure_6(closure_4, obj4);
+          items6[1] = closure_6(View, obj4);
           obj3.children = items6;
           memo1 = closure_6(closure_7, obj3);
         }
         obj.children = memo1;
-        let tmp9Result2 = closure_5(closure_4, obj);
+        let tmp9Result2 = closure_5(View, obj);
       } else {
         tmp9Result2 = null;
       }

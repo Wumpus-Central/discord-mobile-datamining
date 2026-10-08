@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/usePendingGameProfileReturn.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function usePendingGameProfileReturn(channelId) {
       const cResult = channelId(stateFromStores1[5]).c(19);
       channelId = channelId.channelId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = channelId(stateFromStores1[5]);
       const stateFromStores = channelId(stateFromStores1[6]).useStateFromStores(first, tmp6);
       if (cResult[3] !== stateFromStores) {
-        class S {
+        class P {
           constructor() {
             tmp = closure_1;
             if (null != closure_1) {
@@ -61,9 +61,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[3] = stateFromStores;
-        cResult[4] = S;
+        cResult[4] = P;
       } else {
-        class S {
+        class P {
           constructor() {
             tmp = closure_1;
             if (null != closure_1) {
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
+        class P {
           constructor() {
             tmp = closure_1;
             if (null != closure_1) {
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = items1;
         const tmp9 = items1;
       } else {
-        class S {
+        class P {
           constructor() {
             tmp = closure_1;
             if (null != closure_1) {
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return null;
     }
-  : (channelId) => {
+  : function usePendingGameProfileReturn(channelId) {
       channelId = channelId.channelId;
       let stateFromStores1;
       const items = [GameProfileStore];

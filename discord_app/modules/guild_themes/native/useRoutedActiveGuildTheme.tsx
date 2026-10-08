@@ -149,7 +149,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
 const ME = fn(1085).ME;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useRoutedActiveGuildThemeGuildId() {
       const cResult = c.c(2);
       const context = noop.useContext(GuildThemeGuildIdOverrideContextDefault);
       [tmp4, require] = noop.useState(getActiveGuildThemeGuildIdSnapshot);
@@ -181,7 +181,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : () => {
+  : function useRoutedActiveGuildThemeGuildId() {
       const context = noop.useContext(GuildThemeGuildIdOverrideContextDefault);
       [tmp3, require] = noop.useState(getActiveGuildThemeGuildIdSnapshot);
       const effect = noop.useEffect(() => {
@@ -208,11 +208,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/native/useRoutedActiveGuildTheme.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useRoutedActiveGuildTheme() {
       const tmp = closure_8();
       return GuildThemeResolver.useActiveGuildThemeForGuildId(tmp);
     }
-  : () => {
+  : function useRoutedActiveGuildTheme() {
       const tmp = closure_8();
       return GuildThemeResolver.useActiveGuildThemeForGuildId(tmp);
     };

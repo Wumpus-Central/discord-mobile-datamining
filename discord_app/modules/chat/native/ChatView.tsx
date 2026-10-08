@@ -21,11 +21,11 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
 
 require = fn;
-const createChannelRecord = fn(2055).createChannelRecord;
+const createChannelRecord = fn(2067).createChannelRecord;
 const ChannelTypes = fn(1085).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   empty: {
     flex: 1,
@@ -59,7 +59,7 @@ let result = size.fileFinishedImporting("modules/chat/native/ChatView.tsx");
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (chatInputRef) => {
+    ? function ChatView(chatInputRef) {
         let setInterstitialResult2 = HACK_fixModalInteraction;
         const cResult = channelId(HACK_fixModalInteraction[11]).c(63);
         ({ alwaysRespectKeyboard, channelId } = chatInputRef);
@@ -551,7 +551,7 @@ export default noop.memo(
         tmp7 = items8;
         let obj = channelId(HACK_fixModalInteraction[11]);
       }
-    : (alwaysRespectKeyboard) => {
+    : function ChatView(alwaysRespectKeyboard) {
         let flag = alwaysRespectKeyboard.alwaysRespectKeyboard;
         if (flag === undefined) {
           flag = false;
@@ -747,7 +747,7 @@ export default noop.memo(
             obj5.shouldRender = shouldRender;
             items[1] = options(ChatBeginningRowDefault, obj5);
             obj3.children = items;
-            const items1 = [v65535(tmp9, obj3), , ,];
+            const items1 = [collapsed(tmp9, obj3), , ,];
             let tmp7Result = null;
             if (!obj6.isAndroid()) {
               const obj7 = { channelId: channel.id, messagesRef: ref };
@@ -770,12 +770,12 @@ export default noop.memo(
             items1[3] = tmp7Result4;
             obj.children = items1;
             const items2 = [
-              v65535(tmp5, obj),
+              collapsed(tmp5, obj),
               options(ChannelSafeAreaBottomDefault, { channelId }),
               options(VoiceMessageOverlayDefault, { channelId }),
             ];
             obj10.children = items2;
-            return v65535(closure_2_11, obj10);
+            return collapsed(closure_2_11, obj10);
           }
           if (channelIsLoading) {
             if (!GatewayConnectionStore.isConnected()) {

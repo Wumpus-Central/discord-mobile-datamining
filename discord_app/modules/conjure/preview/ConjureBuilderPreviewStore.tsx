@@ -3,7 +3,7 @@ import initializeDefault from "../../../../discord_common/js/packages/flux/index
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import FramesStore from "../../frames/FramesStore.tsx";
 
-const OrientationLockState = fn(2011).OrientationLockState;
+const OrientationLockState = fn(2023).OrientationLockState;
 let applicationId = null;
 let enabled = false;
 let closure_5 = false;

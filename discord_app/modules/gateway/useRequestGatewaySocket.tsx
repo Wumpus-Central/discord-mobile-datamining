@@ -10,11 +10,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/gateway/useRequestGatewaySocket.tsx");
 
 export const useRequestGatewaySocket = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useRequestGatewaySocket(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       const obj = require("c");
-      canUIRequestGatewaySocket = canUIRequestGatewaySocket(10028).useCanUIRequestGatewaySocket();
+      canUIRequestGatewaySocket = canUIRequestGatewaySocket(6076).useCanUIRequestGatewaySocket();
       if (cResult[0] === canUIRequestGatewaySocket) {
         if (cResult[1] === arg0) {
           let tmp3 = cResult[2];
@@ -37,11 +37,11 @@ export const useRequestGatewaySocket = ReactCompilerGating.isReactCompilerEnable
       cResult[3] = items;
       tmp4 = items;
       tmp3 = fn;
-      const obj2 = canUIRequestGatewaySocket(10028);
+      const obj2 = canUIRequestGatewaySocket(6076);
     }
-  : (arg0) => {
+  : function useRequestGatewaySocket(arg0) {
       closure_0 = arg0;
-      canUIRequestGatewaySocket = canUIRequestGatewaySocket(10028).useCanUIRequestGatewaySocket();
+      canUIRequestGatewaySocket = canUIRequestGatewaySocket(6076).useCanUIRequestGatewaySocket();
       const items = [arg0, canUIRequestGatewaySocket];
       const effect = noop.useEffect(() => {
         if (canUIRequestGatewaySocket) {

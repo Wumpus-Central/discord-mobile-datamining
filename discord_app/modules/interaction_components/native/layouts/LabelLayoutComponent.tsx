@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/layouts/LabelLayoutComponent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function LabelLayoutComponent(arg0) {
       const cResult = c.c(15);
       ({ label, description, component, renderComponent } = arg0);
       const componentError = ComponentStateContext.useComponentError(component);
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = renderComponentResult1;
       }
     }
-  : (arg0) => {
+  : function LabelLayoutComponent(arg0) {
       ({ component, renderComponent } = arg0);
       ({ label, description } = arg0);
       const componentError = ComponentStateContext.useComponentError(component);

@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/hooks/useUserIsTeen.tsx");
 
 export const useUserIsTeen = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useUserIsTeen() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -30,7 +30,7 @@ export const useUserIsTeen = ReactCompilerGating.isReactCompilerEnabled()
       }
       return false === initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useUserIsTeen() {
       const items = [UserStore];
       return (
         false ===

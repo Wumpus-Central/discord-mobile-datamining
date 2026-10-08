@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormTrialActiveUserLimitPicker.tsx
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -14,16 +14,16 @@ const result = size.fileFinishedImporting(
 
 export default function FormTrialActiveUserLimitPicker(activeTrialUserlimit) {
   const onChange = activeTrialUserlimit.onChange;
-  dependencyMap = onChange(17989)();
+  dependencyMap = onChange(18276)();
   if (null == activeTrialUserlimit.activeTrialUserlimit) {
     let intl = str(1126).intl;
     let stringResult = intl.string(str(1126).t.zHfL6o);
   } else {
     stringResult = str.toString();
   }
-  return jsx(onChange(13726), {
+  return jsx(onChange(13948), {
     label: stringResult,
-    onPress() {
+    onPress: function handleSelectLimit() {
       const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
       const obj = ActionSheetActionCreatorsDefault;
       const intl = util.intl;
@@ -34,7 +34,7 @@ export default function FormTrialActiveUserLimitPicker(activeTrialUserlimit) {
         onChange(closure_2[5]).hideActionSheet(closure_2_4);
       };
       obj2.selectedItem = str;
-      obj.openLazy(asyncRequireImpl(8978, dependencyMap.paths), c4, obj2);
+      obj.openLazy(asyncRequireImpl(8529, dependencyMap.paths), c4, obj2);
     },
     disabled: activeTrialUserlimit.disabled,
   });

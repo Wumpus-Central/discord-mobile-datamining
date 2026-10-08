@@ -8,7 +8,7 @@ require = fn;
 let View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 },
   promoDetails: null,
@@ -34,7 +34,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (purchase) => {
+  ? function PremiumGiftingPromotionSuccessActions(purchase) {
       const cResult = onClose(navigation[6]).c(24);
       const tmp4 = closure_7();
       let obj = onClose(navigation[6]);
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           let tmp13 = cResult[15];
                         }
                         const _Symbol = Symbol;
-                        class S {
+                        class I {
                           constructor() {
                             if (null != product) {
                               tmp10 = closure_1;
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               return tmp20;
                             }
                           }
-                          class S {
+                          class I {
                             constructor() {
                               if (null != product) {
                                 tmp10 = closure_1;
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         tmp17 = tmp19;
                       }
                     }
-                    class S {
+                    class I {
                       constructor() {
                         if (null != product) {
                           tmp10 = closure_1;
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          class S {
+          class I {
             constructor() {
               if (null != product) {
                 tmp10 = closure_1;
@@ -252,8 +252,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = onClose;
           cResult[9] = tmp10;
           cResult[10] = product;
-          cResult[11] = S;
-          tmp11 = S;
+          cResult[11] = I;
+          tmp11 = I;
         }
       }
       const fn = function _() {
@@ -273,7 +273,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn;
       const tmpResult = onClose(navigation[10]);
     }
-  : (purchase) => {
+  : function PremiumGiftingPromotionSuccessActions(purchase) {
       let onClose;
       let navigation;
       onCancel = undefined;

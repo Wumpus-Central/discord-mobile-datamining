@@ -7,7 +7,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildRoleSubscriptionsStore from "../GuildRoleSubscriptionsStore.tsx";
 import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore.tsx";
-import allSettled_mod from "../../../../_runtime/05330_allSettled.js";
+import allSettled_mod from "../../../../_runtime/05641_allSettled.js";
 
 const require = globalThis.__r;
 
@@ -138,16 +138,16 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(15061).useEditStateStore;
+const useEditStateStore = fn(15323).useEditStateStore;
 const GuildFeatures = fn(1085).GuildFeatures;
-const ChannelFlags = fn(2058).ChannelFlags;
+const ChannelFlags = fn(2070).ChannelFlags;
 let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
 let closure_12 = {};
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useChannelWithTemplateFallback(arg0) {
       _require = arg0;
       let flags = dependencyMap;
       const cResult = require("c").c(12);
@@ -178,7 +178,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[3];
       }
       if (cResult[4] !== arg0) {
-        const fn2 = function h() {
+        const fn2 = function f() {
           return GuildRoleSubscriptionTierTemplatesStore.getChannel(closure_0);
         };
         cResult[4] = arg0;
@@ -197,24 +197,39 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[6];
       }
       if (cResult[7] !== arg0) {
-        const fn3 = function _() {
-          return GuildRoleSubscriptionsStore.getBenefitChannel(closure_0);
-        };
+        class C {
+          constructor() {
+            return closure_7.getBenefitChannel(closure_0);
+          }
+        }
         cResult[7] = arg0;
-        cResult[8] = fn3;
-        let tmp12 = fn3;
+        cResult[8] = C;
       } else {
-        tmp12 = cResult[8];
+        class C {
+          constructor() {
+            return closure_7.getBenefitChannel(closure_0);
+          }
+        }
       }
       const tmpResult3 = require("useStateFromStores");
-      let name = require("useStateFromStores").useStateFromStores(tmp10, tmp12);
-      let tmp13 = null;
+      let name = require("useStateFromStores").useStateFromStores(tmp10, C);
       if (null != stateFromStores) {
-        tmp13 = null;
+        class C {
+          constructor() {
+            return closure_7.getBenefitChannel(closure_0);
+          }
+        }
         if (stateFromStores.isObfuscated()) {
-          tmp13 = null;
+          class C {
+            constructor() {
+              return closure_7.getBenefitChannel(closure_0);
+            }
+          }
           if (null != name) {
-            if (cResult[9] === name.name) {
+            class C {
+              constructor() {
+                return closure_7.getBenefitChannel(closure_0);
+              }
             }
             const obj2 = { name: name.name, flags: null };
             flags = stateFromStores.flags;
@@ -228,18 +243,23 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (null != stateFromStores) {
-        let tmp19 = stateFromStores;
-        if (stateFromStores.isObfuscated()) {
-          if (tmp13 == null) {
-            tmp13 = stateFromStores;
+        class C {
+          constructor() {
+            return closure_7.getBenefitChannel(closure_0);
           }
-          tmp19 = tmp13;
         }
-        stateFromStores1 = tmp19;
+        if (stateFromStores.isObfuscated()) {
+          class C {
+            constructor() {
+              return closure_7.getBenefitChannel(closure_0);
+            }
+          }
+        }
+        stateFromStores1 = tmp17;
       }
       return stateFromStores1;
     }
-  : (arg0) => {
+  : function useChannelWithTemplateFallback(arg0) {
       _require = arg0;
       const items = [ChannelStore];
       const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
@@ -292,7 +312,7 @@ let result = size.fileFinishedImporting(
 
 export const useChannelWithTemplateFallback = tmp3;
 export const useSuggestedUnusedPrices = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useSuggestedUnusedPrices(arg0, arg1, arg2) {
       _require = arg0;
       const cResult = require("c").c(21);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -315,7 +335,7 @@ export const useSuggestedUnusedPrices = ReactCompilerGating.isReactCompilerEnabl
       const obj = require("c");
       const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp6);
       if (cResult[3] !== arg0) {
-        const fn2 = function f(arg0) {
+        const fn2 = function h(arg0) {
           return arg0.editStateIdsForGroup[closure_0];
         };
         cResult[3] = arg0;
@@ -511,7 +531,7 @@ export const useSuggestedUnusedPrices = ReactCompilerGating.isReactCompilerEnabl
       }
       return null;
     }
-  : (arg0, arr, arg2) => {
+  : function useSuggestedUnusedPrices(arg0, arr, arg2) {
       _require = arg0;
       const items = [GuildRoleSubscriptionsStore];
       const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>

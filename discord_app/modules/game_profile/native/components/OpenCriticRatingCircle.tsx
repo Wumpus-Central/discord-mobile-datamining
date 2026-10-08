@@ -1,7 +1,7 @@
 // discord_app/modules/game_profile/native/components/OpenCriticRatingCircle.tsx
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07550_inlineStyles.js";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -11,7 +11,7 @@ const jsx = jsxProd.jsx;
 let result = size.fileFinishedImporting("modules/game_profile/native/components/OpenCriticRatingCircle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (rating) => {
+  ? function OpenCriticRatingCircle(rating) {
       const cResult = c.c(10);
       ({ strokeColor, size } = rating);
       const result = size / 2;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp11;
       tmp10 = tmp11;
     }
-  : (size) => {
+  : function OpenCriticRatingCircle(size) {
       size = size.size;
       const result = size / 2;
       const result1 = (size - 4) / 2;

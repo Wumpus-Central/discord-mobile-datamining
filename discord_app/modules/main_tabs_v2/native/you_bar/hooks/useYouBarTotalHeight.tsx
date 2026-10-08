@@ -9,7 +9,7 @@ const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarTotalHeight.tsx");
 
 export const useYouBarTotalHeight = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useYouBarTotalHeight(arg0) {
       let num = 0;
       if (undefined !== arg0) {
         num = arg0;
@@ -17,7 +17,7 @@ export const useYouBarTotalHeight = ReactCompilerGating.isReactCompilerEnabled()
       const youBarBottomMargin = useYouBarMargins.useYouBarBottomMargin();
       return youBarBottomMargin + YOU_BAR_HEIGHT + useConnectionBannerHeight.useConnectionBannerHeight() + num;
     }
-  : () => {
+  : function useYouBarTotalHeight() {
       let num = arg0;
       if (arg0 === undefined) {
         num = 0;

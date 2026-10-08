@@ -2,15 +2,15 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 let size = {
-  id: "enabled",
+  id: "end",
   mode: "toCharArray$esjava$1",
   width: false,
   height: null,
-  containerHeight: "slide_from_bottom",
-  showSecondaryPIP: 2392,
-  scale: 2393,
+  containerHeight: 0,
+  showSecondaryPIP: false,
+  scale: null,
 };
-const ReanimatedHelperTypes = fn(6578);
+const ReanimatedHelperTypes = fn(6754);
 size.scale = ReanimatedHelperTypes.createFakeSharedValue(1);
 const context = noop.createContext(size);
 let ReactCompilerGating = fn(558);
@@ -19,4 +19,6 @@ size = fn(2);
 const result1 = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPStateContext.tsx");
 
 export const VoicePanelPIPStateContext = context;
-export const usePIPState = () => noop.useContext(context);
+export const usePIPState = function usePIPState() {
+  return noop.useContext(context);
+};

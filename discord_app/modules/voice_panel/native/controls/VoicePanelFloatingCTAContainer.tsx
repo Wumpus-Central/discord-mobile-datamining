@@ -16,11 +16,11 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
 let closure_3 = ["trailing"];
-const UI_SHOW_HIDE_PHYSICS = fn(11916).UI_SHOW_HIDE_PHYSICS;
-const CALL_TILE_GUTTER = fn(11919).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(11989).UI_SHOW_HIDE_PHYSICS;
+const CALL_TILE_GUTTER = fn(11992).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null };
 const rect = {
   zIndex: 1,
@@ -35,7 +35,7 @@ obj2.container = rect;
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (trailing) => {
+  ? function FloatingCTA(trailing) {
       const cResult = c.c(7);
       if (cResult[0] !== trailing) {
         trailing = trailing.trailing;
@@ -72,7 +72,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = tmp12;
       const obj3 = { experimental_withBlurBackground: true, arrow: null == tmp5, trailing: tmp5 };
     }
-  : (trailing) => {
+  : function FloatingCTA(trailing) {
       trailing = trailing.trailing;
       const merged = Object.assign(trailing, Object.assign({ trailing: 0 }));
       const obj = { children: null };
@@ -92,7 +92,7 @@ const __initData2 = {
 };
 ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (wrapperSpecs) => {
+  ? function VoicePanelFloatingCTAContainer(wrapperSpecs) {
       const cResult = wrapperSpecs(controlsSpecs[12]).c(21);
       wrapperSpecs = wrapperSpecs.wrapperSpecs;
       const accessoryHeights = wrapperSpecs.accessoryHeights;
@@ -136,32 +136,46 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp16 = cResult[8];
           }
           ({ hiddenProps, hiddenStyles } = tmp5(tmp2[21])(context.mode, wrapperSpecs, tmp16));
-          const tmp17 = tmp5(tmp2[21])(context.mode, wrapperSpecs, tmp16);
-          const fn2 = function k() {
-            const controlsDefaultWidth = VoicePanelControlsUtils.getControlsDefaultWidth(
-              windowDimensions.get().width,
-              safeArea.get().left,
-              safeArea.get().right,
-            );
-            const obj2 = {
-              bottom: controlsSpecs.get().height + 16,
-              width: controlsDefaultWidth,
-              marginLeft: -1 * roundToNearestPixelDefault(controlsDefaultWidth / 2),
-              transform: null,
-            };
-            const obj3 = { translateX: null };
-            obj3.translateX = spring.withSpring(wrapperSpecs.get().x, UI_SHOW_HIDE_PHYSICS);
-            const items = [obj3];
-            if (wrapperSpecs.get().hidden) {
-              const sum = wrapperSpecs.get().height + CALL_TILE_GUTTER;
-              let y = sum + accessoryHeights.get();
-            } else {
-              y = wrapperSpecs.get().y;
+          const tmp18 = tmp5(tmp2[21])(context.mode, wrapperSpecs, tmp16);
+          class V {
+            constructor() {
+              obj = closure_0(closure_2[23]);
+              controlsDefaultWidth = obj.getControlsDefaultWidth(
+                windowDimensions.get().width,
+                safeArea.get().left,
+                safeArea.get().right,
+              );
+              obj1 = {
+                bottom: controlsSpecs.get().height + 16,
+                width: controlsDefaultWidth,
+                marginLeft: -1 * closure_1(closure_2[24])(controlsDefaultWidth / 2),
+                transform: null,
+              };
+              obj9 = { translateX: null };
+              obj4 = closure_0(closure_2[25]);
+              obj5 = wrapperSpecs;
+              tmp2 = UI_SHOW_HIDE_PHYSICS;
+              obj9.translateX = obj4.withSpring(wrapperSpecs.get().x, UI_SHOW_HIDE_PHYSICS);
+              items = [,];
+              items[0] = obj9;
+              obj6 = closure_0(closure_2[25]);
+              if (wrapperSpecs.get().hidden) {
+                tmp3 = CALL_TILE_GUTTER;
+                tmp5 = accessoryHeights;
+                sum = obj5.get().height + CALL_TILE_GUTTER;
+                y = sum + accessoryHeights.get();
+              } else {
+                obj7 = gestureState;
+                if (gestureState.get().active) {
+                }
+                y = obj5.get().y;
+              }
+              obj10 = { translateY: obj6.withSpring(y, tmp2) };
+              items[1] = obj10;
+              obj1.transform = items;
+              return obj1;
             }
-            items[1] = { translateY: spring.withSpring(y, UI_SHOW_HIDE_PHYSICS) };
-            obj2.transform = items;
-            return obj2;
-          };
+          }
           let obj3 = {
             getControlsDefaultWidth: tmp(tmp2[23]).getControlsDefaultWidth,
             windowDimensions,
@@ -175,34 +189,70 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             CALL_TILE_GUTTER,
             accessoryHeights,
           };
-          fn2.__closure = obj3;
-          fn2.__workletHash = 10861017326398;
-          fn2.__initData = __initData;
-          const animatedStyle = tmp(tmp2[22]).useAnimatedStyle(fn2);
+          V.__closure = obj3;
+          V.__workletHash = 10861017326398;
+          V.__initData = __initData;
+          const animatedStyle = tmp(tmp2[22]).useAnimatedStyle(V);
           if (cResult[9] === animatedStyle) {
             if (cResult[10] === hiddenStyles) {
               if (cResult[11] === tmp4.container) {
-                let tmp22 = cResult[12];
+                let tmp23 = cResult[12];
               }
               if (cResult[13] === tmp7) {
                 if (cResult[14] === tmp13) {
                   if (cResult[15] === floatingCTAProps) {
                     if (cResult[17] === hiddenProps) {
-                      if (cResult[18] === tmp22) {
-                        if (cResult[19] === tmp23) {
+                      if (cResult[18] === tmp23) {
+                        if (cResult[19] === tmp24) {
                           let tmp33 = cResult[20];
                         }
                         return tmp33;
                       }
                     }
-                    let obj4 = { style: tmp22, animatedProps: hiddenProps, children: cResult[16] };
-                    const tmp35 = jsx(tmp5(tmp2[27]), {
-                      style: tmp22,
-                      animatedProps: hiddenProps,
-                      children: cResult[16],
-                    });
+                    let obj4 = { style: tmp23, animatedProps: null, children: null };
+                    class V {
+                      constructor() {
+                        obj = closure_0(closure_2[23]);
+                        controlsDefaultWidth = obj.getControlsDefaultWidth(
+                          windowDimensions.get().width,
+                          safeArea.get().left,
+                          safeArea.get().right,
+                        );
+                        obj1 = {
+                          bottom: controlsSpecs.get().height + 16,
+                          width: controlsDefaultWidth,
+                          marginLeft: -1 * closure_1(closure_2[24])(controlsDefaultWidth / 2),
+                          transform: null,
+                        };
+                        obj9 = { translateX: null };
+                        obj4 = closure_0(closure_2[25]);
+                        obj5 = wrapperSpecs;
+                        tmp2 = UI_SHOW_HIDE_PHYSICS;
+                        obj9.translateX = obj4.withSpring(wrapperSpecs.get().x, UI_SHOW_HIDE_PHYSICS);
+                        items = [,];
+                        items[0] = obj9;
+                        obj6 = closure_0(closure_2[25]);
+                        if (wrapperSpecs.get().hidden) {
+                          tmp3 = CALL_TILE_GUTTER;
+                          tmp5 = accessoryHeights;
+                          sum = obj5.get().height + CALL_TILE_GUTTER;
+                          y = sum + accessoryHeights.get();
+                        } else {
+                          obj7 = gestureState;
+                          if (gestureState.get().active) {
+                          }
+                          y = obj5.get().y;
+                        }
+                        obj10 = { translateY: obj6.withSpring(y, tmp2) };
+                        items[1] = obj10;
+                        obj1.transform = items;
+                        return obj1;
+                      }
+                    }
+                    obj4.children = cResult[16];
+                    const tmp35 = jsx(tmp5(tmp2[27]), { style: tmp23, animatedProps: null, children: null });
                     cResult[17] = hiddenProps;
-                    cResult[18] = tmp22;
+                    cResult[18] = tmp23;
                     cResult[19] = cResult[16];
                     cResult[20] = tmp35;
                     tmp33 = tmp35;
@@ -217,7 +267,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     return <closure_13 />;
                   },
                 };
-                let tmp25 = jsx(tmp5(tmp2[26]), {
+                let tmp26 = jsx(tmp5(tmp2[26]), {
                   contentTypes: tmp7,
                   children() {
                     const merged = Object.assign(closure_7);
@@ -225,17 +275,93 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   },
                 });
               } else {
-                tmp25 = null;
+                tmp26 = null;
                 if (null != floatingCTAProps) {
                   let obj6 = {};
-                  let merged = Object.assign(floatingCTAProps);
-                  tmp25 = <closure_13 />;
+                  class V {
+                    constructor() {
+                      obj = closure_0(closure_2[23]);
+                      controlsDefaultWidth = obj.getControlsDefaultWidth(
+                        windowDimensions.get().width,
+                        safeArea.get().left,
+                        safeArea.get().right,
+                      );
+                      obj1 = {
+                        bottom: controlsSpecs.get().height + 16,
+                        width: controlsDefaultWidth,
+                        marginLeft: -1 * closure_1(closure_2[24])(controlsDefaultWidth / 2),
+                        transform: null,
+                      };
+                      obj9 = { translateX: null };
+                      obj4 = closure_0(closure_2[25]);
+                      obj5 = wrapperSpecs;
+                      tmp2 = UI_SHOW_HIDE_PHYSICS;
+                      obj9.translateX = obj4.withSpring(wrapperSpecs.get().x, UI_SHOW_HIDE_PHYSICS);
+                      items = [,];
+                      items[0] = obj9;
+                      obj6 = closure_0(closure_2[25]);
+                      if (wrapperSpecs.get().hidden) {
+                        tmp3 = CALL_TILE_GUTTER;
+                        tmp5 = accessoryHeights;
+                        sum = obj5.get().height + CALL_TILE_GUTTER;
+                        y = sum + accessoryHeights.get();
+                      } else {
+                        obj7 = gestureState;
+                        if (gestureState.get().active) {
+                        }
+                        y = obj5.get().y;
+                      }
+                      obj10 = { translateY: obj6.withSpring(y, tmp2) };
+                      items[1] = obj10;
+                      obj1.transform = items;
+                      return obj1;
+                    }
+                  }
+                  tmp26 = <closure_13 />;
                 }
               }
-              cResult[13] = tmp7;
+              class V {
+                constructor() {
+                  obj = closure_0(closure_2[23]);
+                  controlsDefaultWidth = obj.getControlsDefaultWidth(
+                    windowDimensions.get().width,
+                    safeArea.get().left,
+                    safeArea.get().right,
+                  );
+                  obj1 = {
+                    bottom: controlsSpecs.get().height + 16,
+                    width: controlsDefaultWidth,
+                    marginLeft: -1 * closure_1(closure_2[24])(controlsDefaultWidth / 2),
+                    transform: null,
+                  };
+                  obj9 = { translateX: null };
+                  obj4 = closure_0(closure_2[25]);
+                  obj5 = wrapperSpecs;
+                  tmp2 = UI_SHOW_HIDE_PHYSICS;
+                  obj9.translateX = obj4.withSpring(wrapperSpecs.get().x, UI_SHOW_HIDE_PHYSICS);
+                  items = [,];
+                  items[0] = obj9;
+                  obj6 = closure_0(closure_2[25]);
+                  if (wrapperSpecs.get().hidden) {
+                    tmp3 = CALL_TILE_GUTTER;
+                    tmp5 = accessoryHeights;
+                    sum = obj5.get().height + CALL_TILE_GUTTER;
+                    y = sum + accessoryHeights.get();
+                  } else {
+                    obj7 = gestureState;
+                    if (gestureState.get().active) {
+                    }
+                    y = obj5.get().y;
+                  }
+                  obj10 = { translateY: obj6.withSpring(y, tmp2) };
+                  items[1] = obj10;
+                  obj1.transform = items;
+                  return obj1;
+                }
+              }
               cResult[14] = tmp13;
               cResult[15] = floatingCTAProps;
-              cResult[16] = tmp25;
+              cResult[16] = tmp26;
             }
           }
           const items1 = [tmp4.container, animatedStyle, hiddenStyles];
@@ -243,14 +369,15 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[10] = hiddenStyles;
           cResult[11] = tmp4.container;
           cResult[12] = items1;
-          tmp22 = items1;
+          tmp23 = items1;
           const tmpResult5 = tmp(tmp2[22]);
         }
-        const obj7 = { state, cleanUp };
+        tmp17[0] = state;
+        tmp17[1] = cleanUp;
         cResult[6] = cleanUp;
         cResult[7] = state;
-        cResult[8] = obj7;
-        tmp16 = obj7;
+        cResult[8] = tmp17;
+        tmp16 = tmp17;
         const tmpResult4 = tmp(tmp2[20]);
       }
       const tmpResult = wrapperSpecs(controlsSpecs[19]);
@@ -264,7 +391,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = dismissableCTAProps;
       const tmpResult6 = wrapperSpecs(controlsSpecs[20]);
     }
-  : (wrapperSpecs) => {
+  : function VoicePanelFloatingCTAContainer(wrapperSpecs) {
       wrapperSpecs = wrapperSpecs.wrapperSpecs;
       const accessoryHeights = wrapperSpecs.accessoryHeights;
       const controlsSpecs = wrapperSpecs.controlsSpecs;

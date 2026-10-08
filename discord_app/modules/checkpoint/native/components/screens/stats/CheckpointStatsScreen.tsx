@@ -32,7 +32,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (name) => {
+  ? function CheckpointStatsScreen(name) {
       const cResult = c.c(7);
       name = name.name;
       const tmp3 = closure_6();
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: name,
       };
     }
-  : (children) => {
+  : function CheckpointStatsScreen(children) {
       const tmp = closure_6();
       const obj = { children: null };
       const obj2 = { style: tmp.container, children: null };

@@ -1,11 +1,11 @@
 // discord_app/modules/guild_automod/native/getRuleInfo.tsx
 import LinkIcon from "../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
 import AtIcon from "../../../design/components/Icon/native/redesign/generated/AtIcon.tsx";
-import RobotIcon from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import Constants from "../Constants.tsx";
+import RobotIcon from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import MenuIcon from "../../../design/components/Icon/native/redesign/generated/MenuIcon.tsx";
 import ChannelListPlusIcon from "../../../design/components/Icon/native/redesign/generated/ChannelListPlusIcon.tsx";
-import _modDef17736 from "../../../../_runtime/metro/17736__.js";
+import _modDef18023 from "../../../../_runtime/metro/18023__.js";
 import BaseRuleInfo from "../BaseRuleInfo.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -38,7 +38,7 @@ export const getRuleInfo = function getRuleInfo(triggerType, rule) {
             }
           }
         }
-        const obj7 = { source: _modDef17736 };
+        const obj7 = { source: _modDef18023 };
         tmp9 = obj7;
       }
       if (tmp9 == null) {

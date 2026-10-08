@@ -6,11 +6,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10085).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(9668).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 16;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = {
     applicationCommandLoadingItem: {
@@ -60,7 +60,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandLoadingItem.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ApplicationCommandLoadingItem() {
       const cResult = c.c(14);
       const tmp2 = closure_8(useFontScale.useFontScale());
       if (cResult[0] !== tmp2.applicationCommandLoadingName) {
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp12;
       tmp11 = tmp12;
     }
-  : () => {
+  : function ApplicationCommandLoadingItem() {
       const tmp = closure_8(useFontScale.useFontScale());
       const obj2 = { style: tmp.applicationCommandLoadingItem, children: null };
       const obj3 = { style: tmp.applicationCommandLoadingLeftWrapper, children: null };

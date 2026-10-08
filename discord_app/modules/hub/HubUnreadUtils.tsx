@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/HubUnreadUtils.tsx");
 
 export const useHubUnreadCount = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHubUnreadCount(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -60,7 +60,7 @@ export const useHubUnreadCount = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useHubUnreadCount(arg0) {
       _require = arg0;
       const items = [GuildDirectoryStore, ReadStateStore];
       const items1 = [arg0];

@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/composer/hooks/useBackspaceHandler.tsx");
 
 export const useBackspaceHandler = ReactCompilerGating.isReactCompilerEnabled()
-  ? (selection) => {
+  ? function useBackspaceHandler(selection) {
       const cResult = selection(draftContent[2]).c(4);
       selection = selection.selection;
       draftContent = selection.draftContent;
@@ -68,7 +68,7 @@ export const useBackspaceHandler = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = fn;
       tmp2 = fn;
     }
-  : (selection) => {
+  : function useBackspaceHandler(selection) {
       selection = selection.selection;
       const draftContent = selection.draftContent;
       const handleTextChange = selection.handleTextChange;

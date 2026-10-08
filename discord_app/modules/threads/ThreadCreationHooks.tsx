@@ -138,11 +138,11 @@ function buildMessageActivity(activity) {
   }
   return tmp2;
 }
-function sendMessage(id, arg1, items, arg3, fn) {
+function sendMessage(id, arr, items, key, fn) {
   if (null != fn) {
-    if (null != arg3) {
-      if (arg3.length > 0) {
-        fn(id, arg3, arg1, items);
+    if (null != key) {
+      if (key.length > 0) {
+        fn(id, key, arr, items);
       }
     }
   }
@@ -151,12 +151,12 @@ function sendMessage(id, arg1, items, arg3, fn) {
       const obj4 = MessageActionCreatorsDefault;
       id = id.id;
       const obj3 = { location: MessageSendLocation.THREAD_CREATION };
-      let sendStickersResult = obj4.sendStickers(id, items, MessageParserDefault.parse(id, arg1), obj3);
+      let sendStickersResult = obj4.sendStickers(id, items, MessageParserDefault.parse(id, arr), obj3);
     }
     return sendStickersResult;
   }
   obj = MessageActionCreatorsDefault;
-  sendStickersResult = obj.sendMessage(id.id, MessageParserDefault.parse(id, arg1), undefined, { location: MessageSendLocation.THREAD_CREATION });
+  sendStickersResult = obj.sendMessage(id.id, MessageParserDefault.parse(id, arr), undefined, { location: MessageSendLocation.THREAD_CREATION });
   const obj6 = { location: MessageSendLocation.THREAD_CREATION };
 }
 function createThread_() {
@@ -458,23 +458,23 @@ let closure_28 = async function _createThread_(arg0, arg1, arg2, arg3) {
     return value;
   })();
 };
-const DraftType = fn(7044).DraftType;
-const SlowmodeType = fn(7184).SlowmodeType;
+const DraftType = fn(7232).DraftType;
+const SlowmodeType = fn(7363).SlowmodeType;
 const ThreadConstants = fn(1125);
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: closure_12, FORUM_POST_CREATION_UPLOAD_ERRORS: map1 } = ThreadConstants);
 const Constants = fn(1085);
 ({ AbortCodes: closure_14, AnalyticEvents: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, LoggingInviteTypes: closure_18, MAX_MESSAGES_PER_CHANNEL: closure_19, MessageFlags: closure_20 } = Constants);
-const MessageSendLocation = fn(4889).MessageSendLocation;
+const MessageSendLocation = fn(5083).MessageSendLocation;
 const PrivateThreadMode = { Disabled: 1, [1]: "Disabled", Enabled: 2, [2]: "Enabled", PrivateOnly: 3, [3]: "PrivateOnly" };
 fn(558);
 let ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePrivateThreadMode(arg0) {
   obj = ThreadHooks;
   const canStartPublicThread = obj.useCanStartPublicThread(arg0);
   if (!obj2.useCanStartPrivateThread(arg0)) {
     return tmp2.Disabled;
   }
-}) : ((arg0) => {
+}) : (function usePrivateThreadMode(arg0) {
   obj = ThreadHooks;
   const canStartPublicThread = obj.useCanStartPublicThread(arg0);
   if (!obj2.useCanStartPrivateThread(arg0)) {
@@ -482,7 +482,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
 });
 ReactCompilerGating = fn(558);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateThreadCommon(parentChannel) {
   const cResult = require("c").c(9);
   parentChannel = parentChannel.parentChannel;
   _require = parentChannel;
@@ -632,7 +632,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => 
       }
     })();
   });
-  const fn = function() {
+  function t1() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -641,7 +641,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => 
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[0] = _location;
   cResult[1] = onThreadCreated;
   cResult[2] = parentChannel;
@@ -650,9 +650,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => 
   cResult[5] = threadSettings;
   cResult[6] = uploadHandler;
   cResult[7] = useDefaultThreadName;
-  cResult[8] = fn;
-  tmp2 = fn;
-}) : ((parentChannel) => {
+  cResult[8] = t1;
+  tmp2 = t1;
+}) : (function useCreateThreadCommon(parentChannel) {
   parentChannel = parentChannel.parentChannel;
   const parentMessageId = parentChannel.parentMessageId;
   const threadSettings = parentChannel.threadSettings;
@@ -812,7 +812,7 @@ export const createThread = function createThread(arg0, name, type, auto_archive
     return HTTP.post(request);
   });
 };
-export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
+export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateForumPostCommon(parentChannel) {
   const cResult = require("c").c(10);
   parentChannel = parentChannel.parentChannel;
   _require = parentChannel;
@@ -1054,7 +1054,7 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
       }
     })();
   });
-  const fn = function() {
+  function t1() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -1063,7 +1063,7 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[0] = activityAction;
   cResult[1] = analyticsLocations;
   cResult[2] = applicationId;
@@ -1073,9 +1073,9 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
   cResult[6] = parentChannel;
   cResult[7] = upload;
   cResult[8] = voiceChatEnabled;
-  cResult[9] = fn;
-  tmp2 = fn;
-}) : ((parentChannel) => {
+  cResult[9] = t1;
+  tmp2 = t1;
+}) : (function useCreateForumPostCommon(parentChannel) {
   parentChannel = parentChannel.parentChannel;
   let name = parentChannel.name;
   const appliedTags = parentChannel.appliedTags;

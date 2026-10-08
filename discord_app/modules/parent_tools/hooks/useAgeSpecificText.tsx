@@ -7,7 +7,7 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/parent_tools/hooks/useAgeSpecificText.tsx");
 
-export const useAgeSpecificText = (cResult, cResult2) => {
+export const useAgeSpecificText = function useAgeSpecificText(cResult, cResult2) {
   let tmp = cResult;
   if (useIsInAdultAgeGroupDefault()) {
     tmp = cResult2;

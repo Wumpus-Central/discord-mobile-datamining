@@ -5,7 +5,7 @@ import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import KeyboardUIStore from "../../../keyboard/native/KeyboardUIStore.native.tsx";
 import KeyboardTypes from "../../../keyboard/native/KeyboardTypes.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import useKeyboardTypeDefault from "../../../keyboard/native/useKeyboardType.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -13,7 +13,7 @@ import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import sanitizeThreadNameDefault from "../../../threads/sanitizeThreadName.tsx";
 import MessageParser from "../../../messages/MessageParser.tsx";
-import tracking_Tracking from "../../tracking/Tracking.tsx";
+import Tracking from "../../tracking/Tracking.tsx";
 import DraftActionCreatorsDefault from "../../../../actions/DraftActionCreators.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import TagIcon from "../../../../design/components/Icon/native/redesign/generated/TagIcon.tsx";
@@ -61,7 +61,7 @@ function ActionBar(channel) {
   const tmp6 = useKeyboardTypeDefault();
   closure_7 = tmp6;
   let isMediaChannelResult = channel.isMediaChannel();
-  const tmp8 = tmp6 === channel(1616).KeyboardTypes.MEDIA;
+  const tmp8 = tmp6 === channel(1628).KeyboardTypes.MEDIA;
   closure_8 = tmp8;
   if (!isMediaChannelResult) {
     let tmp9 = stateFromStores1;
@@ -106,8 +106,8 @@ function ActionBar(channel) {
       const items5 = [,];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj6.style = items5;
-      obj6.IconComponent = tmp2(8557).TagIcon;
-      obj6.onPress = function onPress() {
+      obj6.IconComponent = tmp2(9041).TagIcon;
+      obj6.onPress = function handlePressTagsButton() {
         timestampProducer.dismiss();
         const obj2 = {
           parentChannel: channel,
@@ -117,8 +117,8 @@ function ActionBar(channel) {
               closure_1_5();
             }
             tmp5 =
-              closure_1_7 !== channel(1616).KeyboardTypes.SYSTEM &&
-              closure_1_7 !== channel(1616).KeyboardTypes.EXPRESSION;
+              closure_1_7 !== channel(1628).KeyboardTypes.SYSTEM &&
+              closure_1_7 !== channel(1628).KeyboardTypes.EXPRESSION;
           },
           title: null,
           tags: null,
@@ -133,15 +133,15 @@ function ActionBar(channel) {
             closure_1_5();
           }
           tmp4 =
-            closure_1_7 !== channel(1616).KeyboardTypes.SYSTEM &&
-            closure_1_7 !== channel(1616).KeyboardTypes.EXPRESSION;
+            closure_1_7 !== channel(1628).KeyboardTypes.SYSTEM &&
+            closure_1_7 !== channel(1628).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(11073, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(10438, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
       };
-      tmp10 = closure_29(tmp2(6890).HeaderActionButton, obj6);
+      tmp10 = closure_29(tmp2(7079).HeaderActionButton, obj6);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(10081).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(9664).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj7 = {
         accessibilityLabel: null,
@@ -153,9 +153,9 @@ function ActionBar(channel) {
       const intl3 = tmp2(1126).intl;
       obj7.accessibilityLabel = intl3.string(tmp2(1126).t.iZ7Mz9);
       obj7.style = tmp.actionButton;
-      obj7.IconComponent = tmp2(8444).ReactionIcon;
+      obj7.IconComponent = tmp2(8930).ReactionIcon;
       obj7.onPress = onShowExpressionPicker;
-      tmp18 = closure_29(tmp2(6890).HeaderActionButton, obj7);
+      tmp18 = closure_29(tmp2(7079).HeaderActionButton, obj7);
     }
     items4[2] = tmp18;
     const obj8 = { style: tmp.postButtonWrapper, children: null };
@@ -173,13 +173,13 @@ function ActionBar(channel) {
     }
     obj9.disabled = submitting;
     const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-    obj9.icon = closure_29(tmp2(5862).ChatIcon, obj10);
-    obj9.onPress = function onPress() {
+    obj9.icon = closure_29(tmp2(8174).ChatIcon, obj10);
+    obj9.onPress = function handleSubmit() {
       if (canPost) {
         _slicedToArray({});
       }
     };
-    obj8.children = closure_29(tmp2(5601).Button, obj9);
+    obj8.children = closure_29(tmp2(5375).Button, obj9);
     items4[3] = closure_29(closure_9, obj8);
     obj5.children = items4;
     items3[1] = closure_30(closure_9, obj5);
@@ -193,21 +193,21 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(11071).KeyboardIcon;
+      let ImageIcon = tmp2(12799).KeyboardIcon;
     } else {
-      ImageIcon = tmp2(5878).ImageIcon;
+      ImageIcon = tmp2(8190).ImageIcon;
     }
     obj11.IconComponent = ImageIcon;
-    obj11.onPress = function onPress() {
+    obj11.onPress = function handlePressMediaButton() {
       if (closure_8) {
         noop();
       } else {
         const result = MediaKeyboardUtils.showSimpleMediaKeyboard(channel);
         timestampProducer.dismiss();
       }
-      const result1 = tracking_Tracking.trackForumChannelMediaUploaderClicked({ isMobile: true });
+      const result1 = Tracking.trackForumChannelMediaUploaderClicked({ isMobile: true });
     };
-    closure_29(tmp2(6890).HeaderActionButton, obj11);
+    closure_29(tmp2(7079).HeaderActionButton, obj11);
   }
   let obj2 = channel(504);
 }
@@ -219,20 +219,20 @@ get_ActivityIndicator = fn(17);
   Text: closure_8,
   View: closure_9,
 } = get_ActivityIndicator);
-const DraftType = fn(7044).DraftType;
-const SlowmodeType = fn(7184).SlowmodeType;
+const DraftType = fn(7232).DraftType;
+const SlowmodeType = fn(7363).SlowmodeType;
 let Constants = fn(1085);
 ({ AbortCodes: closure_21, MAX_CHANNEL_NAME_LENGTH: closure_22, Permissions: closure_23 } = Constants);
-const ChannelFlags = fn(2058).ChannelFlags;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
-const ExpressionPickerViewType = fn(1229).ExpressionPickerViewType;
+const ChannelFlags = fn(2070).ChannelFlags;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
 let closure_27 = fn(1125).OpenThreadAnalyticsLocations;
 Constants = fn(1096);
 ({ NOOP: closure_28, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: items } = jsxProd);
 const re32 = /(#"[^"]*"|[@#]\S+|:[\w+-]+:)/g;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "relative" },
   scrollViewContentContainer: { paddingBottom: 16 },
@@ -328,7 +328,7 @@ let __initData = {
 };
 const ReactCompilerGating = fn(558);
 let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (tags) => {
+  ? function Tags(tags) {
       const cResult = c.c(9);
       tags = tags.tags;
       const tmp4 = closure_33();
@@ -347,7 +347,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] !== tags) {
           const _Symbol = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn = function c(tag, arg1) {
+            const fn = function u(tag, arg1) {
               let tmp2 = 0 !== arg1;
               if (tmp2) {
                 const obj = { style: { width: 4 } };
@@ -387,7 +387,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (tags) => {
+  : function Tags(tags) {
       tags = tags.tags;
       const tmp = closure_33();
       let tmp2 = null;
@@ -1173,7 +1173,7 @@ export default function ForumComposer(parentChannel) {
       channel: parentChannel,
       height: 44,
       onClose,
-      onGuidelinesPress() {
+      onGuidelinesPress: function handleGuidelinesPress() {
         blurLastInput();
         const result = ForumGuidelinesActionSheet.openForumGuidelinesActionSheet({
           channel,
@@ -1224,7 +1224,7 @@ export default function ForumComposer(parentChannel) {
     obj14.clearButtonVisibility = tmp5(tmp3[56]).ClearButtonVisibility.NEVER;
     obj14.maxLength = maxLength;
     obj14.onChange = callback1;
-    obj14.onBlur = function onBlur() {
+    obj14.onBlur = function handleBlurTitle() {
       if (!isEdit) {
         let name;
         if (threadSettingsDraft != null) {
@@ -1249,7 +1249,7 @@ export default function ForumComposer(parentChannel) {
         }
       }
     };
-    obj14.onFocus = function onFocus() {
+    obj14.onFocus = function handleFocusTitle() {
       if (!tmp4) {
         const obj = { type: KeyboardTypes.KeyboardTypes.SYSTEM, context: { keyboardWillOpen: true } };
         KeyboardUIStore.setKeyboardType(obj);
@@ -1354,7 +1354,7 @@ export default function ForumComposer(parentChannel) {
     obj29.placeholderTextColor = tmp10;
     obj29.onChangeText = callback7;
     obj29.onSelectionChange = callback8;
-    obj29.onFocus = function onFocus() {
+    obj29.onFocus = function handleFocusContent() {
       if (closure_11 === KeyboardTypes.KeyboardTypes.MEDIA) {
         const obj = { type: KeyboardTypes.KeyboardTypes.SYSTEM, context: { keyboardWillOpen: true } };
         KeyboardUIStore.setKeyboardType(obj);
@@ -1386,7 +1386,7 @@ export default function ForumComposer(parentChannel) {
       canPost: tmp48,
       submitting: tmp17,
       onSubmit: callback6,
-      onShowExpressionPicker() {
+      onShowExpressionPicker: function handleShowExpressionPicker() {
         timestampProducer.dismiss();
         const obj2 = {
           channelId: channel.id,

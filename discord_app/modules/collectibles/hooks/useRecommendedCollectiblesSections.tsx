@@ -13,7 +13,7 @@ let closure_5 = [];
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useRecommendedCollectiblesSections.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr, arg1) => {
+  ? function useRecommendedCollectiblesSections(arr, arg1) {
       _require = arg1;
       const cResult = require("c").c(9);
       const obj = require("c");
@@ -54,33 +54,64 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp5 = cResult[8];
           }
           const mapped = arr.map(tmp5);
+          class C {
+            constructor(arg0) {
+              if (arr.section !== closure_0) {
+                return arr;
+              } else {
+                tmp = closure_0;
+                tmp2 = closure_2;
+                obj = closure_0(closure_2[6]);
+                tmp3 = closure_2;
+                result = obj.reorderCollectiblesByRecommendation(arr.items, closure_2);
+                tmp5 = arr;
+                if (result !== arr.items) {
+                  obj1 = {};
+                  tmp6 = obj1;
+                  tmp7 = arr;
+                  merged = Object.assign(arr);
+                  obj1.items = result;
+                  tmp5 = obj1;
+                }
+                return tmp5;
+              }
+            }
+          }
           cResult[2] = arg1;
           cResult[3] = arr;
           cResult[4] = arr;
           cResult[5] = mapped;
         }
-        const fn2 = function p(section) {
-          if (section.section !== closure_0) {
-            return section;
-          } else {
-            const result = CollectiblesRecommendationUtils.reorderCollectiblesByRecommendation(section.items, arr);
-            let tmp5 = section;
-            if (result !== section.items) {
-              const obj2 = {};
-              const merged = Object.assign(section);
-              obj2.items = result;
-              tmp5 = obj2;
+        class C {
+          constructor(arg0) {
+            if (arr.section !== closure_0) {
+              return arr;
+            } else {
+              tmp = closure_0;
+              tmp2 = closure_2;
+              obj = closure_0(closure_2[6]);
+              tmp3 = closure_2;
+              result = obj.reorderCollectiblesByRecommendation(arr.items, closure_2);
+              tmp5 = arr;
+              if (result !== arr.items) {
+                obj1 = {};
+                tmp6 = obj1;
+                tmp7 = arr;
+                merged = Object.assign(arr);
+                obj1.items = result;
+                tmp5 = obj1;
+              }
+              return tmp5;
             }
-            return tmp5;
           }
-        };
+        }
         cResult[6] = arg1;
         cResult[7] = arr;
-        cResult[8] = fn2;
-        tmp5 = fn2;
+        cResult[8] = C;
+        tmp5 = C;
       }
     }
-  : (arg0, arg1) => {
+  : function useRecommendedCollectiblesSections(arg0, arg1) {
       _require = arg0;
       importDefault = arg1;
       dependencyMap = require("EditProfileCollectiblesOrderingExperiment").useIsEditProfileCollectiblesOrderingEnabled(

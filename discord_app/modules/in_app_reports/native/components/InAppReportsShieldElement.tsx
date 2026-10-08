@@ -6,14 +6,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ container: { flex: 0, alignSelf: "center", marginBottom: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (element) => {
+  ? function ShieldElement(element) {
       const cResult = c.c(3);
       element = element.element;
       let container = closure_4();
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (element) => {
+  : function ShieldElement(element) {
       element = element.element;
       let tmp2 = null;
       if (null != element) {

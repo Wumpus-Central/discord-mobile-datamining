@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import RoleTierEditStore from "../RoleTierEditStore.tsx";
 
 require = fn;
-const constants = fn(15038).GuildRoleSubscriptionsTierScenes;
+const constants = fn(15300).GuildRoleSubscriptionsTierScenes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildRoleSubscriptionGroupGatingModal(arg0) {
       const cResult = c.c(8);
       [tmp5, tmp6] = RoleTierEditStore.useGroupIsFullGateState();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp12;
       const tmp4 = _slicedToArray(RoleTierEditStore.useGroupIsFullGateState(), 2);
     }
-  : (arg0) => {
+  : function GuildRoleSubscriptionGroupGatingModal(arg0) {
       [tmp2, tmp3] = RoleTierEditStore.useGroupIsFullGateState();
       const obj = { title: null, description: null, canProceedToNextStep: true, nextStep: null };
       const tmp = _slicedToArray(RoleTierEditStore.useGroupIsFullGateState(), 2);

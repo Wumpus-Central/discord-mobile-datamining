@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import hooks from "../../../../_runtime/metro/04467__.js";
+import hooks from "../../../../_runtime/metro/04659__.js";
 
 require = fn;
 let closure_4 = hooks.duration(30, "days");
@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/hooks/useOutboundPromotionRedemptionEndDate.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useOutboundPromotionRedemptionEndDate(arg0, arg1) {
       outboundRedemptionEndDate = arg0;
       let outboundRedemptionEndDate2 = dependencyMap;
       const cResult = c.c(4);
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = hooks(outboundRedemptionEndDate.endDate);
       }
     }
-  : (arg0, arg1) => {
+  : function useOutboundPromotionRedemptionEndDate(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
       const items = [arg0, arg1];

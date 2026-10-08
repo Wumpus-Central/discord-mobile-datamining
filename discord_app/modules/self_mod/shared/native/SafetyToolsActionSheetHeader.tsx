@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   navbarContainer: { display: "flex", flexDirection: "row", justifyContent: "center" },
   navbarLeft: { position: "absolute", left: nativeDefault.space.PX_16 },
@@ -20,7 +20,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsActionSheetHeader.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (recipientId) => {
+  ? function SafetyToolsActionSheetHeader(recipientId) {
       const cResult = channelId(recipientId[6]).c(16);
       ({ title, channelId } = recipientId);
       recipientId = recipientId.recipientId;
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       const obj = channelId(recipientId[6]);
     }
-  : (channelId) => {
+  : function SafetyToolsActionSheetHeader(channelId) {
       channelId = channelId.channelId;
       const recipientId = channelId.recipientId;
       const warningId = channelId.warningId;

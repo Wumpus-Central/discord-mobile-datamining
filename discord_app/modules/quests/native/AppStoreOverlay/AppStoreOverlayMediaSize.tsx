@@ -55,7 +55,7 @@ export const getMediaSizeFromLoadEvent = function getMediaSizeFromLoadEvent(nati
   return tmp;
 };
 export const useAppStoreOverlayMediaSizes = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAppStoreOverlayMediaSizes(arg0) {
       const cResult = first(576).c(6);
       first = _slicedToArray(noop.useState(arg0), 1)[0];
       const obj = first(576);
@@ -149,7 +149,7 @@ export const useAppStoreOverlayMediaSizes = ReactCompilerGating.isReactCompilerE
       }
       return tmp9;
     }
-  : (arg0) => {
+  : function useAppStoreOverlayMediaSizes(arg0) {
       const first = _slicedToArray(noop.useState(arg0), 1)[0];
       [tmp3, dependencyMap] = noop.useState(map);
       const items = [first];

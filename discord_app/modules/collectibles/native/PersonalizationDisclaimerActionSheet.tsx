@@ -6,8 +6,8 @@ import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import ButtonGroup from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import ButtonGroup from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -16,7 +16,7 @@ require = fn;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, header: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.header = { paddingVertical: nativeDefault.space.PX_8, alignSelf: "center", textAlign: "center" };
@@ -27,7 +27,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/PersonalizationDisclaimerActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PersonalizationDisclaimerActionSheet() {
       const cResult = c.c(10);
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp22;
       tmp21 = tmp22;
     }
-  : () => {
+  : function PersonalizationDisclaimerActionSheet() {
       const tmp = closure_7();
       const callback = noop.useCallback(() => {
         const obj = LinkingDefault;

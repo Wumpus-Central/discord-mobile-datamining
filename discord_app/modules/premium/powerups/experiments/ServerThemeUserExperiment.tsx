@@ -16,7 +16,7 @@ export const getServerThemeUserEnabled = function getServerThemeUserEnabled(Guil
   return apexExperiment.getConfig({ location: GuildPowerupsConstants }).enabled;
 };
 export const useServerThemeUserEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useServerThemeUserEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -28,4 +28,6 @@ export const useServerThemeUserEnabled = ReactCompilerGating.isReactCompilerEnab
       }
       return apexExperiment.useConfig(tmp2).enabled;
     }
-  : (location) => apexExperiment.useConfig({ location }).enabled;
+  : function useServerThemeUserEnabled(location) {
+      return apexExperiment.useConfig({ location }).enabled;
+    };

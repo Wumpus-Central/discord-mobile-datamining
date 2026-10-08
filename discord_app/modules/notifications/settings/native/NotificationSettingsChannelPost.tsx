@@ -13,7 +13,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsChannelPost.tsx");
 
 export const NotificationSettingsChannelPost = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function NotificationSettingsChannelPost(channel) {
       _require = channel;
       const cResult = require("c").c(17);
       channel = channel.channel;
@@ -87,7 +87,7 @@ export const NotificationSettingsChannelPost = ReactCompilerGating.isReactCompil
             });
             const tmp15 = jsx(tmp(tmp2[9]).TableRowGroup, { title: tmp8, hasIcons: false, children: null });
             cResult[10] = newForumThreadsCreated;
-            class S {
+            class M {
               constructor() {
                 obj = closure_1(closure_2[8]);
                 result = obj.setForumThreadsCreated(closure_0.channel, !newForumThreadsCreated);
@@ -98,7 +98,7 @@ export const NotificationSettingsChannelPost = ReactCompilerGating.isReactCompil
             cResult[13] = tmp15;
             tmp13 = tmp15;
           }
-          class S {
+          class M {
             constructor() {
               obj = closure_1(closure_2[8]);
               result = obj.setForumThreadsCreated(closure_0.channel, !newForumThreadsCreated);
@@ -107,8 +107,8 @@ export const NotificationSettingsChannelPost = ReactCompilerGating.isReactCompil
           }
           cResult[7] = newForumThreadsCreated;
           cResult[8] = channel.channel;
-          cResult[9] = S;
-          tmp12 = S;
+          cResult[9] = M;
+          tmp12 = M;
           const tmpResult = tmp(tmp2[6]);
         }
       }
@@ -126,7 +126,7 @@ export const NotificationSettingsChannelPost = ReactCompilerGating.isReactCompil
       tmp6 = fn;
       const obj = require("c");
     }
-  : (channel) => {
+  : function NotificationSettingsChannelPost(channel) {
       _require = channel;
       ({ guild_id: importDefault, id: dependencyMap } = channel.channel);
       const items = [UserGuildSettingsStore];

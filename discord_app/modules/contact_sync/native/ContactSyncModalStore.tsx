@@ -5,7 +5,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ContactPermissions = fn(12342).ContactPermissions;
+const ContactPermissions = fn(12438).ContactPermissions;
 const PlatformTypes = fn(1085).PlatformTypes;
 const ContactSyncModes = {
   NORMAL: 0,
@@ -181,11 +181,11 @@ export const setError = function setError(arg0) {
   });
 };
 export const useIsOnboarding = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsOnboarding() {
       const mode = obj5().mode;
       return mode === obj.ONBOARDING || mode === obj.ONBOARDING_INVITE;
     }
-  : () => {
+  : function useIsOnboarding() {
       const mode = obj5().mode;
       return mode === obj.ONBOARDING || mode === obj.ONBOARDING_INVITE;
     };

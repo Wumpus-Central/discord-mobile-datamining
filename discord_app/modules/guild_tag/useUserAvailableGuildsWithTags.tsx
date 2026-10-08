@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
 
 export const useUserAvailableGuildsWithTags = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useUserAvailableGuildsWithTags() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore, GuildMemberStore];
@@ -49,7 +49,7 @@ export const useUserAvailableGuildsWithTags = ReactCompilerGating.isReactCompile
       }
       return initialize.useStateFromStoresArray(tmp4, tmp5);
     }
-  : () => {
+  : function useUserAvailableGuildsWithTags() {
       const items = [GuildStore, GuildMemberStore];
       return initialize.useStateFromStoresArray(items, () => {
         guildsArray = guildsArray.getGuildsArray();

@@ -94,7 +94,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/core/isUserSettingsOpen.native.tsx");
 
 export { isUserSettingsOpen };
-export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsUserSettingsOpen() {
   const cResult = require("c").c(2);
   const tmp2 = _slicedToArray(noop.useState(isUserSettingsOpen), 2);
   _require = tmp2[1];
@@ -166,7 +166,7 @@ export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled(
   }
   const effect = noop.useEffect(tmp3, tmp4);
   return tmp2[0];
-}) : (() => {
+}) : (function useIsUserSettingsOpen() {
   [tmp2, require] = noop.useState(isUserSettingsOpen);
   const effect = noop.useEffect(() => {
     function handleStateChange() {

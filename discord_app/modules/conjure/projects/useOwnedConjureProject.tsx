@@ -10,7 +10,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/useOwnedConjureProject.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useOwnedConjureProject(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(8);
       const tmp4 = useIsOwnedConjureApplicationDefault(arg0, arg1);
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = obj2;
         const tmpResult = tmp(504);
       }
-      const fn = function l() {
+      const fn = function c() {
         let result = null;
         if (true === closure_1) {
           result = null;
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useOwnedConjureProject(arg0, arg1) {
       _require = arg0;
       const tmp = useIsOwnedConjureApplicationDefault(arg0, arg1);
       importDefault = tmp;

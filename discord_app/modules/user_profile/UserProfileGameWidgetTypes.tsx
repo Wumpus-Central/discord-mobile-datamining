@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/UserProfileGameWidgetTypes.tsx
-import GameWidgetLimits from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
 import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
+import GameWidgetLimits from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
 import UserProfileWidgetConstants from "UserProfileWidgetConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -27,7 +27,9 @@ prototype["toSubmission"] = function toSubmission() {
   const obj = { id: this.id, data: null };
   const obj2 = { type: this.type, games: null };
   const games = this.games;
-  obj2.games = games.map((gameId) => ({ game_id: gameId.gameId, comment: gameId.comment, tags: gameId.tags }));
+  obj2.games = games.map(function convertGame(gameId) {
+    return { game_id: gameId.gameId, comment: gameId.comment, tags: gameId.tags };
+  });
   obj.data = obj2;
   return obj;
 };

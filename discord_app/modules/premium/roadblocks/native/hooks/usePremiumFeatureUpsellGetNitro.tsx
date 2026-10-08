@@ -10,7 +10,7 @@ import SubscriptionStore from "../../../../../stores/billing/SubscriptionStore.t
 import UserOfferStore from "../../../../../stores/billing/UserOfferStore.tsx";
 
 require = fn;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const AnalyticsObjectTypes = fn(1085).AnalyticsObjectTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx");
@@ -78,7 +78,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
           })
           .catch(() => {
             const intl = closure_1_0(1126).intl;
-            page(4573).presentFailedToast(intl.string(closure_1_0(1126).t.R0RpRX));
+            page(4765).presentFailedToast(intl.string(closure_1_0(1126).t.R0RpRX));
           })
           .finally(() => closure_1_4(false));
         const catchPromise = Promise.all(items)
@@ -88,7 +88,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
           })
           .catch(() => {
             const intl = closure_1_0(1126).intl;
-            page(4573).presentFailedToast(intl.string(closure_1_0(1126).t.R0RpRX));
+            page(4765).presentFailedToast(intl.string(closure_1_0(1126).t.R0RpRX));
           });
       }
     }

@@ -6,8 +6,8 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef9691 from "../../../../../_runtime/metro/09691__.js";
-import _modDef9692 from "../../../../../_runtime/metro/09692__.js";
+import _modDef10880 from "../../../../../_runtime/metro/10880__.js";
+import _modDef10881 from "../../../../../_runtime/metro/10881__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../ThemeStore.tsx";
 
@@ -49,11 +49,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/KrispLogo.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function KrispLogo() {
       const cResult = c.c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ThemeStore];
-        const fn = function o() {
+        const fn = function c() {
           return theme.theme;
         };
         cResult[0] = items;
@@ -66,9 +66,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
       const tmpResult = initialize;
       if (tmpResult2.isThemeLight(stateFromStores)) {
-        let tmp8Result = _modDef9691;
+        let tmp8Result = _modDef10880;
       } else {
-        tmp8Result = _modDef9692;
+        tmp8Result = _modDef10881;
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
@@ -125,13 +125,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp24;
     }
-  : () => {
+  : function KrispLogo() {
       const items = [ThemeStore];
       const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
       if (obj2.isThemeLight(stateFromStores)) {
-        let tmp4Result = _modDef9691;
+        let tmp4Result = _modDef10880;
       } else {
-        tmp4Result = _modDef9692;
+        tmp4Result = _modDef10881;
       }
       const obj3 = { style: closure_13.detailsView, children: null };
       const obj4 = { style: closure_13.logo, source: tmp4Result, accessibilityLabel: null };

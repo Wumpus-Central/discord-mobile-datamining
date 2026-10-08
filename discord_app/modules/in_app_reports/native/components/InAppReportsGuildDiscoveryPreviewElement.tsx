@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
   borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
@@ -40,7 +40,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function GuildDiscoveryPreviewElement(guild) {
       const cResult = c.c(36);
       guild = guild.guild;
       const tmp4 = closure_7();
@@ -209,7 +209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = items4;
       const tmpResult = initialize;
     }
-  : (guild) => {
+  : function GuildDiscoveryPreviewElement(guild) {
       guild = guild.guild;
       const tmp = closure_7();
       const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow(

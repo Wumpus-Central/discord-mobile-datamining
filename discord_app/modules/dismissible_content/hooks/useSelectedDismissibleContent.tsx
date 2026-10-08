@@ -8,7 +8,7 @@ require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useSelectedDismissibleContent(arg0, arg1, arg2) {
       const cResult = c.c(3);
       const tmp4 = undefined !== arg2 && arg2;
       const tmpResult = useGetDismissibleContent;
@@ -32,7 +32,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = items;
       const tmpResult2 = useSelectedDismissibleContentShared;
     }
-  : (arg0, arg1) => {
+  : function useSelectedDismissibleContent(arg0, arg1) {
       let flag = arg2;
       if (arg2 === undefined) {
         flag = false;
@@ -49,7 +49,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2, arg3) => {
+  ? function useSelectedSingleUseGuildDismissibleContent(arg0, arg1, arg2, arg3) {
       const cResult = c.c(3);
       const tmp4 = undefined !== arg3 && arg3;
       const tmpResult = useGetDismissibleContent;
@@ -77,7 +77,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = items;
       const tmpResult2 = useSelectedDismissibleContentShared;
     }
-  : (arg0, arg1, arg2) => {
+  : function useSelectedSingleUseGuildDismissibleContent(arg0, arg1, arg2) {
       let flag = arg3;
       if (arg3 === undefined) {
         flag = false;
@@ -98,7 +98,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2, arg3) => {
+  ? function useSelectedVersionedDismissibleContent(arg0, arg1, arg2, arg3) {
       const cResult = c.c(3);
       const tmp4 = undefined !== arg3 && arg3;
       const tmpResult = useGetDismissibleContent;
@@ -122,7 +122,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = items;
       const tmpResult2 = useSelectedDismissibleContentShared;
     }
-  : (arg0, arg1, arg2) => {
+  : function useSelectedVersionedDismissibleContent(arg0, arg1, arg2) {
       let flag = arg3;
       if (arg3 === undefined) {
         flag = false;
@@ -139,7 +139,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2, arg3) => {
+  ? function useSelectedTimeRecurringDismissibleContent(arg0, arg1, arg2, arg3) {
       const cResult = c.c(3);
       const tmp4 = undefined !== arg3 && arg3;
       const tmpResult = useGetDismissibleContent;
@@ -163,7 +163,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = items;
       const tmpResult2 = useSelectedDismissibleContentShared;
     }
-  : (arg0, arg1, arg2) => {
+  : function useSelectedTimeRecurringDismissibleContent(arg0, arg1, arg2) {
       let flag = arg3;
       if (arg3 === undefined) {
         flag = false;
@@ -180,7 +180,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2, arg3) => {
+  ? function useSelectedSnowflakeBoundDismissibleContent(arg0, arg1, arg2, arg3) {
       const cResult = c.c(3);
       const tmp4 = undefined !== arg3 && arg3;
       const tmpResult = useGetDismissibleContent;
@@ -204,7 +204,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = items;
       const tmpResult2 = useSelectedDismissibleContentShared;
     }
-  : (arg0, arg1, arg2) => {
+  : function useSelectedSnowflakeBoundDismissibleContent(arg0, arg1, arg2) {
       let flag = arg3;
       if (arg3 === undefined) {
         flag = false;
@@ -221,7 +221,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2, arg3, arg4) => {
+  ? function useSelectedSnowflakeBoundGuildDismissibleContent(arg0, arg1, arg2, arg3, arg4) {
       const cResult = c.c(3);
       const tmp4 = undefined !== arg4 && arg4;
       const tmpResult = useGetDismissibleContent;
@@ -254,7 +254,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = items;
       const tmpResult2 = useSelectedDismissibleContentShared;
     }
-  : (arg0, arg1, arg2, arg3) => {
+  : function useSelectedSnowflakeBoundGuildDismissibleContent(arg0, arg1, arg2, arg3) {
       let flag = arg4;
       if (arg4 === undefined) {
         flag = false;
@@ -280,7 +280,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2, arg3, arg4) => {
+  ? function useSelectedTimeRecurringSnowflakeBoundDismissibleContent(arg0, arg1, arg2, arg3, arg4) {
       const cResult = c.c(3);
       const tmp4 = undefined !== arg4 && arg4;
       const tmpResult = useGetDismissibleContent;
@@ -312,7 +312,7 @@ const tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = items;
       const tmpResult2 = useSelectedDismissibleContentShared;
     }
-  : (arg0, arg1, arg2, arg3) => {
+  : function useSelectedTimeRecurringSnowflakeBoundDismissibleContent(arg0, arg1, arg2, arg3) {
       let flag = arg4;
       if (arg4 === undefined) {
         flag = false;
@@ -346,7 +346,7 @@ export const useSelectedSnowflakeBoundDismissibleContent = tmp6;
 export const useSelectedSnowflakeBoundGuildDismissibleContent = tmp7;
 export const useSelectedTimeRecurringSnowflakeBoundDismissibleContent = tmp8;
 export const useSelectedTimeRecurringGuildDismissibleContent = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2, arg3) => {
+  ? function useSelectedTimeRecurringGuildDismissibleContent(arg0, arg1, arg2, arg3) {
       const cResult = c.c(3);
       [tmp3, tmp4] = useGetDismissibleContent.useGetTimeRecurringGuildDismissibleContent_UNSAFE(arg0, arg1, arg2, arg3);
       const tmp2 = _slicedToArray(
@@ -371,7 +371,7 @@ export const useSelectedTimeRecurringGuildDismissibleContent = ReactCompilerGati
       cResult[2] = items;
       tmp6 = items;
     }
-  : (arg0, arg1, arg2, arg3) => {
+  : function useSelectedTimeRecurringGuildDismissibleContent(arg0, arg1, arg2, arg3) {
       [tmp2, tmp3] = useGetDismissibleContent.useGetTimeRecurringGuildDismissibleContent_UNSAFE(arg0, arg1, arg2, arg3);
       const tmp = _slicedToArray(
         useGetDismissibleContent.useGetTimeRecurringGuildDismissibleContent_UNSAFE(arg0, arg1, arg2, arg3),

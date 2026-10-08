@@ -58,7 +58,7 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
   }
   return tmp;
 }
-const PermissionsConstants = fn(9205);
+const PermissionsConstants = fn(8547);
 ({
   CREATE_GUILD_EVENT_CORE_PERMISSIONS: closure_7,
   CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8,
@@ -100,7 +100,7 @@ const result = size.fileFinishedImporting("modules/permissions/useManageResource
 
 export { attachChannelPermissions };
 export const useManageResourcePermissions = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isGuildStageVoice) => {
+  ? function useManageResourcePermissions(isGuildStageVoice) {
       _require = isGuildStageVoice;
       const cResult = require("c").c(24);
       if (cResult[0] !== isGuildStageVoice) {
@@ -126,7 +126,7 @@ export const useManageResourcePermissions = ReactCompilerGating.isReactCompilerE
         }
         cResult[0] = isGuildStageVoice;
         cResult[1] = items2;
-        tmpResult = tmp(2066);
+        tmpResult = tmp(2078);
       } else {
         const tmp12 = first1(cResult[1], 2);
         first = tmp12[0];
@@ -242,7 +242,7 @@ export const useManageResourcePermissions = ReactCompilerGating.isReactCompilerE
             const tmpResult4 = tmp(504);
           }
         }
-        const fn = function u() {
+        const fn = function l() {
           const items = [
             PermissionStore.can(Permissions.CREATE_GUILD_EXPRESSIONS, closure_0),
             PermissionStore.can(Permissions.MANAGE_GUILD_EXPRESSIONS, closure_0),
@@ -259,7 +259,7 @@ export const useManageResourcePermissions = ReactCompilerGating.isReactCompilerE
       }
       const obj = require("c");
     }
-  : (isGuildStageVoice) => {
+  : function useManageResourcePermissions(isGuildStageVoice) {
       _require = isGuildStageVoice;
       if (obj.isGuildRecord(isGuildStageVoice)) {
         let items = [,];

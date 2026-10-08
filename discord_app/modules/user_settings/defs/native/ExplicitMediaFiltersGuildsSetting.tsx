@@ -3,9 +3,9 @@ import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import SensitiveMediaExplicitRedactionSettingsUtils from "../../../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx";
-import ExplicitMediaRedactionUtils from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
-import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import useUserIsTeen from "../../../self_mod/hooks/useUserIsTeen.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import ExplicitMediaRedactionUtils from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import useExplicitContentSettingsOrDefault from "../../../explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx";
 import ExplicitMediaRedactionNativeUtils from "../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
 import "ReactCompilerGating";
@@ -15,14 +15,14 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsDisabled() {
       let userIsTeen = useUserIsTeen.useUserIsTeen();
       if (!userIsTeen) {
         userIsTeen = obj2.useIsParentallyControlled();
       }
       return userIsTeen;
     }
-  : () => {
+  : function useIsDisabled() {
       let userIsTeen = useUserIsTeen.useUserIsTeen();
       if (!userIsTeen) {
         userIsTeen = obj2.useIsParentallyControlled();
@@ -34,7 +34,7 @@ function getTitle() {
   return intl.string(util.t["FP+a42"]);
 }
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useObscuredContentGuildsSettingValue() {
       const cResult = c.c(2);
       const explicitContentGuilds =
         useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentGuilds;
@@ -49,7 +49,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : () => {
+  : function useObscuredContentGuildsSettingValue() {
       const obj = useExplicitContentSettingsOrDefault;
       return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(
         obj.useExplicitContentSettingOrDefault().explicitContentGuilds,
@@ -61,7 +61,7 @@ const pressable = SettingBuilders.createPressable({
     return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
   },
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useObscuredContentGuildsSettingValue() {
         const cResult = c.c(2);
         const explicitContentGuilds =
           useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentGuilds;
@@ -76,7 +76,7 @@ const pressable = SettingBuilders.createPressable({
         }
         return tmp4;
       }
-    : () => {
+    : function useObscuredContentGuildsSettingValue() {
         const obj = useExplicitContentSettingsOrDefault;
         return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(
           obj.useExplicitContentSettingOrDefault().explicitContentGuilds,

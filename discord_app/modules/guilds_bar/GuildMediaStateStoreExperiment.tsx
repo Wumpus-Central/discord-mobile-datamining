@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/GuildMediaStateSto
 
 export const GuildMediaStateSource = obj;
 export const useGuildMediaStateSource = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useGuildMediaStateSource(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -29,4 +29,6 @@ export const useGuildMediaStateSource = ReactCompilerGating.isReactCompilerEnabl
       }
       return closure_2.useConfig(tmp2).source;
     }
-  : (location) => closure_2.useConfig({ location }).source;
+  : function useGuildMediaStateSource(location) {
+      return closure_2.useConfig({ location }).source;
+    };

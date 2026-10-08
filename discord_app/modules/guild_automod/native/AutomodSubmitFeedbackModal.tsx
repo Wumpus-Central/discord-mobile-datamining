@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
-import _modDef4815 from "../../../../_runtime/metro/04815__.js";
+import _modDef5009 from "../../../../_runtime/metro/05009__.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const SUBMIT_FEEDBACK = "SUBMIT_FEEDBACK";
 let c10 = 16;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     flex: 1,
@@ -86,7 +86,7 @@ obj2.submitButtonContainer = rect;
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onClose) => {
+  ? function Navbar(onClose) {
       const cResult = c.c(9);
       onClose = onClose.onClose;
       const tmp4 = closure_11();
@@ -100,7 +100,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== onClose) {
-        const obj2 = { accessibilityLabel: first, onPress: onClose, source: _modDef4815 };
+        const obj2 = { accessibilityLabel: first, onPress: onClose, source: _modDef5009 };
         const tmp10 = React5(HeaderActionButton.HeaderActionButton, obj2);
         cResult[1] = onClose;
         cResult[2] = tmp10;
@@ -131,7 +131,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp12;
       tmp11 = tmp12;
     }
-  : (onClose) => {
+  : function Navbar(onClose) {
       const tmp = closure_11();
       const rect = { top: true, left: true, right: true, style: tmp.header, children: null };
       const obj = { style: tmp.closeButtonContainer, children: null };
@@ -139,14 +139,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
       obj2.onPress = onClose.onClose;
-      obj2.source = _modDef4815;
+      obj2.source = _modDef5009;
       obj.children = React5(HeaderActionButton.HeaderActionButton, obj2);
       rect.children = React5(View, obj);
       return React5(common_SafeAreaView.SafeAreaPaddingView, rect);
     };
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SubmitFeedbackScreen(arg0) {
       const cResult = c.c(38);
       ({ feedback: require, onChange: importDefault, onSubmit } = arg0);
       const tmp4 = closure_11();
@@ -154,17 +154,17 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const feedbackOptions = AutomodFeedback.generateFeedbackOptions();
       ({ left, right, bottom } = useSafeAreaInsetsDefault());
       if (cResult[0] !== tmp4.formRow) {
-        const fn = function l(children) {
+        function label(children) {
           return React5(Text_Text.Text, {
             style: closure_2.formRow,
             variant: "text-md/semibold",
             color: "interactive-text-active",
             children,
           });
-        };
+        }
         cResult[0] = tmp4.formRow;
-        cResult[1] = fn;
-        let tmp6 = fn;
+        cResult[1] = label;
+        let tmp6 = label;
       } else {
         tmp6 = cResult[1];
       }
@@ -353,7 +353,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = obj10;
       const tmp5 = useSafeAreaInsetsDefault();
     }
-  : (onSubmit) => {
+  : function SubmitFeedbackScreen(onSubmit) {
       ({ feedback: require, onChange: importDefault } = onSubmit);
       const tmp = closure_11();
       dependencyMap = tmp;
@@ -429,18 +429,18 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/AutomodSubmitFeedbackModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onCloseModal) => {
+  ? function AutomodSubmitFeedbackModal(onCloseModal) {
       const cResult = onCloseModal(feedback_type[8]).c(12);
       onCloseModal = onCloseModal.onCloseModal;
       const automodDecision = onCloseModal.automodDecision;
       const top = automodDecision(feedback_type[14])().top;
       [feedback_type, _slicedToArray] = noop.useState(onCloseModal(feedback_type[13]).Feedback.BUG);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function c(arg0) {
+        function handleChange(arg0) {
           closure_3(arg0);
-        };
-        cResult[0] = fn;
-        let first1 = fn;
+        }
+        cResult[0] = handleChange;
+        let first1 = handleChange;
       } else {
         first1 = cResult[0];
       }
@@ -483,7 +483,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             render() {
-              return closure_2_7(closure_2_13, { feedback, onChange, onSubmit });
+              return closure_2_7(closure_2_13, { feedback, onChange: handleChange, onSubmit: handleSubmit });
             },
           };
           obj3[SUBMIT_FEEDBACK] = obj4;
@@ -494,39 +494,38 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp8 = obj3;
         }
       }
-      class S {
-        constructor() {
-          obj = closure_0(closure_2[19]);
-          obj1 = {
-            feedback_type: closure_2,
-            message_id: automodDecision.messageId,
-            content: automodDecision.messageContent,
-            decision_id: automodDecision.decisionId,
-          };
-          trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.GUILD_AUTOMOD_FEEDBACK, obj1);
-          obj3 = closure_0(closure_2[20]);
-          ({ messageId, channel } = automodDecision);
-          executeAlertActionResult = obj3.executeAlertAction(
-            messageId,
-            channel,
-            closure_0(closure_2[21]).AutomodAlertActionType.SUBMIT_FEEDBACK,
-          );
-          obj4 = closure_0(closure_2[22]);
-          presentFeedbackSentResult = obj4.presentFeedbackSent();
-          tmp4 = onCloseModal();
-          return;
-        }
+      function handleSubmit() {
+        AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.GUILD_AUTOMOD_FEEDBACK, {
+          feedback_type,
+          message_id: automodDecision.messageId,
+          content: automodDecision.messageContent,
+          decision_id: automodDecision.decisionId,
+        });
+        const obj2 = {
+          feedback_type,
+          message_id: automodDecision.messageId,
+          content: automodDecision.messageContent,
+          decision_id: automodDecision.decisionId,
+        };
+        ({ messageId, channel } = automodDecision);
+        GuildAutomodActionCreators.executeAlertAction(
+          messageId,
+          channel,
+          AutomodAlert.AutomodAlertActionType.SUBMIT_FEEDBACK,
+        );
+        ToastUtils.presentFeedbackSent();
+        onCloseModal();
       }
       cResult[1] = automodDecision;
       cResult[2] = feedback_type;
       cResult[3] = onCloseModal;
-      cResult[4] = S;
-      tmp7 = S;
+      cResult[4] = handleSubmit;
+      tmp7 = handleSubmit;
       let obj = onCloseModal(feedback_type[8]);
       tmp = onCloseModal;
       tmp2 = feedback_type;
     }
-  : (onCloseModal) => {
+  : function AutomodSubmitFeedbackModal(onCloseModal) {
       onCloseModal = onCloseModal.onCloseModal;
       const automodDecision = onCloseModal.automodDecision;
       first = undefined;
@@ -536,19 +535,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const memo = noop.useMemo(() => {
         const onClose = onCloseModal;
         const feedback = first;
-        function onChange(arg0) {
-          onSubmit(arg0);
+        function handleChange(arg0) {
+          handleSubmit(arg0);
         }
-        function onSubmit() {
+        function handleSubmit() {
           onCloseModal(first[19]).trackWithMetadata(constants.GUILD_AUTOMOD_FEEDBACK, {
-            feedback_type: onChange,
+            feedback_type: handleChange,
             message_id: feedback.messageId,
             content: feedback.messageContent,
             decision_id: feedback.decisionId,
           });
           const obj = onCloseModal(first[19]);
           const obj2 = {
-            feedback_type: onChange,
+            feedback_type: handleChange,
             message_id: feedback.messageId,
             content: feedback.messageContent,
             decision_id: feedback.decisionId,
@@ -574,7 +573,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             render() {
-              return closure_2_7(closure_2_13, { feedback, onChange, onSubmit });
+              return closure_2_7(closure_2_13, { feedback, onChange: handleChange, onSubmit: handleSubmit });
             },
           },
         };

@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { iconContainer: null };
 let size = {
   width: 40,
@@ -26,7 +26,7 @@ const result = size.fileFinishedImporting("modules/in_app_notifications/native/M
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (notification) => {
+    ? function MessageFailedToSendNotification(notification) {
         const cResult = channelId(576).c(12);
         notification = notification.notification;
         const tmp4 = closure_6();
@@ -48,7 +48,7 @@ export default noop.memo(
           const _Symbol = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             const obj3 = { size: "md", color: messageId(587).colors.ICON_SUBTLE };
-            const tmp10 = jsx(tmp(11377).RetryIcon, { size: "md", color: messageId(587).colors.ICON_SUBTLE });
+            const tmp10 = jsx(tmp(12633).RetryIcon, { size: "md", color: messageId(587).colors.ICON_SUBTLE });
             cResult[4] = tmp10;
             let tmp7 = tmp10;
           } else {
@@ -68,7 +68,7 @@ export default noop.memo(
             const obj5 = { text: null };
             const intl2 = tmp(1126).intl;
             obj5.text = intl2.string(tmp(1126).t.xxRPOT);
-            const tmp17 = jsx(tmp(12501).SystemMessageText, { text: null });
+            const tmp17 = jsx(tmp(12597).SystemMessageText, { text: null });
             cResult[7] = tmp17;
             let tmp15 = tmp17;
           } else {
@@ -83,7 +83,7 @@ export default noop.memo(
             }
           }
           const obj6 = { icon: tmp11, children: tmp15, header: first, onPress: tmp6, notification };
-          const tmp20 = jsx(tmp(12531).NotificationPressable, {
+          const tmp20 = jsx(tmp(12627).NotificationPressable, {
             icon: tmp11,
             children: tmp15,
             header: first,
@@ -96,7 +96,7 @@ export default noop.memo(
           cResult[11] = tmp20;
           tmp18 = tmp20;
         }
-        const fn = function p() {
+        const fn = function y() {
           const obj = transitionToChannel;
           obj.transitionToMessage(channelId, messageId, { jumpType: Client.JumpType.INSTANT });
         };
@@ -106,7 +106,7 @@ export default noop.memo(
         tmp6 = fn;
         let obj = channelId(576);
       }
-    : (notification) => {
+    : function MessageFailedToSendNotification(notification) {
         notification = notification.notification;
         let channelId;
         let obj = { type: "simple", text: null };
@@ -122,16 +122,16 @@ export default noop.memo(
         const obj2 = { icon: null, children: null, header: null, onPress: null, notification: null };
         const obj3 = { style: closure_6().iconContainer, children: null };
         const tmp = closure_6();
-        obj3.children = jsx(channelId(11377).RetryIcon, { size: "md", color: messageId(587).colors.ICON_SUBTLE });
+        obj3.children = jsx(channelId(12633).RetryIcon, { size: "md", color: messageId(587).colors.ICON_SUBTLE });
         obj2.icon = <View style={closure_6().iconContainer}>{null}</View>;
         const obj5 = { text: null };
         const intl2 = channelId(1126).intl;
         obj5.text = intl2.string(channelId(1126).t.xxRPOT);
-        obj2.children = jsx(channelId(12501).SystemMessageText, { text: null });
+        obj2.children = jsx(channelId(12597).SystemMessageText, { text: null });
         obj2.header = obj;
         obj2.onPress = callback;
         obj2.notification = notification;
-        return jsx(channelId(12531).NotificationPressable, {
+        return jsx(channelId(12627).NotificationPressable, {
           icon: null,
           children: null,
           header: null,

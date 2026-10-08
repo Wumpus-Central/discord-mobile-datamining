@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   group: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: nativeDefault.space.PX_8 },
   inline: { flexWrap: "nowrap", flexShrink: 1, overflow: "hidden" },
@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TagGroup/native/TagGroup.native.tsx");
 
 export const TagGroup = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TagGroup(arg0) {
       const cResult = str2(str[6]).c(19);
       ({ label, items, layout, size, variant } = arg0);
       str = "default";
@@ -84,7 +84,7 @@ export const TagGroup = ReactCompilerGating.isReactCompilerEnabled()
               cResult[10] = mapped;
             }
           }
-          const fn = function h(item) {
+          const fn = function z(item) {
             return jsx(Tag.Tag, { item, size, variant: str, inline: "inline" === str2 }, item.id);
           };
           cResult[11] = str2;
@@ -112,7 +112,7 @@ export const TagGroup = ReactCompilerGating.isReactCompilerEnabled()
       tmp = str2;
       tmp2 = str;
     }
-  : (accessibilityLabel) => {
+  : function TagGroup(accessibilityLabel) {
       ({ items, layout } = accessibilityLabel);
       if (layout === undefined) {
         layout = "default";

@@ -8,7 +8,7 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ title: { flexDirection: "row" }, container: { padding: 10 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/search/native/components/list
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (text) => {
+    ? function GenericTextRow(text) {
         const cResult = c.c(18);
         text = text.text;
         closure_0 = text;
@@ -158,7 +158,7 @@ export default noop.memo(
             }
           }
         });
-        const fn = function () {
+        function t1() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -167,13 +167,13 @@ export default noop.memo(
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[0] = onPress;
         cResult[1] = text;
-        cResult[2] = fn;
-        tmp5 = fn;
+        cResult[2] = t1;
+        tmp5 = t1;
       }
-    : (text) => {
+    : function GenericTextRow(text) {
         text = text.text;
         require = text;
         ({ icon, onPress } = text);

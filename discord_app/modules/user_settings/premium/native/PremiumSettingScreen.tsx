@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumSettingScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PremiumScreen() {
       const cResult = c.c(3);
       const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
       const stackNavigation = useNavigation.useStackNavigation();
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp9;
       tmp6 = tmp9;
     }
-  : () => {
+  : function PremiumScreen() {
       const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
       const stackNavigation = useNavigation.useStackNavigation();
       let close;

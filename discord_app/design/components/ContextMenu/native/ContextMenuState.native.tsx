@@ -46,9 +46,9 @@ const obj7 = {
   INDEX_BOUNDS_PAGE_Y_OFFSET: 1,
   INDEX_BOUNDS_PAGE_X_OFFSET: 0,
   INDEX_BOUNDS_OFFSET: 4,
-  runOnJS: fn(4618).runOnJS,
-  triggerHapticFeedback: fn(4861).triggerHapticFeedback,
-  HapticFeedbackTypes: fn(4861).HapticFeedbackTypes,
+  runOnJS: fn(4810).runOnJS,
+  triggerHapticFeedback: fn(5055).triggerHapticFeedback,
+  HapticFeedbackTypes: fn(5055).HapticFeedbackTypes,
 };
 updateContextMenuState.__closure = obj7;
 updateContextMenuState.__workletHash = 10158111154044;
@@ -57,7 +57,7 @@ updateContextMenuState.__initData = {
 };
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useActiveContextMenu() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(menu) {
@@ -70,7 +70,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return obj3(first);
     }
-  : () => obj3((menu) => menu.menu);
+  : function useActiveContextMenu() {
+      return obj3((menu) => menu.menu);
+    };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuState.native.tsx");
 
@@ -98,7 +100,7 @@ export const hideContextMenu = function hideContextMenu() {
 export const useActiveContextMenu = tmp3;
 export { updateContextMenuState };
 export const useContextMenuState = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useContextMenuState() {
       const cResult = c.c(4);
       const sharedValue = ReanimatedRexport.useSharedValue(-1);
       const sharedValue1 = ReanimatedRexport.useSharedValue([]);
@@ -118,7 +120,7 @@ export const useContextMenuState = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = obj5;
       tmp5 = obj5;
     }
-  : () => {
+  : function useContextMenuState() {
       const sharedValue = ReanimatedRexport.useSharedValue(-1);
       const sharedValue1 = ReanimatedRexport.useSharedValue([]);
       const sharedValue2 = ReanimatedRexport.useSharedValue(-1);

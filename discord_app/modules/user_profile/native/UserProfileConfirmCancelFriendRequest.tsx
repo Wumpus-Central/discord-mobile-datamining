@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileConfirmCancelFriendRequest.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileConfirmCancelFriendRequest(arg0) {
       const cResult = c.c(12);
       ({ userDisplayName, onConfirm } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = tmp20;
       tmp19 = tmp20;
     }
-  : (arg0) => {
+  : function UserProfileConfirmCancelFriendRequest(arg0) {
       ({ userDisplayName, onConfirm } = arg0);
       const obj = { title: null, content: null, actions: null };
       const intl = util.intl;

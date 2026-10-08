@@ -217,21 +217,21 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
   }
 }
 const View = fn(17).View;
-const GuildsNodeType = fn(5623).GuildsNodeType;
-const GuildsBarConstants = fn(16262);
+const GuildsNodeType = fn(5968).GuildsNodeType;
+const GuildsBarConstants = fn(16522);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(14915);
+const YouBarConstants = fn(15177);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_15 = createStyles.createStyles({
   wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH },
 });
-let closure_17 = { beforeItem: "start", afterItem: "unicodeVersion" };
+let closure_17 = { beforeItem: "Array", afterItem: "Reflect" };
 let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "Array" };
 let ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useUnreadBarWrapperStyles() {
       const cResult = c.c(10);
       const tmp2 = closure_15();
       const top = useSafeAreaInsetsDefault().top;
@@ -278,7 +278,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = rect;
       tmp6 = rect;
     }
-  : () => {
+  : function useUnreadBarWrapperStyles() {
       const tmp = closure_15();
       const wrapper = tmp;
       const top = useSafeAreaInsetsDefault().top;
@@ -316,10 +316,10 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarUnre
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (fastList) => {
+    ? function GuildsBarUnreadBars(fastList) {
         const cResult = fastList(576).c(22);
         fastList = fastList.fastList;
-        top = top(1618)().top;
+        top = top(1630)().top;
         const result = closure_11() / 2;
         dependencyMap = result;
         if (cResult[0] === fastList) {
@@ -336,17 +336,23 @@ export default noop.memo(
                 }
                 noop = tmp10;
                 if (cResult[8] !== tmp10) {
-                  const fn2 = function w() {
-                    const items = [GuildReadStateStore, SelectedGuildStore, SortedGuildStore];
-                    const batchedStoreListener = new initialize.BatchedStoreListener(items, closure_4);
-                    batchedStoreListener.attach("guild-mention-bars");
-                    return () => {
-                      batchedStoreListener.detach();
-                    };
-                  };
+                  class E {
+                    constructor() {
+                      items = [, ,];
+                      items[0] = closure_6;
+                      items[1] = closure_7;
+                      items[2] = closure_8;
+                      batchedStoreListener = new closure_0(closure_2[18]).BatchedStoreListener(items, closure_4);
+                      closure_0 = batchedStoreListener;
+                      attachResult = batchedStoreListener.attach("guild-mention-bars");
+                      return () => {
+                        batchedStoreListener.detach();
+                      };
+                    }
+                  }
                   let items = [tmp10];
                   cResult[8] = tmp10;
-                  cResult[9] = fn2;
+                  cResult[9] = E;
                   class C {
                     constructor() {
                       return scrollPosValue.get();
@@ -354,12 +360,24 @@ export default noop.memo(
                   }
                   cResult[10] = items;
                   let tmp13 = items;
-                  let tmp12 = fn2;
                 } else {
-                  tmp12 = cResult[9];
+                  class E {
+                    constructor() {
+                      items = [, ,];
+                      items[0] = closure_6;
+                      items[1] = closure_7;
+                      items[2] = closure_8;
+                      batchedStoreListener = new closure_0(closure_2[18]).BatchedStoreListener(items, closure_4);
+                      closure_0 = batchedStoreListener;
+                      attachResult = batchedStoreListener.attach("guild-mention-bars");
+                      return () => {
+                        batchedStoreListener.detach();
+                      };
+                    }
+                  }
                   tmp13 = cResult[10];
                 }
-                const effect = obj2.useEffect(tmp12, tmp13);
+                const effect = obj2.useEffect(E, tmp13);
                 const scrollPosValue = fastList.scrollPosValue;
                 class C {
                   constructor() {
@@ -370,82 +388,33 @@ export default noop.memo(
                 C.__closure = obj3;
                 C.__workletHash = 16367582542434;
                 C.__initData = __initData;
-                class B {
-                  constructor(arg0, arg1) {
-                    if (fastList !== arg1) {
-                      tmp = closure_0;
-                      tmp2 = closure_2;
-                      obj = closure_0(closure_2[19]);
-                      tmp3 = closure_4;
-                      tmp4 = obj.runOnJS(closure_4)();
-                    }
-                    return;
+                const fn2 = function k(arg0, arg1) {
+                  if (arg0 !== arg1) {
+                    ReanimatedRexport.runOnJS(closure_4)();
                   }
-                }
-                const obj4 = { runOnJS: tmp(4618).runOnJS, debouncedUpdate: tmp10 };
-                B.__closure = obj4;
-                B.__workletHash = 13727289405147;
-                B.__initData = __initData2;
-                const animatedReaction = tmp(4618).useAnimatedReaction(C, B);
+                };
+                const obj4 = { runOnJS: tmp(4810).runOnJS, debouncedUpdate: tmp10 };
+                fn2.__closure = obj4;
+                fn2.__workletHash = 13727289405147;
+                fn2.__initData = __initData2;
+                const animatedReaction = tmp(4810).useAnimatedReaction(C, fn2);
                 const tmp19 = closure_20();
                 ({ style, paddingStart } = tmp19);
                 const paddingEnd = tmp19.paddingEnd;
                 if (cResult[11] === fastList) {
-                  if (cResult[12] === paddingEnd) {
-                    if (cResult[13] === paddingStart) {
-                      let tmp20 = cResult[14];
+                  class E {
+                    constructor() {
+                      items = [, ,];
+                      items[0] = closure_6;
+                      items[1] = closure_7;
+                      items[2] = closure_8;
+                      batchedStoreListener = new closure_0(closure_2[18]).BatchedStoreListener(items, closure_4);
+                      closure_0 = batchedStoreListener;
+                      attachResult = batchedStoreListener.attach("guild-mention-bars");
+                      return () => {
+                        batchedStoreListener.detach();
+                      };
                     }
-                    if (cResult[15] === afterItem) {
-                      if (cResult[16] === beforeItem) {
-                        if (cResult[17] === tmp20) {
-                          let tmp21 = cResult[18];
-                        }
-                        if (cResult[19] === style) {
-                          if (cResult[20] === tmp21) {
-                            let tmp24 = cResult[21];
-                          }
-                          return tmp24;
-                        }
-                        const obj5 = {
-                          style,
-                          collapsable: false,
-                          pointerEvents: "box-none",
-                          testID: "guilds-bar-unread-bars",
-                          children: tmp21,
-                        };
-                        class C {
-                          constructor() {
-                            return scrollPosValue.get();
-                          }
-                        }
-                        cResult[19] = style;
-                        cResult[20] = tmp21;
-                        cResult[21] = tmp27;
-                        tmp24 = tmp27;
-                      }
-                    }
-                    const obj6 = { beforeItem, afterItem, scrollToLocation: tmp20, compact: true };
-                    class C {
-                      constructor() {
-                        return scrollPosValue.get();
-                      }
-                    }
-                    cResult[15] = afterItem;
-                    cResult[16] = beforeItem;
-                    cResult[17] = tmp20;
-                    class B {
-                      constructor(arg0, arg1) {
-                        if (fastList !== arg1) {
-                          tmp = closure_0;
-                          tmp2 = closure_2;
-                          obj = closure_0(closure_2[19]);
-                          tmp3 = closure_4;
-                          tmp4 = obj.runOnJS(closure_4)();
-                        }
-                        return;
-                      }
-                    }
-                    tmp21 = tmp23;
                   }
                 }
                 const fn3 = function x(arg0) {
@@ -460,8 +429,7 @@ export default noop.memo(
                 cResult[12] = paddingEnd;
                 cResult[13] = paddingStart;
                 cResult[14] = fn3;
-                tmp20 = fn3;
-                const tmpResult = tmp(4618);
+                const tmpResult = tmp(4810);
               }
             }
             const tmp11 = tmp4(551)(() => {
@@ -519,14 +487,14 @@ export default noop.memo(
         let obj = fastList(576);
         tmp4 = top;
       }
-    : (fastList) => {
+    : function GuildsBarUnreadBars(fastList) {
         fastList = fastList.fastList;
         let top;
         _slicedToArray = undefined;
         let memo;
         let paddingStart;
         let paddingEnd;
-        top = top(1618)().top;
+        top = top(1630)().top;
         const result = closure_11() / 2;
         dependencyMap = result;
         [tmp3, c3] = memo.useState(() => {
@@ -599,15 +567,15 @@ export default noop.memo(
           }),
           2,
         );
-        class M {
+        class B {
           constructor() {
             return scrollPosValue.get();
           }
         }
-        M.__closure = { scrollPosValue };
-        M.__workletHash = 263168135840;
-        M.__initData = __initData3;
-        class O {
+        B.__closure = { scrollPosValue };
+        B.__workletHash = 263168135840;
+        B.__initData = __initData3;
+        class T {
           constructor(arg0, arg1) {
             if (fastList !== arg1) {
               tmp = closure_0;
@@ -619,11 +587,11 @@ export default noop.memo(
             return;
           }
         }
-        let obj = fastList(4618);
-        O.__closure = { runOnJS: fastList(4618).runOnJS, debouncedUpdate: memo };
-        O.__workletHash = 3399641848221;
-        O.__initData = __initData4;
-        const animatedReaction = obj.useAnimatedReaction(M, O);
+        let obj = fastList(4810);
+        T.__closure = { runOnJS: fastList(4810).runOnJS, debouncedUpdate: memo };
+        T.__workletHash = 3399641848221;
+        T.__initData = __initData4;
+        const animatedReaction = obj.useAnimatedReaction(B, T);
         const tmp7 = closure_20();
         paddingStart = tmp7.paddingStart;
         paddingEnd = tmp7.paddingEnd;
@@ -643,7 +611,7 @@ export default noop.memo(
           obj.orientation = "visible";
           fastList.scrollToLocation(obj);
         }, items2);
-        obj3.children = jsx(top(16336), { beforeItem, afterItem, scrollToLocation: callback, compact: true });
+        obj3.children = jsx(top(16596), { beforeItem, afterItem, scrollToLocation: callback, compact: true });
         return (
           <scrollPosValue
             style={tmp7.style}

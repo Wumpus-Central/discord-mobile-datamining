@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileConfirmVideoUnstableConnection.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onConfirm) => {
+  ? function UserProfileConfirmVideoUnstableConnection(onConfirm) {
       const cResult = c.c(8);
       onConfirm = onConfirm.onConfirm;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp16;
     }
-  : (onConfirm) => {
+  : function UserProfileConfirmVideoUnstableConnection(onConfirm) {
       const obj = { title: null, content: null, actions: null };
       const intl = util.intl;
       obj.title = intl.string(util.t.m2Hyj0);

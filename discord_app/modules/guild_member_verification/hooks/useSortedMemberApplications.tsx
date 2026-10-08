@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useSortedMemberApplications.tsx");
 
 export const useSortedMemberApplications = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function useSortedMemberApplications(guildId) {
       const cResult = guildId(applicationStatus[3]).c(9);
       guildId = guildId.guildId;
       applicationStatus = guildId.applicationStatus;
@@ -57,7 +57,7 @@ export const useSortedMemberApplications = ReactCompilerGating.isReactCompilerEn
       tmp6 = fn;
       const obj = guildId(applicationStatus[3]);
     }
-  : (guildId) => {
+  : function useSortedMemberApplications(guildId) {
       guildId = guildId.guildId;
       const applicationStatus = guildId.applicationStatus;
       const sortOrder = guildId.sortOrder;

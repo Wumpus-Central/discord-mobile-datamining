@@ -1,17 +1,17 @@
 // discord_app/modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import Link from "../../../../../_runtime/01491_Link.js";
+import Link from "../../../../../_runtime/01503_Link.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useAppLauncherNavigation = fn(1489).useAppLauncherNavigation;
+const useAppLauncherNavigation = fn(1501).useAppLauncherNavigation;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useNavigationTransitionEnded() {
       const cResult = c.c(4);
       const tmp2 = _slicedToArray(noop.useState(false), 2);
       closure_0 = tmp3;
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const effect = noop.useEffect(tmp6, tmp7);
         return tmp2[0];
       }
-      const fn = function s() {
+      const fn = function u() {
         return state.addListener("transitionEnd", () => {
           state = state.getState();
           if (state.routes[state.index].key === key.key) {
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = items;
       tmp6 = fn;
     }
-  : () => {
+  : function useNavigationTransitionEnded() {
       const tmp = _slicedToArray(noop.useState(false), 2);
       closure_0 = tmp2;
       const tmp3 = useAppLauncherNavigation();

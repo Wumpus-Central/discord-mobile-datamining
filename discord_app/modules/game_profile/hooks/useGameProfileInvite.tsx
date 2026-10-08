@@ -131,7 +131,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-obj2.load = function () {
+obj2.load = function load() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -147,7 +147,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileInvite.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (websites, current) => {
+  ? function useGameProfileInvite(websites, current) {
       _require = current;
       const cResult = require("c").c(15);
       noop.useRef(current);
@@ -223,69 +223,44 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[6] !== id) {
+        let id1;
         if (data != null) {
           let guild2 = data.guild;
-          class G {
-            constructor() {
-              tmp = data;
-              id = undefined;
-              if (data != null) {
-                guild = tmp.guild;
-                if (guild != null) {
-                  id = guild.id;
-                }
-              }
-              isMemberResult = null != id;
-              if (isMemberResult) {
-                id1 = undefined;
-                tmp4 = closure_5;
-                if (tmp != null) {
-                  guild2 = tmp.guild;
-                  if (guild2 != null) {
-                    id1 = guild2.id;
-                  }
-                }
-                isMemberResult = closure_5.isMember(id1);
-              }
-              return isMemberResult;
-            }
+          if (guild2 != null) {
+            id1 = guild2.id;
           }
         }
-        class G {
-          constructor() {
-            tmp = data;
-            id = undefined;
+        const fn2 = function p() {
+          let id;
+          if (data != null) {
+            guild = data.guild;
+            if (guild != null) {
+              id = guild.id;
+            }
+          }
+          let isMemberResult = null != id;
+          if (isMemberResult) {
+            let id1;
             if (data != null) {
-              guild = tmp.guild;
-              if (guild != null) {
-                id = guild.id;
+              const guild2 = data.guild;
+              if (guild2 != null) {
+                id1 = guild2.id;
               }
             }
-            isMemberResult = null != id;
-            if (isMemberResult) {
-              id1 = undefined;
-              tmp4 = closure_5;
-              if (tmp != null) {
-                guild2 = tmp.guild;
-                if (guild2 != null) {
-                  id1 = guild2.id;
-                }
-              }
-              isMemberResult = closure_5.isMember(id1);
-            }
-            return isMemberResult;
+            isMemberResult = GuildMembershipStore.isMember(id1);
           }
-        }
-        cResult[6] = undefined;
-        cResult[7] = G;
-        let tmp17 = G;
+          return isMemberResult;
+        };
+        cResult[6] = id1;
+        cResult[7] = fn2;
+        let tmp17 = fn2;
       } else {
         tmp17 = cResult[7];
       }
       const obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(tmp14, tmp17);
       if (cResult[8] !== data) {
-        const fn2 = function _() {
+        const fn3 = function _() {
           if (null != data) {
             current = ref.current;
             if (current != null) {
@@ -293,37 +268,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         };
-        const items2 = [];
-        class G {
-          constructor() {
-            tmp = data;
-            id = undefined;
-            if (data != null) {
-              guild = tmp.guild;
-              if (guild != null) {
-                id = guild.id;
-              }
-            }
-            isMemberResult = null != id;
-            if (isMemberResult) {
-              id1 = undefined;
-              tmp4 = closure_5;
-              if (tmp != null) {
-                guild2 = tmp.guild;
-                if (guild2 != null) {
-                  id1 = guild2.id;
-                }
-              }
-              isMemberResult = closure_5.isMember(id1);
-            }
-            return isMemberResult;
-          }
-        }
+        const items2 = [data];
         cResult[8] = data;
-        cResult[9] = fn2;
+        cResult[9] = fn3;
         cResult[10] = items2;
         let tmp21 = items2;
-        let tmp20 = fn2;
+        let tmp20 = fn3;
       } else {
         tmp20 = cResult[9];
         tmp21 = cResult[10];
@@ -345,7 +295,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp23 = obj3;
       const tmpResult = require("initialize");
     }
-  : (websites, current) => {
+  : function useGameProfileInvite(websites, current) {
       _require = current;
       noop.useRef(current);
       const items = [current];

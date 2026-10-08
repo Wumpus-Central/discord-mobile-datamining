@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import v1 from "../../../../../_runtime/01266_v1.js";
-import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
+import v1 from "../../../../../_runtime/01278_v1.js";
+import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Card2 from "../../../../design/components/Card/native/Card.native.tsx";
@@ -31,7 +31,7 @@ function itemType(kind) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   list: { paddingHorizontal: nativeDefault.space.PX_16 },
   header: null,
@@ -104,7 +104,7 @@ obj2.rowTitle = { flexShrink: 1 };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (entry) => {
+  ? function TraceRow(entry) {
       const cResult = c.c(74);
       entry = entry.entry;
       let str = entry.onPress;
@@ -388,12 +388,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const obj13 = { tokens: null };
       const tmpResult = ConjureTraceUtils;
       obj13.tokens = debug_ConjureTraceFormat.formatTokens(entry.promptTokens);
-      formatDurationResult = intl.formatToPlainString(_modDef3753["6GQUgQ"], obj13);
+      formatDurationResult = intl.formatToPlainString(_modDef3827["6GQUgQ"], obj13);
       const tmpResult6 = debug_ConjureTraceFormat;
     }
-  : (entry) => {
+  : function TraceRow(entry) {
       entry = entry.entry;
-      const onPress = entry.onPress;
+      onPress = entry.onPress;
       const tmp = closure_10();
       const traceCategoryTextStyles = ConjureTraceFormat.useTraceCategoryTextStyles();
       const traceCategoryResult = ConjureTraceUtils.traceCategory(entry);
@@ -402,7 +402,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != entry.promptTokens) {
           const intl = util.intl;
           const obj3 = { tokens: debug_ConjureTraceFormat.formatTokens(entry.promptTokens) };
-          let formatToPlainStringResult = intl.formatToPlainString(_modDef3753["6GQUgQ"], obj3);
+          let formatToPlainStringResult = intl.formatToPlainString(_modDef3827["6GQUgQ"], obj3);
           const tmp2Result = debug_ConjureTraceFormat;
         }
         const items = [tmp.rowSlot];
@@ -483,7 +483,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (entries) => {
+  ? function TraceOverview(entries) {
       const cResult = require("c").c(23);
       entries = entries.entries;
       const tmp4 = closure_10();
@@ -586,7 +586,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               items1[1] = closure_2_8(Text_Text.Text, obj3);
               const obj5 = { variant: "text-xs/normal", color: "text-subtle", children: null };
               const intl = util.intl;
-              obj5.children = intl.formatToPlainString(_modDef3753["3dQ1ly"], { percent: num2 });
+              obj5.children = intl.formatToPlainString(_modDef3827["3dQ1ly"], { percent: num2 });
               items1[2] = closure_2_8(Text_Text.Text, obj5);
               const intl2 = util.intl;
               let num4;
@@ -599,7 +599,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               items1[3] = closure_2_8(Text_Text.Text, {
                 variant: "text-xs/normal",
                 color: "text-subtle",
-                children: intl2.formatToPlainString(_modDef3753.Ow0k34, { count: num4 }),
+                children: intl2.formatToPlainString(_modDef3827.Ow0k34, { count: num4 }),
               });
               let tmp6Result = null;
               if (0 !== num) {
@@ -659,11 +659,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = mapped1;
       let obj2 = require("ConjureTraceFormat");
     }
-  : (arg0) => {
+  : function TraceOverview(arg0) {
       const entries = arg0.entries;
       let tmp = closure_10();
       closure_1 = tmp;
-      dependencyMap = entries(16782).useTraceCategoryFillStyles();
+      dependencyMap = entries(17057).useTraceCategoryFillStyles();
       let items = [entries];
       const memo = noop.useMemo(() => ConjureTraceUtils.traceCategoryTotals(entries), items);
       const reduced = memo.reduce((acc, ms) => acc + ms.ms, 0);
@@ -693,7 +693,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.children = mapped;
       let items1 = [closure_8(View, obj3)];
       let obj4 = { style: tmp.legend, children: null };
-      const TRACE_CATEGORIES = entries(16784).TRACE_CATEGORIES;
+      const TRACE_CATEGORIES = entries(17059).TRACE_CATEGORIES;
       obj4.children = TRACE_CATEGORIES.map((item) => {
         closure_0 = item;
         const found = memo.find((category) => category.category === closure_0);
@@ -722,7 +722,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         items1[1] = closure_2_8(Text_Text.Text, obj3);
         const obj5 = { variant: "text-xs/normal", color: "text-subtle", children: null };
         const intl = util.intl;
-        obj5.children = intl.formatToPlainString(_modDef3753["3dQ1ly"], { percent: num2 });
+        obj5.children = intl.formatToPlainString(_modDef3827["3dQ1ly"], { percent: num2 });
         items1[2] = closure_2_8(Text_Text.Text, obj5);
         const intl2 = util.intl;
         let num4;
@@ -735,7 +735,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         items1[3] = closure_2_8(Text_Text.Text, {
           variant: "text-xs/normal",
           color: "text-subtle",
-          children: intl2.formatToPlainString(_modDef3753.Ow0k34, { count: num4 }),
+          children: intl2.formatToPlainString(_modDef3827.Ow0k34, { count: num4 }),
         });
         let tmp6Result = null;
         if (0 !== num) {
@@ -761,7 +761,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/debug/native/ConjureTraceTab.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (projectId) => {
+  ? function ConjureTraceTab(projectId) {
       const cResult = projectId(stateFromStoresArray[9]).c(59);
       projectId = projectId.projectId;
       const tmp4 = closure_10();
@@ -813,9 +813,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmpResult = projectId(stateFromStoresArray[18]);
       const stateFromStores = projectId(stateFromStoresArray[18]).useStateFromStores(tmp10, tmp12, tmp13);
-      let obj4 = noop;
+      let obj4 = onPress;
       const tmpResult3 = projectId(stateFromStoresArray[18]);
-      first1 = first1(noop.useState(""), 2)[0];
+      first1 = first1(onPress.useState(""), 2)[0];
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class I {
           constructor() {
@@ -854,7 +854,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[14] !== projectId) {
-          class X {
+          class F {
             constructor(arg0) {
               obj = closure_0(closure_2[21]);
               obj1 = { key: closure_0(closure_2[22]).CONJURE_TRACE_DETAIL_SHEET_KEY, content: null };
@@ -865,9 +865,56 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[14] = projectId;
-          cResult[15] = X;
+          class H {
+            constructor(arg0) {
+              item = projectId.item;
+              if ("entry" === item.kind) {
+                tmp6 = jsx;
+                tmp7 = TraceRow;
+                obj1 = { entry: null, onPress: null };
+                obj1.entry = item.entry;
+                tmp8 = closure_5;
+                obj1.onPress = closure_5;
+                tmp9Result = jsx(TraceRow, obj1);
+              } else {
+                obj7 = { style: null, children: null };
+                tmp11 = closure_1;
+                obj7.style = closure_1.groupHead;
+                tmp12 = jsx;
+                tmp13 = closure_0;
+                tmp14 = closure_2;
+                tmp9 = jsxs;
+                tmp10 = View;
+                obj8 = { variant: "text-xs/semibold", color: "text-muted", children: null };
+                obj8.children = item.label;
+                items = [, ,];
+                items[0] = jsx(closure_0(closure_2[16]).Text, obj8);
+                tmp15 = null;
+                tmp2 = null;
+                if (null != item.started) {
+                  tmp = jsx;
+                  obj = { variant: "text-xs/normal", color: "text-subtle", children: null };
+                  obj.children = item.started;
+                  tmp2 = jsx(tmp13(tmp14[16]).Text, obj);
+                }
+                items[1] = tmp2;
+                tmp3 = null;
+                if (null != item.spanMs) {
+                  tmp4 = jsx;
+                  obj9 = { variant: "text-xs/normal", color: "text-subtle", children: null };
+                  tmp13Result = tmp13(tmp14[14]);
+                  obj9.children = tmp13Result.formatDuration(item.spanMs);
+                  tmp3 = jsx(tmp13(tmp14[16]).Text, obj9);
+                }
+                items[2] = tmp3;
+                obj7.children = items;
+                tmp9Result = tmp9(tmp10, obj7);
+              }
+              return tmp9Result;
+            }
+          }
         } else {
-          class X {
+          class F {
             constructor(arg0) {
               obj = closure_0(closure_2[21]);
               obj1 = { key: closure_0(closure_2[22]).CONJURE_TRACE_DETAIL_SHEET_KEY, content: null };
@@ -878,9 +925,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        noop = X;
-        if (cResult[16] === X) {
-          class X {
+        onPress = F;
+        if (cResult[16] === F) {
+          class F {
             constructor(arg0) {
               obj = closure_0(closure_2[21]);
               obj1 = { key: closure_0(closure_2[22]).CONJURE_TRACE_DETAIL_SHEET_KEY, content: null };
@@ -891,7 +938,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[19] === stateFromStoresArray) {
-            class X {
+            class F {
               constructor(arg0) {
                 obj = closure_0(closure_2[21]);
                 obj1 = { key: closure_0(closure_2[22]).CONJURE_TRACE_DETAIL_SHEET_KEY, content: null };
@@ -901,7 +948,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            class O {
+            class N {
               constructor() {
                 combined = "vibegrations-trace-" + projectId + ".json";
                 closure_0 = combined;
@@ -963,7 +1010,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             combined = tmp4;
                             c1 = 1;
                             dependencyMap = 1;
-                            const obj6 = { value: combined(7887).clearFolder("cache", combined1), done: false };
+                            const obj6 = { value: combined(8307).clearFolder("cache", combined1), done: false };
                             return obj6;
                           }
                         } else if (1 === tmp4) {
@@ -977,7 +1024,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           } else {
                             c1 = 2;
                             dependencyMap = 1;
-                            const obj8 = { value: combined(7887).removeFile("cache", closure_128_1), done: false };
+                            const obj8 = { value: combined(8307).removeFile("cache", closure_128_1), done: false };
                             return obj8;
                           }
                         } else if (arg0 === 1) {
@@ -1009,7 +1056,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          class O {
+          class N {
             constructor() {
               combined = "vibegrations-trace-" + projectId + ".json";
               closure_0 = combined;
@@ -1071,7 +1118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           combined = tmp4;
                           c1 = 1;
                           dependencyMap = 1;
-                          const obj6 = { value: combined(7887).clearFolder("cache", combined1), done: false };
+                          const obj6 = { value: combined(8307).clearFolder("cache", combined1), done: false };
                           return obj6;
                         }
                       } else if (1 === tmp4) {
@@ -1085,7 +1132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         } else {
                           c1 = 2;
                           dependencyMap = 1;
-                          const obj8 = { value: combined(7887).removeFile("cache", closure_128_1), done: false };
+                          const obj8 = { value: combined(8307).removeFile("cache", closure_128_1), done: false };
                           return obj8;
                         }
                       } else if (arg0 === 1) {
@@ -1116,47 +1163,111 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          cResult[19] = stateFromStoresArray;
-          cResult[20] = projectId;
-          cResult[21] = O;
-        }
-        const fn3 = function j(item) {
-          item = item.item;
-          if ("entry" === item.kind) {
-            const obj2 = { entry: item.entry, onPress };
-            let tmp9Result = closure_2_8(closure_11, obj2);
-          } else {
-            const obj3 = { style: groupHead.groupHead, children: null };
-            const obj4 = { variant: "text-xs/semibold", color: "text-muted", children: item.label };
-            const items = [closure_2_8(Text_Text.Text, obj4), ,];
-            let tmp2 = null;
-            if (null != item.started) {
-              const obj = { variant: "text-xs/normal", color: "text-subtle", children: item.started };
-              tmp2 = closure_2_8(Text_Text.Text, obj);
+          class H {
+            constructor(arg0) {
+              item = projectId.item;
+              if ("entry" === item.kind) {
+                tmp6 = jsx;
+                tmp7 = TraceRow;
+                obj1 = { entry: null, onPress: null };
+                obj1.entry = item.entry;
+                tmp8 = closure_5;
+                obj1.onPress = closure_5;
+                tmp9Result = jsx(TraceRow, obj1);
+              } else {
+                obj7 = { style: null, children: null };
+                tmp11 = closure_1;
+                obj7.style = closure_1.groupHead;
+                tmp12 = jsx;
+                tmp13 = closure_0;
+                tmp14 = closure_2;
+                tmp9 = jsxs;
+                tmp10 = View;
+                obj8 = { variant: "text-xs/semibold", color: "text-muted", children: null };
+                obj8.children = item.label;
+                items = [, ,];
+                items[0] = jsx(closure_0(closure_2[16]).Text, obj8);
+                tmp15 = null;
+                tmp2 = null;
+                if (null != item.started) {
+                  tmp = jsx;
+                  obj = { variant: "text-xs/normal", color: "text-subtle", children: null };
+                  obj.children = item.started;
+                  tmp2 = jsx(tmp13(tmp14[16]).Text, obj);
+                }
+                items[1] = tmp2;
+                tmp3 = null;
+                if (null != item.spanMs) {
+                  tmp4 = jsx;
+                  obj9 = { variant: "text-xs/normal", color: "text-subtle", children: null };
+                  tmp13Result = tmp13(tmp14[14]);
+                  obj9.children = tmp13Result.formatDuration(item.spanMs);
+                  tmp3 = jsx(tmp13(tmp14[16]).Text, obj9);
+                }
+                items[2] = tmp3;
+                obj7.children = items;
+                tmp9Result = tmp9(tmp10, obj7);
+              }
+              return tmp9Result;
             }
-            items[1] = tmp2;
-            let tmp3 = null;
-            if (null != item.spanMs) {
-              const obj5 = {
-                variant: "text-xs/normal",
-                color: "text-subtle",
-                children: debug_ConjureTraceFormat.formatDuration(item.spanMs),
-              };
-              tmp3 = closure_2_8(Text_Text.Text, obj5);
-              const tmp13Result = debug_ConjureTraceFormat;
-            }
-            items[2] = tmp3;
-            obj3.children = items;
-            tmp9Result = options(View, obj3);
           }
-          return tmp9Result;
-        };
-        cResult[16] = X;
+          cResult[20] = projectId;
+          cResult[21] = N;
+        }
+        class H {
+          constructor(arg0) {
+            item = projectId.item;
+            if ("entry" === item.kind) {
+              tmp6 = jsx;
+              tmp7 = TraceRow;
+              obj1 = { entry: null, onPress: null };
+              obj1.entry = item.entry;
+              tmp8 = closure_5;
+              obj1.onPress = closure_5;
+              tmp9Result = jsx(TraceRow, obj1);
+            } else {
+              obj7 = { style: null, children: null };
+              tmp11 = closure_1;
+              obj7.style = closure_1.groupHead;
+              tmp12 = jsx;
+              tmp13 = closure_0;
+              tmp14 = closure_2;
+              tmp9 = jsxs;
+              tmp10 = View;
+              obj8 = { variant: "text-xs/semibold", color: "text-muted", children: null };
+              obj8.children = item.label;
+              items = [, ,];
+              items[0] = jsx(closure_0(closure_2[16]).Text, obj8);
+              tmp15 = null;
+              tmp2 = null;
+              if (null != item.started) {
+                tmp = jsx;
+                obj = { variant: "text-xs/normal", color: "text-subtle", children: null };
+                obj.children = item.started;
+                tmp2 = jsx(tmp13(tmp14[16]).Text, obj);
+              }
+              items[1] = tmp2;
+              tmp3 = null;
+              if (null != item.spanMs) {
+                tmp4 = jsx;
+                obj9 = { variant: "text-xs/normal", color: "text-subtle", children: null };
+                tmp13Result = tmp13(tmp14[14]);
+                obj9.children = tmp13Result.formatDuration(item.spanMs);
+                tmp3 = jsx(tmp13(tmp14[16]).Text, obj9);
+              }
+              items[2] = tmp3;
+              obj7.children = items;
+              tmp9Result = tmp9(tmp10, obj7);
+            }
+            return tmp9Result;
+          }
+        }
+        cResult[16] = F;
         cResult[17] = tmp4.groupHead;
-        cResult[18] = fn3;
+        cResult[18] = H;
       }
       const items4 = [];
-      const tmp15 = first1(noop.useState(""), 2);
+      const tmp15 = first1(onPress.useState(""), 2);
       const tmpResult4 = projectId(stateFromStoresArray[11]);
       let item = projectId(stateFromStoresArray[11])
         .groupTraceByTurn(stateFromStoresArray)
@@ -1172,7 +1283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj2.key = "group-" + turnId;
             const intl = util.intl;
             const obj3 = { number: index + 1 };
-            obj2.label = intl.formatToPlainString(_modDef3753.gPwGYA, obj3);
+            obj2.label = intl.formatToPlainString(_modDef3827.gPwGYA, obj3);
             obj2.started = ConjureTimeFormat.formatClockTime(turnId.startedAt);
             obj2.spanMs = turnId.spanMs;
             items4.push(obj2);
@@ -1189,10 +1300,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = items4;
       const groupTraceByTurnResult = projectId(stateFromStoresArray[11]).groupTraceByTurn(stateFromStoresArray);
     }
-  : (projectId) => {
+  : function ConjureTraceTab(projectId) {
       projectId = projectId.projectId;
       let stateFromStoresArray;
-      let onPress;
+      onPress = undefined;
       const tmp = closure_10();
       importDefault = tmp;
       let items = [ConjureProjectStore];
@@ -1233,7 +1344,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj2.key = "group-" + turnId;
               const intl = util.intl;
               const obj3 = { number: index + 1 };
-              obj2.label = intl.formatToPlainString(_modDef3753.gPwGYA, obj3);
+              obj2.label = intl.formatToPlainString(_modDef3827.gPwGYA, obj3);
               obj2.started = ConjureTimeFormat.formatClockTime(turnId.startedAt);
               obj2.spanMs = turnId.spanMs;
               items.push(obj2);

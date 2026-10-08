@@ -92,15 +92,15 @@ let closure_13 = async function _computeNativeDisplayPair(arg0) {
     }
   }
 };
-let closure_9 = fn(9380).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
-let Features = fn(4921).Features;
+let closure_9 = fn(8801).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+let Features = fn(5115).Features;
 const SecureFramesPairwiseFingerprintMode = { FROZEN: "frozen", LIVE: "live" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx");
 
 export { SecureFramesPairwiseFingerprintMode };
-export const useSecureFramesPairwiseFingerprint = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export const useSecureFramesPairwiseFingerprint = ReactCompilerGating.isReactCompilerEnabled() ? (function useSecureFramesPairwiseFingerprint(userId) {
   obj = require("c");
   const cResult = obj.c(22);
   userId = userId.userId;
@@ -234,7 +234,7 @@ export const useSecureFramesPairwiseFingerprint = ReactCompilerGating.isReactCom
               c0 = 3;
               const obj3 = { value, done: true };
               return obj3;
-            } else if (fn.supports(constants.MLS_PAIRWISE_FINGERPRINTS)) {
+            } else if (t8.supports(constants.MLS_PAIRWISE_FINGERPRINTS)) {
               c1 = 2;
               c0 = 1;
               const obj5 = { value: computeNativeDisplayPair(c0), done: false };
@@ -273,7 +273,7 @@ export const useSecureFramesPairwiseFingerprint = ReactCompilerGating.isReactCom
         }
       }
     });
-    let fn = function() {
+    function t8() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -282,14 +282,14 @@ export const useSecureFramesPairwiseFingerprint = ReactCompilerGating.isReactCom
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    };
+    }
     class F {
       constructor() {
         return closure_6.getId();
       }
     }
     cResult[8] = userId;
-    cResult[9] = fn;
+    cResult[9] = t8;
   } else {
     class D {
       constructor() {
@@ -297,7 +297,7 @@ export const useSecureFramesPairwiseFingerprint = ReactCompilerGating.isReactCom
       }
     }
   }
-  fn = tmp19;
+  t8 = tmp19;
   RTCConnectionStore = obj3.useRef(0);
   closure_9 = obj3.useRef(null);
   Features = obj3.useRef(false);
@@ -330,7 +330,7 @@ export const useSecureFramesPairwiseFingerprint = ReactCompilerGating.isReactCom
             num2 = 0;
             closure_9.current = setTimeout(() => {
               asyncGeneratorStep(true);
-              fn().then(() => { ... });
+              t8().then(() => { ... });
             }, 0);
           } else {
             tmp4 = closure_10;
@@ -348,7 +348,7 @@ export const useSecureFramesPairwiseFingerprint = ReactCompilerGating.isReactCom
   cResult[14] = items3;
   cResult[15] = L;
   const tmpResult4 = require("initialize");
-}) : ((userId) => {
+}) : (function useSecureFramesPairwiseFingerprint(userId) {
   userId = userId.userId;
   let FROZEN = userId.mode;
   if (FROZEN === undefined) {

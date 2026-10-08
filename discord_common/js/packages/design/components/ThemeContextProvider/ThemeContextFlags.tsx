@@ -28,7 +28,7 @@ export const setThemeFlag = function setThemeFlag(tmpResult, MOBILE_DARK_GRADIEN
   return tmpResult | MOBILE_DARK_GRADIENT_THEME_ENABLED;
 };
 export const useThemeFlag = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useThemeFlag(arg0) {
       const cResult = c.c(3);
       const themeContext = ThemeContext.useThemeContext();
       if (cResult[0] === themeContext) {
@@ -42,4 +42,6 @@ export const useThemeFlag = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = (themeContext.flags & arg0) === arg0;
       tmp3 = tmp4;
     }
-  : (arg0) => (ThemeContext.useThemeContext().flags & arg0) === arg0;
+  : function useThemeFlag(arg0) {
+      return (ThemeContext.useThemeContext().flags & arg0) === arg0;
+    };

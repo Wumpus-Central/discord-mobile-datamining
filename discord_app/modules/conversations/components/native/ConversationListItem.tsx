@@ -11,13 +11,13 @@ import ChannelConversationsStore from "../../ChannelConversationsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(7118).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_6 = fn(7304).MOBILE_PREVIEW_MESSAGE_COUNT;
 const VerticalGradient = fn(1085).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const colors = ["black", "black"];
 const colors2 = ["black", "transparent"];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   card: {
     marginBottom: nativeDefault.space.PX_12,
@@ -70,12 +70,12 @@ obj.maskFade = { height: nativeDefault.space.PX_64 };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (conversation) => {
+  ? function ConversationListItemBase(conversation) {
       const cResult = conversation(576).c(50);
       conversation = conversation.conversation;
       const tmp4 = closure_12();
       let obj = conversation(576);
-      const navigation = conversation(1490).useNavigation();
+      const navigation = conversation(1502).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelConversationsStore];
         cResult[0] = items;
@@ -135,7 +135,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                         if (cResult[25] !== tmp4.maskOpaque) {
                           const obj4 = { colors, style: tmp4.maskOpaque };
-                          const tmp33 = closure_8(navigation(5612), obj4);
+                          const tmp33 = closure_8(navigation(5387), obj4);
                           cResult[25] = tmp4.maskOpaque;
                           cResult[26] = tmp33;
                           let tmp29 = tmp33;
@@ -146,7 +146,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                           const obj5 = { colors: colors2, start: null, end: null, style: null };
                           ({ START: obj9.start, END: obj9.end } = VerticalGradient);
                           obj5.style = tmp4.maskFade;
-                          const tmp39 = closure_8(navigation(5612), obj5);
+                          const tmp39 = closure_8(navigation(5387), obj5);
                           cResult[27] = tmp4.maskFade;
                           cResult[28] = tmp39;
                           let tmp34 = tmp39;
@@ -190,7 +190,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                                         };
                                         const items1 = [tmp25, tmp54];
                                         obj6.children = items1;
-                                        const tmp60 = closure_9(tmp(6002).Card, obj6);
+                                        const tmp60 = closure_9(tmp(6186).Card, obj6);
                                         cResult[44] = conversation.title;
                                         cResult[45] = tmp13;
                                         cResult[46] = tmp4.card;
@@ -201,7 +201,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                                       }
                                     }
                                     const obj7 = { style: tmp4.previewsMask, maskElement: tmp40, children: tmp50 };
-                                    const tmp57 = closure_8(navigation(6059), obj7);
+                                    const tmp57 = closure_8(navigation(6245), obj7);
                                     cResult[40] = tmp4.previewsMask;
                                     cResult[41] = tmp40;
                                     cResult[42] = tmp50;
@@ -218,7 +218,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                             if (null == arr4) {
-                              let mapped = closure_8(navigation(7597), {});
+                              let mapped = closure_8(navigation(9304), {});
                             } else {
                               mapped = arr4.map((blocked) => {
                                 if (!blocked.blocked) {
@@ -274,7 +274,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     style: tmp4.timestamp,
                     children: tmp20,
                   };
-                  const tmp24 = closure_8(tmp(4892).Text, obj12);
+                  const tmp24 = closure_8(tmp(5086).Text, obj12);
                   cResult[18] = tmp4.timestamp;
                   cResult[19] = tmp20;
                   cResult[20] = tmp24;
@@ -287,7 +287,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   style: tmp4.title,
                   children: conversation.title,
                 };
-                const tmp19 = closure_8(tmp(4892).Text, obj13);
+                const tmp19 = closure_8(tmp(5086).Text, obj13);
                 cResult[13] = conversation.title;
                 cResult[14] = tmp4.title;
                 cResult[15] = tmp19;
@@ -324,7 +324,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = fn2;
         const tmpResult = tmp(504);
       }
-      const fn = function l() {
+      const fn = function s() {
         return ChannelConversationsStore.getHydratedMessages(conversation.channelId, conversation.id);
       };
       const items4 = [,];
@@ -335,9 +335,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items4;
       tmp9 = items4;
       tmp8 = fn;
-      const obj2 = conversation(1490);
+      const obj2 = conversation(1502);
     }
-  : (conversation) => {
+  : function ConversationListItemBase(conversation) {
       conversation = conversation.conversation;
       let stateFromStores;
       const tmp = closure_12();
@@ -465,7 +465,7 @@ let result = size.fileFinishedImporting("modules/conversations/components/native
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channelId) => {
+    ? function ConversationListItem(channelId) {
         const cResult = channelId(576).c(7);
         channelId = channelId.channelId;
         const conversationId = channelId.conversationId;
@@ -496,7 +496,7 @@ export default noop.memo(
           }
           return tmp9;
         }
-        const fn = function l() {
+        const fn = function s() {
           const conversationMetadata = ChannelConversationsStore.getConversationMetadata(channelId, conversationId);
           let conversation;
           if (conversationMetadata != null) {
@@ -514,7 +514,7 @@ export default noop.memo(
         const obj = channelId(576);
         tmp = channelId;
       }
-    : (channelId) => {
+    : function ConversationListItem(channelId) {
         channelId = channelId.channelId;
         const conversationId = channelId.conversationId;
         const items = [ChannelConversationsStore];

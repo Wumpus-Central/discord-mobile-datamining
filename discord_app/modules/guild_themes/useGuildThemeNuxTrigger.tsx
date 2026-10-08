@@ -5,13 +5,13 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let constants = fn(2048).DismissibleContentGroupName;
+let constants = fn(2060).DismissibleContentGroupName;
 let c5 = 2000;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/useGuildThemeNuxTrigger.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, isNuxOpen) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildThemeNuxTrigger(arg0, isNuxOpen) {
   _require = arg0;
   const cResult = require("c").c(12);
   isNuxOpen = isNuxOpen.isNuxOpen;
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, isNuxOpen)
     const tmpResult = tmp(tmp2[7]);
   }
   const obj2 = require("GuildThemeResolver");
-}) : ((arg0, isNuxOpen) => {
+}) : (function useGuildThemeNuxTrigger(arg0, isNuxOpen) {
   _require = arg0;
   isNuxOpen = isNuxOpen.isNuxOpen;
   const openNux = isNuxOpen.openNux;

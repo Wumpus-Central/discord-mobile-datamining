@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesAccessibleColors.tsx");
 
 export const useDisplayNameStylesAccessibleColors = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useDisplayNameStylesAccessibleColors(arg0) {
       const cResult = backgroundColor(effectId[3]).c(14);
       ({ displayNameStyles, backgroundColor } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -93,7 +93,7 @@ export const useDisplayNameStylesAccessibleColors = ReactCompilerGating.isReactC
       }
       const tmpResult2 = backgroundColor(effectId[6]);
     }
-  : (displayNameStyles) => {
+  : function useDisplayNameStylesAccessibleColors(displayNameStyles) {
       displayNameStyles = displayNameStyles.displayNameStyles;
       const backgroundColor = displayNameStyles.backgroundColor;
       let stateFromStores;

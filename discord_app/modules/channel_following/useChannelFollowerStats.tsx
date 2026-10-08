@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_following/useChannelFollowerStats.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useChannelFollowerStats(arg0) {
       _require = arg0;
       const cResult = require("c").c(12);
       const tmp4 = stateFromStores(noop.useState(false), 2);
@@ -63,47 +63,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp14 = items2;
         }
       }
-      class C {
-        constructor() {
-          tmp = closure_3;
-          if (null == closure_3) {
-            tmp4 = closure_1;
-            if (!closure_1) {
-              tmp5 = closure_2;
-              flag = true;
-              tmp6 = closure_2(true);
-              tmp7 = closure_1;
-              tmp8 = closure_2;
-              obj = closure_1(closure_2[7]);
-              tmp9 = closure_0;
-              channelFollowerStats = obj.fetchChannelFollowerStats(closure_0);
-            }
-            return;
-          } else {
-            tmp2 = globalThis;
-            _Date = Date;
-            tmp3 = closure_6;
+      const fn2 = function _() {
+        if (null == stateFromStores) {
+          if (!first) {
+            closure_2(true);
+            const channelFollowerStats = ChannelFollowerActionCreatorsDefault.fetchChannelFollowerStats(closure_0);
           }
-          tmp11 = null != tmp && closure_1;
-          if (tmp11) {
-            tmp12 = closure_2;
-            flag2 = false;
-            tmp13 = closure_2(false);
-          }
-          return;
+        } else {
+          const _Date = Date;
         }
-      }
+        if (tmp11) {
+          closure_2(false);
+        }
+        tmp11 = null != stateFromStores && first;
+      };
       const items3 = [arg0, stateFromStores, first];
       cResult[4] = arg0;
       cResult[5] = stateFromStores;
       cResult[6] = first;
-      cResult[7] = C;
+      cResult[7] = fn2;
       cResult[8] = items3;
       tmp12 = items3;
-      tmp11 = C;
+      tmp11 = fn2;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useChannelFollowerStats(arg0) {
       _require = arg0;
       const tmp = stateFromStores(noop.useState(false), 2);
       const first = tmp[0];

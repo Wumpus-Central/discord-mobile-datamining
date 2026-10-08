@@ -6,9 +6,9 @@ import GuildIncidentsStore from "../../../guild_antiraid/GuildIncidentsStore.tsx
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHasCommunityActivityAlertsSetting() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildIncidentsStore];
@@ -24,7 +24,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useHasCommunityActivityAlertsSetting() {
       const items = [GuildIncidentsStore];
       return initialize.useStateFromStores(
         items,
@@ -36,13 +36,13 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.D9yVAH);
   },
-  parent: fn(7645).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(7966).MobileUserSettings.NOTIFICATIONS,
   useDescription: function useCommunityActivityAlertsSettingDescription() {
     const intl = util.intl;
     return intl.string(util.t["0PhAOH"]);
   },
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useHasCommunityActivityAlertsSetting() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [GuildIncidentsStore];
@@ -58,7 +58,7 @@ const route = SettingBuilders.createRoute({
         }
         return initialize.useStateFromStores(tmp4, tmp5);
       }
-    : () => {
+    : function useHasCommunityActivityAlertsSetting() {
         const items = [GuildIncidentsStore];
         return initialize.useStateFromStores(
           items,

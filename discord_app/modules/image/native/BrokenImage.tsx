@@ -1,6 +1,6 @@
 // discord_app/modules/image/native/BrokenImage.tsx
 import c from "../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/07550_inlineStyles.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -12,7 +12,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/image/native/BrokenImage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BrokenImage(arg0) {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp6 = jsx(inlineStyles.Path, {
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp7;
     }
-  : (arg0) => {
+  : function BrokenImage(arg0) {
       const size = { width: 24, height: 24, fill: "hsl(217, 7.6%, 33.5%)" };
       const merged = Object.assign(arg0);
       size.children = jsx(inlineStyles.Path, {

@@ -11,14 +11,14 @@ require = fn;
 function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   return closure_1_8(closure_18, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
 }
-const IOS_POINTER_STYLE = fn(5618).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(16262);
+const IOS_POINTER_STYLE = fn(5384).IOS_POINTER_STYLE;
+const GuildsBarConstants = fn(16522);
 ({ GUILD_ITEM_HIT_SLOP: hasOwnProperty, GUILD_ITEM_INSET_LEFT: metroRequire, useGuildWrapperSize: closure_7 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const CORNER_SPRING_PHYSICS = { mass: 0.8, damping: 100, stiffness: 150 };
 const BAR_SPRING_PHYSICS = { mass: 0.25, damping: 100, stiffness: 200 };
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let closure_12 = createStyles.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {
@@ -31,7 +31,7 @@ let closure_12 = createStyles.createStyles(() => {
   obj.expandedChildrenWrapper = rect;
   return obj;
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_13 = createStyles.createStyles((arg0, arg1, width, height) => {
   const obj = { pressableWrapper: null, itemShape: null, itemShapeSelected: null };
   const size = { position: "relative", paddingTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingBottom: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingLeft, height, width: width + hasOwnProperty.left + hasOwnProperty.right };
@@ -61,7 +61,7 @@ const __initData2 = { code: "function GuildsBarAnimatedItemWrapperTsx2(values_0)
 const __initData3 = { code: "function GuildsBarAnimatedItemWrapperTsx3(values){const{disableEntering,sharedId,id,withSpring,BAR_SPRING_PHYSICS,guildItemSize}=this.__closure;if(disableEntering||sharedId!=null&&sharedId.get()!==id){return{animations:{},initialValues:{}};}return{animations:{originY:withSpring(values.targetOriginY,BAR_SPRING_PHYSICS,'animate-always'),originX:withSpring(values.targetOriginX,BAR_SPRING_PHYSICS,'animate-always'),height:withSpring(values.targetHeight,BAR_SPRING_PHYSICS,'animate-always')},initialValues:{height:8,originY:guildItemSize/2,originX:-12}};}" };
 const __initData4 = { code: "function GuildsBarAnimatedItemWrapperTsx4(values_0){const{withSpring,BAR_SPRING_PHYSICS,transitionState,TransitionStates,cleanUp,runOnJS}=this.__closure;return{animations:{originY:withSpring(values_0.targetOriginY,BAR_SPRING_PHYSICS,'animate-always'),originX:withSpring(values_0.targetOriginX,BAR_SPRING_PHYSICS,'animate-always'),height:withSpring(values_0.targetHeight,BAR_SPRING_PHYSICS,'animate-always')},initialValues:{height:values_0.currentHeight,originY:values_0.currentOriginY,originX:values_0.currentOriginX},callback:function(finished){if(transitionState===TransitionStates.YEETED&&finished&&cleanUp!=null){runOnJS(cleanUp)();}}};}" };
 let ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((sharedId) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadIndicator(sharedId) {
   const cResult = sharedId(cleanUp[7]).c(19);
   sharedId = sharedId.sharedId;
   const id = sharedId.id;
@@ -164,7 +164,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((sharedId) => {
             }
           }
         }
-        class B {
+        class G {
           constructor(arg0) {
             if (closure_5) {
               obj1 = { animations: null, initialValues: null };
@@ -201,15 +201,15 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((sharedId) => {
           }
         }
         let obj4 = { disableEntering: tmp7, sharedId, id, withSpring: tmp(cleanUp[10]).withSpring, BAR_SPRING_PHYSICS, guildItemSize: token };
-        B.__closure = obj4;
-        B.__workletHash = 12996428552555;
-        B.__initData = __initData;
+        G.__closure = obj4;
+        G.__workletHash = 12996428552555;
+        G.__initData = __initData;
         cResult[7] = tmp7;
         cResult[8] = token;
         cResult[9] = id;
         cResult[10] = sharedId;
-        cResult[11] = B;
-        tmp12 = B;
+        cResult[11] = G;
+        tmp12 = G;
       }
       tmp11[0] = tmp6.unreadIndicator;
       tmp11[1] = tmp9;
@@ -227,7 +227,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((sharedId) => {
   tmp9 = obj5;
   tmp4 = id;
   let tmpResult = sharedId(cleanUp[8]);
-}) : ((sharedId) => {
+}) : (function UnreadIndicator(sharedId) {
   sharedId = sharedId.sharedId;
   const id = sharedId.id;
   let MOUNTED = sharedId.transitionState;
@@ -321,7 +321,7 @@ let closure_18 = tmp5;
 const __initData5 = { code: "function GuildsBarAnimatedItemWrapperTsx5(){const{withSpring,circle,guildItemSelectedBorderRadius,guildItemSize,CORNER_SPRING_PHYSICS}=this.__closure;return{borderRadius:withSpring(!circle?guildItemSelectedBorderRadius:guildItemSize/2,CORNER_SPRING_PHYSICS,\"animate-always\")};}" };
 let __initData6 = { code: "function GuildsBarAnimatedItemWrapperTsx6(){const{withSpring,circle,guildItemSelectedBorderRadius,guildItemSize,CORNER_SPRING_PHYSICS}=this.__closure;return{borderRadius:withSpring(!circle?guildItemSelectedBorderRadius:guildItemSize/2,CORNER_SPRING_PHYSICS,'animate-always')};}" };
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildsBarAnimatedWrapperStyles(arg0) {
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {
     let obj2 = arg0;
@@ -339,7 +339,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp6 = undefined !== disableBGColor && disableBGColor;
   const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
   return closure_13(tmp5, tmp6, token, React5());
-}) : (() => {
+}) : (function useGuildsBarAnimatedWrapperStyles() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -358,7 +358,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarAnimatedItemWrapper.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBarAnimatedItemWrapper(arg0) {
   const cResult = circle(expanded[7]).c(84);
   ({ id, selected, circle } = arg0);
   ({ externalChildren, expandedChildren, label, hint, draggable, cutouts, isDragTarget, dragState, isDragPreview, draggedItemSize, overState, styles, accessibilityActions, onAccessibilityAction } = arg0);
@@ -462,13 +462,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
             obj6.useRef(undefined);
             if (cResult[16] !== expanded) {
-              function we() {
+              function ye() {
                 if (undefined !== ref.current) {
                   if (ref.current !== expanded) {
                     let AccessibilityAnnouncer = require;
                     const intl = util.intl;
                     const t = util.t;
-                    AccessibilityAnnouncer = AccessibilityAnnouncer(4596).AccessibilityAnnouncer;
+                    AccessibilityAnnouncer = AccessibilityAnnouncer(4788).AccessibilityAnnouncer;
                     AccessibilityAnnouncer.announce(intl.string(expanded ? t.CUnsOR : t.jsudFd));
                     ref.current = expanded;
                     const stringResult = intl.string(expanded ? t.CUnsOR : t.jsudFd);
@@ -479,10 +479,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
               const items = [expanded];
               cResult[16] = expanded;
-              cResult[17] = we;
+              cResult[17] = ye;
               cResult[18] = items;
               let tmp25 = items;
-              let tmp24 = we;
+              let tmp24 = ye;
             } else {
               tmp24 = cResult[17];
               tmp25 = cResult[18];
@@ -492,7 +492,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             closure_6 = tmp27;
             if (null == tmp27) {
               if (cResult[27] === onAccessibilityAction) {
-                class Be {
+                class Ge {
                   constructor(arg0) {
                     obj = closure_6;
                     if (null != closure_6) {
@@ -512,7 +512,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     if (cResult[32] === hint) {
                       let obj13 = cResult[33];
                     }
-                    class Be {
+                    class Ge {
                       constructor(arg0) {
                         obj = closure_6;
                         if (null != closure_6) {
@@ -529,7 +529,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     }
                     const joined = obj13.join(". ");
                     if (cResult[36] === expanded) {
-                      class Be {
+                      class Ge {
                         constructor(arg0) {
                           obj = closure_6;
                           if (null != closure_6) {
@@ -545,7 +545,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                         }
                       }
                       if (cResult[39] !== tmp21) {
-                        class Be {
+                        class Ge {
                           constructor(arg0) {
                             obj = closure_6;
                             if (null != closure_6) {
@@ -570,7 +570,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                         tmp49 = cResult[40];
                       }
                       if (cResult[41] === tmp49) {
-                        class Be {
+                        class Ge {
                           constructor(arg0) {
                             obj = closure_6;
                             if (null != closure_6) {
@@ -608,7 +608,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 }
                 if (!tmp4) {
                   if (!tmp34) {
-                    class Be {
+                    class Ge {
                       constructor(arg0) {
                         obj = closure_6;
                         if (null != closure_6) {
@@ -628,7 +628,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     cResult[33] = items2;
                     obj13 = items2;
                   } else {
-                    class Be {
+                    class Ge {
                       constructor(arg0) {
                         obj = closure_6;
                         if (null != closure_6) {
@@ -644,7 +644,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                       }
                     }
                     if (cResult[35] === Symbol.for("react.memo_cache_sentinel")) {
-                      class Be {
+                      class Ge {
                         constructor(arg0) {
                           obj = closure_6;
                           if (null != closure_6) {
@@ -668,7 +668,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     items2.push(tmp43);
                   }
                 } else {
-                  class Be {
+                  class Ge {
                     constructor(arg0) {
                       obj = closure_6;
                       if (null != closure_6) {
@@ -684,7 +684,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     }
                   }
                   if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
-                    class Be {
+                    class Ge {
                       constructor(arg0) {
                         obj = closure_6;
                         if (null != closure_6) {
@@ -709,7 +709,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 }
                 tmp35 = null != hint && hint.length > 0;
               }
-              class Be {
+              class Ge {
                 constructor(arg0) {
                   obj = closure_6;
                   if (null != closure_6) {
@@ -726,10 +726,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
               cResult[27] = onAccessibilityAction;
               cResult[28] = tmp27;
-              cResult[29] = Be;
+              cResult[29] = Ge;
             } else {
               if (cResult[19] !== accessibilityActions) {
-                class Be {
+                class Ge {
                   constructor(arg0) {
                     obj = closure_6;
                     if (null != closure_6) {
@@ -747,7 +747,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 cResult[19] = accessibilityActions;
                 cResult[20] = accessibilityActions;
               }
-              class Be {
+              class Ge {
                 constructor(arg0) {
                   obj = closure_6;
                   if (null != closure_6) {
@@ -789,7 +789,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp16 = obj9;
   }
   if (null != overState) {
-    class Be {
+    class Ge {
       constructor(arg0) {
         obj = closure_6;
         if (null != closure_6) {
@@ -807,7 +807,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     str2 = "none";
   }
   const tmpResult6 = circle(expanded[15]);
-}) : ((id) => {
+}) : (function GuildsBarAnimatedItemWrapper(id) {
   id = id.id;
   const selected = id.selected;
   ({ unread, circle } = id);
@@ -957,7 +957,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         let AccessibilityAnnouncer = require;
         const intl = util.intl;
         const t = util.t;
-        AccessibilityAnnouncer = AccessibilityAnnouncer(4596).AccessibilityAnnouncer;
+        AccessibilityAnnouncer = AccessibilityAnnouncer(4788).AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(intl.string(expanded ? t.CUnsOR : t.jsudFd));
         ref.current = expanded;
         const stringResult = intl.string(expanded ? t.CUnsOR : t.jsudFd);

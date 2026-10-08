@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", justifyContent: "flex-start" },
   textContainer: { flex: 1, justifyContent: "center" },
@@ -22,7 +22,7 @@ let closure_7 = createStyles.createStyles({
 });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BenefitRow(arg0) {
       const cResult = c.c(15);
       ({ emojiId, guildId, title, description } = arg0);
       const tmp4 = closure_7();
@@ -97,7 +97,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp6;
       tmp5 = tmp6;
     }
-  : (description) => {
+  : function BenefitRow(description) {
       description = description.description;
       ({ emojiId, guildId, title } = description);
       const tmp = closure_7();
@@ -127,7 +127,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
 fn(558);
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (benefit) => {
+  ? function ChannelBenefitRow(benefit) {
       const cResult = benefit(576).c(23);
       benefit = benefit.benefit;
       const guildId = benefit.guildId;
@@ -161,7 +161,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = tmp(1126).intl;
         const _HermesInternal = HermesInternal;
         obj2.children = "[" + intl.string(tmp(1126).t.bz1PZX) + "]";
-        const tmp13 = closure_5(tmp(4892).Text, obj2);
+        const tmp13 = closure_5(tmp(5086).Text, obj2);
         cResult[4] = tmp13;
         let tmp11 = tmp13;
       } else {
@@ -203,11 +203,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         ({ channelTitle: channelTitle2, channelIcon } = channelTitle);
         if (cResult[5] !== stateFromStores) {
-          const channelIcon1 = tmp(5819).getChannelIcon(stateFromStores);
+          const channelIcon1 = tmp(8134).getChannelIcon(stateFromStores);
           cResult[5] = stateFromStores;
           cResult[6] = channelIcon1;
           let tmp14 = channelIcon1;
-          const tmpResult2 = tmp(5819);
+          const tmpResult2 = tmp(8134);
         } else {
           tmp14 = cResult[6];
         }
@@ -217,7 +217,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[10] !== tmp10) {
             const obj4 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp10 };
-            const tmp21 = closure_5(tmp(4892).Text, obj4);
+            const tmp21 = closure_5(tmp(5086).Text, obj4);
             cResult[10] = tmp10;
             cResult[11] = tmp21;
             let tmp19 = tmp21;
@@ -238,8 +238,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[14] = tmp19;
           cResult[15] = tmp25;
         }
-        const obj6 = { style: channelIcon, size: tmp(1188).Icon.Sizes.CUSTOM, source: tmp14 };
-        const tmp18 = closure_5(tmp(1188).Icon, obj6);
+        const obj6 = { style: channelIcon, size: tmp(1200).Icon.Sizes.CUSTOM, source: tmp14 };
+        const tmp18 = closure_5(tmp(1200).Icon, obj6);
         cResult[7] = channelTitle.channelIcon;
         cResult[8] = tmp14;
         cResult[9] = tmp18;
@@ -247,7 +247,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = benefit(504);
     }
-  : (benefit) => {
+  : function ChannelBenefitRow(benefit) {
       benefit = benefit.benefit;
       const tmp = closure_7();
       const items = [ChannelStore];
@@ -261,20 +261,20 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       const intl = benefit(1126).intl;
       obj2.children = "[" + intl.string(benefit(1126).t.bz1PZX) + "]";
-      let tmp8 = closure_5(benefit(4892).Text, obj2);
+      let tmp8 = closure_5(benefit(5086).Text, obj2);
       if (null != stateFromStores) {
         const obj3 = { style: tmp.channelTitle, children: null };
         const obj4 = {
           style: tmp.channelIcon,
-          size: tmp2(1188).Icon.Sizes.CUSTOM,
-          source: tmp2(5819).getChannelIcon(stateFromStores),
+          size: tmp2(1200).Icon.Sizes.CUSTOM,
+          source: tmp2(8134).getChannelIcon(stateFromStores),
         };
-        const items2 = [closure_5(tmp2(1188).Icon, obj4)];
+        const items2 = [closure_5(tmp2(1200).Icon, obj4)];
         const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
-        items2[1] = closure_5(tmp2(4892).Text, obj5);
+        items2[1] = closure_5(tmp2(5086).Text, obj5);
         obj3.children = items2;
         tmp8 = closure_6(View, obj3);
-        const tmp2Result = tmp2(5819);
+        const tmp2Result = tmp2(8134);
       }
       if (null != benefit.emoji_id) {
         let str = benefit.emoji_id;
@@ -299,7 +299,7 @@ const result = size.fileFinishedImporting(
 
 export const ChannelBenefitRow = tmp4;
 export const IntangibleBenefitRow = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function IntangibleBenefitRow(arg0) {
       const cResult = c.c(9);
       ({ benefit, guildId } = arg0);
       if (cResult[0] !== benefit) {
@@ -343,7 +343,7 @@ export const IntangibleBenefitRow = ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = tmp14;
       }
     }
-  : (benefit) => {
+  : function IntangibleBenefitRow(benefit) {
       benefit = benefit.benefit;
       if (null != benefit.emoji_id) {
         let str = benefit.emoji_id;

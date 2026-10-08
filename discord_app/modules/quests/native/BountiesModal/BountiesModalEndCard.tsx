@@ -2,7 +2,7 @@
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
 import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -43,7 +43,7 @@ const __initData2 = {
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalEndCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (sourceQuestContent) => {
+  ? function BountiesModalEndCard(sourceQuestContent) {
       const cResult = visible(576).c(6);
       ({ bounty, visible } = sourceQuestContent);
       sourceQuestContent = sourceQuestContent.sourceQuestContent;
@@ -56,8 +56,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: timing.withTiming(num, timingPresets.timingStandard) };
       };
-      const obj2 = visible(4618);
-      fn.__closure = { withTiming: visible(4897).withTiming, visible, timingStandard: visible(4900).timingStandard };
+      const obj2 = visible(4810);
+      fn.__closure = { withTiming: visible(5091).withTiming, visible, timingStandard: visible(5094).timingStandard };
       fn.__workletHash = 15062259404736;
       fn.__initData = __initData;
       const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -98,13 +98,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = visible;
       cResult[5] = tmp6;
       tmp5 = tmp6;
-      const obj3 = { withTiming: visible(4897).withTiming, visible, timingStandard: visible(4900).timingStandard };
+      const obj3 = { withTiming: visible(5091).withTiming, visible, timingStandard: visible(5094).timingStandard };
     }
-  : (visible) => {
+  : function BountiesModalEndCard(visible) {
       visible = visible.visible;
       ({ bounty, sourceQuestContent } = visible);
       const tmp = closure_7();
-      visible(4618);
+      visible(4810);
       const fn = function b() {
         let num = 0;
         if (visible) {
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: timing.withTiming(num, timingPresets.timingStandard) };
       };
-      fn.__closure = { withTiming: visible(4897).withTiming, visible, timingStandard: visible(4900).timingStandard };
+      fn.__closure = { withTiming: visible(5091).withTiming, visible, timingStandard: visible(5094).timingStandard };
       fn.__workletHash = 8770295520643;
       fn.__initData = __initData2;
       if (visible) {

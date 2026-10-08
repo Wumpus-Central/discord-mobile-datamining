@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   image: { alignSelf: "center", justifySelf: "center" },
   tips: {
@@ -28,13 +28,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyTipsSection.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (showHeader) => {
+  ? function SafetyTipsContainer(showHeader) {
       const cResult = safetyTips(576).c(23);
       ({ description, safetyTips } = showHeader);
       showHeader = showHeader.showHeader;
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = closure_4(safetyTips(9820).SafetyBookletSpotIllustration, {});
+        const tmp7 = closure_4(safetyTips(10383).SafetyBookletSpotIllustration, {});
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[12] !== safetyTips) {
               if (cResult[14] !== safetyTips.length) {
-                const fn = function k(tip, arg1) {
+                const fn = function _(tip, arg1) {
                   return React4(
                     SafetyTipsRowDefault,
                     { index: arg1 + 1, tip, end: arg1 === safetyTips.length - 1 },
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { spacing: 16, children: null };
                 const items = [tmp8, tmp18, tmp26];
                 obj3.children = items;
-                const tmp32 = closure_5(safetyTips(5600).Stack, obj3);
+                const tmp32 = closure_5(safetyTips(5373).Stack, obj3);
                 cResult[19] = tmp8;
                 cResult[20] = tmp18;
                 cResult[21] = tmp26;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { spacing: 8, align: "center", justify: "center", children: null };
           const items1 = [tmp12, tmp15];
           obj5.children = items1;
-          const tmp20 = closure_5(safetyTips(5600).Stack, obj5);
+          const tmp20 = closure_5(safetyTips(5373).Stack, obj5);
           cResult[9] = tmp12;
           cResult[10] = tmp15;
           cResult[11] = tmp20;
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "text-default",
           children: description,
         };
-        const tmp17 = closure_4(safetyTips(4892).Text, obj6);
+        const tmp17 = closure_4(safetyTips(5086).Text, obj6);
         cResult[6] = description;
         cResult[7] = tmp4.text;
         cResult[8] = tmp17;
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = { style: tmp4.text, variant: "heading-xl/semibold", children: null };
         const intl = safetyTips(1126).intl;
         obj7.children = intl.string(safetyTips(1126).t.eAbVfS);
-        tmp13 = closure_4(safetyTips(4892).Text, obj7);
+        tmp13 = closure_4(safetyTips(5086).Text, obj7);
       }
       cResult[3] = showHeader;
       cResult[4] = tmp4.text;
@@ -145,25 +145,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = tmp13;
       const obj = safetyTips(576);
     }
-  : (children) => {
+  : function SafetyTipsContainer(children) {
       const safetyTips = children.safetyTips;
       let showHeader = children.showHeader;
       const tmp = closure_6();
       const items = [
-        closure_4(View, { style: tmp.image, children: closure_4(safetyTips(9820).SafetyBookletSpotIllustration, {}) }),
+        closure_4(View, { style: tmp.image, children: closure_4(safetyTips(10383).SafetyBookletSpotIllustration, {}) }),
         ,
       ];
       if (showHeader) {
         const obj2 = { style: tmp.text, variant: "heading-xl/semibold", children: null };
         const intl = tmp3(1126).intl;
         obj2.children = intl.string(tmp3(1126).t.eAbVfS);
-        showHeader = closure_4(tmp3(4892).Text, obj2);
+        showHeader = closure_4(tmp3(5086).Text, obj2);
       }
       const obj3 = { spacing: 16, children: null };
       const obj4 = { spacing: 8, align: "center", justify: "center", children: null };
       const items1 = [
         showHeader,
-        closure_4(safetyTips(4892).Text, {
+        closure_4(safetyTips(5086).Text, {
           style: tmp.text,
           accessibilityRole: "header",
           variant: "text-md/medium",
@@ -172,8 +172,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj4.children = items1;
-      items[1] = closure_5(safetyTips(5600).Stack, obj4);
-      const obj = { style: tmp.image, children: closure_4(safetyTips(9820).SafetyBookletSpotIllustration, {}) };
+      items[1] = closure_5(safetyTips(5373).Stack, obj4);
+      const obj = { style: tmp.image, children: closure_4(safetyTips(10383).SafetyBookletSpotIllustration, {}) };
       const obj5 = {
         style: tmp.text,
         accessibilityRole: "header",
@@ -188,5 +188,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ),
       });
       obj3.children = items;
-      return closure_5(safetyTips(5600).Stack, obj3);
+      return closure_5(safetyTips(5373).Stack, obj3);
     };

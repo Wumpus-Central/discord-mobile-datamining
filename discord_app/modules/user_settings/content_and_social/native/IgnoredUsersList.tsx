@@ -20,7 +20,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   list: { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 },
   sectionLabelStyle: null,
@@ -30,7 +30,7 @@ obj2.sectionLabelStyle = { marginTop: nativeDefault.space.PX_12, marginBottom: n
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (userIds) => {
+  ? function IgnoredUsersList(userIds) {
       const cResult = c.c(21);
       userIds = userIds.userIds;
       const tmp4 = closure_7();
@@ -145,7 +145,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = tmp10;
       }
     }
-  : (userIds) => {
+  : function IgnoredUsersList(userIds) {
       userIds = userIds.userIds;
       const tmp = closure_7();
       useAnalyticsLocationsDefault;
@@ -187,11 +187,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUsersList.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ConnectedIgnoredUsersList() {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [RelationshipStore];
-        const fn = function l() {
+        const fn = function s() {
           return ignoredIDs.getIgnoredIDs();
         };
         cResult[0] = items;
@@ -213,7 +213,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function ConnectedIgnoredUsersList() {
       const items = [RelationshipStore];
       return hasOwnProperty(closure_8, {
         userIds: initialize.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs()),

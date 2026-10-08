@@ -13,7 +13,7 @@ const noop = fn(19);
 ({ useCallback: closure_4, useState: hasOwnProperty } = noop);
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   previewContainer: { flex: 1 },
   previewDivider: {
@@ -35,7 +35,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetPreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ProductDetailsActionSheetPreview(arg0) {
       const cResult = c.c(12);
       ({ product, handlePreviewPress, onTrackPress, onBundleActiveItemChange } = arg0);
       const tmp3 = closure_8();
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp9Result;
       const tmp4 = _slicedToArray(hasOwnProperty(0), 2);
     }
-  : (onBundleActiveItemChange) => {
+  : function ProductDetailsActionSheetPreview(onBundleActiveItemChange) {
       ({ product, handlePreviewPress, onTrackPress } = onBundleActiveItemChange);
       c0 = undefined;
       const tmp = closure_8();

@@ -35,7 +35,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BLACK, borderWidth: 2, border
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CheckpointButton(arg0) {
       const cResult = c.c(26);
       ({
         onPress,
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const tmpResult2 = useToken;
     }
-  : (iconPosition) => {
+  : function CheckpointButton(iconPosition) {
       ({ label, accessibilityLabel, disabled } = iconPosition);
       ({ onPress, Icon, accessibilityHint, accessibilityState } = iconPosition);
       if (disabled === undefined) {

@@ -6,18 +6,18 @@ import MessageReactionsTypes from "../../../messages/MessageReactionsTypes.tsx";
 import ICYMIActionCreatorsDefault from "../../ICYMIActionCreators.tsx";
 import openEmojiPickerActionSheet from "../../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
 import ICYMIContext from "../ICYMIContext.tsx";
-import _objectDestructuringEmpty from "../../../../../_runtime/11884__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../../_runtime/11956__objectDestructuringEmpty.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(6653).ACTION_SHEET_MAX_WIDTH;
-const EmojiIntention = fn(1380).EmojiIntention;
+const ACTION_SHEET_MAX_WIDTH = fn(6830).ACTION_SHEET_MAX_WIDTH;
+const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   header: { width: "100%", display: "flex", alignItems: "center", padding: 8 },
   container: { gap: 12 },
@@ -62,8 +62,8 @@ obj2.emojiText = { lineHeight: 24, fontSize: 20, textAlign: "center", paddingTop
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
-      const cResult = channel(onPressEmoji[12]).c(12);
+  ? function AddEmojiButton(channel) {
+      const cResult = channel(onPressEmoji[12]).c(10);
       channel = channel.channel;
       const onOpenPicker = channel.onOpenPicker;
       onPressEmoji = channel.onPressEmoji;
@@ -74,53 +74,45 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] === onPressEmoji) {
             let tmp5 = cResult[3];
           }
-          if (cResult[4] !== tmp4.emoji) {
-            const items = [tmp4.emoji];
-            cResult[4] = tmp4.emoji;
-            cResult[5] = items;
-            let tmp6 = items;
-          } else {
-            tmp6 = cResult[5];
-          }
           const _Symbol = Symbol;
-          if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+          if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = tmp(tmp2[8]).intl;
             const stringResult = intl.string(tmp(tmp2[8]).t.lfIHs4);
-            cResult[6] = stringResult;
-            let tmp8 = stringResult;
+            cResult[4] = stringResult;
+            let tmp7 = stringResult;
           } else {
-            tmp8 = cResult[6];
+            tmp7 = cResult[4];
           }
           const _Symbol2 = Symbol;
-          if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp12 = closure_10(tmp(tmp2[15]).ReactionIcon, { size: "md" });
-            cResult[7] = tmp12;
-            let tmp10 = tmp12;
+          if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+            const tmp11 = closure_10(tmp(tmp2[15]).ReactionIcon, { size: "md" });
+            cResult[5] = tmp11;
+            let tmp9 = tmp11;
           } else {
-            tmp10 = cResult[7];
+            tmp9 = cResult[5];
           }
-          if (cResult[8] === disabled) {
-            if (cResult[9] === tmp5) {
-              if (cResult[10] === tmp6) {
-                let tmp13 = cResult[11];
+          if (cResult[6] === disabled) {
+            if (cResult[7] === tmp5) {
+              if (cResult[8] === tmp4.emoji) {
+                let tmp12 = cResult[9];
               }
-              return tmp13;
+              return tmp12;
             }
           }
           const obj2 = {
             onPress: tmp5,
-            style: tmp6,
+            style: tmp4.emoji,
             accessible: true,
-            accessibilityLabel: tmp8,
+            accessibilityLabel: tmp7,
             disabled,
-            children: tmp10,
+            children: tmp9,
           };
-          const tmp15 = closure_10(tmp(tmp2[16]).PressableHighlight, obj2);
-          cResult[8] = disabled;
-          cResult[9] = tmp5;
-          cResult[10] = tmp6;
-          cResult[11] = tmp15;
-          tmp13 = tmp15;
+          const tmp14 = closure_10(tmp(tmp2[16]).PressableHighlight, obj2);
+          cResult[6] = disabled;
+          cResult[7] = tmp5;
+          cResult[8] = tmp4.emoji;
+          cResult[9] = tmp14;
+          tmp12 = tmp14;
         }
       }
       const fn = function n() {
@@ -142,7 +134,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       let obj = channel(onPressEmoji[12]);
     }
-  : (channel) => {
+  : function AddEmojiButton(channel) {
       channel = channel.channel;
       const onOpenPicker = channel.onOpenPicker;
       const onPressEmoji = channel.onPressEmoji;
@@ -161,14 +153,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       let obj = {
         onPress: callback,
-        style: null,
+        style: closure_12().emoji,
         accessible: true,
         accessibilityLabel: null,
         disabled: null,
         children: null,
       };
-      const items1 = [closure_12().emoji];
-      obj.style = items1;
       const intl = channel(onPressEmoji[8]).intl;
       obj.accessibilityLabel = intl.string(channel(onPressEmoji[8]).t.lfIHs4);
       obj.disabled = channel.disabled;
@@ -177,7 +167,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (content) => {
+  ? function ReactActionSheetBase(content) {
       const cResult = require("c").c(94);
       content = content.content;
       ({ author, channel, onPressEmoji } = content);
@@ -757,7 +747,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 })();
               });
-              const fn2 = function () {
+              function t2() {
                 const self = this;
                 const apply = closure_0.apply;
                 if (typeof apply === "unknown") {
@@ -766,12 +756,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                   applyArgumentsResult = apply(self, arguments);
                 }
                 return applyArgumentsResult;
-              };
+              }
               cResult[11] = content.id;
               cResult[12] = tmp8;
               cResult[13] = onPressEmoji;
-              cResult[14] = fn2;
-              tmp24 = fn2;
+              cResult[14] = t2;
+              tmp24 = t2;
             }
           }
         }
@@ -839,7 +829,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         });
-        const fn = function () {
+        function t1() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -848,19 +838,19 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[6] = content.id;
         cResult[7] = cResult[1];
         cResult[8] = first1;
         cResult[9] = sendMessage;
-        cResult[10] = fn;
-        tmp22 = fn;
+        cResult[10] = t1;
+        tmp22 = t1;
       }
       let obj = require("c");
       obj2 = noop;
       tmp5 = disabled;
     }
-  : (content) => {
+  : function ReactActionSheetBase(content) {
       content = content.content;
       _require = content;
       const onPressEmoji = content.onPressEmoji;
@@ -921,8 +911,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                     return obj3;
                   } else {
                     closure_5(true);
-                    v1(8039).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-                    const obj5 = v1(8039);
+                    v1(8447).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+                    const obj5 = v1(8447);
                     const obj4 = {
                       itemId: tmp4.id,
                       itemType: hotwheels_gaming_activity,
@@ -933,7 +923,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                         actionDestinationType: null,
                       },
                     };
-                    v1(8039).feedItemActioned(obj4);
+                    v1(8447).feedItemActioned(obj4);
                     v1 = 1;
                     dependencyMap = 1;
                     const obj7 = { value: sendMessage(first1), done: false };
@@ -1215,7 +1205,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/content_inventory/ReactActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ReactActionSheet(arg0) {
       const cResult = c.c(4);
       if (cResult[0] !== arg0) {
         const _Object = Object;
@@ -1231,8 +1221,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { children: null };
         const obj3 = {};
         const merged1 = Object.assign(tmp4);
-        obj2.children = v65535(closure_14, obj3);
-        const tmp15 = v65535(ICYMIContext.ICYMIContextProvider, obj2);
+        obj2.children = collapsed(closure_14, obj3);
+        const tmp15 = collapsed(ICYMIContext.ICYMIContextProvider, obj2);
         cResult[2] = tmp4;
         cResult[3] = tmp15;
         let tmp9 = tmp15;
@@ -1241,7 +1231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : (arg0) => {
+  : function ReactActionSheet(arg0) {
       if (arg0 == null) {
         throw new TypeError("Cannot destructure 'undefined' or 'null'.");
       } else {
@@ -1249,8 +1239,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj = { children: null };
         const obj2 = {};
         const merged1 = Object.assign(merged);
-        obj.children = v65535(closure_14, obj2);
-        return v65535(ICYMIContext.ICYMIContextProvider, obj);
+        obj.children = collapsed(closure_14, obj2);
+        return collapsed(ICYMIContext.ICYMIContextProvider, obj);
       }
     };
 export const getStatusReplyContent = function getStatusReplyContent(reply) {

@@ -67,12 +67,12 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
             notNSFW = globalThis;
             const _Symbol = Symbol;
             if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-              const fn2 = function q() {
+              function handleContactSupportClick() {
                 const tmp = onEligibilityBecameStale(actions[7]);
                 return tmp(onEligibilityBecameStale(actions[8]).getSubmitRequestURL());
-              };
-              cResult[9] = fn2;
-              let push = fn2;
+              }
+              cResult[9] = handleContactSupportClick;
+              let push = handleContactSupportClick;
             } else {
               push = cResult[9];
             }
@@ -467,7 +467,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
         }
       }
     });
-    let fn = function () {
+    function t2() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -476,13 +476,13 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    };
+    }
     cResult[2] = actions2;
     cResult[3] = isModerationMFAEnabled2;
     cResult[4] = isUserMFAEnabled2;
     cResult[5] = onEligibilityBecameStale2;
-    cResult[6] = fn;
-    tmp14 = fn;
+    cResult[6] = t2;
+    tmp14 = t2;
     const tmp10Result = tmp10(BU4Diu[5]);
   } else {
     class D {
@@ -639,14 +639,14 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
           stringResult = intl.string(util.t["xU2fl+"]);
         }
         obj2.actionLabel = stringResult;
-        let fn;
+        let handleContactSupportClick;
         if (!noRecentViolations) {
-          fn = () => {
-            const tmp = onEligibilityBecameStale(4565);
-            return tmp(onEligibilityBecameStale(2115).getSubmitRequestURL());
+          handleContactSupportClick = function handleContactSupportClick() {
+            const tmp = onEligibilityBecameStale(4757);
+            return tmp(onEligibilityBecameStale(2127).getSubmitRequestURL());
           };
         }
-        obj2.actionHandler = fn;
+        obj2.actionHandler = handleContactSupportClick;
         const items = [obj2];
         if (tmp3) {
           const obj = {

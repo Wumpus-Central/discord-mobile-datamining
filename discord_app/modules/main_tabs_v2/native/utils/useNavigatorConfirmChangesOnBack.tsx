@@ -10,12 +10,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useNavigatorConfirmChangesOnBack() {
       const cResult = ref(576).c(4);
       ref = noop.useRef(null);
       importDefault = noop.useRef(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t(preventable) {
+        function onBeforeGoBack(preventable) {
           if (preventable.preventable) {
             let current = ref2.current;
             if (!current) {
@@ -40,9 +40,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               ref2(dependencyMap[5])(obj);
             }
           }
-        };
-        cResult[0] = fn;
-        let first = fn;
+        }
+        cResult[0] = onBeforeGoBack;
+        let first = onBeforeGoBack;
       } else {
         first = cResult[0];
       }
@@ -64,13 +64,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : () => {
+  : function useNavigatorConfirmChangesOnBack() {
       const ref = noop.useRef(null);
       importDefault = noop.useRef(false);
       let obj = {
         onGoBack: useNavigatorBackHandlerDefault({
-          onBeforeGoBack(navigation) {
-            if (navigation.preventable) {
+          onBeforeGoBack(preventable) {
+            if (preventable.preventable) {
               let current = ref2.current;
               if (!current) {
                 const current2 = ref.current;
@@ -81,14 +81,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 current = true !== hasUnsavedChangesResult;
               }
               if (!current) {
-                navigation.preventDefault();
+                preventable.preventDefault();
                 Keyboard.dismiss();
                 const obj = {
                   hasEdits: true,
                   resetPending,
                   onConfirm() {
                     closure_1.current = true;
-                    navigation.goBack();
+                    preventable.goBack();
                   },
                 };
                 ref2(dependencyMap[5])(obj);

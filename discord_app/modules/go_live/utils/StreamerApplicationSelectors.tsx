@@ -60,7 +60,7 @@ export { getStreamerActivityByUserId };
 export { getStreamerActivity };
 export { getStreamerApplication };
 export const useGetStreamApplication = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGetStreamApplication(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -101,7 +101,7 @@ export const useGetStreamApplication = ReactCompilerGating.isReactCompilerEnable
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7, streamApplicationEqualityCheck);
     }
-  : (arg0) => {
+  : function useGetStreamApplication(arg0) {
       _require = arg0;
       const items = [PresenceStore];
       const items1 = [arg0];

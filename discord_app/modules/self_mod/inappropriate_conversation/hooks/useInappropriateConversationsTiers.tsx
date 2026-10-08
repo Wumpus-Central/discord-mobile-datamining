@@ -6,7 +6,7 @@ import SelfModInappropriateConversationExperiment from "../SelfModInappropriateC
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SafetyWarningTypes = fn(9799).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10266).SafetyWarningTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useInappropriateConversationsTiers = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useInappropriateConversationsTiers(id) {
       const cResult = c.c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { location: "context-menu-item" };
@@ -87,7 +87,7 @@ export const useInappropriateConversationsTiers = ReactCompilerGating.isReactCom
       }
       return null;
     }
-  : (id) => {
+  : function useInappropriateConversationsTiers(id) {
       const isEligibleForInappropriateConversationWarning =
         SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({
           location: "context-menu-item",

@@ -5,13 +5,13 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const AutomodTriggerType = fn(11487).AutomodTriggerType;
+const AutomodTriggerType = fn(11473).AutomodTriggerType;
 const Constants = fn(1085);
 ({ GuildFeatures: hasOwnProperty, Permissions: metroRequire } = Constants);
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanCurrentUserManageAutomod(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -47,7 +47,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useCanCurrentUserManageAutomod(arg0) {
       _require = arg0;
       const items = [GuildStore, PermissionStore];
       const items1 = [arg0];
@@ -70,7 +70,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHasMentionRaidLimitAccess(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -108,7 +108,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7);
     }
-  : (arg0) => {
+  : function useHasMentionRaidLimitAccess(arg0) {
       _require = arg0;
       const items = [GuildStore];
       const items1 = [arg0];
@@ -133,7 +133,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useIsUndeletableMentionSpamRule(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(5);
@@ -174,7 +174,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useIsUndeletableMentionSpamRule(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const items = [GuildStore];
@@ -241,7 +241,7 @@ export { hasMentionRaidLimitAccess };
 export const useHasMentionRaidLimitAccess = tmp4;
 export const useIsUndeletableMentionSpamRule = tmp5;
 export const useIsUserProfileRuleEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsUserProfileRuleEnabled(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -277,7 +277,7 @@ export const useIsUserProfileRuleEnabled = ReactCompilerGating.isReactCompilerEn
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7);
     }
-  : (arg0) => {
+  : function useIsUserProfileRuleEnabled(arg0) {
       _require = arg0;
       const items = [GuildStore];
       const items1 = [arg0];

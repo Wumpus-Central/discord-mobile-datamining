@@ -8,9 +8,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDefaultGuildThemePreferenceOptions() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { label: null, value: null };
@@ -30,8 +30,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      noop.useMemo(() => {
+  : function useDefaultGuildThemePreferenceOptions() {
+      return noop.useMemo(() => {
         const obj = { label: null, value: null };
         const intl = util.intl;
         obj.label = intl.string(util.t.aN3RNQ);
@@ -44,19 +44,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items[1] = obj2;
         return items;
       }, []);
+    };
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Q7mm4g);
   },
-  parent: fn(7645).MobileUserSettings.APPEARANCE,
-  useValue: fn(2028).DefaultGuildThemePreference.useSetting,
+  parent: fn(7966).MobileUserSettings.APPEARANCE,
+  useValue: fn(2040).DefaultGuildThemePreference.useSetting,
   onValueChange: function onDefaultGuildThemePreferenceChange(arg0) {
     const DefaultGuildThemePreference = UserSettings.DefaultGuildThemePreference;
     DefaultGuildThemePreference.updateSetting(Number(arg0));
   },
   useOptions: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useDefaultGuildThemePreferenceOptions() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { label: null, value: null };
@@ -76,8 +77,8 @@ const radio = SettingBuilders.createRadio({
         }
         return first;
       }
-    : () =>
-        noop.useMemo(() => {
+    : function useDefaultGuildThemePreferenceOptions() {
+        return noop.useMemo(() => {
           const obj = { label: null, value: null };
           const intl = util.intl;
           obj.label = intl.string(util.t.aN3RNQ);
@@ -89,7 +90,8 @@ const radio = SettingBuilders.createRadio({
           obj2.value = preloaded_user_settings.GuildThemeSourcePreference.PERSONAL;
           items[1] = obj2;
           return items;
-        }, []),
+        }, []);
+      },
   usePredicate() {
     return ServerThemeUserExperiment.useServerThemeUserEnabled("DefaultGuildThemePreferenceSetting");
   },

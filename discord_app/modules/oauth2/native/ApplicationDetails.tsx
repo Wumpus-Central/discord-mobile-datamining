@@ -13,16 +13,16 @@ import scopes from "../scopes.tsx";
 import disclosures from "../../applications/disclosures.tsx";
 import Utils from "../Utils.tsx";
 import ShieldIcon from "../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
-import EmbedIcon from "../../../design/components/Icon/native/redesign/generated/EmbedIcon.tsx";
 import HammerIcon from "../../../design/components/Icon/native/redesign/generated/HammerIcon.tsx";
 import RobotIcon from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
+import EmbedIcon from "../../../design/components/Icon/native/redesign/generated/EmbedIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   applicationDetails: { flexDirection: "column", gap: 16 },
   entry: { flexDirection: "row", alignItems: "center", gap: 8 },
@@ -35,7 +35,7 @@ let closure_6 = createStyles.createStyles(obj2);
 fn(558);
 const ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ApplicationDetailsEntry(arg0) {
       const cResult = c.c(10);
       ({ iconComponent, text } = arg0);
       const tmp4 = closure_6();
@@ -82,7 +82,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = iconComponentResult;
       tmp5 = iconComponentResult;
     }
-  : (children) => {
+  : function ApplicationDetailsEntry(children) {
       const iconComponent = children.iconComponent;
       const tmp = closure_6();
       const obj = { style: tmp.entry, children: null };
@@ -107,7 +107,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/ApplicationDetails.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ApplicationDetails(arg0) {
       const cResult = c.c(50);
       ({ application, scopes, redirectUri, approximateGuildCount, isEmbeddedFlow, disclosures, connectedAccount } =
         arg0);
@@ -340,7 +340,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp18 = applicationDetails;
       tmp17 = View;
     }
-  : (arg0) => {
+  : function ApplicationDetails(arg0) {
       ({ application, scopes, redirectUri, approximateGuildCount, disclosures } = arg0);
       ({ isEmbeddedFlow, connectedAccount } = arg0);
       const tmp2 = closure_6();

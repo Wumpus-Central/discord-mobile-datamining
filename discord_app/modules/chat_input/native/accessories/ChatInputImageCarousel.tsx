@@ -4,8 +4,8 @@ import ApplicationCommandStore from "../../../application_commands/ApplicationCo
 import UploadAttachmentStore from "../../../../stores/UploadAttachmentStore.tsx";
 
 const require = fn;
-const DraftType = fn(7044).DraftType;
-let closure_6 = fn(9100).useChatShowingAutoComplete;
+const DraftType = fn(7232).DraftType;
+let closure_6 = fn(9318).useChatShowingAutoComplete;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/chat_input/native/accessories
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (canUpload) => {
+    ? function ChatInputImageCarousel(canUpload) {
         const cResult = canUpload(576).c(9);
         canUpload = canUpload.canUpload;
         const channelId = canUpload.channelId;
@@ -42,7 +42,7 @@ export default noop.memo(
             let tmp12 = null;
             if (null != stateFromStores) {
               const obj2 = { attachments: stateFromStores, channelId };
-              tmp12 = jsx(channelId(10373), { attachments: stateFromStores, channelId });
+              tmp12 = jsx(channelId(9970), { attachments: stateFromStores, channelId });
             }
             cResult[6] = stateFromStores;
             cResult[7] = channelId;
@@ -76,7 +76,7 @@ export default noop.memo(
         const obj = canUpload(576);
         tmp = canUpload;
       }
-    : (canUpload) => {
+    : function ChatInputImageCarousel(canUpload) {
         canUpload = canUpload.canUpload;
         const channelId = canUpload.channelId;
         let tmp = closure_6(canUpload.screenIndex);
@@ -104,7 +104,7 @@ export default noop.memo(
         let tmp4 = null;
         if (null != stateFromStores) {
           const obj2 = { attachments: stateFromStores, channelId };
-          tmp4 = jsx(channelId(10373), { attachments: stateFromStores, channelId });
+          tmp4 = jsx(channelId(9970), { attachments: stateFromStores, channelId });
         }
         return tmp4;
       },

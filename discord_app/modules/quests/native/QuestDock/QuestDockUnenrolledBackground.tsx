@@ -8,7 +8,7 @@ import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const expandedHeight = fn(14912).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+const expandedHeight = fn(15174).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function QuestDockUnenrolledBackground() {
         const cResult = c.c(5);
         const questDockQuest = QuestDockCreativeContext.useQuestDockQuest();
         const questDockHeroAsset = QuestHooks.useQuestDockHeroAsset(questDockQuest);
@@ -64,7 +64,7 @@ export default noop.memo(
           gradientBaseColor: token,
         };
       }
-    : () => {
+    : function QuestDockUnenrolledBackground() {
         const questDockQuest = QuestDockCreativeContext.useQuestDockQuest();
         const questDockHeroAsset = QuestHooks.useQuestDockHeroAsset(questDockQuest);
         ({ videoAsset, staticUrl } = questDockHeroAsset);

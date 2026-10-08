@@ -9,17 +9,17 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const MediaEngineContextTypes = fn(4921).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5115).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({ slider: { marginTop: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsVoiceOutputOptions() {
       const cResult = stateFromStores1(576).c(27);
       const tmp4 = closure_11();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = stateFromStores1(504).useStateFromStores(tmp5, tmp6);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ApplicationStreamingStore, AuthenticationStore];
-        const fn2 = function p() {
+        const fn2 = function y() {
           lastActiveStream = lastActiveStream.getLastActiveStream();
           let tmp2 = null;
           if (null != lastActiveStream) {
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       ({ slider, slider: slider2 } = tmp4);
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        class E {
+        class A {
           constructor(arg0) {
             obj = closure_1_1(closure_1_2[12]);
             return obj.setOutputVolume(arg0);
@@ -169,11 +169,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const intl = tmp(1126).intl;
         const stringResult2 = intl.string(tmp(1126).t.xPHVBs);
-        cResult[11] = E;
+        cResult[11] = A;
         cResult[12] = stringResult2;
         let tmp24 = stringResult2;
       } else {
-        class E {
+        class A {
           constructor(arg0) {
             obj = closure_1_1(closure_1_2[12]);
             return obj.setOutputVolume(arg0);
@@ -182,21 +182,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp24 = cResult[12];
       }
       if (cResult[13] === stateFromStores) {
-        class E {
+        class A {
           constructor(arg0) {
             obj = closure_1_1(closure_1_2[12]);
             return obj.setOutputVolume(arg0);
           }
         }
         if (cResult[16] === tmp4.slider) {
-          class E {
+          class A {
             constructor(arg0) {
               obj = closure_1_1(closure_1_2[12]);
               return obj.setOutputVolume(arg0);
             }
           }
           if (cResult[19] === stateFromStores1) {
-            class E {
+            class A {
               constructor(arg0) {
                 obj = closure_1_1(closure_1_2[12]);
                 return obj.setOutputVolume(arg0);
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           let tmp34 = null != stateFromStores1;
           if (tmp34) {
-            class E {
+            class A {
               constructor(arg0) {
                 obj = closure_1_1(closure_1_2[12]);
                 return obj.setOutputVolume(arg0);
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj4.accessibilityLabel = intl3.string(tmp(1126).t.pEAl4b);
             obj3.children = closure_9(VolumeSliderDefault, obj4);
             obj2.subLabel = closure_9(View, obj3);
-            tmp34 = closure_9(tmp(6000).TableRow, obj2);
+            tmp34 = closure_9(tmp(6184).TableRow, obj2);
           }
           cResult[19] = stateFromStores1;
           cResult[20] = T;
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = { label: tmp21, subLabel: null };
         const obj8 = { style: slider, children: tmp26 };
         obj7.subLabel = closure_9(View, obj8);
-        const tmp31 = closure_9(tmp(6000).TableRow, obj7);
+        const tmp31 = closure_9(tmp(6184).TableRow, obj7);
         cResult[16] = tmp4.slider;
         cResult[17] = tmp26;
         cResult[18] = tmp31;
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp27 = closure_9(VolumeSliderDefault, {
         style: slider2,
         value: stateFromStores,
-        onValueChange: E,
+        onValueChange: A,
         accessibilityLabel: tmp24,
       });
       cResult[13] = stateFromStores;
@@ -247,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[15] = tmp27;
       const tmpResult4 = stateFromStores1(504);
     }
-  : () => {
+  : function UserSettingsVoiceOutputOptions() {
       const tmp = closure_11();
       const items = [MediaEngineStore];
       const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => outputVolume.getOutputVolume());
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj7.accessibilityLabel = intl3.string(stateFromStores1(1126).t.xPHVBs);
       obj6.children = closure_9(VolumeSliderDefault, obj7);
       obj5.subLabel = closure_9(View, obj6);
-      const items4 = [closure_9(stateFromStores1(6000).TableRow, obj5)];
+      const items4 = [closure_9(stateFromStores1(6184).TableRow, obj5)];
       let tmp9Result = null != stateFromStores1;
       if (tmp9Result) {
         const obj8 = { label: null, subLabel: null };
@@ -310,10 +310,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj10.accessibilityLabel = intl5.string(tmp2(1126).t.pEAl4b);
         obj9.children = closure_9(VolumeSliderDefault, obj10);
         obj8.subLabel = closure_9(View, obj9);
-        tmp9Result = closure_9(tmp2(6000).TableRow, obj8);
+        tmp9Result = closure_9(tmp2(6184).TableRow, obj8);
         const tmp11Result = VolumeSliderDefault;
       }
       items4[1] = tmp9Result;
       obj4.children = items4;
-      return closure_10(stateFromStores1(9670).UserSettingsTableRowGroup, obj4);
+      return closure_10(stateFromStores1(10859).UserSettingsTableRowGroup, obj4);
     };

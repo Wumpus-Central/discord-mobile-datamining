@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_relationships/hooks/useIsGameFriends.tsx");
 
 export const useIsGameFriends = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsGameFriends(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -22,7 +22,7 @@ export const useIsGameFriends = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function u() {
+        const fn = function l() {
           const gameRelationshipsForUserByType = GameRelationshipStore.getGameRelationshipsForUserByType(
             closure_0,
             RelationshipTypes.FRIEND,
@@ -49,7 +49,7 @@ export const useIsGameFriends = ReactCompilerGating.isReactCompilerEnabled()
         1,
       )[0];
     }
-  : (arg0) => {
+  : function useIsGameFriends(arg0) {
       _require = arg0;
       let items = [GameRelationshipStore];
       const items1 = [arg0];

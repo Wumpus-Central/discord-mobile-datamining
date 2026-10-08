@@ -2,7 +2,7 @@
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import v1 from "../../../_runtime/01266_v1.js";
+import v1 from "../../../_runtime/01278_v1.js";
 import ClientInfoUtilsAll from "ClientInfoUtils.tsx";
 import PlatformUtils2 from "../PlatformUtils.tsx";
 import DeviceUtils from "DeviceUtils.tsx";
@@ -309,7 +309,7 @@ let closure_19 = async function _fetchStoreFront() {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj6 = { value: require("../../../_runtime/metro/10798__.js").getStorefront(), done: false };
+            const obj6 = { value: require("../../../_runtime/metro/12750__.js").getStorefront(), done: false };
             return obj6;
           } else {
             c5 = 3;
@@ -349,20 +349,20 @@ let closure_19 = async function _fetchStoreFront() {
     }
   }
 };
-const convertToAlpha2 = fn(5111).convertToAlpha2;
+const convertToAlpha2 = fn(5908).convertToAlpha2;
 const Constants = fn(1085);
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = Constants);
-const NAMESPACE_SNOWFLAKE_UUID = fn(1379).NAMESPACE_SNOWFLAKE_UUID;
+const NAMESPACE_SNOWFLAKE_UUID = fn(1391).NAMESPACE_SNOWFLAKE_UUID;
 const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
-let PlatformUtils = fn(1369);
+let PlatformUtils = fn(1381);
 let _default = null;
 if (PlatformUtils.isIOS()) {
-  _default = fn(10797).default;
+  _default = fn(12749).default;
 }
 let items = [
-  fn(10798).ErrorCode.E_USER_CANCELLED,
+  fn(12750).ErrorCode.E_USER_CANCELLED,
   Constants.StoreKitErrors.PAYMENT_CANCELED,
-  fn(10798).ErrorCode.E_UNKNOWN,
+  fn(12750).ErrorCode.E_UNKNOWN,
 ];
 let set = new Set(items);
 new LoggerDefault("IAPUtils.tsx");
@@ -435,7 +435,7 @@ let obj = {
                   c5 = 1;
                   c6 = 2;
                   c7 = 1;
-                  const obj5 = { value: sku(10798).clearTransactionIOS(), done: false };
+                  const obj5 = { value: sku(12750).clearTransactionIOS(), done: false };
                   return obj5;
                 } else {
                   const _Error2 = Error;
@@ -460,7 +460,7 @@ let obj = {
                   const obj8 = { sku, appAccountToken, withOffer };
                   c6 = 3;
                   c7 = 1;
-                  const obj9 = { value: sku(10798).requestPurchase(obj8), done: false };
+                  const obj9 = { value: sku(12750).requestPurchase(obj8), done: false };
                   return obj9;
                 }
               } else if (arg0 === 1) {
@@ -543,17 +543,17 @@ let obj = {
     return applyArgumentsResult;
   },
 };
-PlatformUtils = fn(1369);
+PlatformUtils = fn(1381);
 PlatformUtils = PlatformUtils.isIOS();
 if (PlatformUtils) {
-  let isIOSResult1 = fn(1369).isIOS();
+  let isIOSResult1 = fn(1381).isIOS();
   if (isIOSResult1) {
     let Identifier = ClientInfoUtilsAll.getConstants().Identifier;
     let _HermesInternal = HermesInternal;
     let isRunningOnSimulator = Identifier.startsWith("" + IOS_BUNDLE_ID + ".local");
     if (!isRunningOnSimulator) {
-      isRunningOnSimulator = fn(4872).getIsRunningOnSimulator();
-      let obj8 = fn(4872);
+      isRunningOnSimulator = fn(5066).getIsRunningOnSimulator();
+      let obj8 = fn(5066);
     }
     isIOSResult1 = isRunningOnSimulator;
     const importAllResult = ClientInfoUtilsAll;
@@ -563,10 +563,10 @@ if (PlatformUtils) {
     value = DevSettingsStore.get("force_mock_iap");
   }
   PlatformUtils = value;
-  let obj6 = fn(1369);
+  let obj6 = fn(1381);
 }
 if (PlatformUtils) {
-  obj = fn(10819).default;
+  obj = fn(12771).default;
 }
 function shouldMockIAPForceEnable() {
   let isIOSResult = PlatformUtils2.isIOS();
@@ -636,7 +636,7 @@ export const makeIAPRequest = function makeIAPRequest(arg0, arg1, arg2) {
                 };
                 c6 = 2;
                 c7 = 1;
-                const obj7 = { value: requestJSONString(10798).requestPurchase(obj6), done: false };
+                const obj7 = { value: requestJSONString(12750).requestPurchase(obj6), done: false };
                 return obj7;
               } else {
                 const _Error2 = Error;
@@ -649,8 +649,8 @@ export const makeIAPRequest = function makeIAPRequest(arg0, arg1, arg2) {
               c5 = 0;
               closure_130_3 = closure_4;
               if (!set.has(closure_130_3.code)) {
-                const result = requestJSONString(4549).captureBillingException(closure_130_3);
-                const obj3 = requestJSONString(4549);
+                const result = requestJSONString(4741).captureBillingException(closure_130_3);
+                const obj3 = requestJSONString(4741);
               }
               closure_130_1(closure_130_3);
             } else if (arg0 === 1) {
@@ -706,7 +706,7 @@ export const makeIAPRequest = function makeIAPRequest(arg0, arg1, arg2) {
   });
 };
 export const useCanPurchaseIAP = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanPurchaseIAP(arg0) {
       _require = arg0;
       const cResult = require("c").c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -769,7 +769,7 @@ export const useCanPurchaseIAP = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = fn2;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useCanPurchaseIAP(arg0) {
       _require = arg0;
       const items = [UserStore];
       closure_1 = require("initialize").useStateFromStores(items, () => {

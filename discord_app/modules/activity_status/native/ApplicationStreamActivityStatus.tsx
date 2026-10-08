@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/ApplicationStreamActivityStatus.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ApplicationStreamActivityStatus(arg0) {
       const cResult = c.c(13);
       ({ game, iconStyle, textStyle, maxFontSizeMultiplier, hideIcon, hideText } = arg0);
       if (undefined !== hideIcon && hideIcon) {
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = tmp13;
       }
     }
-  : (hideText) => {
+  : function ApplicationStreamActivityStatus(hideText) {
       ({ game, hideIcon } = hideText);
       ({ iconStyle, textStyle, maxFontSizeMultiplier } = hideText);
       if (hideIcon === undefined) {
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp12 = !hideIcon;
       if (!hideIcon) {
-        const obj2 = { icon: tmp7(10629).TvIcon, style: iconStyle };
+        const obj2 = { icon: tmp7(10227).TvIcon, style: iconStyle };
         tmp12 = React3(ActivityStatusIconDefault, obj2);
       }
       const children = [tmp12];

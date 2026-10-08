@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting(
 
 export default apexExperiment;
 export const useIsProfileFrameLayerPreloadEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsProfileFrameLayerPreloadEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -28,4 +28,6 @@ export const useIsProfileFrameLayerPreloadEnabled = ReactCompilerGating.isReactC
       }
       return apexExperiment.useConfig(tmp2).profileFrameLayerPreloadEnabled;
     }
-  : (location) => apexExperiment.useConfig({ location }).profileFrameLayerPreloadEnabled;
+  : function useIsProfileFrameLayerPreloadEnabled(location) {
+      return apexExperiment.useConfig({ location }).profileFrameLayerPreloadEnabled;
+    };

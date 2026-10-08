@@ -81,23 +81,39 @@ export const parseServerMemberGamingLeaderboardData = function parseServerMember
     if (winning_week == null) {
       winning_week = null;
     }
+    let current_leader_stat = member_gaming_leaderboard_data.current_leader_stat;
+    if (current_leader_stat == null) {
+      current_leader_stat = null;
+    }
+    let current_leader_week = member_gaming_leaderboard_data.current_leader_week;
+    if (current_leader_week == null) {
+      current_leader_week = null;
+    }
     if (null == winning_stat) {
       if (null == winning_streak) {
-        let tmp4 = null;
+        if (null == winning_week) {
+          if (null == current_leader_stat) {
+            let tmp6 = null;
+          }
+          return tmp6;
+        }
       }
-      return tmp4;
     }
     const obj = {
       winningStat: winning_stat,
       winningStreak: winning_streak,
       winningWeek: winning_week,
       winningValue: null,
+      currentLeaderStat: null,
+      currentLeaderWeek: null,
     };
     let winning_value = member_gaming_leaderboard_data.winning_value;
     if (winning_value == null) {
       winning_value = null;
     }
     obj.winningValue = winning_value;
-    tmp4 = obj;
+    obj.currentLeaderStat = current_leader_stat;
+    obj.currentLeaderWeek = current_leader_week;
+    tmp6 = obj;
   }
 };

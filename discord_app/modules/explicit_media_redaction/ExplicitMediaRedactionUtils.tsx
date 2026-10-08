@@ -3,20 +3,19 @@ import c from "../../../_runtime/00576_c.js";
 import util from "../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import AgeVerificationUtils from "../age_assurance/AgeVerificationUtils.tsx";
 import MonitoringAgentDefault from "../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
-import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import AgeVerificationUtils from "../age_assurance/AgeVerificationUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import SelfModUtils from "../self_mod/SelfModUtils.tsx";
-import ObscuredMediaUtils from "ObscuredMediaUtils.tsx";
 import DevSettingsStore from "../devtools/dev_settings/DevSettingsStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ExplicitMediaStore from "ExplicitMediaStore.tsx";
 
-const ObscureMediaModels = AGE_VERIFICATION_OBSCURABLE_REASONS(6809);
+const ObscureMediaModels = AGE_VERIFICATION_OBSCURABLE_REASONS(6981);
 require = fn;
-const ExplicitMediaRedactionConstants = fn(7123);
+const ExplicitMediaRedactionConstants = fn(6979);
 ({
   EXPLICIT_MEDIA_MIN_HEIGHT: metroRequire,
   EXPLICIT_MEDIA_MIN_WIDTH: closure_7,
@@ -25,7 +24,7 @@ const ExplicitMediaRedactionConstants = fn(7123);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShouldAgeVerifyForExplicitMedia() {
       let isFeatureAgeGated = RegionalFeatureConfigUtils.useIsFeatureAgeGated(
         AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
       );
@@ -34,7 +33,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return isFeatureAgeGated;
     }
-  : () => {
+  : function useShouldAgeVerifyForExplicitMedia() {
       let isFeatureAgeGated = RegionalFeatureConfigUtils.useIsFeatureAgeGated(
         AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
       );
@@ -46,7 +45,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_10 = tmp3;
 ReactCompilerGating = fn(558);
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx");
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx");
 
 export const redactionSettingToRenderedString = function redactionSettingToRenderedString(prop) {
   if (preloaded_user_settings.ExplicitContentRedaction.SHOW === prop) {
@@ -333,54 +332,6 @@ export const trackExplicitMediaScanComplete = function trackExplicitMediaScanCom
     AnalyticsUtilsDefault.track(AnalyticEvents.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, obj2);
   }
 };
-export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitMediaScanTimeoutForMessage(message) {
-  let attachments = message.attachments;
-  let embeds = message.embeds;
-  const attachments1 = attachments.map((item) => {
-    item.content_scan_version = -1;
-    return item;
-  });
-  let components = message.components;
-  const embeds1 = embeds.map((components) => {
-    components.contentScanVersion = -1;
-    components = components.components;
-    if (components == null) {
-      components = [];
-    }
-    const result = closure_1_0(closure_1_2[11]).failOverComponentMedia(components);
-    return components;
-  });
-  let result = ObscuredMediaUtils.failOverComponentMedia(components);
-  const messageSnapshots = message.messageSnapshots;
-  let messageSnapshots1 = messageSnapshots;
-  if (null != messageSnapshots) {
-    messageSnapshots1 = messageSnapshots;
-    if (0 !== messageSnapshots.length) {
-      messageSnapshots1 = messageSnapshots.map((message) => {
-        message = message.message;
-        const attachments = message.attachments;
-        const embeds = message.embeds;
-        const mapped = attachments.map((item) => {
-          item.content_scan_version = -1;
-          return item;
-        });
-        let components = message.components;
-        const mapped1 = embeds.map((components) => {
-          components.contentScanVersion = -1;
-          components = components.components;
-          if (components == null) {
-            components = [];
-          }
-          const result = closure_1_0(closure_1_2[11]).failOverComponentMedia(components);
-          return components;
-        });
-        let result = ObscuredMediaUtils.failOverComponentMedia(components);
-        return message.merge({ message: message.merge({ attachments: mapped, embeds: mapped1, components }) });
-      });
-    }
-  }
-  return message.merge({ attachments: attachments1, embeds: embeds1, components, messageSnapshots: messageSnapshots1 });
-};
 export const isObscuredMediaBelowConstraints = function isObscuredMediaBelowConstraints(arg0, arg1) {
   let tmp = null != arg0 && null != arg1;
   if (tmp) {
@@ -403,7 +354,7 @@ export const shouldAgeVerifyForExplicitMedia = function shouldAgeVerifyForExplic
 };
 export const useShouldAgeVerifyForExplicitMedia = tmp3;
 export const useShouldAgeVerifyForReason = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShouldAgeVerifyForReason(arg0) {
       let AGE_VERIFICATION_OBSCURABLE_REASONS = require;
       let hasItem = dependencyMap;
       const cResult = c.c(2);
@@ -421,7 +372,7 @@ export const useShouldAgeVerifyForReason = ReactCompilerGating.isReactCompilerEn
         cResult[1] = hasItem;
       }
     }
-  : (arg0) => {
+  : function useShouldAgeVerifyForReason(arg0) {
       const tmp = closure_10();
       let tmp2 = !tmp;
       if (tmp) {

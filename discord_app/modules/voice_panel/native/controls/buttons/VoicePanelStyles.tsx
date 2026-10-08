@@ -42,7 +42,7 @@ let closure_3 = createStyles.createStyles((arg0) => {
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelStyles.tsx");
 
 export const useVoicePanelButtonStyles = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useVoicePanelButtonStyles(arg0) {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function c(drawerMode) {
@@ -55,5 +55,8 @@ export const useVoicePanelButtonStyles = ReactCompilerGating.isReactCompilerEnab
       }
       return closure_3(useStateFromSharedValue.useDerivedStateFromSharedValue(arg0, first));
     }
-  : (arg0) =>
-      closure_3(useStateFromSharedValue.useDerivedStateFromSharedValue(arg0, (drawerMode) => drawerMode.drawerMode));
+  : function useVoicePanelButtonStyles(arg0) {
+      return closure_3(
+        useStateFromSharedValue.useDerivedStateFromSharedValue(arg0, (drawerMode) => drawerMode.drawerMode),
+      );
+    };

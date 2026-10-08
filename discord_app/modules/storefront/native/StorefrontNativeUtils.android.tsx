@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/native/StorefrontNativeUtils.android.tsx");
 
 export const useFormattedSKUPrice = ReactCompilerGating.isReactCompilerEnabled()
-  ? (sku) => {
+  ? function useFormattedSKUPrice(sku) {
       const cResult = require("c").c(10);
       sku = sku.sku;
       let tmp5;
@@ -26,7 +26,7 @@ export const useFormattedSKUPrice = ReactCompilerGating.isReactCompilerEnabled()
       }
       _require = tmp5;
       if (cResult[0] !== tmp5) {
-        const fn = function t() {
+        const fn = function l() {
           if (null != c0) {
             const items = [tmp];
             const inAppSkus = GPlayActionCreators.loadInAppSkus(items);
@@ -94,7 +94,7 @@ export const useFormattedSKUPrice = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = require("initialize");
     }
-  : (sku) => {
+  : function useFormattedSKUPrice(sku) {
       sku = sku.sku;
       _require = undefined;
       let stateFromStores;
@@ -116,7 +116,7 @@ export const useFormattedSKUPrice = ReactCompilerGating.isReactCompilerEnabled()
           const inAppSkus = GPlayActionCreators.loadInAppSkus(items);
         }
       }, items);
-      const items1 = [stateFromStores(6931)];
+      const items1 = [stateFromStores(7120)];
       const items2 = [tmp2];
       stateFromStores = require("initialize").useStateFromStores(
         items1,

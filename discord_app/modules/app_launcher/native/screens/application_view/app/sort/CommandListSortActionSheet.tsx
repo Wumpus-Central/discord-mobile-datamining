@@ -11,7 +11,7 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const CommandListSortOrder = fn(11773).CommandListSortOrder;
+const CommandListSortOrder = fn(11840).CommandListSortOrder;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onClose) => {
+  ? function CommandListSortActionSheet(onClose) {
       const cResult = onClose(576).c(8);
       onClose = onClose.onClose;
       ({ sortOrder, onSortOptionPress } = onClose);
@@ -32,13 +32,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { leading: null, title: null };
           const obj3 = { size: "sm", color: onSortOptionPress(587).colors.TEXT_DEFAULT };
-          obj2.leading = jsx(tmp(11789).ArrowsUpDownIcon, {
+          obj2.leading = jsx(tmp(11856).ArrowsUpDownIcon, {
             size: "sm",
             color: onSortOptionPress(587).colors.TEXT_DEFAULT,
           });
           const intl = tmp(1126).intl;
           obj2.title = intl.string(tmp(1126).t.yeYaHf);
-          const tmp9 = jsx(tmp(6651).BottomSheetTitleHeader, { leading: null, title: null });
+          const tmp9 = jsx(tmp(6828).BottomSheetTitleHeader, { leading: null, title: null });
           cResult[3] = tmp9;
           let tmp6 = tmp9;
         } else {
@@ -73,29 +73,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj6 = { startExpanded: true, header: tmp6, children: null };
         const obj7 = { hasIcons: false, value: sortOrder, onChange: tmp4, children: tmp10 };
-        obj6.children = jsx(tmp(6079).TableRadioGroup, {
+        obj6.children = jsx(tmp(6265).TableRadioGroup, {
           hasIcons: false,
           value: sortOrder,
           onChange: tmp4,
           children: tmp10,
         });
-        const tmp15 = jsx(tmp(6652).BottomSheet, { startExpanded: true, header: tmp6, children: null });
+        const tmp15 = jsx(tmp(6829).BottomSheet, { startExpanded: true, header: tmp6, children: null });
         cResult[5] = tmp4;
         cResult[6] = sortOrder;
         cResult[7] = tmp15;
         tmp13 = tmp15;
       }
-      const fn = function n(dependencyMap) {
-        onSortOptionPress(dependencyMap);
+      function handleSortOptionPress(arg0) {
+        onSortOptionPress(arg0);
         onClose();
-      };
+      }
       cResult[0] = onClose;
       cResult[1] = onSortOptionPress;
-      cResult[2] = fn;
-      tmp4 = fn;
+      cResult[2] = handleSortOptionPress;
+      tmp4 = handleSortOptionPress;
       const obj = onClose(576);
     }
-  : (sortOrder) => {
+  : function CommandListSortActionSheet(sortOrder) {
       ({ onClose: require, onSortOptionPress: importDefault } = sortOrder);
       const obj = { startExpanded: true, header: null, children: null };
       const obj2 = {
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = {
         hasIcons: false,
         value: sortOrder.sortOrder,
-        onChange(arg0) {
+        onChange: function handleSortOptionPress(arg0) {
           importDefault(arg0);
           require();
         },
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj.children = jsx(TableRadioGroup.TableRadioGroup, {
         hasIcons: false,
         value: sortOrder.sortOrder,
-        onChange(arg0) {
+        onChange: function handleSortOptionPress(arg0) {
           importDefault(arg0);
           require();
         },

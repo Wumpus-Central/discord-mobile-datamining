@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNoVideoPermissionsAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function VoicePanelNoVideoPermissionsAlert() {
       const cResult = c.c(5);
       const dismissModalCallback = AlertModal.useDismissModalCallback();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp11;
     }
-  : () => {
+  : function VoicePanelNoVideoPermissionsAlert() {
       const obj2 = { title: null, content: null, actions: null };
       const intl = util.intl;
       obj2.title = intl.string(util.t.OYzPcW);

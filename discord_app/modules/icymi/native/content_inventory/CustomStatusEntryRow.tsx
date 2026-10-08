@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/content_inventory/CustomStatusEntryRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CustomStatusEntryRow(arg0) {
       const cResult = c.c(12);
       ({ content, renderForScreenshot, visible } = arg0);
       if (cResult[0] !== content) {
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = obj4;
       const tmpResult = useReplyActions;
     }
-  : (content) => {
+  : function CustomStatusEntryRow(content) {
       content = content.content;
       ({ renderForScreenshot, visible } = content);
       const replyActions = useReplyActions.useReplyActions({ content });

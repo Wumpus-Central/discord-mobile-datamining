@@ -17,7 +17,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({
   profileEffects: {
     position: "absolute",
@@ -33,7 +33,7 @@ let closure_10 = createStyles.createStyles({
 });
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function usePreloadProfileEffect(arr) {
       const cResult = c.c(8);
       if (cResult[0] !== arr) {
         let tmp3 = globalThis;
@@ -98,7 +98,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp16;
       }
     }
-  : (arg0) => {
+  : function usePreloadProfileEffect(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       const memo = noop.useMemo(() => new Set(closure_0.map((src) => src.src)), items);
@@ -125,7 +125,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_11 = tmp3;
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useProfileDimensions() {
       const cResult = c.c(4);
       [tmp3, require] = noop.useState(0);
       const height = useWindowDimensionsDefault().height;
@@ -150,7 +150,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = size;
       tmp5 = size;
     }
-  : () => {
+  : function useProfileDimensions() {
       const tmp = _slicedToArray(noop.useState(0), 2);
       closure_0 = tmp[1];
       const size = {
@@ -286,7 +286,7 @@ function ProfileEffect(profileEffect) {
 }
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (thumbnailUrlOverride) => {
+  ? function StaticEffect(thumbnailUrlOverride) {
       const cResult = useThumbnail(width[8]).c(28);
       ({ profileEffect, bannerAdjustment, useThumbnail } = thumbnailUrlOverride);
       let thumbnailPreviewSrc = thumbnailUrlOverride.thumbnailUrlOverride;
@@ -454,7 +454,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       const tmp5 = _slicedToArray(thumbnailPreviewSrc.useState(0), 2);
     }
-  : (useThumbnail) => {
+  : function StaticEffect(useThumbnail) {
       ({ profileEffect, bannerAdjustment } = useThumbnail);
       if (bannerAdjustment === undefined) {
         bannerAdjustment = 0;
@@ -532,7 +532,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffect.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (skuId) => {
+  ? function WrappedProfileEffect(skuId) {
       let useThumbnail = skuId;
       const cResult = c.c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -600,7 +600,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult2 = utils;
     }
-  : (skuId) => {
+  : function WrappedProfileEffect(skuId) {
       let thumbnailUrlOverride = skuId;
       const tmp = useProfileEffectDefault(skuId.skuId);
       const items = [AccessibilityStore];

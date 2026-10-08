@@ -10,14 +10,14 @@ export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {
   let request;
   dependencyMap = undefined;
   let obj = { scope: scope.scope, handler: scope.handler };
-  const tmp = request(14336).RPCCommandSchemas[AUTHENTICATE];
+  const tmp = request(14561).RPCCommandSchemas[AUTHENTICATE];
   request = undefined;
   if (tmp != null) {
     request = tmp.request;
   }
   dependencyMap = null;
   if (null != request) {
-    obj.validation = (object) => {
+    obj.validation = function validation(object) {
       if (null == closure_1) {
         closure_1 = helpers.joiReqObj(object.object(request(object)));
       }

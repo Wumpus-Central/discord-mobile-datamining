@@ -131,10 +131,10 @@ let closure_19 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
   return value;
 };
-const ChannelRecord = fn(2055);
+const ChannelRecord = fn(2067);
 ({ isGuildTextChannelType: closure_4, isGuildVocalChannelType: hasOwnProperty } = ChannelRecord);
 const Permissions = fn(1085).Permissions;
-const EmojiConstants = fn(1380);
+const EmojiConstants = fn(1392);
 ({ EMOJI_MAX_FILESIZE: closure_9, EMOJI_MAX_LENGTH: c10, EMOJI_RE: closure_11, EmojiDisabledReasons } = EmojiConstants);
 ({ EmojiIntention: map1, isExternalEmojiAllowedForIntention: closure_14 } = EmojiConstants);
 const items = [,];
@@ -161,7 +161,7 @@ export default {
   sanitizeEmojiName(str) {
     let length;
     const replaced = str.replace(closure_1_11, "");
-    const substr = replaced.slice(0, v65535);
+    const substr = replaced.slice(0, collapsed);
     let tmp = substr;
     let tmp2 = substr;
     if (substr.length < 2) {

@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useMessagesReconnectToCallsEffect() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n() {
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp2, tmp3);
     }
-  : () => {
+  : function useMessagesReconnectToCallsEffect() {
       const effect = noop.useEffect(() => {
         function isGatewayConnectedListener() {
           isConnectedResult = GatewayConnectionStore.isConnected();

@@ -4,13 +4,13 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelFlags = fn(2058).ChannelFlags;
+const ChannelFlags = fn(2070).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/useShouldHideMediaOptions.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShouldHideMediaOptions(arg0) {
       _require = arg0;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return true === tmp7;
     }
-  : (arg0) => {
+  : function useShouldHideMediaOptions(arg0) {
       _require = arg0;
       const items = [ChannelStore];
       const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {

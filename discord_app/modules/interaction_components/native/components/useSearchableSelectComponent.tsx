@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (selectActionComponent) => {
+  ? function useSearchableSelectComponent(selectActionComponent) {
       const cResult = selectActionComponent(576).c(29);
       selectActionComponent = selectActionComponent.selectActionComponent;
       ({ containerId, guildId, queryOptions, onSubmit } = selectActionComponent);
@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           dependencyMap = tmp8;
           if (cResult[4] !== tmp8) {
-            const fn = function h() {
+            const fn = function y() {
               return new Map(
                 closure_2.map((value) => {
                   const items = [value.value, value];
@@ -68,17 +68,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           return closure_3.has(selectActionComponent.value);
                         }
                       }
-                      class A {
-                        constructor(arg0) {
-                          obj = { type: selectActionComponent.type, selectedOptions: null };
-                          items = [...selectActionComponent.values()];
-                          obj.selectedOptions = items;
-                          tmp = onSubmit(obj);
-                          obj2 = closure_1(closure_2[5]);
-                          hideActionSheetResult = obj2.hideActionSheet();
-                          return;
-                        }
-                      }
                       cResult[17] = first1;
                       cResult[18] = items;
                       cResult[19] = Q;
@@ -117,17 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           return closure_3.has(selectActionComponent.value);
                         }
                       }
-                      class A {
-                        constructor(arg0) {
-                          obj = { type: selectActionComponent.type, selectedOptions: null };
-                          items = [...selectActionComponent.values()];
-                          obj.selectedOptions = items;
-                          tmp = onSubmit(obj);
-                          obj2 = closure_1(closure_2[5]);
-                          hideActionSheetResult = obj2.hideActionSheet();
-                          return;
-                        }
-                      }
+                      obj3.isSelected = tmp18;
                       obj3.onPressOptionItem = tmp16;
                       obj3.submitSelection = tmp21;
                       obj3.setQuery = tmp7;
@@ -139,27 +118,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       cResult[28] = obj3;
                       tmp22 = obj3;
                     }
-                    const fn3 = function j() {
+                    const fn2 = function j() {
                       return closure_6(first1);
                     };
-                    class A {
-                      constructor(arg0) {
-                        obj = { type: selectActionComponent.type, selectedOptions: null };
-                        items = [...selectActionComponent.values()];
-                        obj.selectedOptions = items;
-                        tmp = onSubmit(obj);
-                        obj2 = closure_1(closure_2[5]);
-                        hideActionSheetResult = obj2.hideActionSheet();
-                        return;
-                      }
-                    }
+                    cResult[20] = first1;
                     cResult[21] = tmp15;
-                    cResult[22] = fn3;
-                    tmp21 = fn3;
+                    cResult[22] = fn2;
+                    tmp21 = fn2;
                   }
                 }
               }
-              const fn2 = function k(arg0, value) {
+              function onPressOptionItem(arg0, value) {
                 const hasItem = first1.has(value.value);
                 if (closure_5) {
                   let tmp12 = !hasItem;
@@ -188,39 +157,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   closure_6(_Map1);
                 }
-              };
-              class A {
-                constructor(arg0) {
-                  obj = { type: selectActionComponent.type, selectedOptions: null };
-                  items = [...selectActionComponent.values()];
-                  obj.selectedOptions = items;
-                  tmp = onSubmit(obj);
-                  obj2 = closure_1(closure_2[5]);
-                  hideActionSheetResult = obj2.hideActionSheet();
-                  return;
-                }
               }
+              cResult[12] = tmp14;
               cResult[13] = selectActionComponent.maxValues;
               cResult[14] = first1;
               cResult[15] = tmp15;
-              cResult[16] = fn2;
-              tmp16 = fn2;
+              cResult[16] = onPressOptionItem;
+              tmp16 = onPressOptionItem;
             }
-            class A {
-              constructor(arg0) {
-                obj = { type: selectActionComponent.type, selectedOptions: null };
-                items = [...selectActionComponent.values()];
-                obj.selectedOptions = items;
-                tmp = onSubmit(obj);
-                obj2 = closure_1(closure_2[5]);
-                hideActionSheetResult = obj2.hideActionSheet();
-                return;
-              }
+            function submitSelection(arr) {
+              const obj = { type: selectActionComponent.type, selectedOptions: null };
+              const items = [...arr.values()];
+              obj.selectedOptions = items;
+              onSubmit(obj);
+              ActionSheetActionCreatorsDefault.hideActionSheet();
             }
             cResult[9] = onSubmit;
             cResult[10] = selectActionComponent.type;
-            cResult[11] = A;
-            tmp15 = A;
+            cResult[11] = submitSelection;
+            tmp15 = submitSelection;
           }
           const queryOptionsResult = queryOptions(first);
           cResult[6] = first;
@@ -230,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp5 = first1(noop.useState(""), 2);
-      const initialSnowflakeSelectOptions = tmp(7814).getInitialSnowflakeSelectOptions(
+      const initialSnowflakeSelectOptions = tmp(8233).getInitialSnowflakeSelectOptions(
         selectActionComponent,
         containerId,
         guildId,
@@ -241,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = initialSnowflakeSelectOptions;
       tmp8 = initialSnowflakeSelectOptions;
     }
-  : (selectActionComponent) => {
+  : function useSearchableSelectComponent(selectActionComponent) {
       selectActionComponent = selectActionComponent.selectActionComponent;
       const queryOptions = selectActionComponent.queryOptions;
       const onSubmit = selectActionComponent.onSubmit;

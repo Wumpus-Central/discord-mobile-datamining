@@ -20,14 +20,14 @@ function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) 
   }
   return result;
 }
-const isThread = fn(2055).isThread;
+const isThread = fn(2067).isThread;
 let closure_7 = { typingChannelId: "Array", typingChannelName: "Reflect", typingUserIds: [] };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
 
 export const useHomeDrawerGuildTyping = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHomeDrawerGuildTyping(arg0) {
       _require = arg0;
       const cResult = require("c").c(6);
       const obj = require("c");
@@ -54,7 +54,7 @@ export const useHomeDrawerGuildTyping = ReactCompilerGating.isReactCompilerEnabl
           return tmpResult.useStateFromStores(first, tmp10, tmp11, areHomeDrawerGuildTypingStatesEqual);
         }
       }
-      const fn = function h() {
+      const fn = function p() {
         const typingUsersByGuild = TypingStore.getTypingUsersByGuild(closure_0);
         const keys = SnowflakeUtilsDefault.keys(typingUsersByGuild);
         const found = keys.find((item) => {
@@ -101,7 +101,7 @@ export const useHomeDrawerGuildTyping = ReactCompilerGating.isReactCompilerEnabl
       tmp10 = fn;
       const obj3 = require("isHomeDrawerChannelInChannelList");
     }
-  : (arg0) => {
+  : function useHomeDrawerGuildTyping(arg0) {
       _require = arg0;
       const isHomeDrawerChannelMuted = require("isHomeDrawerChannelMuted").useIsHomeDrawerChannelMuted();
       const obj = require("isHomeDrawerChannelMuted");

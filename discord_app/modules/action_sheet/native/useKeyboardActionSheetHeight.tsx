@@ -14,7 +14,7 @@ const useCustomKeyboardHeightDefault = useCustomKeyboardHeight;
 const result = size.fileFinishedImporting("modules/action_sheet/native/useKeyboardActionSheetHeight.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useKeyboardActionSheetHeight() {
       const cResult = c.c(5);
       const tmp5 = useSafeAreaInsetsDefault();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj3;
       tmp9 = obj3;
     }
-  : () => {
+  : function useKeyboardActionSheetHeight() {
       const tmp2 = useSafeAreaInsetsDefault();
       const tmp3 = useWindowDimensionsDefault({ ignoreKeyboard: true });
       const maximum = Math.max(0, tmp3.height - NavigatorConstants.NAV_BAR_HEIGHT_MULTILINE - tmp2.top);

@@ -5,15 +5,15 @@ import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef13293 from "../../../../../_runtime/metro/13293__.js";
-import _modDef13294 from "../../../../../_runtime/metro/13294__.js";
+import _modDef13593 from "../../../../../_runtime/metro/13593__.js";
+import _modDef13594 from "../../../../../_runtime/metro/13594__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({
   container: { flexDirection: "column", alignItems: "center" },
   headerText: { marginTop: 16, marginBottom: 24 },
@@ -23,7 +23,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/Header.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function Header(style) {
       const cResult = c.c(13);
       style = style.style;
       const tmp4 = closure_6();
@@ -41,9 +41,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp9 = cResult[3];
         }
         if (tmpResult.isThemeDark(tmp6)) {
-          let tmp5Result = _modDef13293;
+          let tmp5Result = _modDef13593;
         } else {
-          tmp5Result = _modDef13294;
+          tmp5Result = _modDef13594;
         }
         if (cResult[4] !== tmp5Result) {
           const obj2 = { accessible: true, accessibilityLabel: tmp9, accessibilityRole: "header", source: tmp5Result };
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp7 = items1;
     }
-  : (style) => {
+  : function Header(style) {
       const tmp = closure_6();
       const obj = { style: null, children: null };
       const items = [tmp.container, style.style];
@@ -113,9 +113,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
       const tmp8 = FastImageDefault;
       if (obj3.isThemeDark(tmp4)) {
-        let tmp2Result = _modDef13293;
+        let tmp2Result = _modDef13593;
       } else {
-        tmp2Result = _modDef13294;
+        tmp2Result = _modDef13594;
       }
       obj2.source = tmp2Result;
       const items1 = [React4(tmp8, obj2)];

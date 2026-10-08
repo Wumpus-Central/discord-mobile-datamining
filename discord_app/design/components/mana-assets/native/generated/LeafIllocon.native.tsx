@@ -2,7 +2,7 @@
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef12388 from "../../../../../../discord_assets/assets/mana/asset-library/generated/LeafIllocon-2x.png.js";
+import _modDef12484 from "../../../../../../discord_assets/assets/mana/asset-library/generated/LeafIllocon-2x.png.js";
 import ReactCompilerGating from "../../../../../modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
@@ -10,7 +10,7 @@ const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/LeafIllocon.native.tsx");
 
 export const LeafIllocon = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function LeafIllocon(arg0) {
       const cResult = c.c(8);
       ({ accessible, accessibilityLabel, resizeMode, size } = arg0);
       let num = 64;
@@ -18,7 +18,7 @@ export const LeafIllocon = ReactCompilerGating.isReactCompilerEnabled()
         num = size;
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef12388 };
+        const obj2 = { uri: _modDef12484 };
         cResult[0] = obj2;
         let first = obj2;
       } else {
@@ -26,10 +26,9 @@ export const LeafIllocon = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== num) {
         const size1 = { width: num, height: num };
-        const items = [size1];
         cResult[1] = num;
-        cResult[2] = items;
-        let tmp5 = items;
+        cResult[2] = size1;
+        let tmp5 = size1;
       } else {
         tmp5 = cResult[2];
       }
@@ -58,7 +57,7 @@ export const LeafIllocon = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp7;
       tmp6 = tmp7;
     }
-  : (size) => {
+  : function LeafIllocon(size) {
       let num = size.size;
       ({ accessible, accessibilityLabel, resizeMode } = size);
       if (num === undefined) {
@@ -72,10 +71,9 @@ export const LeafIllocon = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: null,
         resizeMode: null,
       };
-      const obj2 = { uri: _modDef12388 };
+      const obj2 = { uri: _modDef12484 };
       obj.source = obj2;
-      const items = [{ width: num, height: num }];
-      obj.style = items;
+      obj.style = { width: num, height: num };
       obj.accessible = accessible;
       obj.accessibilityLabel = accessibilityLabel;
       obj.resizeMode = resizeMode;

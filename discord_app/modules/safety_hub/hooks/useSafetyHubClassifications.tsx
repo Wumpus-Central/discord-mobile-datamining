@@ -7,10 +7,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import SafetyHubStore from "../SafetyHubStore.tsx";
 
 require = fn;
-const ViolationType = fn(8126).ViolationType;
+const ViolationType = fn(5921).ViolationType;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSafetyHubClassifications() {
       const cResult = c.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SafetyHubStore];
@@ -45,7 +45,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = initialize;
     }
-  : () => {
+  : function useSafetyHubClassifications() {
       const items = [SafetyHubStore];
       const stateFromStoresArray = initialize.useStateFromStoresArray(items, () =>
         classifications.getClassifications(),
@@ -59,7 +59,7 @@ let closure_7 = tmp2;
 fn(558);
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSafetyHubClassification(arg0) {
       _require = arg0;
       const cResult = require("c").c(21);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -117,14 +117,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores2 = require("initialize").useStateFromStores(tmp12, tmp13);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         const items3 = [SafetyHubStore];
-        class E {
+        class C {
           constructor() {
             return closure_1_5.getIsAppealEligible();
           }
         }
         cResult[8] = items3;
-        cResult[9] = E;
-        let tmp17 = E;
+        cResult[9] = C;
+        let tmp17 = C;
         let tmp16 = items3;
       } else {
         tmp16 = cResult[8];
@@ -135,12 +135,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult7 = require("initialize");
       if (tmpResult8.isGuildClassification(stateFromStores)) {
         const guild_metadata = stateFromStores.guild_metadata;
-        class E {
+        class C {
           constructor() {
             return closure_1_5.getIsAppealEligible();
           }
         }
-        if (undefined === tmp(8127).MemberType.OWNER) {
+        if (undefined === tmp(5922).MemberType.OWNER) {
           let GUILD_MEMBER = ViolationType.GUILD_OWNER;
         } else {
           GUILD_MEMBER = ViolationType.GUILD_MEMBER;
@@ -235,7 +235,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       tmpResult8 = require("SafetyHubUtils");
     }
-  : (arg0) => {
+  : function useSafetyHubClassification(arg0) {
       _require = arg0;
       const items = [SafetyHubStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () =>
@@ -264,7 +264,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (guild_metadata != null) {
           member_type = guild_metadata.member_type;
         }
-        if (member_type === tmp(8127).MemberType.OWNER) {
+        if (member_type === tmp(5922).MemberType.OWNER) {
           let GUILD_MEMBER = ViolationType.GUILD_OWNER;
         } else {
           GUILD_MEMBER = ViolationType.GUILD_MEMBER;
@@ -302,7 +302,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useActiveSafetyHubClassifications() {
       const cResult = c.c(4);
       const arr = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -331,7 +331,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         return cResult[2];
       }
     }
-  : () => {
+  : function useActiveSafetyHubClassifications() {
       let date = new Date();
       return closure_7().filter((max_expiration_time) => {
         date = new Date(max_expiration_time.max_expiration_time);
@@ -340,7 +340,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useExpiredSafetyHubClassifications() {
       const cResult = c.c(4);
       const arr = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -369,7 +369,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         return cResult[2];
       }
     }
-  : () => {
+  : function useExpiredSafetyHubClassifications() {
       let date = new Date();
       return closure_7().filter((max_expiration_time) => {
         date = new Date(max_expiration_time.max_expiration_time);
@@ -384,7 +384,7 @@ export const useSafetyHubClassification = tmp3;
 export const useActiveSafetyHubClassifications = tmp4;
 export const useExpiredSafetyHubClassifications = tmp5;
 export const useSafetyHubAppealSignal = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSafetyHubAppealSignal() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SafetyHubStore];
@@ -400,7 +400,7 @@ export const useSafetyHubAppealSignal = ReactCompilerGating.isReactCompilerEnabl
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useSafetyHubAppealSignal() {
       const items = [SafetyHubStore];
       return initialize.useStateFromStores(items, () => appealSignal.getAppealSignal());
     };

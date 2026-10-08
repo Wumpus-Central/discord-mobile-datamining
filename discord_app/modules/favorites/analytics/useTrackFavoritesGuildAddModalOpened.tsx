@@ -11,11 +11,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildAddModalOpened.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (source) => {
+  ? function useTrackFavoritesGuildAddModalOpened(source) {
       _require = source;
       const cResult = require("c").c(3);
       if (cResult[0] !== source) {
-        const fn = function n() {
+        const fn = function u() {
           AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_ADD_MODAL_OPENED, { source });
         };
         const items = [source];
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp2, tmp3);
     }
-  : (source) => {
+  : function useTrackFavoritesGuildAddModalOpened(source) {
       const items = [source];
       const effect = noop.useEffect(() => {
         AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_ADD_MODAL_OPENED, { source });

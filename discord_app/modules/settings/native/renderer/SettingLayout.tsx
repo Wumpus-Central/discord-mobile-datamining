@@ -5,7 +5,7 @@ import SettingSegmentedControlRendererDefault from "SettingSegmentedControlRende
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const NodeType = fn(11143).NodeType;
+const NodeType = fn(11263).NodeType;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/settings/native/renderer/Sett
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (node) => {
+    ? function SettingLayout(node) {
         const cResult = c.c(4);
         node = node.node;
         const type = node.type;
@@ -41,7 +41,7 @@ export default noop.memo(
           return tmp5;
         }
       }
-    : (node) => {
+    : function SettingLayout(node) {
         node = node.node;
         const type = node.type;
         if (NodeType.LIST === type) {

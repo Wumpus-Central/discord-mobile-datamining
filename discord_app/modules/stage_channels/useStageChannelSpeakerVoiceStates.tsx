@@ -13,13 +13,13 @@ function transformParticipantToSortedVoiceState(user) {
   ({ voiceState, userNick } = user);
   return { user: user.user, voiceState, nick: userNick, comparator: getComparator(voiceState, userNick) };
 }
-const getComparator = fn(4920).getComparator;
+const getComparator = fn(5114).getComparator;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStageChannelSpeakerVoiceStates.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useStageChannelSpeakerVoiceStates(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         1,
       )[0];
     }
-  : (arg0) => {
+  : function useStageChannelSpeakerVoiceStates(arg0) {
       _require = arg0;
       let items = [StageChannelParticipantStore, ChannelStore, FavoriteStore];
       const items1 = [arg0];

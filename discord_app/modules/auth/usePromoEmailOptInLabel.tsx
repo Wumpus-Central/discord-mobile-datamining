@@ -8,7 +8,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/auth/usePromoEmailOptInLabel.tsx");
 
 export const usePromoEmailOptInLabel = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, location) => {
+  ? function usePromoEmailOptInLabel(arg0, location) {
       const cResult = c.c(5);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -36,7 +36,7 @@ export const usePromoEmailOptInLabel = ReactCompilerGating.isReactCompilerEnable
       cResult[4] = stringResult;
       tmp5 = stringResult;
     }
-  : (arg0, location) => {
+  : function usePromoEmailOptInLabel(arg0, location) {
       let LSoXK5 = arg0;
       const intl = util.intl;
       if (obj.useConfig(obj2).trackingCopy) {

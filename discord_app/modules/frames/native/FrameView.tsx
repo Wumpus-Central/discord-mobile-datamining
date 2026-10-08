@@ -8,223 +8,86 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const FrameLayoutModes = fn(8738).FrameLayoutModes;
-const ActivityPlatform = fn(2011).ActivityPlatform;
+const FrameLayoutModes = fn(10613).FrameLayoutModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FrameView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (frame) => {
-      const cResult = frame(576).c(37);
+  ? function FrameView(frame) {
+      const cResult = frame(576).c(40);
       frame = frame.frame;
       ({ iframeId, onActivityCrash, presentation } = frame);
       const layoutMode = presentation.layoutMode;
       ({ portraitSafeAreasConfig, landscapeSafeAreasConfig } = presentation);
       let obj = frame(576);
-      const data = frame(6665).useApplication(frame.applicationId).data;
+      const data = frame(6842).useApplication(frame.applicationId).data;
       const orientationLock = frame.data.orientationLock;
-      const obj2 = frame(6665);
-      let first = _slicedToArray(noop.useState(true), 2)[0];
+      const obj2 = frame(6842);
+      const first = _slicedToArray(noop.useState(true), 2)[0];
       if (cResult[0] === frame.applicationId) {
         if (cResult[1] === frame.id) {
           if (cResult[2] === layoutMode) {
-            let tmp7 = cResult[3];
-            let tmp8 = cResult[4];
+            let tmp5 = cResult[3];
+            let tmp6 = cResult[4];
           }
-          const layoutEffect = noop.useLayoutEffect(tmp7, tmp8);
+          const layoutEffect = noop.useLayoutEffect(tmp5, tmp6);
           if (cResult[5] !== frame.id) {
-            const fn2 = function f() {
+            const fn2 = function u() {
               FramesNativeManagerDefault.leaveFrame(frame.id);
             };
             cResult[5] = frame.id;
             cResult[6] = fn2;
-            let tmp10 = fn2;
-          } else {
-            tmp10 = cResult[6];
           }
           if (cResult[7] !== frame.id) {
-            const fn3 = function k(application, arg1) {
-              return frames_getDefaultOrientationLockState.setOrientationLockState(frame.id, application, arg1);
-            };
+            class O {
+              constructor(arg0, arg1) {
+                obj = closure_0(closure_2[9]);
+                return obj.setOrientationLockState(frame.id, frame, arg1);
+              }
+            }
             cResult[7] = frame.id;
-            cResult[8] = fn3;
-            let tmp11 = fn3;
+            cResult[8] = O;
           } else {
-            tmp11 = cResult[8];
-          }
-          if (!first) {
-            first = null == data;
-          }
-          if (cResult[9] === data) {
-            if (cResult[10] === orientationLock) {
-              if (cResult[11] === tmp11) {
-                if (cResult[12] === first) {
-                  let tmp12 = cResult[13];
-                }
-                const baseActivityView = tmp(9169).useBaseActivityView(tmp12);
-                ({ isResetting, isLandscape } = baseActivityView);
-                if (cResult[14] !== frame.id) {
-                  const fn4 = function b() {
-                    FramesNativeManagerDefault.leaveFrame(frame.id);
-                    const obj3 = { body: null, confirmText: null };
-                    const intl = util.intl;
-                    obj3.body = intl.string(util.t.tYBBWz);
-                    const intl2 = util.intl;
-                    obj3.confirmText = intl2.string(util.t.BddRzS);
-                    actions_AlertActionCreatorsDefault.show(obj3);
-                  };
-                  class D {
-                    constructor() {
-                      obj = closure_1(closure_2[9]);
-                      return obj.leaveFrame(frame.id);
-                    }
-                  }
-                  cResult[14] = frame.id;
-                  cResult[15] = fn4;
-                  cResult[16] = D;
-                  let tmp14 = fn4;
-                } else {
-                  tmp14 = cResult[15];
-                  class D {
-                    constructor() {
-                      obj = closure_1(closure_2[9]);
-                      return obj.leaveFrame(frame.id);
-                    }
-                  }
-                }
-                if (cResult[17] !== frame) {
-                  class D {
-                    constructor() {
-                      obj = closure_1(closure_2[9]);
-                      return obj.leaveFrame(frame.id);
-                    }
-                  }
-                  const tmp18 = layoutMode(17178)(frame, ActivityPlatform.MOBILE);
-                  cResult[17] = frame;
-                  cResult[18] = tmp18;
-                  let tmp16 = tmp18;
-                } else {
-                  tmp16 = cResult[18];
-                }
-                if (cResult[19] !== data) {
-                  tmp(9182);
-                  class D {
-                    constructor() {
-                      obj = closure_1(closure_2[9]);
-                      return obj.leaveFrame(frame.id);
-                    }
-                  }
-                  cResult[19] = data;
-                  cResult[20] = tmp21;
-                  let tmp19 = tmp21;
-                } else {
-                  tmp19 = cResult[20];
-                }
-                if (isLandscape) {
-                  portraitSafeAreasConfig = landscapeSafeAreasConfig;
-                }
-                if (cResult[21] === frame.applicationId) {
-                  if (cResult[22] === frame.data.url) {
-                    if (cResult[23] === iframeId) {
-                      if (cResult[24] === onActivityCrash) {
-                        if (cResult[25] === tmp10) {
-                          if (cResult[26] === tmp16) {
-                            if (cResult[27] === tmp19) {
-                              if (cResult[28] === tmp23) {
-                                if (cResult[29] === portraitSafeAreasConfig) {
-                                  if (cResult[30] === tmp14) {
-                                    if (cResult[31] === D) {
-                                      let tmp24 = cResult[32];
-                                    }
-                                    class D {
-                                      constructor() {
-                                        obj = closure_1(closure_2[9]);
-                                        return obj.leaveFrame(frame.id);
-                                      }
-                                    }
-                                    const obj4 = { showLoadingIndicator: first, isResetting, children: tmp24 };
-                                    const tmp30 = jsx(tmp(9169).BaseActivityView, {
-                                      showLoadingIndicator: first,
-                                      isResetting,
-                                      children: tmp24,
-                                    });
-                                    cResult[33] = isResetting;
-                                    cResult[34] = first;
-                                    cResult[35] = tmp24;
-                                    cResult[36] = tmp30;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-                const obj5 = {
-                  onActivityCrash,
-                  applicationId: frame.applicationId,
-                  iframeId,
-                  onDisallowedNavigation: tmp14,
-                  onInvalidUrl: D,
-                  activityUrl: frame.data.url,
-                  queryParams: tmp16,
-                  onLoadError: tmp10,
-                  allowPopups: tmp19,
-                  referrerPolicy: "origin",
-                  isPipOrGridMode: layoutMode === FrameLayoutModes.PIP,
-                  safeAreasConfig: portraitSafeAreasConfig,
-                };
-                const tmp27 = jsx(layoutMode(17181), {
-                  onActivityCrash,
-                  applicationId: frame.applicationId,
-                  iframeId,
-                  onDisallowedNavigation: tmp14,
-                  onInvalidUrl: D,
-                  activityUrl: frame.data.url,
-                  queryParams: tmp16,
-                  onLoadError: tmp10,
-                  allowPopups: tmp19,
-                  referrerPolicy: "origin",
-                  isPipOrGridMode: layoutMode === FrameLayoutModes.PIP,
-                  safeAreasConfig: portraitSafeAreasConfig,
-                });
-                cResult[21] = frame.applicationId;
-                cResult[22] = frame.data.url;
-                cResult[23] = iframeId;
-                cResult[24] = onActivityCrash;
-                cResult[25] = tmp10;
-                cResult[26] = tmp16;
-                cResult[27] = tmp19;
-                cResult[28] = layoutMode === FrameLayoutModes.PIP;
-                cResult[29] = portraitSafeAreasConfig;
-                cResult[30] = tmp14;
-                cResult[31] = D;
-                cResult[32] = tmp27;
-                tmp24 = tmp27;
-                const tmpResult = tmp(9169);
+            class O {
+              constructor(arg0, arg1) {
+                obj = closure_0(closure_2[9]);
+                return obj.setOrientationLockState(frame.id, frame, arg1);
               }
             }
           }
-          const obj6 = {
+          if (!first) {
+            class O {
+              constructor(arg0, arg1) {
+                obj = closure_0(closure_2[9]);
+                return obj.setOrientationLockState(frame.id, frame, arg1);
+              }
+            }
+          }
+          if (cResult[9] === data) {
+            class O {
+              constructor(arg0, arg1) {
+                obj = closure_0(closure_2[9]);
+                return obj.setOrientationLockState(frame.id, frame, arg1);
+              }
+            }
+          }
+          const obj4 = {
             orientationLockState: orientationLock,
             showLoadingIndicator: first,
-            setShowLoadingStateForLockingOrientation: tmp6,
+            setShowLoadingStateForLockingOrientation: tmp4,
             application: data,
-            setOrientationLockState: tmp11,
+            setOrientationLockState: O,
           };
           cResult[9] = data;
           cResult[10] = orientationLock;
-          cResult[11] = tmp11;
+          cResult[11] = O;
           cResult[12] = first;
-          cResult[13] = obj6;
-          tmp12 = obj6;
+          cResult[13] = obj4;
         }
       }
-      const fn = function p() {
+      const fn = function c() {
         DispatcherDefault.dispatch({
           type: "FRAME_UPDATE_LAYOUT_MODE",
           layoutMode,
@@ -239,17 +102,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = layoutMode;
       cResult[3] = fn;
       cResult[4] = items;
-      tmp8 = items;
-      tmp7 = fn;
-      const tmp4 = _slicedToArray(noop.useState(true), 2);
+      tmp6 = items;
+      tmp5 = fn;
+      const tmp2 = _slicedToArray(noop.useState(true), 2);
     }
-  : (frame) => {
+  : function FrameView(frame) {
       frame = frame.frame;
       const presentation = frame.presentation;
       const layoutMode = presentation.layoutMode;
       let landscapeSafeAreasConfig = presentation.portraitSafeAreasConfig;
       ({ iframeId, onActivityCrash } = frame);
-      const data = frame(6665).useApplication(frame.applicationId).data;
+      const data = frame(6842).useApplication(frame.applicationId).data;
       const orientationLock = frame.data.orientationLock;
       const tmp3 = _slicedToArray(noop.useState(true), 2);
       let first = tmp3[0];
@@ -276,8 +139,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (!first) {
         first = null == data;
       }
-      let obj = frame(6665);
-      const baseActivityView = frame(9169).useBaseActivityView({
+      let obj = frame(6842);
+      const baseActivityView = frame(10735).useBaseActivityView({
         orientationLockState: orientationLock,
         showLoadingIndicator: first,
         setShowLoadingStateForLockingOrientation: tmp3[1],
@@ -303,6 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return FramesNativeManagerDefault.leaveFrame(frame.id);
         },
         activityUrl: frame.data.url,
+        contextSource: null,
         queryParams: null,
         onLoadError: null,
         allowPopups: null,
@@ -310,11 +174,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         isPipOrGridMode: null,
         safeAreasConfig: null,
       };
-      const tmpResult = frame(9169);
-      obj3.queryParams = layoutMode(17178)(frame, ActivityPlatform.MOBILE);
+      const obj4 = { type: null, frameId: null };
+      const tmpResult = frame(10735);
+      obj4.type = frame(10615).EmbeddedContextSourceType.FRAME;
+      obj4.frameId = frame.id;
+      obj3.contextSource = obj4;
+      const tmp10 = layoutMode(17462);
+      obj3.queryParams = layoutMode(17459)(frame, frame(10742).ActivityPlatform.MOBILE);
       obj3.onLoadError = callback;
-      const tmp10 = layoutMode(17181);
-      obj3.allowPopups = frame(9182).allowPopups(data);
+      const tmp11 = layoutMode(17459);
+      obj3.allowPopups = frame(10750).allowPopups(data);
       obj3.isPipOrGridMode = layoutMode === FrameLayoutModes.PIP;
       if (isLandscape) {
         landscapeSafeAreasConfig = presentation.landscapeSafeAreasConfig;
@@ -338,6 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return FramesNativeManagerDefault.leaveFrame(frame.id);
           }}
           activityUrl={frame.data.url}
+          contextSource={null}
           queryParams={null}
           onLoadError={null}
           allowPopups={null}
@@ -346,5 +216,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           safeAreasConfig={null}
         />
       );
-      return jsx(frame(9169).BaseActivityView, { showLoadingIndicator: first, isResetting, children: null });
+      return jsx(frame(10735).BaseActivityView, { showLoadingIndicator: first, isResetting, children: null });
     };

@@ -9,10 +9,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationFocusScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ConversationFocusScreen() {
       const cResult = channelId(576).c(17);
       const obj = channelId(576);
-      const params = channelId(1493).useRoute().params;
+      const params = channelId(1505).useRoute().params;
       channelId = params.channelId;
       const conversationId = params.conversationId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             isFullFetchPending,
             startMessageId,
           };
-          const tmp16 = jsx(conversationId(13111), {
+          const tmp16 = jsx(conversationId(9313), {
             channelId,
             conversationId,
             messages: stateFromStores,
@@ -158,13 +158,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items3;
       tmp7 = items3;
       tmp6 = fn;
-      let obj2 = channelId(1493);
+      let obj2 = channelId(1505);
     }
-  : () => {
-      const params = channelId(1493).useRoute().params;
+  : function ConversationFocusScreen() {
+      const params = channelId(1505).useRoute().params;
       channelId = params.channelId;
       const conversationId = params.conversationId;
-      const obj = channelId(1493);
+      const obj = channelId(1505);
       const items = [ChannelConversationsStore];
       const items1 = [channelId, conversationId];
       const messages = channelId(504).useStateFromStores(
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items3,
       );
       ({ fullyHydrated, isFullFetchPending, startMessageId } = stateFromStoresObject);
-      return jsx(conversationId(13111), {
+      return jsx(conversationId(9313), {
         channelId,
         conversationId,
         messages,

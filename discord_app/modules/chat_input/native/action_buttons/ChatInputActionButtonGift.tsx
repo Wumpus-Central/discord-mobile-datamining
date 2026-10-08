@@ -10,12 +10,12 @@ import PromotionsStore from "../../../premium/promotions/PromotionsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let View = fn(17).View;
-const ChatInputActionType = fn(11589).ChatInputActionType;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const View = fn(17).View;
+const ChatInputActionType = fn(11652).ChatInputActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { gradientContainerRefresh: null, transparentBackground: null };
   const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderRadius: nativeDefault.radii.sm };
@@ -29,45 +29,38 @@ let result = size.fileFinishedImporting("modules/chat_input/native/action_button
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
-        const cResult = onPress(stateFromStores[11]).c(42);
+    ? function ChatInputActionButtonGift(arg0) {
+        const cResult = onPress(stateFromStores[11]).c(45);
         ({ accessible, disabled, channel, onPress } = arg0);
         ({ style, styleButton } = arg0);
         stateFromStores2.useRef(null);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const items = [closure_6];
-          const fn = function f() {
-            return closure_6.useReducedMotion;
-          };
+          const items = [AccessibilityStore];
+          class T {
+            constructor() {
+              return closure_6.useReducedMotion;
+            }
+          }
           cResult[0] = items;
-          cResult[1] = fn;
+          cResult[1] = T;
           tmp5 = items;
-          tmp6 = fn;
         } else {
           [tmp5, tmp6] = cResult;
         }
         let obj = onPress(stateFromStores[11]);
         let obj2 = stateFromStores2;
-        stateFromStores = onPress(stateFromStores[12]).useStateFromStores(tmp5, tmp6);
+        stateFromStores = onPress(stateFromStores[12]).useStateFromStores(tmp5, T);
         closure_12();
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [PromotionsStore];
-          const fn2 = function h() {
-            const marketingComponentByType = closure_7.getMarketingComponentByType(
-              onPress(stateFromStores[13]).MarketingComponentType.GIFT_ICON,
-            );
-            let giftIcon = null;
-            if (null != marketingComponentByType) {
-              giftIcon = null;
-              if ("giftIcon" === marketingComponentByType.properties.properties.oneofKind) {
-                giftIcon = marketingComponentByType.properties.properties.giftIcon;
-              }
+          class T {
+            constructor() {
+              return closure_6.useReducedMotion;
             }
-            return giftIcon;
-          };
+          }
           cResult[2] = items1;
-          cResult[3] = fn2;
-          let tmp11 = fn2;
+          cResult[3] = tmp13;
+          let tmp11 = tmp13;
           let tmp10 = items1;
         } else {
           tmp10 = cResult[2];
@@ -77,7 +70,7 @@ export default noop.memo(
         const stateFromStores1 = onPress(stateFromStores[12]).useStateFromStores(tmp10, tmp11);
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const items2 = [PromotionsStore];
-          class P {
+          class B {
             constructor() {
               giftPromotion = closure_7.getGiftPromotion();
               str = undefined;
@@ -91,15 +84,15 @@ export default noop.memo(
             }
           }
           cResult[4] = items2;
-          cResult[5] = P;
-          let tmp15 = P;
-          let tmp14 = items2;
+          cResult[5] = B;
+          let tmp16 = B;
+          let tmp15 = items2;
         } else {
-          tmp14 = cResult[4];
-          tmp15 = cResult[5];
+          tmp15 = cResult[4];
+          tmp16 = cResult[5];
         }
         const tmpResult6 = onPress(stateFromStores[12]);
-        stateFromStores2 = onPress(stateFromStores[12]).useStateFromStores(tmp14, tmp15);
+        stateFromStores2 = onPress(stateFromStores[12]).useStateFromStores(tmp15, tmp16);
         let boxAnimationUrl;
         if (stateFromStores1 != null) {
           boxAnimationUrl = stateFromStores1.boxAnimationUrl;
@@ -113,7 +106,7 @@ export default noop.memo(
         }
         if (cResult[6] !== boxAnimationUrl) {
           const isNullOrEmptyResult = onPress(tmp2[14]).isNullOrEmpty(boxAnimationUrl);
-          class P {
+          class B {
             constructor() {
               giftPromotion = closure_7.getGiftPromotion();
               str = undefined;
@@ -127,16 +120,18 @@ export default noop.memo(
             }
           }
           cResult[7] = isNullOrEmptyResult;
-          let tmp20 = isNullOrEmptyResult;
+          let tmp21 = isNullOrEmptyResult;
           const tmpResult8 = onPress(tmp2[14]);
         } else {
-          tmp20 = cResult[7];
+          tmp21 = cResult[7];
         }
-        if (cResult[8] === !tmp20) {
+        let tmp23 = !tmp21;
+        if (cResult[8] === tmp23) {
           if (cResult[9] === trinketAnimationUrl) {
-            let tmp23 = cResult[10];
+            let tmp24 = cResult[10];
           }
-          class P {
+          const _Symbol = Symbol;
+          class B {
             constructor() {
               giftPromotion = closure_7.getGiftPromotion();
               str = undefined;
@@ -149,22 +144,69 @@ export default noop.memo(
               return str;
             }
           }
-          const tmp27 = stateFromStores1(obj2.useState(false), 2);
-          View = tmp27[1];
-          const _Symbol = Symbol;
-          if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-            class L {
-              constructor(arg0) {
-                if (!arg0) {
-                  tmp = closure_5;
-                  flag = true;
-                  tmp2 = closure_5(true);
-                }
-                return;
-              }
+          const GiftingPromoMobileButtonAnimationDismissHoldoutExperiment = onPress(
+            tmp2[15],
+          ).GiftingPromoMobileButtonAnimationDismissHoldoutExperiment;
+          const inHoldout = GiftingPromoMobileButtonAnimationDismissHoldoutExperiment.useConfig(tmp28).inHoldout;
+          [tmp31, AccessibilityStore] = stateFromStores1(obj2.useState(false), 2);
+          const tmpResult9 = onPress(tmp2[16]);
+          if (!tmp21) {
+            let prop = null;
+            if (!tmp31) {
+              prop = onPress(tmp2[17]).DismissibleContent.GIFTING_PROMOTION_ICON;
             }
-            cResult[11] = L;
-            class P {
+          } else {
+            prop = null;
+          }
+          const tmp29Result = stateFromStores1(
+            tmpResult9.useSelectedSnowflakeBoundDismissibleContent(prop, stateFromStores2, undefined, true),
+            2,
+          );
+          PromotionsStore = tmp37;
+          const tmp38 = tmp29Result[0] === onPress(tmp2[17]).DismissibleContent.GIFTING_PROMOTION_ICON;
+          if (!tmp21) {
+            tmp23 = tmp38;
+          }
+          closure_8 = tmp23;
+          if (tmp24) {
+            tmp24 = tmp38;
+          }
+          closure_9 = tmp24;
+          let tmp39 = null != gradient;
+          if (tmp39) {
+            tmp39 = gradient.colors.length > 0;
+          }
+          if (tmp39) {
+            tmp39 = tmp24;
+          }
+          if (cResult[12] === inHoldout) {
+            if (cResult[13] === tmp37) {
+              let tmp40 = cResult[14];
+            }
+            closure_10 = tmp40;
+            if (cResult[15] !== tmp40) {
+              function ie(arg0) {
+                if (!arg0) {
+                  closure_10();
+                }
+              }
+              cResult[15] = tmp40;
+              class B {
+                constructor() {
+                  giftPromotion = closure_7.getGiftPromotion();
+                  str = undefined;
+                  if (giftPromotion != null) {
+                    str = giftPromotion.id;
+                  }
+                  if (str == null) {
+                    str = "";
+                  }
+                  return str;
+                }
+              }
+              cResult[16] = ie;
+            }
+            class B {
               constructor() {
                 giftPromotion = closure_7.getGiftPromotion();
                 str = undefined;
@@ -177,181 +219,61 @@ export default noop.memo(
                 return str;
               }
             }
-          } else {
-            class L {
-              constructor(arg0) {
-                if (!arg0) {
-                  tmp = closure_5;
-                  flag = true;
-                  tmp2 = closure_5(true);
-                }
-                return;
-              }
+            function se() {
+              const timeout = setTimeout(closure_10, 7000);
+              return () => clearTimeout(closure_0);
             }
+            const items3 = [tmp23, tmp24, stateFromStores, tmp40];
+            cResult[17] = tmp40;
+            cResult[18] = tmp23;
+            cResult[19] = tmp24;
+            cResult[20] = stateFromStores;
+            cResult[21] = se;
+            cResult[22] = items3;
           }
-          const tmpResult9 = onPress(tmp2[15]);
-          if (!tmp20) {
-            class L {
-              constructor(arg0) {
-                if (!arg0) {
-                  tmp = closure_5;
-                  flag = true;
-                  tmp2 = closure_5(true);
-                }
-                return;
-              }
-            }
-            if (!tmp27[0]) {
-              class L {
-                constructor(arg0) {
-                  if (!arg0) {
-                    tmp = closure_5;
-                    flag = true;
-                    tmp2 = closure_5(true);
-                  }
-                  return;
-                }
-              }
-            }
-          } else {
-            class L {
-              constructor(arg0) {
-                if (!arg0) {
-                  tmp = closure_5;
-                  flag = true;
-                  tmp2 = closure_5(true);
-                }
-                return;
-              }
-            }
-          }
-          const tmp26Result = tmp26(
-            tmpResult9.useSelectedSnowflakeBoundDismissibleContent(tmp28, stateFromStores2, undefined, true),
-            2,
-          );
-          closure_6 = tmp26Result[1];
-          tmp26Result[0] === onPress(tmp2[16]).DismissibleContent.GIFTING_PROMOTION_ICON;
-          if (!tmp20) {
-            class L {
-              constructor(arg0) {
-                if (!arg0) {
-                  tmp = closure_5;
-                  flag = true;
-                  tmp2 = closure_5(true);
-                }
-                return;
-              }
-            }
-          }
-          PromotionsStore = tmp22;
-          if (tmp23) {
-            class L {
-              constructor(arg0) {
-                if (!arg0) {
-                  tmp = closure_5;
-                  flag = true;
-                  tmp2 = closure_5(true);
-                }
-                return;
-              }
-            }
-          }
-          closure_8 = tmp23;
-          let tmp34 = null != gradient;
-          if (tmp34) {
-            class L {
-              constructor(arg0) {
-                if (!arg0) {
-                  tmp = closure_5;
-                  flag = true;
-                  tmp2 = closure_5(true);
-                }
-                return;
-              }
-            }
-            tmp34 = gradient.colors.length > 0;
-          }
-          if (tmp34) {
-            class L {
-              constructor(arg0) {
-                if (!arg0) {
-                  tmp = closure_5;
-                  flag = true;
-                  tmp2 = closure_5(true);
-                }
-                return;
-              }
-            }
-          }
-          if (cResult[12] === tmp22) {
-            class L {
-              constructor(arg0) {
-                if (!arg0) {
-                  tmp = closure_5;
-                  flag = true;
-                  tmp2 = closure_5(true);
-                }
-                return;
-              }
-            }
-          }
-          class H {
+          class Z {
             constructor() {
-              tmp = closure_2;
-              if (closure_2) {
-                tmp = closure_7;
-              }
-              if (!tmp) {
-                tmp = closure_8;
-              }
-              if (tmp) {
-                tmp2 = globalThis;
-                _setTimeout = setTimeout;
-                num = 7000;
-                timerId = setTimeout(() => {
-                  closure_1_5(true);
-                }, 7000);
+              tmp = closure_6(true);
+              if (!inHoldout) {
+                tmp2 = closure_7;
+                tmp3 = ContentDismissActionType;
+                tmp4 = closure_7(ContentDismissActionType.AUTO_DISMISS);
               }
               return;
             }
           }
-          cResult[12] = tmp22;
-          cResult[13] = tmp23;
-          cResult[14] = stateFromStores;
-          cResult[15] = H;
+          cResult[12] = inHoldout;
+          cResult[13] = tmp29Result[1];
+          cResult[14] = Z;
+          tmp40 = Z;
+          const tmp30 = stateFromStores1(obj2.useState(false), 2);
         }
         const tmpResult7 = onPress(stateFromStores[12]);
         const isNullOrEmptyResult1 = onPress(stateFromStores[14]).isNullOrEmpty(trinketAnimationUrl);
+        let tmp26 = !isNullOrEmptyResult1;
         if (!isNullOrEmptyResult1) {
-          class L {
-            constructor(arg0) {
-              if (!arg0) {
-                tmp = closure_5;
-                flag = true;
-                tmp2 = closure_5(true);
-              }
-              return;
-            }
-          }
+          tmp26 = !tmp23;
         }
-        cResult[8] = !tmp20;
+        cResult[8] = tmp23;
         cResult[9] = trinketAnimationUrl;
-        cResult[10] = !isNullOrEmptyResult1;
-        tmp23 = tmp25;
+        cResult[10] = tmp26;
+        tmp24 = tmp26;
         const tmpResult10 = onPress(stateFromStores[14]);
       }
-    : (arg0) => {
+    : function ChatInputActionButtonGift(arg0) {
         ({ accessible, disabled, onPress: require } = arg0);
         let stateFromStores;
         let stateFromStores2;
-        c5 = undefined;
+        let inHoldout;
         c6 = undefined;
         closure_7 = undefined;
         closure_8 = undefined;
+        closure_9 = undefined;
+        let callback;
         ({ channel, style, styleButton } = arg0);
         const ref = stateFromStores2.useRef(null);
         const items = [c6];
-        stateFromStores = require("initialize").useStateFromStores(items, () => _undefined2.useReducedMotion);
+        stateFromStores = require("initialize").useStateFromStores(items, () => _undefined.useReducedMotion);
         const tmp5 = closure_12();
         let obj2 = require("initialize");
         const items1 = [closure_7];
@@ -398,18 +320,18 @@ export default noop.memo(
         let tmp12 = !isNullOrEmptyResult;
         const tmp2Result = require("StringUtils");
         const isNullOrEmptyResult1 = require("StringUtils").isNullOrEmpty(trinketAnimationUrl);
-        let tmp30Result = !isNullOrEmptyResult1;
+        let tmp31Result = !isNullOrEmptyResult1;
         if (!isNullOrEmptyResult1) {
-          tmp30Result = !tmp12;
+          tmp31Result = !tmp12;
         }
+        const GiftingPromoMobileButtonAnimationDismissHoldoutExperiment =
+          require("GiftingPromoMobileButtonAnimationDismissHoldoutExperiment").GiftingPromoMobileButtonAnimationDismissHoldoutExperiment;
+        inHoldout = GiftingPromoMobileButtonAnimationDismissHoldoutExperiment.useConfig({
+          location: "ChatInputActionButtonGift",
+        }).inHoldout;
         const tmp15 = stateFromStores1;
         const tmp2Result3 = require("StringUtils");
-        [tmp17, c5] = stateFromStores1(stateFromStores2.useState(false), 2);
-        const callback = obj.useCallback((arg0) => {
-          if (!arg0) {
-            _undefined(true);
-          }
-        }, []);
+        [tmp17, c6] = stateFromStores1(stateFromStores2.useState(false), 2);
         const tmp16 = stateFromStores1(stateFromStores2.useState(false), 2);
         if (!isNullOrEmptyResult) {
           let prop = null;
@@ -419,8 +341,7 @@ export default noop.memo(
         } else {
           prop = null;
         }
-        const tmp2Result4 = require("useSelectedDismissibleContent");
-        [tmp21, c6] = tmp15(
+        const tmp15Result = tmp15(
           require("useSelectedDismissibleContent").useSelectedSnowflakeBoundDismissibleContent(
             prop,
             stateFromStores2,
@@ -429,38 +350,41 @@ export default noop.memo(
           ),
           2,
         );
-        const tmp22 = tmp21 === require("dismissible_content").DismissibleContent.GIFTING_PROMOTION_ICON;
+        closure_7 = tmp20;
+        const tmp21 = tmp15Result[0] === require("dismissible_content").DismissibleContent.GIFTING_PROMOTION_ICON;
         if (!isNullOrEmptyResult) {
-          tmp12 = tmp22;
+          tmp12 = tmp21;
         }
-        closure_7 = tmp12;
-        if (tmp30Result) {
-          tmp30Result = tmp22;
+        closure_8 = tmp12;
+        if (tmp31Result) {
+          tmp31Result = tmp21;
         }
-        closure_8 = tmp30Result;
+        closure_9 = tmp31Result;
         let transparentBackground = null != gradient;
         if (transparentBackground) {
           transparentBackground = gradient.colors.length > 0;
         }
         if (transparentBackground) {
-          transparentBackground = tmp30Result;
+          transparentBackground = tmp31Result;
         }
-        const items3 = [tmp12, tmp22, tmp30Result, stateFromStores];
-        const effect = obj.useEffect(() => {
-          let tmp = stateFromStores;
-          if (stateFromStores) {
-            tmp = closure_7;
-          }
-          if (!tmp) {
-            tmp = closure_8;
-          }
-          if (tmp) {
-            const _setTimeout = setTimeout;
-            const timerId = setTimeout(() => {
-              _undefined(true);
-            }, 7000);
+        const items3 = [inHoldout, tmp15Result[1]];
+        callback = obj.useCallback(() => {
+          _undefined(true);
+          if (!inHoldout) {
+            closure_7(ContentDismissActionType.AUTO_DISMISS);
           }
         }, items3);
+        const items4 = [callback];
+        const items5 = [tmp12, tmp31Result, stateFromStores, callback];
+        const callback1 = obj.useCallback((arg0) => {
+          if (!arg0) {
+            callback();
+          }
+        }, items4);
+        const effect = obj.useEffect(() => {
+          const timeout = setTimeout(callback, 7000);
+          return () => clearTimeout(closure_0);
+        }, items5);
         const obj5 = { style, children: null };
         if (tmp12) {
           const obj6 = {
@@ -470,20 +394,20 @@ export default noop.memo(
             active: false,
             loop: false,
             onPress(arg0) {
-              _undefined2(ContentDismissActionType.TAKE_ACTION);
+              closure_7(ContentDismissActionType.TAKE_ACTION);
               require(arg0, ChatInputActionType.NITRO_GIFT, ref);
             },
-            onAnimationFinished: callback,
+            onAnimationFinished: callback1,
             IconComponent: require("GiftIcon").GiftIcon,
             accessible,
             accessibilityLabel: null,
           };
           const intl2 = require("util").intl;
           obj6.accessibilityLabel = intl2.string(require("util").t.Z1RnTk);
-          let tmp24Result = closure_10(require("PremiumAnimatedGiftButton").PremiumAnimatedGiftButton, obj6);
-          let tmp30 = closure_10;
+          let tmp25Result = callback(require("PremiumAnimatedGiftButton").PremiumAnimatedGiftButton, obj6);
+          let tmp31 = callback;
         } else {
-          let tmp27Result = transparentBackground;
+          let tmp28Result = transparentBackground;
           if (transparentBackground) {
             const obj7 = {
               style: tmp5.gradientContainerRefresh,
@@ -499,11 +423,11 @@ export default noop.memo(
             obj7.angle = num2;
             obj7.angleCenter = { x: 0.5, y: 0.5 };
             obj7.colors = gradient.colors;
-            tmp27Result = closure_10(ref(tmp3[20]), obj7);
-            const tmp29 = ref(tmp3[20]);
+            tmp28Result = callback(ref(tmp3[21]), obj7);
+            const tmp30 = ref(tmp3[21]);
           }
-          const items4 = [tmp27Result];
-          tmp30 = closure_10;
+          const items6 = [tmp28Result];
+          tmp31 = callback;
           const obj8 = {
             ref,
             style: null,
@@ -514,13 +438,13 @@ export default noop.memo(
             IconComponent: null,
             onPress: null,
           };
-          const items5 = [styleButton];
+          const items7 = [styleButton];
           if (transparentBackground) {
             transparentBackground = tmp5.transparentBackground;
           }
           const obj9 = { children: null };
-          items5[1] = transparentBackground;
-          obj8.style = items5;
+          items7[1] = transparentBackground;
+          obj8.style = items7;
           obj8.disabled = disabled;
           obj8.accessible = accessible;
           const intl = require("util").intl;
@@ -537,18 +461,18 @@ export default noop.memo(
             }
             closure_1_0(arg0, ChatInputActionType.NITRO_GIFT, ref);
           };
-          items4[1] = tmp30(ref(tmp3[21]), obj8);
-          obj9.children = items4;
-          tmp24Result = closure_11(tmp25, obj9);
-          const tmp32 = ref(tmp3[21]);
+          items6[1] = tmp31(ref(tmp3[22]), obj8);
+          obj9.children = items6;
+          tmp25Result = closure_11(tmp26, obj9);
+          const tmp33 = ref(tmp3[22]);
         }
-        const items6 = [tmp24Result];
-        if (tmp30Result) {
+        const items8 = [tmp25Result];
+        if (tmp31Result) {
           const obj10 = { trinketsAnimationUrl: trinketAnimationUrl };
-          tmp30Result = tmp30(require("GiftIconTrinketsAnimation").GiftIconTrinketsAnimation, obj10);
+          tmp31Result = tmp31(require("GiftIconTrinketsAnimation").GiftIconTrinketsAnimation, obj10);
         }
-        items6[1] = tmp30Result;
-        obj5.children = items6;
-        return closure_11(c5, obj5);
+        items8[1] = tmp31Result;
+        obj5.children = items8;
+        return closure_11(inHoldout, obj5);
       },
 );

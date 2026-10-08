@@ -9,9 +9,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useActivityShelfItemsSorting.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function useActivityShelfItemsSorting(arr) {
       const cResult = items2(576).c(2);
-      const FrecencyUserSettingsActionCreators = items2(2033).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = items2(2045).FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
       if (cResult[0] !== arr) {
         const items = [];
@@ -51,21 +51,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const embeddedActivityConfig = tmp.application.embeddedActivityConfig;
           let label_type;
           if (embeddedActivityConfig != null) {
-            const obj = items(1369);
-            const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(8962)(undefined, obj.getOS(obj))];
+            const obj = items(1381);
+            const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(10627)(undefined, obj.getOS(obj))];
             if (tmp7 != null) {
               label_type = tmp7.label_type;
             }
-            const tmp5 = closure_1(8962);
+            const tmp5 = closure_1(10627);
           }
           let tmp8 = null != label_type;
           if (tmp8) {
             tmp8 =
-              label_type === items(1985).EmbeddedActivityLabelTypes.NEW ||
-              label_type === items(1985).EmbeddedActivityLabelTypes.UPDATED;
+              label_type === items(1997).EmbeddedActivityLabelTypes.NEW ||
+              label_type === items(1997).EmbeddedActivityLabelTypes.UPDATED;
             const tmp11 =
-              label_type === items(1985).EmbeddedActivityLabelTypes.NEW ||
-              label_type === items(1985).EmbeddedActivityLabelTypes.UPDATED;
+              label_type === items(1997).EmbeddedActivityLabelTypes.NEW ||
+              label_type === items(1997).EmbeddedActivityLabelTypes.UPDATED;
           }
           return tmp8;
         });
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : (arg0) => {
+  : function useActivityShelfItemsSorting(arg0) {
       _require = arg0;
       const FrecencyUserSettingsActionCreators =
         require("UserSettingsProtoActionCreators").FrecencyUserSettingsActionCreators;
@@ -137,21 +137,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const embeddedActivityConfig = tmp.application.embeddedActivityConfig;
           let label_type;
           if (embeddedActivityConfig != null) {
-            const obj = items(1369);
-            const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(8962)(undefined, obj.getOS(obj))];
+            const obj = items(1381);
+            const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(10627)(undefined, obj.getOS(obj))];
             if (tmp7 != null) {
               label_type = tmp7.label_type;
             }
-            const tmp5 = closure_1(8962);
+            const tmp5 = closure_1(10627);
           }
           let tmp8 = null != label_type;
           if (tmp8) {
             tmp8 =
-              label_type === items(1985).EmbeddedActivityLabelTypes.NEW ||
-              label_type === items(1985).EmbeddedActivityLabelTypes.UPDATED;
+              label_type === items(1997).EmbeddedActivityLabelTypes.NEW ||
+              label_type === items(1997).EmbeddedActivityLabelTypes.UPDATED;
             const tmp11 =
-              label_type === items(1985).EmbeddedActivityLabelTypes.NEW ||
-              label_type === items(1985).EmbeddedActivityLabelTypes.UPDATED;
+              label_type === items(1997).EmbeddedActivityLabelTypes.NEW ||
+              label_type === items(1997).EmbeddedActivityLabelTypes.UPDATED;
           }
           return tmp8;
         });

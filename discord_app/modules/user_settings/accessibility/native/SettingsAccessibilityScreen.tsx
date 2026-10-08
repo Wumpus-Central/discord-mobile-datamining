@@ -4,7 +4,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef2911 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import _modDef2955 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
 import openUserSettings from "../../core/native/openUserSettings.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
@@ -38,7 +38,7 @@ function getAccessibilitySettingScreen(youBarAnimationsOverridden) {
   const items3 = [MobileUserSettings.DISPLAY_NAME_STYLES_ACCESSIBILITY];
   obj5.settings = items3;
   const intl3 = util.intl;
-  obj5.subLabel = intl3.format(_modDef2911.L8U56h, {
+  obj5.subLabel = intl3.format(_modDef2955.L8U56h, {
     onClickOpenModal() {
       openUserSettings.openUserSettings({ screen: constants.PROFILE_CUSTOMIZATION }, () => {
         closure_1_0(closure_1_2[10]).runAfterInteractions(() => {
@@ -145,7 +145,7 @@ function getAccessibilitySettingScreen(youBarAnimationsOverridden) {
   items1[13] = obj20;
   return items1.filter((item) => null != item);
 }
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const Constants = fn(1085);
 ({ HelpdeskArticles: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsx = fn(21).jsx;
@@ -154,7 +154,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/accessibility/native/SettingsAccessibilityScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function SettingsAccessibilityScreen() {
       const cResult = c.c(12);
       const stackNavigation = useNavigation.useStackNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -178,16 +178,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stateFromStoresObject);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [AccessibilityStore];
-        const fn2 = function c() {
-          return (
-            ("respect-motion-settings" === AccessibilityStore.youBarNameplateAnimation ||
-              "respect-motion-settings" === AccessibilityStore.youBarAvatarDecoAnimation) &&
-            AccessibilityStore.useReducedMotion
-          );
-        };
+        class O {
+          constructor() {
+            tmp = closure_1_4;
+            tmp2 =
+              ("respect-motion-settings" === closure_1_4.youBarNameplateAnimation ||
+                "respect-motion-settings" === tmp.youBarAvatarDecoAnimation) &&
+              tmp.useReducedMotion;
+            return tmp2;
+          }
+        }
         cResult[2] = items1;
-        cResult[3] = fn2;
-        let tmp10 = fn2;
+        cResult[3] = O;
+        let tmp10 = O;
         let tmp9 = items1;
       } else {
         tmp9 = cResult[2];
@@ -203,11 +206,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let tmp13 = cResult[9];
               }
               if (cResult[10] !== tmp13) {
-                const obj3 = { node: tmp13 };
-                const tmp18 = jsx(SettingLayoutDefault, { node: tmp13 });
+                class O {
+                  constructor() {
+                    tmp = closure_1_4;
+                    tmp2 =
+                      ("respect-motion-settings" === closure_1_4.youBarNameplateAnimation ||
+                        "respect-motion-settings" === tmp.youBarAvatarDecoAnimation) &&
+                      tmp.useReducedMotion;
+                    return tmp2;
+                  }
+                }
+                const tmp18 = jsx(SettingLayoutDefault, { node: null });
                 cResult[10] = tmp13;
                 cResult[11] = tmp18;
                 let tmp15 = tmp18;
+                const obj3 = { node: null };
               } else {
                 tmp15 = cResult[11];
               }
@@ -244,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
       };
     }
-  : () => {
+  : function SettingsAccessibilityScreen() {
       stackNavigation = stackNavigation(animateEmojiOverrideReason[14]).useStackNavigation();
       const obj = stackNavigation(animateEmojiOverrideReason[14]);
       const items = [UserSettingsOverridesStore];

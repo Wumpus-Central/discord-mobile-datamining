@@ -31,8 +31,6 @@ export const getAnalyticsPage = function getAnalyticsPage(featureName) {
     return AnalyticsPages.PREMIUM_UPSELL_CLIENT_THEMES;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.APP_ICONS === featureName) {
     return AnalyticsPages.PREMIUM_UPSELL_APP_ICONS;
-  } else if (EntitlementFeatureNames.EntitlementFeatureNames.SAVED_MESSAGES === featureName) {
-    return AnalyticsPages.PREMIUM_UPSELL_FOR_LATER;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.SCHEDULED_MESSAGES === featureName) {
     return AnalyticsPages.PREMIUM_UPSELL_SCHEDULED_MESSAGES;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
@@ -57,8 +55,6 @@ export const getUpsellType = function getUpsellType(EMOJIS_EVERYWHERE) {
     return ConstantsIOS.UpsellTypes.CLIENT_THEMES;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.APP_ICONS === EMOJIS_EVERYWHERE) {
     return ConstantsIOS.UpsellTypes.APP_ICONS;
-  } else if (EntitlementFeatureNames.EntitlementFeatureNames.SAVED_MESSAGES === EMOJIS_EVERYWHERE) {
-    return ConstantsIOS.UpsellTypes.FOR_LATER;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.SCHEDULED_MESSAGES === EMOJIS_EVERYWHERE) {
     return ConstantsIOS.UpsellTypes.SCHEDULED_MESSAGES;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.STREAM_HIGH_QUALITY === EMOJIS_EVERYWHERE) {

@@ -16,13 +16,13 @@ export const requestConjurePreviewMode = function requestConjurePreviewMode(arg0
   }
 };
 export const useConjurePreviewModeRequests = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, current) => {
+  ? function useConjurePreviewModeRequests(arg0, current) {
       _require = arg0;
       dependencyMap = current;
       const cResult = require("c").c(5);
       noop = noop.useRef(current);
       if (cResult[0] !== current) {
-        const fn = function f() {
+        const fn = function s() {
           closure_2.current = current;
         };
         cResult[0] = current;
@@ -33,7 +33,7 @@ export const useConjurePreviewModeRequests = ReactCompilerGating.isReactCompiler
       }
       const layoutEffect = obj2.useLayoutEffect(tmp2);
       if (cResult[2] !== arg0) {
-        const fn2 = function s() {
+        const fn2 = function f() {
           if (null != listener) {
             listener = function listener(arg0, AUTO_DISMISS) {
               if (arg0 === listener) {
@@ -58,7 +58,7 @@ export const useConjurePreviewModeRequests = ReactCompilerGating.isReactCompiler
       }
       const effect = obj2.useEffect(tmp4, tmp5);
     }
-  : (arg0, current) => {
+  : function useConjurePreviewModeRequests(arg0, current) {
       closure_0 = arg0;
       noop = noop.useRef(current);
       const layoutEffect = noop.useLayoutEffect(() => {

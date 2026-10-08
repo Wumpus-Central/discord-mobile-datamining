@@ -2,28 +2,28 @@
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import DisplayNameFont from "../../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
-import _modDef2911 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2955 from "../intl/DisplayNameStyles.messages.js";
 import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const DISPLAY_NAME_STYLES_EFFECT_NAMES = {};
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1396).DisplayNameEffect.SOLID] = _modDef2911.OpWJ3f;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1396).DisplayNameEffect.GRADIENT] = _modDef2911["i9e/u1"];
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1396).DisplayNameEffect.NEON] = _modDef2911.x68b1F;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1396).DisplayNameEffect.TOON] = _modDef2911.otpeeM;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1396).DisplayNameEffect.POP] = _modDef2911.cjQOKb;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1396).DisplayNameEffect.GUMMY] = _modDef2911.x9Gtie;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1396).DisplayNameEffect.PRISM] = _modDef2911["/M7psm"];
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1408).DisplayNameEffect.SOLID] = _modDef2955.OpWJ3f;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1408).DisplayNameEffect.GRADIENT] = _modDef2955["i9e/u1"];
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1408).DisplayNameEffect.NEON] = _modDef2955.x68b1F;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1408).DisplayNameEffect.TOON] = _modDef2955.otpeeM;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1408).DisplayNameEffect.POP] = _modDef2955.cjQOKb;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1408).DisplayNameEffect.GUMMY] = _modDef2955.x9Gtie;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1408).DisplayNameEffect.PRISM] = _modDef2955["/M7psm"];
 let closure_5 = {
-  [fn(1396).DisplayNameEffect.SOLID]: 3,
-  [fn(1396).DisplayNameEffect.GRADIENT]: 2.5,
-  [fn(1396).DisplayNameEffect.GLOW]: 2.5,
-  [fn(1396).DisplayNameEffect.PRISM]: 2.5,
-  [fn(1396).DisplayNameEffect.NEON]: 3,
-  [fn(1396).DisplayNameEffect.TOON]: 3,
-  [fn(1396).DisplayNameEffect.POP]: 3,
-  [fn(1396).DisplayNameEffect.GUMMY]: 3,
+  [fn(1408).DisplayNameEffect.SOLID]: 3,
+  [fn(1408).DisplayNameEffect.GRADIENT]: 2.5,
+  [fn(1408).DisplayNameEffect.GLOW]: 2.5,
+  [fn(1408).DisplayNameEffect.PRISM]: 2.5,
+  [fn(1408).DisplayNameEffect.NEON]: 3,
+  [fn(1408).DisplayNameEffect.TOON]: 3,
+  [fn(1408).DisplayNameEffect.POP]: 3,
+  [fn(1408).DisplayNameEffect.GUMMY]: 3,
 };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -31,7 +31,7 @@ const result = size.fileFinishedImporting("modules/display_name_styles/hooks/use
 
 export { DISPLAY_NAME_STYLES_EFFECT_NAMES };
 export const useDisplayNameStylesEffectConfig = ReactCompilerGating.isReactCompilerEnabled()
-  ? (effectId) => {
+  ? function useDisplayNameStylesEffectConfig(effectId) {
       const obj = c;
       const cResult = obj.c(10);
       const tmp5 = useDisplayNameStylesEffectDefaultColorsDefault()[effectId];
@@ -39,7 +39,7 @@ export const useDisplayNameStylesEffectConfig = ReactCompilerGating.isReactCompi
         const intl = util.intl;
         let OpWJ3f = obj[effectId];
         if (OpWJ3f == null) {
-          OpWJ3f = _modDef2911.OpWJ3f;
+          OpWJ3f = _modDef2955.OpWJ3f;
         }
         const stringResult = intl.string(OpWJ3f);
         cResult[0] = effectId;
@@ -80,7 +80,7 @@ export const useDisplayNameStylesEffectConfig = ReactCompilerGating.isReactCompi
       cResult[4] = obj3;
       tmp10 = obj3;
     }
-  : (effectId) => {
+  : function useDisplayNameStylesEffectConfig(effectId) {
       const tmp = useDisplayNameStylesEffectDefaultColorsDefault()[effectId];
       importDefault = tmp;
       const items = [effectId, tmp];
@@ -88,7 +88,7 @@ export const useDisplayNameStylesEffectConfig = ReactCompilerGating.isReactCompi
         const intl = util.intl;
         let OpWJ3f = obj[effectId];
         if (OpWJ3f == null) {
-          OpWJ3f = _modDef2911.OpWJ3f;
+          OpWJ3f = _modDef2955.OpWJ3f;
         }
         obj = {
           name: intl.string(OpWJ3f),

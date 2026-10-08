@@ -6,7 +6,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useShouldConvertBioEmoji.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShouldConvertBioEmoji() {
       const UseLegacyChatInput = UserSettings.UseLegacyChatInput;
       let setting = UseLegacyChatInput.useSetting();
       const UseRichChatInput = UserSettings.UseRichChatInput;
@@ -15,7 +15,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return setting;
     }
-  : () => {
+  : function useShouldConvertBioEmoji() {
       const UseLegacyChatInput = UserSettings.UseLegacyChatInput;
       let setting = UseLegacyChatInput.useSetting();
       const UseRichChatInput = UserSettings.UseRichChatInput;

@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting("modules/verification/ChangeEmailStore
 export const ChangeEmailFields = { EMAIL: "email", EMAIL_TOKEN: "email_token", PASSWORD: "password" };
 export { useChangeEmailStore };
 export { setChangeEmailError };
-export const useChangeEmailError = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useChangeEmailError = ReactCompilerGating.isReactCompilerEnabled() ? (function useChangeEmailError(arg0) {
   _require = arg0;
   const obj = require("c");
   const cResult = obj.c(7);
@@ -74,7 +74,7 @@ export const useChangeEmailError = ReactCompilerGating.isReactCompilerEnabled() 
   cResult[5] = tmp4;
   cResult[6] = items;
   tmp5 = items;
-}) : ((arg0) => {
+}) : (function useChangeEmailError(arg0) {
   closure_0 = arg0;
   const items = [
     obj((errors) => {

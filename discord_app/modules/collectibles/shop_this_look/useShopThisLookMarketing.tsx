@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/shop_this_look/useShopThisLookMarketing.tsx");
 
 export const useShopThisLookMarketing = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useShopThisLookMarketing(arg0, arg1, arg2) {
       const cResult = c.c(6);
       let num = 0;
       const tmp4 = useMaybeFetchEquippedCollectibleProducts.useEquippedCollectibleSkuIds(arg0, arg1).length > 0;
@@ -45,7 +45,7 @@ export const useShopThisLookMarketing = ReactCompilerGating.isReactCompilerEnabl
       const items1 = [dismissible_content.DismissibleContent.SHOP_THIS_LOOK_WEB_MARKETING];
       items = items1;
     }
-  : (arg0, arg1, arg2) => {
+  : function useShopThisLookMarketing(arg0, arg1, arg2) {
       useSelectedDismissibleContent;
       if (arg2) {
         if (tmp3) {

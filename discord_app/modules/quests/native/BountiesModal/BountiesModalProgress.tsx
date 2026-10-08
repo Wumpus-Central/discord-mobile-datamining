@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { progressContainer: { height: 4 }, progressTrack: null, progressBar: null, progressBarGlowLayer: null };
   const obj2 = {};
@@ -66,7 +66,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalProgress.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (progress) => {
+  ? function BountiesModalProgress(progress) {
       const cResult = progress(shouldSkipAnimation[7]).c(17);
       progress = progress.progress;
       const visible = progress.visible;
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         timingFast: progress(shouldSkipAnimation[10]).timingFast,
       };
     }
-  : (progress) => {
+  : function BountiesModalProgress(progress) {
       progress = progress.progress;
       const visible = progress.visible;
       const tmp = closure_9();

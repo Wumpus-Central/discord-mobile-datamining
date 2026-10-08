@@ -3,7 +3,7 @@ import useStateFromStores from "../../../../discord_common/js/packages/flux/useS
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2521 from "../FamilyCenter.messages.js";
+import _modDef2565 from "../FamilyCenter.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
@@ -15,11 +15,11 @@ import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7062).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_6 = fn(7248).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "https://support.discord.com/hc/articles/14155060633623";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     paddingHorizontal: nativeDefault.space.PX_24,
@@ -45,24 +45,25 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/ConnectGuardianBottomSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ConnectGuardianBottomSheet(arg0) {
       const cResult = c.c(31);
       ({ onRefresh, title, body } = arg0);
       ({ linkCode, expiresAt } = arg0);
       const tmp4 = closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FamilyCenterStore];
-        const fn = function p() {
-          return FamilyCenterStore.getLinkCode();
-        };
+        class C {
+          constructor() {
+            return closure_1_5.getLinkCode();
+          }
+        }
         cResult[0] = items;
-        cResult[1] = fn;
+        cResult[1] = C;
         tmp5 = items;
-        tmp6 = fn;
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const stateFromStores = useStateFromStores.useStateFromStores(tmp5, tmp6);
+      const stateFromStores = useStateFromStores.useStateFromStores(tmp5, C);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [FamilyCenterStore];
         class A {
@@ -84,21 +85,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stateFromStores1 = expiresAt;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        class R {
+        class B {
           constructor() {
             obj = closure_1_1(closure_1_2[10]);
             hideActionSheetResult = obj.hideActionSheet(closure_1_6);
             return;
           }
         }
-        cResult[4] = R;
+        cResult[4] = B;
         class A {
           constructor() {
             return closure_1_5.getLinkCodeExpiresAt();
           }
         }
       } else {
-        class R {
+        class B {
           constructor() {
             obj = closure_1_1(closure_1_2[10]);
             hideActionSheetResult = obj.hideActionSheet(closure_1_6);
@@ -108,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       useOnNewPendingRequestDefault(tmp14);
       if (cResult[5] !== title) {
-        class R {
+        class B {
           constructor() {
             obj = closure_1_1(closure_1_2[10]);
             hideActionSheetResult = obj.hideActionSheet(closure_1_6);
@@ -116,14 +117,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (title == null) {
-          class R {
+          class B {
             constructor() {
               obj = closure_1_1(closure_1_2[10]);
               hideActionSheetResult = obj.hideActionSheet(closure_1_6);
               return;
             }
           }
-          const stringResult = obj4.string(_modDef2521.aCUVfL);
+          const stringResult = obj4.string(_modDef2565.aCUVfL);
         }
         class A {
           constructor() {
@@ -132,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[6] = stringResult;
       } else {
-        class R {
+        class B {
           constructor() {
             obj = closure_1_1(closure_1_2[10]);
             hideActionSheetResult = obj.hideActionSheet(closure_1_6);
@@ -141,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[7] === tmp4.centered) {
-        class R {
+        class B {
           constructor() {
             obj = closure_1_1(closure_1_2[10]);
             hideActionSheetResult = obj.hideActionSheet(closure_1_6);
@@ -149,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[10] !== body) {
-          class R {
+          class B {
             constructor() {
               obj = closure_1_1(closure_1_2[10]);
               hideActionSheetResult = obj.hideActionSheet(closure_1_6);
@@ -157,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (body == null) {
-            class R {
+            class B {
               constructor() {
                 obj = closure_1_1(closure_1_2[10]);
                 hideActionSheetResult = obj.hideActionSheet(closure_1_6);
@@ -171,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             obj2.link = link;
-            const formatResult = obj6.format(_modDef2521["2O6ltn"], obj2);
+            const formatResult = obj6.format(_modDef2565["2O6ltn"], obj2);
           }
           class A {
             constructor() {
@@ -180,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[11] = formatResult;
         } else {
-          class R {
+          class B {
             constructor() {
               obj = closure_1_1(closure_1_2[10]);
               hideActionSheetResult = obj.hideActionSheet(closure_1_6);
@@ -189,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[12] === tmp4.centered) {
-          class R {
+          class B {
             constructor() {
               obj = closure_1_1(closure_1_2[10]);
               hideActionSheetResult = obj.hideActionSheet(closure_1_6);
@@ -197,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[15] === tmp4.info) {
-            class R {
+            class B {
               constructor() {
                 obj = closure_1_1(closure_1_2[10]);
                 hideActionSheetResult = obj.hideActionSheet(closure_1_6);
@@ -249,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmpResult2 = useStateFromStores;
     }
-  : (arg0) => {
+  : function ConnectGuardianBottomSheet(arg0) {
       ({ title, body } = arg0);
       ({ linkCode, expiresAt, onRefresh } = arg0);
       const tmp = closure_10();
@@ -274,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       if (title == null) {
         const intl = util.intl;
-        title = intl.string(_modDef2521.aCUVfL);
+        title = intl.string(_modDef2565.aCUVfL);
       }
       obj5.children = title;
       const items2 = [React5(Text_Text.Text, obj5)];
@@ -282,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (body == null) {
         const intl2 = util.intl;
         const obj7 = { link };
-        body = intl2.format(_modDef2521["2O6ltn"], obj7);
+        body = intl2.format(_modDef2565["2O6ltn"], obj7);
       }
       obj6.children = body;
       items2[1] = React5(Text_Text.Text, obj6);
@@ -303,7 +304,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items3[1] = React5(View, obj8);
       const obj11 = { variant: "secondary", size: "md", text: null, onPress: null };
       const intl3 = util.intl;
-      obj11.text = intl3.string(_modDef2521.Hsm5IF);
+      obj11.text = intl3.string(_modDef2565.Hsm5IF);
       obj11.onPress = callback;
       items3[2] = React5(components_Button_Button.Button, obj11);
       obj3.children = items3;

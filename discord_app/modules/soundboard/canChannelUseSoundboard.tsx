@@ -43,7 +43,7 @@ export const canSelectedVoiceChannelUseSoundboard = function canSelectedVoiceCha
   return flag;
 };
 export const useCanChannelUseSoundboard = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanChannelUseSoundboard(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -54,7 +54,7 @@ export const useCanChannelUseSoundboard = ReactCompilerGating.isReactCompilerEna
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function u() {
+        const fn = function s() {
           let flag = false;
           if (null != guildVoiceOrThread) {
             const CALLABLE = constants.CALLABLE;
@@ -87,7 +87,7 @@ export const useCanChannelUseSoundboard = ReactCompilerGating.isReactCompilerEna
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7);
     }
-  : (arg0) => {
+  : function useCanChannelUseSoundboard(arg0) {
       _require = arg0;
       const items = [PermissionStore];
       const items1 = [arg0];

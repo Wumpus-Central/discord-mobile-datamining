@@ -1,63 +1,53 @@
 // discord_app/modules/saved_messages/message_reminders/MessageRemindersNotificationManager.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import DurationsDefault from "../../../utils/Durations.tsx";
-import ForLaterExperiment from "../ForLaterExperiment.tsx";
 import SavedMessagesStore from "../SavedMessagesStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
-require = fn;
 function scheduleNextNotification() {
-  if (obj.isForLaterExperimentOn("MessageRemindersNotificationManager")) {
-    if (null != timeout) {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(timeout);
+  if (null != timeout) {
+    const _clearTimeout = clearTimeout;
+    clearTimeout(timeout);
+  }
+  const messageReminders = SavedMessagesStore.getMessageReminders();
+  const found = messageReminders.find((saveData) => {
+    let tmp = null != saveData.saveData.dueAt;
+    if (tmp) {
+      const _Date = Date;
+      const date = new Date();
+      tmp = saveData.saveData.dueAt > date;
     }
-    const messageReminders = SavedMessagesStore.getMessageReminders();
-    const found = messageReminders.find((saveData) => {
-      let tmp = null != saveData.saveData.dueAt;
-      if (tmp) {
-        const _Date = Date;
-        const date = new Date();
-        tmp = saveData.saveData.dueAt > date;
-      }
-      return tmp;
-    });
-    let dueAt1;
-    if (found != null) {
-      const saveData = found.saveData;
-      if (saveData != null) {
-        dueAt1 = saveData.dueAt;
-      }
-    }
-    if (null != dueAt1) {
-      let _Date = Date;
-      const timestamp = Date.now();
-      const dueAt = found.saveData.dueAt;
-      const sum = timestamp + DurationsDefault.Millis.WEEK;
-      if (dueAt.getTime() <= sum) {
-        const dueAt2 = found.saveData.dueAt;
-        const _Date2 = Date;
-        const time = dueAt2.getTime();
-        const _setTimeout = setTimeout;
-        timeout = setTimeout(() => {
-          if (obj.isForLaterExperimentOn("MessageRemindersNotificationManager")) {
-            const obj3 = { type: "MESSAGE_REMINDER_DUE", savedMessage: found };
-            DispatcherDefault.dispatch(obj3);
-            scheduleNextNotification();
-          }
-          obj = ForLaterExperiment;
-        }, time - Date.now());
-      }
-    } else {
-      timeout = null;
+    return tmp;
+  });
+  let dueAt1;
+  if (found != null) {
+    const saveData = found.saveData;
+    if (saveData != null) {
+      dueAt1 = saveData.dueAt;
     }
   }
-  obj = found(7496);
+  if (null != dueAt1) {
+    let _Date = Date;
+    const timestamp = Date.now();
+    const dueAt = found.saveData.dueAt;
+    const sum = timestamp + found(1102).Millis.WEEK;
+    if (dueAt.getTime() <= sum) {
+      const dueAt2 = found.saveData.dueAt;
+      const _Date2 = Date;
+      const time = dueAt2.getTime();
+      const _setTimeout = setTimeout;
+      timeout = setTimeout(() => {
+        DispatcherDefault.dispatch({ type: "MESSAGE_REMINDER_DUE", savedMessage: found });
+        scheduleNextNotification();
+      }, time - Date.now());
+    }
+  } else {
+    timeout = null;
+  }
 }
-let c4 = null;
+let c3 = null;
 const prototype = function MessageRemindersNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  require = applyArgumentsResult;
+  importDefault = applyArgumentsResult;
   applyArgumentsResult.actions = {
     SAVED_MESSAGES_UPDATE() {
       return applyArgumentsResult.handleUpdates();

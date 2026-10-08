@@ -1,6 +1,6 @@
 // discord_app/design/void/WarningCircle/native/WarningCircle.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07550_inlineStyles.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/WarningCircle/native/WarningCircle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function WarningCircle(arg0) {
       const cResult = c.c(12);
       if (cResult[0] !== arg0) {
         ({ width, height, color } = arg0);
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = tmp16;
       tmp14 = tmp16;
     }
-  : (width) => {
+  : function WarningCircle(width) {
       let num = width.width;
       if (num === undefined) {
         num = 20;

@@ -4,10 +4,10 @@ import util from "../../../intl/index.native.tsx";
 import CircleCheckIcon from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import CircleXIcon from "../../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx";
 import CircleErrorIcon from "../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import _modDef4814 from "../../../../_runtime/metro/04814__.js";
+import _modDef5008 from "../../../../_runtime/metro/05008__.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef6434 from "../../../../_runtime/metro/06434__.js";
 import SafetyHubModels from "../SafetyHubModels.tsx";
+import _modDef6612 from "../../../../_runtime/metro/06612__.js";
 import SafetyHubAccountStandingLabels from "../SafetyHubAccountStandingLabels.tsx";
 import SafetyHubAccountStandingSubwayMarkerDefault from "SafetyHubAccountStandingSubwayMarker.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -17,31 +17,31 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubLinks = fn(8126).SafetyHubLinks;
+const SafetyHubLinks = fn(5921).SafetyHubLinks;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let c11 = 20;
-let obj = { [fn(8127).AccountStandingState.ALL_GOOD]: { left: "0%" } };
+let obj = { [fn(5922).AccountStandingState.ALL_GOOD]: { left: "0%" } };
 let obj2 = { left: "25%", transform: null };
-let items = [{ translateX: -0.5 * fn(14573).SUBWAY_MARKER_WIDTH }];
+let items = [{ translateX: -0.5 * fn(14834).SUBWAY_MARKER_WIDTH }];
 obj2.transform = items;
-obj[fn(8127).AccountStandingState.LIMITED] = obj2;
+obj[fn(5922).AccountStandingState.LIMITED] = obj2;
 let obj4 = { left: "50%", transform: null };
-let obj3 = { translateX: -0.5 * fn(14573).SUBWAY_MARKER_WIDTH };
-let items1 = [{ translateX: -0.5 * fn(14573).SUBWAY_MARKER_WIDTH }];
+let obj3 = { translateX: -0.5 * fn(14834).SUBWAY_MARKER_WIDTH };
+let items1 = [{ translateX: -0.5 * fn(14834).SUBWAY_MARKER_WIDTH }];
 obj4.transform = items1;
-obj[fn(8127).AccountStandingState.VERY_LIMITED] = obj4;
+obj[fn(5922).AccountStandingState.VERY_LIMITED] = obj4;
 let obj6 = { left: "75%", transform: null };
-let obj5 = { translateX: -0.5 * fn(14573).SUBWAY_MARKER_WIDTH };
-let items2 = [{ translateX: -0.5 * fn(14573).SUBWAY_MARKER_WIDTH }];
+let obj5 = { translateX: -0.5 * fn(14834).SUBWAY_MARKER_WIDTH };
+let items2 = [{ translateX: -0.5 * fn(14834).SUBWAY_MARKER_WIDTH }];
 obj6.transform = items2;
-obj[fn(8127).AccountStandingState.AT_RISK] = obj6;
+obj[fn(5922).AccountStandingState.AT_RISK] = obj6;
 let obj8 = { left: "100%", transform: null };
-let obj7 = { translateX: -0.5 * fn(14573).SUBWAY_MARKER_WIDTH };
-let items3 = [{ translateX: -fn(14573).SUBWAY_MARKER_WIDTH }];
+let obj7 = { translateX: -0.5 * fn(14834).SUBWAY_MARKER_WIDTH };
+let items3 = [{ translateX: -fn(14834).SUBWAY_MARKER_WIDTH }];
 obj8.transform = items3;
-obj[fn(8127).AccountStandingState.SUSPENDED] = obj8;
-const createStyles = fn(4896);
+obj[fn(5922).AccountStandingState.SUSPENDED] = obj8;
+const createStyles = fn(5090);
 let obj11 = {
   container: null,
   avatarBackground: null,
@@ -57,7 +57,7 @@ let obj11 = {
   subwayMarker: null,
   icon: null,
 };
-let obj9 = { translateX: -fn(14573).SUBWAY_MARKER_WIDTH };
+let obj9 = { translateX: -fn(14834).SUBWAY_MARKER_WIDTH };
 obj11.container = {
   display: "flex",
   flexDirection: "column",
@@ -124,8 +124,8 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/SafetyHubAccountStanding.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      const cResult = first(576).c(76);
+  ? function SafetyHubAccountStanding() {
+      const cResult = first(576).c(74);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const accountStanding = SafetyHubStore.getAccountStanding();
         cResult[0] = accountStanding;
@@ -150,9 +150,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj4 = {
           title: tmp(1126).t.uaKrRi,
           description: tmp10,
-          status: tmp(14565).ACCOUNT_STANDING_SHORT_STATUS[tmp(undefined, 8127).AccountStandingState.ALL_GOOD],
+          status: tmp(14826).ACCOUNT_STANDING_SHORT_STATUS[tmp(undefined, 5922).AccountStandingState.ALL_GOOD],
           style: tmp9.good,
-          CustomIcon: tmp(4798).CircleCheckIcon,
+          CustomIcon: tmp(4992).CircleCheckIcon,
         };
         cResult[2] = tmp9.good;
         cResult[3] = obj4;
@@ -172,10 +172,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = {
           title: tmp(1126).t.epkcmS,
           description: tmp14,
-          status: tmp(14565).ACCOUNT_STANDING_SHORT_STATUS[tmp(undefined, 8127).AccountStandingState.LIMITED],
+          status: tmp(14826).ACCOUNT_STANDING_SHORT_STATUS[tmp(undefined, 5922).AccountStandingState.LIMITED],
           style: tmp9.limited,
-          CustomIcon: tmp(4806).CircleErrorIcon,
-          iconSource: first1(4814),
+          CustomIcon: tmp(5000).CircleErrorIcon,
+          iconSource: first1(5008),
         };
         cResult[5] = tmp9.limited;
         cResult[6] = obj5;
@@ -195,10 +195,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = {
           title: tmp(1126).t.crzE2X,
           description: tmp18,
-          status: tmp(14565).ACCOUNT_STANDING_SHORT_STATUS[tmp(undefined, 8127).AccountStandingState.VERY_LIMITED],
+          status: tmp(14826).ACCOUNT_STANDING_SHORT_STATUS[tmp(undefined, 5922).AccountStandingState.VERY_LIMITED],
           style: tmp9.veryLimited,
-          CustomIcon: tmp(4806).CircleErrorIcon,
-          iconSource: first1(4814),
+          CustomIcon: tmp(5000).CircleErrorIcon,
+          iconSource: first1(5008),
         };
         cResult[8] = tmp9.veryLimited;
         cResult[9] = obj6;
@@ -218,10 +218,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj7 = {
           title: tmp(1126).t.XRNVzO,
           description: tmp22,
-          status: tmp(14565).ACCOUNT_STANDING_SHORT_STATUS[tmp(undefined, 8127).AccountStandingState.AT_RISK],
+          status: tmp(14826).ACCOUNT_STANDING_SHORT_STATUS[tmp(undefined, 5922).AccountStandingState.AT_RISK],
           style: tmp9.atRisk,
-          CustomIcon: tmp(4806).CircleErrorIcon,
-          iconSource: first1(4814),
+          CustomIcon: tmp(5000).CircleErrorIcon,
+          iconSource: first1(5008),
         };
         cResult[11] = tmp9.atRisk;
         cResult[12] = obj7;
@@ -241,10 +241,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = {
           title: tmp(1126).t.MExFkz,
           description: tmp26,
-          status: tmp(14565).ACCOUNT_STANDING_SHORT_STATUS[tmp(undefined, 8127).AccountStandingState.SUSPENDED],
+          status: tmp(14826).ACCOUNT_STANDING_SHORT_STATUS[tmp(undefined, 5922).AccountStandingState.SUSPENDED],
           style: tmp9.suspended,
-          CustomIcon: tmp(4803).CircleXIcon,
-          iconSource: first1(6434),
+          CustomIcon: tmp(4997).CircleXIcon,
+          iconSource: first1(6612),
         };
         cResult[14] = tmp9.suspended;
         cResult[15] = obj8;
@@ -293,23 +293,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const stateFromStores = tmp(504).useStateFromStores(tmp34, tmp35);
                       if (cResult[32] !== stateFromStores) {
                         if (null != stateFromStores) {
-                          let userAvatarSource = first1(1402).getUserAvatarSource(stateFromStores);
-                          const obj10 = first1(1402);
+                          let userAvatarSource = first1(1414).getUserAvatarSource(stateFromStores);
+                          const obj10 = first1(1414);
                         } else {
-                          userAvatarSource = first1(8500);
+                          userAvatarSource = first1(8984);
                         }
                         cResult[32] = stateFromStores;
                         cResult[33] = userAvatarSource;
                       } else {
                         ({ title, description, style } = tmp30[first.state]);
-                        if (cResult[34] !== tmp9.container) {
-                          const items1 = [tmp9.container];
-                          cResult[34] = tmp9.container;
-                          cResult[35] = items1;
-                          let tmp44 = items1;
-                        } else {
-                          tmp44 = cResult[35];
-                        }
                         let str;
                         if (stateFromStores != null) {
                           str = stateFromStores.username;
@@ -317,185 +309,185 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         if (str == null) {
                           str = "";
                         }
-                        if (cResult[36] === cResult[33]) {
-                          if (cResult[37] === str) {
-                            let tmp46 = cResult[38];
+                        if (cResult[34] === cResult[33]) {
+                          if (cResult[35] === str) {
+                            let tmp45 = cResult[36];
                           }
-                          if (cResult[39] === tmp9.avatarBackground) {
-                            if (cResult[40] === tmp46) {
-                              let tmp49 = cResult[41];
+                          if (cResult[37] === tmp9.avatarBackground) {
+                            if (cResult[38] === tmp45) {
+                              let tmp48 = cResult[39];
                             }
                             const _Symbol2 = Symbol;
                             ({ body, bodyText } = tmp9);
-                            if (cResult[42] === Symbol.for("react.memo_cache_sentinel")) {
+                            if (cResult[40] === Symbol.for("react.memo_cache_sentinel")) {
                               const obj9 = { textAlign: "center" };
-                              cResult[42] = obj9;
-                              let tmp53 = obj9;
+                              cResult[40] = obj9;
+                              let tmp52 = obj9;
                             } else {
-                              tmp53 = cResult[42];
+                              tmp52 = cResult[40];
                             }
-                            if (cResult[43] === style) {
-                              if (cResult[44] === title) {
-                                if (cResult[48] !== cResult[45]) {
+                            if (cResult[41] === style) {
+                              if (cResult[42] === title) {
+                                if (cResult[46] !== cResult[43]) {
                                   const obj11 = {
                                     variant: "heading-lg/medium",
                                     color: "text-default",
-                                    style: tmp53,
-                                    children: tmp54,
+                                    style: tmp52,
+                                    children: tmp53,
                                   };
-                                  const tmp60 = closure_9(tmp(4892).Text, obj11);
-                                  cResult[48] = tmp54;
-                                  cResult[49] = tmp60;
-                                  let tmp58 = tmp60;
+                                  const tmp59 = closure_9(tmp(5086).Text, obj11);
+                                  cResult[46] = tmp53;
+                                  cResult[47] = tmp59;
+                                  let tmp57 = tmp59;
                                 } else {
-                                  tmp58 = cResult[49];
+                                  tmp57 = cResult[47];
                                 }
                                 const _Symbol3 = Symbol;
-                                if (cResult[50] === Symbol.for("react.memo_cache_sentinel")) {
+                                if (cResult[48] === Symbol.for("react.memo_cache_sentinel")) {
                                   const obj12 = { textAlign: "center" };
-                                  cResult[50] = obj12;
-                                  let tmp61 = obj12;
+                                  cResult[48] = obj12;
+                                  let tmp60 = obj12;
                                 } else {
-                                  tmp61 = cResult[50];
+                                  tmp60 = cResult[48];
                                 }
-                                if (cResult[51] !== description) {
+                                if (cResult[49] !== description) {
                                   const obj13 = {
                                     variant: "text-sm/medium",
                                     color: "text-muted",
-                                    style: tmp61,
+                                    style: tmp60,
                                     children: description,
                                   };
-                                  const tmp64 = closure_9(tmp(4892).Text, obj13);
-                                  cResult[51] = description;
-                                  cResult[52] = tmp64;
-                                  let tmp62 = tmp64;
+                                  const tmp63 = closure_9(tmp(5086).Text, obj13);
+                                  cResult[49] = description;
+                                  cResult[50] = tmp63;
+                                  let tmp61 = tmp63;
                                 } else {
-                                  tmp62 = cResult[52];
+                                  tmp61 = cResult[50];
                                 }
-                                if (cResult[53] === tmp9.bodyText) {
-                                  if (cResult[54] === tmp58) {
-                                    if (cResult[55] === tmp62) {
-                                      let tmp65 = cResult[56];
+                                if (cResult[51] === tmp9.bodyText) {
+                                  if (cResult[52] === tmp57) {
+                                    if (cResult[53] === tmp61) {
+                                      let tmp64 = cResult[54];
                                     }
-                                    if (cResult[57] !== first1) {
+                                    if (cResult[55] !== first1) {
                                       const obj14 = { height: first1 };
-                                      cResult[57] = first1;
-                                      cResult[58] = obj14;
-                                      let tmp69 = obj14;
+                                      cResult[55] = first1;
+                                      cResult[56] = obj14;
+                                      let tmp68 = obj14;
                                     } else {
-                                      tmp69 = cResult[58];
+                                      tmp68 = cResult[56];
                                     }
-                                    if (cResult[59] === tmp9.health) {
-                                      if (cResult[60] === tmp69) {
-                                        let tmp70 = cResult[61];
+                                    if (cResult[57] === tmp9.health) {
+                                      if (cResult[58] === tmp68) {
+                                        let tmp69 = cResult[59];
                                       }
-                                      if (cResult[62] !== tmp9.line) {
+                                      if (cResult[60] !== tmp9.line) {
                                         const obj15 = { style: tmp9.line };
-                                        const tmp74 = closure_9(style, obj15);
-                                        cResult[62] = tmp9.line;
-                                        cResult[63] = tmp74;
-                                        let tmp71 = tmp74;
+                                        const tmp73 = closure_9(style, obj15);
+                                        cResult[60] = tmp9.line;
+                                        cResult[61] = tmp73;
+                                        let tmp70 = tmp73;
                                       } else {
-                                        tmp71 = cResult[63];
+                                        tmp70 = cResult[61];
                                       }
-                                      if (cResult[64] === tmp32) {
-                                        if (cResult[65] === tmp70) {
-                                          if (cResult[66] === tmp71) {
-                                            let tmp75 = cResult[67];
+                                      if (cResult[62] === tmp32) {
+                                        if (cResult[63] === tmp69) {
+                                          if (cResult[64] === tmp70) {
+                                            let tmp74 = cResult[65];
                                           }
-                                          if (cResult[68] === tmp9.body) {
-                                            if (cResult[69] === tmp65) {
-                                              if (cResult[70] === tmp75) {
-                                                let tmp79 = cResult[71];
+                                          if (cResult[66] === tmp9.body) {
+                                            if (cResult[67] === tmp64) {
+                                              if (cResult[68] === tmp74) {
+                                                let tmp78 = cResult[69];
                                               }
-                                              if (cResult[72] === tmp44) {
-                                                if (cResult[73] === tmp49) {
-                                                  if (cResult[74] === tmp79) {
-                                                    let tmp83 = cResult[75];
+                                              if (cResult[70] === tmp9.container) {
+                                                if (cResult[71] === tmp48) {
+                                                  if (cResult[72] === tmp78) {
+                                                    let tmp82 = cResult[73];
                                                   }
-                                                  return tmp83;
+                                                  return tmp82;
                                                 }
                                               }
-                                              const obj16 = { style: tmp44, children: null };
-                                              const items2 = [tmp49, tmp79];
-                                              obj16.children = items2;
-                                              const tmp86 = closure_10(style, obj16);
-                                              cResult[72] = tmp44;
-                                              cResult[73] = tmp49;
-                                              cResult[74] = tmp79;
-                                              cResult[75] = tmp86;
-                                              tmp83 = tmp86;
+                                              const obj16 = { style: tmp9.container, children: null };
+                                              const items1 = [tmp48, tmp78];
+                                              obj16.children = items1;
+                                              const tmp85 = closure_10(style, obj16);
+                                              cResult[70] = tmp9.container;
+                                              cResult[71] = tmp48;
+                                              cResult[72] = tmp78;
+                                              cResult[73] = tmp85;
+                                              tmp82 = tmp85;
                                             }
                                           }
                                           const obj17 = { style: body, children: null };
-                                          const items3 = [tmp65, tmp75];
-                                          obj17.children = items3;
-                                          const tmp82 = closure_10(style, obj17);
-                                          cResult[68] = tmp9.body;
-                                          cResult[69] = tmp65;
-                                          cResult[70] = tmp75;
-                                          cResult[71] = tmp82;
-                                          tmp79 = tmp82;
+                                          const items2 = [tmp64, tmp74];
+                                          obj17.children = items2;
+                                          const tmp81 = closure_10(style, obj17);
+                                          cResult[66] = tmp9.body;
+                                          cResult[67] = tmp64;
+                                          cResult[68] = tmp74;
+                                          cResult[69] = tmp81;
+                                          tmp78 = tmp81;
                                         }
                                       }
-                                      const obj18 = { style: tmp70, children: null };
-                                      const items4 = [tmp71, tmp32];
-                                      obj18.children = items4;
-                                      const tmp78 = closure_10(style, obj18);
-                                      cResult[64] = tmp32;
-                                      cResult[65] = tmp70;
-                                      cResult[66] = tmp71;
-                                      cResult[67] = tmp78;
-                                      tmp75 = tmp78;
+                                      const obj18 = { style: tmp69, children: null };
+                                      const items3 = [tmp70, tmp32];
+                                      obj18.children = items3;
+                                      const tmp77 = closure_10(style, obj18);
+                                      cResult[62] = tmp32;
+                                      cResult[63] = tmp69;
+                                      cResult[64] = tmp70;
+                                      cResult[65] = tmp77;
+                                      tmp74 = tmp77;
                                     }
-                                    const items5 = [tmp9.health, tmp69];
-                                    cResult[59] = tmp9.health;
-                                    cResult[60] = tmp69;
-                                    cResult[61] = items5;
-                                    tmp70 = items5;
+                                    const items4 = [tmp9.health, tmp68];
+                                    cResult[57] = tmp9.health;
+                                    cResult[58] = tmp68;
+                                    cResult[59] = items4;
+                                    tmp69 = items4;
                                   }
                                 }
                                 const obj19 = { style: bodyText, children: null };
-                                const items6 = [tmp58, tmp62];
-                                obj19.children = items6;
-                                const tmp68 = closure_10(style, obj19);
-                                cResult[53] = tmp9.bodyText;
-                                cResult[54] = tmp58;
-                                cResult[55] = tmp62;
-                                cResult[56] = tmp68;
-                                tmp65 = tmp68;
+                                const items5 = [tmp57, tmp61];
+                                obj19.children = items5;
+                                const tmp67 = closure_10(style, obj19);
+                                cResult[51] = tmp9.bodyText;
+                                cResult[52] = tmp57;
+                                cResult[53] = tmp61;
+                                cResult[54] = tmp67;
+                                tmp64 = tmp67;
                               }
                             }
-                            if (cResult[46] !== style) {
+                            if (cResult[44] !== style) {
                               function nt(children, arg1) {
                                 return options(Text_Text.Text, { style, variant: "heading-lg/bold", children }, arg1);
                               }
-                              cResult[46] = style;
-                              cResult[47] = nt;
-                              let tmp55 = nt;
+                              cResult[44] = style;
+                              cResult[45] = nt;
+                              let tmp54 = nt;
                             } else {
-                              tmp55 = cResult[47];
+                              tmp54 = cResult[45];
                             }
                             const intl6 = tmp(1126).intl;
-                            const obj20 = { hook: tmp55 };
+                            const obj20 = { hook: tmp54 };
                             const formatResult1 = intl6.format(title, obj20);
-                            cResult[43] = style;
-                            cResult[44] = title;
-                            cResult[45] = formatResult1;
+                            cResult[41] = style;
+                            cResult[42] = title;
+                            cResult[43] = formatResult1;
                           }
-                          const obj21 = { style: tmp9.avatarBackground, children: tmp46 };
-                          const tmp52 = closure_9(style, obj21);
-                          cResult[39] = tmp9.avatarBackground;
-                          cResult[40] = tmp46;
-                          cResult[41] = tmp52;
-                          tmp49 = tmp52;
+                          const obj21 = { style: tmp9.avatarBackground, children: tmp45 };
+                          const tmp51 = closure_9(style, obj21);
+                          cResult[37] = tmp9.avatarBackground;
+                          cResult[38] = tmp45;
+                          cResult[39] = tmp51;
+                          tmp48 = tmp51;
                         }
-                        const obj22 = { source: cResult[33], size: tmp(1188).AvatarSizes.XXLARGE, "aria-label": str };
-                        const tmp48 = closure_9(tmp(1188).Avatar, obj22);
-                        cResult[36] = cResult[33];
-                        cResult[37] = str;
-                        cResult[38] = tmp48;
-                        tmp46 = tmp48;
+                        const obj22 = { source: cResult[33], size: tmp(1200).AvatarSizes.XXLARGE, "aria-label": str };
+                        const tmp47 = closure_9(tmp(1200).Avatar, obj22);
+                        cResult[34] = cResult[33];
+                        cResult[35] = str;
+                        cResult[36] = tmp47;
+                        tmp45 = tmp47;
                       }
                       const tmpResult = tmp(504);
                     }
@@ -551,11 +543,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj23 = {};
-      obj23[first(8127).AccountStandingState.ALL_GOOD] = tmp13;
-      obj23[first(8127).AccountStandingState.LIMITED] = tmp16;
-      obj23[first(8127).AccountStandingState.VERY_LIMITED] = tmp20;
-      obj23[first(8127).AccountStandingState.AT_RISK] = tmp24;
-      obj23[first(8127).AccountStandingState.SUSPENDED] = tmp28;
+      obj23[first(5922).AccountStandingState.ALL_GOOD] = tmp13;
+      obj23[first(5922).AccountStandingState.LIMITED] = tmp16;
+      obj23[first(5922).AccountStandingState.VERY_LIMITED] = tmp20;
+      obj23[first(5922).AccountStandingState.AT_RISK] = tmp24;
+      obj23[first(5922).AccountStandingState.SUSPENDED] = tmp28;
       cResult[16] = tmp28;
       cResult[17] = tmp13;
       cResult[18] = tmp16;
@@ -565,7 +557,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp30 = obj23;
       obj = first(576);
     }
-  : () => {
+  : function SafetyHubAccountStanding() {
       const accountStanding = SafetyHubStore.getAccountStanding();
       [height, dependencyMap] = memo.useState(0);
       const tmp4 = closure_13();
@@ -598,7 +590,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           SafetyHubAccountStandingLabels.ACCOUNT_STANDING_SHORT_STATUS[SafetyHubModels.AccountStandingState.LIMITED];
         obj4.style = closure_3.limited;
         obj4.CustomIcon = CircleErrorIcon.CircleErrorIcon;
-        obj4.iconSource = _modDef4814;
+        obj4.iconSource = _modDef5008;
         obj[SafetyHubModels.AccountStandingState.LIMITED] = obj4;
         const obj5 = {
           title: util.t.crzE2X,
@@ -616,7 +608,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ];
         obj5.style = closure_3.veryLimited;
         obj5.CustomIcon = CircleErrorIcon.CircleErrorIcon;
-        obj5.iconSource = _modDef4814;
+        obj5.iconSource = _modDef5008;
         obj[SafetyHubModels.AccountStandingState.VERY_LIMITED] = obj5;
         const obj6 = {
           title: util.t.XRNVzO,
@@ -632,7 +624,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           SafetyHubAccountStandingLabels.ACCOUNT_STANDING_SHORT_STATUS[SafetyHubModels.AccountStandingState.AT_RISK];
         obj6.style = closure_3.atRisk;
         obj6.CustomIcon = CircleErrorIcon.CircleErrorIcon;
-        obj6.iconSource = _modDef4814;
+        obj6.iconSource = _modDef5008;
         obj[SafetyHubModels.AccountStandingState.AT_RISK] = obj6;
         const obj7 = {
           title: util.t.MExFkz,
@@ -648,7 +640,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           SafetyHubAccountStandingLabels.ACCOUNT_STANDING_SHORT_STATUS[SafetyHubModels.AccountStandingState.SUSPENDED];
         obj7.style = closure_3.suspended;
         obj7.CustomIcon = CircleXIcon.CircleXIcon;
-        obj7.iconSource = _modDef6434;
+        obj7.iconSource = _modDef6612;
         obj[SafetyHubModels.AccountStandingState.SUSPENDED] = obj7;
         return obj;
       }, items);
@@ -696,18 +688,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [UserStore];
       const stateFromStores = accountStanding(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
       if (null != stateFromStores) {
-        let userAvatarSource = height(1402).getUserAvatarSource(stateFromStores);
-        let obj2 = height(1402);
+        let userAvatarSource = height(1414).getUserAvatarSource(stateFromStores);
+        let obj2 = height(1414);
       } else {
-        userAvatarSource = height(8500);
+        userAvatarSource = height(8984);
       }
       const style = tmp13.style;
-      let obj3 = { style: null, children: null };
-      const items3 = [tmp4.container];
-      obj3.style = items3;
+      let obj3 = { style: tmp4.container, children: null };
       let obj4 = { style: tmp4.avatarBackground, children: null };
       ({ title, description } = memo[accountStanding.state]);
-      let obj5 = { source: userAvatarSource, size: accountStanding(1188).AvatarSizes.XXLARGE, "aria-label": null };
+      let obj5 = { source: userAvatarSource, size: accountStanding(1200).AvatarSizes.XXLARGE, "aria-label": null };
       let str;
       if (stateFromStores != null) {
         str = stateFromStores.username;
@@ -716,8 +706,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         str = "";
       }
       obj5["aria-label"] = str;
-      obj4.children = closure_9(accountStanding(1188).Avatar, obj5);
-      const items4 = [closure_9(style, obj4)];
+      obj4.children = closure_9(accountStanding(1200).Avatar, obj5);
+      const items3 = [closure_9(style, obj4)];
       let obj6 = { style: tmp4.body, children: null };
       let obj7 = { style: tmp4.bodyText, children: null };
       const obj8 = {
@@ -732,25 +722,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return options(Text_Text.Text, { style, variant: "heading-lg/bold", children }, arg1);
         },
       });
-      const items5 = [
-        closure_9(accountStanding(4892).Text, obj8),
-        closure_9(accountStanding(4892).Text, {
+      const items4 = [
+        closure_9(accountStanding(5086).Text, obj8),
+        closure_9(accountStanding(5086).Text, {
           variant: "text-sm/medium",
           color: "text-muted",
           style: { textAlign: "center" },
           children: description,
         }),
       ];
-      obj7.children = items5;
-      const items6 = [closure_10(style, obj7)];
+      obj7.children = items4;
+      const items5 = [closure_10(style, obj7)];
       const obj10 = { style: null, children: null };
-      const items7 = [tmp4.health, { height }];
-      obj10.style = items7;
-      const items8 = [closure_9(style, { style: tmp4.line }), memo1];
-      obj10.children = items8;
-      items6[1] = closure_10(style, obj10);
-      obj6.children = items6;
-      items4[1] = closure_10(style, obj6);
-      obj3.children = items4;
+      const items6 = [tmp4.health, { height }];
+      obj10.style = items6;
+      const items7 = [closure_9(style, { style: tmp4.line }), memo1];
+      obj10.children = items7;
+      items5[1] = closure_10(style, obj10);
+      obj6.children = items5;
+      items3[1] = closure_10(style, obj6);
+      obj3.children = items3;
       return closure_10(style, obj3);
     };

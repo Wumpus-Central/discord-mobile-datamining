@@ -8,13 +8,7 @@ const AnalyticsUtilsDefault = AnalyticsUtils;
 
 const AnalyticEvents = Constants.AnalyticEvents;
 class GameSearchSession {
-  constructor(arg0) {
-    DEFAULT = require;
-    if (require === undefined) {
-      tmp = closure_0;
-      tmp2 = closure_2;
-      DEFAULT = closure_0(closure_2[1]).GameAutocompleteProfile.DEFAULT;
-    }
+  constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.state = null;
@@ -122,7 +116,7 @@ class GameSearchSession {
           const obj4 = {
             search_session_id: state.id,
             surface: null,
-            profile: null,
+            filter_group: null,
             query: null,
             query_length: null,
             results_query: null,
@@ -135,7 +129,7 @@ class GameSearchSession {
             selection_number: null,
             ms_since_session_start: null,
           };
-          ({ surface: obj3.surface, profile: obj3.profile } = tmp);
+          ({ surface: obj3.surface, filterGroup: obj3.filter_group } = tmp);
           obj4.query = state.query;
           obj4.query_length = state.query.length;
           let query;
@@ -180,7 +174,7 @@ class GameSearchSession {
       obj2.endAt(Date.now());
     };
     obj.surface = global;
-    obj.profile = DEFAULT;
+    obj.filterGroup = require;
     return obj;
   }
 }
@@ -192,7 +186,7 @@ GameSearchSession.prototype["endAt"] = function endAt(lastActivityAt) {
     const obj3 = {
       search_session_id: state.id,
       surface: null,
-      profile: null,
+      filter_group: null,
       query: null,
       query_length: null,
       max_query_length: null,
@@ -204,7 +198,7 @@ GameSearchSession.prototype["endAt"] = function endAt(lastActivityAt) {
       num_selections: null,
       duration_ms: null,
     };
-    ({ surface: obj2.surface, profile: obj2.profile } = this);
+    ({ surface: obj2.surface, filterGroup: obj2.filter_group } = this);
     obj3.query = state.lastQuery;
     obj3.query_length = state.lastQuery.length;
     ({ maxQueryLength: obj2.max_query_length, displayed: displayed3 } = state);
@@ -249,11 +243,11 @@ let result = size.fileFinishedImporting("modules/games/autocomplete/GameSearchSe
 
 export const GAME_SEARCH_SESSION_IDLE_MS = 60000;
 export { GameSearchSession };
-export const getGameSearchSession = function getGameSearchSession(CHAT_MENTION) {
+export const getGameSearchSession = function getGameSearchSession(CHAT_MENTION, DEFAULT) {
   value = map.get(CHAT_MENTION);
   if (null == value) {
     if (typeof GameSearchSession === "function") {
-      let obj2 = Object.create(tmp6.prototype);
+      let obj2 = Object.create(tmp5.prototype);
       obj2.state = null;
       obj2.selectedQuery = null;
       obj2.onQuery = function onQuery(c2) {
@@ -359,7 +353,7 @@ export const getGameSearchSession = function getGameSearchSession(CHAT_MENTION) 
             const obj4 = {
               search_session_id: state.id,
               surface: null,
-              profile: null,
+              filter_group: null,
               query: null,
               query_length: null,
               results_query: null,
@@ -372,7 +366,7 @@ export const getGameSearchSession = function getGameSearchSession(CHAT_MENTION) 
               selection_number: null,
               ms_since_session_start: null,
             };
-            ({ surface: obj3.surface, profile: obj3.profile } = tmp);
+            ({ surface: obj3.surface, filterGroup: obj3.filter_group } = tmp);
             obj4.query = state.query;
             obj4.query_length = state.query.length;
             let query;
@@ -417,7 +411,7 @@ export const getGameSearchSession = function getGameSearchSession(CHAT_MENTION) 
         obj2.endAt(Date.now());
       };
       obj2.surface = CHAT_MENTION;
-      obj2.profile = obj2(5900).GameAutocompleteProfile.DEFAULT;
+      obj2.filterGroup = DEFAULT;
       let result = map.set(CHAT_MENTION, obj2);
       value = obj2;
     } else {

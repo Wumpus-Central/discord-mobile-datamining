@@ -12,7 +12,7 @@ const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/user_settings/quests/native/QuestCardPreview.tsx");
 
 export const QuestCardPreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? (quest) => {
+  ? function QuestCardPreview(quest) {
       const cResult = quest(576).c(5);
       quest = quest.quest;
       if (cResult[0] !== quest) {
@@ -40,10 +40,10 @@ export const QuestCardPreview = ReactCompilerGating.isReactCompilerEnabled()
         return tmp5;
       }
       let obj = quest(576);
-      const tmp6 = jsx(quest(10971).QuestContentImpressionTrackerNative, {
+      const tmp6 = jsx(quest(11164).QuestContentImpressionTrackerNative, {
         questOrQuests: quest,
-        questContent: quest(5633).QuestContent.INTERNAL_PREVIEW_TOOL,
-        sourceQuestContent: quest(5633).QuestContent.INTERNAL_PREVIEW_TOOL,
+        questContent: quest(5980).QuestContent.INTERNAL_PREVIEW_TOOL,
+        sourceQuestContent: quest(5980).QuestContent.INTERNAL_PREVIEW_TOOL,
         trackGuildAndChannelMetadata: false,
         children: tmp4,
       });
@@ -53,18 +53,18 @@ export const QuestCardPreview = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp6;
       const obj2 = {
         questOrQuests: quest,
-        questContent: quest(5633).QuestContent.INTERNAL_PREVIEW_TOOL,
-        sourceQuestContent: quest(5633).QuestContent.INTERNAL_PREVIEW_TOOL,
+        questContent: quest(5980).QuestContent.INTERNAL_PREVIEW_TOOL,
+        sourceQuestContent: quest(5980).QuestContent.INTERNAL_PREVIEW_TOOL,
         trackGuildAndChannelMetadata: false,
         children: tmp4,
       };
     }
-  : (quest) => {
+  : function QuestCardPreview(quest) {
       quest = quest.quest;
-      return jsx(quest(10971).QuestContentImpressionTrackerNative, {
+      return jsx(quest(11164).QuestContentImpressionTrackerNative, {
         questOrQuests: quest,
-        questContent: quest(5633).QuestContent.INTERNAL_PREVIEW_TOOL,
-        sourceQuestContent: quest(5633).QuestContent.INTERNAL_PREVIEW_TOOL,
+        questContent: quest(5980).QuestContent.INTERNAL_PREVIEW_TOOL,
+        sourceQuestContent: quest(5980).QuestContent.INTERNAL_PREVIEW_TOOL,
         trackGuildAndChannelMetadata: false,
         children() {
           const obj = { title: null, children: null };

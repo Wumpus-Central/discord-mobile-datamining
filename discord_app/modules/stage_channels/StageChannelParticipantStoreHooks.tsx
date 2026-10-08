@@ -9,7 +9,7 @@ require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useStageParticipants(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(5);
@@ -26,9 +26,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp7 = cResult[4];
         }
         const tmpResult = tmp(504);
-        return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(5596).isVersionEqual), 1)[0];
+        return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(5962).isVersionEqual), 1)[0];
       }
-      const fn = function u() {
+      const fn = function c() {
         const items = [
           StageChannelParticipantStore.getMutableParticipants(closure_0, closure_1),
           StageChannelParticipantStore.getParticipantsVersion(closure_0),
@@ -44,7 +44,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       const obj = require("c");
     }
-  : (arg0, arg1) => {
+  : function useStageParticipants(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       let items = [StageChannelParticipantStore];
@@ -67,7 +67,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useStageParticipantsCount(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(5);
@@ -85,7 +85,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(504).useStateFromStores(first, tmp6, tmp7);
       }
-      const fn = function c() {
+      const fn = function u() {
         return StageChannelParticipantStore.getParticipantCount(closure_0, closure_1);
       };
       const items1 = [arg0, arg1];
@@ -98,7 +98,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useStageParticipantsCount(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const items = [StageChannelParticipantStore];
@@ -111,7 +111,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSortedRequestToSpeakParticipants(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -122,7 +122,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function c() {
+        const fn = function u() {
           const items = [
             StageChannelParticipantStore.getMutableRequestToSpeakParticipants(closure_0),
             StageChannelParticipantStore.getRequestToSpeakParticipantsVersion(closure_0),
@@ -145,7 +145,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         1,
       )[0];
     }
-  : (arg0) => {
+  : function useSortedRequestToSpeakParticipants(arg0) {
       _require = arg0;
       let items = [StageChannelParticipantStore];
       const items1 = [arg0];
@@ -172,7 +172,7 @@ export const useStageParticipants = tmp2;
 export const useStageParticipantsCount = tmp3;
 export const useSortedRequestToSpeakParticipants = tmp4;
 export const useActualStageSpeakerCount = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useActualStageSpeakerCount(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -205,7 +205,7 @@ export const useActualStageSpeakerCount = ReactCompilerGating.isReactCompilerEna
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7);
     }
-  : (arg0) => {
+  : function useActualStageSpeakerCount(arg0) {
       _require = arg0;
       const items = [StageChannelParticipantStore];
       const items1 = [arg0];

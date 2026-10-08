@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const usePressHorizontalAutocompleteItemHandler = ReactCompilerGating.isReactCompilerEnabled()
-  ? (draftContent) => {
+  ? function usePressHorizontalAutocompleteItemHandler(draftContent) {
       const cResult = draftContent(handleTextChange[3]).c(5);
       draftContent = draftContent.draftContent;
       handleTextChange = draftContent.handleTextChange;
@@ -42,7 +42,7 @@ export const usePressHorizontalAutocompleteItemHandler = ReactCompilerGating.isR
       cResult[4] = fn;
       tmp2 = fn;
     }
-  : (draftContent) => {
+  : function usePressHorizontalAutocompleteItemHandler(draftContent) {
       draftContent = draftContent.draftContent;
       const handleTextChange = draftContent.handleTextChange;
       const setSelection = draftContent.setSelection;

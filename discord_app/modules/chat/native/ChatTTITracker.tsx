@@ -10,26 +10,26 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/chat/native/ChatTTITracker.tsx");
 
 export const ChatTTITracker = ReactCompilerGating.isReactCompilerEnabled()
-  ? (messages) => {
+  ? function ChatTTITracker(messages) {
       const cResult = c.c(11);
       messages = messages.messages;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function h(nativeEvent) {
+        function handleLatestMessagesTTIMeasurement(nativeEvent) {
           const displayLatestMessages = TTITrackerDefault.displayLatestMessages;
           displayLatestMessages.record(nativeEvent.nativeEvent.timestamp);
-        };
-        cResult[0] = fn;
-        let first = fn;
+        }
+        cResult[0] = handleLatestMessagesTTIMeasurement;
+        let first = handleLatestMessagesTTIMeasurement;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function u(nativeEvent) {
+        function handleCachedMessagesTTIMeasurement(nativeEvent) {
           const displayMessagesWithCache = TTITrackerDefault.displayMessagesWithCache;
           displayMessagesWithCache.record(nativeEvent.nativeEvent.timestamp);
-        };
-        cResult[1] = fn2;
-        let tmp5 = fn2;
+        }
+        cResult[1] = handleCachedMessagesTTIMeasurement;
+        let tmp5 = handleCachedMessagesTTIMeasurement;
       } else {
         tmp5 = cResult[1];
       }
@@ -81,13 +81,13 @@ export const ChatTTITracker = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp10;
       tmp9 = tmp10;
     }
-  : (messages) => {
+  : function ChatTTITracker(messages) {
       messages = messages.messages;
       let tmp3 = null;
       if (messages.length > 0) {
         const obj = {
           nativeID: "cached_messages_tti",
-          onMeasurement(nativeEvent) {
+          onMeasurement: function handleCachedMessagesTTIMeasurement(nativeEvent) {
             const displayMessagesWithCache = TTITrackerDefault.displayMessagesWithCache;
             displayMessagesWithCache.record(nativeEvent.nativeEvent.timestamp);
           },
@@ -98,7 +98,7 @@ export const ChatTTITracker = ReactCompilerGating.isReactCompilerEnabled()
       if (messages.hasFetched) {
         const obj2 = {
           nativeID: "latest_messages_tti",
-          onMeasurement(nativeEvent) {
+          onMeasurement: function handleLatestMessagesTTIMeasurement(nativeEvent) {
             const displayLatestMessages = TTITrackerDefault.displayLatestMessages;
             displayLatestMessages.record(nativeEvent.nativeEvent.timestamp);
           },

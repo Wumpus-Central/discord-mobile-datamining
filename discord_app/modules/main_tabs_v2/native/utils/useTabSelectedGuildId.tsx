@@ -10,11 +10,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useTabSelectedGuildId() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SelectedGuildStore, SortedGuildStore];
-        const fn = function n() {
+        const fn = function s() {
           let guildId = SelectedGuildStore.getGuildId();
           const lastSelectedGuildId = SelectedGuildStore.getLastSelectedGuildId();
           if (guildId == null) {
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return useStateFromStores.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useTabSelectedGuildId() {
       const items = [SelectedGuildStore, SortedGuildStore];
       return useStateFromStores.useStateFromStores(items, () => {
         let guildId = SelectedGuildStore.getGuildId();

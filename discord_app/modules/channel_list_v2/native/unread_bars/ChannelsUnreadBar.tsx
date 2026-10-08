@@ -10,14 +10,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
-const RedesignChannelListConstants = fn(11711);
+const RedesignChannelListConstants = fn(11776);
 ({ getScaledSearchBarHeight: hasOwnProperty, VIEWABILITY_CONFIG: metroRequire } = RedesignChannelListConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
 let c11 = 12;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles((arg0, arg1) => {
   const obj = {
     position: "absolute",
@@ -81,7 +81,7 @@ let result = size.fileFinishedImporting("modules/channel_list_v2/native/unread_b
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (position) => {
+    ? function ChannelsUnreadBar(position) {
         const cResult = position(onPress[11]).c(46);
         position = position.position;
         const shown = position.shown;
@@ -218,7 +218,7 @@ export default noop.memo(
         cResult[5] = D;
         const tmpResult6 = position(onPress[6]);
       }
-    : (position) => {
+    : function ChannelsUnreadBar(position) {
         position = position.position;
         const shown = position.shown;
         const onPress = position.onPress;

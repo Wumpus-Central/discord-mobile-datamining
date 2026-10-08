@@ -12,11 +12,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/useCollectibleListLayout.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCollectibleListLayout() {
       const cResult = c.c(3);
       [tmp3, require] = React4(0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function n(nativeEvent) {
+        const fn = function l(nativeEvent) {
           require((nativeEvent.nativeEvent.layout.width - 64) / 3);
         };
         cResult[0] = fn;
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function useCollectibleListLayout() {
       const tmp = _slicedToArray(React4(0), 2);
       closure_0 = tmp[1];
       return {

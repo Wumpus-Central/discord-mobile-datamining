@@ -26,7 +26,7 @@ let size = size_mod;
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostGem.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildPowerupsBoostGem(arg0) {
       const cResult = c.c(9);
       ({ style, gemWidth, gemHeight } = arg0);
       const tmp3 = closure_5();
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp4 = items;
     }
-  : (arg0) => {
+  : function GuildPowerupsBoostGem(arg0) {
       ({ style, gemWidth, gemHeight } = arg0);
       const obj = { style: null, children: null };
       const items = [closure_5().boostGemContainer, style];

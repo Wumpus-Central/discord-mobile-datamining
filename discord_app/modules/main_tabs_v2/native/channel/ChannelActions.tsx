@@ -15,7 +15,7 @@ import showThreadBrowserModalDefault from "../../../threads/native/showThreadBro
 import SwipeToMemberListUtils from "../sidebar/member_list/SwipeToMemberListUtils.tsx";
 import useSearchContext from "../../../search/native/hooks/useSearchContext.tsx";
 import GuildDirectorySearchModalActionCreatorsDefault from "../../../directory_channels/native/components/GuildDirectorySearchModalActionCreators.tsx";
-import search_tracking_TrackingDefault from "../../../search/native/tracking/Tracking.tsx";
+import tracking_TrackingDefault from "../../../search/native/tracking/Tracking.tsx";
 import ConversationCoachmark from "../../../conversations/components/native/ConversationCoachmark.tsx";
 import IconActionButtonDefault from "../shared_components/IconActionButton.tsx";
 import PrivateChannelButtonsDefault from "header/PrivateChannelButtons.tsx";
@@ -26,20 +26,20 @@ import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const THREADED_CHANNEL_TYPES = fn(2055).THREADED_CHANNEL_TYPES;
-let closure_8 = fn(7522).setIsChannelDetailsSearchActive;
+const THREADED_CHANNEL_TYPES = fn(2067).THREADED_CHANNEL_TYPES;
+let closure_8 = fn(9245).setIsChannelDetailsSearchActive;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_9, ChannelTypesSets: c10, ComponentActions: closure_11 } = Constants);
-let closure_12 = fn(7523).SearchEntrypointAnalyticsLocations;
+let closure_12 = fn(9246).SearchEntrypointAnalyticsLocations;
 const jsx = fn(21).jsx;
 const createElement = fn(19).createElement;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_15 = createStyles.createStyles({
   actionWrapper: { flexShrink: 0, flexDirection: "row", alignItems: "center" },
 });
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (type) => {
+  ? function useAppChannelChatToggle(type) {
       _require = type;
       const cResult = require("c").c(9);
       let obj = require("c");
@@ -64,9 +64,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           tmp9 = hasUnread;
         }
         if (isAppChannelChatOpen) {
-          let ChatIcon = tmp(5897).AppsIcon;
+          let ChatIcon = tmp(8209).AppsIcon;
         } else {
-          ChatIcon = tmp(5862).ChatIcon;
+          ChatIcon = tmp(8174).ChatIcon;
         }
         if (cResult[0] === type.guild_id) {
           if (cResult[1] === type.id) {
@@ -127,7 +127,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = require("AppChannelChat");
     }
-  : (type) => {
+  : function useAppChannelChatToggle(type) {
       _require = type;
       let id = null;
       if (type.type === constants.GUILD_APP) {
@@ -150,9 +150,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           tmp8 = hasUnread;
         }
         if (isAppChannelChatOpen) {
-          let ChatIcon = tmp2(5897).AppsIcon;
+          let ChatIcon = tmp2(8209).AppsIcon;
         } else {
-          ChatIcon = tmp2(5862).ChatIcon;
+          ChatIcon = tmp2(8174).ChatIcon;
         }
         const obj2 = {
           source: null,
@@ -190,7 +190,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function JoinCallIcon() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { size: "sm", color: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -202,10 +202,12 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => jsx(PhoneCallIcon.PhoneCallIcon, { size: "sm", color: nativeDefault.unsafe_rawColors.GREEN_360 });
+  : function JoinCallIcon() {
+      return jsx(PhoneCallIcon.PhoneCallIcon, { size: "sm", color: nativeDefault.unsafe_rawColors.GREEN_360 });
+    };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function EndCallIcon() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { size: "sm", color: nativeDefault.unsafe_rawColors.RED_400 };
@@ -220,10 +222,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => jsx(PhoneHangUpIcon.PhoneHangUpIcon, { size: "sm", color: nativeDefault.unsafe_rawColors.RED_400 });
+  : function EndCallIcon() {
+      return jsx(PhoneHangUpIcon.PhoneHangUpIcon, { size: "sm", color: nativeDefault.unsafe_rawColors.RED_400 });
+    };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function LfgVoiceActiveIcon() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { size: "sm", color: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -238,10 +242,12 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => jsx(VoiceNormalIcon.VoiceNormalIcon, { size: "sm", color: nativeDefault.unsafe_rawColors.GREEN_360 });
+  : function LfgVoiceActiveIcon() {
+      return jsx(VoiceNormalIcon.VoiceNormalIcon, { size: "sm", color: nativeDefault.unsafe_rawColors.GREEN_360 });
+    };
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function LfgVoiceInactiveIcon() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp6 = jsx(VoiceNormalIcon.VoiceNormalIcon, { size: "sm" });
@@ -252,10 +258,12 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => jsx(VoiceNormalIcon.VoiceNormalIcon, { size: "sm" });
+  : function LfgVoiceInactiveIcon() {
+      return jsx(VoiceNormalIcon.VoiceNormalIcon, { size: "sm" });
+    };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function ChannelActionButtons(channel) {
       const cResult = channel(items1[12]).c(21);
       channel = channel.channel;
       const screenIndex = channel.screenIndex;
@@ -288,38 +296,24 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           tmp14 = cResult[4];
         }
         if (cResult[5] !== channel.id) {
-          class G {
-            constructor() {
-              return closure_7.isInChannel(channel.id);
-            }
-          }
+          const fn2 = function x() {
+            return VoiceStateStore.isInChannel(channel.id);
+          };
           cResult[5] = channel.id;
-          cResult[6] = G;
+          cResult[6] = fn2;
+          let tmp16 = fn2;
         } else {
-          class G {
-            constructor() {
-              return closure_7.isInChannel(channel.id);
-            }
-          }
+          tmp16 = cResult[6];
         }
         const tmpResult7 = tmp(tmp2[25]);
-        const stateFromStores1 = tmp(tmp2[24]).useStateFromStores(tmp14, G);
+        const stateFromStores1 = tmp(tmp2[24]).useStateFromStores(tmp14, tmp16);
         const _Symbol2 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          class G {
-            constructor() {
-              return closure_7.isInChannel(channel.id);
-            }
-          }
           const items3 = [VoiceStateStore];
           cResult[7] = items3;
-          const tmp18 = items3;
+          let tmp18 = items3;
         } else {
-          class G {
-            constructor() {
-              return closure_7.isInChannel(channel.id);
-            }
-          }
+          tmp18 = cResult[7];
         }
         if (cResult[8] !== channel.id) {
           class O {
@@ -360,14 +354,14 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               return Object.keys(closure_7.getVoiceStatesForChannel(channel.id)).length;
             }
           }
-          tmp32[0] = tmp5(tmp2[31]);
-          tmp32[1] = tmp(tmp2[32]).MagnifyingGlassIcon;
-          tmp32[2] = function onPress() {
+          tmp33[0] = tmp5(tmp2[31]);
+          tmp33[1] = tmp(tmp2[32]).MagnifyingGlassIcon;
+          tmp33[2] = function onPress() {
             GuildDirectorySearchModalActionCreatorsDefault.open({ channel });
           };
           const intl2 = tmp(tmp2[16]).intl;
-          tmp32[3] = intl2.string(tmp(tmp2[16]).t["5h0QOP"]);
-          items1.push(tmp32);
+          tmp33[3] = intl2.string(tmp(tmp2[16]).t["5h0QOP"]);
+          items1.push(tmp33);
         } else {
           class O {
             constructor() {
@@ -380,17 +374,17 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                 return Object.keys(closure_7.getVoiceStatesForChannel(channel.id)).length;
               }
             }
-            tmp30[0] = tmp5(tmp2[31]);
-            tmp30[1] = tmp(tmp2[32]).MagnifyingGlassIcon;
-            tmp30[2] = function onPress() {
+            tmp31[0] = tmp5(tmp2[31]);
+            tmp31[1] = tmp(tmp2[32]).MagnifyingGlassIcon;
+            tmp31[2] = function onPress() {
               const result = ForumActionCreatorsDefault.updateForumSearchQuery(channel.id, "");
             };
             const intl = tmp(tmp2[16]).intl;
-            tmp30[3] = intl.string(tmp(tmp2[16]).t["5h0QOP"]);
-            items1.push(tmp30);
+            tmp31[3] = intl.string(tmp(tmp2[16]).t["5h0QOP"]);
+            items1.push(tmp31);
           }
         }
-        if (null != tmp27) {
+        if (null != tmp28) {
           class O {
             constructor() {
               return Object.keys(closure_7.getVoiceStatesForChannel(channel.id)).length;
@@ -411,7 +405,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const hasItem = THREADED_CHANNEL_TYPES.has(channel.type);
-          let tmp36 = !hasItem;
+          let tmp37 = !hasItem;
           if (!hasItem) {
             class O {
               constructor() {
@@ -419,14 +413,14 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          if (tmp36) {
+          if (tmp37) {
             class O {
               constructor() {
                 return Object.keys(closure_7.getVoiceStatesForChannel(channel.id)).length;
               }
             }
             const GUILD_THREADS_ONLY = constants2.GUILD_THREADS_ONLY;
-            tmp36 = !GUILD_THREADS_ONLY.has(channel.type);
+            tmp37 = !GUILD_THREADS_ONLY.has(channel.type);
           }
           if (hasItem) {
             class O {
@@ -457,14 +451,14 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               return Object.keys(closure_7.getVoiceStatesForChannel(channel.id)).length;
             }
           }
-          tmp37[0] = tmp5(tmp2[42]);
-          tmp37[1] = tmp(tmp2[43]).ThreadIcon;
-          tmp37[2] = function onPress() {
+          tmp38[0] = tmp5(tmp2[42]);
+          tmp38[1] = tmp(tmp2[43]).ThreadIcon;
+          tmp38[2] = function onPress() {
             return showThreadBrowserModalDefault(channel);
           };
           const intl3 = tmp(tmp2[16]).intl;
-          tmp37[3] = intl3.string(tmp(tmp2[16]).t.B2panI);
-          items1.unshift(tmp37);
+          tmp38[3] = intl3.string(tmp(tmp2[16]).t.B2panI);
+          items1.unshift(tmp38);
         }
         const mapped = items1.map((accessibilityLabel, index) => {
           closure_0 = accessibilityLabel;
@@ -519,15 +513,15 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               return Object.keys(closure_7.getVoiceStatesForChannel(channel.id)).length;
             }
           }
-          return tmp40;
+          return tmp41;
         }
         let obj3 = { style: tmp4.actionWrapper, children: mapped };
-        const tmp43 = <conversationsHeaderButton style={tmp4.actionWrapper}>{mapped}</conversationsHeaderButton>;
+        const tmp44 = <conversationsHeaderButton style={tmp4.actionWrapper}>{mapped}</conversationsHeaderButton>;
         cResult[18] = tmp4.actionWrapper;
         cResult[19] = mapped;
-        cResult[20] = tmp43;
-        tmp27 = closure_16(channel);
-        tmp40 = tmp43;
+        cResult[20] = tmp44;
+        tmp28 = closure_16(channel);
+        tmp41 = tmp44;
       }
       const fn = function c() {
         return ActiveThreadsStore.hasThreadsForChannel(channel.guild_id, channel.id);
@@ -538,7 +532,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = fn;
       let obj2 = channel(items1[22]);
     }
-  : (channel) => {
+  : function ChannelActionButtons(channel) {
       channel = channel.channel;
       const screenIndex = channel.screenIndex;
       let items1;
@@ -683,7 +677,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                     isThreadResult,
                   );
                   const tmp2Result4 = useSearchContext;
-                  search_tracking_TrackingDefault.trackSearchOpened({
+                  tracking_TrackingDefault.trackSearchOpened({
                     searchContext: channelDetailsSearchContext,
                     searchLocation: constants.CHANNEL_HEADER,
                   });
@@ -821,7 +815,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function WrappedChannelNavButtons(channelId) {
       const cResult = channelId(576).c(6);
       channelId = channelId.channelId;
       const screenIndex = channelId.screenIndex;
@@ -833,7 +827,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== channelId) {
-        const fn = function s() {
+        const fn = function t() {
           return ChannelStore.getChannel(channelId);
         };
         cResult[1] = channelId;
@@ -844,7 +838,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = channelId(576);
       const stateFromStores = channelId(504).useStateFromStores(first, tmp6);
-      channelId(5106);
+      channelId(5930);
       let tmp10 = null;
       if (null != stateFromStores) {
         tmp10 = null;
@@ -863,12 +857,12 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp10;
     }
-  : (channelId) => {
+  : function WrappedChannelNavButtons(channelId) {
       channelId = channelId.channelId;
       ({ screenIndex, showCreateThread } = channelId);
       const items = [ChannelStore];
       const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-      channelId(5106);
+      channelId(5930);
       let tmp4 = null;
       if (null != stateFromStores) {
         tmp4 = null;
@@ -887,7 +881,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelActions.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function ChannelActions(channelId) {
       let ForumChannelCloseSearchButton = channelId;
       const cResult = channelId(576).c(13);
       channelId = channelId.channelId;
@@ -930,7 +924,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const result = ForumChannelCloseSearchButton(504);
       const stateFromStoresObject = result.useStateFromStoresObject(first, tmp4);
       ({ isMultiUserDM, isDM } = stateFromStoresObject);
-      const result1 = ForumChannelCloseSearchButton(7539);
+      const result1 = ForumChannelCloseSearchButton(9261);
       const hasForumSearchQuery = result1.useHasForumSearchQuery(channelId);
       if (cResult[3] === channelId) {
         if (cResult[4] === hasForumSearchQuery) {
@@ -957,7 +951,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (hasForumSearchQuery) {
-        ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(13117).ForumChannelCloseSearchButton;
+        ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(12831).ForumChannelCloseSearchButton;
         const obj = { channelId };
         let tmp10 = <ForumChannelCloseSearchButton channelId={channelId} />;
       } else {
@@ -979,7 +973,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp10;
       let obj2 = channelId(576);
     }
-  : (channelId) => {
+  : function ChannelActions(channelId) {
       channelId = channelId.channelId;
       const screenIndex = channelId.screenIndex;
       ({ containerStyle, showCreateThread } = channelId);
@@ -1011,7 +1005,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: containerStyle, children: null };
       if (obj2.useHasForumSearchQuery(channelId)) {
         const obj4 = { channelId };
-        let tmp4Result = jsx(tmp(13117).ForumChannelCloseSearchButton, { channelId });
+        let tmp4Result = jsx(tmp(12831).ForumChannelCloseSearchButton, { channelId });
       } else {
         if (!isDM) {
           if (!isMultiUserDM) {

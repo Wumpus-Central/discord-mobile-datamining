@@ -13,10 +13,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Keyboard: metroRequire } = get_ActivityIndicator);
 const NOOP = fn(1085).NOOP;
-let UserRowModes = fn(10605).UserRowModes;
+let UserRowModes = fn(10202).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   searchBarContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -38,8 +38,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/SearchableDestinationList.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onSelectedDestinationChange) => {
-      const cResult = getRowIsUnavailable(onSearchTextChange[9]).c(71);
+  ? function SearchableDestinationList(onSelectedDestinationChange) {
+      const cResult = getRowIsUnavailable(onSearchTextChange[9]).c(69);
       ({ initialSelectedDestinations, disabledDestinations, originDestination, channelFilter, getRowIsUnavailable } =
         onSelectedDestinationChange);
       onSelectedDestinationChange = onSelectedDestinationChange.onSelectedDestinationChange;
@@ -213,7 +213,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = obj3;
       let obj = getRowIsUnavailable(onSearchTextChange[9]);
     }
-  : (getRowIsUnavailable) => {
+  : function SearchableDestinationList(getRowIsUnavailable) {
       ({ initialSelectedDestinations, disabledDestinations } = getRowIsUnavailable);
       getRowIsUnavailable = getRowIsUnavailable.getRowIsUnavailable;
       const onSelectedDestinationChange = getRowIsUnavailable.onSelectedDestinationChange;
@@ -531,10 +531,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         if (!tmp14) {
           if (null != defaultNoResultsFound) {
-            let obj5 = { style: null, children: null };
-            const items10 = [tmp6.noResults];
-            obj5.style = items10;
-            obj5.children = defaultNoResultsFound;
+            let obj5 = { style: tmp6.noResults, children: defaultNoResultsFound };
           }
           tmp31Result = tmp31(tmp32, obj5);
           tmp35 = tmp31;
@@ -551,15 +548,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (!disableGradient) {
         tmp35Result = tmp35(tmp26(tmp11[22]), { absolute: true });
       }
-      const items11 = [tmp35Result, ,];
+      const items10 = [tmp35Result, ,];
       if (flag2) {
         if (!someResult) {
           let tmp35Result2 = null;
         }
         const obj8 = { children: null };
-        items11[1] = tmp35Result2;
-        items11[2] = tmp31Result;
-        obj8.children = items11;
+        items10[1] = tmp35Result2;
+        items10[2] = tmp31Result;
+        obj8.children = items10;
         return updateSearchText(results, obj8);
       }
       const obj9 = { style: tmp6.searchBarContainer, children: null };

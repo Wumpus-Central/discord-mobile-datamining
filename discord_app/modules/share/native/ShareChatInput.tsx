@@ -3,9 +3,9 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
+import FormInputDefault from "../../../design/void/Form/native/FormInput.tsx";
 import ReactionIcon from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import useMessageMaxLengthDefault from "../../messages/useMessageMaxLength.tsx";
-import FormInputDefault from "../../../design/void/Form/native/FormInput.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     flex: 1,
@@ -48,7 +48,7 @@ const obj5 = {
   paddingTop: null,
   paddingBottom: null,
 };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let num = 2;
 if (PlatformUtils.isAndroid()) {
   num = 0;
@@ -73,7 +73,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareChatInput.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onBlur) => {
+  ? function ShareChatInput(onBlur) {
       const cResult = c.c(32);
       ({ text, inputRef, onChange, onSelectionChange, onFocus } = onBlur);
       onBlur = onBlur.onBlur;
@@ -221,7 +221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = items;
       const tmp8 = _slicedToArray(noop.useState(false), 2);
     }
-  : (onFocus) => {
+  : function ShareChatInput(onFocus) {
       onFocus = onFocus.onFocus;
       const onBlur = onFocus.onBlur;
       let flag = onFocus.disabled;

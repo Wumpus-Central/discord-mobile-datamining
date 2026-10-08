@@ -6,7 +6,7 @@ import useTenureBadging from "useTenureBadging.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const TieredTenureBadgeUtils = erUSmA(7132);
+const TieredTenureBadgeUtils = erUSmA(7318);
 const TieredTenureBadge = PremiumConstants.TieredTenureBadge;
 function getTenureBadgeRequirementString(badge, tenureReqNumMonths) {
   if (TieredTenureBadge.PREMIUM_TENURE_1_MONTH !== badge) {
@@ -37,7 +37,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useTenureBadgeRequirementString = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useTenureBadgeRequirementString() {
       let erUSmA = require;
       let obj = dependencyMap;
       const cResult = c.c(2);
@@ -76,7 +76,7 @@ export const useTenureBadgeRequirementString = ReactCompilerGating.isReactCompil
         return cResult[1];
       }
     }
-  : () => {
+  : function useTenureBadgeRequirementString() {
       const tieredTenureBadge = useTenureBadging.useTieredTenureBadge();
       if (null == tieredTenureBadge) {
         return null;

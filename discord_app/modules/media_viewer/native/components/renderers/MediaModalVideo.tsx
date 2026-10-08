@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/media_viewer/native/component
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function MediaModalVideo(arg0) {
         let tmp2 = dependencyMap;
         const cResult = c.c(30);
         ({ controls, index, muted, onError, onLoad, onLoadingVisible, paused, source, style } = arg0);
@@ -37,7 +37,7 @@ export default noop.memo(
                 }
                 if (tmp7) {
                   if (cResult[8] !== style) {
-                    tmp5 = tmp5(12796);
+                    tmp5 = tmp5(12943);
                     const obj2 = { style, status: "error" };
                     tmp2 = React4(tmp5, obj2);
                     cResult[8] = style;
@@ -83,7 +83,7 @@ export default noop.memo(
                                     }
                                   }
                                   const obj5 = { style, index, source };
-                                  const tmp17 = React4(tmp5(12797), obj5);
+                                  const tmp17 = React4(tmp5(12944), obj5);
                                   cResult[22] = index;
                                   cResult[23] = source;
                                   cResult[24] = style;
@@ -93,7 +93,7 @@ export default noop.memo(
                                 let tmp13 = null;
                                 if (isLoadingVisible) {
                                   const obj6 = { style, status: "loading" };
-                                  tmp13 = React4(tmp5(12796), obj6);
+                                  tmp13 = React4(tmp5(12943), obj6);
                                 }
                                 cResult[19] = isLoadingVisible;
                                 cResult[20] = style;
@@ -147,7 +147,7 @@ export default noop.memo(
         cResult[3] = obj8;
         tmp4 = obj8;
       }
-    : (source) => {
+    : function MediaModalVideo(source) {
         source = source.source;
         const style = source.style;
         let uri = source.videoURI;

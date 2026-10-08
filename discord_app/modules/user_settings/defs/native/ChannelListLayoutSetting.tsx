@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/ChannelListLayoutSetting.tsx
 import util from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
-import ChannelListLayoutTypes from "../../../main_tabs_v2/ChannelListLayoutTypes.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import ChannelListLayoutTypes from "../../../main_tabs_v2/ChannelListLayoutTypes.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 

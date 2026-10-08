@@ -6,9 +6,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const InviteSendStates = fn(7239).InviteSendStates;
+const InviteSendStates = fn(7418).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ buttonWrapper: { minWidth: 66, flexDirection: "row" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/instant_invite/native/compone
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function InviteButton(arg0) {
         const cResult = c.c(11);
         ({ sendState, disabled, onPressSend } = arg0);
         let flag = undefined !== disabled && disabled;
@@ -119,7 +119,7 @@ export default noop.memo(
           tmp20 = tmp22;
         }
       }
-    : (onPress) => {
+    : function InviteButton(onPress) {
         ({ sendState, disabled } = onPress);
         if (disabled === undefined) {
           disabled = false;

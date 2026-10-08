@@ -8,14 +8,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ expandCTALabelContainer: { alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/ViewAllRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ViewAllRow(arg0) {
       const cResult = c.c(9);
       ({ onPress, title } = arg0);
       const tmp4 = closure_4();
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp16;
       tmp15 = tmp16;
     }
-  : (title) => {
+  : function ViewAllRow(title) {
       title = title.title;
       let formatToPlainStringResult;
       if (null != title) {

@@ -17,7 +17,7 @@ export const getFontScale = function getFontScale() {
   return DimensionsStore.getState().byAppEntry[str].fontScale;
 };
 export const useFontScale = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useFontScale() {
       const cResult = c.c(2);
       const appEntryKey = AppEntryKeyContext.useAppEntryKey();
       if (cResult[0] !== appEntryKey) {
@@ -32,7 +32,7 @@ export const useFontScale = ReactCompilerGating.isReactCompilerEnabled()
       }
       return DimensionsStore(tmp3);
     }
-  : () => {
+  : function useFontScale() {
       const appEntryKey = AppEntryKeyContext.useAppEntryKey();
       const items = [appEntryKey];
       return DimensionsStore(noop.useCallback((arg0) => arg0.byAppEntry[appEntryKey].fontScale, items));

@@ -14,12 +14,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_9 = fn(16241).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_9 = fn(16501).MAX_DISPLAYED_UPSELL_GUILDS;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, Consents: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG },
   header: null,
@@ -76,7 +76,7 @@ let items = [
     id: "hangout",
     title: fn(1126).t.ScXySs,
     description: fn(1126).t.DSCqxM,
-    Icon: fn(12829).BumpingFistsSpotIllustration,
+    Icon: fn(12976).BumpingFistsSpotIllustration,
   },
   ,
 ];
@@ -84,38 +84,38 @@ const obj14 = {
   id: "hangout",
   title: fn(1126).t.ScXySs,
   description: fn(1126).t.DSCqxM,
-  Icon: fn(12829).BumpingFistsSpotIllustration,
+  Icon: fn(12976).BumpingFistsSpotIllustration,
 };
 items[1] = {
   id: "gaming",
   title: fn(1126).t["F+MTAZ"],
   description: fn(1126).t.srNlJw,
-  Icon: fn(16242).ChatControllersSpotIllustration,
+  Icon: fn(16502).ChatControllersSpotIllustration,
 };
 const obj15 = {
   id: "gaming",
   title: fn(1126).t["F+MTAZ"],
   description: fn(1126).t.srNlJw,
-  Icon: fn(16242).ChatControllersSpotIllustration,
+  Icon: fn(16502).ChatControllersSpotIllustration,
 };
 items[2] = {
   id: "hobbies",
   title: fn(1126).t["0Ka6B5"],
   description: fn(1126).t["5oGAp/"],
-  Icon: fn(16244).MiniaturesSpotIllustration,
+  Icon: fn(16504).MiniaturesSpotIllustration,
 };
 const ReactCompilerGating = fn(558);
 const obj16 = {
   id: "hobbies",
   title: fn(1126).t["0Ka6B5"],
   description: fn(1126).t["5oGAp/"],
-  Icon: fn(16244).MiniaturesSpotIllustration,
+  Icon: fn(16504).MiniaturesSpotIllustration,
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildUpsellChannelList(arg0) {
       const cResult = require("c").c(59);
       const tmp4 = closure_14();
       _require = tmp4;
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const GameCommunityAddServerEntryExperiment = tmp(13543).GameCommunityAddServerEntryExperiment;
+      const GameCommunityAddServerEntryExperiment = tmp(13840).GameCommunityAddServerEntryExperiment;
       const cardAction = GameCommunityAddServerEntryExperiment.useConfig(first).cardAction;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         items = [ConsentStore, LocalAppDetectionStore];
@@ -221,20 +221,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function f(guild_id, game_id) {
           MobileGameCommunitiesActionCreatorsAll.dismissGuild(guild_id);
-          onPress(1252).track(constants.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_DISMISSED, { game_id, guild_id });
+          onPress(1264).track(constants.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_DISMISSED, { game_id, guild_id });
         };
         cResult[7] = fn;
       }
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function w() {
-          onPress(12372).openCreateGuildModal();
-        };
-        cResult[8] = fn2;
-        let tmp16 = fn2;
+        class L {
+          constructor() {
+            obj = closure_1(closure_1_3[19]);
+            openCreateGuildModalResult = obj.openCreateGuildModal();
+            return;
+          }
+        }
+        cResult[8] = L;
       } else {
-        tmp16 = cResult[8];
+        class L {
+          constructor() {
+            obj = closure_1(closure_1_3[19]);
+            openCreateGuildModalResult = obj.openCreateGuildModal();
+            return;
+          }
+        }
       }
-      importDefault = tmp16;
+      importDefault = L;
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
         class X {
           constructor() {
@@ -282,7 +291,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return someResult;
           }
         }
-        const tmp19 = closure_12(tmp(4892).Text, {
+        const tmp19 = closure_12(tmp(5086).Text, {
           variant: "heading-md/bold",
           color: "mobile-text-heading-primary",
           children: null,
@@ -346,7 +355,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         let obj4 = { variant: "text-sm/medium", color: "text-subtle", style: tmp4.createDescription, children: tmp20 };
-        const tmp23 = closure_12(tmp(4892).Text, obj4);
+        const tmp23 = closure_12(tmp(5086).Text, obj4);
         class I {
           constructor() {
             hasConsentedResult = closure_1_8.hasConsented(closure_1_11.PERSONALIZATION);
@@ -420,7 +429,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[17] = mapped;
       const tmpResult2 = require("MobileGameCommunitiesActionCreators");
     }
-  : (style) => {
+  : function GuildUpsellChannelList(style) {
       let callback1;
       let callback2;
       const tmp = closure_14();

@@ -55,6 +55,7 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
     gameApplicationIds: null,
     officialMessageColor: null,
     incidentsData: null,
+    linkedGameOrganization: null,
   };
   let description = properties.description;
   if (description == null) {
@@ -273,6 +274,14 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
   }
   obj.officialMessageColor = prop4;
   obj.incidentsData = guildIncidentsSerialization.fromServerGuildIncidentsData(properties.incidents_data);
+  let tmp43 = null;
+  if (null != properties.linked_game_organization) {
+    ({ application_id: obj8.applicationId, game_organization_id: obj8.gameOrganizationId } =
+      properties.linked_game_organization);
+    tmp43 = { applicationId: null, gameOrganizationId: null };
+    const obj7 = { applicationId: null, gameOrganizationId: null };
+  }
+  obj.linkedGameOrganization = tmp43;
   return timestampProducer(closure_1_8, guildTheme, obj);
 }
 ({
@@ -654,6 +663,7 @@ export const dangerouslyConstructGuildRecordFromUntypedObject =
       officialMessageColor: null,
       verificationRoleId: null,
       incidentsData: null,
+      linkedGameOrganization: null,
     };
     let preferredLocale = id.preferredLocale;
     if (!preferredLocale) {
@@ -801,6 +811,11 @@ export const dangerouslyConstructGuildRecordFromUntypedObject =
       incidentsData = null;
     }
     obj.incidentsData = incidentsData;
+    let prop1 = id.linkedGameOrganization;
+    if (prop1 == null) {
+      prop1 = null;
+    }
+    obj.linkedGameOrganization = prop1;
     return React3(closure_1_8, obj);
   };
 export const toGuildProperties = function toGuildProperties(id) {
@@ -849,6 +864,7 @@ export const toGuildProperties = function toGuildProperties(id) {
     incidents_data: null,
     game_application_ids: null,
     verification_role_id: null,
+    linked_game_organization: null,
   };
   let vanityURLCode = id.vanityURLCode;
   if (vanityURLCode == null) {
@@ -913,9 +929,9 @@ export const toGuildProperties = function toGuildProperties(id) {
   let tmp4 = null;
   if (null != id.guildTheme) {
     const guildTheme = id.guildTheme;
-    const obj9 = { enabled: guildTheme.enabled };
+    const obj11 = { enabled: guildTheme.enabled };
     const merged = Object.assign(guildThemeSerialization.toServerGuildThemeSettings(guildTheme.themeSettings));
-    tmp4 = obj9;
+    tmp4 = obj11;
   }
   obj.theme = tmp4;
   let tmp9 = null;
@@ -925,12 +941,19 @@ export const toGuildProperties = function toGuildProperties(id) {
       moderatorReportChannelId: obj5.moderator_report_channel_id,
     } = id.moderatorReporting);
     tmp9 = { moderator_reporting_enabled: null, moderator_report_channel_id: null };
-    const obj10 = { moderator_reporting_enabled: null, moderator_report_channel_id: null };
+    const obj12 = { moderator_reporting_enabled: null, moderator_report_channel_id: null };
   }
   obj.moderator_reporting = tmp9;
   ({ guildSpaceSettings: obj.guild_space_settings, officialMessageColor: obj.official_message_color } = id);
   obj.incidents_data = guildIncidentsSerialization.toServerGuildIncidentsData(id.incidentsData);
   ({ gameApplicationIds: obj.game_application_ids, verificationRoleId: obj.verification_role_id } = id);
+  let tmp10 = null;
+  if (null != id.linkedGameOrganization) {
+    ({ applicationId: obj7.application_id, gameOrganizationId: obj7.game_organization_id } = id.linkedGameOrganization);
+    tmp10 = { application_id: null, game_organization_id: null };
+    const obj13 = { application_id: null, game_organization_id: null };
+  }
+  obj.linked_game_organization = tmp10;
   return obj;
 };
 export const fromSerializedGuildRecord = function fromSerializedGuildRecord(item10009) {

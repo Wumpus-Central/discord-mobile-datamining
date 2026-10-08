@@ -8,10 +8,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   header: {
-    height: fn(6075).NAV_BAR_HEIGHT,
+    height: fn(6261).NAV_BAR_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 8,
@@ -22,7 +22,7 @@ let obj = {
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  height: fn(6075).NAV_BAR_HEIGHT,
+  height: fn(6261).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 8,
@@ -34,7 +34,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function ModeratorStartStageHeader(channel) {
         const cResult = c.c(14);
         channel = channel.channel;
         const tmp4 = closure_6();
@@ -104,7 +104,7 @@ export default noop.memo(
         cResult[5] = tmp13;
         tmp12 = tmp13;
       }
-    : (channel) => {
+    : function ModeratorStartStageHeader(channel) {
         channel = channel.channel;
         const tmp3 = useMyCurrentStageChannelRoleDefault(channel.id);
         let speaker;

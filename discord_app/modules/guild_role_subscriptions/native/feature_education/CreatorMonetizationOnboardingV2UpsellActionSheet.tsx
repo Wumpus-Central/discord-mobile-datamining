@@ -5,16 +5,16 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef16217 from "../../../../../_runtime/metro/16217__.js";
+import _modDef16477 from "../../../../../_runtime/metro/16477__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const GuildSettingsSections = fn(1085).GuildSettingsSections;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({
   container: { paddingLeft: 24, paddingRight: 24, paddingTop: 24 },
   title: { marginBottom: 6 },
@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function CreatorMonetizationOnboardingV2UpsellActionSheet(guildId) {
       const cResult = guildId(576).c(34);
       guildId = guildId.guildId;
       const markAsDismissed = guildId.markAsDismissed;
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "mobile-text-heading-primary",
             children: tmp8,
           };
-          const tmp11 = closure_6(tmp(4892).Text, obj3);
+          const tmp11 = closure_6(tmp(5086).Text, obj3);
           cResult[6] = tmp4.title;
           cResult[7] = tmp11;
         } else {
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "text-default",
             children: tmp12,
           };
-          const tmp15 = closure_6(tmp(4892).Text, obj5);
+          const tmp15 = closure_6(tmp(5086).Text, obj5);
           cResult[9] = tmp4.description;
           cResult[10] = tmp15;
         } else {
@@ -140,11 +140,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return markAsDismissed(ContentDismissActionType.UNKNOWN);
             }
           }
-          const obj6 = { style: tmp4.image, resizeMode: "contain", source: markAsDismissed(16217) };
-          const tmp19 = closure_6(markAsDismissed(5981), obj6);
+          const obj6 = { style: tmp4.image, resizeMode: "contain", source: markAsDismissed(16477) };
+          const tmp19 = closure_6(markAsDismissed(6164), obj6);
           cResult[11] = tmp4.image;
           cResult[12] = tmp19;
-          const tmp18 = markAsDismissed(5981);
+          const tmp18 = markAsDismissed(6164);
         } else {
           class N {
             constructor() {
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj8 = { onPress: tmp5, text: tmp20 };
-          const tmp23 = closure_6(tmp(5601).Button, obj8);
+          const tmp23 = closure_6(tmp(5375).Button, obj8);
           cResult[14] = tmp5;
           cResult[15] = tmp23;
         } else {
@@ -187,15 +187,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[16] !== markAsDismissed) {
-          class P {
+          class A {
             constructor() {
               return markAsDismissed(ContentDismissActionType.UNKNOWN);
             }
           }
           cResult[16] = markAsDismissed;
-          cResult[17] = P;
+          cResult[17] = A;
         } else {
-          class P {
+          class A {
             constructor() {
               return markAsDismissed(ContentDismissActionType.UNKNOWN);
             }
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol4 = Symbol;
         if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-          class P {
+          class A {
             constructor() {
               return markAsDismissed(ContentDismissActionType.UNKNOWN);
             }
@@ -212,37 +212,37 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[18] = stringResult3;
           const tmp25 = stringResult3;
         } else {
-          class P {
+          class A {
             constructor() {
               return markAsDismissed(ContentDismissActionType.UNKNOWN);
             }
           }
         }
-        if (cResult[19] !== P) {
-          class P {
+        if (cResult[19] !== A) {
+          class A {
             constructor() {
               return markAsDismissed(ContentDismissActionType.UNKNOWN);
             }
           }
-          const obj10 = { onPress: P, text: tmp25, variant: "secondary" };
-          const tmp28 = closure_6(tmp(5601).Button, obj10);
-          cResult[19] = P;
+          const obj10 = { onPress: A, text: tmp25, variant: "secondary" };
+          const tmp28 = closure_6(tmp(5375).Button, obj10);
+          cResult[19] = A;
           cResult[20] = tmp28;
         } else {
-          class P {
+          class A {
             constructor() {
               return markAsDismissed(ContentDismissActionType.UNKNOWN);
             }
           }
         }
         if (cResult[21] === tmp4.dismissButton) {
-          class P {
+          class A {
             constructor() {
               return markAsDismissed(ContentDismissActionType.UNKNOWN);
             }
           }
           if (cResult[24] === tmp4.container) {
-            class P {
+            class A {
               constructor() {
                 return markAsDismissed(ContentDismissActionType.UNKNOWN);
               }
@@ -266,17 +266,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[22] = tmp27;
         cResult[23] = tmp32;
       }
-      const fn = function h() {
+      function handleCheckItOut() {
         markAsDismissed(ContentDismissActionType.UNKNOWN);
         GuildSettingsActionCreatorsDefault.open(guildId, GuildSettingsSections.ROLE_SUBSCRIPTIONS);
-      };
+      }
       cResult[0] = guildId;
       cResult[1] = markAsDismissed;
-      cResult[2] = fn;
-      tmp5 = fn;
+      cResult[2] = handleCheckItOut;
+      tmp5 = handleCheckItOut;
       const obj = guildId(576);
     }
-  : (arg0) => {
+  : function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
       ({ guildId: require, markAsDismissed: importDefault } = arg0);
       const tmp = closure_8();
       const obj = {
@@ -307,10 +307,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = util.intl;
       obj4.children = intl2.string(util.t.kUUFbG);
       items[1] = closure_6(Text_Text.Text, obj4);
-      const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16217 };
+      const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16477 };
       items[2] = closure_6(FastImageDefault, obj5);
       const obj6 = {
-        onPress() {
+        onPress: function handleCheckItOut() {
           closure_1_1(ContentDismissActionType.UNKNOWN);
           GuildSettingsActionCreatorsDefault.open(require, GuildSettingsSections.ROLE_SUBSCRIPTIONS);
         },

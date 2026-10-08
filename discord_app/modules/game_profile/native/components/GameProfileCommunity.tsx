@@ -16,7 +16,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const sum = nativeDefault.space.PX_48 + nativeDefault.space.PX_8;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   card: {
     borderRadius: nativeDefault.radii.lg,
@@ -116,7 +116,7 @@ let closure_7 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_8 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function GameProfileCommunitySkeleton() {
         const cResult = c.c(27);
         const tmp4 = closure_7();
         const result = 2 * GameProfileSkeleton.SKELETON_CARD_ANIMATION_DELAY_MS;
@@ -244,7 +244,7 @@ let closure_8 = noop.memo(
         tmp12 = items3;
         const tmp6 = useIsWindowLargeDefault();
       }
-    : () => {
+    : function GameProfileCommunitySkeleton() {
         const tmp = closure_7();
         const result = 2 * GameProfileSkeleton.SKELETON_CARD_ANIMATION_DELAY_MS;
         const obj = { animationDelayMs: result, showViewAllSkeleton: false, skeletonTitleWidth: 80, children: null };
@@ -279,7 +279,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileCommunity.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (closeModal) => {
+  ? function GameProfileCommunityServer(closeModal) {
       const cResult = trackAction(invite[6]).c(66);
       ({ game, trackAction } = closeModal);
       closeModal = closeModal.closeModal;
@@ -588,34 +588,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const tmp19 = closure_5(tmp5(tmp2[16]), obj24);
                 cResult[13] = tmp11;
                 cResult[14] = tmp4.guildIconImage;
-                class G {
-                  constructor() {
-                    tmp = invite;
-                    if (null != invite) {
-                      tmp5 = trackAction;
-                      tmp6 = closure_0;
-                      tmp7 = closure_2;
-                      tmp8 = trackAction(closure_0(closure_2[11]).GameProfileTrackActionActions.JoinServer);
-                      tmp9 = closeModal;
-                      tmp10 = closeModal();
-                      tmp11 = isMember;
-                      if (isMember) {
-                        guild = tmp.guild;
-                        id = undefined;
-                        if (guild != null) {
-                          id = guild.id;
-                        }
-                        if (null != id) {
-                          tmp6Result = tmp6(tmp7[12]);
-                          transitionToGuildResult = tmp6Result.transitionToGuild(tmp.guild.id);
-                        }
-                      }
-                      tmp6Result1 = tmp6(tmp7[13]);
-                      showInviteResult = tmp6Result1.showInvite(tmp.code);
-                    }
-                    return;
-                  }
-                }
+                cResult[15] = tmp4.guildIconLoading;
                 cResult[16] = tmp19;
                 tmp16 = tmp19;
                 const tmp5Result4 = tmp5(tmp2[16]);
@@ -641,43 +614,34 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      class G {
-        constructor() {
-          tmp = invite;
-          if (null != invite) {
-            tmp5 = trackAction;
-            tmp6 = closure_0;
-            tmp7 = closure_2;
-            tmp8 = trackAction(closure_0(closure_2[11]).GameProfileTrackActionActions.JoinServer);
-            tmp9 = closeModal;
-            tmp10 = closeModal();
-            tmp11 = isMember;
-            if (isMember) {
-              guild = tmp.guild;
-              id = undefined;
-              if (guild != null) {
-                id = guild.id;
-              }
-              if (null != id) {
-                tmp6Result = tmp6(tmp7[12]);
-                transitionToGuildResult = tmp6Result.transitionToGuild(tmp.guild.id);
-              }
+      const fn = function k() {
+        if (null != invite) {
+          trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.JoinServer);
+          closeModal();
+          if (isMember) {
+            guild = invite.guild;
+            let id;
+            if (guild != null) {
+              id = guild.id;
             }
-            tmp6Result1 = tmp6(tmp7[13]);
-            showInviteResult = tmp6Result1.showInvite(tmp.code);
+            if (null != id) {
+              transitionToGuild.transitionToGuild(invite.guild.id);
+              const tmp6Result = transitionToGuild;
+            }
           }
-          return;
+          DisplayedInviteActionCreators.showInvite(invite.code);
+          const tmp6Result2 = DisplayedInviteActionCreators;
         }
-      }
+      };
       cResult[2] = closeModal;
       cResult[3] = invite;
       cResult[4] = isMember;
       cResult[5] = trackAction;
-      cResult[6] = G;
-      tmp9 = G;
+      cResult[6] = fn;
+      tmp9 = fn;
       const obj = trackAction(invite[6]);
     }
-  : (closeModal) => {
+  : function GameProfileCommunityServer(closeModal) {
       ({ game, trackAction } = closeModal);
       closeModal = closeModal.closeModal;
       let invite;

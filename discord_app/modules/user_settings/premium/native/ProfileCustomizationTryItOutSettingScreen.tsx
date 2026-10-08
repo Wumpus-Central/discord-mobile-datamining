@@ -13,9 +13,9 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, AnalyticsPages: closure_8 } = Constants);
-const PremiumUpsellTypes = fn(1379).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null, activityIndicator: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -29,7 +29,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ProfileCustomizationTryItOutSettingScreen() {
       const cResult = sourceAnalyticsLocations(categories[9]).c(30);
       closure_11();
       let obj = sourceAnalyticsLocations(categories[9]);
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = items2;
       const tmp12 = stateFromStores(categories[13])();
     }
-  : () => {
+  : function ProfileCustomizationTryItOutSettingScreen() {
       let tmp = closure_11();
       const tmp2 = stateFromStores;
       const tmp4 = stateFromStores(categories[10]);

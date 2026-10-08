@@ -8,11 +8,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useGetIsMounted.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGetIsMounted() {
       const cResult = c.c(3);
       noop.useRef(true);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function n() {
+        const fn = function u() {
           return () => {
             ref.current = false;
           };
@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp2, tmp3);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function u() {
+        const fn2 = function c() {
           return ref.current;
         };
         cResult[2] = fn2;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function useGetIsMounted() {
       noop.useRef(true);
       const effect = noop.useEffect(
         () => () => {

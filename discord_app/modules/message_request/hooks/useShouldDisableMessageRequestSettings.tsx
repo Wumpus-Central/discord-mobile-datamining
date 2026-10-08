@@ -7,7 +7,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/message_request/hooks/useShouldDisableMessageRequestSettings.tsx");
 
 export const useShouldDisableMessageRequestSettings = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShouldDisableMessageRequestSettings() {
       let isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
       if (isVerifiedTeen) {
         isVerifiedTeen = obj2.useIsSettingTeenByDefault(
@@ -16,7 +16,7 @@ export const useShouldDisableMessageRequestSettings = ReactCompilerGating.isReac
       }
       return isVerifiedTeen;
     }
-  : () => {
+  : function useShouldDisableMessageRequestSettings() {
       let isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
       if (isVerifiedTeen) {
         isVerifiedTeen = obj2.useIsSettingTeenByDefault(

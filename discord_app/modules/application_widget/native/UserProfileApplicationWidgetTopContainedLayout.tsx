@@ -1,17 +1,17 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetTopContainedLayout.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import resolvedValuesFromUserApplicationIdentityProfile from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import UserProfileApplicationWidgetFieldUtils from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
 import UserProfileApplicationWidgetSkeletons from "../../user_profile/native/UserProfileApplicationWidgetSkeletons.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c2, View: c3 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   contentRow: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" },
   text: null,
@@ -45,7 +45,8 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileApplicationWidgetTopContainedLayout(arg0) {
+      let tmp2 = dependencyMap;
       const cResult = c.c(45);
       ({ header, topConfig, resolveFieldValue, numberFormat } = arg0);
       const tmp4 = closure_6();
@@ -139,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             const obj6 = { children: null };
                                             const items = [header, tmp39];
                                             obj6.children = items;
-                                            const tmp46 = hasOwnProperty(React3, obj6);
+                                            const tmp46 = hasOwnProperty(View, obj6);
                                             cResult[42] = header;
                                             cResult[43] = tmp39;
                                             cResult[44] = tmp46;
@@ -149,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         const obj7 = { style: tmp4.contentRow, children: null };
                                         const items1 = [tmp28, cResult[37]];
                                         obj7.children = items1;
-                                        const tmp42 = hasOwnProperty(React3, obj7);
+                                        const tmp42 = hasOwnProperty(View, obj7);
                                         cResult[38] = tmp4.contentRow;
                                         cResult[39] = tmp28;
                                         cResult[40] = cResult[37];
@@ -165,8 +166,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   const obj10 = { uri: imageSkeleton.media.url };
                                   obj9.source = obj10;
                                   obj9.style = tmp4.image;
-                                  obj8.children = React4(React2, obj9);
-                                  let tmp34 = React4(React3, obj8);
+                                  tmp2 = React4(FastImageDefault, obj9);
+                                  obj8.children = tmp2;
+                                  let tmp34 = React4(View, obj8);
                                 } else {
                                   const obj11 = { style: tmp4.imageSkeleton };
                                   tmp34 = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj11);
@@ -183,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         const obj12 = { style: tmp4.text, children: null };
                         const items2 = [tmp16, tmp19, tmp22, tmp25];
                         obj12.children = items2;
-                        const tmp31 = hasOwnProperty(React3, obj12);
+                        const tmp31 = hasOwnProperty(View, obj12);
                         cResult[27] = tmp4.text;
                         cResult[28] = tmp25;
                         cResult[29] = tmp16;
@@ -253,7 +255,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = textComponentValues3;
       const tmpResult6 = resolvedValuesFromUserApplicationIdentityProfile;
     }
-  : (header) => {
+  : function UserProfileApplicationWidgetTopContainedLayout(header) {
       ({ topConfig, resolveFieldValue, numberFormat } = header);
       const tmp = closure_6();
       const textComponentValues = resolvedValuesFromUserApplicationIdentityProfile.resolveTextComponentValues(
@@ -310,15 +312,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj6.children = items2;
-      const items3 = [hasOwnProperty(React3, obj6)];
+      const items3 = [hasOwnProperty(View, obj6)];
       if (null != fieldValue) {
         const obj7 = { style: tmp.imageContainer, children: null };
         const obj8 = { source: null, style: null, resizeMode: "contain" };
         const obj9 = { uri: fieldValue.media.url };
         obj8.source = obj9;
         obj8.style = tmp.image;
-        obj7.children = React4(React2, obj8);
-        let tmp12Result = React4(React3, obj7);
+        obj7.children = React4(FastImageDefault, obj8);
+        let tmp12Result = React4(View, obj7);
       } else {
         const obj10 = { style: tmp.imageSkeleton };
         tmp12Result = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj10);
@@ -326,7 +328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj11 = { children: null };
       items3[1] = tmp12Result;
       obj5.children = items3;
-      items1[1] = hasOwnProperty(React3, obj5);
+      items1[1] = hasOwnProperty(View, obj5);
       obj11.children = items1;
-      return hasOwnProperty(React3, obj11);
+      return hasOwnProperty(View, obj11);
     };

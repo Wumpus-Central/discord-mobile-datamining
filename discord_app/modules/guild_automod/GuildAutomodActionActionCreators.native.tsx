@@ -1,11 +1,11 @@
 // discord_app/modules/guild_automod/GuildAutomodActionActionCreators.native.tsx
-import asyncRequireImpl from "../../../_runtime/01987_asyncRequireImpl.js";
-import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
+import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
 import actions_AlertActionCreatorsDefault from "../../actions/native/AlertActionCreators.tsx";
+import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(11487);
+const Constants = fn(11473);
 ({ AutomodActionType: c3, SUBMIT_FEEDBACK_MODAL_KEY: closure_4 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -20,12 +20,12 @@ export const getPromiseableActionHandlers = function getPromiseableActionHandler
 };
 export const openSubmitFeedback = function openSubmitFeedback(messageId, content, decisionId, channel) {
   const obj2 = {
-    onCloseModal() {
+    onCloseModal: function handleClose() {
       ModalActionCreatorsDefault.popWithKey(closure_1_4);
     },
     automodDecision: { messageId, messageContent: content, decisionId, channel },
   };
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11491, dependencyMap.paths), obj2, React4);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11477, dependencyMap.paths), obj2, React4);
 };
 export function openRaidResolveModal() {}
 export function openConfirmRemoveMentionRaid() {}
@@ -33,7 +33,7 @@ export const openAutomodProfileQuarantineAlert = function openAutomodProfileQuar
   closure_0 = guildId;
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(11494, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(11480, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};

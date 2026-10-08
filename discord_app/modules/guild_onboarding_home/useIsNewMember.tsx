@@ -7,13 +7,13 @@ import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildMemberFlags = fn(4501).GuildMemberFlags;
+const GuildMemberFlags = fn(4693).GuildMemberFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/useIsNewMember.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsNewMember(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function u() {
+        const fn = function l() {
           let flag = true;
           if (!ImpersonateStore.isFullServerPreview(closure_0)) {
             const selfMember = GuildMemberStore.getSelfMember(closure_0);
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7);
     }
-  : (arg0) => {
+  : function useIsNewMember(arg0) {
       _require = arg0;
       const items = [GuildMemberStore, ImpersonateStore];
       return require("initialize").useStateFromStores(items, () => {

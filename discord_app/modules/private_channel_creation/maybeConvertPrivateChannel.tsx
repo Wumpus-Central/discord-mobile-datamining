@@ -1,6 +1,6 @@
 // discord_app/modules/private_channel_creation/maybeConvertPrivateChannel.tsx
-import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
 import FakePlaceholderPrivateChannel from "../channel/FakePlaceholderPrivateChannel.tsx";
+import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
 require = fn;

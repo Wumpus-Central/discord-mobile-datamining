@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((arg0, arg1) => {
   const obj = { tag: null, inline: null, label: null };
   const obj2 = {
@@ -42,7 +42,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TagGroup/native/Tag.native.tsx");
 
 export const Tag = ReactCompilerGating.isReactCompilerEnabled()
-  ? (variant) => {
+  ? function Tag(variant) {
       const cResult = c.c(16);
       ({ item, size, inline } = variant);
       const tmp4 = closure_6(size, variant.variant);
@@ -114,7 +114,7 @@ export const Tag = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp5 = items1;
     }
-  : (variant) => {
+  : function Tag(variant) {
       ({ item, size, inline } = variant);
       const tmp = closure_6(size, variant.variant);
       const items = [tmp.tag];

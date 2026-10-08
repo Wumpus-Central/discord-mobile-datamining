@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createICYMIStyles = fn(16434);
+const createICYMIStyles = fn(16694);
 let closure_7 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = {
     text: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: margin.margin },
@@ -29,7 +29,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/ICYMIHeader.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ICYMIHeader() {
       const cResult = c.c(8);
       const tmp4 = closure_7();
       if (cResult[0] !== tmp4.separator) {
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp15;
       tmp14 = tmp15;
     }
-  : () => {
+  : function ICYMIHeader() {
       const tmp = closure_7();
       const obj = { children: null };
       const items = [React4(View, { style: tmp.separator })];

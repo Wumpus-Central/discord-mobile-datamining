@@ -6,8 +6,8 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const useGuildInviteSendStates = fn(12810).useGuildInviteSendStates;
-const InviteSendStates = fn(7239).InviteSendStates;
+const useGuildInviteSendStates = fn(12957).useGuildInviteSendStates;
+const InviteSendStates = fn(7418).InviteSendStates;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (source) => {
+    ? function GuildInviteRow(source) {
         const cResult = recipientId(guild[6]).c(28);
         ({ row, recipientId } = source);
         source = source.source;
@@ -150,14 +150,14 @@ export default noop.memo(
               tmp8 = tmp11;
             }
           }
-          const fn2 = function x() {
+          function handlePress() {
             GuildInviteUtils.sendGuildInvite(recipientId, guild.id, source);
-          };
+          }
           cResult[3] = guild.id;
           cResult[4] = recipientId;
           cResult[5] = source;
-          cResult[6] = fn2;
-          tmp7 = fn2;
+          cResult[6] = handlePress;
+          tmp7 = handlePress;
         }
         const fn = function c(arg0) {
           let tmp2;
@@ -172,7 +172,7 @@ export default noop.memo(
         tmp4 = fn;
         const obj = recipientId(guild[6]);
       }
-    : (arg0) => {
+    : function GuildInviteRow(arg0) {
         ({ row, recipientId: require, source: importDefault } = arg0);
         function handlePress() {
           GuildInviteUtils.sendGuildInvite(closure_1_0, guild.id, importDefault);

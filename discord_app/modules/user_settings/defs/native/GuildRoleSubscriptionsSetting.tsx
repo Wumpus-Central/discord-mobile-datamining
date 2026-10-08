@@ -21,7 +21,9 @@ const route = SettingBuilders.createRoute({
   },
   parent: SettingsConstants.MobileUserSettings.PREMIUM,
   IconComponent: TicketIcon.TicketIcon,
-  usePredicate: () => useUserRoleSubscriptionRelationshipDefault() === constants.SUBSCRIBED,
+  usePredicate: function useHasGuildRoleSubscriptionsSetting() {
+    return useUserRoleSubscriptionRelationshipDefault() === constants.SUBSCRIBED;
+  },
   screen: {
     route: Constants.UserSettingsSections.GUILD_ROLE_SUBSCRIPTIONS,
     getComponent() {

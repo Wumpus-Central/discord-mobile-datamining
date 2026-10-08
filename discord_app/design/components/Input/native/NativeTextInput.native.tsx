@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useKeyboardBlurring(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] !== arg0) {
@@ -48,7 +48,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp2, tmp3);
     }
-  : (arg0) => {
+  : function useKeyboardBlurring(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       const effect = noop.useEffect(() => {
@@ -67,7 +67,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_12 = tmp4;
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (value, arg1) => {
+  ? function useControlledValueProps(value, arg1) {
       const cResult = c.c(9);
       value = value.value;
       importDefault = value;
@@ -86,7 +86,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             const mountLayoutEffect = useMountEffect.useMountLayoutEffect(tmp8);
             const _Symbol = Symbol;
             if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj2 = { value: "start", defaultValue: "unicodeVersion" };
+              const obj2 = { value: "Array", defaultValue: "Reflect" };
               cResult[8] = obj2;
               let tmp11 = obj2;
             } else {
@@ -127,7 +127,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = items;
       tmp4 = fn;
     }
-  : (value, arg1) => {
+  : function useControlledValueProps(value, arg1) {
       value = value.value;
       importDefault = value;
       const defaultValue = value.defaultValue;
@@ -150,11 +150,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           current.setNativeProps(obj);
         }
       });
-      return { value: "start", defaultValue: "unicodeVersion" };
+      return { value: "Array", defaultValue: "Reflect" };
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function usePanGestureWrapper(arg0) {
       _require = arg0;
       const cResult = require("c").c(8);
       let obj = require("c");
@@ -211,7 +211,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           if (isFocusedResult) {
             str = "none";
           }
-          items[1] = v65535(React4, { pointerEvents: str, onPress, style });
+          items[1] = collapsed(React4, { pointerEvents: str, onPress, style });
           obj.children = items;
           return closure_2_11(React5, obj);
         },
@@ -223,7 +223,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = obj4;
       const obj2 = require("useIsScreenReaderEnabled");
     }
-  : (arg0) => {
+  : function usePanGestureWrapper(arg0) {
       _require = arg0;
       const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
       let items = [arg0];
@@ -259,7 +259,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           if (isFocusedResult) {
             str = "none";
           }
-          items[1] = v65535(React4, { pointerEvents: str, onPress, style });
+          items[1] = collapsed(React4, { pointerEvents: str, onPress, style });
           obj.children = items;
           return closure_2_11(React5, obj);
         },
@@ -269,25 +269,26 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Input/native/NativeTextInput.native.tsx");
 
 export const useKeyboardBlurring = tmp4;
-export const NativeTextInput = noop.forwardRef((keyboardAppearance, ref2) => {
-  const ref = noop.useRef(null);
+export const NativeTextInput = function TextInput(ref) {
+  const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+  ref = noop.useRef(null);
   closure_12(ref);
-  const tmp4 = useBottomSheetKeyboardHandlingDefault(keyboardAppearance);
+  const tmp5 = useBottomSheetKeyboardHandlingDefault(merged);
   native2;
-  if (null != keyboardAppearance.keyboardAppearance) {
+  if (null != merged.keyboardAppearance) {
     const obj = {};
-    const merged = Object.assign(native.mergeProps(keyboardAppearance, tmp4, tmp5));
-    const tmp6Result = native;
-    obj.ref = native.mergeRefs(ref, ref2);
-    const tmp15 = v65535(hasOwnProperty, obj);
+    const merged1 = Object.assign(native.mergeProps(merged, tmp5, tmp6));
+    const tmp7Result = native;
+    obj.ref = native.mergeRefs(ref, ref.ref);
+    const tmp15 = collapsed(hasOwnProperty, obj);
     let panGestureWrapperResult = tmp15;
-    if (!keyboardAppearance.multiline) {
+    if (!merged.multiline) {
       panGestureWrapperResult = closure_14(ref).panGestureWrapper(tmp15);
     }
     return panGestureWrapperResult;
   } else {
-    keyboardAppearance.keyboardAppearance = native.isThemeDark(tmp8) ? KeyboardThemes.DARK : KeyboardThemes.LIGHT;
-    const tmp6Result4 = native;
+    merged.keyboardAppearance = native.isThemeDark(tmp9) ? KeyboardThemes.DARK : KeyboardThemes.LIGHT;
+    const tmp7Result4 = native;
   }
-  tmp5 = closure_13(keyboardAppearance, ref);
-});
+  tmp6 = closure_13(merged, ref);
+};

@@ -3,7 +3,7 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import transitionToChannel from "../../routing/transitionToChannel.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
@@ -13,16 +13,16 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const InAppNotificationConstants = fn(12493);
+const InAppNotificationConstants = fn(12589);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: hasOwnProperty, NOTIFICATION_PREVIEW_LINE_CLAMP: metroRequire } =
   InAppNotificationConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ newContainerRoleDot: { paddingRight: 4, paddingTop: 0 } });
 let ReactCompilerGating = fn(558);
 let closure_9 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (message) => {
+    ? function MessagePreview(message) {
         const cResult = c.c(2);
         message = message.message;
         if (cResult[0] !== message) {
@@ -36,11 +36,13 @@ let closure_9 = noop.memo(
         }
         return tmp3;
       }
-    : (message) => jsx(MessagePreviewTextDefault, { message: message.message, lineClamp, maxHeight }),
+    : function MessagePreview(message) {
+        return jsx(MessagePreviewTextDefault, { message: message.message, lineClamp, maxHeight });
+      },
 );
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAccessoryLabelNode(arg0) {
       const cResult = c.c(7);
       ({ author, containerStyles } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -97,7 +99,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp13Result;
       const tmpResult = initialize;
     }
-  : (author) => {
+  : function useAccessoryLabelNode(author) {
       author = author.author;
       const items = [AccessibilityStore];
       let colorString;
@@ -181,7 +183,7 @@ export default noop.memo(function MessageNotification(notification) {
   const callback1 = guild.useCallback(
     () =>
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(12510, dependencyMap.paths),
+        asyncRequireImpl(12606, dependencyMap.paths),
         { channelId: channel.id },
         "in-app-notification-settings-modal",
       ),

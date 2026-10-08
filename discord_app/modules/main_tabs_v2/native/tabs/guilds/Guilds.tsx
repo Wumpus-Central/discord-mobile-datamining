@@ -11,7 +11,7 @@ import YouBarDefault from "../../you_bar/YouBar.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const YouBarNavigatorScreens = fn(10833).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11182).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guil
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function GuildsOnly() {
         const cResult = c.c(4);
         const trackTabPerformance = TabsPerformanceTracker.useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
         const tmp6 = useColorThemeBackgroundDefault();
@@ -60,7 +60,7 @@ export default noop.memo(
         }
         return tmp13;
       }
-    : () => {
+    : function GuildsOnly() {
         const trackTabPerformance = TabsPerformanceTracker.useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
         const tmp4 = useColorThemeBackgroundDefault();
         let isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();

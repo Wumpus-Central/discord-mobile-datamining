@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (source) => {
+    ? function GIFFavButton(source) {
         let StarIcon = source;
         let tmp = isFavoriteGIF;
         const cResult = source(isFavoriteGIF[3]).c(19);
@@ -97,7 +97,7 @@ export default noop.memo(
             }
           }
         }
-        const fn = function c() {
+        const fn = function u() {
           if (isFavoriteGIF) {
             GIFPickerActionCreators.removeFavoriteGIF(uri);
             const tmpResult = GIFPickerActionCreators;
@@ -145,7 +145,7 @@ export default noop.memo(
         tmp6 = fn;
         const StarIconResult1 = StarIcon(tmp[5]);
       }
-    : (source) => {
+    : function GIFFavButton(source) {
         source = source.source;
         let isFavoriteGIF;
         let uri = source.isGIFV ? source.embedURI : source.sourceURI;

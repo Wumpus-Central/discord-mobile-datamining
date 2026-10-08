@@ -9,9 +9,9 @@ import YouBarButtonDefault from "YouBarButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const YOU_BAR_BUTTON_ICON_SIZE = fn(14915).YOU_BAR_BUTTON_ICON_SIZE;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(15177).YOU_BAR_BUTTON_ICON_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE },
   badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND },
@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/Y
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (hasNameplate) => {
+    ? function YouBarICYMIButton(hasNameplate) {
         const cResult = c.c(10);
         hasNameplate = hasNameplate.hasNameplate;
         const tmp4 = closure_4();
@@ -96,7 +96,7 @@ export default noop.memo(
         tmp6 = tmp7;
         const obj3 = { size: "custom", style: tmp4.icon, color: str };
       }
-    : (hasNameplate) => {
+    : function YouBarICYMIButton(hasNameplate) {
         hasNameplate = hasNameplate.hasNameplate;
         const tmp = closure_4();
         const obj = {

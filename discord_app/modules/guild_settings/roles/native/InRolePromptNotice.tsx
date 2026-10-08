@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import FlagUtils from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import _modDef4814 from "../../../../../_runtime/metro/04814__.js";
+import _modDef5008 from "../../../../../_runtime/metro/05008__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildSettingsUtils from "../../GuildSettingsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const RoleFlags = fn(1085).RoleFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   promptRow: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -40,7 +40,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/native/InRolePromptNotice.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (role) => {
+  ? function InRolePromptNotice(role) {
       const cResult = c.c(18);
       role = role.role;
       const tmp4 = closure_7();
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const promptRow = tmp4.promptRow;
         if (tmpResult.isRolePowerful(role)) {
           if (cResult[0] !== tmp4.icon) {
-            const obj3 = { style: tmp4.icon, source: _modDef4814, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+            const obj3 = { style: tmp4.icon, source: _modDef5008, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
             const tmp23 = hasOwnProperty(native.Icon, obj3);
             cResult[0] = tmp4.icon;
             cResult[1] = tmp23;
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp30 = tmp33;
         } else {
           if (cResult[9] !== tmp4.icon) {
-            const obj6 = { style: tmp4.icon, source: _modDef4814 };
+            const obj6 = { style: tmp4.icon, source: _modDef5008 };
             const tmp9 = hasOwnProperty(native.Icon, obj6);
             cResult[9] = tmp4.icon;
             cResult[10] = tmp9;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2 = FlagUtils;
     }
-  : (role) => {
+  : function InRolePromptNotice(role) {
       role = role.role;
       let string = closure_7();
       let stringResult = dependencyMap;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult = GuildSettingsUtils;
         let Icon = native.Icon;
         if (isRolePowerfulResult) {
-          const obj3 = { style: string.icon, source: _modDef4814, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+          const obj3 = { style: string.icon, source: _modDef5008, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
           const items = [hasOwnProperty(Icon, obj3)];
           const obj4 = { style: string.promptText, variant: "text-sm/medium", children: null };
           const intl2 = util.intl;
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj2.children = items;
           let tmp4Result = timestampProducer(View, obj2);
         } else {
-          const obj5 = { style: string.icon, source: _modDef4814 };
+          const obj5 = { style: string.icon, source: _modDef5008 };
           const items1 = [hasOwnProperty(Icon, obj5)];
           const obj6 = { style: string.promptText, variant: "text-sm/medium", children: null };
           const intl = util.intl;

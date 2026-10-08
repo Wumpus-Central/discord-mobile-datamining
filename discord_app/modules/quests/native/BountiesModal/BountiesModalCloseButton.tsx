@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles(() => {
   const obj = { closeButton: null };
   const size = {
@@ -27,7 +27,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalCloseButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPress) => {
+  ? function BountiesModalCloseButton(onPress) {
       const cResult = c.c(5);
       onPress = onPress.onPress;
       const tmp4 = closure_4();
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: tmp7,
       };
     }
-  : (onPress) => {
+  : function BountiesModalCloseButton(onPress) {
       const obj = {
         accessibilityLabel: null,
         accessibilityRole: "button",

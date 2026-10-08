@@ -14,7 +14,7 @@ const require = globalThis.__r;
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxs = fn(21).jsxs;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   commandClickable: {
     color: nativeDefault.colors.MENTION_FOREGROUND,
@@ -36,7 +36,7 @@ let result = size.fileFinishedImporting("modules/user_profile/native/UserProfile
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (application) => {
+    ? function UserProfileAboutMeCardCommand(application) {
         const cResult = application(channel[6]).c(12);
         application = application.application;
         const command = application.command;
@@ -161,7 +161,7 @@ export default noop.memo(
         tmp = application;
         tmp2 = channel;
       }
-    : (channel) => {
+    : function UserProfileAboutMeCardCommand(channel) {
         ({ application: require, command } = channel);
         channel = channel.channel;
         let obj = {

@@ -10,7 +10,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/useChannelListWidth.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useChannelListWidth() {
       const drawerWidth = useDrawerWidth.useDrawerWidth();
       const token = useToken.useToken(nativeDefault.modules.mobile.CHANNEL_DRAWER_SPACING);
       let num = 0;
@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return diff - num;
     }
-  : () => {
+  : function useChannelListWidth() {
       const drawerWidth = useDrawerWidth.useDrawerWidth();
       const token = useToken.useToken(nativeDefault.modules.mobile.CHANNEL_DRAWER_SPACING);
       let num = 0;

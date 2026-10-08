@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/VideoBackgroundSetting.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import applyBackgroundOption from "../../../video_backgrounds/applyBackgroundOption.tsx";
 import VideoBackgroundActionCreators from "../../../video_backgrounds/VideoBackgroundActionCreators.tsx";
 import LastUsedVideoBackgroundOption from "../../../video_backgrounds/LastUsedVideoBackgroundOption.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import useIsVideoBackgroundEnabledDefault from "../../../video_backgrounds/useIsVideoBackgroundEnabled.tsx";
 import VideoBackgroundOptions from "../../../video_backgrounds/native/VideoBackgroundOptions.tsx";
 import Constants from "../../../../Constants.tsx";
@@ -14,7 +14,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 ({ AnalyticsSections: c3, NOOP: closure_4, AnalyticsPages: hasOwnProperty } = Constants);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useVideoBackgroundSettingValue() {
       const cResult = c.c(2);
       const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
       if (cResult[0] !== lastUsedVideoBackgroundOption) {
@@ -28,7 +28,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return "" + tmp5;
     }
-  : () => {
+  : function useVideoBackgroundSettingValue() {
       const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
       return "" + VideoBackgroundOptions.toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
     };
@@ -42,7 +42,7 @@ const radio = SettingBuilders.createRadio({
     return useIsVideoBackgroundEnabledDefault("VideoBackgroundSetting");
   },
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useVideoBackgroundSettingValue() {
         const cResult = c.c(2);
         const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
         if (cResult[0] !== lastUsedVideoBackgroundOption) {
@@ -56,7 +56,7 @@ const radio = SettingBuilders.createRadio({
         }
         return "" + tmp5;
       }
-    : () => {
+    : function useVideoBackgroundSettingValue() {
         const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
         return "" + VideoBackgroundOptions.toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
       },

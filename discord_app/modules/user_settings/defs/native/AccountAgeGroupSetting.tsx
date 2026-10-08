@@ -45,7 +45,7 @@ let obj3 = {
   },
   parent: SettingsConstants.MobileUserSettings.ACCOUNT,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useAccountAgeGroupTrailing() {
         const cResult = c.c(9);
         const tmp4 = closure_6();
         const ageGroupValueLabel = useAgeGroupPresentation.useAgeGroupValueLabel();
@@ -95,7 +95,7 @@ let obj3 = {
         cResult[2] = tmp8;
         tmp7 = tmp8;
       }
-    : () => {
+    : function useAccountAgeGroupTrailing() {
         const tmp = closure_6();
         const ageGroupValueLabel = useAgeGroupPresentation.useAgeGroupValueLabel();
         const shouldShowAgeNotice = TinyBroncoLazy.useShouldShowAgeNotice();

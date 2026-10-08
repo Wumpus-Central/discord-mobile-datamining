@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerFavoritesRow.tsx");
 
 export const HomeDrawerFavoritesRowExpandedChildren = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function HomeDrawerFavoritesRowExpandedChildren() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { title: null, subtitle: null };
@@ -33,7 +33,7 @@ export const HomeDrawerFavoritesRowExpandedChildren = ReactCompilerGating.isReac
       }
       return first;
     }
-  : () => {
+  : function HomeDrawerFavoritesRowExpandedChildren() {
       const obj = { title: null, subtitle: null };
       const obj2 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
       const intl = util.intl;

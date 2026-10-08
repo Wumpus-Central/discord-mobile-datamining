@@ -7,26 +7,26 @@ import shared from "../../design/shared.tsx";
 import useThemeDefault from "../../hooks/useTheme.tsx";
 import BoostGemIcon from "../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
+import ShieldUserIcon from "../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
 import ReactionIcon from "../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import UploadIcon from "../../design/components/Icon/native/redesign/generated/UploadIcon.tsx";
 import PremiumFeatureListDefault from "PremiumFeatureList.tsx";
-import ShieldUserIcon from "../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
 import StarIcon from "../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import HeadphonesIcon from "../../design/components/Icon/native/redesign/generated/HeadphonesIcon.tsx";
 import StickerIcon from "../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
-import _modDef13189 from "../../../_runtime/metro/13189__.js";
-import _modDef13198 from "../../../_runtime/metro/13198__.js";
-import _modDef13199 from "../../../_runtime/metro/13199__.js";
+import _modDef13489 from "../../../_runtime/metro/13489__.js";
+import _modDef13498 from "../../../_runtime/metro/13498__.js";
+import _modDef13499 from "../../../_runtime/metro/13499__.js";
 import useSubscriptionPlansLoaded from "../../modules/billing/hooks/useSubscriptionPlansLoaded.tsx";
-import _modDef13326 from "../../../_runtime/metro/13326__.js";
-import _modDef13348 from "../../../_runtime/metro/13348__.js";
+import _modDef13626 from "../../../_runtime/metro/13626__.js";
+import _modDef13648 from "../../../_runtime/metro/13648__.js";
 import BoostTier3Icon from "../../design/components/Icon/native/redesign/generated/BoostTier3Icon.tsx";
-import _modDef13351 from "../../../_runtime/metro/13351__.js";
-import _modDef13352 from "../../../_runtime/metro/13352__.js";
-import _modDef13353 from "../../../_runtime/metro/13353__.js";
-import _modDef13354 from "../../../_runtime/metro/13354__.js";
-import _modDef13355 from "../../../_runtime/metro/13355__.js";
-import _modDef13356 from "../../../_runtime/metro/13356__.js";
+import _modDef13651 from "../../../_runtime/metro/13651__.js";
+import _modDef13652 from "../../../_runtime/metro/13652__.js";
+import _modDef13653 from "../../../_runtime/metro/13653__.js";
+import _modDef13654 from "../../../_runtime/metro/13654__.js";
+import _modDef13655 from "../../../_runtime/metro/13655__.js";
+import _modDef13656 from "../../../_runtime/metro/13656__.js";
 import GuildSubscriptionNoGuilds from "../../design/components/Illustration/native/redesign/generated/GuildSubscriptionNoGuilds.tsx";
 import PremiumSubscriptionPricingUpsellDefault from "PremiumSubscriptionPricingUpsell.tsx";
 import GuildBoostingGuildListDefault from "GuildBoostingGuildList.tsx";
@@ -37,10 +37,10 @@ import SortedGuildStore from "../../stores/SortedGuildStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
-const FractionalPremiumStates = fn(1379).FractionalPremiumStates;
+const FractionalPremiumStates = fn(1391).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   root: { paddingHorizontal: 16, paddingVertical: 32 },
   title: { marginTop: 16 },
@@ -89,30 +89,30 @@ class FEATURES_PREMIUM_GUILD_USER {
   }
 }
 function FEATURES_PREMIUM_GUILD() {
-  const obj = { icon: _modDef13352, label: null, IconComponent: null, color: null };
+  const obj = { icon: _modDef13652, label: null, IconComponent: null, color: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.Ts7BVI);
   obj.IconComponent = ReactionIcon.ReactionIcon;
   obj.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_YELLOW;
   const items = [obj, , , ,];
-  const obj2 = { icon: _modDef13353, label: null, IconComponent: null, color: null };
+  const obj2 = { icon: _modDef13653, label: null, IconComponent: null, color: null };
   const intl2 = util.intl;
   obj2.label = intl2.string(util.t.QcJbt6);
   obj2.IconComponent = StickerIcon.StickerIcon;
   obj2.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE;
   items[1] = obj2;
-  const obj3 = { icon: _modDef13354, label: null, color: "#4173da", IconComponent: null };
+  const obj3 = { icon: _modDef13654, label: null, color: "#4173da", IconComponent: null };
   const intl3 = util.intl;
   obj3.label = intl3.string(util.t.rFNkf5);
   obj3.IconComponent = HeadphonesIcon.HeadphonesIcon;
   items[2] = obj3;
-  const obj4 = { icon: _modDef13355, label: null, IconComponent: null, color: null };
+  const obj4 = { icon: _modDef13655, label: null, IconComponent: null, color: null };
   const intl4 = util.intl;
   obj4.label = intl4.string(util.t["BpjjS/"]);
   obj4.IconComponent = UploadIcon.UploadIcon;
   obj4.color = nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
   items[3] = obj4;
-  const obj5 = { icon: _modDef13356, label: null, IconComponent: null, color: null };
+  const obj5 = { icon: _modDef13656, label: null, IconComponent: null, color: null };
   const intl5 = util.intl;
   obj5.label = intl5.string(util.t["9g5Lgb"]);
   obj5.IconComponent = StarIcon.StarIcon;
@@ -131,7 +131,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/GuildBoostingUpsell.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (hasAvailableSlots) => {
+  ? function GuildBoostingUpsell(hasAvailableSlots) {
       const cResult = c.c(58);
       ({ onLearnMorePremium, fractionalState, isInReverseTrial } = hasAvailableSlots);
       const tmp4 = closure_9();
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       ({ root, header } = tmp4);
       if (cResult[2] !== tmp4.imgPremiumGuild) {
-        const obj2 = { style: tmp4.imgPremiumGuild, source: _modDef13189 };
+        const obj2 = { style: tmp4.imgPremiumGuild, source: _modDef13489 };
         const tmp18 = React5(React4, obj2);
         cResult[2] = tmp4.imgPremiumGuild;
         cResult[3] = tmp18;
@@ -172,9 +172,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp12 = useThemeDefault();
       if (tmpResult6.isThemeDark(tmp12)) {
-        let tmp11Result = _modDef13198;
+        let tmp11Result = _modDef13498;
       } else {
-        tmp11Result = _modDef13199;
+        tmp11Result = _modDef13499;
       }
       if (cResult[4] === tmp4.logoPremiumGuild) {
         if (cResult[5] === tmp11Result) {
@@ -409,9 +409,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const intl7 = util.intl;
                       obj13.children = intl7.string(util.t.WRzob8);
                       const items3 = [React5(Text_Text.Text, obj13), ,];
-                      const obj14 = { style: null, variant: "text-md/bold", children: null };
-                      const items4 = [tmp4.cardText];
-                      obj14.style = items4;
+                      const obj14 = { style: tmp4.cardText, variant: "text-md/bold", children: null };
                       const intl8 = util.intl;
                       obj14.children = intl8.string(util.t.j4bXcm);
                       items3[1] = React5(Text_Text.Text, obj14);
@@ -421,18 +419,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       let tmp67 = obj12;
                     } else {
                       const obj16 = { style: tmp4.imgNoGuilds, source: guildSubscriptionNoGuildsSource };
-                      const items5 = [React5(React4, obj16), ,];
-                      const obj17 = { style: null, variant: "text-md/bold", children: null };
-                      const items6 = [tmp4.cardText];
-                      obj17.style = items6;
+                      const items4 = [React5(React4, obj16), ,];
+                      const obj17 = { style: tmp4.cardText, variant: "text-md/bold", children: null };
                       const intl5 = util.intl;
                       obj17.children = intl5.string(util.t.FHm4bZ);
-                      items5[1] = React5(Text_Text.Text, obj17);
+                      items4[1] = React5(Text_Text.Text, obj17);
                       const obj18 = { style: tmp4.cardText, variant: "text-md/medium", children: null };
                       const intl6 = util.intl;
                       obj18.children = intl6.string(util.t.PSLiiu);
-                      items5[2] = React5(Text_Text.Text, obj18);
-                      obj12.children = items5;
+                      items4[2] = React5(Text_Text.Text, obj18);
+                      obj12.children = items4;
                       tmp67 = obj12;
                     }
                     closure_1_8(React3, tmp67);
@@ -454,8 +450,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj19 = { style: header, children: null };
-        const items7 = [tmp15, tmp20, tmp24, tmp29];
-        obj19.children = items7;
+        const items5 = [tmp15, tmp20, tmp24, tmp29];
+        obj19.children = items5;
         const tmp35 = closure_1_8(React3, obj19);
         cResult[13] = tmp4.header;
         cResult[14] = tmp24;
@@ -473,7 +469,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj20 = { style: tmp4.logoPremiumGuild, source: tmp11Result };
       tmpResult6 = shared;
     }
-  : (arg0) => {
+  : function GuildBoostingUpsell(arg0) {
       ({ fractionalState, isInReverseTrial } = arg0);
       ({ onLearnMorePremium, hasAvailableSlots } = arg0);
       const tmp = closure_9();
@@ -493,13 +489,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: tmp.root, children: null };
       const obj5 = { style: tmp.header, children: null };
       const tmp8 = useThemeDefault();
-      const items1 = [React5(React4, { style: tmp.imgPremiumGuild, source: _modDef13189 }), , ,];
+      const items1 = [React5(React4, { style: tmp.imgPremiumGuild, source: _modDef13489 }), , ,];
       const obj7 = { style: tmp.logoPremiumGuild, source: null };
-      const obj6 = { style: tmp.imgPremiumGuild, source: _modDef13189 };
+      const obj6 = { style: tmp.imgPremiumGuild, source: _modDef13489 };
       if (tmp2Result.isThemeDark(tmp8)) {
-        let tmp7Result = _modDef13198;
+        let tmp7Result = _modDef13498;
       } else {
-        tmp7Result = _modDef13199;
+        tmp7Result = _modDef13499;
       }
       obj7.source = tmp7Result;
       items1[1] = React5(React4, obj7);
@@ -575,9 +571,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl7 = util.intl;
           obj17.children = intl7.string(util.t.WRzob8);
           const items4 = [React5(Text_Text.Text, obj17), ,];
-          const obj18 = { style: null, variant: "text-md/bold", children: null };
-          const items5 = [tmp.cardText];
-          obj18.style = items5;
+          const obj18 = { style: tmp.cardText, variant: "text-md/bold", children: null };
           const intl8 = util.intl;
           obj18.children = intl8.string(util.t.j4bXcm);
           items4[1] = React5(Text_Text.Text, obj18);
@@ -587,18 +581,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp19 = obj16;
         } else {
           const obj20 = { style: tmp.imgNoGuilds, source: guildSubscriptionNoGuildsSource };
-          const items6 = [React5(React4, obj20), ,];
-          const obj21 = { style: null, variant: "text-md/bold", children: null };
-          const items7 = [tmp.cardText];
-          obj21.style = items7;
+          const items5 = [React5(React4, obj20), ,];
+          const obj21 = { style: tmp.cardText, variant: "text-md/bold", children: null };
           const intl5 = util.intl;
           obj21.children = intl5.string(util.t.FHm4bZ);
-          items6[1] = React5(Text_Text.Text, obj21);
+          items5[1] = React5(Text_Text.Text, obj21);
           const obj22 = { style: tmp.cardText, variant: "text-md/medium", children: null };
           const intl6 = util.intl;
           obj22.children = intl6.string(util.t.PSLiiu);
-          items6[2] = React5(Text_Text.Text, obj22);
-          obj16.children = items6;
+          items5[2] = React5(Text_Text.Text, obj22);
+          obj16.children = items5;
           tmp19 = obj16;
         }
         closure_1_8(React3, tmp19);

@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsJSError.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsJSError() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { variant: "display-md", children: null.boo };
@@ -22,4 +22,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => jsx(Text_Text.Text, { variant: "display-md", children: null.boo });
+  : function UserSettingsJSError() {
+      return jsx(Text_Text.Text, { variant: "display-md", children: null.boo });
+    };

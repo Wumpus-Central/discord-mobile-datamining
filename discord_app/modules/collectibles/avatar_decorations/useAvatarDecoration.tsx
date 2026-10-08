@@ -37,7 +37,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecoration.tsx");
 
 export const useAvatarDecoration = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useAvatarDecoration(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(4);
@@ -84,7 +84,7 @@ export const useAvatarDecoration = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useAvatarDecoration(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       let items = [GuildMemberStore];

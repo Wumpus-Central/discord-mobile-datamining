@@ -8,7 +8,7 @@ const require = globalThis.__r;
 require = fn;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHideFriendRequestNotes() {
       const HideFriendRequestNotes = UserSettings.HideFriendRequestNotes;
       const setting = HideFriendRequestNotes.useSetting();
       let userIsTeen = useUserIsTeen.useUserIsTeen();
@@ -17,7 +17,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return userIsTeen;
     }
-  : () => {
+  : function useHideFriendRequestNotes() {
       const HideFriendRequestNotes = UserSettings.HideFriendRequestNotes;
       const setting = HideFriendRequestNotes.useSetting();
       let userIsTeen = useUserIsTeen.useUserIsTeen();
@@ -33,7 +33,7 @@ const result = size.fileFinishedImporting("modules/people/HideFriendRequestNotes
 
 export const useHideFriendRequestNotes = tmp2;
 export const useFriendRequestNote = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFriendRequestNote(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       const obj = require("c");
@@ -69,7 +69,7 @@ export const useFriendRequestNote = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : (arg0) => {
+  : function useFriendRequestNote(arg0) {
       _require = arg0;
       const tmp = closure_3();
       const items = [RelationshipStore];

@@ -79,10 +79,10 @@ let closure_9 = {
   useAlternateEmbedColors: false,
   restrictedPreview: true,
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flexDirection: "column" },
-  hiddenMedia: { marginLeft: fn(17105).RESTRICTED_CONTENT_INSET },
+  hiddenMedia: { marginLeft: fn(17386).RESTRICTED_CONTENT_INSET },
   messageRow: { position: "relative" },
   avatarHitbox: null,
   dateDivider: null,
@@ -94,11 +94,11 @@ let size = {
   position: "absolute",
   top: 0,
   left: 0,
-  width: fn(17105).RESTRICTED_CONTENT_INSET,
-  height: fn(17105).RESTRICTED_AVATAR_SIZE,
+  width: fn(17386).RESTRICTED_CONTENT_INSET,
+  height: fn(17386).RESTRICTED_AVATAR_SIZE,
 };
 obj2.avatarHitbox = size;
-let obj3 = { marginLeft: fn(17105).RESTRICTED_CONTENT_INSET };
+let obj3 = { marginLeft: fn(17386).RESTRICTED_CONTENT_INSET };
 obj2.dateDivider = {
   flexDirection: "row",
   alignItems: "center",
@@ -141,7 +141,7 @@ obj2.mediaHiddenRow = {
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (count) => {
+  ? function HiddenMedia(count) {
       const cResult = require("c").c(12);
       let mediaPlaceholderCard = count.count;
       const tmp4 = closure_10();
@@ -150,7 +150,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === tmp4.mediaPlaceholderCard) {
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp11 = closure_6(tmp(4818).CircleInformationIcon, { size: "sm", color: "text-muted" });
+            const tmp11 = closure_6(tmp(5012).CircleInformationIcon, { size: "sm", color: "text-muted" });
             cResult[5] = tmp11;
             let tmp9 = tmp11;
           } else {
@@ -161,7 +161,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             let obj2 = { variant: "text-sm/normal", color: "text-muted", children: null };
             let intl = tmp(1126).intl;
             obj2.children = intl.string(tmp(1126).t["VGf+K3"]);
-            const tmp14 = closure_6(tmp(4892).Text, obj2);
+            const tmp14 = closure_6(tmp(5086).Text, obj2);
             cResult[6] = tmp14;
             let tmp12 = tmp14;
           } else {
@@ -218,7 +218,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = Array.from({ length: mediaPlaceholderCard }, tmp6);
       const arr = Array.from({ length: mediaPlaceholderCard }, tmp6);
     }
-  : (length) => {
+  : function HiddenMedia(length) {
       const tmp = closure_10();
       _require = tmp;
       let obj = { children: null };
@@ -259,7 +259,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewList.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function RestrictedMessagePreviewList(channelId) {
       const cResult = channelId(analyticsLocations[8]).c(25);
       channelId = channelId.channelId;
       const tmp4 = closure_10();
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           let obj3 = new tmp5(tmp2[17])();
           obj3.setOptions(closure_9);
-          class M {
+          class P {
             constructor(arg0) {
               closure_0 = channelId;
               tmp = closure_1(analyticsLocations[18])(channelId);
@@ -372,7 +372,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       let obj2 = { style: tmp20, children: tmp21 };
                       const tmp26 = arr3(tmp19, obj2);
-                      class M {
+                      class P {
                         constructor(arg0) {
                           closure_0 = channelId;
                           tmp = closure_1(analyticsLocations[18])(channelId);
@@ -424,7 +424,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               arr3 = groupMessages(stateFromStoresArray);
-              class M {
+              class P {
                 constructor(arg0) {
                   closure_0 = channelId;
                   tmp = closure_1(analyticsLocations[18])(channelId);
@@ -530,7 +530,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        class M {
+        class P {
           constructor(arg0) {
             closure_0 = channelId;
             tmp = closure_1(analyticsLocations[18])(channelId);
@@ -576,8 +576,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp4.avatarHitbox;
         cResult[10] = tmp4.hiddenMedia;
         cResult[11] = tmp4.messageRow;
-        cResult[12] = M;
-        tmp18 = M;
+        cResult[12] = P;
+        tmp18 = P;
       }
       const fn2 = function _(userId) {
         showUserProfileActionSheetDefault({ userId, channelId, sourceAnalyticsLocations: analyticsLocations });
@@ -588,7 +588,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = fn2;
       const tmpResult = channelId(analyticsLocations[15]);
     }
-  : (channelId) => {
+  : function RestrictedMessagePreviewList(channelId) {
       channelId = channelId.channelId;
       let analyticsLocations;
       let callback;

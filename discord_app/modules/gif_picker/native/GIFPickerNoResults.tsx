@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import BottomSheetModal from "../../../../_runtime/06119_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06298_BottomSheetModal.js";
 import SearchEmpty from "../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
 import useModalDismissGuardRefreshControl from "../../keyboard/native/useModalDismissGuardRefreshControl.tsx";
 import useExpressionPickerInsetsDefault from "../../expression_picker/native/useExpressionPickerInsets.tsx";
@@ -13,7 +13,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 fn(1085).GIFPickerResultTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   emptyStateContainer: { padding: 0, flex: 1 },
   emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE },
@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerNo
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function GIFPickerNoResults(arg0) {
         const cResult = c.c(16);
         ({ categoryType, inActionSheet } = arg0);
         const tmp4 = closure_7();
@@ -140,7 +140,7 @@ export default noop.memo(
         }
         const tmpResult = SearchEmpty;
       }
-    : (inActionSheet) => {
+    : function GIFPickerNoResults(inActionSheet) {
         inActionSheet = inActionSheet.inActionSheet;
         const tmp = closure_7();
         const safeAreaBottomKeyboardAware = useExpressionPickerInsetsDefault({

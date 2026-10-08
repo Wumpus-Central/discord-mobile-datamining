@@ -9,4 +9,6 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoSettingsPredicate.tsx");
 
-export const useIsTinyBroncoSettingsEnabled = () => TinyBroncoExperiment.useIsTinyBroncoEnabled(closure_2);
+export const useIsTinyBroncoSettingsEnabled = function useIsTinyBroncoSettingsEnabled() {
+  return TinyBroncoExperiment.useIsTinyBroncoEnabled(closure_2);
+};

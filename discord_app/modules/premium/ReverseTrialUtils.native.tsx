@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/ReverseTrialUtils.native.tsx");
 
 export const useIsInReverseTrial = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsInReverseTrial() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -33,7 +33,7 @@ export const useIsInReverseTrial = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsInReverseTrial() {
       const items = [UserStore];
       return initialize.useStateFromStores(items, () => {
         currentUser = currentUser.getCurrentUser();

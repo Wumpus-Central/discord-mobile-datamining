@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/replies/canReplyToMessage.tsx");
 
 export const useCanReplyToMessage = ReactCompilerGating.isReactCompilerEnabled()
-  ? (getGuildId, hasFlag) => {
+  ? function useCanReplyToMessage(getGuildId, hasFlag) {
       _require = getGuildId;
       dependencyMap = hasFlag;
       const cResult = require("c").c(12);
@@ -90,7 +90,7 @@ export const useCanReplyToMessage = ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmpResult2 = tmp(504);
       }
-      const fn = function v() {
+      const fn = function y() {
         let tmp = null != getGuildId;
         if (tmp) {
           tmp = null != hasFlag;
@@ -117,7 +117,7 @@ export const useCanReplyToMessage = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = fn;
       const tmpResult = require("useUserCommunicationDisabled");
     }
-  : (getGuildId, hasFlag) => {
+  : function useCanReplyToMessage(getGuildId, hasFlag) {
       _require = getGuildId;
       dependencyMap = hasFlag;
       const canUnarchiveThread = require("ThreadHooks").useCanUnarchiveThread(getGuildId);

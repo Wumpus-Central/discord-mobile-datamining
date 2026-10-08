@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import MemberVerificationActionCreatorsDefault from "../../guild_member_verification/MemberVerificationActionCreators.tsx";
@@ -27,19 +27,19 @@ function formattedNameHighlight(children, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, ScrollView: closure_7, FlatList: closure_8 } = get_ActivityIndicator);
-const constants = fn(6599).GuildOnboardingModalStates;
-const EMOJI_URL_BASE_SIZE = fn(1380).EMOJI_URL_BASE_SIZE;
+let closure_13 = fn(6775).GuildOnboardingModalStates;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 let c18 = 48;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   flex: { flex: 1 },
   container: {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(6075).NAV_BAR_HEIGHT,
+    marginTop: fn(6261).NAV_BAR_HEIGHT,
     marginBottom: 16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -66,7 +66,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(6075).NAV_BAR_HEIGHT,
+  marginTop: fn(6261).NAV_BAR_HEIGHT,
   marginBottom: 16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };
@@ -179,7 +179,7 @@ let obj7 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PromptHeader(arg0) {
       const cResult = c.c(19);
       ({ currentPrompt, numberOfPrompts, currentPromptIndex } = arg0);
       const tmp4 = closure_19();
@@ -282,7 +282,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = formatResult;
       const obj9 = { currentQuestion: currentPromptIndex + 1, questionCount: numberOfPrompts };
     }
-  : (currentPrompt) => {
+  : function PromptHeader(currentPrompt) {
       currentPrompt = currentPrompt.currentPrompt;
       ({ numberOfPrompts, currentPromptIndex } = currentPrompt);
       const tmp = closure_19();
@@ -328,8 +328,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
-      const cResult = guildId(576).c(51);
+  ? function PromptFooter(guildId) {
+      const cResult = guildId(576).c(49);
       guildId = guildId.guildId;
       ({ currentPrompt, selectedOptionIds } = guildId);
       ({ handleOnPress, lastPrompt } = guildId);
@@ -381,8 +381,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[9] !== tmp20) {
               if (null != tmp20) {
-                let selectedRoleIds = tmp(6608).getSelectedRoleIds(tmp20);
-                const tmpResult4 = tmp(6608);
+                let selectedRoleIds = tmp(6784).getSelectedRoleIds(tmp20);
+                const tmpResult4 = tmp(6784);
               } else {
                 const _Set = Set;
                 selectedRoleIds = new Set();
@@ -391,8 +391,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[10] = selectedRoleIds;
             } else if (cResult[11] !== tmp20) {
               if (null != tmp20) {
-                let selectedChannelIds = tmp(6608).getSelectedChannelIds(tmp20);
-                const tmpResult5 = tmp(6608);
+                let selectedChannelIds = tmp(6784).getSelectedChannelIds(tmp20);
+                const tmpResult5 = tmp(6784);
               } else {
                 const _Set2 = Set;
                 selectedChannelIds = new Set();
@@ -406,9 +406,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[16] === tmp23) {
                       let tmp33 = cResult[17];
                     }
-                    ({ helpText, helpTextAdditional } = selectedOptionIds(6627)(tmp33));
-                    const tmp36 = selectedOptionIds(6627)(tmp33);
-                    const token = tmp(4586).useToken(selectedOptionIds(587).colors.BACKGROUND_BASE_LOWER);
+                    ({ helpText, helpTextAdditional } = selectedOptionIds(6804)(tmp33));
+                    const tmp36 = selectedOptionIds(6804)(tmp33);
+                    const token = tmp(4778).useToken(selectedOptionIds(587).colors.BACKGROUND_BASE_LOWER);
                     if (cResult[18] !== token) {
                       const obj7 = selectedOptionIds(683)(token);
                       const hexResult = selectedOptionIds(683)(token).alpha(0).hex();
@@ -433,26 +433,18 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                       if (cResult[23] === tmp40) {
                         let tmp42 = cResult[24];
                       }
-                      if (cResult[25] !== tmp4.scrollContainerGradient) {
-                        const items1 = [tmp4.scrollContainerGradient];
-                        cResult[25] = tmp4.scrollContainerGradient;
-                        cResult[26] = items1;
-                        let tmp43 = items1;
-                      } else {
-                        tmp43 = cResult[26];
-                      }
-                      if (cResult[27] === tmp42) {
-                        if (cResult[28] === tmp43) {
-                          let tmp44 = cResult[29];
+                      if (cResult[25] === tmp42) {
+                        if (cResult[26] === tmp4.scrollContainerGradient) {
+                          let tmp43 = cResult[27];
                         }
-                        if (cResult[30] === tmp15) {
-                          if (cResult[31] === tmp4.helpText) {
-                            let tmp48 = cResult[32];
+                        if (cResult[28] === tmp15) {
+                          if (cResult[29] === tmp4.helpText) {
+                            let tmp47 = cResult[30];
                           }
-                          if (cResult[33] === helpText) {
-                            if (cResult[34] === helpTextAdditional) {
-                              if (cResult[35] === tmp4.helpText) {
-                                let tmp51 = cResult[36];
+                          if (cResult[31] === helpText) {
+                            if (cResult[32] === helpTextAdditional) {
+                              if (cResult[33] === tmp4.helpText) {
+                                let tmp50 = cResult[34];
                               }
                               let str6 = "primary";
                               if (tmp9) {
@@ -461,48 +453,48 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                                   str6 = "secondary";
                                 }
                               }
-                              if (cResult[37] === tmp12) {
-                                if (cResult[38] === tmp15) {
-                                  if (cResult[39] === handleOnPress) {
-                                    if (cResult[40] === str6) {
-                                      let tmp54 = cResult[41];
+                              if (cResult[35] === tmp12) {
+                                if (cResult[36] === tmp15) {
+                                  if (cResult[37] === handleOnPress) {
+                                    if (cResult[38] === str6) {
+                                      let tmp53 = cResult[39];
                                     }
-                                    if (cResult[42] === tmp4.footerContent) {
-                                      if (cResult[43] === tmp48) {
-                                        if (cResult[44] === tmp51) {
-                                          if (cResult[45] === tmp54) {
-                                            let tmp57 = cResult[46];
+                                    if (cResult[40] === tmp4.footerContent) {
+                                      if (cResult[41] === tmp47) {
+                                        if (cResult[42] === tmp50) {
+                                          if (cResult[43] === tmp53) {
+                                            let tmp56 = cResult[44];
                                           }
-                                          if (cResult[47] === tmp4.footer) {
-                                            if (cResult[48] === tmp44) {
-                                              if (cResult[49] === tmp57) {
-                                                let tmp61 = cResult[50];
+                                          if (cResult[45] === tmp4.footer) {
+                                            if (cResult[46] === tmp43) {
+                                              if (cResult[47] === tmp56) {
+                                                let tmp60 = cResult[48];
                                               }
-                                              return tmp61;
+                                              return tmp60;
                                             }
                                           }
                                           const obj2 = { style: tmp4.footer, children: null };
-                                          const items2 = [tmp44, tmp57];
-                                          obj2.children = items2;
-                                          const tmp64 = closure_16(closure_6, obj2);
-                                          cResult[47] = tmp4.footer;
-                                          cResult[48] = tmp44;
-                                          cResult[49] = tmp57;
-                                          cResult[50] = tmp64;
-                                          tmp61 = tmp64;
+                                          const items1 = [tmp43, tmp56];
+                                          obj2.children = items1;
+                                          const tmp63 = closure_16(closure_6, obj2);
+                                          cResult[45] = tmp4.footer;
+                                          cResult[46] = tmp43;
+                                          cResult[47] = tmp56;
+                                          cResult[48] = tmp63;
+                                          tmp60 = tmp63;
                                         }
                                       }
                                     }
                                     const obj3 = { style: tmp4.footerContent, children: null };
-                                    const items3 = [tmp48, tmp51, tmp54];
-                                    obj3.children = items3;
-                                    const tmp60 = closure_16(closure_6, obj3);
-                                    cResult[42] = tmp4.footerContent;
-                                    cResult[43] = tmp48;
-                                    cResult[44] = tmp51;
-                                    cResult[45] = tmp54;
-                                    cResult[46] = tmp60;
-                                    tmp57 = tmp60;
+                                    const items2 = [tmp47, tmp50, tmp53];
+                                    obj3.children = items2;
+                                    const tmp59 = closure_16(closure_6, obj3);
+                                    cResult[40] = tmp4.footerContent;
+                                    cResult[41] = tmp47;
+                                    cResult[42] = tmp50;
+                                    cResult[43] = tmp53;
+                                    cResult[44] = tmp59;
+                                    tmp56 = tmp59;
                                   }
                                 }
                               }
@@ -514,13 +506,13 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                                 onPress: handleOnPress,
                                 disabled: tmp15,
                               };
-                              const tmp56 = closure_15(tmp(5601).Button, obj4);
-                              cResult[37] = tmp12;
-                              cResult[38] = tmp15;
-                              cResult[39] = handleOnPress;
-                              cResult[40] = str6;
-                              cResult[41] = tmp56;
-                              tmp54 = tmp56;
+                              const tmp55 = closure_15(tmp(5375).Button, obj4);
+                              cResult[35] = tmp12;
+                              cResult[36] = tmp15;
+                              cResult[37] = handleOnPress;
+                              cResult[38] = str6;
+                              cResult[39] = tmp55;
+                              tmp53 = tmp55;
                             }
                           }
                           if ("" !== helpText) {
@@ -530,19 +522,19 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                               color: "text-default",
                               children: null,
                             };
-                            const items4 = [helpText, " ", helpTextAdditional];
-                            obj5.children = items4;
-                            let tmp52 = closure_16(tmp(4892).Text, obj5);
+                            const items3 = [helpText, " ", helpTextAdditional];
+                            obj5.children = items3;
+                            let tmp51 = closure_16(tmp(5086).Text, obj5);
                           } else {
-                            tmp52 = null;
+                            tmp51 = null;
                           }
-                          cResult[33] = helpText;
-                          cResult[34] = helpTextAdditional;
-                          cResult[35] = tmp4.helpText;
-                          cResult[36] = tmp52;
-                          tmp51 = tmp52;
+                          cResult[31] = helpText;
+                          cResult[32] = helpTextAdditional;
+                          cResult[33] = tmp4.helpText;
+                          cResult[34] = tmp51;
+                          tmp50 = tmp51;
                         }
-                        let tmp49 = null;
+                        let tmp48 = null;
                         if (tmp15) {
                           const obj6 = {
                             style: tmp4.helpText,
@@ -552,33 +544,33 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                           };
                           const intl = tmp(1126).intl;
                           obj6.children = intl.string(tmp(1126).t.dA1dSf);
-                          tmp49 = closure_15(tmp(4892).Text, obj6);
+                          tmp48 = closure_15(tmp(5086).Text, obj6);
                         }
-                        cResult[30] = tmp15;
-                        cResult[31] = tmp4.helpText;
-                        cResult[32] = tmp49;
-                        tmp48 = tmp49;
+                        cResult[28] = tmp15;
+                        cResult[29] = tmp4.helpText;
+                        cResult[30] = tmp48;
+                        tmp47 = tmp48;
                       }
                       const obj8 = {
-                        style: tmp43,
+                        style: tmp4.scrollContainerGradient,
                         start: tmp(1105).VerticalGradient.START,
                         end: tmp(1105).VerticalGradient.END,
                         colors: tmp42,
                         pointerEvents: "none",
                       };
-                      const tmp47 = closure_15(selectedOptionIds(5612), obj8);
-                      cResult[27] = tmp42;
-                      cResult[28] = tmp43;
-                      cResult[29] = tmp47;
-                      tmp44 = tmp47;
-                      const tmp35Result = selectedOptionIds(5612);
+                      const tmp46 = closure_15(selectedOptionIds(5387), obj8);
+                      cResult[25] = tmp42;
+                      cResult[26] = tmp4.scrollContainerGradient;
+                      cResult[27] = tmp46;
+                      tmp43 = tmp46;
+                      const tmp35Result = selectedOptionIds(5387);
                     }
-                    const items5 = [tmp38, tmp40];
+                    const items4 = [tmp38, tmp40];
                     cResult[22] = tmp38;
                     cResult[23] = tmp40;
-                    cResult[24] = items5;
-                    tmp42 = items5;
-                    const tmpResult6 = tmp(4586);
+                    cResult[24] = items4;
+                    tmp42 = items4;
+                    const tmpResult6 = tmp(4778);
                   }
                 }
               }
@@ -634,7 +626,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = combined;
       const tmpResult = guildId(504);
     }
-  : (onPress) => {
+  : function PromptFooter(onPress) {
       ({ guildId: require, currentPrompt, selectedOptionIds } = onPress);
       const lastPrompt = onPress.lastPrompt;
       let found;
@@ -725,14 +717,12 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = selectedOptionIds(found[19])(token);
       items3[1] = selectedOptionIds(found[19])(token).alpha(1).hex();
       const obj3 = { style: tmp.footer, children: null };
-      const obj5 = { style: null, start: null, end: null, colors: null, pointerEvents: "none" };
-      const items4 = [tmp.scrollContainerGradient];
-      obj5.style = items4;
+      const obj5 = { style: tmp.scrollContainerGradient, start: null, end: null, colors: null, pointerEvents: "none" };
       const alphaResult1 = selectedOptionIds(found[19])(token).alpha(1);
       obj5.start = require("ConstantsIOS").VerticalGradient.START;
       obj5.end = require("ConstantsIOS").VerticalGradient.END;
       obj5.colors = items3;
-      const items5 = [closure_15(selectedOptionIds(found[25]), obj5)];
+      const items4 = [closure_15(selectedOptionIds(found[25]), obj5)];
       const obj7 = { style: tmp.footerContent, children: null };
       let tmp20Result = null;
       if (tmp10) {
@@ -741,16 +731,16 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         obj8.children = intl2.string(require("util").t.dA1dSf);
         tmp20Result = closure_15(require("Text/Text").Text, obj8);
       }
-      const items6 = [tmp20Result, ,];
+      const items5 = [tmp20Result, ,];
       if ("" !== helpText) {
         const obj9 = { style: tmp.helpText, variant: "text-xs/medium", color: "text-default", children: null };
-        const items7 = [helpText, " ", helpTextAdditional];
-        obj9.children = items7;
+        const items6 = [helpText, " ", helpTextAdditional];
+        obj9.children = items6;
         let tmp18Result = closure_16(require("Text/Text").Text, obj9);
       } else {
         tmp18Result = null;
       }
-      items6[1] = tmp18Result;
+      items5[1] = tmp18Result;
       let str4 = "primary";
       if (tmp5) {
         str4 = "primary";
@@ -758,7 +748,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           str4 = "secondary";
         }
       }
-      items6[2] = closure_15(require("components/Button/Button").Button, {
+      items5[2] = closure_15(require("components/Button/Button").Button, {
         variant: str4,
         size: "md",
         grow: true,
@@ -766,14 +756,14 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         onPress: onPress.handleOnPress,
         disabled: tmp10,
       });
-      obj7.children = items6;
-      items5[1] = closure_16(closure_6, obj7);
-      obj3.children = items5;
+      obj7.children = items5;
+      items4[1] = closure_16(closure_6, obj7);
+      obj3.children = items4;
       return closure_16(closure_6, obj3);
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function RulesPrompt(guildId) {
       const cResult = guildId(stateFromStores[14]).c(72);
       guildId = guildId.guildId;
       closure_19();
@@ -904,45 +894,28 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               return closure_10.get(guildId);
             }
           }
-          class U {
-            constructor() {
-              tmp = closure_2;
-              tmp2 = null != closure_2;
-              if (tmp2) {
-                tmp3 = closure_4;
-                tmp2 = null != closure_4;
-              }
-              if (tmp2) {
-                tmp4 = closure_1;
-                tmp5 = closure_2;
-                obj = closure_1(closure_2[20]);
-                tmp6 = guildId;
-                obj1 = {};
-                tmp7 = closure_4;
-                tmp8 = obj1;
-                merged = Object.assign(closure_4);
-                obj4 = {};
-                tmp10 = obj4;
-                tmp11 = tmp;
-                merged1 = Object.assign(tmp);
-                flag = true;
-                obj4.response = true;
-                items = [];
-                items[0] = obj4;
-                obj1.formFields = items;
-                result = obj.submitVerificationForm(guildId, obj1);
-                tmp14 = closure_1;
-                tmp15 = closure_13;
-                arr1 = closure_1.push(closure_13.COMPLETED);
-              }
-              return;
+          function handleOnPress() {
+            let tmp2 = null != stateFromStores;
+            if (tmp2) {
+              tmp2 = null != stateFromStores2;
+            }
+            if (tmp2) {
+              const obj2 = {};
+              const merged = Object.assign(stateFromStores2);
+              const obj3 = {};
+              const merged1 = Object.assign(stateFromStores);
+              obj3.response = true;
+              const items = [obj3];
+              obj2.formFields = items;
+              const result = MemberVerificationActionCreatorsDefault.submitVerificationForm(guildId, obj2);
+              navigation.push(constants.COMPLETED);
             }
           }
           cResult[16] = stateFromStores;
           cResult[17] = stateFromStores2;
           cResult[18] = guildId;
           cResult[19] = navigation;
-          cResult[20] = U;
+          cResult[20] = handleOnPress;
         }
       }
       const items3 = [tmp21, tmp23];
@@ -951,7 +924,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[15] = items3;
       const tmpResult6 = guildId(stateFromStores[18]);
     }
-  : (guildId) => {
+  : function RulesPrompt(guildId) {
       guildId = guildId.guildId;
       let stateFromStores;
       c5 = undefined;
@@ -1043,7 +1016,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         string = intl2.string;
         stringResult = string(tmp(END[22]).t["0KL0ot"]);
         obj15.text = stringResult;
-        obj15.onPress = function onPress() {
+        obj15.onPress = function handleOnPress() {
           let tmp2 = null != stateFromStores;
           if (tmp2) {
             tmp2 = null != closure_4;
@@ -1090,7 +1063,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (option) => {
+  ? function DropdownOption(option) {
       const cResult = option(576).c(19);
       option = option.option;
       const tmp4 = closure_19();
@@ -1171,7 +1144,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[13] !== option.title) {
                 const obj5 = { variant: "text-md/semibold", children: option.title };
-                const tmp23 = closure_15(tmp(4892).Text, obj5);
+                const tmp23 = closure_15(tmp(5086).Text, obj5);
                 cResult[13] = option.title;
                 cResult[14] = tmp23;
                 let tmp21 = tmp23;
@@ -1225,7 +1198,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmpResult = option(504);
     }
-  : (option) => {
+  : function DropdownOption(option) {
       option = option.option;
       const tmp = closure_19();
       const items = [EmojiStore];
@@ -1272,7 +1245,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.children = closure_15(EmojiDefault, obj4);
       const items1 = [
         closure_15(closure_6, obj3),
-        closure_15(tmp2(4892).Text, { variant: "text-md/semibold", children: option.title }),
+        closure_15(tmp2(5086).Text, { variant: "text-md/semibold", children: option.title }),
       ];
       obj2.children = items1;
       return closure_16(closure_6, obj2);
@@ -1282,7 +1255,7 @@ let result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOn
 
 export const RulesPrompt = tmp4;
 export const MultipleChoicePrompt = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function MultipleChoicePrompt(guildId) {
       const cResult = guildId(selectOption[14]).c(40);
       guildId = guildId.guildId;
       const currentPrompt = guildId.currentPrompt;
@@ -1333,8 +1306,9 @@ export const MultipleChoicePrompt = ReactCompilerGating.isReactCompilerEnabled()
                               obj = {
                                 option: guildId,
                                 guildId: closure_0,
-                                onSelect(flag) {
-                                  if (flag == null) {
+                                onSelect(arg0) {
+                                  let flag = arg0;
+                                  if (arg0 == null) {
                                     flag = false;
                                   }
                                   return selectOption(currentPrompt.id, option.id, flag);
@@ -1383,8 +1357,9 @@ export const MultipleChoicePrompt = ReactCompilerGating.isReactCompilerEnabled()
                                         obj = {
                                           option: guildId,
                                           guildId: closure_0,
-                                          onSelect(flag) {
-                                            if (flag == null) {
+                                          onSelect(arg0) {
+                                            let flag = arg0;
+                                            if (arg0 == null) {
                                               flag = false;
                                             }
                                             return selectOption(currentPrompt.id, option.id, flag);
@@ -1419,8 +1394,9 @@ export const MultipleChoicePrompt = ReactCompilerGating.isReactCompilerEnabled()
                                 obj = {
                                   option: guildId,
                                   guildId: closure_0,
-                                  onSelect(flag) {
-                                    if (flag == null) {
+                                  onSelect(arg0) {
+                                    let flag = arg0;
+                                    if (arg0 == null) {
                                       flag = false;
                                     }
                                     return selectOption(currentPrompt.id, option.id, flag);
@@ -1460,8 +1436,9 @@ export const MultipleChoicePrompt = ReactCompilerGating.isReactCompilerEnabled()
                             obj = {
                               option: guildId,
                               guildId: closure_0,
-                              onSelect(flag) {
-                                if (flag == null) {
+                              onSelect(arg0) {
+                                let flag = arg0;
+                                if (arg0 == null) {
                                   flag = false;
                                 }
                                 return selectOption(currentPrompt.id, option.id, flag);
@@ -1506,8 +1483,9 @@ export const MultipleChoicePrompt = ReactCompilerGating.isReactCompilerEnabled()
                         obj = {
                           option: guildId,
                           guildId: closure_0,
-                          onSelect(flag) {
-                            if (flag == null) {
+                          onSelect(arg0) {
+                            let flag = arg0;
+                            if (arg0 == null) {
                               flag = false;
                             }
                             return selectOption(currentPrompt.id, option.id, flag);
@@ -1539,8 +1517,9 @@ export const MultipleChoicePrompt = ReactCompilerGating.isReactCompilerEnabled()
                   obj = {
                     option: guildId,
                     guildId: closure_0,
-                    onSelect(flag) {
-                      if (flag == null) {
+                    onSelect(arg0) {
+                      let flag = arg0;
+                      if (arg0 == null) {
                         flag = false;
                       }
                       return selectOption(currentPrompt.id, option.id, flag);
@@ -1600,7 +1579,7 @@ export const MultipleChoicePrompt = ReactCompilerGating.isReactCompilerEnabled()
       let obj = guildId(selectOption[14]);
       tmp = guildId;
     }
-  : (guildId) => {
+  : function MultipleChoicePrompt(guildId) {
       guildId = guildId.guildId;
       const currentPrompt = guildId.currentPrompt;
       const selectOption = guildId.selectOption;
@@ -1637,8 +1616,9 @@ export const MultipleChoicePrompt = ReactCompilerGating.isReactCompilerEnabled()
         const obj = {
           option,
           guildId,
-          onSelect(flag) {
-            if (flag == null) {
+          onSelect(arg0) {
+            let flag = arg0;
+            if (arg0 == null) {
               flag = false;
             }
             return selectOption(currentPrompt.id, option.id, flag);
@@ -1702,11 +1682,12 @@ export const DropdownPrompt = function DropdownPrompt(guildId) {
   items3[1] = { paddingBottom: 64 + currentPrompt(selectOption[17])().bottom + c18 + c18, position: "relative" };
   obj2.contentContainerStyle = items3;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(6637, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(6814, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: currentPrompt.id,
-      onSelect(id, flag) {
-        if (flag == null) {
+      onSelect(id, arg1) {
+        let flag = arg1;
+        if (arg1 == null) {
           flag = false;
         }
         return selectOption(id.id, id.id, flag);

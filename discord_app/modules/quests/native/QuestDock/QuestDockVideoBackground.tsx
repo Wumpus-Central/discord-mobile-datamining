@@ -13,8 +13,8 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet, View: metroRequire } = get_ActivityIndicator);
-const QuestDockMode = fn(5630).QuestDockMode;
-const QuestDockConstants = fn(14912);
+const QuestDockMode = fn(5977).QuestDockMode;
+const QuestDockConstants = fn(15174);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_9, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: c10 } =
   QuestDockConstants);
 const VerticalGradient = fn(1085).VerticalGradient;
@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 let closure_14 = [0, 0.1, 0.8, 1];
 const locations = [0, 0.33, 0.76, 1];
 const QuestDockBackgroundCollapsedMediaMode = { PAUSED: "paused", HIDDEN: "hidden" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   backgroundWrapper: null,
   backgroundImage: null,
@@ -62,11 +62,11 @@ const __initData2 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function QuestDockBackgroundMediaFade(arg0) {
       const cResult = activeQuestDockMode(576).c(7);
       ({ children, style } = arg0);
       const tmp3 = closure_17();
-      activeQuestDockMode = noop.useContext(activeQuestDockMode(14913).QuestDockGestureContext).activeQuestDockMode;
+      activeQuestDockMode = noop.useContext(activeQuestDockMode(15175).QuestDockGestureContext).activeQuestDockMode;
       let obj = activeQuestDockMode(576);
       const fn = function n() {
         let num = 0;
@@ -75,9 +75,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
       };
-      const obj2 = activeQuestDockMode(4618);
+      const obj2 = activeQuestDockMode(4810);
       fn.__closure = {
-        withSpring: activeQuestDockMode(5604).withSpring,
+        withSpring: activeQuestDockMode(5374).withSpring,
         activeQuestDockMode,
         QuestDockMode,
         QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
@@ -111,16 +111,16 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp5 = items;
       const obj3 = {
-        withSpring: activeQuestDockMode(5604).withSpring,
+        withSpring: activeQuestDockMode(5374).withSpring,
         activeQuestDockMode,
         QuestDockMode,
         QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
       };
     }
-  : (arg0) => {
+  : function QuestDockBackgroundMediaFade(arg0) {
       let activeQuestDockMode;
       ({ children, style } = arg0);
-      activeQuestDockMode = noop.useContext(activeQuestDockMode(14913).QuestDockGestureContext).activeQuestDockMode;
+      activeQuestDockMode = noop.useContext(activeQuestDockMode(15175).QuestDockGestureContext).activeQuestDockMode;
       const tmp = closure_17();
       const fn = function s() {
         let num = 0;
@@ -129,9 +129,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
       };
-      let obj = activeQuestDockMode(4618);
+      let obj = activeQuestDockMode(4810);
       fn.__closure = {
-        withSpring: activeQuestDockMode(5604).withSpring,
+        withSpring: activeQuestDockMode(5374).withSpring,
         activeQuestDockMode,
         QuestDockMode,
         QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
@@ -162,7 +162,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (imageUrl) => {
+    ? function QuestDockVideoBackground(imageUrl) {
         let obj = imageUrl(activeQuestDockMode[10]);
         const cResult = obj.c(66);
         imageUrl = imageUrl.imageUrl;
@@ -222,13 +222,13 @@ export default noop.memo(
             const fn2 = function $() {
               let num = 0;
               if (activeQuestDockMode.get() === QuestDockMode.COLLAPSED) {
-                num = -1 * v65535;
+                num = -1 * collapsed;
               }
               const items = [{ translateX: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) }];
               const obj3 = { translateX: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
               let num3 = 0;
               if (activeQuestDockMode.get() === QuestDockMode.COLLAPSED) {
-                num3 = -1 * v65535;
+                num3 = -1 * collapsed;
               }
               const obj4 = { transform: null, width: null };
               const tmpResult = spring;
@@ -531,7 +531,7 @@ export default noop.memo(
         tmp14 = questDockExpandedHeightLimits;
         const tmpResult6 = imageUrl(activeQuestDockMode[21]);
       }
-    : (imageUrl) => {
+    : function QuestDockVideoBackground(imageUrl) {
         imageUrl = imageUrl.imageUrl;
         ({ videoUrl, collapsedMediaMode } = imageUrl);
         if (collapsedMediaMode === undefined) {
@@ -693,7 +693,7 @@ export default noop.memo(
           }
         }, items4);
         const tmp17 = _slicedToArray(activeQuestDockMode.useState("active" !== windowDimensions.currentState), 2);
-        function se() {
+        function de() {
           let num = 1;
           if (isRendered) {
             num = 1;
@@ -708,7 +708,7 @@ export default noop.memo(
           return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
         }
         const tmp4Result4 = imageUrl(expandedHeight[12]);
-        se.__closure = {
+        de.__closure = {
           withSpring: imageUrl(expandedHeight[13]).withSpring,
           shouldShowVideo: isRendered,
           isVideoReadyForDisplay,
@@ -717,10 +717,10 @@ export default noop.memo(
           QuestDockMode: top,
           QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: tmp13,
         };
-        se.__workletHash = 7848759251612;
-        se.__initData = __initData6;
+        de.__workletHash = 7848759251612;
+        de.__initData = __initData6;
         let tmp31 = null;
-        const animatedStyle1 = tmp4Result4.useAnimatedStyle(se);
+        const animatedStyle1 = tmp4Result4.useAnimatedStyle(de);
         if (isRendered) {
           const obj6 = {
             style: tmp3.backgroundVideo,

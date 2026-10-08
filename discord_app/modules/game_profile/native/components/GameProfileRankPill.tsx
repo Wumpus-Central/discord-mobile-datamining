@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, flexDirection: "row", alignItems: "flex-end" }, gameRankPill: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.gameRankPill = {
@@ -35,7 +35,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileRankPill.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GameProfileRankPill(arg0) {
       const cResult = c.c(12);
       ({ rank, compact } = arg0);
       const tmp5 = closure_6();
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = rank;
       cResult[3] = t;
     }
-  : (arg0) => {
+  : function GameProfileRankPill(arg0) {
       ({ rank, compact } = arg0);
       if (compact === undefined) {
         compact = false;

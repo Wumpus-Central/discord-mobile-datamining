@@ -5,7 +5,7 @@ import SettingsAppearanceThemePickerScreenDefault from "SettingsAppearanceThemeP
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SystemTheme = fn(1196).SystemTheme;
+const SystemTheme = fn(1208).SystemTheme;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function SettingsAppearanceDarkModeThemePickerScreen() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { mode: SystemTheme.DARK, themeSelector: "nitro", headerTitle: null };
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => {
+  : function SettingsAppearanceDarkModeThemePickerScreen() {
       const obj = { mode: SystemTheme.DARK, themeSelector: "nitro", headerTitle: null };
       const intl = util.intl;
       obj.headerTitle = intl.string(util.t["EgvHH/"]);

@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const CATEGORY_ICON_SIZE = fn(1085).CATEGORY_ICON_SIZE;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { placeholder: { color: nativeDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.5 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useExpressionPickerCategoriesPlaceholderConfig() {
       const cResult = c.c(3);
       const tmp4 = closure_4();
       if (cResult[0] === tmp4.placeholder.color) {
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj2;
       tmp5 = obj2;
     }
-  : () => {
+  : function useExpressionPickerCategoriesPlaceholderConfig() {
       const tmp = closure_4();
       closure_0 = tmp;
       const items = [tmp];

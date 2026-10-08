@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PressableNavigatorButtonWrapper(arg0) {
       const cResult = c.c(3);
       ({ children, isModal } = arg0);
       const tmp3 = closure_4();
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp6;
       tmp5 = tmp6;
     }
-  : (children) => {
+  : function PressableNavigatorButtonWrapper(children) {
       let flag = children.isModal;
       if (flag === undefined) {
         flag = false;

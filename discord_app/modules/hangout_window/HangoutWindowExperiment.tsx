@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/hangout_window/HangoutWindowE
 
 export const HangoutWindowExperiment = experiment;
 export const useHangoutWindowExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHangoutWindowExperiment(arg0) {
       const cResult = c.c(4);
       ({ guildId, location: _location } = arg0);
       if (cResult[0] === guildId) {
@@ -43,8 +43,12 @@ export const useHangoutWindowExperiment = ReactCompilerGating.isReactCompilerEna
       cResult[2] = obj3;
       tmp2 = obj3;
     }
-  : (guildId) =>
-      experiment.useExperiment({ guildId: guildId.guildId, location: guildId.location }, { autoTrackExposure: true });
+  : function useHangoutWindowExperiment(guildId) {
+      return experiment.useExperiment(
+        { guildId: guildId.guildId, location: guildId.location },
+        { autoTrackExposure: true },
+      );
+    };
 export const getHangoutWindowExperiment = function getHangoutWindowExperiment(guildId) {
   return experiment.getCurrentConfig(
     { guildId: guildId.guildId, location: guildId.location },

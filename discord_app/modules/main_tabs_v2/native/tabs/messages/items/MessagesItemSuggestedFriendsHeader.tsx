@@ -4,8 +4,8 @@ import nativeDefault from "../../../../../../../discord_common/js/packages/token
 import util from "../../../../../../intl/index.native.tsx";
 import ReanimatedRexport from "../../../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
-import ThemedGradientDefault from "../../../../../client_themes/native/ThemedGradient.tsx";
 import useStateFromSharedValueDefault from "../../../../../reanimated/native/useStateFromSharedValue.tsx";
+import ThemedGradientDefault from "../../../../../client_themes/native/ThemedGradient.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -13,8 +13,8 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const sum = fn(4892).TextStyleSheet["text-md/semibold"].lineHeight + nativeDefault.space.PX_24;
-const createStyles = fn(4896);
+const sum = fn(5086).TextStyleSheet["text-md/semibold"].lineHeight + nativeDefault.space.PX_24;
+const createStyles = fn(5090);
 let obj = {
   headerContainer: { height: sum, justifyContent: "center", overflow: "hidden" },
   stickyOverlay: null,
@@ -41,13 +41,13 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (stickyAt) => {
+    ? function MessagesItemSuggestedFriendsHeader(stickyAt) {
         const cResult = c.c(14);
         stickyAt = stickyAt.stickyAt;
         const scrollPosition = stickyAt.scrollPosition;
         ({ stickyLeft, stickyTop } = stickyAt);
         const tmp4 = closure_8();
-        const fn = function l() {
+        const fn = function s() {
           let tmp2 = null != stickyAt;
           if (tmp2) {
             tmp2 = scrollPosition.get() >= tmp;
@@ -135,7 +135,7 @@ export default noop.memo(
         cResult[2] = rect;
         tmp10 = rect;
       }
-    : (stickyAt) => {
+    : function MessagesItemSuggestedFriendsHeader(stickyAt) {
         stickyAt = stickyAt.stickyAt;
         const scrollPosition = stickyAt.scrollPosition;
         const stickyLeft = stickyAt.stickyLeft;

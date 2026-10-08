@@ -11,7 +11,7 @@ const SearchTypes = fn(1085).SearchTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function useGuildSearchContext(guildId) {
       const cResult = c.c(2);
       if (cResult[0] !== guildId) {
         const obj2 = { type: SearchTypes.GUILD, guildId };
@@ -23,13 +23,13 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp2;
     }
-  : (guildId) => {
+  : function useGuildSearchContext(guildId) {
       const items = [guildId];
       return noop.useMemo(() => ({ type: SearchTypes.GUILD, guildId }), items);
     };
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, channelId) => {
+  ? function useGuildChannelSearchContext(guildId, channelId) {
       const cResult = c.c(3);
       if (cResult[0] === channelId) {
         if (cResult[1] === guildId) {
@@ -43,7 +43,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj2;
       tmp2 = obj2;
     }
-  : (guildId, channelId) => {
+  : function useGuildChannelSearchContext(guildId, channelId) {
       const items = [guildId, channelId];
       return noop.useMemo(() => ({ type: SearchTypes.GUILD_CHANNEL, guildId, channelId }), items);
     };
@@ -67,7 +67,7 @@ export const useGuildSearchContext = tmp2;
 export const useGuildChannelSearchContext = tmp3;
 export { getChannelDetailsSearchContext };
 export const useChannelDetailsSearchContext = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId, guildId) => {
+  ? function useChannelDetailsSearchContext(channelId, guildId) {
       _require = channelId;
       let obj = dependencyMap;
       const cResult = require("c").c(7);
@@ -79,7 +79,7 @@ export const useChannelDetailsSearchContext = ReactCompilerGating.isReactCompile
         first = cResult[0];
       }
       if (cResult[1] !== channelId) {
-        const fn = function o() {
+        const fn = function h() {
           const channel = ChannelStore.getChannel(closure_0);
           let flag;
           if (channel != null) {
@@ -123,7 +123,7 @@ export const useChannelDetailsSearchContext = ReactCompilerGating.isReactCompile
       cResult[6] = obj4;
       const tmpResult = require("useStateFromStores");
     }
-  : (channelId, guildId) => {
+  : function useChannelDetailsSearchContext(channelId, guildId) {
       _require = channelId;
       const items = [ChannelStore];
       stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {

@@ -9,7 +9,7 @@ const ACTION_SHEET_MAX_WIDTH = ActionSheetConstants.ACTION_SHEET_MAX_WIDTH;
 const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useDefaultAppLauncherWidth.tsx");
 
 export const useDefaultAppLauncherWidth = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useDefaultAppLauncherWidth(arg0) {
       const width = useWindowDimensionsDefault().width;
       let bound = width;
       if (arg0 !== AppLauncherTypes.AppLauncherEntrypoint.TEXT) {
@@ -18,7 +18,7 @@ export const useDefaultAppLauncherWidth = ReactCompilerGating.isReactCompilerEna
       }
       return bound;
     }
-  : (arg0) => {
+  : function useDefaultAppLauncherWidth(arg0) {
       const width = useWindowDimensionsDefault().width;
       let bound = width;
       if (arg0 !== AppLauncherTypes.AppLauncherEntrypoint.TEXT) {

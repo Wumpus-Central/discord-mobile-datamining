@@ -29,7 +29,7 @@ export default {
   changeVanityURL(id, vanityURLCode) {
     const self = this;
     DispatcherDefault.dispatch({ type: "CHANGE_VANITY_URL_MODAL_SUBMIT" });
-    const HTTP = self(1282).HTTP;
+    const HTTP = self(1294).HTTP;
     const request = {
       url: Endpoints.GUILD_VANITY_URL(id),
       body: { code: vanityURLCode },

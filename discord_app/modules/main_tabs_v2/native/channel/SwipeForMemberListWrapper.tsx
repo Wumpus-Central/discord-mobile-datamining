@@ -22,9 +22,9 @@ require = fn;
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(7522);
+const ChannelDetailsStore = fn(9245);
 ({ getIsChannelDetailsSearchActive: closure_7, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(7510).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9233).ONYX_BORDER_WIDTH;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
@@ -32,7 +32,7 @@ const jsxProd = fn(21);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
 let c16 = 150;
 let context = noop.createContext(undefined);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   memberListPreview: null,
   content: null,
@@ -66,7 +66,7 @@ obj.onyxRightOverflow = { right: -ONYX_BORDER_WIDTH };
 let closure_18 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel_id, arg1, arg2, member_list_open) => {
+  ? function useAnalyticsEffect(channel_id, arg1, arg2, member_list_open) {
       _require = channel_id;
       closure_1 = arg1;
       dependencyMap = arg2;
@@ -130,7 +130,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       tmp2 = fn;
       let obj = require("c");
     }
-  : (channel_id, arg1, arg2, member_list_open) => {
+  : function useAnalyticsEffect(channel_id, arg1, arg2, member_list_open) {
       closure_1 = arg1;
       closure_2 = arg2;
       const items = [channel_id, arg1, member_list_open];
@@ -182,7 +182,7 @@ const __initData8 = {
 };
 ReactCompilerGating = fn(558);
 let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (simultaneousWithExternalGesture, shownPixels, disallowGesture) => {
+  ? function useGestureCompositionEffect(simultaneousWithExternalGesture, shownPixels, disallowGesture) {
       _require = shownPixels;
       const cResult = c.c(11);
       context = noop.useContext(MainTabsNavigatorPanelContextDefault);
@@ -322,7 +322,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = result1;
       }
     }
-  : (arg0, shownPixels, disallowGesture) => {
+  : function useGestureCompositionEffect(arg0, shownPixels, disallowGesture) {
       closure_0 = arg0;
       context = noop.useContext(MainTabsNavigatorPanelContextDefault);
       const gesture = context.gesture;

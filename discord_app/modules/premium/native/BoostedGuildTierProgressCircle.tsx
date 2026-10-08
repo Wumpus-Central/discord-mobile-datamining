@@ -6,9 +6,9 @@ import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
 import useGuildPowerupsBoostCountDefault from "../powerups/hooks/useGuildPowerupsBoostCount.tsx";
 import ProgressCircleDefault from "components/ProgressCircle.tsx";
 import Tier048Px from "../../../design/components/Illustration/native/redesign/generated/Tier048Px.tsx";
-import _modDef13336 from "../../../../_runtime/metro/13336__.js";
-import _modDef13337 from "../../../../_runtime/metro/13337__.js";
-import _modDef13338 from "../../../../_runtime/metro/13338__.js";
+import _modDef13636 from "../../../../_runtime/metro/13636__.js";
+import _modDef13637 from "../../../../_runtime/metro/13637__.js";
+import _modDef13638 from "../../../../_runtime/metro/13638__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -18,7 +18,7 @@ const Constants = fn(1085);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: hasOwnProperty, BoostedGuildTiers: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   guildTierProgressCircle: { position: "relative", width: 70, height: 70 },
   guildTierBackground: null,
@@ -44,7 +44,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/BoostedGuildTierProgressCircle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BoostedGuildTierProgressCircle(arg0) {
       const cResult = c.c(27);
       ({ guild, theme } = arg0);
       const tmp4 = closure_9();
@@ -183,13 +183,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (guild.premiumTier !== constants.NONE) {
             const premiumTier = guild.premiumTier;
             if (constants.TIER_1 === premiumTier) {
-              let tier048PxSource1 = _modDef13336;
+              let tier048PxSource1 = _modDef13636;
             } else if (constants.TIER_2 !== premiumTier) {
               if (constants.TIER_3 === premiumTier) {
-                tier048PxSource1 = _modDef13338;
+                tier048PxSource1 = _modDef13638;
               }
             }
-            tier048PxSource1 = _modDef13337;
+            tier048PxSource1 = _modDef13637;
           }
           cResult[8] = guild;
           cResult[9] = theme;
@@ -200,7 +200,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult6 = Tier048Px;
       }
     }
-  : (arg0) => {
+  : function BoostedGuildTierProgressCircle(arg0) {
       ({ guild, theme } = arg0);
       const tmp = closure_9();
       useGuildPowerupsBoostCountDefault;
@@ -236,11 +236,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (guild.premiumTier !== constants.NONE) {
             const premiumTier = guild.premiumTier;
             if (constants.TIER_1 === premiumTier) {
-              let tier048PxSource = _modDef13336;
+              let tier048PxSource = _modDef13636;
             } else if (constants.TIER_2 === premiumTier) {
-              tier048PxSource = _modDef13337;
+              tier048PxSource = _modDef13637;
             } else if (constants.TIER_3 === premiumTier) {
-              tier048PxSource = _modDef13338;
+              tier048PxSource = _modDef13638;
             }
           }
           const obj5 = {

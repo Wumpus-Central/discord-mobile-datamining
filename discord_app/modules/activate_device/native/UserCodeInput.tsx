@@ -11,17 +11,17 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const OAuthConstants = fn(13712).OAuthConstants;
+const OAuthConstants = fn(13934).OAuthConstants;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ text: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activate_device/native/UserCodeInput.tsx");
 
 export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled()
-  ? (prefilledUserCode) => {
+  ? function UserCodeInput(prefilledUserCode) {
       const cResult = c.c(23);
       let str = prefilledUserCode.prefilledUserCode;
       ({ onClose, onUserCodeAccepted } = prefilledUserCode);
@@ -75,14 +75,14 @@ export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] === tmp10) {
         const _Symbol = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          class G {
+          class D {
             constructor(arg0) {
               return closure_0(prefilledUserCode);
             }
           }
-          cResult[9] = G;
+          cResult[9] = D;
         } else {
-          class G {
+          class D {
             constructor(arg0) {
               return closure_0(prefilledUserCode);
             }
@@ -90,7 +90,7 @@ export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol2 = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          class G {
+          class D {
             constructor(arg0) {
               return closure_0(prefilledUserCode);
             }
@@ -100,21 +100,21 @@ export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled()
           cResult[10] = formatToPlainStringResult;
           const tmp21 = formatToPlainStringResult;
         } else {
-          class G {
+          class D {
             constructor(arg0) {
               return closure_0(prefilledUserCode);
             }
           }
         }
         if (cResult[11] === error) {
-          class G {
+          class D {
             constructor(arg0) {
               return closure_0(prefilledUserCode);
             }
           }
           const _Symbol3 = Symbol;
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-            class G {
+            class D {
               constructor(arg0) {
                 return closure_0(prefilledUserCode);
               }
@@ -123,14 +123,14 @@ export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled()
             cResult[14] = stringResult2;
             const tmp28 = stringResult2;
           } else {
-            class G {
+            class D {
               constructor(arg0) {
                 return closure_0(prefilledUserCode);
               }
             }
           }
           if (cResult[15] === manualSubmit) {
-            class G {
+            class D {
               constructor(arg0) {
                 return closure_0(prefilledUserCode);
               }
@@ -151,7 +151,7 @@ export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled()
           cResult[18] = tmp34;
         }
         const obj7 = {
-          onChange: G,
+          onChange: D,
           maxLength: OAuthConstants.USER_CODE_LENGTH,
           value: arr,
           autoFocus: true,
@@ -173,7 +173,7 @@ export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = closure_1_8(View, obj8);
       const tmp19 = closure_1_8(View, obj8);
     }
-  : (prefilledUserCode) => {
+  : function UserCodeInput(prefilledUserCode) {
       let str = prefilledUserCode.prefilledUserCode;
       c0 = undefined;
       ({ onClose, onUserCodeAccepted } = prefilledUserCode);

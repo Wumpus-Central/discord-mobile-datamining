@@ -15,12 +15,12 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1085);
 ({ ThemeTypes: closure_8, Fonts } = Constants);
-let ActivityLayoutMode = fn(2011).ActivityLayoutMode;
+let ActivityLayoutMode = fn(2023).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const XSMALL = fn(1188).AvatarSizes.XSMALL;
-const androidRippleConfig = fn(1192).getThemedRippleConfig({ foreground: true });
-const createStyles = fn(4896);
+const XSMALL = fn(1200).AvatarSizes.XSMALL;
+const androidRippleConfig = fn(1204).getThemedRippleConfig({ foreground: true });
+const createStyles = fn(5090);
 let obj2 = {
   pressableOpacity: null,
   activityPreview: null,
@@ -62,7 +62,7 @@ let obj4 = {
   marginRight: 16,
 };
 obj2.overflow = {
-  height: fn(1188).AVATAR_SIZE_MAP[XSMALL],
+  height: fn(1200).AVATAR_SIZE_MAP[XSMALL],
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
 };
 obj2.buttonWrapper = { marginTop: 8, alignSelf: "center" };
@@ -70,7 +70,7 @@ obj2.buttonPill = { borderRadius: 100 };
 let closure_14 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (participants) => {
+  ? function useUsersForActivityParticipant(participants) {
       _require = participants;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -94,7 +94,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStoresArray(first, tmp6);
     }
-  : (arg0) => {
+  : function useUsersForActivityParticipant(arg0) {
       _require = arg0;
       const items = [UserStore];
       return require("initialize").useStateFromStoresArray(items, () => {
@@ -104,7 +104,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (participant) => {
+  ? function ActivityTileInner(participant) {
       const cResult = require("c").c(61);
       participant = participant.participant;
       _require = participant;
@@ -362,16 +362,16 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                   }
-                  const fn2 = function z() {
+                  function handleTileOrButtonPress() {
                     handlePressJoinActivityDefault({ embeddedActivityJoinability, handleCanJoin });
                     if (onSingleTap != null) {
                       onSingleTap();
                     }
-                  };
+                  }
                   cResult[16] = embeddedActivityJoinability;
                   cResult[17] = tmp31;
                   cResult[18] = onSingleTap;
-                  cResult[19] = fn2;
+                  cResult[19] = handleTileOrButtonPress;
                 }
               }
             }
@@ -504,7 +504,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       tmp16 = fn;
       let obj2 = channel(onSingleTap[18]);
     }
-  : (participant) => {
+  : function ActivityTileInner(participant) {
       participant = participant.participant;
       const channel = participant.channel;
       const onSingleTap = participant.onSingleTap;
@@ -560,7 +560,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                   };
                   v1 = 1;
                   dependencyMap = 1;
-                  const obj5 = { value: v1(9083)(obj4), done: false };
+                  const obj5 = { value: v1(10666)(obj4), done: false };
                   return obj5;
                 } else {
                   dependencyMap = 3;
@@ -570,8 +570,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               dependencyMap = 3;
               throw value;
             } else if (arg0 !== 2) {
-              const result = tmp2(9168).setOrientationLockState(closure_128_3);
-              const obj = tmp2(9168);
+              const result = tmp2(10734).setOrientationLockState(closure_128_3);
+              const obj = tmp2(10734);
             }
             dependencyMap = 3;
             const obj6 = { value, done: true };
@@ -728,7 +728,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               tmp5 = obj2;
             }
             obj.cutout = tmp5;
-            return v65535(native.CutoutableAvatarImage, obj);
+            return collapsed(native.CutoutableAvatarImage, obj);
           },
         };
         const items4 = [closure_10(tmp10(tmp3[10]).SummarizedIconRow, obj14), , ,];
@@ -764,7 +764,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp23Result;
     };
 ReactCompilerGating = fn(558);
-let obj5 = { height: fn(1188).AVATAR_SIZE_MAP[XSMALL], backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+let obj5 = { height: fn(1200).AVATAR_SIZE_MAP[XSMALL], backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/ActivityTile.tsx");
 
@@ -775,8 +775,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { theme: constants.DARK, children: null };
         const obj3 = {};
         const merged = Object.assign(arg0);
-        obj2.children = v65535(closure_16, obj3);
-        const tmp11 = v65535(native2.ThemeContextProvider, obj2);
+        obj2.children = collapsed(closure_16, obj3);
+        const tmp11 = collapsed(native2.ThemeContextProvider, obj2);
         cResult[0] = arg0;
         cResult[1] = tmp11;
         let tmp4 = tmp11;
@@ -788,6 +788,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function ActivityTile(arg0) {
       const obj = { theme: constants.DARK, children: null };
       const merged = Object.assign(arg0);
-      obj.children = v65535(closure_16, {});
-      return v65535(native2.ThemeContextProvider, obj);
+      obj.children = collapsed(closure_16, {});
+      return collapsed(native2.ThemeContextProvider, obj);
     };

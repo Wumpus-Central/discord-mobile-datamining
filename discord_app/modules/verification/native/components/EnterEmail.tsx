@@ -8,12 +8,12 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const ChangeEmailStore = fn(6016);
+const ChangeEmailStore = fn(6202);
 ({ useChangeEmailError: c10, useChangeEmailStore: closure_11, ChangeEmailFields: closure_12 } = ChangeEmailStore);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: { paddingVertical: 12, paddingHorizontal: 16 },
@@ -28,7 +28,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/verification/native/components/EnterEmail.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (isChangeEmail) => {
+  ? function EnterEmail(isChangeEmail) {
       const cResult = isChangeEmail(stateFromStores[11]).c(43);
       isChangeEmail = isChangeEmail.isChangeEmail;
       const changeEmailReason = isChangeEmail.changeEmailReason;
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const navigation = isChangeEmail(stateFromStores[12]).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function _() {
+        const fn = function b() {
           return currentUser.getCurrentUser();
         };
         cResult[0] = items;
@@ -147,7 +147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           });
-          obj.onSubmit = function () {
+          obj.onSubmit = function onSubmit() {
             const self = this;
             const apply = closure_0.apply;
             if (typeof apply === "unknown") {
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = D;
       const tmp12 = _slicedToArray(closure_10(constants.EMAIL), 2);
     }
-  : (isChangeEmail) => {
+  : function EnterEmail(isChangeEmail) {
       isChangeEmail = isChangeEmail.isChangeEmail;
       const changeEmailReason = isChangeEmail.changeEmailReason;
       let stateFromStores;
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         });
-        obj.onSubmit = function () {
+        obj.onSubmit = function onSubmit() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {

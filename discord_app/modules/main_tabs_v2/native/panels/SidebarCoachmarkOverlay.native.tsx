@@ -15,7 +15,7 @@ const context = noop.createContext(null);
 fn(558);
 const ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (manager) => {
+  ? function SidebarCoachmarkOverlayLayer(manager) {
       const cResult = items(576).c(14);
       items = manager.manager;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +53,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[8] !== items.items) {
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn3 = function p(children) {
+            const fn3 = function _(children) {
               return closure_1_7(React.Fragment, { children: children.component }, children.key);
             };
             cResult[10] = fn3;
@@ -87,7 +87,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           tmp12 = tmp17;
         }
       }
-      const fn = function f() {
+      const fn = function y() {
         closure_0 = items;
         items.invalidate = () => closure_1_1({});
         return () => {
@@ -100,7 +100,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn;
       const obj = items(576);
     }
-  : (manager) => {
+  : function SidebarCoachmarkOverlayLayer(manager) {
       manager = manager.manager;
       closure_1 = _slicedToArray(noop.useState({}), 2)[1];
       const items = [manager];
@@ -137,7 +137,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/Si
 
 export const SidebarCoachmarkOverlayContext = context;
 export const SidebarCoachmarkOverlay = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SidebarCoachmarkOverlay(arg0) {
       const cResult = c.c(8);
       ({ children, enabled } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -187,7 +187,7 @@ export const SidebarCoachmarkOverlay = ReactCompilerGating.isReactCompilerEnable
       cResult[3] = tmp7;
       tmp6 = tmp7;
     }
-  : (enabled) => {
+  : function SidebarCoachmarkOverlay(enabled) {
       enabled = enabled.enabled;
       const tmp = useInitialValueDefault(() => {
         const layerContextManager = new LayerContext.LayerContextManager();

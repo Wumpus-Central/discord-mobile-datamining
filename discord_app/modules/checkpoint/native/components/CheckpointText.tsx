@@ -6,13 +6,13 @@ import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objec
 require = fn;
 let closure_2 = ["children", "style"];
 const jsx = fn(21).jsx;
-let closure_5 = { color: fn(5121).CHECKPOINT_PRIMARY };
+let closure_5 = { color: fn(5433).CHECKPOINT_PRIMARY };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointText.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CheckpointText(arg0) {
       const cResult = c.c(10);
       if (cResult[0] !== arg0) {
         ({ children, style } = arg0);
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp14;
       tmp12 = tmp14;
     }
-  : (arg0) => {
+  : function CheckpointText(arg0) {
       ({ children, style } = arg0);
       const merged = Object.assign(arg0, Object.assign({ children: 0, style: 0 }));
       const obj = {};

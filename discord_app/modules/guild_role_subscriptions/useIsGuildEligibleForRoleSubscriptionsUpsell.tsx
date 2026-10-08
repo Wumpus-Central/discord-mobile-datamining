@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
       _require = arg0;
       const cResult = require("c").c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_3.getGuild(closure_0);
           }
         }
-        const isUserInCreatorMonetizationEligibleCountry = tmp(6774).useIsUserInCreatorMonetizationEligibleCountry();
+        const isUserInCreatorMonetizationEligibleCountry = tmp(6950).useIsUserInCreatorMonetizationEligibleCountry();
         if (stateFromStores != null) {
           class E {
             constructor() {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp11;
         cResult[10] = isUserInCreatorMonetizationEligibleCountry;
         cResult[11] = tmp17;
-        const tmpResult4 = tmp(6774);
+        const tmpResult4 = tmp(6950);
       }
       let tmp12 = null != stateFromStores;
       if (tmp12) {
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp12;
       const tmpResult3 = require("initialize");
     }
-  : (arg0) => {
+  : function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
       _require = arg0;
       const items = [GuildStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));

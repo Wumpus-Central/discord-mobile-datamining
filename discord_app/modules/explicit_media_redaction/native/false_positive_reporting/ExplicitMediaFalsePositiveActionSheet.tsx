@@ -5,21 +5,22 @@ import util from "../../../../intl/index.native.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import ExplicitMediaRedactionUtils from "../../ExplicitMediaRedactionUtils.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import utils_UploadUtils from "../../../../utils/native/UploadUtils.tsx";
-import _modDef7994 from "../../../../../_runtime/metro/07994__.js";
-import _modDef8951 from "../../../../../_runtime/metro/08951__.js";
+import ExplicitMediaRedactionUtils from "../../ExplicitMediaRedactionUtils.tsx";
+import _modDef8402 from "../../../../../_runtime/metro/08402__.js";
 import ShieldIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
+import _modDef10387 from "../../../../../_runtime/metro/10387__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: closure_4, Image: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (embed) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function ExplicitMediaFalsePositivePreviewEmbed(embed) {
       const cResult = c.c(2);
       embed = embed.embed;
       if (undefined !== embed.video) {
@@ -30,7 +31,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           return null;
         } else if (cResult[0] !== url) {
           const obj2 = { url };
-          const tmp6 = React5(closure_11, obj2);
+          const tmp6 = timestampProducer(closure_10, obj2);
           cResult[0] = url;
           cResult[1] = tmp6;
         }
@@ -40,7 +41,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         url = thumbnail.url;
       }
     }
-  : (embed) => {
+  : function ExplicitMediaFalsePositivePreviewEmbed(embed) {
       embed = embed.embed;
       if (undefined !== embed.video) {
         if ("gifv" !== embed.type) {
@@ -49,7 +50,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp = null;
         if (null != url) {
           const obj = { url };
-          tmp = React5(closure_11, obj);
+          tmp = timestampProducer(closure_10, obj);
         }
         return tmp;
       }
@@ -59,35 +60,35 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
     };
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (attachment) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function ExplicitMediaFalsePositivePreviewAttachment(attachment) {
       const cResult = c.c(2);
       const url = attachment.attachment.url;
       if (null == url) {
         return null;
       } else if (cResult[0] !== url) {
         const obj2 = { url };
-        const tmp5 = React5(closure_11, obj2);
+        const tmp5 = timestampProducer(closure_10, obj2);
         cResult[0] = url;
         cResult[1] = tmp5;
       }
     }
-  : (attachment) => {
+  : function ExplicitMediaFalsePositivePreviewAttachment(attachment) {
       const url = attachment.attachment.url;
       let tmp = null;
       if (null != url) {
         const obj = { url };
-        tmp = React5(closure_11, obj);
+        tmp = timestampProducer(closure_10, obj);
       }
       return tmp;
     };
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (url) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function ExplicitMediaFalsePositivePreview(url) {
       let obj = dependencyMap;
       const cResult = c.c(13);
       url = url.url;
-      let media = closure_12();
+      let media = closure_11();
       if (cResult[0] !== url) {
         const isVideoResult = utils_UploadUtils.isVideo(url);
         cResult[0] = url;
@@ -107,21 +108,23 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[8] === url) {
                 if (cResult[10] === tmp4) {
                   if (cResult[11] === tmp5) {
-                    let tmp12 = cResult[12];
+                    let tmp10 = cResult[12];
                   }
-                  return tmp12;
+                  return tmp10;
                 }
                 const obj3 = { style: tmp4, children: cResult[9] };
-                const tmp15 = React5(React4, obj3);
+                const tmp13 = timestampProducer(React4, obj3);
                 cResult[10] = tmp4;
                 cResult[11] = cResult[9];
-                cResult[12] = tmp15;
-                tmp12 = tmp15;
+                cResult[12] = tmp13;
+                tmp10 = tmp13;
               }
             }
           }
         }
+        let tmp7 = importDefault;
         if (image) {
+          tmp7 = tmp7(8402);
           obj = {
             volume: 0,
             resizeMode: "cover",
@@ -133,7 +136,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           };
           const obj4 = { uri: url };
           obj.source = obj4;
-          let tmp6Result = React5(_modDef7994, obj);
+          let tmp6Result = timestampProducer(tmp7, obj);
         } else {
           const obj5 = { style: null, source: null };
           const items = [,];
@@ -141,7 +144,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           obj5.style = items;
           const obj6 = { uri: url };
           obj5.source = obj6;
-          tmp6Result = React5(hasOwnProperty, obj5);
+          tmp6Result = timestampProducer(tmp7(6164), obj5);
         }
         cResult[5] = image;
         image = media.image;
@@ -158,9 +161,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp4 = items1;
     }
-  : (url) => {
+  : function ExplicitMediaFalsePositivePreview(url) {
       url = url.url;
-      const tmp = closure_12();
+      const tmp = closure_11();
       const obj2 = { style: null, children: null };
       const items = [,];
       ({ mediaContainer: arr[0], elevationShadow: arr[1] } = tmp);
@@ -177,7 +180,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const obj4 = { uri: url };
         obj3.source = obj4;
-        let tmp3Result = React5(_modDef7994, obj3);
+        let tmp3Result = timestampProducer(_modDef8402, obj3);
       } else {
         const obj5 = { style: null, source: null };
         const items1 = [,];
@@ -185,12 +188,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         obj5.style = items1;
         const obj6 = { uri: url };
         obj5.source = obj6;
-        tmp3Result = React5(hasOwnProperty, obj5);
+        tmp3Result = timestampProducer(FastImageDefault, obj5);
       }
       obj2.children = tmp3Result;
-      return React5(React4, obj2);
+      return timestampProducer(React4, obj2);
     };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj5 = {
   content: { padding: nativeDefault.space.PX_16 },
   contentContainer: { justifyContent: "center", textAlign: "center", alignItems: "center" },
@@ -212,8 +215,8 @@ obj5.mediaContainer = {
   marginTop: nativeDefault.space.PX_8,
   aspectRatio: "4 / 3",
 };
-const native = fn(1188);
-obj5.elevationShadow = native.generateBoxShadowStyle(fn(1188).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1200);
+obj5.elevationShadow = native.generateBoxShadowStyle(fn(1200).FOUR_DP_ELEVATION_SHADOW_PARAMS);
 obj5.image = { resizeMode: "contain" };
 let obj8 = {
   width: "100%",
@@ -231,9 +234,9 @@ obj5.footer = {
   paddingHorizontal: nativeDefault.space.PX_16,
   gap: nativeDefault.space.PX_8,
 };
-let closure_12 = createStyles.createStyles(obj5);
+let closure_11 = createStyles.createStyles(obj5);
 ReactCompilerGating = fn(558);
-const obj11 = {
+let obj11 = {
   backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT,
   paddingVertical: nativeDefault.space.PX_12,
   paddingHorizontal: nativeDefault.space.PX_16,
@@ -248,7 +251,7 @@ export const handleSuccess = function handleSuccess(arg0) {
   ActionSheetActionCreatorsDefault.hideActionSheet(arg0);
   const obj3 = {
     key: "explicit_media_report_false_positive_success",
-    icon: _modDef8951,
+    icon: _modDef10387,
     IconComponent: ShieldIcon.ShieldIcon,
     iconColor: "text-brand",
     content: null,
@@ -262,13 +265,13 @@ export const handleError = function handleError() {
   ToastUtils.presentError(intl.string(util.t.R0RpRX));
 };
 export const ExplicitMediaFalsePositiveActionSheet = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function ExplicitMediaFalsePositiveActionSheet(channelId) {
       const cResult = channelId(onConfirmPress[4]).c(42);
       channelId = channelId.channelId;
       const messageId = channelId.messageId;
       ({ isReportFalsePositiveLoading, attachmentPreview, embedPreview, onConfirmPress } = channelId);
       const analyticsContext = channelId.analyticsContext;
-      const tmp4 = closure_12();
+      const tmp4 = closure_11();
       if (cResult[0] === analyticsContext) {
         if (cResult[1] === channelId) {
           if (cResult[2] === messageId) {
@@ -282,61 +285,24 @@ export const ExplicitMediaFalsePositiveActionSheet = ReactCompilerGating.isReact
                 }
                 if (cResult[9] === analyticsContext) {
                   if (cResult[10] === channelId) {
-                    class R {
-                      constructor() {
-                        obj = closure_0(closure_2[16]);
-                        obj1 = {
-                          action: closure_0(closure_2[16]).TrackMediaRedactionActionType
-                            .EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
-                          channelId,
-                          messageId,
-                          context: analyticsContext,
-                        };
-                        result = obj.trackMediaRedactionAction(obj1);
-                        return;
-                      }
+                    if (cResult[11] === messageId) {
+                      let tmp7 = cResult[12];
+                      let tmp8 = cResult[13];
                     }
+                    const effect = analyticsContext.useEffect(tmp7, tmp8);
                     const _Symbol = Symbol;
                     ({ content, contentContainer, heading } = tmp4);
                     if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-                      const string = tmp(onConfirmPress[14]).intl.string;
-                      class R {
-                        constructor() {
-                          obj = closure_0(closure_2[16]);
-                          obj1 = {
-                            action: closure_0(closure_2[16]).TrackMediaRedactionActionType
-                              .EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
-                            channelId,
-                            messageId,
-                            context: analyticsContext,
-                          };
-                          result = obj.trackMediaRedactionAction(obj1);
-                          return;
-                        }
-                      }
-                      cResult[14] = tmp13;
-                      let tmp12 = tmp13;
+                      const intl = tmp(onConfirmPress[15]).intl;
+                      const stringResult = intl.string(tmp(onConfirmPress[15]).t.TPpVkI);
+                      cResult[14] = stringResult;
+                      let tmp12 = stringResult;
                     } else {
                       tmp12 = cResult[14];
                     }
                     if (cResult[15] !== tmp4.heading) {
-                      let obj2 = { style: null, variant: "heading-lg/bold", children: null };
-                      class R {
-                        constructor() {
-                          obj = closure_0(closure_2[16]);
-                          obj1 = {
-                            action: closure_0(closure_2[16]).TrackMediaRedactionActionType
-                              .EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
-                            channelId,
-                            messageId,
-                            context: analyticsContext,
-                          };
-                          result = obj.trackMediaRedactionAction(obj1);
-                          return;
-                        }
-                      }
-                      obj2.children = tmp12;
-                      const tmp16 = closure_7(tmp(onConfirmPress[17]).Text, obj2);
+                      let obj2 = { style: heading, variant: "heading-lg/bold", children: tmp12 };
+                      const tmp16 = closure_6(tmp(onConfirmPress[18]).Text, obj2);
                       cResult[15] = tmp4.heading;
                       cResult[16] = tmp16;
                       let tmp14 = tmp16;
@@ -346,283 +312,182 @@ export const ExplicitMediaFalsePositiveActionSheet = ReactCompilerGating.isReact
                     const _Symbol2 = Symbol;
                     if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
                       const obj3 = { variant: "text-sm/normal", children: null };
-                      class R {
-                        constructor() {
-                          obj = closure_0(closure_2[16]);
-                          obj1 = {
-                            action: closure_0(closure_2[16]).TrackMediaRedactionActionType
-                              .EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
-                            channelId,
-                            messageId,
-                            context: analyticsContext,
-                          };
-                          result = obj.trackMediaRedactionAction(obj1);
-                          return;
-                        }
-                      }
-                      const intl = tmp(onConfirmPress[14]).intl;
-                      obj3.children = intl.string(tmp(onConfirmPress[14]).t["z4du/I"]);
-                      const tmp20 = closure_7(tmp19, obj3);
-                      cResult[17] = tmp20;
-                      let tmp17 = tmp20;
+                      const intl2 = tmp(onConfirmPress[15]).intl;
+                      obj3.children = intl2.string(tmp(onConfirmPress[15]).t["z4du/I"]);
+                      const tmp19 = closure_6(tmp(onConfirmPress[18]).Text, obj3);
+                      cResult[17] = tmp19;
+                      let tmp17 = tmp19;
                     } else {
                       tmp17 = cResult[17];
                     }
                     if (cResult[18] !== attachmentPreview) {
-                      class R {
-                        constructor() {
-                          obj = closure_0(closure_2[16]);
-                          obj1 = {
-                            action: closure_0(closure_2[16]).TrackMediaRedactionActionType
-                              .EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
-                            channelId,
-                            messageId,
-                            context: analyticsContext,
-                          };
-                          result = obj.trackMediaRedactionAction(obj1);
-                          return;
-                        }
+                      let tmp22 = null != attachmentPreview;
+                      if (tmp22) {
+                        const obj4 = { attachment: attachmentPreview };
+                        tmp22 = closure_6(closure_9, obj4);
                       }
                       cResult[18] = attachmentPreview;
-                      cResult[19] = null != attachmentPreview;
-                      let tmp21 = tmp23;
+                      cResult[19] = tmp22;
+                      let tmp20 = tmp22;
                     } else {
-                      tmp21 = cResult[19];
+                      tmp20 = cResult[19];
                     }
                     if (cResult[20] !== embedPreview) {
-                      class R {
-                        constructor() {
-                          obj = closure_0(closure_2[16]);
-                          obj1 = {
-                            action: closure_0(closure_2[16]).TrackMediaRedactionActionType
-                              .EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
-                            channelId,
-                            messageId,
-                            context: analyticsContext,
-                          };
-                          result = obj.trackMediaRedactionAction(obj1);
-                          return;
-                        }
+                      let tmp27 = null != embedPreview;
+                      if (tmp27) {
+                        const obj5 = { embed: embedPreview };
+                        tmp27 = closure_6(closure_8, obj5);
                       }
                       cResult[20] = embedPreview;
-                      cResult[21] = null != embedPreview;
-                      let tmp24 = tmp26;
+                      cResult[21] = tmp27;
+                      let tmp25 = tmp27;
                     } else {
-                      tmp24 = cResult[21];
+                      tmp25 = cResult[21];
                     }
                     if (cResult[22] === tmp4.content) {
                       if (cResult[23] === tmp4.contentContainer) {
-                        if (cResult[24] === tmp21) {
-                          if (cResult[25] === tmp24) {
+                        if (cResult[24] === tmp20) {
+                          if (cResult[25] === tmp25) {
                             if (cResult[26] === tmp14) {
-                              let tmp27 = cResult[27];
+                              let tmp30 = cResult[27];
                             }
                             const _Symbol3 = Symbol;
-                            class R {
-                              constructor() {
-                                obj = closure_0(closure_2[16]);
-                                obj1 = {
-                                  action: closure_0(closure_2[16]).TrackMediaRedactionActionType
-                                    .EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
-                                  channelId,
-                                  messageId,
-                                  context: analyticsContext,
-                                };
-                                result = obj.trackMediaRedactionAction(obj1);
-                                return;
-                              }
-                            }
                             if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
-                              const string2 = tmp(onConfirmPress[14]).intl.string;
-                              class R {
-                                constructor() {
-                                  obj = closure_0(closure_2[16]);
-                                  obj1 = {
-                                    action: closure_0(closure_2[16]).TrackMediaRedactionActionType
-                                      .EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
-                                    channelId,
-                                    messageId,
-                                    context: analyticsContext,
-                                  };
-                                  result = obj.trackMediaRedactionAction(obj1);
-                                  return;
-                                }
-                              }
-                              cResult[28] = tmp33;
-                              let tmp32 = tmp33;
+                              const intl3 = tmp(onConfirmPress[15]).intl;
+                              const stringResult1 = intl3.string(tmp(onConfirmPress[15]).t["cY+Oob"]);
+                              cResult[28] = stringResult1;
+                              let tmp34 = stringResult1;
                             } else {
-                              tmp32 = cResult[28];
+                              tmp34 = cResult[28];
                             }
                             if (cResult[29] === tmp6) {
                               if (cResult[30] === isReportFalsePositiveLoading) {
-                                let tmp34 = cResult[31];
+                                let tmp36 = cResult[31];
                               }
                               const _Symbol4 = Symbol;
-                              class R {
-                                constructor() {
-                                  obj = closure_0(closure_2[16]);
-                                  obj1 = {
-                                    action: closure_0(closure_2[16]).TrackMediaRedactionActionType
-                                      .EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
-                                    channelId,
-                                    messageId,
-                                    context: analyticsContext,
-                                  };
-                                  result = obj.trackMediaRedactionAction(obj1);
-                                  return;
-                                }
-                              }
-                              if (tmp37 === Symbol.for("react.memo_cache_sentinel")) {
-                                const string3 = tmp(onConfirmPress[14]).intl.string;
-                                class R {
-                                  constructor() {
-                                    obj = closure_0(closure_2[16]);
-                                    obj1 = {
-                                      action: closure_0(closure_2[16]).TrackMediaRedactionActionType
-                                        .EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
-                                      channelId,
-                                      messageId,
-                                      context: analyticsContext,
-                                    };
-                                    result = obj.trackMediaRedactionAction(obj1);
-                                    return;
-                                  }
-                                }
-                                cResult[32] = tmp39;
+                              if (cResult[32] === Symbol.for("react.memo_cache_sentinel")) {
+                                const intl4 = tmp(onConfirmPress[15]).intl;
+                                const stringResult2 = intl4.string(tmp(onConfirmPress[15]).t["ETE/oC"]);
+                                cResult[32] = stringResult2;
+                                let tmp39 = stringResult2;
+                              } else {
+                                tmp39 = cResult[32];
                               }
                               if (cResult[33] !== tmp5) {
-                                const obj4 = { variant: "secondary", size: "md", text: null, onPress: null };
-                                class R {
-                                  constructor() {
-                                    obj = closure_0(closure_2[16]);
-                                    obj1 = {
-                                      action: closure_0(closure_2[16]).TrackMediaRedactionActionType
-                                        .EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
-                                      channelId,
-                                      messageId,
-                                      context: analyticsContext,
-                                    };
-                                    result = obj.trackMediaRedactionAction(obj1);
-                                    return;
-                                  }
-                                }
-                                obj4.onPress = tmp5;
-                                const tmp42 = closure_7(tmp(onConfirmPress[18]).Button, obj4);
+                                const obj6 = { variant: "secondary", size: "md", text: tmp39, onPress: tmp5 };
+                                const tmp43 = closure_6(tmp(onConfirmPress[19]).Button, obj6);
                                 cResult[33] = tmp5;
-                                cResult[34] = tmp42;
-                                let tmp40 = tmp42;
+                                cResult[34] = tmp43;
+                                let tmp41 = tmp43;
                               } else {
-                                tmp40 = cResult[34];
+                                tmp41 = cResult[34];
                               }
                               if (cResult[35] === tmp4.footer) {
-                                if (cResult[36] === tmp34) {
-                                  if (cResult[37] === tmp40) {
-                                    let tmp43 = cResult[38];
+                                if (cResult[36] === tmp36) {
+                                  if (cResult[37] === tmp41) {
+                                    let tmp44 = cResult[38];
                                   }
-                                  if (cResult[39] === tmp27) {
-                                    if (cResult[40] === tmp43) {
-                                      let tmp47 = cResult[41];
+                                  if (cResult[39] === tmp30) {
+                                    if (cResult[40] === tmp44) {
+                                      let tmp48 = cResult[41];
                                     }
-                                    return tmp47;
+                                    return tmp48;
                                   }
-                                  class R {
-                                    constructor() {
-                                      obj = closure_0(closure_2[16]);
-                                      obj1 = {
-                                        action: closure_0(closure_2[16]).TrackMediaRedactionActionType
-                                          .EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
-                                        channelId,
-                                        messageId,
-                                        context: analyticsContext,
-                                      };
-                                      result = obj.trackMediaRedactionAction(obj1);
-                                      return;
-                                    }
-                                  }
-                                  const obj5 = { startExpanded: true, children: null };
-                                  const obj6 = { children: null };
-                                  const items = [tmp27, tmp43];
-                                  obj6.children = items;
-                                  obj5.children = closure_8(closure_4, obj6);
-                                  const tmp50 = closure_7(tmp(onConfirmPress[19]).BottomSheet, obj5);
-                                  cResult[39] = tmp27;
-                                  cResult[40] = tmp43;
-                                  cResult[41] = tmp50;
-                                  tmp47 = tmp50;
+                                  const obj7 = { startExpanded: true, children: null };
+                                  const obj8 = { children: null };
+                                  const items = [tmp30, tmp44];
+                                  obj8.children = items;
+                                  obj7.children = closure_7(closure_4, obj8);
+                                  const tmp52 = closure_6(tmp(onConfirmPress[20]).BottomSheet, obj7);
+                                  cResult[39] = tmp30;
+                                  cResult[40] = tmp44;
+                                  cResult[41] = tmp52;
+                                  tmp48 = tmp52;
                                 }
                               }
-                              const obj7 = { style: tmp31, children: null };
-                              const items1 = [tmp34, tmp40];
-                              obj7.children = items1;
-                              const tmp46 = closure_8(closure_4, obj7);
+                              const obj9 = { style: tmp4.footer, children: null };
+                              const items1 = [tmp36, tmp41];
+                              obj9.children = items1;
+                              const tmp47 = closure_7(closure_4, obj9);
                               cResult[35] = tmp4.footer;
-                              cResult[36] = tmp34;
-                              cResult[37] = tmp40;
-                              cResult[38] = tmp46;
-                              tmp43 = tmp46;
+                              cResult[36] = tmp36;
+                              cResult[37] = tmp41;
+                              cResult[38] = tmp47;
+                              tmp44 = tmp47;
                             }
-                            const obj8 = {
+                            const obj10 = {
                               variant: "primary",
                               size: "md",
                               disabled: isReportFalsePositiveLoading,
                               loading: isReportFalsePositiveLoading,
-                              text: tmp32,
+                              text: tmp34,
                               onPress: tmp6,
                             };
-                            const tmp36 = closure_7(tmp(onConfirmPress[18]).Button, obj8);
+                            const tmp38 = closure_6(tmp(onConfirmPress[19]).Button, obj10);
                             cResult[29] = tmp6;
                             cResult[30] = isReportFalsePositiveLoading;
-                            cResult[31] = tmp36;
-                            tmp34 = tmp36;
+                            cResult[31] = tmp38;
+                            tmp36 = tmp38;
                           }
                         }
                       }
                     }
-                    const obj9 = { style: content, contentContainerStyle: contentContainer, children: null };
-                    const items2 = [tmp14, tmp17, tmp21, tmp24];
-                    obj9.children = items2;
-                    const tmp30 = closure_8(closure_6, obj9);
+                    const obj11 = { style: content, contentContainerStyle: contentContainer, children: null };
+                    const items2 = [tmp14, tmp17, tmp20, tmp25];
+                    obj11.children = items2;
+                    const tmp33 = closure_7(closure_5, obj11);
                     cResult[22] = tmp4.content;
                     cResult[23] = tmp4.contentContainer;
-                    cResult[24] = tmp21;
-                    cResult[25] = tmp24;
+                    cResult[24] = tmp20;
+                    cResult[25] = tmp25;
                     cResult[26] = tmp14;
-                    cResult[27] = tmp30;
-                    tmp27 = tmp30;
+                    cResult[27] = tmp33;
+                    tmp30 = tmp33;
                   }
                 }
-                class R {
-                  constructor() {
-                    obj = closure_0(closure_2[16]);
-                    obj1 = {
-                      action: closure_0(closure_2[16]).TrackMediaRedactionActionType
-                        .EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
-                      channelId,
-                      messageId,
-                      context: analyticsContext,
-                    };
-                    result = obj.trackMediaRedactionAction(obj1);
-                    return;
-                  }
-                }
+                const fn3 = function f() {
+                  const obj = ExplicitMediaRedactionUtils;
+                  const result = obj.trackMediaRedactionAction({
+                    action:
+                      ExplicitMediaRedactionUtils.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
+                    channelId,
+                    messageId,
+                    context: analyticsContext,
+                  });
+                };
                 const items3 = [channelId, messageId, analyticsContext];
                 cResult[9] = analyticsContext;
                 cResult[10] = channelId;
                 cResult[11] = messageId;
-                cResult[12] = R;
+                cResult[12] = fn3;
                 cResult[13] = items3;
+                tmp8 = items3;
+                tmp7 = fn3;
               }
             }
           }
+          const fn2 = function y() {
+            if (onConfirmPress != null) {
+              tmp();
+            }
+            const obj = ExplicitMediaRedactionUtils;
+            const result = obj.trackMediaRedactionAction({
+              action:
+                ExplicitMediaRedactionUtils.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
+              channelId,
+              messageId,
+              context: analyticsContext,
+            });
+          };
           cResult[4] = analyticsContext;
           cResult[5] = channelId;
           cResult[6] = messageId;
           cResult[7] = onConfirmPress;
-          cResult[8] = tmp7;
-          tmp6 = tmp7;
+          cResult[8] = fn2;
+          tmp6 = fn2;
         }
       }
-      const fn = function c() {
+      const fn = function l() {
         const obj = ExplicitMediaRedactionUtils;
         const result = obj.trackMediaRedactionAction({
           action: ExplicitMediaRedactionUtils.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
@@ -645,12 +510,12 @@ export const ExplicitMediaFalsePositiveActionSheet = ReactCompilerGating.isReact
       tmp5 = fn;
       let obj = channelId(onConfirmPress[4]);
     }
-  : (channelId) => {
+  : function ExplicitMediaFalsePositiveActionSheet(channelId) {
       channelId = channelId.channelId;
       const messageId = channelId.messageId;
       ({ isReportFalsePositiveLoading, attachmentPreview, embedPreview, onConfirmPress } = channelId);
       const analyticsContext = channelId.analyticsContext;
-      const tmp = closure_12();
+      const tmp = closure_11();
       const items = [channelId, messageId, analyticsContext];
       const items1 = [channelId, messageId, analyticsContext, onConfirmPress];
       const callback = analyticsContext.useCallback(() => {
@@ -693,29 +558,29 @@ export const ExplicitMediaFalsePositiveActionSheet = ReactCompilerGating.isReact
       }, items2);
       let obj = { style: tmp.content, contentContainerStyle: tmp.contentContainer, children: null };
       let obj2 = { style: tmp.heading, variant: "heading-lg/bold", children: null };
-      const intl = channelId(onConfirmPress[14]).intl;
-      obj2.children = intl.string(channelId(onConfirmPress[14]).t.TPpVkI);
-      const items3 = [closure_7(channelId(onConfirmPress[17]).Text, obj2), , ,];
+      const intl = channelId(onConfirmPress[15]).intl;
+      obj2.children = intl.string(channelId(onConfirmPress[15]).t.TPpVkI);
+      const items3 = [closure_6(channelId(onConfirmPress[18]).Text, obj2), , ,];
       const obj3 = { variant: "text-sm/normal", children: null };
-      const intl2 = channelId(onConfirmPress[14]).intl;
-      obj3.children = intl2.string(channelId(onConfirmPress[14]).t["z4du/I"]);
-      items3[1] = closure_7(channelId(onConfirmPress[17]).Text, obj3);
+      const intl2 = channelId(onConfirmPress[15]).intl;
+      obj3.children = intl2.string(channelId(onConfirmPress[15]).t["z4du/I"]);
+      items3[1] = closure_6(channelId(onConfirmPress[18]).Text, obj3);
       let tmp5Result = null != attachmentPreview;
       if (tmp5Result) {
         const obj4 = { attachment: attachmentPreview };
-        tmp5Result = closure_7(closure_10, obj4);
+        tmp5Result = closure_6(closure_9, obj4);
       }
       items3[2] = tmp5Result;
       let tmp5Result2 = null != embedPreview;
       if (tmp5Result2) {
         const obj5 = { embed: embedPreview };
-        tmp5Result2 = closure_7(closure_9, obj5);
+        tmp5Result2 = closure_6(closure_8, obj5);
       }
       const obj6 = { startExpanded: true, children: null };
       const obj7 = { children: null };
       items3[3] = tmp5Result2;
       obj.children = items3;
-      const items4 = [closure_8(closure_6, obj)];
+      const items4 = [closure_7(closure_5, obj)];
       const obj8 = { style: tmp.footer, children: null };
       const obj9 = {
         variant: "primary",
@@ -725,18 +590,18 @@ export const ExplicitMediaFalsePositiveActionSheet = ReactCompilerGating.isReact
         text: null,
         onPress: null,
       };
-      const intl3 = tmp6(onConfirmPress[14]).intl;
-      obj9.text = intl3.string(channelId(onConfirmPress[14]).t["cY+Oob"]);
+      const intl3 = tmp6(onConfirmPress[15]).intl;
+      obj9.text = intl3.string(channelId(onConfirmPress[15]).t["cY+Oob"]);
       obj9.onPress = callback1;
-      const items5 = [closure_7(channelId(onConfirmPress[18]).Button, obj9)];
+      const items5 = [closure_6(channelId(onConfirmPress[19]).Button, obj9)];
       const obj10 = { variant: "secondary", size: "md", text: null, onPress: null };
-      const intl4 = tmp6(onConfirmPress[14]).intl;
-      obj10.text = intl4.string(channelId(onConfirmPress[14]).t["ETE/oC"]);
+      const intl4 = tmp6(onConfirmPress[15]).intl;
+      obj10.text = intl4.string(channelId(onConfirmPress[15]).t["ETE/oC"]);
       obj10.onPress = callback;
-      items5[1] = closure_7(channelId(onConfirmPress[18]).Button, obj10);
+      items5[1] = closure_6(channelId(onConfirmPress[19]).Button, obj10);
       obj8.children = items5;
-      items4[1] = closure_8(closure_4, obj8);
+      items4[1] = closure_7(closure_4, obj8);
       obj7.children = items4;
-      obj6.children = closure_8(closure_4, obj7);
-      return closure_7(channelId(onConfirmPress[19]).BottomSheet, obj6);
+      obj6.children = closure_7(closure_4, obj7);
+      return closure_6(channelId(onConfirmPress[20]).BottomSheet, obj6);
     };

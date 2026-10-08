@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { icon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
 obj2.icon = size;
@@ -17,7 +17,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/native/TableRowApplicationIcon.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (application) => {
+  ? function TableRowApplicationIcon(application) {
       const cResult = c.c(6);
       application = application.application;
       const tmp3 = closure_4();
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = applicationIconSource;
       const obj4 = { id: application.id, icon: application.icon, size: 32 };
     }
-  : (application) => {
+  : function TableRowApplicationIcon(application) {
       application = application.application;
       const obj = { source: null, style: null };
       const tmp = closure_4();

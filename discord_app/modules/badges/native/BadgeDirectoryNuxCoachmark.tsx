@@ -10,11 +10,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const dependencyMap2 = { single: [60], pair: [48, 48], trio: [42, 60, 42] };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   graphicRow: {
     flexDirection: "row",
@@ -36,7 +36,7 @@ obj2.noProgressGraphicRow = { gap: nativeDefault.space.PX_12 };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function NoProgressGraphic() {
       const cResult = c.c(8);
       const tmp4 = closure_9();
       if (cResult[0] === tmp4.graphicRow) {
@@ -85,7 +85,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp5 = items1;
     }
-  : () => {
+  : function NoProgressGraphic() {
       const obj = { style: null, children: null };
       const items = [,];
       ({ graphicRow: arr[0], noProgressGraphicRow: arr[1] } = closure_9());
@@ -100,7 +100,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (badgeIconUrls) => {
+  ? function ProgressGraphic(badgeIconUrls) {
       const cResult = require("c").c(17);
       badgeIconUrls = badgeIconUrls.badgeIconUrls;
       let graphicRow = closure_9();
@@ -129,9 +129,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       if ("fallback" === map.type) {
         const _Symbol2 = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp13 = closure_6(tmp(12915).GameDiversityTier9LargeBadge, { width: 42, height: 42 });
-          const tmp14 = closure_6(tmp(12917).GameDiversityTier10LargeBadge, { width: 60, height: 60 });
-          const tmp15 = closure_6(tmp(12913).GameDiversityTier8LargeBadge, { width: 42, height: 42 });
+          const tmp13 = closure_6(tmp(13064).GameDiversityTier9LargeBadge, { width: 42, height: 42 });
+          const tmp14 = closure_6(tmp(13066).GameDiversityTier10LargeBadge, { width: 60, height: 60 });
+          const tmp15 = closure_6(tmp(13062).GameDiversityTier8LargeBadge, { width: 42, height: 42 });
           cResult[6] = tmp13;
           cResult[7] = tmp14;
           cResult[8] = tmp15;
@@ -165,16 +165,16 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       _require = tmp20;
       const graphicRow2 = graphicRow.graphicRow;
       if (cResult[11] !== dependencyMap2[map.type]) {
-        class B {
+        class R {
           constructor(arg0, arg1) {
             obj = { url: badgeIconUrls, height: closure_0[arg1] };
             return jsx(closure_1(closure_2[14]), obj, badgeIconUrls);
           }
         }
         cResult[11] = tmp20;
-        cResult[12] = B;
+        cResult[12] = R;
       } else {
-        class B {
+        class R {
           constructor(arg0, arg1) {
             obj = { url: badgeIconUrls, height: closure_0[arg1] };
             return jsx(closure_1(closure_2[14]), obj, badgeIconUrls);
@@ -183,10 +183,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const iconUrls = map.iconUrls;
       map = iconUrls.map;
-      const mapped = map(B);
+      const mapped = map(R);
       const tmpResult = require("BadgeDirectoryNuxGraphicUtils");
     }
-  : (badgeIconUrls) => {
+  : function ProgressGraphic(badgeIconUrls) {
       let _require;
       const tmp = closure_9();
       const badgeDirectoryNuxGraphicLayout = require("BadgeDirectoryNuxGraphicUtils").getBadgeDirectoryNuxGraphicLayout(
@@ -195,9 +195,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       if ("fallback" === badgeDirectoryNuxGraphicLayout.type) {
         const obj2 = { style: tmp.graphicRow, children: null };
         const items = [
-          closure_6(tmp2(12915).GameDiversityTier9LargeBadge, { width: 42, height: 42 }),
-          closure_6(tmp2(12917).GameDiversityTier10LargeBadge, { width: 60, height: 60 }),
-          closure_6(tmp2(12913).GameDiversityTier8LargeBadge, { width: 42, height: 42 }),
+          closure_6(tmp2(13064).GameDiversityTier9LargeBadge, { width: 42, height: 42 }),
+          closure_6(tmp2(13066).GameDiversityTier10LargeBadge, { width: 60, height: 60 }),
+          closure_6(tmp2(13062).GameDiversityTier8LargeBadge, { width: 42, height: 42 }),
         ];
         obj2.children = items;
         return closure_7(View, obj2);
@@ -218,7 +218,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/native/BadgeDirectoryNuxCoachmark.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function BadgeDirectoryNuxCoachmark(userId) {
       const cResult = userId(markAsDismissed[7]).c(21);
       userId = userId.userId;
       const variantProps = userId.variantProps;
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let tmp12 = cResult[7];
               }
               if (cResult[8] !== markAsDismissed) {
-                const fn2 = function h() {
+                const fn2 = function l() {
                   return markAsDismissed(ContentDismissActionType.USER_DISMISS);
                 };
                 cResult[8] = markAsDismissed;
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[20] = obj2;
                 tmp18 = obj2;
               }
-              const fn3 = function y() {
+              const fn3 = function w() {
                 markAsDismissed(ContentDismissActionType.TAKE_ACTION);
                 const result = openBadgeDirectoryScreen.openBadgeDirectoryScreen({ targetUserId: userId });
               };
@@ -310,7 +310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[13] = fn3;
               tmp17 = fn3;
             }
-            const fn = function l() {
+            const fn = function h() {
               if (closure_3) {
                 const obj = { badgeIconUrls: variantProps.badgeIconUrls };
                 let tmpResult = timestampProducer(closure_11, obj);
@@ -337,7 +337,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = formatToPlainStringResult;
       }
     }
-  : (userId) => {
+  : function BadgeDirectoryNuxCoachmark(userId) {
       userId = userId.userId;
       const variantProps = userId.variantProps;
       const visible = userId.visible;

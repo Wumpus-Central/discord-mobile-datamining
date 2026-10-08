@@ -66,7 +66,7 @@ let closure_11 = async function _requestPushNotificationPermission(arg0) {
           const obj3 = closure_132_1(closure_132_2[10]);
         } else if (closure_131_3 !== closure_132_10.AUTHORIZED) {
           const permission = closure_132_1(closure_132_2[12]).requestPermission((permission_granted) => {
-            action_location(1252).track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
+            action_location(1264).track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
               action_type,
               action_location,
               permission_granted,
@@ -160,9 +160,9 @@ let closure_12 = async function _enableProvisionalPushNotification() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const EventActionType = fn(12068).EventActionType;
+const EventActionType = fn(12141).EventActionType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_10 = fn(5105).NotificationAuthorizationStatus;
+let closure_10 = fn(7477).NotificationAuthorizationStatus;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -265,7 +265,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_13 = tmp3;
 ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShowReactivationPrompt() {
       const cResult = require("c").c(2);
       const tmp2 = _slicedToArray(noop.useState(false), 2);
       _require = tmp2[1];
@@ -346,7 +346,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp3, tmp4);
       return tmp2[0];
     }
-  : () => {
+  : function useShowReactivationPrompt() {
       [tmp2, require] = noop.useState(false);
       const effect = noop.useEffect(() => {
         closure_0 = async function _shouldShowReactivationPrompts2() {

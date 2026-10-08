@@ -1,6 +1,6 @@
 // discord_app/components_native/common/SafeAreaView.tsx
 import c from "../../../_runtime/00576_c.js";
-import _modDef1342 from "../../../_runtime/metro/01342__.js";
+import _modDef1354 from "../../../_runtime/metro/01354__.js";
 import useSafeAreaInsetsDefault from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import useRefValueDefault from "../../hooks/useRefValue.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/SafeAreaView.tsx");
 
 export const SafeAreaPaddingView = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SafeAreaPaddingView(arg0) {
       const cResult = c.c(13);
       if (cResult[0] !== arg0) {
         ({ top, bottom, left, right, style } = arg0);
@@ -76,7 +76,7 @@ export const SafeAreaPaddingView = ReactCompilerGating.isReactCompilerEnabled()
       items[4] = tmp24;
       importDefault = items;
       const tmp25 = useRefValueDefault(noop.useRef(null));
-      const tmp26 = _modDef1342(items, tmp25);
+      const tmp26 = _modDef1354(items, tmp25);
       closure_2 = tmp26;
       if (tmp26) {
         importDefault = tmp25;
@@ -101,7 +101,7 @@ export const SafeAreaPaddingView = ReactCompilerGating.isReactCompilerEnabled()
         cResult[12] = tmp35;
         tmp29 = tmp35;
       }
-      class V {
+      class R {
         constructor() {
           if (!closure_2) {
             tmp = closure_0;
@@ -113,15 +113,15 @@ export const SafeAreaPaddingView = ReactCompilerGating.isReactCompilerEnabled()
       }
       cResult[7] = tmp26;
       cResult[8] = items;
-      cResult[9] = V;
-      tmp27 = V;
+      cResult[9] = R;
+      tmp27 = R;
       const ref = noop.useRef(null);
       tmp17 = obj2.paddingTop || obj2.paddingVertical || 0;
       tmp18 = obj2.paddingBottom || obj2.paddingVertical || 0;
       tmp19 = obj2.paddingLeft || obj2.paddingHorizontal || 0;
       tmp20 = obj2.paddingRight || obj2.paddingHorizontal || 0;
     }
-  : (top) => {
+  : function SafeAreaPaddingView(top) {
       let flag = top.top;
       if (flag === undefined) {
         flag = false;
@@ -174,7 +174,7 @@ export const SafeAreaPaddingView = ReactCompilerGating.isReactCompilerEnabled()
       items[4] = tmp12;
       current = items;
       const tmp13 = useRefValueDefault(ref);
-      const tmp14 = _modDef1342(items, tmp13);
+      const tmp14 = _modDef1354(items, tmp13);
       closure_2 = tmp14;
       if (tmp14) {
         current = tmp13;

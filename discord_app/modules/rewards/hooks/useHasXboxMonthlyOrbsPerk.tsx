@@ -9,7 +9,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 const PremiumUtilsDefault = PremiumUtils;
 
 require = fn;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const ReactCompilerGating = fn(558);
 function hasCrepeMonthlyOrbsPerk(currentUser) {
   if (obj.canUseMonthlyOrbs(currentUser)) {
@@ -34,11 +34,11 @@ const result = size.fileFinishedImporting("modules/rewards/hooks/useHasXboxMonth
 
 export { hasCrepeMonthlyOrbsPerk };
 export const useHasXboxMonthlyOrbsPerk = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHasXboxMonthlyOrbsPerk() {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function n() {
+        const fn = function o() {
           return currentUser.getCurrentUser();
         };
         cResult[0] = items;
@@ -77,7 +77,7 @@ export const useHasXboxMonthlyOrbsPerk = ReactCompilerGating.isReactCompilerEnab
       }
       return tmp8;
     }
-  : () => {
+  : function useHasXboxMonthlyOrbsPerk() {
       const items = [UserStore];
       const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
       let flag = false;

@@ -35,7 +35,7 @@ function computeCanEveryoneInGuildSeeRoleSubscriptions(id1) {
 const GuildFeatures = fn(1085).GuildFeatures;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useRoleSubscriptionsVisibleInGuild(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       const obj = require("c");
@@ -77,7 +77,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp11;
     }
-  : (arg0) => {
+  : function useRoleSubscriptionsVisibleInGuild(arg0) {
       _require = arg0;
       const tmp = useHasRoleSubscriptionInGuildDefault(arg0);
       let items = [GuildStore, ImpersonateStore];
@@ -121,7 +121,7 @@ export const areRoleSubscriptionsVisibleInGuild = function areRoleSubscriptionsV
 };
 export const useRoleSubscriptionsVisibleInGuild = tmp2;
 export const useShowRoleSubscriptionsInChannelList = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShowRoleSubscriptionsInChannelList(arg0) {
       let tmp = closure_7(arg0);
       const guildEligibleForGuildProducts = GuildProductsEligibility.useGuildEligibleForGuildProducts(arg0);
       if (tmp) {
@@ -133,7 +133,7 @@ export const useShowRoleSubscriptionsInChannelList = ReactCompilerGating.isReact
       }
       return tmp;
     }
-  : (arg0) => {
+  : function useShowRoleSubscriptionsInChannelList(arg0) {
       let tmp = closure_7(arg0);
       const guildEligibleForGuildProducts = GuildProductsEligibility.useGuildEligibleForGuildProducts(arg0);
       if (tmp) {

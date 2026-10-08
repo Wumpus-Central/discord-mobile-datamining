@@ -270,7 +270,7 @@ export const removeConjureDesignAnnotation = function removeConjureDesignAnnotat
 };
 export { subscribeConjureDesignFeedback };
 export const useConjureDesignFeedback = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useConjureDesignFeedback(arg0) {
       _require = arg0;
       const cResult = require("c").c(2);
       if (cResult[0] !== arg0) {
@@ -293,7 +293,7 @@ export const useConjureDesignFeedback = ReactCompilerGating.isReactCompilerEnabl
       }
       return noop.useSyncExternalStore(subscribeConjureDesignFeedback, tmp2, tmp2);
     }
-  : (arg0) => {
+  : function useConjureDesignFeedback(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       const callback = noop.useCallback(() => {

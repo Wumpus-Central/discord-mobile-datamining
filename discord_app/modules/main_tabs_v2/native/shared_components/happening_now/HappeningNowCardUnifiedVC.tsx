@@ -14,7 +14,7 @@ const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCallActivityData(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -65,7 +65,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       return require("useStateFromStores").useStateFromStoresObject(first, tmp8, tmp9);
     }
-  : (arg0) => {
+  : function useCallActivityData(arg0) {
       _require = arg0;
       const items = [EmbeddedActivitiesStore, ApplicationStreamingStore, RelationshipStore];
       const items1 = [arg0];
@@ -108,7 +108,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function HappeningNowCardUnifiedVC(arg0) {
       let tmp = dependencyMap;
       const cResult = c.c(21);
       ({ guildId, index, voiceState, fullwidth, userId, cardKey, panelVariant } = arg0);
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp4 = closure_7(voiceState.channelId);
     }
-  : (arg0) => {
+  : function HappeningNowCardUnifiedVC(arg0) {
       ({ guildId, index, voiceState, fullwidth, panelVariant } = arg0);
       ({ userId, cardKey } = arg0);
       if (panelVariant === undefined) {

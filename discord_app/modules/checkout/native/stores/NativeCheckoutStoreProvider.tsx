@@ -1,7 +1,7 @@
 // discord_app/modules/checkout/native/stores/NativeCheckoutStoreProvider.tsx
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import v12 from "../../../../../_runtime/01266_v1.js";
+import v12 from "../../../../../_runtime/01278_v1.js";
 import PaymentFlowStartedTriggerPoint from "../../../experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -11,24 +11,24 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const NativeCheckoutStore = fn(6943);
+const NativeCheckoutStore = fn(7132);
 ({
   createNativeStore: closure_7,
   NativeCheckoutStoreContext: closure_8,
   NativeCheckoutStoreContextOrNull: closure_9,
 } = NativeCheckoutStore);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let ItemPurchaseType = fn(4875).ItemPurchaseType;
+let ItemPurchaseType = fn(5069).ItemPurchaseType;
 const PaymentGateways = fn(1096).PaymentGateways;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_14 = createStyles.createStyles({
   loadingSpinnerContainer: { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" },
 });
 fn(558);
 const ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (checkoutInitParameters) => {
+  ? function NativeCheckoutStoreProvider(checkoutInitParameters) {
       const cResult = checkoutInitParameters(paymentGateway[11]).c(33);
       checkoutInitParameters = checkoutInitParameters.checkoutInitParameters;
       const order = checkoutInitParameters.order;
@@ -411,7 +411,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = E;
       let obj = checkoutInitParameters(paymentGateway[11]);
     }
-  : (children) => {
+  : function NativeCheckoutStoreProvider(children) {
       ({ checkoutInitParameters: require, order } = children);
       ({
         paymentGateway: dependencyMap,
@@ -421,7 +421,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         checkoutAnalyticsFields: View,
         analyticsInitialStep: closure_7,
       } = children);
-      const contextMetadata = order(5991)(() => {
+      const contextMetadata = order(6174)(() => {
         let id;
         if (order != null) {
           id = order.id;
@@ -434,7 +434,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { message: "Checkout session ID: " + id };
         return { loadId: id, startTime: Date.now() };
       });
-      redux = order(5991)(() => {
+      redux = order(6174)(() => {
         const obj = {};
         const merged = Object.assign(View);
         obj.load_id = contextMetadata.loadId;
@@ -456,7 +456,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         ),
         1,
       )[0];
-      order(5597)(() => {
+      order(5392)(() => {
         if (null != View) {
           const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);
           const obj3 = {};
@@ -473,8 +473,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               checkoutSucceeded = purchaseInFlight;
             }
             if (!checkoutSucceeded) {
-              order(1252).track(first.PAYMENT_FLOW_CANCELED, analyticsFields);
-              const obj = order(1252);
+              order(1264).track(first.PAYMENT_FLOW_CANCELED, analyticsFields);
+              const obj = order(1264);
             }
           };
         }
@@ -501,8 +501,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { checkoutSucceeded: tmp2, order: null };
             ({ id: obj3.id, status: obj3.status } = orderRecord);
             obj2.order = { id: null, status: null };
-            checkoutInitParameters(10554).discardDraftOrder(obj2);
-            const obj = checkoutInitParameters(10554);
+            checkoutInitParameters(10151).discardDraftOrder(obj2);
+            const obj = checkoutInitParameters(10151);
             const obj5 = { id: null, status: null };
           }
         },
@@ -518,7 +518,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkout/native/stores/NativeCheckoutStoreProvider.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (orderRequired) => {
+  ? function NativeCheckoutStoreProviderWrapper(orderRequired) {
       const cResult = require("c").c(38);
       orderRequired = orderRequired.orderRequired;
       _require = orderRequired;
@@ -555,7 +555,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7 = paymentGateway(isGift[12]);
       const mobileStoreFront = paymentGateway(isGift[13]).useMobileStoreFront();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        class W {
+        class K {
           constructor() {
             obj = paymentGateway(isGift[14]);
             dispatchResult = obj.dispatch({ type: "IAP_CHECKOUT_START" });
@@ -565,11 +565,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         let items = [];
-        cResult[0] = W;
+        cResult[0] = K;
         cResult[1] = items;
         let tmp12 = items;
       } else {
-        class W {
+        class K {
           constructor() {
             obj = paymentGateway(isGift[14]);
             dispatchResult = obj.dispatch({ type: "IAP_CHECKOUT_START" });
@@ -580,9 +580,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp12 = cResult[1];
       }
-      const effect = defaultPlans.useEffect(W, tmp12);
+      const effect = defaultPlans.useEffect(K, tmp12);
       if (cResult[2] === initialExternalGatewayFacet) {
-        class W {
+        class K {
           constructor() {
             obj = paymentGateway(isGift[14]);
             dispatchResult = obj.dispatch({ type: "IAP_CHECKOUT_START" });
@@ -667,7 +667,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = onOrderCreated;
       cResult[5] = paymentGateway;
       if (mobileStoreFront != null) {
-        class W {
+        class K {
           constructor() {
             obj = paymentGateway(isGift[14]);
             dispatchResult = obj.dispatch({ type: "IAP_CHECKOUT_START" });
@@ -677,7 +677,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn = function () {
+      function t4() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -686,12 +686,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      };
+      }
       cResult[6] = undefined;
-      cResult[7] = fn;
+      cResult[7] = t4;
       const tmp6Result = paymentGateway(isGift[13]);
     }
-  : (orderRequired) => {
+  : function NativeCheckoutStoreProviderWrapper(orderRequired) {
       orderRequired = orderRequired.orderRequired;
       _require = orderRequired;
       ({ skuIds, paymentGateway } = orderRequired);

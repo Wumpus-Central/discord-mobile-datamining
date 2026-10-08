@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/useShouldDisplayCancelConsoleTransfer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShouldDisplayCancelConsoleTransfer(arg0) {
       _require = arg0;
       const cResult = require("c").c(5);
       if (cResult[0] !== arg0) {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp5, tmp6);
       return tmp4;
     }
-  : (arg0) => {
+  : function useShouldDisplayCancelConsoleTransfer(arg0) {
       closure_0 = arg0;
       const tmp = _slicedToArray(
         noop.useState(() => {

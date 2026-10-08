@@ -12,7 +12,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAccountCanUseWebAuthnView() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t() {
@@ -41,8 +41,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      noop.useCallback(() => {
+  : function useAccountCanUseWebAuthnView() {
+      return noop.useCallback(() => {
         currentUser = currentUser.getCurrentUser();
         let flag;
         if (currentUser != null) {
@@ -61,9 +61,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return flag;
       }, []);
-const SettingBuilders = fn(11142);
+    };
+const SettingBuilders = fn(11262);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAccountSecurityKeysSettingTrailing() {
       const cResult = c.c(2);
       if (!WebAuthnStore.hasFetchedCredentials()) {
         const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
@@ -84,7 +85,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp6, tmp7);
     }
-  : () => {
+  : function useAccountSecurityKeysSettingTrailing() {
       if (!WebAuthnStore.hasFetchedCredentials()) {
         const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
       }
@@ -99,10 +100,10 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t["0N1s81"]);
   },
-  parent: fn(7645).MobileUserSettings.ACCOUNT,
+  parent: fn(7966).MobileUserSettings.ACCOUNT,
   usePreNavigationAction: tmp2,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useAccountSecurityKeysSettingTrailing() {
         const cResult = c.c(2);
         if (!WebAuthnStore.hasFetchedCredentials()) {
           const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
@@ -123,7 +124,7 @@ const route = SettingBuilders.createRoute({
         }
         return initialize.useStateFromStores(tmp6, tmp7);
       }
-    : () => {
+    : function useAccountSecurityKeysSettingTrailing() {
         if (!WebAuthnStore.hasFetchedCredentials()) {
           const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
         }

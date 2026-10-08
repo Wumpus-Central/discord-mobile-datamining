@@ -23,12 +23,13 @@ let closure_3 = [
   "countryCode",
   "onPressCountrySelector",
   "forceMode",
+  "ref",
 ];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
-let obj = {
+const createStyles = fn(5090);
+let obj2 = {
   label: { marginBottom: 8 },
   input: { flexGrow: 1, marginBottom: 8 },
   error: { marginBottom: 8 },
@@ -44,10 +45,10 @@ let obj = {
     marginVertical: -4,
   },
 };
-let closure_9 = createStyles.createStyles(obj);
+let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CountryCodeSelector(arg0) {
       const cResult = c.c(19);
       ({ alpha2, onPress } = arg0);
       ({ show, countryCode } = arg0);
@@ -157,7 +158,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         return null;
       }
     }
-  : (alpha2) => {
+  : function CountryCodeSelector(alpha2) {
       let str = alpha2.alpha2;
       ({ show, countryCode, onPress } = alpha2);
       const tmp = closure_9();
@@ -206,383 +207,292 @@ let obj3 = {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/phone/native/FormPhoneOrEmail.tsx");
 
-export default noop.forwardRef(
-  ReactCompilerGating.isReactCompilerEnabled()
-    ? (alpha2, arg1) => {
-        const cResult = require("c").c(63);
-        if (cResult[0] !== alpha2) {
-          ({ style, textInputStyle, label, error, value, hint, onChangeText } = alpha2);
-          closure_3 = onChangeText;
-          alpha2 = alpha2.alpha2;
-          _require = alpha2;
-          const countryCode = alpha2.countryCode;
-          importDefault = countryCode;
-          const onPressCountrySelector = alpha2.onPressCountrySelector;
-          onPress = onPressCountrySelector;
-          const forceMode = alpha2.forceMode;
-          dependencyMap = forceMode;
-          const tmp18 = onPress(alpha2, closure_3);
-          cResult[0] = alpha2;
-          cResult[1] = alpha2;
-          cResult[2] = countryCode;
-          cResult[3] = error;
-          cResult[4] = forceMode;
-          cResult[5] = hint;
-          cResult[6] = label;
-          cResult[7] = onChangeText;
-          cResult[8] = onPressCountrySelector;
-          cResult[9] = tmp18;
-          cResult[10] = style;
-          cResult[11] = textInputStyle;
-          cResult[12] = value;
-          let tmp15 = value;
-          let tmp9 = label;
-          const tmp11 = onPressCountrySelector;
-        } else {
-          _require = cResult[1];
-          importDefault = cResult[2];
-          dependencyMap = cResult[4];
-          tmp9 = cResult[6];
-          closure_3 = cResult[7];
-          onPress = cResult[8];
-          tmp15 = cResult[12];
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? function FormPhoneOrEmail(alpha2) {
+      const cResult = require("c").c(64);
+      if (cResult[0] !== alpha2) {
+        ({ style, textInputStyle, label, error, value, hint, onChangeText } = alpha2);
+        closure_3 = onChangeText;
+        alpha2 = alpha2.alpha2;
+        _require = alpha2;
+        const countryCode = alpha2.countryCode;
+        importDefault = countryCode;
+        const onPressCountrySelector = alpha2.onPressCountrySelector;
+        onPress = onPressCountrySelector;
+        const forceMode = alpha2.forceMode;
+        dependencyMap = forceMode;
+        let ref = alpha2.ref;
+        const tmp19 = onPress(alpha2, closure_3);
+        cResult[0] = alpha2;
+        cResult[1] = alpha2;
+        cResult[2] = countryCode;
+        cResult[3] = error;
+        cResult[4] = forceMode;
+        cResult[5] = hint;
+        cResult[6] = label;
+        cResult[7] = onChangeText;
+        cResult[8] = onPressCountrySelector;
+        cResult[9] = ref;
+        cResult[10] = tmp19;
+        cResult[11] = style;
+        cResult[12] = textInputStyle;
+        cResult[13] = value;
+        let tmp16 = value;
+        let tmp9 = label;
+        const tmp11 = onPressCountrySelector;
+      } else {
+        _require = cResult[1];
+        importDefault = cResult[2];
+        dependencyMap = cResult[4];
+        tmp9 = cResult[6];
+        closure_3 = cResult[7];
+        onPress = cResult[8];
+        tmp16 = cResult[13];
+      }
+      const tmp20 = closure_9();
+      if (cResult[14] === tmp7) {
+        if (cResult[15] === tmp16) {
+          let tmp21 = cResult[16];
         }
-        const obj = require("c");
-        const tmp = _require;
-        if (cResult[13] === tmp7) {
-          if (cResult[14] === tmp15) {
-            let tmp20 = cResult[15];
-          }
-          show = tmp20;
-          if (cResult[16] === tmp5) {
-            if (cResult[17] === tmp7) {
-              if (cResult[18] === onChangeText) {
-                let tmp22 = cResult[19];
+        show = tmp21;
+        if (cResult[17] === tmp5) {
+          if (cResult[18] === tmp7) {
+            if (cResult[19] === onChangeText) {
+              let tmp23 = cResult[20];
+            }
+            if (cResult[21] === tmp23) {
+              if (cResult[22] === tmp16) {
+                let tmp24 = cResult[23];
               }
-              if (cResult[20] === tmp22) {
-                if (cResult[21] === tmp15) {
-                  let tmp23 = cResult[22];
-                }
-                current = tmp23;
-                class M {
-                  constructor(arg0) {
-                    obj = closure_0(closure_2[11]);
-                    str = "";
-                    if (obj.shouldShowCountryCodeSelector(closure_2, alpha2)) {
-                      str = closure_1;
-                    }
-                    if (closure_3 != null) {
-                      tmp = closure_3(alpha2, str);
-                    }
+              current = tmp24;
+              ref = show.useRef(tmp24);
+              if (cResult[24] !== tmp24) {
+                class I {
+                  constructor() {
+                    closure_7.current = closure_6;
                     return;
                   }
                 }
-                if (cResult[23] !== tmp23) {
-                  class I {
-                    constructor() {
-                      closure_7.current = closure_6;
-                      return;
-                    }
+                cResult[24] = tmp24;
+                cResult[25] = I;
+              } else {
+                class I {
+                  constructor() {
+                    closure_7.current = closure_6;
+                    return;
                   }
-                  cResult[23] = tmp23;
-                  class M {
-                    constructor(arg0) {
-                      obj = closure_0(closure_2[11]);
-                      str = "";
-                      if (obj.shouldShowCountryCodeSelector(closure_2, alpha2)) {
-                        str = closure_1;
-                      }
-                      if (closure_3 != null) {
-                        tmp = closure_3(alpha2, str);
-                      }
-                      return;
-                    }
-                  }
-                  cResult[24] = I;
-                } else {
-                  class I {
-                    constructor() {
-                      closure_7.current = closure_6;
-                      return;
-                    }
-                  }
-                }
-                const effect = obj3.useEffect(I);
-                const _Symbol = Symbol;
-                if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                  class B {
-                    constructor() {
-                      iter = closure_7.current;
-                      handleChangeTextResult = iter.handleChangeText(iter.value);
-                      return;
-                    }
-                  }
-                  cResult[25] = B;
-                  class M {
-                    constructor(arg0) {
-                      obj = closure_0(closure_2[11]);
-                      str = "";
-                      if (obj.shouldShowCountryCodeSelector(closure_2, alpha2)) {
-                        str = closure_1;
-                      }
-                      if (closure_3 != null) {
-                        tmp = closure_3(alpha2, str);
-                      }
-                      return;
-                    }
-                  }
-                } else {
-                  class B {
-                    constructor() {
-                      iter = closure_7.current;
-                      handleChangeTextResult = iter.handleChangeText(iter.value);
-                      return;
-                    }
-                  }
-                }
-                if (cResult[26] !== tmp5) {
-                  class B {
-                    constructor() {
-                      iter = closure_7.current;
-                      handleChangeTextResult = iter.handleChangeText(iter.value);
-                      return;
-                    }
-                  }
-                  tmp31[0] = tmp5;
-                  class M {
-                    constructor(arg0) {
-                      obj = closure_0(closure_2[11]);
-                      str = "";
-                      if (obj.shouldShowCountryCodeSelector(closure_2, alpha2)) {
-                        str = closure_1;
-                      }
-                      if (closure_3 != null) {
-                        tmp = closure_3(alpha2, str);
-                      }
-                      return;
-                    }
-                  }
-                  cResult[27] = tmp31;
-                } else {
-                  class B {
-                    constructor() {
-                      iter = closure_7.current;
-                      handleChangeTextResult = iter.handleChangeText(iter.value);
-                      return;
-                    }
-                  }
-                }
-                const effect1 = obj3.useEffect(tmp29, tmp31);
-                if (cResult[28] === tmp9) {
-                  class B {
-                    constructor() {
-                      iter = closure_7.current;
-                      handleChangeTextResult = iter.handleChangeText(iter.value);
-                      return;
-                    }
-                  }
-                  if (cResult[31] === tmp4) {
-                    class B {
-                      constructor() {
-                        iter = closure_7.current;
-                        handleChangeTextResult = iter.handleChangeText(iter.value);
-                        return;
-                      }
-                    }
-                  }
-                  class G {
-                    constructor() {
-                      obj = { show: closure_5, alpha2: closure_0, countryCode: closure_1, onPress: closure_4 };
-                      return jsx(f38164, obj);
-                    }
-                  }
-                  class M {
-                    constructor(arg0) {
-                      obj = closure_0(closure_2[11]);
-                      str = "";
-                      if (obj.shouldShowCountryCodeSelector(closure_2, alpha2)) {
-                        str = closure_1;
-                      }
-                      if (closure_3 != null) {
-                        tmp = closure_3(alpha2, str);
-                      }
-                      return;
-                    }
-                  }
-                  cResult[31] = tmp4;
-                  cResult[32] = tmp5;
-                  cResult[33] = tmp11;
-                  cResult[34] = tmp20;
-                  cResult[35] = G;
-                }
-                let tmp34 = null;
-                if (null != tmp9) {
-                  class B {
-                    constructor() {
-                      iter = closure_7.current;
-                      handleChangeTextResult = iter.handleChangeText(iter.value);
-                      return;
-                    }
-                  }
-                  class G {
-                    constructor() {
-                      obj = { show: closure_5, alpha2: closure_0, countryCode: closure_1, onPress: closure_4 };
-                      return jsx(f38164, obj);
-                    }
-                  }
-                  class M {
-                    constructor(arg0) {
-                      obj = closure_0(closure_2[11]);
-                      str = "";
-                      if (obj.shouldShowCountryCodeSelector(closure_2, alpha2)) {
-                        str = closure_1;
-                      }
-                      if (closure_3 != null) {
-                        tmp = closure_3(alpha2, str);
-                      }
-                      return;
-                    }
-                  }
-                  tmp36[1] = tmp9;
-                  tmp34 = ref(FreeFormLabelDefault, tmp36);
-                }
-                cResult[28] = tmp9;
-                cResult[29] = tmp19.label;
-                cResult[30] = tmp34;
-              }
-              class M {
-                constructor(arg0) {
-                  obj = closure_0(closure_2[11]);
-                  str = "";
-                  if (obj.shouldShowCountryCodeSelector(closure_2, alpha2)) {
-                    str = closure_1;
-                  }
-                  if (closure_3 != null) {
-                    tmp = closure_3(alpha2, str);
-                  }
-                  return;
                 }
               }
-              tmp24[1] = tmp15;
-              cResult[20] = tmp22;
-              cResult[21] = tmp15;
-              cResult[22] = tmp24;
-              tmp23 = tmp24;
+              const effect = obj3.useEffect(I);
+              const _Symbol = Symbol;
+              if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
+                class B {
+                  constructor() {
+                    iter = closure_7.current;
+                    handleChangeTextResult = iter.handleChangeText(iter.value);
+                    return;
+                  }
+                }
+                cResult[26] = B;
+              } else {
+                class B {
+                  constructor() {
+                    iter = closure_7.current;
+                    handleChangeTextResult = iter.handleChangeText(iter.value);
+                    return;
+                  }
+                }
+              }
+              if (cResult[27] !== tmp5) {
+                class B {
+                  constructor() {
+                    iter = closure_7.current;
+                    handleChangeTextResult = iter.handleChangeText(iter.value);
+                    return;
+                  }
+                }
+                tmp32[0] = tmp5;
+                cResult[27] = tmp5;
+                cResult[28] = tmp32;
+              } else {
+                class B {
+                  constructor() {
+                    iter = closure_7.current;
+                    handleChangeTextResult = iter.handleChangeText(iter.value);
+                    return;
+                  }
+                }
+              }
+              const effect1 = obj3.useEffect(B, tmp32);
+              if (cResult[29] === tmp9) {
+                class B {
+                  constructor() {
+                    iter = closure_7.current;
+                    handleChangeTextResult = iter.handleChangeText(iter.value);
+                    return;
+                  }
+                }
+                if (cResult[32] === tmp4) {
+                  class B {
+                    constructor() {
+                      iter = closure_7.current;
+                      handleChangeTextResult = iter.handleChangeText(iter.value);
+                      return;
+                    }
+                  }
+                }
+                class G {
+                  constructor() {
+                    obj = { show: closure_5, alpha2: closure_0, countryCode: closure_1, onPress: closure_4 };
+                    return jsx(CountryCodeSelector, obj);
+                  }
+                }
+                cResult[32] = tmp4;
+                cResult[33] = tmp5;
+                cResult[34] = tmp11;
+                cResult[35] = tmp21;
+                cResult[36] = G;
+              }
+              let tmp35 = null;
+              if (null != tmp9) {
+                class B {
+                  constructor() {
+                    iter = closure_7.current;
+                    handleChangeTextResult = iter.handleChangeText(iter.value);
+                    return;
+                  }
+                }
+                class G {
+                  constructor() {
+                    obj = { show: closure_5, alpha2: closure_0, countryCode: closure_1, onPress: closure_4 };
+                    return jsx(CountryCodeSelector, obj);
+                  }
+                }
+                tmp37[0] = tmp20.label;
+                tmp37[1] = tmp9;
+                tmp35 = ref(FreeFormLabelDefault, tmp37);
+              }
+              cResult[29] = tmp9;
+              cResult[30] = tmp20.label;
+              cResult[31] = tmp35;
             }
+            tmp25[0] = tmp23;
+            tmp25[1] = tmp16;
+            cResult[21] = tmp23;
+            cResult[22] = tmp16;
+            cResult[23] = tmp25;
+            tmp24 = tmp25;
           }
-          class M {
-            constructor(arg0) {
-              obj = closure_0(closure_2[11]);
-              str = "";
-              if (obj.shouldShowCountryCodeSelector(closure_2, alpha2)) {
-                str = closure_1;
-              }
-              if (closure_3 != null) {
-                tmp = closure_3(alpha2, str);
-              }
-              return;
-            }
-          }
-          cResult[16] = tmp5;
-          cResult[17] = tmp7;
-          cResult[18] = onChangeText;
-          cResult[19] = M;
-          tmp22 = M;
         }
-        tmp19 = closure_9();
-        const result = tmp(6458).shouldShowCountryCodeSelector(tmp7, tmp15);
-        cResult[13] = tmp7;
-        cResult[14] = tmp15;
-        cResult[15] = result;
-        tmp20 = result;
-        const tmpResult = tmp(6458);
-      }
-    : (arg0, ref) => {
-        ({ label, error, value, hint, onChangeText: require, alpha2: importDefault, countryCode } = arg0);
-        ({ onPressCountrySelector: closure_3, forceMode } = arg0);
-        ({ style, textInputStyle } = arg0);
-        const merged = Object.assign(
-          arg0,
-          Object.assign({
-            style: 0,
-            textInputStyle: 0,
-            label: 0,
-            error: 0,
-            value: 0,
-            hint: 0,
-            onChangeText: 0,
-            alpha2: 0,
-            countryCode: 0,
-            onPressCountrySelector: 0,
-            forceMode: 0,
-          }),
-        );
         function handleChangeText(cResult) {
           let str = "";
-          if (obj.shouldShowCountryCodeSelector(forceMode, cResult)) {
-            str = countryCode;
+          if (obj.shouldShowCountryCodeSelector(closure_2, cResult)) {
+            str = closure_1;
           }
-          if (_require != null) {
-            _require(cResult, str);
+          if (closure_3 != null) {
+            closure_3(cResult, str);
           }
         }
-        const tmp2 = closure_9();
-        show = require("PhoneOrEmailUtils").shouldShowCountryCodeSelector(forceMode, value);
-        const obj2 = { handleChangeText, value };
-        ref = show.useRef(obj2);
-        const effect = show.useEffect(() => {
-          closure_7.current = obj2;
-        });
-        const items = [countryCode];
-        const effect1 = show.useEffect(() => {
-          ref.current.handleChangeText(ref.current.value);
-        }, items);
-        const obj3 = { style, children: null };
-        let tmp9 = null;
-        if (null != label) {
-          const obj4 = { style: tmp2.label, children: label };
-          tmp9 = ref(require("FreeFormLabel"), obj4);
+        cResult[17] = tmp5;
+        cResult[18] = tmp7;
+        cResult[19] = onChangeText;
+        cResult[20] = handleChangeText;
+        tmp23 = handleChangeText;
+      }
+      const obj = require("c");
+      const result = require("PhoneOrEmailUtils").shouldShowCountryCodeSelector(tmp7, tmp16);
+      cResult[14] = tmp7;
+      cResult[15] = tmp16;
+      cResult[16] = result;
+      tmp21 = result;
+      const tmpResult = require("PhoneOrEmailUtils");
+    }
+  : function FormPhoneOrEmail(arg0) {
+      ({ label, error, value, hint, onChangeText: require, alpha2: importDefault, countryCode } = arg0);
+      ({ onPressCountrySelector: closure_3, forceMode } = arg0);
+      ({ style, textInputStyle, ref } = arg0);
+      const merged = Object.assign(
+        arg0,
+        Object.assign({
+          style: 0,
+          textInputStyle: 0,
+          label: 0,
+          error: 0,
+          value: 0,
+          hint: 0,
+          onChangeText: 0,
+          alpha2: 0,
+          countryCode: 0,
+          onPressCountrySelector: 0,
+          forceMode: 0,
+          ref: 0,
+        }),
+      );
+      function handleChangeText(cResult) {
+        let str = "";
+        if (obj.shouldShowCountryCodeSelector(forceMode, cResult)) {
+          str = countryCode;
         }
-        const items1 = [tmp9, , ,];
-        const obj5 = {};
-        const obj = require("PhoneOrEmailUtils");
-        const tmp8 = obj2;
-        const merged1 = Object.assign(merged);
-        obj5.renderLeadingComponent = function renderLeadingComponent() {
-          return React5(closure_10, { show, alpha2, countryCode, onPress });
-        };
-        obj5.error = null != error;
-        obj5.ref = ref;
-        obj5.value = value;
-        const items2 = [tmp2.input, textInputStyle];
-        obj5.style = items2;
-        obj5.onChangeText = handleChangeText;
-        let str = "emailAddress";
-        if (forceMode === require("PhoneOrEmailUtils").PhoneOrEmailSelectorForceMode.PHONE) {
-          str = "telephoneNumber";
+        if (_require != null) {
+          _require(cResult, str);
         }
-        obj5.textContentType = str;
-        let str2 = "email-address";
-        if (forceMode === require("PhoneOrEmailUtils").PhoneOrEmailSelectorForceMode.PHONE) {
-          str2 = "phone-pad";
-        }
-        obj5.keyboardType = str2;
-        obj5.accessibilityLabel = label;
-        obj5.accessibilityHint = hint;
-        items1[1] = ref(require("FreeFormTextInput"), obj5);
-        let tmp12Result = null;
-        if (null != error) {
-          const obj6 = { style: tmp2.error, children: error };
-          tmp12Result = tmp12(require("FreeFormErrorLabel"), obj6);
-        }
-        items1[2] = tmp12Result;
-        let tmp12Result2 = null;
-        if (null != hint) {
-          const obj7 = { style: tmp2.hint, variant: "text-xs/medium", color: "text-muted", children: hint };
-          tmp12Result2 = tmp12(require("Text/Text").Text, obj7);
-        }
-        items1[3] = tmp12Result2;
-        obj3.children = items1;
-        return closure_8(tmp8, obj3);
-      },
-);
+      }
+      const tmp2 = closure_9();
+      show = require("PhoneOrEmailUtils").shouldShowCountryCodeSelector(forceMode, value);
+      const obj2 = { handleChangeText, value };
+      ref = show.useRef(obj2);
+      const effect = show.useEffect(() => {
+        closure_7.current = obj2;
+      });
+      const items = [countryCode];
+      const effect1 = show.useEffect(() => {
+        ref.current.handleChangeText(ref.current.value);
+      }, items);
+      const obj3 = { style, children: null };
+      let tmp9 = null;
+      if (null != label) {
+        const obj4 = { style: tmp2.label, children: label };
+        tmp9 = ref(require("FreeFormLabel"), obj4);
+      }
+      const items1 = [tmp9, , ,];
+      const obj5 = {};
+      const obj = require("PhoneOrEmailUtils");
+      const tmp8 = obj2;
+      const merged1 = Object.assign(merged);
+      obj5.renderLeadingComponent = function renderLeadingComponent() {
+        return React5(closure_10, { show, alpha2, countryCode, onPress });
+      };
+      obj5.error = null != error;
+      obj5.ref = ref;
+      obj5.value = value;
+      const items2 = [tmp2.input, textInputStyle];
+      obj5.style = items2;
+      obj5.onChangeText = handleChangeText;
+      let str = "emailAddress";
+      if (forceMode === require("PhoneOrEmailUtils").PhoneOrEmailSelectorForceMode.PHONE) {
+        str = "telephoneNumber";
+      }
+      obj5.textContentType = str;
+      let str2 = "email-address";
+      if (forceMode === require("PhoneOrEmailUtils").PhoneOrEmailSelectorForceMode.PHONE) {
+        str2 = "phone-pad";
+      }
+      obj5.keyboardType = str2;
+      obj5.accessibilityLabel = label;
+      obj5.accessibilityHint = hint;
+      items1[1] = ref(require("FreeFormTextInput"), obj5);
+      let tmp12Result = null;
+      if (null != error) {
+        const obj6 = { style: tmp2.error, children: error };
+        tmp12Result = tmp12(require("FreeFormErrorLabel"), obj6);
+      }
+      items1[2] = tmp12Result;
+      let tmp12Result2 = null;
+      if (null != hint) {
+        const obj7 = { style: tmp2.hint, variant: "text-xs/medium", color: "text-muted", children: hint };
+        tmp12Result2 = tmp12(require("Text/Text").Text, obj7);
+      }
+      items1[3] = tmp12Result2;
+      obj3.children = items1;
+      return closure_8(tmp8, obj3);
+    };

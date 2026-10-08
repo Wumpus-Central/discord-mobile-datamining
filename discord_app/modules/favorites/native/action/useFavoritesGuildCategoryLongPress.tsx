@@ -11,17 +11,17 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (getGuildId) => {
+  ? function useFavoritesGuildCategoryLongPress(getGuildId) {
       const cResult = id(576).c(5);
       if (cResult[0] !== getGuildId) {
-        let isFavoritesGuildIdResult = tmp(2077).isFavoritesGuildId(getGuildId.getGuildId());
+        let isFavoritesGuildIdResult = tmp(2089).isFavoritesGuildId(getGuildId.getGuildId());
         if (isFavoritesGuildIdResult) {
           isFavoritesGuildIdResult = getGuildId.type === ChannelTypes.GUILD_CATEGORY;
         }
         cResult[0] = getGuildId;
         cResult[1] = isFavoritesGuildIdResult;
         let tmp4 = isFavoritesGuildIdResult;
-        const tmpResult = tmp(2077);
+        const tmpResult = tmp(2089);
       } else {
         tmp4 = cResult[1];
       }
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = tmp8;
       const obj = id(576);
     }
-  : (getGuildId) => {
+  : function useFavoritesGuildCategoryLongPress(getGuildId) {
       let isFavoritesGuildIdResult = FavoritesUtils.isFavoritesGuildId(getGuildId.getGuildId());
       if (isFavoritesGuildIdResult) {
         isFavoritesGuildIdResult = getGuildId.type === ChannelTypes.GUILD_CATEGORY;

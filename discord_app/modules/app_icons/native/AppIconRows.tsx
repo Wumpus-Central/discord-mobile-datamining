@@ -7,7 +7,7 @@ import AppIconTypes from "../AppIconTypes.tsx";
 import AppIconUtils from "AppIconUtils.tsx";
 import AppIconRowDefault from "AppIconRow/AppIconRow.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import _objectDestructuringEmpty from "../../../../_runtime/11884__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../_runtime/11956__objectDestructuringEmpty.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -16,11 +16,11 @@ const View = fn(17).View;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BackwardsCompatibleAppIconRows(arg0) {
       const cResult = merged(576).c(11);
       _objectDestructuringEmpty(arg0);
       merged = Object.assign({}, arg0);
@@ -29,19 +29,18 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       [importDefault, dependencyMap] = onLongPress(noop.useState(false), 2);
       ({ icons, title } = merged);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function p(arg0) {
+        onLongPress = function onLongPress(noop) {
           let tmp = null;
-          if (arg0 === AppIconTypes.FreemiumAppIconIds.DEFAULT) {
+          if (noop === AppIconTypes.FreemiumAppIconIds.DEFAULT) {
             tmp = dependencyMap(true);
           }
           return tmp;
         };
-        cResult[0] = fn;
-        onLongPress = fn;
+        cResult[0] = onLongPress;
       } else {
         onLongPress = cResult[0];
       }
-      const TableRowGroup = tmp(6081).TableRowGroup;
+      const TableRowGroup = tmp(6267).TableRowGroup;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
         const stringResult = intl.string(tmp(1126).t.N4YDao);
@@ -98,7 +97,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = tmp14;
       const tmp7 = onLongPress(noop.useState(false), 2);
     }
-  : (arg0) => {
+  : function BackwardsCompatibleAppIconRows(arg0) {
       if (arg0 == null) {
         throw new TypeError("Cannot destructure 'undefined' or 'null'.");
       } else {
@@ -134,7 +133,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           obj.onLongPress = onLongPress;
           return createElement(AppIconRowDefault, {});
         });
-        obj.children = closure_9(merged(6081).TableRowGroup, obj2);
+        obj.children = closure_9(merged(6267).TableRowGroup, obj2);
         return closure_9(View, obj);
       }
     };
@@ -143,7 +142,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onSelect) => {
+  ? function AppIconRows(onSelect) {
       const cResult = c.c(26);
       onSelect = onSelect.onSelect;
       const tmp4 = closure_12();
@@ -223,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         const obj3 = { children: null };
                         const items1 = [tmp14, tmp24];
                         obj3.children = items1;
-                        const tmp31 = closure_1_11(v65535, obj3);
+                        const tmp31 = closure_1_11(collapsed, obj3);
                         cResult[23] = tmp14;
                         cResult[24] = tmp24;
                         cResult[25] = tmp31;
@@ -269,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = tmp15;
       const tmpResult = initialize;
     }
-  : (onSelect) => {
+  : function AppIconRows(onSelect) {
       onSelect = onSelect.onSelect;
       const tmp = closure_12();
       const appIcons = AppIconUtils.useAppIcons();
@@ -311,5 +310,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj5.children = options(closure_13, obj6);
       items1[1] = options(View, obj5);
       obj7.children = items1;
-      return closure_1_11(v65535, obj7);
+      return closure_1_11(collapsed, obj7);
     };

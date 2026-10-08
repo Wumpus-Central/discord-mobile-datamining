@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const fetchProjectMcpConnection = fn(12923).fetchProjectMcpConnection;
+const fetchProjectMcpConnection = fn(13072).fetchProjectMcpConnection;
 let closure_6 = {
   setTimeout(arg0, arg1) {
     return setTimeout(arg0, arg1);
@@ -192,7 +192,7 @@ const result = size.fileFinishedImporting("modules/conjure/external_connections/
 export const MCP_CONNECTION_MIN_REFETCH_MS = 15000;
 export { McpConnectionPanel };
 export const useMcpConnectionPanel = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useMcpConnectionPanel(arg0) {
       _require = arg0;
       const cResult = require("c").c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -262,7 +262,7 @@ export const useMcpConnectionPanel = ReactCompilerGating.isReactCompilerEnabled(
       }
       return tmp9;
     }
-  : (arg0) => {
+  : function useMcpConnectionPanel(arg0) {
       closure_0 = arg0;
       [tmp2, dependencyMap] = noop.useState({ connection: null, loading: true, failed: false });
       _slicedToArray = noop.useRef(null);

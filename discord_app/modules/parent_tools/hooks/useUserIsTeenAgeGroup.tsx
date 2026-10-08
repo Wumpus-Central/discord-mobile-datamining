@@ -9,11 +9,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useUserIsTeenAgeGroup.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useUserIsTeenAgeGroup() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FamilyCenterStore];
-        const fn = function n() {
+        const fn = function s() {
           return ageGroup.getAgeGroup();
         };
         cResult[0] = items;
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return "teen" === initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useUserIsTeenAgeGroup() {
       const items = [FamilyCenterStore];
       return "teen" === initialize.useStateFromStores(items, () => ageGroup.getAgeGroup());
     };

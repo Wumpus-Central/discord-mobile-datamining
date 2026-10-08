@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/SafetyGuildSettingGuildSelect.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useDMPermissionsOverrideCount from "../../privacy_and_safety/useDMPermissionsOverrideCount.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -9,20 +9,20 @@ import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 import UserSettingSearchStore from "../../UserSettingSearchStore.tsx";
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(15815);
+const UserSettingsSafetySelectedGuildStore = fn(16074);
 ({
   getSelectedGuildId: metroRequire,
   GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7,
   setSelectedGuildId: closure_8,
   useUserSafetySettingsSelectedGuildStore: closure_9,
 } = UserSettingsSafetySelectedGuildStore);
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 let items = [,];
 ({ GUILD_SETTING_ACTIVITY_STATUS: arr[0], GUILD_SETTING_ACTIVITY_JOINING: arr[1] } = MobileUserSettings);
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSelectedGuildId() {
       const cResult = field(576).c(3);
       field = UserSettingSearchStore.useField("selected");
       if (cResult[0] !== field) {
@@ -52,7 +52,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp3, tmp4);
       return closure_9().selectedGuildId;
     }
-  : () => {
+  : function useSelectedGuildId() {
       const field = UserSettingSearchStore.useField("selected");
       items = [field];
       const effect = noop.useEffect(() => {
@@ -70,9 +70,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       return closure_9().selectedGuildId;
     };
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDescription() {
       const cResult = c.c(2);
       const dMPermissionsOverrideCount = useDMPermissionsOverrideCount.useDMPermissionsOverrideCount();
       if (options().selectedGuildId === React5) {
@@ -91,7 +91,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : () => {
+  : function useDescription() {
       const dMPermissionsOverrideCount = useDMPermissionsOverrideCount.useDMPermissionsOverrideCount();
       if (options().selectedGuildId === React5) {
         if (0 !== dMPermissionsOverrideCount) {
@@ -105,7 +105,7 @@ const guildSelector = SettingBuilders.createGuildSelector({
   unsearchable: true,
   useSelectedGuildId: tmp3,
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useDescription() {
         const cResult = c.c(2);
         const dMPermissionsOverrideCount = useDMPermissionsOverrideCount.useDMPermissionsOverrideCount();
         if (options().selectedGuildId === React5) {
@@ -124,7 +124,7 @@ const guildSelector = SettingBuilders.createGuildSelector({
           }
         }
       }
-    : () => {
+    : function useDescription() {
         const dMPermissionsOverrideCount = useDMPermissionsOverrideCount.useDMPermissionsOverrideCount();
         if (options().selectedGuildId === React5) {
           if (0 !== dMPermissionsOverrideCount) {
@@ -137,7 +137,7 @@ const guildSelector = SettingBuilders.createGuildSelector({
   parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15816, dependencyMap.paths),
+      asyncRequireImpl(16075, dependencyMap.paths),
       "SettingsPrivacyAndSafetyGuildSelectActionSheet",
     );
   },

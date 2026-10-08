@@ -12,7 +12,7 @@ const constants = fn(1087).CollectiblesMobileShopScreen;
 fn(558);
 const ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function usePriceFilter(arg0) {
       const cResult = require("c").c(7);
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp12;
       }
-      const fn2 = function b(arr) {
+      const fn2 = function p(arr) {
         let found = arr;
         if (closure_0) {
           found = arr.filter(
@@ -59,7 +59,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = fn2;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function usePriceFilter(arg0) {
       _require = tmp;
       const items = [UserStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -81,7 +81,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useFilteredAndSortedProducts.tsx");
 
 export const useFilteredAndSortedProducts = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFilteredAndSortedProducts(arg0) {
       const cResult = c.c(12);
       ({ products, maxProducts, bypassAndroidUnsyncedFilter, screen } = arg0);
       const badBundleFilter = useBadBundleFilter.useBadBundleFilter();
@@ -114,8 +114,8 @@ export const useFilteredAndSortedProducts = ReactCompilerGating.isReactCompilerE
         const items = [tmp7, badBundleFilter, tmp6];
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn2 = function f(arg0, fn) {
-            return fn(arg0);
+          const fn2 = function h(value, fn) {
+            return fn(value);
           };
           cResult[8] = fn2;
           let tmp9 = fn2;
@@ -138,7 +138,7 @@ export const useFilteredAndSortedProducts = ReactCompilerGating.isReactCompilerE
       cResult[2] = fn;
       tmp7 = fn;
     }
-  : (products) => {
+  : function useFilteredAndSortedProducts(products) {
       products = products.products;
       const maxProducts = products.maxProducts;
       const bypassAndroidUnsyncedFilter = products.bypassAndroidUnsyncedFilter;

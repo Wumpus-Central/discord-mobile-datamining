@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/messages/computeGlobalSpoiler
 
 export default computeGlobalSpoilerDisplay;
 export const useShouldDisplaySpoilerObscurity = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShouldDisplaySpoilerObscurity(arg0) {
       _require = arg0;
       const cResult = require("c").c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -33,7 +33,7 @@ export const useShouldDisplaySpoilerObscurity = ReactCompilerGating.isReactCompi
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function n() {
+        const fn = function u() {
           return PermissionStore.can(constants.MANAGE_MESSAGES, closure_0);
         };
         cResult[1] = arg0;
@@ -44,7 +44,7 @@ export const useShouldDisplaySpoilerObscurity = ReactCompilerGating.isReactCompi
       }
       const obj = require("c");
       const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp6);
-      const RenderSpoilers = tmp(2028).RenderSpoilers;
+      const RenderSpoilers = tmp(2040).RenderSpoilers;
       const setting = RenderSpoilers.useSetting();
       if (cResult[3] === stateFromStores) {
         if (cResult[4] === setting) {
@@ -66,7 +66,7 @@ export const useShouldDisplaySpoilerObscurity = ReactCompilerGating.isReactCompi
       tmp9 = flag;
       const tmpResult = require("useStateFromStores");
     }
-  : (arg0) => {
+  : function useShouldDisplaySpoilerObscurity(arg0) {
       _require = arg0;
       const items = [PermissionStore];
       const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>

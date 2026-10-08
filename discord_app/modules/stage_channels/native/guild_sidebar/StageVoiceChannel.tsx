@@ -3,10 +3,10 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
-import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import StageMediaHooks from "../../StageMediaHooks.tsx";
-import useShowMemberVerificationGate from "../../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
+import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
+import useShowMemberVerificationGate from "../../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import openChannelLongPressActionSheet from "../../../channel/native/openChannelLongPressActionSheet.tsx";
 import VoiceUsersDefault from "../../../guild_sidebar/native/VoiceUsers.tsx";
 import ChannelItemDefault from "../../../guild_sidebar/native/ChannelItem.tsx";
@@ -49,15 +49,15 @@ function getStageChannelAccessibilityProps(arg0) {
   const formatToPlainStringResult = intl.formatToPlainString(util.t.TPPk2T, { channelName });
 }
 const View = fn(17).View;
-const NO_VOICE_STATES = fn(4920).NO_VOICE_STATES;
+const NO_VOICE_STATES = fn(5114).NO_VOICE_STATES;
 const Constants = fn(1085);
 ({ MAX_STAGE_VOICE_USER_LIMIT: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   voiceStates: { marginLeft: 36, marginBottom: 8 },
   container: {
-    marginVertical: fn(11711).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11776).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -65,7 +65,7 @@ let obj = {
 let closure_17 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11711).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11776).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -74,7 +74,7 @@ let result = size.fileFinishedImporting("modules/stage_channels/native/guild_sid
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function StageVoiceChannel(channel) {
         const cResult = channel(576).c(38);
         channel = channel.channel;
         closure_17();
@@ -124,9 +124,9 @@ export default noop.memo(
           arr3 = NO_VOICE_STATES;
         }
         const tmpResult = channel(504);
-        const stageParticipantsCount = channel(5595).useStageParticipantsCount(
+        const stageParticipantsCount = channel(5961).useStageParticipantsCount(
           channel.id,
-          tmp(5589).StageChannelParticipantNamedIndex.AUDIENCE,
+          tmp(5955).StageChannelParticipantNamedIndex.AUDIENCE,
         );
         const sum = stageParticipantsCount + arr3.length;
         if (cResult[4] !== channel) {
@@ -228,8 +228,8 @@ export default noop.memo(
           }
         }
         const tmp21 = useChannelNameDefault(channel, false);
-        const tmpResult3 = channel(5595);
-        const isConnectedToVoiceChannel = channel(9090).useIsConnectedToVoiceChannel(channel);
+        const tmpResult3 = channel(5961);
+        const isConnectedToVoiceChannel = channel(10337).useIsConnectedToVoiceChannel(channel);
         if (stageInstance != null) {
           class N {
             constructor() {
@@ -278,14 +278,14 @@ export default noop.memo(
             }
           }
         }
-        const tmpResult4 = channel(9090);
+        const tmpResult4 = channel(10337);
         cResult[8] = channel;
         cResult[9] = tmp21;
         cResult[10] = sum;
         cResult[11] = getStageChannelAccessibilityProps({ channel, channelName: tmp21, userCount: sum });
         const tmp23 = getStageChannelAccessibilityProps({ channel, channelName: tmp21, userCount: sum });
       }
-    : (channel) => {
+    : function StageVoiceChannel(channel) {
         channel = channel.channel;
         const selected = channel.selected;
         const tmp = closure_17();
@@ -321,9 +321,9 @@ export default noop.memo(
           arr3 = NO_VOICE_STATES;
         }
         let obj = channel(504);
-        const stageParticipantsCount = channel(5595).useStageParticipantsCount(
+        const stageParticipantsCount = channel(5961).useStageParticipantsCount(
           channel.id,
-          tmp2(5589).StageChannelParticipantNamedIndex.AUDIENCE,
+          tmp2(5955).StageChannelParticipantNamedIndex.AUDIENCE,
         );
         const items2 = [channel];
         const sum = stageParticipantsCount + arr3.length;
@@ -342,15 +342,15 @@ export default noop.memo(
         const callback1 = noop.useCallback(() => {
           const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
         }, items3);
-        const tmp2Result = channel(5595);
+        const tmp2Result = channel(5961);
         const tmp10 = useChannelNameDefault(channel, false);
         let topic;
-        const isConnectedToVoiceChannel = channel(9090).useIsConnectedToVoiceChannel(channel);
+        const isConnectedToVoiceChannel = channel(10337).useIsConnectedToVoiceChannel(channel);
         if (stageInstance != null) {
           topic = stageInstance.topic;
         }
         let obj2 = {};
-        const tmp2Result2 = channel(9090);
+        const tmp2Result2 = channel(10337);
         const merged = Object.assign(
           getStageChannelAccessibilityProps({ channel, channelName: tmp10, userCount: sum }),
         );

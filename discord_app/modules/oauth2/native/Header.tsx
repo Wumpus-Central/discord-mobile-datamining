@@ -14,7 +14,7 @@ const View = fn(17).View;
 const UserFlags = fn(1085).UserFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   header: {
     paddingBottom: 16,
@@ -56,7 +56,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/Header.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Header(arg0) {
       const cResult = c.c(41);
       ({ user, application, accountScopes, bot } = arg0);
       const tmp4 = closure_7();
@@ -252,7 +252,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = applicationIconSource;
       const obj16 = { id: application.id, icon: application.icon };
     }
-  : (accountScopes) => {
+  : function Header(accountScopes) {
       ({ user, application, bot } = accountScopes);
       const tmp = closure_7();
       let userAvatarSource;

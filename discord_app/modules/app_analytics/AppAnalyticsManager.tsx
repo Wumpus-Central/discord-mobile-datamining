@@ -1,8 +1,8 @@
 // discord_app/modules/app_analytics/AppAnalyticsManager.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
 import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
-import RobloxSubgameUtils from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
 import AppAnalyticsUtils from "AppAnalyticsUtils.tsx";
+import RobloxSubgameUtils from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
 import getGamePlatformDefault from "../activities/utils/getGamePlatform.tsx";
 import RunningGameStore from "../game_detection/RunningGameStore.native.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";

@@ -1,7 +1,7 @@
 // discord_app/modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx
 import util from "../../../intl/index.native.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
-import _modDef3623 from "../intl/SlayerStorefront.messages.js";
+import _modDef3697 from "../intl/SlayerStorefront.messages.js";
 import useGetOrFetchApplicationsDefault from "../../applications/useGetOrFetchApplications.tsx";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
 import StorefrontUtils from "../../storefront/StorefrontUtils.tsx";
@@ -14,7 +14,7 @@ import SKUStore from "../../../stores/game_store/SKUStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const InviteTypes = fn(7239).InviteTypes;
+const InviteTypes = fn(7418).InviteTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -80,7 +80,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             if (result1) {
               let stringResult = string(util.t.boqtTA);
             } else {
-              stringResult = string(_modDef3623.BKf0MM);
+              stringResult = string(_modDef3697.BKf0MM);
             }
             obj3.acceptLabelText = stringResult;
             let prop;
@@ -109,7 +109,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
   return obj6;
 };
 export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function useFetchSocialLayerStorefrontProductDetailsEmbedApplications(arr) {
       const cResult = require("c").c(7);
       if (cResult[0] !== arr) {
         const _Symbol = Symbol;
@@ -176,7 +176,7 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = Reac
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0) => {
+  : function useFetchSocialLayerStorefrontProductDetailsEmbedApplications(arg0) {
       _require = arg0;
       let items = [arg0];
       const memo = noop.useMemo(
@@ -215,5 +215,5 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = Reac
         },
         items2,
       );
-      memo(6670)(stateFromStoresArray);
+      memo(6847)(stateFromStoresArray);
     };

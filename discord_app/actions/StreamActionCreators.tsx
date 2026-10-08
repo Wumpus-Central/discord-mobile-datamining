@@ -2,16 +2,16 @@
 import _modDef38 from "../../_runtime/metro/00038__.js";
 import DispatcherDefault from "../Dispatcher.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import ChannelActionCreatorsDefault from "ChannelActionCreators.tsx";
-import StreamKeyUtils from "../modules/go_live/utils/StreamKeyUtils.tsx";
-import ChannelUtils from "../utils/ChannelUtils.tsx";
-import GuildRoomActionCreators from "../modules/guild_rooms/GuildRoomActionCreators.native.tsx";
-import TrackedHTTPUtilsDefault from "../utils/TrackedHTTPUtils.tsx";
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators.tsx";
-import transitionToStreamDefault from "../modules/go_live/utils/transitionToStream.native.tsx";
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators.tsx";
 import StreamQualityUtils from "../utils/StreamQualityUtils.tsx";
+import ChannelUtils from "../utils/ChannelUtils.tsx";
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators.tsx";
+import StreamKeyUtils from "../modules/go_live/utils/StreamKeyUtils.tsx";
+import TrackedHTTPUtilsDefault from "../utils/TrackedHTTPUtils.tsx";
+import ChannelActionCreatorsDefault from "ChannelActionCreators.tsx";
 import CallActionCreatorsDefault from "CallActionCreators.tsx";
+import GuildRoomActionCreators from "../modules/guild_rooms/GuildRoomActionCreators.native.tsx";
+import transitionToStreamDefault from "../modules/go_live/utils/transitionToStream.native.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import GameConsoleStore from "../modules/game_console/GameConsoleStore.tsx";
 import PopoutWindowStore from "../modules/popout-window/PopoutWindowStore.native.tsx";
@@ -127,7 +127,7 @@ let closure_19 = async function _fetchStreamPreview() {
               const obj7 = { type: "STREAM_PREVIEW_FETCH_START", streamKey: HTTPResult };
               DispatcherDefault.dispatch(obj7);
               c6 = 1;
-              HTTP = obj6(1282).HTTP;
+              HTTP = obj6(1294).HTTP;
               const request = {
                 url: closure_2_13.STREAM_PREVIEW(HTTPResult),
                 query: null,
@@ -138,7 +138,7 @@ let closure_19 = async function _fetchStreamPreview() {
               timestamp = Date.now();
               obj9.version = timestamp;
               request.query = obj9;
-              obj6 = obj6(1282);
+              obj6 = obj6(1294);
               result = obj6.rejectWithMigratedError();
               request.rejectWithError = result;
               value = HTTP.get(request);
@@ -208,7 +208,7 @@ let closure_20 = async function _notifyStreamStart(arg0) {
 };
 const Constants = fn(1085);
 ({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(4938).StreamTypes;
+const StreamTypes = fn(5894).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -365,15 +365,15 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(5098)(closure_1_1);
+          closure_1(7475)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(5041).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(5041);
+          closure_0(5410).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(5410);
         }
       }
     };

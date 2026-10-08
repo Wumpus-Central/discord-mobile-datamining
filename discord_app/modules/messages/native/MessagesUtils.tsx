@@ -13,25 +13,25 @@ import ReactionUtils from "../../reactions/ReactionUtils.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import Client from "../../../flow/Client.tsx";
-import _modDef4817 from "../../../../_runtime/metro/04817__.js";
+import _modDef5011 from "../../../../_runtime/metro/05011__.js";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
+import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import ChannelUtils from "../../../utils/ChannelUtils.tsx";
 import MediaFormatTesters from "../MediaFormatTesters.tsx";
-import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import InteractionComponentUtils from "../../interaction_components/InteractionComponentUtils.tsx";
 import InteractionTypes from "../../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
 import QuestTypes from "../../quests/QuestTypes.tsx";
-import useShowMemberVerificationGate from "../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import MemberVerificationModalActionCreators from "../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import ExplicitMediaRedactionModels from "../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import ApplicationCommandUtils from "../../application_commands/ApplicationCommandUtils.tsx";
-import MessageReactionsTypes from "../MessageReactionsTypes.tsx";
 import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
+import MessageReactionsTypes from "../MessageReactionsTypes.tsx";
 import ThreadActionCreatorsDefault from "../../threads/ThreadActionCreators.tsx";
-import tracking_Tracking from "../../forums/tracking/Tracking.tsx";
+import Tracking from "../../forums/tracking/Tracking.tsx";
+import useShowMemberVerificationGate from "../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import reactions_ReactionUtils from "../../reactions/native/ReactionUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
@@ -215,8 +215,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9100).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(7603);
+let closure_5 = fn(9318).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(7720);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1085);
 ({
@@ -441,7 +441,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       stringResult = string(t.X2L3Oa);
     }
     const obj3 = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: stringResult, icon: null };
-    tmp36Result = _modDef4817;
+    tmp36Result = _modDef5011;
     obj3.icon = tmp36Result;
     t = obj15.open(obj3);
     isForumPostResult = channel.isForumPost();
@@ -515,7 +515,7 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
   if (flag == null) {
     flag = false;
   }
-  const result = tracking_Tracking.trackForumPostLinkCopied({ postId: id, location });
+  const result = Tracking.trackForumPostLinkCopied({ postId: id, location });
   if (flag) {
     const obj3 = { media_post_id: id };
     AppAnalyticsUtils.trackWithMetadata(constants3.MEDIA_POST_SHARE_PROMPT_CLICKED, obj3);

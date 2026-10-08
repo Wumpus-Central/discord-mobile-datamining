@@ -4,11 +4,9 @@ import encodeProperties from "encodeProperties.tsx";
 import getSystemLocale2 from "../i18n/getSystemLocale.tsx";
 import ClientModDetectionUtils from "../../shared/utils/ClientModDetectionUtils.tsx";
 import clientLaunchId from "clientLaunchId.tsx";
-import formatDefault from "../../../../_runtime/01351_format.js";
+import formatDefault from "../../../../_runtime/01363_format.js";
 import NativeMetaQuestModule from "../rtn-codegen/js/NativeMetaQuestModule.tsx";
 import NativeDeviceModule from "../rtn-codegen/js/NativeDeviceModule.tsx";
-import NativeClientInfoModule from "../rtn-codegen/js/NativeClientInfoModule.tsx";
-import DesignIds from "../../shared/shared-constants/DesignIds.tsx";
 import SessionStorage3 from "../storage/SessionStorage.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -24,42 +22,21 @@ function getOS() {
   }
   return str;
 }
+function getBrowser() {
+  ({ userAgent, vendor } = window.navigator);
+  const _default = NativeMetaQuestModule.default;
+  let isMetaQuestResult;
+  if (_default != null) {
+    isMetaQuestResult = _default.isMetaQuest();
+  }
+  let str = "Discord Android";
+  if (true === isMetaQuestResult) {
+    str = "Discord VR";
+  }
+  return str;
+}
 function getDevice() {
   return NativeDeviceModule.default.getConstants().device;
-}
-function getDeviceProperties() {
-  obj = {};
-  const tmp = getOS();
-  obj.os = tmp;
-  obj.browser = (function getBrowser() {
-    ({ userAgent, vendor } = window.navigator);
-    const _default = NativeMetaQuestModule.default;
-    let isMetaQuestResult;
-    if (_default != null) {
-      isMetaQuestResult = _default.isMetaQuest();
-    }
-    let str = "Discord Android";
-    if (true === isMetaQuestResult) {
-      str = "Discord VR";
-    }
-    return str;
-  })();
-  obj.device = getDevice();
-  obj.system_locale = getSystemLocale();
-  obj.has_client_mods = ClientModDetectionUtils.usesClientMods();
-  try {
-    constants = NativeClientInfoModule.default.getConstants();
-    let str = "";
-    ({ Version, ReleaseChannel, DeviceVendorID } = constants);
-    if ("Android" === tmp) {
-      str = " - rn";
-    }
-    obj.client_version = Version + str;
-    obj.release_channel = ReleaseChannel;
-    obj.device_vendor_id = DeviceVendorID;
-    obj.design_id = DesignIds.DesignIds.DESIGN_TABS_IA;
-    return obj;
-  } catch (err) {}
 }
 const getSystemLocale = getSystemLocale2.getSystemLocale;
 const deviceProperties = "deviceProperties";
@@ -111,9 +88,9 @@ if (null != DiscordNative) {
   if ("electron" === toLocaleLowerCaseResult) {
     obj.browser_user_agent = formatDefault.ua || "";
     const tmp4 = formatDefault.ua || "";
-    const tmp5 = obj;
+    let tmp5 = obj;
     tmp5.browser_version = formatDefault.version || "";
-    let tmp6 = formatDefault.version || "";
+    const tmp6 = formatDefault.version || "";
   }
   if ("linux" === platform) {
     const crashReporter = DiscordNative.crashReporter;
@@ -143,10 +120,32 @@ if (null == obj) {
       const Storage = Storage5.Storage;
       value = Storage.get(deviceProperties);
       if (null == value) {
-        const tmp6 = getDeviceProperties();
+        const tmp5 = (function getDeviceProperties() {
+          obj = {};
+          const tmp = getOS();
+          obj.os = tmp;
+          obj.browser = getBrowser();
+          obj.device = getDevice();
+          obj.system_locale = getSystemLocale();
+          obj2 = obj2(dependencyMap[1]);
+          obj.has_client_mods = obj2.usesClientMods();
+          try {
+            constants = tmp2(dependencyMap[6]).default.getConstants();
+            let str = "";
+            ({ Version, ReleaseChannel, DeviceVendorID } = constants);
+            if ("Android" === tmp) {
+              str = " - rn";
+            }
+            obj.client_version = Version + str;
+            obj.release_channel = ReleaseChannel;
+            obj.device_vendor_id = DeviceVendorID;
+            obj.design_id = tmp2(dependencyMap[7]).DesignIds.DESIGN_TABS_IA;
+            return obj;
+          } catch (err) {}
+        })();
         const Storage2 = Storage5.Storage;
-        const result = Storage2.set(deviceProperties, tmp6);
-        value = tmp6;
+        const result = Storage2.set(deviceProperties, tmp5);
+        value = tmp5;
       }
       const Storage3 = Storage5.Storage;
       value3 = Storage3.get(referralProperties);
@@ -169,13 +168,13 @@ if (null == obj) {
         const SessionStorage2 = SessionStorage3.SessionStorage;
         const result2 = SessionStorage2.set(referralProperties, obj3);
         value4 = obj3;
-        const obj2 = {};
+        let obj2 = {};
       }
       const obj4 = {};
       const merged = Object.assign(value);
       obj4.browser_user_agent = window.navigator.userAgent || "";
       obj4.browser_version = formatDefault.version || "";
-      const tmp16 = formatDefault.version || "";
+      const tmp15 = formatDefault.version || "";
       const _default = NativeDeviceModule.default;
       obj4.os_version = NativeDeviceModule.default.getConstants().systemVersion || "";
       const merged1 = Object.assign(value3);
@@ -194,7 +193,7 @@ function extendSuperProperties(arg0) {
 }
 let result = extendSuperProperties(
   (function getContextualSuperProperties() {
-    obj = { client_build_number: parseInt("35020100000000", 10) };
+    obj = { client_build_number: parseInt("35020200000000", 10) };
     let buildNumber;
     if (DiscordNative != null) {
       const app = DiscordNative.app;
@@ -217,6 +216,7 @@ let result = extendSuperProperties(
 let result1 = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/getSuperProperties.tsx");
 
 export { getOS };
+export { getBrowser };
 export { getDevice };
 export const getCampaignParams = function getCampaignParams(arg0) {
   closure_0 = arg0;

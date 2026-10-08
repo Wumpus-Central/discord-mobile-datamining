@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useFavoritesGuildChannelFilter() {
       const cResult = stateFromStores(576).c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FavoriteStore];
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function useFavoritesGuildChannelFilter() {
       const items = [FavoriteStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
       const items1 = [stateFromStores];

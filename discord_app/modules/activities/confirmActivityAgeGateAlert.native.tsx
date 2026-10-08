@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   alertContainer: { display: "flex", alignItems: "center", padding: 8 },
   alertBodyText: {
@@ -25,7 +25,7 @@ let obj2 = {
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (description) => {
+  ? function ConfirmActivityGateContent(description) {
       const cResult = c.c(7);
       description = description.description;
       const tmp4 = closure_6();
@@ -66,7 +66,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const obj3 = { style: tmp4.alertBodyText, variant: "text-md/normal", children: description };
     }
-  : (children) => {
+  : function ConfirmActivityGateContent(children) {
       const tmp = closure_6();
       const obj = { style: tmp.alertContainer, children: null };
       const items = [

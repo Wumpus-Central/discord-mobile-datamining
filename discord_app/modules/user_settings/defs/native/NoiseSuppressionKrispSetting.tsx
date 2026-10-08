@@ -10,7 +10,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useNoiseSuppressionKrispSettingOptions() {
       const cResult = c.c(13);
       const noiseCancellationDeferredToSystem = NoiseCancellationUtils.useNoiseCancellationDeferredToSystem();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -88,7 +88,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = items;
       tmp14 = items;
     }
-  : () => {
+  : function useNoiseSuppressionKrispSettingOptions() {
       const noiseCancellationDeferredToSystem = NoiseCancellationUtils.useNoiseCancellationDeferredToSystem();
       const obj2 = { value: UserSettingsVoiceUtils.NoiseSuppressionOpt.KRISP, label: null, disabled: null };
       const intl = util.intl;
@@ -113,9 +113,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       items[2] = obj4;
       return items;
     };
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHasNoiseSuppressionKrispSetting() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MediaEngineStore];
@@ -131,7 +131,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useHasNoiseSuppressionKrispSetting() {
       const items = [MediaEngineStore];
       return initialize.useStateFromStores(items, () => noiseCancellationSupported.isNoiseCancellationSupported());
     };
@@ -140,7 +140,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
   },
-  parent: fn(7645).MobileUserSettings.VOICE,
+  parent: fn(7966).MobileUserSettings.VOICE,
   useValue() {
     return UserSettingsVoiceUtils.useSelectedNoiseSuppressionOption();
   },
@@ -149,7 +149,7 @@ const radio = SettingBuilders.createRadio({
   },
   useOptions: tmp2,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useHasNoiseSuppressionKrispSetting() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [MediaEngineStore];
@@ -165,7 +165,7 @@ const radio = SettingBuilders.createRadio({
         }
         return initialize.useStateFromStores(tmp4, tmp5);
       }
-    : () => {
+    : function useHasNoiseSuppressionKrispSetting() {
         const items = [MediaEngineStore];
         return initialize.useStateFromStores(items, () => noiseCancellationSupported.isNoiseCancellationSupported());
       },

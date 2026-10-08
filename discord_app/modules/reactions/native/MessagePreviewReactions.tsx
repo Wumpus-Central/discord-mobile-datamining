@@ -15,7 +15,7 @@ const jsx = fn(21).jsx;
 let closure_7 = [];
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function usePreviewMessageReactions(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(5);
@@ -33,7 +33,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(504).useStateFromStores(first, tmp8, tmp9);
       }
-      class E {
+      class M {
         constructor() {
           tmp = closure_1;
           message = closure_5.getMessage(closure_1);
@@ -52,14 +52,14 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [arg0, arg1];
       cResult[1] = arg0;
       cResult[2] = arg1;
-      cResult[3] = E;
+      cResult[3] = M;
       cResult[4] = items1;
       tmp9 = items1;
-      tmp8 = E;
+      tmp8 = M;
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function usePreviewMessageReactions(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const items = [MessagePreviewStore, ChannelConversationsStore, ConversationPreviewStore];
@@ -84,7 +84,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/native/MessagePreviewReactions.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MessagePreviewReactions(arg0) {
       const cResult = c.c(8);
       ({ channelId, messageId, emoji } = arg0);
       const arr = closure_8(channelId, messageId);
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       num = 4;
       cResult[4] = tmp7;
     }
-  : (emoji) => {
+  : function MessagePreviewReactions(emoji) {
       ({ channelId, messageId } = emoji);
       const arr = closure_8(channelId, messageId);
       const obj = {

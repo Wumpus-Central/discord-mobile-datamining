@@ -14,7 +14,7 @@ require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (userIds) => {
+  ? function useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds(userIds) {
       const cResult = userIds(576).c(4);
       userIds = userIds.userIds;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -25,7 +25,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== userIds) {
-        const fn = function l() {
+        const fn = function s() {
           const items = [];
           while (tmp2 !== undefined) {
             let userOutbox = ContentInventoryOutboxStore.getUserOutbox(tmp3);
@@ -67,7 +67,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = userIds(576);
       return userIds(504).useStateFromStoresArray(first, tmp7, tmp8);
     }
-  : (userIds) => {
+  : function useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds(userIds) {
       userIds = userIds.userIds;
       let items = [ContentInventoryOutboxStore, SocialLayerStorefrontStore];
       const items1 = [userIds];
@@ -107,7 +107,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (userIds) => {
+  ? function useUsersPlayingStorefrontEnabledGamesApplicationIds(userIds) {
       const cResult = userIds(576).c(7);
       userIds = userIds.userIds;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -150,7 +150,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = userIds(576);
       const stateFromStoresArray = userIds(504).useStateFromStoresArray(first, tmp7, tmp8);
       const tmpResult = userIds(504);
-      const slayerStorefrontDevApplicationIdOverride = userIds(8481).useSlayerStorefrontDevApplicationIdOverride();
+      const slayerStorefrontDevApplicationIdOverride = userIds(8967).useSlayerStorefrontDevApplicationIdOverride();
       if (null == slayerStorefrontDevApplicationIdOverride) {
         return stateFromStoresArray;
       } else {
@@ -162,9 +162,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = slayerStorefrontDevApplicationIdOverride;
         cResult[6] = items2;
       }
-      const tmpResult2 = userIds(8481);
+      const tmpResult2 = userIds(8967);
     }
-  : (userIds) => {
+  : function useUsersPlayingStorefrontEnabledGamesApplicationIds(userIds) {
       userIds = userIds.userIds;
       let stateFromStoresArray;
       let items = [PresenceStore, SocialLayerStorefrontStore];
@@ -211,7 +211,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_9 = tmp4;
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAreUsersInSocialLayerStorefrontMutualGuildsApplicationIds(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -257,7 +257,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStoresArray(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useAreUsersInSocialLayerStorefrontMutualGuildsApplicationIds(arg0) {
       _require = arg0;
       let items = [UserProfileStore, SocialLayerStorefrontStore];
       const items1 = [arg0];
@@ -290,7 +290,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (userIds) => {
+  ? function useAreUsersPlayingStorefrontEnabledGames(userIds) {
       const cResult = c.c(2);
       userIds = userIds.userIds;
       if (cResult[0] !== userIds) {
@@ -303,10 +303,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_9(tmp2).length > 0;
     }
-  : (userIds) => closure_9({ userIds: userIds.userIds }).length > 0;
+  : function useAreUsersPlayingStorefrontEnabledGames(userIds) {
+      return closure_9({ userIds: userIds.userIds }).length > 0;
+    };
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCurrentUserPlayingSocialLayerStorefrontGamesApplicationIds() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [RunningGameStore, SocialLayerStorefrontStore];
@@ -341,7 +343,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStoresArray(tmp4, tmp5, tmp6);
     }
-  : () => {
+  : function useCurrentUserPlayingSocialLayerStorefrontGamesApplicationIds() {
       let items = [RunningGameStore, SocialLayerStorefrontStore];
       return initialize.useStateFromStoresArray(items, () => {
         const items = [];
@@ -368,7 +370,7 @@ ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCurrentUserPlayedSocialLayerStorefrontGamesApplicationIds() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [RunningGameStore, SocialLayerStorefrontStore];
@@ -397,7 +399,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStoresArray(tmp4, tmp5);
     }
-  : () => {
+  : function useCurrentUserPlayedSocialLayerStorefrontGamesApplicationIds() {
       let items = [RunningGameStore, SocialLayerStorefrontStore];
       return initialize.useStateFromStoresArray(items, () => {
         const items = [];
@@ -416,7 +418,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         return items;
       });
     };
-fn = () => closure_10().length > 0;
+function useIsCurrentUserPlayingSocialLayerStorefrontGames() {
+  return closure_10().length > 0;
+}
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/slayer_storefront/hooks/SocialLayerStorefrontEligibilityHooks.tsx");
 
@@ -426,9 +430,9 @@ export const useUsersPlayingStorefrontEnabledGamesApplicationIds = tmp4;
 export const useAreUsersPlayingStorefrontEnabledGames = tmp5;
 export const useCurrentUserPlayedSocialLayerStorefrontGamesApplicationIds = tmp6;
 export const useCurrentUserPlayingSocialLayerStorefrontGamesApplicationIds = tmp7;
-export const useIsCurrentUserPlayingSocialLayerStorefrontGames = fn;
+export { useIsCurrentUserPlayingSocialLayerStorefrontGames };
 export const useIsCurrentUserInSocialLayerStorefrontGuildsApplicationIds = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsCurrentUserInSocialLayerStorefrontGuildsApplicationIds() {
       const cResult = stateFromStores(576).c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [GuildStore];
@@ -452,7 +456,7 @@ export const useIsCurrentUserInSocialLayerStorefrontGuildsApplicationIds = React
         tmp8 = cResult[2];
       }
       if (cResult[3] !== stateFromStores) {
-        const fn2 = function s() {
+        const fn2 = function u() {
           const items = [];
           while (tmp2 !== undefined) {
             let applicationIdFromGuildId = SocialLayerStorefrontStore.getApplicationIdFromGuildId(tmp3);
@@ -476,7 +480,7 @@ export const useIsCurrentUserInSocialLayerStorefrontGuildsApplicationIds = React
       const tmpResult = stateFromStores(504);
       return stateFromStores(504).useStateFromStoresArray(tmp8, tmp10, tmp11);
     }
-  : () => {
+  : function useIsCurrentUserInSocialLayerStorefrontGuildsApplicationIds() {
       let items = [GuildStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () => guildIds.getGuildIds());
       const obj = stateFromStores(504);

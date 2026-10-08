@@ -16,7 +16,7 @@ require = fn;
 const DEV_WIDGET_SIZE = fn(585).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { widgetContainer: { position: "absolute" }, widget: null };
 let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
@@ -61,7 +61,7 @@ const __initData10 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DraggableContainer(arg0) {
       const cResult = require("c").c(34);
       const x = arg0.x;
       _require = x;
@@ -426,7 +426,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         contentHeight,
       };
     }
-  : (children) => {
+  : function DraggableContainer(children) {
       const x = children.x;
       _require = x;
       const y = children.y;
@@ -554,7 +554,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let closure_21 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function DevWidgetContent() {
         const cResult = c.c(4);
         const tmp4 = closure_9();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -590,7 +590,7 @@ let closure_21 = noop.memo(
         }
         return tmp9;
       }
-    : () => {
+    : function DevWidgetContent() {
         const tmp = closure_9();
         return timestampProducer(Pressables.PressableOpacity, {
           style: closure_9().widget,
@@ -608,7 +608,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DevWidget() {
       const cResult = c.c(11);
       const sharedValue = ReanimatedRexport.useSharedValue(DevToolsSettingsStore.devWidgetPosition.x);
       const sharedValue1 = ReanimatedRexport.useSharedValue(DevToolsSettingsStore.devWidgetPosition.y);
@@ -670,7 +670,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp6;
       tmp5 = tmp6;
     }
-  : () => {
+  : function DevWidget() {
       const sharedValue = ReanimatedRexport.useSharedValue(DevToolsSettingsStore.devWidgetPosition.x);
       const sharedValue1 = ReanimatedRexport.useSharedValue(DevToolsSettingsStore.devWidgetPosition.y);
       const obj3 = { children: null };

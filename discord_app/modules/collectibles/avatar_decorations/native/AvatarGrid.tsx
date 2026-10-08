@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   avatarRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-around" },
   avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -19,7 +19,7 @@ let obj2 = {
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function GridAvatar(user) {
       let tmp2 = dependencyMap;
       const cResult = user(576).c(22);
       user = user.user;
@@ -33,7 +33,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== user.id) {
-        const fn = function v() {
+        const fn = function u() {
           return PresenceStore.getStatus(user.id);
         };
         cResult[1] = user.id;
@@ -97,7 +97,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              const tmpResult4 = tmp(7930);
+              const tmpResult4 = tmp(8349);
               class E {
                 constructor() {
                   return closure_1_3.useReducedMotion;
@@ -127,7 +127,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
               }
               obj3.guildId = guildId;
               const merged1 = Object.assign(tmp14);
-              const tmp20 = closure_5(tmp(1188).Avatar, obj3);
+              const tmp20 = closure_5(tmp(1200).Avatar, obj3);
               cResult[18] = guildId;
               cResult[19] = tmp14;
               cResult[20] = user;
@@ -151,7 +151,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = obj4;
       const tmpResult3 = user(504);
     }
-  : (user) => {
+  : function GridAvatar(user) {
       user = user.user;
       ({ guildId, pendingAvatarSrc, pendingAvatarDecoration } = user);
       ({ size, showStatus } = user);
@@ -174,7 +174,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.size = size;
       if (undefined !== pendingAvatarSrc) {
         const obj4 = { source: null };
-        const tmp2Result = tmp2(7930);
+        const tmp2Result = tmp2(8349);
         obj4.source = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
         const merged = Object.assign(obj3);
         let obj5 = obj4;
@@ -182,7 +182,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         obj5 = { user, guildId };
         const merged1 = Object.assign(obj3);
       }
-      return closure_5(user(1188).Avatar, obj5);
+      return closure_5(user(1200).Avatar, obj5);
     };
 ReactCompilerGating = fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -190,7 +190,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarGrid.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AvatarGrid(arg0) {
       const cResult = c.c(18);
       const tmp4 = closure_7();
       if (cResult[0] !== arg0) {
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp18;
       tmp17 = tmp18;
     }
-  : (arg0) => {
+  : function AvatarGrid(arg0) {
       const tmp = closure_7();
       const obj = { style: tmp.gridContainer, children: null };
       const obj2 = { style: tmp.avatarRow, children: null };

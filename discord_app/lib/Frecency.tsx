@@ -1,6 +1,6 @@
 // discord_app/lib/Frecency.tsx
 import _modDef12 from "../../_runtime/metro/00012__.js";
-import _modDef4467 from "../../_runtime/metro/04467__.js";
+import _modDef4659 from "../../_runtime/metro/04659__.js";
 import size from "../../_runtime/metro/00002__.js";
 
 function DEFAULT_FRECENCY(arg0, arg1, numOfRecentUses) {
@@ -47,20 +47,21 @@ class Frecency {
     if (num === undefined) {
       num = 10;
     }
-    obj = Object.create(new.target.prototype);
-    obj.computeBonus = global.computeBonus;
-    obj.computeWeight = computeWeight;
-    obj.computeFrecency = computeFrecency;
-    obj.calculateMaxTotalUse = flag;
-    obj.afterCompute = afterCompute;
-    obj.lookupKey = lookupKey;
-    obj.usageHistory = {};
-    obj.frequently = [];
-    obj.maxSamples = num;
-    obj.numFrequentlyItems = numFrequentlyItems;
-    obj.dirty = false;
-    obj.version = 0;
-    return obj;
+    merged = Object.assign({ _frequently: null });
+    merged[0] = [];
+    merged.computeBonus = global.computeBonus;
+    merged.computeWeight = computeWeight;
+    merged.computeFrecency = computeFrecency;
+    merged.calculateMaxTotalUse = flag;
+    merged.afterCompute = afterCompute;
+    merged.lookupKey = lookupKey;
+    merged.usageHistory = {};
+    merged.frequently = [];
+    merged.maxSamples = num;
+    merged.numFrequentlyItems = numFrequentlyItems;
+    merged.dirty = false;
+    merged.version = 0;
+    return merged;
   }
 }
 const prototype = Frecency.prototype;
@@ -185,7 +186,7 @@ prototype["getFrecency"] = function getFrecency(id) {
 };
 prototype["compute"] = function compute() {
   const self = this;
-  dependencyMap = _modDef4467();
+  dependencyMap = _modDef4659();
   let maxByResult = null;
   if (this.calculateMaxTotalUse) {
     const _Object = Object;
@@ -202,7 +203,7 @@ prototype["compute"] = function compute() {
         if (arg1 >= self.maxSamples) {
           return false;
         } else {
-          score.score = score.score + closure_1 * self.computeWeight(closure_1.diff(_modDef4467(arg0), "days"));
+          score.score = score.score + closure_1 * self.computeWeight(closure_1.diff(_modDef4659(arg0), "days"));
         }
       });
       if (recentUses.score > 0) {

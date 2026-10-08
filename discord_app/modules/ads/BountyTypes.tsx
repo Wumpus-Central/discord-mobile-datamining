@@ -1,4 +1,5 @@
 // discord_app/modules/ads/BountyTypes.tsx
+import BountyAspectRatio from "../../../discord_common/js/shared/shared-constants/BountyAspectRatio.tsx";
 import AssetUtils from "../quests/lib/AssetUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
@@ -11,17 +12,25 @@ function videoRenditionsFromServer(video_renditions) {
     const tmp4 = entries[Symbol.iterator]();
     while (tmp4 !== undefined) {
       let tmp9 = _slicedToArray(tmp6, 2);
-      [tmp10, tmp11] = tmp9;
-      let obj2 = AssetUtils;
-      obj[tmp10] = obj2.resolveAdCreativeCdnUrl(tmp11);
+      [tmp10, tmp12] = tmp9;
+      let _Object2 = Object;
+      let values = Object.values(BountyAspectRatio.BountyAspectRatio);
+      let hasItem = values.includes(tmp10);
+      if (hasItem) {
+        hasItem = "" !== tmp12;
+      }
+      if (hasItem) {
+        let tmp13Result = AssetUtils;
+        obj[tmp10] = tmp13Result.resolveAdCreativeCdnUrl(tmp12);
+      }
       continue;
     }
-    const _Object2 = Object;
-    let tmp14;
+    const _Object3 = Object;
+    let tmp19;
     if (Object.keys(obj).length > 0) {
-      tmp14 = obj;
+      tmp19 = obj;
     }
-    return tmp14;
+    return tmp19;
   }
 }
 const size = fn(2);

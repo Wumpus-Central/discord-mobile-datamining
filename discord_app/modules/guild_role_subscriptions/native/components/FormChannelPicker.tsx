@@ -1,5 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormChannelPicker.tsx
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({
   container: { alignItems: "center", flexDirection: "row" },
   content: { marginStart: 8, flexGrow: 1 },
@@ -38,7 +38,7 @@ export default function FormChannelPicker(channelId) {
   let obj2 = {
     style: null,
     accessibilityRole: "link",
-    onPress() {
+    onPress: function handleSelectChannel() {
       const obj2 = { guildId, selectedChannelId: null, onChannelSelected: null };
       let id;
       const obj = ActionSheetActionCreatorsDefault;
@@ -47,7 +47,7 @@ export default function FormChannelPicker(channelId) {
       }
       obj2.selectedChannelId = id;
       obj2.onChannelSelected = onChange;
-      obj.openLazy(asyncRequireImpl(17996, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
+      obj.openLazy(asyncRequireImpl(18283, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
     },
     children: null,
   };
@@ -79,7 +79,7 @@ export default function FormChannelPicker(channelId) {
   const tmpResult = require("TouchableHitBox");
   items3[2] = closure_4(channelId(stateFromStores[15]).Icon, {
     size: channelId(stateFromStores[15]).Icon.Sizes.MEDIUM,
-    source: require("../../../../../_runtime/metro/09615__.js"),
+    source: require("../../../../../_runtime/metro/10808__.js"),
   });
   obj2.children = items3;
   return closure_5(tmpResult, obj2);

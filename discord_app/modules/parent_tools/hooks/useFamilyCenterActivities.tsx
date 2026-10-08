@@ -6,11 +6,11 @@ import FamilyCenterUtils from "../FamilyCenterUtils.tsx";
 import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
 require = fn;
-const TeenActionDisplayType = fn(7062).TeenActionDisplayType;
+const TeenActionDisplayType = fn(7248).TeenActionDisplayType;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useActionTotalsForDisplayType(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -33,7 +33,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("useStateFromStores").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useActionTotalsForDisplayType(arg0) {
       _require = arg0;
       const items = [FamilyCenterStore];
       return require("useStateFromStores").useStateFromStores(items, () =>
@@ -43,7 +43,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useActionsForDisplayType(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -66,7 +66,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("useStateFromStores").useStateFromStoresArray(first, tmp6);
     }
-  : (arg0) => {
+  : function useActionsForDisplayType(arg0) {
       _require = arg0;
       const items = [FamilyCenterStore];
       return require("useStateFromStores").useStateFromStoresArray(items, () =>
@@ -75,7 +75,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHasActionForAnyDisplayType() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FamilyCenterStore];
@@ -92,7 +92,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return useStateFromStores.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useHasActionForAnyDisplayType() {
       const items = [FamilyCenterStore];
       return useStateFromStores.useStateFromStores(items, () => {
         const values = Object.values(TeenActionDisplayType);
@@ -106,7 +106,7 @@ export const useActionsForDisplayType = tmp2;
 export const useActionTotalsForDisplayType = tmp3;
 export const useHasActionForAnyDisplayType = tmp4;
 export const useFormattedTotalForDisplayType = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFormattedTotalForDisplayType(arg0) {
       const cResult = c.c(5);
       let num = closure_4(arg0);
       if (num == null) {
@@ -175,7 +175,7 @@ export const useFormattedTotalForDisplayType = ReactCompilerGating.isReactCompil
         }
       }
     }
-  : (arg0) => {
+  : function useFormattedTotalForDisplayType(arg0) {
       let num = closure_4(arg0);
       if (num == null) {
         num = 0;

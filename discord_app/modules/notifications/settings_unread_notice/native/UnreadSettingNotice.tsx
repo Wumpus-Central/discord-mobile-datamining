@@ -11,7 +11,7 @@ const View = fn(17).View;
 let closure_4 = fn(1095).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: null, informations: null, actions: null, inlineTextWithIcon: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.content = {
@@ -43,7 +43,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function UnreadSettingNoticeConnected(channel) {
       _require = channel;
       const cResult = require("c").c(19);
       const tmp4 = closure_7();
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { variant: "text-md/semibold", children: null };
         const intl = tmp(1126).intl;
         obj3.children = intl.string(tmp(1126).t.i4xQ5o);
-        const tmp11 = closure_5(tmp(4892).Text, obj3);
+        const tmp11 = closure_5(tmp(5086).Text, obj3);
         cResult[2] = tmp11;
         let tmp9 = tmp11;
       } else {
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { variant: "text-xs/medium", color: "text-link", children: null };
         const intl2 = tmp(1126).intl;
         obj5.children = intl2.string(tmp(1126).t.KyUKhT);
-        const tmp19 = closure_5(tmp(4892).Text, obj5);
+        const tmp19 = closure_5(tmp(5086).Text, obj5);
         cResult[7] = tmp19;
         let tmp17 = tmp19;
       } else {
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       const obj8 = { accessibilityRole: "button", style: tmp4.inlineTextWithIcon, onPress: tmp16, children: tmp17 };
     }
-  : (channel) => {
+  : function UnreadSettingNoticeConnected(channel) {
       _require = channel;
       const tmp = closure_7();
       const obj = { style: tmp.content, children: null };

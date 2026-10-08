@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/premium/components/native/Nit
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function NitroUpsellButton(arg0) {
         const cResult = c.c(9);
         ({ loading, onPress, text, shiny, size } = arg0);
         let tmp4 = undefined === shiny || shiny;
@@ -77,7 +77,7 @@ export default noop.memo(
         tmp13 = tmp14;
         const tmpResult = initialize;
       }
-    : (shiny) => {
+    : function NitroUpsellButton(shiny) {
         let flag = shiny.shiny;
         ({ loading, onPress, text } = shiny);
         if (flag === undefined) {

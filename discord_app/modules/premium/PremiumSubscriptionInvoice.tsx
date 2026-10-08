@@ -563,7 +563,7 @@ const noop = fn(19);
 const Endpoints = fn(1085).Endpoints;
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (preventFetch, arg1, arg2) => {
+  ? function useFetchGenericInvoicePreview(preventFetch, arg1, arg2) {
       _require = arg1;
       const cResult = require("c").c(10);
       preventFetch = preventFetch.preventFetch;
@@ -572,6 +572,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       [tmp4, dependencyMap] = closure_9(null);
       const tmp3 = _slicedToArray(closure_9(null), 2);
       [tmp6, closure_3] = closure_9(null);
+      closure_4 = closure_10(null);
       if (cResult[0] === arg1) {
         if (cResult[1] === tmp2) {
           let tmp7 = cResult[2];
@@ -606,12 +607,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         c0 = asyncGeneratorStep(async () => {
           closure_1 = tmp3;
           closure_2_3(null);
-          await c0();
+          await c0(ref.current);
           if (1 === tmp7) {
             c3 = 0;
             closure_128_1 = closure_2;
             if (!closure_0) {
-              closure_2_3(tmp16);
+              ref.current = null;
+              closure_2_3(closure_128_1);
               dependencyMap(null);
             }
             c5 = 3;
@@ -621,6 +623,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           } else if (arg0 !== 2) {
             closure_128_0 = value;
             if (!closure_0) {
+              ref.current = closure_128_0;
               dependencyMap(closure_128_0);
             }
             c3 = 0;
@@ -649,7 +652,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       const tmp5 = _slicedToArray(closure_9(null), 2);
     }
-  : (preventFetch, arg1, arg2) => {
+  : function useFetchGenericInvoicePreview(preventFetch, arg1, arg2) {
       let flag = preventFetch.preventFetch;
       if (flag === undefined) {
         flag = false;
@@ -659,18 +662,20 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       [tmp2, c2] = closure_9(null);
       const tmp3 = _slicedToArray(closure_9(null), 2);
       closure_3 = tmp3[1];
+      closure_4 = closure_10(null);
       const items = [flag, arg1, arg2];
       closure_8(() => {
         closure_1 = async function _loadPreview2() {
           let v0 = 1;
           v0(null);
-          await tmp3();
+          await tmp3(ref.current);
           if (1 === tmp7) {
             v0 = 0;
-            closure_128_1 = tmp26;
+            closure_128_1 = tmp31;
             if (!closure_129_0) {
-              v0(tmp16);
-              tmp26(null);
+              ref.current = null;
+              v0(closure_128_1);
+              tmp31(null);
             }
             c5 = 3;
           } else if (arg0 === 1) {
@@ -679,7 +684,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           } else if (arg0 !== 2) {
             closure_128_0 = value;
             if (!closure_129_0) {
-              tmp26(closure_128_0);
+              ref.current = closure_128_0;
+              tmp31(closure_128_0);
             }
             v0 = 0;
           }

@@ -7,13 +7,13 @@ import StringUtils from "../../../utils/StringUtils.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import useAnalyticsLocations from "../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
+import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
 import utils from "../../content_inventory/utils.tsx";
 import ContentInventoryTypes from "../../content_inventory/ContentInventoryTypes.tsx";
-import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
 import GameProfileAnalyticUtils from "../../game_profile/GameProfileAnalyticUtils.tsx";
 import useOpenGameProfileModalDefault from "../../game_profile/hooks/useOpenGameProfileModal.tsx";
 import ContentInventoryActivityImageUtils from "../../content_inventory/ContentInventoryActivityImageUtils.tsx";
@@ -60,7 +60,7 @@ function getEntryText(entry) {
           const obj5 = { title: entry.extra.activity_name };
           let obj6 = obj5;
         } else {
-          obj6 = { title: "r" };
+          obj6 = { title: "create" };
         }
         return obj6;
       }
@@ -91,8 +91,8 @@ let obj = {
     return true;
   },
 };
-items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(7829).isEntryNew };
-let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(7829).isEntryNew };
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8247).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8247).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -150,7 +150,7 @@ items[5] = {
     return tmp3;
   },
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj7 = {
   body: null,
   content: null,
@@ -209,7 +209,7 @@ obj7.badgeCell = { width: "50%", paddingRight: nativeDefault.space.PX_8 };
 let closure_9 = createStyles.createStyles(obj7);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (entry) => {
+  ? function GamingEntryBadges(entry) {
       let tmp2 = dependencyMap;
       const cResult = badgeCell(576).c(14);
       badgeCell = entry.entry;
@@ -239,25 +239,25 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[7] !== badgeCell) {
-        class C {
+        class E {
           constructor(arg0) {
             return entry.predicate(entry);
           }
         }
         cResult[7] = badgeCell;
-        cResult[8] = C;
+        cResult[8] = E;
       } else {
-        class C {
+        class E {
           constructor(arg0) {
             return entry.predicate(entry);
           }
         }
       }
-      const found = items.filter(C);
+      const found = items.filter(E);
       let TopGameBadge = importAll;
       let obj = badgeCell(576);
       if (tmpResult.isTopGameEntry(badgeCell)) {
-        class C {
+        class E {
           constructor(arg0) {
             return entry.predicate(entry);
           }
@@ -269,7 +269,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.children = tmp2;
         const tmp10 = closure_6(View, obj3);
       } else {
-        class C {
+        class E {
           constructor(arg0) {
             return entry.predicate(entry);
           }
@@ -284,9 +284,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = "user-profile";
       cResult[5] = str.badges;
       cResult[6] = tmp10;
-      tmpResult = badgeCell(8027);
+      tmpResult = badgeCell(8435);
     }
-  : (entry) => {
+  : function GamingEntryBadges(entry) {
       entry = entry.entry;
       const tmp = closure_9();
       const badgeCell = tmp;
@@ -309,7 +309,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let closure_11 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (poster) => {
+    ? function EntryImage(poster) {
         const cResult = c.c(26);
         ({ largeImage, smallImage } = poster);
         const tmp4 = closure_9();
@@ -439,7 +439,7 @@ let closure_11 = noop.memo(
         }
         obj2 = native;
       }
-    : (poster) => {
+    : function EntryImage(poster) {
         ({ largeImage, smallImage } = poster);
         const tmp = closure_9();
         let src;
@@ -496,7 +496,7 @@ let closure_11 = noop.memo(
 ReactCompilerGating = fn(558);
 let closure_12 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function EntryCardBody(arg0) {
         const cResult = c.c(24);
         ({ entry, largeImage, smallImage, title, subtitle, style } = arg0);
         const tmp4 = closure_9();
@@ -616,7 +616,7 @@ let closure_12 = noop.memo(
         cResult[5] = tmp8;
         tmp7 = tmp8;
       }
-    : (arg0) => {
+    : function EntryCardBody(arg0) {
         ({ entry, title, subtitle } = arg0);
         ({ largeImage, smallImage, style } = arg0);
         const tmp = closure_9();
@@ -664,7 +664,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileRecentActivityCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileRecentActivityCard(arg0) {
       const cResult = c.c(33);
       ({ user, entry, style } = arg0);
       if (cResult[0] !== entry) {
@@ -686,13 +686,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[4] === user) {
             let tmp8 = cResult[5];
           }
-          const tmp9 = tmp6(12862)(tmp8);
+          const tmp9 = tmp6(13011)(tmp8);
           _require = tmp9;
           if (cResult[6] === tmp9) {
             if (cResult[7] === user.id) {
               let tmp10 = cResult[8];
             }
-            tmp6(12863)(tmp10);
+            tmp6(13012)(tmp10);
             let application_id;
             if ("application_id" in entry.extra) {
               application_id = entry.extra.application_id;
@@ -701,7 +701,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[10] === user.id) {
                 let tmp14 = cResult[11];
               }
-              const tmp15 = tmp6(8353)(tmp14);
+              const tmp15 = tmp6(8851)(tmp14);
               importDefault = tmp15;
               if (cResult[12] === tmp9) {
                 if (cResult[13] === tmp15) {
@@ -856,7 +856,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = obj6;
       tmp8 = obj6;
     }
-  : (style) => {
+  : function UserProfileRecentActivityCard(style) {
       ({ user, entry } = style);
       closure_1 = undefined;
       const imageForContentEntry = ContentInventoryActivityImageUtils.useImageForContentEntry({

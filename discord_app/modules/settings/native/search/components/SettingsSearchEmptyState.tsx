@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({
   container: { paddingTop: 24, justifyContent: "center", alignItems: "center" },
   textContainer: { marginTop: 24 },
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/settings/native/search/compon
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function SettingsSearchEmptyState() {
         const cResult = c.c(10);
         const tmp4 = closure_6();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -93,7 +93,7 @@ export default noop.memo(
         cResult[9] = tmp21;
         tmp20 = tmp21;
       }
-    : () => {
+    : function SettingsSearchEmptyState() {
         const tmp = closure_6();
         const effect = noop.useEffect(() => {
           const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;

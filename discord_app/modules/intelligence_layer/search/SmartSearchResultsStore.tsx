@@ -1,7 +1,7 @@
 // discord_app/modules/intelligence_layer/search/SmartSearchResultsStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import privDefault from "../../../../_runtime/01444_priv.js";
+import privDefault from "../../../../_runtime/01456_priv.js";
 import SmartSearchTypes from "SmartSearchTypes.tsx";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -10,7 +10,7 @@ require = fn;
 function handleReset() {
   closure_6.reset();
 }
-const SmartSearchConstants = fn(11982);
+const SmartSearchConstants = fn(12055);
 ({ MAX_CACHED_ANSWERS_PER_GUILD: hasOwnProperty, MAX_CACHED_ANSWER_GUILDS } = SmartSearchConstants);
 let closure_6 = new privDefault({ max: MAX_CACHED_ANSWER_GUILDS });
 const Store = initializeDefault.Store;
@@ -28,20 +28,20 @@ prototype["getAnswer"] = function getAnswer(arg0, arg1) {
   if (peekResult1 == null) {
     peekResult1 = null;
   }
-  return peekResult1;
+  let smartSearchResult;
+  if (peekResult1 != null) {
+    smartSearchResult = peekResult1.smartSearchResult;
+  }
+  if (smartSearchResult == null) {
+    smartSearchResult = null;
+  }
+  return smartSearchResult;
 };
 prototype["getStatus"] = function getStatus(arg0, arg1) {
-  const peekResult = closure_6.peek(arg0);
-  let peekResult1;
-  if (peekResult != null) {
-    peekResult1 = peekResult.peek(arg1);
-  }
-  if (peekResult1 == null) {
-    peekResult1 = null;
-  }
+  const answer = this.getAnswer(arg0, arg1);
   let status;
-  if (peekResult1 != null) {
-    status = peekResult1.status;
+  if (answer != null) {
+    status = answer.status;
   }
   if (status == null) {
     status = null;
@@ -59,6 +59,24 @@ prototype["hasAnswer"] = function hasAnswer(guildId, requestKey) {
   }
   return null != peekResult1;
 };
+prototype["getResultFeedback"] = function getResultFeedback(guildId, requestKey) {
+  const peekResult = closure_6.peek(guildId);
+  let peekResult1;
+  if (peekResult != null) {
+    peekResult1 = peekResult.peek(requestKey);
+  }
+  if (peekResult1 == null) {
+    peekResult1 = null;
+  }
+  let hasPositiveFeedback;
+  if (peekResult1 != null) {
+    hasPositiveFeedback = peekResult1.hasPositiveFeedback;
+  }
+  if (hasPositiveFeedback == null) {
+    hasPositiveFeedback = null;
+  }
+  return hasPositiveFeedback;
+};
 SmartSearchResultsStore.displayName = "SmartSearchResultsStore";
 const obj = { max: MAX_CACHED_ANSWER_GUILDS };
 let obj2 = {
@@ -73,14 +91,18 @@ let obj2 = {
       const result = closure_6.set(guildId, tmp7);
       value = tmp7;
     }
-    const result1 = value.set(requestKey, {
-      status: SmartSearchTypes.SmartSearchStatus.LOADING,
-      queryText,
-      answerText: "",
-      citations: [],
-      channelIds,
-    });
     const obj3 = {
+      smartSearchResult: {
+        status: SmartSearchTypes.SmartSearchStatus.LOADING,
+        queryText,
+        answerText: "",
+        citations: [],
+        channelIds,
+      },
+      hasPositiveFeedback: null,
+    };
+    const result1 = value.set(requestKey, obj3);
+    const obj4 = {
       status: SmartSearchTypes.SmartSearchStatus.LOADING,
       queryText,
       answerText: "",
@@ -100,7 +122,14 @@ let obj2 = {
       const result = closure_6.set(guildId, tmp7);
       value = tmp7;
     }
-    const result1 = value.set(requestKey, { status: smartSearchStatus, queryText, answerText, citations, channelIds });
+    const result1 = value.set(requestKey, {
+      smartSearchResult: { status: smartSearchStatus, queryText, answerText, citations, channelIds },
+      hasPositiveFeedback: null,
+    });
+    const obj3 = {
+      smartSearchResult: { status: smartSearchStatus, queryText, answerText, citations, channelIds },
+      hasPositiveFeedback: null,
+    };
   },
   SMART_SEARCH_FETCH_FAILURE: function handleFetchFailure(status) {
     const smartSearchQuery = status.smartSearchQuery;
@@ -114,12 +143,30 @@ let obj2 = {
       value = tmp7;
     }
     const result1 = value.set(requestKey, {
-      status: status.status,
-      queryText,
-      answerText: "",
-      citations: [],
-      channelIds,
+      smartSearchResult: { status: status.status, queryText, answerText: "", citations: [], channelIds },
+      hasPositiveFeedback: null,
     });
+    const obj3 = {
+      smartSearchResult: { status: status.status, queryText, answerText: "", citations: [], channelIds },
+      hasPositiveFeedback: null,
+    };
+  },
+  SMART_SEARCH_SET_RESULT_FEEDBACK: function handleSetResultFeedback(arg0) {
+    ({ smartSearchQuery, hasPositiveFeedback } = arg0);
+    const peekResult = closure_6.peek(smartSearchQuery.guildId);
+    let peekResult1;
+    if (peekResult != null) {
+      peekResult1 = peekResult.peek(smartSearchQuery.requestKey);
+    }
+    if (peekResult1 == null) {
+      peekResult1 = null;
+    }
+    if (null != peekResult1) {
+      if (peekResult1.hasPositiveFeedback !== hasPositiveFeedback) {
+        peekResult1.hasPositiveFeedback = hasPositiveFeedback;
+      }
+    }
+    return false;
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     guild = guild.guild;
@@ -142,11 +189,11 @@ let obj2 = {
         return false;
       } else {
         items = [];
-        const item = peekResult.forEach((channelIds, index) => {
-          channelIds = channelIds.channelIds;
+        const item = peekResult.forEach((smartSearchResult, index) => {
+          const channelIds = smartSearchResult.smartSearchResult.channelIds;
           let hasItem = channelIds.includes(channel.id);
           if (!hasItem) {
-            const citations = channelIds.citations;
+            const citations = smartSearchResult.smartSearchResult.citations;
             hasItem = citations.some((channelId) => channelId.channelId === id.id);
           }
           if (hasItem) {
@@ -182,14 +229,18 @@ export default new SmartSearchResultsStore(DispatcherDefault, {
       const result = closure_6.set(guildId, tmp7);
       value = tmp7;
     }
-    const result1 = value.set(requestKey, {
-      status: SmartSearchTypes.SmartSearchStatus.LOADING,
-      queryText,
-      answerText: "",
-      citations: [],
-      channelIds,
-    });
     const obj3 = {
+      smartSearchResult: {
+        status: SmartSearchTypes.SmartSearchStatus.LOADING,
+        queryText,
+        answerText: "",
+        citations: [],
+        channelIds,
+      },
+      hasPositiveFeedback: null,
+    };
+    const result1 = value.set(requestKey, obj3);
+    const obj4 = {
       status: SmartSearchTypes.SmartSearchStatus.LOADING,
       queryText,
       answerText: "",
@@ -209,7 +260,14 @@ export default new SmartSearchResultsStore(DispatcherDefault, {
       const result = closure_6.set(guildId, tmp7);
       value = tmp7;
     }
-    const result1 = value.set(requestKey, { status: smartSearchStatus, queryText, answerText, citations, channelIds });
+    const result1 = value.set(requestKey, {
+      smartSearchResult: { status: smartSearchStatus, queryText, answerText, citations, channelIds },
+      hasPositiveFeedback: null,
+    });
+    const obj3 = {
+      smartSearchResult: { status: smartSearchStatus, queryText, answerText, citations, channelIds },
+      hasPositiveFeedback: null,
+    };
   },
   SMART_SEARCH_FETCH_FAILURE: function handleFetchFailure(status) {
     const smartSearchQuery = status.smartSearchQuery;
@@ -223,12 +281,30 @@ export default new SmartSearchResultsStore(DispatcherDefault, {
       value = tmp7;
     }
     const result1 = value.set(requestKey, {
-      status: status.status,
-      queryText,
-      answerText: "",
-      citations: [],
-      channelIds,
+      smartSearchResult: { status: status.status, queryText, answerText: "", citations: [], channelIds },
+      hasPositiveFeedback: null,
     });
+    const obj3 = {
+      smartSearchResult: { status: status.status, queryText, answerText: "", citations: [], channelIds },
+      hasPositiveFeedback: null,
+    };
+  },
+  SMART_SEARCH_SET_RESULT_FEEDBACK: function handleSetResultFeedback(arg0) {
+    ({ smartSearchQuery, hasPositiveFeedback } = arg0);
+    const peekResult = closure_6.peek(smartSearchQuery.guildId);
+    let peekResult1;
+    if (peekResult != null) {
+      peekResult1 = peekResult.peek(smartSearchQuery.requestKey);
+    }
+    if (peekResult1 == null) {
+      peekResult1 = null;
+    }
+    if (null != peekResult1) {
+      if (peekResult1.hasPositiveFeedback !== hasPositiveFeedback) {
+        peekResult1.hasPositiveFeedback = hasPositiveFeedback;
+      }
+    }
+    return false;
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     guild = guild.guild;
@@ -251,11 +327,11 @@ export default new SmartSearchResultsStore(DispatcherDefault, {
         return false;
       } else {
         items = [];
-        const item = peekResult.forEach((channelIds, index) => {
-          channelIds = channelIds.channelIds;
+        const item = peekResult.forEach((smartSearchResult, index) => {
+          const channelIds = smartSearchResult.smartSearchResult.channelIds;
           let hasItem = channelIds.includes(channel.id);
           if (!hasItem) {
-            const citations = channelIds.citations;
+            const citations = smartSearchResult.smartSearchResult.citations;
             hasItem = citations.some((channelId) => channelId.channelId === id.id);
           }
           if (hasItem) {

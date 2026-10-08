@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchMessageTimestamp.tsx");
 
 export const useSearchMessageTimestamp = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, id2) => {
+  ? function useSearchMessageTimestamp(id, id2) {
       const cResult = c.c(7);
       if (cResult[0] === id2) {
         if (cResult[1] === id.id) {
@@ -45,7 +45,7 @@ export const useSearchMessageTimestamp = ReactCompilerGating.isReactCompilerEnab
       tmp4 = relativeTimestamp1;
       const tmpResult2 = NotificationCenterUtils;
     }
-  : (arg0, arg1) => {
+  : function useSearchMessageTimestamp(arg0, arg1) {
       let id = arg0;
       const id2 = arg1;
       const items = [arg0, arg1];

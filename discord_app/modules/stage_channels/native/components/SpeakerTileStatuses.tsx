@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef6464 from "../../../../../_runtime/metro/06464__.js";
-import _modDef9749 from "../../../../../_runtime/metro/09749__.js";
+import _modDef6642 from "../../../../../_runtime/metro/06642__.js";
+import _modDef10950 from "../../../../../_runtime/metro/10950__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
@@ -12,7 +12,7 @@ import StageChannelRoleStore from "../../StageChannelRoleStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { voiceStatusWrapper: null, moderatorStatusWrapper: null, restricted: null };
 let size = {
   position: "absolute",
@@ -45,7 +45,7 @@ let obj3 = { marginEnd: nativeDefault.space.PX_4 };
 let ReactCompilerGating = fn(558);
 const memoResult = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (userId) => {
+    ? function VoiceStatus(userId) {
         const cResult = userId(576).c(18);
         userId = userId.userId;
         const channelId = userId.channelId;
@@ -136,7 +136,7 @@ const memoResult = noop.memo(
                 return closure_4.isLocalMute(userId);
               }
             }
-            const tmp15 = channelId(9704);
+            const tmp15 = channelId(10893);
           } else {
             class S {
               constructor() {
@@ -173,7 +173,7 @@ const memoResult = noop.memo(
         cResult[8] = items4;
         const tmpResult = userId(504);
       }
-    : (userId) => {
+    : function VoiceStatus(userId) {
         userId = userId.userId;
         const channelId = userId.channelId;
         const tmp = closure_8();
@@ -207,15 +207,15 @@ const memoResult = noop.memo(
           flag2 = false;
         }
         if (stateFromStores) {
-          let tmp5 = channelId(9704);
+          let tmp5 = channelId(10893);
           let flag3 = true;
         } else if (flag2) {
-          tmp5 = channelId(9161);
+          tmp5 = channelId(10727);
           flag3 = false;
         } else {
           flag3 = false;
           if (flag) {
-            tmp5 = channelId(4825);
+            tmp5 = channelId(5019);
             flag3 = false;
           }
         }
@@ -226,13 +226,13 @@ const memoResult = noop.memo(
           obj3.style = items4;
           const obj4 = {
             source: tmp5,
-            size: tmp2(1188).Icon.Sizes.SMALL,
+            size: tmp2(1200).Icon.Sizes.SMALL,
             color: channelId(587).unsafe_rawColors.BLACK,
             disableColor: flag3,
           };
-          obj3.children = jsx(tmp2(1188).Icon, {
+          obj3.children = jsx(tmp2(1200).Icon, {
             source: tmp5,
-            size: tmp2(1188).Icon.Sizes.SMALL,
+            size: tmp2(1200).Icon.Sizes.SMALL,
             color: channelId(587).unsafe_rawColors.BLACK,
             disableColor: flag3,
           });
@@ -244,7 +244,7 @@ const memoResult = noop.memo(
 ReactCompilerGating = fn(558);
 const memoResult1 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (userId) => {
+    ? function ModeratorStatus(userId) {
         const cResult = userId(576).c(13);
         userId = userId.userId;
         const channelId = userId.channelId;
@@ -264,7 +264,7 @@ const memoResult1 = noop.memo(
           }
           let tmp9;
           if (tmpResult.useStateFromStores(first, tmp7, tmp8)) {
-            tmp9 = channelId(9748);
+            tmp9 = channelId(10949);
           }
           if (null == tmp9) {
             return null;
@@ -276,12 +276,12 @@ const memoResult1 = noop.memo(
               if (cResult[8] !== tmp9) {
                 const obj2 = {
                   source: tmp9,
-                  size: tmp(1188).Icon.Sizes.SMALL,
+                  size: tmp(1200).Icon.Sizes.SMALL,
                   color: channelId(587).unsafe_rawColors.BLACK,
                 };
-                const tmp16 = jsx(tmp(1188).Icon, {
+                const tmp16 = jsx(tmp(1200).Icon, {
                   source: tmp9,
-                  size: tmp(1188).Icon.Sizes.SMALL,
+                  size: tmp(1200).Icon.Sizes.SMALL,
                   color: channelId(587).unsafe_rawColors.BLACK,
                 });
                 cResult[8] = tmp9;
@@ -318,7 +318,7 @@ const memoResult1 = noop.memo(
         tmp7 = fn;
         const obj = userId(576);
       }
-    : (userId) => {
+    : function ModeratorStatus(userId) {
         userId = userId.userId;
         const channelId = userId.channelId;
         const tmp = closure_8();
@@ -326,7 +326,7 @@ const memoResult1 = noop.memo(
         const items1 = [channelId, userId];
         let tmp4;
         if (obj.useStateFromStores(items, () => StageChannelRoleStore.isModerator(userId, channelId), items1)) {
-          tmp4 = channelId(9748);
+          tmp4 = channelId(10949);
         }
         let tmp6 = null;
         if (null != tmp4) {
@@ -335,12 +335,12 @@ const memoResult1 = noop.memo(
           obj2.style = items2;
           const obj3 = {
             source: tmp4,
-            size: tmp2(1188).Icon.Sizes.SMALL,
+            size: tmp2(1200).Icon.Sizes.SMALL,
             color: channelId(587).unsafe_rawColors.BLACK,
           };
-          obj2.children = jsx(tmp2(1188).Icon, {
+          obj2.children = jsx(tmp2(1200).Icon, {
             source: tmp4,
-            size: tmp2(1188).Icon.Sizes.SMALL,
+            size: tmp2(1200).Icon.Sizes.SMALL,
             color: channelId(587).unsafe_rawColors.BLACK,
           });
           tmp6 = <View style={null}>{null}</View>;
@@ -350,19 +350,19 @@ const memoResult1 = noop.memo(
 );
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function BlockedStatus() {
       const cResult = c.c(2);
       const tmp4 = closure_8();
       if (cResult[0] !== tmp4.restricted) {
         const obj2 = {
           style: tmp4.restricted,
-          source: _modDef9749,
+          source: _modDef10950,
           size: native.Icon.Sizes.EXTRA_SMALL,
           color: nativeDefault.unsafe_rawColors.RED_400,
         };
         const tmp8 = jsx(native.Icon, {
           style: tmp4.restricted,
-          source: _modDef9749,
+          source: _modDef10950,
           size: native.Icon.Sizes.EXTRA_SMALL,
           color: nativeDefault.unsafe_rawColors.RED_400,
         });
@@ -374,11 +374,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function BlockedStatus() {
       const tmp = closure_8();
       return jsx(native.Icon, {
         style: closure_8().restricted,
-        source: _modDef9749,
+        source: _modDef10950,
         size: native.Icon.Sizes.EXTRA_SMALL,
         color: nativeDefault.unsafe_rawColors.RED_400,
       });
@@ -390,14 +390,14 @@ export const VoiceStatus = memoResult;
 export const ModeratorStatus = memoResult1;
 export const BlockedStatus = tmp4;
 export const IgnoredStatus = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function IgnoredStatus() {
       const cResult = c.c(2);
       const tmp4 = closure_8();
       if (cResult[0] !== tmp4.restricted) {
-        const obj2 = { style: tmp4.restricted, source: _modDef6464, size: native.Icon.Sizes.EXTRA_SMALL };
+        const obj2 = { style: tmp4.restricted, source: _modDef6642, size: native.Icon.Sizes.EXTRA_SMALL };
         const tmp8 = jsx(native.Icon, {
           style: tmp4.restricted,
-          source: _modDef6464,
+          source: _modDef6642,
           size: native.Icon.Sizes.EXTRA_SMALL,
         });
         cResult[0] = tmp4.restricted;
@@ -408,11 +408,11 @@ export const IgnoredStatus = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function IgnoredStatus() {
       const tmp = closure_8();
       return jsx(native.Icon, {
         style: closure_8().restricted,
-        source: _modDef6464,
+        source: _modDef6642,
         size: native.Icon.Sizes.EXTRA_SMALL,
       });
     };

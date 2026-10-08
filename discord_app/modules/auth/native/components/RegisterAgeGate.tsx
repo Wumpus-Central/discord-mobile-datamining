@@ -5,20 +5,20 @@ import RegistrationStepsUtils from "../RegistrationStepsUtils.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ConsentStore from "../../../../stores/ConsentStore.tsx";
-import hooks_mod from "../../../../../_runtime/metro/04467__.js";
+import hooks_mod from "../../../../../_runtime/metro/04659__.js";
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(15906);
+const RegistrationUIStore = fn(16165);
 ({ updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(15907);
+const RegistrationConstants = fn(16166);
 ({ RegisterTransitionSteps: closure_9, RegistrationTransitionActionTypes: c10 } = RegistrationConstants);
 const AuthStates = fn(1085).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   inputGroup: { marginTop: 24, marginBottom: 24 },
   flexGrow: { flexGrow: 1 },
@@ -42,7 +42,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/RegisterAgeGate.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function RegisterAgeGate() {
       const cResult = navigation(first1[13]).c(78);
       closure_15();
       let obj = navigation(first1[13]);
@@ -249,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      function it() {
+      function handleSubmit() {
         _modDef38(null != first1, "birthday was not null");
         const obj = { birthday: first1, consent: null };
         let tmp4 = first2;
@@ -267,10 +267,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[18] = stateFromStores;
       cResult[19] = navigation;
       cResult[20] = context;
-      cResult[21] = it;
+      cResult[21] = handleSubmit;
       const tmpResult = tmp(first1[17]);
     }
-  : () => {
+  : function RegisterAgeGate() {
       const tmp = closure_15();
       let obj = require("native");
       _require = require("useNavigation").useNavigation();

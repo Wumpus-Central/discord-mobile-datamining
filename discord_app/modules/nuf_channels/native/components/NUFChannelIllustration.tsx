@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     width: "100%",
@@ -94,7 +94,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFChannelIllustration.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function NUFChannelIllustration() {
       const cResult = require("c").c(59);
       const tmp4 = closure_9();
       _require = tmp4;
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj = { name: null, avatar: null, message: null };
                 const intl2 = closure_1_0(1126).intl;
                 obj.name = intl2.string(closure_1_0(1126).t["9m/HsX"]);
-                obj.avatar = closure_1_1(13597);
+                obj.avatar = closure_1_1(13419);
                 obj.message = intl.string(closure_1_0(1126).t["5alrl0"]);
                 items[tmp] = obj;
                 return items;
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj = { name: null, avatar: null, message: null };
                 const intl2 = closure_1_0(1126).intl;
                 obj.name = intl2.string(closure_1_0(1126).t["AW1kM+"]);
-                obj.avatar = closure_1_1(13598);
+                obj.avatar = closure_1_1(13420);
                 obj.message = intl.string(closure_1_0(1126).t["5Oo+vS"]);
                 items[tmp] = obj;
                 return items;
@@ -196,11 +196,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj;
               }
             }
-            let obj3 = { interpolate: tmp(4618).interpolate, messageListAnimation: sharedValue };
+            let obj3 = { interpolate: tmp(4810).interpolate, messageListAnimation: sharedValue };
             M.__closure = obj3;
             M.__workletHash = 1240710065054;
             M.__initData = __initData;
-            const animatedStyle = tmp(4618).useAnimatedStyle(M);
+            const animatedStyle = tmp(4810).useAnimatedStyle(M);
             if (cResult[14] === tmp4.starBlue) {
               if (cResult[15] === tmp4.starSmall) {
                 let tmp21 = cResult[16];
@@ -264,8 +264,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           return obj;
                         }
                       }
-                      let tmp43 = closure_7(tmp(5871).TextIcon, { size: "sm" });
-                      const tmp45 = closure_7(tmp(5871).TextIcon, { size: "sm" });
+                      let tmp43 = closure_7(tmp(8183).TextIcon, { size: "sm" });
+                      const tmp45 = closure_7(tmp(8183).TextIcon, { size: "sm" });
                     } else {
                       tmp43 = cResult[28];
                     }
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       const items2 = [" ", obj13.string(tmp(1126).t.aLOLry)];
                       obj5.children = items2;
-                      const tmp48 = closure_8(tmp(4892).Text, obj5);
+                      const tmp48 = closure_8(tmp(5086).Text, obj5);
                       cResult[29] = tmp48;
                       let tmp46 = tmp48;
                     } else {
@@ -308,10 +308,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       const items3 = [tmp43, tmp46];
                       obj6.children = items3;
-                      const tmp52 = closure_8(closure_5, obj6);
                       cResult[30] = tmp4.header;
-                      cResult[31] = tmp52;
-                      let tmp49 = tmp52;
+                      class G {
+                        constructor(arg0) {
+                          obj = { style: closure_0.message, children: null };
+                          obj1 = { source: arg0.avatar, style: closure_0.messageAvatar };
+                          items = [,];
+                          items[0] = jsx(Image, obj1);
+                          obj6 = { style: closure_0.messageContent, children: null };
+                          obj7 = { variant: "text-md/semibold", allowFontScaling: false, children: arg0.name };
+                          items1 = [,];
+                          items1[0] = jsx(closure_0(closure_2[18]).Text, obj7);
+                          obj8 = { variant: "text-md/medium", allowFontScaling: false, children: arg0.message };
+                          items1[1] = jsx(closure_0(closure_2[18]).Text, obj8);
+                          obj6.children = items1;
+                          items[1] = jsxs(View, obj6);
+                          obj.children = items;
+                          return jsxs(View, obj, arg0.message);
+                        }
+                      }
+                      let tmp49 = closure_8(closure_5, obj6);
+                      const tmp52 = closure_8(closure_5, obj6);
                     } else {
                       tmp49 = cResult[31];
                     }
@@ -361,7 +378,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       }
                                     }
                                     const obj7 = { style: tmp20, children: null };
-                                    const items4 = [tmp21, tmp26, tmp30, tmp34, tmp38, tmp64];
+                                    const items4 = [tmp21, tmp26, tmp30, tmp34, tmp38];
+                                    class G {
+                                      constructor(arg0) {
+                                        obj = { style: closure_0.message, children: null };
+                                        obj1 = { source: arg0.avatar, style: closure_0.messageAvatar };
+                                        items = [,];
+                                        items[0] = jsx(Image, obj1);
+                                        obj6 = { style: closure_0.messageContent, children: null };
+                                        obj7 = {
+                                          variant: "text-md/semibold",
+                                          allowFontScaling: false,
+                                          children: arg0.name,
+                                        };
+                                        items1 = [,];
+                                        items1[0] = jsx(closure_0(closure_2[18]).Text, obj7);
+                                        obj8 = {
+                                          variant: "text-md/medium",
+                                          allowFontScaling: false,
+                                          children: arg0.message,
+                                        };
+                                        items1[1] = jsx(closure_0(closure_2[18]).Text, obj8);
+                                        obj6.children = items1;
+                                        items[1] = jsxs(View, obj6);
+                                        obj.children = items;
+                                        return jsxs(View, obj, arg0.message);
+                                      }
+                                    }
                                     obj7.children = items4;
                                     const tmp70 = closure_8(closure_5, obj7);
                                     cResult[51] = tmp4.container;
@@ -390,8 +433,34 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 tmp66[0] = tmp42;
                                 const items5 = [tmp49, tmp61];
                                 tmp66[3] = items5;
-                                const tmp67 = closure_8(tmp(6002).Card, tmp66);
+                                const tmp67 = closure_8(tmp(6186).Card, tmp66);
                                 cResult[47] = tmp4.card;
+                                class G {
+                                  constructor(arg0) {
+                                    obj = { style: closure_0.message, children: null };
+                                    obj1 = { source: arg0.avatar, style: closure_0.messageAvatar };
+                                    items = [,];
+                                    items[0] = jsx(Image, obj1);
+                                    obj6 = { style: closure_0.messageContent, children: null };
+                                    obj7 = {
+                                      variant: "text-md/semibold",
+                                      allowFontScaling: false,
+                                      children: arg0.name,
+                                    };
+                                    items1 = [,];
+                                    items1[0] = jsx(closure_0(closure_2[18]).Text, obj7);
+                                    obj8 = {
+                                      variant: "text-md/medium",
+                                      allowFontScaling: false,
+                                      children: arg0.message,
+                                    };
+                                    items1[1] = jsx(closure_0(closure_2[18]).Text, obj8);
+                                    obj6.children = items1;
+                                    items[1] = jsxs(View, obj6);
+                                    obj.children = items;
+                                    return jsxs(View, obj, arg0.message);
+                                  }
+                                }
                                 cResult[48] = tmp49;
                                 cResult[49] = tmp61;
                                 cResult[50] = tmp67;
@@ -413,6 +482,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               const tmp63 = closure_7(closure_5, obj8);
                               cResult[44] = tmp4.content;
                               cResult[45] = tmp58;
+                              class G {
+                                constructor(arg0) {
+                                  obj = { style: closure_0.message, children: null };
+                                  obj1 = { source: arg0.avatar, style: closure_0.messageAvatar };
+                                  items = [,];
+                                  items[0] = jsx(Image, obj1);
+                                  obj6 = { style: closure_0.messageContent, children: null };
+                                  obj7 = { variant: "text-md/semibold", allowFontScaling: false, children: arg0.name };
+                                  items1 = [,];
+                                  items1[0] = jsx(closure_0(closure_2[18]).Text, obj7);
+                                  obj8 = { variant: "text-md/medium", allowFontScaling: false, children: arg0.message };
+                                  items1[1] = jsx(closure_0(closure_2[18]).Text, obj8);
+                                  obj6.children = items1;
+                                  items[1] = jsxs(View, obj6);
+                                  obj.children = items;
+                                  return jsxs(View, obj, arg0.message);
+                                }
+                              }
                               cResult[46] = tmp63;
                               tmp61 = tmp63;
                             }
@@ -429,9 +516,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                             const obj9 = { style: animatedStyle, children: cResult[36] };
-                            const tmp60 = closure_7(messageContent(4618).View, obj9);
+                            const tmp60 = closure_7(messageContent(4810).View, obj9);
                             cResult[41] = animatedStyle;
                             cResult[42] = cResult[36];
+                            class G {
+                              constructor(arg0) {
+                                obj = { style: closure_0.message, children: null };
+                                obj1 = { source: arg0.avatar, style: closure_0.messageAvatar };
+                                items = [,];
+                                items[0] = jsx(Image, obj1);
+                                obj6 = { style: closure_0.messageContent, children: null };
+                                obj7 = { variant: "text-md/semibold", allowFontScaling: false, children: arg0.name };
+                                items1 = [,];
+                                items1[0] = jsx(closure_0(closure_2[18]).Text, obj7);
+                                obj8 = { variant: "text-md/medium", allowFontScaling: false, children: arg0.message };
+                                items1[1] = jsx(closure_0(closure_2[18]).Text, obj8);
+                                obj6.children = items1;
+                                items[1] = jsxs(View, obj6);
+                                obj.children = items;
+                                return jsxs(View, obj, arg0.message);
+                              }
+                            }
                             cResult[43] = tmp60;
                             tmp58 = tmp60;
                           }
@@ -459,37 +564,49 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         cResult[33] = tmp4.message;
                         ({ messageAvatar: tmp3[34], messageContent } = tmp4);
                         cResult[35] = messageContent;
-                        cResult[36] = mapped;
+                        class G {
+                          constructor(arg0) {
+                            obj = { style: closure_0.message, children: null };
+                            obj1 = { source: arg0.avatar, style: closure_0.messageAvatar };
+                            items = [,];
+                            items[0] = jsx(Image, obj1);
+                            obj6 = { style: closure_0.messageContent, children: null };
+                            obj7 = { variant: "text-md/semibold", allowFontScaling: false, children: arg0.name };
+                            items1 = [,];
+                            items1[0] = jsx(closure_0(closure_2[18]).Text, obj7);
+                            obj8 = { variant: "text-md/medium", allowFontScaling: false, children: arg0.message };
+                            items1[1] = jsx(closure_0(closure_2[18]).Text, obj8);
+                            obj6.children = items1;
+                            items[1] = jsxs(View, obj6);
+                            obj.children = items;
+                            return jsxs(View, obj, arg0.message);
+                          }
+                        }
                       }
                     }
-                    const fn3 = function j(children) {
-                      const obj = { style: closure_0.message, children: null };
-                      const items = [
-                        React5(timestampProducer, { source: children.avatar, style: closure_0.messageAvatar }),
-                      ];
-                      const obj3 = { style: closure_0.messageContent, children: null };
-                      const items1 = [
-                        React5(Text_Text.Text, {
-                          variant: "text-md/semibold",
-                          allowFontScaling: false,
-                          children: children.name,
-                        }),
-                        React5(Text_Text.Text, {
-                          variant: "text-md/medium",
-                          allowFontScaling: false,
-                          children: children.message,
-                        }),
-                      ];
-                      obj3.children = items1;
-                      items[1] = closure_2_8(hasOwnProperty, obj3);
-                      obj.children = items;
-                      return closure_2_8(hasOwnProperty, obj, children.message);
-                    };
+                    class G {
+                      constructor(arg0) {
+                        obj = { style: closure_0.message, children: null };
+                        obj1 = { source: arg0.avatar, style: closure_0.messageAvatar };
+                        items = [,];
+                        items[0] = jsx(Image, obj1);
+                        obj6 = { style: closure_0.messageContent, children: null };
+                        obj7 = { variant: "text-md/semibold", allowFontScaling: false, children: arg0.name };
+                        items1 = [,];
+                        items1[0] = jsx(closure_0(closure_2[18]).Text, obj7);
+                        obj8 = { variant: "text-md/medium", allowFontScaling: false, children: arg0.message };
+                        items1[1] = jsx(closure_0(closure_2[18]).Text, obj8);
+                        obj6.children = items1;
+                        items[1] = jsxs(View, obj6);
+                        obj.children = items;
+                        return jsxs(View, obj, arg0.message);
+                      }
+                    }
                     cResult[37] = tmp4.message;
                     cResult[38] = tmp4.messageAvatar;
                     cResult[39] = tmp4.messageContent;
-                    cResult[40] = fn3;
-                    tmp55 = fn3;
+                    cResult[40] = G;
+                    tmp55 = G;
                   }
                   class M {
                     constructor() {
@@ -503,7 +620,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return obj;
                     }
                   }
-                  const obj10 = { source: messageContent(13602), style: null };
+                  const obj10 = { source: messageContent(13424), style: null };
                   const items6 = [,];
                   ({ starSmall: arr8[0], starPurple: arr8[1] } = tmp4);
                   obj10.style = items6;
@@ -525,7 +642,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return obj;
                   }
                 }
-                const obj11 = { source: messageContent(13601), style: null };
+                const obj11 = { source: messageContent(13423), style: null };
                 const items7 = [,];
                 ({ starMedium: arr7[0], starGreen: arr7[1] } = tmp4);
                 obj11.style = items7;
@@ -547,7 +664,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return obj;
                 }
               }
-              const obj12 = { source: messageContent(13600), style: null };
+              const obj12 = { source: messageContent(13422), style: null };
               const items8 = [,];
               ({ starMedium: arr6[0], starPink: arr6[1] } = tmp4);
               obj12.style = items8;
@@ -557,7 +674,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[19] = tmp29;
               tmp26 = tmp29;
             }
-            const obj14 = { source: messageContent(13599), style: null };
+            const obj14 = { source: messageContent(13421), style: null };
             const items9 = [,];
             ({ starSmall: arr5[0], starBlue: arr5[1] } = tmp4);
             obj14.style = items9;
@@ -566,12 +683,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[15] = tmp4.starSmall;
             cResult[16] = tmp25;
             tmp21 = tmp25;
-            const tmpResult4 = tmp(4618);
+            const tmpResult4 = tmp(4810);
           }
           const items10 = [sharedValue, messageContent];
           cResult[11] = sharedValue;
           cResult[12] = messageContent;
-          cResult[13] = items10;
           tmp16 = items10;
         }
         const items11 = [, messageContent];
@@ -599,7 +715,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = S;
       const tmpResult3 = require("ReanimatedRexport");
     }
-  : () => {
+  : function NUFChannelIllustration() {
       const tmp = closure_9();
       _require = tmp;
       const tmp2 = sharedValue(sharedValue1.useState([]), 2);
@@ -617,7 +733,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj = { name: null, avatar: null, message: null };
               const intl2 = closure_1_0(1126).intl;
               obj.name = intl2.string(closure_1_0(1126).t["9m/HsX"]);
-              obj.avatar = closure_1_1(13597);
+              obj.avatar = closure_1_1(13419);
               obj.message = intl.string(closure_1_0(1126).t["5alrl0"]);
               items[tmp] = obj;
               return items;
@@ -632,7 +748,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj = { name: null, avatar: null, message: null };
               const intl2 = closure_1_0(1126).intl;
               obj.name = intl2.string(closure_1_0(1126).t["AW1kM+"]);
-              obj.avatar = closure_1_1(13598);
+              obj.avatar = closure_1_1(13420);
               obj.message = intl.string(closure_1_0(1126).t["5Oo+vS"]);
               items[tmp] = obj;
               return items;
@@ -670,22 +786,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: tmp.container, children: null };
       const obj6 = { source: null, style: null };
       const animatedStyle = obj3.useAnimatedStyle(fn);
-      obj6.source = first(13599);
+      obj6.source = first(13421);
       const items2 = [,];
       ({ starSmall: arr4[0], starBlue: arr4[1] } = tmp);
       obj6.style = items2;
       const items3 = [closure_7(closure_6, obj6), , , , ,];
-      const obj7 = { source: first(13600), style: null };
+      const obj7 = { source: first(13422), style: null };
       const items4 = [,];
       ({ starMedium: arr6[0], starPink: arr6[1] } = tmp);
       obj7.style = items4;
       items3[1] = closure_7(closure_6, obj7);
-      const obj8 = { source: first(13601), style: null };
+      const obj8 = { source: first(13423), style: null };
       const items5 = [,];
       ({ starMedium: arr7[0], starGreen: arr7[1] } = tmp);
       obj8.style = items5;
       items3[2] = closure_7(closure_6, obj8);
-      const obj9 = { source: first(13602), style: null };
+      const obj9 = { source: first(13424), style: null };
       const items6 = [,];
       ({ starSmall: arr8[0], starPurple: arr8[1] } = tmp);
       obj9.style = items6;
@@ -704,7 +820,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj14 = { style: tmp.content, children: null };
       const obj10 = { style: tmp.cardBackground };
       const obj4 = { interpolate: require("ReanimatedRexport").interpolate, messageListAnimation: sharedValue };
-      obj14.children = closure_7(first(4618).View, {
+      obj14.children = closure_7(first(4810).View, {
         style: animatedStyle,
         children: first.map((children) => {
           const obj = { style: closure_0.message, children: null };

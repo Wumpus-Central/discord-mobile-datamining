@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "role-subscriptions";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1 },
   list: { flex: 1 },
@@ -33,7 +33,7 @@ let closure_8 = createStyles.createStyles({
 });
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function GuildRoleSubscriptionsSectionHeader() {
       const cResult = c.c(7);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -78,7 +78,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp14;
       tmp13 = tmp14;
     }
-  : () => {
+  : function GuildRoleSubscriptionsSectionHeader() {
       const tmp = closure_8();
       const obj = { style: tmp.sectionHeader, children: null };
       const obj2 = { variant: "eyebrow", color: "text-default", children: null };
@@ -94,7 +94,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ItemSeparator() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp6 = hasOwnProperty(native.Spacer, { size: 8 });
@@ -105,7 +105,9 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => hasOwnProperty(native.Spacer, { size: 8 });
+  : function ItemSeparator() {
+      return hasOwnProperty(native.Spacer, { size: 8 });
+    };
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -113,7 +115,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsGuildRoleSubscriptions() {
       const cResult = c.c(14);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -208,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       tmpResult = GuildRoleSubscriptionsHooks;
     }
-  : () => {
+  : function UserSettingsGuildRoleSubscriptions() {
       const tmp = closure_8();
       useRestorePurchasesDefault({ forceRestore: true });
       const tmp5 = useActiveGuildSubscriptionsDefault({ ensureFresh: true });

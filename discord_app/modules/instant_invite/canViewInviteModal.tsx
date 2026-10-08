@@ -8,11 +8,11 @@ const result = size.fileFinishedImporting("modules/instant_invite/canViewInviteM
 export const canViewInviteModal = function canViewInviteModal(
   PermissionStore,
   guild,
-  defaultChannel,
+  channel1,
   stageInstanceByChannel,
 ) {
-  let tmp = defaultChannel;
-  if (defaultChannel == null) {
+  let tmp = channel1;
+  if (channel1 == null) {
     tmp = guild;
   }
   let canResult = null != tmp;

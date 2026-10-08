@@ -6,7 +6,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore.tsx";
 
 require = fn;
-const getCurrentlyShownCounts = fn(2042).getCurrentlyShownCounts;
+const getCurrentlyShownCounts = fn(2055).getCurrentlyShownCounts;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/dismissible_content/trackDismissibleContentActioned.tsx");

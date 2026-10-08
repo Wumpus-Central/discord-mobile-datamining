@@ -21,7 +21,7 @@ prototype["isFetchingFriendsForGuild"] = function isFetchingFriendsForGuild(arg0
   }
   return fetchState === constants.FETCHING;
 };
-prototype["fetchFriendMembersIfNotFetched"] = function fetchFriendMembersIfNotFetched(id1, items) {
+prototype["fetchFriendMembersIfNotFetched"] = function fetchFriendMembersIfNotFetched(id1, id) {
   let fetchState;
   if (dependencyMap[id1] != null) {
     fetchState = tmp.fetchState;
@@ -32,7 +32,7 @@ prototype["fetchFriendMembersIfNotFetched"] = function fetchFriendMembersIfNotFe
   if (fetchState === constants.NOT_FETCHED) {
     const obj = { fetchState: tmp4.FETCHING, foundMembers: 0, notFoundMembers: 0 };
     dependencyMap[id1] = obj;
-    const membersById = GuildActionCreatorsDefault.requestMembersById(id1, items, false);
+    const membersById = GuildActionCreatorsDefault.requestMembersById(id1, id, false);
   }
 };
 const guildFriendshipStore = new GuildFriendshipStore(DispatcherDefault, {

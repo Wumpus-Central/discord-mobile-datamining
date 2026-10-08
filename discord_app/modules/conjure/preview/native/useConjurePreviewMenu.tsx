@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/preview/native/useConjurePreviewMenu.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import conjureExternalConnections from "../../external_connections/conjureExternalConnections.tsx";
 import conjureProjectMenuItems from "../../projects/conjureProjectMenuItems.tsx";
@@ -13,7 +13,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/preview/native/useConjurePreviewMenu.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (projectId) => {
+  ? function useConjurePreviewMenu(projectId) {
       const cResult = projectId(connect[3]).c(18);
       projectId = projectId.projectId;
       const refreshApplicationId = projectId.refreshApplicationId;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   return tmp17;
                 }
-                class S {
+                class E {
                   constructor(arg0) {
                     closure_0 = projectId;
                     if ("refresh" !== projectId.kind) {
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp17 = tmp18;
               }
             }
-            class S {
+            class E {
               constructor(arg0) {
                 closure_0 = projectId;
                 if ("refresh" !== projectId.kind) {
@@ -139,8 +139,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[11] = connect;
             cResult[12] = stateFromStores;
             cResult[13] = refresh;
-            cResult[14] = S;
-            tmp16 = S;
+            cResult[14] = E;
+            tmp16 = E;
           }
         }
       }
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = previewMenuItemsResult;
       const tmpResult4 = projectId(connect[9]);
     }
-  : (projectId) => {
+  : function useConjurePreviewMenu(projectId) {
       projectId = projectId.projectId;
       const refreshApplicationId = projectId.refreshApplicationId;
       let pending;
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               connect(found);
             } else {
               const intl = util.intl;
-              ToastUtils.presentError(intl.string(_modDef3753["jCQ/1B"]));
+              ToastUtils.presentError(intl.string(_modDef3827["jCQ/1B"]));
             }
           }
         } else {

@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/referral_program/hooks/useReferralIncentiveEligibility.tsx");
 
 export const useReferralIncentiveEligibility = ReactCompilerGating.isReactCompilerEnabled()
-  ? (preventFetch) => {
+  ? function useReferralIncentiveEligibility(preventFetch) {
       const cResult = c.c(6);
       preventFetch = preventFetch.preventFetch;
       let tmp4 = undefined === preventFetch;
@@ -74,7 +74,7 @@ export const useReferralIncentiveEligibility = ReactCompilerGating.isReactCompil
       tmp12 = null != stateFromStores && stateFromStores.hasPremiumNitroMonthly;
       const tmpResult4 = initialize;
     }
-  : (preventFetch) => {
+  : function useReferralIncentiveEligibility(preventFetch) {
       let flag = preventFetch.preventFetch;
       if (flag === undefined) {
         flag = true;

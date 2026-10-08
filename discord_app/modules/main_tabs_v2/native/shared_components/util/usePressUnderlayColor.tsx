@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function usePressUnderlayColor(arr) {
       const cResult = c.c(4);
       const tmp4 = useThemeDefault();
       const token = useToken.useToken(nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE);
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = hexWithOpacityResult;
       tmp6 = hexWithOpacityResult;
     }
-  : (arr) => {
+  : function usePressUnderlayColor(arr) {
       const tmp2 = useThemeDefault();
       const token = useToken.useToken(nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE);
       let substr;

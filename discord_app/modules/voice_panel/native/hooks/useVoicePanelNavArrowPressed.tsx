@@ -2,13 +2,13 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const VoicePanelControlsModes = fn(11914).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useVoicePanelNavArrowPressed() {
       const cResult = focused(dismissPanel[3]).c(5);
       const context = controlsSpecs.useContext(setFocused(dismissPanel[4]));
       focused = context.focused;
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = fn;
       tmp3 = fn;
     }
-  : () => {
+  : function useVoicePanelNavArrowPressed() {
       const context = controlsSpecs.useContext(setFocused(dismissPanel[4]));
       const focused = context.focused;
       setFocused = context.setFocused;

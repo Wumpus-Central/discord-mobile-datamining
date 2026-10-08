@@ -12,12 +12,12 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const PlatformUtils = fn(1370);
+const PlatformUtils = fn(1382);
 let num = 325;
 if (PlatformUtils.isIOS()) {
   num = 300;
 }
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj3 = {
   cardContainer: { width: 250, marginEnd: PX_16, flex: 1 },
   scroller: { height: num, paddingBottom: nativeDefault.space.PX_8 },
@@ -32,7 +32,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsLevelsSection.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildPowerupsLevelsSection(guildId) {
       const cResult = guildId(arr2[7]).c(15);
       guildId = guildId.guildId;
       const listings = guildId.listings;
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = guildId(arr2[7]);
     }
-  : (arg0) => {
+  : function GuildPowerupsLevelsSection(arg0) {
       ({ guildId: require, listings } = arg0);
       let memo;
       const tmp = closure_9();
@@ -162,11 +162,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const obj2 = { title: null, description: null };
       const intl = util.intl;
-      obj2.title = intl.string(listings(2553)["TXY/b0"]);
+      obj2.title = intl.string(listings(2597)["TXY/b0"]);
       const intl2 = util.intl;
-      obj2.description = intl2.string(listings(2553).aJv4PB);
-      const items1 = [closure_5(listings(12226), obj2)];
-      const tmp3 = listings(12226);
+      obj2.description = intl2.string(listings(2597).aJv4PB);
+      const items1 = [closure_5(listings(12305), obj2)];
+      const tmp3 = listings(12305);
       items1[1] = closure_5(MarketingCardsScroller.MarketingCardsScroller, {
         cardMarginRight: PX_16,
         cardWidth: 250,

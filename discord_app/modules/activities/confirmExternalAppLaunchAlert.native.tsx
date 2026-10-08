@@ -3,18 +3,18 @@ import c from "../../../_runtime/00576_c.js";
 import util from "../../intl/index.native.tsx";
 import LinkingDefault from "../../lib/native/Linking.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
-import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
-import _modDef9043 from "../../../_runtime/metro/09043__.js";
+import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
+import _modDef10656 from "../../../_runtime/metro/10656__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const PRIVATE_APPS_HELP_ARTICLE = fn(2011).PRIVATE_APPS_HELP_ARTICLE;
+const PRIVATE_APPS_HELP_ARTICLE = fn(2023).PRIVATE_APPS_HELP_ARTICLE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({
   alertContainer: { display: "flex", alignItems: "center", padding: 8 },
   alertEyebrowText: { marginTop: 40, textAlign: "center" },
@@ -25,12 +25,12 @@ let closure_8 = createStyles.createStyles({
 });
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (application) => {
+  ? function ConfirmActivityGateContent(application) {
       const cResult = c.c(19);
       application = application.application;
       const tmp4 = closure_8();
       if (cResult[0] !== tmp4.announcementBirb) {
-        const obj2 = { source: _modDef9043, style: tmp4.announcementBirb };
+        const obj2 = { source: _modDef10656, style: tmp4.announcementBirb };
         const tmp9 = timestampProducer(React3, obj2);
         cResult[0] = tmp4.announcementBirb;
         cResult[1] = tmp9;
@@ -121,10 +121,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp18;
       tmp17 = tmp18;
     }
-  : (activityName) => {
+  : function ConfirmActivityGateContent(activityName) {
       const tmp = closure_8();
       const obj = { style: tmp.alertContainer, children: null };
-      const items = [timestampProducer(React3, { source: _modDef9043, style: tmp.announcementBirb }), , ,];
+      const items = [timestampProducer(React3, { source: _modDef10656, style: tmp.announcementBirb }), , ,];
       const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
       const intl = util.intl;
       obj3.children = intl.string(util.t["06YebE"]);
@@ -142,15 +142,15 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function LinkButton() {
       const cResult = c.c(4);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t() {
+        function handlePress() {
           LinkingDefault.openURL(PRIVATE_APPS_HELP_ARTICLE);
-        };
-        cResult[0] = fn;
-        let first = fn;
+        }
+        cResult[0] = handlePress;
+        let first = handlePress;
       } else {
         first = cResult[0];
       }
@@ -175,12 +175,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : () => {
+  : function LinkButton() {
       const obj = { style: closure_8().linkWrapper, children: null };
       const obj2 = {
         variant: "secondary",
         size: "sm",
-        onPress() {
+        onPress: function handlePress() {
           LinkingDefault.openURL(PRIVATE_APPS_HELP_ARTICLE);
         },
         text: null,

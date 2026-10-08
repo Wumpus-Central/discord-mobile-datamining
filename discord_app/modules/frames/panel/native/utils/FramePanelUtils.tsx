@@ -4,8 +4,8 @@ import c from "../../../../../../_runtime/00576_c.js";
 import FramesStore from "../../../FramesStore.tsx";
 
 require = fn;
-const asLaunched = fn(8738).asLaunched;
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const asLaunched = fn(10613).asLaunched;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/utils/FramePanelUtils.tsx");
@@ -19,7 +19,7 @@ export const isFramePanelFullscreen = function isFramePanelFullscreen() {
   return tmp2;
 };
 export const useIsActivityPanelFullscreen = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsActivityPanelFullscreen() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FramesStore];
@@ -40,7 +40,7 @@ export const useIsActivityPanelFullscreen = ReactCompilerGating.isReactCompilerE
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsActivityPanelFullscreen() {
       const items = [FramesStore];
       return initialize.useStateFromStores(items, () => {
         const tmp = asLaunched(mainFrame.getMainFrame());

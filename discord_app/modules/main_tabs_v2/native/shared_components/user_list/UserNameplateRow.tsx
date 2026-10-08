@@ -34,7 +34,7 @@ let closure_3 = [
 ];
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { card: { padding: 0, paddingRight: nativeDefault.space.PX_40, overflow: "hidden" } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -45,7 +45,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const UserNameplateRow = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPressOut) => {
+  ? function UserNameplateRow(onPressOut) {
       const cResult = c.c(57);
       if (cResult[0] !== onPressOut) {
         ({ label, subLabel, icon, trailing, arrow, onPress, onPressIn } = onPressOut);
@@ -103,14 +103,29 @@ export const UserNameplateRow = ReactCompilerGating.isReactCompilerEnabled()
       }
       [tmp34, dependencyMap] = noop.useState(false);
       if (cResult[20] !== onPressIn) {
-        const fn = function k(arg0) {
-          dependencyMap(true);
-          if (closure_0 != null) {
-            tmp2(arg0);
+        class H {
+          constructor(arg0) {
+            tmp = closure_2(true);
+            if (closure_0 != null) {
+              tmp3 = onPressOut;
+              tmp2Result = tmp2(onPressOut);
+            }
+            return;
           }
-        };
+        }
         cResult[20] = onPressIn;
-        cResult[21] = fn;
+        cResult[21] = H;
+      } else {
+        class H {
+          constructor(arg0) {
+            tmp = closure_2(true);
+            if (closure_0 != null) {
+              tmp3 = onPressOut;
+              tmp2Result = tmp2(onPressOut);
+            }
+            return;
+          }
+        }
       }
       if (cResult[22] !== tmp15) {
         class Q {
@@ -170,7 +185,7 @@ export const UserNameplateRow = ReactCompilerGating.isReactCompilerEnabled()
         animate: undefined !== tmp21 && tmp21,
       });
     }
-  : (onPressOut) => {
+  : function UserNameplateRow(onPressOut) {
       ({ icon, onPressIn } = onPressOut);
       onPressOut = onPressOut.onPressOut;
       let flag = onPressOut.disabled;

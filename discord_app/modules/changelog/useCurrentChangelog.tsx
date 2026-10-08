@@ -7,12 +7,12 @@ import LocaleStore from "../user_settings/LocaleStore.tsx";
 import ChangelogStore from "ChangelogStore.tsx";
 
 require = fn;
-const ChangelogLoadState = fn(2102).ChangelogLoadState;
+const ChangelogLoadState = fn(2114).ChangelogLoadState;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, arg1) => {
+  ? function useChangelog(id, arg1) {
       _require = id;
-      closure_1 = arg1;
+      importDefault = arg1;
       const cResult = require("c").c(21);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChangelogStore];
@@ -61,7 +61,29 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     const obj3 = { id, changelog: defaultChangelog, loaded: tmp9 !== ChangelogLoadState.NOT_LOADED };
                     cResult[13] = defaultChangelog;
-                    cResult[14] = id;
+                    class C {
+                      constructor() {
+                        tmp2 = null != closure_0;
+                        tmp = closure_0;
+                        if (tmp2) {
+                          tmp3 = changelog;
+                          tmp2 = null == changelog;
+                        }
+                        if (tmp2) {
+                          tmp4 = loadState;
+                          tmp5 = ChangelogLoadState;
+                          tmp2 = loadState === ChangelogLoadState.NOT_LOADED;
+                        }
+                        if (tmp2) {
+                          tmp6 = closure_1;
+                          tmp7 = closure_2;
+                          obj = closure_1(closure_2[7]);
+                          tmp8 = closure_1;
+                          changelog = obj.fetchChangelog(tmp, closure_1);
+                        }
+                        return;
+                      }
+                    }
                     cResult[15] = tmp9 !== ChangelogLoadState.NOT_LOADED;
                     cResult[16] = obj3;
                     tmp19 = obj3;
@@ -76,7 +98,29 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj4 = { id, changelog, loaded: loadState !== ChangelogLoadState.NOT_LOADED };
-                cResult[17] = changelog;
+                class C {
+                  constructor() {
+                    tmp2 = null != closure_0;
+                    tmp = closure_0;
+                    if (tmp2) {
+                      tmp3 = changelog;
+                      tmp2 = null == changelog;
+                    }
+                    if (tmp2) {
+                      tmp4 = loadState;
+                      tmp5 = ChangelogLoadState;
+                      tmp2 = loadState === ChangelogLoadState.NOT_LOADED;
+                    }
+                    if (tmp2) {
+                      tmp6 = closure_1;
+                      tmp7 = closure_2;
+                      obj = closure_1(closure_2[7]);
+                      tmp8 = closure_1;
+                      changelog = obj.fetchChangelog(tmp, closure_1);
+                    }
+                    return;
+                  }
+                }
                 cResult[18] = id;
                 cResult[19] = loadState !== ChangelogLoadState.NOT_LOADED;
                 cResult[20] = obj4;
@@ -85,27 +129,38 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const fn2 = function f() {
-          let tmp2 = null != closure_0;
-          if (tmp2) {
-            tmp2 = null == changelog;
+        class C {
+          constructor() {
+            tmp2 = null != closure_0;
+            tmp = closure_0;
+            if (tmp2) {
+              tmp3 = changelog;
+              tmp2 = null == changelog;
+            }
+            if (tmp2) {
+              tmp4 = loadState;
+              tmp5 = ChangelogLoadState;
+              tmp2 = loadState === ChangelogLoadState.NOT_LOADED;
+            }
+            if (tmp2) {
+              tmp6 = closure_1;
+              tmp7 = closure_2;
+              obj = closure_1(closure_2[7]);
+              tmp8 = closure_1;
+              changelog = obj.fetchChangelog(tmp, closure_1);
+            }
+            return;
           }
-          if (tmp2) {
-            tmp2 = loadState === ChangelogLoadState.NOT_LOADED;
-          }
-          if (tmp2) {
-            changelog = ChangeLogActionCreatorsDefault.fetchChangelog(closure_0, closure_1);
-          }
-        };
+        }
         const items1 = [id, changelog, loadState, arg1];
         cResult[5] = changelog;
         cResult[6] = id;
         cResult[7] = loadState;
         cResult[8] = arg1;
-        cResult[9] = fn2;
+        cResult[9] = C;
         cResult[10] = items1;
         tmp11 = items1;
-        tmp10 = fn2;
+        tmp10 = C;
         const tmpResult = tmp(tmp2[6]);
       }
       const fn = function h() {
@@ -142,7 +197,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp = _require;
       tmp2 = changelog;
     }
-  : (id, arg1) => {
+  : function useChangelog(id, arg1) {
       _require = id;
       closure_1 = arg1;
       const items = [ChangelogStore];
@@ -211,7 +266,7 @@ const result = size.fileFinishedImporting("modules/changelog/useCurrentChangelog
 
 export const useChangelog = tmp2;
 export const useCurrentChangelog = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCurrentChangelog() {
       const cResult = c.c(20);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [LocaleStore];
@@ -243,14 +298,12 @@ export const useCurrentChangelog = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores1 = useStateFromStores.useStateFromStores(tmp8, tmp9);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [ChangelogStore];
-        class C {
-          constructor() {
-            return closure_1_5.getConfig();
-          }
-        }
+        const fn3 = function f() {
+          return ChangelogStore.getConfig();
+        };
         cResult[4] = items2;
-        cResult[5] = C;
-        let tmp13 = C;
+        cResult[5] = fn3;
+        let tmp13 = fn3;
         let tmp12 = items2;
       } else {
         tmp12 = cResult[4];
@@ -268,12 +321,20 @@ export const useCurrentChangelog = ReactCompilerGating.isReactCompilerEnabled()
           let tmp17 = cResult[8];
         }
         const _Symbol = Symbol;
-        class C {
-          constructor() {
-            return closure_1_5.getConfig();
-          }
+        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+          const items3 = [ChangelogStore];
+          const fn4 = function b() {
+            return ChangelogStore.overrideId();
+          };
+          cResult[9] = items3;
+          cResult[10] = fn4;
+          let tmp20 = fn4;
+          let tmp19 = items3;
+        } else {
+          tmp19 = cResult[9];
+          tmp20 = cResult[10];
         }
-        const stateFromStores3 = useStateFromStores.useStateFromStores(tmp20, tmp21);
+        const stateFromStores3 = useStateFromStores.useStateFromStores(tmp19, tmp20);
         const tmpResult6 = useStateFromStores;
         ({ changelog, loaded } = closure_7(stateFromStores1, stateFromStores));
         const tmp24 = closure_7(stateFromStores1, stateFromStores);
@@ -287,14 +348,7 @@ export const useCurrentChangelog = ReactCompilerGating.isReactCompilerEnabled()
               return tmp28;
             }
           }
-          const obj2 = { id: null, changelog: null, loaded: null, clientTooOld: false };
-          class C {
-            constructor() {
-              return closure_1_5.getConfig();
-            }
-          }
-          obj2.changelog = changelog2;
-          obj2.loaded = loaded2;
+          const obj2 = { id: stateFromStores3, changelog: changelog2, loaded: loaded2, clientTooOld: false };
           cResult[11] = changelog2;
           cResult[12] = stateFromStores3;
           cResult[13] = loaded2;
@@ -334,7 +388,7 @@ export const useCurrentChangelog = ReactCompilerGating.isReactCompilerEnabled()
       tmp17 = tmp18;
       const tmpResult5 = useStateFromStores;
     }
-  : () => {
+  : function useCurrentChangelog() {
       const items = [LocaleStore];
       const stateFromStores = useStateFromStores.useStateFromStores(items, () => locale.locale);
       const items1 = [ChangelogStore];

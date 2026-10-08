@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/useGuildOnboardingAvailable.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (features) => {
+  ? function useGuildOnboardingAvailable(features) {
       _require = features;
       const cResult = require("c").c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const tmpResult = require("initialize");
     }
-  : (features) => {
+  : function useGuildOnboardingAvailable(features) {
       _require = features;
       const items = [ImpersonateStore];
       let stateFromStores = require("initialize").useStateFromStores(items, () => {

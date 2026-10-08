@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumManagePlanScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PremiumPlanSelectSettingScreen() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp6 = jsx(PremiumManagePlanDefault, {});
@@ -21,4 +21,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => jsx(PremiumManagePlanDefault, {});
+  : function PremiumPlanSelectSettingScreen() {
+      return jsx(PremiumManagePlanDefault, {});
+    };

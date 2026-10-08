@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty, Platform } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles(() => {
   const obj = {
     divider: {},
@@ -37,7 +37,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormDivider.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Divider(arg0) {
       const cResult = c.c(10);
       ({ outer, iconPush, style } = arg0);
       let dividerHasIcon = undefined !== iconPush && iconPush;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult3 = useProfileThemeValues;
     }
-  : (arg0) => {
+  : function Divider(arg0) {
       let flag = arg0.outer;
       if (flag === undefined) {
         flag = false;

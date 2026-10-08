@@ -13,11 +13,11 @@ import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FetchState = fn(4508).FetchState;
+const FetchState = fn(4700).FetchState;
 let closure_10 = [];
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useFetchListingsForGuild(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(17);
       if (cResult[0] !== arg1) {
@@ -180,7 +180,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       obj5 = ref;
       const tmpResult2 = require("initialize");
     }
-  : (arg0) => {
+  : function useFetchListingsForGuild(arg0) {
       _require = arg0;
       let obj = arg1;
       if (arg1 === undefined) {
@@ -582,7 +582,7 @@ ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arr) => {
       const cResult = loading(stateFromStoresArray[6]).c(12);
-      [loading, closure_1] = noop.useState(false);
+      [loading, importDefault] = noop.useState(false);
       if (cResult[0] !== arr) {
         const mapped = arr.map(tmp(tmp2[11]).getRoleSubscriptionPlanId);
         cResult[0] = arr;
@@ -633,41 +633,39 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp16;
       }
-      const fn2 = function v() {
-        let tmp = !first;
-        if (!first) {
-          tmp = stateFromStoresArray.length > 0;
-        }
-        if (tmp) {
-          closure_1(true);
-          const allPromises = Promise.all(
-            stateFromStoresArray.map((item) =>
-              closure_1_2(stateFromStoresArray[8]).fetchSubscriptionListingForPlan(item),
-            ),
-          );
-          Promise.all(
-            stateFromStoresArray.map((item) =>
-              closure_1_2(stateFromStoresArray[8]).fetchSubscriptionListingForPlan(item),
-            ),
-          )
-            .catch(() => {})
-            .then(() => {
+      class F {
+        constructor() {
+          tmp = !closure_0;
+          if (!closure_0) {
+            tmp2 = closure_3;
+            num = 0;
+            tmp = closure_3.length > 0;
+          }
+          if (tmp) {
+            tmp3 = closure_1;
+            flag = true;
+            tmp4 = closure_1(true);
+            tmp5 = globalThis;
+            _Promise = Promise;
+            tmp6 = closure_3;
+            allPromises = Promise.all(
+              closure_3.map((item) => closure_1_2(stateFromStoresArray[8]).fetchSubscriptionListingForPlan(item)),
+            );
+            catchPromise = allPromises.catch(() => {});
+            nextPromise = catchPromise.then(() => {
               closure_1_1(false);
             });
-          const catchPromise = Promise.all(
-            stateFromStoresArray.map((item) =>
-              closure_1_2(stateFromStoresArray[8]).fetchSubscriptionListingForPlan(item),
-            ),
-          ).catch(() => {});
+          }
+          return;
         }
-      };
+      }
       const items2 = [loading, stateFromStoresArray];
       cResult[6] = loading;
       cResult[7] = stateFromStoresArray;
-      cResult[8] = fn2;
+      cResult[8] = F;
       cResult[9] = items2;
       tmp14 = items2;
-      tmp13 = fn2;
+      tmp13 = F;
       const tmpResult = loading(stateFromStoresArray[7]);
     }
   : (arg0) => {

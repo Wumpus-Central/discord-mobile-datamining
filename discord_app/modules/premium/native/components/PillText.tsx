@@ -4,7 +4,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../../Constants.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
 import usePremiumPrimaryGradientColorsDefault from "../usePremiumPrimaryGradientColors.tsx";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -21,7 +21,7 @@ let obj2 = { paddingHorizontal: 8, borderRadius: nativeDefault.radii.lg, justify
 const result = size.fileFinishedImporting("modules/premium/native/components/PillText.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PillText(arg0) {
       const cResult = c.c(10);
       ({ pillText, style } = arg0);
       const tmp4 = closure_5();
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp7 = items;
     }
-  : (arg0) => {
+  : function PillText(arg0) {
       ({ pillText, style } = arg0);
       const tmp = closure_5();
       const obj = {

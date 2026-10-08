@@ -10,21 +10,21 @@ import noop from "../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../modules/a11y/AccessibilityStore.tsx";
 
 const MessageTypes2 = _default(1101);
-const AutoModerationSystemMessageViewNativeComponent = _default(8337);
-const MessageViewNativeComponent = _default(8338);
-const SystemMessageViewNativeComponent = _default(8339);
+const AutoModerationSystemMessageViewNativeComponent = _default(9309);
+const MessageViewNativeComponent = _default(9310);
+const SystemMessageViewNativeComponent = _default(9311);
 require = fn;
 let closure_3 = ["message"];
 const View = fn(17).View;
 const MessageTypes = fn(1085).MessageTypes;
-const RowGeneratorConstants = fn(7603);
+const RowGeneratorConstants = fn(7720);
 ({ RowType: c10, Changeset: closure_11 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const PX_4 = nativeDefault.space.PX_4;
 const ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (message) => {
+  ? function DCDChatItem(message) {
       let _default = require;
       let tmp = dependencyMap;
       const cResult = c.c(11);
@@ -82,7 +82,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (message) => {
+  : function DCDChatItem(message) {
       message = message.message;
       const merged = Object.assign(message, Object.assign({ message: 0 }));
       if (message.type === MessageTypes.AUTO_MODERATION_ACTION) {
@@ -107,7 +107,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3Result;
     };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_16 = createStyles.createStyles((marginLeft, marginTop, paddingTop) => {
   const obj = {
     container: { position: "relative", overflow: "hidden", paddingTop },
@@ -268,6 +268,6 @@ export default function _default(rowGenerator) {
   }
   const tmp3 = messageSizeCacheRef(noop.useState(0), 2);
 }
-export const DCDMessageView = fn(8338).default;
-export const DCDSystemMessageView = fn(8339).default;
-export const DCDAutoModerationSystemMessageView = fn(8337).default;
+export const DCDMessageView = fn(9310).default;
+export const DCDSystemMessageView = fn(9311).default;
+export const DCDAutoModerationSystemMessageView = fn(9309).default;

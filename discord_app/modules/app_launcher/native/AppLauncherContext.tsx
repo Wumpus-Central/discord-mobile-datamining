@@ -21,7 +21,7 @@ const AppLauncherKeyboardCloseReason = {
 let context = noop.createContext(undefined);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (noop) => {
+  ? function useAppLauncherChatInputRefDummy(noop) {
       const cResult = c.c(2);
       noop = noop.noop;
       if (cResult[0] !== noop) {
@@ -56,7 +56,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return noop.useRef(tmp2);
     }
-  : (noop) => {
+  : function useAppLauncherChatInputRefDummy(noop) {
       noop = noop.noop;
       return noop.useRef({
         getApplicationCommandManager() {
@@ -86,7 +86,7 @@ let closure_5 = tmp3;
 fn(558);
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useRequiredAppLauncherContext() {
       context = noop.useContext(context);
       if (null == context) {
         const _Error = Error;
@@ -96,7 +96,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         return context;
       }
     }
-  : () => {
+  : function useRequiredAppLauncherContext() {
       context = noop.useContext(context);
       if (null == context) {
         const _Error = Error;
@@ -126,7 +126,7 @@ export const AppLauncherContext = context;
 export const useAppLauncherChatInputRefDummy = tmp3;
 export const useRequiredAppLauncherContext = tmp4;
 export const useAppLauncherContext = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAppLauncherContext() {
       const obj = c;
       const cResult = obj.c(6);
       const ref = noop.useRef(obj.DISMISSED);
@@ -174,7 +174,7 @@ export const useAppLauncherContext = ReactCompilerGating.isReactCompilerEnabled(
       cResult[5] = obj7;
       tmp9 = obj7;
     }
-  : () => {
+  : function useAppLauncherContext() {
       const keyboardCloseReasonRef = noop.useRef(obj.DISMISSED);
       const bottomSheetExpandReasonRef = noop.useRef(undefined);
       obj = ReanimatedRexport;

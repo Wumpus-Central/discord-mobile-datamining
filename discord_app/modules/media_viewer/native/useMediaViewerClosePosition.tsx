@@ -23,7 +23,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaViewerClosePosition.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (index) => {
+  ? function useMediaViewerClosePosition(index) {
       const cResult = index(windowHeight[5]).c(14);
       index = index.index;
       const sources = index.sources;
@@ -48,14 +48,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     let tmp9 = cResult[9];
                   }
                   __initData = tmp9;
-                  const fn3 = function b() {
-                    return index.get();
-                  };
+                  class H {
+                    constructor() {
+                      return index.get();
+                    }
+                  }
                   const obj3 = { index };
-                  fn3.__closure = obj3;
-                  fn3.__workletHash = 5031282724746;
-                  fn3.__initData = __initData;
-                  class M {
+                  H.__closure = obj3;
+                  H.__workletHash = 5031282724746;
+                  H.__initData = __initData;
+                  class V {
                     constructor(arg0) {
                       obj = closure_0(closure_2[7]);
                       tmp = obj.runOnJS(closure_6)(index);
@@ -63,10 +65,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj4 = { runOnJS: tmp(windowHeight[7]).runOnJS, setClosePosition: tmp9 };
-                  M.__closure = obj4;
-                  M.__workletHash = 10222005330358;
-                  M.__initData = __initData2;
-                  const animatedReaction = tmp(windowHeight[7]).useAnimatedReaction(fn3, M);
+                  V.__closure = obj4;
+                  V.__workletHash = 10222005330358;
+                  V.__initData = __initData2;
+                  const animatedReaction = tmp(windowHeight[7]).useAnimatedReaction(H, V);
                   if (cResult[10] === index) {
                     if (cResult[11] === tmp9) {
                       let tmp13 = cResult[12];
@@ -75,16 +77,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const effect = obj2.useEffect(tmp13, tmp14);
                     return tmp8;
                   }
-                  const fn4 = function k() {
+                  const fn3 = function b() {
                     closure_6(index.get());
                   };
                   const items = [tmp9, index];
                   cResult[10] = index;
                   cResult[11] = tmp9;
-                  cResult[12] = fn4;
+                  cResult[12] = fn3;
                   cResult[13] = items;
                   tmp14 = items;
-                  tmp13 = fn4;
+                  tmp13 = fn3;
                   const tmpResult = tmp(windowHeight[7]);
                 }
               }
@@ -127,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       let obj = index(windowHeight[5]);
     }
-  : (index) => {
+  : function useMediaViewerClosePosition(index) {
       index = index.index;
       const sources = index.sources;
       let onClose = index.onClose;
@@ -163,20 +165,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         closure_5((windowHeight + obj.height) / 2);
       }, items);
-      const fn = function x() {
-        return index.get();
-      };
-      fn.__closure = { index };
-      fn.__workletHash = 3888496641736;
-      fn.__initData = __initData3;
-      const fn2 = function w(arg0) {
+      class P {
+        constructor() {
+          return index.get();
+        }
+      }
+      P.__closure = { index };
+      P.__workletHash = 3888496641736;
+      P.__initData = __initData3;
+      const fn = function w(arg0) {
         ReanimatedRexport.runOnJS(callback)(arg0);
       };
       let obj = index(windowHeight[7]);
-      fn2.__closure = { runOnJS: index(windowHeight[7]).runOnJS, setClosePosition };
-      fn2.__workletHash = 9607289589872;
-      fn2.__initData = __initData4;
-      const animatedReaction = obj.useAnimatedReaction(fn, fn2);
+      fn.__closure = { runOnJS: index(windowHeight[7]).runOnJS, setClosePosition };
+      fn.__workletHash = 9607289589872;
+      fn.__initData = __initData4;
+      const animatedReaction = obj.useAnimatedReaction(P, fn);
       const items1 = [setClosePosition, index];
       const effect = noop.useEffect(() => {
         callback(index.get());

@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useWishlistViewerCoachmark.tsx");
 
 export const useWishlistViewerCoachmark = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useWishlistViewerCoachmark(arg0) {
       const cResult = c.c(6);
       ({ isCurrentUser, shouldShowWishlistTab } = arg0);
       if (cResult[0] === isCurrentUser) {
@@ -43,7 +43,7 @@ export const useWishlistViewerCoachmark = ReactCompilerGating.isReactCompilerEna
       }
       items = [];
     }
-  : (isCurrentUser) => {
+  : function useWishlistViewerCoachmark(isCurrentUser) {
       isCurrentUser = isCurrentUser.isCurrentUser;
       const shouldShowWishlistTab = isCurrentUser.shouldShowWishlistTab;
       let items = [isCurrentUser, shouldShowWishlistTab];

@@ -4,10 +4,10 @@ import util from "../../../../intl/index.native.tsx";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import useStableCallbackDefault from "../../../../hooks/useStableCallback.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef9311 from "../../../../../_runtime/metro/09311__.js";
+import _modDef8640 from "../../../../../_runtime/metro/08640__.js";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import utils_InstantInviteUtils from "../../../../utils/native/InstantInviteUtils.tsx";
-import _modDef9728 from "../../../../../_runtime/metro/09728__.js";
+import _modDef10311 from "../../../../../_runtime/metro/10311__.js";
 import GuildDirectorySearchModalActionCreatorsDefault from "../../../directory_channels/native/components/GuildDirectorySearchModalActionCreators.tsx";
 import SearchPlatformUtilsDefault from "../../../search/native/SearchPlatformUtils.tsx";
 import useCanSeeEventsInChannelListDefault from "../../../guild_scheduled_events/useCanSeeEventsInChannelList.tsx";
@@ -24,12 +24,12 @@ function handleInviteDisabledPress() {
   useAlertStore.openAlert("invites-disabled", __initData(lazyResult, {}));
 }
 const View = fn(17).View;
-const SEARCH_BAR_MARGIN_BOTTOM = fn(11711).SEARCH_BAR_MARGIN_BOTTOM;
+const SEARCH_BAR_MARGIN_BOTTOM = fn(11776).SEARCH_BAR_MARGIN_BOTTOM;
 const Constants = fn(1085);
 ({ GuildFeatures: c10, InstantInviteSources: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -57,7 +57,7 @@ let closure_14 = createStyles.createStyles((arg0) => {
 });
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildSearchAndInvite(guildId) {
       const cResult = guildId(guildSearchContext[15]).c(39);
       guildId = guildId.guildId;
       ({
@@ -322,7 +322,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       let obj3 = guildId(guildSearchContext[17]);
     }
-  : (guildId) => {
+  : function GuildSearchAndInvite(guildId) {
       guildId = guildId.guildId;
       const canInvite = guildId.canInvite;
       const invitesDisabled = guildId.invitesDisabled;
@@ -370,7 +370,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           const obj = {
             variant: "secondary",
             size: "sm",
-            icon: _modDef9728,
+            icon: _modDef10311,
             onPress: onInvitePress,
             onPressDisabled: handleInviteDisabledPress,
             accessibilityLabel: null,
@@ -435,7 +435,7 @@ let result = size.fileFinishedImporting("modules/channel_list_v2/native/componen
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guild) => {
+    ? function ConnectedGuildSearchAndInviteInner(guild) {
         const cResult = guild(576).c(16);
         guild = guild.guild;
         ({ useButtonComponent, useEventsButton } = guild);
@@ -488,9 +488,9 @@ export default noop.memo(
         }
         const tmp12 = useStableCallbackDefault(B);
         const tmpResult = guild(504);
-        const shouldShowInvitesDisabledNotif = guild(12023).useShouldShowInvitesDisabledNotif(guild);
+        const shouldShowInvitesDisabledNotif = guild(12096).useShouldShowInvitesDisabledNotif(guild);
         useCanSeeEventsInChannelListDefault(guild.id);
-        const tmpResult2 = guild(12023);
+        const tmpResult2 = guild(12096);
         ({ hasUnread, handlePress, handleLongPress } = useEventsButtonPropsDefault(guild));
         if (undefined !== useEventsButton && useEventsButton) {
           class B {
@@ -558,7 +558,7 @@ export default noop.memo(
           useButtonComponent: undefined !== useButtonComponent && useButtonComponent,
         });
       }
-    : (guild) => {
+    : function ConnectedGuildSearchAndInviteInner(guild) {
         guild = guild.guild;
         let flag = guild.useButtonComponent;
         if (flag === undefined) {
@@ -589,8 +589,8 @@ export default noop.memo(
             constants2.GUILD_HEADER,
           );
         });
-        const shouldShowInvitesDisabledNotif = guild(12023).useShouldShowInvitesDisabledNotif(guild);
-        const obj2 = guild(12023);
+        const shouldShowInvitesDisabledNotif = guild(12096).useShouldShowInvitesDisabledNotif(guild);
+        const obj2 = guild(12096);
         const tmp5 = useEventsButtonPropsDefault(guild);
         const obj3 = {
           guildId: guild.id,

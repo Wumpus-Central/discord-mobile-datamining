@@ -4,9 +4,9 @@ import util from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
+import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
-import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import useParentalControlSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import DefultGuildsRestrictedSetting from "../../privacy_and_safety/DefultGuildsRestrictedSetting.tsx";
 import useShouldDisableMessageRequestSettings from "../../../message_request/hooks/useShouldDisableMessageRequestSettings.tsx";
@@ -52,14 +52,14 @@ function showMessageRequestRestrictionModal(arg0) {
   };
   AlertActionCreatorsDefault.show(obj2);
 }
-const UserSettingsSafetySelectedGuildStore = fn(15815);
+const UserSettingsSafetySelectedGuildStore = fn(16074);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } =
   UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11143).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+let closure_6 = fn(11263).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsDisabled() {
       const cResult = c.c(3);
       const defaultGuildsRestricted = DefultGuildsRestrictedSetting.useDefaultGuildsRestricted();
       const selectedGuildId = hasOwnProperty().selectedGuildId;
@@ -95,7 +95,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = hasItem;
       tmp5 = hasItem;
     }
-  : () => {
+  : function useIsDisabled() {
       const defaultGuildsRestricted = DefultGuildsRestrictedSetting.useDefaultGuildsRestricted();
       const selectedGuildId = hasOwnProperty().selectedGuildId;
       const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
@@ -121,9 +121,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       return shouldDisableMessageRequestSettings;
     };
 let closure_8 = tmp4;
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useValue() {
       const cResult = c.c(3);
       const selectedGuildId = hasOwnProperty().selectedGuildId;
       const tmp2 = closure_8();
@@ -162,7 +162,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = hasItem;
       tmp6 = hasItem;
     }
-  : () => {
+  : function useValue() {
       const selectedGuildId = hasOwnProperty().selectedGuildId;
       const tmp = closure_8();
       const shouldDisableMessageRequestSettings =
@@ -200,9 +200,9 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.o5fjz6);
   },
-  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7966).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useValue() {
         const cResult = c.c(3);
         const selectedGuildId = hasOwnProperty().selectedGuildId;
         const tmp2 = closure_8();
@@ -241,7 +241,7 @@ const toggle = SettingBuilders.createToggle({
         cResult[2] = hasItem;
         tmp6 = hasItem;
       }
-    : () => {
+    : function useValue() {
         const selectedGuildId = hasOwnProperty().selectedGuildId;
         const tmp = closure_8();
         const shouldDisableMessageRequestSettings =

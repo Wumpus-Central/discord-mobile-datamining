@@ -2,15 +2,15 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const GuildThemePresets = obj(4739);
+const GuildThemePresets = obj(4933);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   previewArt: {
     position: "relative",
@@ -25,7 +25,7 @@ let obj2 = {
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PreviewOverlay() {
       const cResult = c.c(3);
       const tmp3 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -50,11 +50,13 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => (
-      <View pointerEvents="none" style={closure_6().previewOverlay}>
-        {jsx(GuildThemePreviewOverlayDefault, {})}
-      </View>
-    );
+  : function PreviewOverlay() {
+      return (
+        <View pointerEvents="none" style={closure_6().previewOverlay}>
+          {jsx(GuildThemePreviewOverlayDefault, {})}
+        </View>
+      );
+    };
 ReactCompilerGating = fn(558);
 let obj3 = {
   position: "relative",
@@ -68,7 +70,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/native/GuildThemePreviewArt.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildThemePreviewArt(arg0) {
       let obj = require;
       const cResult = c.c(15);
       ({ themeSettings, style } = arg0);
@@ -176,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = themeSettings;
       cResult[2] = tmp7;
     }
-  : (themeSettings) => {
+  : function GuildThemePreviewArt(themeSettings) {
       themeSettings = themeSettings.themeSettings;
       const tmp4 = useThemeDefault();
       importDefault = tmp4;

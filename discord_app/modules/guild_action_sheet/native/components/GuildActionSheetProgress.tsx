@@ -5,10 +5,10 @@ import GuildProgressUtils from "../../../guild_progress/native/GuildProgressUtil
 import GuildProgressOverviewDefault from "../../../guild_progress/native/components/GuildProgressOverview.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const Card2 = Card(6002);
+const Card2 = Card(6186);
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { title: { color: nativeDefault.colors.TEXT_DEFAULT }, cardStyle: { padding: 0 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetProgress.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function GuildActionSheetProgress(guild) {
       let Card = require;
       let tmp = dependencyMap;
       const cResult = c.c(6);
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (guild) => {
+  : function GuildActionSheetProgress(guild) {
       guild = guild.guild;
       const tmp = closure_4();
       const iOSCompletionStates = GuildProgressUtils.useIOSCompletionStates(guild);

@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserSettingsDebugLogsFiltersActionSheet(arg0) {
       const cResult = c.c(14);
       ({ sortOrder, onSortOrderChanged, onRefresh } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -118,7 +118,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp21;
       tmp20 = tmp21;
     }
-  : (arg0) => {
+  : function UserSettingsDebugLogsFiltersActionSheet(arg0) {
       ({ sortOrder, onSortOrderChanged, onRefresh } = arg0);
       const obj = { header: null, children: null };
       const obj2 = { title: null };

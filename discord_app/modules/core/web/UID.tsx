@@ -1,13 +1,13 @@
 // discord_app/modules/core/web/UID.tsx
 import c from "../../../../_runtime/00576_c.js";
-import uniqueIdDefault from "../../../../_runtime/05100_uniqueId.js";
+import uniqueIdDefault from "../../../../_runtime/05941_uniqueId.js";
 import useInitialValueDefault from "../../../hooks/useInitialValue.tsx";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useUID() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n() {
@@ -20,7 +20,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return useInitialValueDefault(first);
     }
-  : () => useInitialValueDefault(() => uniqueIdDefault("uid_"));
+  : function useUID() {
+      return useInitialValueDefault(() => uniqueIdDefault("uid_"));
+    };
 let closure_3 = tmp2;
 let ReactCompilerGating = ReactCompilerGating_mod;
 function uid() {
@@ -35,7 +37,7 @@ const result = size.fileFinishedImporting("modules/core/web/UID.tsx");
 export { uid };
 export const useUID = tmp2;
 export const UID = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function UID(children) {
       const cResult = c.c(3);
       children = children.children;
       const tmp2 = closure_3();
@@ -51,4 +53,6 @@ export const UID = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = childrenResult;
       tmp3 = childrenResult;
     }
-  : (children) => children.children(closure_3());
+  : function UID(children) {
+      return children.children(closure_3());
+    };

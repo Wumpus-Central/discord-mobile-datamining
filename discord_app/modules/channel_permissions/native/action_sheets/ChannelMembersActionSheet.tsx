@@ -8,15 +8,15 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import BottomSheetModal from "../../../../../_runtime/06119_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06298_BottomSheetModal.js";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
 import ChannelPermissionsUtils from "../../ChannelPermissionsUtils.tsx";
 import ChannelOverwritesItemDefault from "../components/ChannelOverwritesItem.tsx";
-import GroupPlusIcon from "../../../../design/components/Icon/native/redesign/generated/GroupPlusIcon.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
+import GroupPlusIcon from "../../../../design/components/Icon/native/redesign/generated/GroupPlusIcon.tsx";
 import channel_permissions_ChannelPermissionsUtils from "../ChannelPermissionsUtils.tsx";
 import AppChannelPermissionUtils from "../../../app_channels/AppChannelPermissionUtils.tsx";
 import ChannelDetailsUtils from "../../../main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx";
@@ -33,7 +33,7 @@ const Constants = fn(1085);
 ({ ChannelSettingsSections: closure_9, Permissions: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { paddingHorizontal: 16, flex: 1 },
   sectionRowWrapper: { paddingVertical: nativeDefault.space.PX_12 },
@@ -48,13 +48,13 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function ChannelMembersActionSheet(channelId) {
       const cResult = channelId(576).c(65);
       channelId = channelId.channelId;
       let guildId = channelId.guildId;
       let obj = channelId(576);
       dependencyMap = closure_13();
-      guildId(1618)();
+      guildId(1630)();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [navigation];
         cResult[0] = items;
@@ -63,41 +63,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== channelId) {
-        class I {
-          constructor() {
-            return closure_4.getChannel(channelId);
-          }
-        }
+        const fn = function v() {
+          return ChannelStore.getChannel(channelId);
+        };
         cResult[1] = channelId;
-        cResult[2] = I;
+        cResult[2] = fn;
+        let tmp9 = fn;
       } else {
-        class I {
-          constructor() {
-            return closure_4.getChannel(channelId);
-          }
-        }
+        tmp9 = cResult[2];
       }
       const tmp4 = closure_13();
       const tmp5 = guildId;
-      const stateFromStores = channelId(504).useStateFromStores(first, I);
+      const stateFromStores = channelId(504).useStateFromStores(first, tmp9);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        class I {
-          constructor() {
-            return closure_4.getChannel(channelId);
-          }
-        }
         const items1 = [GuildStore, GuildRoleStore];
         cResult[3] = items1;
-        const tmp11 = items1;
+        let tmp11 = items1;
       } else {
-        class I {
-          constructor() {
-            return closure_4.getChannel(channelId);
-          }
-        }
+        tmp11 = cResult[3];
       }
       if (cResult[4] !== stateFromStores) {
-        class M {
+        class C {
           constructor() {
             obj = closure_3;
             guildId = undefined;
@@ -118,11 +104,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const items2 = [stateFromStores];
         cResult[4] = stateFromStores;
-        cResult[5] = M;
+        cResult[5] = C;
         cResult[6] = items2;
-        let tmp14 = items2;
+        let tmp15 = items2;
       } else {
-        class M {
+        class C {
           constructor() {
             obj = closure_3;
             guildId = undefined;
@@ -141,13 +127,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return obj1;
           }
         }
-        tmp14 = cResult[6];
+        tmp15 = cResult[6];
       }
       const tmpResult = channelId(504);
-      const stateFromStoresObject = channelId(504).useStateFromStoresObject(tmp11, M, tmp14);
+      const stateFromStoresObject = channelId(504).useStateFromStoresObject(tmp11, C, tmp15);
       ({ guild, sortedGuildRoles } = stateFromStoresObject);
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        class M {
+        class C {
           constructor() {
             obj = closure_3;
             guildId = undefined;
@@ -168,9 +154,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const items3 = [GuildMemberStore];
         cResult[7] = items3;
-        const tmp16 = items3;
+        const tmp17 = items3;
       } else {
-        class M {
+        class C {
           constructor() {
             obj = closure_3;
             guildId = undefined;
@@ -191,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[8] !== stateFromStores) {
-        class A {
+        class O {
           constructor() {
             obj = closure_3;
             guildId = undefined;
@@ -204,11 +190,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const items4 = [stateFromStores];
         cResult[8] = stateFromStores;
-        cResult[9] = A;
+        cResult[9] = O;
         cResult[10] = items4;
-        let tmp18 = items4;
+        let tmp19 = items4;
       } else {
-        class A {
+        class O {
           constructor() {
             obj = closure_3;
             guildId = undefined;
@@ -219,17 +205,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_5.getMemberIds(guildId);
           }
         }
-        tmp18 = cResult[10];
+        tmp19 = cResult[10];
       }
       const tmpResult5 = channelId(504);
-      const stateFromStoresArray = channelId(504).useStateFromStoresArray(tmp16, A, tmp18);
+      const stateFromStoresArray = channelId(504).useStateFromStoresArray(tmp17, O, tmp19);
       const tmpResult6 = channelId(504);
-      navigation = channelId(1490).useNavigation();
-      tmp5(5049)(stateFromStores);
-      const tmpResult7 = channelId(1490);
-      const appChannelBotUserId = channelId(11245).useAppChannelBotUserId(stateFromStores);
+      navigation = channelId(1502).useNavigation();
+      tmp5(5417)(stateFromStores);
+      const tmpResult7 = channelId(1502);
+      const appChannelBotUserId = channelId(11360).useAppChannelBotUserId(stateFromStores);
       if (null != stateFromStores) {
-        class A {
+        class O {
           constructor() {
             obj = closure_3;
             guildId = undefined;
@@ -243,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return null;
     }
-  : (arg0) => {
+  : function ChannelMembersActionSheet(arg0) {
       ({ channelId: require, guildId: importDefault } = arg0);
       closure_4 = undefined;
       c5 = undefined;
@@ -328,7 +314,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp32Result = canResult;
             if (canResult) {
               const obj9 = {
-                onPress() {
+                onPress: function handleSettingPressed() {
                   ActionSheetActionCreatorsDefault.hideActionSheet();
                   ChannelSettingsActionCreatorsDefault.init(channelId);
                   const result = ChannelDetailsUtils.navigateToChannelDetailsScreen(

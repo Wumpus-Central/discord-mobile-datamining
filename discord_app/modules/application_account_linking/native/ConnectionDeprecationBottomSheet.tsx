@@ -18,10 +18,10 @@ const GameIconDefault = GameIcon;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   iconContainer: { width: 56, height: 56, alignItems: "center", justifyContent: "center" },
   content: { paddingHorizontal: nativeDefault.space.PX_16 },
@@ -31,7 +31,7 @@ let obj2 = {
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ConnectionIcon(arg0) {
       const cResult = c.c(8);
       ({ platform, theme } = arg0);
       const tmp4 = closure_10();
@@ -73,7 +73,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp10;
       tmp8 = tmp10;
     }
-  : (arg0) => {
+  : function ConnectionIcon(arg0) {
       ({ platform, theme } = arg0);
       const tmp = closure_10();
       const isThemeDarkResult = themes.isThemeDark(theme);
@@ -89,7 +89,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (application) => {
+  ? function ApplicationIcon(application) {
       const cResult = c.c(5);
       application = application.application;
       const tmp4 = closure_10();
@@ -118,7 +118,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = tmp11;
       const obj3 = { style: tmp4.iconContainer, children: tmp5 };
     }
-  : (application) => {
+  : function ApplicationIcon(application) {
       application = application.application;
       const obj = { style: closure_10().iconContainer, children: null };
       let tmpResult = null;
@@ -243,7 +243,7 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
       const obj17 = { text: null, variant: "secondary", size: "lg", onPress: null };
       const intl4 = require("util").intl;
       obj17.text = intl4.string(require("util").t.TulDPl);
-      obj17.onPress = function onPress() {
+      obj17.onPress = function handleDismiss() {
         ActionSheetActionCreatorsDefault.hideActionSheet();
         if (markAsDismissed != null) {
           tmp2(ContentDismissActionType.DISMISS);
@@ -260,7 +260,7 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
   return false;
 }
 export const useShouldShowConnectionDeprecationBottomSheet = ReactCompilerGating.isReactCompilerEnabled()
-  ? (deprecatedPlatformTypes) => {
+  ? function useShouldShowConnectionDeprecationBottomSheet(deprecatedPlatformTypes) {
       const cResult = deprecatedPlatformTypes(576).c(3);
       deprecatedPlatformTypes = deprecatedPlatformTypes.deprecatedPlatformTypes;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -307,7 +307,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = ReactCompilerGating
           replacedBy = migrationData.replacedBy;
         }
       }
-      const getOrFetchApplication = deprecatedPlatformTypes(6670).useGetOrFetchApplication(replacedBy);
+      const getOrFetchApplication = deprecatedPlatformTypes(6847).useGetOrFetchApplication(replacedBy);
       const tmp10 = useStartAuthorizeDefault(getOrFetchApplication);
       ({ hasAlreadyLinked, canStartAuthorization } = tmp10);
       if (!fetchingConnections) {
@@ -325,7 +325,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = ReactCompilerGating
       }
       return tmp11;
     }
-  : (deprecatedPlatformTypes) => {
+  : function useShouldShowConnectionDeprecationBottomSheet(deprecatedPlatformTypes) {
       deprecatedPlatformTypes = deprecatedPlatformTypes.deprecatedPlatformTypes;
       const items = [ConnectedAccountsStore];
       const stateFromStoresObject = deprecatedPlatformTypes(504).useStateFromStoresObject(items, () => {
@@ -356,7 +356,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = ReactCompilerGating
           replacedBy = migrationData.replacedBy;
         }
       }
-      const getOrFetchApplication = deprecatedPlatformTypes(6670).useGetOrFetchApplication(replacedBy);
+      const getOrFetchApplication = deprecatedPlatformTypes(6847).useGetOrFetchApplication(replacedBy);
       const tmp5 = useStartAuthorizeDefault(getOrFetchApplication);
       ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
       if (!fetchingConnections) {

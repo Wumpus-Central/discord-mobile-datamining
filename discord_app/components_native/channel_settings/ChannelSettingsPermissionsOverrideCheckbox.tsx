@@ -1,8 +1,8 @@
 // discord_app/components_native/channel_settings/ChannelSettingsPermissionsOverrideCheckbox.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import PermissionUtils from "../../utils/PermissionUtils.tsx";
-import DenyIcon from "../../design/components/Icon/native/redesign/generated/DenyIcon.tsx";
 import CheckmarkLargeBoldIcon from "../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
+import DenyIcon from "../../design/components/Icon/native/redesign/generated/DenyIcon.tsx";
 import SlashIcon from "../../design/components/Icon/native/redesign/generated/SlashIcon.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -32,7 +32,7 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
 const md = nativeDefault.radii.md;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   ternaryCheckBox: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
@@ -78,10 +78,10 @@ const obj9 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELE
 obj.passthroughActive = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 obj.disabled = { opacity: 0.3 };
 let closure_6 = createStyles.createStyles(obj);
-let items = [fn(4520).DENY, fn(4520).PASSTHROUGH, fn(4520).ALLOW];
+let items = [fn(4712).DENY, fn(4712).PASSTHROUGH, fn(4712).ALLOW];
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (selected) => {
+  ? function OverrideOption(selected) {
       let v6639O5 = styles;
       const cResult = type(styles[11]).c(22);
       ({ permissionTitle, type } = selected);
@@ -144,7 +144,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                   }
-                  class I {
+                  class O {
                     constructor(arg0) {
                       items = selected;
                       if (!selected) {
@@ -191,7 +191,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp16 = tmp20;
                 }
               }
-              class I {
+              class O {
                 constructor(arg0) {
                   items = selected;
                   if (!selected) {
@@ -228,7 +228,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               tmp13 = tmp15;
             }
           }
-          class I {
+          class O {
             constructor(arg0) {
               items = selected;
               if (!selected) {
@@ -261,8 +261,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[7] = selected;
           cResult[8] = styles;
           cResult[9] = type;
-          cResult[10] = I;
-          tmp12 = I;
+          cResult[10] = O;
+          tmp12 = O;
         }
         items = [permissionTitle];
         const _Boolean = Boolean;
@@ -274,7 +274,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = type(v6639O5[12]);
     }
-  : (type) => {
+  : function OverrideOption(type) {
       type = type.type;
       const selected = type.selected;
       const styles = type.styles;
@@ -345,7 +345,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (permissionTitle) => {
+    ? function ChannelSettingsPermissionsOverrideCheckbox(permissionTitle) {
         const cResult = permissionTitle(onValueChange[11]).c(13);
         permissionTitle = permissionTitle.permissionTitle;
         value = permissionTitle.value;
@@ -442,7 +442,7 @@ export default noop.memo(
         tmp4 = items;
         const obj = permissionTitle(onValueChange[11]);
       }
-    : (permissionTitle) => {
+    : function ChannelSettingsPermissionsOverrideCheckbox(permissionTitle) {
         permissionTitle = permissionTitle.permissionTitle;
         ({ value: importDefault, disabled } = permissionTitle);
         if (disabled === undefined) {

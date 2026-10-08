@@ -1,8 +1,7 @@
 // discord_app/modules/games/autocomplete/GameAutocompleteStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import privDefault from "../../../../_runtime/01444_priv.js";
-import GameAutocompleteTypes from "GameAutocompleteTypes.tsx";
+import privDefault from "../../../../_runtime/01456_priv.js";
 import GameAutocompleteUtils from "GameAutocompleteUtils.tsx";
 
 require = fn;
@@ -16,24 +15,16 @@ const navigation2 = new privDefault({ max: 500 });
 const Store = initializeDefault.Store;
 class GameAutocompleteStore extends Store {}
 const prototype = GameAutocompleteStore.prototype;
-prototype["getResults"] = function getResults(name) {
-  let DEFAULT = arg1;
-  if (arg1 === undefined) {
-    DEFAULT = GameAutocompleteTypes.GameAutocompleteProfile.DEFAULT;
-  }
+prototype["getResults"] = function getResults(name, arg1) {
   const result = GameAutocompleteUtils.normalizeGameAutocompleteQuery(name);
   let peekResult;
   if (null != result) {
     const _HermesInternal = HermesInternal;
-    peekResult = navigation.peek("" + DEFAULT + ":" + result);
+    peekResult = navigation.peek("" + arg1 + ":" + result);
   }
   return peekResult;
 };
-prototype["getClosestResults"] = function getClosestResults(result) {
-  let DEFAULT = arg1;
-  if (arg1 === undefined) {
-    DEFAULT = GameAutocompleteTypes.GameAutocompleteProfile.DEFAULT;
-  }
+prototype["getClosestResults"] = function getClosestResults(result, DEFAULT) {
   result = GameAutocompleteUtils.normalizeGameAutocompleteQuery(result);
   if (null != result) {
     let length = result.length;
@@ -49,41 +40,36 @@ prototype["getClosestResults"] = function getClosestResults(result) {
     }
   }
 };
-prototype["shouldSuppressFetch"] = function shouldSuppressFetch(name, arg1) {
-  let DEFAULT = arg1;
-  if (arg1 === undefined) {
-    DEFAULT = DEFAULT(5900).GameAutocompleteProfile.DEFAULT;
-  }
-  const result = DEFAULT(5901).normalizeGameAutocompleteQuery(name);
+prototype["shouldSuppressFetch"] = function shouldSuppressFetch(result, filter_group) {
+  _require = filter_group;
+  result = require("GameAutocompleteUtils").normalizeGameAutocompleteQuery(result);
   if (null == result) {
     return false;
   } else {
     const _HermesInternal = HermesInternal;
-    const combined = "" + DEFAULT + ":" + result;
+    const combined = "" + filter_group + ":" + result;
     const hasItem = navigation.has(combined);
     let result1 = !hasItem;
     if (!hasItem) {
       result1 = !set.has(combined);
     }
     if (result1) {
-      result1 = tmp3(5901).shouldSuppressAutocompleteFetch(result, (arg0) => closure_3.peek("" + DEFAULT + ":" + arg0));
-      const tmp3Result = tmp3(5901);
+      result1 = tmp(8212).shouldSuppressAutocompleteFetch(result, (arg0) =>
+        closure_3.peek("" + closure_0 + ":" + arg0),
+      );
+      const tmpResult = tmp(8212);
     }
     return result1;
   }
-  const obj = DEFAULT(5901);
-  tmp3 = DEFAULT;
+  const obj = require("GameAutocompleteUtils");
+  tmp = _require;
 };
-prototype["isFetching"] = function isFetching(name) {
-  let DEFAULT = arg1;
-  if (arg1 === undefined) {
-    DEFAULT = GameAutocompleteTypes.GameAutocompleteProfile.DEFAULT;
-  }
+prototype["isFetching"] = function isFetching(name, arg1) {
   const result = GameAutocompleteUtils.normalizeGameAutocompleteQuery(name);
   let hasItem = null != result;
   if (hasItem) {
     const _HermesInternal = HermesInternal;
-    hasItem = set.has("" + DEFAULT + ":" + result);
+    hasItem = set.has("" + arg1 + ":" + result);
   }
   return hasItem;
 };
@@ -97,12 +83,12 @@ const gameAutocompleteStore = new GameAutocompleteStore(DispatcherDefault, {
     set = new Set();
     navigation2.reset();
   },
-  GAME_AUTOCOMPLETE_FETCH: function handleFetch(profile) {
-    set.add("" + profile.profile + ":" + profile.query);
+  GAME_AUTOCOMPLETE_FETCH: function handleFetch(filterGroup) {
+    set.add("" + filterGroup.filterGroup + ":" + filterGroup.query);
   },
   GAME_AUTOCOMPLETE_FETCH_SUCCESS: function handleFetchSuccess(results) {
     results = results.results;
-    const tmp = getCacheKey(results.profile, results.query);
+    const tmp = getCacheKey(results.filterGroup, results.query);
     set.delete(tmp);
     const result = navigation.set(tmp, results);
     for (const item10017 of results) {
@@ -110,8 +96,8 @@ const gameAutocompleteStore = new GameAutocompleteStore(DispatcherDefault, {
       continue;
     }
   },
-  GAME_AUTOCOMPLETE_FETCH_FAILURE: function handleFetchFailure(profile) {
-    set.delete("" + profile.profile + ":" + profile.query);
+  GAME_AUTOCOMPLETE_FETCH_FAILURE: function handleFetchFailure(filterGroup) {
+    set.delete("" + filterGroup.filterGroup + ":" + filterGroup.query);
   },
 });
 const size = fn(2);

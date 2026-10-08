@@ -24,8 +24,8 @@ const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-fn(6932).GPlayBillingResult;
-const PremiumConstants = fn(1379);
+fn(7121).GPlayBillingResult;
+const PremiumConstants = fn(1391);
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = PremiumConstants);
 let PaymentGateways = fn(1096).PaymentGateways;
 let jsx = fn(21).jsx;
@@ -34,7 +34,7 @@ const tmp4 = new LoggerDefault("NativeGiftContext");
 [closure_18, tmp6, tmp7] = ContextUtilsDefault();
 let ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGiftInfoOptions(arg0) {
       const cResult = c.c(11);
       ({
         giftStyle,
@@ -101,7 +101,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [selectedGiftingPromotionReward];
       items = items1;
     }
-  : (giftStyle) => {
+  : function useGiftInfoOptions(giftStyle) {
       giftStyle = giftStyle.giftStyle;
       const recipientUserId = giftStyle.recipientUserId;
       const customGiftMessage = giftStyle.customGiftMessage;
@@ -163,7 +163,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (order) => {
+  ? function useSyncOrder(order) {
       const cResult = order(setRevision[15]).c(44);
       order = order.order;
       let revision = order.revision;
@@ -238,7 +238,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                                                                           }
                                                                           if (cResult[42] !== tmp14) {
                                                                             let obj2 = { awaitSyncOrder: tmp14 };
-                                                                            class A {
+                                                                            class O {
                                                                               constructor() {
                                                                                 tmp = flush(giftInfoOptions);
                                                                                 tmp2 = waitForSync();
@@ -254,7 +254,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                                                                           return tmp15;
                                                                         }
                                                                       }
-                                                                      class A {
+                                                                      class O {
                                                                         constructor() {
                                                                           tmp = flush(giftInfoOptions);
                                                                           tmp2 = waitForSync();
@@ -265,8 +265,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                                                                       cResult[38] = flush;
                                                                       cResult[39] = giftInfoOptions;
                                                                       cResult[40] = waitForSync;
-                                                                      cResult[41] = A;
-                                                                      tmp14 = A;
+                                                                      cResult[41] = O;
+                                                                      tmp14 = O;
                                                                     }
                                                                   }
                                                                 }
@@ -971,16 +971,16 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj4 = {
         orderId: "a",
-        planId: "no good",
+        planId: "twitch.tv",
         planSelection: { premiumType, planInterval },
-        giftInfo: "zna\u010Dka",
+        giftInfo: "youtube.com",
       };
       cResult[0] = planInterval;
       cResult[1] = premiumType;
       cResult[2] = obj4;
       tmp3 = obj4;
     }
-  : (order) => {
+  : function useSyncOrder(order) {
       order = order.order;
       let revision = order.revision;
       const setRevision = order.setRevision;
@@ -996,9 +996,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const setError = order.setError;
       let obj = {
         orderId: "a",
-        planId: "no good",
+        planId: "twitch.tv",
         planSelection: { premiumType, planInterval },
-        giftInfo: "zna\u010Dka",
+        giftInfo: "youtube.com",
       };
       closure_13 = externalGatewayFacet.useRef(obj);
       externalGatewayFacet.useRef(false);
@@ -1654,7 +1654,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/payments/native/NativeGiftContext.tsx");
 
 export const NativeGiftContextProvider = ReactCompilerGating.isReactCompilerEnabled()
-  ? (basePurchaseAnalytics) => {
+  ? function NativeGiftContextProvider(basePurchaseAnalytics) {
       const cResult = basePurchaseAnalytics(setCurrentAnalyticsStep[15]).c(88);
       basePurchaseAnalytics = basePurchaseAnalytics.basePurchaseAnalytics;
       const recipientUserId = basePurchaseAnalytics.recipientUserId;
@@ -1943,7 +1943,7 @@ export const NativeGiftContextProvider = ReactCompilerGating.isReactCompilerEnab
       tmp29 = productIdForGift;
       const tmpResult14 = basePurchaseAnalytics(setCurrentAnalyticsStep[23]);
     }
-  : (basePurchaseAnalytics) => {
+  : function NativeGiftContextProvider(basePurchaseAnalytics) {
       basePurchaseAnalytics = basePurchaseAnalytics.basePurchaseAnalytics;
       _require = basePurchaseAnalytics;
       const recipientUserId = basePurchaseAnalytics.recipientUserId;
@@ -2388,7 +2388,7 @@ export const NativeGiftContextProvider = ReactCompilerGating.isReactCompilerEnab
                     yield closure_1_40(closure_2_2);
                     return value;
                   });
-                  obj8.onPurchaseComplete = function () {
+                  obj8.onPurchaseComplete = function onPurchaseComplete() {
                     const self = this;
                     const apply = closure_1_1.apply;
                     if (typeof apply === "unknown") {

@@ -16,7 +16,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, DebugLogCategory: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, body: null, buttonSpacer: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.body = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
@@ -29,7 +29,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/feedback/native/UploadLogsActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (mediaSessionId) => {
+  ? function UploadLogsActionSheet(mediaSessionId) {
       const cResult = mediaSessionId(576).c(19);
       mediaSessionId = mediaSessionId.mediaSessionId;
       const rtcConnectionId = mediaSessionId.rtcConnectionId;
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = { title: null };
           const intl = tmp(1126).intl;
           obj2.title = intl.string(tmp(1126).t.KTjjrG);
-          const tmp9 = closure_6(tmp(6651).BottomSheetTitleHeader, obj2);
+          const tmp9 = closure_6(tmp(6828).BottomSheetTitleHeader, obj2);
           cResult[3] = tmp9;
           let tmp7 = tmp9;
         } else {
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] !== tmp4.body) {
           let obj3 = { variant: "text-sm/normal", color: "text-muted", style: body, children: tmp10 };
-          const tmp14 = closure_6(tmp(4892).Text, obj3);
+          const tmp14 = closure_6(tmp(5086).Text, obj3);
           cResult[5] = tmp4.body;
           cResult[6] = tmp14;
           let tmp12 = tmp14;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[8] !== tmp5) {
           const obj4 = { text: tmp15, onPress: tmp5 };
-          const tmp19 = closure_6(tmp(5601).Button, obj4);
+          const tmp19 = closure_6(tmp(5375).Button, obj4);
           cResult[8] = tmp5;
           cResult[9] = tmp19;
           let tmp17 = tmp19;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return rtcConnectionId(dependencyMap[10]).hideActionSheet();
             },
           };
-          const tmp28 = closure_6(tmp(5601).Button, obj6);
+          const tmp28 = closure_6(tmp(5375).Button, obj6);
           cResult[13] = tmp28;
           let tmp26 = tmp28;
         } else {
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [tmp12, tmp17, tmp20, tmp26];
         obj8.children = items;
         obj7.children = closure_7(View, obj8);
-        const tmp33 = closure_6(tmp(6652).BottomSheet, obj7);
+        const tmp33 = closure_6(tmp(6829).BottomSheet, obj7);
         cResult[14] = tmp4.container;
         cResult[15] = tmp12;
         cResult[16] = tmp17;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[18] = tmp33;
         tmp29 = tmp33;
       }
-      const fn = function l() {
+      function handleUpload() {
         DebugUploadManager.uploadDebugLogFiles(constants2.RTC);
         let tmp4 = mediaSessionId;
         if (mediaSessionId == null) {
@@ -157,14 +157,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         AnalyticsUtilsDefault.track(constants.DEBUG_LOG_UPLOADED, obj3);
         ActionSheetActionCreatorsDefault.hideActionSheet();
         const tmp3Result = ActionSheetActionCreatorsDefault;
-      };
+      }
       cResult[0] = mediaSessionId;
       cResult[1] = rtcConnectionId;
-      cResult[2] = fn;
-      tmp5 = fn;
+      cResult[2] = handleUpload;
+      tmp5 = handleUpload;
       let obj = mediaSessionId(576);
     }
-  : (arg0) => {
+  : function UploadLogsActionSheet(arg0) {
       ({ mediaSessionId: require, rtcConnectionId: importDefault } = arg0);
       const tmp = closure_8();
       let obj = { header: null, children: null };
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { text: null, onPress: null };
       const intl3 = util.intl;
       obj5.text = intl3.string(util.t.EbwFfR);
-      obj5.onPress = function onPress() {
+      obj5.onPress = function handleUpload() {
         DebugUploadManager.uploadDebugLogFiles(constants2.RTC);
         let tmp4 = closure_1_0;
         if (closure_1_0 == null) {

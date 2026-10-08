@@ -10,11 +10,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useSortedSpamMessageRequests.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSortedSpamMessageRequests() {
       const cResult = stateFromStoresArray(stateFromStoresObject[5]).c(15);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore];
-        const fn = function l() {
+        const fn = function u() {
           return ChannelStore.getPrivateChannelsVersion();
         };
         cResult[0] = items;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = mapped;
       const tmpResult4 = stateFromStoresArray(stateFromStoresObject[6]);
     }
-  : () => {
+  : function useSortedSpamMessageRequests() {
       const items = [ChannelStore];
       const stateFromStores = stateFromStoresArray(stateFromStoresObject[6]).useStateFromStores(items, () =>
         ChannelStore.getPrivateChannelsVersion(),

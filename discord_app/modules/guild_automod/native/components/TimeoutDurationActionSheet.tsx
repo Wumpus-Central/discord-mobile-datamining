@@ -3,7 +3,7 @@ import util from "../../../../intl/index.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
-import TableRadioGroup from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import TableRadioGroup2 from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet2 from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import getActionInfo from "../getActionInfo.tsx";
@@ -12,8 +12,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const AutomodActionType = fn(11487).AutomodActionType;
-let closure_4 = fn(2114).getDisableCommunicationDurationOptions;
+const AutomodActionType = fn(11473).AutomodActionType;
+let closure_4 = fn(2126).getDisableCommunicationDurationOptions;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "";
@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/TimeoutDurationActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onRemove) => {
+  ? function TimeoutDurationActionSheet(onRemove) {
       const cResult = onSelectDuration(576).c(40);
       ({ triggerType, action, onSelectDuration } = onRemove);
       onRemove = onRemove.onRemove;
@@ -61,47 +61,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       if (cResult[30] === tmp14) {
                         if (cResult[31] === tmp15) {
                           if (cResult[32] === tmp16) {
-                            let tmp38 = cResult[33];
+                            let tmp37 = cResult[33];
                           }
                           if (cResult[34] === tmp10) {
                             if (cResult[35] === tmp11) {
-                              if (cResult[36] === tmp38) {
+                              if (cResult[36] === tmp37) {
                                 if (cResult[37] === flag2) {
                                   if (cResult[38] === tmp17) {
-                                    let tmp41 = cResult[39];
+                                    let tmp40 = cResult[39];
                                   }
-                                  return tmp41;
+                                  return tmp40;
                                 }
                               }
                             }
                           }
                           const obj2 = { startExpanded: flag2, header: tmp17, children: null };
-                          const items = [tmp11, tmp38];
+                          const items = [tmp11, tmp37];
                           obj2.children = items;
-                          const tmp43 = closure_6(tmp10, obj2);
-                          class M {
-                            constructor(arg0) {
-                              obj = closure_1(closure_2[7]);
-                              hideActionSheetResult = obj.hideActionSheet();
-                              if (onRemove !== c7) {
-                                tmp4 = onSelectDuration;
-                                tmp5 = globalThis;
-                                _Number = Number;
-                                tmp6 = onSelectDuration(Number(onRemove));
-                              } else {
-                                tmp2 = onRemove;
-                                tmp3 = onRemove();
-                              }
-                              return;
-                            }
-                          }
+                          const tmp42 = closure_6(tmp10, obj2);
                           cResult[34] = tmp10;
                           cResult[35] = tmp11;
-                          cResult[36] = tmp38;
+                          cResult[36] = tmp37;
                           cResult[37] = flag2;
                           cResult[38] = tmp17;
-                          cResult[39] = tmp43;
-                          tmp41 = tmp43;
+                          cResult[39] = tmp42;
+                          tmp40 = tmp42;
                         }
                       }
                     }
@@ -116,23 +100,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 children: null,
               };
               const items1 = [tmp15, tmp16];
-              class M {
-                constructor(arg0) {
-                  obj = closure_1(closure_2[7]);
-                  hideActionSheetResult = obj.hideActionSheet();
-                  if (onRemove !== c7) {
-                    tmp4 = onSelectDuration;
-                    tmp5 = globalThis;
-                    _Number = Number;
-                    tmp6 = onSelectDuration(Number(onRemove));
-                  } else {
-                    tmp2 = onRemove;
-                    tmp3 = onRemove();
-                  }
-                  return;
-                }
-              }
-              const tmp40 = closure_6(tmp9, obj3);
+              obj3.children = items1;
+              const tmp39 = closure_6(tmp9, obj3);
               cResult[26] = tmp9;
               cResult[27] = flag;
               cResult[28] = tmp12;
@@ -140,8 +109,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[30] = tmp14;
               cResult[31] = tmp15;
               cResult[32] = tmp16;
-              cResult[33] = tmp40;
-              tmp38 = tmp40;
+              cResult[33] = tmp39;
+              tmp37 = tmp39;
             }
           }
         }
@@ -152,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[19] === onSelectDuration) {
             let tmp19 = cResult[20];
           }
-          const ActionSheet = onSelectDuration(6708).ActionSheet;
+          const ActionSheet = onSelectDuration(6885).ActionSheet;
           let str;
           if (tmp4 != null) {
             str = tmp4.headerText;
@@ -162,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[21] !== str) {
             const obj4 = { title: str };
-            const tmp22 = closure_5(onSelectDuration(6651).BottomSheetTitleHeader, obj4);
+            const tmp22 = closure_5(onSelectDuration(6828).BottomSheetTitleHeader, obj4);
             cResult[21] = str;
             cResult[22] = tmp22;
             let tmp20 = tmp22;
@@ -174,28 +143,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj5 = { variant: "text-md/normal", children: null };
             const intl = onSelectDuration(1126).intl;
             obj5.children = intl.string(onSelectDuration(1126).t.DWGBAh);
-            const tmp26 = closure_5(onSelectDuration(4892).Text, obj5);
+            const tmp26 = closure_5(onSelectDuration(5086).Text, obj5);
             cResult[23] = tmp26;
             let tmp24 = tmp26;
           } else {
             tmp24 = cResult[23];
           }
-          class M {
-            constructor(arg0) {
-              obj = closure_1(closure_2[7]);
-              hideActionSheetResult = obj.hideActionSheet();
-              if (onRemove !== c7) {
-                tmp4 = onSelectDuration;
-                tmp5 = globalThis;
-                _Number = Number;
-                tmp6 = onSelectDuration(Number(onRemove));
-              } else {
-                tmp2 = onRemove;
-                tmp3 = onRemove();
-              }
-              return;
-            }
-          }
+          const TableRadioGroup = onSelectDuration(6265).TableRadioGroup;
           let headerText1;
           if (tmp4 != null) {
             headerText1 = tmp4.headerText;
@@ -211,24 +165,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = { value, label: null };
             const intl2 = onSelectDuration(1126).intl;
             obj6.label = intl2.string(onSelectDuration(1126).t.PoWNfe);
-            cResult[24] = closure_5(onSelectDuration(6078).TableRadioRow, obj6);
-            class M {
-              constructor(arg0) {
-                obj = closure_1(closure_2[7]);
-                hideActionSheetResult = obj.hideActionSheet();
-                if (onRemove !== c7) {
-                  tmp4 = onSelectDuration;
-                  tmp5 = globalThis;
-                  _Number = Number;
-                  tmp6 = onSelectDuration(Number(onRemove));
-                } else {
-                  tmp2 = onRemove;
-                  tmp3 = onRemove();
-                }
-                return;
-              }
-            }
-            const tmp33 = closure_5(onSelectDuration(6078).TableRadioRow, obj6);
+            const tmp32 = closure_5(onSelectDuration(6264).TableRadioRow, obj6);
+            cResult[24] = tmp32;
+            let tmp29 = tmp32;
+          } else {
+            tmp29 = cResult[24];
           }
           const _Symbol3 = Symbol;
           if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
@@ -272,53 +213,46 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[4] = undefined;
           cResult[5] = onRemove;
           cResult[6] = onSelectDuration;
-          cResult[7] = tmp27;
+          cResult[7] = TableRadioGroup;
           cResult[8] = ActionSheet;
           cResult[9] = tmp24;
           cResult[10] = false;
           cResult[11] = headerText1;
           cResult[12] = StringResult;
           cResult[13] = tmp19;
-          cResult[14] = tmp30;
+          cResult[14] = tmp29;
           cResult[15] = mapped;
           cResult[16] = true;
           cResult[17] = tmp20;
           tmp17 = tmp20;
           flag2 = true;
           tmp16 = mapped;
-          tmp15 = tmp30;
+          tmp15 = tmp29;
           tmp14 = tmp19;
           tmp13 = StringResult;
           tmp12 = headerText1;
           flag = false;
           tmp11 = tmp24;
           tmp10 = ActionSheet;
-          tmp9 = tmp27;
+          tmp9 = TableRadioGroup;
         }
-        class M {
-          constructor(arg0) {
-            obj = closure_1(closure_2[7]);
-            hideActionSheetResult = obj.hideActionSheet();
-            if (onRemove !== c7) {
-              tmp4 = onSelectDuration;
-              tmp5 = globalThis;
-              _Number = Number;
-              tmp6 = onSelectDuration(Number(onRemove));
-            } else {
-              tmp2 = onRemove;
-              tmp3 = onRemove();
-            }
-            return;
+        function handleChange(arg0) {
+          ActionSheetActionCreatorsDefault.hideActionSheet();
+          if (arg0 !== c7) {
+            const _Number = Number;
+            onSelectDuration(Number(arg0));
+          } else {
+            onRemove();
           }
         }
         cResult[18] = onRemove;
         cResult[19] = onSelectDuration;
-        cResult[20] = M;
-        tmp19 = M;
+        cResult[20] = handleChange;
+        tmp19 = handleChange;
         arr = closure_4();
       }
       let obj = onSelectDuration(576);
-      const actionInfo = onSelectDuration(17731).getActionInfo(
+      const actionInfo = onSelectDuration(18018).getActionInfo(
         AutomodActionType.USER_COMMUNICATION_DISABLED,
         action,
         triggerType,
@@ -327,9 +261,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = triggerType;
       cResult[2] = actionInfo;
       tmp4 = actionInfo;
-      const tmpResult = onSelectDuration(17731);
+      const tmpResult = onSelectDuration(18018);
     }
-  : (triggerType) => {
+  : function TimeoutDurationActionSheet(triggerType) {
       ({ action, onSelectDuration: require, onRemove: importDefault } = triggerType);
       const actionInfo = getActionInfo.getActionInfo(
         AutomodActionType.USER_COMMUNICATION_DISABLED,
@@ -374,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         StringResult = value;
       }
       obj4.defaultValue = StringResult;
-      obj4.onChange = function onChange(arg0) {
+      obj4.onChange = function handleChange(arg0) {
         ActionSheetActionCreatorsDefault.hideActionSheet();
         if (arg0 !== c7) {
           const _Number = Number;
@@ -394,7 +328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj4.children = items1;
-      items[1] = closure_6(TableRadioGroup.TableRadioGroup, obj4);
+      items[1] = closure_6(TableRadioGroup2.TableRadioGroup, obj4);
       obj2.children = items;
       return closure_6(ActionSheet2.ActionSheet, obj2);
     };

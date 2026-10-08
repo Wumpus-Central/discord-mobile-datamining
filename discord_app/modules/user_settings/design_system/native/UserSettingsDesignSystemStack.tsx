@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { padding: 16, flex: 1, alignItems: "center" },
   block: {
@@ -24,7 +24,7 @@ let obj2 = {
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function StackBlock() {
       const cResult = c.c(2);
       const tmp2 = closure_6();
       if (cResult[0] !== tmp2.block) {
@@ -38,7 +38,9 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : () => React4(React2, { style: closure_6().block });
+  : function StackBlock() {
+      return React4(React2, { style: closure_6().block });
+    };
 ReactCompilerGating = fn(558);
 let obj3 = {
   borderRadius: nativeDefault.radii.lg,
@@ -52,7 +54,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsDesignSystemStack() {
       const cResult = c.c(11);
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -166,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp35;
     }
-  : () => {
+  : function UserSettingsDesignSystemStack() {
       const obj = { children: null };
       const obj2 = { style: closure_6().container, children: null };
       const obj3 = { spacing: 16, children: null };

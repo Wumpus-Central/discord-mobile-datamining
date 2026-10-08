@@ -9,11 +9,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let View = fn(17).View;
-let isNudgeWarning = fn(9797).getSafetyToolsActionSheetKey;
+let isNudgeWarning = fn(10361).getSafetyToolsActionSheetKey;
 let HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   aboutContainer: { marginHorizontal: nativeDefault.space.PX_32 },
   description: null,
@@ -30,7 +30,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsAboutActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function SafetyToolsAboutScreen(channelId) {
       const cResult = channelId(warningId[9]).c(35);
       channelId = channelId.channelId;
       const recipientId = channelId.recipientId;
@@ -531,7 +531,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = T;
       let obj2 = channelId(warningId[10]);
     }
-  : (channelId) => {
+  : function SafetyToolsAboutScreen(channelId) {
       channelId = channelId.channelId;
       const recipientId = channelId.recipientId;
       const warningId = channelId.warningId;

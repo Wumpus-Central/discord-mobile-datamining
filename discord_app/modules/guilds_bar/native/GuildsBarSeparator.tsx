@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles((width) => {
   const obj = { separator: null };
   const size = {
@@ -34,12 +34,12 @@ const __initData2 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildItemSize) => {
+  ? function GuildsBarHomeDrawerSeparator(guildItemSize) {
       const cResult = c.c(3);
       guildItemSize = guildItemSize.guildItemSize;
       const tmp3 = closure_4(guildItemSize);
       const panelTranslateX = useHomeDrawerGesture.useHomeDrawerState().panelTranslateX;
-      const fn = function o() {
+      const fn = function n() {
         const obj = { transform: null };
         const items = [{ scaleX: Math.max(1, (panelTranslateX.get() + guildItemSize) / guildItemSize) }];
         obj.transform = items;
@@ -64,11 +64,11 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp6;
       tmp5 = tmp6;
     }
-  : (guildItemSize) => {
+  : function GuildsBarHomeDrawerSeparator(guildItemSize) {
       guildItemSize = guildItemSize.guildItemSize;
       const tmp = closure_4(guildItemSize);
       const panelTranslateX = useHomeDrawerGesture.useHomeDrawerState().panelTranslateX;
-      const fn = function n() {
+      const fn = function o() {
         const obj = { transform: null };
         const items = [{ scaleX: Math.max(1, (panelTranslateX.get() + guildItemSize) / guildItemSize) }];
         obj.transform = items;
@@ -89,7 +89,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarSe
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function GuildsBarSeparator() {
         const cResult = c.c(4);
         const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
         const tmp5 = closure_4(token);
@@ -114,7 +114,7 @@ export default noop.memo(
         }
         obj3 = useHomeDrawerGesture;
       }
-    : () => {
+    : function GuildsBarSeparator() {
         const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
         const tmp4 = closure_4(token);
         if (obj2.useIsHomeDrawerEnabled()) {

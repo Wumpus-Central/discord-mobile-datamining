@@ -31,7 +31,7 @@ let result = size.fileFinishedImporting("modules/screen/native/useScaledTextLine
 export { scaleLineHeight };
 export { scaleTextLineHeight };
 export const useScaledTextLineHeight = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useScaledTextLineHeight(arg0) {
       const cResult = c.c(3);
       const fontScale = useFontScale.useFontScale();
       if (cResult[0] === fontScale) {
@@ -52,7 +52,7 @@ export const useScaledTextLineHeight = ReactCompilerGating.isReactCompilerEnable
       cResult[2] = value;
       tmp5 = value;
     }
-  : (arg0) => {
+  : function useScaledTextLineHeight(arg0) {
       const fontScale = useFontScale.useFontScale();
       const lineHeight = Text_Text.TextStyleSheet[arg0].lineHeight;
       value = map.get(lineHeight);

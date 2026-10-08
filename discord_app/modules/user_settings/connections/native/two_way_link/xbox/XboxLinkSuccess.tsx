@@ -9,12 +9,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, Linking: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const XboxLinkModalScenes = fn(8767).XboxLinkModalScenes;
-const GameConsoleConstants = fn(8781);
+const XboxLinkModalScenes = fn(9113).XboxLinkModalScenes;
+const GameConsoleConstants = fn(9127);
 ({ XBOX_ANDROID_APP_LINK: c10, XBOX_IOS_APP_LINK: closure_11, XBOX_URL_BASE: closure_12 } = GameConsoleConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   image: { width: 58, height: 85, marginBottom: 24 },
   getApp: {
@@ -64,7 +64,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function XboxLinkDiscordSuccess() {
       const cResult = icon(navigation[9]).c(53);
       const tmp4 = closure_15();
       let obj = icon(navigation[9]);
@@ -84,11 +84,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp7, tmp8);
       if (cResult[2] !== icon) {
-        const fn2 = function f() {
+        const fn2 = function b() {
           if (!icon) {
             const openURL = React5.openURL;
             if (obj.isAndroid()) {
-              openURL(v65535);
+              openURL(collapsed);
             } else {
               openURL(closure_2_11);
             }
@@ -101,16 +101,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = icon(navigation[10]);
       navigation = icon(navigation[12]).useNavigation();
       if (cResult[4] !== navigation) {
-        class C {
+        class R {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
           }
         }
         cResult[4] = navigation;
-        cResult[5] = C;
+        cResult[5] = R;
       } else {
-        class C {
+        class R {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
@@ -119,18 +119,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       ({ container, content } = twoWayLinkStyles);
       if (cResult[6] !== tmp4.image) {
-        class C {
+        class R {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
           }
         }
-        const obj4 = { source: require("../../../../../../../_runtime/metro/08785__.js"), style: tmp4.image };
+        const obj4 = { source: require("../../../../../../../_runtime/metro/12891__.js"), style: tmp4.image };
         const tmp16 = closure_13(closure_5, obj4);
         cResult[6] = tmp4.image;
         cResult[7] = tmp16;
       } else {
-        class C {
+        class R {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        class C {
+        class R {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = stringResult;
         const tmp17 = stringResult;
       } else {
-        class C {
+        class R {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[9] !== twoWayLinkStyles.title) {
-        class C {
+        class R {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = twoWayLinkStyles.title;
         cResult[10] = tmp20;
       } else {
-        class C {
+        class R {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        class C {
+        class R {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
@@ -190,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = stringResult1;
         const tmp21 = stringResult1;
       } else {
-        class C {
+        class R {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[12] !== twoWayLinkStyles.body) {
-        class C {
+        class R {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[12] = twoWayLinkStyles.body;
         cResult[13] = tmp24;
       } else {
-        class C {
+        class R {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
@@ -222,18 +222,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[14] !== tmp4.appLogo) {
-        class C {
+        class R {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
           }
         }
-        const obj9 = { source: require("../../../../../../../_runtime/metro/08786__.js"), style: tmp4.appLogo };
+        const obj9 = { source: require("../../../../../../../_runtime/metro/10963__.js"), style: tmp4.appLogo };
         const tmp28 = closure_13(closure_5, obj9);
         cResult[14] = tmp4.appLogo;
         cResult[15] = tmp28;
       } else {
-        class C {
+        class R {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
@@ -241,21 +241,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[16] === tmp4.appLogoBox) {
-        class C {
+        class R {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
           }
         }
         if (cResult[19] !== icon) {
-          class C {
+          class R {
             constructor() {
               arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
               return;
             }
           }
           if (icon) {
-            class C {
+            class R {
               constructor() {
                 arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
                 return;
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const stringResult2 = obj12.string(tmp(tmp2[14]).t);
           } else {
-            class C {
+            class R {
               constructor() {
                 arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
                 return;
@@ -273,21 +273,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[19] = icon;
           cResult[20] = stringResult2;
         } else {
-          class C {
+          class R {
             constructor() {
               arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
               return;
             }
           }
           if (cResult[21] === tmp4.getAppTitle) {
-            class C {
+            class R {
               constructor() {
                 arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
                 return;
               }
             }
             if (cResult[24] === icon) {
-              class C {
+              class R {
                 constructor() {
                   arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
                   return;
@@ -295,22 +295,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (icon) {
-              class C {
+              class R {
                 constructor() {
                   arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
                   return;
                 }
               }
-              const obj10 = { source: require("../../../../../../../_runtime/metro/08787__.js"), style: tmp4.icon };
+              const obj10 = { source: require("../../../../../../../_runtime/metro/12892__.js"), style: tmp4.icon };
               let tmp36Result = closure_13(closure_5, obj10);
             } else {
-              class C {
+              class R {
                 constructor() {
                   arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
                   return;
                 }
               }
-              tmp37[0] = require("../../../../../../../_runtime/metro/08788__.js");
+              tmp37[0] = require("../../../../../../../_runtime/metro/10911__.js");
               tmp37[1] = tmp(tmp2[18]).Icon.Sizes.SMALL;
               tmp37[2] = tmp4.externalLinkIcon.color;
               tmp37[3] = tmp4.icon;
@@ -340,7 +340,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[18] = closure_13(closure_6, { style: tmp4.appLogoBox, children: tmp25 });
       const tmp29 = closure_13(closure_6, { style: tmp4.appLogoBox, children: tmp25 });
     }
-  : () => {
+  : function XboxLinkDiscordSuccess() {
       const tmp = closure_15();
       const twoWayLinkStyles = first(navigation[10]).useTwoWayLinkStyles();
       [first, importDefault] = noop.useState(true);
@@ -352,7 +352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (!first) {
           const openURL = React5.openURL;
           if (obj.isAndroid()) {
-            openURL(v65535);
+            openURL(collapsed);
           } else {
             openURL(closure_2_11);
           }
@@ -368,7 +368,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback1 = noop.useCallback(() => {
         navigation.push(XboxLinkModalScenes.EDUCATION);
       }, items1);
-      obj5.source = require("../../../../../../../_runtime/metro/08785__.js");
+      obj5.source = require("../../../../../../../_runtime/metro/12891__.js");
       obj5.style = tmp.image;
       const items2 = [closure_13(closure_5, obj5), , ,];
       const obj6 = {
@@ -388,7 +388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj9 = { style: tmp.appLogoBox, children: null };
       const obj2 = first(navigation[12]);
       obj9.children = closure_13(closure_5, {
-        source: require("../../../../../../../_runtime/metro/08786__.js"),
+        source: require("../../../../../../../_runtime/metro/10963__.js"),
         style: tmp.appLogo,
       });
       const items3 = [closure_13(closure_6, obj9), ,];

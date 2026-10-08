@@ -18,7 +18,7 @@ export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
   ({ style, iconStyle } = onBackspace);
   const interval = new Timers.Interval();
   noop.useRef(interval);
-  const delayedCall = new Timers.DelayedCall(500, () => {
+  const delayedCall = new Timers.DelayedCall(500, function handleDelayLongPressBackspace() {
     const current = closure_2.current;
     current.cancel();
     const current2 = ref.current;

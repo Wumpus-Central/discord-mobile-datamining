@@ -5,21 +5,21 @@ import util from "../../../../intl/index.native.tsx";
 import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import FolderIcon from "../../../../design/components/Icon/native/redesign/generated/FolderIcon.tsx";
 import NitroFileUploadExperiments from "../../experiments/NitroFileUploadExperiments.tsx";
+import FolderIcon from "../../../../design/components/Icon/native/redesign/generated/FolderIcon.tsx";
 import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import ChatSmileIcon from "../../../../design/components/Icon/native/redesign/generated/ChatSmileIcon.tsx";
 import UserIcon from "../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
+import ChatSmileIcon from "../../../../design/components/Icon/native/redesign/generated/ChatSmileIcon.tsx";
 import NitroWumpusFlightRight3dIllustration from "../../../../design/components/mana-assets/native/generated/NitroWumpusFlightRight3dIllustration.native.tsx";
 import PremiumPerksListDefault from "../../../../components_native/premium/PremiumPerksList.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   contentContainer: {
     paddingHorizontal: 36,
@@ -54,7 +54,7 @@ const result = size.fileFinishedImporting("modules/premium/native/trials/Premium
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function PremiumTrialOfferActionSheetContent(arg0) {
         const cResult = c.c(27);
         ({ trialOffer, intervalDuration, onConfirm } = arg0);
         const tmp4 = closure_7();
@@ -246,7 +246,7 @@ export default noop.memo(
         cResult[8] = formatToPlainStringResult1;
         tmp19 = formatToPlainStringResult1;
       }
-    : (onConfirm) => {
+    : function PremiumTrialOfferActionSheetContent(onConfirm) {
         ({ trialOffer, intervalDuration } = onConfirm);
         const tmp = closure_7();
         let subscriptionTrial;

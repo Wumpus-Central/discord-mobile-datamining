@@ -21,80 +21,70 @@ const View = fn(17).View;
 const ActivityTypes = fn(1085).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 }, statusRow: { flexDirection: "row", gap: nativeDefault.space.PX_4 }, statusEmoji: { width: 16, height: 16 }, usernameRow: { flexDirection: "row", alignItems: "center", overflow: "visible", gap: 2 }, username: { flexShrink: 1 }, guildTag: { marginLeft: 2, flexShrink: 0 }, statusText: { flexShrink: 1 } };
 let closure_15 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(14);
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Username(arg0) {
+  const cResult = c.c(12);
   ({ userId, username } = arg0);
   const tmp4 = closure_15();
-  if (cResult[0] !== tmp4.usernameRow) {
-    const items = [tmp4.usernameRow];
-    cResult[0] = tmp4.usernameRow;
-    cResult[1] = items;
-    let tmp5 = items;
-  } else {
-    tmp5 = cResult[1];
-  }
-  if (cResult[2] === tmp4.username) {
-    if (cResult[3] === userId) {
-      if (cResult[4] === username) {
-        let tmp6 = cResult[5];
+  if (cResult[0] === tmp4.username) {
+    if (cResult[1] === userId) {
+      if (cResult[2] === username) {
+        let tmp5 = cResult[3];
       }
-      if (cResult[6] === tmp4.guildTag) {
-        if (cResult[7] === userId) {
-          let tmp8 = cResult[8];
+      if (cResult[4] === tmp4.guildTag) {
+        if (cResult[5] === userId) {
+          let tmp7 = cResult[6];
         }
         const _Symbol = Symbol;
-        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp15 = __initData(ChevronSmallDownIcon.ChevronSmallDownIcon, { size: "xs", color: "mobile-text-heading-primary" });
-          cResult[9] = tmp15;
-          let tmp13 = tmp15;
+        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+          const tmp14 = __initData(ChevronSmallDownIcon.ChevronSmallDownIcon, { size: "xs", color: "mobile-text-heading-primary" });
+          cResult[7] = tmp14;
+          let tmp12 = tmp14;
         } else {
-          tmp13 = cResult[9];
+          tmp12 = cResult[7];
         }
-        if (cResult[10] === tmp5) {
-          if (cResult[11] === tmp6) {
-            if (cResult[12] === tmp8) {
-              let tmp16 = cResult[13];
+        if (cResult[8] === tmp4.usernameRow) {
+          if (cResult[9] === tmp5) {
+            if (cResult[10] === tmp7) {
+              let tmp15 = cResult[11];
             }
-            return tmp16;
+            return tmp15;
           }
         }
-        const obj2 = { style: tmp5, children: null };
-        const items1 = [tmp6, tmp8, tmp13];
-        obj2.children = items1;
-        const tmp19 = __initData2(View, obj2);
-        cResult[10] = tmp5;
-        cResult[11] = tmp6;
-        cResult[12] = tmp8;
-        cResult[13] = tmp19;
-        tmp16 = tmp19;
+        const obj2 = { style: tmp4.usernameRow, children: null };
+        const items = [tmp5, tmp7, tmp12];
+        obj2.children = items;
+        const tmp18 = __initData2(View, obj2);
+        cResult[8] = tmp4.usernameRow;
+        cResult[9] = tmp5;
+        cResult[10] = tmp7;
+        cResult[11] = tmp18;
+        tmp15 = tmp18;
       }
       const obj3 = { userId, disabledTooltip: true, containerStyles: tmp4.guildTag };
-      const tmp11 = __initData(GuildTagDefault, obj3);
-      cResult[6] = tmp4.guildTag;
-      cResult[7] = userId;
-      cResult[8] = tmp11;
-      tmp8 = tmp11;
+      const tmp10 = __initData(GuildTagDefault, obj3);
+      cResult[4] = tmp4.guildTag;
+      cResult[5] = userId;
+      cResult[6] = tmp10;
+      tmp7 = tmp10;
     }
   }
-  const tmp7 = __initData(UsernameWithEffectsDefault, { userId, userName: username, defaultColor: "mobile-text-heading-primary", variant: "heading-md/semibold", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, containerStyle: tmp4.username, style: tmp4.username });
-  cResult[2] = tmp4.username;
-  cResult[3] = userId;
-  cResult[4] = username;
-  cResult[5] = tmp7;
-  tmp6 = tmp7;
+  const tmp6 = __initData(UsernameWithEffectsDefault, { userId, userName: username, defaultColor: "mobile-text-heading-primary", variant: "heading-md/semibold", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, containerStyle: tmp4.username, style: tmp4.username });
+  cResult[0] = tmp4.username;
+  cResult[1] = userId;
+  cResult[2] = username;
+  cResult[3] = tmp6;
+  tmp5 = tmp6;
   const obj4 = { userId, userName: username, defaultColor: "mobile-text-heading-primary", variant: "heading-md/semibold", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, containerStyle: tmp4.username, style: tmp4.username };
-}) : ((userId) => {
+}) : (function Username(userId) {
   userId = userId.userId;
   const tmp = closure_15();
-  const obj = { style: null, children: null };
-  const items = [tmp.usernameRow];
-  obj.style = items;
-  const items1 = [__initData(UsernameWithEffectsDefault, { userId, userName: userId.username, defaultColor: "mobile-text-heading-primary", variant: "heading-md/semibold", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, containerStyle: tmp.username, style: tmp.username }), __initData(GuildTagDefault, { userId, disabledTooltip: true, containerStyles: tmp.guildTag }), __initData(ChevronSmallDownIcon.ChevronSmallDownIcon, { size: "xs", color: "mobile-text-heading-primary" })];
-  obj.children = items1;
+  const obj = { style: tmp.usernameRow, children: null };
+  const items = [__initData(UsernameWithEffectsDefault, { userId, userName: userId.username, defaultColor: "mobile-text-heading-primary", variant: "heading-md/semibold", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, containerStyle: tmp.username, style: tmp.username }), __initData(GuildTagDefault, { userId, disabledTooltip: true, containerStyles: tmp.guildTag }), __initData(ChevronSmallDownIcon.ChevronSmallDownIcon, { size: "xs", color: "mobile-text-heading-primary" })];
+  obj.children = items;
   return __initData2(View, obj);
 });
 ReactCompilerGating = fn(558);
@@ -102,7 +92,7 @@ let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarName.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function YouName(userId) {
   const cResult = userId(576).c(24);
   userId = userId.userId;
   const username = userId.username;
@@ -123,13 +113,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((userId
   let obj = userId(576);
   const stateFromStores = userId(504).useStateFromStores(tmp5, C);
   const tmpResult = userId(504);
-  const customStatusActivity = userId(10839).useCustomStatusActivity();
-  const tmpResult4 = userId(10839);
+  const customStatusActivity = userId(10488).useCustomStatusActivity();
+  const tmpResult4 = userId(10488);
   state = undefined;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
   }
-  const gameMentionsAsPlainText = userId(10626).useGameMentionsAsPlainText(state);
+  const gameMentionsAsPlainText = userId(10224).useGameMentionsAsPlainText(state);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [PresenceStore, , , , , ];
     class C {
@@ -184,21 +174,21 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((userId
   cResult[4] = userId;
   cResult[5] = M;
   tmp18 = M;
-  const tmpResult5 = userId(10626);
-}) : ((username) => {
+  const tmpResult5 = userId(10224);
+}) : (function YouName(username) {
   const userId = username.userId;
   const tmp = closure_15();
   let items = [SelfPresenceStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => status.getStatus());
   let obj = userId(504);
-  const customStatusActivity = userId(10839).useCustomStatusActivity();
-  let obj2 = userId(10839);
+  const customStatusActivity = userId(10488).useCustomStatusActivity();
+  let obj2 = userId(10488);
   state = undefined;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
   }
-  const gameMentionsAsPlainText = userId(10626).useGameMentionsAsPlainText(state);
-  let obj3 = userId(10626);
+  const gameMentionsAsPlainText = userId(10224).useGameMentionsAsPlainText(state);
+  let obj3 = userId(10224);
   const items1 = [PresenceStore, ApplicationStreamingStore, RelationshipStore, ChannelStore, PermissionStore, VoiceStateStore];
   let obj4 = { style: tmp.userText, children: null };
   const stateFromStores1 = userId(504).useStateFromStores(items1, () => {
@@ -214,7 +204,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((userId
   const obj5 = { style: tmp.statusRow, children: null };
   if (stateFromStores1) {
     const obj6 = { userId, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
-    let tmp9Result = closure_12(stateFromStores(10622), obj6);
+    let tmp9Result = closure_12(stateFromStores(10220), obj6);
   } else {
     let emoji;
     if (customStatusActivity != null) {
@@ -223,18 +213,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((userId
     let tmp11Result2 = null;
     if (null != emoji) {
       const obj7 = { size: 16, style: tmp.statusEmoji, emoji: customStatusActivity.emoji };
-      tmp11Result2 = closure_12(stateFromStores(10642), obj7);
+      tmp11Result2 = closure_12(stateFromStores(10242), obj7);
     }
     const items3 = [tmp11Result2, ];
     const obj8 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, style: tmp.statusText, children: null };
     let humanizeStatusResult = gameMentionsAsPlainText;
     if (gameMentionsAsPlainText == null) {
-      humanizeStatusResult = tmp2(4728).humanizeStatus(stateFromStores);
-      const tmp2Result2 = tmp2(4728);
+      humanizeStatusResult = tmp2(4922).humanizeStatus(stateFromStores);
+      const tmp2Result2 = tmp2(4922);
     }
     const obj9 = { children: null };
     obj8.children = humanizeStatusResult;
-    items3[1] = closure_12(tmp2(4892).Text, obj8);
+    items3[1] = closure_12(tmp2(5086).Text, obj8);
     obj9.children = items3;
     tmp9Result = closure_13(closure_14, obj9);
   }

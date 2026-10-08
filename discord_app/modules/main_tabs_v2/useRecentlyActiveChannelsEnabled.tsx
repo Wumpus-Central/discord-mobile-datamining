@@ -10,4 +10,6 @@ const result1 = size.fileFinishedImporting("modules/main_tabs_v2/useRecentlyActi
 export const isRecentlyActiveChannelsEnabled = function isRecentlyActiveChannelsEnabled() {
   return DesignTogglesStore.get("enable_recently_active");
 };
-export const useRecentlyActiveChannelsEnabled = () => useDesignToggleDefault("enable_recently_active");
+export const useRecentlyActiveChannelsEnabled = function useRecentlyActiveChannelsEnabled() {
+  return useDesignToggleDefault("enable_recently_active");
+};

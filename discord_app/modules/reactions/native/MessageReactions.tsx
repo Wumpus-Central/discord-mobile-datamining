@@ -15,7 +15,7 @@ const jsx = fn(21).jsx;
 let closure_8 = [];
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useMessageReactions(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(8);
@@ -70,7 +70,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useMessageReactions(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const items = [MessageStore];
@@ -102,7 +102,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/native/MessageReactions.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MessageReactions(arg0) {
       const cResult = c.c(20);
       if (cResult[0] !== arg0) {
         ({ channelId, messageId, emoji, reactions, isSelectedBurst } = arg0);
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[16] = tmp22;
       }
     }
-  : (emoji) => {
+  : function MessageReactions(emoji) {
       ({ channelId, messageId, reactions, isSelectedBurst } = emoji);
       if (isSelectedBurst === undefined) {
         isSelectedBurst = false;

@@ -11,11 +11,11 @@ import LocaleStore from "../../../../modules/user_settings/LocaleStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const BadgeConstants = fn(1190);
+const BadgeConstants = fn(1202);
 ({ BADGE_MASK_SIZE: metroRequire, BADGE_MASK_UNREAD_SIZE: closure_7, BADGE_PADDING, BADGE_SIZE } = BadgeConstants);
 const BADGE_SIZE_UNREAD = BadgeConstants.BADGE_SIZE_UNREAD;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   badgeMask: { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 },
   badge: {
@@ -43,12 +43,12 @@ let obj4 = {
   textAlign: "center",
   textAlignVertical: null,
 };
-let PlatformUtils = fn(1369);
+let PlatformUtils = fn(1381);
 PlatformUtils = PlatformUtils.isAndroid();
 const space = nativeDefault.space;
 obj4.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;
 obj4.fontFamily = fn(1085).Fonts.PRIMARY_BOLD;
-PlatformUtils = fn(1369);
+PlatformUtils = fn(1381);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";
@@ -81,7 +81,7 @@ obj2.eventsMentionBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Badge(arg0) {
       const cResult = c.c(29);
       ({
         value,
@@ -301,7 +301,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = BADGE_SIZE;
       const tmpResult4 = initialize;
     }
-  : (value) => {
+  : function Badge(value) {
       value = value.value;
       require = value;
       const style = value.style;
@@ -422,7 +422,7 @@ let result = size.fileFinishedImporting("design/void/Badge/native/Badge.tsx");
 
 export default tmp4;
 export const MaskedBadge = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MaskedBadge(arg0) {
       const cResult = c.c(23);
       ({
         style,
@@ -554,7 +554,7 @@ export const MaskedBadge = ReactCompilerGating.isReactCompilerEnabled()
       }
       tmp4 = timestampProducer;
     }
-  : (maskStyle) => {
+  : function MaskedBadge(maskStyle) {
       maskStyle = maskStyle.maskStyle;
       value = maskStyle.value;
       importDefault = value;

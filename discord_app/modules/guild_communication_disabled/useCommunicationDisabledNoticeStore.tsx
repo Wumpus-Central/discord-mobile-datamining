@@ -1,12 +1,12 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx
 import c from "../../../_runtime/00576_c.js";
-import _mod1254 from "../../../_runtime/metro/01254__.js";
-import _mod4498 from "../../../_runtime/metro/04498__.js";
+import _mod1266 from "../../../_runtime/metro/01266__.js";
+import _mod4690 from "../../../_runtime/metro/04690__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
 const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY =
-  fn(2114).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
+  fn(2126).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
 const module_571 = fn(571);
 let state = module_571.createStore((arg0, arg1) => {
   _require = arg0;
@@ -26,7 +26,7 @@ let state = module_571.createStore((arg0, arg1) => {
         DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY,
         notificationDismissedInGuilds,
       );
-      notificationDismissedInGuilds(1259).batchUpdates(() =>
+      notificationDismissedInGuilds(1271).batchUpdates(() =>
         notificationDismissedInGuilds({ notificationDismissedInGuilds }),
       );
     },
@@ -39,10 +39,10 @@ let state = module_571.createStore((arg0, arg1) => {
           DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY,
           notificationDismissedInGuilds,
         );
-        notificationDismissedInGuilds(1259).batchUpdates(() =>
+        notificationDismissedInGuilds(1271).batchUpdates(() =>
           notificationDismissedInGuilds({ notificationDismissedInGuilds }),
         );
-        const obj = notificationDismissedInGuilds(1259);
+        const obj = notificationDismissedInGuilds(1271);
       }
     },
   };
@@ -61,7 +61,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx");
 
 export const useCommunicationDisabledNoticeStore = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCommunicationDisabledNoticeStore(arg0) {
       const cResult = c.c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n(arg0) {
@@ -74,8 +74,8 @@ export const useCommunicationDisabledNoticeStore = ReactCompilerGating.isReactCo
       } else {
         first = cResult[0];
       }
-      const tmpResult = _mod1254;
-      [obj3, tmp6] = _mod1254.useStoreWithEqualityFn(closure_4, first, _mod4498.shallow);
+      const tmpResult = _mod1266;
+      [obj3, tmp6] = _mod1266.useStoreWithEqualityFn(closure_4, first, _mod4690.shallow);
       if (cResult[1] === arg0) {
         if (cResult[2] === obj3) {
           let tmp7 = cResult[3];
@@ -97,18 +97,18 @@ export const useCommunicationDisabledNoticeStore = ReactCompilerGating.isReactCo
       cResult[2] = obj3;
       cResult[3] = hasItem;
       tmp7 = hasItem;
-      const tmp5 = _slicedToArray(_mod1254.useStoreWithEqualityFn(closure_4, first, _mod4498.shallow), 2);
+      const tmp5 = _slicedToArray(_mod1266.useStoreWithEqualityFn(closure_4, first, _mod4690.shallow), 2);
     }
-  : (arg0) => {
+  : function useCommunicationDisabledNoticeStore(arg0) {
       const tmp = _slicedToArray(
-        _mod1254.useStoreWithEqualityFn(
+        _mod1266.useStoreWithEqualityFn(
           closure_4,
           (arg0) => {
             const items = [,];
             ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
             return items;
           },
-          _mod4498.shallow,
+          _mod4690.shallow,
         ),
         2,
       );

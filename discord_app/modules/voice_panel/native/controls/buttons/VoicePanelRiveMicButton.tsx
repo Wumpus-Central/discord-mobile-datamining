@@ -13,7 +13,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelRiveMicButton.tsx");
 
 export const VoicePanelRiveMicButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VoicePanelRiveMicButton(arg0) {
       const cResult = c.c(11);
       ({ color, muted } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -73,7 +73,7 @@ export const VoicePanelRiveMicButton = ReactCompilerGating.isReactCompilerEnable
       cResult[3] = obj5;
       tmp6 = obj5;
     }
-  : (arg0) => {
+  : function VoicePanelRiveMicButton(arg0) {
       ({ color, muted } = arg0);
       const obj = { style: { width: 24, height: 24, pointerEvents: "none" }, children: null };
       const obj2 = { dataBinding: { fill: color, on: !muted }, defaultViewModelInstance: null, fallback: null };

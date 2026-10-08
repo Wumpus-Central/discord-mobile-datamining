@@ -7,13 +7,13 @@ import ActivityPanelStateContextDefault from "ActivityPanelStateContext.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BaseActivityPanelSystemUIManager(arg0) {
       const cResult = c.c(9);
       ({ mode, isWindowLandscape } = arg0);
       let tmp5 = mode === ActivityPanelModes.PANEL;
@@ -66,7 +66,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const tmpResult = PlatformUtils;
     }
-  : (arg0) => {
+  : function BaseActivityPanelSystemUIManager(arg0) {
       ({ mode, isWindowLandscape } = arg0);
       let tmp = mode === ActivityPanelModes.PANEL;
       const tmp3 = PlatformUtils.isIOS() && tmp;
@@ -94,7 +94,7 @@ const result = size.fileFinishedImporting("modules/activities/panel/native/Activ
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function ActivityPanelSystemUIManager() {
         const cResult = c.c(3);
         const context = noop.useContext(ActivityPanelStateContextDefault);
         ({ mode, wrapperDimensions } = context);
@@ -110,7 +110,7 @@ export default noop.memo(
         cResult[2] = tmp4;
         tmp3 = tmp4;
       }
-    : () => {
+    : function ActivityPanelSystemUIManager() {
         const context = noop.useContext(ActivityPanelStateContextDefault);
         return hasOwnProperty(closure_8, {
           mode: context.mode,

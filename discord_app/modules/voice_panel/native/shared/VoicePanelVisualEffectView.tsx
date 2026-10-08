@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ DynamicColorIOS: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { wrapper: null, border: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.wrapper = {};
@@ -31,7 +31,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/shared/Voi
 
 export const VoicePanelVisualEffectView = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (matchAppTheme) => {
+    ? function VoicePanelVisualEffectViewInner(matchAppTheme) {
         const cResult = c.c(18);
         matchAppTheme = matchAppTheme.matchAppTheme;
         const token = useToken.useToken(nativeDefault.colors.THEME_LOCKED_BLUR_FALLBACK);
@@ -135,7 +135,7 @@ export const VoicePanelVisualEffectView = noop.memo(
         tmp14 = tmp15;
         tmpResult8 = PlatformUtils;
       }
-    : (matchAppTheme) => {
+    : function VoicePanelVisualEffectViewInner(matchAppTheme) {
         let flag = matchAppTheme.matchAppTheme;
         if (flag === undefined) {
           flag = false;

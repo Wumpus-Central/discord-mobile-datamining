@@ -5,7 +5,7 @@ import util from "../../../../../../intl/index.native.tsx";
 import RootNavigationRef from "../../../../RootNavigationRef.native.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
-import _modDef16018 from "../../../../../../../_runtime/metro/16018__.js";
+import _modDef16278 from "../../../../../../../_runtime/metro/16278__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { padding: nativeDefault.space.PX_16, flex: 1, height: 325 },
   containerImage: null,
@@ -35,7 +35,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/mess
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function MessagesItemEmptyState() {
         const cResult = c.c(18);
         const tmp4 = closure_8();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -58,7 +58,7 @@ export default noop.memo(
           first = cResult[0];
         }
         if (cResult[1] !== tmp4.image) {
-          let obj2 = { resizeMode: "contain", source: _modDef16018, style: tmp4.image };
+          let obj2 = { resizeMode: "contain", source: _modDef16278, style: tmp4.image };
           const tmp10 = timestampProducer(React4, obj2);
           cResult[1] = tmp4.image;
           cResult[2] = tmp10;
@@ -158,7 +158,7 @@ export default noop.memo(
         tmp11 = tmp12;
         const obj7 = { style: tmp4.containerImage, children: tmp6 };
       }
-    : () => {
+    : function MessagesItemEmptyState() {
         const tmp = closure_8();
         const obj = { style: tmp.container, collapsable: false, children: null };
         let obj2 = { style: tmp.containerImage, children: null };
@@ -176,7 +176,7 @@ export default noop.memo(
             }
           }
         }, []);
-        obj3.source = _modDef16018;
+        obj3.source = _modDef16278;
         obj3.style = tmp.image;
         obj2.children = timestampProducer(React4, obj3);
         const items = [timestampProducer(hasOwnProperty, obj2), , ,];

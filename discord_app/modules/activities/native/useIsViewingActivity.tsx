@@ -9,13 +9,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/useIsViewingActivity.tsx");
 
 export const useIsViewingActivity = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function useIsViewingActivity(channelId) {
       const cResult = channelId(576).c(4);
       channelId = channelId.channelId;
       let tmp4 = useIsActivityFocusedDefault(channelId);
       const obj = channelId(576);
       const tmp = channelId;
-      const isModalOpen = channelId(4742).useIsModalOpen(ChannelCallModalDefault);
+      const isModalOpen = channelId(4936).useIsModalOpen(ChannelCallModalDefault);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelRTCStore];
         cResult[0] = items;
@@ -24,7 +24,7 @@ export const useIsViewingActivity = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== channelId) {
-        const fn = function o() {
+        const fn = function c() {
           return ChannelRTCStore.getChatOpen(channelId);
         };
         const items1 = [channelId];
@@ -37,7 +37,7 @@ export const useIsViewingActivity = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const obj2 = channelId(4742);
+      const obj2 = channelId(4936);
       const stateFromStores = tmp(504).useStateFromStores(first, tmp8, tmp9);
       if (tmp4) {
         tmp4 = isModalOpen;
@@ -47,11 +47,11 @@ export const useIsViewingActivity = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (channelId) => {
+  : function useIsViewingActivity(channelId) {
       channelId = channelId.channelId;
       let tmp = useIsActivityFocusedDefault(channelId);
-      const isModalOpen = channelId(4742).useIsModalOpen(ChannelCallModalDefault);
-      const obj = channelId(4742);
+      const isModalOpen = channelId(4936).useIsModalOpen(ChannelCallModalDefault);
+      const obj = channelId(4936);
       const items = [ChannelRTCStore];
       const items1 = [channelId];
       const stateFromStores = channelId(504).useStateFromStores(

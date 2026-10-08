@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useCanInviteMembers.tsx");
 
 export const useCanInviteMembers = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanInviteMembers(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -46,7 +46,7 @@ export const useCanInviteMembers = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("useStateFromStores").useStateFromStores(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useCanInviteMembers(arg0) {
       _require = arg0;
       const items = [ChannelStore, PermissionStore];
       const items1 = [arg0];

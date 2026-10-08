@@ -106,7 +106,7 @@ prototype["sourceId"] = function sourceId(dependencyMap) {
 
 export default VoicePanelStreamOutputSinkStack;
 export const useSetHasActiveVideoOutputSink = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSetHasActiveVideoOutputSink(arg0) {
       const hasActiveVideoOutputSink = arg0;
       const cResult = c.c(10);
       const id = noop.useId();
@@ -150,7 +150,7 @@ export const useSetHasActiveVideoOutputSink = ReactCompilerGating.isReactCompile
       cResult[2] = fn;
       tmp3 = fn;
     }
-  : (arg0) => {
+  : function useSetHasActiveVideoOutputSink(arg0) {
       const hasActiveVideoOutputSink = arg0;
       const id = noop.useId();
       const items = [id, arg0];

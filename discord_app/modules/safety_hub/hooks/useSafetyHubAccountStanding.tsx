@@ -9,11 +9,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubAccountStanding.tsx");
 
 export const useSafetyHubAccountStanding = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSafetyHubAccountStanding() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SafetyHubStore];
-        const fn = function o() {
+        const fn = function u() {
           return accountStanding.getAccountStanding();
         };
         cResult[0] = items;
@@ -25,7 +25,7 @@ export const useSafetyHubAccountStanding = ReactCompilerGating.isReactCompilerEn
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useSafetyHubAccountStanding() {
       const items = [SafetyHubStore];
       return initialize.useStateFromStores(items, () => accountStanding.getAccountStanding());
     };

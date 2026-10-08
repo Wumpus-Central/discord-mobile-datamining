@@ -13,10 +13,10 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
 let c6 = 16;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null, row: null };
 let rect = { position: "absolute", top: 0, left: 0, backgroundColor: null, paddingRight: 16, paddingBottom: 16 };
-const ColorUtils = fn(4733);
+const ColorUtils = fn(4927);
 rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj2.container = rect;
 obj2.row = { flexDirection: "row" };
@@ -26,7 +26,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/ActivitiesDebugOverlay.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ActivitiesDebugOverlay() {
       const cResult = c.c(16);
       const tmp4 = closure_7();
       const tmp6 = useThermalStateDefault();
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj6;
       tmp9 = obj6;
     }
-  : () => {
+  : function ActivitiesDebugOverlay() {
       const tmp = closure_7();
       const tmp4 = useThermalStateDefault();
       let str = "text-overlay-light";

@@ -13,7 +13,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAvatarDecorationIfNotExpired(arg0) {
       _require = arg0;
       const cResult = require("c").c(6);
       [first, _slicedToArray] = noop.useState(false);
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp10;
     }
-  : (arg0) => {
+  : function useAvatarDecorationIfNotExpired(arg0) {
       closure_0 = arg0;
       [first, _slicedToArray] = noop.useState(false);
       noop = noop.useRef(null);

@@ -12,7 +12,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useMaybeFetchProfileFrame(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       let tmp2 = useFramePreviewOverrideFrameDefault();
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       let obj = require("c");
     }
-  : (arg0) => {
+  : function useMaybeFetchProfileFrame(arg0) {
       closure_0 = arg0;
       let tmp = useFramePreviewOverrideFrameDefault();
       const tmp2 = useProfileFrameDefault(arg0);

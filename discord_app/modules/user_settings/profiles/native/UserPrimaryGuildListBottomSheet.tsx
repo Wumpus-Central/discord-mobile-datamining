@@ -8,10 +8,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(7614).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(7860).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" },
   guildIcon: { marginLeft: 4 },
@@ -20,7 +20,7 @@ let obj = {
   divider: null,
   itemTrailingStyle: null,
 };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let num = 18;
 if (PlatformUtils.isAndroid()) {
   num = 16;
@@ -32,7 +32,7 @@ let closure_8 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_9 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function Item(arg0) {
         const cResult = item(576).c(34);
         ({ start, end, item } = arg0);
         ({ selected, onSelectGuild } = arg0);
@@ -57,7 +57,7 @@ let closure_9 = noop.memo(
           } else {
             tmp12 = cResult[4];
           }
-          const radioA11yNative = item(4600).useRadioA11yNative(tmp12);
+          const radioA11yNative = item(4792).useRadioA11yNative(tmp12);
           ({ accessibilityRole, accessibilityState } = radioA11yNative);
           let id;
           if (item != null) {
@@ -90,7 +90,7 @@ let closure_9 = noop.memo(
                         }
                         if (cResult[19] !== selected) {
                           const obj3 = { selected };
-                          const tmp30 = closure_6(item(6082).FormRadio, obj3);
+                          const tmp30 = closure_6(item(6268).FormRadio, obj3);
                           cResult[19] = selected;
                           cResult[20] = tmp30;
                           let tmp28 = tmp30;
@@ -130,7 +130,7 @@ let closure_9 = noop.memo(
                               accessibilityState,
                               trailing: tmp31,
                             };
-                            class G {
+                            class C {
                               constructor() {
                                 id = undefined;
                                 tmp = onSelectGuild;
@@ -162,7 +162,7 @@ let closure_9 = noop.memo(
                         const items = [tmp24, tmp28];
                         obj5.children = items;
                         const tmp34 = closure_7(View, obj5);
-                        class G {
+                        class C {
                           constructor() {
                             id = undefined;
                             tmp = onSelectGuild;
@@ -203,13 +203,13 @@ let closure_9 = noop.memo(
                   obj7.guildTag = tag;
                   obj7.guildBadge = tmp7;
                   obj7.badgeSize = GuildTagBadgeSize.SIZE_16;
-                  tmp26Result = closure_6(item(9409).BaseGuildTagChiplet, obj7);
+                  tmp26Result = closure_6(item(8830).BaseGuildTagChiplet, obj7);
                 }
                 cResult[13] = tmp7;
                 cResult[14] = profile;
                 cResult[15] = item;
                 cResult[16] = tmp4.tag;
-                class G {
+                class C {
                   constructor() {
                     id = undefined;
                     tmp = onSelectGuild;
@@ -231,9 +231,9 @@ let closure_9 = noop.memo(
               }
               let tmp20 = null;
               if (null != item) {
-                const obj8 = { style: tmp4.guildIcon, guild: item, size: item(5978).GuildIconSizes.SMALL_32 };
-                tmp20 = closure_6(onSelectGuild(5978), obj8);
-                const tmp23 = onSelectGuild(5978);
+                const obj8 = { style: tmp4.guildIcon, guild: item, size: item(6161).GuildIconSizes.SMALL_32 };
+                tmp20 = closure_6(onSelectGuild(6161), obj8);
+                const tmp23 = onSelectGuild(6161);
               }
               cResult[10] = item;
               cResult[11] = tmp4.guildIcon;
@@ -245,7 +245,7 @@ let closure_9 = noop.memo(
           if (item != null) {
             id1 = item.id;
           }
-          class G {
+          class C {
             constructor() {
               id = undefined;
               tmp = onSelectGuild;
@@ -263,9 +263,9 @@ let closure_9 = noop.memo(
           }
           cResult[5] = id1;
           cResult[6] = onSelectGuild;
-          cResult[7] = G;
-          tmp15 = G;
-          const tmpResult = item(4600);
+          cResult[7] = C;
+          tmp15 = C;
+          const tmpResult = item(4792);
         }
         let guildTagBadgeUrl = null != item;
         if (guildTagBadgeUrl) {
@@ -273,8 +273,8 @@ let closure_9 = noop.memo(
           if (profile != null) {
             badge1 = profile.badge;
           }
-          guildTagBadgeUrl = item(7847).getGuildTagBadgeUrl(item.id, badge1, GuildTagBadgeSize.SIZE_24);
-          const tmpResult2 = item(7847);
+          guildTagBadgeUrl = item(8265).getGuildTagBadgeUrl(item.id, badge1, GuildTagBadgeSize.SIZE_24);
+          const tmpResult2 = item(8265);
         }
         let badge2;
         if (profile != null) {
@@ -286,7 +286,7 @@ let closure_9 = noop.memo(
         tmp7 = guildTagBadgeUrl;
         let obj = item(576);
       }
-    : (item) => {
+    : function Item(item) {
         item = item.item;
         ({ selected, onSelectGuild: importDefault } = item);
         ({ start, end } = item);
@@ -300,10 +300,10 @@ let closure_9 = noop.memo(
           if (profile != null) {
             badge = profile.badge;
           }
-          guildTagBadgeUrl = item(7847).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
-          let obj = item(7847);
+          guildTagBadgeUrl = item(8265).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
+          let obj = item(8265);
         }
-        const radioA11yNative = item(4600).useRadioA11yNative({ selected });
+        const radioA11yNative = item(4792).useRadioA11yNative({ selected });
         ({ accessibilityRole, accessibilityState } = radioA11yNative);
         const obj3 = {
           start,
@@ -334,7 +334,7 @@ let closure_9 = noop.memo(
         obj3.label = name;
         let tmp10Result = null;
         if (null != item) {
-          const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(5978).GuildIconSizes.SMALL_32 };
+          const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(6161).GuildIconSizes.SMALL_32 };
           tmp10Result = closure_6(GuildIconDefault, obj4);
         }
         obj3.icon = tmp10Result;
@@ -360,12 +360,12 @@ let closure_9 = noop.memo(
           obj10.guildTag = tag;
           obj10.guildBadge = guildTagBadgeUrl;
           obj10.badgeSize = GuildTagBadgeSize.SIZE_16;
-          tmp10Result2 = closure_6(tmp7(9409).BaseGuildTagChiplet, obj10);
+          tmp10Result2 = closure_6(tmp7(8830).BaseGuildTagChiplet, obj10);
         }
-        const items = [tmp10Result2, closure_6(item(6082).FormRadio, { selected })];
+        const items = [tmp10Result2, closure_6(item(6268).FormRadio, { selected })];
         obj5.children = items;
         obj3.trailing = closure_7(View, obj5);
-        return closure_6(item(6000).TableRow, obj3);
+        return closure_6(item(6184).TableRow, obj3);
       },
 );
 ReactCompilerGating = fn(558);
@@ -374,7 +374,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onSelectGuild) => {
+  ? function UserPrimaryGuildListBottomSheet(onSelectGuild) {
       const cResult = selectedGuildId(576).c(21);
       ({ availableGuilds, selectedGuildId } = onSelectGuild);
       onSelectGuild = onSelectGuild.onSelectGuild;
@@ -397,7 +397,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = items;
         const obj2 = onSelectGuild(12);
       } else {
-        const data = cResult[1];
         const _Symbol2 = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = {
@@ -408,7 +407,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl = selectedGuildId(1126).intl;
           obj3.children = intl.string(selectedGuildId(1126).t.Fo0g9x);
-          const tmp14 = closure_6(selectedGuildId(4892).Text, obj3);
+          const tmp14 = closure_6(selectedGuildId(5086).Text, obj3);
           cResult[3] = tmp14;
           let tmp12 = tmp14;
         } else {
@@ -421,19 +420,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[5] = tmp18;
         }
         if (cResult[6] !== tmp4.divider) {
-          const fn2 = function f() {
-            return timestampProducer(Form.FormDivider, { iconPush: true, style: divider.divider });
-          };
+          class I {
+            constructor() {
+              obj = { iconPush: true, style: closure_2.divider };
+              return jsx(closure_0(closure_2[19]).FormDivider, obj);
+            }
+          }
           cResult[6] = tmp4.divider;
-          cResult[7] = fn2;
-          let tmp19 = fn2;
+          cResult[7] = I;
         } else {
-          tmp19 = cResult[7];
+          class I {
+            constructor() {
+              obj = { iconPush: true, style: closure_2.divider };
+              return jsx(closure_0(closure_2[19]).FormDivider, obj);
+            }
+          }
         }
         const _Symbol3 = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj5 = { padding: 16 };
-          class C {
+          class I {
+            constructor() {
+              obj = { iconPush: true, style: closure_2.divider };
+              return jsx(closure_0(closure_2[19]).FormDivider, obj);
+            }
+          }
+          class G {
             constructor(arg0) {
               str = "none-guild-type";
               if (null != onSelectGuild) {
@@ -442,12 +453,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return str;
             }
           }
-          cResult[8] = obj5;
-          cResult[9] = C;
-          let tmp20 = obj5;
+          cResult[8] = tmp22;
+          cResult[9] = G;
         } else {
-          tmp20 = cResult[8];
-          class C {
+          class I {
+            constructor() {
+              obj = { iconPush: true, style: closure_2.divider };
+              return jsx(closure_0(closure_2[19]).FormDivider, obj);
+            }
+          }
+          class G {
             constructor(arg0) {
               str = "none-guild-type";
               if (null != onSelectGuild) {
@@ -457,62 +472,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        if (cResult[10] === data.length) {
-          if (cResult[11] === onSelectGuild) {
-            if (cResult[12] === selectedGuildId) {
-              let tmp22 = cResult[13];
+        if (cResult[10] === cResult[1].length) {
+          class I {
+            constructor() {
+              obj = { iconPush: true, style: closure_2.divider };
+              return jsx(closure_0(closure_2[19]).FormDivider, obj);
             }
-            class C {
-              constructor(arg0) {
-                str = "none-guild-type";
-                if (null != onSelectGuild) {
-                  str = onSelectGuild.id;
-                }
-                return str;
-              }
-            }
-            const obj6 = {
-              ItemSeparatorComponent: tmp19,
-              data,
-              contentContainerStyle: tmp20,
-              keyExtractor: C,
-              renderItem: tmp22,
-            };
-            const tmp25 = closure_6(selectedGuildId(8404).BottomSheetFlashList, obj6);
-            cResult[14] = data;
-            class G {
-              constructor(arg0) {
-                ({ item, index } = onSelectGuild);
-                obj = {
-                  start: 0 === index,
-                  end: index === closure_3.length - 1,
-                  item,
-                  selected: null,
-                  onSelectGuild: null,
-                };
-                tmp3 = selectedGuildId;
-                tmp = jsx;
-                tmp2 = closure_9;
-                if (selectedGuildId == null) {
-                  tmp3 = null;
-                }
-                id = undefined;
-                if (item != null) {
-                  id = item.id;
-                }
-                if (id == null) {
-                  id = null;
-                }
-                obj.selected = tmp3 === id;
-                obj.onSelectGuild = onSelectGuild;
-                return tmp(tmp2, obj);
-              }
-            }
-            cResult[16] = tmp22;
-            cResult[17] = tmp25;
           }
         }
-        class G {
+        class C {
           constructor(arg0) {
             ({ item, index } = onSelectGuild);
             obj = {
@@ -540,15 +508,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmp(tmp2, obj);
           }
         }
-        cResult[10] = data.length;
+        cResult[10] = cResult[1].length;
         cResult[11] = onSelectGuild;
         cResult[12] = selectedGuildId;
-        cResult[13] = G;
-        tmp22 = G;
+        cResult[13] = C;
       }
       let obj = selectedGuildId(576);
     }
-  : (availableGuilds) => {
+  : function UserPrimaryGuildListBottomSheet(availableGuilds) {
       availableGuilds = availableGuilds.availableGuilds;
       ({ selectedGuildId: importDefault, onSelectGuild: dependencyMap } = availableGuilds);
       const tmp = closure_8();
@@ -572,9 +539,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = availableGuilds(1126).intl;
       obj3.children = intl.string(availableGuilds(1126).t.Fo0g9x);
-      obj2.children = closure_6(availableGuilds(4892).Text, obj3);
+      obj2.children = closure_6(availableGuilds(5086).Text, obj3);
       obj.header = closure_6(memo, obj2);
-      obj.children = closure_6(availableGuilds(8404).BottomSheetFlashList, {
+      obj.children = closure_6(availableGuilds(8600).BottomSheetFlashList, {
         ItemSeparatorComponent() {
           return timestampProducer(Form.FormDivider, { iconPush: true, style: divider.divider });
         },
@@ -606,5 +573,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return timestampProducer(closure_9, obj);
         },
       });
-      return closure_6(availableGuilds(6652).BottomSheet, obj);
+      return closure_6(availableGuilds(6829).BottomSheet, obj);
     };

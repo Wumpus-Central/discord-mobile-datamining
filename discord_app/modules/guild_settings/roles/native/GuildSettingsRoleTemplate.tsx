@@ -8,9 +8,9 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
-import _modDef7963 from "../../../../../_runtime/metro/07963__.js";
-import PaginationDefault from "../../../../../_runtime/10504_Pagination.js";
-import _modDef11194 from "../../../../../_runtime/metro/11194__.js";
+import _modDef8380 from "../../../../../_runtime/metro/08380__.js";
+import PaginationDefault from "../../../../../_runtime/10101_Pagination.js";
+import _modDef11311 from "../../../../../_runtime/metro/11311__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -21,7 +21,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(17826);
+const GuildSettingsRoleConstants = fn(18113);
 ({
   PermissionTemplateTypes: closure_9,
   PermissionTemplates: c10,
@@ -33,7 +33,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let width = Dimensions.get("window").width;
 let c17 = 300;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
   carousel: { flex: 1 },
@@ -105,7 +105,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleTemplate.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onSelect) => {
+  ? function GuildSettingsRoleTemplate(onSelect) {
       const cResult = onSelect(guildId[11]).c(83);
       onSelect = onSelect.onSelect;
       const location = onSelect.location;
@@ -277,7 +277,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items;
       let obj3 = onSelect(guildId[14]);
     }
-  : (arg0) => {
+  : function GuildSettingsRoleTemplate(arg0) {
       ({ onSelect: require, location: importDefault, guildId: dependencyMap } = arg0);
       let ref;
       value = undefined;
@@ -378,7 +378,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         accessible: false,
         accessibilityElementsHidden: true,
         importantForAccessibility: "no-hide-descendants",
-        children: closure_14(_modDef7963, {
+        children: closure_14(_modDef8380, {
           maximumValue: values.length - 1,
           minimumTrackTintColor: values[value].color,
           minimumValue: closure_9.COSMETIC,
@@ -442,7 +442,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: closure_14(PaginationDefault, {
           ref: ref1,
           data: values,
-          renderItem(item) {
+          renderItem: function renderCarouselItem(item) {
             item = item.item;
             const contentPrefaceResult = item.contentPreface();
             let obj = {
@@ -495,7 +495,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj = { style: closure_3.templateContent, children: null };
               const items = [
                 state(native.Icon, {
-                  source: _modDef11194,
+                  source: _modDef11311,
                   size: native.IconSizes.MEDIUM,
                   color: nativeDefault.unsafe_rawColors.GREEN_360,
                 }),
@@ -542,8 +542,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           enabled: !isScreenReaderEnabled,
           scrollAnimationDuration: 200,
           customAnimation: callback,
-          onSnapToItem(result) {
-            closure_7(result);
+          onSnapToItem: function handleCarouselSnap(arg0) {
+            closure_7(arg0);
           },
           onConfigurePanGesture(activeOffsetX) {
             activeOffsetX.activeOffsetX([-10, 10]);

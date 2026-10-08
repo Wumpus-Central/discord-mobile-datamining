@@ -4,7 +4,7 @@ import EmojiStore from "../../emojis/EmojiStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiIntention = fn(1380).EmojiIntention;
+const EmojiIntention = fn(1392).EmojiIntention;
 let closure_4 = [];
 const ReactCompilerGating = fn(558);
 function getTopAndNewlyAddedEmojis(emojiStoreInstance) {
@@ -31,7 +31,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/hooks/useTopAndNewlyAddedEmojis.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useTopAndNewlyAddedEmojis(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(5);
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(573).useStateFromStoresObject(first, tmp6, tmp7);
       }
-      const fn = function c() {
+      const fn = function l() {
         if (EmojiStore !== undefined) {
           if (closure_1 !== EmojiIntention.REACTION) {
             let topEmoji = EmojiStore.getTopEmoji(closure_0);
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useTopAndNewlyAddedEmojis(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const items = [EmojiStore];

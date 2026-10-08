@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import useToken from "../../../tokens/native/useToken.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -75,7 +75,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/ExpressiveGradient/native/ExpressiveGradient.native.tsx");
 
 export const ExpressiveGradient = ReactCompilerGating.isReactCompilerEnabled()
-  ? (backgroundColor) => {
+  ? function ExpressiveGradient(backgroundColor) {
       obj = c;
       const cResult = obj.c(26);
       ({ color, offsetBottom, children, style } = backgroundColor);
@@ -218,7 +218,7 @@ export const ExpressiveGradient = ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = items5;
       const tmpResult4 = useToken;
     }
-  : (color) => {
+  : function ExpressiveGradient(color) {
       let str = color.color;
       if (str === undefined) {
         str = "purple";

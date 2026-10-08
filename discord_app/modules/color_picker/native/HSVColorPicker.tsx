@@ -9,14 +9,14 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ hsvColorPicker: { alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/color_picker/native/HSVColorPicker.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function HSVColorPicker(arg0) {
       const cResult = c.c(21);
       ({
         hue,
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp9;
       tmp8 = tmp9;
     }
-  : (arg0) => {
+  : function HSVColorPicker(arg0) {
       ({ hue, saturation, value, onPanUpdate, onPanFinalize } = arg0);
       ({
         saturationValuePickerStyle,

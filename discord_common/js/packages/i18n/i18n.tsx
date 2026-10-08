@@ -1,23 +1,11 @@
 // discord_common/js/packages/i18n/i18n.tsx
 import getSystemLocale from "getSystemLocale.tsx";
-import _modDef1892 from "../../../../_runtime/metro/01892__.js";
-import _mod1933 from "../../../../_runtime/metro/01933__.js";
+import _modDef1904 from "../../../../_runtime/metro/01904__.js";
+import _mod1945 from "../../../../_runtime/metro/01945__.js";
 import parse from "parse.tsx";
 
 require = fn;
-global.IntlMessageFormat = _modDef1892;
-const module_1901 = fn(1901);
-const module_1902 = fn(1902);
-const module_1903 = fn(1903);
-const module_1904 = fn(1904);
-const module_1905 = fn(1905);
-const module_1906 = fn(1906);
-const module_1907 = fn(1907);
-const module_1908 = fn(1908);
-const module_1909 = fn(1909);
-const module_1910 = fn(1910);
-const module_1911 = fn(1911);
-const module_1912 = fn(1912);
+global.IntlMessageFormat = _modDef1904;
 const module_1913 = fn(1913);
 const module_1914 = fn(1914);
 const module_1915 = fn(1915);
@@ -34,9 +22,21 @@ const module_1925 = fn(1925);
 const module_1926 = fn(1926);
 const module_1927 = fn(1927);
 const module_1928 = fn(1928);
+const module_1929 = fn(1929);
+const module_1930 = fn(1930);
+const module_1931 = fn(1931);
+const module_1932 = fn(1932);
+const module_1933 = fn(1933);
+const module_1934 = fn(1934);
+const module_1935 = fn(1935);
+const module_1936 = fn(1936);
+const module_1937 = fn(1937);
+const module_1938 = fn(1938);
+const module_1939 = fn(1939);
+const module_1940 = fn(1940);
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
-  fn(1929);
+  fn(1941);
 }
 const React2 = "en-US";
 class Provider {
@@ -139,10 +139,10 @@ _instance_members_initializer_I18N_ = function () {
       return _createProxy(obj3);
     } else {
       try {
-        return self(1934).getMessage(tmp4, locale);
+        return self(1946).getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(1934).getMessage(tmp7, tmp);
+          return self(1946).getMessage(tmp7, tmp);
         } else {
           return "";
         }
@@ -342,5 +342,5 @@ prototype["_fetchMessages"] = function _fetchMessages(c2) {
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
 
-export const getSystemLocale = fn(1348).getSystemLocale;
+export const getSystemLocale = fn(1360).getSystemLocale;
 export { I18N };

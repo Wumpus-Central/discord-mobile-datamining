@@ -26,7 +26,7 @@ function getUnitId(type, guildId) {
 }
 const ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (type, guildId) => {
+  ? function useUnitId(type, guildId) {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [AuthenticationStore];
@@ -67,7 +67,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp7 = _slicedToArray(initialize.useStateFromStoresArray(tmp4, tmp5), 2);
     }
-  : (type, guildId) => {
+  : function useUnitId(type, guildId) {
       let items = [AuthenticationStore];
       _slicedToArray(
         initialize.useStateFromStoresArray(items, () => {
@@ -97,5 +97,5 @@ const result = size.fileFinishedImporting("modules/experiments/apex/ApexExperime
 export default function createApexExperiment(arg0) {
   return discord_common_apex_ApexExperimentDefault(arg0, ApexExperimentStore, getUnitId, closure_7);
 }
-export const ApexExperiment = fn(1442).ApexExperiment;
+export const ApexExperiment = fn(1454).ApexExperiment;
 export { getUnitId };

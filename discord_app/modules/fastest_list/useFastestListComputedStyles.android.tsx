@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/useFastestListComputedStyles.android.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function useFastestListComputedStyles(style) {
       const cResult = c.c(6);
       style = style.style;
       if (cResult[0] !== style) {
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         throw error1;
       }
     }
-  : (style) => {
+  : function useFastestListComputedStyles(style) {
       style = style.style;
       let items = [style];
       return noop.useMemo(() => {

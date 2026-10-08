@@ -8,7 +8,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   messagesHeaderContainer: {
     flexDirection: "row",
@@ -31,7 +31,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (animatedStyles) => {
+  ? function MessagesHeaderItem(animatedStyles) {
       const cResult = c.c(6);
       animatedStyles = animatedStyles.animatedStyles;
       const tmp4 = closure_4();
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp11;
       tmp10 = tmp11;
     }
-  : (animatedStyles) => {
+  : function MessagesHeaderItem(animatedStyles) {
       const obj = { style: closure_4().messagesHeaderContainer, children: null };
       const obj2 = {
         animated: true,

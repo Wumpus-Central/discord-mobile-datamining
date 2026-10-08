@@ -13,8 +13,8 @@ import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import formatPollMessageChatData from "../chat/formatPollMessageChatData.tsx";
-import _modDef11367 from "../../../../_runtime/metro/11367__.js";
-import _modDef11368 from "../../../../_runtime/metro/11368__.js";
+import _modDef11544 from "../../../../_runtime/metro/11544__.js";
+import _modDef11545 from "../../../../_runtime/metro/11545__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -159,8 +159,8 @@ get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
-let obj = {
+const createStyles = fn(5090);
+let obj2 = {
   headerText: { textAlign: "center", paddingHorizontal: 16 },
   subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 },
   answerScroll: { marginTop: 24 },
@@ -191,19 +191,19 @@ let obj3 = {
   borderRadius: nativeDefault.radii.xs,
   maxWidth: 200,
 };
-obj.answerSelected = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-obj.answerEmoji = { marginRight: 8 };
-obj.answerText = { flexShrink: 1 };
-obj.emojiText = { fontSize: 16 };
-obj.emojiImage = { height: 16, width: 16, flexShrink: 0 };
-obj.noResultsContainer = { flexDirection: "column", alignItems: "center", paddingHorizontal: 16 };
-obj.noResultsImage = { marginTop: 32, width: 138 };
-obj.noResultsTitle = { marginTop: 16, textAlign: "center" };
-obj.noResultsSubtitle = { marginTop: 4, textAlign: "center" };
-let closure_16 = createStyles.createStyles(obj);
+obj2.answerSelected = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.answerEmoji = { marginRight: 8 };
+obj2.answerText = { flexShrink: 1 };
+obj2.emojiText = { fontSize: 16 };
+obj2.emojiImage = { height: 16, width: 16, flexShrink: 0 };
+obj2.noResultsContainer = { flexDirection: "column", alignItems: "center", paddingHorizontal: 16 };
+obj2.noResultsImage = { marginTop: 32, width: 138 };
+obj2.noResultsTitle = { marginTop: 16, textAlign: "center" };
+obj2.noResultsSubtitle = { marginTop: 4, textAlign: "center" };
+let closure_16 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PollEmoji(arg0) {
       const cResult = emoji(576).c(10);
       ({ style, emoji } = arg0);
       const tmp4 = closure_16();
@@ -267,7 +267,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       const obj = emoji(576);
     }
-  : (emoji) => {
+  : function PollEmoji(emoji) {
       emoji = emoji.emoji;
       const tmp = closure_16();
       const items = [EmojiStore];
@@ -298,245 +298,243 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       });
     };
 ReactCompilerGating = fn(558);
-let closure_18 = noop.forwardRef(
-  ReactCompilerGating.isReactCompilerEnabled()
-    ? (answer, ref) => {
-        const cResult = c.c(32);
-        answer = answer.answer;
-        ({ reaction, selected, setSelectedAnswerId } = answer);
-        const tmp4 = closure_16();
-        let num;
-        if (reaction != null) {
-          const count_details = reaction.count_details;
-          if (count_details != null) {
-            num = count_details.vote;
-          }
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function PollAnswerButton(answer) {
+      const cResult = c.c(32);
+      answer = answer.answer;
+      ({ reaction, selected, setSelectedAnswerId } = answer);
+      const tmp4 = closure_16();
+      let num;
+      if (reaction != null) {
+        const count_details = reaction.count_details;
+        if (count_details != null) {
+          num = count_details.vote;
         }
-        if (num == null) {
-          num = 0;
+      }
+      if (num == null) {
+        num = 0;
+      }
+      if (cResult[0] === answer.answer_id) {
+        if (cResult[1] === setSelectedAnswerId) {
+          let tmp5 = cResult[2];
         }
-        if (cResult[0] === answer.answer_id) {
-          if (cResult[1] === setSelectedAnswerId) {
-            let tmp5 = cResult[2];
+        let str = "text-default";
+        if (selected) {
+          str = "interactive-text-active";
+        }
+        if (cResult[3] === answer.poll_media.text) {
+          if (cResult[4] === num) {
+            let tmp6 = cResult[5];
           }
-          let str = "text-default";
+          let answerSelected;
           if (selected) {
-            str = "interactive-text-active";
+            answerSelected = tmp4.answerSelected;
           }
-          if (cResult[3] === answer.poll_media.text) {
-            if (cResult[4] === num) {
-              let tmp6 = cResult[5];
+          if (cResult[6] === tmp4.answerButton) {
+            if (cResult[7] === answerSelected) {
+              let tmp9 = cResult[8];
             }
-            let answerSelected;
-            if (selected) {
-              answerSelected = tmp4.answerSelected;
+            if (cResult[9] !== selected) {
+              const obj2 = { selected };
+              cResult[9] = selected;
+              cResult[10] = obj2;
+              let tmp10 = obj2;
+            } else {
+              tmp10 = cResult[10];
             }
-            if (cResult[6] === tmp4.answerButton) {
-              if (cResult[7] === answerSelected) {
-                let tmp9 = cResult[8];
+            if (cResult[11] === answer.poll_media.emoji) {
+              if (cResult[12] === tmp4.answerEmoji) {
+                let tmp11 = cResult[13];
               }
-              if (cResult[9] !== selected) {
-                const obj2 = { selected };
-                cResult[9] = selected;
-                cResult[10] = obj2;
-                let tmp10 = obj2;
-              } else {
-                tmp10 = cResult[10];
-              }
-              if (cResult[11] === answer.poll_media.emoji) {
-                if (cResult[12] === tmp4.answerEmoji) {
-                  let tmp11 = cResult[13];
-                }
-                if (cResult[14] === answer.poll_media.text) {
-                  if (cResult[15] === tmp4.answerText) {
-                    if (cResult[16] === str) {
-                      let tmp15 = cResult[17];
+              if (cResult[14] === answer.poll_media.text) {
+                if (cResult[15] === tmp4.answerText) {
+                  if (cResult[16] === str) {
+                    let tmp15 = cResult[17];
+                  }
+                  if (cResult[18] !== num) {
+                    const toLocaleStringResult = num.toLocaleString();
+                    cResult[18] = num;
+                    cResult[19] = toLocaleStringResult;
+                    let tmp18 = toLocaleStringResult;
+                  } else {
+                    tmp18 = cResult[19];
+                  }
+                  if (cResult[20] === tmp18) {
+                    if (cResult[21] === str) {
+                      let tmp20 = cResult[22];
                     }
-                    if (cResult[18] !== num) {
-                      const toLocaleStringResult = num.toLocaleString();
-                      cResult[18] = num;
-                      cResult[19] = toLocaleStringResult;
-                      let tmp18 = toLocaleStringResult;
-                    } else {
-                      tmp18 = cResult[19];
-                    }
-                    if (cResult[20] === tmp18) {
-                      if (cResult[21] === str) {
-                        let tmp20 = cResult[22];
-                      }
-                      if (cResult[23] === tmp6) {
-                        if (cResult[24] === tmp5) {
-                          if (cResult[25] === ref) {
-                            if (cResult[26] === tmp9) {
-                              if (cResult[27] === tmp10) {
-                                if (cResult[28] === tmp11) {
-                                  if (cResult[29] === tmp15) {
-                                    if (cResult[30] === tmp20) {
-                                      let tmp24 = cResult[31];
-                                    }
-                                    return tmp24;
+                    if (cResult[23] === tmp6) {
+                      if (cResult[24] === tmp5) {
+                        if (cResult[25] === ref) {
+                          if (cResult[26] === tmp9) {
+                            if (cResult[27] === tmp10) {
+                              if (cResult[28] === tmp11) {
+                                if (cResult[29] === tmp15) {
+                                  if (cResult[30] === tmp20) {
+                                    let tmp23 = cResult[31];
                                   }
+                                  return tmp23;
                                 }
                               }
                             }
                           }
                         }
                       }
-                      const obj3 = {
-                        ref,
-                        onPress: tmp5,
-                        style: tmp9,
-                        accessibilityRole: "tab",
-                        accessibilityState: tmp10,
-                        accessibilityLabel: tmp6,
-                        children: null,
-                      };
-                      const items = [tmp11, tmp15, tmp20];
-                      obj3.children = items;
-                      const tmp26 = closure_1_15(Pressables.PressableHighlight, obj3);
-                      cResult[23] = tmp6;
-                      cResult[24] = tmp5;
-                      cResult[25] = ref;
-                      cResult[26] = tmp9;
-                      cResult[27] = tmp10;
-                      cResult[28] = tmp11;
-                      cResult[29] = tmp15;
-                      cResult[30] = tmp20;
-                      cResult[31] = tmp26;
-                      tmp24 = tmp26;
                     }
-                    const obj4 = { variant: "text-sm/semibold", color: str, lineClamp: 1, children: null };
-                    const items1 = [" ", "(", tmp18, ")"];
-                    obj4.children = items1;
-                    const tmp22 = closure_1_15(Text_Text.Text, obj4);
-                    cResult[20] = tmp18;
-                    cResult[21] = str;
-                    cResult[22] = tmp22;
-                    tmp20 = tmp22;
+                    const obj3 = {
+                      ref,
+                      onPress: tmp5,
+                      style: tmp9,
+                      accessibilityRole: "tab",
+                      accessibilityState: tmp10,
+                      accessibilityLabel: tmp6,
+                      children: null,
+                    };
+                    const items = [tmp11, tmp15, tmp20];
+                    obj3.children = items;
+                    const tmp25 = closure_1_15(Pressables.PressableHighlight, obj3);
+                    cResult[23] = tmp6;
+                    cResult[24] = tmp5;
+                    cResult[25] = ref;
+                    cResult[26] = tmp9;
+                    cResult[27] = tmp10;
+                    cResult[28] = tmp11;
+                    cResult[29] = tmp15;
+                    cResult[30] = tmp20;
+                    cResult[31] = tmp25;
+                    tmp23 = tmp25;
                   }
+                  const obj4 = { variant: "text-sm/semibold", color: str, lineClamp: 1, children: null };
+                  const items1 = [" ", "(", tmp18, ")"];
+                  obj4.children = items1;
+                  const tmp22 = closure_1_15(Text_Text.Text, obj4);
+                  cResult[20] = tmp18;
+                  cResult[21] = str;
+                  cResult[22] = tmp22;
+                  tmp20 = tmp22;
                 }
-                let tmp16 = null;
-                if (null != answer.poll_media.text) {
-                  const obj5 = {
-                    style: tmp4.answerText,
-                    variant: "text-sm/semibold",
-                    color: str,
-                    lineClamp: 1,
-                    children: answer.poll_media.text,
-                  };
-                  tmp16 = state(Text_Text.Text, obj5);
-                }
-                cResult[14] = answer.poll_media.text;
-                cResult[15] = tmp4.answerText;
-                cResult[16] = str;
-                cResult[17] = tmp16;
-                tmp15 = tmp16;
               }
-              let tmp12 = null;
-              if (null != answer.poll_media.emoji) {
-                const obj6 = { style: tmp4.answerEmoji, emoji: answer.poll_media.emoji };
-                tmp12 = state(closure_17, obj6);
+              let tmp16 = null;
+              if (null != answer.poll_media.text) {
+                const obj5 = {
+                  style: tmp4.answerText,
+                  variant: "text-sm/semibold",
+                  color: str,
+                  lineClamp: 1,
+                  children: answer.poll_media.text,
+                };
+                tmp16 = state(Text_Text.Text, obj5);
               }
-              cResult[11] = answer.poll_media.emoji;
-              cResult[12] = tmp4.answerEmoji;
-              cResult[13] = tmp12;
-              tmp11 = tmp12;
+              cResult[14] = answer.poll_media.text;
+              cResult[15] = tmp4.answerText;
+              cResult[16] = str;
+              cResult[17] = tmp16;
+              tmp15 = tmp16;
             }
-            const items2 = [tmp4.answerButton, answerSelected];
-            cResult[6] = tmp4.answerButton;
-            cResult[7] = answerSelected;
-            cResult[8] = items2;
-            tmp9 = items2;
+            let tmp12 = null;
+            if (null != answer.poll_media.emoji) {
+              const obj6 = { style: tmp4.answerEmoji, emoji: answer.poll_media.emoji };
+              tmp12 = state(closure_17, obj6);
+            }
+            cResult[11] = answer.poll_media.emoji;
+            cResult[12] = tmp4.answerEmoji;
+            cResult[13] = tmp12;
+            tmp11 = tmp12;
           }
-          const intl = util.intl;
-          const obj7 = { numVotes: num, option: answer.poll_media.text };
-          const formatToPlainStringResult = intl.formatToPlainString(util.t.wqBc7A, obj7);
-          cResult[3] = answer.poll_media.text;
-          cResult[4] = num;
-          cResult[5] = formatToPlainStringResult;
-          tmp6 = formatToPlainStringResult;
-        }
-        const fn = function n() {
-          setSelectedAnswerId(String(answer.answer_id));
-        };
-        cResult[0] = answer.answer_id;
-        cResult[1] = setSelectedAnswerId;
-        cResult[2] = fn;
-        tmp5 = fn;
-      }
-    : (answer, ref) => {
-        answer = answer.answer;
-        ({ reaction, selected, setSelectedAnswerId } = answer);
-        const tmp = closure_16();
-        let num;
-        if (reaction != null) {
-          const count_details = reaction.count_details;
-          if (count_details != null) {
-            num = count_details.vote;
-          }
-        }
-        if (num == null) {
-          num = 0;
-        }
-        const items = [setSelectedAnswerId, answer.answer_id];
-        let str = "text-default";
-        const callback = noop.useCallback(() => {
-          setSelectedAnswerId(String(answer.answer_id));
-        }, items);
-        if (selected) {
-          str = "interactive-text-active";
+          const items2 = [tmp4.answerButton, answerSelected];
+          cResult[6] = tmp4.answerButton;
+          cResult[7] = answerSelected;
+          cResult[8] = items2;
+          tmp9 = items2;
         }
         const intl = util.intl;
-        const obj2 = {
-          ref,
-          onPress: callback,
-          style: null,
-          accessibilityRole: "tab",
-          accessibilityState: null,
-          accessibilityLabel: null,
-          children: null,
+        const obj7 = { numVotes: num, option: answer.poll_media.text };
+        const formatToPlainStringResult = intl.formatToPlainString(util.t.wqBc7A, obj7);
+        cResult[3] = answer.poll_media.text;
+        cResult[4] = num;
+        cResult[5] = formatToPlainStringResult;
+        tmp6 = formatToPlainStringResult;
+      }
+      const fn = function l() {
+        setSelectedAnswerId(String(answer.answer_id));
+      };
+      cResult[0] = answer.answer_id;
+      cResult[1] = setSelectedAnswerId;
+      cResult[2] = fn;
+      tmp5 = fn;
+    }
+  : function PollAnswerButton(answer) {
+      answer = answer.answer;
+      ({ reaction, selected, setSelectedAnswerId } = answer);
+      const tmp = closure_16();
+      let num;
+      if (reaction != null) {
+        const count_details = reaction.count_details;
+        if (count_details != null) {
+          num = count_details.vote;
+        }
+      }
+      if (num == null) {
+        num = 0;
+      }
+      const items = [setSelectedAnswerId, answer.answer_id];
+      let str = "text-default";
+      const callback = noop.useCallback(() => {
+        setSelectedAnswerId(String(answer.answer_id));
+      }, items);
+      if (selected) {
+        str = "interactive-text-active";
+      }
+      const intl = util.intl;
+      const obj2 = {
+        ref: answer.ref,
+        onPress: callback,
+        style: null,
+        accessibilityRole: "tab",
+        accessibilityState: null,
+        accessibilityLabel: null,
+        children: null,
+      };
+      const items1 = [tmp.answerButton];
+      let answerSelected;
+      if (selected) {
+        answerSelected = tmp.answerSelected;
+      }
+      items1[1] = answerSelected;
+      obj2.style = items1;
+      obj2.accessibilityState = { selected };
+      obj2.accessibilityLabel = intl.formatToPlainString(util.t.wqBc7A, {
+        numVotes: num,
+        option: answer.poll_media.text,
+      });
+      let tmp8 = null;
+      if (null != answer.poll_media.emoji) {
+        const obj3 = { style: tmp.answerEmoji, emoji: answer.poll_media.emoji };
+        tmp8 = state(closure_17, obj3);
+      }
+      const items2 = [tmp8, ,];
+      let tmp11 = null;
+      if (null != answer.poll_media.text) {
+        const obj4 = {
+          style: tmp.answerText,
+          variant: "text-sm/semibold",
+          color: str,
+          lineClamp: 1,
+          children: answer.poll_media.text,
         };
-        const items1 = [tmp.answerButton];
-        let answerSelected;
-        if (selected) {
-          answerSelected = tmp.answerSelected;
-        }
-        items1[1] = answerSelected;
-        obj2.style = items1;
-        obj2.accessibilityState = { selected };
-        obj2.accessibilityLabel = intl.formatToPlainString(util.t.wqBc7A, {
-          numVotes: num,
-          option: answer.poll_media.text,
-        });
-        let tmp8 = null;
-        if (null != answer.poll_media.emoji) {
-          const obj3 = { style: tmp.answerEmoji, emoji: answer.poll_media.emoji };
-          tmp8 = state(closure_17, obj3);
-        }
-        const items2 = [tmp8, ,];
-        let tmp11 = null;
-        if (null != answer.poll_media.text) {
-          const obj4 = {
-            style: tmp.answerText,
-            variant: "text-sm/semibold",
-            color: str,
-            lineClamp: 1,
-            children: answer.poll_media.text,
-          };
-          tmp11 = state(Text_Text.Text, obj4);
-        }
-        items2[1] = tmp11;
-        const obj5 = { variant: "text-sm/semibold", color: str, lineClamp: 1, children: null };
-        const items3 = [" ", "(", num.toLocaleString(), ")"];
-        obj5.children = items3;
-        items2[2] = closure_1_15(Text_Text.Text, obj5);
-        obj2.children = items2;
-        return closure_1_15(Pressables.PressableHighlight, obj2);
-      },
-);
+        tmp11 = state(Text_Text.Text, obj4);
+      }
+      items2[1] = tmp11;
+      const obj5 = { variant: "text-sm/semibold", color: str, lineClamp: 1, children: null };
+      const items3 = [" ", "(", num.toLocaleString(), ")"];
+      obj5.children = items3;
+      items2[2] = closure_1_15(Text_Text.Text, obj5);
+      obj2.children = items2;
+      return closure_1_15(Pressables.PressableHighlight, obj2);
+    };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (message) => {
+  ? function PollVotesHeader(message) {
       const cResult = message(setSelectedAnswerId[13]).c(31);
       message = message.message;
       const selectedAnswerId = message.selectedAnswerId;
@@ -840,7 +838,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult2 = message(setSelectedAnswerId[21]);
     }
-  : (message) => {
+  : function PollVotesHeader(message) {
       message = message.message;
       const selectedAnswerId = message.selectedAnswerId;
       const setSelectedAnswerId = message.setSelectedAnswerId;
@@ -1034,14 +1032,14 @@ const __initData = {
 };
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function NoResults() {
       const cResult = c.c(14);
       const tmp4 = closure_16();
       const tmp6 = useThemeDefault();
       if (obj2.isThemeDark(tmp6)) {
-        let tmp5Result = _modDef11367;
+        let tmp5Result = _modDef11544;
       } else {
-        tmp5Result = _modDef11368;
+        tmp5Result = _modDef11545;
       }
       if (cResult[0] === tmp4.noResultsImage) {
         if (cResult[1] === tmp5Result) {
@@ -1122,15 +1120,15 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       obj2 = shared;
       const obj6 = { style: tmp4.noResultsImage, source: tmp5Result };
     }
-  : () => {
+  : function NoResults() {
       const tmp = closure_16();
       const obj = { style: tmp.noResultsContainer, children: null };
       const obj2 = { style: tmp.noResultsImage, source: null };
       const tmp4 = useThemeDefault();
       if (obj3.isThemeDark(tmp4)) {
-        let tmp2Result = _modDef11367;
+        let tmp2Result = _modDef11544;
       } else {
-        tmp2Result = _modDef11368;
+        tmp2Result = _modDef11545;
       }
       obj2.source = tmp2Result;
       const items = [state(timestampProducer, obj2), ,];

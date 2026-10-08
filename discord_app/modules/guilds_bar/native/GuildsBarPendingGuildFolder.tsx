@@ -18,7 +18,7 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (id) => {
+    ? function GuildsBarPendingGuildFolder(id) {
         const cResult = id(guildFolderMenuItems[5]).c(28);
         id = id.id;
         ({ expanded, childNodes } = id);
@@ -41,44 +41,23 @@ export default noop.memo(
           tmp7 = cResult[1];
         }
         if (cResult[2] !== tmp6) {
-          class A {
-            constructor() {
-              tmp = closure_1;
-              guildId = closure_4.getGuildId();
-              if (guildId == null) {
-                guildId = EMPTY_STRING_SNOWFLAKE_ID;
-              }
-              return closure_1.includes(guildId);
+          const fn = function y() {
+            let guildId = SelectedGuildStore.getGuildId();
+            if (guildId == null) {
+              guildId = EMPTY_STRING_SNOWFLAKE_ID;
             }
-          }
+            return closure_1.includes(guildId);
+          };
           cResult[2] = tmp6;
-          cResult[3] = A;
+          cResult[3] = fn;
+          let tmp9 = fn;
         } else {
-          class A {
-            constructor() {
-              tmp = closure_1;
-              guildId = closure_4.getGuildId();
-              if (guildId == null) {
-                guildId = EMPTY_STRING_SNOWFLAKE_ID;
-              }
-              return closure_1.includes(guildId);
-            }
-          }
+          tmp9 = cResult[3];
         }
         const tmpResult = id(guildFolderMenuItems[6]);
-        const stateFromStores = id(guildFolderMenuItems[8]).useStateFromStores(tmp7, A);
+        const stateFromStores = id(guildFolderMenuItems[8]).useStateFromStores(tmp7, tmp9);
         if (cResult[4] !== id) {
-          class A {
-            constructor() {
-              tmp = closure_1;
-              guildId = closure_4.getGuildId();
-              if (guildId == null) {
-                guildId = EMPTY_STRING_SNOWFLAKE_ID;
-              }
-              return closure_1.includes(guildId);
-            }
-          }
-          guildFolderMenuItems = obj5.getGuildFolderMenuItems(id);
+          guildFolderMenuItems = tmp(tmp2[9]).getGuildFolderMenuItems(id);
           const _Symbol = Symbol;
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
             class S {
@@ -100,6 +79,7 @@ export default noop.memo(
           cResult[4] = id;
           cResult[5] = guildFolderMenuItems;
           cResult[6] = mapped;
+          const tmpResult5 = tmp(tmp2[9]);
         } else {
           class S {
             constructor(arg0) {
@@ -182,7 +162,7 @@ export default noop.memo(
             cResult[15] = expanded;
             cResult[16] = id;
             cResult[17] = tmp25;
-            const tmpResult4 = tmp(tmp2[10]);
+            const tmpResult6 = tmp(tmp2[10]);
           }
           const obj4 = {
             accessibilityActions: cResult[6],
@@ -202,14 +182,14 @@ export default noop.memo(
           cResult[10] = obj4;
           tmp17 = obj4;
         }
-        const tmpResult3 = id(guildFolderMenuItems[8]);
+        const tmpResult4 = id(guildFolderMenuItems[8]);
       }
-    : (id) => {
+    : function GuildsBarPendingGuildFolder(id) {
         id = id.id;
         ({ expanded, childNodes } = id);
-        let obj = id(16274);
+        let obj = id(16534);
         importDefault = usePendingFolderGuildIdsDefault();
-        const guildsBarAnimatedWrapperStyles = id(16274).useGuildsBarAnimatedWrapperStyles({
+        const guildsBarAnimatedWrapperStyles = id(16534).useGuildsBarAnimatedWrapperStyles({
           disableSelectedColor: true,
           disableBGColor: false,
         });
@@ -241,13 +221,13 @@ export default noop.memo(
         ({ accessibilityActions, onAccessibilityAction } = memo);
         const obj2 = id(504);
         const items2 = [id];
-        const sharedValue = id(4618).useSharedValue("" + id);
+        const sharedValue = id(4810).useSharedValue("" + id);
         const memo1 = noop.useMemo(
           () => ({
             onPress() {
-              const result = id(4861).triggerHapticFeedback(id(4861).HapticFeedbackTypes.IMPACT_LIGHT);
-              const obj = id(4861);
-              const result1 = closure_1(5712).toggleGuildFolderExpand(closure_1_0);
+              const result = id(5055).triggerHapticFeedback(id(5055).HapticFeedbackTypes.IMPACT_LIGHT);
+              const obj = id(5055);
+              const result1 = closure_1(6102).toggleGuildFolderExpand(closure_1_0);
             },
           }),
           items2,
@@ -264,12 +244,13 @@ export default noop.memo(
           sharedId: null,
           cutouts: "IconComponent",
           overState: "a",
-          preventClipping: "\u0441\u0456\u043C\u0432\u0430\u043B",
-          config: "\u0441\u0456\u043C\u0432\u0430\u043B\u044B",
-          externalChildren: "\u0441\u0456\u043C\u0432\u0430\u043B\u0430\u045E",
-          children: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442",
+          preventClipping:
+            "M14.9873 5.52783C14.4019 5.192 13.7233 5 13 5H6C3.79086 5 2 6.79086 2 9V15C2 15.9811 2.35325 16.8798 2.93949 17.5757L14.9873 5.52783Z",
+          config: null,
+          externalChildren: "xxs",
+          children: "status-positive",
         };
-        const obj3 = id(4618);
+        const obj3 = id(4810);
         obj4.id = "" + id;
         obj4.accessibilityActions = accessibilityActions;
         obj4.onAccessibilityAction = onAccessibilityAction;
@@ -282,10 +263,10 @@ export default noop.memo(
         let tmp8Result = null;
         if (expanded) {
           const obj5 = { folderId: id, totalItems: childNodes.length };
-          tmp8Result = jsx(tmp(16273).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+          tmp8Result = jsx(tmp(16533).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
         }
         obj4.externalChildren = tmp8Result;
-        obj4.children = jsx(id(12717).HourglassIcon, {});
+        obj4.children = jsx(id(12995).HourglassIcon, {});
         return jsx(GuildsBarAnimatedItemWrapperDefault, {
           id: null,
           accessibilityActions: null,
@@ -298,10 +279,11 @@ export default noop.memo(
           sharedId: null,
           cutouts: "IconComponent",
           overState: "a",
-          preventClipping: "\u0441\u0456\u043C\u0432\u0430\u043B",
-          config: "\u0441\u0456\u043C\u0432\u0430\u043B\u044B",
-          externalChildren: "\u0441\u0456\u043C\u0432\u0430\u043B\u0430\u045E",
-          children: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442",
+          preventClipping:
+            "M14.9873 5.52783C14.4019 5.192 13.7233 5 13 5H6C3.79086 5 2 6.79086 2 9V15C2 15.9811 2.35325 16.8798 2.93949 17.5757L14.9873 5.52783Z",
+          config: null,
+          externalChildren: "xxs",
+          children: "status-positive",
         });
       },
 );

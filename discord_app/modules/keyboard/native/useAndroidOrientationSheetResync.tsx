@@ -7,7 +7,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/keyboard/native/useAndroidOrientationSheetResync.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (animatedIndex) => {
+  ? function useAndroidOrientationSheetResync(animatedIndex) {
       const cResult = animatedIndex(bottomSheetRef[2]).c(8);
       animatedIndex = animatedIndex.animatedIndex;
       bottomSheetRef = animatedIndex.bottomSheetRef;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = items;
       tmp5 = fn;
     }
-  : (animatedIndex) => {
+  : function useAndroidOrientationSheetResync(animatedIndex) {
       animatedIndex = animatedIndex.animatedIndex;
       let bottomSheetRef = animatedIndex.bottomSheetRef;
       const containerHeight = animatedIndex.containerHeight;

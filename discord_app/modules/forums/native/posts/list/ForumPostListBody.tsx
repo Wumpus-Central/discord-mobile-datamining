@@ -11,10 +11,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ForumTimestampFormats = fn(6786).ForumTimestampFormats;
+const ForumTimestampFormats = fn(6961).ForumTimestampFormats;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   body: { display: "flex", flexDirection: "row", alignItems: "flex-start" },
   contentContainer: { flex: 1 },
@@ -27,7 +27,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostListBody.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForumPostListBody(arg0) {
       const cResult = c.c(42);
       ({
         containerStyle,
@@ -249,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items3;
       tmp6 = items3;
     }
-  : (arg0) => {
+  : function ForumPostListBody(arg0) {
       ({ thread, firstMessage, hasUnreads, isNew, media } = arg0);
       ({ containerStyle, firstMessageLoaded, messageContent, isEmbed, isLocalDeviceMedia, senderModifier } = arg0);
       const tmp = closure_7();

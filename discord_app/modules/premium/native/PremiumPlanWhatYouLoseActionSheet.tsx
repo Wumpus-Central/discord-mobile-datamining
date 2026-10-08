@@ -6,21 +6,21 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import PremiumAnalyticsUtils from "PremiumAnalyticsUtils.tsx";
-import _modDef13156 from "../../../../_runtime/metro/13156__.js";
-import _modDef13206 from "../../../../_runtime/metro/13206__.js";
-import _modDef13207 from "../../../../_runtime/metro/13207__.js";
-import _modDef13208 from "../../../../_runtime/metro/13208__.js";
-import _modDef13209 from "../../../../_runtime/metro/13209__.js";
+import _modDef12869 from "../../../../_runtime/metro/12869__.js";
+import _modDef13506 from "../../../../_runtime/metro/13506__.js";
+import _modDef13507 from "../../../../_runtime/metro/13507__.js";
+import _modDef13508 from "../../../../_runtime/metro/13508__.js";
+import _modDef13509 from "../../../../_runtime/metro/13509__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   body: { paddingTop: 24, paddingHorizontal: 24 },
   title: { marginBottom: 8, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
@@ -61,7 +61,7 @@ obj2.keepText = { textAlign: "center", paddingVertical: 8, color: nativeDefault.
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function WhatYouLoseItem(arg0) {
       const cResult = c.c(9);
       ({ imageSource, text } = arg0);
       const tmp4 = closure_8();
@@ -107,7 +107,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const obj4 = { variant: "text-md/medium", style: tmp4.itemLabel, children: text };
     }
-  : (arg0) => {
+  : function WhatYouLoseItem(arg0) {
       ({ imageSource, text } = arg0);
       const tmp = closure_8();
       const obj = { style: tmp.item, children: null };
@@ -125,7 +125,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/PremiumPlanWhatYouLoseActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (subscription) => {
+  ? function PremiumPlanWhatYouLoseActionSheet(subscription) {
       const cResult = onContinue(analyticsLocations[7]).c(69);
       ({ mode, onContinue } = subscription);
       subscription = subscription.subscription;
@@ -144,116 +144,87 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const whatYouLoseProfileTier1Source = onContinue(analyticsLocations[12]).useWhatYouLoseProfileTier1Source();
       subscription(analyticsLocations[13])(null != tmp5, "Expected premium type");
       if (PremiumTypes.TIER_0 === tmp5) {
-        const _Symbol7 = Symbol;
+        const _Symbol8 = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { imageSource: tmp7(tmp2[14]), text: null };
           const intl7 = onContinue(tmp2[15]).intl;
           obj2.text = intl7.format(onContinue(tmp2[15]).t["0hUHi6"], {});
           cResult[2] = obj2;
-          let tmp27 = obj2;
+          let tmp25 = obj2;
         } else {
-          tmp27 = cResult[2];
+          tmp25 = cResult[2];
         }
-        const _Symbol8 = Symbol;
+        const _Symbol9 = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { imageSource: tmp7(tmp2[16]), text: null };
           const intl8 = onContinue(tmp2[15]).intl;
           obj3.text = intl8.format(onContinue(tmp2[15]).t.wFWO6D, {});
           cResult[3] = obj3;
-          let tmp28 = obj3;
+          let tmp26 = obj3;
         } else {
-          tmp28 = cResult[3];
+          tmp26 = cResult[3];
         }
-        if (cResult[4] === tmp27) {
+        if (cResult[4] === tmp25) {
         }
-        const items = [tmp27, tmp28];
-        cResult[4] = tmp27;
-        cResult[5] = tmp28;
+        const items = [tmp25, tmp26];
+        cResult[4] = tmp25;
+        cResult[5] = tmp26;
         cResult[6] = items;
       } else {
         if (PremiumTypes.TIER_1 === tmp5) {
-          const _Symbol4 = Symbol;
+          const _Symbol5 = Symbol;
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
             const intl4 = onContinue(tmp2[15]).intl;
             const formatResult = intl4.format(onContinue(tmp2[15]).t.xCaYwE, {});
             cResult[7] = formatResult;
-            let tmp19 = formatResult;
+            let tmp18 = formatResult;
           } else {
-            tmp19 = cResult[7];
+            tmp18 = cResult[7];
           }
-          if (cResult[8] === tmp19) {
+          if (cResult[8] === tmp18) {
             if (cResult[9] === whatYouLoseProfileTier1Source) {
-              let tmp21 = cResult[10];
+              let tmp20 = cResult[10];
             }
-            const _Symbol5 = Symbol;
+            const _Symbol6 = Symbol;
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
               const obj4 = { imageSource: tmp7(tmp2[17]), text: null };
               const intl5 = onContinue(tmp2[15]).intl;
               obj4.text = intl5.format(onContinue(tmp2[15]).t.wK04T1, {});
               cResult[11] = obj4;
-              let tmp22 = obj4;
+              let tmp21 = obj4;
             } else {
-              tmp22 = cResult[11];
+              tmp21 = cResult[11];
             }
-            const _Symbol6 = Symbol;
+            const _Symbol7 = Symbol;
             if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
               const obj5 = { imageSource: tmp7(tmp2[18]), text: null };
               const intl6 = onContinue(tmp2[15]).intl;
               obj5.text = intl6.format(onContinue(tmp2[15]).t.K4Hv69, {});
               cResult[12] = obj5;
-              let tmp23 = obj5;
+              let tmp22 = obj5;
             } else {
-              tmp23 = cResult[12];
+              tmp22 = cResult[12];
             }
-            if (cResult[13] === tmp21) {
-              if (cResult[14] === tmp22) {
+            if (cResult[13] === tmp20) {
+              if (cResult[14] === tmp21) {
+                if (cResult[15] === tmp22) {
+                  let tmp23 = cResult[16];
+                }
+                let arr = tmp23;
               }
             }
-            class F {
-              constructor() {
-                obj = closure_0(closure_2[21]);
-                obj1 = {
-                  subscription,
-                  analyticsLocations,
-                  fromStep: closure_0(closure_2[21]).STEP_ANALYTICS_NAMES[
-                    closure_0(undefined, closure_2[21]).CancellationFlowSteps.WHAT_YOU_LOSE
-                  ],
-                  toStep: null,
-                };
-                result = obj.trackPremiumSubscriptionCancellationFlowStep(obj1);
-                tmp2 = closure_3();
-                return;
-              }
-            }
-            tmp25[0] = tmp21;
-            tmp25[1] = tmp22;
-            tmp25[2] = tmp23;
-            cResult[13] = tmp21;
-            cResult[14] = tmp22;
-            cResult[15] = tmp23;
-            cResult[16] = tmp25;
+            const items1 = [tmp20, tmp21, tmp22];
+            cResult[13] = tmp20;
+            cResult[14] = tmp21;
+            cResult[15] = tmp22;
+            cResult[16] = items1;
+            tmp23 = items1;
           }
-          const obj6 = { imageSource: whatYouLoseProfileTier1Source, text: null };
-          class F {
-            constructor() {
-              obj = closure_0(closure_2[21]);
-              obj1 = {
-                subscription,
-                analyticsLocations,
-                fromStep: closure_0(closure_2[21]).STEP_ANALYTICS_NAMES[
-                  closure_0(undefined, closure_2[21]).CancellationFlowSteps.WHAT_YOU_LOSE
-                ],
-                toStep: null,
-              };
-              result = obj.trackPremiumSubscriptionCancellationFlowStep(obj1);
-              tmp2 = closure_3();
-              return;
-            }
-          }
-          cResult[8] = tmp19;
+          const obj6 = { imageSource: whatYouLoseProfileTier1Source, text: tmp18 };
+          cResult[8] = tmp18;
           cResult[9] = whatYouLoseProfileTier1Source;
           cResult[10] = obj6;
-          tmp21 = obj6;
+          tmp20 = obj6;
         } else if (PremiumTypes.TIER_2 === tmp5) {
           const _Symbol2 = Symbol;
           if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
@@ -261,9 +232,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl = onContinue(tmp2[15]).intl;
             obj7.text = intl.format(onContinue(tmp2[15]).t["gpqr+n"], {});
             cResult[17] = obj7;
-            let tmp14 = obj7;
+            let tmp13 = obj7;
           } else {
-            tmp14 = cResult[17];
+            tmp13 = cResult[17];
           }
           const _Symbol3 = Symbol;
           if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
@@ -271,279 +242,280 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl2 = onContinue(tmp2[15]).intl;
             obj8.text = intl2.format(onContinue(tmp2[15]).t.wRxEDW, {});
             cResult[18] = obj8;
-            let tmp15 = obj8;
+            let tmp14 = obj8;
           } else {
-            tmp15 = cResult[18];
+            tmp14 = cResult[18];
           }
-          class F {
-            constructor() {
-              obj = closure_0(closure_2[21]);
-              obj1 = {
-                subscription,
-                analyticsLocations,
-                fromStep: closure_0(closure_2[21]).STEP_ANALYTICS_NAMES[
-                  closure_0(undefined, closure_2[21]).CancellationFlowSteps.WHAT_YOU_LOSE
-                ],
-                toStep: null,
-              };
-              result = obj.trackPremiumSubscriptionCancellationFlowStep(obj1);
-              tmp2 = closure_3();
-              return;
-            }
-          }
+          const _Symbol4 = Symbol;
           if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
             const obj9 = { imageSource: tmp7(tmp2[17]), text: null };
             const intl3 = onContinue(tmp2[15]).intl;
             obj9.text = intl3.format(onContinue(tmp2[15]).t["4WZ7T2"], {});
             cResult[19] = obj9;
-            let tmp16 = obj9;
+            let tmp15 = obj9;
           } else {
-            tmp16 = cResult[19];
+            tmp15 = cResult[19];
           }
-          if (cResult[20] === tmp14) {
-            if (cResult[21] === tmp15) {
+          if (cResult[20] === tmp13) {
+            if (cResult[21] === tmp14) {
+              if (cResult[22] === tmp15) {
+                let tmp16 = cResult[23];
+              }
+              arr = tmp16;
             }
           }
-          const items1 = [tmp14, tmp15, tmp16];
-          cResult[20] = tmp14;
-          cResult[21] = tmp15;
-          cResult[22] = tmp16;
-          cResult[23] = items1;
+          const items2 = [tmp13, tmp14, tmp15];
+          cResult[20] = tmp13;
+          cResult[21] = tmp14;
+          cResult[22] = tmp15;
+          cResult[23] = items2;
+          tmp16 = items2;
         } else {
           const _Symbol = Symbol;
           if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
-            const items2 = [];
-            cResult[24] = items2;
+            const items3 = [];
+            cResult[24] = items3;
+            arr = items3;
+          } else {
+            arr = cResult[24];
           }
         }
-        const _Symbol9 = Symbol;
+        const _Symbol10 = Symbol;
         if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-          class B {
-            constructor() {
-              obj = subscription(analyticsLocations[20]);
-              hideActionSheetResult = obj.hideActionSheet();
-              return;
-            }
+          function onClose() {
+            subscription(analyticsLocations[20]).hideActionSheet();
           }
-          cResult[25] = B;
+          cResult[25] = onClose;
+          let tmp30 = onClose;
         } else {
-          class B {
-            constructor() {
-              obj = subscription(analyticsLocations[20]);
-              hideActionSheetResult = obj.hideActionSheet();
-              return;
-            }
-          }
+          tmp30 = cResult[25];
         }
-        noop = B;
+        closure_3 = tmp30;
         if (cResult[26] === analyticsLocations) {
-          class B {
-            constructor() {
-              obj = subscription(analyticsLocations[20]);
-              hideActionSheetResult = obj.hideActionSheet();
-              return;
-            }
+          if (cResult[27] === subscription) {
+            let tmp31 = cResult[28];
           }
           if (cResult[29] !== onContinue) {
-            class U {
-              constructor(arg0) {
-                tmp = onContinue(subscription);
-                tmp2 = closure_3();
-                return;
-              }
+            function onContinueDowngradeOrCancellation(arg0) {
+              onContinue(arg0);
+              closure_3();
             }
             cResult[29] = onContinue;
-            cResult[30] = U;
-            const tmp34 = U;
+            cResult[30] = onContinueDowngradeOrCancellation;
+            let tmp32 = onContinueDowngradeOrCancellation;
           } else {
-            class U {
-              constructor(arg0) {
-                tmp = onContinue(subscription);
-                tmp2 = closure_3();
-                return;
-              }
-            }
+            tmp32 = cResult[30];
           }
-          U = tmp34;
+          closure_4 = tmp32;
           if (cResult[31] !== tmp5) {
-            class U {
-              constructor(arg0) {
-                tmp = onContinue(subscription);
-                tmp2 = closure_3();
-                return;
-              }
-            }
             const obj10 = { premiumType: tmp5 };
-            cResult[31] = tmp5;
-            cResult[32] = closure_6(tmp7(tmp2[22]), obj10);
-            class F {
-              constructor() {
-                obj = closure_0(closure_2[21]);
-                obj1 = {
-                  subscription,
-                  analyticsLocations,
-                  fromStep: closure_0(closure_2[21]).STEP_ANALYTICS_NAMES[
-                    closure_0(undefined, closure_2[21]).CancellationFlowSteps.WHAT_YOU_LOSE
-                  ],
-                  toStep: null,
-                };
-                result = obj.trackPremiumSubscriptionCancellationFlowStep(obj1);
-                tmp2 = closure_3();
-                return;
-              }
-            }
             const tmp35 = closure_6(tmp7(tmp2[22]), obj10);
+            cResult[31] = tmp5;
+            cResult[32] = tmp35;
+            let tmp33 = tmp35;
           } else {
-            class U {
-              constructor(arg0) {
-                tmp = onContinue(subscription);
-                tmp2 = closure_3();
-                return;
-              }
-            }
+            tmp33 = cResult[32];
           }
           if (cResult[33] !== mode) {
-            class U {
-              constructor(arg0) {
-                tmp = onContinue(subscription);
-                tmp2 = closure_3();
-                return;
-              }
-            }
             if (mode === obj8.CANCEL) {
-              class U {
-                constructor(arg0) {
-                  tmp = onContinue(subscription);
-                  tmp2 = closure_3();
-                  return;
-                }
-              }
-              let stringResult = obj14.string(onContinue(tmp2[15]).t.PWq8TL);
+              const intl10 = onContinue(tmp2[15]).intl;
+              let stringResult = intl10.string(onContinue(tmp2[15]).t.PWq8TL);
             } else {
-              class U {
-                constructor(arg0) {
-                  tmp = onContinue(subscription);
-                  tmp2 = closure_3();
-                  return;
-                }
-              }
-              stringResult = obj13.string(onContinue(tmp2[15]).t["7VcWW0"]);
+              const intl9 = onContinue(tmp2[15]).intl;
+              stringResult = intl9.string(onContinue(tmp2[15]).t["7VcWW0"]);
             }
             cResult[33] = mode;
             cResult[34] = stringResult;
           } else {
-            class U {
-              constructor(arg0) {
-                tmp = onContinue(subscription);
-                tmp2 = closure_3();
-                return;
-              }
-            }
             if (cResult[35] === tmp4.title) {
-              class U {
-                constructor(arg0) {
-                  tmp = onContinue(subscription);
-                  tmp2 = closure_3();
-                  return;
-                }
+              if (cResult[36] === tmp37) {
+                let tmp41 = cResult[37];
               }
               if (cResult[38] === mode) {
-                class U {
-                  constructor(arg0) {
-                    tmp = onContinue(subscription);
-                    tmp2 = closure_3();
-                    return;
+                if (cResult[39] === tmp5) {
+                  if (cResult[41] === tmp4.subtitle) {
+                    if (cResult[42] === tmp44) {
+                      let tmp48 = cResult[43];
+                    }
+                    if (cResult[44] !== arr) {
+                      const mapped = arr.map((item, index) => {
+                        const merged = Object.assign(item);
+                        return closure_1_6(closure_1_9, {}, index);
+                      });
+                      cResult[44] = arr;
+                      cResult[45] = mapped;
+                      let tmp51 = mapped;
+                    } else {
+                      tmp51 = cResult[45];
+                    }
+                    if (cResult[46] === tmp4.body) {
+                      if (cResult[47] === tmp48) {
+                        if (cResult[48] === tmp51) {
+                          if (cResult[49] === tmp41) {
+                            let tmp53 = cResult[50];
+                          }
+                          const _Symbol11 = Symbol;
+                          ({ footer, button } = tmp4);
+                          if (cResult[51] === Symbol.for("react.memo_cache_sentinel")) {
+                            const intl13 = onContinue(tmp2[15]).intl;
+                            const stringResult1 = intl13.string(onContinue(tmp2[15]).t["3PatSz"]);
+                            cResult[51] = stringResult1;
+                            let tmp57 = stringResult1;
+                          } else {
+                            tmp57 = cResult[51];
+                          }
+                          if (cResult[52] !== tmp32) {
+                            const obj11 = {
+                              text: tmp57,
+                              grow: true,
+                              onPress() {
+                                closure_4(
+                                  PremiumAnalyticsUtils.STEP_ANALYTICS_NAMES[
+                                    PremiumAnalyticsUtils.CancellationFlowSteps.WHAT_YOU_LOSE
+                                  ],
+                                );
+                              },
+                            };
+                            const tmp61 = closure_6(onContinue(tmp2[23]).Button, obj11);
+                            cResult[52] = tmp32;
+                            cResult[53] = tmp61;
+                            let tmp59 = tmp61;
+                          } else {
+                            tmp59 = cResult[53];
+                          }
+                          if (cResult[54] === tmp4.button) {
+                            if (cResult[55] === tmp59) {
+                              let tmp62 = cResult[56];
+                            }
+                            const _Symbol12 = Symbol;
+                            if (cResult[57] === Symbol.for("react.memo_cache_sentinel")) {
+                              const intl14 = onContinue(tmp2[15]).intl;
+                              const stringResult2 = intl14.string(onContinue(tmp2[15]).t.rzVN6j);
+                              cResult[57] = stringResult2;
+                              let tmp66 = stringResult2;
+                            } else {
+                              tmp66 = cResult[57];
+                            }
+                            if (cResult[58] === tmp31) {
+                              if (cResult[59] === tmp4.keepText) {
+                                let tmp68 = cResult[60];
+                              }
+                              if (cResult[61] === tmp4.footer) {
+                                if (cResult[62] === tmp62) {
+                                  if (cResult[63] === tmp68) {
+                                    let tmp71 = cResult[64];
+                                  }
+                                  if (cResult[65] === tmp53) {
+                                    if (cResult[66] === tmp71) {
+                                      if (cResult[67] === tmp33) {
+                                        let tmp75 = cResult[68];
+                                      }
+                                      return tmp75;
+                                    }
+                                  }
+                                  const obj12 = { children: null };
+                                  const items4 = [tmp33, tmp53, tmp71];
+                                  obj12.children = items4;
+                                  const tmp77 = closure_7(onContinue(tmp2[24]).BottomSheet, obj12);
+                                  cResult[65] = tmp53;
+                                  cResult[66] = tmp71;
+                                  cResult[67] = tmp33;
+                                  cResult[68] = tmp77;
+                                  tmp75 = tmp77;
+                                }
+                              }
+                              const obj13 = { style: footer, children: null };
+                              const items5 = [tmp62, tmp68];
+                              obj13.children = items5;
+                              const tmp74 = closure_7(closure_4, obj13);
+                              cResult[61] = tmp4.footer;
+                              cResult[62] = tmp62;
+                              cResult[63] = tmp68;
+                              cResult[64] = tmp74;
+                              tmp71 = tmp74;
+                            }
+                            const obj14 = {
+                              variant: "text-sm/medium",
+                              style: tmp4.keepText,
+                              onPress: tmp31,
+                              children: tmp66,
+                            };
+                            const tmp70 = closure_6(onContinue(tmp2[9]).Text, obj14);
+                            cResult[58] = tmp31;
+                            cResult[59] = tmp4.keepText;
+                            cResult[60] = tmp70;
+                            tmp68 = tmp70;
+                          }
+                          const obj15 = { style: button, children: tmp59 };
+                          const tmp65 = closure_6(closure_4, obj15);
+                          cResult[54] = tmp4.button;
+                          cResult[55] = tmp59;
+                          cResult[56] = tmp65;
+                          tmp62 = tmp65;
+                        }
+                      }
+                    }
+                    const obj16 = { style: tmp36, children: null };
+                    const items6 = [tmp41, tmp48, tmp51];
+                    obj16.children = items6;
+                    const tmp56 = closure_7(closure_4, obj16);
+                    cResult[46] = tmp4.body;
+                    cResult[47] = tmp48;
+                    cResult[48] = tmp51;
+                    cResult[49] = tmp41;
+                    cResult[50] = tmp56;
+                    tmp53 = tmp56;
                   }
+                  const obj17 = { variant: "text-md/medium", style: tmp4.subtitle, children: cResult[40] };
+                  const tmp50 = closure_6(onContinue(tmp2[9]).Text, obj17);
+                  cResult[41] = tmp4.subtitle;
+                  cResult[42] = cResult[40];
+                  cResult[43] = tmp50;
+                  tmp48 = tmp50;
                 }
               }
               if (mode === obj8.CANCEL) {
-                class U {
-                  constructor(arg0) {
-                    tmp = onContinue(subscription);
-                    tmp2 = closure_3();
-                    return;
-                  }
-                }
-                const obj11 = { subscriptionName: onContinue(tmp2[10]).getPremiumTypeDisplayName(tmp5, true) };
-                let formatResult1 = obj19.format(onContinue(tmp2[15]).t.jh5mUz, obj11);
+                const intl12 = onContinue(tmp2[15]).intl;
+                const obj18 = { subscriptionName: onContinue(tmp2[10]).getPremiumTypeDisplayName(tmp5, true) };
+                let formatResult1 = intl12.format(onContinue(tmp2[15]).t.jh5mUz, obj18);
                 const tmpResult5 = onContinue(tmp2[10]);
               } else {
-                class U {
-                  constructor(arg0) {
-                    tmp = onContinue(subscription);
-                    tmp2 = closure_3();
-                    return;
-                  }
-                }
-                const obj12 = { subscriptionName: onContinue(tmp2[10]).getPremiumTypeDisplayName(tmp5, true) };
-                formatResult1 = obj16.format(onContinue(tmp2[15]).t.Qk34Ik, obj12);
+                const intl11 = onContinue(tmp2[15]).intl;
+                const obj19 = { subscriptionName: onContinue(tmp2[10]).getPremiumTypeDisplayName(tmp5, true) };
+                formatResult1 = intl11.format(onContinue(tmp2[15]).t.Qk34Ik, obj19);
                 const tmpResult6 = onContinue(tmp2[10]);
               }
               cResult[38] = mode;
               cResult[39] = tmp5;
-              class F {
-                constructor() {
-                  obj = closure_0(closure_2[21]);
-                  obj1 = {
-                    subscription,
-                    analyticsLocations,
-                    fromStep: closure_0(closure_2[21]).STEP_ANALYTICS_NAMES[
-                      closure_0(undefined, closure_2[21]).CancellationFlowSteps.WHAT_YOU_LOSE
-                    ],
-                    toStep: null,
-                  };
-                  result = obj.trackPremiumSubscriptionCancellationFlowStep(obj1);
-                  tmp2 = closure_3();
-                  return;
-                }
-              }
               cResult[40] = formatResult1;
             }
-            const obj15 = { variant: "heading-xl/extrabold", style: tmp4.title, children: tmp36 };
-            const tmp41 = closure_6(onContinue(tmp2[9]).Text, obj15);
-            class F {
-              constructor() {
-                obj = closure_0(closure_2[21]);
-                obj1 = {
-                  subscription,
-                  analyticsLocations,
-                  fromStep: closure_0(closure_2[21]).STEP_ANALYTICS_NAMES[
-                    closure_0(undefined, closure_2[21]).CancellationFlowSteps.WHAT_YOU_LOSE
-                  ],
-                  toStep: null,
-                };
-                result = obj.trackPremiumSubscriptionCancellationFlowStep(obj1);
-                tmp2 = closure_3();
-                return;
-              }
-            }
-            cResult[36] = tmp36;
-            cResult[37] = tmp41;
+            const obj20 = { variant: "heading-xl/extrabold", style: tmp4.title, children: cResult[34] };
+            const tmp43 = closure_6(onContinue(tmp2[9]).Text, obj20);
+            cResult[35] = tmp4.title;
+            cResult[36] = cResult[34];
+            cResult[37] = tmp43;
+            tmp41 = tmp43;
           }
         }
-        class F {
-          constructor() {
-            obj = closure_0(closure_2[21]);
-            obj1 = {
-              subscription,
-              analyticsLocations,
-              fromStep: closure_0(closure_2[21]).STEP_ANALYTICS_NAMES[
-                closure_0(undefined, closure_2[21]).CancellationFlowSteps.WHAT_YOU_LOSE
-              ],
-              toStep: null,
-            };
-            result = obj.trackPremiumSubscriptionCancellationFlowStep(obj1);
-            tmp2 = closure_3();
-            return;
-          }
+        function onCloseWithTracking() {
+          const obj = PremiumAnalyticsUtils;
+          const result = obj.trackPremiumSubscriptionCancellationFlowStep({
+            subscription,
+            analyticsLocations,
+            fromStep:
+              PremiumAnalyticsUtils.STEP_ANALYTICS_NAMES[PremiumAnalyticsUtils.CancellationFlowSteps.WHAT_YOU_LOSE],
+            toStep: null,
+          });
+          closure_3();
         }
         cResult[26] = analyticsLocations;
         cResult[27] = subscription;
-        cResult[28] = F;
+        cResult[28] = onCloseWithTracking;
+        tmp31 = onCloseWithTracking;
       }
       const tmpResult4 = onContinue(analyticsLocations[12]);
     }
-  : (arg0) => {
+  : function PremiumPlanWhatYouLoseActionSheet(arg0) {
       ({ mode, onContinue: require, subscription } = arg0);
       let premiumTypeFromSubscription;
       const tmp = closure_8();
@@ -555,11 +527,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let items = [premiumTypeFromSubscription, whatYouLoseProfileTier1Source];
       const memo = analyticsLocations.useMemo(() => {
         if (PremiumTypes.TIER_0 === premiumTypeFromSubscription) {
-          const obj2 = { imageSource: _modDef13206, text: null };
+          const obj2 = { imageSource: _modDef13506, text: null };
           const intl7 = util.intl;
           obj2.text = intl7.format(util.t["0hUHi6"], {});
           const items = [obj2];
-          const obj3 = { imageSource: _modDef13207, text: null };
+          const obj3 = { imageSource: _modDef13507, text: null };
           const intl8 = util.intl;
           obj3.text = intl8.format(util.t.wFWO6D, {});
           items[1] = obj3;
@@ -569,25 +541,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl4 = util.intl;
           obj4.text = intl4.format(util.t.xCaYwE, {});
           const items1 = [obj4, ,];
-          const obj5 = { imageSource: _modDef13156, text: null };
+          const obj5 = { imageSource: _modDef12869, text: null };
           const intl5 = util.intl;
           obj5.text = intl5.format(util.t.wK04T1, {});
           items1[1] = obj5;
-          const obj6 = { imageSource: _modDef13208, text: null };
+          const obj6 = { imageSource: _modDef13508, text: null };
           const intl6 = util.intl;
           obj6.text = intl6.format(util.t.K4Hv69, {});
           items1[2] = obj6;
           return items1;
         } else if (PremiumTypes.TIER_2 === premiumTypeFromSubscription) {
-          const obj = { imageSource: _modDef13209, text: null };
+          const obj = { imageSource: _modDef13509, text: null };
           const intl = util.intl;
           obj.text = intl.format(util.t["gpqr+n"], {});
           const items2 = [obj, ,];
-          const obj7 = { imageSource: _modDef13208, text: null };
+          const obj7 = { imageSource: _modDef13508, text: null };
           const intl2 = util.intl;
           obj7.text = intl2.format(util.t.wRxEDW, {});
           items2[1] = obj7;
-          obj8 = { imageSource: _modDef13156, text: null };
+          obj8 = { imageSource: _modDef12869, text: null };
           const intl3 = util.intl;
           obj8.text = intl3.format(util.t["4WZ7T2"], {});
           items2[2] = obj8;
@@ -642,7 +614,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let intl5 = require("util").intl;
       obj11.text = intl5.string(require("util").t["3PatSz"]);
       obj11.onPress = function onPress() {
-        _require(PremiumAnalyticsUtils.STEP_ANALYTICS_NAMES[PremiumAnalyticsUtils.CancellationFlowSteps.WHAT_YOU_LOSE]);
+        closure_1_0(
+          PremiumAnalyticsUtils.STEP_ANALYTICS_NAMES[PremiumAnalyticsUtils.CancellationFlowSteps.WHAT_YOU_LOSE],
+        );
         ActionSheetActionCreatorsDefault.hideActionSheet();
       };
       obj10.children = closure_6(require("components/Button/Button").Button, obj11);
@@ -650,7 +624,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj12 = {
         variant: "text-sm/medium",
         style: tmp.keepText,
-        onPress() {
+        onPress: function onCloseWithTracking() {
           const obj = PremiumAnalyticsUtils;
           const result = obj.trackPremiumSubscriptionCancellationFlowStep({
             subscription,

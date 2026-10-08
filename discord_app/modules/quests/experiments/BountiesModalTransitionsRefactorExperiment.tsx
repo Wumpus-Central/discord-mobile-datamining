@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/quests/experiments/BountiesMo
 
 export const BountiesModalTransitionsRefactorExperiment = apexExperiment;
 export const useIsBountiesModalTransitionsRefactorEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsBountiesModalTransitionsRefactorEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -30,4 +30,6 @@ export const useIsBountiesModalTransitionsRefactorEnabled = ReactCompilerGating.
       }
       return apexExperiment.useConfig(tmp2).enabled;
     }
-  : (location) => apexExperiment.useConfig({ location }).enabled;
+  : function useIsBountiesModalTransitionsRefactorEnabled(location) {
+      return apexExperiment.useConfig({ location }).enabled;
+    };

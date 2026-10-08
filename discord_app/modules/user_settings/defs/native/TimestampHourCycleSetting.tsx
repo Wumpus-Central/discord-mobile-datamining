@@ -7,9 +7,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDMsMessagePreviewsOptions() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { label: null, value: null };
@@ -34,8 +34,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      noop.useMemo(() => {
+  : function useDMsMessagePreviewsOptions() {
+      return noop.useMemo(() => {
         const obj = { label: null, value: null };
         const intl = util.intl;
         obj.label = intl.string(util.t.FMWYvb);
@@ -53,19 +53,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items[2] = obj3;
         return items;
       }, []);
+    };
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.dyamEI);
   },
-  parent: fn(7645).MobileUserSettings.APPEARANCE,
-  useValue: fn(2028).TimestampHourCycle.useSetting,
+  parent: fn(7966).MobileUserSettings.APPEARANCE,
+  useValue: fn(2040).TimestampHourCycle.useSetting,
   onValueChange: function onTimestampHourCycleChange(arg0) {
     const TimestampHourCycle = UserSettings.TimestampHourCycle;
     TimestampHourCycle.updateSetting(Number(arg0));
   },
   useOptions: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useDMsMessagePreviewsOptions() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { label: null, value: null };
@@ -90,8 +91,8 @@ const radio = SettingBuilders.createRadio({
         }
         return first;
       }
-    : () =>
-        noop.useMemo(() => {
+    : function useDMsMessagePreviewsOptions() {
+        return noop.useMemo(() => {
           const obj = { label: null, value: null };
           const intl = util.intl;
           obj.label = intl.string(util.t.FMWYvb);
@@ -108,8 +109,9 @@ const radio = SettingBuilders.createRadio({
           obj3.value = preloaded_user_settings.TimestampHourCycle.H23;
           items[2] = obj3;
           return items;
-        }, []),
-  usePredicate: fn(4561).supportsSystemDateFormatter,
+        }, []);
+      },
+  usePredicate: fn(4753).supportsSystemDateFormatter,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/TimestampHourCycleSetting.tsx");

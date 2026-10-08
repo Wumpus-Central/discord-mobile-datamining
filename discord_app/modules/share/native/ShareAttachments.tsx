@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import utils_UploadUtils from "../../../utils/native/UploadUtils.tsx";
 import AttachmentPreviewDefault from "../../media/native/AttachmentPreview.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -15,8 +15,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
-let GRADIENT_EASING_CONFIG = { duration: 300, easing: fn(1188).STANDARD_EASING };
-const createStyles = fn(4896);
+let GRADIENT_EASING_CONFIG = { duration: 300, easing: fn(1200).STANDARD_EASING };
+const createStyles = fn(5090);
 let obj2 = {
   containerRevamp: { marginHorizontal: -nativeDefault.space.PX_16 },
   attachmentPreviewContentContainer: null,
@@ -71,7 +71,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/share/native/ShareAttachments.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ShareAttachments(arg0) {
       GRADIENT_EASING_CONFIG = attachmentPreview(sharedValue1[9]);
       const cResult = GRADIENT_EASING_CONFIG.c(48);
       ({ attachments, isRevamp } = arg0);
@@ -425,7 +425,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult10 = attachmentPreview(sharedValue1[3]);
     }
-  : (arg0) => {
+  : function ShareAttachments(arg0) {
       ({ attachments, isRevamp } = arg0);
       if (isRevamp === undefined) {
         isRevamp = false;

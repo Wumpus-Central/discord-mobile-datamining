@@ -19,7 +19,7 @@ const WindowSizeClassifier = {
 const result = size.fileFinishedImporting("modules/screen/native/useWindowSizeClassifier.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useWindowSizeClassifier() {
       const obj = c;
       const cResult = obj.c(2);
       const width = useBaseAppContainerDimensionsDefault().width;
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return cResult[1];
       }
     }
-  : () => {
+  : function useWindowSizeClassifier() {
       const width = useBaseAppContainerDimensionsDefault().width;
       if (width <= 360) {
         let XLARGE = obj.SMALL;

@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   emptyContainer: { flex: 1, justifyContent: "center", alignItems: "center", marginHorizontal: 36 },
   emptyImage: { width: 170, height: 130 },
@@ -39,7 +39,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/ViewEmptyState.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ViewEmptyState(arg0) {
       const cResult = c.c(21);
       ({ source, label, text, style } = arg0);
       const tmp4 = closure_6();
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items2;
       tmp5 = items2;
     }
-  : (arg0) => {
+  : function ViewEmptyState(arg0) {
       ({ label, text } = arg0);
       ({ source, style } = arg0);
       const tmp = closure_6();

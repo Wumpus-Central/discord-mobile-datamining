@@ -7,7 +7,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles((paddingTop, arg1, arg2) => {
   const obj = {
     bar: {
@@ -28,7 +28,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const MediaModalOverlayHeaderWrapper = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MediaModalOverlayHeaderWrapper(arg0) {
       const cResult = c.c(6);
       ({ children, style } = arg0);
       const rect = useSafeAreaInsetsDefault();
@@ -60,7 +60,7 @@ export const MediaModalOverlayHeaderWrapper = ReactCompilerGating.isReactCompile
       cResult[2] = items;
       tmp3 = items;
     }
-  : (arg0) => {
+  : function MediaModalOverlayHeaderWrapper(arg0) {
       ({ children, style } = arg0);
       const rect = useSafeAreaInsetsDefault();
       const obj = { style: null, pointerEvents: "box-none", children: null };

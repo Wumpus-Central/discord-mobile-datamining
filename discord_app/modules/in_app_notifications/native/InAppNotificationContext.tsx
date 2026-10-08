@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/in_app_notifications/native/I
 
 export const InAppNotificationContext = context;
 export const useInAppNotificationContext = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useInAppNotificationContext() {
       context = noop.useContext(context);
       if (null == context) {
         const _Error = Error;
@@ -18,7 +18,7 @@ export const useInAppNotificationContext = ReactCompilerGating.isReactCompilerEn
         return context;
       }
     }
-  : () => {
+  : function useInAppNotificationContext() {
       context = noop.useContext(context);
       if (null == context) {
         const _Error = Error;

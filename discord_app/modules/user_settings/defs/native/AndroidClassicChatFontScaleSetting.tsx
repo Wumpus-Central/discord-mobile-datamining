@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _mod4498 from "../../../../../_runtime/metro/04498__.js";
+import _mod4690 from "../../../../../_runtime/metro/04690__.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import FontScaleStore from "../../appearance/native/FontScaleStore.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -13,10 +13,10 @@ const require = globalThis.__r;
 
 const useFontScaleStore = FontScaleStore.useFontScaleStore;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useClassicChatFontScaleValue() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function n(isClassicChatFontScaleEnabled) {
+        const fn = function s(isClassicChatFontScaleEnabled) {
           return isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled;
         };
         cResult[0] = fn;
@@ -24,13 +24,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return useFontScaleStore(first, _mod4498.shallow);
+      return useFontScaleStore(first, _mod4690.shallow);
     }
-  : () =>
-      useFontScaleStore(
+  : function useClassicChatFontScaleValue() {
+      return useFontScaleStore(
         (isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled,
-        _mod4498.shallow,
+        _mod4690.shallow,
       );
+    };
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -38,10 +39,10 @@ const toggle = SettingBuilders.createToggle({
   },
   parent: SettingsConstants.MobileUserSettings.APPEARANCE,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useClassicChatFontScaleValue() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function n(isClassicChatFontScaleEnabled) {
+          const fn = function s(isClassicChatFontScaleEnabled) {
             return isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled;
           };
           cResult[0] = fn;
@@ -49,13 +50,14 @@ const toggle = SettingBuilders.createToggle({
         } else {
           first = cResult[0];
         }
-        return useFontScaleStore(first, _mod4498.shallow);
+        return useFontScaleStore(first, _mod4690.shallow);
       }
-    : () =>
-        useFontScaleStore(
+    : function useClassicChatFontScaleValue() {
+        return useFontScaleStore(
           (isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled,
-          _mod4498.shallow,
-        ),
+          _mod4690.shallow,
+        );
+      },
   onValueChange: function onClassicChatFontScaleChange(isClassicChatFontScaleEnabled) {
     _require = isClassicChatFontScaleEnabled;
     return require("ReactBatchUpdates").batchUpdates(() =>

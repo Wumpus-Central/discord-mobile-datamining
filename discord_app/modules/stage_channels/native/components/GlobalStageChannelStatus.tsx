@@ -3,23 +3,23 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import StageChannelActionCreators from "../../StageChannelActionCreators.tsx";
-import PushNotificationDefault from "../../../../lib/pushnotification/PushNotification.tsx";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import useCanSpeakInChannelDefault from "../../useCanSpeakInChannel.tsx";
 import useIsInvitedToSpeakDefault from "../../useIsInvitedToSpeak.tsx";
+import PushNotificationDefault from "../../../../lib/pushnotification/PushNotification.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ActionSheetStore from "../../../action_sheet/native/ActionSheetStore.tsx";
 import StageInstanceStore from "../../StageInstanceStore.tsx";
 
-const useMountEffectDefault = tmp5(5597);
+const useMountEffectDefault = tmp5(5392);
 require = fn;
 const View = fn(17).View;
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   invitedContainer: { paddingHorizontal: nativeDefault.space.PX_8 },
   icon: null,
@@ -82,7 +82,7 @@ obj2.declineButtonPill = { borderColor: nativeDefault.colors.WHITE };
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function StageChannelRaiseHandAck(channel) {
       const cResult = require("c").c(49);
       channel = channel.channel;
       _require = channel;
@@ -141,7 +141,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        useMountEffectDefault(I);
+        useMountEffectDefault(fn);
         [r10071, dependencyMap] = noop.useState(false);
         const tmp16 = _slicedToArray(noop.useState(false), 2);
         if (channel != null) {
@@ -151,8 +151,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const stageBlockedUsersCount = tmp(8310).useStageBlockedUsersCount(tmp17);
-        const tmpResult4 = tmp(8310);
+        const stageBlockedUsersCount = tmp(7693).useStageBlockedUsersCount(tmp17);
+        const tmpResult4 = tmp(7693);
         if (channel != null) {
           class S {
             constructor() {
@@ -160,8 +160,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const stageIgnoredUsersCount = tmp(8310).useStageIgnoredUsersCount(tmp19);
-        const tmpResult5 = tmp(8310);
+        const stageIgnoredUsersCount = tmp(7693).useStageIgnoredUsersCount(tmp19);
+        const tmpResult5 = tmp(7693);
         if (channel != null) {
           class S {
             constructor() {
@@ -169,7 +169,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const getStageRTCPanelHeight = tmp(9617).useGetStageRTCPanelHeight(tmp21);
+        const getStageRTCPanelHeight = tmp(10810).useGetStageRTCPanelHeight(tmp21);
         if (cResult[7] !== channel) {
           class S {
             constructor() {
@@ -207,19 +207,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                     if (null != id) {
                       if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
                         const obj5 = {
-                          entryPoint: tmp41(8119).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
+                          entryPoint: tmp41(5915).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
                         };
-                        const result = stringResult(8117).showAgeVerificationGetStartedModal(obj5);
-                        const obj4 = stringResult(8117);
+                        const result = stringResult(7492).showAgeVerificationGetStartedModal(obj5);
+                        const obj4 = stringResult(7492);
                       } else {
                         v0(true);
                         v0 = 1;
                         c4 = 2;
                         c5 = 1;
-                        const obj6 = { value: tmp41(8107).audienceAckRequestToSpeak(id, false), done: false };
+                        const obj6 = { value: tmp41(7482).audienceAckRequestToSpeak(id, false), done: false };
                         return obj6;
                       }
-                      obj9 = id(5586);
+                      obj9 = id(5954);
                     }
                     c5 = 3;
                   }
@@ -235,8 +235,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   v0 = 0;
                   v0(false);
                   if (null == key.getKey()) {
-                    stateFromStores(8103).openStageChannel(id);
-                    const obj8 = stateFromStores(8103);
+                    stateFromStores(7478).openStageChannel(id);
+                    const obj8 = stateFromStores(7478);
                   }
                 }
                 v0 = 0;
@@ -274,187 +274,96 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[9] !== channel) {
-          class B {
+          class S {
             constructor() {
-              if (null != closure_0) {
-                tmp2 = closure_0;
-                tmp3 = closure_3;
-                obj = closure_0(closure_3[22]);
-                flag = true;
-                result = obj.audienceAckRequestToSpeak(tmp, true);
-              }
-              return;
+              return closure_9.getStageInstanceByChannel(closure_0.id);
             }
           }
           cResult[9] = channel;
-          cResult[10] = B;
+          cResult[10] = tmp25;
         } else {
-          class B {
+          class S {
             constructor() {
-              if (null != closure_0) {
-                tmp2 = closure_0;
-                tmp3 = closure_3;
-                obj = closure_0(closure_3[22]);
-                flag = true;
-                result = obj.audienceAckRequestToSpeak(tmp, true);
-              }
-              return;
+              return closure_9.getStageInstanceByChannel(closure_0.id);
             }
           }
         }
         if (null == stateFromStores) {
-          class B {
+          class S {
             constructor() {
-              if (null != closure_0) {
-                tmp2 = closure_0;
-                tmp3 = closure_3;
-                obj = closure_0(closure_3[22]);
-                flag = true;
-                result = obj.audienceAckRequestToSpeak(tmp, true);
-              }
-              return;
+              return closure_9.getStageInstanceByChannel(closure_0.id);
             }
           }
         } else {
-          class B {
+          class S {
             constructor() {
-              if (null != closure_0) {
-                tmp2 = closure_0;
-                tmp3 = closure_3;
-                obj = closure_0(closure_3[22]);
-                flag = true;
-                result = obj.audienceAckRequestToSpeak(tmp, true);
-              }
-              return;
+              return closure_9.getStageInstanceByChannel(closure_0.id);
             }
           }
           if (cResult[13] === tmp4.invitedContainer) {
-            class B {
+            class S {
               constructor() {
-                if (null != closure_0) {
-                  tmp2 = closure_0;
-                  tmp3 = closure_3;
-                  obj = closure_0(closure_3[22]);
-                  flag = true;
-                  result = obj.audienceAckRequestToSpeak(tmp, true);
-                }
-                return;
+                return closure_9.getStageInstanceByChannel(closure_0.id);
               }
             }
             const _Symbol = Symbol;
             ({ row, invitedHeaderText } = tmp4);
             if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-              class B {
+              class S {
                 constructor() {
-                  if (null != closure_0) {
-                    tmp2 = closure_0;
-                    tmp3 = closure_3;
-                    obj = closure_0(closure_3[22]);
-                    flag = true;
-                    result = obj.audienceAckRequestToSpeak(tmp, true);
-                  }
-                  return;
+                  return closure_9.getStageInstanceByChannel(closure_0.id);
                 }
               }
               const stringResult1 = obj6.string(tmp(1126).t.Ul1RJQ);
               cResult[16] = stringResult1;
-              const tmp27 = stringResult1;
+              const tmp28 = stringResult1;
             } else {
-              class B {
+              class S {
                 constructor() {
-                  if (null != closure_0) {
-                    tmp2 = closure_0;
-                    tmp3 = closure_3;
-                    obj = closure_0(closure_3[22]);
-                    flag = true;
-                    result = obj.audienceAckRequestToSpeak(tmp, true);
-                  }
-                  return;
+                  return closure_9.getStageInstanceByChannel(closure_0.id);
                 }
               }
             }
             if (cResult[17] !== tmp4.invitedHeaderText) {
-              class B {
+              class S {
                 constructor() {
-                  if (null != closure_0) {
-                    tmp2 = closure_0;
-                    tmp3 = closure_3;
-                    obj = closure_0(closure_3[22]);
-                    flag = true;
-                    result = obj.audienceAckRequestToSpeak(tmp, true);
-                  }
-                  return;
+                  return closure_9.getStageInstanceByChannel(closure_0.id);
                 }
               }
-              let obj2 = { style: invitedHeaderText, accessibilityRole: "header", children: tmp27 };
-              const tmp30 = closure_10(tmp(1188).LegacyText, obj2);
+              let obj2 = { style: invitedHeaderText, accessibilityRole: "header", children: tmp28 };
+              const tmp31 = closure_10(tmp(1200).LegacyText, obj2);
               cResult[17] = tmp4.invitedHeaderText;
-              cResult[18] = tmp30;
+              cResult[18] = tmp31;
             } else {
-              class B {
+              class S {
                 constructor() {
-                  if (null != closure_0) {
-                    tmp2 = closure_0;
-                    tmp3 = closure_3;
-                    obj = closure_0(closure_3[22]);
-                    flag = true;
-                    result = obj.audienceAckRequestToSpeak(tmp, true);
-                  }
-                  return;
+                  return closure_9.getStageInstanceByChannel(closure_0.id);
                 }
               }
             }
             if (cResult[19] === tmp4.row) {
-              class B {
+              class S {
                 constructor() {
-                  if (null != closure_0) {
-                    tmp2 = closure_0;
-                    tmp3 = closure_3;
-                    obj = closure_0(closure_3[22]);
-                    flag = true;
-                    result = obj.audienceAckRequestToSpeak(tmp, true);
-                  }
-                  return;
+                  return closure_9.getStageInstanceByChannel(closure_0.id);
                 }
               }
               if (cResult[22] === stageBlockedUsersCount) {
-                class B {
+                class S {
                   constructor() {
-                    if (null != closure_0) {
-                      tmp2 = closure_0;
-                      tmp3 = closure_3;
-                      obj = closure_0(closure_3[22]);
-                      flag = true;
-                      result = obj.audienceAckRequestToSpeak(tmp, true);
-                    }
-                    return;
+                    return closure_9.getStageInstanceByChannel(closure_0.id);
                   }
                 }
               }
               if (stageBlockedUsersCount <= 0) {
-                class B {
+                class S {
                   constructor() {
-                    if (null != closure_0) {
-                      tmp2 = closure_0;
-                      tmp3 = closure_3;
-                      obj = closure_0(closure_3[22]);
-                      flag = true;
-                      result = obj.audienceAckRequestToSpeak(tmp, true);
-                    }
-                    return;
+                    return closure_9.getStageInstanceByChannel(closure_0.id);
                   }
                 }
                 if (stageIgnoredUsersCount <= 0) {
-                  class B {
+                  class S {
                     constructor() {
-                      if (null != closure_0) {
-                        tmp2 = closure_0;
-                        tmp3 = closure_3;
-                        obj = closure_0(closure_3[22]);
-                        flag = true;
-                        result = obj.audienceAckRequestToSpeak(tmp, true);
-                      }
-                      return;
+                      return closure_9.getStageInstanceByChannel(closure_0.id);
                     }
                   }
                   cResult[22] = stageBlockedUsersCount;
@@ -465,32 +374,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               }
               let obj3 = { style: tmp4.row, children: null };
               if (stageBlockedUsersCount <= 0) {
-                class B {
+                class S {
                   constructor() {
-                    if (null != closure_0) {
-                      tmp2 = closure_0;
-                      tmp3 = closure_3;
-                      obj = closure_0(closure_3[22]);
-                      flag = true;
-                      result = obj.audienceAckRequestToSpeak(tmp, true);
-                    }
-                    return;
+                    return closure_9.getStageInstanceByChannel(closure_0.id);
                   }
                 }
                 let obj4 = { variant: "text-xs/medium", color: "text-overlay-light", children: formatResult };
-                obj3.children = closure_10(tmp38, obj4);
+                obj3.children = closure_10(tmp39, obj4);
                 closure_10(View, obj3);
               } else {
-                class B {
+                class S {
                   constructor() {
-                    if (null != closure_0) {
-                      tmp2 = closure_0;
-                      tmp3 = closure_3;
-                      obj = closure_0(closure_3[22]);
-                      flag = true;
-                      result = obj.audienceAckRequestToSpeak(tmp, true);
-                    }
-                    return;
+                    return closure_9.getStageInstanceByChannel(closure_0.id);
                   }
                 }
               }
@@ -498,54 +393,43 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               let obj5 = { number: stageBlockedUsersCount + stageIgnoredUsersCount };
               formatResult = intl2.format(tmp(1126).t["cXaoI+"], obj5);
             }
-            const obj7 = { style: row, children: tmp29 };
-            const tmp34 = closure_10(View, obj7);
+            const obj7 = { style: row, children: tmp30 };
+            const tmp35 = closure_10(View, obj7);
             cResult[19] = tmp4.row;
-            cResult[20] = tmp29;
-            cResult[21] = tmp34;
+            cResult[20] = tmp30;
+            cResult[21] = tmp35;
           }
-          const items2 = [tmp4.invitedContainer, tmp25];
+          const items2 = [tmp4.invitedContainer, tmp26];
           cResult[13] = tmp4.invitedContainer;
-          cResult[14] = tmp25;
+          cResult[14] = tmp26;
           cResult[15] = items2;
         }
-        const tmpResult6 = tmp(9617);
+        const tmpResult6 = tmp(10810);
       }
       cResult[4] = stringResult;
       if (stateFromStores != null) {
-        class B {
+        class S {
           constructor() {
-            if (null != closure_0) {
-              tmp2 = closure_0;
-              tmp3 = closure_3;
-              obj = closure_0(closure_3[22]);
-              flag = true;
-              result = obj.audienceAckRequestToSpeak(tmp, true);
-            }
-            return;
+            return closure_9.getStageInstanceByChannel(closure_0.id);
           }
         }
       }
-      class I {
-        constructor() {
-          obj = closure_1(closure_3[15]);
-          intl = closure_0(closure_3[8]).intl;
-          obj1 = { channelName: closure_1, channelTopic: null };
-          topic = undefined;
-          if (closure_2 != null) {
-            topic = closure_2.topic;
-          }
-          obj4 = { alertBody: intl.formatToPlainString(closure_0(closure_3[8]).t.sqnsSP, obj1) };
-          obj1.channelTopic = topic;
-          result = obj.presentLocalNotification(obj4);
-          return;
+      fn = function _() {
+        const intl = util.intl;
+        const obj2 = { channelName: stringResult, channelTopic: null };
+        let topic;
+        if (stateFromStores != null) {
+          topic = stateFromStores.topic;
         }
-      }
+        const obj = PushNotificationDefault;
+        obj2.channelTopic = topic;
+        const result = obj.presentLocalNotification({ alertBody: intl.formatToPlainString(util.t.sqnsSP, obj2) });
+      };
       cResult[5] = undefined;
-      cResult[6] = I;
+      cResult[6] = fn;
       const tmpResult = require("initialize");
     }
-  : (channel) => {
+  : function StageChannelRaiseHandAck(channel) {
       channel = channel.channel;
       importDefault = undefined;
       let stateFromStores;
@@ -578,18 +462,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 channel = tmp7;
                 if (null != id) {
                   if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
-                    const obj5 = { entryPoint: tmp41(8119).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
-                    const result = tmp3(8117).showAgeVerificationGetStartedModal(obj5);
-                    const obj4 = tmp3(8117);
+                    const obj5 = { entryPoint: tmp41(5915).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
+                    const result = tmp3(7492).showAgeVerificationGetStartedModal(obj5);
+                    const obj4 = tmp3(7492);
                   } else {
                     dependencyMap(true);
                     dependencyMap = 1;
                     c4 = 2;
                     c5 = 1;
-                    const obj6 = { value: tmp41(8107).audienceAckRequestToSpeak(id, false), done: false };
+                    const obj6 = { value: tmp41(7482).audienceAckRequestToSpeak(id, false), done: false };
                     return obj6;
                   }
-                  obj9 = channel(5586);
+                  obj9 = channel(5954);
                 }
                 c5 = 3;
               }
@@ -605,8 +489,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               dependencyMap = 0;
               closure_129_3(false);
               if (null == key.getKey()) {
-                tmp27(8103).openStageChannel(closure_129_0);
-                const obj8 = tmp27(8103);
+                tmp27(7478).openStageChannel(closure_129_0);
+                const obj8 = tmp27(7478);
               }
             }
             dependencyMap = 0;
@@ -655,14 +539,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (channel != null) {
         id1 = channel.id;
       }
-      const stageBlockedUsersCount = channel(8310).useStageBlockedUsersCount(id1);
-      let obj2 = channel(8310);
+      const stageBlockedUsersCount = channel(7693).useStageBlockedUsersCount(id1);
+      let obj2 = channel(7693);
       let id2;
       if (channel != null) {
         id2 = channel.id;
       }
-      let stageIgnoredUsersCount = channel(8310).useStageIgnoredUsersCount(id2);
-      channel(9617);
+      let stageIgnoredUsersCount = channel(7693).useStageIgnoredUsersCount(id2);
+      channel(10810);
       if (channel != null) {
         const id = channel.id;
       }
@@ -677,7 +561,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         let obj6 = { style: tmp.invitedHeaderText, accessibilityRole: "header", children: null };
         const intl2 = tmp6(1126).intl;
         obj6.children = intl2.string(tmp6(1126).t.Ul1RJQ);
-        obj5.children = closure_10(tmp6(1188).LegacyText, obj6);
+        obj5.children = closure_10(tmp6(1200).LegacyText, obj6);
         const items3 = [closure_10(View, obj5), ,];
         if (stageBlockedUsersCount <= 0) {
           if (stageIgnoredUsersCount <= 0) {
@@ -698,7 +582,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             };
             const intl6 = tmp6(1126).intl;
             obj9.text = intl6.string(tmp6(1126).t["1YDv7a"]);
-            obj8.children = closure_10(tmp6(5602).BaseTextButton, obj9);
+            obj8.children = closure_10(tmp6(5376).BaseTextButton, obj9);
             const items4 = [closure_10(View, obj8)];
             const obj10 = { style: tmp.buttonWrapper, children: null };
             const obj11 = {
@@ -723,7 +607,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             obj11.text = intl7.string(tmp6(1126).t.MpO0px);
             obj11.loading = tmp10;
             obj11.disabled = tmp10;
-            obj10.children = closure_10(tmp6(5601).Button, obj11);
+            obj10.children = closure_10(tmp6(5375).Button, obj11);
             items4[1] = closure_10(View, obj10);
             obj7.children = items4;
             items3[2] = closure_11(View, obj7);
@@ -806,7 +690,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (!tmp9) {
         if (!tmp8) {
-          tmp(4593);
+          tmp(4785);
           let str = "dark-content";
         }
         if (null != channel) {
@@ -892,7 +776,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   const obj5 = { numberOfLines: 1, children: null };
                                   const items3 = [tmp26, tmp30];
                                   obj5.children = items3;
-                                  const tmp35 = closure_11(tmp(1188).LegacyText, obj5);
+                                  const tmp35 = closure_11(tmp(1200).LegacyText, obj5);
                                   cResult[26] = tmp30;
                                   cResult[27] = tmp26;
                                   cResult[28] = tmp35;
@@ -912,7 +796,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             items4[1] = invitedHeaderText2;
                             obj6.style = items4;
                             obj6.children = combined;
-                            tmp32Result = closure_10(tmp(1188).LegacyText, obj6);
+                            tmp32Result = closure_10(tmp(1200).LegacyText, obj6);
                           }
                           cResult[20] = tmp25;
                           cResult[21] = tmp9;
@@ -941,7 +825,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                     items6[1] = tmp29;
                     obj7.children = items6;
-                    tmp28Result = closure_11(tmp(1188).LegacyText, obj7);
+                    tmp28Result = closure_11(tmp(1200).LegacyText, obj7);
                   }
                   cResult[14] = tmp16 > 50;
                   cResult[15] = tmp9;
@@ -951,19 +835,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[19] = tmp28Result;
                   tmp26 = tmp28Result;
                 }
-                const obj8 = { style: activeSpeakerIcon, size: tmp(1188).Icon.Sizes.REFRESH_SMALL_16, source: tmp20 };
-                const tmp24 = closure_10(tmp(1188).Icon, obj8);
+                const obj8 = { style: activeSpeakerIcon, size: tmp(1200).Icon.Sizes.REFRESH_SMALL_16, source: tmp20 };
+                const tmp24 = closure_10(tmp(1200).Icon, obj8);
                 cResult[11] = activeSpeakerIcon;
                 cResult[12] = tmp20;
                 cResult[13] = tmp24;
                 tmp22 = tmp24;
               }
-              const channelIconWithGuild = tmp(5819).getChannelIconWithGuild(channel, guild);
+              const channelIconWithGuild = tmp(8134).getChannelIconWithGuild(channel, guild);
               cResult[8] = channel;
               cResult[9] = guild;
               cResult[10] = channelIconWithGuild;
               tmp20 = channelIconWithGuild;
-              const tmpResult4 = tmp(5819);
+              const tmpResult4 = tmp(8134);
             }
           }
         }
@@ -1000,7 +884,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (!invitedHeaderText) {
         if (!tmp7) {
-          tmp8(4593);
+          tmp8(4785);
           let str = "dark-content";
         }
         if (null != channel) {
@@ -1024,10 +908,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const items2 = [closure_10(StatusBarDefault, obj4), ,];
               const obj5 = {
                 style: activeSpeakerIcon,
-                size: tmp8(1188).Icon.Sizes.REFRESH_SMALL_16,
-                source: tmp8(5819).getChannelIconWithGuild(channel, guild),
+                size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16,
+                source: tmp8(8134).getChannelIconWithGuild(channel, guild),
               };
-              items2[1] = closure_10(tmp8(1188).Icon, obj5);
+              items2[1] = closure_10(tmp8(1200).Icon, obj5);
               let tmp13Result = "" !== str2;
               if (tmp13Result) {
                 const items3 = [tmp.topic];
@@ -1044,7 +928,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 items4[1] = tmp17;
                 obj6.children = items4;
-                tmp13Result = closure_11(tmp8(1188).LegacyText, obj6);
+                tmp13Result = closure_11(tmp8(1200).LegacyText, obj6);
               }
               const items5 = [tmp13Result];
               let tmp15Result = !tmp12;
@@ -1057,15 +941,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 items6[1] = invitedHeaderText;
                 obj7.style = items6;
                 obj7.children = combined;
-                tmp15Result = closure_10(tmp8(1188).LegacyText, obj7);
+                tmp15Result = closure_10(tmp8(1200).LegacyText, obj7);
               }
               const obj8 = { numberOfLines: 1, children: null };
               items5[1] = tmp15Result;
               obj8.children = items5;
-              items2[2] = closure_11(tmp8(1188).LegacyText, obj8);
+              items2[2] = closure_11(tmp8(1200).LegacyText, obj8);
               obj3.children = items2;
               tmp13Result2 = closure_11(View, obj3);
-              const tmp8Result2 = tmp8(5819);
+              const tmp8Result2 = tmp8(8134);
             }
             return tmp13Result2;
           }

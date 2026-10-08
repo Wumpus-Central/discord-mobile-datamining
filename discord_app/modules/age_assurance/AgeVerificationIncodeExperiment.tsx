@@ -17,7 +17,7 @@ let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationIncodeExperiment.tsx");
 
 export const useIsAgeVerificationIncodeEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsAgeVerificationIncodeEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -29,7 +29,9 @@ export const useIsAgeVerificationIncodeEnabled = ReactCompilerGating.isReactComp
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useIsAgeVerificationIncodeEnabled(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };
 export const isAgeVerificationIncodeEnabled = function isAgeVerificationIncodeEnabled(entryPoint) {
   return closure_2.getConfig({ location: entryPoint }).enabled;
 };

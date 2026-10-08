@@ -1,16 +1,16 @@
 // discord_app/modules/video_backgrounds/native/VideoBackgroundOptions.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getDefaultBackgroundDataDefault from "../getDefaultBackgroundData.native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 const require = fn;
-const Image = fn(17).Image;
-const BLUR_BACKGROUND_OPTION = fn(6491).BLUR_BACKGROUND_OPTION;
+const BLUR_BACKGROUND_OPTION = fn(5253).BLUR_BACKGROUND_OPTION;
 const jsx = fn(21).jsx;
 const none = "none";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { imageThumbnail: null };
 let size = {
   width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
@@ -18,7 +18,7 @@ let size = {
   borderRadius: nativeDefault.radii.lg,
 };
 obj2.imageThumbnail = size;
-let closure_7 = createStyles.createStyles(obj2);
+let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/native/VideoBackgroundOptions.tsx");
@@ -57,9 +57,9 @@ export const parseVideoBackgroundRadioValue = function parseVideoBackgroundRadio
   return NumberResult;
 };
 export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useVideoBackgroundRadioOptions() {
       const cResult = require("c").c(5);
-      const tmp4 = closure_7();
+      const tmp4 = closure_6();
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const _Object = Object;
@@ -74,8 +74,8 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
         const obj2 = { value: none, label: null, icon: null };
         const intl = tmp(1126).intl;
         obj2.label = intl.string(tmp(1126).t.fUdMeO);
-        const obj3 = { IconComponent: tmp(7599).DenyIcon };
-        obj2.icon = jsx(tmp(6006).TableRowIcon, { IconComponent: tmp(7599).DenyIcon });
+        const obj3 = { IconComponent: tmp(9306).DenyIcon };
+        obj2.icon = jsx(tmp(6192).TableRowIcon, { IconComponent: tmp(9306).DenyIcon });
         cResult[1] = obj2;
         let tmp7 = obj2;
       } else {
@@ -85,8 +85,8 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
         const obj4 = { value: BLUR_BACKGROUND_OPTION, label: null, icon: null };
         const intl2 = tmp(1126).intl;
         obj4.label = intl2.string(tmp(1126).t.LhSyL8);
-        const obj5 = { IconComponent: tmp(9695).BlurBackgroundIcon };
-        obj4.icon = jsx(tmp(6006).TableRowIcon, { IconComponent: tmp(9695).BlurBackgroundIcon });
+        const obj5 = { IconComponent: tmp(10884).BlurBackgroundIcon };
+        obj4.icon = jsx(tmp(6192).TableRowIcon, { IconComponent: tmp(10884).BlurBackgroundIcon });
         cResult[2] = obj4;
         let tmp10 = obj4;
       } else {
@@ -99,7 +99,11 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
             const obj = {
               value: uri.id,
               label: uri.name,
-              icon: <Image source={{ uri: uri.source }} style={imageThumbnail.imageThumbnail} resizeMode="cover" />,
+              icon: jsx(FastImageDefault, {
+                source: { uri: uri.source },
+                style: imageThumbnail.imageThumbnail,
+                resizeMode: "cover",
+              }),
             };
             return obj;
           }),
@@ -113,8 +117,8 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
       }
       return tmp13;
     }
-  : () => {
-      _require = closure_7();
+  : function useVideoBackgroundRadioOptions() {
+      _require = closure_6();
       const values = Object.values(getDefaultBackgroundDataDefault());
       const found = values.filter((source) => "" !== source.source);
       let obj = { value: none, label: null, icon: null };
@@ -135,7 +139,11 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
           const obj = {
             value: uri.id,
             label: uri.name,
-            icon: <Image source={{ uri: uri.source }} style={imageThumbnail.imageThumbnail} resizeMode="cover" />,
+            icon: jsx(FastImageDefault, {
+              source: { uri: uri.source },
+              style: imageThumbnail.imageThumbnail,
+              resizeMode: "cover",
+            }),
           };
           return obj;
         }),

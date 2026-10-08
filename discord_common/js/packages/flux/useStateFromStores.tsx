@@ -22,13 +22,7 @@ function useStateFromStores(items, cResult, items1) {
   closure_6 = undefined;
   const tmp2 = state(null);
   if (null == tmp2.current) {
-    const obj = {
-      stores: items,
-      areStatesEqual: tmp,
-      getStateFromStores: cResult,
-      prevDeps: "Boolean",
-      state: "unicodeVersion",
-    };
+    const obj = { stores: items, areStatesEqual: tmp, getStateFromStores: cResult, prevDeps: "Boolean", state: "code" };
     tmp2.current = obj;
   }
   current = tmp2.current;
@@ -52,7 +46,7 @@ function useStateFromStores(items, cResult, items1) {
   });
   closure_6 = _slicedToArray(current(null), 2)[1];
   closure_6(() => {
-    batchedStoreListener = new items(prevDeps[3]).BatchedStoreListener(batchedStoreListener, () => {
+    batchedStoreListener = new items(prevDeps[3]).BatchedStoreListener(batchedStoreListener, function updateState() {
       stateFromStores = stateFromStores.getStateFromStores();
       if (!closure_1_3(stateFromStores.state, stateFromStores)) {
         tmp.state = stateFromStores;
@@ -78,7 +72,9 @@ export function statesWillNeverBeEqual() {
   return false;
 }
 export { useStateFromStores };
-export const useStateFromStoresObject = (items, cResult, items1) =>
-  useStateFromStores(items, cResult, items1, discord_common_shallowEqualDefault);
-export const useStateFromStoresArray = (items, cResult, items1) =>
-  useStateFromStores(items, cResult, items1, discord_common_shallowEqual.areArraysShallowEqual);
+export const useStateFromStoresObject = function useStateFromStoresObject(items, cResult, items1) {
+  return useStateFromStores(items, cResult, items1, discord_common_shallowEqualDefault);
+};
+export const useStateFromStoresArray = function useStateFromStoresArray(items, cResult, items1) {
+  return useStateFromStores(items, cResult, items1, discord_common_shallowEqual.areArraysShallowEqual);
+};

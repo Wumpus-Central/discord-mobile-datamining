@@ -8,7 +8,7 @@ import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActi
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const constants = fn(1614).MediaPickerActionSheetEngagedActions;
+const constants = fn(1626).MediaPickerActionSheetEngagedActions;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onBack) => {
+  ? function MediaKeyboardActionSheet(onBack) {
       const cResult = onClose(sharedValue[5]).c(41);
       ({
         channel,
@@ -300,7 +300,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = fn;
       const obj2 = onClose(sharedValue[6]);
     }
-  : (onAttachPress) => {
+  : function MediaKeyboardActionSheet(onAttachPress) {
       onAttachPress = onAttachPress.onAttachPress;
       const onViewAll = onAttachPress.onViewAll;
       const onClose = onAttachPress.onClose;

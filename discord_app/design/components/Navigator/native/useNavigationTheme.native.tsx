@@ -1,7 +1,7 @@
 // discord_app/design/components/Navigator/native/useNavigationTheme.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Link from "../../../../../_runtime/01491_Link.js";
+import Link from "../../../../../_runtime/01503_Link.js";
 import useToken from "../../../tokens/native/useToken.tsx";
 import shared from "../../../shared.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigationTheme.native.tsx");
 
 export const useNavigationTheme = ReactCompilerGating.isReactCompilerEnabled()
-  ? (DARK) => {
+  ? function useNavigationTheme(DARK) {
       const cResult = c.c(11);
       const token = useToken.useToken(nativeDefault.colors.TEXT_STRONG, DARK);
       const token1 = useToken.useToken(nativeDefault.colors.BORDER_SUBTLE, DARK);
@@ -68,7 +68,7 @@ export const useNavigationTheme = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = obj8;
       tmp11 = obj8;
     }
-  : (DARK) => {
+  : function useNavigationTheme(DARK) {
       _require = DARK;
       token = require("useToken").useToken(token(token1[4]).colors.TEXT_STRONG, DARK);
       let obj = require("useToken");

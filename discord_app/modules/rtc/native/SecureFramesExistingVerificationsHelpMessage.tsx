@@ -15,7 +15,7 @@ let closure_4 = createStyles.createStyles({ container: { width: "100%" } });
 const result = size.fileFinishedImporting("modules/rtc/native/SecureFramesExistingVerificationsHelpMessage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SecureFramesExistingVerificationsHelpMessage(arg0) {
       const cResult = c.c(13);
       ({ style, userId, userKey } = arg0);
       const tmp4 = closure_4();
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj5;
       tmp5 = obj5;
     }
-  : (arg0) => {
+  : function SecureFramesExistingVerificationsHelpMessage(arg0) {
       ({ style, userId, userKey } = arg0);
       const tmp = closure_4();
       const secureFramesUserVerifiedKeysCount =

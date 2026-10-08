@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/design/DesignSystemsNotificat
 
 export default apexExperiment;
 export const useDesignSystemsNotificationComponents = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useDesignSystemsNotificationComponents(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -30,7 +30,9 @@ export const useDesignSystemsNotificationComponents = ReactCompilerGating.isReac
       }
       return apexExperiment.useConfig(tmp2).enabled;
     }
-  : (location) => apexExperiment.useConfig({ location }).enabled;
+  : function useDesignSystemsNotificationComponents(location) {
+      return apexExperiment.useConfig({ location }).enabled;
+    };
 export const getDesignSystemsNotificationComponents = function getDesignSystemsNotificationComponents(
   DevToolsInAppNotificationTestingScreen,
 ) {

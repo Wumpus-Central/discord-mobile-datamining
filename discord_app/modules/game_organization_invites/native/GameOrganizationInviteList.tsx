@@ -8,7 +8,7 @@ function keyExtractor(id) {
   return id.id;
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = {
     content: { paddingBottom: arg0 + nativeDefault.space.PX_16 },
@@ -21,7 +21,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationInviteList.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (users) => {
+  ? function GameOrganizationInviteList(users) {
       const cResult = users(onInvite[5]).c(13);
       users = users.users;
       const getSendState = users.getSendState;
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = S;
       let obj = users(onInvite[5]);
     }
-  : (users) => {
+  : function GameOrganizationInviteList(users) {
       users = users.users;
       const getSendState = users.getSendState;
       const onInvite = users.onInvite;

@@ -1,13 +1,13 @@
 // discord_app/modules/channel/usePrivateChannelWaveEligible.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef4467 from "../../../_runtime/metro/04467__.js";
+import _modDef4659 from "../../../_runtime/metro/04659__.js";
 import MessageStore from "../../stores/MessageStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelFlags = fn(2058).ChannelFlags;
+const ChannelFlags = fn(2070).ChannelFlags;
 const MessageTypes = fn(1085).MessageTypes;
 let c7 = 1814400000;
 const ReactCompilerGating = fn(558);
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/usePrivateChannelWaveEligible.tsx");
 
 export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isDM, arg1) => {
+  ? function usePrivateChannelWaveEligible(isDM, arg1) {
       const _require = isDM;
       const cResult = require("c").c(21);
       if (cResult[0] !== isDM) {
@@ -151,214 +151,172 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
           }
         }
         if (cResult[12] !== isDM.id) {
-          class C {
+          class F {
             constructor() {
-              messages = closure_3.getMessages(closure_0.id);
-              tmp = 1 === messages.length;
-              if (tmp) {
-                firstResult = messages.first();
-                tmp3 = null;
-                type = undefined;
-                if (firstResult != null) {
-                  type = firstResult.type;
-                }
-                tmp5 = MessageTypes;
-                tmp = type === MessageTypes.FRIEND_REQUEST_ACCEPTED;
+              isFriendResult = null != closure_1;
+              if (isFriendResult) {
+                tmp3 = closure_4;
+                isFriendResult = closure_4.isFriend(tmp);
               }
-              return tmp;
+              return isFriendResult;
             }
           }
           cResult[12] = isDM.id;
-          cResult[13] = C;
+          cResult[13] = tmp19;
         } else {
-          class C {
+          class F {
             constructor() {
-              messages = closure_3.getMessages(closure_0.id);
-              tmp = 1 === messages.length;
-              if (tmp) {
-                firstResult = messages.first();
-                tmp3 = null;
-                type = undefined;
-                if (firstResult != null) {
-                  type = firstResult.type;
-                }
-                tmp5 = MessageTypes;
-                tmp = type === MessageTypes.FRIEND_REQUEST_ACCEPTED;
+              isFriendResult = null != closure_1;
+              if (isFriendResult) {
+                tmp3 = closure_4;
+                isFriendResult = closure_4.isFriend(tmp);
               }
-              return tmp;
+              return isFriendResult;
             }
           }
         }
         const tmpResult6 = tmp(504);
-        const stateFromStores2 = tmp(504).useStateFromStores(tmp17, C);
+        const stateFromStores2 = tmp(504).useStateFromStores(tmp17, tmp19);
         if (cResult[14] !== isDM) {
-          class C {
+          class F {
             constructor() {
-              messages = closure_3.getMessages(closure_0.id);
-              tmp = 1 === messages.length;
-              if (tmp) {
-                firstResult = messages.first();
-                tmp3 = null;
-                type = undefined;
-                if (firstResult != null) {
-                  type = firstResult.type;
-                }
-                tmp5 = MessageTypes;
-                tmp = type === MessageTypes.FRIEND_REQUEST_ACCEPTED;
+              isFriendResult = null != closure_1;
+              if (isFriendResult) {
+                tmp3 = closure_4;
+                isFriendResult = closure_4.isFriend(tmp);
               }
-              return tmp;
+              return isFriendResult;
             }
           }
           const hasFlagResult = isDM.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
           cResult[14] = isDM;
           cResult[15] = hasFlagResult;
         } else {
-          class C {
+          class F {
             constructor() {
-              messages = closure_3.getMessages(closure_0.id);
-              tmp = 1 === messages.length;
-              if (tmp) {
-                firstResult = messages.first();
-                tmp3 = null;
-                type = undefined;
-                if (firstResult != null) {
-                  type = firstResult.type;
-                }
-                tmp5 = MessageTypes;
-                tmp = type === MessageTypes.FRIEND_REQUEST_ACCEPTED;
+              isFriendResult = null != closure_1;
+              if (isFriendResult) {
+                tmp3 = closure_4;
+                isFriendResult = closure_4.isFriend(tmp);
               }
-              return tmp;
+              return isFriendResult;
             }
           }
         }
         const _Symbol4 = Symbol;
         if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-          class C {
+          class F {
             constructor() {
-              messages = closure_3.getMessages(closure_0.id);
-              tmp = 1 === messages.length;
-              if (tmp) {
-                firstResult = messages.first();
-                tmp3 = null;
-                type = undefined;
-                if (firstResult != null) {
-                  type = firstResult.type;
-                }
-                tmp5 = MessageTypes;
-                tmp = type === MessageTypes.FRIEND_REQUEST_ACCEPTED;
+              isFriendResult = null != closure_1;
+              if (isFriendResult) {
+                tmp3 = closure_4;
+                isFriendResult = closure_4.isFriend(tmp);
               }
-              return tmp;
+              return isFriendResult;
             }
           }
           const items3 = [MessageStore];
           cResult[16] = items3;
-          const tmp22 = items3;
+          const tmp23 = items3;
         } else {
-          class C {
+          class F {
             constructor() {
-              messages = closure_3.getMessages(closure_0.id);
-              tmp = 1 === messages.length;
-              if (tmp) {
-                firstResult = messages.first();
-                tmp3 = null;
-                type = undefined;
-                if (firstResult != null) {
-                  type = firstResult.type;
-                }
-                tmp5 = MessageTypes;
-                tmp = type === MessageTypes.FRIEND_REQUEST_ACCEPTED;
+              isFriendResult = null != closure_1;
+              if (isFriendResult) {
+                tmp3 = closure_4;
+                isFriendResult = closure_4.isFriend(tmp);
               }
-              return tmp;
+              return isFriendResult;
             }
           }
         }
         if (cResult[17] !== isDM.id) {
-          class W {
+          class T {
             constructor() {
               return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
           cResult[17] = isDM.id;
-          cResult[18] = W;
+          cResult[18] = T;
         } else {
-          class W {
+          class T {
             constructor() {
               return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
         }
         const tmpResult7 = tmp(504);
-        const stateFromStores3 = tmp(504).useStateFromStores(tmp22, W);
+        const stateFromStores3 = tmp(504).useStateFromStores(tmp23, T);
         if (cResult[19] !== isDM.id) {
-          class W {
+          class T {
             constructor() {
               return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
           const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(isDM.id);
-          const tmpResult9 = tmp(4558);
+          const tmpResult9 = tmp(4750);
           const isWithinIntervalResult = tmpResult9.isWithinInterval(
-            _modDef4467(),
-            _modDef4467(extractTimestampResult),
+            _modDef4659(),
+            _modDef4659(extractTimestampResult),
             c7,
           );
           cResult[19] = isDM.id;
           cResult[20] = isWithinIntervalResult;
-          const tmp27 = _modDef4467();
+          const tmp28 = _modDef4659();
         } else {
-          class W {
+          class T {
             constructor() {
               return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
         }
         const tmpResult8 = tmp(504);
-        const strangerDangerWarning = tmp(9798).useStrangerDangerWarning(isDM.id);
+        const strangerDangerWarning = tmp(10362).useStrangerDangerWarning(isDM.id);
         if (tmp4) {
-          class W {
+          class T {
             constructor() {
               return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
         }
         if (tmp4) {
-          class W {
+          class T {
             constructor() {
               return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
         }
         if (tmp4) {
-          class W {
+          class T {
             constructor() {
               return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
-          if (!tmp20) {
-            class W {
+          if (!tmp21) {
+            class T {
               constructor() {
                 return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
               }
             }
           }
-          tmp4 = tmp20;
+          tmp4 = tmp21;
         }
         if (tmp4) {
-          class W {
+          class T {
             constructor() {
               return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
         }
         if (tmp4) {
-          class W {
+          class T {
             constructor() {
               return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
         }
         if (tmp4) {
-          class W {
+          class T {
             constructor() {
               return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
@@ -368,7 +326,7 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
         return tmp4;
       }
       if (tmp4) {
-        class W {
+        class T {
           constructor() {
             return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
           }
@@ -380,7 +338,7 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
       tmp6 = tmp7;
       const obj = require("c");
     }
-  : (isDM, arg1) => {
+  : function usePrivateChannelWaveEligible(isDM, arg1) {
       const _require = isDM;
       let tmp = isDM.isDM() && !isDM.isSystemDM();
       if (tmp) {
@@ -433,10 +391,10 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
       const obj5 = recipientId(11);
       const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
       const obj6 = require("DateUtils");
-      const tmp9 = recipientId(4467)();
+      const tmp9 = recipientId(4659)();
       const isWithinIntervalResult = obj6.isWithinInterval(
-        recipientId(4467)(),
-        recipientId(4467)(extractTimestampResult),
+        recipientId(4659)(),
+        recipientId(4659)(extractTimestampResult),
         c7,
       );
       const strangerDangerWarning = require("useStrangerDangerWarning").useStrangerDangerWarning(isDM.id);

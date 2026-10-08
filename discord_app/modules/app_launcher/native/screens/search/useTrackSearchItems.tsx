@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/search/useTrackSearchItems.tsx");
 
 export const useTrackSearchItems = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, current) => {
+  ? function useTrackSearchItems(arg0, arg1, current) {
       _require = arg0;
       dependencyMap = arg1;
       noop = current;
@@ -58,12 +58,12 @@ export const useTrackSearchItems = ReactCompilerGating.isReactCompilerEnabled()
                 ({ applicationId, commandId } = dependencyMap(isViewable.item));
                 const tmp5 = dependencyMap(isViewable.item);
                 const obj2 = {
-                  type: closure_0(1260).ImpressionTypes.VIEW,
-                  name: closure_0(1260).ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
+                  type: closure_0(1272).ImpressionTypes.VIEW,
+                  name: closure_0(1272).ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                   properties: null,
                 };
                 const obj3 = {
-                  location: closure_0(7047).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
+                  location: closure_0(7235).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
                   application_id: applicationId,
                   command_id: commandId,
                   search_results_position: isViewable.index,
@@ -71,8 +71,8 @@ export const useTrackSearchItems = ReactCompilerGating.isReactCompilerEnabled()
                   source,
                 };
                 obj2.properties = obj3;
-                closure_0(8455).trackImpression(obj2, false);
-                const obj = closure_0(8455);
+                closure_0(8941).trackImpression(obj2, false);
+                const obj = closure_0(8941);
               }
             }
           }
@@ -85,7 +85,7 @@ export const useTrackSearchItems = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = fn;
       tmp3 = fn;
     }
-  : (arg0, arg1, current) => {
+  : function useTrackSearchItems(arg0, arg1, current) {
       _require = arg0;
       dependencyMap = arg1;
       noop = current;
@@ -109,12 +109,12 @@ export const useTrackSearchItems = ReactCompilerGating.isReactCompilerEnabled()
                 ({ applicationId, commandId } = dependencyMap(isViewable.item));
                 const tmp5 = dependencyMap(isViewable.item);
                 const obj2 = {
-                  type: closure_0(1260).ImpressionTypes.VIEW,
-                  name: closure_0(1260).ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
+                  type: closure_0(1272).ImpressionTypes.VIEW,
+                  name: closure_0(1272).ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                   properties: null,
                 };
                 const obj3 = {
-                  location: closure_0(7047).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
+                  location: closure_0(7235).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
                   application_id: applicationId,
                   command_id: commandId,
                   search_results_position: isViewable.index,
@@ -122,8 +122,8 @@ export const useTrackSearchItems = ReactCompilerGating.isReactCompilerEnabled()
                   source,
                 };
                 obj2.properties = obj3;
-                closure_0(8455).trackImpression(obj2, false);
-                const obj = closure_0(8455);
+                closure_0(8941).trackImpression(obj2, false);
+                const obj = closure_0(8941);
               }
             }
           }

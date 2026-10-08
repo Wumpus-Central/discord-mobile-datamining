@@ -6,14 +6,14 @@ import LinkIcon from "../../../../design/components/Icon/native/redesign/generat
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import useFontScale from "../../../screen/native/useFontScale.tsx";
-import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
-import PhoneCallIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx";
-import PhoneHangUpIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
 import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
 import RowGeneratorStyleSheet from "../../../messages/native/renderer/RowGeneratorStyleSheet.tsx";
+import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import RowGeneratorTypes from "../../../messages/native/renderer/RowGeneratorTypes.tsx";
-import MusicIcon from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
+import PhoneCallIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx";
+import PhoneHangUpIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
+import MusicIcon from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import useScaledTextLineHeight from "../../../screen/native/useScaledTextLineHeight.android.tsx";
 import VideoIcon from "../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import MessagePreviewMarkup from "../../../message_previews/native/MessagePreviewMarkup.tsx";
@@ -33,7 +33,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (icon) => {
+  ? function PreviewIcon(icon) {
       const cResult = c.c(19);
       if (cResult[0] !== icon) {
         icon = icon.icon;
@@ -145,7 +145,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp9;
       }
     }
-  : (icon) => {
+  : function PreviewIcon(icon) {
       icon = icon.icon;
       const merged = Object.assign(icon, Object.assign({ icon: 0 }));
       if ("image" === icon) {
@@ -185,7 +185,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let closure_11 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function PreviewMarkup(arg0) {
         const cResult = c.c(8);
         ({ markup, channelId, guildId, muted, layout, color } = arg0);
         const fontScale = useFontScale.useFontScale();
@@ -225,7 +225,7 @@ let closure_11 = noop.memo(
         tmp5 = result;
         const tmpResult = MessagePreviewMarkup;
       }
-    : (arg0) => {
+    : function PreviewMarkup(arg0) {
         ({ markup, channelId, guildId, muted, layout, color } = arg0);
         const fontScale = useFontScale.useFontScale();
         return MessagePreviewMarkup.renderMessagePreviewMarkup({
@@ -241,7 +241,7 @@ let closure_11 = noop.memo(
 );
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ChannelRowPreview(arg0) {
       const cResult = c.c(28);
       ({ message, channel, layout, lineClamp, muted, variant, color } = arg0);
       let num = 1;
@@ -406,7 +406,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = layoutStyles;
       const tmpResult6 = useScaledTextLineHeight;
     }
-  : (arg0) => {
+  : function ChannelRowPreview(arg0) {
       ({ message, channel, layout, lineClamp } = arg0);
       if (lineClamp === undefined) {
         lineClamp = 1;
@@ -485,7 +485,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_12 = tmp3;
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (textColor) => {
+  ? function NativeChannelRowPreview(textColor) {
       const cResult = lineClamp(token[6]).c(19);
       ({ message, lineClamp } = textColor);
       ({ messageSizeCacheRef, maxHeight, gifAutoPlay, gradientStyles, gradientColors } = textColor);
@@ -595,35 +595,6 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           };
           const tmp25 = closure_8(tmp5(tmp2[29]), obj4);
           cResult[11] = gradientColors;
-          class I {
-            constructor(arg0) {
-              processColorOrThrowResult = undefined;
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              textColor.contextType = closure_0(closure_2[25]).MessageContextType.SEARCH;
-              if (null != closure_2) {
-                try {
-                  tmp2Result = tmp2(tmp3[26]);
-                  processColorOrThrowResult = tmp2Result.processColorOrThrow(tmp4);
-                } catch (err) {}
-              }
-              if (null != processColorOrThrowResult) {
-                tmp5 = processColorOrThrowResult;
-                textColor.message.textColor = processColorOrThrowResult;
-              }
-              if (null != lineClamp) {
-                obj1 = { numberOfLines: null, expandable: false, seeMoreLabel: "...", seeMoreLabelColor: null };
-                obj1.numberOfLines = tmp6;
-                if (processColorOrThrowResult == null) {
-                  tmp7 = closure_1;
-                  processColorOrThrowResult = closure_1.seeMoreLabelColor;
-                }
-                obj1.seeMoreLabelColor = processColorOrThrowResult;
-                textColor.truncation = obj1;
-              }
-              return;
-            }
-          }
           cResult[12] = gradientStyles;
           cResult[13] = maxHeight;
           cResult[14] = message;
@@ -634,50 +605,42 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           tmp23 = tmp25;
         }
       }
-      class I {
-        constructor(arg0) {
-          processColorOrThrowResult = undefined;
-          tmp2 = closure_0;
-          tmp3 = closure_2;
-          textColor.contextType = closure_0(closure_2[25]).MessageContextType.SEARCH;
-          if (null != closure_2) {
-            try {
-              tmp2Result = tmp2(tmp3[26]);
-              processColorOrThrowResult = tmp2Result.processColorOrThrow(tmp4);
-            } catch (err) {}
+      function modifyRow(message) {
+        let processColorOrThrowResult;
+        message.contextType = RowGeneratorTypes.MessageContextType.SEARCH;
+        if (null != token) {
+          try {
+            processColorOrThrowResult = RowGeneratorStyleSheet.processColorOrThrow(tmp4);
+            const tmp2Result = RowGeneratorStyleSheet;
+          } catch (err) {}
+        }
+        if (null != processColorOrThrowResult) {
+          message.message.textColor = processColorOrThrowResult;
+        }
+        if (null != lineClamp) {
+          const obj = { numberOfLines: tmp6, expandable: false, seeMoreLabel: "...", seeMoreLabelColor: null };
+          if (processColorOrThrowResult == null) {
+            processColorOrThrowResult = seeMoreLabelColor.seeMoreLabelColor;
           }
-          if (null != processColorOrThrowResult) {
-            tmp5 = processColorOrThrowResult;
-            textColor.message.textColor = processColorOrThrowResult;
-          }
-          if (null != lineClamp) {
-            obj1 = { numberOfLines: null, expandable: false, seeMoreLabel: "...", seeMoreLabelColor: null };
-            obj1.numberOfLines = tmp6;
-            if (processColorOrThrowResult == null) {
-              tmp7 = closure_1;
-              processColorOrThrowResult = closure_1.seeMoreLabelColor;
-            }
-            obj1.seeMoreLabelColor = processColorOrThrowResult;
-            textColor.truncation = obj1;
-          }
-          return;
+          obj.seeMoreLabelColor = processColorOrThrowResult;
+          message.truncation = obj;
         }
       }
       cResult[2] = token;
       cResult[3] = lineClamp;
       cResult[4] = tmp7;
-      cResult[5] = I;
-      tmp10 = I;
+      cResult[5] = modifyRow;
+      tmp10 = modifyRow;
       const tmpResult2 = lineClamp(token[24]);
     }
-  : (arg0) => {
+  : function NativeChannelRowPreview(arg0) {
       ({ lineClamp: require, gifAutoPlay } = arg0);
       ({ message, messageSizeCacheRef, maxHeight } = arg0);
       if (gifAutoPlay === undefined) {
         gifAutoPlay = false;
       }
       ({ textColor, gradientStyles, gradientColors } = arg0);
-      const tmp = gifAutoPlay(4797)();
+      const tmp = gifAutoPlay(4991)();
       let obj = createStyles;
       dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT })(tmp);
       const obj2 = { seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT };
@@ -711,7 +674,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         });
         return obj;
       }, items);
-      return closure_8(gifAutoPlay(8336), {
+      return closure_8(gifAutoPlay(9308), {
         pointerEvents: "none",
         horizontalOffset: 0,
         modifyRow(message) {
@@ -752,7 +715,7 @@ export const ChannelRowPreview = tmp3;
 export const NativeChannelRowPreview = tmp4;
 export const NativeMessageChannelRowPreview = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (message) => {
+    ? function NativeMessageChannelRowPreview(message) {
         _require = message;
         const cResult = require("c").c(8);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -803,7 +766,7 @@ export const NativeMessageChannelRowPreview = noop.memo(
         }
         tmpResult2 = require("useFormattedMessagePreview");
       }
-    : (message) => {
+    : function NativeMessageChannelRowPreview(message) {
         _require = message;
         const items = [RelationshipStore];
         const items1 = [message.message.author.id];

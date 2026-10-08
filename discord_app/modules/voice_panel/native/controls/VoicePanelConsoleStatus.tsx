@@ -6,12 +6,12 @@ import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EDGE_GUTTER = fn(11919).EDGE_GUTTER;
-const CONTROLS_HEIGHT = fn(11914).CONTROLS_HEIGHT;
+const EDGE_GUTTER = fn(11992).EDGE_GUTTER;
+const CONTROLS_HEIGHT = fn(11987).CONTROLS_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 36;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   consoleParentContainer: {
     zIndex: 1,
@@ -41,7 +41,7 @@ obj2.blockingControlCover = {
 };
 let closure_9 = createStyles.createStyles(obj2);
 let obj5 = {};
-let merged = Object.assign(fn(11916).MODE_CHANGE_PHYSICS);
+let merged = Object.assign(fn(11989).MODE_CHANGE_PHYSICS);
 obj5.overshootClamping = true;
 const __initData = {
   code: 'function VoicePanelConsoleStatusTsx1(){const{color,windowDimensions,EDGE_GUTTER,CONTROLS_HEIGHT,CONSOLE_STATUS_HEIGHT,withSpring,shouldShow,FADE_IN_MODE_PHYSICS,runOnJS,cleanUp}=this.__closure;return{backgroundColor:color,width:windowDimensions.get().width-EDGE_GUTTER*2,height:CONTROLS_HEIGHT+CONSOLE_STATUS_HEIGHT,borderRadius:32,transform:[{translateY:withSpring(shouldShow.get()?0:100,FADE_IN_MODE_PHYSICS,"respect-motion-settings",function(finished){if(finished&&!shouldShow.get()){runOnJS(cleanUp)();}})}]};}',
@@ -63,8 +63,8 @@ const __initData5 = {
 };
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (cleanUp) => {
-      const cResult = state(windowDimensions[8]).c(39);
+  ? function VoicePanelConsoleStatus(cleanUp) {
+      const cResult = state(windowDimensions[8]).c(37);
       ({ wrapperSpecs, state } = cleanUp);
       cleanUp = cleanUp.cleanUp;
       const tmp4 = closure_9();
@@ -85,7 +85,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const tmp12 = tmp5(tmp2[13])(mode, wrapperSpecs, cleanUp.accessoryHeights);
         ({ hiddenProps, hiddenStyles } = tmp5(tmp2[14])(mode, wrapperSpecs));
         const tmp13 = tmp5(tmp2[14])(mode, wrapperSpecs);
-        class V {
+        class N {
           constructor() {
             size = {
               backgroundColor: color,
@@ -136,10 +136,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           runOnJS: state(tmp2[11]).runOnJS,
           cleanUp,
         };
-        V.__closure = obj4;
-        V.__workletHash = 12149301111714;
-        V.__initData = __initData;
-        const animatedStyle = state(tmp2[11]).useAnimatedStyle(V);
+        N.__closure = obj4;
+        N.__workletHash = 12149301111714;
+        N.__initData = __initData;
+        const animatedStyle = state(tmp2[11]).useAnimatedStyle(N);
         const tmpResult = state(tmp2[11]);
         class L {
           constructor() {
@@ -157,22 +157,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[6] === tmp12) {
               let tmp22 = cResult[7];
             }
-            if (cResult[8] !== tmp4.consoleContainer) {
-              let items = [tmp4.consoleContainer];
-              cResult[8] = tmp4.consoleContainer;
-              cResult[9] = items;
-              let tmp23 = items;
-            } else {
-              tmp23 = cResult[9];
-            }
-            if (cResult[10] !== icon) {
+            if (cResult[8] !== icon) {
               const obj6 = {
                 source: icon,
                 color: tmp5(tmp2[6]).unsafe_rawColors.WHITE,
                 size: state(tmp2[16]).IconSizes.SMALL,
               };
-              const tmp26 = closure_6(state(tmp2[16]).Icon, obj6);
-              class V {
+              const tmp25 = closure_6(state(tmp2[16]).Icon, obj6);
+              class N {
                 constructor() {
                   size = {
                     backgroundColor: color,
@@ -211,22 +203,22 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   return size;
                 }
               }
-              cResult[10] = icon;
-              cResult[11] = tmp26;
-              let tmp24 = tmp26;
+              cResult[8] = icon;
+              cResult[9] = tmp25;
+              let tmp23 = tmp25;
             } else {
-              tmp24 = cResult[11];
+              tmp23 = cResult[9];
             }
-            if (cResult[12] === tmp4.consoleText) {
-              if (cResult[13] === text) {
-                let tmp27 = cResult[14];
+            if (cResult[10] === tmp4.consoleText) {
+              if (cResult[11] === text) {
+                let tmp26 = cResult[12];
               }
-              if (cResult[15] !== displayCancel) {
-                let tmp31 = null;
+              if (cResult[13] !== displayCancel) {
+                let tmp30 = null;
                 if (displayCancel) {
                   const obj7 = { hitSlop: 4, onPress: state(tmp2[19]).disconnectRemote, children: null };
                   const obj8 = { variant: "text-sm/medium", color: "text-overlay-light", children: null };
-                  class V {
+                  class N {
                     constructor() {
                       size = {
                         backgroundColor: color,
@@ -265,47 +257,47 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                       return size;
                     }
                   }
-                  obj8.children = tmp33(state(tmp2[20]).t["ETE/oC"]);
+                  obj8.children = tmp32(state(tmp2[20]).t["ETE/oC"]);
                   obj7.children = closure_6(state(tmp2[17]).Text, obj8);
-                  tmp31 = closure_6(state(tmp2[18]).PressableOpacity, obj7);
+                  tmp30 = closure_6(state(tmp2[18]).PressableOpacity, obj7);
                 }
-                cResult[15] = displayCancel;
-                cResult[16] = tmp31;
-                let tmp30 = tmp31;
+                cResult[13] = displayCancel;
+                cResult[14] = tmp30;
+                let tmp29 = tmp30;
               } else {
-                tmp30 = cResult[16];
+                tmp29 = cResult[14];
               }
-              if (cResult[17] === tmp4.consoleItemContainer) {
-                if (cResult[18] === tmp24) {
-                  if (cResult[19] === tmp27) {
-                    if (cResult[20] === tmp30) {
-                      let tmp34 = cResult[21];
+              if (cResult[15] === tmp4.consoleItemContainer) {
+                if (cResult[16] === tmp23) {
+                  if (cResult[17] === tmp26) {
+                    if (cResult[18] === tmp29) {
+                      let tmp33 = cResult[19];
                     }
-                    if (cResult[22] === animatedStyle) {
-                      if (cResult[23] === tmp34) {
-                        let tmp37 = cResult[24];
+                    if (cResult[20] === animatedStyle) {
+                      if (cResult[21] === tmp33) {
+                        let tmp36 = cResult[22];
                       }
-                      if (cResult[25] === tmp23) {
-                        if (cResult[26] === tmp37) {
-                          let tmp40 = cResult[27];
+                      if (cResult[23] === tmp4.consoleContainer) {
+                        if (cResult[24] === tmp36) {
+                          let tmp39 = cResult[25];
                         }
-                        if (cResult[28] === animatedStyle1) {
-                          if (cResult[29] === tmp4.blockingControlCover) {
-                            let tmp43 = cResult[30];
+                        if (cResult[26] === animatedStyle1) {
+                          if (cResult[27] === tmp4.blockingControlCover) {
+                            let tmp42 = cResult[28];
                           }
                           const _Symbol = Symbol;
-                          if (cResult[31] === Symbol.for("react.memo_cache_sentinel")) {
-                            const tmp47 = closure_6(state(tmp2[22]).VoicePanelVisualEffectView, {});
-                            cResult[31] = tmp47;
-                            let tmp45 = tmp47;
+                          if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
+                            const tmp46 = closure_6(state(tmp2[22]).VoicePanelVisualEffectView, {});
+                            cResult[29] = tmp46;
+                            let tmp44 = tmp46;
                           } else {
-                            tmp45 = cResult[31];
+                            tmp44 = cResult[29];
                           }
-                          if (cResult[32] !== tmp43) {
-                            const obj9 = { style: tmp43, children: tmp45 };
-                            const tmp50 = closure_6(tmp5(tmp2[11]).View, obj9);
-                            cResult[32] = tmp43;
-                            class V {
+                          if (cResult[30] !== tmp42) {
+                            const obj9 = { style: tmp42, children: tmp44 };
+                            const tmp49 = closure_6(tmp5(tmp2[11]).View, obj9);
+                            cResult[30] = tmp42;
+                            class N {
                               constructor() {
                                 size = {
                                   backgroundColor: color,
@@ -344,12 +336,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 return size;
                               }
                             }
-                            cResult[33] = tmp50;
-                            let tmp48 = tmp50;
+                            cResult[31] = tmp49;
+                            let tmp47 = tmp49;
                           } else {
-                            tmp48 = cResult[33];
+                            tmp47 = cResult[31];
                           }
-                          class V {
+                          class N {
                             constructor() {
                               size = {
                                 backgroundColor: color,
@@ -389,18 +381,18 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                             }
                           }
                           const obj10 = { style: tmp22, animatedProps: hiddenProps, children: null };
-                          const items1 = [tmp40, tmp48];
-                          obj10.children = items1;
-                          const tmp53 = closure_7(tmp5(tmp2[11]).View, obj10);
-                          cResult[34] = hiddenProps;
-                          cResult[35] = tmp40;
-                          cResult[36] = tmp48;
-                          cResult[37] = tmp22;
-                          cResult[38] = tmp53;
+                          let items = [tmp39, tmp47];
+                          obj10.children = items;
+                          const tmp52 = closure_7(tmp5(tmp2[11]).View, obj10);
+                          cResult[32] = hiddenProps;
+                          cResult[33] = tmp47;
+                          cResult[34] = tmp22;
+                          cResult[35] = tmp39;
+                          cResult[36] = tmp52;
                         }
-                        const items2 = [tmp4.blockingControlCover, animatedStyle1];
-                        cResult[28] = animatedStyle1;
-                        class V {
+                        const items1 = [tmp4.blockingControlCover, animatedStyle1];
+                        cResult[26] = animatedStyle1;
+                        class N {
                           constructor() {
                             size = {
                               backgroundColor: color,
@@ -439,13 +431,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                             return size;
                           }
                         }
-                        cResult[29] = tmp4.blockingControlCover;
-                        cResult[30] = items2;
-                        tmp43 = items2;
+                        cResult[27] = tmp4.blockingControlCover;
+                        cResult[28] = items1;
+                        tmp42 = items1;
                       }
-                      const obj11 = { style: tmp23, children: tmp37 };
-                      const tmp42 = closure_6(tmp5(tmp2[21]), obj11);
-                      class V {
+                      const obj11 = { style: tmp4.consoleContainer, children: tmp36 };
+                      const tmp41 = closure_6(tmp5(tmp2[21]), obj11);
+                      class N {
                         constructor() {
                           size = {
                             backgroundColor: color,
@@ -484,14 +476,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                           return size;
                         }
                       }
-                      cResult[25] = tmp23;
-                      cResult[26] = tmp37;
-                      cResult[27] = tmp42;
-                      tmp40 = tmp42;
+                      cResult[23] = tmp4.consoleContainer;
+                      cResult[24] = tmp36;
+                      cResult[25] = tmp41;
+                      tmp39 = tmp41;
                     }
-                    const obj12 = { style: animatedStyle, children: tmp34 };
-                    const tmp39 = closure_6(tmp5(tmp2[11]).View, obj12);
-                    class V {
+                    const obj12 = { style: animatedStyle, children: tmp33 };
+                    const tmp38 = closure_6(tmp5(tmp2[11]).View, obj12);
+                    class N {
                       constructor() {
                         size = {
                           backgroundColor: color,
@@ -530,16 +522,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                         return size;
                       }
                     }
-                    cResult[22] = animatedStyle;
-                    cResult[23] = tmp34;
-                    cResult[24] = tmp39;
-                    tmp37 = tmp39;
+                    cResult[20] = animatedStyle;
+                    cResult[21] = tmp33;
+                    cResult[22] = tmp38;
+                    tmp36 = tmp38;
                   }
                 }
               }
               const obj13 = { style: tmp4.consoleItemContainer, children: null };
-              const items3 = [, ,];
-              class V {
+              const items2 = [, ,];
+              class N {
                 constructor() {
                   size = {
                     backgroundColor: color,
@@ -578,24 +570,24 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   return size;
                 }
               }
-              items3[1] = tmp27;
-              items3[2] = tmp30;
-              obj13.children = items3;
-              const tmp36 = closure_7(tmp5(tmp2[21]), obj13);
-              cResult[17] = tmp4.consoleItemContainer;
-              cResult[18] = tmp24;
-              cResult[19] = tmp27;
-              cResult[20] = tmp30;
-              cResult[21] = tmp36;
-              tmp34 = tmp36;
+              items2[1] = tmp26;
+              items2[2] = tmp29;
+              obj13.children = items2;
+              const tmp35 = closure_7(tmp5(tmp2[21]), obj13);
+              cResult[15] = tmp4.consoleItemContainer;
+              cResult[16] = tmp23;
+              cResult[17] = tmp26;
+              cResult[18] = tmp29;
+              cResult[19] = tmp35;
+              tmp33 = tmp35;
             }
             const obj14 = {
               variant: "text-sm/medium",
               color: "text-overlay-light",
               style: tmp4.consoleText,
-              children: null,
+              children: text,
             };
-            class V {
+            class N {
               constructor() {
                 size = {
                   backgroundColor: color,
@@ -634,34 +626,33 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 return size;
               }
             }
-            const tmp29 = closure_6(state(tmp2[17]).Text, obj14);
-            cResult[12] = tmp4.consoleText;
-            cResult[13] = text;
-            cResult[14] = tmp29;
-            tmp27 = tmp29;
+            cResult[10] = tmp4.consoleText;
+            cResult[11] = text;
+            cResult[12] = tmp28;
+            tmp26 = tmp28;
           }
         }
-        const items4 = [tmp4.consoleParentContainer, tmp12, hiddenStyles];
+        const items3 = [tmp4.consoleParentContainer, tmp12, hiddenStyles];
         cResult[4] = hiddenStyles;
         cResult[5] = tmp4.consoleParentContainer;
         cResult[6] = tmp12;
-        cResult[7] = items4;
-        tmp22 = items4;
+        cResult[7] = items3;
+        tmp22 = items3;
         const tmpResult2 = state(tmp2[11]);
       }
       let fn = function l() {
         const result = sharedValue.set(state !== native.TransitionStates.YEETED);
       };
-      const items5 = [sharedValue, state];
+      const items4 = [sharedValue, state];
       cResult[0] = sharedValue;
       cResult[1] = state;
       cResult[2] = fn;
-      cResult[3] = items5;
-      tmp10 = items5;
+      cResult[3] = items4;
+      tmp10 = items4;
       tmp9 = fn;
       const obj3 = state(windowDimensions[11]);
     }
-  : (cleanUp) => {
+  : function VoicePanelConsoleStatus(cleanUp) {
       ({ wrapperSpecs, state } = cleanUp);
       cleanUp = cleanUp.cleanUp;
       let windowDimensions;
@@ -753,15 +744,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       obj5 = { style: null, animatedProps: hiddenProps, children: null };
       const items1 = [tmp.consoleParentContainer, tmp9, hiddenStyles];
       obj5.style = items1;
-      const obj6 = { style: null, children: null };
-      const items2 = [tmp.consoleContainer];
-      obj6.style = items2;
+      const obj6 = { style: tmp.consoleContainer, children: null };
       const obj4 = state(windowDimensions[11]);
       const obj7 = { style: animatedStyle, children: null };
       const obj8 = { style: tmp.consoleItemContainer, children: null };
       const tmp15 = cleanUp(windowDimensions[21]);
       const tmp16 = cleanUp(windowDimensions[21]);
-      const items3 = [
+      const items2 = [
         closure_6(state(windowDimensions[16]).Icon, {
           source: icon,
           color: cleanUp(windowDimensions[6]).unsafe_rawColors.WHITE,
@@ -783,16 +772,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         obj11.children = closure_6(state(tmp3[17]).Text, obj12);
         tmp14Result = closure_6(state(tmp3[18]).PressableOpacity, obj11);
       }
-      items3[2] = tmp14Result;
-      obj8.children = items3;
+      items2[2] = tmp14Result;
+      obj8.children = items2;
       obj7.children = closure_7(tmp16, obj8);
       obj6.children = closure_6(cleanUp(windowDimensions[11]).View, obj7);
-      const items4 = [closure_6(tmp15, obj6)];
+      const items3 = [closure_6(tmp15, obj6)];
       const obj13 = { style: null, children: closure_6(state(windowDimensions[22]).VoicePanelVisualEffectView, {}) };
-      const items5 = [tmp.blockingControlCover, animatedStyle1];
-      obj13.style = items5;
-      items4[1] = closure_6(tmp2(windowDimensions[11]).View, obj13);
-      obj5.children = items4;
+      const items4 = [tmp.blockingControlCover, animatedStyle1];
+      obj13.style = items4;
+      items3[1] = closure_6(tmp2(windowDimensions[11]).View, obj13);
+      obj5.children = items3;
       return closure_7(cleanUp(windowDimensions[11]).View, obj5);
     };
 let closure_17 = tmp4;

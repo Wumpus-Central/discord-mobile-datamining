@@ -11,10 +11,10 @@ const result = size.fileFinishedImporting("lib/ZustandStore.tsx");
 
 export const createZustandStore = function createZustandStore(arg0) {
   _require = arg0;
-  let obj = require("../../_runtime/metro/01254__.js");
+  let obj = require("../../_runtime/metro/01266__.js");
   let tmp = _require;
   dependencyMap = obj.createWithEqualityFn(
-    require("../../_runtime/metro/04756__.js").subscribeWithSelector((arg0, arg1, arg2) => {
+    require("../../_runtime/metro/04950__.js").subscribeWithSelector((arg0, arg1, arg2) => {
       closure_0 = arg0;
       return closure_0(
         (arg0) => {
@@ -26,16 +26,16 @@ export const createZustandStore = function createZustandStore(arg0) {
       );
     }),
   );
-  const obj2 = require("../../_runtime/metro/04756__.js");
+  const obj2 = require("../../_runtime/metro/04950__.js");
   let tmp3 = require("ReactCompilerGating").isReactCompilerEnabled()
-    ? (arg0, arg1) => {
+    ? function useState(arg0, arg1) {
         let tmp = arg1;
         if (undefined === arg1) {
           tmp = defaultStatesAreEqual;
         }
         return closure_1(arg0, tmp);
       }
-    : (arg0) => {
+    : function useState(arg0) {
         let tmp = arg1;
         if (arg1 === undefined) {
           tmp = defaultStatesAreEqual;
@@ -59,7 +59,7 @@ export const createZustandStore = function createZustandStore(arg0) {
       return tmp2;
     },
     useField: tmp(558).isReactCompilerEnabled()
-      ? (arg0, arg1) => {
+      ? function useField(arg0, arg1) {
           closure_0 = arg0;
           let tmp = arg1;
           const cResult = c.c(2);
@@ -78,7 +78,7 @@ export const createZustandStore = function createZustandStore(arg0) {
           }
           return closure_2(tmp3, tmp);
         }
-      : (arg0) => {
+      : function useField(arg0) {
           closure_0 = arg0;
           let tmp = arg1;
           if (arg1 === undefined) {

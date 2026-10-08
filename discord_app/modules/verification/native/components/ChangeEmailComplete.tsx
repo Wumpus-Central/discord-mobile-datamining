@@ -5,7 +5,7 @@ import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import EmailVerificationModalActionCreatorsDefault from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
-import _modDef6101 from "../../../../../_runtime/metro/06101__.js";
+import _modDef6279 from "../../../../../_runtime/metro/06279__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,10 +15,10 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const resetChangeEmailStore = fn(6016).resetChangeEmailStore;
+const resetChangeEmailStore = fn(6202).resetChangeEmailStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   contentContainer: {
     flexGrow: 2,
@@ -65,12 +65,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/ChangeEmailComplete.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (email) => {
+  ? function ChangeEmailComplete(email) {
       const cResult = c.c(23);
       email = email.email;
       const tmp4 = closure_9();
       if (cResult[0] !== tmp4.image) {
-        const obj2 = { style: tmp4.image, source: _modDef6101 };
+        const obj2 = { style: tmp4.image, source: _modDef6279 };
         const tmp9 = React5(React4, obj2);
         cResult[0] = tmp4.image;
         cResult[1] = tmp9;
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp18;
       tmp17 = tmp18;
     }
-  : (email) => {
+  : function ChangeEmailComplete(email) {
       const tmp = closure_9();
       const obj = {
         keyboardShouldPersistTaps: "handled",
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         contentContainerStyle: tmp.contentContainer,
         children: null,
       };
-      const items = [React5(React4, { style: tmp.image, source: _modDef6101 }), , ,];
+      const items = [React5(React4, { style: tmp.image, source: _modDef6279 }), , ,];
       const obj3 = { style: tmp.bodyInner, children: null };
       const obj4 = {
         style: tmp.title,

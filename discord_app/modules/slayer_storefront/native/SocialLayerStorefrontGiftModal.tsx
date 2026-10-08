@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontGiftModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (skuId) => {
+  ? function SocialLayerStorefrontGiftModal(skuId) {
       const cResult = skuId(stateFromStores[5]).c(45);
       skuId = skuId.skuId;
       ({ analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin } = skuId);
@@ -233,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      class R {
+      class G {
         constructor() {
           obj = closure_1(closure_2[11]);
           obj1 = {
@@ -253,11 +253,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       cResult[8] = undefined;
       cResult[9] = skuId;
-      cResult[10] = R;
-      tmp20 = R;
+      cResult[10] = G;
+      tmp20 = G;
       tmpResult3 = skuId(stateFromStores[9]);
     }
-  : (skuId) => {
+  : function SocialLayerStorefrontGiftModal(skuId) {
       skuId = skuId.skuId;
       ({ analyticsLocations, onGiftModalDismiss, giftingOrigin } = skuId);
       let applicationId;

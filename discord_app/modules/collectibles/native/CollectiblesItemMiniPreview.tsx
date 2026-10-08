@@ -7,20 +7,20 @@ import ProfileEffectDefault from "../profile_effects/native/ProfileEffect.tsx";
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
 import NameplateDefault from "../nameplates/native/Nameplate.tsx";
 import ProfileFrameSamplePreviewDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
-import _modDef8512 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef8996 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7071).isAvatarDecorationRecord;
-const isNameplateRecord = fn(1978).isNameplateRecord;
-const isProfileEffectRecord = fn(7072).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7073).isProfileFrameRecord;
-let closure_8 = fn(7904).PROFILE_FRAME_ASPECT_RATIO;
+const isAvatarDecorationRecord = fn(7257).isAvatarDecorationRecord;
+const isNameplateRecord = fn(1990).isNameplateRecord;
+const isProfileEffectRecord = fn(7258).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7259).isProfileFrameRecord;
+let closure_8 = fn(8323).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   tile: { overflow: "hidden", alignItems: "center", justifyContent: "center" },
   framePreview: {
@@ -39,7 +39,7 @@ let obj = {
 };
 let size = { overflow: "hidden", width: "100%", height: "100%", borderRadius: nativeDefault.radii.sm };
 obj.profileEffect = size;
-obj.sampleProfile = { aspectRatio: fn(8487).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(8971).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.nameplate = {
   overflow: "hidden",
   borderTopRightRadius: nativeDefault.radii.xs,
@@ -59,7 +59,7 @@ let result = size.fileFinishedImporting("modules/collectibles/native/Collectible
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function CollectiblesItemMiniPreview(arg0) {
         const cResult = c.c(47);
         ({ item, size } = arg0);
         const tmp4 = closure_12();
@@ -148,7 +148,7 @@ export default noop.memo(
           } else if (isProfileEffectRecord(item)) {
             const _Symbol = Symbol;
             if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj7 = { uri: _modDef8512 };
+              const obj7 = { uri: _modDef8996 };
               cResult[21] = obj7;
               let tmp28 = obj7;
             } else {
@@ -199,7 +199,7 @@ export default noop.memo(
             };
             const items = [tmp30, tmp34];
             obj11.children = items;
-            const tmp41 = v65535(View, obj11);
+            const tmp41 = collapsed(View, obj11);
             cResult[26] = tmp4.profileEffect;
             cResult[27] = tmp30;
             cResult[28] = tmp34;
@@ -269,7 +269,7 @@ export default noop.memo(
         cResult[4] = items2;
         tmp6 = items2;
       }
-    : (arg0) => {
+    : function CollectiblesItemMiniPreview(arg0) {
         ({ item, size } = arg0);
         const tmp = closure_12();
         const items = [tmp.tile, { width: size, height: size }];
@@ -294,14 +294,14 @@ export default noop.memo(
           const obj7 = { style: items, children: null };
           const obj8 = { style: tmp.profileEffect, accessible: false, importantForAccessibility: "no", children: null };
           const obj9 = { source: null, style: null, resizeMode: "cover" };
-          const obj10 = { uri: _modDef8512 };
+          const obj10 = { uri: _modDef8996 };
           obj9.source = obj10;
           obj9.style = tmp.sampleProfile;
           const items1 = [options(FastImageDefault, obj9)];
           const obj11 = { skuId: item.skuId, bannerAdjustment: 0, useThumbnail: true };
           items1[1] = options(ProfileEffectDefault, obj11);
           obj8.children = items1;
-          obj7.children = v65535(View, obj8);
+          obj7.children = collapsed(View, obj8);
           return options(View, obj7);
         } else if (isNameplateRecord(item)) {
           const obj12 = { style: null, children: null };

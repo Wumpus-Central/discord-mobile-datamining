@@ -41,7 +41,7 @@ export const skipServerOnboardingSetupProgress = function skipServerOnboardingSe
   DispatcherDefault.dispatch({ type: "SERVER_ONBOARDING_SETUP_PROGRESS_SKIP", guildId });
 };
 export const useIsServerOnboardingSetupProgressSkipped = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsServerOnboardingSetupProgressSkipped(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -68,7 +68,7 @@ export const useIsServerOnboardingSetupProgressSkipped = ReactCompilerGating.isR
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7);
     }
-  : (arg0) => {
+  : function useIsServerOnboardingSetupProgressSkipped(arg0) {
       _require = arg0;
       const items = [serverOnboardingSetupProgressSkipStore];
       const items1 = [arg0];

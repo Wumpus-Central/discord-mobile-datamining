@@ -24,7 +24,7 @@ const obj6 = { newUserCooldownMs: 7 * DurationsDefault.Millis.DAY };
 const result = size.fileFinishedImporting("modules/dismissible_content/DcfNewUserCooldownExperiment.tsx");
 
 export const useDcfNewUserCooldown = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDcfNewUserCooldown() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { location: "useDcfNewUserCooldown" };
@@ -35,7 +35,9 @@ export const useDcfNewUserCooldown = ReactCompilerGating.isReactCompilerEnabled(
       }
       return closure_2.useConfig(first).newUserCooldownMs;
     }
-  : () => closure_2.useConfig({ location: "useDcfNewUserCooldown" }).newUserCooldownMs;
+  : function useDcfNewUserCooldown() {
+      return closure_2.useConfig({ location: "useDcfNewUserCooldown" }).newUserCooldownMs;
+    };
 export const getDcfNewUserCooldown = function getDcfNewUserCooldown() {
   return closure_2.getConfig({ location: "getDcfNewUserCooldown" }).newUserCooldownMs;
 };

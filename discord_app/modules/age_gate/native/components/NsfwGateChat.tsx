@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef12330 from "../../../../../_runtime/metro/12330__.js";
+import _modDef12428 from "../../../../../_runtime/metro/12428__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     flex: 1,
@@ -37,7 +37,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/components/NsfwGateChat.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function NsfwGateChat() {
       const cResult = c.c(12);
       const tmp4 = closure_8();
       if (cResult[0] !== tmp4.border) {
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { source: _modDef12330 };
+        const obj3 = { source: _modDef12428 };
         const tmp13 = hasOwnProperty(React4, obj3);
         cResult[2] = tmp13;
         let tmp9 = tmp13;
@@ -102,12 +102,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp20;
       tmp19 = tmp20;
     }
-  : () => {
+  : function NsfwGateChat() {
       const tmp = closure_8();
       const obj = { children: null };
       const items = [hasOwnProperty(React3, { style: tmp.border })];
       const obj3 = { style: tmp.container, children: null };
-      const items1 = [hasOwnProperty(React4, { source: _modDef12330 })];
+      const items1 = [hasOwnProperty(React4, { source: _modDef12428 })];
       const obj5 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
       const intl = util.intl;
       obj5.children = intl.string(util.t.W4Qyxr);

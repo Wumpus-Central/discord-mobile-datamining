@@ -16,67 +16,111 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/StandaloneMembersView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function StandaloneMembersView(guildId) {
       const cResult = guildId(576).c(30);
       guildId = guildId.guildId;
       let obj = guildId(576);
-      const tmp = guildId;
-      const navigation = guildId(1490).useNavigation();
+      const navigation = guildId(1502).useNavigation();
       if (cResult[0] !== guildId) {
-        const fn = function u() {
-          GuildSettingsActionCreatorsDefault.init(guildId);
-        };
+        class M {
+          constructor() {
+            obj = closure_1(closure_2[6]);
+            initResult = obj.init(guildId);
+            return;
+          }
+        }
         const items = [guildId];
         cResult[0] = guildId;
-        cResult[1] = fn;
+        cResult[1] = M;
         cResult[2] = items;
-        let tmp6 = items;
-        let tmp5 = fn;
+        let tmp4 = items;
       } else {
-        tmp5 = cResult[1];
-        tmp6 = cResult[2];
+        class M {
+          constructor() {
+            obj = closure_1(closure_2[6]);
+            initResult = obj.init(guildId);
+            return;
+          }
+        }
+        tmp4 = cResult[2];
       }
-      const effect = noop.useEffect(tmp5, tmp6);
-      const sum = 16 + navigation(1618)().bottom;
+      const effect = noop.useEffect(M, tmp4);
+      const sum = 16 + navigation(1630)().bottom;
       if (cResult[3] !== sum) {
-        const obj3 = { contentContainerStyle: null };
-        const obj4 = { paddingBottom: sum };
-        obj3.contentContainerStyle = obj4;
+        class M {
+          constructor() {
+            obj = closure_1(closure_2[6]);
+            initResult = obj.init(guildId);
+            return;
+          }
+        }
+        const obj3 = { paddingBottom: sum };
+        tmp8[0] = obj3;
         cResult[3] = sum;
-        cResult[4] = obj3;
-        let tmp9 = obj3;
+        cResult[4] = tmp8;
       } else {
-        tmp9 = cResult[4];
+        class M {
+          constructor() {
+            obj = closure_1(closure_2[6]);
+            initResult = obj.init(guildId);
+            return;
+          }
+        }
       }
-      dependencyMap = tmp9;
+      dependencyMap = tmp8;
       if (cResult[5] !== navigation) {
-        const headerCloseButton = tmp(6017).getHeaderCloseButton(() => navigation.goBack());
+        class M {
+          constructor() {
+            obj = closure_1(closure_2[6]);
+            initResult = obj.init(guildId);
+            return;
+          }
+        }
+        const headerCloseButton = obj4.getHeaderCloseButton(() => navigation.goBack());
         cResult[5] = navigation;
         cResult[6] = headerCloseButton;
-        let tmp10 = headerCloseButton;
-        const tmpResult = tmp(6017);
       } else {
-        tmp10 = cResult[6];
+        class M {
+          constructor() {
+            obj = closure_1(closure_2[6]);
+            initResult = obj.init(guildId);
+            return;
+          }
+        }
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function f() {
-          const obj = { title: null };
-          const intl = guildId(1126).intl;
-          obj.title = intl.string(guildId(1126).t["9Oq93m"]);
-          return jsx(guildId(6017).NavigatorHeader, { title: null });
-        };
-        cResult[7] = fn2;
-        let tmp12 = fn2;
+        class M {
+          constructor() {
+            obj = closure_1(closure_2[6]);
+            initResult = obj.init(guildId);
+            return;
+          }
+        }
+        cResult[7] = tmp12;
       } else {
-        tmp12 = cResult[7];
+        class M {
+          constructor() {
+            obj = closure_1(closure_2[6]);
+            initResult = obj.init(guildId);
+            return;
+          }
+        }
       }
       if (cResult[8] === guildId) {
-        if (cResult[9] === tmp10) {
-          let tmp13 = cResult[10];
+        class M {
+          constructor() {
+            obj = closure_1(closure_2[6]);
+            initResult = obj.init(guildId);
+            return;
+          }
         }
         if (cResult[11] === guildId) {
-          if (cResult[12] === tmp9) {
-            let tmp14 = cResult[13];
+          class M {
+            constructor() {
+              obj = closure_1(closure_2[6]);
+              initResult = obj.init(guildId);
+              return;
+            }
           }
           const _Symbol = Symbol;
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
@@ -101,27 +145,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol2 = Symbol;
             if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-              class R {
+              class S {
                 constructor() {
                   return null;
                 }
               }
-              cResult[18] = tmp18;
+              cResult[18] = S;
             } else {
-              class R {
+              class S {
                 constructor() {
                   return null;
                 }
               }
             }
             if (cResult[19] === guildId) {
-              class R {
+              class S {
                 constructor() {
                   return null;
                 }
               }
               if (cResult[22] === tmp16) {
-                class R {
+                class S {
                   constructor() {
                     return null;
                   }
@@ -131,15 +175,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj5[constants.MAIN] = tmp13;
               obj5[constants.MEMBER_EDIT] = tmp14;
               obj5[constants.MEMBER_KICK] = tmp16;
-              obj5[constants.MEMBER_BAN] = tmp19;
+              obj5[constants.MEMBER_BAN] = tmp18;
               cResult[22] = tmp16;
-              cResult[23] = tmp19;
+              cResult[23] = tmp18;
               cResult[24] = tmp13;
               cResult[25] = tmp14;
               cResult[26] = obj5;
             }
             const obj6 = {
-              headerTitle: tmp18,
+              headerTitle: S,
               render(arg0) {
                 const merged = Object.assign(arg0);
                 const merged1 = Object.assign(closure_2);
@@ -147,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               },
             };
             cResult[19] = guildId;
-            cResult[20] = tmp9;
+            cResult[20] = tmp8;
             cResult[21] = obj6;
           }
           const obj7 = {
@@ -159,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             },
           };
           cResult[15] = guildId;
-          cResult[16] = tmp9;
+          cResult[16] = tmp8;
           cResult[17] = obj7;
         }
         const obj8 = {
@@ -170,24 +214,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           },
         };
         cResult[11] = guildId;
-        cResult[12] = tmp9;
+        cResult[12] = tmp8;
         cResult[13] = obj8;
-        tmp14 = obj8;
       }
       const obj9 = {
-        headerLeft: tmp10,
+        headerLeft: tmp9,
         headerTitle: tmp12,
         render() {
           return jsx(GuildSettingsModalMembersWithTabsDefault, { guildId });
         },
       };
       cResult[8] = guildId;
-      cResult[9] = tmp10;
+      cResult[9] = tmp9;
       cResult[10] = obj9;
-      tmp13 = obj9;
-      const obj2 = guildId(1490);
+      const obj2 = guildId(1502);
     }
-  : (guildId) => {
+  : function StandaloneMembersView(guildId) {
       guildId = guildId.guildId;
       let obj2;
       importDefault = guildId(obj2[4]).useNavigation();

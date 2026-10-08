@@ -4,14 +4,14 @@ import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 import GameConsoleStore from "GameConsoleStore.tsx";
 
 const require = fn;
-const CONSOLE_VOICE_PLATFORMS = fn(8781).CONSOLE_VOICE_PLATFORMS;
+const CONSOLE_VOICE_PLATFORMS = fn(9127).CONSOLE_VOICE_PLATFORMS;
 const ActivityTypes = fn(1085).ActivityTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/useConsoleConnectedAccountForVoiceUpsell.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useConsoleConnectedAccountForVoiceUpsell() {
       const cResult = arr3(576).c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SelfPresenceStore];
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== stateFromStores) {
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn2 = function v(platform) {
+          const fn2 = function p(platform) {
             platform = platform.platform;
             let hasItem = platform.type === constants.PLAYING;
             if (hasItem) {
@@ -85,24 +85,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp14 = cResult[7];
         }
         if (cResult[8] !== cResult[3]) {
-          class F {
-            constructor() {
-              mapped = closure_0.map((platform) => {
-                platform = platform.platform;
-                if (null == platform) {
-                  return null;
-                } else {
-                  const tmp3 = closure_1_1(closure_1_2[8])(platform);
-                  account = null;
-                  if (null != tmp3) {
-                    account = account.getAccount(null, tmp3);
-                  }
-                  return account;
+          const fn3 = function y() {
+            const mapped = arr3.map((platform) => {
+              platform = platform.platform;
+              if (null == platform) {
+                return null;
+              } else {
+                const tmp3 = closure_1_1(closure_1_2[8])(platform);
+                account = null;
+                if (null != tmp3) {
+                  account = account.getAccount(null, tmp3);
                 }
-              });
-              return mapped.find((item) => null != item);
-            }
-          }
+                return account;
+              }
+            });
+            return mapped.find((item) => null != item);
+          };
           cResult[8] = arr3;
           class A {
             constructor() {
@@ -111,94 +109,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return tmp;
             }
           }
-          cResult[9] = F;
+          cResult[9] = fn3;
+          let tmp16 = fn3;
         } else {
-          class F {
-            constructor() {
-              mapped = closure_0.map((platform) => {
-                platform = platform.platform;
-                if (null == platform) {
-                  return null;
-                } else {
-                  const tmp3 = closure_1_1(closure_1_2[8])(platform);
-                  account = null;
-                  if (null != tmp3) {
-                    account = account.getAccount(null, tmp3);
-                  }
-                  return account;
-                }
-              });
-              return mapped.find((item) => null != item);
-            }
-          }
+          tmp16 = cResult[9];
         }
         const tmpResult3 = tmp(504);
-        const stateFromStores2 = tmp(504).useStateFromStores(tmp14, F);
+        const stateFromStores2 = tmp(504).useStateFromStores(tmp14, tmp16);
+        let tmp19 = null;
         if (cResult[3].length > 0) {
-          class F {
-            constructor() {
-              mapped = closure_0.map((platform) => {
-                platform = platform.platform;
-                if (null == platform) {
-                  return null;
-                } else {
-                  const tmp3 = closure_1_1(closure_1_2[8])(platform);
-                  account = null;
-                  if (null != tmp3) {
-                    account = account.getAccount(null, tmp3);
-                  }
-                  return account;
-                }
-              });
-              return mapped.find((item) => null != item);
-            }
-          }
+          tmp19 = null;
           if (null != stateFromStores2) {
-            class F {
-              constructor() {
-                mapped = closure_0.map((platform) => {
-                  platform = platform.platform;
-                  if (null == platform) {
-                    return null;
-                  } else {
-                    const tmp3 = closure_1_1(closure_1_2[8])(platform);
-                    account = null;
-                    if (null != tmp3) {
-                      account = account.getAccount(null, tmp3);
-                    }
-                    return account;
-                  }
-                });
-                return mapped.find((item) => null != item);
-              }
-            }
+            tmp19 = null;
             if (!stateFromStores1) {
-              class F {
-                constructor() {
-                  mapped = closure_0.map((platform) => {
-                    platform = platform.platform;
-                    if (null == platform) {
-                      return null;
-                    } else {
-                      const tmp3 = closure_1_1(closure_1_2[8])(platform);
-                      account = null;
-                      if (null != tmp3) {
-                        account = account.getAccount(null, tmp3);
-                      }
-                      return account;
-                    }
-                  });
-                  return mapped.find((item) => null != item);
-                }
-              }
+              tmp19 = stateFromStores2;
             }
           }
         }
-        return null;
+        return tmp19;
       }
       const tmpResult = arr3(504);
     }
-  : () => {
+  : function useConsoleConnectedAccountForVoiceUpsell() {
       const items = [SelfPresenceStore];
       const stateFromStores = found(504).useStateFromStores(items, () => activities.getActivities(true));
       found = stateFromStores.filter((platform) => {

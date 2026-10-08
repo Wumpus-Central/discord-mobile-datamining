@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/chat/usePollMessageContextItemTypes.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (poll) => {
+  ? function usePollMessageContextItemTypes(poll) {
       const obj = c;
       const cResult = obj.c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_4;
     }
-  : (poll) => {
+  : function usePollMessageContextItemTypes(poll) {
       const obj = initialize;
       const items = [AuthenticationStore];
       poll = poll.poll;

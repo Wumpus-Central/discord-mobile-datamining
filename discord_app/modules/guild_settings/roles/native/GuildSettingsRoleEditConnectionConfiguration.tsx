@@ -8,8 +8,8 @@ import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import PlatformsDefault from "../../../../lib/Platforms.tsx";
-import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import useGetOrFetchApplicationBatched from "../../../applications/useGetOrFetchApplicationBatched.tsx";
@@ -112,7 +112,7 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1085).PlatformTypes;
-const Constants = fn(6686);
+const Constants = fn(6863);
 ({
   MetadataFields: closure_7,
   OperatorTypes: closure_8,
@@ -122,7 +122,7 @@ const Constants = fn(6686);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   numericalInputContainerIOSInline: { marginTop: -2 },
   numericalInputContainerAndroidInline: null,
@@ -170,7 +170,7 @@ obj2.metadataRowText = { lineHeight: 32 };
 let closure_15 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Header(arg0) {
       const cResult = c.c(20);
       ({ platform, integration: application, applicationId, onRemove, locked } = arg0);
       const tmp4 = useThemeDefault();
@@ -196,7 +196,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[0] !== bot) {
-          const obj3 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "Array" };
+          const obj3 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "r" };
           const tmp26 = onChangeText(native.Avatar, obj3);
           cResult[0] = bot;
           cResult[1] = tmp26;
@@ -217,11 +217,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 name1 = getOrFetchApplicationBatched.name;
               }
             } else if (cResult[2] !== getOrFetchApplicationBatched.bot) {
-              const obj4 = {
-                size: native.AvatarSizes.XSMALL,
-                user: getOrFetchApplicationBatched.bot,
-                guildId: "Array",
-              };
+              const obj4 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
               const tmp20 = onChangeText(native.Avatar, obj4);
               cResult[2] = getOrFetchApplicationBatched.bot;
               cResult[3] = tmp20;
@@ -319,7 +315,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp29 = formatResult;
       }
     }
-  : (arg0) => {
+  : function Header(arg0) {
       ({ platform, integration, applicationId } = arg0);
       ({ onRemove, locked } = arg0);
       const tmp2 = useThemeDefault();
@@ -337,7 +333,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         application2 = integration.application;
       }
       if (null != application2) {
-        const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "Array" };
+        const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "r" };
         let bot;
         if (integration != null) {
           const application = integration.application;
@@ -358,7 +354,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
           let tmp11;
           if (null != bot1) {
-            const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
+            const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
             tmp11 = onChangeText(native.Avatar, obj3);
           }
           let name1;
@@ -399,7 +395,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (existingPendingConfiguration) => {
+  ? function BooleanConfigRule(existingPendingConfiguration) {
       const cResult = metadataField(platform[9]).c(13);
       ({ fieldText, metadataField } = existingPendingConfiguration);
       existingPendingConfiguration = existingPendingConfiguration.existingPendingConfiguration;
@@ -475,7 +471,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             type = platform.type;
           }
           if (type == null) {
-            type = v65535;
+            type = collapsed;
           }
           const obj = {
             connectionType: type,
@@ -502,7 +498,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = metadataField(platform[9]);
       tmp2 = platform;
     }
-  : (metadataField) => {
+  : function BooleanConfigRule(metadataField) {
       metadataField = metadataField.metadataField;
       const existingPendingConfiguration = metadataField.existingPendingConfiguration;
       ({
@@ -531,7 +527,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             type = type.type;
           }
           if (type == null) {
-            type = v65535;
+            type = collapsed;
           }
           const obj = {
             connectionType: type,
@@ -551,11 +547,11 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         }
         _slicedToArray(tmp, num);
       };
-      return onChangeText(metadataField(6705).TableSwitchRow, obj, metadataField);
+      return onChangeText(metadataField(6882).TableSwitchRow, obj, metadataField);
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (existingPendingConfiguration) => {
+  ? function NumericalConfigRule(existingPendingConfiguration) {
       const cResult = require("c").c(76);
       ({ fieldText, fieldTextHook, metadataField } = existingPendingConfiguration);
       existingPendingConfiguration = existingPendingConfiguration.existingPendingConfiguration;
@@ -733,7 +729,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                                         }
                                         const metadataRow = numericalInputDisabled.metadataRow;
                                         if (cResult[39] !== numericalInputDisabled.metadataRowText) {
-                                          const fn2 = function z(children, arg1) {
+                                          const fn = function z(children, arg1) {
                                             let tmp = children;
                                             if (typeof children === "string") {
                                               const obj = {
@@ -781,7 +777,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                                               return tmp(tmp2, obj, "_numericalInputContainer");
                                             }
                                           }
-                                          let tmp47 = fn2;
+                                          let tmp47 = fn;
                                         } else {
                                           tmp47 = cResult[40];
                                         }
@@ -1386,7 +1382,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         if (platform != null) {
           type3 = platform.type;
         }
-        const fn = function b(TableSwitchRow) {
+        function onInputValueChange(TableSwitchRow) {
           closure_10(TableSwitchRow);
           let isFiniteResult = null != existingPendingConfiguration;
           if (isFiniteResult) {
@@ -1403,7 +1399,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               type = platform.type;
             }
             if (type == null) {
-              type = v65535;
+              type = collapsed;
             }
             const obj = {
               connectionType: type,
@@ -1414,11 +1410,11 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             };
             onConfigurationChange(obj, num);
           }
-        };
+        }
         cResult[10] = type3;
         cResult[11] = tmp5;
-        cResult[12] = fn;
-        numericalInputContainerBase = fn;
+        cResult[12] = onInputValueChange;
+        numericalInputContainerBase = onInputValueChange;
       }
       let obj = require("c");
       const realizedOperatorForResult = require("RoleConnectionRequirementUtils").realizedOperatorFor(operator);
@@ -1449,7 +1445,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = value3;
       const str = require("RoleConnectionRequirementUtils").displayedValueFor(value3, realizedOperatorForResult);
     }
-  : (existingPendingConfiguration) => {
+  : function NumericalConfigRule(existingPendingConfiguration) {
       ({ fieldText, fieldTextHook, metadataField } = existingPendingConfiguration);
       existingPendingConfiguration = existingPendingConfiguration.existingPendingConfiguration;
       ({
@@ -1481,7 +1477,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             type = dependencyMap.type;
           }
           if (type == null) {
-            type = v65535;
+            type = collapsed;
           }
           const obj = {
             connectionType: type,
@@ -1501,7 +1497,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       if (num == null) {
         num = -1;
       }
-      const realizedOperatorForResult = metadataField(17854).realizedOperatorFor(existingPendingConfiguration.operator);
+      const realizedOperatorForResult = metadataField(18141).realizedOperatorFor(existingPendingConfiguration.operator);
       c7 = realizedOperatorForResult;
       value = undefined;
       if (existingPendingConfiguration != null) {
@@ -1509,9 +1505,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           value = iter.value;
         }
       }
-      let obj = metadataField(17854);
-      const tmpResult = metadataField(17854);
-      str1 = metadataField(17854).displayedValueFor(value, realizedOperatorForResult).toString();
+      let obj = metadataField(18141);
+      const tmpResult = metadataField(18141);
+      str1 = metadataField(18141).displayedValueFor(value, realizedOperatorForResult).toString();
       let mapped = noop;
       [value] = noop.useState(str1);
       closure_10 = tmp9;
@@ -1535,7 +1531,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       closure_11 = tmp14;
       if (undefined !== fieldTextHook) {
-        closure_13 = metadataField(1369).isIOS()
+        closure_13 = metadataField(1381).isIOS()
           ? map.numericalInputContainerIOSInline
           : map.numericalInputContainerAndroidInline;
         const intl = metadataField(1126).intl;
@@ -1566,7 +1562,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           },
         };
         const obj3 = { style: map.metadataRow, children: null };
-        const tmpResult2 = metadataField(1369);
+        const tmpResult2 = metadataField(1381);
         fieldTextHook = mapped.Children;
         map = fieldTextHook.map;
         mapped = map(intl.format(fieldTextHook, obj2), (children, arg1) => {
@@ -1597,10 +1593,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           obj6.editable = !tmp14;
           obj6.value = value;
           obj6.onChangeText = onInputValueChange;
-          obj5.children = onInputValueChange(metadataField(1188).TextInput, obj6, metadataField);
+          obj5.children = onInputValueChange(metadataField(1200).TextInput, obj6, metadataField);
           let items1 = [onInputValueChange(map, obj5, "_numericalInputContainer")];
           const obj7 = { variant: "text-md/semibold", style: map.appNumericalInputText, children: fieldText };
-          items1[1] = onInputValueChange(metadataField(4892).Text, obj7);
+          items1[1] = onInputValueChange(metadataField(5086).Text, obj7);
           obj4.children = items1;
           tmp21Result = closure_13(tmp22, obj4);
         }
@@ -1621,7 +1617,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                 type = dependencyMap.type;
               }
               if (type == null) {
-                type = v65535;
+                type = collapsed;
               }
               const obj = {
                 connectionType: type,
@@ -1642,13 +1638,13 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             _slicedToArray(tmp3, num);
           },
         };
-        return onInputValueChange(metadataField(6705).TableSwitchRow, obj8, metadataField);
+        return onInputValueChange(metadataField(6882).TableSwitchRow, obj8, metadataField);
       }
-      const str = metadataField(17854).displayedValueFor(value, realizedOperatorForResult);
+      const str = metadataField(18141).displayedValueFor(value, realizedOperatorForResult);
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BlueskyMetadataRules(arg0) {
       const cResult = c.c(23);
       ({ configMetadataMap, onConfigurationChange, locked } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1770,7 +1766,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         locked,
       };
     }
-  : (arg0) => {
+  : function BlueskyMetadataRules(arg0) {
       ({ configMetadataMap, onConfigurationChange, locked } = arg0);
       value = PlatformsDefault.get(PlatformTypes.BLUESKY);
       const obj2 = { children: null };
@@ -1822,7 +1818,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SteamMetadataRules(arg0) {
       const cResult = c.c(30);
       ({ configMetadataMap, onConfigurationChange, locked } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1976,7 +1972,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         locked,
       };
     }
-  : (arg0) => {
+  : function SteamMetadataRules(arg0) {
       ({ configMetadataMap, onConfigurationChange, locked } = arg0);
       value = PlatformsDefault.get(PlatformTypes.STEAM);
       const obj2 = { children: null };
@@ -2045,7 +2041,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TwitterMetadataRules(arg0) {
       const cResult = c.c(31);
       ({ configMetadataMap, onConfigurationChange, locked } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -2208,7 +2204,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         locked,
       };
     }
-  : (arg0) => {
+  : function TwitterMetadataRules(arg0) {
       ({ configMetadataMap, onConfigurationChange, locked } = arg0);
       value = PlatformsDefault.get(PlatformTypes.TWITTER);
       const obj2 = { children: null };
@@ -2277,7 +2273,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RedditMetadataRules(arg0) {
       const cResult = c.c(32);
       ({ configMetadataMap, onConfigurationChange, locked } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -2449,7 +2445,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         locked,
       };
     }
-  : (arg0) => {
+  : function RedditMetadataRules(arg0) {
       ({ configMetadataMap, onConfigurationChange, locked } = arg0);
       value = PlatformsDefault.get(PlatformTypes.REDDIT);
       const obj2 = { children: null };
@@ -2518,7 +2514,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PaypalMetadataRules(arg0) {
       const cResult = c.c(17);
       ({ configMetadataMap, onConfigurationChange, locked } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -2617,7 +2613,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         locked,
       };
     }
-  : (arg0) => {
+  : function PaypalMetadataRules(arg0) {
       ({ configMetadataMap, onConfigurationChange, locked } = arg0);
       value = PlatformsDefault.get(PlatformTypes.PAYPAL);
       const obj2 = { children: null };
@@ -2652,7 +2648,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function EbayMetadataRules(arg0) {
       const cResult = c.c(38);
       ({ configMetadataMap, onConfigurationChange, locked } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -2848,7 +2844,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         locked,
       };
     }
-  : (arg0) => {
+  : function EbayMetadataRules(arg0) {
       ({ configMetadataMap, onConfigurationChange, locked } = arg0);
       value = PlatformsDefault.get(PlatformTypes.EBAY);
       const obj2 = { children: null };
@@ -2935,7 +2931,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TikTokMetadataRules(arg0) {
       const cResult = c.c(31);
       ({ configMetadataMap, onConfigurationChange, locked } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -3097,7 +3093,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         locked,
       };
     }
-  : (arg0) => {
+  : function TikTokMetadataRules(arg0) {
       ({ configMetadataMap, onConfigurationChange, locked } = arg0);
       value = PlatformsDefault.get(PlatformTypes.TIKTOK);
       const obj2 = { children: null };
@@ -3168,7 +3164,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (configurationItems) => {
+  ? function GuildSettingsRoleEditConnectionConfiguration(configurationItems) {
       const cResult = c.c(48);
       configurationItems = configurationItems.configurationItems;
       const onConfigurationChange = configurationItems.onConfigurationChange;
@@ -3240,7 +3236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = tmp6;
       }
     }
-  : (configurationItems) => {
+  : function GuildSettingsRoleEditConnectionConfiguration(configurationItems) {
       configurationItems = configurationItems.configurationItems;
       const onConfigurationChange = configurationItems.onConfigurationChange;
       ({ locked, integrations } = configurationItems);

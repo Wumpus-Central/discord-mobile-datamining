@@ -3,7 +3,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -24,11 +24,11 @@ import QuestDockStore from "QuestDockStore.tsx";
 
 const require = globalThis.__r;
 
-const AssetUtils = getScaledImageUrl(10013);
+const AssetUtils = getScaledImageUrl(9544);
 require = fn;
-const QuestConstants = fn(5630);
+const QuestConstants = fn(5977);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: metroRequire, QuestDockMode: closure_7 } = QuestConstants);
-const QuestDockConstants = fn(14912);
+const QuestDockConstants = fn(15174);
 ({
   QUEST_DOCK_CLOSED_HEIGHT: closure_8,
   QUEST_DOCK_COLLAPSED_HEIGHT: closure_9,
@@ -52,7 +52,7 @@ const __initData4 = {
 };
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsQuestDockExpanded() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [QuestDockStore];
@@ -68,13 +68,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsQuestDockExpanded() {
       const items = [QuestDockStore];
       return initialize.useStateFromStores(items, () => QuestDockStore.prevRestingQuestDockMode === constants.EXPANDED);
     };
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useQuestDockModeAnimatedReaction() {
       const context = restingQuestDockMode.useContext(
         questDockWrapperSpecs(activeQuestDockMode[8]).QuestDockGestureContext,
       );
@@ -219,7 +219,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       fn2.__initData = __initData2;
       const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
     }
-  : () => {
+  : function useQuestDockModeAnimatedReaction() {
       const context = restingQuestDockMode.useContext(
         questDockWrapperSpecs(activeQuestDockMode[8]).QuestDockGestureContext,
       );
@@ -366,7 +366,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useQuestDockExternalOffset() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [QuestDockStore];
@@ -391,14 +391,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         } else if (constants.EXPANDED === first) {
           num3 = __initData;
         } else if (constants.CLOSED === first) {
-          num3 = v65535;
+          num3 = collapsed;
         } else {
           num3 = 0;
         }
       }
       return num3;
     }
-  : () => {
+  : function useQuestDockExternalOffset() {
       let items = [QuestDockStore];
       const tmp = _slicedToArray(
         first(504).useStateFromStoresArray(items, () => {
@@ -423,7 +423,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                 return 0;
               }
             }
-            return v65535;
+            return collapsed;
           }
         } else {
           return 0;
@@ -432,13 +432,13 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useQuestDockDismissalReset() {
       const cResult = setRestingQuestDockMode(576).c(4);
       setRestingQuestDockMode = noop.useContext(
-        setRestingQuestDockMode(14916).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(15178).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const activeQuestDockMode = noop.useContext(
-        setRestingQuestDockMode(14913).QuestDockGestureContext,
+        setRestingQuestDockMode(15175).QuestDockGestureContext,
       ).activeQuestDockMode;
       if (cResult[0] === activeQuestDockMode) {
         if (cResult[1] === setRestingQuestDockMode) {
@@ -450,10 +450,10 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const fn = function t() {
         let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
         if (!isSoftDismissedResult) {
-          isSoftDismissedResult = setRestingQuestDockMode(14911).isSoftDismissed(
+          isSoftDismissedResult = setRestingQuestDockMode(15173).isSoftDismissed(
             QuestDockStore.questDockSoftDismissedAt,
           );
-          let obj = setRestingQuestDockMode(14911);
+          let obj = setRestingQuestDockMode(15173);
         }
         if (!isSoftDismissedResult) {
           setRestingQuestDockMode(constants.COLLAPSED);
@@ -461,10 +461,10 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         function maybeResetSoftDismissal() {
           let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
           if (!isSoftDismissedResult) {
-            isSoftDismissedResult = setRestingQuestDockMode(14911).isSoftDismissed(
+            isSoftDismissedResult = setRestingQuestDockMode(15173).isSoftDismissed(
               QuestDockStore.questDockSoftDismissedAt,
             );
-            const obj = setRestingQuestDockMode(14911);
+            const obj = setRestingQuestDockMode(15173);
           }
           if (!isSoftDismissedResult) {
             closure_0(constants.COLLAPSED);
@@ -484,21 +484,21 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       tmp2 = fn;
       let obj = setRestingQuestDockMode(576);
     }
-  : () => {
+  : function useQuestDockDismissalReset() {
       setRestingQuestDockMode = noop.useContext(
-        setRestingQuestDockMode(14916).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(15178).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const activeQuestDockMode = noop.useContext(
-        setRestingQuestDockMode(14913).QuestDockGestureContext,
+        setRestingQuestDockMode(15175).QuestDockGestureContext,
       ).activeQuestDockMode;
       const items = [setRestingQuestDockMode, activeQuestDockMode];
       const effect = noop.useEffect(() => {
         let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
         if (!isSoftDismissedResult) {
-          isSoftDismissedResult = setRestingQuestDockMode(14911).isSoftDismissed(
+          isSoftDismissedResult = setRestingQuestDockMode(15173).isSoftDismissed(
             QuestDockStore.questDockSoftDismissedAt,
           );
-          let obj = setRestingQuestDockMode(14911);
+          let obj = setRestingQuestDockMode(15173);
         }
         if (!isSoftDismissedResult) {
           setRestingQuestDockMode(constants.COLLAPSED);
@@ -506,10 +506,10 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         function maybeResetSoftDismissal() {
           let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
           if (!isSoftDismissedResult) {
-            isSoftDismissedResult = setRestingQuestDockMode(14911).isSoftDismissed(
+            isSoftDismissedResult = setRestingQuestDockMode(15173).isSoftDismissed(
               QuestDockStore.questDockSoftDismissedAt,
             );
-            const obj = setRestingQuestDockMode(14911);
+            const obj = setRestingQuestDockMode(15173);
           }
           if (!isSoftDismissedResult) {
             closure_0(constants.COLLAPSED);
@@ -523,7 +523,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useQuestDockExpandHandler(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       let obj = require("c");
@@ -549,7 +549,7 @@ const tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp3 = fn;
     }
-  : (arg0) => {
+  : function useQuestDockExpandHandler(arg0) {
       _require = arg0;
       const getQuestImpressionId = require("ContentImpressionTrackerHooks").useGetQuestImpressionId();
       const items = [arg0, getQuestImpressionId];
@@ -566,7 +566,7 @@ const tmp8 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (imagePreview) => {
+  ? function useBountyPreviewImageUrl(imagePreview) {
       let getScaledImageUrl = require;
       let scaledImageUrl1 = dependencyMap;
       const cResult = c.c(8);
@@ -602,7 +602,7 @@ const tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = scaledFirstFrameImageUrl;
       }
     }
-  : (imagePreview) => {
+  : function useBountyPreviewImageUrl(imagePreview) {
       const width = useWindowDimensionsDefault().width;
       const result = width / timestampProducer;
       if (null != imagePreview.imagePreview) {
@@ -676,7 +676,7 @@ export const useActionSheetPressHandler = function useActionSheetPressHandler(qu
     }
     obj2 = AdAnalyticsInterfaceExperiment;
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14920, dependencyMap.paths),
+      asyncRequireImpl(15182, dependencyMap.paths),
       "QuestDockContextMenuActionSheet",
       { creative, impressionId: tmp7 },
     );
@@ -685,7 +685,7 @@ export const useActionSheetPressHandler = function useActionSheetPressHandler(qu
 export const useQuestDockExpandHandler = tmp8;
 export const useBountyPreviewImageUrl = tmp9;
 export const useQuestDockAppThemedBackgroundColor = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useQuestDockAppThemedBackgroundColor() {
       const gradientBottom = ClientThemesOverrides.useGradientBottom();
       let backgroundColor;
       const token = useToken.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
@@ -697,7 +697,7 @@ export const useQuestDockAppThemedBackgroundColor = ReactCompilerGating.isReactC
       }
       return backgroundColor;
     }
-  : () => {
+  : function useQuestDockAppThemedBackgroundColor() {
       const gradientBottom = ClientThemesOverrides.useGradientBottom();
       let backgroundColor;
       const token = useToken.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);

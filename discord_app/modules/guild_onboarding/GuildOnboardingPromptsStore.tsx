@@ -79,8 +79,8 @@ function handleUpdate(arg0) {
   obj.prompts = mapped;
   dependencyMap[guildId] = obj;
 }
-const GuildOnboardingStatus = fn(6598).GuildOnboardingStatus;
-const GuildOnboardingMode = fn(6603).GuildOnboardingMode;
+const GuildOnboardingStatus = fn(6774).GuildOnboardingStatus;
+const GuildOnboardingMode = fn(6779).GuildOnboardingMode;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};

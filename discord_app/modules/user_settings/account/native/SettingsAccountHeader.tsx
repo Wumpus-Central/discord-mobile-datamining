@@ -16,20 +16,20 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AnalyticsSections = fn(1085).AnalyticsSections;
-const SafetySettingsNoticeType = fn(8108).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7015).SafetySettingsNoticeType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { header: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 } };
 let closure_11 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function RestrictedAccountRedirect() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = {
           label: util.t.zqv4nV,
-          labelHook() {
+          labelHook: function handleRestrictedAccountRedirect() {
             openUserSettings.openUserSettings({ screen: constants.SETTINGS_CONTENT_AND_SOCIAL });
           },
           noticeType: SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
@@ -42,10 +42,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => {
+  : function RestrictedAccountRedirect() {
       const obj = {
         label: util.t.zqv4nV,
-        labelHook() {
+        labelHook: function handleRestrictedAccountRedirect() {
           openUserSettings.openUserSettings({ screen: constants.SETTINGS_CONTENT_AND_SOCIAL });
         },
         noticeType: SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
@@ -59,12 +59,12 @@ const result = size.fileFinishedImporting("modules/user_settings/account/native/
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function SettingsAccountHeader() {
         const cResult = c.c(15);
         let header = closure_11();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [UserStore];
-          const fn = function o() {
+          const fn = function c() {
             return currentUser.getCurrentUser();
           };
           cResult[0] = items;
@@ -100,16 +100,16 @@ export default noop.memo(
         const tmpResult = initialize;
         const stateFromStores1 = initialize.useStateFromStores(tmp10, tmp11);
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          class N {
+          class I {
             constructor() {
               obj = closure_1_1(closure_1_2[16]);
               openResult = obj.open();
               return;
             }
           }
-          cResult[6] = N;
+          cResult[6] = I;
         } else {
-          class N {
+          class I {
             constructor() {
               obj = closure_1_1(closure_1_2[16]);
               openResult = obj.open();
@@ -118,7 +118,7 @@ export default noop.memo(
           }
         }
         if (null == tmp8) {
-          class N {
+          class I {
             constructor() {
               obj = closure_1_1(closure_1_2[16]);
               openResult = obj.open();
@@ -126,7 +126,7 @@ export default noop.memo(
             }
           }
           if (!stateFromStores1) {
-            class N {
+            class I {
               constructor() {
                 obj = closure_1_1(closure_1_2[16]);
                 openResult = obj.open();
@@ -136,7 +136,7 @@ export default noop.memo(
           }
         }
         if (cResult[7] !== stateFromStores1) {
-          class N {
+          class I {
             constructor() {
               obj = closure_1_1(closure_1_2[16]);
               openResult = obj.open();
@@ -144,7 +144,7 @@ export default noop.memo(
             }
           }
           if (stateFromStores1) {
-            class N {
+            class I {
               constructor() {
                 obj = closure_1_1(closure_1_2[16]);
                 openResult = obj.open();
@@ -156,7 +156,7 @@ export default noop.memo(
           cResult[7] = stateFromStores1;
           cResult[8] = tmp16;
         } else {
-          class N {
+          class I {
             constructor() {
               obj = closure_1_1(closure_1_2[16]);
               openResult = obj.open();
@@ -165,7 +165,7 @@ export default noop.memo(
           }
         }
         if (cResult[9] !== tmp8) {
-          class N {
+          class I {
             constructor() {
               obj = closure_1_1(closure_1_2[16]);
               openResult = obj.open();
@@ -173,7 +173,7 @@ export default noop.memo(
             }
           }
           if (null != tmp8) {
-            class N {
+            class I {
               constructor() {
                 obj = closure_1_1(closure_1_2[16]);
                 openResult = obj.open();
@@ -181,7 +181,7 @@ export default noop.memo(
               }
             }
             const obj2 = {
-              onPress: N,
+              onPress: I,
               variant: "danger",
               label: null,
               accessibilityLabel: null,
@@ -192,14 +192,14 @@ export default noop.memo(
             ({ title: obj5.label, title: obj5.accessibilityLabel } = tmp8);
             const obj3 = { text: null, accessibilityLabel: null, onPress: null };
             ({ button: obj6.text, button: obj6.accessibilityLabel } = tmp8);
-            obj3.onPress = N;
+            obj3.onPress = I;
             obj2.trailing = options(components_Button_Button.Button, obj3);
             const tmp19 = options(TableRow.TableRow, obj2);
           }
           cResult[9] = tmp8;
           cResult[10] = tmp19;
         } else {
-          class N {
+          class I {
             constructor() {
               obj = closure_1_1(closure_1_2[16]);
               openResult = obj.open();
@@ -208,7 +208,7 @@ export default noop.memo(
           }
         }
         if (cResult[11] === header.header) {
-          class N {
+          class I {
             constructor() {
               obj = closure_1_1(closure_1_2[16]);
               openResult = obj.open();
@@ -224,10 +224,10 @@ export default noop.memo(
         cResult[11] = header;
         cResult[12] = tmp15;
         cResult[13] = tmp18;
-        cResult[14] = v65535(View, obj4);
-        const tmp20 = v65535(View, obj4);
+        cResult[14] = collapsed(View, obj4);
+        const tmp20 = collapsed(View, obj4);
       }
-    : () => {
+    : function SettingsAccountHeader() {
         const tmp = closure_11();
         const items = [UserStore];
         const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -267,7 +267,7 @@ export default noop.memo(
           }
           items2[1] = tmp14;
           obj4.children = items2;
-          let tmp9Result = v65535(View, obj4);
+          let tmp9Result = collapsed(View, obj4);
         } else {
           tmp9Result = null;
         }

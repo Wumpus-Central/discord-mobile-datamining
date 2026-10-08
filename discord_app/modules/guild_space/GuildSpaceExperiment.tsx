@@ -24,7 +24,7 @@ export const getGuildSpaceExperimentEnabled = function getGuildSpaceExperimentEn
   return enabled;
 };
 export const useGuildSpaceExperimentEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, location) => {
+  ? function useGuildSpaceExperimentEnabled(arg0, location) {
       let tmp = arg0;
       const cResult = c.c(3);
       if (arg0 == null) {
@@ -42,7 +42,7 @@ export const useGuildSpaceExperimentEnabled = ReactCompilerGating.isReactCompile
       cResult[2] = obj2;
       tmp3 = obj2;
     }
-  : (arg0, location) => {
+  : function useGuildSpaceExperimentEnabled(arg0, location) {
       let tmp = arg0;
       if (arg0 == null) {
         tmp = EMPTY_STRING_SNOWFLAKE_ID;

@@ -1,5 +1,7 @@
 // discord_common/js/packages/rpc-schema/definitions.tsx
 import OAuth2Scopes from "../../shared/shared-constants/OAuth2Scopes.tsx";
+import EmbeddedSurfaceType from "../../shared/shared-constants/EmbeddedSurfaceType.tsx";
+import ActivityPlatform from "../../shared/constants/ActivityPlatform.tsx";
 import helpers from "helpers.tsx";
 import contextMenuIcons from "contextMenuIcons.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -344,7 +346,28 @@ const obj25 = {
     const stringResult = array.string();
   },
 };
-const obj30 = {
+const obj27 = {
+  request: "Array",
+  response(string) {
+    const obj = { surface: EmbeddedSurface(string).required(), launch: null, platform: null };
+    const obj3 = { custom_id: null, referrer_id: null, interaction_id: null };
+    const obj2 = EmbeddedSurface(string);
+    obj3.custom_id = string.string().optional();
+    const stringResult = string.string();
+    obj3.referrer_id = string.string().optional();
+    const stringResult1 = string.string();
+    obj3.interaction_id = string.string().optional();
+    const stringResult2 = string.string();
+    obj.launch = string.object(obj3).required();
+    const objectResult = string.object(obj3);
+    const stringResult3 = string.string();
+    const items = [...helpers.joiEnum(ActivityPlatform.ActivityPlatform)];
+    const applyResult = stringResult3.valid.apply(items);
+    obj.platform = stringResult3.valid.apply(items).meta({ className: "ActivityPlatform" }).required();
+    return obj;
+  },
+};
+const obj31 = {
   embeddedAppSDK: true,
   request: "Array",
   response(string) {
@@ -360,7 +383,7 @@ const obj30 = {
     return obj;
   },
 };
-const obj31 = {
+const obj32 = {
   embeddedAppSDK: true,
   request: "Array",
   response(string) {
@@ -472,8 +495,69 @@ function ContextMenuItem(string, arg1) {
   }
   const stringResult3 = string.string();
 }
+class EmbeddedSurface {
+  constructor(arg0) {
+    alternativesResult = global.alternatives();
+    obj1 = { type: null, channel_id: null, guild_id: null };
+    numberResult = global.number();
+    validResult = numberResult.valid(closure_0(closure_1[4]).EmbeddedSurfaceType.MAIN);
+    requiredResult = validResult.required();
+    obj1.type = requiredResult.meta({ className: "EmbeddedSurfaceType.MAIN" });
+    stringResult = global.string();
+    optionalResult = stringResult.optional();
+    obj1.channel_id = optionalResult.meta({ className: "ChannelId" });
+    stringResult1 = global.string();
+    optionalResult1 = stringResult1.optional();
+    obj1.guild_id = optionalResult1.meta({ className: "GuildId" });
+    objectResult = global.object(obj1);
+    obj39 = { type: null, channel_id: null, guild_id: null };
+    numberResult1 = global.number();
+    validResult1 = numberResult1.valid(closure_0(closure_1[4]).EmbeddedSurfaceType.APP_CHANNEL);
+    requiredResult1 = validResult1.required();
+    obj39.type = requiredResult1.meta({ className: "EmbeddedSurfaceType.APP_CHANNEL" });
+    stringResult2 = global.string();
+    requiredResult2 = stringResult2.required();
+    obj39.channel_id = requiredResult2.meta({ className: "ChannelId" });
+    stringResult3 = global.string();
+    optionalResult2 = stringResult3.optional();
+    obj39.guild_id = optionalResult2.meta({ className: "GuildId" });
+    obj40 = { type: null, channel_id: null, guild_id: null };
+    objectResult1 = global.object(obj39);
+    numberResult2 = global.number();
+    validResult2 = numberResult2.valid(closure_0(closure_1[4]).EmbeddedSurfaceType.VOICE_CHANNEL);
+    requiredResult3 = validResult2.required();
+    obj40.type = requiredResult3.meta({ className: "EmbeddedSurfaceType.VOICE_CHANNEL" });
+    stringResult4 = global.string();
+    requiredResult4 = stringResult4.required();
+    obj40.channel_id = requiredResult4.meta({ className: "ChannelId" });
+    stringResult5 = global.string();
+    optionalResult3 = stringResult5.optional();
+    obj40.guild_id = optionalResult3.meta({ className: "GuildId" });
+    obj41 = { type: null, channel_id: null, guild_id: null };
+    objectResult2 = global.object(obj40);
+    numberResult3 = global.number();
+    validResult3 = numberResult3.valid(closure_0(closure_1[4]).EmbeddedSurfaceType.INTERACTION_MODAL);
+    requiredResult5 = validResult3.required();
+    obj41.type = requiredResult5.meta({ className: "EmbeddedSurfaceType.INTERACTION_MODAL" });
+    stringResult6 = global.string();
+    requiredResult6 = stringResult6.required();
+    obj41.channel_id = requiredResult6.meta({ className: "ChannelId" });
+    stringResult7 = global.string();
+    optionalResult4 = stringResult7.optional();
+    obj41.guild_id = optionalResult4.meta({ className: "GuildId" });
+    obj42 = { type: null };
+    objectResult3 = global.object(obj41);
+    numberResult4 = global.number();
+    validResult4 = numberResult4.valid(closure_0(closure_1[4]).EmbeddedSurfaceType.OVERLAY);
+    requiredResult7 = validResult4.required();
+    obj42.type = requiredResult7.meta({ className: "EmbeddedSurfaceType.OVERLAY" });
+    tryResult = alternativesResult.try(objectResult, objectResult1, objectResult2, objectResult3, global.object(obj42));
+    return tryResult.meta({ className: "EmbeddedSurface" });
+  }
+}
 function ActionRowComponent(arg0) {}
 function ButtonComponent(arg0) {}
+let items = [EmbeddedSurface];
 const result = size.fileFinishedImporting("../discord_common/js/packages/rpc-schema/definitions.tsx");
 
 export const RPCCommandSchemas = {
@@ -998,6 +1082,7 @@ export const RPCCommandSchemas = {
     },
     response: "Reflect",
   },
+  [helpers.RPCCommand.GET_CONTEXT]: obj27,
   [helpers.RPCCommand.GET_USER]: {
     embeddedAppSDK: true,
     request(string) {
@@ -1006,8 +1091,8 @@ export const RPCCommandSchemas = {
       obj.id = string.string().max(64).required();
       return obj;
     },
-    response(string) {
-      return User(string).allow(null);
+    response(arg0) {
+      return User(arg0).allow(null);
     },
   },
   [helpers.RPCCommand.GET_QUEST_ENROLLMENT_STATUS]: {
@@ -1041,8 +1126,8 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.GET_QUEST]: obj30,
-  [helpers.RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: obj31,
+  [helpers.RPCCommand.GET_QUEST]: obj31,
+  [helpers.RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: obj32,
   [helpers.RPCCommand.SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY]: {
     request(boolean) {
       const obj = { enabled: boolean.boolean().required() };
@@ -1054,3 +1139,4 @@ export const RPCCommandSchemas = {
     },
   },
 };
+export const RPCNamedSchemas = items;

@@ -4,8 +4,8 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
-import useIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
 import Sheet_BottomSheet from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import useIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../../guild_settings/GuildSettingsActionCreators.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -15,12 +15,12 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1085);
 ({ GuildSettingsSections: closure_7, GuildSettingsSubsections: closure_8 } = Constants);
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 1.7289156626506024;
 const src = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -56,8 +56,8 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
-      const cResult = guildId(576).c(49);
+  ? function GuildRoleSubscriptionTierTemplateUpsellActionSheet(guildId) {
+      const cResult = guildId(576).c(47);
       guildId = guildId.guildId;
       const markAsDismissed = guildId.markAsDismissed;
       const tmp4 = closure_14();
@@ -65,119 +65,87 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [tmp8, dependencyMap] = isScreenLandscape(noop.useState(0), 2);
         const obj2 = noop;
         const tmp7 = isScreenLandscape(noop.useState(0), 2);
-        isScreenLandscape = tmp(5919).useIsScreenLandscape();
+        isScreenLandscape = tmp(8302).useIsScreenLandscape();
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [AccessibilityStore];
-          class E {
+          class C {
             constructor() {
               return closure_1_6.useReducedMotion;
             }
           }
           cResult[3] = items;
-          cResult[4] = E;
-          let tmp12 = E;
+          cResult[4] = C;
+          let tmp12 = C;
           let tmp11 = items;
         } else {
           tmp11 = cResult[3];
           tmp12 = cResult[4];
         }
-        const tmpResult = tmp(5919);
+        const tmpResult = tmp(8302);
         const stateFromStores = tmp(573).useStateFromStores(tmp11, tmp12);
         if (cResult[5] !== isScreenLandscape) {
-          class P {
-            constructor(arg0) {
-              diff = guildId - 32;
-              result = diff;
-              tmp2 = closure_2;
-              if (closure_3) {
-                num = 2;
-                result = diff / 2;
-              }
-              tmp2Result = tmp2(result);
-              return;
+          function setWidth(arg0) {
+            const diff = arg0 - 32;
+            let result = diff;
+            if (isScreenLandscape) {
+              result = diff / 2;
             }
+            dependencyMap(result);
           }
           cResult[5] = isScreenLandscape;
-          class E {
+          class C {
             constructor() {
               return closure_1_6.useReducedMotion;
             }
           }
-          cResult[6] = P;
+          cResult[6] = setWidth;
+          let tmp15 = setWidth;
         } else {
-          class P {
-            constructor(arg0) {
-              diff = guildId - 32;
-              result = diff;
-              tmp2 = closure_2;
-              if (closure_3) {
-                num = 2;
-                result = diff / 2;
-              }
-              tmp2Result = tmp2(result);
-              return;
-            }
-          }
+          tmp15 = cResult[6];
         }
-        noop = P;
+        noop = tmp15;
         if (cResult[7] !== markAsDismissed) {
-          class P {
-            constructor(arg0) {
-              diff = guildId - 32;
-              result = diff;
-              tmp2 = closure_2;
-              if (closure_3) {
-                num = 2;
-                result = diff / 2;
-              }
-              tmp2Result = tmp2(result);
-              return;
+          class W {
+            constructor() {
+              return () => markAsDismissed(constants.UNKNOWN);
             }
           }
           const items1 = [markAsDismissed];
-          class E {
+          class C {
             constructor() {
               return closure_1_6.useReducedMotion;
             }
           }
           cResult[7] = markAsDismissed;
-          cResult[8] = tmp18;
+          cResult[8] = W;
           cResult[9] = items1;
           let tmp17 = items1;
         } else {
-          class P {
-            constructor(arg0) {
-              diff = guildId - 32;
-              result = diff;
-              tmp2 = closure_2;
-              if (closure_3) {
-                num = 2;
-                result = diff / 2;
-              }
-              tmp2Result = tmp2(result);
-              return;
+          class W {
+            constructor() {
+              return () => markAsDismissed(constants.UNKNOWN);
             }
           }
           tmp17 = cResult[9];
         }
-        const effect = obj2.useEffect(tmp18, tmp17);
+        const effect = obj2.useEffect(W, tmp17);
         const container = tmp4.container;
-        if (cResult[10] !== P) {
-          class F {
+        if (cResult[10] !== tmp15) {
+          class G {
             constructor(arg0) {
               return closure_4(guildId.nativeEvent.layout.width);
             }
           }
-          cResult[10] = P;
-          class E {
+          cResult[10] = tmp15;
+          class C {
             constructor() {
               return closure_1_6.useReducedMotion;
             }
           }
-          cResult[11] = F;
+          cResult[11] = G;
         } else {
-          class F {
+          class G {
             constructor(arg0) {
               return closure_4(guildId.nativeEvent.layout.width);
             }
@@ -185,21 +153,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol2 = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-          class F {
+          class G {
             constructor(arg0) {
               return closure_4(guildId.nativeEvent.layout.width);
             }
           }
           const stringResult = obj5.string(tmp(1126).t.gCgirr);
-          class E {
+          class C {
             constructor() {
               return closure_1_6.useReducedMotion;
             }
           }
           cResult[12] = stringResult;
-          const tmp21 = stringResult;
+          const tmp20 = stringResult;
         } else {
-          class F {
+          class G {
             constructor(arg0) {
               return closure_4(guildId.nativeEvent.layout.width);
             }
@@ -207,13 +175,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         let result = tmp8 / c12;
         if (cResult[13] === tmp4.videoContainer) {
-          class F {
+          class G {
             constructor(arg0) {
               return closure_4(guildId.nativeEvent.layout.width);
             }
           }
         }
-        const obj3 = { accessibilityRole: "image", accessibilityLabel: tmp21, children: null };
+        const obj3 = { accessibilityRole: "image", accessibilityLabel: tmp20, children: null };
         const size = {
           style: tmp4.videoContainer,
           src,
@@ -223,16 +191,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           paused: stateFromStores,
           ariaHidden: true,
         };
-        obj3.children = closure_10(markAsDismissed(7993), size);
-        const tmp30 = closure_10(View, obj3);
+        obj3.children = closure_10(markAsDismissed(8401), size);
+        const tmp29 = closure_10(View, obj3);
         cResult[13] = tmp4.videoContainer;
         cResult[14] = result;
         cResult[15] = stateFromStores;
         cResult[16] = tmp8;
-        cResult[17] = tmp30;
+        cResult[17] = tmp29;
         const tmpResult2 = tmp(573);
       }
-      const fn = function b() {
+      function handleClickUseTemplate() {
         GuildSettingsActionCreatorsDefault.open(
           guildId,
           constants.ROLE_SUBSCRIPTIONS_TIERS,
@@ -240,13 +208,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           constants2.ROLE_SUBSCRIPTION_TIER_TEMPLATE,
         );
         markAsDismissed(ContentDismissActionType.UNKNOWN);
-      };
+      }
       cResult[0] = guildId;
       cResult[1] = markAsDismissed;
-      cResult[2] = fn;
+      cResult[2] = handleClickUseTemplate;
       const obj = guildId(576);
     }
-  : (arg0) => {
+  : function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0) {
       ({ guildId: require, markAsDismissed } = arg0);
       dependencyMap = undefined;
       _slicedToArray = undefined;
@@ -283,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         paused: stateFromStores,
         ariaHidden: true,
       };
-      obj5.children = closure_10(markAsDismissed(7993), size);
+      obj5.children = closure_10(markAsDismissed(8401), size);
       const items2 = [closure_10(View, obj5), ,];
       const obj6 = { style: tmp.info, children: null };
       const obj7 = {
@@ -301,14 +269,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items3[1] = closure_10(Text_Text.Text, obj8);
       obj6.children = items3;
       items2[1] = closure_11(View, obj6);
-      const obj9 = { style: null, children: null };
-      const items4 = [tmp.footer];
-      obj9.style = items4;
+      const obj9 = { style: tmp.footer, children: null };
       const obj10 = { style: tmp.button, children: null };
       const obj11 = { text: null, onPress: null };
       const intl4 = util.intl;
       obj11.text = intl4.string(util.t.BQq86h);
-      obj11.onPress = function onPress() {
+      obj11.onPress = function handleClickUseTemplate() {
         GuildSettingsActionCreatorsDefault.open(
           require,
           constants.ROLE_SUBSCRIPTIONS_TIERS,
@@ -318,7 +284,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         markAsDismissed(ContentDismissActionType.UNKNOWN);
       };
       obj10.children = closure_10(components_Button_Button.Button, obj11);
-      const items5 = [closure_10(View, obj10)];
+      const items4 = [closure_10(View, obj10)];
       const obj12 = { style: tmp.button, children: null };
       const obj13 = { text: null, onPress: null, variant: "secondary" };
       const intl5 = util.intl;
@@ -327,8 +293,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return markAsDismissed(_undefined[18]).hideActionSheet();
       };
       obj12.children = closure_10(components_Button_Button.Button, obj13);
-      items5[1] = closure_10(View, obj12);
-      obj9.children = items5;
+      items4[1] = closure_10(View, obj12);
+      obj9.children = items4;
       items2[2] = closure_11(View, obj9);
       obj4.children = items2;
       obj3.children = closure_11(View, obj4);

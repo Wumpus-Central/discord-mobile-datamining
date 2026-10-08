@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/secrets/ConjureSecretRequestState.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3827 from "../intl/ConjureUntranslated.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -9,14 +9,14 @@ require = fn;
 function isSecretsSavedMessage(content) {
   const trimmed = content.content.trim();
   const intl = util.intl;
-  let tmp5 = trimmed === intl.string(_modDef3753.UGqnoV);
+  let tmp5 = trimmed === intl.string(_modDef3827.UGqnoV);
   if (!tmp5) {
     const intl2 = util.intl;
-    tmp5 = trimmed === intl2.string(_modDef3753.sMQt5O);
+    tmp5 = trimmed === intl2.string(_modDef3827.sMQt5O);
   }
   return tmp5;
 }
-const turnSettled = fn(12924).turnSettled;
+const turnSettled = fn(13073).turnSettled;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/secrets/ConjureSecretRequestState.tsx");
@@ -104,7 +104,7 @@ export const secretRequestStatuses = function secretRequestStatuses(memo, stateF
   }
   return map;
 };
-export const useSecretRequestStatusChanged = ReactCompilerGating.isReactCompilerEnabled() ? ((cardId, arg1) => {
+export const useSecretRequestStatusChanged = ReactCompilerGating.isReactCompilerEnabled() ? (function useSecretRequestStatusChanged(cardId, arg1) {
   closure_1 = arg1;
   const cResult = c.c(3);
   if (cResult[0] === cardId) {
@@ -141,7 +141,7 @@ export const useSecretRequestStatusChanged = ReactCompilerGating.isReactCompiler
   cResult[1] = arg1;
   cResult[2] = fn;
   tmp2 = fn;
-}) : ((cardId, arg1) => {
+}) : (function useSecretRequestStatusChanged(cardId, arg1) {
   closure_1 = arg1;
   [tmp2, tmp3] = noop.useState(() => {
     const obj = { cardId, status: null };

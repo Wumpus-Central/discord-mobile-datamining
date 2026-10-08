@@ -20,7 +20,7 @@ let closure_4 = ["guildActivityIndicatorSource"];
 const Constants = fn(1085);
 ({ GuildFeatures: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_16 = createStyles.createStyles({
   topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" },
 });
@@ -29,7 +29,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useGuildsBarBadges(arg0, arg1, arg2) {
       _require = arg0;
       const cResult = require("c").c(47);
       const tmp4 = closure_16();
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        class D {
+        class B {
           constructor() {
             guild = closure_10.getGuild(closure_0);
             flag = undefined;
@@ -57,9 +57,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[1] = arg0;
-        cResult[2] = D;
+        cResult[2] = B;
       } else {
-        class D {
+        class B {
           constructor() {
             guild = closure_10.getGuild(closure_0);
             flag = undefined;
@@ -76,9 +76,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, D);
+      const stateFromStores = require("initialize").useStateFromStores(first, B);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        class D {
+        class B {
           constructor() {
             guild = closure_10.getGuild(closure_0);
             flag = undefined;
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = items1;
         const tmp9 = items1;
       } else {
-        class D {
+        class B {
           constructor() {
             guild = closure_10.getGuild(closure_0);
             flag = undefined;
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[4] === arg0) {
-        class D {
+        class B {
           constructor() {
             guild = closure_10.getGuild(closure_0);
             flag = undefined;
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const stateFromStores1 = tmp(504).useStateFromStores(tmp9, C, items5);
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          class D {
+          class B {
             constructor() {
               guild = closure_10.getGuild(closure_0);
               flag = undefined;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = items2;
           const tmp13 = items2;
         } else {
-          class D {
+          class B {
             constructor() {
               guild = closure_10.getGuild(closure_0);
               flag = undefined;
@@ -272,12 +272,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmpResult5 = tmp(504);
         const stateFromStores2 = tmp(504).useStateFromStores(tmp13, U, tmp17);
-        const tmp20 = stateFromStores(16310)(arg0);
+        const tmp20 = stateFromStores(16570)(arg0);
         const tmpResult6 = tmp(504);
-        const token = tmp(4586).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
-        const tmpResult7 = tmp(4586);
-        const token1 = tmp(4586).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
-        const diff = token1 - tmp(1188).BADGE_PADDING;
+        const token = tmp(4778).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
+        const tmpResult7 = tmp(4778);
+        const token1 = tmp(4778).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
+        const diff = token1 - tmp(1200).BADGE_PADDING;
         if (cResult[12] !== diff) {
           class U {
             constructor() {
@@ -797,7 +797,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[14] = tmp4.topRightBadge;
         cResult[15] = tmp25;
         cResult[16] = items4;
-        const tmpResult8 = tmp(4586);
+        const tmpResult8 = tmp(4778);
       }
       class C {
         constructor() {
@@ -835,7 +835,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = items5;
       const tmpResult = require("initialize");
     }
-  : (arg0, mentionCount, isMentionLowImportance) => {
+  : function useGuildsBarBadges(arg0, mentionCount, isMentionLowImportance) {
       _require = arg0;
       const tmp = closure_16();
       importDefault = tmp;

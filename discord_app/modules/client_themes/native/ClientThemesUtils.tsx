@@ -288,7 +288,7 @@ export const getGradientThemeMetadata = function getGradientThemeMetadata(gradie
 };
 export { getGradientValue };
 export const useGradientValue = ReactCompilerGating.isReactCompilerEnabled()
-  ? (END, dark) => {
+  ? function useGradientValue(END, dark) {
       const obj = c;
       const cResult = obj.c(9);
       const tmp4 = useColorThemeBackgroundDefault();
@@ -351,7 +351,7 @@ export const useGradientValue = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : (arg0, dark) => {
+  : function useGradientValue(arg0, dark) {
       closure_0 = arg0;
       importDefault = dark;
       const tmp = useColorThemeBackgroundDefault();

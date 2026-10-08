@@ -9,12 +9,12 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const VerificationConstants = fn(6077);
+const VerificationConstants = fn(6263);
 ({ CHANGE_EMAIL_REASONS_ORDER: closure_7, SUSPICIOUS_CHANGE_EMAIL_REASONS: closure_8 } = VerificationConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: null,
@@ -33,7 +33,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/ChangeEmailCollectReasons.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (changeEmailReason) => {
+  ? function ChangeEmailCollectReasons(changeEmailReason) {
       const cResult = changeEmailReason(navigation[9]).c(29);
       changeEmailReason = changeEmailReason.changeEmailReason;
       const setChangeEmailReason = changeEmailReason.setChangeEmailReason;
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn2;
       const tmpResult2 = changeEmailReason(navigation[11]);
     }
-  : (changeEmailReason) => {
+  : function ChangeEmailCollectReasons(changeEmailReason) {
       changeEmailReason = changeEmailReason.changeEmailReason;
       const setChangeEmailReason = changeEmailReason.setChangeEmailReason;
       let navigation;

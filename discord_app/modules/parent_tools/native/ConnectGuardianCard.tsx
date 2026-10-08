@@ -8,10 +8,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7062).FAMILY_CENTER_REQUEST_QR_CODE_URL;
+let closure_6 = fn(7248).FAMILY_CENTER_REQUEST_QR_CODE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_16 },
   compactContainer: null,
@@ -55,7 +55,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/native/ConnectGuardianCard.tsx");
 
 export const ConnectGuardianCard = ReactCompilerGating.isReactCompilerEnabled()
-  ? (linkCode) => {
+  ? function ConnectGuardianCard(linkCode) {
       const cResult = linkCode(id[8]).c(69);
       linkCode = linkCode.linkCode;
       ({ expiresAt, shareActions } = linkCode);
@@ -434,7 +434,7 @@ export const ConnectGuardianCard = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = stateFromStores;
       const tmpResult = linkCode(id[9]);
     }
-  : (linkCode) => {
+  : function ConnectGuardianCard(linkCode) {
       linkCode = linkCode.linkCode;
       ({ expiresAt, shareActions } = linkCode);
       if (shareActions === undefined) {

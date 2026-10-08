@@ -13,13 +13,13 @@ require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const MetaQuestUtils = fn(1615);
+const MetaQuestUtils = fn(1627);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(12204).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(12283).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(17372).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(17653).MobilePhoneShareIcon;
 }
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj3 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj3.circle = size;
@@ -38,175 +38,68 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (props) => {
+  ? function ScreenshareButton(wrapperSpecs) {
       const cResult = channelId(isFeatureEnabled[10]).c(30);
-      props = props.props;
       channelId = onPress.useContext(isActive(isFeatureEnabled[11])).channelId;
-      const tmp5 = closure_9();
+      closure_9();
       let obj = channelId(isFeatureEnabled[10]);
-      const voicePanelButtonStyles = channelId(isFeatureEnabled[12]).useVoicePanelButtonStyles(props.wrapperSpecs);
+      const voicePanelButtonStyles = channelId(isFeatureEnabled[12]).useVoicePanelButtonStyles(
+        wrapperSpecs.wrapperSpecs,
+      );
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [closure_4];
+        const items = [ChannelStore];
         cResult[0] = items;
         let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== channelId) {
-        const fn = function _() {
-          return ChannelStore.getChannel(channelId);
-        };
+        class S {
+          constructor() {
+            return closure_4.getChannel(channelId);
+          }
+        }
         cResult[1] = channelId;
-        cResult[2] = fn;
-        let tmp9 = fn;
+        cResult[2] = S;
       } else {
-        tmp9 = cResult[2];
+        class S {
+          constructor() {
+            return closure_4.getChannel(channelId);
+          }
+        }
       }
       let obj2 = channelId(isFeatureEnabled[12]);
-      const stateFromStores = channelId(isFeatureEnabled[13]).useStateFromStores(first, tmp9);
+      const stateFromStores = channelId(isFeatureEnabled[13]).useStateFromStores(first, S);
       isActive(isFeatureEnabled[14])(null != stateFromStores, "null channel in VoicePanelScreenshareButton");
       const tmp12 = isActive(isFeatureEnabled[15])(stateFromStores);
       isActive = tmp12.isActive;
       isFeatureEnabled = tmp12.isFeatureEnabled;
       onPress = tmp12.onPress;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj3 = { location: "VoicePanelScreenshareButton" };
-        cResult[3] = obj3;
-        let tmp13 = obj3;
+        class S {
+          constructor() {
+            return closure_4.getChannel(channelId);
+          }
+        }
+        cResult[3] = tmp14;
       } else {
-        tmp13 = cResult[3];
-      }
-      const VideoGuardExperiment = tmp(tmp2[16]).VideoGuardExperiment;
-      const videoEnabled = VideoGuardExperiment.useConfig(tmp13).videoEnabled;
-      closure_4 = tmp14;
-      if (cResult[4] === isActive) {
-        if (cResult[5] === isFeatureEnabled) {
-          if (cResult[6] === onPress) {
-            if (cResult[7] === tmp14) {
-              let tmp15 = cResult[8];
-            }
-            let tmp16 = !tmp14;
-            if (videoEnabled) {
-              tmp16 = !isFeatureEnabled;
-            }
-            if (tmp16) {
-              let color = voicePanelButtonStyles.iconFillMuted.color;
-            } else {
-              color = voicePanelButtonStyles.iconFill.color;
-            }
-            if (isActive) {
-              let backgroundColor = voicePanelButtonStyles.iconBgSelected.backgroundColor;
-            } else {
-              backgroundColor = voicePanelButtonStyles.iconBg.backgroundColor;
-            }
-            if (isActive) {
-              color = voicePanelButtonStyles.iconFillSelected.color;
-            }
-            if (videoEnabled) {
-              let MobilePhoneDenyIcon = MobilePhoneShareIcon;
-            } else {
-              MobilePhoneDenyIcon = tmp(tmp2[21]).MobilePhoneDenyIcon;
-            }
-            if (cResult[9] !== isActive) {
-              let intl = tmp(tmp2[19]).intl;
-              const string = intl.string;
-              let CpkXwZ = tmp(tmp2[19]).t;
-              if (isActive) {
-                CpkXwZ = CpkXwZ.CpkXwZ;
-                let stringResult = string(CpkXwZ);
-              } else {
-                stringResult = string(CpkXwZ.fjBNo1);
-              }
-              cResult[9] = isActive;
-              cResult[10] = stringResult;
-            } else {
-              if (isActive) {
-                const iconBgSelected = voicePanelButtonStyles.iconBgSelected;
-              }
-              if (cResult[11] !== backgroundColor) {
-                let obj4 = { backgroundColor };
-                cResult[11] = backgroundColor;
-                cResult[12] = obj4;
-                let tmp20 = obj4;
-              } else {
-                tmp20 = cResult[12];
-              }
-              if (cResult[13] === tmp5.circle) {
-                if (cResult[14] === tmp20) {
-                  let tmp21 = cResult[15];
-                }
-                if (cResult[16] === MobilePhoneDenyIcon) {
-                  if (cResult[17] === color) {
-                    let tmp24 = cResult[18];
-                  }
-                  if (cResult[19] === tmp5.iconContainer) {
-                    if (cResult[20] === tmp24) {
-                      let tmp27 = cResult[21];
-                    }
-                    if (cResult[22] === tmp16) {
-                      if (cResult[23] === tmp15) {
-                        if (cResult[24] === props) {
-                          if (cResult[25] === tmp27) {
-                            if (cResult[26] === tmp17) {
-                              if (cResult[27] === iconBgSelected) {
-                                if (cResult[28] === tmp21) {
-                                  let tmp30 = cResult[29];
-                                }
-                                return tmp30;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                    const element = {
-                      onPress: tmp15,
-                      disabled: tmp16,
-                      props,
-                      accessibilityLabel: tmp17,
-                      style: iconBgSelected,
-                      children: null,
-                    };
-                    const items1 = [tmp21, tmp27];
-                    element.children = items1;
-                    const tmp32 = closure_7(tmp4(tmp2[23]), element);
-                    cResult[22] = tmp16;
-                    cResult[23] = tmp15;
-                    cResult[24] = props;
-                    cResult[25] = tmp27;
-                    cResult[26] = tmp17;
-                    cResult[27] = iconBgSelected;
-                    cResult[28] = tmp21;
-                    cResult[29] = tmp32;
-                    tmp30 = tmp32;
-                  }
-                  const obj5 = { style: tmp5.iconContainer, children: tmp24 };
-                  const tmp29 = closure_6(tmp4(tmp2[22]), obj5);
-                  cResult[19] = tmp5.iconContainer;
-                  cResult[20] = tmp24;
-                  cResult[21] = tmp29;
-                  tmp27 = tmp29;
-                }
-                const obj6 = { color };
-                const tmp26 = closure_6(MobilePhoneDenyIcon, obj6);
-                cResult[16] = MobilePhoneDenyIcon;
-                cResult[17] = color;
-                cResult[18] = tmp26;
-                tmp24 = tmp26;
-              }
-              const obj7 = { style: null };
-              const items2 = [tmp5.circle, tmp20];
-              obj7.style = items2;
-              const tmp23 = closure_6(tmp4(tmp2[22]), obj7);
-              cResult[13] = tmp5.circle;
-              cResult[14] = tmp20;
-              cResult[15] = tmp23;
-              tmp21 = tmp23;
-            }
+        class S {
+          constructor() {
+            return closure_4.getChannel(channelId);
           }
         }
       }
-      const fn2 = function f() {
+      const VideoGuardExperiment = tmp(tmp2[16]).VideoGuardExperiment;
+      let tmp15 = !VideoGuardExperiment.useConfig(tmp14).videoEnabled;
+      ChannelStore = tmp15;
+      if (cResult[4] === isActive) {
+        class S {
+          constructor() {
+            return closure_4.getChannel(channelId);
+          }
+        }
+      }
+      const fn = function f() {
         if (closure_4) {
           const obj2 = { title: null };
           const obj3 = useAlertStore;
@@ -225,12 +118,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = isActive;
       cResult[5] = isFeatureEnabled;
       cResult[6] = onPress;
-      cResult[7] = !videoEnabled;
-      cResult[8] = fn2;
-      tmp15 = fn2;
+      cResult[7] = tmp15;
+      cResult[8] = fn;
       const tmpResult = channelId(isFeatureEnabled[13]);
     }
-  : (arg0) => {
+  : function ScreenshareButton(arg0) {
       let isActive;
       let isFeatureEnabled;
       let onPress;

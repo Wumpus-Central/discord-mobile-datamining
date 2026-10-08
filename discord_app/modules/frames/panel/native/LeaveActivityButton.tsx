@@ -4,7 +4,7 @@ import LeaveActivityButton from "../../../activities/panel/native/LeaveActivityB
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/frames/panel/native/LeaveActi
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (frame) => {
+    ? function LeaveActivityButton(frame) {
         const cResult = frame(576).c(3);
         frame = frame.frame;
         const setMode = frame.setMode;
@@ -22,7 +22,7 @@ export default noop.memo(
           }
           return tmp4;
         }
-        const tmp5 = jsx(frame(17218).BaseLeaveActivityButton, {
+        const tmp5 = jsx(frame(17499).BaseLeaveActivityButton, {
           onPress() {
             setMode(ActivityPanelModes.DISCONNECTED);
             const timerId = setTimeout(() => {
@@ -44,7 +44,7 @@ export default noop.memo(
           },
         };
       }
-    : (arg0) => {
+    : function LeaveActivityButton(arg0) {
         ({ frame: require, setMode: importDefault } = arg0);
         return jsx(LeaveActivityButton.BaseLeaveActivityButton, {
           onPress() {

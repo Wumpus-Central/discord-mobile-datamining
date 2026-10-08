@@ -15,8 +15,8 @@ import TableRowGroup2 from "../../../design/components/TableRow/native/TableRowG
 import TextInput from "../../../design/components/TextInput/native/TextInput.native.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
-import useCanToggleCommunicationDisableOnUser from "../../guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
+import useCanToggleCommunicationDisableOnUser from "../../guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx";
 import GuildSettingsModalMembersActionCreatorsDefault from "../GuildSettingsModalMembersActionCreators.tsx";
 import GuildDisableCommunicationActionCreators from "../../guild_communication_disabled/GuildDisableCommunicationActionCreators.native.tsx";
 import TransferOwnershipModalActionCreatorsDefault from "../safety/native/TransferOwnershipModalActionCreators.tsx";
@@ -32,14 +32,14 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildRecord = fn(2070);
+const GuildRecord = fn(2082);
 ({ isGuildOwner: metroRequire, isGuildOwnerWithRequiredMfaLevel: closure_7 } = GuildRecord);
-const isEveryoneRole = fn(2107).isEveryoneRole;
+const isEveryoneRole = fn(2119).isEveryoneRole;
 const Constants = fn(1085);
 ({ Permissions: closure_15, GuildFeatures: closure_16, GuildSettingsSections: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   form: { flex: 1 },
   formContent: { paddingTop: 16 },
@@ -198,8 +198,8 @@ class GuildSettingsModalMemberEdit extends PureComponent2 {
         applyArgumentsResult.props.user.id,
       );
     };
-    applyArgumentsResult.handleToggleRole = function handleToggleRole(roleId, state) {
-      GuildSettingsModalMembersActionCreatorsDefault.toggleRole(roleId, state);
+    applyArgumentsResult.handleToggleRole = function handleToggleRole(arg0, arg1) {
+      GuildSettingsModalMembersActionCreatorsDefault.toggleRole(arg0, arg1);
     };
     applyArgumentsResult.handleSetCommunicationDisabled = function handleSetCommunicationDisabled() {
       ({ guild, user } = applyArgumentsResult.props);
@@ -274,8 +274,8 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
         return collapsedCategories(HeaderActionButton.HeaderActionButton, obj);
       };
     } else if (null != onClose) {
-      fn = self(6017).getHeaderCloseButton(onClose);
-      let obj = self(6017);
+      fn = self(6203).getHeaderCloseButton(onClose);
+      let obj = self(6203);
     }
     let obj2 = { headerLeft: fn, headerRight: null, headerTitle: null };
     if (submitting) {
@@ -476,10 +476,10 @@ prototype["render"] = function render() {
     }
   }
 };
-GuildSettingsModalMemberEdit.contextType = fn(4595).ThemeContext;
+GuildSettingsModalMemberEdit.contextType = fn(4787).ThemeContext;
 let ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildSettingsModalMemberEditScene(guildId) {
       const cResult = guildId(stateFromStores[37]).c(34);
       guildId = guildId.guildId;
       const userId = guildId.userId;
@@ -696,7 +696,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[16] = A;
       const tmpResult4 = guildId(stateFromStores[39]);
     }
-  : (guildId) => {
+  : function GuildSettingsModalMemberEditScene(guildId) {
       guildId = guildId.guildId;
       const userId = guildId.userId;
       let stateFromStores;
@@ -822,10 +822,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMemberEdit.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function MemberModalEdit(guildId) {
       const cResult = require("c").c(9);
       ({ userId, onClose, onRemove } = guildId);
-      const tmp4 = onClose(5991)(guildId.guildId);
+      const tmp4 = onClose(6174)(guildId.guildId);
       if (cResult[0] === tmp4) {
         if (cResult[1] === onClose) {
           if (cResult[2] === onRemove) {
@@ -849,7 +849,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmp8;
           }
           const obj4 = { screens: tmp5, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: tmp6 };
-          const tmp11 = closure_18(tmp(6503).Navigator, obj4);
+          const tmp11 = closure_18(tmp(6679).Navigator, obj4);
           cResult[6] = tmp5;
           cResult[7] = tmp6;
           cResult[8] = tmp11;
@@ -882,7 +882,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onKick = onKick;
-          return closure_2_18(onRemove(11474), obj);
+          return closure_2_18(onRemove(11458), obj);
         },
       };
       obj8 = {
@@ -894,16 +894,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onBan = onBan;
-          return closure_2_18(onRemove(11476), obj);
+          return closure_2_18(onRemove(11460), obj);
         },
       };
       tmp = _require;
     }
-  : (onClose) => {
+  : function MemberModalEdit(onClose) {
       onClose = onClose.onClose;
       const onRemove = onClose.onRemove;
       ({ guildId, userId } = onClose);
-      const tmp = onRemove(5991)(guildId);
+      const tmp = onRemove(6174)(guildId);
       closure_2 = tmp;
       const items = [onClose, onRemove, tmp];
       const memo = noop.useMemo(() => {
@@ -928,7 +928,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const merged = Object.assign(arg0);
               obj.guildId = guildId;
               obj.onKick = onKick;
-              return closure_2_18(onRemove(11474), obj);
+              return closure_2_18(onRemove(11458), obj);
             },
           },
           [closure_2_17.MEMBER_BAN]: {
@@ -940,7 +940,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const merged = Object.assign(arg0);
               obj.guildId = guildId;
               obj.onBan = onBan;
-              return closure_2_18(onRemove(11476), obj);
+              return closure_2_18(onRemove(11460), obj);
             },
           },
         };
@@ -948,6 +948,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = { screens: memo, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: null };
       const items1 = [{ name: constants3.MEMBER_EDIT, params: { userId } }];
       obj.initialRouteStack = items1;
-      return closure_18(onClose(6503).Navigator, obj);
+      return closure_18(onClose(6679).Navigator, obj);
     };
 export const GuildSettingsModalMemberEditScene = tmp6;

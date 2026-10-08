@@ -4,13 +4,13 @@ import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const PRICE_PLACEHOLDER = fn(1379).PRICE_PLACEHOLDER;
+const PRICE_PLACEHOLDER = fn(1391).PRICE_PLACEHOLDER;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumProductPricingString.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (premiumType, c3) => {
+  ? function usePremiumProductPricingString(premiumType, c3) {
       const cResult = require("c").c(6);
       if (cResult[0] === c3) {
         if (cResult[1] === premiumType) {
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = productIdForGift;
       const tmpResult4 = require("ProductIds");
     }
-  : (premiumType, c3) => {
+  : function usePremiumProductPricingString(premiumType, c3) {
       const planIdForPremiumType = require("PremiumUtils").getPlanIdForPremiumType(premiumType, c3);
       const obj = require("PremiumUtils");
       _require = require("ProductIds").getProductIdForGift(planIdForPremiumType);

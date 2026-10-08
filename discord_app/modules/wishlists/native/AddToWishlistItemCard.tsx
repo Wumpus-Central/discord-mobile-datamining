@@ -11,7 +11,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { heartOverlay: null };
 const rect = {
   position: "absolute",
@@ -54,7 +54,7 @@ export default function AddToWishlistItemCard(sku) {
     };
     items[1] = closure_2_8(View, obj3);
     obj.children = items;
-    return v65535(options, obj);
+    return collapsed(options, obj);
   }, items);
   const items1 = [first, wishlistAnalyticsContext, , , ,];
   ({ id: arr2[2], productLine: arr2[3] } = sku);

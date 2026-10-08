@@ -10,7 +10,7 @@ const getJankScreenNameDefault = getJankScreenName;
 
 class JankNavigationReporter {
   constructor() {
-    return Object.assign({ _isAttached: false, _routeKeyAtDispatch: "a" });
+    return Object.assign({ _isAttached: false, _routeKeyAtDispatch: "Boolean", _screensBeforeDispatch: "end" });
   }
 }
 const prototype = JankNavigationReporter.prototype;
@@ -31,6 +31,13 @@ prototype["attach"] = function attach() {
 };
 prototype["handleDispatch"] = function handleDispatch(noop) {
   if (!noop) {
+    const self = this;
+    if (null == this._screensBeforeDispatch) {
+      const obj = { expectedScreenIds: null, chatScreens: null };
+      ({ expectedScreenIds: obj.expectedScreenIds, chatScreens: obj.chatScreens } = getJankScreenNameDefault());
+      self._screensBeforeDispatch = obj;
+      const tmp4 = getJankScreenNameDefault();
+    }
     const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     let key;
     if (rootNavigationRef != null) {
@@ -42,31 +49,32 @@ prototype["handleDispatch"] = function handleDispatch(noop) {
         }
       }
     }
-    const self = this;
-    this._routeKeyAtDispatch = key;
-    const obj2 = NativeJankStatsModuleDefault;
-    if (obj2 != null) {
-      const result = obj2.beginScreenTransition();
+    self._routeKeyAtDispatch = key;
+    const obj3 = NativeJankStatsModuleDefault;
+    if (obj3 != null) {
+      const result = obj3.beginScreenTransition();
     }
   }
 };
 prototype["handleStateSettled"] = function handleStateSettled() {
+  const self = this;
+  this._screensBeforeDispatch = undefined;
   const tmp3 = getJankScreenNameDefault();
-  const screen = tmp3.screen;
-  ({ expectedScreenIds, focusedRoute } = tmp3);
-  const result = getJankSurfaceName.composeJankSurfaceName(() => screen);
+  ({ screen: require, expectedScreenIds } = tmp3);
+  ({ focusedRoute, chatScreens } = tmp3);
+  const result = getJankSurfaceName.composeJankSurfaceName(() => require);
   const obj2 = NativeJankStatsModuleDefault;
   if (obj2 != null) {
     obj2.nameCurrentScreen(result, expectedScreenIds);
   }
-  if (this.shouldSettleInJS(focusedRoute)) {
+  if (self.shouldSettleInJS(focusedRoute, this._screensBeforeDispatch, { expectedScreenIds, chatScreens })) {
     const tmpResult = NativeJankStatsModuleDefault;
     if (tmpResult != null) {
       tmpResult.settleCurrentScreen();
     }
   }
 };
-prototype["shouldSettleInJS"] = function shouldSettleInJS(focusedRoute) {
+prototype["shouldSettleInJS"] = function shouldSettleInJS(focusedRoute, _screensBeforeDispatch, chatScreens2) {
   let key;
   if (focusedRoute != null) {
     key = focusedRoute.key;
@@ -81,15 +89,30 @@ prototype["shouldSettleInJS"] = function shouldSettleInJS(focusedRoute) {
     if (focusedRoute != null) {
       name = focusedRoute.name;
     }
-    let isChatLockedOpen = name === getJankScreenName.CHAT_PANEL_ROUTE;
-    if (isChatLockedOpen) {
-      isChatLockedOpen = useChatLayout.getChatLayout().isChatLockedOpen;
-      const tmp4Result = useChatLayout;
+    let tmp6 = name === getJankScreenName.CHAT_PANEL_ROUTE;
+    if (tmp6) {
+      let chatScreens;
+      if (_screensBeforeDispatch != null) {
+        chatScreens = _screensBeforeDispatch.chatScreens;
+      }
+      let isChatLockedOpen =
+        null != chatScreens &&
+        _screensBeforeDispatch.chatScreens === chatScreens2.chatScreens &&
+        _screensBeforeDispatch.expectedScreenIds === chatScreens2.expectedScreenIds;
+      if (!isChatLockedOpen) {
+        isChatLockedOpen = useChatLayout.getChatLayout().isChatLockedOpen;
+        const tmp4Result = useChatLayout;
+      }
+      tmp6 = isChatLockedOpen;
+      const tmp10 =
+        null != chatScreens &&
+        _screensBeforeDispatch.chatScreens === chatScreens2.chatScreens &&
+        _screensBeforeDispatch.expectedScreenIds === chatScreens2.expectedScreenIds;
     }
-    tmp2 = isChatLockedOpen;
+    tmp2 = tmp6;
   }
   return tmp2;
 };
 let result = size.fileFinishedImporting("modules/jank_stats/native/JankNavigationReporter.android.tsx");
 
-export default Object.assign({ _isAttached: false, _routeKeyAtDispatch: "a" });
+export default Object.assign({ _isAttached: false, _routeKeyAtDispatch: "Boolean", _screensBeforeDispatch: "end" });

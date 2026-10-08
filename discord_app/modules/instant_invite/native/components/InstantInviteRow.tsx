@@ -13,11 +13,11 @@ const InviteQueueDefault = InviteQueue;
 
 require = fn;
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(9567);
+const InstantInviteSendStateStore = fn(8738);
 ({ setSendState: closure_9, useInstantInviteSendStates: c10 } = InstantInviteSendStateStore);
-const InviteSendStates = fn(7239).InviteSendStates;
+const InviteSendStates = fn(7418).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { acronym: null };
 let size = {
   width: 32,
@@ -41,7 +41,7 @@ const result = size.fileFinishedImporting("modules/instant_invite/native/compone
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (row) => {
+    ? function InstantInviteRow(row) {
         const cResult = row(onPressAvatar[13]).c(57);
         row = row.row;
         const code = row.code;
@@ -52,19 +52,19 @@ export default noop.memo(
         const id = row.item.id;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [id];
-          class E {
+          class I {
             constructor() {
               return id.isSubmitting();
             }
           }
           cResult[0] = items;
-          cResult[1] = E;
+          cResult[1] = I;
           tmp5 = items;
         } else {
           [tmp5, tmp6] = cResult;
         }
         let obj = row(onPressAvatar[13]);
-        const stateFromStores = row(onPressAvatar[14]).useStateFromStores(tmp5, E);
+        const stateFromStores = row(onPressAvatar[14]).useStateFromStores(tmp5, I);
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [id];
           class U {
@@ -132,103 +132,63 @@ export default noop.memo(
                 return closure_4.getChannel(id);
               }
             }
-            class O {
-              constructor() {
-                tmp = code;
-                if (null != code) {
-                  handleSendState = function handleSendState(arg0) {
-                    if (null != code) {
-                      closure_2_9(tmp, id, arg0 ? InviteSendStates.SENT : InviteSendStates.ERROR);
-                      if (arg0) {
-                        if (onInviteSent != null) {
-                          onInviteSent();
-                        }
+            function handlePress() {
+              if (null != code) {
+                function handleSendState(arg0) {
+                  if (null != code) {
+                    closure_2_9(tmp, id, arg0 ? InviteSendStates.SENT : InviteSendStates.ERROR);
+                    if (arg0) {
+                      if (onInviteSent != null) {
+                        onInviteSent();
                       }
                     }
-                  };
-                  tmp2 = setSendState;
-                  tmp3 = id;
-                  tmp4 = InviteSendStates;
-                  tmp5 = setSendState(tmp, id, InviteSendStates.SENDING);
-                  tmp6 = row;
-                  type = row.type;
-                  tmp7 = closure_0;
-                  tmp8 = closure_2;
-                  if (closure_0(closure_2[16]).RowTypes.FRIEND !== type) {
-                    if (tmp7(tmp8[16]).RowTypes.DM !== type) {
-                      if (tmp7(tmp8[16]).RowTypes.GROUP_DM === type) {
-                        if (null != tmp) {
-                          tmp14 = closure_1;
-                          obj4 = closure_1(tmp8[17]);
-                          obj1 = {
-                            inviteKey: null,
-                            type: null,
-                            channel: null,
-                            location: "Invite Action Sheet",
-                            inviteAnalyticsMetadata: null,
-                          };
-                          obj1.inviteKey = tmp;
-                          obj1.type = tmp7(tmp8[17]).InvitePropertiesType.GROUP_DM;
-                          tmp15 = closure_4;
-                          obj1.channel = closure_4.getChannel(tmp3);
-                          obj10 = { suggestionData: null, source: null };
-                          tmp16 = closure_7;
-                          obj10.suggestionData = closure_7.getSelectedInviteMetadata(tmp6);
-                          tmp17 = source;
-                          obj10.source = source;
-                          obj1.inviteAnalyticsMetadata = obj10;
-                          enqueueResult = obj4.enqueue(obj1, handleSendState);
-                        }
-                      } else if (tmp7(tmp8[16]).RowTypes.CHANNEL === type) {
-                        if (null != tmp) {
-                          tmp9 = closure_1;
-                          obj = closure_1(tmp8[17]);
-                          obj11 = {
-                            inviteKey: null,
-                            type: null,
-                            channel: null,
-                            location: "Invite Action Sheet",
-                            inviteAnalyticsMetadata: null,
-                          };
-                          obj11.inviteKey = tmp;
-                          obj11.type = tmp7(tmp8[17]).InvitePropertiesType.CHANNEL;
-                          tmp10 = closure_4;
-                          obj11.channel = closure_4.getChannel(tmp3);
-                          obj12 = { suggestionData: null, source: null };
-                          tmp11 = closure_7;
-                          obj12.suggestionData = closure_7.getSelectedInviteMetadata(tmp6);
-                          tmp12 = source;
-                          obj12.source = source;
-                          obj11.inviteAnalyticsMetadata = obj12;
-                          enqueueResult1 = obj.enqueue(obj11, handleSendState);
-                        }
-                      }
-                    }
-                  }
-                  if (null != tmp) {
-                    tmp19 = closure_1;
-                    obj7 = closure_1(tmp8[17]);
-                    obj13 = {
-                      inviteKey: null,
-                      type: null,
-                      user: null,
-                      location: "Invite Action Sheet",
-                      inviteAnalyticsMetadata: null,
-                    };
-                    obj13.inviteKey = tmp;
-                    obj13.type = tmp7(tmp8[17]).InvitePropertiesType.USER;
-                    tmp20 = closure_8;
-                    obj13.user = closure_8.getUser(tmp3);
-                    obj14 = { suggestionData: null, source: null };
-                    tmp21 = closure_7;
-                    obj14.suggestionData = closure_7.getSelectedInviteMetadata(tmp6);
-                    tmp22 = source;
-                    obj14.source = source;
-                    obj13.inviteAnalyticsMetadata = obj14;
-                    enqueueResult2 = obj7.enqueue(obj13, handleSendState);
                   }
                 }
-                return;
+                options(code, id, InviteSendStates.SENDING);
+                const type = row.type;
+                if (InstantInviteUtils.RowTypes.FRIEND !== type) {
+                  if (InstantInviteUtils.RowTypes.DM !== type) {
+                    if (InstantInviteUtils.RowTypes.GROUP_DM === type) {
+                      if (null != code) {
+                        const obj2 = {
+                          inviteKey: code,
+                          type: InviteQueue.InvitePropertiesType.GROUP_DM,
+                          channel: ChannelStore.getChannel(id),
+                          location: "Invite Action Sheet",
+                          inviteAnalyticsMetadata: null,
+                        };
+                        const obj3 = { suggestionData: InviteSuggestionsStore.getSelectedInviteMetadata(row), source };
+                        obj2.inviteAnalyticsMetadata = obj3;
+                        InviteQueueDefault.enqueue(obj2, handleSendState);
+                      }
+                    } else if (InstantInviteUtils.RowTypes.CHANNEL === type) {
+                      if (null != code) {
+                        const obj5 = {
+                          inviteKey: code,
+                          type: InviteQueue.InvitePropertiesType.CHANNEL,
+                          channel: ChannelStore.getChannel(id),
+                          location: "Invite Action Sheet",
+                          inviteAnalyticsMetadata: null,
+                        };
+                        const obj6 = { suggestionData: InviteSuggestionsStore.getSelectedInviteMetadata(row), source };
+                        obj5.inviteAnalyticsMetadata = obj6;
+                        InviteQueueDefault.enqueue(obj5, handleSendState);
+                      }
+                    }
+                  }
+                }
+                if (null != code) {
+                  const obj8 = {
+                    inviteKey: code,
+                    type: InviteQueue.InvitePropertiesType.USER,
+                    user: UserStore.getUser(id),
+                    location: "Invite Action Sheet",
+                    inviteAnalyticsMetadata: null,
+                  };
+                  const obj9 = { suggestionData: InviteSuggestionsStore.getSelectedInviteMetadata(row), source };
+                  obj8.inviteAnalyticsMetadata = obj9;
+                  InviteQueueDefault.enqueue(obj8, handleSendState);
+                }
               }
             }
             class U {
@@ -240,7 +200,7 @@ export default noop.memo(
             cResult[12] = onInviteSent;
             cResult[13] = row;
             cResult[14] = source;
-            cResult[15] = O;
+            cResult[15] = handlePress;
           }
           const tmpResult4 = tmp(tmp2[14]);
         }
@@ -261,7 +221,7 @@ export default noop.memo(
         tmp13 = fn;
         const tmpResult = row(onPressAvatar[14]);
       }
-    : (row) => {
+    : function InstantInviteRow(row) {
         row = row.row;
         const code = row.code;
         const onPressAvatar = row.onPressAvatar;
@@ -313,7 +273,6 @@ export default noop.memo(
                   str = "";
                 }
                 let str2 = str;
-                let T;
                 let tmp15 = tmp19;
               } else if (tmp2(tmp3[16]).RowTypes.CHANNEL === type) {
                 let guild_id;
@@ -351,7 +310,6 @@ export default noop.memo(
                     const _HermesInternal = HermesInternal;
                     str2 = "#" + str;
                   }
-                  T = undefined;
                 }
               } else {
                 return null;
@@ -436,7 +394,7 @@ export default noop.memo(
             }
             obj11.disabled = tmp30;
             obj11.accessibilityActions = tmp18;
-            obj11.onAccessibilityAction = T;
+            obj11.onAccessibilityAction = fn;
             return jsx(tmp2(tmp3[27]).TableRow, {
               start,
               end,
@@ -504,24 +462,17 @@ export default noop.memo(
             const items3 = [obj17];
             tmp27 = items3;
           }
-          class T {
-            constructor(arg0) {
-              tmp = "viewProfile" === row.nativeEvent.actionName;
-              if (tmp) {
-                tmp2 = onPressAvatar;
-                tmp3 = null;
-                tmp = null !== onPressAvatar;
-              }
-              if (tmp) {
-                tmp5 = null;
-                if (onPressAvatar != null) {
-                  tmp6 = id;
-                  tmp4Result = tmp4(id);
-                }
-              }
-              return;
+          fn = function w(nativeEvent) {
+            let tmp = "viewProfile" === nativeEvent.nativeEvent.actionName;
+            if (tmp) {
+              tmp = null !== onPressAvatar;
             }
-          }
+            if (tmp) {
+              if (onPressAvatar != null) {
+                tmp4(id);
+              }
+            }
+          };
           str2 = <tmp8Result9 nick={null} user={null} />;
           tmp15 = tmp22Result;
           tmp18 = tmp27;

@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useIsSpeaking.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function useIsSpeaking(userId) {
       const cResult = userId(context[5]).c(20);
       userId = userId.userId;
       ({ checkSoundSharing, checkSoundboardSounds, checkIsMuted, context } = userId);
@@ -173,7 +173,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = fn;
       const tmpResult = userId(context[6]);
     }
-  : (checkSoundboardSounds) => {
+  : function useIsSpeaking(checkSoundboardSounds) {
       ({ userId: require, checkSoundSharing } = checkSoundboardSounds);
       if (checkSoundSharing === undefined) {
         checkSoundSharing = false;

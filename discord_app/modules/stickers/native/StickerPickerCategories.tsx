@@ -10,7 +10,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(10127).useStickerPickerStore;
+let useStickerPickerStore = fn(9712).useStickerPickerStore;
 const Constants = fn(1085);
 ({
   AnalyticEvents: closure_8,
@@ -20,10 +20,10 @@ const Constants = fn(1085);
 } = Constants);
 const EXPRESSION_FOOTER_HEIGHT = Constants.EXPRESSION_FOOTER_HEIGHT;
 const NODE_SIZE = Constants.NODE_SIZE;
-const ExpressionPickerViewType = fn(1229).ExpressionPickerViewType;
+const ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
   item: {
@@ -68,7 +68,7 @@ let closure_16 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_17 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (category) => {
+    ? function StickerCategoryItem(category) {
         const cResult = category(index[11]).c(38);
         category = category.category;
         const onPressCategory = category.onPressCategory;
@@ -497,7 +497,7 @@ let closure_17 = noop.memo(
         tmp8 = guild;
         let obj = category(index[11]);
       }
-    : (category) => {
+    : function StickerCategoryItem(category) {
         category = category.category;
         const onPressCategory = category.onPressCategory;
         const index = category.index;
@@ -1102,9 +1102,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
       const tmp17 = categoryIndex;
-      const tmp19 = categoryIndex(9980)();
+      const tmp19 = categoryIndex(9509)();
       const items9 = [
-        closure_14(categoryIndex(6559), {
+        closure_14(categoryIndex(6735), {
           estimatedListSize: "windowSize",
           horizontal: true,
           itemSize: EXPRESSION_FOOTER_HEIGHT,
@@ -1130,12 +1130,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items10 = [,];
         ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
         obj4.style = items10;
-        const obj5 = { style: tmp.guildIcon, source: tmp17(10162) };
-        obj4.children = closure_14(categories(1188).Icon, obj5);
+        const obj5 = { style: tmp.guildIcon, source: tmp17(9748) };
+        obj4.children = closure_14(categories(1200).Icon, obj5);
         obj3.children = closure_14(closure_5, obj4);
-        tmp22Result = closure_14(categories(5916).PressableOpacity, obj3);
+        tmp22Result = closure_14(categories(6189).PressableOpacity, obj3);
       }
       items9[1] = tmp22Result;
       obj.children = items9;
-      return closure_15(categoryIndex(9981), obj);
+      return closure_15(categoryIndex(9510), obj);
     };

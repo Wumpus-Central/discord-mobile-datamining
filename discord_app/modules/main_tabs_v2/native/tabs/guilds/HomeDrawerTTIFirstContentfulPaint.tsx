@@ -13,10 +13,10 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function HomeDrawerTTIFirstContentfulPaint() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function c() {
+        const fn = function o() {
           TTIAnalyticsUtils.trackAppUIViewed();
         };
         const items = [];
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp7;
     }
-  : () => {
+  : function HomeDrawerTTIFirstContentfulPaint() {
       const layoutEffect = noop.useLayoutEffect(() => {
         TTIAnalyticsUtils.trackAppUIViewed();
       }, []);

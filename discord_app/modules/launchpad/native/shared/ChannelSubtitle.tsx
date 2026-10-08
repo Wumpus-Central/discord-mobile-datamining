@@ -7,11 +7,11 @@ import getLayoutStylesDefault from "getLayoutStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SUBTITLE_OPACITY_NORMAL = fn(11711).SUBTITLE_OPACITY_NORMAL;
+const SUBTITLE_OPACITY_NORMAL = fn(11776).SUBTITLE_OPACITY_NORMAL;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ChannelSubtitle(arg0) {
       const cResult = c.c(14);
       ({ muted, connected, channelId, guildId, subtitle, textProps } = arg0);
       if (cResult[0] === channelId) {
@@ -98,7 +98,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = Text;
       const tmpResult = getChannelSubtitleData;
     }
-  : (arg0) => {
+  : function ChannelSubtitle(arg0) {
       ({ muted, textProps } = arg0);
       ({ connected, channelId, guildId, subtitle } = arg0);
       const channelSubtitleData = getChannelSubtitleData.getChannelSubtitleData(subtitle);

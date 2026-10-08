@@ -360,7 +360,7 @@ export const removeMentionRaidRestrictionWithFeedback = function removeMentionRa
     canResult = PermissionStore.can(constants2.MANAGE_GUILD, guild);
   }
   if (canResult) {
-    const result = require("GuildAutomodActionActionCreators").openConfirmRemoveMentionRaid(() => {
+    const result = require("GuildAutomodActionActionCreators").openConfirmRemoveMentionRaid(function onConfirm() {
       const obj = AppAnalyticsUtils;
       obj.trackWithMetadata(constants.GUILD_AUTOMOD_FEEDBACK, {
         feedback_type: AutomodFeedback.Feedback.MENTION_RAID_REMOVE_RESTRICTION,

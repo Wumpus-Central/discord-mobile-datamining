@@ -201,7 +201,7 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(7050).isGuildEventEnded;
+const isGuildEventEnded = fn(6059).isGuildEventEnded;
 const RelationshipTypes = fn(1085).RelationshipTypes;
 let obj = {
   loading: false,
@@ -224,7 +224,7 @@ prototype["initialize"] = function initialize(notifCenterItems) {
   this.waitFor(UserStore, RelationshipStore, ExperimentStore);
   if (null != notifCenterItems) {
     notifCenterItems = notifCenterItems.notifCenterItems;
-    const mapped = notifCenterItems.map((message) => {
+    const mapped = notifCenterItems.map(function unpack(message) {
       obj = {};
       const merged = Object.assign(message);
       let tmp2;
@@ -599,7 +599,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         const items = [];
-        obj = id(7139);
+        obj = id(6064);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(
           user,
           since,

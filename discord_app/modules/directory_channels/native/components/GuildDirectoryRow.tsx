@@ -14,7 +14,7 @@ const View = fn(17).View;
 const JoinGuildSources = fn(1085).JoinGuildSources;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { flexDirection: "row", padding: 16, marginVertical: 6, marginHorizontal: 8 },
   guildInfoContainer: { flexDirection: "column", flex: 1 },
@@ -177,14 +177,14 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   let result;
   let obj3 = { id: entry.guildId, icon: entry.icon, size: 40 };
   if (null == guildIconURL) {
-    result = tmp2(2066).fromGuildDirectoryEntry(entry);
-    const tmp2Result = tmp2(2066);
+    result = tmp2(2078).fromGuildDirectoryEntry(entry);
+    const tmp2Result = tmp2(2078);
   }
   obj8.guild = result;
   const items1 = [closure_10(GuildIconDefault, obj8)];
   let obj9 = { style: tmp.guildInfoContainer, children: null };
   const items2 = [
-    closure_10(entry(4892).Text, {
+    closure_10(entry(5086).Text, {
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
       lineClamp: 1,
@@ -201,7 +201,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
     const intl3 = tmp2(1126).intl;
     const obj14 = { membersOnline: approximatePresenceCount };
     obj13.children = intl3.format(tmp2(1126).t["LC+S+m"], obj14);
-    items3[1] = closure_10(tmp2(4892).Text, obj13);
+    items3[1] = closure_10(tmp2(5086).Text, obj13);
     obj11.children = items3;
     tmp10Result = closure_12(closure_11, obj11);
   }
@@ -215,7 +215,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
     const intl4 = tmp2(1126).intl;
     const obj18 = { count: approximateMemberCount };
     obj17.children = intl4.format(tmp2(1126).t.zRl6XR, obj18);
-    items5[1] = closure_10(tmp2(4892).Text, obj17);
+    items5[1] = closure_10(tmp2(5086).Text, obj17);
     obj15.children = items5;
     tmp10Result2 = closure_12(closure_11, obj15);
   }
@@ -242,7 +242,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
       color: "text-default",
       children: description,
     };
-    tmp9Result = closure_10(tmp2(4892).Text, obj20);
+    tmp9Result = closure_10(tmp2(5086).Text, obj20);
   }
   items7[1] = tmp9Result;
   items7[2] = closure_10(View, { style: tmp.flex });
@@ -267,8 +267,8 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   }
   obj22.variant = str2;
   obj22.text = stringResult;
-  items7[3] = closure_10(entry(5601).Button, obj22);
+  items7[3] = closure_10(entry(5375).Button, obj22);
   obj5.children = items7;
   obj4.children = closure_12(View, obj5);
-  return closure_10(entry(6002).Card, obj4);
+  return closure_10(entry(6186).Card, obj4);
 });

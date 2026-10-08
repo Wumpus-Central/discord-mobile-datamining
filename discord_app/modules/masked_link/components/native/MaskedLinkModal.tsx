@@ -3,8 +3,8 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import AlertModal from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import SharedStateUtils from "../../SharedStateUtils.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/metro/00017__.js";
@@ -24,7 +24,7 @@ let obj2 = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefaul
 const result = size.fileFinishedImporting("modules/masked_link/components/native/MaskedLinkModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MaskedLinkModal(arg0) {
       const cResult = c.c(60);
       ({ url, trustUrl, isProtocol, onConfirm, onCancel } = arg0);
       const tmp4 = closure_6();
@@ -320,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj17;
       tmp5 = obj17;
     }
-  : (isProtocol) => {
+  : function MaskedLinkModal(isProtocol) {
       isProtocol = isProtocol.isProtocol;
       shouldTrustUrl = undefined;
       ({ url, trustUrl, onConfirm, onCancel } = isProtocol);

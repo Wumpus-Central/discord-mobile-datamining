@@ -11,7 +11,7 @@ const require = globalThis.__r;
 const require = fn;
 function authorizeLink() {
   const self = this;
-  const apply = closure_14.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -19,7 +19,7 @@ function authorizeLink() {
   }
   return applyArgumentsResult;
 }
-let closure_14 = async function _authorizeLink(arg0) {
+let closure_13 = async function _authorizeLink(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -64,7 +64,7 @@ let closure_14 = async function _authorizeLink(arg0) {
         url = value.body.url;
         const obj5 = closure_130_1(closure_130_2[10]);
         const tmp18 = url;
-        let tmp6 = closure_130_8;
+        let tmp6 = closure_130_7;
         if (obj6.isAndroid()) {
           let IN_APP = tmp6.CHROME;
         } else {
@@ -81,487 +81,227 @@ let closure_14 = async function _authorizeLink(arg0) {
     }
   }
 };
-get_ActivityIndicator = fn(17);
-({ Image: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const View = fn(17).View;
 const WebBrowserType = fn(1085).WebBrowserType;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const logger = new LoggerDefault("TwoWayLink");
-const createStyles = fn(4896);
-let closure_12 = createStyles.createStyles({ image: { marginBottom: 32 }, redirect: { marginTop: 8 } });
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let closure_10 = new LoggerDefault("TwoWayLink");
+const createStyles = fn(5090);
+let closure_11 = createStyles.createStyles({ image: { marginBottom: 32 }, redirect: { marginTop: 8 } });
 const ReactCompilerGating = fn(558);
-let tmp4 = new LoggerDefault("TwoWayLink");
+const tmp3 = new LoggerDefault("TwoWayLink");
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_settings/connections/native/two_way_link/TwoWayLinkPreConnect.tsx",
 );
 
 export const TwoWayLinkPreConnect = ReactCompilerGating.isReactCompilerEnabled()
-  ? (platformType) => {
+  ? function TwoWayLinkPreConnect(platformType) {
       const cResult = require("c").c(44);
       platformType = platformType.platformType;
       _require = platformType;
       const onError = platformType.onError;
       onNext = platformType.onNext;
       ({ img, imgStyle, title, body, redirectDestination } = platformType);
-      const tmp4 = closure_12();
+      const tmp4 = closure_11();
       let obj = require("c");
       const twoWayLinkStyles = require("TwoWayLinkStyles").useTwoWayLinkStyles();
       const obj2 = require("TwoWayLinkStyles");
       const obj3 = noop;
-      [tmp7, _slicedToArray] = noop.useState(false);
+      [r10030, _slicedToArray] = noop.useState(false);
       asyncGeneratorStep = noop.useRef(undefined);
       if (cResult[0] === onError) {
-        if (cResult[1] === platformType) {
-          let tmp8 = cResult[2];
-        }
         if (cResult[3] === onNext) {
           if (cResult[4] === platformType) {
-            let tmp9 = cResult[5];
+            let tmp8 = cResult[5];
           }
-          noop = tmp9;
-          class P {
-            constructor(arg0) {
-              callbackState = platformType.callbackState;
-              if (callbackState === closure_4.current) {
-                tmp6 = onNext;
-                obj = { callbackCode: null, callbackState: null };
-                obj.callbackCode = tmp;
-                obj.callbackState = callbackState;
-                tmp7 = onNext(obj);
-              } else {
-                tmp2 = closure_11;
-                tmp3 = closure_0;
-                tmp4 = globalThis;
-                _HermesInternal = HermesInternal;
-                str = " link: received mismatching callback state!";
-                str2 = "";
-                warnResult = closure_11.warn("" + closure_0 + " link: received mismatching callback state!");
+          noop = tmp8;
+          if (cResult[6] !== tmp8) {
+            class I {
+              constructor() {
+                obj = closure_1(closure_2[17]);
+                subscription = obj.subscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_5);
+                return () => {
+                  onError(onNext[17]).unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_1_5);
+                };
               }
-              return;
             }
+            const items = [tmp8];
+            cResult[6] = tmp8;
+            cResult[7] = I;
+            cResult[8] = items;
+            let tmp10 = items;
+          } else {
+            class I {
+              constructor() {
+                obj = closure_1(closure_2[17]);
+                subscription = obj.subscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_5);
+                return () => {
+                  onError(onNext[17]).unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_1_5);
+                };
+              }
+            }
+            tmp10 = cResult[8];
           }
-          const effect = obj3.useEffect(tmp10, tmp11);
+          const effect = obj3.useEffect(I, tmp10);
+          const container = twoWayLinkStyles.container;
           if (imgStyle == null) {
-            imgStyle = false;
+            class I {
+              constructor() {
+                obj = closure_1(closure_2[17]);
+                subscription = obj.subscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_5);
+                return () => {
+                  onError(onNext[17]).unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_1_5);
+                };
+              }
+            }
           }
           if (cResult[9] === tmp4.image) {
-            if (cResult[10] === imgStyle) {
-              let tmp14 = cResult[11];
+            class I {
+              constructor() {
+                obj = closure_1(closure_2[17]);
+                subscription = obj.subscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_5);
+                return () => {
+                  onError(onNext[17]).unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_1_5);
+                };
+              }
             }
             if (cResult[12] === img) {
-              if (cResult[13] === tmp14) {
-                let tmp15 = cResult[14];
+              class I {
+                constructor() {
+                  obj = closure_1(closure_2[17]);
+                  subscription = obj.subscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_5);
+                  return () => {
+                    onError(onNext[17]).unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_1_5);
+                  };
+                }
               }
               if (cResult[15] === twoWayLinkStyles.title) {
-                if (cResult[16] === title) {
-                  let tmp18 = cResult[17];
+                class I {
+                  constructor() {
+                    obj = closure_1(closure_2[17]);
+                    subscription = obj.subscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_5);
+                    return () => {
+                      onError(onNext[17]).unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_1_5);
+                    };
+                  }
                 }
                 if (cResult[18] === body) {
-                  if (cResult[19] === twoWayLinkStyles.body) {
-                    let tmp20 = cResult[20];
+                  class I {
+                    constructor() {
+                      obj = closure_1(closure_2[17]);
+                      subscription = obj.subscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_5);
+                      return () => {
+                        onError(onNext[17]).unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_1_5);
+                      };
+                    }
                   }
                   if (cResult[21] === redirectDestination) {
-                    if (cResult[22] === tmp4.redirect) {
-                      let tmp22 = cResult[23];
+                    class I {
+                      constructor() {
+                        obj = closure_1(closure_2[17]);
+                        subscription = obj.subscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_5);
+                        return () => {
+                          onError(onNext[17]).unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_1_5);
+                        };
+                      }
                     }
                     if (cResult[24] === twoWayLinkStyles.content) {
-                      if (cResult[25] === tmp20) {
-                        if (cResult[26] === tmp22) {
-                          if (cResult[27] === tmp15) {
-                            if (cResult[28] === tmp18) {
-                              let tmp25 = cResult[29];
-                            }
-                            class P {
-                              constructor(arg0) {
-                                callbackState = platformType.callbackState;
-                                if (callbackState === closure_4.current) {
-                                  tmp6 = onNext;
-                                  obj = { callbackCode: null, callbackState: null };
-                                  obj.callbackCode = tmp;
-                                  obj.callbackState = callbackState;
-                                  tmp7 = onNext(obj);
-                                } else {
-                                  tmp2 = closure_11;
-                                  tmp3 = closure_0;
-                                  tmp4 = globalThis;
-                                  _HermesInternal = HermesInternal;
-                                  str = " link: received mismatching callback state!";
-                                  str2 = "";
-                                  warnResult = closure_11.warn(
-                                    "" + closure_0 + " link: received mismatching callback state!",
-                                  );
-                                }
-                                return;
-                              }
-                            }
-                            ({ footerContainer, footerButton } = twoWayLinkStyles);
-                            if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
-                              const string = tmp(tmp2[19]).intl.string;
-                              class P {
-                                constructor(arg0) {
-                                  callbackState = platformType.callbackState;
-                                  if (callbackState === closure_4.current) {
-                                    tmp6 = onNext;
-                                    obj = { callbackCode: null, callbackState: null };
-                                    obj.callbackCode = tmp;
-                                    obj.callbackState = callbackState;
-                                    tmp7 = onNext(obj);
-                                  } else {
-                                    tmp2 = closure_11;
-                                    tmp3 = closure_0;
-                                    tmp4 = globalThis;
-                                    _HermesInternal = HermesInternal;
-                                    str = " link: received mismatching callback state!";
-                                    str2 = "";
-                                    warnResult = closure_11.warn(
-                                      "" + closure_0 + " link: received mismatching callback state!",
-                                    );
-                                  }
-                                  return;
-                                }
-                              }
-                              cResult[30] = tmp30;
-                              let tmp29 = tmp30;
-                            } else {
-                              tmp29 = cResult[30];
-                            }
-                            if (cResult[31] === tmp8) {
-                              if (cResult[32] === tmp7) {
-                                let tmp31 = cResult[33];
-                              }
-                              if (cResult[34] === twoWayLinkStyles.footerButton) {
-                                if (cResult[35] === tmp31) {
-                                  let tmp34 = cResult[36];
-                                }
-                                if (cResult[37] === twoWayLinkStyles.footerContainer) {
-                                  if (cResult[38] === tmp34) {
-                                    let tmp37 = cResult[39];
-                                  }
-                                  if (cResult[40] === twoWayLinkStyles.container) {
-                                    if (cResult[41] === tmp25) {
-                                      if (cResult[42] === tmp37) {
-                                        let tmp39 = cResult[43];
-                                      }
-                                      return tmp39;
-                                    }
-                                  }
-                                  class P {
-                                    constructor(arg0) {
-                                      callbackState = platformType.callbackState;
-                                      if (callbackState === closure_4.current) {
-                                        tmp6 = onNext;
-                                        obj = { callbackCode: null, callbackState: null };
-                                        obj.callbackCode = tmp;
-                                        obj.callbackState = callbackState;
-                                        tmp7 = onNext(obj);
-                                      } else {
-                                        tmp2 = closure_11;
-                                        tmp3 = closure_0;
-                                        tmp4 = globalThis;
-                                        _HermesInternal = HermesInternal;
-                                        str = " link: received mismatching callback state!";
-                                        str2 = "";
-                                        warnResult = closure_11.warn(
-                                          "" + closure_0 + " link: received mismatching callback state!",
-                                        );
-                                      }
-                                      return;
-                                    }
-                                  }
-                                  const obj4 = { style: twoWayLinkStyles.container, children: null };
-                                  const items = [tmp25, tmp37];
-                                  obj4.children = items;
-                                  const tmp41 = closure_10(closure_7, obj4);
-                                  cResult[40] = twoWayLinkStyles.container;
-                                  cResult[41] = tmp25;
-                                  cResult[42] = tmp37;
-                                  cResult[43] = tmp41;
-                                  tmp39 = tmp41;
-                                }
-                                class P {
-                                  constructor(arg0) {
-                                    callbackState = platformType.callbackState;
-                                    if (callbackState === closure_4.current) {
-                                      tmp6 = onNext;
-                                      obj = { callbackCode: null, callbackState: null };
-                                      obj.callbackCode = tmp;
-                                      obj.callbackState = callbackState;
-                                      tmp7 = onNext(obj);
-                                    } else {
-                                      tmp2 = closure_11;
-                                      tmp3 = closure_0;
-                                      tmp4 = globalThis;
-                                      _HermesInternal = HermesInternal;
-                                      str = " link: received mismatching callback state!";
-                                      str2 = "";
-                                      warnResult = closure_11.warn(
-                                        "" + closure_0 + " link: received mismatching callback state!",
-                                      );
-                                    }
-                                    return;
-                                  }
-                                }
-                                const obj5 = { bottom: true, style: footerContainer, children: tmp34 };
-                                const tmp38 = closure_9(tmp(tmp2[21]).SafeAreaPaddingView, obj5);
-                                cResult[37] = twoWayLinkStyles.footerContainer;
-                                cResult[38] = tmp34;
-                                cResult[39] = tmp38;
-                                tmp37 = tmp38;
-                              }
-                              class P {
-                                constructor(arg0) {
-                                  callbackState = platformType.callbackState;
-                                  if (callbackState === closure_4.current) {
-                                    tmp6 = onNext;
-                                    obj = { callbackCode: null, callbackState: null };
-                                    obj.callbackCode = tmp;
-                                    obj.callbackState = callbackState;
-                                    tmp7 = onNext(obj);
-                                  } else {
-                                    tmp2 = closure_11;
-                                    tmp3 = closure_0;
-                                    tmp4 = globalThis;
-                                    _HermesInternal = HermesInternal;
-                                    str = " link: received mismatching callback state!";
-                                    str2 = "";
-                                    warnResult = closure_11.warn(
-                                      "" + closure_0 + " link: received mismatching callback state!",
-                                    );
-                                  }
-                                  return;
-                                }
-                              }
-                              const obj6 = { style: footerButton, children: tmp31 };
-                              const tmp36 = closure_9(closure_7, obj6);
-                              cResult[34] = twoWayLinkStyles.footerButton;
-                              cResult[35] = tmp31;
-                              cResult[36] = tmp36;
-                              tmp34 = tmp36;
-                            }
-                            const obj7 = { variant: "primary", size: "lg", text: tmp29, onPress: tmp8, loading: tmp7 };
-                            const tmp33 = closure_9(tmp(tmp2[20]).Button, obj7);
-                            cResult[31] = tmp8;
-                            cResult[32] = tmp7;
-                            cResult[33] = tmp33;
-                            tmp31 = tmp33;
-                          }
+                      class I {
+                        constructor() {
+                          obj = closure_1(closure_2[17]);
+                          subscription = obj.subscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_5);
+                          return () => {
+                            onError(onNext[17]).unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_1_5);
+                          };
                         }
                       }
                     }
-                    class P {
-                      constructor(arg0) {
-                        callbackState = platformType.callbackState;
-                        if (callbackState === closure_4.current) {
-                          tmp6 = onNext;
-                          obj = { callbackCode: null, callbackState: null };
-                          obj.callbackCode = tmp;
-                          obj.callbackState = callbackState;
-                          tmp7 = onNext(obj);
-                        } else {
-                          tmp2 = closure_11;
-                          tmp3 = closure_0;
-                          tmp4 = globalThis;
-                          _HermesInternal = HermesInternal;
-                          str = " link: received mismatching callback state!";
-                          str2 = "";
-                          warnResult = closure_11.warn("" + closure_0 + " link: received mismatching callback state!");
-                        }
-                        return;
-                      }
-                    }
-                    const obj8 = { style: twoWayLinkStyles.content, children: null };
-                    const items1 = [tmp15, tmp18, tmp20, tmp22];
-                    obj8.children = items1;
-                    const tmp27 = closure_10(closure_7, obj8);
+                    const obj4 = { style: twoWayLinkStyles.content, children: null };
+                    const items1 = [tmp14, tmp18, tmp21, tmp24];
+                    obj4.children = items1;
+                    const tmp29 = closure_9(View, obj4);
                     cResult[24] = twoWayLinkStyles.content;
-                    cResult[25] = tmp20;
-                    cResult[26] = tmp22;
-                    cResult[27] = tmp15;
+                    cResult[25] = tmp21;
+                    cResult[26] = tmp24;
+                    cResult[27] = tmp14;
                     cResult[28] = tmp18;
-                    cResult[29] = tmp27;
-                    tmp25 = tmp27;
+                    cResult[29] = tmp29;
                   }
-                  class P {
-                    constructor(arg0) {
-                      callbackState = platformType.callbackState;
-                      if (callbackState === closure_4.current) {
-                        tmp6 = onNext;
-                        obj = { callbackCode: null, callbackState: null };
-                        obj.callbackCode = tmp;
-                        obj.callbackState = callbackState;
-                        tmp7 = onNext(obj);
-                      } else {
-                        tmp2 = closure_11;
-                        tmp3 = closure_0;
-                        tmp4 = globalThis;
-                        _HermesInternal = HermesInternal;
-                        str = " link: received mismatching callback state!";
-                        str2 = "";
-                        warnResult = closure_11.warn("" + closure_0 + " link: received mismatching callback state!");
-                      }
-                      return;
-                    }
-                  }
-                  if (tmp23) {
-                    const obj9 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
-                    class P {
-                      constructor(arg0) {
-                        callbackState = platformType.callbackState;
-                        if (callbackState === closure_4.current) {
-                          tmp6 = onNext;
-                          obj = { callbackCode: null, callbackState: null };
-                          obj.callbackCode = tmp;
-                          obj.callbackState = callbackState;
-                          tmp7 = onNext(obj);
-                        } else {
-                          tmp2 = closure_11;
-                          tmp3 = closure_0;
-                          tmp4 = globalThis;
-                          _HermesInternal = HermesInternal;
-                          str = " link: received mismatching callback state!";
-                          str2 = "";
-                          warnResult = closure_11.warn("" + closure_0 + " link: received mismatching callback state!");
-                        }
-                        return;
+                  let tmp25 = null != redirectDestination;
+                  if (tmp25) {
+                    class I {
+                      constructor() {
+                        obj = closure_1(closure_2[17]);
+                        subscription = obj.subscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_5);
+                        return () => {
+                          onError(onNext[17]).unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_1_5);
+                        };
                       }
                     }
-                    const intl = tmp(tmp2[19]).intl;
-                    const obj10 = { redirectUrl: redirectDestination };
-                    obj9.children = intl.format(tmp(tmp2[19]).t.XhlYYn, obj10);
-                    tmp23 = closure_9(tmp(tmp2[18]).Text, obj9);
+                    const obj5 = {
+                      style: tmp4.redirect,
+                      variant: "text-sm/medium",
+                      color: "text-default",
+                      children: null,
+                    };
+                    const intl = tmp(tmp2[20]).intl;
+                    const obj6 = { redirectUrl: redirectDestination };
+                    obj5.children = intl.format(tmp(tmp2[20]).t.XhlYYn, obj6);
+                    tmp25 = closure_8(tmp(tmp2[19]).Text, obj5);
                   }
                   cResult[21] = redirectDestination;
                   cResult[22] = tmp4.redirect;
-                  cResult[23] = tmp23;
-                  tmp22 = tmp23;
+                  cResult[23] = tmp25;
                 }
-                class P {
-                  constructor(arg0) {
-                    callbackState = platformType.callbackState;
-                    if (callbackState === closure_4.current) {
-                      tmp6 = onNext;
-                      obj = { callbackCode: null, callbackState: null };
-                      obj.callbackCode = tmp;
-                      obj.callbackState = callbackState;
-                      tmp7 = onNext(obj);
-                    } else {
-                      tmp2 = closure_11;
-                      tmp3 = closure_0;
-                      tmp4 = globalThis;
-                      _HermesInternal = HermesInternal;
-                      str = " link: received mismatching callback state!";
-                      str2 = "";
-                      warnResult = closure_11.warn("" + closure_0 + " link: received mismatching callback state!");
-                    }
-                    return;
-                  }
-                }
-                const obj11 = {
+                const obj7 = {
                   variant: "text-md/medium",
                   color: "text-default",
                   style: twoWayLinkStyles.body,
                   children: body,
                 };
-                const tmp21 = closure_9(tmp(tmp2[18]).Text, obj11);
+                const tmp23 = closure_8(tmp(tmp2[19]).Text, obj7);
                 cResult[18] = body;
                 cResult[19] = twoWayLinkStyles.body;
-                cResult[20] = tmp21;
-                tmp20 = tmp21;
+                cResult[20] = tmp23;
               }
-              class P {
-                constructor(arg0) {
-                  callbackState = platformType.callbackState;
-                  if (callbackState === closure_4.current) {
-                    tmp6 = onNext;
-                    obj = { callbackCode: null, callbackState: null };
-                    obj.callbackCode = tmp;
-                    obj.callbackState = callbackState;
-                    tmp7 = onNext(obj);
-                  } else {
-                    tmp2 = closure_11;
-                    tmp3 = closure_0;
-                    tmp4 = globalThis;
-                    _HermesInternal = HermesInternal;
-                    str = " link: received mismatching callback state!";
-                    str2 = "";
-                    warnResult = closure_11.warn("" + closure_0 + " link: received mismatching callback state!");
-                  }
-                  return;
-                }
-              }
-              const obj12 = {
+              const obj8 = {
                 variant: "heading-xl/bold",
                 color: "mobile-text-heading-primary",
                 style: twoWayLinkStyles.title,
                 accessibilityRole: "header",
                 children: title,
               };
-              const tmp19 = closure_9(tmp(tmp2[18]).Text, obj12);
+              const tmp20 = closure_8(tmp(tmp2[19]).Text, obj8);
               cResult[15] = twoWayLinkStyles.title;
               cResult[16] = title;
-              cResult[17] = tmp19;
-              tmp18 = tmp19;
+              cResult[17] = tmp20;
             }
-            class P {
-              constructor(arg0) {
-                callbackState = platformType.callbackState;
-                if (callbackState === closure_4.current) {
-                  tmp6 = onNext;
-                  obj = { callbackCode: null, callbackState: null };
-                  obj.callbackCode = tmp;
-                  obj.callbackState = callbackState;
-                  tmp7 = onNext(obj);
-                } else {
-                  tmp2 = closure_11;
-                  tmp3 = closure_0;
-                  tmp4 = globalThis;
-                  _HermesInternal = HermesInternal;
-                  str = " link: received mismatching callback state!";
-                  str2 = "";
-                  warnResult = closure_11.warn("" + closure_0 + " link: received mismatching callback state!");
-                }
-                return;
-              }
-            }
-            const obj13 = { source: img, style: tmp14 };
-            const tmp17 = closure_9(closure_6, obj13);
+            const obj9 = { source: img, style: tmp13 };
+            const tmp17 = closure_8(onError(tmp2[18]), obj9);
             cResult[12] = img;
-            cResult[13] = tmp14;
+            cResult[13] = tmp13;
             cResult[14] = tmp17;
-            tmp15 = tmp17;
           }
           const items2 = [tmp4.image, imgStyle];
           cResult[9] = tmp4.image;
           cResult[10] = imgStyle;
           cResult[11] = items2;
-          tmp14 = items2;
         }
-        class P {
-          constructor(arg0) {
-            callbackState = platformType.callbackState;
-            if (callbackState === closure_4.current) {
-              tmp6 = onNext;
-              obj = { callbackCode: null, callbackState: null };
-              obj.callbackCode = tmp;
-              obj.callbackState = callbackState;
-              tmp7 = onNext(obj);
-            } else {
-              tmp2 = closure_11;
-              tmp3 = closure_0;
-              tmp4 = globalThis;
-              _HermesInternal = HermesInternal;
-              str = " link: received mismatching callback state!";
-              str2 = "";
-              warnResult = closure_11.warn("" + closure_0 + " link: received mismatching callback state!");
-            }
-            return;
+        const fn = function z(callbackState) {
+          callbackState = callbackState.callbackState;
+          if (callbackState === ref.current) {
+            const obj = { callbackCode: tmp, callbackState };
+            onNext(obj);
+          } else {
+            const _HermesInternal = HermesInternal;
+            logger.warn("" + closure_0 + " link: received mismatching callback state!");
           }
-        }
+        };
         cResult[3] = onNext;
         cResult[4] = platformType;
-        cResult[5] = P;
-        tmp9 = P;
+        cResult[5] = fn;
+        tmp8 = fn;
       }
       _require = asyncGeneratorStep(async () => {
         v0(true);
@@ -576,7 +316,7 @@ export const TwoWayLinkPreConnect = ReactCompilerGating.isReactCompilerEnabled()
         v0 = 0;
         tmp3();
       });
-      const fn = function () {
+      function t1() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -585,14 +325,13 @@ export const TwoWayLinkPreConnect = ReactCompilerGating.isReactCompilerEnabled()
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      };
+      }
       cResult[0] = onError;
       cResult[1] = platformType;
-      cResult[2] = fn;
-      tmp8 = fn;
+      cResult[2] = t1;
       const tmp6 = _slicedToArray(noop.useState(false), 2);
     }
-  : (platformType) => {
+  : function TwoWayLinkPreConnect(platformType) {
       platformType = platformType.platformType;
       const onError = platformType.onError;
       const onNext = platformType.onNext;
@@ -600,7 +339,7 @@ export const TwoWayLinkPreConnect = ReactCompilerGating.isReactCompilerEnabled()
       _slicedToArray = undefined;
       let callback1;
       ({ img, title, body } = platformType);
-      const tmp = closure_12();
+      const tmp = closure_11();
       const twoWayLinkStyles = platformType(onNext[14]).useTwoWayLinkStyles();
       let obj = platformType(onNext[14]);
       [tmp6, c3] = callback1.useState(false);
@@ -610,7 +349,7 @@ export const TwoWayLinkPreConnect = ReactCompilerGating.isReactCompilerEnabled()
       const callback = callback1.useCallback(
         asyncGeneratorStep(async () => {
           v0(true);
-          await closure_1_13(platformType);
+          await closure_1_12(platformType);
           closure_128_0 = value;
           closure_129_3(false);
           state = platformType(tmp16[15]).getCallbackParamsFromURL(closure_128_0).state;
@@ -643,21 +382,22 @@ export const TwoWayLinkPreConnect = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: twoWayLinkStyles.content, children: null };
       const obj4 = { source: img, style: null };
       const items3 = [tmp.image];
+      const tmp5 = _slicedToArray(callback1.useState(false), 2);
       if (imgStyle == null) {
         imgStyle = false;
       }
       items3[1] = imgStyle;
       obj4.style = items3;
       const items4 = [
-        closure_9(closure_6, obj4),
-        closure_9(platformType(onNext[18]).Text, {
+        closure_8(onError(onNext[18]), obj4),
+        closure_8(platformType(onNext[19]).Text, {
           variant: "heading-xl/bold",
           color: "mobile-text-heading-primary",
           style: twoWayLinkStyles.title,
           accessibilityRole: "header",
           children: title,
         }),
-        closure_9(platformType(onNext[18]).Text, {
+        closure_8(platformType(onNext[19]).Text, {
           variant: "text-md/medium",
           color: "text-default",
           style: twoWayLinkStyles.body,
@@ -667,24 +407,24 @@ export const TwoWayLinkPreConnect = ReactCompilerGating.isReactCompilerEnabled()
       let tmp12Result = null != redirectDestination;
       if (tmp12Result) {
         const obj7 = { style: tmp.redirect, variant: "text-sm/medium", color: "text-default", children: null };
-        const intl = tmp2(tmp3[19]).intl;
+        const intl = tmp2(tmp3[20]).intl;
         const obj8 = { redirectUrl: redirectDestination };
-        obj7.children = intl.format(tmp2(tmp3[19]).t.XhlYYn, obj8);
-        tmp12Result = closure_9(tmp2(tmp3[18]).Text, obj7);
+        obj7.children = intl.format(tmp2(tmp3[20]).t.XhlYYn, obj8);
+        tmp12Result = closure_8(tmp2(tmp3[19]).Text, obj7);
       }
       items4[3] = tmp12Result;
       obj3.children = items4;
-      const items5 = [closure_10(closure_7, obj3)];
+      const items5 = [closure_9(View, obj3)];
       const obj9 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
       const obj10 = { style: twoWayLinkStyles.footerButton, children: null };
       const obj11 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
-      const intl2 = tmp2(tmp3[19]).intl;
-      obj11.text = intl2.string(platformType(onNext[19]).t["3PatSz"]);
+      const intl2 = tmp2(tmp3[20]).intl;
+      obj11.text = intl2.string(platformType(onNext[20]).t["3PatSz"]);
       obj11.onPress = callback;
       obj11.loading = tmp6;
-      obj10.children = closure_9(platformType(onNext[20]).Button, obj11);
-      obj9.children = closure_9(closure_7, obj10);
-      items5[1] = closure_9(platformType(onNext[21]).SafeAreaPaddingView, obj9);
+      obj10.children = closure_8(platformType(onNext[21]).Button, obj11);
+      obj9.children = closure_8(View, obj10);
+      items5[1] = closure_8(platformType(onNext[22]).SafeAreaPaddingView, obj9);
       obj2.children = items5;
-      return closure_10(closure_7, obj2);
+      return closure_9(View, obj2);
     };

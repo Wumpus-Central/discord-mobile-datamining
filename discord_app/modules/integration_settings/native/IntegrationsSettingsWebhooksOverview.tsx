@@ -20,7 +20,7 @@ import WebhooksStore from "../../../stores/WebhooksStore.tsx";
 
 require = fn;
 let closure_3 = ["channelId", "user"];
-let GuildChannelStore = fn(4513);
+let GuildChannelStore = fn(4705);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_8, GUILD_VOCAL_CHANNELS_KEY: closure_9 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1085);
@@ -33,7 +33,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: null, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.content = {
@@ -45,7 +45,7 @@ obj2.hint = { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: native
 let closure_23 = createStyles.createLegacyClassComponentStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (avatar) => {
+  ? function WebhookItem(avatar) {
       const cResult = avatar(guildId[14]).c(22);
       avatar = avatar.avatar;
       const channel = avatar.channel;
@@ -148,7 +148,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       const obj2 = avatar(guildId[15]);
     }
-  : (avatar) => {
+  : function WebhookItem(avatar) {
       avatar = avatar.avatar;
       const channel = avatar.channel;
       const guildId = avatar.guildId;
@@ -192,7 +192,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function ConnectedWebhookItem(channelId) {
       const cResult = require("c").c(14);
       if (cResult[0] !== channelId) {
         channelId = channelId.channelId;
@@ -226,7 +226,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp6 != null) {
           id1 = tmp6.id;
         }
-        const fn = function p() {
+        const fn = function b() {
           id = undefined;
           if (id != null) {
             id = id.id;
@@ -249,38 +249,41 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         tmp16 = cResult[7];
       }
       if (cResult[8] !== tmp4) {
-        const fn2 = function k() {
-          return ChannelStore.getChannel(closure_0);
-        };
+        class S {
+          constructor() {
+            return closure_7.getChannel(closure_0);
+          }
+        }
         cResult[8] = tmp4;
-        cResult[9] = fn2;
-        let tmp18 = fn2;
+        cResult[9] = S;
       } else {
-        tmp18 = cResult[9];
+        class S {
+          constructor() {
+            return closure_7.getChannel(closure_0);
+          }
+        }
       }
       const tmpResult = require("initialize");
-      const stateFromStores1 = require("initialize").useStateFromStores(tmp16, tmp18);
+      const stateFromStores1 = require("initialize").useStateFromStores(tmp16, S);
       if (cResult[10] === stateFromStores1) {
-        if (cResult[11] === tmp5) {
-          if (cResult[12] === stateFromStores) {
-            let tmp20 = cResult[13];
+        class S {
+          constructor() {
+            return closure_7.getChannel(closure_0);
           }
-          return tmp20;
         }
       }
       const obj2 = {};
       const merged = Object.assign(tmp5);
       obj2.user = stateFromStores;
       obj2.channel = stateFromStores1;
-      const tmp22 = closure_20(closure_24, obj2);
+      const tmpResult2 = require("initialize");
       cResult[10] = stateFromStores1;
       cResult[11] = tmp5;
       cResult[12] = stateFromStores;
-      cResult[13] = tmp22;
-      tmp20 = tmp22;
-      const tmpResult2 = require("initialize");
+      cResult[13] = closure_20(closure_24, obj2);
+      const tmp21 = closure_20(closure_24, obj2);
     }
-  : (arg0) => {
+  : function ConnectedWebhookItem(arg0) {
       ({ channelId: require, user: importDefault } = arg0);
       const merged = Object.assign(arg0, Object.assign({ channelId: 0, user: 0 }));
       const items = [UserStore];
@@ -301,7 +304,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function CreateWebhookButton(guild) {
       const cResult = require("c").c(13);
       guild = guild.guild;
       _require = guild;
@@ -425,7 +428,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         });
-        const fn2 = function () {
+        function t3() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -434,12 +437,12 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[4] = stateFromStores;
         cResult[5] = guild.id;
         cResult[6] = navigation;
-        cResult[7] = fn2;
-        tmp10 = fn2;
+        cResult[7] = t3;
+        tmp10 = t3;
         const tmpResult = tmp(tmp2[22]);
       }
       const fn = function l() {
@@ -463,7 +466,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = fn;
       const obj2 = require("useNavigation");
     }
-  : (guild) => {
+  : function CreateWebhookButton(guild) {
       guild = guild.guild;
       let channel = guild.channel;
       let navigation;
@@ -596,7 +599,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
   const items = [
-    closure_20(webhookType(4892).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }),
+    closure_20(webhookType(5086).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }),
     ,
   ];
   let tmp4Result = webhookType === constants3.INCOMING;
@@ -606,7 +609,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: webhookType(17051).WebhookEmpty, title: null };
+    const obj2 = { Illustration: webhookType(17332).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1126).intl;
       dkHRkE = webhookType(1126).t.dkHRkE;
@@ -616,7 +619,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
       stringResult = intl.string(webhookType(1126).t["4JAVI+"]);
     }
     obj2.title = stringResult;
-    closure_20(webhookType(1188).EmptyState, obj2);
+    closure_20(webhookType(1200).EmptyState, obj2);
   } else {
     const obj3 = {
       hasIcons: true,
@@ -637,7 +640,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
       }),
     };
     const obj4 = { children: null };
-    items[2] = closure_20(webhookType(6081).TableRowGroup, obj3);
+    items[2] = closure_20(webhookType(6267).TableRowGroup, obj3);
     obj4.children = items;
     return closure_22(closure_21, obj4);
   }
@@ -648,17 +651,17 @@ prototype["render"] = function render() {
   const obj2 = {
     style: tmp.form,
     contentContainerStyle: this.props.contentContainerStyle,
-    children: closure_1_20(Stack_Stack.Stack, {
+    children: constants2(Stack_Stack.Stack, {
       spacing: nativeDefault.space.PX_24,
       style: tmp.content,
       children: this.renderWebhooks(),
     }),
   };
-  const items = [closure_1_20(Form.Form, obj2), closure_1_20(NavScrim.NavScrim, {})];
+  const items = [constants2(Form.Form, obj2), constants2(NavScrim.NavScrim, {})];
   obj.children = items;
   return closure_1_22(guild, obj);
 };
-WebhooksOverview.contextType = fn(4595).ThemeContext;
+WebhooksOverview.contextType = fn(4787).ThemeContext;
 let closure_28 = [];
 ReactCompilerGating = fn(558);
 let obj5 = { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
@@ -668,7 +671,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function ConnectedWebhooksOverview(channelId) {
       const cResult = channelId(stateFromStores[14]).c(21);
       channelId = channelId.channelId;
       const guildId = channelId.guildId;
@@ -772,7 +775,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[20] = tmp25;
             tmp24 = tmp25;
           }
-          const fn4 = function w() {
+          const fn3 = function w() {
             if (null != id) {
               if (null != id1) {
                 const forChannel = WebhooksActionCreatorsDefault.fetchForChannel(id, tmp2);
@@ -785,13 +788,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const items3 = [id, id1];
           cResult[11] = id1;
           cResult[12] = id;
-          cResult[13] = fn4;
+          cResult[13] = fn3;
           cResult[14] = items3;
           tmp21 = items3;
-          tmp20 = fn4;
+          tmp20 = fn3;
           const tmpResult4 = tmp(tmp2[22]);
         }
-        const fn3 = function y() {
+        const fn2 = function f() {
           if (null != id) {
             if (null != id1) {
               let webhooksForChannel = WebhooksStore.getWebhooksForChannel(id, tmp2);
@@ -806,31 +809,34 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[8] = id1;
         cResult[9] = id;
-        cResult[10] = fn3;
-        tmp18 = fn3;
+        cResult[10] = fn2;
+        tmp18 = fn2;
         const tmpResult3 = tmp(tmp2[22]);
       }
       let guild_id1;
       if (stateFromStores != null) {
         guild_id1 = stateFromStores.guild_id;
       }
-      const fn2 = function _() {
-        let guild_id;
-        if (stateFromStores != null) {
-          guild_id = stateFromStores.guild_id;
+      class I {
+        constructor() {
+          guild_id = undefined;
+          tmp = closure_11;
+          if (closure_2 != null) {
+            guild_id = closure_2.guild_id;
+          }
+          if (guild_id == null) {
+            guild_id = guildId;
+          }
+          return closure_11.getGuild(guild_id);
         }
-        if (guild_id == null) {
-          guild_id = guildId;
-        }
-        return GuildStore.getGuild(guild_id);
-      };
+      }
       cResult[4] = guild_id1;
       cResult[5] = guildId;
-      cResult[6] = fn2;
-      tmp11 = fn2;
+      cResult[6] = I;
+      tmp11 = I;
       const tmpResult = channelId(stateFromStores[22]);
     }
-  : (channelId) => {
+  : function ConnectedWebhooksOverview(channelId) {
       channelId = channelId.channelId;
       const guildId = channelId.guildId;
       let stateFromStores;

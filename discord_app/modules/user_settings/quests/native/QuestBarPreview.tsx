@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const value = { isRendered: true, isVisibleToUser: true };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   overlay: {
     position: "absolute",
@@ -38,7 +38,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/quests/native/QuestBarPreview.tsx");
 
 export const QuestBarPreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? (quest) => {
+  ? function QuestBarPreview(quest) {
       const cResult = c.c(8);
       quest = quest.quest;
       let overlay = closure_6();
@@ -84,7 +84,7 @@ export const QuestBarPreview = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (quest) => {
+  : function QuestBarPreview(quest) {
       quest = quest.quest;
       const tmp = closure_6();
       let tmp2 = null;

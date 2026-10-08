@@ -38,7 +38,7 @@ let obj2 = {
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsDisabledWarning.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (text) => {
+  ? function GuildPowerupsDisabledWarning(text) {
       const cResult = c.c(7);
       text = text.text;
       const tmp4 = closure_6();
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const obj4 = { style: tmp4.text, variant: "text-md/semibold", color: "text-feedback-warning", children: text };
     }
-  : (children) => {
+  : function GuildPowerupsDisabledWarning(children) {
       const tmp = closure_6();
       const obj = { style: tmp.container, children: null };
       const items = [

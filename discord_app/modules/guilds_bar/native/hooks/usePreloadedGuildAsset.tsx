@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/usePreloadedGuildAsset.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, icon, asset) => {
+  ? function usePreloadedGuildAsset(guildId, icon, asset) {
       _require = guildId;
       importDefault = icon;
       dependencyMap = asset;
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj4;
       tmp5 = obj4;
     }
-  : (guildId, icon, asset) => {
+  : function usePreloadedGuildAsset(guildId, icon, asset) {
       importDefault = icon;
       dependencyMap = asset;
       _slicedToArray = _slicedToArray(ref.useState({}), 2)[1];

@@ -11,14 +11,14 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const useEffectiveThemeOverride = fn(7911).useEffectiveThemeOverride;
+const useEffectiveThemeOverride = fn(8330).useEffectiveThemeOverride;
 const ThemeTypes = fn(1085).ThemeTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (isPreview) => {
+  ? function useProfileTheme(isPreview) {
       const cResult = c.c(23);
       ({ user, displayProfile, pendingThemeColors, pendingAvatarSrc, forceUserTheme } = isPreview);
       const tmp4 = useThemeDefault();
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp12;
       const tmpResult = initialize;
     }
-  : (arg0) => {
+  : function useProfileTheme(arg0) {
       ({ user, displayProfile, pendingAvatarSrc } = arg0);
       ({ pendingThemeColors, isPreview, forceUserTheme } = arg0);
       const tmp2 = useThemeDefault();

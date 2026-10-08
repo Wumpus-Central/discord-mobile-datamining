@@ -8,7 +8,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCurrentUser() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -26,7 +26,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       _modDef38(null != stateFromStores, "user has to be signed in before accessing shop");
       return stateFromStores;
     }
-  : () => {
+  : function useCurrentUser() {
       const items = [UserStore];
       const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
       _modDef38(null != stateFromStores, "user has to be signed in before accessing shop");
@@ -37,7 +37,7 @@ const result = size.fileFinishedImporting("modules/collectibles/hooks/useCurrent
 
 export const useCurrentUser = tmp2;
 export const useCurrentUserIfAvailable = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCurrentUserIfAvailable() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -53,7 +53,7 @@ export const useCurrentUserIfAvailable = ReactCompilerGating.isReactCompilerEnab
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useCurrentUserIfAvailable() {
       const items = [UserStore];
       return initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
     };

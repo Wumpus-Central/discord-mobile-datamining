@@ -24,7 +24,7 @@ const constants = {
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useThrottleDurationForChannel(arg0) {
       const cResult = c.c(3);
       const stageParticipantsCount = StageChannelParticipantStoreHooks.useStageParticipantsCount(
         arg0,
@@ -56,7 +56,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return num3;
     }
-  : (arg0) => {
+  : function useThrottleDurationForChannel(arg0) {
       const stageParticipantsCount = StageChannelParticipantStoreHooks.useStageParticipantsCount(
         arg0,
         StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE,
@@ -110,13 +110,13 @@ function useStageChannelParticipantsList(arg0, arg1, arg2) {
     if (c2) {
       let mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
         items,
-        closure_0(5589).StageChannelParticipantNamedIndex.SPEAKER,
+        closure_0(5955).StageChannelParticipantNamedIndex.SPEAKER,
       );
       const iter = mutableParticipants[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp10 = nextResult;
-        if (nextResult.type !== closure_0(5589).StageChannelParticipantTypes.STREAM) {
+        if (nextResult.type !== closure_0(5955).StageChannelParticipantTypes.STREAM) {
           iter.return();
           break;
         } else {
@@ -152,8 +152,8 @@ function useStageChannelParticipantsList(arg0, arg1, arg2) {
     }
     pushSection(items4, 1, false);
     const items5 = [
-      closure_0(5589).StageChannelParticipantNamedIndex.SPEAKER,
-      closure_0(5589).StageChannelParticipantNamedIndex.AUDIENCE,
+      closure_0(5955).StageChannelParticipantNamedIndex.SPEAKER,
+      closure_0(5955).StageChannelParticipantNamedIndex.AUDIENCE,
     ];
     const item = items5.forEach((item) => {
       const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(stateFromStores[0], item);
@@ -183,7 +183,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/useStageChanne
 export { useStageChannelParticipantsList };
 export const useThrottleDurationForChannel = tmp2;
 export const useStageChannelParticipantsListThrottled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2, arg3) => {
+  ? function useStageChannelParticipantsListThrottled(arg0, arg1, arg2, arg3) {
       const cResult = require("c").c(13);
       _require = arg0;
       dependencyMap = arg1;
@@ -198,7 +198,7 @@ export const useStageChannelParticipantsListThrottled = ReactCompilerGating.isRe
           return items;
         },
         items1,
-        tmp(5596).isVersionEqual,
+        tmp(5962).isVersionEqual,
       );
       const tmpResult = require("initialize");
       const items2 = [stateFromStores1];
@@ -218,13 +218,13 @@ export const useStageChannelParticipantsListThrottled = ReactCompilerGating.isRe
         if (c2) {
           let mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
             items,
-            closure_0(5589).StageChannelParticipantNamedIndex.SPEAKER,
+            closure_0(5955).StageChannelParticipantNamedIndex.SPEAKER,
           );
           const iter = mutableParticipants[Symbol.iterator]();
           const nextResult = iter.next();
           while (iter !== undefined) {
             let tmp10 = nextResult;
-            if (nextResult.type !== closure_0(5589).StageChannelParticipantTypes.STREAM) {
+            if (nextResult.type !== closure_0(5955).StageChannelParticipantTypes.STREAM) {
               iter.return();
               break;
             } else {
@@ -260,8 +260,8 @@ export const useStageChannelParticipantsListThrottled = ReactCompilerGating.isRe
         }
         pushSection(items4, 1, false);
         const items5 = [
-          closure_0(5589).StageChannelParticipantNamedIndex.SPEAKER,
-          closure_0(5589).StageChannelParticipantNamedIndex.AUDIENCE,
+          closure_0(5955).StageChannelParticipantNamedIndex.SPEAKER,
+          closure_0(5955).StageChannelParticipantNamedIndex.AUDIENCE,
         ];
         const item = items5.forEach((item) => {
           const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(stateFromStores[0], item);
@@ -346,7 +346,7 @@ export const useStageChannelParticipantsListThrottled = ReactCompilerGating.isRe
       tmp22 = items8;
       const tmp8Result = tmp8(require("useThrottle").useThrottledState(memo, arg2, tmp13), 2);
     }
-  : (arg0, arg1, arg2) => {
+  : function useStageChannelParticipantsListThrottled(arg0, arg1, arg2) {
       let flag = arg3;
       if (arg3 === undefined) {
         flag = false;
@@ -382,13 +382,13 @@ export const useStageChannelParticipantsListThrottled = ReactCompilerGating.isRe
         if (c2) {
           let mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
             items,
-            closure_0(5589).StageChannelParticipantNamedIndex.SPEAKER,
+            closure_0(5955).StageChannelParticipantNamedIndex.SPEAKER,
           );
           const iter = mutableParticipants[Symbol.iterator]();
           const nextResult = iter.next();
           while (iter !== undefined) {
             let tmp10 = nextResult;
-            if (nextResult.type !== closure_0(5589).StageChannelParticipantTypes.STREAM) {
+            if (nextResult.type !== closure_0(5955).StageChannelParticipantTypes.STREAM) {
               iter.return();
               break;
             } else {
@@ -424,8 +424,8 @@ export const useStageChannelParticipantsListThrottled = ReactCompilerGating.isRe
         }
         pushSection(items4, 1, false);
         const items5 = [
-          closure_0(5589).StageChannelParticipantNamedIndex.SPEAKER,
-          closure_0(5589).StageChannelParticipantNamedIndex.AUDIENCE,
+          closure_0(5955).StageChannelParticipantNamedIndex.SPEAKER,
+          closure_0(5955).StageChannelParticipantNamedIndex.AUDIENCE,
         ];
         const item = items5.forEach((item) => {
           const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(stateFromStores[0], item);

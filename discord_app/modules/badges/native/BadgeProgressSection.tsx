@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { section: { gap: nativeDefault.space.PX_12 }, row: null, content: null, track: null, fill: null };
 let obj3 = { gap: nativeDefault.space.PX_12 };
 obj2.row = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16 };
@@ -46,7 +46,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/BadgeProgressSection.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BadgeProgressSection(arg0) {
       const cResult = c.c(37);
       ({ badge, viewerBadge } = arg0);
       const tmp4 = closure_6();
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = View;
       const tmpResult = BadgeDetailsUtils;
     }
-  : (arg0) => {
+  : function BadgeProgressSection(arg0) {
       ({ badge, viewerBadge } = arg0);
       const tmp = closure_6();
       const badgeProgressDisplay = BadgeDetailsUtils.getBadgeProgressDisplay(badge, viewerBadge);

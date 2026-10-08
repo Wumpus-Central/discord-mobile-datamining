@@ -4,10 +4,10 @@ import NativeFileModuleDefault from "../../../discord_common/js/packages/rtn-cod
 import PlatformUtils from "../PlatformUtils.tsx";
 import NativeMediaManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeMediaManagerModule.tsx";
 import PremiumUtilsDefault from "../PremiumUtils.tsx";
-import UploadUtils from "../UploadUtils.tsx";
-import UploadPlatform from "../../modules/media_uploads/UploadPlatform.tsx";
-import FileUtils from "../FileUtils.tsx";
 import NativePermissionUtilsDefault from "../../modules/native_permissions/NativePermissionUtils.tsx";
+import UploadPlatform from "../../modules/media_uploads/UploadPlatform.tsx";
+import UploadUtils from "../UploadUtils.tsx";
+import FileUtils from "../FileUtils.tsx";
 import ImageConversionDecision from "../../modules/media_uploads/native/ImageConversionDecision.tsx";
 import VideoUploadUtils from "../../modules/media_uploads/native/VideoUploadUtils.tsx";
 import UploadLimits from "../../modules/media_uploads/UploadLimits.tsx";
@@ -66,8 +66,8 @@ let closure_24 = async function _openImagePickerUnhandled(arg0) {
             closure_135_8 = undefined;
             closure_135_7 = function cleanPickedImage() {
               if (obj.isIOS()) {
-                promise.then(() => type(7298).cleanSingle(decodeURIComponent(uri.uri.replace(/^file:\/\//, "")))).catch((error) => logger.warn("Failed to remove picked image", error));
-                const nextPromise = promise.then(() => type(7298).cleanSingle(decodeURIComponent(uri.uri.replace(/^file:\/\//, ""))));
+                promise.then(() => type(7742).cleanSingle(decodeURIComponent(uri.uri.replace(/^file:\/\//, "")))).catch((error) => logger.warn("Failed to remove picked image", error));
+                const nextPromise = promise.then(() => type(7742).cleanSingle(decodeURIComponent(uri.uri.replace(/^file:\/\//, ""))));
               }
               obj = closure_0(obj21[13]);
             };
@@ -104,7 +104,7 @@ let closure_24 = async function _openImagePickerUnhandled(arg0) {
             size1 = new Promise((arg0, arg1) => {
               closure_0 = arg0;
               closure_1 = arg1;
-              closure_1(7298).launchImageLibrary({ mediaType: "photo", includeBase64: true, disableNewIOSPicker: true }, (assets) => {
+              closure_1(7742).launchImageLibrary({ mediaType: "photo", includeBase64: true, disableNewIOSPicker: true }, (assets) => {
                 let first = null;
                 if (null != assets.assets) {
                   first = null;
@@ -1897,7 +1897,7 @@ let closure_38 = async function _tryConvertImage(arg0) {
           } else {
             closure_130_10 = value;
             if ((function shouldConvertBase64ToJPG(str) {
-              let isIOSResult = closure_1_0(1369).isIOS();
+              let isIOSResult = closure_1_0(1381).isIOS();
               if (isIOSResult) {
                 isIOSResult = null != str.match(closure_1_20);
               }
@@ -1909,7 +1909,7 @@ let closure_38 = async function _tryConvertImage(arg0) {
               const obj9 = { value: closure_131_26(closure_131_1(closure_131_2[16]).convertBase64ToJPEG, closure_130_0.replace(closure_131_20, ""), obj8), done: false };
               return obj9;
             } else if ((function shouldConvertBase64ToGIF(str) {
-              let isIOSResult = closure_1_0(1369).isIOS();
+              let isIOSResult = closure_1_0(1381).isIOS();
               if (isIOSResult) {
                 isIOSResult = null != str.match(closure_1_21);
               }
@@ -1942,7 +1942,7 @@ let closure_38 = async function _tryConvertImage(arg0) {
                 const obj16 = closure_131_0(closure_131_2[20]);
                 if (!obj16.shouldConvertToJPG(closure_130_0, closure_130_1, closure_130_2, closure_130_4, closure_130_7)) {
                   if ((function shouldConvertToGifFilepath(str, str2) {
-                    const isIOSResult = closure_1_0(1369).isIOS();
+                    const isIOSResult = closure_1_0(1381).isIOS();
                     if (!isIOSResult) {
                       return isIOSResult;
                     } else {
@@ -1955,9 +1955,9 @@ let closure_38 = async function _tryConvertImage(arg0) {
                       } else {
                         tmp7 = null != str.match(/^assets-library:\/\/.+&ext=gif$/i);
                       }
-                      tmpResult = closure_1_0(7305);
+                      tmpResult = closure_1_0(7749);
                     }
-                    const obj = closure_1_0(1369);
+                    const obj = closure_1_0(1381);
                   })(closure_130_0, closure_130_1)) {
                     c4 = 2;
                     c6 = 10;
@@ -2598,13 +2598,13 @@ let closure_44 = async function _calculateImageQualityMetrics(arg0) {
 };
 let closure_3 = ["filename"];
 const Image = fn(17).Image;
-let UnsyncedUserSettingsStore = fn(1195);
+let UnsyncedUserSettingsStore = fn(1207);
 ({ VideoCompressionQuality: closure_7, VideoQualitySettings: closure_8 } = UnsyncedUserSettingsStore);
 let UnsyncedUserSettingsStore = UnsyncedUserSettingsStore_mod;
 const Constants = fn(1085);
 ({ Base64PNGPrefix: closure_12, Base64GIFPrefix } = Constants);
 ({ NetworkConnectionTypes: closure_14, CompressionQuality: closure_15, Base64WEBPPrefix: closure_16, Base64AVIFPrefix: closure_17, Base64JPEGPrefix } = Constants);
-const NativePermissionTypes = fn(5105).NativePermissionTypes;
+const NativePermissionTypes = fn(7477).NativePermissionTypes;
 let closure_19 = new LoggerDefault("UploadUtils.tsx");
 const regExp = new RegExp("^" + Base64JPEGPrefix, "i");
 const regExp1 = new RegExp("^" + Base64GIFPrefix, "i");
@@ -2672,8 +2672,8 @@ export const getFileSize = function getFileSize(uri) {
 };
 export { getAppDir };
 export { getFileInfo };
-export const shouldConvertToJPG = fn(7305).shouldConvertToJPG;
-export const shouldForceConvertToJPG = fn(7305).shouldForceConvertToJPG;
+export const shouldConvertToJPG = fn(7749).shouldConvertToJPG;
+export const shouldForceConvertToJPG = fn(7749).shouldForceConvertToJPG;
 export const shouldResolveToMediaFilePath = function shouldResolveToMediaFilePath(str) {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {

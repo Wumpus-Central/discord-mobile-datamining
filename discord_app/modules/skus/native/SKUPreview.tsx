@@ -17,10 +17,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(7070).transformSKUToCollectiblesItem;
+let closure_5 = fn(7256).transformSKUToCollectiblesItem;
 const SKUProductLines = fn(1085).SKUProductLines;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles((width, height) => {
   const obj = {
     container: { width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" },
@@ -49,10 +49,10 @@ let closure_8 = createStyles.createStyles((width, height) => {
   obj.premiumRiveContainer = { width, height };
   return obj;
 });
-let size = { width: fn(8460).DEFAULT_ITEM_SIZE, height: fn(8460).DEFAULT_ITEM_SIZE };
+let size = { width: fn(8946).DEFAULT_ITEM_SIZE, height: fn(8946).DEFAULT_ITEM_SIZE };
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CollectiblesPreview(arg0) {
       const cResult = c.c(53);
       ({ collectiblesItemData, size } = arg0);
       if (undefined === size) {
@@ -312,7 +312,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (arg0) => {
+  : function CollectiblesPreview(arg0) {
       ({ collectiblesItemData, size } = arg0);
       if (size === undefined) {
         size = WishlistItemCardBase.DEFAULT_ITEM_SIZE;
@@ -406,7 +406,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_10 = tmp2;
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CollectiblesSKUPreview(arg0) {
       const cResult = c.c(5);
       ({ sku, size } = arg0);
       if (undefined === size) {
@@ -432,11 +432,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = tmp10;
       }
     }
-  : (sku) => {
+  : function CollectiblesSKUPreview(sku) {
       sku = sku.sku;
       let DEFAULT_ITEM_SIZE = sku.size;
       if (DEFAULT_ITEM_SIZE === undefined) {
-        DEFAULT_ITEM_SIZE = sku(8460).DEFAULT_ITEM_SIZE;
+        DEFAULT_ITEM_SIZE = sku(8946).DEFAULT_ITEM_SIZE;
       }
       const items = [sku];
       const memo = noop.useMemo(() => closure_5(sku), items);
@@ -449,7 +449,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SocialLayerStorefrontSKUPreview(arg0) {
       const cResult = c.c(5);
       ({ sku, size } = arg0);
       if (undefined === size) {
@@ -481,7 +481,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = tmp7;
       const obj2 = { sku, containerStyle: tmp5.socialLayerStorefrontContainer };
     }
-  : (size) => {
+  : function SocialLayerStorefrontSKUPreview(size) {
       let DEFAULT_ITEM_SIZE = size.size;
       if (DEFAULT_ITEM_SIZE === undefined) {
         DEFAULT_ITEM_SIZE = WishlistItemCardBase.DEFAULT_ITEM_SIZE;
@@ -500,7 +500,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_12 = tmp3;
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (size) => {
+  ? function PremiumSKUPreview(size) {
       const cResult = c.c(7);
       let DEFAULT_ITEM_SIZE = size.size;
       if (undefined === DEFAULT_ITEM_SIZE) {
@@ -547,7 +547,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: tmp5.premiumRiveContainer, children: tmp7 };
       const tmpResult = useToken;
     }
-  : (size) => {
+  : function PremiumSKUPreview(size) {
       let DEFAULT_ITEM_SIZE = size.size;
       if (DEFAULT_ITEM_SIZE === undefined) {
         DEFAULT_ITEM_SIZE = WishlistItemCardBase.DEFAULT_ITEM_SIZE;
@@ -571,7 +571,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/skus/native/SKUPreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SKUPreview(arg0) {
       const cResult = c.c(8);
       ({ sku, size } = arg0);
       if (undefined === size) {
@@ -629,7 +629,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return null;
       }
     }
-  : (arg0) => {
+  : function SKUPreview(arg0) {
       ({ sku, size } = arg0);
       if (size === undefined) {
         size = WishlistItemCardBase.DEFAULT_ITEM_SIZE;

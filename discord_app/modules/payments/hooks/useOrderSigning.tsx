@@ -7,7 +7,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 require = fn;
 const noop = fn(19);
 ({ useCallback: hasOwnProperty, useState: metroRequire } = noop);
-const OrderStatus = fn(4875).OrderStatus;
+const OrderStatus = fn(5069).OrderStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/payments/hooks/useOrderSigning.tsx");
 
@@ -87,12 +87,18 @@ export const useOrderSigning = function useOrderSigning(order) {
               closure_129_0 = undefined;
               closure_129_1 = undefined;
               closure_129_2 = undefined;
+              closure_129_3 = undefined;
               let obj4 = order;
               if (order === undefined) {
                 obj4 = {};
               }
-              ({ loadId: closure_129_0, purchaseToken: closure_129_1, errorExtra: closure_129_2 } = obj4);
-              closure_129_3 = undefined;
+              ({
+                loadId: closure_129_0,
+                purchaseToken: closure_129_1,
+                gatewayCheckoutContext: closure_129_2,
+                errorExtra: closure_129_3,
+              } = obj4);
+              closure_129_4 = undefined;
               let billing_facet;
               let orderSigningError;
               c5 = 1;
@@ -116,7 +122,12 @@ export const useOrderSigning = function useOrderSigning(order) {
             } else {
               closure_130_4(null);
               c4 = 1;
-              const obj8 = { orderId: closure_130_0.id, loadId: closure_129_0, purchaseToken: closure_129_1 };
+              const obj8 = {
+                orderId: closure_130_0.id,
+                loadId: closure_129_0,
+                purchaseToken: closure_129_1,
+                gatewayCheckoutContext: closure_129_2,
+              };
               c5 = 3;
               c6 = 1;
               const obj9 = { value: order(tmp4[6]).signOrder(obj8), done: false };
@@ -124,17 +135,17 @@ export const useOrderSigning = function useOrderSigning(order) {
             }
           } else if (2 === tmp9) {
             c4 = 0;
-            closure_129_6 = closure_3;
-            if (closure_129_6 instanceof order(tmp4[6]).OrderSigningFailedWithConstraintsError) {
+            closure_129_7 = closure_3;
+            if (closure_129_7 instanceof order(tmp4[6]).OrderSigningFailedWithConstraintsError) {
               if (closure_130_2 != null) {
-                tmp72(closure_129_6.order);
+                tmp72(closure_129_7.order);
               }
-              closure_130_5(closure_129_6);
+              closure_130_5(closure_129_7);
             } else {
               const obj11 = {};
-              const merged = Object.assign(closure_129_2);
+              const merged = Object.assign(closure_129_3);
               obj11.orderId = closure_130_0.id;
-              closure_130_6(closure_129_6, obj11);
+              closure_130_6(closure_129_7, obj11);
             }
             c6 = 3;
           } else if (3 === tmp9) {
@@ -147,15 +158,15 @@ export const useOrderSigning = function useOrderSigning(order) {
               const obj13 = { value, done: true };
               return obj13;
             } else {
-              closure_129_3 = value;
-              if (closure_129_3.status === constants.SIGNED) {
-                const obj14 = { type: "signed", order: closure_129_3 };
+              closure_129_4 = value;
+              if (closure_129_4.status === constants.SIGNED) {
+                const obj14 = { type: "signed", order: closure_129_4 };
                 c4 = 0;
                 c6 = 3;
                 const obj15 = { value: obj14, done: true };
                 return obj15;
-              } else if (closure_129_3.status === constants.SIGNING_IN_PROGRESS) {
-                billing_facet = closure_129_3.billing_facet;
+              } else if (closure_129_4.status === constants.SIGNING_IN_PROGRESS) {
+                billing_facet = closure_129_4.billing_facet;
                 c4 = 2;
                 let prop = null;
                 if (null != billing_facet) {
@@ -166,22 +177,22 @@ export const useOrderSigning = function useOrderSigning(order) {
                 const obj16 = { value: order(tmp4[7]).performSigningDeferralAction(prop), done: false };
                 return obj16;
               } else {
-                orderSigningError = order(tmp4[9]).getOrderSigningError(closure_129_3);
+                orderSigningError = order(tmp4[9]).getOrderSigningError(closure_129_4);
                 if (null != orderSigningError) {
                   closure_130_5(orderSigningError);
                   c4 = 0;
                   c6 = 3;
                   const obj17 = { value: { type: "failed" }, done: true };
                   return obj17;
-                } else if (null != closure_129_3.error) {
+                } else if (null != closure_129_4.error) {
                   const _Error2 = Error;
                   const _HermesInternal2 = HermesInternal;
-                  const error = new Error("Order signing failed with error: " + closure_129_3.error.code);
+                  const error = new Error("Order signing failed with error: " + closure_129_4.error.code);
                   throw error;
                 } else {
                   const _Error = Error;
                   const _HermesInternal = HermesInternal;
-                  const error1 = new Error("Unexpected order status: " + closure_129_3.status);
+                  const error1 = new Error("Unexpected order status: " + closure_129_4.status);
                   throw error1;
                 }
                 const obj21 = order(tmp4[9]);
@@ -190,7 +201,7 @@ export const useOrderSigning = function useOrderSigning(order) {
           } else if (4 === tmp9) {
             c4 = 1;
             const obj18 = {};
-            const merged1 = Object.assign(closure_129_2);
+            const merged1 = Object.assign(closure_129_3);
             obj18.orderId = closure_130_0.id;
             const intl = order(tmp4[8]).intl;
             closure_130_6(closure_3, obj18, intl.string(order(tmp4[8]).t.khEaRI));
@@ -207,7 +218,7 @@ export const useOrderSigning = function useOrderSigning(order) {
             const obj20 = { value, done: true };
             return obj20;
           } else {
-            const obj = { type: "pending", order: closure_129_3 };
+            const obj = { type: "pending", order: closure_129_4 };
             c4 = 0;
             c6 = 3;
             const obj23 = { value: obj, done: true };

@@ -7,16 +7,16 @@ import DisplayNameStylesSeenStore from "../DisplayNameStylesSeenStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1395);
+const DisplayNameStylesConstants = fn(1407);
 ({ FLYWHEEL_EFFECTS: closure_4, FLYWHEEL_FONTS: hasOwnProperty } = DisplayNameStylesConstants);
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function useDisplayNameStylesNewFonts(arr) {
       const cResult = stateFromStores(576).c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DisplayNameStylesSeenStore];
-        const fn = function n() {
+        const fn = function l() {
           return seenFonts.getSeenFonts();
         };
         cResult[0] = items;
@@ -82,7 +82,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = new Set(arr.filter(S));
       set = new Set(arr.filter(S));
     }
-  : (arg0) => {
+  : function useDisplayNameStylesNewFonts(arg0) {
       const _require = arg0;
       const items = [DisplayNameStylesSeenStore];
       stateFromStores = require("initialize").useStateFromStores(items, () => seenFonts.getSeenFonts());
@@ -110,11 +110,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function useDisplayNameStylesNewEffects(arr) {
       const cResult = stateFromStores(576).c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DisplayNameStylesSeenStore];
-        const fn = function l() {
+        const fn = function n() {
           return seenEffects.getSeenEffects();
         };
         cResult[0] = items;
@@ -180,7 +180,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = new Set(arr.filter(S));
       set = new Set(arr.filter(S));
     }
-  : (arg0) => {
+  : function useDisplayNameStylesNewEffects(arg0) {
       const _require = arg0;
       const items = [DisplayNameStylesSeenStore];
       stateFromStores = require("initialize").useStateFromStores(items, () => seenEffects.getSeenEffects());
@@ -208,11 +208,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function useDisplayNameStylesNewFontsBadge(arr) {
       const cResult = c.c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DisplayNameStylesSeenStore];
-        const fn = function n() {
+        const fn = function l() {
           return newFontsBadgeDismissed.getNewFontsBadgeDismissed();
         };
         cResult[0] = items;
@@ -288,7 +288,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp15;
       }
     }
-  : (arg0) => {
+  : function useDisplayNameStylesNewFontsBadge(arg0) {
       const _require = arg0;
       const items = [DisplayNameStylesSeenStore];
       const items1 = [arg0];
@@ -312,11 +312,11 @@ export const useDisplayNameStylesNewFonts = tmp3;
 export const useDisplayNameStylesNewEffects = tmp4;
 export const useDisplayNameStylesNewFontsBadge = tmp5;
 export const useDisplayNameStylesNewEffectsBadge = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr) => {
+  ? function useDisplayNameStylesNewEffectsBadge(arr) {
       const cResult = c.c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DisplayNameStylesSeenStore];
-        const fn = function l() {
+        const fn = function n() {
           return newEffectsBadgeDismissed.getNewEffectsBadgeDismissed();
         };
         cResult[0] = items;
@@ -392,7 +392,7 @@ export const useDisplayNameStylesNewEffectsBadge = ReactCompilerGating.isReactCo
         return tmp15;
       }
     }
-  : (arg0) => {
+  : function useDisplayNameStylesNewEffectsBadge(arg0) {
       const _require = arg0;
       const items = [DisplayNameStylesSeenStore];
       const items1 = [arg0];

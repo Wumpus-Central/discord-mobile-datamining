@@ -3,7 +3,7 @@ import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
 import native from "../../../../../../design/void/native.tsx";
-import _modDef4815 from "../../../../../../../_runtime/metro/04815__.js";
+import _modDef5009 from "../../../../../../../_runtime/metro/05009__.js";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import MonitoringAgentDefault from "../../../../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   scroll: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   contentContainer: null,
@@ -46,7 +46,7 @@ obj2.header = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefaul
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MoreTipsModalScreen(arg0) {
       const cResult = c.c(28);
       ({ channelId, warningId, senderId, description, safetyTips, actionItems, learnMore } = arg0);
       const tmp4 = closure_10();
@@ -167,7 +167,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp8;
       tmp7 = tmp8;
     }
-  : (learnMore) => {
+  : function MoreTipsModalScreen(learnMore) {
       learnMore = learnMore.learnMore;
       ({ channelId, warningId, senderId, description, safetyTips, actionItems } = learnMore);
       const tmp = closure_10();
@@ -203,7 +203,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function MoreTipsModal(channelId) {
       const cResult = channelId(senderId[8]).c(19);
       channelId = channelId.channelId;
       const warningId = channelId.warningId;
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         headerStyle: null,
                         render: null,
                       };
-                      class S {
+                      class M {
                         constructor() {
                           tmp2 = closure_2;
                           tmp = closure_0;
@@ -311,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                     let obj4 = { screens: tmp16, initialRouteName: "MORE_TIPS", headerStatusBarHeight: top };
                     const tmp19 = closure_8(tmp(tmp2[22]).Navigator, obj4);
-                    class S {
+                    class M {
                       constructor() {
                         tmp2 = closure_2;
                         tmp = closure_0;
@@ -338,7 +338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               const items1 = [channelId, warningId, senderId, stateFromStores];
               cResult[9] = channelId;
-              class S {
+              class M {
                 constructor() {
                   tmp2 = closure_2;
                   tmp = closure_0;
@@ -368,7 +368,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores != null) {
           type1 = stateFromStores.type;
         }
-        class S {
+        class M {
           constructor() {
             tmp2 = closure_2;
             tmp = closure_0;
@@ -389,11 +389,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = type1;
         cResult[6] = senderId;
         cResult[7] = warningId;
-        cResult[8] = S;
-        tmp10 = S;
+        cResult[8] = M;
+        tmp10 = M;
         const tmpResult = tmp(tmp2[18]);
       }
-      const fn = function l() {
+      const fn = function o() {
         return ChannelSafetyWarningsStore.getChannelSafetyWarning(channelId, warningId);
       };
       cResult[1] = channelId;
@@ -402,7 +402,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       let obj = channelId(senderId[8]);
     }
-  : (headerStyle) => {
+  : function MoreTipsModal(headerStyle) {
       const channelId = headerStyle.channelId;
       const warningId = headerStyle.warningId;
       const senderId = headerStyle.senderId;
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 onPress() {
                   return warningId(senderId[14]).popWithKey(channelId);
                 },
-                source: _modDef4815,
+                source: _modDef5009,
                 iconSize: native.IconSizes.MEDIUM,
                 accessibilityLabel: null,
               };

@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/useHasFinishedPresenting.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHasFinishedPresenting() {
       const cResult = c.c(4);
       let navigation = useNavigation.useNavigation();
       [first, closure_2] = noop.useState(false);
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = items;
       tmp5 = fn;
     }
-  : () => {
+  : function useHasFinishedPresenting() {
       let navigation = useNavigation.useNavigation();
       [first, closure_2] = noop.useState(false);
       const items = [navigation, first];

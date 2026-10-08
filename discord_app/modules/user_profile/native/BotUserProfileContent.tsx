@@ -1,18 +1,18 @@
 // discord_app/modules/user_profile/native/BotUserProfileContent.tsx
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
+import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(6714);
+const Constants = fn(6891);
 ({ PROFILE_CONTENT_BOTTOM_PADDING: metroRequire, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_7 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(6653).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6830).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const size = fn(2);
@@ -126,7 +126,7 @@ export default noop.memo(function BotUserProfileContent(user) {
       const obj13 = {
         customStatusActivity: tmp16,
         hasCustomProfileTheme: null != primaryColor,
-        onPressTruncatedStatus() {
+        onPressTruncatedStatus: function handlePressTruncatedStatus() {
           const obj = ActionSheetActionCreatorsDefault;
           const obj2 = { user, guildId: guild_id, channelId: null };
           let id;
@@ -135,7 +135,7 @@ export default noop.memo(function BotUserProfileContent(user) {
           }
           obj2.channelId = id;
           obj.openLazy(
-            asyncRequireImpl(10852, dependencyMap.paths),
+            asyncRequireImpl(10503, dependencyMap.paths),
             "UserProfileCustomStatusActionSheet",
             obj2,
             "stack",

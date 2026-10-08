@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   touchableContainer: { overflow: "visible" },
   container: { alignItems: "center" },
@@ -46,7 +46,7 @@ obj.faded = { opacity: 0.5 };
 const styles = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (rtsState) => {
+  ? function RaisedHandIcon(rtsState) {
       const cResult = c.c(9);
       const tmp4 = styles();
       let activeBackground =
@@ -84,7 +84,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = tmp14;
           tmp11 = tmp14;
         }
-        const obj3 = { style: tmp4.raisedHand, source: tmp6(9612), color: PRIMARY_800 };
+        const obj3 = { style: tmp4.raisedHand, source: tmp6(10805), color: PRIMARY_800 };
         const tmp10 = hasOwnProperty(native.Icon, obj3);
         cResult[3] = PRIMARY_800;
         cResult[4] = tmp4.raisedHand;
@@ -97,7 +97,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp7 = items;
     }
-  : (rtsState) => {
+  : function RaisedHandIcon(rtsState) {
       const tmp = styles();
       let activeBackground =
         rtsState.rtsState ===
@@ -116,7 +116,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = {
         style: items,
-        children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(9612), color: PRIMARY_800 }),
+        children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(10805), color: PRIMARY_800 }),
       };
       items[1] = activeBackground;
       return hasOwnProperty(View, obj);
@@ -131,14 +131,14 @@ let result = size.fileFinishedImporting("modules/stage_channels/native/component
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
-        const cResult = channel(576).c(72);
+    ? function AudienceTile(channel) {
+        const cResult = channel(576).c(70);
         channel = channel.channel;
         ({ participant, theme } = channel);
         const user = participant.user;
         ({ rtsState, blocked, ignored } = participant);
         const tmp4 = styles();
-        const diff = user(1484)().width - 46;
+        const diff = user(1496)().width - 46;
         if (cResult[0] !== channel) {
           const guildId = channel.getGuildId();
           cResult[0] = channel;
@@ -162,18 +162,11 @@ export default noop.memo(
           }
           const stateFromStores = tmp(504).useStateFromStores(tmp9, tmp11, tmp12);
           if (cResult[7] !== rtsState) {
-            const result = tmp(5589).isRequestedToSpeakAll(rtsState);
+            const result = tmp(5955).isRequestedToSpeakAll(rtsState);
             cResult[7] = rtsState;
-            class H {
-              constructor() {
-                obj = closure_0(closure_2[14]);
-                obj1 = { userId: user.id, channelId: channel.id };
-                showUserProfileResult = obj.showUserProfile(obj1);
-                return;
-              }
-            }
+            cResult[8] = result;
             let tmp14 = result;
-            const tmpResult3 = tmp(5589);
+            const tmpResult3 = tmp(5955);
           } else {
             tmp14 = cResult[8];
           }
@@ -195,14 +188,7 @@ export default noop.memo(
                     if (cResult[21] !== result1) {
                       const obj2 = { width: result1 };
                       cResult[21] = result1;
-                      class H {
-                        constructor() {
-                          obj = closure_0(closure_2[14]);
-                          obj1 = { userId: user.id, channelId: channel.id };
-                          showUserProfileResult = obj.showUserProfile(obj1);
-                          return;
-                        }
-                      }
+                      cResult[22] = obj2;
                       let tmp25 = obj2;
                     } else {
                       tmp25 = cResult[22];
@@ -212,162 +198,112 @@ export default noop.memo(
                         if (cResult[25] === tmp25) {
                           let tmp26 = cResult[26];
                         }
-                        class H {
-                          constructor() {
-                            obj = closure_0(closure_2[14]);
-                            obj1 = { userId: user.id, channelId: channel.id };
-                            showUserProfileResult = obj.showUserProfile(obj1);
-                            return;
-                          }
+                        let faded = tmp18;
+                        if (tmp18) {
+                          faded = tmp4.faded;
                         }
                         if (cResult[27] === tmp7) {
-                          if (cResult[28] === tmp30) {
+                          if (cResult[28] === faded) {
                             if (cResult[29] === user) {
-                              let tmp31 = cResult[30];
+                              let tmp29 = cResult[30];
                             }
                             if (cResult[31] === rtsState) {
                               if (cResult[32] === tmp14) {
-                                let tmp34 = cResult[33];
+                                let tmp32 = cResult[33];
                               }
                               if (cResult[34] === tmp4.avatarContainer) {
-                                if (cResult[35] === tmp31) {
-                                  if (cResult[36] === tmp34) {
-                                    let tmp38 = cResult[37];
+                                if (cResult[35] === tmp29) {
+                                  if (cResult[36] === tmp32) {
+                                    let tmp36 = cResult[37];
                                   }
-                                  if (cResult[38] !== tmp4.nameplateContainer) {
-                                    const items1 = [tmp4.nameplateContainer];
-                                    cResult[38] = tmp4.nameplateContainer;
-                                    class H {
-                                      constructor() {
-                                        obj = closure_0(closure_2[14]);
-                                        obj1 = { userId: user.id, channelId: channel.id };
-                                        showUserProfileResult = obj.showUserProfile(obj1);
-                                        return;
-                                      }
-                                    }
-                                    let tmp42 = items1;
-                                  } else {
-                                    tmp42 = cResult[39];
-                                  }
-                                  if (cResult[40] !== blocked) {
-                                    let tmp44 = blocked;
+                                  if (cResult[38] !== blocked) {
+                                    let tmp41 = blocked;
                                     if (blocked) {
-                                      tmp44 = closure_5(tmp(9747).BlockedStatus, {});
+                                      tmp41 = closure_5(tmp(10948).BlockedStatus, {});
                                     }
-                                    cResult[40] = blocked;
-                                    class H {
-                                      constructor() {
-                                        obj = closure_0(closure_2[14]);
-                                        obj1 = { userId: user.id, channelId: channel.id };
-                                        showUserProfileResult = obj.showUserProfile(obj1);
-                                        return;
-                                      }
+                                    cResult[38] = blocked;
+                                    cResult[39] = tmp41;
+                                    let tmp40 = tmp41;
+                                  } else {
+                                    tmp40 = cResult[39];
+                                  }
+                                  if (cResult[40] !== ignored) {
+                                    let tmp44 = ignored;
+                                    if (ignored) {
+                                      tmp44 = closure_5(tmp(10948).IgnoredStatus, {});
                                     }
+                                    cResult[40] = ignored;
+                                    cResult[41] = tmp44;
                                     let tmp43 = tmp44;
                                   } else {
                                     tmp43 = cResult[41];
                                   }
-                                  if (cResult[42] !== ignored) {
-                                    let tmp47 = ignored;
-                                    if (ignored) {
-                                      tmp47 = closure_5(tmp(9747).IgnoredStatus, {});
-                                    }
-                                    cResult[42] = ignored;
-                                    class H {
-                                      constructor() {
-                                        obj = closure_0(closure_2[14]);
-                                        obj1 = { userId: user.id, channelId: channel.id };
-                                        showUserProfileResult = obj.showUserProfile(obj1);
-                                        return;
+                                  if (cResult[42] === stateFromStores) {
+                                    if (cResult[43] === tmp18) {
+                                      if (cResult[44] === result1) {
+                                        let tmp46 = cResult[45];
                                       }
-                                    }
-                                    let tmp46 = tmp47;
-                                  } else {
-                                    tmp46 = cResult[43];
-                                  }
-                                  if (cResult[44] === stateFromStores) {
-                                    if (cResult[45] === tmp18) {
-                                      if (cResult[46] === result1) {
-                                        let tmp49 = cResult[47];
-                                      }
-                                      if (cResult[48] !== theme) {
+                                      if (cResult[46] !== theme) {
                                         if (null == theme) {
-                                          cResult[48] = theme;
-                                          cResult[49] = tmp52;
-                                          let tmp51 = tmp52;
+                                          cResult[46] = theme;
+                                          cResult[47] = tmp49;
+                                          let tmp48 = tmp49;
                                         } else {
-                                          const tmpResult4 = tmp(4735);
+                                          const tmpResult4 = tmp(4929);
                                           tmp5(587).unsafe_rawColors;
+                                          const isThemeDarkResult = tmp(4929).isThemeDark(theme);
                                           const unsafe_rawColors = { color: null };
-                                          class H {
-                                            constructor() {
-                                              obj = closure_0(closure_2[14]);
-                                              obj1 = { userId: user.id, channelId: channel.id };
-                                              showUserProfileResult = obj.showUserProfile(obj1);
-                                              return;
-                                            }
-                                          }
-                                          const isThemeDarkResult = tmp(4735).isThemeDark(theme);
+                                          unsafe_rawColors.color = tmp(4929).isThemeDark(theme)
+                                            ? unsafe_rawColors.WHITE
+                                            : unsafe_rawColors.PRIMARY_860;
+                                          const tmp51 = tmp(4929).isThemeDark(theme)
+                                            ? unsafe_rawColors.WHITE
+                                            : unsafe_rawColors.PRIMARY_860;
                                         }
                                       } else {
-                                        tmp51 = cResult[49];
+                                        tmp48 = cResult[47];
                                       }
-                                      if (cResult[50] === tmp4.usernameText) {
-                                        if (cResult[51] === tmp49) {
-                                          if (cResult[52] === tmp51) {
-                                            let tmp56 = cResult[53];
+                                      if (cResult[48] === tmp4.usernameText) {
+                                        if (cResult[49] === tmp46) {
+                                          if (cResult[50] === tmp48) {
+                                            let tmp53 = cResult[51];
                                           }
-                                          if (cResult[54] === tmp19) {
-                                            if (cResult[55] === tmp56) {
-                                              let tmp57 = cResult[56];
+                                          if (cResult[52] === tmp19) {
+                                            if (cResult[53] === tmp53) {
+                                              let tmp54 = cResult[54];
                                             }
-                                            if (cResult[57] !== stateFromStores) {
-                                              let tmp61 = stateFromStores;
+                                            if (cResult[55] !== stateFromStores) {
+                                              let tmp58 = stateFromStores;
                                               if (stateFromStores) {
                                                 const obj3 = {
-                                                  source: tmp5(4831),
-                                                  size: tmp(1188).Icon.Sizes.SMALL,
-                                                  color: null,
+                                                  source: tmp5(5025),
+                                                  size: tmp(1200).Icon.Sizes.SMALL,
+                                                  color: tmp5(587).unsafe_rawColors.GUILD_BOOSTING_PINK,
                                                 };
-                                                class H {
-                                                  constructor() {
-                                                    obj = closure_0(closure_2[14]);
-                                                    obj1 = { userId: user.id, channelId: channel.id };
-                                                    showUserProfileResult = obj.showUserProfile(obj1);
-                                                    return;
-                                                  }
-                                                }
-                                                tmp61 = closure_5(tmp(1188).Icon, obj3);
+                                                tmp58 = closure_5(tmp(1200).Icon, obj3);
                                               }
-                                              cResult[57] = stateFromStores;
-                                              class H {
-                                                constructor() {
-                                                  obj = closure_0(closure_2[14]);
-                                                  obj1 = { userId: user.id, channelId: channel.id };
-                                                  showUserProfileResult = obj.showUserProfile(obj1);
-                                                  return;
-                                                }
-                                              }
-                                              let tmp60 = tmp61;
+                                              cResult[55] = stateFromStores;
+                                              cResult[56] = tmp58;
+                                              let tmp57 = tmp58;
                                             } else {
-                                              tmp60 = cResult[58];
+                                              tmp57 = cResult[56];
                                             }
-                                            if (cResult[59] === tmp42) {
-                                              if (cResult[60] === tmp43) {
-                                                if (cResult[61] === tmp46) {
-                                                  if (cResult[62] === tmp57) {
-                                                    if (cResult[63] === tmp60) {
-                                                      let tmp63 = cResult[64];
+                                            if (cResult[57] === tmp4.nameplateContainer) {
+                                              if (cResult[58] === tmp40) {
+                                                if (cResult[59] === tmp43) {
+                                                  if (cResult[60] === tmp54) {
+                                                    if (cResult[61] === tmp57) {
+                                                      let tmp60 = cResult[62];
                                                     }
-                                                    if (cResult[65] === tmp17) {
-                                                      if (cResult[66] === tmp16) {
-                                                        if (cResult[67] === tmp26) {
-                                                          if (cResult[68] === tmp38) {
-                                                            if (cResult[69] === tmp63) {
-                                                              if (cResult[70] === tmp20) {
-                                                                let tmp68 = cResult[71];
+                                                    if (cResult[63] === tmp17) {
+                                                      if (cResult[64] === tmp16) {
+                                                        if (cResult[65] === tmp26) {
+                                                          if (cResult[66] === tmp36) {
+                                                            if (cResult[67] === tmp60) {
+                                                              if (cResult[68] === tmp20) {
+                                                                let tmp64 = cResult[69];
                                                               }
-                                                              return tmp68;
+                                                              return tmp64;
                                                             }
                                                           }
                                                         }
@@ -375,202 +311,134 @@ export default noop.memo(
                                                     }
                                                     const obj4 = {
                                                       accessibilityLabel: tmp20,
-                                                      style: null,
+                                                      style: tmp26,
                                                       accessibilityRole: "button",
-                                                      onPress: null,
+                                                      onPress: tmp16,
                                                       children: null,
                                                     };
-                                                    class H {
-                                                      constructor() {
-                                                        obj = closure_0(closure_2[14]);
-                                                        obj1 = { userId: user.id, channelId: channel.id };
-                                                        showUserProfileResult = obj.showUserProfile(obj1);
-                                                        return;
-                                                      }
-                                                    }
-                                                    obj4.onPress = tmp16;
-                                                    const items2 = [tmp38, tmp63];
-                                                    obj4.children = items2;
-                                                    const tmp70 = closure_6(tmp17, obj4);
-                                                    cResult[65] = tmp17;
-                                                    cResult[66] = tmp16;
-                                                    cResult[67] = tmp26;
-                                                    cResult[68] = tmp38;
-                                                    cResult[69] = tmp63;
-                                                    cResult[70] = tmp20;
-                                                    cResult[71] = tmp70;
-                                                    tmp68 = tmp70;
+                                                    const items1 = [tmp36, tmp60];
+                                                    obj4.children = items1;
+                                                    const tmp66 = closure_6(tmp17, obj4);
+                                                    cResult[63] = tmp17;
+                                                    cResult[64] = tmp16;
+                                                    cResult[65] = tmp26;
+                                                    cResult[66] = tmp36;
+                                                    cResult[67] = tmp60;
+                                                    cResult[68] = tmp20;
+                                                    cResult[69] = tmp66;
+                                                    tmp64 = tmp66;
                                                   }
                                                 }
                                               }
                                             }
-                                            class H {
-                                              constructor() {
-                                                obj = closure_0(closure_2[14]);
-                                                obj1 = { userId: user.id, channelId: channel.id };
-                                                showUserProfileResult = obj.showUserProfile(obj1);
-                                                return;
-                                              }
-                                            }
-                                            tmp66[0] = tmp42;
-                                            const items3 = [tmp43, tmp46, tmp57, tmp60];
-                                            tmp66[1] = items3;
-                                            const tmp67 = closure_6(View, tmp66);
-                                            cResult[59] = tmp42;
-                                            cResult[60] = tmp43;
-                                            cResult[61] = tmp46;
-                                            cResult[62] = tmp57;
-                                            cResult[63] = tmp60;
-                                            cResult[64] = tmp67;
-                                            tmp63 = tmp67;
+                                            const obj5 = { style: tmp4.nameplateContainer, children: null };
+                                            const items2 = [tmp40, tmp43, tmp54, tmp57];
+                                            obj5.children = items2;
+                                            const tmp63 = closure_6(View, obj5);
+                                            cResult[57] = tmp4.nameplateContainer;
+                                            cResult[58] = tmp40;
+                                            cResult[59] = tmp43;
+                                            cResult[60] = tmp54;
+                                            cResult[61] = tmp57;
+                                            cResult[62] = tmp63;
+                                            tmp60 = tmp63;
                                           }
-                                          const obj5 = { style: tmp56, numberOfLines: 1, children: null };
-                                          class H {
-                                            constructor() {
-                                              obj = closure_0(closure_2[14]);
-                                              obj1 = { userId: user.id, channelId: channel.id };
-                                              showUserProfileResult = obj.showUserProfile(obj1);
-                                              return;
-                                            }
-                                          }
-                                          const tmp59 = closure_5(tmp(1188).LegacyText, obj5);
-                                          cResult[54] = tmp19;
-                                          cResult[55] = tmp56;
-                                          cResult[56] = tmp59;
-                                          tmp57 = tmp59;
+                                          const obj6 = { style: tmp53, numberOfLines: 1, children: tmp19 };
+                                          const tmp56 = closure_5(tmp(1200).LegacyText, obj6);
+                                          cResult[52] = tmp19;
+                                          cResult[53] = tmp53;
+                                          cResult[54] = tmp56;
+                                          tmp54 = tmp56;
                                         }
                                       }
-                                      const items4 = [tmp4.usernameText, ,];
-                                      class H {
-                                        constructor() {
-                                          obj = closure_0(closure_2[14]);
-                                          obj1 = { userId: user.id, channelId: channel.id };
-                                          showUserProfileResult = obj.showUserProfile(obj1);
-                                          return;
-                                        }
-                                      }
-                                      items4[2] = tmp51;
-                                      cResult[50] = tmp4.usernameText;
-                                      cResult[51] = tmp49;
-                                      cResult[52] = tmp51;
-                                      cResult[53] = items4;
-                                      tmp56 = items4;
+                                      const items3 = [tmp4.usernameText, tmp46, tmp48];
+                                      cResult[48] = tmp4.usernameText;
+                                      cResult[49] = tmp46;
+                                      cResult[50] = tmp48;
+                                      cResult[51] = items3;
+                                      tmp53 = items3;
                                     }
                                   }
-                                  class H {
-                                    constructor() {
-                                      obj = closure_0(closure_2[14]);
-                                      obj1 = { userId: user.id, channelId: channel.id };
-                                      showUserProfileResult = obj.showUserProfile(obj1);
-                                      return;
-                                    }
-                                  }
+                                  let tmp47 = stateFromStores;
                                   if (!stateFromStores) {
-                                    let tmp50 = tmp18;
+                                    tmp47 = tmp18;
                                   }
-                                  if (tmp50) {
-                                    class H {
-                                      constructor() {
-                                        obj = closure_0(closure_2[14]);
-                                        obj1 = { userId: user.id, channelId: channel.id };
-                                        showUserProfileResult = obj.showUserProfile(obj1);
-                                        return;
+                                  if (tmp47) {
+                                    let num41 = 1;
+                                    if (stateFromStores) {
+                                      num41 = 1;
+                                      if (tmp18) {
+                                        num41 = 2;
                                       }
                                     }
-                                    tmp50 = { maxWidth: null };
-                                    const obj6 = { maxWidth: null };
+                                    const obj7 = { maxWidth: result1 - 18 * num41 };
+                                    tmp47 = obj7;
                                   }
-                                  cResult[44] = stateFromStores;
-                                  cResult[45] = tmp18;
-                                  cResult[46] = result1;
-                                  cResult[47] = tmp50;
-                                  tmp49 = tmp50;
+                                  cResult[42] = stateFromStores;
+                                  cResult[43] = tmp18;
+                                  cResult[44] = result1;
+                                  cResult[45] = tmp47;
+                                  tmp46 = tmp47;
                                 }
                               }
-                              const obj7 = { style: null, children: null };
-                              class H {
-                                constructor() {
-                                  obj = closure_0(closure_2[14]);
-                                  obj1 = { userId: user.id, channelId: channel.id };
-                                  showUserProfileResult = obj.showUserProfile(obj1);
-                                  return;
-                                }
-                              }
-                              const items5 = [tmp31, tmp34];
-                              obj7.children = items5;
-                              const tmp41 = closure_6(View, obj7);
+                              const obj8 = { style: tmp4.avatarContainer, children: null };
+                              const items4 = [tmp29, tmp32];
+                              obj8.children = items4;
+                              const tmp39 = closure_6(View, obj8);
                               cResult[34] = tmp4.avatarContainer;
-                              cResult[35] = tmp31;
-                              cResult[36] = tmp34;
-                              cResult[37] = tmp41;
-                              tmp38 = tmp41;
+                              cResult[35] = tmp29;
+                              cResult[36] = tmp32;
+                              cResult[37] = tmp39;
+                              tmp36 = tmp39;
                             }
-                            let tmp35 = tmp14;
+                            let tmp33 = tmp14;
                             if (tmp14) {
-                              const obj8 = { rtsState };
-                              tmp35 = closure_5(closure_8, obj8);
+                              const obj9 = { rtsState };
+                              tmp33 = closure_5(closure_8, obj9);
                             }
-                            class H {
-                              constructor() {
-                                obj = closure_0(closure_2[14]);
-                                obj1 = { userId: user.id, channelId: channel.id };
-                                showUserProfileResult = obj.showUserProfile(obj1);
-                                return;
-                              }
-                            }
+                            cResult[31] = rtsState;
                             cResult[32] = tmp14;
-                            cResult[33] = tmp35;
-                            tmp34 = tmp35;
+                            cResult[33] = tmp33;
+                            tmp32 = tmp33;
                           }
                         }
-                        const obj9 = { user, guildId: tmp7, size: tmp(1188).AvatarSizes.LARGE, style: tmp18 };
-                        const tmp33 = closure_5(tmp(1188).CutoutableAvatarImage, obj9);
+                        const obj10 = { user, guildId: tmp7, size: tmp(1200).AvatarSizes.LARGE, style: faded };
+                        const tmp31 = closure_5(tmp(1200).CutoutableAvatarImage, obj10);
                         cResult[27] = tmp7;
-                        cResult[28] = tmp18;
+                        cResult[28] = faded;
                         cResult[29] = user;
-                        cResult[30] = tmp33;
-                        tmp31 = tmp33;
+                        cResult[30] = tmp31;
+                        tmp29 = tmp31;
                       }
                     }
-                    class H {
-                      constructor() {
-                        obj = closure_0(closure_2[14]);
-                        obj1 = { userId: user.id, channelId: channel.id };
-                        showUserProfileResult = obj.showUserProfile(obj1);
-                        return;
-                      }
-                    }
-                    ({ touchableContainer: tmp27[0], container: tmp27[1] } = tmp4);
-                    tmp27[2] = tmp25;
+                    const items5 = [, ,];
+                    ({ touchableContainer: arr3[0], container: arr3[1] } = tmp4);
+                    items5[2] = tmp25;
                     cResult[23] = tmp4.container;
                     cResult[24] = tmp4.touchableContainer;
                     cResult[25] = tmp25;
-                    cResult[26] = tmp27;
-                    tmp26 = tmp27;
+                    cResult[26] = items5;
+                    tmp26 = items5;
                   }
                 }
               }
             }
-            const name = tmp5(5048).getName(tmp7, channel.id, user);
-            class H {
-              constructor() {
-                obj = closure_0(closure_2[14]);
-                obj1 = { userId: user.id, channelId: channel.id };
-                showUserProfileResult = obj.showUserProfile(obj1);
-                return;
-              }
+            const name = tmp5(5405).getName(tmp7, channel.id, user);
+            let tmp22 = blocked;
+            if (!blocked) {
+              tmp22 = ignored;
             }
-            const LegacyPressable = tmp(6147).LegacyPressable;
+            const LegacyPressable = tmp(6326).LegacyPressable;
             const intl = tmp(1126).intl;
-            const obj10 = { name };
-            const tmp5Result = tmp5(5048);
+            const obj11 = { name };
+            const tmp5Result = tmp5(5405);
             cResult[12] = blocked;
             cResult[13] = channel.id;
             cResult[14] = tmp7;
             cResult[15] = ignored;
             cResult[16] = user;
             cResult[17] = LegacyPressable;
-            cResult[18] = blocked;
+            cResult[18] = tmp22;
             cResult[19] = name;
             class R {
               constructor() {
@@ -588,24 +456,19 @@ export default noop.memo(
                 return Boolean(tmp2);
               }
             }
-            tmp18 = blocked;
-            tmp20 = intl.formatToPlainString(tmp(1126).t.QLMGhv, obj10);
+            tmp18 = tmp22;
+            tmp20 = intl.formatToPlainString(tmp(1126).t.QLMGhv, obj11);
             tmp19 = name;
             tmp17 = LegacyPressable;
-            const formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t.QLMGhv, obj10);
+            const formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t.QLMGhv, obj11);
           }
-          class H {
-            constructor() {
-              obj = closure_0(closure_2[14]);
-              obj1 = { userId: user.id, channelId: channel.id };
-              showUserProfileResult = obj.showUserProfile(obj1);
-              return;
-            }
+          function handlePress() {
+            StageChannelModalActionCreators.showUserProfile({ userId: user.id, channelId: channel.id });
           }
           cResult[9] = channel.id;
           cResult[10] = user.id;
-          cResult[11] = H;
-          tmp16 = H;
+          cResult[11] = handlePress;
+          tmp16 = handlePress;
           const tmpResult = tmp(504);
         }
         class R {
@@ -633,7 +496,7 @@ export default noop.memo(
         tmp11 = R;
         const obj = channel(576);
       }
-    : (channel) => {
+    : function AudienceTile(channel) {
         channel = channel.channel;
         const participant = channel.participant;
         const user = participant.user;
@@ -683,7 +546,7 @@ export default noop.memo(
         ({ touchableContainer: arr3[0], container: arr3[1] } = tmp);
         items2[2] = { width: result1 };
         obj4.style = items2;
-        obj4.onPress = function onPress() {
+        obj4.onPress = function handlePress() {
           StageChannelModalActionCreators.showUserProfile({ userId: user.id, channelId: channel.id });
         };
         const obj5 = { style: tmp.avatarContainer, children: null };
@@ -701,18 +564,16 @@ export default noop.memo(
         items3[1] = result;
         obj5.children = items3;
         const items4 = [closure_6(View, obj5)];
-        const obj8 = { style: null, children: null };
-        const items5 = [tmp.nameplateContainer];
-        obj8.style = items5;
+        const obj8 = { style: tmp.nameplateContainer, children: null };
         if (blocked) {
           blocked = closure_5(tmp6(tmp3[18]).BlockedStatus, {});
         }
-        const items6 = [blocked, , ,];
+        const items5 = [blocked, , ,];
         if (ignored) {
           ignored = closure_5(tmp6(tmp3[18]).IgnoredStatus, {});
         }
-        items6[1] = ignored;
-        const items7 = [tmp.usernameText, ,];
+        items5[1] = ignored;
+        const items6 = [tmp.usernameText, ,];
         let tmp16 = stateFromStores;
         if (!stateFromStores) {
           tmp16 = tmp10;
@@ -728,13 +589,13 @@ export default noop.memo(
           const obj9 = { maxWidth: result1 - 18 * num2 };
           tmp16 = obj9;
         }
-        items7[1] = tmp16;
+        items6[1] = tmp16;
         if (null == theme) {
           const obj10 = { style: null, numberOfLines: 1, children: null };
-          items7[2] = tmp17;
-          obj10.style = items7;
+          items6[2] = tmp17;
+          obj10.style = items6;
           obj10.children = name;
-          items6[2] = closure_5(tmp6(tmp3[9]).LegacyText, obj10);
+          items5[2] = closure_5(tmp6(tmp3[9]).LegacyText, obj10);
           if (stateFromStores) {
             const obj11 = {
               source: tmp2(tmp3[20]),
@@ -743,8 +604,8 @@ export default noop.memo(
             };
             stateFromStores = closure_5(tmp6(tmp3[9]).Icon, obj11);
           }
-          items6[3] = stateFromStores;
-          obj8.children = items6;
+          items5[3] = stateFromStores;
+          obj8.children = items5;
           items4[1] = closure_6(View, obj8);
           obj4.children = items4;
           return closure_6(tmp6(tmp3[16]).LegacyPressable, obj4);

@@ -603,10 +603,10 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
   }
 };
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(7168).ACCEPT_INVITE_MODAL_KEY;
-const StaticChannelRoutes = fn(2058).StaticChannelRoutes;
+const ACCEPT_INVITE_MODAL_KEY = fn(7348).ACCEPT_INVITE_MODAL_KEY;
+const StaticChannelRoutes = fn(2070).StaticChannelRoutes;
 const jsx = fn(21).jsx;
-const v1 = fn(1266);
+const v1 = fn(1278);
 const load_id = v1.v4();
 const Manifest = ClientInfoUtils.getConstants().Manifest;
 let c18 = false;

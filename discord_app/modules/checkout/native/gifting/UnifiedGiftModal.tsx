@@ -13,7 +13,7 @@ require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (skuId) => {
+  ? function useScreens(skuId) {
       const cResult = skuId(onGiftModalDismiss[4]).c(11);
       skuId = skuId.skuId;
       const lockedRecipientUser = skuId.lockedRecipientUser;
@@ -55,7 +55,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      class D {
+      class I {
         constructor() {
           obj = {};
           obj1 = { title: null, headerLeft: null, render: null };
@@ -103,12 +103,12 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = renderPurchaseSection;
       cResult[7] = skuId;
       cResult[8] = validateRecipient;
-      cResult[9] = D;
+      cResult[9] = I;
       cResult[10] = items;
       tmp8 = items;
-      tmp7 = D;
+      tmp7 = I;
     }
-  : (skuId) => {
+  : function useScreens(skuId) {
       skuId = skuId.skuId;
       const lockedRecipientUser = skuId.lockedRecipientUser;
       const onGiftModalDismiss = skuId.onGiftModalDismiss;
@@ -168,7 +168,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UnifiedGiftModal(arg0) {
       const cResult = c.c(12);
       ({
         skuId,
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = obj4;
       tmp4 = obj4;
     }
-  : (skuId) => {
+  : function UnifiedGiftModal(skuId) {
       const obj2 = { value: skuId.analyticsLocations, children: null };
       const obj = {
         skuId: skuId.skuId,

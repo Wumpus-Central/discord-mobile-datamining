@@ -11,7 +11,7 @@ require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PollDurationRadioGroup(arg0) {
       const cResult = onChange(576).c(10);
       ({ selectedDuration, onChange } = arg0);
       const tmp4 = usePollDurationOptionsDefault();
@@ -52,7 +52,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { title: tmp7, hasIcons: false, onChange: tmp5, defaultValue: selectedDuration, children: tmp9 };
-        const tmp13 = jsx(onChange(6079).TableRadioGroup, {
+        const tmp13 = jsx(onChange(6265).TableRadioGroup, {
           title: tmp7,
           hasIcons: false,
           onChange: tmp5,
@@ -77,7 +77,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       const obj = onChange(576);
     }
-  : (onChange) => {
+  : function PollDurationRadioGroup(onChange) {
       onChange = onChange.onChange;
       const tmp = usePollDurationOptionsDefault();
       importDefault = tmp;
@@ -98,7 +98,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp, tmp2] = item;
         return jsx(onChange(dependencyMap[9]).TableRadioRow, { value: parseInt(tmp), label: tmp2 }, tmp);
       });
-      return jsx(onChange(6079).TableRadioGroup, {
+      return jsx(onChange(6265).TableRadioGroup, {
         title: null,
         hasIcons: false,
         onChange: null,
@@ -111,7 +111,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/native/PollDurationActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PollDurationActionSheet(arg0) {
       const cResult = c.c(3);
       ({ selectedDuration, onChange } = arg0);
       if (cResult[0] === onChange) {
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = tmp5;
       const obj2 = { children: <closure_6 selectedDuration={selectedDuration} onChange={onChange} /> };
     }
-  : (arg0) => {
+  : function PollDurationActionSheet(arg0) {
       ({ selectedDuration, onChange } = arg0);
       return jsx(ActionSheet.ActionSheet, {
         children: <closure_6 selectedDuration={selectedDuration} onChange={onChange} />,

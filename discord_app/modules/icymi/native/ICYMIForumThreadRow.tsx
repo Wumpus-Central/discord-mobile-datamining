@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createICYMIStyles = fn(16434);
+const createICYMIStyles = fn(16694);
 let closure_9 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = {
     pressable: { flex: 1, paddingLeft: marginHorizontal.inset },
@@ -32,7 +32,7 @@ let closure_9 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
 });
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function ICYMIForumThreadRow(channel) {
       const cResult = channel(stateFromStores[8]).c(60);
       channel = channel.channel;
       const message = channel.message;
@@ -114,7 +114,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               return closure_5.getChannel(channel.parent_id);
             }
           }
-          const effect = author.useEffect(S, tmp16);
+          const effect = author.useEffect(R, tmp16);
           if (cResult[12] === channel) {
             class C {
               constructor() {
@@ -122,7 +122,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          class A {
+          class F {
             constructor() {
               tmp = closure_2;
               obj = closure_1(closure_2[11]);
@@ -158,7 +158,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[12] = channel;
           cResult[13] = stateFromStores;
           cResult[14] = message.id;
-          cResult[15] = A;
+          cResult[15] = F;
         }
         const items2 = [author.id, undefined];
         cResult[9] = author.id;
@@ -174,7 +174,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      class S {
+      class R {
         constructor() {
           tmp = closure_2;
           id = undefined;
@@ -198,10 +198,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       cResult[7] = undefined;
-      cResult[8] = S;
+      cResult[8] = R;
       const tmpResult = channel(stateFromStores[9]);
     }
-  : (channel) => {
+  : function ICYMIForumThreadRow(channel) {
       channel = channel.channel;
       const message = channel.message;
       let stateFromStores;
@@ -377,7 +377,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/ICYMIForumThreadRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForumThreadRowWrapper(arg0) {
       const cResult = c.c(4);
       ({ message, threadChannel, visible } = arg0);
       if (cResult[0] === message) {
@@ -395,7 +395,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp3;
       tmp2 = tmp3;
     }
-  : (message) =>
-      React5(closure_10, { message: message.message, channel: message.threadChannel, visible: message.visible });
+  : function ForumThreadRowWrapper(message) {
+      return React5(closure_10, { message: message.message, channel: message.threadChannel, visible: message.visible });
+    };
 export const MAX_AVATARS_IN_PILE = 3;
 export const ICYMIForumThreadRow = tmp3;

@@ -3,10 +3,10 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07550_inlineStyles.js";
 import useReferralProgramBannerDetails from "../hooks/useReferralProgramBannerDetails.tsx";
-import _modDef13276 from "../../../../../_runtime/metro/13276__.js";
-import _modDef13277 from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
+import _modDef13577 from "../../../../../_runtime/metro/13577__.js";
+import _modDef13578 from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -18,7 +18,7 @@ const jsxProd = fn(21);
 let c6 = 160;
 const strokeDasharray = 2 * Math.PI * 77;
 let c8 = "#53ac66";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({
   progressCircleContainer: { width: 160, height: 160, alignItems: "center", justifyContent: "center", marginTop: 24 },
   progressCircleImage: { position: "absolute", width: 93, height: 93, borderRadius: 46.5 },
@@ -29,7 +29,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/referral_program/native/ProgressWheel.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ProgressWheel(arg0) {
       const cResult = c.c(21);
       ({ nReferralsSent, altImage } = arg0);
       const tmp4 = closure_9();
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let tmp23 = cResult[10];
             }
             if (altImage == null) {
-              altImage = _modDef13277;
+              altImage = _modDef13578;
             }
             if (cResult[11] !== altImage) {
               const obj5 = { uri: altImage };
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp12 = tmp10;
       if (tmp10) {
-        const obj9 = { source: _modDef13276, style: tmp4.glowImage };
+        const obj9 = { source: _modDef13577, style: tmp4.glowImage };
         tmp12 = React4(FastImageDefault, obj9);
         const tmp5Result = FastImageDefault;
       }
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp12;
       tmp11 = tmp12;
     }
-  : (arg0) => {
+  : function ProgressWheel(arg0) {
       ({ nReferralsSent, altImage } = arg0);
       const tmp = closure_9();
       const token = useToken.useToken(nativeDefault.colors.BACKGROUND_MOD_STRONG);
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
       let tmp9 = nReferralsSent === useReferralProgramBannerDetails.MAX_REFERRALS_SENT;
       if (tmp9) {
-        const obj4 = { source: _modDef13276, style: tmp.glowImage };
+        const obj4 = { source: _modDef13577, style: tmp.glowImage };
         tmp9 = React4(FastImageDefault, obj4);
         const tmp4Result = FastImageDefault;
       }
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmp4Result3 = inlineStylesDefault;
       if (altImage == null) {
-        altImage = _modDef13277;
+        altImage = _modDef13578;
       }
       items[2] = React4(FastImageDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
       obj3.children = items;

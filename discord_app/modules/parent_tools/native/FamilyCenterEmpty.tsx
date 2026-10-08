@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/native/FamilyCenterEmpty.tsx
 import c from "../../../../_runtime/00576_c.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef14741 from "../../../../_runtime/metro/14741__.js";
+import _modDef15002 from "../../../../_runtime/metro/15002__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   art: { marginBottom: 10, width: 243 },
   empty: { display: "flex", alignItems: "center" },
@@ -19,12 +19,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterEmpty.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (text) => {
+  ? function FamilyCenterEmpty(text) {
       const cResult = c.c(8);
       text = text.text;
       const tmp4 = closure_7();
       if (cResult[0] !== tmp4.art) {
-        const obj2 = { source: _modDef14741, style: tmp4.art, resizeMethod: "scale" };
+        const obj2 = { source: _modDef15002, style: tmp4.art, resizeMethod: "scale" };
         const tmp9 = hasOwnProperty(React4, obj2);
         cResult[0] = tmp4.art;
         cResult[1] = tmp9;
@@ -59,11 +59,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp14;
       tmp13 = tmp14;
     }
-  : (children) => {
+  : function FamilyCenterEmpty(children) {
       const tmp = closure_7();
       const obj = { style: tmp.empty, children: null };
       const items = [
-        hasOwnProperty(React4, { source: _modDef14741, style: tmp.art, resizeMethod: "scale" }),
+        hasOwnProperty(React4, { source: _modDef15002, style: tmp.art, resizeMethod: "scale" }),
         hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text }),
       ];
       obj.children = items;

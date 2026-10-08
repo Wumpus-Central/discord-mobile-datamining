@@ -2,14 +2,14 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
 import GroupIcon from "../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import AppsIcon2 from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
-import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
 import utils from "../../content_inventory/utils.tsx";
 import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
-import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import TvIcon from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
 import conjurePresenceActivity from "../../conjure/presence/conjurePresenceActivity.tsx";
+import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import TopicsIcon from "../../../design/components/Icon/native/redesign/generated/TopicsIcon.tsx";
 import HourglassIcon from "../../../design/components/Icon/native/redesign/generated/HourglassIcon.tsx";
 import shouldShowActivityTimeBarDefault from "../utils/shouldShowActivityTimeBar.tsx";
@@ -45,7 +45,7 @@ const View = fn(17).View;
 const ActivityTypes = fn(1085).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 },
   bold: { fontWeight: "bold" },
@@ -53,7 +53,7 @@ let closure_7 = createStyles.createStyles({
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (activity) => {
+  ? function TimestampBadge(activity) {
       const cResult = c.c(16);
       activity = activity.activity;
       const tmp4 = closure_7();
@@ -150,7 +150,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return null;
     }
-  : (activity) => {
+  : function TimestampBadge(activity) {
       activity = activity.activity;
       const tmp = closure_7();
       const timestamps = activity.timestamps;
@@ -199,7 +199,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (activity) => {
+  ? function PartyBadge(activity) {
       const cResult = c.c(9);
       activity = activity.activity;
       let container = closure_7();
@@ -252,7 +252,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return null;
     }
-  : (activity) => {
+  : function PartyBadge(activity) {
       activity = activity.activity;
       if (!isEmbeddedActivityDefault(activity)) {
         if (null != activity.party) {
@@ -278,7 +278,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export const TimestampBadge = tmp4;
 export const PartyBadge = tmp5;
 export const EpisodeBadge = ReactCompilerGating.isReactCompilerEnabled()
-  ? (activity) => {
+  ? function EpisodeBadge(activity) {
       const cResult = c.c(8);
       let container = closure_7();
       const assets = activity.activity.assets;
@@ -328,7 +328,7 @@ export const EpisodeBadge = ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = tmp18;
       }
     }
-  : (activity) => {
+  : function EpisodeBadge(activity) {
       const tmp = closure_7();
       const assets = activity.activity.assets;
       let large_text;

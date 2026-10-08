@@ -52,11 +52,11 @@ function dispatchThreadMemberLocalUpdate(id, isJoining) {
     isJoining,
   });
 }
-let closure_4 = fn(2055).createChannelRecordFromServer;
-const PAGE_SIZE = fn(7275).PAGE_SIZE;
+let closure_4 = fn(2067).createChannelRecordFromServer;
+const PAGE_SIZE = fn(7875).PAGE_SIZE;
 const Constants = fn(1085);
 ({ Endpoints: closure_12, AbortCodes: map1, AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-const ChannelFlags = fn(2058).ChannelFlags;
+const ChannelFlags = fn(2070).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadActionCreators.tsx");
 
@@ -734,7 +734,7 @@ export default {
       if (flag) {
         obj7.archived = false;
       }
-      const HTTP = tmp3(1282).HTTP;
+      const HTTP = tmp3(1294).HTTP;
       const request = { url: closure_1_12.CHANNEL(tmp3.id), body: obj7, rejectWithError: true };
       await HTTP.patch(request);
       if (1 === tmp7) {
@@ -818,7 +818,7 @@ export default {
               return obj14;
             } else {
               dependencyMap = 1;
-              const HTTP2 = tmp3(1282).HTTP;
+              const HTTP2 = tmp3(1294).HTTP;
               const request = { url: closure_1_12.CHANNEL(closure_128_0.id), body: null, rejectWithError: true };
               const obj15 = { flags: closure_128_0.flags & ~constants.PINNED };
               request.body = obj15;
@@ -855,7 +855,7 @@ export default {
                 return obj21;
               } else {
                 dependencyMap = 2;
-                const HTTP = tmp3(1282).HTTP;
+                const HTTP = tmp3(1294).HTTP;
                 const request1 = { url: closure_1_12.CHANNEL(closure_128_1.id), body: null, rejectWithError: true };
                 const obj22 = { flags: closure_128_1.flags | constants.PINNED };
                 request1.body = obj22;
@@ -936,14 +936,14 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const result = tmp4(7420).trackThreadNotificationSettingsUpdated(tmp4, closure_1);
+              const result = tmp4(7895).trackThreadNotificationSettingsUpdated(tmp4, closure_1);
               if (!JoinedThreadsStore.hasJoined(tmp4.id)) {
                 c1 = 1;
                 dependencyMap = 1;
                 const obj5 = { value: self.joinThread(tmp4, "Change Notification Settings"), done: false };
                 return obj5;
               }
-              const obj8 = tmp4(7420);
+              const obj8 = tmp4(7895);
             }
           } else if (arg0 === 1) {
             dependencyMap = 3;
@@ -953,11 +953,11 @@ export default {
             const obj = { value, done: true };
             return obj;
           }
-          const HTTP = tmp4(1282).HTTP;
+          const HTTP = tmp4(1294).HTTP;
           const request = {
             url: closure_1_12.THREAD_MEMBER_SETTINGS(closure_128_0.id),
             body: closure_128_1,
-            rejectWithError: tmp4(1282).rejectWithMigratedError(),
+            rejectWithError: tmp4(1294).rejectWithMigratedError(),
           };
           dependencyMap = 3;
           const obj6 = { value: HTTP.patch(request), done: true };

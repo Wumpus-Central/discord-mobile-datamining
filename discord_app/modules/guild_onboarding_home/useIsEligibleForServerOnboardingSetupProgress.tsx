@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsEligibleForServerOnboardingSetupProgress(arg0) {
       const cResult = c.c(5);
       let tmp4 = arg0;
       if (arg0 == null) {
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       flag = false;
       const tmp2 = useHasAllocateBoostPermissionDefault(arg0);
     }
-  : (arg0) => {
+  : function useIsEligibleForServerOnboardingSetupProgress(arg0) {
       let tmp = arg0;
       useHasAllocateBoostPermissionDefault(arg0);
       let tmp4 = arg0;

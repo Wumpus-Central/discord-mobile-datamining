@@ -7,7 +7,7 @@ const jsxProd = fn(21);
 ({ Fragment: c3, jsx: closure_4 } = jsxProd);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useThemeContext() {
       context = noop.useContext(context);
       if (null == context) {
         const _Error = Error;
@@ -17,7 +17,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         return context;
       }
     }
-  : () => {
+  : function useThemeContext() {
       context = noop.useContext(context);
       if (null == context) {
         const _Error = Error;
@@ -63,7 +63,7 @@ export const useThemeContext = tmp3;
 export const FALLBACK_THEME_CONTEXT_VALUE = obj3;
 export const ThemeContext = context;
 export const UseThemeContext = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function UseThemeContext(children) {
       const cResult = c.c(5);
       children = children.children;
       const tmp2 = closure_5();
@@ -88,4 +88,6 @@ export const UseThemeContext = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = childrenResult;
       tmp3 = childrenResult;
     }
-  : (children) => React4(React3, { children: children.children(closure_5()) });
+  : function UseThemeContext(children) {
+      return React4(React3, { children: children.children(closure_5()) });
+    };

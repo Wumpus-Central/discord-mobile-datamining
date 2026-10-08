@@ -6,12 +6,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import GameServerStore from "../../../game_server/GameServerStore.tsx";
 
-const useGuildPowerupOnShowMoreDefault = description(12240);
-const GuildPowerupsPerkCardDefault = description(12245);
+const useGuildPowerupOnShowMoreDefault = description(12319);
+const GuildPowerupsPerkCardDefault = description(12324);
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { riveContainer: { flex: 1, paddingVertical: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsGameServerCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildPowerupsGameServerCard(guildId) {
       let tmp2 = dependencyMap;
       const cResult = guildId(576).c(17);
       guildId = guildId.guildId;
@@ -49,14 +49,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let title = useGameServerPerkDefault(guildId);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [AccessibilityStore];
-        class C {
+        class G {
           constructor() {
             return closure_1_4.useReducedMotion;
           }
         }
         cResult[3] = items1;
-        cResult[4] = C;
-        let tmp11 = C;
+        cResult[4] = G;
+        let tmp11 = G;
         let tmp10 = items1;
       } else {
         tmp10 = cResult[3];
@@ -71,13 +71,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (null != title) {
           if (cResult[5] !== stateFromStores1) {
             const obj2 = { stateMachine: "SM_Auto", dataBinding: null };
-            class C {
+            class G {
               constructor() {
                 return closure_1_4.useReducedMotion;
               }
             }
             obj2.dataBinding = { reducedMotion: null };
-            const tmp18 = jsx(tmp(4684).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
+            const tmp18 = jsx(tmp(4878).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
             cResult[5] = stateFromStores1;
             cResult[6] = tmp18;
             let tmp16 = tmp18;
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            class C {
+            class G {
               constructor() {
                 return closure_1_4.useReducedMotion;
               }
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[15] = tmp19;
             cResult[16] = tmp2;
           }
-          class C {
+          class G {
             constructor() {
               return closure_1_4.useReducedMotion;
             }
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp15;
     }
-  : (guildId) => {
+  : function GuildPowerupsGameServerCard(guildId) {
       guildId = guildId.guildId;
       const tmp = closure_7();
       const tmp2 = guildId;
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { stateMachine: "SM_Auto", dataBinding: null };
           const obj10 = { reducedMotion: stateFromStores1 };
           obj6.dataBinding = obj10;
-          obj5.children = jsx(tmp2(4684).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
+          obj5.children = jsx(tmp2(4878).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
           obj4.riveComponent = <View style={tmp.riveContainer}>{null}</View>;
           obj4.status = tmp6;
           obj4.onPress = tmp9;

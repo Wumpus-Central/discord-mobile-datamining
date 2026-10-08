@@ -1,6 +1,6 @@
 // discord_app/modules/age_gate/native/AgeGateManager.tsx
-import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import AgeGateUtils from "../AgeGateUtils.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";

@@ -2,10 +2,10 @@
 import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06326_LegacyBaseButton.js";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
-import DCDVideoRendererDefault from "../../../video_calls/native/components/DCDVideoRenderer.tsx";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
+import DCDVideoRendererDefault from "../../../video_calls/native/components/DCDVideoRenderer.tsx";
 import VideoActionCreators from "../../../media/VideoActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -14,12 +14,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(11916);
+const VoicePanelConstants = fn(11989);
 let VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(11914).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17235).VoicePanelPIPModes;
-const SCALE_PHYSICS = fn(11917).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17516).VoicePanelPIPModes;
+const SCALE_PHYSICS = fn(11990).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 50;
@@ -45,7 +45,7 @@ getScaleChangeWithOverscroll.__workletHash = 8727721301304;
 getScaleChangeWithOverscroll.__initData = {
   code: "function getScaleChangeWithOverscroll_VoicePanelVideoRendererTsx1(currentScale,scaleChange,fitScale){const{MIN_OVERSCROLL,OVERSCOLL_INTENSITY_FACTOR}=this.__closure;if(currentScale>=fitScale){return scaleChange;}const underScale=1-currentScale;const factor=Math.max(MIN_OVERSCROLL,1-underScale*underScale*OVERSCOLL_INTENSITY_FACTOR);return 1+(scaleChange-1)*factor;}",
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_22 = createStyles.createStyles({
   wrapper: {
     position: "absolute",
@@ -260,7 +260,7 @@ let closure_92 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_93 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useGestures(id) {
       const cResult = id(focused[12]).c(120);
       id = id.id;
       const isCamera = id.isCamera;
@@ -490,7 +490,7 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled()
                                                           }
                                                           return id === id;
                                                         }
-                                                        class Fe {
+                                                        class Ge {
                                                           constructor() {
                                                             value = closure_21.get();
                                                             if (value < closure_22.get() + c16) {
@@ -1078,7 +1078,7 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled()
                                         tmp31.__workletHash = 15797844425755;
                                         tmp31.__initData = __initData8;
                                         cResult[23] = containerLayout;
-                                        class Fe {
+                                        class Ge {
                                           constructor() {
                                             value = closure_21.get();
                                             if (value < closure_22.get() + c16) {
@@ -1169,7 +1169,7 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled()
                                 }
                               }
                             }
-                            class Fe {
+                            class Ge {
                               constructor() {
                                 value = closure_21.get();
                                 if (value < closure_22.get() + c16) {
@@ -1256,9 +1256,9 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled()
                               SNAP_EDGE_OUTER_THRESHOLD: sharedValue2,
                               SNAP_EDGE_INNER_THRESHOLD: sharedValue1,
                             };
-                            Fe.__closure = obj29;
-                            Fe.__workletHash = 3902544453390;
-                            Fe.__initData = __initData7;
+                            Ge.__closure = obj29;
+                            Ge.__workletHash = 3902544453390;
+                            Ge.__initData = __initData7;
                             cResult[15] = containerLayout;
                             cResult[16] = derivedValue;
                             cResult[17] = derivedValue1;
@@ -1266,8 +1266,8 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled()
                             cResult[19] = sharedValue1;
                             cResult[20] = sharedValue2;
                             cResult[21] = videoDimensions;
-                            cResult[22] = Fe;
-                            tmp24 = Fe;
+                            cResult[22] = Ge;
+                            tmp24 = Ge;
                             const tmpResult = tmp(tmp2[8]);
                           }
                         }
@@ -1346,7 +1346,7 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled()
         currentSizeThreshold: sharedValue7,
       };
     }
-  : (id) => {
+  : function useGestures(id) {
       id = id.id;
       const isCamera = id.isCamera;
       const focused = id.focused;
@@ -2388,7 +2388,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePa
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (id) => {
+    ? function VideoRenderer(id) {
         const cResult = id(sharedCoords[12]).c(75);
         id = id.id;
         const streamId = id.streamId;
@@ -3175,7 +3175,7 @@ export default noop.memo(
         tmp19 = fn;
         let tmp17 = isScrollVisible(isCamera.useState(true), 2);
       }
-    : (streamKey) => {
+    : function VideoRenderer(streamKey) {
         let id = streamKey.id;
         const streamId = streamKey.streamId;
         ({ userId, videoSpinnerContext, sharedCoords } = streamKey);

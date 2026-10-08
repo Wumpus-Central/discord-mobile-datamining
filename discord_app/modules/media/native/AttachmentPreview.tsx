@@ -7,20 +7,20 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import FileUtils from "../../../utils/FileUtils.tsx";
 import common_Video from "../../../components_native/common/Video.tsx";
-import _modDef11057 from "../../../../_runtime/metro/11057__.js";
-import _modDef11058 from "../../../../_runtime/metro/11058__.js";
-import _modDef11059 from "../../../../_runtime/metro/11059__.js";
-import _modDef11060 from "../../../../_runtime/metro/11060__.js";
-import _modDef11061 from "../../../../_runtime/metro/11061__.js";
-import _modDef11062 from "../../../../_runtime/metro/11062__.js";
-import _modDef11063 from "../../../../_runtime/metro/11063__.js";
-import _modDef11064 from "../../../../_runtime/metro/11064__.js";
-import _modDef11065 from "../../../../_runtime/metro/11065__.js";
-import _modDef11066 from "../../../../_runtime/metro/11066__.js";
-import _modDef11067 from "../../../../_runtime/metro/11067__.js";
-import _modDef11068 from "../../../../_runtime/metro/11068__.js";
-import _modDef11069 from "../../../../_runtime/metro/11069__.js";
-import _modDef11070 from "../../../../_runtime/metro/11070__.js";
+import _modDef11885 from "../../../../_runtime/metro/11885__.js";
+import _modDef11886 from "../../../../_runtime/metro/11886__.js";
+import _modDef11887 from "../../../../_runtime/metro/11887__.js";
+import _modDef11888 from "../../../../_runtime/metro/11888__.js";
+import _modDef11889 from "../../../../_runtime/metro/11889__.js";
+import _modDef11890 from "../../../../_runtime/metro/11890__.js";
+import _modDef11891 from "../../../../_runtime/metro/11891__.js";
+import _modDef11892 from "../../../../_runtime/metro/11892__.js";
+import _modDef11893 from "../../../../_runtime/metro/11893__.js";
+import _modDef11894 from "../../../../_runtime/metro/11894__.js";
+import _modDef11895 from "../../../../_runtime/metro/11895__.js";
+import _modDef11896 from "../../../../_runtime/metro/11896__.js";
+import _modDef11897 from "../../../../_runtime/metro/11897__.js";
+import _modDef11898 from "../../../../_runtime/metro/11898__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -28,7 +28,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   fileInfoAttachmentPreviewFile: {
     flexDirection: "row",
@@ -54,24 +54,24 @@ let obj = {
 };
 let closure_8 = createStyles.createStyles(obj);
 let obj4 = {
-  archive: _modDef11057,
-  acrobat: _modDef11058,
-  ae: _modDef11059,
-  ai: _modDef11060,
-  audio: _modDef11061,
-  code: _modDef11062,
-  document: _modDef11063,
-  image: _modDef11064,
-  photoshop: _modDef11065,
-  sketch: _modDef11066,
-  spreadsheet: _modDef11067,
-  unknown: _modDef11068,
-  video: _modDef11069,
-  webcode: _modDef11070,
+  archive: _modDef11885,
+  acrobat: _modDef11886,
+  ae: _modDef11887,
+  ai: _modDef11888,
+  audio: _modDef11889,
+  code: _modDef11890,
+  document: _modDef11891,
+  image: _modDef11892,
+  photoshop: _modDef11893,
+  sketch: _modDef11894,
+  spreadsheet: _modDef11895,
+  unknown: _modDef11896,
+  video: _modDef11897,
+  webcode: _modDef11898,
 };
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (fileName) => {
+  ? function AttachmentIcon(fileName) {
       const cResult = c.c(3);
       let str = fileName.fileName;
       const tmp3 = closure_8();
@@ -81,7 +81,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp4 = obj4[obj2.classifyFileName(obj2, str)];
       if (tmp4 == null) {
-        tmp4 = _modDef11068;
+        tmp4 = _modDef11896;
       }
       if (cResult[0] === tmp4) {
         if (cResult[1] === tmp3.attachmentFileIcon) {
@@ -96,7 +96,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = tmp7;
       const obj3 = { style: tmp3.attachmentFileIcon, source: tmp4 };
     }
-  : (fileName) => {
+  : function AttachmentIcon(fileName) {
       fileName = fileName.fileName;
       const items = [fileName];
       const tmp = closure_8();
@@ -110,7 +110,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           let tmp2 = obj4[obj.classifyFileName(obj, str)];
           if (tmp2 == null) {
-            tmp2 = _modDef11068;
+            tmp2 = _modDef11896;
           }
           return tmp2;
         }, items),
@@ -119,7 +119,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_10 = tmp4;
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (fileName) => {
+  ? function FilenameText(fileName) {
       const cResult = c.c(21);
       fileName = fileName.fileName;
       const tmp4 = closure_8();
@@ -224,7 +224,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = Text;
       const obj2 = /(?:\.([^.]+))?$/;
     }
-  : (fileName) => {
+  : function FilenameText(fileName) {
       fileName = fileName.fileName;
       const tmp = closure_8();
       let str = fileName;
@@ -270,7 +270,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DefaultAttachmentPreview(arg0) {
       const cResult = c.c(13);
       ({ fileName, maxFileWidth, borderRadius } = arg0);
       const tmp2 = closure_8();
@@ -326,7 +326,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj5;
       tmp3 = obj5;
     }
-  : (fileName) => {
+  : function DefaultAttachmentPreview(fileName) {
       fileName = fileName.fileName;
       ({ maxFileWidth, borderRadius } = fileName);
       const obj = { style: null, children: null };
@@ -339,8 +339,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let closure_13 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
-        const cResult = c.c(34);
+    ? function ImageThumbnail(arg0) {
+        const cResult = c.c(36);
         ({ uri, width, height, borderRadius, style, fileName } = arg0);
         if (cResult[0] === height) {
           if (cResult[1] === uri) {
@@ -380,24 +380,32 @@ let closure_13 = noop.memo(
                       if (cResult[13] === tmp5) {
                         let tmp22 = cResult[14];
                       }
-                      if (cResult[15] === tmp4) {
-                        if (cResult[16] === tmp22) {
-                          let tmp23 = cResult[17];
-                        }
-                        if (cResult[18] === tmp21) {
-                        }
-                        const obj3 = { style: tmp21, children: tmp23 };
-                        const tmp30 = timestampProducer(hasOwnProperty, obj3);
-                        cResult[18] = tmp21;
-                        cResult[19] = tmp23;
-                        cResult[20] = tmp30;
+                      if (cResult[15] !== uri) {
+                        const obj3 = { uri };
+                        cResult[15] = uri;
+                        cResult[16] = obj3;
+                        let tmp23 = obj3;
+                      } else {
+                        tmp23 = cResult[16];
                       }
-                      const obj5 = { style: tmp22, source: tmp4, resizeMode: "cover", enableAnimation: true };
-                      const tmp26 = timestampProducer(FastImageDefault, obj5);
-                      cResult[15] = tmp4;
-                      cResult[16] = tmp22;
-                      cResult[17] = tmp26;
-                      tmp23 = tmp26;
+                      if (cResult[17] === tmp22) {
+                        if (cResult[18] === tmp23) {
+                          let tmp24 = cResult[19];
+                        }
+                        if (cResult[20] === tmp21) {
+                        }
+                        const obj5 = { style: tmp21, children: tmp24 };
+                        const tmp31 = timestampProducer(hasOwnProperty, obj5);
+                        cResult[20] = tmp21;
+                        cResult[21] = tmp24;
+                        cResult[22] = tmp31;
+                      }
+                      const obj6 = { style: tmp22, source: tmp23, resizeMode: "cover", enableAnimation: true };
+                      const tmp27 = timestampProducer(FastImageDefault, obj6);
+                      cResult[17] = tmp22;
+                      cResult[18] = tmp23;
+                      cResult[19] = tmp27;
+                      tmp24 = tmp27;
                     }
                     const items = [tmp5, style];
                     cResult[12] = style;
@@ -413,55 +421,55 @@ let closure_13 = noop.memo(
                   tmpResult = PlatformUtils;
                 }
                 const _Symbol = Symbol;
-                if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-                  const obj6 = { overflow: "hidden" };
-                  cResult[21] = obj6;
-                  let tmp9 = obj6;
+                if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
+                  const obj7 = { overflow: "hidden" };
+                  cResult[23] = obj7;
+                  let tmp9 = obj7;
                 } else {
-                  tmp9 = cResult[21];
+                  tmp9 = cResult[23];
                 }
-                if (cResult[22] === style) {
-                  if (cResult[23] === tmp5) {
-                    let tmp10 = cResult[24];
+                if (cResult[24] === style) {
+                  if (cResult[25] === tmp5) {
+                    let tmp10 = cResult[26];
                   }
-                  if (cResult[25] === style) {
-                    if (cResult[26] === tmp5) {
-                      let tmp11 = cResult[27];
+                  if (cResult[27] === style) {
+                    if (cResult[28] === tmp5) {
+                      let tmp11 = cResult[29];
                     }
-                    if (cResult[28] === tmp4) {
-                      if (cResult[29] === tmp11) {
-                        let tmp12 = cResult[30];
+                    if (cResult[30] === tmp4) {
+                      if (cResult[31] === tmp11) {
+                        let tmp12 = cResult[32];
                       }
-                      if (cResult[31] === tmp10) {
-                        if (cResult[32] === tmp12) {
-                          let tmp15 = cResult[33];
+                      if (cResult[33] === tmp10) {
+                        if (cResult[34] === tmp12) {
+                          let tmp15 = cResult[35];
                         }
                         return tmp15;
                       }
-                      const obj7 = { style: tmp10, children: tmp12 };
-                      const tmp18 = timestampProducer(hasOwnProperty, obj7);
-                      cResult[31] = tmp10;
-                      cResult[32] = tmp12;
-                      cResult[33] = tmp18;
+                      const obj8 = { style: tmp10, children: tmp12 };
+                      const tmp18 = timestampProducer(hasOwnProperty, obj8);
+                      cResult[33] = tmp10;
+                      cResult[34] = tmp12;
+                      cResult[35] = tmp18;
                       tmp15 = tmp18;
                     }
-                    const obj8 = { style: tmp11, source: tmp4, localImageSource: tmp4 };
-                    const tmp14 = timestampProducer(native.ThumbnailImage, obj8);
-                    cResult[28] = tmp4;
-                    cResult[29] = tmp11;
-                    cResult[30] = tmp14;
+                    const obj9 = { style: tmp11, source: tmp4, localImageSource: tmp4 };
+                    const tmp14 = timestampProducer(native.ThumbnailImage, obj9);
+                    cResult[30] = tmp4;
+                    cResult[31] = tmp11;
+                    cResult[32] = tmp14;
                     tmp12 = tmp14;
                   }
                   const items2 = [tmp5, style];
-                  cResult[25] = style;
-                  cResult[26] = tmp5;
-                  cResult[27] = items2;
+                  cResult[27] = style;
+                  cResult[28] = tmp5;
+                  cResult[29] = items2;
                   tmp11 = items2;
                 }
                 const items3 = [tmp5, style, tmp9];
-                cResult[22] = style;
-                cResult[23] = tmp5;
-                cResult[24] = items3;
+                cResult[24] = style;
+                cResult[25] = tmp5;
+                cResult[26] = items3;
                 tmp10 = items3;
               }
             }
@@ -480,7 +488,7 @@ let closure_13 = noop.memo(
         cResult[3] = size1;
         tmp4 = size1;
       }
-    : (borderRadius) => {
+    : function ImageThumbnail(borderRadius) {
         ({ uri, width, height, style, fileName } = borderRadius);
         const size = { uri, width, height };
         const size1 = { width, height, borderRadius: borderRadius.borderRadius };
@@ -514,16 +522,17 @@ let closure_13 = noop.memo(
           const obj2 = { style: null, source: null, resizeMode: "cover", enableAnimation: true };
           const items1 = [size1, style];
           obj2.style = items1;
-          obj2.source = size;
+          const obj5 = { uri };
+          obj2.source = obj5;
           obj.children = timestampProducer(FastImageDefault, obj2);
           let tmp10 = obj;
         } else {
-          const obj5 = { style: null, source: null, localImageSource: null };
+          const obj6 = { style: null, source: null, localImageSource: null };
           const items2 = [size1, style];
-          obj5.style = items2;
-          obj5.source = size;
-          obj5.localImageSource = size;
-          obj.children = timestampProducer(native.ThumbnailImage, obj5);
+          obj6.style = items2;
+          obj6.source = size;
+          obj6.localImageSource = size;
+          obj.children = timestampProducer(native.ThumbnailImage, obj6);
           tmp10 = obj;
         }
         return timestampProducer(hasOwnProperty, tmp10);
@@ -600,7 +609,7 @@ export default function AttachmentPreview(height) {
       const obj8 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
       obj8.style = videoIcon;
-      CirclePlayIcon = CirclePlayIcon(8401).CirclePlayIcon;
+      CirclePlayIcon = CirclePlayIcon(8899).CirclePlayIcon;
       tmp6 = timestampProducer(CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" });
       obj8.children = tmp6;
       items[1] = timestampProducer(hasOwnProperty, obj8);

@@ -14,7 +14,7 @@ export const shouldRenderReportFalsePositiveButton = function shouldRenderReport
   return null != ExplicitMediaStore.getFpMessageInfo(id);
 };
 export const useShouldRenderReportFalsePositiveButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShouldRenderReportFalsePositiveButton(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -25,7 +25,7 @@ export const useShouldRenderReportFalsePositiveButton = ReactCompilerGating.isRe
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function s() {
+        const fn = function n() {
           return ExplicitMediaStore.getFpMessageInfo(closure_0);
         };
         cResult[1] = arg0;
@@ -37,7 +37,7 @@ export const useShouldRenderReportFalsePositiveButton = ReactCompilerGating.isRe
       const obj = require("c");
       return null != require("useStateFromStores").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useShouldRenderReportFalsePositiveButton(arg0) {
       _require = arg0;
       const items = [ExplicitMediaStore];
       return (

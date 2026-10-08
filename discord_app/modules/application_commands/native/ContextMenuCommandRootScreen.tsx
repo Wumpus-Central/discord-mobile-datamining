@@ -9,11 +9,11 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandConstants = fn(5795);
+const ApplicationCommandConstants = fn(5399);
 ({ CONTEXT_MENU_COMMANDS_QUERY_LIMIT: closure_8, BuiltInSectionId: closure_9 } = ApplicationCommandConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, sectionHeader: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.sectionHeader = {
@@ -32,7 +32,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandRootScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (navigation) => {
+  ? function ContextMenuCommandRootScreen(navigation) {
       const cResult = navigation(onPressAppCommand[9]).c(83);
       navigation = navigation.navigation;
       const params = navigation.route.params;
@@ -137,22 +137,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 if (cResult[34] !== prop1) {
                                   const _Symbol = Symbol;
                                   if (cResult[37] === Symbol.for("react.memo_cache_sentinel")) {
-                                    function ie(section) {
+                                    function re(section) {
                                       return section.section.id === prop1.FRECENCY;
                                     }
-                                    cResult[37] = ie;
-                                    let tmp31 = ie;
+                                    cResult[37] = re;
+                                    let tmp31 = re;
                                   } else {
                                     tmp31 = cResult[37];
                                   }
                                   let found = prop1.find(tmp31);
                                   const _Symbol2 = Symbol;
                                   if (cResult[38] === Symbol.for("react.memo_cache_sentinel")) {
-                                    function re(section) {
+                                    function ie(section) {
                                       return section.section.id !== prop1.FRECENCY;
                                     }
-                                    cResult[38] = re;
-                                    let tmp33 = re;
+                                    cResult[38] = ie;
+                                    let tmp33 = ie;
                                   } else {
                                     tmp33 = cResult[38];
                                   }
@@ -528,7 +528,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = H;
       const tmp8 = onClose(stateFromStores.useState(""), 2);
     }
-  : (navigation) => {
+  : function ContextMenuCommandRootScreen(navigation) {
       navigation = navigation.navigation;
       const params = navigation.route.params;
       const channel = params.channel;
@@ -695,7 +695,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let stringResult = intl2.string(util.t.V0w2ap);
                 }
                 const obj = { variant, color: "text-default", style: closure_18.sectionHeader, children: stringResult };
-                return v65535(Text_Text.Text, obj);
+                return collapsed(Text_Text.Text, obj);
               }
               const intl = util.intl;
               stringResult = intl.string(util.t.PHjkRE);

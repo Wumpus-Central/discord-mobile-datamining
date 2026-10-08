@@ -3,13 +3,13 @@ import PremiumTypeUtils from "../../utils/PremiumTypeUtils.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/useIsPremiumSubscriber.tsx");
 
 export const useIsPremiumSubscriber = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsPremiumSubscriber(arg0) {
       let TIER_2 = arg0;
       const cResult = TIER_2(576).c(3);
       if (undefined === arg0) {
@@ -23,7 +23,7 @@ export const useIsPremiumSubscriber = ReactCompilerGating.isReactCompilerEnabled
         first = cResult[0];
       }
       if (cResult[1] !== TIER_2) {
-        const fn = function o() {
+        const fn = function c() {
           const currentUser = UserStore.getCurrentUser();
           return PremiumTypeUtils.isPremiumExactly(currentUser, TIER_2);
         };
@@ -36,7 +36,7 @@ export const useIsPremiumSubscriber = ReactCompilerGating.isReactCompilerEnabled
       const obj = TIER_2(576);
       return TIER_2(504).useStateFromStores(first, tmp7);
     }
-  : () => {
+  : function useIsPremiumSubscriber() {
       let TIER_2 = arg0;
       if (arg0 === undefined) {
         TIER_2 = PremiumTypes.TIER_2;

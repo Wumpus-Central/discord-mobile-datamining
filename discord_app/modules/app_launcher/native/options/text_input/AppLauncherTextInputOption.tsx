@@ -8,10 +8,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let View = fn(17).View;
-const EmojiIntention = fn(1380).EmojiIntention;
+const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj2 = {
   container: {
     width: "100%",
@@ -49,7 +49,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (autoFocus) => {
+  ? function AppLauncherTextInputOption(autoFocus) {
       const cResult = onChangeText(initialValue[8]).c(38);
       ({ option, onChangeText } = autoFocus);
       ({ onFocus, onEndEditing, guildId } = autoFocus);
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp10 = option.type === onChangeText(initialValue[10]).ApplicationCommandOptionType.STRING;
       closure_7 = tmp10;
       if (cResult[3] !== onChangeText) {
-        class G {
+        class P {
           constructor(arg0) {
             tmp = closure_4(autoFocus);
             tmp2 = onChangeText(autoFocus);
@@ -98,9 +98,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[3] = onChangeText;
-        cResult[4] = G;
+        cResult[4] = P;
       } else {
-        class G {
+        class P {
           constructor(arg0) {
             tmp = closure_4(autoFocus);
             tmp2 = onChangeText(autoFocus);
@@ -108,9 +108,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      G = tmp11;
+      P = tmp11;
       if (cResult[5] === tmp11) {
-        class G {
+        class P {
           constructor(arg0) {
             tmp = closure_4(autoFocus);
             tmp2 = onChangeText(autoFocus);
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onPressEmoji = V;
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          class G {
+          class P {
             constructor(arg0) {
               tmp = closure_4(autoFocus);
               tmp2 = onChangeText(autoFocus);
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[8] = tmp13;
         } else {
-          class G {
+          class P {
             constructor(arg0) {
               tmp = closure_4(autoFocus);
               tmp2 = onChangeText(autoFocus);
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const onClose = tmp13;
         if (cResult[9] === guildId) {
-          class G {
+          class P {
             constructor(arg0) {
               tmp = closure_4(autoFocus);
               tmp2 = onChangeText(autoFocus);
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const effect = obj2.useEffect(U, tmp15);
           const _Symbol2 = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-            class G {
+            class P {
               constructor(arg0) {
                 tmp = closure_4(autoFocus);
                 tmp2 = onChangeText(autoFocus);
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             cResult[13] = tmp18;
           } else {
-            class G {
+            class P {
               constructor(arg0) {
                 tmp = closure_4(autoFocus);
                 tmp2 = onChangeText(autoFocus);
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (hasError) {
-            class G {
+            class P {
               constructor(arg0) {
                 tmp = closure_4(autoFocus);
                 tmp2 = onChangeText(autoFocus);
@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[14] === style) {
-            class G {
+            class P {
               constructor(arg0) {
                 tmp = closure_4(autoFocus);
                 tmp2 = onChangeText(autoFocus);
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = V;
       const tmpResult = onChangeText(initialValue[9]);
     }
-  : (guildId) => {
+  : function AppLauncherTextInputOption(guildId) {
       ({ option, onChangeText } = guildId);
       guildId = guildId.guildId;
       ({ initialValue: dependencyMap, hasError } = guildId);
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       noop = tmp2[1];
       noop.useRef({ start: 0, end: 0 });
       const ref = noop.useRef(null);
-      let tmp14Result = option.type === onChangeText(1985).ApplicationCommandOptionType.STRING;
+      let tmp14Result = option.type === onChangeText(1997).ApplicationCommandOptionType.STRING;
       closure_7 = tmp14Result;
       const items = [onChangeText];
       onChangeText = noop.useCallback((arg0) => {
@@ -353,17 +353,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const result = TopEmojisUtils.maybeFetchTopEmojisByGuild(guildId);
         }
       }, items2);
-      let obj = onChangeText(11007);
-      const animationDelayedAutoFocus = onChangeText(11806).useAnimationDelayedAutoFocus(autoFocus, () => {
+      let obj = onChangeText(11232);
+      const animationDelayedAutoFocus = onChangeText(11873).useAnimationDelayedAutoFocus(autoFocus, () => {
         const current = ref.current;
         if (current != null) {
           current.focus();
         }
       });
-      if (obj.useAppLauncherContext().entrypoint === onChangeText(8961).AppLauncherEntrypoint.VOICE) {
-        let TextInput = tmp4(1188).TextInput;
+      if (obj.useAppLauncherContext().entrypoint === onChangeText(11233).AppLauncherEntrypoint.VOICE) {
+        let TextInput = tmp4(1200).TextInput;
       } else {
-        TextInput = guildId(11811);
+        TextInput = guildId(11878);
       }
       const items3 = [tmp.container, ,];
       if (hasError) {
@@ -390,7 +390,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onPressIn: null,
       };
       let maxLength;
-      if (option.type === onChangeText(1985).ApplicationCommandOptionType.STRING) {
+      if (option.type === onChangeText(1997).ApplicationCommandOptionType.STRING) {
         maxLength = option.maxLength;
       }
       obj4.maxLength = maxLength;
@@ -400,13 +400,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj4.onFocus = onFocus;
       obj4.onEndEditing = onEndEditing;
-      if (option.type === onChangeText(1985).ApplicationCommandOptionType.INTEGER) {
+      if (option.type === onChangeText(1997).ApplicationCommandOptionType.INTEGER) {
         let str2 = "numbers-and-punctuation";
         if (tmp4Result.isAndroid()) {
           str2 = "numeric";
         }
         let str = str2;
-        tmp4Result = tmp4(1369);
+        tmp4Result = tmp4(1381);
       } else {
         str = "default";
       }
@@ -428,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             });
           },
         };
-        tmp14Result = tmp14(guildId(11812), obj5);
+        tmp14Result = tmp14(guildId(11879), obj5);
       }
       items4[1] = tmp14Result;
       obj3.children = items4;

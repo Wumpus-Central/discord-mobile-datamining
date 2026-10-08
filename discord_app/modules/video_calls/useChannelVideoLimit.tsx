@@ -11,7 +11,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/useChannelVideoLimit.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useChannelVideoLimit(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       return require("initialize").useStateFromStoresObject(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useChannelVideoLimit(arg0) {
       _require = arg0;
       const items = [SortedVoiceStateStore, GuildStore];
       const items1 = [arg0];

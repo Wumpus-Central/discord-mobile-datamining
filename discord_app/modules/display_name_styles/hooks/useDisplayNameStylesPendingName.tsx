@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesPendingName.tsx");
 
 export const useDisplayNameStylesPendingName = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, arg1) => {
+  ? function useDisplayNameStylesPendingName(id, arg1) {
       _require = id;
       importDefault = arg1;
       const cResult = require("c").c(7);
@@ -57,7 +57,7 @@ export const useDisplayNameStylesPendingName = ReactCompilerGating.isReactCompil
       if (id != null) {
         id1 = id.id;
       }
-      const fn = function u() {
+      const fn = function o() {
         const pendingChanges = UserProfileSettingsStore.getPendingChanges(closure_1);
         if (null != closure_1) {
           let pendingNickname = pendingChanges.pendingNickname;
@@ -78,12 +78,12 @@ export const useDisplayNameStylesPendingName = ReactCompilerGating.isReactCompil
       cResult[3] = fn;
       tmp10 = fn;
     }
-  : (guildId, arg1) => {
-      _require = guildId;
+  : function useDisplayNameStylesPendingName(user, arg1) {
+      _require = user;
       importDefault = arg1;
-      const name = UserUtilsDefault.useName(guildId);
+      const name = UserUtilsDefault.useName(user);
       const items = [UserProfileSettingsStore, GuildMemberStore];
-      const items1 = [arg1, guildId];
+      const items1 = [arg1, user];
       let str = require("initialize").useStateFromStores(
         items,
         () => {
@@ -91,9 +91,9 @@ export const useDisplayNameStylesPendingName = ReactCompilerGating.isReactCompil
           if (null != closure_1) {
             let pendingNickname = pendingChanges.pendingNickname;
             if (pendingNickname == null) {
-              let id;
-              if (guildId != null) {
-                id = guildId.id;
+              id = undefined;
+              if (id != null) {
+                id = id.id;
               }
               pendingNickname = GuildMemberStore.getNick(closure_1, id);
             }

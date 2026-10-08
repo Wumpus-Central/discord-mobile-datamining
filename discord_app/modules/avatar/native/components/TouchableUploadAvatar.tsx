@@ -3,17 +3,17 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef12457 from "../../../../../_runtime/metro/12457__.js";
-import _modDef13691 from "../../../../../_runtime/metro/13691__.js";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
+import _modDef12553 from "../../../../../_runtime/metro/12553__.js";
+import _modDef13913 from "../../../../../_runtime/metro/13913__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   avatarContainer: { display: "flex", paddingTop: 24 },
   defaultLogoStyle: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 96 },
@@ -57,12 +57,12 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/avatar/native/components/TouchableUploadAvatar.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TouchableUploadAvatar(arg0) {
       const cResult = c.c(19);
       ({ avatarSource, showPendingAvatar, onSelectAvatar } = arg0);
       const tmp5 = closure_6();
       if (!(undefined !== showPendingAvatar && showPendingAvatar)) {
-        let tmp7 = _modDef13691;
+        let tmp7 = _modDef13913;
       } else {
         tmp7 = avatarSource;
       }
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp13 = cResult[3];
           }
           if (cResult[4] !== tmp5.uploadAvatarIcon) {
-            const obj2 = { size: native.Icon.Sizes.MEDIUM, source: _modDef12457, style: tmp5.uploadAvatarIcon };
+            const obj2 = { size: native.Icon.Sizes.MEDIUM, source: _modDef12553, style: tmp5.uploadAvatarIcon };
             const tmp20 = React4(native.Icon, obj2);
             cResult[4] = tmp5.uploadAvatarIcon;
             cResult[5] = tmp20;
@@ -157,14 +157,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       defaultLogoStyle = tmp5.defaultLogoStyle;
     }
-  : (onSelectAvatar) => {
+  : function TouchableUploadAvatar(onSelectAvatar) {
       ({ avatarSource, showPendingAvatar } = onSelectAvatar);
       if (showPendingAvatar === undefined) {
         showPendingAvatar = false;
       }
       const tmp = closure_6();
       if (!showPendingAvatar) {
-        let tmp3 = _modDef13691;
+        let tmp3 = _modDef13913;
       } else {
         tmp3 = avatarSource;
       }
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { resizeMode: "contain", style: defaultLogoStyle, source: tmp3 };
         const items = [React4(FastImageDefault, obj4)];
         const obj5 = { style: tmp.uploadAvatarWrapper, children: null };
-        const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef12457, style: tmp.uploadAvatarIcon };
+        const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef12553, style: tmp.uploadAvatarIcon };
         obj5.children = React4(native.Icon, obj6);
         items[1] = React4(View, obj5);
         obj3.children = items;

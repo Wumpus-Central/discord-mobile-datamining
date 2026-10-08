@@ -8,7 +8,7 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06119_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06298_BottomSheetModal.js";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import useArchiveOrDeleteDefault from "useArchiveOrDelete.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 },
   cancel: { alignSelf: "center" },
@@ -32,7 +32,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (groupListingId) => {
+  ? function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(groupListingId) {
       const cResult = c.c(26);
       groupListingId = groupListingId.groupListingId;
       ({ editStateId, guildId } = groupListingId);
@@ -99,80 +99,70 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol2 = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-            class D {
-              constructor() {
-                obj = closure_1_1(closure_1_2[13]);
-                return obj.hideActionSheet();
-              }
-            }
-            cResult[13] = D;
+            const fn = function w() {
+              return ActionSheetActionCreatorsDefault.hideActionSheet();
+            };
+            cResult[13] = fn;
+            let tmp25 = fn;
           } else {
-            class D {
-              constructor() {
-                obj = closure_1_1(closure_1_2[13]);
-                return obj.hideActionSheet();
-              }
-            }
+            tmp25 = cResult[13];
           }
           const _Symbol3 = Symbol;
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-            class D {
-              constructor() {
-                obj = closure_1_1(closure_1_2[13]);
-                return obj.hideActionSheet();
-              }
-            }
             const obj5 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
             const intl = util.intl;
             obj5.children = intl.string(util.t["ETE/oC"]);
-            const tmp27 = hasOwnProperty(Text_Text.Text, obj5);
-            cResult[14] = tmp27;
-            const tmp26 = tmp27;
+            const tmp28 = hasOwnProperty(Text_Text.Text, obj5);
+            cResult[14] = tmp28;
+            let tmp26 = tmp28;
           } else {
-            class D {
-              constructor() {
-                obj = closure_1_1(closure_1_2[13]);
-                return obj.hideActionSheet();
-              }
-            }
+            tmp26 = cResult[14];
           }
           if (cResult[15] !== tmp4.cancel) {
-            class D {
-              constructor() {
-                obj = closure_1_1(closure_1_2[13]);
-                return obj.hideActionSheet();
-              }
-            }
-            const obj6 = { onPress: D, style: tmp4.cancel, activeOpacity: 0.5, children: tmp26 };
-            const tmp30 = hasOwnProperty(React3, obj6);
+            const obj6 = { onPress: tmp25, style: tmp4.cancel, activeOpacity: 0.5, children: tmp26 };
+            const tmp32 = hasOwnProperty(React3, obj6);
             cResult[15] = tmp4.cancel;
-            cResult[16] = tmp30;
+            cResult[16] = tmp32;
+            let tmp29 = tmp32;
           } else {
-            class D {
-              constructor() {
-                obj = closure_1_1(closure_1_2[13]);
-                return obj.hideActionSheet();
-              }
-            }
+            tmp29 = cResult[16];
           }
           if (cResult[17] === tmp7) {
-            class D {
-              constructor() {
-                obj = closure_1_1(closure_1_2[13]);
-                return obj.hideActionSheet();
+            if (cResult[18] === tmp29) {
+              if (cResult[19] === tmp8) {
+                if (cResult[20] === tmp14) {
+                  if (cResult[21] === tmp20) {
+                    let tmp33 = cResult[22];
+                  }
+                  if (cResult[23] === tmp4.container) {
+                    if (cResult[24] === tmp33) {
+                      let tmp36 = cResult[25];
+                    }
+                    return tmp36;
+                  }
+                  const obj7 = { backdropOpacity: 0.8, children: null };
+                  const obj8 = { style: tmp4.container, children: tmp33 };
+                  obj7.children = hasOwnProperty(React4, obj8);
+                  const tmp39 = hasOwnProperty(Sheet_BottomSheet.BottomSheet, obj7);
+                  cResult[23] = tmp4.container;
+                  cResult[24] = tmp33;
+                  cResult[25] = tmp39;
+                  tmp36 = tmp39;
+                }
               }
             }
           }
-          const obj7 = { contentContainerStyle: tmp7, children: null };
-          const items = [tmp8, tmp11, tmp14, tmp17, tmp20, tmp22, tmp28];
-          obj7.children = items;
-          const tmp33 = timestampProducer(BottomSheetModal.BottomSheetScrollView, obj7);
+          const obj9 = { contentContainerStyle: tmp7, children: null };
+          const items = [tmp8, tmp11, tmp14, tmp17, tmp20, tmp22, tmp29];
+          obj9.children = items;
+          const tmp35 = timestampProducer(BottomSheetModal.BottomSheetScrollView, obj9);
           cResult[17] = tmp7;
-          cResult[18] = tmp28;
+          cResult[18] = tmp29;
           cResult[19] = tmp8;
           cResult[20] = tmp14;
           cResult[21] = tmp20;
-          cResult[22] = tmp33;
+          cResult[22] = tmp35;
+          tmp33 = tmp35;
         }
       }
       const tmp21 = hasOwnProperty(components_Button_Button.Button, {
@@ -189,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp20 = tmp21;
       const tmp6 = useArchiveOrDeleteDefault(guildId, groupListingId, editStateId);
     }
-  : (groupListingId) => {
+  : function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(groupListingId) {
       groupListingId = groupListingId.groupListingId;
       ({ editStateId, guildId } = groupListingId);
       const tmp = closure_7();

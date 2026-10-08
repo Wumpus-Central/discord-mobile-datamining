@@ -10,10 +10,10 @@ import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const EVERYONE_CHANNEL_ID = fn(6792).EVERYONE_CHANNEL_ID;
+const EVERYONE_CHANNEL_ID = fn(6967).EVERYONE_CHANNEL_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   header: {
     flexDirection: "row",
@@ -43,7 +43,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/RoleMembersActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function RoleMembersActionSheet(guildId) {
       const cResult = guildId(576).c(33);
       guildId = guildId.guildId;
       const roleId = guildId.roleId;
@@ -71,14 +71,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol2 = Symbol;
           if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
             const items1 = [AccessibilityStore];
-            class D {
+            class A {
               constructor() {
                 return closure_1_5.roleStyle;
               }
             }
             cResult[9] = items1;
-            cResult[10] = D;
-            let tmp16 = D;
+            cResult[10] = A;
+            let tmp16 = A;
             let tmp15 = items1;
           } else {
             tmp15 = cResult[9];
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (stateFromStores != null) {
               const colorString = stateFromStores.colorString;
             }
-            class D {
+            class A {
               constructor() {
                 return closure_1_5.roleStyle;
               }
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const tmpResult2 = tmp(504);
           const result = roleId(11).castGuildIdAsEveryoneGuildRoleId(guildId);
-          const tmp22 = roleId(6629)(guildId);
+          const tmp22 = roleId(6806)(guildId);
           class I {
             constructor() {
               tmp = roleId;
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (tmp24 == null) {
               tmp24 = null;
             }
-            class D {
+            class A {
               constructor() {
                 return closure_1_5.roleStyle;
               }
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (stateFromStores != null) {
                 name = stateFromStores.name;
               }
-              class D {
+              class A {
                 constructor() {
                   return closure_1_5.roleStyle;
                 }
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let obj2 = { variant: "text-sm/semibold", style: tmp4.headerText, children: name };
               cResult[15] = tmp4.headerText;
               cResult[16] = name;
-              cResult[17] = closure_8(tmp(4892).Text, obj2);
+              cResult[17] = closure_8(tmp(5086).Text, obj2);
               class I {
                 constructor() {
                   tmp = roleId;
@@ -156,19 +156,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const tmp30 = closure_8(tmp(4892).Text, obj2);
+              const tmp30 = closure_8(tmp(5086).Text, obj2);
             }
           }
           let tmp26 = null;
           if (tmp18) {
             const obj3 = { color: stateFromStores.colorString, colors: null, size: "small", containerStyles: null };
-            class D {
+            class A {
               constructor() {
                 return closure_1_5.roleStyle;
               }
             }
             obj3.containerStyles = tmp4.roleDot;
-            tmp26 = closure_8(tmp(1188).RoleDot, obj3);
+            tmp26 = closure_8(tmp(1200).RoleDot, obj3);
           }
           cResult[11] = stateFromStores;
           cResult[12] = tmp18;
@@ -224,7 +224,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = I;
       let obj = guildId(576);
     }
-  : (guildId) => {
+  : function RoleMembersActionSheet(guildId) {
       guildId = guildId.guildId;
       const roleId = guildId.roleId;
       let channelId = guildId.channelId;
@@ -258,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = guildId(504);
       const tmp9 = roleId;
       const result = roleId(11).castGuildIdAsEveryoneGuildRoleId(guildId);
-      const tmp11 = roleId(6629)(guildId);
+      const tmp11 = roleId(6806)(guildId);
       let tmp12 = null;
       if (roleId !== result) {
         let tmp13;
@@ -289,9 +289,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         obj5.channelId = channelId;
         obj5.roleId = roleId;
-        obj4.children = closure_8(tmp9(11223), obj5);
-        tmp16Result = closure_8(tmp3(6652).BottomSheet, obj4);
-        let tmp9Result = tmp9(11223);
+        obj4.children = closure_8(tmp9(11338), obj5);
+        tmp16Result = closure_8(tmp3(6829).BottomSheet, obj4);
+        let tmp9Result = tmp9(11338);
       }
       return tmp16Result;
     };

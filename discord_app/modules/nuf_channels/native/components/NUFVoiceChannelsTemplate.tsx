@@ -3,7 +3,7 @@ import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUti
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
 import NUFChannelsManagerDefault from "../NUFChannelsManager.tsx";
 import NUFTemplateDefault from "NUFTemplate.tsx";
-import _modDef13606 from "../../../../../_runtime/metro/13606__.js";
+import _modDef13428 from "../../../../../_runtime/metro/13428__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -13,7 +13,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFVoiceChannelsTemplate.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function NUFVoiceChannelsTemplate(channel) {
       const cResult = channel(576).c(5);
       channel = channel.channel;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj2 = {
           title: tmp4,
           description: tmp5,
-          imageSrc: _modDef13606,
+          imageSrc: _modDef13428,
           CTALabel: tmp8,
           onCTAPress() {
             const result = NUFChannelsManagerDefault.handleVoiceChannelsOnboard();
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp14 = jsx(NUFTemplateDefault, {
           title: tmp4,
           description: tmp5,
-          imageSrc: _modDef13606,
+          imageSrc: _modDef13428,
           CTALabel: tmp8,
           onCTAPress() {
             const result = NUFChannelsManagerDefault.handleVoiceChannelsOnboard();
@@ -67,14 +67,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp10;
     }
-  : (channel) => {
+  : function NUFVoiceChannelsTemplate(channel) {
       channel = channel.channel;
       let obj = { title: null, description: null, imageSrc: null, CTALabel: null, onCTAPress: null };
       const intl = channel(1126).intl;
       obj.title = intl.string(channel(1126).t.w5HAll);
       const intl2 = channel(1126).intl;
       obj.description = intl2.string(channel(1126).t.Ww4hhq);
-      obj.imageSrc = _modDef13606;
+      obj.imageSrc = _modDef13428;
       const intl3 = channel(1126).intl;
       obj.CTALabel = intl3.string(channel(1126).t.eIi3Om);
       obj.onCTAPress = function onCTAPress() {

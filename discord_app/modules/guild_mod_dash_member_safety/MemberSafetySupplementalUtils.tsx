@@ -248,7 +248,7 @@ export const getIntegrationLabel = function getIntegrationLabel(arg0) {
   }
 };
 export const useGetIntegrationIconString = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGetIntegrationIconString(arg0) {
       let str2 = c.c(4);
       obj2 = PlatformsDefault;
       let lightSVG = obj2.get(ConnectionsHooks.useLegacyPlatformType(arg0));
@@ -281,7 +281,7 @@ export const useGetIntegrationIconString = ReactCompilerGating.isReactCompilerEn
       }
       return tmp3;
     }
-  : (arg0) => {
+  : function useGetIntegrationIconString(arg0) {
       obj2 = ConnectionsHooks;
       value = PlatformsDefault.get(obj2.useLegacyPlatformType(arg0));
       let tmp5 = null;

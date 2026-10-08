@@ -8,7 +8,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("../discord_common/js/shared/hooks/useShallowArrayMemo.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (current) => {
+  ? function useShallowArrayMemo(current) {
       closure_0 = current;
       const cResult = c.c(2);
       if (cResult[0] !== current) {
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return useMemoWithEqualityFunctionDefault(tmp4, current, discord_common_shallowEqual.areArraysShallowEqual);
     }
-  : (current) => {
+  : function useShallowArrayMemo(current) {
       closure_0 = current;
       return useMemoWithEqualityFunctionDefault(
         () => closure_0,

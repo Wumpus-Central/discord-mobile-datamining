@@ -4,11 +4,11 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import native from "../../../../../design/void/native.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
-import ThemedGradientDefault from "../../../../client_themes/native/ThemedGradient.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import ClientThemesOverrides from "../../../../client_themes/native/ClientThemesOverrides.tsx";
 import useFastestListTableRowPlaceholderConfig from "../../../../fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx";
+import ThemedGradientDefault from "../../../../client_themes/native/ThemedGradient.tsx";
 import UserRowDefault from "UserRow.tsx";
 import GroupDMRowDefault from "GroupDMRow.tsx";
 import ChannelRowDefault from "ChannelRow.tsx";
@@ -19,11 +19,11 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const UsersFastListConstants = fn(10612);
+const UsersFastListConstants = fn(10209);
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   sectionHeader: { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING },
   stickyHeader: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
@@ -61,13 +61,13 @@ obj.badge = rect;
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Placeholder(arg0) {
       const cResult = c.c(11);
       ({ start, end } = arg0);
       const fastestListTableRowPlaceholderStyles =
         useFastestListTableRowPlaceholderConfig.useFastestListTableRowPlaceholderStyles();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function n() {
+        const fn = function o() {
           return { width: `${(10 + 80 * Math.random()) | 0}%` };
         };
         cResult[0] = fn;
@@ -117,7 +117,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp8;
       tmp7 = tmp8;
     }
-  : (arg0) => {
+  : function Placeholder(arg0) {
       ({ start, end } = arg0);
       const fastestListTableRowPlaceholderStyles =
         useFastestListTableRowPlaceholderConfig.useFastestListTableRowPlaceholderStyles();
@@ -137,7 +137,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PlaceholderSection() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp5 = React5(View, {});
@@ -148,7 +148,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => React5(View, {});
+  : function PlaceholderSection() {
+      return React5(View, {});
+    };
 const __initData = {
   code: "function UsersFastListTsx1(){const{scrollPosValue,stickyAt}=this.__closure;var _scrollPosValue;const scrollPos=(_scrollPosValue=scrollPosValue)===null||_scrollPosValue===void 0?void 0:_scrollPosValue.get();if(scrollPos==null||stickyAt==null){return false;}return scrollPos>=stickyAt;}",
 };
@@ -170,7 +172,7 @@ const __initData6 = {
 ReactCompilerGating = fn(558);
 let closure_19 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (stickyAt) => {
+    ? function UserSectionInner(stickyAt) {
         const cResult = c.c(40);
         ({ title, colorOverride, actionTitle, action, badge, scrollPosValue } = stickyAt);
         stickyAt = stickyAt.stickyAt;
@@ -195,7 +197,7 @@ let closure_19 = noop.memo(
             if (cResult[4] === clientThemesOverride) {
               let tmp10 = cResult[5];
             }
-            class E {
+            class V {
               constructor() {
                 obj = scrollPosValue;
                 value = undefined;
@@ -215,12 +217,12 @@ let closure_19 = noop.memo(
               }
             }
             const obj3 = { scrollPosValue, stickyAt };
-            E.__closure = obj3;
-            E.__workletHash = 15448160320615;
-            E.__initData = __initData;
-            const derivedValue = ReanimatedRexport.useDerivedValue(E);
+            V.__closure = obj3;
+            V.__workletHash = 15448160320615;
+            V.__initData = __initData;
+            const derivedValue = ReanimatedRexport.useDerivedValue(V);
             const tmpResult4 = ReanimatedRexport;
-            class O {
+            class E {
               constructor() {
                 backgroundColor = "transparent";
                 if (closure_3.get()) {
@@ -231,15 +233,15 @@ let closure_19 = noop.memo(
               }
             }
             const obj4 = { isSticky: derivedValue, styles: tmp4 };
-            O.__closure = obj4;
-            O.__workletHash = 11315917458152;
-            O.__initData = __initData2;
-            const animatedStyle = ReanimatedRexport.useAnimatedStyle(O);
+            E.__closure = obj4;
+            E.__workletHash = 11315917458152;
+            E.__initData = __initData2;
+            const animatedStyle = ReanimatedRexport.useAnimatedStyle(E);
             if (cResult[6] === animatedStyle) {
               if (cResult[7] === tmp4.sectionHeader) {
                 let tmp15 = cResult[8];
               }
-              class M {
+              class F {
                 constructor() {
                   opacity = 0;
                   if (closure_3.get()) {
@@ -249,14 +251,14 @@ let closure_19 = noop.memo(
                 }
               }
               const obj5 = { isSticky: derivedValue };
-              M.__closure = obj5;
-              M.__workletHash = 13270974904859;
-              M.__initData = __initData3;
-              const animatedStyle1 = ReanimatedRexport.useAnimatedStyle(M);
+              F.__closure = obj5;
+              F.__workletHash = 13270974904859;
+              F.__initData = __initData3;
+              const animatedStyle1 = ReanimatedRexport.useAnimatedStyle(F);
               if (null == title) {
                 if (null == actionTitle) {
                   if (cResult[9] !== tmp4.emptySection) {
-                    class M {
+                    class F {
                       constructor() {
                         opacity = 0;
                         if (closure_3.get()) {
@@ -317,7 +319,7 @@ let closure_19 = noop.memo(
                                         }
                                       }
                                     }
-                                    class M {
+                                    class F {
                                       constructor() {
                                         opacity = 0;
                                         if (closure_3.get()) {
@@ -327,7 +329,7 @@ let closure_19 = noop.memo(
                                       }
                                     }
                                     if (!disableStickySections) {
-                                      class M {
+                                      class F {
                                         constructor() {
                                           opacity = 0;
                                           if (closure_3.get()) {
@@ -340,7 +342,7 @@ let closure_19 = noop.memo(
                                       let tmp41 = !disableThemedGradient;
                                       if (!disableThemedGradient) {
                                         const obj6 = { style: null, children: null };
-                                        class M {
+                                        class F {
                                           constructor() {
                                             opacity = 0;
                                             if (closure_3.get()) {
@@ -366,7 +368,7 @@ let closure_19 = noop.memo(
                                     cResult[36] = disableThemedGradient;
                                     cResult[37] = tmp33;
                                     cResult[38] = tmp15;
-                                    class O {
+                                    class E {
                                       constructor() {
                                         backgroundColor = "transparent";
                                         if (closure_3.get()) {
@@ -380,7 +382,7 @@ let closure_19 = noop.memo(
                                     tmp36 = tmp38Result;
                                   }
                                 }
-                                class M {
+                                class F {
                                   constructor() {
                                     opacity = 0;
                                     if (closure_3.get()) {
@@ -394,7 +396,7 @@ let closure_19 = noop.memo(
                                 obj7.children = items1;
                                 const tmp35 = closure_1_8(View, obj7);
                                 cResult[30] = tmp10;
-                                class O {
+                                class E {
                                   constructor() {
                                     backgroundColor = "transparent";
                                     if (closure_3.get()) {
@@ -408,7 +410,7 @@ let closure_19 = noop.memo(
                                 cResult[33] = tmp35;
                                 tmp33 = tmp35;
                               }
-                              class M {
+                              class F {
                                 constructor() {
                                   opacity = 0;
                                   if (closure_3.get()) {
@@ -419,7 +421,7 @@ let closure_19 = noop.memo(
                               }
                               if (null != actionTitle) {
                                 const obj8 = { onPress: null, children: null };
-                                class M {
+                                class F {
                                   constructor() {
                                     opacity = 0;
                                     if (closure_3.get()) {
@@ -442,7 +444,7 @@ let closure_19 = noop.memo(
                               tmp30 = tmp31;
                             }
                           }
-                          class M {
+                          class F {
                             constructor() {
                               opacity = 0;
                               if (closure_3.get()) {
@@ -453,7 +455,7 @@ let closure_19 = noop.memo(
                           }
                           if (null != onTitlePress) {
                             const obj10 = { accessibilityRole: "button", style: null, onPress: null, children: null };
-                            class M {
+                            class F {
                               constructor() {
                                 opacity = 0;
                                 if (closure_3.get()) {
@@ -473,7 +475,7 @@ let closure_19 = noop.memo(
                           tmp27 = tmp28;
                         }
                       }
-                      class M {
+                      class F {
                         constructor() {
                           opacity = 0;
                           if (closure_3.get()) {
@@ -483,7 +485,7 @@ let closure_19 = noop.memo(
                         }
                       }
                       if (null != titleLeading) {
-                        class M {
+                        class F {
                           constructor() {
                             opacity = 0;
                             if (closure_3.get()) {
@@ -504,7 +506,7 @@ let closure_19 = noop.memo(
                       tmp22 = tmp23;
                     }
                   }
-                  class M {
+                  class F {
                     constructor() {
                       opacity = 0;
                       if (closure_3.get()) {
@@ -526,7 +528,7 @@ let closure_19 = noop.memo(
                   const tmp21 = closure_1_8(Text_Text.Text, obj11);
                   cResult[15] = tmp18;
                   cResult[16] = tmp5;
-                  class O {
+                  class E {
                     constructor() {
                       backgroundColor = "transparent";
                       if (closure_3.get()) {
@@ -541,7 +543,7 @@ let closure_19 = noop.memo(
                   tmp20 = tmp21;
                 }
               }
-              class O {
+              class E {
                 constructor() {
                   backgroundColor = "transparent";
                   if (closure_3.get()) {
@@ -574,7 +576,7 @@ let closure_19 = noop.memo(
         tmp10 = items5;
         const tmpResult = ClientThemesOverrides;
       }
-    : (stickyAt) => {
+    : function UserSectionInner(stickyAt) {
         ({ title, colorOverride } = stickyAt);
         ({ actionTitle, badge, scrollPosValue } = stickyAt);
         stickyAt = stickyAt.stickyAt;
@@ -728,137 +730,268 @@ let obj8 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx");
 
-export const UsersFastList = noop.forwardRef(
-  ReactCompilerGating.isReactCompilerEnabled()
-    ? (getSectionProps, arg1) => {
-        const cResult = getItemProps(disableThemedGradient[8]).c(32);
-        ({ sections, getItemProps } = getSectionProps);
-        getSectionProps = getSectionProps.getSectionProps;
-        ({
-          getItemSize,
-          keyExtractor,
-          insetStart,
-          insetEnd,
-          disableBottomSafeZone,
-          disableStickySections,
-          disableThemedGradient,
-        } = getSectionProps);
-        ({
-          disableBackgroundOverlay,
-          inActionSheet,
-          listHeaderSize,
-          onContentLengthChange,
-          onScroll,
-          onLayout,
-          renderListHeader,
-          listStyleOverride,
-        } = getSectionProps);
-        disableStickySections = tmp5;
-        const tmp6 = closure_10();
-        if (!tmp4) {
-          getSectionProps(disableThemedGradient[17])().bottom;
-        }
-        getSectionProps(disableThemedGradient[18])();
-        const tmp9 = getSectionProps(disableThemedGradient[19])();
-        closure_4 = tmp9;
-        getItemProps(disableThemedGradient[11]);
-        if (cResult[0] === (undefined !== disableStickySections && disableStickySections)) {
-          if (cResult[1] === disableThemedGradient) {
-            if (cResult[4] !== getItemProps) {
-              class X {
-                constructor(arg0, arg1) {
-                  element = getItemProps(getSectionProps, arg1);
-                  type = undefined;
-                  if (element != null) {
-                    type = element.type;
-                  }
-                  if ("user" === type) {
-                    tmp20 = jsx;
-                    tmp21 = closure_1;
-                    tmp22 = closure_2;
-                    obj1 = {};
-                    tmp24 = obj1;
-                    tmp23 = closure_1(closure_2[20]);
-                    merged = Object.assign(element.props);
-                    return jsx(tmp23, obj1);
+export const UsersFastList = ReactCompilerGating.isReactCompilerEnabled()
+  ? function UsersFastListInner(getSectionProps) {
+      const cResult = getItemProps(disableThemedGradient[8]).c(32);
+      ({ sections, getItemProps } = getSectionProps);
+      getSectionProps = getSectionProps.getSectionProps;
+      ({
+        getItemSize,
+        keyExtractor,
+        insetStart,
+        insetEnd,
+        disableBottomSafeZone,
+        disableStickySections,
+        disableThemedGradient,
+      } = getSectionProps);
+      ({
+        disableBackgroundOverlay,
+        inActionSheet,
+        listHeaderSize,
+        onContentLengthChange,
+        onScroll,
+        onLayout,
+        renderListHeader,
+        listStyleOverride,
+        ref,
+      } = getSectionProps);
+      disableStickySections = tmp5;
+      const tmp6 = closure_10();
+      if (!tmp4) {
+        getSectionProps(disableThemedGradient[17])().bottom;
+      }
+      getSectionProps(disableThemedGradient[18])();
+      const tmp9 = getSectionProps(disableThemedGradient[19])();
+      closure_4 = tmp9;
+      getItemProps(disableThemedGradient[11]);
+      if (cResult[0] === (undefined !== disableStickySections && disableStickySections)) {
+        if (cResult[1] === disableThemedGradient) {
+          if (cResult[4] !== getItemProps) {
+            class X {
+              constructor(arg0, arg1) {
+                element = getItemProps(getSectionProps, arg1);
+                type = undefined;
+                if (element != null) {
+                  type = element.type;
+                }
+                if ("user" === type) {
+                  tmp20 = jsx;
+                  tmp21 = closure_1;
+                  tmp22 = closure_2;
+                  obj1 = {};
+                  tmp24 = obj1;
+                  tmp23 = closure_1(closure_2[20]);
+                  merged = Object.assign(element.props);
+                  return jsx(tmp23, obj1);
+                } else {
+                  str3 = "placeholder";
+                  if ("placeholder" === type) {
+                    tmp16 = jsx;
+                    tmp17 = Placeholder;
+                    obj6 = {};
+                    tmp18 = obj6;
+                    merged1 = Object.assign(element.props);
+                    return jsx(Placeholder, obj6);
                   } else {
-                    str3 = "placeholder";
-                    if ("placeholder" === type) {
-                      tmp16 = jsx;
-                      tmp17 = f55374;
-                      obj6 = {};
-                      tmp18 = obj6;
-                      merged1 = Object.assign(element.props);
-                      return jsx(f55374, obj6);
+                    str4 = "gdm";
+                    if ("gdm" === type) {
+                      tmp10 = jsx;
+                      tmp11 = closure_1;
+                      tmp12 = closure_2;
+                      obj7 = {};
+                      tmp14 = obj7;
+                      tmp13 = closure_1(closure_2[21]);
+                      merged2 = Object.assign(element.props);
+                      return jsx(tmp13, obj7);
                     } else {
-                      str4 = "gdm";
-                      if ("gdm" === type) {
-                        tmp10 = jsx;
-                        tmp11 = closure_1;
-                        tmp12 = closure_2;
-                        obj7 = {};
-                        tmp14 = obj7;
-                        tmp13 = closure_1(closure_2[21]);
-                        merged2 = Object.assign(element.props);
-                        return jsx(tmp13, obj7);
+                      str = "channel";
+                      if ("channel" === type) {
+                        tmp4 = jsx;
+                        tmp5 = closure_1;
+                        tmp6 = closure_2;
+                        obj8 = {};
+                        tmp8 = obj8;
+                        tmp7 = closure_1(closure_2[22]);
+                        merged3 = Object.assign(element.props);
+                        return jsx(tmp7, obj8);
                       } else {
-                        str = "channel";
-                        if ("channel" === type) {
-                          tmp4 = jsx;
-                          tmp5 = closure_1;
-                          tmp6 = closure_2;
-                          obj8 = {};
-                          tmp8 = obj8;
-                          tmp7 = closure_1(closure_2[22]);
-                          merged3 = Object.assign(element.props);
-                          return jsx(tmp7, obj8);
+                        str2 = "custom";
+                        if ("custom" === type) {
+                          tmp2 = jsx;
+                          tmp3 = Fragment;
+                          obj = { children: null };
+                          obj.children = element.component();
+                          return jsx(Fragment, obj);
                         } else {
-                          str2 = "custom";
-                          if ("custom" === type) {
-                            tmp2 = jsx;
-                            tmp3 = Fragment;
-                            obj = { children: null };
-                            obj.children = element.component();
-                            return jsx(Fragment, obj);
-                          } else {
-                            return null;
-                          }
+                          return null;
                         }
                       }
                     }
                   }
                 }
               }
-              cResult[4] = getItemProps;
-              class K {
-                constructor(arg0) {
-                  element = getSectionProps(getSectionProps);
-                  type = undefined;
-                  if (element != null) {
-                    type = element.type;
-                  }
-                  if ("placeholder" === type) {
-                    tmp3 = closure_4;
-                    return closure_4;
-                  } else {
-                    str = "section";
-                    if ("section" === type) {
-                      num2 = 0;
-                      if (element.props.hideTitle) {
-                        return 0;
-                      } else {
-                        tmp2 = null == element.props.title ? closure_6 : closure_4;
-                      }
-                    } else {
-                      num = 0;
+            }
+            cResult[4] = getItemProps;
+            class K {
+              constructor(arg0) {
+                element = getSectionProps(getSectionProps);
+                type = undefined;
+                if (element != null) {
+                  type = element.type;
+                }
+                if ("placeholder" === type) {
+                  tmp3 = closure_4;
+                  return closure_4;
+                } else {
+                  str = "section";
+                  if ("section" === type) {
+                    num2 = 0;
+                    if (element.props.hideTitle) {
                       return 0;
+                    } else {
+                      tmp2 = null == element.props.title ? closure_6 : closure_4;
+                    }
+                  } else {
+                    num = 0;
+                    return 0;
+                  }
+                }
+                return;
+              }
+            }
+            cResult[5] = X;
+          } else {
+            class X {
+              constructor(arg0, arg1) {
+                element = getItemProps(getSectionProps, arg1);
+                type = undefined;
+                if (element != null) {
+                  type = element.type;
+                }
+                if ("user" === type) {
+                  tmp20 = jsx;
+                  tmp21 = closure_1;
+                  tmp22 = closure_2;
+                  obj1 = {};
+                  tmp24 = obj1;
+                  tmp23 = closure_1(closure_2[20]);
+                  merged = Object.assign(element.props);
+                  return jsx(tmp23, obj1);
+                } else {
+                  str3 = "placeholder";
+                  if ("placeholder" === type) {
+                    tmp16 = jsx;
+                    tmp17 = Placeholder;
+                    obj6 = {};
+                    tmp18 = obj6;
+                    merged1 = Object.assign(element.props);
+                    return jsx(Placeholder, obj6);
+                  } else {
+                    str4 = "gdm";
+                    if ("gdm" === type) {
+                      tmp10 = jsx;
+                      tmp11 = closure_1;
+                      tmp12 = closure_2;
+                      obj7 = {};
+                      tmp14 = obj7;
+                      tmp13 = closure_1(closure_2[21]);
+                      merged2 = Object.assign(element.props);
+                      return jsx(tmp13, obj7);
+                    } else {
+                      str = "channel";
+                      if ("channel" === type) {
+                        tmp4 = jsx;
+                        tmp5 = closure_1;
+                        tmp6 = closure_2;
+                        obj8 = {};
+                        tmp8 = obj8;
+                        tmp7 = closure_1(closure_2[22]);
+                        merged3 = Object.assign(element.props);
+                        return jsx(tmp7, obj8);
+                      } else {
+                        str2 = "custom";
+                        if ("custom" === type) {
+                          tmp2 = jsx;
+                          tmp3 = Fragment;
+                          obj = { children: null };
+                          obj.children = element.component();
+                          return jsx(Fragment, obj);
+                        } else {
+                          return null;
+                        }
+                      }
                     }
                   }
-                  return;
                 }
               }
-              cResult[5] = X;
-            } else {
+            }
+          }
+          if (cResult[6] === getSectionProps) {
+            class X {
+              constructor(arg0, arg1) {
+                element = getItemProps(getSectionProps, arg1);
+                type = undefined;
+                if (element != null) {
+                  type = element.type;
+                }
+                if ("user" === type) {
+                  tmp20 = jsx;
+                  tmp21 = closure_1;
+                  tmp22 = closure_2;
+                  obj1 = {};
+                  tmp24 = obj1;
+                  tmp23 = closure_1(closure_2[20]);
+                  merged = Object.assign(element.props);
+                  return jsx(tmp23, obj1);
+                } else {
+                  str3 = "placeholder";
+                  if ("placeholder" === type) {
+                    tmp16 = jsx;
+                    tmp17 = Placeholder;
+                    obj6 = {};
+                    tmp18 = obj6;
+                    merged1 = Object.assign(element.props);
+                    return jsx(Placeholder, obj6);
+                  } else {
+                    str4 = "gdm";
+                    if ("gdm" === type) {
+                      tmp10 = jsx;
+                      tmp11 = closure_1;
+                      tmp12 = closure_2;
+                      obj7 = {};
+                      tmp14 = obj7;
+                      tmp13 = closure_1(closure_2[21]);
+                      merged2 = Object.assign(element.props);
+                      return jsx(tmp13, obj7);
+                    } else {
+                      str = "channel";
+                      if ("channel" === type) {
+                        tmp4 = jsx;
+                        tmp5 = closure_1;
+                        tmp6 = closure_2;
+                        obj8 = {};
+                        tmp8 = obj8;
+                        tmp7 = closure_1(closure_2[22]);
+                        merged3 = Object.assign(element.props);
+                        return jsx(tmp7, obj8);
+                      } else {
+                        str2 = "custom";
+                        if ("custom" === type) {
+                          tmp2 = jsx;
+                          tmp3 = Fragment;
+                          obj = { children: null };
+                          obj.children = element.component();
+                          return jsx(Fragment, obj);
+                        } else {
+                          return null;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            if (disableBackgroundOverlay) {
               class X {
                 constructor(arg0, arg1) {
                   element = getItemProps(getSectionProps, arg1);
@@ -879,11 +1012,11 @@ export const UsersFastList = noop.forwardRef(
                     str3 = "placeholder";
                     if ("placeholder" === type) {
                       tmp16 = jsx;
-                      tmp17 = f55374;
+                      tmp17 = Placeholder;
                       obj6 = {};
                       tmp18 = obj6;
                       merged1 = Object.assign(element.props);
-                      return jsx(f55374, obj6);
+                      return jsx(Placeholder, obj6);
                     } else {
                       str4 = "gdm";
                       if ("gdm" === type) {
@@ -924,7 +1057,7 @@ export const UsersFastList = noop.forwardRef(
                 }
               }
             }
-            if (cResult[6] === getSectionProps) {
+            if (cResult[9] === listStyleOverride) {
               class X {
                 constructor(arg0, arg1) {
                   element = getItemProps(getSectionProps, arg1);
@@ -945,11 +1078,11 @@ export const UsersFastList = noop.forwardRef(
                     str3 = "placeholder";
                     if ("placeholder" === type) {
                       tmp16 = jsx;
-                      tmp17 = f55374;
+                      tmp17 = Placeholder;
                       obj6 = {};
                       tmp18 = obj6;
                       merged1 = Object.assign(element.props);
-                      return jsx(f55374, obj6);
+                      return jsx(Placeholder, obj6);
                     } else {
                       str4 = "gdm";
                       if ("gdm" === type) {
@@ -989,172 +1122,6 @@ export const UsersFastList = noop.forwardRef(
                   }
                 }
               }
-              if (disableBackgroundOverlay) {
-                class X {
-                  constructor(arg0, arg1) {
-                    element = getItemProps(getSectionProps, arg1);
-                    type = undefined;
-                    if (element != null) {
-                      type = element.type;
-                    }
-                    if ("user" === type) {
-                      tmp20 = jsx;
-                      tmp21 = closure_1;
-                      tmp22 = closure_2;
-                      obj1 = {};
-                      tmp24 = obj1;
-                      tmp23 = closure_1(closure_2[20]);
-                      merged = Object.assign(element.props);
-                      return jsx(tmp23, obj1);
-                    } else {
-                      str3 = "placeholder";
-                      if ("placeholder" === type) {
-                        tmp16 = jsx;
-                        tmp17 = f55374;
-                        obj6 = {};
-                        tmp18 = obj6;
-                        merged1 = Object.assign(element.props);
-                        return jsx(f55374, obj6);
-                      } else {
-                        str4 = "gdm";
-                        if ("gdm" === type) {
-                          tmp10 = jsx;
-                          tmp11 = closure_1;
-                          tmp12 = closure_2;
-                          obj7 = {};
-                          tmp14 = obj7;
-                          tmp13 = closure_1(closure_2[21]);
-                          merged2 = Object.assign(element.props);
-                          return jsx(tmp13, obj7);
-                        } else {
-                          str = "channel";
-                          if ("channel" === type) {
-                            tmp4 = jsx;
-                            tmp5 = closure_1;
-                            tmp6 = closure_2;
-                            obj8 = {};
-                            tmp8 = obj8;
-                            tmp7 = closure_1(closure_2[22]);
-                            merged3 = Object.assign(element.props);
-                            return jsx(tmp7, obj8);
-                          } else {
-                            str2 = "custom";
-                            if ("custom" === type) {
-                              tmp2 = jsx;
-                              tmp3 = Fragment;
-                              obj = { children: null };
-                              obj.children = element.component();
-                              return jsx(Fragment, obj);
-                            } else {
-                              return null;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              if (cResult[9] === listStyleOverride) {
-                class X {
-                  constructor(arg0, arg1) {
-                    element = getItemProps(getSectionProps, arg1);
-                    type = undefined;
-                    if (element != null) {
-                      type = element.type;
-                    }
-                    if ("user" === type) {
-                      tmp20 = jsx;
-                      tmp21 = closure_1;
-                      tmp22 = closure_2;
-                      obj1 = {};
-                      tmp24 = obj1;
-                      tmp23 = closure_1(closure_2[20]);
-                      merged = Object.assign(element.props);
-                      return jsx(tmp23, obj1);
-                    } else {
-                      str3 = "placeholder";
-                      if ("placeholder" === type) {
-                        tmp16 = jsx;
-                        tmp17 = f55374;
-                        obj6 = {};
-                        tmp18 = obj6;
-                        merged1 = Object.assign(element.props);
-                        return jsx(f55374, obj6);
-                      } else {
-                        str4 = "gdm";
-                        if ("gdm" === type) {
-                          tmp10 = jsx;
-                          tmp11 = closure_1;
-                          tmp12 = closure_2;
-                          obj7 = {};
-                          tmp14 = obj7;
-                          tmp13 = closure_1(closure_2[21]);
-                          merged2 = Object.assign(element.props);
-                          return jsx(tmp13, obj7);
-                        } else {
-                          str = "channel";
-                          if ("channel" === type) {
-                            tmp4 = jsx;
-                            tmp5 = closure_1;
-                            tmp6 = closure_2;
-                            obj8 = {};
-                            tmp8 = obj8;
-                            tmp7 = closure_1(closure_2[22]);
-                            merged3 = Object.assign(element.props);
-                            return jsx(tmp7, obj8);
-                          } else {
-                            str2 = "custom";
-                            if ("custom" === type) {
-                              tmp2 = jsx;
-                              tmp3 = Fragment;
-                              obj = { children: null };
-                              obj.children = element.component();
-                              return jsx(Fragment, obj);
-                            } else {
-                              return null;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              class K {
-                constructor(arg0) {
-                  element = getSectionProps(getSectionProps);
-                  type = undefined;
-                  if (element != null) {
-                    type = element.type;
-                  }
-                  if ("placeholder" === type) {
-                    tmp3 = closure_4;
-                    return closure_4;
-                  } else {
-                    str = "section";
-                    if ("section" === type) {
-                      num2 = 0;
-                      if (element.props.hideTitle) {
-                        return 0;
-                      } else {
-                        tmp2 = null == element.props.title ? closure_6 : closure_4;
-                      }
-                    } else {
-                      num = 0;
-                      return 0;
-                    }
-                  }
-                  return;
-                }
-              }
-              tmp15[0] = tmp6.list;
-              tmp15[1] = disableBackgroundOverlay;
-              tmp15[2] = listStyleOverride;
-              cResult[9] = listStyleOverride;
-              cResult[10] = tmp6.list;
-              cResult[11] = disableBackgroundOverlay;
-              cResult[12] = tmp15;
             }
             class K {
               constructor(arg0) {
@@ -1183,195 +1150,230 @@ export const UsersFastList = noop.forwardRef(
                 return;
               }
             }
-            cResult[6] = getSectionProps;
-            cResult[7] = tmp9;
-            cResult[8] = K;
+            tmp15[0] = tmp6.list;
+            tmp15[1] = disableBackgroundOverlay;
+            tmp15[2] = listStyleOverride;
+            cResult[9] = listStyleOverride;
+            cResult[10] = tmp6.list;
+            cResult[11] = disableBackgroundOverlay;
+            cResult[12] = tmp15;
           }
-        }
-        const fn = function l(arg0, arg1, scrollPosValue, stickyAt) {
-          const element = getSectionProps(arg0);
-          let type;
-          if (element != null) {
-            type = element.type;
-          }
-          if ("placeholder" === type) {
-            return React5(closure_12, {});
-          } else if ("section" === type) {
-            const obj = {};
-            const merged = Object.assign(element.props);
-            obj.disableStickySections = disableStickySections;
-            obj.disableThemedGradient = disableThemedGradient;
-            obj.scrollPosValue = scrollPosValue;
-            obj.stickyAt = stickyAt;
-            return React5(closure_19, obj);
-          } else {
-            return null;
-          }
-        };
-        cResult[0] = undefined !== disableStickySections && disableStickySections;
-        cResult[1] = disableThemedGradient;
-        cResult[2] = getSectionProps;
-        cResult[3] = fn;
-        let obj = getItemProps(disableThemedGradient[8]);
-        tmp4 = undefined !== disableBottomSafeZone && disableBottomSafeZone;
-      }
-    : (getItemProps, ref) => {
-        getItemProps = getItemProps.getItemProps;
-        const getSectionProps = getItemProps.getSectionProps;
-        ({ getItemSize, insetEnd } = getItemProps);
-        ({ sections, keyExtractor, insetStart } = getItemProps);
-        if (insetEnd === undefined) {
-          insetEnd = 0;
-        }
-        let flag = getItemProps.disableBottomSafeZone;
-        if (flag === undefined) {
-          flag = false;
-        }
-        let flag2 = getItemProps.disableStickySections;
-        if (flag2 === undefined) {
-          flag2 = false;
-        }
-        const disableThemedGradient = getItemProps.disableThemedGradient;
-        const disableBackgroundOverlay = getItemProps.disableBackgroundOverlay;
-        const listStyleOverride = getItemProps.listStyleOverride;
-        closure_7 = undefined;
-        let clientThemesOverride;
-        ({ inActionSheet, listHeaderSize, onContentLengthChange, onScroll, onLayout, renderListHeader } = getItemProps);
-        let tmp = closure_10();
-        const list = tmp;
-        let num = 0;
-        if (!flag) {
-          num = getSectionProps(flag2[17])().bottom;
-        }
-        const sum = insetEnd + num;
-        const tmp6 = getSectionProps(flag2[19])();
-        closure_7 = tmp6;
-        const tmp5 = getSectionProps(flag2[18])();
-        clientThemesOverride = getItemProps(flag2[11]).useClientThemesOverride();
-        let items = [getSectionProps, flag2, disableThemedGradient];
-        const items1 = [getItemProps];
-        const callback = disableBackgroundOverlay.useCallback((arg0, arg1, scrollPosValue, stickyAt) => {
-          const element = getSectionProps(arg0);
-          let type;
-          if (element != null) {
-            type = element.type;
-          }
-          if ("placeholder" === type) {
-            return React5(closure_12, {});
-          } else if ("section" === type) {
-            const obj = {};
-            const merged = Object.assign(element.props);
-            obj.disableStickySections = flag2;
-            obj.disableThemedGradient = disableThemedGradient;
-            obj.scrollPosValue = scrollPosValue;
-            obj.stickyAt = stickyAt;
-            return React5(closure_19, obj);
-          } else {
-            return null;
-          }
-        }, items);
-        const items2 = [getSectionProps, tmp6];
-        const callback1 = disableBackgroundOverlay.useCallback((disableThemedGradient, arg1) => {
-          const element = getItemProps(disableThemedGradient, arg1);
-          let type;
-          if (element != null) {
-            type = element.type;
-          }
-          if ("user" === type) {
-            const obj2 = {};
-            const merged = Object.assign(element.props);
-            return React5(UserRowDefault, obj2);
-          } else if ("placeholder" === type) {
-            const obj3 = {};
-            const merged1 = Object.assign(element.props);
-            return React5(closure_11, obj3);
-          } else if ("gdm" === type) {
-            const obj4 = {};
-            const merged2 = Object.assign(element.props);
-            return React5(GroupDMRowDefault, obj4);
-          } else if ("channel" === type) {
-            const obj5 = {};
-            const merged3 = Object.assign(element.props);
-            return React5(ChannelRowDefault, obj5);
-          } else if ("custom" === type) {
-            const obj = { children: element.component() };
-            return React5(options, obj);
-          } else {
-            return null;
-          }
-        }, items1);
-        const items3 = [tmp.list, disableBackgroundOverlay, clientThemesOverride, listStyleOverride];
-        const callback2 = disableBackgroundOverlay.useCallback((arg0) => {
-          const element = getSectionProps(arg0);
-          let type;
-          if (element != null) {
-            type = element.type;
-          }
-          if ("placeholder" === type) {
-            return closure_7;
-          } else if ("section" === type) {
-            if (element.props.hideTitle) {
-              return 0;
+          class K {
+            constructor(arg0) {
+              element = getSectionProps(getSectionProps);
+              type = undefined;
+              if (element != null) {
+                type = element.type;
+              }
+              if ("placeholder" === type) {
+                tmp3 = closure_4;
+                return closure_4;
+              } else {
+                str = "section";
+                if ("section" === type) {
+                  num2 = 0;
+                  if (element.props.hideTitle) {
+                    return 0;
+                  } else {
+                    tmp2 = null == element.props.title ? closure_6 : closure_4;
+                  }
+                } else {
+                  num = 0;
+                  return 0;
+                }
+              }
+              return;
             }
-          } else {
+          }
+          cResult[6] = getSectionProps;
+          cResult[7] = tmp9;
+          cResult[8] = K;
+        }
+      }
+      const fn = function s(arg0, arg1, scrollPosValue, stickyAt) {
+        const element = getSectionProps(arg0);
+        let type;
+        if (element != null) {
+          type = element.type;
+        }
+        if ("placeholder" === type) {
+          return React5(closure_12, {});
+        } else if ("section" === type) {
+          const obj = {};
+          const merged = Object.assign(element.props);
+          obj.disableStickySections = disableStickySections;
+          obj.disableThemedGradient = disableThemedGradient;
+          obj.scrollPosValue = scrollPosValue;
+          obj.stickyAt = stickyAt;
+          return React5(closure_19, obj);
+        } else {
+          return null;
+        }
+      };
+      cResult[0] = undefined !== disableStickySections && disableStickySections;
+      cResult[1] = disableThemedGradient;
+      cResult[2] = getSectionProps;
+      cResult[3] = fn;
+      let obj = getItemProps(disableThemedGradient[8]);
+      tmp4 = undefined !== disableBottomSafeZone && disableBottomSafeZone;
+    }
+  : function UsersFastListInner(getItemProps) {
+      getItemProps = getItemProps.getItemProps;
+      const getSectionProps = getItemProps.getSectionProps;
+      ({ getItemSize, insetEnd } = getItemProps);
+      ({ sections, keyExtractor, insetStart } = getItemProps);
+      if (insetEnd === undefined) {
+        insetEnd = 0;
+      }
+      let flag = getItemProps.disableBottomSafeZone;
+      if (flag === undefined) {
+        flag = false;
+      }
+      let flag2 = getItemProps.disableStickySections;
+      if (flag2 === undefined) {
+        flag2 = false;
+      }
+      const disableThemedGradient = getItemProps.disableThemedGradient;
+      const disableBackgroundOverlay = getItemProps.disableBackgroundOverlay;
+      const listStyleOverride = getItemProps.listStyleOverride;
+      closure_7 = undefined;
+      let clientThemesOverride;
+      ({ inActionSheet, listHeaderSize, onContentLengthChange, onScroll, onLayout, renderListHeader, ref } =
+        getItemProps);
+      let tmp = closure_10();
+      const list = tmp;
+      let num = 0;
+      if (!flag) {
+        num = getSectionProps(flag2[17])().bottom;
+      }
+      const sum = insetEnd + num;
+      const tmp6 = getSectionProps(flag2[19])();
+      closure_7 = tmp6;
+      const tmp5 = getSectionProps(flag2[18])();
+      clientThemesOverride = getItemProps(flag2[11]).useClientThemesOverride();
+      let items = [getSectionProps, flag2, disableThemedGradient];
+      const items1 = [getItemProps];
+      const callback = disableBackgroundOverlay.useCallback((arg0, arg1, scrollPosValue, stickyAt) => {
+        const element = getSectionProps(arg0);
+        let type;
+        if (element != null) {
+          type = element.type;
+        }
+        if ("placeholder" === type) {
+          return React5(closure_12, {});
+        } else if ("section" === type) {
+          const obj = {};
+          const merged = Object.assign(element.props);
+          obj.disableStickySections = flag2;
+          obj.disableThemedGradient = disableThemedGradient;
+          obj.scrollPosValue = scrollPosValue;
+          obj.stickyAt = stickyAt;
+          return React5(closure_19, obj);
+        } else {
+          return null;
+        }
+      }, items);
+      const items2 = [getSectionProps, tmp6];
+      const callback1 = disableBackgroundOverlay.useCallback((arg0, arg1) => {
+        const element = getItemProps(arg0, arg1);
+        let type;
+        if (element != null) {
+          type = element.type;
+        }
+        if ("user" === type) {
+          const obj2 = {};
+          const merged = Object.assign(element.props);
+          return React5(UserRowDefault, obj2);
+        } else if ("placeholder" === type) {
+          const obj3 = {};
+          const merged1 = Object.assign(element.props);
+          return React5(closure_11, obj3);
+        } else if ("gdm" === type) {
+          const obj4 = {};
+          const merged2 = Object.assign(element.props);
+          return React5(GroupDMRowDefault, obj4);
+        } else if ("channel" === type) {
+          const obj5 = {};
+          const merged3 = Object.assign(element.props);
+          return React5(ChannelRowDefault, obj5);
+        } else if ("custom" === type) {
+          const obj = { children: element.component() };
+          return React5(options, obj);
+        } else {
+          return null;
+        }
+      }, items1);
+      const items3 = [tmp.list, disableBackgroundOverlay, clientThemesOverride, listStyleOverride];
+      const callback2 = disableBackgroundOverlay.useCallback((arg0) => {
+        const element = getSectionProps(arg0);
+        let type;
+        if (element != null) {
+          type = element.type;
+        }
+        if ("placeholder" === type) {
+          return closure_7;
+        } else if ("section" === type) {
+          if (element.props.hideTitle) {
             return 0;
           }
-        }, items2);
-        const memo = disableBackgroundOverlay.useMemo(() => {
-          const items = [list.list, ,];
-          let tmp = disableBackgroundOverlay;
-          if (disableBackgroundOverlay) {
-            tmp = clientThemesOverride;
-          }
-          items[1] = tmp;
-          items[2] = listStyleOverride;
-          return items;
-        }, items3);
-        let obj = getItemProps(flag2[11]);
-        let obj2 = {
-          sections,
-          sectionHeaderIsSticky: !flag2,
-          sectionHeaderSize: callback2,
-          estimatedListSize: "windowSize",
-          keyExtractor,
-          ref,
-          style: memo,
-          itemSize: null,
-          renderItem: null,
-          renderListHeader: null,
-          renderSectionHeader: null,
-          insetStart: null,
-          insetEnd: null,
-          keyboardDismissMode: "on-drag",
-          keyboardShouldPersistTaps: "always",
-          inActionSheet: null,
-          onContentLengthChange: null,
-          onScroll: null,
-          onLayout: null,
-          placeholderConfig: null,
-          listId: "users-fast-list",
-          listHeaderSize: null,
-          listHeaderAlwaysMounted: true,
-          scrollReporting: "callbacks",
-          wrapChildren: true,
-        };
-        const tmp12 = getSectionProps(flag2[9])();
-        const tmp13 = closure_7;
-        if (getItemSize == null) {
-          getItemSize = tmp5;
+        } else {
+          return 0;
         }
-        obj2.itemSize = getItemSize;
-        obj2.renderItem = callback1;
-        obj2.renderListHeader = renderListHeader;
-        obj2.renderSectionHeader = callback;
-        obj2.insetStart = insetStart;
-        obj2.insetEnd = sum;
-        obj2.inActionSheet = inActionSheet;
-        obj2.onContentLengthChange = onContentLengthChange;
-        obj2.onScroll = onScroll;
-        obj2.onLayout = onLayout;
-        obj2.placeholderConfig = tmp12;
-        obj2.listHeaderSize = listHeaderSize;
-        return tmp13(getSectionProps(flag2[23]), obj2);
-      },
-);
+      }, items2);
+      const memo = disableBackgroundOverlay.useMemo(() => {
+        const items = [list.list, ,];
+        let tmp = disableBackgroundOverlay;
+        if (disableBackgroundOverlay) {
+          tmp = clientThemesOverride;
+        }
+        items[1] = tmp;
+        items[2] = listStyleOverride;
+        return items;
+      }, items3);
+      let obj = getItemProps(flag2[11]);
+      let obj2 = {
+        sections,
+        sectionHeaderIsSticky: !flag2,
+        sectionHeaderSize: callback2,
+        estimatedListSize: "windowSize",
+        keyExtractor,
+        ref,
+        style: memo,
+        itemSize: null,
+        renderItem: null,
+        renderListHeader: null,
+        renderSectionHeader: null,
+        insetStart: null,
+        insetEnd: null,
+        keyboardDismissMode: "on-drag",
+        keyboardShouldPersistTaps: "always",
+        inActionSheet: null,
+        onContentLengthChange: null,
+        onScroll: null,
+        onLayout: null,
+        placeholderConfig: null,
+        listId: "users-fast-list",
+        listHeaderSize: null,
+        listHeaderAlwaysMounted: true,
+        scrollReporting: "callbacks",
+        wrapChildren: true,
+      };
+      const tmp12 = getSectionProps(flag2[9])();
+      const tmp13 = closure_7;
+      if (getItemSize == null) {
+        getItemSize = tmp5;
+      }
+      obj2.itemSize = getItemSize;
+      obj2.renderItem = callback1;
+      obj2.renderListHeader = renderListHeader;
+      obj2.renderSectionHeader = callback;
+      obj2.insetStart = insetStart;
+      obj2.insetEnd = sum;
+      obj2.inActionSheet = inActionSheet;
+      obj2.onContentLengthChange = onContentLengthChange;
+      obj2.onScroll = onScroll;
+      obj2.onLayout = onLayout;
+      obj2.placeholderConfig = tmp12;
+      obj2.listHeaderSize = listHeaderSize;
+      return tmp13(getSectionProps(flag2[23]), obj2);
+    };

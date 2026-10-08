@@ -11,7 +11,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 ({ AnalyticEvents: c3, AnalyticsSections: closure_4 } = Constants);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSwipeToReplySettingValue() {
       const SwipeRightToLeftModeSetting = UserSettings.SwipeRightToLeftModeSetting;
       let SWIPE_RIGHT_TO_LEFT_REPLY = SwipeRightToLeftModeSetting.useSetting();
       if (SWIPE_RIGHT_TO_LEFT_REPLY === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_UNSET) {
@@ -19,7 +19,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return SWIPE_RIGHT_TO_LEFT_REPLY;
     }
-  : () => {
+  : function useSwipeToReplySettingValue() {
       const SwipeRightToLeftModeSetting = UserSettings.SwipeRightToLeftModeSetting;
       let SWIPE_RIGHT_TO_LEFT_REPLY = SwipeRightToLeftModeSetting.useSetting();
       if (SWIPE_RIGHT_TO_LEFT_REPLY === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_UNSET) {

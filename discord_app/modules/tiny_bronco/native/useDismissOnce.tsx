@@ -4,19 +4,19 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tiny_bronco/native/useDismissOnce.tsx");
 
 export const useDismissOnce = ReactCompilerGating.isReactCompilerEnabled()
-  ? (current) => {
+  ? function useDismissOnce(current) {
       _require = current;
       const cResult = require("c").c(6);
       dependencyMap = noop.useRef(false);
       noop = noop.useRef(current);
       if (cResult[0] !== current) {
-        const fn = function s() {
+        const fn = function c() {
           closure_2.current = current;
         };
         const items = [current];
@@ -64,7 +64,7 @@ export const useDismissOnce = ReactCompilerGating.isReactCompilerEnabled()
       const effect1 = obj2.useEffect(S, tmp7);
       return tmp5;
     }
-  : (current) => {
+  : function useDismissOnce(current) {
       noop.useRef(false);
       noop = noop.useRef(current);
       const items = [current];

@@ -6,8 +6,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/usePlaceholderSize.tsx");
 
 export const usePlaceholderWidth = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => Math.random() * (arg1 - arg0) + arg0
-  : (arg0, arg1) => {
+  ? function usePlaceholderWidth(arg0, arg1) {
+      return Math.random() * (arg1 - arg0) + arg0;
+    }
+  : function usePlaceholderWidth(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
       const items = [arg0, arg1];

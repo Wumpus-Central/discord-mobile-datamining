@@ -147,7 +147,7 @@ function resolveChannelScreens(state, isChatLockedOpen) {
   return tmp8;
 }
 const ME = fn(1085).ME;
-const isStaticChannelRoute = fn(2058).isStaticChannelRoute;
+const isStaticChannelRoute = fn(2070).isStaticChannelRoute;
 const ChannelScreenType = {
   DEFAULT: 0,
   [0]: "DEFAULT",
@@ -161,7 +161,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/useChannelScreensFromNavigation.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useChannelScreensFromNavigation(arg0) {
       const _require = arg0;
       const cResult = require("c").c(11);
       const tmp2 = useChatLayoutDefault();
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const effect = noop.useEffect(tmp8, tmp9);
           if (cResult[8] !== arg0) {
-            class A {
+            class S {
               constructor() {
                 handleStateChange = function handleStateChange(data) {
                   closure_1_3(
@@ -245,11 +245,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             let items = [arg0, tmp7];
             cResult[8] = arg0;
-            cResult[9] = A;
+            cResult[9] = S;
             cResult[10] = items;
             let tmp12 = items;
           } else {
-            class A {
+            class S {
               constructor() {
                 handleStateChange = function handleStateChange(data) {
                   closure_1_3(
@@ -265,7 +265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             tmp12 = cResult[10];
           }
-          const effect1 = noop.useEffect(A, tmp12);
+          const effect1 = noop.useEffect(S, tmp12);
           return tmp5[0];
         }
         class R {
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = fn;
       let obj = require("c");
     }
-  : (arg0) => {
+  : function useChannelScreensFromNavigation(arg0) {
       closure_0 = arg0;
       const tmp = useChatLayoutDefault();
       importDefault = tmp;
@@ -387,7 +387,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let items1 = [arg0, callback];
       const effect1 = noop.useEffect(() => {
         function handleStateChange(data) {
-          callback(resolveChannelScreens(data.data.state, handleStateChange(4745).getChatLayout()), data.data.state);
+          callback(resolveChannelScreens(data.data.state, handleStateChange(4939).getChatLayout()), data.data.state);
         }
         handleStateChange.addListener("state", handleStateChange);
         return () => {

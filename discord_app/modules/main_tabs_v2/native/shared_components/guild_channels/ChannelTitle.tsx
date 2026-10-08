@@ -6,9 +6,9 @@ import ChannelListLayout from "layouts/ChannelListLayout.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyleProperties({
   muted: nativeDefault.colors.TEXT_MUTED,
   normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT,
@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function ChannelTitle(arg0) {
         const cResult = c.c(8);
         ({ title, unread, layout, muted, resolvedUnreadSetting, connected } = arg0);
         if (cResult[0] !== layout) {
@@ -93,7 +93,7 @@ export default noop.memo(
           children: title,
         };
       }
-    : (unread) => {
+    : function ChannelTitle(unread) {
         ({ title, muted } = unread);
         unread = unread.unread;
         const resolvedUnreadSetting = unread.resolvedUnreadSetting;

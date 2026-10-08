@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/utils/getGuildPowerupsBoostInfoText.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2553 from "../GuildPowerups.messages.js";
+import _modDef2597 from "../GuildPowerups.messages.js";
 import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -11,13 +11,13 @@ export const getGuildPowerupsBoostInfoText = function getGuildPowerupsBoostInfoT
   if (BoostInfoType.AVAILABLE === type) {
     const intl3 = util.intl;
     const obj2 = { boostCount: count };
-    return intl3.formatToPlainString(_modDef2553.BdRXZA, obj2);
+    return intl3.formatToPlainString(_modDef2597.BdRXZA, obj2);
   } else if (BoostInfoType.SPENT === type) {
     const intl2 = util.intl;
     const obj = { boostCount: count };
-    return intl2.formatToPlainString(_modDef2553.xvgIVG, obj);
+    return intl2.formatToPlainString(_modDef2597.xvgIVG, obj);
   } else if (BoostInfoType.TOTAL === type) {
     const intl = util.intl;
-    return intl.string(_modDef2553["/F7Z2y"]);
+    return intl.string(_modDef2597["/F7Z2y"]);
   }
 };

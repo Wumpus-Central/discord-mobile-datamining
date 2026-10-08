@@ -12,19 +12,19 @@ import AuthorizedAppsStore from "../../../oauth2/AuthorizedAppsStore.tsx";
 
 const require = globalThis.__r;
 
-const CircleInformationIcon = GlobeEarthIcon(4818);
-const GlobeEarthIcon2 = GlobeEarthIcon(8584);
-const EmbedIcon = GlobeEarthIcon(8983);
+const CircleInformationIcon = GlobeEarthIcon(5012);
+const GlobeEarthIcon2 = GlobeEarthIcon(9068);
+const EmbedIcon = GlobeEarthIcon(12887);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
-const FetchState = fn(6609).FetchState;
+const FetchState = fn(6786).FetchState;
 const Constants = fn(1085);
 ({ AnalyticsPages: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   spinner: { padding: 16 },
   emptyText: { marginTop: 24 },
@@ -38,7 +38,7 @@ fn(558);
 let obj3 = { paddingHorizontal: 16, paddingTop: nativeDefault.space.PX_24 };
 const ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DisclosureIcon(arg0) {
       let GlobeEarthIcon = require;
       let tmp = dependencyMap;
       const cResult = c.c(6);
@@ -75,7 +75,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp3;
       }
     }
-  : (disclosure) => {
+  : function DisclosureIcon(disclosure) {
       disclosure = disclosure.disclosure;
       const style = disclosure.style;
       const items = [disclosure, style];
@@ -96,7 +96,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedApps.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsAuthedApps() {
       const cResult = require("c").c(37);
       const tmp4 = closure_15();
       _require = tmp4;
@@ -121,39 +121,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = require("initialize");
       navigation = require("useNavigation").useNavigation();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        class A {
-          constructor() {
-            obj = appAuthTokens(closure_2[16]);
-            return obj.fetch();
-          }
-        }
-        cResult[2] = A;
+        const fn2 = function x() {
+          return appAuthTokens(navigation[16]).fetch();
+        };
+        cResult[2] = fn2;
+        let tmp10 = fn2;
       } else {
-        class A {
-          constructor() {
-            obj = appAuthTokens(closure_2[16]);
-            return obj.fetch();
-          }
-        }
+        tmp10 = cResult[2];
       }
       const tmpResult3 = require("useNavigation");
-      const focusEffect = require("Link").useFocusEffect(A);
+      const focusEffect = require("Link").useFocusEffect(tmp10);
       if (cResult[3] === tmp4.appListHeader) {
-        class A {
-          constructor() {
-            obj = appAuthTokens(closure_2[16]);
-            return obj.fetch();
-          }
+        if (cResult[4] === tmp4.headerDescription) {
+          let tmp12 = cResult[5];
         }
         if (cResult[6] !== navigation) {
-          class D {
+          class H {
             constructor(arg0) {
               item = arg0.item;
               index = arg0.index;
               obj = {
                 icon: null,
                 label: item.application.name,
-                onPress() {
+                onPress: function handleAppPress() {
                   UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                   const obj3 = {
                     destinationPane: constants2.AUTHORIZED_APP,
@@ -173,16 +163,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[6] = navigation;
-          cResult[7] = D;
+          cResult[7] = H;
         } else {
-          class D {
+          class H {
             constructor(arg0) {
               item = arg0.item;
               index = arg0.index;
               obj = {
                 icon: null,
                 label: item.application.name,
-                onPress() {
+                onPress: function handleAppPress() {
                   UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                   const obj3 = {
                     destinationPane: constants2.AUTHORIZED_APP,
@@ -202,16 +192,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        noop = D;
+        noop = H;
         if (null != appAuthTokens) {
-          class D {
+          class H {
             constructor(arg0) {
               item = arg0.item;
               index = arg0.index;
               obj = {
                 icon: null,
                 label: item.application.name,
-                onPress() {
+                onPress: function handleAppPress() {
                   UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                   const obj3 = {
                     destinationPane: constants2.AUTHORIZED_APP,
@@ -231,14 +221,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (stateFromStoresObject.fetchState === FetchState.FETCHED) {
-            class D {
+            class H {
               constructor(arg0) {
                 item = arg0.item;
                 index = arg0.index;
                 obj = {
                   icon: null,
                   label: item.application.name,
-                  onPress() {
+                  onPress: function handleAppPress() {
                     UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                     const obj3 = {
                       destinationPane: constants2.AUTHORIZED_APP,
@@ -258,14 +248,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (0 === appAuthTokens.length) {
-              class D {
+              class H {
                 constructor(arg0) {
                   item = arg0.item;
                   index = arg0.index;
                   obj = {
                     icon: null,
                     label: item.application.name,
-                    onPress() {
+                    onPress: function handleAppPress() {
                       UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                       const obj3 = {
                         destinationPane: constants2.AUTHORIZED_APP,
@@ -284,15 +274,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
                 }
               }
-              if (cResult[10] !== E) {
-                class D {
+              if (cResult[10] !== tmp12) {
+                class H {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
                     obj = {
                       icon: null,
                       label: item.application.name,
-                      onPress() {
+                      onPress: function handleAppPress() {
                         UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                         const obj3 = {
                           destinationPane: constants2.AUTHORIZED_APP,
@@ -311,17 +301,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
                   }
                 }
-                cResult[10] = E;
+                cResult[10] = tmp12;
                 cResult[11] = tmp29;
               } else {
-                class D {
+                class H {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
                     obj = {
                       icon: null,
                       label: item.application.name,
-                      onPress() {
+                      onPress: function handleAppPress() {
                         UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                         const obj3 = {
                           destinationPane: constants2.AUTHORIZED_APP,
@@ -343,14 +333,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol = Symbol;
               if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                class D {
+                class H {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
                     obj = {
                       icon: null,
                       label: item.application.name,
-                      onPress() {
+                      onPress: function handleAppPress() {
                         UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                         const obj3 = {
                           destinationPane: constants2.AUTHORIZED_APP,
@@ -373,14 +363,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[12] = stringResult;
                 const tmp30 = stringResult;
               } else {
-                class D {
+                class H {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
                     obj = {
                       icon: null,
                       label: item.application.name,
-                      onPress() {
+                      onPress: function handleAppPress() {
                         UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                         const obj3 = {
                           destinationPane: constants2.AUTHORIZED_APP,
@@ -401,14 +391,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (cResult[13] !== tmp4.emptyText) {
-                class D {
+                class H {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
                     obj = {
                       icon: null,
                       label: item.application.name,
-                      onPress() {
+                      onPress: function handleAppPress() {
                         UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                         const obj3 = {
                           destinationPane: constants2.AUTHORIZED_APP,
@@ -437,14 +427,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[13] = tmp4.emptyText;
                 cResult[14] = tmp33;
               } else {
-                class D {
+                class H {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
                     obj = {
                       icon: null,
                       label: item.application.name,
-                      onPress() {
+                      onPress: function handleAppPress() {
                         UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                         const obj3 = {
                           destinationPane: constants2.AUTHORIZED_APP,
@@ -465,14 +455,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (cResult[15] === tmp4.emptyContainer) {
-                class D {
+                class H {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
                     obj = {
                       icon: null,
                       label: item.application.name,
-                      onPress() {
+                      onPress: function handleAppPress() {
                         UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                         const obj3 = {
                           destinationPane: constants2.AUTHORIZED_APP,
@@ -501,14 +491,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[17] = tmp32;
               cResult[18] = tmp37;
             } else {
-              class D {
+              class H {
                 constructor(arg0) {
                   item = arg0.item;
                   index = arg0.index;
                   obj = {
                     icon: null,
                     label: item.application.name,
-                    onPress() {
+                    onPress: function handleAppPress() {
                       UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                       const obj3 = {
                         destinationPane: constants2.AUTHORIZED_APP,
@@ -529,14 +519,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               const sum = appAuthTokens(navigation[13])().bottom + PX_24;
               if (cResult[19] !== sum) {
-                class D {
+                class H {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
                     obj = {
                       icon: null,
                       label: item.application.name,
-                      onPress() {
+                      onPress: function handleAppPress() {
                         UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                         const obj3 = {
                           destinationPane: constants2.AUTHORIZED_APP,
@@ -559,14 +549,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[19] = sum;
                 cResult[20] = tmp16;
               } else {
-                class D {
+                class H {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
                     obj = {
                       icon: null,
                       label: item.application.name,
-                      onPress() {
+                      onPress: function handleAppPress() {
                         UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                         const obj3 = {
                           destinationPane: constants2.AUTHORIZED_APP,
@@ -587,14 +577,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (cResult[21] === tmp4.container) {
-                class D {
+                class H {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
                     obj = {
                       icon: null,
                       label: item.application.name,
-                      onPress() {
+                      onPress: function handleAppPress() {
                         UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                         const obj3 = {
                           destinationPane: constants2.AUTHORIZED_APP,
@@ -613,15 +603,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
                   }
                 }
-                if (cResult[24] !== E) {
-                  class D {
+                if (cResult[24] !== tmp12) {
+                  class H {
                     constructor(arg0) {
                       item = arg0.item;
                       index = arg0.index;
                       obj = {
                         icon: null,
                         label: item.application.name,
-                        onPress() {
+                        onPress: function handleAppPress() {
                           UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                           const obj3 = {
                             destinationPane: constants2.AUTHORIZED_APP,
@@ -640,7 +630,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
                     }
                   }
-                  cResult[24] = E;
+                  cResult[24] = tmp12;
                   class M {
                     constructor(arg0) {
                       obj = { item: arg0.item, index: arg0.index, numItems: appAuthTokens.length };
@@ -649,14 +639,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   cResult[25] = tmp19;
                 } else {
-                  class D {
+                  class H {
                     constructor(arg0) {
                       item = arg0.item;
                       index = arg0.index;
                       obj = {
                         icon: null,
                         label: item.application.name,
-                        onPress() {
+                        onPress: function handleAppPress() {
                           UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                           const obj3 = {
                             destinationPane: constants2.AUTHORIZED_APP,
@@ -677,14 +667,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 if (cResult[26] === appAuthTokens.length) {
-                  class D {
+                  class H {
                     constructor(arg0) {
                       item = arg0.item;
                       index = arg0.index;
                       obj = {
                         icon: null,
                         label: item.application.name,
-                        onPress() {
+                        onPress: function handleAppPress() {
                           UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                           const obj3 = {
                             destinationPane: constants2.AUTHORIZED_APP,
@@ -704,14 +694,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   if (cResult[29] !== appAuthTokens) {
-                    class D {
+                    class H {
                       constructor(arg0) {
                         item = arg0.item;
                         index = arg0.index;
                         obj = {
                           icon: null,
                           label: item.application.name,
-                          onPress() {
+                          onPress: function handleAppPress() {
                             UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
                             const obj3 = {
                               destinationPane: constants2.AUTHORIZED_APP,
@@ -797,7 +787,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 cResult[26] = appAuthTokens.length;
-                cResult[27] = D;
+                cResult[27] = H;
                 cResult[28] = M;
               }
               const items2 = [tmp4.container, tmp16];
@@ -835,38 +825,35 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp38;
       }
-      class E {
-        constructor() {
-          obj = { children: null };
-          obj1 = { children: null };
-          obj7 = { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: null };
-          intl = closure_0(closure_2[19]).intl;
-          obj7.children = intl.string(closure_0(closure_2[19]).t.HU3RFw);
-          items = [,];
-          items[0] = jsx(closure_0(closure_2[18]).Text, obj7);
-          obj8 = { style: closure_0.headerDescription, variant: "heading-sm/medium", children: null };
-          intl2 = closure_0(closure_2[19]).intl;
-          obj8.children = intl2.string(closure_0(closure_2[19]).t.Nu5Yi0);
-          items[1] = jsx(closure_0(closure_2[18]).Text, obj8);
-          obj1.children = items;
-          items1 = [,];
-          items1[0] = jsxs(View, obj1);
-          obj9 = { style: closure_0.appListHeader, children: null };
-          obj10 = { title: null };
-          intl3 = closure_0(closure_2[19]).intl;
-          obj10.title = intl3.string(closure_0(closure_2[19]).t.PHjkRE);
-          obj9.children = jsx(closure_0(closure_2[20]).TableRowGroupTitle, obj10);
-          items1[1] = jsx(View, obj9);
-          obj.children = items1;
-          return jsxs(Fragment, obj);
-        }
+      function renderHeader() {
+        const obj = { children: null };
+        const obj2 = { children: null };
+        const obj3 = { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: null };
+        const intl = util.intl;
+        obj3.children = intl.string(util.t.HU3RFw);
+        const items = [closure_2_11(Text_Text.Text, obj3)];
+        const obj4 = { style: closure_0.headerDescription, variant: "heading-sm/medium", children: null };
+        const intl2 = util.intl;
+        obj4.children = intl2.string(util.t.Nu5Yi0);
+        items[1] = closure_2_11(Text_Text.Text, obj4);
+        obj2.children = items;
+        const items1 = [__initData(React4, obj2)];
+        const obj5 = { style: closure_0.appListHeader, children: null };
+        const obj6 = { title: null };
+        const intl3 = util.intl;
+        obj6.title = intl3.string(util.t.PHjkRE);
+        obj5.children = closure_2_11(TableRowGroup.TableRowGroupTitle, obj6);
+        items1[1] = closure_2_11(React4, obj5);
+        obj.children = items1;
+        return __initData(__initData2, obj);
       }
       cResult[3] = tmp4.appListHeader;
       cResult[4] = tmp4.headerDescription;
-      cResult[5] = E;
+      cResult[5] = renderHeader;
+      tmp12 = renderHeader;
       const tmpResult4 = require("Link");
     }
-  : () => {
+  : function UserSettingsAuthedApps() {
       const tmp = closure_15();
       _require = tmp;
       let items = [AuthorizedAppsStore];
@@ -888,7 +875,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj = {
           icon: closure_1_11(appAuthTokens(navigation[22]), { application: item.application }),
           label: item.application.name,
-          onPress() {
+          onPress: function handleAppPress() {
             UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
             const obj3 = {
               destinationPane: constants2.AUTHORIZED_APP,

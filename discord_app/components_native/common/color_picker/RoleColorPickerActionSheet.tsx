@@ -19,7 +19,7 @@ let items = [
   ...ROLE_COLORS.slice(5, 10),
   ...ROLE_COLORS.slice(15, 18),
 ];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   body: { paddingVertical: nativeDefault.space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" },
   colorWrap: null,
@@ -47,7 +47,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/color_picker/RoleColorPickerActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (color) => {
+  ? function RoleColorPickerActionSheet(color) {
       const cResult = color(defaultColor[8]).c(37);
       color = color.color;
       let onSelect = color.onSelect;
@@ -85,13 +85,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            class E {
+            class A {
               constructor(arg0) {
                 tmp = closure_4(color);
                 return;
               }
             }
-            cResult[5] = E;
+            cResult[5] = A;
             class O {
               constructor() {
                 tmp = onSelect(closure_3);
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           } else {
-            class E {
+            class A {
               constructor(arg0) {
                 tmp = closure_4(color);
                 return;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           onSelect = tmp13;
           if (cResult[6] !== defaultColor) {
-            class E {
+            class A {
               constructor(arg0) {
                 tmp = closure_4(color);
                 return;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             cResult[7] = tmp15;
           } else {
-            class E {
+            class A {
               constructor(arg0) {
                 tmp = closure_4(color);
                 return;
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[8] === color) {
-            class E {
+            class A {
               constructor(arg0) {
                 tmp = closure_4(color);
                 return;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (cResult[12] === confirmLabel) {
-              class E {
+              class A {
                 constructor(arg0) {
                   tmp = closure_4(color);
                   return;
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             let obj3 = { title: tmp18, trailing: null };
-            class A {
+            class T {
               constructor() {
                 obj = { color, onSelect };
                 tmp = closure_1(closure_2[12])(obj);
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (null != confirmLabel) {
-              class E {
+              class A {
                 constructor(arg0) {
                   tmp = closure_4(color);
                   return;
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             } else {
-              class E {
+              class A {
                 constructor(arg0) {
                   tmp = closure_4(color);
                   return;
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[13] = tmp11;
             cResult[14] = obj3;
           }
-          class A {
+          class T {
             constructor() {
               obj = { color, onSelect };
               tmp = closure_1(closure_2[12])(obj);
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[8] = color;
           cResult[9] = onSelect;
-          cResult[10] = A;
+          cResult[10] = T;
         }
         class O {
           constructor() {
@@ -232,7 +232,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       tmpResult2 = color(defaultColor[10]);
     }
-  : (color) => {
+  : function RoleColorPickerActionSheet(color) {
       color = color.color;
       let onSelect = color.onSelect;
       ({ confirmLabel, defaultColor } = color);
@@ -312,7 +312,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj10 = { variant: "secondary", text: null, onPress: null };
       const intl4 = tmp2(tmp3[13]).intl;
       obj10.text = intl4.string(color(defaultColor[13]).t.yBZMsQ);
-      obj10.onPress = function onPress() {
+      obj10.onPress = function handleReset() {
         closure_5(defaultColor);
       };
       items4[1] = onSelect(color(defaultColor[15]).Button, obj10);

@@ -13,7 +13,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 ({ useAndroidNotificationSoundsEnabled: c2, setAndroidNotificationSoundsEnabled } = AndroidNotificationSettingsStore);
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHasAndroidNotificationSoundsSetting() {
       const cResult = c.c(2);
       const tmp4 = React2();
       if (cResult[0] !== tmp4) {
@@ -35,7 +35,7 @@ let closure_3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function useHasAndroidNotificationSoundsSetting() {
       const tmp = React2();
       const isIOSResult = PlatformUtils.isIOS();
       let tmp5 = !isIOSResult;
@@ -58,7 +58,7 @@ const obj = {
 };
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-obj.useValue = () => {
+obj.useValue = function useAndroidNotificationSoundsSettingValue() {
   let flag = React2();
   if (flag == null) {
     flag = false;

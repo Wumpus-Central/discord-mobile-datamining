@@ -3,13 +3,23 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/frames/utils/getFrameLaunchContextQueryParams.tsx");
 
-export default function getFrameLaunchContextQueryParams(customId) {
-  const obj = {};
-  if (null != customId.customId) {
-    obj.custom_id = customId.customId;
+export default function getFrameLaunchContextQueryParams(launch) {
+  launch = launch.launch;
+  let customId;
+  if (launch != null) {
+    customId = launch.customId;
   }
-  if (null != customId.referrerId) {
-    obj.referrer_id = customId.referrerId;
+  const obj = {};
+  if (null != customId) {
+    obj.custom_id = launch.launch.customId;
+  }
+  const launch2 = launch.launch;
+  let referrerId;
+  if (launch2 != null) {
+    referrerId = launch2.referrerId;
+  }
+  if (null != referrerId) {
+    obj.referrer_id = launch.launch.referrerId;
   }
   return obj;
 }

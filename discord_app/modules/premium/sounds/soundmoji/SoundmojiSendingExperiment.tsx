@@ -16,7 +16,7 @@ obj2[2] = { enabled: true, showSoundmojiInEmojiPicker: true };
 obj.variations = obj2;
 let closure_2 = ApexExperiment.createApexExperiment(obj);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useSoundmojiSendExperiment(location) {
       const cResult = c.c(2);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -29,7 +29,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location: location.location }).enabled;
+  : function useSoundmojiSendExperiment(location) {
+      return closure_2.useConfig({ location: location.location }).enabled;
+    };
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/SoundmojiSendingExperiment.tsx");
 
 export const getSoundmojiSendExperiment = function getSoundmojiSendExperiment(location) {
@@ -37,7 +39,7 @@ export const getSoundmojiSendExperiment = function getSoundmojiSendExperiment(lo
 };
 export const useSoundmojiSendExperiment = tmp2;
 export const useSoundmojiEmojiPickerSectionExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useSoundmojiEmojiPickerSectionExperiment(location) {
       const cResult = c.c(2);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -50,4 +52,6 @@ export const useSoundmojiEmojiPickerSectionExperiment = ReactCompilerGating.isRe
       }
       return closure_2.useConfig(tmp2).showSoundmojiInEmojiPicker;
     }
-  : (location) => closure_2.useConfig({ location: location.location }).showSoundmojiInEmojiPicker;
+  : function useSoundmojiEmojiPickerSectionExperiment(location) {
+      return closure_2.useConfig({ location: location.location }).showSoundmojiInEmojiPicker;
+    };

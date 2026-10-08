@@ -1,27 +1,27 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildCategoryFullNotice.tsx
 import c from "../../../../_runtime/00576_c.js";
-import _modDef3395 from "../intl/FavoritesGuild.messages.js";
+import _modDef3439 from "../intl/FavoritesGuild.messages.js";
 import FavoriteStore from "../FavoriteStore.tsx";
 
 const initialize = intl(504);
 const util = intl(1126);
-const FavoritesUtils = intl(2077);
-const FavoritesHooks = intl(10049);
+const FavoritesUtils = intl(2089);
+const FavoritesHooks = intl(10294);
 require = fn;
-let closure_4 = fn(2065).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
+let closure_4 = fn(2077).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
 const ChannelTypes = fn(1085).ChannelTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryFullNotice.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (getGuildId, str) => {
+  ? function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
       let intl = require;
       let stringResult = dependencyMap;
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FavoriteStore];
-        const fn = function _() {
+        const fn = function c() {
           return autoAddJoinedThreads.autoAddJoinedThreads;
         };
         cResult[0] = items;
@@ -51,9 +51,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
                     const obj2 = { label: null, tooltip: null };
                     const intl2 = util.intl;
-                    obj2.label = intl2.string(_modDef3395.WsUrMD);
+                    obj2.label = intl2.string(_modDef3439.WsUrMD);
                     intl = util.intl;
-                    stringResult = intl.string(_modDef3395.dW9Kov);
+                    stringResult = intl.string(_modDef3439.dW9Kov);
                     obj2.tooltip = stringResult;
                     cResult[2] = obj2;
                   }
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : (getGuildId, str) => {
+  : function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
       const items = [FavoriteStore];
       const stateFromStores = initialize.useStateFromStores(items, () => autoAddJoinedThreads.autoAddJoinedThreads);
       FavoritesHooks;
@@ -86,9 +86,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (formatted === closure_4.toLowerCase()) {
                   const obj2 = { label: null, tooltip: null };
                   const intl = util.intl;
-                  obj2.label = intl.string(_modDef3395.WsUrMD);
+                  obj2.label = intl.string(_modDef3439.WsUrMD);
                   const intl2 = util.intl;
-                  obj2.tooltip = intl2.string(_modDef3395.dW9Kov);
+                  obj2.tooltip = intl2.string(_modDef3439.dW9Kov);
                   tmp6 = obj2;
                 }
               }

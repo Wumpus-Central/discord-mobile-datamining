@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2521 from "../FamilyCenter.messages.js";
+import _modDef2565 from "../FamilyCenter.messages.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import GuildIconDefault from "../../guild/native/GuildIcon.tsx";
 import GuildBadgeDefault from "../../guild/native/GuildBadge.tsx";
@@ -17,11 +17,11 @@ import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ACTION_TO_TEXT = fn(7062).ACTION_TO_TEXT;
+const ACTION_TO_TEXT = fn(7248).ACTION_TO_TEXT;
 const GuildFeatures = fn(1085).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj = {
   container: {
     display: "flex",
@@ -43,7 +43,7 @@ let obj3 = {
   paddingVertical: 12,
 };
 obj.avatar = {
-  borderRadius: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.NORMAL] / 2,
+  borderRadius: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.NORMAL] / 2,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
 obj.avatarContainer = { marginRight: 12, alignItems: "flex-start" };
@@ -104,10 +104,10 @@ const memoResult = noop.memo(
                 if (cResult[12] === tmp4.text) {
                   let tmp20 = cResult[13];
                 }
-                const Text = tmp(4892).Text;
+                const Text = tmp(5086).Text;
                 const _Date = Date;
                 const date = new Date(extractTimestampResult);
-                const result = tmp(8331).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+                const result = tmp(7714).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
                 if (cResult[14] === Text) {
                   if (cResult[15] === result) {
                     let tmp28 = cResult[16];
@@ -158,7 +158,7 @@ const memoResult = noop.memo(
                 cResult[15] = result;
                 cResult[16] = tmp30;
                 tmp28 = tmp30;
-                const tmpResult2 = tmp(8331);
+                const tmpResult2 = tmp(7714);
               }
               const obj5 = {
                 style: text,
@@ -168,7 +168,7 @@ const memoResult = noop.memo(
                 lineClamp: 1,
                 children: tmp18,
               };
-              const tmp22 = closure_8(tmp(4892).Text, obj5);
+              const tmp22 = closure_8(tmp(5086).Text, obj5);
               cResult[11] = tmp18;
               cResult[12] = tmp4.text;
               cResult[13] = tmp22;
@@ -188,7 +188,7 @@ const memoResult = noop.memo(
             disablePlaceholder: null,
             avatarDecoration: stateFromStores.avatarDecoration,
           };
-          const tmp14 = closure_8(tmp(1188).Avatar, obj7);
+          const tmp14 = closure_8(tmp(1200).Avatar, obj7);
           cResult[3] = stateFromStores;
           cResult[4] = tmp4.avatar;
           cResult[5] = tmp14;
@@ -217,7 +217,7 @@ const memoResult = noop.memo(
             disablePlaceholder: null,
             avatarDecoration: stateFromStores.avatarDecoration,
           };
-          obj3.children = closure_8(tmp6(1188).Avatar, obj4);
+          obj3.children = closure_8(tmp6(1200).Avatar, obj4);
           const items1 = [closure_8(View, obj3)];
           const obj5 = { style: tmp.textContainer, children: null };
           const obj6 = {
@@ -230,13 +230,13 @@ const memoResult = noop.memo(
           };
           const tmp3Result = SnowflakeUtilsDefault;
           obj6.children = UserUtilsDefault.getName(stateFromStores);
-          const items2 = [closure_8(tmp6(4892).Text, obj6)];
+          const items2 = [closure_8(tmp6(5086).Text, obj6)];
           const obj7 = { variant: "text-xs/medium", color: "channels-default", children: null };
           const tmp3Result2 = UserUtilsDefault;
           const _Date = Date;
           const date = new Date(extractTimestampResult);
-          obj7.children = tmp6(8331).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
-          items2[1] = closure_8(tmp6(4892).Text, obj7);
+          obj7.children = tmp6(7714).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+          items2[1] = closure_8(tmp6(5086).Text, obj7);
           obj5.children = items2;
           items1[1] = closure_9(View, obj5);
           obj2.children = items1;
@@ -246,7 +246,7 @@ const memoResult = noop.memo(
       },
 );
 memoResult.displayName = "FamilyCenterActivityRowUser";
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj5 = {
   container: null,
   avatar: null,
@@ -258,7 +258,7 @@ let obj5 = {
   headerAndIconContainer: null,
 };
 let obj4 = {
-  borderRadius: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.NORMAL] / 2,
+  borderRadius: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.NORMAL] / 2,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
 obj5.container = {
@@ -368,8 +368,8 @@ const memoResult1 = noop.memo(
                               const obj2 = { variant: "text-xs/medium", color: "channels-default", children: null };
                               const intl = tmp(1126).intl;
                               const obj4 = { members: stateFromStores.approximateMemberCount };
-                              obj2.children = intl.format(_modDef2521["5JmNgg"], obj4);
-                              tmp35 = closure_8(tmp(4892).Text, obj2);
+                              obj2.children = intl.format(_modDef2565["5JmNgg"], obj4);
+                              tmp35 = closure_8(tmp(5086).Text, obj2);
                             }
                             cResult[23] = stateFromStores.approximateMemberCount;
                             cResult[24] = tmp35;
@@ -437,7 +437,7 @@ const memoResult1 = noop.memo(
                     lineClamp: 1,
                     children: name,
                   };
-                  const tmp25 = closure_8(tmp(4892).Text, obj9);
+                  const tmp25 = closure_8(tmp(5086).Text, obj9);
                   cResult[13] = tmp4.header;
                   cResult[14] = name;
                   cResult[15] = tmp25;
@@ -465,7 +465,7 @@ const memoResult1 = noop.memo(
           const obj11 = { style: null, textStyle: null, guild: null, size: null, animate: true };
           ({ avatar: obj3.style, avatarText: obj3.textStyle } = tmp4);
           obj11.guild = stateFromStores;
-          obj11.size = tmp(5978).GuildIconSizes.NORMAL;
+          obj11.size = tmp(6161).GuildIconSizes.NORMAL;
           const tmp18 = closure_8(GuildIconDefault, obj11);
           cResult[5] = stateFromStores;
           cResult[6] = tmp4.avatar;
@@ -498,7 +498,7 @@ const memoResult1 = noop.memo(
           const obj4 = { style: null, textStyle: null, guild: null, size: null, animate: true };
           ({ avatar: obj3.style, avatarText: obj3.textStyle } = tmp);
           obj4.guild = stateFromStores;
-          obj4.size = tmp2(5978).GuildIconSizes.NORMAL;
+          obj4.size = tmp2(6161).GuildIconSizes.NORMAL;
           const items1 = [closure_8(GuildIconDefault, obj4)];
           const obj5 = { style: tmp.text, children: null };
           const obj6 = { style: tmp.headerContainer, children: null };
@@ -523,7 +523,7 @@ const memoResult1 = noop.memo(
             lineClamp: 1,
             children: stateFromStores.name,
           };
-          items2[1] = closure_8(tmp2(4892).Text, obj9);
+          items2[1] = closure_8(tmp2(5086).Text, obj9);
           obj7.children = items2;
           obj6.children = closure_9(View, obj7);
           const items3 = [closure_8(View, obj6)];
@@ -532,8 +532,8 @@ const memoResult1 = noop.memo(
             const obj10 = { variant: "text-xs/medium", color: "channels-default", children: null };
             const intl = tmp2(1126).intl;
             const obj19 = { members: stateFromStores.approximateMemberCount };
-            obj10.children = intl.format(_modDef2521["5JmNgg"], obj19);
-            tmp11Result2 = closure_8(tmp2(4892).Text, obj10);
+            obj10.children = intl.format(_modDef2565["5JmNgg"], obj19);
+            tmp11Result2 = closure_8(tmp2(5086).Text, obj10);
           }
           items3[1] = tmp11Result2;
           obj5.children = items3;
@@ -551,7 +551,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (action) => {
+  ? function FamilyCenterActivityRow(action) {
       let tmp2 = dependencyMap;
       const cResult = c.c(20);
       action = action.action;
@@ -680,7 +680,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       tmpResult9 = FamilyCenterUtils;
     }
-  : (action) => {
+  : function FamilyCenterActivityRow(action) {
       action = action.action;
       if (!obj.isUserAction(action)) {
         if (!tmpResult.isGuildAction(action)) {

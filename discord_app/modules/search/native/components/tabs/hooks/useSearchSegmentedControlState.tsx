@@ -46,7 +46,7 @@ let result = size.fileFinishedImporting(
 );
 
 export const useSearchSegmentedControlState = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onSelectedTabChange) => {
+  ? function useSearchSegmentedControlState(onSelectedTabChange) {
       const cResult = visibleTabs(onSelectedTabChange[2]).c(6);
       ({ items, visibleTabs } = onSelectedTabChange);
       onSelectedTabChange = onSelectedTabChange.onSelectedTabChange;
@@ -166,7 +166,7 @@ export const useSearchSegmentedControlState = ReactCompilerGating.isReactCompile
       tmp6 = tmp7;
       const obj3 = visibleTabs(onSelectedTabChange[3]);
     }
-  : (visibleTabs) => {
+  : function useSearchSegmentedControlState(visibleTabs) {
       visibleTabs = visibleTabs.visibleTabs;
       const onSelectedTabChange = visibleTabs.onSelectedTabChange;
       ({ items, width } = visibleTabs);

@@ -10,16 +10,16 @@ const require = globalThis.__r;
 
 require = fn;
 const SettingsUpsellsConfigRegistry = {};
-SettingsUpsellsConfigRegistry[fn(8313).SettingsUpsells.SAFETY_DM_SPAM_FILTER] =
+SettingsUpsellsConfigRegistry[fn(7696).SettingsUpsells.SAFETY_DM_SPAM_FILTER] =
   IarSettingsUpsellsConfigDmSpamFilterDefault;
-SettingsUpsellsConfigRegistry[fn(8313).SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] =
+SettingsUpsellsConfigRegistry[fn(7696).SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] =
   IarSettingsUpsellsConfigScFiltersSexualMediaDefault;
-SettingsUpsellsConfigRegistry[fn(8313).SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] =
+SettingsUpsellsConfigRegistry[fn(7696).SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] =
   IarSettingsUpsellsConfigScFiltersGraphicMediaDefault;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIarReportSettingsUpsells(arg0) {
       const obj = c;
       const cResult = obj.c(2);
       if (null == arg0) {
@@ -48,7 +48,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = tmp6;
       }
     }
-  : (arg0) => {
+  : function useIarReportSettingsUpsells(arg0) {
       closure_0 = arg0;
       let items = [arg0];
       return noop.useMemo(() => {
@@ -83,7 +83,7 @@ const result = size.fileFinishedImporting("modules/in_app_reports/IarSettingsUps
 export { SettingsUpsellsConfigRegistry };
 export const useIarReportSettingsUpsells = tmp2;
 export const useSettingsUpsellsConfigs = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr, arg1) => {
+  ? function useSettingsUpsellsConfigs(arr, arg1) {
       _require = arg1;
       let found = dependencyMap;
       const cResult = require("c").c(5);
@@ -124,7 +124,7 @@ export const useSettingsUpsellsConfigs = ReactCompilerGating.isReactCompilerEnab
       cResult[1] = arr;
       cResult[2] = found;
     }
-  : (arg0, arg1) => {
+  : function useSettingsUpsellsConfigs(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
       const items = [arg0, arg1];

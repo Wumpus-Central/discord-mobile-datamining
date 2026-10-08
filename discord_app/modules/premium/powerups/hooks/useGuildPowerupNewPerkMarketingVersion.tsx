@@ -8,7 +8,7 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(4774);
+const GuildPowerupsConstants = fn(4968);
 ({
   GuildPowerupNewPerkMarketingVersion: hasOwnProperty,
   NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: metroRequire,
@@ -20,7 +20,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useGuildPowerupNewPerkMarketingVersion(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(6);
@@ -422,7 +422,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       arr = Array.from(dependencyMap2[constants.GUILD_TAG_BADGE_PACKS_WAVE_TWO]);
     }
-  : (arg0, arg1) => {
+  : function useGuildPowerupNewPerkMarketingVersion(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(

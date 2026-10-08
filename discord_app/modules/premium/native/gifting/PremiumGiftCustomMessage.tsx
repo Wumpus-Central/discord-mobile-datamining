@@ -8,18 +8,18 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const maxLength = fn(1379).CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
+const maxLength = fn(1391).CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GiftCustomMessage(arg0) {
       const cResult = c.c(14);
       ({ onFocusMessage, setMessagePosition } = arg0);
       ({ customGiftMessage, setCustomGiftMessage } = arg0);
-      closure_6();
+      const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
         const stringResult = intl.string(util.t.ZkOo1U);
@@ -29,94 +29,82 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== setCustomGiftMessage) {
-        class C {
-          constructor(arg0) {
-            tmp = setCustomGiftMessage(arg0);
-            return;
-          }
-        }
+        const fn = function v(arg0) {
+          setCustomGiftMessage(arg0);
+        };
         cResult[1] = setCustomGiftMessage;
-        cResult[2] = C;
+        cResult[2] = fn;
+        let tmp7 = fn;
       } else {
-        class C {
-          constructor(arg0) {
-            tmp = setCustomGiftMessage(arg0);
-            return;
-          }
-        }
+        tmp7 = cResult[2];
       }
       if (cResult[3] !== setMessagePosition) {
-        class C {
-          constructor(arg0) {
-            tmp = setCustomGiftMessage(arg0);
-            return;
-          }
-        }
+        const fn2 = function y(nativeEvent) {
+          return setMessagePosition(nativeEvent.nativeEvent.layout.y);
+        };
         cResult[3] = setMessagePosition;
-        cResult[4] = tmp9;
+        cResult[4] = fn2;
+        let tmp8 = fn2;
       } else {
-        class C {
-          constructor(arg0) {
-            tmp = setCustomGiftMessage(arg0);
-            return;
-          }
-        }
+        tmp8 = cResult[4];
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        class C {
-          constructor(arg0) {
-            tmp = setCustomGiftMessage(arg0);
-            return;
-          }
-        }
-        const stringResult1 = obj2.string(util.t.B3miE8);
+        const intl2 = util.intl;
+        const stringResult1 = intl2.string(util.t.B3miE8);
         cResult[5] = stringResult1;
-        const tmp10 = stringResult1;
+        let tmp9 = stringResult1;
       } else {
-        class C {
-          constructor(arg0) {
-            tmp = setCustomGiftMessage(arg0);
-            return;
-          }
-        }
+        tmp9 = cResult[5];
       }
       if (cResult[6] === customGiftMessage) {
-        class C {
-          constructor(arg0) {
-            tmp = setCustomGiftMessage(arg0);
-            return;
+        if (cResult[7] === tmp7) {
+          if (cResult[8] === onFocusMessage) {
+            let tmp11 = cResult[9];
           }
+          if (cResult[10] === tmp4.container) {
+            if (cResult[11] === tmp8) {
+              if (cResult[12] === tmp11) {
+                let tmp13 = cResult[13];
+              }
+              return tmp13;
+            }
+          }
+          const obj2 = { style: tmp4.container, onLayout: tmp8, children: tmp11 };
+          const tmp16 = (
+            <View style={tmp4.container} onLayout={tmp8}>
+              {tmp11}
+            </View>
+          );
+          cResult[10] = tmp4.container;
+          cResult[11] = tmp8;
+          cResult[12] = tmp11;
+          cResult[13] = tmp16;
+          tmp13 = tmp16;
         }
       }
-      const obj3 = {
-        label: tmp10,
+      const tmp12 = jsx(TextArea.TextArea, {
+        label: tmp9,
         placeholder: first,
         value: customGiftMessage,
-        onChange: C,
+        onChange: tmp7,
+        maxLength,
+        onFocus: onFocusMessage,
+      });
+      cResult[6] = customGiftMessage;
+      cResult[7] = tmp7;
+      cResult[8] = onFocusMessage;
+      cResult[9] = tmp12;
+      tmp11 = tmp12;
+      const obj3 = {
+        label: tmp9,
+        placeholder: first,
+        value: customGiftMessage,
+        onChange: tmp7,
         maxLength,
         onFocus: onFocusMessage,
       };
-      cResult[6] = customGiftMessage;
-      cResult[7] = C;
-      cResult[8] = onFocusMessage;
-      cResult[9] = jsx(TextArea.TextArea, {
-        label: tmp10,
-        placeholder: first,
-        value: customGiftMessage,
-        onChange: C,
-        maxLength,
-        onFocus: onFocusMessage,
-      });
-      const tmp12 = jsx(TextArea.TextArea, {
-        label: tmp10,
-        placeholder: first,
-        value: customGiftMessage,
-        onChange: C,
-        maxLength,
-        onFocus: onFocusMessage,
-      });
     }
-  : (arg0) => {
+  : function GiftCustomMessage(arg0) {
       ({ setMessagePosition: require, setCustomGiftMessage } = arg0);
       ({ onFocusMessage, customGiftMessage } = arg0);
       const intl = util.intl;
@@ -167,7 +155,7 @@ const result = size.fileFinishedImporting("modules/premium/native/gifting/Premiu
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function PremiumGiftCustomMessage(arg0) {
         const cResult = c.c(5);
         ({ onFocusMessage, setMessagePosition } = arg0);
         const nativeGiftContext = NativeGiftContext.useNativeGiftContext();
@@ -197,7 +185,7 @@ export default noop.memo(
         cResult[4] = tmp4;
         tmp3 = tmp4;
       }
-    : (arg0) => {
+    : function PremiumGiftCustomMessage(arg0) {
         ({ onFocusMessage, setMessagePosition } = arg0);
         const nativeGiftContext = NativeGiftContext.useNativeGiftContext();
         return (

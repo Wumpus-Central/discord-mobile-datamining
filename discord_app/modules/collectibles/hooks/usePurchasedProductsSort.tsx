@@ -21,7 +21,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/usePurchasedProductsSort.tsx");
 
 export const usePurchasedProductsSort = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function usePurchasedProductsSort(arg0) {
       const cResult = require("c").c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [CollectiblesPurchaseStore];
@@ -106,7 +106,7 @@ export const usePurchasedProductsSort = ReactCompilerGating.isReactCompilerEnabl
       cResult[6] = sorted;
       let tmpResult = require("useStateFromStores");
     }
-  : (arg0) => {
+  : function usePurchasedProductsSort(arg0) {
       _require = arg0;
       let items = [CollectiblesPurchaseStore];
       stateFromStores = require("useStateFromStores").useStateFromStores(items, () => purchases.purchases);

@@ -2,18 +2,18 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import AgeGateUtils from "../../AgeGateUtils.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
+import AgeGateUtils from "../../AgeGateUtils.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
-import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     padding: nativeDefault.space.PX_16,
@@ -39,20 +39,20 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_gate/native/components/AgeGateVerify.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (source) => {
+  ? function AgeGateVerify(source) {
       const cResult = c.c(15);
       const tmp4 = closure_6();
       const ageGateVerifyContent = AgeGateUtils.useAgeGateVerifyContent(source.source);
       ({ verifyAgreementButtonText, verifyGateDescription, verifyTitle } = ageGateVerifyContent);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function s() {
+        function handleConfirm() {
           const obj = AgeVerificationActionCreatorsDefault;
           const result = obj.showAgeVerificationGetStartedModal({
             entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.NSFW_AGE_GATE,
           });
-        };
-        cResult[0] = fn;
-        let first = fn;
+        }
+        cResult[0] = handleConfirm;
+        let first = handleConfirm;
       } else {
         first = cResult[0];
       }
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = tmp11;
         tmp9 = tmp11;
       }
-      const tmp8 = React4(Text_Text.Text, {
+      const tmp8 = React4(Text_Text.Heading, {
         style: tmp4.header,
         variant: "heading-xl/extrabold",
         color: "mobile-text-heading-primary",
@@ -130,13 +130,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: verifyTitle,
       };
     }
-  : (source) => {
+  : function AgeGateVerify(source) {
       const tmp = closure_6();
       const ageGateVerifyContent = AgeGateUtils.useAgeGateVerifyContent(source.source);
       ({ verifyAgreementButtonText, verifyGateDescription, verifyTitle } = ageGateVerifyContent);
       const obj2 = { top: true, style: tmp.container, children: null };
       const items = [
-        React4(Text_Text.Text, {
+        React4(Text_Text.Heading, {
           style: tmp.header,
           variant: "heading-xl/extrabold",
           color: "mobile-text-heading-primary",
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { style: tmp.buttonWrapper, children: null };
         const obj6 = {
           text: verifyAgreementButtonText,
-          onPress() {
+          onPress: function handleConfirm() {
             const obj = AgeVerificationActionCreatorsDefault;
             const result = obj.showAgeVerificationGetStartedModal({
               entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.NSFW_AGE_GATE,

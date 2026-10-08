@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/ActivityLaunchErrorLink.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActivityLaunchErrorLink(arg0) {
       const cResult = c.c(3);
       ({ href, children } = arg0);
       if (cResult[0] === children) {
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp5;
       tmp4 = tmp5;
     }
-  : (arg0) => {
+  : function ActivityLaunchErrorLink(arg0) {
       ({ href, children } = arg0);
       return jsx(migration.IntlLink, { target, children });
     };

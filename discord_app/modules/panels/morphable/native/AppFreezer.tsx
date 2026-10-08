@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/panels/morphable/native/AppFreezer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AppFreezer(arg0) {
       const cResult = lockKeys(576).c(6);
       ({ children, manualFreeze, placeholder, lockKeys } = arg0);
       if (undefined === placeholder) {
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp7;
         }
       }
-      const tmp8 = jsx(lockKeys(5745).Freeze, { freeze: tmp6, placeholder, children });
+      const tmp8 = jsx(lockKeys(5328).Freeze, { freeze: tmp6, placeholder, children });
       cResult[2] = children;
       cResult[3] = placeholder;
       cResult[4] = tmp6;
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = lockKeys(576);
       const tmp4 = undefined !== manualFreeze && manualFreeze;
     }
-  : (children) => {
+  : function AppFreezer(children) {
       let flag = children.manualFreeze;
       if (flag === undefined) {
         flag = false;
@@ -73,5 +73,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (!freeze) {
         freeze = flag;
       }
-      return jsx(lockKeys(5745).Freeze, { freeze, placeholder, children: children.children });
+      return jsx(lockKeys(5328).Freeze, { freeze, placeholder, children: children.children });
     };

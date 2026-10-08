@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/AddRuleRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AddRuleRow(arg0) {
       const cResult = c.c(6);
       ({ triggerType, onPress } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp10;
       tmp9 = tmp10;
     }
-  : (arg0) => {
+  : function AddRuleRow(arg0) {
       ({ triggerType, onPress } = arg0);
       const obj = {
         icon: jsx(TableRow.TableRow.Icon, { IconComponent: CirclePlusIcon.CirclePlusIcon }),

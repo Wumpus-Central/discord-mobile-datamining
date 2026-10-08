@@ -9,11 +9,11 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 require = fn;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useRoleColorSettingValue() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
-        const fn = function n() {
+        const fn = function o() {
           return roleStyle.roleStyle;
         };
         cResult[0] = items;
@@ -25,13 +25,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useRoleColorSettingValue() {
       const items = [AccessibilityStore];
       return initialize.useStateFromStores(items, () => roleStyle.roleStyle);
     };
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useRoleColorSettingOptions() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { label: null, value: "username" };
@@ -53,8 +53,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      noop.useMemo(() => {
+  : function useRoleColorSettingOptions() {
+      return noop.useMemo(() => {
         const obj = { label: null, value: "username" };
         const intl = util.intl;
         obj.label = intl.string(util.t.YEOEi6);
@@ -69,16 +69,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         items[2] = obj3;
         return items;
       }, []);
+    };
 function onRoleColorSettingValueChange(roleStyle) {
   AccessibilityActionCreators.setRoleStyle(roleStyle);
 }
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uSOPWm);
   },
-  parent: fn(7645).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7966).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange: onRoleColorSettingValueChange,
   useOptions: tmp3,

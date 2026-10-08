@@ -196,7 +196,7 @@ function updateActivity(withGracePeriod) {
                         let merged = Object.assign(closure_1_10);
                         details = closure_1_10.details;
                         let prop = closure_1_0(closure_1_1[6]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F106646 */ function() { ... });
+                        let found = prop.filter(/* F107135 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -227,7 +227,7 @@ function updateActivity(withGracePeriod) {
   }
 }
 const ActivityTypes = fn(1085).ActivityTypes;
-const StaticChannelRoute = fn(2058).StaticChannelRoute;
+const StaticChannelRoute = fn(2070).StaticChannelRoute;
 let c8 = 300000;
 let selectedProjectId = null;
 let c11 = null;

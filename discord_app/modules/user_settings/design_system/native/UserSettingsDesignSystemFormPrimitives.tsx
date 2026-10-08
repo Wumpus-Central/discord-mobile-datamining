@@ -2,15 +2,15 @@
 import c from "../../../../../_runtime/00576_c.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
-import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import TableCheckboxRow from "../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import TableRadioGroup from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import Checkbox from "../../../../design/components/Checkbox/native/Checkbox.native.tsx";
+import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import VoiceXIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
+import Checkbox from "../../../../design/components/Checkbox/native/Checkbox.native.tsx";
 import Slider from "../../../../design/components/Slider/native/Slider.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -20,11 +20,11 @@ const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 32 } });
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function Radio() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp7 = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Radio" });
@@ -77,7 +77,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : () => {
+  : function Radio() {
       const obj = { children: null };
       const items = [
         timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Radio" }),
@@ -114,7 +114,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSwitchState(arg0) {
       const cResult = c.c(3);
       const tmp2 = undefined === arg0 || arg0;
       [tmp4, require] = noop.useState(undefined === arg0 || arg0);
@@ -137,7 +137,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : () => {
+  : function useSwitchState() {
       let flag = arg0;
       if (arg0 === undefined) {
         flag = true;
@@ -153,7 +153,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function Switch() {
       const cResult = c.c(18);
       const tmp4 = closure_11();
       const tmp5 = closure_11(false);
@@ -259,7 +259,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[14] = tmp42;
       tmp41 = tmp42;
     }
-  : () => {
+  : function Switch() {
       const tmp = closure_11();
       const tmp2 = closure_11(false);
       const tmp3 = closure_11();
@@ -300,7 +300,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCheckboxState(arg0) {
       const cResult = c.c(3);
       const tmp2 = undefined === arg0 || arg0;
       [tmp4, require] = noop.useState(undefined === arg0 || arg0);
@@ -323,7 +323,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : () => {
+  : function useCheckboxState() {
       let flag = arg0;
       if (arg0 === undefined) {
         flag = true;
@@ -339,7 +339,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function InlineCheckbox(arg0) {
       const cResult = c.c(6);
       ({ label, description, required, startChecked } = arg0);
       let tmp5 = undefined !== startChecked;
@@ -369,7 +369,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = tmp8;
       const tmp4Result = closure_13(tmp5);
     }
-  : (startChecked) => {
+  : function InlineCheckbox(startChecked) {
       let flag = startChecked.startChecked;
       ({ label, description, required } = startChecked);
       if (flag === undefined) {
@@ -380,7 +380,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function InlineCheckboxDemo() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { children: null };
@@ -403,7 +403,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => {
+  : function InlineCheckboxDemo() {
       const obj = { children: null };
       const items = [
         timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Inline Checkbox" }),
@@ -420,7 +420,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function CheckboxRowDemo() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp7 = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Checkbox" });
@@ -471,7 +471,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : () => {
+  : function CheckboxRowDemo() {
       const obj = { children: null };
       const items = [
         timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Checkbox" }),
@@ -508,7 +508,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function SliderDemo() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp6 = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Slider" });
@@ -537,7 +537,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp7;
     }
-  : () => {
+  : function SliderDemo() {
       const obj = { children: null };
       const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Slider" })];
       const obj2 = {
@@ -561,7 +561,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsDesignSystemFormPrimitives() {
       const cResult = c.c(7);
       const tmp4 = closure_9();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -598,7 +598,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp21;
     }
-  : () => {
+  : function UserSettingsDesignSystemFormPrimitives() {
       const obj = { children: null };
       const obj2 = { spacing: 24, style: closure_9().container, children: null };
       const items = [

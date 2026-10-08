@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/useBadgeDirectoryNuxCoachmarkVariant.tsx");
 
 export const useBadgeDirectoryNuxCoachmarkVariant = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useBadgeDirectoryNuxCoachmarkVariant(arg0) {
       const cResult = c.c(8);
       ({ userId, enabled, fetchCatalog, location: _location } = arg0);
       if (cResult[0] !== _location) {
@@ -71,7 +71,7 @@ export const useBadgeDirectoryNuxCoachmarkVariant = ReactCompilerGating.isReactC
       tmp5 = obj4;
       tmpResult = useCanOpenBadgeDirectoryFromProfile;
     }
-  : (enabled) => {
+  : function useBadgeDirectoryNuxCoachmarkVariant(enabled) {
       enabled = enabled.enabled;
       ({ userId, fetchCatalog, location: _location } = enabled);
       if (enabled) {

@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles(() => {
   const obj = {
     chatContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, gap: nativeDefault.space.PX_8 },
@@ -25,7 +25,7 @@ let closure_7 = createStyles.createStyles(() => {
 });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (textVariant) => {
+  ? function useNativeProvisionalAccountExplainerText(textVariant) {
       const cResult = iconSize(576).c(6);
       ({ userId, iconSize } = textVariant);
       textVariant = textVariant.textVariant;
@@ -37,7 +37,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[4] === userId) {
             let tmp5 = cResult[5];
           }
-          return iconSize(12310).useProvisionalAccountExplanationText(tmp5);
+          return iconSize(12408).useProvisionalAccountExplanationText(tmp5);
         }
         const obj2 = { userId, renderApplicationName: tmp4 };
         cResult[3] = tmp4;
@@ -54,7 +54,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn;
       const obj = iconSize(576);
     }
-  : (userId) => {
+  : function useNativeProvisionalAccountExplainerText(userId) {
       const iconSize = userId.iconSize;
       const textVariant = userId.textVariant;
       const items = [iconSize, textVariant];
@@ -63,12 +63,12 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id),
         items,
       );
-      return iconSize(12310).useProvisionalAccountExplanationText({ userId: userId.userId, renderApplicationName });
+      return iconSize(12408).useProvisionalAccountExplanationText({ userId: userId.userId, renderApplicationName });
     };
 fn(558);
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ChatProvisionalAccountExplainerCard(arg0) {
       const cResult = c.c(16);
       ({ style, userId, iconSize } = arg0);
       const tmp4 = closure_7();
@@ -146,7 +146,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj6;
       tmp5 = obj6;
     }
-  : (arg0) => {
+  : function ChatProvisionalAccountExplainerCard(arg0) {
       ({ style, userId, iconSize } = arg0);
       const tmp = closure_7();
       const obj = { style: null, children: null };
@@ -177,7 +177,7 @@ const result = size.fileFinishedImporting("modules/provisional_accounts/native/P
 
 export const ChatProvisionalAccountExplainerCard = tmp3;
 export const UserProfileProvisionalAccountExplainerCard = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileProvisionalAccountExplainerCard(arg0) {
       const cResult = c.c(10);
       ({ style, userId, iconSize } = arg0);
       if (cResult[0] === iconSize) {
@@ -226,7 +226,7 @@ export const UserProfileProvisionalAccountExplainerCard = ReactCompilerGating.is
       cResult[2] = obj4;
       tmp4 = obj4;
     }
-  : (userId) => {
+  : function UserProfileProvisionalAccountExplainerCard(userId) {
       const obj2 = { style: userId.style, title: null, titleIcon: null, children: null };
       const obj = { userId: userId.userId, iconSize: userId.iconSize, textVariant: "text-md/semibold" };
       const tmp = closure_8({ userId: userId.userId, iconSize: userId.iconSize, textVariant: "text-md/semibold" });

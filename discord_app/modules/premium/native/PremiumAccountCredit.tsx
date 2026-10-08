@@ -3,7 +3,7 @@ import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3233 from "../premium_group/PremiumGroup.messages.js";
+import _modDef3277 from "../premium_group/PremiumGroup.messages.js";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import BoostGemIcon from "../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -19,7 +19,7 @@ let View = fn(17).View;
 const SubscriptionStatusTypes = fn(1085).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   title: { marginBottom: 12 },
   creditList: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -33,8 +33,8 @@ let obj2 = {
   creditDescription: null,
 };
 let size = {
-  width: fn(6674).GameIconImageSize[fn(undefined, 6674).GameIconSizes.SMALL],
-  height: fn(6674).GameIconImageSize[fn(undefined, 6674).GameIconSizes.SMALL],
+  width: fn(6851).GameIconImageSize[fn(undefined, 6851).GameIconSizes.SMALL],
+  height: fn(6851).GameIconImageSize[fn(undefined, 6851).GameIconSizes.SMALL],
   alignItems: "center",
   justifyContent: "center",
 };
@@ -49,7 +49,7 @@ obj2.creditDescription = { marginTop: 8 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AccountCreditTier(arg0) {
       const cResult = c.c(67);
       ({ planId, months, currentSubscription, shouldAddDivider, unconsumedFractionalPremiumUnits, hasPremiumGroup } =
         arg0);
@@ -223,7 +223,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
           const intl4 = util.intl;
-          const stringResult = intl4.string(intl(3233)["5asczk"]);
+          const stringResult = intl4.string(intl(3277)["5asczk"]);
           cResult[28] = stringResult;
         }
       } else {
@@ -319,8 +319,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               let tmp46Result = timestampProducer(View, obj12);
             } else {
               const obj14 = { size: GameIcon.GameIconSizes.SMALL, skuId: str };
-              tmp46Result = timestampProducer(intl(6674), obj14);
-              const intlResult = intl(6674);
+              tmp46Result = timestampProducer(intl(6851), obj14);
+              const intlResult = intl(6851);
             }
             cResult[37] = tmp7;
             cResult[38] = str;
@@ -338,7 +338,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         formatToPlainStringResult1 = intl2.formatToPlainString(util.t.eNXZ5O, obj15);
       }
     }
-  : (arg0) => {
+  : function AccountCreditTier(arg0) {
       ({ planId, currentSubscription } = arg0);
       ({ months, shouldAddDivider, unconsumedFractionalPremiumUnits, hasPremiumGroup } = arg0);
       const tmp = closure_8();
@@ -353,7 +353,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (hasPremiumGroup) {
         const intl3 = util.intl;
-        let stringResult = intl3.string(_modDef3233["5asczk"]);
+        let stringResult = intl3.string(_modDef3277["5asczk"]);
       } else {
         if (null != currentSubscription) {
           if (currentSubscription.planId === planId) {
@@ -435,7 +435,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/PremiumAccountCredit.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (currentSubscription) => {
+  ? function PremiumAccountCredit(currentSubscription) {
       const cResult = currentSubscription(stateFromStoresArray[9]).c(35);
       currentSubscription = currentSubscription.currentSubscription;
       ({ entitlements, style, creditListContainerStyle, hasPremiumGroup } = currentSubscription);
@@ -489,14 +489,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol2 = Symbol;
             if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-              class D {
+              class A {
                 constructor(arg0) {
                   return currentSubscription.subscriptionPlanId;
                 }
               }
-              cResult[5] = D;
+              cResult[5] = A;
             } else {
-              class D {
+              class A {
                 constructor(arg0) {
                   return currentSubscription.subscriptionPlanId;
                 }
@@ -505,13 +505,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const _Array = Array;
             const iterResult = iter(tmp2[16]);
             const found = iter(tmp2[16])(Array.from(entitlements)).filter(T);
-            iter = found.groupBy(D);
+            iter = found.groupBy(A);
             const valueResult = iter.value();
             cResult[2] = entitlements;
             cResult[3] = valueResult;
             const iterResultResult = iter(tmp2[16])(Array.from(entitlements));
           } else {
-            class D {
+            class A {
               constructor(arg0) {
                 return currentSubscription.subscriptionPlanId;
               }
@@ -519,7 +519,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             View = tmp9;
             const _Symbol3 = Symbol;
             if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-              class D {
+              class A {
                 constructor(arg0) {
                   return currentSubscription.subscriptionPlanId;
                 }
@@ -528,14 +528,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[6] = stringResult;
               const tmp15 = stringResult;
             } else {
-              class D {
+              class A {
                 constructor(arg0) {
                   return currentSubscription.subscriptionPlanId;
                 }
               }
             }
             if (cResult[7] !== tmp4.title) {
-              class D {
+              class A {
                 constructor(arg0) {
                   return currentSubscription.subscriptionPlanId;
                 }
@@ -551,20 +551,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[7] = tmp4.title;
               cResult[8] = tmp18;
             } else {
-              class D {
+              class A {
                 constructor(arg0) {
                   return currentSubscription.subscriptionPlanId;
                 }
               }
             }
             if (cResult[9] === creditListContainerStyle) {
-              class D {
+              class A {
                 constructor(arg0) {
                   return currentSubscription.subscriptionPlanId;
                 }
               }
               if (cResult[12] !== tmp9) {
-                class D {
+                class A {
                   constructor(arg0) {
                     return currentSubscription.subscriptionPlanId;
                   }
@@ -573,14 +573,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[12] = tmp9;
                 cResult[13] = keys;
               } else {
-                class D {
+                class A {
                   constructor(arg0) {
                     return currentSubscription.subscriptionPlanId;
                   }
                 }
               }
               if (cResult[14] === currentSubscription) {
-                class D {
+                class A {
                   constructor(arg0) {
                     return currentSubscription.subscriptionPlanId;
                   }
@@ -618,7 +618,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return null;
     }
-  : (currentSubscription) => {
+  : function PremiumAccountCredit(currentSubscription) {
       currentSubscription = currentSubscription.currentSubscription;
       ({ entitlements, hasPremiumGroup: importDefault } = currentSubscription);
       c3 = undefined;
@@ -655,7 +655,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl = tmp2(1126).intl;
           obj3.children = intl.string(tmp2(1126).t.YugZY0);
-          const items1 = [closure_6(tmp2(4892).Text, obj3), , ,];
+          const items1 = [closure_6(tmp2(5086).Text, obj3), , ,];
           const obj4 = { style: null, children: null };
           const items2 = [tmp.creditList, creditListContainerStyle];
           obj4.style = items2;
@@ -680,7 +680,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
           const intl2 = tmp2(1126).intl;
           obj5.children = intl2.string(tmp2(1126).t.Z5b2Gf);
-          items1[2] = closure_6(tmp2(4892).Text, obj5);
+          items1[2] = closure_6(tmp2(5086).Text, obj5);
           let tmp9Result = null;
           if (null != currentSubscription) {
             tmp9Result = null;
@@ -688,7 +688,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
               const intl3 = tmp2(1126).intl;
               obj6.children = intl3.string(tmp2(1126).t.azRP0E);
-              tmp9Result = closure_6(tmp2(4892).Text, obj6);
+              tmp9Result = closure_6(tmp2(5086).Text, obj6);
             }
           }
           items1[3] = tmp9Result;

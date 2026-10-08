@@ -7,9 +7,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDmSpamFilterSettingOptions() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
@@ -22,19 +22,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      noop.useMemo(() => {
+  : function useDmSpamFilterSettingOptions() {
+      return noop.useMemo(() => {
         const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
         return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
       }, []);
+    };
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.tiCXaH);
   },
-  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7966).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useDmSpamFilterSettingOptions() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
@@ -51,12 +52,13 @@ const radio = SettingBuilders.createRadio({
         }
         return first;
       }
-    : () =>
-        noop.useMemo(() => {
+    : function useDmSpamFilterSettingOptions() {
+        return noop.useMemo(() => {
           const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
           return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
-        }, []),
-  useValue: fn(14663).useDerivedDmSpamFilterSettingValue,
+        }, []);
+      },
+  useValue: fn(14924).useDerivedDmSpamFilterSettingValue,
   onValueChange: function onDmSpamFilterSettingValueChange(arg0) {
     const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
     DmSpamFilterV2.updateSetting(Number(arg0));

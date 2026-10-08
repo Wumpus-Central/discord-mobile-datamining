@@ -198,9 +198,9 @@ export const trackSelectGIF = function trackSelectGIF(arg0) {
   }
 };
 export const initializeSearch = function initializeSearch() {
-  const obj = replaced(1266);
-  replaced = replaced(1266).v4().replace(closure_12, "");
-  const str = replaced(1266).v4();
+  const obj = replaced(1278);
+  replaced = replaced(1278).v4().replace(closure_12, "");
+  const str = replaced(1278).v4();
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.SEARCH_OPENED, {
     search_type: constants3.GIF,
     load_id: replaced,
@@ -389,7 +389,7 @@ export const addFavoriteGIF = function addFavoriteGIF(size) {
             obj3.order = num + 1;
             gifs.gifs[tmp23] = obj3;
             const FavoriteGIFs = frecency_user_settings.FavoriteGIFs;
-            if (FavoriteGIFs.toBinary(gifs).length > v65535) {
+            if (FavoriteGIFs.toBinary(gifs).length > collapsed) {
               const obj5 = { title: null, body: null };
               const intl = util.intl;
               obj5.title = intl.string(util.t["+XYXtZ"]);

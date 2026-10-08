@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileConfirmRemoveFriend.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileConfirmRemoveFriend(arg0) {
       const cResult = c.c(14);
       ({ userDisplayName, onConfirm } = arg0);
       if (cResult[0] !== userDisplayName) {
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = tmp20;
       tmp19 = tmp20;
     }
-  : (userDisplayName) => {
+  : function UserProfileConfirmRemoveFriend(userDisplayName) {
       userDisplayName = userDisplayName.userDisplayName;
       const obj = { title: null, content: null, actions: null };
       const intl = util.intl;

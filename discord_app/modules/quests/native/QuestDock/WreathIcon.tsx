@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../../../design/components/Icon/native/BaseIconImage.tsx";
-import _mod14922 from "../../../../../_runtime/metro/14922__.js";
+import _mod15184 from "../../../../../_runtime/metro/15184__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/WreathIcon.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function WreathIcon(arg0) {
       const cResult = c.c(9);
       if (cResult[0] !== arg0) {
         ({ style, color } = arg0);
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         INTERACTIVE_TEXT_DEFAULT = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod14922;
+        const tmpResult = _mod15184;
         cResult[4] = tmpResult;
         let tmp10 = tmpResult;
       } else {
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = tmp14;
       const obj2 = { source: tmp10, color: INTERACTIVE_TEXT_DEFAULT, style: tmp5 };
     }
-  : (color) => {
+  : function WreathIcon(color) {
       let INTERACTIVE_TEXT_DEFAULT = color.color;
       if (INTERACTIVE_TEXT_DEFAULT === undefined) {
         INTERACTIVE_TEXT_DEFAULT = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
       const merged1 = Object.assign(merged);
       return jsx(BaseIconImage.BaseIconImage, {
-        source: _mod14922,
+        source: _mod15184,
         color: INTERACTIVE_TEXT_DEFAULT,
         style: color.style,
       });

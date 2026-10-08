@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/game_claim/experiments/GameCl
 
 export const GameClaimCoachmarkExperiment = experiment;
 export const useGameClaimCoachmarkEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, location) => {
+  ? function useGameClaimCoachmarkEnabled(guildId, location) {
       const cResult = c.c(4);
       if (cResult[0] === guildId) {
         if (cResult[1] === location) {
@@ -40,4 +40,6 @@ export const useGameClaimCoachmarkEnabled = ReactCompilerGating.isReactCompilerE
       cResult[2] = obj3;
       tmp2 = obj3;
     }
-  : (guildId, location) => experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled;
+  : function useGameClaimCoachmarkEnabled(guildId, location) {
+      return experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled;
+    };

@@ -16,34 +16,34 @@ function createNativePlaceholderConfig(listFooter) {
   }
   const size = {
     borderRadius: "Array",
-    borderTopLeftRadius: "default",
-    borderTopRightRadius: "applicationId",
-    borderBottomLeftRadius: "track",
-    borderBottomRightRadius: "flags",
+    borderTopLeftRadius: "defineProperty",
+    borderTopRightRadius: "apply",
+    borderBottomLeftRadius: "WireType",
+    borderBottomRightRadius: "to",
     divider: "Array",
     dividerColor: "toCharArray$esjava$1",
-    dividerPaddingLeft: "unicodeVersion",
-    dividerPaddingRight: "then",
-    placeholderShape: "method",
-    placeholderShapeColor: "backgroundColor",
-    placeholderShapeCount: "default",
-    placeholderShapeGap: "getGuild",
-    placeholderShapePaddingHorizontal: "Array",
+    dividerPaddingLeft: "code",
+    dividerPaddingRight: "st",
+    placeholderShape: "IconComponent",
+    placeholderShapeColor: "apply",
+    placeholderShapeCount: "nativeEvent",
+    placeholderShapeGap: "unicodeVersion",
+    placeholderShapePaddingHorizontal: "r",
     placeholderShapePaddingVertical: "toCharArray$esjava$1",
-    placeholderFeedBackgroundColor: "replace",
-    placeholderFeedColor: "enabled",
-    placeholderFeedLabelPadding: "a",
-    placeholderFeedLabelPaddingInnerRatio: "toCharArray$esjava$1",
-    placeholderFeedLabelSize: "limit",
-    placeholderFeedLabelSecondarySize: "p",
-    placeholderFeedPadding: "r",
-    placeholderFeedShape: "toCharArray$esjava$1",
-    placeholderFeedShapeSize: "unicodeVersion",
+    placeholderFeedBackgroundColor: "Array",
+    placeholderFeedColor: "color",
+    placeholderFeedLabelPadding: "hasDiversityParent",
+    placeholderFeedLabelPaddingInnerRatio: "i",
+    placeholderFeedLabelSize: "w",
+    placeholderFeedLabelSecondarySize: "__closure",
+    placeholderFeedPadding: "code",
+    placeholderFeedShape: "to",
+    placeholderFeedShapeSize: "e",
     placeholderType: NONE,
-    width: "source",
-    height: "intl",
-    verticalAlignment: "Array",
-    horizontalAlignment: "toCharArray$esjava$1",
+    width: "\u0432\u0434\u0438\u0433\u043D\u0430\u0442 \u043F\u0430\u043B\u0435\u0446",
+    height: "\u0434\u0430",
+    verticalAlignment: "\u0434\u043E\u0431\u0440\u0435",
+    horizontalAlignment: "\u043C\u043D\u043E\u0433\u043E \u044F\u0441\u043D\u043E",
   };
   if (null == listFooter) {
     return size;
@@ -162,14 +162,14 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-let obj = { sectionItem: { type: fn(6566).FastestListPropsPlaceholderType.NONE } };
+let obj = { sectionItem: { type: fn(6742).FastestListPropsPlaceholderType.NONE } };
 const ReactCompilerGating = fn(558);
-let obj2 = { type: fn(6566).FastestListPropsPlaceholderType.NONE };
+let obj2 = { type: fn(6742).FastestListPropsPlaceholderType.NONE };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFastestListPropsPlaceholder(arg0) {
       let tmp = arg0;
       obj = c;
       const cResult = obj.c(25);
@@ -279,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[24] = obj2;
       tmp27 = obj2;
     }
-  : () => {
+  : function useFastestListPropsPlaceholder() {
       let tmp = arg0;
       if (arg0 === undefined) {
         tmp = obj;

@@ -130,11 +130,11 @@ export const subscribeKeyCommand = function subscribeKeyCommand(arg0) {
   };
 };
 export const useKeyCommands = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useKeyCommands(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] !== arg0) {
-        const fn = function i() {
+        const fn = function o() {
           while (tmp2 !== undefined) {
             let tmp5 = registerKeyCommand(tmp3);
             continue;
@@ -159,7 +159,7 @@ export const useKeyCommands = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp2, tmp3);
     }
-  : (arg0) => {
+  : function useKeyCommands(arg0) {
       dependencyMap = arg0;
       const items = [arg0];
       const effect = noop.useEffect(() => {

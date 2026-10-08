@@ -16,12 +16,12 @@ function handlePress() {
   obj2.IconComponent = CircleInformationIcon.CircleInformationIcon;
   ToastActionCreatorsDefault.open(obj2);
 }
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: {
-    marginVertical: fn(11711).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11776).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -29,7 +29,7 @@ let obj = {
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11711).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11776).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -38,7 +38,7 @@ let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/Un
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function UnknownChannel(channel) {
         const cResult = channel(576).c(13);
         channel = channel.channel;
         const selected = channel.selected;
@@ -118,7 +118,7 @@ export default noop.memo(
           resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS,
         };
       }
-    : (channel) => {
+    : function UnknownChannel(channel) {
         channel = channel.channel;
         const selected = channel.selected;
         const items = [channel.id];

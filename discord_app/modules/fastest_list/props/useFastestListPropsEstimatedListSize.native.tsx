@@ -9,7 +9,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsEstimatedListSize.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (estimatedListSize) => {
+  ? function useFastestListPropsEstimatedListSize(estimatedListSize) {
       const cResult = estimatedListSize(horizontal[3]).c(3);
       estimatedListSize = estimatedListSize.estimatedListSize;
       horizontal = estimatedListSize.horizontal;
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp2 = fn;
       let obj = estimatedListSize(horizontal[3]);
     }
-  : (arg0) => {
+  : function useFastestListPropsEstimatedListSize(arg0) {
       ({ estimatedListSize: require, horizontal: dependencyMap } = arg0);
       return _slicedToArray(
         noop.useState(() => {

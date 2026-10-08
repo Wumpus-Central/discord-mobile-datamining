@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const Constants = fn(1085);
 ({ AnalyticsPages, AnalyticsSections, AnalyticsObjectTypes } = Constants);
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ SubscriptionIntervalTypes: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
 let closure_6 = {
   page: AnalyticsPages.USER_SETTINGS,
@@ -19,15 +19,15 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/useOpenPremiumMarketingPayment.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useOpenPremiumMarketingPayment(arg0) {
       let formatTrialCtaIntervalDuration = analyticsLocations;
       let result1 = dependencyMap;
       const cResult = analyticsLocations(576).c(10);
-      analyticsLocations = premiumTrialOfferPremiumType(6664)(arg0).analyticsLocations;
+      analyticsLocations = premiumTrialOfferPremiumType(6841)(arg0).analyticsLocations;
       let obj = analyticsLocations(576);
-      const premiumTrialOffer = analyticsLocations(6969).usePremiumTrialOffer();
-      const obj2 = analyticsLocations(6969);
-      premiumTrialOfferPremiumType = analyticsLocations(6968).usePremiumTrialOfferPremiumType();
+      const premiumTrialOffer = analyticsLocations(7158).usePremiumTrialOffer();
+      const obj2 = analyticsLocations(7158);
+      premiumTrialOfferPremiumType = analyticsLocations(7157).usePremiumTrialOfferPremiumType();
       if (cResult[0] === analyticsLocations) {
         if (cResult[1] === premiumTrialOfferPremiumType) {
           let tmp5 = cResult[2];
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[4] === interval) {
           }
-          const result = formatTrialCtaIntervalDuration(4534);
+          const result = formatTrialCtaIntervalDuration(4726);
           formatTrialCtaIntervalDuration = result.formatTrialCtaIntervalDuration;
           const obj4 = { intervalType: interval, intervalCount };
           result1 = formatTrialCtaIntervalDuration(obj4);

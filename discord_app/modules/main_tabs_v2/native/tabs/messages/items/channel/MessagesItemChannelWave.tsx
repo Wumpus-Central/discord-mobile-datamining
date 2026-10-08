@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function MessagesItemChannelWave(arg0) {
         const cResult = c.c(5);
         ({ wavePressed, hasNameplate } = arg0);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -67,7 +67,7 @@ export default noop.memo(
         tmp10 = tmp11;
         tmp4 = undefined !== hasNameplate && hasNameplate;
       }
-    : (hasNameplate) => {
+    : function MessagesItemChannelWave(hasNameplate) {
         let flag = hasNameplate.hasNameplate;
         if (flag === undefined) {
           flag = false;

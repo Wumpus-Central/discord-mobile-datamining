@@ -9,6 +9,7 @@ const items = [
 ];
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionConstants.tsx");
 
+export const FAILOVER_SCAN_VERSION = -1;
 export const USER_SETTING_ACTION_SHEET_KEY = "SensitiveMediaFilterSetting";
 export const EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY = "ExplicitMediaFalsePositiveActionSheet";
 export const EXPLICIT_MEDIA_LEARN_MORE_ACTION_SHEET_KEY = "ExplicitMediaLearnMoreActionSheet";

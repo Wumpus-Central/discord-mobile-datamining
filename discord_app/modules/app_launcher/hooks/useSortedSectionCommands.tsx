@@ -5,13 +5,13 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const CommandListSortOrder = fn(11773).CommandListSortOrder;
+const CommandListSortOrder = fn(11840).CommandListSortOrder;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (sectionId) => {
+  ? function useSortedSectionCommands(sectionId) {
       const cResult = alphabeticalSortedCommands(576).c(15);
       sectionId = sectionId.sectionId;
       alphabeticalSortedCommands = sectionId;
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = tmp8;
       const tmp3 = _slicedToArray(noop.useState(CommandListSortOrder.ALPHABETICAL), 2);
     }
-  : (sectionId) => {
+  : function useSortedSectionCommands(sectionId) {
       sectionId = sectionId.sectionId;
       const commandsByActiveSection = sectionId.commandsByActiveSection;
       let setSortOrder;

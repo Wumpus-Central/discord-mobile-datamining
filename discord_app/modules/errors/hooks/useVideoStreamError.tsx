@@ -4,10 +4,10 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import AVErrorStore from "../av_errors/AVErrorStore.tsx";
 
 require = fn;
-const MediaEngineContextTypes = fn(4921).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5115).MediaEngineContextTypes;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useVideoStreamErrorContext(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(4);
@@ -66,7 +66,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useVideoStreamErrorContext(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       let items = [AVErrorStore, AuthenticationStore];
@@ -100,12 +100,12 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/errors/hooks/useVideoStreamError.tsx");
 
-export default (arg0, arg1) => {
+export default function useVideoStreamError(arg0, arg1) {
   const tmp = closure_5(arg0, arg1);
   let type;
   if (tmp != null) {
     type = tmp.type;
   }
   return type;
-};
+}
 export const useVideoStreamErrorContext = tmp2;

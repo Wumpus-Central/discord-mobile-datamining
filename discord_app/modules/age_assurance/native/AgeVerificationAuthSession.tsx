@@ -148,7 +148,7 @@ export function getIsAgeVerificationAuthSessionAwaitingResult() {
   return c6;
 }
 export const useIsAgeVerificationAuthSessionOpen = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsAgeVerificationAuthSessionOpen() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n(isOpen) {
@@ -161,5 +161,7 @@ export const useIsAgeVerificationAuthSessionOpen = ReactCompilerGating.isReactCo
       }
       return closure_5(first);
     }
-  : () => closure_5((isOpen) => isOpen.isOpen);
+  : function useIsAgeVerificationAuthSessionOpen() {
+      return closure_5((isOpen) => isOpen.isOpen);
+    };
 export { getIsAgeVerificationAuthSessionOpen };

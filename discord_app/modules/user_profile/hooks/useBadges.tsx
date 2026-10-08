@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useBadges.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (getBadges, arg1) => {
+  ? function useBadges(getBadges, arg1) {
       const cResult = c.c(12);
       const LegacyUsernameDisabled = UserSettings.LegacyUsernameDisabled;
       let setting = LegacyUsernameDisabled.useSetting();
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function u() {
+        const fn = function c() {
           return currentUser.getCurrentUser();
         };
         cResult[0] = items;
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult2 = useStateFromStores;
     }
-  : (getBadges, arg1) => {
+  : function useBadges(getBadges, arg1) {
       const LegacyUsernameDisabled = UserSettings.LegacyUsernameDisabled;
       let setting = LegacyUsernameDisabled.useSetting();
       if (undefined !== arg1) {

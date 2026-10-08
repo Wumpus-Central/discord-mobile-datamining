@@ -73,7 +73,7 @@ function getVisibleUserVoiceActivity(arg0, arg1) {
 }
 const Permissions = fn(1096).Permissions;
 let closure_6 = { ChannelStore, PermissionStore, VoiceStateStore };
-let closure_7 = Object.freeze({ voiceState: "start", voiceChannel: "unicodeVersion" });
+let closure_7 = Object.freeze({ voiceState: "Array", voiceChannel: "Reflect" });
 const ReactCompilerGating = fn(558);
 function getUserVoiceState(arg0) {
   ({ userId, guildId, includeNonDiscoverable } = arg0);
@@ -107,7 +107,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/useUserVoiceActivity.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function useUserVoiceActivity(userId) {
       const cResult = userId(guildId[5]).c(6);
       userId = userId.userId;
       guildId = userId.guildId;
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp = userId;
       tmp2 = guildId;
     }
-  : (userId) => {
+  : function useUserVoiceActivity(userId) {
       userId = userId.userId;
       const guildId = userId.guildId;
       const includeNonDiscoverable = userId.includeNonDiscoverable;

@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useSelectedActiveStream.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useSelectedActiveStream(id) {
       _require = id;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7);
     }
-  : (arg0) => {
+  : function useSelectedActiveStream(arg0) {
       _require = arg0;
       const items = [ChannelRTCStore, ApplicationStreamingStore];
       return require("initialize").useStateFromStores(items, () => {

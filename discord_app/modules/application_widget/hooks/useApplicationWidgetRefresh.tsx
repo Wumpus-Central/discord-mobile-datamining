@@ -12,13 +12,13 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetRefresh.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useApplicationWidgetRefresh(arg0) {
       _require = arg0;
       const cResult = require("c").c(8);
       [pending, dependencyMap] = noop.useState(false);
       _slicedToArray = noop.useRef(true);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function c() {
+        const fn = function s() {
           closure_3.current = true;
           return () => {
             closure_1_3.current = false;
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = obj3;
         tmp8 = obj3;
       }
-      const fn2 = function s() {
+      const fn2 = function l() {
         let tmp = first;
         if (!first) {
           tmp = null == closure_0;
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn2;
       let obj = require("c");
     }
-  : (arg0) => {
+  : function useApplicationWidgetRefresh(arg0) {
       closure_0 = arg0;
       [pending, closure_2] = noop.useState(false);
       _slicedToArray = noop.useRef(true);

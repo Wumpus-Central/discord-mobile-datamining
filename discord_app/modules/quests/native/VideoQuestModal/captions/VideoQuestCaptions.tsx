@@ -11,7 +11,7 @@ import n from "../../../../../../_runtime/metro/00683__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null, captionBox: null, captionText: null };
 const rect = {
   position: "absolute",
@@ -37,7 +37,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptions.tsx");
 
 export const VideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled()
-  ? (quest) => {
+  ? function VideoQuestCaptions(quest) {
       const cResult = c.c(15);
       ({ currentTime, style, visible } = quest);
       let tmp4 = undefined === visible;
@@ -138,7 +138,7 @@ export const VideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp11;
     }
-  : (currentTime) => {
+  : function VideoQuestCaptions(currentTime) {
       currentTime = currentTime.currentTime;
       let flag = currentTime.visible;
       ({ quest, style } = currentTime);

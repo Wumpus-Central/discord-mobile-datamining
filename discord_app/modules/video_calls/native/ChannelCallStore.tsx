@@ -13,11 +13,11 @@ import apply from "../../../../_runtime/metro/00012__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(9087);
+const ChannelCallConstants = fn(10334);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const OrientationLockState = fn(2011).OrientationLockState;
-const ParticipantTypes = fn(4917).ParticipantTypes;
-const timeout = new fn(2046).Timeout();
+const OrientationLockState = fn(2023).OrientationLockState;
+const ParticipantTypes = fn(5113).ParticipantTypes;
+const timeout = new fn(2058).Timeout();
 let obj = {
   focus: true,
   pipFocus: false,
@@ -31,9 +31,9 @@ let size = {
   y: "Symbol",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8018).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: false,
-  isInitialized: null,
+  screenOrientation: fn(8426).OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: true,
+  isInitialized: true,
   isVisible: null,
 };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
@@ -42,9 +42,9 @@ const size1 = {
   y: "Symbol",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8018).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: false,
-  isInitialized: null,
+  screenOrientation: fn(8426).OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: true,
+  isInitialized: true,
   isVisible: null,
 };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
@@ -54,13 +54,13 @@ const module_570 = fn(570);
 let obj3 = module_570.create(() => closure_9);
 let ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsVoiceChatFocused() {
       const voiceChatDrawerState = obj3().voiceChatDrawerState;
       return (
         voiceChatDrawerState === VoiceChatDrawerState.OPEN || voiceChatDrawerState === VoiceChatDrawerState.CLOSING
       );
     }
-  : () => {
+  : function useIsVoiceChatFocused() {
       const voiceChatDrawerState = obj3().voiceChatDrawerState;
       return (
         voiceChatDrawerState === VoiceChatDrawerState.OPEN || voiceChatDrawerState === VoiceChatDrawerState.CLOSING
@@ -70,7 +70,7 @@ let closure_11 = tmp6;
 ReactCompilerGating = fn(558);
 const throttleResult = apply.throttle(() => {
   const pipFocus = obj3.getState().pipFocus;
-  pipFocus(1259).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
+  pipFocus(1271).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
 }, 300);
 function resetFocusTimer() {
   timeout.stop();
@@ -88,7 +88,7 @@ export const setFocus = function setFocus(focus) {
 };
 export const toggleFocus = function toggleFocus() {
   const focus = obj3.getState().focus;
-  focus(1259).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
+  focus(1271).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
 };
 export { resetFocusTimer };
 export const resetFocus = function resetFocus() {
@@ -119,7 +119,7 @@ export const setVoiceChatDrawerState = function setVoiceChatDrawerState(embedded
 export const togglePipFocus = throttleResult;
 export const useIsVoiceChatFocused = tmp6;
 export const useChannelCallOrientationHandlers = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isGuildStageVoice) => {
+  ? function useChannelCallOrientationHandlers(isGuildStageVoice) {
       const cResult = require("c").c(16);
       const tmp4 = useIsPrivateAudioOnlyCallDefault(isGuildStageVoice);
       _require = tmp4;
@@ -151,36 +151,31 @@ export const useChannelCallOrientationHandlers = ReactCompilerGating.isReactComp
         const _Symbol2 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [applicationId];
-          class I {
-            constructor() {
-              if (null != applicationId) {
-                tmp3 = closure_4;
-                UNLOCKED2 = closure_4.getOrientationLockStateForApp(tmp);
-                if (UNLOCKED2 == null) {
-                  tmp4 = OrientationLockState;
-                  UNLOCKED2 = OrientationLockState.UNLOCKED;
-                }
-                UNLOCKED = UNLOCKED2;
-              } else {
-                tmp2 = OrientationLockState;
-                UNLOCKED = OrientationLockState.UNLOCKED;
+          const fn = function k() {
+            if (null != applicationId) {
+              let UNLOCKED2 = EmbeddedActivitiesStore.getOrientationLockStateForApp(tmp);
+              if (UNLOCKED2 == null) {
+                UNLOCKED2 = OrientationLockState.UNLOCKED;
               }
-              return UNLOCKED;
+              let UNLOCKED = UNLOCKED2;
+            } else {
+              UNLOCKED = OrientationLockState.UNLOCKED;
             }
-          }
+            return UNLOCKED;
+          };
           const items1 = [applicationId];
           cResult[4] = items;
-          cResult[5] = I;
+          cResult[5] = fn;
           cResult[6] = items1;
           let tmp19 = items1;
-          let tmp18 = I;
+          let tmp18 = fn;
           let tmp17 = items;
         } else {
           tmp17 = cResult[4];
           tmp18 = cResult[5];
           tmp19 = cResult[6];
         }
-        tmpResult = tmp(9090);
+        tmpResult = tmp(10337);
         const stateFromStores = tmp(504).useStateFromStores(tmp17, tmp18, tmp19);
         const _Symbol3 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
@@ -190,23 +185,7 @@ export const useChannelCallOrientationHandlers = ReactCompilerGating.isReactComp
             }
           }
           const items2 = [];
-          class I {
-            constructor() {
-              if (null != applicationId) {
-                tmp3 = closure_4;
-                UNLOCKED2 = closure_4.getOrientationLockStateForApp(tmp);
-                if (UNLOCKED2 == null) {
-                  tmp4 = OrientationLockState;
-                  UNLOCKED2 = OrientationLockState.UNLOCKED;
-                }
-                UNLOCKED = UNLOCKED2;
-              } else {
-                tmp2 = OrientationLockState;
-                UNLOCKED = OrientationLockState.UNLOCKED;
-              }
-              return UNLOCKED;
-            }
-          }
+          cResult[7] = P;
           cResult[8] = items2;
           let tmp23 = items2;
         } else {
@@ -311,7 +290,7 @@ export const useChannelCallOrientationHandlers = ReactCompilerGating.isReactComp
       tmp6 = isGuildStageVoiceResult;
       let obj = require("c");
     }
-  : (isGuildStageVoice) => {
+  : function useChannelCallOrientationHandlers(isGuildStageVoice) {
       const tmp2 = useIsPrivateAudioOnlyCallDefault(isGuildStageVoice);
       _require = tmp2;
       const tmp3 = useSelectedParticipantDefault(isGuildStageVoice);

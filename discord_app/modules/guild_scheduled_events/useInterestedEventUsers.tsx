@@ -12,7 +12,7 @@ let closure_4 = GuildScheduledEventsConstants.GuildScheduledEventUserResponses;
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useInterestedEventUsers.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useInterestedEventUsers(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(16);
@@ -55,26 +55,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[9] !== stateFromStoresArray1) {
           const _Symbol = Symbol;
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-            class T {
+            class I {
               constructor(arg0, arg1) {
                 arg0[arg1.user_id] = arg1;
                 return arg0;
               }
             }
-            cResult[11] = T;
+            cResult[11] = I;
           } else {
-            class T {
+            class I {
               constructor(arg0, arg1) {
                 arg0[arg1.user_id] = arg1;
                 return arg0;
               }
             }
           }
-          const reduced = stateFromStoresArray1.reduce(T, {});
+          const reduced = stateFromStoresArray1.reduce(I, {});
           cResult[9] = stateFromStoresArray1;
           cResult[10] = reduced;
         } else {
-          class T {
+          class I {
             constructor(arg0, arg1) {
               arg0[arg1.user_id] = arg1;
               return arg0;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           GuildScheduledEventStore = tmp12;
           if (cResult[12] === stateFromStoresArray) {
-            class T {
+            class I {
               constructor(arg0, arg1) {
                 arg0[arg1.user_id] = arg1;
                 return arg0;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn2;
       const tmpResult = require("initialize");
     }
-  : (arg0, arg1) => {
+  : function useInterestedEventUsers(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       let items = [stateFromStoresArray1];

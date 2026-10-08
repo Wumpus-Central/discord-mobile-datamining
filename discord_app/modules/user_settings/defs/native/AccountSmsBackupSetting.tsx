@@ -1,22 +1,22 @@
 // discord_app/modules/user_settings/defs/native/AccountSmsBackupSetting.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
-import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import PhoneActionCreators from "../../../phone/PhoneActionCreators.tsx";
 import MFAActionCreatorsDefault from "../../../../actions/MFAActionCreators.tsx";
 import showUserSettingsInputAlertDefault from "../../account/native/showUserSettingsInputAlert.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 const initialize = obj(504);
-const account_MFAUtils = obj(14596);
+const account_MFAUtils = obj(14857);
 require = fn;
 const UserFlags = fn(1085).UserFlags;
-let closure_5 = fn(6547).PHONE_VERIFICATION_MODAL_KEY;
+let closure_5 = fn(6723).PHONE_VERIFICATION_MODAL_KEY;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAccountSMSBackupSettingDescription() {
       let obj = require;
       let sMSBackupDisabledMessage = dependencyMap;
       const cResult = c.c(4);
@@ -43,7 +43,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const objResult = initialize;
     }
-  : () => {
+  : function useAccountSMSBackupSettingDescription() {
       const items = [UserStore];
       const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
       let sMSBackupDisabledMessage = null;
@@ -57,7 +57,9 @@ let closure_6 = tmp2;
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-fn = () => null != closure_6();
+function useAccountSMSBackupSettingIsDisabled() {
+  return null != closure_6();
+}
 const apply = fn(12);
 let closure_7 = apply.debounce(function toggleSMS(user) {
   user = user.user;
@@ -91,17 +93,17 @@ let closure_7 = apply.debounce(function toggleSMS(user) {
     const obj5 = { reason: null };
     let obj = ModalActionCreatorsDefault;
     obj5.reason = PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(asyncRequireImpl(6546, dependencyMap.paths), obj5, closure_5);
-    const tmp5 = asyncRequireImpl(6546, dependencyMap.paths);
+    obj.pushLazy(asyncRequireImpl(6722, dependencyMap.paths), obj5, closure_5);
+    const tmp5 = asyncRequireImpl(6722, dependencyMap.paths);
   }
 }, 200);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAccountSMSBackupSettingToggleValue() {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function l() {
+        const fn = function u() {
           return currentUser.getCurrentUser();
         };
         cResult[0] = items;
@@ -128,7 +130,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp7;
     }
-  : () => {
+  : function useAccountSMSBackupSettingToggleValue() {
       const items = [UserStore];
       const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
       let flag;
@@ -145,14 +147,14 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.uHAJ5v);
   },
-  parent: fn(7645).MobileUserSettings.ACCOUNT,
-  useIsDisabled: fn,
+  parent: fn(7966).MobileUserSettings.ACCOUNT,
+  useIsDisabled: useAccountSMSBackupSettingIsDisabled,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useAccountSMSBackupSettingToggleValue() {
         const cResult = c.c(4);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [UserStore];
-          const fn = function l() {
+          const fn = function u() {
             return currentUser.getCurrentUser();
           };
           cResult[0] = items;
@@ -179,7 +181,7 @@ const toggle = SettingBuilders.createToggle({
         }
         return tmp7;
       }
-    : () => {
+    : function useAccountSMSBackupSettingToggleValue() {
         const items = [UserStore];
         const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
         let flag;
@@ -199,7 +201,7 @@ const toggle = SettingBuilders.createToggle({
     }
   },
   useDescription: tmp2,
-  usePredicate: fn(14510).useIsTOTPEnabled,
+  usePredicate: fn(14770).useIsTOTPEnabled,
 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");

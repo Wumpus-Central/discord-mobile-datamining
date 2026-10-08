@@ -11,9 +11,9 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSaturationSettingProps() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = {
@@ -32,8 +32,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      noop.useMemo(
+  : function useSaturationSettingProps() {
+      return noop.useMemo(
         () => ({
           value: saturation.saturation,
           onSlidingComplete: AccessibilityActionCreators.setSaturation,
@@ -45,17 +45,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }),
         [],
       );
+    };
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["5PWWCY"]);
   },
-  parent: fn(7645).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7966).MobileUserSettings.ACCESSIBILITY,
   useTrailing() {
     return jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
   },
   useProps: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useSaturationSettingProps() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = {
@@ -74,8 +75,8 @@ const slider = SettingBuilders.createSlider({
         }
         return first;
       }
-    : () =>
-        noop.useMemo(
+    : function useSaturationSettingProps() {
+        return noop.useMemo(
           () => ({
             value: saturation.saturation,
             onSlidingComplete: AccessibilityActionCreators.setSaturation,
@@ -86,7 +87,8 @@ const slider = SettingBuilders.createSlider({
             endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}),
           }),
           [],
-        ),
+        );
+      },
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ReduceSaturationSetting.tsx");

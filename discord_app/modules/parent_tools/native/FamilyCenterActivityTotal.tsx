@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LEDGE);
 obj2.container = {
@@ -35,7 +35,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityTotal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (displayType) => {
+  ? function FamilyCenterActivityTotal(displayType) {
       const cResult = c.c(11);
       displayType = displayType.displayType;
       const tmp4 = closure_5();
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp11;
       tmp10 = tmp11;
     }
-  : (displayType) => {
+  : function FamilyCenterActivityTotal(displayType) {
       displayType = displayType.displayType;
       const tmp = closure_5();
       const actionTotalsForDisplayType = useFamilyCenterActivities.useActionTotalsForDisplayType(displayType);

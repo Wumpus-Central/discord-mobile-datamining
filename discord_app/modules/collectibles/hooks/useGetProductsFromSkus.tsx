@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/hooks/useGetProductsFromSkus.tsx
 import _mod19 from "../../../../_runtime/metro/00019__.js";
-import uniqByDefault from "../../../../_runtime/15755_uniqBy.js";
+import uniqByDefault from "../../../../_runtime/16013_uniqBy.js";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -9,11 +9,11 @@ _mod19.useCallback;
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useGetProductsFromSkus.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGetProductsFromSkus() {
       const cResult = stateFromStores(576).c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [CollectiblesCategoryStore];
-        const fn = function n() {
+        const fn = function u() {
           return productByStoreListingId.products;
         };
         cResult[0] = items;
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = stateFromStores(576);
       stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
       if (cResult[2] !== stateFromStores) {
-        const fn2 = function s(arr) {
+        const fn2 = function n(arr) {
           const mapped = arr.map((item) => {
             value = stateFromStores.get(item);
             productByStoreListingId = value;
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function useGetProductsFromSkus() {
       const items = [CollectiblesCategoryStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () => productByStoreListingId.products);
       const items1 = [stateFromStores];

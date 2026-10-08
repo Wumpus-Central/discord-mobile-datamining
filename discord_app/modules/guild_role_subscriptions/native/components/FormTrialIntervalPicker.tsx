@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormTrialIntervalPicker.tsx
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FormDropdownDefault from "FormDropdown.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -22,12 +22,12 @@ export default function FormTrialIntervalPicker(disabled) {
     let intl = interval(1126).intl;
     let stringResult = intl.string(interval(1126).t.WZG1BU);
   } else {
-    stringResult = interval(15064).formatPlanIntervalDuration(interval);
-    let obj = interval(15064);
+    stringResult = interval(15326).formatPlanIntervalDuration(interval);
+    let obj = interval(15326);
   }
   return jsx(FormDropdownDefault, {
     label: stringResult,
-    onPress() {
+    onPress: function handleSelectTrialInterval() {
       const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
       const obj = ActionSheetActionCreatorsDefault;
       const intl = util.intl;
@@ -44,8 +44,8 @@ export default function FormTrialIntervalPicker(disabled) {
         tmp3 = null;
       }
       obj2.selectedItem = tmp3;
-      obj.openLazy(asyncRequireImpl(8978, dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj2);
-      const tmp = asyncRequireImpl(8978, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(8529, dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj2);
+      const tmp = asyncRequireImpl(8529, dependencyMap.paths);
     },
     disabled: disabled.disabled,
   });

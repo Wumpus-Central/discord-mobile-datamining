@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActivityCardsItem(arg0) {
       const cResult = animatedStyles(576).c(7);
       ({ cards, animatedStyles } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp8;
       }
-      const tmp9 = jsx(animatedStyles(8404).FlashList, {
+      const tmp9 = jsx(animatedStyles(8600).FlashList, {
         contentContainerStyle: first,
         data: cards,
         renderItem: tmp6,
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp9;
       const obj = animatedStyles(576);
     }
-  : (animatedStyles) => {
+  : function ActivityCardsItem(animatedStyles) {
       animatedStyles = animatedStyles.animatedStyles;
       const obj = {
         contentContainerStyle: {
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         showsHorizontalScrollIndicator: false,
         horizontal: true,
       };
-      return jsx(animatedStyles(8404).FlashList, {
+      return jsx(animatedStyles(8600).FlashList, {
         contentContainerStyle: {
           paddingVertical: nativeDefault.space.PX_16,
           paddingHorizontal: nativeDefault.space.PX_16,

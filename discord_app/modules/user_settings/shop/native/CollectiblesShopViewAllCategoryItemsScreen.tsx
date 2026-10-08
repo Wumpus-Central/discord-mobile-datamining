@@ -14,12 +14,12 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function CollectiblesShopViewAllCategoryItemsScreen() {
       const cResult = c.c(5);
       const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
       const stackNavigation = useNavigation.useStackNavigation();
       if (cResult[0] !== stackNavigation) {
-        const fn = function n() {
+        const fn = function o() {
           stackNavigation.setOptions({ headerShown: false });
         };
         const items = [stackNavigation];
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function CollectiblesShopViewAllCategoryItemsScreen() {
       const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
       const stackNavigation = useNavigation.useStackNavigation();
       const items = [stackNavigation];

@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallMicButton.tsx");
 
 export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function ChannelCallMicButton(channel) {
       const cResult = c.c(16);
       ({ isSmallSize, disableTint } = channel);
       let tmp4 = undefined !== disableTint;
@@ -61,7 +61,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp16 = cResult[7];
         }
-        const tmp5Result = importDefault(mute ? 9704 : 9705);
+        const tmp5Result = importDefault(mute ? 10893 : 10894);
         if (!tmp4) {
           tmp4 = mute;
         }
@@ -123,7 +123,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = muteHandler;
       const tmpResult2 = VoiceActionUtils;
     }
-  : (disableTint) => {
+  : function ChannelCallMicButton(disableTint) {
       let flag = disableTint.disableTint;
       ({ channel, isSmallSize } = disableTint);
       if (flag === undefined) {
@@ -137,7 +137,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
         () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo(),
       );
       const obj = mute(504);
-      const muteHandler = mute(9700).createMuteHandler(tmp3, stateFromStores);
+      const muteHandler = mute(10889).createMuteHandler(tmp3, stateFromStores);
       mute = muteHandler.mute;
       const items1 = [mute];
       const memo = noop.useMemo(() => jsx(VoicePanelRiveMicButton.VoicePanelRiveMicButton, { muted: mute }), items1);
@@ -154,7 +154,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
       const intl = mute(1126).intl;
       obj3.accessibilityLabel = intl.string(mute(1126).t.B3zz0G);
       obj3.onPress = muteHandler.onPress;
-      obj3.source = importDefault(mute ? 9704 : 9705);
+      obj3.source = importDefault(mute ? 10893 : 10894);
       if (!flag) {
         flag = mute;
       }

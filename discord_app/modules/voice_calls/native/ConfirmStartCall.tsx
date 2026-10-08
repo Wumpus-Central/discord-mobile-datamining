@@ -10,7 +10,7 @@ const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
 const ReactCompilerGating = fn(558);
 let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onConfirm) => {
+  ? function ConfirmStartCall(onConfirm) {
       const cResult = c.c(8);
       onConfirm = onConfirm.onConfirm;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -67,7 +67,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp16;
     }
-  : (onConfirm) => {
+  : function ConfirmStartCall(onConfirm) {
       const obj = { title: null, content: null, actions: null };
       const intl = util.intl;
       obj.title = intl.string(util.t.HlAPoq);

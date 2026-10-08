@@ -4,15 +4,11 @@ import size from "../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/restoreEventRecurrence.tsx");
 
-export default function restoreEventRecurrence(arg0, guild_id, id, event_exception_id) {
+export default function restoreEventRecurrence(arg0, guild_id, id, c2) {
   ({ scheduled_start_time, scheduled_end_time } = arg0);
   if (null == scheduled_start_time) {
     if (null == scheduled_end_time) {
-      let result = GuildScheduledEventsActionCreatorsDefault.deleteGuildEventException(
-        guild_id,
-        id,
-        event_exception_id,
-      );
+      let result = GuildScheduledEventsActionCreatorsDefault.deleteGuildEventException(guild_id, id, c2);
     }
     return result;
   }
@@ -20,7 +16,7 @@ export default function restoreEventRecurrence(arg0, guild_id, id, event_excepti
     { scheduled_start_time, scheduled_end_time, is_canceled: false },
     guild_id,
     id,
-    event_exception_id,
+    c2,
   );
   const obj2 = { scheduled_start_time, scheduled_end_time, is_canceled: false };
 }

@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/useIsSocialLayerParentApplication.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (application) => {
+  ? function useIsSocialLayerParentApplication(application) {
       const cResult = c.c(2);
       if (cResult[0] !== application) {
         const hasApplicationFlagResult = ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.PARENT);
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (arg0) => {
+  : function useIsSocialLayerParentApplication(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       return noop.useMemo(() => ApplicationFlagUtils.hasApplicationFlag(closure_0, ApplicationFlags.PARENT), items);

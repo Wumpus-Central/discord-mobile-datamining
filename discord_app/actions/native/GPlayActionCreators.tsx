@@ -457,7 +457,7 @@ let closure_34 = async function _verifyPurchase(arg0) {
             const tmp75 = state.getState().analyticsByProductId[closure_0.productId];
             closure_131_1 = tmp75;
             id = id.getId();
-            const SubscriptionProductIds = closure_2_0(6926).SubscriptionProductIds;
+            const SubscriptionProductIds = closure_2_0(7115).SubscriptionProductIds;
             const hasItem = SubscriptionProductIds.includes(closure_0.productId);
             let tmp53 = !hasItem;
             closure_131_2 = tmp53;
@@ -477,11 +477,11 @@ let closure_34 = async function _verifyPurchase(arg0) {
             }
             if (tmp53) {
               const obj4 = { source: "verifyPurchase", sku_id: closure_0.productId };
-              _true(1252).track(constants.GIFT_INFO_OPTIONS_MISSING, obj4);
-              const obj8 = _true(1252);
+              _true(1264).track(constants.GIFT_INFO_OPTIONS_MISSING, obj4);
+              const obj8 = _true(1264);
             }
             c6 = 1;
-            const HTTP = closure_2_0(1282).HTTP;
+            const HTTP = closure_2_0(1294).HTTP;
             const request = { url: constants2.VERIFY_PURCHASE, body: null, rejectWithError: false };
             const obj5 = {
               purchase_token: closure_0.purchaseToken,
@@ -619,14 +619,14 @@ let closure_3 = ["succeededOnlyFields"];
 let closure_4 = ["succeededOnlyFields"];
 let subscriptionId = ["succeededOnlyFields"];
 let closure_6 = ["succeededOnlyFields"];
-const GPlayAnalyticsStore = fn(8902);
+const GPlayAnalyticsStore = fn(9335);
 ({ deleteGPlayAnalytics: closure_9, useGPlayAnalyticsStore: c10 } = GPlayAnalyticsStore);
 let Constants = fn(1085);
 ({ AnalyticEvents: map1, Endpoints: closure_14, PriceSetAssignmentPurchaseTypes: closure_15 } = Constants);
-Constants = fn(6932);
+Constants = fn(7121);
 const GPlayBillingResult = Constants.GPlayBillingResult;
 const GPlaySkusType = Constants.GPlaySkusType;
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ PremiumSubscriptionSKUs: closure_18, SubscriptionPlanInfo: closure_19 } = PremiumConstants);
 const PaymentGateways = fn(1096).PaymentGateways;
 const BillingManager = fn(17).NativeModules.BillingManager;
@@ -1668,7 +1668,7 @@ export const loadUserCountry = function loadUserCountry() {
   }
   return applyArgumentsResult;
 };
-export const purchase = function () {
+export const purchase = function purchase() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

@@ -1,20 +1,20 @@
 // discord_app/modules/tiny_bronco/TinyBroncoNoticeVisibility.tsx
 import c from "../../../_runtime/00576_c.js";
 import Server from "../../flow/Server.tsx";
-import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShouldShowAgeNotice() {
       const cResult = c.c(2);
       let isFeatureAgeGated = RegionalFeatureConfigUtils.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.NOTICE);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function u() {
+        const fn = function o() {
           currentUser = currentUser.getCurrentUser();
           let prop;
           if (currentUser != null) {
@@ -41,7 +41,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return isFeatureAgeGated;
     }
-  : () => {
+  : function useShouldShowAgeNotice() {
       let isFeatureAgeGated = RegionalFeatureConfigUtils.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.NOTICE);
       const items = [UserStore];
       if (isFeatureAgeGated) {
@@ -87,12 +87,12 @@ export const shouldShowAgeNotice = function shouldShowAgeNotice() {
 };
 export const useShouldShowAgeNotice = tmp2;
 export const useShouldShowAgeNoticePromo = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShouldShowAgeNoticePromo() {
       const cResult = c.c(2);
       let isFeatureAgeGated = RegionalFeatureConfigUtils.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.NOTICE);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function u() {
+        const fn = function o() {
           currentUser = currentUser.getCurrentUser();
           let prop;
           if (currentUser != null) {
@@ -122,7 +122,7 @@ export const useShouldShowAgeNoticePromo = ReactCompilerGating.isReactCompilerEn
       }
       return isFeatureAgeGated;
     }
-  : () => {
+  : function useShouldShowAgeNoticePromo() {
       let isFeatureAgeGated = RegionalFeatureConfigUtils.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.NOTICE);
       const items = [UserStore];
       if (isFeatureAgeGated) {

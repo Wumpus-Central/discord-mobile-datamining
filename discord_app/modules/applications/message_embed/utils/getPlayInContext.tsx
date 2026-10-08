@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/message_embed/utils/getPlayInContext.tsx");
 
 export const usePlayInContext = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function usePlayInContext(arg0) {
       _require = arg0;
       const cResult = require("c").c(14);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -143,7 +143,7 @@ export const usePlayInContext = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = I;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function usePlayInContext(arg0) {
       _require = arg0;
       const items = [SelectedChannelStore];
       stateFromStores = require("initialize").useStateFromStores(items, () => channelId.getChannelId());
@@ -254,7 +254,7 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
       tmp11 = compositeInstanceId1 === compositeInstanceId;
     }
     obj3.isCurrentlyInInstance = tmp11;
-    obj3.canLaunchInChannel = NO_CHANNEL === tmp3(9044).EmbeddedActivityLaunchability.CAN_LAUNCH;
+    obj3.canLaunchInChannel = NO_CHANNEL === tmp3(10657).EmbeddedActivityLaunchability.CAN_LAUNCH;
     return obj3;
   }
 };

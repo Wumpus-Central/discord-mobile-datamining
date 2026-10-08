@@ -10,7 +10,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/activity_privacy/native/ProfileToActivityUpsellActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (direction) => {
+  ? function ProfileToActivityUpsellActionSheet(direction) {
       const cResult = direction(mappedActivityValue[3]).c(16);
       direction = direction.direction;
       const affectedGuildIds = direction.affectedGuildIds;
@@ -28,16 +28,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol = Symbol;
             if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-              class G {
+              class S {
                 constructor() {
                   obj = affectedGuildIds(mappedActivityValue[6]);
                   hideActionSheetResult = obj.hideActionSheet();
                   return;
                 }
               }
-              cResult[7] = G;
+              cResult[7] = S;
             } else {
-              class G {
+              class S {
                 constructor() {
                   obj = affectedGuildIds(mappedActivityValue[6]);
                   hideActionSheetResult = obj.hideActionSheet();
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (cResult[8] === affectedGuildIds) {
-              class G {
+              class S {
                 constructor() {
                   obj = affectedGuildIds(mappedActivityValue[6]);
                   hideActionSheetResult = obj.hideActionSheet();
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               confirmText,
               toastContent,
               onConfirm: tmp7,
-              onCardPress: G,
+              onCardPress: S,
             };
             const tmp13 = jsx(affectedGuildIds(mappedActivityValue[7]), {
               direction,
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               confirmText,
               toastContent,
               onConfirm: tmp7,
-              onCardPress: G,
+              onCardPress: S,
             });
             cResult[8] = affectedGuildIds;
             cResult[9] = confirmText;
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = profileToActivityUpsellStrings;
       const tmpResult = direction(mappedActivityValue[4]);
     }
-  : (direction) => {
+  : function ProfileToActivityUpsellActionSheet(direction) {
       direction = direction.direction;
       const affectedGuildIds = direction.affectedGuildIds;
       const mappedActivityValue = direction.mappedActivityValue;

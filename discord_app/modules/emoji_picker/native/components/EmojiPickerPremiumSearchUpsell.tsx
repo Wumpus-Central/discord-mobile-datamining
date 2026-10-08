@@ -5,28 +5,28 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import PremiumUtilsDefault from "../../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import MobileEmojiPickerUpsellRestyleExperiment from "../../../premium/experiments/MobileEmojiPickerUpsellRestyleExperiment.tsx";
-import PremiumFeaturesCards from "../../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
-import _modDef9930 from "../../../../../_runtime/metro/09930__.js";
+import PremiumFeaturesCards from "../../../user_settings/premium/native/PremiumFeaturesCards.tsx";
+import _modDef9452 from "../../../../../_runtime/metro/09452__.js";
 import PremiumExpressionPickerSearchUpsellDefault from "../../../premium/roadblocks/native/views/PremiumExpressionPickerSearchUpsell.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 const util = NitroWheelIcon(1126);
-const native = NitroWheelIcon(1188);
-const PremiumUtils = NitroWheelIcon(4534);
-const NitroWheelIcon2 = NitroWheelIcon(8346);
+const native = NitroWheelIcon(1200);
+const PremiumUtils = NitroWheelIcon(4726);
+const NitroWheelIcon2 = NitroWheelIcon(9005);
 require = fn;
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire, AnalyticsSections: closure_7 } = Constants);
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ PremiumSubscriptionSKUs: closure_8, PremiumUpsellTypes: closure_9, SubscriptionPlans: c10 } = PremiumConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles({ nitroIcon: { marginRight: 8, alignSelf: "center" } });
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function useEmojiPickerPremiumSearchUpsellViewed(guildId) {
       const cResult = guildId(useTier0UpsellContent[7]).c(5);
       guildId = guildId.guildId;
       const analyticsLocations = guildId.analyticsLocations;
@@ -41,7 +41,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           const effect = ref.useEffect(tmp3, tmp4);
         }
       }
-      const fn = function l() {
+      const fn = function t() {
         if (!ref.current) {
           tmp.current = true;
           let obj2 = { type: constants4.EMOJI_PICKER_SEARCH, location: null, location_stack: null, sku_id: null };
@@ -66,7 +66,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = items;
       tmp3 = fn;
     }
-  : (guildId) => {
+  : function useEmojiPickerPremiumSearchUpsellViewed(guildId) {
       guildId = guildId.guildId;
       const analyticsLocations = guildId.analyticsLocations;
       const useTier0UpsellContent = guildId.useTier0UpsellContent;
@@ -93,7 +93,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_13 = tmp4;
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (analyticsLocations) => {
+  ? function useEmojiPickerPremiumSearchUpsellClick(analyticsLocations) {
       const cResult = analyticsLocations(mobileEmojiPickerUpsellRestyleEnabled[7]).c(9);
       analyticsLocations = analyticsLocations.analyticsLocations;
       const useTier0UpsellContent = analyticsLocations.useTier0UpsellContent;
@@ -137,7 +137,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      class I {
+      class P {
         constructor() {
           currentUser = closure_4.getCurrentUser();
           result = null == currentUser;
@@ -177,10 +177,10 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = onPress;
       cResult[3] = mobileEmojiPickerUpsellRestyleEnabled;
       cResult[4] = useTier0UpsellContent;
-      cResult[5] = I;
-      tmp8 = I;
+      cResult[5] = P;
+      tmp8 = P;
     }
-  : (analyticsLocations) => {
+  : function useEmojiPickerPremiumSearchUpsellClick(analyticsLocations) {
       analyticsLocations = analyticsLocations.analyticsLocations;
       const useTier0UpsellContent = analyticsLocations.useTier0UpsellContent;
       let mobileEmojiPickerUpsellRestyleEnabled;
@@ -233,7 +233,7 @@ export const useEmojiPickerPremiumSearchUpsellViewed = tmp4;
 export const useEmojiPickerPremiumSearchUpsellClick = tmp5;
 export const PremiumSearchUpsell = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (useTier0UpsellContent) => {
+    ? function EmojiPickerListPremiumSearchUpsell(useTier0UpsellContent) {
         let NitroWheelIcon = require;
         const cResult = c.c(13);
         let nitroIcon = closure_12();
@@ -247,7 +247,7 @@ export const PremiumSearchUpsell = noop.memo(
         if (cResult[0] !== useTier0UpsellContent.useTier0UpsellContent) {
           const intl = util.intl;
           if (useTier0UpsellContent.useTier0UpsellContent) {
-            const obj3 = { planName: PremiumUtils.getTierDisplayNameByPlanId(v65535.PREMIUM_MONTH_TIER_0) };
+            const obj3 = { planName: PremiumUtils.getTierDisplayNameByPlanId(collapsed.PREMIUM_MONTH_TIER_0) };
             let formatToPlainStringResult = intl.formatToPlainString(util.t.kWBwlJ, obj3);
             const NitroWheelIconResult = PremiumUtils;
           } else {
@@ -317,13 +317,13 @@ export const PremiumSearchUpsell = noop.memo(
           } else {
             const obj6 = {
               style: nitroIcon.nitroIcon,
-              source: _modDef9930,
+              source: _modDef9452,
               disableColor: true,
               size: native.Icon.Sizes.MEDIUM,
             };
             tmp15Result = jsx(native.Icon, {
               style: nitroIcon.nitroIcon,
-              source: _modDef9930,
+              source: _modDef9452,
               disableColor: true,
               size: native.Icon.Sizes.MEDIUM,
             });
@@ -334,7 +334,7 @@ export const PremiumSearchUpsell = noop.memo(
           cResult[6] = tmp15Result;
         }
       }
-    : (useTier0UpsellContent) => {
+    : function EmojiPickerListPremiumSearchUpsell(useTier0UpsellContent) {
         const tmp = closure_12();
         ({ loading, onPress } = closure_14(useTier0UpsellContent));
         const tmp2 = closure_14(useTier0UpsellContent);
@@ -345,7 +345,7 @@ export const PremiumSearchUpsell = noop.memo(
         closure_13(useTier0UpsellContent);
         const intl = util.intl;
         if (useTier0UpsellContent.useTier0UpsellContent) {
-          const obj2 = { planName: PremiumUtils.getTierDisplayNameByPlanId(v65535.PREMIUM_MONTH_TIER_0) };
+          const obj2 = { planName: PremiumUtils.getTierDisplayNameByPlanId(collapsed.PREMIUM_MONTH_TIER_0) };
           let formatToPlainStringResult = intl.formatToPlainString(util.t.kWBwlJ, obj2);
           const tmp3Result = PremiumUtils;
         } else {
@@ -371,13 +371,13 @@ export const PremiumSearchUpsell = noop.memo(
         } else {
           const obj5 = {
             style: tmp.nitroIcon,
-            source: _modDef9930,
+            source: _modDef9452,
             disableColor: true,
             size: native.Icon.Sizes.MEDIUM,
           };
           tmp7Result = jsx(native.Icon, {
             style: tmp.nitroIcon,
-            source: _modDef9930,
+            source: _modDef9452,
             disableColor: true,
             size: native.Icon.Sizes.MEDIUM,
           });

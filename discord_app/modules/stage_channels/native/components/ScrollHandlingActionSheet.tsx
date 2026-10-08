@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ScrollHandlingActionSheet(arg0) {
       const cResult = c.c(6);
       if (cResult[0] !== arg0) {
         ({ children, scrollableDeviceHeightBreakpoint } = arg0);
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp11;
       tmp9 = tmp11;
     }
-  : (children) => {
+  : function ScrollHandlingActionSheet(children) {
       const merged = Object.assign(children, Object.assign({ children: 0, scrollableDeviceHeightBreakpoint: 0 }));
       const obj = { startExpanded: true };
       const merged1 = Object.assign(merged);

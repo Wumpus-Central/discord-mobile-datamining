@@ -3,8 +3,8 @@ import util from "../../../../../intl/index.native.tsx";
 import UserUtilsDefault from "../../../../../utils/UserUtils.tsx";
 import EyeSlashIcon2 from "../../../../../design/components/Icon/native/redesign/generated/EyeSlashIcon.tsx";
 import EyeIcon from "../../../../../design/components/Icon/native/redesign/generated/EyeIcon.tsx";
-import DenyIcon from "../../../../../design/components/Icon/native/redesign/generated/DenyIcon.tsx";
 import RelationshipActionCreatorsDefault from "../../../../../actions/RelationshipActionCreators.tsx";
+import DenyIcon from "../../../../../design/components/Icon/native/redesign/generated/DenyIcon.tsx";
 import SafetyWarningUtils from "../../../shared/SafetyWarningUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -12,13 +12,13 @@ import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
-const SafetyWarningTypes = fn(9799).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10266).SafetyWarningTypes;
 let jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/stranger_danger/native/components/StrangerDangerMoreTipsModalActionItems.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function StrangerDangerMoreTipsModalActionItems(channelId) {
   const cResult = channelId(senderId[7]).c(47);
   channelId = channelId.channelId;
   const warningId = channelId.warningId;
@@ -452,7 +452,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[13] = N;
   tmp19 = N;
   const tmp17 = _slicedToArray(noop.useState(stateFromStoresObject.isIgnored), 2);
-}) : ((channelId) => {
+}) : (function StrangerDangerMoreTipsModalActionItems(channelId) {
   channelId = channelId.channelId;
   const warningId = channelId.warningId;
   const senderId = channelId.senderId;

@@ -6,7 +6,7 @@ import ApplicationStreamingSettingsStore from "../../stores/ApplicationStreaming
 import ApexExperiment from "../experiments/apex/ApexExperiment.tsx";
 
 require = fn;
-const ApplicationStreamPresets = fn(4943).ApplicationStreamPresets;
+const ApplicationStreamPresets = fn(5210).ApplicationStreamPresets;
 let obj = { allowAutoQuality: false, defaultAutoQuality: false, migrateAutoQuality: false };
 const GoLiveAutoQualityMigrationVersion = "GoLiveAutoQualityMigrationVersion";
 const obj2 = { name: "2025-10-go-live-auto-quality", kind: "user", defaultConfig: obj, variations: null };
@@ -32,7 +32,7 @@ let result = size.fileFinishedImporting("modules/go_live/GoLiveAutoQualityExperi
 
 export { getGoLiveAutoQualityExperimentConfig };
 export const useGoLiveAutoQualityExperimentConfig = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useGoLiveAutoQualityExperimentConfig(location) {
       const cResult = _location(576).c(3);
       _location = location.location;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -55,7 +55,7 @@ export const useGoLiveAutoQualityExperimentConfig = ReactCompilerGating.isReactC
       const obj = _location(576);
       return _location(504).useStateFromStores(first, tmp6);
     }
-  : (location) => {
+  : function useGoLiveAutoQualityExperimentConfig(location) {
       location = location.location;
       const items = [ApexExperimentStore];
       return location(504).useStateFromStores(items, () => config.getConfig({ location }));

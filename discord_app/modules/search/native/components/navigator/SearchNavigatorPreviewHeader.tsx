@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({
   container: { flexShrink: 1, paddingRight: 12, flexDirection: "row", alignItems: "center" },
 });
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channelId) => {
+    ? function SearchNavigatorPreviewHeader(channelId) {
         const cResult = c.c(5);
         channelId = channelId.channelId;
         const tmp3 = closure_5();
@@ -56,15 +56,17 @@ export default noop.memo(
         tmp8 = tmp9;
         const obj3 = { style: tmp3.container, children: tmp4 };
       }
-    : (channelId) => (
-        <View style={closure_5().container}>
-          {jsx(ChannelHeaderDefault, {
-            channelId: channelId.channelId,
-            screenIndex: "none",
-            pressable: false,
-            isGuildMemberCountVisible: false,
-            isNavigationScreen: true,
-          })}
-        </View>
-      ),
+    : function SearchNavigatorPreviewHeader(channelId) {
+        return (
+          <View style={closure_5().container}>
+            {jsx(ChannelHeaderDefault, {
+              channelId: channelId.channelId,
+              screenIndex: "none",
+              pressable: false,
+              isGuildMemberCountVisible: false,
+              isNavigationScreen: true,
+            })}
+          </View>
+        );
+      },
 );

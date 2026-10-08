@@ -3,6 +3,7 @@ import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import BillingPlatformUtils from "../../device/BillingPlatformUtils.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
@@ -44,10 +45,10 @@ const CollectiblesShopConstants = fn(1087);
 } = CollectiblesShopConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_14, PaymentGateways: closure_15 } = Constants);
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_19 = createStyles.createStyles({
   rootContainer: { height: "100%", width: "100%" },
   spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 },
@@ -65,9 +66,9 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         analyticsSource(screen[16]).CollectiblesShopOpenTriggerPoint,
       );
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let items = [analyticsLocations];
+        let items = [isFetchingGoogleSkus];
         const fn = function h() {
-          let num = analyticsLocations.lastSuccessfulFetch;
+          let num = isFetchingGoogleSkus.lastSuccessfulFetch;
           if (num == null) {
             num = 0;
           }
@@ -82,15 +83,15 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp5, tmp6] = cResult;
       }
       let obj2 = analyticsSource(screen[15]);
-      const first = noCache(analyticsSource(screen[17]).useStateFromStoresArray(tmp5, tmp6), 1)[0];
+      const first = bypassGoogleSkuSync(analyticsSource(screen[17]).useStateFromStoresArray(tmp5, tmp6), 1)[0];
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [DevSettingsStore];
         class T {
           constructor() {
             obj = {
-              bypassGoogleSkuSync: closure_7.get("bypass_google_sku_sync"),
-              noCache: closure_7.get("shop_disable_cache"),
-              includeUnpublished: closure_7.get("shop_include_unpublished"),
+              bypassGoogleSkuSync: isFetchingCategories.get("bypass_google_sku_sync"),
+              noCache: isFetchingCategories.get("shop_disable_cache"),
+              includeUnpublished: isFetchingCategories.get("shop_include_unpublished"),
             };
             return obj;
           }
@@ -105,14 +106,15 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = analyticsSource(screen[17]);
       const stateFromStoresObject = analyticsSource(screen[17]).useStateFromStoresObject(tmp9, tmp10);
-      ({ bypassGoogleSkuSync, noCache } = stateFromStoresObject);
+      bypassGoogleSkuSync = stateFromStoresObject.bypassGoogleSkuSync;
+      const noCache = stateFromStoresObject.noCache;
       const includeUnpublished = stateFromStoresObject.includeUnpublished;
       closure_19();
       if (storeFront != null) {
         const country = storeFront.country;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        class B {
+        class F {
           constructor() {
             obj = { sessionId: null };
             obj2 = analyticsSource(screen[18]);
@@ -120,19 +122,19 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             return obj;
           }
         }
-        cResult[4] = B;
+        cResult[4] = F;
         class T {
           constructor() {
             obj = {
-              bypassGoogleSkuSync: closure_7.get("bypass_google_sku_sync"),
-              noCache: closure_7.get("shop_disable_cache"),
-              includeUnpublished: closure_7.get("shop_include_unpublished"),
+              bypassGoogleSkuSync: isFetchingCategories.get("bypass_google_sku_sync"),
+              noCache: isFetchingCategories.get("shop_disable_cache"),
+              includeUnpublished: isFetchingCategories.get("shop_include_unpublished"),
             };
             return obj;
           }
         }
       } else {
-        class B {
+        class F {
           constructor() {
             obj = { sessionId: null };
             obj2 = analyticsSource(screen[18]);
@@ -146,7 +148,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       const sessionId = onNavigateAway(screen[19])(tmp14).sessionId;
       let FEATURED_PAGE = screen;
       if (screen == null) {
-        class B {
+        class F {
           constructor() {
             obj = { sessionId: null };
             obj2 = analyticsSource(screen[18]);
@@ -154,10 +156,10 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             return obj;
           }
         }
-        FEATURED_PAGE = constants.FEATURED_PAGE;
+        FEATURED_PAGE = stateFromStores.FEATURED_PAGE;
       }
       if (cResult[5] === sessionId) {
-        class B {
+        class F {
           constructor() {
             obj = { sessionId: null };
             obj2 = analyticsSource(screen[18]);
@@ -166,7 +168,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[8] !== country) {
-          class B {
+          class F {
             constructor() {
               obj = { sessionId: null };
               obj2 = analyticsSource(screen[18]);
@@ -174,13 +176,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             }
           }
-          tmp19[0] = constants4.APPLE;
+          tmp19[0] = constants3.APPLE;
           class T {
             constructor() {
               obj = {
-                bypassGoogleSkuSync: closure_7.get("bypass_google_sku_sync"),
-                noCache: closure_7.get("shop_disable_cache"),
-                includeUnpublished: closure_7.get("shop_include_unpublished"),
+                bypassGoogleSkuSync: isFetchingCategories.get("bypass_google_sku_sync"),
+                noCache: isFetchingCategories.get("shop_disable_cache"),
+                includeUnpublished: isFetchingCategories.get("shop_include_unpublished"),
               };
               return obj;
             }
@@ -190,7 +192,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = country;
           cResult[9] = tmp19;
         } else {
-          class B {
+          class F {
             constructor() {
               obj = { sessionId: null };
               obj2 = analyticsSource(screen[18]);
@@ -202,15 +204,16 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           class T {
             constructor() {
               obj = {
-                bypassGoogleSkuSync: closure_7.get("bypass_google_sku_sync"),
-                noCache: closure_7.get("shop_disable_cache"),
-                includeUnpublished: closure_7.get("shop_include_unpublished"),
+                bypassGoogleSkuSync: isFetchingCategories.get("bypass_google_sku_sync"),
+                noCache: isFetchingCategories.get("shop_disable_cache"),
+                includeUnpublished: isFetchingCategories.get("shop_include_unpublished"),
               };
               return obj;
             }
           }
+          DevSettingsStore = tmp27;
           if (cResult[10] === includeUnpublished) {
-            class B {
+            class F {
               constructor() {
                 obj = { sessionId: null };
                 obj2 = analyticsSource(screen[18]);
@@ -222,15 +225,15 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             class T {
               constructor() {
                 obj = {
-                  bypassGoogleSkuSync: closure_7.get("bypass_google_sku_sync"),
-                  noCache: closure_7.get("shop_disable_cache"),
-                  includeUnpublished: closure_7.get("shop_include_unpublished"),
+                  bypassGoogleSkuSync: isFetchingCategories.get("bypass_google_sku_sync"),
+                  noCache: isFetchingCategories.get("shop_disable_cache"),
+                  includeUnpublished: isFetchingCategories.get("shop_include_unpublished"),
                 };
                 return obj;
               }
             }
-            if (screen === constants.ORBS) {
-              class B {
+            if (screen === stateFromStores.ORBS) {
+              class F {
                 constructor() {
                   obj = { sessionId: null };
                   obj2 = analyticsSource(screen[18]);
@@ -238,9 +241,9 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                   return obj;
                 }
               }
-              let HOME = constants2.ORBS;
+              let HOME = analyticsLocations.ORBS;
             } else {
-              class B {
+              class F {
                 constructor() {
                   obj = { sessionId: null };
                   obj2 = analyticsSource(screen[18]);
@@ -248,13 +251,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                   return obj;
                 }
               }
-              HOME = constants2.HOME;
+              HOME = analyticsLocations.HOME;
             }
             const tmp30Result = tmp30(HOME, tmp28, tmp17);
             ({ shopBlocks, fetchShopHomeError } = tmp30Result);
             const isFetchingShopHome = tmp30Result.isFetchingShopHome;
             if (true !== tmp27) {
-              class B {
+              class F {
                 constructor() {
                   obj = { sessionId: null };
                   obj2 = analyticsSource(screen[18]);
@@ -263,7 +266,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (false !== obj7.isAndroid()) {
-                class B {
+                class F {
                   constructor() {
                     obj = { sessionId: null };
                     obj2 = analyticsSource(screen[18]);
@@ -275,7 +278,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol = Symbol;
             if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-              class B {
+              class F {
                 constructor() {
                   obj = { sessionId: null };
                   obj2 = analyticsSource(screen[18]);
@@ -287,15 +290,15 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               class T {
                 constructor() {
                   obj = {
-                    bypassGoogleSkuSync: closure_7.get("bypass_google_sku_sync"),
-                    noCache: closure_7.get("shop_disable_cache"),
-                    includeUnpublished: closure_7.get("shop_include_unpublished"),
+                    bypassGoogleSkuSync: isFetchingCategories.get("bypass_google_sku_sync"),
+                    noCache: isFetchingCategories.get("shop_disable_cache"),
+                    includeUnpublished: isFetchingCategories.get("shop_include_unpublished"),
                   };
                   return obj;
                 }
               }
             } else {
-              class B {
+              class F {
                 constructor() {
                   obj = { sessionId: null };
                   obj2 = analyticsSource(screen[18]);
@@ -305,14 +308,15 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const googleSkuIds = onNavigateAway(screen[24]).useGoogleSkuIds(tmp33, true === tmp27);
-            ({ isFetchingGoogleSkus, fetchError } = googleSkuIds);
+            isFetchingGoogleSkus = googleSkuIds.isFetchingGoogleSkus;
+            const fetchError = googleSkuIds.fetchError;
             const obj8 = onNavigateAway(screen[24]);
             const currentUserIfAvailable = analyticsSource(screen[25]).useCurrentUserIfAvailable();
             const obj9 = analyticsSource(screen[25]);
             const currentUserWishlist = analyticsSource(screen[26]).useCurrentUserWishlist();
             const _Symbol2 = Symbol;
             if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-              class B {
+              class F {
                 constructor() {
                   obj = { sessionId: null };
                   obj2 = analyticsSource(screen[18]);
@@ -320,13 +324,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                   return obj;
                 }
               }
-              const items2 = [currentUserIfAvailable];
+              const items2 = [fetchShopHomeError];
               class T {
                 constructor() {
                   obj = {
-                    bypassGoogleSkuSync: closure_7.get("bypass_google_sku_sync"),
-                    noCache: closure_7.get("shop_disable_cache"),
-                    includeUnpublished: closure_7.get("shop_include_unpublished"),
+                    bypassGoogleSkuSync: isFetchingCategories.get("bypass_google_sku_sync"),
+                    noCache: isFetchingCategories.get("shop_disable_cache"),
+                    includeUnpublished: isFetchingCategories.get("shop_include_unpublished"),
                   };
                   return obj;
                 }
@@ -336,7 +340,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               let tmp44 = tmp45;
               const tmp43 = items2;
             } else {
-              class B {
+              class F {
                 constructor() {
                   obj = { sessionId: null };
                   obj2 = analyticsSource(screen[18]);
@@ -347,9 +351,9 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               tmp44 = cResult[17];
             }
             const obj10 = analyticsSource(screen[26]);
-            const stateFromStores = analyticsSource(screen[17]).useStateFromStores(tmp43, tmp44);
+            stateFromStores = analyticsSource(screen[17]).useStateFromStores(tmp43, tmp44);
             if (cResult[18] !== screen) {
-              class B {
+              class F {
                 constructor() {
                   obj = { sessionId: null };
                   obj2 = analyticsSource(screen[18]);
@@ -361,9 +365,9 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               class T {
                 constructor() {
                   obj = {
-                    bypassGoogleSkuSync: closure_7.get("bypass_google_sku_sync"),
-                    noCache: closure_7.get("shop_disable_cache"),
-                    includeUnpublished: closure_7.get("shop_include_unpublished"),
+                    bypassGoogleSkuSync: isFetchingCategories.get("bypass_google_sku_sync"),
+                    noCache: isFetchingCategories.get("shop_disable_cache"),
+                    includeUnpublished: isFetchingCategories.get("shop_include_unpublished"),
                   };
                   return obj;
                 }
@@ -371,7 +375,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[18] = screen;
               cResult[19] = tmp48;
             } else {
-              class B {
+              class F {
                 constructor() {
                   obj = { sessionId: null };
                   obj2 = analyticsSource(screen[18]);
@@ -381,7 +385,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (cResult[20] !== tmp47) {
-              class B {
+              class F {
                 constructor() {
                   obj = { sessionId: null };
                   obj2 = analyticsSource(screen[18]);
@@ -394,9 +398,9 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               class T {
                 constructor() {
                   obj = {
-                    bypassGoogleSkuSync: closure_7.get("bypass_google_sku_sync"),
-                    noCache: closure_7.get("shop_disable_cache"),
-                    includeUnpublished: closure_7.get("shop_include_unpublished"),
+                    bypassGoogleSkuSync: isFetchingCategories.get("bypass_google_sku_sync"),
+                    noCache: isFetchingCategories.get("shop_disable_cache"),
+                    includeUnpublished: isFetchingCategories.get("shop_include_unpublished"),
                   };
                   return obj;
                 }
@@ -404,7 +408,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[20] = tmp47;
               cResult[21] = tmp50;
             } else {
-              class B {
+              class F {
                 constructor() {
                   obj = { sessionId: null };
                   obj2 = analyticsSource(screen[18]);
@@ -417,7 +421,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             const tmp40Result = analyticsSource(screen[17]);
             const navigation = analyticsSource(screen[29]).useNavigation();
             if (cResult[22] === navigation) {
-              class B {
+              class F {
                 constructor() {
                   obj = { sessionId: null };
                   obj2 = analyticsSource(screen[18]);
@@ -425,23 +429,38 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                   return obj;
                 }
               }
-              const effect = includeUnpublished.useEffect(tmp52, tmp53);
+              const effect = noCache.useEffect(tmp52, tmp53);
               class T {
                 constructor() {
                   obj = {
-                    bypassGoogleSkuSync: closure_7.get("bypass_google_sku_sync"),
-                    noCache: closure_7.get("shop_disable_cache"),
-                    includeUnpublished: closure_7.get("shop_include_unpublished"),
+                    bypassGoogleSkuSync: isFetchingCategories.get("bypass_google_sku_sync"),
+                    noCache: isFetchingCategories.get("shop_disable_cache"),
+                    includeUnpublished: isFetchingCategories.get("shop_include_unpublished"),
                   };
                   return obj;
                 }
               }
               const items3 = [];
               HermesBuiltin.arraySpread(categories.values(), 0);
-              const tmp40Result5 = tmp40(screen[31]);
               let result = items3;
-              if (tmp40Result6.isGooglePlayBillingSupported()) {
-                class B {
+              if (
+                (function shouldFilterGPlayCategories() {
+                  let result = BillingPlatformUtils.isGooglePlayBillingSupported();
+                  if (result) {
+                    let tmp3 = !bypassGoogleSkuSync;
+                    if (!bypassGoogleSkuSync) {
+                      let tmp5 = !isFetchingGoogleSkus;
+                      if (!isFetchingGoogleSkus) {
+                        tmp5 = !closure_7;
+                      }
+                      tmp3 = tmp5;
+                    }
+                    result = tmp3;
+                  }
+                  return result;
+                })()
+              ) {
+                class F {
                   constructor() {
                     obj = { sessionId: null };
                     obj2 = analyticsSource(screen[18]);
@@ -449,45 +468,15 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                     return obj;
                   }
                 }
-                if (!bypassGoogleSkuSync) {
-                  class B {
-                    constructor() {
-                      obj = { sessionId: null };
-                      obj2 = analyticsSource(screen[18]);
-                      obj.sessionId = obj2.v4();
-                      return obj;
-                    }
-                  }
-                  if (!isFetchingGoogleSkus) {
-                    class B {
-                      constructor() {
-                        obj = { sessionId: null };
-                        obj2 = analyticsSource(screen[18]);
-                        obj.sessionId = obj2.v4();
-                        return obj;
-                      }
-                    }
-                    if (!tmp27) {
-                      class B {
-                        constructor() {
-                          obj = { sessionId: null };
-                          obj2 = analyticsSource(screen[18]);
-                          obj.sessionId = obj2.v4();
-                          return obj;
-                        }
-                      }
-                      result = obj15.filterGPlaySyncedCategories(items3);
-                    }
-                  }
-                }
+                result = obj14.filterGPlaySyncedCategories(items3);
               }
-              const result1 = tmp40Result5.filterHiddenCategories(result);
+              const result1 = tmp40(screen[31]).filterHiddenCategories(result);
               cResult[26] = bypassGoogleSkuSync;
               cResult[27] = categories;
               cResult[28] = tmp27;
               cResult[29] = isFetchingGoogleSkus;
               cResult[30] = result1;
-              tmp40Result6 = tmp40(screen[30]);
+              const tmp40Result4 = tmp40(screen[31]);
             }
             function ge() {
               return navigation.addListener("beforeRemove", (data) => {
@@ -503,7 +492,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[23] = onNavigateAway;
             cResult[24] = ge;
             cResult[25] = items4;
-            const tmp40Result4 = analyticsSource(screen[29]);
+            const tmp40Result3 = analyticsSource(screen[29]);
             tmp52 = ge;
             tmp53 = items4;
           }
@@ -703,19 +692,22 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       memo2 = obj4.useMemo(() => {
         const items = [...categories.values()];
         const obj = collectibles_CollectiblesUtils;
-        let result = items;
-        if (obj2.isGooglePlayBillingSupported()) {
-          result = items;
+        let result1 = BillingPlatformUtils.isGooglePlayBillingSupported();
+        if (result1) {
+          let tmp5 = !bypassGoogleSkuSync;
           if (!bypassGoogleSkuSync) {
-            result = items;
+            let tmp7 = !isFetchingGoogleSkus;
             if (!isFetchingGoogleSkus) {
-              result = items;
-              if (!isFetchingCategories) {
-                result = collectibles_CollectiblesUtils.filterGPlaySyncedCategories(items);
-                const tmpResult = collectibles_CollectiblesUtils;
-              }
+              tmp7 = !isFetchingCategories;
             }
+            tmp5 = tmp7;
           }
+          result1 = tmp5;
+        }
+        let result = items;
+        if (result1) {
+          result = collectibles_CollectiblesUtils.filterGPlaySyncedCategories(items);
+          const tmpResult = collectibles_CollectiblesUtils;
         }
         return obj.filterHiddenCategories(result);
       }, items7);
@@ -811,7 +803,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           str = FEATURED_PAGE;
         }
         obj2.page_type = str;
-        AnalyticsUtilsDefault.track(constants3.COLLECTIBLES_SHOP_VIEWED, obj2);
+        AnalyticsUtilsDefault.track(constants2.COLLECTIBLES_SHOP_VIEWED, obj2);
         const obj4 = {
           sessionId,
           checkpoint: CollectiblesPerfLogging.CollectiblesShopPerfCheckpoint.SHOP_MOUNTED,
@@ -966,7 +958,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (screen) => {
+  ? function CollectiblesShopV2(screen) {
       const cResult = nativePaymentsConnected(576).c(10);
       const obj = nativePaymentsConnected(576);
       const nativeIAPPayments = NativePaymentHooksDefault.useNativeIAPPayments();
@@ -1021,7 +1013,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp14, tmp15);
       const tmp12 = _slicedToArray(noop.useState(false), 2);
-      const tmpResult3 = nativePaymentsConnected(1369);
+      const tmpResult3 = nativePaymentsConnected(1381);
       if (!nativePaymentsConnected) {
         if (!tmp17) {
           if (!tmp13) {
@@ -1039,10 +1031,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (tmp13) {
-        tmp(1369);
+        tmp(1381);
         const text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj9.isIOS()}`;
         SentryUtilsDefault.captureMessage(
-          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj9.isIOS()}`} isStable: ${tmp(5417).isStable}`,
+          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj9.isIOS()}`} isStable: ${tmp(5726).isStable}`,
         );
         const tmp4Result = SentryUtilsDefault;
       }
@@ -1056,9 +1048,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = screen;
       cResult[8] = storeFront;
       cResult[9] = tmp26;
-      tmp17 = nativePaymentsConnected(1369).isIOS() && !nativePaymentsConnected(5417).isStable && isStaffResult;
+      tmp17 = nativePaymentsConnected(1381).isIOS() && !nativePaymentsConnected(5726).isStable && isStaffResult;
     }
-  : (screen) => {
+  : function CollectiblesShopV2(screen) {
       const nativeIAPPayments = NativePaymentHooksDefault.useNativeIAPPayments();
       const nativePaymentsConnected = nativeIAPPayments.nativePaymentsConnected;
       const tmp4 = closure_19();
@@ -1090,7 +1082,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       const tmp8 = _slicedToArray(noop.useState(false), 2);
-      const tmp5Result = nativePaymentsConnected(1369);
+      const tmp5Result = nativePaymentsConnected(1381);
       if (!nativePaymentsConnected) {
         if (!tmp11) {
           if (!tmp9) {
@@ -1101,10 +1093,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (tmp9) {
-        tmp5(1369);
+        tmp5(1381);
         const text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`;
         SentryUtilsDefault.captureMessage(
-          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`} isStable: ${tmp5(5417).isStable}`,
+          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`} isStable: ${tmp5(5726).isStable}`,
         );
         const tmpResult = SentryUtilsDefault;
       }
@@ -1113,7 +1105,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.storeFront = nativeIAPPayments.storeFront;
       obj4.screen = screen.screen;
       tmp14 = closure_17(closure_22, obj4);
-      tmp11 = nativePaymentsConnected(1369).isIOS() && !nativePaymentsConnected(5417).isStable && isStaffResult;
+      tmp11 = nativePaymentsConnected(1381).isIOS() && !nativePaymentsConnected(5726).isStable && isStaffResult;
     };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopV2.tsx");

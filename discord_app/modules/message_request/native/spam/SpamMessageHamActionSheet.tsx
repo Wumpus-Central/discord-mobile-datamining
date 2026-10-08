@@ -3,7 +3,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef4813 from "../../../../../_runtime/metro/04813__.js";
+import _modDef5007 from "../../../../../_runtime/metro/05007__.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   header: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   container: null,
@@ -38,7 +38,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/spam/SpamMessageHamActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function SpamMessageRequestHamActionSheet(channel) {
       const cResult = channel(onCancel[8]).c(44);
       channel = channel.channel;
       const onConfirm = channel.onConfirm;
@@ -48,84 +48,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       first = tmp5[0];
       noop = tmp5[1];
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            obj = onConfirm(onCancel[9]);
-            obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-            intl = channel(onCancel[10]).intl;
-            obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
-            obj1.icon = onConfirm(onCancel[11]);
-            openResult = obj.open(obj1);
-            return;
-          }
+        function handleRequestError() {
+          const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+          const intl = channel(onCancel[10]).intl;
+          obj2.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
+          obj2.icon = onConfirm(onCancel[11]);
+          onConfirm(onCancel[9]).open(obj2);
         }
-        cResult[0] = S;
+        cResult[0] = handleRequestError;
+        let first1 = handleRequestError;
       } else {
-        class S {
-          constructor() {
-            obj = onConfirm(onCancel[9]);
-            obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-            intl = channel(onCancel[10]).intl;
-            obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
-            obj1.icon = onConfirm(onCancel[11]);
-            openResult = obj.open(obj1);
-            return;
-          }
-        }
+        first1 = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            obj = onConfirm(onCancel[9]);
-            obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-            intl = channel(onCancel[10]).intl;
-            obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
-            obj1.icon = onConfirm(onCancel[11]);
-            openResult = obj.open(obj1);
-            return;
-          }
+        function handleAcceptSuccess() {
+          onConfirm(onCancel[12]).hideActionSheet();
         }
-        cResult[1] = tmp9;
+        cResult[1] = handleAcceptSuccess;
+        let tmp8 = handleAcceptSuccess;
       } else {
-        class S {
-          constructor() {
-            obj = onConfirm(onCancel[9]);
-            obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-            intl = channel(onCancel[10]).intl;
-            obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
-            obj1.icon = onConfirm(onCancel[11]);
-            openResult = obj.open(obj1);
-            return;
-          }
-        }
+        tmp8 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            obj = onConfirm(onCancel[9]);
-            obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-            intl = channel(onCancel[10]).intl;
-            obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
-            obj1.icon = onConfirm(onCancel[11]);
-            openResult = obj.open(obj1);
-            return;
-          }
-        }
         const items = [UserStore];
         cResult[2] = items;
-        const tmp10 = items;
+        let tmp9 = items;
       } else {
-        class S {
-          constructor() {
-            obj = onConfirm(onCancel[9]);
-            obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-            intl = channel(onCancel[10]).intl;
-            obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
-            obj1.icon = onConfirm(onCancel[11]);
-            openResult = obj.open(obj1);
-            return;
-          }
-        }
+        tmp9 = cResult[2];
       }
       if (cResult[3] !== channel) {
         class P {
@@ -143,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj = channel(onCancel[8]);
-      const stateFromStores = channel(onCancel[13]).useStateFromStores(tmp10, P);
+      const stateFromStores = channel(onCancel[13]).useStateFromStores(tmp9, P);
       if (cResult[5] !== stateFromStores) {
         class P {
           constructor() {
@@ -151,8 +100,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         tmp14[0] = stateFromStores;
-        tmp14[1] = S;
-        tmp14[2] = tmp9;
+        tmp14[1] = first1;
+        tmp14[2] = tmp8;
         cResult[5] = stateFromStores;
         cResult[6] = tmp14;
       } else {
@@ -173,21 +122,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      class L {
-        constructor() {
-          tmp = onConfirm(closure_3);
-          tmp2 = acceptMessageRequest(channel.id);
-          return;
-        }
+      function handleAccept() {
+        onConfirm(first);
+        acceptMessageRequest(channel.id);
       }
       cResult[7] = acceptMessageRequest;
       cResult[8] = channel.id;
       cResult[9] = first;
       cResult[10] = onConfirm;
-      cResult[11] = L;
+      cResult[11] = handleAccept;
       const tmpResult2 = channel(onCancel[14]);
     }
-  : (arg0) => {
+  : function SpamMessageRequestHamActionSheet(arg0) {
       ({ channel: require, onConfirm: importDefault, onCancel: dependencyMap } = arg0);
       value = undefined;
       noop = undefined;
@@ -202,20 +148,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       const messageRequestActions = useMessageRequestActions.useMessageRequestActions({
         user: stateFromStores,
-        onError() {
+        onError: function handleRequestError() {
           const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
           const intl = recipientId(1126).intl;
           obj2.content = intl.string(recipientId(1126).t["EDYbS+"]);
-          obj2.icon = _modDef4813;
+          obj2.icon = _modDef5007;
           ToastActionCreatorsDefault.open(obj2);
         },
-        onAcceptSuccess() {
+        onAcceptSuccess: function handleAcceptSuccess() {
           ActionSheetActionCreatorsDefault.hideActionSheet();
         },
       });
       ({ acceptMessageRequest: c5, isAcceptLoading, isOptimisticAccepted } = messageRequestActions);
       const obj4 = {
-        onDismiss() {
+        onDismiss: function handleDismiss() {
           dependencyMap();
         },
         children: null,
@@ -224,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let intl = util.intl;
       obj5.title = intl.string(util.t["9ty6yc"]);
       obj5.trailing = closure_7(ActionSheetCloseButton.ActionSheetCloseButton, {
-        onPress() {
+        onPress: function handleClose() {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           dependencyMap();
         },
@@ -244,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj9 = { style: tmp.buttonContainer, children: null };
       const obj10 = {
         size: "md",
-        onPress() {
+        onPress: function handleAccept() {
           importDefault(first);
           _undefined(recipientId.id);
         },

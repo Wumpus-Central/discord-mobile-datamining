@@ -15,7 +15,7 @@ const View = fn(17).View;
 const AnalyticsSections = fn(1085).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   actionBarContainer: {
     overflow: "hidden",
@@ -79,7 +79,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/ForumPostActionBar.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function ForumPostActionBar(channel) {
       const cResult = channel(576).c(61);
       channel = channel.channel;
       const tmp4 = closure_12();
@@ -91,91 +91,56 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== channel.parent_id) {
-        class B {
-          constructor() {
-            return closure_8.getChannel(channel.parent_id);
-          }
-        }
+        const fn = function f() {
+          return ChannelStore.getChannel(channel.parent_id);
+        };
         cResult[1] = channel.parent_id;
-        cResult[2] = B;
+        cResult[2] = fn;
+        let tmp7 = fn;
       } else {
-        class B {
-          constructor() {
-            return closure_8.getChannel(channel.parent_id);
-          }
-        }
+        tmp7 = cResult[2];
       }
       let obj = channel(576);
-      const stateFromStores = channel(504).useStateFromStores(first, B);
+      const stateFromStores = channel(504).useStateFromStores(first, tmp7);
       const tmpResult = channel(504);
-      const firstMessage = channel(6817).useFirstForumPostMessage(channel).firstMessage;
+      const firstMessage = channel(6990).useFirstForumPostMessage(channel).firstMessage;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        class B {
-          constructor() {
-            return closure_8.getChannel(channel.parent_id);
-          }
-        }
         const items1 = [JoinedThreadsStore];
         cResult[3] = items1;
-        const tmp9 = items1;
+        let tmp9 = items1;
       } else {
-        class B {
-          constructor() {
-            return closure_8.getChannel(channel.parent_id);
-          }
-        }
+        tmp9 = cResult[3];
       }
       if (cResult[4] !== channel.id) {
-        class F {
-          constructor() {
-            return closure_7.hasJoined(channel.id);
-          }
-        }
+        const fn2 = function _() {
+          return JoinedThreadsStore.hasJoined(channel.id);
+        };
         cResult[4] = channel.id;
-        cResult[5] = F;
+        cResult[5] = fn2;
+        let tmp11 = fn2;
       } else {
-        class F {
-          constructor() {
-            return closure_7.hasJoined(channel.id);
-          }
-        }
+        tmp11 = cResult[5];
       }
-      const tmpResult5 = channel(6817);
-      const stateFromStores1 = channel(504).useStateFromStores(tmp9, F);
+      const tmpResult5 = channel(6990);
+      const stateFromStores1 = channel(504).useStateFromStores(tmp9, tmp11);
       if (cResult[6] !== channel) {
-        class F {
-          constructor() {
-            return closure_7.hasJoined(channel.id);
-          }
-        }
+        let guildId = channel.getGuildId();
         cResult[6] = channel;
-        cResult[7] = tmp13;
+        cResult[7] = guildId;
+        let tmp13 = guildId;
       } else {
-        class F {
-          constructor() {
-            return closure_7.hasJoined(channel.id);
-          }
-        }
+        tmp13 = cResult[7];
       }
       dependencyMap = tmp13;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        class F {
-          constructor() {
-            return closure_7.hasJoined(channel.id);
-          }
-        }
         const items2 = [LurkingStore];
         cResult[8] = items2;
-        const tmp14 = items2;
+        let tmp15 = items2;
       } else {
-        class F {
-          constructor() {
-            return closure_7.hasJoined(channel.id);
-          }
-        }
+        tmp15 = cResult[8];
       }
       if (cResult[9] !== tmp13) {
-        class P {
+        class I {
           constructor() {
             isLurkingResult = null != closure_2;
             if (isLurkingResult) {
@@ -186,9 +151,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[9] = tmp13;
-        cResult[10] = P;
+        cResult[10] = I;
       } else {
-        class P {
+        class I {
           constructor() {
             isLurkingResult = null != closure_2;
             if (isLurkingResult) {
@@ -200,10 +165,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult6 = channel(504);
-      const stateFromStores2 = channel(504).useStateFromStores(tmp14, P);
-      const width = stateFromStores1(1484)().width;
+      const stateFromStores2 = channel(504).useStateFromStores(tmp15, I);
+      const width = stateFromStores1(1496)().width;
       const tmpResult7 = channel(504);
-      [tmp18, noop] = width(noop.useState(0), 2);
+      [tmp20, noop] = width(noop.useState(0), 2);
       if (cResult[11] !== width) {
         class S {
           constructor(arg0) {
@@ -236,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[16] = channel;
-          cResult[17] = tmp21;
+          cResult[17] = tmp23;
         } else {
           class S {
             constructor(arg0) {
@@ -246,106 +211,81 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[18] !== channel.id) {
-          class U {
-            constructor() {
-              obj = closure_1(closure_2[16]);
-              obj1 = { channelId: channel.id, messageId: null, flash: true, jumpType: null };
-              obj3 = closure_1(closure_2[17]);
-              obj1.messageId = obj3.castChannelIdAsMessageId(channel.id);
-              obj1.jumpType = closure_0(closure_2[18]).JumpType.ANIMATED;
-              jumpToMessageResult = obj.jumpToMessage(obj1);
+          class S {
+            constructor(arg0) {
+              tmp = closure_4(width - channel.nativeEvent.layout.width - 40);
               return;
             }
           }
           cResult[18] = channel.id;
-          cResult[19] = U;
+          cResult[19] = tmp25;
         } else {
-          class U {
-            constructor() {
-              obj = closure_1(closure_2[16]);
-              obj1 = { channelId: channel.id, messageId: null, flash: true, jumpType: null };
-              obj3 = closure_1(closure_2[17]);
-              obj1.messageId = obj3.castChannelIdAsMessageId(channel.id);
-              obj1.jumpType = closure_0(closure_2[18]).JumpType.ANIMATED;
-              jumpToMessageResult = obj.jumpToMessage(obj1);
+          class S {
+            constructor(arg0) {
+              tmp = closure_4(width - channel.nativeEvent.layout.width - 40);
               return;
             }
           }
         }
-        const gradientTop = tmp(7518).useGradientTop();
+        const gradientTop = tmp(9241).useGradientTop();
         if (cResult[20] === gradientTop) {
-          class U {
-            constructor() {
-              obj = closure_1(closure_2[16]);
-              obj1 = { channelId: channel.id, messageId: null, flash: true, jumpType: null };
-              obj3 = closure_1(closure_2[17]);
-              obj1.messageId = obj3.castChannelIdAsMessageId(channel.id);
-              obj1.jumpType = closure_0(closure_2[18]).JumpType.ANIMATED;
-              jumpToMessageResult = obj.jumpToMessage(obj1);
+          class S {
+            constructor(arg0) {
+              tmp = closure_4(width - channel.nativeEvent.layout.width - 40);
               return;
             }
           }
           if (cResult[23] === channel) {
-            class U {
-              constructor() {
-                obj = closure_1(closure_2[16]);
-                obj1 = { channelId: channel.id, messageId: null, flash: true, jumpType: null };
-                obj3 = closure_1(closure_2[17]);
-                obj1.messageId = obj3.castChannelIdAsMessageId(channel.id);
-                obj1.jumpType = closure_0(closure_2[18]).JumpType.ANIMATED;
-                jumpToMessageResult = obj.jumpToMessage(obj1);
+            class S {
+              constructor(arg0) {
+                tmp = closure_4(width - channel.nativeEvent.layout.width - 40);
                 return;
               }
             }
           }
-          let tmp27 = null != firstMessage;
-          if (tmp27) {
-            class U {
-              constructor() {
-                obj = closure_1(closure_2[16]);
-                obj1 = { channelId: channel.id, messageId: null, flash: true, jumpType: null };
-                obj3 = closure_1(closure_2[17]);
-                obj1.messageId = obj3.castChannelIdAsMessageId(channel.id);
-                obj1.jumpType = closure_0(closure_2[18]).JumpType.ANIMATED;
-                jumpToMessageResult = obj.jumpToMessage(obj1);
+          let tmp30 = null != firstMessage;
+          if (tmp30) {
+            class S {
+              constructor(arg0) {
+                tmp = closure_4(width - channel.nativeEvent.layout.width - 40);
                 return;
               }
             }
             let obj2 = { style: tmp4.reactionRow, children: null };
-            const obj3 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp18 };
-            obj2.children = closure_10(tmp(10040).ForumPostActionBarReactions, obj3);
-            tmp27 = closure_10(View, obj2);
+            const obj3 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp20 };
+            obj2.children = closure_10(tmp(10427).ForumPostActionBarReactions, obj3);
+            tmp30 = closure_10(View, obj2);
           }
           cResult[23] = channel;
-          cResult[24] = tmp18;
+          cResult[24] = tmp20;
           cResult[25] = firstMessage;
           cResult[26] = stateFromStores;
           cResult[27] = tmp4.reactionRow;
-          cResult[28] = tmp27;
+          cResult[28] = tmp30;
         }
         const items3 = [tmp4.actionBarContainer, gradientTop];
         cResult[20] = gradientTop;
         cResult[21] = tmp4.actionBarContainer;
         cResult[22] = items3;
-        const tmpResult8 = tmp(7518);
+        const tmpResult8 = tmp(9241);
       }
-      const fn = function j() {
+      function handleFollow() {
         const result = messages_MessagesUtils.handleToggleFollowForumPost(channel, stateFromStores1);
-      };
+      }
       cResult[13] = channel;
       cResult[14] = stateFromStores1;
-      cResult[15] = fn;
-      const tmp17 = width(noop.useState(0), 2);
+      cResult[15] = handleFollow;
+      const tmp19 = width(noop.useState(0), 2);
     }
-  : (channel) => {
+  : function ForumPostActionBar(channel) {
       channel = channel.channel;
       noop = undefined;
       const tmp = closure_12();
       const items = [ChannelStore];
       const stateFromStores = channel(504).useStateFromStores(items, () => ChannelStore.getChannel(channel.parent_id));
       let obj = channel(504);
-      const firstMessage = channel(6817).useFirstForumPostMessage(channel).firstMessage;
-      let obj2 = channel(6817);
+      const firstMessage = channel(6990).useFirstForumPostMessage(channel).firstMessage;
+      let obj2 = channel(6990);
       const items1 = [JoinedThreadsStore];
       const stateFromStores1 = channel(504).useStateFromStores(items1, () => JoinedThreadsStore.hasJoined(channel.id));
       dependencyMap = channel.getGuildId();
@@ -358,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return isLurkingResult;
       });
-      const width = stateFromStores1(1484)().width;
+      const width = stateFromStores1(1496)().width;
       const tmp7 = width(noop.useState(0), 2);
       noop = tmp7[1];
       const items3 = [width];
@@ -367,13 +307,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items3);
       const obj4 = channel(504);
       const obj6 = { style: null, children: null };
-      const items4 = [tmp.actionBarContainer, channel(7518).useGradientTop()];
+      const items4 = [tmp.actionBarContainer, channel(9241).useGradientTop()];
       obj6.style = items4;
       let tmp11 = null != firstMessage;
       if (tmp11) {
         const obj7 = { style: tmp.reactionRow, children: null };
         const obj8 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp7[0] };
-        obj7.children = closure_10(tmp2(10040).ForumPostActionBarReactions, obj8);
+        obj7.children = closure_10(tmp2(10427).ForumPostActionBarReactions, obj8);
         tmp11 = closure_10(View, obj7);
       }
       const items5 = [tmp11];
@@ -387,30 +327,30 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl4 = tmp2(1126).intl;
         obj10.accessibilityLabel = intl4.string(tmp2(1126).t.WqhZss);
         obj10.style = tmp.actionButton;
-        obj10.onPress = function onPress() {
+        obj10.onPress = function handleCopyLink() {
           const guildId = channel.getGuildId();
           if (null != guildId) {
             const obj2 = { section: AnalyticsSections.CHANNEL_HEADER };
             const result = messages_MessagesUtils.handleCopyLinkForumPost(guildId, channel.id, obj2);
           }
         };
-        obj10.children = closure_10(tmp2(4845).LinkIcon, { size: "xs" });
-        items7[1] = closure_10(tmp2(5916).PressableOpacity, obj10);
+        obj10.children = closure_10(tmp2(5039).LinkIcon, { size: "xs" });
+        items7[1] = closure_10(tmp2(6189).PressableOpacity, obj10);
         const obj11 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
         const intl5 = tmp2(1126).intl;
         obj11.accessibilityLabel = intl5.string(tmp2(1126).t.nFP4oa);
         const items8 = [,];
-        ({ actionButton: arr12[0], lastActionButton: arr12[1] } = tmp);
+        ({ actionButton: arr11[0], lastActionButton: arr11[1] } = tmp);
         obj11.style = items8;
-        obj11.onPress = function onPress() {
+        obj11.onPress = function handleJumpToTop() {
           const obj2 = { channelId: channel.id, messageId: null, flash: true, jumpType: null };
           const obj = MessageActionCreatorsDefault;
           obj2.messageId = SnowflakeUtilsDefault.castChannelIdAsMessageId(channel.id);
           obj2.jumpType = Client.JumpType.ANIMATED;
           obj.jumpToMessage(obj2);
         };
-        obj11.children = closure_10(tmp2(11085).ArrowLargeUpIcon, { size: "xs" });
-        items7[2] = closure_10(tmp2(5916).PressableOpacity, obj11);
+        obj11.children = closure_10(tmp2(10449).ArrowLargeUpIcon, { size: "xs" });
+        items7[2] = closure_10(tmp2(6189).PressableOpacity, obj11);
         obj9.children = items7;
         items5[1] = closure_11(View, obj9);
         obj6.children = items5;
@@ -428,11 +368,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj12.style = tmp.actionButton;
           obj12.onPress = items9;
           intl = closure_10;
-          items9 = [closure_10(tmp2(4583).CheckmarkLargeIcon, { size: "xs", color: "text-brand" })];
-          Text = tmp2(4892).Text;
-          const obj13 = { style: null, variant: "text-sm/semibold", color: "text-brand", children: null };
-          const items10 = [tmp.buttonText];
-          obj13.style = items10;
+          items9 = [closure_10(tmp2(4775).CheckmarkLargeIcon, { size: "xs", color: "text-brand" })];
+          Text = tmp2(5086).Text;
+          const obj13 = { style: tmp.buttonText, variant: "text-sm/semibold", color: "text-brand", children: null };
           const intl3 = tmp2(1126).intl;
           obj13.children = intl3.string(tmp2(1126).t["OtF+lC"]);
           t = closure_10(Text, obj13);
@@ -443,7 +381,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj12.accessibilityLabel = Text(t["DjZ+6E"]);
           obj12.style = tmp.actionButton;
           obj12.onPress = items9;
-          const items11 = [closure_10(tmp2(9301).BellIcon, { size: "xs" })];
+          const items10 = [closure_10(tmp2(8747).BellIcon, { size: "xs" })];
           const obj14 = {
             style: tmp.buttonText,
             variant: "text-sm/semibold",
@@ -452,11 +390,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl2 = tmp2(1126).intl;
           obj14.children = intl2.string(tmp2(1126).t["0rQinA"]);
-          items11[1] = closure_10(tmp2(4892).Text, obj14);
-          obj12.children = items11;
+          items10[1] = closure_10(tmp2(5086).Text, obj14);
+          obj12.children = items10;
           tmp15 = obj12;
         }
-        closure_11(tmp2(5916).PressableOpacity, tmp15);
+        closure_11(tmp2(6189).PressableOpacity, tmp15);
       }
-      const obj5 = channel(7518);
+      const obj5 = channel(9241);
     };

@@ -7,7 +7,7 @@ const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({
   container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 0 },
 });
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (rulesChannelId) => {
+  ? function MemberVerificationFormRenderer(rulesChannelId) {
       const cResult = rulesChannelId(verification[5]).c(10);
       rulesChannelId = rulesChannelId.rulesChannelId;
       ({ formFields, onChange } = rulesChannelId);
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp4 = mapped;
         }
       }
-      const fn = function c(field_type, arg1, id) {
+      function renderFormField(field_type, arg1, id) {
         rulesChannelId = arg1;
         field_type = field_type.field_type;
         if (rulesChannelId(verification[6]).VerificationFormFieldTypes.TERMS === field_type) {
@@ -142,15 +142,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           return null;
         }
-      };
+      }
       cResult[0] = onChange;
       cResult[1] = rulesChannelId;
       cResult[2] = verification;
-      cResult[3] = fn;
-      tmp3 = fn;
+      cResult[3] = renderFormField;
+      tmp3 = renderFormField;
       let obj = rulesChannelId(verification[5]);
     }
-  : (arg0) => {
+  : function MemberVerificationFormRenderer(arg0) {
       ({ rulesChannelId: require, formFields, onChange: importDefault, verification: dependencyMap } = arg0);
       let obj = { style: closure_6().container, children: null };
       let mapped;

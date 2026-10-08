@@ -15,7 +15,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((arg0) => {
   const container = {
     flex: 1,
@@ -33,7 +33,7 @@ let closure_6 = createStyles.createStyles((arg0) => {
 });
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function ConversationNavigatorHeader(channelId) {
       const cResult = channelId(576).c(10);
       channelId = channelId.channelId;
       ({ title, hasRightAction } = channelId);
@@ -83,7 +83,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp18;
         tmp15 = tmp18;
       }
-      const tmp14 = jsx(channelId(7509).GenericHeaderTitle, {
+      const tmp14 = jsx(channelId(9232).GenericHeaderTitle, {
         title,
         subtitle: tmp12,
         variant: "heading-lg/semibold",
@@ -95,7 +95,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = tmp14;
       const tmpResult = channelId(504);
     }
-  : (channelId) => {
+  : function ConversationNavigatorHeader(channelId) {
       channelId = channelId.channelId;
       let flag = channelId.hasRightAction;
       if (flag === undefined) {
@@ -117,7 +117,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "heading-lg/semibold",
         subtitleColor: "text-muted",
       };
-      obj2.children = jsx(channelId(7509).GenericHeaderTitle, {
+      obj2.children = jsx(channelId(9232).GenericHeaderTitle, {
         title: channelId.title,
         subtitle: useChannelNameDefault(stateFromStores, true),
         variant: "heading-lg/semibold",
@@ -127,7 +127,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (shouldHandleSafeArea) => {
+  ? function HeaderWithBorder(shouldHandleSafeArea) {
       const cResult = c.c(4);
       const token = useToken.useToken(nativeDefault.colors.BORDER_SUBTLE);
       const token1 = useToken.useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
@@ -156,7 +156,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = renderHeaderResult;
       const tmpResult = HeaderShared;
     }
-  : (shouldHandleSafeArea) => {
+  : function HeaderWithBorder(shouldHandleSafeArea) {
       const token = useToken.useToken(nativeDefault.colors.BORDER_SUBTLE);
       const token1 = useToken.useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
       const obj4 = {};

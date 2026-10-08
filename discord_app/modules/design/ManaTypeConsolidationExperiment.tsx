@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/design/ManaTypeConsolidationE
 
 export default apexExperiment;
 export const useManaTypeConsolidationExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useManaTypeConsolidationExperiment(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -30,4 +30,6 @@ export const useManaTypeConsolidationExperiment = ReactCompilerGating.isReactCom
       }
       return apexExperiment.useConfig(tmp2).enabled;
     }
-  : (location) => apexExperiment.useConfig({ location }).enabled;
+  : function useManaTypeConsolidationExperiment(location) {
+      return apexExperiment.useConfig({ location }).enabled;
+    };

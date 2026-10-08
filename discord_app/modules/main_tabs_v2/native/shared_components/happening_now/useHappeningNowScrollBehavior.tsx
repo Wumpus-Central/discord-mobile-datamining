@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useHappeningNowScrollBehavior(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
       const cResult = c.c(6);
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp4 = fn;
     }
-  : (arg0, arg1) => {
+  : function useHappeningNowScrollBehavior(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
       const tmp = _slicedToArray(noop.useState(false), 2);

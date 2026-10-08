@@ -2,9 +2,9 @@
 import c from "../../../../../_runtime/00576_c.js";
 import AccessibilityPreferencesContext from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
 import ReanimatedRexportDefault from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import AnimatedEnterExitItemDefault from "../../AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 import Tooltip from "Tooltip.native.tsx";
 import TooltipConstants from "TooltipConstants.native.tsx";
+import AnimatedEnterExitItemDefault from "../../AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -31,7 +31,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Tooltip/native/AnimatedTooltip.native.tsx");
 
 export const AnimatedTooltip = ReactCompilerGating.isReactCompilerEnabled()
-  ? (visible) => {
+  ? function AnimatedTooltip(visible) {
       const cResult = c.c(7);
       visible = visible.visible;
       const tmp3 = _objectWithoutProperties(visible, closure_3);
@@ -87,7 +87,7 @@ export const AnimatedTooltip = ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmp5 = _slicedToArray(noop.useState(false), 2);
     }
-  : (visible) => {
+  : function AnimatedTooltip(visible) {
       visible = visible.visible;
       const merged = Object.assign(visible, Object.assign({ visible: 0 }));
       const result = TooltipConstants.tooltipEnterExitAnimation(merged.position);

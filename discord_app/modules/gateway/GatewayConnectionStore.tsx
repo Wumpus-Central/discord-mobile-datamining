@@ -112,10 +112,9 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
               }
               channel = closure_130_8.getChannel(closure_129_1);
               if (null != channel) {
-                const obj6 = { guildId: channel.getGuildId(), channelId: closure_129_1 };
-                closure_129_0 = obj6;
-                closure_130_0(closure_130_3[17]).muteCustomJoinSound(closure_129_1);
-                const obj5 = closure_130_0(closure_130_3[17]);
+                const obj5 = { guildId: channel.getGuildId(), channelId: closure_129_1 };
+                closure_129_0 = obj5;
+                closure_130_1(closure_130_3[17])(closure_129_1);
               }
             }
             const localVoiceState = closure_130_0(closure_130_3[13]).localVoiceState;
@@ -145,8 +144,8 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
           }
         }
         c4 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
+        const obj6 = { value, done: true };
+        return obj6;
       } catch (tmp47) {
         c4 = tmp;
         throw tmp47;
@@ -171,7 +170,7 @@ function handleLocalPresenceChange() {
 const Constants = fn(1085);
 ({ RTCConnectionStates: closure_15, AppStates: closure_16 } = Constants);
 const UserSettingsTypes = fn(1095).UserSettingsTypes;
-fn(13458).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+fn(13758).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_19 = new LoggerDefault("ConnectionStore");
 let closure_20 = 0;
 let c21 = null;
@@ -514,13 +513,13 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((item) => closure_0(4948).decodeStreamKey(item).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((item) => closure_0(5896).decodeStreamKey(item).ownerId === id.getId());
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(13458).socket;
+          const socket = closure_0(13758).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(13458).socket;
+            const socket2 = closure_0(13758).socket;
             socket2.streamDelete(item);
           }
         });

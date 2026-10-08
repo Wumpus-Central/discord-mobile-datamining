@@ -45,7 +45,7 @@ const Constants = fn(1085);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_4, GuildFeatures: hasOwnProperty } = Constants);
 const value = InstantInviteUtilsDefault.INVITE_OPTIONS_7_DAYS.value;
 const metroRequire = value;
-let createExperiment = fn(4780);
+let createExperiment = fn(4974);
 let obj2 = {
   kind: "guild",
   id: "2025-08_default_invite_expiration_guild",
@@ -60,7 +60,7 @@ let items = [
 ];
 obj2.treatments = items;
 let experiment = createExperiment.createExperiment(obj2);
-createExperiment = fn(4780);
+createExperiment = fn(4974);
 let obj4 = {
   kind: "guild",
   id: "2026-05_default_invite_expiration_guild_web",
@@ -78,7 +78,7 @@ let experiment1 = createExperiment.createExperiment(obj4);
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function useDefaultInviteExpiration(guildId) {
       const cResult = guildId(576).c(12);
       guildId = guildId.guildId;
       const _location = guildId.location;
@@ -161,7 +161,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = guildId(576);
       tmp = guildId;
     }
-  : (guildId) => {
+  : function useDefaultInviteExpiration(guildId) {
       guildId = guildId.guildId;
       const _location = guildId.location;
       let tmp = guildId;
@@ -195,7 +195,7 @@ export const DefaultInviteExpirationGuildWebExperiment = experiment1;
 export { getDefaultInviteExpiration };
 export const useDefaultInviteExpiration = tmp5;
 export const useMaxAgeOptions = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useMaxAgeOptions(arg0) {
       const cResult = c.c(8);
       ({ guildId, location: _location } = arg0);
       if (guildId == null) {
@@ -255,7 +255,7 @@ export const useMaxAgeOptions = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj5;
       tmp3 = obj5;
     }
-  : (arg0) => {
+  : function useMaxAgeOptions(arg0) {
       ({ guildId, location: _location } = arg0);
       if (guildId == null) {
         guildId = React4;

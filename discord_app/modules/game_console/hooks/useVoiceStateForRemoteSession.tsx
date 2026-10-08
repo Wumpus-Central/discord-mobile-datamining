@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/hooks/useVoiceStateForRemoteSession.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useVoiceStateForRemoteSession() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AuthenticationStore, VoiceStateStore, GameConsoleStore];
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5, tmp6);
     }
-  : () => {
+  : function useVoiceStateForRemoteSession() {
       const items = [AuthenticationStore, VoiceStateStore, GameConsoleStore];
       return initialize.useStateFromStores(items, () => {
         id = id.getId();

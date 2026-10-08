@@ -7,7 +7,7 @@ import Server from "../../../flow/Server.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import useFontScale from "../../screen/native/useFontScale.tsx";
 import ApplicationCommandQueryTypes from "../ApplicationCommandQueryTypes.tsx";
-import _modDef10160 from "../../../../_runtime/metro/10160__.js";
+import _modDef9746 from "../../../../_runtime/metro/09746__.js";
 import ApplicationSectionHeader from "ApplicationSectionHeader.tsx";
 import ApplicationCommandDiscoveryManager from "../ApplicationCommandDiscoveryManager.tsx";
 import ApplicationCommandsCategoriesDefault from "ApplicationCommandsCategories.tsx";
@@ -20,15 +20,15 @@ const ApplicationSectionHeaderDefault = ApplicationSectionHeader;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
-const ApplicationCommandConstants = fn(5795);
+const ApplicationCommandConstants = fn(5399);
 ({ BuiltInSectionId: closure_8, DISCOVERY_COMMANDS_QUERY_LIMIT: closure_9 } = ApplicationCommandConstants);
-const ITEM_HEIGHT = fn(12053).ITEM_HEIGHT;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10085).AUTOCOMPLETE_ROW_HEIGHT;
+const ITEM_HEIGHT = fn(12126).ITEM_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(9668).AUTOCOMPLETE_ROW_HEIGHT;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, SectionListElementType: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   discoveryWrapper: { flex: 1 },
   noCommandsImage: { height: 50, width: 50, marginBottom: 16 },
@@ -42,7 +42,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandDiscovery.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onHeightChange) => {
+  ? function ApplicationCommandDiscovery(onHeightChange) {
       const cResult = onPressSlashItem(576).c(78);
       ({ style, onPressSlashItem } = onHeightChange);
       onHeightChange = onHeightChange.onHeightChange;
@@ -51,9 +51,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp4 = sum();
       dependencyMap = tmp4;
       let obj = onPressSlashItem(576);
-      const bound = Math.max(onPressSlashItem(5609).useFontScale() * commandsByActiveSection, commandsByActiveSection);
+      const bound = Math.max(onPressSlashItem(5382).useFontScale() * commandsByActiveSection, commandsByActiveSection);
       ref = ref.useRef(null);
-      let obj2 = onPressSlashItem(5609);
+      let obj2 = onPressSlashItem(5382);
       [r10036, tmp8] = bound(ref.useState(0), 2);
       ref = ref.useRef(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       let tmp7 = bound(ref.useState(0), 2);
-      const commandDiscoveryManager = onPressSlashItem(12055).useCommandDiscoveryManager(first);
+      const commandDiscoveryManager = onPressSlashItem(12128).useCommandDiscoveryManager(first);
       if (cResult[1] !== channel) {
         const obj4 = { channel, type: "channel" };
         cResult[1] = channel;
@@ -76,13 +76,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [onPressSlashItem(1985).ApplicationCommandType.CHAT];
+        const items = [onPressSlashItem(1997).ApplicationCommandType.CHAT];
         cResult[3] = items;
         let tmp12 = items;
       } else {
         tmp12 = cResult[3];
       }
-      const BuiltInCommandFilter = onPressSlashItem(8833).BuiltInCommandFilter;
+      const BuiltInCommandFilter = onPressSlashItem(9192).BuiltInCommandFilter;
       let tmp13 = canOnlyUseTextCommands ? BuiltInCommandFilter.ONLY_TEXT : BuiltInCommandFilter.ALLOW;
       if (cResult[4] === tmp13) {
         if (cResult[5] === tmp14) {
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[9] === tmp15) {
             let tmp18 = cResult[10];
           }
-          const discovery = channel(8968).useDiscovery(tmp18);
+          const discovery = channel(9759).useDiscovery(tmp18);
           sectionDescriptors = discovery.sectionDescriptors;
           const activeSections = discovery.activeSections;
           commandsByActiveSection = discovery.commandsByActiveSection;
@@ -118,10 +118,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const _Symbol2 = Symbol;
               if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
                 const fn2 = function j() {
-                  const AccessibilityAnnouncer = onPressSlashItem(4596).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = onPressSlashItem(4788).AccessibilityAnnouncer;
                   const intl = onPressSlashItem(1126).intl;
                   AccessibilityAnnouncer.announce(intl.string(onPressSlashItem(1126).t["2wfLMm"]));
-                  onPressSlashItem(5076).trackWithMetadata(hasMoreAfter.APPLICATION_COMMAND_BROWSER_OPENED);
+                  onPressSlashItem(5105).trackWithMetadata(hasMoreAfter.APPLICATION_COMMAND_BROWSER_OPENED);
                   return () => {
                     const result = onPressSlashItem(dependencyMap[14]).updateInitialSectionId(undefined);
                   };
@@ -545,8 +545,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         let tmp3Result = 0 === section.data.length;
                                         if (tmp3Result) {
                                           const obj3 = {
-                                            lightSource: _modDef10160,
-                                            darkSource: _modDef10160,
+                                            lightSource: _modDef9746,
+                                            darkSource: _modDef9746,
                                             body: null,
                                             containerStyle: null,
                                             imageStyle: null,
@@ -866,7 +866,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[15] = X;
           tmp22 = X;
           tmp21 = items4;
-          const obj9 = channel(8968);
+          const obj9 = channel(9759);
         }
         const obj6 = { context: tmp11, filters: tmp15, options: tmp16, allowFetch: true };
         cResult[8] = tmp11;
@@ -879,7 +879,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = !canOnlyUseTextCommands;
       cResult[6] = obj7;
       tmp15 = obj7;
-      let tmpResult = onPressSlashItem(12055);
+      let tmpResult = onPressSlashItem(12128);
     }
   : function ApplicationCommandDiscovery(channel) {
       ({ onPressSlashItem: require, onHeightChange } = channel);
@@ -913,7 +913,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.applicationCommands = !canOnlyUseTextCommands;
       obj5.filters = obj6;
       obj5.options = { placeholderCount: 3, limit: commandDiscoveryManager, includeFrecency: true };
-      const discovery = channel(8968).useDiscovery(obj5);
+      const discovery = channel(9759).useDiscovery(obj5);
       const sectionDescriptors = discovery.sectionDescriptors;
       ({ activeSections: c11, commandsByActiveSection } = discovery);
       ({ hasMoreAfter: c13, filteredSectionId } = discovery);
@@ -1177,7 +1177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const section = item.section;
         let found;
         if (item.inputType === require("ApplicationCommandTypes").ApplicationCommandInputType.PLACEHOLDER) {
-          return filteredSectionId(onHeightChange(12056), {});
+          return filteredSectionId(onHeightChange(12129), {});
         } else {
           found = sectionDescriptors.find((id) => id.id === item.applicationId);
           const obj = {
@@ -1193,7 +1193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             showIcon: item.applicationId !== section.section.id,
             guildId: found.guild_id,
           };
-          return filteredSectionId(onHeightChange(12057), obj);
+          return filteredSectionId(onHeightChange(12130), obj);
         }
       };
       obj9.renderSectionHeader = function renderSectionHeader(section) {
@@ -1208,8 +1208,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp3Result = 0 === section.data.length;
         if (tmp3Result) {
           const obj3 = {
-            lightSource: _modDef10160,
-            darkSource: _modDef10160,
+            lightSource: _modDef9746,
+            darkSource: _modDef9746,
             body: null,
             containerStyle: null,
             imageStyle: null,

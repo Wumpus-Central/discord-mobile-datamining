@@ -1,22 +1,22 @@
 // discord_app/modules/parental_consent/native/AgeUpdateFooter.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef2815 from "../../safety_flows/SafetyFlows.messages.js";
+import _modDef2859 from "../../safety_flows/SafetyFlows.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import AgeVerificationActionCreatorsDefault from "../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import AgeVerificationAnalyticsUtils from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
+import AgeVerificationActionCreatorsDefault from "../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ text: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parental_consent/native/AgeUpdateFooter.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AgeUpdateFooter() {
       const cResult = c.c(3);
       const tmp4 = closure_4();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             });
           },
         };
-        const formatResult = intl.format(_modDef2815.ifObbX, obj2);
+        const formatResult = intl.format(_modDef2859.ifObbX, obj2);
         cResult[0] = formatResult;
         let first = formatResult;
       } else {
@@ -51,10 +51,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function AgeUpdateFooter() {
       let obj = { variant: "text-md/medium", color: "text-muted", style: closure_4().text, children: null };
       const intl = util.intl;
-      obj.children = intl.format(_modDef2815.ifObbX, {
+      obj.children = intl.format(_modDef2859.ifObbX, {
         handleAgeVerifyHook() {
           const obj = AgeVerificationActionCreatorsDefault;
           return obj.showAgeVerificationGetStartedModal({

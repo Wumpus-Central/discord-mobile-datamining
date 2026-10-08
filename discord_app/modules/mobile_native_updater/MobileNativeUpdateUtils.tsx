@@ -112,7 +112,7 @@ function openBuildInstallerUrl(install) {
     }
   } catch (err) {}
 }
-const UPDATE_CONFIG = fn(4874).UPDATE_CONFIG;
+const UPDATE_CONFIG = fn(5068).UPDATE_CONFIG;
 const logger = new LoggerDefault("MobileNativeUpdateUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateUtils.tsx");

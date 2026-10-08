@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -11,8 +11,8 @@ import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx"
 import UserProfileSettingsActionCreators from "../UserProfileSettingsActionCreators.tsx";
 import ProfileCustomizationUtils from "../../profile_customization/ProfileCustomizationUtils.tsx";
 import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
-import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
+import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
 import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles.tsx";
 import UserProfilePremiumTryItOutMobileRefreshExperiment from "../experiments/UserProfilePremiumTryItOutMobileRefreshExperiment.tsx";
@@ -50,11 +50,18 @@ function EditGuildProfileBanner(user) {
     result = null != guildMember;
   }
   obj3.showEditButton = result;
-  obj3.onPressEdit = function onPressEdit() {
+  obj3.onPressEdit = function handleEditBanner() {
     if (c4) {
-      const obj = { user, analyticsLocations, showRemoveBanner: null, removeText: null, onBannerChange: null };
+      let obj = {
+        user,
+        analyticsLocations,
+        showRemoveBanner: null,
+        removeText: null,
+        onBannerChange: null,
+        onGifBannerSelect: null,
+      };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(14434, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(14659, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -63,17 +70,26 @@ function EditGuildProfileBanner(user) {
       const intl = util.intl;
       obj.removeText = intl.string(util.t.jHlJNS);
       obj.onBannerChange = function onBannerChange(banner) {
-        return user(banner[17]).setPendingChanges({ guildId, banner });
+        return user(dependencyMap[17]).setPendingChanges({ guildId, banner });
+      };
+      obj.onGifBannerSelect = function openGifPicker() {
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+        const obj3 = { profileAssetType: null, selectionContext: null, guildId: null };
+        const obj2 = ActionSheetActionCreatorsDefault;
+        obj3.profileAssetType = user(dependencyMap[19]).ProfileAssetType.BANNER;
+        obj3.selectionContext = user(dependencyMap[19]).GIFSelectionContext.PROFILE_EDIT;
+        obj3.guildId = guildId;
+        obj2.openLazy(user(dependencyMap[14])(dependencyMap[18], dependencyMap.paths), "Select GIF Banner", obj3);
       };
       tmpResult.openLazy(tmp13, "Change Banner", obj);
     } else {
-      const obj2 = {
+      let obj2 = {
         initialUpsellKey: constants2.PREMIUM_GUILD_PROFILE,
         analyticsLocation: null,
         analyticsLocations: null,
         analyticsProperties: null,
       };
-      const obj3 = {
+      let obj3 = {
         section: AnalyticsSections.PREMIUM_GUILD_MEMBER_PROFILE,
         object: constants.EDIT_GUILD_PROFILE_BANNER,
       };
@@ -89,7 +105,7 @@ function EditGuildProfileBanner(user) {
   obj3.editButtonAccessibilityLabel = intl.string(user(1126).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_17(UserProfileEditBannerButtonDefault, obj3);
-  return closure_17(user(6664).AnalyticsLocationProvider, obj2);
+  return closure_17(user(6841).AnalyticsLocationProvider, obj2);
 }
 let closure_3 = ["nick", "bio", "guild_tag"];
 let closure_4 = ["nick", "bio", "guild_tag"];
@@ -103,13 +119,13 @@ const Constants = fn(1085);
   UpsellTypes: closure_15,
   AnalyticsPages,
 } = Constants);
-const PremiumUpsellTypes = fn(1379).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE };
 let ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildProfileTryItOutUpsellExperimentWrapper(arg0) {
       const cResult = c.c(16);
       ({ onLayout, onButtonPress } = arg0);
       const isTryItOutMobileRefreshEnabled =
@@ -209,7 +225,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = items;
       }
     }
-  : (onButtonPress) => {
+  : function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
       onButtonPress = onButtonPress.onButtonPress;
       const isTryItOutMobileRefreshEnabled =
         UserProfilePremiumTryItOutMobileRefreshExperiment.useIsTryItOutMobileRefreshEnabled("GuildProfileEditForm");
@@ -252,8 +268,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/GuildProfileEditForm.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (currentUser) => {
-      const cResult = currentUser(guild[20]).c(186);
+  ? function GuildProfileEditForm(currentUser) {
+      const cResult = currentUser(guild[22]).c(186);
       currentUser = currentUser.currentUser;
       const tmp5 = require("UserProfileSharedStyles")();
       const tmp6 = require("UserProfileEditFormSharedStyles")();
@@ -265,11 +281,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      let obj = currentUser(guild[20]);
-      const bioMaxLength = currentUser(guild[29]).useBioMaxLength(first);
-      const tmpResult = currentUser(guild[29]);
-      let tmp9 = require("useKeyboardIsOpen")();
+      let obj = currentUser(guild[22]);
+      const bioMaxLength = currentUser(guild[31]).useBioMaxLength(first);
+      const tmpResult = currentUser(guild[31]);
       const ref = first3.useRef(null);
+      const ref1 = first3.useRef(null);
       const ref2 = first3.useRef(null);
       const ref3 = first3.useRef(null);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -279,8 +295,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp14 = cResult[1];
       }
-      const insets = tmp4(tmp2[23])(tmp14).insets;
-      const PX_16 = tmp4(tmp2[25]).space.PX_16;
+      const insets = tmp4(tmp2[25])(tmp14).insets;
+      const PX_16 = tmp4(tmp2[27]).space.PX_16;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = { ref: ref1, offset: null };
         const obj5 = { type: "toRef", ref: ref2, extraOffset: PX_16 };
@@ -302,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [tmp15, tmp16];
         const obj8 = { ref: ref3, offset: null };
-        const obj9 = { type: "toValue", value: tmp4(tmp2[25]).space.PX_64 };
+        const obj9 = { type: "toValue", value: tmp4(tmp2[27]).space.PX_64 };
         obj8.offset = obj9;
         items[2] = obj8;
         cResult[4] = items;
@@ -318,7 +334,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp18 = cResult[6];
       }
-      const onFocus = tmp4(tmp2[31])(tmp18).onFocus;
+      const onFocus = tmp4(tmp2[33])(tmp18).onFocus;
       const tmp19 = require("useGuildProfileEditForm")();
       guild = tmp19.guild;
       ({
@@ -347,7 +363,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[9] === guild) {
           let tmp22 = cResult[10];
         }
-        const stateFromStores = tmp(tmp2[33]).useStateFromStores(tmp20, tmp22);
+        const stateFromStores = tmp(tmp2[35]).useStateFromStores(tmp20, tmp22);
         const _Symbol = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
           const items2 = [UserProfileStore];
@@ -360,27 +376,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[13] === guild) {
             let tmp26 = cResult[14];
           }
-          const stateFromStores1 = tmp(tmp2[33]).useStateFromStores(tmp24, tmp26);
+          const stateFromStores1 = tmp(tmp2[35]).useStateFromStores(tmp24, tmp26);
           let id;
-          const tmpResult10 = tmp(tmp2[33]);
+          const tmpResult10 = tmp(tmp2[35]);
           if (guild != null) {
             id = guild.id;
           }
-          const tmp4ResultResult = tmp4(tmp2[34])(currentUser.id, id);
-          const tmp4Result = tmp4(tmp2[34]);
-          const customStatusActivity = tmp(tmp2[35]).useCustomStatusActivity();
-          const tmp32 = tmp4(tmp2[36])(tmp4ResultResult);
+          const tmp4ResultResult = tmp4(tmp2[36])(currentUser.id, id);
+          const tmp4Result = tmp4(tmp2[36]);
+          const customStatusActivity = tmp(tmp2[37]).useCustomStatusActivity();
+          const tmp32 = tmp4(tmp2[38])(tmp4ResultResult);
           if (cResult[15] === currentUser.id) {
             if (cResult[16] === pendingAvatar) {
               let tmp33 = cResult[17];
             }
-            const canEditNickname = tmp(tmp2[38]).useGuildActionSheetPermissions(guild).canEditNickname;
+            const canEditNickname = tmp(tmp2[40]).useGuildActionSheetPermissions(guild).canEditNickname;
             if (cResult[18] !== currentUser) {
               const result = tmp4(tmp2[8]).canUsePremiumGuildMemberProfile(currentUser);
               cResult[18] = currentUser;
               cResult[19] = result;
               let tmp35 = result;
-              const tmp4Result4 = tmp4(tmp2[8]);
+              const tmp4Result8 = tmp4(tmp2[8]);
             } else {
               tmp35 = cResult[19];
             }
@@ -396,7 +412,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (!tmp35) {
                 tmp40 = !tmp9;
               }
-              const floatingUpsellHeight = tmp(tmp2[24]).useFloatingUpsellHeight();
+              const floatingUpsellHeight = tmp(tmp2[26]).useFloatingUpsellHeight();
               const onLayout = floatingUpsellHeight.onLayout;
               let str;
               if (stateFromStores != null) {
@@ -450,13 +466,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[26] === pendingThemeColors) {
                     let tmp43 = cResult[27];
                   }
-                  ({ theme, primaryColor, secondaryColor } = tmp4(tmp2[40])(tmp43));
+                  ({ theme, primaryColor, secondaryColor } = tmp4(tmp2[42])(tmp43));
                   if (cResult[28] === primaryColor) {
                     if (cResult[29] === secondaryColor) {
                       if (cResult[30] === theme) {
                         let tmp46 = cResult[31];
                       }
-                      const userProfileColors = tmp(tmp2[41]).useUserProfileColors(tmp46);
+                      const userProfileColors = tmp(tmp2[43]).useUserProfileColors(tmp46);
                       ({
                         gradientFallbackBackground,
                         gradientSecondaryBackground,
@@ -468,7 +484,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         num30 = floatingUpsellHeight.height;
                       }
                       const sum = insets.bottom + num30;
-                      const sum1 = sum + tmp4(tmp2[25]).space.PX_16;
+                      const sum1 = sum + tmp4(tmp2[27]).space.PX_16;
                       if (cResult[32] === analyticsLocations) {
                         if (cResult[33] === avatarBackground) {
                           if (cResult[34] === tmp32) {
@@ -633,7 +649,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                         cResult[155] ===
                                                                                                                         tmp63
                                                                                                                       ) {
-                                                                                                                        let tmp135 =
+                                                                                                                        let tmp154 =
                                                                                                                           cResult[156];
                                                                                                                       }
                                                                                                                       if (
@@ -646,9 +662,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                         ) {
                                                                                                                           if (
                                                                                                                             cResult[159] ===
-                                                                                                                            tmp135
+                                                                                                                            tmp154
                                                                                                                           ) {
-                                                                                                                            let tmp138 =
+                                                                                                                            let tmp157 =
                                                                                                                               cResult[160];
                                                                                                                           }
                                                                                                                           if (
@@ -665,9 +681,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                               ) {
                                                                                                                                 if (
                                                                                                                                   cResult[164] ===
-                                                                                                                                  tmp138
+                                                                                                                                  tmp157
                                                                                                                                 ) {
-                                                                                                                                  let tmp141 =
+                                                                                                                                  let tmp160 =
                                                                                                                                     cResult[165];
                                                                                                                                 }
                                                                                                                                 if (
@@ -684,9 +700,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                                     ) {
                                                                                                                                       if (
                                                                                                                                         cResult[169] ===
-                                                                                                                                        tmp141
+                                                                                                                                        tmp160
                                                                                                                                       ) {
-                                                                                                                                        let tmp144 =
+                                                                                                                                        let tmp163 =
                                                                                                                                           cResult[170];
                                                                                                                                       }
                                                                                                                                       if (
@@ -701,7 +717,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                                             cResult[173] ===
                                                                                                                                             tmp40
                                                                                                                                           ) {
-                                                                                                                                            let tmp147 =
+                                                                                                                                            let tmp166 =
                                                                                                                                               cResult[174];
                                                                                                                                           }
                                                                                                                                           if (
@@ -714,13 +730,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                                             ) {
                                                                                                                                               if (
                                                                                                                                                 cResult[177] ===
-                                                                                                                                                tmp144
+                                                                                                                                                tmp163
                                                                                                                                               ) {
                                                                                                                                                 if (
                                                                                                                                                   cResult[178] ===
-                                                                                                                                                  tmp147
+                                                                                                                                                  tmp166
                                                                                                                                                 ) {
-                                                                                                                                                  let tmp151 =
+                                                                                                                                                  let tmp170 =
                                                                                                                                                     cResult[179];
                                                                                                                                                 }
                                                                                                                                                 if (
@@ -752,9 +768,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                                                     secondaryColor:
                                                                                                                                                       tmp72,
                                                                                                                                                     children:
-                                                                                                                                                      tmp151,
+                                                                                                                                                      tmp170,
                                                                                                                                                   };
-                                                                                                                                                const tmp156 =
+                                                                                                                                                const tmp175 =
                                                                                                                                                   closure_17(
                                                                                                                                                     tmp55,
                                                                                                                                                     obj11,
@@ -768,9 +784,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                                                 cResult[183] =
                                                                                                                                                   tmp72;
                                                                                                                                                 cResult[184] =
-                                                                                                                                                  tmp151;
+                                                                                                                                                  tmp170;
                                                                                                                                                 cResult[185] =
-                                                                                                                                                  tmp156;
+                                                                                                                                                  tmp175;
                                                                                                                                               }
                                                                                                                                             }
                                                                                                                                           }
@@ -783,12 +799,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                                             };
                                                                                                                                           const items4 =
                                                                                                                                             [
-                                                                                                                                              tmp144,
-                                                                                                                                              tmp147,
+                                                                                                                                              tmp163,
+                                                                                                                                              tmp166,
                                                                                                                                             ];
                                                                                                                                           obj12.children =
                                                                                                                                             items4;
-                                                                                                                                          const tmp153 =
+                                                                                                                                          const tmp172 =
                                                                                                                                             closure_18(
                                                                                                                                               tmp54,
                                                                                                                                               obj12,
@@ -798,16 +814,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                                           cResult[176] =
                                                                                                                                             tmp69;
                                                                                                                                           cResult[177] =
-                                                                                                                                            tmp144;
+                                                                                                                                            tmp163;
                                                                                                                                           cResult[178] =
-                                                                                                                                            tmp147;
+                                                                                                                                            tmp166;
                                                                                                                                           cResult[179] =
-                                                                                                                                            tmp153;
-                                                                                                                                          tmp151 =
-                                                                                                                                            tmp153;
+                                                                                                                                            tmp172;
+                                                                                                                                          tmp170 =
+                                                                                                                                            tmp172;
                                                                                                                                         }
                                                                                                                                       }
-                                                                                                                                      let tmp148 =
+                                                                                                                                      let tmp167 =
                                                                                                                                         tmp40;
                                                                                                                                       if (
                                                                                                                                         tmp40
@@ -818,7 +834,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                                               tmp56,
                                                                                                                                             onLayout,
                                                                                                                                           };
-                                                                                                                                        tmp148 =
+                                                                                                                                        tmp167 =
                                                                                                                                           closure_17(
                                                                                                                                             closure_21,
                                                                                                                                             obj13,
@@ -831,9 +847,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                                       cResult[173] =
                                                                                                                                         tmp40;
                                                                                                                                       cResult[174] =
-                                                                                                                                        tmp148;
-                                                                                                                                      tmp147 =
-                                                                                                                                        tmp148;
+                                                                                                                                        tmp167;
+                                                                                                                                      tmp166 =
+                                                                                                                                        tmp167;
                                                                                                                                     }
                                                                                                                                   }
                                                                                                                                 }
@@ -846,11 +862,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                                 const items5 =
                                                                                                                                   [
                                                                                                                                     tmp68,
-                                                                                                                                    tmp141,
+                                                                                                                                    tmp160,
                                                                                                                                   ];
                                                                                                                                 obj14.children =
                                                                                                                                   items5;
-                                                                                                                                const tmp146 =
+                                                                                                                                const tmp165 =
                                                                                                                                   closure_18(
                                                                                                                                     tmp53,
                                                                                                                                     obj14,
@@ -862,11 +878,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                                 cResult[168] =
                                                                                                                                   tmp68;
                                                                                                                                 cResult[169] =
-                                                                                                                                  tmp141;
+                                                                                                                                  tmp160;
                                                                                                                                 cResult[170] =
-                                                                                                                                  tmp146;
-                                                                                                                                tmp144 =
-                                                                                                                                  tmp146;
+                                                                                                                                  tmp165;
+                                                                                                                                tmp163 =
+                                                                                                                                  tmp165;
                                                                                                                               }
                                                                                                                             }
                                                                                                                           }
@@ -880,11 +896,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                           const items6 =
                                                                                                                             [
                                                                                                                               tmp66,
-                                                                                                                              tmp138,
+                                                                                                                              tmp157,
                                                                                                                             ];
                                                                                                                           obj15.children =
                                                                                                                             items6;
-                                                                                                                          const tmp143 =
+                                                                                                                          const tmp162 =
                                                                                                                             closure_18(
                                                                                                                               tmp52,
                                                                                                                               obj15,
@@ -896,11 +912,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                           cResult[163] =
                                                                                                                             tmp66;
                                                                                                                           cResult[164] =
-                                                                                                                            tmp138;
+                                                                                                                            tmp157;
                                                                                                                           cResult[165] =
-                                                                                                                            tmp143;
-                                                                                                                          tmp141 =
-                                                                                                                            tmp143;
+                                                                                                                            tmp162;
+                                                                                                                          tmp160 =
+                                                                                                                            tmp162;
                                                                                                                         }
                                                                                                                       }
                                                                                                                       const obj16 =
@@ -911,11 +927,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                       const items7 =
                                                                                                                         [
                                                                                                                           tmp64,
-                                                                                                                          tmp135,
+                                                                                                                          tmp154,
                                                                                                                         ];
                                                                                                                       obj16.children =
                                                                                                                         items7;
-                                                                                                                      const tmp140 =
+                                                                                                                      const tmp159 =
                                                                                                                         closure_18(
                                                                                                                           tmp51,
                                                                                                                           obj16,
@@ -925,11 +941,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                       cResult[158] =
                                                                                                                         tmp64;
                                                                                                                       cResult[159] =
-                                                                                                                        tmp135;
+                                                                                                                        tmp154;
                                                                                                                       cResult[160] =
-                                                                                                                        tmp140;
-                                                                                                                      tmp138 =
-                                                                                                                        tmp140;
+                                                                                                                        tmp159;
+                                                                                                                      tmp157 =
+                                                                                                                        tmp159;
                                                                                                                     }
                                                                                                                   }
                                                                                                                 }
@@ -956,7 +972,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                         ];
                                                                                                         obj17.children =
                                                                                                           items8;
-                                                                                                        const tmp137 =
+                                                                                                        const tmp156 =
                                                                                                           closure_18(
                                                                                                             tmp50,
                                                                                                             obj17,
@@ -978,8 +994,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                         cResult[155] =
                                                                                                           tmp63;
                                                                                                         cResult[156] =
-                                                                                                          tmp137;
-                                                                                                        tmp135 = tmp137;
+                                                                                                          tmp156;
+                                                                                                        tmp154 = tmp156;
                                                                                                       }
                                                                                                     }
                                                                                                   }
@@ -1023,7 +1039,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       const _Symbol3 = Symbol;
                       const obj18 = { backgroundColor: avatarBackground };
-                      Symbol.for("react.early_return_sentinel");
+                      const tmpResult14 = tmp(tmp2[43]);
                       if (cResult[97] !== errors) {
                         ({ nick, bio, guild_tag } = errors);
                         const tmp81 = first1(errors, analyticsLocations);
@@ -1058,281 +1074,88 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       if (tmp77 != null) {
                         first4 = tmp77[0];
                       }
+                      let tmp86 = null;
+                      let tmp87;
+                      let tmp88;
+                      let tmp89;
+                      let tmp90;
+                      let tmp91;
+                      let tmp92;
+                      let tmp93;
+                      let tmp94;
+                      let tmp95;
+                      let tmp96;
+                      let tmp97;
+                      let tmp98;
+                      let tmp99;
+                      let tmp100;
+                      let tmp101;
+                      let tmp102;
+                      let tmp103;
+                      let ThemeContextProvider;
+                      let tmp105;
+                      let tmp106;
+                      let tmp107;
+                      let tmp108;
+                      let tmp109;
                       if (null != guild) {
                         if (cResult[102] === first3) {
                           if (cResult[103] === tmp76) {
                             if (cResult[104] === first4) {
                               if (cResult[105] === first1) {
-                                class Nn {
-                                  constructor() {
-                                    if (null == closure_6) {
-                                      tmp15 = closure_5;
-                                      if (null == closure_5) {
-                                        tmp8 = closure_7;
-                                        if (null == closure_7) {
-                                          tmp = globalThis;
-                                          _Object = Object;
-                                          tmp2 = closure_4;
-                                          num = 0;
-                                          stringResult = null;
-                                          if (Object.keys(closure_4).length > 0) {
-                                            tmp4 = closure_0;
-                                            tmp5 = closure_2;
-                                            intl = closure_0(closure_2[16]).intl;
-                                            tmp6 = closure_0;
-                                            tmp7 = closure_2;
-                                            stringResult = intl.string(closure_0(closure_2[16]).t.s35OuK);
-                                          }
-                                          tmp8 = stringResult;
-                                        }
-                                        tmp9 = null;
-                                        if (null != tmp8) {
-                                          str = "";
-                                          tmp9 = null;
-                                          if ("" !== tmp8) {
-                                            tmp10 = jsx;
-                                            tmp11 = View;
-                                            obj = { style: null, children: null };
-                                            tmp12 = closure_1;
-                                            obj.style = closure_1.errorContainer;
-                                            tmp13 = closure_0;
-                                            tmp14 = closure_2;
-                                            obj1 = {
-                                              variant: "text-sm/bold",
-                                              color: "text-feedback-critical",
-                                              children: null,
-                                            };
-                                            obj1.children = tmp8;
-                                            obj.children = jsx(closure_0(closure_2[26]).Text, obj1);
-                                            tmp9 = jsx(View, obj);
-                                          }
-                                        }
-                                        return tmp9;
-                                      }
-                                    }
-                                    return null;
-                                  }
+                                if (cResult[106] === tmp6.errorContainer) {
+                                  let tmp110 = cResult[107];
                                 }
-                                const ThemeContextProvider = tmp(tmp2[53]).ThemeContextProvider;
-                                if (cResult[110] !== gradientSecondaryBackground) {
-                                  const obj19 = { backgroundColor: null };
-                                  class Nn {
-                                    constructor() {
-                                      if (null == closure_6) {
-                                        tmp15 = closure_5;
-                                        if (null == closure_5) {
-                                          tmp8 = closure_7;
-                                          if (null == closure_7) {
-                                            tmp = globalThis;
-                                            _Object = Object;
-                                            tmp2 = closure_4;
-                                            num = 0;
-                                            stringResult = null;
-                                            if (Object.keys(closure_4).length > 0) {
-                                              tmp4 = closure_0;
-                                              tmp5 = closure_2;
-                                              intl = closure_0(closure_2[16]).intl;
-                                              tmp6 = closure_0;
-                                              tmp7 = closure_2;
-                                              stringResult = intl.string(closure_0(closure_2[16]).t.s35OuK);
-                                            }
-                                            tmp8 = stringResult;
-                                          }
-                                          tmp9 = null;
-                                          if (null != tmp8) {
-                                            str = "";
-                                            tmp9 = null;
-                                            if ("" !== tmp8) {
-                                              tmp10 = jsx;
-                                              tmp11 = View;
-                                              obj = { style: null, children: null };
-                                              tmp12 = closure_1;
-                                              obj.style = closure_1.errorContainer;
-                                              tmp13 = closure_0;
-                                              tmp14 = closure_2;
-                                              obj1 = {
-                                                variant: "text-sm/bold",
-                                                color: "text-feedback-critical",
-                                                children: null,
-                                              };
-                                              obj1.children = tmp8;
-                                              obj.children = jsx(closure_0(closure_2[26]).Text, obj1);
-                                              tmp9 = jsx(View, obj);
-                                            }
-                                          }
-                                          return tmp9;
-                                        }
-                                      }
-                                      return null;
-                                    }
+                                if (cResult[108] !== analyticsLocations) {
+                                  function handleUpsellPress() {
+                                    const obj = {
+                                      analyticsLocation: null,
+                                      analyticsLocations: null,
+                                      premiumFeatureCardOrder: null,
+                                    };
+                                    const obj2 = {};
+                                    const merged = Object.assign(closure_19);
+                                    obj2.object = constants.BUTTON_CTA;
+                                    obj.analyticsLocation = obj2;
+                                    obj.analyticsLocations = analyticsLocations;
+                                    obj.premiumFeatureCardOrder =
+                                      PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING;
+                                    openPremiumModalDefault(obj);
                                   }
+                                  cResult[108] = analyticsLocations;
+                                  cResult[109] = handleUpsellPress;
+                                  let tmp111 = handleUpsellPress;
+                                } else {
+                                  tmp111 = cResult[109];
+                                }
+                                if (cResult[110] !== gradientSecondaryBackground) {
+                                  const obj19 = { backgroundColor: gradientSecondaryBackground };
                                   cResult[110] = gradientSecondaryBackground;
                                   cResult[111] = obj19;
-                                  let tmp112 = obj19;
+                                  let tmp113 = obj19;
                                 } else {
-                                  tmp112 = cResult[111];
+                                  tmp113 = cResult[111];
                                 }
                                 if (cResult[112] === tmp6.container) {
-                                  class Nn {
-                                    constructor() {
-                                      if (null == closure_6) {
-                                        tmp15 = closure_5;
-                                        if (null == closure_5) {
-                                          tmp8 = closure_7;
-                                          if (null == closure_7) {
-                                            tmp = globalThis;
-                                            _Object = Object;
-                                            tmp2 = closure_4;
-                                            num = 0;
-                                            stringResult = null;
-                                            if (Object.keys(closure_4).length > 0) {
-                                              tmp4 = closure_0;
-                                              tmp5 = closure_2;
-                                              intl = closure_0(closure_2[16]).intl;
-                                              tmp6 = closure_0;
-                                              tmp7 = closure_2;
-                                              stringResult = intl.string(closure_0(closure_2[16]).t.s35OuK);
-                                            }
-                                            tmp8 = stringResult;
-                                          }
-                                          tmp9 = null;
-                                          if (null != tmp8) {
-                                            str = "";
-                                            tmp9 = null;
-                                            if ("" !== tmp8) {
-                                              tmp10 = jsx;
-                                              tmp11 = View;
-                                              obj = { style: null, children: null };
-                                              tmp12 = closure_1;
-                                              obj.style = closure_1.errorContainer;
-                                              tmp13 = closure_0;
-                                              tmp14 = closure_2;
-                                              obj1 = {
-                                                variant: "text-sm/bold",
-                                                color: "text-feedback-critical",
-                                                children: null,
-                                              };
-                                              obj1.children = tmp8;
-                                              obj.children = jsx(closure_0(closure_2[26]).Text, obj1);
-                                              tmp9 = jsx(View, obj);
-                                            }
-                                          }
-                                          return tmp9;
-                                        }
-                                      }
-                                      return null;
-                                    }
+                                  if (cResult[113] === tmp113) {
+                                    let tmp114 = cResult[114];
                                   }
                                   if (cResult[115] !== tmp6.bounceOffset) {
-                                    class Nn {
-                                      constructor() {
-                                        if (null == closure_6) {
-                                          tmp15 = closure_5;
-                                          if (null == closure_5) {
-                                            tmp8 = closure_7;
-                                            if (null == closure_7) {
-                                              tmp = globalThis;
-                                              _Object = Object;
-                                              tmp2 = closure_4;
-                                              num = 0;
-                                              stringResult = null;
-                                              if (Object.keys(closure_4).length > 0) {
-                                                tmp4 = closure_0;
-                                                tmp5 = closure_2;
-                                                intl = closure_0(closure_2[16]).intl;
-                                                tmp6 = closure_0;
-                                                tmp7 = closure_2;
-                                                stringResult = intl.string(closure_0(closure_2[16]).t.s35OuK);
-                                              }
-                                              tmp8 = stringResult;
-                                            }
-                                            tmp9 = null;
-                                            if (null != tmp8) {
-                                              str = "";
-                                              tmp9 = null;
-                                              if ("" !== tmp8) {
-                                                tmp10 = jsx;
-                                                tmp11 = View;
-                                                obj = { style: null, children: null };
-                                                tmp12 = closure_1;
-                                                obj.style = closure_1.errorContainer;
-                                                tmp13 = closure_0;
-                                                tmp14 = closure_2;
-                                                obj1 = {
-                                                  variant: "text-sm/bold",
-                                                  color: "text-feedback-critical",
-                                                  children: null,
-                                                };
-                                                obj1.children = tmp8;
-                                                obj.children = jsx(closure_0(closure_2[26]).Text, obj1);
-                                                tmp9 = jsx(View, obj);
-                                              }
-                                            }
-                                            return tmp9;
-                                          }
-                                        }
-                                        return null;
-                                      }
-                                    }
-                                    tmp116[0] = tmp6.bounceOffset;
-                                    const tmp117 = closure_17(closure_8, tmp116);
+                                    const obj20 = { style: tmp6.bounceOffset };
+                                    const tmp118 = closure_17(closure_8, obj20);
                                     cResult[115] = tmp6.bounceOffset;
-                                    cResult[116] = tmp117;
+                                    cResult[116] = tmp118;
+                                    let tmp116 = tmp118;
+                                  } else {
+                                    tmp116 = cResult[116];
                                   }
                                   if (cResult[117] !== gradientSecondaryBackground) {
-                                    const obj20 = { backgroundColor: null };
-                                    class Nn {
-                                      constructor() {
-                                        if (null == closure_6) {
-                                          tmp15 = closure_5;
-                                          if (null == closure_5) {
-                                            tmp8 = closure_7;
-                                            if (null == closure_7) {
-                                              tmp = globalThis;
-                                              _Object = Object;
-                                              tmp2 = closure_4;
-                                              num = 0;
-                                              stringResult = null;
-                                              if (Object.keys(closure_4).length > 0) {
-                                                tmp4 = closure_0;
-                                                tmp5 = closure_2;
-                                                intl = closure_0(closure_2[16]).intl;
-                                                tmp6 = closure_0;
-                                                tmp7 = closure_2;
-                                                stringResult = intl.string(closure_0(closure_2[16]).t.s35OuK);
-                                              }
-                                              tmp8 = stringResult;
-                                            }
-                                            tmp9 = null;
-                                            if (null != tmp8) {
-                                              str = "";
-                                              tmp9 = null;
-                                              if ("" !== tmp8) {
-                                                tmp10 = jsx;
-                                                tmp11 = View;
-                                                obj = { style: null, children: null };
-                                                tmp12 = closure_1;
-                                                obj.style = closure_1.errorContainer;
-                                                tmp13 = closure_0;
-                                                tmp14 = closure_2;
-                                                obj1 = {
-                                                  variant: "text-sm/bold",
-                                                  color: "text-feedback-critical",
-                                                  children: null,
-                                                };
-                                                obj1.children = tmp8;
-                                                obj.children = jsx(closure_0(closure_2[26]).Text, obj1);
-                                                tmp9 = jsx(View, obj);
-                                              }
-                                            }
-                                            return tmp9;
-                                          }
-                                        }
-                                        return null;
-                                      }
-                                    }
+                                    const obj21 = { backgroundColor: gradientSecondaryBackground };
                                     cResult[117] = gradientSecondaryBackground;
-                                    cResult[118] = obj20;
+                                    cResult[118] = obj21;
+                                    let tmp119 = obj21;
+                                  } else {
+                                    tmp119 = cResult[118];
                                   }
                                   if (cResult[119] === currentUser) {
                                     if (cResult[120] === tmp4ResultResult) {
@@ -1342,117 +1165,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             if (cResult[124] === isDisabled) {
                                               if (cResult[125] === tmp33) {
                                                 if (cResult[126] === pendingBanner) {
-                                                  class Nn {
-                                                    constructor() {
-                                                      if (null == closure_6) {
-                                                        tmp15 = closure_5;
-                                                        if (null == closure_5) {
-                                                          tmp8 = closure_7;
-                                                          if (null == closure_7) {
-                                                            tmp = globalThis;
-                                                            _Object = Object;
-                                                            tmp2 = closure_4;
-                                                            num = 0;
-                                                            stringResult = null;
-                                                            if (Object.keys(closure_4).length > 0) {
-                                                              tmp4 = closure_0;
-                                                              tmp5 = closure_2;
-                                                              intl = closure_0(closure_2[16]).intl;
-                                                              tmp6 = closure_0;
-                                                              tmp7 = closure_2;
-                                                              stringResult = intl.string(
-                                                                closure_0(closure_2[16]).t.s35OuK,
-                                                              );
-                                                            }
-                                                            tmp8 = stringResult;
-                                                          }
-                                                          tmp9 = null;
-                                                          if (null != tmp8) {
-                                                            str = "";
-                                                            tmp9 = null;
-                                                            if ("" !== tmp8) {
-                                                              tmp10 = jsx;
-                                                              tmp11 = View;
-                                                              obj = { style: null, children: null };
-                                                              tmp12 = closure_1;
-                                                              obj.style = closure_1.errorContainer;
-                                                              tmp13 = closure_0;
-                                                              tmp14 = closure_2;
-                                                              obj1 = {
-                                                                variant: "text-sm/bold",
-                                                                color: "text-feedback-critical",
-                                                                children: null,
-                                                              };
-                                                              obj1.children = tmp8;
-                                                              obj.children = jsx(closure_0(closure_2[26]).Text, obj1);
-                                                              tmp9 = jsx(View, obj);
-                                                            }
-                                                          }
-                                                          return tmp9;
-                                                        }
-                                                      }
-                                                      return null;
-                                                    }
+                                                  if (cResult[127] === pendingThemeColors) {
+                                                    let tmp120 = cResult[128];
                                                   }
+                                                  let tmp125Result = null;
                                                   if (null != guild) {
-                                                    class Nn {
-                                                      constructor() {
-                                                        if (null == closure_6) {
-                                                          tmp15 = closure_5;
-                                                          if (null == closure_5) {
-                                                            tmp8 = closure_7;
-                                                            if (null == closure_7) {
-                                                              tmp = globalThis;
-                                                              _Object = Object;
-                                                              tmp2 = closure_4;
-                                                              num = 0;
-                                                              stringResult = null;
-                                                              if (Object.keys(closure_4).length > 0) {
-                                                                tmp4 = closure_0;
-                                                                tmp5 = closure_2;
-                                                                intl = closure_0(closure_2[16]).intl;
-                                                                tmp6 = closure_0;
-                                                                tmp7 = closure_2;
-                                                                stringResult = intl.string(
-                                                                  closure_0(closure_2[16]).t.s35OuK,
-                                                                );
-                                                              }
-                                                              tmp8 = stringResult;
-                                                            }
-                                                            tmp9 = null;
-                                                            if (null != tmp8) {
-                                                              str = "";
-                                                              tmp9 = null;
-                                                              if ("" !== tmp8) {
-                                                                tmp10 = jsx;
-                                                                tmp11 = View;
-                                                                obj = { style: null, children: null };
-                                                                tmp12 = closure_1;
-                                                                obj.style = closure_1.errorContainer;
-                                                                tmp13 = closure_0;
-                                                                tmp14 = closure_2;
-                                                                obj1 = {
-                                                                  variant: "text-sm/bold",
-                                                                  color: "text-feedback-critical",
-                                                                  children: null,
-                                                                };
-                                                                obj1.children = tmp8;
-                                                                obj.children = jsx(closure_0(closure_2[26]).Text, obj1);
-                                                                tmp9 = jsx(View, obj);
-                                                              }
-                                                            }
-                                                            return tmp9;
-                                                          }
-                                                        }
-                                                        return null;
-                                                      }
-                                                    }
+                                                    const obj22 = { style: null, children: null };
                                                     const items9 = [, , ,];
                                                     ({ avatarBackground: arr6[0], avatarPosition: arr6[1] } = tmp5);
                                                     items9[2] = tmp6.avatarContainer;
                                                     items9[3] = obj18;
-                                                    tmp125[0] = items9;
-                                                    const obj21 = {
+                                                    obj22.style = items9;
+                                                    const obj23 = {
                                                       userId: currentUser.id,
                                                       disabled: null,
                                                       disableStatus: false,
@@ -1463,136 +1187,323 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                     if (!isDisabled) {
                                                       tmp127 = !tmp35;
                                                     }
-                                                    obj21.disabled = tmp127;
+                                                    obj23.disabled = tmp127;
                                                     let id1;
                                                     if (guild != null) {
                                                       id1 = guild.id;
                                                     }
-                                                    obj21.guildId = id1;
-                                                    obj21.statusStyle = obj18;
-                                                    tmp125[1] = closure_17(tmp4(tmp2[42]), obj21);
-                                                    closure_17(closure_8, tmp125);
-                                                    const tmp4Result5 = tmp4(tmp2[42]);
+                                                    obj23.guildId = id1;
+                                                    obj23.statusStyle = obj18;
+                                                    obj22.children = closure_17(tmp4(tmp2[44]), obj23);
+                                                    tmp125Result = closure_17(closure_8, obj22);
+                                                    const tmp4Result9 = tmp4(tmp2[44]);
                                                   }
-                                                  tmp4(tmp2[54]);
                                                   if (cResult[129] !== sum1) {
-                                                    const obj22 = { paddingTop: 0, paddingBottom: null };
-                                                    class Nn {
-                                                      constructor() {
-                                                        if (null == closure_6) {
-                                                          tmp15 = closure_5;
-                                                          if (null == closure_5) {
-                                                            tmp8 = closure_7;
-                                                            if (null == closure_7) {
-                                                              tmp = globalThis;
-                                                              _Object = Object;
-                                                              tmp2 = closure_4;
-                                                              num = 0;
-                                                              stringResult = null;
-                                                              if (Object.keys(closure_4).length > 0) {
-                                                                tmp4 = closure_0;
-                                                                tmp5 = closure_2;
-                                                                intl = closure_0(closure_2[16]).intl;
-                                                                tmp6 = closure_0;
-                                                                tmp7 = closure_2;
-                                                                stringResult = intl.string(
-                                                                  closure_0(closure_2[16]).t.s35OuK,
-                                                                );
-                                                              }
-                                                              tmp8 = stringResult;
-                                                            }
-                                                            tmp9 = null;
-                                                            if (null != tmp8) {
-                                                              str = "";
-                                                              tmp9 = null;
-                                                              if ("" !== tmp8) {
-                                                                tmp10 = jsx;
-                                                                tmp11 = View;
-                                                                obj = { style: null, children: null };
-                                                                tmp12 = closure_1;
-                                                                obj.style = closure_1.errorContainer;
-                                                                tmp13 = closure_0;
-                                                                tmp14 = closure_2;
-                                                                obj1 = {
-                                                                  variant: "text-sm/bold",
-                                                                  color: "text-feedback-critical",
-                                                                  children: null,
-                                                                };
-                                                                obj1.children = tmp8;
-                                                                obj.children = jsx(closure_0(closure_2[26]).Text, obj1);
-                                                                tmp9 = jsx(View, obj);
-                                                              }
-                                                            }
-                                                            return tmp9;
-                                                          }
-                                                        }
-                                                        return null;
-                                                      }
-                                                    }
+                                                    const obj24 = { paddingTop: 0, paddingBottom: sum1 };
                                                     cResult[129] = sum1;
-                                                    cResult[130] = obj22;
-                                                    let tmp130 = obj22;
+                                                    cResult[130] = obj24;
+                                                    let tmp130 = obj24;
                                                   } else {
                                                     tmp130 = cResult[130];
                                                   }
                                                   if (cResult[131] === tmp5.profileContent) {
                                                     if (cResult[132] === tmp5.profileContentWrapper) {
-                                                      class Nn {
-                                                        constructor() {
-                                                          if (null == closure_6) {
-                                                            tmp15 = closure_5;
-                                                            if (null == closure_5) {
-                                                              tmp8 = closure_7;
-                                                              if (null == closure_7) {
-                                                                tmp = globalThis;
-                                                                _Object = Object;
-                                                                tmp2 = closure_4;
-                                                                num = 0;
-                                                                stringResult = null;
-                                                                if (Object.keys(closure_4).length > 0) {
-                                                                  tmp4 = closure_0;
-                                                                  tmp5 = closure_2;
-                                                                  intl = closure_0(closure_2[16]).intl;
-                                                                  tmp6 = closure_0;
-                                                                  tmp7 = closure_2;
-                                                                  stringResult = intl.string(
-                                                                    closure_0(closure_2[16]).t.s35OuK,
-                                                                  );
-                                                                }
-                                                                tmp8 = stringResult;
-                                                              }
-                                                              tmp9 = null;
-                                                              if (null != tmp8) {
-                                                                str = "";
-                                                                tmp9 = null;
-                                                                if ("" !== tmp8) {
-                                                                  tmp10 = jsx;
-                                                                  tmp11 = View;
-                                                                  obj = { style: null, children: null };
-                                                                  tmp12 = closure_1;
-                                                                  obj.style = closure_1.errorContainer;
-                                                                  tmp13 = closure_0;
-                                                                  tmp14 = closure_2;
-                                                                  obj1 = {
-                                                                    variant: "text-sm/bold",
-                                                                    color: "text-feedback-critical",
-                                                                    children: null,
-                                                                  };
-                                                                  obj1.children = tmp8;
-                                                                  obj.children = jsx(
-                                                                    closure_0(closure_2[26]).Text,
-                                                                    obj1,
-                                                                  );
-                                                                  tmp9 = jsx(View, obj);
-                                                                }
-                                                              }
-                                                              return tmp9;
+                                                      if (cResult[133] === tmp130) {
+                                                        let tmp131 = cResult[134];
+                                                      }
+                                                      if (cResult[135] === customStatusActivity) {
+                                                        if (cResult[136] === tmp45) {
+                                                          if (cResult[137] === tmp5.customStatusBubble) {
+                                                            if (cResult[138] === tmp5.emojiOnlyCustomStatusBubble) {
+                                                              let tmp132 = cResult[139];
                                                             }
+                                                            let tmp135 = pendingNickname;
+                                                            if (pendingNickname == null) {
+                                                              tmp135 = str;
+                                                            }
+                                                            let tmp136 = str3;
+                                                            if ("" !== pendingPronouns) {
+                                                              tmp136 = pendingPronouns;
+                                                            }
+                                                            if (cResult[140] === tmp32) {
+                                                              if (cResult[141] === containerBackground) {
+                                                                if (cResult[142] === currentUser) {
+                                                                  if (cResult[143] === guild.id) {
+                                                                    if (cResult[144] === pendingDisplayNameStyles) {
+                                                                      if (cResult[145] === tmp135) {
+                                                                        if (cResult[146] === tmp136) {
+                                                                          let tmp137 = cResult[147];
+                                                                        }
+                                                                        let tmp141Result = null;
+                                                                        if (null != guild) {
+                                                                          const obj25 = { style: null, children: null };
+                                                                          const items10 = [tmp6.formContainer];
+                                                                          const obj26 = {
+                                                                            backgroundColor: containerBackground,
+                                                                            paddingBottom: 20,
+                                                                          };
+                                                                          items10[1] = obj26;
+                                                                          obj25.style = items10;
+                                                                          const items11 = [tmp110(), , , , , , , , ,];
+                                                                          const obj27 = {
+                                                                            inputRef: ref1,
+                                                                            label: null,
+                                                                            errorMessage: null,
+                                                                            value: null,
+                                                                            onFocus: null,
+                                                                            onChange: null,
+                                                                            placeholder: null,
+                                                                            maxLength: null,
+                                                                            disabled: null,
+                                                                          };
+                                                                          let intl = tmp(tmp2[16]).intl;
+                                                                          obj27.label = intl.string(
+                                                                            tmp(tmp2[16]).t.me1lRk,
+                                                                          );
+                                                                          obj27.errorMessage = first1;
+                                                                          let tmp144 = pendingNickname;
+                                                                          if (pendingNickname == null) {
+                                                                            tmp144 = str;
+                                                                          }
+                                                                          obj27.value = tmp144;
+                                                                          obj27.onFocus = onFocus;
+                                                                          obj27.onChange = function onChange(nickname) {
+                                                                            return UserProfileSettingsActionCreators.setPendingChanges(
+                                                                              { guildId: guild.id, nickname },
+                                                                            );
+                                                                          };
+                                                                          const tmp4Result11 = tmp4(tmp2[45]);
+                                                                          obj27.placeholder = tmp4(tmp2[46]).getName(
+                                                                            currentUser,
+                                                                          );
+                                                                          obj27.maxLength = maxLength;
+                                                                          let tmp146 = !canEditNickname;
+                                                                          if (canEditNickname) {
+                                                                            tmp146 = isDisabled;
+                                                                          }
+                                                                          obj27.disabled = tmp146;
+                                                                          items11[1] = closure_17(tmp4Result11, obj27);
+                                                                          let tmp142Result = tmp35;
+                                                                          if (tmp35) {
+                                                                            const obj28 = {
+                                                                              user: currentUser,
+                                                                              guildId: guild.id,
+                                                                            };
+                                                                            tmp142Result = closure_17(
+                                                                              tmp4(tmp2[47]),
+                                                                              obj28,
+                                                                            );
+                                                                          }
+                                                                          items11[2] = tmp142Result;
+                                                                          const obj29 = {
+                                                                            inputRef: ref2,
+                                                                            label: null,
+                                                                            errorMessage: null,
+                                                                            description: null,
+                                                                            value: null,
+                                                                            onFocus: null,
+                                                                            onChange: null,
+                                                                            placeholder: null,
+                                                                            maxLength: null,
+                                                                            spellCheck: false,
+                                                                            autoCorrect: false,
+                                                                            disabled: null,
+                                                                          };
+                                                                          const tmp4Result12 = tmp4(tmp2[46]);
+                                                                          const intl2 = tmp(tmp2[16]).intl;
+                                                                          obj29.label = intl2.string(
+                                                                            tmp(tmp2[16]).t["+T3RI/"],
+                                                                          );
+                                                                          obj29.errorMessage = first2;
+                                                                          const intl3 = tmp(tmp2[16]).intl;
+                                                                          obj29.description = intl3.string(
+                                                                            tmp(tmp2[16]).t.NZqtIp,
+                                                                          );
+                                                                          obj29.value = pendingPronouns;
+                                                                          obj29.onFocus = onFocus;
+                                                                          obj29.onChange = function onChange(pronouns) {
+                                                                            return UserProfileSettingsActionCreators.setPendingChanges(
+                                                                              { guildId: guild.id, pronouns },
+                                                                            );
+                                                                          };
+                                                                          obj29.placeholder = str3;
+                                                                          obj29.maxLength = maxLength2;
+                                                                          obj29.disabled = isDisabled;
+                                                                          items11[3] = closure_17(
+                                                                            tmp4(tmp2[45]),
+                                                                            obj29,
+                                                                          );
+                                                                          let tmp142Result2 = null;
+                                                                          if (tmp35) {
+                                                                            const obj30 = {
+                                                                              inputRef: ref3,
+                                                                              label: null,
+                                                                              errorMessage: null,
+                                                                              description: null,
+                                                                              value: null,
+                                                                              onFocus: null,
+                                                                              onChange: null,
+                                                                              placeholder: null,
+                                                                              maxLength: null,
+                                                                              numberOfLines: 5,
+                                                                              disabled: null,
+                                                                            };
+                                                                            const intl4 = tmp(tmp2[16]).intl;
+                                                                            obj30.label = intl4.string(
+                                                                              tmp(tmp2[16]).t.ZzAR2Y,
+                                                                            );
+                                                                            obj30.errorMessage = first3;
+                                                                            const intl5 = tmp(tmp2[16]).intl;
+                                                                            obj30.description = intl5.string(
+                                                                              tmp(tmp2[16]).t.S5O8U2,
+                                                                            );
+                                                                            let tmp152 = pendingBio;
+                                                                            if (pendingBio == null) {
+                                                                              tmp152 = str4;
+                                                                            }
+                                                                            obj30.value = tmp152;
+                                                                            obj30.onFocus = onFocus;
+                                                                            obj30.onChange = function onChange(bio) {
+                                                                              return UserProfileSettingsActionCreators.setPendingChanges(
+                                                                                { guildId: guild.id, bio },
+                                                                              );
+                                                                            };
+                                                                            obj30.placeholder = str5;
+                                                                            obj30.maxLength = bioMaxLength;
+                                                                            obj30.disabled = isDisabled;
+                                                                            tmp142Result2 = closure_17(
+                                                                              tmp4(tmp2[45]),
+                                                                              obj30,
+                                                                            );
+                                                                            const tmp4Result14 = tmp4(tmp2[45]);
+                                                                          }
+                                                                          items11[4] = tmp142Result2;
+                                                                          const obj31 = {
+                                                                            pendingAvatarSrc: tmp33,
+                                                                            pendingThemeColors,
+                                                                            user: currentUser,
+                                                                            guildId: guild.id,
+                                                                            onProfileThemeColorsChanged(themeColors) {
+                                                                              return UserProfileSettingsActionCreators.setPendingChanges(
+                                                                                { guildId: guild.id, themeColors },
+                                                                              );
+                                                                            },
+                                                                            showResetMenu: tmp38,
+                                                                          };
+                                                                          items11[5] = closure_17(
+                                                                            tmp4(tmp2[48]),
+                                                                            obj31,
+                                                                          );
+                                                                          class X {
+                                                                            constructor() {
+                                                                              member = null;
+                                                                              if (null != guild) {
+                                                                                tmp3 = closure_9;
+                                                                                tmp4 = currentUser;
+                                                                                member = closure_9.getMember(
+                                                                                  tmp.id,
+                                                                                  currentUser.id,
+                                                                                );
+                                                                              }
+                                                                              return member;
+                                                                            }
+                                                                          }
+                                                                          tmp153[0] = currentUser;
+                                                                          tmp153[1] = guild.id;
+                                                                          tmp153[2] = pendingAvatarDecoration;
+                                                                          items11[6] = closure_17(
+                                                                            tmp4(tmp2[49]),
+                                                                            tmp153,
+                                                                          );
+                                                                          const obj33 = {
+                                                                            user: currentUser,
+                                                                            guildId: guild.id,
+                                                                            pendingProfileEffect,
+                                                                            displayProfile: tmp4ResultResult,
+                                                                          };
+                                                                          items11[7] = closure_17(
+                                                                            tmp4(tmp2[50]),
+                                                                            obj33,
+                                                                          );
+                                                                          const obj34 = {
+                                                                            user: currentUser,
+                                                                            guildId: guild.id,
+                                                                            pendingProfileFrame,
+                                                                            displayProfile: tmp4ResultResult,
+                                                                          };
+                                                                          items11[8] = closure_17(
+                                                                            tmp4(tmp2[51]),
+                                                                            obj34,
+                                                                          );
+                                                                          const obj35 = {
+                                                                            user: currentUser,
+                                                                            pendingNameplate,
+                                                                            guildId: guild.id,
+                                                                          };
+                                                                          items11[9] = closure_17(
+                                                                            tmp4(tmp2[52]),
+                                                                            obj35,
+                                                                          );
+                                                                          obj25.children = items11;
+                                                                          tmp141Result = closure_18(closure_8, obj25);
+                                                                          const tmp4Result13 = tmp4(tmp2[45]);
+                                                                        }
+                                                                        tmp96 = tmp141Result;
+                                                                        tmp86 = forResult;
+                                                                        tmp87 = secondaryColor;
+                                                                        tmp88 = primaryColor;
+                                                                        tmp89 = theme;
+                                                                        tmp90 = tmp114;
+                                                                        tmp91 = tmp116;
+                                                                        tmp92 = ref;
+                                                                        tmp93 = tmp120;
+                                                                        tmp94 = tmp119;
+                                                                        tmp95 = tmp125Result;
+                                                                        tmp97 = tmp137;
+                                                                        tmp98 = tmp132;
+                                                                        tmp99 = tmp131;
+                                                                        tmp100 = secondaryColor;
+                                                                        tmp101 = primaryColor;
+                                                                        tmp102 = gradientFallbackBackground;
+                                                                        tmp103 = tmp111;
+                                                                        ThemeContextProvider = tmp(
+                                                                          tmp2[55],
+                                                                        ).ThemeContextProvider;
+                                                                        tmp105 = closure_8;
+                                                                        tmp106 = tmp115;
+                                                                        tmp107 = closure_8;
+                                                                        tmp108 = closure_8;
+                                                                        tmp109 = tmp4Result10;
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                            const obj36 = {
+                                                              user: currentUser,
+                                                              displayName: tmp135,
+                                                              pronouns: tmp136,
+                                                              badges: tmp32,
+                                                              badgeContainerBackground: containerBackground,
+                                                              displayNameAccessibilityRole: "header",
+                                                              guildId: guild.id,
+                                                              pendingDisplayNameStyles,
+                                                            };
+                                                            const tmp139 = closure_17(tmp4(tmp2[58]), obj36);
+                                                            cResult[140] = tmp32;
+                                                            cResult[141] = containerBackground;
+                                                            cResult[142] = currentUser;
+                                                            cResult[143] = guild.id;
+                                                            cResult[144] = pendingDisplayNameStyles;
+                                                            cResult[145] = tmp135;
+                                                            cResult[146] = tmp136;
+                                                            cResult[147] = tmp139;
+                                                            tmp137 = tmp139;
                                                           }
-                                                          return null;
                                                         }
                                                       }
-                                                      const obj23 = {
+                                                      const obj37 = {
                                                         customStatusActivity,
                                                         hasCustomProfileTheme: tmp45,
                                                         style: null,
@@ -1600,24 +1511,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                         editEnabled: true,
                                                       };
                                                       ({
-                                                        customStatusBubble: obj30.style,
-                                                        emojiOnlyCustomStatusBubble: obj30.emojiOnlyStyle,
+                                                        customStatusBubble: obj32.style,
+                                                        emojiOnlyCustomStatusBubble: obj32.emojiOnlyStyle,
                                                       } = tmp5);
-                                                      const tmp134 = closure_17(tmp4(tmp2[55]), obj23);
+                                                      const tmp134 = closure_17(tmp4(tmp2[57]), obj37);
                                                       cResult[135] = customStatusActivity;
                                                       cResult[136] = tmp45;
                                                       cResult[137] = tmp5.customStatusBubble;
                                                       cResult[138] = tmp5.emojiOnlyCustomStatusBubble;
                                                       cResult[139] = tmp134;
+                                                      tmp132 = tmp134;
                                                     }
                                                   }
-                                                  const items10 = [, ,];
+                                                  const items12 = [, ,];
                                                   ({ profileContentWrapper: arr7[0], profileContent: arr7[1] } = tmp5);
-                                                  items10[2] = tmp130;
+                                                  items12[2] = tmp130;
                                                   cResult[131] = tmp5.profileContent;
                                                   cResult[132] = tmp5.profileContentWrapper;
                                                   cResult[133] = tmp130;
-                                                  cResult[134] = items10;
+                                                  cResult[134] = items12;
+                                                  tmp131 = items12;
+                                                  tmp4Result10 = tmp4(tmp2[56]);
                                                 }
                                               }
                                             }
@@ -1626,7 +1540,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       }
                                     }
                                   }
-                                  const obj24 = {
+                                  const obj38 = {
                                     user: currentUser,
                                     displayProfile: tmp4ResultResult,
                                     guildId: guild.id,
@@ -1637,7 +1551,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     pendingThemeColors,
                                     disabled: isDisabled,
                                   };
-                                  const tmp122 = closure_17(EditGuildProfileBanner, obj24);
+                                  const tmp123 = closure_17(EditGuildProfileBanner, obj38);
                                   cResult[119] = currentUser;
                                   cResult[120] = tmp4ResultResult;
                                   cResult[121] = guild.id;
@@ -1647,68 +1561,58 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   cResult[125] = tmp33;
                                   cResult[126] = pendingBanner;
                                   cResult[127] = pendingThemeColors;
-                                  cResult[128] = tmp122;
+                                  cResult[128] = tmp123;
+                                  tmp120 = tmp123;
+                                  tmp115 = first4;
                                 }
-                                const items11 = [tmp6.container, tmp112];
+                                const items13 = [tmp6.container, tmp113];
                                 cResult[112] = tmp6.container;
-                                cResult[113] = tmp112;
-                                cResult[114] = items11;
+                                cResult[113] = tmp113;
+                                cResult[114] = items13;
+                                tmp114 = items13;
                               }
                             }
                           }
                         }
-                        class Nn {
-                          constructor() {
-                            if (null == closure_6) {
-                              tmp15 = closure_5;
-                              if (null == closure_5) {
-                                tmp8 = closure_7;
-                                if (null == closure_7) {
-                                  tmp = globalThis;
-                                  _Object = Object;
-                                  tmp2 = closure_4;
-                                  num = 0;
-                                  stringResult = null;
-                                  if (Object.keys(closure_4).length > 0) {
-                                    tmp4 = closure_0;
-                                    tmp5 = closure_2;
-                                    intl = closure_0(closure_2[16]).intl;
-                                    tmp6 = closure_0;
-                                    tmp7 = closure_2;
-                                    stringResult = intl.string(closure_0(closure_2[16]).t.s35OuK);
-                                  }
-                                  tmp8 = stringResult;
+                        function renderFormError() {
+                          if (null == first3) {
+                            if (null == first1) {
+                              let tmp8 = first4;
+                              if (null == first4) {
+                                const _Object = Object;
+                                let stringResult = null;
+                                if (Object.keys(closure_4).length > 0) {
+                                  const intl = util.intl;
+                                  stringResult = intl.string(util.t.s35OuK);
                                 }
-                                tmp9 = null;
-                                if (null != tmp8) {
-                                  str = "";
-                                  tmp9 = null;
-                                  if ("" !== tmp8) {
-                                    tmp10 = jsx;
-                                    tmp11 = View;
-                                    obj = { style: null, children: null };
-                                    tmp12 = closure_1;
-                                    obj.style = closure_1.errorContainer;
-                                    tmp13 = closure_0;
-                                    tmp14 = closure_2;
-                                    obj1 = { variant: "text-sm/bold", color: "text-feedback-critical", children: null };
-                                    obj1.children = tmp8;
-                                    obj.children = jsx(closure_0(closure_2[26]).Text, obj1);
-                                    tmp9 = jsx(View, obj);
-                                  }
-                                }
-                                return tmp9;
+                                tmp8 = stringResult;
                               }
+                              let tmp9 = null;
+                              if (null != tmp8) {
+                                tmp9 = null;
+                                if ("" !== tmp8) {
+                                  const obj = { style: errorContainer.errorContainer, children: null };
+                                  const obj2 = {
+                                    variant: "text-sm/bold",
+                                    color: "text-feedback-critical",
+                                    children: tmp8,
+                                  };
+                                  obj.children = constants(Text_Text.Text, obj2);
+                                  tmp9 = constants(closure_2_8, obj);
+                                }
+                              }
+                              return tmp9;
                             }
-                            return null;
                           }
+                          return null;
                         }
                         cResult[102] = first3;
                         cResult[103] = tmp76;
                         cResult[104] = first4;
                         cResult[105] = first1;
                         cResult[106] = tmp6.errorContainer;
-                        cResult[107] = Nn;
+                        cResult[107] = renderFormError;
+                        tmp110 = renderFormError;
                       }
                       cResult[32] = analyticsLocations;
                       cResult[33] = avatarBackground;
@@ -1761,30 +1665,30 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       cResult[70] = tmp5;
                       cResult[71] = tmp38;
                       cResult[72] = theme;
-                      cResult[73] = undefined;
-                      cResult[74] = undefined;
-                      cResult[75] = undefined;
-                      cResult[76] = undefined;
-                      cResult[77] = undefined;
-                      cResult[78] = undefined;
-                      cResult[79] = undefined;
-                      cResult[80] = undefined;
-                      cResult[81] = undefined;
-                      cResult[82] = undefined;
-                      cResult[83] = undefined;
-                      cResult[84] = undefined;
-                      cResult[85] = undefined;
-                      cResult[86] = undefined;
-                      cResult[87] = undefined;
-                      cResult[88] = undefined;
-                      cResult[89] = undefined;
-                      cResult[90] = undefined;
-                      cResult[91] = undefined;
-                      cResult[92] = undefined;
-                      cResult[93] = undefined;
-                      cResult[94] = undefined;
-                      cResult[95] = undefined;
-                      cResult[96] = null;
+                      cResult[73] = tmp109;
+                      cResult[74] = tmp108;
+                      cResult[75] = tmp107;
+                      cResult[76] = tmp106;
+                      cResult[77] = tmp105;
+                      cResult[78] = ThemeContextProvider;
+                      cResult[79] = tmp103;
+                      cResult[80] = tmp102;
+                      cResult[81] = tmp101;
+                      cResult[82] = tmp100;
+                      cResult[83] = tmp99;
+                      cResult[84] = tmp98;
+                      cResult[85] = tmp97;
+                      cResult[86] = tmp96;
+                      cResult[87] = tmp95;
+                      cResult[88] = tmp94;
+                      cResult[89] = tmp93;
+                      cResult[90] = tmp92;
+                      cResult[91] = tmp91;
+                      cResult[92] = tmp90;
+                      cResult[93] = tmp89;
+                      cResult[94] = tmp88;
+                      cResult[95] = tmp87;
+                      cResult[96] = tmp86;
                       tmp73 = tmp86;
                       tmp72 = tmp87;
                       tmp71 = tmp88;
@@ -1803,48 +1707,48 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       tmp58 = tmp101;
                       tmp57 = tmp102;
                       tmp56 = tmp103;
-                      tmp55 = tmp104;
+                      tmp55 = ThemeContextProvider;
                       tmp54 = tmp105;
                       tmp53 = tmp106;
                       tmp52 = tmp107;
                       tmp51 = tmp108;
                       tmp50 = tmp109;
-                      const tmpResult14 = tmp(tmp2[41]);
+                      forResult = Symbol.for("react.early_return_sentinel");
                     }
                   }
-                  const obj25 = { theme, primaryColor, secondaryColor };
+                  const obj39 = { theme, primaryColor, secondaryColor };
                   cResult[28] = primaryColor;
                   cResult[29] = secondaryColor;
                   cResult[30] = theme;
-                  cResult[31] = obj25;
-                  tmp46 = obj25;
-                  const tmp44 = tmp4(tmp2[40])(tmp43);
+                  cResult[31] = obj39;
+                  tmp46 = obj39;
+                  const tmp44 = tmp4(tmp2[42])(tmp43);
                 }
               }
-              const obj26 = { user: currentUser, displayProfile: tmp4ResultResult, pendingThemeColors };
+              const obj40 = { user: currentUser, displayProfile: tmp4ResultResult, pendingThemeColors };
               cResult[24] = currentUser;
               cResult[25] = tmp4ResultResult;
               cResult[26] = pendingThemeColors;
-              cResult[27] = obj26;
-              tmp43 = obj26;
-              const tmpResult13 = tmp(tmp2[24]);
+              cResult[27] = obj40;
+              tmp43 = obj40;
+              const tmpResult13 = tmp(tmp2[26]);
             }
-            const tmpResult12 = tmp(tmp2[38]);
-            const canResetThemeColorsResult = tmp(tmp2[39]).canResetThemeColors(pendingThemeColors, themeColors);
+            const tmpResult12 = tmp(tmp2[40]);
+            const canResetThemeColorsResult = tmp(tmp2[41]).canResetThemeColors(pendingThemeColors, themeColors);
             cResult[20] = pendingThemeColors;
             cResult[21] = themeColors;
             cResult[22] = canResetThemeColorsResult;
             tmp38 = canResetThemeColorsResult;
-            const tmpResult15 = tmp(tmp2[39]);
+            const tmpResult15 = tmp(tmp2[41]);
           }
-          const tmpResult11 = tmp(tmp2[35]);
-          const obj27 = { userId: currentUser.id, image: pendingAvatar };
-          const pendingAvatarSrc = tmp(tmp2[37]).getPendingAvatarSrc(obj27);
+          const tmpResult11 = tmp(tmp2[37]);
+          const obj41 = { userId: currentUser.id, image: pendingAvatar };
+          const pendingAvatarSrc = tmp(tmp2[39]).getPendingAvatarSrc(obj41);
           cResult[15] = currentUser.id;
           cResult[16] = pendingAvatar;
           cResult[17] = pendingAvatarSrc;
           tmp33 = pendingAvatarSrc;
-          const tmpResult16 = tmp(tmp2[37]);
+          const tmpResult16 = tmp(tmp2[39]);
         }
         function oe() {
           let guildMemberProfile = null;
@@ -1861,7 +1765,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = guild;
         cResult[14] = oe;
         tmp26 = oe;
-        const tmpResult9 = tmp(tmp2[33]);
+        const tmpResult9 = tmp(tmp2[35]);
       }
       class X {
         constructor() {
@@ -1878,22 +1782,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = guild;
       cResult[10] = X;
       tmp22 = X;
-      ref1 = first3.useRef(null);
+      tmp9 = require("useKeyboardIsOpen")();
     }
-  : (currentUser) => {
+  : function GuildProfileEditForm(currentUser) {
       currentUser = currentUser.currentUser;
       guild = undefined;
       let analyticsLocations;
-      const tmp3 = guild(analyticsLocations[28])();
-      const tmp4 = guild(analyticsLocations[22])();
-      const bioMaxLength = currentUser(analyticsLocations[29]).useBioMaxLength({ location: "guild_profile_edit_form" });
-      let obj = currentUser(analyticsLocations[29]);
+      const tmp3 = guild(analyticsLocations[30])();
+      const tmp4 = guild(analyticsLocations[24])();
+      const bioMaxLength = currentUser(analyticsLocations[31]).useBioMaxLength({ location: "guild_profile_edit_form" });
+      let obj = currentUser(analyticsLocations[31]);
       const ref = noop.useRef(null);
       const ref1 = noop.useRef(null);
       const ref2 = noop.useRef(null);
       const ref3 = noop.useRef(null);
-      const insets = guild(analyticsLocations[23])({ includeKeyboardHeight: true }).insets;
-      const PX_16 = guild(analyticsLocations[25]).space.PX_16;
+      const insets = guild(analyticsLocations[25])({ includeKeyboardHeight: true }).insets;
+      const PX_16 = guild(analyticsLocations[27]).space.PX_16;
       let obj2 = { insets, inputs: null, scrollViewRef: null };
       const items = [
         { ref: ref1, offset: { type: "toRef", ref: ref2, extraOffset: PX_16 } },
@@ -1903,14 +1807,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = { type: "toValue", value: null };
       const obj3 = { ref: ref1, offset: { type: "toRef", ref: ref2, extraOffset: PX_16 } };
       const obj4 = { ref: ref2, offset: { type: "toRef", ref: ref3, extraOffset: PX_16 } };
-      const tmp7 = guild(analyticsLocations[30])();
-      obj6.value = guild(analyticsLocations[25]).space.PX_64;
+      const tmp7 = guild(analyticsLocations[32])();
+      obj6.value = guild(analyticsLocations[27]).space.PX_64;
       obj5.offset = obj6;
       items[2] = obj5;
       obj2.inputs = items;
       obj2.scrollViewRef = ref;
-      const onFocus = guild(analyticsLocations[31])(obj2).onFocus;
-      const tmp13 = guild(analyticsLocations[32])();
+      const onFocus = guild(analyticsLocations[33])(obj2).onFocus;
+      const tmp13 = guild(analyticsLocations[34])();
       guild = tmp13.guild;
       ({
         errors,
@@ -1927,18 +1831,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         pendingNameplate,
         pendingDisplayNameStyles,
       } = tmp13);
-      const tmp12 = guild(analyticsLocations[31]);
+      const tmp12 = guild(analyticsLocations[33]);
       const items1 = [GuildMemberStore];
-      const stateFromStores = currentUser(analyticsLocations[33]).useStateFromStores(items1, () => {
+      const stateFromStores = currentUser(analyticsLocations[35]).useStateFromStores(items1, () => {
         let member = null;
         if (null != guild) {
           member = GuildMemberStore.getMember(tmp.id, currentUser.id);
         }
         return member;
       });
-      const obj7 = currentUser(analyticsLocations[33]);
+      const obj7 = currentUser(analyticsLocations[35]);
       const items2 = [UserProfileStore];
-      const stateFromStores1 = currentUser(analyticsLocations[33]).useStateFromStores(items2, () => {
+      const stateFromStores1 = currentUser(analyticsLocations[35]).useStateFromStores(items2, () => {
         let guildMemberProfile = null;
         if (null != guild) {
           let id;
@@ -1950,23 +1854,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return guildMemberProfile;
       });
       let id;
-      const obj8 = currentUser(analyticsLocations[33]);
+      const obj8 = currentUser(analyticsLocations[35]);
       if (guild != null) {
         id = guild.id;
       }
-      const tmp16Result = guild(analyticsLocations[34])(currentUser.id, id);
-      const tmp16 = guild(analyticsLocations[34]);
-      const customStatusActivity = currentUser(analyticsLocations[35]).useCustomStatusActivity();
-      const tmp5Result = currentUser(analyticsLocations[35]);
-      const tmp20 = guild(analyticsLocations[36])(tmp16Result);
-      const pendingAvatarSrc = currentUser(analyticsLocations[37]).getPendingAvatarSrc({
+      const tmp16Result = guild(analyticsLocations[36])(currentUser.id, id);
+      const tmp16 = guild(analyticsLocations[36]);
+      const customStatusActivity = currentUser(analyticsLocations[37]).useCustomStatusActivity();
+      const tmp5Result = currentUser(analyticsLocations[37]);
+      const tmp20 = guild(analyticsLocations[38])(tmp16Result);
+      const pendingAvatarSrc = currentUser(analyticsLocations[39]).getPendingAvatarSrc({
         userId: currentUser.id,
         image: pendingAvatar,
       });
       const obj9 = { userId: currentUser.id, image: pendingAvatar };
-      const tmp5Result6 = currentUser(analyticsLocations[37]);
-      const canEditNickname = currentUser(analyticsLocations[38]).useGuildActionSheetPermissions(guild).canEditNickname;
-      const tmp5Result7 = currentUser(analyticsLocations[38]);
+      const tmp5Result6 = currentUser(analyticsLocations[39]);
+      const canEditNickname = currentUser(analyticsLocations[40]).useGuildActionSheetPermissions(guild).canEditNickname;
+      const tmp5Result7 = currentUser(analyticsLocations[40]);
       const result = guild(analyticsLocations[8]).canUsePremiumGuildMemberProfile(currentUser);
       const tmpResult = guild(analyticsLocations[8]);
       let themeColors;
@@ -1974,15 +1878,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         themeColors = stateFromStores1.themeColors;
       }
       let tmp59Result8 = !result;
-      const tmp5Result8 = currentUser(analyticsLocations[39]);
+      const tmp5Result8 = currentUser(analyticsLocations[41]);
       if (!result) {
         tmp59Result8 = !tmp7;
       }
-      const canResetThemeColorsResult = currentUser(analyticsLocations[39]).canResetThemeColors(
+      const canResetThemeColorsResult = currentUser(analyticsLocations[41]).canResetThemeColors(
         pendingThemeColors,
         themeColors,
       );
-      const floatingUpsellHeight = currentUser(analyticsLocations[24]).useFloatingUpsellHeight();
+      const floatingUpsellHeight = currentUser(analyticsLocations[26]).useFloatingUpsellHeight();
       let str;
       ({ height, onLayout } = floatingUpsellHeight);
       if (stateFromStores != null) {
@@ -2022,21 +1926,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (str5 == null) {
         str5 = "";
       }
-      const tmp5Result9 = currentUser(analyticsLocations[24]);
+      const tmp5Result9 = currentUser(analyticsLocations[26]);
       const items3 = [guild(analyticsLocations[10]).USER_SETTINGS];
       analyticsLocations = guild(analyticsLocations[9])(items3).analyticsLocations;
       const tmpResult9 = guild(analyticsLocations[9]);
-      ({ theme, primaryColor, secondaryColor } = guild(analyticsLocations[40])({
+      ({ theme, primaryColor, secondaryColor } = guild(analyticsLocations[42])({
         user: currentUser,
         displayProfile: tmp16Result,
         pendingThemeColors,
       }));
-      const tmp28 = guild(analyticsLocations[40])({
+      const tmp28 = guild(analyticsLocations[42])({
         user: currentUser,
         displayProfile: tmp16Result,
         pendingThemeColors,
       });
-      const userProfileColors = currentUser(analyticsLocations[41]).useUserProfileColors({
+      const userProfileColors = currentUser(analyticsLocations[43]).useUserProfileColors({
         theme,
         primaryColor,
         secondaryColor,
@@ -2050,8 +1954,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const sum = insets.bottom + num;
       const obj10 = { backgroundColor: avatarBackground };
       ({ nick, bio, guild_tag } = errors);
-      const sum1 = sum + tmp(tmp2[25]).space.PX_16;
-      const tmp5Result10 = currentUser(analyticsLocations[41]);
+      const sum1 = sum + tmp(tmp2[27]).space.PX_16;
+      const tmp5Result10 = currentUser(analyticsLocations[43]);
       if (nick != null) {
         const first = nick[0];
       }
@@ -2118,9 +2022,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           obj20.guildId = id1;
           obj20.statusStyle = obj10;
-          obj19.children = closure_17(tmp(tmp2[42]), obj20);
+          obj19.children = closure_17(tmp(tmp2[44]), obj20);
           tmp59Result = closure_17(closure_8, obj19);
-          const tmpResult10 = tmp(tmp2[42]);
+          const tmpResult10 = tmp(tmp2[44]);
         }
         const items8 = [tmp59Result];
         const obj21 = {
@@ -2143,7 +2047,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           editEnabled: true,
         };
         ({ customStatusBubble: obj22.style, emojiOnlyCustomStatusBubble: obj22.emojiOnlyStyle } = tmp3);
-        const items10 = [closure_17(tmp(tmp2[55]), obj24), ,];
+        const items10 = [closure_17(tmp(tmp2[57]), obj24), ,];
         const obj25 = {
           user: currentUser,
           displayName: null,
@@ -2155,7 +2059,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           pendingDisplayNameStyles: null,
         };
         let tmp43 = pendingNickname;
-        const tmpResult11 = tmp(tmp2[54]);
+        const tmpResult11 = tmp(tmp2[56]);
         if (pendingNickname == null) {
           tmp43 = str;
         }
@@ -2169,7 +2073,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj25.badgeContainerBackground = containerBackground;
         obj25.guildId = guild.id;
         obj25.pendingDisplayNameStyles = pendingDisplayNameStyles;
-        items10[1] = closure_17(tmp(tmp2[56]), obj25);
+        items10[1] = closure_17(tmp(tmp2[58]), obj25);
         let tmp60Result = null;
         if (null != guild) {
           const obj26 = { style: null, children: null };
@@ -2196,7 +2100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if ("" !== first3) {
                   const obj28 = { style: tmp4.errorContainer, children: null };
                   const obj29 = { variant: "text-sm/bold", color: "text-feedback-critical", children: first3 };
-                  obj28.children = closure_17(tmp5(tmp2[26]).Text, obj29);
+                  obj28.children = closure_17(tmp5(tmp2[28]).Text, obj29);
                   tmp59Result5 = closure_17(closure_8, obj28);
                 }
               }
@@ -2226,8 +2130,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj30.onChange = function onChange(nickname) {
             return UserProfileSettingsActionCreators.setPendingChanges({ guildId: guild.id, nickname });
           };
-          const tmpResult13 = tmp(tmp2[43]);
-          obj30.placeholder = tmp(tmp2[44]).getName(currentUser);
+          const tmpResult13 = tmp(tmp2[45]);
+          obj30.placeholder = tmp(tmp2[46]).getName(currentUser);
           obj30.maxLength = maxLength;
           let tmp52 = !canEditNickname;
           if (canEditNickname) {
@@ -2238,7 +2142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp59Result6 = result;
           if (result) {
             const obj31 = { user: currentUser, guildId: guild.id };
-            tmp59Result6 = closure_17(tmp(tmp2[45]), obj31);
+            tmp59Result6 = closure_17(tmp(tmp2[47]), obj31);
           }
           items12[2] = tmp59Result6;
           const obj32 = {
@@ -2255,7 +2159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             autoCorrect: false,
             disabled: null,
           };
-          const tmpResult14 = tmp(tmp2[44]);
+          const tmpResult14 = tmp(tmp2[46]);
           const intl3 = tmp5(tmp2[16]).intl;
           obj32.label = intl3.string(tmp5(tmp2[16]).t["+T3RI/"]);
           obj32.errorMessage = first1;
@@ -2269,7 +2173,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj32.placeholder = str3;
           obj32.maxLength = maxLength2;
           obj32.disabled = isDisabled;
-          items12[3] = closure_17(tmp(tmp2[43]), obj32);
+          items12[3] = closure_17(tmp(tmp2[45]), obj32);
           let tmp59Result7 = null;
           if (result) {
             const obj33 = {
@@ -2301,8 +2205,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj33.placeholder = str5;
             obj33.maxLength = bioMaxLength;
             obj33.disabled = isDisabled;
-            tmp59Result7 = closure_17(tmp(tmp2[43]), obj33);
-            const tmpResult16 = tmp(tmp2[43]);
+            tmp59Result7 = closure_17(tmp(tmp2[45]), obj33);
+            const tmpResult16 = tmp(tmp2[45]);
           }
           items12[4] = tmp59Result7;
           const obj34 = {
@@ -2315,18 +2219,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             },
             showResetMenu: canResetThemeColorsResult,
           };
-          items12[5] = closure_17(tmp(tmp2[46]), obj34);
+          items12[5] = closure_17(tmp(tmp2[48]), obj34);
           const obj35 = { user: currentUser, guildId: guild.id, pendingAvatarDecoration };
-          items12[6] = closure_17(tmp(tmp2[47]), obj35);
+          items12[6] = closure_17(tmp(tmp2[49]), obj35);
           const obj36 = { user: currentUser, guildId: guild.id, pendingProfileEffect, displayProfile: tmp16Result };
-          items12[7] = closure_17(tmp(tmp2[48]), obj36);
+          items12[7] = closure_17(tmp(tmp2[50]), obj36);
           const obj37 = { user: currentUser, guildId: guild.id, pendingProfileFrame, displayProfile: tmp16Result };
-          items12[8] = closure_17(tmp(tmp2[49]), obj37);
+          items12[8] = closure_17(tmp(tmp2[51]), obj37);
           const obj38 = { user: currentUser, pendingNameplate, guildId: guild.id };
-          items12[9] = closure_17(tmp(tmp2[50]), obj38);
+          items12[9] = closure_17(tmp(tmp2[52]), obj38);
           obj26.children = items12;
           tmp60Result = closure_18(closure_8, obj26);
-          const tmpResult15 = tmp(tmp2[43]);
+          const tmpResult15 = tmp(tmp2[45]);
         }
         const obj39 = { children: null };
         items10[2] = tmp60Result;
@@ -2340,7 +2244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items13 = [closure_18(closure_7, obj14)];
         if (tmp59Result8) {
           const obj40 = {
-            onButtonPress() {
+            onButtonPress: function handleUpsellPress() {
               const obj = { analyticsLocation: null, analyticsLocations: null, premiumFeatureCardOrder: null };
               const obj2 = {};
               const merged = Object.assign(closure_19);
@@ -2357,7 +2261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items13[1] = tmp59Result8;
         obj12.children = items13;
         obj11.children = closure_18(closure_8, obj12);
-        return closure_17(tmp5(tmp2[53]).ThemeContextProvider, obj11);
+        return closure_17(tmp5(tmp2[55]).ThemeContextProvider, obj11);
       }
       tmp32 = _objectWithoutProperties(errors, closure_4);
     };

@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(14912).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15174).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const __initData = {
   code: "function useIsQuestDockModeActiveOrExitingTsx1(){const{activeQuestDockMode,mode}=this.__closure;return activeQuestDockMode.get()===mode;}",
 };
@@ -29,7 +29,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/useIsQuestDockModeActiveOrExiting.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (mode) => {
+  ? function useIsQuestDockModeActiveOrExiting(mode) {
       _require = mode;
       const activeQuestDockMode = sharedValue1.useContext(
         require("QuestDockGestureContext").QuestDockGestureContext,
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
       return activeQuestDockMode(sharedValue[6])(sharedValue);
     }
-  : (mode) => {
+  : function useIsQuestDockModeActiveOrExiting(mode) {
       _require = mode;
       const activeQuestDockMode = sharedValue1.useContext(
         require("QuestDockGestureContext").QuestDockGestureContext,

@@ -24,7 +24,7 @@ const __initData3 = {
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelAnimationUtils.tsx");
 
 export const useStageActionBarAnimation = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, controlPadding) => {
+  ? function useStageActionBarAnimation(arg0, controlPadding) {
       _require = controlPadding;
       const tmp = require("useIsInvitedToSpeak")();
       importDefault = tmp;
@@ -65,7 +65,7 @@ export const useStageActionBarAnimation = ReactCompilerGating.isReactCompilerEna
       fn.__initData = __initData;
       return obj3.useAnimatedStyle(fn);
     }
-  : (arg0, controlPadding) => {
+  : function useStageActionBarAnimation(arg0, controlPadding) {
       _require = controlPadding;
       const tmp = require("useIsInvitedToSpeak")();
       importDefault = tmp;

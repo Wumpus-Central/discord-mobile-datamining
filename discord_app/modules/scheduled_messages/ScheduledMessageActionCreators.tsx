@@ -5,7 +5,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_8 = async function _createScheduledMessage(arg0) {
+let closure_7 = async function _createScheduledMessage(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -52,9 +52,9 @@ let closure_8 = async function _createScheduledMessage(arg0) {
           return obj5;
         } else {
           const obj6 = { type: "SCHEDULED_MESSAGES_CREATE_START", channelId: closure_131_0 };
-          closure_132_1(closure_132_2[4]).dispatch(obj6);
+          closure_132_1(closure_132_2[3]).dispatch(obj6);
           c6 = 1;
-          const HTTP = closure_132_0(closure_132_2[5]).HTTP;
+          const HTTP = closure_132_0(closure_132_2[4]).HTTP;
           const request = { url: closure_132_5.SCHEDULED_MESSAGES, body: null, rejectWithError: true };
           const obj7 = {
             channel_id: closure_131_0,
@@ -81,7 +81,7 @@ let closure_8 = async function _createScheduledMessage(arg0) {
       } else if (2 === tmp7) {
         c6 = 0;
         closure_131_5 = closure_5;
-        const scheduledMessageLogger = closure_132_0(closure_132_2[6]).scheduledMessageLogger;
+        const scheduledMessageLogger = closure_132_0(closure_132_2[5]).scheduledMessageLogger;
         scheduledMessageLogger.error("Failed to create scheduled message", closure_131_5);
         const body = closure_131_5.body;
         let message;
@@ -93,7 +93,7 @@ let closure_8 = async function _createScheduledMessage(arg0) {
         }
         closure_131_4 = message;
         const obj10 = { type: "SCHEDULED_MESSAGES_CREATE_FAILURE", channelId: closure_131_0, errorMsg: closure_131_4 };
-        closure_132_1(closure_132_2[4]).dispatch(obj10);
+        closure_132_1(closure_132_2[3]).dispatch(obj10);
         throw closure_131_5;
       } else if (arg0 === 1) {
         c8 = 3;
@@ -105,22 +105,16 @@ let closure_8 = async function _createScheduledMessage(arg0) {
         return obj13;
       } else {
         closure_131_3 = value;
-        const obj15 = {
+        const obj14 = {
           type: "SCHEDULED_MESSAGES_CREATE_SUCCESS",
           channelId: closure_131_0,
           scheduledMessageSend: null,
         };
-        const obj9 = closure_132_1(closure_132_2[4]);
-        obj15.scheduledMessageSend = closure_132_0(closure_132_2[6]).convertServerScheduledMessageSend(
+        const obj9 = closure_132_1(closure_132_2[3]);
+        obj14.scheduledMessageSend = closure_132_0(closure_132_2[5]).convertServerScheduledMessageSend(
           closure_131_3.body,
         );
-        obj9.dispatch(obj15);
-        const obj11 = closure_132_0(closure_132_2[6]);
-        const obj16 = { dismissAction: closure_132_7.INDIRECT_ACTION };
-        const result = closure_132_0(closure_132_2[7]).UNSAFE_markDismissibleContentAsDismissed(
-          closure_132_0(closure_132_2[8]).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK,
-          obj16,
-        );
+        obj9.dispatch(obj14);
         c6 = 0;
         c8 = 3;
         const obj = { value: closure_131_3, done: true };
@@ -137,7 +131,7 @@ let closure_8 = async function _createScheduledMessage(arg0) {
     }
   }
 };
-let closure_9 = async function _updateScheduledMessage(arg0) {
+let closure_8 = async function _updateScheduledMessage(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -194,39 +188,39 @@ let closure_9 = async function _updateScheduledMessage(arg0) {
           return obj6;
         } else {
           const obj7 = { type: "SCHEDULED_MESSAGES_UPDATE_START", scheduledMessageId: closure_131_0 };
-          closure_132_1(closure_132_2[4]).dispatch(obj7);
+          closure_132_1(closure_132_2[3]).dispatch(obj7);
           c6 = 1;
           if (null == closure_131_2) {
             const items = [closure_131_2, closure_131_3];
             let result = items;
           } else {
             const obj8 = { content: closure_131_2, flags: null };
-            const obj14 = closure_132_0(closure_132_2[6]);
+            const obj14 = closure_132_0(closure_132_2[5]);
             c2 = closure_131_3;
             if (closure_131_3 == null) {
               c2 = 0;
             }
-            obj8.flags = closure_132_0(closure_132_2[9]).removeFlag(c2, closure_132_6.SUPPRESS_NOTIFICATIONS);
+            obj8.flags = closure_132_0(closure_132_2[6]).removeFlag(c2, closure_132_6.SUPPRESS_NOTIFICATIONS);
             result = obj14.parseContentAndFlagsForSilentMessage(obj8);
-            const obj16 = closure_132_0(closure_132_2[9]);
+            const obj16 = closure_132_0(closure_132_2[6]);
           }
           closure_131_4 = result;
           closure_131_5 = closure_132_3(closure_131_4, 2);
           closure_131_6 = closure_131_5[0];
           closure_131_7 = closure_131_5[1];
-          const HTTP = closure_132_0(closure_132_2[5]).HTTP;
+          const HTTP = closure_132_0(closure_132_2[4]).HTTP;
           const request = { url: closure_132_5.SCHEDULED_MESSAGE(closure_131_0), body: null, rejectWithError: true };
           const obj9 = { scheduled_timestamp: closure_131_1, content: closure_131_6, flags: closure_131_7 };
           request.body = obj9;
           HTTP.patch(request);
           c7 = 3;
           c8 = 1;
-          const obj12 = closure_132_1(closure_132_2[4]);
+          const obj12 = closure_132_1(closure_132_2[3]);
         }
       } else if (2 === tmp7) {
         c6 = 0;
         closure_131_10 = closure_5;
-        const scheduledMessageLogger = closure_132_0(closure_132_2[6]).scheduledMessageLogger;
+        const scheduledMessageLogger = closure_132_0(closure_132_2[5]).scheduledMessageLogger;
         scheduledMessageLogger.error("Failed to update scheduled message", closure_131_10);
         const body = closure_131_10.body;
         let message;
@@ -242,7 +236,7 @@ let closure_9 = async function _updateScheduledMessage(arg0) {
           scheduledMessageId: closure_131_0,
           errorMsg: closure_131_9,
         };
-        closure_132_1(closure_132_2[4]).dispatch(obj10);
+        closure_132_1(closure_132_2[3]).dispatch(obj10);
         const _Error = Error;
         const error = new Error(closure_131_9);
         throw error;
@@ -257,8 +251,8 @@ let closure_9 = async function _updateScheduledMessage(arg0) {
       } else {
         closure_131_8 = value;
         const obj13 = { type: "SCHEDULED_MESSAGES_UPDATE_SUCCESS", scheduledMessageSend: null };
-        const obj = closure_132_1(closure_132_2[4]);
-        obj13.scheduledMessageSend = closure_132_0(closure_132_2[6]).convertServerScheduledMessageSend(
+        const obj = closure_132_1(closure_132_2[3]);
+        obj13.scheduledMessageSend = closure_132_0(closure_132_2[5]).convertServerScheduledMessageSend(
           closure_131_8.body,
         );
         obj.dispatch(obj13);
@@ -277,7 +271,7 @@ let closure_9 = async function _updateScheduledMessage(arg0) {
     }
   }
 };
-let closure_10 = async function _deleteScheduledMessage() {
+let closure_9 = async function _deleteScheduledMessage() {
   c6 = 0;
   c7 = 0;
   c5 = 0;
@@ -323,7 +317,7 @@ let closure_10 = async function _deleteScheduledMessage() {
         } else if (1 === tmp7) {
           c5 = 0;
           closure_130_2 = closure_4;
-          const scheduledMessageLogger = closure_131_0(closure_131_2[6]).scheduledMessageLogger;
+          const scheduledMessageLogger = closure_131_0(closure_131_2[5]).scheduledMessageLogger;
           scheduledMessageLogger.error("Failed to cancel scheduled message", closure_130_2);
           const body = closure_130_2.body;
           message = undefined;
@@ -339,7 +333,7 @@ let closure_10 = async function _deleteScheduledMessage() {
             scheduledMessageId: closure_130_0,
             errorMsg: closure_130_1,
           };
-          closure_131_1(closure_131_2[4]).dispatch(obj8);
+          closure_131_1(closure_131_2[3]).dispatch(obj8);
           const _Error = Error;
           const error = new Error(closure_130_1);
           throw error;
@@ -353,7 +347,7 @@ let closure_10 = async function _deleteScheduledMessage() {
           return obj10;
         } else {
           const obj11 = { type: "SCHEDULED_MESSAGES_DELETE_SUCCESS", scheduledMessageId: closure_130_0 };
-          closure_131_1(closure_131_2[4]).dispatch(obj11);
+          closure_131_1(closure_131_2[3]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
           return { value: "IconComponent", done: null };
@@ -370,7 +364,7 @@ let closure_10 = async function _deleteScheduledMessage() {
     }
   })();
 };
-let closure_11 = async function _sendScheduledMessageNow() {
+let closure_10 = async function _sendScheduledMessageNow() {
   c6 = 0;
   c7 = 0;
   c5 = 0;
@@ -416,7 +410,7 @@ let closure_11 = async function _sendScheduledMessageNow() {
         } else if (1 === tmp7) {
           c5 = 0;
           closure_130_2 = closure_4;
-          const scheduledMessageLogger = closure_131_0(closure_131_2[6]).scheduledMessageLogger;
+          const scheduledMessageLogger = closure_131_0(closure_131_2[5]).scheduledMessageLogger;
           scheduledMessageLogger.error("Failed to send scheduled message now", closure_130_2);
           const body = closure_130_2.body;
           message = undefined;
@@ -432,7 +426,7 @@ let closure_11 = async function _sendScheduledMessageNow() {
             scheduledMessageId: closure_130_0,
             errorMsg: closure_130_1,
           };
-          closure_131_1(closure_131_2[4]).dispatch(obj8);
+          closure_131_1(closure_131_2[3]).dispatch(obj8);
           const _Error = Error;
           const error = new Error(closure_130_1);
           throw error;
@@ -446,7 +440,7 @@ let closure_11 = async function _sendScheduledMessageNow() {
           return obj10;
         } else {
           const obj11 = { type: "SCHEDULED_MESSAGES_SEND_NOW_SUCCESS", scheduledMessageId: closure_130_0 };
-          closure_131_1(closure_131_2[4]).dispatch(obj11);
+          closure_131_1(closure_131_2[3]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
           return { value: "IconComponent", done: null };
@@ -463,19 +457,19 @@ let closure_11 = async function _sendScheduledMessageNow() {
     }
   })();
 };
-let closure_12 = async function _getScheduledMessages() {
+let closure_11 = async function _getScheduledMessages() {
   closure_0 = tmp2;
   const HTTP = HTTPUtils.HTTP;
   await HTTP.get({ url: constants.SCHEDULED_MESSAGES, rejectWithError: true });
   const body = value.body;
-  return body.map(closure_128_0(closure_128_2[6]).convertServerScheduledMessageSend);
+  return body.map(closure_128_0(closure_128_2[5]).convertServerScheduledMessageSend);
 };
-let closure_13 = async function _fetchScheduledMessages() {
+let closure_12 = async function _fetchScheduledMessages() {
   closure_1 = tmp3;
   DispatcherDefault.dispatch({ type: "FETCH_SCHEDULED_MESSAGES" });
   await (function getScheduledMessages() {
     const self = this;
-    const apply = closure_1_12.apply;
+    const apply = closure_1_11.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -486,33 +480,32 @@ let closure_13 = async function _fetchScheduledMessages() {
   if (1 === tmp7) {
     c3 = 0;
     closure_128_1 = closure_2;
-    const scheduledMessageLogger2 = closure_129_0(closure_129_2[6]).scheduledMessageLogger;
+    const scheduledMessageLogger2 = closure_129_0(closure_129_2[5]).scheduledMessageLogger;
     scheduledMessageLogger2.error("Failed to fetch scheduled messages", closure_128_1);
-    closure_129_1(closure_129_2[4]).dispatch({ type: "FETCH_SCHEDULED_MESSAGES_FAILURE", error: closure_128_1 });
+    closure_129_1(closure_129_2[3]).dispatch({ type: "FETCH_SCHEDULED_MESSAGES_FAILURE", error: closure_128_1 });
     c5 = 3;
-    closure_129_1(closure_129_2[4]);
+    closure_129_1(closure_129_2[3]);
   } else if (arg0 === 1) {
     c5 = 3;
     throw value;
   } else if (arg0 !== 2) {
     closure_128_0 = value;
-    const scheduledMessageLogger = closure_129_0(closure_129_2[6]).scheduledMessageLogger;
+    const scheduledMessageLogger = closure_129_0(closure_129_2[5]).scheduledMessageLogger;
     scheduledMessageLogger.info("Fetched scheduled messages", closure_128_0);
-    closure_129_1(closure_129_2[4]).dispatch({ type: "FETCH_SCHEDULED_MESSAGES_SUCCESS", messages: closure_128_0 });
+    closure_129_1(closure_129_2[3]).dispatch({ type: "FETCH_SCHEDULED_MESSAGES_SUCCESS", messages: closure_128_0 });
     c3 = 0;
-    closure_129_1(closure_129_2[4]);
+    closure_129_1(closure_129_2[3]);
   }
   return value;
 };
 const Constants = fn(1085);
 ({ Endpoints: hasOwnProperty, MessageFlags: metroRequire } = Constants);
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageActionCreators.tsx");
 
 export const createScheduledMessage = function createScheduledMessage() {
   const self = this;
-  const apply = closure_8.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -522,7 +515,7 @@ export const createScheduledMessage = function createScheduledMessage() {
 };
 export const updateScheduledMessage = function updateScheduledMessage() {
   const self = this;
-  const apply = closure_9.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -532,7 +525,7 @@ export const updateScheduledMessage = function updateScheduledMessage() {
 };
 export const deleteScheduledMessage = function deleteScheduledMessage() {
   const self = this;
-  const apply = closure_10.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -542,7 +535,7 @@ export const deleteScheduledMessage = function deleteScheduledMessage() {
 };
 export const sendScheduledMessageNow = function sendScheduledMessageNow() {
   const self = this;
-  const apply = closure_11.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -552,7 +545,7 @@ export const sendScheduledMessageNow = function sendScheduledMessageNow() {
 };
 export const fetchScheduledMessages = function fetchScheduledMessages() {
   const self = this;
-  const apply = closure_13.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

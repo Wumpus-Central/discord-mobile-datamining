@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Pile/native/AvatarPile.native.tsx");
 
 export const AvatarPile = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AvatarPile(arg0) {
       const cResult = c.c(13);
       ({ totalCount, names, children } = arg0);
       const Children = noop.Children;
@@ -84,7 +84,7 @@ export const AvatarPile = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = listSummaryLabel;
       const tmpResult = ListUtils;
     }
-  : (arg0) => {
+  : function AvatarPile(arg0) {
       ({ totalCount, children } = arg0);
       const Children = noop.Children;
       ({ size, names } = arg0);

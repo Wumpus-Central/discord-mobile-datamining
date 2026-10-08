@@ -13,9 +13,9 @@ require = fn;
 const Accessibility = fn(1085).Accessibility;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useToastDurationSettingProps() {
       const cResult = c.c(15);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
@@ -105,7 +105,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp19 = obj5;
       const tmpResult = initialize;
     }
-  : () => {
+  : function useToastDurationSettingProps() {
       const items = [AccessibilityStore];
       stateFromStores = stateFromStores(onValueChange[7]).useStateFromStores(
         items,
@@ -143,14 +143,14 @@ const slider = SettingBuilders.createSlider({
     const intl = util.intl;
     return intl.string(util.t["3oxlia"]);
   },
-  parent: fn(7645).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7966).MobileUserSettings.ACCESSIBILITY,
   usePredicate() {
     return DesignSystemsNotificationComponentsExperiment.useDesignSystemsNotificationComponents(
       "ToastDurationSettingNative",
     );
   },
   useProps: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useToastDurationSettingProps() {
         const cResult = c.c(15);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [AccessibilityStore];
@@ -240,7 +240,7 @@ const slider = SettingBuilders.createSlider({
         tmp19 = obj5;
         const tmpResult = initialize;
       }
-    : () => {
+    : function useToastDurationSettingProps() {
         const items = [AccessibilityStore];
         stateFromStores = stateFromStores(onValueChange[7]).useStateFromStores(
           items,

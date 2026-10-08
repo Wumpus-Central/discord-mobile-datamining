@@ -10,12 +10,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(13260);
+const Constants = fn(13560);
 ({ REFERRAL_INCENTIVE_DISCOUNT_PERCENTAGE: closure_4, REFERRAL_INCENTIVE_ORBS_PER_CONVERSION: hasOwnProperty } =
   Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -46,7 +46,7 @@ fn(558);
 let obj4 = { flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" };
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (nRewardsGranted) => {
+  ? function OrbsGrantNotice(nRewardsGranted) {
       const cResult = c.c(7);
       const tmp4 = closure_8();
       const result = nRewardsGranted.nRewardsGranted * hasOwnProperty;
@@ -92,7 +92,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = tmp7;
       const obj4 = { initialRenderedBalance: 0, balance: result, style: tmp4.balancePillOverride };
     }
-  : (nRewardsGranted) => {
+  : function OrbsGrantNotice(nRewardsGranted) {
       const tmp = closure_8();
       const obj = { style: tmp.orbsPillContainer, children: null };
       const items = [
@@ -112,7 +112,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (nRewardsGranted) => {
+  ? function DiscountGrantNotice(nRewardsGranted) {
       const cResult = c.c(11);
       nRewardsGranted = nRewardsGranted.nRewardsGranted;
       const tmp4 = closure_8();
@@ -171,7 +171,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = tmp19;
       tmp18 = tmp19;
     }
-  : (nRewardsGranted) => {
+  : function DiscountGrantNotice(nRewardsGranted) {
       nRewardsGranted = nRewardsGranted.nRewardsGranted;
       const obj = { style: closure_8().container, accessible: true, accessibilityLabel: null, children: null };
       const intl = util.intl;
@@ -196,7 +196,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/referral_program/native/RewardGrantNotice.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RewardGrantNotice(arg0) {
       const cResult = c.c(4);
       ({ nRewardsGranted, referralRewardType } = arg0);
       if (nRewardsGranted < 1) {
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (arg0) => {
+  : function RewardGrantNotice(arg0) {
       ({ nRewardsGranted, referralRewardType } = arg0);
       if (nRewardsGranted < 1) {
         return null;

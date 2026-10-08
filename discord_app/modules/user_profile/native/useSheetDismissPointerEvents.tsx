@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/useSheetDismissPointerEvents.tsx
-import LegacyBaseButton from "../../../../_runtime/06147_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/06326_LegacyBaseButton.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -12,7 +12,7 @@ const __initData2 = {
 const result = size.fileFinishedImporting("modules/user_profile/native/useSheetDismissPointerEvents.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSheetDismissPointerEvents() {
       const bottomSheetInternal = prop(prop1[1]).useBottomSheetInternal(true);
       prop = undefined;
       if (bottomSheetInternal != null) {
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       fn.__initData = __initData;
       return tmpResult.useAnimatedStyle(fn);
     }
-  : () => {
+  : function useSheetDismissPointerEvents() {
       const bottomSheetInternal = prop(prop1[1]).useBottomSheetInternal(true);
       prop = undefined;
       if (bottomSheetInternal != null) {

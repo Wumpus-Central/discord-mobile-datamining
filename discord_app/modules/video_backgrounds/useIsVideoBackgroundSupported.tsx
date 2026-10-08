@@ -10,11 +10,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/useIsVideoBackgroundSupported.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsVideoBackgroundSupported() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MediaEngineStore];
-        const fn = function n() {
+        const fn = function u() {
           return isVideoBackgroundSupportedDefault(MediaEngineStore);
         };
         cResult[0] = items;
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsVideoBackgroundSupported() {
       const items = [MediaEngineStore];
       return initialize.useStateFromStores(items, () => isVideoBackgroundSupportedDefault(MediaEngineStore));
     };

@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/useICYMITabBadge.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useICYMITabBadge() {
       const cResult = c.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ICYMIStore];
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : () => {
+  : function useICYMITabBadge() {
       const obj = { value: 0, showDot: null };
       const items = [ICYMIStore];
       obj.showDot = initialize.useStateFromStores(items, () => ICYMIStore.hasNewContent(), []);

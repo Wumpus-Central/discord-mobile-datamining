@@ -2,18 +2,18 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef9328 from "../../../../../_runtime/metro/09328__.js";
-import _modDef9329 from "../../../../../_runtime/metro/09329__.js";
+import _modDef8636 from "../../../../../_runtime/metro/08636__.js";
+import _modDef8637 from "../../../../../_runtime/metro/08637__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const native = ThemeContextProvider(4595);
+const native = ThemeContextProvider(4787);
 require = fn;
 let closure_3 = ["theme"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { width: 88, height: 88, alignItems: "center", justifyContent: "center" },
   iconContainer: null,
@@ -35,11 +35,11 @@ obj2.sparkles = { position: "absolute", top: 0 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function StageSparkleInner(arg0) {
       const cResult = c.c(16);
       ({ style, IconComponent, icon } = arg0);
       if (undefined === icon) {
-        icon = _modDef9328;
+        icon = _modDef8636;
       }
       const tmp4 = closure_8();
       if (cResult[0] === style) {
@@ -54,7 +54,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp14 = cResult[9];
                 }
                 if (cResult[10] !== tmp4.sparkles) {
-                  const obj2 = { style: tmp4.sparkles, source: _modDef9329 };
+                  const obj2 = { style: tmp4.sparkles, source: _modDef8637 };
                   const tmp22 = timestampProducer(FastImageDefault, obj2);
                   cResult[10] = tmp4.sparkles;
                   cResult[11] = tmp22;
@@ -108,10 +108,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp5 = items1;
     }
-  : (style) => {
+  : function StageSparkleInner(style) {
       ({ IconComponent, icon } = style);
       if (icon === undefined) {
-        icon = _modDef9328;
+        icon = _modDef8636;
       }
       const tmp3 = closure_8();
       const obj = { style: null, children: null };
@@ -129,8 +129,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2.children = tmp6Result;
       const items1 = [timestampProducer(View, obj2)];
-      const obj5 = { style: tmp3.sparkles, source: tmp10(9329) };
-      items1[1] = timestampProducer(tmp10(5981), obj5);
+      const obj5 = { style: tmp3.sparkles, source: tmp10(8637) };
+      items1[1] = timestampProducer(tmp10(6164), obj5);
       obj.children = items1;
       return React5(View, obj);
     };
@@ -139,7 +139,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageSparkle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (theme) => {
+  ? function StageSparkle(theme) {
       let ThemeContextProvider = require;
       let tmp = dependencyMap;
       const cResult = c.c(10);
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return tmp8;
       }
     }
-  : (theme) => {
+  : function StageSparkle(theme) {
       theme = theme.theme;
       const merged = Object.assign(theme, Object.assign({ theme: 0 }));
       if (null != theme) {

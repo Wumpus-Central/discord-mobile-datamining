@@ -13,7 +13,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/ICYMIFeedbackSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ICYMIFeedbackSheet() {
       const cResult = c.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp11;
     }
-  : () => {
+  : function ICYMIFeedbackSheet() {
       const obj = {
         headerLabel: null,
         showHeaderCloseButton: true,

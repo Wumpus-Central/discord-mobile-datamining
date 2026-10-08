@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/shared/hooks/useStableCallback.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (current) => {
+  ? function useStableCallback(current) {
       const cResult = c.c(3);
       noop.useRef(current);
       if (cResult[0] !== current) {
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (current) => {
+  : function useStableCallback(current) {
       noop.useRef(current);
       const insertionEffect = noop.useInsertionEffect(() => {
         closure_1.current = current;

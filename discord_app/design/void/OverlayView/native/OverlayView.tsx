@@ -1,6 +1,6 @@
 // discord_app/design/void/OverlayView/native/OverlayView.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import _modDef5771 from "../../../../../_runtime/metro/05771__.js";
+import _modDef5354 from "../../../../../_runtime/metro/05354__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -10,22 +10,22 @@ get_ActivityIndicator = fn(17);
 let View = get_ActivityIndicator.View;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const jsx = fn(21).jsx;
-let PlatformUtils = fn(1369);
+let PlatformUtils = fn(1381);
 let FullWindowOverlay = View;
 if (PlatformUtils.isIOS()) {
-  FullWindowOverlay = fn(5722).FullWindowOverlay;
+  FullWindowOverlay = fn(5305).FullWindowOverlay;
 }
 const ReactCompilerGating = fn(558);
-PlatformUtils = fn(1369);
+PlatformUtils = fn(1381);
 if (PlatformUtils.isIOS()) {
-  View = _modDef5771;
+  View = _modDef5354;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");
 
 export default FullWindowOverlay;
 export const TransitionGroupOverlayView = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function TransitionGroupOverlayView(children) {
       const cResult = c.c(6);
       if (cResult[0] !== children) {
         children = children.children;
@@ -62,7 +62,7 @@ export const TransitionGroupOverlayView = ReactCompilerGating.isReactCompilerEna
       cResult[5] = tmp7;
       tmp6 = tmp7;
     }
-  : (children) => {
+  : function TransitionGroupOverlayView(children) {
       children = children.children;
       const merged = Object.assign(children, Object.assign({ children: 0 }));
       let tmp2 = null;

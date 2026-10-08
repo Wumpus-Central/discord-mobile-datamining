@@ -7,4 +7,6 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/message_request/hooks/useRequireConfirmationOnAccept.tsx");
 
-export default () => useIsStricterMessageRequestsDefault();
+export default function useRequireConfirmationOnAccept() {
+  return useIsStricterMessageRequestsDefault();
+}

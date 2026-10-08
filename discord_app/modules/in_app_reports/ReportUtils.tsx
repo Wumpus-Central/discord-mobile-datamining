@@ -229,7 +229,7 @@ function genSubmitData(version, name, arr, email_token) {
   if (str == null) {
     str = "en";
   }
-  let obj2 = { channel_id: "__initData", message_id: "a", stage_instance_id: "toCharArray$esjava$1", guild_id: "string", guild_scheduled_event_id: "toCharArray$esjava$1", user_id: "r", email_token: "toCharArray$esjava$1", application_id: "index", entrypoint: "l", widget_id: "r" };
+  let obj2 = { channel_id: "body", message_id: "channelId", stage_instance_id: "justifyContent", guild_id: "r", guild_scheduled_event_id: "toCharArray$esjava$1", user_id: "set", email_token: "flexDirection", application_id: "a", entrypoint: "toCharArray$esjava$1", widget_id: "end" };
   obj.language = str;
   obj.breadcrumbs = arr.map((nodeRef) => nodeRef.nodeRef);
   obj.elements = arr.reduce((acc, item) => {
@@ -368,7 +368,7 @@ function genSubmitData(version, name, arr, email_token) {
 }
 const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
-const SafetyToastType = fn(8108).SafetyToastType;
+const SafetyToastType = fn(7015).SafetyToastType;
 const ReactCompilerGating = fn(558);
 function getModeratorReportEndpointSafely(name) {
   const REPORT_TO_MOD = ReportMenuType.ReportMenuTypeSets.REPORT_TO_MOD;
@@ -421,7 +421,7 @@ export const submitReport = function submitReport(language, name, arr) {
   if (DevSettingsStore.get("iar_skip_api_report_submit")) {
     let resolved = Promise.resolve();
   } else {
-    const REPORT_TO_MOD = obj4(8315).ReportMenuTypeSets.REPORT_TO_MOD;
+    const REPORT_TO_MOD = obj4(7698).ReportMenuTypeSets.REPORT_TO_MOD;
     if (REPORT_TO_MOD.has(name.name)) {
       let str2 = language.language;
       const obj = { version: null, variant: null, language: null, breadcrumbs: null, elements: null };
@@ -454,8 +454,8 @@ export const submitReport = function submitReport(language, name, arr) {
         return {};
       }, {});
       let tmp15 = null;
-      if (name.name === tmp4(8313).ModeratorReportNames.MESSAGE) {
-        let obj2 = { channel_id: "duration", message_id: "toCharArray$esjava$1", guild_id: "toCharArray$esjava$1" };
+      if (name.name === tmp4(7696).ModeratorReportNames.MESSAGE) {
+        let obj2 = { channel_id: "useSharedValue", message_id: "apply", guild_id: "next" };
         obj4 = {};
         ({ channel_id, id } = name.record);
         let merged = Object.assign(obj);
@@ -466,12 +466,12 @@ export const submitReport = function submitReport(language, name, arr) {
         tmp15 = obj4;
       }
       obj4 = tmp15;
-      const HTTP2 = tmp4(1282).HTTP;
-      const REPORT_TO_MOD2 = tmp4(8315).ReportMenuTypeSets.REPORT_TO_MOD;
+      const HTTP2 = tmp4(1294).HTTP;
+      const REPORT_TO_MOD2 = tmp4(7698).ReportMenuTypeSets.REPORT_TO_MOD;
       const _HermesInternal2 = HermesInternal;
       const hasItem = REPORT_TO_MOD2.has(name.name);
       _modDef38(hasItem, "Invalid report type " + name.name);
-      if (name.name === tmp4(8313).ModeratorReportNames.MESSAGE) {
+      if (name.name === tmp4(7696).ModeratorReportNames.MESSAGE) {
         const request = { url: closure_7.SUBMIT_MODERATOR_MESSAGE_REPORT(name.record.channel_id, name.record.id), body: tmp15, rejectWithError: false };
         resolved = HTTP2.post(request).then((result) => {
           SafetyToastsActionCreatorsDefault.showSuccessToast(SafetyToastType.REPORT_TO_MOD_SUCCESS);
@@ -503,11 +503,11 @@ export const submitReport = function submitReport(language, name, arr) {
         throw error;
       }
     } else {
-      const HTTP = tmp4(1282).HTTP;
+      const HTTP = tmp4(1294).HTTP;
       const request1 = { url: null, body: null, rejectWithError: false };
       name = name.name;
       let _Object = Object;
-      const values = Object.values(tmp4(8313).ReportNames);
+      const values = Object.values(tmp4(7696).ReportNames);
       const _HermesInternal = HermesInternal;
       const hasItem1 = values.includes(name);
       _modDef38(hasItem1, "Invalid report type " + name.name);
@@ -803,7 +803,7 @@ export const areRequiredElementsUnfilled = function areRequiredElementsUnfilled(
   return someResult;
 };
 export const TrackIarSettingsUpsellsActionType = { SETTINGS_UPSELLS_VIEWED: "SETTINGS_UPSELLS_VIEWED", SETTINGS_UPSELLS_APPLY_CLICKED: "SETTINGS_UPSELLS_APPLY_CLICKED", SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED: "SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED" };
-export const useTrackSettingsUpsellsAction = ReactCompilerGating.isReactCompilerEnabled() ? ((name, arg1, arg2) => {
+export const useTrackSettingsUpsellsAction = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackSettingsUpsellsAction(name, arg1, arg2) {
   _require = name;
   closure_1 = arg1;
   dependencyMap = arg2;
@@ -826,7 +826,7 @@ export const useTrackSettingsUpsellsAction = ReactCompilerGating.isReactCompiler
   cResult[2] = name.name;
   cResult[3] = fn;
   tmp2 = fn;
-}) : ((arg0, arg1, arg2) => {
+}) : (function useTrackSettingsUpsellsAction(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;

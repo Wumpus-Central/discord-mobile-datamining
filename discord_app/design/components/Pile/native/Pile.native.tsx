@@ -10,13 +10,13 @@ const ClipViewDefault = ClipView;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ pile: { flexDirection: "row" } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Pile/native/Pile.native.tsx");
 
-export const Pile = ReactCompilerGating.isReactCompilerEnabled() ? ((size) => {
+export const Pile = ReactCompilerGating.isReactCompilerEnabled() ? (function Pile(size) {
   const cResult = shape(gap[5]).c(21);
   ({ aria-label: tmp4, shape } = size);
   size = size.size;
@@ -201,7 +201,7 @@ export const Pile = ReactCompilerGating.isReactCompilerEnabled() ? ((size) => {
   cResult[15] = size;
   cResult[16] = fn;
   tmp10 = fn;
-}) : ((aria_label) => {
+}) : (function Pile(aria_label) {
   ({ shape: require, size } = aria_label);
   ({ gap: dependencyMap, depthX: noop, depthY: View, children } = aria_label);
   const Children = noop.Children;

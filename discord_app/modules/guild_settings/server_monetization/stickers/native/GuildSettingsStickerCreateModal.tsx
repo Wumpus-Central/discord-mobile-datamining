@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildSettingsStickerCreateModal(guildId) {
       const cResult = guildId(onGoBack[3]).c(10);
       guildId = guildId.guildId;
       const stickerId = guildId.stickerId;
@@ -62,12 +62,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = fn;
       }
     }
-  : (arg0) => {
+  : function GuildSettingsStickerCreateModal(arg0) {
       ({ guildId: require, stickerId } = arg0);
       dependencyMap = undefined;
       c3 = undefined;
-      ({ onGoBack: c2, ref: c3 } = stickerId(10671)());
-      const tmp2 = stickerId(10671)();
+      ({ onGoBack: c2, ref: c3 } = stickerId(9584)());
+      const tmp2 = stickerId(9584)();
       const tmp3 = c3;
       const intl = util.intl;
       if (null != stickerId) {
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tdhW5b = util.t["3DzNjU"];
       }
-      const tmp4 = stickerId(10674);
+      const tmp4 = stickerId(9587);
       return tmp3(tmp4, {
         screenKey: "guild-settings-sticker-create",
         title: intl.string(tdhW5b),

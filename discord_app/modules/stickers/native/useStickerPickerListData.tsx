@@ -5,8 +5,8 @@ import age_gate_AgeGateUtils from "../../age_gate/native/AgeGateUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let useStickerPickerStore = fn(10127).useStickerPickerStore;
-const StickerPickerConstants = fn(10095);
+let useStickerPickerStore = fn(9712).useStickerPickerStore;
+const StickerPickerConstants = fn(9679);
 ({
   MIN_MARGIN: hasOwnProperty,
   ROW_HEIGHT: metroRequire,
@@ -14,14 +14,14 @@ const StickerPickerConstants = fn(10095);
   LABEL_HEIGHT,
 } = StickerPickerConstants);
 const StickerPickerSectionType = { STICKERS: 0, [0]: "STICKERS", NSFW: 1, [1]: "NSFW" };
-const sectionSize = LABEL_HEIGHT + 2 * fn(1229).PADDING_VERTICAL;
-let closure_10 = fn(9921).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(9921).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
+const sectionSize = LABEL_HEIGHT + 2 * fn(1241).PADDING_VERTICAL;
+let closure_10 = fn(9442).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(9442).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/useStickerPickerListData.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useStickerPickerListData(arg0) {
       const cResult = stickerFormats(items3[6]).c(30);
       ({ searchResults, stickerFormats } = arg0);
       ({ channel, containerWidth } = arg0);
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         num3 = closure_10;
       }
       if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function b(arg0) {
+        const fn2 = function w(arg0) {
           let num = 12;
           if (null != arg0) {
             num = closure_1_10;
@@ -249,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = START;
       const tmpResult = stickerFormats(items3[8]);
     }
-  : (containerWidth) => {
+  : function useStickerPickerListData(containerWidth) {
       containerWidth = containerWidth.containerWidth;
       const searchResults = containerWidth.searchResults;
       const stickerFormats = containerWidth.stickerFormats;

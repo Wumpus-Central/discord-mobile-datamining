@@ -215,10 +215,10 @@ let closure_33 = async function _relayCaptureRequest(arg0, arg1, arg2) {
     closure_131_4 = asyncGeneratorStep(async () => {
       ws = ws.ws;
       ws.sendCaptureAck(user.id, "accepted");
-      await v3(closure_1_2[11]).awaitConjurePreviewClaim(closure_2_0, user.id);
+      await v3(closure_1_2[12]).awaitConjurePreviewClaim(closure_2_0, user.id);
       return value;
     });
-    obj7.onAccepted = function() {
+    obj7.onAccepted = function onAccepted() {
       const self = this;
       const apply = closure_1_4.apply;
       if (typeof apply === "unknown") {
@@ -231,7 +231,7 @@ let closure_33 = async function _relayCaptureRequest(arg0, arg1, arg2) {
     obj7.resolveUploadUrl = function resolveUploadUrl() {
       return (function getClientCaptureUploadUrl(arg0) {
         const self = this;
-        const apply = closure_1_69.apply;
+        const apply = closure_1_68.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -267,7 +267,7 @@ let closure_34 = async function _relayControlRequest(arg0) {
   await ConjurePlatformUtilsDefault.relayPreviewControl(closure_0, id, request, asyncGeneratorStep(async () => {
     ws = ws.ws;
     ws.sendControlAck(user.id, "accepted");
-    await v3(closure_1_2[11]).awaitConjurePreviewClaim(closure_2_0, user.id);
+    await v3(closure_1_2[12]).awaitConjurePreviewClaim(closure_2_0, user.id);
     return null != value;
   }));
   if (1 === tmp6) {
@@ -318,827 +318,848 @@ function handleEvent(projectId, pendingEvents, type) {
       }
     }
   }
-  if ("history_page" === type.type) {
-    value = map7.get(projectId);
-    map7.delete(projectId);
-    if (true !== type.failed) {
-      obj2 = { type: "CONJURE_CHAT_HISTORY_PREPEND", projectId, entries: null, cursor: null };
+  if ("history_page" !== type.type) {
+    if ("hello" === type.type) {
+      pendingEvents.helloSeen = true;
+      const backoff = pendingEvents.backoff;
+      backoff.succeed();
+    } else if ("history" === type.type) {
       let messages = type.messages;
       if (messages == null) {
         messages = [];
       }
-      obj2.entries = messages.slice();
-      let tmp249 = null;
+      const substr = messages.slice();
+      obj2 = { type: "CONJURE_CHAT_HISTORY_SET", projectId, entries: substr, cursor: null, degraded: null };
+      let tmp252 = null;
       if (true === type.has_more) {
         let cursor = type.cursor;
         if (cursor == null) {
           cursor = null;
         }
-        tmp249 = cursor;
+        tmp252 = cursor;
       }
-      obj2.cursor = tmp249;
+      obj2.cursor = tmp252;
+      obj2.degraded = true === type.degraded;
       attachment_id(584).dispatch(obj2);
-      loadOlderHistory(projectId);
-      const obj95 = attachment_id(584);
-    }
-  } else if ("hello" === type.type) {
-    pendingEvents.helloSeen = true;
-    const backoff = pendingEvents.backoff;
-    backoff.succeed();
-  } else if ("history" === type.type) {
-    let messages1 = type.messages;
-    if (messages1 == null) {
-      messages1 = [];
-    }
-    const substr = messages1.slice();
-    const obj6 = { type: "CONJURE_CHAT_HISTORY_SET", projectId, entries: substr, cursor: null, degraded: null };
-    let tmp228 = null;
-    if (true === type.has_more) {
-      let cursor1 = type.cursor;
-      if (cursor1 == null) {
-        cursor1 = null;
+      map7.delete(projectId);
+      pendingEvents = pendingEvents.pendingEvents;
+      pendingEvents.pendingEvents = [];
+      setConnState(projectId, "open");
+      for (const item10819 of pendingEvents) {
+        let tmp262 = handleEvent(arg0, arg1, item10819);
+        continue;
       }
-      tmp228 = cursor1;
-    }
-    obj6.cursor = tmp228;
-    obj6.degraded = true === type.degraded;
-    attachment_id(584).dispatch(obj6);
-    map7.delete(projectId);
-    (function beginHistoryDrain(projectId) {
-      const tmp = getOlderHistoryCursor(projectId);
-      if (null != tmp) {
-        if (map7.get(projectId) !== tmp) {
-          value = map.get(projectId);
-          if (null != value) {
-            const result = map7.set(projectId, tmp);
-            const ws = value.ws;
-            ws.sendLoadHistory(tmp);
-          }
+      const pendingModelSettings = pendingEvents.pendingModelSettings;
+      pendingEvents.pendingModelSettings = null;
+      if (null != pendingModelSettings) {
+        try {
+          let ws = pendingEvents.ws;
+          ws.sendModelSettings(pendingModelSettings);
+        } catch (err) {
         }
       }
-    })(projectId);
-    pendingEvents = pendingEvents.pendingEvents;
-    pendingEvents.pendingEvents = [];
-    setConnState(projectId, "open");
-    for (const item10755 of pendingEvents) {
-      let tmp239 = handleEvent(arg0, arg1, item10755);
-      continue;
-    }
-    const pendingModelSettings = pendingEvents.pendingModelSettings;
-    pendingEvents.pendingModelSettings = null;
-    if (null != pendingModelSettings) {
-      try {
-        let ws = pendingEvents.ws;
-        ws.sendModelSettings(pendingModelSettings);
-      } catch (err) {
-      }
-    }
-    flushPendingSends(projectId, pendingEvents);
-    const obj92 = attachment_id(584);
-  } else if ("chat_state" === type.type) {
-    const obj8 = { type: "CONJURE_CHAT_STOPPED_SET", projectId, stopped: type.stopped };
-    attachment_id(584).dispatch(obj8);
-    let stopped = type.stopped;
-    if (!stopped) {
-      stopped = "open" !== map1.get(projectId);
-    }
-    if (!stopped) {
       flushPendingSends(projectId, pendingEvents);
-    }
-    const obj90 = attachment_id(584);
-  } else if ("user_message" === type.type) {
-    (function appendAcceptedUserMessage(projectId, content) {
-      let hasItem = null != content.nonce;
-      if (hasItem) {
-        hasItem = map.has(content.nonce);
+      const obj104 = attachment_id(584);
+    } else if ("chat_state" === type.type) {
+      const obj4 = { type: "CONJURE_CHAT_STOPPED_SET", projectId, stopped: type.stopped };
+      attachment_id(584).dispatch(obj4);
+      let stopped = type.stopped;
+      if (!stopped) {
+        stopped = "open" !== map1.get(projectId);
       }
-      if (hasItem) {
-        if (null != content.nonce) {
-          value = map.get(content.nonce);
+      if (!stopped) {
+        flushPendingSends(projectId, pendingEvents);
+      }
+      const obj102 = attachment_id(584);
+    } else if ("user_message" === type.type) {
+      (function appendAcceptedUserMessage(projectId, content) {
+        let hasItem = null != content.nonce;
+        if (hasItem) {
+          hasItem = map.has(content.nonce);
         }
-      }
-      if (hasItem) {
-        hasItem = null == value || null == content.user_id || value === content.user_id;
-        const tmp5 = null == value || null == content.user_id || value === content.user_id;
-      }
-      let tmp6 = hasItem;
-      if (hasItem) {
-        tmp6 = null != content.nonce;
-      }
-      if (tmp6) {
-        map.delete(content.nonce);
-      }
-      attachment_id(584);
-      const obj = { type: "CONJURE_CHAT_MESSAGE_APPEND", projectId, content: content.content, id: content.id };
-      if (hasItem) {
-        if (null != content.nonce) {
-          obj2 = { optimisticId: null };
-          const _HermesInternal = HermesInternal;
-          obj2.optimisticId = "optimistic:" + content.nonce;
-          obj3 = obj2;
+        if (hasItem) {
+          if (null != content.nonce) {
+            value = map.get(content.nonce);
+          }
         }
-        const merged = Object.assign(obj3);
-        ({ user_id: obj.userId, ts: obj.timestamp, attachments: obj.attachments } = content);
-        tmp10(obj);
-      }
-      obj3 = {};
-    })(projectId, type);
-  } else if ("message_disposition" === type.type) {
-    if ((function isKnownDisposition(disposition) {
-      hasOwnProperty = Object.prototype.hasOwnProperty;
-      const call = hasOwnProperty.call;
-      return typeof call === "unknown" ? hasOwnProperty(disposition) : call(closure_1_26, disposition);
-    })(type.disposition)) {
-      const obj9 = { type: "CONJURE_CHAT_MESSAGE_DISPOSITION", projectId, id: null, activeTurnId: null, disposition: null };
-      ({ id: obj89.id, active_turn_id: obj89.activeTurnId, disposition: obj89.disposition } = type);
-      attachment_id(584).dispatch(obj9);
-      const obj88 = attachment_id(584);
-    }
-  } else if ("publish_notice" === type.type) {
-    const obj11 = { type: "CONJURE_CHAT_PUBLISH_NOTICE", projectId, id: null, content: null, timestamp: null, publishNotice: null };
-    ({ id: obj87.id, content: obj87.content, ts: obj87.timestamp, publish_notice: obj87.publishNotice } = type);
-    attachment_id(584).dispatch(obj11);
-    const obj86 = attachment_id(584);
-  } else if ("side_reply" === type.type) {
-    const obj14 = { type: "CONJURE_CHAT_SIDE_REPLY", projectId, id: null, inReplyTo: null, content: null, timestamp: null };
-    ({ id: obj85.id, in_reply_to: obj85.inReplyTo, content: obj85.content, ts: obj85.timestamp } = type);
-    attachment_id(584).dispatch(obj14);
-    const obj84 = attachment_id(584);
-  } else if ("source_checkpoint" === type.type) {
-    const obj26 = { type: "CONJURE_CHAT_SOURCE_CHECKPOINT", projectId, turnId: null, sourceSha: null };
-    ({ turn_id: obj83.turnId, source_sha: obj83.sourceSha } = type);
-    attachment_id(584).dispatch(obj26);
-    const obj82 = attachment_id(584);
-  } else if ("turn_notification" === type.type) {
-    const obj29 = { type: "CONJURE_TURN_NOTIFICATION", projectId, body: null, nonce: null };
-    ({ summary: obj81.body, nonce: obj81.nonce } = type);
-    attachment_id(584).dispatch(obj29);
-    const obj80 = attachment_id(584);
-  } else if ("provisional_todo" === type.type) {
-    const obj32 = { type: "CONJURE_CHAT_PROVISIONAL_TODO", projectId, turnId: null, text: null };
-    ({ turn_id: obj79.turnId, text: obj79.text } = type);
-    attachment_id(584).dispatch(obj32);
-    const obj78 = attachment_id(584);
-  } else if ("step" === type.type) {
-    if ("reply" === type.kind) {
-      let str32 = type.message;
-      if (str32 == null) {
-        str32 = "";
-      }
-      if ("" !== str32) {
-        const obj33 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
-        const obj41 = { content: str32, kind: "message" };
-        obj33.patch = obj41;
-        attachment_id(584).dispatch(obj33);
-        const obj75 = attachment_id(584);
-      } else {
-        const intl2 = require("util").intl;
-        sendFailedStep(projectId, intl2.string(attachment_id(3753)["913RMa"]), obj2);
-      }
-    } else if ("thinking_lifecycle" === type.kind) {
-      ({ phase, session, seq, ticks, elapsed_ms, text } = type);
-      if (tmp185) {
-        const obj42 = { type: "CONJURE_CHAT_THINKING_SET", projectId, activity: null };
-        const obj44 = { phase, session, seq, ticks: null, elapsedMs: null, text: null };
-        if (ticks == null) {
-          ticks = 0;
+        if (hasItem) {
+          hasItem = null == value || null == content.user_id || value === content.user_id;
+          const tmp5 = null == value || null == content.user_id || value === content.user_id;
         }
-        obj44.ticks = ticks;
-        if (elapsed_ms == null) {
-          elapsed_ms = 0;
+        let tmp6 = hasItem;
+        if (hasItem) {
+          tmp6 = null != content.nonce;
         }
-        obj44.elapsedMs = elapsed_ms;
-        if (text == null) {
-          text = "";
+        if (tmp6) {
+          map.delete(content.nonce);
         }
-        obj44.text = text;
-        obj42.activity = obj44;
-        attachment_id(584).dispatch(obj42);
-        const obj72 = attachment_id(584);
-      }
-      tmp185 = null != phase && null != seq && null != session;
-    } else if ("compaction" === type.kind) {
-      let tmp180 = "start" !== type.phase;
-      if (tmp180) {
-        tmp180 = "end" !== type.phase;
-      }
-      if (!tmp180) {
-        const obj45 = { type: "CONJURE_CHAT_COMPACTING_SET", projectId, compacting: "start" === type.phase };
-        attachment_id(584).dispatch(obj45);
-        const obj70 = attachment_id(584);
-      }
-    } else if ("debug_compaction_declined" === type.kind) {
-      if (tmp172) {
-        const obj48 = { type: "CONJURE_DEBUG_COMPACTION_DECLINED", projectId, promptCeiling: null, threshold: null, projected: null, headroom: null, retainedMessages: null, observedAt: null };
-        let num16 = type.prompt_ceiling;
-        if (num16 == null) {
-          num16 = 0;
+        attachment_id(584);
+        const obj = { type: "CONJURE_CHAT_MESSAGE_APPEND", projectId, content: content.content, id: content.id };
+        if (hasItem) {
+          if (null != content.nonce) {
+            obj2 = { optimisticId: null };
+            const _HermesInternal = HermesInternal;
+            obj2.optimisticId = "optimistic:" + content.nonce;
+            obj3 = obj2;
+          }
+          const merged = Object.assign(obj3);
+          ({ user_id: obj.userId, ts: obj.timestamp, attachments: obj.attachments } = content);
+          tmp10(obj);
         }
-        obj48.promptCeiling = num16;
-        ({ threshold: obj68.threshold, projected: obj68.projected, headroom } = type);
-        if (headroom == null) {
-          headroom = type.threshold - type.projected;
-        }
-        obj48.headroom = headroom;
-        let num17 = type.retained_messages;
-        if (num17 == null) {
-          num17 = 0;
-        }
-        obj48.retainedMessages = num17;
-        const _Date4 = Date;
-        const date = new Date();
-        obj48.observedAt = date.toISOString();
-        attachment_id(584).dispatch(obj48);
-        const obj67 = attachment_id(584);
+        obj3 = {};
+      })(projectId, type);
+    } else if ("message_disposition" === type.type) {
+      if ((function isKnownDisposition(disposition) {
+        hasOwnProperty = Object.prototype.hasOwnProperty;
+        const call = hasOwnProperty.call;
+        return typeof call === "unknown" ? hasOwnProperty(disposition) : call(closure_1_26, disposition);
+      })(type.disposition)) {
+        const obj8 = { type: "CONJURE_CHAT_MESSAGE_DISPOSITION", projectId, id: null, activeTurnId: null, disposition: null };
+        ({ id: obj101.id, active_turn_id: obj101.activeTurnId, disposition: obj101.disposition } = type);
+        attachment_id(584).dispatch(obj8);
+        const obj100 = attachment_id(584);
       }
-      tmp172 = null != type.projected && null != type.threshold;
-    } else if ("force_compaction_result" === type.kind) {
-      const outcome = type.outcome;
-      let tmp159 = "compacted" !== outcome;
-      if (tmp159) {
-        tmp159 = "declined" !== outcome;
-      }
-      if (tmp159) {
-        tmp159 = "failed" !== outcome;
-      }
-      if (tmp159) {
-        tmp159 = "busy" !== outcome;
-      }
-      if (!tmp159) {
-        const obj49 = { type: "CONJURE_DEBUG_FORCE_COMPACTION_RESULT", projectId, outcome, reason: type.reason };
-        const tmp162 = true === type.pending_turn ? { pendingTurn: true } : {};
-        let merged = Object.assign(tmp162);
-        const _Date3 = Date;
-        const date1 = new Date();
-        obj49.observedAt = date1.toISOString();
-        attachment_id(584).dispatch(obj49);
-        const obj64 = attachment_id(584);
-      }
-    } else if ("debug_compaction_report" === type.kind) {
-      if (tmp151) {
-        const obj51 = { type: "CONJURE_DEBUG_COMPACTION_REPORT", projectId, tokensBefore: null, tokensAfter: null, retainedMessages: null, promptCeiling: null, observedAt: null };
-        ({ tokens_before: obj62.tokensBefore, tokens_after: obj62.tokensAfter, retained_messages } = type);
-        if (retained_messages == null) {
-          retained_messages = 0;
-        }
-        obj51.retainedMessages = retained_messages;
-        let num15 = type.prompt_ceiling;
-        if (num15 == null) {
-          num15 = 0;
-        }
-        obj51.promptCeiling = num15;
-        const _Date2 = Date;
-        const date2 = new Date();
-        obj51.observedAt = date2.toISOString();
-        attachment_id(584).dispatch(obj51);
-        const obj61 = attachment_id(584);
-      }
-      tmp151 = null != type.tokens_before && null != type.tokens_after;
-    } else if ("todos" === type.kind) {
-      let items = type.items;
-      if (items == null) {
-        items = [];
-      }
-      if (items.length > 0) {
-        const obj52 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
-        const obj54 = { todos: items };
-        obj52.patch = obj54;
-        attachment_id(584).dispatch(obj52);
-        const obj120 = attachment_id(584);
-        const obj56 = { type: "CONJURE_CHAT_STEP_APPEND", projectId, turnId: type.turn_id, step: type };
-        attachment_id(584).dispatch(obj56);
-        const obj123 = attachment_id(584);
-      }
-    } else if ("plan_proposed" === type.kind) {
-      if (null != type.proposal) {
-        const obj57 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
-        const obj59 = { proposal: type.proposal, kind: "proposal" };
-        obj57.patch = obj59;
-        attachment_id(584).dispatch(obj57);
-        const obj58 = attachment_id(584);
-      } else {
-        const intl = require("util").intl;
-        sendFailedStep(projectId, intl.string(attachment_id(3753)["0+RUWx"]), obj2);
-      }
-    } else if ("ideas" === type.kind) {
-      let tmp135 = null != type.ideas;
-      if (tmp135) {
-        tmp135 = type.ideas.length > 0;
-      }
-      if (tmp135) {
-        const obj60 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
-        const obj63 = { ideas: type.ideas };
-        obj60.patch = obj63;
-        attachment_id(584).dispatch(obj60);
-        const obj55 = attachment_id(584);
-      }
-    } else if ("restore_proposal" === type.kind) {
-      if (null != type.restore_proposal) {
-        const obj65 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
-        const obj66 = { restoreProposal: type.restore_proposal };
-        obj65.patch = obj66;
-        attachment_id(584).dispatch(obj65);
-        const obj117 = attachment_id(584);
-      }
-    } else if ("publish_cta" === type.kind) {
-      if (null != type.publish_cta) {
-        const obj69 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
-        const obj71 = { publishCta: null };
-        const obj73 = { surface: publishSurface(type.publish_cta.surface) };
-        obj71.publishCta = obj73;
-        obj69.patch = obj71;
-        attachment_id(584).dispatch(obj69);
-        const obj113 = attachment_id(584);
-      }
-    } else if ("publish_status" === type.kind) {
-      const obj74 = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId, published: true === type.published, hasUnpublishedChanges: true === type.has_unpublished_changes, surface: publishSurface(type.surface) };
-      attachment_id(584).dispatch(obj74);
-      const obj53 = attachment_id(584);
-    } else if ("clarification" === type.kind) {
-      let tmp124 = null != type.clarification;
-      if (tmp124) {
-        const questions = type.clarification.questions;
-        let num9;
-        if (questions != null) {
-          num9 = questions.length;
-        }
-        if (num9 == null) {
-          num9 = 0;
-        }
-        tmp124 = num9 > 0;
-      }
-      if (tmp124) {
-        const obj76 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
-        const obj77 = { clarification: type.clarification };
-        obj76.patch = obj77;
-        attachment_id(584).dispatch(obj76);
-        const obj50 = attachment_id(584);
-      }
-    } else if ("attachment" === type.kind) {
-      let tmp119 = null != type.attachments;
-      if (tmp119) {
-        tmp119 = type.attachments.length > 0;
-      }
-      if (tmp119) {
-        const obj91 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
-        const obj93 = { attachments: type.attachments };
-        obj91.patch = obj93;
-        attachment_id(584).dispatch(obj91);
-        const obj47 = attachment_id(584);
-      }
-    } else if ("collect_secrets" === type.kind) {
-      let fields = type.fields;
-      if (fields == null) {
-        fields = [];
-      }
-      if (fields.length > 0) {
-        const obj96 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
-        const obj97 = { secretRequest: null };
-        const obj100 = { fields, note: null, copy_values: null };
-        ({ note: obj112.note, copy_values: obj112.copy_values } = type);
-        obj97.secretRequest = obj100;
-        obj96.patch = obj97;
-        attachment_id(584).dispatch(obj96);
-        const obj109 = attachment_id(584);
-      }
-    } else if ("collect_settings" === type.kind) {
-      const obj104 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
-      const obj106 = { settingsRequest: null };
-      ({ keys: obj46.keys, note: obj46.note } = type);
-      obj106.settingsRequest = { keys: null, note: null };
-      obj104.patch = obj106;
-      attachment_id(584).dispatch(obj104);
-      const obj107 = { keys: null, note: null };
-      const obj43 = attachment_id(584);
-    } else if ("awaiting_user" === type.kind) {
-      if ("secrets" === type.action) {
-        const obj108 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
-        const obj110 = { awaitingUser: null };
-        const obj111 = { action: type.action };
-        obj110.awaitingUser = obj111;
-        obj108.patch = obj110;
-        attachment_id(584).dispatch(obj108);
-        const obj105 = attachment_id(584);
-      }
-    } else if ("intake" === type.kind) {
-      let tmp110 = null != type.intake;
-      if (tmp110) {
-        const questions1 = type.intake.questions;
-        let num5;
-        if (questions1 != null) {
-          num5 = questions1.length;
-        }
-        if (num5 == null) {
-          num5 = 0;
-        }
-        tmp110 = num5 > 0;
-      }
-      if (tmp110) {
-        const obj114 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
-        const obj115 = { intake: type.intake };
-        obj114.patch = obj115;
-        attachment_id(584).dispatch(obj114);
-        const obj40 = attachment_id(584);
-      }
-    } else if ("usage" === type.kind) {
-      if (tmp105) {
-        const obj116 = { type: "CONJURE_CHAT_USAGE_SET", projectId, turn: null, project: null };
-        ({ turn: obj39.turn, project: obj39.project } = type);
-        attachment_id(584).dispatch(obj116);
-        const obj38 = attachment_id(584);
-      }
-      tmp105 = null != type.turn && null != type.project;
-    } else if ("reaction" === type.kind) {
-      let tmp100 = null != type.message_id && null != type.emoji;
-      if (tmp100) {
-        tmp100 = "" !== type.emoji;
-      }
-      if (tmp100) {
-        const obj118 = { type: "CONJURE_CHAT_MESSAGE_REACTION", projectId, id: null, emoji: null };
-        ({ message_id: obj37.id, emoji: obj37.emoji } = type);
-        attachment_id(584).dispatch(obj118);
-        const obj36 = attachment_id(584);
-      }
-    } else if ("project_named" === type.kind) {
-      const name = type.name;
-      let tmp95 = null != name;
-      if (tmp95) {
-        tmp95 = "" !== name;
-      }
-      if (tmp95) {
-        const obj35 = require("ConjureActionCreators");
-        require("ConjureActionCreators").renameProject(projectId, name).catch(() => {
-
-        });
-        const renameProjectResult = require("ConjureActionCreators").renameProject(projectId, name);
-      }
-    } else if ("publish_result" === type.kind) {
-      const pendingPublish = pendingEvents.pendingPublish;
-      pendingEvents.pendingPublish = null;
-      if (null != pendingPublish) {
-        const _clearTimeout2 = clearTimeout;
-        clearTimeout(pendingPublish.timeout);
-        pendingPublish.resolve(type);
-      }
-      if (true !== type.ok) {
-        let str22 = type.error;
-        if (str22 == null) {
-          str22 = "publish_result not ok";
-        }
-        require("ConjureActionCreators").trackPublishFailed(projectId, str22, false);
-        const obj34 = require("ConjureActionCreators");
-      } else {
-        const publishStatus = ConjureProjectStore.getPublishStatus(projectId);
-        if (null != publishStatus) {
-          const obj119 = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId, published: true, hasUnpublishedChanges: false, surface: publishStatus.surface };
-          attachment_id(584).dispatch(obj119);
-          const obj103 = attachment_id(584);
-        }
-      }
-    } else if ("patch_notes_draft" === type.kind) {
-      const pendingPatchNotesDraft = pendingEvents.pendingPatchNotesDraft;
-      if (tmp81) {
-        pendingEvents.pendingPatchNotesDraft = null;
-        const _clearTimeout = clearTimeout;
-        clearTimeout(pendingPatchNotesDraft.timeout);
-        pendingPatchNotesDraft.resolve(type);
-      }
-      tmp81 = null != pendingPatchNotesDraft && pendingPatchNotesDraft.nonce === type.nonce;
-    } else if ("app_icon_set" === type.kind) {
-      const icon = type.icon;
-      if (null != icon) {
-        if ("" !== icon) {
-          attachment_id = type.attachment_id;
-          const obj102 = require("ConjureActionCreators");
-          const setProjectIconResult = require("ConjureActionCreators").setProjectIcon(projectId, icon);
-          require("ConjureActionCreators").setProjectIcon(projectId, icon).then((ok) => {
-            let str = "failed";
-            if (ok.ok) {
-              str = "applied";
-            }
-            let tmp2 = null != attachment_id;
-            if (tmp2) {
-              tmp2 = "" !== attachment_id;
-            }
-            if (tmp2) {
-              const ws = pendingEvents.ws;
-              ws.sendAppIconAck(attachment_id, str);
-            }
-          }).catch(() => {
-            let tmp2 = null != attachment_id;
-            if (tmp2) {
-              tmp2 = "" !== attachment_id;
-            }
-            if (tmp2) {
-              const ws = pendingEvents.ws;
-              ws.sendAppIconAck(attachment_id, "failed");
-            }
-          });
-          const nextPromise = require("ConjureActionCreators").setProjectIcon(projectId, icon).then((ok) => {
-            let str = "failed";
-            if (ok.ok) {
-              str = "applied";
-            }
-            let tmp2 = null != attachment_id;
-            if (tmp2) {
-              tmp2 = "" !== attachment_id;
-            }
-            if (tmp2) {
-              const ws = pendingEvents.ws;
-              ws.sendAppIconAck(attachment_id, str);
-            }
-          });
-        }
-      }
-    } else if ("turn_result" === type.kind) {
-      let result = require("ConjureAnalytics").trackConjureTurnResulted(projectId, type);
-      if ("deployed" === type.result) {
-        const obj121 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: { kind: "plan_implemented" } };
-        attachment_id(584).dispatch(obj121);
-        const obj28 = attachment_id(584);
-      }
-      const obj27 = require("ConjureAnalytics");
-      const tmp74 = attachment_id;
-      const obj122 = { type: "CONJURE_CHAT_TURN_FINISHED", projectId, turnId: null, summary: null };
-      ({ turn_id: obj31.turnId, summary: obj31.summary } = type);
-      attachment_id(584).dispatch(obj122);
-      let deleteResult2 = set1.delete(projectId);
-      if (deleteResult2) {
-        deleteResult2 = "cancelled" === type.result;
-      }
-      if (deleteResult2) {
-        const obj124 = { type: "CONJURE_CHAT_INTERRUPTED", projectId };
-        tmp74(584).dispatch(obj124);
-        const tmp74Result = tmp74(584);
-      }
-      const obj30 = attachment_id(584);
+    } else if ("publish_notice" === type.type) {
+      const obj10 = { type: "CONJURE_CHAT_PUBLISH_NOTICE", projectId, id: null, content: null, timestamp: null, publishNotice: null };
+      ({ id: obj99.id, content: obj99.content, ts: obj99.timestamp, publish_notice: obj99.publishNotice } = type);
+      attachment_id(584).dispatch(obj10);
+      const obj98 = attachment_id(584);
     } else {
-      const obj187 = { type: "CONJURE_CHAT_STEP_APPEND", projectId, turnId: type.turn_id, step: type };
-      attachment_id(584).dispatch(obj187);
-      let tmp62 = "build_error" !== type.kind;
-      if (tmp62) {
-        tmp62 = "healthcheck_failed" !== type.kind;
-      }
-      if (tmp62) {
-        tmp62 = "error" !== type.kind;
-      }
-      if (!tmp62) {
-        const obj188 = {};
-        const merged1 = Object.assign(obj3[type.kind]);
-        obj188.message = type.message;
-        let stderr_tail;
-        if ("build_error" === type.kind) {
-          stderr_tail = type.stderr_tail;
-        }
-        obj188.details = stderr_tail;
-        require("ConjureAnalytics").trackConjureErrored(projectId, obj188);
-        const obj25 = require("ConjureAnalytics");
-      }
-      if ("preview_ready" === type.kind) {
-        const result1 = require("ConjureActionCreators").refreshPublishedProject(projectId, { isPreview: true });
-        result1.catch(() => {
+      if ("app_removed" !== type.type) {
+        if ("bot_removed" !== type.type) {
+          if ("preview_bot_removed" !== type.type) {
+            if ("app_channel_deleted" !== type.type) {
+              if ("side_reply" === type.type) {
+                const obj12 = { type: "CONJURE_CHAT_SIDE_REPLY", projectId, id: null, inReplyTo: null, content: null, timestamp: null };
+                ({ id: obj95.id, in_reply_to: obj95.inReplyTo, content: obj95.content, ts: obj95.timestamp } = type);
+                attachment_id(584).dispatch(obj12);
+                const obj94 = attachment_id(584);
+              } else if ("source_checkpoint" === type.type) {
+                const obj13 = { type: "CONJURE_CHAT_SOURCE_CHECKPOINT", projectId, turnId: null, sourceSha: null };
+                ({ turn_id: obj93.turnId, source_sha: obj93.sourceSha } = type);
+                attachment_id(584).dispatch(obj13);
+                const obj92 = attachment_id(584);
+              } else if ("turn_notification" === type.type) {
+                const obj15 = { type: "CONJURE_TURN_NOTIFICATION", projectId, body: null, nonce: null };
+                ({ summary: obj91.body, nonce: obj91.nonce } = type);
+                attachment_id(584).dispatch(obj15);
+                const obj90 = attachment_id(584);
+              } else if ("provisional_todo" === type.type) {
+                const obj18 = { type: "CONJURE_CHAT_PROVISIONAL_TODO", projectId, turnId: null, text: null };
+                ({ turn_id: obj89.turnId, text: obj89.text } = type);
+                attachment_id(584).dispatch(obj18);
+                const obj88 = attachment_id(584);
+              } else if ("step" === type.type) {
+                if ("reply" === type.kind) {
+                  let str33 = type.message;
+                  if (str33 == null) {
+                    str33 = "";
+                  }
+                  if ("" !== str33) {
+                    const obj24 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+                    const obj32 = { content: str33, kind: "message" };
+                    obj24.patch = obj32;
+                    attachment_id(584).dispatch(obj24);
+                    const obj85 = attachment_id(584);
+                  } else {
+                    const intl2 = require("util").intl;
+                    sendFailedStep(projectId, intl2.string(attachment_id(3827)["913RMa"]), obj2);
+                  }
+                } else if ("thinking_lifecycle" === type.kind) {
+                  ({ phase, session, seq, ticks, elapsed_ms, text } = type);
+                  if (tmp206) {
+                    const obj35 = { type: "CONJURE_CHAT_THINKING_SET", projectId, activity: null };
+                    const obj38 = { phase, session, seq, ticks: null, elapsedMs: null, text: null };
+                    if (ticks == null) {
+                      ticks = 0;
+                    }
+                    obj38.ticks = ticks;
+                    if (elapsed_ms == null) {
+                      elapsed_ms = 0;
+                    }
+                    obj38.elapsedMs = elapsed_ms;
+                    if (text == null) {
+                      text = "";
+                    }
+                    obj38.text = text;
+                    obj35.activity = obj38;
+                    attachment_id(584).dispatch(obj35);
+                    const obj82 = attachment_id(584);
+                  }
+                  tmp206 = null != phase && null != seq && null != session;
+                } else if ("compaction" === type.kind) {
+                  let tmp201 = "start" !== type.phase;
+                  if (tmp201) {
+                    tmp201 = "end" !== type.phase;
+                  }
+                  if (!tmp201) {
+                    const obj39 = { type: "CONJURE_CHAT_COMPACTING_SET", projectId, compacting: "start" === type.phase };
+                    attachment_id(584).dispatch(obj39);
+                    const obj80 = attachment_id(584);
+                  }
+                } else if ("saving" === type.kind) {
+                  let tmp197 = "start" !== type.phase;
+                  if (tmp197) {
+                    tmp197 = "end" !== type.phase;
+                  }
+                  if (!tmp197) {
+                    const obj42 = { type: "CONJURE_CHAT_SAVING_SET", projectId, saving: "start" === type.phase };
+                    attachment_id(584).dispatch(obj42);
+                    const obj78 = attachment_id(584);
+                  }
+                } else if ("debug_compaction_declined" === type.kind) {
+                  if (tmp189) {
+                    const obj43 = { type: "CONJURE_DEBUG_COMPACTION_DECLINED", projectId, promptCeiling: null, threshold: null, projected: null, headroom: null, retainedMessages: null, observedAt: null };
+                    let num16 = type.prompt_ceiling;
+                    if (num16 == null) {
+                      num16 = 0;
+                    }
+                    obj43.promptCeiling = num16;
+                    ({ threshold: obj76.threshold, projected: obj76.projected, headroom } = type);
+                    if (headroom == null) {
+                      headroom = type.threshold - type.projected;
+                    }
+                    obj43.headroom = headroom;
+                    let num17 = type.retained_messages;
+                    if (num17 == null) {
+                      num17 = 0;
+                    }
+                    obj43.retainedMessages = num17;
+                    const _Date4 = Date;
+                    const date = new Date();
+                    obj43.observedAt = date.toISOString();
+                    attachment_id(584).dispatch(obj43);
+                    const obj75 = attachment_id(584);
+                  }
+                  tmp189 = null != type.projected && null != type.threshold;
+                } else if ("force_compaction_result" === type.kind) {
+                  const outcome = type.outcome;
+                  let tmp176 = "compacted" !== outcome;
+                  if (tmp176) {
+                    tmp176 = "declined" !== outcome;
+                  }
+                  if (tmp176) {
+                    tmp176 = "failed" !== outcome;
+                  }
+                  if (tmp176) {
+                    tmp176 = "busy" !== outcome;
+                  }
+                  if (!tmp176) {
+                    const obj49 = { type: "CONJURE_DEBUG_FORCE_COMPACTION_RESULT", projectId, outcome, reason: type.reason };
+                    const tmp179 = true === type.pending_turn ? { pendingTurn: true } : {};
+                    let merged = Object.assign(tmp179);
+                    const _Date3 = Date;
+                    const date1 = new Date();
+                    obj49.observedAt = date1.toISOString();
+                    attachment_id(584).dispatch(obj49);
+                    const obj72 = attachment_id(584);
+                  }
+                } else if ("debug_compaction_report" === type.kind) {
+                  if (tmp168) {
+                    const obj50 = { type: "CONJURE_DEBUG_COMPACTION_REPORT", projectId, tokensBefore: null, tokensAfter: null, retainedMessages: null, promptCeiling: null, observedAt: null };
+                    ({ tokens_before: obj70.tokensBefore, tokens_after: obj70.tokensAfter, retained_messages } = type);
+                    if (retained_messages == null) {
+                      retained_messages = 0;
+                    }
+                    obj50.retainedMessages = retained_messages;
+                    let num15 = type.prompt_ceiling;
+                    if (num15 == null) {
+                      num15 = 0;
+                    }
+                    obj50.promptCeiling = num15;
+                    const _Date2 = Date;
+                    const date2 = new Date();
+                    obj50.observedAt = date2.toISOString();
+                    attachment_id(584).dispatch(obj50);
+                    const obj69 = attachment_id(584);
+                  }
+                  tmp168 = null != type.tokens_before && null != type.tokens_after;
+                } else if ("todos" === type.kind) {
+                  let items = type.items;
+                  if (items == null) {
+                    items = [];
+                  }
+                  if (items.length > 0) {
+                    const obj52 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+                    const obj53 = { todos: items };
+                    obj52.patch = obj53;
+                    attachment_id(584).dispatch(obj52);
+                    const obj130 = attachment_id(584);
+                    const obj56 = { type: "CONJURE_CHAT_STEP_APPEND", projectId, turnId: type.turn_id, step: type };
+                    attachment_id(584).dispatch(obj56);
+                    const obj133 = attachment_id(584);
+                  }
+                } else if ("plan_proposed" === type.kind) {
+                  if (null != type.proposal) {
+                    const obj57 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+                    const obj59 = { proposal: type.proposal, kind: "proposal" };
+                    obj57.patch = obj59;
+                    attachment_id(584).dispatch(obj57);
+                    const obj66 = attachment_id(584);
+                  } else {
+                    const intl = require("util").intl;
+                    sendFailedStep(projectId, intl.string(attachment_id(3827)["0+RUWx"]), obj2);
+                  }
+                } else if ("ideas" === type.kind) {
+                  let tmp152 = null != type.ideas;
+                  if (tmp152) {
+                    tmp152 = type.ideas.length > 0;
+                  }
+                  if (tmp152) {
+                    const obj60 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+                    const obj62 = { ideas: type.ideas };
+                    obj60.patch = obj62;
+                    attachment_id(584).dispatch(obj60);
+                    const obj63 = attachment_id(584);
+                  }
+                } else if ("restore_proposal" === type.kind) {
+                  if (null != type.restore_proposal) {
+                    const obj64 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+                    const obj65 = { restoreProposal: type.restore_proposal };
+                    obj64.patch = obj65;
+                    attachment_id(584).dispatch(obj64);
+                    const obj127 = attachment_id(584);
+                  }
+                } else if ("publish_cta" === type.kind) {
+                  if (null != type.publish_cta) {
+                    const obj67 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+                    const obj68 = { publishCta: null };
+                    const obj71 = { surface: publishSurface(type.publish_cta.surface) };
+                    obj68.publishCta = obj71;
+                    obj67.patch = obj68;
+                    attachment_id(584).dispatch(obj67);
+                    const obj123 = attachment_id(584);
+                  }
+                } else if ("publish_status" === type.kind) {
+                  const obj73 = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId, published: true === type.published, hasUnpublishedChanges: true === type.has_unpublished_changes, surface: publishSurface(type.surface) };
+                  attachment_id(584).dispatch(obj73);
+                  const obj61 = attachment_id(584);
+                } else if ("clarification" === type.kind) {
+                  let tmp141 = null != type.clarification;
+                  if (tmp141) {
+                    const questions = type.clarification.questions;
+                    let num9;
+                    if (questions != null) {
+                      num9 = questions.length;
+                    }
+                    if (num9 == null) {
+                      num9 = 0;
+                    }
+                    tmp141 = num9 > 0;
+                  }
+                  if (tmp141) {
+                    const obj74 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+                    const obj77 = { clarification: type.clarification };
+                    obj74.patch = obj77;
+                    attachment_id(584).dispatch(obj74);
+                    const obj58 = attachment_id(584);
+                  }
+                } else if ("attachment" === type.kind) {
+                  let tmp136 = null != type.attachments;
+                  if (tmp136) {
+                    tmp136 = type.attachments.length > 0;
+                  }
+                  if (tmp136) {
+                    const obj79 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+                    const obj81 = { attachments: type.attachments };
+                    obj79.patch = obj81;
+                    attachment_id(584).dispatch(obj79);
+                    const obj55 = attachment_id(584);
+                  }
+                } else if ("collect_secrets" === type.kind) {
+                  let fields = type.fields;
+                  if (fields == null) {
+                    fields = [];
+                  }
+                  if (fields.length > 0) {
+                    const obj83 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+                    const obj84 = { secretRequest: null };
+                    const obj86 = { fields, note: null, copy_values: null };
+                    ({ note: obj122.note, copy_values: obj122.copy_values } = type);
+                    obj84.secretRequest = obj86;
+                    obj83.patch = obj84;
+                    attachment_id(584).dispatch(obj83);
+                    const obj119 = attachment_id(584);
+                  }
+                } else if ("collect_settings" === type.kind) {
+                  const obj87 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+                  const obj97 = { settingsRequest: null };
+                  ({ keys: obj54.keys, note: obj54.note } = type);
+                  obj97.settingsRequest = { keys: null, note: null };
+                  obj87.patch = obj97;
+                  attachment_id(584).dispatch(obj87);
+                  const obj103 = { keys: null, note: null };
+                  const obj51 = attachment_id(584);
+                } else if ("awaiting_user" === type.kind) {
+                  if ("secrets" === type.action) {
+                    const obj105 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+                    const obj107 = { awaitingUser: null };
+                    const obj110 = { action: type.action };
+                    obj107.awaitingUser = obj110;
+                    obj105.patch = obj107;
+                    attachment_id(584).dispatch(obj105);
+                    const obj115 = attachment_id(584);
+                  }
+                } else if ("intake" === type.kind) {
+                  let tmp127 = null != type.intake;
+                  if (tmp127) {
+                    const questions1 = type.intake.questions;
+                    let num5;
+                    if (questions1 != null) {
+                      num5 = questions1.length;
+                    }
+                    if (num5 == null) {
+                      num5 = 0;
+                    }
+                    tmp127 = num5 > 0;
+                  }
+                  if (tmp127) {
+                    const obj114 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+                    const obj116 = { intake: type.intake };
+                    obj114.patch = obj116;
+                    attachment_id(584).dispatch(obj114);
+                    const obj48 = attachment_id(584);
+                  }
+                } else if ("usage" === type.kind) {
+                  if (tmp122) {
+                    const obj117 = { type: "CONJURE_CHAT_USAGE_SET", projectId, turn: null, project: null };
+                    ({ turn: obj47.turn, project: obj47.project } = type);
+                    attachment_id(584).dispatch(obj117);
+                    const obj46 = attachment_id(584);
+                  }
+                  tmp122 = null != type.turn && null != type.project;
+                } else if ("reaction" === type.kind) {
+                  let tmp117 = null != type.message_id && null != type.emoji;
+                  if (tmp117) {
+                    tmp117 = "" !== type.emoji;
+                  }
+                  if (tmp117) {
+                    const obj118 = { type: "CONJURE_CHAT_MESSAGE_REACTION", projectId, id: null, emoji: null };
+                    ({ message_id: obj45.id, emoji: obj45.emoji } = type);
+                    attachment_id(584).dispatch(obj118);
+                    const obj44 = attachment_id(584);
+                  }
+                } else if ("project_named" === type.kind) {
+                  const project = ConjureProjectStore.getProject(projectId);
+                  if (tmp109) {
+                    const obj120 = { type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: null };
+                    const obj121 = {};
+                    const merged1 = Object.assign(project);
+                    obj121.name = type.name;
+                    obj120.project = obj121;
+                    attachment_id(584).dispatch(obj120);
+                    const obj41 = attachment_id(584);
+                  }
+                  tmp109 = null != project && null != type.name;
+                } else if ("publish_result" === type.kind) {
+                  const pendingPublish = pendingEvents.pendingPublish;
+                  pendingEvents.pendingPublish = null;
+                  if (null != pendingPublish) {
+                    const _clearTimeout2 = clearTimeout;
+                    clearTimeout(pendingPublish.timeout);
+                    pendingPublish.resolve(type);
+                  }
+                  if (true !== type.ok) {
+                    let str22 = type.error;
+                    if (str22 == null) {
+                      str22 = "publish_result not ok";
+                    }
+                    require("ConjureActionCreators").trackPublishFailed(projectId, str22, false);
+                    const obj40 = require("ConjureActionCreators");
+                  } else {
+                    const publishStatus = ConjureProjectStore.getPublishStatus(projectId);
+                    if (null != publishStatus) {
+                      const obj124 = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId, published: true, hasUnpublishedChanges: false, surface: publishStatus.surface };
+                      attachment_id(584).dispatch(obj124);
+                      const obj113 = attachment_id(584);
+                    }
+                  }
+                } else if ("patch_notes_draft" === type.kind) {
+                  const pendingPatchNotesDraft = pendingEvents.pendingPatchNotesDraft;
+                  if (tmp93) {
+                    pendingEvents.pendingPatchNotesDraft = null;
+                    const _clearTimeout = clearTimeout;
+                    clearTimeout(pendingPatchNotesDraft.timeout);
+                    pendingPatchNotesDraft.resolve(type);
+                  }
+                  tmp93 = null != pendingPatchNotesDraft && pendingPatchNotesDraft.nonce === type.nonce;
+                } else if ("app_icon_set" === type.kind) {
+                  const icon = type.icon;
+                  if (null != icon) {
+                    if ("" !== icon) {
+                      attachment_id = type.attachment_id;
+                      const obj112 = require("ConjureActionCreators");
+                      const setProjectIconResult = require("ConjureActionCreators").setProjectIcon(projectId, icon);
+                      require("ConjureActionCreators").setProjectIcon(projectId, icon).then((ok) => {
+                        let str = "failed";
+                        if (ok.ok) {
+                          str = "applied";
+                        }
+                        let tmp2 = null != attachment_id;
+                        if (tmp2) {
+                          tmp2 = "" !== attachment_id;
+                        }
+                        if (tmp2) {
+                          const ws = pendingEvents.ws;
+                          ws.sendAppIconAck(attachment_id, str);
+                        }
+                      }).catch(() => {
+                        let tmp2 = null != attachment_id;
+                        if (tmp2) {
+                          tmp2 = "" !== attachment_id;
+                        }
+                        if (tmp2) {
+                          const ws = pendingEvents.ws;
+                          ws.sendAppIconAck(attachment_id, "failed");
+                        }
+                      });
+                      const nextPromise = require("ConjureActionCreators").setProjectIcon(projectId, icon).then((ok) => {
+                        let str = "failed";
+                        if (ok.ok) {
+                          str = "applied";
+                        }
+                        let tmp2 = null != attachment_id;
+                        if (tmp2) {
+                          tmp2 = "" !== attachment_id;
+                        }
+                        if (tmp2) {
+                          const ws = pendingEvents.ws;
+                          ws.sendAppIconAck(attachment_id, str);
+                        }
+                      });
+                    }
+                  }
+                } else if ("turn_result" === type.kind) {
+                  let result = require("ConjureAnalytics").trackConjureTurnResulted(projectId, type);
+                  if ("deployed" === type.result) {
+                    const obj125 = { type: "CONJURE_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: { kind: "plan_implemented" } };
+                    attachment_id(584).dispatch(obj125);
+                    const obj34 = attachment_id(584);
+                  }
+                  const obj33 = require("ConjureAnalytics");
+                  const tmp86 = attachment_id;
+                  const obj126 = { type: "CONJURE_CHAT_TURN_FINISHED", projectId, turnId: null, summary: null };
+                  ({ turn_id: obj37.turnId, summary: obj37.summary } = type);
+                  attachment_id(584).dispatch(obj126);
+                  let deleteResult1 = set1.delete(projectId);
+                  if (deleteResult1) {
+                    deleteResult1 = "cancelled" === type.result;
+                  }
+                  if (deleteResult1) {
+                    const obj128 = { type: "CONJURE_CHAT_INTERRUPTED", projectId };
+                    tmp86(584).dispatch(obj128);
+                    const tmp86Result = tmp86(584);
+                  }
+                  const obj36 = attachment_id(584);
+                } else {
+                  const obj129 = { type: "CONJURE_CHAT_STEP_APPEND", projectId, turnId: type.turn_id, step: type };
+                  attachment_id(584).dispatch(obj129);
+                  let tmp74 = "build_error" !== type.kind;
+                  if (tmp74) {
+                    tmp74 = "healthcheck_failed" !== type.kind;
+                  }
+                  if (tmp74) {
+                    tmp74 = "error" !== type.kind;
+                  }
+                  if (!tmp74) {
+                    const obj131 = {};
+                    const merged2 = Object.assign(obj3[type.kind]);
+                    obj131.message = type.message;
+                    let stderr_tail;
+                    if ("build_error" === type.kind) {
+                      stderr_tail = type.stderr_tail;
+                    }
+                    obj131.details = stderr_tail;
+                    require("ConjureAnalytics").trackConjureErrored(projectId, obj131);
+                    const obj31 = require("ConjureAnalytics");
+                  }
+                  if ("preview_ready" === type.kind) {
+                    const result1 = require("ConjureActionCreators").refreshPublishedProject(projectId, { isPreview: true });
+                    result1.catch(() => {
 
-        });
-        const obj101 = require("ConjureActionCreators");
-      }
-      const obj99 = attachment_id(584);
-    }
-  } else if ("capture_preview" === type.type) {
-    (function relayCaptureRequest() {
-      const self = this;
-      const apply = closure_1_33.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    })(projectId, pendingEvents, type).catch(() => {
-
-    });
-    const promise2 = (function relayCaptureRequest() {
-      const self = this;
-      const apply = closure_1_33.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    })(projectId, pendingEvents, type);
-  } else if ("control_preview" === type.type) {
-    (function relayControlRequest() {
-      const self = this;
-      const apply = closure_1_34.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    })(projectId, pendingEvents, type).catch(() => {
-
-    });
-    const promise = (function relayControlRequest() {
-      const self = this;
-      const apply = closure_1_34.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    })(projectId, pendingEvents, type);
-  } else if ("control_abort" === type.type) {
-    attachment_id(8737).abortPreviewControl(projectId);
-    const obj24 = attachment_id(8737);
-  } else {
-    if ("control_claim" !== type.type) {
-      if ("capture_claim" !== type.type) {
-        if ("preview_operation" === type.type) {
-          if ("begin" === type.phase) {
-            const result2 = require("conjurePreviewControlLease").setConjureControlTuning(projectId, "tuning" === type.mode);
-            const obj21 = require("conjurePreviewControlLease");
-            const result3 = attachment_id(8737).beginPreviewOperation(projectId);
-            const obj22 = attachment_id(8737);
-          } else {
-            const result4 = require("conjurePreviewControlLease").setConjureControlTuning(projectId, false);
-            const obj19 = require("conjurePreviewControlLease");
-            attachment_id(8737).endPreviewOperation(projectId);
-            const obj20 = attachment_id(8737);
-          }
-        } else if ("live_reload" === type.type) {
-          const obj189 = { type: "CONJURE_LIVE_RELOAD_SET", projectId, enabled: null, error: null, phase: null, step: null };
-          ({ enabled: obj18.enabled, error } = type);
-          if (error == null) {
-            error = null;
-          }
-          obj189.error = error;
-          let phase1 = type.phase;
-          if (phase1 == null) {
-            phase1 = null;
-          }
-          obj189.phase = phase1;
-          let step = type.step;
-          if (step == null) {
-            step = null;
-          }
-          obj189.step = step;
-          attachment_id(584).dispatch(obj189);
-          const obj17 = attachment_id(584);
-        } else if ("model_settings" === type.type) {
-          const obj190 = { type: "CONJURE_MODEL_SETTINGS_SET", projectId, settings: null, tierSettings: null, tiers: null, choices: null };
-          ({ settings: obj16.settings, tier_settings } = type);
-          if (tier_settings == null) {
-            tier_settings = null;
-          }
-          obj190.tierSettings = tier_settings;
-          let tiers = type.tiers;
-          if (tiers == null) {
-            tiers = null;
-          }
-          obj190.tiers = tiers;
-          obj190.choices = type.choices;
-          attachment_id(584).dispatch(obj190);
-          const obj15 = attachment_id(584);
-        } else if ("debug_status" === type.type) {
-          const obj191 = { type: "CONJURE_DEBUG_STATUS_SET", projectId, status: null, failed: null };
-          let status = type.status;
-          if (status == null) {
-            status = null;
-          }
-          obj191.status = status;
-          obj191.failed = true === type.failed || null == type.status;
-          attachment_id(584).dispatch(obj191);
-          const obj13 = attachment_id(584);
-        } else if ("settings" === type.type) {
-          const obj192 = { type: "CONJURE_SETTINGS_SET", projectId, settings: null };
-          ({ schema: obj12.schema, values: obj12.values, secrets: obj12.secrets, connections: obj12.connections } = type);
-          obj192.settings = { schema: null, values: null, secrets: null, connections: null };
-          attachment_id(584).dispatch(obj192);
-          const obj10 = attachment_id(584);
-          const obj193 = { schema: null, values: null, secrets: null, connections: null };
-        } else if ("debug_model_call" === type.type) {
-          const obj194 = { type: "CONJURE_MODEL_CALL_APPEND", projectId, modelCall: type };
-          attachment_id(584).dispatch(obj194);
-          if ("started" !== type.status) {
-            const obj195 = { type: "CONJURE_DEBUG_MODEL_CALL", projectId, id: type.id, role: null, model: null, stopReason: null, durationMs: null, inputTokens: null, outputTokens: null, cacheReadTokens: null, cacheWriteTokens: null, observedAt: null };
-            let str10 = "compaction";
-            if ("compaction" !== type.agent) {
-              let str8 = "orchestrator";
-              if ("subagent" === type.agent) {
-                str8 = "codegen";
-              }
-              str10 = str8;
-            }
-            obj195.role = str10;
-            obj195.model = type.model;
-            if ("error" === type.status) {
-              let str12 = type.stop_reason;
-              if (str12 == null) {
-                str12 = "error";
-              }
-              let stop_reason = str12;
-            } else {
-              stop_reason = type.stop_reason;
-            }
-            obj195.stopReason = stop_reason;
-            ({ duration_ms: obj98.durationMs, input_tokens } = type);
-            if (input_tokens == null) {
-              input_tokens = 0;
-            }
-            obj195.inputTokens = input_tokens;
-            let num2 = type.output_tokens;
-            if (num2 == null) {
-              num2 = 0;
-            }
-            obj195.outputTokens = num2;
-            let num3 = type.cache_read_tokens;
-            if (num3 == null) {
-              num3 = 0;
-            }
-            obj195.cacheReadTokens = num3;
-            let num4 = type.cache_write_tokens;
-            if (num4 == null) {
-              num4 = 0;
-            }
-            obj195.cacheWriteTokens = num4;
-            const _Date = Date;
-            const date3 = new Date();
-            obj195.observedAt = date3.toISOString();
-            tmp14(584).dispatch(obj195);
-            const tmp14Result = tmp14(584);
-          }
-          obj7 = attachment_id(584);
-          tmp14 = attachment_id;
-        } else if ("debug_tool_call" === type.type) {
-          const obj196 = { type: "CONJURE_TOOL_CALL_APPEND", projectId, toolCall: type };
-          attachment_id(584).dispatch(obj196);
-          const obj5 = attachment_id(584);
-        } else if ("request_upstream_ticket" === type.type) {
-          (function mintUpstreamTicket() {
-            const self = this;
-            const apply = closure_1_29.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          })(pendingEvents, type.id, type.project_id);
-        } else if ("debug_history_state" === type.type) {
-          obj3 = attachment_id(584);
-          const obj197 = { type: "CONJURE_HISTORY_LOAD_SETTLE", projectId, scope: null, status: null, count: null, truncated: null };
-          ({ scope: obj4.scope, status: obj4.status, count: obj4.count } = type);
-          obj197.truncated = true === type.truncated;
-          obj3.dispatch(obj197);
-        } else {
-          const obj198 = { type: "CONJURE_LOG_APPEND", projectId, log: type };
-          attachment_id(584).dispatch(obj198);
-          (function reportRuntimeError(projectId, historical) {
-            if (true !== historical.historical) {
-              if ("error" === historical.level) {
-                let tmp2;
-                if (null != historical.source) {
-                  tmp2 = obj7[historical.source];
+                    });
+                    const obj111 = require("ConjureActionCreators");
+                  }
+                  const obj109 = attachment_id(584);
                 }
-                if (null != tmp2) {
-                  value = map6.get(projectId);
-                  if (null == value) {
-                    const _Set = Set;
-                    set = new Set();
-                    const result = map6.set(projectId, set);
-                    value = set;
+              } else if ("capture_preview" === type.type) {
+                (function relayCaptureRequest() {
+                  const self = this;
+                  const apply = closure_1_33.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
                   }
-                  const replaced = historical.message.replace(/\d+/g, "#");
-                  const _HermesInternal = HermesInternal;
-                  const combined = "" + historical.source + ":" + replaced.slice(0, 200);
-                  let hasItem = value.has(combined);
-                  if (!hasItem) {
-                    hasItem = value.size >= 10;
+                  return applyArgumentsResult;
+                })(projectId, pendingEvents, type).catch(() => {
+
+                });
+                const promise2 = (function relayCaptureRequest() {
+                  const self = this;
+                  const apply = closure_1_33.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
                   }
-                  if (!hasItem) {
-                    value.add(combined);
-                    ({ location: obj3.location, code: obj3.code } = tmp2);
-                    ({ message: obj3.message, source: obj3.details } = historical);
-                    pendingEvents(8736).trackConjureErrored(projectId, { location: null, code: null, message: null, details: null });
-                    const obj = { location: null, code: null, message: null, details: null };
-                    obj2 = pendingEvents(8736);
+                  return applyArgumentsResult;
+                })(projectId, pendingEvents, type);
+              } else if ("control_preview" === type.type) {
+                (function relayControlRequest() {
+                  const self = this;
+                  const apply = closure_1_34.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(projectId, pendingEvents, type).catch(() => {
+
+                });
+                const promise = (function relayControlRequest() {
+                  const self = this;
+                  const apply = closure_1_34.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(projectId, pendingEvents, type);
+              } else if ("control_abort" === type.type) {
+                attachment_id(12366).abortPreviewControl(projectId);
+                const obj30 = attachment_id(12366);
+              } else {
+                if ("control_claim" !== type.type) {
+                  if ("capture_claim" !== type.type) {
+                    if ("preview_operation" === type.type) {
+                      if ("begin" === type.phase) {
+                        const result2 = require("conjurePreviewControlLease").setConjureControlTuning(projectId, "tuning" === type.mode);
+                        const obj27 = require("conjurePreviewControlLease");
+                        const result3 = attachment_id(12366).beginPreviewOperation(projectId);
+                        const obj28 = attachment_id(12366);
+                      } else {
+                        const result4 = require("conjurePreviewControlLease").setConjureControlTuning(projectId, false);
+                        const obj25 = require("conjurePreviewControlLease");
+                        attachment_id(12366).endPreviewOperation(projectId);
+                        const obj26 = attachment_id(12366);
+                      }
+                    } else if ("browser_sessions" === type.type) {
+                      const obj132 = { type: "CONJURE_BROWSER_SESSIONS_SET", projectId, sessions: type.sessions };
+                      attachment_id(584).dispatch(obj132);
+                      const obj23 = attachment_id(584);
+                    } else if ("live_reload" === type.type) {
+                      const obj134 = { type: "CONJURE_LIVE_RELOAD_SET", projectId, enabled: null, error: null, phase: null, step: null };
+                      ({ enabled: obj22.enabled, error } = type);
+                      if (error == null) {
+                        error = null;
+                      }
+                      obj134.error = error;
+                      let phase1 = type.phase;
+                      if (phase1 == null) {
+                        phase1 = null;
+                      }
+                      obj134.phase = phase1;
+                      let step = type.step;
+                      if (step == null) {
+                        step = null;
+                      }
+                      obj134.step = step;
+                      attachment_id(584).dispatch(obj134);
+                      const obj21 = attachment_id(584);
+                    } else if ("model_settings" === type.type) {
+                      const obj204 = { type: "CONJURE_MODEL_SETTINGS_SET", projectId, settings: null, tierSettings: null, tiers: null, choices: null };
+                      ({ settings: obj20.settings, tier_settings } = type);
+                      if (tier_settings == null) {
+                        tier_settings = null;
+                      }
+                      obj204.tierSettings = tier_settings;
+                      let tiers = type.tiers;
+                      if (tiers == null) {
+                        tiers = null;
+                      }
+                      obj204.tiers = tiers;
+                      obj204.choices = type.choices;
+                      attachment_id(584).dispatch(obj204);
+                      const obj19 = attachment_id(584);
+                    } else if ("debug_status" === type.type) {
+                      const obj205 = { type: "CONJURE_DEBUG_STATUS_SET", projectId, status: null, failed: null };
+                      let status = type.status;
+                      if (status == null) {
+                        status = null;
+                      }
+                      obj205.status = status;
+                      obj205.failed = true === type.failed || null == type.status;
+                      attachment_id(584).dispatch(obj205);
+                      const obj17 = attachment_id(584);
+                    } else if ("settings" === type.type) {
+                      const obj206 = { type: "CONJURE_SETTINGS_SET", projectId, settings: null };
+                      ({ schema: obj16.schema, values: obj16.values, secrets: obj16.secrets, connections: obj16.connections } = type);
+                      obj206.settings = { schema: null, values: null, secrets: null, connections: null };
+                      attachment_id(584).dispatch(obj206);
+                      const obj14 = attachment_id(584);
+                      const obj207 = { schema: null, values: null, secrets: null, connections: null };
+                    } else if ("debug_model_call" === type.type) {
+                      const obj208 = { type: "CONJURE_MODEL_CALL_APPEND", projectId, modelCall: type };
+                      attachment_id(584).dispatch(obj208);
+                      if ("started" !== type.status) {
+                        const obj209 = { type: "CONJURE_DEBUG_MODEL_CALL", projectId, id: type.id, role: null, model: null, stopReason: null, durationMs: null, inputTokens: null, outputTokens: null, cacheReadTokens: null, cacheWriteTokens: null, observedAt: null };
+                        let str10 = "compaction";
+                        if ("compaction" !== type.agent) {
+                          let str8 = "orchestrator";
+                          if ("subagent" === type.agent) {
+                            str8 = "codegen";
+                          }
+                          str10 = str8;
+                        }
+                        obj209.role = str10;
+                        obj209.model = type.model;
+                        if ("error" === type.status) {
+                          let str12 = type.stop_reason;
+                          if (str12 == null) {
+                            str12 = "error";
+                          }
+                          let stop_reason = str12;
+                        } else {
+                          stop_reason = type.stop_reason;
+                        }
+                        obj209.stopReason = stop_reason;
+                        ({ duration_ms: obj108.durationMs, input_tokens } = type);
+                        if (input_tokens == null) {
+                          input_tokens = 0;
+                        }
+                        obj209.inputTokens = input_tokens;
+                        let num2 = type.output_tokens;
+                        if (num2 == null) {
+                          num2 = 0;
+                        }
+                        obj209.outputTokens = num2;
+                        let num3 = type.cache_read_tokens;
+                        if (num3 == null) {
+                          num3 = 0;
+                        }
+                        obj209.cacheReadTokens = num3;
+                        let num4 = type.cache_write_tokens;
+                        if (num4 == null) {
+                          num4 = 0;
+                        }
+                        obj209.cacheWriteTokens = num4;
+                        const _Date = Date;
+                        const date3 = new Date();
+                        obj209.observedAt = date3.toISOString();
+                        tmp23(584).dispatch(obj209);
+                        const tmp23Result = tmp23(584);
+                      }
+                      const obj11 = attachment_id(584);
+                      tmp23 = attachment_id;
+                    } else if ("timing_trace" === type.type) {
+                      const obj210 = { type: "CONJURE_DEBUG_TIMING_TRACE", projectId, trace: type.trace };
+                      attachment_id(584).dispatch(obj210);
+                      const obj9 = attachment_id(584);
+                    } else if ("debug_tool_call" === type.type) {
+                      const obj211 = { type: "CONJURE_TOOL_CALL_APPEND", projectId, toolCall: type };
+                      attachment_id(584).dispatch(obj211);
+                      obj7 = attachment_id(584);
+                    } else if ("request_upstream_ticket" === type.type) {
+                      (function mintUpstreamTicket() {
+                        const self = this;
+                        const apply = closure_1_29.apply;
+                        if (typeof apply === "unknown") {
+                          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                        } else {
+                          applyArgumentsResult = apply(self, arguments);
+                        }
+                        return applyArgumentsResult;
+                      })(pendingEvents, type.id, type.project_id);
+                    } else if ("debug_history_state" === type.type) {
+                      const obj212 = { type: "CONJURE_HISTORY_LOAD_SETTLE", projectId, scope: null, status: null, count: null, truncated: null };
+                      ({ scope: obj6.scope, status: obj6.status, count: obj6.count } = type);
+                      obj212.truncated = true === type.truncated;
+                      attachment_id(584).dispatch(obj212);
+                      const obj5 = attachment_id(584);
+                    } else {
+                      obj3 = attachment_id(584);
+                      const obj213 = { type: "CONJURE_LOG_APPEND", projectId, log: type };
+                      obj3.dispatch(obj213);
+                      (function reportRuntimeError(projectId, historical) {
+                        if (true !== historical.historical) {
+                          if ("error" === historical.level) {
+                            let tmp2;
+                            if (null != historical.source) {
+                              tmp2 = obj7[historical.source];
+                            }
+                            if (null != tmp2) {
+                              value = map6.get(projectId);
+                              if (null == value) {
+                                const _Set = Set;
+                                set = new Set();
+                                const result = map6.set(projectId, set);
+                                value = set;
+                              }
+                              const replaced = historical.message.replace(/\d+/g, "#");
+                              const _HermesInternal = HermesInternal;
+                              const combined = "" + historical.source + ":" + replaced.slice(0, 200);
+                              let hasItem = value.has(combined);
+                              if (!hasItem) {
+                                hasItem = value.size >= 10;
+                              }
+                              if (!hasItem) {
+                                value.add(combined);
+                                ({ location: obj3.location, code: obj3.code } = tmp2);
+                                ({ message: obj3.message, source: obj3.details } = historical);
+                                pendingEvents(12365).trackConjureErrored(projectId, { location: null, code: null, message: null, details: null });
+                                const obj = { location: null, code: null, message: null, details: null };
+                                obj2 = pendingEvents(12365);
+                              }
+                            }
+                          }
+                        }
+                      })(projectId, type);
+                    }
                   }
                 }
+                let upload_token;
+                if ("capture_claim" === type.type) {
+                  upload_token = type.upload_token;
+                }
+                const conjurePreviewClaim = require("conjurePreviewClaims").resolveConjurePreviewClaim(projectId, type.id, upload_token);
+                const obj29 = require("conjurePreviewClaims");
               }
             }
-          })(projectId, type);
-          let obj = attachment_id(584);
+          }
         }
       }
+      const obj214 = { type: "CONJURE_CHAT_PROJECT_EVENT", projectId, event: type };
+      attachment_id(584).dispatch(obj214);
+      if ("app_channel_deleted" !== type.type) {
+        const result5 = require("ConjureActionCreators").refreshConjureInstallState(projectId);
+        const obj135 = require("ConjureActionCreators");
+      }
+      const obj96 = attachment_id(584);
     }
-    let upload_token;
-    if ("capture_claim" === type.type) {
-      upload_token = type.upload_token;
+  } else if (type.requested === map7.get(projectId)) {
+    map7.delete(projectId);
+    if (true !== type.failed) {
+      const obj215 = { type: "CONJURE_CHAT_HISTORY_PREPEND", projectId, entries: null, cursor: null };
+      let messages1 = type.messages;
+      if (messages1 == null) {
+        messages1 = [];
+      }
+      obj215.entries = messages1.slice();
+      let tmp6 = null;
+      if (true === type.has_more) {
+        let cursor1 = type.cursor;
+        if (cursor1 == null) {
+          cursor1 = null;
+        }
+        tmp6 = cursor1;
+      }
+      obj215.cursor = tmp6;
+      attachment_id(584).dispatch(obj215);
+      let obj = attachment_id(584);
     }
-    const conjurePreviewClaim = require("conjurePreviewClaims").resolveConjurePreviewClaim(projectId, type.id, upload_token);
-    const obj23 = require("conjurePreviewClaims");
   }
 }
 let closure_36 = async function _openWithFreshTicket(arg0, arg1) {
@@ -1205,16 +1226,16 @@ let closure_36 = async function _openWithFreshTicket(arg0, arg1) {
               closure_130_1.pendingModelSettings = null;
               closure_131_9(closure_130_1, "Connection failed before the publish result arrived");
               closure_131_10(closure_130_1, "Connection failed before the draft arrived");
-              obj7 = { location: "connection", code: closure_131_0(closure_131_2[7]).ConjureErrorCodes.WS_OPEN_FAILED, message: null };
+              obj7 = { location: "connection", code: closure_131_0(closure_131_2[8]).ConjureErrorCodes.WS_OPEN_FAILED, message: null };
               let _Error2 = Error;
               let str2 = "ws open failed";
               if (closure_130_5 instanceof Error) {
                 str2 = closure_130_5.message;
               }
               obj7.message = str2;
-              closure_131_0(closure_131_2[7]).trackConjureErrored(closure_130_0, obj7);
+              closure_131_0(closure_131_2[8]).trackConjureErrored(closure_130_0, obj7);
               c7 = 3;
-              obj3 = closure_131_0(closure_131_2[7]);
+              obj3 = closure_131_0(closure_131_2[8]);
             }
           } else if (arg0 === 1) {
             c7 = 3;
@@ -1234,7 +1255,7 @@ let closure_36 = async function _openWithFreshTicket(arg0, arg1) {
                 url: baseUrl,
                 ticket,
                 onEvent(arg0) {
-                            return closure_2_35(projectId, ws, arg0);
+                            closure_2_35(projectId, ws, arg0);
                           },
                 onClose() {
                             const pendingPublish = ws.pendingPublish;
@@ -1255,28 +1276,28 @@ let closure_36 = async function _openWithFreshTicket(arg0, arg1) {
                               const error1 = new Error("Connection closed before the draft arrived");
                               pendingPatchNotesDraft.reject(error1);
                             }
-                            const result = projectId(dependencyMap[11]).clearConjurePreviewClaims(projectId);
+                            const result = projectId(dependencyMap[12]).clearConjurePreviewClaims(projectId);
                             if (ws.disposed) {
                               obj3 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "closed" };
-                              closure_1(dependencyMap[6]).dispatch(obj3);
-                              const obj6 = closure_1(dependencyMap[6]);
+                              closure_1(dependencyMap[7]).dispatch(obj3);
+                              const obj6 = closure_1(dependencyMap[7]);
                             } else if (ws.helloSeen) {
                               ws.reconnectPending = true;
                               const obj5 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "connecting" };
-                              closure_1(dependencyMap[6]).dispatch(obj5);
+                              closure_1(dependencyMap[7]).dispatch(obj5);
                               const backoff = ws.backoff;
                               backoff.fail(() => {
                                 closure_2_37(projectId);
                               });
-                              const obj4 = closure_1(dependencyMap[6]);
+                              const obj4 = closure_1(dependencyMap[7]);
                             } else {
                               obj7 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "closed" };
-                              closure_1(dependencyMap[6]).dispatch(obj7);
+                              closure_1(dependencyMap[7]).dispatch(obj7);
                               closure_2_27(projectId, ws, "Connection closed before the message was sent");
                               ws.pendingModelSettings = null;
-                              obj2 = closure_1(dependencyMap[6]);
+                              obj2 = closure_1(dependencyMap[7]);
                             }
-                            const obj = projectId(dependencyMap[11]);
+                            const obj = projectId(dependencyMap[12]);
                           },
                 onError() {
 
@@ -1371,24 +1392,6 @@ function teardown(projectId) {
   }
   return flag;
 }
-function loadOlderHistory(projectId) {
-  const tmp = getOlderHistoryCursor(projectId);
-  if (null == tmp) {
-    return false;
-  } else if (map7.get(projectId) === tmp) {
-    return true;
-  } else {
-    value = map.get(projectId);
-    let flag = null != value;
-    if (flag) {
-      const result = map7.set(projectId, tmp);
-      const ws = value.ws;
-      ws.sendLoadHistory(tmp);
-      flag = true;
-    }
-    return flag;
-  }
-}
 function getMediaTicket(projectId) {
   _require = projectId;
   value = map8.get(projectId);
@@ -1438,7 +1441,7 @@ function getMediaTicket(projectId) {
 }
 function fetchVersionHistory() {
   const self = this;
-  const apply = closure_45.apply;
+  const apply = closure_44.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1446,7 +1449,7 @@ function fetchVersionHistory() {
   }
   return applyArgumentsResult;
 }
-let closure_45 = async function _fetchVersionHistory() {
+let closure_44 = async function _fetchVersionHistory() {
   closure_1 = tmp2;
   await require("ConjureWorkerTickets").mintWorkerTicket(closure_0);
   closure_129_0 = value;
@@ -1486,11 +1489,11 @@ let closure_45 = async function _fetchVersionHistory() {
   value.publishedSha = publishedSha;
   return value;
 };
-let closure_46 = async function _fetchSourceHistory() {
+let closure_45 = async function _fetchSourceHistory() {
   await fetchVersionHistory(closure_0);
   return value.entries;
 };
-let closure_47 = async function _restoreSourceHistoryEntry(arg0) {
+let closure_46 = async function _restoreSourceHistoryEntry(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1611,11 +1614,11 @@ let closure_47 = async function _restoreSourceHistoryEntry(arg0) {
           throw error1;
         } else {
           if (true !== closure_130_8.live) {
-            const result = closure_131_0(closure_131_2[14]).refreshPublishedProject(closure_130_0, { isPreview: true });
+            const result = closure_131_0(closure_131_2[13]).refreshPublishedProject(closure_130_0, { isPreview: true });
             result.catch(() => {
 
             });
-            const obj = closure_131_0(closure_131_2[14]);
+            const obj = closure_131_0(closure_131_2[13]);
           }
           c5 = 3;
           const obj15 = { value: closure_130_8.entry, done: true };
@@ -1628,7 +1631,7 @@ let closure_47 = async function _restoreSourceHistoryEntry(arg0) {
     }
   }
 };
-let closure_48 = async function _fetchDatabaseRestorePoints(arg0) {
+let closure_47 = async function _fetchDatabaseRestorePoints(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1734,7 +1737,7 @@ let closure_48 = async function _fetchDatabaseRestorePoints(arg0) {
     }
   }
 };
-let closure_49 = async function _fetchDatabaseRestoreWindow() {
+let closure_48 = async function _fetchDatabaseRestoreWindow() {
   closure_2 = tmp2;
   closure_130_0 = closure_1;
   await require("ConjureWorkerTickets").mintWorkerTicket(closure_0);
@@ -1757,7 +1760,7 @@ let closure_49 = async function _fetchDatabaseRestoreWindow() {
   await closure_130_5.json();
   return value;
 };
-let closure_50 = async function _createDatabaseRestorePoint(arg0) {
+let closure_49 = async function _createDatabaseRestorePoint(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1873,7 +1876,7 @@ let closure_50 = async function _createDatabaseRestorePoint(arg0) {
 };
 function settleDatabaseRestore() {
   const self = this;
-  const apply = closure_52.apply;
+  const apply = closure_51.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1881,7 +1884,7 @@ function settleDatabaseRestore() {
   }
   return applyArgumentsResult;
 }
-let closure_52 = async function _settleDatabaseRestore(arg0, arg1) {
+let closure_51 = async function _settleDatabaseRestore(arg0, arg1) {
   closure_0 = arg0;
   let ok = arg1;
   c6 = 0;
@@ -1922,15 +1925,15 @@ let closure_52 = async function _settleDatabaseRestore(arg0, arg1) {
               let str = "";
               if (202 !== ok.status) {
                 closure_130_2 = str;
-                closure_130_3 = closure_131_0(closure_131_2[19]).databaseRestoreResultFromStatus(closure_130_1.status, closure_130_2);
+                closure_130_3 = closure_131_0(closure_131_2[20]).databaseRestoreResultFromStatus(closure_130_1.status, closure_130_2);
                 if (closure_130_3.ok) {
                   c5 = 1;
-                  const result = closure_131_0(closure_131_2[14]).reloadConjureProjectFrames(closure_130_0);
+                  const result = closure_131_0(closure_131_2[13]).reloadConjureProjectFrames(closure_130_0);
                   c5 = 0;
-                  const obj4 = closure_131_0(closure_131_2[14]);
+                  const obj4 = closure_131_0(closure_131_2[13]);
                 }
                 c7 = 3;
-                obj3 = closure_131_0(closure_131_2[19]);
+                obj3 = closure_131_0(closure_131_2[20]);
               }
             }
             c6 = 1;
@@ -1963,7 +1966,7 @@ let closure_52 = async function _settleDatabaseRestore(arg0, arg1) {
     }
   })();
 };
-let closure_53 = async function _restoreDatabaseToPoint() {
+let closure_52 = async function _restoreDatabaseToPoint() {
   closure_5 = tmp2;
   closure_133_0 = closure_0;
   closure_133_1 = closure_1;
@@ -1974,7 +1977,7 @@ let closure_53 = async function _restoreDatabaseToPoint() {
   const _URLSearchParams = URLSearchParams;
   const uRLSearchParams = new URLSearchParams({ ticket });
   closure_133_5 = uRLSearchParams;
-  _slicedToArray = closure_132_51;
+  _slicedToArray = closure_132_50;
   closure_2 = closure_133_0;
   const _fetch = fetch;
   const _encodeURIComponent = encodeURIComponent;
@@ -1982,7 +1985,7 @@ let closure_53 = async function _restoreDatabaseToPoint() {
   await fetch("" + baseUrl + "/agent/database/restore-points/" + encodeURIComponent(closure_133_1) + "/restore?" + closure_133_5, { method: "POST" });
   return _slicedToArray(closure_2, value);
 };
-let closure_54 = async function _restoreDatabaseToTimestamp() {
+let closure_53 = async function _restoreDatabaseToTimestamp() {
   closure_6 = tmp2;
   closure_134_0 = closure_0;
   closure_134_1 = closure_1;
@@ -1994,7 +1997,7 @@ let closure_54 = async function _restoreDatabaseToTimestamp() {
   const _URLSearchParams = URLSearchParams;
   const uRLSearchParams = new URLSearchParams({ ticket });
   closure_134_6 = uRLSearchParams;
-  asyncGeneratorStep = closure_133_51;
+  asyncGeneratorStep = closure_133_50;
   closure_3 = closure_134_0;
   const _fetch = fetch;
   const _HermesInternal = HermesInternal;
@@ -2016,7 +2019,7 @@ function attachmentEndpoint(arg0, arg1) {
   }
   return combined;
 }
-let closure_56 = async function _importAttachmentFromUrl(arg0) {
+let closure_55 = async function _importAttachmentFromUrl(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2074,7 +2077,7 @@ let closure_56 = async function _importAttachmentFromUrl(arg0) {
           const request = { method: "POST", headers: { "content-type": "application/json" }, body: null };
           const _JSON = JSON;
           const obj8 = { url: closure_130_0 };
-          const combined = "" + closure_131_55(baseUrl, "from-url") + "?" + uRLSearchParams;
+          const combined = "" + closure_131_54(baseUrl, "from-url") + "?" + uRLSearchParams;
           request.body = JSON.stringify(obj8);
           c4 = 2;
           c5 = 1;
@@ -2136,7 +2139,7 @@ let closure_56 = async function _importAttachmentFromUrl(arg0) {
 };
 function uploadAttachmentBytes() {
   const self = this;
-  const apply = closure_58.apply;
+  const apply = closure_57.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2144,7 +2147,7 @@ function uploadAttachmentBytes() {
   }
   return applyArgumentsResult;
 }
-let closure_58 = async function _uploadAttachmentBytes() {
+let closure_57 = async function _uploadAttachmentBytes() {
   closure_4 = tmp2;
   closure_132_0 = closure_1;
   closure_132_1 = closure_2;
@@ -2158,7 +2161,7 @@ let closure_58 = async function _uploadAttachmentBytes() {
   closure_132_6 = uRLSearchParams;
   const _HermesInternal2 = HermesInternal;
   let str3 = "application/octet-stream";
-  const combined = "" + closure_133_55(baseUrl) + "?" + closure_132_6;
+  const combined = "" + closure_133_54(baseUrl) + "?" + closure_132_6;
   if ("" !== closure_132_2) {
     str3 = closure_132_2;
   }
@@ -2174,7 +2177,7 @@ let closure_58 = async function _uploadAttachmentBytes() {
   await closure_132_7.json();
   return value;
 };
-let closure_60 = async function _exportProjectArchive() {
+let closure_59 = async function _exportProjectArchive() {
   closure_2 = tmp2;
   closure_130_0 = closure_1;
   await require("ConjureWorkerTickets").mintWorkerTicket(closure_0);
@@ -2189,12 +2192,12 @@ let closure_60 = async function _exportProjectArchive() {
   await fetch("" + baseUrl + "/agent/export?" + closure_130_4);
   closure_130_5 = value;
   if (!closure_130_5.ok) {
-    throw new closure_131_59(closure_130_5.status);
+    throw new closure_131_58(closure_130_5.status);
   }
   await closure_130_5.blob();
   return value;
 };
-let closure_62 = async function _remixProjectWorkspace(arg0) {
+let closure_61 = async function _remixProjectWorkspace(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2277,7 +2280,7 @@ let closure_62 = async function _remixProjectWorkspace(arg0) {
           c5 = 3;
           return { value: "IconComponent", done: null };
         } else {
-          throw new closure_131_61(closure_130_5.status);
+          throw new closure_131_60(closure_130_5.status);
         }
       }
     } catch (tmp13) {
@@ -2286,7 +2289,7 @@ let closure_62 = async function _remixProjectWorkspace(arg0) {
     }
   }
 };
-let closure_63 = async function _submitProjectSecrets(arg0) {
+let closure_62 = async function _submitProjectSecrets(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2375,7 +2378,7 @@ let closure_63 = async function _submitProjectSecrets(arg0) {
     }
   }
 };
-let closure_64 = async function _submitProjectSettings() {
+let closure_63 = async function _submitProjectSettings() {
   closure_2 = tmp2;
   closure_130_0 = closure_1;
   await require("ConjureWorkerTickets").mintWorkerTicket(closure_0);
@@ -2408,7 +2411,7 @@ let closure_64 = async function _submitProjectSettings() {
   value = { rebuildRequired: true === rebuild_required };
   return value;
 };
-let closure_65 = async function _fetchProjectMcpConnection(arg0) {
+let closure_64 = async function _fetchProjectMcpConnection(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2468,7 +2471,7 @@ let closure_65 = async function _fetchProjectMcpConnection(arg0) {
         } else {
           c4 = 2;
           c5 = 1;
-          const obj6 = { value: closure_131_0(closure_131_2[8]).mintWorkerTicket(closure_130_0), done: false };
+          const obj6 = { value: closure_131_0(closure_131_2[9]).mintWorkerTicket(closure_130_0), done: false };
           return obj6;
         }
       } else if (2 === tmp5) {
@@ -2545,7 +2548,7 @@ let closure_65 = async function _fetchProjectMcpConnection(arg0) {
     }
   }
 };
-let closure_66 = async function _requestExternalAuthorizeUrl(arg0) {
+let closure_65 = async function _requestExternalAuthorizeUrl(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2640,7 +2643,7 @@ let closure_66 = async function _requestExternalAuthorizeUrl(arg0) {
           } else {
             closure_132_6 = null;
             c6 = 2;
-            const tmp30 = closure_133_0(closure_133_2[20]);
+            const tmp30 = closure_133_0(closure_133_2[21]);
             closure_3 = tmp30;
             const externalAuthErrorCode = tmp30.externalAuthErrorCode;
             c7 = 6;
@@ -2652,10 +2655,10 @@ let closure_66 = async function _requestExternalAuthorizeUrl(arg0) {
       } else {
         if (4 === tmp10) {
           c6 = 0;
-          { type: "error", error: null }.error = closure_133_0(closure_133_2[20]).externalAuthErrorFor(closure_132_1.status, closure_132_6);
+          { type: "error", error: null }.error = closure_133_0(closure_133_2[21]).externalAuthErrorFor(closure_132_1.status, closure_132_6);
           c8 = 3;
           const obj13 = { type: "error", error: null };
-          obj7 = closure_133_0(closure_133_2[20]);
+          obj7 = closure_133_0(closure_133_2[21]);
         } else if (5 === tmp10) {
           c6 = 0;
           c8 = 3;
@@ -2712,7 +2715,7 @@ let closure_66 = async function _requestExternalAuthorizeUrl(arg0) {
     }
   }
 };
-let closure_67 = async function _deleteStagedAttachment(arg0) {
+let closure_66 = async function _deleteStagedAttachment(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2770,7 +2773,7 @@ let closure_67 = async function _deleteStagedAttachment(arg0) {
           const _HermesInternal2 = HermesInternal;
           c4 = 2;
           c5 = 1;
-          const obj8 = { value: fetch("" + closure_131_55(baseUrl, closure_130_0) + "?" + closure_130_4, { method: "DELETE", keepalive: true }), done: false };
+          const obj8 = { value: fetch("" + closure_131_54(baseUrl, closure_130_0) + "?" + closure_130_4, { method: "DELETE", keepalive: true }), done: false };
           return obj8;
         }
       } else if (arg0 === 1) {
@@ -2798,7 +2801,7 @@ let closure_67 = async function _deleteStagedAttachment(arg0) {
     }
   }
 };
-let closure_68 = async function _getPreviewScreenshotUrl() {
+let closure_67 = async function _getPreviewScreenshotUrl() {
   closure_2 = tmp2;
   closure_130_0 = closure_1;
   await getMediaTicket(closure_0);
@@ -2812,7 +2815,7 @@ let closure_68 = async function _getPreviewScreenshotUrl() {
   const _HermesInternal = HermesInternal;
   return "" + baseUrl + "/agent/screenshots/" + encodeURIComponent(closure_130_0) + "?" + closure_130_4;
 };
-let closure_69 = async function _getClientCaptureUploadUrl() {
+let closure_68 = async function _getClientCaptureUploadUrl() {
   closure_1 = tmp2;
   await getMediaTicket(closure_0);
   closure_129_0 = value;
@@ -2824,7 +2827,7 @@ let closure_69 = async function _getClientCaptureUploadUrl() {
 };
 function getAttachmentUrl(arg0, arg1) {
   const self = this;
-  const apply = closure_71.apply;
+  const apply = closure_70.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2832,7 +2835,7 @@ function getAttachmentUrl(arg0, arg1) {
   }
   return applyArgumentsResult;
 }
-let closure_71 = async function _getAttachmentUrl(arg0) {
+let closure_70 = async function _getAttachmentUrl(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2890,7 +2893,7 @@ let closure_71 = async function _getAttachmentUrl(arg0) {
         } else {
           c5 = 2;
           c6 = 1;
-          const obj6 = { value: closure_132_43(closure_131_0), done: false };
+          const obj6 = { value: closure_132_42(closure_131_0), done: false };
           return obj6;
         }
       } else if (arg0 === 1) {
@@ -2913,7 +2916,7 @@ let closure_71 = async function _getAttachmentUrl(arg0) {
         }
         const _HermesInternal = HermesInternal;
         c6 = 3;
-        const obj = { value: "" + closure_132_55(baseUrl, closure_131_1) + "?" + closure_131_6, done: true };
+        const obj = { value: "" + closure_132_54(baseUrl, closure_131_1) + "?" + closure_131_6, done: true };
         return obj;
       }
     } catch (tmp21) {
@@ -2922,7 +2925,7 @@ let closure_71 = async function _getAttachmentUrl(arg0) {
     }
   }
 };
-let closure_72 = async function _isAttachmentAvailable(arg0) {
+let closure_71 = async function _isAttachmentAvailable(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2967,7 +2970,7 @@ let closure_72 = async function _isAttachmentAvailable(arg0) {
             const self = this;
             const tmp = c4(function*() {
               const _fetch = fetch;
-              yield closure_1_70(closure_2_0, closure_2_1);
+              yield closure_1_69(closure_2_0, closure_2_1);
               return fetch(value, { method: "HEAD" });
             });
             closure_3 = tmp;
@@ -2996,7 +2999,7 @@ let closure_72 = async function _isAttachmentAvailable(arg0) {
           } else {
             closure_130_4 = value;
             if (401 === closure_130_4.status) {
-              closure_131_41.delete(closure_130_0);
+              closure_131_40.delete(closure_130_0);
               c4 = 2;
               c5 = 1;
               const obj6 = { value: closure_130_2(), done: false };
@@ -3043,8 +3046,9 @@ function closeAllConnections() {
   map8.clear();
   tmp2 = Array.from(map.keys())[Symbol.iterator]();
 }
-const getOlderHistoryCursor = fn(12924).getOlderHistoryCursor;
-const ConjureLiveReloadStore = fn(12926);
+const getOlderHistoryCursor = fn(13073).getOlderHistoryCursor;
+const ConjureBrowserSessionsStore = fn(13075);
+const ConjureLiveReloadStore = fn(13076);
 const map = new Map();
 let set = new Set(["activity", "automod", "widget", "bot"]);
 const map1 = new Map();
@@ -3052,20 +3056,20 @@ const map2 = new Map();
 const set1 = new Set();
 const map3 = new Map();
 const map4 = new Map();
-let value = { location: "connection", code: fn(8736).ConjureErrorCodes.SEND_FAILED };
-let obj2 = { location: "agent", code: fn(8736).ConjureErrorCodes.AGENT_ERROR };
+let value = { location: "connection", code: fn(12365).ConjureErrorCodes.SEND_FAILED };
+let obj2 = { location: "agent", code: fn(12365).ConjureErrorCodes.AGENT_ERROR };
 const map5 = new Map();
 let closure_26 = { steered: true, queued: true, restarting: true, answered: true };
-let obj3 = { build_error: { location: "build", code: fn(8736).ConjureErrorCodes.BUILD_FAILED }, healthcheck_failed: null, error: null };
-let obj4 = { location: "build", code: fn(8736).ConjureErrorCodes.BUILD_FAILED };
-obj3.healthcheck_failed = { location: "healthcheck", code: fn(8736).ConjureErrorCodes.HEALTHCHECK_FAILED };
-let obj5 = { location: "healthcheck", code: fn(8736).ConjureErrorCodes.HEALTHCHECK_FAILED };
-obj3.error = { location: "agent", code: fn(8736).ConjureErrorCodes.AGENT_ERROR };
+let obj3 = { build_error: { location: "build", code: fn(12365).ConjureErrorCodes.BUILD_FAILED }, healthcheck_failed: null, error: null };
+let obj4 = { location: "build", code: fn(12365).ConjureErrorCodes.BUILD_FAILED };
+obj3.healthcheck_failed = { location: "healthcheck", code: fn(12365).ConjureErrorCodes.HEALTHCHECK_FAILED };
+let obj5 = { location: "healthcheck", code: fn(12365).ConjureErrorCodes.HEALTHCHECK_FAILED };
+obj3.error = { location: "agent", code: fn(12365).ConjureErrorCodes.AGENT_ERROR };
 let obj7 = { web: null, preview: null };
-let obj6 = { location: "agent", code: fn(8736).ConjureErrorCodes.AGENT_ERROR };
-obj7.web = { location: "runtime_frame", code: fn(8736).ConjureErrorCodes.RUNTIME_FRAME_ERROR };
-let obj8 = { location: "runtime_frame", code: fn(8736).ConjureErrorCodes.RUNTIME_FRAME_ERROR };
-obj7.preview = { location: "runtime_worker", code: fn(8736).ConjureErrorCodes.RUNTIME_WORKER_ERROR };
+let obj6 = { location: "agent", code: fn(12365).ConjureErrorCodes.AGENT_ERROR };
+obj7.web = { location: "runtime_frame", code: fn(12365).ConjureErrorCodes.RUNTIME_FRAME_ERROR };
+let obj8 = { location: "runtime_frame", code: fn(12365).ConjureErrorCodes.RUNTIME_FRAME_ERROR };
+obj7.preview = { location: "runtime_worker", code: fn(12365).ConjureErrorCodes.RUNTIME_WORKER_ERROR };
 const map6 = new Map();
 const map7 = new Map();
 const map8 = new Map();
@@ -3126,11 +3130,11 @@ prototype3["getDeclaredConnections"] = function getDeclaredConnections(projectId
     connections = value.connections;
   }
   if (connections == null) {
-    connections = closure_74;
+    connections = closure_73;
   }
   return connections;
 };
-let closure_74 = [];
+let closure_73 = [];
 const conjureConnectionStore = new ConjureConnectionStore(DispatcherDefault, {
   CONJURE_CHAT_CONN_STATE: function handleChatConnState(arg0) {
     ({ projectId, connState } = arg0);
@@ -3462,6 +3466,13 @@ export const stageModelSettings = function stageModelSettings(arg0, pendingModel
     value.pendingModelSettings = pendingModelSettings;
   }
 };
+export const refreshBrowserSessions = function refreshBrowserSessions(arg0) {
+  value = map.get(arg0);
+  if (value != null) {
+    const ws = value.ws;
+    const result = ws.sendRefreshBrowserSessions();
+  }
+};
 export const requestDebugStatus = function requestDebugStatus(projectId) {
   DispatcherDefault.dispatch({ type: "CONJURE_DEBUG_STATUS_REQUESTED", projectId });
   value = map.get(projectId);
@@ -3476,8 +3487,8 @@ export const requestDebugStatus = function requestDebugStatus(projectId) {
     }
   } catch (err) {
     obj3 = { type: "CONJURE_DEBUG_STATUS_SET", projectId: tmp4, status: null, failed: true };
-    tmp3(tmp2[6]).dispatch(obj3);
-    const tmp3Result = tmp3(tmp2[6]);
+    tmp3(tmp2[7]).dispatch(obj3);
+    const tmp3Result = tmp3(tmp2[7]);
   }
 };
 export const forceCompaction = function forceCompaction(projectId) {
@@ -3500,8 +3511,8 @@ export const forceCompaction = function forceCompaction(projectId) {
     const _Date = Date;
     const date = new Date();
     obj3.observedAt = date.toISOString();
-    tmp3(tmp2[6]).dispatch(obj3);
-    const tmp3Result = tmp3(tmp2[6]);
+    tmp3(tmp2[7]).dispatch(obj3);
+    const tmp3Result = tmp3(tmp2[7]);
   }
 };
 export const sendLiveReload = function sendLiveReload(arg0, arg1) {
@@ -3534,14 +3545,34 @@ export const sendModelSettings = function sendModelSettings(arg0, arg1) {
   } catch (err) {
   }
 };
-export { loadOlderHistory };
+export const loadOlderHistory = function loadOlderHistory(arg0) {
+  const tmp = getOlderHistoryCursor(arg0);
+  if (null == tmp) {
+    return false;
+  } else if (map7.get(arg0) === tmp) {
+    return true;
+  } else {
+    value = map.get(arg0);
+    let flag = null != value;
+    if (flag) {
+      flag = "open" === map1.get(arg0);
+    }
+    if (flag) {
+      const result = map7.set(arg0, tmp);
+      const ws = value.ws;
+      ws.sendLoadHistory(tmp);
+      flag = true;
+    }
+    return flag;
+  }
+};
 export const resetHistoryPaging = function resetHistoryPaging(arg0) {
   map7.delete(arg0);
 };
 export { fetchVersionHistory };
 export const fetchSourceHistory = function fetchSourceHistory() {
   const self = this;
-  const apply = closure_46.apply;
+  const apply = closure_45.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3551,7 +3582,7 @@ export const fetchSourceHistory = function fetchSourceHistory() {
 };
 export const restoreSourceHistoryEntry = function restoreSourceHistoryEntry() {
   const self = this;
-  const apply = closure_47.apply;
+  const apply = closure_46.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3561,7 +3592,7 @@ export const restoreSourceHistoryEntry = function restoreSourceHistoryEntry() {
 };
 export const fetchDatabaseRestorePoints = function fetchDatabaseRestorePoints() {
   const self = this;
-  const apply = closure_48.apply;
+  const apply = closure_47.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3571,7 +3602,7 @@ export const fetchDatabaseRestorePoints = function fetchDatabaseRestorePoints() 
 };
 export const fetchDatabaseRestoreWindow = function fetchDatabaseRestoreWindow() {
   const self = this;
-  const apply = closure_49.apply;
+  const apply = closure_48.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3581,7 +3612,7 @@ export const fetchDatabaseRestoreWindow = function fetchDatabaseRestoreWindow() 
 };
 export const createDatabaseRestorePoint = function createDatabaseRestorePoint() {
   const self = this;
-  const apply = closure_50.apply;
+  const apply = closure_49.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3591,7 +3622,7 @@ export const createDatabaseRestorePoint = function createDatabaseRestorePoint() 
 };
 export const restoreDatabaseToPoint = function restoreDatabaseToPoint() {
   const self = this;
-  const apply = closure_53.apply;
+  const apply = closure_52.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3601,7 +3632,7 @@ export const restoreDatabaseToPoint = function restoreDatabaseToPoint() {
 };
 export const restoreDatabaseToTimestamp = function restoreDatabaseToTimestamp() {
   const self = this;
-  const apply = closure_54.apply;
+  const apply = closure_53.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3614,7 +3645,7 @@ export const uploadAttachment = function uploadAttachment(arg0, name) {
 };
 export const importAttachmentFromUrl = function importAttachmentFromUrl() {
   const self = this;
-  const apply = closure_56.apply;
+  const apply = closure_55.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3626,7 +3657,7 @@ export { uploadAttachmentBytes };
 export const ConjureExportError = prototype;
 export const exportProjectArchive = function exportProjectArchive() {
   const self = this;
-  const apply = closure_60.apply;
+  const apply = closure_59.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3637,7 +3668,7 @@ export const exportProjectArchive = function exportProjectArchive() {
 export const ConjureRemixError = prototype2;
 export const remixProjectWorkspace = function remixProjectWorkspace() {
   const self = this;
-  const apply = closure_62.apply;
+  const apply = closure_61.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3647,7 +3678,7 @@ export const remixProjectWorkspace = function remixProjectWorkspace() {
 };
 export const submitProjectSecrets = function submitProjectSecrets() {
   const self = this;
-  const apply = closure_63.apply;
+  const apply = closure_62.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3657,7 +3688,7 @@ export const submitProjectSecrets = function submitProjectSecrets() {
 };
 export const submitProjectSettings = function submitProjectSettings() {
   const self = this;
-  const apply = closure_64.apply;
+  const apply = closure_63.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3698,7 +3729,7 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
             closure_128_3 = undefined;
             c1 = 1;
             c2 = 1;
-            const obj5 = { value: tmp2(c2[8]).mintWorkerTicket(_require), done: false };
+            const obj5 = { value: tmp2(c2[9]).mintWorkerTicket(_require), done: false };
             return obj5;
           }
         } else if (1 === tmp5) {
@@ -3760,7 +3791,7 @@ export const formatMcpConnectionExpiry = function formatMcpConnectionExpiry(conn
 };
 export const fetchProjectMcpConnection = function fetchProjectMcpConnection(merged) {
   const self = this;
-  const apply = closure_65.apply;
+  const apply = closure_64.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3770,7 +3801,7 @@ export const fetchProjectMcpConnection = function fetchProjectMcpConnection(merg
 };
 export const requestExternalAuthorizeUrl = function requestExternalAuthorizeUrl(arg0, arg1) {
   const self = this;
-  const apply = closure_66.apply;
+  const apply = closure_65.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3780,7 +3811,7 @@ export const requestExternalAuthorizeUrl = function requestExternalAuthorizeUrl(
 };
 export const deleteStagedAttachment = function deleteStagedAttachment(arg0, arg1) {
   const self = this;
-  const apply = closure_67.apply;
+  const apply = closure_66.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3790,7 +3821,7 @@ export const deleteStagedAttachment = function deleteStagedAttachment(arg0, arg1
 };
 export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl(arg0, arg1) {
   const self = this;
-  const apply = closure_68.apply;
+  const apply = closure_67.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3801,7 +3832,7 @@ export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl(arg0, ar
 export { getAttachmentUrl };
 export const isAttachmentAvailable = function isAttachmentAvailable(arg0, arg1) {
   const self = this;
-  const apply = closure_72.apply;
+  const apply = closure_71.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/useTextChannelPressEvents.tsx
 import transitionToChannel from "../../../../routing/transitionToChannel.tsx";
 import ChannelActionCreatorsDefault from "../../../../../actions/ChannelActionCreators.tsx";
-import showLongPressForumPostActionSheetDefault from "../../../../action_sheet/native/components/showLongPressForumPostActionSheet.tsx";
 import openChannelLongPressActionSheet from "../../../../channel/native/openChannelLongPressActionSheet.tsx";
+import showLongPressForumPostActionSheetDefault from "../../../../action_sheet/native/components/showLongPressForumPostActionSheet.tsx";
 import showThreadLongPressActionSheetDefault from "../../../../threads/native/components/showThreadLongPressActionSheet.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting(
 );
 
 export const useTextChannelPressEvents = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild_id, navigationReplace) => {
+  ? function useTextChannelPressEvents(guild_id, navigationReplace) {
       _require = guild_id;
       const cResult = require("c").c(9);
       if (cResult[0] === guild_id.guild_id) {
@@ -70,7 +70,7 @@ export const useTextChannelPressEvents = ReactCompilerGating.isReactCompilerEnab
       cResult[3] = fn;
       tmp2 = fn;
     }
-  : (arg0, navigationReplace) => {
+  : function useTextChannelPressEvents(arg0, navigationReplace) {
       const user = arg0;
       let obj = { onPress: null, onLongPress: null, unstable_pressDelay: 32 };
       const items = [, ,];

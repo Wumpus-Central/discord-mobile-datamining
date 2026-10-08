@@ -224,7 +224,7 @@ let closure_11 = async function _buildOverride(arg0) {
   })();
 };
 const Image = fn(17).Image;
-const FrameOverrideConstants = fn(7886);
+const FrameOverrideConstants = fn(8306);
 ({ MANIFEST_NAME: hasOwnProperty, OVERRIDE_DIR: metroRequire } = FrameOverrideConstants);
 let closure_7 = new LoggerDefault("FramePreviewOverrideStore");
 let closure_8 = 0;
@@ -384,7 +384,7 @@ export const useFramePreviewOverrideStore = module_570.create((arg0) => {
       }
     }
   });
-  obj.loadFromDevice = function () {
+  obj.loadFromDevice = function loadFromDevice() {
     const self = this;
     const apply = closure_1.apply;
     if (typeof apply === "unknown") {

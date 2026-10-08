@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormCheckmark.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (selected) => {
+  ? function RowCheckmark(selected) {
       const cResult = c.c(2);
       selected = selected.selected;
       if (cResult[0] !== selected) {
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (selected) => {
+  : function RowCheckmark(selected) {
       let tmp = null;
       if (selected.selected) {
         const obj = { color: nativeDefault.unsafe_rawColors.BRAND_500 };

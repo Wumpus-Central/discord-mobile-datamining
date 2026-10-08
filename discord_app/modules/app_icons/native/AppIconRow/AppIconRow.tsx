@@ -37,7 +37,7 @@ const items = [
     return intl.string(util.t.RnMLvl);
   },
 ];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { icon: { borderRadius: nativeDefault.radii.md } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -46,7 +46,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/AppIconRow/AppIconRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onLongPress) => {
+  ? function AppIconRow(onLongPress) {
       const cResult = c.c(26);
       ({ icon, onSelect } = onLongPress);
       onLongPress = onLongPress.onLongPress;
@@ -212,7 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = id;
       cResult[2] = name;
     }
-  : (arg0) => {
+  : function AppIconRow(arg0) {
       ({ icon, onSelect: require, onLongPress: importDefault } = arg0);
       ({ hasNitro, currentAppIcon, showEasterEgg } = arg0);
       const id = icon.id;

@@ -5,7 +5,7 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ container: { paddingHorizontal: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function MemberRowPlaceholderItem() {
       const cResult = c.c(2);
       const tmp3 = closure_4();
       if (cResult[0] !== tmp3.container) {
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : () => {
+  : function MemberRowPlaceholderItem() {
       const tmp = closure_4();
       return jsx(FormRowPlaceholderDefault, { style: closure_4().container });
     };

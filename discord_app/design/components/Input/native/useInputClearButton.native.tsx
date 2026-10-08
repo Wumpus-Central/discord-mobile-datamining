@@ -10,7 +10,7 @@ const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (clearable, hasValue) => {
+  ? function useInputClearButtonConfig(clearable, hasValue) {
       const cResult = c.c(6);
       clearable = clearable.clearable;
       if (undefined !== clearable) {
@@ -59,7 +59,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (clearable, hasValue) => {
+  : function useInputClearButtonConfig(clearable, hasValue) {
       clearable = clearable.clearable;
       if (undefined !== clearable) {
         if (clearable) {
@@ -79,7 +79,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Input/native/useInputClearButton.native.tsx");
 
 export const useInputClearButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useInputClearButton(arg0, arg1) {
       const cResult = c.c(3);
       pressableProps = closure_4(arg0, arg1);
       if (null == pressableProps) {
@@ -96,7 +96,7 @@ export const useInputClearButton = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = tmp7;
       }
     }
-  : (arg0, arg1) => {
+  : function useInputClearButton(arg0, arg1) {
       const tmp = closure_4(arg0, arg1);
       let tmp2 = null;
       if (null != tmp) {

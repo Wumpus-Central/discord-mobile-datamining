@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const AILoaderConstants = fn(14228);
+const AILoaderConstants = fn(14052);
 ({
   AI_LOADER_CYCLE_MS: hasOwnProperty,
   AI_LOADER_GAP_EM: metroRequire,
@@ -33,7 +33,7 @@ trackStepAt.__workletHash = 2403964493846;
 trackStepAt.__initData = {
   code: "function trackStepAt_AILoaderNativeTsx1(progress){const{AI_LOADER_REST_FRACTION,AI_LOADER_TRACK_STEPS,AI_LOADER_STEP_FRACTION}=this.__closure;if(progress<AI_LOADER_REST_FRACTION)return AI_LOADER_TRACK_STEPS[0];const step=Math.floor((progress-AI_LOADER_REST_FRACTION)/AI_LOADER_STEP_FRACTION)+1;return AI_LOADER_TRACK_STEPS[Math.min(step,AI_LOADER_TRACK_STEPS.length-1)];}",
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_16 = createStyles.createStyles((width) => {
   const obj = {
     loader: { flexDirection: "row", gap: width * timestampProducer },
@@ -50,7 +50,7 @@ const __initData2 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (index) => {
+  ? function Slot(index) {
       const cResult = index(color[6]).c(16);
       index = index.index;
       const size = index.size;
@@ -262,14 +262,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       let obj2 = index(color[7]);
     }
-  : (index) => {
+  : function Slot(index) {
       index = index.index;
       const size = index.size;
       ({ color: dependencyMap, cycle } = index);
       const stagger = index.stagger;
       const tmp = closure_16(size);
       const glyph = tmp;
-      const sharedValue = index(4618).useSharedValue(0);
+      const sharedValue = index(4810).useSharedValue(0);
       let items = [cycle, index, sharedValue, stagger];
       const effect = cycle.useEffect(() => {
         const result = sharedValue.set(0);
@@ -288,7 +288,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         );
         return () => index(color[7]).cancelAnimation(sharedValue);
       }, items);
-      let obj = index(4618);
+      let obj = index(4810);
       class R {
         constructor() {
           value = closure_6.get();
@@ -330,10 +330,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       R.__workletHash = 6102802507505;
       R.__initData = __initData2;
       const obj4 = { style: tmp.slot, children: null };
-      const animatedStyle = index(4618).useAnimatedStyle(R);
-      let obj2 = index(4618);
+      const animatedStyle = index(4810).useAnimatedStyle(R);
+      let obj2 = index(4810);
       let obj3 = { trackStepAt, progress: sharedValue, size };
-      obj4.children = jsx(size(4618).View, {
+      obj4.children = jsx(size(4810).View, {
         style: animatedStyle,
         children: closure_7.map((children) =>
           jsx(
@@ -351,7 +351,7 @@ let result = size.fileFinishedImporting("design/visual-identities/ai/AILoader/AI
 
 export const AILoader = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function AILoader(arg0) {
         const cResult = num(576).c(16);
         ({ size, color, accessibilityLabel, style } = arg0);
         num = 16;
@@ -363,7 +363,7 @@ export const AILoader = noop.memo(
           str = color;
         }
         const tmp4 = closure_16(num);
-        const reducedMotion = num2.useContext(num(4595).AccessibilityPreferencesContext).reducedMotion;
+        const reducedMotion = num2.useContext(num(4787).AccessibilityPreferencesContext).reducedMotion;
         const tmp5 = reducedMotion.enabled ? closure_8 : closure_5;
         dependencyMap = tmp5;
         num2 = 0;
@@ -452,7 +452,7 @@ export const AILoader = noop.memo(
         tmp7 = items;
         const obj = num(576);
       }
-    : (size) => {
+    : function AILoader(size) {
         let num = size.size;
         if (num === undefined) {
           num = 16;
@@ -463,7 +463,7 @@ export const AILoader = noop.memo(
         }
         const accessibilityLabel = size.accessibilityLabel;
         let num2;
-        const reducedMotion = num2.useContext(num(4595).AccessibilityPreferencesContext).reducedMotion;
+        const reducedMotion = num2.useContext(num(4787).AccessibilityPreferencesContext).reducedMotion;
         dependencyMap = reducedMotion.enabled ? closure_8 : closure_5;
         num2 = 0;
         if (!reducedMotion.enabled) {

@@ -2,11 +2,12 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef4467 from "../../../_runtime/metro/04467__.js";
-import TrackedHTTPUtilsDefault from "../../utils/TrackedHTTPUtils.tsx";
+import _modDef4659 from "../../../_runtime/metro/04659__.js";
 import APIErrorDefault from "../../errors/APIError.tsx";
 import SharedCaptchaUtils from "../captcha/SharedCaptchaUtils.tsx";
+import TrackedHTTPUtilsDefault from "../../utils/TrackedHTTPUtils.tsx";
 import trackAgeGateSubmittedDefault from "experiment/trackAgeGateSubmitted.tsx";
+import formatDateForAPIDefault from "../date/formatDateForAPI.tsx";
 import AgeGateActionCreatorsAll from "../age_gate/AgeGateActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -214,7 +215,7 @@ function registerFull(giftCodeSKUId) {
     let obj2 = { source: constants5.REGISTER, action: constants4.AGE_GATE_SUBMITTED };
     AnalyticsUtilsDefault.track(constants.AGE_GATE_ACTION, obj2);
     const tmp4Result = AnalyticsUtilsDefault;
-    const diffResult = _modDef4467().diff(birthday, "years");
+    const diffResult = _modDef4659().diff(birthday, "years");
     if (diffResult >= 13) {
       if (diffResult < 13) {
         let str3 = "23+";
@@ -232,7 +233,7 @@ function registerFull(giftCodeSKUId) {
       AnalyticsUtilsDefault.track(constants.USER_AGE_SUBMITTED, obj3);
       const tmp4Result3 = AnalyticsUtilsDefault;
     }
-    const obj11 = _modDef4467();
+    const obj11 = _modDef4659();
   }
   const request = { url: constants3.REGISTER, body: null, trackedActionData: null, rejectWithError: false };
   const user = {
@@ -249,11 +250,11 @@ function registerFull(giftCodeSKUId) {
     guild_template_code: null,
     promotional_email_opt_in: null,
   };
-  let formatResult;
-  if (birthday != null) {
-    formatResult = birthday.format("YYYY-MM-DD");
+  let tmp8;
+  if (null != birthday) {
+    tmp8 = formatDateForAPIDefault(birthday);
   }
-  user.date_of_birth = formatResult;
+  user.date_of_birth = tmp8;
   user.gift_code_sku_id = giftCodeSKUId;
   user.guild_template_code = guildTemplateCode;
   let checked;
@@ -330,7 +331,7 @@ function registerFull(giftCodeSKUId) {
     },
   );
 }
-const ParentalConsentStore = fn(15918);
+const ParentalConsentStore = fn(16177);
 const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, AnalyticsSections: closure_7, Endpoints: closure_8 } = Constants);
 const AgeGateConstants = fn(1110);

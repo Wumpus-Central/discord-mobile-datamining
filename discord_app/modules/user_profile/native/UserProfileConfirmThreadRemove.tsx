@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileConfirmThreadRemove.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function UserProfileConfirmThreadRemove(user) {
       const cResult = c.c(15);
       ({ isForumPost, onConfirm } = user);
       const name = UserUtilsDefault.useName(user.user);
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = t2;
       }
     }
-  : (isForumPost) => {
+  : function UserProfileConfirmThreadRemove(isForumPost) {
       isForumPost = isForumPost.isForumPost;
       ({ user, onConfirm } = isForumPost);
       const name = UserUtilsDefault.useName(user);

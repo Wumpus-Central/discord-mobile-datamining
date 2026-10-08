@@ -1,21 +1,21 @@
 // discord_app/modules/embedded_apps/native/utils/createWebViewController.tsx
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
-import WebViewPostMessageTransportDefault from "../../../rpc/native/server/transports/WebViewPostMessageTransport.tsx";
 import createWebViewHtmlFile from "createWebViewHtmlFile.tsx";
+import WebViewPostMessageTransportDefault from "../../../rpc/native/server/transports/WebViewPostMessageTransport.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = globalThis.__r;
 
 require = fn;
 const ComponentActions = fn(1085).ComponentActions;
-let closure_5 = fn(2011).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
-const TransportTypes = fn(5323).TransportTypes;
+let closure_5 = fn(2023).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
+const TransportTypes = fn(5635).TransportTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/embedded_apps/native/utils/createWebViewController.tsx");
 
-export default function createWebViewController(id, arg1) {
+export default function createWebViewController(id, contextSource) {
   _require = id;
-  ({ getOrigin: importDefault, onDisallowedNavigation: dependencyMap } = arg1);
+  ({ getOrigin: importDefault, onDisallowedNavigation: dependencyMap } = contextSource);
   function postMessageToWebView(arg0) {
     const self = this;
     const apply = closure_5.apply;
@@ -69,7 +69,10 @@ export default function createWebViewController(id, arg1) {
     }
   });
   let ComponentDispatch = require("ComponentDispatchUtils").ComponentDispatch;
-  ComponentDispatch.dispatch(postMessageToWebView.IFRAME_MOUNT, { id });
+  ComponentDispatch.dispatch(postMessageToWebView.IFRAME_MOUNT, {
+    id,
+    data: { contextSource: contextSource.contextSource },
+  });
   return {
     iframeId: id,
     release() {

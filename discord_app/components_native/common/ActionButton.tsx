@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/ActionButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (IconComponent) => {
+  ? function ActionButton(IconComponent) {
       const cResult = c.c(11);
       IconComponent = IconComponent.IconComponent;
       let str = "tertiary";
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = tmp5;
       const tmpResult = ButtonHooks;
     }
-  : (style) => {
+  : function ActionButton(style) {
       let str = "tertiary";
       if ("positive" === style.type) {
         str = "active";

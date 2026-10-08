@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj = {
   variantsContainer: {
     display: "flex",
@@ -21,7 +21,7 @@ let obj = {
   },
 };
 let closure_6 = createStyles.createStyles(obj);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { variantOption: null, variantOptionInner: null, variantOverflowInner: null };
   const size = {
@@ -56,7 +56,7 @@ let closure_7 = createStyles.createStyles((arg0) => {
 });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isSelected) => {
+  ? function VariantOption(isSelected) {
       const cResult = c.c(19);
       ({ variant, zIndex } = isSelected);
       const tmp2 = closure_7(isSelected.isSelected);
@@ -135,7 +135,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp4 = items1;
     }
-  : (variant) => {
+  : function VariantOption(variant) {
       variant = variant.variant;
       const tmp = closure_7(variant.isSelected);
       let isPurchased = useProductPurchaseState.useProductPurchaseState(variant).isPurchased;
@@ -155,7 +155,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (variant) => {
+  ? function VariantCheckmark(variant) {
       const cResult = c.c(2);
       const colors = nativeDefault.colors;
       const tmp5 = useIsVariantColorLightDefault(variant.variant) ? colors.BLACK : colors.WHITE;
@@ -170,7 +170,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : (variant) => {
+  : function VariantCheckmark(variant) {
       const colors = nativeDefault.colors;
       const tmp = useIsVariantColorLightDefault(variant.variant);
       return React4(CheckmarkSmallIcon.CheckmarkSmallIcon, {
@@ -180,7 +180,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (zIndex) => {
+  ? function VariantOverflowOption(zIndex) {
       const cResult = c.c(14);
       zIndex = zIndex.zIndex;
       const tmp4 = closure_7(zIndex.isSelected);
@@ -244,7 +244,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp6 = items1;
     }
-  : (isSelected) => {
+  : function VariantOverflowOption(isSelected) {
       const tmp = closure_7(isSelected.isSelected);
       const obj = { style: null, children: null };
       const items = [tmp.variantOption, { zIndex: isSelected.zIndex }];
@@ -266,13 +266,13 @@ const result = size.fileFinishedImporting("modules/collectibles/native/Collectib
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (product) => {
+    ? function CardProductVariants(product) {
         const cResult = defaultVariantIndex(576).c(14);
         let variants = product.product;
         const tmp2 = closure_6();
         const obj = defaultVariantIndex(576);
-        defaultVariantIndex = defaultVariantIndex(8452).useDefaultVariantIndex(variants);
-        const obj2 = defaultVariantIndex(8452);
+        defaultVariantIndex = defaultVariantIndex(8938).useDefaultVariantIndex(variants);
+        const obj2 = defaultVariantIndex(8938);
         if (obj3.getIsVariantProduct(variants)) {
           let num3 = 3;
           if (variants.variants.length <= 4) {
@@ -324,7 +324,7 @@ export default noop.memo(
             }
           }
           if (cResult[4] !== defaultVariantIndex) {
-            const fn = function x(variant, arg1) {
+            const fn = function f(variant, arg1) {
               return React4(
                 closure_8,
                 { variant, isSelected: arg1 === defaultVariantIndex, zIndex: 4 - Math.abs(defaultVariantIndex - arg1) },
@@ -348,14 +348,14 @@ export default noop.memo(
         } else {
           return null;
         }
-        obj3 = defaultVariantIndex(7077);
+        obj3 = defaultVariantIndex(7263);
       }
-    : (product) => {
+    : function CardProductVariants(product) {
         product = product.product;
         let defaultVariantIndex;
         const tmp = closure_6();
-        defaultVariantIndex = defaultVariantIndex(8452).useDefaultVariantIndex(product);
-        const obj = defaultVariantIndex(8452);
+        defaultVariantIndex = defaultVariantIndex(8938).useDefaultVariantIndex(product);
+        const obj = defaultVariantIndex(8938);
         if (obj2.getIsVariantProduct(product)) {
           let num3 = 3;
           if (product.variants.length <= 4) {
@@ -393,6 +393,6 @@ export default noop.memo(
         } else {
           return null;
         }
-        obj2 = defaultVariantIndex(7077);
+        obj2 = defaultVariantIndex(7263);
       },
 );

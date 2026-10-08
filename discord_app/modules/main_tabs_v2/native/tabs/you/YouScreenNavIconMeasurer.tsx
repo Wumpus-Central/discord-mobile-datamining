@@ -14,7 +14,7 @@ fn(558);
 const importDefaultResultResult = _slicedToArray(ContextUtilsDefault(), 2);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function YouScreenNavIconMeasurer(children) {
       const cResult = require("c").c(7);
       children = children.children;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -143,7 +143,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp12;
       const tmp7 = _slicedToArray(noop.useState(), 2);
     }
-  : (children) => {
+  : function YouScreenNavIconMeasurer(children) {
       width = undefined;
       _slicedToArray = undefined;
       let onWidthMeasured;
@@ -177,7 +177,7 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/Yo
 
 export const YouScreenNavIconMeasurer = tmp4;
 export const useYouScreenNavIconMeasurement = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useYouScreenNavIconMeasurement() {
       const cResult = c.c(6);
       const tmp2 = closure_1_8();
       const onWidthMeasured = tmp2.onWidthMeasured;
@@ -204,7 +204,7 @@ export const useYouScreenNavIconMeasurement = ReactCompilerGating.isReactCompile
         }
         return tmp11;
       }
-      const fn = function n() {
+      const fn = function t() {
         const current = ref.current;
         if (null != current) {
           current.measureLayout(current, (arg0, arg1, arg2) => {
@@ -223,7 +223,7 @@ export const useYouScreenNavIconMeasurement = ReactCompilerGating.isReactCompile
       tmp7 = fn;
       const tmp5 = _slicedToArray(noop.useState(false), 2);
     }
-  : () => {
+  : function useYouScreenNavIconMeasurement() {
       const tmp = closure_1_8();
       const onWidthMeasured = tmp.onWidthMeasured;
       const id = noop.useId();

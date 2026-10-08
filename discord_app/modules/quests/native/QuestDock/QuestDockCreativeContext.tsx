@@ -9,7 +9,7 @@ const redux = noop.createContext(null);
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function QuestDockQuestProvider(children) {
       const cResult = c.c(3);
       children = children.children;
       const tmp2 = closure_5(children.quest);
@@ -25,10 +25,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp4;
       tmp3 = tmp4;
     }
-  : (children) => <redux.Provider value={closure_5(children.quest)}>{children.children}</redux.Provider>;
+  : function QuestDockQuestProvider(children) {
+      return <redux.Provider value={closure_5(children.quest)}>{children.children}</redux.Provider>;
+    };
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function QuestDockBountyProvider(children) {
       const cResult = c.c(3);
       children = children.children;
       const tmp2 = closure_6(children.bounty);
@@ -44,10 +46,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp4;
       tmp3 = tmp4;
     }
-  : (bounty) => <redux.Provider value={closure_6(bounty.bounty)}>{bounty.children}</redux.Provider>;
+  : function QuestDockBountyProvider(bounty) {
+      return <redux.Provider value={closure_6(bounty.bounty)}>{bounty.children}</redux.Provider>;
+    };
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (quest) => {
+  ? function useQuestCreative(quest) {
       const cResult = c.c(2);
       if (cResult[0] !== quest) {
         const obj2 = { type: AdCreativeType.AdCreativeType.QUEST, quest };
@@ -59,14 +63,14 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (quest) => {
+  : function useQuestCreative(quest) {
       const items = [quest];
       return noop.useMemo(() => ({ type: AdCreativeType.AdCreativeType.QUEST, quest }), items);
     };
 let closure_5 = tmp5;
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useQuestDockQuest() {
       const context = noop.useContext(closure_4);
       let type;
       if (context != null) {
@@ -80,7 +84,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         return context.quest;
       }
     }
-  : () => {
+  : function useQuestDockQuest() {
       const context = noop.useContext(closure_4);
       let type;
       if (context != null) {
@@ -96,7 +100,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (bounty) => {
+  ? function useBountyCreative(bounty) {
       const cResult = c.c(2);
       if (cResult[0] !== bounty) {
         const obj2 = { type: AdCreativeType.AdCreativeType.BOUNTY, bounty };
@@ -108,14 +112,14 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (bounty) => {
+  : function useBountyCreative(bounty) {
       const items = [bounty];
       return noop.useMemo(() => ({ type: AdCreativeType.AdCreativeType.BOUNTY, bounty }), items);
     };
 let closure_6 = tmp7;
 ReactCompilerGating = fn(558);
 const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useQuestDockBounty() {
       const context = noop.useContext(closure_4);
       let type;
       if (context != null) {
@@ -129,7 +133,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         return context.bounty;
       }
     }
-  : () => {
+  : function useQuestDockBounty() {
       const context = noop.useContext(closure_4);
       let type;
       if (context != null) {
@@ -153,7 +157,7 @@ export const useQuestCreative = tmp5;
 export const useQuestDockBounty = tmp6;
 export const useBountyCreative = tmp7;
 export const useQuestDockCreative = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useQuestDockCreative() {
       const context = noop.useContext(closure_4);
       if (null == context) {
         const _Error = Error;
@@ -165,7 +169,7 @@ export const useQuestDockCreative = ReactCompilerGating.isReactCompilerEnabled()
         return context;
       }
     }
-  : () => {
+  : function useQuestDockCreative() {
       const context = noop.useContext(closure_4);
       if (null == context) {
         const _Error = Error;

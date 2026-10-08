@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/MentionsBadge.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MentionsBadge(arg0) {
       const cResult = c.c(3);
       ({ mentionsCount, isMentionLowImportance } = arg0);
       if (cResult[0] === isMentionLowImportance) {
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp5;
       tmp4 = tmp5;
     }
-  : (arg0) => {
+  : function MentionsBadge(arg0) {
       ({ mentionsCount, isMentionLowImportance } = arg0);
       return jsx(native.Badge, { value, isMentionLowImportance });
     };

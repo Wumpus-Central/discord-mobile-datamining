@@ -1,16 +1,16 @@
 // discord_app/modules/app_launcher/native/options/attachment/AppLauncherAttachmentOption.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import AttachmentPreviewDefault from "../../../../media/native/AttachmentPreview.tsx";
 import FileIcon from "../../../../../design/components/Icon/native/redesign/generated/FileIcon.tsx";
+import AttachmentPreviewDefault from "../../../../media/native/AttachmentPreview.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../../../../stores/UploadAttachmentStore.tsx";
 
 require = fn;
 let View = fn(17).View;
-const DraftType = fn(7044).DraftType;
+const DraftType = fn(7232).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { imageIconWrapper: null, selectedImage: null };
 let size = {
   justifyContent: "center",
@@ -26,7 +26,7 @@ obj2.selectedImage = size1;
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AttachmentPreviewAppLauncher(arg0) {
       const cResult = c.c(8);
       ({ uri, isImage, isVideo } = arg0);
       const tmp4 = closure_8();
@@ -71,7 +71,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp9;
       tmp8 = tmp9;
     }
-  : (arg0) => {
+  : function AttachmentPreviewAppLauncher(arg0) {
       ({ uri, isImage, isVideo } = arg0);
       const tmp = closure_8();
       ({ width, height } = tmp.selectedImage);
@@ -101,7 +101,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (option) => {
+  ? function AppLauncherAttachmentOption(option) {
       const cResult = option(onSelectAttachment[8]).c(29);
       option = option.option;
       const channel = option.channel;
@@ -133,25 +133,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const effect = stateFromStores.useEffect(tmp11, tmp12);
           View = stateFromStores.useRef(onSelectAttachment);
           if (cResult[8] !== onSelectAttachment) {
-            class N {
+            class P {
               constructor() {
                 closure_4.current = onSelectAttachment;
                 return;
               }
             }
             cResult[8] = onSelectAttachment;
-            cResult[9] = N;
+            cResult[9] = P;
           } else {
-            class N {
+            class P {
               constructor() {
                 closure_4.current = onSelectAttachment;
                 return;
               }
             }
           }
-          const effect1 = obj4.useEffect(N);
+          const effect1 = obj4.useEffect(P);
           if (cResult[10] !== stateFromStores) {
-            class P {
+            class V {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -168,9 +168,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[10] = stateFromStores;
-            cResult[11] = P;
+            cResult[11] = V;
           } else {
-            class P {
+            class V {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (stateFromStores != null) {
-            class P {
+            class V {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[12] !== undefined) {
-            class P {
+            class V {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[12] = tmp18;
             cResult[13] = tmp20;
           } else {
-            class P {
+            class V {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -243,9 +243,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const effect2 = obj4.useEffect(P, tmp20);
+          const effect2 = obj4.useEffect(V, tmp20);
           if (null != stateFromStores) {
-            class P {
+            class V {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[14] !== fileTypesFormattedString) {
-            class P {
+            class V {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (null != fileTypesFormattedString) {
-              class P {
+              class V {
                 constructor() {
                   tmp = closure_3;
                   filename = undefined;
@@ -302,7 +302,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[14] = fileTypesFormattedString;
             cResult[15] = formatResult;
           } else {
-            class P {
+            class V {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -320,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[16] === stateFromStores) {
-            class P {
+            class V {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -338,7 +338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (null == stateFromStores) {
-            class P {
+            class V {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -370,7 +370,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[17] = tmp4;
             cResult[18] = tmp27;
           } else {
-            class P {
+            class V {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -403,7 +403,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = fn2;
         const tmpResult2 = tmp(onSelectAttachment[13]);
       }
-      const fn = function h() {
+      const fn = function f() {
         return UploadAttachmentStore.getUpload(channel.id, option.name, DraftType.ApplicationLauncherCommand);
       };
       cResult[1] = channel.id;
@@ -412,7 +412,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = fn;
       const tmpResult = option(onSelectAttachment[12]);
     }
-  : (option) => {
+  : function AppLauncherAttachmentOption(option) {
       option = option.option;
       const channel = option.channel;
       const onSelectAttachment = option.onSelectAttachment;

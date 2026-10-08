@@ -4,12 +4,12 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import BotTagDefault from "../../applications/native/BotTag.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = Text(4892);
+const Text_Text = Text(5086);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flexGrow: 1, alignItems: "center", flexDirection: "row" },
   botTag: { marginLeft: nativeDefault.space.PX_4 },
@@ -21,7 +21,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/DiscordTag.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DiscordTag(arg0) {
       let Text = require;
       const cResult = c.c(14);
       ({ user, nick, usernameStyle, nicknameStyle, discriminatorStyle, hideBotTag } = arg0);
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = usernameStyle;
       cResult[5] = tmp6Result2;
     }
-  : (arg0) => {
+  : function DiscordTag(arg0) {
       ({ user, nick, hideBotTag } = arg0);
       ({ usernameStyle, nicknameStyle, discriminatorStyle } = arg0);
       if (hideBotTag === undefined) {

@@ -7,7 +7,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 require = fn;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (url) => {
+  ? function useUrlParts(url) {
       const cResult = c.c(15);
       if (cResult[0] !== url) {
         const protocol1 = MaskedLinkStoreMethodsAdditional.getProtocol(url);
@@ -72,7 +72,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = url1;
       tmp8 = url1;
     }
-  : (str) => {
+  : function useUrlParts(str) {
       closure_0 = str;
       const items = [str];
       const memo = noop.useMemo(() => {
@@ -100,7 +100,7 @@ const result = size.fileFinishedImporting("modules/masked_link/SharedStateUtils.
 
 export const useUrlParts = tmp2;
 export const useModalState = ReactCompilerGating.isReactCompilerEnabled()
-  ? (url) => {
+  ? function useModalState(url) {
       const cResult = c.c(17);
       url = url.url;
       const trustUrl = url.trustUrl;
@@ -137,7 +137,7 @@ export const useModalState = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                class S {
+                class O {
                   constructor() {
                     tmp = onCancel();
                     if (onClose != null) {
@@ -164,7 +164,7 @@ export const useModalState = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[16] = tmp8;
                 tmp7 = tmp8;
               }
-              class S {
+              class O {
                 constructor() {
                   tmp = onCancel();
                   if (onClose != null) {
@@ -175,13 +175,13 @@ export const useModalState = ReactCompilerGating.isReactCompilerEnabled()
               }
               cResult[6] = onCancel;
               cResult[7] = onClose;
-              cResult[8] = S;
-              tmp6 = S;
+              cResult[8] = O;
+              tmp6 = O;
             }
           }
         }
       }
-      const fn = function s() {
+      const fn = function n() {
         if (first) {
           trustUrl(url);
         }
@@ -198,7 +198,7 @@ export const useModalState = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = fn;
       tmp5 = fn;
     }
-  : (url) => {
+  : function useModalState(url) {
       url = url.url;
       const trustUrl = url.trustUrl;
       const onConfirm = url.onConfirm;

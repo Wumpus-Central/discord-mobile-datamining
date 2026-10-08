@@ -14,19 +14,19 @@ require = fn;
 const View = fn(17).View;
 const RelationshipTypes = fn(1085).RelationshipTypes;
 const jsx = fn(21).jsx;
-let closure_11 = Object.freeze({ direction: fn(1188).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(4896);
+let closure_11 = Object.freeze({ direction: fn(1200).CutoutDirection.RIGHT, inset: -4 });
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles({
   facepile: { flexDirection: "row", alignItems: "center" },
   avatars: { flexDirection: "row" },
 });
 const ReactCompilerGating = fn(558);
-let obj = { direction: fn(1188).CutoutDirection.RIGHT, inset: -4 };
+let obj = { direction: fn(1200).CutoutDirection.RIGHT, inset: -4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileYourFriendsCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileYourFriendsCard(arg0) {
       const cResult = require("c").c(27);
       closure_12();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -41,13 +41,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_1 = tmp6[1];
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [UserAffinitiesV2Store];
-        const fn = function _() {
-          userAffinities = userAffinities.getUserAffinities();
-          return userAffinities.map((otherUserId) => otherUserId.otherUserId);
-        };
+        class F {
+          constructor() {
+            userAffinities = closure_1_6.getUserAffinities();
+            return userAffinities.map((otherUserId) => otherUserId.otherUserId);
+          }
+        }
         cResult[1] = items1;
-        cResult[2] = fn;
-        let tmp8 = fn;
+        cResult[2] = F;
+        let tmp8 = F;
         let tmp7 = items1;
       } else {
         tmp7 = cResult[1];
@@ -58,12 +60,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp7, tmp8);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [RelationshipStore];
-        const fn2 = function x() {
-          return friendIDs.getFriendIDs();
-        };
+        class F {
+          constructor() {
+            userAffinities = closure_1_6.getUserAffinities();
+            return userAffinities.map((otherUserId) => otherUserId.otherUserId);
+          }
+        }
         cResult[3] = items2;
-        cResult[4] = fn2;
-        let tmp12 = fn2;
+        cResult[4] = tmp14;
+        let tmp12 = tmp14;
         let tmp11 = items2;
       } else {
         tmp11 = cResult[3];
@@ -84,9 +89,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const items3 = [];
-        cResult[5] = R;
+        class F {
+          constructor() {
+            userAffinities = closure_1_6.getUserAffinities();
+            return userAffinities.map((otherUserId) => otherUserId.otherUserId);
+          }
+        }
         cResult[6] = items3;
-        let tmp17 = items3;
+        let tmp18 = items3;
       } else {
         class R {
           constructor() {
@@ -95,9 +105,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        tmp17 = cResult[6];
+        tmp18 = cResult[6];
       }
-      const effect = obj2.useEffect(R, tmp17);
+      const effect = obj2.useEffect(R, tmp18);
       if (cResult[7] === stateFromStoresArray1) {
         class R {
           constructor() {
@@ -107,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn3 = function w() {
+      const fn = function w() {
         const found = _modDef12.chain(stateFromStoresArray).filter((item) => stateFromStoresArray1.includes(item));
         const chainResult = _modDef12.chain(stateFromStoresArray);
         const mapped = found.take(5).map(UserStore.getUser);
@@ -137,11 +147,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = stateFromStoresArray1;
       cResult[8] = gameRelationshipsByType;
       cResult[9] = stateFromStoresArray;
-      cResult[10] = fn3;
+      cResult[10] = fn;
       cResult[11] = items4;
       const tmpResult4 = require("GameRelationshipStoreHooks");
     }
-  : (navigateToFriends) => {
+  : function UserProfileYourFriendsCard(navigateToFriends) {
       let stateFromStoresArray;
       let stateFromStoresArray1;
       const tmp = closure_12();
@@ -162,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         RelationshipTypes.FRIEND,
       );
       const effect = stateFromStoresArray1.useEffect(() => {
-        const userAffinitiesV2 = closure_0(9522).fetchUserAffinitiesV2();
+        const userAffinitiesV2 = closure_0(8692).fetchUserAffinitiesV2();
       }, []);
       const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
       const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -206,16 +216,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items = [{ translateX: 4 * (first.length - 1 - index) }];
                 obj2.transform = items;
                 obj.style = obj2;
-                const obj4 = { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: null };
+                const obj4 = { user, guildId: "r", size: closure_0(1200).AvatarSizes.XSMALL, cutout: null };
                 let tmp3;
                 if (index < first.length - 1) {
                   tmp3 = closure_2_11;
                 }
                 obj4.cutout = tmp3;
-                obj.children = jsx(closure_0(1188).CutoutableAvatarImage, {
+                obj.children = jsx(closure_0(1200).CutoutableAvatarImage, {
                   user,
                   guildId: "r",
-                  size: closure_0(1188).AvatarSizes.XSMALL,
+                  size: closure_0(1200).AvatarSizes.XSMALL,
                   cutout: null,
                 });
                 return (
@@ -236,16 +246,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items = [{ translateX: 4 * (first.length - 1 - index) }];
                 obj2.transform = items;
                 obj.style = obj2;
-                const obj4 = { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: null };
+                const obj4 = { user, guildId: "r", size: closure_0(1200).AvatarSizes.XSMALL, cutout: null };
                 let tmp3;
                 if (index < first.length - 1) {
                   tmp3 = closure_2_11;
                 }
                 obj4.cutout = tmp3;
-                obj.children = jsx(closure_0(1188).CutoutableAvatarImage, {
+                obj.children = jsx(closure_0(1200).CutoutableAvatarImage, {
                   user,
                   guildId: "r",
-                  size: closure_0(1188).AvatarSizes.XSMALL,
+                  size: closure_0(1200).AvatarSizes.XSMALL,
                   cutout: null,
                 });
                 return (

@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useEmbeddedActivityParticipantAvatarUris(arg0) {
       let mapped = dependencyMap;
       const cResult = guildId(576).c(11);
       ({ activity, guildId } = arg0);
@@ -78,14 +78,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp13 = cResult[10];
       }
-      const found = stateFromStoresArray.filter(guildId(1375).isNotNullish);
+      const found = stateFromStoresArray.filter(guildId(1387).isNotNullish);
       mapped = found.map(tmp13);
       cResult[6] = guildId;
       cResult[7] = stateFromStoresArray;
       cResult[8] = mapped;
       const tmpResult = guildId(573);
     }
-  : (activity) => {
+  : function useEmbeddedActivityParticipantAvatarUris(activity) {
       activity = activity.activity;
       const guildId = activity.guildId;
       let memo;

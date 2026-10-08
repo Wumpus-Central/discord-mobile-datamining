@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
 import ConjureDebugFormat from "../ConjureDebugFormat.tsx";
 import ConjureDebugLabels from "../ConjureDebugLabels.tsx";
 import ConjureDebugPrimitives from "ConjureDebugPrimitives.tsx";
@@ -13,12 +13,12 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { tab: { gap: nativeDefault.space.PX_24 } };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function EnvSection(arg0) {
       const cResult = c.c(19);
       ({ title, preview, stable, renderEnv } = arg0);
       if (cResult[0] === preview) {
@@ -31,7 +31,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             if (arr.length <= 0) {
               const obj2 = { children: null };
               const intl = util.intl;
-              obj2.children = intl.string(_modDef3753.umcjif);
+              obj2.children = intl.string(_modDef3827.umcjif);
               tmp19 = hasOwnProperty(ConjureDebugPrimitives.DebugNote, obj2);
             }
             cResult[14] = arr;
@@ -107,7 +107,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = renderEnvResult1;
       }
     }
-  : (title) => {
+  : function EnvSection(title) {
       ({ preview, stable, renderEnv } = title);
       let items = [];
       if (null != preview) {
@@ -122,7 +122,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       if (items.length <= 0) {
         const obj4 = { children: null };
         const intl = util.intl;
-        obj4.children = intl.string(_modDef3753.umcjif);
+        obj4.children = intl.string(_modDef3827.umcjif);
         items = hasOwnProperty(ConjureDebugPrimitives.DebugNote, obj4);
       }
       obj3.children = items;
@@ -130,14 +130,14 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BotEnvBlock(arg0) {
       const cResult = c.c(45);
       ({ env, bot } = arg0);
       if (bot.ever_started) {
         if (cResult[5] !== env) {
           const intl2 = util.intl;
           const obj2 = { env: ConjureDebugLabels.debugEnvLabel(env) };
-          const formatToPlainStringResult = intl2.formatToPlainString(_modDef3753["01ZMS4"], obj2);
+          const formatToPlainStringResult = intl2.formatToPlainString(_modDef3827["01ZMS4"], obj2);
           cResult[5] = env;
           cResult[6] = formatToPlainStringResult;
           let tmp13 = formatToPlainStringResult;
@@ -177,7 +177,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               const _Symbol2 = Symbol;
               if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
                 const intl3 = util.intl;
-                const stringResult = intl3.string(_modDef3753["z1dh+F"]);
+                const stringResult = intl3.string(_modDef3827["z1dh+F"]);
                 cResult[14] = stringResult;
                 let tmp26 = stringResult;
               } else {
@@ -203,7 +203,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                   const _Symbol3 = Symbol;
                   if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
                     const intl4 = util.intl;
-                    const stringResult1 = intl4.string(_modDef3753.Iz5GnJ);
+                    const stringResult1 = intl4.string(_modDef3827.Iz5GnJ);
                     cResult[23] = stringResult1;
                     let tmp36 = stringResult1;
                   } else {
@@ -230,7 +230,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                   const _Symbol4 = Symbol;
                   if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
                     const intl5 = util.intl;
-                    const stringResult2 = intl5.string(_modDef3753["7UqtNv"]);
+                    const stringResult2 = intl5.string(_modDef3827["7UqtNv"]);
                     cResult[28] = stringResult2;
                     let tmp44 = stringResult2;
                   } else {
@@ -258,7 +258,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                         if (bot.dispatch_errors > 0) {
                           const obj4 = { label: null, value: null, critical: true };
                           const intl7 = util.intl;
-                          obj4.label = intl7.string(_modDef3753["x3+JXJ"]);
+                          obj4.label = intl7.string(_modDef3827["x3+JXJ"]);
                           obj4.value = ConjureDebugFormat.formatCount(bot.dispatch_errors);
                           tmp56 = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj4);
                           const tmpResult13 = ConjureDebugFormat;
@@ -308,7 +308,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                         code: bot.last_close_code,
                         time: ConjureDebugFormat.formatObservedAt(bot.last_close_at),
                       };
-                      formatToPlainStringResult1 = intl6.formatToPlainString(_modDef3753.MasSly, obj7);
+                      formatToPlainStringResult1 = intl6.formatToPlainString(_modDef3827.MasSly, obj7);
                       const tmpResult14 = ConjureDebugFormat;
                     }
                   }
@@ -361,7 +361,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = util.intl;
-          const stringResult3 = intl.string(_modDef3753.lTHQss);
+          const stringResult3 = intl.string(_modDef3827.lTHQss);
           cResult[2] = stringResult3;
           let tmp7 = stringResult3;
         } else {
@@ -379,13 +379,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp10;
       }
     }
-  : (arg0) => {
+  : function BotEnvBlock(arg0) {
       ({ env, bot } = arg0);
       if (bot.ever_started) {
         const obj3 = { label: null, value: null, critical: null, hint: null };
         const intl2 = util.intl;
         const obj4 = { env: ConjureDebugLabels.debugEnvLabel(env) };
-        obj3.label = intl2.formatToPlainString(_modDef3753["01ZMS4"], obj4);
+        obj3.label = intl2.formatToPlainString(_modDef3827["01ZMS4"], obj4);
         obj3.value = ConjureDebugLabels.debugYesNo(bot.connected);
         const connected = bot.connected;
         let tmp12 = !connected;
@@ -406,7 +406,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const items = [hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj3), , , ,];
         const obj7 = { label: null, value: null, hint: null };
         const intl3 = util.intl;
-        obj7.label = intl3.string(_modDef3753["z1dh+F"]);
+        obj7.label = intl3.string(_modDef3827["z1dh+F"]);
         obj7.value = ConjureDebugFormat.formatCount(bot.events_received);
         let combined;
         if (null != bot.last_event_type) {
@@ -420,13 +420,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         items[1] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj7);
         const obj8 = { label: null, value: null };
         const intl4 = util.intl;
-        obj8.label = intl4.string(_modDef3753.Iz5GnJ);
+        obj8.label = intl4.string(_modDef3827.Iz5GnJ);
         const tmp9Result = ConjureDebugFormat;
         obj8.value = ConjureDebugFormat.formatCount(bot.guild_count);
         items[2] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj8);
         const obj9 = { label: null, value: null, hint: null };
         const intl5 = util.intl;
-        obj9.label = intl5.string(_modDef3753["7UqtNv"]);
+        obj9.label = intl5.string(_modDef3827["7UqtNv"]);
         const tmp9Result7 = ConjureDebugFormat;
         obj9.value = ConjureDebugFormat.formatCount(bot.reconnects);
         let formatToPlainStringResult;
@@ -434,7 +434,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           if (null != bot.last_close_at) {
             const intl6 = util.intl;
             const obj10 = { code: bot.last_close_code, time: ConjureDebugFormat.formatObservedAt(bot.last_close_at) };
-            formatToPlainStringResult = intl6.formatToPlainString(_modDef3753.MasSly, obj10);
+            formatToPlainStringResult = intl6.formatToPlainString(_modDef3827.MasSly, obj10);
             const tmp9Result9 = ConjureDebugFormat;
           }
         }
@@ -444,7 +444,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         if (bot.dispatch_errors > 0) {
           const obj11 = { label: null, value: null, critical: true };
           const intl7 = util.intl;
-          obj11.label = intl7.string(_modDef3753["x3+JXJ"]);
+          obj11.label = intl7.string(_modDef3827["x3+JXJ"]);
           obj11.value = ConjureDebugFormat.formatCount(bot.dispatch_errors);
           tmp8Result = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj11);
           const tmp9Result10 = ConjureDebugFormat;
@@ -457,14 +457,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const obj = { label: ConjureDebugLabels.debugEnvLabel(env), value: null };
         const intl = util.intl;
-        obj.value = intl.string(_modDef3753.lTHQss);
+        obj.value = intl.string(_modDef3827.lTHQss);
         tmp6Result = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj);
       }
       return tmp6Result;
     };
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function OutboundEnvBlock(arg0) {
       const cResult = c.c(14);
       ({ env, metrics: since } = arg0);
       const sum = since.status_4xx + since.status_5xx;
@@ -513,12 +513,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             }
             obj3.status = str;
             obj3.time = ConjureDebugFormat.formatObservedAt(since.last_failure.at);
-            let formatToPlainStringResult = intl3.formatToPlainString(_modDef3753["o/ZBm4"], obj3);
+            let formatToPlainStringResult = intl3.formatToPlainString(_modDef3827["o/ZBm4"], obj3);
             const tmpResult5 = ConjureDebugFormat;
           } else {
             const intl2 = util.intl;
             const obj4 = { time: ConjureDebugFormat.formatObservedAt(since.since) };
-            formatToPlainStringResult = intl2.formatToPlainString(_modDef3753["7KlGT6"], obj4);
+            formatToPlainStringResult = intl2.formatToPlainString(_modDef3827["7KlGT6"], obj4);
             const tmpResult6 = ConjureDebugFormat;
           }
           ({ last_failure: tmp3[6], since } = since);
@@ -531,7 +531,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       obj5.requests = ConjureDebugFormat.formatCount(since.requests);
       const tmpResult7 = ConjureDebugFormat;
       obj5.failures = ConjureDebugFormat.formatCount(sum + since.errors);
-      const formatToPlainStringResult1 = intl.formatToPlainString(_modDef3753["Xq+wHT"], obj5);
+      const formatToPlainStringResult1 = intl.formatToPlainString(_modDef3827["Xq+wHT"], obj5);
       cResult[2] = sum;
       cResult[3] = since.errors;
       cResult[4] = since.requests;
@@ -539,7 +539,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = formatToPlainStringResult1;
       const tmpResult8 = ConjureDebugFormat;
     }
-  : (metrics) => {
+  : function OutboundEnvBlock(metrics) {
       metrics = metrics.metrics;
       const sum = metrics.status_4xx + metrics.status_5xx;
       const obj = { label: ConjureDebugLabels.debugEnvLabel(metrics.env), value: null, critical: null, hint: null };
@@ -547,7 +547,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { requests: null, failures: null };
       obj3.requests = ConjureDebugFormat.formatCount(metrics.requests);
       obj3.failures = ConjureDebugFormat.formatCount(sum + metrics.errors);
-      obj.value = intl.formatToPlainString(_modDef3753["Xq+wHT"], obj3);
+      obj.value = intl.formatToPlainString(_modDef3827["Xq+wHT"], obj3);
       obj.critical = metrics.errors + metrics.status_5xx > 0;
       if (null != metrics.last_failure) {
         const intl3 = util.intl;
@@ -558,12 +558,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
         obj6.status = str;
         obj6.time = ConjureDebugFormat.formatObservedAt(metrics.last_failure.at);
-        let formatToPlainStringResult = intl3.formatToPlainString(_modDef3753["o/ZBm4"], obj6);
+        let formatToPlainStringResult = intl3.formatToPlainString(_modDef3827["o/ZBm4"], obj6);
         const tmp3Result = ConjureDebugFormat;
       } else {
         const intl2 = util.intl;
         const obj7 = { time: ConjureDebugFormat.formatObservedAt(metrics.since) };
-        formatToPlainStringResult = intl2.formatToPlainString(_modDef3753["7KlGT6"], obj7);
+        formatToPlainStringResult = intl2.formatToPlainString(_modDef3827["7KlGT6"], obj7);
         const tmp3Result2 = ConjureDebugFormat;
       }
       obj.hint = formatToPlainStringResult;
@@ -571,27 +571,27 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (env) => {
+  ? function RuntimeEnvBlock(env) {
       const cResult = env(576).c(15);
       env = env.env;
       let schedules = env.runtime;
       if (cResult[0] !== env) {
         let intl = tmp(1126).intl;
-        const obj2 = { env: tmp(16778).debugEnvLabel(env) };
-        let formatToPlainStringResult = intl.formatToPlainString(_modDef3753["92gVTm"], obj2);
+        const obj2 = { env: tmp(17053).debugEnvLabel(env) };
+        let formatToPlainStringResult = intl.formatToPlainString(_modDef3827["92gVTm"], obj2);
         cResult[0] = env;
         cResult[1] = formatToPlainStringResult;
         let tmp4 = formatToPlainStringResult;
-        const tmpResult = tmp(16778);
+        const tmpResult = tmp(17053);
       } else {
         tmp4 = cResult[1];
       }
       if (cResult[2] !== schedules.connections) {
-        const formatCountResult = tmp(16777).formatCount(schedules.connections);
+        const formatCountResult = tmp(17052).formatCount(schedules.connections);
         cResult[2] = schedules.connections;
         cResult[3] = formatCountResult;
         let tmp7 = formatCountResult;
-        const tmpResult2 = tmp(16777);
+        const tmpResult2 = tmp(17052);
       } else {
         tmp7 = cResult[3];
       }
@@ -618,10 +618,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[10] !== env) {
-          const fn = function _(id) {
+          const fn = function v(id) {
             const obj = { label: null, value: null, hint: null };
             const intl = util.intl;
-            obj.label = intl.formatToPlainString(_modDef3753.Dafaco, { id: id.id });
+            obj.label = intl.formatToPlainString(_modDef3827.Dafaco, { id: id.id });
             obj.value = id.trigger;
             if (null != id.pending_state) {
               const intl3 = util.intl;
@@ -631,11 +631,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 pending_attempt = 1;
               }
               obj3.attempt = pending_attempt;
-              let formatToPlainStringResult = intl3.formatToPlainString(_modDef3753.ologm6, obj3);
+              let formatToPlainStringResult = intl3.formatToPlainString(_modDef3827.ologm6, obj3);
             } else if (null != id.next_run_at) {
               const intl2 = util.intl;
               const obj4 = { time: ConjureDebugFormat.formatObservedAt(id.next_run_at) };
-              formatToPlainStringResult = intl2.formatToPlainString(_modDef3753.wxAWNv, obj4);
+              formatToPlainStringResult = intl2.formatToPlainString(_modDef3827.wxAWNv, obj4);
               const tmp2Result = ConjureDebugFormat;
             }
             obj.hint = formatToPlainStringResult;
@@ -654,29 +654,29 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = schedules;
         cResult[9] = mapped;
       }
-      const tmp10 = closure_5(env(16780).DebugStatRow, { label: tmp4, value: tmp7 });
+      const tmp10 = closure_5(env(17055).DebugStatRow, { label: tmp4, value: tmp7 });
       cResult[4] = tmp4;
       cResult[5] = tmp7;
       cResult[6] = tmp10;
       tmp9 = tmp10;
       let obj = env(576);
     }
-  : (env) => {
+  : function RuntimeEnvBlock(env) {
       env = env.env;
       const runtime = env.runtime;
       let obj = { children: null };
       const obj2 = { label: null, value: null };
       let intl = env(1126).intl;
-      let obj3 = { env: env(16778).debugEnvLabel(env) };
-      obj2.label = intl.formatToPlainString(_modDef3753["92gVTm"], obj3);
-      let obj4 = env(16778);
-      obj2.value = env(16777).formatCount(runtime.connections);
-      const items = [closure_5(env(16780).DebugStatRow, obj2)];
+      let obj3 = { env: env(17053).debugEnvLabel(env) };
+      obj2.label = intl.formatToPlainString(_modDef3827["92gVTm"], obj3);
+      let obj4 = env(17053);
+      obj2.value = env(17052).formatCount(runtime.connections);
+      const items = [closure_5(env(17055).DebugStatRow, obj2)];
       const schedules = runtime.schedules;
       items[1] = schedules.map((id) => {
         const obj = { label: null, value: null, hint: null };
         const intl = util.intl;
-        obj.label = intl.formatToPlainString(_modDef3753.Dafaco, { id: id.id });
+        obj.label = intl.formatToPlainString(_modDef3827.Dafaco, { id: id.id });
         obj.value = id.trigger;
         if (null != id.pending_state) {
           const intl3 = util.intl;
@@ -686,11 +686,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             pending_attempt = 1;
           }
           obj3.attempt = pending_attempt;
-          let formatToPlainStringResult = intl3.formatToPlainString(_modDef3753.ologm6, obj3);
+          let formatToPlainStringResult = intl3.formatToPlainString(_modDef3827.ologm6, obj3);
         } else if (null != id.next_run_at) {
           const intl2 = util.intl;
           const obj4 = { time: ConjureDebugFormat.formatObservedAt(id.next_run_at) };
-          formatToPlainStringResult = intl2.formatToPlainString(_modDef3753.wxAWNv, obj4);
+          formatToPlainStringResult = intl2.formatToPlainString(_modDef3827.wxAWNv, obj4);
           const tmp2Result = ConjureDebugFormat;
         }
         obj.hint = formatToPlainStringResult;
@@ -701,7 +701,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AiEnvBlock(arg0) {
       const cResult = c.c(10);
       ({ env, metrics } = arg0);
       if (cResult[0] !== env) {
@@ -741,28 +741,28 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.calls = ConjureDebugFormat.formatCount(metrics.calls);
       const tmpResult3 = ConjureDebugFormat;
       obj3.errors = ConjureDebugFormat.formatCount(metrics.errors);
-      const formatToPlainStringResult = intl.formatToPlainString(_modDef3753.suAOj9, obj3);
+      const formatToPlainStringResult = intl.formatToPlainString(_modDef3827.suAOj9, obj3);
       cResult[2] = metrics.calls;
       cResult[3] = metrics.errors;
       cResult[4] = formatToPlainStringResult;
       tmp6 = formatToPlainStringResult;
       const tmpResult4 = ConjureDebugFormat;
     }
-  : (metrics) => {
+  : function AiEnvBlock(metrics) {
       metrics = metrics.metrics;
       const obj = { label: ConjureDebugLabels.debugEnvLabel(metrics.env), value: null, critical: null, hint: null };
       const intl = util.intl;
       const obj3 = { calls: null, errors: null };
       obj3.calls = ConjureDebugFormat.formatCount(metrics.calls);
       obj3.errors = ConjureDebugFormat.formatCount(metrics.errors);
-      obj.value = intl.formatToPlainString(_modDef3753.suAOj9, obj3);
+      obj.value = intl.formatToPlainString(_modDef3827.suAOj9, obj3);
       obj.critical = metrics.errors > 0;
       obj.hint = metrics.last_model;
       return hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function EnvMetricsSection(arg0) {
       const cResult = c.c(49);
       ({ title, metrics, limits } = arg0);
       if (null != metrics) {
@@ -770,7 +770,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol3 = Symbol;
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = util.intl;
-            const stringResult = intl.string(_modDef3753.xtD4Zp);
+            const stringResult = intl.string(_modDef3827.xtD4Zp);
             cResult[3] = stringResult;
             let tmp4 = stringResult;
           } else {
@@ -788,7 +788,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[6] !== metrics.since) {
             const intl2 = util.intl;
             const obj2 = { time: ConjureDebugFormat.formatObservedAt(metrics.since) };
-            const formatToPlainStringResult = intl2.formatToPlainString(_modDef3753["7KlGT6"], obj2);
+            const formatToPlainStringResult = intl2.formatToPlainString(_modDef3827["7KlGT6"], obj2);
             cResult[6] = metrics.since;
             cResult[7] = formatToPlainStringResult;
             let tmp9 = formatToPlainStringResult;
@@ -803,7 +803,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol = Symbol;
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
               const intl3 = util.intl;
-              const stringResult1 = intl3.string(_modDef3753.gfRhR3);
+              const stringResult1 = intl3.string(_modDef3827.gfRhR3);
               cResult[11] = stringResult1;
               let tmp15 = stringResult1;
             } else {
@@ -837,7 +837,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                               if (metrics.exceeded_cpu > 0) {
                                 const obj3 = { label: null, value: null, critical: true };
                                 const intl11 = util.intl;
-                                obj3.label = intl11.string(_modDef3753["4sQYwH"]);
+                                obj3.label = intl11.string(_modDef3827["4sQYwH"]);
                                 obj3.value = ConjureDebugFormat.formatCount(metrics.exceeded_cpu);
                                 tmp38 = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj3);
                                 const tmpResult12 = ConjureDebugFormat;
@@ -851,7 +851,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                             const _Symbol2 = Symbol;
                             if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
                               const intl12 = util.intl;
-                              const stringResult2 = intl12.string(_modDef3753.bQenOy);
+                              const stringResult2 = intl12.string(_modDef3827.bQenOy);
                               cResult[29] = stringResult2;
                               let tmp41 = stringResult2;
                             } else {
@@ -872,7 +872,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                               const _HermesInternal = HermesInternal;
                               obj4.limit = "" + limits.memory_mb + " MB";
                               const formatToPlainStringResult1 = intl13.formatToPlainString(
-                                _modDef3753["5jIZwv"],
+                                _modDef3827["5jIZwv"],
                                 obj4,
                               );
                               cResult[32] = limits.memory_mb;
@@ -891,7 +891,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                                   if (null != metrics.build) {
                                     const obj5 = { label: null, value: null };
                                     const intl14 = util.intl;
-                                    obj5.label = intl14.string(_modDef3753.xgpn4Y);
+                                    obj5.label = intl14.string(_modDef3827.xgpn4Y);
                                     obj5.value = ConjureDebugFormat.shortBuildLabel(metrics.build);
                                     tmp54 = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj5);
                                     const tmpResult14 = ConjureDebugFormat;
@@ -955,7 +955,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                             if (metrics.wall_ms_total > 0) {
                               const obj8 = { label: null, value: null };
                               const intl10 = util.intl;
-                              obj8.label = intl10.string(_modDef3753.xvmL1D);
+                              obj8.label = intl10.string(_modDef3827.xvmL1D);
                               obj8.value = ConjureDebugFormat.formatMs(metrics.wall_ms_total);
                               tmp34 = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj8);
                               const tmpResult15 = ConjureDebugFormat;
@@ -975,14 +975,14 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj9 = { children: null };
                 const obj10 = { label: null, used: null, max: null, formatValue: null };
                 const intl7 = util.intl;
-                obj10.label = intl7.string(_modDef3753.LEJ5r3);
+                obj10.label = intl7.string(_modDef3827.LEJ5r3);
                 obj10.used = metrics.cpu_ms_max;
                 obj10.max = limits.cpu_ms_per_request;
                 obj10.formatValue = ConjureDebugFormat.formatMs;
                 const items1 = [hasOwnProperty(ConjureDebugPrimitives.DebugMeter, obj10)];
                 const obj11 = { label: null, value: null, hint: null };
                 const intl8 = util.intl;
-                obj11.label = intl8.string(_modDef3753.mSKImM);
+                obj11.label = intl8.string(_modDef3827.mSKImM);
                 obj11.value = ConjureDebugFormat.formatMs(metrics.cpu_ms_total / metrics.requests);
                 const intl9 = util.intl;
                 const obj12 = { total: null, wall: null };
@@ -990,7 +990,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 obj12.total = ConjureDebugFormat.formatMs(metrics.cpu_ms_total);
                 const tmpResult17 = ConjureDebugFormat;
                 obj12.wall = ConjureDebugFormat.formatMs(metrics.wall_ms_total);
-                obj11.hint = intl9.formatToPlainString(_modDef3753.JqMU05, obj12);
+                obj11.hint = intl9.formatToPlainString(_modDef3827.JqMU05, obj12);
                 items1[1] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj11);
                 obj9.children = items1;
                 let tmp27 = React5(timestampProducer, obj9);
@@ -998,11 +998,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 const obj13 = { label: null, value: null, hint: null };
                 const intl4 = util.intl;
-                obj13.label = intl4.string(_modDef3753.LEJ5r3);
+                obj13.label = intl4.string(_modDef3827.LEJ5r3);
                 const intl5 = util.intl;
-                obj13.value = intl5.string(_modDef3753["2Ekb2b"]);
+                obj13.value = intl5.string(_modDef3827["2Ekb2b"]);
                 const intl6 = util.intl;
-                obj13.hint = intl6.string(_modDef3753.G0aq7i);
+                obj13.hint = intl6.string(_modDef3827.G0aq7i);
                 tmp27 = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj13);
               }
               cResult[17] = tmp67;
@@ -1031,7 +1031,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj16 = { children: null };
         const intl15 = util.intl;
-        obj16.children = intl15.string(_modDef3753["Noami/"]);
+        obj16.children = intl15.string(_modDef3827["Noami/"]);
         const tmp63 = hasOwnProperty(ConjureDebugPrimitives.DebugNote, obj16);
         cResult[0] = tmp63;
         let first = tmp63;
@@ -1049,23 +1049,23 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp64;
     }
-  : (arg0) => {
+  : function EnvMetricsSection(arg0) {
       ({ title, metrics, limits } = arg0);
       if (null != metrics) {
         if (0 !== metrics.requests) {
           const obj2 = { title, children: null };
           const obj3 = { label: null, value: null, hint: null };
           const intl13 = util.intl;
-          obj3.label = intl13.string(_modDef3753.xtD4Zp);
+          obj3.label = intl13.string(_modDef3827.xtD4Zp);
           obj3.value = ConjureDebugFormat.formatCount(metrics.requests);
           const intl14 = util.intl;
           const obj4 = { time: null };
           obj4.time = ConjureDebugFormat.formatObservedAt(metrics.since);
-          obj3.hint = intl14.formatToPlainString(_modDef3753["7KlGT6"], obj4);
+          obj3.hint = intl14.formatToPlainString(_modDef3827["7KlGT6"], obj4);
           const items = [hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj3), , , , , ,];
           const obj5 = { label: null, value: null, critical: null };
           const intl15 = util.intl;
-          obj5.label = intl15.string(_modDef3753.gfRhR3);
+          obj5.label = intl15.string(_modDef3827.gfRhR3);
           obj5.value = ConjureDebugFormat.formatCount(metrics.errors);
           obj5.critical = metrics.errors > 0;
           items[1] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj5);
@@ -1073,14 +1073,14 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = { children: null };
             const obj7 = { label: null, used: null, max: null, formatValue: null };
             const intl4 = util.intl;
-            obj7.label = intl4.string(_modDef3753.LEJ5r3);
+            obj7.label = intl4.string(_modDef3827.LEJ5r3);
             obj7.used = metrics.cpu_ms_max;
             obj7.max = limits.cpu_ms_per_request;
             obj7.formatValue = ConjureDebugFormat.formatMs;
             const items1 = [hasOwnProperty(ConjureDebugPrimitives.DebugMeter, obj7)];
             const obj8 = { label: null, value: null, hint: null };
             const intl5 = util.intl;
-            obj8.label = intl5.string(_modDef3753.mSKImM);
+            obj8.label = intl5.string(_modDef3827.mSKImM);
             obj8.value = ConjureDebugFormat.formatMs(metrics.cpu_ms_total / metrics.requests);
             const intl6 = util.intl;
             const obj9 = { total: null, wall: null };
@@ -1088,7 +1088,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             obj9.total = ConjureDebugFormat.formatMs(metrics.cpu_ms_total);
             const tmp9Result7 = ConjureDebugFormat;
             obj9.wall = ConjureDebugFormat.formatMs(metrics.wall_ms_total);
-            obj8.hint = intl6.formatToPlainString(_modDef3753.JqMU05, obj9);
+            obj8.hint = intl6.formatToPlainString(_modDef3827.JqMU05, obj9);
             items1[1] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj8);
             obj6.children = items1;
             let tmp = React5(timestampProducer, obj6);
@@ -1096,11 +1096,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             const obj = { label: null, value: null, hint: null };
             const intl = util.intl;
-            obj.label = intl.string(_modDef3753.LEJ5r3);
+            obj.label = intl.string(_modDef3827.LEJ5r3);
             const intl2 = util.intl;
-            obj.value = intl2.string(_modDef3753["2Ekb2b"]);
+            obj.value = intl2.string(_modDef3827["2Ekb2b"]);
             const intl3 = util.intl;
-            obj.hint = intl3.string(_modDef3753.G0aq7i);
+            obj.hint = intl3.string(_modDef3827.G0aq7i);
             tmp = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj);
           }
           items[2] = tmp;
@@ -1110,7 +1110,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             if (metrics.wall_ms_total > 0) {
               const obj10 = { label: null, value: null };
               const intl7 = util.intl;
-              obj10.label = intl7.string(_modDef3753.xvmL1D);
+              obj10.label = intl7.string(_modDef3827.xvmL1D);
               obj10.value = ConjureDebugFormat.formatMs(metrics.wall_ms_total);
               tmp11Result = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj10);
               const tmp9Result9 = ConjureDebugFormat;
@@ -1121,7 +1121,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           if (metrics.exceeded_cpu > 0) {
             const obj11 = { label: null, value: null, critical: true };
             const intl8 = util.intl;
-            obj11.label = intl8.string(_modDef3753["4sQYwH"]);
+            obj11.label = intl8.string(_modDef3827["4sQYwH"]);
             obj11.value = ConjureDebugFormat.formatCount(metrics.exceeded_cpu);
             tmp11Result3 = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj11);
             const tmp9Result10 = ConjureDebugFormat;
@@ -1129,20 +1129,20 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           items[4] = tmp11Result3;
           const obj12 = { label: null, value: null, critical: null, hint: null };
           const intl9 = util.intl;
-          obj12.label = intl9.string(_modDef3753.bQenOy);
+          obj12.label = intl9.string(_modDef3827.bQenOy);
           obj12.value = ConjureDebugFormat.formatCount(metrics.exceeded_memory);
           obj12.critical = metrics.exceeded_memory > 0;
           const intl10 = util.intl;
           const obj13 = { limit: null };
           const _HermesInternal = HermesInternal;
           obj13.limit = "" + limits.memory_mb + " MB";
-          obj12.hint = intl10.formatToPlainString(_modDef3753["5jIZwv"], obj13);
+          obj12.hint = intl10.formatToPlainString(_modDef3827["5jIZwv"], obj13);
           items[5] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj12);
           let tmp11Result4 = null;
           if (null != metrics.build) {
             const obj14 = { label: null, value: null };
             const intl11 = util.intl;
-            obj14.label = intl11.string(_modDef3753.xgpn4Y);
+            obj14.label = intl11.string(_modDef3827.xgpn4Y);
             obj14.value = ConjureDebugFormat.shortBuildLabel(metrics.build);
             tmp11Result4 = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj14);
             const tmp9Result12 = ConjureDebugFormat;
@@ -1155,13 +1155,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const obj15 = { title, children: null };
       const obj16 = { children: null };
       const intl12 = util.intl;
-      obj16.children = intl12.string(_modDef3753["Noami/"]);
+      obj16.children = intl12.string(_modDef3827["Noami/"]);
       obj15.children = hasOwnProperty(ConjureDebugPrimitives.DebugNote, obj16);
       return hasOwnProperty(ConjureDebugPrimitives.DebugSection, obj15);
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (status) => {
+  ? function StorageSection(status) {
       let DebugSection = limits;
       let tmp = dependencyMap;
       const cResult = limits(576).c(6);
@@ -1180,29 +1180,29 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       if (shared_data) {
         let obj2 = { key: "shared", label: null, metrics: null };
         let intl = DebugSection(1126).intl;
-        obj2.label = intl.string(_modDef3753.V5kbaH);
+        obj2.label = intl.string(_modDef3827.V5kbaH);
         obj2.metrics = stable;
         let items = [obj2];
         let items1 = items;
       } else {
-        let obj3 = { key: "preview", label: DebugSection(16778).debugEnvLabel("preview"), metrics: preview };
+        let obj3 = { key: "preview", label: DebugSection(17053).debugEnvLabel("preview"), metrics: preview };
         items1 = [obj3];
         let obj4 = { key: "stable", label: null, metrics: null };
-        const DebugSectionResult = DebugSection(16778);
-        obj4.label = DebugSection(16778).debugEnvLabel("stable");
+        const DebugSectionResult = DebugSection(17053);
+        obj4.label = DebugSection(17053).debugEnvLabel("stable");
         obj4.metrics = stable;
         items1[1] = obj4;
-        const DebugSectionResult1 = DebugSection(16778);
+        const DebugSectionResult1 = DebugSection(17053);
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         let intl2 = DebugSection(1126).intl;
-        const stringResult = intl2.string(_modDef3753.mRt7MW);
+        const stringResult = intl2.string(_modDef3827.mRt7MW);
         cResult[5] = stringResult;
         let tmp4 = stringResult;
       } else {
         tmp4 = cResult[5];
       }
-      DebugSection = DebugSection(16780).DebugSection;
+      DebugSection = DebugSection(17055).DebugSection;
       let obj = limits(576);
       tmp = closure_5(DebugSection, {
         title: tmp4,
@@ -1215,10 +1215,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { label: null, value: null, hint: null };
             const intl2 = util.intl;
             const obj5 = { env: label };
-            obj4.label = intl2.formatToPlainString(_modDef3753.u7kJJ4, obj5);
+            obj4.label = intl2.formatToPlainString(_modDef3827.u7kJJ4, obj5);
             obj4.value = ConjureDebugFormat.formatBytes(metrics.r2_bytes);
             const intl3 = util.intl;
-            const tmp32 = _modDef3753;
+            const tmp32 = _modDef3827;
             const obj = { count: null };
             const tmp = metrics.r2_truncated ? tmp32.lH0oQw : tmp32.m9h02S;
             obj.count = ConjureDebugFormat.formatCount(metrics.r2_objects);
@@ -1229,7 +1229,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = { label: null, used: null, max: null, formatValue: null };
               const intl = util.intl;
               const obj7 = { env: label };
-              obj6.label = intl.formatToPlainString(_modDef3753.mnbPqt, obj7);
+              obj6.label = intl.formatToPlainString(_modDef3827.mnbPqt, obj7);
               obj6.used = metrics.db_bytes;
               obj6.max = limits.db_bytes;
               obj6.formatValue = ConjureDebugFormat.formatBytes;
@@ -1259,10 +1259,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { label: null, value: null, hint: null };
             const intl2 = util.intl;
             const obj5 = { env: label };
-            obj4.label = intl2.formatToPlainString(_modDef3753.u7kJJ4, obj5);
+            obj4.label = intl2.formatToPlainString(_modDef3827.u7kJJ4, obj5);
             obj4.value = ConjureDebugFormat.formatBytes(metrics.r2_bytes);
             const intl3 = util.intl;
-            const tmp32 = _modDef3753;
+            const tmp32 = _modDef3827;
             const obj = { count: null };
             const tmp = metrics.r2_truncated ? tmp32.lH0oQw : tmp32.m9h02S;
             obj.count = ConjureDebugFormat.formatCount(metrics.r2_objects);
@@ -1273,7 +1273,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = { label: null, used: null, max: null, formatValue: null };
               const intl = util.intl;
               const obj7 = { env: label };
-              obj6.label = intl.formatToPlainString(_modDef3753.mnbPqt, obj7);
+              obj6.label = intl.formatToPlainString(_modDef3827.mnbPqt, obj7);
               obj6.used = metrics.db_bytes;
               obj6.max = limits.db_bytes;
               obj6.formatValue = ConjureDebugFormat.formatBytes;
@@ -1288,7 +1288,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       };
     }
-  : (status) => {
+  : function StorageSection(status) {
       status = status.status;
       const storage = status.storage;
       const stable = storage.stable;
@@ -1296,25 +1296,25 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       if (storage.shared_data) {
         let obj3 = { key: "shared", label: null, metrics: null };
         let intl = limits(1126).intl;
-        obj3.label = intl.string(_modDef3753.V5kbaH);
+        obj3.label = intl.string(_modDef3827.V5kbaH);
         obj3.metrics = stable;
         let items = [obj3];
         let tmp4 = limits;
         let items1 = items;
       } else {
-        let obj = { key: "preview", label: limits(16778).debugEnvLabel("preview"), metrics: tmp };
+        let obj = { key: "preview", label: limits(17053).debugEnvLabel("preview"), metrics: tmp };
         items1 = [obj];
         let obj5 = { key: "stable", label: null, metrics: null };
-        let obj2 = limits(16778);
-        obj5.label = limits(16778).debugEnvLabel("stable");
+        let obj2 = limits(17053);
+        obj5.label = limits(17053).debugEnvLabel("stable");
         obj5.metrics = stable;
         items1[1] = obj5;
         tmp4 = limits;
-        let obj4 = limits(16778);
+        let obj4 = limits(17053);
       }
       let obj6 = { title: null, children: null };
       let intl2 = tmp4(1126).intl;
-      obj6.title = intl2.string(_modDef3753.mRt7MW);
+      obj6.title = intl2.string(_modDef3827.mRt7MW);
       obj6.children = items1.map((item) => {
         ({ key, label, metrics } = item);
         if (null == metrics) {
@@ -1324,10 +1324,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { label: null, value: null, hint: null };
           const intl2 = util.intl;
           const obj5 = { env: label };
-          obj4.label = intl2.formatToPlainString(_modDef3753.u7kJJ4, obj5);
+          obj4.label = intl2.formatToPlainString(_modDef3827.u7kJJ4, obj5);
           obj4.value = ConjureDebugFormat.formatBytes(metrics.r2_bytes);
           const intl3 = util.intl;
-          const tmp32 = _modDef3753;
+          const tmp32 = _modDef3827;
           const obj = { count: null };
           const tmp = metrics.r2_truncated ? tmp32.lH0oQw : tmp32.m9h02S;
           obj.count = ConjureDebugFormat.formatCount(metrics.r2_objects);
@@ -1338,7 +1338,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = { label: null, used: null, max: null, formatValue: null };
             const intl = util.intl;
             const obj7 = { env: label };
-            obj6.label = intl.formatToPlainString(_modDef3753.mnbPqt, obj7);
+            obj6.label = intl.formatToPlainString(_modDef3827.mnbPqt, obj7);
             obj6.used = metrics.db_bytes;
             obj6.max = limits.db_bytes;
             obj6.formatValue = ConjureDebugFormat.formatBytes;
@@ -1351,7 +1351,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp18Result;
       });
-      return closure_5(tmp4(16780).DebugSection, obj6);
+      return closure_5(tmp4(17055).DebugSection, obj6);
     };
 ReactCompilerGating = fn(558);
 let obj3 = { gap: nativeDefault.space.PX_24 };
@@ -1359,7 +1359,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/debug/native/ConjureDebugWorkerTab.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ConjureDebugWorkerTab(arg0) {
       const cResult = c.c(10);
       ({ status, fetchState, onRefresh } = arg0);
       const tmp4 = closure_8();
@@ -1380,13 +1380,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (null != status) {
               const obj2 = { title: null, metrics: null, limits: null };
               const intl = util.intl;
-              obj2.title = intl.string(_modDef3753.o5xzvl);
+              obj2.title = intl.string(_modDef3827.o5xzvl);
               obj2.metrics = status.worker.preview;
               obj2.limits = status.worker.limits;
               const items = [hasOwnProperty(closure_14, obj2), , , , , , , ,];
               const obj3 = { title: null, metrics: null, limits: null };
               const intl2 = util.intl;
-              obj3.title = intl2.string(_modDef3753.n2X3ZK);
+              obj3.title = intl2.string(_modDef3827.n2X3ZK);
               obj3.metrics = status.worker.stable;
               obj3.limits = status.worker.limits;
               items[1] = hasOwnProperty(closure_14, obj3);
@@ -1396,7 +1396,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (null != status.bot) {
                 const obj5 = { title: null, preview: null, stable: null, renderEnv: null };
                 const intl3 = util.intl;
-                obj5.title = intl3.string(_modDef3753["7mahem"]);
+                obj5.title = intl3.string(_modDef3827["7mahem"]);
                 obj5.preview = status.bot.preview;
                 obj5.stable = status.bot.stable;
                 obj5.renderEnv = function renderEnv(env, bot) {
@@ -1409,7 +1409,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (null != status.outbound) {
                 const obj6 = { title: null, preview: null, stable: null, renderEnv: null };
                 const intl4 = util.intl;
-                obj6.title = intl4.string(_modDef3753.THneIO);
+                obj6.title = intl4.string(_modDef3827.THneIO);
                 obj6.preview = status.outbound.preview;
                 obj6.stable = status.outbound.stable;
                 obj6.renderEnv = function renderEnv(env, metrics) {
@@ -1422,7 +1422,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (null != status.runtime) {
                 const obj7 = { title: null, preview: null, stable: null, renderEnv: null };
                 const intl5 = util.intl;
-                obj7.title = intl5.string(_modDef3753.vboq04);
+                obj7.title = intl5.string(_modDef3827.vboq04);
                 obj7.preview = status.runtime.preview;
                 obj7.stable = status.runtime.stable;
                 obj7.renderEnv = function renderEnv(env, runtime) {
@@ -1435,7 +1435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (null != status.ai) {
                 const obj8 = { title: null, preview: null, stable: null, renderEnv: null };
                 const intl6 = util.intl;
-                obj8.title = intl6.string(_modDef3753.UzhuEq);
+                obj8.title = intl6.string(_modDef3827.UzhuEq);
                 obj8.preview = status.ai.preview;
                 obj8.stable = status.ai.stable;
                 obj8.renderEnv = function renderEnv(env, metrics) {
@@ -1452,7 +1452,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               items[7] = tmp12Result8;
               const obj10 = { title: null, children: null };
               const intl7 = util.intl;
-              obj10.title = intl7.string(_modDef3753.fQMpFp);
+              obj10.title = intl7.string(_modDef3827.fQMpFp);
               const obj11 = { label: ConjureDebugLabels.debugEnvLabel("preview"), value: null };
               let str2 = "\u2014";
               let str3 = "\u2014";
@@ -1514,7 +1514,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp7;
       tmp6 = tmp7;
     }
-  : (status) => {
+  : function ConjureDebugWorkerTab(status) {
       status = status.status;
       ({ fetchState, onRefresh } = status);
       const obj = { style: closure_8().tab, children: null };
@@ -1536,13 +1536,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != status) {
         const obj2 = { title: null, metrics: null, limits: null };
         const intl = util.intl;
-        obj2.title = intl.string(_modDef3753.o5xzvl);
+        obj2.title = intl.string(_modDef3827.o5xzvl);
         obj2.metrics = status.worker.preview;
         obj2.limits = status.worker.limits;
         const items1 = [hasOwnProperty(closure_14, obj2), , , , , , , ,];
         const obj3 = { title: null, metrics: null, limits: null };
         const intl2 = util.intl;
-        obj3.title = intl2.string(_modDef3753.n2X3ZK);
+        obj3.title = intl2.string(_modDef3827.n2X3ZK);
         obj3.metrics = status.worker.stable;
         obj3.limits = status.worker.limits;
         items1[1] = hasOwnProperty(closure_14, obj3);
@@ -1552,7 +1552,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (null != status.bot) {
           const obj5 = { title: null, preview: null, stable: null, renderEnv: null };
           const intl3 = util.intl;
-          obj5.title = intl3.string(_modDef3753["7mahem"]);
+          obj5.title = intl3.string(_modDef3827["7mahem"]);
           obj5.preview = status.bot.preview;
           obj5.stable = status.bot.stable;
           obj5.renderEnv = function renderEnv(env, bot) {
@@ -1565,7 +1565,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (null != status.outbound) {
           const obj6 = { title: null, preview: null, stable: null, renderEnv: null };
           const intl4 = util.intl;
-          obj6.title = intl4.string(_modDef3753.THneIO);
+          obj6.title = intl4.string(_modDef3827.THneIO);
           obj6.preview = status.outbound.preview;
           obj6.stable = status.outbound.stable;
           obj6.renderEnv = function renderEnv(env, metrics) {
@@ -1578,7 +1578,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (null != status.runtime) {
           const obj7 = { title: null, preview: null, stable: null, renderEnv: null };
           const intl5 = util.intl;
-          obj7.title = intl5.string(_modDef3753.vboq04);
+          obj7.title = intl5.string(_modDef3827.vboq04);
           obj7.preview = status.runtime.preview;
           obj7.stable = status.runtime.stable;
           obj7.renderEnv = function renderEnv(env, runtime) {
@@ -1591,7 +1591,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (null != status.ai) {
           const obj8 = { title: null, preview: null, stable: null, renderEnv: null };
           const intl6 = util.intl;
-          obj8.title = intl6.string(_modDef3753.UzhuEq);
+          obj8.title = intl6.string(_modDef3827.UzhuEq);
           obj8.preview = status.ai.preview;
           obj8.stable = status.ai.stable;
           obj8.renderEnv = function renderEnv(env, metrics) {
@@ -1608,7 +1608,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items1[7] = tmp3Result8;
         const obj10 = { title: null, children: null };
         const intl7 = util.intl;
-        obj10.title = intl7.string(_modDef3753.fQMpFp);
+        obj10.title = intl7.string(_modDef3827.fQMpFp);
         const obj11 = { label: ConjureDebugLabels.debugEnvLabel("preview"), value: null };
         let str2 = "\u2014";
         let str3 = "\u2014";

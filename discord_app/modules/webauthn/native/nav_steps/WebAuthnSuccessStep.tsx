@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnSuccessStep.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function WebAuthnSuccessStep() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { onGenerate: null, headerLabel: null };
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => {
+  : function WebAuthnSuccessStep() {
       const obj = { onGenerate: null, headerLabel: null };
       const intl = util.intl;
       obj.headerLabel = intl.format(util.t.iVTs6i, {});

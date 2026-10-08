@@ -6,7 +6,7 @@ import native from "../../../../design/void/native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
 import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import GuildPowerupsImageDefault from "GuildPowerupsImage.tsx";
 import GuildPowerupsCardFooter from "GuildPowerupsCardFooter.tsx";
@@ -29,7 +29,7 @@ let closure_3 = [
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { marginHorizontal: nativeDefault.space.PX_16 },
   card: { padding: 0, overflow: "hidden" },
@@ -54,7 +54,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsPerkCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildPowerupsPerkCard(arg0) {
       const cResult = c.c(62);
       if (cResult[0] !== arg0) {
         ({ title, description, imageUrl, isImageAnimated, riveComponent, style, onPress, status, badge } = arg0);
@@ -325,7 +325,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult2 = ManaTypeConsolidationExperiment;
     }
-  : (arg0) => {
+  : function GuildPowerupsPerkCard(arg0) {
       ({ imageUrl, isImageAnimated } = arg0);
       ({ title, description } = arg0);
       if (isImageAnimated === undefined) {

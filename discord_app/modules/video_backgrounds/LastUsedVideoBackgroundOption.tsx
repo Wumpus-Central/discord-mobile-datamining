@@ -7,7 +7,7 @@ import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx"
 import UserStore from "../../stores/UserStore.tsx";
 
 const initialize = obj(504);
-const VideoBackgroundUtils = obj(8090);
+const VideoBackgroundUtils = obj(5257);
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -30,7 +30,7 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
   return tmp5;
 };
 export const useLastUsedVideoBackgroundOption = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useLastUsedVideoBackgroundOption() {
       let obj = require;
       let result = dependencyMap;
       const cResult = c.c(12);
@@ -64,12 +64,14 @@ export const useLastUsedVideoBackgroundOption = ReactCompilerGating.isReactCompi
       const stateFromStores1 = initialize.useStateFromStores(tmp7, tmp8);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [UserStore];
-        const fn3 = function k() {
-          return currentUser.getCurrentUser();
-        };
+        class S {
+          constructor() {
+            return closure_1_6.getCurrentUser();
+          }
+        }
         cResult[4] = items2;
-        cResult[5] = fn3;
-        let tmp12 = fn3;
+        cResult[5] = S;
+        let tmp12 = S;
         let tmp11 = items2;
       } else {
         tmp11 = cResult[4];
@@ -84,25 +86,40 @@ export const useLastUsedVideoBackgroundOption = ReactCompilerGating.isReactCompi
         }
         if (!objResult6.isCustomBackgroundOption(stateFromStores)) {
           if (typeof stateFromStores !== "number") {
-            let tmp18 = stateFromStores;
+            let tmp19 = stateFromStores;
           } else {
             obj = VideoBackgroundUtils;
             result = obj.isDefaultBackgroundOption(stateFromStores);
-            tmp18 = null;
+            tmp19 = null;
+            class S {
+              constructor() {
+                return closure_1_6.getCurrentUser();
+              }
+            }
           }
-          let tmp17 = tmp18;
+          let tmp18 = tmp19;
         } else {
           PremiumUtilsDefault;
-          tmp17 = null;
+          tmp18 = null;
+          class S {
+            constructor() {
+              return closure_1_6.getCurrentUser();
+            }
+          }
+        }
+        class S {
+          constructor() {
+            return closure_1_6.getCurrentUser();
+          }
         }
         cResult[6] = stateFromStores;
         cResult[7] = stateFromStores2;
-        cResult[8] = tmp17;
+        cResult[8] = tmp18;
         objResult6 = VideoBackgroundUtils;
       }
       const objResult5 = initialize;
     }
-  : () => {
+  : function useLastUsedVideoBackgroundOption() {
       const items = [UnsyncedUserSettingsStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () => videoBackground.videoBackground);
       let obj = stateFromStores(504);

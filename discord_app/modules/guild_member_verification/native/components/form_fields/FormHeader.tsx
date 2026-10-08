@@ -9,7 +9,7 @@ import TextStyles from "../../../../rebrand/native/TextStyles.tsx";
 require = fn;
 let closure_2 = ["children"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { fieldHeader: null };
 const obj3 = {};
 let merged = Object.assign(
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function FormHeader(children) {
       const cResult = c.c(10);
       if (cResult[0] !== children) {
         children = children.children;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items;
       tmp10 = items;
     }
-  : (children) => {
+  : function FormHeader(children) {
       const merged = Object.assign(children, Object.assign({ children: 0 }));
       const obj = {};
       const merged1 = Object.assign(merged);

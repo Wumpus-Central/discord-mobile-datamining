@@ -4,13 +4,13 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import AppIconDefault from "AppIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const AppIconTypes = ClydeIcon(8859);
-const ClydeIcon2 = ClydeIcon(10560);
-const AppIconUtils = ClydeIcon(13280);
+const AppIconTypes = ClydeIcon(9402);
+const ClydeIcon2 = ClydeIcon(10157);
+const AppIconUtils = ClydeIcon(13581);
 require = fn;
-const getIconById = fn(8858).getIconById;
+const getIconById = fn(9401).getIconById;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { icon: { borderRadius: nativeDefault.radii.round } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -19,7 +19,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/SettingsItemAppIcon.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (color) => {
+  ? function SettingsItemAppIcon(color) {
       let ClydeIcon = require;
       let tmp = dependencyMap;
       const cResult = c.c(5);
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       tmp6 = getIconById(currentAppIcon);
     }
-  : (color) => {
+  : function SettingsItemAppIcon(color) {
       let INTERACTIVE_ICON_DEFAULT = color.color;
       if (INTERACTIVE_ICON_DEFAULT === undefined) {
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;

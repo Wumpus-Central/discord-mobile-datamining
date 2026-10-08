@@ -3,6 +3,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import AgeGateConstants from "AgeGateConstants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import trackAgeGateSubmittedDefault from "../auth/experiment/trackAgeGateSubmitted.tsx";
+import formatDateForAPIDefault from "../date/formatDateForAPI.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -12,15 +13,15 @@ const AgeGateAnalyticAction = AgeGateConstants.AgeGateAnalyticAction;
 ({ AnalyticEvents: closure_4, Endpoints: hasOwnProperty } = Constants);
 const result = size.fileFinishedImporting("modules/age_gate/AgeGateActionCreators.tsx");
 
-export const submitDateOfBirth = function submitDateOfBirth(format, source) {
+export const submitDateOfBirth = function submitDateOfBirth(arg0, source) {
   _require = source;
-  trackAgeGateSubmittedDefault(format, source);
+  trackAgeGateSubmittedDefault(arg0, source);
   AnalyticsUtilsDefault.track(constants.AGE_GATE_ACTION, { source, action: AgeGateAnalyticAction.AGE_GATE_SUBMITTED });
   const HTTP = require("HTTPUtils").HTTP;
   const request = { url: constants2.ME, oldFormErrors: true, body: null, rejectWithError: false };
   const obj2 = { source, action: AgeGateAnalyticAction.AGE_GATE_SUBMITTED };
-  request.body = { date_of_birth: format.format("YYYY-MM-DD") };
-  const obj3 = { date_of_birth: format.format("YYYY-MM-DD") };
+  request.body = { date_of_birth: formatDateForAPIDefault(arg0) };
+  const obj3 = { date_of_birth: formatDateForAPIDefault(arg0) };
   return HTTP.patch(request).then((user) => {
     DispatcherDefault.dispatch({ type: "CURRENT_USER_UPDATE", user: user.body });
     AnalyticsUtilsDefault.track(constants.AGE_GATE_ACTION, { source, action: AgeGateAnalyticAction.AGE_GATE_SUCCESS });

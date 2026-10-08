@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileGameClaimCta.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (trackAction) => {
+  ? function GameProfileGameClaimCta(trackAction) {
       let Button = _require;
       let tmp = dependencyMap;
       const cResult = require("c").c(5);
@@ -45,13 +45,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  v3(v3(8352).GameProfileTrackActionActions.ClaimGame);
+                  v3(v3(8850).GameProfileTrackActionActions.ClaimGame);
                   c1 = 1;
                   v3 = 1;
                   const obj4 = {
                     value: MobileWebHandoffLinkingDefault.redirectDeveloperPortalWithHandoffToken(
                       constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                      v3(6834).LoginHandoffSource.GAME_CLAIM,
+                      v3(7028).LoginHandoffSource.GAME_CLAIM,
                     ),
                     done: false,
                   };
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         });
-        const fn = function () {
+        function t1() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -83,17 +83,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[0] = trackAction;
-        cResult[1] = fn;
-        let tmp3 = fn;
+        cResult[1] = t1;
+        let tmp3 = t1;
       } else {
         tmp3 = cResult[1];
       }
       const linkedApplications = trackAction.game.linkedApplications;
       let someResult;
       if (linkedApplications != null) {
-        someResult = linkedApplications.some((type) => type.type === closure_0(1985).GameLinkTypes.OFFICIAL);
+        someResult = linkedApplications.some((type) => type.type === closure_0(1997).GameLinkTypes.OFFICIAL);
       }
       if (someResult != null) {
         if (someResult) {
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       if (cResult[3] !== tmp3) {
-        Button = Button(5601).Button;
+        Button = Button(5375).Button;
         let obj2 = { variant: "secondary", size: "md", text: tmp7, onPress: tmp3 };
         tmp = <Button variant="secondary" size="md" text={tmp7} onPress={tmp3} />;
         cResult[3] = tmp3;
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = require("c");
     }
-  : (trackAction) => {
+  : function GameProfileGameClaimCta(trackAction) {
       trackAction = trackAction.trackAction;
       const items = [trackAction];
       const linkedApplications = trackAction.game.linkedApplications;
@@ -148,13 +148,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  trackAction(v3(8352).GameProfileTrackActionActions.ClaimGame);
+                  trackAction(v3(8850).GameProfileTrackActionActions.ClaimGame);
                   v1 = 1;
                   v3 = 1;
                   const obj4 = {
-                    value: v1(6830).redirectDeveloperPortalWithHandoffToken(
+                    value: v1(7024).redirectDeveloperPortalWithHandoffToken(
                       constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                      v3(6834).LoginHandoffSource.GAME_CLAIM,
+                      v3(7028).LoginHandoffSource.GAME_CLAIM,
                     ),
                     done: false,
                   };
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl = trackAction(1126).intl;
         obj.text = intl.string(trackAction(1126).t["mqg+to"]);
         obj.onPress = callback;
-        let tmp3 = jsx(trackAction(5601).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+        let tmp3 = jsx(trackAction(5375).Button, { variant: "secondary", size: "md", text: null, onPress: null });
       } else {
         tmp3 = null;
       }

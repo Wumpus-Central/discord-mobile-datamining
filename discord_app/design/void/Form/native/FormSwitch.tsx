@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const Switch = fn(17).Switch;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { switch: { marginVertical: -5 }, track: { color: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormSwitch.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (tintColor) => {
+  ? function FormSwitch(tintColor) {
       const cResult = c.c(20);
       ({
         value,
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = obj4;
       tmp9 = useThemeDefault();
     }
-  : (value) => {
+  : function FormSwitch(value) {
       value = value.value;
       const disabled = value.disabled;
       ({ borderColor, renderIosBackground } = value);

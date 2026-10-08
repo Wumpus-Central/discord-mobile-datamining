@@ -12,7 +12,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (bottomInset) => {
+  ? function ManaToastSurface(bottomInset) {
       const cResult = c.c(5);
       bottomInset = bottomInset.bottomInset;
       const top = useSafeAreaInsetsDefault().top;
@@ -37,7 +37,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = rect;
       tmp4 = rect;
     }
-  : (bottomInset) => {
+  : function ManaToastSurface(bottomInset) {
       bottomInset = bottomInset.bottomInset;
       const top = useSafeAreaInsetsDefault().top;
       const items = [top, bottomInset];
@@ -49,7 +49,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AppChromeToastSurface() {
       const cResult = c.c(2);
       const mobileQuestDockHeight = QuestHooks.useMobileQuestDockHeight();
       const sum = mobileQuestDockHeight + useYouBarTotalHeight.useYouBarTotalHeight();
@@ -64,7 +64,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : () => {
+  : function AppChromeToastSurface() {
       const mobileQuestDockHeight = QuestHooks.useMobileQuestDockHeight();
       return React4(closure_7, { bottomInset: mobileQuestDockHeight + useYouBarTotalHeight.useYouBarTotalHeight() });
     };
@@ -73,7 +73,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/toast/native/AppToastContainer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (appChrome) => {
+  ? function AppToastContainer(appChrome) {
       const cResult = c.c(3);
       appChrome = appChrome.appChrome;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return cResult[2];
       }
     }
-  : (appChrome) => {
+  : function AppToastContainer(appChrome) {
       let flag = appChrome.appChrome;
       if (flag === undefined) {
         flag = true;

@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/settings/native/routes/RedesignSettingsNotificationScreen.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef2847 from "../../../NotificationSettings.messages.js";
+import _modDef2891 from "../../../NotificationSettings.messages.js";
 import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import SettingBuilders from "../../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../../settings/native/renderer/SettingLayout.tsx";
@@ -11,8 +11,8 @@ import MobileNotifSettingsRouteBuilders from "../MobileNotifSettingsRouteBuilder
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(15320).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(7645).MobileUserSettings;
+let closure_4 = fn(15582).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -22,7 +22,7 @@ let result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function RedesignSettingsNotificationsScreen() {
         const cResult = c.c(6);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { location: "SettingsNotificationsScreen" };
@@ -38,7 +38,7 @@ export default noop.memo(
           const items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection()];
           const obj5 = { label: null, settings: null };
           const intl = util.intl;
-          obj5.label = intl.string(_modDef2847.nvBHcD);
+          obj5.label = intl.string(_modDef2891.nvBHcD);
           const items1 = [, , , , , ,];
           ({
             REDESIGN_IN_APP_NOTIFICATIONS: arr2[0],
@@ -112,7 +112,7 @@ export default noop.memo(
         }
         return tmp13;
       }
-    : () => {
+    : function RedesignSettingsNotificationsScreen() {
         const tmp = !ContextualOptInNudgeHoldoutExperimentDefault.useConfig({ location: "SettingsNotificationsScreen" })
           .inHoldout;
         closure_0 = tmp;
@@ -123,7 +123,7 @@ export default noop.memo(
           const items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection()];
           const obj4 = { label: null, settings: null };
           const intl = util.intl;
-          obj4.label = intl.string(_modDef2847.nvBHcD);
+          obj4.label = intl.string(_modDef2891.nvBHcD);
           const items1 = [, , , , , ,];
           ({
             REDESIGN_IN_APP_NOTIFICATIONS: arr2[0],

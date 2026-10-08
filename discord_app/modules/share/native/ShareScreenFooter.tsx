@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareScreenFooter.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (appEntryKey) => {
+  ? function ShareScreenFooter(appEntryKey) {
       const cResult = c.c(20);
       ({ text, setText, preview, sendLabel, canSend, isSending, onSend, disabled } = appEntryKey);
       let tmp4 = undefined !== disabled;
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp9;
       const tmpResult = useShareChatInputActions;
     }
-  : (arg0) => {
+  : function ShareScreenFooter(arg0) {
       ({ setText, canSend, isSending, onSend, disabled } = arg0);
       ({ text, preview, sendLabel, appEntryKey } = arg0);
       if (disabled === undefined) {

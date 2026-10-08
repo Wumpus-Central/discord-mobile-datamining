@@ -16,7 +16,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const constants = { REQUEST: "REQUEST", SPAM: "SPAM" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   messageRequestContent: { flex: 1 },
@@ -34,13 +34,13 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (navigation) => {
+    ? function MessageRequestsScreenWithTabs(navigation) {
         const cResult = c.c(30);
         navigation = navigation.navigation;
         const tmp4 = closure_9();
         [tmp6, importDefault] = noop.useState(0);
         if (cResult[0] !== navigation) {
-          const fn = function v(channelId) {
+          const fn = function b(channelId) {
             return navigation.push("preview", { channelId });
           };
           cResult[0] = navigation;
@@ -185,7 +185,7 @@ export default noop.memo(
         tmp21 = items1;
         const tmp5 = _slicedToArray(noop.useState(0), 2);
       }
-    : (navigation) => {
+    : function MessageRequestsScreenWithTabs(navigation) {
         navigation = navigation.navigation;
         closure_1 = undefined;
         const tmp = closure_9();

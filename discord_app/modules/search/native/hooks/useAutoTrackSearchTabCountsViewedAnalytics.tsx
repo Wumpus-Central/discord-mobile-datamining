@@ -1,15 +1,15 @@
 // discord_app/modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx
-import search_tracking_TrackingDefault from "../tracking/Tracking.tsx";
+import tracking_TrackingDefault from "../tracking/Tracking.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const SearchTabs = fn(7524).SearchTabs;
+const SearchTabs = fn(9247).SearchTabs;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx");
 
 export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.isReactCompilerEnabled()
-  ? (searchContext) => {
+  ? function useAutoTrackSearchTabCountsViewedAnalytics(searchContext) {
       const cResult = searchContext(visibleTabs[3]).c(7);
       searchContext = searchContext.searchContext;
       const visibleTabCounts = searchContext.visibleTabCounts;
@@ -163,7 +163,7 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
       tmp6 = items1;
       tmp5 = fn2;
     }
-  : (searchContext) => {
+  : function useAutoTrackSearchTabCountsViewedAnalytics(searchContext) {
       searchContext = searchContext.searchContext;
       const visibleTabCounts = searchContext.visibleTabCounts;
       const visibleTabs = searchContext.visibleTabs;
@@ -282,7 +282,7 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               tmp20 = tmp22;
             }
             obj2.numLinkTabReturnedResults = tmp20;
-            const result = search_tracking_TrackingDefault.trackSearchResultReturned(obj2);
+            const result = tracking_TrackingDefault.trackSearchResultReturned(obj2);
           }
         }
       }, items1);

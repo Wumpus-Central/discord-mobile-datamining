@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileMutuals.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useUserProfileMutuals(id) {
       _require = id;
       let tmp = _require;
       const cResult = require("c").c(22);
@@ -64,14 +64,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = tmp(stateFromStores1[7]).useStateFromStores(tmp11, tmp12);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [SortedGuildStore];
-        class P {
+        class G {
           constructor() {
             return closure_1_6.getFlattenedGuildIds();
           }
         }
         cResult[5] = items2;
-        cResult[6] = P;
-        let tmp16 = P;
+        cResult[6] = G;
+        let tmp16 = G;
         let tmp15 = items2;
       } else {
         tmp15 = cResult[5];
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp18 = arr2;
         if (arr2.length >= 2) {
           if (cResult[7] !== stateFromStores) {
-            class B {
+            class A {
               constructor(arg0) {
                 value = closure_1.get(id.user.id);
                 num = undefined;
@@ -98,14 +98,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[7] = stateFromStores;
-            class P {
+            class G {
               constructor() {
                 return closure_1_6.getFlattenedGuildIds();
               }
             }
-            cResult[8] = B;
+            cResult[8] = A;
           } else {
-            class B {
+            class A {
               constructor(arg0) {
                 value = closure_1.get(id.user.id);
                 num = undefined;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[9] === arr2) {
-            class B {
+            class A {
               constructor(arg0) {
                 value = closure_1.get(id.user.id);
                 num = undefined;
@@ -135,19 +135,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           tmp(tmp2[8]);
-          class P {
+          class G {
             constructor() {
               return closure_1_6.getFlattenedGuildIds();
             }
           }
           cResult[9] = arr2;
-          cResult[10] = B;
+          cResult[10] = A;
           cResult[11] = tmp22;
         }
       }
       let tmp24 = arr3;
       if (null != arr3) {
-        class B {
+        class A {
           constructor(arg0) {
             value = closure_1.get(id.user.id);
             num = undefined;
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp24 = arr3;
         if (arr3.length >= 2) {
-          class B {
+          class A {
             constructor(arg0) {
               value = closure_1.get(id.user.id);
               num = undefined;
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const _Symbol = Symbol;
-          class P {
+          class G {
             constructor() {
               return closure_1_6.getFlattenedGuildIds();
             }
@@ -201,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       stateFromStores(stateFromStores1[9])(tmp18);
       stateFromStores(stateFromStores1[9])(tmp24);
       if (tmp8 == null) {
-        class B {
+        class A {
           constructor(arg0) {
             value = closure_1.get(id.user.id);
             num = undefined;
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (tmp18 == null) {
-        class B {
+        class A {
           constructor(arg0) {
             value = closure_1.get(id.user.id);
             num = undefined;
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (tmp24 == null) {
-        class B {
+        class A {
           constructor(arg0) {
             value = closure_1.get(id.user.id);
             num = undefined;
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[16] === tmp9) {
-        class B {
+        class A {
           constructor(arg0) {
             value = closure_1.get(id.user.id);
             num = undefined;
@@ -281,7 +281,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmpResult5 = tmp(stateFromStores1[7]);
     }
-  : (arg0) => {
+  : function useUserProfileMutuals(arg0) {
       _require = arg0;
       let items = [UserProfileStore];
       const tmp = stateFromStores(

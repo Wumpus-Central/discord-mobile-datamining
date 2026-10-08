@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   editIcon: {
     alignItems: "center",
@@ -32,7 +32,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/EditIcon.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function EditIcon(arg0) {
       const cResult = c.c(9);
       ({ style, size } = arg0);
       let str = "xs";
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = obj4;
       tmp6 = obj4;
     }
-  : (style) => {
+  : function EditIcon(style) {
       style = style.style;
       let str = style.size;
       if (str === undefined) {

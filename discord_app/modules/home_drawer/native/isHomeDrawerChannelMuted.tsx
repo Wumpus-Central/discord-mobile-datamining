@@ -5,13 +5,13 @@ import JoinedThreadsStore from "../../threads/JoinedThreadsStore.tsx";
 import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
-const isThread = fn(2055).isThread;
+const isThread = fn(2067).isThread;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");
 
 export const useIsHomeDrawerChannelMuted = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsHomeDrawerChannelMuted() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [JoinedThreadsStore, UserGuildSettingsStore];
@@ -43,7 +43,7 @@ export const useIsHomeDrawerChannelMuted = ReactCompilerGating.isReactCompilerEn
       }
       return initialize.useStateFromStores(tmp4, tmp5, tmp6, initialize.statesWillNeverBeEqual);
     }
-  : () => {
+  : function useIsHomeDrawerChannelMuted() {
       const items = [JoinedThreadsStore, UserGuildSettingsStore];
       return initialize.useStateFromStores(
         items,

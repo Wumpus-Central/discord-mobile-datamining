@@ -72,7 +72,7 @@ export const ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = {
 };
 export { getJoinFromSupportedPlatformsIconKeys };
 export const useJoinFromSupportedPlatformsIconKeys = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useJoinFromSupportedPlatformsIconKeys(arg0) {
       const cResult = c.c(4);
       ({ platforms, currentPlatform, isGameLaunchable } = arg0);
       if (cResult[0] === currentPlatform) {
@@ -90,7 +90,7 @@ export const useJoinFromSupportedPlatformsIconKeys = ReactCompilerGating.isReact
       cResult[3] = tmp3;
       tmp2 = tmp3;
     }
-  : (platforms) => {
+  : function useJoinFromSupportedPlatformsIconKeys(platforms) {
       platforms = platforms.platforms;
       const currentPlatform = platforms.currentPlatform;
       const isGameLaunchable = platforms.isGameLaunchable;

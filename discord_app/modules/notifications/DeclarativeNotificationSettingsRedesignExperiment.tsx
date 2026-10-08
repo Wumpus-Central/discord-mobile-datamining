@@ -19,7 +19,7 @@ export const isDeclarativeNotificationSettingsRedesignEnabled =
     return closure_2.getConfig({ location: getAssignedNotifSettingsAndMappings }).enabled;
   };
 export const useIsDeclarativeNotificationSettingsRedesignEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsDeclarativeNotificationSettingsRedesignEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -31,4 +31,6 @@ export const useIsDeclarativeNotificationSettingsRedesignEnabled = ReactCompiler
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useIsDeclarativeNotificationSettingsRedesignEnabled(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };

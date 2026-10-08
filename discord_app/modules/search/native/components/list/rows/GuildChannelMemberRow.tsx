@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildChannelMemberRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildChannelMemberRow(arg0) {
       const cResult = c.c(2);
       if (cResult[0] !== arg0) {
         const obj2 = {};
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : (arg0) => {
+  : function GuildChannelMemberRow(arg0) {
       const merged = Object.assign(arg0);
       return jsx(UserRowDefault, {});
     };

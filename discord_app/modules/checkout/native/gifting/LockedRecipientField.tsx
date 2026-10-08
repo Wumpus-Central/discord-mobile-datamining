@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flexDirection: "row", alignItems: "center", marginLeft: nativeDefault.space.PX_16 },
   avatar: null,
@@ -24,7 +24,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkout/native/gifting/LockedRecipientField.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function LockedRecipientField(user) {
       const cResult = c.c(11);
       user = user.user;
       const tmp4 = closure_6();
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp7;
       tmp6 = tmp7;
     }
-  : (user) => {
+  : function LockedRecipientField(user) {
       user = user.user;
       const tmp = closure_6();
       const obj = { style: tmp.container, children: null };

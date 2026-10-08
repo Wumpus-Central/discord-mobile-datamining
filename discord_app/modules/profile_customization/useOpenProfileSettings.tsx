@@ -16,7 +16,7 @@ let closure_5 = UserSettingsConstants.ProfileCustomizationSubsection;
 const result = size.fileFinishedImporting("modules/profile_customization/useOpenProfileSettings.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useOpenProfileSettings(arg0) {
       const cResult = guild(scrollPosition[7]).c(7);
       if (cResult[0] !== arg0) {
         let obj2 = arg0;
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = fn;
       tmp6 = fn;
     }
-  : () => {
+  : function useOpenProfileSettings() {
       let obj = arg0;
       if (arg0 === undefined) {
         obj = {};

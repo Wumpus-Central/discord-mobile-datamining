@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 },
   label: null,
@@ -40,7 +40,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/tooling/ShopSkipCategoriesFilter.tsx");
 
 export const ShopSkipCategoriesFilter = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ShopSkipCategoriesFilter() {
       const cResult = stateFromStores(576).c(38);
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -58,32 +58,32 @@ export const ShopSkipCategoriesFilter = ReactCompilerGating.isReactCompilerEnabl
       let obj = stateFromStores(576);
       stateFromStores = stateFromStores(504).useStateFromStores(tmp5, tmp6);
       if (cResult[2] !== stateFromStores) {
-        const fn2 = function x() {
+        function handleDecrement() {
           if (stateFromStores > 0) {
             CollectiblesActionCreators.setSkipNumCategories(tmp - 1);
           }
-        };
+        }
         cResult[2] = stateFromStores;
-        cResult[3] = fn2;
-        let tmp9 = fn2;
+        cResult[3] = handleDecrement;
+        let tmp9 = handleDecrement;
       } else {
         tmp9 = cResult[3];
       }
       if (cResult[4] !== stateFromStores) {
-        const fn3 = function y() {
+        function handleIncrement() {
           if (stateFromStores < 100) {
             CollectiblesActionCreators.setSkipNumCategories(tmp + 1);
           }
-        };
+        }
         cResult[4] = stateFromStores;
-        cResult[5] = fn3;
-        let tmp10 = fn3;
+        cResult[5] = handleIncrement;
+        let tmp10 = handleIncrement;
       } else {
         tmp10 = cResult[5];
       }
       if (cResult[6] !== tmp4.label) {
         const obj2 = { variant: "text-md/normal", style: tmp4.label, children: "Hide first # of categories" };
-        const tmp15 = closure_5(tmp(4892).Text, obj2);
+        const tmp15 = closure_5(tmp(5086).Text, obj2);
         cResult[6] = tmp4.label;
         cResult[7] = tmp15;
         let tmp13 = tmp15;
@@ -100,7 +100,7 @@ export const ShopSkipCategoriesFilter = ReactCompilerGating.isReactCompilerEnabl
         }
         const _Symbol = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp19 = closure_5(tmp(4892).Text, { variant: "text-lg/semibold", children: "\u2212" });
+          const tmp19 = closure_5(tmp(5086).Text, { variant: "text-lg/semibold", children: "\u2212" });
           cResult[11] = tmp19;
           let tmp17 = tmp19;
         } else {
@@ -125,7 +125,7 @@ export const ShopSkipCategoriesFilter = ReactCompilerGating.isReactCompilerEnabl
                 }
                 const _Symbol2 = Symbol;
                 if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmp30 = closure_5(tmp(4892).Text, { variant: "text-lg/semibold", children: "+" });
+                  const tmp30 = closure_5(tmp(5086).Text, { variant: "text-lg/semibold", children: "+" });
                   cResult[22] = tmp30;
                   let tmp28 = tmp30;
                 } else {
@@ -162,7 +162,7 @@ export const ShopSkipCategoriesFilter = ReactCompilerGating.isReactCompilerEnabl
                           const obj4 = { spacing: 8, children: null };
                           const items1 = [tmp13, tmp35];
                           obj4.children = items1;
-                          const tmp41 = closure_6(tmp(5600).Stack, obj4);
+                          const tmp41 = closure_6(tmp(5373).Stack, obj4);
                           cResult[32] = tmp35;
                           cResult[33] = tmp13;
                           cResult[34] = tmp41;
@@ -197,7 +197,7 @@ export const ShopSkipCategoriesFilter = ReactCompilerGating.isReactCompilerEnabl
               tmp27 = items3;
             }
             const obj7 = { variant: "text-md/semibold", style: tmp4.valueText, children: stateFromStores };
-            const tmp26 = closure_5(tmp(4892).Text, obj7);
+            const tmp26 = closure_5(tmp(5086).Text, obj7);
             cResult[16] = stateFromStores;
             cResult[17] = tmp4.valueText;
             cResult[18] = tmp26;
@@ -219,13 +219,13 @@ export const ShopSkipCategoriesFilter = ReactCompilerGating.isReactCompilerEnabl
       tmp16 = items4;
       const tmpResult = stateFromStores(504);
     }
-  : () => {
+  : function ShopSkipCategoriesFilter() {
       const tmp = closure_7();
       const items = [CollectiblesCategoryStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () => skipNumCategories.skipNumCategories);
       const obj2 = { style: tmp.container, children: null };
       const items1 = [
-        closure_5(stateFromStores(4892).Text, {
+        closure_5(stateFromStores(5086).Text, {
           variant: "text-md/normal",
           style: tmp.label,
           children: "Hide first # of categories",
@@ -243,15 +243,15 @@ export const ShopSkipCategoriesFilter = ReactCompilerGating.isReactCompilerEnabl
       const items3 = [
         closure_5(closure_3, {
           style: items2,
-          onPress() {
+          onPress: function handleDecrement() {
             if (stateFromStores > 0) {
               CollectiblesActionCreators.setSkipNumCategories(tmp - 1);
             }
           },
           disabled: stateFromStores <= 0,
-          children: closure_5(stateFromStores(4892).Text, { variant: "text-lg/semibold", children: "\u2212" }),
+          children: closure_5(stateFromStores(5086).Text, { variant: "text-lg/semibold", children: "\u2212" }),
         }),
-        closure_5(stateFromStores(4892).Text, {
+        closure_5(stateFromStores(5086).Text, {
           variant: "text-md/semibold",
           style: tmp.valueText,
           children: stateFromStores,
@@ -265,29 +265,29 @@ export const ShopSkipCategoriesFilter = ReactCompilerGating.isReactCompilerEnabl
       const obj7 = { spacing: 8, children: null };
       const obj5 = {
         style: items2,
-        onPress() {
+        onPress: function handleDecrement() {
           if (stateFromStores > 0) {
             CollectiblesActionCreators.setSkipNumCategories(tmp - 1);
           }
         },
         disabled: stateFromStores <= 0,
-        children: closure_5(stateFromStores(4892).Text, { variant: "text-lg/semibold", children: "\u2212" }),
+        children: closure_5(stateFromStores(5086).Text, { variant: "text-lg/semibold", children: "\u2212" }),
       };
       const obj6 = { variant: "text-md/semibold", style: tmp.valueText, children: stateFromStores };
       items4[1] = stepperButtonDisabled2;
       items3[2] = closure_5(closure_3, {
         style: items4,
-        onPress() {
+        onPress: function handleIncrement() {
           if (stateFromStores < 100) {
             CollectiblesActionCreators.setSkipNumCategories(tmp + 1);
           }
         },
         disabled: stateFromStores >= 100,
-        children: closure_5(stateFromStores(4892).Text, { variant: "text-lg/semibold", children: "+" }),
+        children: closure_5(stateFromStores(5086).Text, { variant: "text-lg/semibold", children: "+" }),
       });
       obj4.children = items3;
       items1[1] = closure_6(closure_2, obj4);
       obj7.children = items1;
-      obj2.children = closure_6(stateFromStores(5600).Stack, obj7);
+      obj2.children = closure_6(stateFromStores(5373).Stack, obj7);
       return closure_5(closure_2, obj2);
     };

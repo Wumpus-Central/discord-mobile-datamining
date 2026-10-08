@@ -10,7 +10,7 @@ require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let closure_3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ChannelSubtitle(arg0) {
       const cResult = c.c(15);
       ({ muted, connected, channelId, guildId, layout, subtitle, textProps } = arg0);
       if (cResult[0] === channelId) {
@@ -97,7 +97,7 @@ let closure_3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = Text;
       const tmpResult = getChannelSubtitleData;
     }
-  : (arg0) => {
+  : function ChannelSubtitle(arg0) {
       ({ muted, textProps } = arg0);
       ({ connected, channelId, guildId, layout, subtitle } = arg0);
       const channelSubtitleData = getChannelSubtitleData.getChannelSubtitleData(subtitle);

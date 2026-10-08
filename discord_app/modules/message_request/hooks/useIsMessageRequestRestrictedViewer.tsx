@@ -7,7 +7,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/message_request/hooks/useIsMessageRequestRestrictedViewer.tsx");
 
 export const useIsMessageRequestRestrictedViewer = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsMessageRequestRestrictedViewer() {
       const isVerifiedAdult = AgeVerificationUtils.useIsVerifiedAdult();
       let isSettingTeenByDefault = !isVerifiedAdult;
       if (!isVerifiedAdult) {
@@ -17,7 +17,7 @@ export const useIsMessageRequestRestrictedViewer = ReactCompilerGating.isReactCo
       }
       return isSettingTeenByDefault;
     }
-  : () => {
+  : function useIsMessageRequestRestrictedViewer() {
       const isVerifiedAdult = AgeVerificationUtils.useIsVerifiedAdult();
       let isSettingTeenByDefault = !isVerifiedAdult;
       if (!isVerifiedAdult) {

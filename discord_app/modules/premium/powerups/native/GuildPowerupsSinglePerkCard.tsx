@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSinglePerkCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildPowerupsSinglePerkCard(arg0) {
       const cResult = c.c(8);
       ({ guildId, powerup, badge } = arg0);
       const tmp4 = useGetGuildPowerupBannerImageDefault(powerup, true);
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         badge,
       };
     }
-  : (badge) => {
+  : function GuildPowerupsSinglePerkCard(badge) {
       ({ guildId, powerup } = badge);
       let str = useGetGuildPowerupBannerImageDefault(powerup, true);
       const tmp = usePowerupActiveStatusDefault(guildId, powerup);

@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/billing/experiments/GiftCards
 
 export default apexExperiment;
 export const useGiftCardsExperimentConfig = ReactCompilerGating.isReactCompilerEnabled()
-  ? (cResult) => {
+  ? function useGiftCardsExperimentConfig(cResult) {
       cResult = c.c(2);
       const config = apexExperiment.useConfig(cResult);
       if (cResult[0] !== config.enabled) {
@@ -26,4 +26,6 @@ export const useGiftCardsExperimentConfig = ReactCompilerGating.isReactCompilerE
       }
       return tmp3;
     }
-  : (cResult) => ({ enabled: apexExperiment.useConfig(cResult).enabled });
+  : function useGiftCardsExperimentConfig(cResult) {
+      return { enabled: apexExperiment.useConfig(cResult).enabled };
+    };

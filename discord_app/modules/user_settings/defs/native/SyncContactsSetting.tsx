@@ -9,9 +9,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 const PlatformTypes = fn(1085).PlatformTypes;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useContactSyncSettingValue() {
       const cResult = c.c(2);
       const contactSyncAccount = ContactSyncUtils.useContactSyncAccount();
       if (cResult[0] !== contactSyncAccount) {
@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function useContactSyncSettingValue() {
       const contactSyncAccount = ContactSyncUtils.useContactSyncAccount();
       return ContactSyncUtils.isContactSyncEnabled(contactSyncAccount);
     };
@@ -34,9 +34,9 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.uSvEy7);
   },
-  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7966).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useContactSyncSettingValue() {
         const cResult = c.c(2);
         const contactSyncAccount = ContactSyncUtils.useContactSyncAccount();
         if (cResult[0] !== contactSyncAccount) {
@@ -50,7 +50,7 @@ const toggle = SettingBuilders.createToggle({
         }
         return tmp5;
       }
-    : () => {
+    : function useContactSyncSettingValue() {
         const contactSyncAccount = ContactSyncUtils.useContactSyncAccount();
         return ContactSyncUtils.isContactSyncEnabled(contactSyncAccount);
       },

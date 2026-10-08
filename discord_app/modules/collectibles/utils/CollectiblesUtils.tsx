@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/utils/CollectiblesUtils.tsx
 import c from "../../../../_runtime/00576_c.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
-import StreamSettingsConstants from "../../go_live/StreamSettingsConstants.tsx";
 import BaseConnectionEvent from "../../../../discord_common/js/packages/media-engine/index.tsx";
+import StreamSettingsConstants from "../../go_live/StreamSettingsConstants.tsx";
 import useFractionalPremiumInfoDefault from "../../billing/hooks/useFractionalPremiumInfo.tsx";
 import ShopVariantsReturnStyle from "../../../../discord_common/js/shared/shared-constants/ShopVariantsReturnStyle.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
@@ -78,7 +78,7 @@ export const getOptimizedProfileEffectThumbnailUrl = function getOptimizedProfil
   }
 };
 export const useFetchFractionalPremiumInfo = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useFetchFractionalPremiumInfo() {
       const cResult = c.c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { forceFetch: true };
@@ -116,7 +116,7 @@ export const useFetchFractionalPremiumInfo = ReactCompilerGating.isReactCompiler
       cResult[6] = obj3;
       tmp9 = obj3;
     }
-  : () => {
+  : function useFetchFractionalPremiumInfo() {
       const tmp = useFractionalPremiumInfoDefault({ forceFetch: true });
       return {
         isLoading: !tmp.fetched,

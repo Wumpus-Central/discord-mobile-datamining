@@ -1,8 +1,8 @@
 // discord_app/modules/guild_onboarding_home/OnboardingHomeUtils.tsx
 import FavoritesUtils from "../favorites/FavoritesUtils.tsx";
-import guildHasOnboardingHomeDefault from "guildHasOnboardingHome.tsx";
 import GuildOnboardingUtils from "../guild_onboarding/GuildOnboardingUtils.tsx";
 import useIsNewMemberDefault from "useIsNewMember.tsx";
+import guildHasOnboardingHomeDefault from "guildHasOnboardingHome.tsx";
 import ImpersonateStore from "../impersonate/ImpersonateStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
@@ -13,13 +13,13 @@ const require = globalThis.__r;
 require = fn;
 const Constants = fn(1085);
 ({ GuildFeatures: closure_7, ME: closure_8 } = Constants);
-const ChannelFlags = fn(2058).ChannelFlags;
+const ChannelFlags = fn(2070).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding_home/OnboardingHomeUtils.tsx");
 
 export const useCanSeeOnboardingHome = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanSeeOnboardingHome(arg0) {
       _require = arg0;
       const cResult = require("c").c(5);
       const tmp4 = useIsNewMemberDefault(arg0);
@@ -110,7 +110,7 @@ export const useCanSeeOnboardingHome = ReactCompilerGating.isReactCompilerEnable
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0) => {
+  : function useCanSeeOnboardingHome(arg0) {
       _require = arg0;
       const tmp = useIsNewMemberDefault(arg0);
       importDefault = tmp;

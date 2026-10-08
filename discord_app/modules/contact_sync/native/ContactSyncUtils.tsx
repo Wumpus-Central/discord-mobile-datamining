@@ -8,8 +8,8 @@ import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx"
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
-import TrackedHTTPUtilsDefault from "../../../utils/TrackedHTTPUtils.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import TrackedHTTPUtilsDefault from "../../../utils/TrackedHTTPUtils.tsx";
 import ContactSyncManager from "ContactSyncManager.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ConnectedAccountsStore from "../../../stores/ConnectedAccountsStore.tsx";
@@ -112,13 +112,13 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(12343);
+const ContactSyncPersistedStore = fn(12439);
 ({
   useContactSyncStore: metroRequire,
   clearDismissState: closure_7,
   deleteStoredContacts: closure_8,
 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(12342);
+const ContactSyncConstants = fn(12438);
 ({
   CONTACT_SYNC_MODAL_KEY: closure_9,
   ContactPermissions: c10,
@@ -137,7 +137,7 @@ const error2 = new Error("Failed to fetch contact image");
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useContactSyncAccount() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConnectedAccountsStore];
@@ -153,13 +153,13 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useContactSyncAccount() {
       const items = [ConnectedAccountsStore];
       return initialize.useStateFromStores(items, () => localAccount.getLocalAccount(constants.CONTACTS));
     };
 ReactCompilerGating = fn(558);
 const tmp9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useContactSyncEnabled() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConnectedAccountsStore];
@@ -176,7 +176,7 @@ const tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useContactSyncEnabled() {
       const items = [ConnectedAccountsStore];
       return initialize.useStateFromStores(items, () => {
         localAccount = localAccount.getLocalAccount(constants.CONTACTS);
@@ -341,7 +341,7 @@ export const getStoredContacts = function getStoredContacts() {
 export const useContactSyncAccount = tmp8;
 export const useContactSyncEnabled = tmp9;
 export const useContactSyncUserIsDiscoverable = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useContactSyncUserIsDiscoverable() {
       const cResult = c.c(8);
       const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
       const setting = FriendDiscoverySettings.useSetting();
@@ -382,7 +382,7 @@ export const useContactSyncUserIsDiscoverable = ReactCompilerGating.isReactCompi
       cResult[7] = obj2;
       tmp12 = obj2;
     }
-  : () => {
+  : function useContactSyncUserIsDiscoverable() {
       const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
       const setting = FriendDiscoverySettings.useSetting();
       let hasFlagResult = FlagUtils.hasFlag(setting, constants3.FIND_BY_PHONE);

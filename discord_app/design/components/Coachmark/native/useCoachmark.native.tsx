@@ -1,6 +1,6 @@
 // discord_app/design/components/Coachmark/native/useCoachmark.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import v1 from "../../../../../_runtime/01266_v1.js";
+import v1 from "../../../../../_runtime/01278_v1.js";
 import useTooltip from "../../Tooltip/native/useTooltip.native.tsx";
 import AnimatedCoachmark from "AnimatedCoachmark.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -10,7 +10,7 @@ const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);
 let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAddCoachmark(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       context = noop.useContext(require("LayerContext").LayerContext);
@@ -32,7 +32,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp3 = fn;
     }
-  : (arg0) => {
+  : function useAddCoachmark(arg0) {
       _require = arg0;
       context = noop.useContext(require("LayerContext").LayerContext);
       const items = [context, arg0];
@@ -48,7 +48,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Coachmark/native/useCoachmark.native.tsx");
 
 export const useCoachmark = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useCoachmark(arg0, arg1) {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const v4Result = v1.v4();
@@ -62,7 +62,7 @@ export const useCoachmark = ReactCompilerGating.isReactCompilerEnabled()
       const tmp7 = closure_4(arg1);
       return useTooltip.useTooltipHelper(ref, arg0, tmp7);
     }
-  : (arg0, arg1) => {
+  : function useCoachmark(arg0, arg1) {
       const ref = noop.useRef(v1.v4());
       const tmp2 = closure_4(arg1);
       return useTooltip.useTooltipHelper(ref, arg0, tmp2);

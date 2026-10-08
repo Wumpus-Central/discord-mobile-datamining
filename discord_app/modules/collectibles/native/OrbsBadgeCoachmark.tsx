@@ -1,30 +1,29 @@
 // discord_app/modules/collectibles/native/OrbsBadgeCoachmark.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useCoachmark from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
-import _modDef10892 from "../../../../discord_assets/assets/orbs/orbs_badge_asset.png.js";
+import _modDef10543 from "../../../../discord_assets/assets/orbs/orbs_badge_asset.png.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let closure_3 = ["badgeRef"];
-get_ActivityIndicator = fn(17);
-({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let closure_9 = createStyles.createStyles({
+const createStyles = fn(5090);
+let closure_8 = createStyles.createStyles({
   coachmarkImageContainer: { alignItems: "center", justifyContent: "center" },
   coachmarkImage: { width: 80, height: 80 },
   coachmarkDescription: { marginBottom: -10 },
 });
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function OrbsBadgeCoachmarkImg() {
       const cResult = c.c(6);
-      const tmp3 = closure_9();
+      const tmp3 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef10892 };
+        const obj2 = { uri: _modDef10543 };
         cResult[0] = obj2;
         let first = obj2;
       } else {
@@ -32,7 +31,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== tmp3.coachmarkImage) {
         const obj3 = { source: first, style: tmp3.coachmarkImage };
-        const tmp9 = <React5 source={first} style={tmp3.coachmarkImage} />;
+        const tmp9 = jsx(FastImageDefault, { source: first, style: tmp3.coachmarkImage });
         cResult[1] = tmp3.coachmarkImage;
         cResult[2] = tmp9;
         let tmp6 = tmp9;
@@ -45,28 +44,31 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp10;
       }
-      const tmp11 = <timestampProducer style={tmp3.coachmarkImageContainer}>{tmp6}</timestampProducer>;
+      const tmp11 = <View style={tmp3.coachmarkImageContainer}>{tmp6}</View>;
       cResult[3] = tmp3.coachmarkImageContainer;
       cResult[4] = tmp6;
       cResult[5] = tmp11;
       tmp10 = tmp11;
       const obj4 = { style: tmp3.coachmarkImageContainer, children: tmp6 };
     }
-  : () => {
-      const tmp = closure_9();
+  : function OrbsBadgeCoachmarkImg() {
+      const tmp = closure_8();
       const obj = { style: tmp.coachmarkImageContainer, children: null };
-      const obj2 = { source: { uri: _modDef10892 }, style: tmp.coachmarkImage };
-      obj.children = <React5 source={{ uri: _modDef10892 }} style={tmp.coachmarkImage} />;
-      return <timestampProducer style={tmp.coachmarkImageContainer}>{null}</timestampProducer>;
+      const obj2 = { source: null, style: null };
+      const obj3 = { uri: _modDef10543 };
+      obj2.source = obj3;
+      obj2.style = tmp.coachmarkImage;
+      obj.children = jsx(FastImageDefault, { source: null, style: null });
+      return <View style={tmp.coachmarkImageContainer}>{null}</View>;
     };
 fn(558);
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled();
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/OrbsBadgeCoachmark.tsx");
 
 export default function OrbsBadgeCoachmark(badgeRef) {
-  if (closure_11) {
+  if (closure_10) {
     let obj3 = require;
     let coachmark = dependencyMap;
     const cResult = c.c(3);
@@ -82,7 +84,7 @@ export default function OrbsBadgeCoachmark(badgeRef) {
       tmp9 = cResult[1];
       tmp10 = cResult[2];
     }
-    obj3 = obj3(9895);
+    obj3 = obj3(9375);
     coachmark = obj3.useCoachmark(tmp9, tmp10);
   } else {
     const merged = Object.assign(badgeRef, Object.assign({ badgeRef: 0 }));
@@ -91,10 +93,10 @@ export default function OrbsBadgeCoachmark(badgeRef) {
   }
 }
 export const useOrbsBadgeCoachmark = ReactCompilerGating.isReactCompilerEnabled()
-  ? (disabled) => {
+  ? function useOrbsBadgeCoachmark(disabled) {
       const cResult = c.c(11);
       disabled = disabled.disabled;
-      const tmp4 = closure_9();
+      const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
         const stringResult = intl.string(util.t["4ivm+P"]);
@@ -105,7 +107,7 @@ export const useOrbsBadgeCoachmark = ReactCompilerGating.isReactCompilerEnabled(
       }
       if (cResult[1] !== tmp4.coachmarkDescription) {
         const obj2 = { style: tmp4.coachmarkDescription };
-        const tmp10 = <timestampProducer style={tmp4.coachmarkDescription} />;
+        const tmp10 = <View style={tmp4.coachmarkDescription} />;
         cResult[1] = tmp4.coachmarkDescription;
         cResult[2] = tmp10;
         let tmp7 = tmp10;
@@ -113,62 +115,109 @@ export const useOrbsBadgeCoachmark = ReactCompilerGating.isReactCompilerEnabled(
         tmp7 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function p() {
-          const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
-          if (null != rootNavigationRef) {
-            if (rootNavigationRef.isReady()) {
-              rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "r" });
+        class C {
+          constructor() {
+            obj = closure_1_0(closure_1_2[10]);
+            rootNavigationRef = obj.getRootNavigationRef();
+            if (null != rootNavigationRef) {
+              if (rootNavigationRef.isReady()) {
+                setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "create" });
+                return;
+              }
             }
+            return false;
           }
-          return false;
+        }
+        const fn = function p() {
+          return <closure_1_9 />;
         };
-        const fn2 = function f() {
-          return <closure_1_10 />;
-        };
-        cResult[3] = fn;
-        cResult[4] = fn2;
-        let tmp13 = fn2;
-        let tmp12 = fn;
+        cResult[3] = C;
+        cResult[4] = fn;
+        let tmp13 = fn;
       } else {
-        tmp12 = cResult[3];
+        class C {
+          constructor() {
+            obj = closure_1_0(closure_1_2[10]);
+            rootNavigationRef = obj.getRootNavigationRef();
+            if (null != rootNavigationRef) {
+              if (rootNavigationRef.isReady()) {
+                setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "create" });
+                return;
+              }
+            }
+            return false;
+          }
+        }
         tmp13 = cResult[4];
       }
       if (cResult[5] === tmp7) {
-        if (cResult[6] === tmp11) {
-          let tmp14 = cResult[7];
+        class C {
+          constructor() {
+            obj = closure_1_0(closure_1_2[10]);
+            rootNavigationRef = obj.getRootNavigationRef();
+            if (null != rootNavigationRef) {
+              if (rootNavigationRef.isReady()) {
+                setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "create" });
+                return;
+              }
+            }
+            return false;
+          }
         }
         if (cResult[8] === disabled) {
-          if (cResult[9] === tmp14) {
-            let tmp15 = cResult[10];
+          class C {
+            constructor() {
+              obj = closure_1_0(closure_1_2[10]);
+              rootNavigationRef = obj.getRootNavigationRef();
+              if (null != rootNavigationRef) {
+                if (rootNavigationRef.isReady()) {
+                  setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "create" });
+                  return;
+                }
+              }
+              return false;
+            }
           }
           return tmp15;
         }
         let tmp16 = null;
         if (!disabled) {
-          const obj3 = { props: tmp14 };
-          tmp16 = obj3;
+          class C {
+            constructor() {
+              obj = closure_1_0(closure_1_2[10]);
+              rootNavigationRef = obj.getRootNavigationRef();
+              if (null != rootNavigationRef) {
+                if (rootNavigationRef.isReady()) {
+                  setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "create" });
+                  return;
+                }
+              }
+              return false;
+            }
+          }
+          tmp17[0] = tmp14;
+          tmp16 = tmp17;
         }
         cResult[8] = disabled;
         cResult[9] = tmp14;
         cResult[10] = tmp16;
         tmp15 = tmp16;
       }
-      const obj4 = {
+      const obj3 = {
         title: first,
         description: tmp7,
         position: "bottom",
         visible: !disabled,
-        onDismiss: tmp12,
+        onDismiss: C,
         renderImgComponent: tmp13,
       };
       cResult[5] = tmp7;
       cResult[6] = !disabled;
-      cResult[7] = obj4;
-      tmp14 = obj4;
+      cResult[7] = obj3;
     }
-  : (disabled) => {
+  : function useOrbsBadgeCoachmark(disabled) {
       disabled = disabled.disabled;
-      const tmp = closure_9();
+      const tmp = closure_8();
       const coachmarkDescription = tmp;
       const items = [disabled, tmp.coachmarkDescription];
       let tmp3 = null;

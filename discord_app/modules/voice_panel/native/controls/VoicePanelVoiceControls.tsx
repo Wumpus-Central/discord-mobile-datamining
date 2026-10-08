@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
 import UserSettings from "../../../user_settings/UserSettings.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06326_LegacyBaseButton.js";
 import getEmbeddedActivityLaunchability from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
 import MobileAudioOutputExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
 import UserSettingsVoiceProcessing from "../../../user_settings/voice/native/UserSettingsVoiceProcessing.tsx";
@@ -21,10 +21,10 @@ const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment
 
 require = fn;
 function NOOP() {}
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11914).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11987).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   scrollView: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 },
   scrollViewScreenReader: null,
@@ -42,7 +42,7 @@ let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(17).ScrollView);
 let ReactCompilerGating = fn(558);
 let closure_10 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function ListItems(channel) {
         const cResult = channel(treatment[9]).c(49);
         channel = channel.channel;
         const openTab = channel.openTab;
@@ -299,7 +299,7 @@ let closure_10 = noop.memo(
             tmp12 = tmp13;
           }
         }
-        const fn = function v() {
+        function renderSecondRowItem() {
           if (
             MobileGoLiveEntrypointExperiment.MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment
           ) {
@@ -315,15 +315,15 @@ let closure_10 = noop.memo(
             const obj = { channel };
             return hasOwnProperty(VoicePanelVoiceControlsButtons.ScreenshareButton, obj);
           }
-        };
+        }
         cResult[2] = channel;
         cResult[3] = treatment;
         cResult[4] = openTab;
-        cResult[5] = fn;
-        tmp10 = fn;
+        cResult[5] = renderSecondRowItem;
+        tmp10 = renderSecondRowItem;
         const tmp4Result2 = openTab(treatment[15]);
       }
-    : (arg0) => {
+    : function ListItems(arg0) {
         ({ channel, openTab } = arg0);
         const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
         const tmp2 = useIsConnectedToVoiceChannelDefault(channelId);
@@ -439,7 +439,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/controls/Voi
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (isVisible) => {
+    ? function VoicePanelVoiceControls(isVisible) {
         const cResult = isVisible(sharedValue[9]).c(38);
         isVisible = isVisible.isVisible;
         const openTab = isVisible.openTab;
@@ -654,7 +654,7 @@ export default noop.memo(
         tmp16 = B;
         const tmpResult7 = isVisible(sharedValue[24]);
       }
-    : (isVisible) => {
+    : function VoicePanelVoiceControls(isVisible) {
         isVisible = isVisible.isVisible;
         let channelId;
         let sharedValue;

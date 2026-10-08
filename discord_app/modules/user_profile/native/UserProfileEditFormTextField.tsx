@@ -3,8 +3,8 @@ import c from "../../../../_runtime/00576_c.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const TextInput = TextArea(6105);
-const TextArea2 = TextArea(6587);
+const TextInput = TextArea(6283);
+const TextArea2 = TextArea(6763);
 require = fn;
 let closure_2 = ["label", "description", "errorMessage", "containerStyle", "numberOfLines", "inputRef"];
 const jsx = fn(21).jsx;
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditFormTextField.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileEditFormTextField(arg0) {
       let TextArea = require;
       let tmp = dependencyMap;
       const cResult = c.c(21);
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[14] = obj4;
       tmp13 = obj4;
     }
-  : (inputRef) => {
+  : function UserProfileEditFormTextField(inputRef) {
       ({ errorMessage, numberOfLines } = inputRef);
       ({ label, description, containerStyle } = inputRef);
       if (numberOfLines === undefined) {

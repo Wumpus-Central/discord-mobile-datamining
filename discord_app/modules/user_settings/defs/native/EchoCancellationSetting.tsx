@@ -6,13 +6,13 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useEchoCancellationSettingValue() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MediaEngineStore];
-        const fn = function o() {
+        const fn = function l() {
           return echoCancellation.getEchoCancellation();
         };
         cResult[0] = items;
@@ -24,7 +24,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useEchoCancellationSettingValue() {
       const items = [MediaEngineStore];
       return initialize.useStateFromStores(items, () => echoCancellation.getEchoCancellation());
     };
@@ -33,13 +33,13 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.iWTwu6);
   },
-  parent: fn(7645).MobileUserSettings.VOICE,
+  parent: fn(7966).MobileUserSettings.VOICE,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useEchoCancellationSettingValue() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [MediaEngineStore];
-          const fn = function o() {
+          const fn = function l() {
             return echoCancellation.getEchoCancellation();
           };
           cResult[0] = items;
@@ -51,11 +51,11 @@ const toggle = SettingBuilders.createToggle({
         }
         return initialize.useStateFromStores(tmp4, tmp5);
       }
-    : () => {
+    : function useEchoCancellationSettingValue() {
         const items = [MediaEngineStore];
         return initialize.useStateFromStores(items, () => echoCancellation.getEchoCancellation());
       },
-  onValueChange: fn(9686).handleEchoCancellationChange,
+  onValueChange: fn(10875).handleEchoCancellationChange,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/EchoCancellationSetting.tsx");

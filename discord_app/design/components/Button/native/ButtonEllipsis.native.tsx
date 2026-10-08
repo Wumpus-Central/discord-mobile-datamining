@@ -10,9 +10,9 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const ELLIPSIS_APPEAR_TIMING = { duration: 500, easing: null };
-const Easing = fn(4618).Easing;
-ELLIPSIS_APPEAR_TIMING.easing = Easing.inOut(fn(4618).Easing.quad);
-const createStyles = fn(4896);
+const Easing = fn(4810).Easing;
+ELLIPSIS_APPEAR_TIMING.easing = Easing.inOut(fn(4810).Easing.quad);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles((arg0, arg1, backgroundColor) => {
   if ("lg" === arg0) {
     let num = 4;
@@ -53,9 +53,9 @@ function withEllipsisAnimation(arg0, value) {
 }
 withEllipsisAnimation.__closure = {
   ELLIPSIS_APPEAR_DURATION: 500,
-  withDelay: fn(4618).withDelay,
-  withRepeat: fn(4618).withRepeat,
-  withTiming: fn(4897).withTiming,
+  withDelay: fn(4810).withDelay,
+  withRepeat: fn(4810).withRepeat,
+  withTiming: fn(5091).withTiming,
   ELLIPSIS_APPEAR_TIMING,
 };
 withEllipsisAnimation.__workletHash = 2181731162311;
@@ -70,7 +70,7 @@ const __initData2 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (offset) => {
+  ? function EllipsisCircle(offset) {
       const cResult = offset(sharedValue1[8]).c(7);
       offset = offset.offset;
       ({ variant, size } = offset);
@@ -119,7 +119,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           const tmpResult2 = tmp(tmp2[3]);
         }
       }
-      const fn = function n() {
+      const fn = function s() {
         if (typeof withEllipsisAnimation === "function") {
           let obj = ReanimatedRexport;
           const result = 166.66666666666666 * offset;
@@ -155,7 +155,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       const obj4 = offset(sharedValue1[3]);
     }
-  : (offset) => {
+  : function EllipsisCircle(offset) {
       offset = offset.offset;
       let sharedValue1;
       ({ variant, size } = offset);
@@ -195,16 +195,20 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
       });
       const obj4 = offset(sharedValue1[10]);
-      const fn = function y() {
-        const obj = { opacity: sharedValue.get(), transform: null };
-        const items = [{ scale: sharedValue1.get() }];
-        obj.transform = items;
-        return obj;
-      };
-      fn.__closure = { opacity: sharedValue, scale: sharedValue1 };
-      fn.__workletHash = 13160478370544;
-      fn.__initData = __initData2;
-      const animatedStyle = offset(sharedValue1[3]).useAnimatedStyle(fn);
+      class E {
+        constructor() {
+          obj = { opacity: closure_1.get(), transform: null };
+          obj1 = { scale: closure_2.get() };
+          items = [];
+          items[0] = obj1;
+          obj.transform = items;
+          return obj;
+        }
+      }
+      E.__closure = { opacity: sharedValue, scale: sharedValue1 };
+      E.__workletHash = 13160478370544;
+      E.__initData = __initData2;
+      const animatedStyle = offset(sharedValue1[3]).useAnimatedStyle(E);
       const obj6 = { style: null };
       let items = [tmp.circle, animatedStyle];
       obj6.style = items;
@@ -213,16 +217,16 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let obj3 = {
   ELLIPSIS_APPEAR_DURATION: 500,
-  withDelay: fn(4618).withDelay,
-  withRepeat: fn(4618).withRepeat,
-  withTiming: fn(4897).withTiming,
+  withDelay: fn(4810).withDelay,
+  withRepeat: fn(4810).withRepeat,
+  withTiming: fn(5091).withTiming,
   ELLIPSIS_APPEAR_TIMING,
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Button/native/ButtonEllipsis.native.tsx");
 
 export const Ellipsis = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Ellipsis(arg0) {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { flexDirection: "row" };
@@ -252,7 +256,7 @@ export const Ellipsis = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : (arg0) => {
+  : function Ellipsis(arg0) {
       const obj = { style: { flexDirection: "row" }, children: null };
       const merged = Object.assign(arg0);
       const items = [React4(closure_11, { offset: 0 }), ,];

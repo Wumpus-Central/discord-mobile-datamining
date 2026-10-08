@@ -7,7 +7,7 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(4774);
+const GuildPowerupsConstants = fn(4968);
 ({
   GuildPowerupType: closure_7,
   POWERUPS_INCLUDED_IN_LEVEL: closure_8,
@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useAvailableBoostCountForPowerup.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, type) => {
+  ? function useAvailableBoostCountForPowerup(arg0, type) {
       _require = arg0;
       const cResult = require("c").c(17);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult2 = require("initialize");
     }
-  : (arg0, arg1) => {
+  : function useAvailableBoostCountForPowerup(arg0, arg1) {
       _require = arg0;
       importDefault = arg1;
       let items = [GuildStore];

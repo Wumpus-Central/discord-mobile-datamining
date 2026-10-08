@@ -26,7 +26,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityCardBadges.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (activity) => {
+  ? function UserProfileActivityCardBadges(activity) {
       const cResult = activity(576).c(12);
       activity = activity.activity;
       const style = activity.style;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const forResult = Symbol.for("react.early_return_sentinel");
     }
-  : (activity) => {
+  : function UserProfileActivityCardBadges(activity) {
       activity = activity.activity;
       const arr = getActivityBadges(activity);
       let tmp = null;

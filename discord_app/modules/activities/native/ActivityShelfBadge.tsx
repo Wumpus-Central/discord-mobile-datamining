@@ -9,7 +9,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { badge: null, newBadge: null, updatedBadge: null, elevationShadow: null, badgeText: null };
 const rect = {
   position: "absolute",
@@ -42,8 +42,8 @@ obj2.updatedBadge = {
   height: 16,
   backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND,
 };
-const native = fn(1188);
-obj2.elevationShadow = native.generateBoxShadowStyle(fn(1188).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1200);
+obj2.elevationShadow = native.generateBoxShadowStyle(fn(1200).FOUR_DP_ELEVATION_SHADOW_PARAMS);
 obj2.badgeText = {
   textTransform: "uppercase",
   marginLeft: 2,
@@ -64,7 +64,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/ActivityShelfBadge.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActivityShelfBadge(arg0) {
       const cResult = c.c(20);
       ({ labelType, replacementStyles } = arg0);
       const tmp4 = closure_4();
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return null;
       }
     }
-  : (arg0) => {
+  : function ActivityShelfBadge(arg0) {
       ({ labelType, replacementStyles } = arg0);
       const tmp = closure_4();
       if (replacementStyles == null) {

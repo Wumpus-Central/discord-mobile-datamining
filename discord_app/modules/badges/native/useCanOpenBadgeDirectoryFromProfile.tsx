@@ -7,7 +7,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/badges/native/useCanOpenBadgeDirectoryFromProfile.tsx");
 
 export const useCanOpenBadgeDirectoryFromProfile = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useCanOpenBadgeDirectoryFromProfile(location) {
       const cResult = c.c(4);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -33,7 +33,7 @@ export const useCanOpenBadgeDirectoryFromProfile = ReactCompilerGating.isReactCo
       }
       return isBadgeManagementEnabled;
     }
-  : (location) => {
+  : function useCanOpenBadgeDirectoryFromProfile(location) {
       const _location = location.location;
       let isBadgeManagementEnabled = BadgeManagementExperiment.useIsBadgeManagementEnabled({ location: _location });
       if (isBadgeManagementEnabled) {

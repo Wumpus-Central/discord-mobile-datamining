@@ -5,7 +5,7 @@ import getJankSurfaceName from "getJankSurfaceName.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const JankScreenConstants = fn(15974);
+const JankScreenConstants = fn(16234);
 ({ INTERACTION_NONE: closure_4, INTERACTION_TRANSITION: hasOwnProperty } = JankScreenConstants);
 let __initData = {
   code: "function JankSlidingSurfaceReporterNativeTsx1(){const{position}=this.__closure;return position.get();}",
@@ -24,7 +24,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/jank_stats/native/JankSlidingSurfaceReporter.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (position) => {
+  ? function JankSlidingSurfaceReporter(position) {
       const cResult = position(closedAt[3]).c(9);
       position = position.position;
       const openAt = position.openAt;
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = obj6;
       tmp4 = obj6;
     }
-  : (position) => {
+  : function JankSlidingSurfaceReporter(position) {
       position = position.position;
       const openAt = position.openAt;
       const closedAt = position.closedAt;

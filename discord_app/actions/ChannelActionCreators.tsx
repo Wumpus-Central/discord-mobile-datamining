@@ -7,6 +7,7 @@ import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx
 import shared from "../design/shared.tsx";
 import RootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import transitionToChannel from "../modules/routing/transitionToChannel.tsx";
+import preloadChannelDefault from "../modules/channel/preloadChannel.tsx";
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators.tsx";
 import isChangelogChannelDefault from "../modules/changelog/utils/isChangelogChannel.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
@@ -18,16 +19,14 @@ import ReadStateStore from "../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(2055).createChannelRecordFromServer;
+let closure_6 = fn(2067).createChannelRecordFromServer;
 const Constants = fn(1085);
 ({
   AnalyticEvents: closure_9,
   AbortCodes: c10,
   Endpoints: closure_11,
   Routes: closure_12,
-  ME: map1,
-  CURRENT_APP_CONTEXT: closure_14,
-  ChannelTypes: closure_15,
+  ChannelTypes: map1,
 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/ChannelActionCreators.tsx");
@@ -304,7 +303,7 @@ export default {
     closure_0 = id;
     const self = this;
     return (async () => {
-      const HTTP = tmp2(1282).HTTP;
+      const HTTP = tmp2(1294).HTTP;
       const request = {
         url: constants.USER_CHANNELS,
         body: { recipients: self._getRecipients(tmp2) },
@@ -312,7 +311,7 @@ export default {
         rejectWithError: null,
       };
       self._getRecipients(tmp2);
-      request.rejectWithError = tmp2(1282).rejectWithMigratedError();
+      request.rejectWithError = tmp2(1294).rejectWithMigratedError();
       await HTTP.post(request);
       closure_128_0 = value;
       closure_128_1 = closure_1_6(closure_128_0.body);
@@ -380,7 +379,7 @@ export default {
   getDMChannel(id) {
     closure_0 = id;
     return (async () => {
-      const HTTP = tmp5(1282).HTTP;
+      const HTTP = tmp5(1294).HTTP;
       await HTTP.get({ url: closure_1_11.DM_CHANNEL(tmp5), rejectWithError: true });
       closure_128_0 = value;
       closure_128_1 = closure_1_6(closure_128_0.body);
@@ -433,7 +432,7 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "parent" },
+      channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" },
       silent: flag2,
     });
     if (flag) {
@@ -446,7 +445,11 @@ export default {
       oldFormErrors: true,
       rejectWithError: null,
     };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "parent" }, silent: flag2 };
+    const obj2 = {
+      type: "CHANNEL_DELETE",
+      channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" },
+      silent: flag2,
+    };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     const delResult = HTTP.del(request);
@@ -477,12 +480,12 @@ export default {
     closure_1 = arr3;
     return (async () => {
       const body = tmp2;
-      const HTTP = tmp5(1282).HTTP;
+      const HTTP = tmp5(1294).HTTP;
       const request = {
         url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, body.id),
         body,
         oldFormErrors: true,
-        rejectWithError: tmp5(1282).rejectWithMigratedError(),
+        rejectWithError: tmp5(1294).rejectWithMigratedError(),
       };
       await HTTP.put(request);
       closure_128_0 = value;
@@ -498,11 +501,11 @@ export default {
     closure_0 = channelId;
     closure_1 = id;
     return (async () => {
-      const HTTP = tmp5(1282).HTTP;
+      const HTTP = tmp5(1294).HTTP;
       await HTTP.del({
         url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, tmp2),
         oldFormErrors: true,
-        rejectWithError: tmp5(1282).rejectWithMigratedError(),
+        rejectWithError: tmp5(1294).rejectWithMigratedError(),
       });
       closure_128_0 = value;
       tmp2(584).dispatch({
@@ -572,7 +575,7 @@ export default {
     return (async () => {
       const name = tmp3;
       const channel2 = channel.getChannel(tmp2);
-      const HTTP = tmp2(1282).HTTP;
+      const HTTP = tmp2(1294).HTTP;
       const request = { url: closure_1_11.CHANNEL(tmp2), body: { name }, oldFormErrors: true, rejectWithError: true };
       await HTTP.patch(request);
       closure_128_1 = value;
@@ -590,8 +593,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(6836).checkGuildTemplateDirty(closure_128_2);
-        name(6836);
+        const result = name(7018).checkGuildTemplateDirty(closure_128_2);
+        name(7018);
       }
       return closure_128_1;
     })();
@@ -894,13 +897,7 @@ export default {
     const HTTP = HTTPUtils.HTTP;
     return HTTP.post({ url: closure_1_11.CHANNEL_CONVERT(arg0), oldFormErrors: true, rejectWithError: true });
   },
-  preload(arg0, channelId) {
-    let tmp = null;
-    if (arg0 !== __initData2) {
-      tmp = arg0;
-    }
-    DispatcherDefault.dispatch({ type: "CHANNEL_PRELOAD", guildId: tmp, channelId, context });
-  },
+  preload: preloadChannelDefault,
   fetchChannelStoreListing(channelId, arg1) {
     _require = channelId;
     if (null != arg1) {

@@ -26,7 +26,7 @@ let size = size_mod;
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/StaticChannelIndicator.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (resolvedUnreadSetting) => {
+  ? function ChannelIndicator(resolvedUnreadSetting) {
       const cResult = c.c(5);
       ({ unread, style } = resolvedUnreadSetting);
       const tmp3 = closure_6();
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp8;
       tmp7 = tmp8;
     }
-  : (arg0) => {
+  : function ChannelIndicator(arg0) {
       ({ unread, resolvedUnreadSetting, style } = arg0);
       const tmp = closure_6();
       useToken;

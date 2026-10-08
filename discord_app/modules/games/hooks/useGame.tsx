@@ -75,7 +75,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-obj2.load = function () {
+obj2.load = function load() {
   const self = this;
   const apply = closure_2.apply;
   if (typeof apply === "unknown") {
@@ -110,11 +110,11 @@ const result = size.fileFinishedImporting("modules/games/hooks/useGame.tsx");
 
 export const useGame = fetchStore;
 export const useGames = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGames(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] !== arg0) {
-        const fn = function n() {
+        const fn = function l() {
           let items = [
             ...closure_0.map((item) => {
               const items = [item];
@@ -135,7 +135,7 @@ export const useGames = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp2, tmp3);
     }
-  : (arg0) => {
+  : function useGames(arg0) {
       closure_0 = arg0;
       let items = [arg0];
       const effect = noop.useEffect(() => {

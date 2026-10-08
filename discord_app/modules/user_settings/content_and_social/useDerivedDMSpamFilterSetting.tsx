@@ -8,13 +8,13 @@ import SettingsDefaultFeature from "../../../../discord_common/js/shared/shared-
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_3 = fn(2030).ExplicitContentFilterToDmSpamFilterV2;
+let closure_3 = fn(2042).ExplicitContentFilterToDmSpamFilterV2;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");
 
 export const useDerivedDmSpamFilterSettingValue = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDerivedDmSpamFilterSettingValue() {
       let DmSpamFilterV2 = dependencyMap;
       const cResult = c.c(4);
       const DmSpamFilterV22 = UserSettings.DmSpamFilterV2;
@@ -63,7 +63,7 @@ export const useDerivedDmSpamFilterSettingValue = ReactCompilerGating.isReactCom
       }
       const tmpResult2 = RegionalFeatureConfigUtils;
     }
-  : () => {
+  : function useDerivedDmSpamFilterSettingValue() {
       let DmSpamFilterV2 = dependencyMap;
       const DmSpamFilterV22 = UserSettings.DmSpamFilterV2;
       const setting = DmSpamFilterV22.useSetting();

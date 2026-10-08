@@ -2,7 +2,7 @@
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod7583 from "../../../../../../../_runtime/metro/07583__.js";
+import _mod9294 from "../../../../../../../_runtime/metro/09294__.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/ThumbsUpIcon.tsx");
 
 export const ThumbsUpIcon = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ThumbsUpIcon(arg0) {
       const cResult = c.c(9);
       if (cResult[0] !== arg0) {
         ({ style, color } = arg0);
@@ -35,7 +35,7 @@ export const ThumbsUpIcon = ReactCompilerGating.isReactCompilerEnabled()
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod7583;
+        const tmpResult = _mod9294;
         cResult[4] = tmpResult;
         let tmp10 = tmpResult;
       } else {
@@ -58,7 +58,7 @@ export const ThumbsUpIcon = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = tmp14;
       const obj2 = { source: tmp10, color: INTERACTIVE_ICON_DEFAULT, style: tmp5 };
     }
-  : (color) => {
+  : function ThumbsUpIcon(color) {
       let INTERACTIVE_ICON_DEFAULT = color.color;
       if (INTERACTIVE_ICON_DEFAULT === undefined) {
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
@@ -66,7 +66,7 @@ export const ThumbsUpIcon = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
       const merged1 = Object.assign(merged);
       return jsx(BaseIconImage.BaseIconImage, {
-        source: _mod7583,
+        source: _mod9294,
         color: INTERACTIVE_ICON_DEFAULT,
         style: color.style,
       });

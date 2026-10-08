@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07550_inlineStyles.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -16,7 +16,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupWordmark.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PremiumGroupWordmark(arg0) {
       const cResult = c.c(12);
       if (cResult[0] !== arg0) {
         ({ width, height, alwaysWhite } = arg0);
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = tmp18;
       const tmp11Result = inlineStylesDefault;
     }
-  : (arg0) => {
+  : function PremiumGroupWordmark(arg0) {
       ({ width, height, alwaysWhite } = arg0);
       const merged = Object.assign(arg0, Object.assign({ width: 0, height: 0, alwaysWhite: 0 }));
       let str = "white";

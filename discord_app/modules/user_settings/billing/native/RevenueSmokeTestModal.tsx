@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 let closure_3 = ["children"];
 const jsx = fn(21).jsx;
-const NativeStackNavigator = fn(7568);
+const NativeStackNavigator = fn(9279);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -18,11 +18,11 @@ const result = size.fileFinishedImporting("modules/user_settings/billing/native/
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function RevenueSmokeTestModal() {
         const cResult = accessibilityNativeStackOptions(576).c(6);
         let obj = accessibilityNativeStackOptions(576);
         const tmp = accessibilityNativeStackOptions;
-        accessibilityNativeStackOptions = accessibilityNativeStackOptions(6503).useAccessibilityNativeStackOptions();
+        accessibilityNativeStackOptions = accessibilityNativeStackOptions(6679).useAccessibilityNativeStackOptions();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [];
           cResult[0] = items;
@@ -31,7 +31,7 @@ export default noop.memo(
           first = cResult[0];
         }
         if (cResult[1] !== accessibilityNativeStackOptions) {
-          const fn = function s(navigation) {
+          const fn = function c(navigation) {
             const obj = {
               headerTitle(children) {
                 const merged = Object.assign(closure_1_4(children, closure_1_3));
@@ -78,7 +78,7 @@ export default noop.memo(
           const obj4 = { skuIDs: first, activeSubscription: null, children: null };
           const obj5 = { screenOptions: tmp6, children: tmp7 };
           obj4.children = <closure_6.Navigator screenOptions={tmp6}>{tmp7}</closure_6.Navigator>;
-          const tmp15 = jsx(tmp(10564).NativePaymentContextProvider, {
+          const tmp15 = jsx(tmp(10161).NativePaymentContextProvider, {
             skuIDs: first,
             activeSubscription: null,
             children: null,
@@ -91,7 +91,7 @@ export default noop.memo(
         }
         return tmp12;
       }
-    : () => {
+    : function RevenueSmokeTestModal() {
         _require = require("Navigator").useAccessibilityNativeStackOptions();
         const obj2 = { skuIDs: [], activeSubscription: null, children: null };
         const obj3 = {

@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import isChangelogUserDefault from "../../changelog/utils/isChangelogUser.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import BottomSheetModal from "../../../../_runtime/06119_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06298_BottomSheetModal.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
@@ -22,13 +22,13 @@ import UserProfileSettingsStore from "../UserProfileSettingsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(6714).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(6891).UserProfileThemeTypes;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1, UserSettingsSections: closure_14 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(6653).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6830).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_18 = createStyles.createStyles({
   container: { flex: 1 },
   profileContainer: { position: "relative" },
@@ -45,7 +45,7 @@ const __initData4 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (animatedPosition) => {
+  ? function UseAnimatedPosition(animatedPosition) {
       animatedPosition = animatedPosition.animatedPosition;
       const animatedPosition2 = BottomSheetModal.useBottomSheet().animatedPosition;
       const fn = function n() {
@@ -63,7 +63,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       const animatedReaction = ReanimatedRexport.useAnimatedReaction(fn, fn2);
       return null;
     }
-  : (animatedPosition) => {
+  : function UseAnimatedPosition(animatedPosition) {
       animatedPosition = animatedPosition.animatedPosition;
       const animatedPosition2 = BottomSheetModal.useBottomSheet().animatedPosition;
       const fn = function n() {
@@ -89,7 +89,7 @@ const __initData6 = {
 };
 ReactCompilerGating = fn(558);
 let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (animatedPosition) => {
+  ? function ActionSheetAlignedView(animatedPosition) {
       const cResult = animatedPosition(safeAreaTop[15]).c(5);
       animatedPosition = animatedPosition.animatedPosition;
       const animatedIndex = animatedPosition.animatedIndex;
@@ -144,7 +144,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         Extrapolation: animatedPosition(safeAreaTop[14]).Extrapolation,
       };
     }
-  : (animatedPosition) => {
+  : function ActionSheetAlignedView(animatedPosition) {
       animatedPosition = animatedPosition.animatedPosition;
       const animatedIndex = animatedPosition.animatedIndex;
       const safeAreaTop = animatedPosition.safeAreaTop;
@@ -188,7 +188,7 @@ let result = size.fileFinishedImporting("modules/user_profile/native/UserProfile
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (userId) => {
+    ? function UserProfileActionSheet(userId) {
         const cResult = userId(localUser[15]).c(190);
         userId = userId.userId;
         const channelId = userId.channelId;
@@ -390,15 +390,15 @@ export default noop.memo(
               }
             }
             const fn = (animatedRef, sharedValue, lockableScrollableContentOffsetY) => {
-              const scrollEventsHandlersDefault = animatedScrollableState(6119).useScrollEventsHandlersDefault(
+              const scrollEventsHandlersDefault = animatedScrollableState(6298).useScrollEventsHandlersDefault(
                 animatedRef,
                 sharedValue,
                 lockableScrollableContentOffsetY,
               );
-              const obj = animatedScrollableState(6119);
-              animatedScrollableState = animatedScrollableState(6119).useBottomSheetInternal().animatedScrollableState;
+              const obj = animatedScrollableState(6298);
+              animatedScrollableState = animatedScrollableState(6298).useBottomSheetInternal().animatedScrollableState;
               const handleOnScroll = scrollEventsHandlersDefault.handleOnScroll;
-              const obj2 = animatedScrollableState(6119);
+              const obj2 = animatedScrollableState(6298);
               const fn = function s(contentOffset, arg1) {
                 if (handleOnScroll != null) {
                   tmp(contentOffset, arg1);
@@ -410,12 +410,12 @@ export default noop.memo(
                 }
                 const result = animatedScrollableState.set(num);
               };
-              const obj3 = animatedScrollableState(4618);
+              const obj3 = animatedScrollableState(4810);
               fn.__closure = {
                 defaultHandleOnScroll: handleOnScroll,
                 scrollPosition: animatedScrollableState,
                 animatedScrollableState,
-                SCROLLABLE_STATE: animatedScrollableState(6119).SCROLLABLE_STATE,
+                SCROLLABLE_STATE: animatedScrollableState(6298).SCROLLABLE_STATE,
               };
               fn.__workletHash = 1075381102662;
               fn.__initData = __initData;
@@ -425,7 +425,7 @@ export default noop.memo(
                 defaultHandleOnScroll: handleOnScroll,
                 scrollPosition: animatedScrollableState,
                 animatedScrollableState,
-                SCROLLABLE_STATE: animatedScrollableState(6119).SCROLLABLE_STATE,
+                SCROLLABLE_STATE: animatedScrollableState(6298).SCROLLABLE_STATE,
               };
               const merged = Object.assign(scrollEventsHandlersDefault);
               obj5.handleOnScroll = obj3.useWorkletCallback(fn, items);
@@ -441,26 +441,21 @@ export default noop.memo(
             }
           }
           const tmpResult14 = tmp(localUser[14]);
-          class Pe {
-            constructor() {
-              obj = closure_11;
-              if (closure_11.get() <= 0) {
-                obj1 = { translateY: null };
-                obj1.translateY = obj.get();
-                items = [];
-                items[0] = obj1;
-                items1 = items;
-              } else {
-                items1 = [];
-              }
-              return { transform: items1 };
+          function _e() {
+            if (sharedValue2.get() <= 0) {
+              const obj2 = { translateY: sharedValue2.get() };
+              const items = [obj2];
+              let transform = items;
+            } else {
+              transform = [];
             }
+            return { transform };
           }
           let obj2 = { scrollPosition: sharedValue2 };
-          Pe.__closure = obj2;
-          Pe.__workletHash = 15687962271123;
-          Pe.__initData = __initData7;
-          const animatedStyle = tmp(localUser[14]).useAnimatedStyle(Pe);
+          _e.__closure = obj2;
+          _e.__workletHash = 15687962271123;
+          _e.__initData = __initData7;
+          const animatedStyle = tmp(localUser[14]).useAnimatedStyle(_e);
           const tmp42 = onClose(noop.useState(false), 2);
           closure_12 = tmp42[0];
           closure_13 = tmp42[1];
@@ -596,7 +591,7 @@ export default noop.memo(
         cResult[12] = re;
         const tmpResult11 = userId(localUser[17]);
       }
-    : (userId) => {
+    : function UserProfileActionSheet(userId) {
         userId = userId.userId;
         const channelId = userId.channelId;
         const localUser = userId.localUser;
@@ -708,15 +703,15 @@ export default noop.memo(
         const memo = isPreviewingChanges.useMemo(() => {
           closure_0 = sharedValue2;
           return (animatedRef, sharedValue, lockableScrollableContentOffsetY) => {
-            const scrollEventsHandlersDefault = animatedScrollableState(6119).useScrollEventsHandlersDefault(
+            const scrollEventsHandlersDefault = animatedScrollableState(6298).useScrollEventsHandlersDefault(
               animatedRef,
               sharedValue,
               lockableScrollableContentOffsetY,
             );
-            const obj = animatedScrollableState(6119);
-            animatedScrollableState = animatedScrollableState(6119).useBottomSheetInternal().animatedScrollableState;
+            const obj = animatedScrollableState(6298);
+            animatedScrollableState = animatedScrollableState(6298).useBottomSheetInternal().animatedScrollableState;
             const handleOnScroll = scrollEventsHandlersDefault.handleOnScroll;
-            const obj2 = animatedScrollableState(6119);
+            const obj2 = animatedScrollableState(6298);
             const fn = function s(contentOffset, arg1) {
               if (handleOnScroll != null) {
                 tmp(contentOffset, arg1);
@@ -728,12 +723,12 @@ export default noop.memo(
               }
               const result = animatedScrollableState.set(num);
             };
-            const obj3 = animatedScrollableState(4618);
+            const obj3 = animatedScrollableState(4810);
             fn.__closure = {
               defaultHandleOnScroll: handleOnScroll,
               scrollPosition: animatedScrollableState,
               animatedScrollableState,
-              SCROLLABLE_STATE: animatedScrollableState(6119).SCROLLABLE_STATE,
+              SCROLLABLE_STATE: animatedScrollableState(6298).SCROLLABLE_STATE,
             };
             fn.__workletHash = 1075381102662;
             fn.__initData = __initData;
@@ -743,7 +738,7 @@ export default noop.memo(
               defaultHandleOnScroll: handleOnScroll,
               scrollPosition: animatedScrollableState,
               animatedScrollableState,
-              SCROLLABLE_STATE: animatedScrollableState(6119).SCROLLABLE_STATE,
+              SCROLLABLE_STATE: animatedScrollableState(6298).SCROLLABLE_STATE,
             };
             const merged = Object.assign(scrollEventsHandlersDefault);
             obj5.handleOnScroll = obj3.useWorkletCallback(fn, items);

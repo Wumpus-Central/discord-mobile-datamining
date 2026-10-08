@@ -488,7 +488,7 @@ export const favoriteSticker = function favoriteSticker(arg0) {
         tmp = found;
       }
       stickerIds.stickerIds = tmp;
-      if (obj.size(stickerIds.stickerIds) >= v65535) {
+      if (obj.size(stickerIds.stickerIds) >= collapsed) {
         const obj2 = { title: null, body: null };
         const intl = util.intl;
         obj2.title = intl.string(util.t["+XYXtZ"]);

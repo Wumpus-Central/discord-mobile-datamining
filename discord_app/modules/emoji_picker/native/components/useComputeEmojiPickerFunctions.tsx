@@ -223,15 +223,15 @@ function pushNativeCategory(emojiSections) {
   emojiSections = emojiSections.emojiSections;
   emojiSections.push(emojiSections.renderingData);
 }
-const EmojiPickerConstants = fn(5649);
+const EmojiPickerConstants = fn(5996);
 ({ EmojiCategories: hasOwnProperty, EmojiCategoryTypes: metroRequire } = EmojiPickerConstants);
-const constants3 = fn(9882).EmojiPickerRenderingDataType;
+const constants3 = fn(9362).EmojiPickerRenderingDataType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useComputeEmojiPickerFunctions() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
@@ -249,8 +249,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return _slicedToArray(noop.useState(first), 1)[0];
     }
-  : () =>
-      _slicedToArray(
+  : function useComputeEmojiPickerFunctions() {
+      return _slicedToArray(
         noop.useState(() => {
           const obj = {
             computeCategories: FunctionUtils.cachedFunction(_computeCategories),
@@ -261,3 +261,4 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
         1,
       )[0];
+    };

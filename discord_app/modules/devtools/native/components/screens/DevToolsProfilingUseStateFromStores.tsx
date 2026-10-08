@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting(
 );
 
 export const DevToolsProfilingUseStateFromStores = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DevToolsProfilingUseStateFromStores() {
       const cResult = first1(str[4]).c(32);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const useStateFromStoresDebuggingEnabled = tmp(tmp2[5]).getUseStateFromStoresDebuggingEnabled();
@@ -71,7 +71,7 @@ export const DevToolsProfilingUseStateFromStores = ReactCompilerGating.isReactCo
       }
       [first2, closure_8] = str2.useState(tmp18);
       if (cResult[5] !== first1) {
-        class V {
+        class N {
           constructor() {
             obj = closure_0(closure_1[5]);
             result = obj.setUseStateFromStoresDebuggingEnabled(closure_0);
@@ -80,11 +80,11 @@ export const DevToolsProfilingUseStateFromStores = ReactCompilerGating.isReactCo
         }
         const items = [first1];
         cResult[5] = first1;
-        cResult[6] = V;
+        cResult[6] = N;
         cResult[7] = items;
         let tmp23 = items;
       } else {
-        class V {
+        class N {
           constructor() {
             obj = closure_0(closure_1[5]);
             result = obj.setUseStateFromStoresDebuggingEnabled(closure_0);
@@ -93,9 +93,9 @@ export const DevToolsProfilingUseStateFromStores = ReactCompilerGating.isReactCo
         }
         tmp23 = cResult[7];
       }
-      const effect = obj3.useEffect(V, tmp23);
+      const effect = obj3.useEffect(N, tmp23);
       if (cResult[8] !== tmp6Result[0]) {
-        class M {
+        class W {
           constructor() {
             obj = closure_0(closure_1[5]);
             result = obj.setUseStateFromStoresExecutionWindowThresholdMs(closure_1);
@@ -104,11 +104,11 @@ export const DevToolsProfilingUseStateFromStores = ReactCompilerGating.isReactCo
         }
         const items1 = [str];
         cResult[8] = str;
-        cResult[9] = M;
+        cResult[9] = W;
         cResult[10] = items1;
         let tmp26 = items1;
       } else {
-        class M {
+        class W {
           constructor() {
             obj = closure_0(closure_1[5]);
             result = obj.setUseStateFromStoresExecutionWindowThresholdMs(closure_1);
@@ -117,7 +117,7 @@ export const DevToolsProfilingUseStateFromStores = ReactCompilerGating.isReactCo
         }
         tmp26 = cResult[10];
       }
-      const effect1 = obj3.useEffect(M, tmp26);
+      const effect1 = obj3.useEffect(W, tmp26);
       if (cResult[11] !== tmp6Result4[0]) {
         class D {
           constructor() {
@@ -193,26 +193,29 @@ export const DevToolsProfilingUseStateFromStores = ReactCompilerGating.isReactCo
       const effect4 = obj3.useEffect(tmp36, tmp35);
       const obj = first1(str[4]);
       if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-        class J {
-          constructor(arg0) {
-            obj = { variant: "text-xs/medium", color: "text-subtle", style: { marginBottom: 4 }, children: arg0 };
-            return closure_4(closure_0(closure_1[6]).Text, obj);
+        class G {
+          constructor() {
+            obj = closure_0(closure_1[5]);
+            result = obj.setUseStateFromStoresExecutionCountWarningThreshold(closure_5);
+            return;
           }
         }
-        cResult[20] = J;
+        cResult[20] = tmp40;
       } else {
-        class J {
-          constructor(arg0) {
-            obj = { variant: "text-xs/medium", color: "text-subtle", style: { marginBottom: 4 }, children: arg0 };
-            return closure_4(closure_0(closure_1[6]).Text, obj);
+        class G {
+          constructor() {
+            obj = closure_0(closure_1[5]);
+            result = obj.setUseStateFromStoresExecutionCountWarningThreshold(closure_5);
+            return;
           }
         }
       }
       if (cResult[21] !== first1) {
-        class J {
-          constructor(arg0) {
-            obj = { variant: "text-xs/medium", color: "text-subtle", style: { marginBottom: 4 }, children: arg0 };
-            return closure_4(closure_0(closure_1[6]).Text, obj);
+        class G {
+          constructor() {
+            obj = closure_0(closure_1[5]);
+            result = obj.setUseStateFromStoresExecutionCountWarningThreshold(closure_5);
+            return;
           }
         }
         const obj2 = { title: "useStateFromStores Profiling", hasIcons: false, children: null };
@@ -223,37 +226,40 @@ export const DevToolsProfilingUseStateFromStores = ReactCompilerGating.isReactCo
           value: first1,
         };
         obj2.children = closure_4(tmp(tmp2[8]).TableSwitchRow, obj4);
-        const tmp41 = closure_4(tmp(tmp2[7]).TableRowGroup, obj2);
+        const tmp42 = closure_4(tmp(tmp2[7]).TableRowGroup, obj2);
         cResult[21] = first1;
-        cResult[22] = tmp41;
+        cResult[22] = tmp42;
       } else {
-        class J {
-          constructor(arg0) {
-            obj = { variant: "text-xs/medium", color: "text-subtle", style: { marginBottom: 4 }, children: arg0 };
-            return closure_4(closure_0(closure_1[6]).Text, obj);
+        class G {
+          constructor() {
+            obj = closure_0(closure_1[5]);
+            result = obj.setUseStateFromStoresExecutionCountWarningThreshold(closure_5);
+            return;
           }
         }
       }
       if (cResult[23] === tmp6Result5[0]) {
-        class J {
-          constructor(arg0) {
-            obj = { variant: "text-xs/medium", color: "text-subtle", style: { marginBottom: 4 }, children: arg0 };
-            return closure_4(closure_0(closure_1[6]).Text, obj);
+        class G {
+          constructor() {
+            obj = closure_0(closure_1[5]);
+            result = obj.setUseStateFromStoresExecutionCountWarningThreshold(closure_5);
+            return;
           }
         }
       }
-      let tmp42 = null;
+      let tmp43 = null;
       if (first1) {
-        class J {
-          constructor(arg0) {
-            obj = { variant: "text-xs/medium", color: "text-subtle", style: { marginBottom: 4 }, children: arg0 };
-            return closure_4(closure_0(closure_1[6]).Text, obj);
+        class G {
+          constructor() {
+            obj = closure_0(closure_1[5]);
+            result = obj.setUseStateFromStoresExecutionCountWarningThreshold(closure_5);
+            return;
           }
         }
         const obj5 = { title: "useStateFromStores Config", hasIcons: false, children: null };
         const obj6 = { label: "Execution time window threshold", subLabel: null };
         const obj7 = { children: null };
-        const items5 = [J("Time window to wait for before reporting violations.")];
+        const items5 = [tmp40("Time window to wait for before reporting violations.")];
         const obj8 = {
           size: "sm",
           defaultValue: str.toString(),
@@ -280,7 +286,7 @@ export const DevToolsProfilingUseStateFromStores = ReactCompilerGating.isReactCo
         const items6 = [closure_4(tmp(tmp2[9]).TableRow, obj6), , ,];
         const obj9 = { label: "Cumulative execution time warning threshold", subLabel: null };
         const obj10 = { children: null };
-        const items7 = [J("Total execution time limit for hooks before reporting violations.")];
+        const items7 = [tmp40("Total execution time limit for hooks before reporting violations.")];
         const obj11 = {
           size: "sm",
           defaultValue: str2.toString(),
@@ -297,7 +303,7 @@ export const DevToolsProfilingUseStateFromStores = ReactCompilerGating.isReactCo
         items6[1] = closure_4(tmp(tmp2[9]).TableRow, obj9);
         const obj12 = { label: "Cumulative execution count warning threshold", subLabel: null };
         const obj13 = { children: null };
-        const items8 = [J("Execution counts limit for hooks before reporting violations.")];
+        const items8 = [tmp40("Execution counts limit for hooks before reporting violations.")];
         const obj14 = {
           size: "sm",
           defaultValue: str3.toString(),
@@ -314,7 +320,7 @@ export const DevToolsProfilingUseStateFromStores = ReactCompilerGating.isReactCo
         items6[2] = closure_4(tmp(tmp2[9]).TableRow, obj12);
         const obj15 = { label: "Track specific hook", subLabel: null };
         const obj16 = { children: null };
-        const items9 = [J("Include a specific hook in the profiling regardless of limits.")];
+        const items9 = [tmp40("Include a specific hook in the profiling regardless of limits.")];
         const obj17 = {
           size: "sm",
           keyboardType: "email-address",
@@ -342,17 +348,17 @@ export const DevToolsProfilingUseStateFromStores = ReactCompilerGating.isReactCo
         obj15.subLabel = closure_6(str3, obj16);
         items6[3] = closure_4(tmp(tmp2[9]).TableRow, obj15);
         obj5.children = items6;
-        tmp42 = closure_6(tmp(tmp2[7]).TableRowGroup, obj5);
+        tmp43 = closure_6(tmp(tmp2[7]).TableRowGroup, obj5);
       }
       cResult[23] = tmp6Result5[0];
       cResult[24] = tmp6Result4[0];
       cResult[25] = tmp6Result[0];
       cResult[26] = first2;
       cResult[27] = first1;
-      cResult[28] = tmp42;
+      cResult[28] = tmp43;
       ref = str2.useRef(null);
     }
-  : () => {
+  : function DevToolsProfilingUseStateFromStores() {
       const tmp3 = _slicedToArray(str2.useState(value(str[5]).getUseStateFromStoresDebuggingEnabled()), 2);
       value = tmp3[0];
       const obj = value(str[5]);

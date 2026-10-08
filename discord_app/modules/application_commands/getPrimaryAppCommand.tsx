@@ -101,15 +101,15 @@ function queryForPrimaryAppCommand(context, id) {
     allowApplicationState: true,
   }).commands[0];
 }
-let ApplicationCommandIndexStore = fn(8827);
+let ApplicationCommandIndexStore = fn(9186);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: metroRequire } =
   ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
 let c8 = "no primary app command for application";
-let items = [fn(1985).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(1997).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, applicationId) => {
+  ? function useGetPrimaryAppCommand(arg0, applicationId) {
       _require = applicationId;
       const cResult = require("c").c(5);
       const tmp2 = closure_13(arg0, applicationId);
@@ -126,7 +126,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           return first;
         }
       }
-      const fn = function p() {
+      const fn = function t() {
         let tmp = closure_2;
         if (!closure_2) {
           tmp = loading;
@@ -146,7 +146,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       let obj = require("c");
     }
-  : (arg0, applicationId) => {
+  : function useGetPrimaryAppCommand(arg0, applicationId) {
       let tmp = closure_13(arg0, applicationId);
       const loading = tmp.loading;
       const first = tmp.commands[0];
@@ -167,7 +167,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_12 = tmp3;
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, applicationId) => {
+  ? function useQueryForPrimaryAppCommand(arg0, applicationId) {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { commandTypes: items };
@@ -192,8 +192,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return timestampProducer(arg0, first, tmp6);
     }
-  : (arg0, applicationId) =>
-      timestampProducer(
+  : function useQueryForPrimaryAppCommand(arg0, applicationId) {
+      return timestampProducer(
         arg0,
         { commandTypes: items },
         {
@@ -204,6 +204,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           allowApplicationState: true,
         },
       );
+    };
 let closure_13 = tmp4;
 ReactCompilerGating = fn(558);
 function isPrimaryAppCommandUsableInAppDM(integration_types) {
@@ -244,7 +245,7 @@ export { queryForPrimaryAppCommand };
 export const useGetPrimaryAppCommand = tmp3;
 export const useQueryForPrimaryAppCommand = tmp4;
 export const useIsPrimaryAppCommandUsableInAppDM = ReactCompilerGating.isReactCompilerEnabled()
-  ? (botUserId) => {
+  ? function useIsPrimaryAppCommandUsableInAppDM(botUserId) {
       let BOT_DM = dependencyMap;
       const cResult = c.c(3);
       botUserId = botUserId.botUserId;
@@ -281,7 +282,7 @@ export const useIsPrimaryAppCommandUsableInAppDM = ReactCompilerGating.isReactCo
         cResult[2] = tmp6;
       }
     }
-  : (context) => {
+  : function useIsPrimaryAppCommandUsableInAppDM(context) {
       const tmp = closure_12(context.context, context.applicationId);
       let tmp2 = null != tmp;
       if (tmp2) {

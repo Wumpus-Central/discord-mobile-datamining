@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting(
 
 export default apexExperiment;
 export const useUpcomingServerEventExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useUpcomingServerEventExperiment(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -32,7 +32,9 @@ export const useUpcomingServerEventExperiment = ReactCompilerGating.isReactCompi
       }
       return apexExperiment.useConfig(tmp2);
     }
-  : (location) => apexExperiment.useConfig({ location });
+  : function useUpcomingServerEventExperiment(location) {
+      return apexExperiment.useConfig({ location });
+    };
 export const isEligibleForUpcomingServerEventNotifications = function isEligibleForUpcomingServerEventNotifications(
   location,
 ) {

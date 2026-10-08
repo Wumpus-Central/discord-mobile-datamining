@@ -11,7 +11,7 @@ const noop = fn(19);
 ({ useEffect: closure_4, useRef: hasOwnProperty } = noop);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFetchPurchases(arg0) {
       const cResult = require("c").c(24);
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,8 +53,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[3];
       }
       const tmpResult = require("useStateFromStores");
-      const tmp12 = current(require("useStateFromStores").useStateFromStoresArray(tmp9, tmp10), 6);
-      current = tmp15;
+      const tmp12 = _slicedToArray(require("useStateFromStores").useStateFromStoresArray(tmp9, tmp10), 6);
+      current = tmp12[0];
+      _slicedToArray = tmp15;
       let current2 = tmp18;
       ref = ref(CollectiblesPurchaseStore.hasPreviouslyFetched);
       if (cResult[4] !== tmp12[5]) {
@@ -88,12 +89,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       current2(tmp21, tmp22);
       ExperimentStore = tmp19(tmp20.fetchError);
       if (cResult[7] !== tmp12[2]) {
-        class A {
-          constructor() {
-            closure_6.current = closure_3;
-            return;
-          }
-        }
+        const fn3 = function w() {
+          closure_6.current = current;
+        };
         const items3 = [tmp15];
         class C {
           constructor() {
@@ -110,27 +108,20 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[7] = tmp15;
-        cResult[8] = A;
+        cResult[8] = fn3;
         cResult[9] = items3;
         let tmp26 = items3;
+        let tmp25 = fn3;
       } else {
-        class A {
-          constructor() {
-            closure_6.current = closure_3;
-            return;
-          }
-        }
+        tmp25 = cResult[8];
         tmp26 = cResult[9];
       }
-      current2(A, tmp26);
+      current2(tmp25, tmp26);
       CollectiblesPurchaseStore = tmp19(tmp20.isFetching);
       if (cResult[10] !== current) {
-        class A {
-          constructor() {
-            closure_6.current = closure_3;
-            return;
-          }
-        }
+        const fn4 = function j() {
+          closure_7.current = current;
+        };
         const items4 = [current];
         class C {
           constructor() {
@@ -148,32 +139,31 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[10] = current;
         cResult[11] = items4;
-        cResult[12] = tmp30;
-        let tmp29 = tmp30;
-        const tmp28 = items4;
+        cResult[12] = fn4;
+        let tmp29 = fn4;
+        let tmp28 = items4;
       } else {
-        class A {
-          constructor() {
-            closure_6.current = closure_3;
-            return;
-          }
-        }
+        tmp28 = cResult[11];
         tmp29 = cResult[12];
       }
       current2(tmp29, tmp28);
       if (cResult[13] === stateFromStores) {
-        class A {
-          constructor() {
-            closure_6.current = closure_3;
-            return;
-          }
+        if (cResult[14] === tmp4) {
+          let tmp31 = cResult[15];
+          let tmp32 = cResult[16];
         }
-        tmp23(I, items5);
+        tmp23(tmp31, tmp32);
         if (cResult[17] === tmp16) {
-          class A {
-            constructor() {
-              closure_6.current = closure_3;
-              return;
+          if (cResult[18] === tmp15) {
+            if (cResult[19] === tmp18) {
+              if (cResult[20] === tmp14) {
+                if (cResult[21] === current) {
+                  if (cResult[22] === tmp17) {
+                    let tmp34 = cResult[23];
+                  }
+                  return tmp34;
+                }
+              }
             }
           }
         }
@@ -191,19 +181,20 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             return items;
           }
         }
-        tmp34[0] = tmp14;
-        tmp34[1] = tmp15;
-        tmp34[2] = tmp16;
-        tmp34[3] = current;
-        tmp34[4] = tmp17;
-        tmp34[5] = tmp18;
+        tmp35[0] = tmp14;
+        tmp35[1] = tmp15;
+        tmp35[2] = tmp16;
+        tmp35[3] = current;
+        tmp35[4] = tmp17;
+        tmp35[5] = tmp18;
         cResult[17] = tmp16;
         cResult[18] = tmp15;
         cResult[19] = tmp18;
         cResult[20] = tmp14;
         cResult[21] = current;
         cResult[22] = tmp17;
-        cResult[23] = tmp34;
+        cResult[23] = tmp35;
+        tmp34 = tmp35;
       }
       class I {
         constructor() {
@@ -236,14 +227,15 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           return;
         }
       }
-      items5 = [undefined !== arg0 && arg0, stateFromStores];
+      const items5 = [undefined !== arg0 && arg0, stateFromStores];
       cResult[13] = stateFromStores;
       cResult[14] = undefined !== arg0 && arg0;
       cResult[15] = I;
       cResult[16] = items5;
-      const tmpResult2 = require("useStateFromStores");
+      tmp32 = items5;
+      tmp31 = I;
     }
-  : () => {
+  : function useFetchPurchases() {
       let flag = arg0;
       if (arg0 === undefined) {
         flag = false;
@@ -292,7 +284,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }, items4);
       const items5 = [flag, stateFromStores];
       hasPreviouslyFetched(() => {
-        current = !stateFromStores;
+        let current = !stateFromStores;
         if (stateFromStores) {
           current = ref3.current;
         }
@@ -325,7 +317,7 @@ ReactCompilerGating.isReactCompilerEnabled();
 fn(558);
 ReactCompilerGating = fn(558);
 const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (paymentGateway, arg1) => {
+  ? function useFetchCollectiblesCategoriesAndPurchases(paymentGateway, arg1) {
       const cResult = c.c(18);
       paymentGateway = undefined;
       if (paymentGateway != null) {
@@ -437,7 +429,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = obj3;
       tmp8 = obj3;
     }
-  : (paymentGateway, arg1) => {
+  : function useFetchCollectiblesCategoriesAndPurchases(paymentGateway, arg1) {
       paymentGateway = undefined;
       if (paymentGateway != null) {
         paymentGateway = paymentGateway.paymentGateway;
@@ -494,7 +486,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_9 = tmp6;
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useGetOrFetchPurchase(arg0, arg1) {
       const cResult = c.c(3);
       let tmp3 = undefined === arg1;
       if (!tmp3) {
@@ -516,7 +508,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = value;
       tmp4 = value;
     }
-  : (arg0) => {
+  : function useGetOrFetchPurchase(arg0) {
       let flag = arg1;
       if (arg1 === undefined) {
         flag = true;
@@ -528,16 +520,18 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return value;
     };
-fn = () => closure_8(true);
+function useGetOrFetchPurchases() {
+  return closure_8(true);
+}
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx");
 
 export default tmp6;
 export const useFetchPurchases = tmp3;
-export const useGetOrFetchPurchases = fn;
+export { useGetOrFetchPurchases };
 export const useGetOrFetchPurchase = tmp5;
 export const useGetOrFetchCollectiblesCategoriesAndPurchases = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGetOrFetchCollectiblesCategoriesAndPurchases(arg0) {
       const cResult = c.c(4);
       if (cResult[0] !== arg0) {
         let obj2 = arg0;
@@ -562,7 +556,7 @@ export const useGetOrFetchCollectiblesCategoriesAndPurchases = ReactCompilerGati
       }
       return closure_9(tmp4);
     }
-  : (arg0) => {
+  : function useGetOrFetchCollectiblesCategoriesAndPurchases(arg0) {
       let obj = arg0;
       if (arg0 == null) {
         obj = {};

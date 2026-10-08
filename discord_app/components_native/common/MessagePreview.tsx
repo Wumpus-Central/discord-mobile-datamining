@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/MessagePreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MessagePreview(arg0) {
       const cResult = c.c(12);
       ({ channelId, onBeforeJumpToMessage } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          class C {
+          class S {
             constructor() {
               return () => {
                 closure_1_1(closure_1_2[8]).clearMessages();
@@ -55,11 +55,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const items1 = [];
-          cResult[6] = C;
+          cResult[6] = S;
           cResult[7] = items1;
           let tmp12 = items1;
         } else {
-          class C {
+          class S {
             constructor() {
               return () => {
                 closure_1_1(closure_1_2[8]).clearMessages();
@@ -68,9 +68,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           tmp12 = cResult[7];
         }
-        const effect = noop.useEffect(C, tmp12);
+        const effect = noop.useEffect(S, tmp12);
         if (cResult[8] === channelId) {
-          class C {
+          class S {
             constructor() {
               return () => {
                 closure_1_1(closure_1_2[8]).clearMessages();
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = obj3;
       const tmpResult = initialize;
     }
-  : (channelId) => {
+  : function MessagePreview(channelId) {
       const onBeforeJumpToMessage = channelId.onBeforeJumpToMessage;
       const items = [MessagePreviewStore];
       const stateFromStoresObject = onBeforeJumpToMessage(504).useStateFromStoresObject(items, () => ({
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         [],
       );
-      return jsx(onBeforeJumpToMessage(13112).ChatPreview, {
+      return jsx(onBeforeJumpToMessage(9314).ChatPreview, {
         channelId: channelId.channelId,
         messages: stateFromStoresObject.messages,
         jumpToChatProps: memo,

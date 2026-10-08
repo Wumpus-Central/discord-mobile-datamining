@@ -6,9 +6,9 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAutomaticGainControlSettingValue() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MediaEngineStore];
@@ -24,7 +24,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useAutomaticGainControlSettingValue() {
       const items = [MediaEngineStore];
       return initialize.useStateFromStores(items, () => automaticGainControl.getAutomaticGainControl());
     };
@@ -33,9 +33,9 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.cUMdH0);
   },
-  parent: fn(7645).MobileUserSettings.VOICE,
+  parent: fn(7966).MobileUserSettings.VOICE,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useAutomaticGainControlSettingValue() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [MediaEngineStore];
@@ -51,11 +51,11 @@ const toggle = SettingBuilders.createToggle({
         }
         return initialize.useStateFromStores(tmp4, tmp5);
       }
-    : () => {
+    : function useAutomaticGainControlSettingValue() {
         const items = [MediaEngineStore];
         return initialize.useStateFromStores(items, () => automaticGainControl.getAutomaticGainControl());
       },
-  onValueChange: fn(9686).handleAutomaticGainControlChange,
+  onValueChange: fn(10875).handleAutomaticGainControlChange,
   useDescription: function useAutomaticGainControlSettingDescription() {
     const intl = util.intl;
     return intl.string(util.t["6EjbvA"]);

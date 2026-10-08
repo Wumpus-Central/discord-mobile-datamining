@@ -34,7 +34,7 @@ function syncExperimentAssignment() {
   }
   return false;
 }
-const DefaultGameModeSettings = fn(4887).DefaultGameModeSettings;
+const DefaultGameModeSettings = fn(5081).DefaultGameModeSettings;
 let obj = {};
 let merged = Object.assign(DefaultGameModeSettings);
 let c6 = false;
@@ -108,6 +108,21 @@ prototype["isEnabledFor"] = function isEnabledFor(arg0) {
 Object.defineProperty(prototype, "hasRunningGame", {
   get: function hasRunningGame() {
     return c6;
+  },
+  set: undefined,
+});
+Object.defineProperty(prototype, "runningGameId", {
+  get: function runningGameId() {
+    const visibleRunningGames = RunningGameStore.getVisibleRunningGames();
+    let id;
+    const found = visibleRunningGames.find((isLauncher) => true !== isLauncher.isLauncher);
+    if (found != null) {
+      id = found.id;
+    }
+    if (id == null) {
+      id = null;
+    }
+    return id;
   },
   set: undefined,
 });

@@ -2,11 +2,11 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4822 from "../../../../../_runtime/metro/04822__.js";
+import _modDef5016 from "../../../../../_runtime/metro/05016__.js";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import IconActionButton from "IconActionButton.tsx";
-import _mod15995 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
+import _mod16255 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRequestStore from "../../../message_request/MessageRequestStore.tsx";
@@ -19,11 +19,11 @@ let closure_3 = ["alternateVariant"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({ buttonContainer: { position: "relative" } });
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useMessageRequestCounts() {
       const cResult = c.c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MessageRequestStore];
@@ -66,7 +66,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = obj2;
       const tmpResult2 = initialize;
     }
-  : () => {
+  : function useMessageRequestCounts() {
       const obj = { requestCount: null, spamCount: null };
       const items = [MessageRequestStore];
       obj.requestCount = initialize.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
@@ -76,7 +76,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const IconComponent = ReactCompilerGating.isReactCompilerEnabled()
-  ? (color) => {
+  ? function MessageRequestAnimation(color) {
       const cResult = c.c(5);
       color = color.color;
       const requestCount = closure_12().requestCount;
@@ -104,7 +104,7 @@ const IconComponent = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp5, tmp6);
       if (cResult[3] !== color) {
         const obj3 = { ref, color, size: "sm", autoPlay: true };
-        const tmp10 = options(_mod15995.MessageRequestLottie, obj3);
+        const tmp10 = options(_mod16255.MessageRequestLottie, obj3);
         cResult[3] = color;
         cResult[4] = tmp10;
         let tmp8 = tmp10;
@@ -113,7 +113,7 @@ const IconComponent = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : (color) => {
+  : function MessageRequestAnimation(color) {
       const ref = noop.useRef(null);
       const requestCount = closure_12().requestCount;
       const items = [requestCount];
@@ -127,14 +127,14 @@ const IconComponent = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items);
-      return options(_mod15995.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+      return options(_mod16255.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (alternateVariant) => {
+  ? function MessageRequestsButton(alternateVariant) {
       const cResult = c.c(21);
       if (cResult[0] !== alternateVariant) {
         alternateVariant = alternateVariant.alternateVariant;
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { style: tmp10.buttonContainer, collapsable: false, children: null };
             const items = [cResult[7], tmp43];
             obj2.children = items;
-            const tmp49 = v65535(View, obj2);
+            const tmp49 = collapsed(View, obj2);
             cResult[10] = tmp10.buttonContainer;
             cResult[11] = cResult[7];
             cResult[12] = tmp43;
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj5 = {
-          source: _modDef4822,
+          source: _modDef5016,
           IconComponent,
           accessibilityLabel: tmp13,
           buttonText: tmp15,
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       tmp9 = undefined !== tmp5 && tmp5;
     }
-  : (alternateVariant) => {
+  : function MessageRequestsButton(alternateVariant) {
       let flag = alternateVariant.alternateVariant;
       if (flag === undefined) {
         flag = false;
@@ -309,12 +309,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const merged2 = Object.assign(merged);
           tmp24 = options(IconButton.IconButton, obj4);
         }
-        const items = [tmp24, str > 0 && tmp27(tmp26(13116).ButtonBadge, { badgePosition: "right" })];
+        const items = [tmp24, str > 0 && tmp27(tmp26(12830).ButtonBadge, { badgePosition: "right" })];
         obj2.children = items;
-        return v65535(View, obj2);
+        return collapsed(View, obj2);
       } else {
         const obj = {
-          source: _modDef4822,
+          source: _modDef5016,
           IconComponent,
           accessibilityLabel: null,
           buttonText: null,

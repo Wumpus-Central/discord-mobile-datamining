@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileHeroBackgroundURL.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (screenshotUrls, size) => {
+  ? function useGameProfileHeroBackgroundURL(screenshotUrls, size) {
       const cResult = c.c(9);
       let screenshotURL = globalThis;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = bannerURL;
       tmp5 = bannerURL;
     }
-  : (arg0, arg1) => {
+  : function useGameProfileHeroBackgroundURL(arg0, arg1) {
       let bannerURL = arg0;
       closure_1 = arg1;
       const first = _slicedToArray(

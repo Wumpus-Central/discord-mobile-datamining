@@ -4,9 +4,9 @@ import c from "../../../_runtime/00576_c.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../intl/index.native.tsx";
 import native from "../../design/void/native.tsx";
+import RTCDebugActionCreatorsAll from "../../actions/RTCDebugActionCreators.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../common/SafeAreaView.tsx";
-import RTCDebugActionCreatorsAll from "../../actions/RTCDebugActionCreators.tsx";
 import RTCConnectionUtilsDefault from "../../utils/RTCConnectionUtils.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -22,15 +22,15 @@ require = fn;
 let closure_4 = ["type"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, ScrollView: closure_9, StyleSheet } = get_ActivityIndicator);
-const MediaEngineContextTypes = fn(4921).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5115).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 function asString(arg0) {}
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: null, scroller: null, indent: null, row: null, text: null, buttonClose: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-const ColorUtils = fn(4733);
+const ColorUtils = fn(4927);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj.container = obj3;
 obj.scroller = { flex: 1, margin: 8 };
@@ -41,7 +41,7 @@ obj.buttonClose = { flexGrow: 0, margin: 8 };
 const guild = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Text(arg0) {
       const cResult = c.c(3);
       const tmp4 = closure_21();
       if (cResult[0] === arg0) {
@@ -59,7 +59,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp7;
       tmp5 = tmp7;
     }
-  : (arg0) => {
+  : function Text(arg0) {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.style = closure_21().text;
@@ -67,7 +67,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Section(arg0) {
       const cResult = c.c(8);
       ({ title, children } = arg0);
       const tmp2 = closure_21();
@@ -108,7 +108,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = tmp8;
       const obj4 = { style: tmp2.indent, children };
     }
-  : (arg0) => {
+  : function Section(arg0) {
       ({ title, children } = arg0);
       const obj = { children: null };
       const obj2 = { children: null };
@@ -411,7 +411,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       if (cResult[4] !== guildId) {
-        const fn2 = function s() {
+        const fn2 = function c() {
           return GuildStore.getGuild(guildId);
         };
         const items3 = [guildId];
@@ -449,7 +449,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult3 = guildId(504);
       const stateFromStores1 = guildId(504).useStateFromStores(tmp14, tmp16, tmp17);
-      const tmp19 = channelId(5049)(stateFromStores1);
+      const tmp19 = channelId(5417)(stateFromStores1);
       let name = null;
       if (null != stateFromStores) {
         name = stateFromStores.name;
@@ -521,9 +521,9 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj5 = { title: "general", children: null };
       obj6 = { obj: null };
-      const tmp4 = channelId(5049)(stateFromStores1);
+      const tmp4 = channelId(5417)(stateFromStores1);
       obj4.name = name;
-      obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5049)(stateFromStores1) } };
+      obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5417)(stateFromStores1) } };
       obj5.children = closure_17(ObjectKV, obj6);
       return closure_17(closure_23, obj5);
     };
@@ -857,7 +857,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n() {
           RTCDebugActionCreatorsAll.open();
-          return () => closure_1_1(584).wait(closure_1_2(9736).close);
+          return () => closure_1_1(584).wait(closure_1_2(5134).close);
         };
         const items = [];
         cResult[0] = fn;
@@ -955,7 +955,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_21();
       const effect = noop.useEffect(() => {
         RTCDebugActionCreatorsAll.open();
-        return () => closure_1_1(584).wait(closure_1_2(9736).close);
+        return () => closure_1_1(584).wait(closure_1_2(5134).close);
       }, []);
       const rect = { top: true, left: true, right: true, bottom: true, style: null, children: null };
       const items = [tmp.container, style];

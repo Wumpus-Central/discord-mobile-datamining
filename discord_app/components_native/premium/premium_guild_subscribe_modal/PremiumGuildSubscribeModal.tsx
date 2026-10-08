@@ -1,7 +1,7 @@
 // discord_app/components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeModal.tsx
 import util from "../../../intl/index.native.tsx";
-import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import useBackPressHandlerDefault from "../../../modules/routing/native/useBackPressHandler.tsx";
+import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import useInitialValueDefault from "../../../hooks/useInitialValue.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import Navigator from "../../../design/components/Navigator/native/Navigator.native.tsx";
@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../modules/user_settings/ThemeStore.tsx";
 
 require = fn;
-const constants = fn(5621).PremiumGuildSubscribeModalScenes;
+let closure_6 = fn(5966).PremiumGuildSubscribeModalScenes;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function PremiumGuildSubscribeModal(guildId) {
       const cResult = guildId(intent[21]).c(12);
       guildId = guildId.guildId;
       const guildBoostSlots = guildId.guildBoostSlots;
@@ -35,54 +35,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             ({ initialStack, screens } = guildBoostSlots(tmp2[22])(tmp4));
             [first, ThemeStore] = first.useState(initialStack[0].name);
             if (cResult[5] !== first) {
-              class B {
-                constructor() {
-                  flag = closure_4 === closure_6.GUILD_SELECT;
-                  if (flag) {
-                    tmp = closure_0;
-                    tmp2 = closure_2;
-                    obj = closure_0(closure_2[8]);
-                    closeApplyBoostModalResult = obj.closeApplyBoostModal();
-                    flag = true;
-                  }
-                  return flag;
+              const fn2 = function b() {
+                let flag = first === constants.GUILD_SELECT;
+                if (flag) {
+                  BoostingActionCreators.closeApplyBoostModal();
+                  flag = true;
                 }
-              }
+                return flag;
+              };
               cResult[5] = first;
-              cResult[6] = B;
+              cResult[6] = fn2;
+              let tmp11 = fn2;
             } else {
-              class B {
-                constructor() {
-                  flag = closure_4 === closure_6.GUILD_SELECT;
-                  if (flag) {
-                    tmp = closure_0;
-                    tmp2 = closure_2;
-                    obj = closure_0(closure_2[8]);
-                    closeApplyBoostModalResult = obj.closeApplyBoostModal();
-                    flag = true;
-                  }
-                  return flag;
-                }
-              }
+              tmp11 = cResult[6];
             }
-            guildBoostSlots(tmp2[23])(B);
+            guildBoostSlots(tmp2[23])(tmp11);
             const _Symbol = Symbol;
             if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-              class B {
-                constructor() {
-                  flag = closure_4 === closure_6.GUILD_SELECT;
-                  if (flag) {
-                    tmp = closure_0;
-                    tmp2 = closure_2;
-                    obj = closure_0(closure_2[8]);
-                    closeApplyBoostModalResult = obj.closeApplyBoostModal();
-                    flag = true;
-                  }
-                  return flag;
-                }
-              }
-              const stringResult = obj2.string(tmp(tmp2[14]).t["13/7kX"]);
-              class R {
+              let intl = tmp(tmp2[14]).intl;
+              const stringResult = intl.string(tmp(tmp2[14]).t["13/7kX"]);
+              class E {
                 constructor(arg0) {
                   tmp = undefined;
                   if (guildId != null) {
@@ -96,42 +68,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               cResult[7] = stringResult;
-              cResult[8] = R;
-              let tmp15 = R;
-              const tmp14 = stringResult;
+              cResult[8] = E;
+              let tmp15 = E;
+              let tmp14 = stringResult;
             } else {
-              class B {
-                constructor() {
-                  flag = closure_4 === closure_6.GUILD_SELECT;
-                  if (flag) {
-                    tmp = closure_0;
-                    tmp2 = closure_2;
-                    obj = closure_0(closure_2[8]);
-                    closeApplyBoostModalResult = obj.closeApplyBoostModal();
-                    flag = true;
-                  }
-                  return flag;
-                }
-              }
+              tmp14 = cResult[7];
               tmp15 = cResult[8];
             }
             if (cResult[9] === initialStack) {
-              class B {
-                constructor() {
-                  flag = closure_4 === closure_6.GUILD_SELECT;
-                  if (flag) {
-                    tmp = closure_0;
-                    tmp2 = closure_2;
-                    obj = closure_0(closure_2[8]);
-                    closeApplyBoostModalResult = obj.closeApplyBoostModal();
-                    flag = true;
-                  }
-                  return flag;
-                }
+              if (cResult[10] === screens) {
+                let tmp17 = cResult[11];
               }
               return tmp17;
             }
-            let obj3 = { screens, initialRouteStack: initialStack, headerBackTitle: tmp14, onStateChange: tmp15 };
+            let obj2 = { screens, initialRouteStack: initialStack, headerBackTitle: tmp14, onStateChange: tmp15 };
             const tmp19 = jsx(tmp(tmp2[24]).Navigator, {
               screens,
               initialRouteStack: initialStack,
@@ -162,57 +112,57 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               headerShown: false,
               render(arg0) {
                 const merged = Object.assign(arg0);
-                return closure_1_8(guildBoostSlots(5622), {});
+                return closure_1_8(guildBoostSlots(5967), {});
               },
             };
             obj5[constants.GUILD_SELECT] = obj6;
             const obj7 = {
               headerLeft: NavigatorHeader.getHeaderCloseButton(BoostingActionCreators.closeApplyBoostModal),
-              headerRight() {
+              headerRight: function renderSettingsButton() {
                 if (obj.isThemeDark(theme.theme)) {
-                  let tmp4Result = guildBoostSlots(6891);
+                  let tmp4Result = guildBoostSlots(7080);
                 } else {
-                  tmp4Result = guildBoostSlots(6892);
+                  tmp4Result = guildBoostSlots(7081);
                 }
                 let obj2 = {
                   source: tmp4Result,
-                  IconComponent: closure_1_0(6893).SettingsIcon,
+                  IconComponent: guildId(7082).SettingsIcon,
                   accessibilityLabel: null,
                   accessibilityHint: null,
                   onPress: null,
                 };
-                const intl = closure_1_0(1126).intl;
-                obj2.accessibilityLabel = intl.string(closure_1_0(1126).t["3D5yo/"]);
-                const intl2 = closure_1_0(1126).intl;
-                obj2.accessibilityHint = intl2.string(closure_1_0(1126).t["+CbP2v"]);
+                const intl = guildId(1126).intl;
+                obj2.accessibilityLabel = intl.string(guildId(1126).t["3D5yo/"]);
+                const intl2 = guildId(1126).intl;
+                obj2.accessibilityHint = intl2.string(guildId(1126).t["+CbP2v"]);
                 obj2.onPress = function onPress() {
-                  const result = closure_1_0(6498).trackUserSettingsPaneViewed({
+                  const result = closure_1_0(6675).trackUserSettingsPaneViewed({
                     destinationPane: constants.GUILD_BOOSTING,
                   });
-                  const obj = closure_1_0(6498);
+                  const obj = closure_1_0(6675);
                   const obj2 = { destinationPane: constants.GUILD_BOOSTING };
-                  closure_1_0(5619).closeApplyBoostModal();
-                  const obj3 = closure_1_0(5619);
-                  closure_1_0(6895).openUserSettings({ screen: constants.GUILD_BOOSTING });
+                  closure_1_0(5964).closeApplyBoostModal();
+                  const obj3 = closure_1_0(5964);
+                  closure_1_0(7084).openUserSettings({ screen: constants.GUILD_BOOSTING });
                 };
-                return closure_1_8(closure_1_0(6890).HeaderActionButton, obj2);
+                return closure_1_8(guildId(7079).HeaderActionButton, obj2);
               },
               headerTitle(children) {
                 children = children.children;
                 const obj = { title: null, subtitle: null };
-                const intl = closure_1_0(1126).intl;
-                obj.title = intl.string(closure_1_0(1126).t.VJEVbu);
+                const intl = guildId(1126).intl;
+                obj.title = intl.string(guildId(1126).t.VJEVbu);
                 let tmpResult = null;
                 if (children.length > 0) {
                   const obj2 = { children };
-                  tmpResult = closure_1_8(closure_1_0(1188).LegacyText, obj2);
+                  tmpResult = closure_1_8(guildId(1200).LegacyText, obj2);
                 }
                 obj.subtitle = tmpResult;
-                return closure_1_8(closure_1_0(6017).NavigatorHeader, obj);
+                return closure_1_8(guildId(6203).NavigatorHeader, obj);
               },
               render(arg0) {
                 const merged = Object.assign(arg0);
-                return closure_1_8(guildBoostSlots(6897), {});
+                return closure_1_8(guildBoostSlots(7086), {});
               },
             };
             obj5[constants.OVERVIEW] = obj7;
@@ -222,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj8.headerTitle = intl.string(util.t.VJEVbu);
             obj8.render = function render(arg0) {
               const merged = Object.assign(arg0);
-              return closure_1_8(guildBoostSlots(13433), {});
+              return closure_1_8(guildBoostSlots(13733), {});
             };
             obj5[constants.CONFIRMATION] = obj8;
             obj4.screens = obj5;
@@ -249,17 +199,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn;
       let obj = guildId(intent[21]);
     }
-  : (arg0) => {
+  : function PremiumGuildSubscribeModal(arg0) {
       ({ guildId: require, guildBoostSlots: importDefault, intent: dependencyMap, onResult: _slicedToArray } = arg0);
       first = undefined;
       closure_5 = undefined;
       let tmp = useInitialValueDefault(() => {
         const items = [];
-        if (null != _require) {
+        if (null != guildId) {
           if (null != guildBoostSlots) {
             if (guildBoostSlots.length > 0) {
               let obj2 = { name: constants.CONFIRMATION, params: null };
-              let obj3 = { guildId: _require, guildBoostSlots, intent, onResult };
+              let obj3 = { guildId, guildBoostSlots, intent, onResult };
               obj2.params = obj3;
               items.push(obj2);
             }
@@ -269,57 +219,57 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               headerShown: false,
               render(arg0) {
                 const merged = Object.assign(arg0);
-                return closure_1_8(guildBoostSlots(5622), {});
+                return closure_1_8(guildBoostSlots(5967), {});
               },
             };
             obj5[constants.GUILD_SELECT] = obj6;
             const obj7 = {
               headerLeft: NavigatorHeader.getHeaderCloseButton(BoostingActionCreators.closeApplyBoostModal),
-              headerRight() {
+              headerRight: function renderSettingsButton() {
                 if (obj.isThemeDark(theme.theme)) {
-                  let tmp4Result = guildBoostSlots(6891);
+                  let tmp4Result = guildBoostSlots(7080);
                 } else {
-                  tmp4Result = guildBoostSlots(6892);
+                  tmp4Result = guildBoostSlots(7081);
                 }
                 let obj2 = {
                   source: tmp4Result,
-                  IconComponent: closure_1_0(6893).SettingsIcon,
+                  IconComponent: guildId(7082).SettingsIcon,
                   accessibilityLabel: null,
                   accessibilityHint: null,
                   onPress: null,
                 };
-                const intl = closure_1_0(1126).intl;
-                obj2.accessibilityLabel = intl.string(closure_1_0(1126).t["3D5yo/"]);
-                const intl2 = closure_1_0(1126).intl;
-                obj2.accessibilityHint = intl2.string(closure_1_0(1126).t["+CbP2v"]);
+                const intl = guildId(1126).intl;
+                obj2.accessibilityLabel = intl.string(guildId(1126).t["3D5yo/"]);
+                const intl2 = guildId(1126).intl;
+                obj2.accessibilityHint = intl2.string(guildId(1126).t["+CbP2v"]);
                 obj2.onPress = function onPress() {
-                  const result = closure_1_0(6498).trackUserSettingsPaneViewed({
+                  const result = closure_1_0(6675).trackUserSettingsPaneViewed({
                     destinationPane: constants.GUILD_BOOSTING,
                   });
-                  const obj = closure_1_0(6498);
+                  const obj = closure_1_0(6675);
                   const obj2 = { destinationPane: constants.GUILD_BOOSTING };
-                  closure_1_0(5619).closeApplyBoostModal();
-                  const obj3 = closure_1_0(5619);
-                  closure_1_0(6895).openUserSettings({ screen: constants.GUILD_BOOSTING });
+                  closure_1_0(5964).closeApplyBoostModal();
+                  const obj3 = closure_1_0(5964);
+                  closure_1_0(7084).openUserSettings({ screen: constants.GUILD_BOOSTING });
                 };
-                return closure_1_8(closure_1_0(6890).HeaderActionButton, obj2);
+                return closure_1_8(guildId(7079).HeaderActionButton, obj2);
               },
               headerTitle(children) {
                 children = children.children;
                 const obj = { title: null, subtitle: null };
-                const intl = closure_1_0(1126).intl;
-                obj.title = intl.string(closure_1_0(1126).t.VJEVbu);
+                const intl = guildId(1126).intl;
+                obj.title = intl.string(guildId(1126).t.VJEVbu);
                 let tmpResult = null;
                 if (children.length > 0) {
                   const obj2 = { children };
-                  tmpResult = closure_1_8(closure_1_0(1188).LegacyText, obj2);
+                  tmpResult = closure_1_8(guildId(1200).LegacyText, obj2);
                 }
                 obj.subtitle = tmpResult;
-                return closure_1_8(closure_1_0(6017).NavigatorHeader, obj);
+                return closure_1_8(guildId(6203).NavigatorHeader, obj);
               },
               render(arg0) {
                 const merged = Object.assign(arg0);
-                return closure_1_8(guildBoostSlots(6897), {});
+                return closure_1_8(guildBoostSlots(7086), {});
               },
             };
             obj5[constants.OVERVIEW] = obj7;
@@ -329,16 +279,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj8.headerTitle = intl.string(util.t.VJEVbu);
             obj8.render = function render(arg0) {
               const merged = Object.assign(arg0);
-              return closure_1_8(guildBoostSlots(13433), {});
+              return closure_1_8(guildBoostSlots(13733), {});
             };
             obj5[constants.CONFIRMATION] = obj8;
             obj4.screens = obj5;
             return obj4;
           }
         }
-        if (null != _require) {
+        if (null != guildId) {
           const obj9 = { name: constants.OVERVIEW, params: null };
-          const obj10 = { guildId: _require, guildBoostSlots, intent, onResult };
+          const obj10 = { guildId, guildBoostSlots, intent, onResult };
           obj9.params = obj10;
           items.push(obj9);
         } else {

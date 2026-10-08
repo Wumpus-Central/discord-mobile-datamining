@@ -12,7 +12,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   flexContainer: {
     flex: 1,
@@ -44,7 +44,7 @@ let obj5 = {
 ({ PASSKEY_CREDENTIAL_MANAGER, PASSKEY_DEVICE, OTHER_AND_ANDROID_NONDISCOVERABLE } = obj4);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (registering) => {
+  ? function AndroidPasskeyRadioGroup(registering) {
       const cResult = c.c(10);
       ({ authenticatorSelection, onChange } = registering);
       registering = registering.registering;
@@ -133,7 +133,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         withSpacing: true,
       });
     }
-  : (onChange) => {
+  : function AndroidPasskeyRadioGroup(onChange) {
       onChange = onChange.onChange;
       ({ authenticatorSelection, registering } = onChange);
       const obj = { value: obj4.PASSKEY_CREDENTIAL_MANAGER, name: null };
@@ -167,22 +167,22 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnRegisterStep.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function WebAuthnRegisterStep() {
       const cResult = navigation(576).c(33);
       const obj = navigation(576);
-      navigation = navigation(1490).useNavigation();
+      navigation = navigation(1502).useNavigation();
       const tmp5 = closure_9();
       const tmp7 = _slicedToArray(noop.useState(false), 2);
       const first = tmp7[0];
-      const obj2 = navigation(1490);
+      const obj2 = navigation(1502);
       [tmp10, tmp11] = noop.useState("");
-      obj4 = navigation(1369);
+      obj4 = navigation(1381);
       const tmp9 = _slicedToArray(noop.useState(""), 2);
       [tmp14, tmp15] = noop.useState(
         obj4.isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE,
       );
       if (cResult[0] !== navigation) {
-        const fn = function s(arg0) {
+        const fn = function l(arg0) {
           const replaced = navigation.replace(UserSettingsSections.WEBAUTHN_NAME, arg0);
         };
         cResult[0] = navigation;
@@ -205,9 +205,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         noop.useState(obj4.isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE),
         2,
       );
-      const announceError = navigation(14611).useAnnounceError(tmp10);
+      const announceError = navigation(14872).useAnnounceError(tmp10);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp22 = closure_7(tmp(14612).KeyImage, {});
+        const tmp22 = closure_7(tmp(14873).KeyImage, {});
         cResult[4] = tmp22;
         let tmp20 = tmp22;
       } else {
@@ -231,25 +231,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp26 = cResult[9];
           }
           if (cResult[10] !== tmp10) {
-            let tmp30 = "" !== tmp10;
-            if (tmp30) {
+            let tmp29 = "" !== tmp10;
+            if (tmp29) {
               const obj6 = { variant: "text-md/normal", color: "text-feedback-critical", children: tmp10 };
-              tmp30 = closure_7(tmp(4892).Text, obj6);
+              tmp29 = closure_7(tmp(5086).Text, obj6);
             }
             cResult[10] = tmp10;
-            cResult[11] = tmp30;
-            let tmp29 = tmp30;
+            cResult[11] = tmp29;
+            let tmp28 = tmp29;
           } else {
-            tmp29 = cResult[11];
+            tmp28 = cResult[11];
           }
           if (cResult[12] === tmp5.centerFlex) {
             if (cResult[13] === tmp26) {
-              if (cResult[14] === tmp29) {
-                let tmp32 = cResult[15];
+              if (cResult[14] === tmp28) {
+                let tmp31 = cResult[15];
               }
               if (cResult[16] === tmp14) {
                 if (cResult[17] === first) {
-                  let tmp36 = cResult[18];
+                  let tmp35 = cResult[18];
                 }
                 if (cResult[19] !== first) {
                   const intl2 = tmp(1126).intl;
@@ -266,21 +266,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   if (cResult[21] === tmp17) {
                     if (cResult[22] === tmp18) {
-                      let tmp43 = cResult[23];
+                      let tmp42 = cResult[23];
                     }
                     if (cResult[24] === first) {
-                      if (cResult[25] === tmp40) {
-                        if (cResult[26] === tmp43) {
-                          let tmp44 = cResult[27];
+                      if (cResult[25] === tmp39) {
+                        if (cResult[26] === tmp42) {
+                          let tmp43 = cResult[27];
                         }
                         if (cResult[28] === tmp5.flexContainer) {
-                          if (cResult[29] === tmp44) {
-                            if (cResult[30] === tmp32) {
-                              if (cResult[31] === tmp36) {
-                                let tmp47 = cResult[32];
+                          if (cResult[29] === tmp43) {
+                            if (cResult[30] === tmp31) {
+                              if (cResult[31] === tmp35) {
+                                let tmp45 = cResult[32];
                               }
-                              return tmp47;
+                              return tmp45;
                             }
+                          }
+                        }
+                        class W {
+                          constructor() {
+                            return closure_1(closure_2);
                           }
                         }
                         const rect = {
@@ -290,70 +295,84 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           style: tmp5.flexContainer,
                           children: null,
                         };
-                        const items = [tmp32, tmp36, tmp44];
+                        const items = [tmp31, tmp35, tmp43];
                         rect.children = items;
-                        const tmp49 = closure_8(tmp(6626).SafeAreaPaddingView, rect);
+                        const tmp46 = closure_8(tmp(6803).SafeAreaPaddingView, rect);
                         cResult[28] = tmp5.flexContainer;
-                        cResult[29] = tmp44;
-                        cResult[30] = tmp32;
-                        cResult[31] = tmp36;
-                        cResult[32] = tmp49;
-                        tmp47 = tmp49;
+                        cResult[29] = tmp43;
+                        cResult[30] = tmp31;
+                        cResult[31] = tmp35;
+                        cResult[32] = tmp46;
+                        tmp45 = tmp46;
+                      }
+                    }
+                    class W {
+                      constructor() {
+                        return closure_1(closure_2);
                       }
                     }
                     const obj7 = { children: null };
-                    const obj8 = { text: tmp40, disabled: first, loading: first, onPress: tmp43, size: "lg" };
-                    obj7.children = closure_7(tmp(5601).Button, obj8);
-                    const tmp46 = closure_7(tmp(5599).ButtonGroup, obj7);
+                    const obj8 = { text: tmp39, disabled: first, loading: first, onPress: tmp42, size: "lg" };
+                    obj7.children = closure_7(tmp(5375).Button, obj8);
+                    const tmp44 = closure_7(tmp(5963).ButtonGroup, obj7);
                     cResult[24] = first;
-                    cResult[25] = tmp40;
-                    cResult[26] = tmp43;
-                    cResult[27] = tmp46;
-                    tmp44 = tmp46;
+                    cResult[25] = tmp39;
+                    cResult[26] = tmp42;
+                    cResult[27] = tmp44;
+                    tmp43 = tmp44;
                   }
-                  const fn2 = function k() {
-                    return closure_1(closure_2);
-                  };
+                  class W {
+                    constructor() {
+                      return closure_1(closure_2);
+                    }
+                  }
                   cResult[21] = tmp17;
                   cResult[22] = tmp18;
-                  cResult[23] = fn2;
-                  tmp43 = fn2;
+                  cResult[23] = W;
+                  tmp42 = W;
                 }
               }
               let shouldDisplayAndroidFidoSelector = NativeCeremoniesDefault.shouldDisplayAndroidFidoSelector;
               if (shouldDisplayAndroidFidoSelector) {
-                const obj9 = { authenticatorSelection: tmp14, registering: first, onChange: tmp15 };
-                shouldDisplayAndroidFidoSelector = closure_7(closure_12, obj9);
+                class W {
+                  constructor() {
+                    return closure_1(closure_2);
+                  }
+                }
+                tmp38[0] = tmp14;
+                tmp38[1] = first;
+                tmp38[2] = tmp15;
+                shouldDisplayAndroidFidoSelector = closure_7(closure_12, tmp38);
               }
               cResult[16] = tmp14;
               cResult[17] = first;
               cResult[18] = shouldDisplayAndroidFidoSelector;
-              tmp36 = shouldDisplayAndroidFidoSelector;
+              tmp35 = shouldDisplayAndroidFidoSelector;
             }
           }
-          const obj10 = { style: tmp5.centerFlex, children: null };
-          const items1 = [tmp20, tmp26, tmp29];
-          obj10.children = items1;
-          const tmp35 = closure_8(View, obj10);
+          const obj9 = { style: tmp5.centerFlex, children: null };
+          const items1 = [tmp20, tmp26, tmp28];
+          obj9.children = items1;
+          const tmp34 = closure_8(View, obj9);
           cResult[12] = tmp5.centerFlex;
           cResult[13] = tmp26;
-          cResult[14] = tmp29;
-          cResult[15] = tmp35;
-          tmp32 = tmp35;
+          cResult[14] = tmp28;
+          cResult[15] = tmp34;
+          tmp31 = tmp34;
         }
-        const obj11 = { style: tmp5.margin, variant: "text-md/normal", children: cResult[6] };
-        const tmp28 = closure_7(tmp(4892).Text, obj11);
+        const obj10 = { style: tmp5.margin, variant: "text-md/normal", children: cResult[6] };
+        const tmp27 = closure_7(tmp(5086).Text, obj10);
         cResult[7] = tmp5.margin;
         cResult[8] = cResult[6];
-        cResult[9] = tmp28;
-        tmp26 = tmp28;
+        cResult[9] = tmp27;
+        tmp26 = tmp27;
       }
-      const tmpResult = navigation(14611);
+      const tmpResult = navigation(14872);
     }
-  : () => {
-      navigation = navigation(1490).useNavigation();
+  : function WebAuthnRegisterStep() {
+      navigation = navigation(1502).useNavigation();
       const tmp4 = closure_9();
-      const obj = navigation(1490);
+      const obj = navigation(1502);
       const tmp5 = authenticatorSelection;
       [tmp7, tmp8] = authenticatorSelection(onRegisterSuccess.useState(false), 2);
       importDefault = tmp8;
@@ -363,7 +382,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp9 = authenticatorSelection(onRegisterSuccess.useState(""), 2);
       const tmp5Result = tmp5(
         onRegisterSuccess.useState(
-          navigation(1369).isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE,
+          navigation(1381).isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE,
         ),
         2,
       );
@@ -376,11 +395,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_5 = obj2.useMemo(() => obj5[first], items1);
       const items2 = [onRegisterSuccess, tmp11, tmp8];
       closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
-      const obj3 = navigation(1369);
-      const announceError = navigation(14611).useAnnounceError(tmp10);
+      const obj3 = navigation(1381);
+      const announceError = navigation(14872).useAnnounceError(tmp10);
       const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
       obj4 = { style: tmp4.centerFlex, children: null };
-      const items3 = [closure_7(navigation(14612).KeyImage, {}), ,];
+      const items3 = [closure_7(navigation(14873).KeyImage, {}), ,];
       obj5 = { style: tmp4.margin, variant: "text-md/normal", children: null };
       const intl = tmp(1126).intl;
       const string = intl.string;
@@ -391,11 +410,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stringResult = string(t.Lh5vTW);
       }
       obj5.children = stringResult;
-      items3[1] = closure_7(navigation(4892).Text, obj5);
+      items3[1] = closure_7(navigation(5086).Text, obj5);
       let tmp19Result = "" !== tmp10;
       if (tmp19Result) {
         const obj6 = { variant: "text-md/normal", color: "text-feedback-critical", children: tmp10 };
-        tmp19Result = closure_7(tmp(4892).Text, obj6);
+        tmp19Result = closure_7(tmp(5086).Text, obj6);
       }
       items3[2] = tmp19Result;
       obj4.children = items3;
@@ -415,7 +434,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         string2Result = string2(t2.oibaQa);
       }
       const obj8 = {
-        children: closure_7(navigation(5601).Button, {
+        children: closure_7(navigation(5375).Button, {
           text: string2Result,
           disabled: tmp7,
           loading: tmp7,
@@ -425,7 +444,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           size: "lg",
         }),
       };
-      items4[2] = closure_7(navigation(5599).ButtonGroup, obj8);
+      items4[2] = closure_7(navigation(5963).ButtonGroup, obj8);
       rect.children = items4;
-      return closure_8(navigation(6626).SafeAreaPaddingView, rect);
+      return closure_8(navigation(6803).SafeAreaPaddingView, rect);
     };

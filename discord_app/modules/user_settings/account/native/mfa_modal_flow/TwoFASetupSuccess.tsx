@@ -6,7 +6,7 @@ import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
-import _mod14594 from "../../../../../../_runtime/metro/14594__.js";
+import _mod14855 from "../../../../../../_runtime/metro/14855__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     alignSelf: "stretch",
@@ -84,7 +84,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupSuccess.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function TwoFASetupSuccess() {
       const cResult = c.c(40);
       const tmp4 = closure_10();
       [tmp6, require] = noop.useState(false);
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           setRegistering = asyncGeneratorStep(async (arg0) => {
             ({ ticket, credential } = closure_0);
             const intl = closure_0(1126).intl;
-            await closure_0(6093).finishRegisterWebAuthnCredential(
+            await closure_0(5945).finishRegisterWebAuthnCredential(
               intl.string(closure_0(1126).t["8H5RmH"]),
               ticket,
               credential,
@@ -109,9 +109,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               c5 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(14582).close();
+              setError(14843).close();
               c4 = 0;
-              setError(14582);
+              setError(14843);
             }
             return value;
           });
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[2];
       }
       if (cResult[3] !== tmp4.image) {
-        const obj3 = { source: _mod14594, style: tmp4.image };
+        const obj3 = { source: _mod14855, style: tmp4.image };
         const tmp17 = closure_8(closure_7, obj3);
         cResult[3] = tmp4.image;
         cResult[4] = tmp17;
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp7 = _slicedToArray(noop.useState(""), 2);
     }
-  : () => {
+  : function TwoFASetupSuccess() {
       const tmp = closure_10();
       [tmp3, require] = noop.useState(false);
       const tmp2 = _slicedToArray(noop.useState(false), 2);
@@ -374,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c5 = 3;
                   c6 = 1;
                   const obj5 = {
-                    value: setRegistering(6093).finishRegisterWebAuthnCredential(
+                    value: setRegistering(5945).finishRegisterWebAuthnCredential(
                       intl.string(setRegistering(1126).t["8H5RmH"]),
                       closure_129_0,
                       closure_129_1,
@@ -392,9 +392,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c6 = 3;
                   throw value;
                 } else if (arg0 !== 2) {
-                  setError(14582).close();
+                  setError(14843).close();
                   c4 = 0;
-                  const obj = setError(14582);
+                  const obj = setError(14843);
                 }
                 c4 = 0;
                 c6 = 3;
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [closure_8(closure_6, { style: tmp.flex }), , , , , , ,];
       let obj2 = { style: tmp.flex };
       const tmp4 = _slicedToArray(noop.useState(""), 2);
-      items[1] = closure_8(closure_7, { source: _mod14594, style: tmp.image });
+      items[1] = closure_8(closure_7, { source: _mod14855, style: tmp.image });
       let obj4 = {
         style: tmp.success,
         variant: "text-lg/semibold",

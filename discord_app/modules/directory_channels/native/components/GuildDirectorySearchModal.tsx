@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectorySearchModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildDirectorySearchModal(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] !== arg0) {
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : (arg0) => {
+  : function GuildDirectorySearchModal(arg0) {
       _require = arg0;
       return jsx(require("Navigator").Navigator, {
         screens: useInitialValueDefault(() => ({

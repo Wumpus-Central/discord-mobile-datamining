@@ -11,7 +11,7 @@ _mod19.useCallback;
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useTrackUserProfileActivityAction.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function useTrackUserProfileActivityAction(user) {
       const cResult = user(activity[3]).c(13);
       user = user.user;
       const display = user.display;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== user.id) {
-        const fn = function c() {
+        const fn = function n() {
           return ContentInventoryOutboxStore.getUserOutbox(user.id);
         };
         cResult[1] = user.id;
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      class P {
+      class C {
         constructor(arg0) {
           action = user.action;
           obj = { action, analyticsLocations };
@@ -89,10 +89,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = stream;
       cResult[10] = trackUserProfileAction;
       cResult[11] = voiceChannelId;
-      cResult[12] = P;
-      tmp9 = P;
+      cResult[12] = C;
+      tmp9 = C;
     }
-  : (activity) => {
+  : function useTrackUserProfileActivityAction(activity) {
       ({ user: require, display } = activity);
       activity = activity.activity;
       const entry = activity.entry;

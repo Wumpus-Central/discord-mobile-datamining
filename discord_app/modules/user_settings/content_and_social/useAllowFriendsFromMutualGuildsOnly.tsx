@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useAllowFriendsFromMutualGuildsOnly = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAllowFriendsFromMutualGuildsOnly() {
       const cResult = c.c(2);
       const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
       const setting = FriendSourceFlagsSetting.useSetting();
@@ -27,8 +27,8 @@ export const useAllowFriendsFromMutualGuildsOnly = ReactCompilerGating.isReactCo
       }
       return tmp5.mutualGuilds && !tmp5.all;
     }
-  : () => {
-      const FriendSourceFlagsSetting = setting(2028).FriendSourceFlagsSetting;
+  : function useAllowFriendsFromMutualGuildsOnly() {
+      const FriendSourceFlagsSetting = setting(2040).FriendSourceFlagsSetting;
       setting = FriendSourceFlagsSetting.useSetting();
       const items = [setting];
       const memo = noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items);

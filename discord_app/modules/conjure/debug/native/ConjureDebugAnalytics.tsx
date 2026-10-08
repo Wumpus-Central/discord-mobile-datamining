@@ -1,11 +1,13 @@
 // discord_app/modules/conjure/debug/native/ConjureDebugAnalytics.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
 import ConjureDebugFormat from "../ConjureDebugFormat.tsx";
 import ConjureDebugLabels from "../ConjureDebugLabels.tsx";
 import ConjureDebugPrimitives from "ConjureDebugPrimitives.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 const jsxProd = fn(21);
@@ -13,16 +15,16 @@ const jsxProd = fn(21);
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (analytics) => {
+  ? function ConjureDebugAgentAnalyticsRows(analytics) {
       const cResult = c.c(24);
       analytics = analytics.analytics;
       if ("ok" !== analytics.status) {
         const _Symbol5 = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const intl5 = util.intl;
-          const stringResult = intl5.string(_modDef3753.SXP7pD);
+          const stringResult = intl5.string(_modDef3827.SXP7pD);
           const intl6 = util.intl;
-          const stringResult1 = intl6.string(_modDef3753.E5hKVi);
+          const stringResult1 = intl6.string(_modDef3827.E5hKVi);
           cResult[0] = stringResult;
           cResult[1] = stringResult1;
           tmp43 = stringResult;
@@ -60,7 +62,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol6 = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = util.intl;
-            const stringResult2 = intl.string(_modDef3753.SXP7pD);
+            const stringResult2 = intl.string(_modDef3827.SXP7pD);
             cResult[12] = stringResult2;
             let tmp13 = stringResult2;
           } else {
@@ -70,7 +72,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
             const obj3 = { label: tmp13, value: "\u2014", hint: null };
             const intl2 = util.intl;
-            obj3.hint = intl2.string(_modDef3753.AGvoMJ);
+            obj3.hint = intl2.string(_modDef3827.AGvoMJ);
             const tmp19 = React3(ConjureDebugPrimitives.DebugStatRow, obj3);
             cResult[13] = tmp19;
             let tmp16 = tmp19;
@@ -89,7 +91,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol3 = Symbol;
         if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
           const intl3 = util.intl;
-          const stringResult3 = intl3.string(_modDef3753["H/X+FI"]);
+          const stringResult3 = intl3.string(_modDef3827["H/X+FI"]);
           cResult[14] = stringResult3;
         }
         const analyticsMemoryValueResult = ConjureDebugLabels.analyticsMemoryValue(found);
@@ -112,7 +114,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 if (null != tmp5) {
                   const obj4 = { label: null, value: null };
                   const intl4 = util.intl;
-                  obj4.label = intl4.string(_modDef3753.lmFmMO);
+                  obj4.label = intl4.string(_modDef3827.lmFmMO);
                   obj4.value = tmp5;
                   tmp34 = React3(ConjureDebugPrimitives.DebugStatRow, obj4);
                 }
@@ -143,14 +145,14 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (analytics) => {
+  : function ConjureDebugAgentAnalyticsRows(analytics) {
       analytics = analytics.analytics;
       if ("ok" !== analytics.status) {
         const obj2 = { label: null, value: null, hint: null };
         const intl4 = util.intl;
-        obj2.label = intl4.string(_modDef3753.SXP7pD);
+        obj2.label = intl4.string(_modDef3827.SXP7pD);
         const intl5 = util.intl;
-        obj2.value = intl5.string(_modDef3753.E5hKVi);
+        obj2.value = intl5.string(_modDef3827.E5hKVi);
         obj2.hint = ConjureDebugLabels.analyticsUnavailableReason(analytics);
         return React3(ConjureDebugPrimitives.DebugStatRow, obj2);
       } else {
@@ -162,22 +164,22 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (null == found) {
           const obj3 = { label: null, value: "\u2014", hint: null };
           const intl2 = util.intl;
-          obj3.label = intl2.string(_modDef3753.SXP7pD);
+          obj3.label = intl2.string(_modDef3827.SXP7pD);
           const intl3 = util.intl;
-          obj3.hint = intl3.string(_modDef3753.AGvoMJ);
+          obj3.hint = intl3.string(_modDef3827.AGvoMJ);
           return React3(ConjureDebugPrimitives.DebugStatRow, obj3);
         } else {
           const analyticsMemoryValueResult = ConjureDebugLabels.analyticsMemoryValue(found);
           const obj4 = { label: null, value: null };
           const intl6 = util.intl;
-          obj4.label = intl6.string(_modDef3753["H/X+FI"]);
+          obj4.label = intl6.string(_modDef3827["H/X+FI"]);
           obj4.value = ConjureDebugFormat.formatMs(found.cpu_ms);
           const items = [React3(ConjureDebugPrimitives.DebugStatRow, obj4)];
           let tmp17Result = null;
           if (null != analyticsMemoryValueResult) {
             const obj = { label: null, value: null };
             const intl = util.intl;
-            obj.label = intl.string(_modDef3753.lmFmMO);
+            obj.label = intl.string(_modDef3827.lmFmMO);
             obj.value = analyticsMemoryValueResult;
             tmp17Result = React3(ConjureDebugPrimitives.DebugStatRow, obj);
           }
@@ -193,12 +195,12 @@ let result = size.fileFinishedImporting("modules/conjure/debug/native/ConjureDeb
 
 export const ConjureDebugAgentAnalyticsRows = tmp4;
 export const ConjureDebugWorkerAnalyticsSection = ReactCompilerGating.isReactCompilerEnabled()
-  ? (analytics) => {
+  ? function ConjureDebugWorkerAnalyticsSection(analytics) {
       const cResult = c.c(15);
       analytics = analytics.analytics;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let intl = util.intl;
-        const stringResult = intl.string(_modDef3753.LoZwWn);
+        const stringResult = intl.string(_modDef3827.LoZwWn);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -229,74 +231,118 @@ export const ConjureDebugWorkerAnalyticsSection = ReactCompilerGating.isReactCom
       } else if (cResult[5] !== analytics.objects) {
         const _Symbol = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function h(object) {
-            const obj = { object, label: ConjureDebugLabels.analyticsRoleLabel(object.role) };
-            return obj;
-          };
-          cResult[9] = fn;
-          let tmp10 = fn;
+          class D {
+            constructor(arg0) {
+              obj = { object: analytics, label: null };
+              obj2 = closure_1_0(closure_1_2[6]);
+              obj.label = obj2.analyticsRoleLabel(analytics.role);
+              return obj;
+            }
+          }
+          cResult[9] = D;
         } else {
-          tmp10 = cResult[9];
+          class D {
+            constructor(arg0) {
+              obj = { object: analytics, label: null };
+              obj2 = closure_1_0(closure_1_2[6]);
+              obj.label = obj2.analyticsRoleLabel(analytics.role);
+              return obj;
+            }
+          }
         }
         const _Symbol2 = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn2 = function _(label) {
-            return null != label.label;
-          };
-          cResult[10] = fn2;
-          let tmp11 = fn2;
+          class D {
+            constructor(arg0) {
+              obj = { object: analytics, label: null };
+              obj2 = closure_1_0(closure_1_2[6]);
+              obj.label = obj2.analyticsRoleLabel(analytics.role);
+              return obj;
+            }
+          }
+          cResult[10] = tmp12;
         } else {
-          tmp11 = cResult[10];
+          class D {
+            constructor(arg0) {
+              obj = { object: analytics, label: null };
+              obj2 = closure_1_0(closure_1_2[6]);
+              obj.label = obj2.analyticsRoleLabel(analytics.role);
+              return obj;
+            }
+          }
         }
-        let items = analytics.objects;
-        if (items == null) {
-          items = [];
+        const objects = analytics.objects;
+        if (objects == null) {
+          class D {
+            constructor(arg0) {
+              obj = { object: analytics, label: null };
+              obj2 = closure_1_0(closure_1_2[6]);
+              obj.label = obj2.analyticsRoleLabel(analytics.role);
+              return obj;
+            }
+          }
         }
-        const mapped = items.map(tmp10);
-        const found = mapped.filter(tmp11);
+        const mapped = objects.map(D);
+        const found = mapped.filter(tmp12);
         const DebugSection = ConjureDebugPrimitives.DebugSection;
         if (0 === found.length) {
+          class D {
+            constructor(arg0) {
+              obj = { object: analytics, label: null };
+              obj2 = closure_1_0(closure_1_2[6]);
+              obj.label = obj2.analyticsRoleLabel(analytics.role);
+              return obj;
+            }
+          }
           let obj4 = { children: null };
           const intl2 = util.intl;
-          obj4.children = intl2.string(_modDef3753.AGvoMJ);
-          let mapped1 = React3(ConjureDebugPrimitives.DebugNote, obj4);
+          obj4.children = intl2.string(_modDef3827.AGvoMJ);
+          const tmp14 = React3(ConjureDebugPrimitives.DebugNote, obj4);
         } else {
-          mapped1 = found.map((label) => {
-            const object = label.object;
-            const obj = { label: label.label, value: null, hint: null };
-            const intl = util.intl;
-            const obj2 = { cpu: ConjureDebugFormat.formatMs(object.cpu_ms) };
-            obj.value = intl.formatToPlainString(_modDef3753["w/2voO"], obj2);
-            obj.hint = ConjureDebugLabels.analyticsMemoryValue(object);
-            return closure_1_3(ConjureDebugPrimitives.DebugStatRow, obj, object.role);
-          });
+          class D {
+            constructor(arg0) {
+              obj = { object: analytics, label: null };
+              obj2 = closure_1_0(closure_1_2[6]);
+              obj.label = obj2.analyticsRoleLabel(analytics.role);
+              return obj;
+            }
+          }
         }
         cResult[5] = analytics.objects;
         cResult[6] = DebugSection;
         cResult[7] = first;
-        cResult[8] = mapped1;
+        cResult[8] = tmp14;
       } else {
-        if (cResult[11] === cResult[6]) {
-          if (cResult[12] === tmp8) {
-            if (cResult[13] === tmp9) {
-              let tmp19 = cResult[14];
+        class D {
+          constructor(arg0) {
+            obj = { object: analytics, label: null };
+            obj2 = closure_1_0(closure_1_2[6]);
+            obj.label = obj2.analyticsRoleLabel(analytics.role);
+            return obj;
+          }
+        }
+        if (cResult[11] === tmp7) {
+          class D {
+            constructor(arg0) {
+              obj = { object: analytics, label: null };
+              obj2 = closure_1_0(closure_1_2[6]);
+              obj.label = obj2.analyticsRoleLabel(analytics.role);
+              return obj;
             }
-            return tmp19;
           }
         }
         const obj5 = { title: cResult[7], children: cResult[8] };
-        const tmp21 = React3(cResult[6], obj5);
-        cResult[11] = cResult[6];
+        const tmp21 = React3(tmp7, obj5);
+        cResult[11] = tmp7;
         cResult[12] = cResult[7];
         cResult[13] = cResult[8];
         cResult[14] = tmp21;
-        tmp19 = tmp21;
       }
     }
-  : (analytics) => {
+  : function ConjureDebugWorkerAnalyticsSection(analytics) {
       analytics = analytics.analytics;
       let intl = util.intl;
-      const stringResult = intl.string(_modDef3753.LoZwWn);
+      const stringResult = intl.string(_modDef3827.LoZwWn);
       if ("ok" !== analytics.status) {
         let obj2 = { title: stringResult, children: null };
         let obj3 = { children: ConjureDebugLabels.analyticsUnavailableReason(analytics) };
@@ -308,7 +354,7 @@ export const ConjureDebugWorkerAnalyticsSection = ReactCompilerGating.isReactCom
           items = [];
         }
         const mapped = items.map((object) => {
-          const obj = { object, label: ConjureDebugLabels.analyticsRoleLabel(object.role) };
+          const obj = { object, label: require("ConjureDebugLabels").analyticsRoleLabel(object.role) };
           return obj;
         });
         const found = mapped.filter((label) => null != label.label);
@@ -316,17 +362,19 @@ export const ConjureDebugWorkerAnalyticsSection = ReactCompilerGating.isReactCom
         if (0 === found.length) {
           let obj4 = { children: null };
           const intl2 = util.intl;
-          obj4.children = intl2.string(_modDef3753.AGvoMJ);
+          obj4.children = intl2.string(_modDef3827.AGvoMJ);
           let mapped1 = React3(ConjureDebugPrimitives.DebugNote, obj4);
         } else {
           mapped1 = found.map((label) => {
             const object = label.object;
             const obj = { label: label.label, value: null, hint: null };
-            const intl = util.intl;
-            const obj2 = { cpu: ConjureDebugFormat.formatMs(object.cpu_ms) };
-            obj.value = intl.formatToPlainString(_modDef3753["w/2voO"], obj2);
-            obj.hint = ConjureDebugLabels.analyticsMemoryValue(object);
-            return closure_1_3(ConjureDebugPrimitives.DebugStatRow, obj, object.role);
+            const intl = require("util").intl;
+            const obj2 = { cpu: require("ConjureDebugFormat").formatMs(object.cpu_ms) };
+            obj.value = intl.formatToPlainString(_modDef3827["w/2voO"], obj2);
+            const obj3 = require("ConjureDebugFormat");
+            const obj4 = require("ConjureDebugLabels");
+            obj.hint = require("ConjureDebugLabels").analyticsMemoryValue(object);
+            return closure_1_3(require("ConjureDebugPrimitives").DebugStatRow, obj, object.role);
           });
         }
         obj.children = mapped1;

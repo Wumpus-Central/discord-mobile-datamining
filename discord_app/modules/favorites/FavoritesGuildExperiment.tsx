@@ -19,7 +19,7 @@ let closure_3 = ApexExperiment.createApexExperiment(obj3);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesGuildExperiment.tsx");
 
 export const useFavoritesGuildConfig = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useFavoritesGuildConfig(location) {
       const cResult = c.c(7);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -52,7 +52,7 @@ export const useFavoritesGuildConfig = ReactCompilerGating.isReactCompilerEnable
       cResult[6] = obj4;
       tmp6 = obj4;
     }
-  : (location) => {
+  : function useFavoritesGuildConfig(location) {
       const _location = location.location;
       const config = closure_3.useConfig({ location: _location });
       const tmp2 = config.enabled || closure_2.useConfig({ location: _location }).enabled;

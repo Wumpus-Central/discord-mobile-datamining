@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2553 from "../GuildPowerups.messages.js";
+import _modDef2597 from "../GuildPowerups.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildPowerupsActionCreators from "../GuildPowerupsActionCreators.tsx";
 import useHasAllocateBoostPermissionDefault from "../hooks/useHasAllocateBoostPermission.tsx";
@@ -15,7 +15,7 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null, text: null };
 let obj3 = { padding: nativeDefault.space.PX_12, backgroundColor: null };
 let obj4 = _modDef683("#000000");
@@ -29,7 +29,7 @@ obj2.text = obj5;
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (powerup) => {
+  ? function PerkText(powerup) {
       const cResult = c.c(2);
       powerup = powerup.powerup;
       if (cResult[0] !== powerup.title) {
@@ -47,23 +47,24 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (children) =>
-      jsx(Text_Text.Text, {
+  : function PerkText(children) {
+      return jsx(Text_Text.Text, {
         color: "text-overlay-light",
         variant: "text-sm/semibold",
         children: children.powerup.title,
       });
+    };
 ReactCompilerGating = fn(558);
 const alphaResult1 = _modDef683("#FFFFFF").alpha(0.5);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMarketingHeader.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function GuildPowerupsMarketingHeader(guild) {
       const cResult = guild(576).c(13);
       guild = guild.guild;
       const tmp4 = closure_7();
-      arr = arr(13402)(guild.id);
+      arr = arr(13702)(guild.id);
       if (cResult[0] !== guild.id) {
         const fn = function s() {
           if (GuildPowerupsStore.shouldFetchCatalogForGuild(guild.id)) {
@@ -81,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       const effect = noop.useEffect(tmp6, tmp7);
-      if (arr(12185)(guild.id)) {
+      if (arr(12264)(guild.id)) {
         let num4;
         if (arr != null) {
           num4 = arr.length;
@@ -91,256 +92,72 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (0 !== num4) {
           if (cResult[3] !== arr) {
-            class F {
-              constructor() {
-                arr = closure_1;
-                if (null != closure_1) {
-                  num = 0;
-                  if (0 !== arr.length) {
-                    tmp8 = closure_2;
-                    tmp7 = closure_1;
-                    arr2 = closure_1(closure_2[13])(arr);
-                    num2 = 1;
-                    if (1 === arr2.length) {
-                      tmp5 = jsx;
-                      tmp6 = f63859;
-                      obj1 = { powerup: null };
-                      obj1.powerup = arr2[0];
-                      formatResult = jsx(f63859, obj1);
-                    } else {
-                      tmp = closure_0;
-                      intl = closure_0(tmp8[14]).intl;
-                      obj = { perk1: null, perk2: null };
-                      tmp2 = jsx;
-                      tmp3 = f63859;
-                      obj5 = { powerup: null };
-                      obj5.powerup = arr2[0];
-                      obj.perk1 = jsx(f63859, obj5);
-                      obj6 = { powerup: null };
-                      obj6.powerup = arr2[1];
-                      obj.perk2 = jsx(f63859, obj6);
-                      formatResult = intl.format(tmp7(tmp8[15]).MNO3sG, obj);
-                    }
-                    return formatResult;
+            function getPerkString() {
+              if (null != arr) {
+                if (0 !== arr.length) {
+                  const arr2 = orderMarketablePerksForDisplayDefault(arr);
+                  if (1 === arr2.length) {
+                    const obj2 = { powerup: arr2[0] };
+                    let formatResult = <closure_8 powerup={arr2[0]} />;
+                  } else {
+                    const intl = util.intl;
+                    const obj = { perk1: null, perk2: null };
+                    const obj3 = { powerup: arr2[0] };
+                    obj.perk1 = <closure_8 powerup={arr2[0]} />;
+                    const obj4 = { powerup: arr2[1] };
+                    obj.perk2 = <closure_8 powerup={arr2[1]} />;
+                    formatResult = intl.format(_modDef2597.MNO3sG, obj);
                   }
+                  return formatResult;
                 }
-                return "";
               }
+              return "";
             }
             cResult[3] = arr;
-            cResult[4] = F;
+            cResult[4] = getPerkString;
+            let tmp10 = getPerkString;
           } else {
-            class F {
-              constructor() {
-                arr = closure_1;
-                if (null != closure_1) {
-                  num = 0;
-                  if (0 !== arr.length) {
-                    tmp8 = closure_2;
-                    tmp7 = closure_1;
-                    arr2 = closure_1(closure_2[13])(arr);
-                    num2 = 1;
-                    if (1 === arr2.length) {
-                      tmp5 = jsx;
-                      tmp6 = f63859;
-                      obj1 = { powerup: null };
-                      obj1.powerup = arr2[0];
-                      formatResult = jsx(f63859, obj1);
-                    } else {
-                      tmp = closure_0;
-                      intl = closure_0(tmp8[14]).intl;
-                      obj = { perk1: null, perk2: null };
-                      tmp2 = jsx;
-                      tmp3 = f63859;
-                      obj5 = { powerup: null };
-                      obj5.powerup = arr2[0];
-                      obj.perk1 = jsx(f63859, obj5);
-                      obj6 = { powerup: null };
-                      obj6.powerup = arr2[1];
-                      obj.perk2 = jsx(f63859, obj6);
-                      formatResult = intl.format(tmp7(tmp8[15]).MNO3sG, obj);
-                    }
-                    return formatResult;
-                  }
-                }
-                return "";
-              }
-            }
+            tmp10 = cResult[4];
           }
           ({ container, text } = tmp4);
-          if (cResult[5] !== F) {
-            class F {
-              constructor() {
-                arr = closure_1;
-                if (null != closure_1) {
-                  num = 0;
-                  if (0 !== arr.length) {
-                    tmp8 = closure_2;
-                    tmp7 = closure_1;
-                    arr2 = closure_1(closure_2[13])(arr);
-                    num2 = 1;
-                    if (1 === arr2.length) {
-                      tmp5 = jsx;
-                      tmp6 = f63859;
-                      obj1 = { powerup: null };
-                      obj1.powerup = arr2[0];
-                      formatResult = jsx(f63859, obj1);
-                    } else {
-                      tmp = closure_0;
-                      intl = closure_0(tmp8[14]).intl;
-                      obj = { perk1: null, perk2: null };
-                      tmp2 = jsx;
-                      tmp3 = f63859;
-                      obj5 = { powerup: null };
-                      obj5.powerup = arr2[0];
-                      obj.perk1 = jsx(f63859, obj5);
-                      obj6 = { powerup: null };
-                      obj6.powerup = arr2[1];
-                      obj.perk2 = jsx(f63859, obj6);
-                      formatResult = intl.format(tmp7(tmp8[15]).MNO3sG, obj);
-                    }
-                    return formatResult;
-                  }
-                }
-                return "";
-              }
-            }
-            let obj3 = { perks: F() };
-            let formatResult = obj2.format(tmp5(2553)["7lwpzR"], obj3);
-            cResult[5] = F;
+          if (cResult[5] !== tmp10) {
+            let intl = tmp(1126).intl;
+            let obj2 = { perks: tmp10() };
+            let formatResult = intl.format(tmp5(2597)["7lwpzR"], obj2);
+            cResult[5] = tmp10;
             cResult[6] = formatResult;
+            let tmp11 = formatResult;
           } else {
-            class F {
-              constructor() {
-                arr = closure_1;
-                if (null != closure_1) {
-                  num = 0;
-                  if (0 !== arr.length) {
-                    tmp8 = closure_2;
-                    tmp7 = closure_1;
-                    arr2 = closure_1(closure_2[13])(arr);
-                    num2 = 1;
-                    if (1 === arr2.length) {
-                      tmp5 = jsx;
-                      tmp6 = f63859;
-                      obj1 = { powerup: null };
-                      obj1.powerup = arr2[0];
-                      formatResult = jsx(f63859, obj1);
-                    } else {
-                      tmp = closure_0;
-                      intl = closure_0(tmp8[14]).intl;
-                      obj = { perk1: null, perk2: null };
-                      tmp2 = jsx;
-                      tmp3 = f63859;
-                      obj5 = { powerup: null };
-                      obj5.powerup = arr2[0];
-                      obj.perk1 = jsx(f63859, obj5);
-                      obj6 = { powerup: null };
-                      obj6.powerup = arr2[1];
-                      obj.perk2 = jsx(f63859, obj6);
-                      formatResult = intl.format(tmp7(tmp8[15]).MNO3sG, obj);
-                    }
-                    return formatResult;
-                  }
-                }
-                return "";
-              }
-            }
+            tmp11 = cResult[6];
           }
           if (cResult[7] === tmp4.text) {
-            class F {
-              constructor() {
-                arr = closure_1;
-                if (null != closure_1) {
-                  num = 0;
-                  if (0 !== arr.length) {
-                    tmp8 = closure_2;
-                    tmp7 = closure_1;
-                    arr2 = closure_1(closure_2[13])(arr);
-                    num2 = 1;
-                    if (1 === arr2.length) {
-                      tmp5 = jsx;
-                      tmp6 = f63859;
-                      obj1 = { powerup: null };
-                      obj1.powerup = arr2[0];
-                      formatResult = jsx(f63859, obj1);
-                    } else {
-                      tmp = closure_0;
-                      intl = closure_0(tmp8[14]).intl;
-                      obj = { perk1: null, perk2: null };
-                      tmp2 = jsx;
-                      tmp3 = f63859;
-                      obj5 = { powerup: null };
-                      obj5.powerup = arr2[0];
-                      obj.perk1 = jsx(f63859, obj5);
-                      obj6 = { powerup: null };
-                      obj6.powerup = arr2[1];
-                      obj.perk2 = jsx(f63859, obj6);
-                      formatResult = intl.format(tmp7(tmp8[15]).MNO3sG, obj);
-                    }
-                    return formatResult;
-                  }
-                }
-                return "";
-              }
+            if (cResult[8] === tmp11) {
+              let tmp13 = cResult[9];
             }
             if (cResult[10] === tmp4.container) {
-              class F {
-                constructor() {
-                  arr = closure_1;
-                  if (null != closure_1) {
-                    num = 0;
-                    if (0 !== arr.length) {
-                      tmp8 = closure_2;
-                      tmp7 = closure_1;
-                      arr2 = closure_1(closure_2[13])(arr);
-                      num2 = 1;
-                      if (1 === arr2.length) {
-                        tmp5 = jsx;
-                        tmp6 = f63859;
-                        obj1 = { powerup: null };
-                        obj1.powerup = arr2[0];
-                        formatResult = jsx(f63859, obj1);
-                      } else {
-                        tmp = closure_0;
-                        intl = closure_0(tmp8[14]).intl;
-                        obj = { perk1: null, perk2: null };
-                        tmp2 = jsx;
-                        tmp3 = f63859;
-                        obj5 = { powerup: null };
-                        obj5.powerup = arr2[0];
-                        obj.perk1 = jsx(f63859, obj5);
-                        obj6 = { powerup: null };
-                        obj6.powerup = arr2[1];
-                        obj.perk2 = jsx(f63859, obj6);
-                        formatResult = intl.format(tmp7(tmp8[15]).MNO3sG, obj);
-                      }
-                      return formatResult;
-                    }
-                  }
-                  return "";
-                }
+              if (cResult[11] === tmp13) {
+                let tmp16 = cResult[12];
               }
               return tmp16;
             }
-            let obj4 = { style: container, children: tmp13 };
+            let obj3 = { style: container, children: tmp13 };
             const tmp19 = <View style={container}>{tmp13}</View>;
             cResult[10] = tmp4.container;
             cResult[11] = tmp13;
             cResult[12] = tmp19;
             tmp16 = tmp19;
           }
-          const obj5 = { style: text, variant: "text-sm/semibold", children: tmp11 };
-          const tmp15 = jsx(tmp(4892).Text, { style: text, variant: "text-sm/semibold", children: tmp11 });
+          let obj4 = { style: text, variant: "text-sm/semibold", children: tmp11 };
+          const tmp15 = jsx(tmp(5086).Text, { style: text, variant: "text-sm/semibold", children: tmp11 });
           cResult[7] = tmp4.text;
           cResult[8] = tmp11;
           cResult[9] = tmp15;
+          tmp13 = tmp15;
         }
       }
       let obj = guild(576);
-      tmp = guild;
     }
-  : (guild) => {
+  : function GuildPowerupsMarketingHeader(guild) {
       guild = guild.guild;
       const tmp = closure_7();
       const arr = useMarketablePowerupPerksDefault(guild.id);
@@ -379,13 +196,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 obj4.perk1 = <closure_8 powerup={first[0]} />;
                 const obj6 = { powerup: first[1] };
                 obj4.perk2 = <closure_8 powerup={first[1]} />;
-                formatResult = intl2.format(_modDef2553.MNO3sG, obj4);
+                formatResult = intl2.format(_modDef2597.MNO3sG, obj4);
               }
             }
           }
           const obj7 = { perks: str2 };
-          obj2.children = intl.format(_modDef2553["7lwpzR"], obj7);
-          obj.children = jsx(guild(4892).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
+          obj2.children = intl.format(_modDef2597["7lwpzR"], obj7);
+          obj.children = jsx(guild(5086).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
           return <View style={tmp.container}>{null}</View>;
         }
       }

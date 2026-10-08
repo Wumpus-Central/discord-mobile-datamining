@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/payments/native/NativePaymentContext.tsx");
 
 export const NativePaymentContextProvider = ReactCompilerGating.isReactCompilerEnabled()
-  ? (activeSubscription) => {
+  ? function NativePaymentContextProvider(activeSubscription) {
       const cResult = skuIDs(selectedPlanId[7]).c(17);
       ({ children, skuIDs } = activeSubscription);
       activeSubscription = activeSubscription.activeSubscription;
@@ -118,7 +118,7 @@ export const NativePaymentContextProvider = ReactCompilerGating.isReactCompilerE
       tmp6 = fn;
       const obj2 = storeFront(selectedPlanId[8]);
     }
-  : (skuIDs) => {
+  : function NativePaymentContextProvider(skuIDs) {
       skuIDs = skuIDs.skuIDs;
       let storeFront;
       let selectedPlanId;

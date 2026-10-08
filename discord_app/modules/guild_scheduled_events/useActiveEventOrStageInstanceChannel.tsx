@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx");
 
 export const useActiveEventOrStageInstanceChannel = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useActiveEventOrStageInstanceChannel(arg0) {
       const cResult = c.c(2);
       let firstActiveEventChannel = useGuildScheduledEvents.useFirstActiveEventChannel(arg0);
       const tmp3 = useLiveStageChannelsDefault(arg0);
@@ -42,7 +42,7 @@ export const useActiveEventOrStageInstanceChannel = ReactCompilerGating.isReactC
       }
       return firstActiveEventChannel;
     }
-  : (arg0) => {
+  : function useActiveEventOrStageInstanceChannel(arg0) {
       let firstActiveEventChannel = useGuildScheduledEvents.useFirstActiveEventChannel(arg0);
       const first = useLiveStageChannelsDefault(arg0)[0];
       if (first != null) {

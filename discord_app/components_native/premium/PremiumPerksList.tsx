@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   perkInfoContainer: { flexDirection: "row", alignItems: "center", gap: 16 },
   perkInfoTextContainer: { flexDirection: "column", gap: 4, maxWidth: 279 },
@@ -31,7 +31,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/PremiumPerksList.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (perks) => {
+  ? function PremiumPerksList(perks) {
       const cResult = require("c").c(12);
       perkInfoTextContainer = perks.perks;
       const tmp2 = closure_5();
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       let obj = require("c");
     }
-  : (perks) => {
+  : function PremiumPerksList(perks) {
       perks = perks.perks;
       const tmp = closure_5();
       closure_0 = tmp;

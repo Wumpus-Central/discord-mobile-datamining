@@ -2,7 +2,7 @@
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../../_runtime/00576_c.js";
 import util from "../../../../../intl/index.native.tsx";
-import Link from "../../../../../../_runtime/01491_Link.js";
+import Link from "../../../../../../_runtime/01503_Link.js";
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import useSelectedDismissibleContent from "../../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
@@ -14,11 +14,11 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 let closure_6 = [];
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (markAsDismissed) => {
+  ? function useSwipeCoachmarkProps(markAsDismissed) {
       const cResult = markAsDismissed(576).c(7);
       markAsDismissed = markAsDismissed.markAsDismissed;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[3];
       }
       const tmp9 =
-        markAsDismissed.visibleContent === markAsDismissed(2036).DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK;
+        markAsDismissed.visibleContent === markAsDismissed(2048).DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK;
       if (cResult[4] === tmp9) {
         if (cResult[5] === tmp8) {
           let tmp10 = cResult[6];
@@ -58,7 +58,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = obj2;
       const obj = markAsDismissed(576);
     }
-  : (visibleContent) => {
+  : function useSwipeCoachmarkProps(visibleContent) {
       visibleContent = visibleContent.visibleContent;
       const markAsDismissed = visibleContent.markAsDismissed;
       const items = [markAsDismissed, visibleContent];
@@ -80,7 +80,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarCoachmark.tsx");
 
 export const useYouBarCoachmark = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isQuestRendered) => {
+  ? function useYouBarCoachmark(isQuestRendered) {
       const cResult = c.c(15);
       const animatedRef = ReanimatedRexport.useAnimatedRef();
       const isTinyBroncoEligible = TinyBroncoLazy.useIsTinyBroncoEligible();
@@ -202,7 +202,7 @@ export const useYouBarCoachmark = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = closure_6;
       const tmpResult = initialize;
     }
-  : (isQuestRendered) => {
+  : function useYouBarCoachmark(isQuestRendered) {
       isQuestRendered = isQuestRendered.isQuestRendered;
       let isTinyBroncoEligible;
       const animatedRef = isQuestRendered(isTinyBroncoEligible[8]).useAnimatedRef();

@@ -7,10 +7,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   scrollViewContainer: null,
@@ -37,7 +37,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftCustomization.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PremiumGiftCustomization() {
       const cResult = navigation(ref[8]).c(25);
       let obj = navigation(ref[8]);
       navigation = navigation(ref[9]).useNavigation();
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const first = tmp8[0];
       ref = noop.useRef(null);
       if (cResult[0] !== first) {
-        const fn = function l() {
+        const fn = function o() {
           const timerId = setTimeout(() => {
             const current = ref.current;
             let scrollToResult;
@@ -273,7 +273,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = navigation(ref[11]);
     }
-  : () => {
+  : function PremiumGiftCustomization() {
       navigation = navigation(ref[9]).useNavigation();
       const tmp4 = closure_11();
       let obj = navigation(ref[9]);

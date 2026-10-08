@@ -9,10 +9,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagBadgeSize = fn(7614).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(7860).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   grid: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 },
   upsellCard: {
@@ -43,7 +43,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagBadgeGrid.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildSettingsServerTagBadgeGrid(guildId) {
       const cResult = guildId(onSelectBadge[7]).c(24);
       guildId = guildId.guildId;
       const selectedBadge = guildId.selectedBadge;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj7 = { size: "md", color: tmp5(tmp2[4]).colors.ICON_SUBTLE };
                   items1[2] = closure_7(tmp(tmp2[15]).ChevronSmallRightIcon, obj7);
                   obj4.children = items1;
-                  class T {
+                  class G {
                     constructor(arg0) {
                       closure_0 = guildId;
                       obj = {
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[7] = mapped;
         }
       }
-      class T {
+      class G {
         constructor(arg0) {
           closure_0 = guildId;
           obj = {
@@ -211,11 +211,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = cellSize;
       cResult[9] = onSelectBadge;
       cResult[10] = selectedBadge;
-      cResult[11] = T;
-      tmp13 = T;
+      cResult[11] = G;
+      tmp13 = G;
       const tmp6 = selectedBadge(onSelectBadge[8])();
     }
-  : (guildId) => {
+  : function GuildSettingsServerTagBadgeGrid(guildId) {
       guildId = guildId.guildId;
       ({ selectedBadge: importDefault, onSelectBadge: dependencyMap, cellSize: noop } = guildId);
       const tmp = closure_9();
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { variant: "text-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
       const intl = guildId(1126).intl;
       obj2.children = intl.string(guildId(1126).t.wRnfnY);
-      const items1 = [closure_7(guildId(4892).Text, obj2), ,];
+      const items1 = [closure_7(guildId(5086).Text, obj2), ,];
       const tmp4 = useGuildTagBadgeCollectionDefault();
       items1[1] = closure_7(closure_5, {
         accessibilityRole: "radiogroup",
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             children: null,
           };
           size = { badge: badge.kind, width: GuildTagBadgeSize.SIZE_32, height: GuildTagBadgeSize.SIZE_32 };
-          obj.children = closure_1_7(guildId(13746).GuildBadge, size);
+          obj.children = closure_1_7(guildId(13968).GuildBadge, size);
           return closure_1_7(GuildSettingsServerTagPickerCellDefault, obj, badge.kind);
         }),
       });
@@ -265,19 +265,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const substr = lockedBadges.slice(0, 10);
         obj5.children = substr.map((badge) => {
           size = { badge: badge.kind, width: 21, height: 21 };
-          return closure_1_7(guildId(13746).GuildBadge, size, badge.kind);
+          return closure_1_7(guildId(13968).GuildBadge, size, badge.kind);
         });
         const items2 = [closure_7(closure_5, obj5), ,];
         const obj6 = { variant: "text-md/medium", color: "text-subtle", style: tmp.upsellText, children: null };
         const intl3 = tmp7(1126).intl;
         obj6.children = intl3.string(tmp7(1126).t.U5p3GZ);
-        items2[1] = closure_7(tmp7(4892).Text, obj6);
+        items2[1] = closure_7(tmp7(5086).Text, obj6);
         const obj7 = { size: "md", color: nativeDefault.colors.ICON_SUBTLE };
-        items2[2] = closure_7(tmp7(6715).ChevronSmallRightIcon, obj7);
+        items2[2] = closure_7(tmp7(6892).ChevronSmallRightIcon, obj7);
         obj4.children = items2;
         tmp6Result = closure_8(closure_4, obj4);
       }
       items1[2] = tmp6Result;
       obj.children = items1;
-      return closure_8(guildId(5600).Stack, obj);
+      return closure_8(guildId(5373).Stack, obj);
     };

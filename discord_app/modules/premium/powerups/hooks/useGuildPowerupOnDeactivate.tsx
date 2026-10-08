@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupOnDeactivate.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useGuildPowerupOnDeactivate(arg0, arg1) {
       const cResult = c.c(6);
       ({ isLoading, error, onToggle } = useGuildPowerupOnToggleDefault(arg0, arg1));
       if (cResult[0] !== onToggle) {
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = obj2;
       tmp4 = obj2;
     }
-  : (arg0, arg1) => {
+  : function useGuildPowerupOnDeactivate(arg0, arg1) {
       const tmp = useGuildPowerupOnToggleDefault(arg0, arg1);
       const onToggle = tmp.onToggle;
       const obj = { isLoading: tmp.isLoading, error: tmp.error, onDeactivate: null };

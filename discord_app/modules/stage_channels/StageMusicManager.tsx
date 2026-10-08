@@ -69,7 +69,7 @@ function checkVoiceStates() {
   }
 }
 let c9 = false;
-const SoundUtils = fn(9575);
+const SoundUtils = fn(10770);
 let closure_10 = SoundUtils.createSound("stage_waiting", "stage_waiting", MediaEngineStore.getOutputVolume() / 400);
 const ReactCompilerGating = fn(558);
 class StageMusicManager extends tmp3 {
@@ -142,7 +142,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/StageMusicMana
 
 export default stageMusicManager;
 export const useShowStageMusicMuteButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShowStageMusicMuteButton(arg0) {
       _require = arg0;
       const cResult = require("c").c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -153,7 +153,7 @@ export const useShowStageMusicMuteButton = ReactCompilerGating.isReactCompilerEn
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function l() {
+        const fn = function u() {
           return SelectedChannelStore.getVoiceChannelId() === closure_0;
         };
         cResult[1] = arg0;
@@ -167,7 +167,7 @@ export const useShowStageMusicMuteButton = ReactCompilerGating.isReactCompilerEn
       const tmpResult = require("initialize");
       const stageParticipants = require("StageChannelParticipantStoreHooks").useStageParticipants(
         arg0,
-        tmp(5589).StageChannelParticipantNamedIndex.SPEAKER,
+        tmp(5955).StageChannelParticipantNamedIndex.SPEAKER,
       );
       if (cResult[3] !== stageParticipants) {
         const _Symbol = Symbol;
@@ -253,7 +253,7 @@ export const useShowStageMusicMuteButton = ReactCompilerGating.isReactCompilerEn
       }
       const tmpResult3 = require("StageChannelParticipantStoreHooks");
     }
-  : (arg0) => {
+  : function useShowStageMusicMuteButton(arg0) {
       _require = arg0;
       const items = [SelectedChannelStore];
       let stateFromStores = require("initialize").useStateFromStores(

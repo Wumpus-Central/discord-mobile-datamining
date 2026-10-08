@@ -12,8 +12,8 @@ import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
 import ButtonConstants from "../../../design/components/Button/native/ButtonConstants.native.tsx";
 import useFontScale from "../../screen/native/useFontScale.tsx";
-import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
 import useIsUsingClientThemeDefault from "../../client_themes/native/useIsUsingClientTheme.tsx";
+import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
 import roundToNearestPixelDefault from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
 import openGuildActionSheetDefault from "../../guild_action_sheet/native/openGuildActionSheet.tsx";
@@ -27,7 +27,7 @@ import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(11711);
+const RedesignChannelListConstants = fn(11776);
 ({
   STICKY_BANNER_ASPECT_RATIO: closure_9,
   BANNER_MAX_HEIGHT_PERCENTAGE: c10,
@@ -39,7 +39,7 @@ const jsxProd = fn(21);
 let c15 = "redesign/heading-18/bold";
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShouldShowBorder() {
       const cResult = c.c(3);
       const tmp4 = useIsUsingClientThemeDefault();
       const tmp5 = useThemeDefault();
@@ -59,7 +59,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = isThemeDarkResult;
       tmp6 = isThemeDarkResult;
     }
-  : () => {
+  : function useShouldShowBorder() {
       let isThemeDarkResult = useIsUsingClientThemeDefault();
       if (!isThemeDarkResult) {
         isThemeDarkResult = shared.isThemeDark(tmp3);
@@ -67,12 +67,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       return isThemeDarkResult;
     };
 fn(558);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let closure_17 = createStyles.createStyles(() => ({ guildHeaderWrapper: { zIndex: 5 } }));
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_18 = createStyles.createStyles((arg0) => {
   const obj = {
-    bannerWrapper: { width: "100%", maxHeight: arg0 * v65535, aspectRatio, overflow: "hidden" },
+    bannerWrapper: { width: "100%", maxHeight: arg0 * collapsed, aspectRatio, overflow: "hidden" },
     guildBanner: { left: "50%", top: "50%" },
     bannerOverlay: null,
   };
@@ -82,7 +82,7 @@ let closure_18 = createStyles.createStyles((arg0) => {
   obj.bannerOverlay = obj3;
   return obj;
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let result = createStyles.experimental_createToken((gradient) => {
   if (null != gradient.gradient) {
     let PANEL_BG = nativeDefault.colors.BACKGROUND_BASE_LOW;
@@ -91,7 +91,7 @@ let result = createStyles.experimental_createToken((gradient) => {
   }
   return PANEL_BG;
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_19 = createStyles.createStyles({ headerWrapper: { backgroundColor: result } });
 ReactCompilerGating = fn(558);
 const __initData = {
@@ -108,7 +108,7 @@ const __initData4 = {
 };
 let obj = { headerWrapper: { backgroundColor: result } };
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useRedesignGuildHeaderHeight(id) {
       const cResult = c.c(8);
       const tmp4 = closure_16();
       const fontScale = useFontScale.useFontScale();
@@ -175,7 +175,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = num7;
       const tmpResult3 = useToken;
     }
-  : (id) => {
+  : function useRedesignGuildHeaderHeight(id) {
       const tmp = closure_16();
       const fontScale = useFontScale.useFontScale();
       const tmp6 = null != useStickyServerHeaderSubtitleDefault(id);
@@ -213,7 +213,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (bannerHeight) => {
+  ? function GuildInfoHeader(bannerHeight) {
       const cResult = c.c(20);
       ({ guild, scrollPosition } = bannerHeight);
       bannerHeight = bannerHeight.bannerHeight;
@@ -328,7 +328,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = tmp23;
       tmp22 = tmp23;
     }
-  : (bannerHeight) => {
+  : function GuildInfoHeader(bannerHeight) {
       ({ guild, scrollPosition } = bannerHeight);
       bannerHeight = bannerHeight.bannerHeight;
       const tmp = closure_19();
@@ -387,7 +387,7 @@ const __initData8 = {
 };
 ReactCompilerGating = fn(558);
 let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function ReanimatedGuildBanner(guild) {
       const cResult = guild(bannerHeight[8]).c(49);
       guild = guild.guild;
       const scrollPosition = guild.scrollPosition;
@@ -427,7 +427,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult5 = guild(bannerHeight[28]);
       const sharedValue = guild(bannerHeight[22]).useSharedValue(0);
       if (cResult[3] !== sharedValue) {
-        class A {
+        class G {
           constructor() {
             obj = closure_0(closure_2[29]);
             result = closure_5.set(obj.withSpring(1, closure_0(closure_2[30]).springStandard, "animate-always"));
@@ -435,7 +435,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[3] = sharedValue;
-        cResult[4] = A;
+        cResult[4] = G;
         class T {
           constructor() {
             obj = { actionSheetOpen: null != closure_1_8.getKey(), useReducedMotion: closure_1_7.useReducedMotion };
@@ -443,7 +443,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       } else {
-        class A {
+        class G {
           constructor() {
             obj = closure_0(closure_2[29]);
             result = closure_5.set(obj.withSpring(1, closure_0(closure_2[30]).springStandard, "animate-always"));
@@ -452,7 +452,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[5] !== sharedValue) {
-        class B {
+        class O {
           constructor() {
             obj = closure_0(closure_2[29]);
             result = closure_5.set(obj.withSpring(0, closure_0(closure_2[30]).springStandard, "animate-always"));
@@ -460,7 +460,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[5] = sharedValue;
-        cResult[6] = B;
+        cResult[6] = O;
         class T {
           constructor() {
             obj = { actionSheetOpen: null != closure_1_8.getKey(), useReducedMotion: closure_1_7.useReducedMotion };
@@ -468,7 +468,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       } else {
-        class B {
+        class O {
           constructor() {
             obj = closure_0(closure_2[29]);
             result = closure_5.set(obj.withSpring(0, closure_0(closure_2[30]).springStandard, "animate-always"));
@@ -477,7 +477,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[7] === guild) {
-        class B {
+        class O {
           constructor() {
             obj = closure_0(closure_2[29]);
             result = closure_5.set(obj.withSpring(0, closure_0(closure_2[30]).springStandard, "animate-always"));
@@ -553,7 +553,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
         let result = (bannerWidth / 2) * -1;
         const result1 = (bannerHeight / 2) * -1;
         if (cResult[10] === bannerHeight) {
-          class B {
+          class O {
             constructor() {
               obj = closure_0(closure_2[29]);
               result = closure_5.set(obj.withSpring(0, closure_0(closure_2[30]).springStandard, "animate-always"));
@@ -580,7 +580,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = fn;
       const tmpResult6 = guild(bannerHeight[22]);
     }
-  : (guild) => {
+  : function ReanimatedGuildBanner(guild) {
       guild = guild.guild;
       const scrollPosition = guild.scrollPosition;
       const bannerWidth = guild.bannerWidth;
@@ -710,7 +710,7 @@ let result1 = size.fileFinishedImporting("modules/channel_list_v2/native/Redesig
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function RedesignGuildHeader(arg0) {
         const cResult = c.c(13);
         ({ guild, scrollPosition, bannerHeight, bannerWidth } = arg0);
         const tmp2 = closure_17();
@@ -766,7 +766,7 @@ export default noop.memo(
         cResult[4] = tmp4;
         tmp3 = tmp4;
       }
-    : (bannerWidth) => {
+    : function RedesignGuildHeader(bannerWidth) {
         ({ guild, scrollPosition, bannerHeight } = bannerWidth);
         const obj = { style: closure_17().guildHeaderWrapper, preventClipping: true, children: null };
         const items = [

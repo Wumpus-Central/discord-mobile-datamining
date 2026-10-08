@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2815 from "../SafetyFlows.messages.js";
+import _modDef2859 from "../SafetyFlows.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
@@ -24,23 +24,23 @@ let obj3 = { marginTop: nativeDefault.space.PX_8 };
 const result = size.fileFinishedImporting("modules/safety_flows/native/UpdateAppScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UpdateAppScreen() {
       const cResult = c.c(9);
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t() {
+        function handlePress() {
           BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
           BundleUpdaterManager.reload();
-        };
-        cResult[0] = fn;
-        let first = fn;
+        }
+        cResult[0] = handlePress;
+        let first = handlePress;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { variant: "heading-lg/semibold", children: null };
         const intl = util.intl;
-        obj2.children = intl.string(_modDef2815.yxqMCD);
+        obj2.children = intl.string(_modDef2859.yxqMCD);
         const tmp9 = hasOwnProperty(Text_Text.Text, obj2);
         cResult[1] = tmp9;
         let tmp6 = tmp9;
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
         const intl2 = util.intl;
-        obj3.children = intl2.string(_modDef2815.VBZJJg);
+        obj3.children = intl2.string(_modDef2859.VBZJJg);
         const tmp13 = hasOwnProperty(Text_Text.Text, obj3);
         cResult[2] = tmp13;
         let tmp10 = tmp13;
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = { onPress: first, text: null, variant: "primary", size: "md" };
         const intl3 = util.intl;
-        obj4.text = intl3.string(_modDef2815.o4D6fm);
+        obj4.text = intl3.string(_modDef2859.o4D6fm);
         const tmp17 = hasOwnProperty(components_Button_Button.Button, obj4);
         cResult[3] = tmp17;
         let tmp14 = tmp17;
@@ -91,20 +91,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp23;
       tmp22 = tmp23;
     }
-  : () => {
+  : function UpdateAppScreen() {
       const tmp = closure_7();
       const obj = { style: tmp.container, children: null };
       const obj2 = { variant: "heading-lg/semibold", children: null };
       const intl = util.intl;
-      obj2.children = intl.string(_modDef2815.yxqMCD);
+      obj2.children = intl.string(_modDef2859.yxqMCD);
       const items = [hasOwnProperty(Text_Text.Text, obj2), ,];
       const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
       const intl2 = util.intl;
-      obj3.children = intl2.string(_modDef2815.VBZJJg);
+      obj3.children = intl2.string(_modDef2859.VBZJJg);
       items[1] = hasOwnProperty(Text_Text.Text, obj3);
       const obj4 = { style: tmp.buttonContainer, children: null };
       const obj5 = {
-        onPress() {
+        onPress: function handlePress() {
           BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
           BundleUpdaterManager.reload();
         },
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         size: "md",
       };
       const intl3 = util.intl;
-      obj5.text = intl3.string(_modDef2815.o4D6fm);
+      obj5.text = intl3.string(_modDef2859.o4D6fm);
       obj4.children = hasOwnProperty(components_Button_Button.Button, obj5);
       items[2] = hasOwnProperty(React4, obj4);
       obj.children = items;

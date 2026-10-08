@@ -71,7 +71,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/useColorThemeBackground.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useColorThemeBackground() {
       const cResult = c.c(7);
       const tmp4 = useRoutedActiveGuildThemeDefault();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -122,8 +122,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = tmp16;
       const tmpResult3 = useStateFromStores;
     }
-  : () => {
-      const tmp = stateFromStores(4741)();
+  : function useColorThemeBackground() {
+      const tmp = stateFromStores(4935)();
       _require = tmp;
       const items = [ThemeStore];
       stateFromStores = require("useStateFromStores").useStateFromStores(items, () => theme.theme);

@@ -14,7 +14,7 @@ let closure_2 = ["title", "headerIcon", "trailingIcon", "showContainer", "childr
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   titleContainer: { flexDirection: "row", marginBottom: 12, justifyContent: "space-between" },
   title: { flexDirection: "row" },
@@ -32,7 +32,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileSection.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileSection(arg0) {
       const cResult = c.c(33);
       if (cResult[0] !== arg0) {
         ({ title, headerIcon, trailingIcon, showContainer, children, style } = arg0);
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       borderColor = ColorUtils.hexOpacityToRgba(FormDivider.DIVIDER_COLORS[theme], contentContainer.dividerOpacity);
       const tmpResult4 = ColorUtils;
     }
-  : (title) => {
+  : function UserProfileSection(title) {
       title = title.title;
       ({ headerIcon, trailingIcon, showContainer, children, style } = title);
       const merged = Object.assign(

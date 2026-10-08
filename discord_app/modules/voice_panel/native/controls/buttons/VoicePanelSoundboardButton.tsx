@@ -15,7 +15,7 @@ const useSoundboardConfigDefault = useSoundboardConfig;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj2.circle = size;
@@ -32,7 +32,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelSoundboardButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (props) => {
+  ? function SoundboardButton(props) {
       const cResult = c.c(9);
       props = props.props;
       const tmp5 = closure_6();
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         useSoundboardConfig.SoundboardButtonLocation.VOICE_PANEL_CONTROLS,
       );
     }
-  : (arg0) => {
+  : function SoundboardButton(arg0) {
       ({ props, wrapperSpecs } = arg0);
       const tmp3 = closure_6();
       const voicePanelButtonStyles = VoicePanelStyles.useVoicePanelButtonStyles(wrapperSpecs);

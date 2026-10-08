@@ -12,9 +12,9 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, AnalyticsPages: closure_7 } = Constants);
-const PremiumUpsellTypes = fn(1379).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null, headerContent: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -29,202 +29,196 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      const cResult = require("c").c(21);
+  ? function ProfileCustomizationTryItOutV2SettingScreen() {
+      const cResult = require("c").c(22);
       const tmp4 = closure_10();
       _require = tmp4;
       let obj = require("c");
       const tmp = _require;
       const navigation = require("useNavigation").useNavigation();
       let obj2 = require("useNavigation");
-      const tmp6 = navigation;
-      const tmp7 = navigation(sourceAnalyticsLocations[11]);
-      ({ analyticsLocations, sourceAnalyticsLocations } = navigation(sourceAnalyticsLocations[11])(
-        navigation(sourceAnalyticsLocations[12]).USER_SETTINGS_TRY_OUT_PREMIUM,
+      const settingNavigationRoute = require("useSettingNavigationRoute").useSettingNavigationRoute();
+      const obj3 = require("useSettingNavigationRoute");
+      const tmp7 = navigation;
+      const tmp8 = navigation(sourceAnalyticsLocations[12]);
+      ({ analyticsLocations, sourceAnalyticsLocations } = navigation(sourceAnalyticsLocations[12])(
+        navigation(sourceAnalyticsLocations[13]).USER_SETTINGS_TRY_OUT_PREMIUM,
       ));
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function l() {
+        const fn = function o() {
           return currentUser.getCurrentUser();
         };
         cResult[0] = items;
         cResult[1] = fn;
-        tmp10 = fn;
-        tmp9 = items;
+        tmp10 = items;
+        tmp11 = fn;
       } else {
-        [tmp9, tmp10] = cResult;
+        [tmp10, tmp11] = cResult;
       }
-      const tmp7Result = navigation(sourceAnalyticsLocations[11])(
-        navigation(sourceAnalyticsLocations[12]).USER_SETTINGS_TRY_OUT_PREMIUM,
+      const tmp8Result = navigation(sourceAnalyticsLocations[12])(
+        navigation(sourceAnalyticsLocations[13]).USER_SETTINGS_TRY_OUT_PREMIUM,
       );
-      const stateFromStores = tmp(sourceAnalyticsLocations[13]).useStateFromStores(tmp9, tmp10);
-      const tmp13 = tmp6(sourceAnalyticsLocations[14])();
-      closure_4 = tmp13;
+      const stateFromStores = tmp(sourceAnalyticsLocations[14]).useStateFromStores(tmp10, tmp11);
+      const tmp14 = tmp7(sourceAnalyticsLocations[15])();
+      closure_4 = tmp14;
       if (cResult[2] !== stateFromStores) {
-        class T {
-          constructor() {
-            obj = closure_3;
-            if (null != closure_3) {
-              tmp = closure_1;
-              tmp2 = closure_2;
-              num = 80;
-              tmp3 = closure_1(closure_2[15]);
-              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
-            }
-            return;
+        const fn2 = function f() {
+          if (null != stateFromStores) {
+            maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), {
+              dispatchWait: true,
+            });
           }
-        }
+        };
         const items1 = [stateFromStores];
         cResult[2] = stateFromStores;
-        cResult[3] = T;
+        cResult[3] = fn2;
         cResult[4] = items1;
-        let tmp15 = items1;
+        let tmp16 = items1;
+        let tmp15 = fn2;
       } else {
-        class T {
-          constructor() {
-            obj = closure_3;
-            if (null != closure_3) {
-              tmp = closure_1;
-              tmp2 = closure_2;
-              num = 80;
-              tmp3 = closure_1(closure_2[15]);
-              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
-            }
-            return;
-          }
-        }
-        tmp15 = cResult[4];
+        tmp15 = cResult[3];
+        tmp16 = cResult[4];
       }
-      const effect = stateFromStores.useEffect(T, tmp15);
+      const effect = stateFromStores.useEffect(tmp15, tmp16);
       if (cResult[5] !== sourceAnalyticsLocations) {
-        class T {
+        class I {
           constructor() {
-            obj = closure_3;
-            if (null != closure_3) {
-              tmp = closure_1;
-              tmp2 = closure_2;
-              num = 80;
-              tmp3 = closure_1(closure_2[15]);
-              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
-            }
+            obj = closure_1(closure_2[17]);
+            obj1 = {
+              type: PremiumUpsellTypes.PREMIUM_PROFILE_TRY_IT_OUT,
+              location: null,
+              location_stack: sourceAnalyticsLocations,
+            };
+            obj4 = { page: AnalyticsPages.USER_SETTINGS };
+            obj1.location = obj4;
+            trackResult = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
             return;
           }
         }
         const items2 = [sourceAnalyticsLocations];
         cResult[5] = sourceAnalyticsLocations;
-        cResult[6] = tmp19;
+        cResult[6] = I;
         cResult[7] = items2;
-        let tmp18 = items2;
+        let tmp19 = items2;
       } else {
-        class T {
+        class I {
           constructor() {
-            obj = closure_3;
-            if (null != closure_3) {
-              tmp = closure_1;
-              tmp2 = closure_2;
-              num = 80;
-              tmp3 = closure_1(closure_2[15]);
-              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
-            }
+            obj = closure_1(closure_2[17]);
+            obj1 = {
+              type: PremiumUpsellTypes.PREMIUM_PROFILE_TRY_IT_OUT,
+              location: null,
+              location_stack: sourceAnalyticsLocations,
+            };
+            obj4 = { page: AnalyticsPages.USER_SETTINGS };
+            obj1.location = obj4;
+            trackResult = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
             return;
           }
         }
-        tmp18 = cResult[7];
+        tmp19 = cResult[7];
       }
-      const effect1 = stateFromStores.useEffect(tmp19, tmp18);
+      const effect1 = stateFromStores.useEffect(I, tmp19);
       if (cResult[8] === navigation) {
-        class T {
+        class I {
           constructor() {
-            obj = closure_3;
-            if (null != closure_3) {
-              tmp = closure_1;
-              tmp2 = closure_2;
-              num = 80;
-              tmp3 = closure_1(closure_2[15]);
-              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
-            }
+            obj = closure_1(closure_2[17]);
+            obj1 = {
+              type: PremiumUpsellTypes.PREMIUM_PROFILE_TRY_IT_OUT,
+              location: null,
+              location_stack: sourceAnalyticsLocations,
+            };
+            obj4 = { page: AnalyticsPages.USER_SETTINGS };
+            obj1.location = obj4;
+            trackResult = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
             return;
           }
         }
       }
-      const fn2 = function v() {
-        navigation.setOptions({
-          headerTitle() {
-            const obj = {
-              variant: "redesign/heading-18/bold",
-              color: "mobile-text-heading-primary",
-              lineClamp: 1,
-              maxFontSizeMultiplier: 2,
-              style: closure_1_0.headerContent,
-              children: null,
-            };
-            const intl = closure_0(sourceAnalyticsLocations[18]).intl;
-            obj.children = intl.string(closure_0(sourceAnalyticsLocations[18]).t.PxUx8e);
-            return jsx(closure_0(sourceAnalyticsLocations[17]).Heading, {
-              variant: "redesign/heading-18/bold",
-              color: "mobile-text-heading-primary",
-              lineClamp: 1,
-              maxFontSizeMultiplier: 2,
-              style: closure_1_0.headerContent,
-              children: null,
-            });
-          },
-          headerRight() {
-            const obj = {
-              onPress,
-              accessibilityRole: "button",
-              accessibilityLabel: null,
-              accessibilityHint: null,
-              hitSlop: null,
-              style: null,
-              children: null,
-            };
-            const intl = closure_0(sourceAnalyticsLocations[18]).intl;
-            obj.accessibilityLabel = intl.string(closure_0(sourceAnalyticsLocations[18]).t.VzqqFC);
-            const intl2 = closure_0(sourceAnalyticsLocations[18]).intl;
-            obj.accessibilityHint = intl2.string(closure_0(sourceAnalyticsLocations[18]).t.bBRdiB);
-            obj.hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-            obj.style = closure_1_0.headerContent;
-            obj.children = jsx(closure_0(sourceAnalyticsLocations[20]).DiceIcon, {
-              size: "md",
-              color: navigation(sourceAnalyticsLocations[7]).colors.ICON_STRONG,
-            });
-            return jsx(closure_0(sourceAnalyticsLocations[19]).PressableOpacity, {
-              onPress,
-              accessibilityRole: "button",
-              accessibilityLabel: null,
-              accessibilityHint: null,
-              hitSlop: null,
-              style: null,
-              children: null,
-            });
-          },
-        });
-      };
-      const items3 = [navigation, tmp13, tmp4];
+      class O {
+        constructor() {
+          obj = {
+            headerTitle() {
+              const obj = {
+                variant: "redesign/heading-18/bold",
+                color: "mobile-text-heading-primary",
+                lineClamp: 1,
+                maxFontSizeMultiplier: 2,
+                style: closure_1_0.headerContent,
+                children: null,
+              };
+              const intl = closure_0(sourceAnalyticsLocations[19]).intl;
+              obj.children = intl.string(closure_0(sourceAnalyticsLocations[19]).t.PxUx8e);
+              return jsx(closure_0(sourceAnalyticsLocations[18]).Heading, {
+                variant: "redesign/heading-18/bold",
+                color: "mobile-text-heading-primary",
+                lineClamp: 1,
+                maxFontSizeMultiplier: 2,
+                style: closure_1_0.headerContent,
+                children: null,
+              });
+            },
+            headerRight() {
+              const obj = {
+                onPress,
+                accessibilityRole: "button",
+                accessibilityLabel: null,
+                accessibilityHint: null,
+                hitSlop: null,
+                style: null,
+                children: null,
+              };
+              const intl = closure_0(sourceAnalyticsLocations[19]).intl;
+              obj.accessibilityLabel = intl.string(closure_0(sourceAnalyticsLocations[19]).t.VzqqFC);
+              const intl2 = closure_0(sourceAnalyticsLocations[19]).intl;
+              obj.accessibilityHint = intl2.string(closure_0(sourceAnalyticsLocations[19]).t.bBRdiB);
+              obj.hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
+              obj.style = closure_1_0.headerContent;
+              obj.children = jsx(closure_0(sourceAnalyticsLocations[21]).DiceIcon, {
+                size: "md",
+                color: navigation(sourceAnalyticsLocations[7]).colors.ICON_STRONG,
+              });
+              return jsx(closure_0(sourceAnalyticsLocations[20]).PressableOpacity, {
+                onPress,
+                accessibilityRole: "button",
+                accessibilityLabel: null,
+                accessibilityHint: null,
+                hitSlop: null,
+                style: null,
+                children: null,
+              });
+            },
+          };
+          setOptionsResult = closure_1.setOptions(obj);
+          return;
+        }
+      }
+      const items3 = [navigation, tmp14, tmp4];
       cResult[8] = navigation;
-      cResult[9] = tmp13;
+      cResult[9] = tmp14;
       cResult[10] = tmp4;
-      cResult[11] = fn2;
+      cResult[11] = O;
       cResult[12] = items3;
-      const tmpResult = tmp(sourceAnalyticsLocations[13]);
+      const tmpResult = tmp(sourceAnalyticsLocations[14]);
     }
-  : () => {
+  : function ProfileCustomizationTryItOutV2SettingScreen() {
       const tmp = closure_10();
       _require = tmp;
       const navigation = require("useNavigation").useNavigation();
       let obj = require("useNavigation");
       const tmp2 = _require;
-      const tmp5 = navigation;
-      const tmp6Result = navigation(sourceAnalyticsLocations[11])(
-        navigation(sourceAnalyticsLocations[12]).USER_SETTINGS_TRY_OUT_PREMIUM,
+      const settingNavigationRoute = require("useSettingNavigationRoute").useSettingNavigationRoute();
+      let obj2 = require("useSettingNavigationRoute");
+      const tmp6 = navigation;
+      const tmp7Result = navigation(sourceAnalyticsLocations[12])(
+        navigation(sourceAnalyticsLocations[13]).USER_SETTINGS_TRY_OUT_PREMIUM,
       );
-      sourceAnalyticsLocations = tmp6Result.sourceAnalyticsLocations;
-      const tmp6 = navigation(sourceAnalyticsLocations[11]);
+      sourceAnalyticsLocations = tmp7Result.sourceAnalyticsLocations;
+      const tmp7 = navigation(sourceAnalyticsLocations[12]);
       const items = [UserStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
-      const tmp9 = navigation(sourceAnalyticsLocations[14])();
-      closure_4 = tmp9;
+      const tmp10 = navigation(sourceAnalyticsLocations[15])();
+      closure_4 = tmp10;
       const items1 = [stateFromStores];
       const effect = stateFromStores.useEffect(() => {
         if (null != stateFromStores) {
@@ -242,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         AnalyticsUtilsDefault.track(constants.PREMIUM_UPSELL_VIEWED, obj2);
       }, items2);
-      const items3 = [navigation, tmp9, tmp];
+      const items3 = [navigation, tmp10, tmp];
       const layoutEffect = stateFromStores.useLayoutEffect(() => {
         navigation.setOptions({
           headerTitle() {
@@ -254,9 +248,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               style: closure_1_0.headerContent,
               children: null,
             };
-            const intl = closure_0(sourceAnalyticsLocations[18]).intl;
-            obj.children = intl.string(closure_0(sourceAnalyticsLocations[18]).t.PxUx8e);
-            return jsx(closure_0(sourceAnalyticsLocations[17]).Heading, {
+            const intl = closure_0(sourceAnalyticsLocations[19]).intl;
+            obj.children = intl.string(closure_0(sourceAnalyticsLocations[19]).t.PxUx8e);
+            return jsx(closure_0(sourceAnalyticsLocations[18]).Heading, {
               variant: "redesign/heading-18/bold",
               color: "mobile-text-heading-primary",
               lineClamp: 1,
@@ -275,17 +269,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               style: null,
               children: null,
             };
-            const intl = closure_0(sourceAnalyticsLocations[18]).intl;
-            obj.accessibilityLabel = intl.string(closure_0(sourceAnalyticsLocations[18]).t.VzqqFC);
-            const intl2 = closure_0(sourceAnalyticsLocations[18]).intl;
-            obj.accessibilityHint = intl2.string(closure_0(sourceAnalyticsLocations[18]).t.bBRdiB);
+            const intl = closure_0(sourceAnalyticsLocations[19]).intl;
+            obj.accessibilityLabel = intl.string(closure_0(sourceAnalyticsLocations[19]).t.VzqqFC);
+            const intl2 = closure_0(sourceAnalyticsLocations[19]).intl;
+            obj.accessibilityHint = intl2.string(closure_0(sourceAnalyticsLocations[19]).t.bBRdiB);
             obj.hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
             obj.style = closure_1_0.headerContent;
-            obj.children = jsx(closure_0(sourceAnalyticsLocations[20]).DiceIcon, {
+            obj.children = jsx(closure_0(sourceAnalyticsLocations[21]).DiceIcon, {
               size: "md",
               color: navigation(sourceAnalyticsLocations[7]).colors.ICON_STRONG,
             });
-            return jsx(closure_0(sourceAnalyticsLocations[19]).PressableOpacity, {
+            return jsx(closure_0(sourceAnalyticsLocations[20]).PressableOpacity, {
               onPress,
               accessibilityRole: "button",
               accessibilityLabel: null,
@@ -297,14 +291,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           },
         });
       }, items3);
-      let tmp13 = null;
+      let tmp15Result = null;
       if (null != stateFromStores) {
-        const obj3 = { value: tmp6Result.analyticsLocations, children: null };
-        const obj4 = { style: tmp.container, children: null };
-        const obj5 = { currentUser: stateFromStores };
-        obj4.children = jsx(tmp5(tmp3[21]), { currentUser: stateFromStores });
-        obj3.children = <closure_4 style={tmp.container}>{null}</closure_4>;
-        tmp13 = jsx(tmp2(tmp3[11]).AnalyticsLocationProvider, { value: tmp6Result.analyticsLocations, children: null });
+        const obj4 = { value: tmp7Result.analyticsLocations, children: null };
+        const obj5 = { style: tmp.container, children: null };
+        const obj6 = { currentUser: stateFromStores, initialTarget: null };
+        const params = settingNavigationRoute.params;
+        let initialTarget;
+        if (params != null) {
+          initialTarget = params.initialTarget;
+        }
+        obj6.initialTarget = initialTarget;
+        obj5.children = jsx(tmp6(tmp3[22]), { currentUser: stateFromStores, initialTarget: null });
+        obj4.children = <closure_4 style={tmp.container}>{null}</closure_4>;
+        tmp15Result = jsx(tmp2(tmp3[12]).AnalyticsLocationProvider, {
+          value: tmp7Result.analyticsLocations,
+          children: null,
+        });
+        const tmp6Result = tmp6(tmp3[22]);
       }
-      return tmp13;
+      return tmp15Result;
     };

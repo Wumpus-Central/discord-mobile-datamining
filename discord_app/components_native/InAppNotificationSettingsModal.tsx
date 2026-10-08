@@ -15,7 +15,7 @@ import UserStore from "../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isMultiUserDM = fn(2055).isMultiUserDM;
+const isMultiUserDM = fn(2067).isMultiUserDM;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
@@ -112,7 +112,7 @@ prototype["render"] = function render() {
 };
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function ConnectedInAppNotificationSettingsScreen(channel) {
       const cResult = channel(576).c(6);
       channel = channel.channel;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -153,7 +153,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp9;
       const tmpResult = channel(504);
     }
-  : (channel) => {
+  : function ConnectedInAppNotificationSettingsScreen(channel) {
       channel = channel.channel;
       const items = [UserGuildSettingsStore];
       const obj = channel(504);
@@ -176,7 +176,7 @@ let result = size.fileFinishedImporting("components_native/InAppNotificationSett
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function InAppNotificationSettingsModal(arg0) {
         const cResult = require("c").c(5);
         ({ channelId, onClose } = arg0);
         if (cResult[0] === channelId) {
@@ -185,7 +185,7 @@ export default noop.memo(
           }
           if (cResult[3] !== tmp4) {
             const obj2 = { screens: tmp4, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" };
-            const tmp7 = closure_11(tmp(6503).Navigator, obj2);
+            const tmp7 = closure_11(tmp(6679).Navigator, obj2);
             cResult[3] = tmp4;
             cResult[4] = tmp7;
             let tmp5 = tmp7;
@@ -203,11 +203,11 @@ export default noop.memo(
             obj.title = intl.string(channelId(1126).t.h850Ss);
             let channelName = null;
             if (null != closure_0) {
-              const tmp3Result = channelId(5049);
+              const tmp3Result = channelId(5417);
               channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
             }
             obj.subtitle = channelName;
-            return closure_2_11(channelId(6017).NavigatorHeader, obj);
+            return closure_2_11(channelId(6203).NavigatorHeader, obj);
           },
           headerLeft: null,
           render: null,
@@ -224,7 +224,7 @@ export default noop.memo(
         tmp4 = obj3;
         const tmpResult = require("NavigatorHeader");
       }
-    : (channelId) => {
+    : function InAppNotificationSettingsModal(channelId) {
         channelId = channelId.channelId;
         const onClose = channelId.onClose;
         const items = [channelId, onClose];
@@ -238,11 +238,11 @@ export default noop.memo(
               obj.title = intl.string(channelId(1126).t.h850Ss);
               let channelName = null;
               if (null != closure_0) {
-                const tmp3Result = channelId(5049);
+                const tmp3Result = channelId(5417);
                 channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
               }
               obj.subtitle = channelName;
-              return closure_2_11(channelId(6017).NavigatorHeader, obj);
+              return closure_2_11(channelId(6203).NavigatorHeader, obj);
             },
             headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
             render() {
@@ -252,6 +252,6 @@ export default noop.memo(
           obj.IN_APP_NOTIFICATION_SETTINGS = obj2;
           return obj;
         }, items);
-        return closure_11(channelId(6503).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+        return closure_11(channelId(6679).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
       },
 );

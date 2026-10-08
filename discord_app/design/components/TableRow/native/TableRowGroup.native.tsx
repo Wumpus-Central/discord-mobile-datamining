@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flexShrink: 0 },
   content: {
@@ -41,7 +41,7 @@ obj2.helperText = { marginTop: 8 };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TableRowGroupTitle(arg0) {
       const cResult = c.c(7);
       ({ title, style, lineClamp } = arg0);
       const tmp4 = closure_8();
@@ -78,7 +78,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp5 = items;
     }
-  : (arg0) => {
+  : function TableRowGroupTitle(arg0) {
       ({ title, style, lineClamp } = arg0);
       const obj = {
         accessibilityRole: "header",

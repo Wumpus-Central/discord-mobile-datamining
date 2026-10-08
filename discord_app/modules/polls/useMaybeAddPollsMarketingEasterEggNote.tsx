@@ -10,11 +10,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (emojiName) => {
+  ? function useMaybeAddPollsMarketingEasterEggNote(emojiName) {
       const cResult = c.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [LocaleStore];
-        const fn = function l() {
+        const fn = function s() {
           locale = locale.locale;
           return locale.startsWith("en-");
         };
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = formatToPlainStringResult;
       const tmpResult = initialize;
     }
-  : (emojiName) => {
+  : function useMaybeAddPollsMarketingEasterEggNote(emojiName) {
       initialize;
       [][0] = LocaleStore;
       let formatToPlainStringResult = emojiName;

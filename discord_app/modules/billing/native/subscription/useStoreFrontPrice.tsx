@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/subscription/useStoreFrontPrice.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (prices, currency) => {
+  ? function useStoreFrontPrice(prices, currency) {
       const obj = c;
       const cResult = obj.c(6);
       if (null == prices) {
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = obj3;
       tmp14 = obj3;
     }
-  : (arg0, arg1) => {
+  : function useStoreFrontPrice(arg0, arg1) {
       const user = arg0;
       closure_1 = arg1;
       const items = [arg0, arg1];

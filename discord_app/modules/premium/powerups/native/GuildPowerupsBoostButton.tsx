@@ -5,7 +5,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 import GuildBoostSlotStore from "../../../../stores/billing/GuildBoostSlotStore.tsx";
 
-const GuildBoostingSubscribeButtonDefault = tmp13(6917);
+const GuildBoostingSubscribeButtonDefault = tmp13(7106);
 const require = fn;
 const AnalyticsSections = fn(1085).AnalyticsSections;
 const jsx = fn(21).jsx;
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostButton.tsx");
 
 export const GuildPowerupsBoostButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildPowerupsBoostButton(guildId) {
       let tmp2 = dependencyMap;
       const cResult = guildId(576).c(16);
       guildId = guildId.guildId;
@@ -143,82 +143,34 @@ export const GuildPowerupsBoostButton = ReactCompilerGating.isReactCompilerEnabl
         }
       }
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        class B {
-          constructor(arg0, arg1) {
-            if (null != arg1) {
-              tmp = guildId;
-              tmp2 = guildId;
-              tmp3 = closure_1_2;
-              obj = guildId(closure_1_2[11]);
-              obj1 = { guildBoostSlots: null, guildId: null };
-              items = [];
-              items[0] = arg1;
-              obj1.guildBoostSlots = items;
-              obj1.guildId = guildId;
-              openTransferModalResult = obj.openTransferModal(obj1);
-            }
-            return;
+        class S {
+          constructor() {
+            return closure_4.getGuild(guildId);
           }
         }
-        cResult[10] = B;
+        cResult[10] = tmp21;
         class E {
           constructor() {
             return closure_1_5.getCurrentUser();
           }
         }
       } else {
-        class B {
-          constructor(arg0, arg1) {
-            if (null != arg1) {
-              tmp = guildId;
-              tmp2 = guildId;
-              tmp3 = closure_1_2;
-              obj = guildId(closure_1_2[11]);
-              obj1 = { guildBoostSlots: null, guildId: null };
-              items = [];
-              items[0] = arg1;
-              obj1.guildBoostSlots = items;
-              obj1.guildId = guildId;
-              openTransferModalResult = obj.openTransferModal(obj1);
-            }
-            return;
+        class S {
+          constructor() {
+            return closure_4.getGuild(guildId);
           }
         }
       }
       if (null == stateFromStores) {
-        class B {
-          constructor(arg0, arg1) {
-            if (null != arg1) {
-              tmp = guildId;
-              tmp2 = guildId;
-              tmp3 = closure_1_2;
-              obj = guildId(closure_1_2[11]);
-              obj1 = { guildBoostSlots: null, guildId: null };
-              items = [];
-              items[0] = arg1;
-              obj1.guildBoostSlots = items;
-              obj1.guildId = guildId;
-              openTransferModalResult = obj.openTransferModal(obj1);
-            }
-            return;
+        class S {
+          constructor() {
+            return closure_4.getGuild(guildId);
           }
         }
       } else {
-        class B {
-          constructor(arg0, arg1) {
-            if (null != arg1) {
-              tmp = guildId;
-              tmp2 = guildId;
-              tmp3 = closure_1_2;
-              obj = guildId(closure_1_2[11]);
-              obj1 = { guildBoostSlots: null, guildId: null };
-              items = [];
-              items[0] = arg1;
-              obj1.guildBoostSlots = items;
-              obj1.guildId = guildId;
-              openTransferModalResult = obj.openTransferModal(obj1);
-            }
-            return;
+        class S {
+          constructor() {
+            return closure_4.getGuild(guildId);
           }
         }
         class E {
@@ -226,13 +178,13 @@ export const GuildPowerupsBoostButton = ReactCompilerGating.isReactCompilerEnabl
             return closure_1_5.getCurrentUser();
           }
         }
-        tmp23[0] = stateFromStores;
-        tmp23[1] = tmp18;
-        tmp23[2] = AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR;
-        tmp23[3] = fractionalState.fractionalState;
-        tmp23[4] = tmp20;
-        tmp23[5] = tmp17;
-        tmp2 = <tmp13 {...tmp23} />;
+        tmp24[0] = stateFromStores;
+        tmp24[1] = tmp18;
+        tmp24[2] = AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR;
+        tmp24[3] = fractionalState.fractionalState;
+        tmp24[4] = tmp20;
+        tmp24[5] = tmp17;
+        tmp2 = <tmp13 {...tmp24} />;
         fractionalState = fractionalState.fractionalState;
         cResult[11] = fractionalState;
         cResult[12] = stateFromStores;
@@ -242,7 +194,7 @@ export const GuildPowerupsBoostButton = ReactCompilerGating.isReactCompilerEnabl
       }
       const tmpResult4 = guildId(504);
     }
-  : (guildId) => {
+  : function GuildPowerupsBoostButton(guildId) {
       guildId = guildId.guildId;
       let items = [GuildStore];
       const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
@@ -252,13 +204,13 @@ export const GuildPowerupsBoostButton = ReactCompilerGating.isReactCompilerEnabl
       const stateFromStores1 = guildId(504).useStateFromStores(items1, () => boostSlots.boostSlots);
       let obj2 = guildId(504);
       const tmp5 = stateFromStores1;
-      const tmp6 = stateFromStores1(6908)({ forceFetch: true });
+      const tmp6 = stateFromStores1(7097)({ forceFetch: true });
       const items2 = [UserStore];
       const stateFromStores2 = guildId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
       if (null != stateFromStores2) {
         let UNSPECIFIED = stateFromStores2.premiumGroupRole;
       } else {
-        UNSPECIFIED = tmp(1385).PremiumSubscriptionGroupRole.UNSPECIFIED;
+        UNSPECIFIED = tmp(1397).PremiumSubscriptionGroupRole.UNSPECIFIED;
       }
       const items3 = [stateFromStores1];
       const memo = noop.useMemo(() => {
@@ -275,7 +227,7 @@ export const GuildPowerupsBoostButton = ReactCompilerGating.isReactCompilerEnabl
           onAvailableSlotPress: tmp9,
           premiumGroupRole: UNSPECIFIED,
         };
-        tmp10 = jsx(tmp5(6917), {
+        tmp10 = jsx(tmp5(7106), {
           guild: stateFromStores,
           previousGuildSubscriptionSlot: memo,
           analyticsSection: AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR,

@@ -8,7 +8,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, c9) => {
+  ? function useGameNameAndCoverImage(arg0, arg1, c9) {
       const cResult = c.c(10);
       const game = useGame.useGame(arg0);
       ({ data, isLoading } = game);
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = coverURL;
       tmp5 = coverURL;
     }
-  : (arg0, arg1, c9) => {
+  : function useGameNameAndCoverImage(arg0, arg1, c9) {
       const game = useGame.useGame(arg0);
       const data = game.data;
       let coverURL;

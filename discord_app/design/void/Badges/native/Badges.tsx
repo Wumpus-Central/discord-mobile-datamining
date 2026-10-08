@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = {
   base: { borderRadius: nativeDefault.radii.sm, paddingHorizontal: 4, paddingVertical: 2 },
   danger: null,
@@ -24,7 +24,7 @@ obj2.brand = { backgroundColor: nativeDefault.unsafe_rawColors.BRAND_260 };
 const obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.BRAND_260 };
 obj2.expressive = { backgroundColor: nativeDefault.colors.CONTROL_EXPRESSIVE_BACKGROUND_DEFAULT };
 let closure_4 = createStyles.createStyles(obj2);
-createStyles = fn(4896);
+createStyles = fn(5090);
 const obj9 = {
   text: { textAlign: "center", textTransform: "uppercase" },
   dangerText: null,
@@ -49,7 +49,7 @@ const result = size.fileFinishedImporting("design/void/Badges/native/Badges.tsx"
 
 export const BadgeColors = obj14;
 export const TextBadge = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TextBadge(arg0) {
       const cResult = c.c(14);
       ({ color, style, text, textStyle } = arg0);
       if (undefined === color) {
@@ -108,7 +108,7 @@ export const TextBadge = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items1;
       tmp9 = items1;
     }
-  : (color) => {
+  : function TextBadge(color) {
       let DANGER = color.color;
       if (DANGER === undefined) {
         DANGER = obj14.DANGER;

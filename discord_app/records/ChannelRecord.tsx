@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import GlobalUtils from "../utils/GlobalUtils.tsx";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import privDefault from "../../_runtime/01444_priv.js";
+import privDefault from "../../_runtime/01456_priv.js";
 import StageChannelPermissions from "../modules/stage_channels/StageChannelPermissions.tsx";
 import ThreadSortOrder from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
 import ForumLayout from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
@@ -62,7 +62,7 @@ const Constants = fn(1085);
 ({ BITRATE_DEFAULT: hasOwnProperty, ChannelTypes } = Constants);
 const BasicPermissions = Constants.BasicPermissions;
 ({ ChannelTypesSets: closure_8, Permissions } = Constants);
-const ChannelFlags = fn(2058).ChannelFlags;
+const ChannelFlags = fn(2070).ChannelFlags;
 let items = [, , , , , , , , , ,];
 ({
   GUILD_TEXT: arr[0],
@@ -452,40 +452,7 @@ prototype["toJS"] = function toJS() {
   return {};
 };
 prototype["set"] = function set(arg0, arg1) {
-  obj = { [arg0]: arg1 };
-  if ("topic" in obj) {
-    obj.topic_ = obj.topic;
-    delete tmp[tmp2];
-  }
-  if ("position" in obj) {
-    obj.position_ = obj.position;
-    delete tmp[tmp2];
-  }
-  if ("permissionOverwrites" in obj) {
-    obj.permissionOverwrites_ = obj.permissionOverwrites;
-    delete tmp[tmp2];
-  }
-  if ("bitrate" in obj) {
-    obj.bitrate_ = obj.bitrate;
-    delete tmp[tmp2];
-  }
-  if ("userLimit" in obj) {
-    obj.userLimit_ = obj.userLimit;
-    delete tmp[tmp2];
-  }
-  if ("nsfw" in obj) {
-    obj.nsfw_ = obj.nsfw;
-    delete tmp[tmp2];
-  }
-  if ("rateLimitPerUser" in obj) {
-    obj.rateLimitPerUser_ = obj.rateLimitPerUser;
-    delete tmp[tmp2];
-  }
-  if ("flags" in obj) {
-    obj.flags_ = obj.flags;
-    delete tmp[tmp2];
-  }
-  return this.merge(obj);
+  return this.merge({ [arg0]: arg1 });
 };
 prototype["merge"] = function merge(topic) {
   if ("topic" in topic) {
@@ -905,7 +872,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     originChannelId: null,
     ownerId: null,
     parent_id: null,
-    parentChannelThreadType: "formatToPlainString",
+    parentChannelThreadType: "gap",
     permissionOverwrites_: true,
     position_: true,
     rateLimitPerUser_: true,
@@ -1084,7 +1051,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
       hd_streaming_buyer_id: obj.hdStreamingBuyerId,
       voice_hangout: obj.voiceHangout,
     } = application_id);
-    return obj7(2064).dangerouslyCast(obj, UnknownChannelRecord);
+    return obj7(2076).dangerouslyCast(obj, UnknownChannelRecord);
   } else {
     const available_tags = application_id.available_tags;
     if (null == available_tags) {
@@ -1233,7 +1200,7 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
     hd_streaming_buyer_id: obj.hdStreamingBuyerId,
     voice_hangout: obj.voiceHangout,
   } = application_id);
-  const result = obj5(2059).normalizeConjureTopicChannelRecord(obj);
+  const result = obj5(2071).normalizeConjureTopicChannelRecord(obj);
   let GUILD_TEXT = result.type;
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
@@ -1242,8 +1209,8 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
   if (tmp10 == null) {
     tmp10 = UnknownChannelRecord;
   }
-  obj4 = obj5(2059);
-  return obj5(2064).dangerouslyCast(result, tmp10);
+  obj4 = obj5(2071);
+  return obj5(2076).dangerouslyCast(result, tmp10);
 };
 class GuildTextualChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -1367,7 +1334,7 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
     hd_streaming_buyer_id: obj.hdStreamingBuyerId,
     version: obj.version,
   } = application_id);
-  const result = obj5(2059).normalizeConjureTopicChannelRecord(obj);
+  const result = obj5(2071).normalizeConjureTopicChannelRecord(obj);
   let GUILD_TEXT2 = result.type;
   if (GUILD_TEXT2 == null) {
     GUILD_TEXT2 = ChannelTypes.GUILD_TEXT;
@@ -1376,8 +1343,8 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
   if (tmp10 == null) {
     tmp10 = UnknownChannelRecord;
   }
-  obj4 = obj5(2059);
-  return obj5(2064).dangerouslyCast(result, tmp10);
+  obj4 = obj5(2071);
+  return obj5(2076).dangerouslyCast(result, tmp10);
 };
 class GuildAnnouncementChannelRecord extends GuildTextualChannelRecord {}
 class GuildCategoryChannelRecord extends GuildTextualChannelRecord {}
@@ -1552,7 +1519,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
     }
     obj.type = GUILD_TEXT;
     obj.version = available_tags.version;
-    return obj8(2064).dangerouslyCast(obj, ForumChannelRecord);
+    return obj8(2076).dangerouslyCast(obj, ForumChannelRecord);
   }
 };
 class IdAsNumberCache {
@@ -1730,8 +1697,8 @@ prototype2["addRecipient"] = function addRecipient(arg0, arg1, arg2) {
     return self;
   }
 };
-prototype2["removeRecipient"] = function removeRecipient(id2) {
-  return this.set("recipients", _modDef12.without(this.recipients, id2));
+prototype2["removeRecipient"] = function removeRecipient(optionId) {
+  return this.set("recipients", _modDef12.without(this.recipients, optionId));
 };
 class DMChannelRecord extends PrivateChannelRecord {}
 class GroupDMChannelRecord extends PrivateChannelRecord {}

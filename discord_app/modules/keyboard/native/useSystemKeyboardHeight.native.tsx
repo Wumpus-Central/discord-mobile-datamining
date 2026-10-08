@@ -9,7 +9,7 @@ let closure_3 = { excludeSafeAreaInsets: false };
 const result = size.fileFinishedImporting("modules/keyboard/native/useSystemKeyboardHeight.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSystemKeyboardHeight(arg0) {
       let tmp = arg0;
       const cResult = c.c(3);
       if (undefined === arg0) {
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       const tmp2Result = AppEntryKeyContext;
     }
-  : () => {
+  : function useSystemKeyboardHeight() {
       let tmp = arg0;
       if (arg0 === undefined) {
         tmp = closure_3;

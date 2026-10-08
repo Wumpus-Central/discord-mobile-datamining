@@ -18,9 +18,9 @@ import NotificationCenterStore from "../NotificationCenterStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const MainTabsConstants = fn(10833);
+const MainTabsConstants = fn(11182);
 ({ RootNavigatorScreen, YouBarNavigatorScreens } = MainTabsConstants);
-const ReadStateTypes = fn(5078).ReadStateTypes;
+const ReadStateTypes = fn(5972).ReadStateTypes;
 const jsx = fn(21).jsx;
 let items = [, , , ,];
 ({ YOU: arr[0], SETTINGS: arr[1] } = RootNavigatorScreen);
@@ -204,8 +204,8 @@ export const NotificationCenterForYou = (panelVariant) => {
         found1 = items.filter((kind) => {
           let tmp = "notification-center-item" !== kind.kind;
           if (!tmp) {
-            tmp = !id(items2[22]).shouldShowAgeGateForChannelId(kind.message_channel_id);
-            const obj = id(items2[22]);
+            tmp = !id(items2[27]).shouldShowAgeGateForChannelId(kind.message_channel_id);
+            const obj = id(items2[27]);
           }
           return tmp;
         });
@@ -281,9 +281,9 @@ export const NotificationCenterForYou = (panelVariant) => {
       const sorted = items1.sort((id, id2) => -1 * arr8(items2[23]).compare(id.id, id2.id));
       const sorted1 = items2.sort((id, id2) => -1 * arr8(items2[23]).compare(id.id, id2.id));
       const sorted2 = items3.sort((id, id2) => -1 * arr8(items2[23]).compare(id.id, id2.id));
-      let obj = currentNavigationRouteName(setting[27]);
+      let obj = currentNavigationRouteName(setting[28]);
       [arr7, arr8] = memo(
-        currentNavigationRouteName(setting[27]).partition(
+        currentNavigationRouteName(setting[28]).partition(
           items1,
           (type) => type.type === id(items2[12]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && type.acked,
         ),
@@ -458,7 +458,7 @@ export const NotificationCenterForYou = (panelVariant) => {
       closure_17(false);
     }
     const result = NotificationCenterItemsActions.setNotificationCenterTabFocused(isFocused);
-    return () => isFocused(setting[29]).setNotificationCenterTabFocused(false);
+    return () => isFocused(setting[30]).setNotificationCenterTabFocused(false);
   }, items14);
   const items15 = [memo, tmp20[1]];
   const effect2 = height.useEffect(() => {
@@ -468,11 +468,11 @@ export const NotificationCenterForYou = (panelVariant) => {
   }, items15);
   const obj10 = { type: null, name: null, properties: null };
   const obj9 = isFocused(setting[22]);
-  obj10.type = isFocused(setting[32]).ImpressionTypes.VIEW;
-  obj10.name = isFocused(setting[32]).ImpressionNames.NOTIFICATION_CENTER_LANDING;
+  obj10.type = isFocused(setting[33]).ImpressionTypes.VIEW;
+  obj10.name = isFocused(setting[33]).ImpressionNames.NOTIFICATION_CENTER_LANDING;
   obj10.properties = { empty: 0 === memo2.length };
   const items16 = [initialized];
-  currentNavigationRouteName(setting[31])(obj10, { disableTrack: !initialized }, items16);
+  currentNavigationRouteName(setting[32])(obj10, { disableTrack: !initialized }, items16);
   if (initialized) {
     const obj13 = {
       items: memo2,
@@ -488,13 +488,13 @@ export const NotificationCenterForYou = (panelVariant) => {
       onAddSuggestionAnimationFinish: callback5,
       panelVariant: flag,
     };
-    let tmp43Result = tmp43(tmp2(tmp3[34]).ForYouItems, obj13);
+    let tmp43Result = tmp43(tmp2(tmp3[35]).ForYouItems, obj13);
   } else {
     const obj14 = { children: null };
     const _Array = Array;
     const _Array2 = Array;
     obj14.children = Array.from(Array(10)).map((item, index) =>
-      stateFromStores3(isFocused(setting[33]).ForYouMentionPlaceholder, {}, index),
+      stateFromStores3(isFocused(setting[34]).ForYouMentionPlaceholder, {}, index),
     );
     tmp43Result = tmp43(closure_5, obj14);
     const arr = Array.from(Array(10));

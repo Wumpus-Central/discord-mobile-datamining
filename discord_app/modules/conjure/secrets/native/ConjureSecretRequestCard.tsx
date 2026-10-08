@@ -13,29 +13,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
-  card: {
-    backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
-    borderWidth: 1,
-    borderColor: nativeDefault.colors.BORDER_SUBTLE,
-    borderRadius: nativeDefault.radii.md,
-    padding: nativeDefault.space.PX_12,
-    marginTop: nativeDefault.space.PX_8,
-    gap: nativeDefault.space.PX_8,
-  },
+  card: { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 },
   cardAwaiting: null,
   status: null,
 };
-let obj3 = {
-  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
-  borderWidth: 1,
-  borderColor: nativeDefault.colors.BORDER_SUBTLE,
-  borderRadius: nativeDefault.radii.md,
-  padding: nativeDefault.space.PX_12,
-  marginTop: nativeDefault.space.PX_8,
-  gap: nativeDefault.space.PX_8,
-};
+let obj3 = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.cardAwaiting = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
 let obj4 = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.status = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -58,7 +42,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/secrets/native/ConjureSecretRequestCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (projectId) => {
+  ? function ConjureSecretRequestCard(projectId) {
       const cResult = projectId(secretRequestStatusChanged[7]).c(84);
       projectId = projectId.projectId;
       ({ cardId, request } = projectId);
@@ -104,15 +88,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             let items = [AccessibilityStore];
-            class O {
+            class R {
               constructor() {
                 return closure_1_5.useReducedMotion;
               }
             }
             cResult[6] = items;
-            cResult[7] = O;
-            let tmp14 = O;
-            const tmp13 = items;
+            cResult[7] = R;
+            let tmp13 = R;
+            const tmp12 = items;
           } else {
             class E {
               constructor(arg0) {
@@ -120,10 +104,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj;
               }
             }
-            tmp14 = cResult[7];
+            tmp13 = cResult[7];
           }
           const tmpResult = tmp(tmp2[11]);
-          const stateFromStores = tmp(tmp2[12]).useStateFromStores(tmp13, tmp14);
+          const stateFromStores = tmp(tmp2[12]).useStateFromStores(tmp12, tmp13);
           const tmpResult3 = tmp(tmp2[12]);
           const sharedValue = tmp(tmp2[13]).useSharedValue(1);
           if (cResult[8] === secretRequestStatusChanged) {
@@ -134,39 +118,35 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          class P {
-            constructor() {
-              if (closure_2) {
-                tmp = closure_3;
-                if (!closure_3) {
-                  tmp2 = closure_4;
-                  num = 0;
-                  result = closure_4.set(0);
-                  tmp4 = closure_0;
-                  tmp5 = closure_2;
-                  obj = closure_0(closure_2[14]);
-                  num2 = 1;
-                  result1 = closure_4.set(obj.withSpring(1, closure_0(closure_2[15]).SUBTLE_SPRING));
-                }
-                return;
+          const fn2 = function j() {
+            if (secretRequestStatusChanged) {
+              if (!stateFromStores) {
+                const result = sharedValue.set(0);
+                const result1 = sharedValue.set(spring.withSpring(1, springPresets.SUBTLE_SPRING));
               }
-              result2 = closure_4.set(1);
-              return;
             }
-          }
+            const result2 = sharedValue.set(1);
+          };
           cResult[8] = secretRequestStatusChanged;
           cResult[9] = sharedValue;
           cResult[10] = stateFromStores;
-          cResult[11] = P;
+          cResult[11] = fn2;
           const tmpResult4 = tmp(tmp2[13]);
         }
       }
+      const fn = function x() {
+        const obj2 = {
+          content: timestampProducer(ConjureSecretsSheetDefault, { projectId, request }),
+          key: ConjureSecretsSheet.CONJURE_SECRETS_SHEET_KEY,
+        };
+        ActionSheetActionCreators.showActionSheet(obj2);
+      };
       cResult[0] = projectId;
       cResult[1] = request;
-      cResult[2] = tmp6;
+      cResult[2] = fn;
       let obj = projectId(secretRequestStatusChanged[7]);
     }
-  : (projectId) => {
+  : function ConjureSecretRequestCard(projectId) {
       projectId = projectId.projectId;
       ({ cardId, request } = projectId);
       ({ status, awaiting } = projectId);
@@ -228,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       fn.__initData = __initData;
       const animatedStyle = obj4.useAnimatedStyle(fn);
       projectId(secretRequestStatusChanged[13]);
-      class R {
+      class I {
         constructor() {
           obj = { opacity: closure_4.get(), transform: null };
           obj1 = { scale: 0.5 + 0.5 * closure_4.get() };
@@ -238,116 +218,120 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return obj;
         }
       }
-      R.__closure = { enter: sharedValue };
-      R.__workletHash = 12712289937001;
-      R.__initData = __initData2;
+      I.__closure = { enter: sharedValue };
+      I.__workletHash = 12712289937001;
+      I.__initData = __initData2;
       if ("superseded" === status) {
-        const obj6 = { style: null, children: null };
-        const items4 = [tmp.card, animatedStyle];
-        obj6.style = items4;
-        const obj7 = { variant: "text-xs/semibold", color: "text-muted", children: null };
+        const obj6 = { style: animatedStyle, children: null };
+        const obj7 = { style: tmp.card, children: null };
+        const obj8 = { variant: "text-xs/semibold", color: "text-muted", children: null };
         const intl10 = tmp4(tmp5[17]).intl;
-        obj7.children = intl10.string(request(tmp5[18]).CTxtdV);
-        obj6.children = closure_6(tmp4(tmp5[16]).Text, obj7);
-        let tmp27Result = closure_6(request(tmp5[13]).View, obj6);
+        obj8.children = intl10.string(request(tmp5[18]).CTxtdV);
+        obj7.children = closure_6(tmp4(tmp5[16]).Text, obj8);
+        obj6.children = closure_6(request(tmp5[19]), obj7);
+        let tmp30Result = closure_6(request(tmp5[13]).View, obj6);
+        const tmp10Result = request(tmp5[19]);
       } else if ("inactive" === status) {
-        const obj8 = { style: null, children: null };
-        const items5 = [tmp.card, animatedStyle];
-        obj8.style = items5;
-        const obj9 = { variant: "text-xs/semibold", color: "text-muted", children: null };
+        const obj9 = { style: animatedStyle, children: null };
+        const obj10 = { style: tmp.card, children: null };
+        const obj11 = { variant: "text-xs/semibold", color: "text-muted", children: null };
         const intl8 = tmp4(tmp5[17]).intl;
-        obj9.children = intl8.string(request(tmp5[18]).HCQvpO);
-        const items6 = [closure_6(tmp4(tmp5[16]).Text, obj9)];
-        const obj10 = { label: null, size: "xs", items: null };
-        const intl9 = tmp4(tmp5[17]).intl;
-        obj10.label = intl9.string(request(tmp5[18]).HCQvpO);
-        obj10.items = memo;
-        items6[1] = closure_6(tmp4(tmp5[19]).TagGroup, obj10);
-        obj8.children = items6;
-        tmp27Result = closure_7(request(tmp5[13]).View, obj8);
-      } else if ("pending" === status) {
-        const obj11 = { style: tmp.card, children: null };
+        obj11.children = intl8.string(request(tmp5[18]).HCQvpO);
+        const items4 = [closure_6(tmp4(tmp5[16]).Text, obj11)];
         const obj12 = { label: null, size: "xs", items: null };
-        const intl7 = tmp4(tmp5[17]).intl;
-        obj12.label = intl7.string(request(tmp5[18]).HCQvpO);
+        const intl9 = tmp4(tmp5[17]).intl;
+        obj12.label = intl9.string(request(tmp5[18]).HCQvpO);
         obj12.items = memo;
-        obj11.children = closure_6(tmp4(tmp5[19]).TagGroup, obj12);
-        tmp27Result = closure_6(sharedValue, obj11);
+        items4[1] = closure_6(tmp4(tmp5[20]).TagGroup, obj12);
+        obj10.children = items4;
+        obj9.children = closure_7(request(tmp5[19]), obj10);
+        tmp30Result = closure_6(request(tmp5[13]).View, obj9);
+        const tmp10Result5 = request(tmp5[19]);
+      } else if ("pending" === status) {
+        const obj13 = { style: tmp.card, children: null };
+        const obj14 = { label: null, size: "xs", items: null };
+        const intl7 = tmp4(tmp5[17]).intl;
+        obj14.label = intl7.string(request(tmp5[18]).HCQvpO);
+        obj14.items = memo;
+        obj13.children = closure_6(tmp4(tmp5[20]).TagGroup, obj14);
+        tmp30Result = closure_6(request(tmp5[19]), obj13);
+        const tmp10Result6 = request(tmp5[19]);
       } else if ("received" === status) {
-        const obj13 = { style: null, children: null };
-        const items7 = [tmp.card, animatedStyle];
-        obj13.style = items7;
-        const obj14 = { style: tmp.status, children: null };
-        const obj15 = {
+        const obj15 = { style: animatedStyle, children: null };
+        const obj16 = { style: tmp.card, children: null };
+        const obj17 = { style: tmp.status, children: null };
+        const obj18 = {
           style: tmp13,
           importantForAccessibility: "no-hide-descendants",
           accessibilityElementsHidden: true,
           children: null,
         };
-        const obj16 = { size: "xs", color: request(tmp5[5]).colors.ICON_FEEDBACK_POSITIVE };
-        obj15.children = closure_6(tmp4(tmp5[20]).CircleCheckIcon, obj16);
-        const items8 = [closure_6(request(tmp5[13]).View, obj15)];
-        const obj17 = { variant: "text-xs/semibold", color: "text-feedback-positive", children: null };
+        const obj19 = { size: "xs", color: request(tmp5[5]).colors.ICON_FEEDBACK_POSITIVE };
+        obj18.children = closure_6(tmp4(tmp5[21]).CircleCheckIcon, obj19);
+        const items5 = [closure_6(request(tmp5[13]).View, obj18)];
+        const obj20 = { variant: "text-xs/semibold", color: "text-feedback-positive", children: null };
         const intl5 = tmp4(tmp5[17]).intl;
-        obj17.children = intl5.string(request(tmp5[18]).sfp7Up);
-        items8[1] = closure_6(tmp4(tmp5[16]).Text, obj17);
-        obj14.children = items8;
-        const items9 = [closure_7(sharedValue, obj14)];
-        const obj18 = { label: null, size: "xs", items: null };
+        obj20.children = intl5.string(request(tmp5[18]).sfp7Up);
+        items5[1] = closure_6(tmp4(tmp5[16]).Text, obj20);
+        obj17.children = items5;
+        const items6 = [closure_7(sharedValue, obj17)];
+        const obj21 = { label: null, size: "xs", items: null };
         const intl6 = tmp4(tmp5[17]).intl;
-        obj18.label = intl6.string(request(tmp5[18]).sfp7Up);
-        obj18.items = memo;
-        items9[1] = closure_6(tmp4(tmp5[19]).TagGroup, obj18);
-        obj13.children = items9;
-        tmp27Result = closure_7(request(tmp5[13]).View, obj13);
+        obj21.label = intl6.string(request(tmp5[18]).sfp7Up);
+        obj21.items = memo;
+        items6[1] = closure_6(tmp4(tmp5[20]).TagGroup, obj21);
+        obj16.children = items6;
+        obj15.children = closure_7(request(tmp5[19]), obj16);
+        tmp30Result = closure_6(request(tmp5[13]).View, obj15);
+        const tmp10Result7 = request(tmp5[19]);
       } else {
-        const items10 = [tmp.card];
+        const items7 = [tmp.card];
         let cardAwaiting = null != awaiting;
         if (cardAwaiting) {
           cardAwaiting = tmp.cardAwaiting;
         }
-        const obj19 = { style: null, children: null };
-        items10[1] = cardAwaiting;
-        obj19.style = items10;
+        const obj22 = { style: null, children: null };
+        items7[1] = cardAwaiting;
+        obj22.style = items7;
         let tmp14 = null;
         if (null != awaiting) {
-          tmp14 = closure_6(tmp4(tmp5[21]).ConjureAwaitingPulseRing, {});
+          tmp14 = closure_6(tmp4(tmp5[22]).ConjureAwaitingPulseRing, {});
         }
-        const items11 = [tmp14, , , ,];
+        const items8 = [tmp14, , , ,];
         let str = "text-muted";
         if (null != awaiting) {
           str = "text-brand";
         }
-        const obj20 = { variant: "text-xs/semibold", color: str, children: null };
+        const obj23 = { variant: "text-xs/semibold", color: str, children: null };
         const intl = tmp4(tmp5[17]).intl;
         if (null != awaiting) {
           let HCQvpO = request(tmp5[18]).O0QIqj;
         } else {
           HCQvpO = request(tmp5[18]).HCQvpO;
         }
-        obj20.children = intl.string(HCQvpO);
-        items11[1] = closure_6(tmp4(tmp5[16]).Text, obj20);
+        obj23.children = intl.string(HCQvpO);
+        items8[1] = closure_6(tmp4(tmp5[16]).Text, obj23);
         if (null != request.note) {
           if ("" !== request.note) {
             let note = request.note;
           }
-          const obj21 = { variant: "text-sm/normal", color: "text-default", children: note };
-          items11[2] = closure_6(tmp17, obj21);
-          const obj22 = { label: null, size: "xs", items: null };
+          const obj24 = { variant: "text-sm/normal", color: "text-default", children: note };
+          items8[2] = closure_6(tmp17, obj24);
+          const obj25 = { label: null, size: "xs", items: null };
           const intl3 = tmp4(tmp5[17]).intl;
-          obj22.label = intl3.string(request(tmp5[18]).HCQvpO);
-          obj22.items = memo;
-          items11[3] = closure_6(tmp4(tmp5[19]).TagGroup, obj22);
-          const obj23 = { variant: "primary", size: "sm", onPress: callback, text: null };
+          obj25.label = intl3.string(request(tmp5[18]).HCQvpO);
+          obj25.items = memo;
+          items8[3] = closure_6(tmp4(tmp5[20]).TagGroup, obj25);
+          const obj26 = { variant: "primary", size: "sm", onPress: callback, text: null };
           const intl4 = tmp4(tmp5[17]).intl;
-          obj23.text = intl4.string(request(tmp5[18]).EK8tKY);
-          items11[4] = closure_6(tmp4(tmp5[22]).Button, obj23);
-          obj19.children = items11;
-          tmp27Result = closure_7(tmp28, obj19);
+          obj26.text = intl4.string(request(tmp5[18]).EK8tKY);
+          items8[4] = closure_6(tmp4(tmp5[23]).Button, obj26);
+          obj22.children = items8;
+          tmp30Result = closure_7(tmp10Result8, obj22);
         }
         const intl2 = tmp4(tmp5[17]).intl;
         note = intl2.string(request(tmp5[18]).MPGSHL);
-        tmp28 = sharedValue;
+        tmp10Result8 = request(tmp5[19]);
       }
-      return tmp27Result;
+      return tmp30Result;
     };

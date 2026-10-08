@@ -6,13 +6,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import QuestDockStore from "QuestDockStore.tsx";
 
 require = fn;
-const QuestDockMode = fn(5630).QuestDockMode;
+const QuestDockMode = fn(5977).QuestDockMode;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/useIsQuestDockContentVisible.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsQuestDockContentVisible() {
       const cResult = c.c(2);
       let isVisibleToUser = noop.useContext(QuestDockVisibilityContextDefault).isVisibleToUser;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return isVisibleToUser;
     }
-  : () => {
+  : function useIsQuestDockContentVisible() {
       let isVisibleToUser = noop.useContext(QuestDockVisibilityContextDefault).isVisibleToUser;
       const items = [QuestDockStore];
       const stateFromStores = initialize.useStateFromStores(items, () => QuestDockStore.prevRestingQuestDockMode);

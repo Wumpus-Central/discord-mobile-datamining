@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting(
 
 export const ApplicationIdentityLinkedRolesExperiment = experiment;
 export const useApplicationIdentityLinkedRolesEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, location) => {
+  ? function useApplicationIdentityLinkedRolesEnabled(guildId, location) {
       const cResult = c.c(4);
       if (cResult[0] === guildId) {
         if (cResult[1] === location) {
@@ -42,4 +42,6 @@ export const useApplicationIdentityLinkedRolesEnabled = ReactCompilerGating.isRe
       cResult[2] = obj3;
       tmp2 = obj3;
     }
-  : (guildId, location) => experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled;
+  : function useApplicationIdentityLinkedRolesEnabled(guildId, location) {
+      return experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled;
+    };

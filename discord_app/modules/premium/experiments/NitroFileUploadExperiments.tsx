@@ -33,7 +33,7 @@ const obj3 = {
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 };
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useNitroFileUploadRolloutEnabled(arg0) {
       let tmp = arg0;
       const cResult = c.c(2);
       if (arg0 == null) {
@@ -49,7 +49,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_5.useConfig(tmp3).enabled;
     }
-  : (arg0) => {
+  : function useNitroFileUploadRolloutEnabled(arg0) {
       let _location = arg0;
       if (arg0 == null) {
         _location = NitroFileUploadRollout;
@@ -94,7 +94,7 @@ export const getNitroFileUploadRolloutCopy = function getNitroFileUploadRolloutC
 };
 export const useNitroFileUploadRolloutEnabled = tmp3;
 export const useNonNitroFileUploadMarketingEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useNonNitroFileUploadMarketingEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -106,4 +106,6 @@ export const useNonNitroFileUploadMarketingEnabled = ReactCompilerGating.isReact
       }
       return closure_6.useConfig(tmp2).enabled;
     }
-  : (location) => closure_6.useConfig({ location }).enabled;
+  : function useNonNitroFileUploadMarketingEnabled(location) {
+      return closure_6.useConfig({ location }).enabled;
+    };

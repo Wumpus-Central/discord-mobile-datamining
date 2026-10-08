@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function UnreadSettingNoticeImpressionTracking(id) {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = {
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       useTrackImpressionDefault(first, undefined, tmp5);
       return null;
     }
-  : (id) => {
+  : function UnreadSettingNoticeImpressionTracking(id) {
       const obj = {
         type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW,
         name: discord_common_AnalyticsUtils.ImpressionNames.NOTIFICATION_SETTING_UNREAD_NUDGE,

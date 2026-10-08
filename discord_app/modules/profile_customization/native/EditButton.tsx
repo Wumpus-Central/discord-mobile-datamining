@@ -1,7 +1,7 @@
 // discord_app/modules/profile_customization/native/EditButton.tsx
 import c from "../../../../_runtime/00576_c.js";
+import _modDef7957 from "../../../../_runtime/metro/07957__.js";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef7636 from "../../../../_runtime/metro/07636__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/EditButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function EditButton(arg0) {
       const cResult = c.c(8);
       ({ onPress, accessibilityLabel, style, variant, disabled } = arg0);
       let str = "primary-overlay";
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp5 = jsx(IconButton.IconButton, {
-        icon: _modDef7636,
+        icon: _modDef7957,
         variant: str,
         size: "sm",
         onPress,
@@ -54,9 +54,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = str;
       cResult[4] = tmp5;
       tmp4 = tmp5;
-      const obj3 = { icon: _modDef7636, variant: str, size: "sm", onPress, accessibilityLabel, disabled };
+      const obj3 = { icon: _modDef7957, variant: str, size: "sm", onPress, accessibilityLabel, disabled };
     }
-  : (disabled) => {
+  : function EditButton(disabled) {
       let str = disabled.variant;
       ({ onPress, accessibilityLabel, style } = disabled);
       if (str === undefined) {
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = {
         style,
         children: jsx(IconButton.IconButton, {
-          icon: _modDef7636,
+          icon: _modDef7957,
           variant: str,
           size: "sm",
           onPress,
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return (
         <View style={style}>
           {jsx(IconButton.IconButton, {
-            icon: _modDef7636,
+            icon: _modDef7957,
             variant: str,
             size: "sm",
             onPress,

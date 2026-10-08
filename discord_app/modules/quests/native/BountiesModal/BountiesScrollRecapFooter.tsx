@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles(() => {
   const obj = {
     container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 },
@@ -37,7 +37,7 @@ let closure_7 = createStyles.createStyles(() => {
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (orbAmount) => {
+  ? function BountiesScrollRecapFooter(orbAmount) {
       const cResult = c.c(19);
       orbAmount = orbAmount.orbAmount;
       const tmp4 = closure_7();
@@ -154,7 +154,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items2;
       tmp9 = items2;
     }
-  : (orbAmount) => {
+  : function BountiesScrollRecapFooter(orbAmount) {
       orbAmount = orbAmount.orbAmount;
       const tmp = closure_7();
       const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow(
@@ -205,7 +205,7 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/B
 
 export const BountiesScrollRecapFooter = tmp4;
 export const BountiesScrollRecapFooterGradient = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function BountiesScrollRecapFooterGradient() {
       const cResult = c.c(7);
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -252,7 +252,7 @@ export const BountiesScrollRecapFooterGradient = ReactCompilerGating.isReactComp
       const obj3 = { style: tmp4.rive, children: tmp8 };
       tmpResult = initialize;
     }
-  : () => {
+  : function BountiesScrollRecapFooterGradient() {
       const tmp = closure_7();
       const items = [AccessibilityStore];
       const obj2 = { style: tmp.rive, children: null };

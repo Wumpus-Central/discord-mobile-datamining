@@ -14,14 +14,14 @@ function getRoleId(id) {
 function getRoleName(name) {
   return name.name;
 }
-const isEveryoneRole = fn(2107).isEveryoneRole;
+const isEveryoneRole = fn(2119).isEveryoneRole;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/ExemptRolesActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function ExemptRolesActionSheet(guildId) {
       const cResult = guildId(576).c(13);
       guildId = guildId.guildId;
       ({ exemptRoles, onSave } = guildId);
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = guildId(504);
     }
-  : (guildId) => {
+  : function ExemptRolesActionSheet(guildId) {
       guildId = guildId.guildId;
       ({ exemptRoles, onSave } = guildId);
       const items = [GuildRoleStore];
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.getSearchText = getRoleName;
       obj2.renderLabel = renderRoleName;
       obj2.onSave = onSave;
-      return jsx(stateFromStores(17756), {
+      return jsx(stateFromStores(18043), {
         title: null,
         searchPlaceholder: null,
         listId: "automod-exempt-roles",

@@ -10,12 +10,12 @@ const set = new Set(["US"]);
 const set1 = new Set(["en-US", "es-ES"]);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShouldShowHelplineLink() {
       const cResult = stateFromStores(576).c(11);
       const tmp4 = useIsInAdultAgeGroupDefault();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FamilyCenterStore];
-        const fn = function c() {
+        const fn = function h() {
           return userCountry.getUserCountry();
         };
         cResult[0] = items;
@@ -84,7 +84,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp16 = hasItem;
       const tmpResult2 = stateFromStores(573);
     }
-  : () => {
+  : function useShouldShowHelplineLink() {
       const tmp = useIsInAdultAgeGroupDefault();
       const items = [FamilyCenterStore];
       stateFromStores = stateFromStores(573).useStateFromStores(items, () => userCountry.getUserCountry());
@@ -116,7 +116,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/hooks/useHelpLin
 
 export const useShouldShowHelplineLink = tmp4;
 export const useShouldShowThroughlineLink = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShouldShowThroughlineLink() {
       const tmp = useIsInAdultAgeGroupDefault();
       let tmp2 = !tmp;
       if (!tmp) {
@@ -124,7 +124,7 @@ export const useShouldShowThroughlineLink = ReactCompilerGating.isReactCompilerE
       }
       return tmp2;
     }
-  : () => {
+  : function useShouldShowThroughlineLink() {
       const tmp = useIsInAdultAgeGroupDefault();
       let tmp2 = !tmp;
       if (!tmp) {

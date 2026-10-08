@@ -9,4 +9,6 @@ const result1 = size.fileFinishedImporting("modules/safety_common/ObscuredSurfac
 
 export const ObscuredSurfaceContext = context;
 export const OBSCURED_VALUE = { obscured: true };
-export const useObscuredSurface = () => noop.useContext(context);
+export const useObscuredSurface = function useObscuredSurface() {
+  return noop.useContext(context);
+};

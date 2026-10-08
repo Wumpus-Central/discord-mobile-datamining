@@ -4,7 +4,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CollectiblesPreviewConstants from "CollectiblesPreviewConstants.tsx";
-import _modDef8489 from "../../../../discord_assets/assets/collectibles/previews/sample_profile.png.js";
+import _modDef8973 from "../../../../discord_assets/assets/collectibles/previews/sample_profile.png.js";
 import ProfileEffectDefault from "../profile_effects/native/ProfileEffect.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -33,8 +33,8 @@ let size = size_mod;
 const result = size.fileFinishedImporting("modules/collectibles/native/ProfileEffectSampleV2.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const cResult = c.c(18);
+  ? function ProfileEffectSample(arg0) {
+      const cResult = c.c(16);
       ({ item, hideBackground } = arg0);
       const tmp4 = closure_6();
       let profileBackground = !tmp3;
@@ -45,82 +45,74 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === profileBackground) {
           let tmp5 = cResult[2];
         }
-        if (cResult[3] !== tmp4.sampleProfileImage) {
-          const items = [tmp4.sampleProfileImage];
-          cResult[3] = tmp4.sampleProfileImage;
-          cResult[4] = items;
-          let tmp6 = items;
-        } else {
-          tmp6 = cResult[4];
-        }
         const _Symbol = Symbol;
-        if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { uri: _modDef8489 };
-          cResult[5] = obj2;
-          let tmp8 = obj2;
+        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj2 = { uri: _modDef8973 };
+          cResult[3] = obj2;
+          let tmp7 = obj2;
         } else {
-          tmp8 = cResult[5];
+          tmp7 = cResult[3];
         }
-        if (cResult[6] !== tmp6) {
-          const obj3 = { style: tmp6, source: tmp8, accessible: false, resizeMode: "cover" };
-          const tmp13 = React4(FastImageDefault, obj3);
-          cResult[6] = tmp6;
-          cResult[7] = tmp13;
-          let tmp10 = tmp13;
+        if (cResult[4] !== tmp4.sampleProfileImage) {
+          const obj3 = { style: tmp4.sampleProfileImage, source: tmp7, accessible: false, resizeMode: "cover" };
+          const tmp12 = React4(FastImageDefault, obj3);
+          cResult[4] = tmp4.sampleProfileImage;
+          cResult[5] = tmp12;
+          let tmp9 = tmp12;
         } else {
-          tmp10 = cResult[7];
+          tmp9 = cResult[5];
         }
-        if (cResult[8] === tmp3) {
-          if (cResult[9] === tmp4.profileBorder) {
-            let tmp14 = cResult[10];
+        if (cResult[6] === tmp3) {
+          if (cResult[7] === tmp4.profileBorder) {
+            let tmp13 = cResult[8];
           }
-          if (cResult[11] !== item.skuId) {
+          if (cResult[9] !== item.skuId) {
             const obj4 = { skuId: item.skuId, bannerAdjustment: 0, useThumbnail: true };
-            const tmp21 = React4(ProfileEffectDefault, obj4);
-            cResult[11] = item.skuId;
-            cResult[12] = tmp21;
-            let tmp18 = tmp21;
+            const tmp20 = React4(ProfileEffectDefault, obj4);
+            cResult[9] = item.skuId;
+            cResult[10] = tmp20;
+            let tmp17 = tmp20;
           } else {
-            tmp18 = cResult[12];
+            tmp17 = cResult[10];
           }
-          if (cResult[13] === tmp5) {
-            if (cResult[14] === tmp10) {
-              if (cResult[15] === tmp14) {
-                if (cResult[16] === tmp18) {
-                  let tmp22 = cResult[17];
+          if (cResult[11] === tmp5) {
+            if (cResult[12] === tmp9) {
+              if (cResult[13] === tmp13) {
+                if (cResult[14] === tmp17) {
+                  let tmp21 = cResult[15];
                 }
-                return tmp22;
+                return tmp21;
               }
             }
           }
           const obj5 = { style: tmp5, children: null };
-          const items1 = [tmp10, tmp14, tmp18];
-          obj5.children = items1;
-          const tmp25 = hasOwnProperty(View, obj5);
-          cResult[13] = tmp5;
-          cResult[14] = tmp10;
-          cResult[15] = tmp14;
-          cResult[16] = tmp18;
-          cResult[17] = tmp25;
-          tmp22 = tmp25;
+          const items = [tmp9, tmp13, tmp17];
+          obj5.children = items;
+          const tmp24 = hasOwnProperty(View, obj5);
+          cResult[11] = tmp5;
+          cResult[12] = tmp9;
+          cResult[13] = tmp13;
+          cResult[14] = tmp17;
+          cResult[15] = tmp24;
+          tmp21 = tmp24;
         }
-        let tmp15 = !tmp3;
+        let tmp14 = !tmp3;
         if (!tmp3) {
           const obj6 = { style: tmp4.profileBorder };
-          tmp15 = React4(View, obj6);
+          tmp14 = React4(View, obj6);
         }
-        cResult[8] = tmp3;
-        cResult[9] = tmp4.profileBorder;
-        cResult[10] = tmp15;
-        tmp14 = tmp15;
+        cResult[6] = tmp3;
+        cResult[7] = tmp4.profileBorder;
+        cResult[8] = tmp14;
+        tmp13 = tmp14;
       }
-      const items2 = [tmp4.profileContainer, profileBackground];
+      const items1 = [tmp4.profileContainer, profileBackground];
       cResult[0] = tmp4.profileContainer;
       cResult[1] = profileBackground;
-      cResult[2] = items2;
-      tmp5 = items2;
+      cResult[2] = items1;
+      tmp5 = items1;
     }
-  : (hideBackground) => {
+  : function ProfileEffectSample(hideBackground) {
       let flag = hideBackground.hideBackground;
       if (flag === undefined) {
         flag = false;
@@ -133,23 +125,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = { style: items, children: null };
       items[1] = profileBackground;
-      const obj2 = { style: null, source: null, accessible: false, resizeMode: "cover" };
-      const items1 = [tmp.sampleProfileImage];
-      obj2.style = items1;
-      const obj3 = { uri: _modDef8489 };
+      const obj2 = { style: tmp.sampleProfileImage, source: null, accessible: false, resizeMode: "cover" };
+      const obj3 = { uri: _modDef8973 };
       obj2.source = obj3;
-      const items2 = [React4(FastImageDefault, obj2), ,];
+      const items1 = [React4(FastImageDefault, obj2), ,];
       let tmp4Result = !flag;
       if (!flag) {
         const obj4 = { style: tmp.profileBorder };
         tmp4Result = React4(View, obj4);
       }
-      items2[1] = tmp4Result;
-      items2[2] = React4(ProfileEffectDefault, {
+      items1[1] = tmp4Result;
+      items1[2] = React4(ProfileEffectDefault, {
         skuId: hideBackground.item.skuId,
         bannerAdjustment: 0,
         useThumbnail: true,
       });
-      obj.children = items2;
+      obj.children = items1;
       return hasOwnProperty(View, obj);
     };

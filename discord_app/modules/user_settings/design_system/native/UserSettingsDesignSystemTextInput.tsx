@@ -5,12 +5,10 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import TextIcon from "../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
-import AtIcon from "../../../../design/components/Icon/native/redesign/generated/AtIcon.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
-import TextField from "../../../../design/components/TextField/native/TextField.native.tsx";
 import Input from "../../../../design/components/Input/native/Input.native.tsx";
+import TextField from "../../../../design/components/TextField/native/TextField.native.tsx";
 import SplitTextInput from "../../../../design/components/SplitTextInput/native/SplitTextInput.native.tsx";
 import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
 import TextArea from "../../../../design/components/TextInput/native/TextArea.native.tsx";
@@ -18,6 +16,8 @@ import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/B
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
+import TextIcon from "../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
+import AtIcon from "../../../../design/components/Icon/native/redesign/generated/AtIcon.tsx";
 import GhostInput from "../../../../design/components/TextInput/native/GhostInput.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -26,7 +26,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { padding: 16 },
   sample: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.xl },
@@ -34,7 +34,7 @@ let obj2 = {
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function Sample(children) {
       const cResult = c.c(5);
       children = children.children;
       const tmp4 = closure_8();
@@ -60,7 +60,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp9;
       const obj3 = { shadow: "low", style: tmp4.sample, children: tmp5 };
     }
-  : (children) => {
+  : function Sample(children) {
       const tmp = closure_8();
       return timestampProducer(Card.Card, {
         shadow: "low",
@@ -70,7 +70,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (defaultValue) => {
+  ? function InputUsername(defaultValue) {
       const cResult = c.c(5);
       defaultValue = defaultValue.defaultValue;
       let hasItem;
@@ -83,15 +83,15 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       [tmp7, require] = noop.useState(str2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function o(arr) {
+        function handleChange(arr) {
           let str = "default";
           if (arr.includes(" ")) {
             str = "error";
           }
           require(str);
-        };
-        cResult[0] = fn;
-        let first = fn;
+        }
+        cResult[0] = handleChange;
+        let first = handleChange;
       } else {
         first = cResult[0];
       }
@@ -122,7 +122,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp11;
       const tmp6 = _slicedToArray(noop.useState(str2), 2);
     }
-  : (defaultValue) => {
+  : function InputUsername(defaultValue) {
       defaultValue = defaultValue.defaultValue;
       let hasItem;
       if (defaultValue != null) {
@@ -143,7 +143,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       obj.errorMessage = str3;
       obj.label = "Username";
       obj.leadingIcon = AtIcon.AtIcon;
-      obj.onChange = function onChange(arr) {
+      obj.onChange = function handleChange(arr) {
         let str = "default";
         if (arr.includes(" ")) {
           str = "error";
@@ -154,7 +154,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (defaultValue) => {
+  ? function GhostInputUsername(defaultValue) {
       const cResult = c.c(5);
       defaultValue = defaultValue.defaultValue;
       let hasItem;
@@ -167,15 +167,15 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       [tmp7, require] = noop.useState(str2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function o(arr) {
+        function handleChange(arr) {
           let str = "default";
           if (arr.includes(" ")) {
             str = "error";
           }
           require(str);
-        };
-        cResult[0] = fn;
-        let first = fn;
+        }
+        cResult[0] = handleChange;
+        let first = handleChange;
       } else {
         first = cResult[0];
       }
@@ -204,7 +204,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp11;
       const tmp6 = _slicedToArray(noop.useState(str2), 2);
     }
-  : (defaultValue) => {
+  : function GhostInputUsername(defaultValue) {
       defaultValue = defaultValue.defaultValue;
       let hasItem;
       if (defaultValue != null) {
@@ -223,7 +223,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         str3 = "Username can't contain spaces";
       }
       obj.errorMessage = str3;
-      obj.onChange = function onChange(arr) {
+      obj.onChange = function handleChange(arr) {
         let str = "default";
         if (arr.includes(" ")) {
           str = "error";
@@ -234,7 +234,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function GhostInputActionSheet() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp6 = timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, {
@@ -273,7 +273,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function GhostInputActionSheet() {
       const obj = { children: null };
       const items = [
         timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Ghost Input - Centered" }),
@@ -293,7 +293,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function GhostInputActionSheetLeftAligned() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp6 = timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, {
@@ -334,7 +334,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function GhostInputActionSheetLeftAligned() {
       const obj = { children: null };
       const items = [
         timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Ghost Input - Left Aligned" }),
@@ -356,22 +356,22 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function CustomAttachmentExample() {
       const cResult = c.c(6);
       [tmp5, require] = noop.useState("default");
       const tmp4 = _slicedToArray(noop.useState("default"), 2);
       [tmp7, importDefault] = noop.useState("");
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function l(arr) {
+        function handleChange(arr) {
           importDefault(arr);
           let str = "default";
           if (arr.includes(" ")) {
             str = "error";
           }
           require(str);
-        };
-        cResult[0] = fn;
-        let first = fn;
+        }
+        cResult[0] = handleChange;
+        let first = handleChange;
       } else {
         first = cResult[0];
       }
@@ -424,7 +424,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         onChange: first,
       };
     }
-  : () => {
+  : function CustomAttachmentExample() {
       [tmp2, require] = noop.useState("default");
       const tmp = _slicedToArray(noop.useState("default"), 2);
       [tmp4, importDefault] = noop.useState("");
@@ -450,7 +450,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: "Press",
       };
       obj.trailingIcon = AtIcon.AtIcon;
-      obj.onChange = function onChange(arr) {
+      obj.onChange = function handleChange(arr) {
         importDefault(arr);
         let str = "default";
         if (arr.includes(" ")) {
@@ -468,7 +468,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsDesignSystemTextInput() {
       const cResult = c.c(46);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -939,7 +939,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp129;
     }
-  : () => {
+  : function UserSettingsDesignSystemTextInput() {
       const obj = { children: null };
       const obj2 = { spacing: 24, style: closure_8().container, children: null };
       const obj3 = { children: null };

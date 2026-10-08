@@ -114,7 +114,7 @@ function getScreens(initiallyVerified) {
   obj2[VerificationModalScenes.CHANGE_EMAIL_COMPLETE] = obj25;
   return obj2;
 }
-const resetChangeEmailStore = fn(6016).resetChangeEmailStore;
+const resetChangeEmailStore = fn(6202).resetChangeEmailStore;
 const VerificationModalScenes = fn(1085).VerificationModalScenes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -122,7 +122,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/EmailVerificationModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (isChangeEmail) => {
+  ? function EmailVerificationModal(isChangeEmail) {
       const cResult = c.c(10);
       isChangeEmail = isChangeEmail.isChangeEmail;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = tmp14;
       const tmp10 = _slicedToArray(noop.useState(), 2);
     }
-  : (isChangeEmail) => {
+  : function EmailVerificationModal(isChangeEmail) {
       isChangeEmail = isChangeEmail.isChangeEmail;
       importDefault = undefined;
       changeEmailReason = undefined;

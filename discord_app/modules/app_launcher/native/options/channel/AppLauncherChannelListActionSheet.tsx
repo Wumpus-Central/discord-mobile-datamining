@@ -5,9 +5,9 @@ import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/Ac
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../../channel/useChannelName.tsx";
 import AutocompleteUtilsDefault from "../../../../../utils/AutocompleteUtils.tsx";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import TextIcon3 from "../../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
-import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import AppLauncherOptionIconDefault from "../../base_components/AppLauncherOptionIcon.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -18,13 +18,13 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let AppLauncherChannelListActionSheet = "AppLauncherChannelListActionSheet";
-const createStyles = fn(4896);
+const AppLauncherChannelListActionSheet = "AppLauncherChannelListActionSheet";
+const createStyles = fn(5090);
 let obj2 = { channelIconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function ChannelIcon(arg0) {
       const cResult = c.c(9);
       ({ channel, size, wrapperSize } = arg0);
       let str = "sm";
@@ -51,7 +51,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { icon: tmp9, wrapperStyle: tmp4.channelIconWrapper, wrapperSize: num };
-          const tmp15 = ref(AppLauncherOptionIconDefault, obj2);
+          const tmp15 = timestampProducer(AppLauncherOptionIconDefault, obj2);
           cResult[5] = tmp4.channelIconWrapper;
           cResult[6] = tmp9;
           cResult[7] = num;
@@ -59,7 +59,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           tmp12 = tmp15;
         }
         const obj3 = { size: str, color: "interactive-text-default" };
-        const tmp11 = ref(TextIcon, obj3);
+        const tmp11 = timestampProducer(TextIcon, obj3);
         cResult[2] = TextIcon;
         cResult[3] = str;
         cResult[4] = tmp11;
@@ -75,7 +75,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult = utils_ChannelUtils;
       }
     }
-  : (wrapperSize) => {
+  : function ChannelIcon(wrapperSize) {
       ({ channel, size } = wrapperSize);
       if (size === undefined) {
         size = "sm";
@@ -96,17 +96,17 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = { icon: null, wrapperStyle: null, wrapperSize: null };
       const tmp = closure_9();
-      obj.icon = ref(TextIcon, { size, color: "interactive-text-default" });
+      obj.icon = timestampProducer(TextIcon, { size, color: "interactive-text-default" });
       obj.wrapperStyle = tmp.channelIconWrapper;
       obj.wrapperSize = num;
-      return ref(AppLauncherOptionIconDefault, obj);
+      return timestampProducer(AppLauncherOptionIconDefault, obj);
     };
 let closure_10 = tmp3;
 fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (totalCount) => {
+  ? function ChannelListItem(totalCount) {
       const cResult = c.c(11);
       ({ channel, index, onPress } = totalCount);
       const tmp4 = useChannelNameDefault(channel);
@@ -117,7 +117,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp4,
         };
-        const tmp7 = ref(Text_Text.Text, obj2);
+        const tmp7 = timestampProducer(Text_Text.Text, obj2);
         cResult[0] = tmp4;
         cResult[1] = tmp7;
         let tmp5 = tmp7;
@@ -126,7 +126,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== channel) {
         const obj3 = { channel };
-        const tmp11 = ref(closure_10, obj3);
+        const tmp11 = timestampProducer(closure_10, obj3);
         cResult[2] = channel;
         cResult[3] = tmp11;
         let tmp8 = tmp11;
@@ -147,7 +147,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp15 = ref(
+      const tmp15 = timestampProducer(
         TableRow.TableRow,
         { onPress, label: tmp5, icon: tmp8, start: 0 === index, end: index === totalCount.totalCount - 1 },
         channel.id,
@@ -161,21 +161,21 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = tmp15;
       tmp14 = tmp15;
     }
-  : (arg0) => {
+  : function ChannelListItem(arg0) {
       ({ channel, index } = arg0);
       ({ totalCount, onPress } = arg0);
       const tmp = useChannelNameDefault(channel);
-      return ref(
+      return timestampProducer(
         TableRow.TableRow,
         {
           onPress,
-          label: ref(Text_Text.Text, {
+          label: timestampProducer(Text_Text.Text, {
             lineClamp: 1,
             variant: "text-md/semibold",
             color: "mobile-text-heading-primary",
             children: useChannelNameDefault(channel),
           }),
-          icon: ref(closure_10, { channel }),
+          icon: timestampProducer(closure_10, { channel }),
           start: 0 === index,
           end: index === totalCount - 1,
         },
@@ -188,16 +188,16 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onChannelPress) => {
+  ? function AppLauncherChannelListActionSheet(onChannelPress) {
       const cResult = onChannelPress(channel[7]).c(24);
       onChannelPress = onChannelPress.onChannelPress;
       const onActionSheetDismiss = onChannelPress.onActionSheetDismiss;
       channel = onChannelPress.channel;
       const option = onChannelPress.option;
-      const tmp3 = option(query.useState(""), 2);
-      query = tmp3[0];
-      GuildStore = tmp3[1];
-      query.useRef(null);
+      const tmp5 = option(query.useState(""), 2);
+      query = tmp5[0];
+      closure_5 = tmp5[1];
+      const ref = query.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [];
         cResult[0] = items;
@@ -205,72 +205,99 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first1 = cResult[0];
       }
-      const tmp2Result = option(query.useState(first1), 2);
-      const first2 = tmp2Result[0];
-      AppLauncherChannelListActionSheet = tmp2Result[1];
+      const tmp4Result = option(query.useState(first1), 2);
+      const first2 = tmp4Result[0];
+      closure_8 = tmp4Result[1];
       if (cResult[1] === channel) {
         if (cResult[2] === option) {
           if (cResult[3] === query) {
-            let tmp8 = cResult[4];
-            let tmp9 = cResult[5];
+            let tmp11 = cResult[4];
+            let tmp12 = cResult[5];
           }
-          const effect = obj2.useEffect(tmp8, tmp9);
+          const effect = obj2.useEffect(tmp11, tmp12);
           if (cResult[6] !== onActionSheetDismiss) {
-            const fn = function b() {
+            function hideActionSheet() {
               ActionSheetActionCreatorsDefault.hideActionSheet(AppLauncherChannelListActionSheet);
               onActionSheetDismiss();
-            };
+            }
             cResult[6] = onActionSheetDismiss;
-            cResult[7] = fn;
-            class O {
-              constructor(arg0) {
-                obj = { channel: onChannelPress.channel };
-                tmp = onChannelPress(obj);
-                tmp2 = closure_9();
-                return;
-              }
-            }
+            cResult[7] = hideActionSheet;
+            let tmp14 = hideActionSheet;
+          } else {
+            tmp14 = cResult[7];
           }
-          closure_9 = tmp11;
-          if (cResult[8] === tmp11) {
+          closure_9 = tmp14;
+          if (cResult[8] === tmp14) {
             if (cResult[9] === onChannelPress) {
-              let tmp12 = cResult[10];
+              let tmp15 = cResult[10];
             }
-            closure_10 = tmp12;
+            closure_10 = tmp15;
             const _Symbol = Symbol;
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-              class W {
-                constructor(arg0) {
-                  tmp = closure_5(onChannelPress.toLowerCase());
-                  current = closure_6.current;
-                  if (current != null) {
-                    scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-                  }
-                  return;
+              function handleQueryUpdate(str) {
+                closure_5(str.toLowerCase());
+                const current = ref.current;
+                if (current != null) {
+                  current.scrollToOffset({ offset: 0, animated: false });
                 }
               }
-              cResult[11] = W;
+              cResult[11] = handleQueryUpdate;
+              let tmp16 = handleQueryUpdate;
             } else {
-              class W {
-                constructor(arg0) {
-                  tmp = closure_5(onChannelPress.toLowerCase());
-                  current = closure_6.current;
-                  if (current != null) {
-                    scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
+              tmp16 = cResult[11];
+            }
+            if (cResult[12] === first2.length) {
+              if (cResult[13] === tmp15) {
+                let tmp17 = cResult[14];
+              }
+              const _Symbol2 = Symbol;
+              if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
+                const obj3 = { onChange: tmp16 };
+                cResult[15] = ref(tmp(tmp2[13]).AppLauncherListSearchBar, obj3);
+                class Item {
+                  constructor(arg0) {
+                    item = onChannelPress.item;
+                    obj = {
+                      channel: item,
+                      index: onChannelPress.index,
+                      totalCount: closure_7.length,
+                      onPress() {
+                        return closure_10({ channel: item });
+                      },
+                    };
+                    return closure_6(closure_1_11, obj);
                   }
-                  return;
+                }
+                const tmp20 = ref(tmp(tmp2[13]).AppLauncherListSearchBar, obj3);
+              }
+              class Item {
+                constructor(arg0) {
+                  item = onChannelPress.item;
+                  obj = {
+                    channel: item,
+                    index: onChannelPress.index,
+                    totalCount: closure_7.length,
+                    onPress() {
+                      return closure_10({ channel: item });
+                    },
+                  };
+                  return closure_6(closure_1_11, obj);
                 }
               }
-            }
-            class O {
-              constructor(arg0) {
-                obj = { channel: onChannelPress.channel };
-                tmp = onChannelPress(obj);
-                tmp2 = closure_9();
-                return;
+              let obj4 = tmp(tmp2[13]);
+              if (0 === tmp10) {
+                obj4 = {};
+                let tmp22Result = tmp22(obj4.AppLauncherListEmptyState, obj4);
+              } else {
+                const obj5 = { ref, data: first2, renderItem: tmp17 };
+                tmp22Result = tmp22(obj4.AppLauncherList, obj5);
               }
+              cResult[16] = tmp17;
+              cResult[17] = first2;
+              cResult[18] = 0 === tmp10;
+              cResult[19] = tmp22Result;
             }
-            class N {
+            class Item {
               constructor(arg0) {
                 item = onChannelPress.item;
                 obj = {
@@ -285,50 +312,49 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[12] = first2.length;
-            cResult[13] = tmp12;
-            cResult[14] = N;
+            cResult[13] = tmp15;
+            cResult[14] = Item;
+            tmp17 = Item;
           }
-          class O {
-            constructor(arg0) {
-              obj = { channel: onChannelPress.channel };
-              tmp = onChannelPress(obj);
-              tmp2 = closure_9();
-              return;
-            }
+          function handleChannelPress(channel) {
+            onChannelPress({ channel: channel.channel });
+            closure_9();
           }
-          cResult[8] = tmp11;
+          cResult[8] = tmp14;
           cResult[9] = onChannelPress;
-          cResult[10] = O;
-          tmp12 = O;
+          cResult[10] = handleChannelPress;
+          tmp15 = handleChannelPress;
         }
       }
-      class I {
-        constructor() {
-          obj = closure_1(closure_2[11]);
-          obj1 = { query: closure_4, channel, channelTypes: option.channelTypes, limit: null, allowSnowflake: true };
-          tmp = closure_8(obj.queryApplicationCommandChannelResults(obj1).channels);
-          return;
-        }
-      }
+      const fn = function y() {
+        closure_8(
+          AutocompleteUtilsDefault.queryApplicationCommandChannelResults({
+            query,
+            channel,
+            channelTypes: option.channelTypes,
+            limit: null,
+            allowSnowflake: true,
+          }).channels,
+        );
+      };
       const items1 = [query, channel, option];
       cResult[1] = channel;
       cResult[2] = option;
       cResult[3] = query;
-      cResult[4] = I;
+      cResult[4] = fn;
       cResult[5] = items1;
-      tmp9 = items1;
-      tmp8 = I;
-      const obj = onChannelPress(channel[7]);
+      tmp12 = items1;
+      tmp11 = fn;
     }
-  : (channel) => {
+  : function AppLauncherChannelListActionSheet(channel) {
       ({ onChannelPress: require, onActionSheetDismiss } = channel);
       channel = channel.channel;
       const option = channel.option;
-      query = undefined;
+      let query;
       const tmp = option(query.useState(""), 2);
       query = tmp[0];
       closure_5 = tmp[1];
-      ref = query.useRef(null);
+      const ref = query.useRef(null);
       const tmp4 = option(query.useState([]), 2);
       const first1 = tmp4[0];
       closure_8 = tmp4[1];
@@ -347,7 +373,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { onDismiss: onActionSheetDismiss, option, children: null };
       const items1 = [
         ref(require("AppLauncherList").AppLauncherListSearchBar, {
-          onChange(str) {
+          onChange: function handleQueryUpdate(str) {
             closure_5(str.toLowerCase());
             const current = ref.current;
             if (current != null) {
@@ -362,7 +388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = {
           ref,
           data: first1,
-          renderItem(index) {
+          renderItem: function Item(index) {
             const item = index.item;
             return ref(closure_1_11, {
               channel: item,

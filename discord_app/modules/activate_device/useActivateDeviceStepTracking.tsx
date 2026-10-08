@@ -13,7 +13,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/activate_device/useActivateDeviceStepTracking.tsx");
 
 export const useActivateDeviceStepTracking = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useActivateDeviceStepTracking(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       const tmp2 = usePreviousDefault(arg0);
@@ -52,7 +52,7 @@ export const useActivateDeviceStepTracking = ReactCompilerGating.isReactCompiler
       tmp3 = fn;
       let obj = require("c");
     }
-  : (arg0) => {
+  : function useActivateDeviceStepTracking(arg0) {
       closure_0 = arg0;
       const tmp = usePreviousDefault(arg0);
       importDefault = tmp;

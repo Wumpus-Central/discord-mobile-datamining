@@ -2,12 +2,12 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
+import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
+import MoreHorizontalIcon from "../../../../design/components/Icon/native/redesign/generated/MoreHorizontalIcon.tsx";
 import ConversationsActionCreators from "../../ConversationsActionCreators.tsx";
 import ConversationsAnalytics2 from "../../ConversationsAnalytics.tsx";
 import ThumbsUpIcon from "../../../../design/components/Icon/native/redesign/generated/ThumbsUpIcon.tsx";
 import ThumbsDownIcon from "../../../../design/components/Icon/native/redesign/generated/ThumbsDownIcon.tsx";
-import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import MoreHorizontalIcon from "../../../../design/components/Icon/native/redesign/generated/MoreHorizontalIcon.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -15,7 +15,7 @@ require = fn;
 let closure_2 = ["ref"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -24,7 +24,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorMoreMenu.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function ConversationNavigatorMoreMenu(channelId) {
       const cResult = channelId(conversationId[7]).c(16);
       channelId = channelId.channelId;
       conversationId = channelId.conversationId;
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let tmp11 = cResult[10];
             }
             if (cResult[11] !== tmp4.container) {
-              const fn = function f(ref) {
+              const fn = function y(ref) {
                 const obj = { style: container.container, ref: ref.ref, children: null };
                 const obj2 = {};
                 const merged = Object.assign(_objectWithoutProperties(ref, container));
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = obj4;
       let obj = channelId(conversationId[7]);
     }
-  : (channelId) => {
+  : function ConversationNavigatorMoreMenu(channelId) {
       channelId = channelId.channelId;
       const conversationId = channelId.conversationId;
       const container = closure_7();

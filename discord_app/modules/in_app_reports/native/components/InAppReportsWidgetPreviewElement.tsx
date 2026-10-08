@@ -10,12 +10,12 @@ import UserProfileSharedStylesDefault from "../../../user_profile/native/UserPro
 import UserProfileWidgetsBoard from "../../../user_profile/native/UserProfileWidgetsBoard.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const UserProfilePersonalWidgetCardDefault = tmp5(8342);
+const UserProfilePersonalWidgetCardDefault = tmp5(13207);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
   title: { lineHeight: 16, marginBottom: 8 },
@@ -30,7 +30,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function WidgetPreview(arg0) {
       const cResult = c.c(18);
       ({ widget, userId } = arg0);
       let container = closure_6();
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = widget;
       cResult[4] = tmp8;
     }
-  : (arg0) => {
+  : function WidgetPreview(arg0) {
       ({ widget, userId } = arg0);
       const tmp = closure_6();
       let SpsnDY = dependencyMap;

@@ -29,7 +29,7 @@ function getScreens(pop, arg1) {
   }
   const obj2 = { [closure_1_3.STUDENT_PROMPT]: obj3 };
   obj2[HubEmailConnectionSteps.VERIFY_EMAIL] = {
-    impressionName: tmp5(1260).ImpressionNames.HUB_EMAIL_SIGNUP,
+    impressionName: tmp5(1272).ImpressionNames.HUB_EMAIL_SIGNUP,
     impressionProperties(invite) {
       return { has_invite: null != invite.invite };
     },
@@ -93,16 +93,16 @@ function getScreens(pop, arg1) {
   };
   return obj2;
 }
-const HubEmailConnectionSteps = fn(12400).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12496).HubEmailConnectionSteps;
 let jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let obj2 = { safeArea: { marginTop: fn(6075).NAV_BAR_HEIGHT, flex: 1 } };
+const createStyles = fn(5090);
+let obj2 = { safeArea: { marginTop: fn(6261).NAV_BAR_HEIGHT, flex: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 fn(558);
-let obj3 = { marginTop: fn(6075).NAV_BAR_HEIGHT, flex: 1 };
+let obj3 = { marginTop: fn(6261).NAV_BAR_HEIGHT, flex: 1 };
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function HubEmailConnectionScreen(children) {
       const cResult = c.c(3);
       children = children.children;
       const tmp4 = closure_5();
@@ -119,7 +119,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp6;
       const obj2 = { top: true, style: tmp4.safeArea, children };
     }
-  : (children) => {
+  : function HubEmailConnectionScreen(children) {
       const tmp = closure_5();
       return jsx(common_SafeAreaView.SafeAreaPaddingView, {
         top: true,
@@ -131,7 +131,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (isNestedNavigator) => {
+  ? function HubEmailConnectionModal(isNestedNavigator) {
       const cResult = isNestedNavigator(invite[15]).c(10);
       isNestedNavigator = isNestedNavigator.isNestedNavigator;
       const onCloseExtra = isNestedNavigator.onCloseExtra;
@@ -173,7 +173,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn = function s() {
+      const fn = function o() {
         function handleClose(arg0) {
           if (closure_1_1 != null) {
             tmp2(true === tmp);
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = fn;
       tmp5 = fn;
     }
-  : (arg0) => {
+  : function HubEmailConnectionModal(arg0) {
       ({
         isNestedNavigator: require,
         onCloseExtra: importDefault,

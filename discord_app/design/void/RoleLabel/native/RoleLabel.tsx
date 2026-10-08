@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({
   container: { display: "flex", flexDirection: "row" },
   roleDot: { marginRight: 4 },
@@ -20,7 +20,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/RoleLabel/native/RoleLabel.tsx");
 
 export const RoleLabel = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RoleLabel(arg0) {
       const cResult = c.c(17);
       ({ name, color, colors } = arg0);
       const tmp4 = closure_6();
@@ -107,7 +107,7 @@ export const RoleLabel = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = initialize;
     }
-  : (color) => {
+  : function RoleLabel(color) {
       color = color.color;
       ({ name, colors } = color);
       const tmp = closure_6();

@@ -179,7 +179,7 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
         }
       }
     });
-    obj.onConfirm = function () {
+    obj.onConfirm = function onConfirm() {
       const self = this;
       const apply = closure_1.apply;
       if (typeof apply === "unknown") {
@@ -198,7 +198,7 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
     ({ key, onCloseCallback } = obj);
     const merged = Object.assign(obj, Object.assign({ key: 0, onCloseCallback: 0, dismissable: 0 }));
     const merged1 = Object.assign(merged);
-    closure_0(5716).openAlert(key, closure_1_5(SyncedLoadingAlertModal, {}), onCloseCallback, {
+    closure_0(5299).openAlert(key, closure_1_5(SyncedLoadingAlertModal, {}), onCloseCallback, {
       dismissable: obj.dismissable,
     });
   });

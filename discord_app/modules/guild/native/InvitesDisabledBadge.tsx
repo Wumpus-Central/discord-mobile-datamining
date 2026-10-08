@@ -2,13 +2,13 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef12407 from "../../../../_runtime/metro/12407__.js";
+import _modDef12503 from "../../../../_runtime/metro/12503__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   pause: { alignContent: "center", justifyContent: "center", width: 10, height: 10 },
   pauseBackground: null,
@@ -17,7 +17,7 @@ let obj = {
 let size = {
   borderRadius: 20,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
-  padding: fn(1188).BADGE_PADDING,
+  padding: fn(1200).BADGE_PADDING,
   height: 16,
   width: 16,
   alignContent: "center",
@@ -28,9 +28,9 @@ const size1 = {
   borderRadius: 20,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   position: "absolute",
-  bottom: -fn(1188).BADGE_PADDING,
-  right: -fn(1188).BADGE_PADDING,
-  padding: fn(1188).BADGE_PADDING,
+  bottom: -fn(1200).BADGE_PADDING,
+  right: -fn(1200).BADGE_PADDING,
+  padding: fn(1200).BADGE_PADDING,
   height: 22,
   width: 22,
   alignContent: "center",
@@ -44,7 +44,7 @@ const result = size.fileFinishedImporting("modules/guild/native/InvitesDisabledB
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (style) => {
+    ? function InvitesDisabledBadge(style) {
         const cResult = c.c(11);
         style = style.style;
         const tmp4 = closure_5();
@@ -56,12 +56,12 @@ export default noop.memo(
             const obj2 = {
               style: tmp4.pause,
               themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-              source: _modDef12407,
+              source: _modDef12503,
             };
             const tmp9 = jsx(native.ThemedIcon, {
               style: tmp4.pause,
               themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-              source: _modDef12407,
+              source: _modDef12503,
             });
             cResult[3] = tmp4.pause;
             cResult[4] = tmp9;
@@ -99,7 +99,7 @@ export default noop.memo(
         cResult[2] = items;
         tmp5 = items;
       }
-    : (style) => {
+    : function InvitesDisabledBadge(style) {
         const tmp = closure_5();
         const obj = { style: null, children: null };
         const items = [tmp.pauseRing, style.style];
@@ -109,7 +109,7 @@ export default noop.memo(
           children: jsx(native.ThemedIcon, {
             style: tmp.pause,
             themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-            source: _modDef12407,
+            source: _modDef12503,
           }),
         };
         obj.children = (
@@ -117,7 +117,7 @@ export default noop.memo(
             {jsx(native.ThemedIcon, {
               style: tmp.pause,
               themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-              source: _modDef12407,
+              source: _modDef12503,
             })}
           </View>
         );

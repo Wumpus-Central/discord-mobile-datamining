@@ -11,16 +11,16 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import VideoQuestUIStore from "../../VideoQuestUIStore.tsx";
 
 require = fn;
-const QuestsExperimentLocations = fn(5630).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5977).QuestsExperimentLocations;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx");
 
-export const PlayerState = fn(14839).PlayerState;
+export const PlayerState = fn(15100).PlayerState;
 export const VideoQuestPlayer = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (onEnd) => {
+    ? function VideoQuestPlayer(onEnd) {
         const cResult = onLoad(onToggleFullscreen[6]).c(104);
         ({ style, onLoad } = onEnd);
         onEnd = onEnd.onEnd;
@@ -126,7 +126,7 @@ export const VideoQuestPlayer = noop.memo(
         cResult[8] = fn;
         const tmp18 = VideoQuestUIStore(B);
       }
-    : (onLoad) => {
+    : function VideoQuestPlayer(onLoad) {
         onLoad = onLoad.onLoad;
         const onEnd = onLoad.onEnd;
         const onToggleFullscreen = onLoad.onToggleFullscreen;

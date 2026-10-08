@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   label: { marginHorizontal: 16, marginBottom: 8 },
   container: {
@@ -33,7 +33,7 @@ obj.divider = size;
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (status) => {
+  ? function ApplicationStatusIcon(status) {
       const cResult = c.c(2);
       status = status.status;
       if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === status) {
@@ -70,7 +70,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         return null;
       }
     }
-  : (status) => {
+  : function ApplicationStatusIcon(status) {
       status = status.status;
       if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === status) {
         const obj2 = {
@@ -104,7 +104,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function JoinRequestOtherApplications(arg0) {
         const cResult = require("c").c(20);
         ({ guildId, userId, selectedJoinRequestId } = arg0);
         const tmp4 = closure_9();
@@ -114,7 +114,7 @@ export default noop.memo(
             if (cResult[2] === userId) {
               let tmp5 = cResult[3];
             }
-            row = tmp(16579).useOtherGuildJoinRequestsForUser(tmp5);
+            row = tmp(16834).useOtherGuildJoinRequestsForUser(tmp5);
             if (0 === row.length) {
               return null;
             } else {
@@ -129,7 +129,7 @@ export default noop.memo(
               }
               if (cResult[5] !== tmp4.label) {
                 let obj2 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp4.label, children: tmp6 };
-                const tmp10 = closure_6(tmp(4892).Text, obj2);
+                const tmp10 = closure_6(tmp(5086).Text, obj2);
                 cResult[5] = tmp4.label;
                 cResult[6] = tmp10;
                 let tmp8 = tmp10;
@@ -211,7 +211,7 @@ export default noop.memo(
               cResult[13] = fn;
               tmp13 = fn;
             }
-            const tmpResult = tmp(16579);
+            const tmpResult = tmp(16834);
           }
         }
         let obj5 = { guildId, userId, selectedJoinRequestId };
@@ -222,7 +222,7 @@ export default noop.memo(
         tmp5 = obj5;
         let obj = require("c");
       }
-    : (arg0) => {
+    : function JoinRequestOtherApplications(arg0) {
         ({ guildId, userId, selectedJoinRequestId } = arg0);
         const tmp = closure_9();
         _require = tmp;
@@ -238,7 +238,7 @@ export default noop.memo(
           let obj3 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.label, children: null };
           const intl = tmp2(1126).intl;
           obj3.children = intl.string(tmp2(1126).t["hxa+G3"]);
-          let items = [closure_6(tmp2(4892).Text, obj3)];
+          let items = [closure_6(tmp2(5086).Text, obj3)];
           let obj4 = {
             style: tmp.container,
             children: otherGuildJoinRequestsForUser.map((createdAt, index) => {

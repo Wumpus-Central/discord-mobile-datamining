@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../../_runtime/05709_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/06099_fuzzysearch.js";
 import getFlattedChannelListDefault from "../../channel/getFlattedChannelList.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -15,12 +15,12 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const isGuildReadableType = fn(2055).isGuildReadableType;
+const isGuildReadableType = fn(2067).isGuildReadableType;
 const Constants = fn(1085);
 ({ ChannelTypes: c10, NotificationSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { marginHorizontal: nativeDefault.space.PX_8, flex: 1 }, searchContainer: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_8, flex: 1 };
 obj.searchContainer = { paddingVertical: nativeDefault.space.PX_16 };
@@ -34,7 +34,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guildId) => {
+    ? function NotificationSettingChannelOverrides(guildId) {
         let stringResult = stateFromStores;
         const cResult = guildId(stateFromStores[12]).c(35);
         guildId = guildId.guildId;
@@ -638,7 +638,7 @@ export default noop.memo(
           }
         });
       }
-    : (arg0) => {
+    : function NotificationSettingChannelOverrides(arg0) {
         ({ guildId: require, navigation } = arg0);
         let stateFromStores;
         let first;

@@ -9,13 +9,13 @@ import useInappropriateConversationWarningsForChannel from "../../inappropriate_
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SafetyWarningTypes = fn(9799).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10266).SafetyWarningTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx");
 
 export const useStrangerDangerWarning = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useStrangerDangerWarning(arg0) {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -56,7 +56,7 @@ export const useStrangerDangerWarning = ReactCompilerGating.isReactCompilerEnabl
       }
       tmpResult10 = useInappropriateConversationWarningsForChannel;
     }
-  : (arg0) => {
+  : function useStrangerDangerWarning(arg0) {
       const items = [UserStore];
       const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
       const isSpamMessageRequest = useIsSpamMessageRequest.useIsSpamMessageRequest(arg0);

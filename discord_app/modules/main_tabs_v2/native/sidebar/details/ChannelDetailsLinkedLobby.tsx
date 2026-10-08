@@ -12,7 +12,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ Fragment: hasOwnProperty, jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { alignItems: "center" }, divider: null };
 let size = { height: 1, width: 48, marginTop: 12, backgroundColor: nativeDefault.colors.BORDER_STRONG };
 obj2.divider = size;
@@ -22,7 +22,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsLinkedLobby.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ChannelDetailsLinkedLobby(arg0) {
       const cResult = c.c(15);
       ({ channel, containerStyle } = arg0);
       const tmp4 = closure_8();
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = items2;
       }
     }
-  : (channel) => {
+  : function ChannelDetailsLinkedLobby(channel) {
       channel = channel.channel;
       let divider = closure_8();
       let BPDKoA = require;

@@ -5,21 +5,21 @@ import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = PressableOpacity(1126);
-const Text_Text = PressableOpacity(4892);
-const Stack_Stack = PressableOpacity(5600);
-const Pressables = PressableOpacity(5916);
-const CustomTypingIndicatorUtils = PressableOpacity(11600);
+const Text_Text = PressableOpacity(5086);
+const Stack_Stack = PressableOpacity(5373);
+const Pressables = PressableOpacity(6189);
+const CustomTypingIndicatorUtils = PressableOpacity(11659);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles(() => ({ text: { flexShrink: 1 }, pressable: { flex: 1 } }));
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorDisplay.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CustomTypingIndicatorDisplay(arg0) {
       let PressableOpacity = require;
       let PX_8 = dependencyMap;
       const cResult = c.c(19);
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       const PressableOpacityResult1 = CustomTypingIndicatorUtils;
     }
-  : (showName) => {
+  : function CustomTypingIndicatorDisplay(showName) {
       ({ config, username, showEmojis } = showName);
       if (showEmojis === undefined) {
         showEmojis = true;

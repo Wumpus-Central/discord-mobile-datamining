@@ -8,14 +8,14 @@ import GuildBoostSlotStore from "../../../../../stores/billing/GuildBoostSlotSto
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(4774);
+const GuildPowerupsConstants = fn(4968);
 ({ BoostPurchaseIntent: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useGuildPowerupOnActivate(arg0, arg1) {
       _require = arg0;
       importDefault = arg1;
       const cResult = require("c").c(15);
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = fn2;
       tmp12 = fn2;
     }
-  : (arg0, arg1) => {
+  : function useGuildPowerupOnActivate(arg0, arg1) {
       _require = arg0;
       importDefault = arg1;
       const tmp = require("useGuildPowerupOnToggle")(arg0, arg1);
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   analyticsLocations,
                   guildId: stateFromStores.id,
                   onBack() {
-                    return PERK(5099).popWithKey(diff(6929).PREMIUM_KEY);
+                    return PERK(5940).popWithKey(diff(7118).PREMIUM_KEY);
                   },
                   onPaymentSuccess() {
                     const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   },
                   onPaymentDismiss() {
-                    return PERK(5099).popWithKey(diff(6929).PREMIUM_KEY);
+                    return PERK(5940).popWithKey(diff(7118).PREMIUM_KEY);
                   },
                 };
                 const result = tmp17(onToggle[15]).launchGuildBoostFlowOrAlert(obj3);

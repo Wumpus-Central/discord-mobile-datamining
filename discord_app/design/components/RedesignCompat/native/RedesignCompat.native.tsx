@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("design/components/RedesignCompat/nati
 
 export const RedesignCompatContext = context;
 export const RedesignCompat = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RedesignCompat(arg0) {
       const cResult = c.c(3);
       ({ children, enabled } = arg0);
       if (enabled == null) {
@@ -29,7 +29,7 @@ export const RedesignCompat = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp3;
       tmp2 = tmp3;
     }
-  : (children) => {
+  : function RedesignCompat(children) {
       let enabled = children.enabled;
       if (enabled == null) {
         enabled = true;

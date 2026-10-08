@@ -9,7 +9,7 @@ import ConjureProjectStore from "ConjureProjectStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isProjectOwner = fn(8734).isProjectOwner;
+const isProjectOwner = fn(11251).isProjectOwner;
 const useIsOwnedVibegrationsApplication = "useIsOwnedVibegrationsApplication";
 let closure_7 = new BackoffDefault(30000, 300000);
 const ReactCompilerGating = fn(558);
@@ -18,7 +18,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/useIsOwnedConjureApplication.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useIsOwnedConjureApplication(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(16);
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = fn2;
         const tmpResult3 = tmp(504);
       }
-      const fn = function p() {
+      const fn = function j() {
         let tmp = closure_1;
         if (closure_1) {
           tmp = null != closure_0;
@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       let obj = require("c");
     }
-  : (arg0, arg1) => {
+  : function useIsOwnedConjureApplication(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const items = [stateFromStores1];

@@ -3,7 +3,7 @@ import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperi
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const DisplayNameStylesConstants = fn(1395);
+const DisplayNameStylesConstants = fn(1407);
 const EFFECT_ORDER = DisplayNameStylesConstants.EFFECT_ORDER;
 let items = [...tmp2.FLYWHEEL_EFFECTS];
 const ReactCompilerGating = fn(558);
@@ -11,13 +11,14 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesEffectOrder.tsx");
 
 export const useVisibleEffectOrder = ReactCompilerGating.isReactCompilerEnabled()
-  ? () =>
-      DisplayNameStylesFlywheelExperiment.useIsDisplayNameStylesFlywheelSettersEnabled("effect-order")
+  ? function useVisibleEffectOrder() {
+      return DisplayNameStylesFlywheelExperiment.useIsDisplayNameStylesFlywheelSettersEnabled("effect-order")
         ? items
-        : EFFECT_ORDER
-  : () => {
+        : EFFECT_ORDER;
+    }
+  : function useVisibleEffectOrder() {
       isDisplayNameStylesFlywheelSettersEnabled =
-        isDisplayNameStylesFlywheelSettersEnabled(9404).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
+        isDisplayNameStylesFlywheelSettersEnabled(14685).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
       items = [isDisplayNameStylesFlywheelSettersEnabled];
       return noop.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? items : EFFECT_ORDER), items);
     };

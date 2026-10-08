@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting(
 
 export default tmp2;
 export const useExpiringPowerupCoachmarkEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useExpiringPowerupCoachmarkEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -30,4 +30,6 @@ export const useExpiringPowerupCoachmarkEnabled = ReactCompilerGating.isReactCom
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useExpiringPowerupCoachmarkEnabled(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };

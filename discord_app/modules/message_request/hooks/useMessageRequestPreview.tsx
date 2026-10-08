@@ -210,7 +210,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestPreview.tsx");
 
 export const useMessageRequestPreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, arg1) => {
+  ? function useMessageRequestPreview(id, arg1) {
       let obj = arg1;
       const cResult = id(576).c(12);
       id = id.id;
@@ -309,7 +309,7 @@ export const useMessageRequestPreview = ReactCompilerGating.isReactCompilerEnabl
       tmp23 = obj3;
       const tmpResult2 = id(504);
     }
-  : (id) => {
+  : function useMessageRequestPreview(id) {
       id = id.id;
       let obj = arg1;
       if (arg1 === undefined) {

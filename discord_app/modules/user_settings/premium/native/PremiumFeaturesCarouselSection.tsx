@@ -7,14 +7,14 @@ import native from "../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import PaginationDefault from "../../../../../_runtime/10504_Pagination.js";
-import _modDef13296 from "../../../../../_runtime/metro/13296__.js";
-import _modDef13297 from "../../../../../_runtime/metro/13297__.js";
-import _modDef13298 from "../../../../../_runtime/metro/13298__.js";
-import _modDef13299 from "../../../../../_runtime/metro/13299__.js";
+import PaginationDefault from "../../../../../_runtime/10101_Pagination.js";
+import _modDef13596 from "../../../../../_runtime/metro/13596__.js";
+import _modDef13597 from "../../../../../_runtime/metro/13597__.js";
+import _modDef13598 from "../../../../../_runtime/metro/13598__.js";
+import _modDef13599 from "../../../../../_runtime/metro/13599__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -22,13 +22,13 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const Gradients = fn(6951).Gradients;
-const PremiumTypes = fn(1379).PremiumTypes;
+const Gradients = fn(7140).Gradients;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 0.85;
 const PX_12 = nativeDefault.space.PX_12;
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1 },
   headerText: { textAlign: "center" },
@@ -39,7 +39,7 @@ let obj2 = {
 let obj3 = { flex: 1, marginTop: nativeDefault.space.PX_16 };
 obj2.indicators = { marginBottom: -nativeDefault.space.PX_48 };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj6 = { cardContainer: { flex: 1 }, card: null, image: null, cardTitle: null };
 let obj4 = { marginBottom: -nativeDefault.space.PX_48 };
 obj6.card = {
@@ -59,11 +59,11 @@ let obj7 = {
 };
 obj6.cardTitle = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
 let closure_15 = createStyles.createStyles(obj6);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_16 = createStyles.createStyles({ emojiImage: { alignSelf: "flex-end" } });
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PremiumFeaturesCardBackground(arg0) {
       const cResult = c.c(9);
       ({ style, children } = arg0);
       const tmp4 = closure_15();
@@ -82,7 +82,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp12;
           }
           const obj2 = { style: tmp4.cardContainer, children: tmp6 };
-          const tmp15 = v65535(timestampProducer, obj2);
+          const tmp15 = collapsed(timestampProducer, obj2);
           cResult[6] = tmp4.cardContainer;
           cResult[7] = tmp6;
           cResult[8] = tmp15;
@@ -95,7 +95,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           colors: Gradients.PREMIUM_TIER_0_PERK_CARD,
           children,
         };
-        const tmp11 = v65535(LinearGradientDefault, obj3);
+        const tmp11 = collapsed(LinearGradientDefault, obj3);
         cResult[3] = children;
         cResult[4] = tmp5;
         cResult[5] = tmp11;
@@ -107,7 +107,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp5 = items;
     }
-  : (arg0) => {
+  : function PremiumFeaturesCardBackground(arg0) {
       ({ style, children } = arg0);
       const tmp = closure_15();
       const obj = { style: tmp.cardContainer, children: null };
@@ -120,13 +120,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const items = [tmp.card, style];
       obj2.style = items;
-      obj.children = v65535(LinearGradientDefault, obj2);
-      return v65535(timestampProducer, obj);
+      obj.children = collapsed(LinearGradientDefault, obj2);
+      return collapsed(timestampProducer, obj);
     };
 let closure_17 = tmp4;
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CarouselCard(arg0) {
       const cResult = c.c(13);
       ({ style, title, imageSrc, imageStyle } = arg0);
       const tmp4 = closure_15();
@@ -161,7 +161,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             tmp12 = tmp15;
           }
           const obj3 = { source: imageSrc, style: tmp7, resizeMode: "contain" };
-          const tmp11 = v65535(FastImageDefault, obj3);
+          const tmp11 = collapsed(FastImageDefault, obj3);
           cResult[6] = imageSrc;
           cResult[7] = tmp7;
           cResult[8] = tmp11;
@@ -173,7 +173,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = items1;
         tmp7 = items1;
       }
-      const tmp6 = v65535(Text_Text.Text, {
+      const tmp6 = collapsed(Text_Text.Text, {
         variant: "heading-md/extrabold",
         color: "text-overlay-light",
         style: tmp4.cardTitle,
@@ -190,12 +190,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         children: title,
       };
     }
-  : (arg0) => {
+  : function CarouselCard(arg0) {
       ({ style, title, imageSrc, imageStyle } = arg0);
       const tmp = closure_15();
       const obj = { style, children: null };
       const items = [
-        v65535(Text_Text.Text, {
+        collapsed(Text_Text.Text, {
           variant: "heading-md/extrabold",
           color: "text-overlay-light",
           style: tmp.cardTitle,
@@ -205,13 +205,13 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { source: imageSrc, style: null, resizeMode: "contain" };
       const items1 = [tmp.image, imageStyle];
       obj3.style = items1;
-      items[1] = v65535(FastImageDefault, obj3);
+      items[1] = collapsed(FastImageDefault, obj3);
       obj.children = items;
       return closure_1_11(closure_17, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function usePremiumFeatureCardData(arg0) {
       _require = arg0;
       const cResult = require("c").c(15);
       const tmp4 = closure_16();
@@ -234,7 +234,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[1];
       }
       if (cResult[2] !== tmp4.emojiImage) {
-        const obj2 = { title: first, imageSrc: _modDef13296, imageStyle: tmp4.emojiImage, premiumTypes: tmp7 };
+        const obj2 = { title: first, imageSrc: _modDef13596, imageStyle: tmp4.emojiImage, premiumTypes: tmp7 };
         cResult[2] = tmp4.emojiImage;
         cResult[3] = obj2;
         let tmp14 = obj2;
@@ -250,7 +250,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         tmp16 = cResult[4];
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { title: tmp16, imageSrc: _modDef13297, premiumTypes: null };
+        const obj3 = { title: tmp16, imageSrc: _modDef13597, premiumTypes: null };
         const _Set2 = Set;
         const items1 = [,];
         ({ TIER_0: arr2[0], TIER_2: arr2[1] } = PremiumTypes);
@@ -267,7 +267,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         tmp19 = cResult[6];
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = { title: tmp19, imageSrc: _modDef13298, premiumTypes: null };
+        const obj4 = { title: tmp19, imageSrc: _modDef13598, premiumTypes: null };
         const _Set3 = Set;
         const items2 = [PremiumTypes.TIER_2];
         const set2 = new Set(items2);
@@ -283,7 +283,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         tmp29 = cResult[8];
       }
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { title: tmp29, imageSrc: _modDef13299, premiumTypes: null };
+        const obj5 = { title: tmp29, imageSrc: _modDef13599, premiumTypes: null };
         const _Set4 = Set;
         const items3 = [PremiumTypes.TIER_2];
         const set3 = new Set(items3);
@@ -310,7 +310,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const mapped = arr5.map((item, index) => {
         const obj = { style: { width: closure_0 * c12 } };
         const merged = Object.assign(item);
-        return v65535(closure_18, obj, index);
+        return collapsed(closure_18, obj, index);
       });
       cResult[12] = arr5;
       cResult[13] = arg0;
@@ -318,7 +318,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       tmp46 = mapped;
       let obj = require("c");
     }
-  : (arg0) => {
+  : function usePremiumFeatureCardData(arg0) {
       closure_0 = arg0;
       const tmp = closure_16();
       const emojiImage = tmp;
@@ -327,7 +327,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
         const intl = util.intl;
         obj.title = intl.string(util.t["3cyhe3"]);
-        obj.imageSrc = _modDef13296;
+        obj.imageSrc = _modDef13596;
         obj.imageStyle = emojiImage.emojiImage;
         const items = [,];
         ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
@@ -336,7 +336,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { title: null, imageSrc: null, premiumTypes: null };
         const intl2 = util.intl;
         obj2.title = intl2.string(util.t["8AhJqy"]);
-        obj2.imageSrc = _modDef13297;
+        obj2.imageSrc = _modDef13597;
         const items2 = [,];
         ({ TIER_0: arr3[0], TIER_2: arr3[1] } = PremiumTypes);
         const set = new Set(items);
@@ -345,7 +345,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { title: null, imageSrc: null, premiumTypes: null };
         const intl3 = util.intl;
         obj3.title = intl3.string(util.t["t/Mvdj"]);
-        obj3.imageSrc = _modDef13298;
+        obj3.imageSrc = _modDef13598;
         const items3 = [PremiumTypes.TIER_2];
         const set1 = new Set(items2);
         obj3.premiumTypes = new Set(items3);
@@ -353,7 +353,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { title: null, imageSrc: null, premiumTypes: null };
         const intl4 = util.intl;
         obj4.title = intl4.string(util.t["n+DGY/"]);
-        obj4.imageSrc = _modDef13299;
+        obj4.imageSrc = _modDef13599;
         const items4 = [PremiumTypes.TIER_2];
         const set2 = new Set(items3);
         obj4.premiumTypes = new Set(items4);
@@ -363,18 +363,18 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       return memo.map((item, index) => {
         const obj = { style: { width: closure_0 * c12 } };
         const merged = Object.assign(item);
-        return v65535(closure_18, obj, index);
+        return collapsed(closure_18, obj, index);
       });
     };
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PremiumFeaturesCarousel(arg0) {
       const cResult = c.c(24);
       ({ width, onEndReached } = arg0);
       const tmp4 = closure_14();
       const isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
       [currentIndex] = noop.useState(0);
-      closure_2 = tmp8;
+      dependencyMap = tmp8;
       const children = closure_19(width);
       if (cResult[0] === children.length) {
         if (cResult[1] === currentIndex) {
@@ -387,40 +387,54 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           const sum = result + PX_12;
           noop = sum;
           const _Math = Math;
-          let carousel = Math.max(0, (width - result) / 2);
+          const bound = Math.max(0, (width - result) / 2);
           if (cResult[5] === children.length) {
             if (cResult[6] === sum) {
-              let tmp17 = cResult[7];
+              let tmp18 = cResult[7];
             }
             if (cResult[8] === children) {
-              if (cResult[9] === tmp17) {
+              if (cResult[9] === tmp18) {
                 if (cResult[10] === isScreenReaderEnabled) {
                   if (cResult[11] === sum) {
-                    if (cResult[12] === carousel) {
+                    if (cResult[12] === bound) {
                       if (cResult[13] === tmp4.carousel) {
                         if (cResult[14] === width) {
                           if (cResult[16] === children.length) {
                             if (cResult[17] === currentIndex) {
                               if (cResult[18] === tmp4.indicators) {
-                                let tmp25 = cResult[19];
+                                let tmp26 = cResult[19];
                               }
                               if (cResult[20] === tmp4.carouselContainer) {
-                                if (cResult[21] === tmp18) {
-                                  if (cResult[22] === tmp25) {
-                                    let tmp28 = cResult[23];
+                                if (cResult[21] === tmp19) {
+                                  if (cResult[22] === tmp26) {
+                                    let tmp29 = cResult[23];
                                   }
-                                  return tmp28;
+                                  return tmp29;
                                 }
                               }
                               const obj4 = { style: tmp4.carouselContainer, children: null };
-                              const items = [tmp18, tmp25];
+                              const items = [tmp19, tmp26];
                               obj4.children = items;
-                              const tmp31 = closure_1_11(timestampProducer, obj4);
+                              const tmp32 = closure_1_11(timestampProducer, obj4);
+                              class P {
+                                constructor(arg0) {
+                                  tmp = closure_2(
+                                    Math.max(
+                                      0,
+                                      Math.min(
+                                        closure_3.length - 1,
+                                        Math.round(arg0.nativeEvent.contentOffset.x / closure_4),
+                                      ),
+                                    ),
+                                  );
+                                  return;
+                                }
+                              }
                               cResult[20] = tmp4.carouselContainer;
-                              cResult[21] = tmp18;
-                              cResult[22] = tmp25;
-                              cResult[23] = tmp31;
-                              tmp28 = tmp31;
+                              cResult[21] = tmp19;
+                              cResult[22] = tmp26;
+                              cResult[23] = tmp32;
+                              tmp29 = tmp32;
                             }
                           }
                           const obj5 = {
@@ -428,12 +442,25 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                             numberOfItems: children.length,
                             currentIndex,
                           };
-                          const tmp27 = v65535(native.CarouselPagination, obj5);
+                          const tmp28 = collapsed(native.CarouselPagination, obj5);
                           cResult[16] = children.length;
-                          cResult[17] = currentIndex;
+                          class P {
+                            constructor(arg0) {
+                              tmp = closure_2(
+                                Math.max(
+                                  0,
+                                  Math.min(
+                                    closure_3.length - 1,
+                                    Math.round(arg0.nativeEvent.contentOffset.x / closure_4),
+                                  ),
+                                ),
+                              );
+                              return;
+                            }
+                          }
                           cResult[18] = tmp4.indicators;
-                          cResult[19] = tmp27;
-                          tmp25 = tmp27;
+                          cResult[19] = tmp28;
+                          tmp26 = tmp28;
                         }
                       }
                     }
@@ -459,17 +486,27 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                   modeConfig: { parallaxScrollingScale: 1, parallaxScrollingOffset: 45 },
                   onSnapToItem: tmp8,
                 };
-                let tmp21 = v65535(PaginationDefault, obj6);
+                let tmp22 = collapsed(PaginationDefault, obj6);
               }
               cResult[8] = children;
-              cResult[9] = tmp17;
+              cResult[9] = tmp18;
               cResult[10] = isScreenReaderEnabled;
               cResult[11] = sum;
-              cResult[12] = carousel;
-              carousel = tmp4.carousel;
-              cResult[13] = carousel;
+              cResult[12] = bound;
+              class P {
+                constructor(arg0) {
+                  tmp = closure_2(
+                    Math.max(
+                      0,
+                      Math.min(closure_3.length - 1, Math.round(arg0.nativeEvent.contentOffset.x / closure_4)),
+                    ),
+                  );
+                  return;
+                }
+              }
+              cResult[13] = bound;
               cResult[14] = width;
-              cResult[15] = tmp21;
+              cResult[15] = tmp22;
             }
             const obj7 = {
               style: tmp4.carousel,
@@ -482,20 +519,32 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               onScroll: null,
               children: null,
             };
-            const obj8 = { paddingHorizontal: carousel, gap: PX_12 };
+            const obj8 = { paddingHorizontal: bound, gap: PX_12 };
             obj7.contentContainerStyle = obj8;
-            obj7.snapToOffsets = children.map((item, index) => index * sum);
-            obj7.onScroll = tmp17;
+            class P {
+              constructor(arg0) {
+                tmp = closure_2(
+                  Math.max(0, Math.min(closure_3.length - 1, Math.round(arg0.nativeEvent.contentOffset.x / closure_4))),
+                );
+                return;
+              }
+            }
+            obj7.onScroll = tmp18;
             obj7.children = children;
-            tmp21 = v65535(hasOwnProperty, obj7);
+            tmp22 = collapsed(hasOwnProperty, obj7);
           }
-          const fn2 = function w(nativeEvent) {
-            closure_2(Math.max(0, Math.min(arr.length - 1, Math.round(nativeEvent.nativeEvent.contentOffset.x / sum))));
-          };
+          class P {
+            constructor(arg0) {
+              tmp = closure_2(
+                Math.max(0, Math.min(closure_3.length - 1, Math.round(arg0.nativeEvent.contentOffset.x / closure_4))),
+              );
+              return;
+            }
+          }
           cResult[5] = children.length;
           cResult[6] = sum;
-          cResult[7] = fn2;
-          tmp17 = fn2;
+          cResult[7] = P;
+          tmp18 = P;
         }
       }
       const fn = function o() {
@@ -515,7 +564,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = fn;
       obj3 = noop;
     }
-  : (arg0) => {
+  : function PremiumFeaturesCarousel(arg0) {
       ({ width, onEndReached } = arg0);
       currentIndex = undefined;
       const tmp = closure_14();
@@ -542,7 +591,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       if (!MetaQuestUtils.isThumbstickScrollDevice) {
         if (!isScreenReaderEnabled) {
-          let tmp16 = v65535;
+          let tmp16 = collapsed;
           const obj3 = {
             style: tmp.carousel,
             data: children,
@@ -559,7 +608,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             modeConfig: { parallaxScrollingScale: 1, parallaxScrollingOffset: 45 },
             onSnapToItem: tmp7,
           };
-          let tmp18 = v65535(PaginationDefault, obj3);
+          let tmp18 = collapsed(PaginationDefault, obj3);
         }
         const items2 = [tmp18];
         const obj4 = { containerStyle: tmp.indicators, numberOfItems: children.length, currentIndex };
@@ -567,7 +616,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.children = items2;
         return closure_1_11(timestampProducer, obj2);
       }
-      tmp18 = v65535(hasOwnProperty, {
+      tmp18 = collapsed(hasOwnProperty, {
         style: tmp.carousel,
         contentContainerStyle: { paddingHorizontal: bound, gap: PX_12 },
         horizontal: true,
@@ -578,7 +627,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         onScroll: callback,
         children,
       });
-      tmp16 = v65535;
+      tmp16 = collapsed;
       const obj5 = {
         style: tmp.carousel,
         contentContainerStyle: { paddingHorizontal: bound, gap: PX_12 },
@@ -597,17 +646,17 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesCarouselSection.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function PremiumFeaturesCarouselSection(style) {
       const cResult = analyticsLocations(576).c(18);
       style = style.style;
       const tmp4 = closure_14();
-      analyticsLocations = first(6664)().analyticsLocations;
+      analyticsLocations = first(6841)().analyticsLocations;
       [first, dependencyMap] = noop.useState(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const windowDimensions = tmp(1484).getWindowDimensions();
+        const windowDimensions = tmp(1496).getWindowDimensions();
         cResult[0] = windowDimensions;
         let first1 = windowDimensions;
-        const tmpResult = tmp(1484);
+        const tmpResult = tmp(1496);
       } else {
         first1 = cResult[0];
       }
@@ -623,42 +672,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-            class M {
-              constructor(arg0) {
-                return closure_3(style.nativeEvent.layout.width);
-              }
-            }
-            cResult[7] = M;
+            const fn = function w(nativeEvent) {
+              return _slicedToArray(nativeEvent.nativeEvent.layout.width);
+            };
+            cResult[7] = fn;
+            let tmp14 = fn;
           } else {
-            class M {
-              constructor(arg0) {
-                return closure_3(style.nativeEvent.layout.width);
-              }
-            }
+            tmp14 = cResult[7];
           }
           const _Symbol2 = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            class M {
-              constructor(arg0) {
-                return closure_3(style.nativeEvent.layout.width);
-              }
-            }
-            const stringResult = obj4.string(tmp(1126).t.RGadQR);
+            const intl = tmp(1126).intl;
+            const stringResult = intl.string(tmp(1126).t.RGadQR);
             cResult[8] = stringResult;
-            const tmp15 = stringResult;
+            let tmp15 = stringResult;
           } else {
-            class M {
-              constructor(arg0) {
-                return closure_3(style.nativeEvent.layout.width);
-              }
-            }
+            tmp15 = cResult[8];
           }
           if (cResult[9] !== tmp4.headerText) {
-            class M {
-              constructor(arg0) {
-                return closure_3(style.nativeEvent.layout.width);
-              }
-            }
             const obj3 = {
               style: tmp4.headerText,
               variant: "heading-xl/extrabold",
@@ -666,43 +697,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               accessibilityRole: "header",
               children: tmp15,
             };
-            const tmp18 = closure_10(tmp(4892).Text, obj3);
+            const tmp19 = closure_10(tmp(5086).Text, obj3);
             cResult[9] = tmp4.headerText;
-            cResult[10] = tmp18;
+            cResult[10] = tmp19;
+            let tmp17 = tmp19;
           } else {
-            class M {
-              constructor(arg0) {
-                return closure_3(style.nativeEvent.layout.width);
-              }
-            }
+            tmp17 = cResult[10];
           }
           if (cResult[11] === tmp11) {
-            class M {
-              constructor(arg0) {
-                return closure_3(style.nativeEvent.layout.width);
-              }
+            if (cResult[12] === tmp12) {
+              let tmp20 = cResult[13];
             }
             if (cResult[14] === tmp13) {
-              class M {
-                constructor(arg0) {
-                  return closure_3(style.nativeEvent.layout.width);
+              if (cResult[15] === tmp17) {
+                if (cResult[16] === tmp20) {
+                  let tmp24 = cResult[17];
                 }
+                return tmp24;
               }
             }
-            const obj5 = { style: tmp13, onLayout: M, children: null };
-            const items = [tmp17, tmp19];
-            obj5.children = items;
-            const tmp26 = closure_11(closure_6, obj5);
+            const obj4 = { style: tmp13, onLayout: tmp14, children: null };
+            const items = [tmp17, tmp20];
+            obj4.children = items;
+            const tmp27 = closure_11(closure_6, obj4);
             cResult[14] = tmp13;
             cResult[15] = tmp17;
-            cResult[16] = tmp19;
-            cResult[17] = tmp26;
+            cResult[16] = tmp20;
+            cResult[17] = tmp27;
+            tmp24 = tmp27;
           }
-          const obj6 = { width: tmp11, onEndReached: tmp12 };
-          const tmp22 = closure_10(closure_20, obj6);
+          const obj5 = { width: tmp11, onEndReached: tmp12 };
+          const tmp23 = closure_10(closure_20, obj5);
           cResult[11] = tmp11;
           cResult[12] = tmp12;
-          cResult[13] = tmp22;
+          cResult[13] = tmp23;
+          tmp20 = tmp23;
         }
         const items1 = [tmp4.container, style];
         cResult[4] = style;
@@ -734,14 +763,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = E;
       const tmp5Result = _slicedToArray(noop.useState(first1.width), 2);
     }
-  : (style) => {
+  : function PremiumFeaturesCarouselSection(style) {
       first = undefined;
       dependencyMap = undefined;
       _slicedToArray = undefined;
       const tmp = closure_14();
-      const analyticsLocations = first(6664)().analyticsLocations;
+      const analyticsLocations = first(6841)().analyticsLocations;
       [first, dependencyMap] = noop.useState(false);
-      const tmp4 = _slicedToArray(noop.useState(analyticsLocations(1484).getWindowDimensions().width), 2);
+      const tmp4 = _slicedToArray(noop.useState(analyticsLocations(1496).getWindowDimensions().width), 2);
       _slicedToArray = tmp4[1];
       const items = [analyticsLocations, first];
       let obj2 = {
@@ -770,7 +799,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl = analyticsLocations(1126).intl;
       obj3.children = intl.string(analyticsLocations(1126).t.RGadQR);
       const items2 = [
-        closure_10(analyticsLocations(4892).Text, obj3),
+        closure_10(analyticsLocations(5086).Text, obj3),
         closure_10(closure_20, { width: tmp4[0], onEndReached: callback }),
       ];
       obj2.children = items2;

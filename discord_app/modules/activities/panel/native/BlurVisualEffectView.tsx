@@ -9,7 +9,7 @@ require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsx = fn(21).jsx;
-const ColorUtils = fn(4733);
+const ColorUtils = fn(4927);
 const tintColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.24);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/activities/panel/native/BlurV
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function BlurVisualEffectView() {
         const cResult = c.c(2);
         const token = useToken.useToken(nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK, ThemeTypes.DARK);
         if (cResult[0] !== token) {
@@ -45,7 +45,7 @@ export default noop.memo(
         }
         return tmp5;
       }
-    : () => {
+    : function BlurVisualEffectView() {
         const token = useToken.useToken(nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK, ThemeTypes.DARK);
         return jsx(VisualEffectViewDefault, {
           style: StyleSheet.absoluteFill,

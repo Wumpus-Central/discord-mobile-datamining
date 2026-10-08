@@ -11,11 +11,11 @@ import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 
 require = fn;
-const CallConstants = fn(4917);
+const CallConstants = fn(5113);
 ({ isStreamParticipant: closure_11, isUserParticipant: closure_12, ParticipantTypes: map1 } = CallConstants);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function usePipVideoOrStream(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -26,7 +26,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function c() {
+        const fn = function s() {
           if (null != _undefined) {
             let videoParticipants = ChannelRTCStore.getVideoParticipants(_undefined);
           } else {
@@ -157,7 +157,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       return require("initialize").useStateFromStores(first, tmp8, tmp9);
     }
-  : (arg0) => {
+  : function usePipVideoOrStream(arg0) {
       _require = arg0;
       const items = [ChannelRTCStore, VideoSpeakerStore, ApplicationStreamingStore];
       const items1 = [arg0];
@@ -291,7 +291,7 @@ const result = size.fileFinishedImporting("modules/video_calls/native/usePipVide
 
 export default tmp3;
 export const useHasPipParticipant = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isActivityViewFocused) => {
+  ? function useHasPipParticipant(isActivityViewFocused) {
       const cResult = isActivityViewFocused(576).c(8);
       isActivityViewFocused = isActivityViewFocused.isActivityViewFocused;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -356,7 +356,7 @@ export const useHasPipParticipant = ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = fn2;
       const tmpResult = isActivityViewFocused(504);
     }
-  : (isActivityViewFocused) => {
+  : function useHasPipParticipant(isActivityViewFocused) {
       isActivityViewFocused = isActivityViewFocused.isActivityViewFocused;
       const items = [RTCConnectionStore];
       const stateFromStores = isActivityViewFocused(504).useStateFromStores(items, () => channelId.getChannelId());

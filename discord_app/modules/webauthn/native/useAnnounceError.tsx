@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/useAnnounceError.tsx");
 
 export const useAnnounceError = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAnnounceError(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] !== arg0) {
@@ -36,7 +36,7 @@ export const useAnnounceError = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp2, tmp3);
     }
-  : (arg0) => {
+  : function useAnnounceError(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       const effect = noop.useEffect(() => {

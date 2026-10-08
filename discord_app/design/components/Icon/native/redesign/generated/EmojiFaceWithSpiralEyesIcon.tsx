@@ -2,7 +2,7 @@
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod15213 from "../../../../../../../_runtime/metro/15213__.js";
+import _mod15475 from "../../../../../../../_runtime/metro/15475__.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const EmojiFaceWithSpiralEyesIcon = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function EmojiFaceWithSpiralEyesIcon(arg0) {
       const cResult = c.c(9);
       if (cResult[0] !== arg0) {
         ({ style, color } = arg0);
@@ -37,7 +37,7 @@ export const EmojiFaceWithSpiralEyesIcon = ReactCompilerGating.isReactCompilerEn
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod15213;
+        const tmpResult = _mod15475;
         cResult[4] = tmpResult;
         let tmp10 = tmpResult;
       } else {
@@ -60,7 +60,7 @@ export const EmojiFaceWithSpiralEyesIcon = ReactCompilerGating.isReactCompilerEn
       tmp12 = tmp14;
       const obj2 = { source: tmp10, color: INTERACTIVE_ICON_DEFAULT, style: tmp5 };
     }
-  : (color) => {
+  : function EmojiFaceWithSpiralEyesIcon(color) {
       let INTERACTIVE_ICON_DEFAULT = color.color;
       if (INTERACTIVE_ICON_DEFAULT === undefined) {
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
@@ -68,7 +68,7 @@ export const EmojiFaceWithSpiralEyesIcon = ReactCompilerGating.isReactCompilerEn
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
       const merged1 = Object.assign(merged);
       return jsx(BaseIconImage.BaseIconImage, {
-        source: _mod15213,
+        source: _mod15475,
         color: INTERACTIVE_ICON_DEFAULT,
         style: color.style,
       });

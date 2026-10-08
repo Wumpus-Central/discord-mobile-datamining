@@ -1,5 +1,5 @@
 // discord_app/modules/premium/powerups/native/hooks/useGuildPowerupOnShowDeactivate.tsx
-import asyncRequireImpl from "../../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
 import useAlertStore from "../../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -7,13 +7,13 @@ const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-let closure_4 = noop.lazy(() => asyncRequireImpl(12214, dependencyMap.paths));
+let closure_4 = noop.lazy(() => asyncRequireImpl(12293, dependencyMap.paths));
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowDeactivate.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, powerup) => {
+  ? function useGuildPowerupOnShowDeactivate(guildId, powerup) {
       _require = guildId;
       dependencyMap = powerup;
       const cResult = require("c").c(3);
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp2 = fn;
     }
-  : (guildId, powerup) => {
+  : function useGuildPowerupOnShowDeactivate(guildId, powerup) {
       const items = [guildId, powerup];
       return noop.useCallback(() => {
         useAlertStore.openAlert("guild-powerups-deactivate-alert", <closure_4 guildId={guildId} powerup={powerup} />);

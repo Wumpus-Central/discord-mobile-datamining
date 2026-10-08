@@ -8,7 +8,7 @@ import NoticeStore from "../../../../../premium/native/NoticeStore.tsx";
 
 require = fn;
 const NoticeTypes = fn(1085).NoticeTypes;
-const PremiumSubscriptionSKUs = fn(1379).PremiumSubscriptionSKUs;
+const PremiumSubscriptionSKUs = fn(1391).PremiumSubscriptionSKUs;
 let closure_6 = 10 * DurationsDefault.Millis.SECOND;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useShouldShowExpiringTrialOfferCard = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShouldShowExpiringTrialOfferCard() {
       const cResult = c.c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [NoticeStore];
@@ -100,7 +100,7 @@ export const useShouldShowExpiringTrialOfferCard = ReactCompilerGating.isReactCo
       }
       const tmpResult2 = usePremiumTrialOffer;
     }
-  : () => {
+  : function useShouldShowExpiringTrialOfferCard() {
       const items = [NoticeStore];
       const stateFromStores = useStateFromStores.useStateFromStores(items, () => noticeType.getNoticeType());
       const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();

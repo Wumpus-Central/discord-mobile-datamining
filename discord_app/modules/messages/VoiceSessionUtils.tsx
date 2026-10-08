@@ -14,7 +14,7 @@ const require = globalThis.__r;
 require = fn;
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (author) => {
+  ? function useVoiceSessionParticipants(author) {
       _require = author;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -57,7 +57,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (author) => {
+  : function useVoiceSessionParticipants(author) {
       _require = author;
       const items = [UserStore];
       const items1 = [author.author.id, author.call];
@@ -118,7 +118,7 @@ let result = size.fileFinishedImporting("modules/messages/VoiceSessionUtils.tsx"
 
 export { getSortedVoiceSessionParticipants };
 export const useSortedVoiceSessionParticipants = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSortedVoiceSessionParticipants(arg0) {
       const cResult = c.c(6);
       const tmp4 = closure_7(arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -155,7 +155,7 @@ export const useSortedVoiceSessionParticipants = ReactCompilerGating.isReactComp
       tmp10 = result;
       const tmpResult2 = maybeSortByProbability;
     }
-  : (arg0) => {
+  : function useSortedVoiceSessionParticipants(arg0) {
       const tmp = closure_7(arg0);
       _require = tmp;
       const items = [UserAffinitiesV2Store];

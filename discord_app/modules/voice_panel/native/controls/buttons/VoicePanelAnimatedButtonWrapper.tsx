@@ -9,9 +9,9 @@ import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(11916).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(11989).MODE_CHANGE_PHYSICS;
 let jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   pressableWrapper: {
     justifyContent: "center",
@@ -45,7 +45,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AnimatedButtonWrapper(arg0) {
       let withTiming = sharedValue;
       const cResult = pressed(sharedValue[8]).c(33);
       ({
@@ -335,7 +335,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = onPressIn;
       obj2 = pressed(sharedValue[6]);
     }
-  : (onPressOut) => {
+  : function AnimatedButtonWrapper(onPressOut) {
       ({ props, onPressIn } = onPressOut);
       onPressOut = onPressOut.onPressOut;
       const style = onPressOut.style;

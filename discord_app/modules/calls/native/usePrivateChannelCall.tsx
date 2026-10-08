@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/usePrivateChannelCall.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function usePrivateChannelCall(arg0, arg1, arg2) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = arg2;
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (null == channel) {
                     dependencyMap = 1;
                     c3 = 1;
-                    const obj7 = { value: tmp3(4909).ensurePrivateChannel(tmp32), done: false };
+                    const obj7 = { value: tmp3(7001).ensurePrivateChannel(tmp32), done: false };
                     return obj7;
                   }
                   tmp32 = closure_0;
@@ -109,8 +109,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 isPrivateResult = channel.isPrivate();
               }
               if (isPrivateResult) {
-                tmp3(10616)(channel, tmp3).onPress();
-                const obj3 = tmp3(10616)(channel, tmp3);
+                tmp3(10214)(channel, tmp3).onPress();
+                const obj3 = tmp3(10214)(channel, tmp3);
               }
               if (dependencyMap != null) {
                 dependencyMap();
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         });
-        const fn2 = function () {
+        function t3() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -132,12 +132,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[5] = arg1;
         cResult[6] = arg2;
         cResult[7] = arg0;
-        cResult[8] = fn2;
-        tmp9 = fn2;
+        cResult[8] = t3;
+        tmp9 = t3;
         const tmpResult = tmp(504);
       }
       const fn = function o() {
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1, arg2) => {
+  : function usePrivateChannelCall(arg0, arg1, arg2) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = arg2;
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (null == channel) {
                     dependencyMap = 1;
                     c3 = 1;
-                    const obj7 = { value: tmp3(4909).ensurePrivateChannel(tmp32), done: false };
+                    const obj7 = { value: tmp3(7001).ensurePrivateChannel(tmp32), done: false };
                     return obj7;
                   }
                   tmp32 = closure_0;
@@ -289,8 +289,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 isPrivateResult = channel.isPrivate();
               }
               if (isPrivateResult) {
-                tmp3(10616)(channel, closure_129_1).onPress();
-                const obj3 = tmp3(10616)(channel, closure_129_1);
+                tmp3(10214)(channel, closure_129_1).onPress();
+                const obj3 = tmp3(10214)(channel, closure_129_1);
               }
               if (closure_129_2 != null) {
                 closure_129_2();

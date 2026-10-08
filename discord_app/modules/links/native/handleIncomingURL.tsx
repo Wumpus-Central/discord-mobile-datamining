@@ -1,8 +1,8 @@
 // discord_app/modules/links/native/handleIncomingURL.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUtils.tsx";
 import TTIAnalyticsUtils from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
+import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUtils.tsx";
 import handleSupportedURLDefault from "handleSupportedURL.tsx";
 import DeepLinkTypes from "../../deep_link/DeepLinkTypes.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";

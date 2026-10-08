@@ -27,14 +27,14 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ HelpdeskArticles: closure_11, UserSettingsSections: closure_12 } = Constants);
-const FractionalPremiumStates = fn(1379).FractionalPremiumStates;
+const FractionalPremiumStates = fn(1391).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   upsellSection: { position: "relative" },
   background: { position: "absolute", width: "100%" },
-  scroller: { flex: 1, backgroundColor: fn(5627).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
+  scroller: { flex: 1, backgroundColor: fn(5974).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
   subscriptionHeader: { paddingHorizontal: 16, paddingBottom: 32 },
   blurb: { lineHeight: 18 },
   blurbNotLast: { marginBottom: 8 },
@@ -152,16 +152,16 @@ prototype["render"] = function render() {
   obj3.children = items;
   return closure_1_15(hasOwnProperty, obj3);
 };
-UserSettingsPremiumGuildSubscriptions.contextType = fn(4595).ThemeContext;
+UserSettingsPremiumGuildSubscriptions.contextType = fn(4787).ThemeContext;
 const ReactCompilerGating = fn(558);
-let obj3 = { flex: 1, backgroundColor: fn(5627).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 };
+let obj3 = { flex: 1, backgroundColor: fn(5974).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 };
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/premium/native/UserSettingsPremiumGuildSubscriptions.tsx",
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (route) => {
+  ? function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
       const cResult = subscriptionPlansLoaded(fractionalState[28]).c(18);
       route = route.route;
       let obj = subscriptionPlansLoaded(fractionalState[28]);
@@ -211,14 +211,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const _Symbol = Symbol;
               if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
                 const items1 = [SubscriptionStore];
-                class I {
+                class U {
                   constructor() {
                     return closure_1_10.getPremiumTypeSubscription();
                   }
                 }
                 cResult[8] = items1;
-                cResult[9] = I;
-                let tmp18 = I;
+                cResult[9] = U;
+                let tmp18 = U;
                 let tmp17 = items1;
               } else {
                 tmp17 = cResult[8];
@@ -232,7 +232,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const externalManagementMessage = tmp(tmp2[35]).getExternalManagementMessage(stateFromStores, {
                   shouldAllowExternalManagement: true,
                 });
-                class I {
+                class U {
                   constructor() {
                     return closure_1_10.getPremiumTypeSubscription();
                   }
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (tmpResult10.isMetaQuest()) {
                   tmp25 = tmp22;
                 }
-                class I {
+                class U {
                   constructor() {
                     return closure_1_10.getPremiumTypeSubscription();
                   }
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = fn;
       const tmp8 = flag(fractionalState[32]);
     }
-  : (route) => {
+  : function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
       route = route.route;
       _require = undefined;
       dependencyMap = undefined;
@@ -339,12 +339,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flag = true;
       }
       let obj = require("useSubscriptionPlansLoaded");
-      ({ fractionalState: c2, endsAt } = flag(6908)({ forceFetch: true }));
-      const tmp3 = flag(6908)({ forceFetch: true });
+      ({ fractionalState: c2, endsAt } = flag(7097)({ forceFetch: true }));
+      const tmp3 = flag(7097)({ forceFetch: true });
       isInReverseTrial = require("ReverseTrialUtils").useIsInReverseTrial();
       const tmpResult = require("ReverseTrialUtils");
-      fpDurationText = flag(13286)(endsAt, tmp(13286).CountDownMessageTypes.LONG_TIME_LEFT);
-      const tmp4 = flag(13286);
+      fpDurationText = flag(13587)(endsAt, tmp(13587).CountDownMessageTypes.LONG_TIME_LEFT);
+      const tmp4 = flag(13587);
       const items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
       const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
         const obj = {

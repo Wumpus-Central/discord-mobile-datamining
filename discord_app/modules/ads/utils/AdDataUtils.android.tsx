@@ -7,7 +7,7 @@ import AdUserStore from "../native/AdUserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DEFAULT_TIMEOUT_MS = fn(7233).DEFAULT_TIMEOUT_MS;
+const DEFAULT_TIMEOUT_MS = fn(7412).DEFAULT_TIMEOUT_MS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/utils/AdDataUtils.android.tsx");
@@ -51,7 +51,7 @@ export const getAdUser = function getAdUser(questContentName) {
   resolved = Promise.resolve(adUser);
 };
 export const useAdUser = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAdUser(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       const obj = require("c");
@@ -91,7 +91,7 @@ export const useAdUser = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp4, tmp5);
       return tmp3;
     }
-  : (arg0) => {
+  : function useAdUser(arg0) {
       closure_0 = arg0;
       const tmp = _slicedToArray(noop.useState(AdUserStore.adUser), 2);
       dependencyMap = tmp[1];

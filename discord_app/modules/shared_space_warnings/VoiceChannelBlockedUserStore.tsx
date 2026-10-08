@@ -1,7 +1,7 @@
 // discord_app/modules/shared_space_warnings/VoiceChannelBlockedUserStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import SharedSpacesWarningManagerDefault from "SharedSpacesWarningManager.tsx";
+import handleBlockedOrIgnoredUserVoiceChannelJoinDefault from "handleBlockedOrIgnoredUserVoiceChannelJoin.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
@@ -29,7 +29,7 @@ function processUserInChannel(channelId, userId) {
     }
     if (0 === set.size) {
       if (flag2) {
-        delete tmp3[tmp2];
+        delete tmp3[tmp];
       }
       const _Set = Set;
       const set1 = new Set(dependencyMap2[channelId]);
@@ -42,13 +42,10 @@ function processUserInChannel(channelId, userId) {
         }
         if (0 === set1.size) {
           if (flag4) {
-            delete tmp[tmp2];
+            delete tmp2[tmp];
           }
           if (flag3) {
-            const result = SharedSpacesWarningManagerDefault.handleBlockedOrIgnoredUserVoiceChannelJoin(
-              channelId,
-              userId,
-            );
+            handleBlockedOrIgnoredUserVoiceChannelJoinDefault(channelId, userId);
           }
           return flag4;
         }
@@ -151,6 +148,6 @@ const voiceChannelBlockedUserStore = new VoiceChannelBlockedUserStore(Dispatcher
   RELATIONSHIP_UPDATE: handleRelationshipChange,
 });
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/shared_space_warnings/VoiceChannelBlockedUserStore.tsx");
+const result = size.fileFinishedImporting("modules/shared_space_warnings/VoiceChannelBlockedUserStore.tsx");
 
 export default voiceChannelBlockedUserStore;

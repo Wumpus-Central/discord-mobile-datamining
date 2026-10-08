@@ -6,11 +6,11 @@ import native from "../../../../design/void/native.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/05709_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../_runtime/06099_fuzzysearch.js";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import SearchBarNavDefault from "../../../main_tabs_v2/native/shared_components/SearchBarNav.tsx";
 import HubActionCreatorsDefault from "../../../../actions/HubActionCreators.tsx";
-import _modDef12426 from "../../../../../_runtime/metro/12426__.js";
+import _modDef12522 from "../../../../../_runtime/metro/12522__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -20,10 +20,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7, FlatList: closure_8 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12400).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12496).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   scrollContainer: { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   fauxHeader: { paddingHorizontal: 0 },
@@ -37,12 +37,12 @@ obj2.error = { color: nativeDefault.unsafe_rawColors.RED_400, alignSelf: "center
 let closure_13 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function EmptyState() {
       const cResult = c.c(9);
       const tmp4 = closure_13();
       if (cResult[0] !== tmp4.emptyStateImage) {
-        const obj2 = { style: tmp4.emptyStateImage, source: _modDef12426 };
-        const tmp9 = v65535(React5, obj2);
+        const obj2 = { style: tmp4.emptyStateImage, source: _modDef12522 };
+        const tmp9 = collapsed(React5, obj2);
         cResult[0] = tmp4.emptyStateImage;
         cResult[1] = tmp9;
         let tmp5 = tmp9;
@@ -64,7 +64,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp10,
         };
-        const tmp14 = v65535(Text_Text.Text, obj3);
+        const tmp14 = collapsed(Text_Text.Text, obj3);
         cResult[3] = tmp4.emptyStateTitle;
         cResult[4] = tmp14;
         let tmp12 = tmp14;
@@ -89,10 +89,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp16;
       tmp15 = tmp16;
     }
-  : () => {
+  : function EmptyState() {
       const tmp = closure_13();
       const obj = { style: tmp.emptyWrapper, children: null };
-      const items = [v65535(React5, { style: tmp.emptyStateImage, source: _modDef12426 })];
+      const items = [collapsed(React5, { style: tmp.emptyStateImage, source: _modDef12522 })];
       const obj3 = {
         style: tmp.emptyStateTitle,
         variant: "text-sm/semibold",
@@ -101,7 +101,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = util.intl;
       obj3.children = intl.string(util.t["6HXiuE"]);
-      items[1] = v65535(Text_Text.Text, obj3);
+      items[1] = collapsed(Text_Text.Text, obj3);
       obj.children = items;
       return closure_1_11(timestampProducer, obj);
     };
@@ -149,7 +149,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
         tmp2 = null;
         if ("" !== anyErrorMessage) {
           const obj = { style: error.error, children: anyErrorMessage };
-          tmp2 = v65535(native.LegacyText, obj);
+          tmp2 = collapsed(native.LegacyText, obj);
         }
       }
       return tmp2;
@@ -201,7 +201,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(5319).APIError(closure_128_0);
+                  const aPIError = new id(5631).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   closure_1_7(false);

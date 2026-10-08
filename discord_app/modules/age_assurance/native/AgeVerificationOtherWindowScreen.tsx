@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3073 from "../AgeAssurance.messages.js";
+import _modDef3117 from "../AgeAssurance.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import MobilePhoneIcon from "../../../design/components/Icon/native/redesign/generated/MobilePhoneIcon.tsx";
@@ -13,7 +13,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({
   container: { flex: 1, alignSelf: "stretch" },
   text: { textAlign: "center" },
@@ -23,7 +23,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationOtherWindowScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (copy) => {
+  ? function AgeVerificationOtherWindowScreen(copy) {
       const cResult = c.c(17);
       copy = copy.copy;
       const tmp4 = closure_5();
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (title1 == null) {
           const intl = util.intl;
-          title1 = intl.string(_modDef3073.MLPgsX);
+          title1 = intl.string(_modDef3117.MLPgsX);
         }
         let title2;
         if (copy != null) {
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (description1 == null) {
           const intl2 = util.intl;
-          description1 = intl2.string(_modDef3073.VcZF1q);
+          description1 = intl2.string(_modDef3117.VcZF1q);
         }
         let description2;
         if (copy != null) {
@@ -147,7 +147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: tmp6,
       };
     }
-  : (copy) => {
+  : function AgeVerificationOtherWindowScreen(copy) {
       copy = copy.copy;
       const tmp = closure_5();
       let title;
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (title == null) {
         const intl = util.intl;
-        title = intl.string(_modDef3073.MLPgsX);
+        title = intl.string(_modDef3117.MLPgsX);
       }
       let description;
       if (copy != null) {
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (description == null) {
         const intl2 = util.intl;
-        description = intl2.string(_modDef3073.VcZF1q);
+        description = intl2.string(_modDef3117.VcZF1q);
       }
       const obj = { children: null };
       const obj2 = { children: null };

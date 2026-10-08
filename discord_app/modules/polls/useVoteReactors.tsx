@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/useVoteReactors.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function useVoteReactors(channelId) {
       const cResult = channelId(reaction[3]).c(9);
       channelId = channelId.channelId;
       const messageId = channelId.messageId;
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = channelId(reaction[3]);
       tmp = channelId;
     }
-  : (channelId) => {
+  : function useVoteReactors(channelId) {
       channelId = channelId.channelId;
       const messageId = channelId.messageId;
       const reaction = channelId.reaction;

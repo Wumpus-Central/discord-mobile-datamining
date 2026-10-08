@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const TwoWayLinkStepHeader = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TwoWayLinkStepHeader(arg0) {
       const cResult = c.c(10);
       ({ idx, total } = arg0);
       const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
@@ -61,7 +61,7 @@ export const TwoWayLinkStepHeader = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp7 = items;
     }
-  : (arg0) => {
+  : function TwoWayLinkStepHeader(arg0) {
       ({ idx, total } = arg0);
       const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
       const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow(

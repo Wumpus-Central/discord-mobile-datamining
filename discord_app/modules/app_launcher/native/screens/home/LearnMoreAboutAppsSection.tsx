@@ -15,7 +15,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     marginTop: nativeDefault.space.PX_32,
@@ -62,7 +62,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/LearnMoreAboutAppsSection.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (visible) => {
+  ? function LearnMoreAboutAppsSection(visible) {
       const cResult = c.c(26);
       visible = visible.visible;
       const tmp4 = closure_8();
@@ -213,7 +213,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[22] = tmp37;
       tmp36 = tmp37;
     }
-  : (visible) => {
+  : function LearnMoreAboutAppsSection(visible) {
       const tmp = closure_8();
       const callback = noop.useCallback(() => {
         const obj = LinkingDefault;

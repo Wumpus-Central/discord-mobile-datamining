@@ -17,13 +17,13 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/components/CutoutableAvatarDecoration.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CutoutableAvatarDecoration(arg0) {
       let tmp2 = dependencyMap;
       const cResult = c.c(30);
       ({ size, avatarDecoration, decorationStyle, animate, cutout } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
-        const fn = function u() {
+        const fn = function s() {
           return useReducedMotion.useReducedMotion;
         };
         cResult[0] = items;
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = avatarDecorationURL;
       const tmpResult4 = AvatarUtils;
     }
-  : (size) => {
+  : function CutoutableAvatarDecoration(size) {
       size = size.size;
       const avatarDecoration = size.avatarDecoration;
       const decorationStyle = size.decorationStyle;

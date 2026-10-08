@@ -12,7 +12,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const FriendDiscoveryFlags = Constants.FriendDiscoveryFlags;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDiscoveryByPhoneSettingValue() {
       const cResult = c.c(2);
       const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
       const setting = FriendDiscoverySettings.useSetting();
@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function useDiscoveryByPhoneSettingValue() {
       const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
       const setting = FriendDiscoverySettings.useSetting();
       return FlagUtils.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_PHONE);
@@ -43,7 +43,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t.X7pIKN);
   },
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useDiscoveryByPhoneSettingValue() {
         const cResult = c.c(2);
         const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
         const setting = FriendDiscoverySettings.useSetting();
@@ -58,7 +58,7 @@ const toggle = SettingBuilders.createToggle({
         }
         return tmp5;
       }
-    : () => {
+    : function useDiscoveryByPhoneSettingValue() {
         const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
         const setting = FriendDiscoverySettings.useSetting();
         return FlagUtils.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_PHONE);

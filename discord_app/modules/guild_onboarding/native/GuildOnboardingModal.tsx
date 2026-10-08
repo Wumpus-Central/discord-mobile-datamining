@@ -41,7 +41,7 @@ function getScreens(guildId) {
     fullscreen: true,
     headerTitle,
     headerRight,
-    headerLeft: guildId(6017).getHeaderCloseButton(() => {
+    headerLeft: guildId(6203).getHeaderCloseButton(() => {
       if (backShouldLeaveGuild) {
         let tmp4 = onClose;
         let channel = ChannelStore.getChannel(SelectedChannelStore.getLastSelectedChannelId());
@@ -92,7 +92,7 @@ function getScreens(guildId) {
   };
   return obj;
 }
-let constants = fn(6599).GuildOnboardingModalStates;
+let constants = fn(6775).GuildOnboardingModalStates;
 const Constants = fn(1085);
 ({ GuildFeatures: c10, Routes: closure_11 } = Constants);
 const jsx = fn(21).jsx;
@@ -101,7 +101,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildOnboardingModal(guildId) {
       const cResult = guildId(stateFromStoresArray[17]).c(33);
       guildId = guildId.guildId;
       ({ onFinish, onClose, landingAnimation, isFirstOpen, backShouldLeaveGuild } = guildId);
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             prompts: stateFromStoresArray,
             connections: stateFromStores1,
             selectOption: N,
-            completeOnboarding: M,
+            completeOnboarding: L,
             onFinish,
             onClose,
             landingAnimation,
@@ -232,7 +232,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const tmp24 = getScreens(obj2);
           cResult[18] = backShouldLeaveGuild;
-          cResult[19] = M;
+          cResult[19] = L;
           cResult[20] = stateFromStores1;
           cResult[21] = guildId;
           cResult[22] = isFirstOpen;
@@ -241,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[25] = onFinish;
           cResult[26] = stateFromStoresArray;
           cResult[27] = N;
-          class M {
+          class L {
             constructor() {
               obj = closure_1(closure_2[19]);
               completeOnboardingResult = obj.completeOnboarding(guildId, closure_2);
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp18 = items3;
         tmp19 = fn4;
       }
-      class M {
+      class L {
         constructor() {
           obj = closure_1(closure_2[19]);
           completeOnboardingResult = obj.completeOnboarding(guildId, closure_2);
@@ -272,10 +272,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       cResult[11] = guildId;
       cResult[12] = stateFromStoresArray;
-      cResult[13] = M;
+      cResult[13] = L;
       const tmpResult4 = guildId(stateFromStoresArray[18]);
     }
-  : (guildId) => {
+  : function GuildOnboardingModal(guildId) {
       guildId = guildId.guildId;
       const onFinish = guildId.onFinish;
       const onClose = guildId.onClose;
@@ -310,8 +310,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         GuildOnboardingPromptsStore.getOnboardingConnections(guildId),
       );
       const items3 = [guildId];
-      const selectOption = landingAnimation.useCallback((id, id2, selected) => {
-        const option = GuildOnboardingActionCreatorsDefault.selectOption(guildId, id, id2, selected);
+      const selectOption = landingAnimation.useCallback((arg0, arg1, arg2) => {
+        const option = GuildOnboardingActionCreatorsDefault.selectOption(guildId, arg0, arg1, arg2);
       }, items3);
       const items4 = [guildId, stateFromStoresArray];
       const callback1 = landingAnimation.useCallback(() => {

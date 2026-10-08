@@ -10,7 +10,7 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadType.tsx");
 
-export default () => {
+export default function useLaunchPadType() {
   const LaunchPadModeSetting = UserSettings.LaunchPadModeSetting;
   const setting = LaunchPadModeSetting.useSetting();
   if (preloaded_user_settings.LaunchPadMode.LAUNCH_PAD_DISABLED === setting) {
@@ -22,4 +22,4 @@ export default () => {
   } else if (preloaded_user_settings.LaunchPadMode.LAUNCH_PAD_PULL_TAB === setting) {
     return LaunchPadTypes.PULL_TAB;
   }
-};
+}

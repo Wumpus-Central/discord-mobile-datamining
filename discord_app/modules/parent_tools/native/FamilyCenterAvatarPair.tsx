@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   avatars: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -38,7 +38,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterAvatarPair.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FamilyCenterAvatarPair(arg0) {
       const cResult = c.c(17);
       ({ otherUser, iconSrc, iconStyles } = arg0);
       let avatars = closure_6();
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : (otherUser) => {
+  : function FamilyCenterAvatarPair(otherUser) {
       otherUser = otherUser.otherUser;
       ({ iconSrc, iconStyles } = otherUser);
       const tmp = closure_6();

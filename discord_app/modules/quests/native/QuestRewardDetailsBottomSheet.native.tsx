@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { wrapper: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 }, rewardDetailsCopy: { flexShrink: 1 }, separator: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };
 obj2.separator = { height: 1, backgroundColor: nativeDefault.colors.BORDER_STRONG };
@@ -27,7 +27,7 @@ let closure_9 = createStyles.createStyles(obj2);
 fn(558);
 let obj4 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_STRONG };
 const ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestRewardDetailsBottomSheet(quest) {
   const cResult = c.c(28);
   quest = quest.quest;
   const tmp4 = closure_9();
@@ -64,14 +64,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [UserStore];
-      class S {
+      class C {
         constructor() {
           return closure_1_5.getCurrentUser();
         }
       }
       cResult[5] = items;
-      cResult[6] = S;
-      let tmp15 = S;
+      cResult[6] = C;
+      let tmp15 = C;
       let tmp14 = items;
     } else {
       tmp14 = cResult[5];
@@ -84,7 +84,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
       }
       if (cResult[10] !== quest) {
         const size = { quest: null, height: 56, width: 56, withAnimation: true };
-        class S {
+        class C {
           constructor() {
             return closure_1_5.getCurrentUser();
           }
@@ -97,14 +97,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
         tmp20 = cResult[11];
       }
       const _Symbol2 = Symbol;
-      class S {
+      class C {
         constructor() {
           return closure_1_5.getCurrentUser();
         }
       }
       if (tmp24 === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { variant: "eyebrow", color: "text-subtle", children: null };
-        class S {
+        class C {
           constructor() {
             return closure_1_5.getCurrentUser();
           }
@@ -118,7 +118,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
       }
       if (cResult[13] !== tmp18) {
         { variant: "heading-lg/semibold", color: "text-strong", children: null }.children = tmp18;
-        class S {
+        class C {
           constructor() {
             return closure_1_5.getCurrentUser();
           }
@@ -150,7 +150,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
                 return tmp46;
               }
             }
-            class S {
+            class C {
               constructor() {
                 return closure_1_5.getCurrentUser();
               }
@@ -166,14 +166,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
             cResult[27] = tmp51;
             tmp46 = tmp51;
           }
-          class S {
+          class C {
             constructor() {
               return closure_1_5.getCurrentUser();
             }
           }
           if (tmp42) {
             const obj5 = { children: null };
-            class S {
+            class C {
               constructor() {
                 return closure_1_5.getCurrentUser();
               }
@@ -190,7 +190,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
           cResult[23] = tmp42;
           tmp40 = tmp42;
         }
-        class S {
+        class C {
           constructor() {
             return closure_1_5.getCurrentUser();
           }
@@ -222,7 +222,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
     const tmpResult6 = QuestRewardUtils;
   }
   const tmpResult4 = QuestRewardUtils;
-}) : ((quest) => {
+}) : (function QuestRewardDetailsBottomSheet(quest) {
   quest = quest.quest;
   const tmp = closure_9();
   const items = [quest.config];
@@ -245,38 +245,38 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
   const stateFromStores = quest(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   let obj = quest(504);
   const tmp4 = quest;
-  const defaultRewardName = quest(10018).getDefaultRewardName(quest.config, stateFromStores);
+  const defaultRewardName = quest(9549).getDefaultRewardName(quest.config, stateFromStores);
   const obj3 = { direction: "vertical", spacing: memo(587).space.PX_16, style: tmp.wrapper, children: null };
   const obj4 = { align: "center", direction: "horizontal", spacing: memo(587).space.PX_16, children: null };
-  const items3 = [closure_6(memo(10963), { quest, height: 56, width: 56, withAnimation: true }), ];
+  const items3 = [closure_6(memo(11156), { quest, height: 56, width: 56, withAnimation: true }), ];
   const obj5 = { direction: "vertical", spacing: memo(587).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
   const obj6 = { variant: "eyebrow", color: "text-subtle", children: null };
   let intl = quest(1126).intl;
   obj6.children = intl.string(quest(1126).t["jyYgZ+"]);
-  const items4 = [closure_6(quest(4892).Text, obj6), closure_6(quest(4892).Text, { variant: "heading-lg/semibold", color: "text-strong", children: defaultRewardName })];
+  const items4 = [closure_6(quest(5086).Text, obj6), closure_6(quest(5086).Text, { variant: "heading-lg/semibold", color: "text-strong", children: defaultRewardName })];
   obj5.children = items4;
-  items3[1] = closure_7(quest(5600).Stack, obj5);
+  items3[1] = closure_7(quest(5373).Stack, obj5);
   obj4.children = items3;
-  const items5 = [closure_7(quest(5600).Stack, obj4), ];
+  const items5 = [closure_7(quest(5373).Stack, obj4), ];
   let tmp9Result = null != memo1;
   if (tmp9Result) {
     const obj7 = { children: null };
     const obj8 = { style: tmp.separator };
     const items6 = [closure_6(View, obj8), ];
     const obj9 = { variant: "text-md/normal", color: "text-subtle", children: memo1 };
-    items6[1] = closure_6(tmp4(4892).Text, obj9);
+    items6[1] = closure_6(tmp4(5086).Text, obj9);
     obj7.children = items6;
     tmp9Result = closure_7(closure_8, obj7);
   }
-  const obj2 = quest(10018);
+  const obj2 = quest(9549);
   items5[1] = tmp9Result;
   obj3.children = items5;
-  return closure_6(quest(6652).BottomSheet, { startExpanded: true, children: closure_7(quest(5600).Stack, obj3) });
+  return closure_6(quest(6829).BottomSheet, { startExpanded: true, children: closure_7(quest(5373).Stack, obj3) });
 });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestRewardDetailsBottomSheet.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((questId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestRewardDetailsBottomSheetConnected(questId) {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n() {
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((questId) => {
     cResult[2] = tmp9;
   }
   const tmpResult = hooks_QuestHooks;
-}) : ((questId) => {
+}) : (function QuestRewardDetailsBottomSheetConnected(questId) {
   const callback = noop.useCallback(() => {
     const result = QuestUtils.showQuestUnavailableAlert();
     ActionSheetActionCreatorsDefault.hideActionSheet();

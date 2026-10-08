@@ -11,7 +11,7 @@ require = fn;
 const UpsellTypes = fn(1085).UpsellTypes;
 const jsx = fn(21).jsx;
 let closure_8 = { focused: false, text: "", selectionStart: 0, selectionEnd: 0 };
-const SUGGESTION_BAR_HEIGHT_TIMING = { duration: 250, easing: fn(1188).STANDARD_EASING };
+const SUGGESTION_BAR_HEIGHT_TIMING = { duration: 250, easing: fn(1200).STANDARD_EASING };
 let obj2 = { duration: 200, dampingRatio: 0.7 };
 const __initData = {
   code: "function EmojiSuggestionBarUtilsTsx1(){const{progress}=this.__closure;return{opacity:progress.get(),transform:[{scale:progress.get()}]};}",
@@ -28,7 +28,7 @@ let closure_14 = {
 };
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (index) => {
+  ? function EmojiEntranceAnimation(index) {
       const cResult = index(sharedValue[7]).c(8);
       index = index.index;
       const reducedMotion = index.reducedMotion;
@@ -87,7 +87,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       obj2 = index(sharedValue[8]);
     }
-  : (children) => {
+  : function EmojiEntranceAnimation(children) {
       const index = children.index;
       const reducedMotion = children.reducedMotion;
       let sharedValue;
@@ -116,7 +116,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, cleanUp, arg2, arg3) => {
+  ? function useSuggestionBarHeight(arg0, cleanUp, arg2, arg3) {
       const _require = arg0;
       dependencyMap = arg2;
       closure_3 = arg3;
@@ -173,7 +173,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = items;
       tmp3 = fn;
     }
-  : (arg0, cleanUp, arg2, arg3) => {
+  : function useSuggestionBarHeight(arg0, cleanUp, arg2, arg3) {
       const _require = arg0;
       dependencyMap = arg2;
       closure_3 = arg3;
@@ -269,7 +269,7 @@ export const ITEM_ENTRANCE_SPRING_CONFIG = obj2;
 export const EmojiEntranceAnimation = tmp2;
 export const useSuggestionBarHeight = tmp3;
 export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEnabled()
-  ? (chatInputStateRef, maxCount, minUnlockedEmojis, arg3) => {
+  ? function useEmojiSuggestionBarState(chatInputStateRef, maxCount, minUnlockedEmojis, arg3) {
       const cResult = chatInputRef(setData[7]).c(26);
       ({ channel, chatInputRef } = chatInputStateRef);
       chatInputStateRef = chatInputStateRef.chatInputStateRef;
@@ -365,7 +365,7 @@ export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEna
                               handlePress: tmp16,
                               handlePressEmojiUnavailable: tmp17,
                             };
-                            class C {
+                            class H {
                               constructor(arg0) {
                                 combined = "" + chatInputStateRef(setData[15])(chatInputStateRef) + " ";
                                 closure_0 = combined;
@@ -407,7 +407,7 @@ export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEna
                       }
                     }
                   }
-                  class C {
+                  class H {
                     constructor(arg0) {
                       combined = "" + chatInputStateRef(setData[15])(chatInputStateRef) + " ";
                       closure_0 = combined;
@@ -439,8 +439,8 @@ export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEna
                   cResult[16] = queryEnd;
                   cResult[17] = queryStart;
                   cResult[18] = setDataImmediate;
-                  cResult[19] = C;
-                  tmp16 = C;
+                  cResult[19] = H;
+                  tmp16 = H;
                 }
               }
             }
@@ -458,7 +458,7 @@ export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEna
       cResult[12] = obj4;
       tmp14 = obj4;
     }
-  : (chatInputRef, maxCount, minUnlockedEmojis, arg3) => {
+  : function useEmojiSuggestionBarState(chatInputRef, maxCount, minUnlockedEmojis, arg3) {
       chatInputRef = chatInputRef.chatInputRef;
       const chatInputStateRef = chatInputRef.chatInputStateRef;
       let setData;

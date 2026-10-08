@@ -14,7 +14,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/PremiumWishlistItemCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PremiumWishlistItemCard(arg0) {
       const cResult = require("c").c(13);
       if (cResult[0] !== arg0) {
         ({ sku, source, size } = arg0);
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         size,
       });
     }
-  : (size) => {
+  : function PremiumWishlistItemCard(size) {
       size = size.size;
       ({ sku, source } = size);
       const merged = Object.assign(size, Object.assign({ sku: 0, source: 0, size: 0 }));

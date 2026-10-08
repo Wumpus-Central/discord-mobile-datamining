@@ -4,7 +4,7 @@ import BaseMessagesScreen from "BaseMessagesScreen.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SearchConstants = fn(7524);
+const SearchConstants = fn(9247);
 ({
   SearchListItemTypes: closure_4,
   CARD_ESTIMATED_ITEM_SIZE: hasOwnProperty,
@@ -18,7 +18,7 @@ let result = size.fileFinishedImporting("modules/search/native/components/tabs/p
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (searchContext) => {
+    ? function LinksScreen(searchContext) {
         const cResult = searchContext(onPressMessageItem[4]).c(32);
         searchContext = searchContext.searchContext;
         ({ tab, isFocused, width } = searchContext);
@@ -283,7 +283,7 @@ export default noop.memo(
         cResult[6] = obj11;
         tmp11 = obj11;
       }
-    : (searchContext) => {
+    : function LinksScreen(searchContext) {
         searchContext = searchContext.searchContext;
         const tab = searchContext.tab;
         let fileOrLinkImageDimensions;

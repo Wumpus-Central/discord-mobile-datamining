@@ -1,8 +1,8 @@
 // discord_app/modules/safety_flows/native/SafetyFlowsUtils.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef2815 from "../SafetyFlows.messages.js";
+import _modDef2859 from "../SafetyFlows.messages.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef4811 from "../../../../_runtime/metro/04811__.js";
+import _modDef5005 from "../../../../_runtime/metro/05005__.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import types from "../types.tsx";
 import constants from "../constants.tsx";
@@ -36,9 +36,9 @@ let closure_7 = async function _fetchAndUpdateTask() {
 function navigateToScreenForTask(arr, task_type) {
   if (null == task_type) {
     ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
-    const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef4811, content: null };
+    const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef5005, content: null };
     const intl = util.intl;
-    obj3.content = intl.string(_modDef2815["/fHz9S"]);
+    obj3.content = intl.string(_modDef2859["/fHz9S"]);
     ToastActionCreatorsDefault.open(obj3);
   } else {
     task_type = task_type.task_type;
@@ -96,7 +96,7 @@ export { getScreensForTaskType };
 export { fetchAndUpdateTask };
 export { navigateToScreenForTask };
 export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useOnTaskComplete() {
       const cResult = require("c").c(5);
       let obj = require("c");
       const navigation = require("useNavigation").useNavigation();
@@ -186,7 +186,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled()
           }
         })();
       });
-      const fn = function () {
+      function t0() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -195,15 +195,15 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled()
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      };
+      }
       cResult[0] = navigation;
       cResult[1] = setTask;
       cResult[2] = task.flow_context.flow_id;
       cResult[3] = task.task_id;
-      cResult[4] = fn;
-      tmp4 = fn;
+      cResult[4] = t0;
+      tmp4 = t0;
     }
-  : () => {
+  : function useOnTaskComplete() {
       const navigation = require("useNavigation").useNavigation();
       _require = navigation;
       let obj = require("useNavigation");

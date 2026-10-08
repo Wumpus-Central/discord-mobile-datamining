@@ -1,7 +1,8 @@
 // discord_app/modules/rpc/server/events/subscriptionHelpers.tsx
-import useIsScreenLandscape from "../../../screen/useIsScreenLandscape.native.tsx";
 import QuestTaskUtils from "../../../quests/utils/QuestTaskUtils.tsx";
+import useIsScreenLandscape from "../../../screen/useIsScreenLandscape.native.tsx";
 import useThermalState from "../../../device/useThermalState.tsx";
+import isPostMessageSocketDefault from "../../helpers/isPostMessageSocket.tsx";
 import activityInstanceConnectedParticipants from "../../helpers/activityInstanceConnectedParticipants.tsx";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
 import ConjureBuilderPreviewStore from "../../../conjure/preview/ConjureBuilderPreviewStore.tsx";
@@ -9,11 +10,9 @@ import FramesStore from "../../../frames/FramesStore.tsx";
 import QuestStore from "../../../quests/QuestStore.tsx";
 
 require = fn;
-const TransportTypes = fn(5323).TransportTypes;
 const RPCEvents = fn(1085).RPCEvents;
-const Constants = fn(2011);
+const Constants = fn(2023);
 ({ ActivityLayoutMode: closure_7, ActivityScreenOrientation: closure_8 } = Constants);
-const asLaunched = fn(8738).asLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 
@@ -51,16 +50,19 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
     }
     return tmp34;
   } else if (RPCEvents.FRAME_LAYOUT_MODE_UPDATE === arg1) {
-    if (application.source.type !== TransportTypes.POST_MESSAGE) {
-      return null;
-    } else {
-      const tmp27 = asLaunched(FramesStore.getFrameByIframeId(application.source.iframeId));
-      let tmp28 = null;
-      if (null != tmp27) {
-        const obj7 = { layout_mode: tmp27.data.layoutMode };
-        tmp28 = obj7;
+    if (isPostMessageSocketDefault(application)) {
+      const frameByEmbeddedContext = FramesStore.getFrameByEmbeddedContext(
+        application.context,
+        application.source.iframeId,
+      );
+      let tmp29 = null;
+      if (null != frameByEmbeddedContext) {
+        const obj7 = { layout_mode: frameByEmbeddedContext.data.layoutMode };
+        tmp29 = obj7;
       }
-      return tmp28;
+      return tmp29;
+    } else {
+      return null;
     }
   } else if (RPCEvents.THERMAL_STATE_UPDATE === arg1) {
     const thermalState = useThermalState.getThermalState();

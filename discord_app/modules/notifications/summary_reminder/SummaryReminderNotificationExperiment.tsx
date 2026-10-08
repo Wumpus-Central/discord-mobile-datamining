@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting(
 
 export default apexExperiment;
 export const useSummaryReminderNotificationExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useSummaryReminderNotificationExperiment(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -32,4 +32,6 @@ export const useSummaryReminderNotificationExperiment = ReactCompilerGating.isRe
       }
       return apexExperiment.useConfig(tmp2);
     }
-  : (location) => apexExperiment.useConfig({ location });
+  : function useSummaryReminderNotificationExperiment(location) {
+      return apexExperiment.useConfig({ location });
+    };

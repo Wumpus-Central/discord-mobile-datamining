@@ -13,7 +13,7 @@ const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/checkpoint/2025/native/Checkpoint2025ForwardPreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (checkpointData) => {
+  ? function Checkpoint2025ForwardPreview(checkpointData) {
       const cResult = c.c(9);
       let num = checkpointData.checkpointData.cardId;
       if (num == null) {
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp11;
       tmp10 = tmp11;
     }
-  : (checkpointData) => {
+  : function Checkpoint2025ForwardPreview(checkpointData) {
       let num = checkpointData.checkpointData.cardId;
       if (num == null) {
         num = 0;

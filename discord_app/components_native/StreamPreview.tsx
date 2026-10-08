@@ -3,9 +3,10 @@ import initialize from "../../discord_common/js/packages/flux/index.tsx";
 import c from "../../_runtime/00576_c.js";
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import util from "../intl/index.native.tsx";
+import FastImageDefault from "common/FastImage.tsx";
 import Pressables from "../design/void/Pressables/native/Pressables.tsx";
-import _modDef9757 from "../../_runtime/metro/09757__.js";
-import _modDef9758 from "../../_runtime/metro/09758__.js";
+import _modDef10958 from "../../_runtime/metro/10958__.js";
+import _modDef10959 from "../../_runtime/metro/10959__.js";
 import useFetchStreamPreviewDefault from "../modules/go_live/useFetchStreamPreview.tsx";
 import noop from "../../_runtime/metro/00019__.js";
 import ThemeStore from "../modules/user_settings/ThemeStore.tsx";
@@ -15,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = { wrapper: null, text: null, fallbackImage: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -40,21 +41,21 @@ DefaultFallback.prototype["render"] = function render() {
   const obj = { style: tmp.wrapper, children: null };
   const obj2 = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp6Result = _modDef9757;
+    let tmp6Result = _modDef10958;
   } else {
-    tmp6Result = _modDef9758;
+    tmp6Result = _modDef10959;
   }
   obj2.source = tmp6Result;
   obj.children = timestampProducer(React3, obj2);
   return timestampProducer(React4, obj);
 };
-DefaultFallback.contextType = fn(4595).ThemeContext;
-createStyles = fn(4896);
+DefaultFallback.contextType = fn(4787).ThemeContext;
+createStyles = fn(5090);
 const obj6 = { touchable: null, imageContainer: null, image: null };
 let size = {
   flex: 1,
   width: "100%",
-  height: "__initData",
+  height: "__packager_asset",
   aspectRatio: true,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
@@ -105,7 +106,7 @@ StreamPreview.prototype["render"] = function render() {
         const obj2 = { uri: url, cache: "force-cache" };
         obj.source = obj2;
         ({ handleLoadStart: obj.onLoadStart, handleLoad: obj.onLoad, handleError: obj.onError } = this);
-        const tmp12 = timestampProducer(React3, obj);
+        const tmp13 = timestampProducer(FastImageDefault, obj);
       }
       const obj3 = {
         accessibilityRole: "button",
@@ -121,7 +122,7 @@ StreamPreview.prototype["render"] = function render() {
       obj3.disabled = tmp6;
       obj3.onPress = tmp5;
       const obj4 = { style: tmp.imageContainer, children: null };
-      const items1 = [tmp8, tmp12];
+      const items1 = [tmp8, tmp13];
       obj4.children = items1;
       const items2 = [React5(React4, obj4), tmp4];
       obj3.children = items2;
@@ -134,7 +135,7 @@ StreamPreview.prototype["render"] = function render() {
   }
   tmp8 = renderFallbackResult1;
 };
-StreamPreview.contextType = fn(4595).ThemeContext;
+StreamPreview.contextType = fn(4787).ThemeContext;
 StreamPreview.defaultProps = {
   renderFallback: function defaultRenderFallback(arg0, theme) {
     const obj = { theme, caption: null };
@@ -156,7 +157,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("components_native/StreamPreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (stream) => {
+  ? function ConnectedStreamPreview(stream) {
       const cResult = c.c(7);
       ({ guildId, channelId, ownerId } = stream.stream);
       ({ previewUrl, isLoading } = useFetchStreamPreviewDefault(guildId, channelId, ownerId));
@@ -198,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp11;
       const tmpResult = initialize;
     }
-  : (stream) => {
+  : function ConnectedStreamPreview(stream) {
       ({ guildId, channelId, ownerId } = stream.stream);
       ({ previewUrl, isLoading } = useFetchStreamPreviewDefault(guildId, channelId, ownerId));
       const tmp = useFetchStreamPreviewDefault(guildId, channelId, ownerId);

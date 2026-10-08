@@ -1,7 +1,7 @@
 // discord_app/modules/rich_presence/FirstPartyRichPresenceStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import _modDef1342 from "../../../_runtime/metro/01342__.js";
+import _modDef1354 from "../../../_runtime/metro/01354__.js";
 import StageChannelSelfRichPresenceStoreDefault from "../stage_channels/StageChannelSelfRichPresenceStore.tsx";
 import ConjureRichPresenceStore from "../conjure/presence/ConjureRichPresenceStore.tsx";
 
@@ -15,7 +15,7 @@ function updateActivities() {
     }
     continue;
   }
-  const tmp6 = _modDef1342(items, items);
+  const tmp6 = _modDef1354(items, items);
   let flag = !tmp6;
   if (!tmp6) {
     flag = true;

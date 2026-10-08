@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/ads/AdTopicOptOutClientExperi
 
 export const AdTopicOptOutClientExperiment = apexExperiment;
 export const useIsAdTopicOptOutClientEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsAdTopicOptOutClientEnabled() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { location: "useIsAdTopicOptOutClientEnabled" };
@@ -29,7 +29,9 @@ export const useIsAdTopicOptOutClientEnabled = ReactCompilerGating.isReactCompil
       }
       return apexExperiment.useConfig(first).enabled;
     }
-  : () => apexExperiment.useConfig({ location: "useIsAdTopicOptOutClientEnabled" }).enabled;
+  : function useIsAdTopicOptOutClientEnabled() {
+      return apexExperiment.useConfig({ location: "useIsAdTopicOptOutClientEnabled" }).enabled;
+    };
 export const isAdTopicOptOutClientEnabled = function isAdTopicOptOutClientEnabled() {
   return apexExperiment.getConfig({ location: "isAdTopicOptOutClientEnabled" }).enabled;
 };

@@ -16,7 +16,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/usePipDimensions.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function usePipDimensions(arg0) {
       const cResult = c.c(5);
       ({ channelId, forcedOrientation } = arg0);
       let tmp4 = null;
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp31 = size;
       const tmp7 = useWindowDimensionsDefault();
     }
-  : (channelId) => {
+  : function usePipDimensions(channelId) {
       let forcedOrientation = channelId.forcedOrientation;
       if (forcedOrientation === undefined) {
         forcedOrientation = null;

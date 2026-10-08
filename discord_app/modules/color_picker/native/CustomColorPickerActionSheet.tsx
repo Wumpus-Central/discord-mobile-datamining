@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = "#000000";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   suggestedColor: null,
@@ -26,7 +26,7 @@ obj2.suggestedColorsContainer = { flexDirection: "row", justifyContent: "center"
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (color) => {
+  ? function SuggestedColors(color) {
       const cResult = onSelect(576).c(12);
       ({ suggestedColors, onSelect } = color);
       color = color.color;
@@ -96,7 +96,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return null;
     }
-  : (arg0) => {
+  : function SuggestedColors(arg0) {
       ({ suggestedColors, onSelect: require, color: importDefault } = arg0);
       const tmp = closure_9();
       const suggestedColor = tmp;
@@ -135,7 +135,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/color_picker/native/CustomColorPickerActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CustomColorPickerActionSheet(arg0) {
       const cResult = onSelect(576).c(86);
       ({ color, onSelect } = arg0);
       ({ suggestedColors, actionButtonVariant } = arg0);
@@ -191,11 +191,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       _slicedToArray = tmp17;
       let int2hsvResult = onSelect(1103).int2hsv(color);
-      sharedValue = onSelect(4618).useSharedValue(h);
-      const tmp5Result11 = onSelect(4618);
-      const sharedValue1 = onSelect(4618).useSharedValue(s);
-      const tmp5Result12 = onSelect(4618);
-      const sharedValue2 = onSelect(4618).useSharedValue(v);
+      sharedValue = onSelect(4810).useSharedValue(h);
+      const tmp5Result11 = onSelect(4810);
+      const sharedValue1 = onSelect(4810).useSharedValue(s);
+      const tmp5Result12 = onSelect(4810);
+      const sharedValue2 = onSelect(4810).useSharedValue(v);
       if (cResult[6] === str) {
         if (cResult[7] === color) {
           if (cResult[8] === sharedValue) {
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                           value: sharedValue2,
                                           onPanFinalize: tmp28,
                                         };
-                                        const tmp78 = sharedValue2(value(14441), obj4);
+                                        const tmp78 = sharedValue2(value(14666), obj4);
                                         cResult[69] = sharedValue;
                                         cResult[70] = tmp28;
                                         cResult[71] = sharedValue1;
@@ -333,14 +333,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const combined = mapped.concat(color);
       }
       if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-        function te(h) {
+        function updateInputHexValueFromHsv(h) {
           const hsvToRgbWorkletResult = ColorPickerUtils.hsvToRgbWorklet(h);
           dependencyMap(
             ColorUtils.rgbToHex(hsvToRgbWorkletResult[0], hsvToRgbWorkletResult[1], hsvToRgbWorkletResult[2]),
           );
         }
-        cResult[27] = te;
-        let tmp37 = te;
+        cResult[27] = updateInputHexValueFromHsv;
+        let tmp37 = updateInputHexValueFromHsv;
       } else {
         tmp37 = cResult[27];
       }
@@ -380,7 +380,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             if (cResult[47] === sharedValue2) {
                               let tmp41 = cResult[48];
                             }
-                            BottomSheet = onSelect(6652).BottomSheet;
+                            BottomSheet = onSelect(6829).BottomSheet;
                             const _Symbol3 = Symbol;
                             if (cResult[49] === Symbol.for("react.memo_cache_sentinel")) {
                               const intl = onSelect(1126).intl;
@@ -445,7 +445,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 const obj17 = value(12);
                               }
                               const obj6 = { accessibilityLabel: tmp50, value, onChange: container, maxLength: 7 };
-                              const tmp54 = sharedValue2(onSelect(6105).TextInput, obj6);
+                              const tmp54 = sharedValue2(onSelect(6283).TextInput, obj6);
                               cResult[55] = value;
                               cResult[56] = container;
                               cResult[57] = tmp54;
@@ -453,15 +453,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             }
                             const obj7 = { title: tmp42, trailing: null };
                             const obj8 = { variant: str, size: "sm", text: tmp44, onPress: tmp40 };
-                            obj7.trailing = sharedValue2(onSelect(5601).Button, obj8);
-                            const tmp48 = sharedValue2(onSelect(6651).BottomSheetTitleHeader, obj7);
+                            obj7.trailing = sharedValue2(onSelect(5375).Button, obj8);
+                            const tmp48 = sharedValue2(onSelect(6828).BottomSheetTitleHeader, obj7);
                             cResult[51] = str;
                             cResult[52] = tmp40;
                             cResult[53] = tmp48;
                             tmp46 = tmp48;
                           }
                         }
-                        function ce(color) {
+                        function onSelectSuggested(color) {
                           dependencyMap(utils_ColorUtils.int2hex(color));
                           const int2hsvResult = utils_ColorUtils.int2hsv(color);
                           ({ s, v } = int2hsvResult);
@@ -472,18 +472,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         cResult[45] = sharedValue;
                         cResult[46] = sharedValue1;
                         cResult[47] = sharedValue2;
-                        cResult[48] = ce;
-                        tmp41 = ce;
+                        cResult[48] = onSelectSuggested;
+                        tmp41 = onSelectSuggested;
                       }
                     }
-                    function ie(combined) {
-                      let tmp = combined.length > 0;
+                    function onTextInputChange(first4) {
+                      let tmp = first4.length > 0;
                       if (tmp) {
-                        tmp = "#" !== combined.charAt(0);
+                        tmp = "#" !== first4.charAt(0);
                       }
-                      let text = combined;
+                      let text = first4;
                       if (tmp) {
-                        text = `#${combined}`;
+                        text = `#${first4}`;
                       }
                       const hex2rgb2hsvResult = ColorUtils.hex2rgb2hsv(text);
                       dependencyMap(text);
@@ -496,8 +496,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     cResult[41] = sharedValue;
                     cResult[42] = sharedValue1;
                     cResult[43] = sharedValue2;
-                    cResult[44] = ie;
-                    container = ie;
+                    cResult[44] = onTextInputChange;
+                    container = onTextInputChange;
                   }
                 }
               }
@@ -525,7 +525,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp39 = se;
         }
       }
-      function oe() {
+      function onPanFinalize() {
         const obj2 = { h: null, s: null, v: null };
         obj2.h = sharedValue.get();
         obj2.s = sharedValue1.get();
@@ -535,11 +535,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[28] = sharedValue;
       cResult[29] = sharedValue1;
       cResult[30] = sharedValue2;
-      cResult[31] = oe;
-      tmp38 = oe;
-      const tmp5Result13 = onSelect(4618);
+      cResult[31] = onPanFinalize;
+      tmp38 = onPanFinalize;
+      const tmp5Result13 = onSelect(4810);
     }
-  : (arg0) => {
+  : function CustomColorPickerActionSheet(arg0) {
       ({ color, onSelect } = arg0);
       ({ suggestedColors, actionButtonVariant } = arg0);
       if (actionButtonVariant === undefined) {
@@ -575,11 +575,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
       let int2hsvResult = onSelect(1103).int2hsv(color);
-      sharedValue = onSelect(4618).useSharedValue(h);
-      const obj4 = onSelect(4618);
-      const sharedValue1 = onSelect(4618).useSharedValue(s);
-      const obj6 = onSelect(4618);
-      const sharedValue2 = onSelect(4618).useSharedValue(v);
+      sharedValue = onSelect(4810).useSharedValue(h);
+      const obj4 = onSelect(4810);
+      const sharedValue1 = onSelect(4810).useSharedValue(s);
+      const obj6 = onSelect(4810);
+      const sharedValue2 = onSelect(4810).useSharedValue(v);
       let combined;
       if (suggestedColors != null) {
         const mapped = suggestedColors.map((item) => onSelect(1103).hex2int(item));
@@ -611,21 +611,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = onSelect(1126).intl;
       obj9.text = intl2.string(onSelect(1126).t.XqMe3N);
       obj9.onPress = callback1;
-      obj7.trailing = sharedValue2(onSelect(5601).Button, obj9);
-      obj5.header = sharedValue2(onSelect(6651).BottomSheetTitleHeader, obj7);
+      obj7.trailing = sharedValue2(onSelect(5375).Button, obj9);
+      obj5.header = sharedValue2(onSelect(6828).BottomSheetTitleHeader, obj7);
       const obj10 = { style: tmp.container, children: null };
       const obj11 = { accessibilityLabel: null, value: null, onChange: null, maxLength: 7 };
       const intl3 = onSelect(1126).intl;
       obj11.accessibilityLabel = intl3.string(onSelect(1126).t["ozfa/h"]);
       obj11.value = value;
-      obj11.onChange = function onChange(combined) {
-        let tmp = combined.length > 0;
+      obj11.onChange = function onTextInputChange(first4) {
+        let tmp = first4.length > 0;
         if (tmp) {
-          tmp = "#" !== combined.charAt(0);
+          tmp = "#" !== first4.charAt(0);
         }
-        let text = combined;
+        let text = first4;
         if (tmp) {
-          text = `#${combined}`;
+          text = `#${first4}`;
         }
         const hex2rgb2hsvResult = ColorUtils.hex2rgb2hsv(text);
         dependencyMap(text);
@@ -635,14 +635,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const result2 = sharedValue2.set(hex2rgb2hsvResult.v / 100);
         }
       };
-      const items3 = [sharedValue2(onSelect(6105).TextInput, obj11), ,];
+      const items3 = [sharedValue2(onSelect(6283).TextInput, obj11), ,];
       const obj12 = { suggestedColors: null, onSelect: null, color: null };
-      const obj8 = onSelect(4618);
+      const obj8 = onSelect(4810);
       const tmp13 = updateInputHexValueFromHsv;
       const tmp14 = sharedValue1;
       const tmp16 = value;
       obj12.suggestedColors = value(12).uniq(combined);
-      obj12.onSelect = function onSelect(color) {
+      obj12.onSelect = function onSelectSuggested(color) {
         dependencyMap(utils_ColorUtils.int2hex(color));
         const int2hsvResult = utils_ColorUtils.int2hsv(color);
         ({ s, v } = int2hsvResult);
@@ -658,7 +658,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj12.color = memo;
       items3[1] = sharedValue2(closure_10, obj12);
-      items3[2] = sharedValue2(tmp16(14441), {
+      items3[2] = sharedValue2(tmp16(14666), {
         hue: sharedValue,
         saturation: sharedValue1,
         value: sharedValue2,
@@ -672,5 +672,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       obj10.children = items3;
       obj5.children = tmp13(tmp14, obj10);
-      return sharedValue2(onSelect(6652).BottomSheet, obj5);
+      return sharedValue2(onSelect(6829).BottomSheet, obj5);
     };

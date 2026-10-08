@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ActivityIndicator: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -60,7 +60,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/ConnectionCardView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ConnectionCardView(arg0) {
       const cResult = c.c(25);
       ({ displayName, description, icon, isLoading, isConnected, canConnect, onConnect } = arg0);
       const tmp4 = closure_6();
@@ -186,7 +186,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp6;
       const obj10 = { style: tmp4.icon, children: icon };
     }
-  : (description) => {
+  : function ConnectionCardView(description) {
       description = description.description;
       ({ displayName, icon, isLoading, isConnected, canConnect, onConnect } = description);
       const tmp = closure_6();

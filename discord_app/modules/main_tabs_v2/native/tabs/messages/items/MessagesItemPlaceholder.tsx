@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function MessagesItemPlaceholder(arg0) {
         const cResult = c.c(3);
         ({ row, height } = arg0);
         if (cResult[0] === height) {
@@ -28,7 +28,7 @@ export default noop.memo(
         cResult[2] = tmp4;
         tmp3 = tmp4;
       }
-    : (arg0) => {
+    : function MessagesItemPlaceholder(arg0) {
         ({ row, height } = arg0);
         return jsx(UserPlaceholderRowDefault, { row, height });
       },

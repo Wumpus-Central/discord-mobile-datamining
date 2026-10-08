@@ -7,13 +7,13 @@ import useUserProfileBannerHeightDefault from "../hooks/native/useUserProfileBan
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const UserProfileBannerDefault = tmp5(7929);
-const EditButtonDefault = tmp5(14433);
+const UserProfileBannerDefault = tmp5(8348);
+const EditButtonDefault = tmp5(14672);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { position: "relative" },
   editButton: null,
@@ -49,7 +49,7 @@ obj2.refreshEditButtonContainer = { position: "absolute", top: 12, right: 12 };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function ProfilePreviewButton(userId) {
       const cResult = userId(context[6]).c(9);
       userId = userId.userId;
       let tmp4 = closure_7();
@@ -122,7 +122,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       const obj2 = userId(context[8]);
     }
-  : (userId) => {
+  : function ProfilePreviewButton(userId) {
       userId = userId.userId;
       let analyticsLocations;
       let context;
@@ -151,7 +151,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function EditButton(arg0) {
       const cResult = c.c(6);
       ({ onPress, accessibilityLabel, disabled } = arg0);
       const tmp5 = closure_7();
@@ -196,7 +196,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         children: first,
       };
     }
-  : (disabled) => {
+  : function EditButton(disabled) {
       let flag = disabled.disabled;
       ({ onPress, accessibilityLabel } = disabled);
       if (flag === undefined) {
@@ -219,7 +219,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditBannerButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileEditBannerButton(arg0) {
       let obj = dependencyMap;
       const cResult = c.c(24);
       ({
@@ -352,7 +352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp8;
       tmp7 = tmp8;
     }
-  : (isUserProfileEditingRefresh) => {
+  : function UserProfileEditBannerButton(isUserProfileEditingRefresh) {
       ({ user, showProfilePreviewButton, showEditButton } = isUserProfileEditingRefresh);
       ({ displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerSafeArea } =
         isUserProfileEditingRefresh);

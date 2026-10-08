@@ -9,7 +9,7 @@ import size from "../../../_runtime/metro/00002__.js";
 let result = size.fileFinishedImporting("modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShowTryItOutButtonInAppLauncher(arg0) {
       const cResult = c.c(4);
       ({ context, application, botUserId } = arg0);
       if (cResult[0] === application.id) {
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = obj2;
       tmp4 = obj2;
     }
-  : (arg0) => {
+  : function useShowTryItOutButtonInAppLauncher(arg0) {
       ({ context, application, botUserId } = arg0);
       let isPrimaryAppCommandUsableInAppDM = getPrimaryAppCommand.useIsPrimaryAppCommandUsableInAppDM({
         context,

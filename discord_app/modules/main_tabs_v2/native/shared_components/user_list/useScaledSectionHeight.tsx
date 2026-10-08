@@ -10,5 +10,9 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => React2 + Math.max(Math.min(useFontScale.useFontScale(), 2) * React3 - React3, 0)
-  : () => React2 + Math.max(Math.min(useFontScale.useFontScale(), 2) * React3 - React3, 0);
+  ? function useScaledSectionHeight() {
+      return React2 + Math.max(Math.min(useFontScale.useFontScale(), 2) * React3 - React3, 0);
+    }
+  : function useScaledSectionHeight() {
+      return React2 + Math.max(Math.min(useFontScale.useFontScale(), 2) * React3 - React3, 0);
+    };

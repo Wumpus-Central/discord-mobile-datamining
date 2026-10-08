@@ -13,7 +13,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGetGameForAppId(arg0) {
       const cResult = c.c(6);
       const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(arg0);
       if (cResult[0] !== getOrFetchApplication) {
@@ -55,7 +55,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = obj3;
       const tmpResult = useGame;
     }
-  : (arg0) => {
+  : function useGetGameForAppId(arg0) {
       const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(arg0);
       let canonicalGameId;
       if (getOrFetchApplication != null) {
@@ -79,13 +79,13 @@ const result = size.fileFinishedImporting("modules/games/hooks/useGetGameForAppI
 
 export default tmp2;
 export const useGetGamesForAppIds = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGetGamesForAppIds(arg0) {
       const cResult = require("c").c(6);
       const arr = useGetOrFetchApplicationsDefault(arg0);
       if (cResult[0] !== arr) {
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function s(getCanonicalGameId) {
+          const fn = function o(getCanonicalGameId) {
             return getCanonicalGameId.getCanonicalGameId();
           };
           cResult[2] = fn;
@@ -93,14 +93,14 @@ export const useGetGamesForAppIds = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp6 = cResult[2];
         }
-        const found = arr.filter(tmp(1375).isNotNullish);
+        const found = arr.filter(tmp(1387).isNotNullish);
         let mapped = found.map(tmp6);
-        const found1 = mapped.filter(tmp(1375).isNotNullish);
+        const found1 = mapped.filter(tmp(1387).isNotNullish);
         cResult[0] = arr;
         cResult[1] = found1;
       } else {
         _require = tmp4;
-        const games = tmp(6822).useGames(tmp4);
+        const games = tmp(6995).useGames(tmp4);
         const _Symbol2 = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [GameStore];
@@ -110,7 +110,7 @@ export const useGetGamesForAppIds = ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = cResult[3];
         }
         if (cResult[4] !== cResult[1]) {
-          const fn2 = function f() {
+          const fn2 = function p() {
             const mapped = closure_0.map((item) => game.getGame(item));
             return mapped.filter(GlobalUtils.isNotNullish);
           };
@@ -120,13 +120,13 @@ export const useGetGamesForAppIds = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp13 = cResult[5];
         }
-        const tmpResult = tmp(6822);
+        const tmpResult = tmp(6995);
         return tmp(504).useStateFromStoresArray(tmp11, tmp13);
       }
       const obj = require("c");
     }
-  : (arg0) => {
-      const tmp = memo(6670)(arg0);
+  : function useGetGamesForAppIds(arg0) {
+      const tmp = memo(6847)(arg0);
       _require = tmp;
       const items = [tmp];
       memo = noop.useMemo(() => {

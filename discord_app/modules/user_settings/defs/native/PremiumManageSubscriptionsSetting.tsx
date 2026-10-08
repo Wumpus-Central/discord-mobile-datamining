@@ -10,7 +10,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCanNavigateToPaymentSetting() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t() {
@@ -29,8 +29,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      noop.useCallback(() => {
+  : function useCanNavigateToPaymentSetting() {
+      return noop.useCallback(() => {
         const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
         let flag = !isPaymentsBlocked;
         if (isPaymentsBlocked) {
@@ -39,9 +39,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return flag;
       }, []);
-const SettingBuilders = fn(11142);
+    };
+const SettingBuilders = fn(11262);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShowManageSubscriptionsSetting() {
       const cResult = c.c(1);
       let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -56,7 +57,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return hasPremiumSubscriptionToDisplay;
     }
-  : () => {
+  : function useShowManageSubscriptionsSetting() {
       let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
       if (hasPremiumSubscriptionToDisplay) {
         hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({
@@ -71,10 +72,10 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["z5YcJ+"]);
   },
   parent: null,
-  IconComponent: fn(14812).SubscriptionIcon,
+  IconComponent: fn(15073).SubscriptionIcon,
   usePreNavigationAction: tmp2,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useShowManageSubscriptionsSetting() {
         const cResult = c.c(1);
         let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -89,7 +90,7 @@ const route = SettingBuilders.createRoute({
         }
         return hasPremiumSubscriptionToDisplay;
       }
-    : () => {
+    : function useShowManageSubscriptionsSetting() {
         let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
         if (hasPremiumSubscriptionToDisplay) {
           hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({

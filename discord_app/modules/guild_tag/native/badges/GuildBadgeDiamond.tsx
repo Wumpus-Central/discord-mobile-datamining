@@ -1,6 +1,6 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeDiamond.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07550_inlineStyles.js";
 import GuildBadgeUtils from "GuildBadgeUtils.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -20,7 +20,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeDiamond.tsx");
 
 export const GuildBadgeDiamond = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildBadgeDiamond(arg0) {
       const cResult = c.c(65);
       if (cResult[0] !== arg0) {
         ({ width, height, primaryTintColor } = arg0);
@@ -376,7 +376,7 @@ export const GuildBadgeDiamond = ReactCompilerGating.isReactCompilerEnabled()
       cResult[64] = tmp105;
       tmp103 = tmp105;
     }
-  : (primaryTintColor) => {
+  : function GuildBadgeDiamond(primaryTintColor) {
       let num = primaryTintColor.width;
       if (num === undefined) {
         num = 24;

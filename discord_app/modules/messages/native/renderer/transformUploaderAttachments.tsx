@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/transformUploaderAttachments.tsx
 import util from "../../../../intl/index.native.tsx";
 import MediaFormatTesters from "../../MediaFormatTesters.tsx";
-import CloudUpload from "../../../../lib/uploader/CloudUpload.tsx";
 import RowGeneratorConstants from "RowGeneratorConstants.tsx";
+import CloudUpload from "../../../../lib/uploader/CloudUpload.tsx";
 import ExplicitMediaUtils from "ExplicitMediaUtils.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 

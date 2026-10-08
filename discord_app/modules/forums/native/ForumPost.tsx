@@ -10,12 +10,12 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const useForumChannelStore = fn(11629).useForumChannelStore;
+const useForumChannelStore = fn(11693).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForumPostGrid(arg0) {
       const cResult = c.c(17);
       ({ firstMessage, hasUnreads, isNew, media, parentChannel, thread } = arg0);
       if (cResult[0] === hasUnreads) {
@@ -80,7 +80,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp4;
       tmp3 = tmp4;
     }
-  : (arg0) => {
+  : function ForumPostGrid(arg0) {
       ({ hasUnreads, thread } = arg0);
       const obj = { children: null };
       ({ firstMessage, isNew, media, parentChannel } = arg0);
@@ -95,7 +95,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
 fn(558);
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForumPostListDisabled(arg0) {
       let ForumPostDisabledContainer = threadId;
       let tmp = dependencyMap;
       const cResult = threadId(576).c(18);
@@ -142,7 +142,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const result1 = ForumPostDisabledContainer(504);
       const stateFromStores1 = result1.useStateFromStores(tmp9, tmp11);
-      const result2 = ForumPostDisabledContainer(6817);
+      const result2 = ForumPostDisabledContainer(6990);
       const firstForumPostMessage = result2.useFirstForumPostMessage(stateFromStores);
       ({ firstMessage, loaded } = firstForumPostMessage);
       if (cResult[6] !== firstMessage) {
@@ -153,7 +153,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp14 = cResult[7];
       }
-      const result3 = ForumPostDisabledContainer(7539);
+      const result3 = ForumPostDisabledContainer(9261);
       const content = result3.useForumPostFirstMessageMarkup(tmp14).content;
       if (!loaded) {
         return null;
@@ -168,7 +168,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                   if (cResult[15] === style) {
                   }
-                  ForumPostDisabledContainer = ForumPostDisabledContainer(11648).ForumPostDisabledContainer;
+                  ForumPostDisabledContainer = ForumPostDisabledContainer(11713).ForumPostDisabledContainer;
                   const obj3 = { style, children: tmp15 };
                   tmp = closure_6(ForumPostDisabledContainer, obj3);
                   cResult[15] = style;
@@ -190,7 +190,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           firstMessageLoaded: loaded,
           isLocalDeviceMedia: true,
         };
-        const tmp17 = closure_6(tmp7(11649), obj4);
+        const tmp17 = closure_6(tmp7(11714), obj4);
         cResult[8] = content;
         cResult[9] = firstMessage;
         cResult[10] = loaded;
@@ -203,7 +203,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = threadId(576);
       tmp7 = stateFromStores;
     }
-  : (threadId) => {
+  : function ForumPostListDisabled(threadId) {
       threadId = threadId.threadId;
       ({ style, localDeviceMedia } = threadId);
       const items = [ChannelStore];
@@ -221,9 +221,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         ChannelStore.getChannel(stateFromStores.parent_id),
       );
       const obj2 = threadId(504);
-      const firstForumPostMessage = threadId(6817).useFirstForumPostMessage(stateFromStores);
+      const firstForumPostMessage = threadId(6990).useFirstForumPostMessage(stateFromStores);
       ({ firstMessage, loaded } = firstForumPostMessage);
-      threadId(7539);
+      threadId(9261);
       if (loaded) {
         const obj4 = { style, children: null };
         const obj5 = {
@@ -237,14 +237,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           firstMessageLoaded: loaded,
           isLocalDeviceMedia: true,
         };
-        obj4.children = closure_6(tmp4(11649), obj5);
-        tmp5 = closure_6(tmp(11648).ForumPostDisabledContainer, obj4);
+        obj4.children = closure_6(tmp4(11714), obj5);
+        tmp5 = closure_6(tmp(11713).ForumPostDisabledContainer, obj4);
       }
       return tmp5;
     };
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (threadId) => {
+  ? function ConnectedForumPost(threadId) {
       const cResult = threadId(firstMessage[6]).c(49);
       threadId = threadId.threadId;
       const style = threadId.style;
@@ -524,7 +524,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       tmp16 = obj8;
       const tmpResult10 = threadId(firstMessage[13]);
     }
-  : (arg0) => {
+  : function ConnectedForumPost(arg0) {
       ({ threadId: require, style } = arg0);
       let parent_id;
       let firstMessage;
@@ -650,7 +650,7 @@ let result = size.fileFinishedImporting("modules/forums/native/ForumPost.tsx");
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (threadId) => {
+    ? function ForumPostMissingWrapper(threadId) {
         _require = threadId;
         const cResult = require("c").c(5);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -682,7 +682,7 @@ export default noop.memo(
         }
         tmpResult = require("initialize");
       }
-    : (arg0) => {
+    : function ForumPostMissingWrapper(arg0) {
         _require = arg0;
         const items = [ChannelStore];
         let tmp = null;

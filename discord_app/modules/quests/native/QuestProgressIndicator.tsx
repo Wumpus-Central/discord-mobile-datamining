@@ -2,7 +2,7 @@
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
-import inlineStyles from "../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/07550_inlineStyles.js";
 import noop_mod from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -45,7 +45,7 @@ const __initData5 = { code: "function QuestProgressIndicatorTsx5(){const{circumf
 const __initData6 = { code: "function QuestProgressIndicatorTsx6(){const{underlayOpacity,styles}=this.__closure;return{opacity:underlayOpacity.get(),...styles.opacityMask};}" };
 let result = size.fileFinishedImporting("modules/quests/native/QuestProgressIndicator.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestProgressIndicator(arg0) {
   let obj = progress(stateFromStores[9]);
   const cResult = obj.c(98);
   ({ quest, size, progress } = arg0);
@@ -695,7 +695,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   tmp27 = items6;
   tmp26 = fn3;
   const tmpResult12 = progress(stateFromStores[4]);
-}) : ((loading) => {
+}) : (function QuestProgressIndicator(loading) {
   ({ quest, size, progress } = loading);
   let flag = loading.loading;
   if (flag === undefined) {

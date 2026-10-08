@@ -8,7 +8,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileWishlistView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (wishlistId) => {
+  ? function useTrackUserProfileWishlistView(wishlistId) {
       const cResult = wishlistId(onAction[3]).c(10);
       wishlistId = wishlistId.wishlistId;
       onAction = wishlistId.onAction;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = items1;
       tmp9 = fn2;
     }
-  : (wishlistId) => {
+  : function useTrackUserProfileWishlistView(wishlistId) {
       wishlistId = wishlistId.wishlistId;
       const onAction = wishlistId.onAction;
       const productLines = wishlistId.productLines;

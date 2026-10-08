@@ -6,7 +6,7 @@ import FamilyCenterActionCreatorsDefault from "../FamilyCenterActionCreators.tsx
 import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
 require = fn;
-const FamilyCenterConstants = fn(7062);
+const FamilyCenterConstants = fn(7248);
 ({ FamilyCenterAction: closure_4, FamilyCenterSubPages } = FamilyCenterConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const ReactCompilerGating = fn(558);
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTab.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSelectedMyFamilyTab() {
       const cResult = c.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FamilyCenterStore];
@@ -30,12 +30,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const stateFromStores = useStateFromStores.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function s(tab) {
+        function handleTabChange(tab) {
           tab = FamilyCenterActionCreatorsDefault.selectTab(tab);
           AnalyticsUtilsDefault.track(constants.FAMILY_CENTER_ACTION, { action: TabChange.TabChange, tab });
-        };
-        cResult[2] = fn2;
-        let tmp8 = fn2;
+        }
+        cResult[2] = handleTabChange;
+        let tmp8 = handleTabChange;
       } else {
         tmp8 = cResult[2];
       }
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : () => {
+  : function useSelectedMyFamilyTab() {
       let obj = {
         selectedTab: null,
         handleTabChange(tab) {

@@ -9,7 +9,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSecureFramesPersistentCodesValue() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SecureFramesPersistedStore];
@@ -25,13 +25,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useSecureFramesPersistentCodesValue() {
       const items = [SecureFramesPersistedStore];
       return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
     };
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSecureFramesEncryptionDescription() {
       const cResult = c.c(2);
       const secureFramesVerifiedUserIds = useSecureFramesVerifiedUsers.useSecureFramesVerifiedUserIds();
       if (cResult[0] !== secureFramesVerifiedUserIds.length) {
@@ -46,7 +46,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : () => {
+  : function useSecureFramesEncryptionDescription() {
       const secureFramesVerifiedUserIds = useSecureFramesVerifiedUsers.useSecureFramesVerifiedUserIds();
       const intl = util.intl;
       return intl.formatToPlainString(util.t["6vrePS"], { count: secureFramesVerifiedUserIds.length });
@@ -57,7 +57,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.x8U2eC);
   },
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useSecureFramesEncryptionDescription() {
         const cResult = c.c(2);
         const secureFramesVerifiedUserIds = useSecureFramesVerifiedUsers.useSecureFramesVerifiedUserIds();
         if (cResult[0] !== secureFramesVerifiedUserIds.length) {
@@ -72,12 +72,12 @@ const route = SettingBuilders.createRoute({
         }
         return tmp4;
       }
-    : () => {
+    : function useSecureFramesEncryptionDescription() {
         const secureFramesVerifiedUserIds = useSecureFramesVerifiedUsers.useSecureFramesVerifiedUserIds();
         const intl = util.intl;
         return intl.formatToPlainString(util.t["6vrePS"], { count: secureFramesVerifiedUserIds.length });
       },
-  parent: fn(7645).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(7966).MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate: tmp2,
   screen: {
     route: fn(1085).UserSettingsSections.SECURE_FRAMES,

@@ -4,8 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef12452 from "../../../../_runtime/metro/12452__.js";
-import _modDef12453 from "../../../../_runtime/metro/12453__.js";
+import _modDef12548 from "../../../../_runtime/metro/12548__.js";
+import _modDef12549 from "../../../../_runtime/metro/12549__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" },
   image: { width: 120, height: 80 },
@@ -26,7 +26,7 @@ const result = size.fileFinishedImporting("modules/forums/native/ForumChannelEmp
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function ForumChannelEmptyState(arg0) {
         const cResult = c.c(26);
         ({ topViewHeight, channelName, tagFilter } = arg0);
         let num = 0;
@@ -49,9 +49,9 @@ export default noop.memo(
             let tmp9 = cResult[4];
           }
           if (tmpResult2.isThemeLight(tmpResult.useThemeContext().theme)) {
-            let tmp5Result = _modDef12452;
+            let tmp5Result = _modDef12548;
           } else {
-            tmp5Result = _modDef12453;
+            tmp5Result = _modDef12549;
           }
           if (cResult[5] === tmp4.image) {
             if (cResult[6] === tmp5Result) {
@@ -161,7 +161,7 @@ export default noop.memo(
         tmp9 = items1;
         tmpResult = shared;
       }
-    : (topViewHeight) => {
+    : function ForumChannelEmptyState(topViewHeight) {
         let num = topViewHeight.topViewHeight;
         if (num === undefined) {
           num = 0;
@@ -174,9 +174,9 @@ export default noop.memo(
         obj2.style = items;
         const obj = shared;
         if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-          let tmp4Result = _modDef12452;
+          let tmp4Result = _modDef12548;
         } else {
-          tmp4Result = _modDef12453;
+          tmp4Result = _modDef12549;
         }
         const items1 = [hasOwnProperty(React4, { source: tmp4Result, style: tmp.image }), ,];
         const obj5 = {

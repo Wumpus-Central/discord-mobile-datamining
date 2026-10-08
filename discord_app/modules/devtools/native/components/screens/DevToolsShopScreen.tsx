@@ -19,7 +19,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 },
 };
@@ -30,7 +30,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsShopScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DevToolsShopScreen() {
       const cResult = c.c(36);
       closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DevSettingsStore];
-        const fn = function h() {
+        const fn = function u() {
           return DevSettingsStore.get("shop_disable_cache");
         };
         cResult[1] = items;
@@ -157,19 +157,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp28 = cResult[13];
       }
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn3 = function k(flag) {
-          return require("DevSettingsActions").toggle("shop_include_unpublished", flag);
-        };
-        cResult[14] = fn3;
+        class D {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_2[12]);
+            return obj.toggle("shop_include_unpublished", arg0);
+          }
+        }
+        cResult[14] = D;
         class R {
           constructor() {
             return closure_1_4.get("bypass_google_sku_sync");
           }
         }
       } else {
-        const tmp32 = cResult[14];
+        class D {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_2[12]);
+            return obj.toggle("shop_include_unpublished", arg0);
+          }
+        }
       }
       if (cResult[15] !== stateFromStores1) {
+        class D {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_2[12]);
+            return obj.toggle("shop_include_unpublished", arg0);
+          }
+        }
         const obj5 = {
           label: "Show unpublished items in collectibles shop",
           subLabel: "shop_include_unpublished",
@@ -181,19 +195,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_1_4.get("bypass_google_sku_sync");
           }
         }
-        tmp35[0] = stateFromStores1;
-        tmp35[1] = tmp32;
-        obj5.trailing = hasOwnProperty(FormSwitch.FormSwitch, tmp35);
-        const tmp36 = hasOwnProperty(TableRow.TableRow, obj5);
+        tmp34[0] = stateFromStores1;
+        tmp34[1] = tmp32;
+        obj5.trailing = hasOwnProperty(FormSwitch.FormSwitch, tmp34);
+        const tmp35 = hasOwnProperty(TableRow.TableRow, obj5);
         cResult[15] = stateFromStores1;
-        cResult[16] = tmp36;
-        let tmp33 = tmp36;
+        cResult[16] = tmp35;
       } else {
-        tmp33 = cResult[16];
+        class D {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_2[12]);
+            return obj.toggle("shop_include_unpublished", arg0);
+          }
+        }
       }
       if (cResult[17] === isDismissed) {
-        if (cResult[18] === handleToggleDismissState) {
-          let tmp37 = cResult[19];
+        class D {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_2[12]);
+            return obj.toggle("shop_include_unpublished", arg0);
+          }
         }
         const _Symbol = Symbol;
         class R {
@@ -202,6 +223,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[21] !== stateFromStores2) {
+          class D {
+            constructor(arg0) {
+              obj = closure_1_0(closure_1_2[12]);
+              return obj.toggle("shop_include_unpublished", arg0);
+            }
+          }
           const obj6 = {
             label: "Show debug log overlay in collectibles shop",
             subLabel: "shop_show_debug_overlay",
@@ -213,15 +240,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return closure_1_4.get("bypass_google_sku_sync");
             }
           }
-          tmp43[0] = stateFromStores2;
-          tmp43[1] = tmp40;
-          obj6.trailing = hasOwnProperty(FormSwitch.FormSwitch, tmp43);
-          const tmp44 = hasOwnProperty(TableRow.TableRow, obj6);
+          tmp41[0] = stateFromStores2;
+          tmp41[1] = tmp39;
+          obj6.trailing = hasOwnProperty(FormSwitch.FormSwitch, tmp41);
+          const tmp42 = hasOwnProperty(TableRow.TableRow, obj6);
           cResult[21] = stateFromStores2;
-          cResult[22] = tmp44;
-          let tmp41 = tmp44;
+          cResult[22] = tmp42;
         } else {
-          tmp41 = cResult[22];
+          class D {
+            constructor(arg0) {
+              obj = closure_1_0(closure_1_2[12]);
+              return obj.toggle("shop_include_unpublished", arg0);
+            }
+          }
         }
         const _Symbol2 = Symbol;
         if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
@@ -263,12 +294,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return closure_1_4.get("bypass_google_sku_sync");
             }
           }
-          tmp47[0] = stateFromStores3;
-          tmp47[1] = tmp45;
-          obj7.trailing = hasOwnProperty(FormSwitch.FormSwitch, tmp47);
-          const tmp48 = hasOwnProperty(TableRow.TableRow, obj7);
+          tmp45[0] = stateFromStores3;
+          tmp45[1] = tmp43;
+          obj7.trailing = hasOwnProperty(FormSwitch.FormSwitch, tmp45);
+          const tmp46 = hasOwnProperty(TableRow.TableRow, obj7);
           cResult[24] = stateFromStores3;
-          cResult[25] = tmp48;
+          cResult[25] = tmp46;
         } else {
           class P {
             constructor(arg0) {
@@ -287,18 +318,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj8 = { spacing: 16, children: null };
         const obj9 = { title: "Shop Toggles", hasIcons: false, children: null };
-        const items4 = [tmp28, tmp33, tmp37, tmp41, tmp46];
+        const items4 = [tmp28, tmp33, tmp36, tmp40, tmp44];
         obj9.children = items4;
         obj8.children = timestampProducer(TableRowGroup.TableRowGroup, obj9);
-        const tmp52 = hasOwnProperty(Stack_Stack.Stack, obj8);
+        const tmp50 = hasOwnProperty(Stack_Stack.Stack, obj8);
         cResult[26] = tmp28;
         cResult[27] = tmp33;
-        cResult[28] = tmp37;
-        cResult[29] = tmp41;
-        cResult[30] = tmp46;
-        cResult[31] = tmp52;
+        cResult[28] = tmp36;
+        cResult[29] = tmp40;
+        cResult[30] = tmp44;
+        cResult[31] = tmp50;
       }
-      const tmp38 = hasOwnProperty(TableSwitchRow.TableSwitchRow, {
+      const tmp37 = hasOwnProperty(TableSwitchRow.TableSwitchRow, {
         label: "Collectibles Marketing",
         subLabel: "COLLECTIBLES_SHOP_ENTRY_MARKETING",
         subLabelLineClamp: 1,
@@ -307,13 +338,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       cResult[17] = isDismissed;
       cResult[18] = handleToggleDismissState;
-      cResult[19] = tmp38;
-      tmp37 = tmp38;
+      cResult[19] = tmp37;
       const tmp6ResultResult = toggleDismissibleContentDismissStateDefault(
         dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING,
       );
     }
-  : () => {
+  : function DevToolsShopScreen() {
       const tmp = closure_7();
       const items = [DevSettingsStore];
       const stateFromStores = initialize.useStateFromStores(items, () => DevSettingsStore.get("shop_disable_cache"));

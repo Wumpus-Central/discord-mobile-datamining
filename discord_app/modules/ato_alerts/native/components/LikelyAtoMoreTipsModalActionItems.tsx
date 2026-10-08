@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/ato_alerts/native/components/LikelyAtoMoreTipsModalActionItems.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (senderId) => {
+  ? function LikelyAtoMoreTipsModalActionItems(senderId) {
       const cResult = senderId(576).c(13);
       senderId = senderId.senderId;
       const handleMutePressed = senderId.handleMutePressed;
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp14 = cResult[8];
       }
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp18 = jsx(tmp(9826).BellSlashIcon, {});
+        const tmp18 = jsx(tmp(10325).BellSlashIcon, {});
         cResult[9] = tmp18;
         let tmp16 = tmp18;
       } else {
@@ -77,9 +77,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return tmp19;
       }
       const tmpResult = senderId(504);
-      const tmp20 = jsx(senderId(6081).TableRowGroup, {
+      const tmp20 = jsx(senderId(6267).TableRowGroup, {
         hasIcons: true,
-        children: jsx(senderId(6000).TableRow, {
+        children: jsx(senderId(6184).TableRow, {
           label: tmp12,
           subLabel: tmp14,
           onPress: handleMutePressed,
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp19 = tmp20;
       const obj4 = {
         hasIcons: true,
-        children: jsx(senderId(6000).TableRow, {
+        children: jsx(senderId(6184).TableRow, {
           label: tmp12,
           subLabel: tmp14,
           onPress: handleMutePressed,
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
       };
     }
-  : (senderId) => {
+  : function LikelyAtoMoreTipsModalActionItems(senderId) {
       senderId = senderId.senderId;
       const items = [UserStore];
       const items1 = [senderId];
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = senderId(1126).intl;
       obj3.subLabel = intl2.string(senderId(1126).t.w2ve0t);
       obj3.onPress = senderId.handleMutePressed;
-      obj3.icon = jsx(senderId(9826).BellSlashIcon, {});
-      obj2.children = jsx(senderId(6000).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
-      return jsx(senderId(6081).TableRowGroup, { hasIcons: true, children: null });
+      obj3.icon = jsx(senderId(10325).BellSlashIcon, {});
+      obj2.children = jsx(senderId(6184).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
+      return jsx(senderId(6267).TableRowGroup, { hasIcons: true, children: null });
     };

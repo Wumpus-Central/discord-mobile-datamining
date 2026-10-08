@@ -9,7 +9,7 @@ const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RootThemeContextProvider(arg0) {
       const cResult = c.c(15);
       ({
         children,
@@ -119,7 +119,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = themedContext;
       const tmpResult = native;
     }
-  : (children) => {
+  : function RootThemeContextProvider(children) {
       let DARK = children.theme;
       if (DARK === undefined) {
         DARK = gradient.DARK;
@@ -200,7 +200,7 @@ const result = size.fileFinishedImporting(
 
 export const RootThemeContextProvider = tmp2;
 export const DisableCustomTheme = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function DisableCustomTheme(children) {
       const cResult = c.c(5);
       const themeContext = native.useThemeContext();
       if (cResult[0] !== themeContext) {
@@ -230,8 +230,8 @@ export const DisableCustomTheme = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp12;
       const obj4 = { value: tmp5, children: children.children };
     }
-  : (children) => {
-      themeContext = themeContext(4595).useThemeContext();
+  : function DisableCustomTheme(children) {
+      themeContext = themeContext(4787).useThemeContext();
       const items = [themeContext];
       const memo = noop.useMemo(() => {
         const obj2 = {};
@@ -241,5 +241,5 @@ export const DisableCustomTheme = ReactCompilerGating.isReactCompilerEnabled()
         obj2.gradient = null;
         return native.createThemedContext(obj2);
       }, items);
-      return jsx(themeContext(4595).ThemeContext.Provider, { value: memo, children: children.children });
+      return jsx(themeContext(4787).ThemeContext.Provider, { value: memo, children: children.children });
     };

@@ -1,6 +1,6 @@
 // discord_app/modules/tiny_bronco/getTinyBroncoWarningDescriptions.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef3105 from "TinyBronco.messages.js";
+import _modDef3149 from "TinyBronco.messages.js";
 import TinyBroncoExperiment from "TinyBroncoExperiment.tsx";
 import TinyBroncoConstants from "TinyBroncoConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -37,13 +37,13 @@ export const getTinyBroncoWarningDescriptions = function getTinyBroncoWarningDes
       obj2.unverified = stringResult;
     } else {
       const obj3 = { guildName };
-      obj2.adult = intl.formatToPlainString(_modDef3105.iK0n30, obj3);
+      obj2.adult = intl.formatToPlainString(_modDef3149.iK0n30, obj3);
       const intl2 = util.intl;
       const obj4 = { guildName };
-      obj2.teen = intl2.formatToPlainString(_modDef3105.ezJA0R, obj4);
+      obj2.teen = intl2.formatToPlainString(_modDef3149.ezJA0R, obj4);
       const intl3 = util.intl;
       const obj5 = { guildName };
-      obj2.unverified = intl3.formatToPlainString(_modDef3105.h4HbnI, obj5);
+      obj2.unverified = intl3.formatToPlainString(_modDef3149.h4HbnI, obj5);
     }
   }
   obj = TinyBroncoExperiment;

@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/B
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (bountyId) => {
+    ? function BountiesModal(bountyId) {
         const cResult = bountyId(variant[3]).c(11);
         bountyId = bountyId.bountyId;
         const sourceQuestContent = bountyId.sourceQuestContent;
@@ -133,7 +133,7 @@ export default noop.memo(
         tmp = bountyId;
         tmp2 = variant;
       }
-    : (bountyId) => {
+    : function BountiesModal(bountyId) {
         bountyId = bountyId.bountyId;
         const sourceQuestContent = bountyId.sourceQuestContent;
         const variant = bountyId.variant;

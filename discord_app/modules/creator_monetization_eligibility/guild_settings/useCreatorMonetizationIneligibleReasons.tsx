@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useCreatorMonetizationIneligibleReasons = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCreatorMonetizationIneligibleReasons(arg0) {
       const cResult = c.c(2);
       const obj2 = useCreatorMonetizationEligibilityItemsDefault(arg0);
       if (cResult[0] !== obj2) {
@@ -35,7 +35,7 @@ export const useCreatorMonetizationIneligibleReasons = ReactCompilerGating.isRea
       }
       return tmp2;
     }
-  : (arg0) => {
+  : function useCreatorMonetizationIneligibleReasons(arg0) {
       const obj = useCreatorMonetizationEligibilityItemsDefault(arg0);
       let flatMapResult;
       if (obj != null) {

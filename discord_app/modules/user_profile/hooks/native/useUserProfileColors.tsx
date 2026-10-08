@@ -7,8 +7,8 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 const initialize = obj(504);
 const utils_ColorUtils = obj(1103);
-const useToken = obj(4586);
-const UserProfileGradientUtils = obj(7912);
+const useToken = obj(4778);
+const UserProfileGradientUtils = obj(8331);
 require = fn;
 const ThemeTypes = fn(1096).ThemeTypes;
 const ReactCompilerGating = fn(558);
@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileColors.tsx");
 
 export const useUserProfileColors = ReactCompilerGating.isReactCompilerEnabled()
-  ? (theme) => {
+  ? function useUserProfileColors(theme) {
       let obj = require;
       let int2hexResult = dependencyMap;
       const cResult = c.c(21);
@@ -25,7 +25,7 @@ export const useUserProfileColors = ReactCompilerGating.isReactCompilerEnabled()
       const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme.theme);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
-        const fn = function t() {
+        const fn = function s() {
           return AccessibilityStore.syncProfileThemeWithUserTheme;
         };
         cResult[0] = items;
@@ -145,7 +145,7 @@ export const useUserProfileColors = ReactCompilerGating.isReactCompilerEnabled()
       tmp16 = obj5;
       const objResult17 = useToken;
     }
-  : (theme) => {
+  : function useUserProfileColors(theme) {
       ({ primaryColor, secondaryColor } = theme);
       const tmp2 = useThemeDefault();
       const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme.theme);

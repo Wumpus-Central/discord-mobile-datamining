@@ -11,22 +11,22 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {};
-obj[fn(1188).AvatarSizes.LARGE_48] = fn(1188).AvatarSizes.SMALL;
-obj[fn(1188).AvatarSizes.XLARGE] = fn(1188).AvatarSizes.NORMAL;
-obj[fn(1188).AvatarSizes.XXLARGE] = fn(1188).AvatarSizes.LARGE;
-obj[fn(1188).AvatarSizes.PROFILE] = fn(1188).AvatarSizes.XXLARGE;
-obj[fn(1188).AvatarSizes.REFRESH_MEDIUM_32] = fn(1188).AvatarSizes.XSMALL_20;
-obj[fn(1188).AvatarSizes.XSMALL] = fn(1188).AvatarSizes.SIZE_16;
-obj[fn(1188).AvatarSizes.SIZE_16] = fn(1188).AvatarSizes.XXSMALL_10;
-obj[fn(1188).AvatarSizes.NORMAL] = fn(1188).AvatarSizes.XSMALL;
-const createStyles = fn(4896);
+obj[fn(1200).AvatarSizes.LARGE_48] = fn(1200).AvatarSizes.SMALL;
+obj[fn(1200).AvatarSizes.XLARGE] = fn(1200).AvatarSizes.NORMAL;
+obj[fn(1200).AvatarSizes.XXLARGE] = fn(1200).AvatarSizes.LARGE;
+obj[fn(1200).AvatarSizes.PROFILE] = fn(1200).AvatarSizes.XXLARGE;
+obj[fn(1200).AvatarSizes.REFRESH_MEDIUM_32] = fn(1200).AvatarSizes.XSMALL_20;
+obj[fn(1200).AvatarSizes.XSMALL] = fn(1200).AvatarSizes.SIZE_16;
+obj[fn(1200).AvatarSizes.SIZE_16] = fn(1200).AvatarSizes.XXSMALL_10;
+obj[fn(1200).AvatarSizes.NORMAL] = fn(1200).AvatarSizes.XSMALL;
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({
   firstFace: { position: "absolute", top: 0, left: 0 },
   secondFace: { position: "absolute", bottom: 0, right: 0 },
 });
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FacepileGroupDMAvatar(arg0) {
       obj = c;
       const cResult = obj.c(33);
       ({ style, size, animate, users, sources, pileSizeOverride, status, accessible, accessibilityLabel } = arg0);
@@ -186,7 +186,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = obj9;
       tmp18 = obj9;
     }
-  : (arg0) => {
+  : function FacepileGroupDMAvatar(arg0) {
       ({ size, animate, users, sources, pileSizeOverride } = arg0);
       _require = undefined;
       dependencyMap = undefined;
@@ -269,7 +269,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMAvatar.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GroupDMAvatar(arg0) {
       let Avatar = channel;
       let tmp = dependencyMap;
       const cResult = channel(576).c(20);
@@ -351,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      Avatar = Avatar(1188).Avatar;
+      Avatar = Avatar(1200).Avatar;
       tmp = closure_5(Avatar, {
         autoStatusCutout: true,
         status,
@@ -372,7 +372,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = tmp;
       const AvatarResult = Avatar(504);
     }
-  : (pileSizeOverride) => {
+  : function GroupDMAvatar(pileSizeOverride) {
       ({ style, channel } = pileSizeOverride);
       ({ size, animate, status, accessible, accessibilityLabel } = pileSizeOverride);
       const items = [UserStore];
@@ -397,7 +397,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp5;
       }
-      tmp5 = closure_5(channel(1188).Avatar, {
+      tmp5 = closure_5(channel(1200).Avatar, {
         autoStatusCutout: true,
         status,
         style,

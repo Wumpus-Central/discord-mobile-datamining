@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function ChatViewPopups(guildId) {
       const cResult = guildId(576).c(5);
       guildId = guildId.guildId;
       importDefault = showWelcomeModal.useRef(false);
@@ -15,7 +15,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp2;
       let obj = guildId(576);
       let obj2 = showWelcomeModal;
-      showWelcomeModal = guildId(12463).useShowWelcomeModal(guildId, guildId.channelId);
+      showWelcomeModal = guildId(12559).useShowWelcomeModal(guildId, guildId.channelId);
       if (cResult[0] === guildId) {
         if (cResult[1] === tmp2) {
           if (cResult[2] === showWelcomeModal) {
@@ -60,13 +60,13 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = items;
       tmp4 = fn;
     }
-  : (guildId) => {
+  : function ChatViewPopups(guildId) {
       guildId = guildId.guildId;
       let showWelcomeModal;
       importDefault = showWelcomeModal.useRef(false);
       const tmp = useIsHubRealNamePromptShowingDefault(guildId);
       dependencyMap = tmp;
-      showWelcomeModal = guildId(12463).useShowWelcomeModal(guildId, guildId.channelId);
+      showWelcomeModal = guildId(12559).useShowWelcomeModal(guildId, guildId.channelId);
       const items = [guildId, showWelcomeModal, tmp];
       const effect = showWelcomeModal.useEffect(() => {
         if (!ref.current) {

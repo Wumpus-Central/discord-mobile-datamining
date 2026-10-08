@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/usePersonalizedVoiceChannelUsers.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild_id) => {
+  ? function usePersonalizedVoiceChannelUsers(guild_id) {
       _require = guild_id;
       const cResult = require("c").c(15);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -48,12 +48,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           const items2 = [stateFromStores1];
-          const fn3 = function h() {
-            return stateFromStores1.hasConsented(constants.PERSONALIZATION);
-          };
+          class A {
+            constructor() {
+              return closure_3.hasConsented(closure_1_6.PERSONALIZATION);
+            }
+          }
           cResult[7] = items2;
-          cResult[8] = fn3;
-          let tmp14 = fn3;
+          cResult[8] = A;
+          let tmp14 = A;
           let tmp13 = items2;
         } else {
           tmp13 = cResult[7];
@@ -64,6 +66,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol3 = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           const items3 = [UserStore];
+          class A {
+            constructor() {
+              return closure_3.hasConsented(closure_1_6.PERSONALIZATION);
+            }
+          }
           cResult[9] = items3;
           let tmp17 = items3;
         } else {
@@ -78,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmp(tmp2[7]).useStateFromStoresArray(tmp17, tmp19, tmp20);
           }
         }
-        const fn4 = function p() {
+        const fn3 = function p() {
           if (stateFromStores1) {
             let sorted = stateFromStoresArray.sort((arg0, arg1) => {
               value = stateFromStores.get(arg1);
@@ -109,10 +116,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = stateFromStores1;
         cResult[11] = stateFromStores;
         cResult[12] = stateFromStoresArray;
-        cResult[13] = fn4;
+        cResult[13] = fn3;
         cResult[14] = items4;
         tmp20 = items4;
-        tmp19 = fn4;
+        tmp19 = fn3;
         const tmpResult5 = tmp(tmp2[7]);
       }
       const fn = function c() {
@@ -132,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       const obj = require("c");
     }
-  : (arg0) => {
+  : function usePersonalizedVoiceChannelUsers(arg0) {
       _require = arg0;
       const items = [SortedVoiceStateStore];
       const items1 = [,];

@@ -12,7 +12,7 @@ const require = globalThis.__r;
 let closure_7 = {};
 let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, current, arg2) => {
+  ? function useIntersectionObserver(arg0, current, arg2) {
       _require = arg0;
       const cResult = require("c").c(10);
       importDefault = tmp3;
@@ -88,7 +88,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = items1;
       tmp9 = fn;
     }
-  : (arg0, arg1) => {
+  : function useIntersectionObserver(arg0, arg1) {
       closure_0 = arg0;
       let flag = arg2;
       if (arg2 === undefined) {
@@ -101,7 +101,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (arg1 == null) {
         tmp4 = closure_7;
       }
-      const tmp3Result = flag(7194)(tmp4);
+      const tmp3Result = flag(7373)(tmp4);
       ref2 = tmp3Result;
       closure_5(null);
       const items = [flag, arg0, tmp3Result];
@@ -143,7 +143,7 @@ let result = size.fileFinishedImporting("../discord_common/js/shared/hooks/useIn
 
 export const useIntersectionObserver = tmp3;
 export const useIsVisible = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useIsVisible(arg0, arg1, arg2) {
       closure_0 = arg0;
       const cResult = c.c(4);
       let num = 1;
@@ -151,7 +151,7 @@ export const useIsVisible = ReactCompilerGating.isReactCompilerEnabled()
         num = arg1;
       }
       if (cResult[0] !== arg0) {
-        const fn = function l(isIntersecting) {
+        const fn = function s(isIntersecting) {
           closure_0(isIntersecting.isIntersecting);
         };
         cResult[0] = arg0;
@@ -176,7 +176,7 @@ export const useIsVisible = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_8(useConstRefDefault(tmp4).current, tmp6, tmp3);
     }
-  : (arg0) => {
+  : function useIsVisible(arg0) {
       closure_0 = arg0;
       let num = arg1;
       if (arg1 === undefined) {
@@ -188,7 +188,7 @@ export const useIsVisible = ReactCompilerGating.isReactCompilerEnabled()
       }
       const items = [num];
       return closure_8(
-        num(7194)((isIntersecting) => {
+        num(7373)((isIntersecting) => {
           closure_0(isIntersecting.isIntersecting);
         }).current,
         closure_4(() => {

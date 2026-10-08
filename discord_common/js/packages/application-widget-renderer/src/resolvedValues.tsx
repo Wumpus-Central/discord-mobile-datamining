@@ -94,5 +94,7 @@ const result = size.fileFinishedImporting(
 export { ResolvedValueType };
 export function bindResolveFieldValue(resolutionContext) {
   closure_0 = resolutionContext;
-  return (image, items) => resolveFieldValue(image, items, closure_0);
+  return function resolveFieldValueBound(image, items) {
+    return resolveFieldValue(image, items, closure_0);
+  };
 }

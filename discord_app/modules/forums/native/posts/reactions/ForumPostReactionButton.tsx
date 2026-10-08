@@ -62,7 +62,7 @@ class BurstReactionButton {
     obj1 = { backgroundColor: str, borderColor: null, borderWidth: null };
     backgroundColor1 = undefined;
     tmp5 = jsx;
-    tmp6 = f53731;
+    tmp6 = ReactionButton;
     if (emojiColorPalette != null) {
       backgroundColor1 = emojiColorPalette.backgroundColor;
     }
@@ -105,7 +105,7 @@ class BurstReactionButton {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     display: "flex",
@@ -155,7 +155,7 @@ let obj4 = {
 };
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AdditionalReactionCount(arg0) {
       const cResult = c.c(12);
       ({ count, threadId, containerStyle } = arg0);
       const tmp4 = closure_7();
@@ -219,7 +219,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items1;
       tmp8 = items1;
     }
-  : (arg0) => {
+  : function AdditionalReactionCount(arg0) {
       ({ count, threadId, containerStyle } = arg0);
       const obj = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
       const intl = util.intl;
@@ -235,7 +235,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AddReactionButton(arg0) {
       const cResult = c.c(13);
       ({ threadId, containerStyle, reactionType } = arg0);
       if (undefined === reactionType) {
@@ -303,7 +303,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj3;
       tmp5 = obj3;
     }
-  : (reactionType) => {
+  : function AddReactionButton(reactionType) {
       let NORMAL = reactionType.reactionType;
       ({ threadId, containerStyle } = reactionType);
       if (NORMAL === undefined) {
@@ -320,7 +320,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ReactionButton(arg0) {
       const cResult = c.c(32);
       ({
         emoji,
@@ -485,7 +485,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = emojiURL;
       tmp6 = emojiURL;
     }
-  : (arg0) => {
+  : function ReactionButton(arg0) {
       ({ emoji, count, selected, animate, disabled } = arg0);
       ({ onPress, onLongPress, textStyle, containerStyle, emojiSize, animateCount, accessible } = arg0);
       if (disabled === undefined) {
@@ -547,7 +547,7 @@ export const DEFAULT_EMOJI_SIZE = 14;
 export const AdditionalReactionCount = tmp3;
 export const AddReactionButton = tmp4;
 export const ForumPostReactionButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (emojiSize) => {
+  ? function ForumPostReactionButton(emojiSize) {
       const cResult = c.c(38);
       ({ thread, reaction } = emojiSize);
       ({ animateCount, containerStyle, textStyle, locationAnalyticsObject } = emojiSize);
@@ -655,6 +655,13 @@ export const ForumPostReactionButton = ReactCompilerGating.isReactCompilerEnable
                   cResult[18] = tmp9;
                   cResult[19] = emoji;
                   ({ burst_count: tmp3[20], emoji } = reaction);
+                  class P {
+                    constructor() {
+                      obj = { reaction, disableReactionCreates, disableReactionUpdates, locationAnalyticsObject };
+                      tmp = onTapReaction(obj);
+                      return;
+                    }
+                  }
                   cResult[21] = emoji;
                   reaction = reaction.me_burst;
                   cResult[22] = reaction;
@@ -718,35 +725,46 @@ export const ForumPostReactionButton = ReactCompilerGating.isReactCompilerEnable
                   cResult[32] = emoji;
                   cResult[33] = reaction.count;
                   cResult[34] = reaction.emoji;
+                  class P {
+                    constructor() {
+                      obj = { reaction, disableReactionCreates, disableReactionUpdates, locationAnalyticsObject };
+                      tmp = onTapReaction(obj);
+                      return;
+                    }
+                  }
                   cResult[35] = reaction.me;
                   cResult[36] = textStyle;
                   cResult[37] = tmp14;
                   tmp11 = tmp14;
                 }
               }
-              const fn2 = function v() {
+              const fn = function v() {
                 onLongTapReaction(reaction);
               };
               cResult[8] = onLongTapReaction;
               cResult[9] = reaction;
-              cResult[10] = fn2;
-              tmp9 = fn2;
+              cResult[10] = fn;
+              tmp9 = fn;
             }
           }
         }
       }
-      const fn = function p() {
-        onTapReaction({ reaction, disableReactionCreates, disableReactionUpdates, locationAnalyticsObject });
-      };
+      class P {
+        constructor() {
+          obj = { reaction, disableReactionCreates, disableReactionUpdates, locationAnalyticsObject };
+          tmp = onTapReaction(obj);
+          return;
+        }
+      }
       cResult[2] = disableReactionCreates;
       cResult[3] = disableReactionUpdates;
       cResult[4] = locationAnalyticsObject;
       cResult[5] = onTapReaction;
       cResult[6] = reaction;
-      cResult[7] = fn;
-      emoji = fn;
+      cResult[7] = P;
+      emoji = P;
     }
-  : (emojiSize) => {
+  : function ForumPostReactionButton(emojiSize) {
       ({ thread, reaction } = emojiSize);
       ({ animateCount, containerStyle, textStyle, locationAnalyticsObject } = emojiSize);
       let num = emojiSize.emojiSize;

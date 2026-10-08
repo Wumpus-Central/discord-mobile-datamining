@@ -15,7 +15,7 @@ let obj = {
 };
 const ReactCompilerGating = fn(558);
 obj.useCanUIRequestGatewaySocket = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCanUIRequestGatewaySocket() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AppStateStore];
@@ -31,7 +31,7 @@ obj.useCanUIRequestGatewaySocket = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useCanUIRequestGatewaySocket() {
       const items = [AppStateStore];
       return initialize.useStateFromStores(items, () => "active" === state.getState());
     };

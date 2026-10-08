@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/agent_activity/ConjureTimelineTree.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3827 from "../intl/ConjureUntranslated.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -44,6 +44,7 @@ function buildTimelineTree(steps, arg1) {
             detailDrivenBy: [],
             status: "running",
             screenshots: [],
+            browserSessions: [],
             attachments: [],
             touched: 0,
             segment,
@@ -60,6 +61,7 @@ function buildTimelineTree(steps, arg1) {
                 detailDrivenBy: [],
                 status: "running",
                 screenshots: [],
+                browserSessions: [],
                 attachments: [],
                 touched: 0,
                 segment,
@@ -89,6 +91,7 @@ function buildTimelineTree(steps, arg1) {
           detailDrivenBy: [],
           status: "running",
           screenshots: [],
+          browserSessions: [],
           attachments: [],
           touched: 0,
           segment,
@@ -107,6 +110,7 @@ function buildTimelineTree(steps, arg1) {
         detailDrivenBy: [],
         status: "running",
         screenshots: [],
+        browserSessions: [],
         attachments: [],
         touched: 0,
         segment,
@@ -282,6 +286,9 @@ function buildTimelineTree(steps, arg1) {
             }
             if (null != node.screenshots) {
               tmp18Result.screenshots = node.screenshots;
+            }
+            if (null != node.browser_sessions) {
+              tmp18Result.browserSessions = node.browser_sessions;
             }
             if (null != node.attachments) {
               tmp18Result.attachments = node.attachments;
@@ -477,10 +484,10 @@ function isTurnWorkFrame(task_id) {
   return tmp;
 }
 let obj = {
-  healthcheck_failed: _modDef3753.iwOTgo,
-  preview_ready: _modDef3753.okkgSB,
-  working: _modDef3753.t8skVB,
-  error: _modDef3753.avt0ax,
+  healthcheck_failed: _modDef3827.iwOTgo,
+  preview_ready: _modDef3827.okkgSB,
+  working: _modDef3827.t8skVB,
+  error: _modDef3827.avt0ax,
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTimelineTree.tsx");
@@ -497,26 +504,26 @@ export const describeNode = function describeNode(currentStepResult) {
   }
   const intl = util.intl;
   if (t8skVB == null) {
-    t8skVB = _modDef3753.t8skVB;
+    t8skVB = _modDef3827.t8skVB;
   }
   return intl.string(t8skVB);
 };
 export const describeTaskStatus = function describeTaskStatus(arg0) {
   if ("running" === arg0) {
     const intl5 = util.intl;
-    return intl5.string(_modDef3753.jTwZFY);
+    return intl5.string(_modDef3827.jTwZFY);
   } else if ("done" === arg0) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3753.keYz9o);
+    return intl4.string(_modDef3827.keYz9o);
   } else if ("failed" === arg0) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3753["RoY/lg"]);
+    return intl3.string(_modDef3827["RoY/lg"]);
   } else if ("cancelled" === arg0) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3753["HZw/I/"]);
+    return intl2.string(_modDef3827["HZw/I/"]);
   } else if ("incomplete" === arg0) {
     const intl = util.intl;
-    return intl.string(_modDef3753.sf2UHL);
+    return intl.string(_modDef3827.sf2UHL);
   }
 };
 export { buildTimelineTree };

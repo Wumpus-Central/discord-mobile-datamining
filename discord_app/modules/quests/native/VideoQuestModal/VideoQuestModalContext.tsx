@@ -9,12 +9,12 @@ const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal
 
 export default context;
 export const useVideoQuestModalContext = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useVideoQuestModalContext() {
       context = noop.useContext(context);
       _modDef38(null != context, "useVideoQuestModalContext must be used within a VideoQuestModalProvider");
       return context;
     }
-  : () => {
+  : function useVideoQuestModalContext() {
       context = noop.useContext(context);
       _modDef38(null != context, "useVideoQuestModalContext must be used within a VideoQuestModalProvider");
       return context;

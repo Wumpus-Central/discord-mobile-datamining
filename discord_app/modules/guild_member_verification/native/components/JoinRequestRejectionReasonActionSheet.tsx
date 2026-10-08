@@ -101,7 +101,7 @@ class JoinRequestRejectionReasonActionSheet {
                   const intl = tmp4(tmp45[10]).intl;
                   obj8.content = intl.string(tmp4(tmp45[10]).t["TQY/Rd"]);
                   obj8.icon = function icon() {
-                    return closure_1_6(closure_1_0(4803).CircleXIcon, {
+                    return closure_1_6(closure_1_0(4997).CircleXIcon, {
                       color: closure_1_1(587).colors.BACKGROUND_FEEDBACK_CRITICAL,
                       secondaryColor: closure_1_1(587).colors.ICON_FEEDBACK_CRITICAL,
                     });
@@ -166,7 +166,7 @@ class JoinRequestRejectionReasonActionSheet {
 }
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ container: { padding: 20 }, buttonGroup: { marginTop: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(

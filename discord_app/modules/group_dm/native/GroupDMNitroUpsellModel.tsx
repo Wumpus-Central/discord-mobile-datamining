@@ -7,7 +7,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const MAX_GROUP_DM_PARTICIPANTS = fn(1085).MAX_GROUP_DM_PARTICIPANTS;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const GroupDMNitroAcquisitionStrategy = { MARKETING: "marketing", CHECKOUT: "checkout" };
 let obj2 = { NONE: "none", MANAGE: "manage", MARKETING: "marketing", CHECKOUT: "checkout" };
 const ReactCompilerGating = fn(558);
@@ -44,7 +44,7 @@ export { GroupDMNitroAcquisitionStrategy };
 export const GroupDMNitroUpsellRoute = obj2;
 export { getGroupDMNitroAudience };
 export const useGroupDMNitroAudience = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGroupDMNitroAudience() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -87,7 +87,7 @@ export const useGroupDMNitroAudience = ReactCompilerGating.isReactCompilerEnable
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useGroupDMNitroAudience() {
       const items = [UserStore];
       return initialize.useStateFromStores(items, () => {
         currentUser = currentUser.getCurrentUser();

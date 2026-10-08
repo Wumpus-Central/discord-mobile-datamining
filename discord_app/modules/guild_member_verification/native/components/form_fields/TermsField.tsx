@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TermsField(arg0) {
       const cResult = c.c(11);
       ({ field, onChange, rulesChannelId } = arg0);
       const tmp4 = closure_6();
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp7;
       tmp6 = tmp7;
     }
-  : (field) => {
+  : function TermsField(field) {
       field = field.field;
       ({ onChange, rulesChannelId } = field);
       let flag = field.response;

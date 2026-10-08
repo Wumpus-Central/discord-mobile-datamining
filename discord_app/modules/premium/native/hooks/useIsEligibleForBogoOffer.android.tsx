@@ -4,13 +4,13 @@ import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx"
 import PromotionsStore from "../../promotions/PromotionsStore.tsx";
 
 const require = fn;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx");
 
 export const useIsEligibleForBogoOffer = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsEligibleForBogoOffer() {
       const cResult = forceUpdate(576).c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PromotionsStore];
@@ -42,13 +42,13 @@ export const useIsEligibleForBogoOffer = ReactCompilerGating.isReactCompilerEnab
       const tmpResult = forceUpdate(504);
       const stateFromStores1 = forceUpdate(504).useStateFromStores(tmp8, tmp9);
       const tmpResult6 = forceUpdate(504);
-      const premiumTrialOffer = forceUpdate(6969).usePremiumTrialOffer();
-      const tmpResult7 = forceUpdate(6969);
-      const premiumDiscountOffer = forceUpdate(10451).usePremiumDiscountOffer();
-      const tmpResult8 = forceUpdate(10451);
-      const isPaymentsBlocked = forceUpdate(6936).useIsPaymentsBlocked();
-      const tmpResult9 = forceUpdate(6936);
-      forceUpdate = forceUpdate(6962).useForceUpdate();
+      const premiumTrialOffer = forceUpdate(7158).usePremiumTrialOffer();
+      const tmpResult7 = forceUpdate(7158);
+      const premiumDiscountOffer = forceUpdate(10048).usePremiumDiscountOffer();
+      const tmpResult8 = forceUpdate(10048);
+      const isPaymentsBlocked = forceUpdate(7125).useIsPaymentsBlocked();
+      const tmpResult9 = forceUpdate(7125);
+      forceUpdate = forceUpdate(7151).useForceUpdate();
       if (cResult[4] !== stateFromStores) {
         let valueOfResult = null;
         if (null != stateFromStores) {
@@ -87,7 +87,7 @@ export const useIsEligibleForBogoOffer = ReactCompilerGating.isReactCompilerEnab
         }
         return tmp21;
       }
-      const fn3 = function b() {
+      const fn3 = function _() {
         if (null != closure_1) {
           const _Date = Date;
           const diff = tmp - Date.now();
@@ -105,9 +105,9 @@ export const useIsEligibleForBogoOffer = ReactCompilerGating.isReactCompilerEnab
       cResult[9] = items2;
       tmp18 = items2;
       tmp17 = fn3;
-      const tmpResult10 = forceUpdate(6962);
+      const tmpResult10 = forceUpdate(7151);
     }
-  : () => {
+  : function useIsEligibleForBogoOffer() {
       const items = [PromotionsStore];
       const stateFromStores = forceUpdate(504).useStateFromStores(items, () =>
         activeBogoRewardPromotion.getActiveBogoRewardPromotion(),
@@ -118,13 +118,13 @@ export const useIsEligibleForBogoOffer = ReactCompilerGating.isReactCompilerEnab
         premiumTypeSubscription.getPremiumTypeSubscription(),
       );
       const obj2 = forceUpdate(504);
-      const premiumTrialOffer = forceUpdate(6969).usePremiumTrialOffer();
-      const obj4 = forceUpdate(6969);
-      const premiumDiscountOffer = forceUpdate(10451).usePremiumDiscountOffer();
-      const obj5 = forceUpdate(10451);
-      const isPaymentsBlocked = forceUpdate(6936).useIsPaymentsBlocked();
-      const obj6 = forceUpdate(6936);
-      forceUpdate = forceUpdate(6962).useForceUpdate();
+      const premiumTrialOffer = forceUpdate(7158).usePremiumTrialOffer();
+      const obj4 = forceUpdate(7158);
+      const premiumDiscountOffer = forceUpdate(10048).usePremiumDiscountOffer();
+      const obj5 = forceUpdate(10048);
+      const isPaymentsBlocked = forceUpdate(7125).useIsPaymentsBlocked();
+      const obj6 = forceUpdate(7125);
+      forceUpdate = forceUpdate(7151).useForceUpdate();
       let valueOfResult = null;
       if (null != stateFromStores) {
         const endDate = stateFromStores.endDate;

@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import UserSettings from "../../UserSettings.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ActivityPrivacyUpsellUtils from "../../../activity_privacy/ActivityPrivacyUpsellUtils.tsx";
@@ -12,9 +12,9 @@ require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useOptions() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = {
@@ -62,8 +62,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : () =>
-      noop.useMemo(() => {
+  : function useOptions() {
+      return noop.useMemo(() => {
         const obj = {
           value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF,
           label: null,
@@ -93,14 +93,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items[2] = obj3;
         return items;
       }, []);
+    };
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7966).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useOptions() {
         const cResult = c.c(3);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = {
@@ -148,8 +149,8 @@ const radio = SettingBuilders.createRadio({
         }
         return tmp6;
       }
-    : () =>
-        noop.useMemo(() => {
+    : function useOptions() {
+        return noop.useMemo(() => {
           const obj = {
             value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF,
             label: null,
@@ -178,8 +179,9 @@ const radio = SettingBuilders.createRadio({
           obj3.label = intl5.string(util.t.fQc5la);
           items[2] = obj3;
           return items;
-        }, []),
-  useValue: () => {
+        }, []);
+      },
+  useValue() {
     const DefaultGuildsActivityRestrictedV2 = UserSettings.DefaultGuildsActivityRestrictedV2;
     return DefaultGuildsActivityRestrictedV2.useSetting();
   },
@@ -197,7 +199,7 @@ const radio = SettingBuilders.createRadio({
       ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds } = affectedGuilds);
       obj2.settingName = activityRestrictionSettingName;
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(15855, dependencyMap.paths),
+        asyncRequireImpl(16114, dependencyMap.paths),
         "ActivityPrivacyUpsellActionSheet",
         obj2,
       );

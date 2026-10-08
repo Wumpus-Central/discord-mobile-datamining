@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting(
 export const ManaContext = context;
 export const useManaContext = tmp3;
 export const ManaContextProvider = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ManaContextProvider(arg0) {
       obj = c;
       const cResult = obj.c(3);
       ({ children, value } = arg0);
@@ -38,7 +38,7 @@ export const ManaContextProvider = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp3;
       tmp2 = tmp3;
     }
-  : (children) => {
+  : function ManaContextProvider(children) {
       value = children.value;
       if (value == null) {
         value = obj;

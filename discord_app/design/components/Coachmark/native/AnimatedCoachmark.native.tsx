@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import AccessibilityPreferencesContext from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
 import ReanimatedRexportDefault from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import AnimatedEnterExitItemDefault from "../../AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 import TooltipConstants from "../../Tooltip/native/TooltipConstants.native.tsx";
+import AnimatedEnterExitItemDefault from "../../AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 import Coachmark from "Coachmark.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -32,7 +32,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Coachmark/native/AnimatedCoachmark.native.tsx");
 
 export const AnimatedCoachmark = ReactCompilerGating.isReactCompilerEnabled()
-  ? (visible) => {
+  ? function AnimatedCoachmark(visible) {
       const cResult = c.c(9);
       visible = visible.visible;
       const tmp3 = _objectWithoutProperties(visible, closure_3);
@@ -94,7 +94,7 @@ export const AnimatedCoachmark = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp7 = fn;
     }
-  : (visible) => {
+  : function AnimatedCoachmark(visible) {
       visible = visible.visible;
       const merged = Object.assign(visible, Object.assign({ visible: 0 }));
       c1 = undefined;

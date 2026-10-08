@@ -64,7 +64,7 @@ const result = size.fileFinishedImporting("modules/calls/native/useVideoTileGrad
 
 export { computeVideoTileGradientStops };
 export const useVideoTileGradientColors = ReactCompilerGating.isReactCompilerEnabled()
-  ? (modalV2BackgroundColor, modalV2BackgroundColor) => {
+  ? function useVideoTileGradientColors(modalV2BackgroundColor, modalV2BackgroundColor) {
       const cResult = c.c(3);
       if (cResult[0] === modalV2BackgroundColor) {
         if (cResult[1] === modalV2BackgroundColor) {
@@ -78,7 +78,7 @@ export const useVideoTileGradientColors = ReactCompilerGating.isReactCompilerEna
       cResult[2] = tmp3;
       tmp2 = tmp3;
     }
-  : (arg0, arg1) => {
+  : function useVideoTileGradientColors(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
       const items = [arg0, arg1];

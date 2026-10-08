@@ -8,7 +8,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/useSimpleGuildSize.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSimpleGuildSize(arg0) {
       const cResult = c.c(13);
       ({ size, style } = arg0);
       let num = 48;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj3;
       tmp3 = obj3;
     }
-  : (size) => {
+  : function useSimpleGuildSize(size) {
       size = size.size;
       const style = size.style;
       let memo;

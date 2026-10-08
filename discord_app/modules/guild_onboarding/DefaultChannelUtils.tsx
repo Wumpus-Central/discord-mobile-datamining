@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/DefaultChannelUtils.tsx");
 
 export const useCanChannelBeDefault = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useCanChannelBeDefault(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(4);
@@ -53,7 +53,7 @@ export const useCanChannelBeDefault = ReactCompilerGating.isReactCompilerEnabled
       let obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useCanChannelBeDefault(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const items = [GatedChannelStore, ChannelStore];

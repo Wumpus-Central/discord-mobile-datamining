@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   mainIdentity: { flexDirection: "row", alignItems: "center" },
   primaryAvatar: { marginRight: nativeDefault.space.PX_4 },
@@ -27,7 +27,7 @@ let closure_7 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 const memoResult = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function DetailedGuildIdentityUser(arg0) {
         const cResult = c.c(20);
         ({ contentHeight, guildId, user } = arg0);
         const tmp4 = closure_7();
@@ -122,7 +122,7 @@ const memoResult = noop.memo(
         cResult[2] = nickname;
         tmp5 = nickname;
       }
-    : (height) => {
+    : function DetailedGuildIdentityUser(height) {
         ({ guildId, user } = height);
         const tmp = closure_7();
         let nickname = NicknameUtilsDefault.getNickname(guildId, undefined, user);
@@ -160,7 +160,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/Detaile
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function DetailedGuildIdentityUserRow(arg0) {
         let FormRow = userId;
         let tmp = dependencyMap;
         const cResult = userId(576).c(42);
@@ -248,7 +248,7 @@ export default noop.memo(
                       accessibilityRole,
                       accessibilityState,
                     };
-                    const tmp16 = closure_5(FormRow(6000).TableRow, obj2);
+                    const tmp16 = closure_5(FormRow(6184).TableRow, obj2);
                     cResult[29] = accessibilityLabel;
                     cResult[30] = accessibilityRole;
                     cResult[31] = accessibilityState;
@@ -275,8 +275,8 @@ export default noop.memo(
             }
             let tmp8 = leading;
             if (leading == null) {
-              const obj4 = { source: stateFromStores.getAvatarSource(guildId), size: FormRow(1188).AvatarSizes.SMALL };
-              tmp8 = closure_5(FormRow(1188).Avatar, obj4);
+              const obj4 = { source: stateFromStores.getAvatarSource(guildId), size: FormRow(1200).AvatarSizes.SMALL };
+              tmp8 = closure_5(FormRow(1200).Avatar, obj4);
             }
             cResult[21] = guildId;
             cResult[22] = leading;
@@ -310,7 +310,7 @@ export default noop.memo(
                       }
                     }
                   }
-                  FormRow = FormRow(8924).FormRow;
+                  FormRow = FormRow(8555).FormRow;
                   const obj5 = {
                     accessibilityLabel,
                     disabled,
@@ -346,8 +346,8 @@ export default noop.memo(
           }
           let tmp18 = leading;
           if (leading == null) {
-            const obj7 = { source: stateFromStores.getAvatarSource(guildId), size: FormRow(1188).AvatarSizes.SMALL };
-            tmp18 = closure_5(FormRow(1188).Avatar, obj7);
+            const obj7 = { source: stateFromStores.getAvatarSource(guildId), size: FormRow(1200).AvatarSizes.SMALL };
+            tmp18 = closure_5(FormRow(1200).Avatar, obj7);
           }
           cResult[3] = guildId;
           cResult[4] = leading;
@@ -357,7 +357,7 @@ export default noop.memo(
         }
         const FormRowResult = FormRow(504);
       }
-    : (arrow) => {
+    : function DetailedGuildIdentityUserRow(arrow) {
         ({ accessibilityLabel, contentHeight, deprecatedFormRow } = arrow);
         if (deprecatedFormRow === undefined) {
           deprecatedFormRow = false;

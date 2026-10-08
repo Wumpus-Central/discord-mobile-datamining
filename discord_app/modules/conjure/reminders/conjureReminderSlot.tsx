@@ -213,7 +213,7 @@ function nextReminderClockState(projectId, projectId2, now) {
     }
   }
 }
-const ConjureChatStore = fn(12924);
+const ConjureChatStore = fn(13073);
 ({ isStrandedSegment: metroRequire, turnSettled: closure_7 } = ConjureChatStore);
 let items = [60000, 180000, 600000];
 let c9 = 600000;
@@ -297,7 +297,7 @@ let obj = {
   },
 };
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arr, arg2) => {
+  ? function useConjureReminder(arg0, arr, arg2) {
       _require = arg0;
       const cResult = require("c").c(30);
       const tmp2 = useConjurePublishActionDefault(arg0);
@@ -307,47 +307,45 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (0 <= diff) {
         while (true) {
           let tmp6 = arr[diff];
-          if ("publish_notice" === tmp6.kind) {
-            diff = diff - 1;
-            tmp5 = null;
-            if (0 > diff) {
-              break;
-            }
-          } else {
-            tmp5 = null;
-            if ("user" === tmp6.role) {
-              break;
-            } else {
-              tmp5 = tmp6;
-              if (closure_7(tmp6)) {
+          if ("publish_notice" !== tmp6.kind) {
+            if ("project_event" !== tmp6.kind) {
+              tmp5 = null;
+              if ("user" === tmp6.role) {
                 break;
               } else {
-                tmp5 = null;
-                if (!closure_6(arr, diff)) {
+                tmp5 = tmp6;
+                if (closure_7(tmp6)) {
                   break;
+                } else {
+                  tmp5 = null;
+                  if (!closure_6(arr, diff)) {
+                    break;
+                  }
                 }
               }
             }
+            break;
           }
-          break;
+          diff = diff - 1;
+          tmp5 = null;
+          if (0 > diff) {
+            break;
+          }
         }
       }
       if (cResult[0] === arg2) {
         if (cResult[1] === arr) {
           if (cResult[2] === arg0) {
-            let publishing;
+            let isUpdate;
             if (tmp2 != null) {
-              publishing = tmp2.publishing;
+              isUpdate = tmp2.isUpdate;
             }
-            if (cResult[3] === publishing) {
-              state = undefined;
+            if (cResult[3] === isUpdate) {
+              let publishing;
               if (tmp2 != null) {
-                const status = tmp2.status;
-                if (status != null) {
-                  state = status.state;
-                }
+                publishing = tmp2.publishing;
               }
-              if (cResult[4] === state) {
+              if (cResult[4] === publishing) {
                 let tmp12 = cResult[5];
                 let tmp13 = cResult[6];
                 let tmp14 = cResult[7];
@@ -360,10 +358,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[13] === tmp15) {
                       if (cResult[14] === tmp16) {
                         if (cResult[15] === tmp3) {
-                          let tmp26 = cResult[16];
+                          let tmp22 = cResult[16];
                         }
-                        importDefault = tmp26;
-                        if (cResult[17] !== tmp26) {
+                        importDefault = tmp22;
+                        if (cResult[17] !== tmp22) {
                           class T {
                             constructor() {
                               tmp = closure_1;
@@ -393,7 +391,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               return obj;
                             }
                           }
-                          cResult[17] = tmp26;
+                          cResult[17] = tmp22;
                           cResult[18] = T;
                         } else {
                           class T {
@@ -426,12 +424,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                             }
                           }
                         }
-                        [tmp30, tmp31] = noop.useState(T);
-                        dependencyMap = tmp31;
+                        [tmp26, tmp27] = noop.useState(T);
+                        dependencyMap = tmp27;
                         let _Date = Date;
-                        const tmp34 = nextReminderClockState(tmp30, tmp26, Date.now);
-                        _slicedToArray = tmp34;
-                        let tmp35 = null;
+                        const tmp30 = nextReminderClockState(tmp26, tmp22, Date.now);
+                        _slicedToArray = tmp30;
+                        let tmp31 = null;
                         if (null != tmp5) {
                           class T {
                             constructor() {
@@ -462,7 +460,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               return obj;
                             }
                           }
-                          if (!tmp36) {
+                          if (!tmp32) {
                             class T {
                               constructor() {
                                 tmp = closure_1;
@@ -492,7 +490,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 return obj;
                               }
                             }
-                            if (tmp37 != null) {
+                            if (tmp33 != null) {
                               class T {
                                 constructor() {
                                   tmp = closure_1;
@@ -555,8 +553,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                           }
-                          tmp35 = null;
-                          if (!tmp36) {
+                          tmp31 = null;
+                          if (!tmp32) {
                             class T {
                               constructor() {
                                 tmp = closure_1;
@@ -586,16 +584,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 return obj;
                               }
                             }
-                            tmp39[0] = tmp5;
-                            tmp39[1] = tmp2;
-                            tmp39[2] = arg2;
-                            tmp39[3] = tmp34.draftTyped && arg2;
-                            tmp39[4] = tmp34.outdatedUpdating;
-                            tmp35 = tmp39;
+                            tmp35[0] = tmp5;
+                            tmp35[1] = tmp2;
+                            tmp35[2] = arg2;
+                            tmp35[3] = tmp30.draftTyped && arg2;
+                            tmp35[4] = tmp30.outdatedUpdating;
+                            tmp31 = tmp35;
                           }
                         }
-                        noop = tmp35;
-                        const tmp29 = _slicedToArray(noop.useState(T), 2);
+                        noop = tmp31;
+                        const tmp25 = _slicedToArray(noop.useState(T), 2);
                         ({ shown, nextDueAt } = selectConjureReminder(
                           items1.map((key) => {
                             const obj = {};
@@ -617,7 +615,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                             obj.eligible = null != closure_4 && key.eligible(tmp6);
                             return obj;
                           }),
-                          tmp34,
+                          tmp30,
                         ));
                         if ("outdated" === shown) {
                           class T {
@@ -709,9 +707,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                   return obj;
                                 }
                               }
-                              tmp45[0] = arg0;
+                              tmp41[0] = arg0;
                               cResult[22] = arg0;
-                              class E {
+                              class C {
                                 constructor() {
                                   if (null != nextDueAt) {
                                     tmp2 = globalThis;
@@ -735,7 +733,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                   }
                                 }
                               }
-                              cResult[23] = tmp45;
+                              cResult[23] = tmp41;
                             } else {
                               class T {
                                 constructor() {
@@ -767,7 +765,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 }
                               }
                             }
-                            const effect = obj3.useEffect(tmp43, tmp45);
+                            const effect = obj3.useEffect(tmp39, tmp41);
                             if (cResult[24] === nextDueAt) {
                               class T {
                                 constructor() {
@@ -798,7 +796,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                   return obj;
                                 }
                               }
-                              if (cResult[27] === tmp34.now) {
+                              if (cResult[27] === tmp30.now) {
                                 class T {
                                   constructor() {
                                     tmp = closure_1;
@@ -828,11 +826,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                     return obj;
                                   }
                                 }
-                                const effect1 = obj3.useEffect(E, tmp48);
+                                const effect1 = obj3.useEffect(C, tmp44);
                                 return shown;
                               }
                               items = [nextDueAt];
-                              class E {
+                              class C {
                                 constructor() {
                                   if (null != nextDueAt) {
                                     tmp2 = globalThis;
@@ -856,12 +854,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                   }
                                 }
                               }
-                              cResult[27] = tmp34.now;
+                              cResult[27] = tmp30.now;
                               cResult[28] = nextDueAt;
                               cResult[29] = items;
-                              tmp48 = items;
+                              tmp44 = items;
                             }
-                            class E {
+                            class C {
                               constructor() {
                                 if (null != nextDueAt) {
                                   tmp2 = globalThis;
@@ -886,10 +884,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                             cResult[24] = nextDueAt;
-                            cResult[25] = tmp31;
-                            cResult[26] = E;
+                            cResult[25] = tmp27;
+                            cResult[26] = C;
                           }
-                          const fn = function k() {
+                          const fn = function w() {
                             function onActivity() {
                               closure_1_2((arg0) => {
                                 const obj = {};
@@ -912,11 +910,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             };
                           };
-                          cResult[20] = tmp31;
+                          cResult[20] = tmp27;
                           cResult[21] = fn;
-                          tmp43 = fn;
+                          tmp39 = fn;
                         }
-                        if (tmp34 !== tmp30) {
+                        if (tmp30 !== tmp26) {
                           class T {
                             constructor() {
                               tmp = closure_1;
@@ -947,7 +945,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                             }
                           }
                         }
-                        const tmp42 = selectConjureReminder(
+                        const tmp38 = selectConjureReminder(
                           items1.map((key) => {
                             const obj = {};
                             const merged = Object.assign(key);
@@ -968,7 +966,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                             obj.eligible = null != closure_4 && key.eligible(tmp6);
                             return obj;
                           }),
-                          tmp34,
+                          tmp30,
                         );
                       }
                     }
@@ -990,7 +988,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[14] = tmp16;
               cResult[15] = tmp3;
               cResult[16] = obj2;
-              tmp26 = obj2;
+              tmp22 = obj2;
             }
           }
         }
@@ -1057,37 +1055,6 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             return obj;
           }
         }
-        if (tmp19 != null) {
-          class T {
-            constructor() {
-              tmp = closure_1;
-              timestamp = Date.now();
-              obj = {};
-              merged = Object.assign(closure_1);
-              obj.now = timestamp;
-              obj.visitStartedAt = timestamp;
-              obj.draftTyped = false;
-              obj.lastActivityAt = null;
-              bound = null;
-              if (null != closure_1.messageAt) {
-                _Math = Math;
-                bound = Math.min(tmp.messageAt, timestamp);
-              }
-              obj.lastMessageAt = bound;
-              obj.seenAt = null;
-              obj.unseen = false;
-              tmp5 = null;
-              if (!tmp.visible) {
-                tmp5 = timestamp;
-              }
-              obj.hiddenAt = tmp5;
-              obj.outdatedShown = false;
-              obj.outdatedBackoff = 0;
-              obj.outdatedUpdating = false;
-              return obj;
-            }
-          }
-        }
       }
       let bound = null;
       if (null != atResult) {
@@ -1121,7 +1088,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const finished_at = atResult.finished_at;
-        class E {
+        class C {
           constructor() {
             if (null != nextDueAt) {
               tmp2 = globalThis;
@@ -1208,7 +1175,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        bound = Math.max(tmp21, finished_at, settled_at);
+        bound = Math.max(tmp19, finished_at, settled_at);
       }
       cResult[0] = arg2;
       cResult[1] = arr;
@@ -1275,82 +1242,52 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             return obj;
           }
         }
-        if (tmp23 != null) {
-          class T {
-            constructor() {
-              tmp = closure_1;
-              timestamp = Date.now();
-              obj = {};
-              merged = Object.assign(closure_1);
-              obj.now = timestamp;
-              obj.visitStartedAt = timestamp;
-              obj.draftTyped = false;
-              obj.lastActivityAt = null;
-              bound = null;
-              if (null != closure_1.messageAt) {
-                _Math = Math;
-                bound = Math.min(tmp.messageAt, timestamp);
-              }
-              obj.lastMessageAt = bound;
-              obj.seenAt = null;
-              obj.unseen = false;
-              tmp5 = null;
-              if (!tmp.visible) {
-                tmp5 = timestamp;
-              }
-              obj.hiddenAt = tmp5;
-              obj.outdatedShown = false;
-              obj.outdatedBackoff = 0;
-              obj.outdatedUpdating = false;
-              return obj;
-            }
-          }
-        }
       }
       cResult[4] = undefined;
       cResult[5] = arg0;
       cResult[6] = arg2;
       cResult[7] = true === undefined;
-      cResult[8] = "changes" === undefined;
+      cResult[8] = true === undefined;
       cResult[9] = bound;
       tmp16 = bound;
-      tmp15 = tmp25;
-      tmp14 = tmp24;
+      tmp15 = tmp21;
+      tmp14 = tmp20;
       tmp13 = arg2;
       tmp12 = arg0;
       let obj = require("c");
     }
-  : (projectId, arr, draftHasText) => {
+  : function useConjureReminder(projectId, arr, draftHasText) {
       closure_0 = projectId;
-      const tmp = obj(16652)(projectId);
+      const tmp = obj(16914)(projectId);
       let diff = arr.length - 1;
       let tmp4 = null;
       if (0 <= diff) {
         while (true) {
           let tmp5 = arr[diff];
-          if ("publish_notice" === tmp5.kind) {
-            diff = diff - 1;
-            tmp4 = null;
-            if (0 > diff) {
-              break;
-            }
-          } else {
-            tmp4 = null;
-            if ("user" === tmp5.role) {
-              break;
-            } else {
-              tmp4 = tmp5;
-              if (closure_7(tmp5)) {
+          if ("publish_notice" !== tmp5.kind) {
+            if ("project_event" !== tmp5.kind) {
+              tmp4 = null;
+              if ("user" === tmp5.role) {
                 break;
               } else {
-                tmp4 = null;
-                if (!closure_6(arr, diff)) {
+                tmp4 = tmp5;
+                if (closure_7(tmp5)) {
                   break;
+                } else {
+                  tmp4 = null;
+                  if (!closure_6(arr, diff)) {
+                    break;
+                  }
                 }
               }
             }
+            break;
           }
-          break;
+          diff = diff - 1;
+          tmp4 = null;
+          if (0 > diff) {
+            break;
+          }
         }
       }
       const atResult = arr.at(-1);
@@ -1360,14 +1297,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         publishing = tmp.publishing;
       }
       obj.publishing = true === publishing;
-      state = undefined;
+      let isUpdate;
       if (tmp != null) {
-        const status = tmp.status;
-        if (status != null) {
-          state = status.state;
-        }
+        isUpdate = tmp.isUpdate;
       }
-      obj.drift = "changes" === state;
+      obj.drift = true === isUpdate;
       let bound = null;
       if (null != atResult) {
         let num = atResult.finished_at;
@@ -1381,8 +1315,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         bound = Math.max(atResult.created_at, num, num2);
       }
       obj.messageAt = bound;
-      obj.visible = obj(16183)();
-      const tmp2 = obj(16183)();
+      obj.visible = obj(16443)();
+      const tmp2 = obj(16443)();
       [tmp15, tmp16] = obj3.useState(() => {
         const timestamp = Date.now();
         obj = {};
@@ -1572,7 +1506,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (key) => {
+  ? function useConjureReminderLayers(key) {
       const cResult = c.c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         items = [];
@@ -1626,7 +1560,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         closure_1 = tmp12;
         if (cResult[4] !== cResult[2]) {
-          const fn2 = function p() {
+          const fn2 = function v() {
             if (closure_1) {
               const _setTimeout = setTimeout;
               const timeout = setTimeout(() => closure_0((arr) => arr.filter((leaving) => !leaving.leaving)), 180);
@@ -1654,7 +1588,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp3 = _slicedToArray(noop.useState(first), 2);
     }
-  : (key) => {
+  : function useConjureReminderLayers(key) {
       [arr, tmp2] = noop.useState([]);
       closure_0 = tmp2;
       const found = arr.find((leaving) => !leaving.leaving);
@@ -1701,12 +1635,14 @@ function reminderSlotTurn(arg0) {
     while (true) {
       let tmp2 = arg0[diff];
       if ("publish_notice" !== tmp2.kind) {
-        if ("user" === tmp2.role) {
-          break;
-        } else if (React5(tmp2)) {
-          return tmp2;
-        } else if (!timestampProducer(arg0, diff)) {
-          return null;
+        if ("project_event" !== tmp2.kind) {
+          if ("user" === tmp2.role) {
+            break;
+          } else if (React5(tmp2)) {
+            return tmp2;
+          } else if (!timestampProducer(arg0, diff)) {
+            return null;
+          }
         }
       }
       diff = diff - 1;
@@ -1787,11 +1723,11 @@ export const useConjureReminder = tmp4;
 export { nextReminderLayers };
 export const useConjureReminderLayers = tmp5;
 export const useConjureUpdatingDots = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useConjureUpdatingDots() {
       const cResult = stateFromStores(576).c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         items = [AccessibilityStore];
-        const fn = function s() {
+        const fn = function u() {
           return useReducedMotion.useReducedMotion;
         };
         cResult[0] = items;
@@ -1841,7 +1777,7 @@ export const useConjureUpdatingDots = ReactCompilerGating.isReactCompilerEnabled
       tmp13 = repeatResult;
       const tmp8 = _slicedToArray(noop.useState(1), 2);
     }
-  : () => {
+  : function useConjureUpdatingDots() {
       items = [AccessibilityStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
       const tmp2 = _slicedToArray(noop.useState(1), 2);

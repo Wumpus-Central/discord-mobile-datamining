@@ -86,8 +86,8 @@ prototype["isActive"] = function isActive(guild_id, id, arg2) {
   }
   return tmp;
 };
-prototype["getThreadsForGuild"] = function getThreadsForGuild(guildId) {
-  let tmp = dependencyMap[guildId];
+prototype["getThreadsForGuild"] = function getThreadsForGuild(guild_id) {
+  let tmp = dependencyMap[guild_id];
   if (tmp == null) {
     tmp = closure_8;
   }

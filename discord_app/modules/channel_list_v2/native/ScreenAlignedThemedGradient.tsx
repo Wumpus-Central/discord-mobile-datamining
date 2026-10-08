@@ -1,8 +1,8 @@
 // discord_app/modules/channel_list_v2/native/ScreenAlignedThemedGradient.tsx
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../_runtime/00576_c.js";
-import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
 import useActiveTheme from "../../client_themes/native/useActiveTheme.tsx";
+import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
 import roundToNearestPixelDefault from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -30,7 +30,7 @@ const __initData2 = {
   code: "function ScreenAlignedThemedGradientTsx2(){const{roundToNearestPixel,offsetX,panelTranslateX,offsetY}=this.__closure;return{transform:[{translateX:roundToNearestPixel(-offsetX-panelTranslateX.get())},{translateY:roundToNearestPixel(-offsetY)}]};}",
 };
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ScreenAlignedThemedGradient(arg0) {
       const cResult = c.c(5);
       ({ offsetX, offsetY } = arg0);
       const isClientThemeOrCustomThemeActive = useActiveTheme.useIsClientThemeOrCustomThemeActive();
@@ -66,7 +66,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const obj4 = { pointerEvents: "none", style: tmp4.container, children: tmp5 };
     }
-  : (arg0) => {
+  : function ScreenAlignedThemedGradient(arg0) {
       ({ offsetX, offsetY } = arg0);
       const isClientThemeOrCustomThemeActive = useActiveTheme.useIsClientThemeOrCustomThemeActive();
       return (
@@ -84,7 +84,7 @@ const result = size.fileFinishedImporting("modules/channel_list_v2/native/Screen
 
 export default tmp3;
 export const ScreenAlignedThemedGradientSliding = ReactCompilerGating.isReactCompilerEnabled()
-  ? (offsetX) => {
+  ? function ScreenAlignedThemedGradientSliding(offsetX) {
       const cResult = offsetX(panelTranslateX[5]).c(7);
       offsetX = offsetX.offsetX;
       const offsetY = offsetX.offsetY;
@@ -142,7 +142,7 @@ export const ScreenAlignedThemedGradientSliding = ReactCompilerGating.isReactCom
       tmp11 = tmp12;
       const obj5 = { roundToNearestPixel: offsetY(panelTranslateX[3]), offsetX, panelTranslateX, offsetY };
     }
-  : (offsetX) => {
+  : function ScreenAlignedThemedGradientSliding(offsetX) {
       offsetX = offsetX.offsetX;
       const offsetY = offsetX.offsetY;
       let panelTranslateX;

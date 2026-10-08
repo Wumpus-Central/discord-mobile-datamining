@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   card: {
     padding: 16,
@@ -37,7 +37,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMuteBanner.tsx");
 
 export const NotificationSettingsMuteBanner = ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function NotificationSettingsMuteBanner(style) {
       const cResult = c.c(18);
       const tmp4 = closure_5();
       if (cResult[0] === style.style) {
@@ -125,7 +125,7 @@ export const NotificationSettingsMuteBanner = ReactCompilerGating.isReactCompile
       cResult[2] = items2;
       tmp5 = items2;
     }
-  : (children) => {
+  : function NotificationSettingsMuteBanner(children) {
       const obj = { style: null, children: null };
       const items = [children.style, closure_5().card];
       obj.style = items;

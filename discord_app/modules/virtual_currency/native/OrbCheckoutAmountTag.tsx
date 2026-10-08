@@ -21,7 +21,7 @@ let obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 const result = size.fileFinishedImporting("modules/virtual_currency/native/OrbCheckoutAmountTag.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (orbAmount) => {
+  ? function OrbCheckoutAmountTag(orbAmount) {
       const cResult = c.c(11);
       orbAmount = orbAmount.orbAmount;
       const tmp4 = closure_5();
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = tmp15;
       }
     }
-  : (orbAmount) => {
+  : function OrbCheckoutAmountTag(orbAmount) {
       orbAmount = orbAmount.orbAmount;
       const tmp = closure_5();
       const obj = { style: tmp.orbAmountTag, children: null };

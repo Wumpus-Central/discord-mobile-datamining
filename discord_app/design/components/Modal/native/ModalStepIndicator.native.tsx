@@ -1,7 +1,7 @@
 // discord_app/design/components/Modal/native/ModalStepIndicator.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2129 from "../../../intl/Mana.messages.js";
+import _modDef2141 from "../../../intl/Mana.messages.js";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 let closure_6 = { overshootClamping: true };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", gap: 4 },
   stepPill: { height: 4, borderRadius: 2 },
@@ -23,7 +23,7 @@ const __initData2 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isActive) => {
+  ? function StepPill(isActive) {
       const cResult = isActive(sharedValue[5]).c(7);
       isActive = isActive.isActive;
       ({ activeColor, inactiveColor, inactiveOpacity } = isActive);
@@ -54,7 +54,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp11 = cResult[3];
         }
         const effect = token.useEffect(tmp10, tmp11);
-        class D {
+        class S {
           constructor() {
             obj = { width: null, backgroundColor: null, opacity: null };
             obj2 = closure_0(closure_2[7]);
@@ -82,10 +82,10 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           activeColor: token,
           inactiveOpacity: num,
         };
-        D.__closure = obj2;
-        D.__workletHash = 12485955218699;
-        D.__initData = __initData;
-        const animatedStyle = tmp(tmp2[7]).useAnimatedStyle(D);
+        S.__closure = obj2;
+        S.__workletHash = 12485955218699;
+        S.__initData = __initData;
+        const animatedStyle = tmp(tmp2[7]).useAnimatedStyle(S);
         if (cResult[4] === animatedStyle) {
           if (cResult[5] === tmp6.stepPill) {
             let tmp16 = cResult[6];
@@ -118,7 +118,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn;
       const tmpResult5 = isActive(sharedValue[8]);
     }
-  : (isActive) => {
+  : function StepPill(isActive) {
       isActive = isActive.isActive;
       let TEXT_BRAND = isActive.activeColor;
       if (TEXT_BRAND === undefined) {
@@ -154,7 +154,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const result = sharedValue.set(spring.withSpring(num, closure_6));
       }, items);
       const tmp6Result3 = isActive(sharedValue[8]);
-      class T {
+      class I {
         constructor() {
           obj = { width: null, backgroundColor: null, opacity: null };
           obj2 = closure_0(closure_2[7]);
@@ -173,7 +173,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp6Result4 = isActive(sharedValue[7]);
-      T.__closure = {
+      I.__closure = {
         interpolate: isActive(sharedValue[7]).interpolate,
         sharedValue,
         WIDTH_INACTIVE: 12,
@@ -183,9 +183,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         activeColor: token,
         inactiveOpacity: num,
       };
-      T.__workletHash = 7601722423560;
-      T.__initData = __initData2;
-      const animatedStyle = tmp6Result4.useAnimatedStyle(T);
+      I.__workletHash = 7601722423560;
+      I.__initData = __initData2;
+      const animatedStyle = tmp6Result4.useAnimatedStyle(I);
       let obj3 = { style: null };
       let items1 = [animatedStyle, tmp5.stepPill];
       obj3.style = items1;
@@ -196,7 +196,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Modal/native/ModalStepIndicator.native.tsx");
 
 export const ModalStepIndicator = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ModalStepIndicator(arg0) {
       const cResult = c.c(19);
       ({ currentStep, totalSteps, activeColor, inactiveColor, inactiveOpacity } = arg0);
       const tmp2 = closure_7();
@@ -237,7 +237,7 @@ export const ModalStepIndicator = ReactCompilerGating.isReactCompilerEnabled()
                   const _Symbol = Symbol;
                   if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
                     const intl = util.intl;
-                    const stringResult = intl.string(_modDef2129.KUwsC0);
+                    const stringResult = intl.string(_modDef2141.KUwsC0);
                     cResult[11] = stringResult;
                     let tmp7 = stringResult;
                   } else {
@@ -314,7 +314,7 @@ export const ModalStepIndicator = ReactCompilerGating.isReactCompilerEnabled()
         tmp3 = items;
       }
     }
-  : (arg0) => {
+  : function ModalStepIndicator(arg0) {
       ({ currentStep, totalSteps } = arg0);
       ({ activeColor, inactiveColor, inactiveOpacity } = arg0);
       const tmp = closure_7();
@@ -343,7 +343,7 @@ export const ModalStepIndicator = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = {
             accessible: true,
             accessibilityRole: "progressbar",
-            accessibilityLabel: intl.string(_modDef2129.KUwsC0),
+            accessibilityLabel: intl.string(_modDef2141.KUwsC0),
             accessibilityValue: null,
             importantForAccessibility: "yes",
             style: null,
@@ -357,7 +357,7 @@ export const ModalStepIndicator = ReactCompilerGating.isReactCompilerEnabled()
             <View
               accessible
               accessibilityRole="progressbar"
-              accessibilityLabel={intl.string(_modDef2129.KUwsC0)}
+              accessibilityLabel={intl.string(_modDef2141.KUwsC0)}
               accessibilityValue={null}
               importantForAccessibility="yes"
               style={null}

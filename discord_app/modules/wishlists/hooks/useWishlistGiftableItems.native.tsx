@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistGi
 
 export const GIFTABLE_PRODUCT_LINES = set;
 export const useWishlistGiftableItems = ReactCompilerGating.isReactCompilerEnabled()
-  ? (items) => {
+  ? function useWishlistGiftableItems(items) {
       const cResult = c.c(2);
       items = undefined;
       if (items != null) {
@@ -39,7 +39,7 @@ export const useWishlistGiftableItems = ReactCompilerGating.isReactCompilerEnabl
       }
       return tmp3;
     }
-  : (arg0) => {
+  : function useWishlistGiftableItems(arg0) {
       let items = [arg0];
       return noop.useMemo(() => {
         let found;

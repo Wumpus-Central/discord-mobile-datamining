@@ -9,13 +9,13 @@ import VoicePanelStore from "../../voice_panel/VoicePanelStore.tsx";
 
 const require = fn;
 function useCoreState() {
-  sharedValue = sharedValue(4618).useSharedValue(MediaPlaybackPanelModes.PIP);
-  const obj = sharedValue(4618);
-  const sharedValue1 = sharedValue(4618).useSharedValue({ height: 0, width: 0 });
-  const obj2 = sharedValue(4618);
-  const sharedValue2 = sharedValue(4618).useSharedValue({ x: -1, y: -1 });
-  const obj3 = sharedValue(4618);
-  const sharedValue3 = sharedValue(4618).useSharedValue(AccessibilityStore.useReducedMotion);
+  sharedValue = sharedValue(4810).useSharedValue(MediaPlaybackPanelModes.PIP);
+  const obj = sharedValue(4810);
+  const sharedValue1 = sharedValue(4810).useSharedValue({ height: 0, width: 0 });
+  const obj2 = sharedValue(4810);
+  const sharedValue2 = sharedValue(4810).useSharedValue({ x: -1, y: -1 });
+  const obj3 = sharedValue(4810);
+  const sharedValue3 = sharedValue(4810).useSharedValue(AccessibilityStore.useReducedMotion);
   const items = [sharedValue3];
   const effect = noop.useEffect(() => {
     function onChange() {
@@ -29,11 +29,11 @@ function useCoreState() {
       const result = AccessibilityStore.removeReactChangeListener(onChange);
     };
   }, items);
-  const obj4 = sharedValue(4618);
-  const sharedValue4 = sharedValue(4618).useSharedValue(true);
-  const obj5 = sharedValue(4618);
-  const sharedValue5 = sharedValue(4618).useSharedValue(0);
-  const obj6 = sharedValue(4618);
+  const obj4 = sharedValue(4810);
+  const sharedValue4 = sharedValue(4810).useSharedValue(true);
+  const obj5 = sharedValue(4810);
+  const sharedValue5 = sharedValue(4810).useSharedValue(0);
+  const obj6 = sharedValue(4810);
   const fn = function p() {
     if (sharedValue.get() === MediaPlaybackPanelModes.PIP) {
       let UNDEFINED = MorphablePanelModes.PIP;
@@ -45,14 +45,14 @@ function useCoreState() {
   fn.__closure = { mode: sharedValue, MediaPlaybackPanelModes, MorphablePanelModes };
   fn.__workletHash = 10375114450450;
   fn.__initData = __initData;
-  const derivedValue = sharedValue(4618).useDerivedValue(fn);
-  const obj7 = sharedValue(4618);
+  const derivedValue = sharedValue(4810).useDerivedValue(fn);
+  const obj7 = sharedValue(4810);
   const obj8 = { mode: sharedValue, MediaPlaybackPanelModes, MorphablePanelModes };
-  const tmp9 = sharedValue3(1618)();
-  const tmp10 = sharedValue3(17192)(sharedValue3(1618)());
-  const sharedValue6 = sharedValue(4618).useSharedValue(false);
-  const obj9 = sharedValue(4618);
-  const obj10 = sharedValue(4618);
+  const tmp9 = sharedValue3(1630)();
+  const tmp10 = sharedValue3(17473)(sharedValue3(1630)());
+  const sharedValue6 = sharedValue(4810).useSharedValue(false);
+  const obj9 = sharedValue(4810);
+  const obj10 = sharedValue(4810);
   return {
     mode: sharedValue,
     morphablePanelMode: derivedValue,
@@ -63,12 +63,12 @@ function useCoreState() {
     scrollPosition: sharedValue5,
     canShowPIP: sharedValue4,
     lockScrolling: sharedValue6,
-    wrapperOffset: sharedValue(4618).useSharedValue({ x: 0, y: 0, gestureActive: false }),
+    wrapperOffset: sharedValue(4810).useSharedValue({ x: 0, y: 0, gestureActive: false }),
   };
 }
-const MediaPlaybackPanelModes = fn(14397).MediaPlaybackPanelModes;
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
-const MorphablePanelModes = fn(11917).MorphablePanelModes;
+const MediaPlaybackPanelModes = fn(14623).MediaPlaybackPanelModes;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
+const MorphablePanelModes = fn(11990).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let __initData = {
   code: "function MediaPlaybackPanelControllerTsx1(){const{mode,MediaPlaybackPanelModes,MorphablePanelModes}=this.__closure;switch(mode.get()){case MediaPlaybackPanelModes.PIP:{return MorphablePanelModes.PIP;}default:{return MorphablePanelModes.UNDEFINED;}}}",
@@ -78,7 +78,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelController.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MediaPlaybackPanelController(arg0) {
       const cResult = mode(wrapperDimensions[13]).c(27);
       const tmp4 = useCoreState();
       mode = tmp4.mode;
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = items1;
       const tmpResult = mode(wrapperDimensions[15]);
     }
-  : (children) => {
+  : function MediaPlaybackPanelController(children) {
       importDefault = undefined;
       dependencyMap = undefined;
       _slicedToArray = undefined;

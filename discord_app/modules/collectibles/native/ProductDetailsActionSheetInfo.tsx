@@ -30,7 +30,7 @@ let obj = {
 let closure_6 = createStyles.createStyles(obj);
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (product) => {
+  ? function ProductNameAndDescription(product) {
       const cResult = c.c(9);
       product = product.product;
       const tmp4 = closure_6();
@@ -85,7 +85,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         children: product.name,
       };
     }
-  : (product) => {
+  : function ProductNameAndDescription(product) {
       product = product.product;
       const tmp = closure_6();
       const obj2 = { style: tmp.description, children: null };
@@ -105,7 +105,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ProductPurchaseStatus(arg0) {
       let stringResult = dependencyMap;
       const cResult = c.c(10);
       ({ product, onTrackPress } = arg0);
@@ -166,7 +166,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp8;
       const tmpResult2 = useProductPurchaseState;
     }
-  : (product) => {
+  : function ProductPurchaseStatus(product) {
       product = product.product;
       const result = CollectiblesUtils.isPremiumCollectiblesProduct(product);
       const productPurchaseState = useProductPurchaseState.useProductPurchaseState(product);
@@ -191,7 +191,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BundleProductDetailsActionSheetInfo(arg0) {
       const cResult = c.c(9);
       ({ product, onTrackPress } = arg0);
       const tmp2 = closure_6();
@@ -230,7 +230,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp3 = items;
     }
-  : (arg0) => {
+  : function BundleProductDetailsActionSheetInfo(arg0) {
       ({ product, onTrackPress } = arg0);
       const obj = { style: null, children: React4(closure_8, { product, onTrackPress }) };
       const items = [,];
@@ -248,7 +248,7 @@ let obj2 = {
 let result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetInfo.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ProductDetailsActionSheetInfo(arg0) {
       const cResult = c.c(12);
       ({ product, onTrackPress } = arg0);
       const tmp2 = closure_6();
@@ -300,7 +300,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = tmp10;
       }
     }
-  : (arg0) => {
+  : function ProductDetailsActionSheetInfo(arg0) {
       ({ product, onTrackPress } = arg0);
       if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
         const obj2 = { product, onTrackPress };

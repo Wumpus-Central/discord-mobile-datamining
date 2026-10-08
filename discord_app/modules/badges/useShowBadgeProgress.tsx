@@ -11,12 +11,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useShowBadgeProgress.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShowBadgeProgress(arg0) {
       const cResult = c.c(7);
       ({ badge, viewerBadge, isViewingOtherUser } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConsentStore];
-        const fn = function l() {
+        const fn = function u() {
           return ConsentStore.hasConsented(constants.PERSONALIZATION);
         };
         cResult[0] = items;
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp12;
       const tmpResult4 = BadgeUtils;
     }
-  : (arg0) => {
+  : function useShowBadgeProgress(arg0) {
       ({ badge, viewerBadge, isViewingOtherUser } = arg0);
       const items = [ConsentStore];
       const stateFromStores = initialize.useStateFromStores(items, () =>

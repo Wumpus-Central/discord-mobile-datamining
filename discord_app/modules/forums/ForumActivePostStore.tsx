@@ -80,8 +80,8 @@ function rebuildState(refreshThreadIds) {
       refreshThreadIds1 = sortThreadIds;
     }
     if (refreshThreadIds1) {
-      LATEST_ACTIVITY = LATEST_ACTIVITY(2061).ThreadSortOrder.LATEST_ACTIVITY;
-      closure_21 = apply.chain(closure_19).sort((id, id) => {
+      LATEST_ACTIVITY = LATEST_ACTIVITY(2073).ThreadSortOrder.LATEST_ACTIVITY;
+      closure_21 = apply.chain(closure_19).sort(function sortThreads(id, id) {
         let compare = dependencyMap;
         let num = -1;
         if (!obj.isForumPostPinned(id)) {
@@ -107,8 +107,8 @@ function rebuildState(refreshThreadIds) {
         return num;
       });
       const chainResult = apply.chain(closure_19);
-      const CREATION_DATE = LATEST_ACTIVITY(2061).ThreadSortOrder.CREATION_DATE;
-      closure_20 = apply.chain(closure_19).sort((id, id) => {
+      const CREATION_DATE = LATEST_ACTIVITY(2073).ThreadSortOrder.CREATION_DATE;
+      closure_20 = apply.chain(closure_19).sort(function sortThreads(id, id) {
         let compare = dependencyMap;
         let num = -1;
         if (!obj.isForumPostPinned(id)) {
@@ -136,12 +136,12 @@ function rebuildState(refreshThreadIds) {
       const chainResult1 = apply.chain(closure_19);
     }
     const valueResult =
-      LATEST_ACTIVITY === LATEST_ACTIVITY(2061).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20.value();
+      LATEST_ACTIVITY === LATEST_ACTIVITY(2073).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20.value();
     let found = valueResult;
     if (0 !== set.size) {
       closure_130_0 = set;
       closure_130_1 = MATCH_SOME;
-      found = valueResult.filter((item) => {
+      found = valueResult.filter(function filterThreads(item) {
         const channel = ChannelStore.getChannel(item);
         let appliedTags;
         if (channel != null) {
@@ -182,15 +182,15 @@ function rebuildState(refreshThreadIds) {
       tmp33 = found1;
     }
     found1 = tmp33;
-    const iter = LATEST_ACTIVITY === LATEST_ACTIVITY(2061).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
+    const iter = LATEST_ACTIVITY === LATEST_ACTIVITY(2073).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
   }
 }
 let items = [];
 let id = null;
 let c12 = null;
 let set = new Set();
-let LATEST_ACTIVITY = fn(2061).ThreadSortOrder.LATEST_ACTIVITY;
-let MATCH_SOME = fn(2063).ThreadSearchTagSetting.MATCH_SOME;
+let LATEST_ACTIVITY = fn(2073).ThreadSortOrder.LATEST_ACTIVITY;
+let MATCH_SOME = fn(2075).ThreadSearchTagSetting.MATCH_SOME;
 let closure_16 = 0;
 let closure_17 = [];
 let c18 = false;
@@ -375,7 +375,7 @@ export const computeThreadIdsSnapshot = function computeThreadIdsSnapshot(id) {
     const values = Object.values(ActiveThreadsStore.getThreadsForParent(channel.guild_id, channel.id));
     const mapped = values.map((id) => id.id);
     closure_0 = LATEST_ACTIVITY;
-    items = mapped.sort((id, id) => {
+    items = mapped.sort(function sortThreads(id, id) {
       let compare = dependencyMap;
       let num = -1;
       if (!obj.isForumPostPinned(id)) {

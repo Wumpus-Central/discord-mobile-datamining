@@ -1,6 +1,6 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeLeaf.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07550_inlineStyles.js";
 import GuildBadgeUtils from "GuildBadgeUtils.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeLeaf.tsx");
 
 export const GuildBadgeLeaf = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildBadgeLeaf(arg0) {
       const cResult = c.c(34);
       if (cResult[0] !== arg0) {
         ({ width, height, primaryTintColor } = arg0);
@@ -202,7 +202,7 @@ export const GuildBadgeLeaf = ReactCompilerGating.isReactCompilerEnabled()
       cResult[33] = tmp50;
       tmp48 = tmp50;
     }
-  : (primaryTintColor) => {
+  : function GuildBadgeLeaf(primaryTintColor) {
       let num = primaryTintColor.width;
       if (num === undefined) {
         num = 24;

@@ -2,17 +2,17 @@
 import _mod12 from "../../../../../_runtime/metro/00012__.js";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4817 from "../../../../../_runtime/metro/04817__.js";
-import _modDef4856 from "../../../../../_runtime/metro/04856__.js";
+import _modDef5011 from "../../../../../_runtime/metro/05011__.js";
+import _modDef5050 from "../../../../../_runtime/metro/05050__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import _modDef6596 from "../../../../../_runtime/metro/06596__.js";
-import _modDef7636 from "../../../../../_runtime/metro/07636__.js";
-import _modDef11194 from "../../../../../_runtime/metro/11194__.js";
-import _modDef12457 from "../../../../../_runtime/metro/12457__.js";
-import _modDef15676 from "../../../../../_runtime/metro/15676__.js";
-import _modDef15677 from "../../../../../_runtime/metro/15677__.js";
+import _modDef6772 from "../../../../../_runtime/metro/06772__.js";
+import _modDef7957 from "../../../../../_runtime/metro/07957__.js";
+import _modDef11311 from "../../../../../_runtime/metro/11311__.js";
+import _modDef12553 from "../../../../../_runtime/metro/12553__.js";
+import _modDef15956 from "../../../../../_runtime/metro/15956__.js";
+import _modDef15957 from "../../../../../_runtime/metro/15957__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -23,14 +23,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let items = [
-  _modDef12457,
-  _modDef6596,
-  _modDef7636,
-  _modDef4817,
-  _modDef4856,
-  _modDef15676,
-  _modDef15677,
-  _modDef11194,
+  _modDef12553,
+  _modDef6772,
+  _modDef7957,
+  _modDef5011,
+  _modDef5050,
+  _modDef15956,
+  _modDef15957,
+  _modDef11311,
 ];
 let closure_10 = [
   "Launch Probe!",
@@ -45,7 +45,7 @@ let closure_10 = [
   "Unleash Space Vortex",
   "Activate Cloaking Device",
 ];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flexDirection: "column", gap: 12, padding: 16 },
   card: { gap: 12 },
@@ -54,7 +54,7 @@ let obj2 = {
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (label) => {
+  ? function DemoContextMenu(label) {
       const cResult = num2(576).c(19);
       label = label.label;
       ({ align, triggerOnLongPress, count, sections, alignButton } = label);
@@ -95,8 +95,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant: "salt",
-              action: "saltkar",
+              variant: -1493171804,
+              action: 94208.12633447349,
             };
             let str = "default";
             if (index === closure_0 - 1) {
@@ -124,8 +124,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant: "salt",
-              action: "saltkar",
+              variant: -1493171804,
+              action: 94208.12633447349,
             };
             let str = "default";
             if (index === closure_0 - 1) {
@@ -185,7 +185,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj5 = { triggerOnLongPress: tmp4, items: tmp5, align, title: "Sample title", children: C };
-        const tmp19 = closure_7(tmp(7590).ContextMenu, obj5);
+        const tmp19 = closure_7(tmp(9297).ContextMenu, obj5);
         cResult[11] = align;
         cResult[12] = tmp5;
         cResult[13] = C;
@@ -194,7 +194,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = num2(576);
     }
-  : (align) => {
+  : function DemoContextMenu(align) {
       ({ label: require, triggerOnLongPress } = align);
       if (triggerOnLongPress === undefined) {
         triggerOnLongPress = false;
@@ -229,8 +229,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 label: length[index % length.length],
                 IconComponent: "a",
                 iconSource: length2[index % length2.length],
-                variant: "salt",
-                action: "saltkar",
+                variant: -1493171804,
+                action: 94208.12633447349,
               };
               let str = "default";
               if (index === closure_0 - 1) {
@@ -253,8 +253,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant: "salt",
-              action: "saltkar",
+              variant: -1493171804,
+              action: 94208.12633447349,
             };
             let str = "default";
             if (index === closure_0 - 1) {
@@ -292,7 +292,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsDesignSystemAlertModal() {
       const cResult = c.c(59);
       const tmp4 = closure_11();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -625,7 +625,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[24] = tmp57;
       tmp56 = tmp57;
     }
-  : () => {
+  : function UserSettingsDesignSystemAlertModal() {
       const tmp = closure_11();
       const obj = { children: null };
       const obj2 = { style: tmp.container, children: null };

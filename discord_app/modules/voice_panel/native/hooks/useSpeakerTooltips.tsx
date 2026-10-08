@@ -11,10 +11,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ConsoleVoiceUpsellStore = fn(17288);
+const ConsoleVoiceUpsellStore = fn(17569);
 ({ setVoiceUpsellDismissed: hasOwnProperty, useConsoleVoiceUpsellStore: metroRequire } = ConsoleVoiceUpsellStore);
-let VoicePanelControlsModes = fn(11914).VoicePanelControlsModes;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+let VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let __initData = {
   code: "function useSpeakerTooltipsTsx1(){const{controlsSpecs}=this.__closure;return controlsSpecs.get().mode;}",
@@ -24,7 +24,7 @@ const __initData2 = {
 };
 const ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useCoachmarkHelper(arg0, arg1, arg2) {
       const visible = arg1;
       closure_1 = arg2;
       const cResult = c.c(6);
@@ -63,7 +63,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = items;
       tmp5 = fn2;
     }
-  : (arg0, arg1, arg2) => {
+  : function useCoachmarkHelper(arg0, arg1, arg2) {
       const visible = arg1;
       closure_1 = arg2;
       const items = [arg1];

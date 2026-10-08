@@ -1,7 +1,7 @@
 // discord_app/modules/guild_profile/native/GuildProfileUtils.tsx
 import c from "../../../../_runtime/00576_c.js";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import tinycolorDefault from "../../../../_runtime/07076_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/07262_tinycolor.js";
 import useAvatarColor from "../../avatar/useAvatarColor.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/GuildProfileUtils.tsx");
 
 export const useProfilePrimaryColor = ReactCompilerGating.isReactCompilerEnabled()
-  ? (brandColorPrimary, arg1) => {
+  ? function useProfilePrimaryColor(brandColorPrimary, arg1) {
       const cResult = c.c(2);
       if (cResult[0] !== brandColorPrimary) {
         let guildIconURL = null;
@@ -42,7 +42,7 @@ export const useProfilePrimaryColor = ReactCompilerGating.isReactCompilerEnabled
       }
       return brandColorPrimary;
     }
-  : (brandColorPrimary, arg1) => {
+  : function useProfilePrimaryColor(brandColorPrimary, arg1) {
       let guildIconURL = null;
       if (null != brandColorPrimary) {
         guildIconURL = null;

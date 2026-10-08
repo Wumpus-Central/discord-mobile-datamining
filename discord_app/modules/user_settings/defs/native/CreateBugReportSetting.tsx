@@ -8,9 +8,9 @@ import DeveloperOptionsStore from "../../../../stores/DeveloperOptionsStore.tsx"
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCreateBugReportSettingToggleValue() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DeveloperOptionsStore];
@@ -26,7 +26,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useCreateBugReportSettingToggleValue() {
       const items = [DeveloperOptionsStore];
       return initialize.useStateFromStores(items, () => isBugReporterEnabled.isBugReporterEnabled);
     };
@@ -36,7 +36,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t.aIkGJD);
   },
   parent: null,
-  IconComponent: fn(15404).WrenchIcon,
+  IconComponent: fn(15666).WrenchIcon,
   onValueChange: function handleCreateBugReportSettingToggle(arg0) {
     const setDeveloperOptionSettings = DeveloperOptionsActionCreators.setDeveloperOptionSettings;
     if (arg0) {
@@ -48,7 +48,7 @@ const toggle = SettingBuilders.createToggle({
     }
   },
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useCreateBugReportSettingToggleValue() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [DeveloperOptionsStore];
@@ -64,14 +64,14 @@ const toggle = SettingBuilders.createToggle({
         }
         return initialize.useStateFromStores(tmp4, tmp5);
       }
-    : () => {
+    : function useCreateBugReportSettingToggleValue() {
         const items = [DeveloperOptionsStore];
         return initialize.useStateFromStores(items, () => isBugReporterEnabled.isBugReporterEnabled);
       },
   useDescription: function useCreateBugReportSettingDescription() {
     return "Photo permission is required";
   },
-  usePredicate: fn(15633).useBugReporterExperimentSettingPredicate,
+  usePredicate: fn(15913).useBugReporterExperimentSettingPredicate,
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/CreateBugReportSetting.tsx");

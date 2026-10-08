@@ -14,7 +14,7 @@ const Constants = fn(1085);
 ({ AbortCodes: metroRequire, GuildFeatures: closure_7 } = Constants);
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFailsMemberCount(arg0) {
       _require = arg0;
       const cResult = require("c").c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -25,7 +25,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function s() {
+        const fn = function u() {
           return GuildStore.getGuild(closure_0);
         };
         const items1 = [arg0];
@@ -48,56 +48,38 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[4];
       }
       if (cResult[5] !== arg0) {
-        class E {
-          constructor() {
-            return closure_3.getMemberCount(closure_0);
-          }
-        }
+        const fn2 = function y() {
+          return GuildMemberCountStore.getMemberCount(closure_0);
+        };
         const items3 = [arg0];
         cResult[5] = arg0;
-        cResult[6] = E;
+        cResult[6] = fn2;
         cResult[7] = items3;
         let tmp12 = items3;
+        let tmp11 = fn2;
       } else {
-        class E {
-          constructor() {
-            return closure_3.getMemberCount(closure_0);
-          }
-        }
+        tmp11 = cResult[6];
         tmp12 = cResult[7];
       }
       const tmpResult = require("initialize");
-      const stateFromStores1 = require("initialize").useStateFromStores(tmp9, E, tmp12);
+      const stateFromStores1 = require("initialize").useStateFromStores(tmp9, tmp11, tmp12);
       let tmp14 = null == stateFromStores || null == stateFromStores1;
       if (!tmp14) {
-        class E {
-          constructor() {
-            return closure_3.getMemberCount(closure_0);
-          }
-        }
-        const hasItem = obj4.has(constants2.PARTNERED);
+        const features = stateFromStores.features;
+        const hasItem = features.has(constants2.PARTNERED);
         let tmp17 = !hasItem;
         if (!hasItem) {
-          class E {
-            constructor() {
-              return closure_3.getMemberCount(closure_0);
-            }
-          }
-          tmp17 = !obj5.has(constants2.VERIFIED);
+          const features2 = stateFromStores.features;
+          tmp17 = !features2.has(constants2.VERIFIED);
         }
         if (tmp17) {
-          class E {
-            constructor() {
-              return closure_3.getMemberCount(closure_0);
-            }
-          }
           tmp17 = stateFromStores1 < 500;
         }
         tmp14 = tmp17;
       }
       return tmp14;
     }
-  : (arg0) => {
+  : function useFailsMemberCount(arg0) {
       _require = arg0;
       const items = [GuildStore];
       const items1 = [arg0];
@@ -135,7 +117,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/community/GuildSettingsAnalyticsUtils.tsx");
 
 export const useGuildAnalyticsOverview = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGuildAnalyticsOverview(arg0) {
       _require = arg0;
       let stringResult = dependencyMap;
       const cResult = require("c").c(14);
@@ -149,7 +131,7 @@ export const useGuildAnalyticsOverview = ReactCompilerGating.isReactCompilerEnab
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function s() {
+        const fn = function u() {
           let overviewAnalytics = null;
           if (null != closure_0) {
             overviewAnalytics = GuildSettingsAnalyticsStore.getOverviewAnalytics(tmp);
@@ -210,33 +192,26 @@ export const useGuildAnalyticsOverview = ReactCompilerGating.isReactCompilerEnab
         obj4.message = stringResult;
         tmp16 = obj4;
       }
-      class E {
-        constructor() {
-          tmp = closure_0;
-          tmp2 = null == closure_0 || closure_1;
-          if (!tmp2) {
-            tmp3 = closure_0;
-            tmp4 = closure_1;
-            obj = closure_0(closure_1[9]);
-            engagementOverview = obj.fetchEngagementOverview(tmp);
-            obj2 = closure_0(closure_1[9]);
-            growthActivationOverview = obj2.fetchGrowthActivationOverview(tmp);
-            obj3 = closure_0(closure_1[9]);
-            growthActivationRetention = obj3.fetchGrowthActivationRetention(tmp);
-          }
-          return;
+      const fn2 = function y() {
+        if (!tmp2) {
+          const engagementOverview = GuildSettingsAnalyticsActionCreators.fetchEngagementOverview(closure_0);
+          const growthActivationOverview =
+            GuildSettingsAnalyticsActionCreators.fetchGrowthActivationOverview(closure_0);
+          const growthActivationRetention =
+            GuildSettingsAnalyticsActionCreators.fetchGrowthActivationRetention(closure_0);
         }
-      }
+        tmp2 = null == closure_0 || closure_1;
+      };
       const items2 = [arg0, tmp4];
       cResult[4] = tmp4;
       cResult[5] = arg0;
-      cResult[6] = E;
+      cResult[6] = fn2;
       cResult[7] = items2;
       tmp11 = items2;
-      tmp10 = E;
+      tmp10 = fn2;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useGuildAnalyticsOverview(arg0) {
       _require = arg0;
       const tmp = closure_8(arg0);
       dependencyMap = tmp;

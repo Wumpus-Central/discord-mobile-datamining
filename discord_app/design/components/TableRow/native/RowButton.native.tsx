@@ -13,7 +13,7 @@ require = fn;
 let closure_3 = ["arrow", "disabled", "variant", "icon", "onPress", "experimental_withBlurBackground"];
 let closure_4 = ["experimental_withBlurBackground", "onPress", "disabled", "children"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles(() => {
   const obj = { card: null, cardWithBlur: null };
   const obj2 = {
@@ -29,7 +29,7 @@ let closure_8 = createStyles.createStyles(() => {
 });
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RowButton(arg0) {
       const cResult = c.c(22);
       if (cResult[0] !== arg0) {
         ({ arrow, disabled, variant, icon, onPress, experimental_withBlurBackground } = arg0);
@@ -135,7 +135,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         borderRadius: nativeDefault.radii.xl,
       };
     }
-  : (arrow) => {
+  : function RowButton(arrow) {
       let flag = arrow.arrow;
       if (flag === undefined) {
         flag = true;
@@ -188,7 +188,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RowButtonWrapper(arg0) {
       const cResult = c.c(36);
       if (cResult[0] !== arg0) {
         ({ experimental_withBlurBackground, onPress, disabled, children } = arg0);
@@ -214,7 +214,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp12 = closure_8();
       const sharedValue = ReanimatedRexport.useSharedValue(0);
       if (cResult[6] !== sharedValue) {
-        const fn = function h() {
+        const fn = function w() {
           const result = sharedValue.set(1);
         };
         cResult[6] = sharedValue;
@@ -225,7 +225,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = tmp14;
       if (cResult[8] !== sharedValue) {
-        const fn2 = function p() {
+        const fn2 = function v() {
           const result = sharedValue.set(0);
         };
         cResult[8] = sharedValue;
@@ -336,7 +336,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = ReanimatedRexport;
     }
-  : (experimental_withBlurBackground) => {
+  : function RowButtonWrapper(experimental_withBlurBackground) {
       ({ onPress, disabled, children } = experimental_withBlurBackground);
       const merged = Object.assign(
         experimental_withBlurBackground,
@@ -394,9 +394,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return jsx(Card.InternalCard, obj4);
     };
-tmp2.Icon = fn(6006).TableRowIcon;
+tmp2.Icon = fn(6192).TableRowIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
 
-export const RowButtonIconProps = fn(6006).TableRowIconProps;
+export const RowButtonIconProps = fn(6192).TableRowIconProps;
 export const RowButton = tmp2;

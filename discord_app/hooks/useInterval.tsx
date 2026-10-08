@@ -9,7 +9,7 @@ const require = globalThis.__r;
 const result = size.fileFinishedImporting("hooks/useInterval.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (current, arg1) => {
+  ? function useInterval(current, arg1) {
       _require = current;
       closure_1 = arg1;
       const cResult = require("c").c(6);
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const fn2 = function f() {
           if (null !== closure_1) {
             const _setInterval = setInterval;
-            ref.current = setInterval(() => {
+            ref.current = setInterval(function tick() {
               closure_1(ref[3])(null != ref.current, "Missing callback");
               ref.current();
             }, tmp);
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       ref(tmp6, tmp7);
     }
-  : (current, arg1) => {
+  : function useInterval(current, arg1) {
       closure_1 = arg1;
       closure_2 = closure_4(current);
       const ref = closure_4(null);
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ref(() => {
         if (null !== closure_1) {
           const _setInterval = setInterval;
-          ref.current = setInterval(() => {
+          ref.current = setInterval(function tick() {
             closure_1(ref[3])(null != ref.current, "Missing callback");
             ref.current();
           }, tmp);

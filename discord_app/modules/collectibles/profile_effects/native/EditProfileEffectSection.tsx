@@ -4,7 +4,7 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import useProfileEffectDefault from "../useProfileEffect.tsx";
 import ProfileEffectDefault from "ProfileEffect.tsx";
-import _modDef8512 from "../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef8996 from "../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import useCollectibleListLayout from "../../native/useCollectibleListLayout.tsx";
 import CollectiblesEditUserProfileListItems from "../../native/CollectiblesEditUserProfileListItems.tsx";
 import useProfileEffectSections from "../useProfileEffectSections.tsx";
@@ -12,16 +12,16 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isProfileEffectRecord = fn(7072).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7258).isProfileEffectRecord;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   row: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: fn(13028).GUTTER_SIZE,
+    paddingHorizontal: fn(13306).GUTTER_SIZE,
   },
   rowSpacer: null,
   profileEffect: null,
@@ -31,11 +31,11 @@ let obj3 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(13028).GUTTER_SIZE,
+  paddingHorizontal: fn(13306).GUTTER_SIZE,
 };
-obj.rowSpacer = { height: fn(13028).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(13306).GUTTER_SIZE };
 obj.profileEffect = { overflow: "hidden", width: "100%", height: "100%" };
-obj.sampleProfile = { aspectRatio: fn(8487).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(8971).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 const memoResult = noop.memo(
@@ -230,7 +230,7 @@ const memoResult1 = noop.memo(
           }
           const _Symbol2 = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj3 = { uri: _modDef8512 };
+            const obj3 = { uri: _modDef8996 };
             cResult[6] = obj3;
             let tmp15 = obj3;
           } else {
@@ -378,7 +378,7 @@ const memoResult1 = noop.memo(
         const items2 = [tmp.profileEffect, { borderRadius: 6 }];
         obj2.style = items2;
         const obj3 = { source: null, style: null, resizeMode: "cover" };
-        const obj4 = { uri: _modDef8512 };
+        const obj4 = { uri: _modDef8996 };
         obj3.source = obj4;
         obj3.style = tmp.sampleProfile;
         const items3 = [

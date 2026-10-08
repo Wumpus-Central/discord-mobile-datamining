@@ -9,7 +9,7 @@ const BANNER_ASPECT_RATIO = Constants.BANNER_ASPECT_RATIO;
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileBannerHeight.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useUserProfileBannerHeight(arg0) {
       const cResult = c.c(2);
       const width = useWindowDimensionsDefault().width;
       let bound = width;
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (arg0) => {
+  : function useUserProfileBannerHeight(arg0) {
       const width = useWindowDimensionsDefault().width;
       let bound = width;
       if (null != arg0) {

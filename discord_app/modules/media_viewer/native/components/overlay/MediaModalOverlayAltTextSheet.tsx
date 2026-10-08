@@ -3,15 +3,15 @@ import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import useIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
 import BottomSheetTitleHeader from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Sheet_BottomSheet from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import useIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
 import useMessagePreviewHeight from "../../useMessagePreviewHeight.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 } };
 let closure_3 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (description) => {
+  ? function MediaViewerAltTextSheet(description) {
       const cResult = c.c(11);
       description = description.description;
       const tmp4 = closure_3();
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = items;
       obj3 = useIsScreenLandscape;
     }
-  : (children) => {
+  : function MediaViewerAltTextSheet(children) {
       const tmp = closure_3();
       const messagePreviewCollapsedheight = useMessagePreviewHeight.useMessagePreviewCollapsedheight();
       let num = 70;

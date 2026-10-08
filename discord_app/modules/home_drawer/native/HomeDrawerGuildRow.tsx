@@ -21,10 +21,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const isThread = fn(2055).isThread;
+const isThread = fn(2067).isThread;
 const Constants = fn(1085);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_15, NOOP: closure_16 } = Constants);
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const HomeDrawerActiveHook = {
@@ -35,7 +35,7 @@ const HomeDrawerActiveHook = {
   UNREAD: "unread",
   NONE: "none",
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_21 = createStyles.createStyles({
   guildName: { flexDirection: "row", alignItems: "center", gap: 4 },
   guildNameText: { flexShrink: 1 },
@@ -43,7 +43,7 @@ let closure_21 = createStyles.createStyles({
 fn(558);
 const ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function GuildRowWrapper(guild) {
       const cResult = guild(576).c(77);
       guild = guild.guild;
       ({ disableSubtitle, onActiveHookChange } = guild);
@@ -89,30 +89,30 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[4] !== guild.id) {
-        class G {
+        class H {
           constructor() {
             return closure_13.getMuteConfig(guild.id);
           }
         }
         cResult[4] = guild.id;
-        cResult[5] = G;
+        cResult[5] = H;
       } else {
-        class G {
+        class H {
           constructor() {
             return closure_13.getMuteConfig(guild.id);
           }
         }
       }
       const tmpResult = guild(504);
-      const stateFromStores1 = guild(504).useStateFromStores(tmp9, G);
+      const stateFromStores1 = guild(504).useStateFromStores(tmp9, H);
       if (null != stateFromStores1) {
-        class G {
+        class H {
           constructor() {
             return closure_13.getMuteConfig(guild.id);
           }
         }
         if (cResult[9] === tmp14) {
-          class G {
+          class H {
             constructor() {
               return closure_13.getMuteConfig(guild.id);
             }
@@ -123,46 +123,46 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = null != stateFromStores1.end_time;
         cResult[11] = obj2;
       } else {
-        class G {
+        class H {
           constructor() {
             return closure_13.getMuteConfig(guild.id);
           }
         }
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          class G {
+          class H {
             constructor() {
               return closure_13.getMuteConfig(guild.id);
             }
           }
           cResult[6] = tmp13;
         } else {
-          class G {
+          class H {
             constructor() {
               return closure_13.getMuteConfig(guild.id);
             }
           }
         }
         if (tmp13.isMuted) {
-          class G {
+          class H {
             constructor() {
               return closure_13.getMuteConfig(guild.id);
             }
           }
         } else {
-          class G {
+          class H {
             constructor() {
               return closure_13.getMuteConfig(guild.id);
             }
           }
           if (tmp13.isMuted) {
-            class G {
+            class H {
               constructor() {
                 return closure_13.getMuteConfig(guild.id);
               }
             }
           }
           if (cResult[12] === guild.name) {
-            class G {
+            class H {
               constructor() {
                 return closure_13.getMuteConfig(guild.id);
               }
@@ -175,7 +175,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             color: "text-default",
             children: guild.name,
           };
-          const tmp22 = closure_18(tmp(4892).Text, obj3);
+          const tmp22 = closure_18(tmp(5086).Text, obj3);
           cResult[12] = guild.name;
           cResult[13] = tmp4.guildNameText;
           cResult[14] = "text-default";
@@ -184,7 +184,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult2 = guild(504);
     }
-  : (guild) => {
+  : function GuildRowWrapper(guild) {
       guild = guild.guild;
       const disableSubtitle = guild.disableSubtitle;
       const onActiveHookChange = guild.onActiveHookChange;
@@ -334,11 +334,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           const tmp = unreadChannel.getMutableGuildStates()[guild.id];
           guild = tmp;
           if (null == tmp) {
-            return {
-              mentionChannel: "duration",
-              mentionChannelName: "toCharArray$esjava$1",
-              mentionChannelCount: null,
-            };
+            return { mentionChannel: "emoji", mentionChannelName: "toCharArray$esjava$1", mentionChannelCount: null };
           } else {
             const keys = disableSubtitle(onActiveHookChange[27]).keys(tmp.mentionCounts);
             const found = keys.filter((item) => {
@@ -536,7 +532,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerGuildRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function HomeDrawerGuildRow(guildId) {
       const cResult = guildId(576).c(8);
       guildId = guildId.guildId;
       ({ disableSubtitle, onActiveHookChange } = guildId);
@@ -566,7 +562,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[3];
       }
-      const MobileHomeDrawerExperiment = tmp(4748).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = tmp(4942).MobileHomeDrawerExperiment;
       let tmp10 = null;
       if (null != stateFromStores) {
         tmp10 = null;
@@ -588,12 +584,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp10;
     }
-  : (guildId) => {
+  : function HomeDrawerGuildRow(guildId) {
       guildId = guildId.guildId;
       ({ disableSubtitle, onActiveHookChange } = guildId);
       const items = [GuildStore];
       const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-      const MobileHomeDrawerExperiment = guildId(4748).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = guildId(4942).MobileHomeDrawerExperiment;
       let tmp3 = null;
       if (null != stateFromStores) {
         tmp3 = null;

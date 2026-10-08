@@ -9,11 +9,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(1087).CollectiblesMobileShopScreen;
+const constants = fn(1087).CollectiblesMobileShopScreen;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { rootContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, border: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.border = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -31,7 +31,7 @@ let result = size.fileFinishedImporting("modules/collectibles/native/Collectible
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (category) => {
+    ? function CollectiblesShopViewAllCategoryItems(category) {
         const cResult = category(analyticsLocations[8]).c(48);
         category = category.category;
         const analyticsContext = category.analyticsContext;
@@ -73,16 +73,13 @@ export default noop.memo(
           tmp10 = cResult[4];
         }
         const tmpResult3 = category(analyticsLocations[14]);
-        class T {
-          constructor() {
-            obj = { opacity: closure_3.get() };
-            return obj;
-          }
-        }
-        T.__closure = { borderOpacity: sharedValue };
-        T.__workletHash = 2446209469388;
-        T.__initData = __initData;
-        const animatedStyle = category(analyticsLocations[14]).useAnimatedStyle(T);
+        const fn2 = function w() {
+          return { opacity: sharedValue.get() };
+        };
+        fn2.__closure = { borderOpacity: sharedValue };
+        fn2.__workletHash = 2446209469388;
+        fn2.__initData = __initData;
+        const animatedStyle = category(analyticsLocations[14]).useAnimatedStyle(fn2);
         let sessionId;
         if (analyticsContext != null) {
           sessionId = analyticsContext.sessionId;
@@ -283,50 +280,52 @@ export default noop.memo(
         if (analyticsContext != null) {
           sessionId2 = analyticsContext.sessionId;
         }
-        const fn2 = function w() {
-          const obj2 = {
-            location_stack: analyticsLocations,
-            page_session_id: null,
-            source: null,
-            page_type: "index",
-            category: null,
-          };
-          let sessionId;
-          if (analyticsContext != null) {
-            sessionId = analyticsContext.sessionId;
+        class T {
+          constructor() {
+            tmp2 = closure_2;
+            tmp = closure_1;
+            obj = closure_1(closure_2[16]);
+            obj1 = {
+              location_stack: analyticsLocations,
+              page_session_id: null,
+              source: null,
+              page_type: "index",
+              category: null,
+            };
+            tmp3 = analyticsContext;
+            sessionId = undefined;
+            if (analyticsContext != null) {
+              sessionId = tmp3.sessionId;
+            }
+            obj1.page_session_id = sessionId;
+            obj1.source = tmp(tmp2[10]).COLLECTIBLES_SHOP;
+            obj1.category = category.name;
+            trackResult = obj.track(AnalyticEvents.COLLECTIBLES_SHOP_VIEWED, obj1);
+            tmp6 = closure_0;
+            obj3 = closure_0(tmp2[17]);
+            sessionId1 = undefined;
+            if (tmp3 != null) {
+              sessionId1 = tmp3.sessionId;
+            }
+            obj5 = {
+              sessionId: sessionId1,
+              checkpoint: tmp6(tmp2[17]).CollectiblesShopPerfCheckpoint.SHOP_MOUNTED,
+              tab: closure_6.SHOP_ALL,
+              unpublishedCategoriesShown: false,
+              cacheDisabled: false,
+            };
+            trackShopPerfResult = obj3.trackShopPerf(obj5);
+            return;
           }
-          obj2.page_session_id = sessionId;
-          obj2.source = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
-          obj2.category = category.name;
-          AnalyticsUtilsDefault.track(AnalyticEvents.COLLECTIBLES_SHOP_VIEWED, obj2);
-          let sessionId1;
-          if (analyticsContext != null) {
-            sessionId1 = analyticsContext.sessionId;
-          }
-          const obj3 = CollectiblesPerfLogging;
-          obj3.trackShopPerf({
-            sessionId: sessionId1,
-            checkpoint: CollectiblesPerfLogging.CollectiblesShopPerfCheckpoint.SHOP_MOUNTED,
-            tab: constants.SHOP_ALL,
-            unpublishedCategoriesShown: false,
-            cacheDisabled: false,
-          });
-          const obj4 = {
-            sessionId: sessionId1,
-            checkpoint: CollectiblesPerfLogging.CollectiblesShopPerfCheckpoint.SHOP_MOUNTED,
-            tab: constants.SHOP_ALL,
-            unpublishedCategoriesShown: false,
-            cacheDisabled: false,
-          };
-        };
+        }
         cResult[5] = sessionId2;
         cResult[6] = analyticsLocations;
         cResult[7] = category.name;
-        cResult[8] = fn2;
-        tmp13 = fn2;
+        cResult[8] = T;
+        tmp13 = T;
         const tmpResult4 = category(analyticsLocations[14]);
       }
-    : (category) => {
+    : function CollectiblesShopViewAllCategoryItems(category) {
         category = category.category;
         const analyticsContext = category.analyticsContext;
         let analyticsLocations;

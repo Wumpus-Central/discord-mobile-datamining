@@ -2,15 +2,15 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2815 from "../../SafetyFlows.messages.js";
+import _modDef2859 from "../../SafetyFlows.messages.js";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import ModalScreen from "../../../../design/components/Modal/native/ModalScreen.native.tsx";
 import ModalContent from "../../../../design/components/Modal/native/ModalContent.native.tsx";
 import LinkExternalSmallIcon from "../../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
-import ModalActionButton from "../../../../design/components/Modal/native/ModalActionButton.native.tsx";
 import ModalFooter from "../../../../design/components/Modal/native/ModalFooter.native.tsx";
+import ModalActionButton from "../../../../design/components/Modal/native/ModalActionButton.native.tsx";
 import LogOutDisclaimerDefault from "../LogOutDisclaimer.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "https://support.discord.com/hc/en-us/articles/42855178312087";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   content: { flexGrow: 1, width: "100%" },
   upperHalf: { flex: 1, justifyContent: "flex-end", alignItems: "center" },
@@ -34,7 +34,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/AppStoreParentalRevocationScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AppStoreParentalRevocationScreen() {
       const cResult = c.c(30);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ content, upperHalf, text } = tmp4);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef2815.Z87TFb);
+        const stringResult = intl.string(_modDef2859.Z87TFb);
         cResult[1] = stringResult;
         let tmp6 = stringResult;
       } else {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ body, text: text2 } = tmp4);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const intl2 = util.intl;
-        const stringResult1 = intl2.string(_modDef2815.VS98dM);
+        const stringResult1 = intl2.string(_modDef2859.VS98dM);
         cResult[4] = stringResult1;
         let tmp12 = stringResult1;
       } else {
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const intl3 = util.intl;
-        const stringResult2 = intl3.string(_modDef2815.BaI6L4);
+        const stringResult2 = intl3.string(_modDef2859.BaI6L4);
         cResult[7] = stringResult2;
         let tmp18 = stringResult2;
       } else {
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const items = [tmp43];
                     const obj7 = { variant: "primary", text: null, icon: null, iconPosition: "end", onPress: null };
                     const intl4 = util.intl;
-                    obj7.text = intl4.string(_modDef2815["6FXIU6"]);
+                    obj7.text = intl4.string(_modDef2859["6FXIU6"]);
                     const obj8 = { color: nativeDefault.colors.WHITE };
                     obj7.icon = hasOwnProperty(LinkExternalSmallIcon.LinkExternalSmallIcon, obj8);
                     obj7.onPress = first;
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = tmp25;
       tmp24 = tmp25;
     }
-  : () => {
+  : function AppStoreParentalRevocationScreen() {
       const tmp = closure_8();
       const callback = noop.useCallback(() => {
         LinkingDefault.openURL(closure_1_7);
@@ -229,16 +229,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const intl = util.intl;
-      obj6.children = intl.string(_modDef2815.Z87TFb);
+      obj6.children = intl.string(_modDef2859.Z87TFb);
       const items = [hasOwnProperty(Text_Text.Text, obj6)];
       const obj7 = { align: "center", spacing: nativeDefault.space.PX_16, style: tmp.body, children: null };
       const obj8 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
       const intl2 = util.intl;
-      obj8.children = intl2.string(_modDef2815.VS98dM);
+      obj8.children = intl2.string(_modDef2859.VS98dM);
       const items1 = [hasOwnProperty(Text_Text.Text, obj8)];
       const obj9 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
       const intl3 = util.intl;
-      obj9.children = intl3.string(_modDef2815.BaI6L4);
+      obj9.children = intl3.string(_modDef2859.BaI6L4);
       items1[1] = hasOwnProperty(Text_Text.Text, obj9);
       obj7.children = items1;
       items[1] = timestampProducer(Stack_Stack.Stack, obj7);
@@ -252,7 +252,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items4 = [hasOwnProperty(LogOutDisclaimerDefault, {})];
       const obj12 = { variant: "primary", text: null, icon: null, iconPosition: "end", onPress: null };
       const intl4 = util.intl;
-      obj12.text = intl4.string(_modDef2815["6FXIU6"]);
+      obj12.text = intl4.string(_modDef2859["6FXIU6"]);
       obj12.icon = hasOwnProperty(LinkExternalSmallIcon.LinkExternalSmallIcon, { color: nativeDefault.colors.WHITE });
       obj12.onPress = callback;
       items4[1] = hasOwnProperty(ModalActionButton.ModalActionButton, obj12);

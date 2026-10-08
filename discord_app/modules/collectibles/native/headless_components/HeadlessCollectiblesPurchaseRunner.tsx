@@ -4,7 +4,7 @@ import useHandleBuyNowDefault from "../useHandleBuyNow.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useNativeCheckoutStore = fn(6943).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(7132).useNativeCheckoutStore;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const HeadlessCollectiblesPurchaseRunner = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function HeadlessCollectiblesPurchaseRunner(arg0) {
       const cResult = c.c(14);
       ({ product, attempt } = arg0);
       ({ analyticsLocations, onBuySettled, stageCollectibleChangeForEditProfile } = arg0);
@@ -25,59 +25,85 @@ export const HeadlessCollectiblesPurchaseRunner = ReactCompilerGating.isReactCom
       } else {
         first = cResult[0];
       }
-      const tmp4 = useNativeCheckoutStore(first);
-      closure_1 = tmp4;
+      const tmp5 = useNativeCheckoutStore(first);
+      closure_1 = tmp5;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        class C {
-          constructor(arg0) {
-            return arg0.orderRequired;
-          }
-        }
-        cResult[1] = C;
+        const fn2 = function b(orderRequired) {
+          return orderRequired.orderRequired;
+        };
+        cResult[1] = fn2;
+        let tmp6 = fn2;
       } else {
-        class C {
-          constructor(arg0) {
-            return arg0.orderRequired;
-          }
-        }
+        tmp6 = cResult[1];
       }
-      closure_2 = useNativeCheckoutStore(C);
-      if (tmp4 != null) {
-        class C {
-          constructor(arg0) {
-            return arg0.orderRequired;
-          }
-        }
+      const tmp4Result = useNativeCheckoutStore(tmp6);
+      closure_2 = tmp4Result;
+      let id;
+      if (tmp5 != null) {
+        id = tmp5.id;
       }
       if (cResult[2] === analyticsLocations) {
-        class C {
-          constructor(arg0) {
-            return arg0.orderRequired;
+        if (cResult[3] === onBuySettled) {
+          if (cResult[4] === product) {
+            if (cResult[5] === stageCollectibleChangeForEditProfile) {
+              if (cResult[6] === id) {
+                let tmp9 = cResult[7];
+              }
+              const handleBuyNow = useHandleBuyNowDefault(tmp9).handleBuyNow;
+              useNativeCheckoutStore = noop.useRef(0);
+              if (cResult[8] === attempt) {
+                if (cResult[9] === handleBuyNow) {
+                  if (cResult[10] === tmp5) {
+                    if (cResult[11] === tmp4Result) {
+                      let tmp11 = cResult[12];
+                      let tmp12 = cResult[13];
+                    }
+                    const effect = noop.useEffect(tmp11, tmp12);
+                    return null;
+                  }
+                }
+              }
+              class P {
+                constructor() {
+                  if (closure_4.current !== attempt) {
+                    tmp3 = closure_2;
+                    if (closure_2) {
+                      tmp4 = closure_1;
+                      tmp5 = null;
+                      tmp3 = null == closure_1;
+                    }
+                    if (!tmp3) {
+                      tmp.current = tmp2;
+                      tmp6 = handleBuyNow;
+                      tmp7 = handleBuyNow();
+                    }
+                  }
+                  return;
+                }
+              }
+              const items = [attempt, handleBuyNow, tmp5, tmp4Result];
+              cResult[8] = attempt;
+              cResult[9] = handleBuyNow;
+              cResult[10] = tmp5;
+              cResult[11] = tmp4Result;
+              cResult[12] = P;
+              cResult[13] = items;
+              tmp12 = items;
+              tmp11 = P;
+            }
           }
         }
       }
+      const obj2 = { product, analyticsLocations, orderId: id, onBuySettled, stageCollectibleChangeForEditProfile };
       cResult[2] = analyticsLocations;
       cResult[3] = onBuySettled;
       cResult[4] = product;
       cResult[5] = stageCollectibleChangeForEditProfile;
-      cResult[6] = undefined;
-      cResult[7] = {
-        product,
-        analyticsLocations,
-        orderId: undefined,
-        onBuySettled,
-        stageCollectibleChangeForEditProfile,
-      };
-      const obj2 = {
-        product,
-        analyticsLocations,
-        orderId: undefined,
-        onBuySettled,
-        stageCollectibleChangeForEditProfile,
-      };
-      const tmp3Result = useNativeCheckoutStore(C);
+      cResult[6] = id;
+      cResult[7] = obj2;
+      tmp9 = obj2;
     }
-  : (attempt) => {
+  : function HeadlessCollectiblesPurchaseRunner(attempt) {
       attempt = attempt.attempt;
       let handleBuyNow;
       ({ product, analyticsLocations, onBuySettled, stageCollectibleChangeForEditProfile } = attempt);

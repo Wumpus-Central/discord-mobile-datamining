@@ -13,7 +13,7 @@ const Permissions = fn(1085).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanViewAllChannels(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -24,7 +24,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function l() {
+        const fn = function t() {
           const values = Object.values(ChannelStore.getMutableGuildChannelsForGuild(closure_0));
           return values.every((item) => closure_1_7.can(constants.VIEW_CHANNEL, item));
         };
@@ -41,7 +41,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useCanViewAllChannels(arg0) {
       _require = arg0;
       const items = [ChannelStore, PermissionStore];
       const items1 = [arg0];
@@ -66,7 +66,7 @@ export const isGuildTemplateNameValid = function isGuildTemplateNameValid(str) {
 };
 export const useCanViewAllChannels = tmp2;
 export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGuildTemplate(arg0) {
       _require = arg0;
       const cResult = require("c").c(11);
       const obj = require("c");
@@ -80,11 +80,11 @@ export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled()
             closure_0 = asyncGeneratorStep(async (arg0) => {
               closure_129_0 = closure_0;
               tmp3(null);
-              await closure_2_1(6837).loadTemplatesForGuild(closure_0);
+              await closure_2_1(7019).loadTemplatesForGuild(closure_0);
               if (1 === tmp7) {
                 c4 = 0;
                 closure_129_1 = closure_3;
-                const aPIError = new closure_0(5319).APIError(closure_129_1);
+                const aPIError = new closure_0(5631).APIError(closure_129_1);
                 tmp3(aPIError);
                 closure_1(closure_129_0);
                 c6 = 3;
@@ -127,7 +127,7 @@ export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = cResult[3];
       }
       if (cResult[4] !== arg0) {
-        class E {
+        class C {
           constructor() {
             forGuild = undefined;
             if (null != closure_0) {
@@ -139,11 +139,11 @@ export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled()
         }
         const items2 = [arg0];
         cResult[4] = arg0;
-        cResult[5] = E;
+        cResult[5] = C;
         cResult[6] = items2;
         let tmp15 = items2;
       } else {
-        class E {
+        class C {
           constructor() {
             forGuild = undefined;
             if (null != closure_0) {
@@ -156,9 +156,9 @@ export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = cResult[6];
       }
       const tmp6 = _slicedToArray(noop.useState(null), 2);
-      const stateFromStores = tmp(504).useStateFromStores(tmp12, E, tmp15);
+      const stateFromStores = tmp(504).useStateFromStores(tmp12, C, tmp15);
       if (cResult[7] === tmp7) {
-        class E {
+        class C {
           constructor() {
             forGuild = undefined;
             if (null != closure_0) {
@@ -176,7 +176,7 @@ export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { loading: null != arg0 && tmp5 !== arg0, guildTemplate: stateFromStores, loadError: tmp7 };
       const tmpResult = tmp(504);
     }
-  : (arg0) => {
+  : function useGuildTemplate(arg0) {
       _require = arg0;
       [tmp2, importDefault] = noop.useState(null);
       const loadError = _slicedToArray(noop.useState(null), 2);
@@ -186,11 +186,11 @@ export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled()
         closure_0 = async function _fetchGuildTemplate2(arg0) {
           closure_129_0 = closure_0;
           tmp3(null);
-          await closure_2_1(6837).loadTemplatesForGuild(closure_0);
+          await closure_2_1(7019).loadTemplatesForGuild(closure_0);
           if (1 === tmp7) {
             c4 = 0;
             closure_129_1 = closure_3;
-            const aPIError = new closure_2_0(5319).APIError(closure_129_1);
+            const aPIError = new closure_2_0(5631).APIError(closure_129_1);
             tmp3(aPIError);
             closure_1(closure_129_0);
             c6 = 3;

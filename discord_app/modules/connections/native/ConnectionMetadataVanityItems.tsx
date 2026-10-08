@@ -7,17 +7,17 @@ import native from "../../../design/void/native.tsx";
 import NumberUtils from "../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ConnectionsUtils from "../ConnectionsUtils.tsx";
-import _modDef11206 from "../../../../_runtime/metro/11206__.js";
-import _modDef11207 from "../../../../_runtime/metro/11207__.js";
+import _modDef11323 from "../../../../_runtime/metro/11323__.js";
+import _modDef11324 from "../../../../_runtime/metro/11324__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(6686);
+const Constants = fn(6863);
 ({ MetadataFields: closure_4, MetadataItemTypes: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   connectedAccountVanityMetadata: { marginTop: 4, paddingRight: 8 },
   connectedAccountVanityMetadataItem: { flexDirection: "row", alignItems: "center" },
@@ -45,7 +45,7 @@ obj2.paypalVerifiedTagText = { color: nativeDefault.colors.WHITE };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function PaypalVanityTag(style) {
       const cResult = c.c(7);
       style = style.style;
       const tmp4 = closure_8();
@@ -81,7 +81,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp5 = items;
     }
-  : (style) => {
+  : function PaypalVanityTag(style) {
       const tmp = closure_8();
       const obj = { style: null, label: null, textStyle: null };
       const items = [tmp.paypalVerifiedTag, style.style];
@@ -93,7 +93,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VanityMetric(arg0) {
       const cResult = c.c(12);
       ({ label, style } = arg0);
       ({ count, percent } = arg0);
@@ -150,7 +150,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = formatResult1;
       }
     }
-  : (label) => {
+  : function VanityMetric(label) {
       label = label.label;
       ({ count, style, percent } = label);
       const tmp = closure_8();
@@ -176,7 +176,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VanityItem(arg0) {
       const cResult = c.c(15);
       ({ label, imageSrc, imageAlt, style } = arg0);
       const tmp4 = closure_8();
@@ -243,7 +243,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items1;
       tmp5 = items1;
     }
-  : (style) => {
+  : function VanityItem(style) {
       style = style.style;
       ({ label, imageSrc, imageAlt } = style);
       const tmp = closure_8();
@@ -266,7 +266,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VanityTag(arg0) {
       const cResult = c.c(10);
       ({ label, style, textStyle } = arg0);
       const tmp4 = closure_8();
@@ -309,7 +309,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp5 = items;
     }
-  : (arg0) => {
+  : function VanityTag(arg0) {
       ({ label, style, textStyle } = arg0);
       const obj = {
         style: null,
@@ -328,7 +328,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VanityDate(arg0) {
       const cResult = c.c(10);
       ({ date, label, locale, style } = arg0);
       const tmp4 = closure_8();
@@ -371,7 +371,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp5 = items;
     }
-  : (arg0) => {
+  : function VanityDate(arg0) {
       ({ date, label, locale, style } = arg0);
       const obj = { variant: "text-xs/normal", color: "text-muted", style: null, children: null };
       const items = [closure_8().connectedAccountVanityMetadata, style];
@@ -482,7 +482,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl = util.intl;
     const obj3 = { count: NumberResult1 };
     obj2.label = intl.format(util.t.Y88M5x, obj3);
-    obj2.imageSrc = _modDef11206;
+    obj2.imageSrc = _modDef11323;
     const intl2 = util.intl;
     obj2.imageAlt = intl2.string(util.t.HKUEZo);
     items.push(timestampProducer(closure_11, obj2, constants.STEAM_ITEM_COUNT_DOTA2));
@@ -492,7 +492,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl3 = util.intl;
     const obj5 = { count: NumberResult2 };
     obj4.label = intl3.format(util.t.Y88M5x, obj5);
-    obj4.imageSrc = _modDef11207;
+    obj4.imageSrc = _modDef11324;
     const intl4 = util.intl;
     obj4.imageAlt = intl4.string(util.t.C8p1Sh);
     items.push(timestampProducer(closure_11, obj4, constants.STEAM_ITEM_COUNT_TF2));

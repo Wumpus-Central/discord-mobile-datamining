@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 const style = { flex: 1 };
 const ImagePlaceholderVersions = { THUMBHASH: 1, [1]: "THUMBHASH" };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = ImageWithThumbhashPlaceholderNativeComponentDefault;
 } else {
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("components_native/common/ImageWithPla
 
 export { ImagePlaceholderVersions };
 export const ImageWithPlaceholder = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ImageWithPlaceholder(arg0) {
       const obj = c;
       const cResult = obj.c(23);
       if (cResult[0] !== arg0) {
@@ -116,7 +116,7 @@ export const ImageWithPlaceholder = ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = tmp15;
       const obj5 = { style, resizeMode: "cover", source: tmp13, accessibilityLabel: tmp3 };
     }
-  : (arg0) => {
+  : function ImageWithPlaceholder(arg0) {
       ({ uri, placeholder, placeholderVersion, alt, style } = arg0);
       const merged = Object.assign(
         arg0,

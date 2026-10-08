@@ -11,7 +11,7 @@ import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import RoleIconUtils from "../../../../guild_boosting/RoleIconUtils.tsx";
 import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
-import _modDef7818 from "../../../../../../_runtime/metro/07818__.js";
+import _modDef8237 from "../../../../../../_runtime/metro/08237__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import GuildRoleStore from "../../../../../stores/GuildRoleStore.tsx";
@@ -27,7 +27,7 @@ const Constants = fn(1085);
 ({ ChannelTypes: c10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   emoji: { width: 32, height: 32 },
   emojiImage: { resizeMode: "contain" },
@@ -64,15 +64,15 @@ const __initData2 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function HorizontalAutocompleteOption(arg0) {
       const cResult = sharedValue(576).c(11);
       ({ children, onPress } = arg0);
       const tmp4 = closure_13();
       const obj = sharedValue(576);
       const tmp = sharedValue;
-      sharedValue = sharedValue(4618).useSharedValue(0);
+      sharedValue = sharedValue(4810).useSharedValue(0);
       if (cResult[0] !== sharedValue) {
-        const fn = function n() {
+        const fn = function o() {
           const result = sharedValue.set(timing.withTiming(1));
         };
         cResult[0] = sharedValue;
@@ -82,14 +82,14 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[1];
       }
       useMountEffectDefault(tmp6);
-      const obj2 = sharedValue(4618);
+      const obj2 = sharedValue(4810);
       const fn2 = function y() {
         return { opacity: sharedValue.get() };
       };
       fn2.__closure = { opacity: sharedValue };
       fn2.__workletHash = 14159604656069;
       fn2.__initData = __initData;
-      const animatedStyle = tmp(4618).useAnimatedStyle(fn2);
+      const animatedStyle = tmp(4810).useAnimatedStyle(fn2);
       if (cResult[2] === animatedStyle) {
         if (cResult[3] === tmp4.horizontalAutocompleteOption) {
           let tmp10 = cResult[4];
@@ -123,17 +123,17 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp4.horizontalAutocompleteOption;
       cResult[4] = items;
       tmp10 = items;
-      const tmpResult = tmp(4618);
+      const tmpResult = tmp(4810);
     }
-  : (arg0) => {
+  : function HorizontalAutocompleteOption(arg0) {
       let sharedValue;
       ({ children, onPress } = arg0);
       const tmp = closure_13();
-      sharedValue = sharedValue(4618).useSharedValue(0);
+      sharedValue = sharedValue(4810).useSharedValue(0);
       useMountEffectDefault(() => {
         const result = sharedValue.set(timing.withTiming(1));
       });
-      const obj = sharedValue(4618);
+      const obj = sharedValue(4810);
       const fn = function c() {
         return { opacity: sharedValue.get() };
       };
@@ -141,7 +141,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__workletHash = 9120427353030;
       fn.__initData = __initData2;
       const obj3 = { onPress, children: null };
-      const animatedStyle = sharedValue(4618).useAnimatedStyle(fn);
+      const animatedStyle = sharedValue(4810).useAnimatedStyle(fn);
       const obj4 = { style: null, children };
       const items = [tmp.horizontalAutocompleteOption, animatedStyle];
       obj4.style = items;
@@ -151,13 +151,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let obj8 = {
   User: ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
-        const cResult = c.c(28);
+    ? function User(arg0) {
+        const cResult = c.c(26);
         ({ user, nick, status, guildId, onPress } = arg0);
         const tmp4 = closure_13();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [AccessibilityStore];
-          const fn = function o() {
+          const fn = function n() {
             return useReducedMotion.useReducedMotion;
           };
           cResult[0] = items;
@@ -189,87 +189,79 @@ let obj8 = {
                 } else {
                   tmp11 = cResult[8];
                 }
-                if (cResult[9] !== tmp4.nickname) {
-                  const items1 = [tmp4.nickname];
-                  cResult[9] = tmp4.nickname;
-                  cResult[10] = items1;
-                  let tmp12 = items1;
-                } else {
-                  tmp12 = cResult[10];
-                }
-                if (cResult[11] === nick) {
-                  if (cResult[12] === user) {
-                    let tmp13 = cResult[13];
+                if (cResult[9] === nick) {
+                  if (cResult[10] === user) {
+                    let tmp12 = cResult[11];
                   }
-                  if (cResult[14] === tmp12) {
-                    if (cResult[15] === tmp13) {
-                      let tmp17 = cResult[16];
+                  if (cResult[12] === tmp4.nickname) {
+                    if (cResult[13] === tmp12) {
+                      let tmp16 = cResult[14];
                     }
-                    if (cResult[17] !== user) {
+                    if (cResult[15] !== user) {
                       const userTag = UserUtilsDefault.getUserTag(user, { decoration: "never" });
-                      cResult[17] = user;
-                      cResult[18] = userTag;
-                      let tmp20 = userTag;
+                      cResult[15] = user;
+                      cResult[16] = userTag;
+                      let tmp19 = userTag;
                     } else {
-                      tmp20 = cResult[18];
+                      tmp19 = cResult[16];
                     }
-                    if (cResult[19] !== tmp20) {
+                    if (cResult[17] !== tmp19) {
                       const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
-                      const items2 = ["@", tmp20];
-                      obj3.children = items2;
-                      const tmp25 = __initData(Text_Text.Text, obj3);
-                      cResult[19] = tmp20;
-                      cResult[20] = tmp25;
-                      let tmp23 = tmp25;
+                      const items1 = ["@", tmp19];
+                      obj3.children = items1;
+                      const tmp24 = __initData(Text_Text.Text, obj3);
+                      cResult[17] = tmp19;
+                      cResult[18] = tmp24;
+                      let tmp22 = tmp24;
                     } else {
-                      tmp23 = cResult[20];
+                      tmp22 = cResult[18];
                     }
-                    if (cResult[21] === tmp23) {
-                      if (cResult[22] === tmp17) {
-                        let tmp26 = cResult[23];
+                    if (cResult[19] === tmp16) {
+                      if (cResult[20] === tmp22) {
+                        let tmp25 = cResult[21];
                       }
-                      if (cResult[24] === onPress) {
-                        if (cResult[25] === tmp26) {
-                          if (cResult[26] === tmp9) {
-                            let tmp30 = cResult[27];
+                      if (cResult[22] === onPress) {
+                        if (cResult[23] === tmp25) {
+                          if (cResult[24] === tmp9) {
+                            let tmp29 = cResult[25];
                           }
-                          return tmp30;
+                          return tmp29;
                         }
                       }
                       const obj4 = { onPress, children: null };
-                      const items3 = [tmp9, tmp26];
-                      obj4.children = items3;
-                      const tmp33 = __initData(closure_16, obj4);
-                      cResult[24] = onPress;
-                      cResult[25] = tmp26;
-                      cResult[26] = tmp9;
-                      cResult[27] = tmp33;
-                      tmp30 = tmp33;
+                      const items2 = [tmp9, tmp25];
+                      obj4.children = items2;
+                      const tmp32 = __initData(closure_16, obj4);
+                      cResult[22] = onPress;
+                      cResult[23] = tmp25;
+                      cResult[24] = tmp9;
+                      cResult[25] = tmp32;
+                      tmp29 = tmp32;
                     }
                     const obj6 = { style: tmp11, children: null };
-                    const items4 = [tmp17, tmp23];
-                    obj6.children = items4;
-                    const tmp29 = __initData(React4, obj6);
-                    cResult[21] = tmp23;
-                    cResult[22] = tmp17;
-                    cResult[23] = tmp29;
-                    tmp26 = tmp29;
+                    const items3 = [tmp16, tmp22];
+                    obj6.children = items3;
+                    const tmp28 = __initData(React4, obj6);
+                    cResult[19] = tmp16;
+                    cResult[20] = tmp22;
+                    cResult[21] = tmp28;
+                    tmp25 = tmp28;
                   }
-                  const obj8 = { style: tmp12, variant: "text-sm/semibold", children: tmp13 };
-                  const tmp19 = closure_1_11(Text_Text.Text, obj8);
-                  cResult[14] = tmp12;
-                  cResult[15] = tmp13;
-                  cResult[16] = tmp19;
-                  tmp17 = tmp19;
+                  const obj8 = { style: tmp4.nickname, variant: "text-sm/semibold", children: tmp12 };
+                  const tmp18 = closure_1_11(Text_Text.Text, obj8);
+                  cResult[12] = tmp4.nickname;
+                  cResult[13] = tmp12;
+                  cResult[14] = tmp18;
+                  tmp16 = tmp18;
                 }
                 let name = nick;
                 if (nick == null) {
                   name = UserUtilsDefault.getName(user);
                 }
-                cResult[11] = nick;
-                cResult[12] = user;
-                cResult[13] = name;
-                tmp13 = name;
+                cResult[9] = nick;
+                cResult[10] = user;
+                cResult[11] = name;
+                tmp12 = name;
               }
             }
           }
@@ -292,7 +284,7 @@ let obj8 = {
         tmp9 = tmp10;
         const obj9 = { status, statusStyle: tmp4.status, user, size: native.AvatarSizes.SMALL, guildId, animate: tmp8 };
       }
-    : (arg0) => {
+    : function User(arg0) {
         ({ user, nick } = arg0);
         ({ status, guildId, onPress } = arg0);
         const tmp = closure_13();
@@ -313,14 +305,12 @@ let obj8 = {
           style: { marginLeft: 8, height: 56, flex: 1, flexDirection: "column", justifyContent: "center" },
           children: null,
         };
-        const obj5 = { style: null, variant: "text-sm/semibold", children: null };
-        const items2 = [tmp.nickname];
-        obj5.style = items2;
+        const obj5 = { style: tmp.nickname, variant: "text-sm/semibold", children: null };
         if (nick == null) {
           nick = UserUtilsDefault.getName(user);
         }
         obj5.children = nick;
-        const items3 = [closure_1_11(Text_Text.Text, obj5)];
+        const items2 = [closure_1_11(Text_Text.Text, obj5)];
         const obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
         const obj3 = {
           status,
@@ -330,10 +320,10 @@ let obj8 = {
           guildId,
           animate: !stateFromStores,
         };
-        const items4 = ["@", UserUtilsDefault.getUserTag(user, { decoration: "never" })];
-        obj7.children = items4;
-        items3[1] = __initData(Text_Text.Text, obj7);
-        obj4.children = items3;
+        const items3 = ["@", UserUtilsDefault.getUserTag(user, { decoration: "never" })];
+        obj7.children = items3;
+        items2[1] = __initData(Text_Text.Text, obj7);
+        obj4.children = items2;
         items1[1] = __initData(React4, obj4);
         obj2.children = items1;
         return __initData(closure_16, obj2);
@@ -344,7 +334,7 @@ let obj8 = {
 };
 ReactCompilerGating = fn(558);
 obj8.Role = ReactCompilerGating.isReactCompilerEnabled()
-  ? (colorString) => {
+  ? function Role(colorString) {
       const cResult = guildId(576).c(22);
       ({ onPress, guildId } = colorString);
       ({ name, id } = colorString);
@@ -365,8 +355,8 @@ obj8.Role = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] !== stateFromStores) {
           let roleIconData = null;
           if (null != stateFromStores) {
-            roleIconData = guildId(6693).getRoleIconData(stateFromStores, 30);
-            const tmpResult2 = guildId(6693);
+            roleIconData = guildId(6870).getRoleIconData(stateFromStores, 30);
+            const tmpResult2 = guildId(6870);
           }
           cResult[4] = stateFromStores;
           cResult[5] = roleIconData;
@@ -420,7 +410,7 @@ obj8.Role = ReactCompilerGating.isReactCompilerEnabled()
                 tmp24 = tmp27;
               }
               const obj4 = { style: tmp19, children: combined };
-              const tmp23 = closure_11(guildId(1188).LegacyText, obj4);
+              const tmp23 = closure_11(guildId(1200).LegacyText, obj4);
               cResult[15] = tmp19;
               cResult[16] = combined;
               cResult[17] = tmp23;
@@ -438,7 +428,7 @@ obj8.Role = ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { style: tmp4.roleIcon, children: null };
           const obj7 = { name, src: null, unicodeEmoji: null, size: 24 };
           ({ customIconSrc: obj5.src, unicodeEmoji: obj5.unicodeEmoji } = tmp9);
-          obj6.children = closure_11(id(6711), obj7);
+          obj6.children = closure_11(id(6888), obj7);
           tmp12 = closure_11(closure_4, obj6);
         }
         cResult[6] = tmp9;
@@ -448,7 +438,7 @@ obj8.Role = ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = tmp12;
         const tmpResult = guildId(504);
       }
-      const fn = function o() {
+      const fn = function n() {
         return GuildRoleStore.getRole(guildId, id);
       };
       cResult[1] = guildId;
@@ -457,7 +447,7 @@ obj8.Role = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       const obj = guildId(576);
     }
-  : (onPress) => {
+  : function Role(onPress) {
       ({ guildId: require, name, id: importDefault, colorString } = onPress);
       const tmp = closure_13();
       const items = [GuildRoleStore];
@@ -492,7 +482,7 @@ obj8.Role = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 obj8.Channel = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function Channel(channel) {
       const cResult = channel(576).c(18);
       channel = channel.channel;
       const onPress = channel.onPress;
@@ -505,7 +495,7 @@ obj8.Channel = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== channel) {
-        const fn = function o() {
+        const fn = function n() {
           return GuildStore.getGuild(channel.getGuildId());
         };
         const items1 = [channel];
@@ -524,7 +514,7 @@ obj8.Channel = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] === stateFromStores) {
           if (cResult[7] !== cResult[6]) {
             const obj2 = { source: tmp10 };
-            const tmp15 = closure_11(tmp(1188).Icon, obj2);
+            const tmp15 = closure_11(tmp(1200).Icon, obj2);
             cResult[7] = tmp10;
             cResult[8] = tmp15;
             let tmp13 = tmp15;
@@ -532,11 +522,11 @@ obj8.Channel = ReactCompilerGating.isReactCompilerEnabled()
             tmp13 = cResult[8];
           }
           if (cResult[9] !== channel) {
-            const channelName = tmp(5049).computeChannelName(channel, UserStore, RelationshipStore);
+            const channelName = tmp(5417).computeChannelName(channel, UserStore, RelationshipStore);
             cResult[9] = channel;
             cResult[10] = channelName;
             let tmp16 = channelName;
-            const tmpResult3 = tmp(5049);
+            const tmpResult3 = tmp(5417);
           } else {
             tmp16 = cResult[10];
           }
@@ -563,7 +553,7 @@ obj8.Channel = ReactCompilerGating.isReactCompilerEnabled()
             tmp23 = tmp26;
           }
           const obj4 = { style: tmp4.channelName, variant: "text-sm/semibold", children: tmp16 };
-          const tmp22 = closure_11(tmp(4892).Text, obj4);
+          const tmp22 = closure_11(tmp(5086).Text, obj4);
           cResult[11] = tmp16;
           cResult[12] = tmp4.channelName;
           cResult[13] = tmp22;
@@ -571,32 +561,32 @@ obj8.Channel = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (channel.type === constants.GUILD_CATEGORY) {
-        let channelIconWithGuild = _modDef7818;
+        let channelIconWithGuild = _modDef8237;
       } else {
-        channelIconWithGuild = tmp(5819).getChannelIconWithGuild(channel, stateFromStores);
-        const tmpResult4 = tmp(5819);
+        channelIconWithGuild = tmp(8134).getChannelIconWithGuild(channel, stateFromStores);
+        const tmpResult4 = tmp(8134);
       }
       cResult[4] = channel;
       cResult[5] = stateFromStores;
       cResult[6] = channelIconWithGuild;
       const tmpResult = channel(504);
     }
-  : (channel) => {
+  : function Channel(channel) {
       channel = channel.channel;
       channel(504);
       [][0] = channel;
       if (channel.type === constants.GUILD_CATEGORY) {
-        let channelIconWithGuild = _modDef7818;
+        let channelIconWithGuild = _modDef8237;
       } else {
-        channelIconWithGuild = tmp2(5819).getChannelIconWithGuild(channel, tmp5);
-        const tmp2Result = tmp2(5819);
+        channelIconWithGuild = tmp2(8134).getChannelIconWithGuild(channel, tmp5);
+        const tmp2Result = tmp2(8134);
       }
       const tmp = closure_13();
-      const tmp8 = closure_11(channel(1188).Icon, { source: channelIconWithGuild });
+      const tmp8 = closure_11(channel(1200).Icon, { source: channelIconWithGuild });
       const obj = { onPress: channel.onPress, children: null };
       const items = [tmp8];
-      const channelName = channel(5049).computeChannelName(channel, UserStore, RelationshipStore);
-      items[1] = closure_11(channel(4892).Text, {
+      const channelName = channel(5417).computeChannelName(channel, UserStore, RelationshipStore);
+      items[1] = closure_11(channel(5086).Text, {
         style: tmp.channelName,
         variant: "text-sm/semibold",
         children: channelName,
@@ -606,7 +596,7 @@ obj8.Channel = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 obj8.Emoji = ReactCompilerGating.isReactCompilerEnabled()
-  ? (name) => {
+  ? function Emoji(name) {
       const cResult = c.c(23);
       ({ url, surrogates, onPress } = name);
       const tmp4 = closure_13();
@@ -701,7 +691,7 @@ obj8.Emoji = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = items2;
       }
     }
-  : (url) => {
+  : function Emoji(url) {
       url = url.url;
       ({ name, surrogates, onPress } = url);
       const tmp = closure_13();

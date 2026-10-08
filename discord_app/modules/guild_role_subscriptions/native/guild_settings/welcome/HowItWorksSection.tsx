@@ -5,16 +5,16 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef17938 from "../../../../../../_runtime/metro/17938__.js";
-import _modDef17939 from "../../../../../../_runtime/metro/17939__.js";
-import _modDef17940 from "../../../../../../_runtime/metro/17940__.js";
+import _modDef18225 from "../../../../../../_runtime/metro/18225__.js";
+import _modDef18226 from "../../../../../../_runtime/metro/18226__.js";
+import _modDef18227 from "../../../../../../_runtime/metro/18227__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1 },
   horizontalContainer: { flex: 1, flexDirection: "row" },
@@ -64,7 +64,7 @@ obj2.howItWorksCardIcon = { marginVertical: 24 };
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function HowItWorksCard(arg0) {
       const cResult = c.c(18);
       ({ cardNumber, iconSource, description } = arg0);
       const tmp4 = closure_6();
@@ -152,7 +152,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         children: cardNumber,
       };
     }
-  : (iconSource) => {
+  : function HowItWorksCard(iconSource) {
       ({ cardNumber, description } = iconSource);
       const tmp = closure_6();
       const obj = {
@@ -205,14 +205,14 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function HowItWorksSection() {
       const cResult = c.c(9);
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { cardNumber: 1, description: null, iconSource: null };
         const intl = util.intl;
         obj2.description = intl.string(util.t.lT0ZNS);
-        obj2.iconSource = _modDef17938;
+        obj2.iconSource = _modDef18225;
         const tmp10 = React4(closure_7, obj2);
         const tmp11 = React4(native.Spacer, { size: 12 });
         cResult[0] = tmp10;
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { cardNumber: 2, description: null, iconSource: null };
         const intl2 = util.intl;
         obj3.description = intl2.string(util.t.ihN2Wb);
-        obj3.iconSource = _modDef17939;
+        obj3.iconSource = _modDef18226;
         const tmp16 = React4(closure_7, obj3);
         cResult[2] = tmp16;
         let tmp12 = tmp16;
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { cardNumber: 3, description: null, iconSource: null };
         const intl3 = util.intl;
         obj5.description = intl3.string(util.t.c8krDQ);
-        obj5.iconSource = _modDef17940;
+        obj5.iconSource = _modDef18227;
         const tmp25 = React4(closure_7, obj5);
         cResult[5] = tmp25;
         let tmp21 = tmp25;
@@ -270,26 +270,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp27;
       tmp26 = tmp27;
     }
-  : () => {
+  : function HowItWorksSection() {
       const tmp = closure_6();
       const obj = { style: tmp.container, children: null };
       const obj2 = { style: tmp.horizontalContainer, children: null };
       const obj3 = { cardNumber: 1, description: null, iconSource: null };
       const intl = util.intl;
       obj3.description = intl.string(util.t.lT0ZNS);
-      obj3.iconSource = _modDef17938;
+      obj3.iconSource = _modDef18225;
       const items = [React4(closure_7, obj3), React4(native.Spacer, { size: 12 })];
       const obj4 = { cardNumber: 2, description: null, iconSource: null };
       const intl2 = util.intl;
       obj4.description = intl2.string(util.t.ihN2Wb);
-      obj4.iconSource = _modDef17939;
+      obj4.iconSource = _modDef18226;
       items[2] = React4(closure_7, obj4);
       obj2.children = items;
       const items1 = [hasOwnProperty(View, obj2)];
       const obj5 = { cardNumber: 3, description: null, iconSource: null };
       const intl3 = util.intl;
       obj5.description = intl3.string(util.t.c8krDQ);
-      obj5.iconSource = _modDef17940;
+      obj5.iconSource = _modDef18227;
       items1[1] = React4(closure_7, obj5);
       obj.children = items1;
       return hasOwnProperty(View, obj);

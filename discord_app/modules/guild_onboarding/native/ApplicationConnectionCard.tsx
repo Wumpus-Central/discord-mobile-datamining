@@ -13,7 +13,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding/native/ApplicationConnectionCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (connection) => {
+  ? function ApplicationConnectionCard(connection) {
       const cResult = connection(_location[5]).c(26);
       connection = connection.connection;
       const guildId = connection.guildId;
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = L;
       const tmpResult = connection(_location[6]);
     }
-  : (connection) => {
+  : function ApplicationConnectionCard(connection) {
       connection = connection.connection;
       const guildId = connection.guildId;
       const _location = connection.location;

@@ -17,11 +17,11 @@ function getAffineChannelId(channelId) {
 function getAffineUserDMId(otherUserId) {
   return ChannelStore.getDMFromUserId(otherUserId.otherUserId);
 }
-const NO_SUGGESTIONS = fn(16166).NO_SUGGESTIONS;
-const isAllowedType = fn(10725).isAllowedType;
+const NO_SUGGESTIONS = fn(16426).NO_SUGGESTIONS;
+const isAllowedType = fn(11578).isAllowedType;
 const ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useChannelAffinities() {
       const cResult = c.c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
@@ -70,7 +70,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = initialize;
     }
-  : () => {
+  : function useChannelAffinities() {
       const effect = noop.useEffect(() => {
         const channelAffinitiesV2 = stateFromStores(dependencyMap[8]).fetchChannelAffinitiesV2();
       }, []);

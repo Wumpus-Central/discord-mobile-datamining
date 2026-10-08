@@ -1,10 +1,8 @@
 // discord_app/actions/RTCDebugActionCreators.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
 import DiscordNativeDefault from "../lib/DiscordNative.tsx";
-import trackVoiceAndVideoSettingsUpdateDefault from "../modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx";
-import RTCDebugStore from "../stores/RTCDebugStore.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const size = fn(2);
 const result = size.fileFinishedImporting("actions/RTCDebugActionCreators.tsx");
 
 export const open = function open(section) {
@@ -20,14 +18,6 @@ export const openReplay = function openReplay() {
 };
 export const setSection = function setSection(section) {
   DispatcherDefault.dispatch({ type: "RTC_DEBUG_MODAL_SET_SECTION", section });
-};
-export const setShouldRecordNextConnection = function setShouldRecordNextConnection(value) {
-  trackVoiceAndVideoSettingsUpdateDefault(
-    "connection_replay_log_enabled",
-    value,
-    RTCDebugStore.shouldRecordNextConnection(),
-  );
-  DispatcherDefault.dispatch({ type: "RTC_DEBUG_SET_RECORDING_FLAG", value });
 };
 export const setSimulcastDebugOverride = function setSimulcastDebugOverride(userId, context, quality) {
   DispatcherDefault.dispatch({ type: "RTC_DEBUG_SET_SIMULCAST_OVERRIDE", userId, context, quality });

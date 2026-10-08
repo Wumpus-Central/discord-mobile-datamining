@@ -10,10 +10,10 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const GuildTagBadgeSize = fn(7614).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(7860).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   card: { padding: nativeDefault.space.PX_16 },
   notice: null,
@@ -40,7 +40,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagPreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildSettingsServerTagPreview(guildId) {
       let Card = _require;
       let tmp = dependencyMap;
       const cResult = require("c").c(77);
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const stateFromStores = Card(504).useStateFromStores(tmp3, tmp4);
       const CardResult = Card(504);
-      const name = onAdopted(5048).useName(guildId, null, stateFromStores);
+      const name = onAdopted(5405).useName(guildId, null, stateFromStores);
       if (cResult[2] === stateFromStores) {
         if (cResult[3] === guildId) {
           let tmp8 = cResult[4];
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let tmp25 = cResult[15];
                 }
                 if (cResult[16] !== card.avatar) {
-                  const obj2 = { source: onAdopted(12521), style: card.avatar, importantForAccessibility: "no" };
+                  const obj2 = { source: onAdopted(12617), style: card.avatar, importantForAccessibility: "no" };
                   const tmp29 = closure_10(closure_6, obj2);
                   cResult[16] = card.avatar;
                   cResult[17] = tmp29;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const _Symbol = Symbol;
                 if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmp32 = closure_10(Card(4892).Text, {
+                  const tmp32 = closure_10(Card(5086).Text, {
                     variant: "text-md/semibold",
                     color: "text-default",
                     children: "Locke",
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let obj3 = { variant: "text-md/normal", color: "text-default", children: null };
                   const intl2 = Card(1126).intl;
                   obj3.children = intl2.string(Card(1126).t.KZQ4mF);
-                  const tmp35 = closure_10(Card(4892).Text, obj3);
+                  const tmp35 = closure_10(Card(5086).Text, obj3);
                   cResult[19] = tmp35;
                   let tmp33 = tmp35;
                 } else {
@@ -170,72 +170,72 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       if (cResult[29] !== name) {
                         const obj6 = { variant: "text-md/semibold", color: "text-default", children: name };
-                        const tmp50 = closure_10(Card(4892).Text, obj6);
+                        const tmp49 = closure_10(Card(5086).Text, obj6);
                         cResult[29] = name;
-                        cResult[30] = tmp50;
-                        let tmp48 = tmp50;
+                        cResult[30] = tmp49;
+                        let tmp47 = tmp49;
                       } else {
-                        tmp48 = cResult[30];
+                        tmp47 = cResult[30];
                       }
                       if (cResult[31] === badge) {
                         if (cResult[32] === primaryColor) {
                           if (cResult[33] === secondaryColor) {
                             if (cResult[34] === tag) {
-                              let tmp51 = cResult[35];
+                              let tmp50 = cResult[35];
                             }
                             if (cResult[36] === card.usernameRow) {
-                              if (cResult[37] === tmp48) {
-                                if (cResult[38] === tmp51) {
-                                  let tmp58 = cResult[39];
+                              if (cResult[37] === tmp47) {
+                                if (cResult[38] === tmp50) {
+                                  let tmp57 = cResult[39];
                                 }
                                 const _Symbol3 = Symbol;
                                 if (cResult[40] === Symbol.for("react.memo_cache_sentinel")) {
                                   const obj7 = { variant: "text-md/normal", color: "text-default", children: null };
                                   const intl3 = Card(1126).intl;
                                   obj7.children = intl3.string(Card(1126).t.LKsPRe);
-                                  const tmp64 = closure_10(Card(4892).Text, obj7);
-                                  cResult[40] = tmp64;
-                                  let tmp62 = tmp64;
+                                  const tmp63 = closure_10(Card(5086).Text, obj7);
+                                  cResult[40] = tmp63;
+                                  let tmp61 = tmp63;
                                 } else {
-                                  tmp62 = cResult[40];
+                                  tmp61 = cResult[40];
                                 }
                                 if (cResult[41] === card.messageBody) {
-                                  if (cResult[42] === tmp58) {
-                                    let tmp65 = cResult[43];
+                                  if (cResult[42] === tmp57) {
+                                    let tmp64 = cResult[43];
                                   }
                                   if (cResult[44] === card.message) {
                                     if (cResult[45] === tmp44) {
-                                      if (cResult[46] === tmp65) {
-                                        let tmp69 = cResult[47];
+                                      if (cResult[46] === tmp64) {
+                                        let tmp68 = cResult[47];
                                       }
                                       if (cResult[48] === card.message) {
                                         if (cResult[49] === card.unfocused) {
-                                          let tmp73 = cResult[50];
+                                          let tmp72 = cResult[50];
                                         }
                                         if (cResult[51] !== card.avatar) {
                                           const obj8 = {
-                                            source: onAdopted(13790),
+                                            source: onAdopted(14012),
                                             style: card.avatar,
                                             importantForAccessibility: "no",
                                           };
-                                          const tmp77 = closure_10(closure_6, obj8);
+                                          const tmp76 = closure_10(closure_6, obj8);
                                           cResult[51] = card.avatar;
-                                          cResult[52] = tmp77;
-                                          let tmp74 = tmp77;
+                                          cResult[52] = tmp76;
+                                          let tmp73 = tmp76;
                                         } else {
-                                          tmp74 = cResult[52];
+                                          tmp73 = cResult[52];
                                         }
                                         const _Symbol4 = Symbol;
                                         if (cResult[53] === Symbol.for("react.memo_cache_sentinel")) {
-                                          const tmp80 = closure_10(Card(4892).Text, {
+                                          const tmp79 = closure_10(Card(5086).Text, {
                                             variant: "text-md/semibold",
                                             color: "text-default",
                                             children: "Phibi",
                                           });
-                                          cResult[53] = tmp80;
-                                          let tmp78 = tmp80;
+                                          cResult[53] = tmp79;
+                                          let tmp77 = tmp79;
                                         } else {
-                                          tmp78 = cResult[53];
+                                          tmp77 = cResult[53];
                                         }
                                         const _Symbol5 = Symbol;
                                         if (cResult[54] === Symbol.for("react.memo_cache_sentinel")) {
@@ -246,36 +246,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                           };
                                           const intl4 = Card(1126).intl;
                                           obj9.children = intl4.string(Card(1126).t.vtCg11);
-                                          const tmp83 = closure_10(Card(4892).Text, obj9);
-                                          cResult[54] = tmp83;
-                                          let tmp81 = tmp83;
+                                          const tmp82 = closure_10(Card(5086).Text, obj9);
+                                          cResult[54] = tmp82;
+                                          let tmp80 = tmp82;
                                         } else {
-                                          tmp81 = cResult[54];
+                                          tmp80 = cResult[54];
                                         }
                                         if (cResult[55] !== card.messageBody) {
                                           const obj10 = { style: card.messageBody, children: null };
-                                          const items2 = [tmp78, tmp81];
+                                          const items2 = [tmp77, tmp80];
                                           obj10.children = items2;
-                                          const tmp87 = closure_11(closure_7, obj10);
+                                          const tmp86 = closure_11(closure_7, obj10);
                                           cResult[55] = card.messageBody;
-                                          cResult[56] = tmp87;
-                                          let tmp84 = tmp87;
+                                          cResult[56] = tmp86;
+                                          let tmp83 = tmp86;
                                         } else {
-                                          tmp84 = cResult[56];
+                                          tmp83 = cResult[56];
                                         }
-                                        if (cResult[57] === tmp73) {
-                                          if (cResult[58] === tmp74) {
-                                            if (cResult[59] === tmp84) {
-                                              let tmp88 = cResult[60];
+                                        if (cResult[57] === tmp72) {
+                                          if (cResult[58] === tmp73) {
+                                            if (cResult[59] === tmp83) {
+                                              let tmp87 = cResult[60];
                                             }
                                             const _Symbol6 = Symbol;
                                             if (cResult[61] === Symbol.for("react.memo_cache_sentinel")) {
                                               const intl5 = Card(1126).intl;
                                               const stringResult1 = intl5.string(Card(1126).t.cQDYRu);
                                               cResult[61] = stringResult1;
-                                              let tmp92 = stringResult1;
+                                              let tmp91 = stringResult1;
                                             } else {
-                                              tmp92 = cResult[61];
+                                              tmp91 = cResult[61];
                                             }
                                             if (!isDirty) {
                                               isDirty = tmp16;
@@ -292,132 +292,132 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             if (cResult[62] === tmp16) {
                                               if (cResult[63] === tmp17) {
                                                 if (cResult[64] === isDirty) {
-                                                  let tmp94 = cResult[65];
+                                                  let tmp93 = cResult[65];
                                                 }
                                                 if (cResult[66] === tmp40) {
-                                                  if (cResult[67] === tmp69) {
-                                                    if (cResult[68] === tmp88) {
-                                                      if (cResult[69] === tmp94) {
-                                                        let tmp97 = cResult[70];
+                                                  if (cResult[67] === tmp68) {
+                                                    if (cResult[68] === tmp87) {
+                                                      if (cResult[69] === tmp93) {
+                                                        let tmp96 = cResult[70];
                                                       }
-                                                      if (cResult[71] === tmp97) {
+                                                      if (cResult[71] === tmp96) {
                                                         if (cResult[72] === tmp22) {
-                                                          let tmp100 = cResult[73];
+                                                          let tmp99 = cResult[73];
                                                         }
                                                         if ("plain" === str) {
-                                                          return tmp100;
+                                                          return tmp99;
                                                         } else {
-                                                          if (cResult[74] === tmp100) {
+                                                          if (cResult[74] === tmp99) {
                                                           }
-                                                          Card = Card(6002).Card;
+                                                          Card = Card(6186).Card;
                                                           const obj11 = {
                                                             variant: "secondary",
                                                             radius: 16,
                                                             style: card.card,
-                                                            children: tmp100,
+                                                            children: tmp99,
                                                           };
                                                           tmp = closure_10(Card, obj11);
-                                                          cResult[74] = tmp100;
+                                                          cResult[74] = tmp99;
                                                           card = card.card;
                                                           cResult[75] = card;
                                                           cResult[76] = tmp;
                                                         }
                                                       }
                                                       const obj12 = { children: null };
-                                                      const items3 = [tmp22, tmp97];
+                                                      const items3 = [tmp22, tmp96];
                                                       obj12.children = items3;
-                                                      const tmp103 = closure_11(closure_12, obj12);
-                                                      cResult[71] = tmp97;
+                                                      const tmp102 = closure_11(closure_12, obj12);
+                                                      cResult[71] = tmp96;
                                                       cResult[72] = tmp22;
-                                                      cResult[73] = tmp103;
-                                                      tmp100 = tmp103;
+                                                      cResult[73] = tmp102;
+                                                      tmp99 = tmp102;
                                                     }
                                                   }
                                                 }
                                                 const obj13 = { spacing: onAdopted(587).space.PX_12, children: null };
-                                                const items4 = [tmp40, tmp69, tmp88, tmp94];
+                                                const items4 = [tmp40, tmp68, tmp87, tmp93];
                                                 obj13.children = items4;
-                                                const tmp99 = closure_11(Card(5600).Stack, obj13);
+                                                const tmp98 = closure_11(Card(5373).Stack, obj13);
                                                 cResult[66] = tmp40;
-                                                cResult[67] = tmp69;
-                                                cResult[68] = tmp88;
-                                                cResult[69] = tmp94;
-                                                cResult[70] = tmp99;
-                                                tmp97 = tmp99;
+                                                cResult[67] = tmp68;
+                                                cResult[68] = tmp87;
+                                                cResult[69] = tmp93;
+                                                cResult[70] = tmp98;
+                                                tmp96 = tmp98;
                                               }
                                             }
                                             const obj15 = {
                                               variant: "primary",
-                                              text: tmp92,
+                                              text: tmp91,
                                               loading: tmp16,
                                               disabled: isDirty,
                                               onPress: tmp17,
                                             };
-                                            const tmp96 = closure_10(Card(5601).Button, obj15);
+                                            const tmp95 = closure_10(Card(5375).Button, obj15);
                                             cResult[62] = tmp16;
                                             cResult[63] = tmp17;
                                             cResult[64] = isDirty;
-                                            cResult[65] = tmp96;
-                                            tmp94 = tmp96;
+                                            cResult[65] = tmp95;
+                                            tmp93 = tmp95;
                                           }
                                         }
-                                        const obj16 = { style: tmp73, children: null };
-                                        const items5 = [tmp74, tmp84];
+                                        const obj16 = { style: tmp72, children: null };
+                                        const items5 = [tmp73, tmp83];
                                         obj16.children = items5;
-                                        const tmp91 = closure_11(closure_7, obj16);
-                                        cResult[57] = tmp73;
-                                        cResult[58] = tmp74;
-                                        cResult[59] = tmp84;
-                                        cResult[60] = tmp91;
-                                        tmp88 = tmp91;
+                                        const tmp90 = closure_11(closure_7, obj16);
+                                        cResult[57] = tmp72;
+                                        cResult[58] = tmp73;
+                                        cResult[59] = tmp83;
+                                        cResult[60] = tmp90;
+                                        tmp87 = tmp90;
                                       }
                                       const items6 = [,];
                                       ({ message: arr8[0], unfocused: arr8[1] } = card);
                                       cResult[48] = card.message;
                                       cResult[49] = card.unfocused;
                                       cResult[50] = items6;
-                                      tmp73 = items6;
+                                      tmp72 = items6;
                                     }
                                   }
                                   const obj17 = { style: card.message, children: null };
-                                  const items7 = [tmp44, tmp65];
+                                  const items7 = [tmp44, tmp64];
                                   obj17.children = items7;
-                                  const tmp72 = closure_11(closure_7, obj17);
+                                  const tmp71 = closure_11(closure_7, obj17);
                                   cResult[44] = card.message;
                                   cResult[45] = tmp44;
-                                  cResult[46] = tmp65;
-                                  cResult[47] = tmp72;
-                                  tmp69 = tmp72;
+                                  cResult[46] = tmp64;
+                                  cResult[47] = tmp71;
+                                  tmp68 = tmp71;
                                 }
                                 const obj18 = { style: card.messageBody, children: null };
-                                const items8 = [tmp58, tmp62];
+                                const items8 = [tmp57, tmp61];
                                 obj18.children = items8;
-                                const tmp68 = closure_11(closure_7, obj18);
+                                const tmp67 = closure_11(closure_7, obj18);
                                 cResult[41] = card.messageBody;
-                                cResult[42] = tmp58;
-                                cResult[43] = tmp68;
-                                tmp65 = tmp68;
+                                cResult[42] = tmp57;
+                                cResult[43] = tmp67;
+                                tmp64 = tmp67;
                               }
                             }
                             const obj19 = { style: card.usernameRow, children: null };
-                            const items9 = [tmp48, tmp51];
+                            const items9 = [tmp47, tmp50];
                             obj19.children = items9;
-                            const tmp61 = closure_11(closure_7, obj19);
+                            const tmp60 = closure_11(closure_7, obj19);
                             cResult[36] = card.usernameRow;
-                            cResult[37] = tmp48;
-                            cResult[38] = tmp51;
-                            cResult[39] = tmp61;
-                            tmp58 = tmp61;
+                            cResult[37] = tmp47;
+                            cResult[38] = tmp50;
+                            cResult[39] = tmp60;
+                            tmp57 = tmp60;
                           }
                         }
                       }
-                      let tmp53Result2 = null != tag;
-                      if (tmp53Result2) {
-                        tmp53Result2 = "" !== tag;
+                      let tmp52Result2 = null != tag;
+                      if (tmp52Result2) {
+                        tmp52Result2 = "" !== tag;
                       }
-                      if (tmp53Result2) {
+                      if (tmp52Result2) {
                         const obj20 = { guildTag: tag, guildBadge: null };
-                        let tmp53Result;
+                        let tmp52Result;
                         if (null != badge) {
                           const size = {
                             badge,
@@ -427,24 +427,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             height: null,
                           };
                           ({ SIZE_12: obj14.width, SIZE_12: obj14.height } = GuildTagBadgeSize);
-                          tmp53Result = closure_10(Card(13746).GuildBadge, size);
+                          tmp52Result = closure_10(Card(13968).GuildBadge, size);
                         }
-                        obj20.guildBadge = tmp53Result;
-                        tmp53Result2 = closure_10(Card(9409).BaseGuildTagChiplet, obj20);
+                        obj20.guildBadge = tmp52Result;
+                        tmp52Result2 = closure_10(Card(8830).BaseGuildTagChiplet, obj20);
                       }
                       cResult[31] = badge;
                       cResult[32] = primaryColor;
                       cResult[33] = secondaryColor;
                       cResult[34] = tag;
-                      cResult[35] = tmp53Result2;
-                      tmp51 = tmp53Result2;
+                      cResult[35] = tmp52Result2;
+                      tmp50 = tmp52Result2;
                     }
                     const obj21 = { source: tmp8, style: card.avatar, importantForAccessibility: "no" };
-                    const tmp47 = closure_10(closure_6, obj21);
+                    const tmp46 = closure_10(onAdopted(6164), obj21);
                     cResult[26] = tmp8;
                     cResult[27] = card.avatar;
-                    cResult[28] = tmp47;
-                    tmp44 = tmp47;
+                    cResult[28] = tmp46;
+                    tmp44 = tmp46;
                   }
                 }
                 const obj22 = { style: tmp25, children: null };
@@ -465,7 +465,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp25 = items11;
             }
             const obj23 = { variant: "text-sm/medium", color: "text-muted", style: card.notice, children: cResult[9] };
-            const tmp24 = closure_10(Card(4892).Text, obj23);
+            const tmp24 = closure_10(Card(5086).Text, obj23);
             cResult[10] = card.notice;
             cResult[11] = cResult[9];
             cResult[12] = tmp24;
@@ -528,7 +528,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         });
-        const fn2 = function () {
+        function t5() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -537,26 +537,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[5] = guildId;
         cResult[6] = onAdopted;
-        cResult[7] = fn2;
-        tmp17 = fn2;
+        cResult[7] = t5;
+        tmp17 = t5;
         const tmp15 = _slicedToArray(noop.useState(false), 2);
       }
-      let obj4 = onAdopted(5048);
+      let obj4 = onAdopted(5405);
       let avatarURL;
       if (stateFromStores != null) {
         avatarURL = stateFromStores.getAvatarURL(guildId, 40);
       }
-      const source = onAdopted(1402).makeSource(avatarURL);
+      const source = onAdopted(1414).makeSource(avatarURL);
       cResult[2] = stateFromStores;
       cResult[3] = guildId;
       cResult[4] = source;
       tmp8 = source;
-      const tmp6Result = onAdopted(1402);
+      const tmp6Result = onAdopted(1414);
     }
-  : (guildId) => {
+  : function GuildSettingsServerTagPreview(guildId) {
       guildId = guildId.guildId;
       ({ tag, badge, primaryColor, secondaryColor, variant } = guildId);
       if (variant === undefined) {
@@ -568,14 +568,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [UserStore];
       const stateFromStores = guildId(504).useStateFromStores(items, () => currentUser.getCurrentUser());
       let obj = guildId(504);
-      const name = onAdopted(5048).useName(guildId, null, stateFromStores);
-      let obj3 = onAdopted(5048);
+      const name = onAdopted(5405).useName(guildId, null, stateFromStores);
+      let obj3 = onAdopted(5405);
       let avatarURL;
       if (stateFromStores != null) {
         avatarURL = stateFromStores.getAvatarURL(guildId, 40);
       }
       let identityGuildId;
-      const source = onAdopted(1402).makeSource(avatarURL);
+      const source = onAdopted(1414).makeSource(avatarURL);
       if (stateFromStores != null) {
         const primaryGuild = stateFromStores.primaryGuild;
         if (primaryGuild != null) {
@@ -593,7 +593,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         isDirty = true === identityEnabled;
       }
-      let obj4 = onAdopted(1402);
+      let obj4 = onAdopted(1414);
       [tmp11, c2] = noop.useState(false);
       const items1 = [guildId, onAdopted];
       const callback = noop.useCallback(
@@ -627,7 +627,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   dependencyMap(true);
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj5 = { value: tmp2(13745).adoptGuildIdentity(guildId, true), done: false };
+                  const obj5 = { value: tmp2(13967).adoptGuildIdentity(guildId, true), done: false };
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -666,7 +666,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stringResult = string(t.OVvzY0);
       }
       obj2.children = stringResult;
-      const items2 = [closure_10(guildId(4892).Text, obj2)];
+      const items2 = [closure_10(guildId(5086).Text, obj2)];
       let obj5 = { spacing: onAdopted(587).space.PX_12, children: null };
       const obj6 = { style: null, children: null };
       const items3 = [,];
@@ -674,26 +674,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.style = items3;
       const tmp10 = _slicedToArray(noop.useState(false), 2);
       const items4 = [
-        closure_10(closure_6, { source: onAdopted(12521), style: tmp.avatar, importantForAccessibility: "no" }),
+        closure_10(closure_6, { source: onAdopted(12617), style: tmp.avatar, importantForAccessibility: "no" }),
       ];
       const obj8 = { style: tmp.messageBody, children: null };
       const items5 = [
-        closure_10(guildId(4892).Text, { variant: "text-md/semibold", color: "text-default", children: "Locke" }),
+        closure_10(guildId(5086).Text, { variant: "text-md/semibold", color: "text-default", children: "Locke" }),
       ];
       const obj9 = { variant: "text-md/normal", color: "text-default", children: null };
       const intl2 = tmp2(1126).intl;
       obj9.children = intl2.string(guildId(1126).t.KZQ4mF);
-      items5[1] = closure_10(guildId(4892).Text, obj9);
+      items5[1] = closure_10(guildId(5086).Text, obj9);
       obj8.children = items5;
       items4[1] = closure_11(closure_7, obj8);
       obj6.children = items4;
       const items6 = [closure_11(closure_7, obj6), , ,];
       const obj10 = { style: tmp.message, children: null };
-      const items7 = [closure_10(closure_6, { source, style: tmp.avatar, importantForAccessibility: "no" })];
+      const items7 = [closure_10(onAdopted(6164), { source, style: tmp.avatar, importantForAccessibility: "no" })];
       const obj12 = { style: tmp.messageBody, children: null };
       const obj13 = { style: tmp.usernameRow, children: null };
       const items8 = [
-        closure_10(guildId(4892).Text, { variant: "text-md/semibold", color: "text-default", children: name }),
+        closure_10(guildId(5086).Text, { variant: "text-md/semibold", color: "text-default", children: name }),
       ];
       let tmp15Result3 = null != tag;
       if (tmp15Result3) {
@@ -711,10 +711,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             height: null,
           };
           ({ SIZE_12: obj16.width, SIZE_12: obj16.height } = GuildTagBadgeSize);
-          tmp15Result = closure_10(tmp2(13746).GuildBadge, size);
+          tmp15Result = closure_10(tmp2(13968).GuildBadge, size);
         }
         obj14.guildBadge = tmp15Result;
-        tmp15Result3 = closure_10(tmp2(9409).BaseGuildTagChiplet, obj14);
+        tmp15Result3 = closure_10(tmp2(8830).BaseGuildTagChiplet, obj14);
       }
       items8[1] = tmp15Result3;
       obj13.children = items8;
@@ -722,7 +722,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj15 = { variant: "text-md/normal", color: "text-default", children: null };
       const intl3 = tmp2(1126).intl;
       obj15.children = intl3.string(guildId(1126).t.LKsPRe);
-      items9[1] = closure_10(guildId(4892).Text, obj15);
+      items9[1] = closure_10(guildId(5086).Text, obj15);
       obj12.children = items9;
       items7[1] = closure_11(closure_7, obj12);
       obj10.children = items7;
@@ -732,18 +732,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ message: arr11[0], unfocused: arr11[1] } = tmp);
       obj17.style = items10;
       const obj11 = { source, style: tmp.avatar, importantForAccessibility: "no" };
-      const obj7 = { source: onAdopted(12521), style: tmp.avatar, importantForAccessibility: "no" };
+      const obj7 = { source: onAdopted(12617), style: tmp.avatar, importantForAccessibility: "no" };
       const items11 = [
-        closure_10(closure_6, { source: onAdopted(13790), style: tmp.avatar, importantForAccessibility: "no" }),
+        closure_10(closure_6, { source: onAdopted(14012), style: tmp.avatar, importantForAccessibility: "no" }),
       ];
       const obj19 = { style: tmp.messageBody, children: null };
       const items12 = [
-        closure_10(guildId(4892).Text, { variant: "text-md/semibold", color: "text-default", children: "Phibi" }),
+        closure_10(guildId(5086).Text, { variant: "text-md/semibold", color: "text-default", children: "Phibi" }),
       ];
       const obj20 = { variant: "text-md/normal", color: "text-default", children: null };
       const intl4 = tmp2(1126).intl;
       obj20.children = intl4.string(guildId(1126).t.vtCg11);
-      items12[1] = closure_10(guildId(4892).Text, obj20);
+      items12[1] = closure_10(guildId(5086).Text, obj20);
       obj19.children = items12;
       items11[1] = closure_11(closure_7, obj19);
       obj17.children = items11;
@@ -767,15 +767,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj22 = { children: null };
       obj21.disabled = isDirty;
       obj21.onPress = callback;
-      items6[3] = closure_10(guildId(5601).Button, obj21);
+      items6[3] = closure_10(guildId(5375).Button, obj21);
       obj5.children = items6;
-      items2[1] = closure_11(guildId(5600).Stack, obj5);
+      items2[1] = closure_11(guildId(5373).Stack, obj5);
       obj22.children = items2;
       const tmp13Result = closure_11(closure_12, obj22);
       let tmp15Result4 = tmp13Result;
       if ("plain" !== variant) {
         const obj23 = { variant: "secondary", radius: 16, style: tmp.card, children: tmp13Result };
-        tmp15Result4 = closure_10(tmp2(6002).Card, obj23);
+        tmp15Result4 = closure_10(tmp2(6186).Card, obj23);
       }
       return tmp15Result4;
     };

@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useOnMessageSend.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useOnMessageSend(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(4);
       let tmp2;
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = fn;
       let obj = require("c");
     }
-  : (arg0) => {
+  : function useOnMessageSend(arg0) {
       closure_0 = arg0;
       closure_1 = tmp;
       const items = [arg0, arg1];

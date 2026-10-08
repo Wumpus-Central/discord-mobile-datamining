@@ -7,16 +7,16 @@ import NotificationSettingsStore from "../../../../stores/NotificationSettingsSt
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function usePredicate() {
       let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
       if (hasActiveParentLinks) {
         hasActiveParentLinks = obj.useHasActiveParentLinks();
       }
       return hasActiveParentLinks;
     }
-  : () => {
+  : function usePredicate() {
       let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
       if (hasActiveParentLinks) {
         hasActiveParentLinks = obj.useHasActiveParentLinks();
@@ -32,7 +32,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.TummoQ);
   },
-  parent: fn(7645).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(7966).MobileUserSettings.NOTIFICATIONS,
   useValue() {
     const items = [NotificationSettingsStore];
     return initialize.useStateFromStores(items, () => NotificationSettingsStore.screenDowntimeReminder);
@@ -41,14 +41,14 @@ const toggle = SettingBuilders.createToggle({
     return NotificationActionCreatorsDefault.setScreenDowntimeReminder(screen_downtime_reminder);
   },
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function usePredicate() {
         let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
         if (hasActiveParentLinks) {
           hasActiveParentLinks = obj.useHasActiveParentLinks();
         }
         return hasActiveParentLinks;
       }
-    : () => {
+    : function usePredicate() {
         let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
         if (hasActiveParentLinks) {
           hasActiveParentLinks = obj.useHasActiveParentLinks();

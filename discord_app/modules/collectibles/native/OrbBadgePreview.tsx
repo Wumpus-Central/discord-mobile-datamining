@@ -9,14 +9,14 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/OrbBadgePreview.tsx");
 
 export const OrbBadgePreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function OrbBadgePreview() {
       const cResult = c.c(7);
       const tmp4 = closure_5();
       const currentUser = useCurrentUser.useCurrentUser();
@@ -58,7 +58,7 @@ export const OrbBadgePreview = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp14;
       tmp13 = tmp14;
     }
-  : () => {
+  : function OrbBadgePreview() {
       const tmp = closure_5();
       const obj2 = { style: tmp.container, children: null };
       const currentUser = useCurrentUser.useCurrentUser();

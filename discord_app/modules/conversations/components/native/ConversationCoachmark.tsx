@@ -10,11 +10,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const TOPICAL_NAVIGATION_HEADER_COACHMARK = fn(2036).DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
+const TOPICAL_NAVIGATION_HEADER_COACHMARK = fn(2048).DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
 let items = [TOPICAL_NAVIGATION_HEADER_COACHMARK];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   badge: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
@@ -34,7 +34,7 @@ obj2.coachmarkWrapper = { marginRight: nativeDefault.space.PX_12 };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function NewBadge() {
       const cResult = c.c(3);
       const tmp4 = closure_9();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -58,7 +58,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function NewBadge() {
       const obj = { style: closure_9().badge, children: null };
       const obj2 = { variant: "text-sm/bold", color: "text-default", children: null };
       const intl = util.intl;
@@ -72,7 +72,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationCoachmark.tsx");
 
 export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function ConversationCoachmark(children) {
       const cResult = require("c").c(18);
       children = children.children;
       closure_9();
@@ -122,18 +122,18 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
             return closure_1_6(closure_1_10, {});
           }
         }
-        const coachmark = tmp(9895).useCoachmark(ref, obj5);
+        const coachmark = tmp(9375).useCoachmark(ref, obj5);
         if (cResult[8] !== tmp7) {
-          class O {
+          class N {
             constructor() {
               tmp = closure_0(ContentDismissActionType.USER_DISMISS);
               return;
             }
           }
           cResult[8] = tmp7;
-          cResult[9] = O;
+          cResult[9] = N;
         } else {
-          class O {
+          class N {
             constructor() {
               tmp = closure_0(ContentDismissActionType.USER_DISMISS);
               return;
@@ -141,7 +141,7 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
           }
         }
         if (!children.isLast) {
-          class O {
+          class N {
             constructor() {
               tmp = closure_0(ContentDismissActionType.USER_DISMISS);
               return;
@@ -149,14 +149,14 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
           }
         }
         if (cResult[10] === children) {
-          class O {
+          class N {
             constructor() {
               tmp = closure_0(ContentDismissActionType.USER_DISMISS);
               return;
             }
           }
           if (cResult[13] !== tmp19) {
-            class O {
+            class N {
               constructor() {
                 tmp = closure_0(ContentDismissActionType.USER_DISMISS);
                 return;
@@ -167,7 +167,7 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
             cResult[13] = tmp19;
             cResult[14] = tmp23;
           } else {
-            class O {
+            class N {
               constructor() {
                 tmp = closure_0(ContentDismissActionType.USER_DISMISS);
                 return;
@@ -175,7 +175,7 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
             }
           }
           if (cResult[15] === tmp21) {
-            class O {
+            class N {
               constructor() {
                 tmp = closure_0(ContentDismissActionType.USER_DISMISS);
                 return;
@@ -190,11 +190,11 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
           cResult[17] = tmp27;
           tmp24 = tmp27;
         }
-        const childrenResult = children(O);
+        const childrenResult = children(N);
         cResult[10] = children;
-        cResult[11] = O;
+        cResult[11] = N;
         cResult[12] = childrenResult;
-        const tmpResult = tmp(9895);
+        const tmpResult = tmp(9375);
       }
       obj5 = {
         title: tmp8,
@@ -209,12 +209,12 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
       cResult[7] = obj5;
       const obj2 = require("useSelectedDismissibleContent");
     }
-  : (arg0) => {
+  : function ConversationCoachmark(arg0) {
       let first;
       ({ children, isLast } = arg0);
       const ref = noop.useRef(null);
       const tmp = closure_9();
-      const tmp3 = _slicedToArray(first(6901).useSelectedDismissibleContent(items), 2);
+      const tmp3 = _slicedToArray(first(7090).useSelectedDismissibleContent(items), 2);
       first = tmp3[0];
       dependencyMap = tmp5;
       items = [tmp3[1], first];
@@ -240,8 +240,8 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
         };
         return obj;
       }, items);
-      let obj = first(6901);
-      const coachmark = first(9895).useCoachmark(ref, memo);
+      let obj = first(7090);
+      const coachmark = first(9375).useCoachmark(ref, memo);
       const items1 = [tmp3[1]];
       let coachmarkWrapper;
       const callback = noop.useCallback(() => {
@@ -251,7 +251,7 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
         coachmarkWrapper = tmp.coachmarkWrapper;
       }
       const obj3 = { style: coachmarkWrapper, children: null };
-      const obj2 = first(9895);
+      const obj2 = first(9375);
       obj3.children = <View ref={ref}>{children(callback)}</View>;
       return <View style={coachmarkWrapper}>{null}</View>;
     };

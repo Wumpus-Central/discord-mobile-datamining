@@ -12,7 +12,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/native/SecureFramesStreamVerificationBottomSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function SecureFramesStreamVerificationBottomSheet(channelId) {
       const cResult = channelId(576).c(11);
       channelId = channelId.channelId;
       const streamKey = channelId.streamKey;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl = tmp(1126).intl;
         const stringResult1 = intl.string(tmp(1126).t.qODBkW);
         const intl2 = tmp(1126).intl;
-        let obj2 = { helpArticle: tmp(9378).getSecureFramesHelpdeskArticle() };
+        let obj2 = { helpArticle: tmp(8800).getSecureFramesHelpdeskArticle() };
         const formatResult = intl2.format(tmp(1126).t["H3+ktv"], obj2);
         cResult[5] = stringResult;
         cResult[6] = stringResult1;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp11 = formatResult;
         let tmp10 = stringResult1;
         const tmp9 = stringResult;
-        const tmpResult2 = tmp(9378);
+        const tmpResult2 = tmp(8800);
       } else {
         class E {
           constructor(arg0) {
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp15;
       }
-      tmp15 = jsx(streamKey(9395), {
+      tmp15 = jsx(streamKey(8816), {
         title: tmp9,
         subtitle: tmp10,
         footer: tmp11,
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = tmp15;
       const tmpResult = channelId(504);
     }
-  : (channelId) => {
+  : function SecureFramesStreamVerificationBottomSheet(channelId) {
       channelId = channelId.channelId;
       const streamKey = channelId.streamKey;
       const items = [StreamRTCConnectionStore];
@@ -174,8 +174,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.subtitle = intl2.string(channelId(1126).t.qODBkW);
       const intl3 = channelId(1126).intl;
       const obj3 = { helpArticle: null };
-      const tmp3 = streamKey(9395);
-      obj3.helpArticle = channelId(9378).getSecureFramesHelpdeskArticle();
+      const tmp3 = streamKey(8816);
+      obj3.helpArticle = channelId(8800).getSecureFramesHelpdeskArticle();
       obj2.footer = intl3.format(channelId(1126).t["H3+ktv"], obj3);
       obj2.epochAuthenticator = stateFromStores;
       obj2.onShareClick = callback;

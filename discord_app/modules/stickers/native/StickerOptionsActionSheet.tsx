@@ -11,11 +11,11 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/stickers/native/StickerOptionsActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (stickerUrl) => {
+  ? function StickerOptionsActionSheet(stickerUrl) {
       const cResult = stickerUrl(576).c(6);
       stickerUrl = stickerUrl.stickerUrl;
       if (cResult[0] !== stickerUrl) {
-        const fn = function t() {
+        const fn = function o() {
           ClipboardUtils.copy(stickerUrl);
           const result = ToastUtils.presentCopiedToClipboard();
           ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp8 = jsx(tmp(4845).LinkIcon, {});
+        const tmp8 = jsx(tmp(5039).LinkIcon, {});
         const intl = tmp(1126).intl;
         const stringResult = intl.string(tmp(1126).t.B1ubHx);
         cResult[2] = tmp8;
@@ -42,9 +42,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj2 = { children: null };
         const obj3 = { hasIcons: true, children: null };
         const obj4 = { icon: tmp5, label: tmp6, onPress: tmp4 };
-        obj3.children = jsx(tmp(6000).TableRow, { icon: tmp5, label: tmp6, onPress: tmp4 });
-        obj2.children = jsx(tmp(6081).TableRowGroup, { hasIcons: true, children: null });
-        const tmp12 = jsx(tmp(6708).ActionSheet, { children: null });
+        obj3.children = jsx(tmp(6184).TableRow, { icon: tmp5, label: tmp6, onPress: tmp4 });
+        obj2.children = jsx(tmp(6267).TableRowGroup, { hasIcons: true, children: null });
+        const tmp12 = jsx(tmp(6885).ActionSheet, { children: null });
         cResult[4] = tmp4;
         cResult[5] = tmp12;
         let tmp10 = tmp12;
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp10;
     }
-  : (stickerUrl) => {
+  : function StickerOptionsActionSheet(stickerUrl) {
       stickerUrl = stickerUrl.stickerUrl;
       const items = [stickerUrl];
       const callback = noop.useCallback(() => {
@@ -63,15 +63,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       let obj = { children: null };
       let obj2 = { hasIcons: true, children: null };
-      const obj3 = { icon: jsx(stickerUrl(4845).LinkIcon, {}), label: null, onPress: null };
+      const obj3 = { icon: jsx(stickerUrl(5039).LinkIcon, {}), label: null, onPress: null };
       const intl = stickerUrl(1126).intl;
       obj3.label = intl.string(stickerUrl(1126).t.B1ubHx);
       obj3.onPress = callback;
-      obj2.children = jsx(stickerUrl(6000).TableRow, {
-        icon: jsx(stickerUrl(4845).LinkIcon, {}),
+      obj2.children = jsx(stickerUrl(6184).TableRow, {
+        icon: jsx(stickerUrl(5039).LinkIcon, {}),
         label: null,
         onPress: null,
       });
-      obj.children = jsx(stickerUrl(6081).TableRowGroup, { hasIcons: true, children: null });
-      return jsx(stickerUrl(6708).ActionSheet, { children: null });
+      obj.children = jsx(stickerUrl(6267).TableRowGroup, { hasIcons: true, children: null });
+      return jsx(stickerUrl(6885).ActionSheet, { children: null });
     };

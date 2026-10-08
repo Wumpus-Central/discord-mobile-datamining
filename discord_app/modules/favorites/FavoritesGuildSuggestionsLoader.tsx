@@ -3,7 +3,7 @@ import useFavoritesGuildSuggestionCandidatesDefault from "hooks/useFavoritesGuil
 import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const FavoritesGuildSuggestionsStore = fn(16166);
+const FavoritesGuildSuggestionsStore = fn(16426);
 ({
   NO_SUGGESTIONS: closure_4,
   setFavoritesGuildSuggestions: hasOwnProperty,
@@ -12,7 +12,7 @@ const FavoritesGuildSuggestionsStore = fn(16166);
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function FavoritesGuildSuggestionsLoaderInner() {
       const cResult = require("c").c(3);
       const tmp2 = useFavoritesGuildSuggestionCandidatesDefault(4);
       _require = tmp2;
@@ -33,7 +33,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const layoutEffect = noop.useLayoutEffect(tmp3, tmp4);
       return null;
     }
-  : () => {
+  : function FavoritesGuildSuggestionsLoaderInner() {
       const tmp = useFavoritesGuildSuggestionCandidatesDefault(4);
       closure_0 = tmp;
       const items = [tmp];
@@ -48,7 +48,7 @@ const result = size.fileFinishedImporting("modules/favorites/FavoritesGuildSugge
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function FavoritesGuildSuggestionsLoader() {
         const cResult = isEligible(576).c(5);
         let tmp2 = closure_6();
         isEligible = tmp2.isEligible;
@@ -94,7 +94,7 @@ export default noop.memo(
         tmp3 = fn;
         const obj = isEligible(576);
       }
-    : () => {
+    : function FavoritesGuildSuggestionsLoader() {
         const tmp = closure_6();
         const isEligible = tmp.isEligible;
         const isSelected = tmp.isSelected;

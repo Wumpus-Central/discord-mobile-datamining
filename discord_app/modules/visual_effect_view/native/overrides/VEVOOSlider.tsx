@@ -2,13 +2,13 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
-import _modDef7963 from "../../../../../_runtime/metro/07963__.js";
+import _modDef8380 from "../../../../../_runtime/metro/08380__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-const PlatformUtils = fn(1369);
+const createStyles = fn(5090);
+const PlatformUtils = fn(1381);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = nativeDefault.space.PX_8;
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/visual_effect_view/native/ove
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (initialValue) => {
+    ? function VEVOOSlider(initialValue) {
         const cResult = c.c(11);
         ({ disabled, disabledOpacity, onValueChange } = initialValue);
         let tmp4 = undefined !== disabledOpacity;
@@ -78,7 +78,7 @@ export default noop.memo(
             onValueChange,
             onResponderGrant: tmp10,
           };
-          const tmp15 = jsx(_modDef7963, {
+          const tmp15 = jsx(_modDef8380, {
             style: tmp7,
             disabled,
             value: current,
@@ -102,7 +102,7 @@ export default noop.memo(
         cResult[4] = items;
         tmp7 = items;
       }
-    : (disabled) => {
+    : function VEVOOSlider(disabled) {
         let flag = disabled.disabledOpacity;
         if (flag === undefined) {
           flag = false;

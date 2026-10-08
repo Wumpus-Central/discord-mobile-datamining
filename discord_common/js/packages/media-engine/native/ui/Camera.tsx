@@ -7,7 +7,7 @@ require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Camera(arg0) {
       const cResult = c.c(5);
       ({ disabled, deviceId, width, height } = arg0);
       if (cResult[0] === deviceId) {
@@ -36,7 +36,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = width;
       cResult[4] = tmp3Result;
     }
-  : (disabled) => {
+  : function Camera(disabled) {
       ({ width, height } = disabled);
       if (disabled.disabled) {
         const obj2 = { className: "media-engine-video", style: null };

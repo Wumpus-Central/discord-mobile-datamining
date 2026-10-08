@@ -9,17 +9,19 @@ require = fn;
 let closure_3 = [
   "accessible",
   "accessibilityLabel",
+  "autoPlay",
   "enableAnimation",
-  "fade",
-  "manualPlayback",
+  "fadeDuration",
   "paused",
   "placeholder",
+  "resizeMode",
   "source",
   "style",
   "tintColor",
   "usesSmallCache",
 ];
-const Image = fn(17).Image;
+get_ActivityIndicator = fn(17);
+({ Image: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -27,43 +29,46 @@ const result = size.fileFinishedImporting("components_native/common/FastImage.ts
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
-        const cResult = c.c(44);
+    ? function FastImage(arg0) {
+        const cResult = c.c(47);
         if (cResult[0] !== arg0) {
           ({
             accessible,
             accessibilityLabel,
+            autoPlay,
             enableAnimation,
-            fade,
-            manualPlayback,
+            fadeDuration,
             paused,
             placeholder,
+            resizeMode,
             source,
             style,
             tintColor,
             usesSmallCache,
           } = arg0);
-          const tmp18 = _objectWithoutProperties(arg0, closure_3);
+          const tmp19 = _objectWithoutProperties(arg0, closure_3);
           cResult[0] = arg0;
           cResult[1] = accessibilityLabel;
           cResult[2] = accessible;
-          cResult[3] = manualPlayback;
-          cResult[4] = paused;
-          cResult[5] = placeholder;
-          cResult[6] = tmp18;
+          cResult[3] = paused;
+          cResult[4] = placeholder;
+          cResult[5] = tmp19;
+          cResult[6] = resizeMode;
           cResult[7] = source;
           cResult[8] = style;
-          cResult[9] = enableAnimation;
-          cResult[10] = fade;
-          cResult[11] = usesSmallCache;
-          cResult[12] = tintColor;
-          let tmp15 = tintColor;
+          cResult[9] = autoPlay;
+          cResult[10] = enableAnimation;
+          cResult[11] = fadeDuration;
+          cResult[12] = usesSmallCache;
+          cResult[13] = tintColor;
+          let tmp16 = tintColor;
+          let tmp14 = fadeDuration;
           let tmp11 = style;
           let tmp10 = source;
-          let tmp9 = tmp18;
-          let tmp8 = placeholder;
-          let tmp7 = paused;
-          let tmp6 = manualPlayback;
+          let tmp9 = resizeMode;
+          let tmp8 = tmp19;
+          let tmp7 = placeholder;
+          let tmp6 = paused;
           let tmp5 = accessible;
           let tmp4 = accessibilityLabel;
         } else {
@@ -75,71 +80,102 @@ export default noop.memo(
           tmp9 = cResult[6];
           tmp10 = cResult[7];
           tmp11 = cResult[8];
-          tmp15 = cResult[12];
+          tmp14 = cResult[11];
+          tmp16 = cResult[13];
         }
-        if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+        let num15 = 200;
+        if (undefined !== tmp14) {
+          num15 = tmp14;
+        }
+        if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { overflow: "hidden" };
-          cResult[13] = obj2;
-          let tmp22 = obj2;
+          cResult[14] = obj2;
+          let tmp23 = obj2;
         } else {
-          tmp22 = cResult[13];
+          tmp23 = cResult[14];
         }
-        if (cResult[14] !== tmp15) {
-          let tmp25;
-          if (null != tmp15) {
-            const obj3 = { tintColor: tmp15 };
-            tmp25 = obj3;
+        if (cResult[15] !== tmp16) {
+          let tmp26;
+          if (null != tmp16) {
+            const obj3 = { tintColor: tmp16 };
+            tmp26 = obj3;
           }
-          cResult[14] = tmp15;
-          cResult[15] = tmp25;
-          let tmp23 = tmp25;
+          cResult[15] = tmp16;
+          cResult[16] = tmp26;
+          let tmp24 = tmp26;
         } else {
-          tmp23 = cResult[15];
+          tmp24 = cResult[16];
         }
-        if (cResult[16] === tmp11) {
-          if (cResult[17] === tmp23) {
-            let tmp26 = cResult[18];
+        if (cResult[17] !== tmp9) {
+          let tmp29;
+          if (null != tmp9) {
+            const obj4 = { resizeMode: tmp9 };
+            tmp29 = obj4;
           }
-          if (tmp5 == null) {
-            tmp5 = null != tmp4 || undefined;
-            const tmp28 = null != tmp4 || undefined;
-          }
-          if (!tmpResult.isAndroid()) {
-            if (typeof tmp10 !== "number") {
-              const _Array = Array;
-              let first = tmp10;
-              if (Array.isArray(tmp10)) {
-                first = tmp10[0];
-              }
-              if (cResult[30] !== tmp8) {
-                let assetSource = null;
-                if (null != tmp8) {
-                  assetSource = Image.resolveAssetSource(tmp8);
-                }
-                let uri;
-                if (assetSource != null) {
-                  uri = assetSource.uri;
-                }
-                cResult[30] = tmp8;
-                cResult[31] = uri;
-                let tmp30 = uri;
-              } else {
-                tmp30 = cResult[31];
-              }
-              if (cResult[32] === tmp4) {
-                if (cResult[33] === tmp5) {
-                  if (cResult[34] === tmp19) {
-                    if (cResult[35] === tmp20) {
-                      if (cResult[36] === tmp6) {
-                        if (cResult[37] === tmp7) {
-                          if (cResult[38] === tmp9) {
-                            if (cResult[39] === tmp26) {
-                              if (cResult[40] === first) {
-                                if (cResult[41] === tmp30) {
-                                  if (cResult[42] === tmp21) {
-                                    let tmp34 = cResult[43];
+          cResult[17] = tmp9;
+          cResult[18] = tmp29;
+          let tmp27 = tmp29;
+        } else {
+          tmp27 = cResult[18];
+        }
+        if (cResult[19] === tmp11) {
+          if (cResult[20] === tmp24) {
+            if (cResult[21] === tmp27) {
+              let tmp30 = cResult[22];
+            }
+            if (tmp5 == null) {
+              tmp5 = null != tmp4 || undefined;
+              const tmp32 = null != tmp4 || undefined;
+            }
+            let tmp33 = null != tmp10 && typeof tmp10 === "object";
+            if (tmp33) {
+              tmp33 = "__packager_asset" in tmp10;
+            }
+            if (tmp33) {
+              tmp33 = true === tmp10.__packager_asset;
+            }
+            const _Array = Array;
+            const isArray = Array.isArray(tmp10);
+            timestampProducer.flatten(tmp11);
+            if (!tmpResult.isAndroid()) {
+              if (typeof tmp10 !== "number") {
+                if (!tmp33) {
+                  const _Array2 = Array;
+                  let first = tmp10;
+                  if (Array.isArray(tmp10)) {
+                    first = tmp10[0];
+                  }
+                  if (cResult[33] !== tmp7) {
+                    let assetSource = null;
+                    if (null != tmp7) {
+                      assetSource = hasOwnProperty.resolveAssetSource(tmp7);
+                    }
+                    let uri;
+                    if (assetSource != null) {
+                      uri = assetSource.uri;
+                    }
+                    cResult[33] = tmp7;
+                    cResult[34] = uri;
+                    let tmp38 = uri;
+                  } else {
+                    tmp38 = cResult[34];
+                  }
+                  if (cResult[35] === tmp4) {
+                    if (cResult[36] === tmp5) {
+                      if (cResult[37] === tmp20) {
+                        if (cResult[38] === tmp21) {
+                          if (cResult[39] === num15) {
+                            if (cResult[40] === tmp6) {
+                              if (cResult[41] === tmp8) {
+                                if (cResult[42] === tmp30) {
+                                  if (cResult[43] === tmp38) {
+                                    if (cResult[44] === first) {
+                                      if (cResult[45] === tmp22) {
+                                        let tmp42 = cResult[46];
+                                      }
+                                      return tmp42;
+                                    }
                                   }
-                                  return tmp34;
                                 }
                               }
                             }
@@ -148,190 +184,215 @@ export default noop.memo(
                       }
                     }
                   }
+                  const obj5 = {};
+                  const merged = Object.assign(tmp8);
+                  obj5.accessible = tmp5;
+                  obj5.accessibilityLabel = tmp4;
+                  obj5.source = first;
+                  obj5.style = tmp30;
+                  obj5.placeholder = tmp38;
+                  obj5.autoPlay = tmp20;
+                  obj5.enableAnimation = tmp21;
+                  obj5.paused = tmp6;
+                  obj5.fadeDuration = num15;
+                  obj5.usesSmallCache = tmp22;
+                  const tmp49 = jsx(FastImageNativeComponentDefault, {});
+                  cResult[35] = tmp4;
+                  cResult[36] = tmp5;
+                  cResult[37] = tmp20;
+                  cResult[38] = tmp21;
+                  cResult[39] = num15;
+                  cResult[40] = tmp6;
+                  cResult[41] = tmp8;
+                  cResult[42] = tmp30;
+                  cResult[43] = tmp38;
+                  cResult[44] = first;
+                  cResult[45] = tmp22;
+                  cResult[46] = tmp49;
+                  tmp42 = tmp49;
                 }
               }
-              const obj4 = {};
-              const merged = Object.assign(tmp9);
-              obj4.accessible = tmp5;
-              obj4.accessibilityLabel = tmp4;
-              obj4.source = first;
-              obj4.style = tmp26;
-              obj4.placeholder = tmp30;
-              obj4.enableAnimation = tmp19;
-              obj4.paused = tmp7;
-              obj4.manualPlayback = tmp6;
-              obj4.fade = tmp20;
-              obj4.usesSmallCache = tmp21;
-              const tmp41 = jsx(FastImageNativeComponentDefault, {});
-              cResult[32] = tmp4;
-              cResult[33] = tmp5;
-              cResult[34] = tmp19;
-              cResult[35] = tmp20;
-              cResult[36] = tmp6;
-              cResult[37] = tmp7;
-              cResult[38] = tmp9;
-              cResult[39] = tmp26;
-              cResult[40] = first;
-              cResult[41] = tmp30;
-              cResult[42] = tmp21;
-              cResult[43] = tmp41;
-              tmp34 = tmp41;
             }
-          }
-          tmpResult = PlatformUtils;
-          let tmp42;
-          if (tmpResult3.isAndroid()) {
-            tmp42 = tmp8;
-          }
-          if (cResult[19] !== tmp9) {
-            let num31 = 0;
-            if (!tmpResult4.isAndroid()) {
-              num31 = tmp9.fadeDuration;
+            tmpResult = PlatformUtils;
+            let tmp50;
+            if (tmpResult2.isAndroid()) {
+              tmp50 = tmp7;
             }
-            cResult[19] = tmp9;
-            cResult[20] = num31;
-            let tmp43 = num31;
-            tmpResult4 = PlatformUtils;
-          } else {
-            tmp43 = cResult[20];
-          }
-          if (cResult[21] === tmp4) {
-            if (cResult[22] === tmp5) {
-              if (cResult[23] === tmp9) {
-                if (cResult[24] === tmp10) {
-                  if (cResult[25] === tmp26) {
-                    if (cResult[26] === tmp42) {
-                      if (cResult[27] === tmp43) {
-                        if (cResult[28] === tmp15) {
-                          let tmp44 = cResult[29];
+            let num35 = 0;
+            if (typeof tmp10 !== "number") {
+              num35 = 0;
+              if (!tmp33) {
+                num35 = num15;
+              }
+            }
+            if (cResult[23] === tmp4) {
+              if (cResult[24] === tmp5) {
+                if (cResult[25] === tmp8) {
+                  if (cResult[26] === tmp9) {
+                    if (cResult[27] === tmp10) {
+                      if (cResult[28] === tmp30) {
+                        if (cResult[29] === num35) {
+                          if (cResult[30] === tmp50) {
+                            if (cResult[31] === tmp16) {
+                              let tmp51 = cResult[32];
+                            }
+                            return tmp51;
+                          }
                         }
-                        return tmp44;
                       }
                     }
                   }
                 }
               }
             }
+            const obj6 = {};
+            const merged1 = Object.assign(tmp8);
+            obj6.resizeMode = tmp9;
+            obj6.source = tmp10;
+            obj6.style = tmp30;
+            obj6.tintColor = tmp16;
+            obj6.accessible = tmp5;
+            obj6.accessibilityLabel = tmp4;
+            obj6.defaultSource = tmp50;
+            obj6.fadeDuration = num35;
+            const tmp57 = <hasOwnProperty />;
+            cResult[23] = tmp4;
+            cResult[24] = tmp5;
+            cResult[25] = tmp8;
+            cResult[26] = tmp9;
+            cResult[27] = tmp10;
+            cResult[28] = tmp30;
+            cResult[29] = num35;
+            cResult[30] = tmp50;
+            cResult[31] = tmp16;
+            cResult[32] = tmp57;
+            tmp51 = tmp57;
+            tmpResult2 = PlatformUtils;
           }
-          const obj5 = {};
-          const merged1 = Object.assign(tmp9);
-          obj5.source = tmp10;
-          obj5.style = tmp26;
-          obj5.tintColor = tmp15;
-          obj5.accessible = tmp5;
-          obj5.accessibilityLabel = tmp4;
-          obj5.defaultSource = tmp42;
-          obj5.fadeDuration = tmp43;
-          const tmp50 = <Image />;
-          cResult[21] = tmp4;
-          cResult[22] = tmp5;
-          cResult[23] = tmp9;
-          cResult[24] = tmp10;
-          cResult[25] = tmp26;
-          cResult[26] = tmp42;
-          cResult[27] = tmp43;
-          cResult[28] = tmp15;
-          cResult[29] = tmp50;
-          tmp44 = tmp50;
-          tmpResult3 = PlatformUtils;
         }
-        const items = [tmp22, tmp11, tmp23];
-        cResult[16] = tmp11;
-        cResult[17] = tmp23;
-        cResult[18] = items;
-        tmp26 = items;
+        const items = [tmp23, tmp11, tmp24, tmp27];
+        cResult[19] = tmp11;
+        cResult[20] = tmp24;
+        cResult[21] = tmp27;
+        cResult[22] = items;
+        tmp30 = items;
       }
-    : (fade) => {
-        ({ accessible, accessibilityLabel, enableAnimation } = fade);
-        if (enableAnimation === undefined) {
-          enableAnimation = true;
+    : function FastImage(enableAnimation) {
+        ({ accessible, accessibilityLabel, autoPlay } = enableAnimation);
+        if (autoPlay === undefined) {
+          autoPlay = true;
         }
-        let flag = fade.fade;
+        let flag = enableAnimation.enableAnimation;
         if (flag === undefined) {
           flag = true;
         }
-        ({ placeholder, source, tintColor, usesSmallCache, manualPlayback, paused, style } = fade);
+        let num = enableAnimation.fadeDuration;
+        if (num === undefined) {
+          num = 200;
+        }
+        ({ placeholder, resizeMode, source, style, tintColor, usesSmallCache, paused } = enableAnimation);
         if (usesSmallCache === undefined) {
           usesSmallCache = false;
         }
         const merged = Object.assign(
-          fade,
+          enableAnimation,
           Object.assign({
             accessible: 0,
             accessibilityLabel: 0,
+            autoPlay: 0,
             enableAnimation: 0,
-            fade: 0,
-            manualPlayback: 0,
+            fadeDuration: 0,
             paused: 0,
             placeholder: 0,
+            resizeMode: 0,
             source: 0,
             style: 0,
             tintColor: 0,
             usesSmallCache: 0,
           }),
         );
-        const items = [{ overflow: "hidden" }, style];
+        const items = [{ overflow: "hidden" }, style, ,];
         let tmp2;
         if (null != tintColor) {
           const obj = { tintColor };
           tmp2 = obj;
         }
         items[2] = tmp2;
+        let tmp3;
+        if (null != resizeMode) {
+          const obj2 = { resizeMode };
+          tmp3 = obj2;
+        }
+        items[3] = tmp3;
         if (accessible == null) {
           accessible = null != accessibilityLabel || undefined;
-          const tmp3 = null != accessibilityLabel || undefined;
+          const tmp4 = null != accessibilityLabel || undefined;
         }
-        if (!obj2.isAndroid()) {
+        let tmp5 = null != source && typeof source === "object";
+        if (tmp5) {
+          tmp5 = "__packager_asset" in source;
+        }
+        if (tmp5) {
+          tmp5 = true === source.__packager_asset;
+        }
+        const isArray = Array.isArray(source);
+        timestampProducer.flatten(style);
+        if (!obj3.isAndroid()) {
           if (typeof source !== "number") {
-            const obj3 = {};
-            const merged1 = Object.assign(merged);
-            obj3.accessible = accessible;
-            obj3.accessibilityLabel = accessibilityLabel;
-            const _Array = Array;
-            let first = source;
-            if (Array.isArray(source)) {
-              first = source[0];
+            if (!tmp5) {
+              const obj4 = {};
+              const merged1 = Object.assign(merged);
+              obj4.accessible = accessible;
+              obj4.accessibilityLabel = accessibilityLabel;
+              const _Array = Array;
+              let first = source;
+              if (Array.isArray(source)) {
+                first = source[0];
+              }
+              obj4.source = first;
+              obj4.style = items;
+              let assetSource = null;
+              if (null != placeholder) {
+                assetSource = hasOwnProperty.resolveAssetSource(placeholder);
+              }
+              let uri;
+              if (assetSource != null) {
+                uri = assetSource.uri;
+              }
+              obj4.placeholder = uri;
+              obj4.autoPlay = autoPlay;
+              obj4.enableAnimation = flag;
+              obj4.paused = paused;
+              obj4.fadeDuration = num;
+              obj4.usesSmallCache = usesSmallCache;
+              let tmp21Result = jsx(FastImageNativeComponentDefault, {});
             }
-            obj3.source = first;
-            obj3.style = items;
-            let assetSource = null;
-            if (null != placeholder) {
-              assetSource = Image.resolveAssetSource(placeholder);
-            }
-            let uri;
-            if (assetSource != null) {
-              uri = assetSource.uri;
-            }
-            obj3.placeholder = uri;
-            obj3.enableAnimation = enableAnimation;
-            obj3.paused = paused;
-            obj3.manualPlayback = manualPlayback;
-            obj3.fade = flag;
-            obj3.usesSmallCache = usesSmallCache;
-            let tmp11Result = jsx(FastImageNativeComponentDefault, {});
+            return tmp21Result;
           }
-          return tmp11Result;
         }
-        const obj4 = {};
+        const obj5 = {};
         const merged2 = Object.assign(merged);
-        obj4.source = source;
-        obj4.style = items;
-        obj4.tintColor = tintColor;
-        obj4.accessible = accessible;
-        obj4.accessibilityLabel = accessibilityLabel;
-        obj2 = PlatformUtils;
-        let tmp14;
-        if (tmp4Result.isAndroid()) {
-          tmp14 = placeholder;
+        obj5.resizeMode = resizeMode;
+        obj5.source = source;
+        obj5.style = items;
+        obj5.tintColor = tintColor;
+        obj5.accessible = accessible;
+        obj5.accessibilityLabel = accessibilityLabel;
+        obj3 = PlatformUtils;
+        let tmp24;
+        if (tmp8Result.isAndroid()) {
+          tmp24 = placeholder;
         }
-        obj4.defaultSource = tmp14;
-        tmp4Result = PlatformUtils;
-        let num = 0;
-        if (!tmp4Result2.isAndroid()) {
-          num = merged.fadeDuration;
+        obj5.defaultSource = tmp24;
+        let num2 = 0;
+        if (typeof source !== "number") {
+          num2 = 0;
+          if (!tmp5) {
+            num2 = num;
+          }
         }
-        obj4.fadeDuration = num;
-        tmp11Result = <Image />;
-        tmp4Result2 = PlatformUtils;
+        obj5.fadeDuration = num2;
+        tmp21Result = <hasOwnProperty />;
+        tmp8Result = PlatformUtils;
       },
 );

@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (type) => {
+    ? function RadioGroupActionComponent(type) {
         const cResult = type(ref[3]).c(25);
         type = type.type;
         ({ options, required } = type);
@@ -173,7 +173,7 @@ export default noop.memo(
               }
             }
           }
-          const fn = function v(value) {
+          function onChange(value) {
             if ("" !== value) {
               if (null == value) {
                 const obj2 = { type, value: null };
@@ -187,13 +187,13 @@ export default noop.memo(
                 executeStateUpdate(obj);
               }
             }
-          };
+          }
           cResult[5] = executeStateUpdate;
           cResult[6] = required;
           cResult[7] = type;
           cResult[8] = str;
-          cResult[9] = fn;
-          tmp15 = fn;
+          cResult[9] = onChange;
+          tmp15 = onChange;
           const tmpResult2 = tmp(tmp2[5]);
         }
         let tmp8;
@@ -214,7 +214,7 @@ export default noop.memo(
         tmp7 = tmp8;
         let obj = type(ref[3]);
       }
-    : (type) => {
+    : function RadioGroupActionComponent(type) {
         type = type.type;
         options = type.options;
         const required = type.required;

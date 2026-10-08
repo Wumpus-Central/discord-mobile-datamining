@@ -10,7 +10,7 @@ import n from "../../../../../_runtime/metro/00683__.js";
 require = fn;
 let closure_3 = ["style", "children"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   disabled: { opacity: 0.5 },
   container: { borderRadius: nativeDefault.radii.round, overflow: "hidden" },
@@ -30,7 +30,7 @@ const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal
 
 export const VideoQuestPlayerControlButton = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function VideoQuestPlayerControlButton(arg0) {
         const cResult = c.c(15);
         if (cResult[0] !== arg0) {
           ({ style, children } = arg0);
@@ -102,7 +102,7 @@ export const VideoQuestPlayerControlButton = noop.memo(
         cResult[7] = items;
         tmp12 = items;
       }
-    : (arg0) => {
+    : function VideoQuestPlayerControlButton(arg0) {
         ({ style, children } = arg0);
         const merged = Object.assign(arg0, Object.assign({ style: 0, children: 0 }));
         const tmp2 = closure_6();

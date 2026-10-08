@@ -15,7 +15,7 @@ const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCanNavigateToPaymentSetting() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t() {
@@ -34,8 +34,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      noop.useCallback(() => {
+  : function useCanNavigateToPaymentSetting() {
+      return noop.useCallback(() => {
         const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
         let flag = !isPaymentsBlocked;
         if (isPaymentsBlocked) {
@@ -44,9 +44,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return flag;
       }, []);
-const SettingBuilders = fn(11142);
+    };
+const SettingBuilders = fn(11262);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function usePremiumSettingTrailing() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp6 = jsx(PremiumTabBadgeDefault, {});
@@ -57,7 +58,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => jsx(PremiumTabBadgeDefault, {});
+  : function usePremiumSettingTrailing() {
+      return jsx(PremiumTabBadgeDefault, {});
+    };
 const route = SettingBuilders.createRoute({
   useTitle: function getPremiumSettingTitle() {
     const mobileNitroManageSubscriptionsSettingsExperiment =
@@ -84,10 +87,10 @@ const route = SettingBuilders.createRoute({
     }
   },
   parent: null,
-  IconComponent: fn(8346).NitroWheelIcon,
+  IconComponent: fn(9005).NitroWheelIcon,
   usePreNavigationAction: tmp2,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function usePremiumSettingTrailing() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const tmp6 = jsx(PremiumTabBadgeDefault, {});
@@ -98,7 +101,9 @@ const route = SettingBuilders.createRoute({
         }
         return first;
       }
-    : () => jsx(PremiumTabBadgeDefault, {}),
+    : function usePremiumSettingTrailing() {
+        return jsx(PremiumTabBadgeDefault, {});
+      },
   screen: {
     route: fn(1085).UserSettingsSections.PREMIUM,
     getComponent() {

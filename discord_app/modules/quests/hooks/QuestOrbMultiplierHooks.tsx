@@ -38,7 +38,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/hooks/QuestOrbMultiplierHooks.tsx");
 
 export const useQuestOrbMultiplierEligibility = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useQuestOrbMultiplierEligibility() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -54,7 +54,7 @@ export const useQuestOrbMultiplierEligibility = ReactCompilerGating.isReactCompi
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useQuestOrbMultiplierEligibility() {
       const items = [UserStore];
       return initialize.useStateFromStores(items, () =>
         getQuestOrbMultiplierEligibilityForUser(currentUser.getCurrentUser()),

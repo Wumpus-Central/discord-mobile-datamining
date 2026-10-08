@@ -1,13 +1,13 @@
 // discord_app/modules/activity_status/native/PresenceActivityStatus.tsx
 import c from "../../../../_runtime/00576_c.js";
-import AppsIcon2 from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
+import AppsIcon2 from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import GameControllerIcon2 from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
-import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import ActivityStatusIconDefault from "ActivityStatusIcon.tsx";
 import TvIcon from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
 import ActivityStatusTextDefault from "ActivityStatusText.tsx";
 import conjurePresenceActivity from "../../conjure/presence/conjurePresenceActivity.tsx";
+import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import getActivityStatusTextDefault from "../getActivityStatusText.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -51,7 +51,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/PresenceActivityStatus.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PresenceActivityStatus(arg0) {
       const cResult = c.c(16);
       ({ activity, iconStyle, textStyle, maxFontSizeMultiplier, hideIcon, hideText } = arg0);
       if (undefined !== hideIcon && hideIcon) {
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp12;
       tmp11 = tmp12;
     }
-  : (hideText) => {
+  : function PresenceActivityStatus(hideText) {
       ({ activity, hideIcon } = hideText);
       ({ iconStyle, textStyle, maxFontSizeMultiplier } = hideText);
       if (hideIcon === undefined) {

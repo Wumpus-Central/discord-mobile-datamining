@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ConjureDebugFormat from "../ConjureDebugFormat.tsx";
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   toolbar: {
     flexDirection: "row",
@@ -75,7 +75,7 @@ fn(558);
 let obj9 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DebugSnapshotToolbar(arg0) {
       const cResult = c.c(13);
       ({ generatedAt, fetchState, onRefresh } = arg0);
       const tmp4 = closure_7();
@@ -88,7 +88,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol = Symbol;
             if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
               const intl3 = util.intl;
-              const stringResult = intl3.string(_modDef3753.oKEgiu);
+              const stringResult = intl3.string(_modDef3827.oKEgiu);
               cResult[6] = stringResult;
               let tmp19 = stringResult;
             } else {
@@ -134,7 +134,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else if ("failed" === fetchState) {
         const obj5 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
         const intl2 = util.intl;
-        obj5.children = intl2.string(_modDef3753.ZVByPX);
+        obj5.children = intl2.string(_modDef3827.ZVByPX);
         tmp9 = hasOwnProperty(Text_Text.Text, obj5);
       } else {
         tmp9 = null;
@@ -142,7 +142,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { variant: "text-xs/normal", color: "text-muted", children: null };
           const intl = util.intl;
           const obj7 = { time: ConjureDebugFormat.formatObservedAt(generatedAt) };
-          obj6.children = intl.formatToPlainString(_modDef3753.INVO50, obj7);
+          obj6.children = intl.formatToPlainString(_modDef3827.INVO50, obj7);
           tmp9 = hasOwnProperty(Text_Text.Text, obj6);
           const tmpResult = ConjureDebugFormat;
         }
@@ -151,7 +151,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = generatedAt;
       cResult[2] = tmp9;
     }
-  : (onRefresh) => {
+  : function DebugSnapshotToolbar(onRefresh) {
       ({ generatedAt, fetchState } = onRefresh);
       const tmp = closure_7();
       const obj = { style: tmp.toolbar, children: null };
@@ -161,7 +161,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else if ("failed" === fetchState) {
         const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
         const intl2 = util.intl;
-        obj3.children = intl2.string(_modDef3753.ZVByPX);
+        obj3.children = intl2.string(_modDef3827.ZVByPX);
         tmp4Result = hasOwnProperty(Text_Text.Text, obj3);
       } else {
         tmp4Result = null;
@@ -169,7 +169,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
           const intl = util.intl;
           const obj6 = { time: ConjureDebugFormat.formatObservedAt(generatedAt) };
-          obj4.children = intl.formatToPlainString(_modDef3753.INVO50, obj6);
+          obj4.children = intl.formatToPlainString(_modDef3827.INVO50, obj6);
           tmp4Result = hasOwnProperty(Text_Text.Text, obj4);
         }
       }
@@ -177,7 +177,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [hasOwnProperty(React4, obj2)];
       const obj7 = { variant: "secondary", size: "sm", text: null, onPress: null };
       const intl3 = util.intl;
-      obj7.text = intl3.string(_modDef3753.oKEgiu);
+      obj7.text = intl3.string(_modDef3827.oKEgiu);
       obj7.onPress = onRefresh.onRefresh;
       items[1] = hasOwnProperty(components_Button_Button.Button, obj7);
       obj.children = items;
@@ -185,7 +185,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DebugSection(arg0) {
       const cResult = c.c(6);
       ({ title, children } = arg0);
       const tmp4 = closure_7();
@@ -216,7 +216,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp9;
       tmp8 = tmp9;
     }
-  : (arg0) => {
+  : function DebugSection(arg0) {
       ({ title, children } = arg0);
       const obj = { style: closure_7().section, children: null };
       const items = [
@@ -228,7 +228,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function DebugNote(children) {
       const cResult = c.c(2);
       children = children.children;
       if (cResult[0] !== children) {
@@ -242,11 +242,16 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (children) =>
-      hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", children: children.children });
+  : function DebugNote(children) {
+      return hasOwnProperty(Text_Text.Text, {
+        variant: "text-sm/normal",
+        color: "text-muted",
+        children: children.children,
+      });
+    };
 ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DebugStatRow(arg0) {
       const cResult = c.c(19);
       ({ label, value, hint, critical } = arg0);
       const tmp5 = closure_7();
@@ -335,7 +340,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { style: tmp5.statLabel, children: tmp6 };
       tmp4 = undefined !== critical && critical;
     }
-  : (arg0) => {
+  : function DebugStatRow(arg0) {
       ({ hint, critical } = arg0);
       ({ label, value } = arg0);
       if (critical === undefined) {
@@ -379,7 +384,7 @@ export const DebugSection = tmp6;
 export const DebugNote = tmp7;
 export const DebugStatRow = tmp8;
 export const DebugMeter = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DebugMeter(arg0) {
       const cResult = c.c(35);
       ({ label, used, max, formatValue } = arg0);
       const tmp4 = closure_7();
@@ -540,7 +545,7 @@ export const DebugMeter = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = formatValueResult1;
       tmp6 = formatValueResult1;
     }
-  : (arg0) => {
+  : function DebugMeter(arg0) {
       ({ label, used, max, formatValue } = arg0);
       const tmp = closure_7();
       let num = 0;

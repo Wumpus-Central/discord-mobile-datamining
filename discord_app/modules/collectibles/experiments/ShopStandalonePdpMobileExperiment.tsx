@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/collectibles/experiments/Shop
 
 export default apexExperiment;
 export const useIsShopStandalonePdpMobileEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsShopStandalonePdpMobileEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -26,4 +26,6 @@ export const useIsShopStandalonePdpMobileEnabled = ReactCompilerGating.isReactCo
       }
       return apexExperiment.useConfig(tmp2).standalonePdpEnabled;
     }
-  : (location) => apexExperiment.useConfig({ location }).standalonePdpEnabled;
+  : function useIsShopStandalonePdpMobileEnabled(location) {
+      return apexExperiment.useConfig({ location }).standalonePdpEnabled;
+    };

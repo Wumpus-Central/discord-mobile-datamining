@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 let closure_3 = ["children"];
 const jsx = fn(21).jsx;
-const NativeStackNavigator = fn(7568);
+const NativeStackNavigator = fn(9279);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -18,10 +18,10 @@ const result = size.fileFinishedImporting("modules/user_settings/billing/native/
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function PaymentFlowTestModal() {
         const cResult = accessibilityNativeStackOptions(576).c(5);
         let obj = accessibilityNativeStackOptions(576);
-        accessibilityNativeStackOptions = accessibilityNativeStackOptions(6503).useAccessibilityNativeStackOptions();
+        accessibilityNativeStackOptions = accessibilityNativeStackOptions(6679).useAccessibilityNativeStackOptions();
         if (cResult[0] !== accessibilityNativeStackOptions) {
           const fn = function l(navigation) {
             const obj = {
@@ -77,7 +77,7 @@ export default noop.memo(
         }
         return tmp10;
       }
-    : () => {
+    : function PaymentFlowTestModal() {
         _require = require("Navigator").useAccessibilityNativeStackOptions();
         const obj2 = {
           screenOptions(navigation) {

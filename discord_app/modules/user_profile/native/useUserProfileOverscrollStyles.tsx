@@ -53,7 +53,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/useUserProfileOverscrollStyles.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useUserProfileOverscrollStyles(arg0) {
       const cResult = height(scrollPosition[4]).c(9);
       ({ scrollPosition, bannerHeight } = arg0);
       height = stateFromStores(scrollPosition[5])().height;
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       N.__initData = __initData4;
       const animatedStyle2 = height(scrollPosition[7]).useAnimatedStyle(N);
       const tmpResult12 = height(scrollPosition[7]);
-      class D {
+      class U {
         constructor() {
           obj = { blurAmount: null };
           obj2 = closure_0(closure_2[7]);
@@ -196,16 +196,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult13 = height(scrollPosition[7]);
-      D.__closure = {
+      U.__closure = {
         clamp: height(scrollPosition[7]).clamp,
         interpolate: height(scrollPosition[7]).interpolate,
         position: scrollPosition,
         windowHeight: height,
         coefficient: stateFromStores,
       };
-      D.__workletHash = 849678936428;
-      D.__initData = __initData5;
-      const animatedProps = tmpResult13.useAnimatedProps(D);
+      U.__workletHash = 849678936428;
+      U.__initData = __initData5;
+      const animatedProps = tmpResult13.useAnimatedProps(U);
       let obj3 = {
         clamp: height(scrollPosition[7]).clamp,
         interpolate: height(scrollPosition[7]).interpolate,
@@ -216,15 +216,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       [tmp17, tmp18] = noop.useState(scrollPosition.get() < 0);
       SCALE_FACTOR = tmp18;
       const tmp16 = _slicedToArray(noop.useState(scrollPosition.get() < 0), 2);
-      class U {
+      class Y {
         constructor() {
           return closure_2.get() < 0;
         }
       }
-      U.__closure = { position: scrollPosition };
-      U.__workletHash = 3867620644429;
-      U.__initData = __initData6;
-      class Y {
+      Y.__closure = { position: scrollPosition };
+      Y.__workletHash = 3867620644429;
+      Y.__initData = __initData6;
+      class D {
         constructor(arg0, arg1) {
           tmp = arg0 !== arg1;
           if (tmp) {
@@ -238,10 +238,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult14 = height(scrollPosition[7]);
-      Y.__closure = { runOnJS: height(scrollPosition[7]).runOnJS, setShowBlur: tmp18 };
-      Y.__workletHash = 6548835412849;
-      Y.__initData = __initData7;
-      const animatedReaction = tmpResult14.useAnimatedReaction(U, Y);
+      D.__closure = { runOnJS: height(scrollPosition[7]).runOnJS, setShowBlur: tmp18 };
+      D.__workletHash = 6548835412849;
+      D.__initData = __initData7;
+      const animatedReaction = tmpResult14.useAnimatedReaction(Y, D);
       if (cResult[3] === animatedStyle) {
         if (cResult[4] === animatedStyle1) {
           if (cResult[5] === animatedProps) {
@@ -269,7 +269,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = obj5;
       tmp20 = obj5;
     }
-  : (arg0) => {
+  : function useUserProfileOverscrollStyles(arg0) {
       ({ scrollPosition, bannerHeight } = arg0);
       let stateFromStores;
       scrollPosition = undefined;

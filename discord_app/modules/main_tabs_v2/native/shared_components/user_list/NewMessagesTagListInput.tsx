@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   searchBarContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -23,7 +23,7 @@ let obj = {
   showSearchButton: null,
 };
 let obj4 = { marginLeft: nativeDefault.space.PX_12, marginBottom: null };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;
@@ -46,7 +46,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function NewMessagesTagListInput(arg0) {
         const cResult = onSelectUser(576).c(27);
         ({ autoFocus, onChangeText, onFocus, onSelectUser } = arg0);
         ({ selectedUserIds, hasQuery, onForceSearchResults, forceSearchResults, tagListInputRef } = arg0);
@@ -57,8 +57,8 @@ export default noop.memo(
             items = [];
           }
           const mapped = items.map(UserStore.getUser);
-          const found = mapped.filter(onSelectUser(1375).isNotNullish);
-          const mapped1 = found.map(tags(10608));
+          const found = mapped.filter(onSelectUser(1387).isNotNullish);
+          const mapped1 = found.map(tags(10205));
           cResult[0] = selectedUserIds;
           cResult[1] = mapped1;
           tags = mapped1;
@@ -89,41 +89,18 @@ export default noop.memo(
                     accessible: false,
                     children: tmp16,
                   };
+                  const tmp20 = jsx(onSelectUser(5086).Text, {
+                    style: tmp4.header,
+                    variant: "text-sm/medium",
+                    color: "text-muted",
+                    accessible: false,
+                    children: tmp16,
+                  });
                   cResult[9] = tmp4.header;
-                  cResult[10] = jsx(onSelectUser(4892).Text, {
-                    style: tmp4.header,
-                    variant: "text-sm/medium",
-                    color: "text-muted",
-                    accessible: false,
-                    children: tmp16,
-                  });
-                  class F {
-                    constructor(arg0) {
-                      tmp = closure_1[arg0];
-                      user = closure_5.getUser(tmp.id);
-                      if (null != user) {
-                        tmp3 = onSelectUser;
-                        tmp4 = onSelectUser(user);
-                        tmp5 = closure_0;
-                        tmp6 = closure_2;
-                        AccessibilityAnnouncer = closure_0(closure_2[16]).AccessibilityAnnouncer;
-                        intl = closure_0(closure_2[12]).intl;
-                        obj = { text: null };
-                        obj.text = tmp.text;
-                        announceResult = AccessibilityAnnouncer.announce(
-                          intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj),
-                        );
-                      }
-                      return;
-                    }
-                  }
-                  const tmp20 = jsx(onSelectUser(4892).Text, {
-                    style: tmp4.header,
-                    variant: "text-sm/medium",
-                    color: "text-muted",
-                    accessible: false,
-                    children: tmp16,
-                  });
+                  cResult[10] = tmp20;
+                  let tmp18 = tmp20;
+                } else {
+                  tmp18 = cResult[10];
                 }
                 if (cResult[11] === onSelectUser) {
                   if (cResult[12] === tags) {
@@ -156,26 +133,7 @@ export default noop.memo(
                                 }
                                 const obj3 = { style: tmp9, children: tmp24 };
                                 const tmp31 = <View style={tmp9}>{tmp24}</View>;
-                                class F {
-                                  constructor(arg0) {
-                                    tmp = closure_1[arg0];
-                                    user = closure_5.getUser(tmp.id);
-                                    if (null != user) {
-                                      tmp3 = onSelectUser;
-                                      tmp4 = onSelectUser(user);
-                                      tmp5 = closure_0;
-                                      tmp6 = closure_2;
-                                      AccessibilityAnnouncer = closure_0(closure_2[16]).AccessibilityAnnouncer;
-                                      intl = closure_0(closure_2[12]).intl;
-                                      obj = { text: null };
-                                      obj.text = tmp.text;
-                                      announceResult = AccessibilityAnnouncer.announce(
-                                        intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj),
-                                      );
-                                    }
-                                    return;
-                                  }
-                                }
+                                cResult[24] = tmp4.searchBarContainer;
                                 cResult[25] = tmp24;
                                 cResult[26] = tmp31;
                                 tmp28 = tmp31;
@@ -189,53 +147,26 @@ export default noop.memo(
                   const obj4 = {
                     autoFocus,
                     focusOnAdd: true,
-                    footer: null,
-                    icon: null,
-                    onChangeText: null,
-                    onFocus: null,
-                    onRemove: null,
-                    placeholder: null,
-                    tags: null,
-                    ref: null,
+                    footer: tmp10,
+                    icon: tmp18,
+                    onChangeText,
+                    onFocus,
+                    onRemove: tmp21,
+                    placeholder: tmp22,
+                    tags,
+                    ref: tagListInputRef,
                   };
-                  class F {
-                    constructor(arg0) {
-                      tmp = closure_1[arg0];
-                      user = closure_5.getUser(tmp.id);
-                      if (null != user) {
-                        tmp3 = onSelectUser;
-                        tmp4 = onSelectUser(user);
-                        tmp5 = closure_0;
-                        tmp6 = closure_2;
-                        AccessibilityAnnouncer = closure_0(closure_2[16]).AccessibilityAnnouncer;
-                        intl = closure_0(closure_2[12]).intl;
-                        obj = { text: null };
-                        obj.text = tmp.text;
-                        announceResult = AccessibilityAnnouncer.announce(
-                          intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj),
-                        );
-                      }
-                      return;
-                    }
-                  }
-                  obj4.icon = tmp18;
-                  obj4.onChangeText = onChangeText;
-                  obj4.onFocus = onFocus;
-                  obj4.onRemove = tmp21;
-                  obj4.placeholder = tmp22;
-                  obj4.tags = tags;
-                  obj4.ref = tagListInputRef;
-                  const tmp27 = jsx(tags(9270), {
+                  const tmp27 = jsx(tags(8601), {
                     autoFocus,
                     focusOnAdd: true,
-                    footer: null,
-                    icon: null,
-                    onChangeText: null,
-                    onFocus: null,
-                    onRemove: null,
-                    placeholder: null,
-                    tags: null,
-                    ref: null,
+                    footer: tmp10,
+                    icon: tmp18,
+                    onChangeText,
+                    onFocus,
+                    onRemove: tmp21,
+                    placeholder: tmp22,
+                    tags,
+                    ref: tagListInputRef,
                   });
                   cResult[15] = autoFocus;
                   cResult[16] = onChangeText;
@@ -248,30 +179,20 @@ export default noop.memo(
                   cResult[23] = tmp27;
                   tmp24 = tmp27;
                 }
-                class F {
-                  constructor(arg0) {
-                    tmp = closure_1[arg0];
-                    user = closure_5.getUser(tmp.id);
-                    if (null != user) {
-                      tmp3 = onSelectUser;
-                      tmp4 = onSelectUser(user);
-                      tmp5 = closure_0;
-                      tmp6 = closure_2;
-                      AccessibilityAnnouncer = closure_0(closure_2[16]).AccessibilityAnnouncer;
-                      intl = closure_0(closure_2[12]).intl;
-                      obj = { text: null };
-                      obj.text = tmp.text;
-                      announceResult = AccessibilityAnnouncer.announce(
-                        intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj),
-                      );
-                    }
-                    return;
+                const fn = function w(arg0) {
+                  const user = UserStore.getUser(tmp.id);
+                  if (null != user) {
+                    onSelectUser(user);
+                    const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+                    const intl = util.intl;
+                    const obj = { text: tmp.text };
+                    AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.srlxB8, obj));
                   }
-                }
+                };
                 cResult[11] = onSelectUser;
                 cResult[12] = tags;
-                cResult[13] = F;
-                tmp21 = F;
+                cResult[13] = fn;
+                tmp21 = fn;
               }
             }
           }
@@ -292,40 +213,20 @@ export default noop.memo(
               accessibilityRole: "button",
               accessibilityLabel: stringResult2,
               onPress: onForceSearchResults,
-              style: null,
+              style: tmp4.showSearchButton,
               children: null,
             };
-            class F {
-              constructor(arg0) {
-                tmp = closure_1[arg0];
-                user = closure_5.getUser(tmp.id);
-                if (null != user) {
-                  tmp3 = onSelectUser;
-                  tmp4 = onSelectUser(user);
-                  tmp5 = closure_0;
-                  tmp6 = closure_2;
-                  AccessibilityAnnouncer = closure_0(closure_2[16]).AccessibilityAnnouncer;
-                  intl = closure_0(closure_2[12]).intl;
-                  obj = { text: null };
-                  obj.text = tmp.text;
-                  announceResult = AccessibilityAnnouncer.announce(
-                    intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj),
-                  );
-                }
-                return;
-              }
-            }
             if (forceSearchResults) {
-              let CirclePlusIcon = onSelectUser(12012).ChevronLargeRightIcon;
+              let CirclePlusIcon = onSelectUser(12085).ChevronLargeRightIcon;
             } else {
-              CirclePlusIcon = onSelectUser(10996).CirclePlusIcon;
+              CirclePlusIcon = onSelectUser(11220).CirclePlusIcon;
             }
             obj5.children = <CirclePlusIcon size="xs" />;
-            jsx(onSelectUser(5916).PressableOpacity, {
+            jsx(onSelectUser(6189).PressableOpacity, {
               accessibilityRole: "button",
               accessibilityLabel: stringResult2,
               onPress: onForceSearchResults,
-              style: null,
+              style: tmp4.showSearchButton,
               children: null,
             });
           }
@@ -339,7 +240,7 @@ export default noop.memo(
         tmp10 = tmp11;
         let obj = onSelectUser(576);
       }
-    : (forceSearchResults) => {
+    : function NewMessagesTagListInput(forceSearchResults) {
         ({ onSelectUser: require, selectedUserIds } = forceSearchResults);
         ({ autoFocus, onChangeText, onFocus, hasQuery, onForceSearchResults, tagListInputRef } =
           forceSearchResults.forceSearchResults);
@@ -423,7 +324,7 @@ export default noop.memo(
         obj2.onRemove = function onRemove(arg0) {
           const user = UserStore.getUser(tmp.id);
           if (null != user) {
-            _require(user);
+            closure_1_0(user);
             const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
             const intl = util.intl;
             const obj = { text: tmp.text };

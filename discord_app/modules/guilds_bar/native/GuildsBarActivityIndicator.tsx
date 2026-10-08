@@ -3,50 +3,50 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
-import _modDef5824 from "../../../../_runtime/metro/05824__.js";
+import NativeViewDefault from "../../core/native/NativeView.tsx";
+import _modDef8139 from "../../../../_runtime/metro/08139__.js";
 import StageIcon from "../../../design/components/Icon/native/redesign/generated/StageIcon.tsx";
 import VoiceNormalIcon from "../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import AppsIcon from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
-import NativeViewDefault from "../../core/native/NativeView.tsx";
-import ScreenIcon from "../../../design/components/Icon/native/redesign/generated/ScreenIcon.tsx";
-import _modDef9228 from "../../../../_runtime/metro/09228__.js";
-import _modDef9308 from "../../../../_runtime/metro/09308__.js";
+import _modDef8536 from "../../../../_runtime/metro/08536__.js";
+import _modDef8638 from "../../../../_runtime/metro/08638__.js";
 import CalendarIcon from "../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx";
+import ScreenIcon from "../../../design/components/Icon/native/redesign/generated/ScreenIcon.tsx";
 import VideoIcon from "../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import useGuildsBarGuildMediaStateDefault from "../useGuildsBarGuildMediaState.tsx";
-import _modDef16315 from "../../../../_runtime/metro/16315__.js";
-import _modDef16316 from "../../../../_runtime/metro/16316__.js";
-import _modDef16317 from "../../../../_runtime/metro/16317__.js";
+import _modDef16575 from "../../../../_runtime/metro/16575__.js";
+import _modDef16576 from "../../../../_runtime/metro/16576__.js";
+import _modDef16577 from "../../../../_runtime/metro/16577__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function getMediaIcon(activeEvent) {
   if (activeEvent.activeEvent) {
-    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef9308 };
+    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef8638 };
     let tmp6 = obj2;
   } else if (tmp4) {
-    const obj3 = { icon: StageIcon.StageIcon, source: _modDef9228 };
+    const obj3 = { icon: StageIcon.StageIcon, source: _modDef8536 };
     tmp6 = obj3;
   } else if (tmp3) {
-    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef16315 };
+    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef16575 };
     tmp6 = obj4;
   } else if (tmp2) {
-    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef16316 };
+    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef16576 };
     tmp6 = obj5;
   } else if (tmp) {
-    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef16317 };
+    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef16577 };
     tmp6 = obj6;
   } else {
     tmp6 = null;
     if (tmp5) {
-      const obj = { icon: AppsIcon.AppsIcon, source: _modDef5824 };
+      const obj = { icon: AppsIcon.AppsIcon, source: _modDef8139 };
       tmp6 = obj;
     }
   }
   return tmp6;
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { activityWrapper: null, activityIconWrapper: null, activityIconWrapperActive: null, activityIcon: null };
 let size = {
   position: "absolute",
@@ -76,7 +76,7 @@ let closure_5 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 const memoResult = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function GuildsBarActivityIndicatorBase(arg0) {
         const cResult = c.c(18);
         ({ IconComponent, style, source, isCurrentUserConnected } = arg0);
         let activityIcon = closure_5();
@@ -161,7 +161,7 @@ const memoResult = noop.memo(
         cResult[2] = items1;
         tmp6 = items1;
       }
-    : (arg0) => {
+    : function GuildsBarActivityIndicatorBase(arg0) {
         ({ IconComponent, isCurrentUserConnected } = arg0);
         ({ style, source } = arg0);
         let activityIcon = closure_5();
@@ -199,7 +199,7 @@ const memoResult = noop.memo(
 const metroRequire = memoResult;
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useActivityIndicatorState(arg0) {
       const cResult = c.c(6);
       const tmp2 = useGuildsBarGuildMediaStateDefault(arg0);
       if (cResult[0] !== tmp2) {
@@ -236,7 +236,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = obj2;
       tmp8 = obj2;
     }
-  : (arg0) => {
+  : function useActivityIndicatorState(arg0) {
       const tmp = useGuildsBarGuildMediaStateDefault(arg0);
       closure_0 = tmp;
       const tmp2 = getMediaIcon(tmp);
@@ -278,7 +278,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarAc
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (style) => {
+    ? function GuildsBarGuildActivityIndicator(style) {
         const cResult = c.c(5);
         style = style.style;
         ({ IconComponent, source, isCurrentUserConnected } = closure_8(style.guildId));
@@ -312,7 +312,7 @@ export default noop.memo(
         tmp3 = tmp4;
         const tmp2 = closure_8(style.guildId);
       }
-    : (guildId) => {
+    : function GuildsBarGuildActivityIndicator(guildId) {
         const source = closure_8(guildId.guildId).source;
         let tmp4 = null;
         if (null != source) {

@@ -4,7 +4,7 @@ import ChannelSafetyWarningsStore from "../../ChannelSafetyWarningsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const SafetyWarningTypes = fn(9799).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10266).SafetyWarningTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useInappropriateConversationWarningsForChannel = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useInappropriateConversationWarningsForChannel(arg0) {
       _require = arg0;
       const cResult = require("c").c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -23,7 +23,7 @@ export const useInappropriateConversationWarningsForChannel = ReactCompilerGatin
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function _() {
+        const fn = function p() {
           return ChannelSafetyWarningsStore.getChannelSafetyWarnings(closure_0);
         };
         const items1 = [arg0];
@@ -75,7 +75,7 @@ export const useInappropriateConversationWarningsForChannel = ReactCompilerGatin
       }
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useInappropriateConversationWarningsForChannel(arg0) {
       _require = arg0;
       const items = [ChannelSafetyWarningsStore];
       const items1 = [arg0];

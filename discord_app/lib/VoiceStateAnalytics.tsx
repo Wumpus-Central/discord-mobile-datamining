@@ -1,11 +1,10 @@
 // discord_app/lib/VoiceStateAnalytics.tsx
 import _mod12 from "../../_runtime/metro/00012__.js";
-import MediaEngineStore from "../stores/MediaEngineStore.tsx";
 import VoiceStateStore from "../stores/VoiceStateStore.tsx";
 import SortedVoiceStateStore from "../stores/views/SortedVoiceStateStore.tsx";
 
 require = fn;
-const SpeakingFlags = fn(4921).SpeakingFlags;
+const SpeakingFlags = fn(5115).SpeakingFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/VoiceStateAnalytics.tsx");
 class VoiceStateAnalytics {
@@ -62,10 +61,9 @@ prototype["getStats"] = function getStats() {
     total_speaker_count: Object.keys(this.totalSpeakers).length,
   };
 };
-prototype["getUserVoiceSettingsStats"] = function getUserVoiceSettingsStats(arg0) {
-  const settings = MediaEngineStore.getSettings(arg0);
-  const set = new Set(Object.keys(settings.localMutes));
-  const set1 = new Set(Object.keys(settings.localVolumes));
+prototype["getUserVoiceSettingsStats"] = function getUserVoiceSettingsStats(localMutes) {
+  const set = new Set(Object.keys(localMutes.localMutes));
+  const set1 = new Set(Object.keys(localMutes.localVolumes));
   set1.delete(this.userId);
   set.delete(this.userId);
   const obj = { num_local_voice_user_mutes: null, num_local_voice_volumes: null };

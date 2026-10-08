@@ -68,27 +68,27 @@ function makeMediaViewerSyncer(sources) {
       const rect = thumbnailScrollPositions(selectedIndex[7])();
       let obj2 = sources(selectedIndex[6]);
       let obj4 = { onBeginDrag: null, onEndDrag: null, onScroll: null, onMomentumBegin: null, onMomentumEnd: null };
-      class N {
+      class C {
         constructor() {
           result = closure_4.set(2 | closure_4.get());
           result1 = closure_1_9.set("thumbnails");
           return;
         }
       }
-      N.__closure = { thumbnailsScrolling: mapped1, SCROLLING_DRAG: 2, swipeSource };
-      N.__workletHash = 16224520186325;
-      N.__initData = variableWidthThumbnailsEnabled;
-      obj4.onBeginDrag = N;
-      class C {
+      C.__closure = { thumbnailsScrolling: mapped1, SCROLLING_DRAG: 2, swipeSource };
+      C.__workletHash = 16224520186325;
+      C.__initData = variableWidthThumbnailsEnabled;
+      obj4.onBeginDrag = C;
+      class V {
         constructor() {
           result = closure_4.set(-3 & closure_4.get());
           return;
         }
       }
-      C.__closure = { thumbnailsScrolling: mapped1, SCROLLING_DRAG: 2 };
-      C.__workletHash = 5779899826871;
-      C.__initData = __initData;
-      obj4.onEndDrag = C;
+      V.__closure = { thumbnailsScrolling: mapped1, SCROLLING_DRAG: 2 };
+      V.__workletHash = 5779899826871;
+      V.__initData = __initData;
+      obj4.onEndDrag = V;
       class R {
         constructor(arg0) {
           result = onSelect.contentOffset.x / closure_0;
@@ -208,7 +208,7 @@ function makeMediaViewerSyncer(sources) {
         ReanimatedRexport.scrollTo(animatedRef, thumbnailScrollPositions[arg0].scrollStart, 0, true);
       }, items);
       const animatedScrollHandler = obj3.useAnimatedScrollHandler(obj4);
-      class V {
+      class N {
         constructor() {
           obj = thumbnailsAnimateTo;
           if (thumbnailsAnimateTo.get() >= 0) {
@@ -226,7 +226,7 @@ function makeMediaViewerSyncer(sources) {
         }
       }
       const obj7 = sources(selectedIndex[5]);
-      V.__closure = {
+      N.__closure = {
         thumbnailsAnimateTo: derivedValue2,
         variableWidthThumbnailsEnabled,
         runOnJS: sources(selectedIndex[5]).runOnJS,
@@ -235,9 +235,9 @@ function makeMediaViewerSyncer(sources) {
         ref: animatedRef,
         thumbnailSize: onSelect,
       };
-      V.__workletHash = 1697086875584;
-      V.__initData = __initData5;
-      let derivedValue = obj7.useDerivedValue(V);
+      N.__workletHash = 1697086875584;
+      N.__initData = __initData5;
+      let derivedValue = obj7.useDerivedValue(N);
       let items1 = [animatedRef];
       const callback2 = _undefined.useCallback((arg0) => {
         const result = portraitThumbnailHelpers.lerpVarWidthThumbnailScrollBounds(thumbnailScrollPositions, arg0);
@@ -824,7 +824,7 @@ function buildThumbnailScrollPositions(sources) {
   }
   return items;
 }
-const Constants = fn(7977);
+const Constants = fn(8394);
 ({
   THUMBNAIL_MARGIN: hasOwnProperty,
   THUMBNAIL_HEIGHT: metroRequire,
@@ -832,7 +832,7 @@ const Constants = fn(7977);
   THUMBNAIL_MIN_WIDTH: closure_8,
   THUMBNAIL_WIDTH_MARGIN: closure_9,
 } = Constants);
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let closure_10 = PlatformUtils.isAndroid();
 let closure_11 = {
   code: "function useMediaViewerSyncerTsx1(){const{thumbnailsScrolling,SCROLLING_DRAG,swipeSource}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()|SCROLLING_DRAG);swipeSource.set('thumbnails');}",
@@ -918,7 +918,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useMediaViewerSyncer.tsx");
 
 export const useMediaViewerSyncer = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useMediaViewerSyncer(arg0) {
       const cResult = c.c(7);
       ({ sources, initialIndex, onEndReached, onEndReachedThreshold } = arg0);
       if (cResult[0] !== initialIndex) {
@@ -984,7 +984,7 @@ export const useMediaViewerSyncer = ReactCompilerGating.isReactCompilerEnabled()
         onEndReachedThreshold,
       };
     }
-  : (sources) => {
+  : function useMediaViewerSyncer(sources) {
       sources = sources.sources;
       const initialIndex = sources.initialIndex;
       const onEndReached = sources.onEndReached;

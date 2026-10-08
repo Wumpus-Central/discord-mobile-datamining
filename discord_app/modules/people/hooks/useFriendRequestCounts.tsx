@@ -8,11 +8,11 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 require = fn;
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIncomingFriendRequestCount() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [RelationshipStore, GameRelationshipStore];
-        const fn = function u() {
+        const fn = function o() {
           const items = [RelationshipStore, GameRelationshipStore];
           [obj, obj2] = items;
           const pendingCount = obj.getPendingCount();
@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIncomingFriendRequestCount() {
       let items = [RelationshipStore, GameRelationshipStore];
       return initialize.useStateFromStores(items, () => {
         const items = [RelationshipStore, GameRelationshipStore];

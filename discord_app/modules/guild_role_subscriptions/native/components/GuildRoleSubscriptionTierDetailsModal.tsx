@@ -18,7 +18,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const FormImagePickerDefault = FormImagePicker;
 
 require = fn;
-const GuildRoleSubscriptionsConstants = fn(15038);
+const GuildRoleSubscriptionsConstants = fn(15300);
 ({
   GuildRoleSubscriptionsTierScenes: hasOwnProperty,
   MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroRequire,
@@ -29,7 +29,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function Content() {
       const cResult = c.c(47);
       const tmp5 = FormStylesDefault();
       const editStateContext = EditStateContextProvider.useEditStateContext();
@@ -125,7 +125,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = options(FormImagePickerDefault, obj9);
       const tmp26 = options(FormImagePickerDefault, obj9);
     }
-  : () => {
+  : function Content() {
       const tmp3 = FormStylesDefault();
       const editStateContext = EditStateContextProvider.useEditStateContext();
       const editStateId = editStateContext.editStateId;
@@ -232,12 +232,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const obj15 = { children: null };
       items[7] = options(FormPriceTierDefault, obj14);
       obj15.children = items;
-      return closure_1_11(v65535, obj15);
+      return closure_1_11(collapsed, obj15);
     };
 ReactCompilerGating = fn(558);
 const memoResult = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function GuildRoleSubscriptionTierDetailsTab() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const tmp5 = options(closure_12, {});
@@ -248,7 +248,9 @@ const memoResult = noop.memo(
         }
         return first;
       }
-    : () => options(closure_12, {}),
+    : function GuildRoleSubscriptionTierDetailsTab() {
+        return options(closure_12, {});
+      },
 );
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -257,7 +259,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildRoleSubscriptionTierDetailsModal(arg0) {
       const cResult = c.c(6);
       const editStateId = EditStateContextProvider.useEditStateContext().editStateId;
       const obj3 = GuildRoleSubscriptionListingEditStateUtilsAll;
@@ -308,7 +310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp18;
       tmp15 = tmp18;
     }
-  : (arg0) => {
+  : function GuildRoleSubscriptionTierDetailsModal(arg0) {
       const editStateId = EditStateContextProvider.useEditStateContext().editStateId;
       const obj2 = GuildRoleSubscriptionListingEditStateUtilsAll;
       const obj3 = GuildRoleSubscriptionListingEditStateUtilsAll;

@@ -10,7 +10,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAccessibilityViewIsModalToggle(arg0) {
       const cResult = nativeID(576).c(6);
       ({ accessibilityViewIsModal, nativeID } = arg0);
       closure_1 = tmp2;
@@ -21,7 +21,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         noop = tmp3;
         if (cResult[3] !== tmp3) {
-          const fn2 = function b() {
+          const fn2 = function v() {
             closure_3();
             return () => {
               closure_1_3(false);
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const effect = noop.useEffect(tmp4, tmp5);
       }
-      const fn = function t(arg0) {
+      const fn = function l(arg0) {
         let tmp = arg0;
         if (undefined === arg0) {
           tmp = closure_1;
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp3 = fn;
     }
-  : (accessibilityViewIsModal) => {
+  : function useAccessibilityViewIsModalToggle(accessibilityViewIsModal) {
       let flag = accessibilityViewIsModal.accessibilityViewIsModal;
       if (flag === undefined) {
         flag = false;

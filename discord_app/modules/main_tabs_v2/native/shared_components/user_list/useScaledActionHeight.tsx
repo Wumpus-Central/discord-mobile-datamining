@@ -10,13 +10,13 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useScaledActionHeight() {
       const fontScale = useFontScale.useFontScale();
       const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT);
       const token1 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_CONTENT_HEIGHT);
       return token + Math.max(fontScale * token1 - token1, 0);
     }
-  : () => {
+  : function useScaledActionHeight() {
       const fontScale = useFontScale.useFontScale();
       const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT);
       const token1 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_CONTENT_HEIGHT);

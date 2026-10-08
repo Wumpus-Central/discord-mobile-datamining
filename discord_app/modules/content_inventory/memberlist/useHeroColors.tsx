@@ -3,7 +3,7 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../_runtime/00576_c.js";
 import _modDef683 from "../../../../_runtime/metro/00683__.js";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import tinycolorDefault from "../../../../_runtime/07076_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/07262_tinycolor.js";
 import useAvatarColor from "../../avatar/useAvatarColor.tsx";
 import getFallbackHeroColor from "getFallbackHeroColor.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/content_inventory/memberlist/useHeroColors.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHeroColors(arg0) {
       const cResult = c.c(14);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
@@ -133,16 +133,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = fallbackHeroColor;
       const tmpResult12 = getFallbackHeroColor;
     }
-  : (arg0) => {
+  : function useHeroColors(arg0) {
       const items = [AccessibilityStore];
       const stateFromStores = first(504).useStateFromStores(items, () => saturation.saturation);
       let obj = first(504);
       const items1 = [ThemeStore];
       const stateFromStores1 = first(504).useStateFromStores(items1, () => theme.theme);
       let obj2 = first(504);
-      const fallbackHeroColor = first(7828).getFallbackHeroColor(stateFromStores1, stateFromStores);
-      let obj3 = first(7828);
-      let tmp4 = _slicedToArray(first(7826).useAvatarColors(arg0, fallbackHeroColor), 2);
+      const fallbackHeroColor = first(8246).getFallbackHeroColor(stateFromStores1, stateFromStores);
+      let obj3 = first(8246);
+      let tmp4 = _slicedToArray(first(8244).useAvatarColors(arg0, fallbackHeroColor), 2);
       first = tmp4[0];
       closure_1 = tmp6;
       const items2 = [first, tmp4[1]];
@@ -196,12 +196,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
     };
 export const getHeroColors = function getHeroColors(game_name) {
-  const fallbackHeroColor = num(7828).getFallbackHeroColor(ThemeStore.theme, AccessibilityStore.saturation);
+  const fallbackHeroColor = num(8246).getFallbackHeroColor(ThemeStore.theme, AccessibilityStore.saturation);
   num = 1;
   if (AccessibilityStore.desaturateUserColors) {
     num = AccessibilityStore.saturation;
   }
-  const useColorStore = tmp2(7826).useColorStore;
+  const useColorStore = tmp2(8244).useColorStore;
   const arr = useColorStore.getState().palette[game_name];
   let mapped;
   if (arr != null) {
@@ -218,7 +218,7 @@ export const getHeroColors = function getHeroColors(game_name) {
     const items = [fallbackHeroColor, fallbackHeroColor];
     mapped = items;
   }
-  let obj = num(7828);
+  let obj = num(8246);
   [tmp7, tmp8] = mapped;
   const tmp6 = _slicedToArray(mapped, 2);
   const hex2intResult = num(1103).hex2int(tmp7);

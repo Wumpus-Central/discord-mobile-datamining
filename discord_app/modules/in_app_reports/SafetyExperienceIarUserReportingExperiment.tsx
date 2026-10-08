@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/in_app_reports/SafetyExperien
 
 export default experiment;
 export const useIsIarUserReportingEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsIarUserReportingEnabled(location) {
       const cResult = c.c(3);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -37,7 +37,9 @@ export const useIsIarUserReportingEnabled = ReactCompilerGating.isReactCompilerE
       }
       return experiment.useExperiment(tmp2, tmp3).enabled;
     }
-  : (location) => experiment.useExperiment({ location }, { autoTrackExposure: true }).enabled;
+  : function useIsIarUserReportingEnabled(location) {
+      return experiment.useExperiment({ location }, { autoTrackExposure: true }).enabled;
+    };
 export const isIarUserReportingEnabled = function isIarUserReportingEnabled(location) {
   return experiment.getCurrentConfig({ location }, { autoTrackExposure: true }).enabled;
 };

@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx");
 
 export const useVideoExternallyPaused = ReactCompilerGating.isReactCompilerEnabled()
-  ? (questId, arg1) => {
+  ? function useVideoExternallyPaused(questId, arg1) {
       const cResult = c.c(11);
       const tmp4 = null != ContextMenuState.useActiveContextMenu();
       const openModalKey = NavigationRouteUtils.useOpenModalKey();
@@ -74,7 +74,7 @@ export const useVideoExternallyPaused = ReactCompilerGating.isReactCompilerEnabl
       cResult[10] = (PlatformUtils.isIOS() && arg1) || tmp11 || tmp4 || openModalKey !== tmp6 || tmp14;
       const tmp15 = (PlatformUtils.isIOS() && arg1) || tmp11 || tmp4 || openModalKey !== tmp6 || tmp14;
     }
-  : (questId, arg1) => {
+  : function useVideoExternallyPaused(questId, arg1) {
       const activeContextMenu = ContextMenuState.useActiveContextMenu();
       const openModalKey = NavigationRouteUtils.useOpenModalKey();
       const videoQuestModalKey = VideoQuestUtils.getVideoQuestModalKey(questId);

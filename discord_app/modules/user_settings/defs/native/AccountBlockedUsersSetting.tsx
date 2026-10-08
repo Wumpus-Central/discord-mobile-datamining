@@ -6,13 +6,13 @@ import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAccountBlockedUsersSettingDescription() {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [RelationshipStore];
-        const fn = function o() {
+        const fn = function s() {
           return "" + blockedIDs.getBlockedIDs().length;
         };
         cResult[0] = items;
@@ -35,7 +35,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function useAccountBlockedUsersSettingDescription() {
       const items = [RelationshipStore];
       const numberOfBlockedUsers = initialize.useStateFromStores(items, () => "" + blockedIDs.getBlockedIDs().length);
       const intl = util.intl;
@@ -47,11 +47,11 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.PFOUKW);
   },
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useAccountBlockedUsersSettingDescription() {
         const cResult = c.c(4);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [RelationshipStore];
-          const fn = function o() {
+          const fn = function s() {
             return "" + blockedIDs.getBlockedIDs().length;
           };
           cResult[0] = items;
@@ -74,14 +74,14 @@ const route = SettingBuilders.createRoute({
         }
         return tmp8;
       }
-    : () => {
+    : function useAccountBlockedUsersSettingDescription() {
         const items = [RelationshipStore];
         const numberOfBlockedUsers = initialize.useStateFromStores(items, () => "" + blockedIDs.getBlockedIDs().length);
         const intl = util.intl;
         return intl.format(util.t["r91W/h"], { numberOfBlockedUsers });
       },
-  IconComponent: fn(7599).DenyIcon,
-  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  IconComponent: fn(9306).DenyIcon,
+  parent: fn(7966).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: {
     route: fn(1085).UserSettingsSections.BLOCKED_USERS_V2,
     getComponent() {

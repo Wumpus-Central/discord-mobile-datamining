@@ -6,8 +6,8 @@ import FriendsIcon from "../../../design/components/Icon/native/redesign/generat
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import SettingsIcon from "../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import OAuth2Scopes from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
-import useIsSocialLayerParentApplicationDefault from "../../applications/useIsSocialLayerParentApplication.tsx";
 import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import useIsSocialLayerParentApplicationDefault from "../../applications/useIsSocialLayerParentApplication.tsx";
 import ChatSmileIcon from "../../../design/components/Icon/native/redesign/generated/ChatSmileIcon.tsx";
 import AuthorizeFormSeparator from "AuthorizeFormSeparator.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const MAX_FRIENDS = fn(1085).MAX_FRIENDS;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   applicationEducation: { flexDirection: "column", gap: 16 },
   entry: { flexDirection: "row", alignItems: "center", gap: 12 },
@@ -30,7 +30,7 @@ let closure_8 = createStyles.createStyles(obj2);
 fn(558);
 const ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ApplicationEducationEntry(arg0) {
       const cResult = c.c(10);
       ({ iconComponent, text } = arg0);
       const tmp4 = closure_8();
@@ -77,7 +77,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = iconComponentResult;
       tmp5 = iconComponentResult;
     }
-  : (children) => {
+  : function ApplicationEducationEntry(children) {
       const iconComponent = children.iconComponent;
       const tmp = closure_8();
       const obj = { style: tmp.entry, children: null };
@@ -97,7 +97,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/ApplicationEducation.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ApplicationEducation(arg0) {
       const cResult = c.c(43);
       ({ application, accountScopes } = arg0);
       const tmp4 = closure_8();
@@ -353,7 +353,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (arg0) => {
+  : function ApplicationEducation(arg0) {
       ({ application, accountScopes } = arg0);
       const items = [];
       const tmp3 = useIsSocialLayerParentApplicationDefault(application);

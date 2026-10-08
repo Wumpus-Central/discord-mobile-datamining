@@ -6,9 +6,9 @@ import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAccountIgnoredUsersSettingDescription() {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [RelationshipStore];
@@ -35,20 +35,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp7;
     }
-  : () => {
+  : function useAccountIgnoredUsersSettingDescription() {
       const items = [RelationshipStore];
       const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs());
       const intl = util.intl;
       return intl.format(util.t.rXUeOl, { numberOfIgnoredUsers: stateFromStoresArray.length });
     };
 const route = SettingBuilders.createRoute({
-  IconComponent: fn(6463).EyeSlashIcon,
+  IconComponent: fn(6641).EyeSlashIcon,
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["93ZDWE"]);
   },
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useAccountIgnoredUsersSettingDescription() {
         const cResult = c.c(4);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [RelationshipStore];
@@ -75,13 +75,13 @@ const route = SettingBuilders.createRoute({
         }
         return tmp7;
       }
-    : () => {
+    : function useAccountIgnoredUsersSettingDescription() {
         const items = [RelationshipStore];
         const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs());
         const intl = util.intl;
         return intl.format(util.t.rXUeOl, { numberOfIgnoredUsers: stateFromStoresArray.length });
       },
-  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7966).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: {
     route: fn(1085).UserSettingsSections.IGNORED_USERS,
     getComponent() {

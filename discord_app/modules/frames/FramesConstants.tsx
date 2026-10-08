@@ -1,46 +1,57 @@
 // discord_app/modules/frames/FramesConstants.tsx
+import _modDef38 from "../../../_runtime/metro/00038__.js";
 import Constants from "../../Constants.tsx";
 import EmbeddedSurfaceType from "../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const ChannelTypes = Constants.ChannelTypes;
-const obj2 = { MAIN: 0, [0]: "MAIN", INLINE: 1, [1]: "INLINE" };
+let obj = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN };
+let obj3 = { MAIN: 0, [0]: "MAIN", INLINE: 1, [1]: "INLINE" };
 const result = size.fileFinishedImporting("modules/frames/FramesConstants.tsx");
 
 export const FrameLayoutModes = { FOCUSED: 0, [0]: "FOCUSED", PIP: 1, [1]: "PIP" };
-export const MAIN_SURFACE = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN };
-export const FrameIntent = obj2;
+export const MAIN_SURFACE = obj;
+export const OVERLAY_SURFACE = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.OVERLAY };
+export const FrameIntent = obj3;
 export const getFrameIntentForSurface = function getFrameIntentForSurface(type) {
   type = type.type;
   if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-    return obj2.MAIN;
+    return obj3.MAIN;
   } else {
-    return obj2.INLINE;
+    if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
+      if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
+        if (EmbeddedSurfaceType.EmbeddedSurfaceType.OVERLAY !== type) {
+          if (EmbeddedSurfaceType.EmbeddedSurfaceType.INTERACTION_MODAL === type) {
+            _modDef38(false, "A Frame cannot be launched at an INTERACTION_MODAL surface");
+          }
+        }
+      }
+    }
+    return obj3.INLINE;
   }
 };
-export const makeFrameId = function makeFrameId(prop, type) {
+export const makeFrameId = function makeFrameId(arg0, type) {
   type = type.type;
   if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
     const _HermesInternal4 = HermesInternal;
-    return "main:" + prop;
+    return "main:" + arg0;
   } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL === type) {
-    if (null != type.channelId) {
-      const _HermesInternal3 = HermesInternal;
-      let combined = "app-channel:" + prop + ":" + type.channelId;
-    } else {
-      const _HermesInternal2 = HermesInternal;
-      combined = "app-channel:" + prop;
-    }
-    return combined;
+    const _HermesInternal3 = HermesInternal;
+    return "app-channel:" + arg0 + ":" + type.channelId;
   } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL === type) {
+    const _HermesInternal2 = HermesInternal;
+    return "voice-channel:" + arg0 + ":" + type.channelId;
+  } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.OVERLAY === type) {
     const _HermesInternal = HermesInternal;
-    return "voice-channel:" + prop + ":" + type.channelId;
+    return "overlay:" + arg0;
+  } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.INTERACTION_MODAL === type) {
+    _modDef38(false, "A Frame cannot be launched at an INTERACTION_MODAL surface");
   }
 };
 export const getFrameSurfaceForChannel = function getFrameSurfaceForChannel(type) {
   type = type.type;
   if (ChannelTypes.GUILD_APP === type) {
-    const obj3 = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, channelId: null, guildId: null };
+    obj3 = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, channelId: null, guildId: null };
     ({ id: obj2.channelId, guild_id: obj2.guildId } = type);
     return obj3;
   } else if (tmp.GUILD_VOICE === type) {
@@ -51,14 +62,6 @@ export const getFrameSurfaceForChannel = function getFrameSurfaceForChannel(type
     return null;
   }
 };
-export const getChannelIdForSurface = function getChannelIdForSurface(type) {
-  if (null != type) {
-    type = type.type;
-    if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN !== type) {
-      return type.channelId;
-    }
-  }
-};
 export const isLaunched = function isLaunched(conjureBuilderPreviewFrame) {
   state = undefined;
   if (conjureBuilderPreviewFrame != null) {
@@ -66,14 +69,26 @@ export const isLaunched = function isLaunched(conjureBuilderPreviewFrame) {
   }
   return "launched" === state;
 };
-export const asLaunched = function asLaunched(frameByIframeId) {
+export const getFrameHostWindowKey = function getFrameHostWindowKey(state) {
   state = undefined;
-  if (frameByIframeId != null) {
-    state = frameByIframeId.state;
+  if (state != null) {
+    state = state.state;
+  }
+  if ("launched" === state) {
+    let hostWindowKey = state.data.hostWindowKey;
+  } else {
+    hostWindowKey = state.hostWindowKey;
+  }
+  return hostWindowKey;
+};
+export const asLaunched = function asLaunched(mainFrame) {
+  state = undefined;
+  if (mainFrame != null) {
+    state = mainFrame.state;
   }
   let tmp2 = null;
   if ("launched" === state) {
-    tmp2 = frameByIframeId;
+    tmp2 = mainFrame;
   }
   return tmp2;
 };

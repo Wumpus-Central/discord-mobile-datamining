@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
 import ProfileEffectUserPreviewDefault from "../profile_effects/native/previews/ProfileEffectUserPreview.tsx";
 import ProfileFrameUserPreviewDefault from "../profile_frames/native/previews/ProfileFrameUserPreview.tsx";
@@ -11,8 +11,8 @@ import NameplateProductPreviewDefault from "../nameplates/native/NameplateProduc
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const FractionalPremiumSKUs = FractionalNitroPreview(1088);
-const FractionalNitroPreview2 = FractionalNitroPreview(12993);
-const OrbBadgePreview = FractionalNitroPreview(12996);
+const FractionalNitroPreview2 = FractionalNitroPreview(13271);
+const OrbBadgePreview = FractionalNitroPreview(13274);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
@@ -20,7 +20,7 @@ const CollectiblesShopConstants = fn(1087);
 ({ EXTERNAL_PRODUCT_SKU_IDS: hasOwnProperty, ShopCtaEnum: metroRequire } = CollectiblesShopConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   collectiblePreview: { marginTop: nativeDefault.space.PX_12, position: "relative", height: 280 },
   profilePreviewContainer: { position: "relative", flex: 1, alignItems: "center", overflow: "hidden" },
@@ -36,7 +36,7 @@ obj2.profilePreviewGradient = obj4;
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (handlePreviewPress) => {
+  ? function ProfilePreviewWrapper(handlePreviewPress) {
       const cResult = handlePreviewPress(576).c(19);
       handlePreviewPress = handlePreviewPress.handlePreviewPress;
       const onTrackPress = handlePreviewPress.onTrackPress;
@@ -101,7 +101,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             tmp14 = tmp17;
           }
           const obj4 = { style: tmp3.profilePreviewGradient, start: tmp6, end: tmp7, colors: tmp9 };
-          const tmp13 = closure_7(onTrackPress(5612), obj4);
+          const tmp13 = closure_7(onTrackPress(5387), obj4);
           cResult[8] = tmp3.profilePreviewGradient;
           cResult[9] = tmp9;
           cResult[10] = tmp13;
@@ -127,7 +127,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn;
       const obj = handlePreviewPress(576);
     }
-  : (children) => {
+  : function ProfilePreviewWrapper(children) {
       ({ handlePreviewPress: require, onTrackPress: importDefault } = children);
       const tmp = closure_9();
       const obj = {
@@ -154,7 +154,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ProfileEffectPreview(arg0) {
       const cResult = c.c(11);
       ({ profileEffect, width, avatarDecorationOverride, profileFrameOverride, handlePreviewPress, onTrackPress } =
         arg0);
@@ -213,7 +213,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp3.profilePreview,
       };
     }
-  : (arg0) => {
+  : function ProfileEffectPreview(arg0) {
       ({ profileEffect, width, avatarDecorationOverride, profileFrameOverride, handlePreviewPress, onTrackPress } =
         arg0);
       const tmp = closure_9();
@@ -231,7 +231,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ProfileFramePreview(arg0) {
       const cResult = c.c(11);
       ({ profileFrame, width, avatarDecorationOverride, profileEffectOverride, handlePreviewPress, onTrackPress } =
         arg0);
@@ -290,7 +290,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp3.profilePreview,
       };
     }
-  : (arg0) => {
+  : function ProfileFramePreview(arg0) {
       ({ profileFrame, width, avatarDecorationOverride, profileEffectOverride, handlePreviewPress, onTrackPress } =
         arg0);
       const tmp = closure_9();
@@ -308,7 +308,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onTrackPress) => {
+  ? function AvatarDecorationPreview(onTrackPress) {
       const cResult = handlePreviewPress(576).c(9);
       ({ product, handlePreviewPress } = onTrackPress);
       onTrackPress = onTrackPress.onTrackPress;
@@ -319,7 +319,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[3] !== product) {
           const obj2 = { product };
-          const tmp8 = closure_7(onTrackPress(12991), obj2);
+          const tmp8 = closure_7(onTrackPress(13269), obj2);
           cResult[3] = product;
           cResult[4] = tmp8;
           let tmp5 = tmp8;
@@ -356,7 +356,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn;
       const obj = handlePreviewPress(576);
     }
-  : (product) => {
+  : function AvatarDecorationPreview(product) {
       ({ handlePreviewPress: require, onTrackPress: importDefault } = product);
       return closure_7(closure_3, {
         onPress() {
@@ -373,7 +373,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function NameplatePreview(arg0) {
       const cResult = c.c(6);
       ({ product, avatarDecorationOverride } = arg0);
       const tmp3 = closure_9();
@@ -400,7 +400,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp5;
       tmp4 = tmp5;
     }
-  : (arg0) => {
+  : function NameplatePreview(arg0) {
       ({ product, avatarDecorationOverride } = arg0);
       return React5(React4, {
         style: closure_9().collectiblePreview,
@@ -413,7 +413,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/IndividualProductPreview.tsx");
 
 export const IndividualProductPreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function IndividualProductPreview(arg0) {
       let FractionalNitroPreview = require;
       let tmp = dependencyMap;
       const cResult = c.c(23);
@@ -544,7 +544,7 @@ export const IndividualProductPreview = ReactCompilerGating.isReactCompilerEnabl
         return null;
       }
     }
-  : (arg0) => {
+  : function IndividualProductPreview(arg0) {
       ({ product, width, avatarDecorationOverride, handlePreviewPress, onTrackPress } = arg0);
       const type = product.type;
       ({ profileFrameOverride, profileEffectOverride } = arg0);

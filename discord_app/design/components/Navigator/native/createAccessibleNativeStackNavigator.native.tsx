@@ -1,8 +1,8 @@
 // discord_app/design/components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import Link from "../../../../../_runtime/01491_Link.js";
+import Link from "../../../../../_runtime/01503_Link.js";
 import Navigator from "Navigator.native.tsx";
-import NativeStackNavigator from "../../../../../_runtime/07568_NativeStackNavigator.js";
+import NativeStackNavigator from "../../../../../_runtime/09279_NativeStackNavigator.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -21,7 +21,7 @@ let closure_2 = [
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (obj) => {
+  ? function useAccessibilityPatchedDescriptors(obj) {
       obj = c;
       const cResult = obj.c(3);
       const accessibilityNativeStackOptions = Navigator.useAccessibilityNativeStackOptions();
@@ -51,7 +51,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = obj3;
       }
     }
-  : (arg0) => {
+  : function useAccessibilityPatchedDescriptors(arg0) {
       closure_0 = arg0;
       const accessibilityNativeStackOptions = Navigator.useAccessibilityNativeStackOptions();
       const items = [arg0, accessibilityNativeStackOptions];
@@ -82,7 +82,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_6 = tmp2;
 ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AccessibleNativeStackNavigator(arg0) {
       const cResult = c.c(30);
       if (cResult[0] !== arg0) {
         ({
@@ -213,7 +213,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[20] = obj4;
       tmp17 = obj4;
     }
-  : (arg0) => {
+  : function AccessibleNativeStackNavigator(arg0) {
       ({
         id,
         initialRouteName,

@@ -15,7 +15,7 @@ const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const StreamSettingsConstants = fn(4943);
+const StreamSettingsConstants = fn(5210);
 ({
   ApplicationStreamFPS: c10,
   ApplicationStreamResolutions: closure_11,
@@ -23,8 +23,8 @@ const StreamSettingsConstants = fn(4943);
   getApplicationFramerate: map1,
   getApplicationResolution: closure_14,
 } = StreamSettingsConstants);
-let closure_15 = fn(1379).StreamQualitiesToPremiumType;
-const ResolutionTypes = fn(4921).ResolutionTypes;
+let closure_15 = fn(1391).StreamQualitiesToPremiumType;
+const ResolutionTypes = fn(5115).ResolutionTypes;
 const ReactCompilerGating = fn(558);
 function isPremiumRequirement(quality) {
   return null != quality.quality || null != quality.guildPremiumTier;
@@ -77,7 +77,7 @@ export const isPremiumResolution = function isPremiumResolution(maxQuality) {
         closure_12.find((resolution) => {
           let tmp = resolution.resolution === closure_0;
           if (tmp) {
-            tmp = resolution.fps !== v65535.FPS_5;
+            tmp = resolution.fps !== collapsed.FPS_5;
           }
           if (tmp) {
             tmp = !(null != resolution.quality || null != resolution.guildPremiumTier);
@@ -124,11 +124,11 @@ export const getFPSText = function getFPSText(maxFrameRate) {
 };
 export { getMaxQuality };
 export const useMaxQuality = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function useMaxQuality(user) {
       const cResult = c.c(16);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ApplicationStreamingSettingsStore];
-        const fn = function o() {
+        const fn = function s() {
           return state.getState();
         };
         cResult[0] = items;
@@ -220,7 +220,7 @@ export const useMaxQuality = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult4 = initialize;
     }
-  : (arg0) => {
+  : function useMaxQuality(arg0) {
       _require = arg0;
       const items = [ApplicationStreamingSettingsStore];
       const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => state.getState());

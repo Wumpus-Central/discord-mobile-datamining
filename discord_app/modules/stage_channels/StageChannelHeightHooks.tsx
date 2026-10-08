@@ -5,7 +5,7 @@ import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGetStageRTCPanelHeight(arg0) {
       const stageBlockedUsersCount = useStageBlockedUsersCount.useStageBlockedUsersCount(arg0);
       useStageBlockedUsersCount;
       if (stageBlockedUsersCount > 0) {
@@ -15,7 +15,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return num;
     }
-  : (arg0) => {
+  : function useGetStageRTCPanelHeight(arg0) {
       const stageBlockedUsersCount = useStageBlockedUsersCount.useStageBlockedUsersCount(arg0);
       useStageBlockedUsersCount;
       if (stageBlockedUsersCount > 0) {
@@ -30,7 +30,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/StageChannelHe
 export const CALL_ACTION_BAR_HEIGHT = 112;
 export const useGetStageRTCPanelHeight = tmp2;
 export const useGetActionBarHeight = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGetActionBarHeight(arg0) {
       const stageBlockedUsersCount = useStageBlockedUsersCount.useStageBlockedUsersCount(arg0);
       useStageBlockedUsersCount;
       if (stageBlockedUsersCount > 0) {
@@ -40,7 +40,7 @@ export const useGetActionBarHeight = ReactCompilerGating.isReactCompilerEnabled(
       }
       return num;
     }
-  : (arg0) => {
+  : function useGetActionBarHeight(arg0) {
       const stageBlockedUsersCount = useStageBlockedUsersCount.useStageBlockedUsersCount(arg0);
       useStageBlockedUsersCount;
       if (stageBlockedUsersCount > 0) {

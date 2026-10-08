@@ -14,7 +14,7 @@ const jsx = fn(21).jsx;
 const redux = noop.createContext("default");
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActionSheetRow(arg0) {
       const cResult = c.c(15);
       if (cResult[0] !== arg0) {
         ({ label, variant, arrow, icon } = arg0);
@@ -75,7 +75,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = tmp14;
       const obj3 = { variant: str, label: tmp6, arrow: tmp4, icon: tmp5 };
     }
-  : (label) => {
+  : function ActionSheetRow(label) {
       let str = label.variant;
       if (str === undefined) {
         str = "default";
@@ -89,7 +89,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 tmp2.Icon = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActionSheetRowIcon(arg0) {
       const cResult = c.c(4);
       ({ source, IconComponent } = arg0);
       const context = noop.useContext(closure_7);
@@ -108,7 +108,7 @@ tmp2.Icon = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp6;
       tmp5 = tmp6;
     }
-  : (IconComponent) => {
+  : function ActionSheetRowIcon(IconComponent) {
       IconComponent = IconComponent.IconComponent;
       const context = noop.useContext(closure_7);
       const obj = { source: IconComponent.source, IconComponent, variant: context };
@@ -116,7 +116,7 @@ tmp2.Icon = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 tmp2.Group = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActionSheetRowGroup(arg0) {
       const cResult = c.c(4);
       ({ children, title, hasIcons } = arg0);
       if (cResult[0] === children) {
@@ -135,7 +135,7 @@ tmp2.Group = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = tmp5;
       const obj2 = { children: jsx(TableRowGroup.TableRowGroup, { hasIcons, title, children }) };
     }
-  : (arg0) => {
+  : function ActionSheetRowGroup(arg0) {
       ({ children, title, hasIcons } = arg0);
       return <View>{jsx(TableRowGroup.TableRowGroup, { hasIcons, title, children })}</View>;
     };
@@ -145,7 +145,7 @@ const result = size.fileFinishedImporting("design/components/Sheet/native/Action
 
 export const ActionSheetRow = tmp2;
 export const ActionSheetSwitchRow = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActionSheetSwitchRow(arg0) {
       const cResult = c.c(2);
       if (cResult[0] !== arg0) {
         const obj2 = {};
@@ -159,7 +159,7 @@ export const ActionSheetSwitchRow = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (arg0) => {
+  : function ActionSheetSwitchRow(arg0) {
       const merged = Object.assign(arg0);
       return jsx(TableSwitchRow.TableSwitchRow, {});
     };

@@ -1,6 +1,6 @@
 // discord_app/actions/SelectedChannelActionCreatorsAdditional.native.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
-import v1 from "../../_runtime/01266_v1.js";
+import v1 from "../../_runtime/01278_v1.js";
 import ChannelStore from "../stores/ChannelStore.tsx";
 import GuildStore from "../stores/GuildStore.tsx";
 import GuildVerificationStore from "../stores/GuildVerificationStore.tsx";
@@ -13,7 +13,7 @@ import VoiceStateStore from "../stores/VoiceStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5578).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5888).STAGE_BOOSTING_SHEET_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");
 
@@ -82,7 +82,7 @@ export const selectVoiceChannelAdditional = function selectVoiceChannelAdditiona
       const obj6 = require("applyBackgroundOption");
     }
     require("collectCallFeedback")(
-      () => {
+      function dispatchAction() {
         const v4Result = v1.v4();
         const obj2 = DispatcherDefault;
         obj2.dispatch({

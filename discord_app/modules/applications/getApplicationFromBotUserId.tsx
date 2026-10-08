@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/getApplicationFromBotUserId.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGetApplicationFromBotUserId(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
       return stateFromStores;
     }
-  : (arg0) => {
+  : function useGetApplicationFromBotUserId(arg0) {
       _require = arg0;
       const items = [UserProfileStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => {

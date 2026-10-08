@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1085).UserNotificationSettings;
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 let closure_6 = fn(1095).ChannelNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -19,7 +19,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function NotificationSettingsMessageNotificationChannelActionSheet(channel) {
       _require = channel;
       const cResult = require("c").c(11);
       let obj = require("c");
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             let obj3 = { context: "channel", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 };
-            const tmp12 = jsx(unread(12523), {
+            const tmp12 = jsx(unread(12619), {
               context: "channel",
               value: notification,
               allMessagesSubLabel: tmp5,
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = stringResult;
       let obj2 = require("notficationSettingsChannelFlagUtils");
     }
-  : (channel) => {
+  : function NotificationSettingsMessageNotificationChannelActionSheet(channel) {
       _require = channel;
       const channelPresetSettings = require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(
         channel.channel,
@@ -129,5 +129,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj4.label = NotificationLabel.notifications(message_notifications);
         const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(obj4);
       };
-      return jsx(unread(12523), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
+      return jsx(unread(12619), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
     };

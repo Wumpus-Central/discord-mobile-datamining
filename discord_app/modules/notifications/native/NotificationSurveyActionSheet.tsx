@@ -13,7 +13,7 @@ function trackOpen() {
     source: "Notification End",
   });
 }
-const constants = fn(11260).NotificationUserFeedbackReasons;
+const constants = fn(9600).NotificationUserFeedbackReasons;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/native/NotificationSurveyActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (notificationType) => {
+  ? function NotificationSurveyActionSheet(notificationType) {
       const cResult = notificationType(messageId[7]).c(10);
       notificationType = notificationType.notificationType;
       const _location = notificationType.location;
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp13;
         }
       }
-      const fn = function b(arg0) {
+      function handleSubmit(arg0) {
         ({ rating, reason } = arg0);
         if (null != rating) {
           value = null;
@@ -120,15 +120,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           PushFeedbackActions.handleSurveyCleanup();
           ToastUtils.presentFeedbackSent();
         }
-      };
+      }
       cResult[1] = _location;
       cResult[2] = messageId;
       cResult[3] = notificationType;
-      cResult[4] = fn;
-      tmp6 = fn;
+      cResult[4] = handleSubmit;
+      tmp6 = handleSubmit;
       let obj = notificationType(messageId[7]);
     }
-  : (arg0) => {
+  : function NotificationSurveyActionSheet(arg0) {
       ({ notificationType: require, location: importDefault, messageId: dependencyMap } = arg0);
       let obj = { value: constants.TOO_MANY, label: null };
       const intl = util.intl;
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.reasonsHeaderLabel = intl6.string(util.t.g1q5fr);
       obj4.reasons = items;
       obj4.trackOpen = trackOpen;
-      obj4.trackReport = function trackReport(arg0) {
+      obj4.trackReport = function handleSubmit(arg0) {
         ({ rating, reason } = arg0);
         if (null != rating) {
           value = null;

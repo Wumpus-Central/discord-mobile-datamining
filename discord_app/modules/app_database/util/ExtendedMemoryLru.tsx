@@ -77,26 +77,19 @@ prototype["delete"] = function delete(arg0) {
   return deleteResult;
 };
 prototype["upstreamItems"] = function upstreamItems() {
+  let canUpstreamItemsResult;
   const self = this;
   if (this.canUpstreamItems()) {
-    const extended = self.extended;
-    const entries = extended.entries();
-    const obj = entries[Symbol.iterator]();
-    while (obj !== undefined) {
-      let tmp7 = _slicedToArray(tmp4, 2);
-      let first = tmp7[0];
-      let primary = self.primary;
-      let putResult = primary.put(first, tmp7[1]);
+    do {
+      let extended = self.extended;
+      let tmp2 = _slicedToArray(extended.newest(), 2);
+      let first = tmp2[0];
       let extended2 = self.extended;
       let deleteResult = extended2.delete(first);
-      if (self.canUpstreamItems()) {
-        continue;
-      } else {
-        obj.return();
-        break;
-      }
-      break;
-    }
+      let primary = self.primary;
+      let putOldestResult = primary.putOldest(first, tmp2[1]);
+      canUpstreamItemsResult = self.canUpstreamItems();
+    } while (canUpstreamItemsResult);
   }
 };
 prototype["canUpstreamItems"] = function canUpstreamItems() {

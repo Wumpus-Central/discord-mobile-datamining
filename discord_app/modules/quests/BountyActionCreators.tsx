@@ -110,10 +110,10 @@ let closure_12 = async function _fetchQuestHomeBounties(arg0) {
             value: fetchBountiesAndDispatch(
               tmp5,
               asyncGeneratorStep(async () => {
-                await tmp2(6983).getSession();
+                await tmp2(7172).getSession();
                 closure_128_0 = value;
-                const orRefreshAdSession = tmp2(7218).getOrRefreshAdSession();
-                const HTTP = tmp2(1282).HTTP;
+                const orRefreshAdSession = tmp2(7398).getOrRefreshAdSession();
+                const HTTP = tmp2(1294).HTTP;
                 const request = {
                   url: constants.QUESTS_GET_DECISIONS,
                   query: null,

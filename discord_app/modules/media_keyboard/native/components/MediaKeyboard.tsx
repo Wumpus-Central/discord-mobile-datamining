@@ -4,11 +4,11 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import KeyboardTypes from "../../../keyboard/native/KeyboardTypes.tsx";
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
+import Upload from "../../../../lib/uploader/Upload.tsx";
+import utils_UploadUtils from "../../../../utils/native/UploadUtils.tsx";
 import ThreadIcon from "../../../../design/components/Icon/native/redesign/generated/ThreadIcon.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import AppsIcon from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
-import Upload from "../../../../lib/uploader/Upload.tsx";
-import utils_UploadUtils from "../../../../utils/native/UploadUtils.tsx";
 import MediaKeyboardUtils from "../MediaKeyboardUtils.tsx";
 import PollsIcon from "../../../../design/components/Icon/native/redesign/generated/PollsIcon.tsx";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
@@ -21,13 +21,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../../../stores/UploadAttachmentStore.tsx";
 
 require = fn;
-const DraftType = fn(7044).DraftType;
-const MediaKeyboardConstants = fn(1614);
+const DraftType = fn(7232).DraftType;
+const MediaKeyboardConstants = fn(1626);
 ({ MediaKeyboardTarget: metroRequire, MediaPickerActionSheetEngagedActions: closure_7 } = MediaKeyboardConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: closure_9 } = Constants);
-const AppLauncherRouteName = fn(1489).AppLauncherRouteName;
-const KEYBOARD_ANIMATION_CONFIG = fn(11664).KEYBOARD_ANIMATION_CONFIG;
+const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
+const KEYBOARD_ANIMATION_CONFIG = fn(11729).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const ReactCompilerGating = fn(558);
@@ -36,7 +36,7 @@ let result = size.fileFinishedImporting("modules/media_keyboard/native/component
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function MediaKeyboard(channel) {
         const cResult = channel(ref[9]).c(137);
         channel = channel.channel;
         const chatInputRef = channel.chatInputRef;
@@ -106,9 +106,9 @@ export default noop.memo(
                                       if (cResult[30] === keyboardContextForType) {
                                         if (cResult[31] === showInvalidFileTypeAlert) {
                                           if (cResult[32] === validateFilenames) {
-                                            let tmp25 = cResult[33];
+                                            let tmp24 = cResult[33];
                                           }
-                                          closure_14 = tmp25;
+                                          closure_14 = tmp24;
                                           if (cResult[34] !== tmp23) {
                                             class Z {
                                               constructor() {
@@ -121,7 +121,7 @@ export default noop.memo(
                                                 return;
                                               }
                                             }
-                                            const fn3 = function q(previewType) {
+                                            let fn2 = function q(previewType) {
                                               const obj2 = {};
                                               const merged = Object.assign(
                                                 closure_13(Upload.UploadOrigin.IMAGE_PICKER),
@@ -129,64 +129,7 @@ export default noop.memo(
                                               obj2.previewType = previewType;
                                               MediaKeyboardUtils.handleCameraDialog(obj2);
                                             };
-                                            class Q {
-                                              constructor(arg0) {
-                                                ({ channelId, item, isIncluded } = channel);
-                                                tmp = closure_2;
-                                                obj = closure_1(closure_2[10]);
-                                                obj1 = { action: closure_7.MEDIA_SELECTED };
-                                                trackResult = obj.track(
-                                                  AnalyticEvents.MEDIA_PICKER_ACTION_SHEET_ENGAGED,
-                                                  obj1,
-                                                );
-                                                tmp3 = closure_5;
-                                                if (closure_5.target === MediaKeyboardTarget.CHAT) {
-                                                  tmp13 = closure_0;
-                                                  obj5 = closure_0(tmp[20]);
-                                                  flag = false;
-                                                  tmp14 = obj5;
-                                                  tmp15 = channelId;
-                                                  tmp16 = item;
-                                                  tmp17 = isIncluded;
-                                                  result = obj5.handleSelectKeyboardItem(
-                                                    channelId,
-                                                    item,
-                                                    isIncluded,
-                                                    false,
-                                                  );
-                                                } else if (tmp3.target === tmp4.COMMAND) {
-                                                  tmp19 = closure_0;
-                                                  obj6 = closure_0(tmp[20]);
-                                                  result1 = obj6.mediaNodeToUploadItem(item);
-                                                  tmp21 = allowedExtensions;
-                                                  num = 0;
-                                                  if (allowedExtensions.length > 0) {
-                                                    tmp5 = validateFilenames;
-                                                    tmp19Result = tmp19(tmp[21]);
-                                                    items = [];
-                                                    items[0] = tmp19Result.getFileFromUploadItem(result1).filename;
-                                                    if (!validateFilenames(items)) {
-                                                      tmp6 = showInvalidFileTypeAlert;
-                                                      return showInvalidFileTypeAlert();
-                                                    }
-                                                  }
-                                                  tmp19Result1 = tmp19(tmp[20]);
-                                                  tmp7 = chatInputRef;
-                                                  tmp8 = tmp19Result1;
-                                                  tmp9 = channelId;
-                                                  tmp10 = result1;
-                                                  tmp11 = tmp3;
-                                                  result2 = tmp19Result1.addAttachmentForCommand(
-                                                    channelId,
-                                                    chatInputRef,
-                                                    result1,
-                                                    tmp3,
-                                                    tmp19(tmp[23]).UploadOrigin.IMAGE_PICKER,
-                                                  );
-                                                }
-                                                return;
-                                              }
-                                            }
+                                            cResult[34] = tmp23;
                                             class J {
                                               constructor() {
                                                 obj = closure_0(closure_2[20]);
@@ -208,7 +151,7 @@ export default noop.memo(
                                                 return;
                                               }
                                             }
-                                            cResult[36] = fn3;
+                                            cResult[36] = fn2;
                                           } else {
                                             class Z {
                                               constructor() {
@@ -222,62 +165,52 @@ export default noop.memo(
                                               }
                                             }
                                           }
-                                          class Q {
-                                            constructor(arg0) {
-                                              ({ channelId, item, isIncluded } = channel);
-                                              tmp = closure_2;
-                                              obj = closure_1(closure_2[10]);
-                                              obj1 = { action: closure_7.MEDIA_SELECTED };
-                                              trackResult = obj.track(
-                                                AnalyticEvents.MEDIA_PICKER_ACTION_SHEET_ENGAGED,
-                                                obj1,
-                                              );
-                                              tmp3 = closure_5;
-                                              if (closure_5.target === MediaKeyboardTarget.CHAT) {
-                                                tmp13 = closure_0;
-                                                obj5 = closure_0(tmp[20]);
-                                                flag = false;
-                                                tmp14 = obj5;
-                                                tmp15 = channelId;
-                                                tmp16 = item;
-                                                tmp17 = isIncluded;
-                                                result = obj5.handleSelectKeyboardItem(
-                                                  channelId,
-                                                  item,
-                                                  isIncluded,
-                                                  false,
+                                          if (cResult[37] !== sharedValue) {
+                                            class Z {
+                                              constructor() {
+                                                obj = closure_0(closure_2[20]);
+                                                obj1 = {};
+                                                merged = Object.assign(
+                                                  closure_13(closure_0(closure_2[23]).UploadOrigin.FILE_ATTACHMENT),
                                                 );
-                                              } else if (tmp3.target === tmp4.COMMAND) {
-                                                tmp19 = closure_0;
-                                                obj6 = closure_0(tmp[20]);
-                                                result1 = obj6.mediaNodeToUploadItem(item);
-                                                tmp21 = allowedExtensions;
-                                                num = 0;
-                                                if (allowedExtensions.length > 0) {
-                                                  tmp5 = validateFilenames;
-                                                  tmp19Result = tmp19(tmp[21]);
-                                                  items = [];
-                                                  items[0] = tmp19Result.getFileFromUploadItem(result1).filename;
-                                                  if (!validateFilenames(items)) {
-                                                    tmp6 = showInvalidFileTypeAlert;
-                                                    return showInvalidFileTypeAlert();
+                                                handleAttachFileResult = obj.handleAttachFile(obj1);
+                                                return;
+                                              }
+                                            }
+                                            cResult[37] = sharedValue;
+                                            cResult[38] = tmp27;
+                                            class J {
+                                              constructor() {
+                                                obj = closure_0(closure_2[20]);
+                                                obj1 = {};
+                                                merged = Object.assign(
+                                                  closure_13(closure_0(closure_2[23]).UploadOrigin.IMAGE_PICKER),
+                                                );
+                                                obj1.draftType = closure_7.draftType;
+                                                handleViewAllDialogResult = obj.handleViewAllDialog(obj1);
+                                                obj3 = closure_0(closure_2[24]);
+                                                if (obj3.isAndroid()) {
+                                                  tmp3 = closure_2;
+                                                  current = closure_2.current;
+                                                  tmp4 = null;
+                                                  if (current != null) {
+                                                    collapseResult = current.collapse();
                                                   }
                                                 }
-                                                tmp19Result1 = tmp19(tmp[20]);
-                                                tmp7 = chatInputRef;
-                                                tmp8 = tmp19Result1;
-                                                tmp9 = channelId;
-                                                tmp10 = result1;
-                                                tmp11 = tmp3;
-                                                result2 = tmp19Result1.addAttachmentForCommand(
-                                                  channelId,
-                                                  chatInputRef,
-                                                  result1,
-                                                  tmp3,
-                                                  tmp19(tmp[23]).UploadOrigin.IMAGE_PICKER,
-                                                );
+                                                return;
                                               }
-                                              return;
+                                            }
+                                          } else {
+                                            class Z {
+                                              constructor() {
+                                                obj = closure_0(closure_2[20]);
+                                                obj1 = {};
+                                                merged = Object.assign(
+                                                  closure_13(closure_0(closure_2[23]).UploadOrigin.FILE_ATTACHMENT),
+                                                );
+                                                handleAttachFileResult = obj.handleAttachFile(obj1);
+                                                return;
+                                              }
                                             }
                                           }
                                           if (cResult[39] === tmp19.draftType) {
@@ -305,64 +238,6 @@ export default noop.memo(
                                                 }
                                               }
                                               cResult[42] = tmp21;
-                                              class Q {
-                                                constructor(arg0) {
-                                                  ({ channelId, item, isIncluded } = channel);
-                                                  tmp = closure_2;
-                                                  obj = closure_1(closure_2[10]);
-                                                  obj1 = { action: closure_7.MEDIA_SELECTED };
-                                                  trackResult = obj.track(
-                                                    AnalyticEvents.MEDIA_PICKER_ACTION_SHEET_ENGAGED,
-                                                    obj1,
-                                                  );
-                                                  tmp3 = closure_5;
-                                                  if (closure_5.target === MediaKeyboardTarget.CHAT) {
-                                                    tmp13 = closure_0;
-                                                    obj5 = closure_0(tmp[20]);
-                                                    flag = false;
-                                                    tmp14 = obj5;
-                                                    tmp15 = channelId;
-                                                    tmp16 = item;
-                                                    tmp17 = isIncluded;
-                                                    result = obj5.handleSelectKeyboardItem(
-                                                      channelId,
-                                                      item,
-                                                      isIncluded,
-                                                      false,
-                                                    );
-                                                  } else if (tmp3.target === tmp4.COMMAND) {
-                                                    tmp19 = closure_0;
-                                                    obj6 = closure_0(tmp[20]);
-                                                    result1 = obj6.mediaNodeToUploadItem(item);
-                                                    tmp21 = allowedExtensions;
-                                                    num = 0;
-                                                    if (allowedExtensions.length > 0) {
-                                                      tmp5 = validateFilenames;
-                                                      tmp19Result = tmp19(tmp[21]);
-                                                      items = [];
-                                                      items[0] = tmp19Result.getFileFromUploadItem(result1).filename;
-                                                      if (!validateFilenames(items)) {
-                                                        tmp6 = showInvalidFileTypeAlert;
-                                                        return showInvalidFileTypeAlert();
-                                                      }
-                                                    }
-                                                    tmp19Result1 = tmp19(tmp[20]);
-                                                    tmp7 = chatInputRef;
-                                                    tmp8 = tmp19Result1;
-                                                    tmp9 = channelId;
-                                                    tmp10 = result1;
-                                                    tmp11 = tmp3;
-                                                    result2 = tmp19Result1.addAttachmentForCommand(
-                                                      channelId,
-                                                      chatInputRef,
-                                                      result1,
-                                                      tmp3,
-                                                      tmp19(tmp[23]).UploadOrigin.IMAGE_PICKER,
-                                                    );
-                                                  }
-                                                  return;
-                                                }
-                                              }
                                               cResult[43] = tmp29;
                                               class J {
                                                 constructor() {
@@ -398,7 +273,7 @@ export default noop.memo(
                                                 }
                                               }
                                             }
-                                            if (cResult[44] !== tmp25) {
+                                            if (cResult[44] !== tmp24) {
                                               class Z {
                                                 constructor() {
                                                   obj = closure_0(closure_2[20]);
@@ -410,65 +285,7 @@ export default noop.memo(
                                                   return;
                                                 }
                                               }
-                                              cResult[44] = tmp25;
-                                              class Q {
-                                                constructor(arg0) {
-                                                  ({ channelId, item, isIncluded } = channel);
-                                                  tmp = closure_2;
-                                                  obj = closure_1(closure_2[10]);
-                                                  obj1 = { action: closure_7.MEDIA_SELECTED };
-                                                  trackResult = obj.track(
-                                                    AnalyticEvents.MEDIA_PICKER_ACTION_SHEET_ENGAGED,
-                                                    obj1,
-                                                  );
-                                                  tmp3 = closure_5;
-                                                  if (closure_5.target === MediaKeyboardTarget.CHAT) {
-                                                    tmp13 = closure_0;
-                                                    obj5 = closure_0(tmp[20]);
-                                                    flag = false;
-                                                    tmp14 = obj5;
-                                                    tmp15 = channelId;
-                                                    tmp16 = item;
-                                                    tmp17 = isIncluded;
-                                                    result = obj5.handleSelectKeyboardItem(
-                                                      channelId,
-                                                      item,
-                                                      isIncluded,
-                                                      false,
-                                                    );
-                                                  } else if (tmp3.target === tmp4.COMMAND) {
-                                                    tmp19 = closure_0;
-                                                    obj6 = closure_0(tmp[20]);
-                                                    result1 = obj6.mediaNodeToUploadItem(item);
-                                                    tmp21 = allowedExtensions;
-                                                    num = 0;
-                                                    if (allowedExtensions.length > 0) {
-                                                      tmp5 = validateFilenames;
-                                                      tmp19Result = tmp19(tmp[21]);
-                                                      items = [];
-                                                      items[0] = tmp19Result.getFileFromUploadItem(result1).filename;
-                                                      if (!validateFilenames(items)) {
-                                                        tmp6 = showInvalidFileTypeAlert;
-                                                        return showInvalidFileTypeAlert();
-                                                      }
-                                                    }
-                                                    tmp19Result1 = tmp19(tmp[20]);
-                                                    tmp7 = chatInputRef;
-                                                    tmp8 = tmp19Result1;
-                                                    tmp9 = channelId;
-                                                    tmp10 = result1;
-                                                    tmp11 = tmp3;
-                                                    result2 = tmp19Result1.addAttachmentForCommand(
-                                                      channelId,
-                                                      chatInputRef,
-                                                      result1,
-                                                      tmp3,
-                                                      tmp19(tmp[23]).UploadOrigin.IMAGE_PICKER,
-                                                    );
-                                                  }
-                                                  return;
-                                                }
-                                              }
+                                              cResult[44] = tmp24;
                                               cResult[45] = tmp30;
                                               class J {
                                                 constructor() {
@@ -504,63 +321,74 @@ export default noop.memo(
                                                 }
                                               }
                                             }
-                                            class Q {
-                                              constructor(arg0) {
-                                                ({ channelId, item, isIncluded } = channel);
-                                                tmp = closure_2;
-                                                obj = closure_1(closure_2[10]);
-                                                obj1 = { action: closure_7.MEDIA_SELECTED };
-                                                trackResult = obj.track(
-                                                  AnalyticEvents.MEDIA_PICKER_ACTION_SHEET_ENGAGED,
-                                                  obj1,
-                                                );
-                                                tmp3 = closure_5;
-                                                if (closure_5.target === MediaKeyboardTarget.CHAT) {
-                                                  tmp13 = closure_0;
-                                                  obj5 = closure_0(tmp[20]);
-                                                  flag = false;
-                                                  tmp14 = obj5;
-                                                  tmp15 = channelId;
-                                                  tmp16 = item;
-                                                  tmp17 = isIncluded;
-                                                  result = obj5.handleSelectKeyboardItem(
-                                                    channelId,
-                                                    item,
-                                                    isIncluded,
-                                                    false,
+                                            if (cResult[46] === tmp22) {
+                                              class Z {
+                                                constructor() {
+                                                  obj = closure_0(closure_2[20]);
+                                                  obj1 = {};
+                                                  merged = Object.assign(
+                                                    closure_13(closure_0(closure_2[23]).UploadOrigin.FILE_ATTACHMENT),
                                                   );
-                                                } else if (tmp3.target === tmp4.COMMAND) {
-                                                  tmp19 = closure_0;
-                                                  obj6 = closure_0(tmp[20]);
-                                                  result1 = obj6.mediaNodeToUploadItem(item);
-                                                  tmp21 = allowedExtensions;
-                                                  num = 0;
-                                                  if (allowedExtensions.length > 0) {
-                                                    tmp5 = validateFilenames;
-                                                    tmp19Result = tmp19(tmp[21]);
-                                                    items = [];
-                                                    items[0] = tmp19Result.getFileFromUploadItem(result1).filename;
-                                                    if (!validateFilenames(items)) {
-                                                      tmp6 = showInvalidFileTypeAlert;
-                                                      return showInvalidFileTypeAlert();
+                                                  handleAttachFileResult = obj.handleAttachFile(obj1);
+                                                  return;
+                                                }
+                                              }
+                                              if (cResult[49] === channel) {
+                                                class Z {
+                                                  constructor() {
+                                                    obj = closure_0(closure_2[20]);
+                                                    obj1 = {};
+                                                    merged = Object.assign(
+                                                      closure_13(closure_0(closure_2[23]).UploadOrigin.FILE_ATTACHMENT),
+                                                    );
+                                                    handleAttachFileResult = obj.handleAttachFile(obj1);
+                                                    return;
+                                                  }
+                                                }
+                                              }
+                                              function ae() {
+                                                AnalyticsUtilsDefault.track(constants2.CHAT_INPUT_COMPONENT_VIEWED, {
+                                                  type: constants3.POLLS,
+                                                  channel_id: channel.id,
+                                                  guild_id: channel.guild_id,
+                                                });
+                                                const current = chatInputRef.current;
+                                                current.closeCustomKeyboard();
+                                                const obj2 = {
+                                                  type: constants3.POLLS,
+                                                  channel_id: channel.id,
+                                                  guild_id: channel.guild_id,
+                                                };
+                                                PollCreationModalActionCreators.openCreatePollModal({
+                                                  channel,
+                                                  onCancel,
+                                                });
+                                              }
+                                              cResult[49] = channel;
+                                              class J {
+                                                constructor() {
+                                                  obj = closure_0(closure_2[20]);
+                                                  obj1 = {};
+                                                  merged = Object.assign(
+                                                    closure_13(closure_0(closure_2[23]).UploadOrigin.IMAGE_PICKER),
+                                                  );
+                                                  obj1.draftType = closure_7.draftType;
+                                                  handleViewAllDialogResult = obj.handleViewAllDialog(obj1);
+                                                  obj3 = closure_0(closure_2[24]);
+                                                  if (obj3.isAndroid()) {
+                                                    tmp3 = closure_2;
+                                                    current = closure_2.current;
+                                                    tmp4 = null;
+                                                    if (current != null) {
+                                                      collapseResult = current.collapse();
                                                     }
                                                   }
-                                                  tmp19Result1 = tmp19(tmp[20]);
-                                                  tmp7 = chatInputRef;
-                                                  tmp8 = tmp19Result1;
-                                                  tmp9 = channelId;
-                                                  tmp10 = result1;
-                                                  tmp11 = tmp3;
-                                                  result2 = tmp19Result1.addAttachmentForCommand(
-                                                    channelId,
-                                                    chatInputRef,
-                                                    result1,
-                                                    tmp3,
-                                                    tmp19(tmp[23]).UploadOrigin.IMAGE_PICKER,
-                                                  );
+                                                  return;
                                                 }
-                                                return;
                                               }
+                                              cResult[50] = chatInputRef;
+                                              cResult[51] = tmp21;
+                                              cResult[52] = ae;
                                             }
                                             function ne(channelId) {
                                               channelId = channelId.channelId;
@@ -639,7 +467,7 @@ export default noop.memo(
                                               }
                                             }
                                             cResult[46] = tmp22;
-                                            cResult[47] = tmp25;
+                                            cResult[47] = tmp24;
                                             cResult[48] = ne;
                                           }
                                           class J {
@@ -670,149 +498,89 @@ export default noop.memo(
                                       }
                                     }
                                   }
-                                  class Q {
-                                    constructor(arg0) {
-                                      ({ channelId, item, isIncluded } = channel);
-                                      tmp = closure_2;
-                                      obj = closure_1(closure_2[10]);
-                                      obj1 = { action: closure_7.MEDIA_SELECTED };
-                                      trackResult = obj.track(AnalyticEvents.MEDIA_PICKER_ACTION_SHEET_ENGAGED, obj1);
-                                      tmp3 = closure_5;
-                                      if (closure_5.target === MediaKeyboardTarget.CHAT) {
-                                        tmp13 = closure_0;
-                                        obj5 = closure_0(tmp[20]);
-                                        flag = false;
-                                        tmp14 = obj5;
-                                        tmp15 = channelId;
-                                        tmp16 = item;
-                                        tmp17 = isIncluded;
-                                        result = obj5.handleSelectKeyboardItem(channelId, item, isIncluded, false);
-                                      } else if (tmp3.target === tmp4.COMMAND) {
-                                        tmp19 = closure_0;
-                                        obj6 = closure_0(tmp[20]);
-                                        result1 = obj6.mediaNodeToUploadItem(item);
-                                        tmp21 = allowedExtensions;
-                                        num = 0;
-                                        if (allowedExtensions.length > 0) {
-                                          tmp5 = validateFilenames;
-                                          tmp19Result = tmp19(tmp[21]);
-                                          items = [];
-                                          items[0] = tmp19Result.getFileFromUploadItem(result1).filename;
-                                          if (!validateFilenames(items)) {
-                                            tmp6 = showInvalidFileTypeAlert;
-                                            return showInvalidFileTypeAlert();
-                                          }
+                                  function onSelectItem(arg0) {
+                                    ({ channelId, item, isIncluded } = arg0);
+                                    AnalyticsUtilsDefault.track(constants2.MEDIA_PICKER_ACTION_SHEET_ENGAGED, {
+                                      action: React5.MEDIA_SELECTED,
+                                    });
+                                    if (keyboardContextForType.target === constants.CHAT) {
+                                      const obj5 = MediaKeyboardUtils;
+                                      const result = obj5.handleSelectKeyboardItem(channelId, item, isIncluded, false);
+                                    } else if (keyboardContextForType.target === tmp4.COMMAND) {
+                                      const result1 = MediaKeyboardUtils.mediaNodeToUploadItem(item);
+                                      if (allowedExtensions.length > 0) {
+                                        const items = [utils_UploadUtils.getFileFromUploadItem(result1).filename];
+                                        if (!validateFilenames(items)) {
+                                          return showInvalidFileTypeAlert();
                                         }
-                                        tmp19Result1 = tmp19(tmp[20]);
-                                        tmp7 = chatInputRef;
-                                        tmp8 = tmp19Result1;
-                                        tmp9 = channelId;
-                                        tmp10 = result1;
-                                        tmp11 = tmp3;
-                                        result2 = tmp19Result1.addAttachmentForCommand(
-                                          channelId,
-                                          chatInputRef,
-                                          result1,
-                                          tmp3,
-                                          tmp19(tmp[23]).UploadOrigin.IMAGE_PICKER,
-                                        );
+                                        const tmp19Result = utils_UploadUtils;
                                       }
-                                      return;
+                                      const tmp19Result2 = MediaKeyboardUtils;
+                                      const result2 = tmp19Result2.addAttachmentForCommand(
+                                        channelId,
+                                        chatInputRef,
+                                        result1,
+                                        keyboardContextForType,
+                                        Upload.UploadOrigin.IMAGE_PICKER,
+                                      );
                                     }
+                                    const obj2 = { action: React5.MEDIA_SELECTED };
                                   }
                                   cResult[29] = chatInputRef;
                                   cResult[30] = keyboardContextForType;
                                   cResult[31] = showInvalidFileTypeAlert;
                                   cResult[32] = validateFilenames;
-                                  cResult[33] = Q;
-                                  tmp25 = Q;
+                                  cResult[33] = onSelectItem;
+                                  tmp24 = onSelectItem;
                                 }
                               }
                             }
                           }
-                          class W {
-                            constructor(arg0, arg1) {
-                              tmp = closure_5;
-                              if (closure_5.target === MediaKeyboardTarget.CHAT) {
-                                tmp15 = closure_0;
-                                tmp16 = closure_2;
-                                obj3 = closure_0(closure_2[20]);
-                                tmp17 = channel;
-                                addImagesFromPickerResult = obj3.addImagesFromPicker(channel.id, channel, arg1);
-                              } else if (tmp.target === tmp2.COMMAND) {
-                                tmp19 = allowedExtensions;
-                                num = 0;
-                                if (allowedExtensions.length > 0) {
-                                  tmp3 = validateFilenames;
-                                  tmp4 = closure_0;
-                                  tmp5 = closure_2;
-                                  obj = closure_0(closure_2[21]);
-                                  items = [];
-                                  items[0] = obj.getFileFromUploadItem(channel[0]).filename;
-                                  if (!validateFilenames(items)) {
-                                    tmp6 = showInvalidFileTypeAlert;
-                                    return showInvalidFileTypeAlert();
-                                  }
-                                }
-                                tmp7 = closure_0;
-                                tmp8 = closure_2;
-                                obj2 = closure_0(closure_2[20]);
-                                tmp9 = channel;
-                                tmp10 = chatInputRef;
-                                tmp11 = obj2;
-                                tmp12 = tmp;
-                                tmp13 = arg1;
-                                result = obj2.addAttachmentForCommand(channel.id, chatInputRef, channel[0], tmp, arg1);
-                              }
-                              return;
-                            }
+                          function onAttachFileParams(arg0) {
+                            channel = arg0;
+                            return {
+                              channel,
+                              uploadLimit: closure_7.uploadLimit,
+                              extensions: allowedExtensions,
+                              onDismissKeyboard() {
+                                return closure_0(ref[22]).dismissKeyboard();
+                              },
+                              onRestoreKeyboard,
+                              onSelectFiles(arg0) {
+                                return closure_12(arg0, closure_0);
+                              },
+                            };
                           }
                           cResult[23] = channel;
                           cResult[24] = tmp19.uploadLimit;
                           cResult[25] = tmp21;
                           cResult[26] = tmp22;
-                          cResult[27] = tmp24;
-                          tmp23 = tmp24;
+                          cResult[27] = onAttachFileParams;
+                          tmp23 = onAttachFileParams;
                         }
                       }
                     }
                   }
                 }
-                class W {
-                  constructor(arg0, arg1) {
-                    tmp = closure_5;
-                    if (closure_5.target === MediaKeyboardTarget.CHAT) {
-                      tmp15 = closure_0;
-                      tmp16 = closure_2;
-                      obj3 = closure_0(closure_2[20]);
-                      tmp17 = channel;
-                      addImagesFromPickerResult = obj3.addImagesFromPicker(channel.id, channel, arg1);
-                    } else if (tmp.target === tmp2.COMMAND) {
-                      tmp19 = allowedExtensions;
-                      num = 0;
-                      if (allowedExtensions.length > 0) {
-                        tmp3 = validateFilenames;
-                        tmp4 = closure_0;
-                        tmp5 = closure_2;
-                        obj = closure_0(closure_2[21]);
-                        items = [];
-                        items[0] = obj.getFileFromUploadItem(channel[0]).filename;
-                        if (!validateFilenames(items)) {
-                          tmp6 = showInvalidFileTypeAlert;
-                          return showInvalidFileTypeAlert();
-                        }
+                function onSelectFiles(items, IMAGE_EDITOR) {
+                  if (keyboardContextForType.target === constants.CHAT) {
+                    MediaKeyboardUtils.addImagesFromPicker(channel.id, items, IMAGE_EDITOR);
+                  } else if (keyboardContextForType.target === tmp2.COMMAND) {
+                    if (allowedExtensions.length > 0) {
+                      items = [];
+                      items[0] = utils_UploadUtils.getFileFromUploadItem(items[0]).filename;
+                      if (!validateFilenames(items)) {
+                        return showInvalidFileTypeAlert();
                       }
-                      tmp7 = closure_0;
-                      tmp8 = closure_2;
-                      obj2 = closure_0(closure_2[20]);
-                      tmp9 = channel;
-                      tmp10 = chatInputRef;
-                      tmp11 = obj2;
-                      tmp12 = tmp;
-                      tmp13 = arg1;
-                      result = obj2.addAttachmentForCommand(channel.id, chatInputRef, channel[0], tmp, arg1);
                     }
-                    return;
+                    const obj2 = MediaKeyboardUtils;
+                    const result = obj2.addAttachmentForCommand(
+                      channel.id,
+                      chatInputRef,
+                      items[0],
+                      keyboardContextForType,
+                      IMAGE_EDITOR,
+                    );
                   }
                 }
                 cResult[16] = channel.id;
@@ -820,20 +588,20 @@ export default noop.memo(
                 cResult[18] = keyboardContextForType;
                 cResult[19] = showInvalidFileTypeAlert;
                 cResult[20] = validateFilenames;
-                cResult[21] = W;
-                tmp22 = W;
+                cResult[21] = onSelectFiles;
+                tmp22 = onSelectFiles;
               }
-              let fn2 = function x() {
+              function onRestoreKeyboard() {
                 if (keyboardContextForType.target !== constants.APP_LAUNCHER) {
                   const current = chatInputRef.current;
                   const obj = { type: KeyboardTypes.KeyboardTypes.MEDIA, context: tmp };
                   current.openCustomKeyboard(obj);
                 }
-              };
+              }
               cResult[12] = chatInputRef;
               cResult[13] = keyboardContextForType;
-              cResult[14] = fn2;
-              tmp21 = fn2;
+              cResult[14] = onRestoreKeyboard;
+              tmp21 = onRestoreKeyboard;
               const tmpResult12 = tmp(tmp2[19]);
             }
             let obj2 = { channel, context: keyboardContextForType };
@@ -868,7 +636,7 @@ export default noop.memo(
         tmp4 = fn;
         let obj = channel(ref[9]);
       }
-    : (channel) => {
+    : function MediaKeyboard(channel) {
         channel = channel.channel;
         const chatInputRef = channel.chatInputRef;
         let sharedValue;

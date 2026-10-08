@@ -14,7 +14,7 @@ require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAvatarsWithGuilds(arg0) {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const mutableAllGuildsAndMembers = GuildMemberStore.getMutableAllGuildsAndMembers();
@@ -54,7 +54,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : (arg0) => {
+  : function useAvatarsWithGuilds(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       return noop.useMemo(() => {
@@ -84,7 +84,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, arg1) => {
+  ? function useGuildMemberAndUserPendingNameplate(id, arg1) {
       _require = id;
       dependencyMap = arg1;
       const cResult = require("c").c(12);
@@ -163,7 +163,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       const obj = require("c");
     }
-  : (nameplate, arg1) => {
+  : function useGuildMemberAndUserPendingNameplate(nameplate, arg1) {
       _require = nameplate;
       dependencyMap = arg1;
       const items = [GuildMemberStore];
@@ -201,7 +201,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (displayNameStyles, arg1) => {
+  ? function useGuildMemberOrUserPendingDisplayNameStyles(displayNameStyles, arg1) {
       _require = displayNameStyles;
       dependencyMap = arg1;
       const cResult = require("c").c(13);
@@ -294,7 +294,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       const obj = require("c");
     }
-  : (displayNameStyles, arg1) => {
+  : function useGuildMemberOrUserPendingDisplayNameStyles(displayNameStyles, arg1) {
       _require = displayNameStyles;
       dependencyMap = arg1;
       const items = [GuildMemberStore];
@@ -339,7 +339,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function useUserAvatarDecoration(user) {
       const cResult = user(guildId[5]).c(4);
       user = user.user;
       guildId = user.guildId;
@@ -381,7 +381,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp = user;
       tmp2 = guildId;
     }
-  : (user) => {
+  : function useUserAvatarDecoration(user) {
       user = user.user;
       const guildId = user.guildId;
       const items = [GuildMemberStore];
@@ -405,7 +405,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function useUserProfileEffect(user) {
       const cResult = user(guildId[5]).c(4);
       user = user.user;
       guildId = user.guildId;
@@ -422,7 +422,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(tmp2[6]).useStateFromStores(first, tmp6);
       }
-      const fn = function o() {
+      const fn = function s() {
         if (null == guildId) {
           const userProfile = UserProfileStore.getUserProfile(user.id);
           let profileEffect1;
@@ -446,7 +446,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       tmp = user;
       tmp2 = guildId;
     }
-  : (arg0) => {
+  : function useUserProfileEffect(arg0) {
       ({ user: require, guildId: dependencyMap } = arg0);
       const items = [UserProfileStore];
       return initialize.useStateFromStores(items, () => {
@@ -468,7 +468,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function useUserProfileFrame(user) {
       const cResult = user(guildId[5]).c(4);
       user = user.user;
       guildId = user.guildId;
@@ -485,7 +485,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(tmp2[6]).useStateFromStores(first, tmp6);
       }
-      const fn = function o() {
+      const fn = function s() {
         if (null == guildId) {
           const userProfile = UserProfileStore.getUserProfile(user.id);
           let profileFrame1;
@@ -509,7 +509,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       tmp = user;
       tmp2 = guildId;
     }
-  : (arg0) => {
+  : function useUserProfileFrame(arg0) {
       ({ user: require, guildId: dependencyMap } = arg0);
       const items = [UserProfileStore];
       return initialize.useStateFromStores(items, () => {
@@ -531,7 +531,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAvatarDecorationSettings(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -542,7 +542,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function o() {
+        const fn = function s() {
           return {
             pendingAvatarDecoration: UserProfileSettingsStore.getPendingChanges(closure_0).pendingAvatarDecoration,
             errors: UserProfileSettingsStore.getErrors(closure_0).avatarDecoration,
@@ -557,7 +557,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStoresObject(first, tmp6);
     }
-  : (arg0) => {
+  : function useAvatarDecorationSettings(arg0) {
       _require = arg0;
       const items = [UserProfileSettingsStore];
       return require("initialize").useStateFromStoresObject(items, () => ({
@@ -567,7 +567,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useProfileEffectSettings(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -578,7 +578,7 @@ const tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function o() {
+        const fn = function s() {
           return {
             pendingProfileEffect: UserProfileSettingsStore.getPendingChanges(closure_0).pendingProfileEffect,
             errors: UserProfileSettingsStore.getErrors(closure_0).profileEffect,
@@ -593,7 +593,7 @@ const tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStoresObject(first, tmp6);
     }
-  : (arg0) => {
+  : function useProfileEffectSettings(arg0) {
       _require = arg0;
       const items = [UserProfileSettingsStore];
       return require("initialize").useStateFromStoresObject(items, () => ({
@@ -639,7 +639,7 @@ export const useUserProfileFrame = tmp7;
 export const useAvatarDecorationSettings = tmp8;
 export const useProfileEffectSettings = tmp9;
 export const useProfileFrameSettings = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useProfileFrameSettings(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -650,7 +650,7 @@ export const useProfileFrameSettings = ReactCompilerGating.isReactCompilerEnable
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function o() {
+        const fn = function s() {
           return {
             pendingProfileFrame: UserProfileSettingsStore.getPendingChanges(closure_0).pendingProfileFrame,
             errors: UserProfileSettingsStore.getErrors(closure_0).profileFrame,
@@ -665,7 +665,7 @@ export const useProfileFrameSettings = ReactCompilerGating.isReactCompilerEnable
       const obj = require("c");
       return require("initialize").useStateFromStoresObject(first, tmp6);
     }
-  : (arg0) => {
+  : function useProfileFrameSettings(arg0) {
       _require = arg0;
       const items = [UserProfileSettingsStore];
       return require("initialize").useStateFromStoresObject(items, () => ({

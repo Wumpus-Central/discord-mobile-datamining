@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting(
 
 export const BountiesAndroidQuestBarSmokeAnimationExperiment = apexExperiment;
 export const useIsBountiesAndroidQuestBarSmokeAnimationEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsBountiesAndroidQuestBarSmokeAnimationEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -32,4 +32,6 @@ export const useIsBountiesAndroidQuestBarSmokeAnimationEnabled = ReactCompilerGa
       }
       return apexExperiment.useConfig(tmp2).enabled;
     }
-  : (location) => apexExperiment.useConfig({ location }).enabled;
+  : function useIsBountiesAndroidQuestBarSmokeAnimationEnabled(location) {
+      return apexExperiment.useConfig({ location }).enabled;
+    };

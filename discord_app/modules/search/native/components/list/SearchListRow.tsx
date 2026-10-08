@@ -7,10 +7,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const paddingVertical = fn(7524).SEARCH_ROW_TAP_STATE_PADDING;
+const paddingVertical = fn(9247).SEARCH_ROW_TAP_STATE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles((marginLeft) => {
   const obj = {
     pressable: { paddingHorizontal: 16, paddingVertical },
@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting("modules/search/native/components/list
 
 export const SearchListRow = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function SearchListRow(arg0) {
         const cResult = c.c(40);
         ({
           containerStyle,
@@ -152,10 +152,7 @@ export const SearchListRow = noop.memo(
                             }
                             let tmp25 = null != extras;
                             if (tmp25) {
-                              const obj3 = { style: null, children: null };
-                              const items1 = [tmp5Result.extrasContainer];
-                              obj3.style = items1;
-                              obj3.children = extras;
+                              const obj3 = { style: tmp5Result.extrasContainer, children: extras };
                               tmp25 = hasOwnProperty(View, obj3);
                             }
                             cResult[24] = extras;
@@ -166,8 +163,8 @@ export const SearchListRow = noop.memo(
                         }
                       }
                       const obj4 = { style: tmp8, children: null };
-                      const items2 = [tmp10, tmp16, trailing];
-                      obj4.children = items2;
+                      const items1 = [tmp10, tmp16, trailing];
+                      obj4.children = items1;
                       const tmp23 = timestampProducer(View, obj4);
                       cResult[19] = tmp8;
                       cResult[20] = tmp10;
@@ -178,8 +175,8 @@ export const SearchListRow = noop.memo(
                     }
                   }
                   const obj5 = { style: tmp5Result.labels, children: null };
-                  const items3 = [tmp14, subLabel];
-                  obj5.children = items3;
+                  const items2 = [tmp14, subLabel];
+                  obj5.children = items2;
                   const tmp19 = timestampProducer(View, obj5);
                   cResult[15] = tmp5Result.labels;
                   cResult[16] = subLabel;
@@ -210,25 +207,25 @@ export const SearchListRow = noop.memo(
               cResult[11] = tmp13;
               tmp10 = tmp13;
             }
-            const items4 = [tmp5Result.iconContainer, iconContainerStyle];
+            const items3 = [tmp5Result.iconContainer, iconContainerStyle];
             cResult[6] = iconContainerStyle;
             cResult[7] = tmp5Result.iconContainer;
-            cResult[8] = items4;
-            tmp9 = items4;
+            cResult[8] = items3;
+            tmp9 = items3;
           }
-          const items5 = [tmp5Result.body, bodyStyle];
+          const items4 = [tmp5Result.body, bodyStyle];
           cResult[3] = bodyStyle;
           cResult[4] = tmp5Result.body;
-          cResult[5] = items5;
-          tmp8 = items5;
+          cResult[5] = items4;
+          tmp8 = items4;
         }
-        const items6 = [tmp5Result.pressable, containerStyle];
+        const items5 = [tmp5Result.pressable, containerStyle];
         cResult[0] = containerStyle;
         cResult[1] = tmp5Result.pressable;
-        cResult[2] = items6;
-        tmp7 = items6;
+        cResult[2] = items5;
+        tmp7 = items5;
       }
-    : (accessibilityRole) => {
+    : function SearchListRow(accessibilityRole) {
         ({ label, iconWidth, extras, accessible } = accessibilityRole);
         ({ containerStyle, onPress, subLabel, icon, iconContainerStyle, trailing, header } = accessibilityRole);
         if (accessible === undefined) {
@@ -287,10 +284,7 @@ export const SearchListRow = noop.memo(
         items1[1] = timestampProducer(View, obj2);
         let tmp7Result2 = null != extras;
         if (tmp7Result2) {
-          const obj6 = { style: null, children: null };
-          const items6 = [tmpResult.extrasContainer];
-          obj6.style = items6;
-          obj6.children = extras;
+          const obj6 = { style: tmpResult.extrasContainer, children: extras };
           tmp7Result2 = hasOwnProperty(View, obj6);
         }
         items1[2] = tmp7Result2;

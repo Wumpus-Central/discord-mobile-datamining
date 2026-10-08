@@ -54,7 +54,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/useIsFirstMessageInMediaPost.tsx");
 
 export const useIsFirstMessageInMediaPost = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsFirstMessageInMediaPost(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -103,7 +103,7 @@ export const useIsFirstMessageInMediaPost = ReactCompilerGating.isReactCompilerE
       let obj = require("c");
       return require("useStateFromStores").useStateFromStores(first, tmp5, tmp6);
     }
-  : (arg0) => {
+  : function useIsFirstMessageInMediaPost(arg0) {
       _require = arg0;
       const items = [arg0];
       return require("useStateFromStores").useStateFromStores(

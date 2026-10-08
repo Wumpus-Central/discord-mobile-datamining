@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ProfileEffectUserPreview(arg0) {
       let mbHmX2 = require;
       const cResult = c.c(13);
       if (cResult[0] !== arg0) {
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp14 = tmp21;
       }
     }
-  : (profileEffect) => {
+  : function ProfileEffectUserPreview(profileEffect) {
       profileEffect = profileEffect.profileEffect;
       ({ avatarDecorationOverride, profileFrameOverride } = profileEffect);
       const merged = Object.assign(

@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOverlay.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsVoiceOverlay() {
       const cResult = c.c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MobileVoiceOverlayStore];
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp14;
     }
-  : () => {
+  : function UserSettingsVoiceOverlay() {
       const items = [MobileVoiceOverlayStore];
       const stateFromStores = useStateFromStores.useStateFromStores(items, () => enabled.getEnabled());
       const obj2 = { title: null, hasIcons: false, children: null };

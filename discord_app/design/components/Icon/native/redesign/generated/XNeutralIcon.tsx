@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/XNeutralIcon.tsx
 import c from "../../../../../../../_runtime/00576_c.js";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod7781 from "../../../../../../../_runtime/metro/07781__.js";
+import _mod8109 from "../../../../../../../_runtime/metro/08109__.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/XNeutralIcon.tsx");
 
 export const XNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function XNeutralIcon(arg0) {
       const cResult = c.c(9);
       if (cResult[0] !== arg0) {
         ({ style, color } = arg0);
@@ -35,7 +35,7 @@ export const XNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
         str = tmp6;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod7781;
+        const tmpResult = _mod8109;
         cResult[4] = tmpResult;
         let tmp10 = tmpResult;
       } else {
@@ -58,12 +58,12 @@ export const XNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = tmp14;
       const obj2 = { source: tmp10, color: str, style: tmp5 };
     }
-  : (color) => {
+  : function XNeutralIcon(color) {
       let str = color.color;
       if (str === undefined) {
         str = "#4E5058";
       }
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
       const merged1 = Object.assign(merged);
-      return jsx(BaseIconImage.BaseIconImage, { source: _mod7781, color: str, style: color.style });
+      return jsx(BaseIconImage.BaseIconImage, { source: _mod8109, color: str, style: color.style });
     };

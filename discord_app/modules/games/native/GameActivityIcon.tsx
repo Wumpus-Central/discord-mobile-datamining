@@ -5,13 +5,13 @@ import native from "../../../../discord_common/js/packages/design/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const AvatarUtils = UnknownGameIcon(1402);
-const shared = UnknownGameIcon(4735);
-const UnknownGameIcon2 = UnknownGameIcon(8281);
+const AvatarUtils = UnknownGameIcon(1414);
+const shared = UnknownGameIcon(4929);
+const UnknownGameIcon2 = UnknownGameIcon(7662);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { icon: { borderRadius: nativeDefault.radii.xs } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/games/native/GameActivityIcon
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (style) => {
+    ? function GameActivityIcon(style) {
         let UnknownGameIcon = require;
         let tmp = dependencyMap;
         const cResult = c.c(14);
@@ -106,7 +106,7 @@ export default noop.memo(
         }
         obj2 = native;
       }
-    : (style) => {
+    : function GameActivityIcon(style) {
         ({ game, size, onShown } = style);
         style = style.style;
         const tmp = closure_6();

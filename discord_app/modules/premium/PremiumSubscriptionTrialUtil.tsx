@@ -6,7 +6,7 @@ import SubscriptionStore from "../../stores/billing/SubscriptionStore.tsx";
 import UserOfferStore from "../../stores/billing/UserOfferStore.tsx";
 
 require = fn;
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: hasOwnProperty,
   PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: metroRequire,
@@ -17,7 +17,7 @@ const PremiumConstants = fn(1379);
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHasActiveTrial() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SubscriptionStore];
@@ -38,7 +38,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return hasActiveTrial;
     }
-  : () => {
+  : function useHasActiveTrial() {
       const items = [SubscriptionStore];
       const stateFromStores = initialize.useStateFromStores(items, () =>
         premiumTypeSubscription.getPremiumTypeSubscription(),
@@ -83,11 +83,11 @@ export const isEligibleTrialSub = function isEligibleTrialSub(trialId) {
   return tmp2;
 };
 export const useCurrentPremiumTrialTier = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCurrentPremiumTrialTier() {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SubscriptionStore];
-        const fn = function n() {
+        const fn = function s() {
           return premiumTypeSubscription.getPremiumTypeSubscription();
         };
         cResult[0] = items;
@@ -100,12 +100,14 @@ export const useCurrentPremiumTrialTier = ReactCompilerGating.isReactCompilerEna
       const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [UserStore];
-        const fn2 = function c() {
-          return currentUser.getCurrentUser();
-        };
+        class T {
+          constructor() {
+            return closure_1_2.getCurrentUser();
+          }
+        }
         cResult[2] = items1;
-        cResult[3] = fn2;
-        let tmp9 = fn2;
+        cResult[3] = T;
+        let tmp9 = T;
         let tmp8 = items1;
       } else {
         tmp8 = cResult[2];
@@ -127,7 +129,7 @@ export const useCurrentPremiumTrialTier = ReactCompilerGating.isReactCompilerEna
       }
       return tmp13;
     }
-  : () => {
+  : function useCurrentPremiumTrialTier() {
       const items = [SubscriptionStore];
       const stateFromStores = initialize.useStateFromStores(items, () =>
         premiumTypeSubscription.getPremiumTypeSubscription(),

@@ -18,7 +18,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 125;
 const ANIMATED_CONTENT_SPRING_CONFIG = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: false };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   wrapper: { flexGrow: 1, flexShrink: 1 },
   headerContentCopy: { flexGrow: 1, flexShrink: 1 },
@@ -36,10 +36,10 @@ let obj = {
   image: null,
 };
 let obj3 = { padding: nativeDefault.space.PX_16 };
-obj.contentRewardsWrapper = { flexGrow: 1, flexShrink: 0, paddingTop: fn(14950).COMPLETION_GLOW_CLEARANCE };
+obj.contentRewardsWrapper = { flexGrow: 1, flexShrink: 0, paddingTop: fn(15212).COMPLETION_GLOW_CLEARANCE };
 obj.contentRewards = { alignItems: "center" };
 obj.contentRewardsCopy = { textAlign: "center" };
-let obj4 = { flexGrow: 1, flexShrink: 0, paddingTop: fn(14950).COMPLETION_GLOW_CLEARANCE };
+let obj4 = { flexGrow: 1, flexShrink: 0, paddingTop: fn(15212).COMPLETION_GLOW_CLEARANCE };
 obj.contentEndCardHeader = { marginBottom: nativeDefault.space.PX_16 };
 obj.contentEndCardHeaderCopy = { flexGrow: 1, flexShrink: 1 };
 let obj5 = { marginBottom: nativeDefault.space.PX_16 };
@@ -70,7 +70,7 @@ let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/V
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function VideoQuestModalContentCompleted(arg0) {
         const cResult = quest(sharedValue[8]).c(110);
         ({ onClose, onRestartVideo, sourceQuestContent } = arg0);
         const tmp4 = closure_12();
@@ -393,7 +393,7 @@ export default noop.memo(
         tmp9 = obj9;
         let obj2 = quest(sharedValue[9]);
       }
-    : (onRestartVideo) => {
+    : function VideoQuestModalContentCompleted(onRestartVideo) {
         ({ onClose, sourceQuestContent } = onRestartVideo);
         const tmp = closure_12();
         const tmp3 = sharedValue;

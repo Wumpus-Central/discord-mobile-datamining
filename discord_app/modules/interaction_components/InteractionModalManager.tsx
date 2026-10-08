@@ -1,5 +1,6 @@
 // discord_app/modules/interaction_components/InteractionModalManager.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import isPostMessageDisconnectDefault from "../rpc/helpers/isPostMessageDisconnect.tsx";
 import openInteractionIframeModalDefault from "openInteractionIframeModal.native.tsx";
 import closeIFrameModalDefault from "closeIFrameModal.native.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -172,15 +173,25 @@ const prototype = function InteractionModalManager() {
         duration_open_ms: diff,
       };
     },
-    RPC_APP_DISCONNECTED(application) {
-      const iFrameModalApplicationId = uiStore.getIFrameModalApplicationId();
-      let tmp3 = application.application.id === iFrameModalApplicationId;
-      const iFrameModalKey = uiStore.getIFrameModalKey();
-      if (tmp3) {
-        tmp3 = null != iFrameModalApplicationId;
-      }
-      if (tmp3) {
-        closeIFrameModalDefault(iFrameModalApplicationId, iFrameModalKey);
+    RPC_APP_DISCONNECTED(context) {
+      iFrameModal = iFrameModal.getIFrameModal();
+      if (null != iFrameModal) {
+        if (isPostMessageDisconnectDefault(context)) {
+          context = context.context;
+          let tmp3 =
+            context.surface.type === applyArgumentsResult(dependencyMap[12]).EmbeddedSurfaceType.INTERACTION_MODAL;
+          if (tmp3) {
+            const launch = context.launch;
+            let interactionId;
+            if (launch != null) {
+              interactionId = launch.interactionId;
+            }
+            tmp3 = interactionId === iFrameModal.interactionId;
+          }
+          if (tmp3) {
+            closeIFrameModalDefault(iFrameModal.applicationId, iFrameModal.modalKey);
+          }
+        }
       }
     },
   };

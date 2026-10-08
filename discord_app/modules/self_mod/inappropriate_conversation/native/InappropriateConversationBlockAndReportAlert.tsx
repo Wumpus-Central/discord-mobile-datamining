@@ -6,7 +6,7 @@ require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function InappropriateConversationBlockAndReportAlert(channelId) {
       const cResult = channelId(warningType[3]).c(24);
       channelId = channelId.channelId;
       const warningId = channelId.warningId;
@@ -35,9 +35,17 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[12] === analyticsBlockAndReportContext) {
                     if (cResult[13] === onDismiss) {
                       if (cResult[14] === tmp4) {
-                        let tmp7 = cResult[15];
+                        let tmp8 = cResult[15];
                       }
-                      const _Symbol = Symbol;
+                      class R {
+                        constructor() {
+                          if (onDismiss != null) {
+                            tmpResult = tmp();
+                          }
+                          tmp3 = closure_8(closure_5);
+                          return;
+                        }
+                      }
                       class B {
                         constructor() {
                           tmp = closure_8(analyticsCancelContext);
@@ -45,28 +53,36 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                       if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-                        const intl = tmp(tmp2[5]).intl;
-                        const stringResult = intl.string(tmp(tmp2[5]).t["5NhTvu"]);
+                        const string = channelId(tmp2[5]).intl.string;
+                        class R {
+                          constructor() {
+                            if (onDismiss != null) {
+                              tmpResult = tmp();
+                            }
+                            tmp3 = closure_8(closure_5);
+                            return;
+                          }
+                        }
                         class B {
                           constructor() {
                             tmp = closure_8(analyticsCancelContext);
                             return;
                           }
                         }
-                        cResult[16] = stringResult;
-                        let tmp9 = stringResult;
+                        cResult[16] = tmp11;
+                        let tmp10 = tmp11;
                       } else {
-                        tmp9 = cResult[16];
+                        tmp10 = cResult[16];
                       }
                       if (cResult[17] === channelId) {
                         if (cResult[18] === tmp5) {
-                          if (cResult[19] === tmp7) {
+                          if (cResult[19] === tmp8) {
                             if (cResult[20] === tmp6) {
                               if (cResult[21] === onClose) {
                                 if (cResult[22] === senderId) {
-                                  let tmp11 = cResult[23];
+                                  let tmp12 = cResult[23];
                                 }
-                                return tmp11;
+                                return tmp12;
                               }
                             }
                           }
@@ -78,27 +94,30 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                         onClose,
                         onCancel: tmp5,
                         onBlock: tmp6,
-                        onBlockAndReport: tmp7,
+                        onBlockAndReport: tmp8,
                         blockButtonVariant: "primary",
-                        description: tmp9,
+                        description: tmp10,
                       };
-                      const tmp14 = analyticsBlockContext(warningId(tmp2[6]), obj2);
+                      const tmp15 = analyticsBlockContext(warningId(tmp2[6]), obj2);
                       cResult[17] = channelId;
                       cResult[18] = tmp5;
-                      cResult[19] = tmp7;
+                      cResult[19] = tmp8;
                       cResult[20] = tmp6;
                       cResult[21] = onClose;
                       cResult[22] = senderId;
-                      cResult[23] = tmp14;
-                      tmp11 = tmp14;
+                      cResult[23] = tmp15;
+                      tmp12 = tmp15;
                     }
                   }
-                  const fn3 = function w() {
-                    if (onDismiss != null) {
-                      tmp();
+                  class R {
+                    constructor() {
+                      if (onDismiss != null) {
+                        tmpResult = tmp();
+                      }
+                      tmp3 = closure_8(closure_5);
+                      return;
                     }
-                    closure_8(analyticsBlockAndReportContext);
-                  };
+                  }
                   class B {
                     constructor() {
                       tmp = closure_8(analyticsCancelContext);
@@ -108,16 +127,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[12] = analyticsBlockAndReportContext;
                   cResult[13] = onDismiss;
                   cResult[14] = tmp4;
-                  cResult[15] = fn3;
-                  tmp7 = fn3;
+                  cResult[15] = R;
+                  tmp8 = R;
                 }
               }
-              const fn2 = function b() {
-                if (onDismiss != null) {
-                  tmp();
-                }
-                closure_8(analyticsBlockContext);
-              };
               class B {
                 constructor() {
                   tmp = closure_8(analyticsCancelContext);
@@ -127,8 +140,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[8] = analyticsBlockContext;
               cResult[9] = onDismiss;
               cResult[10] = tmp4;
-              cResult[11] = fn2;
-              tmp6 = fn2;
+              cResult[11] = tmp7;
+              tmp6 = tmp7;
             }
             class B {
               constructor() {
@@ -153,7 +166,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = fn;
       tmp4 = fn;
     }
-  : (channelId) => {
+  : function InappropriateConversationBlockAndReportAlert(channelId) {
       channelId = channelId.channelId;
       const warningId = channelId.warningId;
       const warningType = channelId.warningType;

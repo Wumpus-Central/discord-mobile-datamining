@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
@@ -33,7 +33,7 @@ let obj2 = {
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (setting) => {
+  ? function NotificationSettingsMessageUnread(setting) {
       const cResult = c.c(32);
       const tmp4 = closure_6();
       if (cResult[0] !== setting.setting) {
@@ -193,7 +193,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp16;
       tmp15 = tmp16;
     }
-  : (onPress) => {
+  : function NotificationSettingsMessageUnread(onPress) {
       const tmp = closure_6();
       const unreadSelectOptions = notificationSettingsPresetOptionUtils.getUnreadSelectOptions();
       const found = unreadSelectOptions.find((value) => value.value === onPress.setting);
@@ -247,7 +247,7 @@ export const NotificationSettingsGuildMessageUnread = function NotificationSetti
     setting: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(style.guildId).unread,
     onCustomize() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(12527, dependencyMap.paths),
+        asyncRequireImpl(12623, dependencyMap.paths),
         "MessageUnreadActionSheet",
         { guildId: style.guildId },
       );
@@ -262,7 +262,7 @@ export const NotificationSettingsChannelMessageUnread = function NotificationSet
     setting: require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(style.channel).unread,
     onCustomize() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(12529, dependencyMap.paths),
+        asyncRequireImpl(12625, dependencyMap.paths),
         "MessageUnreadActionSheet",
         { channel: style.channel },
       );

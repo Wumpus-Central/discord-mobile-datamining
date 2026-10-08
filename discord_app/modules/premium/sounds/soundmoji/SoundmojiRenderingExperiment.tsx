@@ -15,7 +15,7 @@ export const getSoundmojiRenderingExperiment = function getSoundmojiRenderingExp
   return closure_2.getConfig({ location: location.location }).enabled;
 };
 export const useSoundmojiRenderingExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useSoundmojiRenderingExperiment(location) {
       const cResult = c.c(2);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -28,4 +28,6 @@ export const useSoundmojiRenderingExperiment = ReactCompilerGating.isReactCompil
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location: location.location }).enabled;
+  : function useSoundmojiRenderingExperiment(location) {
+      return closure_2.useConfig({ location: location.location }).enabled;
+    };

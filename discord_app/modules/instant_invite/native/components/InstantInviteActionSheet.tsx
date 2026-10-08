@@ -18,11 +18,11 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InviteTargetTypes = fn(7239).InviteTargetTypes;
+const InviteTargetTypes = fn(7418).InviteTargetTypes;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   placeholderHeader: null,
   placeholderLabel: null,
@@ -72,7 +72,7 @@ obj2.shareApps = { paddingVertical: 0 };
 let closure_16 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function Loading() {
       const cResult = c.c(8);
       const tmp2 = closure_16();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -121,7 +121,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp17;
       tmp16 = tmp17;
     }
-  : () => {
+  : function Loading() {
       const tmp = closure_16();
       const items = [];
       let num = 0;
@@ -145,7 +145,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function InstantInviteActionSheet(channel) {
       const cResult = channel(vanityURLCode[13]).c(66);
       channel = channel.channel;
       const source = channel.source;
@@ -666,7 +666,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp6 = source(vanityURLCode[16]);
     }
-  : (channel) => {
+  : function InstantInviteActionSheet(channel) {
       channel = channel.channel;
       const source = channel.source;
       const vanityURLCode = channel.vanityURLCode;

@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const RelationshipTypes = fn(1085).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   applicationNameWrapper: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", gap: 12 },
   gameIcon: null,
@@ -23,7 +23,7 @@ obj2.gameIcon = size;
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (application) => {
+  ? function GameFriendApplicationRow(application) {
       const cResult = application(userDisplayName[10]).c(24);
       application = application.application;
       const userId = application.userId;
@@ -139,7 +139,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       const obj = application(userDisplayName[10]);
     }
-  : (application) => {
+  : function GameFriendApplicationRow(application) {
       application = application.application;
       const userId = application.userId;
       const userDisplayName = application.userDisplayName;
@@ -311,7 +311,7 @@ export default function UserProfileGameFriendActionSheet(user) {
     let tmp = null != application;
     if (tmp) {
       const obj = { application, userDisplayName, userId: user.id };
-      tmp = v65535(closure_13, obj, application.id);
+      tmp = collapsed(closure_13, obj, application.id);
     }
     return tmp;
   });

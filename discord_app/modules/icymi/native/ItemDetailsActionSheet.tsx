@@ -22,7 +22,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -31,7 +31,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/ItemDetailsActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function ItemDetailsActionSheet(guildId) {
       const cResult = guildId(id[9]).c(37);
       guildId = guildId.guildId;
       const channelId = guildId.channelId;
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult4 = guildId(id[10]);
     }
-  : (arg0) => {
+  : function ItemDetailsActionSheet(arg0) {
       ({ guildId: require, channelId: importDefault, id: dependencyMap } = arg0);
       const items = [ChannelStore];
       const stateFromStores = initialize.useStateFromStores(items, () => ChannelStore.getChannel(importDefault));

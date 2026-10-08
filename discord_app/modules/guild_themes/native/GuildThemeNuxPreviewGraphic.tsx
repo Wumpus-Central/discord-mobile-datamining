@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     width: "100%",
@@ -30,7 +30,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/native/GuildThemeNuxPreviewGraphic.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildThemeNuxPreviewGraphic(arg0) {
       const cResult = c.c(5);
       ({ themeSettings, isPersonal } = arg0);
       const tmp3 = closure_5();
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: tmp5,
       };
     }
-  : (arg0) => {
+  : function GuildThemeNuxPreviewGraphic(arg0) {
       ({ themeSettings, isPersonal } = arg0);
       const obj = {
         accessibilityElementsHidden: true,

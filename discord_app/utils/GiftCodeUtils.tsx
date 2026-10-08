@@ -177,7 +177,7 @@ const Constants = fn(1085);
   MessageEmbedTypes: closure_11,
   MessageTypes: closure_12,
 } = Constants);
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ PremiumTypes: map1, SubscriptionIntervalTypes: closure_14 } = PremiumConstants);
 let items = [RegexUtils.escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...items1.map((item) => RegexUtils.escape(item))];
 items1 = ["discordapp.com/gifts", "discord.com/gifts"];
@@ -236,9 +236,9 @@ function cleanCode(str) {
 }
 function getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) {
   _require = getOrFetchSubscriptionPlan;
-  const match = require("module_5081").match(getOrFetchSubscriptionPlan);
+  const match = require("module_5741").match(getOrFetchSubscriptionPlan);
   const obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-  const str = require("module_5081");
+  const str = require("module_5741");
   const obj2 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
   const withResult = match.with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
     const intl = util.intl;
@@ -554,9 +554,9 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
   } else {
     intervalCount = subscriptionPlan.intervalCount;
     if (null != sender) {
-      const match = require("module_5081").match(subscriptionPlan);
+      const match = require("module_5741").match(subscriptionPlan);
       const obj2 = { interval: constants6.MONTH };
-      const str = require("module_5081");
+      const str = require("module_5741");
       const obj3 = { interval: constants6.YEAR };
       const withResult = match.with(obj2, () => {
         const intl = util.intl;
@@ -585,9 +585,9 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
           return intl.formatToPlainString(util.t["3CX6Ev"], { username: sender, skuName, intervalCount });
         });
     } else {
-      const match1 = require("module_5081").match(subscriptionPlan);
+      const match1 = require("module_5741").match(subscriptionPlan);
       const obj4 = { interval: constants6.MONTH };
-      const str2 = require("module_5081");
+      const str2 = require("module_5741");
       const obj5 = { interval: constants6.YEAR };
       const withResult2 = match1.with(obj4, () => {
         const intl = util.intl;
@@ -645,9 +645,9 @@ export const getBodyText = function getBodyText(arg0) {
     return formatResult;
   } else if (constants3.SUCCESS === step) {
     if (null != subscriptionPlan) {
-      const match = subscriptionPlan(5081).match(subscriptionPlan);
+      const match = subscriptionPlan(5741).match(subscriptionPlan);
       const obj3 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-      const str = subscriptionPlan(5081);
+      const str = subscriptionPlan(5741);
       const obj4 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
       const withResult = match.with(obj3, () => {
         const intl = util.intl;
@@ -765,11 +765,15 @@ export const firstLibraryApplicationForGiftCode = function firstLibraryApplicati
 export const processGiftCodeInput = function processGiftCodeInput(str) {
   str = str.trim();
   const parts = str.split("/");
-  const match = parts.pop().match(regExp2);
+  const str2 = parts.pop();
+  let match;
+  if (str2 != null) {
+    match = str2.match(regExp2);
+  }
   if (null == match) {
     return null;
   } else {
-    [r10016, r10017, str3] = match;
+    [r10017, r10018, str3] = match;
     let replaced = null;
     if (null != str3) {
       const _RegExp = RegExp;
@@ -778,10 +782,9 @@ export const processGiftCodeInput = function processGiftCodeInput(str) {
     }
     return replaced;
   }
-  const str2 = parts.pop();
 };
 export const useGetGiftCode = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useGetGiftCode(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(4);
@@ -821,7 +824,7 @@ export const useGetGiftCode = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useGetGiftCode(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const items = [PremiumPaymentModalStore];

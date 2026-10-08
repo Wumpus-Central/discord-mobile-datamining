@@ -9,12 +9,12 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/activity_privacy/native/ActivityPrivacyUpsellActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (direction) => {
+  ? function ActivityPrivacyUpsellActionSheet(direction) {
       const cResult = direction(576).c(14);
       direction = direction.direction;
       const affectedGuildIds = direction.affectedGuildIds;
       const settingName = direction.settingName;
-      const tmp4 = direction === direction(14675).ChangeDirection.RESTRICTING;
+      const tmp4 = direction === direction(14936).ChangeDirection.RESTRICTING;
       if (cResult[0] === tmp4) {
         if (cResult[1] === settingName) {
           let tmp5 = cResult[2];
@@ -40,35 +40,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const obj2 = {
+          const obj2 = { direction, affectedGuildIds, title, subtitle, confirmText, toastContent, onConfirm: tmp7 };
+          const tmp11 = jsx(affectedGuildIds(14938), {
             direction,
-            affectedGuildIds: null,
-            title: null,
-            subtitle: null,
-            confirmText: null,
-            toastContent: null,
-            onConfirm: null,
-          };
-          class C {
-            constructor() {
-              obj = closure_0(closure_2[4]);
-              result = obj.applyBulkGuildRestrictionChange(direction, affectedGuildIds);
-              return;
-            }
-          }
-          obj2.title = title;
-          obj2.subtitle = subtitle;
-          obj2.confirmText = confirmText;
-          obj2.toastContent = toastContent;
-          obj2.onConfirm = tmp7;
-          const tmp11 = jsx(affectedGuildIds(14677), {
-            direction,
-            affectedGuildIds: null,
-            title: null,
-            subtitle: null,
-            confirmText: null,
-            toastContent: null,
-            onConfirm: null,
+            affectedGuildIds,
+            title,
+            subtitle,
+            confirmText,
+            toastContent,
+            onConfirm: tmp7,
           });
           cResult[6] = affectedGuildIds;
           cResult[7] = confirmText;
@@ -80,31 +60,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[13] = tmp11;
           tmp8 = tmp11;
         }
-        class C {
-          constructor() {
-            obj = closure_0(closure_2[4]);
-            result = obj.applyBulkGuildRestrictionChange(direction, affectedGuildIds);
-            return;
-          }
-        }
+        const fn = function v() {
+          const result = ActivityPrivacyUpsellUtils.applyBulkGuildRestrictionChange(direction, affectedGuildIds);
+        };
         cResult[3] = affectedGuildIds;
         cResult[4] = direction;
-        cResult[5] = C;
-        tmp7 = C;
+        cResult[5] = fn;
+        tmp7 = fn;
       }
       const obj = direction(576);
-      const upsellStrings = direction(14675).getUpsellStrings(tmp4, settingName);
+      const upsellStrings = direction(14936).getUpsellStrings(tmp4, settingName);
       cResult[0] = tmp4;
       cResult[1] = settingName;
       cResult[2] = upsellStrings;
       tmp5 = upsellStrings;
-      const tmpResult = direction(14675);
+      const tmpResult = direction(14936);
     }
-  : (direction) => {
+  : function ActivityPrivacyUpsellActionSheet(direction) {
       direction = direction.direction;
       const affectedGuildIds = direction.affectedGuildIds;
-      const upsellStrings = direction(14675).getUpsellStrings(
-        direction === direction(14675).ChangeDirection.RESTRICTING,
+      const upsellStrings = direction(14936).getUpsellStrings(
+        direction === direction(14936).ChangeDirection.RESTRICTING,
         direction.settingName,
       );
       const items = [direction, affectedGuildIds];
@@ -112,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const onConfirm = noop.useCallback(() => {
         const result = ActivityPrivacyUpsellUtils.applyBulkGuildRestrictionChange(direction, affectedGuildIds);
       }, items);
-      return jsx(affectedGuildIds(14677), {
+      return jsx(affectedGuildIds(14938), {
         direction,
         affectedGuildIds,
         title,

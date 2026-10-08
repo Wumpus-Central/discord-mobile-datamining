@@ -1,7 +1,7 @@
 // discord_app/modules/calls/native/VideoBackground.tsx
 import c from "../../../../_runtime/00576_c.js";
 import native from "../../../design/void/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import VideoBackgroundManagerDefault from "VideoBackgroundManager.tsx";
 import useProfileTileGradientDefault from "useProfileTileGradient.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -10,19 +10,19 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import apply from "../../../../_runtime/metro/00012__.js";
 
 require = fn;
-function useDominantRGBFromImage(assetImage, cResult) {
-  _require = assetImage;
-  let first = cResult;
-  let tmp = cResult;
-  if (Array.isArray(cResult)) {
-    first = cResult[0];
+function useDominantRGBFromImage(arg0, arg1) {
+  _require = arg0;
+  let first = arg1;
+  let tmp = arg1;
+  if (Array.isArray(arg1)) {
+    first = arg1[0];
     tmp = first;
   }
-  const tmp5 = first(7932)();
+  const tmp5 = first(8351)();
   dependencyMap = tmp5;
   let hexToRgbResult;
-  if (null != assetImage) {
-    hexToRgbResult = tmp3(7933).cachedDominantColors[assetImage];
+  if (null != arg0) {
+    hexToRgbResult = tmp3(8352).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
     hexToRgbResult = require("ColorUtils").hexToRgb(tmp3(587).unsafe_rawColors.PRIMARY_800);
@@ -30,7 +30,7 @@ function useDominantRGBFromImage(assetImage, cResult) {
   }
   const tmp8 = _slicedToArray(noop.useState(hexToRgbResult), 2);
   closure_3 = tmp8[1];
-  const items = [tmp, assetImage, tmp5];
+  const items = [tmp, arg0, tmp5];
   const effect = noop.useEffect(() => {
     let tmp2 = null != first;
     if (tmp2) {
@@ -41,11 +41,11 @@ function useDominantRGBFromImage(assetImage, cResult) {
       let nextPromise = dependencyMap;
       if (null == VideoBackgroundManagerDefault.cachedDominantColors[closure_0]) {
         if (typeof first === "number") {
-          const dominantColorsLocalAsset = getDominantColorsLocalAsset(1886);
+          const dominantColorsLocalAsset = getDominantColorsLocalAsset(1898);
           getDominantColorsLocalAsset = dominantColorsLocalAsset.getDominantColorsLocalAsset;
           let dominantColorsLocalAsset1 = getDominantColorsLocalAsset(closure_2_8.resolveAssetSource(first));
         } else {
-          const dominantColorsLocalAsset2 = getDominantColorsLocalAsset(1886);
+          const dominantColorsLocalAsset2 = getDominantColorsLocalAsset(1898);
           dominantColorsLocalAsset1 = dominantColorsLocalAsset2.getDominantColors(
             closure_2_8.resolveAssetSource(first),
           );
@@ -55,13 +55,13 @@ function useDominantRGBFromImage(assetImage, cResult) {
             const obj = { r: null, g: null, b: null };
             [obj.r, obj.g, obj.b] = result[0];
             closure_1_3(obj);
-            first(7933).cachedDominantColors[assetImage] = obj;
+            first(8352).cachedDominantColors[closure_1_0] = obj;
             const tmp3 = _slicedToArray(result[0], 3);
           }
         });
         nextPromise.catch(NOOP);
       } else {
-        closure_3(getDominantColorsLocalAsset(7933).cachedDominantColors[tmp4]);
+        closure_3(getDominantColorsLocalAsset(8352).cachedDominantColors[tmp4]);
       }
     }
   }, items);
@@ -73,7 +73,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles({
   videoBackground: { alignItems: "center" },
   videoDetailsSpacer: { paddingTop: 12 },
@@ -95,18 +95,18 @@ const memoizeResult = apply.memoize((uri) => {
 });
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (assetImage, cResult) => {
-      const tmp = useDominantRGBFromImage(assetImage, cResult);
+  ? function useDominantColorFromImage(arg0, arg1) {
+      const tmp = useDominantRGBFromImage(arg0, arg1);
       return "rgb(" + tmp.r + ", " + tmp.g + ", " + tmp.b + ")";
     }
-  : (assetImage, cResult) => {
-      const tmp = useDominantRGBFromImage(assetImage, cResult);
+  : function useDominantColorFromImage(arg0, arg1) {
+      const tmp = useDominantRGBFromImage(arg0, arg1);
       return "rgb(" + tmp.r + ", " + tmp.g + ", " + tmp.b + ")";
     };
 let closure_15 = tmp5;
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VideoBackground(arg0) {
       let tmp2 = dependencyMap;
       const cResult = c.c(47);
       if (cResult[0] !== arg0) {
@@ -222,7 +222,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                     }
                                   }
                                 }
-                                tmp23 = tmp23(5612);
+                                tmp23 = tmp23(5387);
                                 const obj2 = { colors: tmp24, start: tmp46, end: items, style: tmp31, children: null };
                                 items = [tmp35, tmp26];
                                 obj2.children = items;
@@ -258,7 +258,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                         const merged = Object.assign(tmp4);
                         obj4.avatarStyle = tmp34;
                         obj4.isStageCall = tmp15;
-                        const tmp40 = v65535(native.Avatar, obj4);
+                        const tmp40 = collapsed(native.Avatar, obj4);
                         cResult[31] = tmp4;
                         cResult[32] = tmp15;
                         cResult[33] = tmp17;
@@ -314,7 +314,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = obj7;
       tmp22 = obj7;
     }
-  : (style) => {
+  : function VideoBackground(style) {
       ({ url, isStageCall } = style);
       if (isStageCall === undefined) {
         isStageCall = false;
@@ -368,7 +368,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [avatarStyle, tmp14];
         obj3.avatarStyle = items1;
         obj3.isStageCall = isStageCall;
-        const tmp20 = v65535(native.Avatar, obj3);
+        const tmp20 = collapsed(native.Avatar, obj3);
         if (null != tmp7Result) {
           const obj4 = { colors: tmp7Result, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, style: items, children: null };
           const items2 = [tmp20, renderVideoDetailsResult];
@@ -383,12 +383,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp23;
       }
     };
-tmp6.AvatarSizes = fn(1188).AvatarSizes;
+tmp6.AvatarSizes = fn(1200).AvatarSizes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/VideoBackground.tsx");
 
 export default noop.memo(tmp6);
-export const AvatarSizes = fn(1188).AvatarSizes;
+export const AvatarSizes = fn(1200).AvatarSizes;
 export const memoizedImageSource = memoizeResult;
 export { useDominantRGBFromImage };
 export const useDominantColorFromImage = tmp5;

@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const UserSettingsDelay = fn(1095).UserSettingsDelay;
 const ReactCompilerGating = fn(558);
 function isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, guildId) {
@@ -23,7 +23,7 @@ let result = size.fileFinishedImporting("modules/guild_dismissible_content/Guild
 
 export { isContentDismissed };
 export const useIsContentDismissed = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useIsContentDismissed(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(4);
@@ -55,7 +55,7 @@ export const useIsContentDismissed = ReactCompilerGating.isReactCompilerEnabled(
       let obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useIsContentDismissed(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const items = [UserSettingsProtoStore];
@@ -92,7 +92,7 @@ export const markContentAsDismissed = function markContentAsDismissed(dc, guildI
   );
   if (arg2) {
     let UNKNOWN = AUTO_DISMISS;
-    const obj3 = { type: tmp(2036).DismissibleGuildContent[dc], guild_id: guildId, action: null };
+    const obj3 = { type: tmp(2048).DismissibleGuildContent[dc], guild_id: guildId, action: null };
     if (AUTO_DISMISS == null) {
       UNKNOWN = ContentDismissActionType.UNKNOWN;
     }

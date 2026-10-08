@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createICYMIStyles = fn(16434);
+const createICYMIStyles = fn(16694);
 const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom, arg1) => {
   let num = 0;
   if (!arg1) {
@@ -67,7 +67,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/content_inventory/ContentInventoryEntryContainer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (contentId) => {
+  ? function ContentInventoryEntryContainer(contentId) {
       const cResult = contentId(type[8]).c(39);
       contentId = contentId.contentId;
       const userId = contentId.userId;
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn = function o() {
+      const fn = function s() {
         if (null != onPress) {
           ICYMIActionCreatorsDefault.itemInteracted(contentId, type, "press");
           const obj3 = {
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       let obj = contentId(type[8]);
     }
-  : (contentId) => {
+  : function ContentInventoryEntryContainer(contentId) {
       contentId = contentId.contentId;
       const userId = contentId.userId;
       let flag = contentId.renderForScreenshot;

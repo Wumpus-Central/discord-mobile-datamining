@@ -2,7 +2,7 @@
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../Constants.tsx";
-import _modDef2521 from "../FamilyCenter.messages.js";
+import _modDef2565 from "../FamilyCenter.messages.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
@@ -19,7 +19,7 @@ obj.container = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefau
 let closure_7 = createStyles.createStyles(obj);
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (rule) => {
+  ? function ScheduleRuleRow(rule) {
       const cResult = rule(navigation[6]).c(19);
       rule = rule.rule;
       const teenId = rule.teenId;
@@ -113,31 +113,31 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = rule(navigation[6]);
     }
-  : (rule) => {
+  : function ScheduleRuleRow(rule) {
       rule = rule.rule;
       ({ teenId: importDefault, navigation: dependencyMap, readOnly } = rule);
       if (readOnly === undefined) {
         readOnly = false;
       }
-      const scheduleRuleDateRange = rule(12483).getScheduleRuleDateRange(rule);
-      let obj = rule(12483);
-      const obj2 = rule(12483);
+      const scheduleRuleDateRange = rule(12579).getScheduleRuleDateRange(rule);
+      let obj = rule(12579);
+      const obj2 = rule(12579);
       const obj3 = {
         label: scheduleRuleDateRange,
-        subLabel: rule(12483).formatDays(rule.days),
+        subLabel: rule(12579).formatDays(rule.days),
         trailing: null,
         arrow: null,
         onPress: null,
       };
       const intl = rule(1126).intl;
       const string = intl.string;
-      const tmp4 = _modDef2521;
+      const tmp4 = _modDef2565;
       if (rule.enabled) {
         let stringResult = string(tmp4["8vDHRq"]);
       } else {
         stringResult = string(tmp4["4z9fN+"]);
       }
-      obj3.trailing = closure_5(rule(4892).Text, {
+      obj3.trailing = closure_5(rule(5086).Text, {
         variant: "text-sm/medium",
         color: "text-subtle",
         children: stringResult,
@@ -153,14 +153,14 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         };
       }
       obj3.onPress = fn;
-      return closure_5(rule(6000).TableRow, obj3);
+      return closure_5(rule(6184).TableRow, obj3);
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsScreenTime.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (readOnly) => {
+  ? function FamilyCenterParentalControlsScreenTime(readOnly) {
       const cResult = require("c").c(28);
       readOnly = readOnly.readOnly;
       _require = tmp4;
@@ -274,10 +274,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { variant: "text-sm/semibold", color: "text-subtle", style: header, children: tmp19 };
           cResult[13] = tmp5.header;
           cResult[14] = closure_5(tmp(tmp2[10]).Text, obj4);
-          class P {
+          class N {
             constructor(arg0) {
               obj = { rule: readOnly, teenId: id, navigation: closure_1, readOnly };
-              return jsx(f68533, obj, readOnly.ruleId);
+              return jsx(ScheduleRuleRow, obj, readOnly.ruleId);
             }
           }
           const tmp24 = closure_5(tmp(tmp2[10]).Text, obj4);
@@ -290,21 +290,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const mapped = sortRulesByStartTimeResult.map(tmp26);
           }
         }
-        class P {
+        class N {
           constructor(arg0) {
             obj = { rule: readOnly, teenId: id, navigation: closure_1, readOnly };
-            return jsx(f68533, obj, readOnly.ruleId);
+            return jsx(ScheduleRuleRow, obj, readOnly.ruleId);
           }
         }
         cResult[15] = navigation;
         cResult[16] = tmp4;
         cResult[17] = id;
-        cResult[18] = P;
-        tmp26 = P;
+        cResult[18] = N;
+        tmp26 = N;
       }
       sortRulesByStartTimeResult = require("FamilyCenterRestrictedHoursUtils").sortRulesByStartTime(rules1);
     }
-  : (readOnly) => {
+  : function FamilyCenterParentalControlsScreenTime(readOnly) {
       let flag = readOnly.readOnly;
       if (flag === undefined) {
         flag = false;

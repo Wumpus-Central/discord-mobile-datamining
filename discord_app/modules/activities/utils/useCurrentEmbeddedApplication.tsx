@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedApplication.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCurrentEmbeddedApplication(arg0) {
       const cResult = c.c(4);
       if (cResult[0] !== arg0) {
         let obj2 = arg0;
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       tmp4 = undefined === fetchesApplication || fetchesApplication;
     }
-  : () => {
+  : function useCurrentEmbeddedApplication() {
       let obj = arg0;
       if (arg0 === undefined) {
         obj = {};

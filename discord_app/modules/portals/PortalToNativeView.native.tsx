@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 require = fn;
 const jsx = fn(21).jsx;
 let closure_3 = fn(17).requireNativeComponent("PortalToNativeView");
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({
   portal: { position: "absolute", opacity: 0, height: 0, right: 0, left: 0, top: 0 },
 });
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/portals/PortalToNativeView.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PortalToNativeView(arg0) {
       const cResult = c.c(4);
       ({ portalId, children } = arg0);
       const tmp2 = closure_4();
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp4;
       tmp3 = tmp4;
     }
-  : (arg0) => {
+  : function PortalToNativeView(arg0) {
       ({ portalId, children } = arg0);
       return (
         <closure_3 pointerEvents="none" portalId={portalId} style={closure_4().portal}>

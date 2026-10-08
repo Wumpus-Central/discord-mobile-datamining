@@ -13,7 +13,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/native/SecureFramesCallVerificationBottomSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function SecureFramesCallVerificationBottomSheet(channelId) {
       const cResult = channelId(576).c(10);
       channelId = channelId.channelId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = tmp(1126).intl;
         const stringResult1 = intl2.string(tmp(1126).t["MPp7+C"]);
         const intl3 = tmp(1126).intl;
-        let obj2 = { helpArticle: tmp(9378).getSecureFramesHelpdeskArticle() };
+        let obj2 = { helpArticle: tmp(8800).getSecureFramesHelpdeskArticle() };
         const formatResult = intl3.format(tmp(1126).t.wKxADe, obj2);
         cResult[4] = stringResult;
         cResult[5] = stringResult1;
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp11 = formatResult;
         let tmp10 = stringResult1;
         let tmp9 = stringResult;
-        const tmpResult2 = tmp(9378);
+        const tmpResult2 = tmp(8800);
       } else {
         tmp9 = cResult[4];
         tmp10 = cResult[5];
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = tmp16;
       const tmpResult = channelId(504);
     }
-  : (channelId) => {
+  : function SecureFramesCallVerificationBottomSheet(channelId) {
       channelId = channelId.channelId;
       const items = [RTCConnectionStore];
       const items1 = [channelId];
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.subtitle = intl2.string(channelId(1126).t["MPp7+C"]);
       const intl3 = channelId(1126).intl;
       const obj3 = { helpArticle: null };
-      obj3.helpArticle = channelId(9378).getSecureFramesHelpdeskArticle();
+      obj3.helpArticle = channelId(8800).getSecureFramesHelpdeskArticle();
       obj2.footer = intl3.format(channelId(1126).t.wKxADe, obj3);
       obj2.epochAuthenticator = stateFromStores;
       obj2.onShareClick = callback;

@@ -51,9 +51,9 @@ function canRenderParticipantVideo(participant) {
   }
   return tmp;
 }
-const CallConstants = fn(4917);
+const CallConstants = fn(5113);
 ({ ParticipantTypes: closure_4, isStreamParticipant: hasOwnProperty, isUserParticipant: metroRequire } = CallConstants);
-const Features = fn(4921).Features;
+const Features = fn(5115).Features;
 const ReactCompilerGating = fn(558);
 function participantHasVideo(type) {
   let streamId = type;
@@ -84,7 +84,7 @@ const result = size.fileFinishedImporting("modules/video_calls/participantHasVid
 export default participantHasVideo;
 export { canRenderParticipantVideo };
 export const useCanRenderParticipantVideo = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanRenderParticipantVideo(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -107,7 +107,7 @@ export const useCanRenderParticipantVideo = ReactCompilerGating.isReactCompilerE
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useCanRenderParticipantVideo(arg0) {
       _require = arg0;
       const items = [MediaEngineStore];
       return require("initialize").useStateFromStores(items, () =>

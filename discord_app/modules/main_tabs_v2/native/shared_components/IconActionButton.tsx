@@ -15,7 +15,7 @@ const BadgeDefault = Badge;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles(() => {
   const obj = {
     actionIconButtonPressable: {
@@ -121,7 +121,7 @@ let closure_7 = noop.memo(
         tmp3 = fn;
         let obj = source(576);
       }
-    : (color) => {
+    : function IconComponent(color) {
         ({ IconComponent, source } = color);
         color = color.color;
         const tmp = closure_6();
@@ -139,7 +139,7 @@ let closure_7 = noop.memo(
 fn(558);
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (badgePosition) => {
+  ? function ButtonBadge(badgePosition) {
       const cResult = c.c(3);
       badgePosition = badgePosition.badgePosition;
       let str = "left";
@@ -164,7 +164,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp8;
       tmp6 = tmp8;
     }
-  : (badgePosition) => {
+  : function ButtonBadge(badgePosition) {
       let str = badgePosition.badgePosition;
       if (str === undefined) {
         str = "left";
@@ -183,7 +183,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/IconActionButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (noMargin) => {
+  ? function IconActionButton(noMargin) {
       const cResult = c.c(32);
       ({
         source,
@@ -363,7 +363,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items1;
       tmp11 = items1;
     }
-  : (variant) => {
+  : function IconActionButton(variant) {
       let str = variant.variant;
       ({ source, IconComponent } = variant);
       if (str === undefined) {

@@ -4,7 +4,7 @@ import util from "../../../../../intl/index.native.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import common_AlertDefault from "../../../../../components_native/common/Alert.tsx";
-import _modDef6593 from "../../../../../../_runtime/metro/06593__.js";
+import _modDef6769 from "../../../../../../_runtime/metro/06769__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,7 +12,7 @@ const Image = fn(17).Image;
 const DownloadLinks = fn(1085).DownloadLinks;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   headerImage: { marginLeft: "auto", marginRight: "auto", marginTop: 8 },
   header: { marginTop: 24, textAlign: "center" },
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onClose) => {
+  ? function MemberVerificationAlertUpdate(onClose) {
       const cResult = c.c(16);
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const stringResult = intl.string(util.t.b8siyY);
         const intl2 = util.intl;
         const stringResult1 = intl2.string(util.t["ETE/oC"]);
-        const fn = function u() {
+        const fn = function f() {
           return LinkingDefault.openURL(constants.IOS);
         };
         cResult[0] = stringResult;
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [tmp5, tmp6, tmp7] = cResult;
       }
       if (cResult[3] !== tmp4.headerImage) {
-        const obj2 = { source: _modDef6593, style: tmp4.headerImage };
+        const obj2 = { source: _modDef6769, style: tmp4.headerImage };
         const tmp14 = hasOwnProperty(Image, obj2);
         cResult[3] = tmp4.headerImage;
         cResult[4] = tmp14;
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[15] = tmp28;
       tmp25 = tmp28;
     }
-  : (onClose) => {
+  : function MemberVerificationAlertUpdate(onClose) {
       const tmp = closure_7();
       const obj = {};
       const merged = Object.assign(onClose);
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj.onCancel = onClose.onClose;
       const tmp2 = common_AlertDefault;
-      const items = [hasOwnProperty(Image, { source: _modDef6593, style: tmp.headerImage }), ,];
+      const items = [hasOwnProperty(Image, { source: _modDef6769, style: tmp.headerImage }), ,];
       const obj3 = {
         style: tmp.header,
         variant: "heading-lg/extrabold",

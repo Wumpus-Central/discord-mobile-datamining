@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/debug/native/ShareLogsButton.
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function ShareLogsButton() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           let obj2 = { accessibilityLabel: null, onPress: null, children: null };
@@ -36,7 +36,7 @@ export default noop.memo(
         }
         return first;
       }
-    : () => {
+    : function ShareLogsButton() {
         let obj = { accessibilityLabel: null, onPress: null, children: null };
         const intl = util.intl;
         obj.accessibilityLabel = intl.string(util.t["Aw+09z"]);

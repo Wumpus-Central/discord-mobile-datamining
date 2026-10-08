@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/shared/CircleWithCutout.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07550_inlineStyles.js";
 import CircleWithCutoutUtils from "CircleWithCutoutUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/shared/Circl
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function CircleWithCutout(arg0) {
         const cResult = c.c(26);
         ({ fill, cutoutPositionInDegrees, alignBadgeEdgeWithCircleEdge, badgeRadius, scaleToPixelDensity } = arg0);
         let tmp4 = undefined !== alignBadgeEdgeWithCircleEdge;
@@ -154,7 +154,7 @@ export default noop.memo(
         diff = cutoutCenterX;
         const tmpResult2 = CircleWithCutoutUtils;
       }
-    : (arg0) => {
+    : function CircleWithCutout(arg0) {
         ({ cutoutPositionInDegrees, alignBadgeEdgeWithCircleEdge } = arg0);
         ({ fill, circleRadius, cutoutRadius, enableCutout } = arg0);
         if (alignBadgeEdgeWithCircleEdge === undefined) {
@@ -210,5 +210,5 @@ export default noop.memo(
         return React4(inlineStylesDefault, size);
       },
 );
-export const getBadgeLeft = fn(9114).getBadgeLeft;
-export const getBadgeTop = fn(9114).getBadgeTop;
+export const getBadgeLeft = fn(10687).getBadgeLeft;
+export const getBadgeTop = fn(10687).getBadgeTop;

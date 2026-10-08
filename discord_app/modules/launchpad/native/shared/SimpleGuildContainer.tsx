@@ -7,7 +7,7 @@ import GuildsBarActivityIndicatorDefault from "../../../guilds_bar/native/Guilds
 import CutoutImageDefault from "CutoutImage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const GuildsBarActivityIndicator = isCurrentUserConnected(16314);
+const GuildsBarActivityIndicator = isCurrentUserConnected(16574);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
@@ -15,12 +15,12 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 48;
 const springConfig = { mass: 0.2, damping: 40, stiffness: 300, overshootClamping: true, restSpeedThreshold: 1 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({ badgeWrapper: { position: "absolute", right: -4, bottom: 0 } });
 let ReactCompilerGating = fn(558);
 let closure_12 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function SimpleGuildContainerBadge(arg0) {
         const cResult = c.c(7);
         ({ badge, unread, backgroundColor } = arg0);
         let badgeWrapper = closure_11();
@@ -51,7 +51,7 @@ let closure_12 = noop.memo(
         cResult[3] = tmp5;
         tmp4 = tmp5;
       }
-    : (backgroundColor) => {
+    : function SimpleGuildContainerBadge(backgroundColor) {
         ({ badge, unread } = backgroundColor);
         if (badge > 0) {
           const obj = { style: tmp.badgeWrapper, children: null };
@@ -67,7 +67,7 @@ let closure_12 = noop.memo(
 ReactCompilerGating = fn(558);
 let closure_13 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function SimpleGuildActivityIndicator(arg0) {
         isCurrentUserConnected = require;
         let tmp = dependencyMap;
         const cResult = c.c(12);
@@ -124,7 +124,7 @@ let closure_13 = noop.memo(
           cResult[11] = tmp8;
         }
       }
-    : (arg0) => {
+    : function SimpleGuildActivityIndicator(arg0) {
         ({ guildId, activityIndicatorState, backgroundColor } = arg0);
         let source;
         if (activityIndicatorState != null) {
@@ -357,7 +357,7 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
   return iconStroke(backgroundColor, obj3);
 };
 export const SimpleGuildContainerAnimated = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SimpleGuildContainerAnimated(arg0) {
       const cResult = selected(iconBackground[5]).c(31);
       ({ guildIconRef, guildId, style, children, selected } = arg0);
       ({ borderRadius, badge, unread, backgroundColor } = arg0);
@@ -369,7 +369,7 @@ export const SimpleGuildContainerAnimated = ReactCompilerGating.isReactCompilerE
         borderRadius = 24;
       }
       const obj = selected(iconBackground[5]);
-      const fn = function t() {
+      const fn = function o() {
         return borderRadius;
       };
       fn.__closure = { targetRadius: borderRadius };
@@ -377,7 +377,7 @@ export const SimpleGuildContainerAnimated = ReactCompilerGating.isReactCompilerE
       fn.__initData = __initData;
       const derivedValue = selected(iconBackground[12]).useDerivedValue(fn);
       const tmpResult = selected(iconBackground[12]);
-      const fn2 = function l() {
+      const fn2 = function s() {
         let num = 0;
         if (selected) {
           num = 1;
@@ -389,27 +389,28 @@ export const SimpleGuildContainerAnimated = ReactCompilerGating.isReactCompilerE
       fn2.__initData = __initData2;
       const derivedValue1 = selected(iconBackground[12]).useDerivedValue(fn2);
       const tmpResult5 = selected(iconBackground[12]);
-      const fn3 = function _() {
-        const size = {
-          borderRadius: spring.withSpring(derivedValue.get(), closure_10),
-          width: height,
-          height,
-          overflow: "hidden",
-          backgroundColor: iconBackground.color,
-        };
-        return size;
-      };
+      class S {
+        constructor() {
+          size = { borderRadius: null, width: null, height: null, overflow: "hidden", backgroundColor: null };
+          obj2 = closure_0(closure_2[13]);
+          size.borderRadius = obj2.withSpring(closure_4.get(), closure_10);
+          size.width = c9;
+          size.height = c9;
+          size.backgroundColor = iconBackground.color;
+          return size;
+        }
+      }
       const tmpResult6 = selected(iconBackground[12]);
-      fn3.__closure = {
+      S.__closure = {
         withSpring: selected(iconBackground[13]).withSpring,
         toRadius: derivedValue,
         springConfig,
         GUILD_SIZE: v48,
         iconBackground,
       };
-      fn3.__workletHash = 2705390387971;
-      fn3.__initData = __initData3;
-      const animatedStyle = tmpResult6.useAnimatedStyle(fn3);
+      S.__workletHash = 2705390387971;
+      S.__initData = __initData3;
+      const animatedStyle = tmpResult6.useAnimatedStyle(S);
       const BRAND_500 = backgroundColor(tmp2[8]).unsafe_rawColors.BRAND_500;
       let obj2 = {
         withSpring: selected(iconBackground[13]).withSpring,
@@ -461,7 +462,7 @@ export const SimpleGuildContainerAnimated = ReactCompilerGating.isReactCompilerE
         borderColor: BRAND_500,
         GUILD_SIZE: v48,
       };
-      class D {
+      class G {
         constructor() {
           size = {
             borderRadius: null,
@@ -485,7 +486,7 @@ export const SimpleGuildContainerAnimated = ReactCompilerGating.isReactCompilerE
         }
       }
       const tmpResult8 = selected(iconBackground[12]);
-      D.__closure = {
+      G.__closure = {
         withSpring: selected(iconBackground[13]).withSpring,
         toRadius: derivedValue,
         springConfig,
@@ -494,9 +495,9 @@ export const SimpleGuildContainerAnimated = ReactCompilerGating.isReactCompilerE
         backgroundColor,
         GUILD_SIZE: v48,
       };
-      D.__workletHash = 4716643044607;
-      D.__initData = __initData5;
-      const animatedStyle2 = tmpResult8.useAnimatedStyle(D);
+      G.__workletHash = 4716643044607;
+      G.__initData = __initData5;
+      const animatedStyle2 = tmpResult8.useAnimatedStyle(G);
       if (cResult[0] === animatedStyle) {
         if (cResult[1] === children) {
           let tmp11 = cResult[2];
@@ -638,7 +639,7 @@ export const SimpleGuildContainerAnimated = ReactCompilerGating.isReactCompilerE
         GUILD_SIZE: v48,
       };
     }
-  : (arg0) => {
+  : function SimpleGuildContainerAnimated(arg0) {
       ({ style, selected } = arg0);
       ({ size, borderRadius, backgroundColor } = arg0);
       ({ folder, usingCutout, onPress } = arg0);

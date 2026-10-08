@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/items/RedesignVoiceUserSummary.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RedesignVoiceUserSummary(arg0) {
       let summarizedVoiceUsers = guildId;
       const cResult = guildId(576).c(19);
       ({ channels, guildId } = arg0);
@@ -41,12 +41,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = summarizedVoiceUsers(504).useStateFromStores(first, tmp5, tmp6);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [SelectedChannelStore];
-        const fn2 = function _() {
-          return voiceChannelId.getVoiceChannelId();
-        };
+        class V {
+          constructor() {
+            return closure_1_4.getVoiceChannelId();
+          }
+        }
         cResult[4] = items2;
-        cResult[5] = fn2;
-        let tmp9 = fn2;
+        cResult[5] = V;
+        let tmp9 = V;
         let tmp8 = items2;
       } else {
         tmp8 = cResult[4];
@@ -65,9 +67,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[15] === guildId) {
                   if (cResult[16] === tmp12) {
                     if (cResult[17] === tmp14) {
-                      let tmp18 = cResult[18];
+                      let tmp19 = cResult[18];
                     }
-                    return tmp18;
+                    return tmp19;
+                  }
+                }
+                class V {
+                  constructor() {
+                    return closure_1_4.getVoiceChannelId();
                   }
                 }
                 const obj2 = { users: cResult[13], max: 8, renderIcon: true, guildId, stageIcon: tmp12 };
@@ -82,19 +89,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[16] = tmp12;
                 cResult[17] = cResult[13];
                 cResult[18] = tmp21;
-                tmp18 = tmp21;
+                tmp19 = tmp21;
               }
             }
           }
           const _Symbol = Symbol;
-          if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn3 = function b(arg0) {
+          class V {
+            constructor() {
+              return closure_1_4.getVoiceChannelId();
+            }
+          }
+          if (tmp15 === Symbol.for("react.memo_cache_sentinel")) {
+            const fn2 = function b(arg0) {
               return null != arg0;
             };
-            cResult[14] = fn3;
-            let tmp15 = fn3;
+            cResult[14] = fn2;
+            class V {
+              constructor() {
+                return closure_1_4.getVoiceChannelId();
+              }
+            }
           } else {
-            tmp15 = cResult[14];
+            const tmp16 = cResult[14];
           }
           const obj3 = {
             channels,
@@ -102,17 +118,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             selectedVoiceChannelId: stateFromStores1,
             voiceStates: stateFromStores,
           };
-          summarizedVoiceUsers = summarizedVoiceUsers(5041).computeSummarizedVoiceUsers(obj3);
-          const found = summarizedVoiceUsers.filter(tmp15);
+          summarizedVoiceUsers = summarizedVoiceUsers(5410).computeSummarizedVoiceUsers(obj3);
+          const found = summarizedVoiceUsers.filter(tmp16);
           cResult[10] = channels;
           cResult[11] = stateFromStores1;
           cResult[12] = stateFromStores;
           cResult[13] = found;
-          const summarizedVoiceUsersResult2 = summarizedVoiceUsers(5041);
+          const summarizedVoiceUsersResult2 = summarizedVoiceUsers(5410);
         }
       }
       const summarizedVoiceUsersResult1 = summarizedVoiceUsers(504);
-      const isAnyVoiceStateStageResult = summarizedVoiceUsers(5041).isAnyVoiceStateStage(
+      const isAnyVoiceStateStageResult = summarizedVoiceUsers(5410).isAnyVoiceStateStage(
         channels,
         stateFromStores1,
         stateFromStores,
@@ -122,9 +138,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = stateFromStores;
       cResult[9] = isAnyVoiceStateStageResult;
       tmp12 = isAnyVoiceStateStageResult;
-      const summarizedVoiceUsersResult3 = summarizedVoiceUsers(5041);
+      const summarizedVoiceUsersResult3 = summarizedVoiceUsers(5410);
     }
-  : (channels) => {
+  : function RedesignVoiceUserSummary(channels) {
       channels = channels.channels;
       const guildId = channels.guildId;
       let stateFromStores;
@@ -146,13 +162,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items3,
       );
       const obj2 = channels(stateFromStores[6]);
-      const obj4 = {
+      const summarizedVoiceUsers = channels(stateFromStores[7]).computeSummarizedVoiceUsers({
         channels,
         selectedChannelId: "r",
         selectedVoiceChannelId: stateFromStores1,
         voiceStates: stateFromStores,
-      };
-      const summarizedVoiceUsers = channels(stateFromStores[7]).computeSummarizedVoiceUsers(obj4);
+      });
       const users = summarizedVoiceUsers.filter((item) => null != item);
       return jsx(guildId(stateFromStores[8]), { users, max: 8, renderIcon: true, guildId, stageIcon });
     };

@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FastAssetImage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (applicationId) => {
+  ? function FastAssetImage(applicationId) {
       const cResult = c.c(10);
       ({ asset, style } = applicationId);
       [tmp5, require] = noop.useState();
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = str;
       const tmp4 = _slicedToArray(noop.useState(), 2);
     }
-  : (style) => {
+  : function FastAssetImage(style) {
       const applicationId = style.applicationId;
       const asset = style.asset;
       _slicedToArray = undefined;

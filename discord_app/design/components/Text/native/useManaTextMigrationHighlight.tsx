@@ -27,7 +27,7 @@ obj5.borderColor = internal2.resolveSemanticColor(nativeDefault.themes.LIGHT, na
 const result = size.fileFinishedImporting("design/components/Text/native/useManaTextMigrationHighlight.tsx");
 
 export const useManaTextMigrationHighlight = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useManaTextMigrationHighlight(arg0, arg1) {
       const cResult = c.c(7);
       let overridden = closure_5();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -77,7 +77,7 @@ export const useManaTextMigrationHighlight = ReactCompilerGating.isReactCompiler
       }
       tmpResult = initialize;
     }
-  : (arg0, arg1) => {
+  : function useManaTextMigrationHighlight(arg0, arg1) {
       const tmp = closure_5();
       const items = [DevSettingsStore];
       if (!obj.useStateFromStores(items, () => DevSettingsStore.get("highlight_mana_text"))) {

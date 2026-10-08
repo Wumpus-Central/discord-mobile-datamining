@@ -75,135 +75,160 @@ function useNullableMessageAuthor(message) {
         tmp40 = cResult[7];
       }
       if (cResult[8] !== id) {
-        const fn3 = function p() {
-          return UserStore.getUser(c2);
-        };
+        class R {
+          constructor() {
+            return closure_8.getUser(id);
+          }
+        }
         const items3 = [id];
         cResult[8] = id;
-        cResult[9] = fn3;
+        cResult[9] = R;
         cResult[10] = items3;
         let tmp43 = items3;
-        let tmp42 = fn3;
       } else {
-        tmp42 = cResult[9];
+        class R {
+          constructor() {
+            return closure_8.getUser(id);
+          }
+        }
         tmp43 = cResult[10];
       }
       const tmp25Result6 = initialize;
-      let stateFromStores2 = initialize.useStateFromStores(tmp40, tmp42, tmp43);
+      let stateFromStores2 = initialize.useStateFromStores(tmp40, R, tmp43);
       const tmp25Result7 = initialize;
       const tmp45 = stateFromStores6;
-      let bot;
       if (author != null) {
-        bot = author.author.bot;
-      }
-      if (bot) {
-        let author1;
-        if (author != null) {
-          author1 = author.author;
+        class R {
+          constructor() {
+            return closure_8.getUser(id);
+          }
         }
-        stateFromStores2 = author1;
       }
-      const name = stateFromStores6(4728).useName(stateFromStores2);
+      if (undefined) {
+        class R {
+          constructor() {
+            return closure_8.getUser(id);
+          }
+        }
+        if (author != null) {
+          class R {
+            constructor() {
+              return closure_8.getUser(id);
+            }
+          }
+        }
+        stateFromStores2 = tmp47;
+      }
+      const name = stateFromStores6(4922).useName(stateFromStores2);
       const _Symbol4 = Symbol;
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+        class R {
+          constructor() {
+            return closure_8.getUser(id);
+          }
+        }
         const items4 = [GuildStore];
         cResult[11] = items4;
-        let tmp49 = items4;
+        const tmp49 = items4;
       } else {
-        tmp49 = cResult[11];
+        class R {
+          constructor() {
+            return closure_8.getUser(id);
+          }
+        }
       }
       if (cResult[12] !== guild_id) {
-        class I {
+        class F {
           constructor() {
             return closure_6.getGuild(guild_id);
           }
         }
         const items5 = [guild_id];
         cResult[12] = guild_id;
-        cResult[13] = I;
+        cResult[13] = F;
         cResult[14] = items5;
-        let tmp52 = items5;
+        let tmp51 = items5;
       } else {
-        class I {
+        class F {
           constructor() {
             return closure_6.getGuild(guild_id);
           }
         }
-        tmp52 = cResult[14];
+        tmp51 = cResult[14];
       }
-      const obj14 = stateFromStores6(4728);
-      const stateFromStores3 = initialize.useStateFromStores(tmp49, I, tmp52);
+      const obj14 = stateFromStores6(4922);
+      const stateFromStores3 = initialize.useStateFromStores(tmp49, F, tmp51);
       if (stateFromStores1 != null) {
-        class I {
+        class F {
           constructor() {
             return closure_6.getGuild(guild_id);
           }
         }
       }
-      closure_129_4 = tmp54;
+      closure_129_4 = tmp53;
       const _Symbol5 = Symbol;
       if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-        class I {
+        class F {
           constructor() {
             return closure_6.getGuild(guild_id);
           }
         }
         const items6 = [GuildRoleStore];
         cResult[15] = items6;
-        const tmp55 = items6;
+        const tmp54 = items6;
       } else {
-        class I {
+        class F {
           constructor() {
             return closure_6.getGuild(guild_id);
           }
         }
       }
       if (cResult[16] === guild_id) {
-        class I {
+        class F {
           constructor() {
             return closure_6.getGuild(guild_id);
           }
         }
-        const stateFromStores4 = initialize.useStateFromStores(tmp55, P, tmp57);
+        const stateFromStores4 = initialize.useStateFromStores(tmp54, P, tmp56);
         const _Symbol6 = Symbol;
         if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-          class I {
+          class F {
             constructor() {
               return closure_6.getGuild(guild_id);
             }
           }
           const items7 = [RelationshipStore];
           cResult[20] = items7;
-          const tmp59 = items7;
+          const tmp58 = items7;
         } else {
-          class I {
+          class F {
             constructor() {
               return closure_6.getGuild(guild_id);
             }
           }
         }
         if (cResult[21] === stateFromStores) {
-          class I {
+          class F {
             constructor() {
               return closure_6.getGuild(guild_id);
             }
           }
-          const stateFromStores5 = initialize.useStateFromStores(tmp59, tmp60);
+          const stateFromStores5 = initialize.useStateFromStores(tmp58, tmp59);
           if (cResult[24] === guild_id) {
-            class I {
+            class F {
               constructor() {
                 return closure_6.getGuild(guild_id);
               }
             }
-            const tmp63 = tmp45(5312)(tmp62);
+            const tmp62 = tmp45(5624)(tmp61);
             if (null == author) {
-              class I {
+              class F {
                 constructor() {
                   return closure_6.getGuild(guild_id);
                 }
               }
             } else {
-              class I {
+              class F {
                 constructor() {
                   return closure_6.getGuild(guild_id);
                 }
@@ -216,11 +241,11 @@ function useNullableMessageAuthor(message) {
                 userName: name,
                 member: stateFromStores1,
                 friendNickname: stateFromStores5,
-                displayNameStyles: tmp63,
+                displayNameStyles: tmp62,
               };
-              const tmp67 = computeMessageAuthor(obj2);
+              const tmp66 = computeMessageAuthor(obj2);
               cResult[27] = stateFromStores;
-              cResult[28] = tmp63;
+              cResult[28] = tmp62;
               cResult[29] = stateFromStores5;
               cResult[30] = stateFromStores3;
               cResult[31] = stateFromStores1;
@@ -239,7 +264,7 @@ function useNullableMessageAuthor(message) {
                   return role;
                 }
               }
-              cResult[35] = tmp67;
+              cResult[35] = tmp66;
             }
           }
           const obj3 = { userId: id, guildId: guild_id };
@@ -247,9 +272,9 @@ function useNullableMessageAuthor(message) {
           cResult[25] = id;
           cResult[26] = obj3;
           const tmp25Result10 = initialize;
-          tmp62 = obj3;
+          tmp61 = obj3;
         }
-        const fn4 = function x() {
+        const fn3 = function x() {
           let nickname = null;
           if (null != c2) {
             let isPrivateResult;
@@ -265,9 +290,9 @@ function useNullableMessageAuthor(message) {
         };
         cResult[21] = stateFromStores;
         cResult[22] = id;
-        cResult[23] = fn4;
+        cResult[23] = fn3;
         const tmp25Result9 = initialize;
-        tmp60 = fn4;
+        tmp59 = fn3;
       }
       class P {
         constructor() {
@@ -287,7 +312,7 @@ function useNullableMessageAuthor(message) {
       cResult[18] = P;
       cResult[19] = items8;
       const tmp25Result8 = initialize;
-      tmp57 = items8;
+      tmp56 = items8;
     }
     const fn2 = function v() {
       let member = null;
@@ -304,7 +329,7 @@ function useNullableMessageAuthor(message) {
     tmp38 = fn2;
     const tmp25Result = initialize;
   } else {
-    class I {
+    class F {
       constructor() {
         return closure_6.getGuild(guild_id);
       }
@@ -318,13 +343,13 @@ function useNullableMessageAuthor(message) {
       return channel;
     });
     if (author != null) {
-      class I {
+      class F {
         constructor() {
           return closure_6.getGuild(guild_id);
         }
       }
       if (tmp7 != null) {
-        class I {
+        class F {
           constructor() {
             return closure_6.getGuild(guild_id);
           }
@@ -333,7 +358,7 @@ function useNullableMessageAuthor(message) {
     }
     dependencyMap = tmp6;
     if (stateFromStores6 != null) {
-      class I {
+      class F {
         constructor() {
           return closure_6.getGuild(guild_id);
         }
@@ -369,20 +394,20 @@ function useNullableMessageAuthor(message) {
     }
     const tmpResult5 = initialize;
     if (author != null) {
-      class I {
+      class F {
         constructor() {
           return closure_6.getGuild(guild_id);
         }
       }
     }
     if (undefined) {
-      class I {
+      class F {
         constructor() {
           return closure_6.getGuild(guild_id);
         }
       }
       if (author != null) {
-        class I {
+        class F {
           constructor() {
             return closure_6.getGuild(guild_id);
           }
@@ -390,13 +415,13 @@ function useNullableMessageAuthor(message) {
       }
       stateFromStores8 = tmp14;
     }
-    const name1 = stateFromStores6(4728).useName(stateFromStores8);
-    const obj4 = stateFromStores6(4728);
+    const name1 = stateFromStores6(4922).useName(stateFromStores8);
+    const obj4 = stateFromStores6(4922);
     const items13 = [GuildStore];
     const items14 = [undefined];
     const stateFromStores9 = initialize.useStateFromStores(items13, () => GuildStore.getGuild(c3), items14);
     if (stateFromStores7 != null) {
-      class I {
+      class F {
         constructor() {
           return closure_6.getGuild(guild_id);
         }
@@ -438,7 +463,7 @@ function useNullableMessageAuthor(message) {
     const obj5 = { userId: undefined, guildId: undefined };
     let tmp24 = null;
     if (null != author) {
-      class I {
+      class F {
         constructor() {
           return closure_6.getGuild(guild_id);
         }
@@ -591,7 +616,7 @@ let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (message, arg1) => {
+  ? function useMessageNickAndColor(message, arg1) {
       let tmp = arg1;
       const tmp2 = useNullableMessageAuthor(message);
       _modDef38(null != tmp2, "Result cannot be null because the message is not null");
@@ -600,7 +625,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp;
     }
-  : (message, arg1) => {
+  : function useMessageNickAndColor(message, arg1) {
       let tmp = arg1;
       const tmp2 = useNullableMessageAuthor(message);
       _modDef38(null != tmp2, "Result cannot be null because the message is not null");
@@ -611,7 +636,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, guild_id) => {
+  ? function useNullableUserAuthor(id, guild_id) {
       _require = guild_id;
       const cResult = require("c").c(29);
       id = undefined;
@@ -694,20 +719,20 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const name = id(tmp2[10]).useName(id);
             if (cResult[17] === guild_id) {
               if (cResult[18] === id) {
-                let tmp27 = cResult[19];
+                const tmp27 = cResult[19];
               }
-              const tmp28 = tmp25(tmp2[11])(tmp27);
+              const tmp29 = tmp25(tmp2[11])(tmp27);
               if (cResult[20] === guild_id) {
-                if (cResult[21] === tmp28) {
+                if (cResult[21] === tmp29) {
                   if (cResult[22] === stateFromStores3) {
                     if (cResult[23] === stateFromStores1) {
                       if (cResult[24] === stateFromStores) {
                         if (cResult[25] === stateFromStores2) {
                           if (cResult[26] === id) {
                             if (cResult[27] === name) {
-                              let tmp29 = cResult[28];
+                              let tmp30 = cResult[28];
                             }
-                            return tmp29;
+                            return tmp30;
                           }
                         }
                       }
@@ -718,16 +743,50 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = {
                 user: id,
                 channel: guild_id,
-                guild: stateFromStores1,
-                memberColorRole: stateFromStores2,
-                member: stateFromStores,
-                userName: name,
-                friendNickname: stateFromStores3,
-                displayNameStyles: tmp28,
+                guild: null,
+                memberColorRole: null,
+                member: null,
+                userName: null,
+                friendNickname: null,
+                displayNameStyles: null,
               };
-              const tmp31 = computeMessageAuthor(obj2);
-              cResult[20] = guild_id;
-              cResult[21] = tmp28;
+              class I {
+                constructor() {
+                  nickname = null;
+                  if (null != id) {
+                    obj = closure_0;
+                    isPrivateResult = undefined;
+                    if (closure_0 != null) {
+                      isPrivateResult = obj.isPrivate();
+                    }
+                    nickname = null;
+                    if (isPrivateResult) {
+                      tmp4 = closure_7;
+                      nickname = closure_7.getNickname(tmp);
+                    }
+                  }
+                  return nickname;
+                }
+              }
+              obj2.memberColorRole = stateFromStores2;
+              obj2.member = stateFromStores;
+              obj2.userName = name;
+              obj2.friendNickname = stateFromStores3;
+              obj2.displayNameStyles = tmp29;
+              const tmp32 = computeMessageAuthor(obj2);
+              class R {
+                constructor() {
+                  role = undefined;
+                  if (null != guild_id) {
+                    if (null != colorRoleId) {
+                      tmp4 = closure_5;
+                      role = closure_5.getRole(tmp, tmp3);
+                    }
+                  }
+                  return role;
+                }
+              }
+              cResult[21] = tmp29;
               cResult[22] = stateFromStores3;
               class S {
                 constructor() {
@@ -746,45 +805,82 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[25] = stateFromStores2;
               cResult[26] = id;
               cResult[27] = name;
-              cResult[28] = tmp31;
-              tmp29 = tmp31;
+              cResult[28] = tmp32;
+              tmp30 = tmp32;
             }
-            const obj3 = { userId: id, guildId: guild_id };
+            class I {
+              constructor() {
+                nickname = null;
+                if (null != id) {
+                  obj = closure_0;
+                  isPrivateResult = undefined;
+                  if (closure_0 != null) {
+                    isPrivateResult = obj.isPrivate();
+                  }
+                  nickname = null;
+                  if (isPrivateResult) {
+                    tmp4 = closure_7;
+                    nickname = closure_7.getNickname(tmp);
+                  }
+                }
+                return nickname;
+              }
+            }
+            tmp28[0] = id;
+            tmp28[1] = guild_id;
             cResult[17] = guild_id;
             cResult[18] = id;
-            cResult[19] = obj3;
-            tmp27 = obj3;
+            cResult[19] = tmp28;
+            class R {
+              constructor() {
+                role = undefined;
+                if (null != guild_id) {
+                  if (null != colorRoleId) {
+                    tmp4 = closure_5;
+                    role = closure_5.getRole(tmp, tmp3);
+                  }
+                }
+                return role;
+              }
+            }
             const obj6 = id(tmp2[10]);
           }
-          const fn3 = function k() {
-            let nickname = null;
-            if (null != id) {
-              let isPrivateResult;
-              if (guild_id != null) {
-                isPrivateResult = guild_id.isPrivate();
-              }
+          class I {
+            constructor() {
               nickname = null;
-              if (isPrivateResult) {
-                nickname = RelationshipStore.getNickname(tmp);
+              if (null != id) {
+                obj = closure_0;
+                isPrivateResult = undefined;
+                if (closure_0 != null) {
+                  isPrivateResult = obj.isPrivate();
+                }
+                nickname = null;
+                if (isPrivateResult) {
+                  tmp4 = closure_7;
+                  nickname = closure_7.getNickname(tmp);
+                }
               }
-            }
-            return nickname;
-          };
-          cResult[14] = guild_id;
-          cResult[15] = id;
-          cResult[16] = fn3;
-          tmp23 = fn3;
-          const tmpResult5 = tmp(tmp2[9]);
-        }
-        const fn2 = function p() {
-          let role;
-          if (null != guild_id) {
-            if (null != colorRoleId) {
-              role = GuildRoleStore.getRole(tmp, tmp3);
+              return nickname;
             }
           }
-          return role;
-        };
+          cResult[14] = guild_id;
+          cResult[15] = id;
+          cResult[16] = I;
+          tmp23 = I;
+          const tmpResult5 = tmp(tmp2[9]);
+        }
+        class R {
+          constructor() {
+            role = undefined;
+            if (null != guild_id) {
+              if (null != colorRoleId) {
+                tmp4 = closure_5;
+                role = closure_5.getRole(tmp, tmp3);
+              }
+            }
+            return role;
+          }
+        }
         const items5 = [guild_id, colorRoleId];
         cResult[9] = guild_id;
         class S {
@@ -801,10 +897,10 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[10] = colorRoleId;
-        cResult[11] = fn2;
+        cResult[11] = R;
         cResult[12] = items5;
         tmp19 = items5;
-        tmp18 = fn2;
+        tmp18 = R;
         const tmpResult4 = tmp(tmp2[9]);
       }
       class S {
@@ -826,7 +922,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = S;
       const obj = require("c");
     }
-  : (id, channel) => {
+  : function useNullableUserAuthor(id, channel) {
       _require = channel;
       id = undefined;
       if (id != null) {
@@ -915,12 +1011,12 @@ export const getMessageAuthor = function getMessageAuthor(message) {
   return getUserAuthor(message.author, ChannelStore.getChannel(message.channel_id));
 };
 export const useUserNickAndColor = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useUserNickAndColor(arg0, arg1) {
       const tmp = closure_11(arg0, arg1);
       _modDef38(null != tmp, "Result cannot be null because user and channel are not null");
       return tmp;
     }
-  : (arg0, arg1) => {
+  : function useUserNickAndColor(arg0, arg1) {
       const tmp = closure_11(arg0, arg1);
       _modDef38(null != tmp, "Result cannot be null because user and channel are not null");
       return tmp;

@@ -9,10 +9,10 @@ import SearchQueryStore from "../../stores/SearchQueryStore.tsx";
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(7524).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_7 = fn(9247).SEARCH_MESSAGE_TAB_SENTINEL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   spinnerColor: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT },
   spinner: { width: 18, height: 18, alignItems: "center", justifyContent: "center", position: "absolute" },
@@ -41,7 +41,7 @@ let result = size.fileFinishedImporting("modules/search/native/components/layout
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (searchContext) => {
+    ? function SearchBarActivityIcon(searchContext) {
         const cResult = searchContext(sharedValue[9]).c(25);
         searchContext = searchContext.searchContext;
         const tmp4 = closure_11();
@@ -255,7 +255,7 @@ export default noop.memo(
         tmp12 = fn2;
         const tmpResult4 = searchContext(sharedValue[12]);
       }
-    : (searchContext) => {
+    : function SearchBarActivityIcon(searchContext) {
         searchContext = searchContext.searchContext;
         let sharedValue;
         const tmp = closure_11();

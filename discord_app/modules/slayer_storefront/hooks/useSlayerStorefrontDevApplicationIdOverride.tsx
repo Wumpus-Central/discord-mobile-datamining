@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useSlayerStorefrontDevApplicationIdOverride = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSlayerStorefrontDevApplicationIdOverride() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(overrideApplicationId) {
@@ -24,7 +24,7 @@ export const useSlayerStorefrontDevApplicationIdOverride = ReactCompilerGating.i
       const tmp3 = closure_2(first);
       return tmp3;
     }
-  : () => {
+  : function useSlayerStorefrontDevApplicationIdOverride() {
       const tmp = closure_2((overrideApplicationId) => overrideApplicationId.overrideApplicationId);
       return tmp;
     };

@@ -14,12 +14,12 @@ import FramesStore from "../../FramesStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const asLaunched = fn(8738).asLaunched;
+const asLaunched = fn(10613).asLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FramePanelHeaderContentInner(arg0) {
       const cResult = c.c(33);
       ({ frame, landscape, setMode, pipState, wrapperOffset } = arg0);
       if (cResult[0] !== frame.applicationId) {
@@ -183,7 +183,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = obj8;
       tmp7 = obj8;
     }
-  : (arg0) => {
+  : function FramePanelHeaderContentInner(arg0) {
       ({ frame, landscape, setMode } = arg0);
       ({ pipState, wrapperOffset } = arg0);
       const items = [frame.applicationId];
@@ -247,7 +247,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let closure_10 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function FramePanelHeaderContent(arg0) {
         const cResult = c.c(5);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [FramesStore];
@@ -276,7 +276,7 @@ let closure_10 = noop.memo(
         }
         const tmpResult = initialize;
       }
-    : (arg0) => {
+    : function FramePanelHeaderContent(arg0) {
         const items = [FramesStore];
         const stateFromStores = initialize.useStateFromStores(items, () => asLaunched(mainFrame.getMainFrame()));
         let tmp2 = null;
@@ -294,7 +294,7 @@ const result = size.fileFinishedImporting("modules/frames/panel/native/FramePane
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function FramePanelHeader() {
         const cResult = c.c(9);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { context: FramePanelStateContextDefault };
@@ -341,7 +341,7 @@ export default noop.memo(
         const obj4 = { landscape: wrapperDimensions.isWindowLandscape, setMode, wrapperOffset, pipState };
         const tmpResult = ActivityPanelHeader;
       }
-    : () => {
+    : function FramePanelHeader() {
         const obj = ActivityPanelHeader;
         const baseActivityPanelHeader = obj.useBaseActivityPanelHeader({ context: FramePanelStateContextDefault });
         const obj3 = {

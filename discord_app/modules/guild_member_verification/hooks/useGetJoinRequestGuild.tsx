@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestGuild.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGetGuildJoinRequest(arg0) {
       _require = arg0;
       const cResult = require("c").c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = require("initialize");
       const stateFromStores1 = require("initialize").useStateFromStores(tmp8, tmp9);
       if (cResult[5] !== stateFromStores1) {
-        class S {
+        class G {
           constructor() {
             if (!closure_1) {
               tmp = closure_1;
@@ -66,11 +66,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const items2 = [stateFromStores1];
         cResult[5] = stateFromStores1;
-        cResult[6] = S;
+        cResult[6] = G;
         cResult[7] = items2;
         let tmp13 = items2;
       } else {
-        class S {
+        class G {
           constructor() {
             if (!closure_1) {
               tmp = closure_1;
@@ -83,10 +83,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp13 = cResult[7];
       }
-      const effect = noop.useEffect(S, tmp13);
+      const effect = noop.useEffect(G, tmp13);
       return stateFromStores;
     }
-  : (arg0) => {
+  : function useGetGuildJoinRequest(arg0) {
       _require = arg0;
       const items = [UserGuildJoinRequestStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => {

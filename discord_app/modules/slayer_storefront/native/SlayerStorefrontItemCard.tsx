@@ -1,18 +1,19 @@
 // discord_app/modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
-import tinycolorDefault from "../../../../_runtime/07076_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/07262_tinycolor.js";
 import DominantColorUtils from "../../voice_panel/native/card/DominantColorUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ImageBackground: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+({ View: closure_4, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(5090);
 let obj2 = {
   cardContainer: {
     borderRadius: nativeDefault.radii.md,
@@ -24,8 +25,15 @@ let obj2 = {
     elevation: 8,
   },
   cardImageBackground: { width: "100%", height: "100%", alignItems: "center", justifyContent: "center" },
-  cardImage: { width: "100%", height: "100%", resizeMode: "cover" },
+  backgroundImage: null,
+  cardImage: null,
 };
+let obj4 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj4.width = "100%";
+obj4.height = "100%";
+obj2.backgroundImage = obj4;
+obj2.cardImage = { width: "100%", height: "100%", resizeMode: "cover" };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
@@ -41,9 +49,9 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SlayerStorefrontItemCard(arg0) {
       let tmp2 = dependencyMap;
-      const cResult = c.c(31);
+      const cResult = c.c(32);
       ({ sku, size, containerStyle } = arg0);
       let num = 220;
       if (undefined !== size) {
@@ -128,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 nativeDefault.colors.BACKGROUND_BASE_LOWEST,
               ];
               cResult[10] = items1;
-              let cardImage = items1;
+              cardImage = items1;
             } else {
               cardImage = cResult[10];
             }
@@ -144,85 +152,79 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[22] === str2) {
                       if (cResult[23] === str) {
                         if (cResult[24] === cardImage) {
-                          if (cResult[25] === cardImageBackground.cardImage) {
-                            if (cResult[26] === cardImageBackground.cardImageBackground) {
-                              if (cResult[28] === tmp23) {
+                          if (cResult[25] === cardImageBackground.backgroundImage) {
+                            if (cResult[26] === cardImageBackground.cardImage) {
+                              if (cResult[27] === cardImageBackground.cardImageBackground) {
+                                if (cResult[29] === tmp23) {
+                                }
+                                const obj2 = { style: tmp23, children: cResult[28] };
+                                const tmp36 = hasOwnProperty(React4, obj2);
+                                cResult[29] = tmp23;
+                                cResult[30] = cResult[28];
+                                cResult[31] = tmp36;
                               }
-                              const obj2 = { style: tmp23, children: cResult[27] };
-                              const tmp34 = <hasOwnProperty style={tmp23}>{cResult[27]}</hasOwnProperty>;
-                              cResult[28] = tmp23;
-                              cResult[29] = cResult[27];
-                              cResult[30] = tmp34;
                             }
                           }
                         }
                       }
                     }
                     if (null != str2) {
-                      const obj3 = { source: null, style: null, children: null };
-                      const obj4 = { uri: str2.toString() };
-                      obj3.source = obj4;
-                      obj3.style = cardImageBackground.cardImageBackground;
-                      const obj5 = { source: null, style: null };
-                      const obj7 = { uri: str.toString() };
-                      obj5.source = obj7;
-                      obj5.style = cardImageBackground.cardImage;
-                      tmp2 = jsx(FastImageDefault, { source: null, style: null });
-                      obj3.children = tmp2;
-                      let tmp29 = (
-                        <React4 source={null} style={null}>
-                          {null}
-                        </React4>
-                      );
+                      const obj3 = { style: cardImageBackground.cardImageBackground, children: null };
+                      const obj4 = { source: null, style: null };
+                      const obj5 = { uri: str2.toString() };
+                      obj4.source = obj5;
+                      obj4.style = cardImageBackground.backgroundImage;
+                      const items2 = [hasOwnProperty(FastImageDefault, obj4)];
+                      const obj7 = { source: null, style: null };
+                      const obj8 = { uri: null };
+                      obj8.uri = str.toString();
+                      obj7.source = obj8;
+                      obj7.style = cardImageBackground.cardImage;
+                      tmp2 = hasOwnProperty(FastImageDefault, obj7);
+                      items2[1] = tmp2;
+                      obj3.children = items2;
+                      let tmp31 = timestampProducer(React4, obj3);
                     } else {
-                      const obj8 = {
+                      const obj9 = {
                         colors: cardImage,
                         start: { x: 0, y: 0 },
                         end: { x: 1, y: 1 },
                         style: cardImageBackground.cardImageBackground,
                         children: null,
                       };
-                      const obj9 = { source: null, style: null };
-                      const obj11 = { uri: null };
-                      obj11.uri = str.toString();
-                      obj9.source = obj11;
-                      obj9.style = cardImageBackground.cardImage;
-                      obj8.children = jsx(FastImageDefault, { source: null, style: null });
-                      tmp29 = (
-                        <tmp38
-                          colors={cardImage}
-                          start={{ x: 0, y: 0 }}
-                          end={{ x: 1, y: 1 }}
-                          style={cardImageBackground.cardImageBackground}
-                        >
-                          {null}
-                        </tmp38>
-                      );
+                      const obj11 = { source: null, style: null };
+                      const obj12 = { uri: null };
+                      const tmp40 = LinearGradientDefault;
+                      obj12.uri = str.toString();
+                      obj11.source = obj12;
+                      obj11.style = cardImageBackground.cardImage;
+                      obj9.children = hasOwnProperty(FastImageDefault, obj11);
+                      tmp31 = hasOwnProperty(tmp40, obj9);
                     }
                     cResult[22] = str2;
                     cResult[23] = str;
                     cResult[24] = cardImage;
-                    cardImage = cardImageBackground.cardImage;
-                    cResult[25] = cardImage;
+                    ({ backgroundImage: tmp3[25], cardImage } = cardImageBackground);
+                    cResult[26] = cardImage;
                     cardImageBackground = cardImageBackground.cardImageBackground;
-                    cResult[26] = cardImageBackground;
-                    cResult[27] = tmp29;
+                    cResult[27] = cardImageBackground;
+                    cResult[28] = tmp31;
                   }
                 }
-                const items2 = [cardImageBackground.cardContainer, size2, containerStyle];
+                const items3 = [cardImageBackground.cardContainer, size2, containerStyle];
                 cResult[18] = containerStyle;
                 cResult[19] = size2;
                 cResult[20] = cardImageBackground.cardContainer;
-                cResult[21] = items2;
-                tmp23 = items2;
+                cResult[21] = items3;
+                tmp23 = items3;
               }
             }
             return tmp22;
           }
           const tmpResult = DominantColorUtils;
         }
-        const obj12 = { size: bound };
-        const cardBackgroundImageURL = SlayerStorefrontUtils.getCardBackgroundImageURL(sku, obj12);
+        const obj13 = { size: bound };
+        const cardBackgroundImageURL = SlayerStorefrontUtils.getCardBackgroundImageURL(sku, obj13);
         cResult[5] = bound;
         cResult[6] = sku;
         cResult[7] = cardBackgroundImageURL;
@@ -236,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       str = cardImageURL;
       const tmpResult4 = SlayerStorefrontUtils;
     }
-  : (sku) => {
+  : function SlayerStorefrontItemCard(sku) {
       sku = sku.sku;
       let num = sku.size;
       if (num === undefined) {
@@ -270,47 +272,44 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const items2 = [cardImage.cardContainer, size, sku.containerStyle];
           obj2.style = items2;
           if (null != str2) {
-            const obj3 = { source: null, style: null, children: null };
-            const obj4 = { uri: str2.toString() };
-            obj3.source = obj4;
-            obj3.style = cardImage.cardImageBackground;
-            let obj5 = { source: null, style: null };
-            const obj6 = { uri: str.toString() };
-            obj5.source = obj6;
-            cardImage = cardImage.cardImage;
-            obj5.style = cardImage;
-            tmp7Result = jsx(bound(tmp7Result[10]), { source: null, style: null });
-            obj3.children = tmp7Result;
-            let tmp7Result3 = (
-              <closure_4 source={null} style={null}>
-                {null}
-              </closure_4>
-            );
+            const obj3 = { style: cardImage.cardImageBackground, children: null };
+            const obj4 = { source: null, style: null };
+            let obj5 = { uri: str2.toString() };
+            obj4.source = obj5;
+            obj4.style = cardImage.backgroundImage;
+            const items3 = [closure_5(bound(tmp7Result[10]), obj4)];
+            const obj6 = { source: null, style: null };
+            const obj7 = { uri: null };
             const tmp11 = bound(tmp7Result[10]);
+            obj7.uri = str.toString();
+            obj6.source = obj7;
+            cardImage = cardImage.cardImage;
+            obj6.style = cardImage;
+            tmp7Result = closure_5(bound(tmp7Result[10]), obj6);
+            items3[1] = tmp7Result;
+            obj3.children = items3;
+            let tmp7Result3 = closure_6(closure_4, obj3);
+            const tmp12 = bound(tmp7Result[10]);
           } else {
-            const obj7 = {
+            const obj8 = {
               colors: tmp5,
               start: { x: 0, y: 0 },
               end: { x: 1, y: 1 },
               style: cardImage.cardImageBackground,
               children: null,
             };
-            const obj8 = { source: null, style: null };
-            const obj9 = { uri: null };
-            const tmp15 = bound(tmp7Result[11]);
-            obj9.uri = str.toString();
-            obj8.source = obj9;
-            obj8.style = cardImage.cardImage;
-            obj7.children = jsx(bound(tmp7Result[10]), { source: null, style: null });
-            tmp7Result3 = (
-              <tmp15 colors={tmp5} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={cardImage.cardImageBackground}>
-                {null}
-              </tmp15>
-            );
-            const tmp16 = bound(tmp7Result[10]);
+            const obj9 = { source: null, style: null };
+            const obj10 = { uri: null };
+            const tmp16 = bound(tmp7Result[11]);
+            obj10.uri = str.toString();
+            obj9.source = obj10;
+            obj9.style = cardImage.cardImage;
+            obj8.children = closure_5(bound(tmp7Result[10]), obj9);
+            tmp7Result3 = closure_5(tmp16, obj8);
+            const tmp17 = bound(tmp7Result[10]);
           }
           obj2.children = tmp7Result3;
-          <closure_5 style={null}>{null}</closure_5>;
+          closure_5(closure_4, obj2);
         }
       }
       return tmp6;

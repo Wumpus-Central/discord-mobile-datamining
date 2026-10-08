@@ -7,11 +7,11 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelListStore = fn(9742);
+const StageChannelListStore = fn(10943);
 ({ useActiveSpeakerPillScrollHandler: metroRequire, useActiveSpeakerPillState: closure_7 } = StageChannelListStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { width: "100%", flexDirection: "column", alignItems: "center", justifyContent: "center" },
   participantItemContainer: {
@@ -62,7 +62,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function ActiveSpeakerTooltip(channel) {
         const cResult = channel(576).c(30);
         channel = channel.channel;
         const tmp4 = closure_10();
@@ -94,7 +94,7 @@ export default noop.memo(
         }
         const obj = channel(576);
         const first1 = _slicedToArray(
-          channel(504).useStateFromStores(first, tmp7, tmp8, tmp(5596).isVersionEqual),
+          channel(504).useStateFromStores(first, tmp7, tmp8, tmp(5962).isVersionEqual),
           1,
         )[0];
         const tmp9 = _slicedToArray(closure_6(), 2)[1];
@@ -157,7 +157,7 @@ export default noop.memo(
                               onPress: tmp9,
                               children: tmp29,
                             };
-                            const tmp35 = closure_8(tmp(5916).PressableOpacity, obj3);
+                            const tmp35 = closure_8(tmp(6189).PressableOpacity, obj3);
                             cResult[26] = tmp9;
                             cResult[27] = tmp4.container;
                             cResult[28] = tmp29;
@@ -188,7 +188,7 @@ export default noop.memo(
                       color: "text-default",
                       children: tmp20,
                     };
-                    const tmp24 = closure_8(tmp(4892).Text, obj6);
+                    const tmp24 = closure_8(tmp(5086).Text, obj6);
                     cResult[16] = tmp4.participantNameplateSpeakingText;
                     cResult[17] = tmp20;
                     cResult[18] = tmp24;
@@ -221,7 +221,7 @@ export default noop.memo(
         }
         return null;
       }
-    : (channel) => {
+    : function ActiveSpeakerTooltip(channel) {
         channel = channel.channel;
         const tmp = closure_10();
         let items = [ChannelRTCStore];
@@ -238,7 +238,7 @@ export default noop.memo(
               return items;
             },
             items1,
-            channel(5596).isVersionEqual,
+            channel(5962).isVersionEqual,
           ),
           1,
         )[0];
@@ -268,11 +268,11 @@ export default noop.memo(
             const intl = tmp2(1126).intl;
             const obj8 = { count: first.length };
             obj7.children = intl.format(tmp2(1126).t["+dia6l"], obj8);
-            obj6.children = closure_8(tmp2(4892).Text, obj7);
+            obj6.children = closure_8(tmp2(5086).Text, obj7);
             items2[1] = closure_8(View, obj6);
             obj3.children = items2;
             obj2.children = closure_9(View, obj3);
-            tmp5 = closure_8(tmp2(5916).PressableOpacity, obj2);
+            tmp5 = closure_8(tmp2(6189).PressableOpacity, obj2);
           }
         }
         return tmp5;

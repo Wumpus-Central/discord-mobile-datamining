@@ -5,24 +5,24 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import ApplicationAssetUtils from "../../../../../utils/ApplicationAssetUtils.tsx";
 import VideoBackground from "../../../../calls/native/VideoBackground.tsx";
+import isListeningOnSpotifyDefault from "../../../../activities/utils/isListeningOnSpotify.tsx";
 import StreamPreviewDefault from "../../../../../components_native/StreamPreview.tsx";
 import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPreview.tsx";
-import isListeningOnSpotifyDefault from "../../../../activities/utils/isListeningOnSpotify.tsx";
 import isOnXboxDefault from "../../../../activities/utils/isOnXbox.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
-import _modDef16038 from "../../../../../../_runtime/metro/16038__.js";
-import _modDef16039 from "../../../../../../_runtime/metro/16039__.js";
+import _modDef16298 from "../../../../../../_runtime/metro/16298__.js";
+import _modDef16299 from "../../../../../../_runtime/metro/16299__.js";
 import HappeningNowAvatarStack from "HappeningNowAvatarStack.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import StageInstanceStore from "../../../../stage_channels/StageInstanceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
-const _modDef16048 = tmp4(16048);
+const _modDef16308 = tmp4(16308);
 require = fn;
 function getActivityA11yLabel(activity) {
   if (isListeningOnSpotifyDefault(activity)) {
@@ -54,7 +54,7 @@ function getActivityA11yLabel(activity) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15129);
+const HappeningNowConstants = fn(15391);
 ({
   HAPPENING_NOW_CONTENT_HEIGHT,
   HappeningNowCardTrackingType: closure_7,
@@ -66,9 +66,9 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef16038, _modDef16039];
+let items = [_modDef16298, _modDef16299];
 let c16 = 0.32;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   content: { flexShrink: 1, gap: 2 },
   avatarStackContainer: {
@@ -141,7 +141,7 @@ let closure_17 = createStyles.createStyles(obj);
 let obj6 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 let ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function IconOrPreview(arg0) {
       const cResult = c.c(43);
       ({ userId, activity, stream, game } = arg0);
       const tmp4 = closure_17();
@@ -333,7 +333,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj12;
       tmp5 = obj12;
     }
-  : (arg0) => {
+  : function IconOrPreview(arg0) {
       ({ activity, stream } = arg0);
       ({ userId, game } = arg0);
       const tmp = closure_17();
@@ -367,7 +367,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = { style: memo, children: null };
         let obj4 = { stream, children: null, style: null, ctaText: null, disabled: true };
         ({ cardImageStreamLive: obj5.style, stageStreamLiveText: obj5.textStyle } = tmp);
-        obj4.children = closure_11(tmp3(1188).LiveTag, { style: null, textStyle: null, allowFontScaling: false });
+        obj4.children = closure_11(tmp3(1200).LiveTag, { style: null, textStyle: null, allowFontScaling: false });
         obj4.style = tmp.cardImageStreamPreview;
         const intl = tmp3(1126).intl;
         obj4.ctaText = intl.string(tmp3(1126).t["7Xq/nV"]);
@@ -385,7 +385,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function StageStreamAvatars(arg0) {
       const cResult = c.c(10);
       ({ user, stage } = arg0);
       const tmp4 = closure_17();
@@ -435,7 +435,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp7 = items;
     }
-  : (stage) => {
+  : function StageStreamAvatars(stage) {
       stage = stage.stage;
       const tmp = closure_17();
       const liveStageData = useLiveStageData.useLiveStageData(stage);
@@ -453,7 +453,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useActivityIcon(arg0) {
       const cResult = c.c(16);
       ({ userId, activity, game, stream } = arg0);
       let tmp6 = null;
@@ -571,7 +571,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             const substr = userId.slice(-1);
             let tmp4Result = items[substr.charCodeAt(substr, 0) % items.length];
           } else {
-            tmp4Result = _modDef16048;
+            tmp4Result = _modDef16308;
           }
           tmp6 = activity == tmp6;
           let type2;
@@ -591,7 +591,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = iconURL;
       }
     }
-  : (arg0) => {
+  : function useActivityIcon(arg0) {
       ({ userId, activity, game, stream } = arg0);
       let guildId;
       if (stream != null) {
@@ -678,7 +678,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           userId = substr.charCodeAt(0);
           let tmpResult = items[userId % items.length];
         } else {
-          tmpResult = _modDef16048;
+          tmpResult = _modDef16308;
         }
       }
     };
@@ -687,7 +687,7 @@ const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivity.tsx",
 );
 
-export default noop.memo((userId) => {
+export default noop.memo(function ActivityCard(userId) {
   userId = userId.userId;
   const guildId = userId.guildId;
   const index = userId.index;
@@ -771,13 +771,13 @@ export default noop.memo((userId) => {
     obj2.destination_channel_id = channelId;
     AnalyticsUtilsDefault.track(constants3.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stream) {
-      asyncRequireImpl(12710, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(12710, dependencyMap.paths);
+      asyncRequireImpl(11123, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(11123, dependencyMap.paths);
     } else {
-      asyncRequireImpl(7861, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8279, dependencyMap.paths).then((result) =>
         result.default({ userId, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(7861, dependencyMap.paths);
+      const promise = asyncRequireImpl(8279, dependencyMap.paths);
     }
   }, items2);
   if (null == stateFromStores) {

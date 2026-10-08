@@ -20,7 +20,7 @@ import NativeMenuStore from "../../native_menu/native/NativeMenuStore.tsx";
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(12493);
+const InAppNotificationConstants = fn(12589);
 ({
   DEFAULT_ANIMATION_TIMING: closure_7,
   extrapolateConfig: closure_8,
@@ -33,9 +33,9 @@ const Constants = fn(1085);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = Constants);
 const jsx = fn(21).jsx;
 let obj = { duration: 200, easing: null };
-const Easing = fn(4618).Easing;
-obj.easing = Easing.in(fn(4618).Easing.ease);
-const createStyles = fn(4896);
+const Easing = fn(4810).Easing;
+obj.easing = Easing.in(fn(4810).Easing.ease);
+const createStyles = fn(5090);
 let closure_16 = createStyles.createStyles({
   safeAreaContainer: {
     position: "absolute",
@@ -50,7 +50,7 @@ let closure_16 = createStyles.createStyles({
 });
 let ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (notification) => {
+  ? function NotificationWrapper(notification) {
       const cResult = c.c(18);
       notification = notification.notification;
       const type = notification.type;
@@ -162,7 +162,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp10;
       }
     }
-  : (notification) => {
+  : function NotificationWrapper(notification) {
       notification = notification.notification;
       const type = notification.type;
       if (constants.MESSAGE === type) {
@@ -248,7 +248,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationContainer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (notification) => {
+  ? function InAppNotificationContainer(notification) {
       const cResult = notification(channelId[10]).c(45);
       notification = notification.notification;
       closure_16();
@@ -624,7 +624,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp20 = Z;
       const tmp13 = messageId(channelType.useState(false), 2);
     }
-  : (notification) => {
+  : function InAppNotificationContainer(notification) {
       notification = notification.notification;
       let channelType;
       const tmp = closure_16();

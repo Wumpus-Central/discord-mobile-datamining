@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-fn(2055).CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING;
+fn(2067).CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useUnreadSettingNotice(id) {
       const _require = id;
       const cResult = require("c").c(19);
       let obj = require("c");
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      class U {
+      class E {
         constructor() {
           tmp = closure_0;
           hasItem = closure_5.has(closure_0.type);
@@ -132,11 +132,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = id.type;
       cResult[8] = shouldUseNewNotificationSystem;
       cResult[9] = first;
-      cResult[10] = U;
-      tmp14 = U;
+      cResult[10] = E;
+      tmp14 = E;
       const tmpResult = tmp(first[7]);
     }
-  : (id) => {
+  : function useUnreadSettingNotice(id) {
       const _require = id;
       const shouldUseNewNotificationSystem =
         require("notifications/NotificationUtils").useShouldUseNewNotificationSystem("useShouldRenderBanner");

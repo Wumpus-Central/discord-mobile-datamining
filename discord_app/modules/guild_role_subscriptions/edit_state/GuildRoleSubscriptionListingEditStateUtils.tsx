@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx
 import c from "../../../../_runtime/00576_c.js";
-import v1 from "../../../../_runtime/01266_v1.js";
+import v1 from "../../../../_runtime/01278_v1.js";
 import RolePermissionUtils from "../RolePermissionUtils.tsx";
 import StoreUtils from "../../../utils/StoreUtils.tsx";
 import useInitialValueDefault from "../../../hooks/useInitialValue.tsx";
@@ -16,7 +16,7 @@ import GuildRoleSubscriptionsStore from "../GuildRoleSubscriptionsStore.tsx";
 const require = globalThis.__r;
 
 const utils_ColorUtils = obj(1103);
-const Contants = obj(15063);
+const Contants = obj(15325);
 require = fn;
 function getRoleEmojis(arr, arg1) {
   closure_0 = arg1;
@@ -183,7 +183,7 @@ let closure_22 = async function _updateListingPeripheralsFromEditState(arg0) {
                   const items = [];
                   items[HermesBuiltin.arraySpread(customEmojiById.roles, 0)] = dependencyMap;
                   obj2.roles = items;
-                  return guildId(9952).updateEmoji(obj2);
+                  return guildId(9479).updateEmoji(obj2);
                 }
               });
               closure_129_16 = closure_129_14.map((item) => {
@@ -193,11 +193,11 @@ let closure_22 = async function _updateListingPeripheralsFromEditState(arg0) {
                   const found = roles.filter((item) => item !== dependencyMap);
                   if (found.length > 0) {
                     const obj3 = { guildId, emojiId: customEmojiById.id, roles: found };
-                    let updateEmojiResult = guildId(9952).updateEmoji(obj3);
-                    const obj2 = guildId(9952);
+                    let updateEmojiResult = guildId(9479).updateEmoji(obj3);
+                    const obj2 = guildId(9479);
                   } else {
-                    updateEmojiResult = guildId(9952).deleteEmoji(guildId, customEmojiById.id);
-                    const obj = guildId(9952);
+                    updateEmojiResult = guildId(9479).deleteEmoji(guildId, customEmojiById.id);
+                    const obj = guildId(9479);
                   }
                   return updateEmojiResult;
                 }
@@ -416,15 +416,15 @@ let closure_23 = async function _createListingFromEditState(arg0) {
     }
   }
 };
-const GuildRoleSubscriptionEditStore = fn(15061);
+const GuildRoleSubscriptionEditStore = fn(15323);
 ({ AllChannelAccessOptions: closure_9, useEditStateStore: c10 } = GuildRoleSubscriptionEditStore);
-let closure_11 = fn(15038).GuildRoleSubscriptionBenefitTypes;
+let closure_11 = fn(15300).GuildRoleSubscriptionBenefitTypes;
 const Constants = fn(1085);
 ({ CurrencyCodes: closure_12, DEFAULT_ROLE_COLOR: map1 } = Constants);
-const SubscriptionIntervalTypes = fn(1379).SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = fn(1391).SubscriptionIntervalTypes;
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useListingEditState(arg0, arg1, arg2) {
       closure_0 = arg0;
       closure_1 = arg1;
       let tmp = arg2;
@@ -439,7 +439,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmp5 = v65535(first);
+      const tmp5 = collapsed(first);
       closure_3 = tmp5;
       if (cResult[1] === arg1) {
         if (cResult[2] === arg0) {
@@ -451,7 +451,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[7] === arg0) {
                 let tmp7 = cResult[8];
               }
-              const tmp4Result = v65535(tmp7);
+              const tmp4Result = collapsed(tmp7);
               if (undefined !== tmp4Result) {
                 tmp = tmp4Result;
               }
@@ -467,7 +467,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[11] = items;
               tmp9 = items;
             }
-            const fn3 = function u(arg0) {
+            const fn3 = function c(arg0) {
               let tmp2;
               if (arg0.listings[closure_0] != null) {
                 tmp2 = tmp[closure_1];
@@ -507,12 +507,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = fn2;
       tmp6 = fn2;
     }
-  : (arg0, arg1, arg2) => {
+  : function useListingEditState(arg0, arg1, arg2) {
       closure_0 = arg0;
       closure_1 = arg1;
       let tmp = arg2;
       closure_2 = arg2;
-      let tmp2 = v65535((setListing) => setListing.setListing);
+      let tmp2 = collapsed((setListing) => setListing.setListing);
       closure_3 = tmp2;
       const items = [tmp2, arg0, arg1, arg2];
       const callback = noop.useCallback((arg0) => {
@@ -534,7 +534,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           return Object.assign({}, arg0, obj);
         });
       }, items);
-      let tmp4 = v65535((arg0) => {
+      let tmp4 = collapsed((arg0) => {
         let tmp2;
         if (arg0.listings[closure_0] != null) {
           tmp2 = tmp[closure_1];
@@ -551,7 +551,7 @@ let closure_15 = tmp4;
 fn(558);
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useListingValue(arg0, arg1) {
       _require = arg0;
       importDefault = arg1;
       const cResult = require("c").c(8);
@@ -598,7 +598,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = tmp9Result;
       const tmpResult = require("initialize");
     }
-  : (arg0, arg1) => {
+  : function useListingValue(arg0, arg1) {
       _require = arg0;
       importDefault = arg1;
       const items = [GuildRoleSubscriptionsStore];
@@ -612,7 +612,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useClearEditStateOnUnmount(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] !== arg0) {
@@ -643,7 +643,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp2, tmp3);
     }
-  : (arg0) => {
+  : function useClearEditStateOnUnmount(arg0) {
       closure_0 = arg0;
       const items = [arg0];
       const effect = noop.useEffect(
@@ -665,7 +665,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useName(arg0) {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(name) {
@@ -685,8 +685,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_15(arg0, "name", closure_16(arg0, first));
     }
-  : (arg0) =>
-      closure_15(
+  : function useName(arg0) {
+      return closure_15(
         arg0,
         "name",
         closure_16(arg0, (name) => {
@@ -700,9 +700,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           return str;
         }),
       );
+    };
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function usePriceTier(arg0) {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(arg0) {
@@ -722,8 +723,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_15(arg0, "priceTier", closure_16(arg0, first));
     }
-  : (arg0) =>
-      closure_15(
+  : function usePriceTier(arg0) {
+      return closure_15(
         arg0,
         "priceTier",
         closure_16(arg0, (arg0) => {
@@ -737,9 +738,10 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           return price;
         }),
       );
+    };
 ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useDescription(arg0) {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(description) {
@@ -759,8 +761,8 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_15(arg0, "description", closure_16(arg0, first));
     }
-  : (arg0) =>
-      closure_15(
+  : function useDescription(arg0) {
+      return closure_15(
         arg0,
         "description",
         closure_16(arg0, (description) => {
@@ -774,9 +776,10 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           return str;
         }),
       );
+    };
 ReactCompilerGating = fn(558);
 let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useImage(arg0, arg1) {
       _require = arg1;
       const cResult = require("c").c(2);
       if (cResult[0] !== arg1) {
@@ -797,7 +800,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_15(arg0, "image", closure_16(arg0, tmp2));
     }
-  : (arg0, arg1) => {
+  : function useImage(arg0, arg1) {
       closure_0 = arg1;
       return closure_15(
         arg0,
@@ -815,7 +818,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useApplicationId(arg0) {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(application_id) {
@@ -832,17 +835,18 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_16(arg0, first);
     }
-  : (arg0) =>
-      closure_16(arg0, (application_id) => {
+  : function useApplicationId(arg0) {
+      return closure_16(arg0, (application_id) => {
         application_id = undefined;
         if (application_id != null) {
           application_id = application_id.application_id;
         }
         return application_id;
       });
+    };
 ReactCompilerGating = fn(558);
 let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useRoleIcon(arg0, arg1) {
       const cResult = c.c(3);
       const tmp2 = useSubscriptionRoleDefault(arg1, arg0);
       let icon;
@@ -865,7 +869,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj2;
       tmp5 = obj2;
     }
-  : (arg0, arg1) => {
+  : function useRoleIcon(arg0, arg1) {
       const tmp = useSubscriptionRoleDefault(arg1, arg0);
       closure_0 = tmp;
       const items = [tmp];
@@ -889,7 +893,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useRole(arg0, arg1) {
       closure_0 = arg0;
       let obj = require;
       let int2hexResult = dependencyMap;
@@ -909,7 +913,7 @@ const tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp4 = cResult[1];
       }
-      const tmp6 = v65535(tmp4);
+      const tmp6 = collapsed(tmp4);
       if (cResult[2] !== arg0) {
         const fn2 = function s(arg0) {
           let roleIcon;
@@ -924,7 +928,7 @@ const tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp7 = cResult[3];
       }
-      const tmp5Result = v65535(tmp7);
+      const tmp5Result = collapsed(tmp7);
       let DEFAULT_PREVIEW_ROLE = tmp3;
       if (tmp3 == null) {
         DEFAULT_PREVIEW_ROLE = Contants.DEFAULT_PREVIEW_ROLE;
@@ -971,7 +975,7 @@ const tmp12 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.colorString = tmp11;
       }
     }
-  : (arg0, arg1) => {
+  : function useRole(arg0, arg1) {
       closure_0 = arg0;
       const tmp = useSubscriptionRoleDefault(arg1, arg0);
       importDefault = tmp;
@@ -1021,7 +1025,7 @@ const tmp12 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let closure_17 = [];
 const tmp13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useRoleColor(arg0, arg1) {
       const tmp = useSubscriptionRoleDefault(arg1, arg0);
       let color;
       if (tmp != null) {
@@ -1032,7 +1036,7 @@ const tmp13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_15(arg0, "roleColor", color);
     }
-  : (arg0, arg1) => {
+  : function useRoleColor(arg0, arg1) {
       const tmp = useSubscriptionRoleDefault(arg1, arg0);
       let color = tmp;
       const items = [tmp];
@@ -1054,7 +1058,7 @@ const tmp13 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let closure_18 = [];
 const tmp14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useChannelAccessFormat(arg0, arg1) {
       const tmp2 = useSubscriptionRoleDefault(arg1, arg0);
       if (null != tmp2) {
         if (obj.hasViewChannelPermission(tmp2)) {
@@ -1064,7 +1068,7 @@ const tmp14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       SOME_CHANNELS_ACCESS = constants.SOME_CHANNELS_ACCESS;
     }
-  : (arg0, arg1) => {
+  : function useChannelAccessFormat(arg0, arg1) {
       const tmp = useSubscriptionRoleDefault(arg1, arg0);
       closure_0 = tmp;
       const items = [tmp];
@@ -1085,7 +1089,7 @@ const tmp14 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useChannelBenefits(arg0) {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(role_benefits) {
@@ -1104,8 +1108,8 @@ let tmp15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_15(arg0, "channelBenefits", closure_16(arg0, first));
     }
-  : (arg0) =>
-      closure_15(
+  : function useChannelBenefits(arg0) {
+      return closure_15(
         arg0,
         "channelBenefits",
         closure_16(arg0, (role_benefits) => {
@@ -1118,10 +1122,11 @@ let tmp15 = ReactCompilerGating.isReactCompilerEnabled()
           return found;
         }),
       );
+    };
 let set = new Set();
 ReactCompilerGating = fn(558);
 const tmp16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIntangibleBenefits(arg0) {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(role_benefits) {
@@ -1140,8 +1145,8 @@ const tmp16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_15(arg0, "intangibleBenefits", closure_16(arg0, first));
     }
-  : (arg0) =>
-      closure_15(
+  : function useIntangibleBenefits(arg0) {
+      return closure_15(
         arg0,
         "intangibleBenefits",
         closure_16(arg0, (role_benefits) => {
@@ -1154,9 +1159,10 @@ const tmp16 = ReactCompilerGating.isReactCompilerEnabled()
           return found;
         }),
       );
+    };
 ReactCompilerGating = fn(558);
 const tmp18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useTierEmojiIds(arg0, arg1) {
       let id = arg1;
       const cResult = id(576).c(7);
       id = useSubscriptionRoleDefault(arg1, arg0);
@@ -1202,7 +1208,7 @@ const tmp18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = id(504);
     }
-  : (arg0, arg1) => {
+  : function useTierEmojiIds(arg0, arg1) {
       _require = arg1;
       const tmp = useSubscriptionRoleDefault(arg1, arg0);
       importDefault = tmp;
@@ -1235,7 +1241,7 @@ const tmp18 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useTrialInterval(arg0) {
       const subscriptionTrial = GuildRoleSubscriptionsHooks.useSubscriptionTrial(arg0);
       let active_trial;
       if (subscriptionTrial != null) {
@@ -1250,7 +1256,7 @@ const tmp19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_15(arg0, "trialInterval", selectedOption);
     }
-  : (arg0) => {
+  : function useTrialInterval(arg0) {
       const subscriptionTrial = GuildRoleSubscriptionsHooks.useSubscriptionTrial(arg0);
       let active_trial;
       if (subscriptionTrial != null) {
@@ -1267,7 +1273,7 @@ const tmp19 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useTrialLimit(arg0) {
       const subscriptionTrial = GuildRoleSubscriptionsHooks.useSubscriptionTrial(arg0);
       let prop;
       if (subscriptionTrial != null) {
@@ -1278,7 +1284,7 @@ const tmp20 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_15(arg0, "trialLimit", prop);
     }
-  : (arg0) => {
+  : function useTrialLimit(arg0) {
       const subscriptionTrial = GuildRoleSubscriptionsHooks.useSubscriptionTrial(arg0);
       let prop;
       if (subscriptionTrial != null) {
@@ -1291,7 +1297,7 @@ const tmp20 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHasChanges(arg0) {
       closure_0 = arg0;
       const cResult = c.c(2);
       if (cResult[0] !== arg0) {
@@ -1304,15 +1310,15 @@ const tmp21 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp2 = cResult[1];
       }
-      return v65535(tmp2);
+      return collapsed(tmp2);
     }
-  : (arg0) => {
+  : function useHasChanges(arg0) {
       closure_0 = arg0;
-      return v65535((arg0) => undefined !== arg0.listings[closure_0]);
+      return collapsed((arg0) => undefined !== arg0.listings[closure_0]);
     };
 ReactCompilerGating = fn(558);
 const tmp22 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHasChangesForEditStateIds(arg0) {
       closure_0 = arg0;
       const cResult = c.c(2);
       if (cResult[0] !== arg0) {
@@ -1332,11 +1338,11 @@ const tmp22 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp2 = cResult[1];
       }
-      return v65535(tmp2);
+      return collapsed(tmp2);
     }
-  : (arg0) => {
+  : function useHasChangesForEditStateIds(arg0) {
       closure_0 = arg0;
-      return v65535((arg0) => {
+      return collapsed((arg0) => {
         for (const item10006 of closure_0) {
           if (undefined !== arg0.listings[item10006]) {
             obj.return();
@@ -1349,7 +1355,7 @@ const tmp22 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp23 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSubscriptionPlan(arg0) {
       const cResult = c.c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n(arg0) {
@@ -1433,7 +1439,7 @@ const tmp23 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = obj2;
       tmp9 = obj2;
     }
-  : (arg0) => {
+  : function useSubscriptionPlan(arg0) {
       const tmp = closure_16(arg0, (arg0) => {
         first = undefined;
         if (arg0 != null) {
@@ -1623,8 +1629,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                   if (null != channelBenefits) {
                     const benefits = subscriptionListing.role_benefits.benefits;
                     const benefits1 = subscriptionListing.role_benefits.benefits;
-                    const found = benefits.filter(closure_1_0(15064).isChannelBenefit);
-                    const found1 = benefits1.filter(closure_1_0(15064).isIntangibleBenefit);
+                    const found = benefits.filter(closure_1_0(15326).isChannelBenefit);
+                    const found1 = benefits1.filter(closure_1_0(15326).isIntangibleBenefit);
                     if (channelBenefits == null) {
                       channelBenefits = found;
                     }
@@ -1638,8 +1644,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                   }
                   if (!obj2.isEmpty(obj)) {
                     const obj4 = { guildId, groupListingId, listingId: editStateId, data: obj };
-                    subscriptionListing = closure_1_2(6768).updateSubscriptionListing(obj4);
-                    const obj3 = closure_1_2(6768);
+                    subscriptionListing = closure_1_2(6944).updateSubscriptionListing(obj4);
+                    const obj3 = closure_1_2(6944);
                   }
                   return subscriptionListing;
                 })(obj5),
@@ -1724,7 +1730,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
               (function moveEditState(arg0, id) {
                 closure_0 = arg0;
                 closure_1 = id;
-                closure_0(1259).batchUpdates(() => {
+                closure_0(1271).batchUpdates(() => {
                   closure_2_10.setState((listings) => {
                     const obj = { listings: null };
                     const obj2 = {};
@@ -1792,7 +1798,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
   };
 };
 export const useEditStateIds = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useEditStateIds(arg0, arg1, arg2) {
       _require = arg1;
       const cResult = require("c").c(27);
       if (cResult[0] !== arg2) {
@@ -1899,7 +1905,7 @@ export const useEditStateIds = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = items;
       const tmp7Result2 = closure_10(S);
     }
-  : (arg0, arg1) => {
+  : function useEditStateIds(arg0, arg1) {
       _require = arg1;
       let obj = arg2;
       if (arg2 === undefined) {
@@ -1947,7 +1953,7 @@ export const useEditStateIds = ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [arg1, tmp3, tmp4];
       obj3.addNewEditStateFromTemplate = noop.useCallback((listings) => {
         closure_0 = listings;
-        const v4Result = closure_0(1266).v4();
+        const v4Result = closure_0(1278).v4();
         subscriptionListingsForGroup = v4Result;
         dependencyMap(closure_0, (arg0) => {
           let items = arg0;

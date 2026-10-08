@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ChatInputActionType = fn(11589).ChatInputActionType;
+const ChatInputActionType = fn(11652).ChatInputActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ReactCompilerGating = fn(558);
@@ -15,7 +15,7 @@ let result = size.fileFinishedImporting("modules/chat_input/native/action_button
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (onPress) => {
+    ? function ChatInputActionButtonApps(onPress) {
         const cResult = channel(ref[5]).c(37);
         ({ accessible, active, disabled, styleButton, styleActive, styleActiveIcon, channel } = onPress);
         onPress = onPress.onPress;
@@ -311,7 +311,7 @@ export default noop.memo(
         let obj = channel(ref[5]);
         tmp6 = onPress;
       }
-    : (onPress) => {
+    : function ChatInputActionButtonApps(onPress) {
         ({ active, channel } = onPress);
         onPress = onPress.onPress;
         canShowBotsBanner = undefined;

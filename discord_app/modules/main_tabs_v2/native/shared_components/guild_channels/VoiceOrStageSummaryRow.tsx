@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((height) => {
   const obj = {
     container: { flexDirection: "row", alignItems: "center", marginLeft: -2 },
@@ -69,7 +69,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function VoiceOrStageSummaryRow(arg0) {
         const cResult = guildId(avatarSize[6]).c(32);
         ({ users, max, guildId } = arg0);
         ({ layout, audienceCount } = arg0);
@@ -125,7 +125,7 @@ export default noop.memo(
                                     return tmp21;
                                   }
                                 }
-                                class O {
+                                class C {
                                   constructor(arg0, arg1) {
                                     if (arg1 >= max) {
                                       return;
@@ -207,7 +207,7 @@ export default noop.memo(
                             }
                           }
                         }
-                        class O {
+                        class C {
                           constructor(arg0, arg1) {
                             if (arg1 >= max) {
                               return;
@@ -278,7 +278,7 @@ export default noop.memo(
                         }
                         if (tmp16Result) {
                           let items1 = [,];
-                          class O {
+                          class C {
                             constructor(arg0, arg1) {
                               if (arg1 >= max) {
                                 return;
@@ -390,7 +390,7 @@ export default noop.memo(
                       let tmp10 = cResult[21];
                     }
                     const mapped = users.map(tmp10);
-                    class O {
+                    class C {
                       constructor(arg0, arg1) {
                         if (arg1 >= max) {
                           return;
@@ -472,7 +472,7 @@ export default noop.memo(
               }
             }
           }
-          class O {
+          class C {
             constructor(arg0, arg1) {
               if (arg1 >= max) {
                 return;
@@ -547,8 +547,8 @@ export default noop.memo(
           cResult[18] = wrapper;
           cResult[19] = tmp5.overflowCircle;
           cResult[20] = tmp5.wrapper;
-          cResult[21] = O;
-          tmp10 = O;
+          cResult[21] = C;
+          tmp10 = C;
         }
         const items4 = [tmp5.container, tmp7];
         cResult[4] = tmp5.container;
@@ -557,7 +557,7 @@ export default noop.memo(
         tmp8 = items4;
         let obj = guildId(avatarSize[6]);
       }
-    : (layout) => {
+    : function VoiceOrStageSummaryRow(layout) {
         ({ users, max } = layout);
         if (max === undefined) {
           max = 5;
@@ -622,7 +622,7 @@ export default noop.memo(
           let obj6 = {
             size: tmp(tmp2[9]).Icon.Sizes.CUSTOM,
             style: { height: 14, width: 14 },
-            source: require("../../../../../../_runtime/metro/16848__.js"),
+            source: require("../../../../../../_runtime/metro/17127__.js"),
           };
           const items4 = [closure_4(tmp(tmp2[9]).Icon, obj6)];
           let obj7 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };

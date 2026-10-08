@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
 
 export const useProductDisableState = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useProductDisableState(arg0) {
       const cResult = c.c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SubscriptionStore];
@@ -64,7 +64,7 @@ export const useProductDisableState = ReactCompilerGating.isReactCompilerEnabled
       }
       const tmpResult = initialize;
     }
-  : (arg0) => {
+  : function useProductDisableState(arg0) {
       const items = [SubscriptionStore];
       const stateFromStores = initialize.useStateFromStores(items, () => {
         premiumSubscription = premiumSubscription.getPremiumSubscription();

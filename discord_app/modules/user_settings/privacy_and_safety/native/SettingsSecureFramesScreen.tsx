@@ -77,11 +77,7 @@ function UserListItem(userId) {
         }
         if (cResult[14] !== stateFromStores) {
           if (null != stateFromStores) {
-            const obj4 = {
-              user: stateFromStores,
-              guildId: "Array",
-              size: "function pnpm_presetsTs1(event){return{transform:[{translateX:event.translationX}]};}",
-            };
+            const obj4 = { user: stateFromStores, guildId: "Array", size: "p\u0314" };
             const Avatar = TableRow(tmp14[15]).Avatar;
             obj4.size = TableRow(tmp14[15]).AvatarSizes.REFRESH_MEDIUM_32;
             class F {
@@ -258,7 +254,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 },
   header: null,
@@ -274,7 +270,7 @@ let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function SettingsSecureFramesFooter() {
       const cResult = navigation(secureFramesVerifiedUserIds[8]).c(21);
       const tmp4 = closure_9();
       const obj = navigation(secureFramesVerifiedUserIds[8]);
@@ -398,7 +394,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = fn2;
       const tmpResult = navigation(secureFramesVerifiedUserIds[21]);
     }
-  : () => {
+  : function SettingsSecureFramesFooter() {
       const tmp = closure_9();
       const token = navigation(secureFramesVerifiedUserIds[19]).useToken(
         callback(secureFramesVerifiedUserIds[6]).modules.mobile.TABLE_ROW_HEIGHT,
@@ -444,7 +440,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function SettingsSecureFramesScreen() {
       const cResult = c.c(8);
       const tmp4 = closure_9();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -502,7 +498,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp20;
       tmp19 = tmp20;
     }
-  : () => {
+  : function SettingsSecureFramesScreen() {
       const tmp = closure_9();
       const obj = { style: tmp.container, children: null };
       const obj2 = { style: tmp.header, children: null };

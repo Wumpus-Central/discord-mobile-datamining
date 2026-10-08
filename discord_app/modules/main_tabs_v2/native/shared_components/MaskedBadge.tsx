@@ -7,9 +7,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
-  maskStyle: { position: "relative", right: "applicationId" },
+  maskStyle: { position: "relative", right: "IconComponent" },
   unreadDot: { width: 0, height: 0 },
   badgeStyle: { flexGrow: 1, flexShrink: 0 },
   unreadBadge: { position: "relative", bottom: -3 },
@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MaskedBadge.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MaskedBadge(arg0) {
       const cResult = c.c(19);
       ({ backgroundColor, value, maxValue, size, style } = arg0);
       ({ unread, lowPriority } = arg0);
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[18] = tmp9;
       }
     }
-  : (backgroundColor) => {
+  : function MaskedBadge(backgroundColor) {
       backgroundColor = backgroundColor.backgroundColor;
       value = backgroundColor.value;
       ({ unread, maxValue, lowPriority, size, style } = backgroundColor);

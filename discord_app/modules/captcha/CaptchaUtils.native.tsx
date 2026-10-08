@@ -6,7 +6,7 @@ import SharedCaptchaUtils from "SharedCaptchaUtils.tsx";
 import ActionSheetStore from "../action_sheet/native/ActionSheetStore.tsx";
 
 require = fn;
-const CAPTCHA_MODAL_KEY = fn(5422).CAPTCHA_MODAL_KEY;
+const CAPTCHA_MODAL_KEY = fn(5731).CAPTCHA_MODAL_KEY;
 let obj = {
   showCaptcha(options, arg1) {
     _require = arg1;
@@ -28,7 +28,7 @@ let obj = {
     };
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(require("asyncRequireImpl")(17455, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
+    obj2.openLazy(require("asyncRequireImpl")(17737, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
   },
   showCaptchaAsync(nextResult1) {
     if (arg1 === undefined) {
@@ -77,11 +77,11 @@ let obj = {
 };
 const ReactCompilerGating = fn(558);
 obj.useIsCaptchaModalOpen = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsCaptchaModalOpen() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ActionSheetStore];
-        const fn = function n() {
+        const fn = function s() {
           return key.getKey() === CAPTCHA_MODAL_KEY;
         };
         cResult[0] = items;
@@ -93,7 +93,7 @@ obj.useIsCaptchaModalOpen = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsCaptchaModalOpen() {
       const items = [ActionSheetStore];
       return initialize.useStateFromStores(items, () => key.getKey() === CAPTCHA_MODAL_KEY);
     };

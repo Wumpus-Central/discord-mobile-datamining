@@ -2,7 +2,7 @@
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import router_utils from "router_utils.tsx";
 import useGuildIdForChannelRoute from "useGuildIdForChannelRoute.tsx";
-import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
+import preloadChannelDefault from "../channel/preloadChannel.tsx";
 import ChannelRTCActionCreatorsDefault from "../../actions/ChannelRTCActionCreators.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
@@ -15,11 +15,11 @@ export const transitionToChannel = function transitionToChannel(id, openTextInVo
   const channel = ChannelStore.getChannel(id);
   if (null != channel) {
     const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
-    ChannelActionCreatorsDefault.preload(channel.guild_id, channel.id);
+    preloadChannelDefault(channel.guild_id, channel.id);
     const obj = { openChannel: true };
-    const obj5 = router_utils;
+    const obj4 = router_utils;
     const merged = Object.assign(openTextInVoiceIfVoiceChannel);
-    obj5.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id), obj);
+    obj4.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id), obj);
     let prop;
     if (openTextInVoiceIfVoiceChannel != null) {
       prop = openTextInVoiceIfVoiceChannel.openTextInVoiceIfVoiceChannel;
@@ -69,11 +69,11 @@ export const tryTransitionToThreadMessage = function tryTransitionToThreadMessag
     const channel1 = ChannelStore.getChannel(parentChannelId);
     if (null != channel1) {
       const guildIdForGenericRedirect1 = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel1);
-      ChannelActionCreatorsDefault.preload(channel1.guild_id, channel1.id);
+      preloadChannelDefault(channel1.guild_id, channel1.id);
       const obj5 = { openChannel: true };
-      const obj9 = router_utils;
+      const obj8 = router_utils;
       const merged1 = Object.assign(arg3);
-      obj9.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect1, channel1.id), obj5);
+      obj8.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect1, channel1.id), obj5);
       let prop;
       if (arg3 != null) {
         prop = arg3.openTextInVoiceIfVoiceChannel;

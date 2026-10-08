@@ -16,7 +16,7 @@ let obj2 = { marginBottom: nativeDefault.space.PX_8 };
 const result = size.fileFinishedImporting("modules/mfa/native/components/KeyImage.tsx");
 
 export const KeyImage = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function KeyImage() {
       const cResult = c.c(3);
       const tmp4 = closure_4();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -37,8 +37,10 @@ export const KeyImage = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => (
-      <View style={closure_4().container}>
-        {jsx(SecurityKeySpotIllustration.SecurityKeySpotIllustration, { scale: 0.6 })}
-      </View>
-    );
+  : function KeyImage() {
+      return (
+        <View style={closure_4().container}>
+          {jsx(SecurityKeySpotIllustration.SecurityKeySpotIllustration, { scale: 0.6 })}
+        </View>
+      );
+    };

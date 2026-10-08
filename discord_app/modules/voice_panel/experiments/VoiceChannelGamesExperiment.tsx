@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/experiments/VoiceChannelGamesExperiment.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsVoiceChannelGamesExperimentEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -27,5 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useIsVoiceChannelGamesExperimentEnabled(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };
 export const VoiceChannelGamesExperiment = tmp2;

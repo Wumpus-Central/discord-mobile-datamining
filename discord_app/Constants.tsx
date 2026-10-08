@@ -911,7 +911,6 @@ const frozen2 = Object.freeze({
     return "/guilds/" + searchId + "/messages/search/tabs";
   },
   SEARCH_TABS_DMS: "/users/@me/messages/search/tabs",
-  CHANGELOG_MESSAGES: "/changelogs/@me/messages",
   GUILD_APPLICATIONS(arg0) {
     return "/guilds/" + arg0 + "/applications";
   },
@@ -1478,8 +1477,8 @@ const frozen2 = Object.freeze({
   GUILD_EVENT_EXCEPTIONS(guild_id, id) {
     return "/guilds/" + guild_id + "/scheduled-events/" + id + "/exceptions";
   },
-  GUILD_EVENT_EXCEPTION(guild_id, id, c2) {
-    return "/guilds/" + guild_id + "/scheduled-events/" + id + "/exceptions/" + c2;
+  GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id) {
+    return "/guilds/" + guild_id + "/scheduled-events/" + id + "/exceptions/" + event_exception_id;
   },
   MEMBER_SAFETY_SUPPLEMENTAL(arg0) {
     return "/guilds/" + arg0 + "/members/supplemental";
@@ -2059,6 +2058,9 @@ const frozen2 = Object.freeze({
   GAME_ANNOUNCEMENTS(gameId) {
     return "/games/" + gameId + "/announcements";
   },
+  GAME_ORGANIZATION_INVITES(arg0, arg1) {
+    return "/game-organizations/" + arg0 + "/" + arg1 + "/invites";
+  },
   GUILD_ROOM(arg0, arg1) {
     return "/guilds/" + arg0 + "/rooms/" + arg1;
   },
@@ -2080,6 +2082,9 @@ const frozen2 = Object.freeze({
   CONJURE_PROJECTS: "/vibegrations/projects",
   CONJURE_PROJECT(projectId) {
     return "/vibegrations/projects/" + projectId;
+  },
+  CONJURE_PROJECT_UNPUBLISH(arg0) {
+    return "/vibegrations/projects/" + arg0 + "/unpublish";
   },
   CONJURE_PROJECT_LIMIT: "/vibegrations/project-limit",
   CONJURE_PROJECT_WS_TICKET(projectId) {
@@ -2963,7 +2968,6 @@ const obj2 = {
     return "/guilds/" + searchId + "/messages/search/tabs";
   },
   SEARCH_TABS_DMS: "/users/@me/messages/search/tabs",
-  CHANGELOG_MESSAGES: "/changelogs/@me/messages",
   GUILD_APPLICATIONS(arg0) {
     return "/guilds/" + arg0 + "/applications";
   },
@@ -3530,8 +3534,8 @@ const obj2 = {
   GUILD_EVENT_EXCEPTIONS(guild_id, id) {
     return "/guilds/" + guild_id + "/scheduled-events/" + id + "/exceptions";
   },
-  GUILD_EVENT_EXCEPTION(guild_id, id, c2) {
-    return "/guilds/" + guild_id + "/scheduled-events/" + id + "/exceptions/" + c2;
+  GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id) {
+    return "/guilds/" + guild_id + "/scheduled-events/" + id + "/exceptions/" + event_exception_id;
   },
   MEMBER_SAFETY_SUPPLEMENTAL(arg0) {
     return "/guilds/" + arg0 + "/members/supplemental";
@@ -4111,6 +4115,9 @@ const obj2 = {
   GAME_ANNOUNCEMENTS(gameId) {
     return "/games/" + gameId + "/announcements";
   },
+  GAME_ORGANIZATION_INVITES(arg0, arg1) {
+    return "/game-organizations/" + arg0 + "/" + arg1 + "/invites";
+  },
   GUILD_ROOM(arg0, arg1) {
     return "/guilds/" + arg0 + "/rooms/" + arg1;
   },
@@ -4132,6 +4139,9 @@ const obj2 = {
   CONJURE_PROJECTS: "/vibegrations/projects",
   CONJURE_PROJECT(projectId) {
     return "/vibegrations/projects/" + projectId;
+  },
+  CONJURE_PROJECT_UNPUBLISH(arg0) {
+    return "/vibegrations/projects/" + arg0 + "/unpublish";
   },
   CONJURE_PROJECT_LIMIT: "/vibegrations/project-limit",
   CONJURE_PROJECT_WS_TICKET(projectId) {
@@ -4290,7 +4300,6 @@ const obj5 = {
   PREMIUM_UPSELL_FILE_UPLOAD: "Premium Upsell Modal - Larger File Uploads",
   PREMIUM_UPSELL_CLIENT_THEMES: "Premium Upsell Modal - Client Themes",
   PREMIUM_UPSELL_APP_ICONS: "Premium Upsell Modal - App Icons",
-  PREMIUM_UPSELL_FOR_LATER: "Premium Upsell Modal - For Later",
   PREMIUM_UPSELL_SCHEDULED_MESSAGES: "Premium Upsell Modal - Scheduled Messages",
   PREMIUM_UPSELL_HALLOWEEN_GIFTING_CAMPAIGN: "Premium Upsell Modal - Halloween Gifting Campaign",
   PREMIUM_UPSELL_SEASONAL_GIFTING_CAMPAIGN: "Premium Upsell Modal - Seasonal Gifting Campaign",
@@ -4350,7 +4359,6 @@ const obj6 = {
   STICKER_PICKER_FLOATING_UPSELL: "Sticker Picker Floating Upsell",
   SOUND_PICKER_FLOATING_UPSELL: "Sound Picker Floating Upsell",
   EMPTY_STICKER_PICKER_UPSELL: "Empty Sticker Picker Upsell",
-  FOR_LATER_POPOUT_UPSELL: "For Later Popout Upsell",
   SCHEDULED_MESSAGES_LIST_UPSELL: "Scheduled Messages List Upsell",
   CREATE_STICKER_MODAL: "Create Sticker Modal",
   IOS_TWO_FA_MODAL: "Two Factor Auth Modal",
@@ -4372,7 +4380,6 @@ const obj6 = {
   PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT: "Premium Soundmoji Guild Info Popout",
   PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL: "Premium Custom Notification Sound Settings Upsell",
   PREMIUM_PERKS_DEMO_UPSELL_MODAL: "Premium Perks Demo Upsell Modal",
-  PREMIUM_FOR_LATER_UPSELL_MODAL: "Premium For Later Upsell Modal",
   PREMIUM_SCHEDULED_MESSAGES_UPSELL_MODAL: "Premium Scheduled Messages Upsell Modal",
   GIFT_CATEGORY_SELECT_MODAL: "Select Gift Category Modal",
   FOR_LATER_CREATE: "For Later Create",
@@ -5647,11 +5654,11 @@ const frozen16 = Object.freeze({
     }
     return combined;
   },
-  GAME_AUTOCOMPLETE(arg0, DEFAULT) {
+  GAME_AUTOCOMPLETE(arg0, arg1) {
     let combined = null;
     if (null != arg0) {
       const _HermesInternal = HermesInternal;
-      combined = "game-autocomplete/" + DEFAULT + "/" + arg0;
+      combined = "game-autocomplete/" + arg1 + "/" + arg0;
     }
     return combined;
   },
@@ -6296,6 +6303,7 @@ export const OverlayWidgets = {
   FRIENDS: "FRIENDS",
   CLICK_ZONE_DEBUG: "CLICK_ZONE_DEBUG",
   PERFORMANCE_DEBUG: "PERFORMANCE_DEBUG",
+  CONJURE: "CONJURE",
 };
 export const OverlayWidgetTypes = {
   DEFAULT: "DEFAULT",
@@ -7105,6 +7113,7 @@ export const JoinGuildSources = {
   GAME_COMMUNITY_UPSELL: "Game Community Upsell",
   ACTIVITY_PANEL_GAME_COMMUNITY_UPSELL: "Activity Panel Game Community Upsell",
   GAME_PROFILE_ANNOUNCEMENTS: "Game Profile Announcements",
+  GAME_PROFILE_COMMUNITIES: "Game Profile Communities",
   DISCOVERABLE_GUILD_INVITE_LURKER: "Discoverable Guild Invite - Lurker Mode",
   LEAVE_PROMPT_LURKER: "Leave Prompt - Lurker Mode",
 };
@@ -7717,6 +7726,7 @@ export const AnalyticEvents = {
   GAME_BLOCKLIST_TRIGGERED: "game_blocklist_triggered",
   GAME_APPLICATION_LOOKUP_FALLTHROUGH: "game_application_lookup_fallthrough",
   GAME_NAME_MATCH_FALLBACK: "game_name_match_fallback",
+  GAME_MODE_TOGGLED: "game_mode_toggled",
   ACTIVITY_UPDATED: "activity_updated",
   ACTIVITY_SESSION_JOINED: "activity_session_joined",
   ACTIVITY_SESSION_JOIN_FAILED: "activity_session_join_failed",
@@ -8543,6 +8553,8 @@ export const AnalyticEvents = {
   UPLOAD_FILE_LIMIT_ERROR: "upload_file_limit_error",
   UPDATE_USER_SETTINGS_LOCAL: "update_user_settings_local",
   UPDATE_SOUNDBOARD_SETTINGS: "update_soundboard_settings",
+  SOUNDBOARD_ECHO_VIEWED: "soundboard_echo_viewed",
+  SOUNDBOARD_ECHO_SOUND_DETAILS_VIEWED: "soundboard_echo_sound_details_viewed",
   SYNC_ACROSS_CLIENTS_TOGGLED: "sync_across_clients_toggled",
   CHANNEL_INFORMATION_OPENED: "channel_information_opened",
   CHANNEL_INFORMATION_TAB_CLICKED: "channel_information_tab_clicked",
@@ -8784,7 +8796,6 @@ export const AnalyticEvents = {
   SEND_MESSAGE_FAILURE: "send_message_failure",
   SEND_MESSAGE_QUEUED: "send_message_queued",
   SEND_MESSAGE_ROUNDTRIP: "send_message_roundtrip",
-  MESSAGE_MARKUP_PARSE: "message_markup_parse",
   VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED: "vc_tile_activities_entry_point_viewed",
   VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED: "vc_tile_activities_entry_point_closed",
   KV_FIELD_TRIAL_EXECUTED: "kv_field_trial_executed",
@@ -9120,6 +9131,7 @@ export const AnalyticEvents = {
   TYPING_INDICATOR_STYLE_REMOVED: "typing_indicator_style_removed",
   TYPING_INDICATOR_STYLE_SURPRISE_ME: "typing_indicator_style_surprise_me",
   TYPING_INDICATOR_STYLE_SEEN: "typing_indicator_style_seen",
+  TYPING_INDICATOR_STYLE_CLICKED: "typing_indicator_style_clicked",
   TYPING_INDICATOR_EDIT_SCREEN_OPENED: "typing_indicator_edit_screen_opened",
   RING_TO_GUILD_VC_BANNER_SHOWN: "impression_ring_to_guild_vc_banner_shown",
   RING_TO_GUILD_VC_MENU_ITEM_SHOWN: "impression_ring_to_guild_vc_menu_item_shown",
@@ -9242,6 +9254,7 @@ export const AnalyticEvents = {
   SMART_SEARCH_ANSWER_DWELLED: "smart_search_answer_dwelled",
   SMART_SEARCH_ANSWER_TOGGLED: "smart_search_answer_toggled",
   SMART_SEARCH_CITATION_OPENED: "smart_search_citation_opened",
+  SMART_SEARCH_FEEDBACK_GIVEN: "smart_search_feedback_given",
   SUGGESTED_SEARCHES_RETURNED: "suggested_searches_returned",
   SUGGESTED_SEARCHES_SHOWN: "suggested_searches_shown",
   SUGGESTED_SEARCH_STARTED: "suggested_search_started",
@@ -9686,6 +9699,7 @@ export const HelpdeskArticles = {
   POGGERMODE: "5706956956695",
   GUILD_HOME: "6156116949911",
   SERVER_WEB_PAGES: "4673515000983",
+  SERVER_WEB_PAGES_ADMIN: "44049845164823",
   TEXT_IN_VOICE: "4412085582359",
   QUARANTINE: "6461420677527",
   FORUMS: "6208479917079",

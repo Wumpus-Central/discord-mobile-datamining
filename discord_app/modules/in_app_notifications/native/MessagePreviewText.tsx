@@ -19,14 +19,14 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(12493);
+const InAppNotificationConstants = fn(12589);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Fonts = fn(1096).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4896);
-const PlatformUtils = fn(1370);
+let createStyles = fn(5090);
+const PlatformUtils = fn(1382);
 let obj3 = {
   italic: {
     fontStyle: "italic",
@@ -34,7 +34,7 @@ let obj3 = {
   },
 };
 let closure_10 = createStyles.createStyles(obj3);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj6 = {
   embedContainer: null,
   embedAccentBar: null,
@@ -82,13 +82,13 @@ obj6.embedTextContainer = {
   paddingVertical: nativeDefault.space.PX_4,
   paddingHorizontal: nativeDefault.space.PX_8,
 };
-let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "unicodeVersion" };
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "code" };
 obj6.embedMediaContainer = size;
 obj6.embedMedia = { width: "100%", height: "100%" };
 let closure_11 = createStyles.createStyles(obj6);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function NativeMessagePreviewContent(arg0) {
       const cResult = c.c(6);
       ({ message, lineClamp, maxHeight } = arg0);
       ({ gradientColors, gradientStyles } = useTruncatedGradientColorsDefault());
@@ -131,7 +131,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       };
     }
-  : (arg0) => {
+  : function NativeMessagePreviewContent(arg0) {
       ({ message, lineClamp, maxHeight } = arg0);
       const tmp = useTruncatedGradientColorsDefault();
       ({ gradientColors, gradientStyles } = tmp);
@@ -147,7 +147,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (text) => {
+  ? function SystemMessageText(text) {
       const cResult = c.c(4);
       text = text.text;
       const tmp4 = closure_10();
@@ -178,7 +178,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = tmp8;
       const obj2 = { variant: first, color: "text-subtle", style: tmp4.italic, lineClamp, children: text };
     }
-  : (children) => {
+  : function SystemMessageText(children) {
       const tmp = closure_10();
       const messagePreviewTextVariant = InAppNotificationUtils.getMessagePreviewTextVariant();
       return closure_1_8(Text_Text.Text, {
@@ -192,7 +192,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_13 = tmp4;
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (media) => {
+  ? function EmbedMediaThumbnail(media) {
       const cResult = c.c(13);
       media = media.media;
       const tmp3 = closure_11();
@@ -258,7 +258,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items;
       tmp6 = items;
     }
-  : (media) => {
+  : function EmbedMediaThumbnail(media) {
       media = media.media;
       const tmp = closure_11();
       let url = media.proxyURL;
@@ -283,7 +283,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (embed) => {
+  ? function EmbedCard(embed) {
       const cResult = c.c(25);
       embed = embed.embed;
       const tmp4 = closure_11();
@@ -440,7 +440,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp10;
       tmp9 = tmp10;
     }
-  : (embed) => {
+  : function EmbedCard(embed) {
       embed = embed.embed;
       const tmp = closure_11();
       const provider = embed.provider;
@@ -529,7 +529,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_notifications/native/MessagePreviewText.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MessagePreviewText(arg0) {
       const cResult = c.c(56);
       ({ message, lineClamp, maxHeight, showMessageAuthor } = arg0);
       const tmp4 = undefined !== showMessageAuthor && showMessageAuthor;
@@ -559,15 +559,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] !== message.embeds) {
           const _Symbol = Symbol;
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-            class S {
+            class H {
               constructor(arg0) {
                 tmp = null != arg0.image || null != arg0.thumbnail;
                 return tmp;
               }
             }
-            cResult[7] = S;
+            cResult[7] = H;
           } else {
-            class S {
+            class H {
               constructor(arg0) {
                 tmp = null != arg0.image || null != arg0.thumbnail;
                 return tmp;
@@ -575,25 +575,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const embeds = message.embeds;
-          const found = embeds.filter(S);
+          const found = embeds.filter(H);
           cResult[5] = message.embeds;
           cResult[6] = found;
         } else {
-          class S {
+          class H {
             constructor(arg0) {
               tmp = null != arg0.image || null != arg0.thumbnail;
               return tmp;
             }
           }
           if (arr2.length > 0) {
-            class S {
+            class H {
               constructor(arg0) {
                 tmp = null != arg0.image || null != arg0.thumbnail;
                 return tmp;
               }
             }
             if (tmp27.type === MessageEmbedTypes.MessageEmbedTypes.GIFV) {
-              class S {
+              class H {
                 constructor(arg0) {
                   tmp = null != arg0.image || null != arg0.thumbnail;
                   return tmp;
@@ -601,7 +601,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (cResult[10] !== getInitialMessagePreview) {
-              class S {
+              class H {
                 constructor(arg0) {
                   tmp = null != arg0.image || null != arg0.thumbnail;
                   return tmp;
@@ -612,7 +612,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[10] = getInitialMessagePreview;
               cResult[11] = tmp32;
             } else {
-              class S {
+              class H {
                 constructor(arg0) {
                   tmp = null != arg0.image || null != arg0.thumbnail;
                   return tmp;
@@ -620,7 +620,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (cResult[12] !== tmp27) {
-              class S {
+              class H {
                 constructor(arg0) {
                   tmp = null != arg0.image || null != arg0.thumbnail;
                   return tmp;
@@ -631,7 +631,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[12] = tmp27;
               cResult[13] = tmp35;
             } else {
-              class S {
+              class H {
                 constructor(arg0) {
                   tmp = null != arg0.image || null != arg0.thumbnail;
                   return tmp;
@@ -639,7 +639,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (cResult[14] === tmp28) {
-              class S {
+              class H {
                 constructor(arg0) {
                   tmp = null != arg0.image || null != arg0.thumbnail;
                   return tmp;
@@ -656,14 +656,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[16] = tmp39;
             tmp36 = tmp39;
           } else {
-            class S {
+            class H {
               constructor(arg0) {
                 tmp = null != arg0.image || null != arg0.thumbnail;
                 return tmp;
               }
             }
             if (isForwardMessageDefault(message)) {
-              class S {
+              class H {
                 constructor(arg0) {
                   tmp = null != arg0.image || null != arg0.thumbnail;
                   return tmp;
@@ -671,7 +671,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               let tmp15 = previewableMedia.length > 0;
               if (tmp15) {
-                class S {
+                class H {
                   constructor(arg0) {
                     tmp = null != arg0.image || null != arg0.thumbnail;
                     return tmp;
@@ -680,14 +680,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp15 = tmp16 === usePreviewableMedia.PreviewableMediaTypes.GIF;
               }
               if (previewableMedia.length > 0) {
-                class S {
+                class H {
                   constructor(arg0) {
                     tmp = null != arg0.image || null != arg0.thumbnail;
                     return tmp;
                   }
                 }
                 if (cResult[17] !== nullableMessageAuthor) {
-                  class S {
+                  class H {
                     constructor(arg0) {
                       tmp = null != arg0.image || null != arg0.thumbnail;
                       return tmp;
@@ -696,14 +696,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[17] = nullableMessageAuthor;
                   cResult[18] = tmp22;
                 } else {
-                  class S {
+                  class H {
                     constructor(arg0) {
                       tmp = null != arg0.image || null != arg0.thumbnail;
                       return tmp;
                     }
                   }
                   if (cResult[19] !== tmp21) {
-                    class S {
+                    class H {
                       constructor(arg0) {
                         tmp = null != arg0.image || null != arg0.thumbnail;
                         return tmp;
@@ -715,7 +715,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     cResult[20] = tmp26;
                     const tmp24 = tmp26;
                   } else {
-                    class S {
+                    class H {
                       constructor(arg0) {
                         tmp = null != arg0.image || null != arg0.thumbnail;
                         return tmp;
@@ -726,7 +726,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (cResult[21] === getInitialMessagePreview) {
-                class S {
+                class H {
                   constructor(arg0) {
                     tmp = null != arg0.image || null != arg0.thumbnail;
                     return tmp;
@@ -740,7 +740,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[23] = maxHeight;
               cResult[24] = tmp20;
             } else {
-              class S {
+              class H {
                 constructor(arg0) {
                   tmp = null != arg0.image || null != arg0.thumbnail;
                   return tmp;
@@ -758,7 +758,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = obj8;
       const tmpResult4 = useMessageAuthor;
     }
-  : (message) => {
+  : function MessagePreviewText(message) {
       message = message.message;
       ({ lineClamp, maxHeight, showMessageAuthor } = message);
       if (showMessageAuthor === undefined) {

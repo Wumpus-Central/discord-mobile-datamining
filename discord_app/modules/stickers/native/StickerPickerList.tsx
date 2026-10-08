@@ -8,7 +8,7 @@ import FastestListPropsPlaceholder from "../../fastest_list/props/FastestListPro
 import PremiumUpsellSectionDividerDefault from "../../premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx";
 import PremiumUpsellGradientBackground from "../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
 import StickerPickerListRowDefault from "StickerPickerListRow.tsx";
-import _modDef10156 from "../../../../_runtime/metro/10156__.js";
+import _modDef9742 from "../../../../_runtime/metro/09742__.js";
 import useStickerPickerListData from "useStickerPickerListData.tsx";
 import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -17,8 +17,8 @@ import StickersStore from "../StickersStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useStickerPickerStore = fn(10127).useStickerPickerStore;
-const StickerPickerConstants = fn(10095);
+const useStickerPickerStore = fn(9712).useStickerPickerStore;
+const StickerPickerConstants = fn(9679);
 ({
   STICKER_SCROLL_LOAD_DELAY_MS: closure_8,
   STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9,
@@ -28,7 +28,7 @@ const Constants = fn(1085);
 ({ AnalyticsPages: closure_11, AnalyticsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   listPlaceholder: { color: nativeDefault.colors.BACKGROUND_MOD_MUTED },
   section: null,
@@ -63,7 +63,7 @@ let closure_16 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_17 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (height) => {
+    ? function EmojiPickerListNSFWRow(height) {
         const cResult = c.c(12);
         height = height.height;
         const tmp4 = closure_16();
@@ -81,7 +81,7 @@ let closure_17 = noop.memo(
           }
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj3 = { source: _modDef10156, size: native.Icon.Sizes.SMALL };
+            const obj3 = { source: _modDef9742, size: native.Icon.Sizes.SMALL };
             const tmp11 = __initData2(native.Icon, obj3);
             cResult[5] = tmp11;
             let tmp8 = tmp11;
@@ -132,12 +132,12 @@ let closure_17 = noop.memo(
         cResult[4] = items1;
         tmp6 = items1;
       }
-    : (height) => {
+    : function EmojiPickerListNSFWRow(height) {
         const tmp = closure_16();
         const obj = { style: null, children: null };
         const items = [tmp.nsfwContainer, { height: height.height }];
         obj.style = items;
-        const items1 = [__initData2(native.Icon, { source: _modDef10156, size: native.Icon.Sizes.SMALL })];
+        const items1 = [__initData2(native.Icon, { source: _modDef9742, size: native.Icon.Sizes.SMALL })];
         const obj3 = {
           style: tmp.nsfwText,
           variant: "text-sm/normal",
@@ -154,7 +154,7 @@ let closure_17 = noop.memo(
 ReactCompilerGating = fn(558);
 let closure_18 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function StickerPickerListSection(arg0) {
         const cResult = c.c(14);
         ({ height, label, isSectionNitroLocked, sectionStyle } = arg0);
         const tmp4 = closure_16();
@@ -222,7 +222,7 @@ let closure_18 = noop.memo(
         cResult[5] = items1;
         tmp6 = items1;
       }
-    : (isSectionNitroLocked) => {
+    : function StickerPickerListSection(isSectionNitroLocked) {
         isSectionNitroLocked = isSectionNitroLocked.isSectionNitroLocked;
         ({ height, label, sectionStyle } = isSectionNitroLocked);
         const obj = { style: null, children: null };
@@ -247,7 +247,7 @@ let closure_18 = noop.memo(
 ReactCompilerGating = fn(558);
 let closure_19 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function StickerPickerListSectionFooter(arg0) {
         const cResult = c.c(7);
         ({ height, isSectionNitroLocked } = arg0);
         if (cResult[0] !== height) {
@@ -281,7 +281,7 @@ let closure_19 = noop.memo(
         cResult[6] = tmp9;
         tmp8 = tmp9;
       }
-    : (height) => {
+    : function StickerPickerListSectionFooter(height) {
         let isSectionNitroLocked = height.isSectionNitroLocked;
         const obj = { style: { height: height.height }, children: null };
         if (isSectionNitroLocked) {
@@ -306,7 +306,7 @@ let result = size.fileFinishedImporting("modules/stickers/native/StickerPickerLi
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (bottomSheetRef) => {
+    ? function StickerPickerList(bottomSheetRef) {
         const cResult = bottomSheetRef(setCategoryIndex[11]).c(128);
         bottomSheetRef = bottomSheetRef.bottomSheetRef;
         const bottomSheetIndex = bottomSheetRef.bottomSheetIndex;
@@ -429,7 +429,7 @@ export default noop.memo(
             }
           }
         }
-        function oe(index) {
+        function scrollTo(index) {
           index = index.index;
           ({ delay, expand } = index);
           tmp23();
@@ -452,10 +452,10 @@ export default noop.memo(
         cResult[7] = bottomSheetRef;
         cResult[8] = setCategoryIndex;
         cResult[9] = tmp20;
-        cResult[10] = oe;
+        cResult[10] = scrollTo;
         const tmpResult4 = bottomSheetRef(setCategoryIndex[21]);
       }
-    : (bottomSheetRef) => {
+    : function StickerPickerList(bottomSheetRef) {
         bottomSheetRef = bottomSheetRef.bottomSheetRef;
         const bottomSheetIndex = bottomSheetRef.bottomSheetIndex;
         const setCategoryIndex = bottomSheetRef.setCategoryIndex;
@@ -514,9 +514,9 @@ export default noop.memo(
           }
           closure_0 = { scrollTo: -1 };
           return {
-            scroll(layout) {
-              const index = layout.index;
-              ({ delay, expand } = layout);
+            scroll: function scrollTo(index) {
+              index = index.index;
+              ({ delay, expand } = index);
               clearTimeout(closure_0.scrollTo);
               if (expand) {
                 let current = bottomSheetRef.current;

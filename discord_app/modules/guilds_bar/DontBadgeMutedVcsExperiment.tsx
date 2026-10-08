@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/DontBadgeMutedVcsExperiment.tsx");
 
 export const useIsDontBadgeMutedVcsEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsDontBadgeMutedVcsEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -26,7 +26,9 @@ export const useIsDontBadgeMutedVcsEnabled = ReactCompilerGating.isReactCompiler
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useIsDontBadgeMutedVcsEnabled(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };
 export const getIsDontBadgeMutedVcsEnabled = function getIsDontBadgeMutedVcsEnabled(GuildMediaStateStore) {
   return closure_2.getConfig({ location: GuildMediaStateStore }).enabled;
 };

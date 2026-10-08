@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06326_LegacyBaseButton.js";
 import cheapWorkletShallowEqual from "../../../../modules/reanimated/native/cheapWorkletShallowEqual.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../../modules/user_settings/LocaleStore.tsx";
@@ -22,7 +22,7 @@ let c9 = 0.04;
 let c10 = 0.9;
 let c11 = 16;
 let closure_12 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_13 = createStyles.createStyles((gap, arg1) => {
   const obj = {
     container: {
@@ -125,7 +125,7 @@ let result = size.fileFinishedImporting("design/components/Tabs/native/Tabs.nati
 
 export { defaultCountFormatter };
 export const Tabs = ReactCompilerGating.isReactCompilerEnabled()
-  ? (state) => {
+  ? function Tabs(state) {
       let GestureDetector = state;
       let tmp = onEndDrag;
       const cResult = state(onEndDrag[8]).c(41);
@@ -543,13 +543,13 @@ export const Tabs = ReactCompilerGating.isReactCompilerEnabled()
         obj.grow = grow;
         obj.pressed = pressedIndex;
         obj.selected = index === activeIndex.get();
-        obj.onPress = function onPress() {
+        obj.onPress = function handlePress() {
           setActiveIndex(closure_0);
         };
-        obj.onPressIn = function onPressIn() {
+        obj.onPressIn = function handlePressIn() {
           const result = pressedIndex.set(closure_0);
         };
-        obj.onPressOut = function onPressOut() {
+        obj.onPressOut = function handlePressOut() {
           const result = pressedIndex.set(-1);
         };
         obj.variant = variant;
@@ -566,7 +566,7 @@ export const Tabs = ReactCompilerGating.isReactCompilerEnabled()
       cResult[20] = me;
       tmp16 = me;
     }
-  : (state) => {
+  : function Tabs(state) {
       state = state.state;
       let flag = state.grow;
       if (flag === undefined) {
@@ -770,7 +770,7 @@ export const Tabs = ReactCompilerGating.isReactCompilerEnabled()
         SELECTED_INDICATOR_SPRING: itemSpacing,
       };
       let obj8 = { onScroll: null, onEndDrag: null };
-      class P {
+      class F {
         constructor(arg0) {
           result = scrollOffset.set(state.contentOffset.x);
           if (onScrollWorklet != null) {
@@ -779,10 +779,10 @@ export const Tabs = ReactCompilerGating.isReactCompilerEnabled()
           return;
         }
       }
-      P.__closure = { scrollOffset, onScrollWorklet };
-      P.__workletHash = 12423910570232;
-      P.__initData = __initData4;
-      obj8.onScroll = P;
+      F.__closure = { scrollOffset, onScrollWorklet };
+      F.__workletHash = 12423910570232;
+      F.__initData = __initData4;
+      obj8.onScroll = F;
       const fn2 = function w() {
         if (onEndDrag != null) {
           tmp();
@@ -915,17 +915,17 @@ export const Tabs = ReactCompilerGating.isReactCompilerEnabled()
               obj.grow = grow;
               obj.pressed = pressed;
               obj.selected = index === closure_7.get();
-              obj.onPress = function onPress() {
+              obj.onPress = function handlePress() {
                 setActiveIndex(closure_0);
               };
-              obj.onPressIn = function onPressIn() {
+              obj.onPressIn = function handlePressIn() {
                 const result = pressed.set(closure_0);
               };
-              obj.onPressOut = function onPressOut() {
+              obj.onPressOut = function handlePressOut() {
                 const result = pressed.set(-1);
               };
               obj.variant = variant;
-              return variant(state(12298).TabItem, obj, id);
+              return variant(state(12396).TabItem, obj, id);
             }),
           }),
         items3,

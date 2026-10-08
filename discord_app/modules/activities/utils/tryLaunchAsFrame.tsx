@@ -1,16 +1,16 @@
 // discord_app/modules/activities/utils/tryLaunchAsFrame.tsx
-import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
 import canLaunchContextlessFrame from "../../frames/utils/canLaunchContextlessFrame.tsx";
+import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
 require = fn;
-const MAIN_SURFACE = fn(8738).MAIN_SURFACE;
+const MAIN_SURFACE = fn(10613).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 
 export const tryLaunchAsFrame = function tryLaunchAsFrame(applicationId) {
   applicationId = applicationId.applicationId;
-  ({ customId, referrerId, analyticsContext } = applicationId);
+  ({ launch, analyticsContext } = applicationId);
   const application = ApplicationStore.getApplication(applicationId);
   let tmp2 = null == application;
   if (!tmp2) {
@@ -18,7 +18,7 @@ export const tryLaunchAsFrame = function tryLaunchAsFrame(applicationId) {
   }
   let flag = !tmp2;
   if (!tmp2) {
-    const obj3 = { applicationId, surface: MAIN_SURFACE, customId, referrerId, analyticsContext };
+    const obj3 = { applicationId, surface: MAIN_SURFACE, launch, analyticsContext };
     FramesActionCreatorsDefault.launchFrame(obj3);
     flag = true;
   }

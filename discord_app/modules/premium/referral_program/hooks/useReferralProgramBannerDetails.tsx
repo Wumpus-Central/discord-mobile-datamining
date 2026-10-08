@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/premium/referral_program/hook
 
 export const MAX_REFERRALS_SENT = 3;
 export const useReferralProgramBannerDetails = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useReferralProgramBannerDetails() {
       const cResult = stateFromStoresArray(576).c(14);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReferralTrialStore];
@@ -34,71 +34,96 @@ export const useReferralProgramBannerDetails = ReactCompilerGating.isReactCompil
         tmp7 = cResult[2];
       }
       if (cResult[3] !== stateFromStoresArray) {
-        const fn2 = function u() {
-          const mapped = stateFromStoresArray.map((item) => user.getUser(item));
-          return mapped.filter((item) => null != item);
-        };
+        class S {
+          constructor() {
+            mapped = closure_0.map((item) => user.getUser(item));
+            return mapped.filter((item) => null != item);
+          }
+        }
         cResult[3] = stateFromStoresArray;
-        cResult[4] = fn2;
-        let tmp9 = fn2;
+        cResult[4] = S;
       } else {
-        tmp9 = cResult[4];
+        class S {
+          constructor() {
+            mapped = closure_0.map((item) => user.getUser(item));
+            return mapped.filter((item) => null != item);
+          }
+        }
       }
       const tmpResult = stateFromStoresArray(504);
-      const stateFromStoresArray1 = stateFromStoresArray(504).useStateFromStoresArray(tmp7, tmp9);
+      const stateFromStoresArray1 = stateFromStoresArray(504).useStateFromStoresArray(tmp7, S);
       if (cResult[5] !== stateFromStoresArray) {
-        const fn3 = function h() {
-          const item = stateFromStoresArray.forEach((item) => {
-            const user = stateFromStoresArray(closure_1_1[6]).getUser(item);
-          });
-        };
+        class S {
+          constructor() {
+            mapped = closure_0.map((item) => user.getUser(item));
+            return mapped.filter((item) => null != item);
+          }
+        }
         const items2 = [stateFromStoresArray];
         cResult[5] = stateFromStoresArray;
-        cResult[6] = fn3;
+        cResult[6] = tmp13;
         cResult[7] = items2;
         let tmp12 = items2;
-        let tmp11 = fn3;
       } else {
-        tmp11 = cResult[6];
+        class S {
+          constructor() {
+            mapped = closure_0.map((item) => user.getUser(item));
+            return mapped.filter((item) => null != item);
+          }
+        }
         tmp12 = cResult[7];
       }
-      const effect = noop.useEffect(tmp11, tmp12);
+      const effect = noop.useEffect(tmp13, tmp12);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+        class S {
+          constructor() {
+            mapped = closure_0.map((item) => user.getUser(item));
+            return mapped.filter((item) => null != item);
+          }
+        }
         const items3 = [ReferralTrialStore];
-        const fn4 = function v() {
+        const fn2 = function v() {
           return authStore.getRefreshAt();
         };
         cResult[8] = items3;
-        cResult[9] = fn4;
-        let tmp15 = fn4;
-        let tmp14 = items3;
+        cResult[9] = fn2;
+        let tmp16 = fn2;
+        const tmp15 = items3;
       } else {
-        tmp14 = cResult[8];
-        tmp15 = cResult[9];
+        class S {
+          constructor() {
+            mapped = closure_0.map((item) => user.getUser(item));
+            return mapped.filter((item) => null != item);
+          }
+        }
+        tmp16 = cResult[9];
       }
       const tmpResult3 = stateFromStoresArray(504);
-      const stateFromStores = stateFromStoresArray(504).useStateFromStores(tmp14, tmp15);
+      const stateFromStores = stateFromStoresArray(504).useStateFromStores(tmp15, tmp16);
       if ((cResult[10] === 3) === stateFromStoresArray.length) {
-        if (cResult[11] === stateFromStores) {
-          if (cResult[12] === stateFromStoresArray1) {
-            let tmp19 = cResult[13];
+        class S {
+          constructor() {
+            mapped = closure_0.map((item) => user.getUser(item));
+            return mapped.filter((item) => null != item);
           }
-          return tmp19;
         }
       }
+      cResult[10] = 3 === stateFromStoresArray.length;
+      cResult[11] = stateFromStores;
+      cResult[12] = stateFromStoresArray1;
+      cResult[13] = {
+        referralSentUsers: stateFromStoresArray1,
+        hasSentAllReferrals: 3 === stateFromStoresArray.length,
+        refreshAt: stateFromStores,
+      };
       const obj2 = {
         referralSentUsers: stateFromStoresArray1,
         hasSentAllReferrals: 3 === stateFromStoresArray.length,
         refreshAt: stateFromStores,
       };
-      cResult[10] = 3 === stateFromStoresArray.length;
-      cResult[11] = stateFromStores;
-      cResult[12] = stateFromStoresArray1;
-      cResult[13] = obj2;
-      tmp19 = obj2;
       const tmpResult4 = stateFromStoresArray(504);
     }
-  : () => {
+  : function useReferralProgramBannerDetails() {
       const items = [ReferralTrialStore];
       stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => authStore.getSentUserIds());
       const obj = stateFromStoresArray(504);

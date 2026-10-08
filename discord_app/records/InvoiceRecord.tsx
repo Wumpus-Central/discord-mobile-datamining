@@ -3,6 +3,7 @@ import PremiumSubscriptionInvoiceItem from "../modules/premium/PremiumSubscripti
 import Record from "../lib/Record.tsx";
 
 require = fn;
+const PaymentGateways = fn(1085).PaymentGateways;
 let BaseInvoiceRecord;
 class BaseInvoiceRecord extends tmp2 {
   constructor(arg0) {
@@ -133,7 +134,12 @@ class InvoiceRecord extends BaseInvoiceRecord {
       orbsReward: tmp.orbsReward,
       checkoutContext: tmp.checkoutContext,
       applyWalletBalance: tmp.applyWalletBalance,
+      paymentLegs,
     } = global);
+    if (paymentLegs == null) {
+      paymentLegs = [];
+    }
+    tmp.paymentLegs = paymentLegs;
     return tmp;
   }
 }
@@ -186,7 +192,12 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
       orbsReward: tmp12.orbsReward,
       checkoutContext: tmp12.checkoutContext,
       applyWalletBalance: tmp12.applyWalletBalance,
+      paymentLegs,
     } = obj);
+    if (paymentLegs == null) {
+      paymentLegs = [];
+    }
+    tmp12.paymentLegs = paymentLegs;
     return tmp12;
   } else {
     throw new TypeError("Trying to call a non-function");
@@ -308,7 +319,12 @@ InvoiceRecord["createFromOrder"] = function createFromOrder(billing_facet) {
         orbsReward: tmp9.orbsReward,
         checkoutContext: tmp9.checkoutContext,
         applyWalletBalance: tmp9.applyWalletBalance,
+        paymentLegs,
       } = obj);
+      if (paymentLegs == null) {
+        paymentLegs = [];
+      }
+      tmp9.paymentLegs = paymentLegs;
       return tmp9;
     } else {
       throw new TypeError("Trying to call a non-function");
@@ -336,16 +352,17 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
     orbsReward: null,
     checkoutContext: null,
     applyWalletBalance: null,
+    paymentLegs: null,
   };
   const date = new Date(0);
   const tmp5 = new.target;
   const tmp7 = new.target;
   obj.subscriptionPeriodEnd = new Date(0);
-  ({ orbs_reward: obj.orbsReward, checkout_context } = invoice_items);
-  obj.checkoutContext = checkout_context;
-  obj.applyWalletBalance = invoice_items.apply_wallet_balance;
+  ({ orbs_reward: obj.orbsReward, checkout_context: obj.checkoutContext, apply_wallet_balance } = invoice_items);
+  obj.applyWalletBalance = apply_wallet_balance;
+  obj.paymentLegs = invoice_items.payment_legs;
   if (typeof InvoiceRecord === "function") {
-    const tmp13 = new InvoiceRecord(obj, require, tmp5, tmp7, checkout_context, InvoiceRecord);
+    const tmp13 = new InvoiceRecord(obj, require, tmp5, tmp7, apply_wallet_balance, InvoiceRecord);
     ({ id: tmp13.id, invoiceItems } = obj);
     if (invoiceItems == null) {
       invoiceItems = [];
@@ -359,12 +376,30 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
       orbsReward: tmp13.orbsReward,
       checkoutContext: tmp13.checkoutContext,
       applyWalletBalance: tmp13.applyWalletBalance,
+      paymentLegs,
     } = obj);
+    if (paymentLegs == null) {
+      paymentLegs = [];
+    }
+    tmp13.paymentLegs = paymentLegs;
     return tmp13;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
   const date1 = new Date(0);
+};
+prototype2["getWalletAmount"] = function getWalletAmount() {
+  const paymentLegs = this.paymentLegs;
+  return paymentLegs.reduce((acc, payment_gateway) => {
+    let sum = acc;
+    if (payment_gateway.payment_gateway === constants.TDS) {
+      sum = acc + payment_gateway.amount;
+    }
+    return sum;
+  }, 0);
+};
+prototype2["getAmountDue"] = function getAmountDue() {
+  return this.total - this.getWalletAmount();
 };
 prototype2["findInvoiceItemByPlanId"] = function findInvoiceItemByPlanId(id) {
   closure_0 = id;

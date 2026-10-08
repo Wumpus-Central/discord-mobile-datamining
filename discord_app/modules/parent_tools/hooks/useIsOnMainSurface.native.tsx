@@ -55,7 +55,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useIsOnMainSurface.native.tsx");
 
 export const useIsOnMainSurface = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsOnMainSurface() {
       const cResult = require("c").c(2);
       const tmp2 = _slicedToArray(noop.useState(getIsOnMainSurface), 2);
       _require = tmp2[1];
@@ -85,7 +85,7 @@ export const useIsOnMainSurface = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp3, tmp4);
       return tmp2[0];
     }
-  : () => {
+  : function useIsOnMainSurface() {
       [tmp2, require] = noop.useState(getIsOnMainSurface);
       const effect = noop.useEffect(() => {
         function handleNavigationChange() {

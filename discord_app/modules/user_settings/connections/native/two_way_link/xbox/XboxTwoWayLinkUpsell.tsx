@@ -6,14 +6,14 @@ import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators.tsx";
 import OneWayToTwoWayLinkUpsell2 from "../OneWayToTwoWayLinkUpsell.tsx";
-import _modDef14791 from "../../../../../../../_runtime/metro/14791__.js";
+import _modDef15052 from "../../../../../../../_runtime/metro/15052__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Constants = fn(1085);
 ({ HelpdeskArticles: c3, AnalyticsLocations: closure_4 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const XboxTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function XboxTwoWayLinkUpsell() {
       const cResult = c.c(8);
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -42,8 +42,8 @@ export const XboxTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabled()
         [tmp5, tmp6, tmp7] = cResult;
       }
       if (cResult[3] !== tmp4.upsellImage) {
-        const obj4 = { style: tmp4.upsellImage, source: _modDef14791, resizeMode: "contain" };
-        const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef14791, resizeMode: "contain" });
+        const obj4 = { style: tmp4.upsellImage, source: _modDef15052, resizeMode: "contain" };
+        const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef15052, resizeMode: "contain" });
         cResult[3] = tmp4.upsellImage;
         cResult[4] = tmp17;
         let tmp13 = tmp17;
@@ -51,66 +51,41 @@ export const XboxTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = cResult[4];
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        class O {
-          constructor() {
-            obj = closure_1_1(closure_1_2[11]);
-            items = [];
-            items[0] = closure_1_4.RELINK_UPSELL;
-            return obj.showModal(items);
-          }
-        }
-        cResult[5] = O;
+        const fn = function p() {
+          const items = [constants.RELINK_UPSELL];
+          return XboxLinkModalActionCreatorsDefault.showModal(items);
+        };
+        cResult[5] = fn;
+        let tmp18 = fn;
       } else {
-        class O {
-          constructor() {
-            obj = closure_1_1(closure_1_2[11]);
-            items = [];
-            items[0] = closure_1_4.RELINK_UPSELL;
-            return obj.showModal(items);
-          }
-        }
+        tmp18 = cResult[5];
       }
       if (cResult[6] !== tmp13) {
-        class O {
-          constructor() {
-            obj = closure_1_1(closure_1_2[11]);
-            items = [];
-            items[0] = closure_1_4.RELINK_UPSELL;
-            return obj.showModal(items);
-          }
-        }
         const obj5 = {
           title: tmp6,
           body: tmp7,
           img: tmp13,
           newIndicatorDismissibleContent: dismissible_content.DismissibleContent.XBOX_ONE_WAY_RECONNECT,
-          onPress: O,
+          onPress: tmp18,
         };
-        const tmp20 = (
+        const tmp21 = (
           <tmp5
             title={tmp6}
             body={tmp7}
             img={tmp13}
             newIndicatorDismissibleContent={dismissible_content.DismissibleContent.XBOX_ONE_WAY_RECONNECT}
-            onPress={O}
+            onPress={tmp18}
           />
         );
         cResult[6] = tmp13;
-        cResult[7] = tmp20;
-        const tmp19 = tmp20;
+        cResult[7] = tmp21;
+        let tmp19 = tmp21;
       } else {
-        class O {
-          constructor() {
-            obj = closure_1_1(closure_1_2[11]);
-            items = [];
-            items[0] = closure_1_4.RELINK_UPSELL;
-            return obj.showModal(items);
-          }
-        }
+        tmp19 = cResult[7];
       }
       return tmp19;
     }
-  : () => {
+  : function XboxTwoWayLinkUpsell() {
       const tmp = closure_6();
       const articleURL = HelpdeskUtilsDefault.getArticleURL(constants.XBOX_CONNECTION);
       const obj2 = { title: null, body: null, img: null, newIndicatorDismissibleContent: null, onPress: null };
@@ -119,7 +94,7 @@ export const XboxTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = util.intl;
       obj2.body = intl2.format(util.t.OnERSS, { help_article: articleURL });
       const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
-      obj3.source = _modDef14791;
+      obj3.source = _modDef15052;
       obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
       obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.XBOX_ONE_WAY_RECONNECT;
       obj2.onPress = function onPress() {

@@ -29,7 +29,7 @@ export const getDrawerWidth = function getDrawerWidth() {
   }
 };
 export const useDrawerWidth = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDrawerWidth() {
       const cResult = c.c(3);
       const width = useBaseAppContainerDimensionsDefault().width;
       const tmp2 = useChatLayoutDefault();
@@ -48,7 +48,7 @@ export const useDrawerWidth = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = bound;
       }
     }
-  : () => {
+  : function useDrawerWidth() {
       const width = useBaseAppContainerDimensionsDefault().width;
       if (!tmp.isChatBesideChannelList) {
         return width;

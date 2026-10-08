@@ -16,7 +16,7 @@ const View = fn(17).View;
 const Constants = fn(1085);
 ({ BANNER_HEIGHT: metroRequire, EMPTY_STRING_SNOWFLAKE_ID: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({
   imageContainer: { width: "100%", height: "100%" },
   image: { width: "100%", height: "100%" },
@@ -24,7 +24,7 @@ let closure_9 = createStyles.createStyles({
 let ReactCompilerGating = fn(558);
 let closure_10 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (applicationId) => {
+    ? function RecommendationBannerEmbedded(applicationId) {
         const cResult = c.c(20);
         applicationId = applicationId.applicationId;
         const width = AppLauncherContext.useRequiredAppLauncherContext().width;
@@ -88,7 +88,7 @@ let closure_10 = noop.memo(
                   }
                 }
                 if (null != imageSource) {
-                  tmp6 = tmp6(5981);
+                  tmp6 = tmp6(6164);
                   const obj = { style: imageStyle, source: imageSource, resizeMode: "cover" };
                   let tmp19 = <tmp6 style={imageStyle} source={imageSource} resizeMode="cover" />;
                 } else {
@@ -122,10 +122,10 @@ let closure_10 = noop.memo(
         tmp5 = obj10;
         const tmpResult = HeroMedia;
       }
-    : (applicationId) => {
+    : function RecommendationBannerEmbedded(applicationId) {
         let heroMediaDimensions;
-        let obj = heroMediaDimensions(11007);
-        heroMediaDimensions = heroMediaDimensions(11722).useHeroMediaDimensions({
+        let obj = heroMediaDimensions(11232);
+        heroMediaDimensions = heroMediaDimensions(11787).useHeroMediaDimensions({
           width: obj.useRequiredAppLauncherContext().width,
         });
         const tmp4 = useEmbeddedActivityBackgroundDefault({
@@ -168,7 +168,7 @@ let closure_10 = noop.memo(
 ReactCompilerGating = fn(558);
 let closure_11 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (applicationBot) => {
+    ? function ReccomendationBannerBot(applicationBot) {
         const cResult = c.c(5);
         applicationBot = applicationBot.applicationBot;
         let id;
@@ -199,7 +199,7 @@ let closure_11 = noop.memo(
         cResult[4] = tmp15;
         tmp14 = tmp15;
       }
-    : (applicationBot) => {
+    : function ReccomendationBannerBot(applicationBot) {
         applicationBot = applicationBot.applicationBot;
         let id;
         if (applicationBot != null) {
@@ -223,7 +223,7 @@ let result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (isActivity) => {
+    ? function RecommendationBanner(isActivity) {
         const cResult = c.c(18);
         ({ applicationId, applicationIcon, applicationBot, overrideImageUrl } = isActivity);
         let imageContainer = closure_9();
@@ -311,7 +311,7 @@ export default noop.memo(
         cResult[3] = applicationIconSource;
         tmp3 = applicationIconSource;
       }
-    : (arg0) => {
+    : function RecommendationBanner(arg0) {
         ({ applicationId, applicationBot, overrideImageUrl } = arg0);
         ({ isActivity, applicationIcon } = arg0);
         const tmp = closure_9();

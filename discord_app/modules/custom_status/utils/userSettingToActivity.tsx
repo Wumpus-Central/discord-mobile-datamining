@@ -73,9 +73,9 @@ export const getActivityFromCustomStatus = function getActivityFromCustomStatus(
   return _activityFromSetting(setting, usableCustomEmojiById);
 };
 export const useCustomStatusActivity = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCustomStatusActivity() {
       const cResult = emojiId(576).c(7);
-      const CustomStatusSetting = emojiId(2028).CustomStatusSetting;
+      const CustomStatusSetting = emojiId(2040).CustomStatusSetting;
       const setting = CustomStatusSetting.useSetting();
       emojiId = undefined;
       if (setting != null) {
@@ -127,7 +127,7 @@ export const useCustomStatusActivity = ReactCompilerGating.isReactCompilerEnable
       tmp11 = tmp12;
       const tmpResult = emojiId(504);
     }
-  : () => {
+  : function useCustomStatusActivity() {
       const CustomStatusSetting = setting(stateFromStores[6]).CustomStatusSetting;
       setting = CustomStatusSetting.useSetting();
       let emojiId;

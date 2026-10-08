@@ -1,6 +1,6 @@
 // discord_app/modules/ads/analytics/captureAdUserAction.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../../_runtime/01266_v1.js";
+import v1 from "../../../../_runtime/01278_v1.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import getDeviceMetadataDefault from "../../device/getDeviceMetadata.native.tsx";
@@ -349,6 +349,7 @@ function handleViewImpression(minViewTimeSeconds) {
     const obj6 = {
       event: AnalyticEvents.QUEST_CONTENT_VIEWED,
       adContentId: null,
+      noFillDecision: null,
       relatedQuestId: null,
       adCreativeType: null,
       trackGuildAndChannelMetadata: null,
@@ -358,6 +359,7 @@ function handleViewImpression(minViewTimeSeconds) {
     };
     ({
       adCreativeId: obj9.adContentId,
+      noFillDecision: obj9.noFillDecision,
       relatedQuestId: obj9.relatedQuestId,
       adCreativeType: obj9.adCreativeType,
     } = minViewTimeSeconds);
@@ -565,6 +567,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           const obj5 = {
             event: constants.QUEST_CONTENT_LOADED,
             adContentId: null,
+            noFillDecision: null,
             relatedQuestId: null,
             adCreativeType: null,
             trackGuildAndChannelMetadata: null,
@@ -573,6 +576,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           };
           ({
             adCreativeId: obj8.adContentId,
+            noFillDecision: obj8.noFillDecision,
             relatedQuestId: obj8.relatedQuestId,
             adCreativeType: obj8.adCreativeType,
             trackGuildAndChannelMetadata: obj8.trackGuildAndChannelMetadata,

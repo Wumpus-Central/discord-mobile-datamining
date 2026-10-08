@@ -294,6 +294,16 @@ prototype["trackSmartSearchAnswerDwelled"] = function trackSmartSearchAnswerDwel
   obj2.dwell_duration_ms = Math.round(dwellDurationMs);
   AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SMART_SEARCH_ANSWER_DWELLED, obj2);
 };
+prototype["trackSmartSearchFeedbackGiven"] = function trackSmartSearchFeedbackGiven(
+  arg0,
+  SearchSessionAnalyticsManager,
+) {
+  ({ smartSearchQuery, hasPositiveFeedback } = arg0);
+  const obj2 = {};
+  const merged = Object.assign(this.getContextualProperties(smartSearchQuery, SearchSessionAnalyticsManager));
+  obj2.is_positive_feedback = hasPositiveFeedback;
+  AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SMART_SEARCH_FEEDBACK_GIVEN, obj2);
+};
 let merged = Object.assign({
   rowVisibilityState: null,
   dwellStartTime: null,

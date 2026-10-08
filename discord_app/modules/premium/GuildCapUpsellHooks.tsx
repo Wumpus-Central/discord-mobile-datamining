@@ -24,7 +24,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/GuildCapUpsellHooks.tsx");
 
 export const useShouldShowInlineGuildCapUpsell = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShouldShowInlineGuildCapUpsell() {
       const cResult = c.c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
@@ -41,7 +41,7 @@ export const useShouldShowInlineGuildCapUpsell = ReactCompilerGating.isReactComp
       let stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [HotspotStore2.HotspotStore];
-        const fn2 = function c() {
+        const fn2 = function p() {
           const HotspotStore = HotspotStore2.HotspotStore;
           return HotspotStore.hasHotspot(HotspotStore2.HotspotLocations.GUILD_CAP_INLINE_UPSELL);
         };
@@ -81,7 +81,7 @@ export const useShouldShowInlineGuildCapUpsell = ReactCompilerGating.isReactComp
       }
       return stateFromStores;
     }
-  : () => {
+  : function useShouldShowInlineGuildCapUpsell() {
       const items = [GuildStore];
       let stateFromStores = initialize.useStateFromStores(items, () => guildCount.getGuildCount() >= 95);
       const items1 = [HotspotStore2.HotspotStore];

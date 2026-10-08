@@ -20,7 +20,7 @@ function handleThemeChange() {
   }
   return flag;
 }
-const ThemeConstants = fn(1196);
+const ThemeConstants = fn(1208);
 ({ SystemTheme: metroRequire, THEME_PREFERENCES_WEB_REFRESH, THEME_PREFERENCES_MOBILE } = ThemeConstants);
 const UserSettingsDelay = fn(1095).UserSettingsDelay;
 const ThemeTypes = fn(1085).ThemeTypes;

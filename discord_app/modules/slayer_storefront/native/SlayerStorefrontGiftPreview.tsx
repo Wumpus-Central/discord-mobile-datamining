@@ -1,7 +1,7 @@
 // discord_app/modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef3623 from "../intl/SlayerStorefront.messages.js";
+import _modDef3697 from "../intl/SlayerStorefront.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard.tsx";
 import InfoBox from "../../user_settings/authorized_apps/native/InfoBox.tsx";
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({
   container: { alignItems: "center", justifyContent: "center", gap: 16, marginTop: 20 },
   text: { textAlign: "center", paddingHorizontal: 32 },
@@ -22,7 +22,7 @@ let closure_6 = createStyles.createStyles({
 fn(558);
 const ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function WarningBox(arg0) {
       const cResult = c.c(15);
       ({ sku, application } = arg0);
       ({ canStartAuthorization, hasAccountLinked, mobileAccountLinkingDisabled } = arg0);
@@ -43,7 +43,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
               name1 = application.name;
             }
             const obj2 = { applicationName: name1 };
-            const formatToPlainStringResult = intl3.formatToPlainString(_modDef3623.BMMo2K, obj2);
+            const formatToPlainStringResult = intl3.formatToPlainString(_modDef3697.BMMo2K, obj2);
             let name2;
             if (application != null) {
               name2 = application.name;
@@ -129,7 +129,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (application) => {
+  : function WarningBox(application) {
       application = application.application;
       ({ canStartAuthorization, hasAccountLinked, mobileAccountLinkingDisabled, sku } = application);
       let tmp2 = null;
@@ -141,7 +141,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { look: InfoBox.InfoBoxLooks.WARNING, style: tmp.warningBox, children: null };
         const intl = util.intl;
         if (mobileAccountLinkingDisabled) {
-          BMMo2K = name(3623).BMMo2K;
+          BMMo2K = name(3697).BMMo2K;
           tmp2 = application == tmp2;
           name = undefined;
           if (!tmp2) {
@@ -171,7 +171,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SlayerStorefrontGiftPreview(arg0) {
       const cResult = c.c(20);
       ({ sku, application, sender, hasAccountLinked, canStartAuthorization, mobileAccountLinkingDisabled } = arg0);
       const tmp5 = closure_6();
@@ -279,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = formatToPlainStringResult;
       }
     }
-  : (arg0) => {
+  : function SlayerStorefrontGiftPreview(arg0) {
       ({ sku, application, mobileAccountLinkingDisabled } = arg0);
       ({ sender, hasAccountLinked, canStartAuthorization } = arg0);
       if (mobileAccountLinkingDisabled === undefined) {

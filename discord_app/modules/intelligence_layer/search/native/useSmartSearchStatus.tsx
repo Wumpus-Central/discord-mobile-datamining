@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSmartSearchStatus.tsx");
 
 export const useSmartSearchStatus = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSmartSearchStatus(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ export const useSmartSearchStatus = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       return require("initialize").useStateFromStoresObject(first, tmp6, tmp7);
     }
-  : (arg0) => {
+  : function useSmartSearchStatus(arg0) {
       _require = arg0;
       const items = [SmartSearchResultsStore];
       const items1 = [arg0];

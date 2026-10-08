@@ -1,69 +1,69 @@
 // discord_app/modules/auth/native/images/flags.tsx
-import _mod15262 from "../../../../../_runtime/metro/15262__.js";
-import _mod15263 from "../../../../../_runtime/metro/15263__.js";
-import _mod15264 from "../../../../../_runtime/metro/15264__.js";
-import _mod15265 from "../../../../../_runtime/metro/15265__.js";
-import _mod15266 from "../../../../../_runtime/metro/15266__.js";
-import _mod15267 from "../../../../../_runtime/metro/15267__.js";
-import _mod15268 from "../../../../../_runtime/metro/15268__.js";
-import _mod15269 from "../../../../../_runtime/metro/15269__.js";
-import _mod15270 from "../../../../../_runtime/metro/15270__.js";
-import _mod15271 from "../../../../../_runtime/metro/15271__.js";
-import _mod15272 from "../../../../../_runtime/metro/15272__.js";
-import _mod15273 from "../../../../../_runtime/metro/15273__.js";
-import _mod15274 from "../../../../../_runtime/metro/15274__.js";
-import _mod15275 from "../../../../../_runtime/metro/15275__.js";
-import _mod15276 from "../../../../../_runtime/metro/15276__.js";
-import _mod15277 from "../../../../../_runtime/metro/15277__.js";
-import _mod15278 from "../../../../../_runtime/metro/15278__.js";
-import _mod15279 from "../../../../../_runtime/metro/15279__.js";
-import _mod15280 from "../../../../../_runtime/metro/15280__.js";
-import _mod15281 from "../../../../../_runtime/metro/15281__.js";
-import _mod15282 from "../../../../../_runtime/metro/15282__.js";
-import _mod15283 from "../../../../../_runtime/metro/15283__.js";
-import _mod15284 from "../../../../../_runtime/metro/15284__.js";
-import _mod15285 from "../../../../../_runtime/metro/15285__.js";
-import _mod15286 from "../../../../../_runtime/metro/15286__.js";
-import _mod15287 from "../../../../../_runtime/metro/15287__.js";
-import _mod15288 from "../../../../../_runtime/metro/15288__.js";
-import _mod15289 from "../../../../../_runtime/metro/15289__.js";
-import _mod15290 from "../../../../../_runtime/metro/15290__.js";
-import _mod15291 from "../../../../../_runtime/metro/15291__.js";
-import _mod15292 from "../../../../../_runtime/metro/15292__.js";
+import _mod15524 from "../../../../../_runtime/metro/15524__.js";
+import _mod15525 from "../../../../../_runtime/metro/15525__.js";
+import _mod15526 from "../../../../../_runtime/metro/15526__.js";
+import _mod15527 from "../../../../../_runtime/metro/15527__.js";
+import _mod15528 from "../../../../../_runtime/metro/15528__.js";
+import _mod15529 from "../../../../../_runtime/metro/15529__.js";
+import _mod15530 from "../../../../../_runtime/metro/15530__.js";
+import _mod15531 from "../../../../../_runtime/metro/15531__.js";
+import _mod15532 from "../../../../../_runtime/metro/15532__.js";
+import _mod15533 from "../../../../../_runtime/metro/15533__.js";
+import _mod15534 from "../../../../../_runtime/metro/15534__.js";
+import _mod15535 from "../../../../../_runtime/metro/15535__.js";
+import _mod15536 from "../../../../../_runtime/metro/15536__.js";
+import _mod15537 from "../../../../../_runtime/metro/15537__.js";
+import _mod15538 from "../../../../../_runtime/metro/15538__.js";
+import _mod15539 from "../../../../../_runtime/metro/15539__.js";
+import _mod15540 from "../../../../../_runtime/metro/15540__.js";
+import _mod15541 from "../../../../../_runtime/metro/15541__.js";
+import _mod15542 from "../../../../../_runtime/metro/15542__.js";
+import _mod15543 from "../../../../../_runtime/metro/15543__.js";
+import _mod15544 from "../../../../../_runtime/metro/15544__.js";
+import _mod15545 from "../../../../../_runtime/metro/15545__.js";
+import _mod15546 from "../../../../../_runtime/metro/15546__.js";
+import _mod15547 from "../../../../../_runtime/metro/15547__.js";
+import _mod15548 from "../../../../../_runtime/metro/15548__.js";
+import _mod15549 from "../../../../../_runtime/metro/15549__.js";
+import _mod15550 from "../../../../../_runtime/metro/15550__.js";
+import _mod15551 from "../../../../../_runtime/metro/15551__.js";
+import _mod15552 from "../../../../../_runtime/metro/15552__.js";
+import _mod15553 from "../../../../../_runtime/metro/15553__.js";
+import _mod15554 from "../../../../../_runtime/metro/15554__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
 export const flags = {
-  bg: _mod15262,
-  cs: _mod15263,
-  da: _mod15264,
-  de: _mod15265,
-  el: _mod15266,
-  "en-GB": _mod15267,
-  "en-US": _mod15268,
-  "es-ES": _mod15269,
-  "es-419": _mod15270,
-  fi: _mod15271,
-  fr: _mod15272,
-  hi: _mod15273,
-  hr: _mod15274,
-  hu: _mod15275,
-  it: _mod15276,
-  ja: _mod15277,
-  ko: _mod15278,
-  lt: _mod15279,
-  nl: _mod15280,
-  no: _mod15281,
-  pl: _mod15282,
-  "pt-BR": _mod15283,
-  ro: _mod15284,
-  ru: _mod15285,
-  "sv-SE": _mod15286,
-  th: _mod15287,
-  tr: _mod15288,
-  uk: _mod15289,
-  vi: _mod15290,
-  "zh-CN": _mod15291,
-  "zh-TW": _mod15292,
+  bg: _mod15524,
+  cs: _mod15525,
+  da: _mod15526,
+  de: _mod15527,
+  el: _mod15528,
+  "en-GB": _mod15529,
+  "en-US": _mod15530,
+  "es-ES": _mod15531,
+  "es-419": _mod15532,
+  fi: _mod15533,
+  fr: _mod15534,
+  hi: _mod15535,
+  hr: _mod15536,
+  hu: _mod15537,
+  it: _mod15538,
+  ja: _mod15539,
+  ko: _mod15540,
+  lt: _mod15541,
+  nl: _mod15542,
+  no: _mod15543,
+  pl: _mod15544,
+  "pt-BR": _mod15545,
+  ro: _mod15546,
+  ru: _mod15547,
+  "sv-SE": _mod15548,
+  th: _mod15549,
+  tr: _mod15550,
+  uk: _mod15551,
+  vi: _mod15552,
+  "zh-CN": _mod15553,
+  "zh-TW": _mod15554,
 };

@@ -1,5 +1,5 @@
 // discord_app/modules/app_channels/native/AppChannelApplicationSelector.tsx
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AppChannelApplicationActionSheet from "AppChannelApplicationActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -46,18 +46,18 @@ export default function AppChannelApplicationSelector(guildId) {
     tmp5Result = jsx(channelId(tmp2[6]), { application: selectedApplication });
   }
   obj3.icon = tmp5Result;
-  let fn;
+  let handlePress;
   if (true !== disabled && !hasNoApplications) {
-    fn = () => {
+    handlePress = function handlePress() {
       const obj = ActionSheetActionCreatorsDefault;
       obj.openLazy(
-        asyncRequireImpl(9258, dependencyMap.paths),
+        asyncRequireImpl(8588, dependencyMap.paths),
         AppChannelApplicationActionSheet.APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY,
         { guildId, channelId, selectedApplicationId, onChange },
       );
     };
   }
-  obj3.onPress = fn;
+  obj3.onPress = handlePress;
   obj3.arrow = true !== disabled && !hasNoApplications;
   obj3.disabled = !(true !== disabled && !hasNoApplications);
   obj2.children = jsx(guildId(selectedApplicationId[5]).TableRow, {

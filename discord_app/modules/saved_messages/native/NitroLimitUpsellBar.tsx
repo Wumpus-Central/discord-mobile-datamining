@@ -5,7 +5,7 @@ import util from "../../../intl/index.native.tsx";
 import WarningIcon from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import _modDef9655 from "../../../../_runtime/metro/09655__.js";
+import _modDef9470 from "../../../../_runtime/metro/09470__.js";
 import NitroUpsellButtonDefault from "../../premium/components/native/NitroUpsellButton.tsx";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -43,7 +43,7 @@ let obj2 = {
 const result = size.fileFinishedImporting("modules/saved_messages/native/NitroLimitUpsellBar.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function NitroLimitUpsellBar(arg0) {
       let stringResult = dependencyMap;
       const cResult = c.c(16);
       ({ text, isAtLimit, onPress, loading } = arg0);
@@ -123,14 +123,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { color: "text-feedback-warning", style: tmp4.icon };
         let tmp6Result = hasOwnProperty(WarningIcon.WarningIcon, obj6);
       } else {
-        const obj7 = { source: _modDef9655, style: tmp4.icon };
+        const obj7 = { source: _modDef9470, style: tmp4.icon };
         tmp6Result = hasOwnProperty(React3, obj7);
       }
       cResult[0] = isAtLimit;
       cResult[1] = tmp4.icon;
       cResult[2] = tmp6Result;
     }
-  : (isAtLimit) => {
+  : function NitroLimitUpsellBar(isAtLimit) {
       isAtLimit = isAtLimit.isAtLimit;
       ({ text, onPress, loading } = isAtLimit);
       const tmp = closure_7();
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp4Result = hasOwnProperty(WarningIcon.WarningIcon, obj2);
         let tmp9 = hasOwnProperty;
       } else {
-        const obj3 = { source: _modDef9655, style: tmp.icon };
+        const obj3 = { source: _modDef9470, style: tmp.icon };
         tmp4Result = hasOwnProperty(React3, obj3);
         tmp9 = hasOwnProperty;
       }

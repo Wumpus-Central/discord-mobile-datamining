@@ -9,7 +9,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ emailPhoneNote: { marginTop: 8, marginBottom: 12 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserVerification(arg0) {
       const cResult = c.c(14);
       ({ verification, field } = arg0);
       const tmp4 = closure_6();
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = tmp6;
       }
     }
-  : (arg0) => {
+  : function UserVerification(arg0) {
       ({ verification, field } = arg0);
       if (null == field.platform) {
         return null;

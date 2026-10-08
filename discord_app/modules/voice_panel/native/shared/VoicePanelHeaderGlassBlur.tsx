@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelHeaderGlassBlur.tsx
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import VisualEffectViewAnimatedDefault from "../../../visual_effect_view/native/VisualEffectViewAnimated.tsx";
+import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
 import ReanimatedNativeViewDefault from "../../../core/native/ReanimatedNativeView.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -10,7 +10,7 @@ require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({
   blur: { position: "absolute", top: 0, left: 0, right: 0 },
   strokeContainer: {
@@ -24,7 +24,7 @@ let closure_6 = createStyles.createStyles({
   strokeAlt: { height: StyleSheet.hairlineWidth, opacity: 0.8, backgroundColor: "black" },
   strokeAltLight: { height: StyleSheet.hairlineWidth, opacity: 0.2, backgroundColor: "black" },
 });
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 const IS_ANDROID = PlatformUtils.isAndroid();
 const __initData = {
   code: "function VoicePanelHeaderGlassBlurTsx1(){const{shown,IS_ANDROID}=this.__closure;return{opacity:shown.get()?IS_ANDROID?0.7:1:0};}",
@@ -44,13 +44,13 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/shared/Voi
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (shown) => {
+    ? function HeaderGlassBlur(shown) {
         const cResult = shown(576).c(26);
         shown = shown.shown;
         ({ blurStyle, style } = shown);
         const tmp4 = closure_6();
         let obj = shown(576);
-        const fn = function s() {
+        const fn = function o() {
           let opacity = 0;
           if (shown.get()) {
             let num2 = 1;
@@ -64,8 +64,8 @@ export default noop.memo(
         fn.__closure = { shown, IS_ANDROID };
         fn.__workletHash = 3451055086565;
         fn.__initData = __initData;
-        const animatedStyle = shown(4618).useAnimatedStyle(fn);
-        const obj2 = shown(4618);
+        const animatedStyle = shown(4810).useAnimatedStyle(fn);
+        const obj2 = shown(4810);
         const obj3 = { shown, IS_ANDROID };
         const fn2 = function k() {
           let num = 0;
@@ -74,8 +74,8 @@ export default noop.memo(
           }
           return { blurAmount: spring.withSpring(num) };
         };
-        const obj4 = shown(4618);
-        fn2.__closure = { withSpring: shown(5604).withSpring, shown };
+        const obj4 = shown(4810);
+        fn2.__closure = { withSpring: shown(5374).withSpring, shown };
         fn2.__workletHash = 5642055202507;
         fn2.__initData = __initData2;
         const animatedProps = obj4.useAnimatedProps(fn2);
@@ -159,12 +159,12 @@ export default noop.memo(
                     }
                   }
                 }
-                const tmp19 = tmp(4735).isThemeDark(tmp8) ? tmp4.strokeAlt : tmp4.strokeAltLight;
+                const tmp19 = tmp(4929).isThemeDark(tmp8) ? tmp4.strokeAlt : tmp4.strokeAltLight;
                 cResult[12] = tmp4.strokeAlt;
                 cResult[13] = tmp4.strokeAltLight;
                 cResult[14] = tmp8;
                 cResult[15] = tmp19;
-                const tmpResult2 = tmp(4735);
+                const tmpResult2 = tmp(4929);
               }
             }
             const obj10 = { blurStyle: "ultra-thin", blurTheme: str, style: tmp10, animatedProps };
@@ -174,7 +174,7 @@ export default noop.memo(
             cResult[8] = tmp10;
             cResult[9] = tmp14;
             tmp12 = tmp14;
-            tmpResult = tmp(4735);
+            tmpResult = tmp(4929);
           }
         }
         const items3 = [tmp4.blur, style, animatedStyle];
@@ -183,9 +183,9 @@ export default noop.memo(
         cResult[2] = tmp4.blur;
         cResult[3] = items3;
         tmp9 = items3;
-        const obj5 = { withSpring: shown(5604).withSpring, shown };
+        const obj5 = { withSpring: shown(5374).withSpring, shown };
       }
-    : (shown) => {
+    : function HeaderGlassBlur(shown) {
         shown = shown.shown;
         ({ blurStyle, style } = shown);
         const tmp = closure_6();
@@ -203,8 +203,8 @@ export default noop.memo(
         fn.__closure = { shown, IS_ANDROID };
         fn.__workletHash = 13658868332711;
         fn.__initData = __initData3;
-        const animatedStyle = shown(4618).useAnimatedStyle(fn);
-        let obj = shown(4618);
+        const animatedStyle = shown(4810).useAnimatedStyle(fn);
+        let obj = shown(4810);
         const obj2 = { shown, IS_ANDROID };
         const tmp2 = shown;
         const fn2 = function w() {
@@ -214,8 +214,8 @@ export default noop.memo(
           }
           return { blurAmount: spring.withSpring(num) };
         };
-        const obj3 = shown(4618);
-        fn2.__closure = { withSpring: shown(5604).withSpring, shown };
+        const obj3 = shown(4810);
+        fn2.__closure = { withSpring: shown(5374).withSpring, shown };
         fn2.__workletHash = 10766437578125;
         fn2.__initData = __initData4;
         const animatedProps = obj3.useAnimatedProps(fn2);
@@ -223,7 +223,7 @@ export default noop.memo(
         const obj5 = { style: null, children: null };
         const items = [tmp.blur, style, animatedStyle];
         obj5.style = items;
-        const obj4 = { withSpring: shown(5604).withSpring, shown };
+        const obj4 = { withSpring: shown(5374).withSpring, shown };
         const tmp9 = ReanimatedNativeViewDefault;
         const tmp11 = VisualEffectViewAnimatedDefault;
         let str = "light";
@@ -235,14 +235,14 @@ export default noop.memo(
         obj7.style = items1;
         const items2 = [closure_4(tmp11, obj7)];
         const obj8 = { style: tmp.strokeContainer, children: null };
-        obj6 = shown(4735);
+        obj6 = shown(4929);
         const items3 = [closure_4(NativeViewDefault, { style: tmp.stroke })];
         const obj9 = { style: tmp.stroke };
         const tmp6Result = NativeViewDefault;
         const tmp6Result2 = NativeViewDefault;
-        const tmp2Result = tmp2(4735);
+        const tmp2Result = tmp2(4929);
         items3[1] = closure_4(tmp6Result2, {
-          style: tmp2(4735).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight,
+          style: tmp2(4929).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight,
         });
         obj8.children = items3;
         items2[1] = closure_5(tmp6Result, obj8);

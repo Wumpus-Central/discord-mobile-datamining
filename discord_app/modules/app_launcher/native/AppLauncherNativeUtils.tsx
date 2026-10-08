@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/AppLauncherNativeUtils.tsx
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import _modDef1975 from "../../../../_runtime/metro/01975__.js";
+import _modDef1987 from "../../../../_runtime/metro/01987__.js";
 import Server from "../../../flow/Server.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
@@ -16,14 +16,14 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const AppLauncherNativeConstants = fn(1489);
+const AppLauncherNativeConstants = fn(1501);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const BuiltInSectionId = fn(5795).BuiltInSectionId;
+const BuiltInSectionId = fn(5399).BuiltInSectionId;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useLogAppLauncherEmptyStateView(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(7);
       let obj = require("c");
@@ -59,7 +59,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp2 = fn;
       let obj2 = require("AppLauncherContext");
     }
-  : (arg0, arg1) => {
+  : function useLogAppLauncherEmptyStateView(arg0, arg1) {
       _require = arg0;
       const entrypoint = require("AppLauncherContext").useAppLauncherContext().entrypoint;
       const items = [arg0, arg1, entrypoint];
@@ -298,7 +298,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
 };
 export const getAppLauncherIconSource = function getAppLauncherIconSource(application) {
   if (null == application) {
-    let applicationIconSource = _modDef1975;
+    let applicationIconSource = _modDef1987;
   } else {
     const obj2 = AvatarUtilsDefault;
     if (isRealApplicationResult) {
@@ -314,7 +314,7 @@ export const getAppLauncherIconSource = function getAppLauncherIconSource(applic
 };
 export const useLogAppLauncherEmptyStateView = tmp3;
 export const useHandleActivityItemSelected = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onActivityItemSelected) => {
+  ? function useHandleActivityItemSelected(onActivityItemSelected) {
       const cResult = sectionName(entrypoint[16]).c(23);
       ({ applicationId, context, sectionName } = onActivityItemSelected);
       onActivityItemSelected = onActivityItemSelected.onActivityItemSelected;
@@ -451,7 +451,7 @@ export const useHandleActivityItemSelected = ReactCompilerGating.isReactCompiler
       cResult[3] = obj4;
       tmp6 = obj4;
     }
-  : (fetchesApplication) => {
+  : function useHandleActivityItemSelected(fetchesApplication) {
       ({ applicationId, context, sectionName } = fetchesApplication);
       ({ onActivityItemSelected: importDefault, location: importAll, entrypoint } = fetchesApplication);
       let flag = fetchesApplication.fetchesApplication;

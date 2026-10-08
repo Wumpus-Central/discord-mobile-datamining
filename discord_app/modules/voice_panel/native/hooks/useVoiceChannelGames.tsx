@@ -14,7 +14,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoiceChannelGames.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useVoiceChannelGames(arg0, arg1, arg2) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = arg2;
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const stateFromStoresArray = tmp2(504).useStateFromStoresArray(first, tmp10, tmp11);
           const tmp2Result = tmp2(504);
-          const getGamesForAppIds = tmp2(9408).useGetGamesForAppIds(stateFromStoresArray);
+          const getGamesForAppIds = tmp2(8829).useGetGamesForAppIds(stateFromStoresArray);
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
             const items1 = [UserStore];
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp16 = cResult[6];
             tmp17 = cResult[7];
           }
-          const tmp2Result3 = tmp2(9408);
+          const tmp2Result3 = tmp2(8829);
           const stateFromStores = tmp2(504).useStateFromStores(tmp16, tmp17);
           if (cResult[8] === getGamesForAppIds) {
             if (cResult[9] === stateFromStores) {
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn;
       const obj = require("c");
     }
-  : (arg0, arg1, arg2) => {
+  : function useVoiceChannelGames(arg0, arg1, arg2) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = arg2;

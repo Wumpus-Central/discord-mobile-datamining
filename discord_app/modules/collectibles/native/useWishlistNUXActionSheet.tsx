@@ -8,10 +8,10 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHasNeverWishlisted() {
       const cResult = stateFromStores(576).c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AuthenticationStore];
@@ -54,7 +54,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = cResult[5];
       }
       if (cResult[6] !== stateFromStores) {
-        const fn3 = function h() {
+        const fn3 = function _() {
           const userProfile = UserProfileStore.getUserProfile(stateFromStores);
           let tmp2 = null != userProfile;
           if (tmp2) {
@@ -75,7 +75,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return stateFromStores2;
     }
-  : () => {
+  : function useHasNeverWishlisted() {
       const items = [AuthenticationStore];
       _require = require("initialize").useStateFromStores(items, () => id.getId());
       const obj = require("initialize");

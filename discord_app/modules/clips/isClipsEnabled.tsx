@@ -16,12 +16,12 @@ export const isClipsEnabled = function isClipsEnabled() {
   return clipsEnabled;
 };
 export const useIsClipsEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsClipsEnabled() {
       const cResult = c.c(2);
       let isClipsAvailable = ClipsExperiment.useIsClipsAvailable();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ClipsStore];
-        const fn = function l() {
+        const fn = function t() {
           return state.getState().clipsSettings.clipsEnabled;
         };
         cResult[0] = items;
@@ -36,7 +36,7 @@ export const useIsClipsEnabled = ReactCompilerGating.isReactCompilerEnabled()
       }
       return isClipsAvailable;
     }
-  : () => {
+  : function useIsClipsEnabled() {
       let isClipsAvailable = ClipsExperiment.useIsClipsAvailable();
       const items = [ClipsStore];
       if (isClipsAvailable) {

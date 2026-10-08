@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   iconWrapper: {
     justifyContent: "center",
@@ -27,7 +27,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherOptionIcon.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AppLauncherOptionIcon(arg0) {
       const cResult = c.c(9);
       ({ wrapperStyle, wrapperSize, icon } = arg0);
       let num = 32;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items;
       tmp4 = items;
     }
-  : (wrapperSize) => {
+  : function AppLauncherOptionIcon(wrapperSize) {
       let num = wrapperSize.wrapperSize;
       if (num === undefined) {
         num = 32;

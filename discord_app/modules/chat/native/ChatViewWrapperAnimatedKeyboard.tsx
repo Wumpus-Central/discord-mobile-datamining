@@ -13,8 +13,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const Easing = fn(4618).Easing;
-let obj = { duration: fn(4900).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
+const Easing = fn(4810).Easing;
+let obj = { duration: fn(5094).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
 const __initData = {
   code: "function ChatViewWrapperAnimatedKeyboardTsx1(){const{animatedHeight}=this.__closure;return animatedHeight.get();}",
 };
@@ -41,7 +41,7 @@ let closure_15 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSafeAreaInsetAnimatedStyle() {
       const INSET_ANIMATION_CONFIG2 = sharedValue(sharedValue1[6])();
       sharedValue = INSET_ANIMATION_CONFIG2(sharedValue1[3]).useSharedValue(INSET_ANIMATION_CONFIG2.get());
       let obj2 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
@@ -101,7 +101,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       fn3.__initData = __initData3;
       return obj5.useAnimatedStyle(fn3);
     }
-  : () => {
+  : function useSafeAreaInsetAnimatedStyle() {
       const INSET_ANIMATION_CONFIG2 = sharedValue(sharedValue1[6])();
       sharedValue = INSET_ANIMATION_CONFIG2(sharedValue1[3]).useSharedValue(INSET_ANIMATION_CONFIG2.get());
       let obj2 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
@@ -164,7 +164,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let closure_17 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channelId) => {
+    ? function ChatViewWrapperSafeAreaBackground(channelId) {
         const cResult = c.c(6);
         const tmp2 = useCustomKeyboardHeightDefault();
         const tmp3 = useChannelSafeAreaBottomStylesDefault(channelId.channelId);
@@ -193,7 +193,7 @@ let closure_17 = noop.memo(
         cResult[2] = rect;
         tmp5 = rect;
       }
-    : (channelId) => {
+    : function ChatViewWrapperSafeAreaBackground(channelId) {
         const tmp = useCustomKeyboardHeightDefault();
         const height = tmp;
         const items = [tmp];
@@ -215,7 +215,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat/native/ChatViewWrapperAnimatedKeyboard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ChatViewWrapperAnimatedKeyboard(arg0) {
       const cResult = c.c(14);
       ({ channelId, children, stickyHeader, style } = arg0);
       const tmp5 = useChatViewPointerEventsDefault(channelId);
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp8;
       tmp7 = tmp8;
     }
-  : (arg0) => {
+  : function ChatViewWrapperAnimatedKeyboard(arg0) {
       ({ channelId, style } = arg0);
       ({ children, stickyHeader } = arg0);
       const tmp = useChatViewPointerEventsDefault(channelId);

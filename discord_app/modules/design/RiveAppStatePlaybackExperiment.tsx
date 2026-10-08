@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/design/RiveAppStatePlaybackEx
 
 export default apexExperiment;
 export const useRiveAppStatePlaybackExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useRiveAppStatePlaybackExperiment(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -30,4 +30,6 @@ export const useRiveAppStatePlaybackExperiment = ReactCompilerGating.isReactComp
       }
       return apexExperiment.useConfig(tmp2).enabled;
     }
-  : (location) => apexExperiment.useConfig({ location }).enabled;
+  : function useRiveAppStatePlaybackExperiment(location) {
+      return apexExperiment.useConfig({ location }).enabled;
+    };

@@ -12,7 +12,7 @@ const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalCloseButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VideoQuestModalCloseButton(arg0) {
       const cResult = c.c(10);
       ({ onClose, iconColor, style } = arg0);
       if (undefined === iconColor) {
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp13;
       tmp12 = tmp13;
     }
-  : (iconColor) => {
+  : function VideoQuestModalCloseButton(iconColor) {
       let MOBILE_TEXT_HEADING_PRIMARY = iconColor.iconColor;
       if (MOBILE_TEXT_HEADING_PRIMARY === undefined) {
         MOBILE_TEXT_HEADING_PRIMARY = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;

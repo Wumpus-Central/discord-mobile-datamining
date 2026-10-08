@@ -40,7 +40,7 @@ export const getGameMentionData = function getGameMentionData(gameId) {
   return tmp4;
 };
 export const useGameMentionData = ReactCompilerGating.isReactCompilerEnabled()
-  ? (gameId) => {
+  ? function useGameMentionData(gameId) {
       _require = gameId;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -91,7 +91,7 @@ export const useGameMentionData = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       return require("initialize").useStateFromStores(first, tmp8, tmp9, discord_common_shallowEqualDefault);
     }
-  : (gameId) => {
+  : function useGameMentionData(gameId) {
       _require = gameId;
       const items = [GameStore, GameAutocompleteStore, UserStore];
       const items1 = [gameId];

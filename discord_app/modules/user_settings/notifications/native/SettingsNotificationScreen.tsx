@@ -116,11 +116,11 @@ function getNotificationSettings() {
   return items1;
 }
 const View = fn(17).View;
-let closure_5 = fn(15320).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(7645).MobileUserSettings;
+let closure_5 = fn(15582).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   card: {
     marginBottom: 8,
@@ -134,7 +134,7 @@ let obj = {
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function SystemNotificationsSubLabel() {
       const cResult = c.c(11);
       const tmp4 = closure_10();
       const manaTypeConsolidationExperiment =
@@ -221,7 +221,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp15;
       tmp14 = tmp15;
     }
-  : () => {
+  : function SystemNotificationsSubLabel() {
       const tmp = closure_10();
       const manaTypeConsolidationExperiment =
         ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("SystemNotificationsSubLabel");
@@ -274,7 +274,7 @@ let result = size.fileFinishedImporting("modules/user_settings/notifications/nat
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function SettingsNotificationsScreen() {
         const cResult = c.c(9);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { location: "SettingsNotificationsScreen" };
@@ -321,7 +321,7 @@ export default noop.memo(
         }
         const effect = noop.useEffect(N, tmp12);
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          class S {
+          class T {
             constructor() {
               obj = closure_1_0(closure_1_2[19]);
               result = obj.prefetchFamilyCenterAgeGroup();
@@ -329,11 +329,11 @@ export default noop.memo(
             }
           }
           const items1 = [];
-          cResult[5] = S;
+          cResult[5] = T;
           cResult[6] = items1;
           let tmp15 = items1;
         } else {
-          class S {
+          class T {
             constructor() {
               obj = closure_1_0(closure_1_2[19]);
               result = obj.prefetchFamilyCenterAgeGroup();
@@ -342,9 +342,9 @@ export default noop.memo(
           }
           tmp15 = cResult[6];
         }
-        const effect1 = noop.useEffect(S, tmp15);
+        const effect1 = noop.useEffect(T, tmp15);
         if (cResult[7] !== tmp7) {
-          class S {
+          class T {
             constructor() {
               obj = closure_1_0(closure_1_2[19]);
               result = obj.prefetchFamilyCenterAgeGroup();
@@ -357,7 +357,7 @@ export default noop.memo(
           cResult[8] = tmp18;
           const tmp17 = tmp18;
         } else {
-          class S {
+          class T {
             constructor() {
               obj = closure_1_0(closure_1_2[19]);
               result = obj.prefetchFamilyCenterAgeGroup();
@@ -367,7 +367,7 @@ export default noop.memo(
         }
         return tmp17;
       }
-    : () => {
+    : function SettingsNotificationsScreen() {
         const tmp = !ContextualOptInNudgeHoldoutExperimentDefault.useConfig({ location: "SettingsNotificationsScreen" })
           .inHoldout;
         closure_0 = tmp;

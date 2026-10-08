@@ -16,7 +16,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 48;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   card: {
     borderRadius: nativeDefault.radii.lg,
@@ -131,7 +131,7 @@ let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_11 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function GameProfileLinkAccountSkeleton() {
         const cResult = c.c(41);
         const tmp4 = closure_10();
         const tmp6 = useIsWindowLargeDefault();
@@ -314,7 +314,7 @@ let closure_11 = noop.memo(
         cResult[2] = items4;
         tmp7 = items4;
       }
-    : () => {
+    : function GameProfileLinkAccountSkeleton() {
         const tmp = closure_10();
         const tmp4 = useIsWindowLargeDefault();
         const obj = { style: tmp.card, children: null };
@@ -365,7 +365,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileLinkAccount.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (analyticsLocations) => {
+  ? function GameProfileLinkAccount(analyticsLocations) {
       const cResult = trackAction(startAuthorization[8]).c(46);
       ({ game, trackAction } = analyticsLocations);
       analyticsLocations = analyticsLocations.analyticsLocations;
@@ -440,21 +440,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      class L {
-        constructor() {
-          tmp = trackAction(closure_0(closure_2[14]).GameProfileTrackActionActions.LinkAccount);
-          obj = { analyticsLocations };
-          tmp2 = startAuthorization(obj);
-          return;
-        }
-      }
+      const fn2 = function w() {
+        trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.LinkAccount);
+        startAuthorization({ analyticsLocations });
+      };
       cResult[8] = analyticsLocations;
       cResult[9] = startAuthorization;
       cResult[10] = trackAction;
-      cResult[11] = L;
+      cResult[11] = fn2;
       const tmpResult = trackAction(startAuthorization[13]);
     }
-  : (analyticsLocations) => {
+  : function GameProfileLinkAccount(analyticsLocations) {
       ({ game, trackAction } = analyticsLocations);
       analyticsLocations = analyticsLocations.analyticsLocations;
       let startAuthorization;

@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   footer: {
     display: "flex",
@@ -66,7 +66,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareFooterLayout.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ShareFooterLayout(arg0) {
       const cResult = c.c(22);
       ({ preview, chatInput, sendButton, warningText, avoidKeyboard } = arg0);
       const tmp4 = closure_7();
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let tmp22 = null != warningText;
                 if (tmp22) {
                   const obj4 = { variant: "text-sm/normal", color: "text-feedback-warning", children: warningText };
-                  tmp22 = closure_4(tmp(4892).Text, obj4);
+                  tmp22 = closure_4(tmp(5086).Text, obj4);
                 }
                 cResult[12] = warningText;
                 cResult[13] = tmp22;
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ON_PRESS_SPRING: springPresets.ON_PRESS_SPRING,
       };
     }
-  : (arg0) => {
+  : function ShareFooterLayout(arg0) {
       ({ preview, warningText } = arg0);
       ({ chatInput, sendButton, avoidKeyboard } = arg0);
       const tmp = closure_7();
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp12 = null != warningText;
       if (tmp12) {
         const obj8 = { variant: "text-sm/normal", color: "text-feedback-warning", children: warningText };
-        tmp12 = closure_4(tmp4(4892).Text, obj8);
+        tmp12 = closure_4(tmp4(5086).Text, obj8);
       }
       items4[1] = tmp12;
       obj6.children = items4;

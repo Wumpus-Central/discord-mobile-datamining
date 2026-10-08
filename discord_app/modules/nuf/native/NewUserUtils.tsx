@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import router_utils from "../../routing/router_utils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import Link from "../../../../_runtime/01491_Link.js";
+import Link from "../../../../_runtime/01503_Link.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import NativePermissionManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativePermissionManagerModule.tsx";
 import NewUserAnalyticsUtils from "NewUserAnalyticsUtils.tsx";
@@ -231,8 +231,8 @@ let closure_17 = async function _getNextOnboardingStep() {
 };
 const Constants = fn(1085);
 ({ PlatformTypes: closure_7, Routes: closure_8 } = Constants);
-const ContactPermissions = fn(12342).ContactPermissions;
-let closure_10 = fn(5105).NotificationAuthorizationStatus;
+const ContactPermissions = fn(12438).ContactPermissions;
+let closure_10 = fn(7477).NotificationAuthorizationStatus;
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_12 = asyncGeneratorStep(async () => {
   if (c2 === 2) {
@@ -286,7 +286,7 @@ let closure_12 = asyncGeneratorStep(async () => {
     }
   }
 });
-obj2.shouldShowStep = function () {
+obj2.shouldShowStep = function shouldShowStep() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -361,7 +361,7 @@ let closure_13 = asyncGeneratorStep(async () => {
     }
   }
 });
-obj3.shouldShowStep = function () {
+obj3.shouldShowStep = function shouldShowStep() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -399,7 +399,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(9494).hasDeferredInvite,
+    shouldShowStep: fn(8658).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     },

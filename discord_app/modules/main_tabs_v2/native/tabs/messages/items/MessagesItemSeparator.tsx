@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: c2 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { height: PX_12 }, separator: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: StyleSheet.hairlineWidth };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/mess
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function MessagesItemSeperator() {
         const cResult = c.c(5);
         const tmp2 = closure_4();
         if (cResult[0] !== tmp2.separator) {
@@ -50,7 +50,7 @@ export default noop.memo(
         tmp7 = tmp8;
         const obj3 = { style: tmp2.container, collapsable: false, children: tmp3 };
       }
-    : () => {
+    : function MessagesItemSeperator() {
         const tmp = closure_4();
         const obj = { style: tmp.container, collapsable: false, children: <React2 style={tmp.separator} /> };
         return (

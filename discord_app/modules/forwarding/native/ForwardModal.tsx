@@ -8,9 +8,9 @@ import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackType
 import ChannelUtils from "../../../utils/ChannelUtils.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import formatResults from "../../share/formatResults.tsx";
 import ForwardModalUtils from "ForwardModalUtils.tsx";
 import ForwardingAnalyticsUtils from "../ForwardingAnalyticsUtils.tsx";
+import formatResults from "../../share/formatResults.tsx";
 import ForwardDestinationUtils from "../ForwardDestinationUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -26,11 +26,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(11322).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10605).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11576).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10202).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
 };
@@ -41,7 +41,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/forwarding/native/ForwardModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (message) => {
+  ? function ForwardModal(message) {
       const cResult = message(source[16]).c(96);
       message = message.message;
       let forwardOptions = message.forwardOptions;
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp18 = items4;
       tmp17 = U;
     }
-  : (message) => {
+  : function ForwardModal(message) {
       message = message.message;
       _require = message;
       let forwardOptions = message.forwardOptions;
@@ -425,9 +425,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     if (forwardOptions(source[27])(message, closure_129_1)) {
                       const promise = new Promise((arg0) => {
                         closure_0 = arg0;
-                        closure_1_0(5716).openAlert(
+                        closure_1_0(5299).openAlert(
                           "staff-to-non-staff-forward",
-                          closure_1_15(forwardOptions(11326), {
+                          closure_1_15(forwardOptions(11582), {
                             onConfirm() {
                               return closure_0(true);
                             },

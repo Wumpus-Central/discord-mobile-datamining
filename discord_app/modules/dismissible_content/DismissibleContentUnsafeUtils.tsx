@@ -416,7 +416,7 @@ let result = size.fileFinishedImporting("modules/dismissible_content/Dismissible
 
 export { UNSAFE_isDismissibleContentDismissed };
 export const useIsDismissibleContentDismissed_UNSAFE = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useIsDismissibleContentDismissed_UNSAFE(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(6);
       if (cResult[0] !== arg1) {
@@ -456,7 +456,7 @@ export const useIsDismissibleContentDismissed_UNSAFE = ReactCompilerGating.isRea
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0) => {
+  : function useIsDismissibleContentDismissed_UNSAFE(arg0) {
       _require = arg0;
       if (arg1 === undefined) {
         const obj = {};

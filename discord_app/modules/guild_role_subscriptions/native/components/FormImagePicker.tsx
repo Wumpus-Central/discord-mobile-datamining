@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ImageLoaderUtils from "../../../image_upload/ImageLoaderUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import utils_UploadUtilsDefault from "../../../../utils/native/UploadUtils.tsx";
 import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import utils_UploadUtilsDefault from "../../../../utils/native/UploadUtils.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -132,7 +132,7 @@ class ImagePickerIcon {
     intl = image(setImage[10]).intl;
     obj.accessibilityLabel = intl.string(image(setImage[10]).t.HNo5cG);
     obj.accessibilityState = { disabled: flag };
-    obj.onPress = function onPress() {
+    obj.onPress = function handleSelectImage() {
       return pickImage(importDefault, dependencyMap);
     };
     items1 = [, , , ,];
@@ -194,7 +194,7 @@ let closure_3 = ["description", "imageUploadSize", "image", "setImage", "disable
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   imageSelectionRow: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 16 },
   buttonColumn: { flex: 1, flexDirection: "column", marginEnd: 16 },
@@ -225,7 +225,7 @@ let size = {
 obj2.editImageIcon = size;
 obj2.standaloneIcon = { top: -4, right: -4 };
 obj2.disabled = { opacity: 0.3 };
-const v65535 = createStyles.createStyles(obj2);
+const collapsed = createStyles.createStyles(obj2);
 let obj5 = { CIRCLE: 0, [0]: "CIRCLE", SQUIRCLE: 1, [1]: "SQUIRCLE" };
 const ReactCompilerGating = fn(558);
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -233,7 +233,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormImagePicker.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (disabled) => {
+  ? function FormImagePicker(disabled) {
       const cResult = require("c").c(33);
       if (cResult[0] !== disabled) {
         ({ description, imageUploadSize } = disabled);
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             obj5 = { text: tmp15, variant: "secondary", onPress: tmp14, size: "md", disabled: tmp5 };
-            const tmp24 = closure_8(tmp(5601).Button, obj5);
+            const tmp24 = closure_8(tmp(5375).Button, obj5);
             cResult[15] = tmp15;
             cResult[16] = tmp5;
             cResult[17] = tmp14;
@@ -360,23 +360,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "text-default",
             children: tmp4,
           };
-          const tmp21 = closure_8(tmp(4892).Text, obj6);
+          const tmp21 = closure_8(tmp(5086).Text, obj6);
           cResult[12] = tmp4;
           cResult[13] = tmp13.imageDescription;
           cResult[14] = tmp21;
           tmp19 = tmp21;
         }
       }
-      const fn = function h() {
+      function handleSelectImage() {
         return pickImage(closure_0, closure_1);
-      };
+      }
       cResult[7] = imageUploadSize;
       cResult[8] = setImage;
-      cResult[9] = fn;
-      tmp14 = fn;
+      cResult[9] = handleSelectImage;
+      tmp14 = handleSelectImage;
       const obj = require("c");
     }
-  : (children) => {
+  : function FormImagePicker(children) {
       const imageUploadSize = children.imageUploadSize;
       ({ image, setImage } = children);
       const disabled = children.disabled;
@@ -397,16 +397,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: tmp2.imageSelectionRow, children: null };
       const obj2 = { style: tmp2.buttonColumn, children: null };
       const items = [
-        closure_8(tmp6(4892).Text, {
+        closure_8(tmp6(5086).Text, {
           style: tmp2.imageDescription,
           variant: "text-sm/medium",
           color: "text-default",
           children: children.description,
         }),
-        closure_8(tmp6(5601).Button, {
+        closure_8(tmp6(5375).Button, {
           text: stringResult,
           variant: "secondary",
-          onPress() {
+          onPress: function handleSelectImage() {
             return pickImage(imageUploadSize, setImage);
           },
           size: "md",

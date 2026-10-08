@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     marginTop: nativeDefault.space.PX_8,
@@ -30,7 +30,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/ForYouRecentActivitySectionHeader.tsx");
 
 export const ForYouRecentActivitySectionHeader = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ForYouRecentActivitySectionHeader() {
       const cResult = c.c(6);
       const tmp4 = closure_4();
       ({ container, textHeader } = tmp4);
@@ -75,7 +75,7 @@ export const ForYouRecentActivitySectionHeader = ReactCompilerGating.isReactComp
       cResult[5] = tmp11;
       tmp10 = tmp11;
     }
-  : () => {
+  : function ForYouRecentActivitySectionHeader() {
       const tmp = closure_4();
       const obj = { style: tmp.container, children: null };
       const obj2 = {

@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/useTypingUsersIds.tsx");
 
 export const useTypingUserIds = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useTypingUserIds(arg0, arg1) {
       _require = arg0;
       let MAX_SAFE_INTEGER = arg1;
       const cResult = require("c").c(5);
@@ -77,7 +77,7 @@ export const useTypingUserIds = ReactCompilerGating.isReactCompilerEnabled()
       tmp = _require;
       tmp2 = MAX_SAFE_INTEGER;
     }
-  : (arg0) => {
+  : function useTypingUserIds(arg0) {
       _require = arg0;
       let MAX_SAFE_INTEGER = arg1;
       if (arg1 === undefined) {

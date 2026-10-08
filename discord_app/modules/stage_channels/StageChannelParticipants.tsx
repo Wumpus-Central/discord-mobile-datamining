@@ -1,8 +1,8 @@
 // discord_app/modules/stage_channels/StageChannelParticipants.tsx
 import SecondaryIndexMap from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
-import StreamKeyUtils from "../go_live/utils/StreamKeyUtils.tsx";
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState.tsx";
+import StreamKeyUtils from "../go_live/utils/StreamKeyUtils.tsx";
 import getParticipantUserKeyDefault from "../calls/getParticipantUserKey.tsx";
 import useGuildMemberDisplayRole from "useGuildMemberDisplayRole.tsx";
 import ApplicationStreamingStore from "../../stores/ApplicationStreamingStore.tsx";
@@ -98,7 +98,7 @@ function getParticipantIndex(arg0) {
   }
   return items;
 }
-const getComparator = fn(4920).getComparator;
+const getComparator = fn(5114).getComparator;
 const StageChannelParticipantNamedIndex = {
   SPEAKER: "SPEAKER",
   AUDIENCE: "AUDIENCE",

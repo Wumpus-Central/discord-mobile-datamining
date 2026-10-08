@@ -10,7 +10,7 @@ const set = new Set(["US"]);
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsUserInCreatorMonetizationEligibleCountry() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore, BillingInfoStore];
@@ -41,7 +41,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsUserInCreatorMonetizationEligibleCountry() {
       const items = [UserStore, BillingInfoStore];
       return initialize.useStateFromStores(items, () => {
         currentUser = currentUser.getCurrentUser();
@@ -113,7 +113,7 @@ export { isRavenOnboardingGuild };
 export { useIsWhitegloveOnboardingGuild };
 export { isWhitegloveOnboardingGuild };
 export const useIsExpeditedOnboardingGuild = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useIsExpeditedOnboardingGuild(id) {
       id = undefined;
       if (id != null) {
         id = id.id;
@@ -129,7 +129,7 @@ export const useIsExpeditedOnboardingGuild = ReactCompilerGating.isReactCompiler
       }
       return tmp2;
     }
-  : (id) => {
+  : function useIsExpeditedOnboardingGuild(id) {
       id = undefined;
       if (id != null) {
         id = id.id;

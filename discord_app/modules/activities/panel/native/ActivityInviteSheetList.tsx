@@ -18,7 +18,7 @@ function keyExtractor(item) {
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 let obj3 = {};
 let TextStyles = TextStyles_mod;
@@ -36,8 +36,8 @@ obj2.goToFriendsLink = { textAlign: "center" };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      const cResult = c.c(16);
+  ? function FriendsEmptyComponent() {
+      const cResult = c.c(14);
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
@@ -57,7 +57,7 @@ const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function b() {
+          const fn = function p() {
             ActionSheetActionCreatorsDefault.hideActionSheet();
             const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
             if (null != rootNavigationRef) {
@@ -83,24 +83,16 @@ const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled()
           tmp12 = cResult[6];
           tmp13 = cResult[7];
         }
-        if (cResult[8] !== tmp4.goToFriendsLink) {
-          const items = [tmp4.goToFriendsLink];
-          cResult[8] = tmp4.goToFriendsLink;
-          cResult[9] = items;
-          let tmp15 = items;
-        } else {
-          tmp15 = cResult[9];
-        }
         const _Symbol3 = Symbol;
-        if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           const intl4 = util.intl;
           const stringResult3 = intl4.string(util.t.a7FVbE);
-          cResult[10] = stringResult3;
-          let tmp16 = stringResult3;
+          cResult[8] = stringResult3;
+          let tmp15 = stringResult3;
         } else {
-          tmp16 = cResult[10];
+          tmp15 = cResult[8];
         }
-        if (cResult[11] !== tmp15) {
+        if (cResult[9] !== tmp4.goToFriendsLink) {
           const obj2 = {
             onPress: tmp11,
             accessibilityRole: "link",
@@ -108,29 +100,29 @@ const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled()
             hitSlop: tmp13,
             children: null,
           };
-          let obj3 = { style: tmp15, variant: "text-sm/semibold", color: "text-link", children: tmp16 };
+          let obj3 = { style: tmp4.goToFriendsLink, variant: "text-sm/semibold", color: "text-link", children: tmp15 };
           obj2.children = React4(Text_Text.Text, obj3);
-          const tmp20 = React4(Pressables.PressableOpacity, obj2);
-          cResult[11] = tmp15;
-          cResult[12] = tmp20;
-          let tmp18 = tmp20;
+          const tmp19 = React4(Pressables.PressableOpacity, obj2);
+          cResult[9] = tmp4.goToFriendsLink;
+          cResult[10] = tmp19;
+          let tmp17 = tmp19;
         } else {
-          tmp18 = cResult[12];
+          tmp17 = cResult[10];
         }
-        if (cResult[13] === tmp9) {
-          if (cResult[14] === tmp18) {
-            let tmp21 = cResult[15];
+        if (cResult[11] === tmp9) {
+          if (cResult[12] === tmp17) {
+            let tmp20 = cResult[13];
           }
-          return tmp21;
+          return tmp20;
         }
         const obj4 = { children: null };
-        const items1 = [tmp9, tmp18];
-        obj4.children = items1;
-        const tmp24 = timestampProducer(hasOwnProperty, obj4);
-        cResult[13] = tmp9;
-        cResult[14] = tmp18;
-        cResult[15] = tmp24;
-        tmp21 = tmp24;
+        const items = [tmp9, tmp17];
+        obj4.children = items;
+        const tmp23 = timestampProducer(hasOwnProperty, obj4);
+        cResult[11] = tmp9;
+        cResult[12] = tmp17;
+        cResult[13] = tmp23;
+        tmp20 = tmp23;
       }
       const tmp10 = React4(native.RefreshEmptyState, {
         title: tmp5,
@@ -144,7 +136,7 @@ const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const obj5 = { title: tmp5, body: tmp6, titleStyle: tmp4.emptyTitle, bodyStyle: tmp4.emptyBody };
     }
-  : () => {
+  : function FriendsEmptyComponent() {
       const tmp = closure_7();
       let obj = { children: null };
       let obj3 = { title: null, body: null, titleStyle: null, bodyStyle: null };
@@ -171,9 +163,7 @@ const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled()
       const intl3 = util.intl;
       obj4.accessibilityLabel = intl3.string(util.t.a7FVbE);
       obj4.hitSlop = { top: 8, left: 8, bottom: 8, right: 8 };
-      const obj7 = { style: null, variant: "text-sm/semibold", color: "text-link", children: null };
-      const items1 = [tmp.goToFriendsLink];
-      obj7.style = items1;
+      const obj7 = { style: tmp.goToFriendsLink, variant: "text-sm/semibold", color: "text-link", children: null };
       const intl4 = util.intl;
       obj7.children = intl4.string(util.t.a7FVbE);
       obj4.children = React4(Text_Text.Text, obj7);
@@ -186,7 +176,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityInviteSheetList.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (data) => {
+  ? function ActivityInviteSheetList(data) {
       const cResult = data(getSendState[7]).c(14);
       data = data.data;
       const error = data.error;
@@ -273,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = data(getSendState[7]);
       tmp = data;
     }
-  : (data) => {
+  : function ActivityInviteSheetList(data) {
       data = data.data;
       const error = data.error;
       const getSendState = data.getSendState;

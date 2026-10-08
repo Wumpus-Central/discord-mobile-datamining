@@ -156,13 +156,13 @@ export const createStyles = function createStyles(rect) {
   let map = new Map();
   dependencyMap = typeof rect === "function";
   return require("ReactCompilerGating").isReactCompilerEnabled()
-    ? () => {
+    ? function useStyles() {
         items = [...arguments];
         let obj4;
         items = undefined;
         const cResult = closure_0(576).c(4);
         const obj = closure_0(576);
-        const themeContext = closure_0(4595).useThemeContext();
+        const themeContext = closure_0(4787).useThemeContext();
         if (cResult[0] === items) {
           if (cResult[1] === themeContext) {
             obj4 = cResult[2];
@@ -176,7 +176,7 @@ export const createStyles = function createStyles(rect) {
         }
         let fromEntries = globalThis;
         const items1 = [];
-        const obj2 = closure_0(4595);
+        const obj2 = closure_0(4787);
         items1[HermesBuiltin.arraySpread(items, 0)] = themeContext.key;
         const tmp6 = createCacheKey();
         value = items.get(tmp6);
@@ -232,10 +232,10 @@ export const createStyles = function createStyles(rect) {
           const result = items.set(tmp6, obj4);
         }
       }
-    : () => {
+    : function useStyles() {
         items = [...arguments];
         let obj3;
-        const themeContext = closure_0(4595).useThemeContext();
+        const themeContext = closure_0(4787).useThemeContext();
         const items1 = [];
         items1[HermesBuiltin.arraySpread(items, 0)] = themeContext.key;
         const tmp2 = createCacheKey();
@@ -285,14 +285,14 @@ export const createStyles = function createStyles(rect) {
           const result = obj2.set(tmp2, obj3);
           return obj3;
         }
-        const obj = closure_0(4595);
+        const obj = closure_0(4787);
         obj2 = themeContext;
       };
 };
 export const createLegacyClassComponentStyles = function createLegacyClassComponentStyles(arg0) {
   closure_0 = arg0;
   const map = new Map();
-  return (key) => {
+  return function readStyles(key) {
     closure_0 = key;
     const FALLBACK_THEME_CONTEXT_VALUE = closure_0(dependencyMap[6]).FALLBACK_THEME_CONTEXT_VALUE;
     value = obj2.get(key.key);
@@ -331,7 +331,7 @@ export const createLegacyClassComponentStyles = function createLegacyClassCompon
   };
 };
 export const useLegacyClassComponentStyles = ReactCompilerGating.isReactCompilerEnabled()
-  ? (fn) => {
+  ? function useLegacyClassComponentStyles(fn) {
       const cResult = c.c(3);
       const themeContext = native.useThemeContext();
       if (cResult[0] === themeContext) {
@@ -346,13 +346,15 @@ export const useLegacyClassComponentStyles = ReactCompilerGating.isReactCompiler
       cResult[2] = tmp4;
       tmp3 = tmp4;
     }
-  : (fn) => fn(native.useThemeContext());
+  : function useLegacyClassComponentStyles(fn) {
+      return fn(native.useThemeContext());
+    };
 export const createStyleProperties = function createStyleProperties(getButtonColorTokens) {
   _require = getButtonColorTokens;
   const map = new Map();
   dependencyMap = typeof getButtonColorTokens === "function";
   return require("ReactCompilerGating").isReactCompilerEnabled()
-    ? () => {
+    ? function useStyleProperties() {
         items = [...arguments];
         const cResult = c.c(4);
         const themeContext = native.useThemeContext();
@@ -391,7 +393,7 @@ export const createStyleProperties = function createStyleProperties(getButtonCol
         }
         const forResult = Symbol.for("react.early_return_sentinel");
       }
-    : () => {
+    : function useStyleProperties() {
         items = [...arguments];
         const themeContext = native.useThemeContext();
         const items1 = [];
@@ -418,7 +420,7 @@ export { processColorOrThrow };
 export const createNativeStyleProperties = function createNativeStyleProperties(arg0) {
   closure_0 = arg0;
   const map = new Map();
-  return (theme) => {
+  return function readStyleProperties(theme) {
     const substr = [...arguments].slice();
     let customBackgroundGradient = MobileThemesUtils.getCustomBackgroundGradient();
     if (customBackgroundGradient == null) {
@@ -510,7 +512,7 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(ob
   stops = arr.map((item, index) => index);
   new Map();
   return arr(obj[4]).isReactCompilerEnabled()
-    ? (themeIndex) => {
+    ? function useStyleProperties(themeIndex) {
         obj = arr(obj[6]);
         const themeContext = obj.useThemeContext();
         value = obj3.get(themeContext.key);

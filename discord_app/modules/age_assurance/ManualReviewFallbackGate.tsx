@@ -1,6 +1,6 @@
 // discord_app/modules/age_assurance/ManualReviewFallbackGate.tsx
-import SafetyHubUtils from "../safety_hub/SafetyHubUtils.tsx";
 import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment.tsx";
+import SafetyHubUtils from "../safety_hub/SafetyHubUtils.tsx";
 import AgeVerificationMethodsV2 from "AgeVerificationMethodsV2.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 

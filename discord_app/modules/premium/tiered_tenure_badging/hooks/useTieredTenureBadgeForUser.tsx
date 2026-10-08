@@ -11,7 +11,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx");
 
 export const useTieredTenureBadgeForUser = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useTieredTenureBadgeForUser(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -74,7 +74,7 @@ export const useTieredTenureBadgeForUser = ReactCompilerGating.isReactCompilerEn
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7);
     }
-  : (arg0) => {
+  : function useTieredTenureBadgeForUser(arg0) {
       _require = arg0;
       const items = [UserProfileStore, UserStore];
       return require("initialize").useStateFromStores(items, () => {

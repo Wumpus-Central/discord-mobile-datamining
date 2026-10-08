@@ -39,7 +39,7 @@ export const isGuildEligibleForTierTemplates = function isGuildEligibleForTierTe
   return flag;
 };
 export const useGuildEligibleForTierTemplates = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGuildEligibleForTierTemplates(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -71,7 +71,7 @@ export const useGuildEligibleForTierTemplates = ReactCompilerGating.isReactCompi
       const obj = require("c");
       return require("useStateFromStores").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useGuildEligibleForTierTemplates(arg0) {
       _require = arg0;
       items = [GuildStore];
       return require("useStateFromStores").useStateFromStores(items, () => {

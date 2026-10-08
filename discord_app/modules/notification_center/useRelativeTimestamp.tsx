@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/useRelativeTimestamp.tsx");
 
 export const useRelativeTimestamp = ReactCompilerGating.isReactCompilerEnabled()
-  ? (timestamp) => {
+  ? function useRelativeTimestamp(timestamp) {
       const cResult = timestamp(576).c(7);
       timestamp = timestamp.timestamp;
       const abbreviated = timestamp.abbreviated;
@@ -27,8 +27,8 @@ export const useRelativeTimestamp = ReactCompilerGating.isReactCompilerEnabled()
           const effect = noop.useEffect(tmp7, tmp8);
           return tmp6;
         }
-        const fn2 = function p() {
-          dependencyMap(timestamp(7139).getRelativeTimestamp(interval, closure_1));
+        const fn2 = function c() {
+          dependencyMap(timestamp(6064).getRelativeTimestamp(interval, closure_1));
           const diff = Date.now() - interval;
           if (diff <= closure_1(1102).Millis.DAY) {
             if (diff >= closure_1(1102).Millis.HOUR) {
@@ -39,14 +39,14 @@ export const useRelativeTimestamp = ReactCompilerGating.isReactCompilerEnabled()
             const _setInterval = setInterval;
             interval = setInterval(
               () => {
-                dependencyMap(timestamp(7139).getRelativeTimestamp(closure_0, closure_1_1));
+                dependencyMap(timestamp(6064).getRelativeTimestamp(closure_0, closure_1_1));
               },
               MINUTE,
               MINUTE - (diff % MINUTE),
             );
             return () => clearInterval(closure_0);
           }
-          const obj = timestamp(7139);
+          const obj = timestamp(6064);
         };
         const items = [timestamp, tmp2];
         cResult[3] = tmp2;
@@ -66,7 +66,7 @@ export const useRelativeTimestamp = ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = fn;
       let obj = timestamp(576);
     }
-  : (timestamp) => {
+  : function useRelativeTimestamp(timestamp) {
       timestamp = timestamp.timestamp;
       let flag = timestamp.abbreviated;
       if (flag === undefined) {
@@ -79,7 +79,7 @@ export const useRelativeTimestamp = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp[1];
       const items = [timestamp, flag];
       const effect = noop.useEffect(() => {
-        dependencyMap(timestamp(7139).getRelativeTimestamp(interval, flag));
+        dependencyMap(timestamp(6064).getRelativeTimestamp(interval, flag));
         const diff = Date.now() - interval;
         if (diff <= flag(1102).Millis.DAY) {
           if (diff >= flag(1102).Millis.HOUR) {
@@ -90,14 +90,14 @@ export const useRelativeTimestamp = ReactCompilerGating.isReactCompilerEnabled()
           const _setInterval = setInterval;
           interval = setInterval(
             () => {
-              dependencyMap(timestamp(7139).getRelativeTimestamp(closure_0, flag));
+              dependencyMap(timestamp(6064).getRelativeTimestamp(closure_0, flag));
             },
             MINUTE,
             MINUTE - (diff % MINUTE),
           );
           return () => clearInterval(closure_0);
         }
-        const obj = timestamp(7139);
+        const obj = timestamp(6064);
       }, items);
       return tmp[0];
     };

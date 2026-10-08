@@ -13,7 +13,7 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1085).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "text-md/semibold";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   row: { flexDirection: "row", gap: 4, alignItems: "center" },
   everyone: {
@@ -29,7 +29,7 @@ let obj = {
   gradient: null,
   image: null,
 };
-let prop = fn(4892).TextStyleSheet["text-md/semibold"];
+let prop = fn(5086).TextStyleSheet["text-md/semibold"];
 let num;
 if (prop != null) {
   num = prop.lineHeight;
@@ -69,7 +69,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/roles/native/G
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guildId) => {
+    ? function GuildSettingsRoleItem(guildId) {
         const cResult = role(onMoveUp[9]).c(82);
         image = onPress(onMoveUp[10])(guildId.guildId, null);
         const tmp5 = closure_10();
@@ -99,11 +99,11 @@ export default noop.memo(
                 if (cResult[8] === onPress) {
                   if (cResult[11] === onMoveDown) {
                     if (cResult[12] === onMoveUp) {
-                      let tmp12 = cResult[13];
+                      let tmp13 = cResult[13];
                     }
                     if (cResult[16] === onMoveDown) {
                       if (cResult[17] === onMoveUp) {
-                        let tmp21 = cResult[18];
+                        let tmp22 = cResult[18];
                       }
                       if (sorting) {
                         if (!locked) {
@@ -129,16 +129,16 @@ export default noop.memo(
                                 return;
                               }
                             }
-                            tmp23[0] = role.name;
+                            tmp24[0] = role.name;
                             const formatToPlainStringResult = intl.formatToPlainString(
                               tmp(onMoveUp[13]).t.Zazao2,
-                              tmp23,
+                              tmp24,
                             );
                             cResult[19] = role.name;
                             cResult[20] = formatToPlainStringResult;
-                            let tmp22 = formatToPlainStringResult;
+                            let tmp23 = formatToPlainStringResult;
                           } else {
-                            tmp22 = cResult[20];
+                            tmp23 = cResult[20];
                           }
                           class D {
                             constructor(arg0) {
@@ -182,10 +182,10 @@ export default noop.memo(
                                 return;
                               }
                             }
-                            cResult[21] = tmp27;
-                            let tmp26 = tmp27;
+                            cResult[21] = tmp28;
+                            let tmp27 = tmp28;
                           } else {
-                            tmp26 = cResult[21];
+                            tmp27 = cResult[21];
                           }
                           let style;
                           if (sortHandlers != null) {
@@ -193,12 +193,12 @@ export default noop.memo(
                           }
                           if (cResult[22] === tmp5.dragHandlePressable) {
                             if (cResult[23] === style) {
-                              let tmp29 = cResult[24];
+                              let tmp30 = cResult[24];
                             }
-                            if (cResult[25] === tmp12) {
-                              if (cResult[26] === tmp21) {
+                            if (cResult[25] === tmp13) {
+                              if (cResult[26] === tmp22) {
                                 if (cResult[27] === sortHandlers) {
-                                  if (cResult[28] === tmp22) {
+                                  if (cResult[28] === tmp23) {
                                     if (!role.managed) {
                                       const _Symbol3 = Symbol;
                                       class D {
@@ -243,16 +243,16 @@ export default noop.memo(
                                             return;
                                           }
                                         }
-                                        tmp40[0] = role.name;
+                                        tmp41[0] = role.name;
                                         const formatToPlainStringResult1 = intl2.formatToPlainString(
                                           tmp(onMoveUp[13]).t.FiMFTZ,
-                                          tmp40,
+                                          tmp41,
                                         );
                                         cResult[32] = role.name;
                                         cResult[33] = formatToPlainStringResult1;
-                                        let tmp39 = formatToPlainStringResult1;
+                                        let tmp40 = formatToPlainStringResult1;
                                       } else {
-                                        tmp39 = cResult[33];
+                                        tmp40 = cResult[33];
                                       }
                                       if (cResult[34] === tmp10) {
                                         class D {
@@ -277,16 +277,16 @@ export default noop.memo(
                                         }
                                       }
                                       let obj2 = {
-                                        icon: tmp38,
-                                        accessibilityLabel: tmp39,
+                                        icon: tmp39,
+                                        accessibilityLabel: tmp40,
                                         size: "sm",
                                         variant: "destructive",
                                         onPress: tmp10,
                                       };
-                                      const tmp44 = closure_7(tmp(onMoveUp[18]).IconButton, obj2);
+                                      const tmp45 = closure_7(tmp(onMoveUp[18]).IconButton, obj2);
                                       cResult[34] = tmp10;
-                                      cResult[35] = tmp39;
-                                      cResult[36] = tmp44;
+                                      cResult[35] = tmp40;
+                                      cResult[36] = tmp45;
                                     } else {
                                       let flag2 = true;
                                       class D {
@@ -334,25 +334,25 @@ export default noop.memo(
                                 return;
                               }
                             }
-                            tmp31[1] = tmp22;
-                            tmp31[2] = tmp26;
-                            tmp31[3] = tmp12;
-                            tmp31[4] = tmp21;
-                            tmp31[7] = onPress(onMoveUp[6]).space.PX_4;
+                            tmp32[1] = tmp23;
+                            tmp32[2] = tmp27;
+                            tmp32[3] = tmp13;
+                            tmp32[4] = tmp22;
+                            tmp32[7] = onPress(onMoveUp[6]).space.PX_4;
                             const merged = Object.assign(sortHandlers);
-                            tmp31.style = tmp29;
-                            cResult[25] = tmp12;
-                            cResult[26] = tmp21;
+                            tmp32.style = tmp30;
+                            cResult[25] = tmp13;
+                            cResult[26] = tmp22;
                             cResult[27] = sortHandlers;
-                            cResult[28] = tmp22;
-                            cResult[29] = tmp29;
-                            cResult[30] = tmp31;
+                            cResult[28] = tmp23;
+                            cResult[29] = tmp30;
+                            cResult[30] = tmp32;
                           }
                           const items = [tmp5.dragHandlePressable, style];
                           cResult[22] = tmp5.dragHandlePressable;
                           cResult[23] = style;
                           cResult[24] = items;
-                          tmp29 = items;
+                          tmp30 = items;
                         }
                         if (null != roleIconProps) {
                           if (cResult[37] !== roleIconProps) {
@@ -377,9 +377,9 @@ export default noop.memo(
                               }
                             }
                             const merged1 = Object.assign(roleIconProps);
-                            const tmp62 = closure_7(onPress(onMoveUp[19]), {});
+                            const tmp63 = closure_7(onPress(onMoveUp[19]), {});
                             cResult[37] = roleIconProps;
-                            cResult[38] = tmp62;
+                            cResult[38] = tmp63;
                             const obj3 = {};
                             const tmp4Result = onPress(onMoveUp[19]);
                           }
@@ -408,9 +408,9 @@ export default noop.memo(
                           if (null === undefined) {
                             if (cResult[39] === guildId) {
                               if (cResult[40] === role) {
-                                let tmp53 = cResult[41];
+                                let tmp54 = cResult[41];
                               }
-                              let everyone = tmp53;
+                              let everyone = tmp54;
                             }
                             class D {
                               constructor(arg0) {
@@ -432,13 +432,13 @@ export default noop.memo(
                                 return;
                               }
                             }
-                            tmp55[1] = guildId;
-                            tmp55[2] = role;
-                            const tmp56 = closure_7(onPress(onMoveUp[20]), tmp55);
+                            tmp56[1] = guildId;
+                            tmp56[2] = role;
+                            const tmp57 = closure_7(onPress(onMoveUp[20]), tmp56);
                             cResult[39] = guildId;
                             cResult[40] = role;
-                            cResult[41] = tmp56;
-                            tmp53 = tmp56;
+                            cResult[41] = tmp57;
+                            tmp54 = tmp57;
                           } else {
                             if (cResult[42] === image) {
                               if (cResult[43] === role.colorString) {
@@ -480,7 +480,7 @@ export default noop.memo(
                                 cResult[45] = tmp5.container;
                                 ({ gradient: tmp3[46], image } = tmp5);
                                 cResult[47] = image;
-                                cResult[48] = tmp46Result;
+                                cResult[48] = tmp47Result;
                               }
                               class D {
                                 constructor(arg0) {
@@ -518,7 +518,7 @@ export default noop.memo(
                               let obj6 = { size: "md", style: tmp5.image };
                               items2[1] = closure_7(tmp(onMoveUp[24]).ShieldUserIcon, obj6);
                               obj4.children = items2;
-                              tmp46Result = closure_8(closure_5, obj4);
+                              tmp47Result = closure_8(closure_5, obj4);
                               const tmp4Result2 = onPress(onMoveUp[21]);
                             }
                             class D {
@@ -549,8 +549,8 @@ export default noop.memo(
                             items3[1] = obj8;
                             obj7.style = items3;
                             const obj9 = { size: "md", style: tmp5.image };
-                            obj7.children = tmp46(tmp(onMoveUp[24]).ShieldUserIcon, obj9);
-                            tmp46Result = tmp46(closure_5, obj7);
+                            obj7.children = tmp47(tmp(onMoveUp[24]).ShieldUserIcon, obj9);
+                            tmp47Result = tmp47(closure_5, obj7);
                           }
                           if (sorting) {
                             sorting = !flag2;
@@ -560,7 +560,7 @@ export default noop.memo(
                               if (cResult[51] === tmp5.everyone) {
                                 if (cResult[53] === role.name) {
                                   if (cResult[54] === tmp5.label) {
-                                    let tmp70 = cResult[55];
+                                    let tmp71 = cResult[55];
                                   }
                                   const tags2 = role.tags;
                                   class D {
@@ -588,12 +588,12 @@ export default noop.memo(
                                   }
                                   if (cResult[56] === subscription_listing_id) {
                                     if (cResult[57] === tmp5.sparkleIcon) {
-                                      let tmp73 = cResult[58];
+                                      let tmp74 = cResult[58];
                                     }
                                     if (cResult[59] !== locked) {
-                                      let tmp80 = null;
+                                      let tmp81 = null;
                                       if (locked) {
-                                        tmp80 = closure_7(tmp(onMoveUp[28]).LockIcon, {
+                                        tmp81 = closure_7(tmp(onMoveUp[28]).LockIcon, {
                                           size: "xxs",
                                           color: "icon-subtle",
                                         });
@@ -619,10 +619,10 @@ export default noop.memo(
                                         }
                                       }
                                       cResult[59] = locked;
-                                      cResult[60] = tmp80;
-                                      let tmp79 = tmp80;
+                                      cResult[60] = tmp81;
+                                      let tmp80 = tmp81;
                                     } else {
-                                      tmp79 = cResult[60];
+                                      tmp80 = cResult[60];
                                     }
                                     class D {
                                       constructor(arg0) {
@@ -645,21 +645,21 @@ export default noop.memo(
                                       }
                                     }
                                     const obj10 = { style: tmp5.row, children: null };
-                                    const items4 = [tmp70, tmp73, tmp79];
+                                    const items4 = [tmp71, tmp74, tmp80];
                                     obj10.children = items4;
-                                    const tmp85 = closure_8(closure_5, obj10);
+                                    const tmp86 = closure_8(closure_5, obj10);
                                     cResult[61] = tmp5.row;
-                                    cResult[62] = tmp70;
-                                    cResult[63] = tmp73;
-                                    cResult[64] = tmp79;
-                                    cResult[65] = tmp85;
+                                    cResult[62] = tmp71;
+                                    cResult[63] = tmp74;
+                                    cResult[64] = tmp80;
+                                    cResult[65] = tmp86;
                                   }
                                   const tags3 = role.tags;
                                   let prop;
                                   if (tags3 != null) {
                                     prop = tags3.subscription_listing_id;
                                   }
-                                  let tmp75 = null;
+                                  let tmp76 = null;
                                   if (null != prop) {
                                     const obj11 = { size: null, source: null, "aria-label": null, style: null };
                                     class D {
@@ -687,7 +687,7 @@ export default noop.memo(
                                     let intl3 = tmp(onMoveUp[13]).intl;
                                     obj11["aria-label"] = intl3.string(tmp(onMoveUp[13]).t.a2Ak8b);
                                     obj11.style = tmp5.sparkleIcon;
-                                    tmp75 = closure_7(tmp77, obj11);
+                                    tmp76 = closure_7(tmp78, obj11);
                                   }
                                   const tags4 = role.tags;
                                   let prop1;
@@ -696,8 +696,8 @@ export default noop.memo(
                                   }
                                   cResult[56] = prop1;
                                   cResult[57] = tmp5.sparkleIcon;
-                                  cResult[58] = tmp75;
-                                  tmp73 = tmp75;
+                                  cResult[58] = tmp76;
+                                  tmp74 = tmp76;
                                 }
                                 class D {
                                   constructor(arg0) {
@@ -726,11 +726,11 @@ export default noop.memo(
                                   color: "interactive-text-active",
                                   children: role.name,
                                 };
-                                const tmp72 = closure_7(tmp(onMoveUp[7]).Text, obj12);
+                                const tmp73 = closure_7(tmp(onMoveUp[7]).Text, obj12);
                                 cResult[53] = role.name;
                                 cResult[54] = tmp5.label;
-                                cResult[55] = tmp72;
-                                tmp70 = tmp72;
+                                cResult[55] = tmp73;
+                                tmp71 = tmp73;
                               }
                             }
                           }
@@ -760,12 +760,12 @@ export default noop.memo(
                           } else {
                             obj14 = { children: everyone };
                           }
-                          const tmp66Result = closure_7(closure_5, obj14);
+                          const tmp67Result = closure_7(closure_5, obj14);
                           cResult[49] = isEveryoneRole;
                           cResult[50] = everyone;
                           everyone = tmp5.everyone;
                           cResult[51] = everyone;
-                          cResult[52] = tmp66Result;
+                          cResult[52] = tmp67Result;
                         }
                       }
                       class D {
@@ -836,16 +836,7 @@ export default noop.memo(
                     cResult[16] = onMoveDown;
                     cResult[17] = onMoveUp;
                     cResult[18] = D;
-                    tmp21 = D;
-                  }
-                  class H {
-                    constructor() {
-                      if (onPress != null) {
-                        tmp2 = role;
-                        tmpResult = tmp(role);
-                      }
-                      return;
-                    }
+                    tmp22 = D;
                   }
                   if (null == onMoveUp) {
                     if (null == onMoveDown) {
@@ -872,7 +863,7 @@ export default noop.memo(
                       }
                       cResult[12] = onMoveUp;
                       cResult[13] = arr;
-                      tmp12 = arr;
+                      tmp13 = arr;
                     } else {
                       const _Symbol2 = Symbol;
                       class D {
@@ -917,13 +908,13 @@ export default noop.memo(
                             return;
                           }
                         }
-                        obj15.label = tmp19(tmp(onMoveUp[13]).t["5PbXSy"]);
+                        obj15.label = tmp20(tmp(onMoveUp[13]).t["5PbXSy"]);
                         cResult[15] = obj15;
-                        let tmp18 = obj15;
+                        let tmp19 = obj15;
                       } else {
-                        tmp18 = cResult[15];
+                        tmp19 = cResult[15];
                       }
-                      arr.push(tmp18);
+                      arr.push(tmp19);
                     }
                   } else {
                     const _Symbol = Symbol;
@@ -969,31 +960,22 @@ export default noop.memo(
                           return;
                         }
                       }
-                      obj16.label = tmp15(tmp(onMoveUp[13]).t.Yl8E4h);
+                      obj16.label = tmp16(tmp(onMoveUp[13]).t.Yl8E4h);
                       cResult[14] = obj16;
-                      let tmp14 = obj16;
+                      let tmp15 = obj16;
                     } else {
-                      tmp14 = cResult[14];
+                      tmp15 = cResult[14];
                     }
-                    arr.push(tmp14);
-                  }
-                }
-                class H {
-                  constructor() {
-                    if (onPress != null) {
-                      tmp2 = role;
-                      tmpResult = tmp(role);
-                    }
-                    return;
+                    arr.push(tmp15);
                   }
                 }
                 cResult[8] = onPress;
                 cResult[9] = role;
-                cResult[10] = H;
+                cResult[10] = tmp12;
               }
             }
           }
-          const fn = function z() {
+          function handleDeleteRow() {
             const obj2 = {
               title: null,
               body: null,
@@ -1038,7 +1020,7 @@ export default noop.memo(
                       c1 = 1;
                       c2 = 1;
                       const obj6 = {
-                        value: tmp2(11203).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                        value: tmp2(11320).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                         done: false,
                       };
                       return obj6;
@@ -1051,7 +1033,7 @@ export default noop.memo(
                     const obj = { value, done: true };
                     return obj;
                   }
-                  onPress(5712).deleteRole(guildId, tmp2.id);
+                  onPress(6102).deleteRole(guildId, tmp2.id);
                   c2 = 3;
                   return { value: "IconComponent", done: null };
                 } catch (tmp16) {
@@ -1060,7 +1042,7 @@ export default noop.memo(
                 }
               }
             });
-            obj2.onConfirm = function () {
+            obj2.onConfirm = function onConfirm() {
               const self = this;
               const apply = closure_0.apply;
               if (typeof apply === "unknown") {
@@ -1072,13 +1054,13 @@ export default noop.memo(
             };
             obj2.confirmColor = onPress(onMoveUp[16]).Colors.RED;
             onPress(onMoveUp[12]).show(obj2);
-          };
+          }
           cResult[3] = guildId;
           cResult[4] = null === guild_connections;
           cResult[5] = role.id;
           cResult[6] = role.name;
-          cResult[7] = fn;
-          tmp10 = fn;
+          cResult[7] = handleDeleteRow;
+          tmp10 = handleDeleteRow;
           const tmpResult = tmp(onMoveUp[11]);
         }
         const obj17 = { guildId, roleId: role.id, size: 32 };
@@ -1088,7 +1070,7 @@ export default noop.memo(
         tmp6 = obj17;
         let obj = role(onMoveUp[9]);
       }
-    : (guildId) => {
+    : function GuildSettingsRoleItem(guildId) {
         const tmp4 = closure_10();
         const role = guildId.role;
         ({ sorting, locked, onPress: importDefault, onMoveUp } = guildId);
@@ -1200,7 +1182,7 @@ export default noop.memo(
                           c1 = 1;
                           c2 = 1;
                           const obj6 = {
-                            value: tmp2(11203).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                            value: tmp2(11320).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                             done: false,
                           };
                           return obj6;
@@ -1222,7 +1204,7 @@ export default noop.memo(
                     }
                   }
                 });
-                obj2.onConfirm = function () {
+                obj2.onConfirm = function onConfirm() {
                   const self = this;
                   const apply = closure_0.apply;
                   if (typeof apply === "unknown") {
@@ -1305,15 +1287,15 @@ export default noop.memo(
             start: null,
             end: null,
           };
-          let fn;
+          let handlePress;
           if (!sorting) {
-            fn = () => {
+            handlePress = function handlePress() {
               if (importDefault != null) {
                 tmp(role);
               }
             };
           }
-          obj18.onPress = fn;
+          obj18.onPress = handlePress;
           if (sorting) {
             sorting = !flag2;
           }
@@ -1347,7 +1329,7 @@ export default noop.memo(
           if (null != prop) {
             const obj23 = {
               size: tmp5(onMoveUp[26]).Icon.Sizes.REFRESH_SMALL_16,
-              source: require("../../../../../_runtime/metro/09917__.js"),
+              source: require("../../../../../_runtime/metro/09399__.js"),
               "aria-label": null,
               style: null,
             };

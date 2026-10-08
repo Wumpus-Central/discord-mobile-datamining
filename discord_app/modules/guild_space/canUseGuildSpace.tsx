@@ -8,7 +8,7 @@ const require = fn;
 const Permissions = fn(1085).Permissions;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsGuildSpaceAdmin(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -19,7 +19,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function s() {
+        const fn = function c() {
           let canResult = null != closure_0;
           if (canResult) {
             canResult = PermissionStore.can(Permissions.MANAGE_GUILD, tmp);
@@ -39,7 +39,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7);
     }
-  : (arg0) => {
+  : function useIsGuildSpaceAdmin(arg0) {
       _require = arg0;
       const items = [PermissionStore];
       const items1 = [arg0];
@@ -72,7 +72,7 @@ export function canUseGuildSpace(guild, getChannelIdForGuildTransition) {
   return false;
 }
 export const useCanUseGuildSpace = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useCanUseGuildSpace(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(7);
       const obj = require("c");
@@ -103,7 +103,7 @@ export const useCanUseGuildSpace = ReactCompilerGating.isReactCompilerEnabled()
       closure_5(tmp(504).useStateFromStores(first, tmp8, tmp9));
       return false;
     }
-  : (arg0, arg1) => {
+  : function useCanUseGuildSpace(arg0, arg1) {
       _require = arg0;
       const guildSpaceExperimentEnabled = require("GuildSpaceExperiment").useGuildSpaceExperimentEnabled(arg0, arg1);
       const obj = require("GuildSpaceExperiment");

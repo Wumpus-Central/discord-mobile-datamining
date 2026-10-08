@@ -6,7 +6,7 @@ import UserSettings from "../../user_settings/UserSettings.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
-import _modDef7867 from "../../../../_runtime/metro/07867__.js";
+import _modDef8285 from "../../../../_runtime/metro/08285__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -15,12 +15,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let UserProfileAnalyticsTypes = fn(7865).UserProfileAnalyticsTypes;
+let UserProfileAnalyticsTypes = fn(8283).UserProfileAnalyticsTypes;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   button: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: 56 },
   tableContainer: null,
@@ -64,18 +64,18 @@ let closure_14 = createStyles.createStyles(obj);
 function SPEEDBUMP_ROWS(arg0) {}
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (speedBumpType) => {
+  ? function InformationTable(speedBumpType) {
       let map = items;
       let TableRowGroup = dependencyMap;
       const cResult = items(576).c(8);
       speedBumpType = speedBumpType.speedBumpType;
       if (cResult[0] !== speedBumpType) {
         if (typeof SPEEDBUMP_ROWS === "function") {
-          const obj2 = { icon: _modDef7867, text: null };
+          const obj2 = { icon: _modDef8285, text: null };
           const intl = map(1126).intl;
           obj2.text = intl.string(map(1126).t.kcuWva);
           items = [obj2];
-          const obj3 = { icon: _modDef7867, text: null };
+          const obj3 = { icon: _modDef8285, text: null };
           if ("block" === speedBumpType) {
             const intl3 = map(1126).intl;
             let stringResult = intl3.string(map(1126).t.QxrDY1);
@@ -85,7 +85,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
           obj3.text = stringResult;
           items[1] = obj3;
-          TableRowGroup = map(6081).TableRowGroup;
+          TableRowGroup = map(6267).TableRowGroup;
           map = items.map;
           const mapped = map((icon, arg1) => {
             const obj = {
@@ -122,14 +122,14 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = items(576);
     }
-  : (arg0) => {
+  : function InformationTable(arg0) {
       let items;
       if (typeof SPEEDBUMP_ROWS === "function") {
-        let obj = { icon: _modDef7867, text: null };
+        let obj = { icon: _modDef8285, text: null };
         const intl = items(1126).intl;
         obj.text = intl.string(items(1126).t.kcuWva);
         items = [obj];
-        const obj2 = { icon: _modDef7867, text: null };
+        const obj2 = { icon: _modDef8285, text: null };
         if ("block" === tmp) {
           const intl3 = tmp4(1126).intl;
           let stringResult = intl3.string(tmp4(1126).t.QxrDY1);
@@ -151,7 +151,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             return __initData(TableRow.TableRow, obj, index);
           }),
         };
-        return closure_12(items(6081).TableRowGroup, obj3);
+        return closure_12(items(6267).TableRowGroup, obj3);
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -163,7 +163,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (userId) => {
+    ? function UserProfileSpeedBumpActionSheet(userId) {
         const cResult = userId(onClose[14]).c(112);
         userId = userId.userId;
         const channelId = userId.channelId;
@@ -367,7 +367,7 @@ export default noop.memo(
         cResult[12] = fn;
         const tmpResult5 = userId(onClose[20]);
       }
-    : (userId) => {
+    : function UserProfileSpeedBumpActionSheet(userId) {
         userId = userId.userId;
         const channelId = userId.channelId;
         ({ localUser, onClose } = userId);

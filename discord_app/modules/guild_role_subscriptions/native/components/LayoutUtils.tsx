@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/LayoutUtils.tsx");
 
 export const GappedList = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GappedList(arg0) {
       const cResult = renderGap(num2[3]).c(7);
       ({ children, gap, renderGap } = arg0);
       let num = 4;
@@ -68,7 +68,7 @@ export const GappedList = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = mapped;
       const toArrayResult = Children.toArray(children);
     }
-  : (gap) => {
+  : function GappedList(gap) {
       let num = gap.gap;
       if (num === undefined) {
         num = 4;

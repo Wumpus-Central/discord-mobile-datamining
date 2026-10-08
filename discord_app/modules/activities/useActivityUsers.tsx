@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useActivityUsers.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useActivityUsers(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(5);
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(573).useStateFromStoresArray(first, tmp7, tmp8);
       }
-      const fn = function s() {
+      const fn = function a() {
         if (null == closure_1) {
           return [];
         } else {
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useActivityUsers(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       let items = [EmbeddedActivitiesStore, UserStore];

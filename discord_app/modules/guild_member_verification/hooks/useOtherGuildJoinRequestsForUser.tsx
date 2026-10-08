@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useOtherGuildJoinRequestsForUser = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function useOtherGuildJoinRequestsForUser(guildId) {
       const cResult = guildId(selectedJoinRequestId[3]).c(16);
       guildId = guildId.guildId;
       const userId = guildId.userId;
@@ -43,45 +43,49 @@ export const useOtherGuildJoinRequestsForUser = ReactCompilerGating.isReactCompi
               return tmp13;
             }
             if (cResult[13] !== selectedJoinRequestId) {
-              class I {
-                constructor(arg0) {
-                  return guildId.joinRequestId !== selectedJoinRequestId;
-                }
-              }
+              const fn3 = function _(joinRequestId) {
+                return joinRequestId.joinRequestId !== selectedJoinRequestId;
+              };
               cResult[13] = selectedJoinRequestId;
-              cResult[14] = I;
+              cResult[14] = fn3;
+              let tmp14 = fn3;
             } else {
-              class I {
-                constructor(arg0) {
-                  return guildId.joinRequestId !== selectedJoinRequestId;
-                }
-              }
+              tmp14 = cResult[14];
             }
             const _Symbol = Symbol;
             if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
               class I {
-                constructor(arg0) {
-                  return guildId.joinRequestId !== selectedJoinRequestId;
+                constructor(arg0, arg1) {
+                  date = new Date(arg1.createdAt);
+                  time = date.getTime();
+                  date1 = new Date(guildId.createdAt);
+                  return time - date1.getTime();
                 }
               }
-              cResult[15] = tmp16;
+              cResult[15] = I;
             } else {
               class I {
-                constructor(arg0) {
-                  return guildId.joinRequestId !== selectedJoinRequestId;
+                constructor(arg0, arg1) {
+                  date = new Date(arg1.createdAt);
+                  time = date.getTime();
+                  date1 = new Date(guildId.createdAt);
+                  return time - date1.getTime();
                 }
               }
             }
             if (stateFromStores == null) {
               class I {
-                constructor(arg0) {
-                  return guildId.joinRequestId !== selectedJoinRequestId;
+                constructor(arg0, arg1) {
+                  date = new Date(arg1.createdAt);
+                  time = date.getTime();
+                  date1 = new Date(guildId.createdAt);
+                  return time - date1.getTime();
                 }
               }
             }
-            const found = stateFromStores.filter(I);
+            const found = stateFromStores.filter(tmp14);
             const substr = found.slice();
-            const sorted = substr.sort(tmp16);
+            const sorted = substr.sort(I);
             cResult[10] = stateFromStores;
             cResult[11] = selectedJoinRequestId;
             cResult[12] = sorted;
@@ -120,7 +124,7 @@ export const useOtherGuildJoinRequestsForUser = ReactCompilerGating.isReactCompi
       tmp = guildId;
       tmp2 = selectedJoinRequestId;
     }
-  : (guildId) => {
+  : function useOtherGuildJoinRequestsForUser(guildId) {
       guildId = guildId.guildId;
       const userId = guildId.userId;
       const selectedJoinRequestId = guildId.selectedJoinRequestId;

@@ -30,7 +30,9 @@ const pressable = SettingBuilders.createPressable({
     };
     AlertActionCreatorsDefault.show(obj2);
   },
-  useIsDisabled: () => null !== account_MFAUtils.use2FARemoveDisableReason(),
+  useIsDisabled() {
+    return null !== account_MFAUtils.use2FARemoveDisableReason();
+  },
   useDescription: account_MFAUtils.use2FARemoveDisableReason,
   usePredicate: SettingsAccountUtils.useIsTOTPEnabled,
 });

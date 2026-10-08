@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2553 from "../GuildPowerups.messages.js";
+import _modDef2597 from "../GuildPowerups.messages.js";
 import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
 import usePowerupActiveStatus from "usePowerupActiveStatus.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -11,7 +11,7 @@ const PowerupActiveStatusType = GuildPowerupsConstants.PowerupActiveStatusType;
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useMultiPerkStatusValues(arg0) {
       const cResult = c.c(25);
       ({ powerups, guildId } = arg0);
       const powerupsActiveStatuses = usePowerupActiveStatus.usePowerupsActiveStatuses(guildId, powerups);
@@ -71,193 +71,130 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
             const obj4 = { type: "active", statusText: null };
             const intl = util.intl;
-            obj4.statusText = intl.string(_modDef2553.FFLkmx);
+            obj4.statusText = intl.string(_modDef2597.FFLkmx);
             cResult[8] = obj4;
           }
         }
         if (cResult[9] !== powerupsActiveStatuses) {
           const _Symbol4 = Symbol;
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn3 = function x(arg0, type) {
-              let sum = arg0;
-              if (type.type === constants.POWERUP_ACTIVATED) {
-                sum = arg0 + type.powerup.cost;
+            class S {
+              constructor(arg0, arg1) {
+                sum = arg0;
+                if (arg1.type === closure_1_3.POWERUP_ACTIVATED) {
+                  sum = arg0 + arg1.powerup.cost;
+                }
+                return sum;
               }
-              return sum;
-            };
-            cResult[11] = fn3;
-            let tmp23 = fn3;
+            }
+            cResult[11] = S;
           } else {
-            tmp23 = cResult[11];
+            class S {
+              constructor(arg0, arg1) {
+                sum = arg0;
+                if (arg1.type === closure_1_3.POWERUP_ACTIVATED) {
+                  sum = arg0 + arg1.powerup.cost;
+                }
+                return sum;
+              }
+            }
           }
-          const reduced1 = powerupsActiveStatuses.reduce(tmp23, 0);
+          const reduced1 = powerupsActiveStatuses.reduce(S, 0);
           cResult[9] = powerupsActiveStatuses;
           cResult[10] = reduced1;
         } else {
+          class S {
+            constructor(arg0, arg1) {
+              sum = arg0;
+              if (arg1.type === closure_1_3.POWERUP_ACTIVATED) {
+                sum = arg0 + arg1.powerup.cost;
+              }
+              return sum;
+            }
+          }
           if (cResult[12] !== powerupsActiveStatuses) {
+            class S {
+              constructor(arg0, arg1) {
+                sum = arg0;
+                if (arg1.type === closure_1_3.POWERUP_ACTIVATED) {
+                  sum = arg0 + arg1.powerup.cost;
+                }
+                return sum;
+              }
+            }
             const _Symbol5 = Symbol;
             if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-              class E {
+              class S {
                 constructor(arg0, arg1) {
-                  powerup = arg1.powerup;
-                  num = undefined;
-                  if (powerup != null) {
-                    num = powerup.cost;
+                  sum = arg0;
+                  if (arg1.type === closure_1_3.POWERUP_ACTIVATED) {
+                    sum = arg0 + arg1.powerup.cost;
                   }
-                  if (num == null) {
-                    num = 0;
-                  }
-                  tmp = arg0;
-                  if (arg0 >= num) {
-                    num2 = undefined;
-                    if (powerup != null) {
-                      num2 = powerup.cost;
-                    }
-                    if (num2 == null) {
-                      num2 = 0;
-                    }
-                    tmp = num2;
-                  }
-                  return tmp;
+                  return sum;
                 }
               }
-              cResult[14] = E;
+              cResult[14] = tmp28;
             } else {
-              class E {
+              class S {
                 constructor(arg0, arg1) {
-                  powerup = arg1.powerup;
-                  num = undefined;
-                  if (powerup != null) {
-                    num = powerup.cost;
+                  sum = arg0;
+                  if (arg1.type === closure_1_3.POWERUP_ACTIVATED) {
+                    sum = arg0 + arg1.powerup.cost;
                   }
-                  if (num == null) {
-                    num = 0;
-                  }
-                  tmp = arg0;
-                  if (arg0 >= num) {
-                    num2 = undefined;
-                    if (powerup != null) {
-                      num2 = powerup.cost;
-                    }
-                    if (num2 == null) {
-                      num2 = 0;
-                    }
-                    tmp = num2;
-                  }
-                  return tmp;
+                  return sum;
                 }
               }
             }
             if (powerupsActiveStatuses[0] != null) {
-              class E {
+              class S {
                 constructor(arg0, arg1) {
-                  powerup = arg1.powerup;
-                  num = undefined;
-                  if (powerup != null) {
-                    num = powerup.cost;
+                  sum = arg0;
+                  if (arg1.type === closure_1_3.POWERUP_ACTIVATED) {
+                    sum = arg0 + arg1.powerup.cost;
                   }
-                  if (num == null) {
-                    num = 0;
-                  }
-                  tmp = arg0;
-                  if (arg0 >= num) {
-                    num2 = undefined;
-                    if (powerup != null) {
-                      num2 = powerup.cost;
-                    }
-                    if (num2 == null) {
-                      num2 = 0;
-                    }
-                    tmp = num2;
-                  }
-                  return tmp;
+                  return sum;
                 }
               }
               if (tmp30 != null) {
-                class E {
+                class S {
                   constructor(arg0, arg1) {
-                    powerup = arg1.powerup;
-                    num = undefined;
-                    if (powerup != null) {
-                      num = powerup.cost;
+                    sum = arg0;
+                    if (arg1.type === closure_1_3.POWERUP_ACTIVATED) {
+                      sum = arg0 + arg1.powerup.cost;
                     }
-                    if (num == null) {
-                      num = 0;
-                    }
-                    tmp = arg0;
-                    if (arg0 >= num) {
-                      num2 = undefined;
-                      if (powerup != null) {
-                        num2 = powerup.cost;
-                      }
-                      if (num2 == null) {
-                        num2 = 0;
-                      }
-                      tmp = num2;
-                    }
-                    return tmp;
+                    return sum;
                   }
                 }
               }
             }
             if (undefined == null) {
-              class E {
+              class S {
                 constructor(arg0, arg1) {
-                  powerup = arg1.powerup;
-                  num = undefined;
-                  if (powerup != null) {
-                    num = powerup.cost;
+                  sum = arg0;
+                  if (arg1.type === closure_1_3.POWERUP_ACTIVATED) {
+                    sum = arg0 + arg1.powerup.cost;
                   }
-                  if (num == null) {
-                    num = 0;
-                  }
-                  tmp = arg0;
-                  if (arg0 >= num) {
-                    num2 = undefined;
-                    if (powerup != null) {
-                      num2 = powerup.cost;
-                    }
-                    if (num2 == null) {
-                      num2 = 0;
-                    }
-                    tmp = num2;
-                  }
-                  return tmp;
+                  return sum;
                 }
               }
             }
-            const reduced2 = powerupsActiveStatuses.reduce(E, tmp29);
+            const reduced2 = powerupsActiveStatuses.reduce(tmp28, tmp29);
             cResult[12] = powerupsActiveStatuses;
             cResult[13] = reduced2;
           } else {
-            class E {
+            class S {
               constructor(arg0, arg1) {
-                powerup = arg1.powerup;
-                num = undefined;
-                if (powerup != null) {
-                  num = powerup.cost;
+                sum = arg0;
+                if (arg1.type === closure_1_3.POWERUP_ACTIVATED) {
+                  sum = arg0 + arg1.powerup.cost;
                 }
-                if (num == null) {
-                  num = 0;
-                }
-                tmp = arg0;
-                if (arg0 >= num) {
-                  num2 = undefined;
-                  if (powerup != null) {
-                    num2 = powerup.cost;
-                  }
-                  if (num2 == null) {
-                    num2 = 0;
-                  }
-                  tmp = num2;
-                }
-                return tmp;
+                return sum;
               }
             }
           }
           const _Symbol6 = Symbol;
           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-            class P {
+            class I {
               constructor(arg0, arg1) {
                 powerup = arg1.powerup;
                 num = undefined;
@@ -270,9 +207,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return arg0 + num;
               }
             }
-            cResult[15] = P;
+            cResult[15] = I;
           } else {
-            class P {
+            class I {
               constructor(arg0, arg1) {
                 powerup = arg1.powerup;
                 num = undefined;
@@ -286,9 +223,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const reduced3 = powerupsActiveStatuses.reduce(P, 0);
+          const reduced3 = powerupsActiveStatuses.reduce(I, 0);
           if (tmp4) {
-            class P {
+            class I {
               constructor(arg0, arg1) {
                 powerup = arg1.powerup;
                 num = undefined;
@@ -303,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (!tmp4) {
-            class P {
+            class I {
               constructor(arg0, arg1) {
                 powerup = arg1.powerup;
                 num = undefined;
@@ -317,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (reduced3 > tmp35) {
-              class P {
+              class I {
                 constructor(arg0, arg1) {
                   powerup = arg1.powerup;
                   num = undefined;
@@ -332,8 +269,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          if (cResult[16] === cResult[10]) {
-            class P {
+          if (cResult[16] === tmp21) {
+            class I {
               constructor(arg0, arg1) {
                 powerup = arg1.powerup;
                 num = undefined;
@@ -353,11 +290,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cost: tmp26,
             costDecorator: undefined,
             expiringAt: tmp9,
-            activeCost: cResult[10],
+            activeCost: tmp21,
             minCost: tmp26,
             totalCost: reduced3,
           };
-          cResult[16] = cResult[10];
+          cResult[16] = tmp21;
           cResult[17] = tmp26;
           cResult[18] = undefined;
           cResult[19] = tmp9;
@@ -369,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (powerups) => {
+  : function useMultiPerkStatusValues(powerups) {
       powerups = powerups.powerups;
       const powerupsActiveStatuses = usePowerupActiveStatus.usePowerupsActiveStatuses(powerups.guildId, powerups);
       const someResult = powerupsActiveStatuses.some((type) => type.type !== constants.INACTIVE);
@@ -399,7 +336,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else if (someResult) {
           const obj3 = { type: "active", statusText: null };
           const intl = util.intl;
-          obj3.statusText = intl.string(_modDef2553.FFLkmx);
+          obj3.statusText = intl.string(_modDef2597.FFLkmx);
           tmp4 = obj3;
         }
         const reduced1 = powerupsActiveStatuses.reduce((acc, type) => {

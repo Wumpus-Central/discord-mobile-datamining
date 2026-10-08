@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ container: { borderRadius: 3 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const CreatorRevenueButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CreatorRevenueButton(arg0) {
       const cResult = c.c(9);
       ({ disabled, text, onPress, style, loading } = arg0);
       const tmp3 = closure_4();
@@ -50,7 +50,7 @@ export const CreatorRevenueButton = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp4 = items;
     }
-  : (arg0) => {
+  : function CreatorRevenueButton(arg0) {
       ({ disabled, text, onPress, style, loading } = arg0);
       const obj = { style: null, loading, disabled, onPress, text };
       const items = [closure_4().container, style];

@@ -8,7 +8,7 @@ const GuildFeatures = fn(1085).GuildFeatures;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHasEnhancedRoleColors(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -19,7 +19,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function l() {
+        const fn = function s() {
           guild = GuildStore.getGuild(closure_0);
           let hasItem = null != guild;
           if (hasItem) {
@@ -37,7 +37,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useHasEnhancedRoleColors(arg0) {
       _require = arg0;
       const items = [GuildStore];
       return require("initialize").useStateFromStores(items, () => {
@@ -68,7 +68,7 @@ export const getHasEnhancedRoleColors = function getHasEnhancedRoleColors(guildI
   }
 };
 export const useHasEnhancedRoleColorsForRole = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHasEnhancedRoleColorsForRole(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -79,7 +79,7 @@ export const useHasEnhancedRoleColorsForRole = ReactCompilerGating.isReactCompil
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function l() {
+        const fn = function s() {
           guild = GuildStore.getGuild(closure_0);
           let hasItem = null != guild;
           if (hasItem) {
@@ -97,7 +97,7 @@ export const useHasEnhancedRoleColorsForRole = ReactCompilerGating.isReactCompil
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useHasEnhancedRoleColorsForRole(arg0) {
       _require = arg0;
       const items = [GuildStore];
       return require("initialize").useStateFromStores(items, () => {

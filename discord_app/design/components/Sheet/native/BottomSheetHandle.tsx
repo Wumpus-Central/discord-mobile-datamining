@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sheet/native/BottomSheetHandle.tsx");
 
 export const useBottomSheetImperativeHandle = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useBottomSheetImperativeHandle(arg0, arg1) {
       closure_0 = arg1;
       const cResult = c.c(3);
       if (cResult[0] !== arg1) {
@@ -63,7 +63,7 @@ export const useBottomSheetImperativeHandle = ReactCompilerGating.isReactCompile
       }
       const imperativeHandle = noop.useImperativeHandle(arg0, tmp2, tmp3);
     }
-  : (arg0, arg1) => {
+  : function useBottomSheetImperativeHandle(arg0, arg1) {
       closure_0 = arg1;
       const items = [arg1];
       const imperativeHandle = noop.useImperativeHandle(

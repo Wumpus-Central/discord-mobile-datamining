@@ -2,25 +2,24 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "../../../../guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx";
+import GuildScheduledEventModalActionCreators from "../../../../guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../../user_settings/LocaleStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15129);
+const View = fn(17).View;
+const HappeningNowConstants = fn(15391);
 const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 ({
-  HappeningNowCardTrackingType: closure_9,
-  HAPPENING_NOW_CARD_HEIGHT: c10,
+  HappeningNowCardTrackingType: closure_8,
+  HAPPENING_NOW_CARD_HEIGHT: closure_9,
   HAPPENING_NOW_EVENT_BANNER_WIDTH,
 } = HappeningNowConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4896);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(5090);
 let obj = {
   info: { alignSelf: "center", flexShrink: 1, marginLeft: 12, gap: 2 },
   infoNoImage: {
@@ -104,21 +103,21 @@ let obj5 = {
   borderTopLeftRadius: nativeDefault.radii.sm,
   borderBottomLeftRadius: nativeDefault.radii.sm,
 };
-obj.avatarContainer = { width: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.XSMALL_20] };
-let closure_14 = createStyles.createStyles(obj);
-const point = { shape: fn(8502).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
+obj.avatarContainer = { width: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.XSMALL_20] };
+let closure_13 = createStyles.createStyles(obj);
+const point = { shape: fn(8986).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
 let items = [point];
 let ReactCompilerGating = fn(558);
-let closure_16 = noop.memo(
+let closure_15 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function DottedLineSeparator() {
         const cResult = c.c(2);
-        const tmp2 = closure_14();
+        const tmp2 = closure_13();
         if (cResult[0] !== tmp2) {
           items = [];
           for (let num3 = 0; num3 <= HAPPENING_NOW_CONTENT_HEIGHT; num3 = num3 + 8) {
             let obj2 = { style: 0 === num3 ? tmp2.shortDottedLineSegment : tmp2.dottedLineSegment };
-            let arr = items.push(__initData(React4, obj2, num3));
+            let arr = items.push(closure_1_11(View, obj2, num3));
           }
           cResult[0] = tmp2;
           cResult[1] = items;
@@ -128,18 +127,18 @@ let closure_16 = noop.memo(
         }
         return tmp3;
       }
-    : () => {
-        const tmp = closure_14();
+    : function DottedLineSeparator() {
+        const tmp = closure_13();
         items = [];
         for (let num = 0; num <= HAPPENING_NOW_CONTENT_HEIGHT; num = num + 8) {
           let obj = { style: 0 === num ? tmp.shortDottedLineSegment : tmp.dottedLineSegment };
-          let arr = items.push(__initData(React4, obj, num));
+          let arr = items.push(closure_1_11(View, obj, num));
         }
         return items;
       },
 );
 ReactCompilerGating = fn(558);
-let obj6 = { width: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.XSMALL_20] };
+let obj6 = { width: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.XSMALL_20] };
 size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEvent.tsx",
@@ -147,7 +146,7 @@ let result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (event) => {
+    ? function HappeningNowCardEvent(event) {
         const cResult = event(creator_id[12]).c(65);
         event = event.event;
         const index = event.index;
@@ -156,10 +155,10 @@ export default noop.memo(
         if (tmp4) {
           tmp4 = panelVariant;
         }
-        closure_14();
+        closure_13();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           items = [LocaleStore];
-          const fn = function c() {
+          const fn = function s() {
             return locale.locale;
           };
           cResult[0] = items;
@@ -195,32 +194,32 @@ export default noop.memo(
             tmp12 = cResult[4];
           }
           if (cResult[5] !== creator_id) {
-            class A {
+            class R {
               constructor() {
-                return closure_7.getUser(creator_id);
+                return closure_6.getUser(creator_id);
               }
             }
             cResult[5] = creator_id;
-            cResult[6] = A;
+            cResult[6] = R;
           } else {
-            class A {
+            class R {
               constructor() {
-                return closure_7.getUser(creator_id);
+                return closure_6.getUser(creator_id);
               }
             }
           }
           const tmpResult3 = tmp(tmp2[14]);
-          const stateFromStores1 = tmp(tmp2[13]).useStateFromStores(tmp12, A);
+          const stateFromStores1 = tmp(tmp2[13]).useStateFromStores(tmp12, R);
           if (cResult[7] !== event) {
-            class A {
+            class R {
               constructor() {
-                return closure_7.getUser(creator_id);
+                return closure_6.getUser(creator_id);
               }
             }
             if (null != event) {
-              class A {
+              class R {
                 constructor() {
-                  return closure_7.getUser(creator_id);
+                  return closure_6.getUser(creator_id);
                 }
               }
               const nextRecurrenceIdInEvent = obj5.getNextRecurrenceIdInEvent(event);
@@ -229,17 +228,17 @@ export default noop.memo(
             cResult[8] = nextRecurrenceIdInEvent;
             const tmp16 = nextRecurrenceIdInEvent;
           } else {
-            class A {
+            class R {
               constructor() {
-                return closure_7.getUser(creator_id);
+                return closure_6.getUser(creator_id);
               }
             }
           }
           index(tmp2[16])(event.guild_id, event.id, tmp16);
           if (cResult[9] === event) {
-            class A {
+            class R {
               constructor() {
-                return closure_7.getUser(creator_id);
+                return closure_6.getUser(creator_id);
               }
             }
           }
@@ -250,7 +249,7 @@ export default noop.memo(
               obj1 = {
                 order: index,
                 guild_id: event.guild_id,
-                type: closure_9.GUILD_EVENT_CARD,
+                type: closure_8.GUILD_EVENT_CARD,
                 highlighted_user_ids: null,
                 destination_channel_id: null,
               };
@@ -278,14 +277,14 @@ export default noop.memo(
         }
         const tmpResult = event(creator_id[13]);
       }
-    : (event) => {
+    : function HappeningNowCardEvent(event) {
         event = event.event;
         const index = event.index;
         ({ isLive, panelVariant } = event);
         if (panelVariant === undefined) {
           panelVariant = false;
         }
-        const tmp = closure_14();
+        const tmp = closure_13();
         items = [LocaleStore];
         let creator_id = event.host_id;
         const stateFromStores = event(creator_id[13]).useStateFromStores(items, () => locale.locale);
@@ -327,10 +326,7 @@ export default noop.memo(
           obj2.highlighted_user_ids = tmp4;
           obj2.destination_channel_id = event.channel_id;
           AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
-          const result = guild_scheduled_events_GuildScheduledEventModalActionCreators.openGuildEventDetails({
-            eventId: event.id,
-            event,
-          });
+          const result = GuildScheduledEventModalActionCreators.openGuildEventDetails({ eventId: event.id, event });
           const obj4 = { eventId: event.id, event };
         }, items4);
         if (null != event.image) {
@@ -343,13 +339,12 @@ export default noop.memo(
           event.scheduled_start_time,
         ).startDateTimeString;
         const items5 = [];
-        for (let num2 = 0; num2 < closure_10; num2 = num2 + 8) {
+        for (let num2 = 0; num2 < closure_9; num2 = num2 + 8) {
           let obj2 = { style: tmp.dottedLineSegment };
-          let arr = items5.push(closure_12(closure_4, obj2, num2));
+          let arr = items5.push(closure_11(View, obj2, num2));
         }
         let obj3 = { onPress: callback, width: null, panelVariant: null, children: null };
         let str = "stretchy";
-        const tmp17 = index;
         const tmp2Result8 = event(creator_id[15]);
         if (event.fullwidth) {
           str = "full";
@@ -360,7 +355,7 @@ export default noop.memo(
         const obj5 = { style: tmp.ticketContainer, children: null };
         const obj6 = { style: tmp.avatarContainer, children: null };
         let tmp22Result = null != stateFromStores1;
-        const tmp19 = index(creator_id[24]);
+        const tmp19 = index(creator_id[25]);
         if (tmp22Result) {
           const obj7 = {
             user: stateFromStores1,
@@ -368,12 +363,12 @@ export default noop.memo(
             guildId: event.guild_id,
             size: event(tmp18[9]).AvatarSizes.XSMALL_20,
           };
-          tmp22Result = closure_12(event(tmp18[9]).Avatar, obj7);
+          tmp22Result = closure_11(event(tmp18[9]).Avatar, obj7);
         }
         obj6.children = tmp22Result;
-        const items6 = [closure_12(closure_4, obj6)];
+        const items6 = [closure_11(View, obj6)];
         const obj8 = { style: tmp.interestedUsersContainer, children: null };
-        const items7 = [closure_12(event(creator_id[21]).GroupIcon, { style: tmp.interestedUsersIcon, size: "xxs" })];
+        const items7 = [closure_11(event(creator_id[21]).GroupIcon, { style: tmp.interestedUsersIcon, size: "xxs" })];
         let tmp22Result4 = tmp9 > 0;
         if (tmp22Result4) {
           const obj10 = {
@@ -381,31 +376,31 @@ export default noop.memo(
             variant: "text-xs/semibold",
             children: tmp25(tmp18[23]).humanizeValue(tmp9, stateFromStores),
           };
-          tmp22Result4 = closure_12(tmp25(tmp18[22]).Text, obj10);
+          tmp22Result4 = closure_11(tmp25(tmp18[22]).Text, obj10);
           const tmp25Result = tmp25(tmp18[23]);
         }
         items7[1] = tmp22Result4;
         obj8.children = items7;
-        items6[1] = closure_13(closure_4, obj8);
+        items6[1] = closure_12(View, obj8);
         obj5.children = items6;
-        const items8 = [closure_13(closure_4, obj5)];
+        const items8 = [closure_12(View, obj5)];
         let tmp22Result5 = null == source;
         if (tmp22Result5) {
-          const obj11 = { style: tmp.dottedLineContainer, children: closure_12(closure_16, {}) };
-          tmp22Result5 = closure_12(closure_4, obj11);
+          const obj11 = { style: tmp.dottedLineContainer, children: closure_11(closure_15, {}) };
+          tmp22Result5 = closure_11(View, obj11);
         }
         items8[1] = tmp22Result5;
         obj4.children = items8;
-        const items9 = [closure_13(tmp17(creator_id[10]), obj4), ,];
+        const items9 = [closure_12(index(creator_id[10]), obj4), ,];
         let tmp22Result6 = null != source;
         if (tmp22Result6) {
           const obj12 = { style: tmp.decorationImage, source, resizeMode: "cover" };
-          tmp22Result6 = closure_12(closure_5, obj12);
+          tmp22Result6 = closure_11(tmp17(tmp18[24]), obj12);
         }
         items9[1] = tmp22Result6;
         const obj13 = { style: null == source ? tmp.infoNoImage : tmp.info, children: null };
         const items10 = [
-          closure_12(event(creator_id[24]).HappeningNowCardHeader, {
+          closure_11(event(creator_id[25]).HappeningNowCardHeader, {
             lineClamp: 3,
             noMargin: true,
             children: event.name,
@@ -422,16 +417,16 @@ export default noop.memo(
         }
         obj15.variant = str3;
         if (isLive) {
-          const intl = tmp25(tmp18[25]).intl;
+          const intl = tmp25(tmp18[26]).intl;
           const _HermesInternal = HermesInternal;
-          startDateTimeString = "\u00B7 " + intl.string(tmp25(tmp18[25]).t.dI3q4h).toUpperCase();
-          const str4 = intl.string(tmp25(tmp18[25]).t.dI3q4h);
+          startDateTimeString = "\u00B7 " + intl.string(tmp25(tmp18[26]).t.dI3q4h).toUpperCase();
+          const str4 = intl.string(tmp25(tmp18[26]).t.dI3q4h);
         }
         obj15.children = startDateTimeString;
-        items10[1] = closure_12(event(creator_id[24]).HappeningNowCardSubtitle, obj15);
+        items10[1] = closure_11(event(creator_id[25]).HappeningNowCardSubtitle, obj15);
         obj13.children = items10;
-        items9[2] = closure_13(closure_4, obj13);
+        items9[2] = closure_12(View, obj13);
         obj3.children = items9;
-        return closure_13(tmp19, obj3);
+        return closure_12(tmp19, obj3);
       },
 );

@@ -11,7 +11,7 @@ const useContext = _mod19.useContext;
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEnabled.tsx");
 
 export const useDisplayNameStylesEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDisplayNameStylesEnabled() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
@@ -31,7 +31,7 @@ export const useDisplayNameStylesEnabled = ReactCompilerGating.isReactCompilerEn
       }
       return overrideSettings;
     }
-  : () => {
+  : function useDisplayNameStylesEnabled() {
       const items = [AccessibilityStore];
       let overrideSettings = initialize.useStateFromStores(items, () => AccessibilityStore.displayNameStylesEnabled);
       if (!overrideSettings) {

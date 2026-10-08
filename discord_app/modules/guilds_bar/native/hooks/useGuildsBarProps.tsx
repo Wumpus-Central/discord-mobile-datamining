@@ -433,8 +433,8 @@ function getAnchorIndexFromId(arg0) {
     }
   }
 }
-const GuildsNodeType = fn(5623).GuildsNodeType;
-const GuildsBarConstants = fn(16262);
+const GuildsNodeType = fn(5968).GuildsNodeType;
+const GuildsBarConstants = fn(16522);
 ({ FastListRenderSections: closure_17, useGuildWrapperSize: closure_18 } = GuildsBarConstants);
 const jsx = fn(21).jsx;
 const constants2 = {
@@ -452,7 +452,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarProps.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGuildsBarProps(arg0) {
       _require = arg0;
       const cResult = require("c").c(62);
       let obj = require("c");
@@ -551,7 +551,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp27 = cResult[10];
             tmp28 = cResult[11];
           }
-          const tmpResult8 = tmp(tmp2[38]);
+          const tmpResult9 = tmp(tmp2[38]);
           stateFromStoresArray1 = tmp(tmp2[38]).useStateFromStoresArray(tmp27, tmp28);
           const _Symbol4 = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
@@ -578,7 +578,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp32 = cResult[12];
             tmp33 = cResult[13];
           }
-          const tmpResult9 = tmp(tmp2[38]);
+          const tmpResult10 = tmp(tmp2[38]);
           stateFromStores1 = tmp(tmp2[38]).useStateFromStores(tmp33, tmp32);
           const _Symbol5 = Symbol;
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
@@ -589,12 +589,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             items5[1] = guildsNFolders;
-            class B {
-              constructor() {
-                guildIds = pendingFolderNode.getGuildIds();
-                return guildIds.filter((item) => currentUserGuest.isCurrentUserGuest(item));
-              }
-            }
+            const fn2 = function q() {
+              const guildIds = pendingFolderNode.getGuildIds();
+              return guildIds.filter((item) => currentUserGuest.isCurrentUserGuest(item));
+            };
             class C {
               constructor() {
                 unreadPrivateChannelIds = closure_12.getUnreadPrivateChannelIds();
@@ -605,14 +603,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj.filterOutMessageRequestsAndSpamById(unreadPrivateChannelIds, items);
               }
             }
-            cResult[15] = B;
-            let tmp38 = B;
+            cResult[15] = fn2;
+            let tmp38 = fn2;
             let tmp37 = items5;
           } else {
             tmp37 = cResult[14];
             tmp38 = cResult[15];
           }
-          const tmpResult10 = tmp(tmp2[38]);
+          const tmpResult11 = tmp(tmp2[38]);
           const stateFromStoresArray2 = tmp(tmp2[38]).useStateFromStoresArray(tmp37, tmp38);
           const _Symbol6 = Symbol;
           if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
@@ -627,12 +625,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const items7 = [];
-            class B {
-              constructor() {
-                guildIds = pendingFolderNode.getGuildIds();
-                return guildIds.filter((item) => currentUserGuest.isCurrentUserGuest(item));
-              }
-            }
             cResult[16] = items6;
             class C {
               constructor() {
@@ -654,8 +646,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp42 = cResult[17];
             tmp43 = cResult[18];
           }
-          const tmpResult12 = tmp(tmp2[38]);
-          const stateFromStores2 = tmpResult12.useStateFromStores(tmp41, tmp42, tmp43, tmp5(tmp2[39]));
+          const tmpResult13 = tmp(tmp2[38]);
+          const stateFromStores2 = tmpResult13.useStateFromStores(tmp41, tmp42, tmp43, tmp5(tmp2[39]));
           guildsNFolders = stateFromStores2.guildsNFolders;
           const version = stateFromStores2.version;
           const tmp50 = tmp5(tmp2[40])();
@@ -673,12 +665,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj;
               }
             }
-            class B {
-              constructor() {
-                guildIds = pendingFolderNode.getGuildIds();
-                return guildIds.filter((item) => currentUserGuest.isCurrentUserGuest(item));
-              }
-            }
+            cResult[19] = items8;
             class C {
               constructor() {
                 unreadPrivateChannelIds = closure_12.getUnreadPrivateChannelIds();
@@ -695,9 +682,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp51 = cResult[19];
             tmp52 = cResult[20];
           }
-          const tmpResult11 = tmp(tmp2[38]);
+          const tmpResult12 = tmp(tmp2[38]);
           const stateFromStores3 = tmp(tmp2[38]).useStateFromStores(tmp51, tmp52);
-          const tmpResult13 = tmp(tmp2[38]);
+          const tmpResult14 = tmp(tmp2[38]);
           const tmp56 = !tmp(tmp2[41]).useIsScreenReaderEnabled();
           let result = 3 * token;
           if (youBarTotalHeight > 0) {
@@ -719,11 +706,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj;
               }
             }
-            class B {
-              constructor() {
-                guildIds = pendingFolderNode.getGuildIds();
-                return guildIds.filter((item) => currentUserGuest.isCurrentUserGuest(item));
+            if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
+              const windowDimensions = tmp(tmp2[42]).getWindowDimensions();
+              class Y {
+                constructor() {
+                  obj = {
+                    guildsNFolders: closure_1_14.getFastListGuildFolders(),
+                    version: closure_1_14.getGuildsTree().version,
+                  };
+                  return obj;
+                }
               }
+              let tmp61 = windowDimensions;
+              const tmpResult16 = tmp(tmp2[42]);
+            } else {
+              tmp61 = cResult[24];
             }
             if (cResult[25] === top) {
               if (cResult[26] === tmp56) {
@@ -814,12 +811,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         if (null != guildId) {
                           const tmp72 = findGuildSectionIndex(guildId);
                         }
-                        class B {
-                          constructor() {
-                            guildIds = pendingFolderNode.getGuildIds();
-                            return guildIds.filter((item) => currentUserGuest.isCurrentUserGuest(item));
-                          }
-                        }
                         cResult[34] = tmp72;
                         class C {
                           constructor() {
@@ -830,12 +821,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             items[1] = closure_7;
                             return obj.filterOutMessageRequestsAndSpamById(unreadPrivateChannelIds, items);
                           }
-                        }
-                      }
-                      class B {
-                        constructor() {
-                          guildIds = pendingFolderNode.getGuildIds();
-                          return guildIds.filter((item) => currentUserGuest.isCurrentUserGuest(item));
                         }
                       }
                       class C {
@@ -885,12 +870,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  class B {
-                    constructor() {
-                      guildIds = pendingFolderNode.getGuildIds();
-                      return guildIds.filter((item) => currentUserGuest.isCurrentUserGuest(item));
-                    }
-                  }
+                  cResult[30] = arg0;
                   class C {
                     constructor() {
                       unreadPrivateChannelIds = closure_12.getUnreadPrivateChannelIds();
@@ -921,7 +901,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp64[1] = tmp59;
             tmp64[2] = top;
             tmp64[3] = sum;
-            tmp64[4] = tmp62.height;
+            tmp64[4] = tmp61.height;
             cResult[25] = top;
             cResult[26] = tmp56;
             cResult[27] = tmp59;
@@ -934,7 +914,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[22] = diff;
           cResult[23] = rect1;
           tmp59 = rect1;
-          const tmpResult14 = tmp(tmp2[41]);
+          const tmpResult15 = tmp(tmp2[41]);
         }
       }
       const fn = function _() {
@@ -951,7 +931,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = fn;
       const obj4 = require("useYouBarTotalHeight");
     }
-  : (arg0) => {
+  : function useGuildsBarProps(arg0) {
       _require = arg0;
       const tmp = isScreenReaderEnabled();
       importDefault = tmp;
@@ -1240,22 +1220,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj = {
               children: items1.map((item) => {
                 if ("unavailable-guilds" === item) {
-                  return closure_1_19(itemSize(16331), {}, item);
+                  return closure_1_19(itemSize(16591), {}, item);
                 } else if ("empty-nux" === item) {
-                  return closure_1_19(itemSize(16332), {}, item);
+                  return closure_1_19(itemSize(16592), {}, item);
                 } else if ("create-join-guild" === item) {
-                  return closure_1_19(itemSize(16333), {}, item);
+                  return closure_1_19(itemSize(16593), {}, item);
                 }
               }),
             };
             return jsx(GuildsBarFooterWrapperDefault, {
               children: items1.map((item) => {
                 if ("unavailable-guilds" === item) {
-                  return closure_1_19(itemSize(16331), {}, item);
+                  return closure_1_19(itemSize(16591), {}, item);
                 } else if ("empty-nux" === item) {
-                  return closure_1_19(itemSize(16332), {}, item);
+                  return closure_1_19(itemSize(16592), {}, item);
                 } else if ("create-join-guild" === item) {
-                  return closure_1_19(itemSize(16333), {}, item);
+                  return closure_1_19(itemSize(16593), {}, item);
                 }
               }),
             });

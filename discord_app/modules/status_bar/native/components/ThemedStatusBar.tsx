@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/status_bar/native/components/ThemedStatusBar.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ThemedStatusBar() {
       const cResult = c.c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AuthenticationStore];
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult6 = useGlobalStatusIndicatorState;
     }
-  : () => {
+  : function ThemedStatusBar() {
       const items = [AuthenticationStore];
       const stateFromStores = initialize.useStateFromStores(items, () => authenticated.isAuthenticated());
       const isModalOpen = NavigationRouteUtils.useIsModalOpen();

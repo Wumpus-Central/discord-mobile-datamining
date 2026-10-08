@@ -8,9 +8,9 @@ import trackActivityProblemDefault from "../trackActivityProblem.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ActivityFeedbackReasons = fn(2011).ActivityFeedbackReasons;
+const ActivityFeedbackReasons = fn(2023).ActivityFeedbackReasons;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const FeedbackType = fn(11262).FeedbackType;
+const FeedbackType = fn(9602).FeedbackType;
 const jsx = fn(21).jsx;
 const items = [, ,];
 ({ OTHER: arr[0], ADS: arr[1], NOT_FUN: arr[2] } = ActivityFeedbackReasons);
@@ -19,7 +19,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/ActivityFeedbackActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (activityApplication) => {
+  ? function ActivityFeedbackActionSheet(activityApplication) {
       const cResult = activityApplication(embeddedActivityLocation[7]).c(18);
       activityApplication = activityApplication.activityApplication;
       const channel = activityApplication.channel;
@@ -147,7 +147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn = function f(dontShowAgain) {
+      function trackReport(dontShowAgain) {
         ({ rating, reason, feedback } = dontShowAgain);
         value = null;
         if (null != reason) {
@@ -180,16 +180,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj6.rating = rating;
           trackActivityProblemDefault(obj6);
         }
-      };
+      }
       cResult[2] = activityApplication;
       cResult[3] = analyticsData;
       cResult[4] = channel;
       cResult[5] = embeddedActivityLocation;
-      cResult[6] = fn;
-      tmp9 = fn;
+      cResult[6] = trackReport;
+      tmp9 = trackReport;
       let obj = activityApplication(embeddedActivityLocation[7]);
     }
-  : (activityApplication) => {
+  : function ActivityFeedbackActionSheet(activityApplication) {
       activityApplication = activityApplication.activityApplication;
       ({
         channel: importDefault,

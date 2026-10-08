@@ -11,7 +11,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyVideoProgressPersistence.tsx");
 
 export const useBountyVideoProgressPersistence = ReactCompilerGating.isReactCompilerEnabled()
-  ? (bountyId) => {
+  ? function useBountyVideoProgressPersistence(bountyId) {
       const cResult = bountyId(endMode[4]).c(11);
       bountyId = bountyId.bountyId;
       endMode = bountyId.endMode;
@@ -110,7 +110,7 @@ export const useBountyVideoProgressPersistence = ReactCompilerGating.isReactComp
       tmp2 = fn;
       let obj = bountyId(endMode[4]);
     }
-  : (bountyId) => {
+  : function useBountyVideoProgressPersistence(bountyId) {
       bountyId = bountyId.bountyId;
       const endMode = bountyId.endMode;
       _slicedToArray = undefined;

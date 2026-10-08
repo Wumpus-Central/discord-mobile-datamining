@@ -16,7 +16,7 @@ const dependencyMap = {
   sheet: "Sheet",
   bespoke: "Bespoke",
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   tintWash: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, pointerEvents: "none", opacity: 0.15 },
   badgeContainer: { position: "absolute", bottom: 2, right: 4, pointerEvents: "none" },
@@ -44,7 +44,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useHeaderDebugOverlay(arg0, arg1) {
       const cResult = c.c(17);
       const tmp5 = closure_8();
       if (tmp4) {
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       tmp4 = useDesignToggleDefault("show_header_debug_info");
     }
-  : (arg0, arg1) => {
+  : function useHeaderDebugOverlay(arg0, arg1) {
       const tmp3 = closure_8();
       if (tmp2) {
         let tmp6 = arg1;

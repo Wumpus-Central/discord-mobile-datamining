@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AdCreativeType from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
-import QuestDataUtils from "utils/QuestDataUtils.tsx";
+import QuestExpirationUtils from "utils/QuestExpirationUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import AdDeliveryStore from "../ads/AdDeliveryStore.tsx";
 import QuestStore from "QuestStore.tsx";
@@ -27,7 +27,7 @@ function syncWithQuestStore() {
     [tmp5, tmp7] = tmp4;
     let hasItem = obj.has(tmp5);
     if (!hasItem) {
-      let obj2 = QuestDataUtils;
+      let obj2 = QuestExpirationUtils;
       hasItem = obj2.isQuestExpired(tmp7);
     }
     if (!hasItem) {
@@ -61,7 +61,7 @@ function syncWithQuestStore() {
         value = quests.get(item10063);
         let isQuestExpiredResult = null == value;
         if (!isQuestExpiredResult) {
-          let obj3 = QuestDataUtils;
+          let obj3 = QuestExpirationUtils;
           isQuestExpiredResult = obj3.isQuestExpired(tmp26);
         }
         if (isQuestExpiredResult) {

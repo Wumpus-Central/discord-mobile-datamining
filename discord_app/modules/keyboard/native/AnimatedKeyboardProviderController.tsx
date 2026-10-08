@@ -1,16 +1,16 @@
 // discord_app/modules/keyboard/native/AnimatedKeyboardProviderController.tsx
 import c from "../../../../_runtime/00576_c.js";
-import KeyboardChatScrollView from "../../../../_runtime/01632_KeyboardChatScrollView.js";
+import KeyboardChatScrollView from "../../../../_runtime/01644_KeyboardChatScrollView.js";
 import ReanimatedRexport2 from "../../reanimated/ReanimatedRexport.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-let ReanimatedRexport = fn(4618);
+let ReanimatedRexport = fn(4810);
 const mutable = ReanimatedRexport.makeMutable(0);
-ReanimatedRexport = fn(4618);
-const mutable1 = ReanimatedRexport.makeMutable(fn(4618).KeyboardState.UNKNOWN);
+ReanimatedRexport = fn(4810);
+const mutable1 = ReanimatedRexport.makeMutable(fn(4810).KeyboardState.UNKNOWN);
 fn(558);
 const __initData = {
   code: "function AnimatedKeyboardProviderControllerTsx1(e){const{animatedKeyboardState,KeyboardState}=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);}",
@@ -33,7 +33,7 @@ const __initData6 = {
 const ReactCompilerGating = fn(558);
 let closure_12 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function ComponentInner() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { onStart: null, onMove: null, onEnd: null };
@@ -87,7 +87,7 @@ let closure_12 = noop.memo(
         KeyboardChatScrollView.useKeyboardHandler(tmp4, tmp5);
         return null;
       }
-    : () => {
+    : function ComponentInner() {
         const obj2 = { onStart: null, onMove: null, onEnd: null };
         const fn = function o(height) {
           if (0 === height.height) {
@@ -137,7 +137,7 @@ let result = size.fileFinishedImporting("modules/keyboard/native/AnimatedKeyboar
 
 export default {
   Component: ReactCompilerGating.isReactCompilerEnabled()
-    ? (children) => {
+    ? function Component(children) {
         const cResult = c.c(3);
         children = children.children;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -166,7 +166,7 @@ export default {
         }
         return tmp8;
       }
-    : (children) => {
+    : function Component(children) {
         const obj = {
           enabled: true,
           navigationBarTranslucent: true,

@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/keyboard/native/useModalDismissGuardRefreshControl.tsx");
 
 export const useModalDismissGuardRefreshControl = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useModalDismissGuardRefreshControl() {
       const cResult = c.c(2);
       const isPortalKeyboardInModal = PortalKeyboardModalContext.useIsPortalKeyboardInModal();
       if (cResult[0] !== isPortalKeyboardInModal) {
@@ -34,8 +34,8 @@ export const useModalDismissGuardRefreshControl = ReactCompilerGating.isReactCom
       }
       return tmp5;
     }
-  : () => {
-      isPortalKeyboardInModal = isPortalKeyboardInModal(9939).useIsPortalKeyboardInModal();
+  : function useModalDismissGuardRefreshControl() {
+      isPortalKeyboardInModal = isPortalKeyboardInModal(9461).useIsPortalKeyboardInModal();
       const items = [isPortalKeyboardInModal];
       return noop.useMemo(() => {
         let tmp;

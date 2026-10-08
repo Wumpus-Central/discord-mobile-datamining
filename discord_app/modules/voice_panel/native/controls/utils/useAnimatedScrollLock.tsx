@@ -3,7 +3,7 @@ import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let closure_3 = PlatformUtils.isAndroid();
 let context = noop.createContext(null);
 let closure_5 = {
@@ -42,7 +42,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/controls/uti
 
 export const ControlsGestureScrollLock = context;
 export const useAnimatedScrollLock = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAnimatedScrollLock(arg0) {
       let obj = arg0;
       const cResult = onScrollHandler(onScrollHandlerWorkletized[3]).c(5);
       if (undefined === arg0) {
@@ -244,7 +244,7 @@ export const useAnimatedScrollLock = ReactCompilerGating.isReactCompilerEnabled(
       cResult[4] = obj6;
       tmp16 = obj6;
     }
-  : () => {
+  : function useAnimatedScrollLock() {
       let obj = arg0;
       if (arg0 === undefined) {
         obj = {};

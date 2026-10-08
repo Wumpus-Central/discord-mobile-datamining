@@ -5,7 +5,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(4513).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_3 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
 const ReactCompilerGating = fn(558);
 function getChannelsAllowedToUnlink(arg0) {
   let obj = arg1;
@@ -33,7 +33,7 @@ const result = size.fileFinishedImporting("modules/lobbies/hooks/useChannelsAllo
 
 export { getChannelsAllowedToUnlink };
 export const useChannelsAllowedToUnlink = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useChannelsAllowedToUnlink(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -70,7 +70,7 @@ export const useChannelsAllowedToUnlink = ReactCompilerGating.isReactCompilerEna
       const obj = require("c");
       return require("initialize").useStateFromStoresArray(first, tmp7);
     }
-  : (arg0) => {
+  : function useChannelsAllowedToUnlink(arg0) {
       _require = arg0;
       let items = [PermissionStore, GuildChannelStore];
       return require("initialize").useStateFromStoresArray(items, () => {

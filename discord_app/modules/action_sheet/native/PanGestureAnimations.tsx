@@ -152,7 +152,7 @@ let obj4 = { TIMING_CONFIG: obj2, withTiming: timing.withTiming };
 let result = size.fileFinishedImporting("modules/action_sheet/native/PanGestureAnimations.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (lowerBounds) => {
+  ? function usePanGesture(lowerBounds) {
       const cResult = lowerBounds(upperBounds[4]).c(2);
       lowerBounds = lowerBounds.lowerBounds;
       upperBounds = lowerBounds.upperBounds;
@@ -312,7 +312,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const onChangeResult = Gesture.Pan().onStart(fn).onChange(fn2);
       return Gesture.Pan().onStart(fn).onChange(fn2).onEnd(fn3).onFinalize(PanGestureAnimationsTsx5);
     }
-  : (lowerBounds) => {
+  : function usePanGesture(lowerBounds) {
       lowerBounds = lowerBounds.lowerBounds;
       const upperBounds = lowerBounds.upperBounds;
       const snapPositions = lowerBounds.snapPositions;

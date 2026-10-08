@@ -9,15 +9,15 @@ import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 import SlowmodeStore from "../../stores/SlowmodeStore.tsx";
 
 require = fn;
-const SlowmodeType = fn(7184).SlowmodeType;
+const SlowmodeType = fn(7363).SlowmodeType;
 const ActivityActionTypes = fn(1085).ActivityActionTypes;
-const ChannelFlags = fn(2058).ChannelFlags;
+const ChannelFlags = fn(2070).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/useCreateGameInvitePost.tsx");
 
 export const useCreateGameInvitePost = ReactCompilerGating.isReactCompilerEnabled()
-  ? (parentChannel) => {
+  ? function useCreateGameInvitePost(parentChannel) {
       const cResult = parentChannel(applicationIdsForGame[9]).c(47);
       parentChannel = parentChannel.parentChannel;
       const description = parentChannel.description;
@@ -375,7 +375,7 @@ export const useCreateGameInvitePost = ReactCompilerGating.isReactCompilerEnable
       };
       const tmpResult2 = parentChannel(applicationIdsForGame[10]);
     }
-  : (parentChannel) => {
+  : function useCreateGameInvitePost(parentChannel) {
       parentChannel = parentChannel.parentChannel;
       const str = parentChannel.description;
       const appliedTagIds = parentChannel.appliedTagIds;

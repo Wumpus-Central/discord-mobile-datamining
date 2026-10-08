@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     width: 56,
@@ -59,7 +59,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/SafetyHubAccountStandingSubwayMarker.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SafetyHubAccountStandingSubwayMarker(arg0) {
       let format = style;
       let formatResult = label;
       const cResult = style(label[6]).c(33);
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             }
                                           }
                                         }
-                                        class S {
+                                        class I {
                                           constructor(arg0, arg1) {
                                             tmp = jsx;
                                             if (isSelected) {
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     }
                                     const intl = format(formatResult[8]).intl;
                                     format = intl.format;
-                                    class S {
+                                    class I {
                                       constructor(arg0, arg1) {
                                         tmp = jsx;
                                         if (isSelected) {
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     cResult[23] = formatResult;
                                   }
                                 }
-                                class S {
+                                class I {
                                   constructor(arg0, arg1) {
                                     tmp = jsx;
                                     if (isSelected) {
@@ -209,8 +209,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 cResult[24] = isSelected;
                                 cResult[25] = style;
                                 cResult[26] = label.label;
-                                cResult[27] = S;
-                                tmp19 = S;
+                                cResult[27] = I;
+                                tmp19 = I;
                               }
                             }
                           }
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = style(label[6]);
       const tmp4 = 0 === index ? label.firstOption : {};
     }
-  : (arg0) => {
+  : function SafetyHubAccountStandingSubwayMarker(arg0) {
       ({ selectedIcon, style: require, isSelected } = arg0);
       ({ index, size, numOptions } = arg0);
       ({ status, onLayout } = arg0);

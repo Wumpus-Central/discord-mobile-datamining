@@ -9,7 +9,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function usePremiumGroupPrimaryName(arg0) {
       const cResult = c.c(10);
       if (cResult[0] !== arg0) {
         let obj2 = arg0;
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj4;
       tmp7 = obj4;
     }
-  : () => {
+  : function usePremiumGroupPrimaryName() {
       let obj = arg0;
       if (arg0 === undefined) {
         obj = {};

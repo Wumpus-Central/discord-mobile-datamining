@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sheet/native/BottomSheetTextInput.native.tsx");
 
 export const BottomSheetTextInput = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BottomSheetTextInput(arg0) {
       const cResult = c.c(15);
       if (cResult[0] !== arg0) {
         ({ onFocus, onBlur, ref } = arg0);
@@ -42,7 +42,7 @@ export const BottomSheetTextInput = ReactCompilerGating.isReactCompilerEnabled()
         const tmp14 = useBottomSheetKeyboardHandlingDefault(tmp12);
         const keyboardBlurring = NativeTextInput.useKeyboardBlurring(ref1);
         if (cResult[8] !== ref) {
-          const fn = function y(current) {
+          const fn = function h(current) {
             ref1.current = current;
             if (typeof closure_0 === "function") {
               closure_0(current);
@@ -85,7 +85,7 @@ export const BottomSheetTextInput = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = obj3;
       ref1 = noop.useRef(null);
     }
-  : (ref) => {
+  : function BottomSheetTextInput(ref) {
       ref = ref.ref;
       ({ onFocus, onBlur } = ref);
       ref = undefined;

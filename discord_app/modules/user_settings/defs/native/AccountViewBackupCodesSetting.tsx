@@ -37,9 +37,9 @@ function onConfirmBackups(onSuccess) {
 const Constants = fn(1085);
 ({ NOOP_NULL: closure_4, UserSettingsSections } = Constants);
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useOnViewBackups() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(arg0) {
@@ -65,8 +65,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
           const intl3 = closure_0(1126).intl;
           obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
-          obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
-          closure_1(14598)(obj);
+          obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
+          closure_1(14859)(obj);
           return false;
         };
         cResult[0] = fn;
@@ -76,8 +76,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      noop.useCallback((arg0) => {
+  : function useOnViewBackups() {
+      return noop.useCallback((arg0) => {
         closure_0 = arg0;
         const obj = {
           onSubmit(password) {
@@ -100,19 +100,20 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
         const intl3 = closure_0(1126).intl;
         obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
-        obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
-        closure_1(14598)(obj);
+        obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
+        closure_1(14859)(obj);
         return false;
       }, []);
+    };
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.xZEzbu);
   },
-  parent: fn(7645).MobileUserSettings.ACCOUNT,
-  usePredicate: fn(14510).useIs2FAEnabled,
+  parent: fn(7966).MobileUserSettings.ACCOUNT,
+  usePredicate: fn(14770).useIs2FAEnabled,
   usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useOnViewBackups() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function t(arg0) {
@@ -138,8 +139,8 @@ const route = SettingBuilders.createRoute({
             obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
             const intl3 = closure_0(1126).intl;
             obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
-            obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
-            closure_1(14598)(obj);
+            obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
+            closure_1(14859)(obj);
             return false;
           };
           cResult[0] = fn;
@@ -149,8 +150,8 @@ const route = SettingBuilders.createRoute({
         }
         return first;
       }
-    : () =>
-        noop.useCallback((arg0) => {
+    : function useOnViewBackups() {
+        return noop.useCallback((arg0) => {
           closure_0 = arg0;
           const obj = {
             onSubmit(password) {
@@ -173,10 +174,11 @@ const route = SettingBuilders.createRoute({
           obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
           const intl3 = closure_0(1126).intl;
           obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
-          obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
-          closure_1(14598)(obj);
+          obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
+          closure_1(14859)(obj);
           return false;
-        }, []),
+        }, []);
+      },
   screen: {
     route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
     getComponent() {

@@ -9,7 +9,7 @@ const require = fn;
 const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: null, label: null, button: null, buttonText: null };
 let size = {
   width: "100%",
@@ -42,7 +42,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePa
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function VoicePanelNoVideoParticipantsCard() {
         const cResult = channelId(576).c(17);
         channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
         const tmp5 = closure_7();
@@ -67,7 +67,7 @@ export default noop.memo(
         }
         if (cResult[3] !== tmp5.label) {
           const obj2 = { style: label, variant: "text-md/semibold", color: "text-overlay-light", children: tmp7 };
-          const tmp11 = closure_5(tmp(4892).Text, obj2);
+          const tmp11 = closure_5(tmp(5086).Text, obj2);
           cResult[3] = tmp5.label;
           cResult[4] = tmp11;
           let tmp9 = tmp11;
@@ -92,7 +92,7 @@ export default noop.memo(
         }
         if (cResult[7] !== tmp5.buttonText) {
           const obj3 = { variant: "text-sm/semibold", style: tmp5.buttonText, children: tmp14 };
-          const tmp18 = closure_5(tmp(4892).Text, obj3);
+          const tmp18 = closure_5(tmp(5086).Text, obj3);
           cResult[7] = tmp5.buttonText;
           cResult[8] = tmp18;
           let tmp16 = tmp18;
@@ -137,7 +137,7 @@ export default noop.memo(
         tmp19 = tmp20;
         const obj = channelId(576);
       }
-    : () => {
+    : function VoicePanelNoVideoParticipantsCard() {
         const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
         const tmp = closure_7();
         const items = [channelId];
@@ -148,7 +148,7 @@ export default noop.memo(
         const obj2 = { style: tmp.label, variant: "text-md/semibold", color: "text-overlay-light", children: null };
         const intl = channelId(1126).intl;
         obj2.children = intl.string(channelId(1126).t["8eBJ73"]);
-        const items1 = [closure_5(channelId(4892).Text, obj2)];
+        const items1 = [closure_5(channelId(5086).Text, obj2)];
         const obj3 = {
           style: tmp.button,
           onPress: callback,
@@ -161,7 +161,7 @@ export default noop.memo(
         const obj4 = { variant: "text-sm/semibold", style: tmp.buttonText, children: null };
         const intl3 = channelId(1126).intl;
         obj4.children = intl3.string(channelId(1126).t.kLQySL);
-        obj3.children = closure_5(channelId(4892).Text, obj4);
+        obj3.children = closure_5(channelId(5086).Text, obj4);
         items1[1] = closure_5(Pressable, obj3);
         obj.children = items1;
         return closure_6(NativeViewDefault, obj);

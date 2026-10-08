@@ -9,7 +9,7 @@ import RedesignGuildHeader from "../RedesignGuildHeader.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const RedesignChannelListConstants = fn(11711);
+const RedesignChannelListConstants = fn(11776);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_4, BANNER_MAX_HEIGHT_PERCENTAGE: hasOwnProperty } =
   RedesignChannelListConstants);
 const ReactCompilerGating = fn(558);
@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (banner) => {
+  ? function useChannelListSpecs(banner) {
       const cResult = c.c(19);
       const redesignGuildHeaderHeight = RedesignGuildHeader.useRedesignGuildHeaderHeight(banner);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -119,15 +119,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = null != banner.banner;
       const tmpResult = useFontScale;
     }
-  : (banner) => {
-      redesignGuildHeaderHeight = redesignGuildHeaderHeight(16098).useRedesignGuildHeaderHeight(banner);
-      height = height(1484)({ ignoreKeyboard: true }).height;
-      const tmp2 = height(15986)();
+  : function useChannelListSpecs(banner) {
+      redesignGuildHeaderHeight = redesignGuildHeaderHeight(16358).useRedesignGuildHeaderHeight(banner);
+      height = height(1496)({ ignoreKeyboard: true }).height;
+      const tmp2 = height(16246)();
       dependencyMap = tmp2;
-      const obj = redesignGuildHeaderHeight(16098);
-      const fontScale = redesignGuildHeaderHeight(5609).useFontScale();
+      const obj = redesignGuildHeaderHeight(16358);
+      const fontScale = redesignGuildHeaderHeight(5382).useFontScale();
       closure_4 = tmp4;
-      const top = height(1618)().top;
+      const top = height(1630)().top;
       const items = [null != banner.banner, tmp2, height, redesignGuildHeaderHeight, top, fontScale];
       return fontScale.useMemo(() => {
         let num = 0;

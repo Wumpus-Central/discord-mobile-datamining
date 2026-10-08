@@ -7,13 +7,13 @@ import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const DraftType = fn(7044).DraftType;
+const DraftType = fn(7232).DraftType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/native/useSetMediaPostThumbnail.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, id) => {
+  ? function useSetMediaPostThumbnail(arg0, id) {
       _require = arg0;
       const user = id;
       const cResult = require("c").c(8);
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (id != null) {
         isThumbnail1 = id.isThumbnail;
       }
-      const fn2 = function f() {
+      const fn2 = function b() {
         let id;
         if (user != null) {
           id = user.id;
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = fn2;
       const tmpResult = require("useStateFromStores");
     }
-  : (arg0, arg1) => {
+  : function useSetMediaPostThumbnail(arg0, arg1) {
       _require = arg0;
       const user = arg1;
       const items = [UploadAttachmentStore];

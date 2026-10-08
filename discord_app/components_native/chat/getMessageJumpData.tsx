@@ -111,17 +111,17 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
     null != messages.replyingMessageId;
 }
 export const useMessageJumpAndroidKeyboardHeight = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useMessageJumpAndroidKeyboardHeight() {
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let num2 = 0;
         if (tmpResult.isAndroid()) {
-          num2 = tmp(1884).getSystemKeyboardHeight();
-          const tmpResult2 = tmp(1884);
+          num2 = tmp(1896).getSystemKeyboardHeight();
+          const tmpResult2 = tmp(1896);
         }
         cResult[0] = num2;
         let first = num2;
-        tmpResult = tmp(1369);
+        tmpResult = tmp(1381);
       } else {
         first = cResult[0];
       }
@@ -148,7 +148,7 @@ export const useMessageJumpAndroidKeyboardHeight = ReactCompilerGating.isReactCo
       const effect = noop.useEffect(tmp6, tmp7);
       return tmp5[0];
     }
-  : () => {
+  : function useMessageJumpAndroidKeyboardHeight() {
       let num = 0;
       if (obj2.isAndroid()) {
         num = useSystemKeyboardHeight.getSystemKeyboardHeight();

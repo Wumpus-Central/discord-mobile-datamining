@@ -20,7 +20,7 @@ const Constants = fn(1085);
 ({ GuildSettingsSections: map1, AuditLogFilterTypes: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   listView: { marginVertical: 12 },
   spinner: { marginTop: 40 },
@@ -254,25 +254,17 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
         closure_15(tmp2(tmp3[26]).EmptyState, obj14);
       } else {
         const obj15 = {
-          style: null,
-          contentContainerStyle: null,
-          data: null,
-          extraData: null,
-          keyExtractor: null,
-          renderItem: null,
-          onEndReached: null,
-        };
-        const items10 = [tmp.listView];
-        obj15.style = items10;
-        obj15.contentContainerStyle = guildId.contentContainerStyle;
-        obj15.data = memo;
-        obj15.extraData = extraData;
-        obj15.keyExtractor = function keyExtractor(id) {
-          return id.id;
-        };
-        obj15.renderItem = callback1;
-        obj15.onEndReached = function onEndReached() {
-          const nextLogPage = AuditLogActionCreators.fetchNextLogPage(guildId);
+          style: tmp.listView,
+          contentContainerStyle: guildId.contentContainerStyle,
+          data: memo,
+          extraData,
+          keyExtractor(id) {
+            return id.id;
+          },
+          renderItem: callback1,
+          onEndReached() {
+            const nextLogPage = AuditLogActionCreators.fetchNextLogPage(guildId);
+          },
         };
         items9[1] = closure_15(stateFromStores1, obj15);
         let tmp24 = null;
@@ -287,7 +279,7 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
     }
   }
   const obj17 = { children: null };
-  const items11 = [tmp16Result, closure_15(guildId(stateFromStores[28]).NavScrim, {})];
-  obj17.children = items11;
+  const items10 = [tmp16Result, closure_15(guildId(stateFromStores[28]).NavScrim, {})];
+  obj17.children = items10;
   return closure_16(closure_17, obj17);
 }

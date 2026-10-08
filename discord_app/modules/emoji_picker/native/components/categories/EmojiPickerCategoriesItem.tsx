@@ -8,12 +8,12 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let EmojiCategoryTypes = fn(5649).EmojiCategoryTypes;
+let EmojiCategoryTypes = fn(5996).EmojiCategoryTypes;
 const Constants = fn(1085);
 ({ CATEGORY_ICON_RIPPLE_CONFIG: closure_7, CATEGORY_ICON_SIZE, NODE_SIZE } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   itemInner: null,
   fadedItem: { backgroundColor: nativeDefault.colors.ICON_TRANSPARENT },
@@ -75,7 +75,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (category) => {
+    ? function EmojiPickerCategoriesItem(category) {
         const cResult = type(handlePressCategory[9]).c(32);
         type = category.category;
         const categoryIndexActive = category.categoryIndexActive;
@@ -115,30 +115,25 @@ export default noop.memo(
           [tmp10, tmp11] = index(backgroundColor.useState(tmp6), 2);
           EmojiCategoryTypes = tmp11;
           const tmp9 = index(backgroundColor.useState(tmp6), 2);
-          const fn3 = function j() {
-            return categoryIndexActive.get() === index;
-          };
-          const obj4 = { categoryIndexActive, index };
-          fn3.__closure = obj4;
-          fn3.__workletHash = 12996370114251;
-          fn3.__initData = __initData2;
           class L {
-            constructor(arg0, arg1) {
-              if (category !== arg1) {
-                tmp = closure_0;
-                tmp2 = closure_2;
-                obj = closure_0(closure_2[10]);
-                tmp3 = closure_6;
-                tmp4 = obj.runOnJS(closure_6)(category);
-              }
-              return;
+            constructor() {
+              return categoryIndexActive.get() === index;
             }
           }
+          const obj4 = { categoryIndexActive, index };
+          L.__closure = obj4;
+          L.__workletHash = 12996370114251;
+          L.__initData = __initData2;
+          const fn3 = function j(arg0, arg1) {
+            if (arg0 !== arg1) {
+              ReanimatedRexport.runOnJS(closure_6)(arg0);
+            }
+          };
           const obj5 = { runOnJS: tmp(tmp2[10]).runOnJS, setIsSelected: tmp11 };
-          L.__closure = obj5;
-          L.__workletHash = 6056273557261;
-          L.__initData = __initData3;
-          const animatedReaction = tmp(tmp2[10]).useAnimatedReaction(fn3, L);
+          fn3.__closure = obj5;
+          fn3.__workletHash = 6056273557261;
+          fn3.__initData = __initData3;
+          const animatedReaction = tmp(tmp2[10]).useAnimatedReaction(L, fn3);
           if (cResult[3] === type) {
             if (cResult[4] === handlePressCategory) {
               if (cResult[5] === index) {
@@ -194,25 +189,19 @@ export default noop.memo(
                                     onPress: tmp15,
                                     accessibilityRole: "tab",
                                     accessibilityLabel: name,
-                                    accessibilityState: tmp17,
-                                    children: tmp31,
+                                    accessibilityState: null,
+                                    children: null,
                                   };
+                                  class L {
+                                    constructor() {
+                                      return categoryIndexActive.get() === index;
+                                    }
+                                  }
+                                  obj7.children = tmp31;
                                   const tmp38 = closure_8(tmp(tmp2[16]).PressableOpacity, obj7);
                                   cResult[26] = tmp15;
                                   cResult[27] = style;
                                   cResult[28] = name;
-                                  class L {
-                                    constructor(arg0, arg1) {
-                                      if (category !== arg1) {
-                                        tmp = closure_0;
-                                        tmp2 = closure_2;
-                                        obj = closure_0(closure_2[10]);
-                                        tmp3 = closure_6;
-                                        tmp4 = obj.runOnJS(closure_6)(category);
-                                      }
-                                      return;
-                                    }
-                                  }
                                   cResult[29] = tmp17;
                                   cResult[30] = tmp31;
                                   cResult[31] = tmp38;
@@ -221,24 +210,17 @@ export default noop.memo(
                               }
                               const obj8 = { style: tmp18, children: null };
                               const items = [tmp19, tmp27];
-                              obj8.children = items;
+                              class L {
+                                constructor() {
+                                  return categoryIndexActive.get() === index;
+                                }
+                              }
+                              const tmp34 = closure_9(categoryIndexActive(tmp2[10]).View, obj8);
                               cResult[22] = tmp18;
                               cResult[23] = tmp19;
                               cResult[24] = tmp27;
-                              class L {
-                                constructor(arg0, arg1) {
-                                  if (category !== arg1) {
-                                    tmp = closure_0;
-                                    tmp2 = closure_2;
-                                    obj = closure_0(closure_2[10]);
-                                    tmp3 = closure_6;
-                                    tmp4 = obj.runOnJS(closure_6)(category);
-                                  }
-                                  return;
-                                }
-                              }
-                              tmp31 = closure_9(categoryIndexActive(tmp2[10]).View, obj8);
-                              const tmp34 = closure_9(categoryIndexActive(tmp2[10]).View, obj8);
+                              cResult[25] = tmp34;
+                              tmp31 = tmp34;
                             }
                           }
                           let tmp28 = locked;
@@ -250,7 +232,11 @@ export default noop.memo(
                           }
                           cResult[18] = locked;
                           cResult[19] = tmp4.lock;
-                          cResult[20] = tmp4.lockContainer;
+                          class L {
+                            constructor() {
+                              return categoryIndexActive.get() === index;
+                            }
+                          }
                           cResult[21] = tmp28;
                           tmp27 = tmp28;
                         }
@@ -273,14 +259,22 @@ export default noop.memo(
                 }
                 cResult[12] = type.guild;
                 ({ id: tmp3[13], type } = type);
-                cResult[14] = type;
+                class L {
+                  constructor() {
+                    return categoryIndexActive.get() === index;
+                  }
+                }
                 cResult[15] = loadingStyle;
                 loadingStyle = tmp4.guildItem;
                 cResult[16] = loadingStyle;
                 cResult[17] = tmp22;
               }
               const items1 = [tmp4.itemInner, animatedStyle];
-              cResult[9] = tmp4.itemInner;
+              class L {
+                constructor() {
+                  return categoryIndexActive.get() === index;
+                }
+              }
               cResult[10] = animatedStyle;
               cResult[11] = items1;
               tmp18 = items1;
@@ -315,7 +309,7 @@ export default noop.memo(
           styleColorTransparent: backgroundColor2,
         };
       }
-    : (category) => {
+    : function EmojiPickerCategoriesItem(category) {
         category = category.category;
         const categoryIndexActive = category.categoryIndexActive;
         const handlePressCategory = category.handlePressCategory;

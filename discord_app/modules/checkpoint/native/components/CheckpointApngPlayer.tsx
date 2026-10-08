@@ -17,7 +17,7 @@ let closure_6 = createStyles.createStyles({ container: { alignItems: "center", j
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointApngPlayer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CheckpointApngPlayer(arg0) {
       let obj = dependencyMap;
       const cResult = c.c(9);
       ({ uri, style } = arg0);
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp9Result;
       tmpResult2 = utils_PlatformUtils;
     }
-  : (arg0) => {
+  : function CheckpointApngPlayer(arg0) {
       ({ uri, style } = arg0);
       const tmp = closure_6();
       const items = [AccessibilityStore];

@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useIsSpamMessageRequest.tsx");
 
 export const useIsSpamMessageRequest = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsSpamMessageRequest(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -20,7 +20,7 @@ export const useIsSpamMessageRequest = ReactCompilerGating.isReactCompilerEnable
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function u() {
+        const fn = function o() {
           return SpamMessageRequestStore.isSpam(closure_0);
         };
         const items1 = [arg0];
@@ -36,7 +36,7 @@ export const useIsSpamMessageRequest = ReactCompilerGating.isReactCompilerEnable
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7);
     }
-  : (arg0) => {
+  : function useIsSpamMessageRequest(arg0) {
       _require = arg0;
       const items = [SpamMessageRequestStore];
       const items1 = [arg0];

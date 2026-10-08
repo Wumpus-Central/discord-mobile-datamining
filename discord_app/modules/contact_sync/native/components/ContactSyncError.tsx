@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({
   container: { justifyContent: "center" },
   error: { paddingHorizontal: 16, textAlign: "center" },
@@ -23,7 +23,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncError.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ContactSyncError(arg0) {
       const cResult = require("c").c(10);
       ({ style, error } = arg0);
       const tmp4 = closure_4();
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             style: tmp4.error,
             children: error,
           };
-          const tmp10 = jsx(tmp(4892).Text, {
+          const tmp10 = jsx(tmp(5086).Text, {
             variant: "text-sm/medium",
             color: "text-feedback-critical",
             style: tmp4.error,
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = items;
       const obj2 = { withTiming: require("timing").withTiming, hasError: tmp5, ERROR_HEIGHT: 44 };
     }
-  : (error) => {
+  : function ContactSyncError(error) {
       error = error.error;
       _require = undefined;
       const tmp = closure_4();

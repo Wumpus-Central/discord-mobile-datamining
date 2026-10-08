@@ -46,7 +46,7 @@ const result = size.fileFinishedImporting("modules/channel_text_area/ChatInputCo
 
 export { tryUpdateSubscriptionForHereMention };
 export const useHereMentionCallback = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useHereMentionCallback(arg0, arg1, arg2) {
       _require = arg0;
       importDefault = arg1;
       dependencyMap = arg2;
@@ -73,7 +73,7 @@ export const useHereMentionCallback = ReactCompilerGating.isReactCompilerEnabled
               }
             }
           }
-          const fn = function y() {
+          const fn = function v() {
             const groups = ChannelMemberStore.getProps(closure_1, closure_2).groups;
             if (null != closure_1) {
               let tmp = groups.length > 1;
@@ -150,7 +150,7 @@ export const useHereMentionCallback = ReactCompilerGating.isReactCompilerEnabled
       cResult[3] = debounceResult;
       tmp7 = debounceResult;
     }
-  : (arg0, arg1, arg2) => {
+  : function useHereMentionCallback(arg0, arg1, arg2) {
       closure_0 = arg0;
       importDefault = arg1;
       dependencyMap = arg2;
@@ -177,9 +177,9 @@ export const useHereMentionCallback = ReactCompilerGating.isReactCompilerEnabled
                 if (!(arr.length < 5 || arr.length > closure_1_3)) {
                   let flag = -1 !== arr.indexOf(memo);
                   if (flag) {
-                    closure_0(6825).subscribeChannel(closure_1_1, dependencyMap, closure_0(6799).DEFAULT_RANGES);
+                    closure_0(6998).subscribeChannel(closure_1_1, dependencyMap, closure_0(6970).DEFAULT_RANGES);
                     flag = true;
-                    const obj = closure_0(6825);
+                    const obj = closure_0(6998);
                   }
                   tmp9 = flag;
                 }

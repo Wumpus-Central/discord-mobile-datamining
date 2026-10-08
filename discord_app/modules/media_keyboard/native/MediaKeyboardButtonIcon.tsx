@@ -4,7 +4,7 @@ import ReanimatedRexportDefault from "../../reanimated/ReanimatedRexport.tsx";
 import useKeyboardTypeDefault from "../../keyboard/native/useKeyboardType.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
-import _objectDestructuringEmpty from "../../../../_runtime/11884__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../_runtime/11956__objectDestructuringEmpty.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardButtonIcon.tsx");
 
 export const MediaKeyboardButtonIcon = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MediaKeyboardButtonIcon(arg0) {
       const cResult = require("c").c(7);
       if (cResult[0] !== arg0) {
         const _Object = Object;
@@ -63,7 +63,7 @@ export const MediaKeyboardButtonIcon = ReactCompilerGating.isReactCompilerEnable
       if (cResult[2] !== tmp4) {
         const obj3 = {};
         const merged1 = Object.assign(tmp4);
-        const tmp17 = jsx(tmp(10702).PlusLargeIcon, {});
+        const tmp17 = jsx(tmp(10290).PlusLargeIcon, {});
         cResult[2] = tmp4;
         cResult[3] = tmp17;
         let tmp12 = tmp17;
@@ -88,7 +88,7 @@ export const MediaKeyboardButtonIcon = ReactCompilerGating.isReactCompilerEnable
         timingStandard: require("timingPresets").timingStandard,
       };
     }
-  : (arg0) => {
+  : function MediaKeyboardButtonIcon(arg0) {
       if (arg0 == null) {
         throw new TypeError("Cannot destructure 'undefined' or 'null'.");
       } else {

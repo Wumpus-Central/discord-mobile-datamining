@@ -4,18 +4,19 @@ import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import MicrophoneSlashIcon from "../../../design/components/Icon/native/redesign/generated/MicrophoneSlashIcon.tsx";
-import _modDef5824 from "../../../../_runtime/metro/05824__.js";
+import _modDef8139 from "../../../../_runtime/metro/08139__.js";
 import HeadphonesDenyIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesDenyIcon.tsx";
 import HeadphonesSlashIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx";
 import MicrophoneDenyIcon from "../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";
 import GameActivityIconDefault from "../../games/native/GameActivityIcon.tsx";
-import getConsoleIcon from "../../game_console/native/getConsoleIcon.tsx";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
 import VideoIcon from "../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
+import getConsoleIcon from "../../game_console/native/getConsoleIcon.tsx";
 import VoiceUserNameItemDefault from "VoiceUserNameItem.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
+const getConsoleIconDefault = getConsoleIcon;
 
 require = fn;
 const View = fn(17).View;
@@ -24,8 +25,8 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = "text-sm/medium";
 let c9 = "redesign-channel-name-muted-text";
-const XSMALL_20 = fn(1188).AvatarSizes.XSMALL_20;
-const createStyles = fn(4896);
+const XSMALL_20 = fn(1200).AvatarSizes.XSMALL_20;
+const createStyles = fn(5090);
 let obj = {
   voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 },
   disabled: { opacity: 0.5 },
@@ -46,7 +47,7 @@ let size = {
   overflow: "hidden",
 };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(11712);
+const ChannelListLayout = fn(11777);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
@@ -60,7 +61,7 @@ const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUse
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (member) => {
+    ? function VoiceUserItem(member) {
         _require = member;
         const cResult = require("c").c(80);
         member = member.member;
@@ -74,7 +75,7 @@ export default noop.memo(
         const deaf = member.deaf;
         const localMute = member.localMute;
         const video = member.video;
-        const disabled = member.disabled;
+        let disabled = member.disabled;
         const platform = member.platform;
         const isInEmbeddedActivity = member.isInEmbeddedActivity;
         const voicePlatform = member.voicePlatform;
@@ -100,203 +101,366 @@ export default noop.memo(
                 if (cResult[6] === user) {
                   let tmp9 = cResult[7];
                 }
-                source = tmp9;
+                const source = tmp9;
                 if (cResult[8] === tmp9) {
+                  if (cResult[9] === tmp3.voiceStateCollapsed) {
+                    let tmp10 = cResult[10];
+                  }
                   if (cResult[11] !== tmp9) {
-                    class U {
-                      constructor() {
-                        obj = { source: closure_20, size: XSMALL_20 };
-                        return jsx(closure_0(closure_2[4]).Avatar, obj);
-                      }
+                    function renderAvatar() {
+                      return timestampProducer(native.Avatar, { source, size: XSMALL_20 });
                     }
                     cResult[11] = tmp9;
-                    class G {
-                      constructor() {
-                        obj = { style: closure_16.voiceStateCollapsed, children: null };
-                        obj1 = { source: closure_20, size: XSMALL_20 };
-                        obj.children = jsx(closure_0(closure_2[4]).Avatar, obj1);
-                        return jsx(View, obj);
-                      }
-                    }
-                    class X {
-                      constructor() {
-                        if (disabled) {
-                          return null;
-                        } else {
-                          tmp = serverMute;
-                          if (serverMute) {
-                            tmp15 = jsx;
-                            tmp16 = closure_0;
-                            tmp17 = closure_2;
-                            obj1 = { style: null, color: "text-feedback-critical", size: "custom" };
-                            tmp18 = closure_16;
-                            obj1.style = closure_16.voiceStateIcon;
-                            tmp4 = jsx(closure_0(closure_2[17]).MicrophoneDenyIcon, obj1);
-                          } else {
-                            tmp2 = localMute;
-                            if (localMute) {
-                              tmp10 = jsx;
-                              tmp11 = closure_0;
-                              tmp12 = closure_2;
-                              obj4 = { style: null, size: "custom", color: null };
-                              tmp13 = closure_16;
-                              obj4.style = closure_16.voiceStateIcon;
-                              tmp14 = c9;
-                              obj4.color = c9;
-                              tmp4 = jsx(closure_0(closure_2[17]).MicrophoneDenyIcon, obj4);
-                            } else {
-                              tmp3 = mute;
-                              tmp4 = null;
-                              if (mute) {
-                                tmp5 = jsx;
-                                tmp6 = closure_0;
-                                tmp7 = closure_2;
-                                obj = { style: null, size: "custom", color: null };
-                                tmp8 = closure_16;
-                                obj.style = closure_16.voiceStateIcon;
-                                tmp9 = c9;
-                                obj.color = c9;
-                                tmp4 = jsx(closure_0(closure_2[18]).MicrophoneSlashIcon, obj);
-                              }
-                            }
-                          }
-                          tmp19 = tmp4;
-                        }
-                        return;
-                      }
-                    }
+                    cResult[12] = renderAvatar;
+                    let tmp11 = renderAvatar;
                   } else {
-                    class U {
-                      constructor() {
-                        obj = { source: closure_20, size: XSMALL_20 };
-                        return jsx(closure_0(closure_2[4]).Avatar, obj);
-                      }
-                    }
+                    tmp11 = cResult[12];
                   }
                   if (cResult[13] !== member) {
-                    class U {
-                      constructor() {
-                        obj = { source: closure_20, size: XSMALL_20 };
-                        return jsx(closure_0(closure_2[4]).Avatar, obj);
-                      }
+                    function renderName() {
+                      const merged = Object.assign(closure_0);
+                      return timestampProducer(VoiceUserNameItemDefault, { variant, color });
                     }
                     cResult[13] = member;
-                    class G {
-                      constructor() {
-                        obj = { style: closure_16.voiceStateCollapsed, children: null };
-                        obj1 = { source: closure_20, size: XSMALL_20 };
-                        obj.children = jsx(closure_0(closure_2[4]).Avatar, obj1);
-                        return jsx(View, obj);
-                      }
-                    }
-                    class X {
-                      constructor() {
-                        if (disabled) {
-                          return null;
-                        } else {
-                          tmp = serverMute;
-                          if (serverMute) {
-                            tmp15 = jsx;
-                            tmp16 = closure_0;
-                            tmp17 = closure_2;
-                            obj1 = { style: null, color: "text-feedback-critical", size: "custom" };
-                            tmp18 = closure_16;
-                            obj1.style = closure_16.voiceStateIcon;
-                            tmp4 = jsx(closure_0(closure_2[17]).MicrophoneDenyIcon, obj1);
-                          } else {
-                            tmp2 = localMute;
-                            if (localMute) {
-                              tmp10 = jsx;
-                              tmp11 = closure_0;
-                              tmp12 = closure_2;
-                              obj4 = { style: null, size: "custom", color: null };
-                              tmp13 = closure_16;
-                              obj4.style = closure_16.voiceStateIcon;
-                              tmp14 = c9;
-                              obj4.color = c9;
-                              tmp4 = jsx(closure_0(closure_2[17]).MicrophoneDenyIcon, obj4);
-                            } else {
-                              tmp3 = mute;
-                              tmp4 = null;
-                              if (mute) {
-                                tmp5 = jsx;
-                                tmp6 = closure_0;
-                                tmp7 = closure_2;
-                                obj = { style: null, size: "custom", color: null };
-                                tmp8 = closure_16;
-                                obj.style = closure_16.voiceStateIcon;
-                                tmp9 = c9;
-                                obj.color = c9;
-                                tmp4 = jsx(closure_0(closure_2[18]).MicrophoneSlashIcon, obj);
+                    cResult[14] = renderName;
+                    let tmp12 = renderName;
+                  } else {
+                    tmp12 = cResult[14];
+                  }
+                  if (cResult[15] === disabled) {
+                    if (cResult[16] === localMute) {
+                      if (cResult[17] === mute) {
+                        if (cResult[18] === serverMute) {
+                          if (cResult[19] === tmp3.voiceStateIcon) {
+                            let tmp13 = cResult[20];
+                          }
+                          if (cResult[21] === deaf) {
+                            if (cResult[22] === disabled) {
+                              if (cResult[23] === serverDeaf) {
+                                if (cResult[24] === tmp3.voiceStateIcon) {
+                                  let tmp14 = cResult[25];
+                                }
+                                if (cResult[26] === stream) {
+                                  if (cResult[27] === tmp3.legacyVoiceStateIcon) {
+                                    let tmp15 = cResult[28];
+                                  }
+                                  if (cResult[29] === disabled) {
+                                    if (cResult[30] === tmp3.voiceStateIcon) {
+                                      if (cResult[31] === video) {
+                                        let tmp16 = cResult[32];
+                                      }
+                                      if (cResult[33] === platform) {
+                                        if (cResult[34] === tmp3.legacyVoiceStateIcon) {
+                                          if (cResult[35] === voicePlatform) {
+                                            let tmp17 = cResult[36];
+                                          }
+                                          if (cResult[37] === isInEmbeddedActivity) {
+                                            if (cResult[38] === tmp3.legacyVoiceStateIcon) {
+                                              let tmp18 = cResult[39];
+                                            }
+                                            if (cResult[40] === disabled) {
+                                              if (cResult[41] === gameRecord) {
+                                                if (cResult[42] === isInEmbeddedActivity) {
+                                                  if (cResult[43] === tmp3.gameIcon) {
+                                                    if (cResult[44] === tmp8) {
+                                                      let tmp19 = cResult[45];
+                                                    }
+                                                    if (member.collapsed) {
+                                                      if (cResult[46] !== tmp10) {
+                                                        const tmp10Result = tmp10();
+                                                        cResult[46] = tmp10;
+                                                        cResult[47] = tmp10Result;
+                                                        let tmp43 = tmp10Result;
+                                                      } else {
+                                                        tmp43 = cResult[47];
+                                                      }
+                                                      return tmp43;
+                                                    } else {
+                                                      if (disabled) {
+                                                        disabled = tmp3.disabled;
+                                                      }
+                                                      if (cResult[48] === tmp3.voiceState) {
+                                                        if (cResult[49] === disabled) {
+                                                          let tmp20 = cResult[50];
+                                                        }
+                                                        if (cResult[51] !== tmp11) {
+                                                          const tmp11Result = tmp11();
+                                                          cResult[51] = tmp11;
+                                                          cResult[52] = tmp11Result;
+                                                          let tmp21 = tmp11Result;
+                                                        } else {
+                                                          tmp21 = cResult[52];
+                                                        }
+                                                        if (cResult[53] !== tmp12) {
+                                                          const tmp12Result = tmp12();
+                                                          cResult[53] = tmp12;
+                                                          cResult[54] = tmp12Result;
+                                                          let tmp23 = tmp12Result;
+                                                        } else {
+                                                          tmp23 = cResult[54];
+                                                        }
+                                                        if (cResult[55] !== tmp13) {
+                                                          const tmp13Result = tmp13();
+                                                          cResult[55] = tmp13;
+                                                          cResult[56] = tmp13Result;
+                                                          let tmp25 = tmp13Result;
+                                                        } else {
+                                                          tmp25 = cResult[56];
+                                                        }
+                                                        if (cResult[57] !== tmp14) {
+                                                          const tmp14Result = tmp14();
+                                                          cResult[57] = tmp14;
+                                                          cResult[58] = tmp14Result;
+                                                          let tmp27 = tmp14Result;
+                                                        } else {
+                                                          tmp27 = cResult[58];
+                                                        }
+                                                        if (cResult[59] !== tmp16) {
+                                                          const tmp16Result = tmp16();
+                                                          cResult[59] = tmp16;
+                                                          cResult[60] = tmp16Result;
+                                                          let tmp29 = tmp16Result;
+                                                        } else {
+                                                          tmp29 = cResult[60];
+                                                        }
+                                                        if (cResult[61] !== tmp18) {
+                                                          const tmp18Result = tmp18();
+                                                          cResult[61] = tmp18;
+                                                          cResult[62] = tmp18Result;
+                                                          let tmp31 = tmp18Result;
+                                                        } else {
+                                                          tmp31 = cResult[62];
+                                                        }
+                                                        if (cResult[63] !== tmp17) {
+                                                          const tmp17Result = tmp17();
+                                                          cResult[63] = tmp17;
+                                                          cResult[64] = tmp17Result;
+                                                          let tmp33 = tmp17Result;
+                                                        } else {
+                                                          tmp33 = cResult[64];
+                                                        }
+                                                        if (cResult[65] !== tmp15) {
+                                                          const tmp15Result = tmp15();
+                                                          cResult[65] = tmp15;
+                                                          cResult[66] = tmp15Result;
+                                                          let tmp35 = tmp15Result;
+                                                        } else {
+                                                          tmp35 = cResult[66];
+                                                        }
+                                                        if (cResult[67] !== tmp19) {
+                                                          const tmp19Result = tmp19();
+                                                          cResult[67] = tmp19;
+                                                          cResult[68] = tmp19Result;
+                                                          let tmp37 = tmp19Result;
+                                                        } else {
+                                                          tmp37 = cResult[68];
+                                                        }
+                                                        if (cResult[69] === tmp20) {
+                                                          if (cResult[70] === tmp21) {
+                                                            if (cResult[71] === tmp23) {
+                                                              if (cResult[72] === tmp25) {
+                                                                if (cResult[73] === tmp27) {
+                                                                  if (cResult[74] === tmp29) {
+                                                                    if (cResult[75] === tmp31) {
+                                                                      if (cResult[76] === tmp33) {
+                                                                        if (cResult[77] === tmp35) {
+                                                                          if (cResult[78] === tmp37) {
+                                                                            let tmp39 = cResult[79];
+                                                                          }
+                                                                          return tmp39;
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                        let obj2 = { style: tmp20, children: null };
+                                                        const items = [
+                                                          tmp21,
+                                                          tmp23,
+                                                          tmp25,
+                                                          tmp27,
+                                                          tmp29,
+                                                          tmp31,
+                                                          tmp33,
+                                                          tmp35,
+                                                          tmp37,
+                                                        ];
+                                                        obj2.children = items;
+                                                        const tmp42 = serverDeaf(channelId, obj2);
+                                                        cResult[69] = tmp20;
+                                                        cResult[70] = tmp21;
+                                                        cResult[71] = tmp23;
+                                                        cResult[72] = tmp25;
+                                                        cResult[73] = tmp27;
+                                                        cResult[74] = tmp29;
+                                                        cResult[75] = tmp31;
+                                                        cResult[76] = tmp33;
+                                                        cResult[77] = tmp35;
+                                                        cResult[78] = tmp37;
+                                                        cResult[79] = tmp42;
+                                                        tmp39 = tmp42;
+                                                      }
+                                                      const items1 = [tmp3.voiceState, disabled];
+                                                      cResult[48] = tmp3.voiceState;
+                                                      cResult[49] = disabled;
+                                                      cResult[50] = items1;
+                                                      tmp20 = items1;
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                            function renderGameIcon() {
+                                              let tmp = null;
+                                              if (!disabled) {
+                                                tmp = null;
+                                                if (!isInEmbeddedActivity) {
+                                                  tmp = null;
+                                                  if (null != gameRecord) {
+                                                    const obj = {
+                                                      game: tmp3,
+                                                      size: 16,
+                                                      fallback: "none",
+                                                      style: closure_16.gameIcon,
+                                                      onShown,
+                                                    };
+                                                    tmp = timestampProducer(GameActivityIconDefault, obj);
+                                                  }
+                                                }
+                                              }
+                                              return tmp;
+                                            }
+                                            cResult[40] = disabled;
+                                            cResult[41] = gameRecord;
+                                            cResult[42] = isInEmbeddedActivity;
+                                            cResult[43] = tmp3.gameIcon;
+                                            cResult[44] = tmp8;
+                                            cResult[45] = renderGameIcon;
+                                            tmp19 = renderGameIcon;
+                                          }
+                                          function renderEmbeddedActivityIcon() {
+                                            let tmp = null;
+                                            if (isInEmbeddedActivity) {
+                                              const obj = {
+                                                source: _modDef8139,
+                                                size: native.Icon.Sizes.REFRESH_SMALL_16,
+                                                style: closure_16.legacyVoiceStateIcon,
+                                              };
+                                              tmp = timestampProducer(native.Icon, obj);
+                                            }
+                                            return tmp;
+                                          }
+                                          cResult[37] = isInEmbeddedActivity;
+                                          cResult[38] = tmp3.legacyVoiceStateIcon;
+                                          cResult[39] = renderEmbeddedActivityIcon;
+                                          tmp18 = renderEmbeddedActivityIcon;
+                                        }
+                                      }
+                                      function renderPlatform() {
+                                        let str = platform;
+                                        if (platform == null) {
+                                          str = "";
+                                        }
+                                        let consoleIconForVoicePlatform = getConsoleIconDefault(str);
+                                        if (consoleIconForVoicePlatform == null) {
+                                          consoleIconForVoicePlatform =
+                                            getConsoleIcon.getConsoleIconForVoicePlatform(voicePlatform);
+                                        }
+                                        let tmp6 = null;
+                                        if (null != consoleIconForVoicePlatform) {
+                                          const obj2 = {
+                                            source: consoleIconForVoicePlatform,
+                                            size: native.Icon.Sizes.REFRESH_SMALL_16,
+                                            style: closure_16.legacyVoiceStateIcon,
+                                          };
+                                          tmp6 = timestampProducer(native.Icon, obj2);
+                                        }
+                                        return tmp6;
+                                      }
+                                      cResult[33] = platform;
+                                      cResult[34] = tmp3.legacyVoiceStateIcon;
+                                      cResult[35] = voicePlatform;
+                                      cResult[36] = renderPlatform;
+                                      tmp17 = renderPlatform;
+                                    }
+                                  }
+                                  function renderVideoIcon() {
+                                    let tmp = null;
+                                    if (video) {
+                                      tmp = null;
+                                      if (!disabled) {
+                                        const obj = { size: "custom", color, style: closure_16.voiceStateIcon };
+                                        tmp = timestampProducer(VideoIcon.VideoIcon, obj);
+                                      }
+                                    }
+                                    return tmp;
+                                  }
+                                  cResult[29] = disabled;
+                                  cResult[30] = tmp3.voiceStateIcon;
+                                  cResult[31] = video;
+                                  cResult[32] = renderVideoIcon;
+                                  tmp16 = renderVideoIcon;
+                                }
+                                function renderStreamIndicator() {
+                                  let tmp = null;
+                                  if (stream) {
+                                    const obj = { style: closure_16.legacyVoiceStateIcon };
+                                    tmp = timestampProducer(native.LiveTag, obj);
+                                  }
+                                  return tmp;
+                                }
+                                cResult[26] = stream;
+                                cResult[27] = tmp3.legacyVoiceStateIcon;
+                                cResult[28] = renderStreamIndicator;
+                                tmp15 = renderStreamIndicator;
                               }
                             }
                           }
-                          tmp19 = tmp4;
-                        }
-                        return;
-                      }
-                    }
-                  } else {
-                    class U {
-                      constructor() {
-                        obj = { source: closure_20, size: XSMALL_20 };
-                        return jsx(closure_0(closure_2[4]).Avatar, obj);
-                      }
-                    }
-                  }
-                  class G {
-                    constructor() {
-                      obj = { style: closure_16.voiceStateCollapsed, children: null };
-                      obj1 = { source: closure_20, size: XSMALL_20 };
-                      obj.children = jsx(closure_0(closure_2[4]).Avatar, obj1);
-                      return jsx(View, obj);
-                    }
-                  }
-                  class X {
-                    constructor() {
-                      if (disabled) {
-                        return null;
-                      } else {
-                        tmp = serverMute;
-                        if (serverMute) {
-                          tmp15 = jsx;
-                          tmp16 = closure_0;
-                          tmp17 = closure_2;
-                          obj1 = { style: null, color: "text-feedback-critical", size: "custom" };
-                          tmp18 = closure_16;
-                          obj1.style = closure_16.voiceStateIcon;
-                          tmp4 = jsx(closure_0(closure_2[17]).MicrophoneDenyIcon, obj1);
-                        } else {
-                          tmp2 = localMute;
-                          if (localMute) {
-                            tmp10 = jsx;
-                            tmp11 = closure_0;
-                            tmp12 = closure_2;
-                            obj4 = { style: null, size: "custom", color: null };
-                            tmp13 = closure_16;
-                            obj4.style = closure_16.voiceStateIcon;
-                            tmp14 = c9;
-                            obj4.color = c9;
-                            tmp4 = jsx(closure_0(closure_2[17]).MicrophoneDenyIcon, obj4);
-                          } else {
-                            tmp3 = mute;
-                            tmp4 = null;
-                            if (mute) {
-                              tmp5 = jsx;
-                              tmp6 = closure_0;
-                              tmp7 = closure_2;
-                              obj = { style: null, size: "custom", color: null };
-                              tmp8 = closure_16;
-                              obj.style = closure_16.voiceStateIcon;
-                              tmp9 = c9;
-                              obj.color = c9;
-                              tmp4 = jsx(closure_0(closure_2[18]).MicrophoneSlashIcon, obj);
+                          function renderDeafIcon() {
+                            if (disabled) {
+                              return null;
+                            } else if (serverDeaf) {
+                              const obj2 = {
+                                style: closure_16.voiceStateIcon,
+                                color: "text-feedback-critical",
+                                size: "custom",
+                              };
+                              let tmp3 = timestampProducer(HeadphonesDenyIcon.HeadphonesDenyIcon, obj2);
+                            } else if (deaf) {
+                              const obj = { style: closure_16.voiceStateIcon, size: "custom", color };
+                              tmp3 = timestampProducer(HeadphonesSlashIcon.HeadphonesSlashIcon, obj);
                             }
                           }
+                          cResult[21] = deaf;
+                          cResult[22] = disabled;
+                          cResult[23] = serverDeaf;
+                          cResult[24] = tmp3.voiceStateIcon;
+                          cResult[25] = renderDeafIcon;
+                          tmp14 = renderDeafIcon;
                         }
-                        tmp19 = tmp4;
                       }
-                      return;
+                    }
+                  }
+                  function renderMuteIcon() {
+                    if (disabled) {
+                      return null;
+                    } else if (serverMute) {
+                      const obj2 = {
+                        style: closure_16.voiceStateIcon,
+                        color: "text-feedback-critical",
+                        size: "custom",
+                      };
+                      let tmp4 = timestampProducer(MicrophoneDenyIcon.MicrophoneDenyIcon, obj2);
+                    } else if (localMute) {
+                      const obj3 = { style: closure_16.voiceStateIcon, size: "custom", color };
+                      tmp4 = timestampProducer(MicrophoneDenyIcon.MicrophoneDenyIcon, obj3);
+                    } else if (mute) {
+                      const obj = { style: closure_16.voiceStateIcon, size: "custom", color };
+                      tmp4 = timestampProducer(MicrophoneSlashIcon.MicrophoneSlashIcon, obj);
                     }
                   }
                   cResult[15] = disabled;
@@ -304,46 +468,39 @@ export default noop.memo(
                   cResult[17] = mute;
                   cResult[18] = serverMute;
                   cResult[19] = tmp3.voiceStateIcon;
-                  cResult[20] = X;
+                  cResult[20] = renderMuteIcon;
+                  tmp13 = renderMuteIcon;
                 }
-                class G {
-                  constructor() {
-                    obj = { style: closure_16.voiceStateCollapsed, children: null };
-                    obj1 = { source: closure_20, size: XSMALL_20 };
-                    obj.children = jsx(closure_0(closure_2[4]).Avatar, obj1);
-                    return jsx(View, obj);
-                  }
+                function renderCollapsed() {
+                  const obj = {
+                    style: closure_16.voiceStateCollapsed,
+                    children: timestampProducer(native.Avatar, { source, size: XSMALL_20 }),
+                  };
+                  return timestampProducer(View, obj);
                 }
                 cResult[8] = tmp9;
                 cResult[9] = tmp3.voiceStateCollapsed;
-                cResult[10] = G;
+                cResult[10] = renderCollapsed;
+                tmp10 = renderCollapsed;
               }
             }
-            class O {
-              constructor() {
-                tmp = member;
-                if (null != member) {
-                  if (null != tmp.avatar) {
-                    tmp3 = closure_1;
-                    tmp4 = closure_2;
-                    obj = closure_1(closure_2[15]);
-                    tmp5 = user;
-                    guildMemberAvatarSource = obj.getGuildMemberAvatarSource(tmp, user);
-                  }
-                  return guildMemberAvatarSource;
+            function getSource() {
+              if (null != member) {
+                if (null != member.avatar) {
+                  let guildMemberAvatarSource = AvatarUtilsDefault.getGuildMemberAvatarSource(member, user);
                 }
-                guildMemberAvatarSource = user.getAvatarSource(guildId);
-                return;
+                return guildMemberAvatarSource;
               }
+              guildMemberAvatarSource = user.getAvatarSource(guildId);
             }
             cResult[4] = guildId;
             cResult[5] = member;
             cResult[6] = user;
-            cResult[7] = O;
-            tmp9 = O;
+            cResult[7] = getSource;
+            tmp9 = getSource;
           }
         }
-        const fn = function n() {
+        const fn = function c() {
           AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_SHOWN, {
             guild_id: guildId,
             channel_id: channelId,
@@ -355,9 +512,8 @@ export default noop.memo(
         cResult[2] = guildId;
         cResult[3] = fn;
         tmp8 = fn;
-        const tmp5 = member(user[11])("channel_list");
       }
-    : (guildId) => {
+    : function VoiceUserItem(guildId) {
         ({ member: require, user } = guildId);
         guildId = guildId.guildId;
         const channelId = guildId.channelId;

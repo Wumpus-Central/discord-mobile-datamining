@@ -19,7 +19,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function MemberVerificationAlertRejected(guildId) {
       const cResult = require("c").c(36);
       if (cResult[0] !== guildId) {
         guildId = guildId.guildId;
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        class M {
+        class C {
           constructor() {
             currentUser = closure_1_8.getCurrentUser();
             id = undefined;
@@ -56,8 +56,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[5] = items;
-        cResult[6] = M;
-        let tmp13 = M;
+        cResult[6] = C;
+        let tmp13 = C;
         let tmp12 = items;
       } else {
         tmp12 = cResult[5];
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ canReapply, isLoading } = canReapplyToRejectedMemberVerificationApplication);
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [UserGuildJoinRequestStore];
-        class M {
+        class C {
           constructor() {
             currentUser = closure_1_8.getCurrentUser();
             id = undefined;
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const items2 = [tmp4];
-        class M {
+        class C {
           constructor() {
             currentUser = closure_1_8.getCurrentUser();
             id = undefined;
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const items3 = [GuildMemberStore];
-        class M {
+        class C {
           constructor() {
             currentUser = closure_1_8.getCurrentUser();
             id = undefined;
@@ -151,8 +151,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_9.getJoinRequestGuild(closure_0);
           }
         }
-        const stateFromStores2 = tmp(tmp2[10]).useStateFromStores(tmp22, T, items4);
-        class M {
+        const stateFromStores2 = tmp(tmp2[10]).useStateFromStores(tmp22, V, items4);
+        class C {
           constructor() {
             currentUser = closure_1_8.getCurrentUser();
             id = undefined;
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          class M {
+          class C {
             constructor() {
               currentUser = closure_1_8.getCurrentUser();
               id = undefined;
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const fn = function () {
+        function t9() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -276,13 +276,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[17] = undefined;
         cResult[18] = onClose;
-        cResult[19] = fn;
+        cResult[19] = t9;
         const tmpResult8 = tmp(tmp2[10]);
       }
-      class T {
+      class V {
         constructor() {
           member = null;
           if (null != closure_2) {
@@ -296,11 +296,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items4 = [stateFromStores, tmp4];
       cResult[12] = stateFromStores;
       cResult[13] = tmp4;
-      cResult[14] = T;
+      cResult[14] = V;
       cResult[15] = items4;
       const tmpResult7 = require("initialize");
     }
-  : (guildId) => {
+  : function MemberVerificationAlertRejected(guildId) {
       guildId = guildId.guildId;
       const onClose = guildId.onClose;
       const merged = Object.assign(guildId, Object.assign({ guildId: 0, secondaryButton: 0, onClose: 0 }));
@@ -388,7 +388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (stateFromStores2 != null) {
                     isPending = stateFromStores2.isPending;
                   }
-                  const obj4 = v1(5938);
+                  const obj4 = v1(6121);
                   if (isPending) {
                     v1 = 2;
                     dependencyMap = 1;
@@ -422,7 +422,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (closure_128_1 != null) {
                   tmp6();
                 }
-                const result = guildId(5967).openMemberVerificationModal(closure_128_0);
+                const result = guildId(6149).openMemberVerificationModal(closure_128_0);
                 dependencyMap = 3;
                 return { value: "IconComponent", done: null };
               }
@@ -484,7 +484,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (stateFromStores2 != null) {
                   isPending = stateFromStores2.isPending;
                 }
-                const obj4 = v1(5938);
+                const obj4 = v1(6121);
                 if (isPending) {
                   v1 = 2;
                   dependencyMap = 1;
@@ -518,7 +518,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (closure_128_1 != null) {
                 tmp6();
               }
-              const result = guildId(5967).openMemberVerificationModal(closure_128_0);
+              const result = guildId(6149).openMemberVerificationModal(closure_128_0);
               dependencyMap = 3;
               return { value: "IconComponent", done: null };
             }

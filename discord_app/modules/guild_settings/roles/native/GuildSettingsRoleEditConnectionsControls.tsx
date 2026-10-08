@@ -3,7 +3,7 @@ import _modDef12 from "../../../../../_runtime/metro/00012__.js";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -108,7 +108,7 @@ function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integratio
   let obj3 = {
     spacing: nativeDefault.space.PX_24,
     children: Array.from(map.values()).map((configurationItems) =>
-      v65535(
+      collapsed(
         GuildSettingsRoleEditConnectionConfigurationDefault,
         { configurationItems, onConfigurationChange: handleConfigurationChange, locked, integrations },
         configurationItems[0].configuration.connectionType + ":" + configurationItems[0].index,
@@ -155,20 +155,20 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(17855, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(18142, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
-const Constants = fn(6686);
+const Constants = fn(6863);
 ({
   GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_8,
   GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_9,
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   formContent: { paddingTop: 16, paddingBottom: 0 },
   warningContainer: {
@@ -187,7 +187,7 @@ let obj2 = {
 let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function HeaderSection(arg0) {
       const cResult = c.c(18);
       ({ clearConnections, locked, hasConnections, hasMembers } = arg0);
       const tmp4 = closure_13();
@@ -201,7 +201,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { variant: "text-md/semibold", children: null };
             const intl2 = util.intl;
             obj2.children = intl2.string(util.t.nMir27);
-            const tmp14 = v65535(Text_Text.Text, obj2);
+            const tmp14 = collapsed(Text_Text.Text, obj2);
             cResult[4] = tmp14;
             let tmp12 = tmp14;
           } else {
@@ -224,7 +224,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                     helpdeskArticleUrl: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.CONNECTION_DETAILS_ADMIN),
                   };
                   obj3.children = intl4.format(util.t.q5f7tK, obj4);
-                  const tmp26 = v65535(Text_Text.Text, obj3);
+                  const tmp26 = collapsed(Text_Text.Text, obj3);
                   cResult[12] = tmp26;
                   let tmp22 = tmp26;
                 } else {
@@ -272,8 +272,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             const obj9 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
             const intl3 = util.intl;
             obj9.children = intl3.string(util.t.ntW1cc);
-            obj8.children = v65535(Text_Text.Text, obj9);
-            tmp16 = v65535(Pressables.PressableOpacity, obj8);
+            obj8.children = collapsed(Text_Text.Text, obj9);
+            tmp16 = collapsed(Pressables.PressableOpacity, obj8);
           }
           cResult[5] = clearConnections;
           cResult[6] = hasConnections;
@@ -286,11 +286,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       if (hasMembers) {
         const obj10 = { style: tmp4.warningContainer, children: null };
         const obj12 = { color: nativeDefault.colors.STATUS_WARNING, size: "sm" };
-        const items3 = [v65535(CircleErrorIcon.CircleErrorIcon, obj12)];
+        const items3 = [collapsed(CircleErrorIcon.CircleErrorIcon, obj12)];
         const obj13 = { variant: "text-xs/medium", style: tmp4.warningText, children: null };
         const intl = util.intl;
         obj13.children = intl.string(util.t["2aFeef"]);
-        items3[1] = v65535(Text_Text.Text, obj13);
+        items3[1] = collapsed(Text_Text.Text, obj13);
         obj10.children = items3;
         tmp6 = closure_1_11(View, obj10);
       }
@@ -300,18 +300,18 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp6;
       tmp5 = tmp6;
     }
-  : (arg0) => {
+  : function HeaderSection(arg0) {
       ({ clearConnections, locked, hasConnections, hasMembers } = arg0);
       const tmp = closure_13();
       let tmp2Result = null;
       if (hasMembers) {
         const obj = { style: tmp.warningContainer, children: null };
         const obj2 = { color: nativeDefault.colors.STATUS_WARNING, size: "sm" };
-        const items = [v65535(CircleErrorIcon.CircleErrorIcon, obj2)];
+        const items = [collapsed(CircleErrorIcon.CircleErrorIcon, obj2)];
         const obj3 = { variant: "text-xs/medium", style: tmp.warningText, children: null };
         const intl = util.intl;
         obj3.children = intl.string(util.t["2aFeef"]);
-        items[1] = v65535(Text_Text.Text, obj3);
+        items[1] = collapsed(Text_Text.Text, obj3);
         obj.children = items;
         tmp2Result = closure_1_11(View, obj);
       }
@@ -320,15 +320,15 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { variant: "text-md/semibold", children: null };
       const intl2 = util.intl;
       obj5.children = intl2.string(util.t.nMir27);
-      const items2 = [v65535(Text_Text.Text, obj5)];
+      const items2 = [collapsed(Text_Text.Text, obj5)];
       let tmp13Result;
       if (hasConnections) {
         const obj6 = { hitSlop: 8, onPress: clearConnections, disabled: locked, children: null };
         const obj7 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
         const intl3 = util.intl;
         obj7.children = intl3.string(util.t.ntW1cc);
-        obj6.children = v65535(Text_Text.Text, obj7);
-        tmp13Result = v65535(Pressables.PressableOpacity, obj6);
+        obj6.children = collapsed(Text_Text.Text, obj7);
+        tmp13Result = collapsed(Pressables.PressableOpacity, obj6);
       }
       const obj8 = { children: null };
       const obj9 = { children: null };
@@ -341,7 +341,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         helpdeskArticleUrl: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.CONNECTION_DETAILS_ADMIN),
       };
       obj10.children = intl4.format(util.t.q5f7tK, obj11);
-      items3[1] = v65535(Text_Text.Text, obj10);
+      items3[1] = collapsed(Text_Text.Text, obj10);
       obj9.children = items3;
       items1[1] = closure_1_11(Stack_Stack.Stack, obj9);
       obj8.children = items1;
@@ -349,7 +349,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (setPendingRoleConfigurations) => {
+  ? function AndOrRadios(setPendingRoleConfigurations) {
       const cResult = c.c(17);
       ({ locked, currentOperator, roleConnectionConfigurations } = setPendingRoleConfigurations);
       setPendingRoleConfigurations = setPendingRoleConfigurations.setPendingRoleConfigurations;
@@ -408,7 +408,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               label: tmp16,
               disabled: tmp18,
             };
-            const tmp21 = v65535(TableRadioRow.TableRadioRow, obj3);
+            const tmp21 = collapsed(TableRadioRow.TableRadioRow, obj3);
             cResult[7] = tmp18;
             cResult[8] = tmp21;
             let tmp19 = tmp21;
@@ -430,7 +430,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               label: tmp22,
               disabled: locked,
             };
-            const tmp26 = v65535(TableRadioRow.TableRadioRow, obj4);
+            const tmp26 = collapsed(TableRadioRow.TableRadioRow, obj4);
             cResult[10] = locked;
             cResult[11] = tmp26;
             let tmp24 = tmp26;
@@ -458,16 +458,16 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[16] = tmp29;
           tmp27 = tmp29;
         }
-        const fn = function p(arg0) {
+        function handleOperatorChange(arg0) {
           setPendingRoleConfigurations(roleConnectionConfigurations, arg0);
-        };
+        }
         cResult[2] = roleConnectionConfigurations;
         cResult[3] = setPendingRoleConfigurations;
-        cResult[4] = fn;
-        tmp12 = fn;
+        cResult[4] = handleOperatorChange;
+        tmp12 = handleOperatorChange;
       }
     }
-  : (setPendingRoleConfigurations) => {
+  : function AndOrRadios(setPendingRoleConfigurations) {
       ({ locked, roleConnectionConfigurations } = setPendingRoleConfigurations);
       closure_1 = setPendingRoleConfigurations.setPendingRoleConfigurations;
       if (
@@ -493,7 +493,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = util.intl;
         obj2.title = intl.string(util.t.Xs7PHX);
         obj2.value = setPendingRoleConfigurations.currentOperator;
-        obj2.onChange = function onChange(arg0) {
+        obj2.onChange = function handleOperatorChange(arg0) {
           closure_1(roleConnectionConfigurations, arg0);
         };
         const obj3 = { value: ConnectionsUtils.ConnectionConfigurationRuleOperator.OR, label: null, disabled: null };
@@ -504,12 +504,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = values.length < 2;
         }
         obj3.disabled = tmp11;
-        const items2 = [v65535(TableRadioRow.TableRadioRow, obj3)];
+        const items2 = [collapsed(TableRadioRow.TableRadioRow, obj3)];
         const obj4 = { value: ConnectionsUtils.ConnectionConfigurationRuleOperator.AND, label: null, disabled: null };
         const intl3 = util.intl;
         obj4.label = intl3.string(util.t.gHXS9A);
         obj4.disabled = locked;
-        items2[1] = v65535(TableRadioRow.TableRadioRow, obj4);
+        items2[1] = collapsed(TableRadioRow.TableRadioRow, obj4);
         obj2.children = items2;
         return closure_1_11(TableRadioGroup.TableRadioGroup, obj2);
       }
@@ -531,16 +531,16 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function GuildSettingsRolesEditConnectionsControls(guild) {
       const cResult = guild(576).c(59);
       guild = guild.guild;
       const role = guild.role;
       ({ locked, integrations } = guild);
       closure_13();
       let obj = guild(576);
-      const applicationIdentityLinkedRolesEnabled = guild(17856).useApplicationIdentityLinkedRolesEnabled(guild.id);
-      let obj2 = guild(17856);
-      const applicationIdentityLinkedRolesEnabled1 = guild(17858).useApplicationIdentityLinkedRolesEnabled(
+      const applicationIdentityLinkedRolesEnabled = guild(18143).useApplicationIdentityLinkedRolesEnabled(guild.id);
+      let obj2 = guild(18143);
+      const applicationIdentityLinkedRolesEnabled1 = guild(18145).useApplicationIdentityLinkedRolesEnabled(
         guild.id,
         "guild_settings_roles_edit_connections",
       );
@@ -616,7 +616,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         dependencyMap = tmp15;
-        if (tmp15 === tmp(6685).ConnectionConfigurationRuleOperator.OR) {
+        if (tmp15 === tmp(6862).ConnectionConfigurationRuleOperator.OR) {
           class S {
             constructor() {
               editedRoleConnectionConfigurationsMap = closure_6.getEditedRoleConnectionConfigurationsMap();
@@ -656,9 +656,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items2;
       tmp10 = items2;
       tmp9 = fn;
-      let obj3 = guild(17858);
+      let obj3 = guild(18145);
     }
-  : (guild) => {
+  : function GuildSettingsRolesEditConnectionsControls(guild) {
       guild = guild.guild;
       const role = guild.role;
       ({ locked, integrations } = guild);
@@ -822,8 +822,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             connectionType,
             connectionMetadataField: "Array",
             applicationId,
-            operator: "disabled",
-            value: false,
+            operator: "height",
+            value: 1090584578,
           };
           items.push(obj);
           if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {

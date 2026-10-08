@@ -74,11 +74,11 @@ export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guil
   obj = PlatformUtils;
 };
 export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanUseRoleSubscriptionIAP(arg0) {
       _require = arg0;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const str = tmp(5686).getSystemVersion();
+        const str = tmp(6033).getSystemVersion();
         let tmp6 = null != str;
         if (tmp6) {
           const parts = str.split(".");
@@ -123,15 +123,15 @@ export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerE
         }
         cResult[0] = tmp6;
         let first = tmp6;
-        const tmpResult = tmp(5686);
+        const tmpResult = tmp(6033);
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const isIOSResult = tmp(1369).isIOS();
+        const isIOSResult = tmp(1381).isIOS();
         cResult[1] = isIOSResult;
         let stateFromStores = isIOSResult;
-        const tmpResult3 = tmp(1369);
+        const tmpResult3 = tmp(1381);
       } else {
         stateFromStores = cResult[1];
       }
@@ -169,10 +169,10 @@ export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerE
       }
       return stateFromStores;
     }
-  : (arg0) => {
+  : function useCanUseRoleSubscriptionIAP(arg0) {
       _require = arg0;
       const memo = noop.useMemo(() => {
-        const str = closure_0(5686).getSystemVersion();
+        const str = closure_0(6033).getSystemVersion();
         let tmp = null != str;
         if (tmp) {
           const parts = str.split(".");
@@ -217,7 +217,7 @@ export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerE
         }
         return tmp;
       }, []);
-      let memo1 = noop.useMemo(() => closure_0(1369).isIOS(), []);
+      let memo1 = noop.useMemo(() => closure_0(1381).isIOS(), []);
       items = [GuildStore];
       if (memo1) {
         memo1 = obj.useStateFromStores(items, () => {

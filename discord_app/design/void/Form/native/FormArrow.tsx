@@ -3,14 +3,14 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../native.tsx";
 import Text_Text from "../../../components/Text/native/Text.tsx";
-import _modDef6645 from "../../../../../_runtime/metro/06645__.js";
+import _modDef6822 from "../../../../../_runtime/metro/06822__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   wrapper: { flexDirection: "row", alignItems: "center" },
   icon: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRight: -8, marginLeft: 8 },
@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormArrow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FormArrow(arg0) {
       const cResult = c.c(12);
       ({ label, style } = arg0);
       let wrapper = closure_6();
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { style: null, source: null, size: null };
         const items1 = [wrapper.icon, style];
         obj4.style = items1;
-        obj4.source = _modDef6645;
+        obj4.source = _modDef6822;
         obj4.size = native.Icon.Sizes.MEDIUM;
         const tmp14 = React4(native.Icon, obj4);
         cResult[2] = style;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { style: null, source: null, size: null };
         const items2 = [wrapper.icon, style];
         obj5.style = items2;
-        obj5.source = _modDef6645;
+        obj5.source = _modDef6822;
         obj5.size = native.Icon.Sizes.MEDIUM;
         const tmp7 = React4(native.Icon, obj5);
         cResult[9] = style;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = tmp7;
       }
     }
-  : (arg0) => {
+  : function FormArrow(arg0) {
       ({ label, style } = arg0);
       const tmp = closure_6();
       if (null != label) {
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { style: null, source: null, size: null };
         const items1 = [tmp.icon, style];
         obj4.style = items1;
-        obj4.source = _modDef6645;
+        obj4.source = _modDef6822;
         obj4.size = native.Icon.Sizes.MEDIUM;
         items[1] = React4(native.Icon, obj4);
         obj2.children = items;
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj = { style: null, source: null, size: null };
         const items2 = [tmp.icon, style];
         obj.style = items2;
-        obj.source = _modDef6645;
+        obj.source = _modDef6822;
         obj.size = native.Icon.Sizes.MEDIUM;
         tmp6 = React4(native.Icon, obj);
       }

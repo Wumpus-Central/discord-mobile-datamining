@@ -12,7 +12,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles((arg0, arg1) => {
   let num = 0;
   if (obj.isIOS()) {
@@ -45,7 +45,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/NewBadge.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function NewBadge() {
       const cResult = c.c(7);
       const tmp5 = useThemeDefault();
       const tmp6 = closure_5(useIsUsingClientThemeDefault(), tmp5);
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       obj2 = shared;
     }
-  : () => {
+  : function NewBadge() {
       const tmp3 = useThemeDefault();
       const tmp4 = closure_5(useIsUsingClientThemeDefault(), tmp3);
       const obj = { style: tmp4.base, children: null };

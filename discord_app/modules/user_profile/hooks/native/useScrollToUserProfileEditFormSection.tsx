@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useScrollToUserProfileEditFormSection(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(7);
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn2;
       const tmpResult = require("initialize");
     }
-  : (arg0, arg1) => {
+  : function useScrollToUserProfileEditFormSection(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       ref = ref.useRef({});

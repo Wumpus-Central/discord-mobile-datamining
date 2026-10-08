@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigatorShouldCrossfade.native.tsx");
 
 export const useNavigatorShouldCrossfade = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useNavigatorShouldCrossfade() {
       const cResult = c.c(3);
       const context = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext);
       const prefersCrossfades = context.prefersCrossfades;
@@ -31,7 +31,7 @@ export const useNavigatorShouldCrossfade = ReactCompilerGating.isReactCompilerEn
       tmp5 = tmp6;
       tmpResult = PlatformUtils;
     }
-  : () => {
+  : function useNavigatorShouldCrossfade() {
       const context = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext);
       let enabled = context.prefersCrossfades;
       if (obj.isAndroid()) {

@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16 } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -19,7 +19,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMultiSelect.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (state) => {
+  ? function MultiSelect(state) {
       const cResult = onPress(state[7]).c(12);
       ({ element, onPress } = state);
       state = state.state;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return null;
     }
-  : (arg0) => {
+  : function MultiSelect(arg0) {
       ({ element, onPress: require, state: dependencyMap } = arg0);
       if (null != element) {
         if ("checkbox" === element.type) {

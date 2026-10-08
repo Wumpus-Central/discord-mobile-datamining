@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1614).MEDIA_PICKER_SEND_BUTTON_SPRING;
+const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1626).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsx = fn(21).jsx;
 const __initData = {
   code: 'function FloatingApplyButtonTsx1(){const{visible}=this.__closure;return{pointerEvents:visible?"box-none":"none"};}',
@@ -25,7 +25,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/custom_typing_indicator/native/FloatingApplyButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (visible) => {
+  ? function FloatingApplyButton(visible) {
       const cResult = visible(stateFromStores[5]).c(19);
       visible = visible.visible;
       ({ disabled, text, onPress } = visible);
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       T.__initData = __initData2;
       const animatedStyle = tmpResult4.useAnimatedStyle(T);
       if (cResult[2] !== onPress) {
-        const fn3 = function v() {
+        const fn3 = function y() {
           const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
           onPress();
         };
@@ -213,7 +213,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         MEDIA_PICKER_SEND_BUTTON_SPRING,
       };
     }
-  : (visible) => {
+  : function FloatingApplyButton(visible) {
       visible = visible.visible;
       ({ disabled, text, onPress } = visible);
       const renderButton = visible.renderButton;

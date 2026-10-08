@@ -16,7 +16,7 @@ const require = globalThis.__r;
 
 require = fn;
 const UPLOAD_SMALL_SIZE = fn(1085).UPLOAD_SMALL_SIZE;
-const EmojiIntention = fn(1380).EmojiIntention;
+const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_9 = ["image/png", "image/jpeg"];
@@ -25,7 +25,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/roles/native/action_sheet/RoleIconActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function RoleIconActionSheet(guildId) {
       const cResult = require("c").c(27);
       guildId = guildId.guildId;
       _require = guildId;
@@ -133,12 +133,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   closure_129_0 = undefined;
                   let base64;
                   let mimeType;
-                  roleId(4860).hideActionSheet();
-                  const obj8 = roleId(4860);
+                  roleId(5054).hideActionSheet();
+                  const obj8 = roleId(5054);
                   const obj6 = { size, preferredMimeType: "image/png" };
                   c3 = 1;
                   c4 = 1;
-                  const obj7 = { value: _var(7287).openImagePicker(obj6), done: false };
+                  const obj7 = { value: _var(7741).openImagePicker(obj6), done: false };
                   return obj7;
                 }
               } else if (arg0 === 1) {
@@ -160,17 +160,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     c0 = "";
                   }
                   if (closure_2_9.includes(c0)) {
-                    const obj = _var(1481);
-                    if (dataUriFileSizeResult <= _var(17843).ROLE_ICON_MAX_FILE_SIZE) {
-                      _var(17839).updateRoleIcon(closure_1, base64, null);
-                      const obj2 = _var(17839);
+                    const obj = _var(1493);
+                    if (dataUriFileSizeResult <= _var(18130).ROLE_ICON_MAX_FILE_SIZE) {
+                      _var(18126).updateRoleIcon(closure_1, base64, null);
+                      const obj2 = _var(18126);
                     }
-                    dataUriFileSizeResult = _var(1481).dataUriFileSize(base64);
+                    dataUriFileSizeResult = _var(1493).dataUriFileSize(base64);
                   }
                 }
                 const intl = _var(1126).intl;
-                _var(4573).presentError(intl.string(_var(1126).t.HFyKsa));
-                const obj3 = _var(4573);
+                _var(4765).presentError(intl.string(_var(1126).t.HFyKsa));
+                const obj3 = _var(4765);
               }
             } catch (tmp30) {
               c4 = tmp;
@@ -230,93 +230,156 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[9] !== roleId) {
-          class T {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
           cResult[9] = roleId;
-          cResult[10] = T;
+          cResult[10] = tmp12;
         } else {
-          class T {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
         }
         const _Symbol = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-          class T {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
           let obj2 = { title: null };
           let intl = tmp(1126).intl;
           obj2.title = intl.string(tmp(1126).t.B9grJw);
-          const tmp13 = closure_7(tmp(6651).BottomSheetTitleHeader, obj2);
-          cResult[11] = tmp13;
-          const tmp12 = tmp13;
+          const tmp14 = closure_7(tmp(6828).BottomSheetTitleHeader, obj2);
+          cResult[11] = tmp14;
+          const tmp13 = tmp14;
         } else {
-          class T {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
         }
         const _Symbol2 = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-          class T {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
           let obj3 = { variant: "text-sm/medium", color: "text-muted", children: null };
           const intl2 = tmp(1126).intl;
           obj3.children = intl2.string(tmp(1126).t.I3YQeV);
-          const tmp15 = closure_7(tmp(4892).Text, obj3);
-          cResult[12] = tmp15;
-          const tmp14 = tmp15;
+          const tmp16 = closure_7(tmp(5086).Text, obj3);
+          cResult[12] = tmp16;
+          const tmp15 = tmp16;
         } else {
-          class T {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
         }
         const _Symbol3 = Symbol;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          class T {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
           const stringResult = obj5.string(tmp(1126).t.royWSB);
@@ -324,151 +387,241 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const stringResult1 = intl3.string(tmp(1126).t["mz++Qq"]);
           cResult[13] = stringResult1;
           cResult[14] = stringResult;
-          let tmp17 = stringResult;
-          const tmp16 = stringResult1;
+          let tmp18 = stringResult;
+          const tmp17 = stringResult1;
         } else {
-          class T {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
-          tmp17 = cResult[14];
+          tmp18 = cResult[14];
         }
         if (cResult[15] !== tmp9) {
-          class T {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
-          let obj4 = { label: tmp17, subLabel: tmp16, onPress: tmp9 };
-          const tmp21 = closure_7(tmp(6000).TableRow, obj4);
+          let obj4 = { label: tmp18, subLabel: tmp17, onPress: tmp9 };
+          let tmp22 = closure_7(tmp(6184).TableRow, obj4);
           cResult[15] = tmp9;
-          cResult[16] = tmp21;
+          cResult[16] = tmp22;
         } else {
-          class T {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
         }
         const _Symbol4 = Symbol;
         if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-          class T {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
           const stringResult2 = obj7.string(tmp(1126).t["/Ny2wZ"]);
           cResult[17] = stringResult2;
-          let tmp22 = stringResult2;
+          const tmp23 = stringResult2;
         } else {
-          class T {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
         }
         if (cResult[18] !== tmp10) {
-          class T {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
-          let obj6 = { label: tmp22, onPress: tmp10 };
-          const tmp25 = closure_7(tmp(6000).TableRow, obj6);
+          let obj6 = { label: tmp23, onPress: tmp10 };
+          const tmp26 = closure_7(tmp(6184).TableRow, obj6);
           cResult[18] = tmp10;
-          cResult[19] = tmp25;
+          cResult[19] = tmp26;
         } else {
-          class T {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
         }
-        if (cResult[20] === T) {
-          class T {
+        if (cResult[20] === tmp12) {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
-          if (cResult[23] === tmp20) {
-            class T {
+          if (cResult[23] === tmp21) {
+            class I {
               constructor() {
-                obj = closure_1(closure_2[9]);
-                hideActionSheetResult = obj.hideActionSheet();
-                obj2 = closure_0(closure_2[15]);
-                updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-                return;
+                role = closure_4.getRole(roleId);
+                icon = undefined;
+                if (role != null) {
+                  icon = role.icon;
+                }
+                tmp3 = null != icon;
+                if (!tmp3) {
+                  unicodeEmoji = undefined;
+                  if (role != null) {
+                    unicodeEmoji = role.unicodeEmoji;
+                  }
+                  tmp3 = null != unicodeEmoji;
+                }
+                return tmp3;
               }
             }
           }
           let obj8 = { children: null };
-          const items2 = [tmp12, tmp14];
+          const items2 = [tmp13, tmp15];
           const obj9 = { hasIcons: false, children: null };
-          const items3 = [tmp20, tmp24, tmp26];
+          const items3 = [tmp21, tmp25, tmp27];
           obj9.children = items3;
-          items2[2] = closure_8(tmp(6081).TableRowGroup, obj9);
+          items2[2] = closure_8(tmp(6267).TableRowGroup, obj9);
           obj8.children = items2;
-          const tmp30 = closure_8(tmp(6708).ActionSheet, obj8);
-          cResult[23] = tmp20;
-          cResult[24] = tmp24;
-          cResult[25] = tmp26;
-          cResult[26] = tmp30;
+          const tmp31 = closure_8(tmp(6885).ActionSheet, obj8);
+          cResult[23] = tmp21;
+          cResult[24] = tmp25;
+          cResult[25] = tmp27;
+          cResult[26] = tmp31;
         }
-        let tmp27 = null;
+        let tmp28 = null;
         if (stateFromStores) {
-          class T {
+          class I {
             constructor() {
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              obj2 = closure_0(closure_2[15]);
-              updateRoleIconResult = obj2.updateRoleIcon(roleId, null, null);
-              return;
+              role = closure_4.getRole(roleId);
+              icon = undefined;
+              if (role != null) {
+                icon = role.icon;
+              }
+              tmp3 = null != icon;
+              if (!tmp3) {
+                unicodeEmoji = undefined;
+                if (role != null) {
+                  unicodeEmoji = role.unicodeEmoji;
+                }
+                tmp3 = null != unicodeEmoji;
+              }
+              return tmp3;
             }
           }
           let obj10 = { variant: "danger", label: null, onPress: null };
           const intl4 = tmp(1126).intl;
           obj10.label = intl4.string(tmp(1126).t["uY+Nk/"]);
-          obj10.onPress = T;
-          tmp27 = closure_7(tmp(6000).TableRow, obj10);
+          obj10.onPress = tmp12;
+          tmp28 = closure_7(tmp(6184).TableRow, obj10);
         }
-        cResult[20] = T;
+        cResult[20] = tmp12;
         cResult[21] = stateFromStores;
-        cResult[22] = tmp27;
+        cResult[22] = tmp28;
       }
-      const fn = function v() {
+      function handleSelectEmoji() {
         let obj2 = { guildId, pickerIntention: constants.COMMUNITY_CONTENT, onPressEmoji: null };
         guildId = asyncGeneratorStep(async (arg0) => {
           if (c8 === 2) {
@@ -503,18 +656,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       surrogates = closure_0.surrogates;
                     }
                     if (null != surrogates) {
-                      closure_0(17839).updateRoleIcon(surrogates, null, tmp26);
-                      const obj5 = closure_0(17839);
+                      closure_0(18126).updateRoleIcon(surrogates, null, tmp26);
+                      const obj5 = closure_0(18126);
                     }
                   } else {
                     c6 = 1;
-                    const tmp22 = closure_0(17839);
+                    const tmp22 = closure_0(18126);
                     closure_4 = tmp22;
                     const updateRoleIcon = tmp22.updateRoleIcon;
                     closure_2 = surrogates;
                     c7 = 2;
                     c8 = 1;
-                    const obj7 = { value: closure_0(17843).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                    const obj7 = { value: closure_0(18130).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                     return obj7;
                   }
                 }
@@ -522,8 +675,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (1 === tmp7) {
                   c6 = 0;
                   const intl = closure_0(1126).intl;
-                  closure_0(4573).presentError(intl.string(closure_0(1126).t.R0RpRX));
-                  const obj2 = closure_0(4573);
+                  closure_0(4765).presentError(intl.string(closure_0(1126).t.R0RpRX));
+                  const obj2 = closure_0(4765);
                 } else if (arg0 === 1) {
                   c8 = 3;
                   throw value;
@@ -547,7 +700,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         });
-        obj2.onPressEmoji = function () {
+        obj2.onPressEmoji = function onPressEmoji() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -557,14 +710,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return applyArgumentsResult;
         };
-        const result = guildId(9879).openEmojiPickerActionSheet(obj2, "stack");
-      };
+        const result = guildId(9359).openEmojiPickerActionSheet(obj2, "stack");
+      }
       cResult[6] = guildId;
       cResult[7] = roleId;
-      cResult[8] = fn;
+      cResult[8] = handleSelectEmoji;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function RoleIconActionSheet(arg0) {
       ({ guildId: require, roleId } = arg0);
       dependencyMap = async function _handleUploadImage2() {
         if (c4 === 2) {
@@ -723,18 +876,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       surrogates = closure_0.surrogates;
                     }
                     if (null != surrogates) {
-                      closure_0(17839).updateRoleIcon(surrogates, null, tmp26);
-                      const obj5 = closure_0(17839);
+                      closure_0(18126).updateRoleIcon(surrogates, null, tmp26);
+                      const obj5 = closure_0(18126);
                     }
                   } else {
                     c6 = 1;
-                    const tmp22 = closure_0(17839);
+                    const tmp22 = closure_0(18126);
                     closure_4 = tmp22;
                     const updateRoleIcon = tmp22.updateRoleIcon;
                     closure_2 = surrogates;
                     c7 = 2;
                     c8 = 1;
-                    const obj7 = { value: closure_0(17843).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                    const obj7 = { value: closure_0(18130).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                     return obj7;
                   }
                 }
@@ -742,8 +895,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (1 === tmp7) {
                   c6 = 0;
                   const intl = closure_0(1126).intl;
-                  closure_0(4573).presentError(intl.string(closure_0(1126).t.R0RpRX));
-                  const obj2 = closure_0(4573);
+                  closure_0(4765).presentError(intl.string(closure_0(1126).t.R0RpRX));
+                  const obj2 = closure_0(4765);
                 } else if (arg0 === 1) {
                   c8 = 3;
                   throw value;
@@ -777,7 +930,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return applyArgumentsResult;
         };
-        const result = guildId(9879).openEmojiPickerActionSheet(obj2, "stack");
+        const result = guildId(9359).openEmojiPickerActionSheet(obj2, "stack");
       };
       items3[1] = closure_7(TableRow.TableRow, obj5);
       let tmp5Result = null;

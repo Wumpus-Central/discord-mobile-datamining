@@ -1,5 +1,5 @@
 // discord_app/modules/notifications/settings/native/useIsNotifSettingDisabled.tsx
-import _modDef2847 from "../../NotificationSettings.messages.js";
+import _modDef2891 from "../../NotificationSettings.messages.js";
 import DeclarativeSystemNotifPermissionHelpersDefault from "../DeclarativeSystemNotifPermissionHelpers.android.tsx";
 import DeclarativeSystemNotifPermissionAnalytics from "../DeclarativeSystemNotifPermissionAnalytics.tsx";
 import DeclarativeSystemNotifPermissionStore from "../DeclarativeSystemNotifPermissionStore.tsx";
@@ -12,20 +12,20 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/native/useIsNotifSettingDisabled.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsNotifSettingDisabled(arg0) {
       _require = arg0;
       const cResult = require("c").c(8);
       if (cResult[0] !== arg0) {
-        const fn = function s() {
+        function handleOpenSystem() {
           const result = DeclarativeSystemNotifPermissionAnalytics.trackSystemNotifSettingsOpened(closure_0);
           const openSystemNotifSettings = DeclarativeSystemNotifPermissionHelpersDefault.openSystemNotifSettings;
           if (openSystemNotifSettings != null) {
             const result1 = openSystemNotifSettings(closure_0);
           }
-        };
+        }
         cResult[0] = arg0;
-        cResult[1] = fn;
-        let tmp4 = fn;
+        cResult[1] = handleOpenSystem;
+        let tmp4 = handleOpenSystem;
       } else {
         tmp4 = cResult[1];
       }
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return closure_3.isDisabled(closure_0);
             }
           }
-          const stringResult = obj3.string(_modDef2847.TVZ0Fm);
+          const stringResult = obj3.string(_modDef2891.TVZ0Fm);
           cResult[5] = stringResult;
           const tmp11 = stringResult;
         } else {
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useIsNotifSettingDisabled(arg0) {
       _require = arg0;
       const items = [DeclarativeSystemNotifPermissionStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () =>
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (!tmp4) {
         const obj2 = { label: null, onPress: null };
         const intl = require("util").intl;
-        obj2.label = intl.string(_modDef2847.TVZ0Fm);
+        obj2.label = intl.string(_modDef2891.TVZ0Fm);
         obj2.onPress = function handleOpenSystem() {
           const result = DeclarativeSystemNotifPermissionAnalytics.trackSystemNotifSettingsOpened(closure_0);
           const openSystemNotifSettings = DeclarativeSystemNotifPermissionHelpersDefault.openSystemNotifSettings;

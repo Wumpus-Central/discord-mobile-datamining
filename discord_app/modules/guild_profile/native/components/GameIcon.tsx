@@ -2,16 +2,16 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const Pressables = PressableHighlight(5916);
-const FireIcon2 = PressableHighlight(9421);
+const Pressables = PressableHighlight(6189);
+const FireIcon2 = PressableHighlight(9085);
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(5090);
 let obj2 = { gameIcon: { width: 32, height: 32 }, gameIconImage: null, gameIconMask: null, fireIcon: null };
 let size = {
   width: 32,
@@ -43,7 +43,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GameIcon.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GameIcon(arg0) {
       let PressableHighlight = require;
       let tmp = dependencyMap;
       const cResult = c.c(34);
@@ -93,10 +93,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj3 = { style: tmp13, children: null };
                     const items = [tmp14, tmp18];
                     obj3.children = items;
-                    const tmp26 = React5(React4, obj3);
+                    const tmp26 = timestampProducer(View, obj3);
                     cResult[30] = tmp13;
                     cResult[31] = tmp14;
                     cResult[32] = tmp18;
+                    class R {
+                      constructor() {
+                        if (onPress != null) {
+                          tmp2 = game;
+                          tmpResult = tmp(game);
+                        }
+                        return;
+                      }
+                    }
                     cResult[33] = tmp26;
                   }
                 }
@@ -104,8 +113,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (tmp12) {
                   const obj4 = { style: tmp3.gameIconMask, children: null };
                   const obj5 = { style: tmp3.fireIcon, color: nativeDefault.unsafe_rawColors.ORANGE_330 };
-                  obj4.children = timestampProducer(FireIcon2.FireIcon, obj5);
-                  tmp19 = timestampProducer(React4, obj4);
+                  obj4.children = hasOwnProperty(FireIcon2.FireIcon, obj5);
+                  tmp19 = hasOwnProperty(View, obj4);
                 }
                 cResult[26] = tmp12;
                 cResult[27] = tmp3.fireIcon;
@@ -114,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp18 = tmp19;
               }
               const obj6 = { style: tmp3.gameIconImage, source: tmp4 };
-              const tmp17 = timestampProducer(hasOwnProperty, obj6);
+              const tmp17 = hasOwnProperty(FastImageDefault, obj6);
               cResult[23] = tmp4;
               cResult[24] = tmp3.gameIconImage;
               cResult[25] = tmp17;
@@ -149,10 +158,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj7 = { style: tmp27, onPress: tmp8, children: null };
                   const items2 = [tmp28, tmp32];
                   obj7.children = items2;
-                  tmp = React5(PressableHighlight, obj7);
+                  tmp = timestampProducer(PressableHighlight, obj7);
                   cResult[15] = tmp8;
                   cResult[16] = tmp27;
-                  cResult[17] = tmp28;
+                  class R {
+                    constructor() {
+                      if (onPress != null) {
+                        tmp2 = game;
+                        tmpResult = tmp(game);
+                      }
+                      return;
+                    }
+                  }
                   cResult[18] = tmp32;
                   cResult[19] = tmp;
                 }
@@ -161,8 +178,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (tmp12) {
                 const obj8 = { style: tmp3.gameIconMask, children: null };
                 const obj9 = { style: tmp3.fireIcon, color: nativeDefault.unsafe_rawColors.ORANGE_260 };
-                obj8.children = timestampProducer(FireIcon2.FireIcon, obj9);
-                tmp33 = timestampProducer(React4, obj8);
+                obj8.children = hasOwnProperty(FireIcon2.FireIcon, obj9);
+                tmp33 = hasOwnProperty(View, obj8);
               }
               cResult[11] = tmp12;
               cResult[12] = tmp3.fireIcon;
@@ -171,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp32 = tmp33;
             }
             const obj10 = { style: tmp3.gameIconImage, source: tmp4 };
-            const tmp31 = timestampProducer(hasOwnProperty, obj10);
+            const tmp31 = hasOwnProperty(FastImageDefault, obj10);
             cResult[8] = tmp4;
             cResult[9] = tmp3.gameIconImage;
             cResult[10] = tmp31;
@@ -184,17 +201,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp27 = items3;
         }
       }
-      const fn = function k() {
-        if (onPress != null) {
-          tmp(game);
+      class R {
+        constructor() {
+          if (onPress != null) {
+            tmp2 = game;
+            tmpResult = tmp(game);
+          }
+          return;
         }
-      };
+      }
       cResult[2] = game;
       cResult[3] = onPress;
-      cResult[4] = fn;
-      tmp8 = fn;
+      cResult[4] = R;
+      tmp8 = R;
     }
-  : (arg0) => {
+  : function GameIcon(arg0) {
       ({ style, game } = arg0);
       ({ activityLevel, onPress } = arg0);
       let fireIcon = styles();
@@ -223,11 +244,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const items1 = [style, fireIcon.gameIcon];
           obj2.style = items1;
           obj2.onPress = callback;
-          style = timestampProducer;
+          style = hasOwnProperty;
           const obj3 = { style: fireIcon.gameIconImage, source };
-          callback = [timestampProducer(hasOwnProperty, obj3)];
+          callback = [hasOwnProperty(FastImageDefault, obj3)];
           if (style1) {
-            source = React4;
             const obj4 = { style: fireIcon.gameIconMask, children: null };
             FireIcon = FireIcon2.FireIcon;
             const obj5 = { style: null, color: null };
@@ -235,28 +255,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj5.style = fireIcon;
             ORANGE_260 = nativeDefault.unsafe_rawColors.ORANGE_260;
             obj5.color = ORANGE_260;
-            obj4.children = style(FireIcon, obj5);
-            style1 = style(React4, obj4);
+            source = style(FireIcon, obj5);
+            obj4.children = source;
+            style1 = style(View, obj4);
           }
           callback[1] = style1;
           obj2.children = callback;
-          let tmp14Result = React5(Pressables.PressableHighlight, obj2);
+          let tmp13Result = timestampProducer(Pressables.PressableHighlight, obj2);
         } else {
           const obj6 = { style: null, children: null };
           const items2 = [style, fireIcon.gameIcon];
           obj6.style = items2;
           const obj7 = { style: fireIcon.gameIconImage, source };
-          const items3 = [timestampProducer(hasOwnProperty, obj7)];
-          let tmp16Result = style1;
+          const items3 = [hasOwnProperty(FastImageDefault, obj7)];
+          let tmp15Result = style1;
           if (style1) {
             const obj8 = { style: fireIcon.gameIconMask, children: null };
             const obj9 = { style: fireIcon.fireIcon, color: nativeDefault.unsafe_rawColors.ORANGE_330 };
-            obj8.children = timestampProducer(FireIcon2.FireIcon, obj9);
-            tmp16Result = timestampProducer(React4, obj8);
+            obj8.children = hasOwnProperty(FireIcon2.FireIcon, obj9);
+            tmp15Result = hasOwnProperty(View, obj8);
           }
-          items3[1] = tmp16Result;
+          items3[1] = tmp15Result;
           obj6.children = items3;
-          tmp14Result = React5(React4, obj6);
+          tmp13Result = timestampProducer(View, obj6);
         }
       }
     };

@@ -9,7 +9,7 @@ let context = noop.createContext(undefined);
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCreatorMonetizationSettingsDisabled() {
       context = noop.useContext(context);
       if (null == context) {
         const _Error = Error;
@@ -21,7 +21,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         return context;
       }
     }
-  : () => {
+  : function useCreatorMonetizationSettingsDisabled() {
       context = noop.useContext(context);
       if (null == context) {
         const _Error = Error;
@@ -41,7 +41,7 @@ const result = size.fileFinishedImporting(
 export default context;
 export const useCreatorMonetizationSettingsDisabled = tmp3;
 export const CreatorMonetizationSettingsDisabledContextProvider = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CreatorMonetizationSettingsDisabledContextProvider(arg0) {
       const cResult = c.c(3);
       ({ children, guildId } = arg0);
       const shouldRestrictUpdatingCreatorMonetizationSettings =
@@ -62,7 +62,7 @@ export const CreatorMonetizationSettingsDisabledContextProvider = ReactCompilerG
       cResult[2] = tmp3;
       tmp2 = tmp3;
     }
-  : (arg0) => {
+  : function CreatorMonetizationSettingsDisabledContextProvider(arg0) {
       ({ guildId, children } = arg0);
       return (
         <context.Provider

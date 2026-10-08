@@ -4,8 +4,8 @@ import GuildRecordUtils from "../../../../utils/GuildRecordUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import transitionToGuild from "../../../routing/transitionToGuild.native.tsx";
-import BadgeCategory from "../../../guild_badge/BadgeCategory.tsx";
 import GuildTraits from "../../../guild_badge/GuildTraits.tsx";
+import BadgeCategory from "../../../guild_badge/BadgeCategory.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../user_settings/LocaleStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
@@ -13,10 +13,10 @@ import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const getBadgeTooltip = fn(9417).getBadgeTooltip;
+const getBadgeTooltip = fn(8838).getBadgeTooltip;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 },
   avatarBackground: null,
@@ -56,7 +56,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileHeader.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (profile) => {
+  ? function GuildProfileHeader(profile) {
       const cResult = profile(stateFromStores1[10]).c(71);
       profile = profile.profile;
       const guildIconSource = profile.guildIconSource;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult5 = tmp(tmp2[14]);
       }
       if (cResult[4] !== profile) {
-        class I {
+        class R {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[14]);
@@ -114,9 +114,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[4] = profile;
-        cResult[5] = I;
+        cResult[5] = R;
       } else {
-        class I {
+        class R {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[14]);
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       id = profile.id;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        class I {
+        class R {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[14]);
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = items1;
         const tmp14 = items1;
       } else {
-        class I {
+        class R {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[14]);
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[7] !== id) {
-        class I {
+        class R {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[14]);
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = items2;
         let tmp17 = items2;
       } else {
-        class I {
+        class R {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[14]);
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj4 = id(stateFromStores1[13]);
       stateFromStores1 = profile(stateFromStores1[11]).useStateFromStores(tmp14, tmp18, tmp17);
       if (cResult[10] === id) {
-        class I {
+        class R {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[14]);
@@ -281,7 +281,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[13] === guildIconSource) {
-          class I {
+          class R {
             constructor() {
               tmp = closure_2;
               obj = closure_0(closure_2[14]);
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[16] === tmp4.avatarBackground) {
-            class I {
+            class R {
               constructor() {
                 tmp = closure_2;
                 obj = closure_0(closure_2[14]);
@@ -331,7 +331,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (stateFromStores1) {
-              class I {
+              class R {
                 constructor() {
                   tmp = closure_2;
                   obj = closure_0(closure_2[14]);
@@ -357,7 +357,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (cResult[19] === profile.name) {
-              class I {
+              class R {
                 constructor() {
                   tmp = closure_2;
                   obj = closure_0(closure_2[14]);
@@ -439,7 +439,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = O;
       const tmpResult6 = profile(stateFromStores1[11]);
     }
-  : (icon) => {
+  : function GuildProfileHeader(icon) {
       const profile = icon.profile;
       let id;
       let stateFromStores1;

@@ -11,13 +11,13 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scrollView: { flex: 1 }, section: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.section = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MultiGuildDevTools() {
   const cResult = stateFromStores(576).c(73);
   const tmp4 = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -155,7 +155,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                                 }
                               }
                               obj5.trailing = tmp58;
-                              const tmp61 = closure_8(tmp(6000).TableRow, obj5);
+                              const tmp61 = closure_8(tmp(6184).TableRow, obj5);
                               cResult[48] = tmp18;
                               cResult[49] = tmp61;
                               let tmp59 = tmp61;
@@ -196,8 +196,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                                   return;
                                 }
                               }
-                              const tmp65 = closure_8(tmp(14794).RefreshIcon, {});
-                              const tmp66 = closure_8(tmp(6007).TableRowArrow, {});
+                              const tmp65 = closure_8(tmp(15055).RefreshIcon, {});
+                              const tmp66 = closure_8(tmp(6193).TableRowArrow, {});
                               class T {
                                 constructor() {
                                   obj = { guildsCount: closure_1_7.getPresentableUpsellGuilds().length, dismissedCount: closure_1_7.getDismissedGuildIds().size, lastFetchedAt: closure_1_7.getLastFetchedAt() };
@@ -233,7 +233,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                                 }
                               }
                               obj6.trailing = tmp64;
-                              const tmp68 = closure_8(tmp(6000).TableRow, obj6);
+                              const tmp68 = closure_8(tmp(6184).TableRow, obj6);
                               cResult[54] = Z;
                               cResult[55] = tmp68;
                             } else {
@@ -269,8 +269,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                                   return obj;
                                 }
                               }
-                              obj7.icon = closure_8(tmp(14794).RefreshIcon, {});
-                              obj7.trailing = closure_8(tmp(6007).TableRowArrow, {});
+                              obj7.icon = closure_8(tmp(15055).RefreshIcon, {});
+                              obj7.trailing = closure_8(tmp(6193).TableRowArrow, {});
                               const tmp71 = closure_8(tmp70, obj7);
                               cResult[56] = tmp71;
                               const tmp69 = tmp71;
@@ -340,7 +340,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                             const obj9 = { title: "Actions", hasIcons: true, children: null };
                             const items3 = [tmp59, tmp67, tmp69];
                             obj9.children = items3;
-                            const tmp74 = closure_9(tmp(6081).TableRowGroup, obj9);
+                            const tmp74 = closure_9(tmp(6267).TableRowGroup, obj9);
                             cResult[57] = tmp59;
                             cResult[58] = tmp67;
                             cResult[59] = tmp74;
@@ -362,7 +362,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                       const obj11 = { title: "Store State", hasIcons: false, children: null };
                       const items4 = [tmp41, tmp45, tmp48];
                       obj11.children = items4;
-                      const tmp53 = closure_9(tmp(6081).TableRowGroup, obj11);
+                      const tmp53 = closure_9(tmp(6267).TableRowGroup, obj11);
                       cResult[39] = tmp41;
                       cResult[40] = tmp45;
                       cResult[41] = tmp48;
@@ -400,7 +400,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }
-  const entries = Object.entries(tmp(15467).DETECTABLE_GAME_TO_APPLICATION_ID_MAP);
+  const entries = Object.entries(tmp(15729).DETECTABLE_GAME_TO_APPLICATION_ID_MAP);
   const mapped = entries.map((item) => {
     const tmp = _slicedToArray(item, 2);
     const first = tmp[0];
@@ -499,7 +499,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         return;
       }
     }
-    const tmp32 = closure_8(tmp(6000).TableRow, { label: "No games configured", subLabel: "MULTI_GUILD_GAME_CONFIGS is empty", disabled: true });
+    const tmp32 = closure_8(tmp(6184).TableRow, { label: "No games configured", subLabel: "MULTI_GUILD_GAME_CONFIGS is empty", disabled: true });
   } else {
     class Z {
       constructor() {
@@ -514,7 +514,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[6] = tmp4.container;
   cResult[7] = tmp4.scrollView;
   cResult[8] = tmp4.section;
-  cResult[9] = stateFromStores(6081).TableRowGroup;
+  cResult[9] = stateFromStores(6267).TableRowGroup;
   cResult[10] = closure_4;
   cResult[11] = closure_5;
   cResult[12] = closure_4;
@@ -528,7 +528,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[19] = scrollView;
   cResult[20] = tmp4.container;
   const tmpResult2 = stateFromStores(504);
-}) : (() => {
+}) : (function MultiGuildDevTools() {
   const tmp = closure_10();
   const items = [LocalAppDetectionStore];
   _require = require("initialize").useStateFromStores(items, () => LocalAppDetectionStore.getUserAgnosticState());
@@ -649,7 +649,7 @@ let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDef
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_community_upsell/native/GameCommunityUpsellDevTools.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameCommunityUpsellDevTools() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp5 = closure_1_8(closure_11, {});
@@ -659,4 +659,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => closure_1_8(closure_11, {}));
+}) : (function GameCommunityUpsellDevTools() {
+  return closure_1_8(closure_11, {});
+});

@@ -18,7 +18,7 @@ let closure_6 = createStyles.createStyles((width) => {
 const result = size.fileFinishedImporting("modules/user_profile/native/ApplicationIconAndName.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ApplicationIconAndName(arg0) {
       const cResult = c.c(15);
       ({ application, textVariant, iconSize, useComma } = arg0);
       const tmp5 = closure_6(iconSize);
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = str;
       tmp4 = undefined !== useComma && useComma;
     }
-  : (textVariant) => {
+  : function ApplicationIconAndName(textVariant) {
       ({ application, iconSize, useComma } = textVariant);
       if (useComma === undefined) {
         useComma = false;

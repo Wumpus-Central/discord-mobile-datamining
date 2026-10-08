@@ -2,11 +2,11 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
-import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import UserProfileActionCreators from "../UserProfileActionCreators.tsx";
+import useAnalyticsLocations from "../../app_analytics/useAnalyticsLocations.tsx";
+import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import RecentAvatarUtils from "../../recent_avatars/RecentAvatarUtils.tsx";
 import useDisplayProfileDefault from "../hooks/useDisplayProfile.tsx";
 import useProfileThemeDefault from "../hooks/useProfileTheme.tsx";
@@ -17,51 +17,121 @@ import userSettingToActivity from "../../custom_status/utils/userSettingToActivi
 import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble.tsx";
 import UserProfileGradientContainerDefault from "UserProfileGradientContainer.tsx";
 import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo.tsx";
+import useOpenChangeBannerActionSheetDefault from "../hooks/native/useOpenChangeBannerActionSheet.tsx";
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
 import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles.tsx";
 import EditUserProfileAvatarDefault from "EditUserProfileAvatar.tsx";
+import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields.tsx";
 import UserProfileFloatingUpsell from "UserProfileFloatingUpsell.tsx";
 import UserProfileTryItOutGetPremiumUpsellDefault from "UserProfileTryItOutGetPremiumUpsell.tsx";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserProfileSettingsStore from "../UserProfileSettingsStore.tsx";
 
+const useAnalyticsLocationsDefault = useAnalyticsLocations;
+
 require = fn;
-function EditableBanner(user) {
-  user = user.user;
-  const merged = Object.assign(user, Object.assign({ user: 0 }));
-  let analyticsLocations;
-  analyticsLocations = analyticsLocations(6664)(analyticsLocations(6688).EDIT_BANNER).analyticsLocations;
-  const items = [analyticsLocations, user];
-  const callback = noop.useCallback(() => {
-    const obj2 = { user, analyticsLocations, onBannerChange: null, isTryItOut: true };
-    const obj = ActionSheetActionCreatorsDefault;
-    obj2.onBannerChange = UserProfileActionCreators.setTryItOutBanner;
-    obj.openLazy(asyncRequireImpl(14434, dependencyMap.paths), "Change Banner", obj2);
-  }, items);
-  let obj = { value: analyticsLocations, children: null };
-  let obj2 = {};
-  const tmp2 = analyticsLocations(6664);
-  const merged1 = Object.assign(merged);
-  obj2.user = user;
-  obj2.onPressEdit = callback;
-  const intl = user(1126).intl;
-  obj2.editButtonAccessibilityLabel = intl.string(user(1126).t.VqsHy0);
-  obj2.bannerSafeArea = 12;
-  obj2.isUserProfileEditingRefresh = true;
-  obj.children = closure_7(analyticsLocations(14432), obj2);
-  return closure_7(user(6664).AnalyticsLocationProvider, obj);
-}
+let closure_3 = ["user"];
 get_ActivityIndicator = fn(17);
-({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const ReactCompilerGating = fn(558);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let ReactCompilerGating = fn(558);
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function EditableBanner(user) {
+      const cResult = c.c(14);
+      if (cResult[0] !== user) {
+        user = user.user;
+        const tmp8 = _objectWithoutProperties(user, closure_3);
+        cResult[0] = user;
+        cResult[1] = tmp8;
+        cResult[2] = user;
+        let tmp5 = user;
+        let tmp4 = tmp8;
+      } else {
+        tmp4 = cResult[1];
+        tmp5 = cResult[2];
+      }
+      const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.EDIT_BANNER).analyticsLocations;
+      if (cResult[3] === analyticsLocations) {
+        if (cResult[4] === tmp5) {
+          let tmp11 = cResult[5];
+        }
+        const tmp12 = useOpenChangeBannerActionSheetDefault(tmp11);
+        const _Symbol = Symbol;
+        if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl = util.intl;
+          const stringResult = intl.string(util.t.VqsHy0);
+          cResult[6] = stringResult;
+          let tmp14 = stringResult;
+        } else {
+          tmp14 = cResult[6];
+        }
+        if (cResult[7] === tmp12) {
+          if (cResult[8] === tmp4) {
+            if (cResult[9] === tmp5) {
+              let tmp16 = cResult[10];
+            }
+            if (cResult[11] === analyticsLocations) {
+              if (cResult[12] === tmp16) {
+                let tmp23 = cResult[13];
+              }
+              return tmp23;
+            }
+            const obj2 = { value: analyticsLocations, children: tmp16 };
+            const tmp25 = closure_1_8(useAnalyticsLocations.AnalyticsLocationProvider, obj2);
+            cResult[11] = analyticsLocations;
+            cResult[12] = tmp16;
+            cResult[13] = tmp25;
+            tmp23 = tmp25;
+          }
+        }
+        const obj3 = {};
+        const merged = Object.assign(tmp4);
+        obj3.user = tmp5;
+        obj3.onPressEdit = tmp12;
+        obj3.editButtonAccessibilityLabel = tmp14;
+        obj3.bannerSafeArea = 12;
+        obj3.isUserProfileEditingRefresh = true;
+        const tmp22 = closure_1_8(UserProfileEditBannerButtonDefault, obj3);
+        cResult[7] = tmp12;
+        cResult[8] = tmp4;
+        cResult[9] = tmp5;
+        cResult[10] = tmp22;
+        tmp16 = tmp22;
+        const tmp9Result = UserProfileEditBannerButtonDefault;
+      }
+      const obj4 = { user: tmp5, analyticsLocations, isTryItOut: true };
+      cResult[3] = analyticsLocations;
+      cResult[4] = tmp5;
+      cResult[5] = obj4;
+      tmp11 = obj4;
+    }
+  : function EditableBanner(user) {
+      user = user.user;
+      const merged = Object.assign(user, Object.assign({ user: 0 }));
+      const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.EDIT_BANNER).analyticsLocations;
+      const obj = { value: analyticsLocations, children: null };
+      const obj2 = {};
+      const tmp3 = useOpenChangeBannerActionSheetDefault({ user, analyticsLocations, isTryItOut: true });
+      const merged1 = Object.assign(merged);
+      obj2.user = user;
+      obj2.onPressEdit = tmp3;
+      const intl = util.intl;
+      obj2.editButtonAccessibilityLabel = intl.string(util.t.VqsHy0);
+      obj2.bannerSafeArea = 12;
+      obj2.isUserProfileEditingRefresh = true;
+      obj.children = closure_1_8(UserProfileEditBannerButtonDefault, obj2);
+      return closure_1_8(useAnalyticsLocations.AnalyticsLocationProvider, obj);
+    };
+ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileTryItOutEditForm.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (currentUser) => {
-      const cResult = c.c(90);
-      currentUser = currentUser.currentUser;
+  ? function UserProfileTryItOutEditForm(arg0) {
+      const cResult = c.c(102);
+      ({ currentUser, initialTarget } = arg0);
       const tmp5 = UserProfileSharedStylesDefault();
       const tmp6 = UserProfileEditFormSharedStylesDefault();
       const tmp7 = useSafeAreaInsetsDefault();
@@ -69,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const onLayout = floatingUpsellHeight.onLayout;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserProfileSettingsStore];
-        const fn = function u() {
+        const fn = function n() {
           tryItOutChanges = tryItOutChanges.getTryItOutChanges();
           return {
             tryItOutAvatar: tryItOutChanges.tryItOutAvatar,
@@ -149,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   if (cResult[20] !== tmp6.bounceOffset) {
                     const obj5 = { style: tmp6.bounceOffset };
-                    const tmp32 = React5(hasOwnProperty, obj5);
+                    const tmp32 = closure_1_8(timestampProducer, obj5);
                     cResult[20] = tmp6.bounceOffset;
                     cResult[21] = tmp32;
                     let tmp29 = tmp32;
@@ -212,168 +282,234 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                         if (cResult[57] === tryItOutDisplayNameStyles) {
                                                           let tmp51 = cResult[58];
                                                         }
-                                                        if (cResult[59] === gradientFallbackBackground) {
-                                                          if (cResult[60] === primaryColor) {
-                                                            if (cResult[61] === secondaryColor) {
-                                                              if (cResult[62] === tmp47) {
-                                                                if (cResult[63] === tmp48) {
-                                                                  if (cResult[64] === tmp51) {
-                                                                    let tmp54 = cResult[65];
-                                                                  }
-                                                                  if (cResult[66] === tmp42) {
-                                                                    if (cResult[67] === tmp54) {
-                                                                      let tmp57 = cResult[68];
-                                                                    }
-                                                                    if (cResult[69] === gradientFallbackBackground) {
-                                                                      if (cResult[70] === primaryColor) {
-                                                                        if (cResult[71] === secondaryColor) {
-                                                                          if (cResult[72] === tmp33) {
-                                                                            if (cResult[73] === tmp34) {
-                                                                              if (cResult[74] === tmp57) {
-                                                                                let tmp61 = cResult[75];
-                                                                              }
-                                                                              if (cResult[76] === tmp61) {
-                                                                                if (cResult[77] === tmp29) {
-                                                                                  let tmp64 = cResult[78];
-                                                                                }
-                                                                                if (cResult[79] !== onLayout) {
-                                                                                  const obj8 = { onLayout };
-                                                                                  const tmp70 = React5(
-                                                                                    UserProfileTryItOutGetPremiumUpsellDefault,
-                                                                                    obj8,
-                                                                                  );
-                                                                                  cResult[79] = onLayout;
-                                                                                  cResult[80] = tmp70;
-                                                                                  let tmp68 = tmp70;
-                                                                                } else {
-                                                                                  tmp68 = cResult[80];
-                                                                                }
-                                                                                if (cResult[81] === tmp64) {
-                                                                                  if (cResult[82] === tmp68) {
-                                                                                    if (cResult[83] === tmp28) {
-                                                                                      let tmp71 = cResult[84];
-                                                                                    }
-                                                                                    if (cResult[85] === primaryColor) {
-                                                                                      if (
-                                                                                        cResult[86] === secondaryColor
-                                                                                      ) {
-                                                                                        if (cResult[87] === tmp71) {
-                                                                                          if (cResult[88] === theme) {
-                                                                                            let tmp75 = cResult[89];
-                                                                                          }
-                                                                                          return tmp75;
-                                                                                        }
+                                                        if (cResult[59] !== containerBackground) {
+                                                          const obj8 = { backgroundColor: containerBackground };
+                                                          cResult[59] = containerBackground;
+                                                          cResult[60] = obj8;
+                                                          let tmp54 = obj8;
+                                                        } else {
+                                                          tmp54 = cResult[60];
+                                                        }
+                                                        if (cResult[61] === tmp6.formContainer) {
+                                                          if (cResult[62] === tmp54) {
+                                                            let tmp55 = cResult[63];
+                                                          }
+                                                          if (cResult[64] === currentUser) {
+                                                            if (cResult[65] === initialTarget) {
+                                                              let tmp56 = cResult[66];
+                                                            }
+                                                            if (cResult[67] === tmp55) {
+                                                              if (cResult[68] === tmp56) {
+                                                                let tmp59 = cResult[69];
+                                                              }
+                                                              if (cResult[70] === gradientFallbackBackground) {
+                                                                if (cResult[71] === primaryColor) {
+                                                                  if (cResult[72] === secondaryColor) {
+                                                                    if (cResult[73] === tmp47) {
+                                                                      if (cResult[74] === tmp48) {
+                                                                        if (cResult[75] === tmp51) {
+                                                                          if (cResult[76] === tmp59) {
+                                                                            let tmp63 = cResult[77];
+                                                                          }
+                                                                          if (cResult[78] === tmp42) {
+                                                                            if (cResult[79] === tmp63) {
+                                                                              let tmp66 = cResult[80];
+                                                                            }
+                                                                            if (
+                                                                              cResult[81] === gradientFallbackBackground
+                                                                            ) {
+                                                                              if (cResult[82] === primaryColor) {
+                                                                                if (cResult[83] === secondaryColor) {
+                                                                                  if (cResult[84] === tmp33) {
+                                                                                    if (cResult[85] === tmp34) {
+                                                                                      if (cResult[86] === tmp66) {
+                                                                                        let tmp70 = cResult[87];
                                                                                       }
+                                                                                      if (cResult[88] === tmp70) {
+                                                                                        if (cResult[89] === tmp29) {
+                                                                                          let tmp73 = cResult[90];
+                                                                                        }
+                                                                                        if (cResult[91] !== onLayout) {
+                                                                                          const obj9 = { onLayout };
+                                                                                          const tmp79 = closure_1_8(
+                                                                                            UserProfileTryItOutGetPremiumUpsellDefault,
+                                                                                            obj9,
+                                                                                          );
+                                                                                          cResult[91] = onLayout;
+                                                                                          cResult[92] = tmp79;
+                                                                                          let tmp77 = tmp79;
+                                                                                        } else {
+                                                                                          tmp77 = cResult[92];
+                                                                                        }
+                                                                                        if (cResult[93] === tmp73) {
+                                                                                          if (cResult[94] === tmp77) {
+                                                                                            if (cResult[95] === tmp28) {
+                                                                                              let tmp80 = cResult[96];
+                                                                                            }
+                                                                                            if (
+                                                                                              cResult[97] ===
+                                                                                              primaryColor
+                                                                                            ) {
+                                                                                              if (
+                                                                                                cResult[98] ===
+                                                                                                secondaryColor
+                                                                                              ) {
+                                                                                                if (
+                                                                                                  cResult[99] === tmp80
+                                                                                                ) {
+                                                                                                  if (
+                                                                                                    cResult[100] ===
+                                                                                                    theme
+                                                                                                  ) {
+                                                                                                    let tmp84 =
+                                                                                                      cResult[101];
+                                                                                                  }
+                                                                                                  return tmp84;
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                            const obj10 = {
+                                                                                              theme,
+                                                                                              primaryColor,
+                                                                                              secondaryColor,
+                                                                                              children: tmp80,
+                                                                                            };
+                                                                                            const tmp86 = closure_1_8(
+                                                                                              native.ThemeContextProvider,
+                                                                                              obj10,
+                                                                                            );
+                                                                                            cResult[97] = primaryColor;
+                                                                                            cResult[98] =
+                                                                                              secondaryColor;
+                                                                                            cResult[99] = tmp80;
+                                                                                            cResult[100] = theme;
+                                                                                            cResult[101] = tmp86;
+                                                                                            tmp84 = tmp86;
+                                                                                          }
+                                                                                        }
+                                                                                        const obj11 = {
+                                                                                          style: tmp28,
+                                                                                          children: null,
+                                                                                        };
+                                                                                        const items1 = [tmp73, tmp77];
+                                                                                        obj11.children = items1;
+                                                                                        const tmp83 = options(
+                                                                                          timestampProducer,
+                                                                                          obj11,
+                                                                                        );
+                                                                                        cResult[93] = tmp73;
+                                                                                        cResult[94] = tmp77;
+                                                                                        cResult[95] = tmp28;
+                                                                                        cResult[96] = tmp83;
+                                                                                        tmp80 = tmp83;
+                                                                                      }
+                                                                                      const obj12 = { children: null };
+                                                                                      const items2 = [tmp29, tmp70];
+                                                                                      obj12.children = items2;
+                                                                                      const tmp76 = options(
+                                                                                        hasOwnProperty,
+                                                                                        obj12,
+                                                                                      );
+                                                                                      cResult[88] = tmp70;
+                                                                                      cResult[89] = tmp29;
+                                                                                      cResult[90] = tmp76;
+                                                                                      tmp73 = tmp76;
                                                                                     }
-                                                                                    const obj9 = {
-                                                                                      theme,
-                                                                                      primaryColor,
-                                                                                      secondaryColor,
-                                                                                      children: tmp71,
-                                                                                    };
-                                                                                    const tmp77 = React5(
-                                                                                      native.ThemeContextProvider,
-                                                                                      obj9,
-                                                                                    );
-                                                                                    cResult[85] = primaryColor;
-                                                                                    cResult[86] = secondaryColor;
-                                                                                    cResult[87] = tmp71;
-                                                                                    cResult[88] = theme;
-                                                                                    cResult[89] = tmp77;
-                                                                                    tmp75 = tmp77;
                                                                                   }
                                                                                 }
-                                                                                const obj10 = {
-                                                                                  style: tmp28,
-                                                                                  children: null,
-                                                                                };
-                                                                                const items1 = [tmp64, tmp68];
-                                                                                obj10.children = items1;
-                                                                                const tmp74 = closure_1_8(
-                                                                                  hasOwnProperty,
-                                                                                  obj10,
-                                                                                );
-                                                                                cResult[81] = tmp64;
-                                                                                cResult[82] = tmp68;
-                                                                                cResult[83] = tmp28;
-                                                                                cResult[84] = tmp74;
-                                                                                tmp71 = tmp74;
                                                                               }
-                                                                              const obj11 = { children: null };
-                                                                              const items2 = [tmp29, tmp61];
-                                                                              obj11.children = items2;
-                                                                              const tmp67 = closure_1_8(React4, obj11);
-                                                                              cResult[76] = tmp61;
-                                                                              cResult[77] = tmp29;
-                                                                              cResult[78] = tmp67;
-                                                                              tmp64 = tmp67;
                                                                             }
+                                                                            const obj13 = {
+                                                                              fallbackBackground:
+                                                                                gradientFallbackBackground,
+                                                                              primaryColor,
+                                                                              secondaryColor,
+                                                                              containerStyle: tmp33,
+                                                                              children: null,
+                                                                            };
+                                                                            const items3 = [tmp34, tmp66];
+                                                                            obj13.children = items3;
+                                                                            const tmp72 = options(
+                                                                              UserProfileGradientContainerDefault,
+                                                                              obj13,
+                                                                            );
+                                                                            cResult[81] = gradientFallbackBackground;
+                                                                            cResult[82] = primaryColor;
+                                                                            cResult[83] = secondaryColor;
+                                                                            cResult[84] = tmp33;
+                                                                            cResult[85] = tmp34;
+                                                                            cResult[86] = tmp66;
+                                                                            cResult[87] = tmp72;
+                                                                            tmp70 = tmp72;
                                                                           }
+                                                                          const obj14 = { children: null };
+                                                                          const items4 = [tmp42, tmp63];
+                                                                          obj14.children = items4;
+                                                                          const tmp69 = options(
+                                                                            timestampProducer,
+                                                                            obj14,
+                                                                          );
+                                                                          cResult[78] = tmp42;
+                                                                          cResult[79] = tmp63;
+                                                                          cResult[80] = tmp69;
+                                                                          tmp66 = tmp69;
                                                                         }
                                                                       }
                                                                     }
-                                                                    const obj12 = {
-                                                                      fallbackBackground: gradientFallbackBackground,
-                                                                      primaryColor,
-                                                                      secondaryColor,
-                                                                      containerStyle: tmp33,
-                                                                      children: null,
-                                                                    };
-                                                                    const items3 = [tmp34, tmp57];
-                                                                    obj12.children = items3;
-                                                                    const tmp63 = closure_1_8(
-                                                                      UserProfileGradientContainerDefault,
-                                                                      obj12,
-                                                                    );
-                                                                    cResult[69] = gradientFallbackBackground;
-                                                                    cResult[70] = primaryColor;
-                                                                    cResult[71] = secondaryColor;
-                                                                    cResult[72] = tmp33;
-                                                                    cResult[73] = tmp34;
-                                                                    cResult[74] = tmp57;
-                                                                    cResult[75] = tmp63;
-                                                                    tmp61 = tmp63;
                                                                   }
-                                                                  const obj13 = { children: null };
-                                                                  const items4 = [tmp42, tmp54];
-                                                                  obj13.children = items4;
-                                                                  const tmp60 = closure_1_8(hasOwnProperty, obj13);
-                                                                  cResult[66] = tmp42;
-                                                                  cResult[67] = tmp54;
-                                                                  cResult[68] = tmp60;
-                                                                  tmp57 = tmp60;
                                                                 }
                                                               }
+                                                              const obj15 = {
+                                                                fallbackBackground: gradientFallbackBackground,
+                                                                primaryColor,
+                                                                secondaryColor,
+                                                                containerStyle: tmp47,
+                                                                children: null,
+                                                              };
+                                                              const items5 = [tmp48, tmp51, tmp59];
+                                                              obj15.children = items5;
+                                                              const tmp65 = options(
+                                                                UserProfileGradientContainerDefault,
+                                                                obj15,
+                                                              );
+                                                              cResult[70] = gradientFallbackBackground;
+                                                              cResult[71] = primaryColor;
+                                                              cResult[72] = secondaryColor;
+                                                              cResult[73] = tmp47;
+                                                              cResult[74] = tmp48;
+                                                              cResult[75] = tmp51;
+                                                              cResult[76] = tmp59;
+                                                              cResult[77] = tmp65;
+                                                              tmp63 = tmp65;
                                                             }
+                                                            const obj16 = { style: tmp55, children: tmp56 };
+                                                            const tmp62 = closure_1_8(timestampProducer, obj16);
+                                                            cResult[67] = tmp55;
+                                                            cResult[68] = tmp56;
+                                                            cResult[69] = tmp62;
+                                                            tmp59 = tmp62;
                                                           }
+                                                          const obj17 = { currentUser, mode: "edit", initialTarget };
+                                                          const tmp58 = closure_1_8(
+                                                            UserProfileTryItOutFieldsDefault,
+                                                            obj17,
+                                                          );
+                                                          cResult[64] = currentUser;
+                                                          cResult[65] = initialTarget;
+                                                          cResult[66] = tmp58;
+                                                          tmp56 = tmp58;
                                                         }
-                                                        const obj14 = {
-                                                          fallbackBackground: gradientFallbackBackground,
-                                                          primaryColor,
-                                                          secondaryColor,
-                                                          containerStyle: tmp47,
-                                                          children: null,
-                                                        };
-                                                        const items5 = [tmp48, tmp51];
-                                                        obj14.children = items5;
-                                                        const tmp56 = closure_1_8(
-                                                          UserProfileGradientContainerDefault,
-                                                          obj14,
-                                                        );
-                                                        cResult[59] = gradientFallbackBackground;
-                                                        cResult[60] = primaryColor;
-                                                        cResult[61] = secondaryColor;
-                                                        cResult[62] = tmp47;
-                                                        cResult[63] = tmp48;
-                                                        cResult[64] = tmp51;
-                                                        cResult[65] = tmp56;
-                                                        tmp54 = tmp56;
+                                                        const items6 = [tmp6.formContainer, tmp54];
+                                                        cResult[61] = tmp6.formContainer;
+                                                        cResult[62] = tmp54;
+                                                        cResult[63] = items6;
+                                                        tmp55 = items6;
                                                       }
                                                     }
                                                   }
                                                 }
                                               }
-                                              const obj15 = {
+                                              const obj19 = {
                                                 user: currentUser,
                                                 displayName: str2,
                                                 pronouns: str3,
@@ -382,7 +518,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                 displayNameAccessibilityRole: "header",
                                                 pendingDisplayNameStyles: tryItOutDisplayNameStyles,
                                               };
-                                              const tmp53 = React5(UserProfilePrimaryInfoDefault, obj15);
+                                              const tmp53 = closure_1_8(UserProfilePrimaryInfoDefault, obj19);
                                               cResult[52] = tmp18;
                                               cResult[53] = containerBackground;
                                               cResult[54] = str2;
@@ -394,7 +530,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             }
                                           }
                                         }
-                                        const obj16 = {
+                                        const obj20 = {
                                           customStatusActivity,
                                           hasCustomProfileTheme: tmp21,
                                           style: null,
@@ -405,7 +541,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                           customStatusBubble: obj18.style,
                                           emojiOnlyCustomStatusBubble: obj18.emojiOnlyStyle,
                                         } = tmp5);
-                                        const tmp50 = React5(UserProfileCustomStatusBubbleDefault, obj16);
+                                        const tmp50 = closure_1_8(UserProfileCustomStatusBubbleDefault, obj20);
                                         cResult[47] = customStatusActivity;
                                         cResult[48] = tmp21;
                                         cResult[49] = tmp5.customStatusBubble;
@@ -414,30 +550,30 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         tmp48 = tmp50;
                                       }
                                     }
-                                    const items6 = [, ,];
+                                    const items7 = [, ,];
                                     ({ profileContentWrapper: arr4[0], profileContent: arr4[1] } = tmp5);
-                                    items6[2] = tmp46;
+                                    items7[2] = tmp46;
                                     cResult[43] = tmp5.profileContent;
                                     cResult[44] = tmp5.profileContentWrapper;
                                     cResult[45] = tmp46;
-                                    cResult[46] = items6;
-                                    tmp47 = items6;
+                                    cResult[46] = items7;
+                                    tmp47 = items7;
                                   }
-                                  const obj17 = { style: tmp38, children: tmp39 };
-                                  const tmp45 = React5(hasOwnProperty, obj17);
+                                  const obj21 = { style: tmp38, children: tmp39 };
+                                  const tmp45 = closure_1_8(timestampProducer, obj21);
                                   cResult[38] = tmp38;
                                   cResult[39] = tmp39;
                                   cResult[40] = tmp45;
                                   tmp42 = tmp45;
                                 }
-                                const obj19 = {
+                                const obj22 = {
                                   user: currentUser,
                                   disableStatus: true,
                                   statusStyle: tmp26,
                                   isTryItOut: true,
                                   isUserProfileEditingRefresh: true,
                                 };
-                                const tmp41 = React5(EditUserProfileAvatarDefault, obj19);
+                                const tmp41 = closure_1_8(EditUserProfileAvatarDefault, obj22);
                                 cResult[35] = tmp26;
                                 cResult[36] = currentUser;
                                 cResult[37] = tmp41;
@@ -445,28 +581,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                           }
-                          const items7 = [, , ,];
+                          const items8 = [, , ,];
                           ({ avatarBackground: arr3[0], avatarPosition: arr3[1] } = tmp5);
-                          items7[2] = tmp6.avatarContainer;
-                          items7[3] = tmp26;
+                          items8[2] = tmp6.avatarContainer;
+                          items8[3] = tmp26;
                           cResult[30] = tmp26;
                           cResult[31] = tmp6.avatarContainer;
                           cResult[32] = tmp5.avatarBackground;
                           cResult[33] = tmp5.avatarPosition;
-                          cResult[34] = items7;
-                          tmp38 = items7;
+                          cResult[34] = items8;
+                          tmp38 = items8;
                         }
                       }
                     }
                   }
-                  const obj20 = {
+                  const obj23 = {
                     user: currentUser,
                     displayProfile: tmp4ResultResult,
                     pendingAvatarSrc: tmp16,
                     pendingBanner: tryItOutBanner,
                     pendingThemeColors: tryItOutThemeColors,
                   };
-                  const tmp37 = React5(EditableBanner, obj20);
+                  const tmp37 = closure_1_8(closure_10, obj23);
                   cResult[24] = currentUser;
                   cResult[25] = tmp4ResultResult;
                   cResult[26] = tmp16;
@@ -475,24 +611,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[29] = tmp37;
                   tmp34 = tmp37;
                 }
-                const items8 = [tmp6.container, tmp27];
+                const items9 = [tmp6.container, tmp27];
                 cResult[17] = tmp6.container;
                 cResult[18] = tmp27;
-                cResult[19] = items8;
-                tmp28 = items8;
+                cResult[19] = items9;
+                tmp28 = items9;
                 const tmpResult5 = useUserProfileColors;
               }
             }
-            const obj21 = { theme, primaryColor, secondaryColor };
+            const obj24 = { theme, primaryColor, secondaryColor };
             cResult[9] = primaryColor;
             cResult[10] = secondaryColor;
             cResult[11] = theme;
-            cResult[12] = obj21;
-            tmp22 = obj21;
+            cResult[12] = obj24;
+            tmp22 = obj24;
             const tmp20 = useProfileThemeDefault(tmp19);
           }
         }
-        const obj22 = {
+        const obj25 = {
           user: currentUser,
           displayProfile: tmp4ResultResult,
           pendingThemeColors: tryItOutThemeColors,
@@ -501,8 +637,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = currentUser;
         cResult[6] = tmp4ResultResult;
         cResult[7] = tryItOutThemeColors;
-        cResult[8] = obj22;
-        tmp19 = obj22;
+        cResult[8] = obj25;
+        tmp19 = obj25;
       }
       const tmpResult4 = userSettingToActivity;
       const pendingAvatarSrc = RecentAvatarUtils.getPendingAvatarSrc({ userId: currentUser.id, image: tryItOutAvatar });
@@ -510,11 +646,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tryItOutAvatar;
       cResult[4] = pendingAvatarSrc;
       tmp16 = pendingAvatarSrc;
-      const obj23 = { userId: currentUser.id, image: tryItOutAvatar };
+      const obj26 = { userId: currentUser.id, image: tryItOutAvatar };
       const tmpResult6 = RecentAvatarUtils;
     }
-  : (currentUser) => {
-      currentUser = currentUser.currentUser;
+  : function UserProfileTryItOutEditForm(initialTarget) {
+      const currentUser = initialTarget.currentUser;
       const tmp3 = UserProfileSharedStylesDefault();
       const tmp4 = UserProfileEditFormSharedStylesDefault();
       const tmp5 = useSafeAreaInsetsDefault();
@@ -576,7 +712,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [tmp4.container, { backgroundColor: gradientSecondaryBackground }];
       obj6.style = items1;
       const obj7 = { children: null };
-      const items2 = [React5(hasOwnProperty, { style: tmp4.bounceOffset })];
+      const items2 = [closure_1_8(timestampProducer, { style: tmp4.bounceOffset })];
       const obj9 = {
         fallbackBackground: gradientFallbackBackground,
         primaryColor,
@@ -587,7 +723,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { style: tmp4.bounceOffset };
       const tmp6Result4 = useUserProfileColors;
       const items3 = [
-        React5(EditableBanner, {
+        closure_1_8(closure_10, {
           user: currentUser,
           displayProfile: tmp9Result,
           pendingAvatarSrc,
@@ -598,7 +734,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj10 = { children: null };
       const obj11 = {
         style: null,
-        children: React5(EditUserProfileAvatarDefault, {
+        children: closure_1_8(EditUserProfileAvatarDefault, {
           user: currentUser,
           disableStatus: true,
           statusStyle: obj4,
@@ -611,7 +747,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items4[2] = tmp4.avatarContainer;
       items4[3] = obj4;
       obj11.style = items4;
-      const items5 = [React5(hasOwnProperty, obj11)];
+      const items5 = [closure_1_8(timestampProducer, obj11)];
       const obj12 = {
         fallbackBackground: gradientFallbackBackground,
         primaryColor,
@@ -625,14 +761,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj12.containerStyle = items6;
       const tmpResult = UserProfileGradientContainerDefault;
       const items7 = [
-        React5(UserProfileCustomStatusBubbleDefault, {
+        closure_1_8(UserProfileCustomStatusBubbleDefault, {
           customStatusActivity,
           hasCustomProfileTheme: null != primaryColor,
           style: tmp3.customStatusBubble,
           emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble,
           editEnabled: true,
         }),
-        React5(UserProfilePrimaryInfoDefault, {
+        closure_1_8(UserProfilePrimaryInfoDefault, {
           user: currentUser,
           displayName: str2,
           pronouns: str3,
@@ -642,15 +778,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           pendingDisplayNameStyles: tryItOutDisplayNameStyles,
         }),
       ];
+      const obj14 = {
+        style: null,
+        children: closure_1_8(UserProfileTryItOutFieldsDefault, {
+          currentUser,
+          mode: "edit",
+          initialTarget: initialTarget.initialTarget,
+        }),
+      };
+      const items8 = [tmp4.formContainer, { backgroundColor: containerBackground }];
+      obj14.style = items8;
+      items7[2] = closure_1_8(timestampProducer, obj14);
       obj12.children = items7;
-      items5[1] = closure_1_8(UserProfileGradientContainerDefault, obj12);
+      items5[1] = options(UserProfileGradientContainerDefault, obj12);
       obj10.children = items5;
-      items3[1] = closure_1_8(hasOwnProperty, obj10);
+      items3[1] = options(timestampProducer, obj10);
       obj9.children = items3;
-      items2[1] = closure_1_8(tmpResult, obj9);
+      items2[1] = options(tmpResult, obj9);
       obj7.children = items2;
-      const items8 = [closure_1_8(React4, obj7), React5(UserProfileTryItOutGetPremiumUpsellDefault, { onLayout })];
-      obj6.children = items8;
-      obj5.children = closure_1_8(hasOwnProperty, obj6);
-      return React5(native.ThemeContextProvider, obj5);
+      const items9 = [
+        options(hasOwnProperty, obj7),
+        closure_1_8(UserProfileTryItOutGetPremiumUpsellDefault, { onLayout }),
+      ];
+      obj6.children = items9;
+      obj5.children = options(timestampProducer, obj6);
+      return closure_1_8(native.ThemeContextProvider, obj5);
     };

@@ -7,9 +7,9 @@ import EmbeddedSurfaceUtils from "../../applications/utils/EmbeddedSurfaceUtils.
 import ApplicationCommandUtils from "../../application_commands/ApplicationCommandUtils.tsx";
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import ApplicationFlagUtils from "../../applications/utils/ApplicationFlagUtils.tsx";
-import AppLauncherTypes from "../AppLauncherTypes.tsx";
 import getPlatformDefault from "../../activities/utils/getPlatform.tsx";
 import ApplicationInstallUtils from "../../applications/utils/ApplicationInstallUtils.tsx";
+import AppLauncherTypes from "../AppLauncherTypes.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ApplicationCommandIndexStore from "../../application_commands/ApplicationCommandIndexStore.tsx";
@@ -65,8 +65,8 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1085).ApplicationFlags;
-const BuiltInSectionId = fn(5795).BuiltInSectionId;
-const MessageSendLocation = fn(4889).MessageSendLocation;
+const BuiltInSectionId = fn(5399).BuiltInSectionId;
+const MessageSendLocation = fn(5083).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 
@@ -185,7 +185,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
               maxSizeCallback,
               commandOrigin,
               sectionName,
-              source: fn.entrypoint(),
+              source: submitCommand.entrypoint(),
             };
             sectionName = 2;
             commandOrigin = 1;
@@ -248,7 +248,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
       }
     }
   });
-  const fn = function () {
+  function submitCommand() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -257,8 +257,8 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
-  return fn();
+  }
+  return submitCommand();
 };
 export const getApplicationDetails = function getApplicationDetails(id) {
   let obj = arg1;

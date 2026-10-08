@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx");
 
 export const useNavigatorBackPressHandler = ReactCompilerGating.isReactCompilerEnabled()
-  ? (current) => {
+  ? function useNavigatorBackPressHandler(current) {
       _require = current;
       const cResult = require("c").c(3);
       dependencyMap = noop.useRef(current);
@@ -38,7 +38,7 @@ export const useNavigatorBackPressHandler = ReactCompilerGating.isReactCompilerE
       const focusEffect = require("Link").useFocusEffect(tmp6);
       const tmpResult = require("Link");
     }
-  : (current) => {
+  : function useNavigatorBackPressHandler(current) {
       _require = current;
       dependencyMap = noop.useRef(current);
       const layoutEffect = noop.useLayoutEffect(() => {

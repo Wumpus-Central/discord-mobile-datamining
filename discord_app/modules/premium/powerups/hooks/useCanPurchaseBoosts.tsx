@@ -5,13 +5,13 @@ import useFractionalPremiumInfoDefault from "../../../billing/hooks/useFractiona
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const FractionalPremiumStates = fn(1379).FractionalPremiumStates;
+const FractionalPremiumStates = fn(1391).FractionalPremiumStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useCanPurchaseBoosts() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         !initialize.useStateFromStores(tmp4, tmp5)
       );
     }
-  : () => {
+  : function useCanPurchaseBoosts() {
       const items = [UserStore];
       return (
         useFractionalPremiumInfoDefault().fractionalState === FractionalPremiumStates.NONE &&

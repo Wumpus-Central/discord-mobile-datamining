@@ -9,14 +9,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ headerBar: { zIndex: 1 }, bodyContainer: { flex: 1, minHeight: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayBottomSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (metadata) => {
+  ? function AppStoreOverlayBottomSheet(metadata) {
       const cResult = metadata(onDismiss[5]).c(38);
       metadata = metadata.metadata;
       ({ trackOverlayCarouselScroll, onOverlaySurfaceClick, onOpen } = metadata);
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = U;
       const tmpResult = tmp(tmp2[8]);
     }
-  : (metadata) => {
+  : function AppStoreOverlayBottomSheet(metadata) {
       metadata = metadata.metadata;
       const onOpen = metadata.onOpen;
       const onDismiss = metadata.onDismiss;

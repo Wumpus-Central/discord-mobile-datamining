@@ -6,14 +6,14 @@ import NotificationPermissionUtil from "../../NotificationPermissionUtil.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const View = fn(17).View;
-const NotificationPermissionConstants = fn(12068);
+let View = fn(17).View;
+const NotificationPermissionConstants = fn(12141);
 ({ EventActionType: hasOwnProperty, NotificationNudgeAnalyticsAction: metroRequire } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" },
   illustration: null,
@@ -37,7 +37,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (surface) => {
+  ? function NotificationNudgeBottomSheet(surface) {
       const cResult = actionLocation(markAsDismissed[9]).c(41);
       ({ title, body, actionLocation } = surface);
       surface = surface.surface;
@@ -45,62 +45,64 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const onHide = surface.onHide;
       closure_11();
       if (cResult[0] !== surface) {
-        const fn = function _() {
-          AnalyticsUtilsDefault.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, {
-            action: constants2.IMPRESSION,
-            prompt_type: surface,
-          });
-        };
+        class S {
+          constructor() {
+            obj = closure_1(closure_2[10]);
+            obj1 = { action: closure_6.IMPRESSION, prompt_type: surface };
+            trackResult = obj.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, obj1);
+            return;
+          }
+        }
         const items = [surface];
         cResult[0] = surface;
-        cResult[1] = fn;
+        cResult[1] = S;
         cResult[2] = items;
         let tmp4 = items;
-        let tmp3 = fn;
       } else {
-        tmp3 = cResult[1];
+        class S {
+          constructor() {
+            obj = closure_1(closure_2[10]);
+            obj1 = { action: closure_6.IMPRESSION, prompt_type: surface };
+            trackResult = obj.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, obj1);
+            return;
+          }
+        }
         tmp4 = cResult[2];
       }
-      const effect = onHide.useEffect(tmp3, tmp4);
+      const effect = onHide.useEffect(S, tmp4);
       if (cResult[3] !== onHide) {
-        class I {
+        class S {
           constructor() {
-            obj = closure_1(closure_2[11]);
-            hideActionSheetResult = obj.hideActionSheet();
-            if (onHide != null) {
-              tmp2 = onHide();
-            }
+            obj = closure_1(closure_2[10]);
+            obj1 = { action: closure_6.IMPRESSION, prompt_type: surface };
+            trackResult = obj.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, obj1);
             return;
           }
         }
         cResult[3] = onHide;
-        cResult[4] = I;
+        cResult[4] = tmp7;
       } else {
-        class I {
+        class S {
           constructor() {
-            obj = closure_1(closure_2[11]);
-            hideActionSheetResult = obj.hideActionSheet();
-            if (onHide != null) {
-              tmp2 = onHide();
-            }
+            obj = closure_1(closure_2[10]);
+            obj1 = { action: closure_6.IMPRESSION, prompt_type: surface };
+            trackResult = obj.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, obj1);
             return;
           }
         }
       }
-      I = tmp6;
+      View = tmp7;
       if (cResult[5] === actionLocation) {
-        class I {
+        class S {
           constructor() {
-            obj = closure_1(closure_2[11]);
-            hideActionSheetResult = obj.hideActionSheet();
-            if (onHide != null) {
-              tmp2 = onHide();
-            }
+            obj = closure_1(closure_2[10]);
+            obj1 = { action: closure_6.IMPRESSION, prompt_type: surface };
+            trackResult = obj.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, obj1);
             return;
           }
         }
       }
-      const fn2 = function x() {
+      const fn = function x() {
         AnalyticsUtilsDefault.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, {
           action: constants2.ACCEPT,
           prompt_type: surface,
@@ -114,12 +116,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         );
       };
       cResult[5] = actionLocation;
-      cResult[6] = tmp6;
+      cResult[6] = tmp7;
       cResult[7] = markAsDismissed;
       cResult[8] = surface;
-      cResult[9] = fn2;
+      cResult[9] = fn;
+      let obj = actionLocation(markAsDismissed[9]);
     }
-  : (actionLocation) => {
+  : function NotificationNudgeBottomSheet(actionLocation) {
       actionLocation = actionLocation.actionLocation;
       const surface = actionLocation.surface;
       const markAsDismissed = actionLocation.markAsDismissed;

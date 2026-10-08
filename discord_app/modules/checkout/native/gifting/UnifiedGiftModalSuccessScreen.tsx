@@ -1,16 +1,15 @@
 // discord_app/modules/checkout/native/gifting/UnifiedGiftModalSuccessScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Image = fn(17).Image;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(5090);
 let obj2 = {
   alertContainer: {
     paddingHorizontal: nativeDefault.space.PX_24,
@@ -29,7 +28,7 @@ let obj3 = {
 obj2.title = { marginTop: -nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_8 };
 let obj4 = { marginTop: -nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_8 };
 obj2.description = { marginBottom: nativeDefault.space.PX_24 };
-let closure_8 = createStyles.createStyles(obj2);
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalSuccessScreen.tsx");
 
@@ -37,8 +36,8 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
   giftBadgeProgress = giftBadgeProgress.giftBadgeProgress;
   const onClose = giftBadgeProgress.onClose;
   let enabled;
-  const tmp = closure_8();
-  const GiftingBadgeExperiment = giftBadgeProgress(enabled[7]).GiftingBadgeExperiment;
+  const tmp = closure_7();
+  const GiftingBadgeExperiment = giftBadgeProgress(enabled[6]).GiftingBadgeExperiment;
   enabled = GiftingBadgeExperiment.useConfig({ location: "UnifiedGiftModalSuccessScreen" }).enabled;
   const items = [enabled, giftBadgeProgress, onClose];
   const callback = noop.useCallback(() => {
@@ -50,7 +49,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     if (tmp2) {
       const obj2 = { giftBadgeProgress };
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(10776, dependencyMap.paths),
+        asyncRequireImpl(12730, dependencyMap.paths),
         obj2,
         "collectibles_shop_gift_badge_modal",
       );
@@ -62,27 +61,28 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     openUserSettings.openUserSettings({ screen: UserSettingsSections.PREMIUM_GIFTING, params: {} });
   }, items1);
   let obj = { onClose: callback, noDefaultButtons: true, style: tmp.alertContainer, children: null };
-  const tmp4 = giftBadgeProgress(enabled[6]).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle];
-  const items2 = [closure_6(Image, { source: tmp4, style: tmp.image }), , ,];
+  const tmp4 = giftBadgeProgress(enabled[5]).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle];
+  const tmp8 = onClose(enabled[11]);
+  const items2 = [closure_5(onClose(enabled[12]), { source: tmp4, style: tmp.image }), , ,];
   const obj3 = { variant: "heading-lg/bold", style: tmp.title, children: null };
   const intl = tmp2(tmp3[14]).intl;
   obj3.children = intl.string(giftBadgeProgress(enabled[14]).t.MqZXbv);
-  items2[1] = closure_6(giftBadgeProgress(enabled[13]).Text, obj3);
+  items2[1] = closure_5(giftBadgeProgress(enabled[13]).Text, obj3);
   const obj4 = { variant: "text-md/medium", style: tmp.description, children: null };
   const intl2 = tmp2(tmp3[14]).intl;
   obj4.children = intl2.format(giftBadgeProgress(enabled[14]).t.YS2J4S, { onClick: callback1 });
-  items2[2] = closure_6(giftBadgeProgress(enabled[13]).Text, obj4);
+  items2[2] = closure_5(giftBadgeProgress(enabled[13]).Text, obj4);
   const obj5 = { onPress: callback, text: null, textVariant: "text-md/semibold", grow: true };
   if (enabled) {
     if (null != giftBadgeProgress) {
       let cpT0Cq = tmp2(tmp3[14]).t.PDTjLN;
     }
     obj5.text = tmp11(cpT0Cq);
-    items2[3] = closure_6(tmp2(tmp3[15]).BaseTextButton, obj5);
+    items2[3] = closure_5(tmp2(tmp3[15]).BaseTextButton, obj5);
     obj.children = items2;
-    return closure_7(tmp8, obj);
+    return closure_6(tmp8, obj);
   }
   cpT0Cq = tmp2(tmp3[14]).t.cpT0Cq;
   let obj2 = { source: tmp4, style: tmp.image };
-  tmp8 = onClose(enabled[12]);
+  const tmp10 = onClose(enabled[12]);
 }

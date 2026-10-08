@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/conjure/projects/conjureProje
 
 export { isConjureProjectMuted };
 export const useIsConjureProjectMuted = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsConjureProjectMuted(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -32,7 +32,7 @@ export const useIsConjureProjectMuted = ReactCompilerGating.isReactCompilerEnabl
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function s() {
+        const fn = function u() {
           const vibegrations = UserSettingsProtoStore.settings.vibegrations;
           let muted;
           if (vibegrations != null) {
@@ -55,7 +55,7 @@ export const useIsConjureProjectMuted = ReactCompilerGating.isReactCompilerEnabl
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7);
     }
-  : (arg0) => {
+  : function useIsConjureProjectMuted(arg0) {
       _require = arg0;
       const items = [UserSettingsProtoStore];
       const items1 = [arg0];

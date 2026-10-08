@@ -42,7 +42,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useIsVideoMode.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsVideoMode() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsVideoMode() {
       const items = [ChannelStore, SelectedChannelStore, MediaEngineStore, VoiceStateStore, ApplicationStreamingStore];
       return initialize.useStateFromStores(items, () => {
         channel = channel.getChannel(voiceChannelId.getVoiceChannelId());

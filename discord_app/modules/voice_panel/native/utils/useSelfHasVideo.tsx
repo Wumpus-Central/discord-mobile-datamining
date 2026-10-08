@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useSelfHasVideo.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSelfHasVideo(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp8);
     }
-  : (arg0) => {
+  : function useSelfHasVideo(arg0) {
       _require = arg0;
       const items = [ChannelRTCStore, AuthenticationStore, MediaEngineStore];
       return require("initialize").useStateFromStores(items, () => {

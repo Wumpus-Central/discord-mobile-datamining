@@ -5,12 +5,11 @@ import size from "../../../../_runtime/metro/00002__.js";
 const RPC_SCOPE_CONFIG = Constants.RPC_SCOPE_CONFIG;
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateScope.tsx");
 
-export default function validateScope(arr, str) {
-  closure_0 = arr;
+export default function validateScope(has, str) {
   if (null == str) {
     return true;
   } else if (typeof str === "string") {
-    return arr.includes(str);
+    return has.has(str);
   } else if (typeof str !== "object") {
     return false;
   } else {
@@ -18,7 +17,7 @@ export default function validateScope(arr, str) {
     const isArray = Array.isArray(obj);
     let tmp = !isArray;
     if (isArray) {
-      tmp = !obj.some((item) => closure_0.includes(item));
+      tmp = !obj.some((item) => has.has(item));
     }
     let tmp2 = !tmp;
     if (tmp) {
@@ -26,7 +25,7 @@ export default function validateScope(arr, str) {
       const isArray1 = Array.isArray(obj2);
       let tmp4 = !isArray1;
       if (isArray1) {
-        tmp4 = !obj2.every((item) => closure_0.includes(item));
+        tmp4 = !obj2.every((item) => has.has(item));
       }
       tmp2 = !tmp4;
     }

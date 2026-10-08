@@ -11,7 +11,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   containerOuter: { flex: 1, overflow: "hidden" },
   containerOuterTablet: {
@@ -37,7 +37,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/settings/Settings.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function Settings() {
       const cResult = c.c(15);
       const reportProfileModalTransition = profileModalTransition.useReportProfileModalTransition();
       ({ top, left, right: containerOuterTablet } = useSafeAreaInsetsDefault());
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = items1;
       const tmp6 = useSafeAreaInsetsDefault();
     }
-  : () => {
+  : function Settings() {
       const reportProfileModalTransition = profileModalTransition.useReportProfileModalTransition();
       const rect = useSafeAreaInsetsDefault();
       const top = rect.top;

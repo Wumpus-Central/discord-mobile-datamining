@@ -4,7 +4,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ApexExperiment = fn(1440);
+const ApexExperiment = fn(1452);
 const obj2 = {
   kind: "user",
   name: "2026-03-surface-direct-renderer",
@@ -24,7 +24,7 @@ export const isSurfaceDirectRendererExperimentEnabled = function isSurfaceDirect
   return closure_3.getConfig({ location: "RTCConnection_media_engine_connect" }).enableSurfaceDirectRenderer;
 };
 export const useSurfaceDirectRendererExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, cResult) => {
+  ? function useSurfaceDirectRendererExperiment(arg0, cResult) {
       _require = arg0;
       cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -35,7 +35,7 @@ export const useSurfaceDirectRendererExperiment = ReactCompilerGating.isReactCom
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function l() {
+        const fn = function f() {
           return closure_0 === AuthenticationStore.getId();
         };
         const items1 = [arg0];
@@ -56,7 +56,7 @@ export const useSurfaceDirectRendererExperiment = ReactCompilerGating.isReactCom
         closure_3.useConfig(cResult).enableSurfaceDirectRenderer
       );
     }
-  : (arg0, cResult) => {
+  : function useSurfaceDirectRendererExperiment(arg0, cResult) {
       _require = arg0;
       const items = [AuthenticationStore];
       const items1 = [arg0];

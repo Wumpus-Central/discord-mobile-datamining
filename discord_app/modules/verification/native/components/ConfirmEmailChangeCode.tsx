@@ -4,18 +4,18 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const setEmailToken = fn(6016).setEmailToken;
+const setEmailToken = fn(6202).setEmailToken;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeCode.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (isChangeEmail) => {
+  ? function ConfirmEmailChangeCode(isChangeEmail) {
       const cResult = isChangeEmail(576).c(9);
       isChangeEmail = isChangeEmail.isChangeEmail;
       let obj = isChangeEmail(576);
-      const navigation = isChangeEmail(1490).useNavigation();
+      const navigation = isChangeEmail(1502).useNavigation();
       if (cResult[0] === isChangeEmail) {
         if (cResult[1] === navigation) {
           let tmp5 = cResult[2];
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             await closure_0(c2[8]).confirmEmailChange(closure_0);
             return value;
           });
-          const fn2 = function () {
+          function t2() {
             const self = this;
             const apply = isChangeEmail.apply;
             if (typeof apply === "unknown") {
@@ -35,9 +35,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               applyArgumentsResult = apply(self, arguments);
             }
             return applyArgumentsResult;
-          };
-          cResult[3] = fn2;
-          let tmp7 = fn2;
+          }
+          cResult[3] = t2;
+          let tmp7 = t2;
         } else {
           tmp7 = cResult[3];
         }
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           });
-          const fn3 = function () {
+          function t3() {
             const self = this;
             const apply = isChangeEmail.apply;
             if (typeof apply === "unknown") {
@@ -99,17 +99,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               applyArgumentsResult = apply(self, arguments);
             }
             return applyArgumentsResult;
-          };
+          }
           const intl = tmp(1126).intl;
           const stringResult = intl.string(tmp(1126).t["2x/2Uo"]);
           const intl2 = tmp(1126).intl;
           const stringResult1 = intl2.string(tmp(1126).t.PDTjLN);
-          cResult[4] = fn3;
+          cResult[4] = t3;
           cResult[5] = stringResult;
           cResult[6] = stringResult1;
           let tmp11 = stringResult1;
           let tmp10 = stringResult;
-          let tmp9 = fn3;
+          let tmp9 = t3;
         } else {
           tmp9 = cResult[4];
           tmp10 = cResult[5];
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             headerText: tmp10,
             confirmButtonText: tmp11,
           };
-          const tmp18 = jsx(navigation(6103), {
+          const tmp18 = jsx(navigation(6281), {
             onFormSubmit: tmp7,
             onSuccess: tmp5,
             onResend: tmp9,
@@ -156,11 +156,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = navigation;
       cResult[2] = fn;
       tmp5 = fn;
-      const obj2 = isChangeEmail(1490);
+      const obj2 = isChangeEmail(1502);
     }
-  : (isChangeEmail) => {
+  : function ConfirmEmailChangeCode(isChangeEmail) {
       isChangeEmail = isChangeEmail.isChangeEmail;
-      const navigation = isChangeEmail(1490).useNavigation();
+      const navigation = isChangeEmail(1502).useNavigation();
       const items = [isChangeEmail, navigation];
       const callback = noop.useCallback((arg0) => {
         let tmp = arg0;
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
       const obj2 = { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null };
-      let obj = isChangeEmail(1490);
+      let obj = isChangeEmail(1502);
       closure_129_0 = asyncGeneratorStep(async (arg0) => {
         await closure_0(c2[8]).confirmEmailChange(closure_0);
         return value;
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.headerText = intl.string(isChangeEmail(1126).t["2x/2Uo"]);
       const intl2 = isChangeEmail(1126).intl;
       obj2.confirmButtonText = intl2.string(isChangeEmail(1126).t.PDTjLN);
-      return jsx(navigation(6103), {
+      return jsx(navigation(6281), {
         onFormSubmit: null,
         onSuccess: null,
         onResend: null,

@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 },
   name: { flexShrink: 1 },
@@ -24,7 +24,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/roles/native/RoleName.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RoleName(arg0) {
       const cResult = c.c(23);
       ({ role, children, textVariant, dotBackground } = arg0);
       let str = "text-md/medium";
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = tmp15;
       const tmpResult4 = enhanced_role_colors_EnhancedRoleColorUtils;
     }
-  : (dotBackground) => {
+  : function RoleName(dotBackground) {
       ({ role, textVariant } = dotBackground);
       if (textVariant === undefined) {
         textVariant = "text-md/medium";

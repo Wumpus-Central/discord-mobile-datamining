@@ -11,15 +11,15 @@ const require = globalThis.__r;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const DraftType = fn(7044).DraftType;
-const EMOJI_URL_BASE_SIZE = fn(1380).EMOJI_URL_BASE_SIZE;
+const DraftType = fn(7232).DraftType;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/native/useRenderPollAnswerImage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, mediaAttachmentState, arg3, width) => {
+  ? function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentState, arg3, width) {
       _require = arg0;
       importDefault = arg1;
       const cResult = require("c").c(26);
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             status = mediaAttachmentState.status;
           }
         }
-        if (status === tmp(11849).PollMediaUploadAttachmentStatus.PREPARING) {
+        if (status === tmp(11933).PollMediaUploadAttachmentStatus.PREPARING) {
           const _Symbol = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             const tmp38 = <ActivityIndicator />;
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp25 = cResult[13];
                 tmp26 = cResult[14];
               }
-              let str = emoji.type === tmp(4532).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
+              let str = emoji.type === tmp(4724).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
               if (str == null) {
                 str = "";
               }
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[18] = tmp25;
                 cResult[19] = tmp26;
                 cResult[20] = str;
-                class E {
+                class I {
                   constructor() {
                     return closure_7.getUpload(closure_0, closure_1, DraftType.Poll);
                   }
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const tmp22 = jsx(FastImageDefault, { style: tmp17, source: tmp18 });
             cResult[9] = tmp17;
             cResult[10] = tmp18;
-            class E {
+            class I {
               constructor() {
                 return closure_7.getUpload(closure_0, closure_1, DraftType.Poll);
               }
@@ -172,18 +172,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmp11 = _slicedToArray(noop.useState(), 2);
       }
-      class E {
+      class I {
         constructor() {
           return closure_7.getUpload(closure_0, closure_1, DraftType.Poll);
         }
       }
       cResult[1] = arg0;
       cResult[2] = arg1;
-      cResult[3] = E;
-      tmp6 = E;
+      cResult[3] = I;
+      tmp6 = I;
       const obj = require("c");
     }
-  : (arg0, arg1, mediaAttachmentState, arg3, arg4) => {
+  : function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentState, arg3, arg4) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = mediaAttachmentState;

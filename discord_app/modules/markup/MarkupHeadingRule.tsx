@@ -1,12 +1,12 @@
 // discord_app/modules/markup/MarkupHeadingRule.tsx
-import _mod1936 from "../../../_runtime/metro/01936__.js";
+import _mod1948 from "../../../_runtime/metro/01948__.js";
 
-const _modDef1936 = _mod1936;
+const _modDef1948 = _mod1948;
 
 require = fn;
 const re2 = /\n$/;
 let obj = {};
-const merged = Object.assign(_modDef1936.defaultRules.heading);
+const merged = Object.assign(_modDef1948.defaultRules.heading);
 obj.requiredFirstCharacters = [" ", "#"];
 obj.match = function match(arg0, allowHeading, str) {
   let tmp = null;
@@ -16,7 +16,7 @@ obj.match = function match(arg0, allowHeading, str) {
         tmp = null;
       }
     }
-    tmp = _mod1936.anyScopeRegex(/^ *(#{1,3})(?:\s+)((?!\s*#{1,3}\s)[^\n]+?)#*\s*(?:\n|$)/)(arg0, allowHeading, str);
+    tmp = _mod1948.anyScopeRegex(/^ *(#{1,3})(?:\s+)((?!\s*#{1,3}\s)[^\n]+?)#*\s*(?:\n|$)/)(arg0, allowHeading, str);
   }
   return tmp;
 };

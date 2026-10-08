@@ -5,7 +5,7 @@ import util from "../../../../intl/index.native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import GuildProfileView from "GuildProfileView.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -21,7 +21,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/RestrictedGuildProfileView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function RestrictedGuildProfileView() {
       const cResult = c.c(23);
       const styles = GuildProfileView.useStyles();
       const tmp6 = useThemeDefault();
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = backgroundForProfile;
       const tmpResult = GuildProfileView;
     }
-  : () => {
+  : function RestrictedGuildProfileView() {
       const styles = GuildProfileView.useStyles();
       const tmp2 = useThemeDefault();
       const obj3 = { style: styles.container, children: null };

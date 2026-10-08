@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/activities/panel/native/Activ
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function ActivityPanelContainer() {
         const cResult = c.c(2);
         const isConnectedToActivityInText = ActivityPanelUtils.useIsConnectedToActivityInText();
         if (cResult[0] !== isConnectedToActivityInText) {
@@ -30,7 +30,7 @@ export default noop.memo(
         }
         return tmp4;
       }
-    : () => {
+    : function ActivityPanelContainer() {
         let tmp2 = null;
         if (obj.useIsConnectedToActivityInText()) {
           const obj2 = { children: jsx(ActivityPanelUIDefault, {}) };

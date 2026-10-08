@@ -3,8 +3,8 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
 import SidebarActionTypes from "../sidebar/SidebarActionTypes.tsx";
+import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -129,7 +129,7 @@ function pruneNewChannels() {
     );
   });
 }
-let closure_7 = fn(4513).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = Constants);
 let set = new Set();

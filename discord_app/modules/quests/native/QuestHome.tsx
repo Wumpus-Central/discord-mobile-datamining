@@ -6,10 +6,10 @@ import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef4813 from "../../../../_runtime/metro/04813__.js";
+import _modDef5007 from "../../../../_runtime/metro/05007__.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import QuestTypes from "../QuestTypes.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import QuestDataUtils from "../utils/QuestDataUtils.tsx";
@@ -32,12 +32,12 @@ import QuestUtmStore from "../QuestUtmStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, StyleSheet } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5630).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5977).QuestsExperimentLocations;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, UserSettingsSections: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { flex: 1 },
   loadingContainer: null,
@@ -66,7 +66,7 @@ obj.sectionHeaderWithTag = { gap: nativeDefault.space.PX_4 };
 let closure_17 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (scrollToIndex) => {
+  ? function useScrollAndLayoutCallbacks(scrollToIndex) {
       const cResult = scrollToIndex(ref[13]).c(21);
       scrollToIndex = scrollToIndex.scrollToIndex;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -93,189 +93,51 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = scrollToIndex(ref[14]);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        class C {
-          constructor(arg0) {
-            keys = Object.keys(closure_3.current.children);
-            iter = keys[Symbol.iterator]();
-            nextResult = iter.next();
-            while (iter !== undefined) {
-              tmp3 = nextResult;
-              tmp4 = null != scrollToIndex;
-              if (tmp4) {
-                tmp5 = nextResult;
-                tmp4 = tmp3 !== scrollToIndex;
-              }
-              if (!tmp4) {
-                tmp6 = closure_3;
-                tmp7 = nextResult;
-                tmp8 = closure_3.current.children[tmp3];
-                if (tmp8 != null) {
-                  calculateVisibility = tmp8.calculateVisibility;
-                  if (calculateVisibility != null) {
-                    calculateVisibilityResult = calculateVisibility();
-                  }
+        const fn2 = function _(arg0) {
+          const keys = Object.keys(ref1.current.children);
+          const iter = keys[Symbol.iterator]();
+          const nextResult = iter.next();
+          while (iter !== undefined) {
+            let tmp3 = nextResult;
+            let tmp4 = null != arg0;
+            if (tmp4) {
+              tmp4 = tmp3 !== arg0;
+            }
+            if (!tmp4) {
+              let tmp8 = ref1.current.children[tmp3];
+              if (tmp8 != null) {
+                let calculateVisibility = tmp8.calculateVisibility;
+                if (calculateVisibility != null) {
+                  let calculateVisibilityResult = calculateVisibility();
                 }
               }
-              continue;
             }
-            return;
+            continue;
           }
-        }
-        cResult[3] = C;
+        };
+        cResult[3] = fn2;
+        let tmp11 = fn2;
       } else {
-        class C {
-          constructor(arg0) {
-            keys = Object.keys(closure_3.current.children);
-            iter = keys[Symbol.iterator]();
-            nextResult = iter.next();
-            while (iter !== undefined) {
-              tmp3 = nextResult;
-              tmp4 = null != scrollToIndex;
-              if (tmp4) {
-                tmp5 = nextResult;
-                tmp4 = tmp3 !== scrollToIndex;
-              }
-              if (!tmp4) {
-                tmp6 = closure_3;
-                tmp7 = nextResult;
-                tmp8 = closure_3.current.children[tmp3];
-                if (tmp8 != null) {
-                  calculateVisibility = tmp8.calculateVisibility;
-                  if (calculateVisibility != null) {
-                    calculateVisibilityResult = calculateVisibility();
-                  }
-                }
-              }
-              continue;
-            }
-            return;
-          }
-        }
+        tmp11 = cResult[3];
       }
-      noop = C;
+      noop = tmp11;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        class C {
-          constructor(arg0) {
-            keys = Object.keys(closure_3.current.children);
-            iter = keys[Symbol.iterator]();
-            nextResult = iter.next();
-            while (iter !== undefined) {
-              tmp3 = nextResult;
-              tmp4 = null != scrollToIndex;
-              if (tmp4) {
-                tmp5 = nextResult;
-                tmp4 = tmp3 !== scrollToIndex;
-              }
-              if (!tmp4) {
-                tmp6 = closure_3;
-                tmp7 = nextResult;
-                tmp8 = closure_3.current.children[tmp3];
-                if (tmp8 != null) {
-                  calculateVisibility = tmp8.calculateVisibility;
-                  if (calculateVisibility != null) {
-                    calculateVisibilityResult = calculateVisibility();
-                  }
-                }
-              }
-              continue;
-            }
-            return;
-          }
-        }
-        cResult[4] = tmp13;
-      } else {
-        class C {
-          constructor(arg0) {
-            keys = Object.keys(closure_3.current.children);
-            iter = keys[Symbol.iterator]();
-            nextResult = iter.next();
-            while (iter !== undefined) {
-              tmp3 = nextResult;
-              tmp4 = null != scrollToIndex;
-              if (tmp4) {
-                tmp5 = nextResult;
-                tmp4 = tmp3 !== scrollToIndex;
-              }
-              if (!tmp4) {
-                tmp6 = closure_3;
-                tmp7 = nextResult;
-                tmp8 = closure_3.current.children[tmp3];
-                if (tmp8 != null) {
-                  calculateVisibility = tmp8.calculateVisibility;
-                  if (calculateVisibility != null) {
-                    calculateVisibilityResult = calculateVisibility();
-                  }
-                }
-              }
-              continue;
-            }
-            return;
-          }
-        }
+        const fn3 = function p(nativeEvent) {
+          ref1.current.parent.scrollY = nativeEvent.nativeEvent.contentOffset.y;
+          closure_4();
+        };
+        cResult[4] = fn3;
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        class C {
-          constructor(arg0) {
-            keys = Object.keys(closure_3.current.children);
-            iter = keys[Symbol.iterator]();
-            nextResult = iter.next();
-            while (iter !== undefined) {
-              tmp3 = nextResult;
-              tmp4 = null != scrollToIndex;
-              if (tmp4) {
-                tmp5 = nextResult;
-                tmp4 = tmp3 !== scrollToIndex;
-              }
-              if (!tmp4) {
-                tmp6 = closure_3;
-                tmp7 = nextResult;
-                tmp8 = closure_3.current.children[tmp3];
-                if (tmp8 != null) {
-                  calculateVisibility = tmp8.calculateVisibility;
-                  if (calculateVisibility != null) {
-                    calculateVisibilityResult = calculateVisibility();
-                  }
-                }
-              }
-              continue;
-            }
-            return;
-          }
-        }
-        cResult[5] = tmp15;
-      } else {
-        class C {
-          constructor(arg0) {
-            keys = Object.keys(closure_3.current.children);
-            iter = keys[Symbol.iterator]();
-            nextResult = iter.next();
-            while (iter !== undefined) {
-              tmp3 = nextResult;
-              tmp4 = null != scrollToIndex;
-              if (tmp4) {
-                tmp5 = nextResult;
-                tmp4 = tmp3 !== scrollToIndex;
-              }
-              if (!tmp4) {
-                tmp6 = closure_3;
-                tmp7 = nextResult;
-                tmp8 = closure_3.current.children[tmp3];
-                if (tmp8 != null) {
-                  calculateVisibility = tmp8.calculateVisibility;
-                  if (calculateVisibility != null) {
-                    calculateVisibilityResult = calculateVisibility();
-                  }
-                }
-              }
-              continue;
-            }
-            return;
-          }
-        }
+        const fn4 = function y(nativeEvent) {
+          ref1.current.parent.layout = nativeEvent.nativeEvent.layout;
+          closure_4();
+        };
+        cResult[5] = fn4;
       }
-      const tmp16 = noop.useRef(tmp9)(noop.useState(false), 2);
-      const first = tmp16[0];
-      closure_6 = tmp16[1];
+      const tmp14 = noop.useRef(tmp9)(noop.useState(false), 2);
+      const first = tmp14[0];
+      closure_6 = tmp14[1];
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         class L {
           constructor() {
@@ -328,7 +190,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               obj.animated = !closure_1;
               tmp4 = closure_1;
               tmp5 = closure_2;
-              obj.viewOffset = closure_1(closure_2[11]).space.PX_8;
+              obj.viewOffset = -closure_1(closure_2[11]).space.PX_8;
               scrollToIndexResult = current.scrollToIndex(obj);
             }
             return;
@@ -348,42 +210,72 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               obj.animated = !closure_1;
               tmp4 = closure_1;
               tmp5 = closure_2;
-              obj.viewOffset = closure_1(closure_2[11]).space.PX_8;
+              obj.viewOffset = -closure_1(closure_2[11]).space.PX_8;
               scrollToIndexResult = current.scrollToIndex(obj);
             }
             return;
           }
         }
       }
-      P = tmp20;
+      P = tmp18;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        class H {
+        class P {
           constructor(arg0) {
-            closure_3.current.parent.firstItemOffset = scrollToIndex.nativeEvent.layout.height;
-            tmp = closure_4();
+            if (null != closure_2.current) {
+              tmp2 = scrollToIndex;
+              current = tmp.current;
+              obj = { index: null, animated: null, viewOffset: null };
+              obj.index = scrollToIndex;
+              tmp3 = closure_1;
+              obj.animated = !closure_1;
+              tmp4 = closure_1;
+              tmp5 = closure_2;
+              obj.viewOffset = -closure_1(closure_2[11]).space.PX_8;
+              scrollToIndexResult = current.scrollToIndex(obj);
+            }
             return;
           }
         }
-        cResult[10] = H;
+        cResult[10] = tmp20;
       } else {
-        class H {
+        class P {
           constructor(arg0) {
-            closure_3.current.parent.firstItemOffset = scrollToIndex.nativeEvent.layout.height;
-            tmp = closure_4();
+            if (null != closure_2.current) {
+              tmp2 = scrollToIndex;
+              current = tmp.current;
+              obj = { index: null, animated: null, viewOffset: null };
+              obj.index = scrollToIndex;
+              tmp3 = closure_1;
+              obj.animated = !closure_1;
+              tmp4 = closure_1;
+              tmp5 = closure_2;
+              obj.viewOffset = -closure_1(closure_2[11]).space.PX_8;
+              scrollToIndexResult = current.scrollToIndex(obj);
+            }
             return;
           }
         }
       }
       if (cResult[11] === first) {
-        class H {
+        class P {
           constructor(arg0) {
-            closure_3.current.parent.firstItemOffset = scrollToIndex.nativeEvent.layout.height;
-            tmp = closure_4();
+            if (null != closure_2.current) {
+              tmp2 = scrollToIndex;
+              current = tmp.current;
+              obj = { index: null, animated: null, viewOffset: null };
+              obj.index = scrollToIndex;
+              tmp3 = closure_1;
+              obj.animated = !closure_1;
+              tmp4 = closure_1;
+              tmp5 = closure_2;
+              obj.viewOffset = -closure_1(closure_2[11]).space.PX_8;
+              scrollToIndexResult = current.scrollToIndex(obj);
+            }
             return;
           }
         }
       }
-      const fn2 = function x() {
+      const fn5 = function x() {
         let tmp2 = null != scrollToIndex;
         if (tmp2) {
           tmp2 = -1 !== scrollToIndex;
@@ -397,12 +289,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         }
       };
       cResult[11] = first;
-      cResult[12] = tmp20;
+      cResult[12] = tmp18;
       cResult[13] = scrollToIndex;
-      cResult[14] = fn2;
+      cResult[14] = fn5;
       const ref1 = noop.useRef(tmp9);
     }
-  : (scrollToIndex) => {
+  : function useScrollAndLayoutCallbacks(scrollToIndex) {
       scrollToIndex = scrollToIndex.scrollToIndex;
       let scrollViewRef;
       let callback;
@@ -464,7 +356,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       callback5 = callback.useCallback((index) => {
         if (null != scrollViewRef.current) {
           const current = tmp.current;
-          const obj = { index, animated: !stateFromStores, viewOffset: nativeDefault.space.PX_8 };
+          const obj = { index, animated: !stateFromStores, viewOffset: -nativeDefault.space.PX_8 };
           current.scrollToIndex(obj);
         }
       }, items4);
@@ -499,11 +391,11 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (bountiesAvailable) => {
+  ? function useSurveyActions(bountiesAvailable) {
       const cResult = bountiesAvailable(576).c(10);
       bountiesAvailable = bountiesAvailable.bountiesAvailable;
       let obj = bountiesAvailable(576);
-      const navigation = bountiesAvailable(1490).useNavigation();
+      const navigation = bountiesAvailable(1502).useNavigation();
       dependencyMap = noop.useRef(false);
       closure_3 = noop.useRef(false);
       noop = noop.useRef(false);
@@ -567,7 +459,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect2 = obj3.useEffect(tmp9, tmp10);
       if (cResult[7] !== navigation) {
-        const fn4 = function h() {
+        const fn4 = function f() {
           return navigation.addListener("beforeRemove", () => {
             if (ref.current) {
               if (ref3.current) {
@@ -600,10 +492,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect3 = obj3.useEffect(tmp12, tmp13);
     }
-  : (bountiesAvailable) => {
+  : function useSurveyActions(bountiesAvailable) {
       bountiesAvailable = bountiesAvailable.bountiesAvailable;
       noop = undefined;
-      const navigation = bountiesAvailable(1490).useNavigation();
+      const navigation = bountiesAvailable(1502).useNavigation();
       dependencyMap = noop.useRef(false);
       closure_3 = noop.useRef(false);
       noop = noop.useRef(false);
@@ -660,7 +552,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function EmptyStateNoQuestsAvailable() {
       const cResult = c.c(5);
       const navigation = useNavigation.useNavigation();
       if (cResult[0] !== navigation) {
@@ -694,7 +586,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function EmptyStateNoQuestsAvailable() {
       const navigation = useNavigation.useNavigation();
       const items = [navigation];
       const callback = noop.useCallback(() => navigation.goBack(), items);
@@ -708,7 +600,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onClearFilters) => {
+  ? function EmptyStateFiltered(onClearFilters) {
       const cResult = c.c(7);
       onClearFilters = onClearFilters.onClearFilters;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -752,7 +644,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp13;
     }
-  : (onClearFilters) => {
+  : function EmptyStateFiltered(onClearFilters) {
       const obj = { action: null, title: null, subtitle: null };
       const obj2 = { variant: "secondary", text: null, onPress: null };
       const intl = util.intl;
@@ -767,7 +659,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function HeaderPreviewButton() {
       const cResult = c.c(4);
       let previewButton = closure_17();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -804,7 +696,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       }
       tmpResult = hooks_QuestHooks;
     }
-  : () => {
+  : function HeaderPreviewButton() {
       const callback = noop.useCallback(() => {
         ModalActionCreatorsDefault.popAll();
         require("openUserSettings").openUserSettings({ screen: QUEST_PREVIEW_TOOL_2.QUEST_PREVIEW_TOOL_2 });
@@ -823,7 +715,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function HeaderWithBounties(arg0) {
       const cResult = c.c(15);
       ({ orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel, shopCarouselConfig } = arg0);
       const tmp4 = closure_17();
@@ -901,7 +793,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp10;
       tmp9 = tmp10;
     }
-  : (arg0) => {
+  : function HeaderWithBounties(arg0) {
       ({ orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel, shopCarouselConfig } = arg0);
       const obj = { children: null };
       const items = [
@@ -928,7 +820,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let closure_24 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function MeasuredHeader(arg0) {
         const cResult = c.c(9);
         ({
           shouldShowBounties,
@@ -973,7 +865,7 @@ let closure_24 = noop.memo(
         cResult[4] = showOrbShopPlaceholderCarousel;
         cResult[5] = tmp3Result;
       }
-    : (onLayout) => {
+    : function MeasuredHeader(onLayout) {
         const obj = { onLayout: onLayout.onLayout, children: null };
         if (onLayout.shouldShowBounties) {
           const obj2 = {
@@ -997,7 +889,7 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestHome.tsx");
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function QuestHome(arg0) {
         const cResult = scrollToQuestId(quests[13]).c(115);
         ({ containerStyle, isNavigationComplete, scrollToQuestId } = arg0);
         ({ filters, sortMethod, onClearFilters } = arg0);
@@ -1026,21 +918,20 @@ export default noop.memo(
           const _Symbol = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             const items = [QuestStore];
-            class H {
-              constructor() {
-                quests = scrollViewRef.quests;
-                arr = Array.from(quests.values());
-                found = arr.filter((item) => !scrollToQuestId(quests[30]).isQuestExpired(item));
-                mapped = found.map((id) => id.id);
-                return mapped.sort();
-              }
-            }
+            const fn = function w() {
+              quests = ref2.quests;
+              const found = Array.from(quests.values()).filter(
+                (item) => !scrollToQuestId(quests[30]).isQuestExpired(item),
+              );
+              const mapped = found.map((id) => id.id);
+              return mapped.sort();
+            };
             const items1 = [];
             cResult[4] = items;
-            cResult[5] = H;
+            cResult[5] = fn;
             cResult[6] = items1;
             let tmp11 = items1;
-            let tmp10 = H;
+            let tmp10 = fn;
             let tmp9 = items;
           } else {
             tmp9 = cResult[4];
@@ -1062,15 +953,6 @@ export default noop.memo(
               }
             }
             const items2 = [stateFromStoresArray];
-            class H {
-              constructor() {
-                quests = scrollViewRef.quests;
-                arr = Array.from(quests.values());
-                found = arr.filter((item) => !scrollToQuestId(quests[30]).isQuestExpired(item));
-                mapped = found.map((id) => id.id);
-                return mapped.sort();
-              }
-            }
             cResult[7] = stateFromStoresArray;
             cResult[8] = V;
             cResult[9] = items2;
@@ -1103,21 +985,12 @@ export default noop.memo(
                 return;
               }
             }
-            const result = scrollToQuestId(tmp2[30]).findQuestOrReplacement(scrollToQuestId, quests, excludedQuests);
-            class H {
-              constructor() {
-                quests = scrollViewRef.quests;
-                arr = Array.from(quests.values());
-                found = arr.filter((item) => !scrollToQuestId(quests[30]).isQuestExpired(item));
-                mapped = found.map((id) => id.id);
-                return mapped.sort();
-              }
-            }
+            const result = scrollToQuestId(tmp2[33]).findQuestOrReplacement(scrollToQuestId, quests, excludedQuests);
             cResult[10] = excludedQuests;
             cResult[11] = quests;
             cResult[12] = scrollToQuestId;
             cResult[13] = result;
-            const tmpResult6 = scrollToQuestId(tmp2[30]);
+            const tmpResult6 = scrollToQuestId(tmp2[33]);
           }
           if (cResult[19] === excludedQuests) {
             class V {
@@ -1132,7 +1005,7 @@ export default noop.memo(
               }
             }
           }
-          const fn = function $() {
+          const fn2 = function $() {
             let tmp2 = null != scrollToQuestId;
             if (tmp2) {
               tmp2 = "" !== scrollToQuestId;
@@ -1157,7 +1030,7 @@ export default noop.memo(
                 };
                 const intl = util.intl;
                 obj3.content = intl.string(util.t.sIyHuY);
-                obj3.icon = _modDef4813;
+                obj3.icon = _modDef5007;
                 ToastActionCreatorsDefault.open(obj3);
                 const obj5 = { quest_id: scrollToQuestId };
                 AnalyticsUtilsDefault.track(constants.QUEST_HOME_MOBILE_DEEP_LINK_MISSING_QUEST, obj5);
@@ -1172,7 +1045,7 @@ export default noop.memo(
           cResult[22] = quests;
           cResult[23] = scrollToQuestId;
           cResult[24] = items3;
-          cResult[25] = fn;
+          cResult[25] = fn2;
           const tmpResult5 = scrollToQuestId(tmp2[14]);
         }
         let obj2 = { filters, sortMethod };
@@ -1182,7 +1055,7 @@ export default noop.memo(
         tmp7 = obj2;
         let obj = scrollToQuestId(quests[13]);
       }
-    : (filters) => {
+    : function QuestHome(filters) {
         ({ containerStyle, isNavigationComplete, scrollToQuestId } = filters);
         filters = filters.filters;
         const sortMethod = filters.sortMethod;
@@ -1265,7 +1138,7 @@ export default noop.memo(
               };
               const intl = util.intl;
               obj3.content = intl.string(util.t.sIyHuY);
-              obj3.icon = _modDef4813;
+              obj3.icon = _modDef5007;
               ToastActionCreatorsDefault.open(obj3);
               const obj5 = { quest_id: scrollToQuestId };
               AnalyticsUtilsDefault.track(constants.QUEST_HOME_MOBILE_DEEP_LINK_MISSING_QUEST, obj5);
@@ -1282,9 +1155,9 @@ export default noop.memo(
         const tmp12 = scrollViewRef((getUtmCurrentContext) => getUtmCurrentContext.getUtmCurrentContext());
         let obj5 = { name: null, type: null, properties: null };
         let obj4 = scrollToQuestId(sortMethod[14]);
-        obj5.name = scrollToQuestId(sortMethod[36]).ImpressionNames.QUEST_HOME;
-        obj5.type = scrollToQuestId(sortMethod[36]).ImpressionTypes.VIEW;
-        const tmp13 = filters(sortMethod[37]);
+        obj5.name = scrollToQuestId(sortMethod[37]).ImpressionNames.QUEST_HOME;
+        obj5.type = scrollToQuestId(sortMethod[37]).ImpressionTypes.VIEW;
+        const tmp13 = filters(sortMethod[38]);
         obj5.properties = {
           utm_source_current: tmp12.utmSourceCurrent,
           utm_medium_current: tmp12.utmMediumCurrent,
@@ -1327,21 +1200,21 @@ export default noop.memo(
         });
         const obj7 = scrollToQuestId(sortMethod[25]);
         const obj8 = { selectedSortMethod: sortMethod, selectedFilters: filters, numQuestsVisible: quests.length };
-        enabled = scrollToQuestId(sortMethod[39]).useVirtualCurrencyMobileEnabled().enabled;
+        enabled = scrollToQuestId(sortMethod[40]).useVirtualCurrencyMobileEnabled().enabled;
         const QuestHomeBountiesFeatureGateExperiment = scrollToQuestId(
-          sortMethod[40],
+          sortMethod[41],
         ).QuestHomeBountiesFeatureGateExperiment;
-        const OrbsHoldoutExperiment = scrollToQuestId(sortMethod[41]).OrbsHoldoutExperiment;
+        const OrbsHoldoutExperiment = scrollToQuestId(sortMethod[42]).OrbsHoldoutExperiment;
         const obj10 = { location: handleQuestCardLayout.QUEST_HOME_MOBILE };
         const obj11 = { location: handleQuestCardLayout.QUEST_HOME_MOBILE };
-        const obj9 = scrollToQuestId(sortMethod[39]);
+        const obj9 = scrollToQuestId(sortMethod[40]);
         const tmp18 = handleQuestCardLayout;
-        const params = scrollToQuestId(sortMethod[42]).useRoute().params;
+        const params = scrollToQuestId(sortMethod[43]).useRoute().params;
         let previewAdCreativeIds;
         if (params != null) {
           previewAdCreativeIds = params.previewAdCreativeIds;
         }
-        const obj12 = scrollToQuestId(sortMethod[42]);
+        const obj12 = scrollToQuestId(sortMethod[43]);
         const fetchQuestHomeBounties = scrollToQuestId(sortMethod[25]).useFetchQuestHomeBounties({
           previewAdCreativeIds,
         });
@@ -1372,10 +1245,10 @@ export default noop.memo(
           enabled = !OrbsHoldoutExperiment.useConfig(obj11).enabled;
         }
         if (enabled) {
-          enabled = tmp(tmp2[45]).shouldShowBountiesGivenFilters(filters);
-          const tmpResult4 = tmp(tmp2[45]);
+          enabled = tmp(tmp2[46]).shouldShowBountiesGivenFilters(filters);
+          const tmpResult4 = tmp(tmp2[46]);
         }
-        const BountiesShopCarouselExperiment = tmp(tmp2[46]).BountiesShopCarouselExperiment;
+        const BountiesShopCarouselExperiment = tmp(tmp2[47]).BountiesShopCarouselExperiment;
         config = BountiesShopCarouselExperiment.useConfig({ location: tmp18.QUEST_HOME_MOBILE });
         const obj13 = { location: tmp18.QUEST_HOME_MOBILE };
         const tmpResult = scrollToQuestId(sortMethod[25]);
@@ -1383,7 +1256,7 @@ export default noop.memo(
         if (enabled) {
           tmp23 = "none" !== config.placement;
         }
-        const questHomeOrbShopCarouselData = scrollToQuestId(sortMethod[47]).useQuestHomeOrbShopCarouselData({
+        const questHomeOrbShopCarouselData = scrollToQuestId(sortMethod[48]).useQuestHomeOrbShopCarouselData({
           enabled: tmp23,
           sortType: config.sortType,
         });
@@ -1425,11 +1298,11 @@ export default noop.memo(
             skipRemountKey: true,
             sourceQuestContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE,
             children() {
-              return previewAdCreativeIds(scrollToQuestId(sortMethod[49]).QuestCard, {
+              return previewAdCreativeIds(scrollToQuestId(sortMethod[50]).QuestCard, {
                 quest: item,
                 questContentPosition: index,
                 containerPadding: 0,
-                sourceQuestContent: scrollToQuestId(sortMethod[43]).QuestContent.QUEST_HOME_MOBILE,
+                sourceQuestContent: scrollToQuestId(sortMethod[44]).QuestContent.QUEST_HOME_MOBILE,
               });
             },
           });
@@ -1472,7 +1345,7 @@ export default noop.memo(
             const obj2 = { includesBounties: ref2.current };
             QuestHomeRoundtripTrackerDefault.startTracking(obj2);
             return () => {
-              filters(sortMethod[50]).clearTracking();
+              filters(sortMethod[51]).clearTracking();
             };
           }
         }, items12);
@@ -1537,7 +1410,7 @@ export default noop.memo(
           obj17.onLayout = handleListLayout;
           obj17.onScroll = handleListScroll;
           obj17.onLoad = handleListLoad;
-          tmp48Result = previewAdCreativeIds(tmp(tmp2[51]).FlashList, obj17);
+          tmp48Result = previewAdCreativeIds(tmp(tmp2[52]).FlashList, obj17);
         }
       },
 );

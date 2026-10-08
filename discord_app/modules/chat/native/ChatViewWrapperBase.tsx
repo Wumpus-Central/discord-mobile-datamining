@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/ChatViewWrapperBase.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function ChatViewWrapperBase(channelId) {
       const cResult = c.c(5);
       ({ children, stickyHeader, style } = channelId);
       const tmp4 = useChatViewPointerEventsDefault(channelId.channelId);
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: jsx(StickyWrapper.StickyWrapper, { header: stickyHeader, style, pointerEvents: tmp4, children }),
       };
     }
-  : (arg0) => {
+  : function ChatViewWrapperBase(arg0) {
       ({ channelId, children, stickyHeader, style } = arg0);
       const tmp = useChatViewPointerEventsDefault(channelId);
       return jsx(LayerScope.LayerScope, {

@@ -1,6 +1,6 @@
 // discord_app/modules/premium/tiered_tenure_badging/native/hooks/useTieredTenureBadgeClickHandler.tsx
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import openUserSettings from "../../../../user_settings/core/native/openUserSettings.tsx";
 import TieredTenureBadgeActionSheet from "../TieredTenureBadgeActionSheet.tsx";
@@ -10,11 +10,11 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const PremiumTypes = fn(1379).PremiumTypes;
-const DEFAULT_PREMIUM_BADGE_ID = fn(7876).DEFAULT_PREMIUM_BADGE_ID;
+const PremiumTypes = fn(1391).PremiumTypes;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8294).DEFAULT_PREMIUM_BADGE_ID;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
-const UserProfileThemeTypes = fn(6714).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(6891).UserProfileThemeTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/premium/tiered_tenure_badging/native/hooks/useTieredTenureBadgeClickHandler.tsx",
@@ -26,8 +26,8 @@ export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeCli
   let isPremiumSubscriber = require("useIsPremiumSubscriber").useIsPremiumSubscriber(PremiumTypes.TIER_2);
   let tmp4 = typeof id === "string";
   if (typeof id === "string") {
-    tmp4 = null != tmp(7132).getTieredTenureBadge(id);
-    const tmpResult = tmp(7132);
+    tmp4 = null != tmp(7318).getTieredTenureBadge(id);
+    const tmpResult = tmp(7318);
   }
   let obj = require("useIsPremiumSubscriber");
   const items = [isPremiumSubscriber];
@@ -56,7 +56,7 @@ export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeCli
         openUserSettings.openUserSettings(obj2);
       } else {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp4 = asyncRequireImpl(10861, dependencyMap.paths);
+        const tmp4 = asyncRequireImpl(10512, dependencyMap.paths);
         const obj4 = { userId };
         obj.openLazy(tmp4, TieredTenureBadgeActionSheet.TIERED_TENURE_BADGE_ACTION_SHEET_KEY, obj4, "stack");
       }

@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { overflow: "hidden" },
   content: {
@@ -29,7 +29,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/RowGroup/native/RowGroup.native.tsx");
 
 export const RowGroup = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RowGroup(arg0) {
       const cResult = c.c(10);
       ({ children, title, trailing } = arg0);
       const tmp4 = closure_5();
@@ -83,7 +83,7 @@ export const RowGroup = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp7Result;
       tmp5 = tmp7Result;
     }
-  : (children) => {
+  : function RowGroup(children) {
       ({ title, trailing } = children);
       const tmp = closure_5();
       const obj = { style: tmp.container, children: null };

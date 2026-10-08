@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/native/images/BoostGem.tsx
 import c from "../../../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/07550_inlineStyles.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -13,7 +13,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/images/BoostGem.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BoostGem(arg0) {
       const cResult = c.c(10);
       ({ width, height, style } = arg0);
       let num = 39;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp18;
       tmp17 = tmp18;
     }
-  : (style) => {
+  : function BoostGem(style) {
       let num = style.width;
       if (num === undefined) {
         num = 39;

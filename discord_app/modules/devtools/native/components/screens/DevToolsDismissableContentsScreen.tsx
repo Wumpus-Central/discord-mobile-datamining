@@ -6,7 +6,7 @@ import UserSettingsProtoActionCreators from "../../../../user_settings/UserSetti
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/05709_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/06099_fuzzysearch.js";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -26,7 +26,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   contentContainer: null,
@@ -49,7 +49,7 @@ let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_11 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function DismissibleContentItem(arg0) {
         const cResult = c.c(8);
         ({ content, start, end } = arg0);
         const tmp4 = dismissible_content.DismissibleContent[content];
@@ -89,7 +89,7 @@ let closure_11 = noop.memo(
         cResult[7] = tmp9;
         tmp8 = tmp9;
       }
-    : (content) => {
+    : function DismissibleContentItem(content) {
         const label = content.content;
         ({ start, end } = content);
         ({ isDismissed, handleToggleDismissState } = toggleDismissibleContentDismissStateDefault(
@@ -101,7 +101,7 @@ let closure_11 = noop.memo(
 ReactCompilerGating = fn(558);
 let closure_12 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function DismissableContentsListHeader(arg0) {
         const cResult = c.c(28);
         ({ dailyCapOverridden, newUserMinAgeRequiredOverridden, initialSearchQuery, onSearchChange } = arg0);
         const tmp4 = closure_10();
@@ -269,7 +269,7 @@ let closure_12 = noop.memo(
         cResult[6] = tmp12;
         tmp11 = tmp12;
       }
-    : (arg0) => {
+    : function DismissableContentsListHeader(arg0) {
         ({ dailyCapOverridden, newUserMinAgeRequiredOverridden, initialSearchQuery, onSearchChange } = arg0);
         const tmp = closure_10();
         const obj = { children: null };
@@ -368,7 +368,7 @@ let closure_12 = noop.memo(
 );
 ReactCompilerGating = fn(558);
 const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DismissableContentsEmpty() {
       const cResult = c.c(4);
       const tmp4 = closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -397,7 +397,7 @@ const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp11;
     }
-  : () => {
+  : function DismissableContentsEmpty() {
       const obj = { style: closure_10().emptyState, children: null };
       const obj2 = {
         style: { marginBottom: nativeDefault.space.PX_16 },
@@ -416,7 +416,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DevToolsDismissableContentsScreen() {
       const cResult = ref(first[8]).c(31);
       closure_10();
       require("useSafeAreaInsets")();
@@ -444,7 +444,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const first1 = tmp7(obj2.useState(tmp11), 1)[0];
       if (cResult[2] !== first) {
-        class D {
+        class T {
           constructor() {
             str = closure_2;
             if (closure_2 == null) {
@@ -482,9 +482,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[2] = first;
-        cResult[3] = D;
+        cResult[3] = T;
       } else {
-        class D {
+        class T {
           constructor() {
             str = closure_2;
             if (closure_2 == null) {
@@ -522,9 +522,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      [noop, closure_5] = noop.useState(D);
+      [noop, closure_5] = noop.useState(T);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        class D {
+        class T {
           constructor() {
             str = closure_2;
             if (closure_2 == null) {
@@ -564,8 +564,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let items = [DismissibleContentFrameworkStore];
         const fn2 = function k() {
           return {
-            dailyCapOverridden: M.dailyCapOverridden,
-            newUserMinAgeRequiredOverridden: M.newUserMinAgeRequiredOverridden,
+            dailyCapOverridden: tmp19.dailyCapOverridden,
+            newUserMinAgeRequiredOverridden: tmp19.newUserMinAgeRequiredOverridden,
           };
         };
         cResult[4] = items;
@@ -573,7 +573,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp16 = fn2;
         const tmp15 = items;
       } else {
-        class D {
+        class T {
           constructor() {
             str = closure_2;
             if (closure_2 == null) {
@@ -616,36 +616,84 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStoresObject = tmp(tmp2[25]).useStateFromStoresObject(tmp15, tmp16);
       ({ dailyCapOverridden, newUserMinAgeRequiredOverridden } = stateFromStoresObject);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        class M {
+        class T {
           constructor() {
-            current = closure_1.current;
-            animationFrame = requestAnimationFrame(() => {
-              current = ref.current;
-              if (current != null) {
-                const obj = { offset: current, animated: false };
-                current.scrollToOffset(obj);
+            str = closure_2;
+            if (closure_2 == null) {
+              str = "";
+            }
+            items = [];
+            tmp = "" === str;
+            for (const key10013 in closure_0(closure_2[9]).DismissibleContent) {
+              tmp9 = key10013;
+              tmp4Result = tmp;
+              if (tmp) {
+              } else {
+                tmp2 = closure_1;
+                tmp3 = closure_2;
+                tmp4 = closure_1(closure_2[22]);
+                formatted = str.toLowerCase();
+                tmp4Result = tmp4(formatted, key10013.toLowerCase());
               }
-            });
-            return;
+              if (!tmp4Result) {
+              } else {
+                _isNaN = isNaN;
+                _Number = Number;
+                tmp4Result = isNaN(Number(key10013));
+              }
+              if (!tmp4Result) {
+                continue;
+              } else {
+                arr1 = items.push(key10013);
+                continue;
+              }
+              continue;
+            }
+            sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
+            return items;
           }
         }
-        cResult[6] = M;
+        cResult[6] = tmp19;
       } else {
-        class M {
+        class T {
           constructor() {
-            current = closure_1.current;
-            animationFrame = requestAnimationFrame(() => {
-              current = ref.current;
-              if (current != null) {
-                const obj = { offset: current, animated: false };
-                current.scrollToOffset(obj);
+            str = closure_2;
+            if (closure_2 == null) {
+              str = "";
+            }
+            items = [];
+            tmp = "" === str;
+            for (const key10013 in closure_0(closure_2[9]).DismissibleContent) {
+              tmp9 = key10013;
+              tmp4Result = tmp;
+              if (tmp) {
+              } else {
+                tmp2 = closure_1;
+                tmp3 = closure_2;
+                tmp4 = closure_1(closure_2[22]);
+                formatted = str.toLowerCase();
+                tmp4Result = tmp4(formatted, key10013.toLowerCase());
               }
-            });
-            return;
+              if (!tmp4Result) {
+              } else {
+                _isNaN = isNaN;
+                _Number = Number;
+                tmp4Result = isNaN(Number(key10013));
+              }
+              if (!tmp4Result) {
+                continue;
+              } else {
+                arr1 = items.push(key10013);
+                continue;
+              }
+              continue;
+            }
+            sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
+            return items;
           }
         }
       }
-      DismissibleContentFrameworkStore = M;
+      DismissibleContentFrameworkStore = tmp19;
       if (cResult[7] !== tmp8[1]) {
         class F {
           constructor(arg0) {
@@ -760,20 +808,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         initialSearchQuery: first1,
         onSearchChange: F,
       });
-      const tmp21 = closure_7(closure_12, {
+      const tmp22 = closure_7(closure_12, {
         dailyCapOverridden,
         newUserMinAgeRequiredOverridden,
         initialSearchQuery: first1,
         onSearchChange: F,
       });
     }
-  : () => {
+  : function DevToolsDismissableContentsScreen() {
       const tmp = callback1();
       const ref = initialSearchQuery.useRef(null);
       importDefault = initialSearchQuery.useRef(0);
       const tmp2 = useSafeAreaInsetsDefault();
-      let obj = ref(9606);
-      [dependencyMap, tmp5] = ref(9606).useLocalStorageState("devtools-dc-search", "");
+      let obj = ref(10799);
+      [dependencyMap, tmp5] = ref(10799).useLocalStorageState("devtools-dc-search", "");
       _slicedToArray = tmp5;
       initialSearchQuery = _slicedToArray(
         initialSearchQuery.useState(() => {
@@ -814,7 +862,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
         return items;
       });
-      let tmp4 = _slicedToArray(ref(9606).useLocalStorageState("devtools-dc-search", ""), 2);
+      let tmp4 = _slicedToArray(ref(10799).useLocalStorageState("devtools-dc-search", ""), 2);
       let items = [closure_6];
       const stateFromStoresObject = ref(504).useStateFromStoresObject(items, () => ({
         dailyCapOverridden: closure_6.dailyCapOverridden,
@@ -905,6 +953,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj4.renderItem = callback3;
       obj4.onScroll = callback2;
-      obj3.children = dailyCapOverridden(ref(8404).FlashList, obj4);
+      obj3.children = dailyCapOverridden(ref(8600).FlashList, obj4);
       return dailyCapOverridden(first1, obj3);
     };

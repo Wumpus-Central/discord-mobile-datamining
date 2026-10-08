@@ -8,7 +8,7 @@ const redux = noop.createContext(null);
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AwaitAnimationContext(arg0) {
       const cResult = c.c(5);
       ({ children, handleQueuedCallback } = arg0);
       if (cResult[0] !== handleQueuedCallback) {
@@ -31,7 +31,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp4;
       tmp3 = tmp4;
     }
-  : (children) => {
+  : function AwaitAnimationContext(children) {
       const handleQueuedCallback = children.handleQueuedCallback;
       const items = [handleQueuedCallback];
       return (
@@ -45,13 +45,13 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/use
 
 export const AwaitAnimationContext = tmp2;
 export const useAwaitAnimationCompletion = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAwaitAnimationCompletion() {
       const cResult = c.c(1);
       const context = noop.useContext(closure_4);
       if (null == context) {
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function l(fn) {
+          const fn = function t(fn) {
             return fn();
           };
           cResult[0] = fn;
@@ -63,7 +63,7 @@ export const useAwaitAnimationCompletion = ReactCompilerGating.isReactCompilerEn
         return context.handleQueuedCallback;
       }
     }
-  : () => {
+  : function useAwaitAnimationCompletion() {
       const context = noop.useContext(closure_4);
       if (null == context) {
         let fn = (fn) => fn();

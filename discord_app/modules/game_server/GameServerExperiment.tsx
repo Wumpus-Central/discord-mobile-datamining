@@ -27,7 +27,7 @@ export const getGameServerEnabled = function getGameServerEnabled(
   ).enabled;
 };
 export const useGameServerEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, location) => {
+  ? function useGameServerEnabled(guildId, location) {
       const cResult = c.c(4);
       if (cResult[0] === guildId) {
         if (cResult[1] === location) {
@@ -49,4 +49,6 @@ export const useGameServerEnabled = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj3;
       tmp2 = obj3;
     }
-  : (guildId, location) => experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled;
+  : function useGameServerEnabled(guildId, location) {
+      return experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled;
+    };

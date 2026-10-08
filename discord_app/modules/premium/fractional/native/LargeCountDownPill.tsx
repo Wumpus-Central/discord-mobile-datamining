@@ -57,12 +57,12 @@ let obj3 = {
 const result = size.fileFinishedImporting("modules/premium/fractional/native/LargeCountDownPill.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (countdownText) => {
+  ? function LargeCountDownPill(countdownText) {
       const cResult = require("c").c(16);
       const tmp4 = closure_7();
       _require = tmp4;
       if (cResult[0] !== tmp4.iconStyle) {
-        const fn = function l() {
+        function handlePress() {
           const designSystemsNotificationComponents =
             DesignSystemsNotificationComponentsExperiment.getDesignSystemsNotificationComponents("LargeCountDownPill");
           const obj2 = ToastActionCreatorsDefault;
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl = util.intl;
             obj4.content = intl.string(util.t["Mv4E/M"]);
             obj4.icon = function icon() {
-              return closure_2_5(closure_0(4818).CircleInformationIcon, {
+              return closure_2_5(closure_0(5012).CircleInformationIcon, {
                 style: closure_1_0.iconStyle,
                 color: nativeDefault.colors.STATUS_WARNING,
               });
@@ -86,10 +86,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj4.iconColor = nativeDefault.colors.STATUS_WARNING;
             obj2.open(obj4);
           }
-        };
+        }
         cResult[0] = tmp4.iconStyle;
-        cResult[1] = fn;
-        let tmp5 = fn;
+        cResult[1] = handlePress;
+        let tmp5 = handlePress;
       } else {
         tmp5 = cResult[1];
       }
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[7] !== tmp4.iconStyle) {
           let obj2 = { style: tmp4.iconStyle, color: nativeDefault.colors.TEXT_STATUS_IDLE };
-          const tmp13 = closure_5(tmp(4818).CircleInformationIcon, obj2);
+          const tmp13 = closure_5(tmp(5012).CircleInformationIcon, obj2);
           cResult[7] = tmp4.iconStyle;
           cResult[8] = tmp13;
           let tmp10 = tmp13;
@@ -155,11 +155,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp9;
       let obj = require("c");
     }
-  : (countdownText) => {
+  : function LargeCountDownPill(countdownText) {
       const tmp = closure_7();
       _require = tmp;
       let obj = {
-        onPress() {
+        onPress: function handlePress() {
           const designSystemsNotificationComponents =
             DesignSystemsNotificationComponentsExperiment.getDesignSystemsNotificationComponents("LargeCountDownPill");
           const obj2 = ToastActionCreatorsDefault;
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl = util.intl;
             obj4.content = intl.string(util.t["Mv4E/M"]);
             obj4.icon = function icon() {
-              return closure_2_5(closure_0(4818).CircleInformationIcon, {
+              return closure_2_5(closure_0(5012).CircleInformationIcon, {
                 style: closure_1_0.iconStyle,
                 color: nativeDefault.colors.STATUS_WARNING,
               });

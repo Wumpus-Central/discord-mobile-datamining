@@ -6,17 +6,17 @@ import UnicodeEmojisDefault from "../../../emojis/UnicodeEmojis.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
-import _modDef9615 from "../../../../../_runtime/metro/09615__.js";
+import _modDef10808 from "../../../../../_runtime/metro/10808__.js";
 import GuildRoleSubscriptionTierTemplatesUtils from "../../tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx";
 import EmojiIconDefault from "EmojiIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(15038).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(15300).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", justifyContent: "flex-start" },
   emojiContainer: {
@@ -36,7 +36,7 @@ let closure_7 = createStyles.createStyles({
 });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BaseBenefitRow(arg0) {
       const cResult = c.c(19);
       ({ emoji, children, contentStyle, guildId, isInteractive } = arg0);
       const tmp5 = closure_7();
@@ -59,7 +59,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[12] !== tmp4) {
                 let tmp18 = true === tmp4;
                 if (tmp18) {
-                  const obj2 = { source: _modDef9615 };
+                  const obj2 = { source: _modDef10808 };
                   tmp18 = hasOwnProperty(native.Icon, obj2);
                 }
                 cResult[12] = tmp4;
@@ -115,7 +115,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp7;
       tmp6 = tmp7;
     }
-  : (isInteractive) => {
+  : function BaseBenefitRow(isInteractive) {
       let flag = isInteractive.isInteractive;
       ({ emoji, children, contentStyle, guildId } = isInteractive);
       if (flag === undefined) {
@@ -136,7 +136,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = hasOwnProperty(View, obj3);
       let tmp4Result = true === flag;
       if (tmp4Result) {
-        const obj4 = { source: _modDef9615 };
+        const obj4 = { source: _modDef10808 };
         tmp4Result = hasOwnProperty(native.Icon, obj4);
       }
       items[2] = tmp4Result;
@@ -145,7 +145,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DescriptiveBenefitRow(arg0) {
       const cResult = c.c(12);
       ({ benefit, children, guildId, isInteractive } = arg0);
       const tmp4 = closure_7();
@@ -209,7 +209,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp6;
       tmp5 = tmp6;
     }
-  : (benefit) => {
+  : function DescriptiveBenefitRow(benefit) {
       benefit = benefit.benefit;
       ({ children, guildId, isInteractive } = benefit);
       let tmp2 = null;
@@ -237,7 +237,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ChannelBenefitRow(arg0) {
       const cResult = c.c(17);
       ({ benefit, guildId, isInteractive } = arg0);
       const tmp3 = closure_7();
@@ -326,7 +326,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = tmp10;
       }
     }
-  : (benefit) => {
+  : function ChannelBenefitRow(benefit) {
       benefit = benefit.benefit;
       ({ guildId, isInteractive } = benefit);
       const tmp = closure_7();
@@ -359,7 +359,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function IntangibleBenefitRow(arg0) {
       const cResult = c.c(7);
       ({ benefit, guildId, isInteractive } = arg0);
       if (cResult[0] !== benefit.name) {
@@ -389,7 +389,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp8;
       tmp7 = tmp8;
     }
-  : (benefit) => {
+  : function IntangibleBenefitRow(benefit) {
       benefit = benefit.benefit;
       const obj = {
         benefit,
@@ -405,7 +405,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function EmojiBenefitRow(arg0) {
       const cResult = c.c(14);
       ({ benefit, guildId, isInteractive } = arg0);
       const tmp4 = closure_7();
@@ -466,7 +466,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = tmp15;
       tmp14 = tmp15;
     }
-  : (benefit) => {
+  : function EmojiBenefitRow(benefit) {
       benefit = benefit.benefit;
       ({ guildId, isInteractive } = benefit);
       const tmp = closure_7();
@@ -500,7 +500,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const GuildRoleSubscriptionBenefitPreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildRoleSubscriptionBenefitPreview(arg0) {
       const cResult = c.c(12);
       ({ benefit, guildId, isInteractive } = arg0);
       if ("roles" in benefit) {
@@ -543,7 +543,7 @@ export const GuildRoleSubscriptionBenefitPreview = ReactCompilerGating.isReactCo
         tmp3 = tmp6;
       }
     }
-  : (arg0) => {
+  : function GuildRoleSubscriptionBenefitPreview(arg0) {
       ({ benefit, guildId, isInteractive } = arg0);
       if ("roles" in benefit) {
         const obj2 = { benefit, guildId, isInteractive };

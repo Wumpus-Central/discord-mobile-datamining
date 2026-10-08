@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 
 export default apexExperiment;
 export const useMobileNitroManageSubscriptionsSettingsExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useMobileNitroManageSubscriptionsSettingsExperiment(location) {
       const cResult = c.c(2);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -28,7 +28,9 @@ export const useMobileNitroManageSubscriptionsSettingsExperiment = ReactCompiler
       }
       return apexExperiment.useConfig(tmp2).enabled;
     }
-  : (location) => apexExperiment.useConfig({ location: location.location }).enabled;
+  : function useMobileNitroManageSubscriptionsSettingsExperiment(location) {
+      return apexExperiment.useConfig({ location: location.location }).enabled;
+    };
 export const getMobileNitroManageSubscriptionsSettingsExperiment =
   function getMobileNitroManageSubscriptionsSettingsExperiment(location) {
     return apexExperiment.getConfig({ location: location.location }).enabled;

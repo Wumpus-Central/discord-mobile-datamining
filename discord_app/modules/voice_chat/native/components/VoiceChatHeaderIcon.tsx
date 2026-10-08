@@ -14,7 +14,7 @@ const View = fn(17).View;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { headerButton: null, disabledOpacity: null, chatIconContainer: null, chatIcon: null, badge: null };
 let size = {
   width: 32,
@@ -28,19 +28,19 @@ obj2.headerButton = size;
 obj2.disabledOpacity = { opacity: 0.6 };
 obj2.chatIconContainer = {
   marginRight: 12,
-  height: fn(6075).NAV_BAR_HEIGHT,
+  height: fn(6261).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
 };
 obj2.chatIcon = { marginHorizontal: 0, width: 32, height: 32 };
-let obj3 = { marginRight: 12, height: fn(6075).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+let obj3 = { marginRight: 12, height: fn(6261).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.badge = { backgroundColor: nativeDefault.colors.ICON_STRONG };
 let closure_8 = createStyles.createStyles(obj2);
 fn(558);
 const obj4 = { backgroundColor: nativeDefault.colors.ICON_STRONG };
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VoiceChatCallScreenHeaderIconInner(arg0) {
       const cResult = c.c(9);
       ({ children, source, onPress, accessibilityLabel } = arg0);
       const tmp3 = closure_8();
@@ -86,7 +86,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp6;
       const obj3 = { containerStyle: tmp3.chatIcon, accessibilityLabel, source, onPress, children };
     }
-  : (onPress) => {
+  : function VoiceChatCallScreenHeaderIconInner(onPress) {
       let noop = onPress.onPress;
       ({ children, source, accessibilityLabel } = onPress);
       const tmp = closure_8();
@@ -102,7 +102,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useVoiceChatMentions(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -132,7 +132,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStoresObject(first, tmp6, tmp7);
     }
-  : (arg0) => {
+  : function useVoiceChatMentions(arg0) {
       _require = arg0;
       const items = [ReadStateStore];
       const items1 = [arg0];
@@ -147,7 +147,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VoiceChatCallScreenHeaderIcon(arg0) {
       const cResult = c.c(2);
       if (cResult[0] !== arg0) {
         const obj2 = { theme: ThemeTypes.DARK, children: null };
@@ -163,7 +163,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (arg0) => {
+  : function VoiceChatCallScreenHeaderIcon(arg0) {
       const obj = { theme: ThemeTypes.DARK, children: null };
       const merged = Object.assign(arg0);
       obj.children = timestampProducer(closure_9, {});
@@ -173,7 +173,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_chat/native/components/VoiceChatHeaderIcon.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VoiceChatHeaderIcon(arg0) {
       const cResult = c.c(13);
       ({ accessibilityLabel, onPress, source, children, disabled } = arg0);
       const tmp4 = closure_8();
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp5 = items1;
     }
-  : (disabled) => {
+  : function VoiceChatHeaderIcon(disabled) {
       let disabledOpacity = disabled.disabled;
       ({ accessibilityLabel, onPress, source, children } = disabled);
       const tmp = closure_8();

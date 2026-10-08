@@ -8,13 +8,13 @@ import useShouldRenderChannelList from "../../guild_sidebar/native/useShouldRend
 import FavoritesGuildChannelList from "../FavoritesGuildChannelList.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const ChannelListPanelBackdropDefault = tmp4(16066);
-const ChannelListStickyHeaderDefault = tmp4(16100);
-const FavoritesGuildSuggestedChannelsDefault = tmp4(16165);
-const FavoritesGuildSuggestionsLoaderDefault = tmp4(16253);
-const FavoritesGuildSidebarHeaderDefault = tmp4(16258);
+const ChannelListPanelBackdropDefault = tmp4(16326);
+const ChannelListStickyHeaderDefault = tmp4(16360);
+const FavoritesGuildSuggestedChannelsDefault = tmp4(16425);
+const FavoritesGuildSuggestionsLoaderDefault = tmp4(16513);
+const FavoritesGuildSidebarHeaderDefault = tmp4(16518);
 require = fn;
-let closure_3 = fn(16166).useFavoritesGuildSuggestionCount;
+let closure_3 = fn(16426).useFavoritesGuildSuggestionCount;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
 const ReactCompilerGating = fn(558);
@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildChannels.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function FavoritesGuildChannels(guild) {
       let obj = dependencyMap;
       const cResult = c.c(11);
       const tmp3 = closure_3();
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       tmpResult3 = useShouldRenderChannelList;
     }
-  : (arg0) => {
+  : function FavoritesGuildChannels(arg0) {
       const tmp = closure_3();
       let tmp2 = importDefault;
       let obj = dependencyMap;

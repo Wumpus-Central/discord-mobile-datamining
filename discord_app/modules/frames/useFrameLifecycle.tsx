@@ -65,7 +65,7 @@ function useFrameLifecycleState(applicationId) {
     return obj3;
   }
 }
-const FramesConstants = fn(8738);
+const FramesConstants = fn(10613);
 ({ isLaunched: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const FrameLifecycleState = {
   Loading: "loading",
@@ -81,7 +81,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/useFrameLifecycle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (applicationId) => {
+  ? function useFrameLifecycle(applicationId) {
       const cResult = applicationId(setFailed[5]).c(9);
       applicationId = applicationId.applicationId;
       const surface = applicationId.surface;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp2 = obj2;
       const obj = applicationId(setFailed[5]);
     }
-  : (applicationId) => {
+  : function useFrameLifecycle(applicationId) {
       applicationId = applicationId.applicationId;
       const tmp = useFrameLifecycleState({ applicationId, surface: applicationId.surface });
       const surface = tmp.surface;

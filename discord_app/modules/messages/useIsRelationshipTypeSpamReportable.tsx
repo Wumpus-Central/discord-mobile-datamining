@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useIsRelationshipTypeSpamReportable.tsx");
 
 export const useIsRelationshipTypeSpamReportable = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsRelationshipTypeSpamReportable(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -21,7 +21,7 @@ export const useIsRelationshipTypeSpamReportable = ReactCompilerGating.isReactCo
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function p() {
+        const fn = function n() {
           return RelationshipStore.getRelationshipType(closure_0);
         };
         const items1 = [arg0];
@@ -42,7 +42,7 @@ export const useIsRelationshipTypeSpamReportable = ReactCompilerGating.isReactCo
         stateFromStores === RelationshipTypes.PENDING_INCOMING
       );
     }
-  : (arg0) => {
+  : function useIsRelationshipTypeSpamReportable(arg0) {
       _require = arg0;
       const items = [RelationshipStore];
       const items1 = [arg0];

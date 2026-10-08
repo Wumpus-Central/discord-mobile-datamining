@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { text: { marginBottom: nativeDefault.space.PX_4, marginHorizontal: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -15,7 +15,7 @@ let obj3 = { marginBottom: nativeDefault.space.PX_4, marginHorizontal: nativeDef
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SuggestedSearchList.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((smartSearchQuery) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SuggestedSearchList(smartSearchQuery) {
   const cResult = smartSearchQuery(suggestedSearches[6]).c(21);
   smartSearchQuery = smartSearchQuery.smartSearchQuery;
   ({ topMargin, source } = smartSearchQuery);
@@ -132,7 +132,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((smartS
     tmp9 = items1;
   }
   const tmpResult = smartSearchQuery(suggestedSearches[7]);
-}) : ((smartSearchQuery) => {
+}) : (function SuggestedSearchList(smartSearchQuery) {
   smartSearchQuery = smartSearchQuery.smartSearchQuery;
   let flag = smartSearchQuery.topMargin;
   if (flag === undefined) {

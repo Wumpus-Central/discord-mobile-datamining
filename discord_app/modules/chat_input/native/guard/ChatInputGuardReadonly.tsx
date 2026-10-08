@@ -19,15 +19,15 @@ function sortChannelsByLastMessageId(id, id2) {
   const obj = SnowflakeUtilsDefault;
   return obj.compare(ReadStateStore.lastMessageId(id2.id), ReadStateStore.lastMessageId(id.id));
 }
-const isTextChannel = fn(2055).isTextChannel;
-let closure_6 = fn(4513).GUILD_SELECTABLE_CHANNELS_KEY;
-const TextAreaCta = fn(11589).TextAreaCta;
+const isTextChannel = fn(2067).isTextChannel;
+let closure_6 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
+const TextAreaCta = fn(11652).TextAreaCta;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useNotice(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(29);
       let obj = require("c");
@@ -188,7 +188,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          class D {
+          class G {
             constructor() {
               obj = closure_1(closure_2[18]);
               obj1 = { cta_type: TextAreaCta.CHANNEL_LINK };
@@ -199,12 +199,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           tmp32[0] = tmp29;
-          tmp32[1] = D;
+          tmp32[1] = G;
           cResult[15] = tmp29;
-          cResult[16] = D;
+          cResult[16] = G;
           cResult[17] = tmp32;
         }
-        class D {
+        class G {
           constructor() {
             obj = closure_1(closure_2[18]);
             obj1 = { cta_type: TextAreaCta.CHANNEL_LINK };
@@ -216,7 +216,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[12] = arg0;
         cResult[13] = stateFromStores;
-        cResult[14] = D;
+        cResult[14] = G;
       } else {
         class P {
           constructor() {
@@ -233,7 +233,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               return found1.filter((item) => closure_1_7.can(constants.SEND_MESSAGES, item));
             }
           }
-          class D {
+          class G {
             constructor() {
               obj = closure_1(closure_2[18]);
               obj1 = { cta_type: TextAreaCta.CHANNEL_LINK };
@@ -252,7 +252,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             tmp27[0] = tmp25;
-            class D {
+            class G {
               constructor() {
                 obj = closure_1(closure_2[18]);
                 obj1 = { cta_type: TextAreaCta.CHANNEL_LINK };
@@ -300,7 +300,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               }
               return tmp23;
             }
-            class D {
+            class G {
               constructor() {
                 obj = closure_1(closure_2[18]);
                 obj1 = { cta_type: TextAreaCta.CHANNEL_LINK };
@@ -311,12 +311,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             tmp23[0] = tmp20;
-            tmp23[1] = H;
+            tmp23[1] = F;
             cResult[26] = tmp20;
-            cResult[27] = H;
+            cResult[27] = F;
             cResult[28] = tmp23;
           }
-          class D {
+          class G {
             constructor() {
               obj = closure_1(closure_2[18]);
               obj1 = { cta_type: TextAreaCta.CHANNEL_LINK };
@@ -328,12 +328,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[23] = stateFromStoresArray1[0];
           cResult[24] = arg0;
-          cResult[25] = H;
+          cResult[25] = F;
         }
       }
       const tmpResult4 = require("initialize");
     }
-  : (arg0, arg1) => {
+  : function useNotice(arg0, arg1) {
       _require = arg0;
       const channelAction = require("MemberActionUtils").useMemberActionsForChannel(arg0, arg1).channelAction;
       let obj = require("MemberActionUtils");
@@ -421,7 +421,7 @@ const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatI
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guildId) => {
+    ? function ChatInputGuardReadonly(guildId) {
         const cResult = c.c(4);
         ({ text, handlePress } = closure_15(guildId.guildId, guildId.channel));
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -450,7 +450,7 @@ export default noop.memo(
         tmp7 = tmp8;
         const tmp4 = closure_15(guildId.guildId, guildId.channel);
       }
-    : (guildId) => {
+    : function ChatInputGuardReadonly(guildId) {
         ({ text, handlePress } = closure_15(guildId.guildId, guildId.channel));
         const obj = { type: "simple-action", actionOnPress: handlePress, actionLabel: null, message: null };
         const tmp = closure_15(guildId.guildId, guildId.channel);

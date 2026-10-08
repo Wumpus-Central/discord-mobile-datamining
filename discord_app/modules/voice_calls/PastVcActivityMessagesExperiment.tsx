@@ -27,7 +27,7 @@ export const isPastVcActivityMessagesEnabled = function isPastVcActivityMessages
     .enabled;
 };
 export const useIsPastVcActivityMessagesEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, location) => {
+  ? function useIsPastVcActivityMessagesEnabled(guildId, location) {
       const cResult = c.c(4);
       if (cResult[0] === guildId) {
         if (cResult[1] === location) {
@@ -49,4 +49,6 @@ export const useIsPastVcActivityMessagesEnabled = ReactCompilerGating.isReactCom
       cResult[2] = obj3;
       tmp2 = obj3;
     }
-  : (guildId, location) => experiment.useExperiment({ guildId, location }, { autoTrackExposure: true }).enabled;
+  : function useIsPastVcActivityMessagesEnabled(guildId, location) {
+      return experiment.useExperiment({ guildId, location }, { autoTrackExposure: true }).enabled;
+    };

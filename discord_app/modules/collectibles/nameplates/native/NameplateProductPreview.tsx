@@ -6,7 +6,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import utils from "../utils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import ProfileCustomizationUtils from "../../../profile_customization/ProfileCustomizationUtils.tsx";
 import useShopProductItems from "../../hooks/useShopProductItems.tsx";
@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" },
   memberListContainer: { paddingHorizontal: nativeDefault.space.PX_16 },
@@ -44,7 +44,7 @@ fn(558);
 let obj4 = { paddingVertical: nativeDefault.space.PX_8 };
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function NameplateUser(arg0) {
       const cResult = c.c(20);
       ({ previewNameplate, previewAvatarDecoration } = arg0);
       const currentUser = useCurrentUser.useCurrentUser();
@@ -74,11 +74,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const stateFromStores = initialize.useStateFromStores(tmp11, tmp12);
         if (cResult[5] !== currentUser) {
-          const name = tmp8(4728).getName(currentUser);
+          const name = tmp8(4922).getName(currentUser);
           cResult[5] = currentUser;
           cResult[6] = name;
           let id = name;
-          const tmp8Result = tmp8(4728);
+          const tmp8Result = tmp8(4922);
         } else {
           id = cResult[6];
         }
@@ -90,7 +90,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp16 = cResult[8];
         }
-        if (null == tmp8(5312)(tmp16)) {
+        if (null == tmp8(5624)(tmp16)) {
           if (cResult[12] === tmp9) {
             if (cResult[13] === tmp22) {
               if (cResult[14] === currentUser) {
@@ -131,7 +131,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           if (cResult[9] === id) {
           }
-          tmp8 = tmp8(10646);
+          tmp8 = tmp8(10246);
           const obj6 = {
             userId: currentUser.id,
             userName: id,
@@ -157,7 +157,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = profilePreviewValue;
       const tmpResult2 = ProfileCustomizationUtils;
     }
-  : (arg0) => {
+  : function NameplateUser(arg0) {
       let currentUser;
       importDefault = undefined;
       let stateFromStores;
@@ -215,7 +215,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PlaceholderUser(arg0) {
       const cResult = c.c(7);
       ({ user, start, end } = arg0);
       if (cResult[0] !== user.avatarSrc) {
@@ -254,7 +254,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const obj4 = { icon: tmp6, label: user.name, start: undefined !== start && start, end: undefined !== end && end };
     }
-  : (end) => {
+  : function PlaceholderUser(end) {
       ({ user, start } = end);
       if (start === undefined) {
         start = false;
@@ -279,7 +279,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/native/NameplateProductPreview.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (avatarDecorationOverride) => {
+  ? function NameplateProductPreview(avatarDecorationOverride) {
       const cResult = c.c(60);
       avatarDecorationOverride = avatarDecorationOverride.avatarDecorationOverride;
       const tmp4 = closure_8();
@@ -585,7 +585,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = nameplateData;
       const tmpResult = utils;
     }
-  : (arg0) => {
+  : function NameplateProductPreview(arg0) {
       ({ product, avatarDecorationOverride } = arg0);
       const tmp = closure_8();
       const obj = useShopProductItems;

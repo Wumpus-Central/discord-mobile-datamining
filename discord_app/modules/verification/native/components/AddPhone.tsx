@@ -17,7 +17,7 @@ const UserFlags = fn(1085).UserFlags;
 const NOOP_NULL = fn(1096).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: { padding: 16, flex: 1 },
@@ -272,7 +272,7 @@ export default function AddPhone(reason) {
         const obj12 = { variant: "secondary", size: "md", text: null, onPress: null };
         const intl6 = require("util").intl;
         obj12.text = intl6.string(require("util").t.kYvzoQ);
-        obj12.onPress = function onPress() {
+        obj12.onPress = function handleRemovePhone() {
           if (null != stateFromStores) {
             if (stateFromStores.hasFlag(UserFlags.MFA_SMS)) {
               const obj3 = {

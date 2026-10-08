@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: {
     position: "relative",
@@ -46,7 +46,7 @@ const __initData4 = {
 let ReactCompilerGating = fn(558);
 let closure_10 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (active) => {
+    ? function Dot(active) {
         const cResult = active(BRAND_500[6]).c(3);
         active = active.active;
         const tmp3 = closure_5();
@@ -114,7 +114,7 @@ let closure_10 = noop.memo(
         cResult[2] = tmp8;
         tmp7 = tmp8;
       }
-    : (active) => {
+    : function Dot(active) {
         active = active.active;
         let BRAND_500;
         const tmp = closure_5();
@@ -185,7 +185,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("design/void/CarouselPagination/native/CarouselPagination.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (containerStyle) => {
+  ? function CarouselPagination(containerStyle) {
       const cResult = currentIndex(576).c(11);
       ({ numberOfItems, currentIndex } = containerStyle);
       containerStyle = containerStyle.containerStyle;
@@ -249,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = items;
       const obj = currentIndex(576);
     }
-  : (currentIndex) => {
+  : function CarouselPagination(currentIndex) {
       currentIndex = currentIndex.currentIndex;
       ({ numberOfItems, containerStyle } = currentIndex);
       const obj = {

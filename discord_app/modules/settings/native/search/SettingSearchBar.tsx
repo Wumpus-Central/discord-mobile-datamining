@@ -2,15 +2,15 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import KeyboardManagerUtils from "../../../../utils/native/KeyboardManagerUtils.tsx";
-import Tracking from "../../tracking/Tracking.tsx";
 import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
+import settings_tracking_Tracking from "../../tracking/Tracking.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserSettingSearchStore from "../../../user_settings/UserSettingSearchStore.tsx";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { marginTop: nativeDefault.modules.mobile.SETTINGS_PADDING_TOP } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -19,7 +19,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/settings/native/search/SettingSearchBar.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function SettingSearchBar() {
       const cResult = c.c(7);
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -33,8 +33,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function y() {
-          const result = Tracking.trackSettingSearchInputFocused();
+        const fn2 = function f() {
+          const result = settings_tracking_Tracking.trackSettingSearchInputFocused();
           UserSettingSearchStore.setState({ isActive: true, isFocused: true });
         };
         cResult[1] = fn2;
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn3 = function h() {
+        const fn3 = function b() {
           UserSettingSearchStore.setState({ isFocused: false });
         };
         cResult[2] = fn3;
@@ -130,14 +130,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp13;
     }
-  : () => {
+  : function SettingSearchBar() {
       const tmp = closure_6();
       const callback = noop.useCallback(() => {
         UserSettingSearchStore.setState({ isActive: false, query: "", isFocused: false });
         const result = KeyboardManagerUtils.dismissGlobalKeyboard();
       }, []);
       const callback1 = noop.useCallback(() => {
-        const result = Tracking.trackSettingSearchInputFocused();
+        const result = settings_tracking_Tracking.trackSettingSearchInputFocused();
         UserSettingSearchStore.setState({ isActive: true, isFocused: true });
       }, []);
       const callback2 = noop.useCallback(() => {

@@ -10,13 +10,13 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHasPremiumRestoreSubscriptionSetting() {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function s() {
+        const fn = function n() {
           return currentUser.getCurrentUser();
         };
         cResult[0] = items;
@@ -41,7 +41,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => {
+  : function useHasPremiumRestoreSubscriptionSetting() {
       const items = [UserStore];
       const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
       let tmp4 = null != stateFromStores && stateFromStores.verified;
@@ -57,7 +57,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.s9h22P);
   },
   parent: null,
-  IconComponent: fn(8346).NitroWheelIcon,
+  IconComponent: fn(9005).NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
     const result = BillingActionCreatorsDefault.restoreAndApplyPurchases(true);
     result.then(
@@ -102,11 +102,11 @@ const pressable = SettingBuilders.createPressable({
   },
   withArrow: true,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useHasPremiumRestoreSubscriptionSetting() {
         const cResult = c.c(4);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [UserStore];
-          const fn = function s() {
+          const fn = function n() {
             return currentUser.getCurrentUser();
           };
           cResult[0] = items;
@@ -131,7 +131,7 @@ const pressable = SettingBuilders.createPressable({
         }
         return tmp8;
       }
-    : () => {
+    : function useHasPremiumRestoreSubscriptionSetting() {
         const items = [UserStore];
         const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
         let tmp4 = null != stateFromStores && stateFromStores.verified;

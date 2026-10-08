@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createICYMIStyles = fn(16434);
+const createICYMIStyles = fn(16694);
 let closure_8 = createICYMIStyles.createICYMIStyles((marginBottom) => {
   const obj = {
     backgroundColor: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE },
@@ -52,7 +52,7 @@ let closure_8 = createICYMIStyles.createICYMIStyles((marginBottom) => {
 });
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ICYMILoadingItem() {
       const cResult = c.c(38);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -261,7 +261,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp16;
       tmp15 = tmp16;
     }
-  : () => {
+  : function ICYMILoadingItem() {
       const tmp = closure_8();
       const tmp2 = useChatPlaceholderAnimatedStylesDefault({ visible: true, animated: true });
       const memo = noop.useMemo(
@@ -330,7 +330,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/ICYMILoading.tsx");
 
 export const ICYMILoading = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ICYMILoading() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { children: null };
@@ -344,7 +344,7 @@ export const ICYMILoading = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => {
+  : function ICYMILoading() {
       const obj = { children: null };
       const items = [hasOwnProperty(closure_9, {}), hasOwnProperty(closure_9, {})];
       obj.children = items;

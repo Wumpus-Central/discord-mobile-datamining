@@ -4,9 +4,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06326_LegacyBaseButton.js";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
-import _modDef9127 from "../../../../../_runtime/metro/09127__.js";
+import _modDef10699 from "../../../../../_runtime/metro/10699__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -41,7 +41,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/ScreenshareTile.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ScreenShareTile(arg0) {
       const cResult = c.c(19);
       ({ onSingleTap, onDoubleTap } = arg0);
       if (undefined === onSingleTap) {
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp12 = cResult[5];
         }
         if (cResult[6] !== tmp4.image) {
-          const obj3 = { source: _modDef9127, style: tmp4.image, resizeMode: "contain" };
+          const obj3 = { source: _modDef10699, style: tmp4.image, resizeMode: "contain" };
           const tmp19 = timestampProducer(React4, obj3);
           cResult[6] = tmp4.image;
           cResult[7] = tmp19;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj7;
       tmp5 = obj7;
     }
-  : (onSingleTap) => {
+  : function ScreenShareTile(onSingleTap) {
       onSingleTap = onSingleTap.onSingleTap;
       if (onSingleTap === undefined) {
         onSingleTap = NOOP;
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ,
       ];
       const obj3 = { style: tmp.liveContainer, children: timestampProducer(native.LiveTag, {}) };
-      items[1] = timestampProducer(React4, { source: _modDef9127, style: tmp.image, resizeMode: "contain" });
+      items[1] = timestampProducer(React4, { source: _modDef10699, style: tmp.image, resizeMode: "contain" });
       const obj5 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };
       const intl = util.intl;
       obj5.children = intl.string(util.t.G84gtR);

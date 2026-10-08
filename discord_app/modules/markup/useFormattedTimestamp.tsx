@@ -20,7 +20,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup/useFormattedTimestamp.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFormattedTimestamp(arg0) {
       let parsed = arg0;
       _require = arg0;
       let R = _require;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const effect = noop.useEffect(tmp4, tmp5);
           if ("R" === parsed.format) {
             if (cResult[5] !== parsed.parsed) {
-              const TIMESTAMP_FORMATS = R(5814).TIMESTAMP_FORMATS;
+              const TIMESTAMP_FORMATS = R(8131).TIMESTAMP_FORMATS;
               R = TIMESTAMP_FORMATS.R;
               RResult = R(parsed.parsed);
               parsed = parsed.parsed;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn;
       const obj2 = require("areHookInputsEqual");
     }
-  : (format) => {
+  : function useFormattedTimestamp(format) {
       _require = format;
       const forceUpdate = require("areHookInputsEqual").useForceUpdate();
       const items = [forceUpdate, ,];

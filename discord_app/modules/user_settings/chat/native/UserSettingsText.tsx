@@ -5,13 +5,13 @@ import native from "../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import UserSettingsActionCreatorsDefault from "../../../../actions/UserSettingsActionCreators.tsx";
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import TableRadioGroup from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import UserSettingsActionCreatorsDefault from "../../../../actions/UserSettingsActionCreators.tsx";
-import _modDef10137 from "../../../../../_runtime/metro/10137__.js";
+import _modDef9722 from "../../../../../_runtime/metro/09722__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
@@ -22,12 +22,12 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VideoQualitySettings = fn(1195).VideoQualitySettings;
+const VideoQualitySettings = fn(1207).VideoQualitySettings;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { flex: { flex: 1 }, nitroUpsell: { flexDirection: "row", alignItems: "center" }, nitroIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 obj2.nitroIcon = size;
@@ -74,12 +74,12 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/chat/native/UserSettingsText.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsText() {
       const cResult = require("c").c(74);
       let obj = require("c");
       const token = require("useToken").useToken(setting(setting1[9]).modules.mobile.TABLE_ROW_PADDING);
-      let obj2 = require("useToken");
-      _require = closure_15();
+      const tmp6 = tmp38();
+      _require = tmp6;
       const InlineAttachmentMedia = require("UserSettings").InlineAttachmentMedia;
       setting = InlineAttachmentMedia.useSetting();
       const InlineEmbedMedia = require("UserSettings").InlineEmbedMedia;
@@ -90,22 +90,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const setting3 = RenderReactions.useSetting();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [dataSavingMode];
-        const fn = function p() {
-          return {
-            lowQualityImageMode: dataSavingMode.dataSavingMode,
-            videoUploadQuality: dataSavingMode.videoUploadQuality,
-            dataSavingMode: dataSavingMode.dataSavingMode,
-          };
-        };
+        class S {
+          constructor() {
+            obj = {
+              lowQualityImageMode: dataSavingMode.dataSavingMode,
+              videoUploadQuality: dataSavingMode.videoUploadQuality,
+              dataSavingMode: dataSavingMode.dataSavingMode,
+            };
+            return obj;
+          }
+        }
         cResult[0] = items;
-        cResult[1] = fn;
-        tmp10 = items;
-        tmp11 = fn;
+        cResult[1] = S;
+        tmp11 = items;
       } else {
-        [tmp10, tmp11] = cResult;
+        [tmp11, tmp12] = cResult;
       }
-      const tmp5 = closure_15();
-      const stateFromStoresObject = require("initialize").useStateFromStoresObject(tmp10, tmp11);
+      let obj2 = require("useToken");
+      const tmp4 = setting;
+      const stateFromStoresObject = require("initialize").useStateFromStoresObject(tmp11, S);
       const lowQualityImageMode = stateFromStoresObject.lowQualityImageMode;
       const videoUploadQuality = stateFromStoresObject.videoUploadQuality;
       dataSavingMode = stateFromStoresObject.dataSavingMode;
@@ -118,40 +121,40 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[2] = items1;
         cResult[3] = D;
-        let tmp15 = D;
-        let tmp14 = items1;
+        let tmp16 = D;
+        let tmp15 = items1;
       } else {
-        tmp14 = cResult[2];
-        tmp15 = cResult[3];
+        tmp15 = cResult[2];
+        tmp16 = cResult[3];
       }
       const tmpResult = require("initialize");
-      const stateFromStores = require("initialize").useStateFromStores(tmp14, tmp15);
+      const stateFromStores = require("initialize").useStateFromStores(tmp15, tmp16);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [setting3];
-        class D {
+        class C {
           constructor() {
-            return lowQualityImageMode.getPremiumTypeSubscription();
+            return closure_4.getCurrentUser();
           }
         }
         cResult[4] = items2;
-        cResult[5] = tmp21;
-        let tmp19 = tmp21;
-        let tmp18 = items2;
+        cResult[5] = C;
+        let tmp20 = C;
+        let tmp19 = items2;
       } else {
-        tmp18 = cResult[4];
-        tmp19 = cResult[5];
+        tmp19 = cResult[4];
+        tmp20 = cResult[5];
       }
-      const tmpResult5 = require("initialize");
-      const stateFromStores1 = require("initialize").useStateFromStores(tmp18, tmp19);
+      const tmpResult6 = require("initialize");
+      const stateFromStores1 = require("initialize").useStateFromStores(tmp19, tmp20);
       if (cResult[6] === stateFromStores) {
         if (cResult[7] === stateFromStores1) {
           let tmp23 = cResult[8];
         }
         closure_8 = tmp23;
         const _Symbol = Symbol;
-        class D {
+        class C {
           constructor() {
-            return lowQualityImageMode.getPremiumTypeSubscription();
+            return closure_4.getCurrentUser();
           }
         }
         if (tmp25 === Symbol.for("react.memo_cache_sentinel")) {
@@ -174,70 +177,434 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const setting4 = ViewImageDescriptions.useSetting();
         const _Symbol2 = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-          class L {
-            constructor(arg0) {
-              obj = closure_1(closure_2[12]);
-              result = obj.setShouldSyncTextSettings(arg0);
-              return;
-            }
+          function handleSync(shouldSync) {
+            const result = setting(setting1[12]).setShouldSyncTextSettings(shouldSync);
           }
-          cResult[11] = L;
+          cResult[11] = handleSync;
           class N {
             constructor() {
               return videoUploadQuality.shouldSync("text");
             }
           }
         } else {
-          class L {
-            constructor(arg0) {
-              obj = closure_1(closure_2[12]);
-              result = obj.setShouldSyncTextSettings(arg0);
-              return;
-            }
-          }
+          const tmp31 = cResult[11];
         }
         const onValueChange = tmp31;
         if (cResult[12] === lowQualityImageMode) {
-          class L {
-            constructor(arg0) {
-              obj = closure_1(closure_2[12]);
-              result = obj.setShouldSyncTextSettings(arg0);
-              return;
+          if (cResult[13] === videoUploadQuality) {
+            if (cResult[14] === setting4) {
+              let tmp32 = cResult[15];
             }
+            const onValueChange2 = tmp32;
+            if (cResult[16] === dataSavingMode) {
+              if (cResult[17] === lowQualityImageMode) {
+                if (cResult[18] === setting4) {
+                  let tmp33 = cResult[19];
+                }
+                const onChange = tmp33;
+                if (cResult[20] === dataSavingMode) {
+                  if (cResult[21] === lowQualityImageMode) {
+                    if (cResult[22] === videoUploadQuality) {
+                      let tmp35 = cResult[23];
+                    }
+                    const onValueChange3 = tmp35;
+                    tmp(tmp2[18]);
+                    class N {
+                      constructor() {
+                        return videoUploadQuality.shouldSync("text");
+                      }
+                    }
+                    if (cResult[24] !== tmp38) {
+                      function navigateToNitroPage() {
+                        UserSettingsModalActionCreatorsDefault.setSection(constants3.PREMIUM);
+                        tmp38.push(constants3.PREMIUM, { isFromTextSection: true });
+                      }
+                      cResult[24] = tmp38;
+                      class N {
+                        constructor() {
+                          return videoUploadQuality.shouldSync("text");
+                        }
+                      }
+                      cResult[25] = navigateToNitroPage;
+                      let tmp39 = navigateToNitroPage;
+                    } else {
+                      tmp39 = cResult[25];
+                    }
+                    closure_16 = tmp39;
+                    if (cResult[26] === setting) {
+                      if (cResult[27] === setting1) {
+                        if (cResult[28] === tmp35) {
+                          if (cResult[31] !== setting2) {
+                            function renderEmbedsSection() {
+                              const obj = { title: null, hasIcons: false, children: null };
+                              const intl = util.intl;
+                              obj.title = intl.string(util.t.PWZOn4);
+                              const obj2 = { label: null, value: null, onValueChange: null };
+                              const intl2 = util.intl;
+                              obj2.label = intl2.string(util.t["5bK9vw"]);
+                              obj2.value = setting2;
+                              obj2.onValueChange = UserSettings.RenderEmbeds.updateSetting;
+                              obj.children = __initData(TableSwitchRow.TableSwitchRow, obj2);
+                              return __initData(TableRowGroup.TableRowGroup, obj);
+                            }
+                            cResult[31] = setting2;
+                            class N {
+                              constructor() {
+                                return videoUploadQuality.shouldSync("text");
+                              }
+                            }
+                            cResult[32] = renderEmbedsSection;
+                            let tmp41 = renderEmbedsSection;
+                          } else {
+                            tmp41 = cResult[32];
+                          }
+                          if (cResult[33] !== setting3) {
+                            function renderEmojiSection() {
+                              const obj = { title: null, hasIcons: false, children: null };
+                              const intl = util.intl;
+                              obj.title = intl.string(util.t.sMOuuS);
+                              const obj2 = { label: null, value: null, onValueChange: null };
+                              const intl2 = util.intl;
+                              obj2.label = intl2.string(util.t["zge/fP"]);
+                              obj2.value = setting3;
+                              obj2.onValueChange = UserSettings.RenderReactions.updateSetting;
+                              obj.children = __initData(TableSwitchRow.TableSwitchRow, obj2);
+                              return __initData(TableRowGroup.TableRowGroup, obj);
+                            }
+                            cResult[33] = setting3;
+                            class N {
+                              constructor() {
+                                return videoUploadQuality.shouldSync("text");
+                              }
+                            }
+                            cResult[34] = renderEmojiSection;
+                            let tmp42 = renderEmojiSection;
+                          } else {
+                            tmp42 = cResult[34];
+                          }
+                          class N {
+                            constructor() {
+                              return videoUploadQuality.shouldSync("text");
+                            }
+                          }
+                          if (cResult[37] === tmp39) {
+                            if (cResult[38] === tmp6.nitroIcon) {
+                              if (cResult[39] === tmp6.nitroUpsell) {
+                                let tmp44 = cResult[40];
+                              }
+                              closure_17 = tmp44;
+                              if (cResult[41] === tmp44) {
+                                if (cResult[42] === tmp33) {
+                                  if (cResult[43] === tmp23) {
+                                    if (cResult[44] === videoUploadQuality) {
+                                      let tmp45 = cResult[45];
+                                    }
+                                    if (cResult[46] === dataSavingMode) {
+                                      if (cResult[47] === tmp32) {
+                                        let tmp47 = cResult[48];
+                                      }
+                                      if (cResult[49] !== token) {
+                                        let obj3 = { paddingHorizontal: token };
+                                        class N {
+                                          constructor() {
+                                            return videoUploadQuality.shouldSync("text");
+                                          }
+                                        }
+                                        cResult[50] = obj3;
+                                        let tmp48 = obj3;
+                                      } else {
+                                        tmp48 = cResult[50];
+                                      }
+                                      class N {
+                                        constructor() {
+                                          return videoUploadQuality.shouldSync("text");
+                                        }
+                                      }
+                                      if (cResult[53] !== tmp45) {
+                                        const tmp45Result = tmp45();
+                                        cResult[53] = tmp45;
+                                        class N {
+                                          constructor() {
+                                            return videoUploadQuality.shouldSync("text");
+                                          }
+                                        }
+                                        cResult[54] = tmp45Result;
+                                        let tmp50 = tmp45Result;
+                                      } else {
+                                        tmp50 = cResult[54];
+                                      }
+                                      if (cResult[55] !== tmp47) {
+                                        const tmp47Result = tmp47();
+                                        cResult[55] = tmp47;
+                                        class N {
+                                          constructor() {
+                                            return videoUploadQuality.shouldSync("text");
+                                          }
+                                        }
+                                        cResult[56] = tmp47Result;
+                                        let tmp52 = tmp47Result;
+                                      } else {
+                                        tmp52 = cResult[56];
+                                      }
+                                      if (cResult[57] !== tmp41) {
+                                        const tmp41Result = tmp41();
+                                        cResult[57] = tmp41;
+                                        class N {
+                                          constructor() {
+                                            return videoUploadQuality.shouldSync("text");
+                                          }
+                                        }
+                                        cResult[58] = tmp41Result;
+                                        let tmp54 = tmp41Result;
+                                      } else {
+                                        tmp54 = cResult[58];
+                                      }
+                                      if (cResult[59] !== tmp42) {
+                                        const tmp42Result = tmp42();
+                                        cResult[59] = tmp42;
+                                        class N {
+                                          constructor() {
+                                            return videoUploadQuality.shouldSync("text");
+                                          }
+                                        }
+                                        cResult[60] = tmp42Result;
+                                        let tmp56 = tmp42Result;
+                                      } else {
+                                        tmp56 = cResult[60];
+                                      }
+                                      if (cResult[61] !== tmp43) {
+                                        const tmp43Result = tmp43();
+                                        cResult[61] = tmp43;
+                                        class N {
+                                          constructor() {
+                                            return videoUploadQuality.shouldSync("text");
+                                          }
+                                        }
+                                        cResult[62] = tmp43Result;
+                                        let tmp58 = tmp43Result;
+                                      } else {
+                                        tmp58 = cResult[62];
+                                      }
+                                      if (cResult[63] === tmp48) {
+                                        if (cResult[64] === tmp49) {
+                                          if (cResult[65] === tmp50) {
+                                            if (cResult[66] === tmp52) {
+                                              if (cResult[67] === tmp54) {
+                                                if (cResult[68] === tmp56) {
+                                                  if (cResult[69] === tmp58) {
+                                                    let tmp60 = cResult[70];
+                                                  }
+                                                  if (cResult[71] === tmp6.flex) {
+                                                    if (cResult[72] === tmp60) {
+                                                      let tmp64 = cResult[73];
+                                                    }
+                                                    return tmp64;
+                                                  }
+                                                  class N {
+                                                    constructor() {
+                                                      return videoUploadQuality.shouldSync("text");
+                                                    }
+                                                  }
+                                                  let obj4 = { style: tmp6.flex, children: tmp60 };
+                                                  const tmp66 = onValueChange2(setting2, obj4);
+                                                  cResult[71] = tmp6.flex;
+                                                  cResult[72] = tmp60;
+                                                  cResult[73] = tmp66;
+                                                  tmp64 = tmp66;
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                      let obj5 = { children: null };
+                                      let obj6 = { spacing: tmp4(tmp2[9]).space.PX_24, style: tmp48, children: null };
+                                      const items4 = [tmp49, tmp50, tmp52, tmp54, tmp56, tmp58];
+                                      obj6.children = items4;
+                                      obj5.children = onChange(tmp(tmp2[29]).Stack, obj6);
+                                      const tmp63 = onValueChange2(tmp(tmp2[28]).Form, obj5);
+                                      cResult[63] = tmp48;
+                                      cResult[64] = tmp49;
+                                      cResult[65] = tmp50;
+                                      cResult[66] = tmp52;
+                                      cResult[67] = tmp54;
+                                      cResult[68] = tmp56;
+                                      cResult[69] = tmp58;
+                                      cResult[70] = tmp63;
+                                      tmp60 = tmp63;
+                                    }
+                                    function renderDataSavingModeSetting() {
+                                      const obj = { title: null, description: null, hasIcons: false, children: null };
+                                      const intl = util.intl;
+                                      obj.title = intl.string(util.t.fyG8t2);
+                                      const intl2 = util.intl;
+                                      obj.description = intl2.string(util.t["wC0+Ph"]);
+                                      const obj2 = { label: null, value: null, onValueChange: null };
+                                      const intl3 = util.intl;
+                                      obj2.label = intl3.string(util.t.ix8XIj);
+                                      obj2.value = dataSavingMode;
+                                      obj2.onValueChange = onValueChange2;
+                                      obj.children = __initData(TableSwitchRow.TableSwitchRow, obj2);
+                                      return __initData(TableRowGroup.TableRowGroup, obj);
+                                    }
+                                    class N {
+                                      constructor() {
+                                        return videoUploadQuality.shouldSync("text");
+                                      }
+                                    }
+                                    cResult[46] = dataSavingMode;
+                                    cResult[47] = tmp32;
+                                    cResult[48] = renderDataSavingModeSetting;
+                                    tmp47 = renderDataSavingModeSetting;
+                                  }
+                                }
+                              }
+                              class N {
+                                constructor() {
+                                  return videoUploadQuality.shouldSync("text");
+                                }
+                              }
+                              cResult[41] = tmp44;
+                              cResult[42] = tmp33;
+                              cResult[43] = tmp23;
+                              cResult[44] = videoUploadQuality;
+                              cResult[45] = tmp46;
+                              tmp45 = tmp46;
+                            }
+                          }
+                          function renderNitroUpsellText() {
+                            const obj = { style: closure_0.nitroUpsell, children: null };
+                            const items = [
+                              __initData(native.Icon, {
+                                source: _modDef9722,
+                                size: native.Icon.Sizes.SMALL,
+                                style: closure_0.nitroIcon,
+                              }),
+                            ];
+                            const obj3 = {
+                              variant: "text-sm/medium",
+                              color: "text-muted",
+                              style: { marginLeft: 4 },
+                              children: null,
+                            };
+                            const intl = util.intl;
+                            obj3.children = intl.format(util.t.uW1zul, {
+                              onClick() {
+                                return closure_1_16();
+                              },
+                            });
+                            items[1] = __initData(Text_Text.Text, obj3);
+                            obj.children = items;
+                            return __initData2(View, obj);
+                          }
+                          cResult[37] = tmp39;
+                          cResult[38] = tmp6.nitroIcon;
+                          cResult[39] = tmp6.nitroUpsell;
+                          cResult[40] = renderNitroUpsellText;
+                          tmp44 = renderNitroUpsellText;
+                        }
+                      }
+                    }
+                    function renderInlineMediaSection() {
+                      const obj = { children: null };
+                      const obj2 = { title: null, description: null, hasIcons: false, children: null };
+                      const intl = util.intl;
+                      obj2.title = intl.string(util.t["9nyle0"]);
+                      const intl2 = util.intl;
+                      obj2.description = intl2.format(util.t.qjjvqO, { maxSize: 8 });
+                      const obj3 = { label: null, value: null, onValueChange: null };
+                      const intl3 = util.intl;
+                      obj3.label = intl3.string(util.t.U47N1p);
+                      obj3.value = setting1;
+                      obj3.onValueChange = UserSettings.InlineEmbedMedia.updateSetting;
+                      const items = [__initData(TableSwitchRow.TableSwitchRow, obj3)];
+                      const obj4 = { label: null, value: null, onValueChange: null };
+                      const intl4 = util.intl;
+                      obj4.label = intl4.string(util.t.VP11No);
+                      obj4.value = setting;
+                      obj4.onValueChange = UserSettings.InlineAttachmentMedia.updateSetting;
+                      items[1] = __initData(TableSwitchRow.TableSwitchRow, obj4);
+                      obj2.children = items;
+                      const items1 = [__initData2(TableRowGroup.TableRowGroup, obj2)];
+                      const obj5 = { description: null, hasIcons: false, children: null };
+                      const intl5 = util.intl;
+                      obj5.description = intl5.string(util.t.T0rbtM);
+                      const obj6 = { label: null, value: null, onValueChange: null };
+                      const intl6 = util.intl;
+                      obj6.label = intl6.string(util.t["w8j+yW"]);
+                      obj6.value = setting4;
+                      obj6.onValueChange = onValueChange3;
+                      obj5.children = __initData(TableSwitchRow.TableSwitchRow, obj6);
+                      items1[1] = __initData(TableRowGroup.TableRowGroup, obj5);
+                      obj.children = items1;
+                      return __initData2(state, obj);
+                    }
+                    cResult[26] = setting;
+                    cResult[27] = setting1;
+                    cResult[28] = tmp35;
+                    cResult[29] = setting4;
+                    cResult[30] = renderInlineMediaSection;
+                  }
+                }
+                class N {
+                  constructor() {
+                    return videoUploadQuality.shouldSync("text");
+                  }
+                }
+                cResult[20] = dataSavingMode;
+                cResult[21] = lowQualityImageMode;
+                cResult[22] = videoUploadQuality;
+                cResult[23] = tmp36;
+                tmp35 = tmp36;
+              }
+            }
+            class N {
+              constructor() {
+                return videoUploadQuality.shouldSync("text");
+              }
+            }
+            cResult[16] = dataSavingMode;
+            cResult[17] = lowQualityImageMode;
+            cResult[18] = setting4;
+            cResult[19] = tmp34;
+            tmp33 = tmp34;
           }
         }
-        class W {
-          constructor(arg0) {
-            obj = closure_1(closure_2[10]);
-            obj1 = {
-              video_upload_quality: videoUploadQuality,
-              image_descriptions: closure_10,
-              low_quality_image_mode: lowQualityImageMode,
-              data_saving_mode: arg0,
-              updated_setting: "data_saving_mode",
-            };
-            trackResult = obj.track(AnalyticEvents.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, obj1);
-            obj3 = closure_1(closure_2[12]);
-            obj5 = { dataSavingMode: arg0 };
-            result = obj3.updatedUnsyncedSettings(obj5);
-            return;
-          }
+        function toggleDataSavingMode(data_saving_mode) {
+          AnalyticsUtilsDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, {
+            video_upload_quality: videoUploadQuality,
+            image_descriptions: setting4,
+            low_quality_image_mode: lowQualityImageMode,
+            data_saving_mode,
+            updated_setting: "data_saving_mode",
+          });
+          const obj2 = {
+            video_upload_quality: videoUploadQuality,
+            image_descriptions: setting4,
+            low_quality_image_mode: lowQualityImageMode,
+            data_saving_mode,
+            updated_setting: "data_saving_mode",
+          };
+          const result = UserSettingsActionCreatorsDefault.updatedUnsyncedSettings({
+            dataSavingMode: data_saving_mode,
+          });
         }
         cResult[12] = lowQualityImageMode;
         cResult[13] = videoUploadQuality;
         cResult[14] = setting4;
-        cResult[15] = W;
-        const tmpResult7 = tmp(tmp2[16]);
+        cResult[15] = toggleDataSavingMode;
+        tmp32 = toggleDataSavingMode;
+        const tmpResult8 = tmp(tmp2[16]);
       }
-      const tmpResult6 = require("initialize");
+      const tmpResult7 = require("initialize");
       let result = require("PremiumUtils").hasPremiumSubscriptionToDisplay(stateFromStores1, stateFromStores);
       cResult[6] = stateFromStores;
       cResult[7] = stateFromStores1;
       cResult[8] = result;
       tmp23 = result;
-      const tmpResult8 = require("PremiumUtils");
+      const tmpResult10 = require("PremiumUtils");
     }
-  : () => {
+  : function UserSettingsText() {
       const token = require("useToken").useToken(
         videoUploadQuality(dataSavingMode[9]).modules.mobile.TABLE_ROW_PADDING,
       );
@@ -384,8 +751,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl12 = require("util").intl;
         const obj23 = {
           onClick() {
-            UserSettingsModalActionCreatorsDefault.setSection(constants2.PREMIUM);
-            closure_4.push(constants2.PREMIUM, { isFromTextSection: true });
+            UserSettingsModalActionCreatorsDefault.setSection(constants3.PREMIUM);
+            closure_4.push(constants3.PREMIUM, { isFromTextSection: true });
           },
         };
         obj22.children = intl12.format(require("util").t.uW1zul, obj23);
@@ -466,7 +833,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return closure_12(setting4, obj8);
     };
 export const setStickerAutocomplete = function setStickerAutocomplete(enabled) {
-  const obj2 = { enabled, location: { section: image_descriptions.SETTINGS_TEXT_AND_IMAGES } };
+  const obj2 = { enabled, location: { section: constants2.SETTINGS_TEXT_AND_IMAGES } };
   AnalyticsUtilsDefault.track(constants.STICKERS_IN_AUTOCOMPLETE_TOGGLED, obj2);
   const IncludeStickersInAutocomplete = UserSettings.IncludeStickersInAutocomplete;
   IncludeStickersInAutocomplete.updateSetting(enabled);

@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/Fractiona
 
 export const FRACTIONAL_NITRO_COIN_SIZE = { CARD: 80, CHECKOUT: 45, COLLECTED_SHEET: 68 };
 export const FractionalNitroCoinIllustration = ReactCompilerGating.isReactCompilerEnabled()
-  ? (skuId) => {
+  ? function FractionalNitroCoinIllustration(skuId) {
       const cResult = c.c(5);
       ({ width, height, resizeMode } = skuId);
       let str = "contain";
@@ -43,7 +43,7 @@ export const FractionalNitroCoinIllustration = ReactCompilerGating.isReactCompil
       cResult[4] = tmp5;
       tmp4 = tmp5;
     }
-  : (resizeMode) => {
+  : function FractionalNitroCoinIllustration(resizeMode) {
       resizeMode = resizeMode.resizeMode;
       ({ skuId, width, height } = resizeMode);
       if (resizeMode === undefined) {

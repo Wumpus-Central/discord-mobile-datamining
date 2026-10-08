@@ -8,11 +8,11 @@ const GIFPickerItemViewDefault = GIFPickerItemView;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let obj2 = { list: { marginHorizontal: -fn(10106).GIF_PICKER_GUTTER_SPACING / 2 } };
+const createStyles = fn(5090);
+let obj2 = { list: { marginHorizontal: -fn(9690).GIF_PICKER_GUTTER_SPACING / 2 } };
 let closure_6 = createStyles.createStyles(obj2);
 let obj4 = { length: 20 };
-let obj3 = { marginHorizontal: -fn(10106).GIF_PICKER_GUTTER_SPACING / 2 };
+let obj3 = { marginHorizontal: -fn(9690).GIF_PICKER_GUTTER_SPACING / 2 };
 let closure_7 = Array.from(obj4).map(() => {});
 const arr = Array.from(obj4);
 const dependencyMap2 = Array.from(obj4).map(() => {
@@ -21,10 +21,10 @@ const dependencyMap2 = Array.from(obj4).map(() => {
 });
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useViewedItemIndexes() {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function s() {
+        const fn = function n() {
           return new Set();
         };
         cResult[0] = fn;
@@ -63,7 +63,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : () => {
+  : function useViewedItemIndexes() {
       let tmp = _slicedToArray(
         noop.useState(() => new Set()),
         2,
@@ -93,7 +93,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerResultsList.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (loading) => {
+  ? function GIFPickerResultsList(loading) {
       const cResult = columnWidth(576).c(25);
       ({ columns, columnWidth } = loading);
       ({ resultItems, onPressGIF } = loading);
@@ -106,89 +106,48 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const safeAreaBottomKeyboardAware = onPressGIF(10099)(first).safeAreaBottomKeyboardAware;
+      const safeAreaBottomKeyboardAware = onPressGIF(9683)(first).safeAreaBottomKeyboardAware;
       if (loading.loading) {
         resultItems = closure_7;
       }
       if (cResult[1] !== columnWidth) {
-        class P {
-          constructor(arg0, arg1) {
-            obj = { height: columnWidth / (loading / arg1) };
-            return obj;
-          }
-        }
+        const fn = function _(arg0, arg1) {
+          return { height: columnWidth / (arg0 / arg1) };
+        };
         cResult[1] = columnWidth;
-        cResult[2] = P;
+        cResult[2] = fn;
+        let tmp6 = fn;
       } else {
-        class P {
-          constructor(arg0, arg1) {
-            obj = { height: columnWidth / (loading / arg1) };
-            return obj;
-          }
-        }
+        tmp6 = cResult[2];
       }
-      dependencyMap = P;
+      dependencyMap = tmp6;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        class M {
-          constructor(arg0, arg1) {
-            src = undefined;
-            if (loading != null) {
-              src = loading.src;
-            }
-            if (src == null) {
-              tmp2 = arg1;
-              src = arg1.toString();
-            }
-            return src;
+        const fn2 = function k(src, arg1) {
+          src = undefined;
+          if (src != null) {
+            src = src.src;
           }
-        }
-        cResult[3] = M;
+          if (src == null) {
+            src = arg1.toString();
+          }
+          return src;
+        };
+        cResult[3] = fn2;
+        let tmp7 = fn2;
       } else {
-        class M {
-          constructor(arg0, arg1) {
-            src = undefined;
-            if (loading != null) {
-              src = loading.src;
-            }
-            if (src == null) {
-              tmp2 = arg1;
-              src = arg1.toString();
-            }
-            return src;
-          }
-        }
+        tmp7 = cResult[3];
       }
       let obj = columnWidth(576);
       ({ viewedItemIndexes, onViewableItemsChanged } = closure_9());
       if (cResult[4] === selectedGifSrc) {
-        class M {
-          constructor(arg0, arg1) {
-            src = undefined;
-            if (loading != null) {
-              src = loading.src;
-            }
-            if (src == null) {
-              tmp2 = arg1;
-              src = arg1.toString();
-            }
-            return src;
-          }
+        if (cResult[5] === viewedItemIndexes) {
+          let tmp9 = cResult[6];
         }
-        if (cResult[7] === P) {
-          class M {
-            constructor(arg0, arg1) {
-              src = undefined;
-              if (loading != null) {
-                src = loading.src;
-              }
-              if (src == null) {
-                tmp2 = arg1;
-                src = arg1.toString();
-              }
-              return src;
-            }
+        if (cResult[7] === tmp6) {
+          if (cResult[8] === onPressGIF) {
+            let tmp10 = cResult[9];
           }
-          columnWidth(8404);
+          columnWidth(8600);
           class V {
             constructor(arg0) {
               ({ item, index, extraData } = loading);
@@ -234,22 +193,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const isPortalKeyboardInModal = columnWidth(9939).useIsPortalKeyboardInModal();
+          const isPortalKeyboardInModal = columnWidth(9461).useIsPortalKeyboardInModal();
           if (cResult[10] !== safeAreaBottomKeyboardAware) {
-            class M {
-              constructor(arg0, arg1) {
-                src = undefined;
-                if (loading != null) {
-                  src = loading.src;
-                }
-                if (src == null) {
-                  tmp2 = arg1;
-                  src = arg1.toString();
-                }
-                return src;
-              }
-            }
-            tmp15[0] = safeAreaBottomKeyboardAware;
+            let obj3 = { paddingBottom: safeAreaBottomKeyboardAware };
             class V {
               constructor(arg0) {
                 ({ item, index, extraData } = loading);
@@ -296,37 +242,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[10] = safeAreaBottomKeyboardAware;
-            cResult[11] = tmp15;
+            cResult[11] = obj3;
+            let tmp14 = obj3;
           } else {
-            class M {
-              constructor(arg0, arg1) {
-                src = undefined;
-                if (loading != null) {
-                  src = loading.src;
-                }
-                if (src == null) {
-                  tmp2 = arg1;
-                  src = arg1.toString();
-                }
-                return src;
-              }
-            }
+            tmp14 = cResult[11];
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            class M {
-              constructor(arg0, arg1) {
-                src = undefined;
-                if (loading != null) {
-                  src = loading.src;
-                }
-                if (src == null) {
-                  tmp2 = arg1;
-                  src = arg1.toString();
-                }
-                return src;
-              }
-            }
             class V {
               constructor(arg0) {
                 ({ item, index, extraData } = loading);
@@ -372,84 +294,71 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
+            let tmp15 = { disabled: true };
+            const obj4 = { disabled: true };
           } else {
-            class M {
-              constructor(arg0, arg1) {
-                src = undefined;
-                if (loading != null) {
-                  src = loading.src;
-                }
-                if (src == null) {
-                  tmp2 = arg1;
-                  src = arg1.toString();
-                }
-                return src;
-              }
-            }
+            tmp15 = cResult[12];
           }
           if (inActionSheet) {
-            class M {
-              constructor(arg0, arg1) {
-                src = undefined;
-                if (loading != null) {
-                  src = loading.src;
-                }
-                if (src == null) {
-                  tmp2 = arg1;
-                  src = arg1.toString();
-                }
-                return src;
-              }
-            }
+            inActionSheet = isPortalKeyboardInModal;
           }
           if (cResult[13] === tmp12) {
-            class M {
-              constructor(arg0, arg1) {
-                src = undefined;
-                if (loading != null) {
-                  src = loading.src;
+            if (cResult[14] === ListFooterComponent) {
+              if (cResult[15] === columns) {
+                if (cResult[16] === resultItems) {
+                  if (cResult[17] === tmp9) {
+                    if (cResult[18] === keyboardDismissMode) {
+                      if (cResult[19] === onViewableItemsChanged) {
+                        if (cResult[20] === tmp10) {
+                          if (cResult[21] === tmp4.list) {
+                            if (cResult[22] === tmp14) {
+                              if (cResult[23] === inActionSheet) {
+                                let tmp16 = cResult[24];
+                              }
+                              return tmp16;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
-                if (src == null) {
-                  tmp2 = arg1;
-                  src = arg1.toString();
-                }
-                return src;
               }
             }
           }
-          let obj3 = {
-            contentContainerStyle: tmp15,
+          const obj5 = {
+            contentContainerStyle: tmp14,
             data: resultItems,
-            drawDistance: columnWidth(10106).GIF_PICKER_ITEM_ESIMTATED_HEIGHT,
+            drawDistance: columnWidth(9690).GIF_PICKER_ITEM_ESIMTATED_HEIGHT,
             extraData: tmp9,
-            keyExtractor: M,
+            keyExtractor: tmp7,
             keyboardDismissMode,
             keyboardShouldPersistTaps: "always",
-            maintainVisibleContentPosition: tmp17,
+            maintainVisibleContentPosition: tmp15,
             numColumns: columns,
             ListFooterComponent,
             optimizeItemArrangement: true,
             onViewableItemsChanged,
             preventNativeModalDismiss: inActionSheet,
-            renderItem: V,
+            renderItem: tmp10,
             style: tmp4.list,
           };
-          const tmp20 = (
+          const tmp18 = (
             <tmp12
-              contentContainerStyle={tmp15}
+              contentContainerStyle={tmp14}
               data={resultItems}
-              drawDistance={columnWidth(10106).GIF_PICKER_ITEM_ESIMTATED_HEIGHT}
+              drawDistance={columnWidth(9690).GIF_PICKER_ITEM_ESIMTATED_HEIGHT}
               extraData={tmp9}
-              keyExtractor={M}
+              keyExtractor={tmp7}
               keyboardDismissMode={keyboardDismissMode}
               keyboardShouldPersistTaps="always"
-              maintainVisibleContentPosition={tmp17}
+              maintainVisibleContentPosition={tmp15}
               numColumns={columns}
               ListFooterComponent={ListFooterComponent}
               optimizeItemArrangement
               onViewableItemsChanged={onViewableItemsChanged}
               preventNativeModalDismiss={inActionSheet}
-              renderItem={V}
+              renderItem={tmp10}
               style={tmp4.list}
             />
           );
@@ -460,12 +369,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[17] = tmp9;
           cResult[18] = keyboardDismissMode;
           cResult[19] = onViewableItemsChanged;
-          cResult[20] = V;
+          cResult[20] = tmp10;
           cResult[21] = tmp4.list;
-          cResult[22] = tmp15;
+          cResult[22] = tmp14;
           cResult[23] = inActionSheet;
-          cResult[24] = tmp20;
-          const tmpResult2 = columnWidth(9939);
+          cResult[24] = tmp18;
+          tmp16 = tmp18;
+          const tmpResult2 = columnWidth(9461);
         }
         class V {
           constructor(arg0) {
@@ -512,17 +422,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        cResult[7] = P;
+        cResult[7] = tmp6;
         cResult[8] = onPressGIF;
         cResult[9] = V;
+        tmp10 = V;
       }
-      const obj4 = { viewedItemIndexes, selectedGifSrc };
+      const obj6 = { viewedItemIndexes, selectedGifSrc };
       cResult[4] = selectedGifSrc;
       cResult[5] = viewedItemIndexes;
-      cResult[6] = obj4;
+      cResult[6] = obj6;
+      tmp9 = obj6;
       let tmp8 = closure_9();
     }
-  : (columnWidth) => {
+  : function GIFPickerResultsList(columnWidth) {
       columnWidth = columnWidth.columnWidth;
       ({ resultItems, onPressGIF } = columnWidth);
       ({ inActionSheet, selectedGifSrc } = columnWidth);

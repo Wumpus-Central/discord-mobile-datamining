@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessages.tsx");
 
 export const useSearchMessages = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useSearchMessages(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(5);
@@ -29,7 +29,7 @@ export const useSearchMessages = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(504).useStateFromStores(first, tmp7, tmp8);
       }
-      const fn = function u() {
+      const fn = function o() {
         const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(closure_0);
         return SearchMessageStore.getMessages(
           SearchUtils.getSearchTabFetchId(closure_0, closure_1, searchResultsQuery),
@@ -45,7 +45,7 @@ export const useSearchMessages = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useSearchMessages(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const items = [SearchQueryStore, SearchMessageStore];

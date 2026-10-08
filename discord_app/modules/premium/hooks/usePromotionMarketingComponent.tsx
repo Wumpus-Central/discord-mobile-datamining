@@ -14,7 +14,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/hooks/usePromotionMarketingComponent.tsx");
 
 export const usePromotionMarketingComponent = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function usePromotionMarketingComponent(arg0) {
       _require = arg0;
       const cResult = require("c").c(11);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -272,7 +272,7 @@ export const usePromotionMarketingComponent = ReactCompilerGating.isReactCompile
       }
       return null;
     }
-  : (arg0) => {
+  : function usePromotionMarketingComponent(arg0) {
       _require = arg0;
       const effect = noop.useEffect(() => {
         const result = closure_0(stateFromStores[6]).maybeFetchActivePromotions();

@@ -35,7 +35,7 @@ export const getCtaButtonType = function getCtaButtonType(id, channel_id) {
   return CONNECT_TO_TEEN;
 };
 export const useCtaButtonType = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, channel_id) => {
+  ? function useCtaButtonType(id, channel_id) {
       const obj = c;
       const cResult = obj.c(2);
       const shouldRenderReportFalsePositiveButton =
@@ -68,7 +68,7 @@ export const useCtaButtonType = ReactCompilerGating.isReactCompilerEnabled()
       }
       return CONNECT_TO_TEEN;
     }
-  : (id, channel_id) => {
+  : function useCtaButtonType(id, channel_id) {
       const obj = useShouldRenderReportFalsePositiveButton;
       const shouldRenderReportFalsePositiveButton = obj.useShouldRenderReportFalsePositiveButton(id);
       const result = AgeVerificationUtils.isAgeVerificationMessageWithRetryCta(channel_id, id);

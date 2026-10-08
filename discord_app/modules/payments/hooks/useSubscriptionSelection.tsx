@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/payments/hooks/useSubscriptionSelection.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSubscriptionSelection() {
       const cResult = c.c(3);
       [tmp3, tmp4] = noop.useState(undefined);
       const tmp2 = _slicedToArray(noop.useState(undefined), 2);
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj2;
       tmp8 = obj2;
     }
-  : () => {
+  : function useSubscriptionSelection() {
       [tmp2, tmp3] = noop.useState(undefined);
       const tmp4 = _slicedToArray(noop.useState(undefined), 2);
       return { selectedSkuId: tmp2, setSelectedSkuId: tmp3, selectedPlanId: tmp4[0], setSelectedPlanId: tmp4[1] };

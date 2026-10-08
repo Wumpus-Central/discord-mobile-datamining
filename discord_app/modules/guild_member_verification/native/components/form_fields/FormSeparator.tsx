@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   separator: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, marginVertical: 12 },
 };
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function FormSeparator(style) {
       const cResult = c.c(6);
       const tmp2 = closure_4();
       if (cResult[0] === style.style) {
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp3 = items;
     }
-  : (style) => {
+  : function FormSeparator(style) {
       const obj = {};
       const merged = Object.assign(style);
       const items = [closure_4().separator, style.style];

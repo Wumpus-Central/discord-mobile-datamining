@@ -9,14 +9,14 @@ const require = fn;
 const View = fn(17).View;
 const AppStates = fn(1085).AppStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ inputContainer: { flexDirection: "column", alignSelf: "stretch" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/components/ClipboardCopyInput.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (isValidClipboardCode) => {
+  ? function ClipboardCopyInput(isValidClipboardCode) {
       const cResult = require("c").c(23);
       ({
         label,
@@ -258,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = fn2;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function ClipboardCopyInput(arg0) {
       ({ onChangeCode, autoFocus } = arg0);
       ({
         label,

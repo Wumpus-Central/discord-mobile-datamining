@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   tag: {
     paddingHorizontal: 6,
@@ -22,7 +22,7 @@ let obj2 = {
   tagText: null,
 };
 const obj4 = { textAlign: "center", color: nativeDefault.unsafe_rawColors.WHITE, marginTop: null };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = -2;
@@ -44,7 +44,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/LiveTag/native/LiveTag.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function LiveTag(arg0) {
       const cResult = c.c(13);
       ({ style, textStyle, allowFontScaling } = arg0);
       const tmp4 = closure_4();
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp5 = items1;
     }
-  : (arg0) => {
+  : function LiveTag(arg0) {
       ({ style, textStyle, allowFontScaling } = arg0);
       const tmp = closure_4();
       const obj = { style: null, children: null };

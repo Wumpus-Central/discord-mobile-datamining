@@ -17,15 +17,15 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, guildId, arg3) => {
+  ? function useArchiveOrDelete(arg0, arg1, arg2, arg3) {
       _require = arg0;
       closure_1 = arg1;
-      importAll = guildId;
+      importAll = arg2;
       dependencyMap = arg3;
       let stringResult3 = dependencyMap;
       const cResult = require("c").c(41);
       let obj = require("c");
-      const subscriptionListing = require("GuildRoleSubscriptionsHooks").useSubscriptionListing(guildId);
+      const subscriptionListing = require("GuildRoleSubscriptionsHooks").useSubscriptionListing(arg2);
       let obj2 = require("GuildRoleSubscriptionsHooks");
       const removeEditStateId = GuildRoleSubscriptionListingEditStateUtilsAll.useEditStateIds(
         arg1,
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ submitting: submitting2, archiveSubscriptionListing } = archiveSubscriptionListing1);
       removeEditStateId(null);
       let obj5 = require("GuildRoleSubscriptionsHooks");
-      const first = stringResult3(GuildRoleSubscriptionListingEditStateUtilsAll.useName(guildId), 1)[0];
+      const first = stringResult3(GuildRoleSubscriptionListingEditStateUtilsAll.useName(arg2), 1)[0];
       let archived;
       if (subscriptionListing != null) {
         archived = subscriptionListing.archived;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[20] === tmp13) {
                   if (cResult[21] === archiveSubscriptionListing) {
                     if (cResult[22] === deleteSubscriptionListing) {
-                      if (cResult[23] === guildId) {
+                      if (cResult[23] === arg2) {
                         if (cResult[24] === arg1) {
                           if (cResult[25] === arg0) {
                             if (cResult[26] === tmp9) {
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[20] = cResult[5];
             cResult[21] = archiveSubscriptionListing;
             cResult[22] = deleteSubscriptionListing;
-            cResult[23] = guildId;
+            cResult[23] = arg2;
             cResult[24] = arg1;
             cResult[25] = arg0;
             cResult[26] = tmp9;
@@ -469,10 +469,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = undefined === subscriptionListing;
       cResult[13] = stringResult4;
     }
-  : (arg0, arg1, guildId, arg3) => {
+  : function useArchiveOrDelete(arg0, arg1, arg2, arg3) {
       _require = arg0;
       closure_1 = arg1;
-      importAll = guildId;
+      importAll = arg2;
       dependencyMap = arg3;
       closure_14 = async function _handleArchiveOrDelete2() {
         if (c2 === 2) {
@@ -499,10 +499,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                const obj4 = { title, body, confirmText, confirmColor: tmp2(1188).ButtonColors.RED };
+                const obj4 = { title, body, confirmText, confirmColor: tmp2(1200).ButtonColors.RED };
                 v2 = 1;
                 c2 = 1;
-                const obj5 = { value: v2(5715).confirm(obj4), done: false };
+                const obj5 = { value: v2(5298).confirm(obj4), done: false };
                 return obj5;
               }
             } else {
@@ -566,7 +566,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       };
       let stringResult3 = dependencyMap;
-      const subscriptionListing = require("GuildRoleSubscriptionsHooks").useSubscriptionListing(guildId);
+      const subscriptionListing = require("GuildRoleSubscriptionsHooks").useSubscriptionListing(arg2);
       let obj = require("GuildRoleSubscriptionsHooks");
       const removeEditStateId = GuildRoleSubscriptionListingEditStateUtilsAll.useEditStateIds(
         arg1,
@@ -580,7 +580,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ submitting: submitting2, error: error2 } = archiveSubscriptionListing);
       removeEditStateId(null);
       let obj4 = require("GuildRoleSubscriptionsHooks");
-      const first = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useName(guildId), 1)[0];
+      const first = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useName(arg2), 1)[0];
       let archived;
       if (subscriptionListing != null) {
         archived = subscriptionListing.archived;

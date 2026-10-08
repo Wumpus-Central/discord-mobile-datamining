@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/jank_stats/native/JankChatPanelReporter.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (showCreateThread) => {
+  ? function JankChatPanelReporter(showCreateThread) {
       const cResult = channelId(576).c(11);
       ({ translateX, maxWidth, channelId } = showCreateThread);
       showCreateThread = showCreateThread.showCreateThread;
@@ -25,20 +25,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const effect = noop.useEffect(tmp5, tmp6);
           const _Symbol = Symbol;
-          class C {
-            constructor() {
-              obj = { channelId, showCreateThread };
-              closure_2.current = obj;
-              return;
-            }
-          }
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn = function p() {
+            const fn2 = function p() {
               ({ channelId, showCreateThread } = ref.current);
               return getJankScreenName.getChatPanelScreenName(channelId, showCreateThread);
             };
-            cResult[7] = fn;
-            let tmp9 = fn;
+            cResult[7] = fn2;
+            let tmp9 = fn2;
           } else {
             tmp9 = cResult[7];
           }
@@ -53,35 +46,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             openAt: 0,
             closedAt: maxWidth,
             resolveOpenName: tmp9,
-            resolveClosedName: channelId(15973).getPanelListScreenName,
+            resolveClosedName: channelId(16233).getPanelListScreenName,
           };
-          const tmp14 = jsx(showCreateThread(15976), {
+          const tmp14 = jsx(showCreateThread(16236), {
             position: translateX,
             openAt: 0,
             closedAt: maxWidth,
             resolveOpenName: tmp9,
-            resolveClosedName: channelId(15973).getPanelListScreenName,
+            resolveClosedName: channelId(16233).getPanelListScreenName,
           });
           cResult[8] = maxWidth;
           cResult[9] = translateX;
           cResult[10] = tmp14;
           tmp10 = tmp14;
-          const tmp13 = showCreateThread(15976);
+          const tmp13 = showCreateThread(16236);
         }
-        class C {
-          constructor() {
-            obj = { channelId, showCreateThread };
-            closure_2.current = obj;
-            return;
-          }
-        }
+        const fn = function v() {
+          closure_2.current = { channelId, showCreateThread };
+        };
         const items = [channelId, showCreateThread];
         cResult[3] = channelId;
         cResult[4] = showCreateThread;
-        cResult[5] = C;
+        cResult[5] = fn;
         cResult[6] = items;
         tmp6 = items;
-        tmp5 = C;
+        tmp5 = fn;
       }
       const obj4 = { channelId, showCreateThread };
       cResult[0] = channelId;
@@ -90,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = obj4;
       const obj = channelId(576);
     }
-  : (channelId) => {
+  : function JankChatPanelReporter(channelId) {
       channelId = channelId.channelId;
       const showCreateThread = channelId.showCreateThread;
       ({ translateX, maxWidth } = channelId);
@@ -108,13 +97,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         openAt: 0,
         closedAt: maxWidth,
         resolveOpenName: callback,
-        resolveClosedName: channelId(15973).getPanelListScreenName,
+        resolveClosedName: channelId(16233).getPanelListScreenName,
       };
-      return jsx(showCreateThread(15976), {
+      return jsx(showCreateThread(16236), {
         position: translateX,
         openAt: 0,
         closedAt: maxWidth,
         resolveOpenName: callback,
-        resolveClosedName: channelId(15973).getPanelListScreenName,
+        resolveClosedName: channelId(16233).getPanelListScreenName,
       });
     };

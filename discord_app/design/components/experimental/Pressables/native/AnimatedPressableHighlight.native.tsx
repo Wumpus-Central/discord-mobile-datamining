@@ -12,10 +12,10 @@ let closure_3 = ["children"];
 let closure_4 = ["children"];
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(5916).PressableHighlight);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(6189).PressableHighlight);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function AnimatedPressableHighlightiOS(children) {
       const cResult = c.c(12);
       if (cResult[0] !== children) {
         children = children.children;
@@ -67,7 +67,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = items;
       const tmpResult = useIOSPressEffects;
     }
-  : (children) => {
+  : function AnimatedPressableHighlightiOS(children) {
       const merged = Object.assign(children, Object.assign({ children: 0 }));
       const iOSPressEffects = useIOSPressEffects.useIOSPressEffects(4);
       const obj2 = {
@@ -88,7 +88,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       );
     };
 ReactCompilerGating = fn(558);
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 if (PlatformUtils.isAndroid()) {
   tmp2 = tmp3;
 }

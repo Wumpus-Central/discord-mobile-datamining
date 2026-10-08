@@ -2,14 +2,14 @@
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_3 = fn(6742).WishlistRecommendationReason;
+let closure_3 = fn(6918).WishlistRecommendationReason;
 const SKUProductLines = fn(1085).SKUProductLines;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistSkuFilter.native.tsx");
 
 export const useWishlistSkuFilter = ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function useWishlistSkuFilter(userId) {
       const cResult = skusToUserAndReason(userId[4]).c(16);
       ({ wishlistAndRecommendations, skusToUserAndReason } = userId);
       userId = userId.userId;
@@ -89,7 +89,7 @@ export const useWishlistSkuFilter = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = fn2;
       }
     }
-  : (wishlistAndRecommendations) => {
+  : function useWishlistSkuFilter(wishlistAndRecommendations) {
       wishlistAndRecommendations = wishlistAndRecommendations.wishlistAndRecommendations;
       const skusToUserAndReason = wishlistAndRecommendations.skusToUserAndReason;
       const userId = wishlistAndRecommendations.userId;

@@ -1,11 +1,12 @@
 // discord_app/modules/premium/promotions/MarketingComponentRecord.tsx
 import DurationsDefault from "../../../utils/Durations.tsx";
 import ProtoUtils from "../../../utils/ProtoUtils.tsx";
-import MurmurHashV3Default from "../../../../_runtime/01251_MurmurHashV3.js";
+import MurmurHashV3Default from "../../../../_runtime/01263_MurmurHashV3.js";
 import premium_marketing_component_properties from "../../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_marketing_component_properties.tsx";
 import Record from "../../../lib/Record.tsx";
 
 require = fn;
+let closure_3 = { month: "long", day: "numeric", year: "numeric" };
 let MarketingComponentRecord;
 class MarketingComponentRecord extends tmp2 {
   constructor(arg0) {
@@ -19,6 +20,7 @@ class MarketingComponentRecord extends tmp2 {
       endDate: tmp.endDate,
       effectiveStartDate: tmp.effectiveStartDate,
       effectiveEndDate: tmp.effectiveEndDate,
+      promotionEndDate: tmp.promotionEndDate,
     } = global);
     return tmp;
   }
@@ -50,27 +52,25 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
     endDate = null;
   }
   ({ id, component_type } = start_date);
-  const tmp14 = ProtoUtils;
-  const b64ToProto = tmp14.b64ToProto;
-  const b64ToProtoResult = b64ToProto(
+  const obj = ProtoUtils;
+  const b64ToProtoResult = obj.b64ToProto(
     premium_marketing_component_properties.PremiumMarketingComponentProperties,
     start_date.properties,
   );
   const promotion_id = start_date.promotion_id;
-  let tmp16 = date;
+  let tmp15 = date;
   if (date == null) {
-    tmp16 = startDate;
+    tmp15 = startDate;
   }
-  let tmp17 = date1;
+  let tmp16 = date1;
   if (date1 == null) {
-    tmp17 = endDate;
+    tmp16 = endDate;
   }
   if (typeof MarketingComponentRecord === "function") {
-    const tmp21 = new MarketingComponentRecord(
+    const tmp20 = new MarketingComponentRecord(
       tmp4,
       tmp,
-      tmp14,
-      b64ToProto,
+      obj,
       MarketingComponentRecord,
       new.target,
       id,
@@ -79,19 +79,43 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
       promotion_id,
       date,
       date1,
+      tmp15,
+      tmp16,
     );
-    tmp21.id = id;
-    tmp21.componentType = component_type;
-    tmp21.properties = b64ToProtoResult;
-    tmp21.promotionId = promotion_id;
-    tmp21.startDate = date;
-    tmp21.endDate = date1;
-    tmp21.effectiveStartDate = tmp16;
-    tmp21.effectiveEndDate = tmp17;
-    return tmp21;
+    tmp20.id = id;
+    tmp20.componentType = component_type;
+    tmp20.properties = b64ToProtoResult;
+    tmp20.promotionId = promotion_id;
+    tmp20.startDate = date;
+    tmp20.endDate = date1;
+    tmp20.effectiveStartDate = tmp15;
+    tmp20.effectiveEndDate = tmp16;
+    tmp20.promotionEndDate = endDate;
+    return tmp20;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
+};
+prototype["getFormatVariableValues"] = function getFormatVariableValues(arg0) {
+  const self = this;
+  if (null == this.promotionEndDate) {
+    let obj = {};
+  } else {
+    const promotionEndDate2 = self.promotionEndDate;
+    const _Date = Date;
+    const date = new Date();
+    const time = promotionEndDate2.getTime();
+    const diff = time - date.getTime();
+    let num = 0;
+    if (diff > 0) {
+      const _Math = Math;
+      num = Math.ceil(diff / DurationsDefault.Millis.DAY);
+    }
+    obj = { days_left: num, promotion_end_date: null };
+    const promotionEndDate = self.promotionEndDate;
+    obj.promotion_end_date = promotionEndDate.toLocaleDateString(arg0, closure_3);
+  }
+  return obj;
 };
 Object.defineProperty(prototype, "isTimed", {
   get: function isTimed() {

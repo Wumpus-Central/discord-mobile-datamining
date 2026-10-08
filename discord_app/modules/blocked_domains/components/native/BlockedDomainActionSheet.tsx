@@ -14,7 +14,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16 },
   title: { textAlign: "center" },
@@ -27,7 +27,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/blocked_domains/components/native/BlockedDomainActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (url) => {
+  ? function BlockedDomainActionSheet(url) {
       const cResult = c.c(17);
       url = url.url;
       const tmp4 = closure_5();
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp19;
       tmp18 = tmp19;
     }
-  : (url) => {
+  : function BlockedDomainActionSheet(url) {
       const tmp = closure_5();
       const obj = { startExpanded: true, children: null };
       const obj2 = { spacing: 16, justify: "center", align: "center", style: tmp.container, children: null };

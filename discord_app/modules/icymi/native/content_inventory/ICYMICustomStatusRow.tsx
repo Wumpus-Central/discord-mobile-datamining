@@ -8,7 +8,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ReactionIcon from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import PencilIcon from "../../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
-import _modDef11055 from "../../../../../_runtime/metro/11055__.js";
+import _modDef11701 from "../../../../../_runtime/metro/11701__.js";
 import ArrowAngleLeftUpIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowAngleLeftUpIcon.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -21,12 +21,12 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 let c11 = 40;
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_13 = createStyles.createStyles((backgroundColor) => {
   const obj = { background: { backgroundColor, overflow: "hidden" } };
   return obj;
 });
-const createICYMIStyles = fn(16434);
+const createICYMIStyles = fn(16694);
 let closure_14 = createICYMIStyles.createICYMIStyles((gap, arg1) => {
   let num = 56;
   if (!arg1) {
@@ -110,11 +110,11 @@ let closure_14 = createICYMIStyles.createICYMIStyles((gap, arg1) => {
 });
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UploadPlaceholder() {
       const cResult = c.c(4);
       const tmp4 = closure_14(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { source: _modDef11055, size: native.IconSizes.SMALL };
+        const obj2 = { source: _modDef11701, size: native.IconSizes.SMALL };
         const tmp8 = closure_1_8(native.Icon, obj2);
         cResult[0] = tmp8;
         let first = tmp8;
@@ -144,9 +144,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp12;
     }
-  : () => {
+  : function UploadPlaceholder() {
       const obj = { style: closure_14(false).uploadContainer, children: null };
-      const items = [closure_1_8(native.Icon, { source: _modDef11055, size: native.IconSizes.SMALL })];
+      const items = [closure_1_8(native.Icon, { source: _modDef11701, size: native.IconSizes.SMALL })];
       const obj3 = { variant: "text-md/normal", color: "text-strong", children: null };
       const intl = util.intl;
       obj3.children = intl.string(util.t["3UB9ad"]);
@@ -159,14 +159,14 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/content_inventory/ICYMICustomStatusRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
-      const cResult = id(576).c(115);
+  ? function GravityCustomStatusEntryRow(id) {
+      const cResult = id(576).c(113);
       id = id.id;
       const userId = id.userId;
       ({ customStatusExtra, renderForScreenshot, variant } = id);
       closure_14(renderForScreenshot);
       const obj = id(576);
-      const gradientBottom = id(7518).useGradientBottom();
+      const gradientBottom = id(9241).useGradientBottom();
       let backgroundColor;
       if (gradientBottom != null) {
         backgroundColor = gradientBottom.backgroundColor;
@@ -176,10 +176,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp6Result = closure_13(backgroundColor);
       if (cResult[0] !== tmp6Result.background.backgroundColor) {
-        const hexWithOpacityResult = tmp(4733).hexWithOpacity(tmp6Result.background.backgroundColor, 0.6);
+        const hexWithOpacityResult = tmp(4927).hexWithOpacity(tmp6Result.background.backgroundColor, 0.6);
         cResult[0] = tmp6Result.background.backgroundColor;
         cResult[1] = hexWithOpacityResult;
-        const tmpResult = tmp(4733);
+        const tmpResult = tmp(4927);
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -189,31 +189,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = cResult[2];
       }
       if (cResult[3] !== userId) {
-        class B {
+        class A {
           constructor() {
             return closure_6.getUser(userId);
           }
         }
         cResult[3] = userId;
-        cResult[4] = B;
+        cResult[4] = A;
       } else {
-        class B {
+        class A {
           constructor() {
             return closure_6.getUser(userId);
           }
         }
       }
-      const obj2 = id(7518);
-      const stateFromStores = id(504).useStateFromStores(tmp12, B);
+      const obj2 = id(9241);
+      const stateFromStores = id(504).useStateFromStores(tmp12, A);
       if (customStatusExtra.emoji_id != null) {
-        class B {
+        class A {
           constructor() {
             return closure_6.getUser(userId);
           }
         }
       }
       if ("0" !== undefined) {
-        class B {
+        class A {
           constructor() {
             return closure_6.getUser(userId);
           }
@@ -221,14 +221,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const emoji_name = customStatusExtra.emoji_name;
       if (emoji_name == null) {
-        class B {
+        class A {
           constructor() {
             return closure_6.getUser(userId);
           }
         }
       }
       if (cResult[5] === customStatusExtra.emoji_animated) {
-        class B {
+        class A {
           constructor() {
             return closure_6.getUser(userId);
           }
@@ -241,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { id: null, name: emoji_name, animated: customStatusExtra.emoji_animated };
       const tmpResult2 = id(504);
     }
-  : (id) => {
+  : function GravityCustomStatusEntryRow(id) {
       id = id.id;
       const userId = id.userId;
       ({ customStatusExtra, renderForScreenshot } = id);
@@ -477,15 +477,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         items13[2] = textOnly;
         obj17.style = items13;
-        const obj18 = { style: null, children: null };
-        const items14 = [tmp.emojiTextContainer];
-        obj18.style = items14;
-        const items15 = [tmp20Result, ,];
+        const obj18 = { style: tmp.emojiTextContainer, children: null };
+        const items14 = [tmp20Result, ,];
         if (tmp31Result10) {
           const obj19 = { style: tmp.emojiText, variant: "text-md/normal", children: gameMentionsAsPlainText };
           tmp31Result10 = closure_8(tmp2(renderForScreenshot[13]).Text, obj19);
         }
-        items15[1] = tmp31Result10;
+        items14[1] = tmp31Result10;
         let tmp31Result11 = !hasStatus;
         if (!hasStatus) {
           const obj20 = { variant: "text-md/normal", children: null };
@@ -493,18 +491,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj20.children = intl3.string(tmp2(renderForScreenshot[14]).t["6ojWO0"]);
           tmp31Result11 = closure_8(tmp2(renderForScreenshot[13]).Text, obj20);
         }
-        items15[2] = tmp31Result11;
-        obj18.children = items15;
-        const items16 = [closure_9(closure_5, obj18)];
+        items14[2] = tmp31Result11;
+        obj18.children = items14;
+        const items15 = [closure_9(closure_5, obj18)];
         let tmp31Result12 = !hasStatus;
         if (!hasStatus) {
           tmp31Result12 = closure_8(closure_15, {});
         }
-        items16[1] = tmp31Result12;
-        obj17.children = items16;
+        items15[1] = tmp31Result12;
+        obj17.children = items15;
         obj16.children = closure_9(tmp2(renderForScreenshot[23]).PressableHighlight, obj17);
-        const items17 = [closure_8(tmp14(renderForScreenshot[33]), obj16), tmp25];
-        obj15.children = items17;
+        const items16 = [closure_8(tmp14(renderForScreenshot[33]), obj16), tmp25];
+        obj15.children = items16;
         items11[1] = closure_9(closure_5, obj15);
         element.children = items11;
         return closure_9(tmp14Result8, element);

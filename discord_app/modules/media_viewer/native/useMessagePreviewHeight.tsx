@@ -13,8 +13,12 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result2 = size.fileFinishedImporting("modules/media_viewer/native/useMessagePreviewHeight.tsx");
 
 export { useMessagePreviewHeightStore };
-export const useMessagePreviewCollapsedheight = () => obj().collapsedHeight;
-export const useMessagePreviewExpandedHeight = () => obj().expandedHeight;
+export const useMessagePreviewCollapsedheight = function useMessagePreviewCollapsedheight() {
+  return obj().collapsedHeight;
+};
+export const useMessagePreviewExpandedHeight = function useMessagePreviewExpandedHeight() {
+  return obj().expandedHeight;
+};
 export const setMesssagePreviewHeight = function setMesssagePreviewHeight(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => obj.setState(closure_0));

@@ -1,13 +1,13 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import ConstantsIOS from "../../../../../ConstantsIOS.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05387_LinearGradient.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Gradients = fn(6951).Gradients;
+const Gradients = fn(7140).Gradients;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { gradient: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 obj2.gradient = { opacity: 0.1 };
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const PremiumUpsellGradientBackground = ReactCompilerGating.isReactCompilerEnabled()
-  ? (useTier0UpsellContent) => {
+  ? function PremiumUpsellGradientBackground(useTier0UpsellContent) {
       const cResult = c.c(3);
       const tmp4 = closure_5();
       if (true === useTier0UpsellContent.useTier0UpsellContent) {
@@ -43,7 +43,7 @@ export const PremiumUpsellGradientBackground = ReactCompilerGating.isReactCompil
       cResult[2] = tmp9;
       tmp7 = tmp9;
     }
-  : (useTier0UpsellContent) => {
+  : function PremiumUpsellGradientBackground(useTier0UpsellContent) {
       const obj = { style: closure_5().gradient, start: null, end: null, colors: null };
       const tmp = closure_5();
       obj.start = ConstantsIOS.HorizontalGradient.START;

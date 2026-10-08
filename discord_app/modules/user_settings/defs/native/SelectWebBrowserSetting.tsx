@@ -13,7 +13,7 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useWebBrowserSettingOptions() {
       let CHROME = dependencyMap;
       const cResult = c.c(6);
       const browserManagerIsChromeInstalled = BrowserManager.useBrowserManagerIsChromeInstalled();
@@ -82,7 +82,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         items.push(tmp7);
       }
     }
-  : () => {
+  : function useWebBrowserSettingOptions() {
       let CHROME = dependencyMap;
       const items = [];
       const browserManagerIsChromeInstalled = BrowserManager.useBrowserManagerIsChromeInstalled();
@@ -121,14 +121,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       tmpResult = PlatformUtils;
     };
-const fn = () => BrowserManager.useBrowserManagerSelectedBrowser();
+function useWebBrowserSettingValue() {
+  return BrowserManager.useBrowserManagerSelectedBrowser();
+}
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["C+DkPu"]);
   },
   parent: SettingsConstants.MobileUserSettings.WEB_BROWSER,
-  useValue: fn,
+  useValue: useWebBrowserSettingValue,
   onValueChange: function onWebBrowserSettingValueChange(arg0) {
     const result = BrowserManager.browserManagerSelectBrowser(Number(arg0));
   },

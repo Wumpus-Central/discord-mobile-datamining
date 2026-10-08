@@ -8,7 +8,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/useViewableAppLauncherHomeItems.tsx");
 
 export const useViewableAppLauncherHomeItems = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useViewableAppLauncherHomeItems() {
       const cResult = sharedValue(sharedValue1[3]).c(8);
       let obj = sharedValue(sharedValue1[3]);
       sharedValue = sharedValue(sharedValue1[4]).useSharedValue(false);
@@ -96,7 +96,7 @@ export const useViewableAppLauncherHomeItems = ReactCompilerGating.isReactCompil
       cResult[3] = fn;
       tmp5 = fn;
     }
-  : () => {
+  : function useViewableAppLauncherHomeItems() {
       sharedValue = sharedValue(sharedValue1[4]).useSharedValue(false);
       let obj = sharedValue(sharedValue1[4]);
       sharedValue1 = sharedValue(sharedValue1[4]).useSharedValue(false);

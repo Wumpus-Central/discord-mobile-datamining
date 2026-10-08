@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const SPRING_CONFIG = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let closure_8 = createStyles.createStyles((arg0) => {
   const item = {
     borderRadius: nativeDefault.radii.lg,
@@ -24,7 +24,7 @@ let closure_8 = createStyles.createStyles((arg0) => {
   item.paddingVertical = num;
   return { item, label: { flexDirection: "column", alignItems: "center", gap: 8 } };
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_9 = createStyles.createStyleProperties({
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
@@ -46,7 +46,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlItem.native.tsx");
 
 export const SegmentedControlItem = ReactCompilerGating.isReactCompilerEnabled()
-  ? (state) => {
+  ? function SegmentedControlItem(state) {
       const cResult = index(activeIndex[6]).c(24);
       ({ label, index } = state);
       ({ itemCount, icon, onPress, onPressIn, onPressOut, pressed } = state);
@@ -212,7 +212,7 @@ export const SegmentedControlItem = ReactCompilerGating.isReactCompilerEnabled()
         SPRING_CONFIG,
       };
     }
-  : (index) => {
+  : function SegmentedControlItem(index) {
       index = index.index;
       const pressed = index.pressed;
       const variant = index.variant;

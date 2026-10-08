@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/VideoQuestModal/icons/SkipBackwardIcon.tsx
 import c from "../../../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/07550_inlineStyles.js";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/icons/SkipBackwardIcon.tsx");
 
 export const SkipBackwardIcon = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SkipBackwardIcon(arg0) {
       const cResult = c.c(16);
       if (cResult[0] !== arg0) {
         ({ width, height, color } = arg0);
@@ -111,7 +111,7 @@ export const SkipBackwardIcon = ReactCompilerGating.isReactCompilerEnabled()
       cResult[15] = tmp21;
       tmp18 = tmp21;
     }
-  : (width) => {
+  : function SkipBackwardIcon(width) {
       let num = width.width;
       if (num === undefined) {
         num = 24;

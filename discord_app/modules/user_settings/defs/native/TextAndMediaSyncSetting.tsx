@@ -7,9 +7,9 @@ import SelectivelySyncedUserSettingsStore from "../../SelectivelySyncedUserSetti
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useTextAndMediaSyncSettingValue() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SelectivelySyncedUserSettingsStore];
@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useTextAndMediaSyncSettingValue() {
       const items = [SelectivelySyncedUserSettingsStore];
       return initialize.useStateFromStores(items, () => SelectivelySyncedUserSettingsStore.shouldSync("text"));
     };
@@ -34,9 +34,9 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(7645).MobileUserSettings.CHAT,
+  parent: fn(7966).MobileUserSettings.CHAT,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useTextAndMediaSyncSettingValue() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [SelectivelySyncedUserSettingsStore];
@@ -52,7 +52,7 @@ const toggle = SettingBuilders.createToggle({
         }
         return initialize.useStateFromStores(tmp4, tmp5);
       }
-    : () => {
+    : function useTextAndMediaSyncSettingValue() {
         const items = [SelectivelySyncedUserSettingsStore];
         return initialize.useStateFromStores(items, () => SelectivelySyncedUserSettingsStore.shouldSync("text"));
       },

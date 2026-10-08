@@ -24,7 +24,7 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messag
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function Messages(arg0) {
         const cResult = sharedValue(sections[5]).c(40);
         let obj = sharedValue(sections[5]);
         const analyticsLocations = dataKey(sections[6])(dataKey(sections[7]).MESSAGES).analyticsLocations;
@@ -45,28 +45,33 @@ export default noop.memo(
         sections = tmp11.sections;
         const tmp10 = dataKey(sections[11])();
         const ref1 = externalScrollEventHandler.useRef(null);
+        const ref = externalScrollEventHandler.useRef(null);
+        if (obj7.isAndroid()) {
+          let AndroidMessagesListImplExperiment = tmp(tmp14).AndroidMessagesListImplExperiment;
+        } else {
+          AndroidMessagesListImplExperiment = tmp4(tmp14);
+        }
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          let obj7 = { location: "Messages Tab" };
-          cResult[0] = obj7;
-          let first = obj7;
+          const obj8 = { location: "Messages Tab" };
+          cResult[0] = obj8;
+          let first = obj8;
         } else {
           first = cResult[0];
         }
-        const ref = externalScrollEventHandler.useRef(null);
-        const config = dataKey(sections[13]).useConfig(first);
+        const config = AndroidMessagesListImplExperiment.useConfig(first);
         ({ list, recycleItems } = config);
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj8 = { listRef: ref, listRefHappeningNow: ref1 };
-          cResult[1] = obj8;
-          let tmp16 = obj8;
+          const obj9 = { listRef: ref, listRefHappeningNow: ref1 };
+          cResult[1] = obj9;
+          let tmp17 = obj9;
         } else {
-          tmp16 = cResult[1];
+          tmp17 = cResult[1];
         }
-        dataKey(sections[14])(tmp16);
-        dataKey(sections[15])();
-        const tmp4Result = dataKey(sections[13]);
-        const commonTriggerPoint = sharedValue(sections[16]).useCommonTriggerPoint(
-          tmp(tmp2[17]).DmGdmListRenderTriggerPoint,
+        dataKey(sections[15])(tmp17);
+        dataKey(sections[16])();
+        obj7 = sharedValue(sections[13]);
+        const commonTriggerPoint = sharedValue(sections[17]).useCommonTriggerPoint(
+          tmp(tmp2[18]).DmGdmListRenderTriggerPoint,
         );
         if (cResult[2] !== dataKey) {
           const fn = function z() {
@@ -99,13 +104,13 @@ export default noop.memo(
           cResult[2] = dataKey;
           cResult[3] = fn;
           cResult[4] = items;
-          let tmp21 = items;
-          let tmp20 = fn;
+          let tmp22 = items;
+          let tmp21 = fn;
         } else {
-          tmp20 = cResult[3];
-          tmp21 = cResult[4];
+          tmp21 = cResult[3];
+          tmp22 = cResult[4];
         }
-        const effect = obj6.useEffect(tmp20, tmp21);
+        const effect = obj6.useEffect(tmp21, tmp22);
         if (cResult[5] !== sections) {
           class D {
             constructor() {
@@ -143,7 +148,7 @@ export default noop.memo(
               return;
             }
           }
-          cResult[7] = tmp26;
+          cResult[7] = tmp27;
         } else {
           class D {
             constructor() {
@@ -156,20 +161,21 @@ export default noop.memo(
             }
           }
         }
-        const tmpResult = sharedValue(sections[16]);
-        externalScrollEventHandler = sharedValue(sections[24]).useExternalScrollEventHandler(tmp26);
+        const tmpResult = sharedValue(sections[17]);
+        externalScrollEventHandler = sharedValue(sections[24]).useExternalScrollEventHandler(tmp27);
         const tmpResult3 = sharedValue(sections[24]);
-        class V {
-          constructor(arg0) {
-            result = closure_0.set(arg0.contentOffset.y);
-            tmp2 = closure_3(arg0.contentOffset.y, arg0.contentSize.height, arg0.layoutMeasurement.height);
-            return;
-          }
-        }
-        V.__closure = { scrollPosition: sharedValue, handleGuildsNavigationScroll: externalScrollEventHandler };
-        V.__workletHash = 5461403437592;
-        V.__initData = __initData;
-        const animatedScrollHandler = sharedValue(sections[8]).useAnimatedScrollHandler(V);
+        const fn2 = function j(contentOffset) {
+          const result = sharedValue.set(contentOffset.contentOffset.y);
+          externalScrollEventHandler(
+            contentOffset.contentOffset.y,
+            contentOffset.contentSize.height,
+            contentOffset.layoutMeasurement.height,
+          );
+        };
+        fn2.__closure = { scrollPosition: sharedValue, handleGuildsNavigationScroll: externalScrollEventHandler };
+        fn2.__workletHash = 5461403437592;
+        fn2.__initData = __initData;
+        const animatedScrollHandler = sharedValue(sections[8]).useAnimatedScrollHandler(fn2);
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           class D {
             constructor() {
@@ -183,7 +189,7 @@ export default noop.memo(
           }
           const stringResult = obj13.string(tmp(tmp2[25]).t.OIgYlQ);
           cResult[8] = stringResult;
-          const tmp29 = stringResult;
+          const tmp30 = stringResult;
         } else {
           class D {
             constructor() {
@@ -220,7 +226,7 @@ export default noop.memo(
         cResult[18] = sharedValue;
         cResult[19] = youBarTotalHeight;
         cResult[20] = {
-          accessibilityLabel: tmp29,
+          accessibilityLabel: tmp30,
           data: tmp11,
           handleScrollAnimated: animatedScrollHandler,
           insetEnd: youBarTotalHeight,
@@ -234,8 +240,8 @@ export default noop.memo(
           scrollIndicatorInsetBottom: youBarTotalHeight1,
           scrollPosition: sharedValue,
         };
-        const obj9 = {
-          accessibilityLabel: tmp29,
+        const obj10 = {
+          accessibilityLabel: tmp30,
           data: tmp11,
           handleScrollAnimated: animatedScrollHandler,
           insetEnd: youBarTotalHeight,
@@ -251,13 +257,12 @@ export default noop.memo(
         };
         const tmpResult4 = sharedValue(sections[8]);
       }
-    : (style) => {
+    : function Messages(style) {
         let sharedValue;
         let dataKey;
         let sections;
         let externalScrollEventHandler;
         const tmp3 = dataKey(sections[6]);
-        const tmp4 = sharedValue;
         sharedValue = sharedValue(sections[8]).useSharedValue(0);
         let obj = sharedValue(sections[8]);
         const youBarTotalHeight = sharedValue(sections[9]).useYouBarTotalHeight();
@@ -275,16 +280,21 @@ export default noop.memo(
         const ref = externalScrollEventHandler.useRef(null);
         const ref1 = externalScrollEventHandler.useRef(null);
         const tmp9 = dataKey(sections[11])();
-        const config = dataKey(sections[13]).useConfig({ location: "Messages Tab" });
+        if (obj6.isAndroid()) {
+          let AndroidMessagesListImplExperiment = tmp4(tmp13).AndroidMessagesListImplExperiment;
+        } else {
+          AndroidMessagesListImplExperiment = tmp(tmp13);
+        }
+        const config = AndroidMessagesListImplExperiment.useConfig({ location: "Messages Tab" });
         ({ list, recycleItems } = config);
-        dataKey(sections[14])({ listRef: ref, listRefHappeningNow: ref1 });
-        dataKey(sections[15])();
-        const obj5 = dataKey(sections[13]);
-        const commonTriggerPoint = sharedValue(sections[16]).useCommonTriggerPoint(
-          sharedValue(sections[17]).DmGdmListRenderTriggerPoint,
+        dataKey(sections[15])({ listRef: ref, listRefHappeningNow: ref1 });
+        dataKey(sections[16])();
+        obj6 = sharedValue(sections[13]);
+        const commonTriggerPoint = sharedValue(sections[17]).useCommonTriggerPoint(
+          tmp4(tmp2[18]).DmGdmListRenderTriggerPoint,
         );
         const items = [dataKey];
-        const effect = externalScrollEventHandler.useEffect(() => {
+        const effect = obj5.useEffect(() => {
           if (null != dataKey) {
             if (!obj7.isAndroid()) {
               if (!AccessibilityStore.useReducedMotion) {
@@ -310,14 +320,14 @@ export default noop.memo(
             obj7 = PlatformUtils;
           }
         }, items);
-        const layoutEffect = externalScrollEventHandler.useLayoutEffect(() => {
+        const layoutEffect = obj5.useLayoutEffect(() => {
           TTIAnalyticsUtils.trackAppUIViewed();
           const reduced = sections.reduce((acc, item) => acc + item, 0);
           TTITrackerDefault.recordRender(reduced, GatewayConnectionStore.isConnected());
         });
-        const obj6 = sharedValue(sections[16]);
+        const tmp4Result = sharedValue(sections[17]);
         externalScrollEventHandler = sharedValue(sections[24]).useExternalScrollEventHandler({ id: "messages" });
-        let obj7 = sharedValue(sections[24]);
+        const tmp4Result3 = sharedValue(sections[24]);
         const fn = function w(contentOffset) {
           const result = sharedValue.set(contentOffset.contentOffset.y);
           externalScrollEventHandler(
@@ -329,7 +339,7 @@ export default noop.memo(
         fn.__closure = { scrollPosition: sharedValue, handleGuildsNavigationScroll: externalScrollEventHandler };
         fn.__workletHash = 17197843851355;
         fn.__initData = __initData2;
-        const obj9 = {
+        let obj7 = {
           accessibilityLabel: null,
           data: null,
           handleScrollAnimated: null,
@@ -344,48 +354,48 @@ export default noop.memo(
           scrollIndicatorInsetBottom: null,
           scrollPosition: null,
         };
-        const obj8 = sharedValue(sections[8]);
-        const intl = sharedValue(sections[25]).intl;
-        obj9.accessibilityLabel = intl.string(sharedValue(sections[25]).t.OIgYlQ);
-        obj9.data = tmp10;
-        obj9.handleScrollAnimated = sharedValue(sections[8]).useAnimatedScrollHandler(fn);
-        obj9.insetEnd = youBarTotalHeight;
-        obj9.listItemHeight = listItemHeight;
-        obj9.listItemSizes = listItemSizes;
-        obj9.listItemSuggestedFriendHeight = listItemSuggestedFriendHeight;
-        obj9.listLeft = listLeft;
-        obj9.listRefHappeningNow = ref1;
-        obj9.listTop = listTop;
-        obj9.recycleItems = recycleItems;
-        obj9.scrollIndicatorInsetBottom = youBarTotalHeight1;
-        obj9.scrollPosition = sharedValue;
-        const obj10 = { value: tmp3(dataKey(sections[7]).MESSAGES).analyticsLocations, children: null };
-        const obj11 = { style: style.style, children: null };
+        const tmp4Result4 = sharedValue(sections[8]);
+        const intl = tmp4(tmp2[25]).intl;
+        obj7.accessibilityLabel = intl.string(sharedValue(sections[25]).t.OIgYlQ);
+        obj7.data = tmp10;
+        obj7.handleScrollAnimated = sharedValue(sections[8]).useAnimatedScrollHandler(fn);
+        obj7.insetEnd = youBarTotalHeight;
+        obj7.listItemHeight = listItemHeight;
+        obj7.listItemSizes = listItemSizes;
+        obj7.listItemSuggestedFriendHeight = listItemSuggestedFriendHeight;
+        obj7.listLeft = listLeft;
+        obj7.listRefHappeningNow = ref1;
+        obj7.listTop = listTop;
+        obj7.recycleItems = recycleItems;
+        obj7.scrollIndicatorInsetBottom = youBarTotalHeight1;
+        obj7.scrollPosition = sharedValue;
+        const obj8 = { value: tmp3(dataKey(sections[7]).MESSAGES).analyticsLocations, children: null };
+        const obj9 = { style: style.style, children: null };
         const animatedScrollHandler = sharedValue(sections[8]).useAnimatedScrollHandler(fn);
-        const obj12 = { backgroundColor: dataKey(sections[33]).colors.PANEL_BG, children: null };
+        const obj10 = { backgroundColor: dataKey(sections[33]).colors.PANEL_BG, children: null };
         const items1 = [closure_6(dataKey(sections[26]), { height: headerSize, scrollPosition: sharedValue }), ,];
         if (tmp10.showFullscreenEmptyState) {
-          let tmp21Result = closure_6(tmp(tmp2[27]), {});
+          let tmp22Result = closure_6(tmp(tmp2[27]), {});
         } else {
           if ("legend" === list) {
-            let tmp24 = tmp2[28];
+            let tmp25 = tmp2[28];
           } else {
-            tmp24 = "flash" === list ? tmp2[29] : tmp2[30];
+            tmp25 = "flash" === list ? tmp2[29] : tmp2[30];
           }
-          const obj13 = { ref };
-          const merged = Object.assign(obj9);
-          tmp21Result = closure_6(tmp(tmp24), obj13);
-          const tmpResult = tmp(tmp24);
+          const obj11 = { ref };
+          const merged = Object.assign(obj7);
+          tmp22Result = closure_6(tmp(tmp25), obj11);
+          const tmpResult2 = tmp(tmp25);
         }
-        items1[1] = tmp21Result;
-        let tmp21Result2 = null;
+        items1[1] = tmp22Result;
+        let tmp22Result2 = null;
         if (!doesLandOnHomeDrawer) {
-          tmp21Result2 = closure_6(tmp4(tmp2[31]).TTIFirstContentfulPaint, { label: "messages_tabs" });
+          tmp22Result2 = closure_6(tmp4(tmp2[31]).TTIFirstContentfulPaint, { label: "messages_tabs" });
         }
-        items1[2] = tmp21Result2;
-        obj12.children = items1;
-        obj11.children = closure_7(sharedValue(sections[32]).CutoutBackgroundProvider, obj12);
-        obj10.children = closure_6(dataKey(sections[34]), obj11);
-        return closure_6(sharedValue(sections[6]).AnalyticsLocationProvider, obj10);
+        items1[2] = tmp22Result2;
+        obj10.children = items1;
+        obj9.children = closure_7(sharedValue(sections[32]).CutoutBackgroundProvider, obj10);
+        obj8.children = closure_6(dataKey(sections[34]), obj9);
+        return closure_6(sharedValue(sections[6]).AnalyticsLocationProvider, obj8);
       },
 );

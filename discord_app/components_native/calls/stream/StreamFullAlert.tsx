@@ -2,9 +2,9 @@
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import common_AlertDefault from "../../common/Alert.tsx";
 import AVError from "../../../modules/errors/av_errors/AVError.tsx";
-import _modDef18096 from "../../../../_runtime/metro/18096__.js";
+import common_AlertDefault from "../../common/Alert.tsx";
+import _modDef18383 from "../../../../_runtime/metro/18383__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/calls/stream/StreamFullAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function StreamFullAlert(arg0) {
       const cResult = c.c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const errorInfo = AVError.getErrorInfo(AVError.AVError.STREAM_FULL);
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: first,
         };
         const tmp17 = React4(Text_Text.Text, obj4);
-        const obj5 = { source: _modDef18096, style: closure_6.image };
+        const obj5 = { source: _modDef18383, style: closure_6.image };
         const tmp20 = React4(Image, obj5);
         cResult[2] = tmp16;
         cResult[3] = tmp17;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp21;
     }
-  : (arg0) => {
+  : function StreamFullAlert(arg0) {
       const errorInfo = AVError.getErrorInfo(AVError.AVError.STREAM_FULL);
       let errorCode;
       if (errorInfo != null) {
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: formatToPlainStringResult,
       };
       const tmp6 = common_AlertDefault;
-      items[2] = React4(Image, { source: _modDef18096, style: closure_6.image });
+      items[2] = React4(Image, { source: _modDef18383, style: closure_6.image });
       obj2.children = items;
       return hasOwnProperty(tmp6, obj2);
     };

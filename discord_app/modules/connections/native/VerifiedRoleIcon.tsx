@@ -14,7 +14,7 @@ const Constants = fn(1085);
 const jsx = fn(21).jsx;
 const WHITE = nativeDefault.unsafe_rawColors.WHITE;
 const PRIMARY_630 = nativeDefault.unsafe_rawColors.PRIMARY_630;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   iconContainer: { alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round },
 };
@@ -25,7 +25,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/VerifiedRoleIcon.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VerifiedRoleIcon(arg0) {
       const cResult = c.c(23);
       ({ guildId, role, roleId, roleColor, size, style, displayRoleIcon } = arg0);
       const tmp3 = closure_9();
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = obj6;
       tmp11 = obj6;
     }
-  : (arg0) => {
+  : function VerifiedRoleIcon(arg0) {
       ({ role, roleId, roleColor, size } = arg0);
       ({ guildId, style, displayRoleIcon } = arg0);
       if (roleColor == null) {

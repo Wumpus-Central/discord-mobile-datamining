@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/channel/VoiceChannelHoistingE
 
 export const VoiceChannelHoistingExperiment = experiment;
 export const useVoiceChannelHoistingExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, location) => {
+  ? function useVoiceChannelHoistingExperiment(guildId, location) {
       const cResult = c.c(4);
       if (cResult[0] === guildId) {
         if (cResult[1] === location) {
@@ -45,4 +45,6 @@ export const useVoiceChannelHoistingExperiment = ReactCompilerGating.isReactComp
       cResult[2] = obj3;
       tmp2 = obj3;
     }
-  : (guildId, location) => experiment.useExperiment({ guildId, location }, { autoTrackExposure: false });
+  : function useVoiceChannelHoistingExperiment(guildId, location) {
+      return experiment.useExperiment({ guildId, location }, { autoTrackExposure: false });
+    };

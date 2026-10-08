@@ -8,7 +8,7 @@ const require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSelectedTeenUser() {
       const cResult = require("c").c(3);
       const tmp4 = useIsInAdultAgeGroupDefault();
       _require = tmp4;
@@ -41,7 +41,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("useStateFromStores").useStateFromStores(first, tmp8);
     }
-  : () => {
+  : function useSelectedTeenUser() {
       _require = useIsInAdultAgeGroupDefault();
       const items = [FamilyCenterStore, UserStore];
       return require("useStateFromStores").useStateFromStores(items, () => {
@@ -59,7 +59,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useTeenUserForId(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -83,7 +83,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("useStateFromStores").useStateFromStores(first, tmp6);
     }
-  : (arg0) => {
+  : function useTeenUserForId(arg0) {
       _require = arg0;
       const items = [UserStore];
       return require("useStateFromStores").useStateFromStores(items, () => {
@@ -97,7 +97,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelecte
 export const useSelectedTeenUser = tmp2;
 export const useTeenUserForId = tmp3;
 export const useShouldLoadSettingsForSelectedTeenUser = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useShouldLoadSettingsForSelectedTeenUser() {
       const cResult = first(576).c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
@@ -139,7 +139,7 @@ export const useShouldLoadSettingsForSelectedTeenUser = ReactCompilerGating.isRe
       }
       return tmp12;
     }
-  : () => {
+  : function useShouldLoadSettingsForSelectedTeenUser() {
       const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
       const items = [FamilyCenterControlledSettingsStore];
       const stateFromStoresObject = selectedTeenId(573).useStateFromStoresObject(items, () => {

@@ -1,8 +1,8 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsBlockUserElement.tsx
-import NicknameUtilsDefault from "../../../../utils/NicknameUtils.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
-import SafetyToastsActionCreatorsDefault from "../../../safety_common/SafetyToastsActionCreators.native.tsx";
+import NicknameUtilsDefault from "../../../../utils/NicknameUtils.tsx";
 import RelationshipActionCreatorsDefault from "../../../../actions/RelationshipActionCreators.tsx";
+import SafetyToastsActionCreatorsDefault from "../../../safety_common/SafetyToastsActionCreators.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
@@ -15,7 +15,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBlockUserElement.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function BlockUserElement(user) {
       const cResult = user(reportId[6]).c(28);
       user = user.user;
       const channelId = user.channelId;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[10] === id) {
           if (cResult[13] === channelId) {
             if (cResult[14] === reportId) {
-              class C {
+              class U {
                 constructor() {
                   obj = closure_1(closure_2[9]);
                   obj1 = { other_user_id: user.id, report_id: reportId };
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          class C {
+          class U {
             constructor() {
               obj = closure_1(closure_2[9]);
               obj1 = { other_user_id: user.id, report_id: reportId };
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[13] = channelId;
           cResult[14] = reportId;
           cResult[15] = user.id;
-          cResult[16] = C;
+          cResult[16] = U;
         }
       }
       const tmpResult2 = user(reportId[7]);
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = name;
       const obj4 = channelId(reportId[8]);
     }
-  : (user) => {
+  : function BlockUserElement(user) {
       user = user.user;
       const channelId = user.channelId;
       const reportId = user.reportId;

@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useSafetyToolsButtonTooltipForChannel = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSafetyToolsButtonTooltipForChannel(arg0) {
       const cResult = c.c(3);
       const inappropriateConversationSafetyToolsWarningForChannel =
         useInappropriateConversationSafetyToolsWarningForChannel.useInappropriateConversationSafetyToolsWarningForChannel(
@@ -52,48 +52,33 @@ export const useSafetyToolsButtonTooltipForChannel = ReactCompilerGating.isReact
                   if (cResult[0] !== inappropriateConversationWarningsForChannel) {
                     const _Symbol = Symbol;
                     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-                      class T {
-                        constructor(arg0) {
-                          return null == arg0.dismiss_timestamp;
-                        }
-                      }
-                      cResult[2] = T;
+                      const fn = function _(dismiss_timestamp) {
+                        return null == dismiss_timestamp.dismiss_timestamp;
+                      };
+                      cResult[2] = fn;
+                      let tmp18 = fn;
                     } else {
-                      class T {
-                        constructor(arg0) {
-                          return null == arg0.dismiss_timestamp;
-                        }
-                      }
+                      tmp18 = cResult[2];
                     }
-                    const found1 = inappropriateConversationWarningsForChannel.filter(T);
-                    const findLastResult = found1.findLast(
+                    const found1 = inappropriateConversationWarningsForChannel.filter(tmp18);
+                    let findLastResult = found1.findLast(
                       (type) => type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1,
                     );
                     if (findLastResult == null) {
-                      class T {
-                        constructor(arg0) {
-                          return null == arg0.dismiss_timestamp;
-                        }
-                      }
+                      findLastResult = found1.findLast(
+                        (type) => type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
+                      );
                     }
                     cResult[0] = inappropriateConversationWarningsForChannel;
                     cResult[1] = findLastResult;
-                    const tmp16 = findLastResult;
+                    let tmp16 = findLastResult;
                   } else {
-                    class T {
-                      constructor(arg0) {
-                        return null == arg0.dismiss_timestamp;
-                      }
-                    }
+                    tmp16 = cResult[1];
                   }
                   return tmp16;
                 }
               } else {
-                class T {
-                  constructor(arg0) {
-                    return null == arg0.dismiss_timestamp;
-                  }
-                }
+                let time1 = globalThis;
                 const _Date = Date;
                 const date = new Date(dismiss_timestamp);
                 let time = date.getTime();
@@ -108,7 +93,7 @@ export const useSafetyToolsButtonTooltipForChannel = ReactCompilerGating.isReact
       }
       obj4 = useShouldShowInitialSafetyToolsButtonTooltip;
     }
-  : (arg0) => {
+  : function useSafetyToolsButtonTooltipForChannel(arg0) {
       const inappropriateConversationSafetyToolsWarningForChannel =
         useInappropriateConversationSafetyToolsWarningForChannel.useInappropriateConversationSafetyToolsWarningForChannel(
           arg0,

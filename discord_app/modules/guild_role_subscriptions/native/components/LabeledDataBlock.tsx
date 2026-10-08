@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
@@ -43,7 +43,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/LabeledDataBlock.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function LabeledDataBlock(arg0) {
       const cResult = c.c(20);
       ({ children, title, style, icon, onPressIcon } = arg0);
       const tmp4 = closure_5();
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items2;
       tmp5 = items2;
     }
-  : (arg0) => {
+  : function LabeledDataBlock(arg0) {
       ({ children, icon } = arg0);
       ({ title, style, onPressIcon } = arg0);
       const tmp = closure_5();

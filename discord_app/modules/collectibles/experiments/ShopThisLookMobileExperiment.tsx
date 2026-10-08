@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/collectibles/experiments/Shop
 
 export default apexExperiment;
 export const useIsShopThisLookMobileEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsShopThisLookMobileEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -26,4 +26,6 @@ export const useIsShopThisLookMobileEnabled = ReactCompilerGating.isReactCompile
       }
       return apexExperiment.useConfig(tmp2).shopThisLookMobileEnabled;
     }
-  : (location) => apexExperiment.useConfig({ location }).shopThisLookMobileEnabled;
+  : function useIsShopThisLookMobileEnabled(location) {
+      return apexExperiment.useConfig({ location }).shopThisLookMobileEnabled;
+    };

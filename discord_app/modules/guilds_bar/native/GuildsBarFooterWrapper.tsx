@@ -30,7 +30,7 @@ let obj2 = {
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFooterWrapper.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function GuildsBarFooterWrapper(children) {
       const cResult = c.c(9);
       children = children.children;
       const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp8;
       tmp7 = tmp8;
     }
-  : (children) => {
+  : function GuildsBarFooterWrapper(children) {
       const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
       const tmp2 = closure_5();
       const isHomeDrawerEnabled = useHomeDrawerGesture.useIsHomeDrawerEnabled();

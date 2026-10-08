@@ -11,7 +11,7 @@ const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembership.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function usePremiumGroupMembership(arg0) {
       const cResult = require("c").c(11);
       if (cResult[0] !== arg0) {
         let obj2 = arg0;
@@ -29,15 +29,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_1 = tmp6;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PremiumGroupStore];
-        const fn = function c() {
-          return {
-            premiumGroupMembership: PremiumGroupStore.getMembership(),
-            isFetchingMembership: PremiumGroupStore.isFetchingMembership(),
-          };
-        };
+        class M {
+          constructor() {
+            obj = {
+              premiumGroupMembership: closure_1_4.getMembership(),
+              isFetchingMembership: closure_1_4.isFetchingMembership(),
+            };
+            return obj;
+          }
+        }
         cResult[2] = items;
-        cResult[3] = fn;
-        let tmp8 = fn;
+        cResult[3] = M;
+        let tmp8 = M;
         let tmp7 = items;
       } else {
         tmp7 = cResult[2];
@@ -52,19 +55,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp12 = cResult[7];
         }
         useEffect(tmp11, tmp12);
-        if (cResult[8] === isFetchingMembership) {
-          if (cResult[9] === premiumGroupMembership) {
-            let tmp15 = cResult[10];
+        class M {
+          constructor() {
+            obj = {
+              premiumGroupMembership: closure_1_4.getMembership(),
+              isFetchingMembership: closure_1_4.isFetchingMembership(),
+            };
+            return obj;
           }
-          return tmp15;
         }
         const obj3 = { premiumGroupMembership, isLoading: isFetchingMembership };
         cResult[8] = isFetchingMembership;
         cResult[9] = premiumGroupMembership;
         cResult[10] = obj3;
-        tmp15 = obj3;
       }
-      const fn2 = function f() {
+      const fn = function f() {
         if (closure_1) {
           let hasFetchedMembershipResult = closure_0;
           if (closure_0) {
@@ -78,13 +83,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [undefined === _fetch || _fetch, undefined !== useCachedData && useCachedData];
       cResult[4] = undefined === _fetch || _fetch;
       cResult[5] = undefined !== useCachedData && useCachedData;
-      cResult[6] = fn2;
+      cResult[6] = fn;
       cResult[7] = items1;
       tmp12 = items1;
-      tmp11 = fn2;
+      tmp11 = fn;
       const tmpResult = require("initialize");
     }
-  : () => {
+  : function usePremiumGroupMembership() {
       let obj = arg0;
       if (arg0 === undefined) {
         obj = {};

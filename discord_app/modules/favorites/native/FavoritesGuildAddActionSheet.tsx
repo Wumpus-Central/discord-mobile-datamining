@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 const FavoritesGuildAddActionSheet = "FavoritesGuildAddActionSheet";
 const ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function FavoritesGuildAddActionSheet() {
       const cResult = shouldShowUpsell(favoriteLimit[5]).c(12);
       let obj = shouldShowUpsell(favoriteLimit[5]);
       const favoritesLimitUpsell = shouldShowUpsell(favoriteLimit[6]).useFavoritesLimitUpsell();
@@ -111,7 +111,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       const obj2 = shouldShowUpsell(favoriteLimit[6]);
     }
-  : () => {
+  : function FavoritesGuildAddActionSheet() {
       const favoritesLimitUpsell = shouldShowUpsell(favoriteLimit[6]).useFavoritesLimitUpsell();
       shouldShowUpsell = favoritesLimitUpsell.shouldShowUpsell;
       const isAtLimit = favoritesLimitUpsell.isAtLimit;

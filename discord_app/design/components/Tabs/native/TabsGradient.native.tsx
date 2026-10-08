@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -13,7 +13,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
 const SPRING_CONFIG = { mass: 1, damping: 30, stiffness: 250 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({
   gradient: { width: 50, position: "absolute", top: 0, bottom: 0, zIndex: 100 },
   left: { left: 0 },
@@ -27,7 +27,7 @@ const __initData2 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (visible) => {
+  ? function useGradientAnimatedStyle(visible) {
       _require = visible;
       const fn = function s() {
         let num = 0;
@@ -42,7 +42,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__initData = __initData;
       return obj.useAnimatedStyle(fn);
     }
-  : (visible) => {
+  : function useGradientAnimatedStyle(visible) {
       _require = visible;
       const fn = function s() {
         let num = 0;
@@ -80,7 +80,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Tabs/native/TabsGradient.native.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (state) => {
+  ? function TabsGradient(state) {
       const cResult = c.c(19);
       state = state.state;
       const colors = state.colors;
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items3;
       tmp10 = items3;
     }
-  : (state) => {
+  : function TabsGradient(state) {
       state = state.state;
       const colors = state.colors;
       const scrollOffset = state.scrollOffset;

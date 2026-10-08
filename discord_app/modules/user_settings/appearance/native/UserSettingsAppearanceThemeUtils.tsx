@@ -12,10 +12,10 @@ import CustomThemeMobileStore from "../../../client_themes/native/CustomThemeMob
 import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
-const SystemThemeState = fn(1196).SystemThemeState;
+const SystemThemeState = fn(1208).SystemThemeState;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_7 = fn(1240).BACKGROUND_GRADIENT_PRESETS_MOBILE;
-const constants = fn(1379).AnalyticsPremiumFeatureNames;
+let closure_7 = fn(1252).BACKGROUND_GRADIENT_PRESETS_MOBILE;
+const constants = fn(1391).AnalyticsPremiumFeatureNames;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
 
@@ -180,7 +180,7 @@ export const trackClientThemeUpdated = function trackClientThemeUpdated(arg0) {
 export const getUserThemeIndex = function getUserThemeIndex(userPreset, c1, memo1, c3, c4) {
   if (null != userPreset) {
     const findIndexResult = memo1.findIndex(
-      (type) => type.type === userPreset(1241).ClientThemeType.BACKGROUND_GRADIENT_PRESET,
+      (type) => type.type === userPreset(1253).ClientThemeType.BACKGROUND_GRADIENT_PRESET,
     );
     const findIndexResult1 = closure_7.findIndex((id) => id.id === userPreset.id);
     let num4 = 0;
@@ -194,7 +194,7 @@ export const getUserThemeIndex = function getUserThemeIndex(userPreset, c1, memo
   } else {
     if (c4) {
       if (tmp >= 0) {
-        return memo1.findIndex((type) => type.type === userPreset(1241).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
+        return memo1.findIndex((type) => type.type === userPreset(1253).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
       }
     }
     const findIndexResult2 = memo1.findIndex((theme) => theme.theme === str);

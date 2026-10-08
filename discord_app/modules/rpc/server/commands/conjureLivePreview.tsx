@@ -1,51 +1,39 @@
 // discord_app/modules/rpc/server/commands/conjureLivePreview.tsx
 import RPCErrorDefault from "../../RPCError.tsx";
-import validateEmbeddedAppFrameDefault from "../../helpers/validateEmbeddedAppFrame.tsx";
 import conjureLiveRelaunch from "../../../conjure/live_reload/conjureLiveRelaunch.tsx";
+import validateEmbeddedAppFrameDefault from "../../helpers/validateEmbeddedAppFrame.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 import ConjureProjectStore from "../../../conjure/projects/ConjureProjectStore.tsx";
-import FramesStore from "../../../frames/FramesStore.tsx";
 
 require = fn;
-let Constants = fn(5323);
+let Constants = fn(5635);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1085);
-({ RPCCommands, RPCErrors: metroRequire } = Constants);
+({ RPCCommands, RPCErrors: hasOwnProperty } = Constants);
 const items = [RPC_EMBEDDED_APP_SCOPE, RPC_AUTHENTICATED_SCOPE];
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(14335);
+const CONTEXT_MENU_ICON_NAMES = fn(14560);
 obj[RPCCommands.RELAUNCH_FRAME] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.RELAUNCH_FRAME, {
   scope: { [RPC_SCOPE_CONFIG.ANY]: items },
   handler(socket) {
-    const tmp3 = validateEmbeddedAppFrameDefault(socket.socket);
-    const applicationId = tmp3.applicationId;
-    const frameByIframeId = FramesStore.getFrameByIframeId(tmp3.iframeId);
+    const applicationId = validateEmbeddedAppFrameDefault(socket.socket).frame.applicationId;
     const application = ApplicationStore.getApplication(applicationId);
     let prop;
     if (application != null) {
       prop = application.vibegrationsProjectId;
     }
-    let result = null != prop;
-    if (!result) {
-      result = ConjureProjectStore.isConjureProjectApplication(applicationId);
-    }
-    let applicationId1;
-    if (frameByIframeId != null) {
-      applicationId1 = frameByIframeId.applicationId;
-    }
-    if (applicationId1 === applicationId) {
-      if (result) {
-        const obj = { relaunched: conjureLiveRelaunch.relaunchAppFramesForBuild(applicationId, socket.args.build) };
-        return obj;
+    if (null == prop) {
+      if (!ConjureProjectStore.isConjureProjectApplication(applicationId)) {
+        const obj = { errorCode: constants.UNAUTHORIZED_FOR_APPLICATION };
+        const tmp10 = new RPCErrorDefault(obj, "Only a Conjuring app frame can relaunch");
+        throw tmp10;
       }
     }
-    throw new RPCErrorDefault(
-      { errorCode: constants.UNAUTHORIZED_FOR_APPLICATION },
-      "Only a Conjuring app frame can relaunch",
-    );
+    const obj2 = { relaunched: conjureLiveRelaunch.relaunchAppFramesForBuild(applicationId, socket.args.build) };
+    return obj2;
   },
 });
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/rpc/server/commands/conjureLivePreview.tsx");
+const result = size.fileFinishedImporting("modules/rpc/server/commands/conjureLivePreview.tsx");
 
 export default obj;

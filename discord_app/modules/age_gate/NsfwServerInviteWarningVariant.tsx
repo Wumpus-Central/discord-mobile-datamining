@@ -31,7 +31,7 @@ export const getNsfwServerInviteWarningVariant = function getNsfwServerInviteWar
   }
 };
 export const useGatedAgeGroup = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGatedAgeGroup() {
       const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
       const isVerifiedAdult = AgeVerificationUtils.useIsVerifiedAdult();
       const AgeGroupState = useAgeGroupPresentation.AgeGroupState;
@@ -42,7 +42,7 @@ export const useGatedAgeGroup = ReactCompilerGating.isReactCompilerEnabled()
       }
       return TEEN;
     }
-  : () => {
+  : function useGatedAgeGroup() {
       const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
       const isVerifiedAdult = AgeVerificationUtils.useIsVerifiedAdult();
       const AgeGroupState = useAgeGroupPresentation.AgeGroupState;

@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import DevSettingsStore from "../../../../modules/devtools/dev_settings/DevSettingsStore.tsx";
 
 require = fn;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj2 = { highlight: { borderWidth: 1, borderColor: nativeDefault.colors.STATUS_DANGER } };
 let closure_3 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/LegacyText/native/useLegacyTextMigrationHighlight.tsx");
 
 export const useLegacyTextMigrationHighlight = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useLegacyTextMigrationHighlight() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DevSettingsStore];
@@ -34,7 +34,7 @@ export const useLegacyTextMigrationHighlight = ReactCompilerGating.isReactCompil
       }
       return highlight;
     }
-  : () => {
+  : function useLegacyTextMigrationHighlight() {
       const tmp = closure_3();
       const items = [DevSettingsStore];
       let highlight = null;

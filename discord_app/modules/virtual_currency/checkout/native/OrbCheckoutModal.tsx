@@ -1,8 +1,8 @@
 // discord_app/modules/virtual_currency/checkout/native/OrbCheckoutModal.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import VirtualCurrencyUtils from "../../VirtualCurrencyUtils.tsx";
 import PaymentFlowStartedTriggerPoint from "../../../experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx";
 import useFetchCollectiblesProduct from "../../../collectibles/hooks/useFetchCollectiblesProduct.tsx";
@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 const constants3 = { MAIN: "MAIN" };
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (orbBalance) => {
+  ? function OrbCheckoutModalContent(orbBalance) {
       const cResult = c.c(10);
       orbBalance = orbBalance.orbBalance;
       const orbCheckoutModalContext = OrbCheckoutModalContext.useOrbCheckoutModalContext();
@@ -80,7 +80,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp17;
       tmp16 = tmp17;
     }
-  : (orbBalance) => {
+  : function OrbCheckoutModalContent(orbBalance) {
       const orbCheckoutModalContext = OrbCheckoutModalContext.useOrbCheckoutModalContext();
       ({ orbRedemptionError, skuId } = orbCheckoutModalContext);
       let product = useFetchCollectiblesProduct.useFetchCollectiblesProduct(skuId).product;
@@ -103,7 +103,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPress) => {
+  ? function OrbCheckoutModalFooter(onPress) {
       const cResult = c.c(3);
       onPress = onPress.onPress;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -128,7 +128,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp7;
     }
-  : (onPress) => {
+  : function OrbCheckoutModalFooter(onPress) {
       const obj = { children: null };
       const items = [
         closure_1_11(OrbCheckoutModalComponents.OrbCheckoutLegalFinePrint, {}),
@@ -139,7 +139,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useOrbCheckoutPaymentFlowEvents(arg0) {
       _require = arg0;
       const cResult = require("c").c(16);
       let obj = require("c");
@@ -149,11 +149,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = require("OrbCheckoutModalContext");
       const virtualCurrencyBalance = require("useVirtualCurrencyBalance").useVirtualCurrencyBalance();
       if (cResult[0] !== skuId) {
-        let result = tmp(10008).get1PShopApplicationIdForSKU(skuId);
+        let result = tmp(9538).get1PShopApplicationIdForSKU(skuId);
         cResult[0] = skuId;
         cResult[1] = result;
         let tmp6 = result;
-        const tmpResult = tmp(10008);
+        const tmpResult = tmp(9538);
       } else {
         tmp6 = cResult[1];
       }
@@ -195,7 +195,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                   return tmp14;
                 }
-                const fn = function b(arg0, arg1) {
+                const fn = function h(arg0, arg1) {
                   const diff = Date.now() - closure_0;
                   if (arg0 === constants.PAYMENT_FLOW_STARTED) {
                     const obj2 = {};
@@ -262,7 +262,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = obj6;
       let obj3 = require("useVirtualCurrencyBalance");
     }
-  : (arg0) => {
+  : function useOrbCheckoutPaymentFlowEvents(arg0) {
       _require = arg0;
       const orbCheckoutModalContext = require("OrbCheckoutModalContext").useOrbCheckoutModalContext();
       const skuId = orbCheckoutModalContext.skuId;

@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles((height) => {
   const obj = { expressionButton: null, expressionButtonIconTint: null };
   const size = {
@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting("modules/chat_input/native/accessories
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function ExpressionButton(arg0) {
         const cResult = c.c(18);
         ({ style, active, showKeyboardIcon, onPress } = arg0);
         if (undefined === showKeyboardIcon) {
@@ -73,7 +73,7 @@ export default noop.memo(
           } else {
             tmp17 = cResult[7];
           }
-          const tmp5Result = importDefault(showKeyboardIcon ? 11072 : 8445);
+          const tmp5Result = importDefault(showKeyboardIcon ? 11880 : 8931);
           if (cResult[8] === tmp9.expressionButtonIconTint) {
             if (cResult[9] === token1) {
               if (cResult[10] === tmp5Result) {
@@ -135,7 +135,7 @@ export default noop.memo(
         tmp13 = items;
         const tmpResult4 = useToken;
       }
-    : (active) => {
+    : function ExpressionButton(active) {
         let flag = active.active;
         if (flag === undefined) {
           flag = false;
@@ -179,7 +179,7 @@ export default noop.memo(
         obj4.children = jsx(native.Icon, {
           size: token1,
           style: tmp7.expressionButtonIconTint,
-          source: importDefault(showKeyboardIcon ? 11072 : 8445),
+          source: importDefault(showKeyboardIcon ? 11880 : 8931),
         });
         return jsx(Pressables.PressableOpacity, {
           ref: noop.useRef(null),

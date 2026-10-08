@@ -5,9 +5,9 @@ import NativeMenuStore from "../../../native_menu/native/NativeMenuStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 const IS_ANDROID = PlatformUtils.isAndroid();
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj3 = { androidContainer: { flex: 1 }, iosContainer: null };
 let merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 obj3.iosContainer = {};
@@ -25,7 +25,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (animatedIndex) => {
+  ? function MediaKeyboardAccessoriesContainer(animatedIndex) {
       const cResult = animatedIndex(animateOnMount[7]).c(14);
       animatedIndex = animatedIndex.animatedIndex;
       const animatedPosition = animatedIndex.animatedPosition;
@@ -74,46 +74,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult = animatedIndex(animateOnMount[8]);
-      class A {
-        constructor() {
-          tmp = !animateOnMount;
-          if (!animateOnMount) {
-            tmp2 = closure_5;
-            tmp = !closure_5.get();
-          }
-          num = 0;
-          if (!tmp) {
-            tmp3 = globalThis;
-            _Math = Math;
-            tmp4 = animatedIndex;
-            num = Math.min(animatedIndex.get(), 0);
-          }
-          if (tmp) {
-            value = initialPosition;
-          } else {
-            tmp5 = animatedPosition;
-            value = animatedPosition.get();
-          }
-          obj = { translateY: null };
-          obj2 = closure_0(closure_2[8]);
-          obj.translateY = obj2.interpolate(num, [-1, 0], [100, 0]);
-          items = [];
-          items[0] = obj;
-          if (closure_6) {
-            obj1 = { marginTop: null, transform: null };
-            obj1.marginTop = value;
-            obj1.transform = items;
-            obj5 = obj1;
-          } else {
-            obj5 = { top: null, transform: null };
-            obj5.top = value;
-            obj5.transform = items;
-          }
-          return obj5;
+      const fn = function x() {
+        let tmp = !animateOnMount;
+        if (!animateOnMount) {
+          tmp = !sharedValue.get();
         }
-      }
+        let num = 0;
+        if (!tmp) {
+          const _Math = Math;
+          num = Math.min(animatedIndex.get(), 0);
+        }
+        if (tmp) {
+          value = initialPosition;
+        } else {
+          value = animatedPosition.get();
+        }
+        const obj = { translateY: ReanimatedRexport.interpolate(num, [-1, 0], [100, 0]) };
+        const items = [obj];
+        if (closure_6) {
+          const obj3 = { marginTop: value, transform: items };
+          let obj4 = obj3;
+        } else {
+          obj4 = { top: value, transform: items };
+        }
+        return obj4;
+      };
       const tmpResult3 = animatedIndex(animateOnMount[8]);
-      A.__closure = {
+      fn.__closure = {
         animateOnMount,
         initialLayout: sharedValue,
         animatedIndex,
@@ -122,9 +109,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         interpolate: animatedIndex(animateOnMount[8]).interpolate,
         IS_ANDROID,
       };
-      A.__workletHash = 10575537164844;
-      A.__initData = __initData;
-      const animatedStyle = tmpResult3.useAnimatedStyle(A);
+      fn.__workletHash = 10575537164844;
+      fn.__initData = __initData;
+      const animatedStyle = tmpResult3.useAnimatedStyle(fn);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         class M {
           constructor() {
@@ -227,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = items1;
       tmpResult4 = animatedIndex(animateOnMount[9]);
     }
-  : (animatedIndex) => {
+  : function MediaKeyboardAccessoriesContainer(animatedIndex) {
       animatedIndex = animatedIndex.animatedIndex;
       const animatedPosition = animatedIndex.animatedPosition;
       const animateOnMount = animatedIndex.animateOnMount;
@@ -251,33 +238,46 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       let obj = animatedIndex(animateOnMount[8]);
-      const fn = function _() {
-        let tmp = !animateOnMount;
-        if (!animateOnMount) {
-          tmp = !sharedValue.get();
+      class D {
+        constructor() {
+          tmp = !animateOnMount;
+          if (!animateOnMount) {
+            tmp2 = closure_6;
+            tmp = !closure_6.get();
+          }
+          num = 0;
+          if (!tmp) {
+            tmp3 = globalThis;
+            _Math = Math;
+            tmp4 = animatedIndex;
+            num = Math.min(animatedIndex.get(), 0);
+          }
+          if (tmp) {
+            value = initialPosition;
+          } else {
+            tmp5 = animatedPosition;
+            value = animatedPosition.get();
+          }
+          obj = { translateY: null };
+          obj2 = closure_0(closure_2[8]);
+          obj.translateY = obj2.interpolate(num, [-1, 0], [100, 0]);
+          items = [];
+          items[0] = obj;
+          if (closure_6) {
+            obj1 = { marginTop: null, transform: null };
+            obj1.marginTop = value;
+            obj1.transform = items;
+            obj5 = obj1;
+          } else {
+            obj5 = { top: null, transform: null };
+            obj5.top = value;
+            obj5.transform = items;
+          }
+          return obj5;
         }
-        let num = 0;
-        if (!tmp) {
-          const _Math = Math;
-          num = Math.min(animatedIndex.get(), 0);
-        }
-        if (tmp) {
-          value = initialPosition;
-        } else {
-          value = animatedPosition.get();
-        }
-        const obj = { translateY: ReanimatedRexport.interpolate(num, [-1, 0], [100, 0]) };
-        const items = [obj];
-        if (closure_6) {
-          const obj3 = { marginTop: value, transform: items };
-          let obj4 = obj3;
-        } else {
-          obj4 = { top: value, transform: items };
-        }
-        return obj4;
-      };
+      }
       const obj2 = animatedIndex(animateOnMount[8]);
-      fn.__closure = {
+      D.__closure = {
         animateOnMount,
         initialLayout: sharedValue,
         animatedIndex,
@@ -286,9 +286,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         interpolate: animatedIndex(animateOnMount[8]).interpolate,
         IS_ANDROID: sharedValue,
       };
-      fn.__workletHash = 449178126799;
-      fn.__initData = __initData2;
-      const animatedStyle = obj2.useAnimatedStyle(fn);
+      D.__workletHash = 449178126799;
+      D.__initData = __initData2;
+      const animatedStyle = obj2.useAnimatedStyle(D);
       let obj3 = {
         animateOnMount,
         initialLayout: sharedValue,

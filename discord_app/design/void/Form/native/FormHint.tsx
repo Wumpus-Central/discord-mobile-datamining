@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const Platform = fn(17).Platform;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   formHintText: { fontSize: 14, marginBottom: 0, color: nativeDefault.colors.TEXT_MUTED },
   redesignHorizontalPadding: { paddingHorizontal: 12 },
@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormHint.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FormHint(arg0) {
       const cResult = c.c(13);
       ({ inset, style, children } = arg0);
       const tmp5 = closure_4();
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = items1;
       }
     }
-  : (inset) => {
+  : function FormHint(inset) {
       let flag = inset.inset;
       if (flag === undefined) {
         flag = false;

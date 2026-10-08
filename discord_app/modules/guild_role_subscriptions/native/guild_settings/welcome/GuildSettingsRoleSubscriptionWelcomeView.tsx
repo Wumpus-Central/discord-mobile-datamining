@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import NavigatorConstants from "../../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
@@ -37,7 +37,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     return obj.openLazy(
-      asyncRequireImpl(17929, dependencyMap.paths),
+      asyncRequireImpl(18216, dependencyMap.paths),
       EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY,
       {
         eligibility,
@@ -107,7 +107,7 @@ function StartEarningButton(isTermsAccepted) {
     const intl = tmp5(tmp3[12]).intl;
     obj9.text = intl.string(tmp5(tmp3[12]).t.NL5ZNS);
     const obj10 = {
-      source: require("../../../../../../_runtime/metro/04814__.js"),
+      source: require("../../../../../../_runtime/metro/05008__.js"),
       color: require("native").unsafe_rawColors.WHITE,
       size: tmp5(tmp3[23]).Icon.Sizes.SMALL_20,
     };
@@ -123,12 +123,12 @@ function StartEarningButton(isTermsAccepted) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const creatorPortalUrl = fn(15038).CREATOR_REVENUE_PORTAL_URL;
+const creatorPortalUrl = fn(15300).CREATOR_REVENUE_PORTAL_URL;
 const GuildSettingsSections = fn(1085).GuildSettingsSections;
-const constants = fn(17925).CreatorMonetizationOnboardingMarketingSection;
+const constants = fn(18212).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: { flex: 1, padding: 24 },
@@ -155,7 +155,7 @@ obj2.statusNoticeContainer = { marginHorizontal: 0, marginTop: 14 };
 let closure_14 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isApplicationPending) => {
+  ? function ApplicationStatusNotice(isApplicationPending) {
       const cResult = c.c(19);
       ({
         style,
@@ -269,7 +269,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = tmp14;
       }
     }
-  : (arg0) => {
+  : function ApplicationStatusNotice(arg0) {
       ({ style, resubmissionError, requestRejectedNoticeText, reapplyNoticeText } = arg0);
       ({ resubmittingEnableRequest, createEnableRequest, isApplicationPending } = arg0);
       const tmp = closure_14();
@@ -311,7 +311,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SectionContainer(arg0) {
       const cResult = c.c(15);
       ({ title, children, footer, onLayout } = arg0);
       const tmp4 = closure_14();
@@ -391,7 +391,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         children: title,
       };
     }
-  : (footer) => {
+  : function SectionContainer(footer) {
       footer = footer.footer;
       ({ title, children, onLayout } = footer);
       const tmp = closure_14();
@@ -418,7 +418,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_16 = tmp4;
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MarketingSections(arg0) {
       const cResult = require("c").c(16);
       ({ onboardingMarketing, onHowItWorksLayoutChange } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -531,7 +531,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = require("c");
     }
-  : (onboardingMarketing) => {
+  : function MarketingSections(onboardingMarketing) {
       onboardingMarketing = onboardingMarketing.onboardingMarketing;
       _require = undefined;
       let obj = { title: null, footer: null, onLayout: null, children: null };
@@ -593,7 +593,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function GuildSettingsRoleSubscriptionWelcomeView(guild) {
       const cResult = refreshEligibility(ref[10]).c(58);
       guild = guild.guild;
       closure_14();
@@ -807,7 +807,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp17 = obj6;
       const tmpResult = refreshEligibility(ref[32]);
     }
-  : (guild) => {
+  : function GuildSettingsRoleSubscriptionWelcomeView(guild) {
       guild = guild.guild;
       refreshEligibility = undefined;
       let ref;

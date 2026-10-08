@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/VoiceSubtitle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function VoiceSubtitle(guildId) {
       const cResult = guildId(576).c(7);
       guildId = guildId.guildId;
       const voiceUsers = guildId.voiceUsers;
@@ -19,7 +19,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === voiceUsers) {
           if (cResult[5] !== cResult[2]) {
             const obj2 = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: tmp4 };
-            const tmp9 = jsx(tmp(4892).Text, {
+            const tmp9 = jsx(tmp(5086).Text, {
               variant: "text-xs/medium",
               color: "text-voice-connected",
               lineClamp: 1,
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[3] !== guildId) {
-        const fn = function l(arg0) {
+        const fn = function n(arg0) {
           return NicknameUtilsDefault.getName(guildId, null, arg0);
         };
         cResult[3] = guildId;
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = intl.format(guildId(1126).t.r1Vkoc, obj3);
       const formatResult = intl.format(guildId(1126).t.r1Vkoc, obj3);
     }
-  : (arg0) => {
+  : function VoiceSubtitle(arg0) {
       ({ guildId: require, voiceUsers } = arg0);
       const obj = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null };
       const intl = util.intl;

@@ -11,10 +11,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/create/useConjureAppSlotsLeft.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useConjureAppSlotsLeft() {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function c() {
+        const fn = function n() {
           const projectLimit = ConjureActionCreators.fetchProjectLimit();
         };
         const items = [];
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp7, tmp8);
     }
-  : () => {
+  : function useConjureAppSlotsLeft() {
       const effect = noop.useEffect(() => {
         const projectLimit = ConjureActionCreators.fetchProjectLimit();
       }, []);

@@ -102,7 +102,7 @@ const result = size.fileFinishedImporting("modules/collectibles/hooks/useProduct
 
 export { getProductDescription };
 export const useProductDescription = ReactCompilerGating.isReactCompilerEnabled()
-  ? (summary, arg1) => {
+  ? function useProductDescription(summary, arg1) {
       const cResult = c.c(3);
       if (cResult[0] === summary) {
         if (cResult[1] === tmp2) {
@@ -116,7 +116,7 @@ export const useProductDescription = ReactCompilerGating.isReactCompilerEnabled(
       cResult[2] = tmp4;
       tmp3 = tmp4;
     }
-  : (arg0) => {
+  : function useProductDescription(arg0) {
       closure_0 = arg0;
       let flag = arg1;
       if (arg1 === undefined) {

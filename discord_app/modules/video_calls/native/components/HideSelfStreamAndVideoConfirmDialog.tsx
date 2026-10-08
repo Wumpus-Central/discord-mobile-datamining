@@ -1,6 +1,6 @@
 // discord_app/modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx
-import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
 import UserSettingsActionCreatorsDefault from "../../../../actions/UserSettingsActionCreators.tsx";
+import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -9,10 +9,10 @@ const require = globalThis.__r;
 const require = fn;
 let closure_3 = ["type", "onConfirm"];
 const View = fn(17).View;
-const constants = fn(17382).SelfStreamAndVideoAlertType;
+const constants = fn(17664).SelfStreamAndVideoAlertType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({
   wrapper: { padding: 16 },
   body: { paddingTop: 16 },
@@ -26,7 +26,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function HideSelfStreamAndVideoConfirmDialog(arg0) {
       const cResult = require("c").c(33);
       if (cResult[0] !== arg0) {
         ({ type, onConfirm } = arg0);
@@ -45,15 +45,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp10 = closure_9();
       if (cResult[4] !== onConfirm) {
-        const fn = function v() {
+        function handleDontAskAgain() {
           const result = UserSettingsActionCreatorsDefault.updatedUnsyncedSettings({
             disableHideSelfStreamAndVideoConfirmationAlert: true,
           });
           closure_0();
-        };
+        }
         cResult[4] = onConfirm;
-        cResult[5] = fn;
-        let tmp11 = fn;
+        cResult[5] = handleDontAskAgain;
+        let tmp11 = handleDontAskAgain;
       } else {
         tmp11 = cResult[5];
       }
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               variant: "text-sm/medium",
               children: tmp31,
             };
-            const tmp35 = closure_7(tmp(4892).Text, obj4);
+            const tmp35 = closure_7(tmp(5086).Text, obj4);
             cResult[19] = tmp11;
             cResult[20] = tmp30;
             cResult[21] = tmp35;
@@ -190,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp30 = items1;
         }
         const obj5 = { style: tmp10.description, variant: "text-sm/medium", children: cResult[9] };
-        const tmp29 = closure_7(tmp(4892).Text, obj5);
+        const tmp29 = closure_7(tmp(5086).Text, obj5);
         cResult[12] = cResult[9];
         cResult[13] = tmp10.description;
         cResult[14] = tmp29;
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = require("c");
     }
-  : (arg0) => {
+  : function HideSelfStreamAndVideoConfirmDialog(arg0) {
       ({ type, onConfirm } = arg0);
       const merged = Object.assign(arg0, Object.assign({ type: 0, onConfirm: 0 }));
       const tmp2 = closure_9();
@@ -234,12 +234,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj.onConfirm = onConfirm;
       const obj2 = { style: tmp2.body, children: null };
       const items = [
-        closure_7(tmp6(4892).Text, { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 }),
+        closure_7(tmp6(5086).Text, { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 }),
       ];
       const obj4 = {
         accessibilityRole: "link",
         style: null,
-        onPress() {
+        onPress: function handleDontAskAgain() {
           const result = UserSettingsActionCreatorsDefault.updatedUnsyncedSettings({
             disableHideSelfStreamAndVideoConfirmationAlert: true,
           });
@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.style = items1;
       const intl7 = tmp6(1126).intl;
       obj4.children = intl7.string(tmp6(1126).t["JdIQ/Y"]);
-      items[1] = closure_7(tmp6(4892).Text, obj4);
+      items[1] = closure_7(tmp6(5086).Text, obj4);
       obj2.children = items;
       obj.children = closure_8(View, obj2);
       return closure_7(common_AlertDefault, obj);

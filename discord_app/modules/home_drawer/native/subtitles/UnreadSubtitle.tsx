@@ -10,11 +10,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/UnreadSubtitle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UnreadSubtitle(arg0) {
       const cResult = subtitleStyles(576).c(16);
       ({ guild, channel, channelName, count } = arg0);
       const obj = subtitleStyles(576);
-      subtitleStyles = subtitleStyles(16305).useSubtitleStyles();
+      subtitleStyles = subtitleStyles(16565).useSubtitleStyles();
       if (cResult[0] === channel) {
         if (cResult[1] === guild) {
           let tmp5 = cResult[2];
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             count: diff,
             labelHook(children, id) {
               return jsx(
-                subtitleStyles(4892).Text,
+                subtitleStyles(5086).Text,
                 { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children },
                 id,
               );
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               );
             },
             overflowHook(children, id) {
-              return jsx(subtitleStyles(4892).Text, { variant: "text-xs/medium", color: "text-muted", children }, id);
+              return jsx(subtitleStyles(5086).Text, { variant: "text-xs/medium", color: "text-muted", children }, id);
             },
           };
           const formatResult = intl2.format(tmp(1126).t.OqlmU6, obj4);
@@ -105,19 +105,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let channelIconComponentWithGuild;
       if (null != channel) {
-        channelIconComponentWithGuild = tmp(5819).getChannelIconComponentWithGuild(channel, guild);
-        const tmpResult = tmp(5819);
+        channelIconComponentWithGuild = tmp(8134).getChannelIconComponentWithGuild(channel, guild);
+        const tmpResult = tmp(8134);
       }
       if (channelIconComponentWithGuild == null) {
-        channelIconComponentWithGuild = tmp(5871).TextIcon;
+        channelIconComponentWithGuild = tmp(8183).TextIcon;
       }
       cResult[0] = channel;
       cResult[1] = guild;
       cResult[2] = channelIconComponentWithGuild;
       tmp5 = channelIconComponentWithGuild;
-      const obj2 = subtitleStyles(16305);
+      const obj2 = subtitleStyles(16565);
     }
-  : (arg0) => {
+  : function UnreadSubtitle(arg0) {
       ({ channel, channelName } = arg0);
       let subtitleStyles;
       let channelIconComponentWithGuild;

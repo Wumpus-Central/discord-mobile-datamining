@@ -1,6 +1,6 @@
 // discord_app/modules/auth_sessions/AuthSessionsUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef4467 from "../../../_runtime/metro/04467__.js";
+import _modDef4659 from "../../../_runtime/metro/04659__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import AuthSessionsStore from "AuthSessionsStore.tsx";
@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth_sessions/AuthSessionsUtils.tsx");
 
 export const useAuthSessions = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAuthSessions() {
       const cResult = authSessionIdHash(576).c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AuthSessionsStore];
@@ -60,7 +60,7 @@ export const useAuthSessions = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = authSessionIdHash(504);
     }
-  : () => {
+  : function useAuthSessions() {
       const items = [AuthSessionsStore];
       stateFromStoresObject = stateFromStoresObject(504).useStateFromStoresObject(items, () => sessions.getSessions());
       const items1 = [stateFromStoresObject];
@@ -89,8 +89,8 @@ export const formatDate = function formatDate(arg0) {
     const intl = util.intl;
     let stringResult = intl.string(util.t.TXCmfL);
   } else {
-    stringResult = _modDef4467(arg0).fromNow();
-    const obj = _modDef4467(arg0);
+    stringResult = _modDef4659(arg0).fromNow();
+    const obj = _modDef4659(arg0);
   }
   return stringResult;
 };

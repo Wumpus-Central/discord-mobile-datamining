@@ -1,9 +1,9 @@
 // discord_app/modules/game_profile/hooks/useResolveGameForProfile.tsx
 import c from "../../../../_runtime/00576_c.js";
-import RobloxSubgameUtils from "../../roblox_subgame_detection/RobloxSubgameUtils.tsx";
-import RobloxSubgameTypes from "../../roblox_subgame_detection/RobloxSubgameTypes.tsx";
 import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
 import useGame from "../../games/hooks/useGame.tsx";
+import RobloxSubgameUtils from "../../roblox_subgame_detection/RobloxSubgameUtils.tsx";
+import RobloxSubgameTypes from "../../roblox_subgame_detection/RobloxSubgameTypes.tsx";
 import useResolveGameDefault from "../../games/hooks/useResolveGame.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -11,7 +11,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 let result = size.fileFinishedImporting("modules/game_profile/hooks/useResolveGameForProfile.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useResolveGameForProfile(arg0) {
       const cResult = c.c(6);
       ({ applicationId, gameId } = arg0);
       let tmp4;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj4;
       tmp6 = obj4;
     }
-  : (arg0) => {
+  : function useResolveGameForProfile(arg0) {
       ({ applicationId, gameId } = arg0);
       let tmp3;
       if (null == gameId) {

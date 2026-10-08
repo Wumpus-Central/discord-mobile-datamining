@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useInappropriateConversationSafetyToolsWarningForChannel = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useInappropriateConversationSafetyToolsWarningForChannel(arg0) {
       const cResult = c.c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { location: "safety-tools-button" };
@@ -78,7 +78,7 @@ export const useInappropriateConversationSafetyToolsWarningForChannel = ReactCom
       }
       const tmpResult4 = useInappropriateConversationWarningsForChannel;
     }
-  : (arg0) => {
+  : function useInappropriateConversationSafetyToolsWarningForChannel(arg0) {
       const isEligibleForInappropriateConversationWarning =
         SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({
           location: "safety-tools-button",

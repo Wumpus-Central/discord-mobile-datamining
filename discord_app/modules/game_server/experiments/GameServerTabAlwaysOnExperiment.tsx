@@ -17,7 +17,7 @@ let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/game_server/experiments/GameServerTabAlwaysOnExperiment.tsx");
 
 export const useIsGameServerTabAlwaysOnEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsGameServerTabAlwaysOnEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -29,4 +29,6 @@ export const useIsGameServerTabAlwaysOnEnabled = ReactCompilerGating.isReactComp
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useIsGameServerTabAlwaysOnEnabled(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };

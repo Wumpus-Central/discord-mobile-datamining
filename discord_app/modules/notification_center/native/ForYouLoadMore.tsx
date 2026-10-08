@@ -10,7 +10,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c2, View: c3 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({
   container: {
     alignItems: "center",
@@ -27,7 +27,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/ForYouLoadMore.tsx");
 
 export const ForYouLoadMore = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPressLoad) => {
+  ? function ForYouLoadMore(onPressLoad) {
       const cResult = c.c(8);
       onPressLoad = onPressLoad.onPressLoad;
       const tmp4 = closure_6();
@@ -80,7 +80,7 @@ export const ForYouLoadMore = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp10Result;
       const tmpResult = useStateFromStores;
     }
-  : (onPressLoad) => {
+  : function ForYouLoadMore(onPressLoad) {
       const tmp = closure_6();
       const items = [NotificationCenterItemsStore];
       const obj2 = { style: tmp.container, children: null };

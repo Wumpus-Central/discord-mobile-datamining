@@ -12,13 +12,13 @@ import StageInstanceStore from "StageInstanceStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isGuildOwner = fn(2070).isGuildOwner;
+const isGuildOwner = fn(2082).isGuildOwner;
 const Constants = fn(1085);
 ({ GuildFeatures: c10, Permissions: closure_11 } = Constants);
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanCreateStageChannelByGuild(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -29,7 +29,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        class E {
+        class S {
           constructor() {
             id = closure_5.getId();
             guild = closure_7.getGuild(closure_0);
@@ -56,11 +56,11 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const items1 = [arg0];
         cResult[1] = arg0;
-        cResult[2] = E;
+        cResult[2] = S;
         cResult[3] = items1;
         let tmp9 = items1;
       } else {
-        class E {
+        class S {
           constructor() {
             id = closure_5.getId();
             guild = closure_7.getGuild(closure_0);
@@ -88,9 +88,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       const obj = require("c");
-      return require("initialize").useStateFromStores(first, E, tmp9);
+      return require("initialize").useStateFromStores(first, S, tmp9);
     }
-  : (arg0) => {
+  : function useCanCreateStageChannelByGuild(arg0) {
       _require = arg0;
       const items = [PermissionStore, AuthenticationStore, GuildStore];
       const items1 = [arg0];
@@ -119,7 +119,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanUpdateStageChannelModerators(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -163,7 +163,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp8, tmp9);
     }
-  : (arg0) => {
+  : function useCanUpdateStageChannelModerators(arg0) {
       _require = arg0;
       const items = [PermissionStore, GuildStore, ChannelStore];
       const items1 = [arg0];
@@ -276,7 +276,7 @@ export const isEmptyOverwrite = function isEmptyOverwrite(id) {
 export const useCanCreateStageChannelByGuild = tmp3;
 export const useCanUpdateStageChannelModerators = tmp4;
 export const useCanModerateRequestToSpeak = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanModerateRequestToSpeak(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -307,7 +307,7 @@ export const useCanModerateRequestToSpeak = ReactCompilerGating.isReactCompilerE
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useCanModerateRequestToSpeak(arg0) {
       _require = arg0;
       const items = [ChannelStore, PermissionStore];
       const items1 = [arg0];

@@ -5,7 +5,7 @@ import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj2 = { elevation: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 const merged1 = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/useMainTabsChannelScreenStyles.tsx");
 
 export const useMainTabsChannelScreenStyles = ReactCompilerGating.isReactCompilerEnabled()
-  ? (isDragging, translateX, maxWidth, isCompletelyCovered, freezeValue) => {
+  ? function useMainTabsChannelScreenStyles(isDragging, translateX, maxWidth, isCompletelyCovered, freezeValue) {
       closure_2 = maxWidth;
       __initData = freezeValue;
       const cResult = c.c(3);
@@ -80,7 +80,7 @@ export const useMainTabsChannelScreenStyles = ReactCompilerGating.isReactCompile
       cResult[2] = items;
       tmp4 = items;
     }
-  : (isDragging, translateX, maxWidth, isCompletelyCovered, freezeValue) => {
+  : function useMainTabsChannelScreenStyles(isDragging, translateX, maxWidth, isCompletelyCovered, freezeValue) {
       closure_2 = maxWidth;
       closure_4 = freezeValue;
       const tmp = isCompletelyCovered();

@@ -7,7 +7,7 @@ let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useIsConnectedToVoiceChannelForId(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -30,7 +30,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7);
     }
-  : (arg0) => {
+  : function useIsConnectedToVoiceChannelForId(arg0) {
       _require = arg0;
       const items = [VoiceStateStore, AuthenticationStore];
       return require("initialize").useStateFromStores(items, () =>
@@ -38,15 +38,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       );
     };
 let closure_4 = tmp3;
-fn = (channel) => {
-  let id;
-  if (channel != null) {
-    id = channel.id;
+function useIsConnectedToVoiceChannel(id) {
+  id = undefined;
+  if (id != null) {
+    id = id.id;
   }
   return closure_4(id);
-};
+}
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/voice_chat/VoiceChatHooks.tsx");
 
-export const useIsConnectedToVoiceChannel = fn;
+export { useIsConnectedToVoiceChannel };
 export const useIsConnectedToVoiceChannelForId = tmp3;

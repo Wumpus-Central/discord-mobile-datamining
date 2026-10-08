@@ -26,7 +26,7 @@ let closure_6 = createStyles.createStyles((width, borderRadius) => {
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/EntityBorderAppIcon.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function EntityBorderAppIcon(arg0) {
       const cResult = c.c(12);
       ({ iconSource, wrapperStyle, iconStyle, iconSize, iconBorderRadius } = arg0);
       let num = 32;
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp5 = items1;
     }
-  : (iconSize) => {
+  : function EntityBorderAppIcon(iconSize) {
       let num = iconSize.iconSize;
       ({ iconSource, wrapperStyle, iconStyle } = iconSize);
       if (num === undefined) {

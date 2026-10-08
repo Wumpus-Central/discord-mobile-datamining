@@ -9,13 +9,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, list: null, searchWrap: null, shareButton: null, log: null, code: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.list = { paddingHorizontal: nativeDefault.space.PX_16 };
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.searchWrap = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
-let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(6113).InputHeights.MD, width: fn(6113).InputHeights.MD, justifyContent: "center", alignItems: "center" };
+let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(6293).InputHeights.MD, width: fn(6293).InputHeights.MD, justifyContent: "center", alignItems: "center" };
 obj2.shareButton = size;
 let obj5 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 obj2.log = { paddingBottom: nativeDefault.space.PX_16 };
@@ -26,10 +26,10 @@ let obj6 = { paddingBottom: nativeDefault.space.PX_16 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsPushNotificationLogs.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsPushNotificationLogs() {
   const cResult = first1(576).c(34);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function l() {
+    const fn = function s() {
       const Storage = first1(510).Storage;
       let str = Storage.get("push-notification-logs-query", "");
       if (str == null) {
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let obj = first1(576);
   [r10046, asyncGeneratorStep] = noop.useState(tmp11);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    class P {
+    class I {
       constructor() {
         closure_0 = async function _load() {
           if (c3 === 2) {
@@ -130,11 +130,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
     let items2 = [];
-    cResult[3] = P;
+    cResult[3] = I;
     cResult[4] = items2;
     let tmp14 = items2;
   } else {
-    class P {
+    class I {
       constructor() {
         closure_0 = async function _load() {
           if (c3 === 2) {
@@ -203,9 +203,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     tmp14 = cResult[4];
   }
-  const effect = noop.useEffect(P, tmp14);
+  const effect = noop.useEffect(I, tmp14);
   if (cResult[5] === first2) {
-    class P {
+    class I {
       constructor() {
         closure_0 = async function _load() {
           if (c3 === 2) {
@@ -275,10 +275,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const effect1 = noop.useEffect(C, items4);
     const tmp18 = closure_9();
     _slicedToArray = tmp18;
-    const bottom = first2(1618)().bottom;
+    const bottom = first2(1630)().bottom;
     ({ wrap, searchWrap } = tmp18);
     if (cResult[9] !== first1) {
-      class P {
+      class I {
         constructor() {
           closure_0 = async function _load() {
             if (c3 === 2) {
@@ -346,11 +346,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       }
       let obj3 = { size: "md", placeholder: "Filter (regex)", onChange: tmp6[1], defaultValue: first1 };
-      const tmp21 = closure_7(tmp(6554).SearchField, obj3);
+      const tmp21 = closure_7(tmp(6730).SearchField, obj3);
       cResult[9] = first1;
       cResult[10] = tmp21;
     } else {
-      class P {
+      class I {
         constructor() {
           closure_0 = async function _load() {
             if (c3 === 2) {
@@ -420,7 +420,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     const _Symbol = Symbol;
     if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-      class P {
+      class I {
         constructor() {
           closure_0 = async function _load() {
             if (c3 === 2) {
@@ -516,7 +516,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 closure_128_0 = undefined;
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp5(12546)(), done: false };
+                const obj4 = { value: tmp5(12644)(), done: false };
                 return obj4;
               }
             } else if (arg0 === 1) {
@@ -528,8 +528,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               return obj5;
             } else {
               closure_128_0 = value;
-              const obj6 = { message: tmp5(12547)(closure_128_0, false) };
-              tmp2(8048).showShareActionSheet(obj6, "push-notification-logs");
+              const obj6 = { message: tmp5(12645)(closure_128_0, false) };
+              tmp2(8457).showShareActionSheet(obj6, "push-notification-logs");
               c3 = 3;
               return { value: "IconComponent", done: null };
             }
@@ -549,7 +549,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
         return applyArgumentsResult;
       }
-      const tmp28 = closure_7(tmp(12730).ShareIcon, {});
+      const tmp28 = closure_7(tmp(12920).ShareIcon, {});
       cResult[11] = stringResult;
       cResult[12] = t12;
       cResult[13] = tmp28;
@@ -557,7 +557,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       let tmp23 = t12;
       const tmp22 = stringResult;
     } else {
-      class P {
+      class I {
         constructor() {
           closure_0 = async function _load() {
             if (c3 === 2) {
@@ -628,7 +628,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       tmp24 = cResult[13];
     }
     if (cResult[14] !== tmp18.shareButton) {
-      class P {
+      class I {
         constructor() {
           closure_0 = async function _load() {
             if (c3 === 2) {
@@ -696,11 +696,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       }
       let obj5 = { style: tmp18.shareButton, accessibilityLabel: tmp22, onPress: tmp23, children: tmp24 };
-      const tmp30 = closure_7(tmp(5916).PressableOpacity, obj5);
+      const tmp30 = closure_7(tmp(6189).PressableOpacity, obj5);
       cResult[14] = tmp18.shareButton;
       cResult[15] = tmp30;
     } else {
-      class P {
+      class I {
         constructor() {
           closure_0 = async function _load() {
             if (c3 === 2) {
@@ -769,7 +769,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
     if (cResult[16] === tmp18.searchWrap) {
-      class P {
+      class I {
         constructor() {
           closure_0 = async function _load() {
             if (c3 === 2) {
@@ -996,7 +996,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   _slicedToArray = tmp9;
   let obj = { style: tmp9.wrap, children: null };
   let obj2 = { style: tmp9.searchWrap, children: null };
-  let items1 = [closure_7(defaultValue(6554).SearchField, { size: "md", placeholder: "Filter (regex)", onChange: tmp[1], defaultValue }), ];
+  let items1 = [closure_7(defaultValue(6730).SearchField, { size: "md", placeholder: "Filter (regex)", onChange: tmp[1], defaultValue }), ];
   let obj3 = { style: tmp9.shareButton, accessibilityLabel: null, onPress: null, children: null };
   const intl = defaultValue(1126).intl;
   obj3.accessibilityLabel = intl.string(defaultValue(1126).t.leICvh);
@@ -1028,7 +1028,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             closure_128_0 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj4 = { value: tmp5(12546)(), done: false };
+            const obj4 = { value: tmp5(12644)(), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -1040,8 +1040,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           return obj5;
         } else {
           closure_128_0 = value;
-          const obj6 = { message: tmp5(12547)(closure_128_0, false) };
-          tmp2(8048).showShareActionSheet(obj6, "push-notification-logs");
+          const obj6 = { message: tmp5(12645)(closure_128_0, false) };
+          tmp2(8457).showShareActionSheet(obj6, "push-notification-logs");
           c3 = 3;
           return { value: "IconComponent", done: null };
         }
@@ -1051,14 +1051,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   });
-  obj3.children = closure_7(defaultValue(12730).ShareIcon, {});
-  items1[1] = closure_7(defaultValue(5916).PressableOpacity, obj3);
+  obj3.children = closure_7(defaultValue(12920).ShareIcon, {});
+  items1[1] = closure_7(defaultValue(6189).PressableOpacity, obj3);
   obj2.children = items1;
   let items2 = [closure_8(View, obj2), ];
   let obj4 = { contentContainerStyle: null, data: null, renderItem: null };
   let obj5 = {};
   const merged = Object.assign(tmp9.list);
-  obj5.paddingBottom = first1(1618)().bottom + first1(587).space.PX_16;
+  obj5.paddingBottom = first1(1630)().bottom + first1(587).space.PX_16;
   obj4.contentContainerStyle = obj5;
   obj4.data = tmp6;
   obj4.renderItem = function renderItem(item) {
@@ -1080,7 +1080,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     obj.children = items;
     return closure_2_8(View, obj, item.index);
   };
-  items2[1] = closure_7(defaultValue(8404).FlashList, obj4);
+  items2[1] = closure_7(defaultValue(8600).FlashList, obj4);
   obj.children = items2;
   return closure_8(View, obj);
 });

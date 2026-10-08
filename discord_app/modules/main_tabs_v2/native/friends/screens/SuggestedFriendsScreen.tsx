@@ -10,7 +10,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj2 = { emptyContainer: { flex: 1, paddingTop: nativeDefault.space.PX_32 }, container: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -18,7 +18,7 @@ let obj3 = { flex: 1, paddingTop: nativeDefault.space.PX_32 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SuggestedFriendsScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuggestedFriendsScreen() {
   const cResult = analyticsLocations(setAdded[7]).c(26);
   closure_9();
   const obj = analyticsLocations(setAdded[7]);
@@ -147,7 +147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[7] = setAdded;
   cResult[8] = I;
   const tmpResult2 = analyticsLocations(setAdded[12]);
-}) : (() => {
+}) : (function SuggestedFriendsScreen() {
   const tmp = closure_9();
   const analyticsLocations = added(setAdded[8])(added(setAdded[9]).SUGGESTED_FRIENDS).analyticsLocations;
   const effect = friendSuggestions.useEffect(() => {

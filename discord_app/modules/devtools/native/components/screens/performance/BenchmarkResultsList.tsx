@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BenchmarkResultsList(arg0) {
       const cResult = c.c(8);
       ({ results, onClear } = arg0);
       let num = 0;
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = tmp14;
       }
     }
-  : (results) => {
+  : function BenchmarkResultsList(results) {
       results = results.results;
       let tmp2 = null;
       if (0 !== results.length) {

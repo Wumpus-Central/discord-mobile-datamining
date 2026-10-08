@@ -21,7 +21,7 @@ require = fn;
 const Constants = fn(1085);
 ({ InviteModalScenes: closure_9, Permissions: c10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   formContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 },
   formContent: null,
@@ -31,14 +31,14 @@ obj2.formContent = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_P
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AdvancedInstantInviteScreen() {
       const cResult = navigation(576).c(33);
       closure_12();
       let obj = navigation(576);
-      navigation = navigation(1490).useNavigation();
+      navigation = navigation(1502).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore, CreateInviteModalStore, GuildStore];
-        const fn = function f() {
+        const fn = function v() {
           const pendingSettings = CreateInviteModalStore.getPendingSettings();
           channel(38)(null != pendingSettings, "Received null pending invite settings");
           const inviteSettings = CreateInviteModalStore.getInviteSettings();
@@ -57,7 +57,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp6, tmp7] = cResult;
       }
-      let obj2 = navigation(1490);
+      let obj2 = navigation(1502);
       const stateFromStoresObject = navigation(504).useStateFromStoresObject(tmp6, tmp7);
       ({ settings, inviteSettings, channel } = stateFromStoresObject);
       const tmp12 = _slicedToArray(noop.useState(channel), 2);
@@ -157,16 +157,16 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         const effect = noop.useEffect(D, tmp19);
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          class V {
+          class O {
             constructor() {
               obj = channel(closure_2[20]);
               waitResult = obj.wait(channel(closure_2[17]).resetSettings);
               return;
             }
           }
-          cResult[8] = V;
+          cResult[8] = O;
         } else {
-          class V {
+          class O {
             constructor() {
               obj = channel(closure_2[20]);
               waitResult = obj.wait(channel(closure_2[17]).resetSettings);
@@ -174,9 +174,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const unmountEffect = tmp(5597).useUnmountEffect(V);
+        const unmountEffect = tmp(5392).useUnmountEffect(O);
         if (cResult[9] !== channel) {
-          class G {
+          class V {
             constructor() {
               if (null != channel) {
                 tmp2 = closure_8;
@@ -206,9 +206,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[9] = channel;
-          cResult[10] = G;
+          cResult[10] = V;
         } else {
-          class G {
+          class V {
             constructor() {
               if (null != channel) {
                 tmp2 = closure_8;
@@ -238,9 +238,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        _slicedToArray = G;
+        _slicedToArray = V;
         if (cResult[11] === !tmp15) {
-          class G {
+          class V {
             constructor() {
               if (null != channel) {
                 tmp2 = closure_8;
@@ -270,7 +270,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        class M {
+        class P {
           constructor() {
             obj = {
               headerRight() {
@@ -279,7 +279,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj = { onPress, text: null };
                   const intl = navigation(1126).intl;
                   obj.text = intl.string(navigation(1126).t["R3BPH+"]);
-                  tmp = jsx(navigation(6890).HeaderActionButton, { onPress, text: null });
+                  tmp = jsx(navigation(7079).HeaderActionButton, { onPress, text: null });
                 }
                 return tmp;
               },
@@ -288,13 +288,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const items2 = [navigation, !tmp15, G];
+        const items2 = [navigation, !tmp15, V];
         cResult[11] = !tmp15;
-        cResult[12] = G;
+        cResult[12] = V;
         cResult[13] = navigation;
-        cResult[14] = M;
+        cResult[14] = P;
         cResult[15] = items2;
-        const tmpResult3 = tmp(5597);
+        const tmpResult3 = tmp(5392);
       }
       const tmpResult = navigation(504);
       const isEqualResult = navigation(12).isEqual(settings, inviteSettings);
@@ -304,10 +304,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = isEqualResult;
       const tmpResult4 = navigation(12);
     }
-  : () => {
+  : function AdvancedInstantInviteScreen() {
       let tmp = closure_12();
-      navigation = navigation(1490).useNavigation();
-      let obj = navigation(1490);
+      navigation = navigation(1502).useNavigation();
+      let obj = navigation(1502);
       const items = [ChannelStore, CreateInviteModalStore, GuildStore];
       const stateFromStoresObject = navigation(504).useStateFromStoresObject(items, () => {
         const pendingSettings = CreateInviteModalStore.getPendingSettings();
@@ -358,8 +358,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       const tmp2Result = navigation(12);
-      const unmountEffect = navigation(5597).useUnmountEffect(() => {
-        channel(584).wait(channel(9500).resetSettings);
+      const unmountEffect = navigation(5392).useUnmountEffect(() => {
+        channel(584).wait(channel(8665).resetSettings);
       });
       const items2 = [channel];
       callback = noop.useCallback(() => {
@@ -386,26 +386,26 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               const obj = { onPress, text: null };
               const intl = navigation(1126).intl;
               obj.text = intl.string(navigation(1126).t["R3BPH+"]);
-              tmp = jsx(navigation(6890).HeaderActionButton, { onPress, text: null });
+              tmp = jsx(navigation(7079).HeaderActionButton, { onPress, text: null });
             }
             return tmp;
           },
         });
       }, items3);
       const callback1 = noop.useCallback((maxUses) => {
-        channel(9500).updateSettings({ maxUses });
+        channel(8665).updateSettings({ maxUses });
       }, []);
       const callback2 = noop.useCallback((maxAge) => {
-        channel(9500).updateSettings({ maxAge });
+        channel(8665).updateSettings({ maxAge });
       }, []);
       const callback3 = noop.useCallback((temporary) => {
-        channel(9500).updateSettings({ temporary });
+        channel(8665).updateSettings({ temporary });
       }, []);
       const callback4 = noop.useCallback((flags) => {
-        channel(9500).updateSettings({ flags });
+        channel(8665).updateSettings({ flags });
       }, []);
       const callback5 = noop.useCallback((roleIds) => {
-        channel(9500).updateSettings({ roleIds });
+        channel(8665).updateSettings({ roleIds });
       }, []);
       let obj4 = { contentContainerStyle: tmp.formContainer, children: null };
       let obj5 = {
@@ -424,15 +424,15 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         onChangeFlags: null,
         onChangeRoleIds: null,
       };
-      const tmp2Result2 = navigation(5597);
-      obj5.maxUsesOptions = channel(9496).getMaxUsesOptions;
+      const tmp2Result2 = navigation(5392);
+      obj5.maxUsesOptions = channel(8660).getMaxUsesOptions;
       ({ temporary: obj7.temporary, flags: obj7.flags, roleIds: obj7.roleIds } = settings);
       obj5.onChangeMaxAge = callback2;
       obj5.onChangeMaxUses = callback1;
       obj5.onChangeTemporary = callback3;
       obj5.onChangeFlags = callback4;
       obj5.onChangeRoleIds = callback5;
-      obj4.children = jsx(channel(18037), {
+      obj4.children = jsx(channel(18324), {
         style: tmp.formContent,
         channel: first,
         guild,
@@ -448,7 +448,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         onChangeFlags: null,
         onChangeRoleIds: null,
       });
-      return jsx(navigation(8924).Form, { contentContainerStyle: tmp.formContainer, children: null });
+      return jsx(navigation(8555).Form, { contentContainerStyle: tmp.formContainer, children: null });
     };
 ReactCompilerGating = fn(558);
 let obj4 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -456,7 +456,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_invite/native/InviteSettingsModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function InviteSettingsModal() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = {};
@@ -489,7 +489,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp7;
     }
-  : () => {
+  : function InviteSettingsModal() {
       const memo = noop.useMemo(() => {
         const obj = {};
         const obj2 = {

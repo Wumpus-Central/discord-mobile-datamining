@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   iconContainer: { alignItems: "center", marginBottom: 8 },
   iconBackground: null,
@@ -55,13 +55,13 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/native/MuteAppDmActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function MuteAppDMActionSheet(channel) {
       const cResult = require("c").c(27);
       const tmp4 = closure_6();
       _require = tmp4;
       channel = channel.channel;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = closure_4(tmp(9301).BellIcon, { size: "md", color: "interactive-text-default" });
+        const tmp7 = closure_4(tmp(8747).BellIcon, { size: "md", color: "interactive-text-default" });
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             style: tmp4.headerText,
             children: tmp14,
           };
-          const tmp18 = closure_4(tmp(4892).Text, obj3);
+          const tmp18 = closure_4(tmp(5086).Text, obj3);
           cResult[7] = tmp4.headerText;
           cResult[8] = tmp18;
           let tmp16 = tmp18;
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[10] !== tmp4.infoText) {
           let obj4 = { variant: "text-md/normal", color: "text-default", style: tmp4.infoText, children: tmp19 };
-          const tmp23 = closure_4(tmp(4892).Text, obj4);
+          const tmp23 = closure_4(tmp(5086).Text, obj4);
           cResult[10] = tmp4.infoText;
           cResult[11] = tmp23;
           let tmp21 = tmp23;
@@ -141,9 +141,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const intl4 = tmp(1126).intl;
               obj5.text = intl4.string(tmp(1126).t.WAI6xu);
               obj5.onPress = function onPress() {
-                channel(4860).hideActionSheet();
+                channel(5054).hideActionSheet();
               };
-              const tmp31 = closure_4(tmp(5601).Button, obj5);
+              const tmp31 = closure_4(tmp(5375).Button, obj5);
               cResult[17] = tmp31;
               let tmp29 = tmp31;
             } else {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const items = [tmp12, tmp16, tmp21, tmp26, tmp32];
             obj8.children = items;
             obj7.children = closure_5(View, obj8);
-            const tmp40 = closure_4(tmp(6652).BottomSheet, obj7);
+            const tmp40 = closure_4(tmp(6829).BottomSheet, obj7);
             cResult[20] = tmp4.content;
             cResult[21] = tmp26;
             cResult[22] = tmp32;
@@ -224,8 +224,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj7.icon = function icon() {
                 const obj = {
                   style: closure_1_0.mutedNotificationContainer,
-                  children: closure_2_4(closure_0(1188).Icon, {
-                    source: channel(7619),
+                  children: closure_2_4(closure_0(1200).Icon, {
+                    source: channel(7866),
                     color: channel(587).unsafe_rawColors.WHITE,
                     style: closure_1_0.mutedNotification,
                   }),
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           },
         };
-        const tmp28 = closure_4(tmp(5601).Button, obj9);
+        const tmp28 = closure_4(tmp(5375).Button, obj9);
         cResult[13] = channel.id;
         cResult[14] = tmp4.mutedNotification;
         cResult[15] = tmp4.mutedNotificationContainer;
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const obj10 = { style: tmp4.iconContainer, children: tmp8 };
     }
-  : (channel) => {
+  : function MuteAppDMActionSheet(channel) {
       const tmp = closure_6();
       _require = tmp;
       channel = channel.channel;
@@ -313,8 +313,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj7.icon = function icon() {
             const obj = {
               style: closure_1_0.mutedNotificationContainer,
-              children: closure_2_4(closure_0(1188).Icon, {
-                source: channel(7619),
+              children: closure_2_4(closure_0(1200).Icon, {
+                source: channel(7866),
                 color: channel(587).unsafe_rawColors.WHITE,
                 style: closure_1_0.mutedNotification,
               }),
@@ -330,7 +330,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl4 = require("util").intl;
       obj9.text = intl4.string(require("util").t.WAI6xu);
       obj9.onPress = function onPress() {
-        channel(4860).hideActionSheet();
+        channel(5054).hideActionSheet();
       };
       obj8.children = closure_4(require("components/Button/Button").Button, obj9);
       items[4] = closure_4(View, obj8);

@@ -12,7 +12,7 @@ let closure_3 = createStyles.createStyles(() => ({ container: { marginTop: 3 } }
 const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx");
 
 export const ActionSheetHeaderPressableText = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActionSheetHeaderPressableText(arg0) {
       const cResult = c.c(7);
       ({ onPress, label, accessibilityLabel } = arg0);
       const tmp4 = closure_3();
@@ -60,7 +60,7 @@ export const ActionSheetHeaderPressableText = ReactCompilerGating.isReactCompile
         children: tmp6,
       };
     }
-  : (onPress) => {
+  : function ActionSheetHeaderPressableText(onPress) {
       ({ label, accessibilityLabel } = onPress);
       const obj = {
         style: closure_3().container,

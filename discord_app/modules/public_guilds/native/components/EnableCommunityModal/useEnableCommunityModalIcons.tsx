@@ -19,9 +19,9 @@ const prototype = EnableCommunityModalIcons.prototype;
 Object.defineProperty(prototype, "safetyCheck", {
   get: function safetyCheck() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = require("../../../../../../_runtime/metro/17887__.js");
+      let tmpResult = require("../../../../../../_runtime/metro/18174__.js");
     } else {
-      tmpResult = require("../../../../../../_runtime/metro/17888__.js");
+      tmpResult = require("../../../../../../_runtime/metro/18175__.js");
     }
     return tmpResult;
   },
@@ -36,9 +36,9 @@ Object.defineProperty(prototype, "channelSetup", {
 Object.defineProperty(prototype, "finishingTouches", {
   get: function finishingTouches() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = require("../../../../../../_runtime/metro/17893__.js");
+      let tmpResult = require("../../../../../../_runtime/metro/18180__.js");
     } else {
-      tmpResult = require("../../../../../../_runtime/metro/17894__.js");
+      tmpResult = require("../../../../../../_runtime/metro/18181__.js");
     }
     return tmpResult;
   },
@@ -46,7 +46,7 @@ Object.defineProperty(prototype, "finishingTouches", {
 });
 Object.defineProperty(prototype, "close", {
   get: function close() {
-    return require("../../../../../../_runtime/metro/04815__.js");
+    return require("../../../../../../_runtime/metro/05009__.js");
   },
   set: undefined,
 });
@@ -57,12 +57,12 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useEnableCommunityModalIcons() {
       const cResult = require("c").c(2);
       const tmp2 = useThemeDefault();
       _require = tmp2;
       if (cResult[0] !== tmp2) {
-        const fn = function s() {
+        const fn = function o() {
           if (typeof EnableCommunityModalIcons === "function") {
             const merged = Object.assign({ theme: null });
             merged[0] = ThemeTypes.LIGHT;
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return _slicedToArray(noop.useState(tmp3), 1)[0];
     }
-  : () => {
+  : function useEnableCommunityModalIcons() {
       closure_0 = useThemeDefault();
       return _slicedToArray(
         noop.useState(() => {

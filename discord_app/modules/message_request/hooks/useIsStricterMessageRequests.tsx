@@ -8,4 +8,6 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/message_request/hooks/useIsStricterMessageRequests.tsx");
 
-export default () => RegionalTeenUtils.useIsTeenInCountrySet(set);
+export default function useIsStricterMessageRequests() {
+  return RegionalTeenUtils.useIsTeenInCountrySet(set);
+}

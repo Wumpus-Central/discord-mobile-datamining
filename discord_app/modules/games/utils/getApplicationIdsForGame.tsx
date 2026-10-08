@@ -41,7 +41,7 @@ const result = size.fileFinishedImporting("modules/games/utils/getApplicationIds
 
 export default getApplicationIdsForGame;
 export const useApplicationIdsForGame = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useApplicationIdsForGame(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -52,7 +52,7 @@ export const useApplicationIdsForGame = ReactCompilerGating.isReactCompilerEnabl
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function s() {
+        const fn = function l() {
           const set = new Set();
           if (null != closure_0) {
             set.add(closure_0);
@@ -95,7 +95,7 @@ export const useApplicationIdsForGame = ReactCompilerGating.isReactCompilerEnabl
       const obj = require("c");
       return require("initialize").useStateFromStoresArray(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useApplicationIdsForGame(arg0) {
       _require = arg0;
       const items = [GameStore, ApplicationStore];
       const items1 = [arg0];

@@ -1,25 +1,25 @@
 // discord_app/modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx
 import c from "../../../../_runtime/00576_c.js";
-import Link from "../../../../_runtime/01491_Link.js";
+import Link from "../../../../_runtime/01503_Link.js";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
 let ReactCompilerGating = ReactCompilerGating_mod;
-const fn = () => {
+function useGuildsRouteGuildId() {
   const params = Link.useRoute().params;
   let guildId;
   if (params != null) {
     guildId = params.guildId;
   }
   return guildId;
-};
+}
 const result1 = size.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
 
-export default fn;
+export default useGuildsRouteGuildId;
 export const useGuildsRouteGuildAndChannelId = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGuildsRouteGuildAndChannelId() {
       const cResult = c.c(3);
       const route = Link.useRoute();
       let guildId;
@@ -48,7 +48,7 @@ export const useGuildsRouteGuildAndChannelId = ReactCompilerGating.isReactCompil
       cResult[2] = items;
       tmp5 = items;
     }
-  : () => {
+  : function useGuildsRouteGuildAndChannelId() {
       const route = Link.useRoute();
       let guildId;
       if (route != null) {

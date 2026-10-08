@@ -12,10 +12,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, Platform } = get_ActivityIndicator);
-const TitleStyleType = fn(1192).TitleStyleType;
+const TitleStyleType = fn(1204).TitleStyleType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   titledSectionHeader: { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 16 },
   titledSectionNoBorder: { marginTop: 24 },
@@ -31,7 +31,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormSection.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FormSection(arg0) {
       const cResult = c.c(60);
       ({
         icon,
@@ -541,7 +541,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (arg0) => {
+  : function FormSection(arg0) {
       ({ children, inset } = arg0);
       ({ icon, thinTitle } = arg0);
       if (inset === undefined) {

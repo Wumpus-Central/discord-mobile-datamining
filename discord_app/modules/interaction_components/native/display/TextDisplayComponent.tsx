@@ -11,18 +11,18 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
-const renderOptions = fn(7805).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+const renderOptions = fn(8224).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/native/display/TextDisplayComponent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TextDisplayComponent(arg0) {
       const cResult = channelId(576).c(21);
       ({ type, id, content } = arg0);
       const obj = channelId(576);
-      const componentContainerId = channelId(7806).useComponentContainerId();
+      const componentContainerId = channelId(8225).useComponentContainerId();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         channelId = SelectedChannelStore.getChannelId();
         cResult[0] = channelId;
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
             let items = [AccessibilityStore];
-            class I {
+            class C {
               constructor() {
                 items = [,];
                 ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = closure_1_5);
@@ -46,8 +46,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[5] = items;
-            cResult[6] = I;
-            let tmp13 = I;
+            cResult[6] = C;
+            let tmp13 = C;
             let tmp12 = items;
           } else {
             tmp12 = cResult[5];
@@ -55,19 +55,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const tmpResult = tmp(504);
           [tmp17, tmp18] = tmp(504).useStateFromStoresArray(tmp12, tmp13);
-          const AnimateEmoji = tmp(2028).AnimateEmoji;
+          const AnimateEmoji = tmp(2040).AnimateEmoji;
           const setting = AnimateEmoji.useSetting();
           const _Symbol2 = Symbol;
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
             const items1 = [ChannelStore];
-            class O {
+            class D {
               constructor() {
                 return closure_6.getChannel(closure_0);
               }
             }
             cResult[7] = items1;
-            cResult[8] = O;
-            let tmp21 = O;
+            cResult[8] = D;
+            let tmp21 = D;
             let tmp20 = items1;
           } else {
             tmp20 = cResult[7];
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const tmp16 = _slicedToArray(tmp(504).useStateFromStoresArray(tmp12, tmp13), 2);
           const stateFromStores = tmp(504).useStateFromStores(tmp20, tmp21);
           const tmpResult4 = tmp(504);
-          const tmp24 = !tmp(7956).useShouldDisplaySpoilerObscurity(stateFromStores);
+          const tmp24 = !tmp(8374).useShouldDisplaySpoilerObscurity(stateFromStores);
           if (cResult[9] === tmp18) {
             if (cResult[10] === setting) {
               if (cResult[11] === componentContainerId) {
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       let tmp27 = cResult[15];
                     }
                     const _Symbol3 = Symbol;
-                    class O {
+                    class D {
                       constructor() {
                         return closure_6.getChannel(closure_0);
                       }
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const _Symbol4 = Symbol;
                     if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
                       cResult[17] = { width: "100%" };
-                      class O {
+                      class D {
                         constructor() {
                           return closure_6.getChannel(closure_0);
                         }
@@ -113,26 +113,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       model: tmp10,
                       markdownTextRenderOptions: tmp27,
                       onTapLink: tmp29,
-                      onLongPressLink: tmp(11216).contentHandlers.onLongPressLink,
-                      onTapAttachmentLink: tmp(11216).contentHandlers.onTapAttachmentLink,
-                      onLongPressAttachmentLink: tmp(11216).contentHandlers.onLongPressAttachmentLink,
-                      onTapMention: tmp(11216).contentHandlers.onTapMention,
-                      onTapTimestamp: tmp(11216).contentHandlers.onTapTimestamp,
-                      onTapInlineCode: tmp(11216).contentHandlers.onTapInlineCode,
-                      onTapEmoji: tmp(11216).contentHandlers.onTapEmoji,
+                      onLongPressLink: tmp(11331).contentHandlers.onLongPressLink,
+                      onTapAttachmentLink: tmp(11331).contentHandlers.onTapAttachmentLink,
+                      onLongPressAttachmentLink: tmp(11331).contentHandlers.onLongPressAttachmentLink,
+                      onTapMention: tmp(11331).contentHandlers.onTapMention,
+                      onTapTimestamp: tmp(11331).contentHandlers.onTapTimestamp,
+                      onTapInlineCode: tmp(11331).contentHandlers.onTapInlineCode,
+                      onTapEmoji: tmp(11331).contentHandlers.onTapEmoji,
                       style: tmp30,
                     };
                     const tmp34 = jsx(TextDisplayComponentViewNativeComponentDefault, {
                       model: tmp10,
                       markdownTextRenderOptions: tmp27,
                       onTapLink: tmp29,
-                      onLongPressLink: tmp(11216).contentHandlers.onLongPressLink,
-                      onTapAttachmentLink: tmp(11216).contentHandlers.onTapAttachmentLink,
-                      onLongPressAttachmentLink: tmp(11216).contentHandlers.onLongPressAttachmentLink,
-                      onTapMention: tmp(11216).contentHandlers.onTapMention,
-                      onTapTimestamp: tmp(11216).contentHandlers.onTapTimestamp,
-                      onTapInlineCode: tmp(11216).contentHandlers.onTapInlineCode,
-                      onTapEmoji: tmp(11216).contentHandlers.onTapEmoji,
+                      onLongPressLink: tmp(11331).contentHandlers.onLongPressLink,
+                      onTapAttachmentLink: tmp(11331).contentHandlers.onTapAttachmentLink,
+                      onLongPressAttachmentLink: tmp(11331).contentHandlers.onLongPressAttachmentLink,
+                      onTapMention: tmp(11331).contentHandlers.onTapMention,
+                      onTapTimestamp: tmp(11331).contentHandlers.onTapTimestamp,
+                      onTapInlineCode: tmp(11331).contentHandlers.onTapInlineCode,
+                      onTapEmoji: tmp(11331).contentHandlers.onTapEmoji,
                       style: tmp30,
                     });
                     cResult[18] = tmp10;
@@ -161,16 +161,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[14] = "username" === tmp17;
           cResult[15] = obj5;
           tmp27 = obj5;
-          const tmpResult5 = tmp(7956);
+          const tmpResult5 = tmp(8374);
         }
       }
       const obj6 = { type, id, content: null };
-      const obj2 = channelId(7806);
+      const obj2 = channelId(8225);
       const tmp8Result2 = MarkupUtilsDefault;
       obj6.content = tmp8Result2.parseToAST(
         content,
         true,
-        channelId(7542).getInitialParserState({ channelId, renderOptions }),
+        channelId(8114).getInitialParserState({ channelId, renderOptions }),
       );
       const json = JSON.stringify(obj6);
       cResult[1] = content;
@@ -179,9 +179,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = json;
       tmp10 = json;
       const obj7 = { channelId, renderOptions };
-      const tmpResult6 = channelId(7542);
+      const tmpResult6 = channelId(8114);
     }
-  : (type) => {
+  : function TextDisplayComponent(type) {
       type = type.type;
       const id = type.id;
       const content = type.content;

@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/ICYMISessionStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import v1 from "../../../_runtime/01266_v1.js";
+import v1 from "../../../_runtime/01278_v1.js";
 import ICYMIAnalytics2 from "ICYMIAnalytics.tsx";
 import ExperimentStore from "../experiments/ExperimentStore.tsx";
 import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
@@ -13,7 +13,7 @@ require = fn;
 let c7 = 300000;
 let c8 = null;
 let closure_9 = [];
-const v65535 = 0;
+const collapsed = 0;
 let map = new Map();
 class ICYMISession {
   constructor() {

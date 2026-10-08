@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
-import _mod4498 from "../../../../_runtime/metro/04498__.js";
+import _mod4690 from "../../../../_runtime/metro/04690__.js";
 import useQuestHomeHeaderDefault from "useQuestHomeHeader.tsx";
 import QuestHomeDefault from "QuestHome.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -10,15 +10,15 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import QuestHomeNavigationStore from "../QuestHomeNavigationStore.tsx";
 
 require = fn;
-const QuestConstants = fn(5630);
+const QuestConstants = fn(5977);
 ({ QuestHomeSortMethods: metroRequire, getQuestHomeFilterOptionItem: closure_7 } = QuestConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useFinishedNavigating() {
       const cResult = c.c(3);
       const navigation = useNavigation.useNavigation();
       [tmp4, importDefault] = noop.useState(false);
@@ -39,7 +39,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp5, tmp6);
       return tmp4;
     }
-  : () => {
+  : function useFinishedNavigating() {
       const navigation = useNavigation.useNavigation();
       const tmp2 = _slicedToArray(noop.useState(false), 2);
       closure_1 = tmp2[1];
@@ -54,7 +54,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestHomeSetting.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function QuestHomeSetting() {
       const cResult = c.c(16);
       const tmp3 = closure_9();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -177,15 +177,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(E, tmp14);
       const tmp16 = closure_10();
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        class T {
+        class N {
           constructor() {
             tmp = closure_1(closure_11);
             return;
           }
         }
-        cResult[4] = T;
+        cResult[4] = N;
       } else {
-        class T {
+        class N {
           constructor() {
             tmp = closure_1(closure_11);
             return;
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        class O {
+        class H {
           constructor() {
             return () => {
               closure_1_1(closure_1_2[11]).close();
@@ -202,11 +202,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const items1 = [];
-        cResult[5] = O;
+        cResult[5] = H;
         cResult[6] = items1;
         let tmp19 = items1;
       } else {
-        class O {
+        class H {
           constructor() {
             return () => {
               closure_1_1(closure_1_2[11]).close();
@@ -216,10 +216,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp19 = cResult[6];
       }
-      const effect1 = noop.useEffect(O, tmp19);
+      const effect1 = noop.useEffect(H, tmp19);
       const field = QuestHomeNavigationStore.useField("scrollToQuestId");
       if (cResult[7] === tmp11) {
-        class O {
+        class H {
           constructor() {
             return () => {
               closure_1_1(closure_1_2[11]).close();
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         useQuestHomeHeaderDefault(obj4);
         if (cResult[10] === tmp16) {
-          class O {
+          class H {
             constructor() {
               return () => {
                 closure_1_1(closure_1_2[11]).close();
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           scrollToQuestId: field,
           sortMethod: tmp7,
           filters: tmp11,
-          onClearFilters: T,
+          onClearFilters: N,
         };
         const tmp26 = jsx(QuestHomeDefault, {
           containerStyle: tmp3.container,
@@ -252,7 +252,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           scrollToQuestId: field,
           sortMethod: tmp7,
           filters: tmp11,
-          onClearFilters: T,
+          onClearFilters: N,
         });
         cResult[10] = tmp16;
         cResult[11] = field;
@@ -272,7 +272,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = obj4;
       const tmp5Result = _slicedToArray(noop.useState(tmp9), 2);
     }
-  : () => {
+  : function QuestHomeSetting() {
       const tmp = closure_9();
       [tmp3, tmp4] = noop.useState(() => {
         let SUGGESTED = QuestHomeNavigationStore.getField("sort");
@@ -342,7 +342,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 closure_1_1(found);
               }
             },
-            { equalityFn: _mod4498.shallow, fireImmediately: true },
+            { equalityFn: _mod4690.shallow, fireImmediately: true },
           ),
         [],
       );

@@ -24,7 +24,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRadioRow.native.tsx");
 
 export const TableRadioRow = ReactCompilerGating.isReactCompilerEnabled()
-  ? (value) => {
+  ? function TableRadioRow(value) {
       const cResult = c.c(33);
       if (cResult[0] !== value) {
         value = value.value;
@@ -160,19 +160,19 @@ export const TableRadioRow = ReactCompilerGating.isReactCompilerEnabled()
           tmp21 = obj4;
         }
       }
-      const fn = function x(arg0) {
+      function handleOnPress(arg0) {
         if (closure_0 != null) {
           tmp(arg0);
         }
         onSelect(closure_1);
-      };
+      }
       cResult[9] = legacyCompat_onPress;
       cResult[10] = onSelect;
       cResult[11] = tmp11;
-      cResult[12] = fn;
-      tmp17 = fn;
+      cResult[12] = handleOnPress;
+      tmp17 = handleOnPress;
     }
-  : (value) => {
+  : function TableRadioRow(value) {
       value = value.value;
       require = value;
       ({ label, subLabel, disabled } = value);
@@ -218,7 +218,7 @@ export const TableRadioRow = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj.accessibilityLabel = "" + nodeText + ", " + str;
       obj.accessibilityHint = value.accessibilityHint;
-      obj.onPress = function onPress(arg0) {
+      obj.onPress = function handleOnPress(arg0) {
         if (dependencyMap != null) {
           tmp(arg0);
         }

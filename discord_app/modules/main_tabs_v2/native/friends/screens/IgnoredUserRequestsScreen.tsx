@@ -5,7 +5,7 @@ import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const UserRowModes = fn(10605).UserRowModes;
+const UserRowModes = fn(10202).UserRowModes;
 const RelationshipTypes = fn(1085).RelationshipTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/IgnoredUserRequestsScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function IgnoredUserRequestsScreen(arg0) {
       const cResult = analyticsLocations(stateFromStores[7]).c(17);
       const obj = analyticsLocations(stateFromStores[7]);
       analyticsLocations = stateFromStoresArray(stateFromStores[8])(
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = analyticsLocations(stateFromStores[11]);
       stateFromStores = analyticsLocations(stateFromStores[11]).useStateFromStores(tmp9, tmp11, tmp12);
       if (cResult[6] !== analyticsLocations) {
-        class N {
+        class U {
           constructor(arg0) {
             obj = { userId: arg0.id, localUser: arg0, sourceAnalyticsLocations: analyticsLocations };
             tmp = closure_1(closure_2[12])(obj);
@@ -68,9 +68,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[6] = analyticsLocations;
-        cResult[7] = N;
+        cResult[7] = U;
       } else {
-        class N {
+        class U {
           constructor(arg0) {
             obj = { userId: arg0.id, localUser: arg0, sourceAnalyticsLocations: analyticsLocations };
             tmp = closure_1(closure_2[12])(obj);
@@ -78,49 +78,49 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      onPress = N;
+      onPress = U;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        class U {
+        class N {
           constructor() {
             return;
           }
         }
-        cResult[8] = U;
+        cResult[8] = N;
       } else {
-        class U {
+        class N {
           constructor() {
             return;
           }
         }
       }
-      if (cResult[9] === N) {
-        class U {
+      if (cResult[9] === U) {
+        class N {
           constructor() {
             return;
           }
         }
         if (0 !== stateFromStores.length) {
-          class U {
+          class N {
             constructor() {
               return;
             }
           }
           if (cResult[14] === P) {
-            class U {
+            class N {
               constructor() {
                 return;
               }
             }
             return tmp17;
           }
-          const obj2 = { getItemProps: P, getSectionProps: U, sections: tmp16 };
-          const tmp19 = jsx(tmp(tmp2[13]).UsersFastList, { getItemProps: P, getSectionProps: U, sections: tmp16 });
+          const obj2 = { getItemProps: P, getSectionProps: N, sections: tmp16 };
+          const tmp19 = jsx(tmp(tmp2[13]).UsersFastList, { getItemProps: P, getSectionProps: N, sections: tmp16 });
           cResult[14] = P;
           cResult[15] = tmp16;
           cResult[16] = tmp19;
           tmp17 = tmp19;
         } else {
-          class U {
+          class N {
             constructor() {
               return;
             }
@@ -142,12 +142,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return element;
         }
       }
-      cResult[9] = N;
+      cResult[9] = U;
       cResult[10] = stateFromStores;
       cResult[11] = P;
       const tmpResult2 = analyticsLocations(stateFromStores[11]);
     }
-  : (navigation) => {
+  : function IgnoredUserRequestsScreen(navigation) {
       navigation = navigation.navigation;
       let stateFromStoresArray;
       let stateFromStores;

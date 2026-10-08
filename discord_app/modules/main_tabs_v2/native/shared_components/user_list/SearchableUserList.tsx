@@ -10,17 +10,17 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10605).UserRowModes;
+const UserRowModes = fn(10202).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   searchBarContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
     paddingBottom: nativeDefault.space.PX_8,
     backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
   },
-  searchBar: { height: "duration", minHeight: false },
+  searchBar: { height: "emoji", minHeight: false },
   searchBarRowContainer: null,
   noResults: null,
 };
@@ -41,7 +41,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (selectedUserIds) => {
+  ? function SearchableUserList(selectedUserIds) {
       const cResult = selectedUserIds(onSelectUser[9]).c(82);
       selectedUserIds = selectedUserIds.selectedUserIds;
       const disabledUserIds = selectedUserIds.disabledUserIds;
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp20 = obj2;
       const tmp18 = handleMessage(rowMode.useState(""), 2);
     }
-  : (selectedUserIds) => {
+  : function SearchableUserList(selectedUserIds) {
       selectedUserIds = selectedUserIds.selectedUserIds;
       const disabledUserIds = selectedUserIds.disabledUserIds;
       const onSelectUser = selectedUserIds.onSelectUser;

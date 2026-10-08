@@ -2,7 +2,7 @@
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import util from "../../intl/index.native.tsx";
-import _modDef4467 from "../../../_runtime/metro/04467__.js";
+import _modDef4659 from "../../../_runtime/metro/04659__.js";
 import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
 import SafetyHubModels from "SafetyHubModels.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -51,7 +51,7 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-const SafetyHubConstants = fn(8126);
+const SafetyHubConstants = fn(5921);
 ({
   AppealIngestionSignal: closure_4,
   SafetySystemNotificationCtaType: hasOwnProperty,
@@ -64,7 +64,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  return _modDef4467().to(_modDef4467(timestamp));
+  return _modDef4659().to(_modDef4659(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {
@@ -180,7 +180,7 @@ export const getClassificationAccountStatusExpiration = function getClassificati
   }
 };
 export const useIsSuspendedUser = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsSuspendedUser() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AuthenticationStore];
@@ -196,7 +196,7 @@ export const useIsSuspendedUser = ReactCompilerGating.isReactCompilerEnabled()
       }
       return null != initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsSuspendedUser() {
       const items = [AuthenticationStore];
       return null != initialize.useStateFromStores(items, () => suspendedUserToken.getSuspendedUserToken());
     };

@@ -12,11 +12,11 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const SubscriptionIntervalTypes = fn(1379).SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = fn(1391).SubscriptionIntervalTypes;
 const CurrencyCodes = fn(1096).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingBottom: 24 }, header: { flexDirection: "row" }, image: null, templateCTAButton: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.sm };
 obj2.image = size;
@@ -30,7 +30,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const GuildRoleSubscriptionTierTemplateBasicInfo = ReactCompilerGating.isReactCompilerEnabled()
-  ? (template) => {
+  ? function GuildRoleSubscriptionTierTemplateBasicInfo(template) {
       const cResult = c.c(40);
       template = template.template;
       const handleSelectTemplateInPreview = template.handleSelectTemplateInPreview;
@@ -63,9 +63,6 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = ReactCompilerGating.is
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { flexShrink: 1 };
           cResult[6] = obj3;
-          let tmp12 = obj3;
-        } else {
-          tmp12 = cResult[6];
         }
         const _Symbol3 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
@@ -132,72 +129,89 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = ReactCompilerGating.is
                     const _Symbol5 = Symbol;
                     if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
                       const intl2 = util.intl;
+                      cResult[27] = intl2.string(util.t["1W7mCt"]);
+                      class I {
+                        constructor() {
+                          return closure_1(template, closeActionSheet);
+                        }
+                      }
                       const stringResult = intl2.string(util.t["1W7mCt"]);
-                      cResult[27] = stringResult;
-                      let tmp41 = stringResult;
                     } else {
-                      tmp41 = cResult[27];
+                      const tmp40 = cResult[27];
                     }
                     if (cResult[28] === closeActionSheet) {
                       if (cResult[29] === handleSelectTemplateInPreview) {
                         if (cResult[30] === template) {
-                          let tmp43 = cResult[31];
+                          let tmp42 = cResult[31];
                         }
                         if (cResult[32] === tmp4.templateCTAButton) {
-                          if (cResult[33] === tmp43) {
-                            let tmp44 = cResult[34];
+                          if (cResult[33] === tmp42) {
+                            let tmp43 = cResult[34];
                           }
                           if (cResult[35] === tmp4.container) {
                             if (cResult[36] === tmp31) {
                               if (cResult[37] === tmp35) {
-                                if (cResult[38] === tmp44) {
-                                  let tmp47 = cResult[39];
+                                if (cResult[38] === tmp43) {
+                                  let tmp46 = cResult[39];
                                 }
-                                return tmp47;
+                                return tmp46;
                               }
                             }
                           }
-                          const obj8 = { style: container, children: null };
-                          const items = [tmp31, tmp35, tmp44];
+                          const obj8 = { style: null, children: null };
+                          class I {
+                            constructor() {
+                              return closure_1(template, closeActionSheet);
+                            }
+                          }
+                          const items = [tmp31, tmp35, tmp43];
                           obj8.children = items;
-                          const tmp50 = React5(View, obj8);
+                          const tmp49 = React5(View, obj8);
                           cResult[35] = tmp4.container;
                           cResult[36] = tmp31;
                           cResult[37] = tmp35;
-                          cResult[38] = tmp44;
-                          cResult[39] = tmp50;
-                          tmp47 = tmp50;
+                          cResult[38] = tmp43;
+                          cResult[39] = tmp49;
+                          tmp46 = tmp49;
                         }
-                        const obj9 = { text: tmp41, pillStyle: tmp4.templateCTAButton, onPress: tmp43, grow: true };
-                        const tmp46 = timestampProducer(BaseTextButton.BaseTextButton, obj9);
+                        const obj9 = { text: tmp40, pillStyle: null, onPress: null, grow: true };
+                        class I {
+                          constructor() {
+                            return closure_1(template, closeActionSheet);
+                          }
+                        }
+                        obj9.onPress = tmp42;
+                        const tmp45 = timestampProducer(BaseTextButton.BaseTextButton, obj9);
                         cResult[32] = tmp4.templateCTAButton;
-                        cResult[33] = tmp43;
-                        cResult[34] = tmp46;
-                        tmp44 = tmp46;
+                        cResult[33] = tmp42;
+                        cResult[34] = tmp45;
+                        tmp43 = tmp45;
                       }
                     }
-                    const fn = function w() {
-                      return handleSelectTemplateInPreview(template, closeActionSheet);
-                    };
+                    class I {
+                      constructor() {
+                        return closure_1(template, closeActionSheet);
+                      }
+                    }
                     cResult[28] = closeActionSheet;
                     cResult[29] = handleSelectTemplateInPreview;
                     cResult[30] = template;
-                    cResult[31] = fn;
-                    tmp43 = fn;
+                    cResult[31] = I;
+                    tmp42 = I;
                   }
                 }
                 const obj10 = { variant: "text-sm/normal", style: descriptionTextStyle };
                 const merged = Object.assign(descriptionTextProps);
                 obj10.children = description;
-                const tmp40 = timestampProducer(Text_Text.Text, obj10);
+                const tmp39 = timestampProducer(Text_Text.Text, obj10);
                 cResult[23] = description;
                 cResult[24] = descriptionTextProps;
                 cResult[25] = descriptionTextStyle;
-                cResult[26] = tmp40;
-                tmp35 = tmp40;
+                cResult[26] = tmp39;
+                tmp35 = tmp39;
               }
             }
-            const obj11 = { style: header, children: null };
+            const obj11 = { style: null, children: null };
             const items1 = [tmp6, tmp9, tmp27];
             obj11.children = items1;
             const tmp34 = React5(View, obj11);
@@ -207,7 +221,7 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = ReactCompilerGating.is
             cResult[22] = tmp34;
             tmp31 = tmp34;
           }
-          const obj12 = { style: tmp12, children: null };
+          const obj12 = { style: null, children: null };
           const items2 = [tmp14, tmp17, tmp24];
           obj12.children = items2;
           const tmp30 = React5(View, obj12);
@@ -230,7 +244,7 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = ReactCompilerGating.is
       tmp6 = tmp7;
       const obj14 = { source: tmp5, style: tmp4.image };
     }
-  : (template) => {
+  : function GuildRoleSubscriptionTierTemplateBasicInfo(template) {
       template = template.template;
       ({
         handleSelectTemplateInPreview: importDefault,

@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FileOrLinkGridPlaceholderItem(arg0) {
       const cResult = c.c(11);
       ({ imageStyle, containerStyle } = arg0);
       const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(true);
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = size;
       tmp6 = size;
     }
-  : (imageStyle) => {
+  : function FileOrLinkGridPlaceholderItem(imageStyle) {
       imageStyle = imageStyle.imageStyle;
       const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(true);
       const width = imageStyle.width;

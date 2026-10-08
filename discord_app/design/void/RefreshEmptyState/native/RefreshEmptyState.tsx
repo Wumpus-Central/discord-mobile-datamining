@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { alignItems: "center", justifyContent: "center", padding: 16 },
   title: null,
@@ -39,7 +39,7 @@ obj2.cta = { alignSelf: "center", marginTop: 16 };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function EmptyState(arg0) {
       const cResult = c.c(26);
       ({ source, title, body, containerStyle, imageStyle, titleStyle, bodyStyle, callToAction } = arg0);
       const tmp4 = closure_9();
@@ -159,7 +159,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items4;
       tmp5 = items4;
     }
-  : (arg0) => {
+  : function EmptyState(arg0) {
       ({ source, title, callToAction } = arg0);
       ({ body, containerStyle, imageStyle, titleStyle, bodyStyle } = arg0);
       const tmp = closure_9();
@@ -211,7 +211,7 @@ const result = size.fileFinishedImporting("design/void/RefreshEmptyState/native/
 
 export default tmp9;
 export const ThemedEmptyState = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ThemedEmptyState(arg0) {
       const cResult = c.c(7);
       if (cResult[0] !== arg0) {
         ({ lightSource, darkSource } = arg0);
@@ -247,7 +247,7 @@ export const ThemedEmptyState = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { source: tmp4 };
       tmpResult2 = shared;
     }
-  : (darkSource) => {
+  : function ThemedEmptyState(darkSource) {
       let lightSource = darkSource.darkSource;
       const merged = Object.assign(darkSource, Object.assign({ lightSource: 0, darkSource: 0 }));
       const obj = shared;

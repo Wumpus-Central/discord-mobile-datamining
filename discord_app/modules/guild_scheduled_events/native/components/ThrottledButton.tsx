@@ -10,7 +10,7 @@ const jsx = fn(21).jsx;
 let c6 = 500;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useThrottledActionHandler(arg0) {
       let tmp = arg0;
       const cResult = c.c(4);
       if (undefined === arg0) {
@@ -19,7 +19,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       closure_0 = tmp;
       closure_1 = noop.useRef(null);
       if (cResult[0] !== tmp) {
-        const fn = function t(arg0) {
+        function createThrottleActionHandler(arg0) {
           closure_0 = arg0;
           return (arg0) => {
             let tmp2 = null != closure_0;
@@ -34,22 +34,22 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               }, closure_0);
             }
           };
-        };
+        }
         cResult[0] = tmp;
-        cResult[1] = fn;
-        let tmp3 = fn;
+        cResult[1] = createThrottleActionHandler;
+        let tmp3 = createThrottleActionHandler;
       } else {
         tmp3 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function f() {
+        const fn = function f() {
           return () => clearTimeout(ref.current);
         };
         const items = [];
-        cResult[2] = fn2;
+        cResult[2] = fn;
         cResult[3] = items;
         let tmp5 = items;
-        let tmp4 = fn2;
+        let tmp4 = fn;
       } else {
         tmp4 = cResult[2];
         tmp5 = cResult[3];
@@ -57,10 +57,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp4, tmp5);
       return tmp3;
     }
-  : () => {
+  : function useThrottledActionHandler() {
       closure_1 = noop.useRef(null);
       const effect = noop.useEffect(() => () => clearTimeout(ref.current), []);
-      return (arg0) => {
+      return function createThrottleActionHandler(arg0) {
         closure_0 = arg0;
         return (arg0) => {
           let tmp2 = null != closure_0;
@@ -83,7 +83,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/ThrottledButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ThrottledButton(arg0) {
       const cResult = c.c(20);
       if (cResult[0] !== arg0) {
         ({ onPress, onPressIn, onPressOut, throttleMs } = arg0);
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp12ResultResult2;
       tmp14 = tmp12ResultResult2;
     }
-  : (throttleMs) => {
+  : function ThrottledButton(throttleMs) {
       let num = throttleMs.throttleMs;
       ({ onPress, onPressIn, onPressOut } = throttleMs);
       if (num === undefined) {

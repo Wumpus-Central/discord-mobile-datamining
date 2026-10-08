@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef13609 from "../../../../../_runtime/metro/13609__.js";
+import _modDef13431 from "../../../../../_runtime/metro/13431__.js";
 import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles_mod from "../../../rebrand/native/TextStyles.tsx";
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { justifyContent: "center" },
   button: { paddingHorizontal: 12, paddingTop: 16 },
@@ -39,7 +39,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceEmptyState.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function VoiceEmptyState(channel) {
       const cResult = c.c(18);
       channel = channel.channel;
       const tmp4 = closure_6();
@@ -114,8 +114,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj11 = {
           title: tmp9,
           body: tmp10,
-          lightSource: _modDef13609,
-          darkSource: _modDef13609,
+          lightSource: _modDef13431,
+          darkSource: _modDef13431,
           titleStyle: null,
           bodyStyle: null,
           imageStyle: null,
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp7 = items1;
     }
-  : (channel) => {
+  : function VoiceEmptyState(channel) {
       const tmp = closure_6();
       const obj = { style: null, children: null };
       const items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
@@ -152,8 +152,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.title = intl.string(util.t["/HABZo"]);
       const intl2 = util.intl;
       obj4.body = intl2.string(util.t["5Jy2FY"]);
-      obj4.lightSource = _modDef13609;
-      obj4.darkSource = _modDef13609;
+      obj4.lightSource = _modDef13431;
+      obj4.darkSource = _modDef13431;
       ({ emptyTitle: obj3.titleStyle, emptyBody: obj3.bodyStyle } = tmp);
       obj4.imageStyle = { marginBottom: 16, marginTop: 20 };
       const items1 = [

@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (sku) => {
+  ? function useMobileSocialLayerPurchaseSKU(sku) {
       const cResult = require("c").c(11);
       if (cResult[0] !== sku) {
         sku = sku.sku;
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       DEFAULT = constants.DEFAULT;
       let obj = require("c");
     }
-  : (sku) => {
+  : function useMobileSocialLayerPurchaseSKU(sku) {
       sku = sku.sku;
       const merged = Object.assign(sku, Object.assign({ sku: 0 }));
       c0 = undefined;

@@ -20,7 +20,7 @@ function serverNameHook(children) {
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (serverName) => {
+  ? function RoleSubscriptionsUnavailableNotice(serverName) {
       const cResult = c.c(5);
       serverName = serverName.serverName;
       if (cResult[0] !== serverName) {
@@ -52,7 +52,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : (serverName) => {
+  : function RoleSubscriptionsUnavailableNotice(serverName) {
       const obj = { title: null, description: null };
       const intl = util.intl;
       obj.title = intl.format(util.t.uEqG1M, { serverName: serverName.serverName, serverNameHook });
@@ -63,7 +63,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_9 = tmp2;
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PurchasePage(arg0) {
       const cResult = c.c(9);
       ({ guildId, gatedChannelId } = arg0);
       const mobileStoreFront = NativePaymentHooksDefault.useMobileStoreFront();
@@ -109,7 +109,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp10;
       tmp9 = tmp10;
     }
-  : (arg0) => {
+  : function PurchasePage(arg0) {
       ({ guildId, gatedChannelId } = arg0);
       const mobileStoreFront = NativePaymentHooksDefault.useMobileStoreFront();
       let country;
@@ -131,10 +131,9 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildRoleSubscriptionsOverview(guildId) {
       const cResult = guildId(stateFromStores1[7]).c(16);
       guildId = guildId.guildId;
-      const gatedChannelId = guildId.gatedChannelId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
@@ -143,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== guildId) {
-        const fn = function h() {
+        const fn = function f() {
           return GuildStore.getGuild(guildId);
         };
         const items1 = [guildId];
@@ -160,12 +159,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = guildId(stateFromStores1[13]).useStateFromStores(first, tmp6, tmp7);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [GatewayConnectionStore];
-        const fn2 = function p() {
-          return connected.isConnected();
-        };
+        class C {
+          constructor() {
+            return closure_1_4.isConnected();
+          }
+        }
         cResult[4] = items2;
-        cResult[5] = fn2;
-        let tmp10 = fn2;
+        cResult[5] = C;
+        let tmp10 = C;
         let tmp9 = items2;
       } else {
         tmp9 = cResult[4];
@@ -179,84 +180,46 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] === stateFromStores) {
         if (cResult[7] === stateFromStores1) {
           if (cResult[8] === tmp13) {
-            let tmp16 = cResult[9];
-            let tmp17 = cResult[10];
+            let tmp15 = cResult[9];
+            let tmp16 = cResult[10];
           }
-          const effect = noop.useEffect(tmp16, tmp17);
-          if (tmp15) {
-            if (cResult[11] === gatedChannelId) {
-              if (cResult[12] === guildId) {
-                let tmp25 = cResult[13];
-              }
-              return tmp25;
+          const effect = noop.useEffect(tmp15, tmp16);
+          class C {
+            constructor() {
+              return closure_1_4.isConnected();
             }
-            let obj2 = { guildId, gatedChannelId };
-            const tmp28 = <closure_10 guildId={guildId} gatedChannelId={gatedChannelId} />;
-            cResult[11] = gatedChannelId;
-            cResult[12] = guildId;
-            cResult[13] = tmp28;
-            tmp25 = tmp28;
-          } else {
-            let str;
-            if (stateFromStores != null) {
-              str = stateFromStores.name;
-            }
-            if (str == null) {
-              str = "";
-            }
-            if (cResult[14] !== str) {
-              let obj3 = { serverName: str };
-              const tmp24 = <closure_9 serverName={str} />;
-              cResult[14] = str;
-              cResult[15] = tmp24;
-              let tmp21 = tmp24;
-            } else {
-              tmp21 = cResult[15];
-            }
-            return tmp21;
           }
         }
       }
-      class F {
-        constructor() {
-          tmp = !closure_2;
-          if (closure_2) {
-            tmp2 = closure_1;
-            tmp3 = null;
-            tmp4 = null != closure_1 && closure_3;
-            tmp = tmp4;
-          }
-          if (!tmp) {
-            tmp5 = closure_1;
-            tmp6 = closure_2;
-            obj = closure_1(closure_2[16]);
-            obj1 = { title: null, body: null, confirmText: null };
-            tmp7 = closure_0;
-            intl = closure_0(closure_2[8]).intl;
-            obj1.title = intl.string(closure_0(closure_2[8]).t.r0DLNm);
-            intl2 = closure_0(closure_2[8]).intl;
-            obj1.body = intl2.string(closure_0(closure_2[8]).t["6Y0JlN"]);
-            intl3 = closure_0(closure_2[8]).intl;
-            obj1.confirmText = intl3.string(closure_0(closure_2[8]).t.BddRzS);
-            showResult = obj.show(obj1);
-            obj3 = closure_0(closure_2[17]);
-            tmp9 = closure_5;
-            replaceWithResult = obj3.replaceWith(closure_5.defaultRoute);
-          }
-          return;
+      const fn2 = function _() {
+        let tmp = !stateFromStores1;
+        if (stateFromStores1) {
+          tmp = null != stateFromStores && closure_3;
+          const tmp4 = null != stateFromStores && closure_3;
         }
-      }
+        if (!tmp) {
+          const obj2 = { title: null, body: null, confirmText: null };
+          const intl = util.intl;
+          obj2.title = intl.string(util.t.r0DLNm);
+          const intl2 = util.intl;
+          obj2.body = intl2.string(util.t["6Y0JlN"]);
+          const intl3 = util.intl;
+          obj2.confirmText = intl3.string(util.t.BddRzS);
+          actions_AlertActionCreatorsDefault.show(obj2);
+          router_utils.replaceWith(DefaultRouteStore.defaultRoute);
+        }
+      };
       const items3 = [stateFromStores, stateFromStores1, tmp13];
       cResult[6] = stateFromStores;
       cResult[7] = stateFromStores1;
       cResult[8] = tmp13;
-      cResult[9] = F;
+      cResult[9] = fn2;
       cResult[10] = items3;
-      tmp17 = items3;
-      tmp16 = F;
+      tmp16 = items3;
+      tmp15 = fn2;
       const tmpResult3 = guildId(stateFromStores1[13]);
     }
-  : (guildId) => {
+  : function GuildRoleSubscriptionsOverview(guildId) {
       guildId = guildId.guildId;
       let stateFromStores1;
       const items = [GuildStore];

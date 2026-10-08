@@ -329,7 +329,7 @@ const Image = fn(17).Image;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function useBurstReactionAnimationSource(channelId) {
       const cResult = channelId(emoji[5]).c(6);
       channelId = channelId.channelId;
       const messageId = channelId.messageId;
@@ -425,7 +425,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn;
       const tmp2 = _slicedToArray(noop.useState(null), 2);
     }
-  : (channelId) => {
+  : function useBurstReactionAnimationSource(channelId) {
       channelId = channelId.channelId;
       const messageId = channelId.messageId;
       const emoji = channelId.emoji;

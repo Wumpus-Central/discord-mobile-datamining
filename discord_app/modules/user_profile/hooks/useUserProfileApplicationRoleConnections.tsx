@@ -11,7 +11,7 @@ let closure_4 = [];
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileApplicationRoleConnections.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useUserProfileApplicationRoleConnections(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return null != prop ? stateFromStores.applicationRoleConnections : closure_4;
     }
-  : (arg0) => {
+  : function useUserProfileApplicationRoleConnections(arg0) {
       _require = arg0;
       const items = [UserProfileStore];
       stateFromStores = require("initialize").useStateFromStores(items, () =>

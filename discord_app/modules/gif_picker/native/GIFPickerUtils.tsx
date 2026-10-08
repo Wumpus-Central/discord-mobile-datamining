@@ -61,7 +61,7 @@ let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerUtil
 
 export const GIF_HEADER_HEIGHT = 56;
 export const useFavoriteGIFsMobile = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useFavoriteGIFsMobile() {
       const cResult = c.c(6);
       const sortedFavoriteGIFs = FavoriteGIFHooks.useSortedFavoriteGIFs(transformFavoriteGifUrl);
       if (cResult[0] === sortedFavoriteGIFs[0]) {
@@ -94,10 +94,10 @@ export const useFavoriteGIFsMobile = ReactCompilerGating.isReactCompilerEnabled(
       cResult[2] = tmp5;
       tmp4 = tmp5;
     }
-  : () => {
-      sortedFavoriteGIFs = sortedFavoriteGIFs(10107).useSortedFavoriteGIFs(transformFavoriteGifUrl);
+  : function useFavoriteGIFsMobile() {
+      sortedFavoriteGIFs = sortedFavoriteGIFs(9691).useSortedFavoriteGIFs(transformFavoriteGifUrl);
       const items = [sortedFavoriteGIFs];
-      let obj = sortedFavoriteGIFs(10107);
+      let obj = sortedFavoriteGIFs(9691);
       return {
         favorites: sortedFavoriteGIFs,
         favoritesCategory: noop.useMemo(() => {

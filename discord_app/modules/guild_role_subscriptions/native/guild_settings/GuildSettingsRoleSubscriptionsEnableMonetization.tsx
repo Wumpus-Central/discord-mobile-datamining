@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildSubscriptionEnableMonetization(guildId) {
       let tmp2 = dependencyMap;
       const cResult = guildId(576).c(5);
       guildId = guildId.guildId;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       tmpResult = guildId(504);
     }
-  : (guildId) => {
+  : function GuildSubscriptionEnableMonetization(guildId) {
       guildId = guildId.guildId;
       const items = [GuildStore];
       if (null == obj.useStateFromStores(items, () => GuildStore.getGuild(guildId))) {

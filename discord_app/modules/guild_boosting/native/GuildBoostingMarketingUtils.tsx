@@ -1,9 +1,9 @@
 // discord_app/modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx
 import PremiumConstants from "../../premium/PremiumConstants.tsx";
 import StageIcon from "../../../design/components/Icon/native/redesign/generated/StageIcon.tsx";
+import ShieldUserIcon from "../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
 import ReactionIcon from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import UploadIcon from "../../../design/components/Icon/native/redesign/generated/UploadIcon.tsx";
-import ShieldUserIcon from "../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
 import StarIcon from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import GifIcon from "../../../design/components/Icon/native/redesign/generated/GifIcon.tsx";
 import ImagesIcon from "../../../design/components/Icon/native/redesign/generated/ImagesIcon.tsx";

@@ -8,10 +8,10 @@ const require = globalThis.__r;
 const require = fn;
 let set = new Set();
 let obj = {
-  layoutType: fn(2062).ForumLayout.LIST,
-  sortOrder: fn(2061).ThreadSortOrder.CREATION_DATE,
+  layoutType: fn(2074).ForumLayout.LIST,
+  sortOrder: fn(2073).ThreadSortOrder.CREATION_DATE,
   tagFilter: set,
-  tagSetting: fn(2063).ThreadSearchTagSetting.MATCH_SOME,
+  tagSetting: fn(2075).ThreadSearchTagSetting.MATCH_SOME,
 };
 let closure_6 = function ForumChannelStoreState(set, get) {
   obj = Object.create(new.target.prototype);
@@ -159,7 +159,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/ForumChannelStore.tsx");
 
 export const useForumChannelStore = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function useForumChannelStore(channelId) {
       _require = channelId;
       obj = require("c");
       const cResult = obj.c(3);
@@ -188,7 +188,7 @@ export const useForumChannelStore = ReactCompilerGating.isReactCompilerEnabled()
       }
       return channelState;
     }
-  : (channelId) => {
+  : function useForumChannelStore(channelId) {
       _require = channelId;
       obj = closure_7();
       const items = [ChannelStore];

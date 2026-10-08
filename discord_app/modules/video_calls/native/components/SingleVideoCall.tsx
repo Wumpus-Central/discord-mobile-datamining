@@ -4,7 +4,7 @@ import showUserProfileActionSheetDefault from "../../../user_profile/native/show
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const ChannelCallStore = fn(9086);
+const ChannelCallStore = fn(10333);
 ({ resetFocus: closure_4, toggleFocus: hasOwnProperty } = ChannelCallStore);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -12,21 +12,21 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/SingleVideoCall.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function SingleVideoCall(arg0) {
       const cResult = channel(576).c(13);
       ({ participant, channel } = arg0);
       const obj = channel(576);
       const tmp4 = analyticsLocations;
-      ({ bottom, right } = analyticsLocations(1618)());
-      analyticsLocations = analyticsLocations(6664)().analyticsLocations;
+      ({ bottom, right } = analyticsLocations(1630)());
+      analyticsLocations = analyticsLocations(6841)().analyticsLocations;
       if (cResult[0] !== channel.id) {
-        const fn = function n() {
+        function handleDoubleTap() {
           React4();
           const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
-        };
+        }
         cResult[0] = channel.id;
-        cResult[1] = fn;
-        let tmp6 = fn;
+        cResult[1] = handleDoubleTap;
+        let tmp6 = handleDoubleTap;
       } else {
         tmp6 = cResult[1];
       }
@@ -51,18 +51,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = {
             gestureEnabled: true,
             participant,
-            avatarSize: channel(1188).AvatarSizes.PROFILE,
-            resizeMode: channel(9140).ResizeMode.AUTO,
+            avatarSize: channel(1200).AvatarSizes.PROFILE,
+            resizeMode: channel(10710).ResizeMode.AUTO,
             statusStyle: tmp8,
             onSingleTap,
             onDoubleTap: tmp6,
             onLongPress: tmp7,
           };
-          const tmp13 = jsx(tmp4(9155), {
+          const tmp13 = jsx(tmp4(10721), {
             gestureEnabled: true,
             participant,
-            avatarSize: channel(1188).AvatarSizes.PROFILE,
-            resizeMode: channel(9140).ResizeMode.AUTO,
+            avatarSize: channel(1200).AvatarSizes.PROFILE,
+            resizeMode: channel(10710).ResizeMode.AUTO,
             statusStyle: tmp8,
             onSingleTap,
             onDoubleTap: tmp6,
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[11] = tmp8;
           cResult[12] = tmp13;
           tmp9 = tmp13;
-          const tmp4Result = tmp4(9155);
+          const tmp4Result = tmp4(10721);
         }
         const obj3 = { marginRight: right, marginBottom: bottom };
         cResult[5] = bottom;
@@ -82,21 +82,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = obj3;
         tmp8 = obj3;
       }
-      const fn2 = function b(user) {
+      function onLongPress(user) {
         showUserProfileActionSheetDefault({
           userId: user.user.id,
           channelId: channel.id,
           isVoiceContext: true,
           sourceAnalyticsLocations: analyticsLocations,
         });
-      };
+      }
       cResult[2] = analyticsLocations;
       cResult[3] = channel.id;
-      cResult[4] = fn2;
-      tmp7 = fn2;
-      const tmp5 = analyticsLocations(1618)();
+      cResult[4] = onLongPress;
+      tmp7 = onLongPress;
+      const tmp5 = analyticsLocations(1630)();
     }
-  : (channel) => {
+  : function SingleVideoCall(channel) {
       channel = channel.channel;
       let bottom;
       let right;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         resizeMode: channel(right[11]).ResizeMode.AUTO,
         statusStyle: memo,
         onSingleTap,
-        onDoubleTap() {
+        onDoubleTap: function handleDoubleTap() {
           React4();
           const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
         },
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         resizeMode: channel(right[11]).ResizeMode.AUTO,
         statusStyle: memo,
         onSingleTap,
-        onDoubleTap() {
+        onDoubleTap: function handleDoubleTap() {
           React4();
           const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
         },

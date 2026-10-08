@@ -19,7 +19,7 @@ const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let closure_15 = ReanimatedRexport.createAnimatedComponent(Pressable);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { position: "absolute", alignItems: "center" },
   shadow: null,
@@ -101,8 +101,8 @@ let closure_16 = createStyles.createStyles(obj);
 let closure_17 = { "21/9": 90, "16/9": 90, "6/4": 60, "2/1": 40, "1/1": 40 };
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const cResult = ref(gradient[10]).c(104);
+  ? function Coachmark(arg0) {
+      const cResult = ref(gradient[10]).c(102);
       ({
         targetMeasurements,
         surfaceMeasurements,
@@ -174,161 +174,153 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         let bottomMargin = null;
         if (null == renderImgComponent) {
           if (null == imgSource) {
-            let tmp28 = null;
+            let tmp26 = null;
             if (null != bottomMargin) {
-              if (cResult[22] === bottomMargin) {
+              if (cResult[20] === bottomMargin) {
               }
               const obj2 = { style: tmp4.bottomMargin, children: bottomMargin };
-              const tmp44 = closure_12(closure_8, obj2);
-              cResult[22] = bottomMargin;
+              const tmp42 = closure_12(closure_8, obj2);
+              cResult[20] = bottomMargin;
               bottomMargin = tmp4.bottomMargin;
-              cResult[23] = bottomMargin;
-              cResult[24] = tmp44;
+              cResult[21] = bottomMargin;
+              cResult[22] = tmp42;
             }
           } else {
-            if (cResult[19] === imgSource) {
+            if (cResult[17] === imgSource) {
             }
             const obj3 = { source: imgSource, style: tmp4.image };
-            const tmp39 = closure_12(Image, obj3);
-            cResult[19] = imgSource;
+            const tmp37 = closure_12(Image, obj3);
+            cResult[17] = imgSource;
             imgSource = tmp4.image;
-            cResult[20] = imgSource;
-            cResult[21] = tmp39;
+            cResult[18] = imgSource;
+            cResult[19] = tmp37;
           }
-        } else if (cResult[17] !== renderImgComponent) {
+        } else if (cResult[15] !== renderImgComponent) {
           const renderImgComponentResult = renderImgComponent();
-          cResult[17] = renderImgComponent;
-          cResult[18] = renderImgComponentResult;
+          cResult[15] = renderImgComponent;
+          cResult[16] = renderImgComponentResult;
         }
       } else {
-        if (cResult[7] !== tmp4.bottomMargin) {
-          const items = [tmp4.bottomMargin];
-          cResult[7] = tmp4.bottomMargin;
-          cResult[8] = items;
-          let tmp18 = items;
-        } else {
-          tmp18 = cResult[8];
-        }
         let str = graphic.aspectRatio;
         if (str == null) {
           str = "1/1";
         }
-        if (cResult[9] !== closure_17[str]) {
-          let size = { height: tmp20, width: "auto" };
-          cResult[9] = tmp20;
-          cResult[10] = size;
-          let tmp21 = size;
+        if (cResult[7] !== closure_17[str]) {
+          let size = { height: tmp18, width: "auto" };
+          cResult[7] = tmp18;
+          cResult[8] = size;
+          let tmp19 = size;
         } else {
-          tmp21 = cResult[10];
+          tmp19 = cResult[8];
         }
-        if (cResult[11] === graphic) {
-          if (cResult[12] === tmp21) {
-            let tmp22 = cResult[13];
+        if (cResult[9] === graphic) {
+          if (cResult[10] === tmp19) {
+            let tmp20 = cResult[11];
           }
-          if (cResult[14] === tmp18) {
-            if (cResult[15] === tmp22) {
-              tmp28 = cResult[16];
+          if (cResult[12] === tmp4.bottomMargin) {
+            if (cResult[13] === tmp20) {
+              tmp26 = cResult[14];
             }
           }
-          const obj4 = { style: tmp18, children: tmp22 };
-          const tmp31 = closure_12(closure_8, obj4);
-          cResult[14] = tmp18;
-          cResult[15] = tmp22;
-          cResult[16] = tmp31;
-          tmp28 = tmp31;
+          const obj4 = { style: tmp4.bottomMargin, children: tmp20 };
+          const tmp29 = closure_12(closure_8, obj4);
+          cResult[12] = tmp4.bottomMargin;
+          cResult[13] = tmp20;
+          cResult[14] = tmp29;
+          tmp26 = tmp29;
         }
         const obj5 = {};
         const merged = Object.assign(graphic);
-        obj5.style = tmp21;
-        const tmp27 = closure_12(tmp(tmp2[13]).Graphic, obj5);
-        cResult[11] = graphic;
-        cResult[12] = tmp21;
-        cResult[13] = tmp27;
-        tmp22 = tmp27;
+        obj5.style = tmp19;
+        const tmp25 = closure_12(tmp(tmp2[13]).Graphic, obj5);
+        cResult[9] = graphic;
+        cResult[10] = tmp19;
+        cResult[11] = tmp25;
+        tmp20 = tmp25;
       }
-      if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-        function pe() {
+      if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
+        function ge() {
           const result = setAccessibilityFocus.setAccessibilityFocus({ ref, delay: 100 });
         }
-        cResult[25] = pe;
-        let tmp46 = pe;
+        cResult[23] = ge;
+        let tmp44 = ge;
       } else {
-        tmp46 = cResult[25];
+        tmp44 = cResult[23];
       }
       let textOnlyPadding;
       if (null == graphic) {
         textOnlyPadding = tmp4.textOnlyPadding;
       }
-      if (cResult[26] === tmp4.text) {
-        if (cResult[27] === textOnlyPadding) {
-          let tmp48 = cResult[28];
+      if (cResult[24] === tmp4.text) {
+        if (cResult[25] === textOnlyPadding) {
+          let tmp46 = cResult[26];
         }
-        if (cResult[29] === tmp48) {
-          if (cResult[30] === title) {
-            let tmp49 = cResult[31];
+        if (cResult[27] === tmp46) {
+          if (cResult[28] === title) {
+            let tmp47 = cResult[29];
           }
-          if (cResult[32] === description) {
-            if (cResult[33] === tmp4.text) {
-              let tmp52 = cResult[34];
+          if (cResult[30] === description) {
+            if (cResult[31] === tmp4.text) {
+              let tmp50 = cResult[32];
             }
-            if (cResult[35] === tmp4.textGap) {
-              if (cResult[36] === tmp49) {
-                if (cResult[37] === tmp52) {
-                  let tmp55 = cResult[38];
+            if (cResult[33] === tmp4.textGap) {
+              if (cResult[34] === tmp47) {
+                if (cResult[35] === tmp50) {
+                  let tmp53 = cResult[36];
                 }
-                if (cResult[39] === tmp28) {
-                  if (cResult[40] === tmp4.center) {
-                    if (cResult[41] === tmp55) {
-                      let tmp59 = cResult[42];
+                if (cResult[37] === tmp26) {
+                  if (cResult[38] === tmp4.center) {
+                    if (cResult[39] === tmp53) {
+                      let tmp57 = cResult[40];
                     }
-                    if (cResult[43] === buttonIcon) {
-                      if (cResult[44] === buttonLabel) {
-                        if (cResult[45] === buttonShiny) {
-                          if (cResult[46] === buttonVariant) {
-                            if (cResult[47] === experimental_withBlurBackground) {
-                              if (cResult[48] === onButtonPress) {
-                                if (cResult[49] === tmp4.buttonSpacing) {
-                                  let tmp63 = cResult[50];
+                    if (cResult[41] === buttonIcon) {
+                      if (cResult[42] === buttonLabel) {
+                        if (cResult[43] === buttonShiny) {
+                          if (cResult[44] === buttonVariant) {
+                            if (cResult[45] === experimental_withBlurBackground) {
+                              if (cResult[46] === onButtonPress) {
+                                if (cResult[47] === tmp4.buttonSpacing) {
+                                  let tmp61 = cResult[48];
                                 }
                                 const _Symbol = Symbol;
-                                if (cResult[51] === Symbol.for("react.memo_cache_sentinel")) {
+                                if (cResult[49] === Symbol.for("react.memo_cache_sentinel")) {
                                   const intl = tmp(tmp2[17]).intl;
                                   const stringResult = intl.string(tmp(tmp2[17]).t.cpT0Cq);
-                                  cResult[51] = stringResult;
-                                  let tmp71 = stringResult;
+                                  cResult[49] = stringResult;
+                                  let tmp69 = stringResult;
                                 } else {
-                                  tmp71 = cResult[51];
+                                  tmp69 = cResult[49];
                                 }
                                 const _Symbol2 = Symbol;
-                                if (cResult[52] === Symbol.for("react.memo_cache_sentinel")) {
+                                if (cResult[50] === Symbol.for("react.memo_cache_sentinel")) {
                                   const obj6 = { size: "xs", color: require("native").colors.ICON_STRONG };
-                                  const tmp75 = closure_12(tmp(tmp2[18]).XSmallIcon, obj6);
-                                  cResult[52] = tmp75;
-                                  let tmp73 = tmp75;
+                                  const tmp73 = closure_12(tmp(tmp2[18]).XSmallIcon, obj6);
+                                  cResult[50] = tmp73;
+                                  let tmp71 = tmp73;
                                 } else {
-                                  tmp73 = cResult[52];
+                                  tmp71 = cResult[50];
                                 }
-                                if (cResult[53] === tmp10) {
-                                  if (cResult[54] === tmp11) {
-                                    if (cResult[55] === onDismiss) {
-                                      if (cResult[56] === tmp4.closeButton) {
-                                        let tmp76 = cResult[57];
+                                if (cResult[51] === tmp10) {
+                                  if (cResult[52] === tmp11) {
+                                    if (cResult[53] === onDismiss) {
+                                      if (cResult[54] === tmp4.closeButton) {
+                                        let tmp74 = cResult[55];
                                       }
-                                      if (cResult[58] === tmp59) {
-                                        if (cResult[59] === tmp63) {
-                                          if (cResult[60] === tmp76) {
-                                            let tmp80 = cResult[61];
+                                      if (cResult[56] === tmp57) {
+                                        if (cResult[57] === tmp61) {
+                                          if (cResult[58] === tmp74) {
+                                            let tmp78 = cResult[59];
                                           }
-                                          if (cResult[62] === tmp80) {
-                                            if (cResult[63] === experimental_withBlurBackground) {
-                                              if (cResult[64] === gradientColor) {
-                                                if (cResult[65] === gradient) {
-                                                  if (cResult[66] === tmp4.bodyBgColor) {
-                                                    if (cResult[67] === tmp4.bodyContainer) {
-                                                      if (cResult[68] === tmp4.gradient) {
+                                          if (cResult[60] === tmp78) {
+                                            if (cResult[61] === experimental_withBlurBackground) {
+                                              if (cResult[62] === gradientColor) {
+                                                if (cResult[63] === gradient) {
+                                                  if (cResult[64] === tmp4.bodyBgColor) {
+                                                    if (cResult[65] === tmp4.bodyContainer) {
+                                                      if (cResult[66] === tmp4.gradient) {
                                                         const _Symbol3 = Symbol;
-                                                        if (cResult[70] === Symbol.for("react.memo_cache_sentinel")) {
-                                                          class Ee {
+                                                        if (cResult[68] === Symbol.for("react.memo_cache_sentinel")) {
+                                                          class Pe {
                                                             constructor(arg0) {
                                                               nativeEvent = arg0.nativeEvent;
                                                               size = {
@@ -339,9 +331,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                               return;
                                                             }
                                                           }
-                                                          cResult[70] = Ee;
+                                                          cResult[68] = Pe;
                                                         } else {
-                                                          class Ee {
+                                                          class Pe {
                                                             constructor(arg0) {
                                                               nativeEvent = arg0.nativeEvent;
                                                               size = {
@@ -353,8 +345,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                             }
                                                           }
                                                         }
-                                                        if (cResult[71] !== tmp4.shadow) {
-                                                          class Ee {
+                                                        if (cResult[69] !== tmp4.shadow) {
+                                                          class Pe {
                                                             constructor(arg0) {
                                                               nativeEvent = arg0.nativeEvent;
                                                               size = {
@@ -366,7 +358,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                             }
                                                           }
                                                           if (obj21.isIOS()) {
-                                                            class Ee {
+                                                            class Pe {
                                                               constructor(arg0) {
                                                                 nativeEvent = arg0.nativeEvent;
                                                                 size = {
@@ -378,10 +370,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                               }
                                                             }
                                                           }
-                                                          cResult[71] = tmp4.shadow;
-                                                          cResult[72] = undefined;
+                                                          cResult[69] = tmp4.shadow;
+                                                          cResult[70] = undefined;
                                                         } else {
-                                                          class Ee {
+                                                          class Pe {
                                                             constructor(arg0) {
                                                               nativeEvent = arg0.nativeEvent;
                                                               size = {
@@ -394,7 +386,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                           }
                                                         }
                                                         if (null != tmp7) {
-                                                          class Ee {
+                                                          class Pe {
                                                             constructor(arg0) {
                                                               nativeEvent = arg0.nativeEvent;
                                                               size = {
@@ -406,8 +398,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                             }
                                                           }
                                                         }
-                                                        if (cResult[73] === 0) {
-                                                          class Ee {
+                                                        if (cResult[71] === 0) {
+                                                          class Pe {
                                                             constructor(arg0) {
                                                               nativeEvent = arg0.nativeEvent;
                                                               size = {
@@ -420,10 +412,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                           }
                                                         }
                                                         const rect = { opacity: 0, top: tooltipY, left: tooltipX };
-                                                        cResult[73] = 0;
-                                                        cResult[74] = tooltipX;
-                                                        cResult[75] = tooltipY;
-                                                        cResult[76] = rect;
+                                                        cResult[71] = 0;
+                                                        cResult[72] = tooltipX;
+                                                        cResult[73] = tooltipY;
+                                                        cResult[74] = rect;
                                                       }
                                                     }
                                                   }
@@ -432,7 +424,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                             }
                                           }
                                           if (experimental_withBlurBackground) {
-                                            class Ee {
+                                            class Pe {
                                               constructor(arg0) {
                                                 nativeEvent = arg0.nativeEvent;
                                                 size = {
@@ -447,11 +439,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                               style: tmp4.bodyContainer,
                                               blurTheme: "dark",
                                               pressed: gradient,
-                                              children: tmp80,
+                                              children: tmp78,
                                             };
-                                            let tmp85Result = closure_12(tmp(tmp2[19]).BackgroundBlurView, obj7);
+                                            let tmp83Result = closure_12(tmp(tmp2[19]).BackgroundBlurView, obj7);
                                           } else {
-                                            class Ee {
+                                            class Pe {
                                               constructor(arg0) {
                                                 nativeEvent = arg0.nativeEvent;
                                                 size = {
@@ -462,12 +454,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                 return;
                                               }
                                             }
-                                            const items1 = [,];
-                                            ({ bodyContainer: arr7[0], bodyBgColor: arr7[1] } = tmp4);
-                                            tmp87[0] = items1;
-                                            let tmp88 = null;
+                                            const items = [,];
+                                            ({ bodyContainer: arr6[0], bodyBgColor: arr6[1] } = tmp4);
+                                            tmp85[0] = items;
+                                            let tmp86 = null;
                                             if (null != gradientColor) {
-                                              class Ee {
+                                              class Pe {
                                                 constructor(arg0) {
                                                   nativeEvent = arg0.nativeEvent;
                                                   size = {
@@ -484,50 +476,50 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                 backgroundColor:
                                                   require("native").colors.MOBILE_COACHMARK_BACKGROUND_DEFAULT,
                                               };
-                                              tmp88 = closure_12(tmp(tmp2[20]).ExpressiveGradient, obj8);
+                                              tmp86 = closure_12(tmp(tmp2[20]).ExpressiveGradient, obj8);
                                             }
-                                            const items2 = [tmp88, tmp80];
-                                            tmp87[1] = items2;
-                                            tmp85Result = closure_13(closure_8, tmp87);
+                                            const items1 = [tmp86, tmp78];
+                                            tmp85[1] = items1;
+                                            tmp83Result = closure_13(closure_8, tmp85);
                                           }
-                                          cResult[62] = tmp80;
-                                          cResult[63] = experimental_withBlurBackground;
-                                          cResult[64] = gradientColor;
-                                          cResult[65] = gradient;
-                                          cResult[66] = tmp4.bodyBgColor;
-                                          ({ bodyContainer: tmp3[67], gradient } = tmp4);
-                                          cResult[68] = gradient;
-                                          cResult[69] = tmp85Result;
+                                          cResult[60] = tmp78;
+                                          cResult[61] = experimental_withBlurBackground;
+                                          cResult[62] = gradientColor;
+                                          cResult[63] = gradient;
+                                          cResult[64] = tmp4.bodyBgColor;
+                                          ({ bodyContainer: tmp3[65], gradient } = tmp4);
+                                          cResult[66] = gradient;
+                                          cResult[67] = tmp83Result;
                                         }
                                       }
                                       const obj9 = { children: null };
-                                      const items3 = [tmp59, tmp63, tmp76];
-                                      obj9.children = items3;
-                                      const tmp83 = closure_13(closure_14, obj9);
-                                      cResult[58] = tmp59;
-                                      cResult[59] = tmp63;
-                                      cResult[60] = tmp76;
-                                      cResult[61] = tmp83;
-                                      tmp80 = tmp83;
+                                      const items2 = [tmp57, tmp61, tmp74];
+                                      obj9.children = items2;
+                                      const tmp81 = closure_13(closure_14, obj9);
+                                      cResult[56] = tmp57;
+                                      cResult[57] = tmp61;
+                                      cResult[58] = tmp74;
+                                      cResult[59] = tmp81;
+                                      tmp78 = tmp81;
                                     }
                                   }
                                 }
                                 const obj10 = {
                                   accessibilityRole: "button",
-                                  accessibilityLabel: tmp71,
+                                  accessibilityLabel: tmp69,
                                   style: tmp4.closeButton,
                                   onPress: onDismiss,
                                   onPressIn: tmp10,
                                   onPressOut: tmp11,
-                                  children: tmp73,
+                                  children: tmp71,
                                 };
-                                const tmp79 = closure_12(Pressable, obj10);
-                                cResult[53] = tmp10;
-                                cResult[54] = tmp11;
-                                cResult[55] = onDismiss;
-                                cResult[56] = tmp4.closeButton;
-                                cResult[57] = tmp79;
-                                tmp76 = tmp79;
+                                const tmp77 = closure_12(Pressable, obj10);
+                                cResult[51] = tmp10;
+                                cResult[52] = tmp11;
+                                cResult[53] = onDismiss;
+                                cResult[54] = tmp4.closeButton;
+                                cResult[55] = tmp77;
+                                tmp74 = tmp77;
                               }
                             }
                           }
@@ -535,7 +527,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                     if (null != buttonLabel) {
-                      class Ee {
+                      class Pe {
                         constructor(arg0) {
                           nativeEvent = arg0.nativeEvent;
                           size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
@@ -544,7 +536,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                       if (null != onButtonPress) {
-                        class Ee {
+                        class Pe {
                           constructor(arg0) {
                             nativeEvent = arg0.nativeEvent;
                             size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
@@ -553,9 +545,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                           }
                         }
                         const obj11 = { style: tmp4.buttonSpacing };
-                        const items4 = [closure_12(closure_8, obj11)];
+                        const items3 = [closure_12(closure_8, obj11)];
                         if (experimental_withBlurBackground) {
-                          class Ee {
+                          class Pe {
                             constructor(arg0) {
                               nativeEvent = arg0.nativeEvent;
                               size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
@@ -563,12 +555,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                               return;
                             }
                           }
-                          tmp69[2] = buttonIcon;
-                          tmp69[3] = buttonLabel;
-                          tmp69[4] = onButtonPress;
-                          let obj12 = tmp69;
+                          tmp67[2] = buttonIcon;
+                          tmp67[3] = buttonLabel;
+                          tmp67[4] = onButtonPress;
+                          let obj12 = tmp67;
                         } else {
-                          class Ee {
+                          class Pe {
                             constructor(arg0) {
                               nativeEvent = arg0.nativeEvent;
                               size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
@@ -577,7 +569,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                             }
                           }
                           if (buttonVariant == null) {
-                            class Ee {
+                            class Pe {
                               constructor(arg0) {
                                 nativeEvent = arg0.nativeEvent;
                                 size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
@@ -587,7 +579,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                             }
                           }
                           obj12 = {
-                            variant: tmp68,
+                            variant: tmp66,
                             size: "sm",
                             icon: buttonIcon,
                             text: buttonLabel,
@@ -597,20 +589,20 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                           };
                         }
                         const obj13 = { children: null };
-                        items4[1] = closure_12(tmp(tmp2[16]).Button, obj12);
-                        obj13.children = items4;
+                        items3[1] = closure_12(tmp(tmp2[16]).Button, obj12);
+                        obj13.children = items3;
                         closure_13(closure_14, obj13);
                       }
                     }
-                    cResult[43] = buttonIcon;
-                    cResult[44] = buttonLabel;
-                    cResult[45] = buttonShiny;
-                    cResult[46] = buttonVariant;
-                    cResult[47] = experimental_withBlurBackground;
-                    cResult[48] = onButtonPress;
-                    cResult[49] = tmp4.buttonSpacing;
-                    cResult[50] = null;
-                    tmp63 = tmp64;
+                    cResult[41] = buttonIcon;
+                    cResult[42] = buttonLabel;
+                    cResult[43] = buttonShiny;
+                    cResult[44] = buttonVariant;
+                    cResult[45] = experimental_withBlurBackground;
+                    cResult[46] = onButtonPress;
+                    cResult[47] = tmp4.buttonSpacing;
+                    cResult[48] = null;
+                    tmp61 = tmp62;
                   }
                 }
                 const obj14 = {
@@ -618,56 +610,56 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   accessibilityRole: "alert",
                   style: tmp4.center,
                   accessible: true,
-                  onLayout: tmp46,
+                  onLayout: tmp44,
                   children: null,
                 };
-                const items5 = [tmp28, tmp55];
-                obj14.children = items5;
-                const tmp62 = closure_13(closure_8, obj14);
-                cResult[39] = tmp28;
-                cResult[40] = tmp4.center;
-                cResult[41] = tmp55;
-                cResult[42] = tmp62;
-                tmp59 = tmp62;
+                const items4 = [tmp26, tmp53];
+                obj14.children = items4;
+                const tmp60 = closure_13(closure_8, obj14);
+                cResult[37] = tmp26;
+                cResult[38] = tmp4.center;
+                cResult[39] = tmp53;
+                cResult[40] = tmp60;
+                tmp57 = tmp60;
               }
             }
             const obj15 = { style: tmp4.textGap, children: null };
-            const items6 = [tmp49, tmp52];
-            obj15.children = items6;
-            const tmp58 = closure_13(closure_8, obj15);
-            cResult[35] = tmp4.textGap;
-            cResult[36] = tmp49;
-            cResult[37] = tmp52;
-            cResult[38] = tmp58;
-            tmp55 = tmp58;
+            const items5 = [tmp47, tmp50];
+            obj15.children = items5;
+            const tmp56 = closure_13(closure_8, obj15);
+            cResult[33] = tmp4.textGap;
+            cResult[34] = tmp47;
+            cResult[35] = tmp50;
+            cResult[36] = tmp56;
+            tmp53 = tmp56;
           }
           const obj16 = { style: tmp4.text, variant: "text-sm/medium", color: "text-subtle", children: description };
-          const tmp54 = closure_12(tmp(tmp2[15]).Text, obj16);
-          cResult[32] = description;
-          cResult[33] = tmp4.text;
-          cResult[34] = tmp54;
-          tmp52 = tmp54;
+          const tmp52 = closure_12(tmp(tmp2[15]).Text, obj16);
+          cResult[30] = description;
+          cResult[31] = tmp4.text;
+          cResult[32] = tmp52;
+          tmp50 = tmp52;
         }
         const obj17 = {
-          style: tmp48,
+          style: tmp46,
           variant: "text-md/semibold",
           color: "mobile-text-heading-primary",
           children: title,
         };
-        const tmp51 = closure_12(tmp(tmp2[15]).Text, obj17);
-        cResult[29] = tmp48;
-        cResult[30] = title;
-        cResult[31] = tmp51;
-        tmp49 = tmp51;
+        const tmp49 = closure_12(tmp(tmp2[15]).Text, obj17);
+        cResult[27] = tmp46;
+        cResult[28] = title;
+        cResult[29] = tmp49;
+        tmp47 = tmp49;
       }
-      const items7 = [tmp4.text, textOnlyPadding];
-      cResult[26] = tmp4.text;
-      cResult[27] = textOnlyPadding;
-      cResult[28] = items7;
-      tmp48 = items7;
+      const items6 = [tmp4.text, textOnlyPadding];
+      cResult[24] = tmp4.text;
+      cResult[25] = textOnlyPadding;
+      cResult[26] = items6;
+      tmp46 = items6;
       const tmpResult2 = ref(gradient[12]);
     }
-  : (graphic) => {
+  : function Coachmark(graphic) {
       ({ targetMeasurements, surfaceMeasurements, offsetY } = graphic);
       let num = 0;
       ({ title, description } = graphic);
@@ -697,7 +689,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       ({ tooltipX, tooltipY } = tmp7);
       const tmp3 = sharedValue(noop.useState(null), 2);
       sharedValue = graphic(renderImgComponent[6]).useSharedValue(0);
-      let items = [sharedValue];
+      const items = [sharedValue];
       const items1 = [sharedValue];
       const callback = noop.useCallback(() => {
         const result = sharedValue.set(1);
@@ -722,9 +714,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const items3 = [
         noop.useMemo(() => {
           if (null != graphic) {
-            const obj2 = { style: null, children: null };
-            const items = [closure_3.bottomMargin];
-            obj2.style = items;
+            const obj2 = { style: closure_3.bottomMargin, children: null };
             const obj3 = {};
             const merged = Object.assign(graphic);
             let str = graphic.aspectRatio;
@@ -918,7 +908,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_18 = tmp5;
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (position) => {
+  ? function Cursor(position) {
       const cResult = c.c(17);
       position = position.position;
       const tmp2 = closure_16();
@@ -991,7 +981,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = obj5;
       }
     }
-  : (arg0) => {
+  : function Cursor(arg0) {
       ({ position, adjustmentX } = arg0);
       const tmp = closure_16();
       let str = "column";
@@ -1019,7 +1009,7 @@ let result = size.fileFinishedImporting("design/components/Coachmark/native/Coac
 
 export const Coachmark = tmp5;
 export const CoachmarkContainer = ReactCompilerGating.isReactCompilerEnabled()
-  ? (experimental_withBlurBackground) => {
+  ? function CoachmarkContainer(experimental_withBlurBackground) {
       const cResult = c.c(5);
       let DARK = native.useThemeContext().theme;
       if (experimental_withBlurBackground.experimental_withBlurBackground) {
@@ -1047,7 +1037,7 @@ export const CoachmarkContainer = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp13;
       tmp12 = tmp13;
     }
-  : (experimental_withBlurBackground) => {
+  : function CoachmarkContainer(experimental_withBlurBackground) {
       let DARK = native.useThemeContext().theme;
       if (experimental_withBlurBackground.experimental_withBlurBackground) {
         DARK = ThemeTypes.DARK;

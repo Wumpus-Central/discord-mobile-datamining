@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/useTrackPollEvents.tsx");
 
 export const useTrackPollCreationEvents = ReactCompilerGating.isReactCompilerEnabled()
-  ? (attachments_count, arg1) => {
+  ? function useTrackPollCreationEvents(attachments_count, arg1) {
       _require = attachments_count;
       closure_1 = arg1;
       const cResult = require("c").c(5);
@@ -61,7 +61,7 @@ export const useTrackPollCreationEvents = ReactCompilerGating.isReactCompilerEna
       cResult[2] = fn;
       tmp2 = fn;
     }
-  : (attachments_count, arg1) => {
+  : function useTrackPollCreationEvents(attachments_count, arg1) {
       closure_1 = arg1;
       let obj = { trackPollCreationCancelled: null };
       const items = [attachments_count, arg1];

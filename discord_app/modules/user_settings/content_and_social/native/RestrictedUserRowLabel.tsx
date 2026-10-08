@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/RestrictedUserRowLabel.tsx");
 
 export const RestrictedUserRowLabel = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RestrictedUserRowLabel(arg0) {
       const cResult = c.c(13);
       ({ userRecord, accessibilityActions, onAccessibilityAction } = arg0);
       const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
@@ -99,7 +99,7 @@ export const RestrictedUserRowLabel = ReactCompilerGating.isReactCompilerEnabled
       cResult[4] = tmp10;
       tmp9 = tmp10;
     }
-  : (userRecord) => {
+  : function RestrictedUserRowLabel(userRecord) {
       userRecord = userRecord.userRecord;
       ({ accessibilityActions, onAccessibilityAction } = userRecord);
       const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);

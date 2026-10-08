@@ -7,7 +7,7 @@ import subscribeToKeyboardUIStore from "../../keyboard/native/subscribeToKeyboar
 const require = globalThis.__r;
 
 require = fn;
-const VoiceMessagesUIStore = fn(11587);
+const VoiceMessagesUIStore = fn(11650);
 ({
   hideVoiceMessagesTooltip: closure_4,
   showVoiceMessagesTooltip: hasOwnProperty,
@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_messages/native/useVoiceMessageTooltip.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useVoiceMessageTooltip() {
       const cResult = require("c").c(8);
       const ref = noop.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const fn2 = function h() {
           if (keyboardIsOpen) {
             keyboardIsOpen = useKeyboardIsOpen.getKeyboardIsOpen({ includeCustomKeyboard: true });
-            closure_1 = subscribeToKeyboardUIStore(() => {
+            closure_1 = subscribeToKeyboardUIStore(function keyboardChangeListener() {
               if (closure_0 !== obj.getKeyboardIsOpen({ includeCustomKeyboard: true })) {
                 closure_2_4();
               }
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp14;
     }
-  : () => {
+  : function useVoiceMessageTooltip() {
       const ref = noop.useRef(null);
       const tmp2 = closure_6((showVoiceMessagesTooltip) => showVoiceMessagesTooltip.showVoiceMessagesTooltip);
       _require = tmp2;
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(() => {
         if (keyboardIsOpen) {
           keyboardIsOpen = useKeyboardIsOpen.getKeyboardIsOpen({ includeCustomKeyboard: true });
-          closure_1 = subscribeToKeyboardUIStore(() => {
+          closure_1 = subscribeToKeyboardUIStore(function keyboardChangeListener() {
             if (closure_0 !== obj.getKeyboardIsOpen({ includeCustomKeyboard: true })) {
               closure_2_4();
             }

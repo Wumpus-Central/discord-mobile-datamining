@@ -227,7 +227,7 @@ fn(558);
 const tmp2 = new LoggerDefault("AgeVerificationCustomTab");
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsAgeVerificationCustomTabOpen() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(isOpen) {
@@ -240,7 +240,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_6(first);
     }
-  : () => closure_6((isOpen) => isOpen.isOpen);
+  : function useIsAgeVerificationCustomTabOpen() {
+      return closure_6((isOpen) => isOpen.isOpen);
+    };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationCustomTab.tsx");
 
@@ -276,7 +278,7 @@ export function getIsAgeVerificationCustomTabAwaitingResult() {
 }
 export const useIsAgeVerificationCustomTabOpen = tmp3;
 export const useAgeVerificationCustomTabCopy = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAgeVerificationCustomTabCopy() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(copy) {
@@ -289,5 +291,7 @@ export const useAgeVerificationCustomTabCopy = ReactCompilerGating.isReactCompil
       }
       return closure_6(first);
     }
-  : () => closure_6((copy) => copy.copy);
+  : function useAgeVerificationCustomTabCopy() {
+      return closure_6((copy) => copy.copy);
+    };
 export { getIsAgeVerificationCustomTabOpen };

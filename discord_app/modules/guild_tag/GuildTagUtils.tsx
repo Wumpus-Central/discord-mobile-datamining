@@ -7,7 +7,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildTagConstants = fn(7614);
+const GuildTagConstants = fn(7860);
 ({
   GuildTagBadgeMediaProxySizes,
   GuildTagBadgeMediaProxySizesMobile: hasOwnProperty,
@@ -17,7 +17,7 @@ const GuildFeatures = fn(1085).GuildFeatures;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useUserPrimaryGuild(arg0) {
       _require = arg0;
       const cResult = require("c").c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -75,7 +75,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useUserPrimaryGuild(arg0) {
       let tmp = arg0;
       _require = arg0;
       const items = [GuildStore];
@@ -148,7 +148,7 @@ export const getGuildTagBadgeUrl = function getGuildTagBadgeUrl(guildId, badge) 
 export { getUserPrimaryGuild };
 export const useUserPrimaryGuild = tmp3;
 export const useShouldDisplayGuildTag = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useShouldDisplayGuildTag(arg0, arg1, arg2) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(9);
@@ -160,51 +160,74 @@ export const useShouldDisplayGuildTag = ReactCompilerGating.isReactCompilerEnabl
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function f() {
-          return UserStore.getUser(closure_0);
-        };
+        class G {
+          constructor() {
+            return closure_4.getUser(closure_0);
+          }
+        }
         const items1 = [arg0];
         cResult[1] = arg0;
-        cResult[2] = fn;
+        cResult[2] = G;
         cResult[3] = items1;
         let tmp7 = items1;
-        let tmp6 = fn;
       } else {
-        tmp6 = cResult[2];
+        class G {
+          constructor() {
+            return closure_4.getUser(closure_0);
+          }
+        }
         tmp7 = cResult[3];
       }
       const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
+      const stateFromStores = require("initialize").useStateFromStores(first, G, tmp7);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        class G {
+          constructor() {
+            return closure_4.getUser(closure_0);
+          }
+        }
         const items2 = [GuildMemberStore];
         cResult[4] = items2;
-        let tmp9 = items2;
+        const tmp9 = items2;
       } else {
-        tmp9 = cResult[4];
+        class G {
+          constructor() {
+            return closure_4.getUser(closure_0);
+          }
+        }
       }
       if (cResult[5] === arg1) {
-        if (cResult[6] === arg0) {
-          let tmp11 = cResult[7];
-          let tmp12 = cResult[8];
+        class G {
+          constructor() {
+            return closure_4.getUser(closure_0);
+          }
         }
-        let tmp13 = arg2;
-        const stateFromStores1 = tmp(504).useStateFromStores(tmp9, tmp11, tmp12);
+        let tmp10 = arg2;
+        const stateFromStores1 = tmp(504).useStateFromStores(tmp9, S, items3);
         if (undefined === arg2) {
-          let primaryGuild;
+          class G {
+            constructor() {
+              return closure_4.getUser(closure_0);
+            }
+          }
           if (stateFromStores != null) {
-            primaryGuild = stateFromStores.primaryGuild;
+            class G {
+              constructor() {
+                return closure_4.getUser(closure_0);
+              }
+            }
           }
-          tmp13 = primaryGuild;
+          tmp10 = tmp12;
         }
-        if (null != tmp13) {
-          if (tmp13.identityEnabled) {
-            ({ identityGuildId: obj5.guildId, tag: obj5.tag, badge: obj5.badge } = tmp13);
-            let obj3 = { guildId: null, tag: null, badge: null };
-            const obj2 = { guildId: null, tag: null, badge: null };
+        if (null != tmp10) {
+          class G {
+            constructor() {
+              return closure_4.getUser(closure_0);
+            }
           }
-          return null != obj3.guildId && null != obj3.tag && !stateFromStores1;
+          return null != obj2.guildId && null != obj2.tag && !stateFromStores1;
         }
-        obj3 = {};
+        obj2 = {};
         const tmpResult2 = tmp(504);
       }
       class S {
@@ -222,16 +245,14 @@ export const useShouldDisplayGuildTag = ReactCompilerGating.isReactCompilerEnabl
           return null;
         }
       }
-      const items3 = [arg1, arg0];
+      items3 = [arg1, arg0];
       cResult[5] = arg1;
       cResult[6] = arg0;
       cResult[7] = S;
       cResult[8] = items3;
-      tmp12 = items3;
-      tmp11 = S;
       const tmpResult = require("initialize");
     }
-  : (arg0, arg1, arg2) => {
+  : function useShouldDisplayGuildTag(arg0, arg1, arg2) {
       _require = arg0;
       dependencyMap = arg1;
       let tmp = arg2;

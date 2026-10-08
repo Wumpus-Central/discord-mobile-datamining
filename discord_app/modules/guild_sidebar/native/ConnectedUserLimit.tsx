@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ConnectedUserLimit.tsx");
 
 export const ConnectedUserLimit = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ConnectedUserLimit(arg0) {
       const cResult = c.c(4);
       ({ channel, video, userCount } = arg0);
       const limit = useChannelVideoLimitDefault(channel).limit;
@@ -49,7 +49,7 @@ export const ConnectedUserLimit = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp9;
       tmp8 = tmp9;
     }
-  : (users) => {
+  : function ConnectedUserLimit(users) {
       ({ channel, video } = users);
       const limit = useChannelVideoLimitDefault(channel).limit;
       let num = -1;

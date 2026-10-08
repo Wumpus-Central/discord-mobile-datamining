@@ -36,7 +36,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/useRecipientsLabel.tsx");
 
 export const useRecipientsLabel = ReactCompilerGating.isReactCompilerEnabled()
-  ? (recipients) => {
+  ? function useRecipientsLabel(recipients) {
       _require = recipients;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -70,7 +70,7 @@ export const useRecipientsLabel = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useRecipientsLabel(arg0) {
       _require = arg0;
       const items = [UserStore];
       const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {

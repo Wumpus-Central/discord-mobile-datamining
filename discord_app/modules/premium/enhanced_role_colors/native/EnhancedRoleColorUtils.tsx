@@ -104,7 +104,12 @@ export const isNativeMessageEligibleForEnhancedRoleColors = function isNativeMes
 ) {
   return useHasEnhancedRoleColors.getHasEnhancedRoleColors(guildId, id);
 };
-export const useIsRoleStyleAndRoleColorsEligibleForERC = (guildId, id, stateFromStores, processColorStringsArray) => {
+export const useIsRoleStyleAndRoleColorsEligibleForERC = function useIsRoleStyleAndRoleColorsEligibleForERC(
+  guildId,
+  id,
+  stateFromStores,
+  processColorStringsArray,
+) {
   let tmp = useHasEnhancedRoleColorsDefault(guildId, id);
   if (tmp) {
     tmp = "username" === stateFromStores;

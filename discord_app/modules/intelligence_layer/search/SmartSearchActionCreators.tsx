@@ -1,5 +1,7 @@
 // discord_app/modules/intelligence_layer/search/SmartSearchActionCreators.tsx
+import DispatcherDefault from "../../../Dispatcher.tsx";
 import SmartSearchResultsStoreDefault from "SmartSearchResultsStore.tsx";
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -183,18 +185,18 @@ let closure_10 = async function _fetchAnswer(arg0) {
           })(closure_129_11.body.message_citations);
           closure_129_13 = (function resolveSearchStatus(search_status, length) {
             if ("not_qualified" === search_status) {
-              return closure_1_0(11985).SmartSearchStatus.NOT_QUALIFIED;
+              return closure_1_0(12058).SmartSearchStatus.NOT_QUALIFIED;
             } else if ("no_results" === search_status) {
-              return closure_1_0(11985).SmartSearchStatus.EMPTY;
+              return closure_1_0(12058).SmartSearchStatus.EMPTY;
             } else if ("success" === search_status) {
               if (length > 0) {
-                let EMPTY = closure_1_0(11985).SmartSearchStatus.LOADED;
+                let EMPTY = closure_1_0(12058).SmartSearchStatus.LOADED;
               } else {
-                EMPTY = closure_1_0(11985).SmartSearchStatus.EMPTY;
+                EMPTY = closure_1_0(12058).SmartSearchStatus.EMPTY;
               }
               return EMPTY;
             } else {
-              return closure_1_0(11985).SmartSearchStatus.ERROR;
+              return closure_1_0(12058).SmartSearchStatus.ERROR;
             }
           })(closure_129_11.body.search_status, closure_129_12.length);
           const obj15 = {
@@ -260,4 +262,12 @@ export const fetchAnswer = function fetchAnswer() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
+};
+export const setResultFeedback = function setResultFeedback(SearchSessionAnalyticsManager) {
+  ({ smartSearchQuery, hasPositiveFeedback } = SearchSessionAnalyticsManager);
+  DispatcherDefault.dispatch({ type: "SMART_SEARCH_SET_RESULT_FEEDBACK", smartSearchQuery, hasPositiveFeedback });
+  const result = SmartSearchAnalyticsManagerDefault.trackSmartSearchFeedbackGiven(
+    { smartSearchQuery, hasPositiveFeedback },
+    SearchSessionAnalyticsManager.SearchSessionAnalyticsManager,
+  );
 };

@@ -8,15 +8,15 @@ import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
-import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import useDefaultVariantIndex from "../hooks/useDefaultVariantIndex.tsx";
+import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import OrbsIcon from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
-import _mod8541 from "../../virtual_currency/hooks/index.tsx";
+import _mod9026 from "../../virtual_currency/hooks/index.tsx";
 import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder.tsx";
 import TagIcon from "../../../design/components/Icon/native/redesign/generated/TagIcon.tsx";
 import getProductName from "../utils/getProductName.tsx";
@@ -30,7 +30,7 @@ const Constants = fn(1085);
 ({ CurrencyCodes: metroRequire, VerticalGradient: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   regularMetadataContainer: null,
   assetName: null,
@@ -107,7 +107,7 @@ const memoResult = noop.memo(
                     let tmp13 = cResult[13];
                   }
                   const discountPercentage2 = tmp13.discountPercentage;
-                  const balance = _mod8541.useFetchVirtualCurrencyBalance().balance;
+                  const balance = _mod9026.useFetchVirtualCurrencyBalance().balance;
                   let tmp17 = null;
                   if (null != tmp9) {
                     tmp17 = null;
@@ -584,7 +584,7 @@ const memoResult = noop.memo(
                       tmp21 = closure_1_8(NitroWheelIcon.NitroWheelIcon, obj23);
                     }
                   }
-                  const tmpResult = _mod8541;
+                  const tmpResult = _mod9026;
                 }
                 const productDiscount = CollectiblesUtils.getProductDiscount(
                   tmp5,
@@ -879,8 +879,8 @@ const result = size.fileFinishedImporting("modules/collectibles/native/Collectib
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
-        const cResult = c.c(37);
+    ? function CardDetailsV2(arg0) {
+        const cResult = c.c(35);
         ({ product, collectibleProductState, preferVCPrice, isDisabled, hidePrice } = arg0);
         const tmp4 = closure_10();
         const currentUser = useCurrentUser.useCurrentUser();
@@ -948,22 +948,10 @@ export default noop.memo(
         }
         const tmpResult8 = useToken;
         const stateFromStores = initialize.useStateFromStores(tmp19, tmp20);
-        if (cResult[12] !== tmp4.regularMetadataContainer) {
-          const items1 = [tmp4.regularMetadataContainer];
-          class V {
-            constructor() {
-              return closure_1_5.isFetchingGoogleSkus();
-            }
-          }
-          cResult[13] = items1;
-          let tmp23 = items1;
-        } else {
-          tmp23 = cResult[13];
-        }
-        if (cResult[14] === token) {
-          if (cResult[15] === tmp13) {
-            if (cResult[16] === tmp15) {
-              let tmp24 = cResult[17];
+        if (cResult[12] === token) {
+          if (cResult[13] === tmp13) {
+            if (cResult[14] === tmp15) {
+              let tmp23 = cResult[15];
             }
             const _Symbol = Symbol;
             class V {
@@ -971,28 +959,28 @@ export default noop.memo(
                 return closure_1_5.isFetchingGoogleSkus();
               }
             }
-            if (cResult[19] === tmp17) {
-              if (cResult[20] === tmp4.assetName) {
-                let tmp27 = cResult[21];
+            if (cResult[17] === tmp17) {
+              if (cResult[18] === tmp4.assetName) {
+                let tmp26 = cResult[19];
               }
-              if (cResult[22] === collectibleProductState) {
-                if (cResult[23] === tmp9) {
-                  if (cResult[24] === hidePrice) {
-                    if (cResult[25] === isDisabled) {
-                      if (cResult[26] === stateFromStores) {
-                        if (cResult[27] === preferVCPrice) {
-                          if (cResult[28] === product) {
-                            if (cResult[29] === tmp6) {
-                              if (cResult[30] === tmp4) {
-                                let tmp30 = cResult[31];
+              if (cResult[20] === collectibleProductState) {
+                if (cResult[21] === tmp9) {
+                  if (cResult[22] === hidePrice) {
+                    if (cResult[23] === isDisabled) {
+                      if (cResult[24] === stateFromStores) {
+                        if (cResult[25] === preferVCPrice) {
+                          if (cResult[26] === product) {
+                            if (cResult[27] === tmp6) {
+                              if (cResult[28] === tmp4) {
+                                let tmp29 = cResult[29];
                               }
-                              if (cResult[32] === tmp27) {
-                                if (cResult[33] === tmp30) {
-                                  if (cResult[34] === tmp23) {
-                                    if (cResult[35] === tmp24) {
-                                      let tmp32 = cResult[36];
+                              if (cResult[30] === tmp4.regularMetadataContainer) {
+                                if (cResult[31] === tmp26) {
+                                  if (cResult[32] === tmp29) {
+                                    if (cResult[33] === tmp23) {
+                                      let tmp31 = cResult[34];
                                     }
-                                    return tmp32;
+                                    return tmp31;
                                   }
                                 }
                               }
@@ -1001,19 +989,19 @@ export default noop.memo(
                                   return closure_1_5.isFetchingGoogleSkus();
                                 }
                               }
-                              tmp34[0] = tmp23;
-                              tmp34[1] = tmp24;
-                              tmp34[2] = tmp26;
-                              ({ START: tmp34[3], END: tmp34[4] } = constants2);
-                              const items2 = [tmp27, tmp30];
-                              tmp34[5] = items2;
-                              const tmp36 = options(LinearGradientDefault, tmp34);
-                              cResult[32] = tmp27;
-                              cResult[33] = tmp30;
-                              cResult[34] = tmp23;
-                              cResult[35] = tmp24;
-                              cResult[36] = tmp36;
-                              tmp32 = tmp36;
+                              tmp33[0] = tmp4.regularMetadataContainer;
+                              tmp33[1] = tmp23;
+                              tmp33[2] = tmp25;
+                              ({ START: tmp33[3], END: tmp33[4] } = constants2);
+                              const items1 = [tmp26, tmp29];
+                              tmp33[5] = items1;
+                              const tmp35 = options(LinearGradientDefault, tmp33);
+                              cResult[30] = tmp4.regularMetadataContainer;
+                              cResult[31] = tmp26;
+                              cResult[32] = tmp29;
+                              cResult[33] = tmp23;
+                              cResult[34] = tmp35;
+                              tmp31 = tmp35;
                             }
                           }
                         }
@@ -1027,17 +1015,17 @@ export default noop.memo(
                   return closure_1_5.isFetchingGoogleSkus();
                 }
               }
-              cResult[22] = collectibleProductState;
-              cResult[23] = tmp9;
-              cResult[24] = hidePrice;
-              cResult[25] = isDisabled;
-              cResult[26] = stateFromStores;
-              cResult[27] = preferVCPrice;
-              cResult[28] = product;
-              cResult[29] = tmp6;
-              cResult[30] = tmp4;
-              cResult[31] = !hidePrice;
-              tmp30 = tmp31;
+              cResult[20] = collectibleProductState;
+              cResult[21] = tmp9;
+              cResult[22] = hidePrice;
+              cResult[23] = isDisabled;
+              cResult[24] = stateFromStores;
+              cResult[25] = preferVCPrice;
+              cResult[26] = product;
+              cResult[27] = tmp6;
+              cResult[28] = tmp4;
+              cResult[29] = !hidePrice;
+              tmp29 = tmp30;
             }
             const obj4 = {
               style: tmp4.assetName,
@@ -1047,22 +1035,22 @@ export default noop.memo(
               accessibilityRole: "header",
               children: tmp17,
             };
-            const tmp29 = closure_1_8(Text_Text.Text, obj4);
-            cResult[19] = tmp17;
-            cResult[20] = tmp4.assetName;
-            cResult[21] = tmp29;
-            tmp27 = tmp29;
+            const tmp28 = closure_1_8(Text_Text.Text, obj4);
+            cResult[17] = tmp17;
+            cResult[18] = tmp4.assetName;
+            cResult[19] = tmp28;
+            tmp26 = tmp28;
           }
         }
-        const items3 = [tmp15, tmp13, token];
-        cResult[14] = token;
-        cResult[15] = tmp13;
-        cResult[16] = tmp15;
-        cResult[17] = items3;
-        tmp24 = items3;
+        const items2 = [tmp15, tmp13, token];
+        cResult[12] = token;
+        cResult[13] = tmp13;
+        cResult[14] = tmp15;
+        cResult[15] = items2;
+        tmp23 = items2;
         const tmpResult14 = initialize;
       }
-    : (arg0) => {
+    : function CardDetailsV2(arg0) {
         ({ product, hidePrice } = arg0);
         ({ collectibleProductState, preferVCPrice, isDisabled } = arg0);
         const tmp = closure_10();
@@ -1078,18 +1066,16 @@ export default noop.memo(
         const items = [IAPStore];
         const stateFromStores = initialize.useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus());
         const obj11 = {
-          style: null,
+          style: tmp.regularMetadataContainer,
           colors: null,
           locations: [0, 0.4, 1],
           start: constants2.START,
           end: constants2.END,
           children: null,
         };
-        const items1 = [tmp.regularMetadataContainer];
-        obj11.style = items1;
-        const items2 = [hexToRgbaStringResult1, hexToRgbaStringResult, token];
-        obj11.colors = items2;
-        const items3 = [
+        const items1 = [hexToRgbaStringResult1, hexToRgbaStringResult, token];
+        obj11.colors = items1;
+        const items2 = [
           closure_1_8(Text_Text.Text, {
             style: tmp.assetName,
             variant: "heading-sm/bold",
@@ -1112,14 +1098,14 @@ export default noop.memo(
             preferVCPrice,
             isDisabled,
           };
-          const items4 = [closure_1_8(memoResult, obj14)];
+          const items3 = [closure_1_8(memoResult, obj14)];
           const obj15 = { product };
-          items4[1] = closure_1_8(CollectiblesShopCardVariantsDefault, obj15);
-          obj13.children = items4;
+          items3[1] = closure_1_8(CollectiblesShopCardVariantsDefault, obj15);
+          obj13.children = items3;
           tmp12Result = options(View, obj13);
         }
-        items3[1] = tmp12Result;
-        obj11.children = items3;
+        items2[1] = tmp12Result;
+        obj11.children = items2;
         return options(LinearGradientDefault, obj11);
       },
 );

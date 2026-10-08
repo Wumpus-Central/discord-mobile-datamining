@@ -86,16 +86,16 @@ function getScreens() {
   };
   return obj;
 }
-const GuildDirectoryCreate = fn(11952).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12025).GuildDirectoryCreate;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let obj2 = { safeArea: { marginTop: fn(6075).NAV_BAR_HEIGHT, flex: 1 } };
+const createStyles = fn(5090);
+let obj2 = { safeArea: { marginTop: fn(6261).NAV_BAR_HEIGHT, flex: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 fn(558);
-let obj3 = { marginTop: fn(6075).NAV_BAR_HEIGHT, flex: 1 };
+let obj3 = { marginTop: fn(6261).NAV_BAR_HEIGHT, flex: 1 };
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function GuildDirectoryAddModalScreen(children) {
       const cResult = c.c(3);
       children = children.children;
       const tmp4 = closure_5();
@@ -112,7 +112,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp6;
       const obj2 = { top: true, style: tmp4.safeArea, children };
     }
-  : (children) => {
+  : function GuildDirectoryAddModalScreen(children) {
       const tmp = closure_5();
       return jsx(common_SafeAreaView.SafeAreaPaddingView, {
         top: true,
@@ -124,11 +124,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryAddModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildDirectoryAddModal(arg0) {
       _require = arg0;
       const cResult = require("c").c(6);
       if (cResult[0] !== arg0) {
-        const fn = function l() {
+        const fn = function s() {
           const obj = { name: GuildDirectoryCreate.CREATE_OR_ADD, params: null };
           const merged = Object.assign(closure_0);
           obj.params = {};
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp9;
       const tmp5 = useInitialValueDefault(tmp4);
     }
-  : (arg0) => {
+  : function GuildDirectoryAddModal(arg0) {
       _require = arg0;
       ({ screens, initialStack } = useInitialValueDefault(() => {
         const obj = { name: GuildDirectoryCreate.CREATE_OR_ADD, params: null };

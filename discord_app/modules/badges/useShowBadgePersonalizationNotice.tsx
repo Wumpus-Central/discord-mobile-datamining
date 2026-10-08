@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useShowBadgePersonalizationNotice.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShowBadgePersonalizationNotice(arg0) {
       const cResult = c.c(6);
       ({ badge, isViewingOtherUser } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp9;
       const tmpResult2 = BadgeUtils;
     }
-  : (arg0) => {
+  : function useShowBadgePersonalizationNotice(arg0) {
       ({ badge, isViewingOtherUser } = arg0);
       const items = [ConsentStore];
       const stateFromStores = initialize.useStateFromStores(items, () =>

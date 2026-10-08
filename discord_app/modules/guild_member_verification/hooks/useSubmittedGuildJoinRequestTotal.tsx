@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useSubmittedGuildJoinRequestTotal = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function useSubmittedGuildJoinRequestTotal(guildId) {
       const cResult = guildId(576).c(4);
       guildId = guildId.guildId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -40,7 +40,7 @@ export const useSubmittedGuildJoinRequestTotal = ReactCompilerGating.isReactComp
       const obj = guildId(576);
       return guildId(504).useStateFromStores(first, tmp6, tmp7);
     }
-  : (guildId) => {
+  : function useSubmittedGuildJoinRequestTotal(guildId) {
       guildId = guildId.guildId;
       const items = [GuildJoinRequestStore];
       const items1 = [guildId];

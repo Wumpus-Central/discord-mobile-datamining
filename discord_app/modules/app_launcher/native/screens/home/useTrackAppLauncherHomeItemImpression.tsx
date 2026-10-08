@@ -10,11 +10,11 @@ const result = size.fileFinishedImporting(
 );
 
 export const useTrackAppLauncherHomeItemImpression = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useTrackAppLauncherHomeItemImpression() {
       const cResult = trackAppLauncherItemImpressionOnFirstView(576).c(4);
       let obj = trackAppLauncherItemImpressionOnFirstView(576);
       trackAppLauncherItemImpressionOnFirstView =
-        trackAppLauncherItemImpressionOnFirstView(11739).useTrackAppLauncherItemImpressionOnFirstView()
+        trackAppLauncherItemImpressionOnFirstView(11805).useTrackAppLauncherItemImpressionOnFirstView()
           .trackAppLauncherItemImpressionOnFirstView;
       if (cResult[0] !== trackAppLauncherItemImpressionOnFirstView) {
         const fn = function t(viewableItems) {
@@ -115,9 +115,9 @@ export const useTrackAppLauncherHomeItemImpression = ReactCompilerGating.isReact
       }
       return tmp3;
     }
-  : () => {
+  : function useTrackAppLauncherHomeItemImpression() {
       trackAppLauncherItemImpressionOnFirstView =
-        trackAppLauncherItemImpressionOnFirstView(11739).useTrackAppLauncherItemImpressionOnFirstView()
+        trackAppLauncherItemImpressionOnFirstView(11805).useTrackAppLauncherItemImpressionOnFirstView()
           .trackAppLauncherItemImpressionOnFirstView;
       let obj2 = { trackAppLauncherHomeItemImpression: null };
       const items = [trackAppLauncherItemImpressionOnFirstView];

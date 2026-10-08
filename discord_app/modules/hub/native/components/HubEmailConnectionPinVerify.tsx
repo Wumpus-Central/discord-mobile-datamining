@@ -1,6 +1,6 @@
 // discord_app/modules/hub/native/components/HubEmailConnectionPinVerify.tsx
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef4822 from "../../../../../_runtime/metro/04822__.js";
+import _modDef5016 from "../../../../../_runtime/metro/05016__.js";
 import HubJoinManagerDefault from "../../HubJoinManager.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -12,13 +12,13 @@ const require = globalThis.__r;
 const require = fn;
 function presentResendToast(content) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "HUB_EMAIL_RESET", content, icon: _modDef4822 });
+  obj.open({ key: "HUB_EMAIL_RESET", content, icon: _modDef5016 });
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({
   container: { alignItems: "center" },
   title: { marginBottom: 8, textAlign: "center" },
@@ -31,7 +31,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionPinVerify.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (email) => {
+  ? function HubEmailConnectionPinVerify(email) {
       const cResult = require("c").c(38);
       email = email.email;
       _require = email;
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             guildId(onClose[12])();
           });
           return () => {
-            guildId(12423).terminate();
+            guildId(12519).terminate();
           };
         };
         const items = [onClose];
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return value;
       });
-      const fn2 = function () {
+      function t3() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -303,14 +303,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      };
+      }
       cResult[3] = email;
       cResult[4] = guildId;
-      cResult[5] = fn2;
-      tmp8 = fn2;
+      cResult[5] = t3;
+      tmp8 = t3;
       const obj = require("c");
     }
-  : (email) => {
+  : function HubEmailConnectionPinVerify(email) {
       email = email.email;
       ({ guildId: importDefault, onClose } = email);
       _slicedToArray = undefined;
@@ -344,7 +344,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           require("navigateToLastChannel")();
         });
         return () => {
-          closure_1_1(12423).terminate();
+          closure_1_1(12519).terminate();
         };
       }, items);
       const obj = require("../../../../../_runtime/metro/00012__.js");
@@ -384,7 +384,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp.container, children: null };
       const tmp5 = _slicedToArray(noop.useState(null), 2);
       const tmp7 = email;
-      const items1 = [closure_9(closure_7, { source: require("../../../../../_runtime/metro/12424__.js") }), , , , ,];
+      const items1 = [closure_9(closure_7, { source: require("../../../../../_runtime/metro/12520__.js") }), , , , ,];
       const obj5 = {
         style: tmp.title,
         accessibilityRole: "header",
@@ -403,7 +403,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl3 = email(onClose[14]).intl;
       obj7.children = intl3.string(email(onClose[14]).t.rpWT1s);
       items1[3] = closure_9(email(onClose[20]).Text, obj7);
-      const obj4 = { source: require("../../../../../_runtime/metro/12424__.js") };
+      const obj4 = { source: require("../../../../../_runtime/metro/12520__.js") };
       items1[4] = closure_9(email(onClose[21]).CodeBlocks, {
         hasError: false,
         count: 8,

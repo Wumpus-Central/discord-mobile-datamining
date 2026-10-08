@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/useStoreConnectionErrorAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useStoreConnectionErrorAlert() {
       const cResult = stateFromStores(576).c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [IAPStore];
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp8, tmp9);
       const tmpResult = stateFromStores(504);
     }
-  : () => {
+  : function useStoreConnectionErrorAlert() {
       const items = [IAPStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () => IAPStore.hasConnectionError());
       const items1 = [stateFromStores];

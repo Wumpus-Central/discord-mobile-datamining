@@ -2,9 +2,9 @@
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const constants = fn(8798).PlayStationLinkModalScenes;
+const constants = fn(9150).PlayStationLinkModalScenes;
 const PlatformTypes = fn(1085).PlatformTypes;
-const PLAYSTATION_CLIENT_SCOPES = fn(8781).PLAYSTATION_CLIENT_SCOPES;
+const PLAYSTATION_CLIENT_SCOPES = fn(9127).PLAYSTATION_CLIENT_SCOPES;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -13,14 +13,14 @@ const result = size.fileFinishedImporting(
 );
 
 export const PlayStationLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PlayStationLinkDiscordConsent(arg0) {
       const cResult = navigation(576).c(12);
       ({ callbackCode, callbackState, platformType } = arg0);
       const obj = navigation(576);
       const tmp = navigation;
-      navigation = navigation(1490).useNavigation();
+      navigation = navigation(1502).useNavigation();
       if (cResult[0] !== navigation) {
-        const fn = function s() {
+        const fn = function l() {
           navigation.push(constants.SUCCESS);
         };
         cResult[0] = navigation;
@@ -91,7 +91,7 @@ export const PlayStationLinkDiscordConsent = ReactCompilerGating.isReactCompiler
           }
         }
       }
-      const obj2 = navigation(1490);
+      const obj2 = navigation(1502);
       const obj3 = {
         platformType,
         callbackCode,
@@ -109,7 +109,7 @@ export const PlayStationLinkDiscordConsent = ReactCompilerGating.isReactCompiler
       cResult[8] = tmp5;
       cResult[9] = platformType;
       cResult[10] = tmp9;
-      cResult[11] = jsx(tmp(8782).TwoWayLinkDiscordConsent, {
+      cResult[11] = jsx(tmp(9128).TwoWayLinkDiscordConsent, {
         platformType,
         callbackCode,
         callbackState,
@@ -119,7 +119,7 @@ export const PlayStationLinkDiscordConsent = ReactCompilerGating.isReactCompiler
         onError: N,
         redirectUri: tmp9,
       });
-      const tmp10 = jsx(tmp(8782).TwoWayLinkDiscordConsent, {
+      const tmp10 = jsx(tmp(9128).TwoWayLinkDiscordConsent, {
         platformType,
         callbackCode,
         callbackState,
@@ -130,11 +130,11 @@ export const PlayStationLinkDiscordConsent = ReactCompilerGating.isReactCompiler
         redirectUri: tmp9,
       });
     }
-  : (platformType) => {
+  : function PlayStationLinkDiscordConsent(platformType) {
       platformType = platformType.platformType;
       let navigation;
       ({ callbackCode, callbackState } = platformType);
-      navigation = navigation(1490).useNavigation();
+      navigation = navigation(1502).useNavigation();
       const items = [navigation];
       const items1 = [navigation];
       const callback = noop.useCallback(() => {
@@ -144,16 +144,16 @@ export const PlayStationLinkDiscordConsent = ReactCompilerGating.isReactCompiler
         navigation.push(constants.ERROR, { errorCode });
       }, items1);
       if (platformType === PlatformTypes.PLAYSTATION_STAGING) {
-        let PLAYSTATION_APPLICATION_ID = tmp(8783).ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID;
+        let PLAYSTATION_APPLICATION_ID = tmp(9156).ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID;
       } else {
-        PLAYSTATION_APPLICATION_ID = tmp(8783).ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID;
+        PLAYSTATION_APPLICATION_ID = tmp(9156).ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID;
       }
       if (platformType === PlatformTypes.PLAYSTATION_STAGING) {
-        let PLAYSTATION = tmp(8804).ConsoleAuthorizationRedirectURIs.PLAYSTATION_STAGING;
+        let PLAYSTATION = tmp(9157).ConsoleAuthorizationRedirectURIs.PLAYSTATION_STAGING;
       } else {
-        PLAYSTATION = tmp(8804).ConsoleAuthorizationRedirectURIs.PLAYSTATION;
+        PLAYSTATION = tmp(9157).ConsoleAuthorizationRedirectURIs.PLAYSTATION;
       }
-      return jsx(navigation(8782).TwoWayLinkDiscordConsent, {
+      return jsx(navigation(9128).TwoWayLinkDiscordConsent, {
         platformType,
         callbackCode,
         callbackState,

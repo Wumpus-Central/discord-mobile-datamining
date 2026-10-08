@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/soundboard/experiments/Soundb
 
 export const SoundboardSoundPreviewMenuExperiment = apexExperiment;
 export const useSoundboardSoundPreviewMenuEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useSoundboardSoundPreviewMenuEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -30,4 +30,6 @@ export const useSoundboardSoundPreviewMenuEnabled = ReactCompilerGating.isReactC
       }
       return apexExperiment.useConfig(tmp2).enabled;
     }
-  : (location) => apexExperiment.useConfig({ location }).enabled;
+  : function useSoundboardSoundPreviewMenuEnabled(location) {
+      return apexExperiment.useConfig({ location }).enabled;
+    };

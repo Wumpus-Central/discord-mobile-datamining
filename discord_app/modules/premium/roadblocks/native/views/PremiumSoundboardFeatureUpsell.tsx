@@ -10,7 +10,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = { container: null };
   const rect = {
@@ -28,7 +28,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumSoundboardFeatureUpsell.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (shouldShow) => {
+  ? function PremiumSoundboardFeatureUpsell(shouldShow) {
       const cResult = c.c(5);
       shouldShow = shouldShow.shouldShow;
       const tmp5 = closure_5(ConstantsIOS.EXPRESSION_FOOTER_HEIGHT + useSafeAreaInsetsDefault().bottom);
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = tmp11;
       const obj3 = { style: tmp5.container, children: tmp6 };
     }
-  : (shouldShow) => {
+  : function PremiumSoundboardFeatureUpsell(shouldShow) {
       const obj = {
         style: closure_5(ConstantsIOS.EXPRESSION_FOOTER_HEIGHT + useSafeAreaInsetsDefault().bottom).container,
         children: null,

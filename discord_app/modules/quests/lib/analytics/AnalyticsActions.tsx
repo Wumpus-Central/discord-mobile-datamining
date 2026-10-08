@@ -123,6 +123,7 @@ function trackAdContentEvent(sourceQuestContent) {
   ({
     adContentId,
     relatedQuestId,
+    noFillDecision,
     adCreativeType,
     event,
     properties,
@@ -174,22 +175,39 @@ function trackAdContentEvent(sourceQuestContent) {
     adTrafficMetadataSealed = null;
   }
   obj5.traffic_metadata_sealed = adTrafficMetadataSealed;
+  if (null != noFillDecision) {
+    const obj6 = { decision_id: null, is_targeted: false, metadata_sealed: null, traffic_metadata_sealed: null };
+    ({ decisionId: obj10.decision_id, metadataSealed } = noFillDecision);
+    if (metadataSealed == null) {
+      metadataSealed = null;
+    }
+    obj6.metadata_sealed = metadataSealed;
+    let prop = noFillDecision.trafficMetadataSealed;
+    if (prop == null) {
+      prop = null;
+    }
+    obj6.traffic_metadata_sealed = prop;
+    let obj7 = obj6;
+  } else {
+    obj7 = {};
+  }
+  const merged2 = Object.assign(obj7);
   if (null != relatedQuestId) {
-    const obj6 = { quest_id: relatedQuestId, quest_status: null };
+    const obj8 = { quest_id: relatedQuestId, quest_status: null };
     let questStatus = null;
     if (null != quest) {
       questStatus = AnalyticsTypes.getQuestStatus(quest);
       const tmp3Result6 = AnalyticsTypes;
     }
-    obj6.quest_status = questStatus;
-    let obj7 = obj6;
+    obj8.quest_status = questStatus;
+    let obj9 = obj8;
   } else {
-    obj7 = {};
+    obj9 = {};
   }
-  const obj8 = {};
-  const merged2 = Object.assign(obj7);
-  const merged3 = Object.assign(obj5);
-  const merged4 = Object.assign(properties);
+  const obj11 = {};
+  const merged3 = Object.assign(obj9);
+  const merged4 = Object.assign(obj5);
+  const merged5 = Object.assign(properties);
   if (trackGuildAndChannelMetadata === undefined) {
     trackGuildAndChannelMetadata = false;
   }
@@ -197,12 +215,12 @@ function trackAdContentEvent(sourceQuestContent) {
     const isLoggingAnalyticsEvents = DeveloperOptionsStore.isLoggingAnalyticsEvents;
     const hasItem = set.has(event);
     if (trackGuildAndChannelMetadata) {
-      AppAnalyticsUtilsDefault.trackWithMetadata(event, obj8, hasItem);
-      const tmp20Result = AppAnalyticsUtilsDefault;
+      AppAnalyticsUtilsDefault.trackWithMetadata(event, obj11, hasItem);
+      const tmp22Result = AppAnalyticsUtilsDefault;
     } else {
-      const obj9 = { flush: hasItem };
-      AnalyticsUtilsDefault.track(event, obj8, obj9);
-      const tmp20Result2 = AnalyticsUtilsDefault;
+      const obj12 = { flush: hasItem };
+      AnalyticsUtilsDefault.track(event, obj11, obj12);
+      const tmp22Result2 = AnalyticsUtilsDefault;
     }
   }
   const tmp3Result5 = QuestDataUtils;

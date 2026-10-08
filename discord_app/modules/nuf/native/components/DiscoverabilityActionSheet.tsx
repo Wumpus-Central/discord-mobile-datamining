@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ContactSyncModalStore = fn(12341);
+const ContactSyncModalStore = fn(12437);
 ({
   useContactSyncModalStore: closure_4,
   setAllowSync: hasOwnProperty,
@@ -13,7 +13,7 @@ const ContactSyncModalStore = fn(12341);
 } = ContactSyncModalStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom: 16 },
   formRow: null,
@@ -47,7 +47,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/components/DiscoverabilityActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DiscoverabilityActionSheet() {
       const cResult = allowPhone(allowEmail[8]).c(59);
       const tmp4 = closure_10();
       const tmp5 = closure_4();
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = items;
       const obj = allowPhone(allowEmail[8]);
     }
-  : () => {
+  : function DiscoverabilityActionSheet() {
       const tmp = closure_10();
       const tmp2 = closure_4();
       const allowPhone = tmp2.allowPhone;
@@ -224,7 +224,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = { style: tmp.info, children: null };
       const intl4 = allowPhone(allowEmail[9]).intl;
       obj6.children = intl4.format(allowPhone(allowEmail[9]).t.eswIfi, {
-        learnMoreHook(children, arg1) {
+        learnMoreHook: function LearnMore(children, arg1) {
           return closure_1_8(
             allowPhone(allowEmail[11]).Text,
             {

@@ -5,8 +5,8 @@ import native from "../../../../../design/void/native.tsx";
 import getDevicePixelRatioDefault from "../../../../../utils/getDevicePixelRatio.native.tsx";
 import native2 from "../../../../../../discord_common/js/packages/design/native.tsx";
 import NicknameUtilsDefault from "../../../../../utils/NicknameUtils.tsx";
-import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import NativeViewDefault from "../../../../core/native/NativeView.tsx";
+import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import ApplicationCommandTypes from "../../../../application_commands/ApplicationCommandTypes.tsx";
 import TestModeUtils from "../../../../game_store/TestModeUtils.tsx";
 import EmbeddedActivitiesNativeManagerDefault from "../../../../activities/native/EmbeddedActivitiesNativeManager.tsx";
@@ -14,24 +14,24 @@ import useEmbeddedActivityBackgroundDefault from "../../../../activities/utils/u
 import useActivityShelfItem from "../../../../activities/utils/useActivityShelfItem.tsx";
 import ActivityShelfBadgeDefault from "../../../../activities/native/ActivityShelfBadge.tsx";
 import useLaunchingActivityButtonStateDefault from "../../../../app_launcher/utils/useLaunchingActivityButtonState.tsx";
-import _modDef12475 from "../../../../../../_runtime/metro/12475__.js";
+import _modDef12571 from "../../../../../../_runtime/metro/12571__.js";
 import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground.tsx";
 import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary.tsx";
 import useActivityUsersDefault from "../../../../activities/useActivityUsers.tsx";
-import _modDef17320 from "../../../../../../_runtime/metro/17320__.js";
+import _modDef17601 from "../../../../../../_runtime/metro/17601__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const useActivityShelfItemDefault = useActivityShelfItem;
 
 const util = getItemSubtitleForMaxPlayersShort(1126);
-const Text_Text = getItemSubtitleForMaxPlayersShort(4892);
-const getItemSubtitleForMaxPlayers = getItemSubtitleForMaxPlayersShort(11784);
+const Text_Text = getItemSubtitleForMaxPlayersShort(5086);
+const getItemSubtitleForMaxPlayers = getItemSubtitleForMaxPlayersShort(11851);
 require = fn;
 const ThemeTypes = fn(1085).ThemeTypes;
-const ANDROID_FOREGROUND_RIPPLE = fn(1192).ANDROID_FOREGROUND_RIPPLE;
+const ANDROID_FOREGROUND_RIPPLE = fn(1204).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     borderRadius: nativeDefault.radii.md,
@@ -56,7 +56,7 @@ let obj2 = {
   developerIconColor: null,
 };
 let obj4 = { backgroundColor: null, borderRadius: null };
-const ColorUtils = fn(4733);
+const ColorUtils = fn(4927);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.5);
 obj4.borderRadius = nativeDefault.radii.round;
 obj2.overlayBubble = obj4;
@@ -96,7 +96,7 @@ obj2.developerIconColor = { color: nativeDefault.colors.WHITE };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActivityActionOverlay(arg0) {
       const cResult = c.c(15);
       ({ action, applicationId, context, launchingComponentId } = arg0);
       if (cResult[0] === applicationId) {
@@ -170,7 +170,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = obj5;
       tmp5 = obj5;
     }
-  : (arg0) => {
+  : function ActivityActionOverlay(arg0) {
       ({ action, context } = arg0);
       ({ applicationId, activityItem, launchingComponentId } = arg0);
       ({ id, name } = activityItem.application);
@@ -204,7 +204,7 @@ fn(558);
 let obj6 = { color: nativeDefault.colors.WHITE };
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ParticipantsText(arg0) {
       let getItemSubtitleForMaxPlayersShort = require;
       let num = dependencyMap;
       const cResult = c.c(33);
@@ -288,7 +288,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj4 = { source: _modDef12475, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" };
+          const obj4 = { source: _modDef12571, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" };
           const tmp19 = timestampProducer(native.Icon, obj4);
           cResult[20] = tmp19;
           let tmp17 = tmp19;
@@ -342,7 +342,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = items1;
       const tmp2Result = NicknameUtilsDefault;
     }
-  : (arg0) => {
+  : function ParticipantsText(arg0) {
       ({ activityItem, channelId } = arg0);
       ({ action, guildId } = arg0);
       const tmp = closure_9();
@@ -358,7 +358,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.style = items;
       const tmp2Result = NativeViewDefault;
       const items1 = [
-        timestampProducer(native.Icon, { source: _modDef12475, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
+        timestampProducer(native.Icon, { source: _modDef12571, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
       ];
       const obj4 = {
         lineClamp: 1,
@@ -391,7 +391,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityShelfItem.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActivityShelfItem(arg0) {
       const cResult = c.c(56);
       ({ itemDimensions, activityItem, context, guildId, locationObject, onActivityItemSelected, disableBadges } =
         arg0);
@@ -566,7 +566,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             const obj5 = { style: tmp5.developerIconContainer, children: null };
                                             const obj6 = {
                                               size: native.Icon.Sizes.REFRESH_SMALL_16,
-                                              source: _modDef17320,
+                                              source: _modDef17601,
                                               color: tmp5.developerIconColor.color,
                                             };
                                             obj5.children = timestampProducer(native.Icon, obj6);
@@ -689,7 +689,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = obj12;
       tmp11 = obj12;
     }
-  : (arg0) => {
+  : function ActivityShelfItem(arg0) {
       ({ itemDimensions, activityItem, context, disableBadges } = arg0);
       ({ guildId, locationObject, onActivityItemSelected } = arg0);
       if (disableBadges === undefined) {
@@ -779,7 +779,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj9 = { style: tmp.developerIconContainer, children: null };
           const obj10 = {
             size: native.Icon.Sizes.REFRESH_SMALL_16,
-            source: _modDef17320,
+            source: _modDef17601,
             color: tmp.developerIconColor.color,
           };
           obj9.children = timestampProducer(native.Icon, obj10);

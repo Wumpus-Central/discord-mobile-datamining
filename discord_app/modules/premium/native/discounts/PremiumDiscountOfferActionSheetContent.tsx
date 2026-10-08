@@ -5,21 +5,21 @@ import util from "../../../../intl/index.native.tsx";
 import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import FolderIcon from "../../../../design/components/Icon/native/redesign/generated/FolderIcon.tsx";
 import NitroFileUploadExperiments from "../../experiments/NitroFileUploadExperiments.tsx";
+import FolderIcon from "../../../../design/components/Icon/native/redesign/generated/FolderIcon.tsx";
 import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import ChatSmileIcon from "../../../../design/components/Icon/native/redesign/generated/ChatSmileIcon.tsx";
 import UserIcon from "../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
+import ChatSmileIcon from "../../../../design/components/Icon/native/redesign/generated/ChatSmileIcon.tsx";
 import NitroWumpusFlightRight3dIllustration from "../../../../design/components/mana-assets/native/generated/NitroWumpusFlightRight3dIllustration.native.tsx";
 import PremiumPerksListDefault from "../../../../components_native/premium/PremiumPerksList.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   contentContainer: {
     paddingHorizontal: 36,
@@ -56,7 +56,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (onConfirm) => {
+    ? function PremiumDiscountOfferActionSheetContent(onConfirm) {
         const cResult = c.c(26);
         onConfirm = onConfirm.onConfirm;
         const tmp4 = closure_7();
@@ -219,7 +219,7 @@ export default noop.memo(
         cResult[10] = tmp19;
         tmp18 = tmp19;
       }
-    : (arg0) => {
+    : function PremiumDiscountOfferActionSheetContent(arg0) {
         ({ discountOffer, onConfirm } = arg0);
         const tmp = closure_7();
         const obj = { IconComponent: UserIcon.UserIcon, label: null, description: null };

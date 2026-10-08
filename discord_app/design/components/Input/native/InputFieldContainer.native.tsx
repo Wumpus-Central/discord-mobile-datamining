@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 const RING_SPRING_CONFIG = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useInputStyles(arg0) {
       const cResult = c.c(4);
       ({ size, round, disabled, grow } = arg0);
       let str = "lg";
@@ -68,7 +68,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       tmp4 = undefined !== round && round;
     }
-  : (size) => {
+  : function useInputStyles(size) {
       let str = size.size;
       if (str === undefined) {
         str = "lg";
@@ -116,7 +116,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       );
     };
 let closure_8 = tmp5;
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let closure_9 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -245,7 +245,7 @@ let closure_9 = createStyles.createStyles(() => {
   obj9.splitBorder = obj15;
   return obj9;
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_10 = createStyles.createStyleProperties({
   error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT,
   default: "transparent",
@@ -268,7 +268,7 @@ const result = size.fileFinishedImporting("design/components/Input/native/InputF
 
 export const useInputStyles = tmp5;
 export const InputFieldContainer = ReactCompilerGating.isReactCompilerEnabled()
-  ? (leadingIcon) => {
+  ? function InputFieldContainer(leadingIcon) {
       const cResult = require("c").c(18);
       const tmp4 = closure_10();
       _require = tmp4;
@@ -469,7 +469,7 @@ export const InputFieldContainer = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = obj3;
       const obj = require("c");
     }
-  : (isFocused) => {
+  : function InputFieldContainer(isFocused) {
       const tmp = closure_10();
       _require = tmp;
       isFocused = isFocused.isFocused;

@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/billing/native/smoke/BillingF
 
 export default {
   RunAllFlows: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function RunAllFlows() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const tmp5 = <View />;
@@ -22,5 +22,7 @@ export default {
         }
         return first;
       }
-    : () => <View />,
+    : function RunAllFlows() {
+        return <View />;
+      },
 };

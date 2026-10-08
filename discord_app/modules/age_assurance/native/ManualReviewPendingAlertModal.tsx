@@ -1,7 +1,7 @@
 // discord_app/modules/age_assurance/native/ManualReviewPendingAlertModal.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef3137 from "../ManualReview.messages.js";
+import _modDef3181 from "../ManualReview.messages.js";
 import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -12,13 +12,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewPendingAlertModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ManualReviewPendingAlertModal() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef3137.CNm4w6);
+        const stringResult = intl.string(_modDef3181.CNm4w6);
         const intl2 = util.intl;
-        const stringResult1 = intl2.string(_modDef3137["14Fje3"]);
+        const stringResult1 = intl2.string(_modDef3181["14Fje3"]);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp4 = stringResult;
@@ -42,12 +42,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     }
-  : () => {
+  : function ManualReviewPendingAlertModal() {
       const obj = { title: null, content: null, actions: null };
       const intl = util.intl;
-      obj.title = intl.string(_modDef3137.CNm4w6);
+      obj.title = intl.string(_modDef3181.CNm4w6);
       const intl2 = util.intl;
-      obj.content = intl2.string(_modDef3137["14Fje3"]);
+      obj.content = intl2.string(_modDef3181["14Fje3"]);
       const obj2 = { children: null };
       const obj3 = { text: null };
       const intl3 = util.intl;

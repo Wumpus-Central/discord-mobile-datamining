@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ wrapper: { height: "100%" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadNot
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function NotificationsContent() {
         const cResult = c.c(2);
         const tmp3 = closure_4();
         if (cResult[0] !== tmp3.wrapper) {
@@ -27,7 +27,7 @@ export default noop.memo(
         }
         return tmp4;
       }
-    : () => {
+    : function NotificationsContent() {
         const tmp = closure_4();
         return jsx(notifications_NotificationsDefault, { style: closure_4().wrapper, nestedInLaunchPad: true });
       },

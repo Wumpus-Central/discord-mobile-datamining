@@ -79,7 +79,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = 0.24;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   pill: {
     flexDirection: "row",
@@ -107,7 +107,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/BadgeRarityPill.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (rarity) => {
+  ? function BadgeRarityPill(rarity) {
       const cResult = c.c(21);
       const tmp4 = closure_8();
       const tmp5 = getRarityStyle(rarity.rarity, shared.isThemeLight(useThemeDefault()));
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = obj7;
       }
     }
-  : (rarity) => {
+  : function BadgeRarityPill(rarity) {
       const tmp = closure_8();
       const tmp4 = getRarityStyle(rarity.rarity, shared.isThemeLight(useThemeDefault()));
       if (null == tmp4) {

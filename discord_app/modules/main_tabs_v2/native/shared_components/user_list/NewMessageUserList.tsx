@@ -4,7 +4,7 @@ import util from "../../../../../intl/index.native.tsx";
 import UserUtilsDefault from "../../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/05709_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/06099_fuzzysearch.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -93,18 +93,18 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10605).UserRowModes;
+const UserRowModes = fn(10202).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { searchBarRowContainer: { paddingTop: nativeDefault.space.PX_8 }, noResults: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_14 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useSearchGDMNames(arg0, arg1, arg2) {
       _require = arg0;
       closure_1 = arg1;
       dependencyMap = arg2;
@@ -164,7 +164,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       const tmp3 = _slicedToArray(noop.useState(first), 2);
     }
-  : (arg0, arg1, arg2) => {
+  : function useSearchGDMNames(arg0, arg1, arg2) {
       closure_0 = arg0;
       closure_1 = arg1;
       closure_2 = arg2;
@@ -220,7 +220,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (selectedUserIds) => {
+  ? function NewMessageUserList(selectedUserIds) {
       const cResult = selectedUserIds(onSelectUser[14]).c(75);
       selectedUserIds = selectedUserIds.selectedUserIds;
       const disabledUserIds = selectedUserIds.disabledUserIds;
@@ -299,36 +299,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           if (cResult[22] !== cResult[18]) {
                             const _Symbol3 = Symbol;
                             if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
-                              class Me {
+                              class Fe {
                                 constructor(arg0) {
                                   return selectedUserIds.items.length;
                                 }
                               }
-                              cResult[24] = Me;
+                              cResult[24] = Fe;
                             } else {
-                              class Me {
+                              class Fe {
                                 constructor(arg0) {
                                   return selectedUserIds.items.length;
                                 }
                               }
                             }
-                            const mapped = arr4.map(Me);
+                            const mapped = arr4.map(Fe);
                             cResult[22] = arr4;
                             cResult[23] = mapped;
                           } else {
-                            class Me {
+                            class Fe {
                               constructor(arg0) {
                                 return selectedUserIds.items.length;
                               }
                             }
                             if (cResult[25] !== arr4) {
-                              class Me {
+                              class Fe {
                                 constructor(arg0) {
                                   return selectedUserIds.items.length;
                                 }
                               }
                               cResult[25] = arr4;
-                              class Le {
+                              class Ce {
                                 constructor(arg0, arg1) {
                                   tmp = closure_6[selectedUserIds].items[arg1];
                                   type = tmp.type;
@@ -418,20 +418,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               }
                               cResult[26] = tmp43;
                             } else {
-                              class Me {
+                              class Fe {
                                 constructor(arg0) {
                                   return selectedUserIds.items.length;
                                 }
                               }
                             }
                             if (cResult[27] === arr4) {
-                              class Me {
+                              class Fe {
                                 constructor(arg0) {
                                   return selectedUserIds.items.length;
                                 }
                               }
                             }
-                            class Le {
+                            class Ce {
                               constructor(arg0, arg1) {
                                 tmp = closure_6[selectedUserIds].items[arg1];
                                 type = tmp.type;
@@ -524,19 +524,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             cResult[29] = onSelectUser;
                             cResult[30] = rowMode;
                             cResult[31] = selectedUserIds;
-                            cResult[32] = Le;
+                            cResult[32] = Ce;
                           }
                         }
                       }
                       let _Symbol = Symbol;
                       if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-                        class Me {
+                        class Fe {
                           constructor(arg0) {
                             return selectedUserIds.items.length;
                           }
                         }
                         cResult[19] = tmp25;
-                        class Le {
+                        class Ce {
                           constructor(arg0, arg1) {
                             tmp = closure_6[selectedUserIds].items[arg1];
                             type = tmp.type;
@@ -625,7 +625,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           }
                         }
                       } else {
-                        class Me {
+                        class Fe {
                           constructor(arg0) {
                             return selectedUserIds.items.length;
                           }
@@ -635,13 +635,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       let slice = arr3.length;
                       let tmp26 = mapped1;
                       if (0 === slice) {
-                        class Me {
+                        class Fe {
                           constructor(arg0) {
                             return selectedUserIds.items.length;
                           }
                         }
                         cResult[16] = arr3;
-                        class Le {
+                        class Ce {
                           constructor(arg0, arg1) {
                             tmp = closure_6[selectedUserIds].items[arg1];
                             type = tmp.type;
@@ -731,19 +731,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                         cResult[18] = tmp26;
                       } else {
-                        class Me {
+                        class Fe {
                           constructor(arg0) {
                             return selectedUserIds.items.length;
                           }
                         }
                         if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-                          class Me {
+                          class Fe {
                             constructor(arg0) {
                               return selectedUserIds.items.length;
                             }
                           }
                           cResult[20] = tmp28;
-                          class Le {
+                          class Ce {
                             constructor(arg0, arg1) {
                               tmp = closure_6[selectedUserIds].items[arg1];
                               type = tmp.type;
@@ -832,13 +832,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             }
                           }
                         } else {
-                          class Me {
+                          class Fe {
                             constructor(arg0) {
                               return selectedUserIds.items.length;
                             }
                           }
                         }
-                        class Le {
+                        class Ce {
                           constructor(arg0, arg1) {
                             tmp = closure_6[selectedUserIds].items[arg1];
                             type = tmp.type;
@@ -931,13 +931,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         slice[1] = arr3.map(tmp27);
                         const _Symbol2 = Symbol;
                         if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-                          class Me {
+                          class Fe {
                             constructor(arg0) {
                               return selectedUserIds.items.length;
                             }
                           }
                           cResult[21] = Re;
-                          class Le {
+                          class Ce {
                             constructor(arg0, arg1) {
                               tmp = closure_6[selectedUserIds].items[arg1];
                               type = tmp.type;
@@ -1026,7 +1026,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             }
                           }
                         } else {
-                          class Me {
+                          class Fe {
                             constructor(arg0) {
                               return selectedUserIds.items.length;
                             }
@@ -1034,12 +1034,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                         _Symbol = arr2.findIndex(tmp29);
                         if (-1 === _Symbol) {
-                          class Me {
+                          class Fe {
                             constructor(arg0) {
                               return selectedUserIds.items.length;
                             }
                           }
-                          class Le {
+                          class Ce {
                             constructor(arg0, arg1) {
                               tmp = closure_6[selectedUserIds].items[arg1];
                               type = tmp.type;
@@ -1170,7 +1170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp20 = obj2;
       const tmp16 = onQueryChanged(rowMode.useState(""), 2);
     }
-  : (selectedUserIds) => {
+  : function NewMessageUserList(selectedUserIds) {
       selectedUserIds = selectedUserIds.selectedUserIds;
       const disabledUserIds = selectedUserIds.disabledUserIds;
       const onSelectUser = selectedUserIds.onSelectUser;
@@ -1338,7 +1338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               color: "text-muted",
               children: UserUtilsDefault.getUserTag(user),
             };
-            obj.subLabel = v65535(Text_Text.Text, obj2);
+            obj.subLabel = collapsed(Text_Text.Text, obj2);
             obj.arrow = !RelationshipStore.isFriend(user.id);
             obj.start = tmp2;
             obj.end = tmp3;

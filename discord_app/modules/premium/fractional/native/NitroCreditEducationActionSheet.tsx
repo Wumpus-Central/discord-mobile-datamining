@@ -40,7 +40,7 @@ let obj2 = {
 const result = size.fileFinishedImporting("modules/premium/fractional/native/NitroCreditEducationActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (aboutText) => {
+  ? function NitroCreditEducationActionSheet(aboutText) {
       const cResult = c.c(18);
       aboutText = aboutText.aboutText;
       const tmp4 = closure_7();
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp12;
       const obj10 = { style: tmp4.aboutTextContainer, children: tmp8 };
     }
-  : (children) => {
+  : function NitroCreditEducationActionSheet(children) {
       const tmp = closure_7();
       const obj = { children: null };
       const obj2 = { style: tmp.container, children: null };

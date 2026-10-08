@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/analytics/Gu
 
 export const ModalType = { DETAIL: "Boost Perk Shop Details", DEACTIVATE: "Boost Perk Shop Disable" };
 export const useLogPowerupModalOpened = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild_id, skuId, type) => {
+  ? function useLogPowerupModalOpened(guild_id, skuId, type) {
       _require = guild_id;
       dependencyMap = type;
       const cResult = require("c").c(5);
@@ -38,7 +38,7 @@ export const useLogPowerupModalOpened = ReactCompilerGating.isReactCompilerEnabl
       tmp2 = fn;
       const obj = require("c");
     }
-  : (guild_id, skuId, type) => {
+  : function useLogPowerupModalOpened(guild_id, skuId, type) {
       const items = [type, guild_id, skuId.skuId];
       const effect = noop.useEffect(() => {
         AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, sku_id: skuId.skuId, guild_id });

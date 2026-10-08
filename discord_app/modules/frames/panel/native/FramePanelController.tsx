@@ -6,15 +6,15 @@ import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 import FramesStore from "../../FramesStore.tsx";
 
 const require = fn;
-const asLaunched = fn(8738).asLaunched;
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const asLaunched = fn(10613).asLaunched;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelController.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function FramePanelController(children) {
       const cResult = mainFrameId(576).c(13);
       children = children.children;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult = mainFrameId(504);
-      const tmp13 = jsx(mainFrameId(17190).BaseActivityPanelController, {
+      const tmp13 = jsx(mainFrameId(17471).BaseActivityPanelController, {
         context: FramePanelStateContextDefault,
         orientationLockStateForApp,
         mode,
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children,
       };
     }
-  : (children) => {
+  : function FramePanelController(children) {
       let mainFrameId;
       const items = [FramesStore, ApplicationStore];
       const stateFromStoresObject = mainFrameId(504).useStateFromStoresObject(items, () => {
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       let obj = mainFrameId(504);
-      return jsx(mainFrameId(17190).BaseActivityPanelController, {
+      return jsx(mainFrameId(17471).BaseActivityPanelController, {
         context: FramePanelStateContextDefault,
         orientationLockStateForApp,
         mode,

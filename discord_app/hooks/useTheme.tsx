@@ -8,7 +8,9 @@ import size from "../../_runtime/metro/00002__.js";
 const ThemeTypes = Constants.ThemeTypes;
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-const useTheme = () => shared.useThemeContext().theme;
+function useTheme() {
+  return shared.useThemeContext().theme;
+}
 let ReactCompilerGating = ReactCompilerGating_mod;
 function getThemeIndex(arg0) {
   if (ThemeTypes.DARK === arg0) {
@@ -22,9 +24,9 @@ const result1 = size.fileFinishedImporting("hooks/useTheme.tsx");
 export default useTheme;
 export { useTheme };
 export const useThemeIndex = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useThemeIndex() {
       const cResult = c.c(2);
-      if (typeof fn === "function") {
+      if (typeof useTheme === "function") {
         const theme = shared.useThemeContext().theme;
         if (cResult[0] !== theme) {
           let num2 = 0;
@@ -44,8 +46,8 @@ export const useThemeIndex = ReactCompilerGating.isReactCompilerEnabled()
         throw new TypeError("Trying to call a non-function");
       }
     }
-  : () => {
-      if (typeof fn === "function") {
+  : function useThemeIndex() {
+      if (typeof useTheme === "function") {
         const theme = shared.useThemeContext().theme;
         let num = 0;
         if (ThemeTypes.DARK !== theme) {

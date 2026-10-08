@@ -22,7 +22,7 @@ let closure_6 = ["label", "children"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { padding: 16 },
   header: {
@@ -69,7 +69,7 @@ obj2.footer = { borderBottomStartRadius: 8, borderBottomEndRadius: 8, height: 16
 let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PriceTier(arg0) {
       const cResult = c.c(14);
       ({ price, currency } = arg0);
       const tmp5 = closure_13();
@@ -79,7 +79,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[3] !== tmp8) {
           const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp8 };
-          const tmp12 = v65535(Text_Text.Text, obj2);
+          const tmp12 = collapsed(Text_Text.Text, obj2);
           cResult[3] = tmp8;
           cResult[4] = tmp12;
           let tmp10 = tmp12;
@@ -118,7 +118,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj5 = { style: tmp5.priceInterval, variant: "eyebrow", color: "text-default", children: formatResult };
-        const tmp16 = v65535(Text, obj5);
+        const tmp16 = collapsed(Text, obj5);
         cResult[5] = Text;
         cResult[6] = tmp5.priceInterval;
         cResult[7] = formatResult;
@@ -134,7 +134,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = formatPriceResult;
       const tmpResult2 = PriceUtils;
     }
-  : (arg0) => {
+  : function PriceTier(arg0) {
       ({ price, currency } = arg0);
       const merged = Object.assign(arg0, Object.assign({ price: 0, currency: 0 }));
       const tmp2 = closure_13();
@@ -144,19 +144,19 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: PriceUtils.formatPrice(price, currency),
       };
-      const items = [v65535(Text_Text.Text, obj2)];
+      const items = [collapsed(Text_Text.Text, obj2)];
       const obj4 = { style: tmp2.priceInterval, variant: "eyebrow", color: "text-default", children: null };
       const intl = util.intl;
       const obj5 = { period: null };
       obj5.period = GuildRoleSubscriptionTypeUtils.formatPlanInterval(merged);
       obj4.children = intl.format(util.t.isLGyX, obj5);
-      items[1] = v65535(Text_Text.Text, obj4);
+      items[1] = collapsed(Text_Text.Text, obj4);
       obj.children = items;
       return closure_1_11(View, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function Header(arg0) {
       const cResult = c.c(20);
       ({ listingId, onSubscribePress } = arg0);
       const tmp4 = closure_13();
@@ -166,7 +166,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const first2 = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useDescription(listingId), 1)[0];
       if (cResult[0] !== first1) {
         obj6 = { variant: "heading-md/semibold", color: "interactive-text-active", children: first1 };
-        const tmp10 = v65535(Text_Text.Text, obj6);
+        const tmp10 = collapsed(Text_Text.Text, obj6);
         cResult[0] = first1;
         cResult[1] = tmp10;
         let tmp8 = tmp10;
@@ -191,7 +191,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[7] !== first) {
           const obj8 = {};
           const merged = Object.assign(first);
-          const tmp20 = v65535(closure_14, obj8);
+          const tmp20 = collapsed(closure_14, obj8);
           cResult[7] = first;
           cResult[8] = tmp20;
           let tmp14 = tmp20;
@@ -200,7 +200,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[9] !== onSubscribePress) {
           const obj9 = { onPress: onSubscribePress };
-          const tmp23 = v65535(GuildPremiumRoleSubscribeButton.GuildPremiumRoleSubscribeButton, obj9);
+          const tmp23 = collapsed(GuildPremiumRoleSubscribeButton.GuildPremiumRoleSubscribeButton, obj9);
           cResult[9] = onSubscribePress;
           cResult[10] = tmp23;
           let tmp21 = tmp23;
@@ -209,7 +209,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[11] !== first2) {
           const obj10 = { variant: "text-sm/medium", children: first2 };
-          const tmp26 = v65535(Text_Text.Text, obj10);
+          const tmp26 = collapsed(Text_Text.Text, obj10);
           cResult[11] = first2;
           cResult[12] = tmp26;
           let tmp24 = tmp26;
@@ -243,14 +243,14 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[19] = tmp30;
         tmp27 = tmp30;
       }
-      const tmp13 = v65535(FastImageDefault, { style: tmp4.image, source: tmp11 });
+      const tmp13 = collapsed(FastImageDefault, { style: tmp4.image, source: tmp11 });
       cResult[4] = tmp4.image;
       cResult[5] = tmp11;
       cResult[6] = tmp13;
       tmp12 = tmp13;
       const obj12 = { style: tmp4.image, source: tmp11 };
     }
-  : (onPress) => {
+  : function Header(onPress) {
       const listingId = onPress.listingId;
       const tmp = closure_13();
       const obj = GuildRoleSubscriptionListingEditStateUtilsAll;
@@ -258,7 +258,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       let str = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useImage(listingId), 1)[0];
       const obj5 = { style: tmp.header, children: null };
       const items = [
-        v65535(Text_Text.Text, {
+        collapsed(Text_Text.Text, {
           variant: "heading-md/semibold",
           color: "interactive-text-active",
           children: _slicedToArray(obj2.useName(listingId), 1)[0],
@@ -273,13 +273,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         str = "";
       }
       obj6.source = { uri: str };
-      items[1] = v65535(FastImageDefault, obj6);
+      items[1] = collapsed(FastImageDefault, obj6);
       const merged = Object.assign(_slicedToArray(obj.useSubscriptionPlan(listingId), 1)[0]);
-      items[2] = v65535(closure_14, {});
-      items[3] = v65535(GuildPremiumRoleSubscribeButton.GuildPremiumRoleSubscribeButton, {
+      items[2] = collapsed(closure_14, {});
+      items[3] = collapsed(GuildPremiumRoleSubscribeButton.GuildPremiumRoleSubscribeButton, {
         onPress: onPress.onSubscribePress,
       });
-      items[4] = v65535(Text_Text.Text, {
+      items[4] = collapsed(Text_Text.Text, {
         variant: "text-sm/medium",
         children: _slicedToArray(obj4.useDescription(listingId), 1)[0],
       });
@@ -288,7 +288,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (noBackground) => {
+  ? function Content(noBackground) {
       const cResult = c.c(7);
       ({ children, style } = noBackground);
       const tmp2 = closure_13();
@@ -304,7 +304,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp5;
           }
           const obj2 = { style: tmp4, children };
-          const tmp8 = v65535(View, obj2);
+          const tmp8 = collapsed(View, obj2);
           cResult[4] = children;
           cResult[5] = tmp4;
           cResult[6] = tmp8;
@@ -318,7 +318,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp4 = items;
     }
-  : (arg0) => {
+  : function Content(arg0) {
       ({ children, noBackground, style } = arg0);
       const tmp = closure_13();
       const style1 = [tmp.content, ,];
@@ -328,11 +328,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       style1[1] = contentWithBackground;
       style1[2] = style;
-      return v65535(View, { style: style1, children });
+      return collapsed(View, { style: style1, children });
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (label) => {
+  ? function SectionLabel(label) {
       const cResult = c.c(9);
       if (cResult[0] !== label) {
         label = label.label;
@@ -360,13 +360,13 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {};
         const merged = Object.assign(tmp4);
         obj2.children = tmp10;
-        const tmp18 = v65535(closure_16, obj2);
+        const tmp18 = collapsed(closure_16, obj2);
         cResult[6] = tmp4;
         cResult[7] = tmp10;
         cResult[8] = tmp18;
         tmp12 = tmp18;
       }
-      const tmp11 = v65535(Text_Text.Text, {
+      const tmp11 = collapsed(Text_Text.Text, {
         style: tmp9.sectionLabel,
         variant: "eyebrow",
         color: "text-default",
@@ -378,22 +378,22 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = tmp11;
       const obj3 = { style: tmp9.sectionLabel, variant: "eyebrow", color: "text-default", children: tmp5 };
     }
-  : (children) => {
+  : function SectionLabel(children) {
       const merged = Object.assign(children, Object.assign({ label: 0 }));
       const obj = {};
       const merged1 = Object.assign(merged);
       const tmp2 = closure_13();
-      obj.children = v65535(Text_Text.Text, {
+      obj.children = collapsed(Text_Text.Text, {
         style: closure_13().sectionLabel,
         variant: "eyebrow",
         color: "text-default",
         children: children.label,
       });
-      return v65535(closure_16, obj);
+      return collapsed(closure_16, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function LabeledSection(arg0) {
       const cResult = c.c(13);
       if (cResult[0] !== arg0) {
         ({ label, children } = arg0);
@@ -436,7 +436,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = {};
         const merged = Object.assign(tmp3);
         obj3.children = tmp2;
-        const tmp17 = v65535(closure_16, obj3);
+        const tmp17 = collapsed(closure_16, obj3);
         cResult[7] = tmp2;
         cResult[8] = tmp3;
         cResult[9] = tmp17;
@@ -445,37 +445,37 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = {};
       const merged1 = Object.assign(tmp3);
       obj4.label = tmp4;
-      const tmp10 = v65535(closure_17, obj4);
+      const tmp10 = collapsed(closure_17, obj4);
       cResult[4] = tmp3;
       cResult[5] = tmp4;
       cResult[6] = tmp10;
       tmp8 = tmp10;
     }
-  : (arg0) => {
+  : function LabeledSection(arg0) {
       ({ label, children } = arg0);
       const merged = Object.assign(arg0, Object.assign({ label: 0, children: 0 }));
       const obj = { children: null };
       const obj2 = {};
       const merged1 = Object.assign(merged);
       obj2.label = label;
-      const items = [v65535(closure_17, obj2)];
+      const items = [collapsed(closure_17, obj2)];
       const obj3 = {};
       const merged2 = Object.assign(merged);
       obj3.children = children;
-      items[1] = v65535(closure_16, obj3);
+      items[1] = collapsed(closure_16, obj3);
       obj.children = items;
       return closure_1_11(__initData, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function Separator() {
       const cResult = c.c(2);
       const tmp2 = closure_13();
       if (cResult[0] !== tmp2.separator) {
         const obj2 = { children: null };
         const obj3 = { style: tmp2.separator };
-        obj2.children = v65535(View, obj3);
-        const tmp7 = v65535(closure_16, obj2);
+        obj2.children = collapsed(View, obj3);
+        const tmp7 = collapsed(closure_16, obj2);
         cResult[0] = tmp2.separator;
         cResult[1] = tmp7;
         let tmp3 = tmp7;
@@ -484,14 +484,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     }
-  : () => {
-      const obj = { children: v65535(View, { style: closure_13().separator }) };
-      return v65535(closure_16, obj);
+  : function Separator() {
+      const obj = { children: collapsed(View, { style: closure_13().separator }) };
+      return collapsed(closure_16, obj);
     };
 let obj6 = { FLAT: 0, [0]: "FLAT", ROUNDED: 1, [1]: "ROUNDED" };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function BenefitsSection(guildId) {
       const cResult = guildId(576).c(20);
       guildId = guildId.guildId;
       ({ label, benefits, look, listingId } = guildId);
@@ -507,7 +507,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[1] === label) {
             let tmp6 = cResult[2];
           }
-          const tmp8 = listingId === tmp(17980).NEW_LISTING_EDIT_STATE_ID;
+          const tmp8 = listingId === tmp(18267).NEW_LISTING_EDIT_STATE_ID;
           closure_2 = tmp8;
           if (cResult[3] === benefits) {
             if (cResult[4] === guildId) {
@@ -569,13 +569,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const obj = {
               style: benefitSpacing,
-              children: v65535(GuildRoleSubscriptionBenefitPreview.GuildRoleSubscriptionBenefitPreview, {
+              children: collapsed(GuildRoleSubscriptionBenefitPreview.GuildRoleSubscriptionBenefitPreview, {
                 guildId,
                 benefit,
                 isInteractive: !closure_2,
               }),
             };
-            return v65535(View, obj, GuildRoleSubscriptionTypeUtils.getBenefitKey(benefit));
+            return collapsed(View, obj, GuildRoleSubscriptionTypeUtils.getBenefitKey(benefit));
           };
           cResult[8] = guildId;
           cResult[9] = tmp8;
@@ -596,7 +596,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = guildId(576);
     }
-  : (listingId) => {
+  : function BenefitsSection(listingId) {
       ({ guildId: require, label, benefits, look } = listingId);
       if (look === undefined) {
         look = obj6.FLAT;
@@ -620,7 +620,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj = {
             style: benefitSpacing,
-            children: v65535(GuildRoleSubscriptionBenefitPreview.GuildRoleSubscriptionBenefitPreview, {
+            children: collapsed(GuildRoleSubscriptionBenefitPreview.GuildRoleSubscriptionBenefitPreview, {
               guildId,
               benefit,
               isInteractive: listingId !== GuildRoleSubscriptionsActionCreatorExtras.NEW_LISTING_EDIT_STATE_ID,
@@ -631,7 +631,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             benefit,
             isInteractive: listingId !== GuildRoleSubscriptionsActionCreatorExtras.NEW_LISTING_EDIT_STATE_ID,
           };
-          return v65535(View, obj, GuildRoleSubscriptionTypeUtils.getBenefitKey(benefit));
+          return collapsed(View, obj, GuildRoleSubscriptionTypeUtils.getBenefitKey(benefit));
         });
         let obj = { noBackground: look === obj6.ROUNDED, label: formatToPlainStringResult, children: null };
         let tmp4Result = mapped;
@@ -658,7 +658,7 @@ const result = size.fileFinishedImporting(
 
 export const BenefitsSection = tmp4;
 export const GuildRoleSubscriptionListingPreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildRoleSubscriptionListingPreview(arg0) {
       const cResult = c.c(22);
       const tmp4 = closure_13();
       ({ guildId, listingId } = arg0);
@@ -671,7 +671,7 @@ export const GuildRoleSubscriptionListingPreview = ReactCompilerGating.isReactCo
       if (cResult[0] !== arg0) {
         const obj5 = {};
         const merged = Object.assign(arg0);
-        const tmp12 = v65535(closure_15, obj5);
+        const tmp12 = collapsed(closure_15, obj5);
         cResult[0] = arg0;
         cResult[1] = tmp12;
         let tmp6 = tmp12;
@@ -689,8 +689,8 @@ export const GuildRoleSubscriptionListingPreview = ReactCompilerGating.isReactCo
       if (cResult[3] !== role) {
         obj6 = { label: tmp13, children: null };
         const obj7 = { role };
-        obj6.children = v65535(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, obj7);
-        const tmp18 = v65535(closure_18, obj6);
+        obj6.children = collapsed(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, obj7);
+        const tmp18 = collapsed(closure_18, obj6);
         cResult[3] = role;
         cResult[4] = tmp18;
         let tmp15 = tmp18;
@@ -709,7 +709,7 @@ export const GuildRoleSubscriptionListingPreview = ReactCompilerGating.isReactCo
               }
               if (cResult[13] !== tmp4.footer) {
                 const obj8 = { style: tmp4.footer };
-                const tmp36 = v65535(closure_16, obj8);
+                const tmp36 = collapsed(closure_16, obj8);
                 cResult[13] = tmp4.footer;
                 cResult[14] = tmp36;
                 let tmp33 = tmp36;
@@ -747,9 +747,9 @@ export const GuildRoleSubscriptionListingPreview = ReactCompilerGating.isReactCo
           let tmp27 = first1.length > 0;
           if (tmp27) {
             const obj10 = { children: null };
-            const items1 = [v65535(closure_19, {})];
+            const items1 = [collapsed(closure_19, {})];
             const obj11 = { guildId, benefits: first1, label: util.t.aBE7f9, listingId };
-            items1[1] = v65535(closure_21, obj11);
+            items1[1] = collapsed(closure_21, obj11);
             obj10.children = items1;
             tmp27 = closure_1_11(__initData, obj10);
           }
@@ -763,9 +763,9 @@ export const GuildRoleSubscriptionListingPreview = ReactCompilerGating.isReactCo
       let tmp20 = first.length > 0;
       if (tmp20) {
         const obj12 = { children: null };
-        const items2 = [v65535(closure_19, {})];
+        const items2 = [collapsed(closure_19, {})];
         const obj13 = { guildId, benefits: first, label: util.t.sqjII9, listingId };
-        items2[1] = v65535(closure_21, obj13);
+        items2[1] = collapsed(closure_21, obj13);
         obj12.children = items2;
         tmp20 = closure_1_11(__initData, obj12);
       }
@@ -775,7 +775,7 @@ export const GuildRoleSubscriptionListingPreview = ReactCompilerGating.isReactCo
       cResult[8] = tmp20;
       tmp19 = tmp20;
     }
-  : (arg0) => {
+  : function GuildRoleSubscriptionListingPreview(arg0) {
       const tmp = closure_13();
       ({ guildId, listingId } = arg0);
       const first = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useChannelBenefits(listingId), 1)[0];
@@ -786,18 +786,18 @@ export const GuildRoleSubscriptionListingPreview = ReactCompilerGating.isReactCo
       const obj4 = { style: tmp.container, children: null };
       const role = GuildRoleSubscriptionListingEditStateUtilsAll.useRole(listingId, guildId);
       const merged = Object.assign(arg0);
-      const items = [v65535(closure_15, {}), , , ,];
+      const items = [collapsed(closure_15, {}), , , ,];
       obj6 = { label: null, children: null };
       const intl = util.intl;
       obj6.label = intl.string(util.t.FJZmYx);
-      obj6.children = v65535(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, { role });
-      items[1] = v65535(closure_18, obj6);
+      obj6.children = collapsed(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, { role });
+      items[1] = collapsed(closure_18, obj6);
       let tmp4Result = first.length > 0;
       if (tmp4Result) {
         const obj7 = { children: null };
-        const items1 = [v65535(closure_19, {})];
+        const items1 = [collapsed(closure_19, {})];
         const obj8 = { guildId, benefits: first, label: util.t.sqjII9, listingId };
-        items1[1] = v65535(closure_21, obj8);
+        items1[1] = collapsed(closure_21, obj8);
         obj7.children = items1;
         tmp4Result = closure_1_11(__initData, obj7);
       }
@@ -805,14 +805,14 @@ export const GuildRoleSubscriptionListingPreview = ReactCompilerGating.isReactCo
       let tmp4Result2 = first1.length > 0;
       if (tmp4Result2) {
         const obj9 = { children: null };
-        const items2 = [v65535(closure_19, {})];
+        const items2 = [collapsed(closure_19, {})];
         const obj10 = { guildId, benefits: first1, label: util.t.aBE7f9, listingId };
-        items2[1] = v65535(closure_21, obj10);
+        items2[1] = collapsed(closure_21, obj10);
         obj9.children = items2;
         tmp4Result2 = closure_1_11(__initData, obj9);
       }
       items[3] = tmp4Result2;
-      items[4] = v65535(closure_16, { style: tmp.footer });
+      items[4] = collapsed(closure_16, { style: tmp.footer });
       obj4.children = items;
       return closure_1_11(View, obj4);
     };

@@ -2,9 +2,9 @@
 import c from "../../../../_runtime/00576_c.js";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
-import _mod4711 from "../../../../_runtime/metro/04711__.js";
+import _mod4905 from "../../../../_runtime/metro/04905__.js";
 import PaymentConstants from "../PaymentConstants.tsx";
-import keysSorter from "../../../../_runtime/05642_keysSorter.js";
+import keysSorter from "../../../../_runtime/05989_keysSorter.js";
 import Constants from "../../../Constants.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -35,9 +35,9 @@ export const getCustomCheckoutFlowForAnalytics = function getCustomCheckoutFlowF
     : CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
 };
 export const useGetCustomCheckoutFlow = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGetCustomCheckoutFlow() {
       const cResult = c.c(3);
-      const _location = _mod4711.useLocation();
+      const _location = _mod4905.useLocation();
       ({ search, pathname } = _location);
       if (cResult[0] === search) {
         if (cResult[1] === pathname) {
@@ -58,8 +58,8 @@ export const useGetCustomCheckoutFlow = ReactCompilerGating.isReactCompilerEnabl
       }
       const tmpResult = keysSorter;
     }
-  : () => {
-      const _location = _mod4711.useLocation();
+  : function useGetCustomCheckoutFlow() {
+      const _location = _mod4905.useLocation();
       ({ pathname, search } = _location);
       const parsed = keysSorter.parse(search);
       ({ deep_link_type, flow_type } = parsed);

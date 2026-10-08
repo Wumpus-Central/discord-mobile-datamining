@@ -23,7 +23,7 @@ const NativeLottieRenderMode = { LOOP: 0, [0]: "LOOP", STILL: 1, [1]: "STILL", O
 const result = size.fileFinishedImporting("modules/stickers/native/NativeLottieView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function NativeLottieView(arg0) {
       const obj = renderMode(ref[7]);
       const cResult = obj.c(17);
       ({ asset, url, width, height, opacity, renderMode, animating, accessibilityLabel } = arg0);
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       ref = noop.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function l(arg0) {
+        function setup(arg0) {
           ({ asset, url, width, height, renderMode, animating, accessibilityLabel } = arg0);
           let tmp = "" !== url;
           if (tmp) {
@@ -48,9 +48,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (tmp) {
             closure_7.setup(ref.current, asset, url, width, height, renderMode, animating, accessibilityLabel);
           }
-        };
-        cResult[0] = fn;
-        let first = fn;
+        }
+        cResult[0] = setup;
+        let first = setup;
       } else {
         first = cResult[0];
       }
@@ -83,31 +83,61 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 first(S);
                 if (cResult[10] !== renderMode) {
-                  class S {
+                  class V {
                     constructor() {
-                      closure_4.current = closure_3;
+                      current = closure_4.current;
+                      size = {
+                        asset: current.asset,
+                        url: current.url,
+                        width: current.width,
+                        height: current.height,
+                        renderMode: LOOP,
+                        animating: current.animating,
+                        accessibilityLabel: current.accessibilityLabel,
+                      };
+                      tmp = closure_2(size);
                       return;
                     }
                   }
                   const items = [renderMode];
                   cResult[10] = renderMode;
-                  cResult[11] = tmp14;
+                  cResult[11] = V;
                   cResult[12] = items;
                   let tmp13 = items;
                 } else {
-                  class S {
+                  class V {
                     constructor() {
-                      closure_4.current = closure_3;
+                      current = closure_4.current;
+                      size = {
+                        asset: current.asset,
+                        url: current.url,
+                        width: current.width,
+                        height: current.height,
+                        renderMode: LOOP,
+                        animating: current.animating,
+                        accessibilityLabel: current.accessibilityLabel,
+                      };
+                      tmp = closure_2(size);
                       return;
                     }
                   }
                   tmp13 = cResult[12];
                 }
-                first(tmp14, tmp13);
+                first(V, tmp13);
                 if (cResult[13] === height) {
-                  class S {
+                  class V {
                     constructor() {
-                      closure_4.current = closure_3;
+                      current = closure_4.current;
+                      size = {
+                        asset: current.asset,
+                        url: current.url,
+                        width: current.width,
+                        height: current.height,
+                        renderMode: LOOP,
+                        animating: current.animating,
+                        accessibilityLabel: current.accessibilityLabel,
+                      };
+                      tmp = closure_2(size);
                       return;
                     }
                   }
@@ -115,11 +145,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { ref, style: null };
                 let size = { width, height, opacity: num };
                 obj2.style = size;
-                const tmp19 = <closure_6 ref={ref} style={null} />;
+                const tmp18 = <closure_6 ref={ref} style={null} />;
                 cResult[13] = height;
                 cResult[14] = num;
                 cResult[15] = width;
-                cResult[16] = tmp19;
+                cResult[16] = tmp18;
               }
             }
           }
@@ -135,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = size1;
       tmp6 = size1;
     }
-  : (accessibilityLabel) => {
+  : function NativeLottieView(accessibilityLabel) {
       ({ width, height, opacity } = accessibilityLabel);
       ({ asset, url } = accessibilityLabel);
       if (opacity === undefined) {

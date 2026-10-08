@@ -5,7 +5,7 @@ import PlatformUtils2 from "../../utils/PlatformUtils.tsx";
 import useToken from "../../design/tokens/native/useToken.tsx";
 import PerceptualVolumeUtils from "../../utils/PerceptualVolumeUtils.tsx";
 import VoiceNormalIcon from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
-import _modDef7963 from "../../../_runtime/metro/07963__.js";
+import _modDef8380 from "../../../_runtime/metro/08380__.js";
 import VoiceXIcon from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -23,15 +23,15 @@ let closure_3 = [
   "accessibilityLabel",
 ];
 const View = fn(17).View;
-let closure_6 = fn(4921).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+let closure_6 = fn(5115).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 0;
 }
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({
   volumerSlider: { flexDirection: "row", alignItems: "center" },
   leftIcon: { marginRight: num },
@@ -43,7 +43,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/VolumeSlider.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function VolumeSlider(arg0) {
       const cResult = require("c").c(38);
       if (cResult[0] !== arg0) {
         ({ style, maxTrackTintColor, value, maxVolume, onValueChange } = arg0);
@@ -91,16 +91,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[9] === tmp8) {
         if (cResult[12] !== tmp15.leftIcon) {
           const obj2 = { style: tmp15.leftIcon };
-          const tmp20 = closure_7(tmp(9680).VoiceXIcon, obj2);
+          const tmp20 = closure_7(tmp(10869).VoiceXIcon, obj2);
           cResult[12] = tmp15.leftIcon;
           cResult[13] = tmp20;
         }
         if (cResult[14] !== tmp10) {
-          const result = tmp(5690).amplitudeToPerceptual(tmp10);
+          const result = tmp(5249).amplitudeToPerceptual(tmp10);
           cResult[14] = tmp10;
           cResult[15] = result;
           let tmp21 = result;
-          const tmpResult2 = tmp(5690);
+          const tmpResult2 = tmp(5249);
         } else {
           tmp21 = cResult[15];
         }
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onValueChange: L,
           onResponderGrant: tmp26,
         };
-        const tmp31 = closure_7(_modDef7963, obj3);
+        const tmp31 = closure_7(_modDef8380, obj3);
         cResult[22] = PRIMARY_400;
         cResult[23] = tmp9;
         cResult[24] = minTrackColor;
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = items;
       tmpResult = require("useToken");
     }
-  : (maxTrackTintColor) => {
+  : function VolumeSlider(maxTrackTintColor) {
       let PRIMARY_400 = maxTrackTintColor.maxTrackTintColor;
       if (PRIMARY_400 === undefined) {
         PRIMARY_400 = nativeDefault.unsafe_rawColors.PRIMARY_400;
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj = useToken;
       const obj3 = { style: tmp4.leftIcon };
-      const tmp7Result = _modDef7963;
+      const tmp7Result = _modDef8380;
       obj4.value = PerceptualVolumeUtils.amplitudeToPerceptual(value);
       obj4.maximumValue = maxVolume;
       obj4.minimumTrackTintColor = minTrackColor;

@@ -41,7 +41,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useSearchFetchPendingManager = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSearchFetchPendingManager(arg0) {
       _require = arg0;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -110,7 +110,7 @@ export const useSearchFetchPendingManager = ReactCompilerGating.isReactCompilerE
       tmp5 = fn2;
       let obj = require("c");
     }
-  : (arg0) => {
+  : function useSearchFetchPendingManager(arg0) {
       closure_0 = arg0;
       const tmp = useInitialValueDefault(() => {
         if (typeof closure_4 === "function") {

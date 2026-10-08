@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, paddingTop: 8 },
   text: { textAlign: "center", marginBottom: 8 },
@@ -15,20 +15,20 @@ let obj2 = {
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function AnnouncementChannelLurkerBar(channel) {
       const cResult = channel(576).c(12);
       channel = channel.channel;
       const tmp4 = closure_5();
       if (cResult[0] !== channel) {
-        const fn = function c() {
+        function handleFollowing() {
           const guildId = channel.getGuildId();
           if (null != guildId) {
             const result = showChannelFollowingActionSheet.showChannelFollowingActionSheet(channel.id, guildId);
           }
-        };
+        }
         cResult[0] = channel;
-        cResult[1] = fn;
-        let tmp5 = fn;
+        cResult[1] = handleFollowing;
+        let tmp5 = handleFollowing;
       } else {
         tmp5 = cResult[1];
       }
@@ -43,7 +43,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp4.text) {
         const obj2 = { style: text, variant: "text-sm/medium", color: "mobile-text-heading-primary", children: tmp6 };
-        const tmp10 = closure_3(tmp(4892).Text, obj2);
+        const tmp10 = closure_3(tmp(5086).Text, obj2);
         cResult[3] = tmp4.text;
         cResult[4] = tmp10;
         let tmp8 = tmp10;
@@ -60,7 +60,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== tmp5) {
         const obj3 = { onPress: tmp5, text: tmp11, size: "sm", variant: "secondary", grow: true };
-        const tmp15 = closure_3(tmp(5601).Button, obj3);
+        const tmp15 = closure_3(tmp(5375).Button, obj3);
         cResult[6] = tmp5;
         cResult[7] = tmp15;
         let tmp13 = tmp15;
@@ -86,16 +86,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp16 = tmp17;
       let obj = channel(576);
     }
-  : (channel) => {
+  : function AnnouncementChannelLurkerBar(channel) {
       channel = channel.channel;
       const tmp = closure_5();
       let obj = { style: tmp.wrapper, children: null };
       const obj2 = { style: tmp.text, variant: "text-sm/medium", color: "mobile-text-heading-primary", children: null };
       const intl = channel(1126).intl;
       obj2.children = intl.string(channel(1126).t.Hl0Mqh);
-      const items = [closure_3(channel(4892).Text, obj2)];
+      const items = [closure_3(channel(5086).Text, obj2)];
       const obj3 = {
-        onPress() {
+        onPress: function handleFollowing() {
           const guildId = channel.getGuildId();
           if (null != guildId) {
             const result = showChannelFollowingActionSheet.showChannelFollowingActionSheet(channel.id, guildId);
@@ -108,7 +108,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl2 = channel(1126).intl;
       obj3.text = intl2.string(channel(1126).t["4z5PU1"]);
-      items[1] = closure_3(channel(5601).Button, obj3);
+      items[1] = closure_3(channel(5375).Button, obj3);
       obj.children = items;
       return closure_4(View, obj);
     };

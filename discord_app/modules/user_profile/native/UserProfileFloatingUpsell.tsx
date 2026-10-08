@@ -8,10 +8,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const Constants = fn(6714);
+const Constants = fn(6891);
 ({ FLOATING_UPSELL_HEIGHT: hasOwnProperty, PROFILE_SIDE_PADDING: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles((bottom) => {
   const obj = {
     container: {
@@ -27,7 +27,7 @@ let closure_8 = createStyles.createStyles((bottom) => {
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useFloatingUpsellHeight() {
       const cResult = c.c(3);
       [tmp3, require] = noop.useState(hasOwnProperty);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -49,7 +49,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function useFloatingUpsellHeight() {
       const tmp = _slicedToArray(noop.useState(hasOwnProperty), 2);
       closure_0 = tmp[1];
       return {
@@ -61,7 +61,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileFloatingUpsell.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileFloatingUpsell(arg0) {
       const cResult = c.c(3);
       const tmp4 = closure_8(useSafeAreaInsetsDefault().bottom);
       if (cResult[0] === arg0) {
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp8;
       const tmp3Result = UserProfileUpsellCardV2Default;
     }
-  : (arg0) => {
+  : function UserProfileFloatingUpsell(arg0) {
       const tmp = closure_8(useSafeAreaInsetsDefault().bottom);
       const obj = { style: closure_8(useSafeAreaInsetsDefault().bottom).container };
       const merged = Object.assign(arg0);

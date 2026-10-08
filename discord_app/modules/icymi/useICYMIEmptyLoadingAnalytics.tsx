@@ -10,7 +10,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/useICYMIEmptyLoadingAnalytics.tsx");
 
 export const useICYMIEmptyLoadingAnalytics = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useICYMIEmptyLoadingAnalytics(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(7);
@@ -71,7 +71,7 @@ export const useICYMIEmptyLoadingAnalytics = ReactCompilerGating.isReactCompiler
       tmp3 = items1;
       tmp2 = fn;
     }
-  : (arg0, arg1) => {
+  : function useICYMIEmptyLoadingAnalytics(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
       noop = noop.useRef(null);

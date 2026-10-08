@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/SavedMessageUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef4467 from "../../../_runtime/metro/04467__.js";
+import _modDef4659 from "../../../_runtime/metro/04659__.js";
 import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -127,7 +127,7 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
     }
   })();
 };
-const UnknownChannelRecord = fn(2055).UnknownChannelRecord;
+const UnknownChannelRecord = fn(2067).UnknownChannelRecord;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_7, Routes: closure_8 } = Constants);
 const DueInStringTypes = { LONG: 0, [0]: "LONG", SHORT: 1, [1]: "SHORT" };
@@ -161,14 +161,14 @@ export const useDueInString = function useDueInString(arg0) {
     const obj2 = { duration: null };
     const time = dueAt.getTime();
     tmp9 = obj;
-    obj2.duration = _modDef4467.duration(time - now.getTime(), "millisecond").humanize();
+    obj2.duration = _modDef4659.duration(time - now.getTime(), "millisecond").humanize();
     obj.dueInText = intl.formatToPlainString(H4gnX9, obj2);
     obj.isOverdue = now > dueAt;
     return obj;
   }
 };
 export const useSavedMessageChannel = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSavedMessageChannel(arg0) {
       let channelId = arg0;
       _require = arg0;
       const cResult = require("c").c(6);
@@ -208,7 +208,7 @@ export const useSavedMessageChannel = ReactCompilerGating.isReactCompilerEnabled
       }
       return stateFromStores;
     }
-  : (arg0) => {
+  : function useSavedMessageChannel(arg0) {
       _require = arg0;
       const items = [ChannelStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () =>

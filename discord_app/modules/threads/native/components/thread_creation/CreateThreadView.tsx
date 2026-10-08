@@ -208,13 +208,13 @@ function useSubmitForm(parentChannel) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const DraftType = fn(7044).DraftType;
-const SlowmodeType = fn(7184).SlowmodeType;
+const DraftType = fn(7232).DraftType;
+const SlowmodeType = fn(7363).SlowmodeType;
 const Constants = fn(1085);
 ({ AbortCodes: c10, AnalyticEvents: closure_11, NOOP: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   containerContent: { flexGrow: 0 },
@@ -258,20 +258,20 @@ obj.parentMessageContainer = { marginBottom: 16 };
 let closure_15 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (threadSettingsDraft) => {
+  ? function CreateThreadViewInner(threadSettingsDraft) {
       const cResult = threadSettingsDraft(576).c(66);
       threadSettingsDraft = threadSettingsDraft.threadSettingsDraft;
       const parentChannel = threadSettingsDraft.parentChannel;
       const screenIndex = threadSettingsDraft.screenIndex;
       const tmp4 = closure_15();
       let obj = threadSettingsDraft(576);
-      const privateThreadMode = threadSettingsDraft(8840).usePrivateThreadMode(parentChannel);
+      const privateThreadMode = threadSettingsDraft(9199).usePrivateThreadMode(parentChannel);
       if (cResult[0] !== parentChannel.id) {
         const fn = function l() {
           return () => {
-            parentChannel(7416).clearDraft(user.id, DraftType.ThreadSettings);
-            const obj = parentChannel(7416);
-            parentChannel(7416).clearDraft(user.id, DraftType.FirstThreadMessage);
+            parentChannel(7891).clearDraft(user.id, DraftType.ThreadSettings);
+            const obj = parentChannel(7891);
+            parentChannel(7891).clearDraft(user.id, DraftType.FirstThreadMessage);
           };
         };
         const items = [parentChannel.id];
@@ -285,7 +285,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       const effect = noop.useEffect(tmp6, tmp7);
-      let obj2 = threadSettingsDraft(8840);
+      let obj2 = threadSettingsDraft(9199);
       [tmp10, tmp11] = noop.useState(null);
       if (cResult[3] === parentChannel) {
         if (cResult[4] === privateThreadMode) {
@@ -293,9 +293,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp12 = cResult[6];
           }
           const tmp14 = useSubmitForm(tmp12);
-          const analyticsLocations = parentChannel(6664)(parentChannel(6688).CREATE_THREAD).analyticsLocations;
+          const analyticsLocations = parentChannel(6841)(parentChannel(6865).CREATE_THREAD).analyticsLocations;
           const _Symbol = Symbol;
-          const tmp16 = parentChannel(6664);
+          const tmp16 = parentChannel(6841);
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
             const obj4 = { isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true };
             cResult[7] = obj4;
@@ -315,13 +315,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           const ref1 = noop.useRef(null);
           const _Symbol2 = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp27 = closure_13(tmp15(5918), { absolute: true });
+            const tmp27 = closure_13(tmp15(10211), { absolute: true });
             cResult[10] = tmp27;
             let tmp25 = tmp27;
           } else {
             tmp25 = cResult[10];
           }
-          const diff = tmp15(6478)(tmp19).insets.bottom - parentChannel(1618)().bottom;
+          const diff = tmp15(6656)(tmp19).insets.bottom - parentChannel(1630)().bottom;
           if (cResult[11] !== diff) {
             const obj5 = { marginBottom: diff };
             cResult[11] = diff;
@@ -345,7 +345,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol3 = Symbol;
             if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp37 = closure_13(tmp(5864).ThreadIcon, { size: "lg" });
+              const tmp37 = closure_13(tmp(8176).ThreadIcon, { size: "lg" });
               cResult[18] = tmp37;
               let tmp35 = tmp37;
             } else {
@@ -403,7 +403,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                               }
                                               if (cResult[54] !== parentChannel.id) {
                                                 const obj8 = { channelId: parentChannel.id };
-                                                const tmp75 = closure_13(tmp15(12323), obj8);
+                                                const tmp75 = closure_13(tmp15(12421), obj8);
                                                 cResult[54] = parentChannel.id;
                                                 cResult[55] = tmp75;
                                                 let tmp73 = tmp75;
@@ -428,7 +428,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                         const items1 = [tmp25, tmp76];
                                                         obj9.children = items1;
                                                         const tmp82 = closure_14(
-                                                          tmp(6664).AnalyticsLocationProvider,
+                                                          tmp(6841).AnalyticsLocationProvider,
                                                           obj9,
                                                         );
                                                         cResult[63] = analyticsLocations;
@@ -462,7 +462,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                             secondaryTextFieldRef: ref1,
                                             threadCreationCallback: tmp14,
                                           };
-                                          const tmp72 = closure_13(tmp15(11585), obj11);
+                                          const tmp72 = closure_13(tmp15(11648), obj11);
                                           cResult[50] = tmp14;
                                           cResult[51] = parentChannel;
                                           cResult[52] = screenIndex;
@@ -477,7 +477,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                             hasTypingText: false,
                                             slowmodeType: SlowmodeType.CreateThread,
                                           };
-                                          obj12.children = closure_13(tmp15(11611), obj13);
+                                          obj12.children = closure_13(tmp15(11675), obj13);
                                           tmp65 = closure_13(closure_6, obj12);
                                         }
                                         cResult[47] = parentChannel;
@@ -514,7 +514,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                 channelId: parentChannel.id,
                                 messageId: threadSettingsDraft.parentMessageId,
                               };
-                              items4[1] = closure_13(tmp(16805).ThreadCreationStarterMessage, obj18);
+                              items4[1] = closure_13(tmp(17085).ThreadCreationStarterMessage, obj18);
                               obj16.children = items4;
                               tmp52 = closure_14(closure_6, obj16);
                             }
@@ -545,12 +545,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp46 = null;
                   if (null == threadSettingsDraft.parentMessageId) {
                     tmp46 = null;
-                    if (privateThreadMode !== tmp(8840).PrivateThreadMode.Disabled) {
+                    if (privateThreadMode !== tmp(9199).PrivateThreadMode.Disabled) {
                       const obj20 = { style: tmp4.optionPrivateThread, children: null };
                       const obj21 = {
                         start: true,
                         end: true,
-                        disabled: privateThreadMode !== tmp(8840).PrivateThreadMode.Enabled,
+                        disabled: privateThreadMode !== tmp(9199).PrivateThreadMode.Enabled,
                         label: null,
                         subLabel: null,
                         value: null,
@@ -560,7 +560,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                       obj21.label = intl.string(tmp(1126).t.F1zyvU);
                       const intl2 = tmp(1126).intl;
                       obj21.subLabel = intl2.string(tmp(1126).t.Wy5RIQ);
-                      obj21.value = tmp(8840).getIsPrivate(threadSettingsDraft, privateThreadMode);
+                      obj21.value = tmp(9199).getIsPrivate(threadSettingsDraft, privateThreadMode);
                       obj21.onValueChange = function onValueChange(isPrivate) {
                         const parentChannelId = threadSettingsDraft.parentChannelId;
                         if (null != parentChannelId) {
@@ -568,9 +568,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                           DraftActionCreatorsDefault.changeThreadSettings(parentChannelId, obj2);
                         }
                       };
-                      obj20.children = closure_13(tmp(6705).TableSwitchRow, obj21);
+                      obj20.children = closure_13(tmp(6882).TableSwitchRow, obj21);
                       tmp46 = closure_13(closure_6, obj20);
-                      const tmpResult = tmp(8840);
+                      const tmpResult = tmp(9199);
                     }
                   }
                 }
@@ -589,7 +589,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               threadNameError: tmp10,
               optional: tmp24,
             };
-            const tmp44 = closure_13(tmp15(16803), obj22);
+            const tmp44 = closure_13(tmp15(17083), obj22);
             cResult[21] = tmp24;
             cResult[22] = tmp10;
             cResult[23] = threadSettingsDraft;
@@ -601,7 +601,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[14] = tmp29;
           cResult[15] = items6;
           tmp30 = items6;
-          const tmp17 = parentChannel(1618)();
+          const tmp17 = parentChannel(1630)();
         }
       }
       const obj23 = { parentChannel, threadSettingsDraft, privateThreadMode, setNameError: tmp11 };
@@ -612,36 +612,36 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = obj23;
       const tmp9 = _slicedToArray(noop.useState(null), 2);
     }
-  : (screenIndex) => {
+  : function CreateThreadViewInner(screenIndex) {
       const threadSettingsDraft = screenIndex.threadSettingsDraft;
       const parentChannel = screenIndex.parentChannel;
       const tmp = closure_15();
-      const privateThreadMode = threadSettingsDraft(8840).usePrivateThreadMode(parentChannel);
+      const privateThreadMode = threadSettingsDraft(9199).usePrivateThreadMode(parentChannel);
       const items = [parentChannel.id];
       const effect = noop.useEffect(
         () => () => {
-          parentChannel(7416).clearDraft(user.id, DraftType.ThreadSettings);
-          const obj = parentChannel(7416);
-          parentChannel(7416).clearDraft(user.id, DraftType.FirstThreadMessage);
+          parentChannel(7891).clearDraft(user.id, DraftType.ThreadSettings);
+          const obj = parentChannel(7891);
+          parentChannel(7891).clearDraft(user.id, DraftType.FirstThreadMessage);
         },
         items,
       );
       const tmp6 = _slicedToArray(noop.useState(null), 2);
-      let obj = threadSettingsDraft(8840);
+      let obj = threadSettingsDraft(9199);
       let obj2 = { parentChannel, threadSettingsDraft, privateThreadMode, setNameError: tmp6[1] };
       const tmp7 = useSubmitForm({ parentChannel, threadSettingsDraft, privateThreadMode, setNameError: tmp6[1] });
-      const tmp9 = parentChannel(6664);
-      const tmp10 = parentChannel(1618)();
+      const tmp9 = parentChannel(6841);
+      const tmp10 = parentChannel(1630)();
       const ref = noop.useRef(null);
       const ref1 = noop.useRef(null);
-      const obj3 = { value: tmp9(parentChannel(6688).CREATE_THREAD).analyticsLocations, children: null };
-      const items1 = [closure_13(parentChannel(5918), { absolute: true })];
+      const obj3 = { value: tmp9(parentChannel(6865).CREATE_THREAD).analyticsLocations, children: null };
+      const items1 = [closure_13(parentChannel(10211), { absolute: true })];
       const obj4 = { style: null, children: null };
       const items2 = [
         tmp.container,
         {
           marginBottom:
-            parentChannel(6478)({ isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true }).insets.bottom -
+            parentChannel(6656)({ isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true }).insets.bottom -
             tmp10.bottom,
         },
       ];
@@ -656,9 +656,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const items4 = [
         closure_13(closure_6, {
           style: tmp.threadIconContainer,
-          children: closure_13(threadSettingsDraft(5864).ThreadIcon, { size: "lg" }),
+          children: closure_13(threadSettingsDraft(8176).ThreadIcon, { size: "lg" }),
         }),
-        closure_13(parentChannel(16803), {
+        closure_13(parentChannel(17083), {
           ref: ref1,
           chatInputRef: ref,
           threadSettingsDraft,
@@ -671,12 +671,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp16Result = null;
         if (null == threadSettingsDraft.parentMessageId) {
           tmp16Result = null;
-          if (privateThreadMode !== tmp2(8840).PrivateThreadMode.Disabled) {
+          if (privateThreadMode !== tmp2(9199).PrivateThreadMode.Disabled) {
             const obj10 = { style: tmp.optionPrivateThread, children: null };
             const obj11 = {
               start: true,
               end: true,
-              disabled: privateThreadMode !== tmp2(8840).PrivateThreadMode.Enabled,
+              disabled: privateThreadMode !== tmp2(9199).PrivateThreadMode.Enabled,
               label: null,
               subLabel: null,
               value: null,
@@ -686,7 +686,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             obj11.label = intl.string(tmp2(1126).t.F1zyvU);
             const intl2 = tmp2(1126).intl;
             obj11.subLabel = intl2.string(tmp2(1126).t.Wy5RIQ);
-            obj11.value = tmp2(8840).getIsPrivate(threadSettingsDraft, privateThreadMode);
+            obj11.value = tmp2(9199).getIsPrivate(threadSettingsDraft, privateThreadMode);
             obj11.onValueChange = function onValueChange(isPrivate) {
               const parentChannelId = threadSettingsDraft.parentChannelId;
               if (null != parentChannelId) {
@@ -694,9 +694,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 DraftActionCreatorsDefault.changeThreadSettings(parentChannelId, obj2);
               }
             };
-            obj10.children = closure_13(tmp2(6705).TableSwitchRow, obj11);
+            obj10.children = closure_13(tmp2(6882).TableSwitchRow, obj11);
             tmp16Result = closure_13(closure_6, obj10);
-            const tmp2Result = tmp2(8840);
+            const tmp2Result = tmp2(9199);
           }
         }
       }
@@ -709,7 +709,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const obj13 = { style: tmp.border };
         const items6 = [closure_13(closure_6, obj13)];
         const obj14 = { channelId: parentChannel.id, messageId: threadSettingsDraft.parentMessageId };
-        items6[1] = closure_13(tmp2(16805).ThreadCreationStarterMessage, obj14);
+        items6[1] = closure_13(tmp2(17085).ThreadCreationStarterMessage, obj14);
         obj12.children = items6;
         tmp15Result = closure_14(closure_6, obj12);
       }
@@ -721,11 +721,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       if (parentChannel.rateLimitPerUser > 0) {
         const obj15 = { style: tmp.typingWrapper, children: null };
         const obj16 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
-        obj15.children = closure_13(tmp8(11611), obj16);
+        obj15.children = closure_13(tmp8(11675), obj16);
         tmp16Result2 = closure_13(closure_6, obj15);
       }
       items3[2] = tmp16Result2;
-      items3[3] = closure_13(parentChannel(11585), {
+      items3[3] = closure_13(parentChannel(11648), {
         ref,
         channel: parentChannel,
         onJumpToPresent,
@@ -733,11 +733,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         secondaryTextFieldRef: ref1,
         threadCreationCallback: tmp7,
       });
-      items3[4] = closure_13(parentChannel(12323), { channelId: parentChannel.id });
+      items3[4] = closure_13(parentChannel(12421), { channelId: parentChannel.id });
       obj4.children = items3;
       items1[1] = closure_14(closure_6, obj4);
       obj3.children = items1;
-      return closure_14(threadSettingsDraft(6664).AnalyticsLocationProvider, obj3);
+      return closure_14(threadSettingsDraft(6841).AnalyticsLocationProvider, obj3);
     };
 ReactCompilerGating = fn(558);
 let obj7 = {
@@ -753,7 +753,7 @@ const result = size.fileFinishedImporting("modules/threads/native/components/thr
 
 export const CreateThreadView = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (screenIndex) => {
+    ? function CreateThreadView(screenIndex) {
         const cResult = c.c(4);
         screenIndex = screenIndex.screenIndex;
         threadSettingsDraft = useCreateThreadViewPropsDefault(screenIndex.channelId);
@@ -776,7 +776,7 @@ export const CreateThreadView = noop.memo(
           cResult[3] = tmp5;
         }
       }
-    : (arg0) => {
+    : function CreateThreadView(arg0) {
         ({ channelId, screenIndex } = arg0);
         const tmp = useCreateThreadViewPropsDefault(channelId);
         let tmp2 = null;

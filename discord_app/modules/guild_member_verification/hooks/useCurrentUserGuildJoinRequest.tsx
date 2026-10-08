@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx");
 
 export const useCurrentUserGuildJoinRequest = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCurrentUserGuildJoinRequest(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -40,7 +40,7 @@ export const useCurrentUserGuildJoinRequest = ReactCompilerGating.isReactCompile
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7);
     }
-  : (arg0) => {
+  : function useCurrentUserGuildJoinRequest(arg0) {
       _require = arg0;
       const items = [UserGuildJoinRequestStore];
       const items1 = [arg0];

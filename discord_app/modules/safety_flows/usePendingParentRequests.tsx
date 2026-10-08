@@ -11,11 +11,11 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const UserLinkStatus = fn(7062).UserLinkStatus;
+const UserLinkStatus = fn(7248).UserLinkStatus;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arr, arg1) => {
+  ? function useDerivedPendingRequests(arr, arg1) {
       const cResult = c.c(11);
       let num = globalThis;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -56,46 +56,22 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (cResult[4] !== arr) {
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          class A {
-            constructor(arg0) {
-              items = [,];
-              items[0] = arr.parent_id;
-              items[1] = arr;
-              return items;
-            }
-          }
-          cResult[6] = A;
+          const fn3 = function h(parent_id) {
+            const items = [parent_id.parent_id, parent_id];
+            return items;
+          };
+          cResult[6] = fn3;
+          let tmp12 = fn3;
         } else {
-          class A {
-            constructor(arg0) {
-              items = [,];
-              items[0] = arr.parent_id;
-              items[1] = arr;
-              return items;
-            }
-          }
+          tmp12 = cResult[6];
         }
         const _Map = Map;
-        const map = new Map(arr.map(A));
+        const map = new Map(arr.map(tmp12));
         cResult[4] = arr;
         cResult[5] = map;
       } else {
-        class A {
-          constructor(arg0) {
-            items = [,];
-            items[0] = arr.parent_id;
-            items[1] = arr;
-            return items;
-          }
-        }
         if (cResult[7] === stateFromStores1) {
-          class A {
-            constructor(arg0) {
-              items = [,];
-              items[0] = arr.parent_id;
-              items[1] = arr;
-              return items;
-            }
+          if (cResult[8] === stateFromStores) {
           }
         }
         const items2 = [];
@@ -104,134 +80,44 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const iter = values[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
-          class A {
-            constructor(arg0) {
-              items = [,];
-              items[0] = arr.parent_id;
-              items[1] = arr;
-              return items;
-            }
-          }
+          let tmp25 = nextResult;
           if (null != nextResult) {
-            class A {
-              constructor(arg0) {
-                items = [,];
-                items[0] = arr.parent_id;
-                items[1] = arr;
-                return items;
-              }
-            }
             if (tmp25.link_status === UserLinkStatus.PENDING) {
-              class A {
-                constructor(arg0) {
-                  items = [,];
-                  items[0] = arr.parent_id;
-                  items[1] = arr;
-                  return items;
-                }
-              }
               if (tmp25.requestor_id !== stateFromStores1) {
-                class A {
-                  constructor(arg0) {
-                    items = [,];
-                    items[0] = arr.parent_id;
-                    items[1] = arr;
-                    return items;
-                  }
-                }
                 let user = UserStore.getUser(tmp25.user_id);
-                let tmp36 = user;
+                let tmp43 = user;
                 value = obj4.get(tmp25.user_id);
                 let obj2 = { parent_id: tmp25.user_id, parent_username: null, parent_avatar: null, created_at: null };
-                let user_id;
+                let username;
                 if (user != null) {
-                  class A {
-                    constructor(arg0) {
-                      items = [,];
-                      items[0] = arr.parent_id;
-                      items[1] = arr;
-                      return items;
-                    }
-                  }
+                  username = user.username;
                 }
-                if (user_id == null) {
-                  class A {
-                    constructor(arg0) {
-                      items = [,];
-                      items[0] = arr.parent_id;
-                      items[1] = arr;
-                      return items;
-                    }
-                  }
-                  let tmp27;
+                if (username == null) {
+                  let parent_username;
                   if (value != null) {
-                    class A {
-                      constructor(arg0) {
-                        items = [,];
-                        items[0] = arr.parent_id;
-                        items[1] = arr;
-                        return items;
-                      }
-                    }
+                    parent_username = value.parent_username;
                   }
-                  user_id = tmp27;
+                  username = parent_username;
                 }
-                if (user_id == null) {
-                  class A {
-                    constructor(arg0) {
-                      items = [,];
-                      items[0] = arr.parent_id;
-                      items[1] = arr;
-                      return items;
-                    }
-                  }
-                  user_id = tmp25.user_id;
+                if (username == null) {
+                  username = tmp25.user_id;
                 }
-                obj2.parent_username = user_id;
-                let tmp29;
-                if (tmp36 != null) {
-                  class A {
-                    constructor(arg0) {
-                      items = [,];
-                      items[0] = arr.parent_id;
-                      items[1] = arr;
-                      return items;
-                    }
-                  }
+                obj2.parent_username = username;
+                let avatar;
+                if (tmp43 != null) {
+                  avatar = tmp43.avatar;
                 }
-                if (tmp29 == null) {
-                  class A {
-                    constructor(arg0) {
-                      items = [,];
-                      items[0] = arr.parent_id;
-                      items[1] = arr;
-                      return items;
-                    }
-                  }
-                  let tmp30;
+                if (avatar == null) {
+                  let parent_avatar;
                   if (value != null) {
-                    class A {
-                      constructor(arg0) {
-                        items = [,];
-                        items[0] = arr.parent_id;
-                        items[1] = arr;
-                        return items;
-                      }
-                    }
+                    parent_avatar = value.parent_avatar;
                   }
-                  tmp29 = tmp30;
+                  avatar = parent_avatar;
                 }
-                if (tmp29 == null) {
-                  class A {
-                    constructor(arg0) {
-                      items = [,];
-                      items[0] = arr.parent_id;
-                      items[1] = arr;
-                      return items;
-                    }
-                  }
+                if (avatar == null) {
+                  avatar = null;
                 }
-                obj2.parent_avatar = tmp29;
+                obj2.parent_avatar = avatar;
                 obj2.created_at = tmp25.created_at;
                 arr = items2.push(obj2);
               }
@@ -241,13 +127,13 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[7] = stateFromStores1;
         cResult[8] = stateFromStores;
-        cResult[9] = obj4;
+        cResult[9] = cResult[5];
         num = 10;
         cResult[10] = items2;
       }
       const tmpResult2 = initialize;
     }
-  : (arg0, arg1) => {
+  : function useDerivedPendingRequests(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       let items = [FamilyCenterStore];
@@ -331,7 +217,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (pendingRequests) => {
+  ? function usePendingRequestListController(pendingRequests) {
       const cResult = c.c(20);
       pendingRequests = pendingRequests.pendingRequests;
       ({ linkedUsersProcessed, onActionError } = pendingRequests);
@@ -371,100 +257,112 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       isDeclineLoading = tmp11;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        class A {
-          constructor() {
-            set = new Set();
-            return set;
-          }
-        }
-        cResult[3] = A;
+        const fn2 = function h() {
+          return new Set();
+        };
+        cResult[3] = fn2;
+        let tmp12 = fn2;
       } else {
-        class A {
-          constructor() {
-            set = new Set();
-            return set;
-          }
-        }
+        tmp12 = cResult[3];
       }
       const tmpResult = useFamilyCenterActions;
-      [UserLinkStatus, closure_7] = noop.useState(A);
+      [UserLinkStatus, closure_7] = noop.useState(tmp12);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        class A {
-          constructor() {
-            set = new Set();
-            return set;
-          }
-        }
-        cResult[4] = tmp15;
-      } else {
-        class A {
-          constructor() {
-            set = new Set();
-            return set;
-          }
-        }
-      }
-      if (cResult[5] === acceptLinkRequest) {
-        class A {
-          constructor() {
-            set = new Set();
-            return set;
-          }
-        }
-        if (cResult[8] === declineLinkRequest) {
-          class A {
-            constructor() {
-              set = new Set();
+        const fn3 = function b(arg0) {
+          closure_0 = arg0;
+          closure_1_7((has) => {
+            if (has.has(closure_0)) {
+              return has;
+            } else {
+              const _Set = Set;
+              set = new Set(has);
+              set.add(closure_0);
               return set;
             }
+          });
+        };
+        cResult[4] = fn3;
+        let tmp14 = fn3;
+      } else {
+        tmp14 = cResult[4];
+      }
+      closure_8 = tmp14;
+      if (cResult[5] === acceptLinkRequest) {
+        if (cResult[6] === tmp11) {
+          let tmp15 = cResult[7];
+        }
+        if (cResult[8] === declineLinkRequest) {
+          if (cResult[9] === tmp11) {
+            let tmp16 = cResult[10];
           }
-          [tmp19, tmp20] = noop.useState(pendingRequests);
+          [tmp18, tmp19] = noop.useState(pendingRequests);
           const tmp5Result4 = _slicedToArray(noop.useState(pendingRequests), 2);
-          [tmp22, r10090] = noop.useState(pendingRequests);
-          _slicedToArray(noop.useState(linkedUsersProcessed), 2);
+          [tmp21, tmp22] = noop.useState(pendingRequests);
+          const tmp5Result5 = _slicedToArray(noop.useState(pendingRequests), 2);
           if (linkedUsersProcessed) {
-            class A {
-              constructor() {
-                set = new Set();
-                return set;
-              }
+            if (!tmp5Result6[0]) {
+              tmp24(true);
+              tmp22(pendingRequests);
+              tmp19((arg0) => {
+                const map = new Map();
+                const iter = arg0[Symbol.iterator]();
+                const nextResult = iter.next();
+                while (iter !== undefined) {
+                  let tmp2 = nextResult;
+                  if (set.has(nextResult.parent_id)) {
+                    let result = map.set(tmp2.parent_id, tmp2);
+                  }
+                  continue;
+                }
+                for (const item10027 of pendingRequests) {
+                  let result1 = map.set(item10027.parent_id, item10027);
+                  continue;
+                }
+                return Array.from(map.values());
+              });
             }
             if (cResult[11] === tmp7) {
-              class A {
-                constructor() {
-                  set = new Set();
-                  return set;
+              if (cResult[12] === tmp15) {
+                if (cResult[13] === tmp16) {
+                  if (cResult[14] === hasMaxConnections) {
+                    if (cResult[15] === isAcceptLoading) {
+                      if (cResult[16] === isDeclineLoading) {
+                        if (cResult[17] === tmp11) {
+                          if (cResult[18] === tmp18) {
+                            let tmp30 = cResult[19];
+                          }
+                          return tmp30;
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
             const obj5 = {
-              seenRequests: tmp19,
+              seenRequests: tmp18,
               hasMaxConnections,
               actioningUserId: tmp7,
               isAcceptLoading,
               isDeclineLoading,
               actionsDisabled: tmp11,
-              handleAccept: M,
-              handleDecline: tmp17,
+              handleAccept: tmp15,
+              handleDecline: tmp16,
             };
             cResult[11] = tmp7;
-            cResult[12] = M;
-            cResult[13] = tmp17;
+            cResult[12] = tmp15;
+            cResult[13] = tmp16;
             cResult[14] = hasMaxConnections;
             cResult[15] = isAcceptLoading;
             cResult[16] = isDeclineLoading;
             cResult[17] = tmp11;
-            cResult[18] = tmp19;
+            cResult[18] = tmp18;
             cResult[19] = obj5;
+            tmp30 = obj5;
           }
-          if (pendingRequests !== tmp22) {
-            class A {
-              constructor() {
-                set = new Set();
-                return set;
-              }
-            }
-            tmp20((arr) => {
+          if (pendingRequests !== tmp21) {
+            tmp22(pendingRequests);
+            tmp19((arr) => {
               const map = new Map(
                 arr.map((parent_id) => {
                   const items = [parent_id.parent_id, parent_id];
@@ -478,18 +376,19 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               return Array.from(map.values());
             });
           }
-          const tmp5Result5 = _slicedToArray(noop.useState(pendingRequests), 2);
+          tmp5Result6 = _slicedToArray(noop.useState(linkedUsersProcessed), 2);
         }
-        const fn2 = function w(arg0) {
+        const fn4 = function w(arg0) {
           if (!isDeclineLoading) {
-            tmp15(arg0);
+            closure_8(arg0);
             _slicedToArray(arg0);
             declineLinkRequest(arg0);
           }
         };
         cResult[8] = declineLinkRequest;
         cResult[9] = tmp11;
-        cResult[10] = fn2;
+        cResult[10] = fn4;
+        tmp16 = fn4;
       }
       class M {
         constructor(arg0) {
@@ -508,9 +407,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = acceptLinkRequest;
       cResult[6] = tmp11;
       cResult[7] = M;
-      const tmp5Result = _slicedToArray(noop.useState(A), 2);
+      tmp15 = M;
+      const tmp5Result = _slicedToArray(noop.useState(tmp12), 2);
     }
-  : (pendingRequests) => {
+  : function usePendingRequestListController(pendingRequests) {
       pendingRequests = pendingRequests.pendingRequests;
       ({ linkedUsersProcessed, onActionError: dependencyMap } = pendingRequests);
       c2 = undefined;
@@ -643,7 +543,7 @@ let result = size.fileFinishedImporting("modules/safety_flows/usePendingParentRe
 export const useDerivedPendingRequests = tmp2;
 export const usePendingRequestListController = tmp3;
 export const usePendingRequestResolution = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function usePendingRequestResolution(arg0) {
       _require = arg0;
       const cResult = require("c").c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -730,7 +630,7 @@ export const usePendingRequestResolution = ReactCompilerGating.isReactCompilerEn
       tmp26 = obj2;
       const tmp9 = _slicedToArray(noop.useState(tmp8), 2);
     }
-  : (arg0) => {
+  : function usePendingRequestResolution(arg0) {
       _require = arg0;
       const items = [FamilyCenterStore];
       stateFromStores = require("initialize").useStateFromStores(items, () => {

@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 fn(1085).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 },
   gifImage: null,
@@ -47,7 +47,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerCategoryView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onSelectCategory) => {
+  ? function GIFPickerCategoryView(onSelectCategory) {
       const cResult = c.c(30);
       onSelectCategory = onSelectCategory.onSelectCategory;
       const item = onSelectCategory.item;
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = fn;
       tmp5 = fn;
     }
-  : (onSelectCategory) => {
+  : function GIFPickerCategoryView(onSelectCategory) {
       onSelectCategory = onSelectCategory.onSelectCategory;
       const item = onSelectCategory.item;
       const tmp = closure_9();

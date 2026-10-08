@@ -12,7 +12,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj2.circle = size;
@@ -31,7 +31,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (props) => {
+  ? function VoicePanelDrawerToggleButton(props) {
       const cResult = c.c(17);
       props = props.props;
       ({ openTab, wrapperSpecs } = props);
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       const tmp7 = useDrawerToggleDefault(openTab);
     }
-  : (arg0) => {
+  : function VoicePanelDrawerToggleButton(arg0) {
       ({ props, openTab, wrapperSpecs } = arg0);
       const tmp = closure_5();
       const voicePanelButtonStyles = VoicePanelStyles.useVoicePanelButtonStyles(wrapperSpecs);

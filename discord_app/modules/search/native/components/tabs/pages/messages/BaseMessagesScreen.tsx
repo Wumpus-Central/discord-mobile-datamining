@@ -1,21 +1,21 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx
 import SearchPlatformUtilsDefault from "../../../../SearchPlatformUtils.tsx";
 import SearchUtils from "../../../../../SearchUtils.tsx";
-import search_tracking_TrackingDefault from "../../../../tracking/Tracking.tsx";
+import tracking_TrackingDefault from "../../../../tracking/Tracking.tsx";
 import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 import SearchMessageStore from "../../../../../SearchMessageStore.tsx";
 import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const constants = fn(7523).SearchResultContentEntityTypes;
+const constants = fn(9246).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (tab) => {
+  ? function BaseMessagesScreen(tab) {
       const cResult = searchContext(isFocused[7]).c(44);
       ({ data, searchContext } = tab);
       tab = tab.tab;
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = fn;
       let obj = searchContext(isFocused[7]);
     }
-  : (tab) => {
+  : function BaseMessagesScreen(tab) {
       ({ data, searchContext } = tab);
       tab = tab.tab;
       const isFocused = tab.isFocused;
@@ -497,5 +497,5 @@ export const trackMessageItemPress = function trackMessageItemPress(messageId) {
   obj2.userId = id;
   obj2.index = index;
   obj2.entityType = constants.MESSAGE;
-  const result = search_tracking_TrackingDefault.trackSearchResultClicked(obj2);
+  const result = tracking_TrackingDefault.trackSearchResultClicked(obj2);
 };

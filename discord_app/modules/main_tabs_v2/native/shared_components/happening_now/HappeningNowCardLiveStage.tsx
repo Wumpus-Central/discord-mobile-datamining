@@ -3,7 +3,7 @@ import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
 import NicknameUtilsDefault from "../../../../../utils/NicknameUtils.tsx";
 import useChannelNameDefault from "../../../../channel/useChannelName.tsx";
 import HappeningNowCard from "HappeningNowCard.tsx";
@@ -93,7 +93,7 @@ function getUsersSubtitle(usersSubtitle) {
   }
 }
 const View = fn(17).View;
-const HappeningNowConstants = fn(15129);
+const HappeningNowConstants = fn(15391);
 ({
   HappeningNowCardTrackingType: hasOwnProperty,
   HAPPENING_NOW_CONTENT_HEIGHT,
@@ -103,7 +103,7 @@ const HappeningNowConstants = fn(15129);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   content: { flexShrink: 1, gap: 2 },
   stagePreviewContainer: {
@@ -163,7 +163,7 @@ let obj5 = {
 };
 const ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (renderingContext) => {
+  ? function HappeningNowLiveStageContent(renderingContext) {
       const cResult = c.c(20);
       ({ stage, streamingUser, guildId } = renderingContext);
       const tmp4 = closure_9();
@@ -281,7 +281,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp33 = tmp34;
       tmp6 = useChannelNameDefault(liveStageData.channel);
     }
-  : (renderingContext) => {
+  : function HappeningNowLiveStageContent(renderingContext) {
       ({ stage, streamingUser, guildId } = renderingContext);
       const tmp = closure_9();
       const liveStageData = useLiveStageData.useLiveStageData(stage);
@@ -356,7 +356,7 @@ const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardLiveStage.tsx",
 );
 
-export default noop.memo((arg0) => {
+export default noop.memo(function HappeningNowCardLiveStage(arg0) {
   ({ stage, index } = arg0);
   ({ fullwidth, renderingContext, panelVariant } = arg0);
   if (panelVariant === undefined) {
@@ -374,7 +374,7 @@ export default noop.memo((arg0) => {
       destination_channel_id: channel_id,
     });
     const obj2 = { order: index, guild_id, type: constants.GUILD_LIVE_STAGE_CARD, destination_channel_id: channel_id };
-    asyncRequireImpl(12710, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(11123, dependencyMap.paths).then((result) => {
       result.default(channel_id, true);
     });
   }, items);

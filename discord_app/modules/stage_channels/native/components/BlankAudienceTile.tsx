@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function BlankAudienceTile() {
         const cResult = c.c(7);
         const width = useWindowDimensionsDefault().width;
         const audienceTileStyles = AudienceTile.useAudienceTileStyles();
@@ -49,7 +49,7 @@ export default noop.memo(
         cResult[6] = tmp9;
         tmp8 = tmp9;
       }
-    : () => {
+    : function BlankAudienceTile() {
         const audienceTileStyles = AudienceTile.useAudienceTileStyles();
         const obj3 = { style: null };
         const items = [audienceTileStyles.container];

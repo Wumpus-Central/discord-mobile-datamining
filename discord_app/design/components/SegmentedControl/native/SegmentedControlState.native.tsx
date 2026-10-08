@@ -14,7 +14,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlState.native.tsx");
 
 export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPageChangeStart) => {
+  ? function useSegmentedControlState(onPageChangeStart) {
       const cResult = pageWidth(onPageChangeStart[2]).c(29);
       ({ items, pageWidth } = onPageChangeStart);
       ({ defaultIndex, itemSpacing, onPageChange } = onPageChangeStart);
@@ -260,7 +260,7 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
       cResult[10] = fn2;
       tmp17 = fn2;
     }
-  : (pageWidth) => {
+  : function useSegmentedControlState(pageWidth) {
       let items = pageWidth.items;
       pageWidth = pageWidth.pageWidth;
       let num = pageWidth.defaultIndex;

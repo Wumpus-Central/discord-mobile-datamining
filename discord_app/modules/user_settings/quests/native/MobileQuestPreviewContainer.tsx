@@ -21,7 +21,7 @@ let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 const result = size.fileFinishedImporting("modules/user_settings/quests/native/MobileQuestPreviewContainer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MobileQuestPreviewContainer(arg0) {
       const cResult = c.c(7);
       ({ children, title } = arg0);
       const tmp4 = closure_5();
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp6;
       tmp5 = tmp6;
     }
-  : (title) => {
+  : function MobileQuestPreviewContainer(title) {
       title = title.title;
       const tmp = closure_5();
       const obj = { style: tmp.container, children: null };

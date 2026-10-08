@@ -29,11 +29,11 @@ function unreadStatus(mentionCount, ackMessageIdResult, arg2) {
   }
   return tmp2;
 }
-const ReadStateTypes = fn(5078).ReadStateTypes;
+const ReadStateTypes = fn(5972).ReadStateTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useConjureProjectUnreadStatus(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -81,7 +81,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useConjureProjectUnreadStatus(arg0) {
       _require = arg0;
       const items = [ReadStateStore, UserSettingsProtoStore];
       const items1 = [arg0];
@@ -116,7 +116,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useConjureUnreadSummary() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReadStateStore, UserSettingsProtoStore];
@@ -154,7 +154,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStoresObject(tmp4, tmp5);
     }
-  : () => {
+  : function useConjureUnreadSummary() {
       const items = [ReadStateStore, UserSettingsProtoStore];
       return initialize.useStateFromStoresObject(items, () => {
         let hasUnread = false;
@@ -192,7 +192,7 @@ export { ackConjureProject };
 export const useConjureProjectUnreadStatus = tmp2;
 export const useConjureUnreadSummary = tmp3;
 export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompilerEnabled()
-  ? (projectId) => {
+  ? function useAckConjureProjectWhileViewing(projectId) {
       _require = projectId;
       const cResult = require("c").c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -222,7 +222,7 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
       }
       let obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
-      const tmp9 = stateFromStores(16183)();
+      const tmp9 = stateFromStores(16443)();
       dependencyMap = tmp9;
       if (cResult[4] === tmp9) {
         if (cResult[5] === projectId) {
@@ -233,38 +233,30 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
           const effect = noop.useEffect(tmp10, tmp11);
         }
       }
-      class R {
-        constructor() {
-          tmp2 = null != closure_0;
-          tmp = closure_0;
-          if (tmp2) {
-            tmp2 = closure_1;
-          }
-          if (tmp2) {
-            tmp2 = closure_2;
-          }
-          if (tmp2) {
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            obj = closure_1(closure_2[4]);
-            obj1 = { type: "CONJURE_PROJECT_ACK", projectId: null };
-            obj1.projectId = tmp;
-            dispatchResult = obj.dispatch(obj1);
-          }
-          return;
+      const fn2 = function j() {
+        let tmp2 = null != projectId;
+        if (tmp2) {
+          tmp2 = stateFromStores;
         }
-      }
+        if (tmp2) {
+          tmp2 = closure_2;
+        }
+        if (tmp2) {
+          const obj2 = { type: "CONJURE_PROJECT_ACK", projectId };
+          DispatcherDefault.dispatch(obj2);
+        }
+      };
       const items2 = [projectId, stateFromStores, tmp9];
       cResult[4] = tmp9;
       cResult[5] = projectId;
       cResult[6] = stateFromStores;
-      cResult[7] = R;
+      cResult[7] = fn2;
       cResult[8] = items2;
       tmp11 = items2;
-      tmp10 = R;
+      tmp10 = fn2;
       const tmpResult = require("initialize");
     }
-  : (projectId) => {
+  : function useAckConjureProjectWhileViewing(projectId) {
       _require = projectId;
       const items = [ReadStateStore];
       const items1 = [projectId];
@@ -279,7 +271,7 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
         },
         items1,
       );
-      let tmp2 = stateFromStores(16183)();
+      let tmp2 = stateFromStores(16443)();
       dependencyMap = tmp2;
       const items2 = [projectId, stateFromStores, tmp2];
       const effect = noop.useEffect(() => {

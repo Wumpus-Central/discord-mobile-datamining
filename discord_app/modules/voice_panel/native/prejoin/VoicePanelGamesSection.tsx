@@ -1,21 +1,21 @@
 // discord_app/modules/voice_panel/native/prejoin/VoicePanelGamesSection.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import useGame from "../../../games/hooks/useGame.tsx";
-import useOpenGameProfileModalDefault from "../../../game_profile/hooks/useOpenGameProfileModal.tsx";
 import FormComponents from "../shared/FormComponents.tsx";
 import VoiceChannelGamesExperimentDefault from "../../experiments/VoiceChannelGamesExperiment.tsx";
+import useOpenGameProfileModalDefault from "../../../game_profile/hooks/useOpenGameProfileModal.tsx";
 import GameActivityIconDefault from "../../../games/native/GameActivityIcon.tsx";
 import useVoiceChannelGamesDefault from "../hooks/useVoiceChannelGames.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const util = v9sZWVp(1126);
-const TableRow = v9sZWVp(6000);
-const GameProfileAnalyticUtils = v9sZWVp(8352);
+const TableRow = v9sZWVp(6184);
+const GameProfileAnalyticUtils = v9sZWVp(8850);
 require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (gameId) => {
+  ? function GameRow(gameId) {
       let v9sZWVp = require;
       let formatToPlainStringResult = dependencyMap;
       const cResult = c.c(10);
@@ -30,7 +30,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       const tmp6 = useOpenGameProfileModalDefault(tmp4);
-      closure_0 = tmp6;
+      _require = tmp6;
       if (null == data) {
         return null;
       } else {
@@ -69,20 +69,25 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[5] = tmp14;
         }
         if (cResult[8] !== tmp6) {
-          const fn = function v() {
-            return closure_0();
-          };
+          class G {
+            constructor() {
+              return closure_0();
+            }
+          }
           cResult[8] = tmp6;
-          cResult[9] = fn;
-          let tmp15 = fn;
+          cResult[9] = G;
         } else {
-          tmp15 = cResult[9];
+          class G {
+            constructor() {
+              return closure_0();
+            }
+          }
         }
         const obj6 = {
           icon: intl2,
           label: name,
           arrow: true,
-          onPress: tmp15,
+          onPress: G,
           accessibilityRole: "button",
           accessibilityLabel: null,
         };
@@ -95,14 +100,14 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
           icon: intl2,
           label: name,
           arrow: true,
-          onPress: tmp15,
+          onPress: G,
           accessibilityRole: "button",
           accessibilityLabel: null,
         });
         const forResult = Symbol.for("react.early_return_sentinel");
       }
     }
-  : (gameId) => {
+  : function GameRow(gameId) {
       gameId = gameId.gameId;
       const data = useGame.useGame(gameId).data;
       const obj2 = { gameId, source: null };
@@ -147,7 +152,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/Vo
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function VoicePanelGamesSection(arg0) {
         const cResult = c.c(6);
         ({ members, guildId } = arg0);
         const tmp4 = VoiceChannelGamesExperimentDefault("voice_pre_join_games_section");
@@ -197,7 +202,7 @@ export default noop.memo(
         }
         return null;
       }
-    : (arg0) => {
+    : function VoicePanelGamesSection(arg0) {
         ({ members, guildId } = arg0);
         const tmp2 = VoiceChannelGamesExperimentDefault("voice_pre_join_games_section");
         const arr = useVoiceChannelGamesDefault(members, guildId, tmp2);

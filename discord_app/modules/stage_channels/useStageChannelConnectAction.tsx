@@ -8,7 +8,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const ChannelConnectAction = { NORMAL: 0, [0]: "NORMAL", START_EVENT: 1, [1]: "START_EVENT" };
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useStageChannelStartEvent(arg0) {
       const cResult = c.c(3);
       const tmp2 = useStateChannelIsLiveDefault(arg0);
       const moderator = useCurrentUserStageRolesDefault(arg0, true).moderator;
@@ -24,14 +24,16 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj2;
       tmp3 = obj2;
     }
-  : (arg0) => ({
-      isLive: useStateChannelIsLiveDefault(arg0),
-      isModerator: useCurrentUserStageRolesDefault(arg0, true).moderator,
-    });
+  : function useStageChannelStartEvent(arg0) {
+      return {
+        isLive: useStateChannelIsLiveDefault(arg0),
+        isModerator: useCurrentUserStageRolesDefault(arg0, true).moderator,
+      };
+    };
 const result = size.fileFinishedImporting("modules/stage_channels/useStageChannelConnectAction.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useStageChannelConnectAction(arg0) {
       if (!tmp) {
         if (useCurrentUserStageRolesDefault(arg0, true).moderator) {
           let NORMAL = obj.START_EVENT;
@@ -41,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       NORMAL = obj.NORMAL;
       tmp = useStateChannelIsLiveDefault(arg0);
     }
-  : (arg0) => {
+  : function useStageChannelConnectAction(arg0) {
       if (!tmp) {
         if (useCurrentUserStageRolesDefault(arg0, true).moderator) {
           let NORMAL = obj.START_EVENT;

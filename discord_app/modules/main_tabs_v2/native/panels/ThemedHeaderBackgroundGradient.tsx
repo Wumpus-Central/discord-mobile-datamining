@@ -4,14 +4,14 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import utils_ColorUtils from "../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ container: { position: "absolute", left: 0, right: 0, top: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/Th
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function ThemedHeaderBackgroundGradient(arg0) {
         const cResult = c.c(17);
         ({ baseColor, minHeight } = arg0);
         if (undefined === baseColor) {
@@ -117,7 +117,7 @@ export default noop.memo(
         tmp13 = items1;
         const tmpResult = useToken;
       }
-    : (baseColor) => {
+    : function ThemedHeaderBackgroundGradient(baseColor) {
         let BACKGROUND_BASE_LOWEST = baseColor.baseColor;
         if (BACKGROUND_BASE_LOWEST === undefined) {
           BACKGROUND_BASE_LOWEST = nativeDefault.colors.BACKGROUND_BASE_LOWEST;

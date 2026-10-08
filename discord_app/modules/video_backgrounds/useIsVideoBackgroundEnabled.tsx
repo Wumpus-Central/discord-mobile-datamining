@@ -8,7 +8,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/video_backgrounds/useIsVideoBackgroundEnabled.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsVideoBackgroundEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : (location) => {
+  : function useIsVideoBackgroundEnabled(location) {
       let tmp2 = useIsVideoBackgroundSupportedDefault();
       if (tmp2) {
         const isIOSResult = PlatformUtils.isIOS();

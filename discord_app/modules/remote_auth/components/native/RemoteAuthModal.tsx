@@ -7,13 +7,14 @@ import native from "../../../../design/void/native.tsx";
 import HTTPUtils from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
-import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import DeprecatedLayoutAnimation from "../../../animations/native/DeprecatedLayoutAnimation.tsx";
-import _modDef13691 from "../../../../../_runtime/metro/13691__.js";
-import _modDef13693 from "../../../../../_runtime/metro/13693__.js";
+import _modDef13913 from "../../../../../_runtime/metro/13913__.js";
+import _modDef13915 from "../../../../../_runtime/metro/13915__.js";
 import QrLoginSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrLoginSpotIllustration.native.tsx";
 import QrSuccessSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrSuccessSpotIllustration.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -21,31 +22,41 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ImageBackground: hasOwnProperty, Image: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const Endpoints = fn(1085).Endpoints;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+const createStyles = fn(5090);
 let obj2 = {
   background: { width: "100%", height: "100%" },
   container: { flex: 1, alignItems: "stretch", alignContent: "center" },
-  imageStyle: { resizeMode: "cover" },
-  logo: { position: "absolute", top: 16, alignSelf: "center", width: 32, height: 32 },
-  mainImage: { marginTop: 16, marginBottom: 32 },
-  warningCaption: {
-    fontSize: 16,
-    lineHeight: 20,
-    color: nativeDefault.unsafe_rawColors.RED_400,
-    textAlign: "center",
-    marginTop: 8,
-    marginBottom: 32,
-  },
-  caption: { lineHeight: 20, textAlign: "center", marginTop: 8, marginBottom: 32 },
+  imageStyle: null,
+  logo: null,
+  mainImage: null,
+  warningCaption: null,
+  caption: null,
   mainCard: null,
   buttonGroup: null,
   loadingContainer: null,
 };
-let obj3 = {
+let obj3 = {};
+let merged = Object.assign(StyleSheet.absoluteFillObject);
+obj3.width = "100%";
+obj3.height = "100%";
+obj3.resizeMode = "cover";
+obj2.imageStyle = obj3;
+obj2.logo = { position: "absolute", top: 16, alignSelf: "center", width: 32, height: 32 };
+obj2.mainImage = { marginTop: 16, marginBottom: 32 };
+obj2.warningCaption = {
+  fontSize: 16,
+  lineHeight: 20,
+  color: nativeDefault.unsafe_rawColors.RED_400,
+  textAlign: "center",
+  marginTop: 8,
+  marginBottom: 32,
+};
+obj2.caption = { lineHeight: 20, textAlign: "center", marginTop: 8, marginBottom: 32 };
+let obj4 = {
   fontSize: 16,
   lineHeight: 20,
   color: nativeDefault.unsafe_rawColors.RED_400,
@@ -71,8 +82,8 @@ obj2.mainCard = {
 };
 obj2.buttonGroup = { paddingVertical: 0 };
 obj2.loadingContainer = { height: 300, justifyContent: "center" };
-let closure_12 = createStyles.createStyles(obj2);
-let c13 = 0.75;
+let closure_10 = createStyles.createStyles(obj2);
+let c11 = 0.75;
 const constants = {
   LOADING: 0,
   [0]: "LOADING",
@@ -84,7 +95,7 @@ const constants = {
   [3]: "SUCCEEDED",
 };
 fn(558);
-let obj4 = {
+let obj5 = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -101,159 +112,109 @@ let obj4 = {
   shadowOffset: { height: 2, width: 0 },
 };
 let ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (remoteAuthFingerprint) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function RemoteAuthBody(remoteAuthFingerprint) {
       const cResult = remoteAuthFingerprint(576).c(10);
       remoteAuthFingerprint = remoteAuthFingerprint.remoteAuthFingerprint;
       let obj = remoteAuthFingerprint(576);
-      [tmp4, importDefault] = first(noop.useState(constants.LOADING), 2);
-      const tmp3 = first(noop.useState(constants.LOADING), 2);
-      [r10024, dependencyMap] = first(noop.useState(null), 2);
+      [tmp4, importDefault] = setAuthStep(noop.useState(constants.LOADING), 2);
+      const tmp3 = setAuthStep(noop.useState(constants.LOADING), 2);
+      [tmp6, dependencyMap] = setAuthStep(noop.useState(null), 2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function l(arg0) {
+        function transitionStep(arg0) {
           importDefault(arg0);
           const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation();
-        };
-        cResult[0] = fn;
-        first = fn;
+        }
+        cResult[0] = transitionStep;
+        setAuthStep = transitionStep;
       } else {
-        first = cResult[0];
+        setAuthStep = cResult[0];
       }
       if (cResult[1] !== remoteAuthFingerprint) {
-        class A {
-          constructor() {
-            HTTP = closure_0(closure_2[13]).HTTP;
-            request = { url: Endpoints.REMOTE_AUTH_INITIALIZE, body: null, oldFormErrors: true, rejectWithError: true };
-            obj1 = { fingerprint: remoteAuthFingerprint };
-            request.body = obj1;
-            postResult = HTTP.post(request);
-            nextPromise = postResult.then((body) => {
+        const fn = function x() {
+          const HTTP = HTTPUtils.HTTP;
+          const request = {
+            url: Endpoints.REMOTE_AUTH_INITIALIZE,
+            body: { fingerprint: remoteAuthFingerprint },
+            oldFormErrors: true,
+            rejectWithError: true,
+          };
+          const obj = { fingerprint: remoteAuthFingerprint };
+          const postResult = HTTP.post(request);
+          HTTP.post(request)
+            .then((body) => {
               closure_1_2(body.body.handshake_token);
-              first(constants.LOADED);
+              setAuthStep(constants.LOADED);
+            })
+            .catch(() => {
+              setAuthStep(constants.NOT_FOUND);
             });
-            catchPromise = nextPromise.catch(() => {
-              first(constants.NOT_FOUND);
-            });
-            return;
-          }
-        }
+        };
         const items = [remoteAuthFingerprint];
         cResult[1] = remoteAuthFingerprint;
-        cResult[2] = A;
+        cResult[2] = fn;
         cResult[3] = items;
-        let tmp8 = items;
+        let tmp9 = items;
+        let tmp8 = fn;
       } else {
-        class A {
-          constructor() {
-            HTTP = closure_0(closure_2[13]).HTTP;
-            request = { url: Endpoints.REMOTE_AUTH_INITIALIZE, body: null, oldFormErrors: true, rejectWithError: true };
-            obj1 = { fingerprint: remoteAuthFingerprint };
-            request.body = obj1;
-            postResult = HTTP.post(request);
-            nextPromise = postResult.then((body) => {
-              closure_1_2(body.body.handshake_token);
-              first(constants.LOADED);
-            });
-            catchPromise = nextPromise.catch(() => {
-              first(constants.NOT_FOUND);
-            });
-            return;
-          }
-        }
-        tmp8 = cResult[3];
+        tmp8 = cResult[2];
+        tmp9 = cResult[3];
       }
-      const effect = noop.useEffect(A, tmp8);
+      const effect = noop.useEffect(tmp8, tmp9);
       if (constants.LOADING === tmp4) {
-        class A {
-          constructor() {
-            HTTP = closure_0(closure_2[13]).HTTP;
-            request = { url: Endpoints.REMOTE_AUTH_INITIALIZE, body: null, oldFormErrors: true, rejectWithError: true };
-            obj1 = { fingerprint: remoteAuthFingerprint };
-            request.body = obj1;
-            postResult = HTTP.post(request);
-            nextPromise = postResult.then((body) => {
-              closure_1_2(body.body.handshake_token);
-              first(constants.LOADED);
-            });
-            catchPromise = nextPromise.catch(() => {
-              first(constants.NOT_FOUND);
-            });
-            return;
-          }
-        }
+        const _Symbol4 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          class A {
-            constructor() {
-              HTTP = closure_0(closure_2[13]).HTTP;
-              request = {
-                url: Endpoints.REMOTE_AUTH_INITIALIZE,
-                body: null,
-                oldFormErrors: true,
-                rejectWithError: true,
-              };
-              obj1 = { fingerprint: remoteAuthFingerprint };
-              request.body = obj1;
-              postResult = HTTP.post(request);
-              nextPromise = postResult.then((body) => {
-                closure_1_2(body.body.handshake_token);
-                first(constants.LOADED);
-              });
-              catchPromise = nextPromise.catch(() => {
-                first(constants.NOT_FOUND);
-              });
-              return;
-            }
-          }
-          const tmp12 = closure_9(closure_19, {});
-          cResult[4] = tmp12;
-          const tmp10 = tmp12;
+          const tmp31 = closure_7(closure_17, {});
+          cResult[4] = tmp31;
+          let tmp28 = tmp31;
         } else {
-          class A {
-            constructor() {
-              HTTP = closure_0(closure_2[13]).HTTP;
-              request = {
-                url: Endpoints.REMOTE_AUTH_INITIALIZE,
-                body: null,
-                oldFormErrors: true,
-                rejectWithError: true,
-              };
-              obj1 = { fingerprint: remoteAuthFingerprint };
-              request.body = obj1;
-              postResult = HTTP.post(request);
-              nextPromise = postResult.then((body) => {
-                closure_1_2(body.body.handshake_token);
-                first(constants.LOADED);
-              });
-              catchPromise = nextPromise.catch(() => {
-                first(constants.NOT_FOUND);
-              });
-              return;
-            }
-          }
+          tmp28 = cResult[4];
         }
-        return tmp10;
+        return tmp28;
+      } else if (constants.LOADED === tmp4) {
+        if (null == tmp6) {
+          const _Symbol3 = Symbol;
+          if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+            const tmp26 = closure_7(closure_16, {});
+            cResult[5] = tmp26;
+          }
+        } else {
+          if (cResult[6] !== tmp6) {
+            const obj3 = { handshakeToken: tmp6, setAuthStep };
+            const tmp22 = closure_7(closure_14, obj3);
+            cResult[6] = tmp6;
+            cResult[7] = tmp22;
+            let tmp19 = tmp22;
+          } else {
+            tmp19 = cResult[7];
+          }
+          return tmp19;
+        }
+      } else if (constants.SUCCEEDED === tmp4) {
+        const _Symbol2 = Symbol;
+        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+          const tmp18 = closure_7(closure_15, {});
+          cResult[8] = tmp18;
+          let tmp15 = tmp18;
+        } else {
+          tmp15 = cResult[8];
+        }
+        return tmp15;
       } else {
-        class A {
-          constructor() {
-            HTTP = closure_0(closure_2[13]).HTTP;
-            request = { url: Endpoints.REMOTE_AUTH_INITIALIZE, body: null, oldFormErrors: true, rejectWithError: true };
-            obj1 = { fingerprint: remoteAuthFingerprint };
-            request.body = obj1;
-            postResult = HTTP.post(request);
-            nextPromise = postResult.then((body) => {
-              closure_1_2(body.body.handshake_token);
-              first(constants.LOADED);
-            });
-            catchPromise = nextPromise.catch(() => {
-              first(constants.NOT_FOUND);
-            });
-            return;
-          }
+        const NOT_FOUND = constants.NOT_FOUND;
+        const _Symbol = Symbol;
+        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+          const tmp14 = closure_7(closure_16, {});
+          cResult[9] = tmp14;
+          let tmp11 = tmp14;
+        } else {
+          tmp11 = cResult[9];
         }
+        return tmp11;
       }
-      const tmp5 = first(noop.useState(null), 2);
+      const tmp5 = setAuthStep(noop.useState(null), 2);
     }
-  : (remoteAuthFingerprint) => {
+  : function RemoteAuthBody(remoteAuthFingerprint) {
       remoteAuthFingerprint = remoteAuthFingerprint.remoteAuthFingerprint;
       [tmp3, importDefault] = noop.useState(constants.LOADING);
       const tmp2 = _slicedToArray(noop.useState(constants.LOADING), 2);
@@ -273,18 +234,18 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           .then((body) => {
             dependencyMap(body.body.handshake_token);
             closure_1_1(constants.LOADED);
-            const result = remoteAuthFingerprint(6480).DeprecatedLayoutAnimation();
+            const result = remoteAuthFingerprint(6658).DeprecatedLayoutAnimation();
           })
           .catch(() => {
             closure_1_1(constants.NOT_FOUND);
-            const result = remoteAuthFingerprint(6480).DeprecatedLayoutAnimation();
+            const result = remoteAuthFingerprint(6658).DeprecatedLayoutAnimation();
           });
       }, items);
       if (constants.LOADING === tmp3) {
-        return closure_9(closure_19, {});
+        return closure_7(closure_17, {});
       } else if (constants.LOADED === tmp3) {
         if (null == tmp5) {
-          let tmp13 = closure_9(closure_18, {});
+          let tmp13 = closure_7(closure_16, {});
         } else {
           let obj = {
             handshakeToken: tmp5,
@@ -293,24 +254,24 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation();
             },
           };
-          tmp13 = closure_9(closure_16, obj);
+          tmp13 = closure_7(closure_14, obj);
         }
         return tmp13;
       } else if (constants.SUCCEEDED === tmp3) {
-        return closure_9(closure_17, {});
+        return closure_7(closure_15, {});
       } else {
         const NOT_FOUND = constants.NOT_FOUND;
-        return closure_9(closure_18, {});
+        return closure_7(closure_16, {});
       }
       const tmp4 = _slicedToArray(noop.useState(null), 2);
     };
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (handshakeToken) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function RemoteAuthLogin(handshakeToken) {
       const cResult = handshakeToken(576).c(30);
       handshakeToken = handshakeToken.handshakeToken;
       const setAuthStep = handshakeToken.setAuthStep;
-      const tmp4 = closure_12();
+      const tmp4 = closure_10();
       let obj = handshakeToken(576);
       [tmp6, dependencyMap] = noop.useState(false);
       const tmp7 = _slicedToArray(noop.useState(false), 2);
@@ -332,7 +293,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp8, tmp9);
       if (cResult[2] !== handshakeToken) {
-        const fn2 = function h() {
+        function handleCancelPress() {
           const HTTP = HTTPUtils.HTTP;
           const request = {
             url: Endpoints.REMOTE_AUTH_CANCEL,
@@ -342,10 +303,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           };
           HTTP.post(request);
           ModalActionCreatorsDefault.pop();
-        };
+        }
         cResult[2] = handshakeToken;
-        cResult[3] = fn2;
-        let tmp11 = fn2;
+        cResult[3] = handleCancelPress;
+        let tmp11 = handleCancelPress;
       } else {
         tmp11 = cResult[3];
       }
@@ -360,7 +321,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           const obj4 = { scale };
-          const tmp18 = closure_9(tmp(13694).QrLoginSpotIllustration, obj4);
+          const tmp18 = closure_7(tmp(13916).QrLoginSpotIllustration, obj4);
           cResult[7] = tmp18;
           let tmp15 = tmp18;
         } else {
@@ -368,7 +329,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[8] !== tmp4.mainImage) {
           const obj5 = { style: tmp4.mainImage, children: tmp15 };
-          const tmp22 = closure_9(closure_7, obj5);
+          const tmp22 = closure_7(closure_5, obj5);
           cResult[8] = tmp4.mainImage;
           cResult[9] = tmp22;
           let tmp19 = tmp22;
@@ -380,7 +341,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { variant: "heading-md/extrabold", children: null };
           const intl = tmp(1126).intl;
           obj6.children = intl.string(tmp(1126).t.jD2pqF);
-          const tmp25 = closure_9(tmp(4892).Heading, obj6);
+          const tmp25 = closure_7(tmp(5086).Heading, obj6);
           cResult[10] = tmp25;
           let tmp23 = tmp25;
         } else {
@@ -397,7 +358,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[12] !== tmp4.warningCaption) {
           const obj7 = { style: tmp4.warningCaption, children: tmp26 };
-          const tmp30 = closure_9(tmp(1188).LegacyText, obj7);
+          const tmp30 = closure_7(tmp(1200).LegacyText, obj7);
           cResult[12] = tmp4.warningCaption;
           cResult[13] = tmp30;
           let tmp28 = tmp30;
@@ -431,7 +392,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[20] !== tmp11) {
               const obj8 = { variant: "secondary", text: tmp37, onPress: tmp11 };
-              const tmp41 = closure_9(tmp(5601).Button, obj8);
+              const tmp41 = closure_7(tmp(5375).Button, obj8);
               cResult[20] = tmp11;
               cResult[21] = tmp41;
               let tmp39 = tmp41;
@@ -454,7 +415,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj9 = { children: null };
                 const items1 = [tmp19, tmp23, tmp28, tmp42];
                 obj9.children = items1;
-                const tmp48 = closure_10(closure_11, obj9);
+                const tmp48 = closure_8(closure_9, obj9);
                 cResult[26] = tmp28;
                 cResult[27] = tmp42;
                 cResult[28] = tmp19;
@@ -465,7 +426,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             const obj10 = { style: tmp4.buttonGroup, children: null };
             const items2 = [tmp34, tmp39];
             obj10.children = items2;
-            const tmp44 = closure_10(tmp(5599).ButtonGroup, obj10);
+            const tmp44 = closure_8(tmp(5963).ButtonGroup, obj10);
             cResult[22] = tmp4.buttonGroup;
             cResult[23] = tmp34;
             cResult[24] = tmp39;
@@ -474,7 +435,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj11 = { text: tmp32, onPress: tmp12, disabled: tmp14 };
-        const tmp36 = closure_9(tmp(5601).Button, obj11, combined);
+        const tmp36 = closure_7(tmp(5375).Button, obj11, combined);
         cResult[15] = tmp12;
         cResult[16] = tmp14;
         cResult[17] = combined;
@@ -511,11 +472,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = throttleResult;
       const obj3 = setAuthStep(12);
     }
-  : (arg0) => {
+  : function RemoteAuthLogin(arg0) {
       ({ handshakeToken: require, setAuthStep: importDefault } = arg0);
       dependencyMap = undefined;
       _slicedToArray = undefined;
-      const tmp = closure_12();
+      const tmp = closure_10();
       [tmp3, c2] = noop.useState(false);
       const tmp2 = _slicedToArray(noop.useState(false), 2);
       [tmp5, c3] = noop.useState(false);
@@ -533,17 +494,17 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { children: null };
       const obj3 = {
         style: tmp.mainImage,
-        children: closure_9(QrLoginSpotIllustration.QrLoginSpotIllustration, { scale }),
+        children: closure_7(QrLoginSpotIllustration.QrLoginSpotIllustration, { scale }),
       };
-      const items = [closure_9(closure_7, obj3), , ,];
+      const items = [closure_7(closure_5, obj3), , ,];
       const obj5 = { variant: "heading-md/extrabold", children: null };
       const intl = util.intl;
       obj5.children = intl.string(util.t.jD2pqF);
-      items[1] = closure_9(Text_Text.Heading, obj5);
+      items[1] = closure_7(Text_Text.Heading, obj5);
       const obj6 = { style: tmp.warningCaption, children: null };
       const intl2 = util.intl;
       obj6.children = intl2.string(util.t["hcd/kh"]);
-      items[2] = closure_9(native.LegacyText, obj6);
+      items[2] = closure_7(native.LegacyText, obj6);
       const obj7 = { style: tmp.buttonGroup, children: null };
       const obj8 = { text: null, onPress: null, disabled: null };
       const intl3 = util.intl;
@@ -572,11 +533,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         { leading: true, trailing: false },
       );
       obj8.disabled = tmp9;
-      const items1 = [closure_9(components_Button_Button.Button, obj8, "" + tmp9)];
+      const items1 = [closure_7(components_Button_Button.Button, obj8, "" + tmp9)];
       const obj9 = { variant: "secondary", text: null, onPress: null };
       const intl4 = util.intl;
       obj9.text = intl4.string(util.t["ETE/oC"]);
-      obj9.onPress = function onPress() {
+      obj9.onPress = function handleCancelPress() {
         const HTTP = HTTPUtils.HTTP;
         const request = {
           url: Endpoints.REMOTE_AUTH_CANCEL,
@@ -587,20 +548,20 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         HTTP.post(request);
         ModalActionCreatorsDefault.pop();
       };
-      items1[1] = closure_9(components_Button_Button.Button, obj9);
+      items1[1] = closure_7(components_Button_Button.Button, obj9);
       obj7.children = items1;
-      items[3] = closure_10(ButtonGroup.ButtonGroup, obj7);
+      items[3] = closure_8(ButtonGroup.ButtonGroup, obj7);
       obj2.children = items;
-      return closure_10(closure_11, obj2);
+      return closure_8(closure_9, obj2);
     };
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function RemoteAuthLoginSucceeded() {
       const cResult = c.c(14);
-      const tmp4 = closure_12();
+      const tmp4 = closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { scale };
-        const tmp8 = options(QrSuccessSpotIllustration.QrSuccessSpotIllustration, obj2);
+        const tmp8 = React5(QrSuccessSpotIllustration.QrSuccessSpotIllustration, obj2);
         cResult[0] = tmp8;
         let first = tmp8;
       } else {
@@ -608,7 +569,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== tmp4.mainImage) {
         const obj3 = { style: tmp4.mainImage, children: first };
-        const tmp12 = options(React5, obj3);
+        const tmp12 = React5(hasOwnProperty, obj3);
         cResult[1] = tmp4.mainImage;
         cResult[2] = tmp12;
         let tmp9 = tmp12;
@@ -619,7 +580,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { variant: "heading-xl/extrabold", children: null };
         const intl = util.intl;
         obj4.children = intl.string(util.t.HbwTOZ);
-        const tmp15 = options(Text_Text.Heading, obj4);
+        const tmp15 = React5(Text_Text.Heading, obj4);
         cResult[3] = tmp15;
         let tmp13 = tmp15;
       } else {
@@ -635,7 +596,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[5] !== tmp4.caption) {
         const obj5 = { style: tmp4.caption, variant: "text-md/medium", color: "text-muted", children: tmp16 };
-        const tmp20 = options(Text_Text.Text, obj5);
+        const tmp20 = React5(Text_Text.Text, obj5);
         cResult[5] = tmp4.caption;
         cResult[6] = tmp20;
         let tmp18 = tmp20;
@@ -647,7 +608,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         const intl3 = util.intl;
         obj6.text = intl3.string(util.t.pYWLA0);
         obj6.onPress = ModalActionCreatorsDefault.pop;
-        const tmp24 = options(components_Button_Button.Button, obj6);
+        const tmp24 = React5(components_Button_Button.Button, obj6);
         cResult[7] = tmp24;
         let tmp21 = tmp24;
       } else {
@@ -655,7 +616,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[8] !== tmp4.buttonGroup) {
         const obj7 = { style: tmp4.buttonGroup, children: tmp21 };
-        const tmp27 = options(ButtonGroup.ButtonGroup, obj7);
+        const tmp27 = React5(ButtonGroup.ButtonGroup, obj7);
         cResult[8] = tmp4.buttonGroup;
         cResult[9] = tmp27;
         let tmp25 = tmp27;
@@ -673,49 +634,49 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { children: null };
       const items = [tmp9, tmp13, tmp18, tmp25];
       obj8.children = items;
-      const tmp29 = v65535(closure_1_11, obj8);
+      const tmp29 = closure_1_8(options, obj8);
       cResult[10] = tmp9;
       cResult[11] = tmp18;
       cResult[12] = tmp25;
       cResult[13] = tmp29;
       tmp28 = tmp29;
     }
-  : () => {
-      const tmp = closure_12();
+  : function RemoteAuthLoginSucceeded() {
+      const tmp = closure_10();
       const obj = { children: null };
       const obj2 = {
         style: tmp.mainImage,
-        children: options(QrSuccessSpotIllustration.QrSuccessSpotIllustration, { scale }),
+        children: React5(QrSuccessSpotIllustration.QrSuccessSpotIllustration, { scale }),
       };
-      const items = [options(React5, obj2), , ,];
+      const items = [React5(hasOwnProperty, obj2), , ,];
       const obj4 = { variant: "heading-xl/extrabold", children: null };
       const intl = util.intl;
       obj4.children = intl.string(util.t.HbwTOZ);
-      items[1] = options(Text_Text.Heading, obj4);
+      items[1] = React5(Text_Text.Heading, obj4);
       const obj5 = { style: tmp.caption, variant: "text-md/medium", color: "text-muted", children: null };
       const intl2 = util.intl;
       obj5.children = intl2.string(util.t.wKknJ0);
-      items[2] = options(Text_Text.Text, obj5);
+      items[2] = React5(Text_Text.Text, obj5);
       const obj6 = { style: tmp.buttonGroup, children: null };
       const obj7 = { text: null, onPress: null };
       const intl3 = util.intl;
       obj7.text = intl3.string(util.t.pYWLA0);
       obj7.onPress = ModalActionCreatorsDefault.pop;
-      obj6.children = options(components_Button_Button.Button, obj7);
-      items[3] = options(ButtonGroup.ButtonGroup, obj6);
+      obj6.children = React5(components_Button_Button.Button, obj7);
+      items[3] = React5(ButtonGroup.ButtonGroup, obj6);
       obj.children = items;
-      return v65535(closure_1_11, obj);
+      return closure_1_8(options, obj);
     };
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function RemoteAuthNotFound() {
       const cResult = c.c(10);
-      const tmp4 = closure_12();
+      const tmp4 = closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { variant: "heading-xl/extrabold", children: null };
         const intl = util.intl;
         obj2.children = intl.string(util.t.NShI3Q);
-        const tmp7 = options(Text_Text.Heading, obj2);
+        const tmp7 = React5(Text_Text.Heading, obj2);
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -731,7 +692,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== tmp4.caption) {
         const obj3 = { style: tmp4.caption, variant: "text-md/medium", color: "text-muted", children: tmp8 };
-        const tmp12 = options(Text_Text.Text, obj3);
+        const tmp12 = React5(Text_Text.Text, obj3);
         cResult[2] = tmp4.caption;
         cResult[3] = tmp12;
         let tmp10 = tmp12;
@@ -743,7 +704,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const intl3 = util.intl;
         obj4.text = intl3.string(util.t["ETE/oC"]);
         obj4.onPress = ModalActionCreatorsDefault.pop;
-        const tmp16 = options(components_Button_Button.Button, obj4);
+        const tmp16 = React5(components_Button_Button.Button, obj4);
         cResult[4] = tmp16;
         let tmp13 = tmp16;
       } else {
@@ -751,7 +712,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[5] !== tmp4.buttonGroup) {
         const obj5 = { style: tmp4.buttonGroup, children: tmp13 };
-        const tmp19 = options(ButtonGroup.ButtonGroup, obj5);
+        const tmp19 = React5(ButtonGroup.ButtonGroup, obj5);
         cResult[5] = tmp4.buttonGroup;
         cResult[6] = tmp19;
         let tmp17 = tmp19;
@@ -767,40 +728,40 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = { children: null };
       const items = [first, tmp10, tmp17];
       obj6.children = items;
-      const tmp21 = v65535(closure_1_11, obj6);
+      const tmp21 = closure_1_8(options, obj6);
       cResult[7] = tmp10;
       cResult[8] = tmp17;
       cResult[9] = tmp21;
       tmp20 = tmp21;
     }
-  : () => {
-      const tmp = closure_12();
+  : function RemoteAuthNotFound() {
+      const tmp = closure_10();
       const obj = { children: null };
       const obj2 = { variant: "heading-xl/extrabold", children: null };
       const intl = util.intl;
       obj2.children = intl.string(util.t.NShI3Q);
-      const items = [options(Text_Text.Heading, obj2), ,];
+      const items = [React5(Text_Text.Heading, obj2), ,];
       const obj3 = { style: tmp.caption, variant: "text-md/medium", color: "text-muted", children: null };
       const intl2 = util.intl;
       obj3.children = intl2.string(util.t.Ygezov);
-      items[1] = options(Text_Text.Text, obj3);
+      items[1] = React5(Text_Text.Text, obj3);
       const obj4 = { style: tmp.buttonGroup, children: null };
       const obj5 = { text: null, onPress: null };
       const intl3 = util.intl;
       obj5.text = intl3.string(util.t["ETE/oC"]);
       obj5.onPress = ModalActionCreatorsDefault.pop;
-      obj4.children = options(components_Button_Button.Button, obj5);
-      items[2] = options(ButtonGroup.ButtonGroup, obj4);
+      obj4.children = React5(components_Button_Button.Button, obj5);
+      items[2] = React5(ButtonGroup.ButtonGroup, obj4);
       obj.children = items;
-      return v65535(closure_1_11, obj);
+      return closure_1_8(options, obj);
     };
 ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function RemoteAuthLoading() {
       const cResult = c.c(3);
-      const tmp4 = closure_12();
+      const tmp4 = closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = options(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
+        const tmp7 = React5(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -808,7 +769,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== tmp4.loadingContainer) {
         const obj2 = { style: tmp4.loadingContainer, children: first };
-        const tmp11 = options(React5, obj2);
+        const tmp11 = React5(hasOwnProperty, obj2);
         cResult[1] = tmp4.loadingContainer;
         cResult[2] = tmp11;
         let tmp8 = tmp11;
@@ -817,108 +778,122 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () =>
-      options(React5, {
-        style: closure_12().loadingContainer,
-        children: options(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}),
+  : function RemoteAuthLoading() {
+      return React5(hasOwnProperty, {
+        style: closure_10().loadingContainer,
+        children: React5(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}),
       });
+    };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/remote_auth/components/native/RemoteAuthModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const cResult = c.c(18);
-      const tmp3 = closure_12();
+  ? function RemoteAuth(arg0) {
+      const cResult = c.c(20);
+      const tmp3 = closure_10();
       const top = useSafeAreaInsetsDefault().top;
-      if (cResult[0] !== top) {
-        const obj2 = { marginTop: top };
-        cResult[0] = top;
-        cResult[1] = obj2;
-        let tmp5 = obj2;
+      if (cResult[0] !== tmp3.imageStyle) {
+        const obj2 = { source: _modDef13915, style: tmp3.imageStyle };
+        const tmp8 = React5(FastImageDefault, obj2);
+        cResult[0] = tmp3.imageStyle;
+        cResult[1] = tmp8;
+        let tmp5 = tmp8;
+        const tmp4Result = FastImageDefault;
       } else {
         tmp5 = cResult[1];
       }
-      if (cResult[2] === tmp3.logo) {
-        if (cResult[3] === tmp5) {
-          let tmp6 = cResult[4];
+      if (cResult[2] !== top) {
+        const obj3 = { marginTop: top };
+        cResult[2] = top;
+        cResult[3] = obj3;
+        let tmp9 = obj3;
+      } else {
+        tmp9 = cResult[3];
+      }
+      if (cResult[4] === tmp3.logo) {
+        if (cResult[5] === tmp9) {
+          let tmp10 = cResult[6];
         }
-        if (cResult[5] !== arg0) {
-          const obj3 = {};
+        if (cResult[7] !== arg0) {
+          const obj4 = {};
           const merged = Object.assign(arg0);
-          const tmp15 = options(closure_15, obj3);
-          cResult[5] = arg0;
-          cResult[6] = tmp15;
-          let tmp9 = tmp15;
+          const tmp20 = React5(closure_13, obj4);
+          cResult[7] = arg0;
+          cResult[8] = tmp20;
+          let tmp14 = tmp20;
         } else {
-          tmp9 = cResult[6];
+          tmp14 = cResult[8];
         }
-        if (cResult[7] === tmp3.mainCard) {
-          if (cResult[8] === tmp9) {
-            let tmp16 = cResult[9];
+        if (cResult[9] === tmp3.mainCard) {
+          if (cResult[10] === tmp14) {
+            let tmp21 = cResult[11];
           }
-          if (cResult[10] === tmp3.container) {
-            if (cResult[11] === tmp16) {
-              let tmp20 = cResult[12];
+          if (cResult[12] === tmp3.container) {
+            if (cResult[13] === tmp21) {
+              let tmp25 = cResult[14];
             }
-            if (cResult[13] === tmp3.background) {
-              if (cResult[14] === tmp3.imageStyle) {
-                if (cResult[15] === tmp6) {
-                  if (cResult[16] === tmp20) {
-                    let tmp24 = cResult[17];
+            if (cResult[15] === tmp3.background) {
+              if (cResult[16] === tmp5) {
+                if (cResult[17] === tmp10) {
+                  if (cResult[18] === tmp25) {
+                    let tmp29 = cResult[19];
                   }
-                  return tmp24;
+                  return tmp29;
                 }
               }
             }
-            const obj4 = { source: _modDef13693, imageStyle: null, style: null, children: null };
-            ({ imageStyle: obj7.imageStyle, background: obj7.style } = tmp3);
-            const items = [tmp6, tmp20];
-            obj4.children = items;
-            const tmp27 = v65535(hasOwnProperty, obj4);
-            cResult[13] = tmp3.background;
-            cResult[14] = tmp3.imageStyle;
-            cResult[15] = tmp6;
-            cResult[16] = tmp20;
-            cResult[17] = tmp27;
-            tmp24 = tmp27;
+            const obj5 = { style: tmp3.background, children: null };
+            const items = [tmp5, tmp10, tmp25];
+            obj5.children = items;
+            const tmp32 = closure_1_8(hasOwnProperty, obj5);
+            cResult[15] = tmp3.background;
+            cResult[16] = tmp5;
+            cResult[17] = tmp10;
+            cResult[18] = tmp25;
+            cResult[19] = tmp32;
+            tmp29 = tmp32;
           }
-          const obj5 = { style: tmp3.container, children: tmp16 };
-          const tmp23 = options(React5, obj5);
-          cResult[10] = tmp3.container;
-          cResult[11] = tmp16;
-          cResult[12] = tmp23;
-          tmp20 = tmp23;
+          const obj6 = { style: tmp3.container, children: tmp21 };
+          const tmp28 = React5(hasOwnProperty, obj6);
+          cResult[12] = tmp3.container;
+          cResult[13] = tmp21;
+          cResult[14] = tmp28;
+          tmp25 = tmp28;
         }
-        const obj6 = { style: tmp3.mainCard, children: tmp9 };
-        const tmp19 = options(React5, obj6);
-        cResult[7] = tmp3.mainCard;
-        cResult[8] = tmp9;
-        cResult[9] = tmp19;
-        tmp16 = tmp19;
+        const obj7 = { style: tmp3.mainCard, children: tmp14 };
+        const tmp24 = React5(hasOwnProperty, obj7);
+        cResult[9] = tmp3.mainCard;
+        cResult[10] = tmp14;
+        cResult[11] = tmp24;
+        tmp21 = tmp24;
       }
-      const obj13 = { style: null, source: _modDef13691 };
-      const items1 = [tmp3.logo, tmp5];
-      obj13.style = items1;
-      const tmp7 = options(timestampProducer, obj13);
-      cResult[2] = tmp3.logo;
-      cResult[3] = tmp5;
-      cResult[4] = tmp7;
-      tmp6 = tmp7;
+      const obj8 = { style: null, source: null };
+      const items1 = [tmp3.logo, tmp9];
+      obj8.style = items1;
+      obj8.source = _modDef13913;
+      const tmp12 = React5(FastImageDefault, obj8);
+      cResult[4] = tmp3.logo;
+      cResult[5] = tmp9;
+      cResult[6] = tmp12;
+      tmp10 = tmp12;
+      const tmp4Result2 = FastImageDefault;
     }
-  : (arg0) => {
-      const tmp = closure_12();
-      const obj = { source: _modDef13693, imageStyle: null, style: null, children: null };
-      ({ imageStyle: obj.imageStyle, background: obj.style } = tmp);
-      const obj2 = { style: null, source: _modDef13691 };
-      const items = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
-      obj2.style = items;
-      const items1 = [options(timestampProducer, obj2)];
-      const obj3 = { style: tmp.container, children: null };
-      const obj4 = { style: tmp.mainCard, children: null };
+  : function RemoteAuth(arg0) {
+      const tmp = closure_10();
+      const obj = { style: tmp.background, children: null };
+      const obj2 = { source: _modDef13915, style: tmp.imageStyle };
+      const items = [React5(FastImageDefault, obj2), ,];
+      const obj3 = { style: null, source: null };
+      const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
+      obj3.style = items1;
+      obj3.source = _modDef13913;
+      items[1] = React5(FastImageDefault, obj3);
+      const obj4 = { style: tmp.container, children: null };
+      const obj5 = { style: tmp.mainCard, children: null };
       const merged = Object.assign(arg0);
-      obj4.children = options(closure_15, {});
-      obj3.children = options(React5, obj4);
-      items1[1] = options(React5, obj3);
-      obj.children = items1;
-      return v65535(hasOwnProperty, obj);
+      obj5.children = React5(closure_13, {});
+      obj4.children = React5(hasOwnProperty, obj5);
+      items[2] = React5(hasOwnProperty, obj4);
+      obj.children = items;
+      return closure_1_8(hasOwnProperty, obj);
     };

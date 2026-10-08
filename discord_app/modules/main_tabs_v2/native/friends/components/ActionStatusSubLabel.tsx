@@ -13,12 +13,12 @@ function announceActioned(intl) {
 }
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles(() => ({
   container: { overflow: "hidden" },
   actionStatus: { position: "absolute" },
 }));
-let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(4892).Text);
+let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(5086).Text);
 const __initData = {
   code: "function ActionStatusSubLabelTsx1(){const{hasSecondLine,actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const currentlyHasSecondLine=hasSecondLine&&!actioned.get();const lineHeightValue=lineHeight*fontScale;const currentLineHeightValue=currentlyHasSecondLine?lineHeightValue*2:lineHeightValue;return{height:!animate||!actioned.get()?currentLineHeightValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[currentlyHasSecondLine?lineHeightValue*2:lineHeightValue,lineHeightValue]))};}",
 };
@@ -55,7 +55,7 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/com
 
 export const ACTION_STATUS_SUB_LABEL_LINE_HEIGHT = 16;
 export const ActionStatusSubLabel = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ActionStatusSubLabel(arg0) {
       const cResult = actioned(animate[7]).c(27);
       ({ lineHeight, textVariant, actioned } = arg0);
       ({ label, secondaryLabel, actionStatus, actionStatusAccessibilityLabel } = arg0);
@@ -374,7 +374,7 @@ export const ActionStatusSubLabel = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = items2;
       let obj5 = { actionStatusAccessibilityLabel, runOnJS: actioned(animate[4]).runOnJS, announceActioned };
     }
-  : (lineHeight) => {
+  : function ActionStatusSubLabel(lineHeight) {
       let num = lineHeight.lineHeight;
       if (num === undefined) {
         num = 16;

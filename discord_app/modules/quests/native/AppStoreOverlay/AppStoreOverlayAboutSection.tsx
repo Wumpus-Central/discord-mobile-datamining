@@ -17,7 +17,7 @@ const rect = {
   left: nativeDefault.space.PX_12,
   right: nativeDefault.space.PX_12,
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   aboutSection: {
     borderRadius: nativeDefault.space.PX_16,
@@ -38,10 +38,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayAboutSection.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AppStoreOverlayAboutSection(arg0) {
       const cResult = c.c(20);
       ({ description, onSeeMorePress } = arg0);
-      const tmp4 = closure_9();
+      closure_9();
       [tmp6, dependencyMap] = noop.useState(false);
       [first, closure_3] = noop.useState(null);
       if (cResult[0] !== first) {
@@ -57,113 +57,163 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[1];
       }
       if (cResult[2] !== onSeeMorePress) {
-        const fn2 = function k() {
-          dependencyMap((arg0) => {
-            if (!arg0) {
-              if (onSeeMorePress != null) {
-                tmp();
+        class X {
+          constructor() {
+            tmp = closure_1((arg0) => {
+              if (!arg0) {
+                if (onSeeMorePress != null) {
+                  tmp();
+                }
               }
-            }
-            return !arg0;
-          });
-        };
+              return !arg0;
+            });
+            return;
+          }
+        }
         cResult[2] = onSeeMorePress;
-        cResult[3] = fn2;
-        let tmp10 = fn2;
+        cResult[3] = X;
       } else {
-        tmp10 = cResult[3];
+        class X {
+          constructor() {
+            tmp = closure_1((arg0) => {
+              if (!arg0) {
+                if (onSeeMorePress != null) {
+                  tmp();
+                }
+              }
+              return !arg0;
+            });
+            return;
+          }
+        }
       }
       if (cResult[4] !== tmp6) {
-        const intl = util.intl;
+        class X {
+          constructor() {
+            tmp = closure_1((arg0) => {
+              if (!arg0) {
+                if (onSeeMorePress != null) {
+                  tmp();
+                }
+              }
+              return !arg0;
+            });
+            return;
+          }
+        }
         const t = util.t;
-        const stringResult = intl.string(tmp6 ? t["6MwJo/"] : t.lBeKY2);
+        const stringResult = obj2.string(tmp6 ? t["6MwJo/"] : t.lBeKY2);
         cResult[4] = tmp6;
         cResult[5] = stringResult;
       } else {
-        const _Symbol = Symbol;
-        if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
-          const intl2 = util.intl;
-          obj2.children = intl2.string(util.t.CI0vSJ);
-          const tmp17 = timestampProducer(Text_Text.Text, obj2);
-          cResult[6] = tmp17;
-          let tmp15 = tmp17;
-        } else {
-          tmp15 = cResult[6];
-        }
-        if (cResult[7] === description) {
-          if (cResult[8] === tmp9) {
-            if (cResult[9] === num7) {
-              let tmp18 = cResult[10];
-            }
-            if (cResult[11] === tmp6) {
-              if (cResult[12] === tmp10) {
-                if (cResult[13] === first) {
-                  if (cResult[14] === tmp11) {
-                    let tmp21 = cResult[15];
-                  }
-                  if (cResult[16] === tmp4.aboutSection) {
-                    if (cResult[17] === tmp18) {
-                      if (cResult[18] === tmp21) {
-                        let tmp26 = cResult[19];
-                      }
-                      return tmp26;
-                    }
-                  }
-                  const obj3 = { style: tmp4.aboutSection, children: null };
-                  const items = [tmp15, tmp18, tmp21];
-                  obj3.children = items;
-                  const tmp29 = React5(hasOwnProperty, obj3);
-                  cResult[16] = tmp4.aboutSection;
-                  cResult[17] = tmp18;
-                  cResult[18] = tmp21;
-                  cResult[19] = tmp29;
-                  tmp26 = tmp29;
+        class X {
+          constructor() {
+            tmp = closure_1((arg0) => {
+              if (!arg0) {
+                if (onSeeMorePress != null) {
+                  tmp();
                 }
               }
-            }
-            let tmp22 = true === first;
-            if (tmp22) {
-              const obj4 = {
-                hitSlop: rect,
-                accessibilityRole: "button",
-                accessibilityLabel: tmp11,
-                accessibilityState: null,
-                onPress: null,
-                children: null,
-              };
-              const obj5 = { expanded: tmp6 };
-              obj4.accessibilityState = obj5;
-              obj4.onPress = tmp10;
-              const obj6 = { variant: "text-sm/medium", color: "text-link", children: tmp11 };
-              obj4.children = timestampProducer(Text_Text.Text, obj6);
-              tmp22 = timestampProducer(React4, obj4);
-            }
-            cResult[11] = tmp6;
-            cResult[12] = tmp10;
-            cResult[13] = first;
-            cResult[14] = tmp11;
-            cResult[15] = tmp22;
-            tmp21 = tmp22;
+              return !arg0;
+            });
+            return;
           }
         }
-        const obj7 = {
+        const _Symbol = Symbol;
+        if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+          class X {
+            constructor() {
+              tmp = closure_1((arg0) => {
+                if (!arg0) {
+                  if (onSeeMorePress != null) {
+                    tmp();
+                  }
+                }
+                return !arg0;
+              });
+              return;
+            }
+          }
+          const obj3 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
+          const intl = util.intl;
+          obj3.children = intl.string(util.t.CI0vSJ);
+          const tmp15 = timestampProducer(Text_Text.Text, obj3);
+          cResult[6] = tmp15;
+        } else {
+          class X {
+            constructor() {
+              tmp = closure_1((arg0) => {
+                if (!arg0) {
+                  if (onSeeMorePress != null) {
+                    tmp();
+                  }
+                }
+                return !arg0;
+              });
+              return;
+            }
+          }
+        }
+        if (tmp6) {
+          class X {
+            constructor() {
+              tmp = closure_1((arg0) => {
+                if (!arg0) {
+                  if (onSeeMorePress != null) {
+                    tmp();
+                  }
+                }
+                return !arg0;
+              });
+              return;
+            }
+          }
+        } else {
+          class X {
+            constructor() {
+              tmp = closure_1((arg0) => {
+                if (!arg0) {
+                  if (onSeeMorePress != null) {
+                    tmp();
+                  }
+                }
+                return !arg0;
+              });
+              return;
+            }
+          }
+        }
+        if (cResult[7] === description) {
+          class X {
+            constructor() {
+              tmp = closure_1((arg0) => {
+                if (!arg0) {
+                  if (onSeeMorePress != null) {
+                    tmp();
+                  }
+                }
+                return !arg0;
+              });
+              return;
+            }
+          }
+        }
+        const obj4 = {
           variant: "text-sm/medium",
           color: "text-default",
-          lineClamp: num7,
+          lineClamp: tmp16,
           onTextLayout: tmp9,
           children: description,
         };
-        const tmp20 = timestampProducer(Text_Text.Text, obj7);
+        const tmp19 = timestampProducer(Text_Text.Text, obj4);
         cResult[7] = description;
         cResult[8] = tmp9;
-        cResult[9] = num7;
-        cResult[10] = tmp20;
-        tmp18 = tmp20;
+        cResult[9] = tmp16;
+        cResult[10] = tmp19;
       }
       const tmp5 = _slicedToArray(noop.useState(false), 2);
     }
-  : (children) => {
+  : function AppStoreOverlayAboutSection(children) {
       const onSeeMorePress = children.onSeeMorePress;
       c1 = undefined;
       first = undefined;

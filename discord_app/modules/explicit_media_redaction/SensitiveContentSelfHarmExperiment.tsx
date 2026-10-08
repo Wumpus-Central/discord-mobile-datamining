@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/explicit_media_redaction/Sens
 
 export const SensitiveContentSelfHarmExperiment = apexExperiment;
 export const useIsSensitiveContentSelfHarmEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsSensitiveContentSelfHarmEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -30,7 +30,9 @@ export const useIsSensitiveContentSelfHarmEnabled = ReactCompilerGating.isReactC
       }
       return apexExperiment.useConfig(tmp2).enabled;
     }
-  : (location) => apexExperiment.useConfig({ location }).enabled;
+  : function useIsSensitiveContentSelfHarmEnabled(location) {
+      return apexExperiment.useConfig({ location }).enabled;
+    };
 export const isSensitiveContentSelfHarmEnabled = function isSensitiveContentSelfHarmEnabled(location) {
   return apexExperiment.getConfig({ location }).enabled;
 };

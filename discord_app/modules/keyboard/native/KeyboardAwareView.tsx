@@ -44,7 +44,7 @@ export default noop.memo(function KeyboardAwareView(style) {
   const items = [num];
   const effect = obj.useEffect(
     () =>
-      subscribeToKeyboardUIStore(() => {
+      subscribeToKeyboardUIStore(function keyboardHeightUpdater() {
         let systemKeyboardHeight = style(flag[5]).getSystemKeyboardHeight();
         if (0 === systemKeyboardHeight) {
           const keyboardType = style(flag[6]).getKeyboardType();

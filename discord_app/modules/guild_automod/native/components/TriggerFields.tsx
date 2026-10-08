@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/TriggerFields.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TriggerFields(arg0) {
       let stringResult = dependencyMap;
       const cResult = c.c(14);
       ({ rule, onChangeRule, onValidityChange } = arg0);
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2 = AutomodRuleUtils;
     }
-  : (onValidityChange) => {
+  : function TriggerFields(onValidityChange) {
       ({ rule, onChangeRule } = onValidityChange);
       if (obj.isRuleMLSpamFilter(rule)) {
         const obj2 = { variant: "text-md/normal", color: "text-default", children: null };

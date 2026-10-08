@@ -8,10 +8,10 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1380).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   upsell: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
   title: { lineHeight: 16, flex: 1 },
@@ -39,7 +39,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (results) => {
+  ? function ChannelAutocompleteEmojiUpsell(results) {
       const cResult = require("c").c(25);
       results = results.results;
       const tmp4 = closure_7();
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp18 = items1;
             }
             const obj6 = { style: title, accessibilityRole: "header", variant: "text-sm/medium", children: tmp11 };
-            const tmp15 = closure_5(tmp(4892).Text, obj6);
+            const tmp15 = closure_5(tmp(5086).Text, obj6);
             cResult[10] = tmp4.title;
             cResult[11] = tmp11;
             cResult[12] = tmp15;
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       let obj = require("c");
     }
-  : (results) => {
+  : function ChannelAutocompleteEmojiUpsell(results) {
       results = results.results;
       const tmp = closure_7();
       _require = tmp;

@@ -3,7 +3,6 @@ import _mod17 from "../../../../../../_runtime/metro/00017__.js";
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import DeveloperOptionsActionCreators from "../../../../../actions/DeveloperOptionsActionCreators.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import DeveloperOptionsStore from "../../../../../stores/DeveloperOptionsStore.tsx";
@@ -11,6 +10,8 @@ import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
+
+const require = globalThis.__r;
 
 const ScrollView = _mod17.ScrollView;
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
@@ -22,9 +23,9 @@ let obj3 = { padding: nativeDefault.space.PX_16 };
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsLoggingFlagsScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DevToolsLoggingFlagsScreen() {
       const cResult = c.c(23);
-      const tmp4 = closure_6();
+      closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DeveloperOptionsStore];
         const fn = function v() {
@@ -47,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stateFromStoresObject);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function y(logGatewayEvents) {
-          return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ logGatewayEvents });
+          return require("DeveloperOptionsActionCreators").setDeveloperOptionSettings({ logGatewayEvents });
         };
         cResult[2] = fn2;
         let tmp9 = fn2;
@@ -69,113 +70,158 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[4];
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn3 = function h(logAnalyticsEvents) {
-          return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ logAnalyticsEvents });
-        };
-        cResult[5] = fn3;
-        let tmp13 = fn3;
+        class L {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_1[8]);
+            obj1 = { logAnalyticsEvents: arg0 };
+            return obj.setDeveloperOptionSettings(obj1);
+          }
+        }
+        cResult[5] = L;
       } else {
-        tmp13 = cResult[5];
+        class L {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_1[8]);
+            obj1 = { logAnalyticsEvents: arg0 };
+            return obj.setDeveloperOptionSettings(obj1);
+          }
+        }
       }
       if (cResult[6] !== isLoggingAnalyticsEvents) {
+        class L {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_1[8]);
+            obj1 = { logAnalyticsEvents: arg0 };
+            return obj.setDeveloperOptionSettings(obj1);
+          }
+        }
         const obj3 = {
           label: "Analytics Events",
           subLabel: "Logs all analytics events to the developer console.",
           value: isLoggingAnalyticsEvents,
-          onValueChange: tmp13,
+          onValueChange: L,
         };
-        const tmp16 = React4(TableSwitchRow.TableSwitchRow, obj3);
+        const tmp15 = React4(TableSwitchRow.TableSwitchRow, obj3);
         cResult[6] = isLoggingAnalyticsEvents;
-        cResult[7] = tmp16;
-        let tmp14 = tmp16;
+        cResult[7] = tmp15;
       } else {
-        tmp14 = cResult[7];
+        class L {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_1[8]);
+            obj1 = { logAnalyticsEvents: arg0 };
+            return obj.setDeveloperOptionSettings(obj1);
+          }
+        }
       }
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn4 = function w(logInteractionTTIAnalytics) {
-          return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ logInteractionTTIAnalytics });
-        };
-        cResult[8] = fn4;
-        let tmp17 = fn4;
+        class L {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_1[8]);
+            obj1 = { logAnalyticsEvents: arg0 };
+            return obj.setDeveloperOptionSettings(obj1);
+          }
+        }
+        cResult[8] = tmp17;
       } else {
-        tmp17 = cResult[8];
+        class L {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_1[8]);
+            obj1 = { logAnalyticsEvents: arg0 };
+            return obj.setDeveloperOptionSettings(obj1);
+          }
+        }
       }
       if (cResult[9] !== isLoggingInteractionTTIAnalytics) {
+        class L {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_1[8]);
+            obj1 = { logAnalyticsEvents: arg0 };
+            return obj.setDeveloperOptionSettings(obj1);
+          }
+        }
         const obj4 = {
           label: "Interaction TTI Analytics",
           subLabel: "Logs Interaction TTI analytics events to the developer console.",
           value: isLoggingInteractionTTIAnalytics,
           onValueChange: tmp17,
         };
-        const tmp20 = React4(TableSwitchRow.TableSwitchRow, obj4);
+        const tmp19 = React4(TableSwitchRow.TableSwitchRow, obj4);
         cResult[9] = isLoggingInteractionTTIAnalytics;
-        cResult[10] = tmp20;
-        let tmp18 = tmp20;
+        cResult[10] = tmp19;
       } else {
-        tmp18 = cResult[10];
+        class L {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_1[8]);
+            obj1 = { logAnalyticsEvents: arg0 };
+            return obj.setDeveloperOptionSettings(obj1);
+          }
+        }
       }
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn5 = function p(trace) {
-          return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ trace });
-        };
-        cResult[11] = fn5;
-        let tmp21 = fn5;
+        class L {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_1[8]);
+            obj1 = { logAnalyticsEvents: arg0 };
+            return obj.setDeveloperOptionSettings(obj1);
+          }
+        }
+        cResult[11] = tmp21;
       } else {
-        tmp21 = cResult[11];
+        class L {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_1[8]);
+            obj1 = { logAnalyticsEvents: arg0 };
+            return obj.setDeveloperOptionSettings(obj1);
+          }
+        }
       }
       if (cResult[12] !== isTracingRequests) {
+        class L {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_1[8]);
+            obj1 = { logAnalyticsEvents: arg0 };
+            return obj.setDeveloperOptionSettings(obj1);
+          }
+        }
         const obj5 = {
           label: "Tracing Requests",
           subLabel: "Force trace all client requests with APM.",
           value: isTracingRequests,
           onValueChange: tmp21,
         };
-        const tmp24 = React4(TableSwitchRow.TableSwitchRow, obj5);
+        const tmp23 = React4(TableSwitchRow.TableSwitchRow, obj5);
         cResult[12] = isTracingRequests;
-        cResult[13] = tmp24;
-        let tmp22 = tmp24;
+        cResult[13] = tmp23;
       } else {
-        tmp22 = cResult[13];
-      }
-      if (cResult[14] === tmp10) {
-        if (cResult[15] === tmp14) {
-          if (cResult[16] === tmp18) {
-            if (cResult[17] === tmp22) {
-              let tmp25 = cResult[18];
-            }
-            if (cResult[19] === tmp4.container) {
-              if (cResult[20] === tmp4.content) {
-                if (cResult[21] === tmp25) {
-                  let tmp27 = cResult[22];
-                }
-                return tmp27;
-              }
-            }
-            const obj6 = { style: null, contentContainerStyle: null, children: null };
-            ({ container: obj8.style, content: obj8.contentContainerStyle } = tmp4);
-            obj6.children = tmp25;
-            const tmp30 = React4(ScrollView, obj6);
-            cResult[19] = tmp4.container;
-            cResult[20] = tmp4.content;
-            cResult[21] = tmp25;
-            cResult[22] = tmp30;
-            tmp27 = tmp30;
+        class L {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_1[8]);
+            obj1 = { logAnalyticsEvents: arg0 };
+            return obj.setDeveloperOptionSettings(obj1);
           }
         }
       }
-      const obj7 = { title: "Logging", hasIcons: false, children: null };
+      if (cResult[14] === tmp10) {
+        class L {
+          constructor(arg0) {
+            obj = closure_1_0(closure_1_1[8]);
+            obj1 = { logAnalyticsEvents: arg0 };
+            return obj.setDeveloperOptionSettings(obj1);
+          }
+        }
+      }
+      const obj6 = { title: "Logging", hasIcons: false, children: null };
       const items1 = [tmp10, tmp14, tmp18, tmp22];
-      obj7.children = items1;
-      const tmp26 = hasOwnProperty(TableRowGroup.TableRowGroup, obj7);
+      obj6.children = items1;
+      const tmpResult = initialize;
       cResult[14] = tmp10;
       cResult[15] = tmp14;
       cResult[16] = tmp18;
       cResult[17] = tmp22;
-      cResult[18] = tmp26;
-      tmp25 = tmp26;
-      const tmpResult = initialize;
+      cResult[18] = hasOwnProperty(TableRowGroup.TableRowGroup, obj6);
+      const tmp24 = hasOwnProperty(TableRowGroup.TableRowGroup, obj6);
     }
-  : () => {
+  : function DevToolsLoggingFlagsScreen() {
       const tmp = closure_6();
       const items = [DeveloperOptionsStore];
       const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({
@@ -194,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           subLabel: "Logs all gateway events to console, including content. Enable verbose logs to see them.",
           value: isLoggingGatewayEvents,
           onValueChange(logGatewayEvents) {
-            return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ logGatewayEvents });
+            return require("DeveloperOptionsActionCreators").setDeveloperOptionSettings({ logGatewayEvents });
           },
         }),
         React4(TableSwitchRow.TableSwitchRow, {
@@ -202,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           subLabel: "Logs all analytics events to the developer console.",
           value: isLoggingAnalyticsEvents,
           onValueChange(logAnalyticsEvents) {
-            return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ logAnalyticsEvents });
+            return require("DeveloperOptionsActionCreators").setDeveloperOptionSettings({ logAnalyticsEvents });
           },
         }),
         React4(TableSwitchRow.TableSwitchRow, {
@@ -210,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           subLabel: "Logs Interaction TTI analytics events to the developer console.",
           value: isLoggingInteractionTTIAnalytics,
           onValueChange(logInteractionTTIAnalytics) {
-            return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ logInteractionTTIAnalytics });
+            return require("DeveloperOptionsActionCreators").setDeveloperOptionSettings({ logInteractionTTIAnalytics });
           },
         }),
         React4(TableSwitchRow.TableSwitchRow, {
@@ -218,7 +264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           subLabel: "Force trace all client requests with APM.",
           value: isTracingRequests,
           onValueChange(trace) {
-            return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ trace });
+            return require("DeveloperOptionsActionCreators").setDeveloperOptionSettings({ trace });
           },
         }),
       ];

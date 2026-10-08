@@ -8,7 +8,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSelectedTeen() {
       const cResult = stateFromStores(576).c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FamilyCenterStore];
@@ -48,7 +48,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = stateFromStores(573);
       return stateFromStores(573).useStateFromStores(tmp8, tmp10);
     }
-  : () => {
+  : function useSelectedTeen() {
       const items = [FamilyCenterStore];
       _require = require("useStateFromStores").useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
       const obj = require("useStateFromStores");
@@ -66,11 +66,11 @@ const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelecte
 
 export const useSelectedTeen = tmp2;
 export const useSelectedTeenId = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSelectedTeenId() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FamilyCenterStore];
-        const fn = function n() {
+        const fn = function o() {
           return selectedTeenId.getSelectedTeenId();
         };
         cResult[0] = items;
@@ -82,7 +82,7 @@ export const useSelectedTeenId = ReactCompilerGating.isReactCompilerEnabled()
       }
       return useStateFromStores.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useSelectedTeenId() {
       const items = [FamilyCenterStore];
       return useStateFromStores.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
     };

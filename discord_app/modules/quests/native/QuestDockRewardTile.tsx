@@ -9,7 +9,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { container: { borderRadius: nativeDefault.radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" }, video: { overflow: "hidden", height: "100%", width: "100%" }, image: { height: "100%", width: "100%" } };
   return obj;
@@ -18,29 +18,29 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDockRewardTile.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockRewardTile(arg0) {
   const cResult = isAnimatedAsset(576).c(32);
   ({ assetUrl, isAnimatedAsset } = arg0);
   ({ accessibilityLabel, height, width, style, paused, withAnimation } = arg0);
   if (cResult[0] !== withAnimation) {
     let isIOSResult = withAnimation;
     if (undefined === withAnimation) {
-      isIOSResult = isAnimatedAsset(1369).isIOS();
-      const tmpResult = isAnimatedAsset(1369);
+      isIOSResult = isAnimatedAsset(1381).isIOS();
+      const tmpResult = isAnimatedAsset(1381);
     }
     cResult[0] = withAnimation;
     cResult[1] = isIOSResult;
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    class U {
+    class L {
       constructor() {
         return closure_1_7.useReducedMotion;
       }
     }
     cResult[2] = items;
-    cResult[3] = U;
-    let tmp7 = U;
+    cResult[3] = L;
+    let tmp7 = L;
     let tmp6 = items;
   } else {
     tmp6 = cResult[2];
@@ -52,7 +52,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   const tmpResult3 = isAnimatedAsset(504);
   [r10055, importDefault] = noop.useState("active" === closure_5.currentState);
   if (cResult[4] !== isAnimatedAsset) {
-    class D {
+    class U {
       constructor() {
         if (closure_0) {
           tmp = closure_1_5;
@@ -65,17 +65,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
       }
     }
     const items1 = [isAnimatedAsset];
-    class U {
+    class L {
       constructor() {
         return closure_1_7.useReducedMotion;
       }
     }
     cResult[4] = isAnimatedAsset;
-    cResult[5] = D;
+    cResult[5] = U;
     cResult[6] = items1;
     let tmp13 = items1;
   } else {
-    class D {
+    class U {
       constructor() {
         if (closure_0) {
           tmp = closure_1_5;
@@ -89,9 +89,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     }
     tmp13 = cResult[6];
   }
-  const effect = noop.useEffect(D, tmp13);
+  const effect = noop.useEffect(U, tmp13);
   if (cResult[7] === assetUrl) {
-    class D {
+    class U {
       constructor() {
         if (closure_0) {
           tmp = closure_1_5;
@@ -105,13 +105,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     }
   }
   const tmp11 = _slicedToArray(noop.useState("active" === closure_5.currentState), 2);
-  const scaledImageUrl = isAnimatedAsset(10013).getScaledImageUrl({ assetUrl, width, height });
+  const scaledImageUrl = isAnimatedAsset(9544).getScaledImageUrl({ assetUrl, width, height });
   cResult[7] = assetUrl;
   cResult[8] = height;
   cResult[9] = width;
   cResult[10] = scaledImageUrl;
-  const tmpResult4 = isAnimatedAsset(10013);
-}) : ((assetUrl) => {
+  const tmpResult4 = isAnimatedAsset(9544);
+}) : (function QuestDockRewardTile(assetUrl) {
   assetUrl = assetUrl.assetUrl;
   const isAnimatedAsset = assetUrl.isAnimatedAsset;
   const height = assetUrl.height;

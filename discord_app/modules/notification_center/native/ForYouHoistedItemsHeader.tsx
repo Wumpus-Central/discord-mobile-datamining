@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_16 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/ForYouHoistedItemsHeader.tsx");
 
 export const ForYouHoistedItemsHeader = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ForYouHoistedItemsHeader() {
       const cResult = c.c(2);
       const tmp2 = closure_4();
       if (cResult[0] !== tmp2.container) {
@@ -29,4 +29,6 @@ export const ForYouHoistedItemsHeader = ReactCompilerGating.isReactCompilerEnabl
       }
       return tmp3;
     }
-  : () => <View style={closure_4().container} />;
+  : function ForYouHoistedItemsHeader() {
+      return <View style={closure_4().container} />;
+    };

@@ -1,8 +1,8 @@
 // discord_app/modules/guild_automod/native/ModerateUserActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
-import useCanToggleCommunicationDisableOnUser from "../../guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx";
 import GuildMemberUtils from "../../guild_member/GuildMemberUtils.tsx";
+import useCanToggleCommunicationDisableOnUser from "../../guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx";
 import GuildDisableCommunicationActionCreators from "../../guild_communication_disabled/GuildDisableCommunicationActionCreators.native.tsx";
 import showKickConfirmModalDefault from "../../guild_moderation/native/showKickConfirmModal.tsx";
 import showBanConfirmModalDefault from "../../guild_moderation/native/showBanConfirmModal.tsx";
@@ -16,7 +16,7 @@ require = fn;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({
   container: { padding: 16, gap: 16 },
   memberRoles: { justifyContent: "flex-start" },
@@ -24,7 +24,7 @@ let closure_11 = createStyles.createStyles({
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_automod/native/ModerateUserActionSheet.tsx");
 
-export default noop.memo((user) => {
+export default noop.memo(function ModerateUserActionSheet(user) {
   user = user.user;
   guild = user.guild;
   let stateFromStores;
@@ -118,7 +118,7 @@ export default noop.memo((user) => {
         obj2.icon = closure_9(tmp2(tmp3[13]).ActionSheetRow.Icon, obj3);
         obj2.onPress = function onPress() {
           hideActionSheet();
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11460, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11444, dependencyMap.paths), {
             userId: user.id,
             guildId: guild.id,
             onClose() {
@@ -208,20 +208,16 @@ export default noop.memo((user) => {
       obj11.title = intl4.formatToPlainString(tmp2(tmp3[14]).t["792QKT"], obj12);
       obj10.header = closure_9(tmp2(tmp3[28]).BottomSheetTitleHeader, obj11);
       obj10.bodyStyles = tmp.container;
-      const obj13 = { style: null, guild: null, userRoles: null };
-      const items5 = [tmp.memberRoles];
-      obj13.style = items5;
-      obj13.guild = guild;
-      obj13.userRoles = tmp5;
-      const items6 = [closure_9(guild(tmp3[29]), obj13)];
+      const obj13 = { style: tmp.memberRoles, guild, userRoles: tmp5 };
+      const items5 = [closure_9(guild(tmp3[29]), obj13)];
       const obj14 = {
         hasIcons: true,
         children: items4.map((children, index) =>
           closure_1_9(hideActionSheet.Fragment, { children }, "action_" + index),
         ),
       };
-      items6[1] = closure_9(tmp2(tmp3[30]).TableRowGroup, obj14);
-      obj10.children = items6;
+      items5[1] = closure_9(tmp2(tmp3[30]).TableRowGroup, obj14);
+      obj10.children = items5;
       return closure_10(tmp2(tmp3[27]).BottomSheet, obj10);
     }
   }

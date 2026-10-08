@@ -7,17 +7,17 @@ import AutomodQuarantineUtils from "../../../guild_automod/AutomodQuarantineUtil
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
-const Text_Text = Text(4892);
+const Text_Text = Text(5086);
 require = fn;
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAccountUsernameSettingTrailing() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function o() {
+        const fn = function s() {
           return UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" });
         };
         cResult[0] = items;
@@ -29,15 +29,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useAccountUsernameSettingTrailing() {
       const items = [UserStore];
       return initialize.useStateFromStores(items, () =>
         UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }),
       );
     };
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAccountUsernameSettingDescription() {
       let Text = require;
       let tmp = dependencyMap;
       const cResult = c.c(2);
@@ -63,7 +63,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = tmp;
       }
     }
-  : () => {
+  : function useAccountUsernameSettingDescription() {
       const guildAutomodProfileQuarantineErrors = AutomodQuarantineUtils.useGuildAutomodProfileQuarantineErrors();
       let first;
       if (guildAutomodProfileQuarantineErrors != null) {
@@ -84,10 +84,10 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
   },
-  parent: fn(7645).MobileUserSettings.ACCOUNT,
+  parent: fn(7966).MobileUserSettings.ACCOUNT,
   useTrailing: tmp3,
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useAccountUsernameSettingDescription() {
         let Text = require;
         let tmp = dependencyMap;
         const cResult = c.c(2);
@@ -113,7 +113,7 @@ const route = SettingBuilders.createRoute({
           cResult[1] = tmp;
         }
       }
-    : () => {
+    : function useAccountUsernameSettingDescription() {
         const guildAutomodProfileQuarantineErrors = AutomodQuarantineUtils.useGuildAutomodProfileQuarantineErrors();
         let first;
         if (guildAutomodProfileQuarantineErrors != null) {

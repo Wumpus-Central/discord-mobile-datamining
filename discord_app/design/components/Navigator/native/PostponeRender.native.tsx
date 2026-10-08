@@ -5,12 +5,12 @@ import RunAfterInteractionsUtils from "../../../../utils/native/RunAfterInteract
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const KeyboardAwareViewDefault = tmp8(6544);
+const KeyboardAwareViewDefault = tmp8(6720);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { view: null };
 const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/PostponeRender.native.tsx");
 
 export const PostponeRender = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PostponeRender(arg0) {
       const cResult = first(576).c(12);
       ({ viewStyle, children } = arg0);
       ({ postpone, ignoreKeyboard } = arg0);
@@ -87,7 +87,7 @@ export const PostponeRender = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp11 = children;
       if (first) {
-        tmp11 = jsx(tmp(6542).SceneLoadingIndicator, {});
+        tmp11 = jsx(tmp(6718).SceneLoadingIndicator, {});
       }
       cResult[2] = children;
       cResult[3] = first;
@@ -96,7 +96,7 @@ export const PostponeRender = ReactCompilerGating.isReactCompilerEnabled()
       const obj = first(576);
       tmp = first;
     }
-  : (children) => {
+  : function PostponeRender(children) {
       children = children.children;
       first = undefined;
       importDefault = undefined;
@@ -117,7 +117,7 @@ export const PostponeRender = ReactCompilerGating.isReactCompilerEnabled()
         }
       });
       if (first) {
-        children = jsx(first(6542).SceneLoadingIndicator, {});
+        children = jsx(first(6718).SceneLoadingIndicator, {});
       }
       if (ignoreKeyboard) {
         let tmp4Result = closure_5;

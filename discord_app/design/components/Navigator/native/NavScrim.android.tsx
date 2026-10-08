@@ -8,7 +8,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { androidNavScrim: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("design/components/Navigator/native/Na
 
 export const NavScrim = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function NavScrim() {
         const cResult = c.c(6);
         let androidNavScrim = closure_5();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -56,7 +56,7 @@ export const NavScrim = noop.memo(
           cResult[5] = tmp8;
         }
       }
-    : () => {
+    : function NavScrim() {
         const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeCustomKeyboardHeight: false }).insets;
         let tmp2 = null;
         if (0 !== insets.bottom) {

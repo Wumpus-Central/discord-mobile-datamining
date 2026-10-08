@@ -79,7 +79,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
     }
   }
 });
-obj2.load = function () {
+obj2.load = function load() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -95,7 +95,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/useGuildEmbeddedApplications.tsx");
 
 export const useGuildEmbeddedApplications = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useGuildEmbeddedApplications(arg0, arg1, arg2) {
       const cResult = c.c(6);
       const tmp2 = closure_6(arg0, arg1, arg2);
       const data = tmp2.data;
@@ -115,7 +115,7 @@ export const useGuildEmbeddedApplications = ReactCompilerGating.isReactCompilerE
           }
         }
       }
-      const fn = function c() {
+      const fn = function s() {
         if (null != data) {
           ref.current = true;
         } else {
@@ -142,7 +142,7 @@ export const useGuildEmbeddedApplications = ReactCompilerGating.isReactCompilerE
       tmp4 = items;
       tmp3 = fn;
     }
-  : (arg0, arg1, arg2) => {
+  : function useGuildEmbeddedApplications(arg0, arg1, arg2) {
       const tmp = closure_6(arg0, arg1, arg2);
       const data = tmp.data;
       const error = tmp.error;

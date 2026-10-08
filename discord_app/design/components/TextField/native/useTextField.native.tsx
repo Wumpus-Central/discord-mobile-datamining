@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = fn;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onClear) => {
+  ? function useTextFieldState(onClear) {
       const cResult = c.c(10);
       ({ value, onChange } = onClear);
       onClear = onClear.onClear;
@@ -26,7 +26,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         first = tmp3[0];
       }
       if (cResult[0] !== onChange) {
-        const fn = function s(arg0) {
+        const fn = function n(arg0) {
           closure_2(arg0);
           if (onChange != null) {
             onChange(arg0);
@@ -38,7 +38,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp5 = cResult[1];
       }
-      closure_3 = tmp5;
+      noop = tmp5;
       if (cResult[2] === onClear) {
         if (cResult[3] === tmp5) {
           let tmp6 = cResult[4];
@@ -61,18 +61,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = obj2;
         tmp7 = obj2;
       }
-      const fn2 = function h() {
-        closure_3("");
-        if (onClear != null) {
-          onClear();
+      class V {
+        constructor() {
+          tmp = closure_3("");
+          if (onClear != null) {
+            tmp2 = onClear();
+          }
+          return;
         }
-      };
+      }
       cResult[2] = onClear;
       cResult[3] = tmp5;
-      cResult[4] = fn2;
-      tmp6 = fn2;
+      cResult[4] = V;
+      tmp6 = V;
     }
-  : (onClear) => {
+  : function useTextFieldState(onClear) {
       ({ value, onChange } = onClear);
       onClear = onClear.onClear;
       let str = first;
@@ -114,7 +117,7 @@ let result = size.fileFinishedImporting("design/components/TextField/native/useT
 
 export const useTextFieldState = tmp2;
 export const useTextField = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onClear, arg1) => {
+  ? function useTextField(onClear, arg1) {
       _require = onClear;
       const cResult = require("c").c(17);
       ref = noop.useRef(null);
@@ -143,7 +146,7 @@ export const useTextField = ReactCompilerGating.isReactCompilerEnabled()
         const tmp7 = closure_4(tmp4);
         closure_2 = tmp7;
         if (cResult[5] !== tmp7) {
-          const fn2 = function b() {
+          const fn2 = function f() {
             return {
               blur() {
                 const current = ref.current;
@@ -262,7 +265,7 @@ export const useTextField = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = obj5;
       let obj = require("c");
     }
-  : (onClear, arg1) => {
+  : function useTextField(onClear, arg1) {
       const ref = noop.useRef(null);
       const items = [ref, onClear.onClear];
       let obj = {};

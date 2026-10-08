@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   scroll: { flex: 1 },
@@ -40,7 +40,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUSelectScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (defaultHighlightedReward) => {
+  ? function GiftingSKUSelectScreen(defaultHighlightedReward) {
       const cResult = c.c(52);
       defaultHighlightedReward = defaultHighlightedReward.defaultHighlightedReward;
       ({ allRewards, claimableRewards } = defaultHighlightedReward);
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            class H {
+            class M {
               constructor() {
                 obj = claimableRewards;
                 if (0 === claimableRewards.length) {
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[12] = first1;
             cResult[13] = first;
             cResult[14] = false;
-            cResult[15] = H;
+            cResult[15] = M;
             cResult[16] = items;
           } else {
             class O {
@@ -134,14 +134,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (cResult[8] !== first) {
-              class O {
+              class K {
                 constructor(arg0) {
-                  tmp = closure_4(defaultHighlightedReward);
-                  tmp2 = closure_6(true);
-                  return;
+                  return defaultHighlightedReward === closure_3;
                 }
               }
-              class H {
+              class M {
                 constructor() {
                   obj = claimableRewards;
                   if (0 === claimableRewards.length) {
@@ -171,17 +169,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              cResult[9] = tmp12;
+              cResult[9] = K;
             } else {
-              class O {
+              class K {
                 constructor(arg0) {
-                  tmp = closure_4(defaultHighlightedReward);
-                  tmp2 = closure_6(true);
-                  return;
+                  return defaultHighlightedReward === closure_3;
                 }
               }
             }
-            class H {
+            class M {
               constructor() {
                 obj = claimableRewards;
                 if (0 === claimableRewards.length) {
@@ -213,7 +209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             cResult[5] = claimableRewards;
             cResult[6] = first;
-            cResult[7] = tmp13;
+            cResult[7] = tmp12;
           }
         }
       }
@@ -228,7 +224,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = onSelect;
       cResult[3] = fn;
     }
-  : (rewardsToDisplay) => {
+  : function GiftingSKUSelectScreen(rewardsToDisplay) {
       const defaultHighlightedReward = rewardsToDisplay.defaultHighlightedReward;
       const claimableRewards = rewardsToDisplay.claimableRewards;
       const onSelect = rewardsToDisplay.onSelect;

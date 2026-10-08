@@ -5,11 +5,11 @@ import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import native from "../../../../design/void/native.tsx";
 import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
 import shared from "../../../../design/shared.tsx";
-import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
-import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef6633 from "../../../../../_runtime/metro/06633__.js";
-import _modDef6634 from "../../../../../_runtime/metro/06634__.js";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
+import _modDef6810 from "../../../../../_runtime/metro/06810__.js";
+import _modDef6811 from "../../../../../_runtime/metro/06811__.js";
+import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import getEmojiItemUrlDefault from "../../../emojis/utils/getEmojiItemUrl.tsx";
 import EmojiPickerListRowViewDefault from "EmojiPickerListRowView.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -20,14 +20,14 @@ require = fn;
 let closure_3 = ["nativeRow"];
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(9882);
+const EmojiPickerListConstants = fn(9362);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
-const PADDING_VERTICAL = fn(1229).PADDING_VERTICAL;
+const PADDING_VERTICAL = fn(1241).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { image: { height: IMAGE_SIZE, width: IMAGE_SIZE }, surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" }, disabledOverlay: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, surrogates: null, row: null, lockContainer: null, lock: null };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let num = 28;
 if (PlatformUtils.isAndroid()) {
   num = 26;
@@ -44,7 +44,7 @@ obj.lockContainer = obj6;
 obj.lock = { width: 16, height: 16, tintColor: "white" };
 let closure_11 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItemLockedOverlay() {
   const cResult = c.c(5);
   const tmp4 = closure_11();
   if (cResult[0] !== tmp4.lock) {
@@ -68,13 +68,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = tmp9;
   tmp8 = tmp9;
   const obj3 = { style: tmp4.lockContainer, children: tmp5 };
-}) : (() => {
+}) : (function EmojiItemLockedOverlay() {
   const tmp = closure_11();
   const obj = { style: tmp.lockContainer, children: options(LockIcon.LockIcon, { style: tmp.lock }) };
   return options(hasOwnProperty, obj);
 });
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((emoji) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(emoji) {
   const cResult = c.c(28);
   emoji = emoji.emoji;
   const category = emoji.category;
@@ -139,7 +139,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((emoji) => {
                       const obj2 = { accessibilityRole: "button", accessibilityLabel: emoji.name, style: tmp5, onPress: tmp6, onLongPress: tmp7, children: null };
                       const items = [cResult[18], tmp19];
                       obj2.children = items;
-                      const tmp25 = v65535(Pressables.PressableOpacity, obj2);
+                      const tmp25 = collapsed(Pressables.PressableOpacity, obj2);
                       cResult[21] = emoji.name;
                       cResult[22] = tmp5;
                       cResult[23] = tmp6;
@@ -168,9 +168,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((emoji) => {
             const obj4 = { resizeMode: "contain", style: surrogates.image, placeholder: null, source: null, usesSmallCache: true };
             const tmp14 = FastImageDefault;
             if (tmpResult.isThemeDark(ThemeStore.theme)) {
-              let tmp13Result = _modDef6633;
+              let tmp13Result = _modDef6810;
             } else {
-              tmp13Result = _modDef6634;
+              tmp13Result = _modDef6811;
             }
             obj4.placeholder = tmp13Result;
             const obj5 = { uri: image };
@@ -178,7 +178,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((emoji) => {
             options(tmp14, obj4);
             tmpResult = shared;
           }
-          const fn2 = function k() {
+          const fn2 = function f() {
             return onLongPressEmoji(emoji);
           };
           cResult[10] = emoji;
@@ -187,7 +187,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((emoji) => {
           tmp7 = fn2;
         }
       }
-      const fn = function f() {
+      const fn = function k() {
         return onPressEmoji(emoji, category);
       };
       cResult[6] = category;
@@ -207,7 +207,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((emoji) => {
   cResult[1] = emoji;
   cResult[2] = tmp4;
   image = tmp4;
-}) : ((emoji) => {
+}) : (function EmojiItem(emoji) {
   emoji = emoji.emoji;
   ({ category: importDefault, disabled, onPressEmoji: dependencyMap, onLongPressEmoji: closure_3 } = emoji);
   ({ animateEmoji, isSectionNitroLocked } = emoji);
@@ -234,10 +234,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((emoji) => {
     const obj2 = { resizeMode: "contain", style: tmp.image, placeholder: null, source: null, usesSmallCache: true };
     const tmp2Result = FastImageDefault;
     if (tmp6Result.isThemeDark(ThemeStore.theme)) {
-      tmp3 = 6633;
+      tmp3 = 6810;
       let tmp2Result2 = importDefault(tmp3);
     } else {
-      tmp2Result2 = _modDef6634;
+      tmp2Result2 = _modDef6811;
     }
     obj2.placeholder = tmp2Result2;
     const obj3 = { uri: tmp4 };
@@ -253,13 +253,13 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((emoji) => {
     }
     items1[1] = disabled;
     obj.children = items1;
-    return v65535(Pressables.PressableOpacity, obj);
+    return collapsed(Pressables.PressableOpacity, obj);
   }
   tmp4 = getEmojiItemUrlDefault(emoji, animateEmoji, IMAGE_SIZE);
 });
 let closure_13 = tmp6;
 ReactCompilerGating = fn(558);
-let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((emojis) => {
+let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiPickerListRow(emojis) {
   const cResult = c.c(22);
   emojis = emojis.emojis;
   ({ emojisDisabled, category } = emojis);
@@ -298,7 +298,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((emoj
                         }
                       }
                     }
-                    class N {
+                    class R {
                       constructor(arg0) {
                         closure_0 = emojis;
                         found = emojis.find(() => { ... });
@@ -318,7 +318,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((emoj
                     cResult[21] = tmp17;
                     tmp14 = tmp17;
                   }
-                  class N {
+                  class R {
                     constructor(arg0) {
                       closure_0 = emojis;
                       found = emojis.find(() => { ... });
@@ -331,8 +331,8 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((emoj
                   }
                   cResult[14] = emojis;
                   cResult[15] = onLongPressEmoji;
-                  cResult[16] = N;
-                  tmp13 = N;
+                  cResult[16] = R;
+                  tmp13 = R;
                 }
               }
               class C {
@@ -373,7 +373,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((emoj
   let sum = result;
   if (result < result + rowSize) {
     do {
-      class N {
+      class R {
         constructor(arg0) {
           closure_0 = emojis;
           found = emojis.find(() => { ... });
@@ -394,7 +394,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((emoj
   cResult[4] = rowSize;
   cResult[5] = items;
   tmp3 = items;
-}) : ((emojis) => {
+}) : (function EmojiPickerListRow(emojis) {
   emojis = emojis.emojis;
   ({ emojisDisabled, category: importDefault, rowSize, onPressEmoji: dependencyMap, onLongPressEmoji: closure_3, animateEmoji } = emojis);
   ({ containerWidth, row, isSectionNitroLocked } = emojis);
@@ -447,7 +447,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((emoj
   return options(EmojiPickerListRowViewDefault, obj2);
 }));
 ReactCompilerGating = fn(558);
-let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiPickerListRow(arg0) {
   const cResult = c.c(14);
   ({ emojis, emojisDisabled, category, rowSize, row, onPressEmoji, onLongPressEmoji, animateEmoji, isSectionNitroLocked } = arg0);
   const tmp2 = closure_11();
@@ -520,7 +520,7 @@ let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[9] = tmp2;
   cResult[10] = items;
   tmp3 = items;
-}) : ((arg0) => {
+}) : (function EmojiPickerListRow(arg0) {
   ({ emojisDisabled, rowSize } = arg0);
   ({ emojis, category, row, onPressEmoji, onLongPressEmoji, animateEmoji, isSectionNitroLocked } = arg0);
   const tmp = closure_11();
@@ -556,7 +556,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListRow.tsx");
 
 export const EmojiItem = tmp6;
-export const EmojiPickerListRow = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((nativeRow) => {
+export const EmojiPickerListRow = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiPickerListRow(nativeRow) {
   const cResult = c.c(7);
   if (cResult[0] !== nativeRow) {
     nativeRow = nativeRow.nativeRow;
@@ -595,7 +595,7 @@ export const EmojiPickerListRow = noop.memo(ReactCompilerGating.isReactCompilerE
     }
     return tmp9;
   }
-}) : ((nativeRow) => {
+}) : (function EmojiPickerListRow(nativeRow) {
   nativeRow = nativeRow.nativeRow;
   if (nativeRow === undefined) {
     nativeRow = PlatformUtils2.isAndroid();

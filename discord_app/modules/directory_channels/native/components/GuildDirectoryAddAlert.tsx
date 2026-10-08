@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   guildIcon: { marginBottom: 16, borderRadius: nativeDefault.radii.sm },
   title: { marginBottom: 8, textAlign: "center" },
@@ -27,7 +27,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryAddAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildDirectoryAddAlert(arg0) {
       const cResult = c.c(20);
       ({ onClose, guild, directoryGuildName } = arg0);
       const tmp4 = closure_6();
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp10;
       tmp8 = tmp10;
     }
-  : (arg0) => {
+  : function GuildDirectoryAddAlert(arg0) {
       ({ onClose, guild, directoryGuildName } = arg0);
       const tmp = closure_6();
       const obj = { confirmText: null, onConfirm: null, children: null };

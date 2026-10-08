@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerAddServerRow.tsx");
 
 export const HomeDrawerAddServerRowExpandedChildren = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function HomeDrawerAddServerRowExpandedChildren() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { title: null, subtitle: null };
@@ -28,7 +28,7 @@ export const HomeDrawerAddServerRowExpandedChildren = ReactCompilerGating.isReac
       }
       return first;
     }
-  : () => {
+  : function HomeDrawerAddServerRowExpandedChildren() {
       const obj = { title: null, subtitle: null };
       const obj2 = { variant: "text-md/medium", color: "text-default", children: null };
       const intl = util.intl;

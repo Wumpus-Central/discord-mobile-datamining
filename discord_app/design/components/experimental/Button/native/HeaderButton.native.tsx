@@ -6,13 +6,13 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsx = fn(21).jsx;
 let c3 = "heading-md/bold";
-const diff = fn(5607).SMALL_BUTTON_HEIGHT - 2 * fn(5607).BUTTON_BORDER_WIDTH;
-const diff1 = diff - fn(4892).TextStyleSheet["heading-md/bold"].lineHeight;
-const createStyles = fn(4896);
+const diff = fn(5380).SMALL_BUTTON_HEIGHT - 2 * fn(5380).BUTTON_BORDER_WIDTH;
+const diff1 = diff - fn(5086).TextStyleSheet["heading-md/bold"].lineHeight;
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ pill: { paddingVertical: diff1 / 2 } });
 const ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function HeaderButton(arg0) {
       const cResult = c.c(3);
       const tmp4 = closure_4();
       if (cResult[0] === arg0) {
@@ -33,7 +33,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp7;
       tmp5 = tmp7;
     }
-  : (arg0) => {
+  : function HeaderButton(arg0) {
       const obj = { accessibilityRole: "header" };
       const merged = Object.assign(arg0);
       obj.pillStyle = closure_4().pill;
@@ -42,7 +42,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       obj.variant = "secondary-overlay";
       return jsx(BaseTextButton.BaseTextButton, { accessibilityRole: "header" });
     };
-tmp5.Icon = fn(5602).BaseTextButton.Icon;
+tmp5.Icon = fn(5376).BaseTextButton.Icon;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Button/native/HeaderButton.native.tsx");
 

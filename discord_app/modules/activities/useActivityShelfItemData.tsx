@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useActivityShelfItemData.tsx");
 
 export const useActivityShelfItemData = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, arg1) => {
+  ? function useActivityShelfItemData(guildId, arg1) {
       closure_0 = arg1;
       const cResult = c.c(5);
       if (cResult[0] !== guildId) {
@@ -36,7 +36,7 @@ export const useActivityShelfItemData = ReactCompilerGating.isReactCompilerEnabl
       cResult[4] = found;
       tmp4 = found;
     }
-  : (guildId, arg1) => {
+  : function useActivityShelfItemData(guildId, arg1) {
       closure_0 = arg1;
       const tmp = useActivityShelfItemsDefault({ guildId });
       closure_1 = tmp;

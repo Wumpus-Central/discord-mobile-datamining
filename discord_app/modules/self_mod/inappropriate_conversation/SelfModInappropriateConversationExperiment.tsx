@@ -23,7 +23,7 @@ export const isEligibleForInappropriateConversationWarning = function isEligible
   return closure_2.getConfig({ location: location.location }).enabled;
 };
 export const useIsEligibleForInappropriateConversationWarning = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsEligibleForInappropriateConversationWarning(location) {
       const cResult = c.c(2);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -36,4 +36,6 @@ export const useIsEligibleForInappropriateConversationWarning = ReactCompilerGat
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location: location.location }).enabled;
+  : function useIsEligibleForInappropriateConversationWarning(location) {
+      return closure_2.useConfig({ location: location.location }).enabled;
+    };

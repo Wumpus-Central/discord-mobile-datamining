@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGuildAppliedBoostCount(arg0) {
       _require = arg0;
       const cResult = require("c").c(12);
       const obj = require("c");
@@ -63,68 +63,35 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       if (cResult[4] !== arg0) {
-        class G {
-          constructor() {
-            stateForGuild = closure_3.getStateForGuild(closure_0);
-            appliedBoosts = undefined;
-            if (stateForGuild != null) {
-              appliedBoosts = stateForGuild.appliedBoosts;
-            }
-            return appliedBoosts;
+        const fn2 = function b() {
+          const stateForGuild = GameServerStore.getStateForGuild(closure_0);
+          let appliedBoosts;
+          if (stateForGuild != null) {
+            appliedBoosts = stateForGuild.appliedBoosts;
           }
-        }
+          return appliedBoosts;
+        };
         cResult[4] = arg0;
-        cResult[5] = G;
+        cResult[5] = fn2;
+        let tmp11 = fn2;
       } else {
-        class G {
-          constructor() {
-            stateForGuild = closure_3.getStateForGuild(closure_0);
-            appliedBoosts = undefined;
-            if (stateForGuild != null) {
-              appliedBoosts = stateForGuild.appliedBoosts;
-            }
-            return appliedBoosts;
-          }
-        }
+        tmp11 = cResult[5];
       }
       const tmpResult3 = require("initialize");
-      const stateFromStores1 = require("initialize").useStateFromStores(tmp9, G);
+      let num8 = require("initialize").useStateFromStores(tmp9, tmp11);
       if (null != stateFromStores) {
-        class G {
-          constructor() {
-            stateForGuild = closure_3.getStateForGuild(closure_0);
-            appliedBoosts = undefined;
-            if (stateForGuild != null) {
-              appliedBoosts = stateForGuild.appliedBoosts;
-            }
-            return appliedBoosts;
-          }
+        if (num8 == null) {
+          num8 = 0;
         }
-        if (stateFromStores1 == null) {
-          class G {
-            constructor() {
-              stateForGuild = closure_3.getStateForGuild(closure_0);
-              appliedBoosts = undefined;
-              if (stateForGuild != null) {
-                appliedBoosts = stateForGuild.appliedBoosts;
-              }
-              return appliedBoosts;
-            }
-          }
-        }
-        const sum = stateFromStores + stateFromStores1;
+        const sum = stateFromStores + num8;
         const _Math = Math;
         const bound = Math.max(0, num - sum);
         if (cResult[8] === num) {
-          class G {
-            constructor() {
-              stateForGuild = closure_3.getStateForGuild(closure_0);
-              appliedBoosts = undefined;
-              if (stateForGuild != null) {
-                appliedBoosts = stateForGuild.appliedBoosts;
-              }
-              return appliedBoosts;
+          if (cResult[9] === sum) {
+            if (cResult[10] === bound) {
+              let tmp14 = cResult[11];
             }
+            return tmp14;
           }
         }
         const obj3 = { available: bound, spent: sum, total: num, isLoading: false };
@@ -132,36 +99,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = sum;
         cResult[10] = bound;
         cResult[11] = obj3;
+        tmp14 = obj3;
       }
       if (cResult[6] !== num) {
-        class G {
-          constructor() {
-            stateForGuild = closure_3.getStateForGuild(closure_0);
-            appliedBoosts = undefined;
-            if (stateForGuild != null) {
-              appliedBoosts = stateForGuild.appliedBoosts;
-            }
-            return appliedBoosts;
-          }
-        }
-        tmp17[2] = num;
+        const obj4 = { available: 0, spent: 0, total: num, isLoading: true };
         cResult[6] = num;
-        cResult[7] = tmp17;
-      } else {
-        class G {
-          constructor() {
-            stateForGuild = closure_3.getStateForGuild(closure_0);
-            appliedBoosts = undefined;
-            if (stateForGuild != null) {
-              appliedBoosts = stateForGuild.appliedBoosts;
-            }
-            return appliedBoosts;
-          }
-        }
+        cResult[7] = obj4;
       }
       const tmpResult4 = require("initialize");
     }
-  : (arg0) => {
+  : function useGuildAppliedBoostCount(arg0) {
       _require = arg0;
       const items = [stateFromStores1];
       num = require("initialize").useStateFromStores(items, () => {

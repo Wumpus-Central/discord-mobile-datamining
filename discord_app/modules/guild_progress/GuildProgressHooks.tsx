@@ -14,7 +14,7 @@ import MessageStore from "../../stores/MessageStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-let GuildChannelStore = fn(4513);
+let GuildChannelStore = fn(4705);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: metroRequire, GUILD_VOCAL_CHANNELS_KEY: closure_7 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1085);
@@ -22,7 +22,7 @@ const Constants = fn(1085);
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGuildChannelCreated(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -62,7 +62,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7);
     }
-  : (arg0) => {
+  : function useGuildChannelCreated(arg0) {
       _require = arg0;
       const items = [GuildChannelStore];
       const items1 = [arg0];
@@ -90,7 +90,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_16 = tmp5;
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (systemChannelId) => {
+  ? function useGuildPopulated(systemChannelId) {
       _require = systemChannelId;
       const cResult = require("c").c(13);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -109,7 +109,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         if (systemChannelId != null) {
           systemChannelId1 = systemChannelId.systemChannelId;
         }
-        const fn = function o() {
+        const fn = function l() {
           systemChannelId = undefined;
           if (systemChannelId != null) {
             systemChannelId = systemChannelId.systemChannelId;
@@ -197,7 +197,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       tmp17 = fn3;
       const tmpResult3 = require("initialize");
     }
-  : (arg0) => {
+  : function useGuildPopulated(arg0) {
       _require = arg0;
       const items = [ChannelStore];
       closure_1 = require("initialize").useStateFromStores(items, () => {
@@ -240,7 +240,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_17 = tmp6;
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useGuildPersonalized(id) {
       _require = id;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -294,7 +294,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return null != icon && !stateFromStores;
     }
-  : (arg0) => {
+  : function useGuildPersonalized(arg0) {
       _require = arg0;
       const items = [LayerStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => LayerStore.hasLayers());
@@ -316,12 +316,12 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_18 = tmp7;
 ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useChannelsMessaged(arg0) {
       _require = arg0;
       const cResult = require("c").c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AuthenticationStore];
-        const fn = function o() {
+        const fn = function l() {
           return id.getId();
         };
         cResult[0] = items;
@@ -365,7 +365,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn2;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useChannelsMessaged(arg0) {
       _require = arg0;
       const items = [AuthenticationStore];
       closure_1 = require("initialize").useStateFromStores(items, () => id.getId());
@@ -388,7 +388,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_19 = tmp8;
 ReactCompilerGating = fn(558);
 let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGuildMessaged(arg0) {
       _require = arg0;
       let values = dependencyMap;
       const cResult = require("c").c(6);
@@ -400,7 +400,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function o() {
+        const fn = function l() {
           let mutableBasicGuildChannelsForGuild = null;
           if (null != closure_0) {
             mutableBasicGuildChannelsForGuild = ChannelStore.getMutableBasicGuildChannelsForGuild(tmp.id);
@@ -434,7 +434,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useGuildMessaged(arg0) {
       _require = arg0;
       let items = [ChannelStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => {
@@ -459,7 +459,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_20 = tmp9;
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function usePermissions(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const cResult = require("c").c(5);
@@ -477,7 +477,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(504).useStateFromStoresObject(first, tmp6, tmp7);
       }
-      const fn = function o() {
+      const fn = function l() {
         const obj = {
           canInvite: canViewInviteModal.canViewInviteModal(PermissionStore, closure_1, closure_0),
           canManageGuild: null,
@@ -511,7 +511,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function usePermissions(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
       const items = [PermissionStore];
@@ -555,7 +555,7 @@ export const useGuildPersonalized = tmp7;
 export const useChannelsMessaged = tmp8;
 export const useGuildMessaged = tmp9;
 export const useCompletedStates = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCompletedStates(arg0) {
       const cResult = c.c(5);
       const tmp2 = closure_17(arg0);
       const tmp3 = closure_20(arg0);
@@ -579,9 +579,11 @@ export const useCompletedStates = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj2;
       tmp6 = obj2;
     }
-  : (arg0) => ({
-      guildPopulated: closure_17(arg0),
-      guildMessaged: closure_20(arg0),
-      guildPersonalized: closure_18(arg0),
-      guildChannelCreated: closure_16(arg0),
-    });
+  : function useCompletedStates(arg0) {
+      return {
+        guildPopulated: closure_17(arg0),
+        guildMessaged: closure_20(arg0),
+        guildPersonalized: closure_18(arg0),
+        guildChannelCreated: closure_16(arg0),
+      };
+    };

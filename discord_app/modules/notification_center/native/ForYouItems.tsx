@@ -6,7 +6,7 @@ import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import Link from "../../../../_runtime/01491_Link.js";
+import Link from "../../../../_runtime/01503_Link.js";
 import parseURLDefault from "../../../utils/native/parseURL.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import CustomMarkupAll from "../../markup/CustomMarkup.native.tsx";
@@ -34,7 +34,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import NotificationCenterStore from "../NotificationCenterStore.tsx";
 
-const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(16399);
+const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(16659);
 require = fn;
 function getMessageContentPreviewV2(item) {
   item = item.item;
@@ -157,30 +157,30 @@ const Constants = fn(1085);
   MessageTypes: closure_18,
   EMPTY_STRING_SNOWFLAKE_ID: closure_19,
 } = Constants);
-const NotificationTypes = fn(6092).NotificationTypes;
+const NotificationTypes = fn(5939).NotificationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const viewabilityConfig = { waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 1000 };
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj = { strong: null };
 let obj3 = {};
-const merged = Object.assign(fn(4892).TextStyleSheet["text-md/medium"]);
+const merged = Object.assign(fn(5086).TextStyleSheet["text-md/medium"]);
 obj3.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 obj.strong = obj3;
 let closure_24 = createStyles.createStyles(obj);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj4 = { strong: null };
 let obj6 = {};
-const merged1 = Object.assign(fn(4892).TextStyleSheet["text-md/medium"]);
+const merged1 = Object.assign(fn(5086).TextStyleSheet["text-md/medium"]);
 obj6.color = nativeDefault.colors.TEXT_MUTED;
 obj4.strong = obj6;
 let closure_25 = createStyles.createStyles(obj4);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj7 = {
   mention: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND },
 };
 let closure_26 = createStyles.createStyles(obj7);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj10 = { mention: null };
 let obj9 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND };
 obj10.mention = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: "transparent" };
@@ -188,14 +188,14 @@ let closure_27 = createStyles.createStyles(obj10);
 let closure_28 = { channelMentionText: "redesign/message-preview/medium" };
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f73639 = () => {};
+function useMarkupMessagePreview() {}
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f73640 = () => {};
+function useMarkupReadV2() {}
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f73641 = () => {};
-createStyles = fn(4896);
+function useMarkupUnreadV2() {}
+createStyles = fn(5090);
 let obj13 = {
   container: { flex: 1 },
   row: null,
@@ -315,7 +315,7 @@ obj13.friendRequestNoteContainer = { marginTop: 4, backgroundColor: nativeDefaul
 let closure_32 = createStyles.createStyles(obj13);
 ReactCompilerGating = fn(558);
 let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (loading) => {
+  ? function ForYouFooter(loading) {
       let ForYouMentionPlaceholder = require;
       let tmp = dependencyMap;
       const cResult = c.c(1);
@@ -333,7 +333,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (loading) => {
+  : function ForYouFooter(loading) {
       let tmp = null;
       if (loading.loading) {
         tmp = guild(ForYouMentionPlaceholder2.ForYouMentionPlaceholder, {});
@@ -343,12 +343,12 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
 const constants4 = { STICKER: "sticker", VOICE_MESSAGE: "voice_message", ATTACHMENT: "attachment" };
 ReactCompilerGating = fn(558);
 let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (item) => {
-      const cResult = c.c(15);
+  ? function Callout(item) {
+      const cResult = c.c(13);
       item = item.item;
       ({ acked, compactMode } = item);
       const tmp4 = closure_32();
-      if (typeof f73639 === "function") {
+      if (typeof useMarkupMessagePreview === "function") {
         const parser = CustomMarkupAll.getParser(closure_26());
         if (cResult[0] !== tmp4.messagePreviewBarV2) {
           const obj3 = { style: tmp4.messagePreviewBarV2 };
@@ -360,74 +360,69 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
           tmp8 = cResult[1];
         }
         const tmp12 = acked ? tmp4.calloutTextAcked : tmp4.calloutTextNotAcked;
-        if (cResult[2] !== tmp12) {
-          const items = [tmp12];
-          cResult[2] = tmp12;
-          cResult[3] = items;
-          let tmp13 = items;
-        } else {
-          tmp13 = cResult[3];
-        }
-        let num6 = 10;
+        let num4 = 10;
         if (compactMode) {
-          num6 = 3;
+          num4 = 3;
         }
-        if (cResult[4] === item.callout) {
-          if (cResult[5] === parser) {
-            let tmp14 = cResult[6];
+        if (cResult[2] === item.callout) {
+          if (cResult[3] === parser) {
+            let tmp13 = cResult[4];
           }
-          if (cResult[7] === tmp13) {
-            if (cResult[8] === num6) {
-              if (cResult[9] === tmp14) {
-                let tmp16 = cResult[10];
+          if (cResult[5] === tmp12) {
+            if (cResult[6] === num4) {
+              if (cResult[7] === tmp13) {
+                let tmp15 = cResult[8];
               }
-              if (cResult[11] === tmp4.calloutContainer) {
-                if (cResult[12] === tmp8) {
-                  if (cResult[13] === tmp16) {
-                    let tmp19 = cResult[14];
+              if (cResult[9] === tmp4.calloutContainer) {
+                if (cResult[10] === tmp8) {
+                  if (cResult[11] === tmp15) {
+                    let tmp18 = cResult[12];
                   }
-                  return tmp19;
+                  return tmp18;
                 }
               }
               const obj4 = { style: tmp4.calloutContainer, pointerEvents: "none", children: null };
-              const items1 = [tmp8, tmp16];
-              obj4.children = items1;
-              const tmp22 = closure_1_22(onAddSuggestionAnimationFinish, obj4);
-              cResult[11] = tmp4.calloutContainer;
-              cResult[12] = tmp8;
-              cResult[13] = tmp16;
-              cResult[14] = tmp22;
-              tmp19 = tmp22;
+              const items = [tmp8, tmp15];
+              obj4.children = items;
+              const tmp21 = closure_1_22(onAddSuggestionAnimationFinish, obj4);
+              cResult[9] = tmp4.calloutContainer;
+              cResult[10] = tmp8;
+              cResult[11] = tmp15;
+              cResult[12] = tmp21;
+              tmp18 = tmp21;
             }
           }
-          const obj5 = { style: tmp13, variant: "redesign/message-preview/medium", lineClamp: num6, children: tmp14 };
-          const tmp18 = guild(Text_Text.Text, obj5);
+          const obj5 = { style: tmp12, variant: "redesign/message-preview/medium", lineClamp: num4, children: tmp13 };
+          const tmp17 = guild(Text_Text.Text, obj5);
+          cResult[5] = tmp12;
+          cResult[6] = num4;
           cResult[7] = tmp13;
-          cResult[8] = num6;
-          cResult[9] = tmp14;
-          cResult[10] = tmp18;
-          tmp16 = tmp18;
+          cResult[8] = tmp17;
+          tmp15 = tmp17;
         }
         const parserResult = parser(item.callout);
-        cResult[4] = item.callout;
-        cResult[5] = parser;
-        cResult[6] = parserResult;
-        tmp14 = parserResult;
+        cResult[2] = item.callout;
+        cResult[3] = parser;
+        cResult[4] = parserResult;
+        tmp13 = parserResult;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
     }
-  : (arg0) => {
+  : function Callout(arg0) {
       ({ item, acked, compactMode } = arg0);
       const tmp = closure_32();
-      if (typeof f73639 === "function") {
+      if (typeof useMarkupMessagePreview === "function") {
         const obj2 = { style: tmp.calloutContainer, pointerEvents: "none", children: null };
         const obj3 = { style: tmp.messagePreviewBarV2 };
         const parser = CustomMarkupAll.getParser(closure_26());
         const items = [guild(onAddSuggestionAnimationFinish, obj3)];
-        const obj4 = { style: null, variant: "redesign/message-preview/medium", lineClamp: null, children: null };
-        const items1 = [acked ? tmp.calloutTextAcked : tmp.calloutTextNotAcked];
-        obj4.style = items1;
+        const obj4 = {
+          style: acked ? tmp.calloutTextAcked : tmp.calloutTextNotAcked,
+          variant: "redesign/message-preview/medium",
+          lineClamp: null,
+          children: null,
+        };
         let num = 10;
         if (compactMode) {
           num = 3;
@@ -443,7 +438,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (item) => {
+  ? function ForYouMessagePreviewV2(item) {
       let messagePreviewIconV2 = dependencyMap;
       const cResult = item(576).c(26);
       item = item.item;
@@ -451,7 +446,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       ({ compactMode, roleStyle } = item);
       const tmp3 = closure_32();
       const obj = item(576);
-      const notifCenterV2MessagePreviewParser = message_channel_id(5791).getNotifCenterV2MessagePreviewParser(
+      const notifCenterV2MessagePreviewParser = message_channel_id(5395).getNotifCenterV2MessagePreviewParser(
         closure_27(),
         closure_28,
         roleStyle,
@@ -478,7 +473,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[2];
       }
-      const obj2 = message_channel_id(5791);
+      const obj2 = message_channel_id(5395);
       const stateFromStores = item(504).useStateFromStores(first, tmp8);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ChannelStore];
@@ -530,7 +525,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp23 = cResult[11];
         }
-        const Text = tmp(4892).Text;
+        const Text = tmp(5086).Text;
         const tmp26 = acked ? tmp3.messagePreviewTextV2Acked : tmp3.messagePreviewTextV2NotAcked;
         let prop;
         if (isSystemMessage) {
@@ -562,7 +557,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
             str = "text-muted";
           }
           const obj5 = { textColor: str };
-          const result = tmp(7542).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj4, obj5);
+          const result = tmp(8114).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj4, obj5);
           if (null == iconType) {
             if (cResult[15] === Text) {
               if (cResult[16] === tmp28) {
@@ -609,8 +604,8 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             const obj8 = { style: tmp3.messagePreviewIconV2Container, children: null };
             if (constants4.ATTACHMENT === iconType) {
-              let tmp35 = guild_id(11055);
-              const obj9 = { source: tmp35, size: tmp(1188).IconSizes.SMALL, style: null };
+              let tmp35 = guild_id(11701);
+              const obj9 = { source: tmp35, size: tmp(1200).IconSizes.SMALL, style: null };
               messagePreviewIconV2 = tmp3.messagePreviewIconV2;
               obj9.style = messagePreviewIconV2;
               obj8.children = closure_21(tmp33, obj9);
@@ -618,12 +613,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
             } else if (constants4.STICKER !== iconType) {
               tmp35 = null;
               if (constants4.VOICE_MESSAGE === iconType) {
-                tmp35 = guild_id(8309);
+                tmp35 = guild_id(7692);
               }
             }
-            tmp35 = guild_id(10162);
+            tmp35 = guild_id(9748);
           }
-          const tmpResult6 = tmp(7542);
+          const tmpResult6 = tmp(8114);
         }
         const items5 = [tmp26, prop];
         cResult[12] = tmp26;
@@ -669,14 +664,14 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       tmp18 = fn3;
       const tmpResult4 = item(504);
     }
-  : (item) => {
+  : function ForYouMessagePreviewV2(item) {
       item = item.item;
       const acked = item.acked;
       let message_channel_id;
       ({ compactMode, roleStyle } = item);
       let messagePreviewIconV2 = closure_32();
       let SMALL = dependencyMap;
-      const notifCenterV2MessagePreviewParser = message_channel_id(5791).getNotifCenterV2MessagePreviewParser(
+      const notifCenterV2MessagePreviewParser = message_channel_id(5395).getNotifCenterV2MessagePreviewParser(
         closure_27(),
         closure_28,
         roleStyle,
@@ -686,7 +681,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       const guild_id = item.guild_id;
       message_channel_id = item.message_channel_id;
       ({ content, isSystemMessage } = tmp2);
-      const obj = message_channel_id(5791);
+      const obj = message_channel_id(5395);
       let items = [GuildStore];
       const stateFromStores = item(504).useStateFromStores(items, () => GuildStore.getGuild(guild_id));
       const obj2 = item(504);
@@ -751,20 +746,20 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         str = "text-muted";
       }
       const items5 = [
-        item(7542).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj8, { textColor: str }),
+        item(8114).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj8, { textColor: str }),
       ];
       if (null == iconType) {
         items5[1] = tmp12;
         obj7.children = items5;
-        items3[1] = closure_22(item(4892).Text, obj7);
+        items3[1] = closure_22(item(5086).Text, obj7);
         obj5.children = items3;
         return closure_22(closure_7, obj5);
       } else {
         const obj9 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
         if (constants4.ATTACHMENT === iconType) {
-          let tmp15 = guild_id(11055);
+          let tmp15 = guild_id(11701);
           const obj10 = { source: tmp15, size: null, style: null };
-          SMALL = tmp3(1188).IconSizes.SMALL;
+          SMALL = tmp3(1200).IconSizes.SMALL;
           obj10.size = SMALL;
           messagePreviewIconV2 = messagePreviewIconV2.messagePreviewIconV2;
           obj10.style = messagePreviewIconV2;
@@ -773,16 +768,16 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         } else if (constants4.STICKER !== iconType) {
           tmp15 = null;
           if (constants4.VOICE_MESSAGE === iconType) {
-            tmp15 = guild_id(8309);
+            tmp15 = guild_id(7692);
           }
         }
-        tmp15 = guild_id(10162);
+        tmp15 = guild_id(9748);
       }
-      const tmp3Result = item(7542);
+      const tmp3Result = item(8114);
     };
 ReactCompilerGating = fn(558);
 let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (applicationId) => {
+  ? function ApplicationName(applicationId) {
       const cResult = applicationId(576).c(7);
       applicationId = applicationId.applicationId;
       const textVariant = applicationId.textVariant;
@@ -827,7 +822,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = applicationId(504);
     }
-  : (applicationId) => {
+  : function ApplicationName(applicationId) {
       applicationId = applicationId.applicationId;
       const items = [ApplicationStore];
       const stateFromStores = applicationId(504).useStateFromStores(items, () =>
@@ -841,7 +836,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     };
-let closure_39 = noop.memo((item) => {
+let closure_39 = noop.memo(function ForYouRowWrapped(item) {
   item = item.item;
   const rowIndex = item.rowIndex;
   ({ isSoftAcked, onSoftAckItem } = item);
@@ -975,15 +970,15 @@ let closure_39 = noop.memo((item) => {
       obj3.icon = tmp6(notificationCenterItemAcked[44]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[45]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(16396).deleteNotificationCenterItem(tmp3);
+        yield tmp3(16656).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { key: "REMOVE_NOTIFICATION_ERROR", content: null };
           const intl = tmp3(1126).intl;
           obj7.content = intl.string(tmp3(1126).t.WDxhvB);
-          rowIndex(4574).open(obj7);
+          rowIndex(4766).open(obj7);
           c4 = 3;
-          rowIndex(4574);
+          rowIndex(4766);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -992,7 +987,7 @@ let closure_39 = noop.memo((item) => {
         }
         return value;
       });
-      obj3.onPress = function () {
+      obj3.onPress = function onPress() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -1025,9 +1020,9 @@ let closure_39 = noop.memo((item) => {
     tmp11,
     compactMode,
   );
-  if (typeof f73640 === "function") {
+  if (typeof useMarkupReadV2 === "function") {
     const getParserWithoutLinks = onSoftAckItem(tmp3[17]).getParserWithoutLinks;
-    if (typeof f73641 === "function") {
+    if (typeof useMarkupUnreadV2 === "function") {
       const parserWithoutLinks = onSoftAckItem(tmp3[17]).getParserWithoutLinks(closure_24());
       let tmp24 = item.type === tmp2(tmp3[35]).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED;
       if (!tmp24) {
@@ -1207,7 +1202,7 @@ let closure_39 = noop.memo((item) => {
 });
 ReactCompilerGating = fn(558);
 let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (scrollRef) => {
+  ? function ScrollToTopRef(scrollRef) {
       const cResult = c.c(2);
       scrollRef = scrollRef.scrollRef;
       if (cResult[0] !== scrollRef) {
@@ -1231,7 +1226,7 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
       const scrollToTop = Link.useScrollToTop(ref);
       return null;
     }
-  : (scrollRef) => {
+  : function ScrollToTopRef(scrollRef) {
       scrollRef = scrollRef.scrollRef;
       const obj = {
         scrollToTop() {
@@ -1263,7 +1258,7 @@ const result3 = size.fileFinishedImporting("modules/notification_center/native/F
 
 export const ForYouItems = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (isSoftAcked) => {
+    ? function ForYouItemsWrapped(isSoftAcked) {
         const cResult = loadMore(onSoftAckItem[18]).c(48);
         ({ items, onScroll, loadMore } = isSoftAcked);
         ({ loadingMore, nestedInLaunchPad, shouldScrollToTop } = isSoftAcked);
@@ -1314,7 +1309,7 @@ export const ForYouItems = noop.memo(
         const tmp16 = setting1 === loadMore(onSoftAckItem[57]).ChannelListLayoutTypes.COMPACT;
         compactMode = tmp16;
         if (cResult[4] !== loadMore) {
-          class U {
+          class Y {
             constructor() {
               tmp = loadMore(true);
               return;
@@ -1326,18 +1321,18 @@ export const ForYouItems = noop.memo(
               return closure_14.isRefreshing();
             }
           }
-          cResult[5] = U;
+          cResult[5] = Y;
         } else {
-          class U {
+          class Y {
             constructor() {
               tmp = loadMore(true);
               return;
             }
           }
         }
-        onPressLoad = U;
+        onPressLoad = Y;
         if (cResult[6] === setting) {
-          class U {
+          class Y {
             constructor() {
               tmp = loadMore(true);
               return;
@@ -1475,7 +1470,7 @@ export const ForYouItems = noop.memo(
         cResult[6] = setting;
         cResult[7] = tmp16;
         cResult[8] = forceHoistItem;
-        cResult[9] = U;
+        cResult[9] = Y;
         cResult[10] = isForceHoisted;
         cResult[11] = isSoftAcked;
         cResult[12] = onAddSuggestionAnimationFinish;
@@ -1487,7 +1482,7 @@ export const ForYouItems = noop.memo(
         cResult[18] = G;
         const tmpResult2 = loadMore(onSoftAckItem[27]);
       }
-    : (loadMore) => {
+    : function ForYouItemsWrapped(loadMore) {
         loadMore = loadMore.loadMore;
         ({ nestedInLaunchPad, shouldScrollToTop } = loadMore);
         const isSoftAcked = loadMore.isSoftAcked;

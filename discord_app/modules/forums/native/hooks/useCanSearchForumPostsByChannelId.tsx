@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/hooks/useCanSearchForumPostsByChannelId.tsx");
 
 export const useCanSearchForumPostsByChannelId = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanSearchForumPostsByChannelId(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -39,7 +39,7 @@ export const useCanSearchForumPostsByChannelId = ReactCompilerGating.isReactComp
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7);
     }
-  : (arg0) => {
+  : function useCanSearchForumPostsByChannelId(arg0) {
       _require = arg0;
       const items = [ChannelStore, PermissionStore];
       return require("initialize").useStateFromStores(items, () => {

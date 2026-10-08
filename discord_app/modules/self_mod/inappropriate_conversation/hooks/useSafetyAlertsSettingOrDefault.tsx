@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useSafetyAlertsSettingOrDefault = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useSafetyAlertsSettingOrDefault() {
       const cResult = c.c(3);
       const currentUser = UserStore.getCurrentUser();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -69,7 +69,7 @@ export const useSafetyAlertsSettingOrDefault = ReactCompilerGating.isReactCompil
       }
       return tmp11;
     }
-  : () => {
+  : function useSafetyAlertsSettingOrDefault() {
       const currentUser = UserStore.getCurrentUser();
       const items = [UserSettingsProtoStore];
       const stateFromStores = initialize.useStateFromStores(items, () => {

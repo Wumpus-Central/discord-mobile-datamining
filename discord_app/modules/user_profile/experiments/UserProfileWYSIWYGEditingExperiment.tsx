@@ -17,7 +17,7 @@ let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/user_profile/experiments/UserProfileWYSIWYGEditingExperiment.tsx");
 
 export const useIsEligibleForUserProfileWYSIWYGEditing = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsEligibleForUserProfileWYSIWYGEditing(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -29,7 +29,9 @@ export const useIsEligibleForUserProfileWYSIWYGEditing = ReactCompilerGating.isR
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useIsEligibleForUserProfileWYSIWYGEditing(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };
 export const getIsEligibleForUserProfileWYSIWYGEditing = function getIsEligibleForUserProfileWYSIWYGEditing(location) {
   return closure_2.getConfig({ location }).enabled;
 };

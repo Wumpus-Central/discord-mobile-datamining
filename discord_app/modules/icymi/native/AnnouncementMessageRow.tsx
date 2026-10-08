@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import ICYMIActionCreatorsDefault from "../ICYMIActionCreators.tsx";
-import openChannelLongPressActionSheet from "../../channel/native/openChannelLongPressActionSheet.tsx";
 import showLongPressMessageActionSheet from "../../messages/native/long_press/showLongPressMessageActionSheet.tsx";
+import openChannelLongPressActionSheet from "../../channel/native/openChannelLongPressActionSheet.tsx";
 import ICYMIShared from "ICYMIShared.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -14,10 +14,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ITEM_PADDING = fn(16474).ITEM_PADDING;
+const ITEM_PADDING = fn(16734).ITEM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(16434);
+const createICYMIStyles = fn(16694);
 let closure_13 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = {
     pressable: { flex: 1, paddingLeft: paddingLeft.inset },
@@ -33,7 +33,7 @@ let closure_13 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
 let ReactCompilerGating = fn(558);
 let closure_14 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guild) => {
+    ? function ChannelRow(guild) {
         const cResult = message(channel[12]).c(56);
         ({ unread, message } = guild);
         guild = guild.guild;
@@ -86,7 +86,7 @@ let closure_14 = noop.memo(
                       let tmp17 = cResult[18];
                     }
                     message(tmp2[19]);
-                    class E {
+                    class D {
                       constructor() {
                         tmp2 = closure_2;
                         tmp = closure_1;
@@ -148,7 +148,7 @@ let closure_14 = noop.memo(
                     }
                     if (tmp20 === Symbol.for("react.memo_cache_sentinel")) {
                       const string = message(tmp2[20]).intl.string;
-                      class E {
+                      class D {
                         constructor() {
                           tmp2 = closure_2;
                           tmp = closure_1;
@@ -213,7 +213,7 @@ let closure_14 = noop.memo(
                     }
                     if (cResult[20] !== message.id) {
                       guild(tmp2[21]);
-                      class E {
+                      class D {
                         constructor() {
                           tmp2 = closure_2;
                           tmp = closure_1;
@@ -326,7 +326,7 @@ let closure_14 = noop.memo(
                                                   }
                                                 }
                                               }
-                                              class E {
+                                              class D {
                                                 constructor() {
                                                   tmp2 = closure_2;
                                                   tmp = closure_1;
@@ -438,7 +438,7 @@ let closure_14 = noop.memo(
                                               cResult[55] = tmp47;
                                               tmp44 = tmp47;
                                             }
-                                            class E {
+                                            class D {
                                               constructor() {
                                                 tmp2 = closure_2;
                                                 tmp = closure_1;
@@ -518,7 +518,7 @@ let closure_14 = noop.memo(
                                             tmp40 = tmp43;
                                           }
                                         }
-                                        class E {
+                                        class D {
                                           constructor() {
                                             tmp2 = closure_2;
                                             tmp = closure_1;
@@ -600,7 +600,7 @@ let closure_14 = noop.memo(
                                   }
                                 }
                               }
-                              class E {
+                              class D {
                                 constructor() {
                                   tmp2 = closure_2;
                                   tmp = closure_1;
@@ -694,7 +694,7 @@ let closure_14 = noop.memo(
                             }
                           }
                         }
-                        class E {
+                        class D {
                           constructor() {
                             tmp2 = closure_2;
                             tmp = closure_1;
@@ -765,7 +765,7 @@ let closure_14 = noop.memo(
                         cResult[32] = tmp33;
                         tmp32 = tmp33;
                       }
-                      class E {
+                      class D {
                         constructor() {
                           tmp2 = closure_2;
                           tmp = closure_1;
@@ -840,7 +840,7 @@ let closure_14 = noop.memo(
                     tmp27 = tmp29;
                   }
                 }
-                class E {
+                class D {
                   constructor() {
                     tmp2 = closure_2;
                     tmp = closure_1;
@@ -901,8 +901,8 @@ let closure_14 = noop.memo(
                 }
                 cResult[16] = guild.id;
                 cResult[17] = message;
-                cResult[18] = E;
-                tmp17 = E;
+                cResult[18] = D;
+                tmp17 = D;
               }
               class L {
                 constructor() {
@@ -1011,7 +1011,7 @@ let closure_14 = noop.memo(
         tmp9 = P;
         let tmpResult = message(channel[13]);
       }
-    : (message) => {
+    : function ChannelRow(message) {
         message = message.message;
         guild = message.guild;
         const channel = message.channel;
@@ -1189,7 +1189,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/AnnouncementMessageRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (visible) => {
+  ? function AnnouncementMessageRowWrapper(visible) {
       const cResult = message(author[12]).c(15);
       ({ unread, message } = visible);
       visible = visible.visible;
@@ -1338,7 +1338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp23;
     }
-  : (message) => {
+  : function AnnouncementMessageRowWrapper(message) {
       message = message.message;
       let author;
       ({ unread, visible } = message);

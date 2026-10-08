@@ -33,7 +33,7 @@ function getAdvancedSettings() {
   items1[3] = obj5;
   return items1;
 }
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const MarketingURLs = fn(1085).MarketingURLs;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -42,7 +42,7 @@ const result = size.fileFinishedImporting("modules/user_settings/advanced/native
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function SettingsAdvancedScreen() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { sections: getAdvancedSettings() };
@@ -63,7 +63,7 @@ export default noop.memo(
         }
         return tmp7;
       }
-    : () => {
+    : function SettingsAdvancedScreen() {
         const node = noop.useMemo(() => {
           const obj = SettingBuilders;
           return obj.createList({ sections: getAdvancedSettings() });

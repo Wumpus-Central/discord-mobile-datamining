@@ -3,7 +3,7 @@ import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2553 from "../GuildPowerups.messages.js";
+import _modDef2597 from "../GuildPowerups.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import useGuildPowerupTier3OverrideConfigDefault from "../hooks/useGuildPowerupTier3OverrideConfig.tsx";
@@ -29,7 +29,7 @@ obj.staffContainer = {
 let closure_6 = createStyles.createStyles(obj);
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (text) => {
+  ? function Tier3OverrideNotice(text) {
       const cResult = c.c(6);
       text = text.text;
       const tmp4 = closure_6();
@@ -61,7 +61,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp6;
       obj2 = ManaTypeConsolidationExperiment;
     }
-  : (children) => {
+  : function Tier3OverrideNotice(children) {
       const tmp = closure_6();
       const obj2 = { style: tmp.staffContainer, children: null };
       const manaTypeConsolidationExperiment =
@@ -85,7 +85,7 @@ let obj3 = {
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsNotificationContainer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildPowerupsNotificationContainer(guildId) {
       const cResult = c.c(17);
       guildId = guildId.guildId;
       const tmp4 = closure_6();
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef2553["3FRirU"]);
+        const stringResult = intl.string(_modDef2597["3FRirU"]);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp13;
       tmp12 = tmp13;
     }
-  : (guildId) => {
+  : function GuildPowerupsNotificationContainer(guildId) {
       guildId = guildId.guildId;
       const tmp4 = useGuildPowerupTier3OverrideConfigDefault(guildId);
       const tmp5 = useGuildPowerupExpiringNotificationsConfigDefault(guildId);
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         obj3.variant = str2;
         const intl = util.intl;
-        obj3.children = intl.string(_modDef2553["3FRirU"]);
+        obj3.children = intl.string(_modDef2597["3FRirU"]);
         const items = [React4(Text_Text.Text, obj3), ,];
         let shouldShow = tmp4.shouldShow;
         if (shouldShow) {

@@ -9,11 +9,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/hooks/useAdPersonalizationTogglesDisabled.tsx");
 
 export const useAdPersonalizationTogglesDisabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAdPersonalizationTogglesDisabled() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AdPersonalizationStore];
-        const fn = function t() {
+        const fn = function l() {
           return togglesDisabled.isTogglesDisabled();
         };
         cResult[0] = items;
@@ -25,7 +25,7 @@ export const useAdPersonalizationTogglesDisabled = ReactCompilerGating.isReactCo
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useAdPersonalizationTogglesDisabled() {
       const items = [AdPersonalizationStore];
       return initialize.useStateFromStores(items, () => togglesDisabled.isTogglesDisabled());
     };

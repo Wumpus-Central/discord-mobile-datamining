@@ -42,7 +42,7 @@ let result = size.fileFinishedImporting("modules/content_classification/ContentC
 export { ContentClassificationVisibility };
 export { getContentClassificationVisibility };
 export const useContentClassificationVisibility = ReactCompilerGating.isReactCompilerEnabled()
-  ? (data, isPrivate) => {
+  ? function useContentClassificationVisibility(data, isPrivate) {
       const obj = c;
       const cResult = obj.c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -94,7 +94,7 @@ export const useContentClassificationVisibility = ReactCompilerGating.isReactCom
       DISPLAY = obj.DISPLAY;
       const tmpResult = initialize;
     }
-  : (data, isPrivate) => {
+  : function useContentClassificationVisibility(data, isPrivate) {
       initialize;
       [][0] = UserStore;
       if (null != data) {

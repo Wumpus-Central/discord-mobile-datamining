@@ -6,7 +6,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
 import ColorConstants from "../../../colors/native/ColorConstants.tsx";
 import PremiumGroupWordmarkDefault from "PremiumGroupWordmark.tsx";
 import usePremiumGroupFeaturesTableCardTextDefault from "../hooks/usePremiumGroupFeaturesTableCardText.tsx";
@@ -63,7 +63,7 @@ obj.description = { color: nativeDefault.colors.TEXT_DEFAULT };
 let closure_7 = createStyles.createStyles(obj);
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function BetaPill() {
       const cResult = c.c(6);
       const tmp4 = closure_7();
       ({ betaPill, betaText } = tmp4);
@@ -96,7 +96,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp11;
       tmp10 = tmp11;
     }
-  : () => {
+  : function BetaPill() {
       const tmp = closure_7();
       const obj = { style: tmp.betaPill, children: null };
       const obj2 = { variant: "text-xs/bold", style: tmp.betaText, children: null };
@@ -111,7 +111,7 @@ let obj6 = { color: nativeDefault.colors.TEXT_DEFAULT };
 const result = size.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupFeaturesTableCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function PremiumGroupFeaturesTableCard(style) {
       const cResult = c.c(22);
       style = style.style;
       const tmp4 = closure_7();
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp21 = tmp23;
       }
     }
-  : (arg0) => {
+  : function PremiumGroupFeaturesTableCard(arg0) {
       ({ style, premiumGroupRole } = arg0);
       const tmp = closure_7();
       const tmp4 = usePremiumGroupFeaturesTableCardTextDefault(premiumGroupRole, false);

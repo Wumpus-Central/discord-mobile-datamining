@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_status/utils/useCustomStatusActivityForUser.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCustomStatusActivityForUser(arg0) {
       _require = arg0;
       const cResult = require("c").c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return stateFromStores1;
     }
-  : (arg0) => {
+  : function useCustomStatusActivityForUser(arg0) {
       _require = arg0;
       const items = [AuthenticationStore];
       const stateFromStores = require("initialize").useStateFromStores(

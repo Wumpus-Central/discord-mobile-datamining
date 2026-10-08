@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -41,7 +41,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("design/components/Pile/native/PileOverflow.native.tsx");
 
 export const PileOverflow = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PileOverflow(arg0) {
       const cResult = c.c(20);
       ({ size, borderRadius, value } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -134,7 +134,7 @@ export const PileOverflow = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = obj4;
       const tmpResult = useStateFromStores;
     }
-  : (size) => {
+  : function PileOverflow(size) {
       size = size.size;
       ({ borderRadius, value } = size);
       const items = [LocaleStore];

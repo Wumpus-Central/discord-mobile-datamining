@@ -9,10 +9,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const END_CARD_IMAGE_SIZE = fn(14852).END_CARD_IMAGE_SIZE;
+const END_CARD_IMAGE_SIZE = fn(15113).END_CARD_IMAGE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { image: null, info: null, ctaContainer: null };
   const size = {
@@ -32,7 +32,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesEndCardPressableCta.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (bounty) => {
+  ? function BountiesEndCardPressableCta(bounty) {
       const cResult = bounty(getQuestImpressionId[7]).c(25);
       bounty = bounty.bounty;
       const sourceQuestContent = bounty.sourceQuestContent;
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = A;
       const tmpResult = bounty(getQuestImpressionId[8]);
     }
-  : (bounty) => {
+  : function BountiesEndCardPressableCta(bounty) {
       bounty = bounty.bounty;
       const sourceQuestContent = bounty.sourceQuestContent;
       let flag = bounty.disabled;

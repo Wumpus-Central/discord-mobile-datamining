@@ -10,7 +10,7 @@ import springPresets from "../../../animation/reanimated/spring/springPresets.ts
 import ButtonConstants2 from "ButtonConstants.native.tsx";
 import ButtonHooks from "ButtonHooks.native.tsx";
 import ButtonShine from "ButtonShine.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
 import ButtonEllipsis from "ButtonEllipsis.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -23,19 +23,19 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = 300;
-let ButtonConstants = fn(5607);
-const paddingVertical = ButtonConstants.getButtonPadding(fn(5607).SMALL_BUTTON_HEIGHT, fn(5607).SMALL_BUTTON_ICON_SIZE);
-ButtonConstants = fn(5607);
+let ButtonConstants = fn(5380);
+const paddingVertical = ButtonConstants.getButtonPadding(fn(5380).SMALL_BUTTON_HEIGHT, fn(5380).SMALL_BUTTON_ICON_SIZE);
+ButtonConstants = fn(5380);
 const paddingVertical2 = ButtonConstants.getButtonPadding(
-  fn(5607).MEDIUM_BUTTON_HEIGHT,
-  fn(5607).MEDIUM_BUTTON_ICON_SIZE,
+  fn(5380).MEDIUM_BUTTON_HEIGHT,
+  fn(5380).MEDIUM_BUTTON_ICON_SIZE,
 );
-ButtonConstants = fn(5607);
+ButtonConstants = fn(5380);
 const paddingVertical3 = ButtonConstants.getButtonPadding(
-  fn(5607).LARGE_BUTTON_HEIGHT,
-  fn(5607).LARGE_BUTTON_ICON_SIZE,
+  fn(5380).LARGE_BUTTON_HEIGHT,
+  fn(5380).LARGE_BUTTON_ICON_SIZE,
 );
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_14 = createStyles.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     const obj2 = {
@@ -104,7 +104,7 @@ let closure_14 = createStyles.createStyles((arg0, arg1) => {
 });
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PillWrapper(arg0) {
       const cResult = c.c(42);
       ({ children, variant, style, shiny, expressiveRiveRef, expressivePressState } = arg0);
       let tmp4 = undefined !== shiny;
@@ -330,7 +330,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = items9;
       const tmpResult11 = useToken;
     }
-  : (expressivePressState) => {
+  : function PillWrapper(expressivePressState) {
       ({ children, variant, style, shiny } = expressivePressState);
       if (shiny === undefined) {
         shiny = false;
@@ -417,7 +417,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
 fn(558);
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BasicButtonPill(arg0) {
       const cResult = c.c(15);
       ({ children, style, pressed, variant, size, shiny, expressiveRiveRef, expressivePressState } = arg0);
       let str = "primary";
@@ -489,7 +489,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp6 = items;
     }
-  : (variant) => {
+  : function BasicButtonPill(variant) {
       let str = variant.variant;
       ({ children, style, pressed } = variant);
       if (str === undefined) {
@@ -522,7 +522,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_16 = tmp5;
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function LoadingButtonPill(arg0) {
       const cResult = c.c(32);
       ({ children, style, pressed, variant, size, loading, loaderSize, expressiveRiveRef, expressivePressState } =
         arg0);
@@ -684,7 +684,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = items4;
       const tmp6Result = _slicedToArray(closure_22(undefined !== loading && loading, size), 2);
     }
-  : (variant) => {
+  : function LoadingButtonPill(variant) {
       let str = variant.variant;
       ({ children, style, pressed } = variant);
       if (str === undefined) {
@@ -767,7 +767,7 @@ const __initData4 = {
 };
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (loading, arg1) => {
+  ? function useLoadingStyles(loading, arg1) {
       _require = loading;
       const cResult = require("c").c(3);
       const enabled = noop.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext)
@@ -886,7 +886,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp6 = items;
     }
-  : (loading, arg1) => {
+  : function useLoadingStyles(loading, arg1) {
       _require = loading;
       const enabled = noop.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext)
         .reducedMotion.enabled;
@@ -998,7 +998,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/ButtonPill.native.tsx");
 
 export const ButtonPill = ReactCompilerGating.isReactCompilerEnabled()
-  ? (loading) => {
+  ? function ButtonPill(loading) {
       const cResult = c.c(4);
       if (null == loading.loading) {
         if (cResult[0] !== loading) {
@@ -1022,7 +1022,7 @@ export const ButtonPill = ReactCompilerGating.isReactCompilerEnabled()
         return tmp2;
       }
     }
-  : (loading) => {
+  : function ButtonPill(loading) {
       if (null == loading.loading) {
         const obj2 = {};
         const merged = Object.assign(loading);

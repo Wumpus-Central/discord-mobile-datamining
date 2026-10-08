@@ -20,7 +20,7 @@ export default function getCurrentAndNextResourceChannel(guildId, arg1) {
   return items;
 }
 export const usePreviousAndNextResourceChannel = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function usePreviousAndNextResourceChannel(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(9);
@@ -83,7 +83,7 @@ export const usePreviousAndNextResourceChannel = ReactCompilerGating.isReactComp
       }
       return tmp13;
     }
-  : (arg0, arg1) => {
+  : function usePreviousAndNextResourceChannel(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const items = [GuildOnboardingHomeSettingsStore];

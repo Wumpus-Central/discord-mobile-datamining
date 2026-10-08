@@ -2,14 +2,14 @@
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import _modDef8525 from "../../../../_runtime/metro/08525__.js";
+import _modDef9010 from "../../../../_runtime/metro/09010__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BalanceWidgetPillButton(arg0) {
       const cResult = c.c(14);
       ({ balance, onPress, variant, accessible } = arg0);
       let str = "tertiary";
@@ -59,7 +59,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             onPress,
             size: "sm",
             text: tmp5,
-            icon: _modDef8525,
+            icon: _modDef9010,
             accessible: tmp4,
             accessibilityElementsHidden: tmp7,
             importantForAccessibility: str3,
@@ -72,7 +72,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             onPress,
             size: "sm",
             text: tmp5,
-            icon: _modDef8525,
+            icon: _modDef9010,
             accessible: tmp4,
             accessibilityElementsHidden: tmp7,
             importantForAccessibility: str3,
@@ -103,7 +103,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = null === balance;
       cResult[4] = stringResult;
     }
-  : (accessible) => {
+  : function BalanceWidgetPillButton(accessible) {
       ({ balance, variant } = accessible);
       if (variant === undefined) {
         variant = "tertiary";
@@ -133,7 +133,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         str = "";
       }
       obj.text = str;
-      obj.icon = _modDef8525;
+      obj.icon = _modDef9010;
       obj.accessible = flag;
       obj.accessibilityElementsHidden = !flag;
       let str2 = "no";

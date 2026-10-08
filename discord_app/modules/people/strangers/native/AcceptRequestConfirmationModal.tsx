@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   bodyText: { textAlign: "center", alignItems: "center", gap: nativeDefault.space.PX_8 },
   text: { textAlign: "center" },
@@ -20,7 +20,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/people/strangers/native/AcceptRequestConfirmationModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AcceptRequestConfirmationModal(arg0) {
       const cResult = onConfirm(576).c(18);
       ({ onCancel, onConfirm } = arg0);
       const tmp4 = closure_6();
@@ -31,142 +31,91 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const stringResult1 = intl2.string(onConfirm(1126).t["ETE/oC"]);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
+        tmp5 = stringResult;
+        tmp6 = stringResult1;
       } else {
         [tmp5, tmp6] = cResult;
       }
       if (cResult[2] !== onConfirm) {
-        class T {
-          constructor() {
-            tmp = onConfirm();
-            obj = closure_1(closure_2[8]);
-            closeResult = obj.close();
-            return;
-          }
-        }
+        const fn = function f() {
+          onConfirm();
+          AlertActionCreatorsDefault.close();
+        };
         cResult[2] = onConfirm;
-        cResult[3] = T;
+        cResult[3] = fn;
+        let tmp9 = fn;
       } else {
-        class T {
-          constructor() {
-            tmp = onConfirm();
-            obj = closure_1(closure_2[8]);
-            closeResult = obj.close();
-            return;
-          }
-        }
+        tmp9 = cResult[3];
       }
       ({ bodyText, text } = tmp4);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        class T {
-          constructor() {
-            tmp = onConfirm();
-            obj = closure_1(closure_2[8]);
-            closeResult = obj.close();
-            return;
-          }
-        }
-        const stringResult2 = obj2.string(onConfirm(1126).t.eJzSDT);
+        const intl3 = onConfirm(1126).intl;
+        const stringResult2 = intl3.string(onConfirm(1126).t.eJzSDT);
         cResult[4] = stringResult2;
-        const tmp10 = stringResult2;
+        let tmp10 = stringResult2;
       } else {
-        class T {
-          constructor() {
-            tmp = onConfirm();
-            obj = closure_1(closure_2[8]);
-            closeResult = obj.close();
-            return;
-          }
-        }
+        tmp10 = cResult[4];
       }
       if (cResult[5] !== tmp4.text) {
-        class T {
-          constructor() {
-            tmp = onConfirm();
-            obj = closure_1(closure_2[8]);
-            closeResult = obj.close();
-            return;
-          }
-        }
-        const obj3 = { variant: "heading-lg/bold", color: "text-strong", style: text, children: tmp10 };
-        const tmp13 = closure_4(onConfirm(4892).Text, obj3);
+        const obj2 = { variant: "heading-lg/bold", color: "text-strong", style: text, children: tmp10 };
+        const tmp14 = closure_4(onConfirm(5086).Text, obj2);
         cResult[5] = tmp4.text;
-        cResult[6] = tmp13;
+        cResult[6] = tmp14;
+        let tmp12 = tmp14;
       } else {
-        class T {
-          constructor() {
-            tmp = onConfirm();
-            obj = closure_1(closure_2[8]);
-            closeResult = obj.close();
-            return;
-          }
-        }
+        tmp12 = cResult[6];
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        class T {
-          constructor() {
-            tmp = onConfirm();
-            obj = closure_1(closure_2[8]);
-            closeResult = obj.close();
-            return;
-          }
-        }
-        const stringResult3 = obj4.string(onConfirm(1126).t.GB4jUw);
+        const intl4 = onConfirm(1126).intl;
+        const stringResult3 = intl4.string(onConfirm(1126).t.GB4jUw);
         cResult[7] = stringResult3;
-        const tmp14 = stringResult3;
+        let tmp15 = stringResult3;
       } else {
-        class T {
-          constructor() {
-            tmp = onConfirm();
-            obj = closure_1(closure_2[8]);
-            closeResult = obj.close();
-            return;
-          }
-        }
+        tmp15 = cResult[7];
       }
       if (cResult[8] !== tmp4.text) {
-        class T {
-          constructor() {
-            tmp = onConfirm();
-            obj = closure_1(closure_2[8]);
-            closeResult = obj.close();
-            return;
-          }
-        }
-        const obj5 = { variant: "text-md/medium", color: "text-subtle", style: tmp4.text, children: tmp14 };
-        const tmp17 = closure_4(onConfirm(4892).Text, obj5);
+        const obj3 = { variant: "text-md/medium", color: "text-subtle", style: tmp4.text, children: tmp15 };
+        const tmp19 = closure_4(onConfirm(5086).Text, obj3);
         cResult[8] = tmp4.text;
-        cResult[9] = tmp17;
+        cResult[9] = tmp19;
+        let tmp17 = tmp19;
       } else {
-        class T {
-          constructor() {
-            tmp = onConfirm();
-            obj = closure_1(closure_2[8]);
-            closeResult = obj.close();
-            return;
-          }
-        }
+        tmp17 = cResult[9];
       }
       if (cResult[10] === tmp4.bodyText) {
-        class T {
-          constructor() {
-            tmp = onConfirm();
-            obj = closure_1(closure_2[8]);
-            closeResult = obj.close();
-            return;
+        if (cResult[11] === tmp17) {
+          if (cResult[12] === tmp12) {
+            let tmp20 = cResult[13];
           }
+          if (cResult[14] === onCancel) {
+            if (cResult[15] === tmp20) {
+              if (cResult[16] === tmp9) {
+                let tmp22 = cResult[17];
+              }
+              return tmp22;
+            }
+          }
+          const obj4 = { confirmText: tmp5, cancelText: tmp6, onConfirm: tmp9, onCancel, children: tmp20 };
+          const tmp25 = closure_4(common_AlertDefault, obj4);
+          cResult[14] = onCancel;
+          cResult[15] = tmp20;
+          cResult[16] = tmp9;
+          cResult[17] = tmp25;
+          tmp22 = tmp25;
         }
       }
-      const obj6 = { style: bodyText, children: null };
-      const items = [tmp12, tmp16];
-      obj6.children = items;
-      const obj = onConfirm(576);
+      const obj5 = { style: bodyText, children: null };
+      const items = [tmp12, tmp17];
+      obj5.children = items;
+      const tmp21 = closure_5(View, obj5);
       cResult[10] = tmp4.bodyText;
-      cResult[11] = tmp16;
+      cResult[11] = tmp17;
       cResult[12] = tmp12;
-      cResult[13] = closure_5(View, obj6);
-      const tmp18 = closure_5(View, obj6);
+      cResult[13] = tmp21;
+      tmp20 = tmp21;
+      const obj = onConfirm(576);
     }
-  : (onConfirm) => {
+  : function AcceptRequestConfirmationModal(onConfirm) {
       onConfirm = onConfirm.onConfirm;
       const tmp = closure_6();
       const obj = { confirmText: null, cancelText: null, onConfirm: null, onCancel: null, children: null };
@@ -183,11 +132,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { variant: "heading-lg/bold", color: "text-strong", style: tmp.text, children: null };
       const intl3 = onConfirm(1126).intl;
       obj3.children = intl3.string(onConfirm(1126).t.eJzSDT);
-      const items = [closure_4(onConfirm(4892).Text, obj3)];
+      const items = [closure_4(onConfirm(5086).Text, obj3)];
       const obj4 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
       const intl4 = onConfirm(1126).intl;
       obj4.children = intl4.string(onConfirm(1126).t.GB4jUw);
-      items[1] = closure_4(onConfirm(4892).Text, obj4);
+      items[1] = closure_4(onConfirm(5086).Text, obj4);
       obj2.children = items;
       obj.children = closure_5(View, obj2);
       return closure_4(common_AlertDefault, obj);

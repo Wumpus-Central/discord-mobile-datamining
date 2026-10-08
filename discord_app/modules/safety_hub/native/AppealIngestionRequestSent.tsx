@@ -1,6 +1,6 @@
 // discord_app/modules/safety_hub/native/AppealIngestionRequestSent.tsx
 import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink.tsx";
-import _modDef11531 from "../../../../_runtime/metro/11531__.js";
+import _modDef11529 from "../../../../_runtime/metro/11529__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -8,11 +8,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8126);
+const SafetyHubConstants = fn(5921);
 ({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({
   container: { flex: 1, padding: 8 },
   actionsHeader: { marginTop: 31, marginBottom: 16 },
@@ -23,10 +23,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionRequestSent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AppealIngestionRequestSent() {
       const cResult = emitAppealIngestionEvent(576).c(20);
       const obj = emitAppealIngestionEvent(576);
-      emitAppealIngestionEvent = emitAppealIngestionEvent(11513).useEmitAppealIngestionEvent();
+      emitAppealIngestionEvent = emitAppealIngestionEvent(11505).useEmitAppealIngestionEvent();
       const tmp5 = closure_9();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[1];
       }
       if (cResult[2] !== tmp5.checkboxPng) {
-        const obj3 = { source: _modDef11531, style: tmp5.checkboxPng };
+        const obj3 = { source: _modDef11529, style: tmp5.checkboxPng };
         const tmp14 = closure_7(closure_4, obj3);
         cResult[2] = tmp5.checkboxPng;
         cResult[3] = tmp14;
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = { headerText: first, subHeaderText: tmp8 };
-        const tmp17 = closure_7(tmp(11511).AppealIngestionModalHeader, obj4);
+        const tmp17 = closure_7(tmp(11503).AppealIngestionModalHeader, obj4);
         cResult[4] = tmp17;
         let tmp15 = tmp17;
       } else {
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: tmp5.actionsHeader,
           children: tmp18,
         };
-        const tmp22 = closure_7(tmp(4892).Text, obj5);
+        const tmp22 = closure_7(tmp(5086).Text, obj5);
         cResult[6] = tmp5.actionsHeader;
         cResult[7] = tmp22;
         let tmp20 = tmp22;
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [tmp10, tmp15, tmp20, tmp25, tmp32];
       obj9.children = items;
       obj8.children = closure_8(closure_3, obj9);
-      const tmp38 = closure_7(emitAppealIngestionEvent(11511).AppealIngestionModalScreen, obj8);
+      const tmp38 = closure_7(emitAppealIngestionEvent(11503).AppealIngestionModalScreen, obj8);
       cResult[14] = tmp5.container;
       cResult[15] = tmp32;
       cResult[16] = tmp10;
@@ -154,9 +154,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[18] = tmp25;
       cResult[19] = tmp38;
       tmp37 = tmp38;
-      const obj2 = emitAppealIngestionEvent(11513);
+      const obj2 = emitAppealIngestionEvent(11505);
     }
-  : () => {
+  : function AppealIngestionRequestSent() {
       _require = require("useEmitAppealIngestionEvent").useEmitAppealIngestionEvent();
       const tmp = closure_9();
       const intl = require("util").intl;
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp.container, children: null };
       const stringResult1 = intl2.string(require("util").t.Qdx8AP);
       const items = [
-        closure_7(closure_4, { source: _modDef11531, style: tmp.checkboxPng }),
+        closure_7(closure_4, { source: _modDef11529, style: tmp.checkboxPng }),
         closure_7(require("AppealIngestionModal").AppealIngestionModalHeader, {
           headerText: stringResult,
           subHeaderText: stringResult1,
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj5.children = intl3.string(require("util").t["9BRc1N"]);
       items[2] = closure_7(require("Text/Text").Text, obj5);
       const obj6 = { text: null, url: null, onPress: null };
-      const obj4 = { source: _modDef11531, style: tmp.checkboxPng };
+      const obj4 = { source: _modDef11529, style: tmp.checkboxPng };
       const intl4 = require("util").intl;
       obj6.text = intl4.string(require("util").t.PxL38B);
       obj6.url = constants.COMMUNITY_GUIDELINES;

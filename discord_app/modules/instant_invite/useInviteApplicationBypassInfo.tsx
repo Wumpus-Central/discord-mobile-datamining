@@ -11,8 +11,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/useInviteApplicationBypassInfo.tsx");
 
 export const useInviteApplicationBypassInfo = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      _require = arg0;
+  ? function useInviteApplicationBypassInfo(features) {
+      _require = features;
       const cResult = require("c").c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PermissionStore];
@@ -21,103 +21,68 @@ export const useInviteApplicationBypassInfo = ReactCompilerGating.isReactCompile
       } else {
         first = cResult[0];
       }
-      if (cResult[1] !== arg0) {
-        class E {
-          constructor() {
-            return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
-          }
-        }
-        const items1 = [arg0];
-        cResult[1] = arg0;
-        cResult[2] = E;
+      if (cResult[1] !== features) {
+        const fn = function p() {
+          return PermissionStore.can(constants2.KICK_MEMBERS, closure_0);
+        };
+        const items1 = [features];
+        cResult[1] = features;
+        cResult[2] = fn;
         cResult[3] = items1;
         let tmp7 = items1;
+        let tmp6 = fn;
       } else {
-        class E {
-          constructor() {
-            return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
-          }
-        }
+        tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
       const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, E, tmp7);
-      if (arg0 != null) {
-        class E {
-          constructor() {
-            return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
-          }
-        }
+      let features1;
+      const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
+      if (features != null) {
+        features1 = features.features;
       }
-      if (cResult[4] !== undefined) {
-        class E {
-          constructor() {
-            return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
-          }
-        }
-        if (arg0 != null) {
-          class E {
-            constructor() {
-              return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
-            }
-          }
-          let hasItem = obj3.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+      if (cResult[4] !== features1) {
+        let hasItem;
+        if (features != null) {
+          features = features.features;
+          hasItem = features.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL);
         }
         if (hasItem) {
-          class E {
-            constructor() {
-              return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
-            }
-          }
-          if (arg0 != null) {
-            class E {
-              constructor() {
-                return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
-              }
-            }
-            const hasItem1 = obj4.has(constants.MEMBER_VERIFICATION_GATE_ENABLED);
+          let hasItem1;
+          if (features != null) {
+            const features2 = features.features;
+            hasItem1 = features2.has(constants.MEMBER_VERIFICATION_GATE_ENABLED);
           }
           hasItem = hasItem1;
         }
-        if (arg0 != null) {
-          class E {
-            constructor() {
-              return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
-            }
-          }
+        let features3;
+        if (features != null) {
+          features3 = features.features;
         }
-        cResult[4] = undefined;
+        cResult[4] = features3;
         cResult[5] = hasItem;
-        const tmp9 = hasItem;
+        let tmp10 = hasItem;
       } else {
-        class E {
-          constructor() {
-            return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
-          }
-        }
+        tmp10 = cResult[5];
       }
-      if (tmp9) {
-        class E {
-          constructor() {
-            return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
-          }
-        }
+      let tmp17 = tmp16;
+      if (tmp10) {
+        tmp17 = stateFromStores;
       }
-      if (cResult[6] === tmp9) {
-        class E {
-          constructor() {
-            return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
-          }
+      if (cResult[6] === tmp10) {
+        if (cResult[7] === tmp17) {
+          let tmp18 = cResult[8];
         }
-        return obj2;
+        return tmp18;
       }
-      obj2 = { canCreateApplicationBypassInvites: tmp9, isManualApprovalGuild: tmp9 };
-      cResult[6] = tmp9;
-      cResult[7] = tmp9;
+      const obj2 = { canCreateApplicationBypassInvites: tmp17, isManualApprovalGuild: tmp10 };
+      cResult[6] = tmp10;
+      cResult[7] = tmp17;
       cResult[8] = obj2;
+      tmp18 = obj2;
       const tmpResult = require("initialize");
     }
-  : (features) => {
+  : function useInviteApplicationBypassInfo(features) {
       _require = features;
       const items = [PermissionStore];
       const items1 = [features];

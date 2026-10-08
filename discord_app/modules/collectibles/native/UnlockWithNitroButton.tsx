@@ -18,7 +18,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/UnlockWithNitroButton.tsx");
 
 export const UnlockWithNitroButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (text) => {
+  ? function UnlockWithNitroButton(text) {
       const cResult = onTrackPress(576).c(18);
       ({ shouldShrink, onTrackPress } = text);
       text = text.text;
@@ -66,7 +66,7 @@ export const UnlockWithNitroButton = ReactCompilerGating.isReactCompilerEnabled(
         }
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp20 = jsx(onTrackPress(8346).NitroWheelIcon, { size: "sm", color: "white" });
+          const tmp20 = jsx(onTrackPress(9005).NitroWheelIcon, { size: "sm", color: "white" });
           cResult[7] = tmp20;
           let tmp18 = tmp20;
         } else {
@@ -101,7 +101,7 @@ export const UnlockWithNitroButton = ReactCompilerGating.isReactCompilerEnabled(
             onPress: null,
             disabled: null,
           };
-          class T {
+          class C {
             constructor() {
               if (onTrackPress != null) {
                 tmp2 = ShopCtaEnum;
@@ -112,7 +112,7 @@ export const UnlockWithNitroButton = ReactCompilerGating.isReactCompilerEnabled(
             }
           }
           obj2.disabled = stateFromStores;
-          const tmp24 = jsx(onTrackPress(5602).BaseTextButton, {
+          const tmp24 = jsx(onTrackPress(5376).BaseTextButton, {
             textElement: tmp14,
             text: tmp17,
             accessibilityLabel: tmp11,
@@ -132,7 +132,7 @@ export const UnlockWithNitroButton = ReactCompilerGating.isReactCompilerEnabled(
           cResult[17] = tmp24;
           tmp22 = tmp24;
         }
-        class T {
+        class C {
           constructor() {
             if (onTrackPress != null) {
               tmp2 = ShopCtaEnum;
@@ -144,8 +144,8 @@ export const UnlockWithNitroButton = ReactCompilerGating.isReactCompilerEnabled(
         }
         cResult[8] = tmp10;
         cResult[9] = onTrackPress;
-        cResult[10] = T;
-        tmp21 = T;
+        cResult[10] = C;
+        tmp21 = C;
       }
       let tmp15;
       if (undefined !== shouldShrink && shouldShrink) {
@@ -155,7 +155,7 @@ export const UnlockWithNitroButton = ReactCompilerGating.isReactCompilerEnabled(
           allowFontScaling: false,
           children: tmp11,
         };
-        tmp15 = jsx(onTrackPress(4892).Text, {
+        tmp15 = jsx(onTrackPress(5086).Text, {
           variant: "text-xs/semibold",
           color: "text-overlay-light",
           allowFontScaling: false,
@@ -168,7 +168,7 @@ export const UnlockWithNitroButton = ReactCompilerGating.isReactCompilerEnabled(
       tmp14 = tmp15;
       const tmpResult = onTrackPress(504);
     }
-  : (shouldShrink) => {
+  : function UnlockWithNitroButton(shouldShrink) {
       let flag = shouldShrink.shouldShrink;
       if (flag === undefined) {
         flag = false;

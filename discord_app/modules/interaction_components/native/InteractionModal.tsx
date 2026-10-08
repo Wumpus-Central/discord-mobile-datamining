@@ -5,8 +5,8 @@ import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
@@ -21,11 +21,11 @@ function onClose() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const InteractionModalState = fn(14180).InteractionModalState;
+const InteractionModalState = fn(14479).InteractionModalState;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const interaction_modal = "interaction_modal";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   modal: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   scroll: { flex: 1 },
@@ -63,7 +63,7 @@ obj2.error = { marginBottom: nativeDefault.space.PX_16 };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (title) => {
+  ? function InteractionModal(title) {
       const cResult = c.c(63);
       const tmp4 = closure_9();
       title = title.title;
@@ -368,7 +368,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = obj20;
       tmp9 = obj20;
     }
-  : (children) => {
+  : function InteractionModal(children) {
       const tmp = closure_9();
       const modalState = InteractionModalUtils.useModalState(children, onClose);
       const error = modalState.error;

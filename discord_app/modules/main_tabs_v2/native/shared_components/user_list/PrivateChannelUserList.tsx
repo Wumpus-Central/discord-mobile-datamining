@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channelId) => {
+    ? function PrivateChannelUserList(channelId) {
         const cResult = channelId(onUserPress[9]).c(52);
         channelId = channelId.channelId;
         ({ disableStickySections, listStyleOverride, disableBottomSafeZone, insetEnd, headerShown, hideTitle } =
@@ -462,7 +462,7 @@ export default noop.memo(
         cResult[9] = obj2;
         const tmpResult5 = channelId(onUserPress[11]);
       }
-    : (channelId) => {
+    : function PrivateChannelUserList(channelId) {
         channelId = channelId.channelId;
         let flag = channelId.headerShown;
         ({ disableStickySections, listStyleOverride, disableBottomSafeZone, insetEnd } = channelId);

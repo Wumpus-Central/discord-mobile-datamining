@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GroupDMRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function GroupDMRow(channel) {
       const cResult = c.c(16);
       channel = channel.channel;
       ({ trailing, onPress } = channel);
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp6 = fn;
     }
-  : (channel) => {
+  : function GroupDMRow(channel) {
       channel = channel.channel;
       const onPress = channel.onPress;
       ({ trailing, onAccessibilityAction, accessibilityActions } = channel);

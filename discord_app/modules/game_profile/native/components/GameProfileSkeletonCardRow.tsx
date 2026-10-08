@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles((gap) => {
   const obj = { viewport: { overflow: "hidden" }, row: { flexDirection: "row", gap } };
   return obj;
@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSkeletonCardRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GameProfileSkeletonCardRow(arg0) {
       const cResult = c.c(12);
       ({ children, contentContainerStyle, gap, style } = arg0);
       if (undefined === gap) {
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp5 = items1;
     }
-  : (gap) => {
+  : function GameProfileSkeletonCardRow(gap) {
       let PX_12 = gap.gap;
       ({ children, contentContainerStyle } = gap);
       if (PX_12 === undefined) {

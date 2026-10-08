@@ -2,10 +2,10 @@
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import AgeVerificationUtils from "../../../age_assurance/AgeVerificationUtils.tsx";
-import RegionalFeatureConfigUtils from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
-import SettingsConstants from "../../core/native/SettingsConstants.tsx";
-import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
+import RegionalFeatureConfigUtils from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import TinyBroncoSettingsPredicate from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
 import "ReactCompilerGating";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -13,7 +13,7 @@ import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.t
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAccountAgeGroupNonAdultSettingTrailing() {
       const cResult = c.c(3);
       const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -37,7 +37,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp7;
     }
-  : () => {
+  : function useAccountAgeGroupNonAdultSettingTrailing() {
       const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
       const intl = util.intl;
       let stringResult = intl.string(util.t.lKDPGA);
@@ -48,7 +48,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       return stringResult;
     };
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AccountAgeGroupNonAdultSettingPredicate() {
       const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
       const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
       let hasTeenDefaults = RegionalFeatureConfigUtils.useHasTeenDefaults();
@@ -65,7 +65,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return hasTeenDefaults;
     }
-  : () => {
+  : function AccountAgeGroupNonAdultSettingPredicate() {
       const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
       const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
       let hasTeenDefaults = RegionalFeatureConfigUtils.useHasTeenDefaults();
@@ -97,7 +97,7 @@ const pressable = SettingBuilders.createPressable({
   },
   withArrow: true,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function AccountAgeGroupNonAdultSettingPredicate() {
         const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
         const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
         let hasTeenDefaults = RegionalFeatureConfigUtils.useHasTeenDefaults();
@@ -114,7 +114,7 @@ const pressable = SettingBuilders.createPressable({
         }
         return hasTeenDefaults;
       }
-    : () => {
+    : function AccountAgeGroupNonAdultSettingPredicate() {
         const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
         const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
         let hasTeenDefaults = RegionalFeatureConfigUtils.useHasTeenDefaults();

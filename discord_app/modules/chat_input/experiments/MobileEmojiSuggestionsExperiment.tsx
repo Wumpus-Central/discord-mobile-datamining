@@ -18,7 +18,7 @@ let closure_2 = ApexExperiment.createApexExperiment({
 const result = size.fileFinishedImporting("modules/chat_input/experiments/MobileEmojiSuggestionsExperiment.tsx");
 
 export const useMobileEmojiSuggestionsConfig = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useMobileEmojiSuggestionsConfig(location) {
       const cResult = c.c(2);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -31,7 +31,9 @@ export const useMobileEmojiSuggestionsConfig = ReactCompilerGating.isReactCompil
       }
       return closure_2.useConfig(tmp2);
     }
-  : (location) => closure_2.useConfig({ location: location.location });
+  : function useMobileEmojiSuggestionsConfig(location) {
+      return closure_2.useConfig({ location: location.location });
+    };
 export const getIsMobileEmojiSuggestionsConfig = function getIsMobileEmojiSuggestionsConfig(location) {
   return closure_2.getConfig({ location: location.location });
 };

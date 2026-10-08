@@ -7,7 +7,7 @@ import useCommunicationDisabledCountdownCleanup from "../../../guild_communicati
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const link = fn(2114).GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK;
+const link = fn(2126).GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guildMember) => {
+    ? function CommunicationDisabledNoticeForGuild(guildMember) {
         const cResult = c.c(7);
         guildMember = guildMember.guildMember;
         const communicationDisabledCountdownCleanup =
@@ -71,7 +71,7 @@ export default noop.memo(
           return tmp25;
         }
       }
-    : (guildMember) => {
+    : function CommunicationDisabledNoticeForGuild(guildMember) {
         guildMember = guildMember.guildMember;
         const communicationDisabledCountdownCleanup =
           useCommunicationDisabledCountdownCleanup.useCommunicationDisabledCountdownCleanup(guildMember);

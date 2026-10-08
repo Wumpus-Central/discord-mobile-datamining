@@ -18,7 +18,7 @@ styles.spacer = size;
 styles.container = { paddingHorizontal: nativeDefault.space.PX_16 };
 let ReactCompilerGating = fn(558);
 const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function FormSeparator() {
       const obj = c;
       const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -31,7 +31,7 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => {
+  : function FormSeparator() {
       obj = { style: obj.spacer };
       return <React3 style={obj.spacer} />;
     };
@@ -41,7 +41,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventsListView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPressEvent) => {
+  ? function GuildEventsListView(onPressEvent) {
       let obj = guild(onCloseAction[5]);
       const cResult = obj.c(19);
       ({ events, guild } = onPressEvent);
@@ -66,11 +66,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function u(id) {
+          function extractKey(id) {
             return id.id;
-          };
-          cResult[3] = fn;
-          let tmp6 = fn;
+          }
+          cResult[3] = extractKey;
+          let tmp6 = extractKey;
         } else {
           tmp6 = cResult[3];
         }
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const sum = tmp4(tmp2[3]).space.PX_16 + tmp5;
               if (cResult[11] !== sum) {
                 const obj4 = { paddingBottom: sum };
-                class A {
+                class P {
                   constructor() {
                     obj = { onClose: onCloseAction, guild };
                     return jsx(closure_1(closure_2[8]), obj);
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              class A {
+              class P {
                 constructor() {
                   obj = { onClose: onCloseAction, guild };
                   return jsx(closure_1(closure_2[8]), obj);
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[17] = tmp10;
               cResult[18] = tmp15;
             }
-            class A {
+            class P {
               constructor() {
                 obj = { onClose: onCloseAction, guild };
                 return jsx(closure_1(closure_2[8]), obj);
@@ -202,8 +202,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[9] = onCloseAction;
-            cResult[10] = A;
-            tmp8 = A;
+            cResult[10] = P;
+            tmp8 = P;
           }
         }
         class E {
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = E;
       }
     }
-  : (lastAckedId) => {
+  : function GuildEventsListView(lastAckedId) {
       ({ events, guild } = lastAckedId);
       ({ onPressEvent: importDefault, onCloseAction } = lastAckedId);
       lastAckedId = lastAckedId.lastAckedId;
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           contentContainerStyle: null,
         };
         obj.style = obj.container;
-        obj.keyExtractor = function keyExtractor(id) {
+        obj.keyExtractor = function extractKey(id) {
           return id.id;
         };
         obj.renderItem = function renderItem(item) {

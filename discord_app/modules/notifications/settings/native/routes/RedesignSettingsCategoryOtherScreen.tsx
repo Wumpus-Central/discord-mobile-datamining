@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function RedesignSettingsCategoryOtherScreen() {
         const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { sections: null };
@@ -39,7 +39,7 @@ export default noop.memo(
         }
         return tmp6;
       }
-    : () => {
+    : function RedesignSettingsCategoryOtherScreen() {
         const node = noop.useMemo(() => {
           const obj2 = { sections: null };
           const obj = SettingBuilders;

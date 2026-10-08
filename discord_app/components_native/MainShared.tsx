@@ -26,7 +26,7 @@ const jsx = fn(21).jsx;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PictureInPictureGlobalContainer() {
       let tmp2 = dependencyMap;
       const cResult = c.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -74,7 +74,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp14;
     }
-  : () => {
+  : function PictureInPictureGlobalContainer() {
       const items = [ChannelStore, RTCConnectionStore];
       const stateFromStores = initialize.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
       const hasPipParticipant = usePipVideoOrStream.useHasPipParticipant({ isActivityViewFocused: false });
@@ -98,7 +98,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAppKeyCommands() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmpResult = PlatformUtils;
@@ -129,7 +129,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult2 = KeyCommands;
       }
     }
-  : () => {
+  : function useAppKeyCommands() {
       const memo = noop.useMemo(() => {
         const KeyModifierFlags = KeyCommands.KeyModifierFlags;
         const obj2 = {
@@ -165,7 +165,7 @@ export const ToastContainer = AppToastContainerDefault;
 export const PictureInPictureGlobalContainer = tmp2;
 export const useAppKeyCommands = tmp3;
 export const useScreenReaderEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useScreenReaderEnabled() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o() {
@@ -181,7 +181,7 @@ export const useScreenReaderEnabled = ReactCompilerGating.isReactCompilerEnabled
       }
       const effect = noop.useEffect(tmp2, tmp3);
     }
-  : () => {
+  : function useScreenReaderEnabled() {
       const effect = noop.useEffect(() => {
         const result = AccessibilityManagerDefault.checkScreenreaderEnabled();
       }, []);

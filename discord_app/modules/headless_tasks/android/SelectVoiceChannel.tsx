@@ -1,7 +1,7 @@
 // discord_app/modules/headless_tasks/android/SelectVoiceChannel.tsx
 import transitionToChannel from "../../routing/transitionToChannel.tsx";
-import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUtils.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../actions/SelectedChannelActionCreators.tsx";
+import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUtils.tsx";
 import HeadlessTaskUtilsDefault from "../HeadlessTaskUtils.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";

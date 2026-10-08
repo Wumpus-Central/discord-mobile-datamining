@@ -7,14 +7,14 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import PublicGuildsUtils from "../../PublicGuildsUtils.tsx";
-import _modDef11286 from "../../../../../_runtime/metro/11286__.js";
+import _modDef11366 from "../../../../../_runtime/metro/11366__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: { padding: 16 }, avatar: null, nameWrapper: null, headerText: null, description: null };
 let size = { borderRadius: nativeDefault.radii.lg, height: 80, width: 80, marginVertical: 16 };
 obj2.avatar = size;
@@ -27,7 +27,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/public_guilds/native/components/PublicGuildAnnouncementProfile.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PublicGuildAnnouncementProfile() {
       const cResult = c.c(22);
       const tmp4 = closure_6();
       ({ content, avatar } = tmp4);
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { source: _modDef11286, disableColor: true };
+        const obj3 = { source: _modDef11366, disableColor: true };
         const tmp14 = React4(native.Icon, obj3);
         cResult[3] = tmp14;
         let tmp11 = tmp14;
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp21;
       tmp20 = tmp21;
     }
-  : () => {
+  : function PublicGuildAnnouncementProfile() {
       const tmp = closure_6();
       const obj = { startExpanded: true, children: null };
       const obj2 = { style: tmp.content, children: null };
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.source = PublicGuildsUtils.getPublicSystemMessageAvatar();
       const items = [React4(tmp2, obj3), , ,];
       const obj5 = { style: tmp.nameWrapper, children: null };
-      const items1 = [React4(native.Icon, { source: _modDef11286, disableColor: true })];
+      const items1 = [React4(native.Icon, { source: _modDef11366, disableColor: true })];
       const obj7 = {
         style: tmp.headerText,
         variant: "heading-xl/extrabold",

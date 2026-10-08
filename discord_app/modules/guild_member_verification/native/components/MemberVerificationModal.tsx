@@ -12,12 +12,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 let View = fn(17).View;
-const MemberVerificationFormConstants = fn(5971);
+const MemberVerificationFormConstants = fn(6154);
 ({ SCROLL_EVENT_TIMER_MS: closure_7, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1188).Icon);
-const createStyles = fn(4896);
+let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1200).Icon);
+const createStyles = fn(5090);
 let obj = {
   flex: { flex: 1 },
   flexLoading: {
@@ -74,7 +74,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function MemberVerificationModal(guildId) {
       const cResult = guildId(top[11]).c(65);
       guildId = guildId.guildId;
       const onClose = guildId.onClose;
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp6 = onClose(top[12])();
       const sharedValue = guildId(top[6]).useSharedValue(0);
       let obj2 = guildId(top[6]);
-      const fn = function u(contentOffset) {
+      const fn = function p(contentOffset) {
         return sharedValue.set(contentOffset.contentOffset.y);
       };
       fn.__closure = { scrollTop: sharedValue };
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         safeAreaTop: top,
         isDarkTheme: isThemeDarkResult,
       };
-      class C {
+      class M {
         constructor() {
           obj = { opacity: null };
           obj2 = closure_0(closure_2[6]);
@@ -145,15 +145,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj7 = guildId(top[6]);
-      C.__closure = {
+      M.__closure = {
         interpolate: guildId(top[6]).interpolate,
         scrollTop: sharedValue,
         bannerHeight: tmp11,
         safeAreaTop: top,
       };
-      C.__workletHash = 12938747435123;
-      C.__initData = __initData3;
-      const animatedStyle1 = obj7.useAnimatedStyle(C);
+      M.__workletHash = 12938747435123;
+      M.__initData = __initData3;
+      const animatedStyle1 = obj7.useAnimatedStyle(M);
       const obj8 = {
         interpolate: guildId(top[6]).interpolate,
         scrollTop: sharedValue,
@@ -532,7 +532,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp39;
     }
-  : (guildId) => {
+  : function MemberVerificationModal(guildId) {
       guildId = guildId.guildId;
       const onClose = guildId.onClose;
       let top;
@@ -698,7 +698,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             items5[1] = closure_9(tmp2(tmp3[23]), obj15);
             const obj16 = {
               guild: tmp13,
-              onSuccess(application_status) {
+              onSuccess: function handleSuccess(application_status) {
                 const tmp2 = null != GuildMemberStore.getSelfMember(guildId);
                 if (!tmp5) {
                   const result = MemberVerificationAlertActionCreators.openMemberVerificationPendingAlert(guildId);

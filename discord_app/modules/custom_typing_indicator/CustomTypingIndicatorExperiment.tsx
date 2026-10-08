@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/custom_typing_indicator/Custo
 
 export const CustomTypingIndicatorExperiment = apexExperiment;
 export const useCustomTypingIndicatorConfig = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useCustomTypingIndicatorConfig(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -31,7 +31,9 @@ export const useCustomTypingIndicatorConfig = ReactCompilerGating.isReactCompile
       }
       return apexExperiment.useConfig(tmp2);
     }
-  : (location) => apexExperiment.useConfig({ location });
+  : function useCustomTypingIndicatorConfig(location) {
+      return apexExperiment.useConfig({ location });
+    };
 export const getCustomTypingIndicatorConfig = function getCustomTypingIndicatorConfig(location) {
   return apexExperiment.getConfig({ location });
 };

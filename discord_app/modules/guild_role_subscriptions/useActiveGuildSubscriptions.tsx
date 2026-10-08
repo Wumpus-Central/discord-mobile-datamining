@@ -7,14 +7,14 @@ import SubscriptionStore from "../../stores/billing/SubscriptionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const constants = fn(15038).UserGuildRoleSubscriptionRelationship;
+const constants = fn(15300).UserGuildRoleSubscriptionRelationship;
 let closure_7 = [];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useActiveGuildSubscriptions.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useActiveGuildSubscriptions(arg0) {
       const cResult = require("c").c(8);
       if (cResult[0] !== arg0) {
         let obj2 = arg0;
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(tmp7, tmp8);
-      importAll = noop.useRef(false);
+      noop.useRef(false);
       if (cResult[4] === (undefined !== ensureFresh && ensureFresh)) {
         if (cResult[5] === tmp6) {
           let tmp11 = cResult[6];
@@ -62,59 +62,47 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return stateFromStores;
       }
-      class F {
-        constructor() {
-          tmp = ensureFresh;
-          current = closure_2.current;
-          obj = closure_5;
-          tmp2 = closure_1;
-          tmp3 = closure_2;
-          activeGuildSubscriptions = closure_5.getActiveGuildSubscriptions();
-          num = undefined;
-          if (activeGuildSubscriptions != null) {
-            num = activeGuildSubscriptions.length;
-          }
-          if (num == null) {
-            num = 0;
-          }
-          tmp4 = 0 !== num || !tmp2;
-          tmp5 = !tmp4;
-          if (tmp4) {
-            tmp6 = !tmp;
-            if (tmp) {
-              tmp6 = current;
-            }
-            tmp7 = !tmp6;
-            if (tmp6) {
-              tmp8 = !current;
-              if (!current) {
-                tmp8 = !obj.hasFetchedSubscriptions();
-              }
-              tmp7 = tmp8;
-            }
-            tmp5 = tmp7;
-          }
-          if (tmp5) {
-            flag = true;
-            tmp3.current = true;
-            tmp9 = closure_2;
-            tmp10 = closure_3;
-            obj2 = closure_2(closure_3[7]);
-            subscriptions = obj2.fetchSubscriptions();
-          }
-          return;
+      const fn = function v() {
+        const current = ref.current;
+        activeGuildSubscriptions = SubscriptionStore.getActiveGuildSubscriptions();
+        let num;
+        if (activeGuildSubscriptions != null) {
+          num = activeGuildSubscriptions.length;
         }
-      }
+        if (num == null) {
+          num = 0;
+        }
+        let tmp5 = !tmp4;
+        if (0 !== num || !closure_1) {
+          let tmp6 = !closure_0;
+          if (closure_0) {
+            tmp6 = current;
+          }
+          let tmp7 = !tmp6;
+          if (tmp6) {
+            let tmp8 = !current;
+            if (!current) {
+              tmp8 = !SubscriptionStore.hasFetchedSubscriptions();
+            }
+            tmp7 = tmp8;
+          }
+          tmp5 = tmp7;
+        }
+        if (tmp5) {
+          ref.current = true;
+          const subscriptions = actions_BillingActionCreatorsAll.fetchSubscriptions();
+        }
+      };
       const items1 = [undefined !== ensureFresh && ensureFresh, tmp6];
       cResult[4] = undefined !== ensureFresh && ensureFresh;
       cResult[5] = tmp6;
-      cResult[6] = F;
+      cResult[6] = fn;
       cResult[7] = items1;
       tmp12 = items1;
-      tmp11 = F;
+      tmp11 = fn;
       const tmpResult = require("initialize");
     }
-  : () => {
+  : function useActiveGuildSubscriptions() {
       let obj = arg0;
       if (arg0 === undefined) {
         obj = {};

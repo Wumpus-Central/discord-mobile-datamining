@@ -2,15 +2,15 @@
 import _mod17 from "../../../_runtime/metro/00017__.js";
 import util from "../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
-import _modDef1936 from "../../../_runtime/metro/01936__.js";
+import _modDef1948 from "../../../_runtime/metro/01948__.js";
 import getGameMediaRefURLDefault from "../games/getGameMediaRefURL.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import MarkupTextRuleDefault from "MarkupTextRule.tsx";
 import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule.tsx";
 import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule.tsx";
+import MarkupInvisibleUnicode from "MarkupInvisibleUnicode.tsx";
 import utils_ChannelUtils from "../../utils/native/ChannelUtils.tsx";
 import useGameMentionData from "../game_mentions/hooks/useGameMentionData.tsx";
-import MarkupInvisibleUnicode from "MarkupInvisibleUnicode.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const Image = _mod17.Image;
@@ -49,7 +49,7 @@ let obj = {
   silentPrefix: null,
 };
 let obj2 = {};
-let merged = Object.assign(_modDef1936.defaultRules.escape);
+let merged = Object.assign(_modDef1948.defaultRules.escape);
 obj2.requiredFirstCharacters = undefined;
 obj2.match = function match(arg0) {
   const INVISIBLE_CHAR_REGEX = MarkupInvisibleUnicode.INVISIBLE_CHAR_REGEX;

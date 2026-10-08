@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/ErrorBlock.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function ErrorBlock(children) {
       const cResult = c.c(2);
       children = children.children;
       if (cResult[0] !== children) {
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (children) => {
+  : function ErrorBlock(children) {
       const obj = { color: MessageBlock.MessageBlockColors.RED, children: children.children };
       return jsx(MessageBlockDefault, { color: MessageBlock.MessageBlockColors.RED, children: children.children });
     };

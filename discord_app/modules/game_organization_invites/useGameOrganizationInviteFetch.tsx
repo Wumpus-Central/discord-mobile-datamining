@@ -4,7 +4,7 @@ import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteA
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import GameOrganizationInviteStore from "GameOrganizationInviteStore.tsx";
 
-const constants = fn(11097).GameOrganizationInviteStates;
+const constants = fn(10462).GameOrganizationInviteStates;
 const initialize = fn(504);
 const obj2 = {
   getQueryId: fn(1085).QueryIds.GAME_ORGANIZATION_INVITE,
@@ -74,7 +74,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-obj2.load = function () {
+obj2.load = function load() {
   const self = this;
   const apply = closure_2.apply;
   if (typeof apply === "unknown") {

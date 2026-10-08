@@ -12,7 +12,7 @@ const dependencyMap = {
   sm: { width: 18, height: 18 },
   md: { width: 24, height: 24 },
   lg: { width: 32, height: 32 },
-  custom: { width: "start", height: "unicodeVersion" },
+  custom: { width: "Array", height: "Reflect" },
   refresh_sm: { width: 18, height: 18 },
 };
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
 
 export const BaseIconImage = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BaseIconImage(arg0) {
       const cResult = c.c(14);
       ({ source, size, color, resizeMode, style, accessible, accessibilityLabel } = arg0);
       const str = "md";
@@ -91,7 +91,7 @@ export const BaseIconImage = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = useToken;
     }
-  : (size) => {
+  : function BaseIconImage(size) {
       let str = size.size;
       if (str === undefined) {
         str = "md";

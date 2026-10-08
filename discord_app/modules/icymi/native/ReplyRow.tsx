@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createICYMIStyles = fn(16434);
+const createICYMIStyles = fn(16694);
 let closure_6 = createICYMIStyles.createICYMIStyles((marginLeft) => {
   const obj = {
     separator: null,
@@ -107,7 +107,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/ReplyRow.tsx");
 
 export const ContentInventoryReplyRow = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ContentInventoryReplyRow(arg0) {
       const cResult = c.c(17);
       ({ reactText, onReply } = arg0);
       const tmp4 = closure_6();
@@ -196,7 +196,7 @@ export const ContentInventoryReplyRow = ReactCompilerGating.isReactCompilerEnabl
         children: reactText,
       };
     }
-  : (onPress) => {
+  : function ContentInventoryReplyRow(onPress) {
       const reactText = onPress.reactText;
       const tmp = closure_6();
       const obj = { style: tmp.replyContainer, children: null };

@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/hooks/useProductPurchaseState.tsx
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import compactDefault from "../../../../_runtime/08530_compact.js";
+import compactDefault from "../../../../_runtime/09015_compact.js";
 import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
 
 const require = globalThis.__r;
@@ -63,7 +63,7 @@ const result = size.fileFinishedImporting("modules/collectibles/hooks/useProduct
 
 export { getProductPurchaseState };
 export const useProductPurchaseState = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useProductPurchaseState(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -74,7 +74,7 @@ export const useProductPurchaseState = ReactCompilerGating.isReactCompilerEnable
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function l() {
+        const fn = function c() {
           return getProductPurchaseState(CollectiblesPurchaseStore, closure_0);
         };
         cResult[1] = arg0;
@@ -86,7 +86,7 @@ export const useProductPurchaseState = ReactCompilerGating.isReactCompilerEnable
       const obj = require("c");
       return require("initialize").useStateFromStoresObject(first, tmp6);
     }
-  : (arg0) => {
+  : function useProductPurchaseState(arg0) {
       _require = arg0;
       const items = [CollectiblesPurchaseStore];
       return require("initialize").useStateFromStoresObject(items, () =>

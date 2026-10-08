@@ -12,7 +12,7 @@ let closure_3 = ["color"];
 let closure_4 = ["color"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: null,
   default: null,
@@ -66,7 +66,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowIcon.native.tsx");
 
 export const TableRowIcon = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TableRowIcon(arg0) {
       const cResult = c.c(22);
       ({ source, IconComponent, variant } = arg0);
       let str = "default";
@@ -201,7 +201,7 @@ export const TableRowIcon = ReactCompilerGating.isReactCompilerEnabled()
           break;
       }
     }
-  : (arg0) => {
+  : function TableRowIcon(arg0) {
       ({ source, IconComponent, variant } = arg0);
       if (variant === undefined) {
         variant = "default";

@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   banner: {
     flexDirection: "row",
@@ -23,7 +23,7 @@ let obj2 = {
     paddingHorizontal: nativeDefault.space.PX_8,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
     position: "relative",
-    zIndex: fn(6714).PROFILE_TOP_LAYER_Z_INDEX,
+    zIndex: fn(6891).PROFILE_TOP_LAYER_Z_INDEX,
   },
 };
 let closure_6 = createStyles.createStyles(obj2);
@@ -38,13 +38,13 @@ let obj3 = {
   paddingHorizontal: nativeDefault.space.PX_8,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   position: "relative",
-  zIndex: fn(6714).PROFILE_TOP_LAYER_Z_INDEX,
+  zIndex: fn(6891).PROFILE_TOP_LAYER_Z_INDEX,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrivateBanner.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (primaryColor) => {
+  ? function UserProfilePrivateBanner(primaryColor) {
       const cResult = c.c(9);
       primaryColor = primaryColor.primaryColor;
       const tmp4 = closure_6();
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp8 = items1;
     }
-  : (primaryColor) => {
+  : function UserProfilePrivateBanner(primaryColor) {
       primaryColor = primaryColor.primaryColor;
       const items = [closure_6().banner];
       let tmp3 = null != primaryColor;

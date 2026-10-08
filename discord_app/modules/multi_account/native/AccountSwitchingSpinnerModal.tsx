@@ -7,13 +7,13 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({
   switchingSpinnerContainer: { flex: 1, alignItems: "center", justifyContent: "center" },
 });
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AccountSwitchingSpinnerModal() {
       const cResult = c.c(4);
       const tmp4 = closure_4();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -47,7 +47,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp10;
     }
-  : () => {
+  : function AccountSwitchingSpinnerModal() {
       const obj = {
         style: closure_4().switchingSpinnerContainer,
         accessible: true,

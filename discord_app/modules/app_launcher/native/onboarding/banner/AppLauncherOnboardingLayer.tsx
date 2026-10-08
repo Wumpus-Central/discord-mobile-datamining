@@ -6,9 +6,9 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(9100).useBestActiveChatInputContainerHeight;
+let closure_4 = fn(9318).useBestActiveChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: null };
 const rect = {
   opacity: 1,
@@ -28,7 +28,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function AppLauncherOnboardingLayer(arg0) {
         const cResult = c.c(6);
         ({ context, visibleContent, bottomOffset } = arg0);
         const tmp3 = closure_6();
@@ -64,7 +64,7 @@ export default noop.memo(
         cResult[5] = tmp6;
         tmp5 = tmp6;
       }
-    : (visibleContent) => {
+    : function AppLauncherOnboardingLayer(visibleContent) {
         visibleContent = visibleContent.visibleContent;
         ({ context, bottomOffset } = visibleContent);
         let tmp3 = null;

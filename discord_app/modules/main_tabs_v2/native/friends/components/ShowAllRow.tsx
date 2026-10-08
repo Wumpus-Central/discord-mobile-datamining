@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   labelContainer: { flexDirection: "row", alignItems: "center" },
   showAllText: { marginLeft: nativeDefault.space.PX_12 },
@@ -24,7 +24,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ShowAllRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ShowAllRow(arg0) {
       const cResult = c.c(18);
       ({ users, onPress, count } = arg0);
       const tmp4 = closure_5();
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp16 = tmp18;
       }
     }
-  : (users) => {
+  : function ShowAllRow(users) {
       users = users.users;
       ({ onPress, count } = users);
       const tmp = closure_5();

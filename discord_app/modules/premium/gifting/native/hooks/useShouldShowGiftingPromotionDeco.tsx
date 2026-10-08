@@ -8,7 +8,7 @@ const PremiumTypes = PremiumConstants.PremiumTypes;
 const result = size.fileFinishedImporting("modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useShouldShowGiftingPromotionDeco(arg0) {
       const nativeGiftContext = NativeGiftContext.useNativeGiftContext();
       const claimableRewards = nativeGiftContext.claimableRewards;
       if (null != arg0) {
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : (arg0) => {
+  : function useShouldShowGiftingPromotionDeco(arg0) {
       const nativeGiftContext = NativeGiftContext.useNativeGiftContext();
       const claimableRewards = nativeGiftContext.claimableRewards;
       if (null != arg0) {

@@ -46,14 +46,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let closure_2 = ["badge", "primaryTintColor", "secondaryTintColor"];
-const GuildTagBadgeKind = fn(7614).GuildTagBadgeKind;
+const GuildTagBadgeKind = fn(7860).GuildTagBadgeKind;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadge.tsx");
 
 export const GuildBadge = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildBadge(arg0) {
       const cResult = c.c(151);
       if (cResult[0] !== arg0) {
         ({ badge, primaryTintColor, secondaryTintColor } = arg0);
@@ -738,7 +738,7 @@ export const GuildBadge = ReactCompilerGating.isReactCompilerEnabled()
         return null;
       }
     }
-  : (arg0) => {
+  : function GuildBadge(arg0) {
       ({ badge, primaryTintColor, secondaryTintColor } = arg0);
       const merged = Object.assign(arg0, Object.assign({ badge: 0, primaryTintColor: 0, secondaryTintColor: 0 }));
       if (GuildTagBadgeKind.SWORD === badge) {

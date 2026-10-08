@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SearchConstants = fn(7524);
+const SearchConstants = fn(9247);
 ({
   FILES_OR_LINKS_GAP_WIDTH: c3,
   FILES_OR_LINKS_NUM_COLUMNS: closure_4,
@@ -15,7 +15,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useFileOrLinkImageDimensions.tsx");
 
 export const useFileOrLinkImageDimensions = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFileOrLinkImageDimensions(arg0) {
       const cResult = c.c(3);
       const diff = (arg0 - 2 * timestampProducer - (React4 - 1) * React3) / React4 - 2;
       const result = diff * hasOwnProperty;
@@ -31,7 +31,7 @@ export const useFileOrLinkImageDimensions = ReactCompilerGating.isReactCompilerE
       cResult[2] = size;
       tmp4 = size;
     }
-  : (arg0) => {
+  : function useFileOrLinkImageDimensions(arg0) {
       const diff = (arg0 - 2 * timestampProducer - (React4 - 1) * React3) / React4 - 2;
       require = diff;
       const result = diff * hasOwnProperty;

@@ -38,11 +38,11 @@ function getContentCategory() {
   items1[1] = obj2;
   return items1;
 }
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 const ListHeaderComponent = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function SensitiveContentFiltersNotices() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { isListHeader: true, screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS };
@@ -57,7 +57,7 @@ const ListHeaderComponent = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => {
+  : function SensitiveContentFiltersNotices() {
       const obj = { isListHeader: true, screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS };
       return jsx(SettingsScreenNoticesDefault, {
         isListHeader: true,
@@ -71,7 +71,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsSensitiveContentFilters() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { sections: null, ListHeaderComponent: null };
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp10;
     }
-  : () => {
+  : function UserSettingsSensitiveContentFilters() {
       const node = noop.useMemo(() => {
         const obj2 = { sections: null, ListHeaderComponent };
         const items = [...closure_1_6()];

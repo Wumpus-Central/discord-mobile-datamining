@@ -21,7 +21,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/screens/TotpScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function TotpScreen(arg0) {
       const cResult = require("c").c(24);
       ({ mfaChallenge, finish } = arg0);
       _require = finish;
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           })();
         });
-        const fn = function () {
+        function t1() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -128,10 +128,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[0] = finish;
-        cResult[1] = fn;
-        let tmp11 = fn;
+        cResult[1] = t1;
+        let tmp11 = t1;
       } else {
         tmp11 = cResult[1];
       }
@@ -308,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp20 = tmp22;
       const tmp21 = require("ClipboardCopyInput");
     }
-  : (finish) => {
+  : function TotpScreen(finish) {
       finish = finish.finish;
       importDefault = undefined;
       first = undefined;

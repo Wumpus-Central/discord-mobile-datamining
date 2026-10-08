@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useCharacterLimitAnnouncement = ReactCompilerGating.isReactCompilerEnabled()
-  ? (currentLength) => {
+  ? function useCharacterLimitAnnouncement(currentLength) {
       const cResult = currentLength(maxLength[2]).c(5);
       currentLength = currentLength.currentLength;
       maxLength = currentLength.maxLength;
@@ -25,7 +25,7 @@ export const useCharacterLimitAnnouncement = ReactCompilerGating.isReactCompiler
           const effect = message.useEffect(tmp2, tmp3);
         }
       }
-      const fn = function t() {
+      const fn = function c() {
         if (null != maxLength) {
           if (currentLength >= tmp) {
             if (!ref.current) {
@@ -48,7 +48,7 @@ export const useCharacterLimitAnnouncement = ReactCompilerGating.isReactCompiler
       tmp3 = items;
       tmp2 = fn;
     }
-  : (currentLength) => {
+  : function useCharacterLimitAnnouncement(currentLength) {
       currentLength = currentLength.currentLength;
       const maxLength = currentLength.maxLength;
       const message = currentLength.message;

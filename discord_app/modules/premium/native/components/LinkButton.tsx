@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({
   defaultContainerStyle: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" },
   disabledContainerStyle: { opacity: 0.5 },
@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/components/LinkButton.tsx");
 
 export const LinkButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function LinkButton(arg0) {
       const cResult = c.c(16);
       ({ onPress, text, containerStyle, disabled, textStyle, variant, textColor, iconRight } = arg0);
       let str = "text-xs/medium";
@@ -103,7 +103,7 @@ export const LinkButton = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items1;
       tmp5 = items1;
     }
-  : (textColor) => {
+  : function LinkButton(textColor) {
       ({ disabled, variant } = textColor);
       ({ onPress, text, containerStyle, textStyle } = textColor);
       if (variant === undefined) {

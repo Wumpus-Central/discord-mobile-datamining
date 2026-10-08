@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef3073 from "../../../age_assurance/AgeAssurance.messages.js";
+import _modDef3117 from "../../../age_assurance/AgeAssurance.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -14,11 +14,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   headerContainer: {
     gap: nativeDefault.space.PX_4,
@@ -29,7 +29,7 @@ let obj2 = {
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function SettingsAgeGroupHeader() {
       const cResult = c.c(5);
       const tmp4 = closure_9();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -45,7 +45,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
         const intl = util.intl;
-        obj2.children = intl.string(_modDef3073.PY4MA0);
+        obj2.children = intl.string(_modDef3117.PY4MA0);
         const tmp9 = React5(Text_Text.Text, obj2);
         cResult[1] = tmp9;
         let tmp6 = tmp9;
@@ -56,7 +56,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { variant: "text-sm/normal", color: "text-default", children: null };
         const intl2 = util.intl;
         const obj4 = { handleOnHelpUrlHook: first };
-        obj3.children = intl2.format(_modDef3073["1DN29p"], obj4);
+        obj3.children = intl2.format(_modDef3117["1DN29p"], obj4);
         const tmp13 = React5(Text_Text.Text, obj3);
         cResult[2] = tmp13;
         let tmp10 = tmp13;
@@ -76,7 +76,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp14;
     }
-  : () => {
+  : function SettingsAgeGroupHeader() {
       let obj = { style: closure_9().headerContainer, children: null };
       const callback = noop.useCallback(() => {
         const obj = AgeVerificationActionCreatorsDefault;
@@ -84,11 +84,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const obj2 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
-      obj2.children = intl.string(_modDef3073.PY4MA0);
+      obj2.children = intl.string(_modDef3117.PY4MA0);
       const items = [React5(Text_Text.Text, obj2)];
       const obj3 = { variant: "text-sm/normal", color: "text-default", children: null };
       const intl2 = util.intl;
-      obj3.children = intl2.format(_modDef3073["1DN29p"], { handleOnHelpUrlHook: callback });
+      obj3.children = intl2.format(_modDef3117["1DN29p"], { handleOnHelpUrlHook: callback });
       items[1] = React5(Text_Text.Text, obj3);
       obj.children = items;
       return closure_1_8(View, obj);
@@ -103,14 +103,14 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function SettingsAgeGroupScreen() {
       const cResult = c.c(4);
       const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
       if (cResult[0] !== isTinyBroncoSettingsEnabled) {
         let obj3 = { sections: null, ListHeaderComponent: null };
         const obj4 = { label: null, settings: null };
         const intl = util.intl;
-        obj4.label = intl.string(_modDef3073["5Mi5TE"]);
+        obj4.label = intl.string(_modDef3117["5Mi5TE"]);
         const items = [, ,];
         ({
           AGE_GROUP_CONFIRM: arr[0],
@@ -143,14 +143,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return tmp9;
       }
     }
-  : () => {
-      isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(14511).useIsTinyBroncoSettingsEnabled();
+  : function SettingsAgeGroupScreen() {
+      isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(14771).useIsTinyBroncoSettingsEnabled();
       let items = [isTinyBroncoSettingsEnabled];
       const node = noop.useMemo(() => {
         const obj2 = { sections: null, ListHeaderComponent: null };
         const obj3 = { label: null, settings: null };
         const intl = util.intl;
-        obj3.label = intl.string(_modDef3073["5Mi5TE"]);
+        obj3.label = intl.string(_modDef3117["5Mi5TE"]);
         const items = [, ,];
         ({
           AGE_GROUP_CONFIRM: arr[0],

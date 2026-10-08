@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useCurrentUserStageRoles.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useCurrentUserStageRoles(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(5);
       dependencyMap = tmp4;
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0) => {
+  : function useCurrentUserStageRoles(arg0) {
       _require = arg0;
       let flag = arg1;
       if (arg1 === undefined) {

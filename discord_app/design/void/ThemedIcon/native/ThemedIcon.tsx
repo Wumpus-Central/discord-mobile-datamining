@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/ThemedIcon/native/ThemedIcon.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (themedColor) => {
+  ? function ThemedIcon(themedColor) {
       const cResult = c.c(6);
       if (cResult[0] !== themedColor) {
         themedColor = themedColor.themedColor;
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp13;
       tmp10 = tmp13;
     }
-  : (themedColor) => {
+  : function ThemedIcon(themedColor) {
       const merged = Object.assign(themedColor, Object.assign({ themedColor: 0 }));
       const token = useToken.useToken(themedColor.themedColor);
       const obj2 = { color: token };

@@ -12,15 +12,15 @@ const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useResettingValue.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useResettingValue(arg0, arg1) {
       _require = arg0;
       importDefault = arg1;
       const cResult = require("c").c(11);
       const obj = require("c");
       [tmp4, dependencyMap] = closure_4(arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function c() {
-          const timeout = new closure_0(2046).Timeout();
+        const fn = function l() {
+          const timeout = new closure_0(2058).Timeout();
           return timeout;
         };
         cResult[0] = fn;
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = items1;
         }
       }
-      const fn3 = function k(arg0) {
+      const fn3 = function h(arg0) {
         dependencyMap(arg0);
         if (arg0 !== closure_0) {
           closure_3.start(closure_1, () => dependencyMap(closure_1_0));
@@ -76,13 +76,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = fn3;
       const tmp3 = _slicedToArray(closure_4(arg0), 2);
     }
-  : (arg0, arg1) => {
+  : function useResettingValue(arg0, arg1) {
       closure_0 = arg0;
       importDefault = arg1;
       const tmp = _slicedToArray(closure_4(arg0), 2);
       dependencyMap = tmp[1];
       const tmp2 = useInitialValueDefault(() => {
-        const timeout = new closure_0(2046).Timeout();
+        const timeout = new closure_0(2058).Timeout();
         return timeout;
       });
       _slicedToArray = tmp2;

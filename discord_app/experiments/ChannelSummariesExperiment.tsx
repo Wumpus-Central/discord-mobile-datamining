@@ -145,7 +145,7 @@ export const useChannelSummariesExperiment = function useChannelSummariesExperim
   return canSeeChannelSummaries(channel, flag);
 };
 export const useGuildEligibleForSummaries = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, arg1) => {
+  ? function useGuildEligibleForSummaries(id, arg1) {
       _require = id;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -215,7 +215,7 @@ export const useGuildEligibleForSummaries = ReactCompilerGating.isReactCompilerE
       let obj = require("c");
       return require("useStateFromStores").useStateFromStores(first, tmp7, tmp9);
     }
-  : (arg0) => {
+  : function useGuildEligibleForSummaries(arg0) {
       _require = arg0;
       const items = [GuildStore];
       const items1 = [arg0];

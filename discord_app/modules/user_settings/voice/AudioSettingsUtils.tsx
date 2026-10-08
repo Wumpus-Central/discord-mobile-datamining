@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/voice/AudioSettingsUtils.tsx
 import UserSettingsConstants from "../UserSettingsConstants.tsx";
 import BaseConnectionEvent from "../../../../discord_common/js/packages/media-engine/index.tsx";
-import PerceptualVolumeUtils from "../../../utils/PerceptualVolumeUtils.tsx";
 import AudioSettingsDefaultVolumes from "../../../../discord_common/js/shared/shared-constants/AudioSettingsDefaultVolumes.tsx";
+import PerceptualVolumeUtils from "../../../utils/PerceptualVolumeUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const constants = UserSettingsConstants.ProtoAudioSettingsContextTypes;

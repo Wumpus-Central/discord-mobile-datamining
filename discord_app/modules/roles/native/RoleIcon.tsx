@@ -1,18 +1,18 @@
 // discord_app/modules/roles/native/RoleIcon.tsx
 import c from "../../../../_runtime/00576_c.js";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = Text(4892);
+const Text_Text = Text(5086);
 require = fn;
-const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RoleIcon(arg0) {
       let Text = require;
       let tmp = dependencyMap;
       const cResult = c.c(19);
@@ -43,18 +43,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { uri: src };
               cResult[8] = src;
               cResult[9] = obj2;
-              let tmp11 = obj2;
+              let tmp12 = obj2;
             } else {
-              tmp11 = cResult[9];
+              tmp12 = cResult[9];
             }
             if (cResult[10] === roleIcon.roleIcon) {
             }
-            const obj3 = { resizeMode: "contain", source: tmp11, style: roleIcon.roleIcon };
-            const tmp15 = <Image resizeMode="contain" source={tmp11} style={roleIcon.roleIcon} />;
+            const obj3 = { resizeMode: "contain", source: tmp12, style: roleIcon.roleIcon };
+            tmp = jsx(FastImageDefault, { resizeMode: "contain", source: tmp12, style: roleIcon.roleIcon });
             roleIcon = roleIcon.roleIcon;
             cResult[10] = roleIcon;
-            cResult[11] = tmp11;
-            cResult[12] = tmp15;
+            cResult[11] = tmp12;
+            cResult[12] = tmp;
           } else if (null == unicodeEmoji) {
             return null;
           } else {
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 variant: "text-lg/normal",
                 children: unicodeEmoji.surrogates,
               };
-              tmp = (
+              const tmp10 = (
                 <Text allowFontScaling={false} color="none" style={tmp7} variant="text-lg/normal">
                   {unicodeEmoji.surrogates}
                 </Text>
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[16] = tmp7;
               unicodeEmoji = unicodeEmoji.surrogates;
               cResult[17] = unicodeEmoji;
-              cResult[18] = tmp;
+              cResult[18] = tmp10;
             }
             const items = [,];
             ({ roleIcon: arr[0], unicodeEmojiRoleIcon: arr[1] } = roleIcon);
@@ -99,17 +99,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = {
         fontFamily: "System",
         fontSize: result,
-        lineHeight: "unicodeVersion",
-        textAlign: -102143,
+        lineHeight: "code",
+        textAlign: "STORAGE_SECURE_KEYS",
         width: num,
-        marginBottom: 1358954865,
+        marginBottom: "buildSkippedNetworkRequestOrResponse",
       };
       cResult[2] = num;
       cResult[3] = result;
       cResult[4] = obj6;
       tmp5 = obj6;
     }
-  : (arg0) => {
+  : function RoleIcon(arg0) {
       ({ src, unicodeEmoji, size } = arg0);
       if (size === undefined) {
         size = 20;
@@ -118,17 +118,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = {
         fontFamily: "System",
         fontSize: size * num,
-        lineHeight: "unicodeVersion",
-        textAlign: -102143,
+        lineHeight: "code",
+        textAlign: "STORAGE_SECURE_KEYS",
         width: size,
-        marginBottom: 1358954865,
+        marginBottom: "buildSkippedNetworkRequestOrResponse",
       };
       if (null != src) {
         const obj2 = { resizeMode: "contain", source: null, style: null };
         const obj3 = { uri: src };
         obj2.source = obj3;
         obj2.style = size1;
-        let tmp = <Image resizeMode="contain" source={null} style={null} />;
+        let tmp = jsx(FastImageDefault, { resizeMode: "contain", source: null, style: null });
       } else {
         tmp = null;
         if (null != unicodeEmoji) {

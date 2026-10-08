@@ -18,12 +18,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileActivityTabContent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function useUserProfileActivityTabContent(userId) {
       const cResult = userId(voiceActivity[9]).c(30);
       userId = userId.userId;
       ({ guildId, currentUserId } = userId);
       if (cResult[0] !== userId) {
-        const fn = function f() {
+        const fn = function h() {
           const promise = maybeFetchContentInventoryOutboxDefault(userId);
           if (promise != null) {
             promise.catch((error) => {
@@ -69,25 +69,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp13 = cResult[8];
         }
         if (cResult[9] !== userId) {
-          class L {
+          class T {
             constructor() {
               return closure_4.isFetchingUserOutbox(userId);
             }
           }
           cResult[9] = userId;
-          cResult[10] = L;
+          cResult[10] = T;
         } else {
-          class L {
+          class T {
             constructor() {
               return closure_4.isFetchingUserOutbox(userId);
             }
           }
         }
-        const stateFromStores = tmp(tmp2[14]).useStateFromStores(tmp13, L);
+        const stateFromStores = tmp(tmp2[14]).useStateFromStores(tmp13, T);
         noop = tmp17;
         const _Symbol2 = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-          class L {
+          class T {
             constructor() {
               return closure_4.isFetchingUserOutbox(userId);
             }
@@ -96,14 +96,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[11] = items2;
           const tmp18 = items2;
         } else {
-          class L {
+          class T {
             constructor() {
               return closure_4.isFetchingUserOutbox(userId);
             }
           }
         }
         if ((cResult[12] === userId) === currentUserId) {
-          class L {
+          class T {
             constructor() {
               return closure_4.isFetchingUserOutbox(userId);
             }
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const stateFromStores1 = tmp(tmp2[14]).useStateFromStores(tmp18, B);
           const _Symbol3 = Symbol;
           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-            class L {
+            class T {
               constructor() {
                 return closure_4.isFetchingUserOutbox(userId);
               }
@@ -120,14 +120,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[15] = items3;
             const tmp22 = items3;
           } else {
-            class L {
+            class T {
               constructor() {
                 return closure_4.isFetchingUserOutbox(userId);
               }
             }
           }
           if (cResult[16] !== userId) {
-            class L {
+            class T {
               constructor() {
                 return closure_4.isFetchingUserOutbox(userId);
               }
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[16] = userId;
             cResult[17] = tmp24;
           } else {
-            class L {
+            class T {
               constructor() {
                 return closure_4.isFetchingUserOutbox(userId);
               }
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const stateFromStores2 = tmp(tmp2[14]).useStateFromStores(tmp22, tmp24);
           const _Symbol4 = Symbol;
           if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-            class L {
+            class T {
               constructor() {
                 return closure_4.isFetchingUserOutbox(userId);
               }
@@ -153,14 +153,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const items4 = [VoiceStateStore];
             cResult[18] = items4;
           } else {
-            class L {
+            class T {
               constructor() {
                 return closure_4.isFetchingUserOutbox(userId);
               }
             }
           }
           if (cResult[19] !== voiceChannel) {
-            class L {
+            class T {
               constructor() {
                 return closure_4.isFetchingUserOutbox(userId);
               }
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[19] = voiceChannel;
             cResult[20] = tmp28;
           } else {
-            class L {
+            class T {
               constructor() {
                 return closure_4.isFetchingUserOutbox(userId);
               }
@@ -176,21 +176,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           tmp(tmp2[14]);
           if (cResult[21] === live) {
-            class L {
+            class T {
               constructor() {
                 return closure_4.isFetchingUserOutbox(userId);
               }
             }
             let tmp32 = stateFromStores1;
             if (!stateFromStores1) {
-              class L {
+              class T {
                 constructor() {
                   return closure_4.isFetchingUserOutbox(userId);
                 }
               }
             }
             if (tmp32) {
-              class L {
+              class T {
                 constructor() {
                   return closure_4.isFetchingUserOutbox(userId);
                 }
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp32 = null != voiceChannel;
             }
             if (tmp32) {
-              class L {
+              class T {
                 constructor() {
                   return closure_4.isFetchingUserOutbox(userId);
                 }
@@ -206,27 +206,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             let tmp33 = !tmp32;
             if (!tmp32) {
-              class L {
+              class T {
                 constructor() {
                   return closure_4.isFetchingUserOutbox(userId);
                 }
               }
             }
             if (tmp33) {
-              class L {
+              class T {
                 constructor() {
                   return closure_4.isFetchingUserOutbox(userId);
                 }
               }
               let tmp34 = live.length > 0;
               if (!tmp34) {
-                class L {
+                class T {
                   constructor() {
                     return closure_4.isFetchingUserOutbox(userId);
                   }
                 }
                 if (!stateFromStores2) {
-                  class L {
+                  class T {
                     constructor() {
                       return closure_4.isFetchingUserOutbox(userId);
                     }
@@ -236,13 +236,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp34 = tmp35;
               }
               if (!tmp34) {
-                class L {
+                class T {
                   constructor() {
                     return closure_4.isFetchingUserOutbox(userId);
                   }
                 }
                 if (!stateFromStores2) {
-                  class L {
+                  class T {
                     constructor() {
                       return closure_4.isFetchingUserOutbox(userId);
                     }
@@ -250,13 +250,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let tmp36 = null != stream;
                 }
                 if (tmp36) {
-                  class L {
+                  class T {
                     constructor() {
                       return closure_4.isFetchingUserOutbox(userId);
                     }
                   }
                   if (voiceChannel != null) {
-                    class L {
+                    class T {
                       constructor() {
                         return closure_4.isFetchingUserOutbox(userId);
                       }
@@ -269,7 +269,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp33 = tmp34;
             }
             if (cResult[24] === tmp33) {
-              class L {
+              class T {
                 constructor() {
                   return closure_4.isFetchingUserOutbox(userId);
                 }
@@ -304,7 +304,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[29] = obj2;
           }
           if (null != voiceActivity) {
-            class L {
+            class T {
               constructor() {
                 return closure_4.isFetchingUserOutbox(userId);
               }
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = obj3;
       const tmp8 = voiceChannel(voiceActivity[11])(userId);
     }
-  : (userId) => {
+  : function useUserProfileActivityTabContent(userId) {
       userId = userId.userId;
       recent = undefined;
       let voiceChannel;

@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/premium/experiments/MobileNit
 
 export const MobileNitroPreviewDirectCheckoutExperiment = apexExperiment;
 export const useMobileNitroPreviewDirectCheckoutEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useMobileNitroPreviewDirectCheckoutEnabled() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { location: "native.GetNitroCard" };
@@ -25,4 +25,6 @@ export const useMobileNitroPreviewDirectCheckoutEnabled = ReactCompilerGating.is
       }
       return apexExperiment.useConfig(first);
     }
-  : () => apexExperiment.useConfig({ location: "native.GetNitroCard" });
+  : function useMobileNitroPreviewDirectCheckoutEnabled() {
+      return apexExperiment.useConfig({ location: "native.GetNitroCard" });
+    };

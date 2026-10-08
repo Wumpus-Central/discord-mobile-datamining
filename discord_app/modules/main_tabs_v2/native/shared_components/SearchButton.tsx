@@ -12,7 +12,7 @@ let closure_2 = ["panelVariant"];
 const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   searchButton: {
     backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
@@ -42,7 +42,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_co
 
 export const SEARCH_BAR_HEIGHT = 40;
 export const SearchButtonContent = ReactCompilerGating.isReactCompilerEnabled()
-  ? (panelVariant) => {
+  ? function SearchButtonContent(panelVariant) {
       const cResult = c.c(15);
       if (cResult[0] !== panelVariant) {
         panelVariant = panelVariant.panelVariant;
@@ -123,7 +123,7 @@ export const SearchButtonContent = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = items1;
       tmp11 = items1;
     }
-  : (panelVariant) => {
+  : function SearchButtonContent(panelVariant) {
       const merged = Object.assign(panelVariant, Object.assign({ panelVariant: 0 }));
       const tmp2 = closure_7();
       const obj = {};

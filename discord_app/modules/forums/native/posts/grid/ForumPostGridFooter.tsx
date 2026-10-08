@@ -12,7 +12,7 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1085).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", marginTop: 12 },
   dot: null,
@@ -31,7 +31,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridFooter.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ForumPostGridFooter(arg0) {
       const cResult = c.c(18);
       ({ thread, firstMessage, hasUnreads, parentChannel } = arg0);
       const tmp4 = closure_8();
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp7;
       tmp6 = tmp7;
     }
-  : (parentChannel) => {
+  : function ForumPostGridFooter(parentChannel) {
       ({ thread, firstMessage, hasUnreads } = parentChannel);
       const tmp = closure_8();
       const typingUserIds = useTypingUsersIds.useTypingUserIds(thread.id);

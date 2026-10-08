@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   statsGrid: {
     flexDirection: "row",
@@ -34,7 +34,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (bottomConfig) => {
+  ? function UserProfileApplicationWidgetBottomStatsLayout(bottomConfig) {
       const cResult = bottomConfig(resolveFieldValue[6]).c(11);
       bottomConfig = bottomConfig.bottomConfig;
       resolveFieldValue = bottomConfig.resolveFieldValue;
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               };
               const items = [React3(UserProfileApplicationWidgetFieldUtils.FieldText, obj2)];
               if ("value" === iter.label.status) {
-                Text = Text(4892).Text;
+                Text = Text(5086).Text;
                 const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
                 iter = iter.label.text;
                 obj3.children = iter;
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 tmp5Result = null;
                 if ("skeleton" === iter.label.status) {
-                  tmp5Result = React3(Text(8717).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
+                  tmp5Result = React3(Text(13190).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
                 }
               }
               items[1] = tmp5Result;
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = mapped1;
       arr3 = mapped1;
     }
-  : (arg0) => {
+  : function UserProfileApplicationWidgetBottomStatsLayout(arg0) {
       ({ bottomConfig: require, resolveFieldValue: dependencyMap, numberFormat: View } = arg0);
       const tmp = closure_5();
       const stat = tmp;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { field: iter.value, variant: "text-sm/medium", color: "text-default", skeletonWidthChars: 8 };
             const items = [React3(UserProfileApplicationWidgetFieldUtils.FieldText, obj2)];
             if ("value" === iter.label.status) {
-              Text = Text(4892).Text;
+              Text = Text(5086).Text;
               const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
               iter = iter.label.text;
               obj3.children = iter;
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               tmp5Result = null;
               if ("skeleton" === iter.label.status) {
-                tmp5Result = React3(Text(8717).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
+                tmp5Result = React3(Text(13190).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
               }
             }
             items[1] = tmp5Result;

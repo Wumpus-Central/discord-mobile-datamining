@@ -58,6 +58,10 @@ const braintreeStore = new BraintreeStore(DispatcherDefault, {
     if (paymentSourceType.paymentSourceType === constants2.PAYPAL) {
       if (tmp === state) {
         const _window = window;
+        let onComplete;
+        if (popupBridge != null) {
+          onComplete = popupBridge.onComplete;
+        }
         if (typeof onComplete === "function") {
           const obj = { path: tmp2, queryItems: tmp3 };
           onComplete(null, obj);

@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/premium/experiments/MobileSti
 
 export const MobileStickerPickerUpsellRestyleExperiment = apexExperiment;
 export const useMobileStickerPickerUpsellRestyleEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useMobileStickerPickerUpsellRestyleEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -30,7 +30,9 @@ export const useMobileStickerPickerUpsellRestyleEnabled = ReactCompilerGating.is
       }
       return apexExperiment.useConfig(tmp2);
     }
-  : (location) => apexExperiment.useConfig({ location });
+  : function useMobileStickerPickerUpsellRestyleEnabled(location) {
+      return apexExperiment.useConfig({ location });
+    };
 export { getMobileStickerPickerUpsellRestyleEnabled };
 export const getMobileStickerPickerUpsellRestyleEnabledForFeature =
   function getMobileStickerPickerUpsellRestyleEnabledForFeature(featureName, location) {

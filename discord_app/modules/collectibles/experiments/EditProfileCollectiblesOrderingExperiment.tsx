@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useIsEditProfileCollectiblesOrderingEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsEditProfileCollectiblesOrderingEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -27,4 +27,6 @@ export const useIsEditProfileCollectiblesOrderingEnabled = ReactCompilerGating.i
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useIsEditProfileCollectiblesOrderingEnabled(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };

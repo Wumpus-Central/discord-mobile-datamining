@@ -51,14 +51,14 @@ export const trackAppEmbedClick = function trackAppEmbedClick(arg0) {
 };
 export { trackAppEmbedViewed };
 export const useTrackAppEmbedViewed = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useTrackAppEmbedViewed(id) {
       const cResult = require("c").c(4);
       if (cResult[0] !== id) {
-        const result = tmp(7192).trackingConfigWithDefaults(id);
+        const result = tmp(7371).trackingConfigWithDefaults(id);
         cResult[0] = id;
         cResult[1] = result;
         let tmp4 = result;
-        const tmpResult = tmp(7192);
+        const tmpResult = tmp(7371);
       } else {
         tmp4 = cResult[1];
       }
@@ -100,7 +100,7 @@ export const useTrackAppEmbedViewed = ReactCompilerGating.isReactCompilerEnabled
       let obj = require("c");
       return require("useIntersectionObserver").useIsVisible(tmp6, undefined);
     }
-  : (id) => {
+  : function useTrackAppEmbedViewed(id) {
       _require = require("appMessageEmbedTrackingConfig").trackingConfigWithDefaults(id);
       noop.useRef(false);
       let obj = require("appMessageEmbedTrackingConfig");

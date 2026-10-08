@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, narrow: { width: "60%" } };
 let closure_7 = createStyles.createStyles(obj2);
 let items = [
@@ -41,7 +41,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsDesignSystemTagGroup() {
       const cResult = c.c(30);
       const tmp4 = closure_7();
       const token = useToken.useToken(nativeDefault.colors.ICON_BRAND);
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[26] = tmp59;
       tmp58 = tmp59;
     }
-  : () => {
+  : function UserSettingsDesignSystemTagGroup() {
       const tmp = closure_7();
       const obj2 = { contentContainerStyle: tmp.container, children: null };
       const token = useToken.useToken(nativeDefault.colors.ICON_BRAND);

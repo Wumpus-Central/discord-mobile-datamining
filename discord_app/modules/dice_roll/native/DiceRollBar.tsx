@@ -8,11 +8,11 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useDiceRollState = fn(11586).useDiceRollState;
+const useDiceRollState = fn(11649).useDiceRollState;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 300;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   animatedContainer: { overflow: "hidden" },
   container: {
@@ -54,7 +54,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/dice_roll/native/DiceRollBar.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channelId) => {
+  ? function DiceRollBar(channelId) {
       const cResult = stateFromStores(sharedValue1[8]).c(30);
       closure_10();
       const tmp5 = useDiceRollState(channelId.channelId);
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = N;
       const tmpResult6 = stateFromStores(sharedValue1[10]);
     }
-  : (channelId) => {
+  : function DiceRollBar(channelId) {
       let stateFromStores;
       let sharedValue1;
       let flag;

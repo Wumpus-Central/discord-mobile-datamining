@@ -11,7 +11,7 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 const util = v0wJXSh(1126);
-const VoiceActivityStatus = v0wJXSh(10640);
+const VoiceActivityStatus = v0wJXSh(10240);
 require = fn;
 const ActivityTypes = fn(1085).ActivityTypes;
 const ReactCompilerGating = fn(558);
@@ -19,7 +19,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/useActivityStatusLabel.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (userId) => {
+  ? function useActivityStatusLabel(userId) {
       const cResult = userId(gameMentionsAsPlainText[8]).c(10);
       userId = userId.userId;
       const guildId = userId.guildId;
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp17 = U;
       const tmpResult3 = userId(gameMentionsAsPlainText[10]);
     }
-  : (userId) => {
+  : function useActivityStatusLabel(userId) {
       userId = userId.userId;
       const guildId = userId.guildId;
       let gameMentionsAsPlainText;

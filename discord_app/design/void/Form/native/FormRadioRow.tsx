@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormRadioRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FormRadioRow(arg0) {
       const cResult = c.c(31);
       if (cResult[0] !== arg0) {
         ({ selected, align, leading, value, onPress, style } = arg0);
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = useA11yRolesNative;
     }
-  : (arg0) => {
+  : function FormRadioRow(arg0) {
       ({ selected, align } = arg0);
       if (align === undefined) {
         align = "left";

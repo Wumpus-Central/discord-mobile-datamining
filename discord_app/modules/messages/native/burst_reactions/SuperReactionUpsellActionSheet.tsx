@@ -3,9 +3,9 @@ import _modDef12 from "../../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _mod7434 from "../../../../../_runtime/metro/07434__.js";
-import PremiumFeaturesCards from "../../../user_settings/premium/native/PremiumFeaturesCards.tsx";
+import _mod7909 from "../../../../../_runtime/metro/07909__.js";
 import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
+import PremiumFeaturesCards from "../../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import SuperReactionLocalImageAnimationDefault from "SuperReactionLocalImageAnimation.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -17,9 +17,9 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const AnalyticsPages = fn(1085).AnalyticsPages;
 const jsx = fn(21).jsx;
-const dismissibleContent = fn(2036).DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
-let items = [fn(9870), fn(9871), fn(9872), fn(9873), fn(9871), fn(9874), fn(9875), fn(9876)];
-const createStyles = fn(4896);
+const dismissibleContent = fn(2048).DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
+let items = [fn(9321), fn(9322), fn(9323), fn(9324), fn(9322), fn(9325), fn(9326), fn(9327)];
+const createStyles = fn(5090);
 let obj2 = { fill: null, nitroIcon: null, description: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -37,7 +37,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/burst_reactions/SuperReactionUpsellActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onDismiss) => {
+  ? function SuperReactionCoachmarkActionSheet(onDismiss) {
       const cResult = require("c").c(24);
       onDismiss = onDismiss.onDismiss;
       const tmp4 = closure_10();
@@ -52,14 +52,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         items = [UserStore];
-        class I {
+        class C {
           constructor() {
             return closure_1_5.getCurrentUser();
           }
         }
         cResult[1] = items;
-        cResult[2] = I;
-        let tmp9 = I;
+        cResult[2] = C;
+        let tmp9 = C;
         let tmp8 = items;
       } else {
         tmp8 = cResult[1];
@@ -70,22 +70,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = require("initialize");
       const tmpResult2 = require("PremiumUtils");
       if (cResult[3] !== analyticsLocations) {
-        const fn = function b() {
+        function handlePremiumUpsellPress() {
           const obj = {
             analyticsLocation,
             analyticsLocations,
             premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING,
           };
           openPremiumModalDefault(obj);
-        };
+        }
         cResult[3] = analyticsLocations;
-        class I {
+        class C {
           constructor() {
             return closure_1_5.getCurrentUser();
           }
         }
-        cResult[4] = fn;
-        let tmp13 = fn;
+        cResult[4] = handlePremiumUpsellPress;
+        let tmp13 = handlePremiumUpsellPress;
       } else {
         tmp13 = cResult[4];
       }
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           localImageSource: items[tmp5Result.random(tmp5Result, 0, items.length - 1)],
           animationSource: null,
         };
-        class I {
+        class C {
           constructor() {
             return closure_1_5.getCurrentUser();
           }
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== tmp4.fill) {
         const obj4 = { style: null, children: null };
-        class I {
+        class C {
           constructor() {
             return closure_1_5.getCurrentUser();
           }
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = tmp(tmp2[25]).intl;
           const stringResult = intl.string(tmp(tmp2[25]).t.Wfl5zp);
-          class I {
+          class C {
             constructor() {
               return closure_1_5.getCurrentUser();
             }
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp22 = cResult[8];
         }
-        class I {
+        class C {
           constructor() {
             return closure_1_5.getCurrentUser();
           }
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
           const intl2 = tmp(tmp2[25]).intl;
           const stringResult1 = intl2.string(tmp(tmp2[25]).t.eikz43);
-          class I {
+          class C {
             constructor() {
               return closure_1_5.getCurrentUser();
             }
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           const intl3 = tmp(tmp2[25]).intl;
           const stringResult2 = intl3.string(tmp(tmp2[25]).t.sEAnVH);
-          class I {
+          class C {
             constructor() {
               return closure_1_5.getCurrentUser();
             }
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[13] = tmp4.nitroIcon;
-          class I {
+          class C {
             constructor() {
               return closure_1_5.getCurrentUser();
             }
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[15] = tmp13;
-          class I {
+          class C {
             constructor() {
               return closure_1_5.getCurrentUser();
             }
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const stringResult3 = obj8.string(tmp(tmp2[25]).t.TulDPl);
-          class I {
+          class C {
             constructor() {
               return closure_1_5.getCurrentUser();
             }
@@ -291,7 +291,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       isPremiumResult = require("PremiumUtils").isPremium(stateFromStores);
     }
-  : (onDismiss) => {
+  : function SuperReactionCoachmarkActionSheet(onDismiss) {
       let analyticsLocations;
       let analyticsLocation;
       const tmp = closure_10();

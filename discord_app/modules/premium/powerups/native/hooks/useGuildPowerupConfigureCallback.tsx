@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupConfigureCallback.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, skuId) => {
+  ? function useGuildPowerupConfigureCallback(arg0, skuId) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === arg0) {
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp2 = fn;
     }
-  : (arg0, skuId) => {
+  : function useGuildPowerupConfigureCallback(arg0, skuId) {
       closure_0 = arg0;
       const items = [arg0, skuId.skuId];
       return noop.useCallback(() => {

@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   pillContainer: {
     flexDirection: "row",
@@ -50,7 +50,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/IconPill/native/IconPill.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function IconPill(arg0) {
       const cResult = c.c(18);
       ({ text, source, IconComponent, style, textStyle, accessibilityLabel } = arg0);
       const tmp3 = closure_6();
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items2;
       tmp4 = items2;
     }
-  : (IconComponent) => {
+  : function IconPill(IconComponent) {
       IconComponent = IconComponent.IconComponent;
       ({ text, source, style, textStyle, accessibilityLabel } = IconComponent);
       const tmp = closure_6();

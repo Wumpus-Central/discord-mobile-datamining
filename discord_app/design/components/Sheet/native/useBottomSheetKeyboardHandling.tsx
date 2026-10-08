@@ -1,6 +1,6 @@
 // discord_app/design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import BottomSheetModal from "../../../../../_runtime/06119_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06298_BottomSheetModal.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -9,7 +9,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onFocus) => {
+  ? function useBottomSheetKeyboardHandling(onFocus) {
       const cResult = c.c(12);
       onFocus = onFocus.onFocus;
       const onBlur = onFocus.onBlur;
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = fn2;
           tmp5 = fn2;
         }
-        const fn = function o(arg0) {
+        const fn = function n(arg0) {
           const shouldHandleKeyboardEvents = bottomSheetInternal.shouldHandleKeyboardEvents;
           const result = shouldHandleKeyboardEvents.set(true);
           if (onFocus != null) {
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp3 = obj4;
       }
     }
-  : (onFocus) => {
+  : function useBottomSheetKeyboardHandling(onFocus) {
       onFocus = onFocus.onFocus;
       const onBlur = onFocus.onBlur;
       const bottomSheetInternal = BottomSheetModal.useBottomSheetInternal(true);

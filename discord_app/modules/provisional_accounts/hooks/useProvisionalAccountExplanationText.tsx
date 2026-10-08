@@ -4,7 +4,7 @@ import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplic
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = rSUACb(1126);
-const HelpdeskUtilsDefault = tmp2(2115);
+const HelpdeskUtilsDefault = tmp2(2127);
 require = fn;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const ReactCompilerGating = fn(558);
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useProvisionalAccountExplanationText = ReactCompilerGating.isReactCompilerEnabled()
-  ? (renderApplicationName) => {
+  ? function useProvisionalAccountExplanationText(renderApplicationName) {
       let rSUACb = require;
       let getArticleURL = dependencyMap;
       const cResult = c.c(4);
@@ -55,7 +55,7 @@ export const useProvisionalAccountExplanationText = ReactCompilerGating.isReactC
         return tmp4;
       }
     }
-  : (renderApplicationName) => {
+  : function useProvisionalAccountExplanationText(renderApplicationName) {
       renderApplicationName = renderApplicationName.renderApplicationName;
       const tmp = useProvisionalAccountApplicationDefault(renderApplicationName.userId);
       importDefault = tmp;

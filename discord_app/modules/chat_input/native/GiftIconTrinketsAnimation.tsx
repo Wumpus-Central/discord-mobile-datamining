@@ -7,13 +7,13 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 const initialize = APNGPlayer(504);
-const PlatformUtils = APNGPlayer(1369);
-const StringUtils = APNGPlayer(2018);
-const APNGPlayer2 = APNGPlayer(8497);
+const PlatformUtils = APNGPlayer(1381);
+const StringUtils = APNGPlayer(2030);
+const APNGPlayer2 = APNGPlayer(8981);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((width) => ({
   containerRefresh: {
     position: "absolute",
@@ -41,7 +41,7 @@ const result = size.fileFinishedImporting("modules/chat_input/native/GiftIconTri
 
 export const GiftIconTrinketsAnimation = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (trinketsAnimationUrl) => {
+    ? function GiftIconTrinketsAnimation(trinketsAnimationUrl) {
         let APNGPlayer = require;
         const cResult = c.c(9);
         trinketsAnimationUrl = trinketsAnimationUrl.trinketsAnimationUrl;
@@ -109,7 +109,7 @@ export const GiftIconTrinketsAnimation = noop.memo(
         }
         APNGPlayerResult1 = StringUtils;
       }
-    : (trinketsAnimationUrl) => {
+    : function GiftIconTrinketsAnimation(trinketsAnimationUrl) {
         trinketsAnimationUrl = trinketsAnimationUrl.trinketsAnimationUrl;
         let APNGPlayer = require;
         const tmp2 = closure_6(useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE));

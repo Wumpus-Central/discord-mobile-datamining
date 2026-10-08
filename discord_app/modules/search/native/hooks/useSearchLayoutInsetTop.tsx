@@ -7,4 +7,6 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/search/native/hooks/useSearchLayoutInsetTop.tsx");
 
-export default () => useSafeAreaInsetsDefault().top + 8;
+export default function useSearchLayoutInsetTop() {
+  return useSafeAreaInsetsDefault().top + 8;
+}

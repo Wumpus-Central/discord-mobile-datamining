@@ -22,11 +22,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ExperimentConstants = fn(4783);
+const ExperimentConstants = fn(4977);
 ({ ExperimentBuckets: closure_9, ExperimentTypes: c10 } = ExperimentConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, listContainer: null, searchBar: null, debugContainer: null, copyExperimentLink: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj.listContainer = { paddingHorizontal: nativeDefault.space.PX_12 };
@@ -40,7 +40,7 @@ let closure_13 = createStyles.createStyles(obj);
 fn(558);
 let obj7 = { marginTop: nativeDefault.space.PX_16 };
 let ReactCompilerGating = fn(558);
-let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ExperimentGroup(id) {
   const cResult = variantId(experiment[11]).c(18);
   id = id.id;
   variantId = id;
@@ -169,7 +169,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((id) 
   cResult[6] = fn;
   tmp5 = fn;
   let obj = variantId(experiment[11]);
-}) : ((id) => {
+}) : (function ExperimentGroup(id) {
   id = id.id;
   const override = id.override;
   const experiment = id.experiment;
@@ -232,7 +232,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((id) 
   }
 }));
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserExperimentDebugView(arg0) {
   const cResult = c.c(55);
   ({ id, override, experiment } = arg0);
   const tmp4 = closure_13();
@@ -354,30 +354,30 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-    class J {
+    class H {
       constructor(arg0) {
         return -closure_1_3(arg0, 2)[1];
       }
     }
-    cResult[21] = J;
+    cResult[21] = H;
   } else {
-    class J {
+    class H {
       constructor(arg0) {
         return -closure_1_3(arg0, 2)[1];
       }
     }
   }
   if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-    class V {
+    class J {
       constructor(arg0) {
         tmp = closure_1_3(arg0, 2);
         date = new Date(tmp[1]);
         return "" + date.toLocaleString() + " (" + tmp[0] + ")";
       }
     }
-    cResult[22] = V;
+    cResult[22] = J;
   } else {
-    class V {
+    class J {
       constructor(arg0) {
         tmp = closure_1_3(arg0, 2);
         date = new Date(tmp[1]);
@@ -386,9 +386,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   const tmpResult4 = useExperimentAssignments;
-  const mapped = _modDef12.sortBy(ExperimentStore.getRecentExposures(constants2.USER, id), J).map(V);
+  const mapped = _modDef12.sortBy(ExperimentStore.getRecentExposures(constants2.USER, id), H).map(J);
   if (experiment.system === ExperimentManager.ExperimentSystem.LEGACY) {
-    class V {
+    class J {
       constructor(arg0) {
         tmp = closure_1_3(arg0, 2);
         date = new Date(tmp[1]);
@@ -397,7 +397,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     let NOT_ELIGIBLE = experimentAssignment;
     if (experimentAssignment == null) {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -409,7 +409,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const _HermesInternal = HermesInternal;
     let str2 = "Currently assigned to bucket " + NOT_ELIGIBLE;
   } else {
-    class V {
+    class J {
       constructor(arg0) {
         tmp = closure_1_3(arg0, 2);
         date = new Date(tmp[1]);
@@ -418,7 +418,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     str2 = "Currently unassigned";
     if (null != experimentAssignment) {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -430,7 +430,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const debugContainer = tmp4.debugContainer;
   if (null == experimentServerAssignment) {
-    class V {
+    class J {
       constructor(arg0) {
         tmp = closure_1_3(arg0, 2);
         date = new Date(tmp[1]);
@@ -439,7 +439,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   if (cResult[23] === str2) {
-    class V {
+    class J {
       constructor(arg0) {
         tmp = closure_1_3(arg0, 2);
         date = new Date(tmp[1]);
@@ -448,7 +448,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const _Symbol = Symbol;
     if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -458,7 +458,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const tmp34 = closure_1_11(native.Spacer, { size: 16 });
       cResult[26] = tmp34;
     } else {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -467,7 +467,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     if (cResult[27] !== experimentServerAssignment) {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -475,7 +475,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       if (null != experimentServerAssignment) {
-        class V {
+        class J {
           constructor(arg0) {
             tmp = closure_1_3(arg0, 2);
             date = new Date(tmp[1]);
@@ -487,7 +487,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[27] = experimentServerAssignment;
       cResult[28] = json;
     } else {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -496,7 +496,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     if (cResult[29] !== tmp35) {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -510,7 +510,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[29] = tmp35;
       cResult[30] = tmp38;
     } else {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -520,7 +520,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const _Symbol2 = Symbol;
     if (cResult[31] === Symbol.for("react.memo_cache_sentinel")) {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -530,7 +530,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const tmp40 = closure_1_11(native.Spacer, { size: 16 });
       cResult[31] = tmp40;
     } else {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -539,7 +539,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     if (cResult[32] !== override) {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -547,7 +547,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       if (null != override) {
-        class V {
+        class J {
           constructor(arg0) {
             tmp = closure_1_3(arg0, 2);
             date = new Date(tmp[1]);
@@ -559,7 +559,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[32] = override;
       cResult[33] = json1;
     } else {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -568,7 +568,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     if (cResult[34] !== tmp41) {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -582,7 +582,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[34] = tmp41;
       cResult[35] = tmp44;
     } else {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -592,7 +592,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const _Symbol3 = Symbol;
     if (cResult[36] === Symbol.for("react.memo_cache_sentinel")) {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -602,7 +602,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const tmp46 = closure_1_11(native.Spacer, { size: 16 });
       cResult[36] = tmp46;
     } else {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -614,7 +614,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const TableRow = TableRow2.TableRow;
     let str5 = "None";
     if (0 !== mapped.length) {
-      class V {
+      class J {
         constructor(arg0) {
           tmp = closure_1_3(arg0, 2);
           date = new Date(tmp[1]);
@@ -656,13 +656,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp17 = TableRowGroup;
     tmp16 = TableRow;
   }
-  const sortByResult = _modDef12.sortBy(ExperimentStore.getRecentExposures(constants2.USER, id), J);
+  const sortByResult = _modDef12.sortBy(ExperimentStore.getRecentExposures(constants2.USER, id), H);
   const tmp32 = closure_1_11(TableRowGroup2.TableRowGroup, { title: "Overview", hasIcons: false, children: closure_1_11(TableRow2.TableRow, { label: str2, subLabel: undefined }) });
   cResult[23] = str2;
   cResult[24] = undefined;
   cResult[25] = tmp32;
   const obj10 = { title: "Overview", hasIcons: false, children: closure_1_11(TableRow2.TableRow, { label: str2, subLabel: undefined }) };
-}) : ((id) => {
+}) : (function UserExperimentDebugView(id) {
   ({ override, experiment } = id);
   id = AuthenticationStore.getId();
   const installationForTracking = AuthenticationStore.getInstallationForTracking();
@@ -739,7 +739,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return __initData(View, obj5);
 });
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildExperimentDebugView(arg0) {
   let tmp = dependencyMap;
   const cResult = require("c").c(55);
   ({ id, override } = arg0);
@@ -853,29 +853,29 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-      class M {
+      class F {
         constructor(arg0) {
           str = arg0.name;
           return str.toLowerCase();
         }
       }
-      cResult[22] = M;
+      cResult[22] = F;
     } else {
-      class M {
+      class F {
         constructor(arg0) {
           str = arg0.name;
           return str.toLowerCase();
         }
       }
     }
-    const sortByResult1 = _modDef12.sortBy(GuildStore.getGuildsArray(), M);
+    const sortByResult1 = _modDef12.sortBy(GuildStore.getGuildsArray(), F);
     _require = {};
     items1 = [];
     sortByResult1[Symbol.iterator]();
     tmp = null;
     const items1Result = _modDef12;
   } else {
-    class M {
+    class F {
       constructor(arg0) {
         str = arg0.name;
         return str.toLowerCase();
@@ -883,7 +883,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     let obj13 = tmp;
     while (true) {
-      class M {
+      class F {
         constructor(arg0) {
           str = arg0.name;
           return str.toLowerCase();
@@ -895,14 +895,14 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       let combined = "Current Assignments: " + tmp21;
       let tmp30 = null;
       if (null != loadedGuildExperiment) {
-        class M {
+        class F {
           constructor(arg0) {
             str = arg0.name;
             return str.toLowerCase();
           }
         }
       } else {
-        class M {
+        class F {
           constructor(arg0) {
             str = arg0.name;
             return str.toLowerCase();
@@ -911,7 +911,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         break;
       }
       if (cResult[23] === combined) {
-        class M {
+        class F {
           constructor(arg0) {
             str = arg0.name;
             return str.toLowerCase();
@@ -919,7 +919,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         let _Symbol = Symbol;
         if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -929,7 +929,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           cResult[26] = tmp37;
           let tmp35 = tmp37;
         } else {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -939,7 +939,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         let str4 = "\n";
         let joined = obj4.join("\n");
         if (cResult[27] !== joined) {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -953,7 +953,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           cResult[28] = tmp41;
           let tmp39 = tmp41;
         } else {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -962,7 +962,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         let _Symbol2 = Symbol;
         if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -972,7 +972,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           cResult[29] = tmp44;
           let tmp42 = tmp44;
         } else {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -982,7 +982,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         let str5 = "None";
         let str6 = "None";
         if (null != loadedGuildExperiment) {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -991,7 +991,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           str6 = JSON.stringify(loadedGuildExperiment, undefined, 2);
         }
         if (cResult[30] !== str6) {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -1005,7 +1005,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           cResult[31] = tmp47;
           let tmp45 = tmp47;
         } else {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -1014,7 +1014,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         let _Symbol3 = Symbol;
         if (cResult[32] === Symbol.for("react.memo_cache_sentinel")) {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -1024,7 +1024,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           cResult[32] = tmp50;
           let tmp48 = tmp50;
         } else {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -1032,7 +1032,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         if (cResult[33] !== override) {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -1042,7 +1042,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           cResult[34] = str5;
           let tmp51 = str5;
         } else {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -1050,7 +1050,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         if (cResult[35] !== tmp51) {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -1064,7 +1064,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           cResult[36] = tmp54;
           let tmp52 = tmp54;
         } else {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -1073,7 +1073,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         let _Symbol4 = Symbol;
         if (cResult[37] === Symbol.for("react.memo_cache_sentinel")) {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -1083,7 +1083,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           cResult[37] = tmp57;
           let tmp55 = tmp57;
         } else {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -1094,17 +1094,17 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         let TableRowGroup = require("TableRowGroup").TableRowGroup;
         let str7 = 0;
         if (0 === mapped.length) {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
             }
           }
-          TableRow = TableRow(6000).TableRow;
+          TableRow = TableRow(6184).TableRow;
           obj13 = { label: "none" };
           let tmp58 = closure_11(TableRow, obj13);
         } else {
-          class M {
+          class F {
             constructor(arg0) {
               str = arg0.name;
               return str.toLowerCase();
@@ -1145,7 +1145,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   const sortByResult = _modDef12.sortBy(ExperimentStore.getRecentExposures(constants2.GUILD, id), O);
-}) : ((arg0) => {
+}) : (function GuildExperimentDebugView(arg0) {
   ({ id, override } = arg0);
   const loadedGuildExperiment = ExperimentStore.getLoadedGuildExperiment(id);
   const tmp = closure_13();
@@ -1197,12 +1197,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj4 = _modDef12(obj3);
   obj6.subLabel = str;
-  const items1 = [closure_11(obj3(6081).TableRowGroup, { title: "Overview", hasIcons: false, children: closure_11(obj3(6000).TableRow, obj6) }), closure_11(obj3(1188).Spacer, { size: 16 }), , , , , , , ];
+  const items1 = [closure_11(obj3(6267).TableRowGroup, { title: "Overview", hasIcons: false, children: closure_11(obj3(6184).TableRow, obj6) }), closure_11(obj3(1200).Spacer, { size: 16 }), , , , , , , ];
   const obj8 = { title: "Guild Assignments", hasIcons: false, children: null };
-  const obj7 = { title: "Overview", hasIcons: false, children: closure_11(obj3(6000).TableRow, obj6) };
-  obj8.children = closure_11(obj3(6000).TableRow, { label: items.join("\n") });
-  items1[2] = closure_11(obj3(6081).TableRowGroup, obj8);
-  items1[3] = closure_11(obj3(1188).Spacer, { size: 16 });
+  const obj7 = { title: "Overview", hasIcons: false, children: closure_11(obj3(6184).TableRow, obj6) };
+  obj8.children = closure_11(obj3(6184).TableRow, { label: items.join("\n") });
+  items1[2] = closure_11(obj3(6267).TableRowGroup, obj8);
+  items1[3] = closure_11(obj3(1200).Spacer, { size: 16 });
   let str2 = "None";
   let str3 = "None";
   if (null != loadedGuildExperiment) {
@@ -1210,35 +1210,35 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     str3 = JSON.stringify(loadedGuildExperiment, undefined, 2);
   }
   const obj9 = { label: items.join("\n") };
-  items1[4] = closure_11(obj3(6081).TableRowGroup, { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(6000).TableRow, { label: str3 }) });
-  items1[5] = closure_11(obj3(1188).Spacer, { size: 16 });
+  items1[4] = closure_11(obj3(6267).TableRowGroup, { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(6184).TableRow, { label: str3 }) });
+  items1[5] = closure_11(obj3(1200).Spacer, { size: 16 });
   if (null != override) {
     const _JSON2 = JSON;
     str2 = JSON.stringify(override, undefined, 2);
   }
-  const obj10 = { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(6000).TableRow, { label: str3 }) };
-  items1[6] = closure_11(obj3(6081).TableRowGroup, { title: "Override Descriptor", hasIcons: false, children: closure_11(obj3(6000).TableRow, { label: str2 }) });
-  items1[7] = closure_11(obj3(1188).Spacer, { size: 16 });
+  const obj10 = { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(6184).TableRow, { label: str3 }) };
+  items1[6] = closure_11(obj3(6267).TableRowGroup, { title: "Override Descriptor", hasIcons: false, children: closure_11(obj3(6184).TableRow, { label: str2 }) });
+  items1[7] = closure_11(obj3(1200).Spacer, { size: 16 });
   if (0 === mapped.length) {
-    let mapped3 = closure_11(tmp20(6000).TableRow, { label: "none" });
+    let mapped3 = closure_11(tmp20(6184).TableRow, { label: "none" });
   } else {
     mapped3 = mapped.map((label) => closure_1_11(obj3(dependencyMap[26]).TableRow, { label, labelLineClamp: 1 }, label));
   }
-  items1[8] = closure_11(obj3(6081).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped3 });
+  items1[8] = closure_11(obj3(6267).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped3 });
   obj5.children = items1;
   return closure_12(View, obj5);
 });
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExperimentDetails(arg0) {
   const cResult = onCopyLink(576).c(25);
   ({ experiment, override, id, options, onCopyLink } = arg0);
   const tmp4 = closure_13();
   if (cResult[0] !== id) {
-    const uRLForExperiment = onCopyLink(7545).getURLForExperiment(id);
+    const uRLForExperiment = onCopyLink(8117).getURLForExperiment(id);
     cResult[0] = id;
     cResult[1] = uRLForExperiment;
     let tmp5 = uRLForExperiment;
-    const tmpResult = onCopyLink(7545);
+    const tmpResult = onCopyLink(8117);
   } else {
     tmp5 = cResult[1];
   }
@@ -1308,7 +1308,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         const obj3 = { title: "Experiment Assignments", hasIcons: false, children: tmp11 };
-        const tmp16 = closure_11(onCopyLink(6081).TableRowGroup, obj3);
+        const tmp16 = closure_11(onCopyLink(6267).TableRowGroup, obj3);
         cResult[9] = tmp11;
         cResult[10] = tmp16;
       } else {
@@ -1403,38 +1403,36 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       const obj7 = { title: "Share", hasIcons: false, children: null };
       const obj8 = { label: "Copy Link", subLabel: tmp5, onPress: tmp7 };
-      obj7.children = closure_11(onCopyLink(6000).TableRow, obj8);
-      const tmp19 = closure_11(onCopyLink(6081).TableRowGroup, obj7);
+      obj7.children = closure_11(onCopyLink(6184).TableRow, obj8);
+      const tmp19 = closure_11(onCopyLink(6267).TableRowGroup, obj7);
       cResult[11] = tmp5;
       cResult[12] = tmp7;
       cResult[13] = tmp19;
     }
   }
-  const fn = function x() {
-    ClipboardUtils.copy(closure_1, () => {
-      const obj = closure_1(4574);
-      obj.open({ key: "experiment-link-copied", content: "Copied experiment link", IconComponent: onCopyLink(4798).CircleCheckIcon, iconColor: "status-positive" });
-      if (closure_1_0 != null) {
-        closure_1_0();
-      }
-    });
-  };
+  class S {
+    constructor() {
+      obj = closure_0(closure_2[31]);
+      copyResult = obj.copy(closure_1, () => { ... });
+      return;
+    }
+  }
   cResult[2] = tmp5;
   cResult[3] = onCopyLink;
-  cResult[4] = fn;
-  tmp7 = fn;
+  cResult[4] = S;
+  tmp7 = S;
   let obj = onCopyLink(576);
-}) : ((arg0) => {
+}) : (function ExperimentDetails(arg0) {
   ({ experiment, override, id, options, onCopyLink } = arg0);
   const tmp = closure_13();
-  const uRLForExperiment = onCopyLink(7545).getURLForExperiment(id);
+  const uRLForExperiment = onCopyLink(8117).getURLForExperiment(id);
   const items = [uRLForExperiment, onCopyLink];
   const obj2 = { style: null, children: null };
   const obj3 = { paddingHorizontal: null };
   const callback = noop.useCallback(() => {
     ClipboardUtils.copy(uRLForExperiment, () => {
-      const obj = uRLForExperiment(4574);
-      obj.open({ key: "experiment-link-copied", content: "Copied experiment link", IconComponent: onCopyLink(4798).CircleCheckIcon, iconColor: "status-positive" });
+      const obj = uRLForExperiment(4766);
+      obj.open({ key: "experiment-link-copied", content: "Copied experiment link", IconComponent: onCopyLink(4992).CircleCheckIcon, iconColor: "status-positive" });
       if (closure_1_0 != null) {
         closure_1_0();
       }
@@ -1442,9 +1440,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items);
   obj3.paddingHorizontal = uRLForExperiment(587).space.PX_12;
   obj2.style = obj3;
-  let obj = onCopyLink(7545);
+  let obj = onCopyLink(8117);
   const items1 = [
-    closure_11(onCopyLink(6081).TableRowGroup, {
+    closure_11(onCopyLink(6267).TableRowGroup, {
       title: "Experiment Assignments",
       hasIcons: false,
       children: options.map((item, index) => {
@@ -1453,7 +1451,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         if (isDestructive) {
           variant = "danger";
         }
-        return closure_1_11(onCopyLink(6000).TableRow, { variant, label, onPress }, index);
+        return closure_1_11(onCopyLink(6184).TableRow, { variant, label, onPress }, index);
       })
     }),
   ,
@@ -1469,10 +1467,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (isDestructive) {
         variant = "danger";
       }
-      return closure_1_11(onCopyLink(6000).TableRow, { variant, label, onPress }, index);
+      return closure_1_11(onCopyLink(6184).TableRow, { variant, label, onPress }, index);
     })
   };
-  obj5.children = closure_11(onCopyLink(6081).TableRowGroup, { title: "Share", hasIcons: false, children: closure_11(onCopyLink(6000).TableRow, { label: "Copy Link", subLabel: uRLForExperiment, onPress: callback }) });
+  obj5.children = closure_11(onCopyLink(6267).TableRowGroup, { title: "Share", hasIcons: false, children: closure_11(onCopyLink(6184).TableRow, { label: "Copy Link", subLabel: uRLForExperiment, onPress: callback }) });
   items1[1] = closure_11(View, obj5);
   if ("guild" === experiment.kind) {
     const obj7 = { id, override };
@@ -1487,7 +1485,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_17 = tmp5;
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExperimentActionSheet(arg0) {
   const cResult = c.c(12);
   ({ id, experiment, override, options, onCopyLink } = arg0);
   if (cResult[0] === experiment.title) {
@@ -1533,7 +1531,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp5;
   tmp4 = tmp5;
   const obj4 = { title: experiment.title, subtitle: id };
-}) : ((arg0) => {
+}) : (function ExperimentActionSheet(arg0) {
   ({ id, experiment } = arg0);
   ({ override, options, onCopyLink } = arg0);
   const obj = { header: closure_1_11(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: experiment.title, subtitle: id }), children: closure_1_11(closure_17, { experiment, override, id, options, onCopyLink }) };
@@ -1542,7 +1540,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsExperimentsScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsExperimentsScreen() {
   const cResult = require("c").c(30);
   const tmp4 = closure_13();
   const obj = require("c");
@@ -1570,8 +1568,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       } else {
         tmp20 = cResult[6];
       }
-      const insets = arr(6478)(tmp20).insets;
-      const tmp22 = arr(6553)();
+      const insets = arr(6656)(tmp20).insets;
+      const tmp22 = arr(6729)();
       if (cResult[7] === tmp10) {
         if (cResult[8] === tmp13) {
           if (cResult[9] === tmp6) {
@@ -1599,8 +1597,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             if (tmp21Result.isEmpty(tmp10)) {
               const _Symbol3 = Symbol;
               if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-                const EmptyState = tmp(1188).EmptyState;
-                { Illustration: null, title: "No Experiments", body: "No experiments are currently running." }.Illustration = tmp(7915).NoResults;
+                const EmptyState = tmp(1200).EmptyState;
+                { Illustration: null, title: "No Experiments", body: "No experiments are currently running." }.Illustration = tmp(8334).NoResults;
                 class A {
                   constructor(arg0, arg1) {
                     tmp = closure_1[arg1];
@@ -1619,7 +1617,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               const _Symbol2 = Symbol;
               if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
                 const obj6 = { size: "md", onChange: tmp7 };
-                const tmp28 = closure_11(tmp(6554).SearchField, obj6);
+                const tmp28 = closure_11(tmp(6730).SearchField, obj6);
                 class A {
                   constructor(arg0, arg1) {
                     tmp = closure_1[arg1];
@@ -1689,7 +1687,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 }
               }
               const obj8 = { style: tmp4.listContainer, sections: tmp24, estimatedListSize: "windowSize", itemSize: tmp22, insetEnd: sum, renderItem: tmp25 };
-              const tmp37 = closure_11(tmp21(6559), obj8);
+              const tmp37 = closure_11(tmp21(6735), obj8);
               cResult[20] = tmp22;
               cResult[21] = tmp25;
               cResult[22] = tmp24;
@@ -1713,15 +1711,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           tmp25 = A;
         }
       }
-      const tmpResult = tmp(11436);
-      const tmpResult3 = tmp(11436);
-      const bestMatches = tmpResult.getBestMatches(tmpResult3.sortEntries(tmp(11436).getEntries(tmp10), tmp13), tmp6);
+      const tmpResult = tmp(11419);
+      const tmpResult3 = tmp(11419);
+      const bestMatches = tmpResult.getBestMatches(tmpResult3.sortEntries(tmp(11419).getEntries(tmp10), tmp13), tmp6);
       cResult[7] = tmp10;
       cResult[8] = tmp13;
       cResult[9] = tmp6;
       cResult[10] = bestMatches;
       arr = bestMatches;
-      const tmpResult4 = tmp(11436);
+      const tmpResult4 = tmp(11419);
     }
     const obj9 = {};
     const merged = Object.assign(overridesInfo);
@@ -1739,7 +1737,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = obj10;
   tmp10 = obj10;
   const obj3 = require("useApexExperiments");
-}) : (() => {
+}) : (function DevToolsExperimentsScreen() {
   const tmp = closure_13();
   [tmp3, tmp4] = overridesInfo2(memo1.useState(""), 2);
   const tmp2 = overridesInfo2(memo1.useState(""), 2);

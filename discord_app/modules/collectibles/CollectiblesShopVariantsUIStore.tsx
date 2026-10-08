@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/CollectiblesShopVariantsUIStore.tsx
-import _mod4498 from "../../../_runtime/metro/04498__.js";
+import _mod4690 from "../../../_runtime/metro/04690__.js";
 import CollectiblesProductUtils from "utils/CollectiblesProductUtils.tsx";
-import identity from "../../../_runtime/metro/01254__.js";
+import identity from "../../../_runtime/metro/01266__.js";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -10,11 +10,11 @@ const require = globalThis.__r;
 const state = identity.createWithEqualityFn(() => {
   const obj = { selectionStates: new Map() };
   return obj;
-}, _mod4498.shallow);
+}, _mod4690.shallow);
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopVariantsUIStore.tsx");
 
 export const useSelectedVariantIndex = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useSelectedVariantIndex(arg0) {
       _require = arg0;
       const cResult = require("c").c(2);
       let obj = require("c");
@@ -50,7 +50,7 @@ export const useSelectedVariantIndex = ReactCompilerGating.isReactCompilerEnable
       }
       return defaultVariantIndex;
     }
-  : (arg0) => {
+  : function useSelectedVariantIndex(arg0) {
       _require = arg0;
       let defaultVariantIndex = require("useDefaultVariantIndex").useDefaultVariantIndex(arg0);
       let tmp2 = state((selectionStates) => {

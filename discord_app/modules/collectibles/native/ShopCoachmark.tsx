@@ -6,13 +6,13 @@ import native from "../../../design/void/native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ image: { marginTop: 12 } });
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CoachmarkImg(arg0) {
       const cResult = c.c(6);
       ({ source, decorationAsset } = arg0);
       const tmp4 = closure_6();
@@ -45,7 +45,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = tmp7;
       const obj3 = { style: tmp4.image, source, avatarDecoration: tmp5, size: native.AvatarSizes.XXLARGE };
     }
-  : (arg0) => {
+  : function CoachmarkImg(arg0) {
       ({ source, decorationAsset } = arg0);
       const tmp = closure_6();
       return jsx(native.Avatar, {
@@ -60,7 +60,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/ShopCoachmark.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (markAsDismissed) => {
+  ? function ShopCoachmark(markAsDismissed) {
       const cResult = markAsDismissed(decorationAsset[5]).c(14);
       markAsDismissed = markAsDismissed.markAsDismissed;
       ({ visible, title, description, avatarSrc } = markAsDismissed);
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = fn2;
       tmp5 = fn2;
     }
-  : (markAsDismissed) => {
+  : function ShopCoachmark(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
       const visible = markAsDismissed.visible;
       const title = markAsDismissed.title;

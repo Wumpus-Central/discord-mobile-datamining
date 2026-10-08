@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import MessageRecordUtils from "../../../messages/MessageRecordUtils.tsx";
-import createMessageDefault from "../../../messages/createMessage.tsx";
 import UserActionCreatorsAll from "../../../../actions/UserActionCreators.tsx";
+import createMessageDefault from "../../../messages/createMessage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserRecord from "../../../../records/UserRecord.tsx";
 
@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx");
 
 export const useGuildSettingsRoleExampleMessage = ReactCompilerGating.isReactCompilerEnabled()
-  ? (content) => {
+  ? function useGuildSettingsRoleExampleMessage(content) {
       const cResult = c.c(2);
       if (cResult[0] !== content) {
         const obj2 = {};
@@ -45,7 +45,7 @@ export const useGuildSettingsRoleExampleMessage = ReactCompilerGating.isReactCom
       }
       return tmp4;
     }
-  : (content) => {
+  : function useGuildSettingsRoleExampleMessage(content) {
       const items = [content];
       return noop.useMemo(() => {
         const obj2 = {};

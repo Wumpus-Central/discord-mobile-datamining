@@ -1,5 +1,4 @@
 // discord_app/modules/saved_messages/SavedMessagesManager.tsx
-import ForLaterExperiment from "ForLaterExperiment.tsx";
 import SavedMessagesActions from "SavedMessagesActions.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
@@ -27,33 +26,30 @@ let closure_3 = async function _refreshSavedMessages() {
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_0 = tmp4;
-          if (obj3.isForLaterExperimentOn("saved_messages_manager")) {
-            c1 = 1;
-            c2 = 1;
-            const obj6 = { value: SavedMessagesActions.fetchAndUpdateSavedMessages(), done: false };
-            return obj6;
-          } else {
-            c2 = 3;
-          }
-          obj3 = ForLaterExperiment;
+          c1 = 1;
+          c2 = 1;
+          const obj5 = { value: SavedMessagesActions.fetchAndUpdateSavedMessages(), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c2 = 3;
         throw value;
-      } else if (arg0 !== 2) {
-        const result = closure_128_0(closure_128_1[3]).showOverdueRemindersToast();
-        const obj = closure_128_0(closure_128_1[3]);
+      } else if (arg0 === 2) {
+        c2 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        const result = closure_128_0(closure_128_1[2]).showOverdueRemindersToast();
+        c2 = 3;
+        return { value: "IconComponent", done: null };
       }
-      c2 = 3;
-      const obj7 = { value, done: true };
-      return obj7;
-    } catch (tmp13) {
+    } catch (tmp11) {
       c2 = tmp;
-      throw tmp13;
+      throw tmp11;
     }
   }
 };

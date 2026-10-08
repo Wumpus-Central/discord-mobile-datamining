@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (product) => {
+  ? function useMobileCollectiblesPurchaseSKU(product) {
       const cResult = c.c(12);
       if (cResult[0] !== product) {
         product = product.product;
@@ -31,12 +31,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function f() {
-          return currentUser.getCurrentUser();
-        };
+        class S {
+          constructor() {
+            return closure_1_5.getCurrentUser();
+          }
+        }
         cResult[3] = items;
-        cResult[4] = fn;
-        let tmp10 = fn;
+        cResult[4] = S;
+        let tmp10 = S;
         let tmp9 = items;
       } else {
         tmp9 = cResult[3];
@@ -56,6 +58,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = {};
+        class S {
+          constructor() {
+            return closure_1_5.getCurrentUser();
+          }
+        }
         const merged = Object.assign(tmp5);
         obj2.skuId = tmp4.skuId;
         obj2.platformSkuId = tmp13;
@@ -74,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = collectibleGoogleSkuId;
       const tmpResult2 = collectibles_CollectiblesUtils;
     }
-  : (product) => {
+  : function useMobileCollectiblesPurchaseSKU(product) {
       product = product.product;
       const merged = Object.assign(product, Object.assign({ product: 0 }));
       const items = [UserStore];

@@ -2,7 +2,6 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import DiscordNativeDefault from "../../lib/DiscordNative.tsx";
 import clipPOVOverlap from "clipPOVOverlap.tsx";
 import DistributedClipsExperimentDefault from "DistributedClipsExperiment.tsx";
@@ -239,7 +238,7 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(7244);
+const ClipsConstants = fn(7735);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire,
   ClipSaveTypes: closure_7,
@@ -253,7 +252,7 @@ const ClipsConstants = fn(7244);
 } = ClipsConstants);
 const Constants = fn(1085);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(4943);
+const StreamSettingsConstants = fn(5210);
 let c16 = "default";
 let c17 = "Discord Clips";
 const dependencyMap = {};
@@ -385,7 +384,7 @@ prototype["getHardwareClassificationVersion"] = function getHardwareClassificati
   return obj.hardwareClassificationVersion;
 };
 prototype["getIsAtMaxSaveClipOperations"] = function getIsAtMaxSaveClipOperations() {
-  return closure_21 >= v65535;
+  return closure_21 >= collapsed;
 };
 prototype["getLastClipsError"] = function getLastClipsError() {
   return c26;
@@ -514,21 +513,7 @@ let items = [
     obj.hardwareClassificationForDecoupled = prop;
     return obj;
   },
-  (clipsSettings) => {
-    const _default = MediaEngineStore.default;
-    let hardwareEncoding;
-    if (_default != null) {
-      hardwareEncoding = _default.getHardwareEncoding();
-    }
-    obj = {};
-    const merged = Object.assign(clipsSettings);
-    const obj2 = {};
-    const merged1 = Object.assign(clipsSettings.clipsSettings);
-    obj2.clipsEnabled = hardwareEncoding && clipsSettings.clipsSettings.clipsEnabled;
-    obj2.decoupledClipsEnabled = hardwareEncoding && clipsSettings.clipsSettings.decoupledClipsEnabled;
-    obj.clipsSettings = obj2;
-    return obj;
-  },
+  (arg0) => arg0,
   (newClipIds) => {
     obj = {};
     const merged = Object.assign(newClipIds);

@@ -1,7 +1,7 @@
 // discord_app/modules/voice_overlay/native/MobileVoiceOverlayLifecycleManager.android.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import useChannelName from "../../channel/useChannelName.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
+import useChannelName from "../../channel/useChannelName.tsx";
 import AutocompleteUtilsDefault from "../../../utils/AutocompleteUtils.tsx";
 import ForegroundServiceManagerDefault from "../../foreground_service/mobile/ForegroundServiceManager.android.tsx";
 import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators.tsx";
@@ -19,18 +19,18 @@ import MobileVoiceOverlayStore from "../../../stores/native/MobileVoiceOverlaySt
 import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4513).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4705).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-fn(14389);
-fn(14390);
-fn(14391);
-fn(14392);
-fn(4815);
-fn(13614);
-fn(14393);
-fn(14394);
-const registerAsset = fn(12741);
+fn(14615);
+fn(14616);
+fn(14617);
+fn(14618);
+fn(5009);
+fn(13437);
+fn(14619);
+fn(14620);
+const registerAsset = fn(13409);
 let items = [VoiceStateStore, RTCConnectionStore, MediaEngineStore];
 const constants = {
   DISABLED: 0,

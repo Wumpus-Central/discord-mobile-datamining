@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import DesignSystemsNotificationComponentsExperiment from "../../design/DesignSystemsNotificationComponentsExperiment.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -63,7 +63,7 @@ function UnavailableStickerDetail(arg0) {
     if (null != stickerAssetUrl) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { stickerUrl: tmp };
-      obj.openLazy(asyncRequireImpl(10146, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequireImpl(9731, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
     }
   }, items1);
   const items2 = [closure_21(require("Sticker"), { sticker: renderableSticker, size: 48 }), ,];
@@ -116,7 +116,7 @@ function UnavailableStickerDetail(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ActivityIndicator: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const StickerPickerConstants = fn(10095);
+const StickerPickerConstants = fn(9679);
 ({ PADDING_HORIZONTAL: closure_12, MIN_MARGIN: map1, STICKER_SIZE: closure_14 } = StickerPickerConstants);
 const Constants = fn(1085);
 ({
@@ -126,11 +126,11 @@ const Constants = fn(1085);
   GuildFeatures: closure_18,
   UserSettingsSections: closure_19,
 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(6653).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6830).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4896);
-const PlatformUtils = fn(1369);
+const createStyles = fn(5090);
+const PlatformUtils = fn(1381);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 16;
@@ -171,7 +171,7 @@ obj.starIconUnselected = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFA
 let closure_24 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useStickerFavorite(arg0) {
       _require = arg0;
       const cResult = require("c").c(13);
       const tmp2 = closure_24();
@@ -220,7 +220,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                   stringResult = string(t.mE2e8A);
                 }
                 obj.children = stringResult;
-                return closure_2_21(closure_0(4892).Text, obj);
+                return closure_2_21(closure_0(5086).Text, obj);
               };
               tmp4 = closure_0;
               obj2 = closure_0(closure_2[22]);
@@ -305,7 +305,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                     stringResult = string(t.mE2e8A);
                   }
                   obj.children = stringResult;
-                  return closure_2_21(closure_0(4892).Text, obj);
+                  return closure_2_21(closure_0(5086).Text, obj);
                 };
                 tmp4 = closure_0;
                 obj2 = closure_0(closure_2[22]);
@@ -381,7 +381,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                 stringResult = string(t.mE2e8A);
               }
               obj.children = stringResult;
-              return closure_2_21(closure_0(4892).Text, obj);
+              return closure_2_21(closure_0(5086).Text, obj);
             };
             tmp4 = closure_0;
             obj2 = closure_0(closure_2[22]);
@@ -445,7 +445,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = hasItem;
       tmp3 = hasItem;
     }
-  : (arg0) => {
+  : function useStickerFavorite(arg0) {
       _require = arg0;
       const tmp = closure_24();
       const starIcon = tmp;
@@ -539,7 +539,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
+  ? function StandardStickerDetail(channel) {
       const cResult = chatInputRef(pack_id[15]).c(25);
       ({ sticker, chatInputRef } = channel);
       const tmp4 = closure_24();
@@ -630,82 +630,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
                         } else {
                           tmp25Result = tmp25(stateFromStores);
                         }
-                        class B {
-                          constructor(arg0) {
-                            closure_0 = channel;
-                            tmp = closure_5;
-                            intl = chatInputRef(pack_id[21]).intl;
-                            format = intl.format;
-                            t = chatInputRef(pack_id[21]).t;
-                            if (closure_5) {
-                              obj1 = { stickerPackName: null };
-                              obj1.stickerPackName = channel.name;
-                              formatResult = format(t.auckXz, obj1);
-                            } else {
-                              obj = { stickerPackName: null };
-                              obj.stickerPackName = channel.name;
-                              formatResult = format(t.OzB6e3, obj);
-                            }
-                            tmp5 = closure_1_21;
-                            tmp3 = closure_1_23;
-                            tmp4 = closure_1_22;
-                            obj9 = {
-                              variant: "heading-md/extrabold",
-                              color: "mobile-text-heading-primary",
-                              children: name,
-                            };
-                            items = [, , , ,];
-                            items[0] = closure_1_21(chatInputRef(pack_id[20]).Text, obj9);
-                            obj10 = { style: closure_1.description, variant: "text-sm/medium", children: formatResult };
-                            items[1] = closure_1_21(chatInputRef(pack_id[20]).Text, obj10);
-                            tmp6 = closure_1;
-                            obj11 = { containerWidth: closure_7, stickers: null, rowSize: null };
-                            stickers = channel.stickers;
-                            tmp7 = closure_1(pack_id[28]);
-                            obj11.stickers = stickers.slice(0, closure_8);
-                            obj11.rowSize = closure_8;
-                            items[2] = closure_1_21(tmp7, obj11);
-                            tmp5Result = null;
-                            if (tmp) {
-                              tmp9 = closure_6;
-                              obj12 = { style: null };
-                              obj13 = { height: null };
-                              tmp10 = pack_id;
-                              obj13.height = tmp6(pack_id[13]).space.PX_16;
-                              obj12.style = obj13;
-                              tmp5Result = tmp5(closure_6, obj12);
-                            }
-                            items[3] = tmp5Result;
-                            if (tmp) {
-                              tmp11 = chatInputRef;
-                              tmp12 = pack_id;
-                              obj14 = { variant: "secondary", text: null, onPress: null };
-                              tmp13 = chatInputRef;
-                              tmp14 = pack_id;
-                              intl2 = chatInputRef(pack_id[21]).intl;
-                              tmp15 = chatInputRef;
-                              tmp16 = pack_id;
-                              obj14.text = intl2.string(chatInputRef(pack_id[21]).t.GPy3Ar);
-                              obj14.onPress = function onPress() {
-                                const result = showStickerDetailActionSheet.hideStickerDetailActionSheet();
-                                if (closure_6) {
-                                  if (null != chatInputRef) {
-                                    const result1 = stickers_StickersUtils.openStickerPickerToPackId(tmp4, pack_id);
-                                    const tmpResult = stickers_StickersUtils;
-                                  }
-                                }
-                                const obj2 = { analyticsLocation, analyticsPopoutType: null, stickerPack: null };
-                                obj2.analyticsPopoutType =
-                                  openStickerPackDetailActionSheet.AnalyticsPopoutType.STICKER_PACK_UPSELL;
-                                obj2.stickerPack = stickerPack;
-                                openStickerPackDetailActionSheetDefault(obj2);
-                              };
-                              tmp = tmp5(chatInputRef(pack_id[29]).Button, obj14);
-                            }
-                            items[4] = tmp;
-                            return tmp3(tmp4, { children: items });
-                          }
-                        }
+                        cResult[22] = stateFromStores;
                         cResult[23] = tmp25;
                         cResult[24] = tmp25Result;
                       }
@@ -716,76 +641,66 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        class B {
-          constructor(arg0) {
-            closure_0 = channel;
-            tmp = closure_5;
-            intl = chatInputRef(pack_id[21]).intl;
-            format = intl.format;
-            t = chatInputRef(pack_id[21]).t;
-            if (closure_5) {
-              obj1 = { stickerPackName: null };
-              obj1.stickerPackName = channel.name;
-              formatResult = format(t.auckXz, obj1);
-            } else {
-              obj = { stickerPackName: null };
-              obj.stickerPackName = channel.name;
-              formatResult = format(t.OzB6e3, obj);
-            }
-            tmp5 = closure_1_21;
-            tmp3 = closure_1_23;
-            tmp4 = closure_1_22;
-            obj9 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: name };
-            items = [, , , ,];
-            items[0] = closure_1_21(chatInputRef(pack_id[20]).Text, obj9);
-            obj10 = { style: closure_1.description, variant: "text-sm/medium", children: formatResult };
-            items[1] = closure_1_21(chatInputRef(pack_id[20]).Text, obj10);
-            tmp6 = closure_1;
-            obj11 = { containerWidth: closure_7, stickers: null, rowSize: null };
-            stickers = channel.stickers;
-            tmp7 = closure_1(pack_id[28]);
-            obj11.stickers = stickers.slice(0, closure_8);
-            obj11.rowSize = closure_8;
-            items[2] = closure_1_21(tmp7, obj11);
-            tmp5Result = null;
-            if (tmp) {
-              tmp9 = closure_6;
-              obj12 = { style: null };
-              obj13 = { height: null };
-              tmp10 = pack_id;
-              obj13.height = tmp6(pack_id[13]).space.PX_16;
-              obj12.style = obj13;
-              tmp5Result = tmp5(closure_6, obj12);
-            }
-            items[3] = tmp5Result;
-            if (tmp) {
-              tmp11 = chatInputRef;
-              tmp12 = pack_id;
-              obj14 = { variant: "secondary", text: null, onPress: null };
-              tmp13 = chatInputRef;
-              tmp14 = pack_id;
-              intl2 = chatInputRef(pack_id[21]).intl;
-              tmp15 = chatInputRef;
-              tmp16 = pack_id;
-              obj14.text = intl2.string(chatInputRef(pack_id[21]).t.GPy3Ar);
-              obj14.onPress = function onPress() {
-                const result = showStickerDetailActionSheet.hideStickerDetailActionSheet();
-                if (closure_6) {
-                  if (null != chatInputRef) {
-                    const result1 = stickers_StickersUtils.openStickerPickerToPackId(tmp4, pack_id);
-                    const tmpResult = stickers_StickersUtils;
-                  }
-                }
-                const obj2 = { analyticsLocation, analyticsPopoutType: null, stickerPack: null };
-                obj2.analyticsPopoutType = openStickerPackDetailActionSheet.AnalyticsPopoutType.STICKER_PACK_UPSELL;
-                obj2.stickerPack = stickerPack;
-                openStickerPackDetailActionSheetDefault(obj2);
-              };
-              tmp = tmp5(chatInputRef(pack_id[29]).Button, obj14);
-            }
-            items[4] = tmp;
-            return tmp3(tmp4, { children: items });
+        function upsellContent(name) {
+          const stickerPack = name;
+          let tmp = stateFromStores1;
+          const intl = chatInputRef(pack_id[21]).intl;
+          const format = intl.format;
+          const t = chatInputRef(pack_id[21]).t;
+          if (stateFromStores1) {
+            let obj2 = { stickerPackName: name.name };
+            let formatResult = format(t.auckXz, obj2);
+          } else {
+            let obj = { stickerPackName: name.name };
+            formatResult = format(t.OzB6e3, obj);
           }
+          const children = [
+            closure_1_21(chatInputRef(pack_id[20]).Text, {
+              variant: "heading-md/extrabold",
+              color: "mobile-text-heading-primary",
+              children: name,
+            }),
+            closure_1_21(chatInputRef(pack_id[20]).Text, {
+              style: closure_1.description,
+              variant: "text-sm/medium",
+              children: formatResult,
+            }),
+            ,
+            ,
+          ];
+          const obj5 = { containerWidth, stickers: null, rowSize: rounded };
+          const stickers = name.stickers;
+          obj5.stickers = stickers.slice(0, rounded);
+          children[2] = closure_1_21(closure_1(pack_id[28]), obj5);
+          let tmp5Result = null;
+          if (tmp) {
+            const obj6 = { style: null };
+            const obj7 = { height: closure_1(pack_id[13]).space.PX_16 };
+            obj6.style = obj7;
+            tmp5Result = closure_1_21(closure_6, obj6);
+          }
+          children[3] = tmp5Result;
+          if (tmp) {
+            const obj8 = { variant: "secondary", text: null, onPress: null };
+            const intl2 = chatInputRef(pack_id[21]).intl;
+            obj8.text = intl2.string(chatInputRef(pack_id[21]).t.GPy3Ar);
+            obj8.onPress = function onPress() {
+              const result = showStickerDetailActionSheet.hideStickerDetailActionSheet();
+              if (closure_6) {
+                if (null != chatInputRef) {
+                  const result1 = stickers_StickersUtils.openStickerPickerToPackId(tmp4, pack_id);
+                  const tmpResult = stickers_StickersUtils;
+                }
+              }
+              const obj2 = { analyticsLocation, analyticsPopoutType: null, stickerPack: null };
+              obj2.analyticsPopoutType = openStickerPackDetailActionSheet.AnalyticsPopoutType.STICKER_PACK_UPSELL;
+              obj2.stickerPack = stickerPack;
+              openStickerPackDetailActionSheetDefault(obj2);
+            };
+            tmp = closure_1_21(chatInputRef(pack_id[29]).Button, obj8);
+          }
+          children[4] = tmp;
+          return closure_1_23(closure_1_22, { children });
         }
         cResult[12] = tmp19;
         cResult[13] = chatInputRef;
@@ -796,8 +711,8 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[18] = rounded;
         cResult[19] = pack_id;
         cResult[20] = tmp4.description;
-        cResult[21] = B;
-        tmp25 = B;
+        cResult[21] = upsellContent;
+        tmp25 = upsellContent;
       }
       class H {
         constructor() {
@@ -824,27 +739,29 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       tmp21 = H;
       const tmpResult4 = chatInputRef(pack_id[16]);
     }
-  : (chatInputRef) => {
+  : function StandardStickerDetail(chatInputRef) {
       ({ sticker, channel } = chatInputRef);
       chatInputRef = chatInputRef.chatInputRef;
+      let stateFromStores;
+      let memo;
       const pack_id = sticker.pack_id;
       const tmp = closure_24();
       const items = [StickersStore];
-      const stateFromStores = channel(pack_id[25]).useStateFromStores(items, () =>
+      stateFromStores = stateFromStores(pack_id[25]).useStateFromStores(items, () =>
         StickersStore.getStickerPack(pack_id),
       );
-      let obj = channel(pack_id[25]);
+      let obj = stateFromStores(pack_id[25]);
       const items1 = [StickersStore];
-      const stateFromStores1 = channel(pack_id[25]).useStateFromStores(items1, () =>
+      const stateFromStores1 = stateFromStores(pack_id[25]).useStateFromStores(items1, () =>
         StickersStore.isPremiumPack(pack_id),
       );
-      let obj2 = channel(pack_id[25]);
-      const fetchStickerPack = channel(pack_id[16]).useFetchStickerPack(pack_id);
+      let obj2 = stateFromStores(pack_id[25]);
+      const fetchStickerPack = stateFromStores(pack_id[16]).useFetchStickerPack(pack_id);
       const diff = chatInputRef(pack_id[26])().width - 2 * closure_12;
       const rounded = Math.floor(Math.min(ACTION_SHEET_MAX_WIDTH, diff - closure_13) / (closure_14 + closure_13));
       const items2 = [channel.guild_id];
-      const memo = stateFromStores.useMemo(() => {
-        if (null != channel.guild_id) {
+      memo = memo.useMemo(() => {
+        if (null != stateFromStores.guild_id) {
           let DM_CHANNEL = constants.GUILD_CHANNEL;
         } else {
           DM_CHANNEL = constants.DM_CHANNEL;
@@ -852,7 +769,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         return { page: DM_CHANNEL, section: constants2.STICKER_POPOUT };
       }, items2);
       const items3 = [memo, stateFromStores];
-      const effect = stateFromStores.useEffect(() => {
+      const effect = memo.useEffect(() => {
         if (null != stateFromStores) {
           const obj2 = { location: memo, type: "Sticker Upsell Sheet", sticker_pack_id: tmp.id };
           AnalyticsUtilsDefault.track(constants3.OPEN_POPOUT, obj2);
@@ -861,9 +778,9 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       if (null == stateFromStores) {
         let tmp13Result = closure_21(closure_7, { size: "large" });
       } else {
-        const intl2 = channel(tmp3[21]).intl;
+        const intl2 = tmp2(tmp3[21]).intl;
         const format = intl2.format;
-        const t = channel(tmp3[21]).t;
+        const t = tmp2(tmp3[21]).t;
         if (stateFromStores1) {
           const obj4 = { stickerPackName: stateFromStores.name };
           let formatResult = format(t.auckXz, obj4);
@@ -872,9 +789,9 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
           formatResult = format(t.OzB6e3, obj5);
         }
         const obj6 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: sticker.name };
-        const items4 = [closure_21(channel(tmp3[20]).Text, obj6), , , ,];
+        const items4 = [closure_21(tmp2(tmp3[20]).Text, obj6), , , ,];
         const obj7 = { style: tmp.description, variant: "text-sm/medium", children: formatResult };
-        items4[1] = closure_21(channel(tmp3[20]).Text, obj7);
+        items4[1] = closure_21(tmp2(tmp3[20]).Text, obj7);
         const obj8 = { containerWidth: diff, stickers: null, rowSize: null };
         const stickers = stateFromStores.stickers;
         obj8.stickers = stickers.slice(0, rounded);
@@ -885,30 +802,32 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
           const obj9 = { style: null };
           const obj10 = { height: tmp7(tmp3[13]).space.PX_16 };
           obj9.style = obj10;
-          tmp15Result = closure_21(memo, obj9);
+          tmp15Result = closure_21(closure_6, obj9);
         }
         items4[3] = tmp15Result;
         let tmp15Result2 = stateFromStores1;
         if (stateFromStores1) {
           const obj11 = { variant: "secondary", text: null, onPress: null };
-          const intl = channel(tmp3[21]).intl;
-          obj11.text = intl.string(channel(tmp3[21]).t.GPy3Ar);
+          const intl = tmp2(tmp3[21]).intl;
+          obj11.text = intl.string(tmp2(tmp3[21]).t.GPy3Ar);
           obj11.onPress = function onPress() {
-            const result = showStickerDetailActionSheet.hideStickerDetailActionSheet();
-            if (null != stateFromStores) {
-              if (stateFromStores1) {
-                if (null != chatInputRef) {
-                  const result1 = stickers_StickersUtils.openStickerPickerToPackId(tmp5, pack_id);
-                  const tmpResult = stickers_StickersUtils;
+            const result = stateFromStores(pack_id[30]).hideStickerDetailActionSheet();
+            if (null != asyncGeneratorStep) {
+              if (_slicedToArray) {
+                if (null != importDefault) {
+                  const result1 = stateFromStores(pack_id[31]).openStickerPickerToPackId(tmp5, dependencyMap);
+                  const tmpResult = stateFromStores(pack_id[31]);
                 }
               }
             }
-            const obj2 = { analyticsLocation: memo, analyticsPopoutType: null, stickerPack: null };
-            obj2.analyticsPopoutType = openStickerPackDetailActionSheet.AnalyticsPopoutType.STICKER_PACK_UPSELL;
+            const obj2 = { analyticsLocation: noop, analyticsPopoutType: null, stickerPack: null };
+            const obj = stateFromStores(pack_id[30]);
+            obj2.analyticsPopoutType = stateFromStores(pack_id[32]).AnalyticsPopoutType.STICKER_PACK_UPSELL;
             obj2.stickerPack = stateFromStores;
-            openStickerPackDetailActionSheetDefault(obj2);
+            chatInputRef(pack_id[32])(obj2);
+            const tmp6 = chatInputRef(pack_id[32]);
           };
-          tmp15Result2 = closure_21(channel(tmp3[29]).Button, obj11);
+          tmp15Result2 = closure_21(tmp2(tmp3[29]).Button, obj11);
         }
         const obj12 = { children: null };
         items4[4] = tmp15Result2;
@@ -964,7 +883,7 @@ function GuildStickerDetail(sticker) {
     if (null != stickerAssetUrl) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { stickerUrl: tmp };
-      obj.openLazy(asyncRequireImpl(10146, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequireImpl(9731, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
     }
   }, items1);
   analyticsLocation = obj.useMemo(() => {
@@ -1274,7 +1193,7 @@ export default noop.memo(
         const tmp5 = _slicedToArray(StickersHooks.useStickerForRenderableSticker(renderableSticker, true), 2);
         const first = tmp5[0];
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp10 = guild(containerWidth, { size: "large" });
+          const tmp10 = guild(React5, { size: "large" });
           cResult[0] = tmp10;
           let first1 = tmp10;
         } else {
@@ -1343,7 +1262,7 @@ export default noop.memo(
         const tmp = closure_24();
         const tmp4 = _slicedToArray(StickersHooks.useStickerForRenderableSticker(renderableSticker, true), 2);
         const first = tmp4[0];
-        let tmp6Result2 = guild(containerWidth, { size: "large" });
+        let tmp6Result2 = guild(React5, { size: "large" });
         if (null == first) {
           if (tmp4[1]) {
             const obj2 = { renderableSticker, channel };

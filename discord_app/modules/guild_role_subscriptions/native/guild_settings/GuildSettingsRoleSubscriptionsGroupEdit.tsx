@@ -9,12 +9,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-const ApplicationTypes = fn(1360).ApplicationTypes;
+const ApplicationTypes = fn(1372).ApplicationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
       const cResult = require("c").c(33);
       guildId = guildId.guildId;
       _require = guildId;
@@ -335,7 +335,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                           }
                         }
                       }
-                      const fn2 = function k() {
+                      let fn = function k() {
                         if (loading) {
                           let fn = () =>
                             updateSubscriptionsSettings(
@@ -363,10 +363,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                       cResult[14] = tmp17;
                       cResult[15] = loading;
                       cResult[16] = navigation;
-                      cResult[17] = fn2;
+                      cResult[17] = fn;
                       cResult[18] = items2;
                       tmp29 = items2;
-                      tmp28 = fn2;
+                      tmp28 = fn;
                     }
                   }
                 }
@@ -469,7 +469,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          let fn = function () {
+          function t3() {
             const self = this;
             const apply = closure_0.apply;
             if (typeof apply === "unknown") {
@@ -478,11 +478,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               applyArgumentsResult = apply(self, arguments);
             }
             return applyArgumentsResult;
-          };
+          }
           cResult[10] = undefined;
           cResult[11] = updateSubscriptionsSettings;
-          cResult[12] = fn;
-          tmp25 = fn;
+          cResult[12] = t3;
+          tmp25 = t3;
         }
       }
       let tmp21 = first;
@@ -574,7 +574,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp20 = tmp21;
       const tmpResult = require("GuildRoleSubscriptionsHooks");
     }
-  : (guildId) => {
+  : function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
       guildId = guildId.guildId;
       let isFullServerGating;
       _slicedToArray = undefined;
@@ -788,7 +788,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function GuildSettingsRoleSubscriptionsGroupEdit(guildId) {
       const cResult = c.c(5);
       guildId = guildId.guildId;
       if (cResult[0] !== guildId) {
@@ -812,7 +812,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp8;
       tmp7 = tmp8;
     }
-  : (guildId) => {
+  : function GuildSettingsRoleSubscriptionsGroupEdit(guildId) {
       guildId = guildId.guildId;
       const obj = { guildId, children: options(closure_11, { guildId }) };
       return options(GuildSettingsRoleSubscriptionContainerDefault, obj);

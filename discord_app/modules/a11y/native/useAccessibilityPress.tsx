@@ -8,11 +8,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/a11y/native/useAccessibilityPress.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (current, label) => {
+  ? function useAccessibilityPress(current, label) {
       const cResult = c.c(6);
       noop.useRef(current);
       if (cResult[0] !== current) {
-        const fn = function s() {
+        const fn = function n() {
           closure_1.current = current;
         };
         const items = [current];
@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp2, tmp3);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function u(nativeEvent) {
+        const fn2 = function l(nativeEvent) {
           if ("activate" === nativeEvent.nativeEvent.actionName) {
             ref.current();
           }
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     }
-  : (current, label) => {
+  : function useAccessibilityPress(current, label) {
       closure_2 = noop.useRef(current);
       let items = [current];
       const effect = noop.useEffect(() => {

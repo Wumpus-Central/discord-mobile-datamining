@@ -1,22 +1,22 @@
 // discord_app/modules/parent_tools/native/FamilyCenterDataConfirmation.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef2521 from "../FamilyCenter.messages.js";
+import _modDef2565 from "../FamilyCenter.messages.js";
 import UserPlusIcon from "../../../design/components/Icon/native/redesign/generated/UserPlusIcon.tsx";
 import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
-import ForumIcon from "../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import SettingsIcon from "../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import CreditCardIcon from "../../../design/components/Icon/native/redesign/generated/CreditCardIcon.tsx";
-import FlagIcon from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
+import ForumIcon from "../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
 import ServerIcon from "../../../design/components/Icon/native/redesign/generated/ServerIcon.tsx";
-import GiftIcon from "../../../design/components/Icon/native/redesign/generated/GiftIcon.tsx";
+import FlagIcon from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import PhoneIcon from "../../../design/components/Icon/native/redesign/generated/PhoneIcon.tsx";
+import GiftIcon from "../../../design/components/Icon/native/redesign/generated/GiftIcon.tsx";
 import PiggyBankIcon from "../../../design/components/Icon/native/redesign/generated/PiggyBankIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -25,7 +25,7 @@ const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function RowGroup(arg0) {
       const cResult = c.c(10);
       ({ title, rows } = arg0);
       if (cResult[0] !== title) {
@@ -85,7 +85,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = tmp17;
       }
     }
-  : (children) => {
+  : function RowGroup(children) {
       const rows = children.rows;
       let obj = { spacing: 8, children: null };
       const items = [
@@ -118,11 +118,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterDataConfirmation.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function FamilyCenterDataConfirmation() {
       const cResult = c.c(74);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef2521.CI1Env);
+        const stringResult = intl.string(_modDef2565.CI1Env);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl2 = util.intl;
-        const stringResult1 = intl2.string(_modDef2521["ksze+o"]);
+        const stringResult1 = intl2.string(_modDef2565["ksze+o"]);
         cResult[1] = stringResult1;
         let tmp7 = stringResult1;
       } else {
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl3 = util.intl;
-        const stringResult2 = intl3.string(_modDef2521["n73g+V"]);
+        const stringResult2 = intl3.string(_modDef2565["n73g+V"]);
         cResult[2] = stringResult2;
         let tmp10 = stringResult2;
       } else {
@@ -146,9 +146,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const intl4 = util.intl;
-        const stringResult3 = intl4.string(_modDef2521["5x3taM"]);
+        const stringResult3 = intl4.string(_modDef2565["5x3taM"]);
         const intl5 = util.intl;
-        const stringResult4 = intl5.string(_modDef2521.WZwGFX);
+        const stringResult4 = intl5.string(_modDef2565.WZwGFX);
         cResult[3] = stringResult3;
         cResult[4] = stringResult4;
         let tmp14 = stringResult4;
@@ -160,9 +160,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ageSpecificText = useAgeSpecificText.useAgeSpecificText(tmp13, tmp14);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const intl6 = util.intl;
-        const stringResult5 = intl6.string(_modDef2521.FcKkcr);
+        const stringResult5 = intl6.string(_modDef2565.FcKkcr);
         const intl7 = util.intl;
-        const stringResult6 = intl7.string(_modDef2521.PQtDFk);
+        const stringResult6 = intl7.string(_modDef2565.PQtDFk);
         cResult[5] = stringResult5;
         cResult[6] = stringResult6;
         let tmp20 = stringResult6;
@@ -175,9 +175,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ageSpecificText1 = useAgeSpecificText.useAgeSpecificText(tmp19, tmp20);
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const intl8 = util.intl;
-        const stringResult7 = intl8.string(_modDef2521["dES/2r"]);
+        const stringResult7 = intl8.string(_modDef2565["dES/2r"]);
         const intl9 = util.intl;
-        const stringResult8 = intl9.string(_modDef2521.ep6mdN);
+        const stringResult8 = intl9.string(_modDef2565.ep6mdN);
         cResult[7] = stringResult7;
         cResult[8] = stringResult8;
         let tmp26 = stringResult8;
@@ -190,9 +190,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ageSpecificText2 = useAgeSpecificText.useAgeSpecificText(tmp25, tmp26);
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
         const intl10 = util.intl;
-        const stringResult9 = intl10.string(_modDef2521.GWPcQg);
+        const stringResult9 = intl10.string(_modDef2565.GWPcQg);
         const intl11 = util.intl;
-        const stringResult10 = intl11.string(_modDef2521.yFnKIg);
+        const stringResult10 = intl11.string(_modDef2565.yFnKIg);
         cResult[9] = stringResult10;
         cResult[10] = stringResult9;
         let tmp32 = stringResult9;
@@ -205,9 +205,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ageSpecificText3 = useAgeSpecificText.useAgeSpecificText(tmp32, tmp31);
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
         const intl12 = util.intl;
-        const stringResult11 = intl12.string(_modDef2521["30+sih"]);
+        const stringResult11 = intl12.string(_modDef2565["30+sih"]);
         const intl13 = util.intl;
-        const stringResult12 = intl13.string(_modDef2521["0cuLn1"]);
+        const stringResult12 = intl13.string(_modDef2565["0cuLn1"]);
         cResult[11] = stringResult11;
         cResult[12] = stringResult12;
         let tmp38 = stringResult12;
@@ -220,9 +220,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ageSpecificText4 = useAgeSpecificText.useAgeSpecificText(tmp37, tmp38);
       if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
         const intl14 = util.intl;
-        const stringResult13 = intl14.string(_modDef2521.tHTyRh);
+        const stringResult13 = intl14.string(_modDef2565.tHTyRh);
         const intl15 = util.intl;
-        const stringResult14 = intl15.string(_modDef2521.TeNlMb);
+        const stringResult14 = intl15.string(_modDef2565.TeNlMb);
         cResult[13] = stringResult13;
         cResult[14] = stringResult14;
         let tmp44 = stringResult14;
@@ -235,9 +235,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ageSpecificText5 = useAgeSpecificText.useAgeSpecificText(tmp43, tmp44);
       if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
         const intl16 = util.intl;
-        const stringResult15 = intl16.string(_modDef2521.PfveQ6);
+        const stringResult15 = intl16.string(_modDef2565.PfveQ6);
         const intl17 = util.intl;
-        const stringResult16 = intl17.string(_modDef2521["f7ofm/"]);
+        const stringResult16 = intl17.string(_modDef2565["f7ofm/"]);
         cResult[15] = stringResult15;
         cResult[16] = stringResult16;
         let tmp50 = stringResult16;
@@ -250,9 +250,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ageSpecificText6 = useAgeSpecificText.useAgeSpecificText(tmp49, tmp50);
       if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
         const intl18 = util.intl;
-        const stringResult17 = intl18.string(_modDef2521.MKeCj3);
+        const stringResult17 = intl18.string(_modDef2565.MKeCj3);
         const intl19 = util.intl;
-        const stringResult18 = intl19.string(_modDef2521.HdcGGl);
+        const stringResult18 = intl19.string(_modDef2565.HdcGGl);
         cResult[17] = stringResult17;
         cResult[18] = stringResult18;
         let tmp56 = stringResult18;
@@ -265,9 +265,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ageSpecificText7 = useAgeSpecificText.useAgeSpecificText(tmp55, tmp56);
       if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
         const intl20 = util.intl;
-        const stringResult19 = intl20.string(_modDef2521.wZejZr);
+        const stringResult19 = intl20.string(_modDef2565.wZejZr);
         const intl21 = util.intl;
-        const stringResult20 = intl21.string(_modDef2521.tdgcf1);
+        const stringResult20 = intl21.string(_modDef2565.tdgcf1);
         cResult[19] = stringResult19;
         cResult[20] = stringResult20;
         let tmp62 = stringResult20;
@@ -280,9 +280,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ageSpecificText8 = useAgeSpecificText.useAgeSpecificText(tmp61, tmp62);
       if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
         const intl22 = util.intl;
-        const stringResult21 = intl22.string(_modDef2521.ASf7XN);
+        const stringResult21 = intl22.string(_modDef2565.ASf7XN);
         const intl23 = util.intl;
-        const stringResult22 = intl23.string(_modDef2521["82y87X"]);
+        const stringResult22 = intl23.string(_modDef2565["82y87X"]);
         cResult[21] = stringResult21;
         cResult[22] = stringResult22;
         let tmp68 = stringResult22;
@@ -295,9 +295,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ageSpecificText9 = useAgeSpecificText.useAgeSpecificText(tmp67, tmp68);
       if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
         const intl24 = util.intl;
-        const stringResult23 = intl24.string(_modDef2521["0QDVFN"]);
+        const stringResult23 = intl24.string(_modDef2565["0QDVFN"]);
         const intl25 = util.intl;
-        const stringResult24 = intl25.string(_modDef2521["1xBHHV"]);
+        const stringResult24 = intl25.string(_modDef2565["1xBHHV"]);
         cResult[23] = stringResult23;
         cResult[24] = stringResult24;
         let tmp74 = stringResult24;
@@ -310,7 +310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ageSpecificText10 = useAgeSpecificText.useAgeSpecificText(tmp73, tmp74);
       if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
         const intl26 = util.intl;
-        const stringResult25 = intl26.string(_modDef2521["/zMYZX"]);
+        const stringResult25 = intl26.string(_modDef2565["/zMYZX"]);
         cResult[25] = stringResult25;
         let tmp79 = stringResult25;
       } else {
@@ -326,7 +326,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
         const intl27 = util.intl;
-        const stringResult26 = intl27.string(_modDef2521["44NEx6"]);
+        const stringResult26 = intl27.string(_modDef2565["44NEx6"]);
         cResult[28] = stringResult26;
         let tmp83 = stringResult26;
       } else {
@@ -343,18 +343,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[31] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = { header: null, description: null, IconComponent: null };
         const intl28 = util.intl;
-        obj4.header = intl28.string(_modDef2521["Z3G+8h"]);
+        obj4.header = intl28.string(_modDef2565["Z3G+8h"]);
         const intl29 = util.intl;
-        obj4.description = intl29.string(_modDef2521.KBgArX);
+        obj4.description = intl29.string(_modDef2565.KBgArX);
         obj4.IconComponent = ForumIcon.ForumIcon;
         const obj5 = { header: null, description: null, IconComponent: null };
         const intl30 = util.intl;
-        obj5.header = intl30.string(_modDef2521.GNs2ZH);
+        obj5.header = intl30.string(_modDef2565.GNs2ZH);
         const intl31 = util.intl;
-        obj5.description = intl31.string(_modDef2521.Ief2xc);
+        obj5.description = intl31.string(_modDef2565.Ief2xc);
         obj5.IconComponent = PhoneIcon.PhoneIcon;
         const intl32 = util.intl;
-        const stringResult27 = intl32.string(_modDef2521.PjM3r5);
+        const stringResult27 = intl32.string(_modDef2565.PjM3r5);
         cResult[31] = obj4;
         cResult[32] = obj5;
         cResult[33] = stringResult27;
@@ -376,7 +376,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[36] === Symbol.for("react.memo_cache_sentinel")) {
         const intl33 = util.intl;
-        const stringResult28 = intl33.string(_modDef2521.Fv3n8L);
+        const stringResult28 = intl33.string(_modDef2565.Fv3n8L);
         cResult[36] = stringResult28;
         let tmp93 = stringResult28;
       } else {
@@ -404,7 +404,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const _Symbol = Symbol;
                 if (cResult[48] === Symbol.for("react.memo_cache_sentinel")) {
                   const intl34 = util.intl;
-                  const stringResult29 = intl34.string(_modDef2521.kyT6pZ);
+                  const stringResult29 = intl34.string(_modDef2565.kyT6pZ);
                   cResult[48] = stringResult29;
                   let tmp99 = stringResult29;
                 } else {
@@ -421,7 +421,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const _Symbol2 = Symbol;
                 if (cResult[51] === Symbol.for("react.memo_cache_sentinel")) {
                   const intl35 = util.intl;
-                  const stringResult30 = intl35.string(_modDef2521["52ld7c"]);
+                  const stringResult30 = intl35.string(_modDef2565["52ld7c"]);
                   cResult[51] = stringResult30;
                   let tmp103 = stringResult30;
                 } else {
@@ -442,7 +442,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const _Symbol3 = Symbol;
                 if (cResult[54] === Symbol.for("react.memo_cache_sentinel")) {
                   const intl36 = util.intl;
-                  const stringResult31 = intl36.string(_modDef2521.UCuHM8);
+                  const stringResult31 = intl36.string(_modDef2565.UCuHM8);
                   cResult[54] = stringResult31;
                   let tmp107 = stringResult31;
                 } else {
@@ -553,155 +553,155 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp97 = obj16;
       const tmpResult20 = useAgeSpecificText;
     }
-  : () => {
+  : function FamilyCenterDataConfirmation() {
       const intl = util.intl;
       const intl2 = util.intl;
-      const stringResult = intl.string(_modDef2521.CI1Env);
+      const stringResult = intl.string(_modDef2565.CI1Env);
       const intl3 = util.intl;
-      const stringResult1 = intl2.string(_modDef2521["ksze+o"]);
-      const stringResult2 = intl3.string(_modDef2521["n73g+V"]);
+      const stringResult1 = intl2.string(_modDef2565["ksze+o"]);
+      const stringResult2 = intl3.string(_modDef2565["n73g+V"]);
       const intl4 = util.intl;
       const obj = useAgeSpecificText;
       const intl5 = util.intl;
       const ageSpecificText = obj.useAgeSpecificText(
-        intl4.string(_modDef2521["5x3taM"]),
-        intl5.string(_modDef2521.WZwGFX),
+        intl4.string(_modDef2565["5x3taM"]),
+        intl5.string(_modDef2565.WZwGFX),
       );
-      const stringResult3 = intl4.string(_modDef2521["5x3taM"]);
+      const stringResult3 = intl4.string(_modDef2565["5x3taM"]);
       const intl6 = util.intl;
       const obj2 = useAgeSpecificText;
       const intl7 = util.intl;
       const ageSpecificText1 = obj2.useAgeSpecificText(
-        intl6.string(_modDef2521.FcKkcr),
-        intl7.string(_modDef2521.PQtDFk),
+        intl6.string(_modDef2565.FcKkcr),
+        intl7.string(_modDef2565.PQtDFk),
       );
-      const stringResult4 = intl6.string(_modDef2521.FcKkcr);
+      const stringResult4 = intl6.string(_modDef2565.FcKkcr);
       const intl8 = util.intl;
       const obj3 = useAgeSpecificText;
       const intl9 = util.intl;
       const ageSpecificText2 = obj3.useAgeSpecificText(
-        intl8.string(_modDef2521["dES/2r"]),
-        intl9.string(_modDef2521.ep6mdN),
+        intl8.string(_modDef2565["dES/2r"]),
+        intl9.string(_modDef2565.ep6mdN),
       );
-      const stringResult5 = intl8.string(_modDef2521["dES/2r"]);
+      const stringResult5 = intl8.string(_modDef2565["dES/2r"]);
       const intl10 = util.intl;
       const obj4 = useAgeSpecificText;
       const intl11 = util.intl;
       const ageSpecificText3 = obj4.useAgeSpecificText(
-        intl10.string(_modDef2521.GWPcQg),
-        intl11.string(_modDef2521.yFnKIg),
+        intl10.string(_modDef2565.GWPcQg),
+        intl11.string(_modDef2565.yFnKIg),
       );
-      const stringResult6 = intl10.string(_modDef2521.GWPcQg);
+      const stringResult6 = intl10.string(_modDef2565.GWPcQg);
       const intl12 = util.intl;
       const obj5 = useAgeSpecificText;
       const intl13 = util.intl;
       const ageSpecificText4 = obj5.useAgeSpecificText(
-        intl12.string(_modDef2521["30+sih"]),
-        intl13.string(_modDef2521["0cuLn1"]),
+        intl12.string(_modDef2565["30+sih"]),
+        intl13.string(_modDef2565["0cuLn1"]),
       );
-      const stringResult7 = intl12.string(_modDef2521["30+sih"]);
+      const stringResult7 = intl12.string(_modDef2565["30+sih"]);
       const intl14 = util.intl;
       const obj6 = useAgeSpecificText;
       const intl15 = util.intl;
       const ageSpecificText5 = obj6.useAgeSpecificText(
-        intl14.string(_modDef2521.tHTyRh),
-        intl15.string(_modDef2521.TeNlMb),
+        intl14.string(_modDef2565.tHTyRh),
+        intl15.string(_modDef2565.TeNlMb),
       );
-      const stringResult8 = intl14.string(_modDef2521.tHTyRh);
+      const stringResult8 = intl14.string(_modDef2565.tHTyRh);
       const intl16 = util.intl;
       const obj7 = useAgeSpecificText;
       const intl17 = util.intl;
       const ageSpecificText6 = obj7.useAgeSpecificText(
-        intl16.string(_modDef2521.PfveQ6),
-        intl17.string(_modDef2521["f7ofm/"]),
+        intl16.string(_modDef2565.PfveQ6),
+        intl17.string(_modDef2565["f7ofm/"]),
       );
-      const stringResult9 = intl16.string(_modDef2521.PfveQ6);
+      const stringResult9 = intl16.string(_modDef2565.PfveQ6);
       const intl18 = util.intl;
       const obj8 = useAgeSpecificText;
       const intl19 = util.intl;
       const ageSpecificText7 = obj8.useAgeSpecificText(
-        intl18.string(_modDef2521.MKeCj3),
-        intl19.string(_modDef2521.HdcGGl),
+        intl18.string(_modDef2565.MKeCj3),
+        intl19.string(_modDef2565.HdcGGl),
       );
-      const stringResult10 = intl18.string(_modDef2521.MKeCj3);
+      const stringResult10 = intl18.string(_modDef2565.MKeCj3);
       const intl20 = util.intl;
       const obj9 = useAgeSpecificText;
       const intl21 = util.intl;
       const ageSpecificText8 = obj9.useAgeSpecificText(
-        intl20.string(_modDef2521.wZejZr),
-        intl21.string(_modDef2521.tdgcf1),
+        intl20.string(_modDef2565.wZejZr),
+        intl21.string(_modDef2565.tdgcf1),
       );
-      const stringResult11 = intl20.string(_modDef2521.wZejZr);
+      const stringResult11 = intl20.string(_modDef2565.wZejZr);
       const intl22 = util.intl;
       const obj10 = useAgeSpecificText;
       const intl23 = util.intl;
       const ageSpecificText9 = obj10.useAgeSpecificText(
-        intl22.string(_modDef2521.ASf7XN),
-        intl23.string(_modDef2521["82y87X"]),
+        intl22.string(_modDef2565.ASf7XN),
+        intl23.string(_modDef2565["82y87X"]),
       );
-      const stringResult12 = intl22.string(_modDef2521.ASf7XN);
+      const stringResult12 = intl22.string(_modDef2565.ASf7XN);
       const intl24 = util.intl;
       const obj11 = useAgeSpecificText;
       const intl25 = util.intl;
       const obj12 = { header: null, description: null, IconComponent: null };
       const ageSpecificText10 = obj11.useAgeSpecificText(
-        intl24.string(_modDef2521["0QDVFN"]),
-        intl25.string(_modDef2521["1xBHHV"]),
+        intl24.string(_modDef2565["0QDVFN"]),
+        intl25.string(_modDef2565["1xBHHV"]),
       );
       const intl26 = util.intl;
-      obj12.header = intl26.string(_modDef2521["/zMYZX"]);
+      obj12.header = intl26.string(_modDef2565["/zMYZX"]);
       obj12.description = ageSpecificText;
       obj12.IconComponent = UserPlusIcon.UserPlusIcon;
       const items = [obj12, , , , , ,];
       const obj13 = { header: null, description: null, IconComponent: null };
       const intl27 = util.intl;
-      obj13.header = intl27.string(_modDef2521["44NEx6"]);
+      obj13.header = intl27.string(_modDef2565["44NEx6"]);
       obj13.description = ageSpecificText1;
       obj13.IconComponent = ServerIcon.ServerIcon;
       items[1] = obj13;
       const obj14 = { header: null, description: null, IconComponent: null };
       const intl28 = util.intl;
-      obj14.header = intl28.string(_modDef2521["Z3G+8h"]);
+      obj14.header = intl28.string(_modDef2565["Z3G+8h"]);
       const intl29 = util.intl;
-      obj14.description = intl29.string(_modDef2521.KBgArX);
+      obj14.description = intl29.string(_modDef2565.KBgArX);
       obj14.IconComponent = ForumIcon.ForumIcon;
       items[2] = obj14;
       const obj15 = { header: null, description: null, IconComponent: null };
       const intl30 = util.intl;
-      obj15.header = intl30.string(_modDef2521.GNs2ZH);
+      obj15.header = intl30.string(_modDef2565.GNs2ZH);
       const intl31 = util.intl;
-      obj15.description = intl31.string(_modDef2521.Ief2xc);
+      obj15.description = intl31.string(_modDef2565.Ief2xc);
       obj15.IconComponent = PhoneIcon.PhoneIcon;
       items[3] = obj15;
       const obj16 = { header: null, description: null, IconComponent: null };
       const intl32 = util.intl;
-      obj16.header = intl32.string(_modDef2521.PjM3r5);
+      obj16.header = intl32.string(_modDef2565.PjM3r5);
       obj16.description = ageSpecificText2;
       obj16.IconComponent = CreditCardIcon.CreditCardIcon;
       items[4] = obj16;
       const obj17 = { header: null, description: null, IconComponent: null };
       const intl33 = util.intl;
-      obj17.header = intl33.string(_modDef2521.Fv3n8L);
+      obj17.header = intl33.string(_modDef2565.Fv3n8L);
       obj17.description = ageSpecificText3;
       obj17.IconComponent = GiftIcon.GiftIcon;
       items[5] = obj17;
-      const stringResult13 = intl24.string(_modDef2521["0QDVFN"]);
+      const stringResult13 = intl24.string(_modDef2565["0QDVFN"]);
       items[6] = { header: ageSpecificText4, description: ageSpecificText5, IconComponent: FlagIcon.FlagIcon };
       const obj19 = { header: null, description: null, IconComponent: null };
       const intl34 = util.intl;
-      obj19.header = intl34.string(_modDef2521.kyT6pZ);
+      obj19.header = intl34.string(_modDef2565.kyT6pZ);
       obj19.description = ageSpecificText6;
       obj19.IconComponent = ClockIcon.ClockIcon;
       const items1 = [obj19, ,];
       const obj20 = { header: null, description: null, IconComponent: null };
       const intl35 = util.intl;
-      obj20.header = intl35.string(_modDef2521["52ld7c"]);
+      obj20.header = intl35.string(_modDef2565["52ld7c"]);
       obj20.description = ageSpecificText7;
       obj20.IconComponent = PiggyBankIcon.PiggyBankIcon;
       items1[1] = obj20;
       const obj21 = { header: null, description: null, IconComponent: null };
       const intl36 = util.intl;
-      obj21.header = intl36.string(_modDef2521.UCuHM8);
+      obj21.header = intl36.string(_modDef2565.UCuHM8);
       obj21.description = ageSpecificText8;
       obj21.IconComponent = SettingsIcon.SettingsIcon;
       items1[2] = obj21;

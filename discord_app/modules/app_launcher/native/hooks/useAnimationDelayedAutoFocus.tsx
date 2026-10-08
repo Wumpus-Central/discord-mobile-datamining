@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useAnimationDelayedAutoFocus.tsx");
 
 export const useAnimationDelayedAutoFocus = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useAnimationDelayedAutoFocus(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
       const cResult = c.c(5);
@@ -45,7 +45,7 @@ export const useAnimationDelayedAutoFocus = ReactCompilerGating.isReactCompilerE
       tmp4 = items;
       tmp3 = fn;
     }
-  : (arg0, arg1) => {
+  : function useAnimationDelayedAutoFocus(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
       const awaitAnimationCompletion = useAwaitAnimationComplete.useAwaitAnimationCompletion();

@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("utils/ContextUtils.tsx");
 export default function createDefinedContext() {
   let context = noop.createContext(undefined);
   const tmp4 = context(558).isReactCompilerEnabled()
-    ? () => {
+    ? function useContext() {
         context = noop.useContext(context);
         if (null == context) {
           const _Error = Error;
@@ -19,7 +19,7 @@ export default function createDefinedContext() {
           return context;
         }
       }
-    : () => {
+    : function useContext() {
         context = noop.useContext(context);
         if (null == context) {
           const _Error = Error;
@@ -35,25 +35,34 @@ export default function createDefinedContext() {
     context,
     tmp4,
     context(558).isReactCompilerEnabled()
-      ? () => {
+      ? function useForwardedContext() {
           const cResult = context(576).c(2);
           const tmp2 = dependencyMap();
           value = tmp2;
           if (cResult[0] !== tmp2) {
-            const fn = function n(children) {
-              return <context.Provider value={value}>{children.children}</context.Provider>;
-            };
+            class ForwardedContext {
+              constructor(arg0) {
+                obj = { value: closure_0, children: arg0.children };
+                return jsx(closure_0.Provider, obj);
+              }
+            }
             cResult[0] = tmp2;
-            cResult[1] = fn;
-            let tmp3 = fn;
+            cResult[1] = ForwardedContext;
           } else {
-            tmp3 = cResult[1];
+            class ForwardedContext {
+              constructor(arg0) {
+                obj = { value: closure_0, children: arg0.children };
+                return jsx(closure_0.Provider, obj);
+              }
+            }
           }
-          return tmp3;
+          return ForwardedContext;
         }
-      : () => {
+      : function useForwardedContext() {
           value = dependencyMap();
-          return (children) => <context.Provider value={value}>{children.children}</context.Provider>;
+          return function ForwardedContext(children) {
+            return <context.Provider value={value}>{children.children}</context.Provider>;
+          };
         },
   ];
   return items;

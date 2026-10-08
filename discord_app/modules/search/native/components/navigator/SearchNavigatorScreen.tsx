@@ -4,8 +4,8 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import useBaseAppContainerDimensionsDefault from "../../../../screen/native/useBaseAppContainerDimensions.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
-import ThemedGradientDefault from "../../../../client_themes/native/ThemedGradient.tsx";
 import ArrowLargeLeftIcon from "../../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
+import ThemedGradientDefault from "../../../../client_themes/native/ThemedGradient.tsx";
 import NonCollapsableGestureDetector from "../../../../gesture_handlers/native/NonCollapsableGestureDetector.tsx";
 import useSearchSuggestionsGesture from "../layout/autocomplete/useSearchSuggestionsGesture.tsx";
 import SearchScreenSearchBarDefault from "../layout/SearchScreenSearchBar.tsx";
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, tabs: null, back: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.tabs = { flex: 1, marginTop: nativeDefault.space.PX_16 };
@@ -30,7 +30,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (navigation) => {
+  ? function SearchNavigatorScreen(navigation) {
       const cResult = c.c(31);
       navigation = navigation.navigation;
       const searchContext = navigation.route.params.searchContext;
@@ -187,15 +187,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: tmp10,
       };
     }
-  : (navigation) => {
+  : function SearchNavigatorScreen(navigation) {
       navigation = navigation.navigation;
       const searchContext = navigation.route.params.searchContext;
       const tmp = closure_8();
       importDefault = tmp;
-      const searchSuggestionsGesture = navigation(16810).useSearchSuggestionsGesture(searchContext);
+      const searchSuggestionsGesture = navigation(17089).useSearchSuggestionsGesture(searchContext);
       ({ gesture, detectorRef, suggestionsContext } = searchSuggestionsGesture);
       const items = [navigation.goBack, tmp.back];
-      let obj = navigation(16810);
+      let obj = navigation(17089);
       let obj2 = { children: null };
       const memo = noop.useMemo(() => {
         const obj = { children: null };
@@ -232,8 +232,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       obj5.children = items3;
       obj4.children = closure_6(View, obj5);
-      obj3.children = closure_5(navigation(16343).NonCollapsableGestureDetector, obj4);
-      items1[1] = closure_5(navigation(16810).SearchSuggestionsProvider, obj3);
+      obj3.children = closure_5(navigation(16603).NonCollapsableGestureDetector, obj4);
+      items1[1] = closure_5(navigation(17089).SearchSuggestionsProvider, obj3);
       obj2.children = items1;
       return closure_6(closure_7, obj2);
     };

@@ -6,9 +6,9 @@ import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const SearchTabs = fn(7524).SearchTabs;
+const SearchTabs = fn(9247).SearchTabs;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_7 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -18,10 +18,10 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/d
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function PinsScreen() {
         const cResult = channelId(576).c(8);
         const obj = channelId(576);
-        channelId = channelId(1493).useRoute().params.channelId;
+        channelId = channelId(1505).useRoute().params.channelId;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ChannelStore];
           cResult[0] = items;
@@ -44,10 +44,10 @@ export default noop.memo(
         } else {
           tmp6 = cResult[2];
         }
-        const obj2 = channelId(1493);
+        const obj2 = channelId(1505);
         const stateFromStores = channelId(504).useStateFromStores(first, tmp6);
         const tmpResult = channelId(504);
-        const channelDetailsSearchContext = channelId(11941).useChannelDetailsSearchContext(channelId, stateFromStores);
+        const channelDetailsSearchContext = channelId(12014).useChannelDetailsSearchContext(channelId, stateFromStores);
         const tmp9 = closure_7();
         if (cResult[3] !== channelDetailsSearchContext) {
           const obj3 = { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS };
@@ -74,11 +74,11 @@ export default noop.memo(
         cResult[7] = tmp16;
         tmp15 = tmp16;
         const obj4 = { style: tmp9.container, children: tmp10 };
-        const tmpResult2 = channelId(11941);
+        const tmpResult2 = channelId(12014);
       }
-    : () => {
-        channelId = channelId(1493).useRoute().params.channelId;
-        const obj = channelId(1493);
+    : function PinsScreen() {
+        channelId = channelId(1505).useRoute().params.channelId;
+        const obj = channelId(1505);
         const items = [ChannelStore];
         const stateFromStores = channelId(504).useStateFromStores(items, () => {
           const channel = ChannelStore.getChannel(channelId);
@@ -89,7 +89,7 @@ export default noop.memo(
           return guild_id;
         });
         const obj2 = channelId(504);
-        const channelDetailsSearchContext = channelId(11941).useChannelDetailsSearchContext(channelId, stateFromStores);
+        const channelDetailsSearchContext = channelId(12014).useChannelDetailsSearchContext(channelId, stateFromStores);
         const obj4 = {
           style: closure_7().container,
           children: jsx(messages_PinsScreenDefault, {

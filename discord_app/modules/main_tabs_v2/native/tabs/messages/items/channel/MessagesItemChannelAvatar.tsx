@@ -9,9 +9,9 @@ import TypingStore from "../../../../../../../stores/TypingStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(11711).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(11776).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = {
     borderRadius: nativeDefault.radii.round,
@@ -35,7 +35,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channel) => {
+    ? function MessagesItemChannelAvatar(channel) {
         let obj = first;
         const cResult = channel(first[11]).c(27);
         channel = channel.channel;
@@ -160,7 +160,7 @@ export default noop.memo(
               return false;
             }
           }
-          const stateFromStores1 = tmp(obj[13]).useStateFromStores(tmp12, U);
+          const stateFromStores1 = tmp(obj[13]).useStateFromStores(tmp12, O);
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
             class F {
@@ -413,8 +413,8 @@ export default noop.memo(
                 isMobileOnline: stateFromStores3,
                 isVROnline: stateFromStores4,
                 status: null,
-                streaming: "277cee809330c511936d96d22ff4ddc7",
-                style: "fi.messages.277cee809330c511936d96d22ff4ddc7.compiled.messages",
+                streaming: "bfa447207de9efb4276e2616820dae4e",
+                style: "hr.messages.bfa447207de9efb4276e2616820dae4e.compiled.messages",
                 size: "jsona",
                 animate: "VOICE_CATEGORY_EXPAND",
                 typing: null,
@@ -450,7 +450,7 @@ export default noop.memo(
           cResult[22] = tmp3Result;
           cResult[23] = stateFromStores2;
           cResult[24] = stateFromStores3;
-          class U {
+          class O {
             constructor() {
               useReducedMotion = closure_3.useReducedMotion;
               tmp = !useReducedMotion;
@@ -468,7 +468,7 @@ export default noop.memo(
           cResult[26] = tmp24Result;
           const tmpResult8 = tmp(obj[13]);
         }
-        class U {
+        class O {
           constructor() {
             useReducedMotion = closure_3.useReducedMotion;
             tmp = !useReducedMotion;
@@ -484,10 +484,10 @@ export default noop.memo(
         }
         cResult[5] = hasUnreadMessages;
         cResult[6] = stateFromStores;
-        cResult[7] = U;
+        cResult[7] = O;
         const tmpResult = channel(obj[13]);
       }
-    : (channel) => {
+    : function MessagesItemChannelAvatar(channel) {
         channel = channel.channel;
         ({ hasUnreadMessages: importDefault, muted, status } = channel);
         dependencyMap = undefined;
@@ -503,7 +503,7 @@ export default noop.memo(
           muted = !channelSelected;
         }
         const tmpResult = closure_10(muted);
-        const REFRESH_MEDIUM_32 = channel(1188).AvatarSizes.REFRESH_MEDIUM_32;
+        const REFRESH_MEDIUM_32 = channel(1200).AvatarSizes.REFRESH_MEDIUM_32;
         dependencyMap = AuthenticationStore.getId();
         const items = [TypingStore];
         stateFromStores = channel(504).useStateFromStores(items, () => {
@@ -579,8 +579,8 @@ export default noop.memo(
               isMobileOnline: stateFromStores3,
               isVROnline: stateFromStores4,
               status: null,
-              streaming: "277cee809330c511936d96d22ff4ddc7",
-              style: "fi.messages.277cee809330c511936d96d22ff4ddc7.compiled.messages",
+              streaming: "bfa447207de9efb4276e2616820dae4e",
+              style: "hr.messages.bfa447207de9efb4276e2616820dae4e.compiled.messages",
               size: "jsona",
               animate: "VOICE_CATEGORY_EXPAND",
               typing: null,
@@ -596,15 +596,15 @@ export default noop.memo(
             obj7.size = REFRESH_MEDIUM_32;
             obj7.animate = stateFromStores1;
             obj7.typing = stateFromStores;
-            tmp11Result = jsx(tmp3(1188).Avatar, {
+            tmp11Result = jsx(tmp3(1200).Avatar, {
               user: stateFromStores2,
               avatarDecoration: stateFromStores2.avatarDecoration,
               guildId: "e",
               isMobileOnline: stateFromStores3,
               isVROnline: stateFromStores4,
               status: null,
-              streaming: "277cee809330c511936d96d22ff4ddc7",
-              style: "fi.messages.277cee809330c511936d96d22ff4ddc7.compiled.messages",
+              streaming: "bfa447207de9efb4276e2616820dae4e",
+              style: "hr.messages.bfa447207de9efb4276e2616820dae4e.compiled.messages",
               size: "jsona",
               animate: "VOICE_CATEGORY_EXPAND",
               typing: null,

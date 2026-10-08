@@ -1,7 +1,7 @@
 // discord_app/modules/tti_analytics/native/navigation/useComponentRenderSpan.tsx
 import LoggerDefault from "../../../debug/Logger.tsx";
-import NavigationSpanTypes from "NavigationSpanTypes.tsx";
 import NavigationSpanTrackerDefault from "NavigationSpanTracker.tsx";
+import NavigationSpanTypes from "NavigationSpanTypes.tsx";
 import NavigationTTIRegionDebugState from "debug/NavigationTTIRegionDebugState.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

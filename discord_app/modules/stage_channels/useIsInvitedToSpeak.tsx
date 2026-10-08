@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useIsInvitedToSpeak.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsInvitedToSpeak() {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SelectedChannelStore];
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
       );
     }
-  : () => {
+  : function useIsInvitedToSpeak() {
       const items = [SelectedChannelStore];
       const stateFromStores = initialize.useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
       const items1 = [AuthenticationStore];

@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx");
 
 export const useFirstGloballyViewbleGuildChannelId = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFirstGloballyViewbleGuildChannelId(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -22,7 +22,7 @@ export const useFirstGloballyViewbleGuildChannelId = ReactCompilerGating.isReact
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function s() {
+        const fn = function o() {
           if (null != closure_0) {
             const selectableChannels = GuildChannelStore.getSelectableChannels(tmp);
             for (const item10010 of selectableChannels) {
@@ -56,7 +56,7 @@ export const useFirstGloballyViewbleGuildChannelId = ReactCompilerGating.isReact
       const obj = require("c");
       return require("initialize").useStateFromStores(first, tmp6, tmp7);
     }
-  : (arg0) => {
+  : function useFirstGloballyViewbleGuildChannelId(arg0) {
       _require = arg0;
       const items = [GuildChannelStore];
       const items1 = [arg0];

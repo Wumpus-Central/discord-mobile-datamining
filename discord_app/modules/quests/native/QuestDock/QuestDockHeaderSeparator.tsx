@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj = { separator: null };
 let size = { backgroundColor: nativeDefault.colors.TEXT_DEFAULT, opacity: 0.2, height: 18, width: 1.5 };
 obj.separator = size;
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function QuestDockHeaderSeparator() {
         const cResult = c.c(2);
         const tmp2 = closure_4();
         if (cResult[0] !== tmp2.separator) {
@@ -31,5 +31,7 @@ export default noop.memo(
         }
         return tmp3;
       }
-    : () => <View style={closure_4().separator} />,
+    : function QuestDockHeaderSeparator() {
+        return <View style={closure_4().separator} />;
+      },
 );

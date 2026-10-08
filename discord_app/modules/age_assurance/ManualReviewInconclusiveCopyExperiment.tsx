@@ -17,7 +17,7 @@ let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/age_assurance/ManualReviewInconclusiveCopyExperiment.tsx");
 
 export const useIsManualReviewInconclusiveCopyEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsManualReviewInconclusiveCopyEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -29,4 +29,6 @@ export const useIsManualReviewInconclusiveCopyEnabled = ReactCompilerGating.isRe
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useIsManualReviewInconclusiveCopyEnabled(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };

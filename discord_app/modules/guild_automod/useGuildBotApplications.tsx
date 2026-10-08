@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/useGuildBotApplications.tsx");
 
 export const useGuildBotApplications = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGuildBotApplications(arg0) {
       _require = arg0;
       let found1 = stateFromStores;
       const cResult = require("c").c(10);
@@ -81,7 +81,7 @@ export const useGuildBotApplications = ReactCompilerGating.isReactCompilerEnable
       tmp7 = fn2;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useGuildBotApplications(arg0) {
       _require = arg0;
       const items = [GuildSettingsStore];
       stateFromStores = require("initialize").useStateFromStores(items, () => props.getProps().integrations);

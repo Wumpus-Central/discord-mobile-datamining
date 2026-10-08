@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef2617 from "../../GiftingBadge.messages.js";
+import _modDef2661 from "../../GiftingBadge.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import GiftingBadgesUtils from "../../GiftingBadgesUtils.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
@@ -10,12 +10,12 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(7874).getSingleRequirementThreshold;
+let closure_4 = fn(8292).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (percent) => {
+  ? function GiftingBadgeProgressBar(percent) {
       const cResult = c.c(8);
       const tmp2 = closure_8();
       const combined = "" + Math.min(Math.max(percent.percent, 0), 100) + "%";
@@ -53,7 +53,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp6;
       tmp5 = tmp6;
     }
-  : (percent) => {
+  : function GiftingBadgeProgressBar(percent) {
       const tmp = closure_8();
       const obj = { style: tmp.progressBarTrack, children: null };
       const obj2 = { style: null };
@@ -62,7 +62,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       obj.children = hasOwnProperty(View, obj2);
       return hasOwnProperty(View, obj);
     };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj3 = {
   container: { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 },
   content: null,
@@ -113,7 +113,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeProgress.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GiftingBadgeProgress(arg0) {
       const cResult = c.c(50);
       ({ progress, currentTier, nextTier, iconSize, title } = arg0);
       let num = 24;
@@ -274,7 +274,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj8 = { variant: "text-xs/normal", color: "text-muted", children: null };
               const intl = util.intl;
               const obj9 = { count: progress, threshold: tmp21 };
-              obj8.children = intl.format(_modDef2617.iIpfQe, obj9);
+              obj8.children = intl.format(_modDef2661.iIpfQe, obj9);
               tmp37 = hasOwnProperty(Text_Text.Text, obj8);
             }
             cResult[6] = tmp6;
@@ -337,7 +337,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = giftingBadgeTierIconUrl1;
       const tmpResult4 = GiftingBadgesUtils;
     }
-  : (title) => {
+  : function GiftingBadgeProgress(title) {
       ({ progress, nextTier, iconSize } = title);
       if (iconSize === undefined) {
         iconSize = 24;
@@ -385,7 +385,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { variant: "text-xs/normal", color: "text-muted", children: null };
         const intl = util.intl;
         const obj10 = { count: progress, threshold: tmp7 };
-        obj9.children = intl.format(_modDef2617.iIpfQe, obj10);
+        obj9.children = intl.format(_modDef2661.iIpfQe, obj10);
         tmp17Result = hasOwnProperty(Text_Text.Text, obj9);
       }
       obj8.children = tmp17Result;

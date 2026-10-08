@@ -9,7 +9,7 @@ import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.t
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAccountAgeGroupAdultSettingPredicate() {
       const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
       const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
       let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return hasAgeGatedFeatures;
     }
-  : () => {
+  : function useAccountAgeGroupAdultSettingPredicate() {
       const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
       const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
       let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
@@ -52,7 +52,7 @@ let obj = {
     return intl.string(util.t.XxRj7f);
   },
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useAccountAgeGroupAdultSettingPredicate() {
         const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
         const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
         let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
@@ -68,7 +68,7 @@ let obj = {
         }
         return hasAgeGatedFeatures;
       }
-    : () => {
+    : function useAccountAgeGroupAdultSettingPredicate() {
         const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
         const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
         let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
@@ -98,7 +98,7 @@ export default SettingBuilders.createStatic({
     return intl.string(util.t.XxRj7f);
   },
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useAccountAgeGroupAdultSettingPredicate() {
         const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
         const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
         let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
@@ -114,7 +114,7 @@ export default SettingBuilders.createStatic({
         }
         return hasAgeGatedFeatures;
       }
-    : () => {
+    : function useAccountAgeGroupAdultSettingPredicate() {
         const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
         const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
         let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();

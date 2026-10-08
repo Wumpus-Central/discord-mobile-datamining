@@ -2,23 +2,25 @@
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
+import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeGateUtils from "../../../age_gate/AgeGateUtils.tsx";
 import AgeRestrictedContentSettingsUtils from "../../content_and_social/AgeRestrictedContentSettingsUtils.tsx";
 import useNSFWAllowed from "../../content_and_social/useNSFWAllowed.tsx";
-import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
-import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const PlatformUtils = tmp(1369);
+const PlatformUtils = tmp(1381);
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
 let ReactCompilerGating = ReactCompilerGating_mod;
-const fn = () => AgeRestrictedContentSettingsUtils.useViewNsfwCommandsOrDefault();
+function useViewNsfwDmCommandsSettingValue() {
+  return AgeRestrictedContentSettingsUtils.useViewNsfwCommandsOrDefault();
+}
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function usePredicate() {
       let tmp = require;
       let isAndroid = dependencyMap;
       const cResult = c.c(3);
@@ -52,7 +54,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = isAndroidResult1;
       }
     }
-  : () => {
+  : function usePredicate() {
       let shouldAgeVerifyForSettingsToggles = AgeGateUtils.useShouldAgeVerifyForSettingsToggles();
       let flag = useNSFWAllowed.useNSFWAllowed();
       if (flag == null) {
@@ -80,7 +82,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t["J4zza/"]);
   },
   parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: fn,
+  useValue: useViewNsfwDmCommandsSettingValue,
   onValueChange: function handleValueChange(arg0) {
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
@@ -95,7 +97,7 @@ const toggle = SettingBuilders.createToggle({
     obj = AgeGateUtils;
   },
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function usePredicate() {
         let tmp = require;
         let isAndroid = dependencyMap;
         const cResult = c.c(3);
@@ -129,7 +131,7 @@ const toggle = SettingBuilders.createToggle({
           cResult[2] = isAndroidResult1;
         }
       }
-    : () => {
+    : function usePredicate() {
         let shouldAgeVerifyForSettingsToggles = AgeGateUtils.useShouldAgeVerifyForSettingsToggles();
         let flag = useNSFWAllowed.useNSFWAllowed();
         if (flag == null) {

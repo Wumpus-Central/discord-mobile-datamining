@@ -90,7 +90,7 @@ let closure_16 = async function _preloadLayer(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, PixelRatio: closure_7 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(6714).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(6891).UserProfileThemeTypes;
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
@@ -98,7 +98,7 @@ const set1 = new Set();
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useProfileFrameLayerAsset(arg0) {
       const cResult = require("c").c(16);
       ({ skuId, layer, width } = arg0);
       if (cResult[0] === layer) {
@@ -276,14 +276,14 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         assetId: layer.id,
       };
     }
-  : (width) => {
+  : function useProfileFrameLayerAsset(width) {
       width = width.width;
       let collectiblesItemAssetUrl;
       ({ skuId, layer } = width);
-      const obj = collectiblesItemAssetUrl(1974);
+      const obj = collectiblesItemAssetUrl(1986);
       collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl({
         skuId,
-        assetFormat: collectiblesItemAssetUrl(1974).CollectiblesItemAssetFormat.STATIC,
+        assetFormat: collectiblesItemAssetUrl(1986).CollectiblesItemAssetFormat.STATIC,
         assetId: layer.id,
       });
       closure_1 = _slicedToArray(
@@ -385,7 +385,7 @@ let result = size.fileFinishedImporting("modules/collectibles/profile_frames/nat
 export default tmp7;
 export { isProfileFrameLayerShown };
 export const usePreloadLayerImages = ReactCompilerGating.isReactCompilerEnabled()
-  ? (frame) => {
+  ? function usePreloadLayerImages(frame) {
       const cResult = frame(skuId[7]).c(27);
       frame = frame.frame;
       ({ containerWidth, profileThemeType } = frame);
@@ -661,7 +661,7 @@ export const usePreloadLayerImages = ReactCompilerGating.isReactCompilerEnabled(
         tmp12 = num14;
       }
     }
-  : (frame) => {
+  : function usePreloadLayerImages(frame) {
       frame = frame.frame;
       ({ containerWidth, profileThemeType } = frame);
       const filterLayer = frame.filterLayer;

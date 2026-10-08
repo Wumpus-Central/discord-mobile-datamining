@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/native/images/BoostGemPixel.tsx
 import c from "../../../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../../../_runtime/08169_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/07550_inlineStyles.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -13,7 +13,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/images/BoostGemPixel.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BoostGemPixel(arg0) {
       const cResult = c.c(62);
       ({ width, height, style } = arg0);
       let num = 24;
@@ -353,7 +353,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[61] = tmp122;
       tmp121 = tmp122;
     }
-  : (style) => {
+  : function BoostGemPixel(style) {
       let num = style.width;
       if (num === undefined) {
         num = 24;

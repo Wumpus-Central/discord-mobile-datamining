@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildMessageNotifications) => {
+  ? function MuteSettingsHint(guildMessageNotifications) {
       let stringResult = dependencyMap;
       const cResult = c.c(7);
       guildMessageNotifications = guildMessageNotifications.guildMessageNotifications;
@@ -94,7 +94,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (guildMessageNotifications) => {
+  : function MuteSettingsHint(guildMessageNotifications) {
       guildMessageNotifications = guildMessageNotifications.guildMessageNotifications;
       if (guildMessageNotifications.isMuted) {
         const obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
@@ -152,7 +152,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function MuteSettings(guildId) {
       const cResult = guildId(onOptionPress[8]).c(45);
       guildId = guildId.guildId;
       const channelId = guildId.channelId;
@@ -452,7 +452,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = A;
       let obj = guildId(onOptionPress[8]);
     }
-  : (guildId) => {
+  : function MuteSettings(guildId) {
       guildId = guildId.guildId;
       const channelId = guildId.channelId;
       const onOptionPress = guildId.onOptionPress;

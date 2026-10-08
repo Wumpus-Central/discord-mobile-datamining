@@ -6,7 +6,7 @@ import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06119_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06298_BottomSheetModal.js";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import useOpenExternalUrlFromGameProfileDefault from "../../hooks/useOpenExternalUrlFromGameProfile.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   header: {
     gap: nativeDefault.space.PX_8,
@@ -44,7 +44,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GameProfileStoreLinksActionSheet(arg0) {
       const cResult = trackAction(576).c(28);
       ({ gameName, websiteButtons, trackAction } = arg0);
       const tmp4 = closure_6();
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: headerText,
           children: tmp9,
         };
-        const tmp13 = closure_4(trackAction(4892).Text, obj3);
+        const tmp13 = closure_4(trackAction(5086).Text, obj3);
         cResult[3] = tmp4.headerText;
         cResult[4] = tmp13;
         let tmp11 = tmp13;
@@ -121,8 +121,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj6 = { contentContainerStyle: tmp8, children: null };
                     const items = [tmp18, tmp27];
                     obj6.children = items;
-                    obj5.children = closure_5(trackAction(6119).BottomSheetScrollView, obj6);
-                    const tmp34 = closure_4(trackAction(6708).ActionSheet, obj5);
+                    obj5.children = closure_5(trackAction(6298).BottomSheetScrollView, obj6);
+                    const tmp34 = closure_4(trackAction(6885).ActionSheet, obj5);
                     cResult[24] = tmp18;
                     cResult[25] = tmp27;
                     cResult[26] = tmp8;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[16] = websiteButtons;
               cResult[17] = mapped;
             }
-            const fn = function w(url) {
+            const fn = function j(url) {
               url = url.url;
               const action = url.action;
               ({ icon, title } = url);
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = tmp21;
         tmp18 = tmp21;
       }
-      const tmp17 = closure_4(trackAction(4892).Text, {
+      const tmp17 = closure_4(trackAction(5086).Text, {
         variant: "text-md/medium",
         color: "text-subtle",
         style: tmp4.headerText,
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp17;
       tmp16 = tmp17;
     }
-  : (gameName) => {
+  : function GameProfileStoreLinksActionSheet(gameName) {
       ({ websiteButtons, trackAction: require } = gameName);
       const tmp = closure_6();
       importDefault = useOpenExternalUrlFromGameProfileDefault(LinkingDefault.openURL);

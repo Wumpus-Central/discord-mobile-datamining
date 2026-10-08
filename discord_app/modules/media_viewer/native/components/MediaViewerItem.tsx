@@ -1,6 +1,6 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerItem.tsx
 import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06326_LegacyBaseButton.js";
 import useMediaViewerSources from "../useMediaViewerSources.tsx";
 import useEntranceAnimation from "../useEntranceAnimation.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -9,12 +9,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let closure_7 = PlatformUtils.isAndroid();
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItem.tsx");
 
-export const MediaViewerItem = noop.memo((index) => {
+export const MediaViewerItem = noop.memo(function MediaViewerItem(index) {
   index = index.index;
   const onLongPress = index.onLongPress;
   const panGestureConfig = index.panGestureConfig;

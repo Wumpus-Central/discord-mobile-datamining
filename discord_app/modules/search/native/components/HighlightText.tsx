@@ -6,10 +6,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { text: null };
 const obj3 = { fontFamily: fn(1085).Fonts.PRIMARY_BOLD, backgroundColor: null, color: null };
-const ColorUtils = fn(4733);
+const ColorUtils = fn(4927);
 obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.YELLOW_300, 0.3);
 obj3.color = nativeDefault.colors.TEXT_STRONG;
 obj2.text = obj3;
@@ -19,7 +19,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/HighlightText.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function HighlightText(children) {
       const cResult = c.c(3);
       children = children.children;
       const tmp4 = closure_3();
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp6;
       const obj2 = { style: tmp4.text, children };
     }
-  : (children) => {
+  : function HighlightText(children) {
       const tmp = closure_3();
       return jsx(native.LegacyText, { style: closure_3().text, children: children.children });
     };

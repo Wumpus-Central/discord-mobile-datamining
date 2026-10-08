@@ -16,7 +16,7 @@ const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/conjure/app_channel/useConjureChatToastMessages.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useConjureChatToastMessages(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(14);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      importDefault = tmp8;
+      closure_1 = tmp8;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         class S {
           constructor() {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_5.getToastsEnabled(closure_0);
           }
         }
-        const effect = noop.useEffect(A, items4);
+        const effect = noop.useEffect(fn, items4);
         const _Symbol = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           class S {
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return tmp(tmp2[7]).useStateFromStoresArray(tmp15, tmp16, tmp17);
         }
-        const fn = function v() {
+        const fn2 = function v() {
           return first1.map((id) => {
             message = message.getMessage(closure_1_0, id.id);
             if (message == null) {
@@ -111,53 +111,45 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items3 = [arg0, first1];
         cResult[10] = arg0;
         cResult[11] = first1;
-        cResult[12] = fn;
+        cResult[12] = fn2;
         cResult[13] = items3;
-        tmp16 = fn;
+        tmp16 = fn2;
         tmp17 = items3;
       }
-      class A {
-        constructor() {
-          if (handleMessageCreate) {
-            handleMessageCreate = function handleMessageCreate(channelId) {
-              if (channelId.channelId === timeout) {
-                if (!channelId.optimistic) {
-                  const _clearTimeout = clearTimeout;
-                  clearTimeout(timeout);
-                  const _setTimeout = setTimeout;
-                  setTimeout(() => closure_1_3([]), result);
-                  timeout = MessageRecordUtils.createMessageRecord(tmp);
-                  closure_3((arg0) => {
-                    const items = [];
-                    items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                    return items.slice(-3);
-                  });
-                }
+      fn = function b() {
+        if (handleMessageCreate) {
+          handleMessageCreate = function handleMessageCreate(channelId) {
+            if (channelId.channelId === timeout) {
+              if (!channelId.optimistic) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(timeout);
+                const _setTimeout = setTimeout;
+                setTimeout(() => closure_1_3([]), result);
+                timeout = MessageRecordUtils.createMessageRecord(tmp);
+                closure_3((arg0) => {
+                  const items = [];
+                  items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
+                  return items.slice(-3);
+                });
               }
-            };
-            tmp = closure_1;
-            tmp2 = closure_2;
-            obj = closure_1(closure_2[9]);
-            str = "MESSAGE_CREATE";
-            subscription = obj.subscribe("MESSAGE_CREATE", handleMessageCreate);
-            return () => {
-              DispatcherDefault.unsubscribe("MESSAGE_CREATE", handleMessageCreate);
-              clearTimeout(closure_0);
-              closure_3([]);
-            };
-          } else {
-            return;
-          }
+            }
+          };
+          const subscription = closure_1(first1[9]).subscribe("MESSAGE_CREATE", handleMessageCreate);
+          return () => {
+            DispatcherDefault.unsubscribe("MESSAGE_CREATE", handleMessageCreate);
+            clearTimeout(closure_0);
+            closure_3([]);
+          };
         }
-      }
+      };
       items4 = [arg1, arg0];
       cResult[5] = arg1;
       cResult[6] = arg0;
-      cResult[7] = A;
+      cResult[7] = fn;
       cResult[8] = items4;
       let obj = require("c");
     }
-  : (arg0, arg1) => {
+  : function useConjureChatToastMessages(arg0, arg1) {
       _require = arg0;
       let stateFromStores = arg1;
       let items = [CallChatToastsStore];

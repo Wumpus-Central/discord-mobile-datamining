@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings_picker/useFilteredGuilds.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (isGuildIncluded) => {
+  ? function useFilteredGuilds(isGuildIncluded) {
       const cResult = isGuildIncluded(stateFromStores2[5]).c(20);
       isGuildIncluded = isGuildIncluded.isGuildIncluded;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult4 = isGuildIncluded(stateFromStores2[6]);
     }
-  : (isGuildIncluded) => {
+  : function useFilteredGuilds(isGuildIncluded) {
       isGuildIncluded = isGuildIncluded.isGuildIncluded;
       const selectedGuildId = isGuildIncluded.selectedGuildId;
       let stateFromStores1;

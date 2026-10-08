@@ -9,7 +9,7 @@ const Constants = fn(1085);
 ({ ChannelTypes: closure_4, GuildFeatures: hasOwnProperty, Permissions: metroRequire } = Constants);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild_id) => {
+  ? function useIsVoiceChannelAppEnabled(guild_id) {
       _require = guild_id;
       const cResult = require("c").c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -95,7 +95,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = tmp15;
       const tmpResult2 = require("ConjureGuildExperiment");
     }
-  : (guild_id) => {
+  : function useIsVoiceChannelAppEnabled(guild_id) {
       _require = guild_id;
       const items = [GuildStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => {
@@ -135,7 +135,7 @@ let closure_7 = tmp3;
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-fn = (application_id) => {
+function useVoiceChannelApplicationId(application_id) {
   let tmp = null;
   if (closure_7(application_id)) {
     application_id = undefined;
@@ -148,14 +148,14 @@ fn = (application_id) => {
     tmp = application_id;
   }
   return tmp;
-};
+}
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/voice_channel_apps/useVoiceChannelApp.tsx");
 
 export const useIsVoiceChannelAppEnabled = tmp3;
-export const useVoiceChannelApplicationId = fn;
+export { useVoiceChannelApplicationId };
 export const useCanConfigureVoiceChannelApp = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCanConfigureVoiceChannelApp(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       let stateFromStores = closure_7(arg0);
@@ -167,7 +167,7 @@ export const useCanConfigureVoiceChannelApp = ReactCompilerGating.isReactCompile
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function t() {
+        const fn = function o() {
           let canResult = null != closure_0;
           if (canResult) {
             canResult = PermissionStore.can(constants3.MANAGE_CHANNELS, tmp);
@@ -186,7 +186,7 @@ export const useCanConfigureVoiceChannelApp = ReactCompilerGating.isReactCompile
       }
       return stateFromStores;
     }
-  : (arg0) => {
+  : function useCanConfigureVoiceChannelApp(arg0) {
       _require = arg0;
       let stateFromStores = closure_7(arg0);
       const items = [PermissionStore];

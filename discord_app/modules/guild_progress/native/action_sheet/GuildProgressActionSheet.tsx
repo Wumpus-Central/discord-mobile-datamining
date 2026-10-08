@@ -22,7 +22,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildProgressConstants = fn(12140);
+const GuildProgressConstants = fn(12219);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1085);
 ({
@@ -33,7 +33,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingTop: 8, paddingBottom: 16 },
@@ -125,7 +125,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_progress/native/action_sheet/GuildProgressActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function GuildProgressActionSheet(guild) {
       const cResult = guild(numFinished[11]).c(72);
       guild = guild.guild;
       closure_16();
@@ -164,14 +164,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const items1 = [GuildSettingsStore];
-        class A {
-          constructor() {
-            return closure_1_6.getErrors();
-          }
-        }
+        const fn = function b() {
+          return errors.getErrors();
+        };
         cResult[3] = items1;
-        cResult[4] = A;
-        let tmp11 = A;
+        cResult[4] = fn;
+        let tmp11 = fn;
         const tmp10 = items1;
       } else {
         class P {
@@ -191,11 +189,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const items2 = [stateFromStoresObject.message];
-        class A {
-          constructor() {
-            return closure_1_6.getErrors();
-          }
-        }
         cResult[5] = stateFromStoresObject.message;
         cResult[6] = tmp15;
         cResult[7] = items2;
@@ -219,11 +212,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const items3 = [id];
-        class A {
-          constructor() {
-            return closure_1_6.getErrors();
-          }
-        }
         cResult[8] = id;
         cResult[9] = M;
         cResult[10] = items3;
@@ -250,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn = function j() {
+      const fn2 = function j() {
         if (numFinished === totalSteps) {
           const result = GuildProgressActionCreatorsDefault.markCompletedProgressSeen(id);
         }
@@ -260,10 +248,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = numFinished;
       cResult[13] = totalSteps;
       cResult[14] = items4;
-      cResult[15] = fn;
+      cResult[15] = fn2;
       const tmpResult4 = guild(numFinished[12]);
     }
-  : (guild) => {
+  : function GuildProgressActionSheet(guild) {
       guild = guild.guild;
       let numFinished;
       const errors = async function _addServerIcon2() {
@@ -292,14 +280,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj3;
               } else {
                 let base64;
-                tmp5(9282).init(View);
-                const obj6 = tmp5(9282);
-                tmp2(12145).hideActionSheet(id.id);
-                const obj7 = tmp2(12145);
+                tmp5(8613).init(View);
+                const obj6 = tmp5(8613);
+                tmp2(12224).hideActionSheet(id.id);
+                const obj7 = tmp2(12224);
                 const obj4 = { size };
                 dependencyMap = 1;
                 c3 = 1;
-                const obj5 = { value: tmp5(7287).openImagePicker(obj4), done: false };
+                const obj5 = { value: tmp5(7741).openImagePicker(obj4), done: false };
                 return obj5;
               }
             } else if (arg0 === 1) {
@@ -312,8 +300,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               base64 = value.base64;
               if (null != base64) {
-                tmp5(9282).updateIcon(closure_129_5, base64);
-                const obj = tmp5(9282);
+                tmp5(8613).updateIcon(closure_129_5, base64);
+                const obj = tmp5(8613);
               }
               c3 = 3;
               return { value: "IconComponent", done: null };

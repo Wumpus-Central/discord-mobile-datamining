@@ -15,7 +15,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/BadgeArtImage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BadgeArtImage(arg0) {
       let SvgUri = _require;
       let size = dependencyMap;
       const cResult = require("c").c(18);
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === width) {
           let tmp3 = cResult[2];
         }
-        importDefault = tmp3;
+        style = tmp3;
         if (cResult[3] === tmp2) {
           if (cResult[4] === tmp3) {
             let tmp4 = cResult[5];
@@ -44,37 +44,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[13] === width) {
                       if (cResult[15] === tmp5) {
                         if (cResult[16] === tmp6) {
-                          let tmp14 = cResult[17];
+                          let tmp13 = cResult[17];
                         }
-                        return tmp14;
-                      }
-                      class E {
-                        constructor(arg0) {
-                          tmp = animated;
-                          if (animated) {
-                            tmp3 = closure_2;
-                            tmp2 = closure_0;
-                            obj = closure_0(closure_2[5]);
-                            if (obj.isAndroid()) {
-                              tmp5 = jsx;
-                              tmp6 = closure_2;
-                              obj1 = { url: null, style: null, autoplay: true };
-                              obj1.url = arg0;
-                              tmp7 = closure_1;
-                              obj1.style = closure_1;
-                              tmp4 = jsx(tmp2(closure_2[6]).APNGPlayer, obj1);
-                            }
-                            return tmp4;
-                          }
-                          obj4 = {
-                            source: { uri: arg0 },
-                            style: closure_1,
-                            resizeMode: "contain",
-                            enableAnimation: tmp,
-                          };
-                          tmp4 = jsx(closure_1(closure_2[7]), obj4);
-                          return;
-                        }
+                        return tmp13;
                       }
                       const obj = { style: tmp5, "aria-hidden": true, children: cResult[14] };
                       const tmp16 = (
@@ -85,71 +57,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       cResult[15] = tmp5;
                       cResult[16] = cResult[14];
                       cResult[17] = tmp16;
-                      tmp14 = tmp16;
+                      tmp13 = tmp16;
                     }
                   }
                 }
               }
             }
-            const first = url.split(/[?#]/)[0];
-            class E {
-              constructor(arg0) {
-                tmp = animated;
-                if (animated) {
-                  tmp3 = closure_2;
-                  tmp2 = closure_0;
-                  obj = closure_0(closure_2[5]);
-                  if (obj.isAndroid()) {
-                    tmp5 = jsx;
-                    tmp6 = closure_2;
-                    obj1 = { url: null, style: null, autoplay: true };
-                    obj1.url = arg0;
-                    tmp7 = closure_1;
-                    obj1.style = closure_1;
-                    tmp4 = jsx(tmp2(closure_2[6]).APNGPlayer, obj1);
-                  }
-                  return tmp4;
-                }
-                obj4 = { source: { uri: arg0 }, style: closure_1, resizeMode: "contain", enableAnimation: tmp };
-                tmp4 = jsx(closure_1(closure_2[7]), obj4);
-                return;
-              }
-            }
-            if (obj4.endsWith(".svg")) {
-              SvgUri = SvgUri(8169).SvgUri;
-              size = { uri: null, width: null, height: null, onError: null, fallback: null };
-              class E {
-                constructor(arg0) {
-                  tmp = animated;
-                  if (animated) {
-                    tmp3 = closure_2;
-                    tmp2 = closure_0;
-                    obj = closure_0(closure_2[5]);
-                    if (obj.isAndroid()) {
-                      tmp5 = jsx;
-                      tmp6 = closure_2;
-                      obj1 = { url: null, style: null, autoplay: true };
-                      obj1.url = arg0;
-                      tmp7 = closure_1;
-                      obj1.style = closure_1;
-                      tmp4 = jsx(tmp2(closure_2[6]).APNGPlayer, obj1);
-                    }
-                    return tmp4;
-                  }
-                  obj4 = { source: { uri: arg0 }, style: closure_1, resizeMode: "contain", enableAnimation: tmp };
-                  tmp4 = jsx(closure_1(closure_2[7]), obj4);
-                  return;
-                }
-              }
-              size.width = width;
-              size.height = height;
-              size.onError = ignoreSvgError;
+            const formatted = url.split(/[?#]/)[0].toLowerCase();
+            if (formatted.endsWith(".svg")) {
+              SvgUri = SvgUri(7550).SvgUri;
+              size = { uri: url, width, height, onError: ignoreSvgError, fallback: null };
               let tmp4Result;
               if (null != fallbackUrl) {
                 tmp4Result = tmp4(fallbackUrl);
               }
               size.fallback = tmp4Result;
-              let tmp4Result1 = <SvgUri uri={null} width={null} height={null} onError={null} fallback={null} />;
+              let tmp4Result1 = (
+                <SvgUri uri={url} width={width} height={height} onError={ignoreSvgError} fallback={null} />
+              );
             } else {
               tmp4Result1 = tmp4(url);
             }
@@ -159,64 +84,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[12] = url;
             cResult[13] = width;
             cResult[14] = tmp4Result1;
+            const str = url.split(/[?#]/)[0];
           }
-          const items = [,];
-          class E {
-            constructor(arg0) {
-              tmp = animated;
-              if (animated) {
-                tmp3 = closure_2;
-                tmp2 = closure_0;
-                obj = closure_0(closure_2[5]);
-                if (obj.isAndroid()) {
-                  tmp5 = jsx;
-                  tmp6 = closure_2;
-                  obj1 = { url: null, style: null, autoplay: true };
-                  obj1.url = arg0;
-                  tmp7 = closure_1;
-                  obj1.style = closure_1;
-                  tmp4 = jsx(tmp2(closure_2[6]).APNGPlayer, obj1);
-                }
-                return tmp4;
-              }
-              obj4 = { source: { uri: arg0 }, style: closure_1, resizeMode: "contain", enableAnimation: tmp };
-              tmp4 = jsx(closure_1(closure_2[7]), obj4);
-              return;
-            }
-          }
-          items[1] = style;
+          const items = [tmp3, style];
           cResult[6] = tmp3;
           cResult[7] = style;
           cResult[8] = items;
           tmp5 = items;
         }
-        class E {
-          constructor(arg0) {
-            tmp = animated;
-            if (animated) {
-              tmp3 = closure_2;
-              tmp2 = closure_0;
-              obj = closure_0(closure_2[5]);
-              if (obj.isAndroid()) {
-                tmp5 = jsx;
-                tmp6 = closure_2;
-                obj1 = { url: null, style: null, autoplay: true };
-                obj1.url = arg0;
-                tmp7 = closure_1;
-                obj1.style = closure_1;
-                tmp4 = jsx(tmp2(closure_2[6]).APNGPlayer, obj1);
-              }
-              return tmp4;
+        function raster(uri) {
+          if (enableAnimation) {
+            if (obj.isAndroid()) {
+              const obj2 = { url: uri, style, autoplay: true };
+              let tmp4 = jsx(APNGPlayer2.APNGPlayer, { url: uri, style, autoplay: true });
             }
-            obj4 = { source: { uri: arg0 }, style: closure_1, resizeMode: "contain", enableAnimation: tmp };
-            tmp4 = jsx(closure_1(closure_2[7]), obj4);
-            return;
+            return tmp4;
           }
+          tmp4 = jsx(FastImageDefault, { source: { uri }, style, resizeMode: "contain", enableAnimation });
+          const obj3 = { source: { uri }, style, resizeMode: "contain", enableAnimation };
         }
         cResult[3] = tmp2;
         cResult[4] = tmp3;
-        cResult[5] = E;
-        tmp4 = E;
+        cResult[5] = raster;
+        tmp4 = raster;
       }
       const size1 = { width, height };
       cResult[0] = height;
@@ -225,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = size1;
       let obj2 = require("c");
     }
-  : (style) => {
+  : function BadgeArtImage(style) {
       ({ url, height, width } = style);
       if (width === undefined) {
         width = height;
@@ -259,9 +149,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               enableAnimation: null,
             });
           } else {
-            APNGPlayer(1369);
+            APNGPlayer(1381);
           }
-          APNGPlayer = APNGPlayer(8497).APNGPlayer;
+          APNGPlayer = APNGPlayer(8981).APNGPlayer;
           const obj5 = { url: fallbackUrl, style: size, autoplay: true };
           tmpResult2 = <APNGPlayer url={fallbackUrl} style={size} autoplay />;
         }

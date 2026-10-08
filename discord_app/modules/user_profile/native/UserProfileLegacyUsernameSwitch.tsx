@@ -10,10 +10,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileLegacyUsernameSwitch.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function UserProfileLegacyUsernameSwitch(arg0) {
       const cResult = setting(576).c(11);
       ({ legacyUsername, pendingLegacyUsernameDisabled } = arg0);
-      const LegacyUsernameDisabled = setting(2028).LegacyUsernameDisabled;
+      const LegacyUsernameDisabled = setting(2040).LegacyUsernameDisabled;
       setting = LegacyUsernameDisabled.useSetting();
       let tmp5 = setting;
       if (undefined !== pendingLegacyUsernameDisabled) {
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             accessibilityLabel: tmp11,
             onValueChange: tmp13,
           };
-          const tmp16 = jsx(tmp(14461).UserProfileEditFormSwitch, {
+          const tmp16 = jsx(tmp(14689).UserProfileEditFormSwitch, {
             value: tmp6,
             label: first,
             subLabel: cResult[3],
@@ -94,10 +94,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = stringResult2;
       let obj = setting(576);
     }
-  : (pendingLegacyUsernameDisabled) => {
+  : function UserProfileLegacyUsernameSwitch(pendingLegacyUsernameDisabled) {
       pendingLegacyUsernameDisabled = pendingLegacyUsernameDisabled.pendingLegacyUsernameDisabled;
       let setting;
-      const LegacyUsernameDisabled = setting(2028).LegacyUsernameDisabled;
+      const LegacyUsernameDisabled = setting(2040).LegacyUsernameDisabled;
       setting = LegacyUsernameDisabled.useSetting();
       let tmp4 = setting;
       if (undefined !== pendingLegacyUsernameDisabled) {
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           UserProfileSettingsActionCreators.setPendingChanges(obj2);
         }
       };
-      return jsx(setting(14461).UserProfileEditFormSwitch, {
+      return jsx(setting(14689).UserProfileEditFormSwitch, {
         value: !tmp4,
         label: null,
         subLabel: null,

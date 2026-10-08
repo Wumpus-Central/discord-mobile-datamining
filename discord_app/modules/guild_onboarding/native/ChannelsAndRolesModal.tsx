@@ -10,17 +10,17 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const GuildOnboardingTab = fn(6603).GuildOnboardingTab;
+const GuildOnboardingTab = fn(6779).GuildOnboardingTab;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { screen: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, tabBar: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.tabBar = { paddingHorizontal: nativeDefault.space.PX_12, paddingTop: nativeDefault.space.PX_16 };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function ChannelsAndRolesScreen(guildId) {
       const cResult = guildId(first1[9]).c(22);
       guildId = guildId.guildId;
       const defaultTab = guildId.defaultTab;
@@ -105,7 +105,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const fn = function y() {
+        const fn = function x() {
           let tmp = closure_1;
           if (!closure_1) {
             tmp = first1 !== GuildOnboardingTab.CUSTOMIZE;
@@ -131,7 +131,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = guildId(first1[10]);
     }
-  : (guildId) => {
+  : function ChannelsAndRolesScreen(guildId) {
       guildId = guildId.guildId;
       const defaultTab = guildId.defaultTab;
       importDefault = undefined;
@@ -194,7 +194,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/ChannelsAndRolesModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function ChannelsAndRolesModal(guildId) {
       const cResult = guildId(576).c(11);
       guildId = guildId.guildId;
       const defaultTab = guildId.defaultTab;
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = guildId(576);
       const stateFromStores = guildId(573).useStateFromStores(first, tmp6);
-      const tmp9 = defaultTab(6848)(stateFromStores);
+      const tmp9 = defaultTab(7035)(stateFromStores);
       if (cResult[3] !== tmp9) {
         const intl = tmp(1126).intl;
         const string = intl.string;
@@ -244,11 +244,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           class I {
             constructor() {
               obj = { guildId, defaultTab };
-              return jsx(f57112, obj);
+              return jsx(ChannelsAndRolesScreen, obj);
             }
           }
           const obj2 = { screenKey: "channelAndRolesModal", title: tmp10, render: tmp13 };
-          const tmp15 = closure_8(tmp8(10674), obj2);
+          const tmp15 = closure_8(tmp8(9587), obj2);
           cResult[8] = tmp10;
           cResult[9] = tmp13;
           cResult[10] = tmp15;
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class I {
           constructor() {
             obj = { guildId, defaultTab };
-            return jsx(f57112, obj);
+            return jsx(ChannelsAndRolesScreen, obj);
           }
         }
         cResult[5] = defaultTab;
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = defaultTab;
       const tmpResult = guildId(573);
     }
-  : (arg0) => {
+  : function ChannelsAndRolesModal(arg0) {
       ({ guildId: require, defaultTab: importDefault } = arg0);
       const items = [GuildStore];
       const stateFromStores = useStateFromStores.useStateFromStores(items, () => GuildStore.getGuild(guildId));

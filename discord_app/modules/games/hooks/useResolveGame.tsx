@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/hooks/useResolveGame.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useResolveGame(arg0) {
       const cResult = c.c(6);
       ({ applicationId, gameId } = arg0);
       let tmp4;
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = obj3;
       const tmpResult = useGame;
     }
-  : (arg0) => {
+  : function useResolveGame(arg0) {
       ({ applicationId, gameId } = arg0);
       let getOrFetchApplication;
       let tmp3;

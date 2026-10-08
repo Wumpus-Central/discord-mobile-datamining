@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   placeholder: { backgroundColor: nativeDefault.colors.ICON_MUTED },
   button: null,
@@ -27,7 +27,7 @@ fn(558);
 const obj4 = { borderRadius: nativeDefault.radii.sm };
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
+  ? function GameProfileSkeletonPlaceholder(style) {
       const cResult = c.c(3);
       style = style.style;
       const tmp2 = closure_5();
@@ -46,7 +46,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp4;
       tmp3 = tmp4;
     }
-  : (style) => {
+  : function GameProfileSkeletonPlaceholder(style) {
       const obj = { style: null };
       const items = [closure_5().placeholder, style.style];
       obj.style = items;
@@ -55,7 +55,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_7 = tmp4;
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GameProfileSkeletonContainer(arg0) {
       const cResult = c.c(6);
       ({ animationDelayMs, children, style } = arg0);
       let num = 0;
@@ -99,7 +99,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = items;
       const tmpResult = GameProfileSkeletonPulse;
     }
-  : (animationDelayMs) => {
+  : function GameProfileSkeletonContainer(animationDelayMs) {
       let num = animationDelayMs.animationDelayMs;
       if (num === undefined) {
         num = 0;
@@ -130,7 +130,7 @@ export default tmp4;
 export const SKELETON_CARD_ANIMATION_DELAY_MS = 150;
 export const GameProfileSkeletonContainer = tmp3;
 export const GameProfileSkeletonButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GameProfileSkeletonButton(arg0) {
       const cResult = c.c(4);
       ({ size, style } = arg0);
       let str = "md";
@@ -156,7 +156,7 @@ export const GameProfileSkeletonButton = ReactCompilerGating.isReactCompilerEnab
       cResult[3] = tmp5;
       tmp4 = tmp5;
     }
-  : (size) => {
+  : function GameProfileSkeletonButton(size) {
       let str = size.size;
       if (str === undefined) {
         str = "md";

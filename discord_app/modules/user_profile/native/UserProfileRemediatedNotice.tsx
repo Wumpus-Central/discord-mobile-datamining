@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/native/UserProfileRemediatedNotice.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
 import RelationshipActionCreatorsDefault from "../../../actions/RelationshipActionCreators.tsx";
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1085).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     padding: nativeDefault.space.PX_12,
@@ -32,7 +32,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileRemediatedNotice.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function RemediatedUserNotice(user) {
       const cResult = user(576).c(16);
       user = user.user;
       const style = user.style;
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
               const intl = tmp(1126).intl;
               obj2.children = intl.string(tmp(1126).t["oC/fU6"]);
-              tmp14 = closure_6(tmp(4892).Text, obj2);
+              tmp14 = closure_6(tmp(5086).Text, obj2);
             }
             cResult[7] = isBlocked;
             cResult[8] = tmp14;
@@ -112,8 +112,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl2 = tmp(1126).intl;
             obj5.children = intl2.string(tmp(1126).t.HXz5An);
             const items2 = [
-              closure_6(tmp(4892).Text, obj5),
-              closure_6(tmp(4892).Text, {
+              closure_6(tmp(5086).Text, obj5),
+              closure_6(tmp(5086).Text, {
                 variant: "text-sm/semibold",
                 color: "text-default",
                 accessibilityElementsHidden: true,
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = items3;
       const tmpResult = user(573);
     }
-  : (user) => {
+  : function RemediatedUserNotice(user) {
       user = user.user;
       const tmp = closure_9();
       const tmp3 = UserProfileSharedStylesDefault();
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
           const intl = tmp4(1126).intl;
           obj3.children = intl.string(tmp4(1126).t["oC/fU6"]);
-          isBlocked = closure_6(tmp4(4892).Text, obj3);
+          isBlocked = closure_6(tmp4(5086).Text, obj3);
         }
         const items2 = [isBlocked];
         if (isIgnored) {
@@ -181,8 +181,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl2 = tmp4(1126).intl;
           obj5.children = intl2.string(tmp4(1126).t.HXz5An);
           const items3 = [
-            closure_6(tmp4(4892).Text, obj5),
-            closure_6(tmp4(4892).Text, {
+            closure_6(tmp4(5086).Text, obj5),
+            closure_6(tmp4(5086).Text, {
               variant: "text-sm/semibold",
               color: "text-default",
               accessibilityElementsHidden: true,

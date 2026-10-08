@@ -34,7 +34,7 @@ obj.messageText = { flexShrink: 0 };
 obj.timestamp = { flexShrink: 0 };
 let closure_7 = createStyles.createStyles(obj);
 let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsRecentActivityRow(row) {
   const cResult = c.c(42);
   const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GuildPowerupsRecentActivityRow");
   ({ boost, phase, sortKey } = row.row);
@@ -51,14 +51,14 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    class R {
+    class I {
       constructor() {
         return closure_1_4.roleStyle;
       }
     }
     cResult[2] = items;
-    cResult[3] = R;
-    let tmp16 = R;
+    cResult[3] = I;
+    let tmp16 = I;
     let tmp15 = items;
   } else {
     tmp15 = cResult[2];
@@ -68,7 +68,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
   if (cResult[4] === roleColor) {
     if (cResult[5] === stateFromStores) {
       const processColorStringsArray = enhanced_role_colors_EnhancedRoleColorUtils.useProcessColorStringsArray(roleColorStrings);
-      class R {
+      class I {
         constructor() {
           return closure_1_4.roleStyle;
         }
@@ -93,7 +93,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
                 if (isRoleStyleAndRoleColorsEligibleForERC) {
                   tmp38 = processColorStringsArray;
                 }
-                class R {
+                class I {
                   constructor() {
                     return closure_1_4.roleStyle;
                   }
@@ -106,7 +106,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
                 cResult[20] = tmp41;
               }
               const items1 = [, ];
-              class R {
+              class I {
                 constructor() {
                   return closure_1_4.roleStyle;
                 }
@@ -118,7 +118,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
               tmp37 = items1;
             }
           }
-          class R {
+          class I {
             constructor() {
               return closure_1_4.roleStyle;
             }
@@ -128,7 +128,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
           }
           if (tmp34) {
             const obj5 = { size: "small", color: roleColor, colors: null };
-            class R {
+            class I {
               constructor() {
                 return closure_1_4.roleStyle;
               }
@@ -143,7 +143,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
       }
       if ("gave" === phase) {
         { color: null, size: "sm" }.color = nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
-        class R {
+        class I {
           constructor() {
             return closure_1_4.roleStyle;
           }
@@ -162,7 +162,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
   if ("username" !== stateFromStores) {
     let obj9 = {};
     cResult[4] = roleColor;
-    class R {
+    class I {
       constructor() {
         return closure_1_4.roleStyle;
       }
@@ -172,7 +172,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
   }
   obj9 = { color: roleColor };
   const tmpResult3 = initialize;
-}) : ((row) => {
+}) : (function GuildPowerupsRecentActivityRow(row) {
   row = row.row;
   const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GuildPowerupsRecentActivityRow");
   ({ boost, phase, sortKey } = row);
@@ -252,7 +252,7 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 let obj3 = { gap: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_16 };
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsRecentActivitySection.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsRecentActivitySection(guildId) {
   const cResult = c.c(13);
   const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GuildPowerupsRecentActivitySection");
   const tmp5 = closure_7();
@@ -285,28 +285,44 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     if (cResult[3] !== arr) {
       const _Symbol2 = Symbol;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function w(row) {
-          return closure_1_5(closure_1_8, { row }, "boost-" + row.boost.id);
-        };
-        cResult[5] = fn;
-        let tmp14 = fn;
+        class R {
+          constructor(arg0) {
+            obj = { row: guildId };
+            return closure_1_5(closure_1_8, obj, "boost-" + guildId.boost.id);
+          }
+        }
+        cResult[5] = R;
       } else {
-        tmp14 = cResult[5];
+        class R {
+          constructor(arg0) {
+            obj = { row: guildId };
+            return closure_1_5(closure_1_8, obj, "boost-" + guildId.boost.id);
+          }
+        }
       }
-      const mapped = arr.map(tmp14);
+      const mapped = arr.map(R);
       cResult[3] = arr;
       cResult[4] = mapped;
     } else {
+      class R {
+        constructor(arg0) {
+          obj = { row: guildId };
+          return closure_1_5(closure_1_8, obj, "boost-" + guildId.boost.id);
+        }
+      }
       if (cResult[6] === tmp5.boostContainer) {
-        if (cResult[7] === tmp13) {
-          let tmp17 = cResult[8];
+        class R {
+          constructor(arg0) {
+            obj = { row: guildId };
+            return closure_1_5(closure_1_8, obj, "boost-" + guildId.boost.id);
+          }
         }
         if (cResult[9] === tmp5.sectionContainer) {
-          if (cResult[10] === tmp9) {
-            if (cResult[11] === tmp17) {
-              let tmp21 = cResult[12];
+          class R {
+            constructor(arg0) {
+              obj = { row: guildId };
+              return closure_1_5(closure_1_8, obj, "boost-" + guildId.boost.id);
             }
-            return tmp21;
           }
         }
         const obj4 = { style: tmp5.sectionContainer, children: null };
@@ -317,17 +333,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         cResult[10] = tmp9;
         cResult[11] = tmp17;
         cResult[12] = tmp24;
-        tmp21 = tmp24;
       }
-      const obj5 = { style: tmp12, children: cResult[4] };
+      const obj5 = { style: tmp12, children: tmp13 };
       const tmp20 = hasOwnProperty(View, obj5);
       cResult[6] = tmp5.boostContainer;
-      cResult[7] = cResult[4];
+      cResult[7] = tmp13;
       cResult[8] = tmp20;
-      tmp17 = tmp20;
     }
   }
-}) : ((guildId) => {
+}) : (function GuildPowerupsRecentActivitySection(guildId) {
   const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GuildPowerupsRecentActivitySection");
   const tmp4 = closure_7();
   const arr = useMaybeGetSortedBoostsDefault(guildId.guildId, 10);

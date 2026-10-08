@@ -15,11 +15,11 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (onPress) => {
+    ? function MediaKeyboardBottomSheetHandle(onPress) {
         const cResult = c.c(7);
         onPress = onPress.onPress;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function l(arg0) {
+          const fn = function o(arg0) {
             return arg0 > 0;
           };
           cResult[0] = fn;
@@ -66,7 +66,7 @@ export default noop.memo(
         }
         const tmpResult = useStateFromSharedValue;
       }
-    : (onPress) => {
+    : function MediaKeyboardBottomSheetHandle(onPress) {
         onPress = onPress.onPress;
         const derivedStateFromSharedValue = useStateFromSharedValue.useDerivedStateFromSharedValue(
           onPress.animatedIndex,

@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({
   container: { position: "relative", justifyContent: "center", alignItems: "center" },
   textContainer: { justifyContent: "center", width: "100%" },
@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/search/EmptyState.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (showsGenericMessage) => {
+  ? function EmptyState(showsGenericMessage) {
       const cResult = showsGenericMessage(576).c(14);
       showsGenericMessage = showsGenericMessage.showsGenericMessage;
       let tmp4 = undefined !== showsGenericMessage;
@@ -27,8 +27,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       showsGenericMessage = tmp4;
       const tmp5 = closure_5();
       const obj = showsGenericMessage(576);
-      const logAppLauncherEmptyStateView = showsGenericMessage(11679).useLogAppLauncherEmptyStateView(
-        tmp(8961).AppLauncherEmptyStateType.SEARCH_EMPTY,
+      const logAppLauncherEmptyStateView = showsGenericMessage(11744).useLogAppLauncherEmptyStateView(
+        tmp(11233).AppLauncherEmptyStateType.SEARCH_EMPTY,
         showsGenericMessage.query,
       );
       if (cResult[0] !== tmp4) {
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp16 = tmp19;
         }
         const obj4 = { style: tmp5.text, variant: "text-sm/medium", color: "text-default", children: cResult[4] };
-        const tmp15 = jsx(tmp(4892).Text, {
+        const tmp15 = jsx(tmp(5086).Text, {
           style: tmp5.text,
           variant: "text-sm/medium",
           color: "text-default",
@@ -108,16 +108,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = tmp15;
         tmp13 = tmp15;
       }
-      const tmpResult = showsGenericMessage(11679);
+      const tmpResult = showsGenericMessage(11744);
     }
-  : (showsGenericMessage) => {
+  : function EmptyState(showsGenericMessage) {
       let flag = showsGenericMessage.showsGenericMessage;
       if (flag === undefined) {
         flag = false;
       }
       const tmp = closure_5();
-      const logAppLauncherEmptyStateView = flag(11679).useLogAppLauncherEmptyStateView(
-        flag(8961).AppLauncherEmptyStateType.SEARCH_EMPTY,
+      const logAppLauncherEmptyStateView = flag(11744).useLogAppLauncherEmptyStateView(
+        flag(11233).AppLauncherEmptyStateType.SEARCH_EMPTY,
         showsGenericMessage.query,
       );
       const items = [flag];
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stringResult = string(t.LSNOYf);
       }
       obj4.children = stringResult;
-      obj3.children = jsx(flag(4892).Text, {
+      obj3.children = jsx(flag(5086).Text, {
         style: tmp.text,
         variant: "text-sm/medium",
         color: "text-default",

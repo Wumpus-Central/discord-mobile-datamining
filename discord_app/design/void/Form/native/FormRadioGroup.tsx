@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormRadioGroup.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FormRadioGroup(arg0) {
       const cResult = c.c(27);
       if (cResult[0] !== arg0) {
         ({ title, hasIcons, accessibilityLabel, children, value, hint, icon } = arg0);
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = tmp22;
       }
     }
-  : (arg0) => {
+  : function FormRadioGroup(arg0) {
       ({ title, children, hint } = arg0);
       ({ hasIcons, accessibilityLabel, value, icon } = arg0);
       const merged = Object.assign(

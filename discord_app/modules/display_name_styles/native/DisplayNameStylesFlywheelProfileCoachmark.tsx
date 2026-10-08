@@ -1,6 +1,6 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx
 import c from "../../../../_runtime/00576_c.js";
-import _modDef2911 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2955 from "../intl/DisplayNameStyles.messages.js";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import DisplayNameLockeAbstractUI from "../../../design/components/mana-assets/native/generated/DisplayNameLockeAbstractUI.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -8,16 +8,16 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({
   coachmarkImageContainer: { alignItems: "center", justifyContent: "center" },
 });
 fn(558);
 const ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function CoachmarkImage() {
       const cResult = c.c(3);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -42,18 +42,24 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : () => (
-      <View style={closure_8().coachmarkImageContainer}>
-        {jsx(DisplayNameLockeAbstractUI.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" })}
-      </View>
-    );
+  : function CoachmarkImage() {
+      return (
+        <View style={closure_8().coachmarkImageContainer}>
+          {jsx(DisplayNameLockeAbstractUI.DisplayNameLockeAbstractUI, {
+            width: 160,
+            height: 68,
+            resizeMode: "contain",
+          })}
+        </View>
+      );
+    };
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx",
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function DisplayNameStylesFlywheelProfileCoachmark(arg0) {
       const cResult = markAsDismissed(576).c(16);
       ({ visible, markAsDismissed } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -81,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] !== tmp8) {
         const intl = markAsDismissed(1126).intl;
         const string = intl.string;
-        let h6sykk = _modDef2911;
+        let h6sykk = _modDef2955;
         if (tmp8) {
           h6sykk = h6sykk.h6sykk;
           let stringResult = string(h6sykk);
@@ -93,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else if (cResult[6] !== tmp8) {
         const intl2 = markAsDismissed(1126).intl;
         const string2 = intl2.string;
-        let TyUdka = _modDef2911;
+        let TyUdka = _modDef2955;
         if (tmp8) {
           TyUdka = TyUdka.TyUdka;
           let string2Result = string2(TyUdka);
@@ -151,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = markAsDismissed(504);
     }
-  : (visible) => {
+  : function DisplayNameStylesFlywheelProfileCoachmark(visible) {
       visible = visible.visible;
       const markAsDismissed = visible.markAsDismissed;
       dependencyMap = undefined;
@@ -161,10 +167,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = visible(504).useStateFromStores(items, () => currentUser.getCurrentUser());
       const obj = visible(504);
       const tmp4 = markAsDismissed;
-      const result = markAsDismissed(4534).canUsePremiumProfileCustomization(stateFromStores);
+      const result = markAsDismissed(4726).canUsePremiumProfileCustomization(stateFromStores);
       const intl = visible(1126).intl;
       const string = intl.string;
-      const tmp6 = markAsDismissed(2911);
+      const tmp6 = markAsDismissed(2955);
       if (result) {
         let stringResult = string(tmp6.h6sykk);
       } else {
@@ -173,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = stringResult;
       const intl2 = tmp(1126).intl;
       const string2 = intl2.string;
-      const tmp4Result = tmp4(2911);
+      const tmp4Result = tmp4(2955);
       if (result) {
         let string2Result = string2(tmp4Result.TyUdka);
       } else {
@@ -198,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
         items2,
       );
-      const obj2 = markAsDismissed(4534);
-      const coachmark = visible(9895).useCoachmark(visible.targetRef, memo);
+      const obj2 = markAsDismissed(4726);
+      const coachmark = visible(9375).useCoachmark(visible.targetRef, memo);
       return null;
     };

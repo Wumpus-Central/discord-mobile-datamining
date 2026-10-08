@@ -511,7 +511,7 @@ export const getExistingMembersRows = function getExistingMembersRows(
   memberIds,
   channel,
   guild,
-  accessPermissions,
+  MODERATE_STAGE_CHANNEL_PERMISSIONS,
   arg4,
 ) {
   _require = guild;
@@ -522,7 +522,7 @@ export const getExistingMembersRows = function getExistingMembersRows(
   const appChannelBotUserId = obj.appChannelBotUserId;
   closure_129_0 = channel;
   closure_129_1 = guild;
-  closure_129_2 = accessPermissions;
+  closure_129_2 = MODERATE_STAGE_CHANNEL_PERMISSIONS;
   const permissionUpdates = obj.permissionUpdates;
   const mapped = memberIds.map(UserStore.getUser);
   const found = mapped.filter(require("GlobalUtils").isNotNullish);

@@ -7,12 +7,12 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
 
 require = fn;
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: {
-    marginVertical: fn(11711).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11776).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -20,7 +20,7 @@ let obj = {
 let closure_8 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11711).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11776).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -29,7 +29,7 @@ let result = size.fileFinishedImporting("modules/guild_sidebar/native/DirectoryC
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guildId) => {
+    ? function DirectoryChannel(guildId) {
         const cResult = guildId(576).c(20);
         guildId = guildId.guildId;
         let selected = guildId.selected;
@@ -42,7 +42,7 @@ export default noop.memo(
           first = cResult[0];
         }
         if (cResult[1] !== guildId) {
-          const fn = function b() {
+          const fn = function h() {
             const directoryChannelIds = GuildChannelStore.getDirectoryChannelIds(guildId);
             let channel = null;
             if (0 !== directoryChannelIds.length) {
@@ -86,7 +86,7 @@ export default noop.memo(
           } else {
             if (cResult[8] !== stateFromStores) {
               const obj2 = { channel: stateFromStores };
-              const tmp15 = id(9295)(obj2);
+              const tmp15 = id(8626)(obj2);
               cResult[8] = stateFromStores;
               cResult[9] = tmp15;
               let tmp13 = tmp15;
@@ -129,7 +129,7 @@ export default noop.memo(
               selected,
               resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS,
             };
-            const tmp21 = jsx(id(16093), {
+            const tmp21 = jsx(id(16353), {
               onPress: tmp11,
               onLongPress: tmp12,
               style: tmp4.container,
@@ -172,7 +172,7 @@ export default noop.memo(
         tmp11 = I;
         const tmpResult = guildId(573);
       }
-    : (guildId) => {
+    : function DirectoryChannel(guildId) {
         guildId = guildId.guildId;
         let selected = guildId.selected;
         const tmp = closure_8();
@@ -212,13 +212,13 @@ export default noop.memo(
             resolvedUnreadSetting: null,
           };
           const obj3 = { channel: stateFromStores };
-          obj2.accessibilityLabel = id(9295)(obj3);
+          obj2.accessibilityLabel = id(8626)(obj3);
           const obj4 = { selected };
           obj2.accessibilityState = obj4;
           obj2.channel = stateFromStores;
           obj2.selected = selected;
           obj2.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-          tmp7 = jsx(id(16093), {
+          tmp7 = jsx(id(16353), {
             onPress: callback,
             onLongPress: tmp6,
             style: tmp.container,
@@ -230,7 +230,7 @@ export default noop.memo(
             selected: null,
             resolvedUnreadSetting: null,
           });
-          const tmp10 = id(16093);
+          const tmp10 = id(16353);
         }
         return tmp7;
       },

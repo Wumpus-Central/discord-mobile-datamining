@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -65,7 +65,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormBigRadioBox.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPress) => {
+  ? function FormBigRadioBox(onPress) {
       const cResult = c.c(33);
       ({ description, icon, title, selected, style, disabled } = onPress);
       let tmp4 = undefined !== disabled;
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj8;
       tmp6 = obj8;
     }
-  : (arg0) => {
+  : function FormBigRadioBox(arg0) {
       ({ selected, disabled } = arg0);
       ({ description, icon, title, style, onPress } = arg0);
       if (disabled === undefined) {

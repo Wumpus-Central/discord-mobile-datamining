@@ -67,7 +67,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_startup/StartupProfiler.tsx");
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function StartupProfiler(arg0) {
       const cResult = profile(576).c(6);
       ({ children, profile } = arg0);
       obj2 = AppStartPerformanceDefault;
@@ -101,7 +101,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp5;
       tmp4 = tmp5;
     }
-  : (children) => {
+  : function StartupProfiler(children) {
       const profile = children.profile;
       AppStartPerformanceDefault.mark("\u{1F3A8}", "" + obj2[profile] + profile + " render");
       obj2 = {
@@ -124,7 +124,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function StartupProfiler(arg0) {
       const cResult = profile(576).c(6);
       ({ children, profile } = arg0);
       obj2 = AppStartPerformanceDefault;
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp5;
       tmp4 = tmp5;
     }
-  : (children) => {
+  : function StartupProfiler(children) {
       const profile = children.profile;
       AppStartPerformanceDefault.mark("\u{1F3A8}", "" + obj2[profile] + profile + " render");
       obj2 = {

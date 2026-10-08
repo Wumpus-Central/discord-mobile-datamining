@@ -39,7 +39,7 @@ let closure_8 = async function _updateDiscoverability(arg0) {
           closure_131_0 = phone;
           const email = closure_0.email;
           closure_131_1 = email;
-          const FriendDiscoverySettings2 = React(2028).FriendDiscoverySettings;
+          const FriendDiscoverySettings2 = React(2040).FriendDiscoverySettings;
           const setting = FriendDiscoverySettings2.getSetting();
           closure_131_2 = setting;
           localAccount = localAccount.getLocalAccount(constants2.CONTACTS);
@@ -50,15 +50,15 @@ let closure_8 = async function _updateDiscoverability(arg0) {
           closure_131_3 = name;
           let setFlagResult = setting;
           if (null != phone) {
-            setFlagResult = React(1390).setFlag(setting, constants.FIND_BY_PHONE, phone);
-            const obj5 = React(1390);
+            setFlagResult = React(1402).setFlag(setting, constants.FIND_BY_PHONE, phone);
+            const obj5 = React(1402);
           }
           let setFlagResult1 = setFlagResult;
           if (null != email) {
-            setFlagResult1 = React(1390).setFlag(setFlagResult, constants.FIND_BY_EMAIL, email);
-            const obj6 = React(1390);
+            setFlagResult1 = React(1402).setFlag(setFlagResult, constants.FIND_BY_EMAIL, email);
+            const obj6 = React(1402);
           }
-          const FriendDiscoverySettings = React(2028).FriendDiscoverySettings;
+          const FriendDiscoverySettings = React(2040).FriendDiscoverySettings;
           c5 = 1;
           c6 = 1;
           const obj8 = { value: FriendDiscoverySettings.updateSetting(setFlagResult1), done: false };
@@ -317,7 +317,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/contact_sync/native/ContactSyncActionCreators.tsx");
 
 export default {
-  updateName: function () {
+  updateName() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -337,7 +337,7 @@ export default {
     }
     return applyArgumentsResult;
   },
-  updateContactSyncEnabled: function () {
+  updateContactSyncEnabled() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

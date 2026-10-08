@@ -57,7 +57,7 @@ function resolveSavedActiveGuildTheme(stateFromStores) {
 const GuildFeatures = fn(1085).GuildFeatures;
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useSavedActiveGuildThemeForGuildId(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(7);
@@ -113,7 +113,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useSavedActiveGuildThemeForGuildId(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const items = [GuildStore, GuildThemeRuntimeStore];
@@ -147,7 +147,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
 fn(558);
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useActiveGuildThemeForGuildId(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(12);
       let str = "useActiveGuildThemeForGuildId";
@@ -249,7 +249,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
       const tmpResult = require("ServerThemeUserExperiment");
     }
-  : (arg0) => {
+  : function useActiveGuildThemeForGuildId(arg0) {
       _require = arg0;
       let str = arg1;
       if (arg1 === undefined) {
@@ -325,14 +325,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_11 = tmp3;
 ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useEnabledGuildThemeForGuildId(arg0, arg1) {
       let str = "useEnabledGuildThemeForGuildId";
       if (undefined !== arg1) {
         str = arg1;
       }
       return closure_10(arg0, ServerThemeUserExperiment.useServerThemeUserEnabled(str));
     }
-  : (arg0) => {
+  : function useEnabledGuildThemeForGuildId(arg0) {
       let str = arg1;
       if (arg1 === undefined) {
         str = "useEnabledGuildThemeForGuildId";
@@ -341,11 +341,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useActiveGuildTheme() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SelectedGuildStore];
-        const fn = function u() {
+        const fn = function l() {
           return guildId.getGuildId();
         };
         cResult[0] = items;
@@ -357,7 +357,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_11(initialize.useStateFromStores(tmp4, tmp5), "useActiveGuildTheme");
     }
-  : () => {
+  : function useActiveGuildTheme() {
       const items = [SelectedGuildStore];
       return closure_11(
         initialize.useStateFromStores(items, () => guildId.getGuildId()),
@@ -498,11 +498,11 @@ export const getActiveGuildTheme = function getActiveGuildTheme() {
 export const useActiveGuildThemeForGuildId = tmp3;
 export const useActiveGuildTheme = tmp4;
 export const useIsGuildThemePreviewActive = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsGuildThemePreviewActive() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildThemePreviewStore];
-        const fn = function u() {
+        const fn = function l() {
           return false;
         };
         cResult[0] = items;
@@ -514,7 +514,7 @@ export const useIsGuildThemePreviewActive = ReactCompilerGating.isReactCompilerE
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useIsGuildThemePreviewActive() {
       const items = [GuildThemePreviewStore];
       return initialize.useStateFromStores(items, () => false);
     };

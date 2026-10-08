@@ -10,7 +10,7 @@ import ApplicationStore from "ApplicationStore.tsx";
 require = fn;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (current, arg1) => {
+  ? function useGetOrFetchApplications(current, arg1) {
       _require = current;
       const cResult = require("c").c(8);
       closure_1 = tmp4;
@@ -37,24 +37,35 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           tmp9 = cResult[5];
         }
         if (cResult[6] !== current) {
-          const fn2 = function h() {
-            return current.map((item) => {
-              application = undefined;
-              if (null != item) {
-                application = application.getApplication(item);
-              }
-              return application;
-            });
-          };
+          class A {
+            constructor() {
+              return closure_0.map((item) => {
+                application = undefined;
+                if (null != item) {
+                  application = application.getApplication(item);
+                }
+                return application;
+              });
+            }
+          }
           cResult[6] = current;
-          cResult[7] = fn2;
-          let tmp11 = fn2;
+          cResult[7] = A;
         } else {
-          tmp11 = cResult[7];
+          class A {
+            constructor() {
+              return closure_0.map((item) => {
+                application = undefined;
+                if (null != item) {
+                  application = application.getApplication(item);
+                }
+                return application;
+              });
+            }
+          }
         }
-        return tmp(504).useStateFromStoresArray(tmp9, tmp11);
+        return tmp(504).useStateFromStoresArray(tmp9, A);
       }
-      const fn = function f() {
+      const fn = function p() {
         let tmp = closure_1;
         if (closure_1) {
           tmp = !discord_common_shallowEqual.areArraysShallowEqual(current, ref.current);
@@ -78,7 +89,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       tmp = _require;
     }
-  : (current) => {
+  : function useGetOrFetchApplications(current) {
       _require = current;
       let flag = arg1;
       if (arg1 === undefined) {
@@ -118,7 +129,7 @@ const result = size.fileFinishedImporting("modules/applications/useGetOrFetchApp
 
 export default tmp2;
 export const useGetOrFetchApplication = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useGetOrFetchApplication(arg0, arg1) {
       const cResult = c.c(2);
       if (cResult[0] !== arg0) {
         if (null != arg0) {
@@ -134,7 +145,7 @@ export const useGetOrFetchApplication = ReactCompilerGating.isReactCompilerEnabl
       }
       tmp2 = undefined === arg1 || arg1;
     }
-  : (arg0) => {
+  : function useGetOrFetchApplication(arg0) {
       let flag = arg1;
       if (arg1 === undefined) {
         flag = true;

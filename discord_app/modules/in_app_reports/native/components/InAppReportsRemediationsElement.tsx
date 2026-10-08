@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_32 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function RemediationsElement(children) {
       const cResult = c.c(6);
       children = children.children;
       const tmp4 = closure_4();
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp11;
       tmp10 = tmp11;
     }
-  : (children) => {
+  : function RemediationsElement(children) {
       const obj = { style: closure_4().container, children: null };
       const obj2 = { title: null, hasIcons: true, children: null };
       const intl = util.intl;

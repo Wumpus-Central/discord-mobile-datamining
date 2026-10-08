@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     alignSelf: "center",
@@ -50,7 +50,7 @@ let closure_11 = createStyles.createStyles(obj2);
 const springConfig = { overshootClamping: true, stiffness: 20, damping: 15, mass: 0.03 };
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild) => {
+  ? function CutoutGuildIcon(guild) {
       const cResult = c.c(5);
       guild = guild.guild;
       const tmp4 = closure_11();
@@ -96,7 +96,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp11;
       tmp8 = tmp11;
     }
-  : (guild) => {
+  : function CutoutGuildIcon(guild) {
       const obj = { style: { width: 24, height: 24 }, children: null };
       const obj2 = { cutouts: null, children: null };
       const size = { shape: null, x: 18, y: -4, width: 32, height: 32, cornerRadius: null };
@@ -131,7 +131,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/NewContentPill.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPress) => {
+  ? function NewContentPill(onPress) {
       const cResult = onPress(stateFromStoresArray[9]).c(64);
       onPress = onPress.onPress;
       const isRefreshing = onPress.isRefreshing;
@@ -350,7 +350,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[14] = items5;
       const tmpResult10 = onPress(stateFromStoresArray[18]);
     }
-  : (onPress) => {
+  : function NewContentPill(onPress) {
       onPress = onPress.onPress;
       const isRefreshing = onPress.isRefreshing;
       let stateFromStoresArray;

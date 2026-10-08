@@ -10,7 +10,7 @@ let result = size.fileFinishedImporting(
 );
 
 export const useTypographyVariantRemap = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useTypographyVariantRemap(arg0, arg1) {
       const cResult = c.c(6);
       let themeContext = ThemeContext.useThemeContext();
       if (themeContext == null) {
@@ -44,7 +44,7 @@ export const useTypographyVariantRemap = ReactCompilerGating.isReactCompilerEnab
       tmp5 = result;
       const tmpResult = typographyVariantRemap;
     }
-  : (arg0, arg1) => {
+  : function useTypographyVariantRemap(arg0, arg1) {
       let themeContext = ThemeContext.useThemeContext();
       if (themeContext == null) {
         themeContext = [];

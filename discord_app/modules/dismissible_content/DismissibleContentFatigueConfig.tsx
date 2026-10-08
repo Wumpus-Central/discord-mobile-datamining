@@ -1,5 +1,6 @@
 // discord_app/modules/dismissible_content/DismissibleContentFatigueConfig.tsx
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import DismissibleContentSettings from "../../../discord_common/js/shared/shared-constants/DismissibleContentSettings.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
@@ -107,3 +108,11 @@ const items = [
 const result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentFatigueConfig.tsx");
 
 export const CONTENT_TYPES_WITH_BYPASS_FATIGUE = new Set(items);
+export const isServerArbitrated = function isServerArbitrated(item) {
+  const tmp = DismissibleContentSettings.DISMISSIBLE_CONTENT_SETTINGS[item];
+  let is_server_arbitrated;
+  if (tmp != null) {
+    is_server_arbitrated = tmp.is_server_arbitrated;
+  }
+  return true === is_server_arbitrated;
+};

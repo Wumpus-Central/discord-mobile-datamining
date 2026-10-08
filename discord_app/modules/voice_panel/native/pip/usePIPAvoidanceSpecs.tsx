@@ -28,7 +28,7 @@ const __initData3 = {
 const result = size.fileFinishedImporting("modules/voice_panel/native/pip/usePIPAvoidanceSpecs.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (mode) => {
+  ? function usePIPAvoidanceSpecs(mode) {
       mode = mode.mode;
       const controlsSpecs = mode.controlsSpecs;
       const safeArea = mode.safeArea;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
       return sharedValue;
     }
-  : (mode) => {
+  : function usePIPAvoidanceSpecs(mode) {
       mode = mode.mode;
       const controlsSpecs = mode.controlsSpecs;
       const safeArea = mode.safeArea;

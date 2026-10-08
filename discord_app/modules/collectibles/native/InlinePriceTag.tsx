@@ -6,12 +6,12 @@ import _modDef683 from "../../../../_runtime/metro/00683__.js";
 import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import ChevronSmallRightIcon from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
@@ -48,7 +48,7 @@ function ExpressiveNitroUpsell(arg0) {
       }
       if (closure_1_2) {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp9 = asyncRequireImpl(13000, dependencyMap.paths);
+        const tmp9 = asyncRequireImpl(13278, dependencyMap.paths);
         const obj2 = { analyticsLocations: null, title: null, description: null };
         const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP_DETAILS_MODAL];
         obj2.analyticsLocations = items;
@@ -162,7 +162,7 @@ const Constants = fn(1085);
 ({ AnalyticsSections: closure_7, CurrencyCodes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = {
   priceTag: { flexDirection: "row", alignItems: "center" },
   strikedPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7 },
@@ -231,7 +231,7 @@ const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PriceTag(arg0) {
       const cResult = c.c(12);
       ({ priceFormatted, style, color, icon, variant, accessibilityLabel } = arg0);
       let str = "interactive-text-active";
@@ -263,7 +263,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { children: null };
                 const items = [icon, tmp6];
                 obj2.children = items;
-                const tmp12 = closure_1_11(v65535, obj2);
+                const tmp12 = closure_1_11(collapsed, obj2);
                 cResult[9] = icon;
                 cResult[10] = tmp6;
                 cResult[11] = tmp12;
@@ -288,7 +288,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items1;
       tmp5 = items1;
     }
-  : (accessibilityLabel) => {
+  : function PriceTag(accessibilityLabel) {
       let str = accessibilityLabel.color;
       ({ priceFormatted, style } = accessibilityLabel);
       if (str === undefined) {
@@ -311,11 +311,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.style = items1;
       items[1] = options(Text_Text.Text, obj2);
       obj.children = items;
-      return closure_1_11(v65535, obj);
+      return closure_1_11(collapsed, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function OrbsPriceTag(arg0) {
       const cResult = c.c(41);
       ({ vcData, isProductDisabled, product, eligibleForShopDiscount } = arg0);
       const tmp4 = closure_12();
@@ -522,7 +522,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult2 = CollectiblesUtils;
       }
     }
-  : (arg0) => {
+  : function OrbsPriceTag(arg0) {
       ({ vcData, product } = arg0);
       ({ isProductDisabled, eligibleForShopDiscount } = arg0);
       const tmp = closure_12();
@@ -608,7 +608,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onTrackPress) => {
+  ? function NitroUpsell(onTrackPress) {
       const cResult = onTrackPress(576).c(21);
       onTrackPress = onTrackPress.onTrackPress;
       const handleNitroSubscribe = onTrackPress.handleNitroSubscribe;
@@ -631,7 +631,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[6] = tmp4.androidTextPadding;
             cResult[7] = androidTextPadding;
             let tmp10 = androidTextPadding;
-            tmpResult = tmp(1369);
+            tmpResult = tmp(1381);
           } else {
             tmp10 = cResult[7];
           }
@@ -668,7 +668,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                 style: tmp10,
                 children: cResult[10],
               };
-              const tmp18 = closure_9(tmp(4892).Text, obj3);
+              const tmp18 = closure_9(tmp(5086).Text, obj3);
               cResult[13] = tmp10;
               cResult[14] = cResult[10];
               cResult[15] = tmp18;
@@ -697,7 +697,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [,];
         ({ nitroIcon: arr[0], nitroIconSubscribeNow: arr[1] } = tmp4);
         obj5.style = items1;
-        const tmp9 = closure_9(tmp(8346).NitroWheelIcon, obj5);
+        const tmp9 = closure_9(tmp(9005).NitroWheelIcon, obj5);
         cResult[3] = tmp4.nitroIcon;
         cResult[4] = tmp4.nitroIconSubscribeNow;
         cResult[5] = tmp9;
@@ -715,7 +715,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       const obj = onTrackPress(576);
     }
-  : (premiumPriceFormatted) => {
+  : function NitroUpsell(premiumPriceFormatted) {
       ({ onTrackPress: require, handleNitroSubscribe: importDefault } = premiumPriceFormatted);
       const tmp = closure_12();
       dependencyMap = tmp;
@@ -764,7 +764,7 @@ let obj6 = {
   flexDirection: "row",
   alignItems: "center",
 };
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_19 = createStyles.createStyles(() => {
   const discount = {
     backgroundColor: "rgba(46, 204, 113, 0.25)",
@@ -791,7 +791,7 @@ let closure_19 = createStyles.createStyles(() => {
 });
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (discountPercentage) => {
+  ? function BundleDiscountV2(discountPercentage) {
       const cResult = c.c(5);
       discountPercentage = discountPercentage.discountPercentage;
       let discount = closure_19();
@@ -819,7 +819,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = tmp10;
       }
     }
-  : (discountPercentage) => {
+  : function BundleDiscountV2(discountPercentage) {
       discountPercentage = discountPercentage.discountPercentage;
       let tmp4 = null;
       if (discountPercentage >= CollectiblesUtils.DISCOUNT_DISPLAY_MINIMUM_THRESHOLD) {
@@ -836,7 +836,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/InlinePriceTag.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function InlinePriceTag(arg0) {
       const cResult = c.c(52);
       ({ product, onTrackPress } = arg0);
       closure_12();
@@ -944,7 +944,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       tmpResult8 = initialize;
     }
-  : (arg0) => {
+  : function InlinePriceTag(arg0) {
       ({ product, onTrackPress } = arg0);
       let nitroIcon = closure_12();
       const currentUser = useCurrentUser.useCurrentUser();

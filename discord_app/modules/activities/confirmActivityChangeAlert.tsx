@@ -1,8 +1,8 @@
 // discord_app/modules/activities/confirmActivityChangeAlert.tsx
 import util from "../../intl/index.native.tsx";
 import StringUtils from "../../utils/StringUtils.tsx";
-import useChannelName from "../channel/useChannelName.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
+import useChannelName from "../channel/useChannelName.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 

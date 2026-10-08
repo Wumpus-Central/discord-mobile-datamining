@@ -1,7 +1,7 @@
 // discord_app/modules/auth/native/components/atoms/BackgroundImage.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import shared from "../../../../../design/shared.tsx";
-import _modDef6472 from "../../../../../../_runtime/metro/06472__.js";
+import _modDef6650 from "../../../../../../_runtime/metro/06650__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/atoms/BackgroundImage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BackgroundImage(arg0) {
       let tmp2 = dependencyMap;
       const cResult = c.c(7);
       ({ backgroundImageSource, backgroundImageCover } = arg0);
@@ -47,21 +47,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = obj4;
       } else {
         if (tmpResult.isThemeDark(tmp6)) {
-          tmp2 = 6471;
+          tmp2 = 6649;
           let tmp5Result = importDefault(tmp2);
         } else {
-          tmp5Result = _modDef6472;
+          tmp5Result = _modDef6650;
         }
         tmpResult = shared;
       }
     }
-  : (backgroundImageSource) => {
+  : function BackgroundImage(backgroundImageSource) {
       backgroundImageSource = backgroundImageSource.backgroundImageSource;
       let flag = backgroundImageSource.backgroundImageCover;
       if (flag === undefined) {
         flag = false;
       }
-      const tmp = flag(4797)();
+      const tmp = flag(4991)();
       dependencyMap = tmp;
       let items = [backgroundImageSource, flag, tmp];
       let obj = { style: absoluteFill.absoluteFill, children: null };
@@ -76,10 +76,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             let tmp2 = dependencyMap;
             if (obj2.isThemeDark(closure_2)) {
-              tmp2 = 6471;
+              tmp2 = 6649;
               let tmp4Result = importDefault(tmp2);
             } else {
-              tmp4Result = _modDef6472;
+              tmp4Result = _modDef6650;
             }
             obj2 = shared;
           }

@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   buttonContainer: {
     minHeight: 56,
@@ -20,7 +20,7 @@ let obj2 = {
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 28,
-    backgroundColor: fn(5627).ACTION_BAR_BUTTON_BACKGROUND,
+    backgroundColor: fn(5974).ACTION_BAR_BUTTON_BACKGROUND,
   },
   container: { marginHorizontal: 12 },
   containerWithLabel: { minWidth: "50%", maxWidth: "70%", flexShrink: 1 },
@@ -35,7 +35,7 @@ let obj3 = {
   alignItems: "center",
   justifyContent: "center",
   borderRadius: 28,
-  backgroundColor: fn(5627).ACTION_BAR_BUTTON_BACKGROUND,
+  backgroundColor: fn(5974).ACTION_BAR_BUTTON_BACKGROUND,
 };
 obj2.buttonText = {
   marginStart: 8,
@@ -60,7 +60,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 
 export const IconPosition = obj5;
 export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function LabeledActionButton(arg0) {
       const cResult = c.c(55);
       if (cResult[0] !== arg0) {
         ({ backgroundColor, imageStyle, children, source, disabled, label, iconPosition } = arg0);
@@ -301,7 +301,7 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = items5;
       tmp17 = items5;
     }
-  : (children) => {
+  : function LabeledActionButton(children) {
       ({ backgroundColor, imageStyle, source, disabled, label, iconPosition } = children);
       if (iconPosition === undefined) {
         iconPosition = obj5.LEFT;

@@ -46,7 +46,7 @@ function getBadgeString(hasItem, days, hours) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   root: { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 },
   backgroundDarkMode: null,
@@ -63,7 +63,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/LimitedTimeBadge.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function LimitedTimeBadge(arg0) {
       const cResult = c.c(22);
       ({ unpublishedAt, style } = arg0);
       const tmp4 = closure_7();
@@ -186,7 +186,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = tmp16;
       const tmp14 = useCountdownDefault(unpublishedAt, 1000, undefined, true);
     }
-  : (unpublishedAt) => {
+  : function LimitedTimeBadge(unpublishedAt) {
       const tmp = closure_7();
       const items = [ThemeStore];
       const stateFromStores = initialize.useStateFromStores(items, () => shared.isThemeDark(theme.theme));

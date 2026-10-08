@@ -23,16 +23,3 @@ export const trackSettingSearchResultPress = function trackSettingSearchResultPr
   obj2.search_session_id = SettingSearchSessionAnalyticsManagerDefault.getSearchSessionId();
   obj.track(AnalyticEvents.USER_SETTINGS_SEARCH_RESULT_PRESS, obj2);
 };
-export const trackSettingSearchQueryEntered = function trackSettingSearchQueryEntered() {
-  const obj2 = { search_session_id: null };
-  const obj = AnalyticsUtilsDefault;
-  obj2.search_session_id = SettingSearchSessionAnalyticsManagerDefault.getSearchSessionId();
-  obj.track(AnalyticEvents.USER_SETTINGS_SEARCH_QUERY_ENTERED, obj2);
-};
-export const trackSettingSearchClosed = function trackSettingSearchClosed(searchSessionDuration) {
-  const obj2 = { search_session_id: null, search_session_duration_ms: null };
-  const obj = AnalyticsUtilsDefault;
-  obj2.search_session_id = SettingSearchSessionAnalyticsManagerDefault.getSearchSessionId();
-  obj2.search_session_duration_ms = searchSessionDuration.searchSessionDuration;
-  obj.track(AnalyticEvents.USER_SETTINGS_SEARCH_CLOSED, obj2);
-};

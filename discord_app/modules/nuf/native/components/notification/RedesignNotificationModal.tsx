@@ -5,18 +5,18 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import NotificationPermissionUtil from "../../NotificationPermissionUtil.tsx";
 import PushNotificationActionCreators from "../../../../../actions/native/PushNotificationActionCreators.tsx";
 import NewUserPermissionsOnboardingDefault from "../NewUserPermissionsOnboarding.android.tsx";
-import _modDef15961 from "../../../../../../_runtime/metro/15961__.js";
+import _modDef16221 from "../../../../../../_runtime/metro/16221__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(12067).PermissionStateType;
-const NotificationPermissionConstants = fn(12068);
+const PermissionStateType = fn(12140).PermissionStateType;
+const NotificationPermissionConstants = fn(12141);
 ({ EventActionLocation: closure_7, EventActionType: closure_8 } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     flex: 1,
@@ -28,7 +28,7 @@ let obj2 = {
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onComplete) => {
+  ? function RedesignNotificationModal(onComplete) {
       const cResult = onComplete(576).c(15);
       onComplete = onComplete.onComplete;
       const tmp4 = closure_11();
@@ -51,80 +51,162 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       if (cResult[2] !== onComplete) {
-        const fn2 = function p() {
-          AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
-            action_type: constants2.SKIP_STEP,
-            action_location: constants.ALERT,
-          });
-          const obj2 = { action_type: constants2.SKIP_STEP, action_location: constants.ALERT };
-          const result = PushNotificationActionCreators.setPushPermissionState(PermissionStateType.PROMPT_SKIPPED);
-          const result1 = NotificationPermissionUtil.enableProvisionalPushNotification();
-          if (onComplete != null) {
-            tmp4(true);
-          }
-        };
-        cResult[2] = onComplete;
-        cResult[3] = fn2;
-        let tmp6 = fn2;
-      } else {
-        tmp6 = cResult[3];
-      }
-      if (cResult[4] !== tmp4.notificationHeaderImage) {
-        let obj2 = { resizeMode: "contain", style: tmp4.notificationHeaderImage, source: _modDef15961 };
-        const tmp11 = <closure_4 resizeMode="contain" style={tmp4.notificationHeaderImage} source={_modDef15961} />;
-        cResult[4] = tmp4.notificationHeaderImage;
-        cResult[5] = tmp11;
-        let tmp7 = tmp11;
-      } else {
-        tmp7 = cResult[5];
-      }
-      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t["3nx0b5"]);
-        const intl2 = tmp(1126).intl;
-        const stringResult1 = intl2.string(tmp(1126).t.Gf7U1T);
-        cResult[6] = stringResult;
-        cResult[7] = stringResult1;
-        let tmp13 = stringResult1;
-        let tmp12 = stringResult;
-      } else {
-        tmp12 = cResult[6];
-        tmp13 = cResult[7];
-      }
-      if (cResult[8] === tmp5) {
-        if (cResult[9] === tmp6) {
-          if (cResult[10] === tmp7) {
-            let tmp16 = cResult[11];
-          }
-          if (cResult[12] === tmp4.container) {
-            if (cResult[13] === tmp16) {
-              let tmp18 = cResult[14];
+        class I {
+          constructor() {
+            obj = closure_1(closure_2[11]);
+            obj1 = { action_type: EventActionType.SKIP_STEP, action_location: EventActionLocation.ALERT };
+            trackResult = obj.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj1);
+            obj3 = closure_0(closure_2[12]);
+            result = obj3.setPushPermissionState(PermissionStateType.PROMPT_SKIPPED);
+            obj4 = closure_0(closure_2[10]);
+            result1 = obj4.enableProvisionalPushNotification();
+            if (onComplete != null) {
+              flag = true;
+              tmp4Result = tmp4(true);
             }
-            return tmp18;
+            return;
           }
-          let obj3 = { style: tmp4.container, children: tmp16 };
-          const tmp21 = <closure_5 style={tmp4.container}>{tmp16}</closure_5>;
-          cResult[12] = tmp4.container;
-          cResult[13] = tmp16;
-          cResult[14] = tmp21;
-          tmp18 = tmp21;
+        }
+        cResult[2] = onComplete;
+        cResult[3] = I;
+      } else {
+        class I {
+          constructor() {
+            obj = closure_1(closure_2[11]);
+            obj1 = { action_type: EventActionType.SKIP_STEP, action_location: EventActionLocation.ALERT };
+            trackResult = obj.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj1);
+            obj3 = closure_0(closure_2[12]);
+            result = obj3.setPushPermissionState(PermissionStateType.PROMPT_SKIPPED);
+            obj4 = closure_0(closure_2[10]);
+            result1 = obj4.enableProvisionalPushNotification();
+            if (onComplete != null) {
+              flag = true;
+              tmp4Result = tmp4(true);
+            }
+            return;
+          }
         }
       }
-      const tmp17 = jsx(NewUserPermissionsOnboardingDefault, {
-        onAllow: tmp5,
-        onDontAllow: tmp6,
-        header: tmp7,
-        title: tmp12,
-        subtitle: tmp13,
-      });
-      cResult[8] = tmp5;
-      cResult[9] = tmp6;
-      cResult[10] = tmp7;
-      cResult[11] = tmp17;
-      tmp16 = tmp17;
+      if (cResult[4] !== tmp4.notificationHeaderImage) {
+        class I {
+          constructor() {
+            obj = closure_1(closure_2[11]);
+            obj1 = { action_type: EventActionType.SKIP_STEP, action_location: EventActionLocation.ALERT };
+            trackResult = obj.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj1);
+            obj3 = closure_0(closure_2[12]);
+            result = obj3.setPushPermissionState(PermissionStateType.PROMPT_SKIPPED);
+            obj4 = closure_0(closure_2[10]);
+            result1 = obj4.enableProvisionalPushNotification();
+            if (onComplete != null) {
+              flag = true;
+              tmp4Result = tmp4(true);
+            }
+            return;
+          }
+        }
+        let obj2 = { resizeMode: "contain", style: tmp4.notificationHeaderImage, source: _modDef16221 };
+        const tmp10 = <closure_4 resizeMode="contain" style={tmp4.notificationHeaderImage} source={_modDef16221} />;
+        cResult[4] = tmp4.notificationHeaderImage;
+        cResult[5] = tmp10;
+      } else {
+        class I {
+          constructor() {
+            obj = closure_1(closure_2[11]);
+            obj1 = { action_type: EventActionType.SKIP_STEP, action_location: EventActionLocation.ALERT };
+            trackResult = obj.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj1);
+            obj3 = closure_0(closure_2[12]);
+            result = obj3.setPushPermissionState(PermissionStateType.PROMPT_SKIPPED);
+            obj4 = closure_0(closure_2[10]);
+            result1 = obj4.enableProvisionalPushNotification();
+            if (onComplete != null) {
+              flag = true;
+              tmp4Result = tmp4(true);
+            }
+            return;
+          }
+        }
+      }
+      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+        class I {
+          constructor() {
+            obj = closure_1(closure_2[11]);
+            obj1 = { action_type: EventActionType.SKIP_STEP, action_location: EventActionLocation.ALERT };
+            trackResult = obj.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj1);
+            obj3 = closure_0(closure_2[12]);
+            result = obj3.setPushPermissionState(PermissionStateType.PROMPT_SKIPPED);
+            obj4 = closure_0(closure_2[10]);
+            result1 = obj4.enableProvisionalPushNotification();
+            if (onComplete != null) {
+              flag = true;
+              tmp4Result = tmp4(true);
+            }
+            return;
+          }
+        }
+        const stringResult = obj3.string(tmp(1126).t["3nx0b5"]);
+        const intl = tmp(1126).intl;
+        const stringResult1 = intl.string(tmp(1126).t.Gf7U1T);
+        cResult[6] = stringResult;
+        cResult[7] = stringResult1;
+        let tmp12 = stringResult1;
+        const tmp11 = stringResult;
+      } else {
+        class I {
+          constructor() {
+            obj = closure_1(closure_2[11]);
+            obj1 = { action_type: EventActionType.SKIP_STEP, action_location: EventActionLocation.ALERT };
+            trackResult = obj.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj1);
+            obj3 = closure_0(closure_2[12]);
+            result = obj3.setPushPermissionState(PermissionStateType.PROMPT_SKIPPED);
+            obj4 = closure_0(closure_2[10]);
+            result1 = obj4.enableProvisionalPushNotification();
+            if (onComplete != null) {
+              flag = true;
+              tmp4Result = tmp4(true);
+            }
+            return;
+          }
+        }
+        tmp12 = cResult[7];
+      }
+      if (cResult[8] === tmp5) {
+        class I {
+          constructor() {
+            obj = closure_1(closure_2[11]);
+            obj1 = { action_type: EventActionType.SKIP_STEP, action_location: EventActionLocation.ALERT };
+            trackResult = obj.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj1);
+            obj3 = closure_0(closure_2[12]);
+            result = obj3.setPushPermissionState(PermissionStateType.PROMPT_SKIPPED);
+            obj4 = closure_0(closure_2[10]);
+            result1 = obj4.enableProvisionalPushNotification();
+            if (onComplete != null) {
+              flag = true;
+              tmp4Result = tmp4(true);
+            }
+            return;
+          }
+        }
+      }
       let obj = onComplete(576);
+      cResult[8] = tmp5;
+      cResult[9] = I;
+      cResult[10] = tmp7;
+      cResult[11] = jsx(NewUserPermissionsOnboardingDefault, {
+        onAllow: tmp5,
+        onDontAllow: I,
+        header: tmp7,
+        title: tmp11,
+        subtitle: tmp12,
+      });
+      const tmp15 = jsx(NewUserPermissionsOnboardingDefault, {
+        onAllow: tmp5,
+        onDontAllow: I,
+        header: tmp7,
+        title: tmp11,
+        subtitle: tmp12,
+      });
     }
-  : (onComplete) => {
+  : function RedesignNotificationModal(onComplete) {
       onComplete = onComplete.onComplete;
       const tmp = closure_11();
       const items = [onComplete];
@@ -154,8 +236,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       let obj2 = { onAllow: callback, onDontAllow: callback1, header: null, title: null, subtitle: null };
-      let obj3 = { resizeMode: "contain", style: tmp.notificationHeaderImage, source: _modDef15961 };
-      obj2.header = <closure_4 resizeMode="contain" style={tmp.notificationHeaderImage} source={_modDef15961} />;
+      let obj3 = { resizeMode: "contain", style: tmp.notificationHeaderImage, source: _modDef16221 };
+      obj2.header = <closure_4 resizeMode="contain" style={tmp.notificationHeaderImage} source={_modDef16221} />;
       const intl = onComplete(1126).intl;
       obj2.title = intl.string(onComplete(1126).t["3nx0b5"]);
       const intl2 = onComplete(1126).intl;
@@ -181,7 +263,7 @@ let result = size.fileFinishedImporting("modules/nuf/native/components/notificat
 
 export default tmp4;
 export const RedesignNotificationScreen = ReactCompilerGating.isReactCompilerEnabled()
-  ? (route) => {
+  ? function RedesignNotificationScreen(route) {
       const cResult = c.c(2);
       const onComplete = route.route.params.onComplete;
       if (cResult[0] !== onComplete) {
@@ -195,4 +277,6 @@ export const RedesignNotificationScreen = ReactCompilerGating.isReactCompilerEna
       }
       return tmp2;
     }
-  : (onComplete) => <closure_12 onComplete={onComplete.route.params.onComplete} />;
+  : function RedesignNotificationScreen(onComplete) {
+      return <closure_12 onComplete={onComplete.route.params.onComplete} />;
+    };

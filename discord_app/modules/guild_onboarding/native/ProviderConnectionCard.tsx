@@ -17,7 +17,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/ProviderConnectionCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (connection) => {
+  ? function ProviderConnectionCard(connection) {
       let LinkIcon = _require;
       const cResult = require("c").c(25);
       connection = connection.connection;
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           });
-          const fn = function () {
+          function t3() {
             const self = this;
             const apply = closure_0.apply;
             if (typeof apply === "unknown") {
@@ -219,13 +219,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               applyArgumentsResult = apply(self, arguments);
             }
             return applyArgumentsResult;
-          };
+          }
           cResult[5] = connection.provider_id;
           cResult[6] = guildId;
           cResult[7] = _location;
           cResult[8] = startConnection;
-          cResult[9] = fn;
-          tmp13 = fn;
+          cResult[9] = t3;
+          tmp13 = t3;
           const LinkIconResult = LinkIcon(tmp[10]);
         }
       }
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       description = connection.description;
       let obj = require("c");
     }
-  : (connection) => {
+  : function ProviderConnectionCard(connection) {
       connection = connection.connection;
       const guildId = connection.guildId;
       const _location = connection.location;
@@ -295,8 +295,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return obj3;
                   } else {
                     const obj4 = {};
-                    const obj5 = v3(1252);
-                    const merged = Object.assign(provider_id(5076).collectGuildAnalyticsMetadata(guildId));
+                    const obj5 = v3(1264);
+                    const merged = Object.assign(provider_id(5105).collectGuildAnalyticsMetadata(guildId));
                     obj4.connection_type = "provider";
                     provider_id = connection.provider_id;
                     if (provider_id == null) {

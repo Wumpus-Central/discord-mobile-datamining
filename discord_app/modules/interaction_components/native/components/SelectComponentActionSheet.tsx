@@ -12,10 +12,10 @@ import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(6653).ACTION_SHEET_START_HEIGHT_RATIO;
+let closure_7 = fn(6830).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   selectionOptionItemIconWrapper: { width: nativeDefault.space.PX_32, alignItems: "center" },
   tagListIconWrapper: null,
@@ -37,7 +37,7 @@ obj2.textInputWrapper = {
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (renderIcon) => {
+  ? function SelectionHeader(renderIcon) {
       const cResult = renderIcon(onPressOptionItem[9]).c(29);
       renderIcon = renderIcon.renderIcon;
       ({ selectionActionComponent, labelComponent, selectButtonDisabled, selectedOptions } = renderIcon);
@@ -246,7 +246,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       arr = mapped;
       let obj = renderIcon(onPressOptionItem[9]);
     }
-  : (renderIcon) => {
+  : function SelectionHeader(renderIcon) {
       renderIcon = renderIcon.renderIcon;
       ({ selectionActionComponent, labelComponent, selectButtonDisabled, selectedOptions } = renderIcon);
       ({ onPressOptionItem: dependencyMap, onRemoveOptionItem: noop, onQueryChange } = renderIcon);
@@ -308,10 +308,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const intl3 = tmp6(1126).intl;
         obj3.text = intl3.string(tmp6(1126).t.XqMe3N);
-        tmp5Result = closure_8(tmp6(5601).Button, obj3);
+        tmp5Result = closure_8(tmp6(5375).Button, obj3);
       }
       obj.trailing = tmp5Result;
-      const children = [closure_8(renderIcon(6651).BottomSheetTitleHeader, obj)];
+      const children = [closure_8(renderIcon(6828).BottomSheetTitleHeader, obj)];
       let tmp5Result4 = null;
       if (null != onQueryChange) {
         tmp5Result4 = null;
@@ -352,8 +352,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             }
             onQueryChange(arg0);
           };
-          tmp5Result4 = closure_8(selectedOptions(9270), obj4);
-          const tmp13 = selectedOptions(9270);
+          tmp5Result4 = closure_8(selectedOptions(8601), obj4);
+          const tmp13 = selectedOptions(8601);
         }
       }
       children[1] = tmp5Result4;
@@ -361,7 +361,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (item) => {
+  ? function SelectionOptionItem(item) {
       const cResult = c.c(44);
       item = item.item;
       const onPressOptionItem = item.onPressOptionItem;
@@ -511,7 +511,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                                 const obj4 = { style: tmp20, children: null };
                                 const items = [tmp21, cResult[28]];
                                 obj4.children = items;
-                                const tmp28 = v65535(View, obj4);
+                                const tmp28 = collapsed(View, obj4);
                                 cResult[29] = tmp21;
                                 cResult[30] = cResult[28];
                                 cResult[31] = tmp28;
@@ -601,7 +601,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj6;
       tmp5 = obj6;
     }
-  : (item) => {
+  : function SelectionOptionItem(item) {
       item = item.item;
       ({
         onPressOptionItem: importDefault,
@@ -689,7 +689,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items1[1] = tmp6Result2;
       obj4.children = items1;
-      obj2.trailing = v65535(View, obj4);
+      obj2.trailing = collapsed(View, obj4);
       return closure_1_8(TableRow.TableRow, obj2);
     };
 ReactCompilerGating = fn(558);
@@ -704,7 +704,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (selectionActionComponent) => {
+  ? function SelectComponentActionSheet(selectionActionComponent) {
       const cResult = selectionActionComponent(selectedCount[9]).c(51);
       selectionActionComponent = selectionActionComponent.selectionActionComponent;
       ({ labelComponent, onPressOptionItem } = selectionActionComponent);
@@ -922,7 +922,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = U;
       const tmpResult = selectionActionComponent(selectedCount[23]);
     }
-  : (selectionActionComponent) => {
+  : function SelectComponentActionSheet(selectionActionComponent) {
       selectionActionComponent = selectionActionComponent.selectionActionComponent;
       const onPressOptionItem = selectionActionComponent.onPressOptionItem;
       const selectedCount = selectionActionComponent.selectedCount;

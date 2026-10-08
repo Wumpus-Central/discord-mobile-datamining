@@ -9,7 +9,7 @@ const require = globalThis.__r;
 const require = fn;
 const Image = fn(17).Image;
 const UserSettingsSections = fn(1085).UserSettingsSections;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ReactCompilerGating = fn(558);
@@ -17,10 +17,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function PasswordlessUpsellPromoSheet() {
       const cResult = require("c").c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { source: tmp(15531), style: { height: 190, width: 220, resizeMode: "contain" } };
+        let obj2 = { source: tmp(15793), style: { height: 190, width: 220, resizeMode: "contain" } };
         const tmp7 = closure_7(Image, obj2);
         cResult[0] = tmp7;
         let first = tmp7;
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       _require = noop.useRef(false);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function h() {
+        function registerPasskey() {
           if (!ref.current) {
             tmp.current = true;
             PasskeyUpsellManagerDefault.markDismissed(ContentDismissActionType.TAKE_ACTION);
@@ -43,74 +43,39 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const intl = ref(1126).intl;
                 obj3.name = intl.string(ref(1126).t["8H5RmH"]);
                 obj2.params = obj3;
-                ref(6895).openUserSettings(obj2);
+                ref(7084).openUserSettings(obj2);
               },
             };
             NativeCeremoniesDefault.registerPasskey(obj4).catch(() => {});
             const registerPasskeyResult = NativeCeremoniesDefault.registerPasskey(obj4);
           }
-        };
-        cResult[1] = fn;
-        let tmp8 = fn;
+        }
+        cResult[1] = registerPasskey;
+        let tmp8 = registerPasskey;
       } else {
         tmp8 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        class P {
-          constructor() {
-            obj = closure_1_1(closure_1_2[8]);
-            markDismissedResult = obj.markDismissed(closure_1_6.USER_DISMISS);
-            obj2 = closure_1_1(closure_1_2[9]);
-            result = obj2.closePasskeyUpsellPromoSheet();
-            return;
-          }
+        function onCancel() {
+          PasskeyUpsellManagerDefault.markDismissed(constants.USER_DISMISS);
+          const result = PasskeyUpsellActionCreatorsDefault.closePasskeyUpsellPromoSheet();
         }
-        cResult[2] = P;
+        cResult[2] = onCancel;
+        let tmp9 = onCancel;
       } else {
-        class P {
-          constructor() {
-            obj = closure_1_1(closure_1_2[8]);
-            markDismissedResult = obj.markDismissed(closure_1_6.USER_DISMISS);
-            obj2 = closure_1_1(closure_1_2[9]);
-            result = obj2.closePasskeyUpsellPromoSheet();
-            return;
-          }
-        }
+        tmp9 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        class P {
-          constructor() {
-            obj = closure_1_1(closure_1_2[8]);
-            markDismissedResult = obj.markDismissed(closure_1_6.USER_DISMISS);
-            obj2 = closure_1_1(closure_1_2[9]);
-            result = obj2.closePasskeyUpsellPromoSheet();
-            return;
-          }
-        }
-        const stringResult = obj3.string(tmp(1126).t.CjleBl);
-        const tmpResult = tmp(1369);
-        const string = tmp(1126).intl.string;
+        let intl = tmp(1126).intl;
+        const stringResult = intl.string(tmp(1126).t.CjleBl);
+        const tmpResult = tmp(1381);
+        const intl2 = tmp(1126).intl;
+        const string = intl2.string;
         const I = tmp(1126).t;
         if (isIOSResult) {
-          class P {
-            constructor() {
-              obj = closure_1_1(closure_1_2[8]);
-              markDismissedResult = obj.markDismissed(closure_1_6.USER_DISMISS);
-              obj2 = closure_1_1(closure_1_2[9]);
-              result = obj2.closePasskeyUpsellPromoSheet();
-              return;
-            }
-          }
+          let stringResult1 = string(I["7yxR9t"]);
         } else {
-          class P {
-            constructor() {
-              obj = closure_1_1(closure_1_2[8]);
-              markDismissedResult = obj.markDismissed(closure_1_6.USER_DISMISS);
-              obj2 = closure_1_1(closure_1_2[9]);
-              result = obj2.closePasskeyUpsellPromoSheet();
-              return;
-            }
-          }
+          stringResult1 = string(I.d6uxJy);
         }
         class I {
           constructor() {
@@ -119,95 +84,51 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[3] = stringResult;
-        cResult[4] = tmp12;
+        cResult[4] = stringResult1;
         cResult[5] = I;
-        isIOSResult = tmp(1369).isIOS();
+        isIOSResult = tmp(1381).isIOS();
       } else {
-        class P {
-          constructor() {
-            obj = closure_1_1(closure_1_2[8]);
-            markDismissedResult = obj.markDismissed(closure_1_6.USER_DISMISS);
-            obj2 = closure_1_1(closure_1_2[9]);
-            result = obj2.closePasskeyUpsellPromoSheet();
-            return;
-          }
-        }
+        const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          class P {
-            constructor() {
-              obj = closure_1_1(closure_1_2[8]);
-              markDismissedResult = obj.markDismissed(closure_1_6.USER_DISMISS);
-              obj2 = closure_1_1(closure_1_2[9]);
-              result = obj2.closePasskeyUpsellPromoSheet();
-              return;
-            }
-          }
-          let obj4 = { size: "lg", onPress: tmp8, text: null };
-          let intl = tmp(1126).intl;
-          obj4.text = intl.string(tmp(1126).t.NIFmCJ);
+          let obj3 = { size: "lg", onPress: tmp8, text: null };
+          const intl3 = tmp(1126).intl;
+          obj3.text = intl3.string(tmp(1126).t.NIFmCJ);
           class I {
             constructor() {
               obj = closure_1_1(closure_1_2[8]);
               return obj.markDismissed(closure_1_6.USER_DISMISS);
             }
           }
-          const tmp17 = closure_7(tmp(5601).Button, obj4);
-          const tmp16 = closure_7(tmp(5601).Button, obj4);
+          let tmp16 = closure_7(tmp(5375).Button, obj3);
+          const tmp18 = closure_7(tmp(5375).Button, obj3);
         } else {
-          class P {
-            constructor() {
-              obj = closure_1_1(closure_1_2[8]);
-              markDismissedResult = obj.markDismissed(closure_1_6.USER_DISMISS);
-              obj2 = closure_1_1(closure_1_2[9]);
-              result = obj2.closePasskeyUpsellPromoSheet();
-              return;
-            }
-          }
+          tmp16 = cResult[6];
         }
-        const _Symbol = Symbol;
+        const _Symbol2 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          class P {
-            constructor() {
-              obj = closure_1_1(closure_1_2[8]);
-              markDismissedResult = obj.markDismissed(closure_1_6.USER_DISMISS);
-              obj2 = closure_1_1(closure_1_2[9]);
-              result = obj2.closePasskeyUpsellPromoSheet();
-              return;
-            }
-          }
-          const obj5 = {
+          let obj4 = {
             illustration: first,
             title: cResult[3],
             description: cResult[4],
             onDismiss: cResult[5],
             actions: null,
           };
-          const obj6 = { children: null };
+          const obj5 = { children: null };
           class I {
             constructor() {
               obj = closure_1_1(closure_1_2[8]);
               return obj.markDismissed(closure_1_6.USER_DISMISS);
             }
           }
-          tmp20[0] = tmp16;
-          const obj7 = { size: "lg", variant: "secondary", onPress: P, text: null };
-          const intl2 = tmp(1126).intl;
-          obj7.text = intl2.string(tmp(1126).t["7J6/nG"]);
-          tmp20[1] = closure_7(tmp(5601).Button, obj7);
-          obj6.children = tmp20;
-          obj5.actions = closure_8(tmp(5599).ButtonGroup, obj6);
-          const tmp21 = closure_7(tmp(10058).PromoSheet, obj5);
-          cResult[7] = tmp21;
-        } else {
-          class P {
-            constructor() {
-              obj = closure_1_1(closure_1_2[8]);
-              markDismissedResult = obj.markDismissed(closure_1_6.USER_DISMISS);
-              obj2 = closure_1_1(closure_1_2[9]);
-              result = obj2.closePasskeyUpsellPromoSheet();
-              return;
-            }
-          }
+          tmp22[0] = tmp16;
+          const obj6 = { size: "lg", variant: "secondary", onPress: tmp9, text: null };
+          const intl4 = tmp(1126).intl;
+          obj6.text = intl4.string(tmp(1126).t["7J6/nG"]);
+          tmp22[1] = closure_7(tmp(5375).Button, obj6);
+          obj5.children = tmp22;
+          obj4.actions = closure_8(tmp(5963).ButtonGroup, obj5);
+          const tmp23 = closure_7(tmp(10303).PromoSheet, obj4);
+          cResult[7] = tmp23;
         }
         class I {
           constructor() {
@@ -218,15 +139,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = require("c");
     }
-  : () => {
+  : function PasswordlessUpsellPromoSheet() {
       let obj = {
-        source: require("../../../../_runtime/metro/15531__.js"),
+        source: require("../../../../_runtime/metro/15793__.js"),
         style: { height: 190, width: 220, resizeMode: "contain" },
       };
       _require = noop.useRef(false);
       let obj2 = {
         illustration: closure_7(Image, {
-          source: require("../../../../_runtime/metro/15531__.js"),
+          source: require("../../../../_runtime/metro/15793__.js"),
           style: { height: 190, width: 220, resizeMode: "contain" },
         }),
         title: null,
@@ -237,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let intl = require("util").intl;
       obj2.title = intl.string(require("util").t.CjleBl);
       const tmp4 = closure_7(Image, {
-        source: require("../../../../_runtime/metro/15531__.js"),
+        source: require("../../../../_runtime/metro/15793__.js"),
         style: { height: 190, width: 220, resizeMode: "contain" },
       });
       let obj3 = require("PlatformUtils");
@@ -256,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj4 = { children: null };
       const obj5 = {
         size: "lg",
-        onPress() {
+        onPress: function registerPasskey() {
           if (!ref.current) {
             tmp.current = true;
             PasskeyUpsellManagerDefault.markDismissed(ContentDismissActionType.TAKE_ACTION);
@@ -270,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const intl = ref(1126).intl;
                 obj3.name = intl.string(ref(1126).t["8H5RmH"]);
                 obj2.params = obj3;
-                ref(6895).openUserSettings(obj2);
+                ref(7084).openUserSettings(obj2);
               },
             };
             NativeCeremoniesDefault.registerPasskey(obj4).catch(() => {});
@@ -285,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = {
         size: "lg",
         variant: "secondary",
-        onPress() {
+        onPress: function onCancel() {
           PasskeyUpsellManagerDefault.markDismissed(constants.USER_DISMISS);
           const result = PasskeyUpsellActionCreatorsDefault.closePasskeyUpsellPromoSheet();
         },

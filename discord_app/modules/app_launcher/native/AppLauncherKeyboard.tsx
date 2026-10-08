@@ -8,7 +8,7 @@ import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import setAccessibilityFocus from "../../a11y/native/setAccessibilityFocus.android.tsx";
-import BottomSheetModal from "../../../../_runtime/06119_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06298_BottomSheetModal.js";
 import completeAppLauncherOnboardingDefault from "onboarding/utils/completeAppLauncherOnboarding.tsx";
 import AppLauncherOnboardingLayerDefault from "onboarding/banner/AppLauncherOnboardingLayer.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -16,11 +16,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(11664).KEYBOARD_ANIMATION_CONFIG;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const KEYBOARD_ANIMATION_CONFIG = fn(11729).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   onboardingRoundingView: { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm },
   onboardingHeader: null,
@@ -72,7 +72,7 @@ let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncher
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (context) => {
+    ? function AppLauncherKeyboard(context) {
         const cResult = context(onClose[9]).c(52);
         context = context.context;
         const chatInputRef = context.chatInputRef;
@@ -285,7 +285,7 @@ export default noop.memo(
               tmp4Result = PlatformUtils;
             }
             children[1] = tmp3Result;
-            return v65535(options, { children });
+            return collapsed(options, { children });
           };
           cResult[12] = visibleContent;
           cResult[13] = context;
@@ -307,7 +307,7 @@ export default noop.memo(
         cResult[8] = items1;
         const tmpResult5 = context(onClose[15]);
       }
-    : (context) => {
+    : function AppLauncherKeyboard(context) {
         context = context.context;
         const chatInputRef = context.chatInputRef;
         const onClose = context.onClose;
@@ -356,14 +356,12 @@ export default noop.memo(
           callback1(sharedValue.get(), onboardingNavigatorContent);
         }, items1);
         let obj5 = context(onClose[15]);
-        class O {
-          constructor() {
-            return closure_12.get();
-          }
-        }
-        O.__closure = { bottomSheetIndex: sharedValue };
-        O.__workletHash = 9724245552188;
-        O.__initData = __initData2;
+        const fn = function y() {
+          return sharedValue.get();
+        };
+        fn.__closure = { bottomSheetIndex: sharedValue };
+        fn.__workletHash = 9724245552188;
+        fn.__initData = __initData2;
         class C {
           constructor(arg0, arg1) {
             if (context !== arg1) {
@@ -385,7 +383,7 @@ export default noop.memo(
         };
         C.__workletHash = 10242116658851;
         C.__initData = __initData3;
-        const animatedReaction = obj6.useAnimatedReaction(O, C);
+        const animatedReaction = obj6.useAnimatedReaction(fn, C);
         const items2 = [transitionState];
         const layoutEffect = transitionState.useLayoutEffect(() => {
           if (transitionState === native.TransitionStates.YEETED) {
@@ -412,7 +410,7 @@ export default noop.memo(
             tmp4Result = PlatformUtils;
           }
           children[1] = tmp3Result;
-          return v65535(options, { children });
+          return collapsed(options, { children });
         }, items3);
         const items5 = [chatInputRef, isScreenReaderEnabled, ref, onClose];
         const callback3 = transitionState.useCallback((arg0, arg1, arg2) => {
@@ -421,20 +419,20 @@ export default noop.memo(
               let trackWithMetadata = require;
               let APP_LAUNCHER_EXPANDED = dependencyMap;
               if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-                let current = trackWithMetadata(11007).AppLauncherBottomSheetExpandReason.KEYBOARD;
-              } else if (arg2 === trackWithMetadata(6119).ANIMATION_SOURCE.GESTURE) {
-                current = trackWithMetadata(11007).AppLauncherBottomSheetExpandReason.GESTURE;
-              } else if (arg2 !== trackWithMetadata(6119).ANIMATION_SOURCE.USER) {
-                current = trackWithMetadata(11007).AppLauncherBottomSheetExpandReason.OTHER;
+                let current = trackWithMetadata(11232).AppLauncherBottomSheetExpandReason.KEYBOARD;
+              } else if (arg2 === trackWithMetadata(6298).ANIMATION_SOURCE.GESTURE) {
+                current = trackWithMetadata(11232).AppLauncherBottomSheetExpandReason.GESTURE;
+              } else if (arg2 !== trackWithMetadata(6298).ANIMATION_SOURCE.USER) {
+                current = trackWithMetadata(11232).AppLauncherBottomSheetExpandReason.OTHER;
               } else {
                 current = ref1.current;
               }
-              trackWithMetadata = trackWithMetadata(5076).trackWithMetadata;
+              trackWithMetadata = trackWithMetadata(5105).trackWithMetadata;
               APP_LAUNCHER_EXPANDED = AnalyticEvents.APP_LAUNCHER_EXPANDED;
               const obj = { reason: current };
               trackWithMetadata(APP_LAUNCHER_EXPANDED, obj);
               ref1.current = undefined;
-              const trackWithMetadataResult = trackWithMetadata(5076);
+              const trackWithMetadataResult = trackWithMetadata(5105);
             }
           }
         }, items4);

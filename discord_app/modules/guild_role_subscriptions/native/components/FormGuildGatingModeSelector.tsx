@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({
   container: { padding: 16 },
   space: { height: 8 },
@@ -21,14 +21,14 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (isFullServerGating) => {
+  ? function FormGuildGatingModeSelector(isFullServerGating) {
       const cResult = isFullServerGating(576).c(28);
       isFullServerGating = isFullServerGating.isFullServerGating;
       const onChange = isFullServerGating.onChange;
       const tmp4 = closure_8();
       dependencyMap = tmp4;
       let obj = isFullServerGating(576);
-      const roleSubscriptionSettingsDisabled = isFullServerGating(17967).useRoleSubscriptionSettingsDisabled();
+      const roleSubscriptionSettingsDisabled = isFullServerGating(18254).useRoleSubscriptionSettingsDisabled();
       if (cResult[0] !== onChange) {
         const fn = function l() {
           onChange(false);
@@ -130,37 +130,37 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj6 = {
-                icon: onChange(17970),
+                icon: onChange(18257),
                 title: tmp24,
                 description: tmp25,
                 selected: isFullServerGating,
                 onPress: tmp7,
                 disabled: roleSubscriptionSettingsDisabled,
               };
-              const tmp32 = closure_5(onChange(17969), obj6);
+              const tmp32 = closure_5(onChange(18256), obj6);
               cResult[18] = tmp7;
               cResult[19] = isFullServerGating;
               cResult[20] = roleSubscriptionSettingsDisabled;
               cResult[21] = tmp32;
               tmp28 = tmp32;
-              const tmp31 = onChange(17969);
+              const tmp31 = onChange(18256);
             }
           }
           const obj7 = {
-            icon: onChange(11428),
+            icon: onChange(11411),
             title: tmp10,
             description: tmp11,
             selected: !isFullServerGating,
             onPress: tmp6,
             disabled: roleSubscriptionSettingsDisabled,
           };
-          const tmp19 = closure_5(onChange(17969), obj7);
+          const tmp19 = closure_5(onChange(18256), obj7);
           cResult[10] = tmp6;
           cResult[11] = roleSubscriptionSettingsDisabled;
           cResult[12] = !isFullServerGating;
           cResult[13] = tmp19;
           tmp15 = tmp19;
-          const tmp18 = onChange(17969);
+          const tmp18 = onChange(18256);
         }
       }
       const fn2 = function v() {
@@ -193,14 +193,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp4.alertHeader;
       cResult[5] = fn2;
       tmp7 = fn2;
-      let obj2 = isFullServerGating(17967);
+      let obj2 = isFullServerGating(18254);
     }
-  : (isFullServerGating) => {
+  : function FormGuildGatingModeSelector(isFullServerGating) {
       isFullServerGating = isFullServerGating.isFullServerGating;
       const onChange = isFullServerGating.onChange;
       const tmp = closure_8();
       dependencyMap = tmp;
-      const roleSubscriptionSettingsDisabled = isFullServerGating(17967).useRoleSubscriptionSettingsDisabled();
+      const roleSubscriptionSettingsDisabled = isFullServerGating(18254).useRoleSubscriptionSettingsDisabled();
       let items = [onChange];
       const items1 = [onChange, isFullServerGating, tmp];
       const callback = noop.useCallback(() => {
@@ -238,8 +238,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onChange(true);
       }, items1);
       let obj3 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
-      let obj = isFullServerGating(17967);
-      obj3.icon = onChange(11428);
+      let obj = isFullServerGating(18254);
+      obj3.icon = onChange(11411);
       let intl = isFullServerGating(1126).intl;
       obj3.title = intl.string(isFullServerGating(1126).t.rXqxhF);
       let intl2 = isFullServerGating(1126).intl;
@@ -247,11 +247,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.selected = !isFullServerGating;
       obj3.onPress = callback;
       obj3.disabled = roleSubscriptionSettingsDisabled;
-      const items2 = [closure_5(onChange(17969), obj3), closure_5(View, { style: tmp.space })];
+      const items2 = [closure_5(onChange(18256), obj3), closure_5(View, { style: tmp.space })];
       let obj5 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
       let obj4 = { style: tmp.space };
-      const tmp5 = onChange(17969);
-      obj5.icon = onChange(17970);
+      const tmp5 = onChange(18256);
+      obj5.icon = onChange(18257);
       let intl3 = isFullServerGating(1126).intl;
       obj5.title = intl3.string(isFullServerGating(1126).t.WzC9s6);
       const intl4 = isFullServerGating(1126).intl;
@@ -259,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj5.selected = isFullServerGating;
       obj5.onPress = callback1;
       obj5.disabled = roleSubscriptionSettingsDisabled;
-      items2[2] = closure_5(onChange(17969), obj5);
+      items2[2] = closure_5(onChange(18256), obj5);
       obj2.children = items2;
       return closure_7(View, obj2);
     };

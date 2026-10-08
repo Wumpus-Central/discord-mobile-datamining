@@ -8,7 +8,7 @@ import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useYouBarSettingsOutsideSafeAreaTop() {
       const cResult = c.c(2);
       const tmp4 = useIsWindowLargeDefault();
       if (cResult[0] !== tmp4) {
@@ -22,7 +22,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function useYouBarSettingsOutsideSafeAreaTop() {
       const tmp = useIsWindowLargeDefault();
       return utils_PlatformUtils.isIOS() || tmp;
     };
@@ -30,14 +30,14 @@ let closure_3 = tmp3;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarSettingsSafeArea.tsx");
 
 export const useYouBarSettingsCustomHeaderPaddingTop = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useYouBarSettingsCustomHeaderPaddingTop() {
       let num = 16;
       if (!closure_3()) {
         num = useSafeAreaInsetsDefault().top;
       }
       return num;
     }
-  : () => {
+  : function useYouBarSettingsCustomHeaderPaddingTop() {
       let num = 16;
       if (!closure_3()) {
         num = useSafeAreaInsetsDefault().top;

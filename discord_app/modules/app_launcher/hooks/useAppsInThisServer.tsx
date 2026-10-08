@@ -1,21 +1,21 @@
 // discord_app/modules/app_launcher/hooks/useAppsInThisServer.tsx
 import _modDef12 from "../../../../_runtime/metro/00012__.js";
-import isApplicationAgeRestrictedDefault from "../../applications/utils/isApplicationAgeRestricted.tsx";
 import ApplicationCommandQueryApiAll from "../../application_commands/ApplicationCommandQueryApi.tsx";
+import isApplicationAgeRestrictedDefault from "../../applications/utils/isApplicationAgeRestricted.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 const require = globalThis.__r;
 
 const require = fn;
-const useGuildIndexState = fn(8827).useGuildIndexState;
-const limit = fn(5795).DISCOVERY_COMMANDS_QUERY_LIMIT;
+const useGuildIndexState = fn(9186).useGuildIndexState;
+const limit = fn(5399).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (context) => {
+  ? function useAppsInThisServer(context) {
       let mapped = dependencyMap;
       const cResult = require("c").c(24);
       context = context.context;
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = require("initialize").useStateFromStores(tmp8, tmp9);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { commandTypes: null };
-        const items1 = [tmp(1985).ApplicationCommandType.CHAT, tmp(1985).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+        const items1 = [tmp(1997).ApplicationCommandType.CHAT, tmp(1997).ApplicationCommandType.PRIMARY_ENTRY_POINT];
         obj2.commandTypes = items1;
         const obj3 = { placeholderCount: 0, limit, includeFrecency: true };
         cResult[2] = obj2;
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const sortApplicationsViaFrecency = tmp(11759).useSortApplicationsViaFrecency(tmp29);
+          const sortApplicationsViaFrecency = tmp(11825).useSortApplicationsViaFrecency(tmp29);
           if (cResult[14] === stateFromStores) {
             class I {
               constructor(arg0, arg1) {
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const tmpResult2 = tmp(11759);
+          const tmpResult2 = tmp(11825);
           const obj8 = stateFromStores(12);
           const found = stateFromStores(12).compact(sortApplicationsViaFrecency.map(R)).filter(tmp32);
           mapped = found.map(E);
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = F;
       }
     }
-  : (context) => {
+  : function useAppsInThisServer(context) {
       context = context.context;
       _require = undefined;
       let stateFromStores;

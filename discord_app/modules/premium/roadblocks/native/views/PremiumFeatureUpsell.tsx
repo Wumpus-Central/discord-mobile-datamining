@@ -7,10 +7,10 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05612_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05387_LinearGradient.js";
+import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import openPremiumUpsellActionSheetDefault from "../utils/openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
-import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import RTCConnectionStore from "../../../../../stores/RTCConnectionStore.tsx";
@@ -53,13 +53,13 @@ function getPremiumUpsellLabel(TIER_0, featureName, fn) {
 let closure_3 = ["shouldShow"];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ PremiumSubscriptionSKUs: closure_9, PremiumTypes: c10, PremiumUpsellTypes: closure_11 } = PremiumConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const Gradients = fn(6951).Gradients;
+const Gradients = fn(7140).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_17 = createStyles.createStyles((arg0) => {
   const obj = {
     container: {
@@ -114,7 +114,7 @@ let closure_17 = createStyles.createStyles((arg0) => {
 });
 let ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (featureName) => {
+  ? function PremiumFeatureUpsellPill(featureName) {
       const cResult = featureName(useTier0UpsellContent[14]).c(50);
       featureName = featureName.featureName;
       const analyticsLocation = featureName.analyticsLocation;
@@ -425,7 +425,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = fn;
       const tmpResult5 = featureName(useTier0UpsellContent[16]);
     }
-  : (featureName) => {
+  : function PremiumFeatureUpsellPill(featureName) {
       featureName = featureName.featureName;
       ({ analyticsLocation: importDefault, showShadow } = featureName);
       if (showShadow === undefined) {
@@ -571,18 +571,18 @@ function animationEnterExit(value, cleanUp) {
   obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
   return obj;
 }
-animationEnterExit.__closure = { withSpring: fn(5604).withSpring, springStandard: fn(5605).springStandard };
+animationEnterExit.__closure = { withSpring: fn(5374).withSpring, springStandard: fn(5378).springStandard };
 animationEnterExit.__workletHash = 15470414797897;
 animationEnterExit.__initData = {
   code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}",
 };
 ReactCompilerGating = fn(558);
-let obj3 = { withSpring: fn(5604).withSpring, springStandard: fn(5605).springStandard };
+let obj3 = { withSpring: fn(5374).withSpring, springStandard: fn(5378).springStandard };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (shouldShow) => {
+  ? function PremiumFeatureUpsell(shouldShow) {
       const cResult = require("c").c(12);
       if (cResult[0] !== shouldShow) {
         shouldShow = shouldShow.shouldShow;
@@ -702,7 +702,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = items;
       const tmpResult = require("analytics");
     }
-  : (shouldShow) => {
+  : function PremiumFeatureUpsell(shouldShow) {
       let merged = Object.assign(shouldShow, Object.assign({ shouldShow: 0 }));
       let analyticsLocations;
       const ref = noop.useRef(false);

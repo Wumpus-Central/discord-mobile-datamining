@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import util from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import _modDef4467 from "../../../_runtime/metro/04467__.js";
+import _modDef4659 from "../../../_runtime/metro/04659__.js";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import NotificationSettingsUtils from "../../utils/NotificationSettingsUtils.tsx";
 import threads_getTimestampStringDefault from "getTimestampString.tsx";
@@ -115,7 +115,7 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
   }
 };
 export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id) => {
+  ? function useLastMessageTimestamp(id) {
       _require = id;
       const cResult = require("c").c(11);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -156,8 +156,8 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
       if (cResult[5] !== createTimestamp) {
         let valueOfResult = null;
         if (null != createTimestamp) {
-          valueOfResult = _modDef4467(createTimestamp).valueOf();
-          const obj4 = _modDef4467(createTimestamp);
+          valueOfResult = _modDef4659(createTimestamp).valueOf();
+          const obj4 = _modDef4659(createTimestamp);
         }
         cResult[5] = createTimestamp;
         cResult[6] = valueOfResult;
@@ -187,7 +187,7 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
       tmp15 = extractTimestampResult1;
       const tmpResult = require("initialize");
     }
-  : (threadMetadata) => {
+  : function useLastMessageTimestamp(threadMetadata) {
       _require = threadMetadata;
       const items = [ReadStateStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () =>
@@ -204,8 +204,8 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
       }
       let valueOfResult = null;
       if (null != createTimestamp) {
-        valueOfResult = _modDef4467(createTimestamp).valueOf();
-        const obj3 = _modDef4467(createTimestamp);
+        valueOfResult = _modDef4659(createTimestamp).valueOf();
+        const obj3 = _modDef4659(createTimestamp);
       }
       if (extractTimestampResult == null) {
         extractTimestampResult = valueOfResult;

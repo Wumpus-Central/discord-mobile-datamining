@@ -11,11 +11,11 @@ require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useBuildOverrideActive() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [BuildOverrideStore];
-        const fn = function l() {
+        const fn = function u() {
           const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
           let id;
           if (overrides != null) {
@@ -35,7 +35,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useBuildOverrideActive() {
       const items = [BuildOverrideStore];
       return initialize.useStateFromStores(items, () => {
         const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
@@ -52,19 +52,19 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
 fn(558);
 ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useHasBuildOverrideActive() {
       const staffOrDeveloperSettingPredicate =
         useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
       return null != closure_4() && staffOrDeveloperSettingPredicate;
     }
-  : () => {
+  : function useHasBuildOverrideActive() {
       const staffOrDeveloperSettingPredicate =
         useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
       return null != closure_4() && staffOrDeveloperSettingPredicate;
     };
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useBuildOverrideActiveDescription() {
       const cResult = c.c(2);
       const tmp4 = closure_4();
       if (cResult[0] !== tmp4) {
@@ -81,7 +81,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     }
-  : () => {
+  : function useBuildOverrideActiveDescription() {
       const tmp = closure_4();
       let tmp2;
       if (null != tmp) {
@@ -95,9 +95,9 @@ const pressable = SettingBuilders.createPressable({
     return "Build Override Active";
   },
   parent: null,
-  IconComponent: fn(14794).RefreshIcon,
+  IconComponent: fn(15055).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function useBuildOverrideActiveDescription() {
         const cResult = c.c(2);
         const tmp4 = closure_4();
         if (cResult[0] !== tmp4) {
@@ -114,7 +114,7 @@ const pressable = SettingBuilders.createPressable({
         }
         return tmp5;
       }
-    : () => {
+    : function useBuildOverrideActiveDescription() {
         const tmp = closure_4();
         let tmp2;
         if (null != tmp) {

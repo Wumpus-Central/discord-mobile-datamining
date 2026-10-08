@@ -14,11 +14,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire, StyleSheet } = get_ActivityIndicator);
-let getColorPresetsForEffect = fn(1395).getColorPresetsForEffect;
+let getColorPresetsForEffect = fn(1407).getColorPresetsForEffect;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: {
@@ -52,7 +52,7 @@ const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj7.alignItems = "center";
 obj7.justifyContent = "center";
 obj2.checkmarkOverlay = obj7;
-const size1 = { width: fn(15186).CHECKMARK_SIZE, height: fn(15186).CHECKMARK_SIZE };
+const size1 = { width: fn(15448).CHECKMARK_SIZE, height: fn(15448).CHECKMARK_SIZE };
 obj2.checkmark = size1;
 let obj6 = { borderColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND };
 obj2.buttonsContainer = { alignSelf: "stretch", flexDirection: "row", gap: nativeDefault.space.PX_16 };
@@ -64,7 +64,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesColorPickerSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (selectedColor) => {
+  ? function DisplayNameStylesColorPickerSheet(selectedColor) {
       const cResult = selectedColor(onSelectColor[11]).c(68);
       selectedColor = selectedColor.selectedColor;
       const selectedEffectId = selectedColor.selectedEffectId;
@@ -189,19 +189,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[11] = onSelectColor;
             cResult[12] = tmp19;
           }
-          class D {
-            constructor() {
-              obj = closure_0(closure_2[15]);
-              result = obj.triggerHapticFeedback(closure_0(closure_2[15]).HapticFeedbackTypes.IMPACT_LIGHT);
-              tmp2 = onSelectColor(closure_4[0]);
-              obj2 = closure_1(closure_2[16]);
-              hideActionSheetResult = obj2.hideActionSheet();
-              return;
-            }
-          }
+          const fn2 = function x() {
+            const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
+            onSelectColor(32);
+            ActionSheetActionCreatorsDefault.hideActionSheet();
+          };
           cResult[7] = tmp3[0];
           cResult[8] = onSelectColor;
-          cResult[9] = D;
+          cResult[9] = fn2;
         }
         class I {
           constructor() {
@@ -216,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj2 = selectedColor(onSelectColor[12]);
     }
-  : (selectedColor) => {
+  : function DisplayNameStylesColorPickerSheet(selectedColor) {
       selectedColor = selectedColor.selectedColor;
       const selectedEffectId = selectedColor.selectedEffectId;
       const onSelectColor = selectedColor.onSelectColor;

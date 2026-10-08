@@ -139,7 +139,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding/useBatchUpdateSelectOption.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId) => {
+  ? function useBatchUpdateSelectOption(guildId) {
       _require = guildId;
       const cResult = require("c").c(15);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== guildId) {
-        const fn = function u() {
+        const fn = function f() {
           let pendingResponseOptions = GuildOnboardingPromptsStore.getPendingResponseOptions(closure_0);
           if (pendingResponseOptions == null) {
             pendingResponseOptions = closure_9;
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const effect1 = noop.useEffect(tmp12, tmp13);
         if (cResult[11] !== guildId) {
-          const fn3 = function v(prompt, option, selected) {
+          const fn4 = function v(prompt, option, selected) {
             const onboardingResponses = GuildOnboardingPromptsStore.getOnboardingResponses(guildId);
             ({ addedRoleIds, removedRoleIds } = getRoles(prompt, option, selected, onboardingResponses));
             let obj = { guildId, prompt, option, selected, responses: onboardingResponses };
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               addedChannelIds.reduce((acc, item) => {
                 const obj = { flags: null };
                 const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-                obj.flags = closure_0(1390).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
+                obj.flags = closure_0(1402).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
                 acc[item] = obj;
                 return acc;
               }, {}),
@@ -219,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               removedChannelIds.reduce((acc, item) => {
                 const obj = { flags: null };
                 const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-                obj.flags = closure_0(1390).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
+                obj.flags = closure_0(1402).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
                 acc[item] = obj;
                 return acc;
               }, {}),
@@ -232,8 +232,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             GuildOnboardingActionCreatorsDefault.updateRolesLocal(guildId, addedRoleIds, removedRoleIds);
           };
           cResult[11] = guildId;
-          cResult[12] = fn3;
-          let tmp15 = fn3;
+          cResult[12] = fn4;
+          let tmp15 = fn4;
         } else {
           tmp15 = cResult[12];
         }
@@ -247,35 +247,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp16;
       }
-      class N {
-        constructor() {
-          tmp2 = null != closure_1;
-          if (tmp2) {
-            tmp3 = globalThis;
-            _Object = Object;
-            num = 0;
-            tmp2 = 0 !== Object.keys(tmp).length;
-          }
-          if (tmp2) {
-            tmp4 = closure_1;
-            tmp5 = closure_2;
-            obj = closure_1(closure_2[11]);
-            tmp6 = closure_0;
-            result = obj.updateOnboardingResponses(closure_0);
-          }
-          return;
+      const fn3 = function _() {
+        let tmp2 = null != stateFromStores;
+        if (tmp2) {
+          const _Object = Object;
+          tmp2 = 0 !== Object.keys(tmp).length;
         }
-      }
+        if (tmp2) {
+          const result = GuildOnboardingActionCreatorsDefault.updateOnboardingResponses(closure_0);
+        }
+      };
       const items3 = [guildId, stateFromStores];
       cResult[7] = guildId;
       cResult[8] = stateFromStores;
-      cResult[9] = N;
+      cResult[9] = fn3;
       cResult[10] = items3;
       tmp13 = items3;
-      tmp12 = N;
+      tmp12 = fn3;
       const tmpResult = require("initialize");
     }
-  : (guildId) => {
+  : function useBatchUpdateSelectOption(guildId) {
       _require = guildId;
       const items = [GuildOnboardingPromptsStore];
       const items1 = [guildId];
@@ -326,7 +317,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           addedChannelIds.reduce((acc, item) => {
             const obj = { flags: null };
             const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-            obj.flags = closure_0(1390).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
+            obj.flags = closure_0(1402).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
             acc[item] = obj;
             return acc;
           }, {}),
@@ -335,7 +326,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           removedChannelIds.reduce((acc, item) => {
             const obj = { flags: null };
             const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-            obj.flags = closure_0(1390).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
+            obj.flags = closure_0(1402).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
             acc[item] = obj;
             return acc;
           }, {}),

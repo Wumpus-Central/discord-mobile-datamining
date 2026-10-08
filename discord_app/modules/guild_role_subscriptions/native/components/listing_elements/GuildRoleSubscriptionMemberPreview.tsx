@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -48,7 +48,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const GuildRoleSubscriptionMemberPreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildRoleSubscriptionMemberPreview(arg0) {
       const cResult = c.c(42);
       ({ content, guildId, style, textStyle, role } = arg0);
       if (cResult[0] !== content) {
@@ -66,7 +66,7 @@ export const GuildRoleSubscriptionMemberPreview = ReactCompilerGating.isReactCom
       const tmp6 = closure_9();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function _() {
+        const fn = function p() {
           return currentUser.getCurrentUser();
         };
         cResult[2] = items;
@@ -268,7 +268,7 @@ export const GuildRoleSubscriptionMemberPreview = ReactCompilerGating.isReactCom
         const tmp10Result = AvatarUtilsDefault;
       }
     }
-  : (content) => {
+  : function GuildRoleSubscriptionMemberPreview(content) {
       content = content.content;
       if (content === undefined) {
         const intl = util.intl;

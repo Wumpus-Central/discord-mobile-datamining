@@ -17,7 +17,7 @@ let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/search/experiments/SearchResultsFeedbackExperiment.tsx");
 
 export const useIsSearchResultsFeedbackExperimentEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsSearchResultsFeedbackExperimentEnabled(location) {
       const cResult = c.c(2);
       const _location = location.location;
       if (cResult[0] !== _location) {
@@ -30,7 +30,9 @@ export const useIsSearchResultsFeedbackExperimentEnabled = ReactCompilerGating.i
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location: location.location }).enabled;
+  : function useIsSearchResultsFeedbackExperimentEnabled(location) {
+      return closure_2.useConfig({ location: location.location }).enabled;
+    };
 export const getIsSearchResultsFeedbackExperimentEnabled = function getIsSearchResultsFeedbackExperimentEnabled(
   location,
 ) {

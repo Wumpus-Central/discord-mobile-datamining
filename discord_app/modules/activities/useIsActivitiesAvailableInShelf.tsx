@@ -10,13 +10,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (guildId, arg1) => {
+  ? function useIsActivitiesAvailableInShelf(guildId, arg1) {
       _require = guildId;
       const cResult = require("c").c(8);
       let obj = require("c");
       const isActivitiesEnabledForCurrentPlatform =
         require("useIsActivitiesEnabledForCurrentPlatform").useIsActivitiesEnabledForCurrentPlatform();
-      const tmp3 = isActivitiesEnabledForCurrentPlatform(9117)(arg1);
+      const tmp3 = isActivitiesEnabledForCurrentPlatform(10690)(arg1);
       if (cResult[0] === guildId) {
         if (cResult[1] === tmp3) {
           let tmp4 = cResult[2];
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmp4;
           }
         }
-        const fn = function o() {
+        const fn = function v() {
           let tmp = closure_2;
           if (closure_2) {
             tmp = isActivitiesEnabledForCurrentPlatform;
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = tmp5;
       let obj2 = require("useIsActivitiesEnabledForCurrentPlatform");
     }
-  : (guildId, arg1) => {
+  : function useIsActivitiesAvailableInShelf(guildId, arg1) {
       _require = guildId;
       const isActivitiesEnabledForCurrentPlatform =
         require("useIsActivitiesEnabledForCurrentPlatform").useIsActivitiesEnabledForCurrentPlatform();

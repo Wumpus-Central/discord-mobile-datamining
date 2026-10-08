@@ -7,9 +7,9 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import openProductDetailsActionSheet from "openProductDetailsActionSheet.tsx";
-import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import CollectiblesAnalyticsContext from "../CollectiblesAnalyticsContext.tsx";
 import CollectiblesBadges from "CollectiblesBadges.tsx";
+import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import DiceIcon from "../../../design/components/Icon/native/redesign/generated/DiceIcon.tsx";
 import LimitedTimeBadgeDefault from "LimitedTimeBadge.tsx";
 import OrbsIcon from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
@@ -32,7 +32,7 @@ if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
 let c11 = 150;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   card: null,
   topRowOverlay: null,
@@ -87,7 +87,7 @@ obj.wishlistButton = { marginLeft: "auto", flexShrink: 0 };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (product) => {
+  ? function CollectiblesShopCardInternalV2(product) {
       const cResult = require("c").c(82);
       product = product.product;
       require = product;
@@ -211,7 +211,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = selectedProduct;
       const tmpResult8 = require("CollectiblesProductUtils");
     }
-  : (product) => {
+  : function CollectiblesShopCardInternalV2(product) {
       product = product.product;
       const require = product;
       ({ onPress: importDefault, unpublishedAt, collectibleProductState, isDisabled } = product);
@@ -451,7 +451,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (product) => {
+  ? function CollectiblesShopCardV2Inner(product) {
       const cResult = require("c").c(22);
       product = product.product;
       require = product;
@@ -627,7 +627,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = selectedProduct;
       const tmpResult14 = require("CollectiblesProductUtils");
     }
-  : (product) => {
+  : function CollectiblesShopCardV2Inner(product) {
       product = product.product;
       const require = product;
       let onPress = product.onPress;

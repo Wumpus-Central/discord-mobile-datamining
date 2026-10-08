@@ -1,6 +1,6 @@
 // discord_app/modules/messages/isMessagePinnable.tsx
-import ThreadHooks from "../threads/ThreadHooks.tsx";
 import isSystemMessageDefault from "isSystemMessage.tsx";
+import ThreadHooks from "../threads/ThreadHooks.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;

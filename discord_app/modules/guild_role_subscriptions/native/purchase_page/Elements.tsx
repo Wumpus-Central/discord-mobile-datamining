@@ -8,7 +8,7 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import NativePaymentHooksDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef16538 from "../../../../../_runtime/metro/16538__.js";
+import _modDef16793 from "../../../../../_runtime/metro/16793__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_8, View: closure_9 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   toggleTruncateButton: {
     alignSelf: "flex-start",
@@ -63,7 +63,7 @@ fn(558);
 const obj5 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (lineClamp) => {
+  ? function TruncatedText(lineClamp) {
       const cResult = c.c(20);
       if (cResult[0] !== lineClamp) {
         lineClamp = lineClamp.lineClamp;
@@ -86,15 +86,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       [first, dependencyMap] = noop.useState(false);
       ref = noop.useRef(false);
       if (cResult[3] !== first) {
-        const fn = function f() {
+        function handleToggle() {
           let tmp = first;
           if (first) {
             tmp = importDefault((arg0) => !arg0);
           }
           return tmp;
-        };
+        }
         cResult[3] = first;
-        cResult[4] = fn;
+        cResult[4] = handleToggle;
       }
       if (cResult[5] === tmp11) {
         if (cResult[6] === first) {
@@ -232,7 +232,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp10 = _slicedToArray(noop.useState(false), 2);
     }
-  : (lineClamp) => {
+  : function TruncatedText(lineClamp) {
       let num = lineClamp.lineClamp;
       if (num === undefined) {
         num = 8;
@@ -247,7 +247,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       noop.useRef(false);
       if (!first) {
         const obj2 = {
-          onPress() {
+          onPress: function handleToggle() {
             let tmp = first;
             if (first) {
               tmp = _undefined((arg0) => !arg0);
@@ -300,7 +300,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ArrowButton(arg0) {
       const cResult = c.c(10);
       ({ text, onPress } = arg0);
       const tmp4 = closure_13();
@@ -309,7 +309,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp5 = cResult[2];
         }
         if (cResult[3] !== tmp4.arrowButtonIcon) {
-          const obj2 = { size: native.Icon.Sizes.SMALL, source: _modDef16538, style: tmp4.arrowButtonIcon };
+          const obj2 = { size: native.Icon.Sizes.SMALL, source: _modDef16793, style: tmp4.arrowButtonIcon };
           const tmp10 = closure_1_11(native.Icon, obj2);
           cResult[3] = tmp4.arrowButtonIcon;
           cResult[4] = tmp10;
@@ -350,7 +350,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp6;
       const obj4 = { variant: "text-md/semibold", color: "text-default", style: tmp4.arrowButtonText, children: text };
     }
-  : (arg0) => {
+  : function ArrowButton(arg0) {
       ({ text, onPress } = arg0);
       const tmp = closure_13();
       const obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
@@ -361,7 +361,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.arrowButtonText,
           children: text,
         }),
-        closure_1_11(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16538, style: tmp.arrowButtonIcon }),
+        closure_1_11(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16793, style: tmp.arrowButtonIcon }),
       ];
       obj.children = items;
       return __initData(Pressables.PressableOpacity, obj);
@@ -372,7 +372,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 export const TruncatedText = tmp4;
 export const ArrowButton = tmp5;
 export const useFormattedSubscriptionPlan = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFormattedSubscriptionPlan(arg0) {
       let amount = first;
       let concat = first(576).c(6);
       const obj = first(576);
@@ -409,18 +409,18 @@ export const useFormattedSubscriptionPlan = ReactCompilerGating.isReactCompilerE
           str2 = "";
           const combined = concat(tmp8, "/mo.");
         }
-        const formatPriceResult = amount(6750).formatPrice(currency.amount, currency.currency);
+        const formatPriceResult = amount(6926).formatPrice(currency.amount, currency.currency);
         amount = currency.amount;
         concat[3] = amount;
         currency = currency.currency;
         concat[4] = currency;
         concat[5] = formatPriceResult;
         tmp8 = formatPriceResult;
-        const amountResult1 = amount(6750);
+        const amountResult1 = amount(6926);
       }
       const amountResult = amount(573);
     }
-  : (arg0) => {
+  : function useFormattedSubscriptionPlan(arg0) {
       const mobileStoreFront = NativePaymentHooksDefault.useMobileStoreFront();
       _require = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useSubscriptionPlan(arg0), 1)[0];
       const tmp3 = _require;
@@ -432,8 +432,8 @@ export const useFormattedSubscriptionPlan = ReactCompilerGating.isReactCompilerE
       let str = "No Price Available";
       if (null != price) {
         const _HermesInternal = HermesInternal;
-        str = "" + tmp3(6750).formatPrice(price.amount, price.currency) + "/mo.";
-        const tmp3Result = tmp3(6750);
+        str = "" + tmp3(6926).formatPrice(price.amount, price.currency) + "/mo.";
+        const tmp3Result = tmp3(6926);
       }
       return str;
     };

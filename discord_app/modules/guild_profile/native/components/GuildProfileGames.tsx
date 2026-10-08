@@ -1,7 +1,7 @@
 // discord_app/modules/guild_profile/native/components/GuildProfileGames.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GameProfileAnalyticUtils from "../../../game_profile/GameProfileAnalyticUtils.tsx";
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { display: "flex", flexDirection: "row", gap: 8 },
   favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 },
@@ -37,7 +37,7 @@ obj2.lastItemText = { display: "flex", justifyContent: "center", alignItems: "ce
 const styles = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ClickableGameIcon(arg0) {
       const cResult = c.c(12);
       ({ style, game } = arg0);
       ({ activityLevel, onPressFallback } = arg0);
@@ -93,7 +93,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp6;
       cResult[6] = fn;
     }
-  : (game) => {
+  : function ClickableGameIcon(game) {
       game = game.game;
       const onPressFallback = game.onPressFallback;
       ({ style, activityLevel } = game);
@@ -119,7 +119,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function FavoriteGame(arg0) {
       const cResult = c.c(9);
       ({ game, activityLevel } = arg0);
       const tmp4 = styles();
@@ -160,7 +160,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp6;
       tmp5 = tmp6;
     }
-  : (activityLevel) => {
+  : function FavoriteGame(activityLevel) {
       const game = activityLevel.game;
       const obj = { style: styles().favoriteGame, children: null };
       const items = [

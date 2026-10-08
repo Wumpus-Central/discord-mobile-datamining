@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { screenContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, header: { alignItems: "center", marginTop: 8, marginBottom: 32, gap: 12 }, divider: null };
 let size = { height: 1, width: 48, backgroundColor: nativeDefault.colors.BORDER_STRONG };
 obj2.divider = size;
@@ -20,7 +20,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/integration_settings/native/IntegrationsSettingsEditLinkedLobby.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditLinkedLobby(channel) {
   const cResult = channel(navigation[7]).c(47);
   channel = channel.channel;
   const numScreensToPop = channel.numScreensToPop;
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                 const obj7 = { source: tmp34, size: tmp(tmp2[20]).AvatarSizes.XXLARGE };
                 const tmp38 = closure_6(tmp(tmp2[20]).Avatar, obj7);
                 cResult[20] = tmp34;
-                class I {
+                class E {
                   constructor() {
                     if (null != closure_4) {
                       tmp2 = closure_1;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                 const obj8 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: getOrFetchApplication.name };
                 cResult[22] = getOrFetchApplication.name;
                 cResult[23] = closure_6(tmp(tmp2[18]).Text, obj8);
-                class I {
+                class E {
                   constructor() {
                     if (null != closure_4) {
                       tmp2 = closure_1;
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                         const intl3 = tmp(tmp2[17]).intl;
                         const obj9 = { channelName: tmp11 };
                         cResult[32] = tmp11;
-                        class I {
+                        class E {
                           constructor() {
                             if (null != closure_4) {
                               tmp2 = closure_1;
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                         const obj10 = { variant: "text-sm/normal", color: "text-default", children: tmp52 };
                         cResult[34] = tmp52;
                         cResult[35] = closure_6(tmp(tmp2[18]).Text, obj10);
-                        class I {
+                        class E {
                           constructor() {
                             if (null != closure_4) {
                               tmp2 = closure_1;
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                         const obj12 = { label: tmp57, variant: "danger", onPress: tmp4ResultResult };
                         obj11.children = closure_6(tmp(tmp2[22]).TableRow, obj12);
                         const tmp61 = closure_6(tmp(tmp2[21]).TableRowGroup, obj11);
-                        class I {
+                        class E {
                           constructor() {
                             if (null != closure_4) {
                               tmp2 = closure_1;
@@ -273,7 +273,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                             }
                             const obj13 = { style: tmp6.screenContainer, contentContainerStyle: tmp31, children: tmp62 };
                             const tmp66 = closure_6(tmp(tmp2[24]).Form, obj13);
-                            class I {
+                            class E {
                               constructor() {
                                 if (null != closure_4) {
                                   tmp2 = closure_1;
@@ -296,7 +296,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                           }
                         }
                       }
-                      class I {
+                      class E {
                         constructor() {
                           if (null != closure_4) {
                             tmp2 = closure_1;
@@ -327,7 +327,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                 }
                 const obj15 = { style: tmp33, children: null };
                 const items2 = [tmp36, , ];
-                class I {
+                class E {
                   constructor() {
                     if (null != closure_4) {
                       tmp2 = closure_1;
@@ -358,7 +358,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                 const obj16 = { children: null };
                 { style: null }.style = tmp6.divider;
                 const items3 = [, ];
-                class I {
+                class E {
                   constructor() {
                     if (null != closure_4) {
                       tmp2 = closure_1;
@@ -381,7 +381,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                 const obj17 = { style: null };
               }
               cResult[24] = null;
-              class I {
+              class E {
                 constructor() {
                   if (null != closure_4) {
                     tmp2 = closure_1;
@@ -402,7 +402,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
               tmp42 = tmp43;
             }
             const obj19 = { id: null, icon: null };
-            class I {
+            class E {
               constructor() {
                 if (null != closure_4) {
                   tmp2 = closure_1;
@@ -444,7 +444,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
             const obj21 = { linkedAtDate: date };
             formatResult1 = intl.formatToPlainString(tmp(tmp2[17]).t.EyygeM, obj21);
           }
-          class I {
+          class E {
             constructor() {
               if (null != closure_4) {
                 tmp2 = closure_1;
@@ -467,7 +467,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         }
       }
     }
-    class I {
+    class E {
       constructor() {
         if (null != closure_4) {
           tmp2 = closure_1;
@@ -486,8 +486,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     cResult[6] = analyticsLocations;
     cResult[7] = channel.id;
     cResult[8] = stateFromStores;
-    cResult[9] = I;
-    tmp21 = I;
+    cResult[9] = E;
+    tmp21 = E;
     const tmp4Result = tmp4(tmp2[15]);
   }
   const fn2 = function f() {
@@ -498,7 +498,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[5] = fn2;
   tmp18 = fn2;
   const tmpResult = channel(navigation[14]);
-}) : ((channel) => {
+}) : (function EditLinkedLobby(channel) {
   channel = channel.channel;
   const numScreensToPop = channel.numScreensToPop;
   let navigation;

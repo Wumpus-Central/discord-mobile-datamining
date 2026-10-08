@@ -21,7 +21,7 @@ let result = size.fileFinishedImporting(
 
 export { getUserRowWithSubLabelHeight };
 export const useUserRowWithSubLabelHeight = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useUserRowWithSubLabelHeight(arg0) {
       const cResult = c.c(6);
       let num = 1;
       if (undefined !== arg0) {
@@ -60,7 +60,7 @@ export const useUserRowWithSubLabelHeight = ReactCompilerGating.isReactCompilerE
       tmp10 = tmp4ResultResult;
       const tmp4Result = roundToNearestPixelDefault;
     }
-  : () => {
+  : function useUserRowWithSubLabelHeight() {
       let num = arg0;
       if (arg0 === undefined) {
         num = 1;

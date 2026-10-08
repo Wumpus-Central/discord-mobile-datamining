@@ -14,18 +14,18 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ChannelDetailsStore = fn(7522);
+const ChannelDetailsStore = fn(9245);
 ({
   deleteChannelDetailsSearchState: closure_7,
   useChannelDetailsSearchActiveSource: closure_8,
   useIsChannelDetailsSearchActive: closure_9,
 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(10666);
+const ChannelDetailsConstants = fn(9581);
 ({ SPRING_CHANNEL_HEADER: c10, CHANNEL_DETAILS_TOP_MARGIN } = ChannelDetailsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   detailsContainer: null,
   information: null,
@@ -63,7 +63,7 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/det
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (channelId) => {
+    ? function ChannelDetails(channelId) {
         const cResult = channelId(onChannelDeleted[10]).c(67);
         channelId = channelId.channelId;
         const isSearchLocked = channelId.isSearchLocked;
@@ -240,7 +240,7 @@ export default noop.memo(
         tmp9 = D;
         const tmpResult = channelId(onChannelDeleted[11]);
       }
-    : (channelId) => {
+    : function ChannelDetails(channelId) {
         channelId = channelId.channelId;
         const isSearchLocked = channelId.isSearchLocked;
         ({ onBackPress, componentWidth, isShowing } = channelId);

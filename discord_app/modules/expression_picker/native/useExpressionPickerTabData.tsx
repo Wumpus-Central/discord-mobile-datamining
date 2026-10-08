@@ -4,14 +4,14 @@ import util from "../../../intl/index.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ExpressionPickerConstants = fn(1229);
+const ExpressionPickerConstants = fn(1241);
 ({ ExpressionPickerOrder: c3, ExpressionPickerViewType: closure_4 } = ExpressionPickerConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerTabData.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useExpressionPickerTabData(arg0) {
       const cResult = c.c(14);
       ({ expressionType, expressionPickerTabs } = arg0);
       if (cResult[0] !== expressionType) {
@@ -50,36 +50,53 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj2.STICKER = obj5;
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function u(order) {
-            return order.order;
-          };
-          cResult[5] = fn;
-          let tmp10 = fn;
+          class I {
+            constructor(arg0) {
+              return arg0.order;
+            }
+          }
+          cResult[5] = I;
         } else {
-          tmp10 = cResult[5];
+          class I {
+            constructor(arg0) {
+              return arg0.order;
+            }
+          }
         }
         const _Object = Object;
         const values = Object.values(obj2);
         const found = values.filter((show) => show.show);
-        const sorted = found.sort(tmp10);
+        const sorted = found.sort(I);
         const _Symbol2 = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn2 = function f(label) {
-            return label.label;
-          };
-          cResult[6] = fn2;
-          let tmp11 = fn2;
+          class S {
+            constructor(arg0) {
+              return arg0.label;
+            }
+          }
+          cResult[6] = S;
         } else {
-          tmp11 = cResult[6];
+          class S {
+            constructor(arg0) {
+              return arg0.label;
+            }
+          }
         }
-        const mapped = sorted.map(tmp11);
+        const mapped = sorted.map(S);
         cResult[2] = expressionPickerTabs;
         cResult[3] = sorted;
         cResult[4] = mapped;
       } else {
-        if (cResult[7] === cResult[3]) {
-          if (cResult[8] === tmp6) {
-            let tmp15 = cResult[9];
+        class S {
+          constructor(arg0) {
+            return arg0.label;
+          }
+        }
+        if (cResult[7] === tmp5) {
+          class S {
+            constructor(arg0) {
+              return arg0.label;
+            }
           }
           ({ expressionPickerTabsSorted, expressionPickerTabStrings } = tmp15);
           const viewType =
@@ -87,11 +104,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               ? expressionPickerTabsSorted[tmp4]
               : expressionPickerTabsSorted[0].viewType;
           if (cResult[10] === tmp4) {
-            if (cResult[11] === expressionPickerTabStrings) {
-              if (cResult[12] === viewType) {
-                let tmp16 = cResult[13];
+            class S {
+              constructor(arg0) {
+                return arg0.label;
               }
-              return tmp16;
             }
           }
           const obj6 = {
@@ -103,16 +119,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[11] = expressionPickerTabStrings;
           cResult[12] = viewType;
           cResult[13] = obj6;
-          tmp16 = obj6;
         }
-        const obj7 = { expressionPickerTabsSorted: cResult[3], expressionPickerTabStrings: cResult[4] };
-        cResult[7] = cResult[3];
+        const obj7 = { expressionPickerTabsSorted: tmp5, expressionPickerTabStrings: cResult[4] };
+        cResult[7] = tmp5;
         cResult[8] = cResult[4];
         cResult[9] = obj7;
         tmp15 = obj7;
       }
     }
-  : (arg0) => {
+  : function useExpressionPickerTabData(arg0) {
       ({ expressionType, expressionPickerTabs } = arg0);
       let num = 0;
       if (closure_3.indexOf(expressionType) >= 0) {

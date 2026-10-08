@@ -11,7 +11,7 @@ let closure_3 = ["header", "icon", "subtitle", "buttons"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   headerImage: {
     marginLeft: "auto",
@@ -43,7 +43,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MemberVerificationAlert(arg0) {
       const cResult = c.c(24);
       if (cResult[0] !== arg0) {
         ({ header, icon, subtitle, buttons } = arg0);
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp14;
       tmp13 = tmp14;
     }
-  : (arg0) => {
+  : function MemberVerificationAlert(arg0) {
       ({ icon, subtitle } = arg0);
       ({ header, buttons } = arg0);
       const merged = Object.assign(arg0, Object.assign({ header: 0, icon: 0, subtitle: 0, buttons: 0 }));

@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("design/components/Navigator/native/Na
 
 export const NavigatorScreen = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function NavigatorScreen(arg0) {
         const cResult = c.c(12);
         ({ screen, route, navigation, viewStyle } = arg0);
         const customNavbar = screen.customNavbar;
@@ -66,7 +66,7 @@ export const NavigatorScreen = noop.memo(
           cResult[1] = customNavbarResult;
         }
       }
-    : (arg0) => {
+    : function NavigatorScreen(arg0) {
         ({ screen, route } = arg0);
         const customNavbar = screen.customNavbar;
         ({ navigation, viewStyle } = arg0);

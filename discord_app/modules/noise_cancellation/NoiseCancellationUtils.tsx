@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/noise_cancellation/NoiseCance
 
 export { getNoiseCancellationDeferredToSystem };
 export const useNoiseCancellationDeferredToSystem = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useNoiseCancellationDeferredToSystem() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MediaEngineStore];
@@ -36,7 +36,7 @@ export const useNoiseCancellationDeferredToSystem = ReactCompilerGating.isReactC
       }
       return initialize.useStateFromStores(tmp4, tmp5);
     }
-  : () => {
+  : function useNoiseCancellationDeferredToSystem() {
       const items = [MediaEngineStore];
       return initialize.useStateFromStores(items, () => {
         systemMicrophoneMode = systemMicrophoneMode.getSystemMicrophoneMode();

@@ -566,70 +566,205 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      const cResult = require("c").c(16);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        class I {
-          constructor() {
-            return closure_1_6.getGuildId();
-          }
-        }
-        cResult[0] = I;
-      } else {
-        class I {
-          constructor() {
-            return closure_1_6.getGuildId();
-          }
-        }
-      }
-      const tmp6 = stateFromStores(5991)(I);
-      _require = tmp6;
-      if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        class I {
-          constructor() {
-            return closure_1_6.getGuildId();
-          }
-        }
-        const items = [GuildStore];
-        cResult[1] = items;
-        const tmp7 = items;
-      } else {
-        class I {
-          constructor() {
-            return closure_1_6.getGuildId();
-          }
-        }
-      }
-      if (cResult[2] !== tmp6) {
-        class I {
-          constructor() {
-            return closure_1_6.getGuildId();
-          }
-        }
-        cResult[2] = tmp6;
-        cResult[3] = tmp9;
-      } else {
-        class I {
-          constructor() {
-            return closure_1_6.getGuildId();
-          }
-        }
-      }
+  ? function GuildSettingsModal() {
+      const cResult = require("c").c(20);
       let obj = require("c");
-      stateFromStores = require("initialize").useStateFromStores(tmp7, tmp9);
-      if (cResult[4] === tmp6) {
-        class I {
-          constructor() {
-            return closure_1_6.getGuildId();
-          }
+      const tmp4 = stateFromStores;
+      ({ bottom, left, right } = stateFromStores(1630)());
+      if (cResult[0] === left) {
+        if (cResult[1] === right) {
+          let tmp6 = cResult[2];
         }
-        if (cResult[7] === stateFromStores) {
-          class I {
+        const _Symbol = Symbol;
+        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+          const fn = function p() {
+            return GuildSettingsStore.getGuildId();
+          };
+          cResult[3] = fn;
+          let tmp8 = fn;
+        } else {
+          tmp8 = cResult[3];
+        }
+        const tmp9 = tmp4(6174)(tmp8);
+        _require = tmp9;
+        const _Symbol2 = Symbol;
+        if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+          const items = [GuildStore];
+          cResult[4] = items;
+          let tmp10 = items;
+        } else {
+          tmp10 = cResult[4];
+        }
+        if (cResult[5] !== tmp9) {
+          class L {
             constructor() {
-              return closure_1_6.getGuildId();
+              return closure_5.getGuild(closure_0);
             }
           }
+          cResult[5] = tmp9;
+          cResult[6] = L;
+        } else {
           class L {
+            constructor() {
+              return closure_5.getGuild(closure_0);
+            }
+          }
+        }
+        stateFromStores = tmp(504).useStateFromStores(tmp10, L);
+        if (cResult[7] === tmp9) {
+          class L {
+            constructor() {
+              return closure_5.getGuild(closure_0);
+            }
+          }
+          if (cResult[10] === stateFromStores) {
+            class L {
+              constructor() {
+                return closure_5.getGuild(closure_0);
+              }
+            }
+            class M {
+              constructor() {
+                tmp = null != closure_0;
+                if (tmp) {
+                  tmp2 = closure_1;
+                  tmp = null != closure_1;
+                }
+                if (!tmp) {
+                  tmp3 = closure_1;
+                  tmp4 = closure_2;
+                  obj = closure_1(closure_2[7]);
+                  closeResult = obj.close();
+                }
+                return;
+              }
+            }
+            const _Symbol3 = Symbol;
+            if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
+              class A {
+                constructor() {
+                  return closure_1_6.getSavedRouteState();
+                }
+              }
+              class M {
+                constructor() {
+                  tmp = null != closure_0;
+                  if (tmp) {
+                    tmp2 = closure_1;
+                    tmp = null != closure_1;
+                  }
+                  if (!tmp) {
+                    tmp3 = closure_1;
+                    tmp4 = closure_2;
+                    obj = closure_1(closure_2[7]);
+                    closeResult = obj.close();
+                  }
+                  return;
+                }
+              }
+            } else {
+              class A {
+                constructor() {
+                  return closure_1_6.getSavedRouteState();
+                }
+              }
+            }
+            const first = _slicedToArray(noop.useState(A), 1)[0];
+            const _Symbol4 = Symbol;
+            if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
+              class A {
+                constructor() {
+                  return closure_1_6.getSavedRouteState();
+                }
+              }
+              class M {
+                constructor() {
+                  tmp = null != closure_0;
+                  if (tmp) {
+                    tmp2 = closure_1;
+                    tmp = null != closure_1;
+                  }
+                  if (!tmp) {
+                    tmp3 = closure_1;
+                    tmp4 = closure_2;
+                    obj = closure_1(closure_2[7]);
+                    closeResult = obj.close();
+                  }
+                  return;
+                }
+              }
+            } else {
+              class A {
+                constructor() {
+                  return closure_1_6.getSavedRouteState();
+                }
+              }
+            }
+            if (cResult[16] === first) {
+              class A {
+                constructor() {
+                  return closure_1_6.getSavedRouteState();
+                }
+              }
+            }
+            let tmp27Result = null;
+            if (null != tmp14) {
+              class A {
+                constructor() {
+                  return closure_1_6.getSavedRouteState();
+                }
+              }
+              const obj2 = {
+                onWillFocus: null,
+                initialRouteName: null,
+                initialRouteState: null,
+                screens: null,
+                viewStyle: null,
+              };
+              class M {
+                constructor() {
+                  tmp = null != closure_0;
+                  if (tmp) {
+                    tmp2 = closure_1;
+                    tmp = null != closure_1;
+                  }
+                  if (!tmp) {
+                    tmp3 = closure_1;
+                    tmp4 = closure_2;
+                    obj = closure_1(closure_2[7]);
+                    closeResult = obj.close();
+                  }
+                  return;
+                }
+              }
+              let LANDING;
+              if (null == first) {
+                class A {
+                  constructor() {
+                    return closure_1_6.getSavedRouteState();
+                  }
+                }
+                LANDING = constants.LANDING;
+              }
+              obj2.initialRouteName = LANDING;
+              if (null != first) {
+                class A {
+                  constructor() {
+                    return closure_1_6.getSavedRouteState();
+                  }
+                }
+              }
+              obj2.initialRouteState = undefined;
+              obj2.screens = tmp14;
+              obj2.viewStyle = tmp6;
+              tmp27Result = tmp27(tmp(6679).Navigator, obj2);
+            }
+            cResult[16] = first;
+            cResult[17] = tmp6;
+            cResult[18] = tmp14;
+            cResult[19] = tmp27Result;
+          }
+          class M {
             constructor() {
               tmp = null != closure_0;
               if (tmp) {
@@ -645,244 +780,111 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const _Symbol = Symbol;
-          if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-            class O {
-              constructor() {
-                return closure_1_6.getSavedRouteState();
-              }
-            }
-            class L {
-              constructor() {
-                tmp = null != closure_0;
-                if (tmp) {
-                  tmp2 = closure_1;
-                  tmp = null != closure_1;
-                }
-                if (!tmp) {
-                  tmp3 = closure_1;
-                  tmp4 = closure_2;
-                  obj = closure_1(closure_2[7]);
-                  closeResult = obj.close();
-                }
-                return;
-              }
-            }
-          } else {
-            class O {
-              constructor() {
-                return closure_1_6.getSavedRouteState();
-              }
-            }
-          }
-          const first = _slicedToArray(noop.useState(O), 1)[0];
-          const _Symbol2 = Symbol;
-          if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            class D {
-              constructor(arg0) {
-                navigation = arg0.navigation;
-                obj = closure_1(closure_1_2[7]);
-                saveRouteStackResult = obj.saveRouteStack(navigation.getState());
-                return;
-              }
-            }
-            class L {
-              constructor() {
-                tmp = null != closure_0;
-                if (tmp) {
-                  tmp2 = closure_1;
-                  tmp = null != closure_1;
-                }
-                if (!tmp) {
-                  tmp3 = closure_1;
-                  tmp4 = closure_2;
-                  obj = closure_1(closure_2[7]);
-                  closeResult = obj.close();
-                }
-                return;
-              }
-            }
-          } else {
-            class D {
-              constructor(arg0) {
-                navigation = arg0.navigation;
-                obj = closure_1(closure_1_2[7]);
-                saveRouteStackResult = obj.saveRouteStack(navigation.getState());
-                return;
-              }
-            }
-          }
-          if (cResult[13] === first) {
-            class D {
-              constructor(arg0) {
-                navigation = arg0.navigation;
-                obj = closure_1(closure_1_2[7]);
-                saveRouteStackResult = obj.saveRouteStack(navigation.getState());
-                return;
-              }
-            }
-            return tmp19;
-          }
-          let tmp22Result = null;
-          if (null != tmp11) {
-            class D {
-              constructor(arg0) {
-                navigation = arg0.navigation;
-                obj = closure_1(closure_1_2[7]);
-                saveRouteStackResult = obj.saveRouteStack(navigation.getState());
-                return;
-              }
-            }
-            const obj2 = { onWillFocus: null, initialRouteName: null, initialRouteState: null, screens: null };
-            class L {
-              constructor() {
-                tmp = null != closure_0;
-                if (tmp) {
-                  tmp2 = closure_1;
-                  tmp = null != closure_1;
-                }
-                if (!tmp) {
-                  tmp3 = closure_1;
-                  tmp4 = closure_2;
-                  obj = closure_1(closure_2[7]);
-                  closeResult = obj.close();
-                }
-                return;
-              }
-            }
-            let LANDING;
-            if (null == first) {
-              class D {
-                constructor(arg0) {
-                  navigation = arg0.navigation;
-                  obj = closure_1(closure_1_2[7]);
-                  saveRouteStackResult = obj.saveRouteStack(navigation.getState());
-                  return;
-                }
-              }
-              LANDING = constants.LANDING;
-            }
-            obj2.initialRouteName = LANDING;
-            if (null != first) {
-              class D {
-                constructor(arg0) {
-                  navigation = arg0.navigation;
-                  obj = closure_1(closure_1_2[7]);
-                  saveRouteStackResult = obj.saveRouteStack(navigation.getState());
-                  return;
-                }
-              }
-            }
-            obj2.initialRouteState = undefined;
-            obj2.screens = tmp11;
-            tmp22Result = tmp22(tmp(6503).Navigator, obj2);
-          }
-          cResult[13] = first;
-          cResult[14] = tmp11;
-          cResult[15] = tmp22Result;
-          tmp19 = tmp22Result;
+          const items1 = [stateFromStores, tmp9];
+          cResult[10] = stateFromStores;
+          cResult[11] = tmp9;
+          cResult[12] = M;
+          cResult[13] = items1;
         }
-        class L {
-          constructor() {
-            tmp = null != closure_0;
-            if (tmp) {
-              tmp2 = closure_1;
-              tmp = null != closure_1;
+        if (null != tmp9) {
+          class A {
+            constructor() {
+              return closure_1_6.getSavedRouteState();
             }
-            if (!tmp) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              obj = closure_1(closure_2[7]);
-              closeResult = obj.close();
+          }
+          class M {
+            constructor() {
+              tmp = null != closure_0;
+              if (tmp) {
+                tmp2 = closure_1;
+                tmp = null != closure_1;
+              }
+              if (!tmp) {
+                tmp3 = closure_1;
+                tmp4 = closure_2;
+                obj = closure_1(closure_2[7]);
+                closeResult = obj.close();
+              }
+              return;
             }
-            return;
           }
         }
-        const items1 = [stateFromStores, tmp6];
-        cResult[7] = stateFromStores;
-        cResult[8] = tmp6;
-        cResult[9] = L;
-        cResult[10] = items1;
+        cResult[7] = tmp9;
+        cResult[8] = bottom;
+        cResult[9] = undefined;
+        const tmpResult = tmp(504);
       }
-      if (null != tmp6) {
-        class D {
-          constructor(arg0) {
-            navigation = arg0.navigation;
-            obj = closure_1(closure_1_2[7]);
-            saveRouteStackResult = obj.saveRouteStack(navigation.getState());
-            return;
-          }
-        }
-        class L {
-          constructor() {
-            tmp = null != closure_0;
-            if (tmp) {
-              tmp2 = closure_1;
-              tmp = null != closure_1;
-            }
-            if (!tmp) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              obj = closure_1(closure_2[7]);
-              closeResult = obj.close();
-            }
-            return;
-          }
-        }
-      }
-      cResult[4] = tmp6;
-      cResult[5] = stateFromStores(1618)().bottom;
-      cResult[6] = undefined;
-      const tmpResult = require("initialize");
+      const rect = { left, right };
+      cResult[0] = left;
+      cResult[1] = right;
+      cResult[2] = rect;
+      tmp6 = rect;
+      const tmp5 = stateFromStores(1630)();
     }
-  : () => {
-      const bottom = require("useSafeAreaInsets")().bottom;
-      let tmp2 = require("useInitialValue")(() => GuildSettingsStore.getGuildId());
-      importDefault = tmp2;
-      const items = [GuildStore];
-      stateFromStores = bottom(stateFromStores[58]).useStateFromStores(items, () => GuildStore.getGuild(closure_1));
-      const items1 = [bottom, tmp2];
-      const memo = noop.useMemo(() => {
+  : function GuildSettingsModal() {
+      let rect = left(right[56])();
+      const bottom = rect.bottom;
+      left = rect.left;
+      right = rect.right;
+      const items = [left, right];
+      const memo = stateFromStores.useMemo(() => {
+        const rect = { left, right };
+        return rect;
+      }, items);
+      const tmp3 = left(right[57])(() => GuildSettingsStore.getGuildId());
+      _slicedToArray = tmp3;
+      const items1 = [GuildStore];
+      stateFromStores = bottom(right[58]).useStateFromStores(items1, () => GuildStore.getGuild(closure_3));
+      const items2 = [bottom, tmp3];
+      const memo1 = stateFromStores.useMemo(() => {
         let tmp2;
-        if (null != closure_1) {
+        if (null != closure_3) {
           tmp2 = getScreens(tmp, bottom);
         }
         return tmp2;
-      }, items1);
-      const items2 = [stateFromStores, tmp2];
-      const effect = noop.useEffect(() => {
-        let tmp = null != closure_1;
+      }, items2);
+      const items3 = [stateFromStores, tmp3];
+      const effect = stateFromStores.useEffect(() => {
+        let tmp = null != closure_3;
         if (tmp) {
           tmp = null != stateFromStores;
         }
         if (!tmp) {
           GuildSettingsActionCreatorsDefault.close();
         }
-      }, items2);
+      }, items3);
       const first = _slicedToArray(
-        noop.useState(() => GuildSettingsStore.getSavedRouteState()),
+        stateFromStores.useState(() => GuildSettingsStore.getSavedRouteState()),
         1,
       )[0];
-      let tmp10Result = null;
-      if (null != memo) {
-        const obj2 = { onWillFocus: tmp8, initialRouteName: null, initialRouteState: null, screens: null };
+      let tmp11Result = null;
+      if (null != memo1) {
+        const obj2 = {
+          onWillFocus: tmp9,
+          initialRouteName: null,
+          initialRouteState: null,
+          screens: null,
+          viewStyle: null,
+        };
         let LANDING;
         if (null == first) {
           LANDING = constants.LANDING;
         }
         obj2.initialRouteName = LANDING;
-        let tmp13;
+        let tmp14;
         if (null != first) {
-          tmp13 = first;
+          tmp14 = first;
         }
-        obj2.initialRouteState = tmp13;
-        obj2.screens = memo;
-        tmp10Result = jsx(bottom(stateFromStores[59]).Navigator, {
-          onWillFocus: tmp8,
+        obj2.initialRouteState = tmp14;
+        obj2.screens = memo1;
+        obj2.viewStyle = memo;
+        tmp11Result = jsx(bottom(right[59]).Navigator, {
+          onWillFocus: tmp9,
           initialRouteName: null,
           initialRouteState: null,
           screens: null,
+          viewStyle: null,
         });
       }
-      return tmp10Result;
+      return tmp11Result;
     };

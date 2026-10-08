@@ -14,16 +14,16 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const QuestDockMode = fn(5630).QuestDockMode;
+const QuestDockMode = fn(5977).QuestDockMode;
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useDismissSheetOrCollapseDock() {
       const cResult = setRestingQuestDockMode(576).c(3);
       setRestingQuestDockMode = noop.useContext(
-        setRestingQuestDockMode(14916).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(15178).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const isInQuestBottomSheet = noop.useContext(
-        setRestingQuestDockMode(14938).QuestBottomSheetContext,
+        setRestingQuestDockMode(15200).QuestBottomSheetContext,
       ).isInQuestBottomSheet;
       if (cResult[0] === isInQuestBottomSheet) {
         if (cResult[1] === setRestingQuestDockMode) {
@@ -43,12 +43,12 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = fn;
       tmp2 = fn;
     }
-  : () => {
+  : function useDismissSheetOrCollapseDock() {
       setRestingQuestDockMode = noop.useContext(
-        setRestingQuestDockMode(14916).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(15178).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const isInQuestBottomSheet = noop.useContext(
-        setRestingQuestDockMode(14938).QuestBottomSheetContext,
+        setRestingQuestDockMode(15200).QuestBottomSheetContext,
       ).isInQuestBottomSheet;
       const items = [isInQuestBottomSheet, setRestingQuestDockMode];
       return noop.useCallback(() => {
@@ -62,14 +62,14 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
 fn(558);
 ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (questId) => {
+  ? function useWatchTaskPressHandler(questId) {
       const cResult = questId(576).c(5);
       questId = questId.questId;
       const sourceQuestContent = questId.sourceQuestContent;
       const tmp2 = closure_6();
       dependencyMap = tmp2;
       let obj = questId(576);
-      const questImpression = questId(10929).useQuestImpression();
+      const questImpression = questId(10580).useQuestImpression();
       if (cResult[0] === tmp2) {
         if (cResult[1] === questImpression) {
           if (cResult[2] === questId) {
@@ -150,12 +150,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = fn;
       tmp4 = fn;
     }
-  : (questId) => {
+  : function useWatchTaskPressHandler(questId) {
       questId = questId.questId;
       const sourceQuestContent = questId.sourceQuestContent;
       const tmp = closure_6();
       dependencyMap = tmp;
-      const questImpression = questId(10929).useQuestImpression();
+      const questImpression = questId(10580).useQuestImpression();
       const items = [questId, tmp, questImpression, sourceQuestContent];
       return noop.useCallback(() => {
         closure_2();
@@ -226,7 +226,7 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestBottomSheet/
 
 export const useWatchTaskPressHandler = tmp2;
 export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompilerEnabled()
-  ? (questId) => {
+  ? function useMobileActivityPressHandler(questId) {
       const cResult = require("c").c(6);
       questId = questId.questId;
       _require = questId;
@@ -350,7 +350,7 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
           }
         }
       });
-      const fn = function () {
+      function t0() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -359,16 +359,16 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      };
+      }
       cResult[0] = tmp2;
       cResult[1] = questImpression;
       cResult[2] = launchMobileActivity;
       cResult[3] = questId;
       cResult[4] = sourceQuestContent;
-      cResult[5] = fn;
-      tmp4 = fn;
+      cResult[5] = t0;
+      tmp4 = t0;
     }
-  : (questId) => {
+  : function useMobileActivityPressHandler(questId) {
       questId = questId.questId;
       const sourceQuestContent = questId.sourceQuestContent;
       const launchMobileActivity = questId.launchMobileActivity;
@@ -419,17 +419,17 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
                 let captureAdUserAction = tmp4;
                 if (
                   obj12.shouldMigrateToAdAnalyticsInterface(
-                    tmp4(7237).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+                    tmp4(7416).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
                     "quest_bottom_sheet_mobile_activity",
                   )
                 ) {
-                  captureAdUserAction = captureAdUserAction(7226).captureAdUserAction;
+                  captureAdUserAction = captureAdUserAction(7405).captureAdUserAction;
                   const obj9 = {
-                    type: tmp4(7236).AdUserActionType.CLICK_INTERNAL,
-                    adCreativeType: tmp4(5637).AdCreativeType.QUEST,
+                    type: tmp4(7415).AdUserActionType.CLICK_INTERNAL,
+                    adCreativeType: tmp4(5984).AdCreativeType.QUEST,
                     adCreativeId: closure_128_0,
-                    questContentCTA: tmp4(7225).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
-                    surfaceId: tmp4(5633).QuestContent.QUEST_BOTTOM_SHEET,
+                    questContentCTA: tmp4(7404).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
+                    surfaceId: tmp4(5980).QuestContent.QUEST_BOTTOM_SHEET,
                     sourceQuestContent: closure_128_1,
                     impressionId: null,
                     questContentPosition: null,
@@ -445,12 +445,12 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
                   }
                   obj9.questContentPosition = questContentPosition;
                   captureAdUserAction(obj9);
-                  const captureAdUserActionResult = captureAdUserAction(7226);
+                  const captureAdUserActionResult = captureAdUserAction(7405);
                 } else {
                   const obj10 = {
                     questId: closure_128_0,
-                    questContent: tmp4(5633).QuestContent.QUEST_BOTTOM_SHEET,
-                    questContentCTA: tmp4(7225).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
+                    questContent: tmp4(5980).QuestContent.QUEST_BOTTOM_SHEET,
+                    questContentCTA: tmp4(7404).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
                     questContentPosition: null,
                     impressionId: null,
                     sourceQuestContent: null,
@@ -466,11 +466,11 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
                   }
                   obj10.impressionId = id1;
                   obj10.sourceQuestContent = closure_128_1;
-                  const result = captureAdUserAction(7215).trackQuestContentClicked(obj10);
-                  const captureAdUserActionResult2 = captureAdUserAction(7215);
+                  const result = captureAdUserAction(7395).trackQuestContentClicked(obj10);
+                  const captureAdUserActionResult2 = captureAdUserAction(7395);
                 }
                 dependencyMap = 3;
-                obj12 = tmp4(7237);
+                obj12 = tmp4(7416);
               }
             } catch (tmp36) {
               dependencyMap = tmp;

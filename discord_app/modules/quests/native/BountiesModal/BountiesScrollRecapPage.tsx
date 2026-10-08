@@ -11,9 +11,9 @@ import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidat
 import common_Video from "../../../../components_native/common/Video.tsx";
 import APNGPlayer from "../../../image/native/APNGPlayer.android.tsx";
 import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import _modDef14874 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.png.js";
-import _modDef14875 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.mov.js";
-import _modDef14876 from "../../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
+import _modDef15136 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.png.js";
+import _modDef15137 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.mov.js";
+import _modDef15138 from "../../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const lg = nativeDefault.radii.lg;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles(() => {
   const obj = {
     root: { overflow: "hidden", borderRadius: lg, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
@@ -86,12 +86,12 @@ let closure_9 = createStyles.createStyles(() => {
 });
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BountiesRecapOrbsBackground(arg0) {
       const cResult = c.c(9);
       ({ style, reducedMotion } = arg0);
       if (obj2.isAndroid()) {
         if (cResult[0] !== !reducedMotion) {
-          const obj3 = { url: _modDef14874, style: React3.absoluteFillObject, autoplay: tmp10 };
+          const obj3 = { url: _modDef15136, style: React3.absoluteFillObject, autoplay: tmp10 };
           const tmp15 = timestampProducer(APNGPlayer.APNGPlayer, obj3);
           cResult[0] = tmp10;
           cResult[1] = tmp15;
@@ -120,7 +120,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj5 = { uri: _modDef14875 };
+          const obj5 = { uri: _modDef15137 };
           cResult[5] = obj5;
           let tmp5 = obj5;
         } else {
@@ -149,7 +149,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2 = PlatformUtils;
     }
-  : (arg0) => {
+  : function BountiesRecapOrbsBackground(arg0) {
       ({ style, reducedMotion } = arg0);
       if (obj.isAndroid()) {
         const obj2 = {
@@ -159,7 +159,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           pointerEvents: "none",
           children: null,
         };
-        const obj3 = { url: _modDef14874, style: React3.absoluteFillObject, autoplay: !reducedMotion };
+        const obj3 = { url: _modDef15136, style: React3.absoluteFillObject, autoplay: !reducedMotion };
         obj2.children = timestampProducer(APNGPlayer.APNGPlayer, obj3);
         let tmp3Result = timestampProducer(React4, obj2);
       } else {
@@ -172,7 +172,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           preventsDisplaySleepDuringVideoPlayback: false,
           importantForAccessibility: "no-hide-descendants",
         };
-        const obj5 = { uri: _modDef14875 };
+        const obj5 = { uri: _modDef15137 };
         obj4.source = obj5;
         obj4.style = style;
         obj4.paused = reducedMotion;
@@ -185,7 +185,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollRecapPage.tsx");
 
 export const BountiesScrollRecapPage = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BountiesScrollRecapPage(arg0) {
       const cResult = c.c(55);
       ({ orbAmount, onClose, style } = arg0);
       const tmp4 = closure_9();
@@ -213,7 +213,7 @@ export const BountiesScrollRecapPage = ReactCompilerGating.isReactCompilerEnable
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { uri: _modDef14876 };
+          const obj3 = { uri: _modDef15138 };
           cResult[5] = obj3;
           let tmp13 = obj3;
         } else {
@@ -479,7 +479,7 @@ export const BountiesScrollRecapPage = ReactCompilerGating.isReactCompilerEnable
       tmp12 = items8;
       const tmpResult = initialize;
     }
-  : (orbAmount) => {
+  : function BountiesScrollRecapPage(orbAmount) {
       orbAmount = orbAmount.orbAmount;
       ({ onClose, style } = orbAmount);
       const tmp = closure_9();
@@ -503,7 +503,7 @@ export const BountiesScrollRecapPage = ReactCompilerGating.isReactCompilerEnable
         preventsDisplaySleepDuringVideoPlayback: false,
         importantForAccessibility: "no-hide-descendants",
       };
-      obj5.source = { uri: _modDef14876 };
+      obj5.source = { uri: _modDef15138 };
       obj5.style = React3.absoluteFillObject;
       obj5.paused = stateFromStores;
       const items2 = [
@@ -528,7 +528,7 @@ export const BountiesScrollRecapPage = ReactCompilerGating.isReactCompilerEnable
       };
       const obj12 = { style: tmp.titleRow, children: null };
       const items6 = [timestampProducer(OrbsIcon.OrbsIcon, { size: "lg", color: "icon-strong", accessible: false })];
-      const obj6 = { uri: _modDef14876 };
+      const obj6 = { uri: _modDef15138 };
       const obj7 = { style: tmp.orbsBackground, reducedMotion: stateFromStores };
       items6[1] = timestampProducer(Text_Text.Text, {
         variant: "display-lg",

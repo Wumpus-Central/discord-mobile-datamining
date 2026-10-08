@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -20,24 +20,24 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_invite/native/action_sheet/InviteSelectActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function InviteSelectActionSheet(arg0) {
       const cResult = onChange(576).c(15);
       ({ title, options, value, onChange } = arg0);
       const tmp4 = closure_4();
       if (cResult[0] !== onChange) {
-        const fn = function l(arg0) {
+        function handleChange(arg0) {
           onChange(arg0);
           ActionSheetActionCreatorsDefault.hideActionSheet();
-        };
+        }
         cResult[0] = onChange;
-        cResult[1] = fn;
-        let tmp5 = fn;
+        cResult[1] = handleChange;
+        let tmp5 = handleChange;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] !== title) {
         const obj2 = { title };
-        const tmp8 = jsx(onChange(6651).BottomSheetTitleHeader, { title });
+        const tmp8 = jsx(onChange(6828).BottomSheetTitleHeader, { title });
         cResult[2] = title;
         cResult[3] = tmp8;
         let tmp6 = tmp8;
@@ -47,15 +47,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] !== options) {
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn2 = function _(value) {
+          const fn = function _(value) {
             return jsx(
               onChange(dependencyMap[8]).TableRadioRow,
               { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel },
               "" + value.value,
             );
           };
-          cResult[6] = fn2;
-          let tmp11 = fn2;
+          cResult[6] = fn;
+          let tmp11 = fn;
         } else {
           tmp11 = cResult[6];
         }
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj3 = { contentStyles: tmp4.content, header: tmp6, children: tmp14 };
-            const tmp19 = jsx(onChange(6652).BottomSheet, {
+            const tmp19 = jsx(onChange(6829).BottomSheet, {
               contentStyles: tmp4.content,
               header: tmp6,
               children: tmp14,
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { value, onChange: tmp5, hasIcons: false, children: cResult[5] };
-        const tmp16 = jsx(onChange(6079).TableRadioGroup, {
+        const tmp16 = jsx(onChange(6265).TableRadioGroup, {
           value,
           onChange: tmp5,
           hasIcons: false,
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = onChange(576);
     }
-  : (arg0) => {
+  : function InviteSelectActionSheet(arg0) {
       ({ options, onChange: require } = arg0);
       ({ title, value } = arg0);
       const obj = {
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_4();
       obj.children = jsx(TableRadioGroup.TableRadioGroup, {
         value,
-        onChange(arg0) {
+        onChange: function handleChange(arg0) {
           require(arg0);
           ActionSheetActionCreatorsDefault.hideActionSheet();
         },

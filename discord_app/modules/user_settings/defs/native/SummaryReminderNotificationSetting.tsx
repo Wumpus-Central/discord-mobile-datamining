@@ -22,8 +22,10 @@ const toggle = SettingBuilders.createToggle({
   parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
   useValue: UserSettings.EnableSummaryReminderNotifications.useSetting,
   onValueChange: SummaryReminderNotificationUtils.onSummaryReminderNotificationSettingsChanged,
-  usePredicate: () =>
-    SummaryReminderNotificationExperiment.useSummaryReminderNotificationExperiment("tabsV2Settings").showSettingsToggle,
+  usePredicate: function useExperiment() {
+    return SummaryReminderNotificationExperiment.useSummaryReminderNotificationExperiment("tabsV2Settings")
+      .showSettingsToggle;
+  },
 });
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx");
 

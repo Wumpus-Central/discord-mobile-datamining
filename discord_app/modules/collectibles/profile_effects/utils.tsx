@@ -23,7 +23,7 @@ export const sortEffectLayers = function sortEffectLayers(effects) {
   });
 };
 export const usePotentiallyRandomizedProfileEffect = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function usePotentiallyRandomizedProfileEffect(arg0) {
       const cResult = c.c(2);
       [tmp6, tmp7] = noop.useState(arg0);
       if (cResult[0] !== arg0) {
@@ -127,7 +127,7 @@ export const usePotentiallyRandomizedProfileEffect = ReactCompilerGating.isReact
       }
       return tmp12;
     }
-  : (arg0) => {
+  : function usePotentiallyRandomizedProfileEffect(arg0) {
       closure_0 = undefined;
       let tmp6 = arg0;
       [tmp4, tmp5] = noop.useState(arg0);

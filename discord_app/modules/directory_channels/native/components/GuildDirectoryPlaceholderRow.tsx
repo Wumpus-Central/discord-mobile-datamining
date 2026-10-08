@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   row: { flexDirection: "row", padding: 16 },
   rowInner: { flex: 1 },
@@ -23,14 +23,14 @@ let size = {
   borderRadius: nativeDefault.radii.sm,
   overflow: "hidden",
   marginRight: 16,
-  backgroundColor: fn(5627).DARK_PRIMARY_500_LIGHT_PRIMARY_230,
+  backgroundColor: fn(5974).DARK_PRIMARY_500_LIGHT_PRIMARY_230,
 };
 obj.placeholderAvatar = size;
-obj.placeholderText = { height: 15, borderRadius: 5, backgroundColor: fn(5627).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
+obj.placeholderText = { height: 15, borderRadius: 5, backgroundColor: fn(5974).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
 obj.placeholderBody = { width: "100%", marginTop: 10 };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { height: 15, borderRadius: 5, backgroundColor: fn(5627).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
+let obj3 = { height: 15, borderRadius: 5, backgroundColor: fn(5974).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/directory_channels/native/components/GuildDirectoryPlaceholderRow.tsx",

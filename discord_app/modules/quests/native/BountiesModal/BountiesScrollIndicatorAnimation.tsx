@@ -9,14 +9,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles(() => ({ container: { width: 80, height: 80 } }));
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollIndicatorAnimation.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (visible) => {
+  ? function BountiesScrollIndicatorAnimation(visible) {
       const cResult = c.c(9);
       visible = visible.visible;
       const tmp4 = closure_7();
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = obj5;
       const tmp6 = _slicedToArray(noop.useState(0), 2);
     }
-  : (startAnimation) => {
+  : function BountiesScrollIndicatorAnimation(startAnimation) {
       const visible = startAnimation.visible;
       const tmp = closure_7();
       const token = useToken.useToken(nativeDefault.colors.TEXT_DEFAULT);

@@ -8,11 +8,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const useChannelCallStore = fn(9086).useChannelCallStore;
-const Constants = fn(9093);
+const useChannelCallStore = fn(10333).useChannelCallStore;
+const Constants = fn(10670);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_8 = createStyles.createStyles(obj2);
 let c9 = 200;
@@ -41,7 +41,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/GestureContainer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
+  ? function GestureContainer(children) {
       const cResult = height(576).c(10);
       children = children.children;
       const tmp4 = closure_8();
@@ -60,12 +60,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       let obj = height(576);
-      height = sharedValue(1484)().height;
+      height = sharedValue(1496)().height;
       const tmp6 = useChannelCallStore(S);
       const tmp7 = sharedValue;
-      sharedValue = height(4618).useSharedValue(0);
-      const Gesture = tmp(6147).Gesture;
-      const tmpResult = height(4618);
+      sharedValue = height(4810).useSharedValue(0);
+      const Gesture = tmp(6326).Gesture;
+      const tmpResult = height(4810);
       const PanResult = Gesture.Pan();
       class L {
         constructor(arg0) {
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       L.__initData = __initData2;
       const enabledResult = Gesture.Pan().enabled(tmp6);
       let obj2 = { THRESHOLD_TRANSLATE, position: sharedValue };
-      class C {
+      class O {
         constructor(arg0) {
           obj = closure_1;
           if (1 !== closure_1.get()) {
@@ -102,29 +102,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const onUpdateResult = Gesture.Pan().enabled(tmp6).onUpdate(L);
-      C.__closure = {
+      O.__closure = {
         position: sharedValue,
         THRESHOLD_VELOCITY,
-        runOnJS: height(4618).runOnJS,
-        ModalActionCreators: sharedValue(5099),
-        withTiming: height(4897).withTiming,
-        DECELERATED_EASING: height(1188).DECELERATED_EASING,
+        runOnJS: height(4810).runOnJS,
+        ModalActionCreators: sharedValue(5940),
+        withTiming: height(5091).withTiming,
+        DECELERATED_EASING: height(1200).DECELERATED_EASING,
       };
-      C.__workletHash = 4811943867759;
-      C.__initData = __initData;
+      O.__workletHash = 4811943867759;
+      O.__initData = __initData;
       let obj3 = {
         position: sharedValue,
         THRESHOLD_VELOCITY,
-        runOnJS: height(4618).runOnJS,
-        ModalActionCreators: sharedValue(5099),
-        withTiming: height(4897).withTiming,
-        DECELERATED_EASING: height(1188).DECELERATED_EASING,
+        runOnJS: height(4810).runOnJS,
+        ModalActionCreators: sharedValue(5940),
+        withTiming: height(5091).withTiming,
+        DECELERATED_EASING: height(1200).DECELERATED_EASING,
       };
       let items = [-closure_5, closure_5];
-      const onEndResult = onUpdateResult.onEnd(C);
+      const onEndResult = onUpdateResult.onEnd(O);
       let items1 = [-closure_6, closure_6];
-      const failOffsetXResult = onUpdateResult.onEnd(C).activeOffsetY(items).failOffsetX(items1);
-      const activeOffsetYResult = onUpdateResult.onEnd(C).activeOffsetY(items);
+      const failOffsetXResult = onUpdateResult.onEnd(O).activeOffsetY(items).failOffsetX(items1);
+      const activeOffsetYResult = onUpdateResult.onEnd(O).activeOffsetY(items);
       const fn = function f() {
         const obj = { flex: 1, transform: null };
         const obj2 = { translateY: null };
@@ -137,8 +137,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.transform = items1;
         return obj;
       };
-      const tmpResult2 = height(4618);
-      fn.__closure = { interpolate: height(4618).interpolate, position: sharedValue, height };
+      const tmpResult2 = height(4810);
+      fn.__closure = { interpolate: height(4810).interpolate, position: sharedValue, height };
       fn.__workletHash = 16049033434372;
       fn.__initData = __initData3;
       const animatedStyle = tmpResult2.useAnimatedStyle(fn);
@@ -170,25 +170,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp16 = tmp19;
         }
         const obj6 = { gesture: failOffsetXResult, children: tmp11 };
-        const tmp15 = jsx(tmp(6147).GestureDetector, { gesture: failOffsetXResult, children: tmp11 });
+        const tmp15 = jsx(tmp(6326).GestureDetector, { gesture: failOffsetXResult, children: tmp11 });
         cResult[4] = failOffsetXResult;
         cResult[5] = tmp11;
         cResult[6] = tmp15;
       }
-      const tmp12 = jsx(tmp7(4618).View, { style: animatedStyle, children });
+      const tmp12 = jsx(tmp7(4810).View, { style: animatedStyle, children });
       cResult[1] = animatedStyle;
       cResult[2] = children;
       cResult[3] = tmp12;
-      let obj4 = { interpolate: height(4618).interpolate, position: sharedValue, height };
+      let obj4 = { interpolate: height(4810).interpolate, position: sharedValue, height };
     }
-  : (children) => {
+  : function GestureContainer(children) {
       let sharedValue;
       const tmp = closure_8();
-      const height = sharedValue(1484)().height;
+      const height = sharedValue(1496)().height;
       const tmp2 = useChannelCallStore((isGestureEnabled) => isGestureEnabled.isGestureEnabled);
-      sharedValue = height(4618).useSharedValue(0);
-      const Gesture = height(6147).Gesture;
-      let obj = height(4618);
+      sharedValue = height(4810).useSharedValue(0);
+      const Gesture = height(6326).Gesture;
+      let obj = height(4810);
       const PanResult = Gesture.Pan();
       const fn = function h(translationY) {
         const result = sharedValue.set(1 - Math.pow(1 - Math.max(Math.min(translationY.translationY, c9), 0) / c9, 3));
@@ -225,20 +225,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       T.__closure = {
         position: sharedValue,
         THRESHOLD_VELOCITY,
-        runOnJS: height(4618).runOnJS,
-        ModalActionCreators: sharedValue(5099),
-        withTiming: height(4897).withTiming,
-        DECELERATED_EASING: height(1188).DECELERATED_EASING,
+        runOnJS: height(4810).runOnJS,
+        ModalActionCreators: sharedValue(5940),
+        withTiming: height(5091).withTiming,
+        DECELERATED_EASING: height(1200).DECELERATED_EASING,
       };
       T.__workletHash = 6850090802761;
       T.__initData = __initData4;
       let obj3 = {
         position: sharedValue,
         THRESHOLD_VELOCITY,
-        runOnJS: height(4618).runOnJS,
-        ModalActionCreators: sharedValue(5099),
-        withTiming: height(4897).withTiming,
-        DECELERATED_EASING: height(1188).DECELERATED_EASING,
+        runOnJS: height(4810).runOnJS,
+        ModalActionCreators: sharedValue(5940),
+        withTiming: height(5091).withTiming,
+        DECELERATED_EASING: height(1200).DECELERATED_EASING,
       };
       let items = [-closure_5, closure_5];
       const onEndResult = onUpdateResult.onEnd(T);
@@ -257,16 +257,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.transform = items1;
         return obj;
       };
-      const obj9 = height(4618);
-      fn2.__closure = { interpolate: height(4618).interpolate, position: sharedValue, height };
+      const obj9 = height(4810);
+      fn2.__closure = { interpolate: height(4810).interpolate, position: sharedValue, height };
       fn2.__workletHash = 15988962645633;
       fn2.__initData = __initData6;
       const obj5 = { style: tmp.background, children: null };
       const animatedStyle = obj9.useAnimatedStyle(fn2);
-      let obj4 = { interpolate: height(4618).interpolate, position: sharedValue, height };
-      obj5.children = jsx(height(6147).GestureDetector, {
+      let obj4 = { interpolate: height(4810).interpolate, position: sharedValue, height };
+      obj5.children = jsx(height(6326).GestureDetector, {
         gesture: failOffsetXResult,
-        children: jsx(sharedValue(4618).View, { style: animatedStyle, children: children.children }),
+        children: jsx(sharedValue(4810).View, { style: animatedStyle, children: children.children }),
       });
       return <View style={tmp.background}>{null}</View>;
     };

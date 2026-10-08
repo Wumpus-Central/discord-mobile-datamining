@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useFriendsSinceDate.tsx");
 
 export const useFriendsSinceDate = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useFriendsSinceDate(arg0) {
       _require = arg0;
       const cResult = require("c").c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -36,40 +36,60 @@ export const useFriendsSinceDate = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
       }
       if (cResult[3] !== arg0) {
-        const fn2 = function p() {
-          let since = null;
-          if (RelationshipStore.getRelationshipType(closure_0) === RelationshipTypes.FRIEND) {
-            since = RelationshipStore.getSince(closure_0);
+        class F {
+          constructor() {
+            obj = closure_3;
+            tmp = closure_0;
+            since = null;
+            if (closure_3.getRelationshipType(closure_0) === RelationshipTypes.FRIEND) {
+              since = obj.getSince(tmp);
+            }
+            return since;
           }
-          return since;
-        };
+        }
         const items2 = [arg0];
         cResult[3] = arg0;
-        cResult[4] = fn2;
+        cResult[4] = F;
         cResult[5] = items2;
         let tmp11 = items2;
-        let tmp10 = fn2;
       } else {
-        tmp10 = cResult[4];
+        class F {
+          constructor() {
+            obj = closure_3;
+            tmp = closure_0;
+            since = null;
+            if (closure_3.getRelationshipType(closure_0) === RelationshipTypes.FRIEND) {
+              since = obj.getSince(tmp);
+            }
+            return since;
+          }
+        }
         tmp11 = cResult[5];
       }
       const tmpResult = require("useStateFromStores");
-      const stateFromStores1 = require("useStateFromStores").useStateFromStores(tmp8, tmp10, tmp11);
+      const stateFromStores1 = require("useStateFromStores").useStateFromStores(tmp8, F, tmp11);
       if (cResult[6] === stateFromStores1) {
-        if (cResult[7] === stateFromStores) {
-          let tmp13 = cResult[8];
+        class F {
+          constructor() {
+            obj = closure_3;
+            tmp = closure_0;
+            since = null;
+            if (closure_3.getRelationshipType(closure_0) === RelationshipTypes.FRIEND) {
+              since = obj.getSince(tmp);
+            }
+            return since;
+          }
         }
-        return tmp13;
+        return createdAtDate;
       }
       const tmpResult3 = require("useStateFromStores");
-      const createdAtDate = require("ConnectionsUtils").getCreatedAtDate(stateFromStores1, stateFromStores);
+      createdAtDate = require("ConnectionsUtils").getCreatedAtDate(stateFromStores1, stateFromStores);
       cResult[6] = stateFromStores1;
       cResult[7] = stateFromStores;
       cResult[8] = createdAtDate;
-      tmp13 = createdAtDate;
       const tmpResult4 = require("ConnectionsUtils");
     }
-  : (arg0) => {
+  : function useFriendsSinceDate(arg0) {
       _require = arg0;
       const items = [LocaleStore];
       const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => locale.locale);

@@ -1,7 +1,7 @@
 // discord_app/modules/custom_typing_indicator/CustomTypingIndicatorUtils.tsx
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes.tsx";
-import _modDef3755 from "intl/CustomTypingIndicator.messages.js";
+import _modDef3829 from "intl/CustomTypingIndicator.messages.js";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import EmojiStore from "../emojis/EmojiStore.tsx";
 import UserProfileSettingsStore from "../user_profile/UserProfileSettingsStore.tsx";
@@ -13,39 +13,39 @@ const require = globalThis.__r;
 
 require = fn;
 const Permissions = fn(1085).Permissions;
-const EmojiIntention = fn(1380).EmojiIntention;
+const EmojiIntention = fn(1392).EmojiIntention;
 let obj = {};
-obj[fn(1385).TypingSuggestion.UNSPECIFIED] = _modDef3755["6Cdy4a"];
-obj[fn(1385).TypingSuggestion.YAPPING] = _modDef3755.E5VRaj;
-obj[fn(1385).TypingSuggestion.VENTING] = _modDef3755.xmxdPC;
-obj[fn(1385).TypingSuggestion.OVERSHARING] = _modDef3755["qGaH/9"];
-obj[fn(1385).TypingSuggestion.BARKING] = _modDef3755.M282uk;
-obj[fn(1385).TypingSuggestion.BABBLING] = _modDef3755.myNZDT;
-obj[fn(1385).TypingSuggestion.DAYDREAMING] = _modDef3755.F7RLTP;
-obj[fn(1385).TypingSuggestion.MEOWING] = _modDef3755.EfxyQI;
+obj[fn(1397).TypingSuggestion.UNSPECIFIED] = _modDef3829["6Cdy4a"];
+obj[fn(1397).TypingSuggestion.YAPPING] = _modDef3829.E5VRaj;
+obj[fn(1397).TypingSuggestion.VENTING] = _modDef3829.xmxdPC;
+obj[fn(1397).TypingSuggestion.OVERSHARING] = _modDef3829["qGaH/9"];
+obj[fn(1397).TypingSuggestion.BARKING] = _modDef3829.M282uk;
+obj[fn(1397).TypingSuggestion.BABBLING] = _modDef3829.myNZDT;
+obj[fn(1397).TypingSuggestion.DAYDREAMING] = _modDef3829.F7RLTP;
+obj[fn(1397).TypingSuggestion.MEOWING] = _modDef3829.EfxyQI;
 let obj2 = {};
-obj2[fn(1385).TypingSuggestion.UNSPECIFIED] = _modDef3755.kh4K4F;
-obj2[fn(1385).TypingSuggestion.YAPPING] = _modDef3755.m9AeqG;
-obj2[fn(1385).TypingSuggestion.VENTING] = _modDef3755["SZ0/Qu"];
-obj2[fn(1385).TypingSuggestion.OVERSHARING] = _modDef3755.N8cWE8;
-obj2[fn(1385).TypingSuggestion.BARKING] = _modDef3755.L5aWEN;
-obj2[fn(1385).TypingSuggestion.BABBLING] = _modDef3755.AoBaEw;
-obj2[fn(1385).TypingSuggestion.DAYDREAMING] = _modDef3755["3hOLod"];
-obj2[fn(1385).TypingSuggestion.MEOWING] = _modDef3755["0Z9/o9"];
+obj2[fn(1397).TypingSuggestion.UNSPECIFIED] = _modDef3829.kh4K4F;
+obj2[fn(1397).TypingSuggestion.YAPPING] = _modDef3829.m9AeqG;
+obj2[fn(1397).TypingSuggestion.VENTING] = _modDef3829["SZ0/Qu"];
+obj2[fn(1397).TypingSuggestion.OVERSHARING] = _modDef3829.N8cWE8;
+obj2[fn(1397).TypingSuggestion.BARKING] = _modDef3829.L5aWEN;
+obj2[fn(1397).TypingSuggestion.BABBLING] = _modDef3829.AoBaEw;
+obj2[fn(1397).TypingSuggestion.DAYDREAMING] = _modDef3829["3hOLod"];
+obj2[fn(1397).TypingSuggestion.MEOWING] = _modDef3829["0Z9/o9"];
 let items = [
-  fn(1385).TypingSuggestion.UNSPECIFIED,
-  fn(1385).TypingSuggestion.YAPPING,
-  fn(1385).TypingSuggestion.VENTING,
-  fn(1385).TypingSuggestion.OVERSHARING,
-  fn(1385).TypingSuggestion.BARKING,
-  fn(1385).TypingSuggestion.BABBLING,
-  fn(1385).TypingSuggestion.DAYDREAMING,
-  fn(1385).TypingSuggestion.MEOWING,
+  fn(1397).TypingSuggestion.UNSPECIFIED,
+  fn(1397).TypingSuggestion.YAPPING,
+  fn(1397).TypingSuggestion.VENTING,
+  fn(1397).TypingSuggestion.OVERSHARING,
+  fn(1397).TypingSuggestion.BARKING,
+  fn(1397).TypingSuggestion.BABBLING,
+  fn(1397).TypingSuggestion.DAYDREAMING,
+  fn(1397).TypingSuggestion.MEOWING,
 ];
 let items1 = [
-  fn(1385).TypingIndicatorAnimation.PULSE,
-  fn(1385).TypingIndicatorAnimation.RING,
-  fn(1385).TypingIndicatorAnimation.WAVE,
+  fn(1397).TypingIndicatorAnimation.PULSE,
+  fn(1397).TypingIndicatorAnimation.RING,
+  fn(1397).TypingIndicatorAnimation.WAVE,
 ];
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -168,7 +168,7 @@ export const getViewableCustomTypingIndicatorConfig = function getViewableCustom
   return customTypingIndicatorConfig;
 };
 export const useCurrentCustomTypingIndicatorConfig = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCurrentCustomTypingIndicatorConfig(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -221,7 +221,7 @@ export const useCurrentCustomTypingIndicatorConfig = ReactCompilerGating.isReact
       obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
-  : (arg0) => {
+  : function useCurrentCustomTypingIndicatorConfig(arg0) {
       _require = arg0;
       items = [UserProfileSettingsStore, UserStore];
       items1 = [arg0];

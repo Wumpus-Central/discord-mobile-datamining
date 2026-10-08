@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     borderTopWidth: 1,
@@ -41,7 +41,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/ForYouSuggestedFriendsSectionHeader.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (showDivider) => {
+  ? function ForYouSuggestedFriendsSectionHeader(showDivider) {
       const cResult = c.c(9);
       showDivider = showDivider.showDivider;
       const tmp4 = closure_4();
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp5 = items;
     }
-  : (showDivider) => {
+  : function ForYouSuggestedFriendsSectionHeader(showDivider) {
       showDivider = showDivider.showDivider;
       const tmp = closure_4();
       const items = [tmp.container];

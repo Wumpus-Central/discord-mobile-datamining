@@ -11,7 +11,7 @@ const require = globalThis.__r;
 const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointSound.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCheckpointSound(arg0) {
       _require = arg0;
       const cResult = require("c").c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -56,24 +56,34 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp11;
       }
-      const fn3 = function _() {
-        if (!stateFromStores) {
-          const current = ref.current;
-          if (current != null) {
-            current.stop();
+      class S {
+        constructor() {
+          if (!closure_1) {
+            tmp = closure_2;
+            current = closure_2.current;
+            tmp2 = null;
+            if (current != null) {
+              stopResult = current.stop();
+            }
+            tmp4 = closure_0;
+            tmp5 = closure_1;
+            obj = closure_0(closure_1[5]);
+            tmp6 = closure_0;
+            str = "vibing_wumpus";
+            tmp.current = obj.createSound(closure_0, "vibing_wumpus");
+            current2 = tmp.current;
+            playResult = current2.play();
           }
-          ref.current = SoundUtils.createSound(closure_0, "vibing_wumpus");
-          const current2 = ref.current;
-          current2.play();
+          return;
         }
-      };
+      }
       cResult[4] = stateFromStores;
       cResult[5] = arg0;
-      cResult[6] = fn3;
-      tmp11 = fn3;
+      cResult[6] = S;
+      tmp11 = S;
       const tmpResult = require("initialize");
     }
-  : (arg0) => {
+  : function useCheckpointSound(arg0) {
       _require = arg0;
       const items = [CheckpointStore];
       stateFromStores = require("initialize").useStateFromStores(items, () => isMuted.isMuted);

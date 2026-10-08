@@ -14,7 +14,7 @@ const GuildFeatures = Constants.GuildFeatures;
 const result = size.fileFinishedImporting("modules/welcome_screen/useWelcomeScreenEnabled.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useWelcomeScreenEnabled(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(4);
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(504).useStateFromStores(first, tmp8);
       }
-      const fn = function _() {
+      const fn = function f() {
         guild = GuildStore.getGuild(closure_1);
         let hasItem;
         if (guild != null) {
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0, arg1) => {
+  : function useWelcomeScreenEnabled(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const items = [ChannelStore, GuildStore, SelectedChannelStore];

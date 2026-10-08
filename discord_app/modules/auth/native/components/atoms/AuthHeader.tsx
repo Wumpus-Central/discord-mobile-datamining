@@ -7,7 +7,7 @@ import TextStyles from "../../../../rebrand/native/TextStyles.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { header: null };
 const obj3 = {};
 const merged = Object.assign(
@@ -21,7 +21,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/atoms/AuthHeader.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function AuthHeader(arg0) {
       const cResult = c.c(6);
       ({ children, style } = arg0);
       const tmp4 = closure_3();
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items;
       tmp5 = items;
     }
-  : (arg0) => {
+  : function AuthHeader(arg0) {
       ({ children, style } = arg0);
       const obj = { style: null, accessibilityRole: "header", children };
       const items = [closure_3().header, style];

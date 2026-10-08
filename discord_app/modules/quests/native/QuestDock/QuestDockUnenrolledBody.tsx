@@ -10,14 +10,14 @@ import QuestStore from "../../QuestStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const QuestConstants = fn(5630);
+const QuestConstants = fn(5977);
 ({ QuestDockMode: metroRequire, QuestsExperimentLocations: closure_7 } = QuestConstants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBody.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockUnenrolledBody() {
   const cResult = require("c").c(48);
   let obj = require("c");
   const questDockQuest = require("QuestDockCreativeContext").useQuestDockQuest();
@@ -135,7 +135,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     return value;
   });
-  const fn = function() {
+  function t3() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -144,7 +144,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[4] = isMobileActivityQuest;
   cResult[5] = isQuestAccessSuspended;
   cResult[6] = launchMobileActivity;
@@ -152,9 +152,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[8] = setRestingQuestDockMode;
   cResult[9] = hasWatchVideoOnMobileTasks;
   cResult[10] = trackQuestContentClickedWithImpression;
-  cResult[11] = fn;
+  cResult[11] = t3;
   const tmpResult16 = require("AnalyticsHooks");
-}) : (() => {
+}) : (function QuestDockUnenrolledBody() {
   questDockQuest = questDockQuest(isMobileActivityQuest[7]).useQuestDockQuest();
   const isRendered = getQuestImpressionId.useContext(hasWatchVideoOnMobileTasks(isMobileActivityQuest[8])).isRendered;
   let obj = questDockQuest(isMobileActivityQuest[7]);
@@ -192,10 +192,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const callback = obj2.useCallback(launchMobileActivity(function*() {
     const v0 = 0;
     if (isQuestAccessSuspended) {
-      trackQuestContentClickedWithImpression({ questId: questDockQuest.id, questContent: v0(5633).QuestContent.QUEST_BAR_MOBILE, questContentCTA: v0(7225).QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent: v0(5633).QuestContent.QUEST_BAR_MOBILE });
-      v2(14936)();
+      trackQuestContentClickedWithImpression({ questId: questDockQuest.id, questContent: v0(5980).QuestContent.QUEST_BAR_MOBILE, questContentCTA: v0(7404).QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent: v0(5980).QuestContent.QUEST_BAR_MOBILE });
+      v2(15198)();
     }
-    yield v0(10007).enrollInQuest(questDockQuest.id, { questContentCTA: v0(7225).QuestContentCTA.ACCEPT_QUEST, questContent: v0(5633).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: v0(5633).QuestContent.QUEST_BAR_MOBILE });
+    yield v0(9537).enrollInQuest(questDockQuest.id, { questContentCTA: v0(7404).QuestContentCTA.ACCEPT_QUEST, questContent: v0(5980).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: v0(5980).QuestContent.QUEST_BAR_MOBILE });
     if (1 === tmp4) {
       if (arg0 === 1) {
         dependencyMap = 3;
@@ -209,10 +209,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         return { value: closure_128_3(), done: false };
       } else {
         if (closure_128_1) {
-          v2(14943)({ questId: closure_128_0.id, sourceQuestContent: v0(5633).QuestContent.QUEST_BAR_MOBILE });
+          v2(15205)({ questId: closure_128_0.id, sourceQuestContent: v0(5980).QuestContent.QUEST_BAR_MOBILE });
           closure_128_5(constants.COLLAPSED);
-          v2(14943);
-          { questId: closure_128_0.id, sourceQuestContent: v0(5633).QuestContent.QUEST_BAR_MOBILE };
+          v2(15205);
+          { questId: closure_128_0.id, sourceQuestContent: v0(5980).QuestContent.QUEST_BAR_MOBILE };
         }
         dependencyMap = 3;
       }

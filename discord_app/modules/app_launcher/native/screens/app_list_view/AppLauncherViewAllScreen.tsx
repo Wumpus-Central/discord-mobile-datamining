@@ -13,13 +13,13 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const AppLauncherNativeConstants = fn(1489);
+const AppLauncherNativeConstants = fn(1501);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 let closure_6 = AppLauncherNativeConstants.FLASH_LIST_ITEM_IMPRESSION_VIEWABILITY_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_9 = { bottom: 4 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: {
     height: "100%",
@@ -59,8 +59,8 @@ let obj4 = {
 };
 obj2.list = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: nativeDefault.space.PX_4 };
 let size = {
-  width: fn(11769).BACK_BUTTON_SIZE,
-  height: fn(11769).BACK_BUTTON_SIZE,
+  width: fn(11836).BACK_BUTTON_SIZE,
+  height: fn(11836).BACK_BUTTON_SIZE,
   alignItems: "center",
   justifyContent: "center",
 };
@@ -74,7 +74,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (navigation) => {
+  ? function AppLauncherViewAllScreen(navigation) {
       const cResult = navigation(analyticsLocation[8]).c(73);
       navigation = navigation.navigation;
       const params = navigation.route.params;
@@ -209,7 +209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = fn;
       const tmpResult = navigation(analyticsLocation[10]);
     }
-  : (route) => {
+  : function AppLauncherViewAllScreen(route) {
       const params = route.route.params;
       const context = params.context;
       const analyticsLocation = params.analyticsLocation;

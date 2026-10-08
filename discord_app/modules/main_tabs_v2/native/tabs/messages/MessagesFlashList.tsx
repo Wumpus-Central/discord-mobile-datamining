@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesFlashList.tsx");
 
-export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((listItemSuggestedFriendHeight, arg1) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesFlashList(listItemSuggestedFriendHeight) {
   const cResult = listItemHeight(listLeft[4]).c(45);
   ({ accessibilityLabel, data, handleScrollAnimated, insetEnd, listItemHeight } = listItemSuggestedFriendHeight);
   listItemSuggestedFriendHeight = listItemSuggestedFriendHeight.listItemSuggestedFriendHeight;
@@ -60,7 +60,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
     }
     tmp7 = cResult[4];
   }
-  const imperativeHandle = scrollPosition.useImperativeHandle(arg1, A, tmp7);
+  const imperativeHandle = scrollPosition.useImperativeHandle(listItemSuggestedFriendHeight.ref, A, tmp7);
   if (cResult[5] === friendSuggestions) {
     class A {
       constructor() {
@@ -145,7 +145,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   cResult[12] = setAddedFriendSuggestions;
   cResult[13] = E;
   let obj = listItemHeight(listLeft[4]);
-}) : ((listItemHeight, arg1) => {
+}) : (function MessagesFlashList(listItemHeight) {
   ({ data, insetEnd } = listItemHeight);
   listItemHeight = listItemHeight.listItemHeight;
   const listItemSuggestedFriendHeight = listItemHeight.listItemSuggestedFriendHeight;
@@ -158,15 +158,15 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   const renderHeader = data.renderHeader;
   const renderFooter = data.renderFooter;
   const setAddedFriendSuggestions = data.setAddedFriendSuggestions;
-  ({ accessibilityLabel, handleScrollAnimated } = listItemHeight);
-  const ref = listRefHappeningNow.useRef(null);
+  ({ accessibilityLabel, handleScrollAnimated, ref } = listItemHeight);
+  const ref2 = listRefHappeningNow.useRef(null);
   const tmp2 = listItemHeight(listItemSuggestedFriendHeight[5])(data, { listItemHeight });
   const data2 = tmp2.listData;
   const friendsHeaderIndex = tmp2.friendsHeaderIndex;
   const extraData = tmp2.friendsHeaderOffset;
   const listHeaderHeight = tmp2.listHeaderHeight;
   let items = [listHeaderHeight];
-  const imperativeHandle = listRefHappeningNow.useImperativeHandle(arg1, () => ({
+  const imperativeHandle = listRefHappeningNow.useImperativeHandle(ref, () => ({
     scrollToTop() {
       let flag = arg0;
       if (arg0 === undefined) {
@@ -269,5 +269,5 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   const items8 = [scrollIndicatorInsetBottom];
   const contentContainerStyle = listRefHappeningNow.useMemo(() => ({ paddingBottom: insetEnd }), items7);
   const scrollIndicatorInsets = listRefHappeningNow.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items8);
-  return listTop(insetEnd(listItemSuggestedFriendHeight[15]).AnimatedFlashList, { ref, accessibilityLabel, contentContainerStyle, data: data2, extraData, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onCommitLayoutEffect, onLoad: onCommitLayoutEffect, onScroll, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
-})));
+  return listTop(insetEnd(listItemSuggestedFriendHeight[15]).AnimatedFlashList, { ref: ref2, accessibilityLabel, contentContainerStyle, data: data2, extraData, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onCommitLayoutEffect, onLoad: onCommitLayoutEffect, onScroll, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
+}));

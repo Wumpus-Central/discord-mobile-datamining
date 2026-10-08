@@ -4,14 +4,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import _modDef683 from "../../../../_runtime/metro/00683__.js";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GuildOfficialMessageUtils from "../../messages/GuildOfficialMessageUtils.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef15117 from "../../../../_runtime/metro/15117__.js";
+import _modDef15379 from "../../../../_runtime/metro/15379__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -23,12 +23,12 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const MessageConstants = fn(4889);
+const MessageConstants = fn(5083);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_9, GUILD_OFFICIAL_HIGHLIGHT_ALPHA: c10 } = MessageConstants);
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = {
   container: { gap: nativeDefault.space.PX_8, height: "100%" },
   segmentedControlContainer: null,
@@ -56,8 +56,8 @@ let obj4 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   marginBottom: nativeDefault.space.PX_16,
 };
-obj2.chatSection = { paddingHorizontal: fn(5996).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
-let obj5 = { paddingHorizontal: fn(5996).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+obj2.chatSection = { paddingHorizontal: fn(6180).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+let obj5 = { paddingHorizontal: fn(6180).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
 obj2.chatContainer = {
   paddingVertical: nativeDefault.space.PX_24,
   borderRadius: nativeDefault.radii.xl,
@@ -77,20 +77,20 @@ obj2.chatContent = { flex: 1 };
 obj2.chatHeader = { flexDirection: "row", alignItems: "baseline", gap: 6 };
 obj2.chatTimestamp = { marginTop: -8 };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj7 = {
   flexDirection: "row",
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   gap: nativeDefault.space.PX_8,
 };
 let closure_15 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj9 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_16 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_STRONG });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj11 = { borderColor: nativeDefault.colors.BORDER_STRONG };
 let closure_17 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_DEFAULT });
-createStyles = fn(4896);
+createStyles = fn(5090);
 const obj13 = { color: nativeDefault.colors.TEXT_DEFAULT };
 let closure_18 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_MUTED });
 const __initData = {
@@ -101,7 +101,7 @@ const __initData2 = {
 };
 const ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function MessagePreview(arg0) {
       const cResult = c.c(41);
       ({ animatedStyles, selectedColor, theme } = arg0);
       const tmp4 = closure_14();
@@ -121,11 +121,11 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[4] !== selectedColor) {
           const obj5 = _modDef683(selectedColor);
-          const hexResult = _modDef683(selectedColor).alpha(v65535).hex();
+          const hexResult = _modDef683(selectedColor).alpha(collapsed).hex();
           cResult[4] = selectedColor;
           cResult[5] = hexResult;
           let tmp14 = hexResult;
-          const alphaResult = _modDef683(selectedColor).alpha(v65535);
+          const alphaResult = _modDef683(selectedColor).alpha(collapsed);
         } else {
           tmp14 = cResult[5];
         }
@@ -148,7 +148,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol = Symbol;
               if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj3 = { source: _modDef15117 };
+                const obj3 = { source: _modDef15379 };
                 const tmp24 = __initData(native.Avatar, obj3);
                 cResult[15] = tmp24;
                 let tmp21 = tmp24;
@@ -311,7 +311,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = hexResult1;
       const tmpResult2 = GuildOfficialMessageUtils;
     }
-  : (theme) => {
+  : function MessagePreview(theme) {
       ({ animatedStyles, selectedColor } = theme);
       const tmp = closure_14();
       const memo = noop.useMemo(() => {
@@ -331,16 +331,16 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const hexResult = accessibleGuildOfficialTextColor.hex();
       const obj3 = _modDef683(selectedColor);
-      const alphaResult = _modDef683(selectedColor).alpha(v65535);
+      const alphaResult = _modDef683(selectedColor).alpha(collapsed);
       const obj2 = { style: null, pointerEvents: "none", children: null };
       const items = [tmp.chatContainer, ,];
       ({ borderStrong: arr[1], bgBaseLow: arr[2] } = animatedStyles);
       obj2.style = items;
       const obj4 = { style: null, children: null };
-      const items1 = [tmp.chatContainerInner, { backgroundColor: _modDef683(selectedColor).alpha(v65535).hex() }];
+      const items1 = [tmp.chatContainerInner, { backgroundColor: _modDef683(selectedColor).alpha(collapsed).hex() }];
       obj4.style = items1;
-      const hexResult1 = _modDef683(selectedColor).alpha(v65535).hex();
-      const items2 = [__initData(native.Avatar, { source: _modDef15117 })];
+      const hexResult1 = _modDef683(selectedColor).alpha(collapsed).hex();
+      const items2 = [__initData(native.Avatar, { source: _modDef15379 })];
       const obj6 = { style: tmp.chatContent, children: null };
       const obj7 = { style: tmp.chatHeader, children: null };
       const obj8 = {
@@ -457,7 +457,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     obj2.onSelect = function onSelect(officialMessageColor) {
       navigation(submitting[18]).updateGuild({ officialMessageColor });
     };
-    obj.openLazy(asyncRequireImpl(16271, dependencyMap.paths), "RoleColorPicker", obj2);
+    obj.openLazy(asyncRequireImpl(16531, dependencyMap.paths), "RoleColorPicker", obj2);
   }, items5);
   const tmp8 = hasChanges(officialMessageColor.useState(0), 2);
   [tmp15, c7] = hasChanges(officialMessageColor.useState(0), 2);

@@ -6,4 +6,6 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
 const result1 = size.fileFinishedImporting("hooks/useInitialValue.tsx");
 
-export default (flag) => noop.useState(flag)[0];
+export default function useInitialValue(flag) {
+  return noop.useState(flag)[0];
+}

@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesProgressiveImage.tsx");
 
 export const CollectiblesProgressiveImage = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CollectiblesProgressiveImage(arg0) {
       const cResult = sharedValue(576).c(16);
       if (cResult[0] !== arg0) {
         ({ source, style } = arg0);
@@ -34,17 +34,17 @@ export const CollectiblesProgressiveImage = ReactCompilerGating.isReactCompilerE
         tmp6 = cResult[3];
       }
       const obj = sharedValue(576);
-      sharedValue = sharedValue(4618).useSharedValue(0);
+      sharedValue = sharedValue(4810).useSharedValue(0);
       if (cResult[4] !== sharedValue) {
-        const fn = function h() {
+        function handleImageLoad() {
           const obj2 = { duration: 500, easing: null };
           const Easing = ReanimatedRexport.Easing;
           obj2.easing = Easing.inOut(ReanimatedRexport.Easing.ease);
           const result = sharedValue.set(timing.withTiming(1, obj2));
-        };
+        }
         cResult[4] = sharedValue;
-        cResult[5] = fn;
-        let tmp11 = fn;
+        cResult[5] = handleImageLoad;
+        let tmp11 = handleImageLoad;
       } else {
         tmp11 = cResult[5];
       }
@@ -91,13 +91,13 @@ export const CollectiblesProgressiveImage = ReactCompilerGating.isReactCompilerE
       cResult[11] = tmp12;
       cResult[12] = tmp18;
       tmp16 = tmp18;
-      const tmpResult = sharedValue(4618);
+      const tmpResult = sharedValue(4810);
     }
-  : (arg0) => {
+  : function CollectiblesProgressiveImage(arg0) {
       ({ source, style } = arg0);
       let sharedValue;
       const merged = Object.assign(arg0, Object.assign({ source: 0, style: 0 }));
-      sharedValue = sharedValue(4618).useSharedValue(0);
+      sharedValue = sharedValue(4810).useSharedValue(0);
       let obj2 = { style, children: null };
       const obj3 = {};
       const merged1 = Object.assign(merged);
@@ -106,7 +106,7 @@ export const CollectiblesProgressiveImage = ReactCompilerGating.isReactCompilerE
       const merged2 = Object.assign(closure_6.absoluteFillObject);
       obj4.opacity = sharedValue;
       obj3.style = obj4;
-      obj3.onLoad = function onLoad() {
+      obj3.onLoad = function handleImageLoad() {
         const obj2 = { duration: 500, easing: null };
         const Easing = ReanimatedRexport.Easing;
         obj2.easing = Easing.inOut(ReanimatedRexport.Easing.ease);

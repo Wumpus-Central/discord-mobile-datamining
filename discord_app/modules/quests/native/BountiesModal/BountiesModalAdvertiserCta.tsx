@@ -20,12 +20,12 @@ let closure_4 = ["style"];
 let closure_5 = ["visible"];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_8, View: closure_9, Pressable } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5630).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5977).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = ReanimatedRexport.createAnimatedComponent(Pressable);
 let c15 = 40;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_16 = createStyles.createStyles(() => {
   const obj = {
     outerContainer: null,
@@ -77,7 +77,7 @@ let entering = function o(value) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings") };
   return obj;
 };
-entering.__closure = { withTiming: fn(4897).withTiming, timingStandard: fn(4900).timingStandard };
+entering.__closure = { withTiming: fn(5091).withTiming, timingStandard: fn(5094).timingStandard };
 entering.__workletHash = 2981824910249;
 entering.__initData = {
   code: "function BountiesModalAdvertiserCtaTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}",
@@ -86,15 +86,15 @@ let fn2 = function l(value, fn) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingFast, "respect-motion-settings", fn) };
   return obj;
 };
-let obj = { withTiming: fn(4897).withTiming, timingStandard: fn(4900).timingStandard };
-fn2.__closure = { withTiming: fn(4897).withTiming, timingFast: fn(4900).timingFast };
+let obj = { withTiming: fn(5091).withTiming, timingStandard: fn(5094).timingStandard };
+fn2.__closure = { withTiming: fn(5091).withTiming, timingFast: fn(5094).timingFast };
 fn2.__workletHash = 15850601331978;
 fn2.__initData = {
   code: "function BountiesModalAdvertiserCtaTsx2(visible,cleanUp){const{withTiming,timingFast}=this.__closure;return{opacity:withTiming(visible,timingFast,'respect-motion-settings',cleanUp)};}",
 };
 let ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (bounty) => {
+  ? function BountiesModalAdvertiserCtaContent(bounty) {
       const cResult = bounty(getQuestImpressionId[12]).c(53);
       bounty = bounty.bounty;
       const sourceQuestContent = bounty.sourceQuestContent;
@@ -183,7 +183,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      class M {
+      class B {
         constructor(arg0) {
           obj = closure_0(closure_2[17]);
           obj1 = {
@@ -205,11 +205,11 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = bounty.id;
       cResult[8] = getQuestImpressionId;
       cResult[9] = sourceQuestContent;
-      cResult[10] = M;
-      tmp19 = M;
+      cResult[10] = B;
+      tmp19 = B;
       const tmpResult8 = bounty(getQuestImpressionId[16]);
     }
-  : (bounty) => {
+  : function BountiesModalAdvertiserCtaContent(bounty) {
       bounty = bounty.bounty;
       const sourceQuestContent = bounty.sourceQuestContent;
       let getQuestImpressionId;
@@ -305,12 +305,12 @@ const __initData2 = {
   code: "function BountiesModalAdvertiserCtaTsx4(){const{withTiming,interpolate,visibility,visible,timingStandard,timingFast}=this.__closure;return{transform:[{translateY:withTiming(interpolate(visibility,[0,1],[8,0]),visible?timingStandard:timingFast)}]};}",
 };
 ReactCompilerGating = fn(558);
-let obj3 = { withTiming: fn(4897).withTiming, timingFast: fn(4900).timingFast };
+let obj3 = { withTiming: fn(5091).withTiming, timingFast: fn(5094).timingFast };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalAdvertiserCta.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (visible) => {
+  ? function BountiesModalAdvertiserCta(visible) {
       const cResult = require("c").c(18);
       if (cResult[0] !== visible) {
         visible = visible.visible;
@@ -461,7 +461,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult6 = require("useVisibilityTransition");
     }
-  : (visible) => {
+  : function BountiesModalAdvertiserCta(visible) {
       visible = visible.visible;
       let merged = Object.assign(visible, Object.assign({ visible: 0 }));
       let animatedStyle;

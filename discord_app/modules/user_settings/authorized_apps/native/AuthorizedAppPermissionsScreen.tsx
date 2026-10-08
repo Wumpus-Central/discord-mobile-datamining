@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AuthorizedAppPermissionsScreen() {
       const cResult = c.c(2);
       const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
       if (cResult[0] !== settingNavigationRoute.params.oauth2Token) {
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : () => {
+  : function AuthorizedAppPermissionsScreen() {
       const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
       return jsx(UserSettingsAuthedAppPermissionsDefault, { oauth2Token: settingNavigationRoute.params.oauth2Token });
     };

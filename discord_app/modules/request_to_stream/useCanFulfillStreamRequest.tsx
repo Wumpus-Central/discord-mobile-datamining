@@ -94,7 +94,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/request_to_stream/useCanFulfillStreamRequest.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useCanFulfillStreamRequest(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(4);
       dependencyMap = tmp4;
@@ -109,23 +109,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           PermissionStore,
         ];
         cResult[0] = items;
-        class R {
-          constructor() {
-            return canFulfillStreamRequest(
-              closure_0,
-              closure_1,
-              closure_3,
-              closure_5,
-              closure_8,
-              closure_2,
-              closure_9,
-              closure_6,
-              closure_7,
-            );
-          }
-        }
+        let first = items;
       } else {
-        const first = cResult[0];
+        first = cResult[0];
       }
       if (cResult[1] === (undefined !== arg1 && arg1)) {
         if (cResult[2] === arg0) {
@@ -133,29 +119,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(504).useStateFromStores(first, tmp13);
       }
-      class R {
-        constructor() {
-          return canFulfillStreamRequest(
-            closure_0,
-            closure_1,
-            closure_3,
-            closure_5,
-            closure_8,
-            closure_2,
-            closure_9,
-            closure_6,
-            closure_7,
-          );
-        }
-      }
+      const fn = function o() {
+        return canFulfillStreamRequest(
+          closure_0,
+          closure_1,
+          ApplicationStreamingStore,
+          ChannelStore,
+          PresenceStore,
+          RunningGameStore,
+          RTCConnectionStore,
+          GuildStore,
+          PermissionStore,
+        );
+      };
       cResult[1] = undefined !== arg1 && arg1;
       cResult[2] = arg0;
-      cResult[3] = R;
-      tmp13 = R;
+      cResult[3] = fn;
+      tmp13 = fn;
       const obj = require("c");
       tmp = _require;
     }
-  : (arg0) => {
+  : function useCanFulfillStreamRequest(arg0) {
       _require = arg0;
       let flag = arg1;
       if (arg1 === undefined) {

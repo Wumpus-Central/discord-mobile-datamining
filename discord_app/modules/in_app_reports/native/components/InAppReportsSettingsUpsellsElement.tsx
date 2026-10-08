@@ -16,7 +16,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_16 },
   settingsContainer: null,
@@ -29,14 +29,14 @@ obj2.goToSettingsText = { marginTop: nativeDefault.space.PX_4 };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (trackSettingsUpsellsAction) => {
+  ? function SettingsUpsellsTableRow(trackSettingsUpsellsAction) {
       const cResult = onButtonClick(576).c(12);
       ({ title, disabledTitle, description, onButtonClick } = trackSettingsUpsellsAction);
       trackSettingsUpsellsAction = trackSettingsUpsellsAction.trackSettingsUpsellsAction;
       const obj = onButtonClick(576);
       [tmp5, dependencyMap] = noop.useState(false);
       if (cResult[0] !== trackSettingsUpsellsAction) {
-        const fn = function o() {
+        const fn = function l() {
           trackSettingsUpsellsAction(
             in_app_reports_ReportUtils.TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_VIEWED,
           );
@@ -47,14 +47,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp6 = cResult[1];
       }
-      trackSettingsUpsellsAction(5597)(tmp6);
+      trackSettingsUpsellsAction(5392)(tmp6);
       if (cResult[2] === onButtonClick) {
         if (cResult[3] === trackSettingsUpsellsAction) {
           let tmp9 = cResult[4];
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp13 = closure_9(onButtonClick(6893).SettingsIcon, {});
+          const tmp13 = closure_9(onButtonClick(7082).SettingsIcon, {});
           cResult[5] = tmp13;
           let tmp11 = tmp13;
         } else {
@@ -73,7 +73,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { title, disabledTitle, description, disabled: tmp5, onPress: tmp9, icon: tmp11 };
-        const tmp16 = closure_9(tmp7(12728), obj2);
+        const tmp16 = closure_9(tmp7(13397), obj2);
         cResult[6] = description;
         cResult[7] = disabledTitle;
         cResult[8] = tmp5;
@@ -82,7 +82,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = tmp16;
         tmp14 = tmp16;
       }
-      const fn2 = function l() {
+      const fn2 = function o() {
         onButtonClick();
         dependencyMap(true);
         trackSettingsUpsellsAction(
@@ -96,7 +96,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = _slicedToArray(noop.useState(false), 2);
       tmp7 = trackSettingsUpsellsAction;
     }
-  : (arg0) => {
+  : function SettingsUpsellsTableRow(arg0) {
       ({ onButtonClick: require, trackSettingsUpsellsAction: importDefault } = arg0);
       ({ title, disabledTitle, description } = arg0);
       const tmp = _slicedToArray(noop.useState(false), 2);
@@ -126,7 +126,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (settingsUpsells) => {
+  ? function SettingsUpsellElement(settingsUpsells) {
       const cResult = settingsUpsells(reportId[9]).c(27);
       settingsUpsells = settingsUpsells.settingsUpsells;
       const channelId = settingsUpsells.channelId;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== channelId) {
-        const fn = function l() {
+        const fn = function o() {
           return ChannelStore.getChannel(channelId);
         };
         cResult[1] = channelId;
@@ -292,7 +292,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult4 = settingsUpsells(reportId[10]);
     }
-  : (settingsUpsells) => {
+  : function SettingsUpsellElement(settingsUpsells) {
       settingsUpsells = settingsUpsells.settingsUpsells;
       ({ channelId: importDefault, reportId } = settingsUpsells);
       const reportType = settingsUpsells.reportType;

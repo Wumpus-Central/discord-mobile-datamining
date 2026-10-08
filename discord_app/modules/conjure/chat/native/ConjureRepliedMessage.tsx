@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
 import UserUtils from "../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ConjureDesignFeedback from "../../design_feedback/ConjureDesignFeedback.tsx";
@@ -16,12 +16,12 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const diff = fn(16670).MESSAGE_EDGE_INSET + fn(16670).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(16670).MESSAGE_CONTENT_INSET - 4 - diff;
-const createStyles = fn(4896);
+const diff = fn(16933).MESSAGE_EDGE_INSET + fn(16933).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(16933).MESSAGE_CONTENT_INSET - 4 - diff;
+const createStyles = fn(5090);
 let obj2 = {
   root: {
-    marginLeft: diff - fn(16670).MESSAGE_CONTENT_INSET,
+    marginLeft: diff - fn(16933).MESSAGE_CONTENT_INSET,
     paddingLeft: diff1 + 4,
     height: 20,
     flexDirection: "row",
@@ -50,7 +50,7 @@ obj2.content = { flex: 1 };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginLeft: diff - fn(16670).MESSAGE_CONTENT_INSET,
+  marginLeft: diff - fn(16933).MESSAGE_CONTENT_INSET,
   paddingLeft: diff1 + 4,
   height: 20,
   flexDirection: "row",
@@ -60,7 +60,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureRepliedMessage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ConjureRepliedMessage(arg0) {
       const cResult = c.c(40);
       ({ replied, onJump } = arg0);
       const tmp4 = closure_8();
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const trimmed = body.replace(/\s+/g, " ").trim();
       const root = tmp4.root;
       const intl = util.intl;
-      const formatToPlainStringResult = intl.formatToPlainString(_modDef3753.K0046m, { name: str, content: trimmed });
+      const formatToPlainStringResult = intl.formatToPlainString(_modDef3827.K0046m, { name: str, content: trimmed });
       cResult[2] = str;
       cResult[3] = onJump;
       cResult[4] = tmp4.root;
@@ -258,13 +258,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = React4;
       const str3 = body.replace(/\s+/g, " ");
     }
-  : (replied) => {
+  : function ConjureRepliedMessage(replied) {
       replied = replied.replied;
       const onJump = replied.onJump;
       const tmp = closure_8();
-      const messageAuthorUser = replied(16673).useMessageAuthorUser(replied.userId);
-      const obj = replied(16673);
-      let str = replied(4728).useName(messageAuthorUser);
+      const messageAuthorUser = replied(16936).useMessageAuthorUser(replied.userId);
+      const obj = replied(16936);
+      let str = replied(4922).useName(messageAuthorUser);
       if (str == null) {
         str = "";
       }
@@ -277,7 +277,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (body == null) {
         body = replied.content;
       }
-      const obj2 = replied(4728);
+      const obj2 = replied(4922);
       const trimmed = body.replace(/\s+/g, " ").trim();
       const obj3 = {
         style: tmp.root,
@@ -288,17 +288,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const intl = tmp2(1126).intl;
-      obj3.accessibilityLabel = intl.formatToPlainString(_modDef3753.K0046m, { name: str, content: trimmed });
+      obj3.accessibilityLabel = intl.formatToPlainString(_modDef3827.K0046m, { name: str, content: trimmed });
       const items1 = [closure_6(closure_5, { style: tmp.spine }), , ,];
       let tmp11Result = null;
       if (null != messageAuthorUser) {
         const obj5 = { style: tmp.avatar, children: null };
-        const obj6 = { userId: replied.userId, size: tmp2(1188).AvatarSizes.SIZE_16 };
-        obj5.children = closure_6(tmp2(16673).ConjureUserAvatar, obj6);
+        const obj6 = { userId: replied.userId, size: tmp2(1200).AvatarSizes.SIZE_16 };
+        obj5.children = closure_6(tmp2(16936).ConjureUserAvatar, obj6);
         tmp11Result = closure_6(closure_5, obj5);
       }
       items1[1] = tmp11Result;
-      items1[2] = closure_6(replied(4892).Text, {
+      items1[2] = closure_6(replied(5086).Text, {
         variant: "text-xs/semibold",
         color: "text-default",
         style: tmp.name,
@@ -328,7 +328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items2[1] = str3;
       items2[2] = trimmed;
       obj8.children = items2;
-      items1[3] = closure_7(replied(4892).Text, obj8);
+      items1[3] = closure_7(replied(5086).Text, obj8);
       obj3.children = items1;
       return closure_7(closure_4, obj3);
     };

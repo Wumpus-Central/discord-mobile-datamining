@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/useChatWidth.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useChatWidth(arg0) {
       let context = noop.useContext(ChatViewWidthContextDefault);
       const width = useBaseAppContainerDimensionsDefault().width;
       useDrawerWidth;
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return context;
     }
-  : (arg0) => {
+  : function useChatWidth(arg0) {
       let context = noop.useContext(ChatViewWidthContextDefault);
       const width = useBaseAppContainerDimensionsDefault().width;
       useDrawerWidth;

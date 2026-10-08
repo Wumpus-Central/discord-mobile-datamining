@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   wrapper: { position: "relative" },
   circle: { position: "absolute" },
@@ -22,7 +22,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressCircle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildProgressCircle(arg0) {
       const cResult = c.c(25);
       ({ percent, style, size } = arg0);
       let num = 32;
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = size1;
       tmp6 = size1;
     }
-  : (size) => {
+  : function GuildProgressCircle(size) {
       let num = size.size;
       ({ percent, style } = size);
       if (num === undefined) {

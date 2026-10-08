@@ -2,8 +2,8 @@
 import DispatcherDefault from "../../../../../../../Dispatcher.tsx";
 import util from "../../../../../../../intl/index.native.tsx";
 import useChannelName from "../../../../../../channel/useChannelName.tsx";
-import utils_ChannelUtils from "../../../../../../../utils/native/ChannelUtils.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
+import utils_ChannelUtils from "../../../../../../../utils/native/ChannelUtils.tsx";
 import ApplicationAssetUtils from "../../../../../../../utils/ApplicationAssetUtils.tsx";
 import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris.tsx";
 import _slicedToArray from "../../../../../../../../_runtime/metro/00032__.js";
@@ -18,9 +18,9 @@ import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const Image = fn(17).Image;
-const FetchState = fn(7833).FetchState;
-const CodedLinkExtendedType = fn(10037).CodedLinkExtendedType;
-const InviteTargetTypes = fn(7239).InviteTargetTypes;
+const FetchState = fn(8251).FetchState;
+const CodedLinkExtendedType = fn(9567).CodedLinkExtendedType;
+const InviteTargetTypes = fn(7418).InviteTargetTypes;
 let closure_16 = ["embedded_cover"];
 const size = fn(2);
 const result = size.fileFinishedImporting(

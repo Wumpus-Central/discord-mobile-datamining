@@ -12,10 +12,10 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 let closure_5 = fn(1087).CollectiblesMobileShopScreen;
-let closure_6 = fn(1614).MEDIA_PICKER_SEND_BUTTON_SPRING;
+let closure_6 = fn(1626).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsx = fn(21).jsx;
 let c8 = 0.9;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({
   buttonRowContainer: {
     flexGrow: 0,
@@ -59,7 +59,7 @@ let result = size.fileFinishedImporting("modules/user_profile/native/EditCollect
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (selectedSkuId) => {
+    ? function EditCollectiblesCTAButton(selectedSkuId) {
         const cResult = currentSkuId(onApply[7]).c(47);
         ({ user, currentSkuId } = selectedSkuId);
         selectedSkuId = selectedSkuId.selectedSkuId;
@@ -70,19 +70,19 @@ export default noop.memo(
         const bottom = selectedSkuId(onApply[8])().bottom;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [analyticsSource];
-          class E {
+          class P {
             constructor() {
               return analyticsSource.useReducedMotion;
             }
           }
           cResult[0] = items;
-          cResult[1] = E;
+          cResult[1] = P;
           tmp6 = items;
         } else {
           [tmp6, tmp7] = cResult;
         }
         let obj = currentSkuId(onApply[7]);
-        const stateFromStores = currentSkuId(onApply[9]).useStateFromStores(tmp6, E);
+        const stateFromStores = currentSkuId(onApply[9]).useStateFromStores(tmp6, P);
         const tmpResult = currentSkuId(onApply[9]);
         ({ product, purchase } = selectedSkuId(onApply[10])(selectedSkuId));
         const tmp10 = selectedSkuId(onApply[10])(selectedSkuId);
@@ -94,7 +94,7 @@ export default noop.memo(
               let tmp13 = cResult[6];
             }
             const effect = analyticsLocations.useEffect(tmp12, tmp13);
-            class E {
+            class P {
               constructor() {
                 return analyticsSource.useReducedMotion;
               }
@@ -179,7 +179,7 @@ export default noop.memo(
             const animatedStyle1 = currentSkuId(onApply[11]).useAnimatedStyle(fn2);
             if (cResult[7] !== user) {
               const canUseCollectiblesResult = tmp5(onApply[13]).canUseCollectibles(user);
-              class E {
+              class P {
                 constructor() {
                   return analyticsSource.useReducedMotion;
                 }
@@ -196,7 +196,7 @@ export default noop.memo(
               }
               if (cResult[12] === tmp24) {
                 let tmp31 = null == selectedSkuId;
-                class E {
+                class P {
                   constructor() {
                     return analyticsSource.useReducedMotion;
                   }
@@ -224,14 +224,14 @@ export default noop.memo(
                   if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
                     const intl3 = currentSkuId(onApply[16]).intl;
                     const stringResult = intl3.string(currentSkuId(onApply[16]).t.Jh8fJz);
-                    class E {
+                    class P {
                       constructor() {
                         return analyticsSource.useReducedMotion;
                       }
                     }
                     cResult[15] = stringResult;
                   }
-                  class E {
+                  class P {
                     constructor() {
                       return analyticsSource.useReducedMotion;
                     }
@@ -241,7 +241,7 @@ export default noop.memo(
                     if (cResult[16] !== user) {
                       const tmp5Result2 = tmp5(onApply[13]);
                       const intl2 = currentSkuId(onApply[16]).intl;
-                      class E {
+                      class P {
                         constructor() {
                           return analyticsSource.useReducedMotion;
                         }
@@ -264,7 +264,7 @@ export default noop.memo(
                     if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
                       const intl = currentSkuId(onApply[16]).intl;
                       const stringResult1 = intl.string(currentSkuId(onApply[16]).t.fYfGgK);
-                      class E {
+                      class P {
                         constructor() {
                           return analyticsSource.useReducedMotion;
                         }
@@ -287,7 +287,7 @@ export default noop.memo(
                               if (cResult[27] === animatedStyle1) {
                                 if (cResult[30] !== bottom) {
                                   let obj6 = { marginBottom: bottom };
-                                  class E {
+                                  class P {
                                     constructor() {
                                       return analyticsSource.useReducedMotion;
                                     }
@@ -303,7 +303,7 @@ export default noop.memo(
                                     if (tmp26) {
                                       str2 = "active";
                                     }
-                                    class E {
+                                    class P {
                                       constructor() {
                                         return analyticsSource.useReducedMotion;
                                       }
@@ -316,7 +316,7 @@ export default noop.memo(
                                     cResult[39] = tmp49;
                                   }
                                 }
-                                class E {
+                                class P {
                                   constructor() {
                                     return analyticsSource.useReducedMotion;
                                   }
@@ -330,7 +330,7 @@ export default noop.memo(
                                 cResult[35] = tmp46;
                               }
                               const items1 = [,];
-                              class E {
+                              class P {
                                 constructor() {
                                   return analyticsSource.useReducedMotion;
                                 }
@@ -375,7 +375,7 @@ export default noop.memo(
                     }
                     ActionSheetActionCreatorsDefault.hideActionSheet();
                   }
-                  class E {
+                  class P {
                     constructor() {
                       return analyticsSource.useReducedMotion;
                     }
@@ -392,7 +392,7 @@ export default noop.memo(
                 }
                 const tmpResult10 = currentSkuId(onApply[15]);
               }
-              class E {
+              class P {
                 constructor() {
                   return analyticsSource.useReducedMotion;
                 }
@@ -430,7 +430,7 @@ export default noop.memo(
         tmp12 = O;
         const tmpResult7 = currentSkuId(onApply[11]);
       }
-    : (user) => {
+    : function EditCollectiblesCTAButton(user) {
         user = user.user;
         const currentSkuId = user.currentSkuId;
         const selectedSkuId = user.selectedSkuId;

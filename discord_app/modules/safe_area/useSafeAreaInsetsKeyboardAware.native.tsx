@@ -13,12 +13,12 @@ import subscribeToKeyboardUIStore from "../keyboard/native/subscribeToKeyboardUI
 require = fn;
 const ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useAnimateChanges(arg0) {
       const cResult = disabled(576).c(5);
       ({ keyboardHeight, disabled } = arg0);
       noop.useRef(false);
       if (cResult[0] !== disabled) {
-        const fn = function o() {
+        const fn = function u() {
           const keyboardDuration = useKeyboardDuration.getKeyboardDuration();
           if (ref.current) {
             if (0 !== keyboardDuration) {
@@ -49,7 +49,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = items;
       let obj = disabled(576);
     }
-  : (disabled) => {
+  : function useAnimateChanges(disabled) {
       disabled = disabled.disabled;
       noop.useRef(false);
       const items = [disabled.keyboardHeight, disabled];
@@ -132,7 +132,7 @@ export default function useSafeAreaInsetsKeyboardAware() {
   const items1 = [callback, flag, flag2];
   const effect = callback.useEffect(
     () =>
-      subscribeToKeyboardUIStore(() => {
+      subscribeToKeyboardUIStore(function maybeUpdateKeyboardHeight() {
         const tmp = callback();
         if (ref.current !== tmp) {
           ref.current = tmp;

@@ -4,8 +4,8 @@ import Constants from "../../Constants.tsx";
 import util from "../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
 import AgeVerificationUtils from "AgeVerificationUtils.tsx";
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators.native.tsx";
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils.tsx";
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators.native.tsx";
 import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -13,7 +13,7 @@ const HelpdeskArticles = Constants.HelpdeskArticles;
 const AgeGroupState = { ADULT: "adult", TEEN: "teen", UNVERIFIED: "unverified" };
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAgeGroupState() {
       const obj = AgeVerificationUtils;
       const isAgeVerified = obj.useIsAgeVerified();
       if (obj2.useIsVerifiedTeen()) {
@@ -23,7 +23,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return TEEN;
     }
-  : () => {
+  : function useAgeGroupState() {
       const obj = AgeVerificationUtils;
       const isAgeVerified = obj.useIsAgeVerified();
       if (obj2.useIsVerifiedTeen()) {
@@ -50,7 +50,7 @@ export const handleShowAgeVerification = function handleShowAgeVerification() {
   });
 };
 export const useAgeGroupValueLabel = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAgeGroupValueLabel() {
       const obj = c;
       const cResult = obj.c(3);
       const tmp4 = closure_5();
@@ -89,7 +89,7 @@ export const useAgeGroupValueLabel = ReactCompilerGating.isReactCompilerEnabled(
         return tmp7;
       }
     }
-  : () => {
+  : function useAgeGroupValueLabel() {
       const tmp = closure_5();
       if (obj.ADULT === tmp) {
         const intl3 = util.intl;

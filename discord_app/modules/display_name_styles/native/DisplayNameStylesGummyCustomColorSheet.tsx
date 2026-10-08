@@ -7,12 +7,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const DisplayNameStylesConstants = fn(1395);
+const DisplayNameStylesConstants = fn(1407);
 ({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: hasOwnProperty, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: metroRequire } =
   DisplayNameStylesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   body: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -45,17 +45,17 @@ let result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onSelect) => {
+  ? function DisplayNameStylesGummyCustomColorSheet(onSelect) {
       const cResult = onSelect(576).c(28);
       onSelect = onSelect.onSelect;
       const tmp4 = closure_9();
       let obj = onSelect(576);
-      let obj2 = onSelect(4618);
-      const obj3 = onSelect(1394);
+      let obj2 = onSelect(4810);
+      const obj3 = onSelect(1406);
       const sharedValue = obj2.useSharedValue(obj3.wrapHue(onSelect(1103).int2hslRaw(onSelect.initialColor).h));
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function l() {
-          const result = onSelect(4861).triggerHapticFeedback(onSelect(4861).HapticFeedbackTypes.IMPACT_LIGHT);
+        const fn = function n() {
+          const result = onSelect(5055).triggerHapticFeedback(onSelect(5055).HapticFeedbackTypes.IMPACT_LIGHT);
         };
         cResult[0] = fn;
         let first = fn;
@@ -87,18 +87,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[6] !== tmp7) {
           const obj5 = { title: tmp8, trailing: null };
           const obj6 = { variant: "primary", size: "sm", text: tmp10, onPress: tmp7 };
-          obj5.trailing = closure_7(tmp(5601).Button, obj6);
-          const tmp16 = closure_7(sharedValue(15178), obj5);
+          obj5.trailing = closure_7(tmp(5375).Button, obj6);
+          const tmp16 = closure_7(sharedValue(15440), obj5);
           cResult[6] = tmp7;
           cResult[7] = tmp16;
           let tmp12 = tmp16;
-          const tmp15 = sharedValue(15178);
+          const tmp15 = sharedValue(15440);
         } else {
           tmp12 = cResult[7];
         }
         if (cResult[8] !== sharedValue) {
           const obj7 = { hue: sharedValue };
-          const tmp20 = closure_7(sharedValue(15184), obj7);
+          const tmp20 = closure_7(sharedValue(15446), obj7);
           cResult[8] = sharedValue;
           cResult[9] = tmp20;
           let tmp17 = tmp20;
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[16] !== sharedValue) {
               const obj8 = { hue: sharedValue, onPanFinalize: first, saturation, lightness, fullWidth: true };
-              const tmp34 = closure_7(sharedValue(14443), obj8);
+              const tmp34 = closure_7(sharedValue(14668), obj8);
               cResult[16] = sharedValue;
               cResult[17] = tmp34;
               let tmp29 = tmp34;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return tmp43;
                   }
                   const obj9 = { header: tmp12, children: tmp39 };
-                  const tmp45 = closure_7(tmp(6652).BottomSheet, obj9);
+                  const tmp45 = closure_7(tmp(6829).BottomSheet, obj9);
                   cResult[25] = tmp39;
                   cResult[26] = tmp12;
                   cResult[27] = tmp45;
@@ -193,15 +193,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = P;
       const obj4 = onSelect(1103);
     }
-  : (onSelect) => {
+  : function DisplayNameStylesGummyCustomColorSheet(onSelect) {
       onSelect = onSelect.onSelect;
       const tmp = closure_9();
-      let obj = onSelect(4618);
-      let obj2 = onSelect(1394);
+      let obj = onSelect(4810);
+      let obj2 = onSelect(1406);
       const sharedValue = obj.useSharedValue(obj2.wrapHue(onSelect(1103).int2hslRaw(onSelect.initialColor).h));
       const items = [sharedValue, onSelect];
       const callback = noop.useCallback(() => {
-        const result = onSelect(4861).triggerHapticFeedback(onSelect(4861).HapticFeedbackTypes.IMPACT_LIGHT);
+        const result = onSelect(5055).triggerHapticFeedback(onSelect(5055).HapticFeedbackTypes.IMPACT_LIGHT);
       }, []);
       const callback1 = noop.useCallback(() => {
         const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -217,19 +217,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = onSelect(1126).intl;
       obj6.text = intl2.string(onSelect(1126).t.XqMe3N);
       obj6.onPress = callback1;
-      obj5.trailing = closure_7(onSelect(5601).Button, obj6);
-      obj4.header = closure_7(sharedValue(15178), obj5);
+      obj5.trailing = closure_7(onSelect(5375).Button, obj6);
+      obj4.header = closure_7(sharedValue(15440), obj5);
       const obj7 = { style: tmp.body, children: null };
       const obj8 = { style: tmp.previewWrapper, children: null };
-      const tmp5 = sharedValue(15178);
+      const tmp5 = sharedValue(15440);
       obj8.children = closure_7(View, {
         style: tmp.preview,
-        children: closure_7(sharedValue(15184), { hue: sharedValue }),
+        children: closure_7(sharedValue(15446), { hue: sharedValue }),
       });
       const items1 = [closure_7(View, obj8)];
       const obj10 = {
         style: tmp.huePickerInset,
-        children: closure_7(sharedValue(14443), {
+        children: closure_7(sharedValue(14668), {
           hue: sharedValue,
           onPanFinalize: callback,
           saturation,
@@ -240,5 +240,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items1[1] = closure_7(View, obj10);
       obj7.children = items1;
       obj4.children = closure_8(View, obj7);
-      return closure_7(onSelect(6652).BottomSheet, obj4);
+      return closure_7(onSelect(6829).BottomSheet, obj4);
     };

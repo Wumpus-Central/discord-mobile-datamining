@@ -13,14 +13,14 @@ const require = globalThis.__r;
 const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
 let closure_4 = ["bannerOriginalMd5"];
-const IGNORE_GUILD_IDS = fn(7842).IGNORE_GUILD_IDS;
+const IGNORE_GUILD_IDS = fn(8260).IGNORE_GUILD_IDS;
 let FormStates = fn(1085).FormStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useGuildProfileEditForm.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGuildProfileEditForm() {
       const cResult = require("c").c(37);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -46,18 +46,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         items1[1] = pendingNameplate;
-        const fn = function y() {
-          const selectedGuildId = pendingAvatarDecoration.selectedGuildId;
-          const obj = {};
-          const merged = Object.assign(pendingAvatarDecoration.getPendingChanges(selectedGuildId));
-          obj.errors = pendingAvatarDecoration.getErrors(selectedGuildId);
-          obj.selectedGuild = pendingNameplate.getGuild(selectedGuildId);
-          obj.formState = pendingAvatarDecoration.getFormState();
-          return obj;
-        };
+        class F {
+          constructor() {
+            selectedGuildId = pendingAvatarDecoration.selectedGuildId;
+            obj = {};
+            merged = Object.assign(pendingAvatarDecoration.getPendingChanges(selectedGuildId));
+            obj.errors = pendingAvatarDecoration.getErrors(selectedGuildId);
+            obj.selectedGuild = pendingNameplate.getGuild(selectedGuildId);
+            obj.formState = pendingAvatarDecoration.getFormState();
+            return obj;
+          }
+        }
         cResult[2] = items1;
-        cResult[3] = fn;
-        let tmp9 = fn;
+        cResult[3] = F;
+        let tmp9 = F;
         let tmp8 = items1;
       } else {
         tmp8 = cResult[2];
@@ -92,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         items2[1] = pendingProfileFrame;
-        class C {
+        class A {
           constructor() {
             isSubmitting = pendingAvatarDecoration.getFormState() === closure_14.SUBMITTING;
             if (!isSubmitting) {
@@ -103,8 +105,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[4] = items2;
-        cResult[5] = C;
-        let tmp15 = C;
+        cResult[5] = A;
+        let tmp15 = A;
         let tmp14 = items2;
       } else {
         tmp14 = cResult[4];
@@ -120,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         UserStore = tmp22;
-        class C {
+        class A {
           constructor() {
             isSubmitting = pendingAvatarDecoration.getFormState() === closure_14.SUBMITTING;
             if (!isSubmitting) {
@@ -131,8 +133,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn2 = function x() {
-            return () => {
+          const fn = function x() {
+            return function cleanup() {
               closure_1_13.cancel();
               pendingAvatar(pendingNickname[14]).wait(closure_0(pendingNickname[15]).resetAllPending);
             };
@@ -143,8 +145,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return closure_13.getCurrentUser();
             }
           }
-          cResult[10] = fn2;
-          class C {
+          cResult[10] = fn;
+          class A {
             constructor() {
               isSubmitting = pendingAvatarDecoration.getFormState() === closure_14.SUBMITTING;
               if (!isSubmitting) {
@@ -156,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[11] = items3;
           let tmp24 = items3;
-          let tmp23 = fn2;
+          let tmp23 = fn;
         } else {
           tmp23 = cResult[10];
           tmp24 = cResult[11];
@@ -173,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           items4[1] = pendingDisplayNameStyles;
-          class C {
+          class A {
             constructor() {
               isSubmitting = pendingAvatarDecoration.getFormState() === closure_14.SUBMITTING;
               if (!isSubmitting) {
@@ -213,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[14] = V;
-          class C {
+          class A {
             constructor() {
               isSubmitting = pendingAvatarDecoration.getFormState() === closure_14.SUBMITTING;
               if (!isSubmitting) {
@@ -477,7 +479,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const fn3 = function () {
+        function t12() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -486,10 +488,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[27] = undefined;
         cResult[28] = stateFromStores;
-        cResult[29] = fn3;
+        cResult[29] = t12;
         const tmpResult8 = tmp(tmp2[11]);
       }
       let merged = Object.assign(guildAutomodProfileQuarantineErrors);
@@ -500,7 +502,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = {};
       const tmpResult7 = require("initialize");
     }
-  : () => {
+  : function useGuildProfileEditForm() {
       const items = [memo];
       stateFromStores = stateFromStores(pendingNickname[11]).useStateFromStores(items, () => memo.getCurrentUser());
       let obj = stateFromStores(pendingNickname[11]);
@@ -549,16 +551,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const merged1 = Object.assign(stateFromStoresObject.errors);
       memo = selectedGuild.useMemo(() => {
         const delayedCall = new stateFromStores(pendingNickname[13]).DelayedCall(200, () => {
-          pendingAvatar(584).wait(stateFromStores(9433).resetAllPending);
+          pendingAvatar(584).wait(stateFromStores(9097).resetAllPending);
         });
         return delayedCall;
       }, []);
       const items3 = [memo];
       const effect = selectedGuild.useEffect(
-        () => () => {
-          memo.cancel();
-          pendingAvatar(pendingNickname[14]).wait(stateFromStores(pendingNickname[15]).resetAllPending);
-        },
+        () =>
+          function cleanup() {
+            memo.cancel();
+            pendingAvatar(pendingNickname[14]).wait(stateFromStores(pendingNickname[15]).resetAllPending);
+          },
         items3,
       );
       FormStates = pendingAvatar(tmp2[16])();

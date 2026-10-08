@@ -2,18 +2,18 @@
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
-import _modDef2553 from "../GuildPowerups.messages.js";
+import _modDef2597 from "../GuildPowerups.messages.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const PerkIcons = fn(1379).PerkIcons;
-const GUILD_FEATURE_TO_PERK = fn(4774).GUILD_FEATURE_TO_PERK;
+const PerkIcons = fn(1391).PerkIcons;
+const GUILD_FEATURE_TO_PERK = fn(4968).GUILD_FEATURE_TO_PERK;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (features, arg1) => {
+  ? function useGuildPowerupLevelPerks(features, arg1) {
       const cResult = c.c(28);
       if (cResult[0] !== arg1) {
         let obj2 = arg1;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               totalSoundboards: features.features.total_sound_slots,
               additionalSoundboards: features.features.additional_sound_slots,
             };
-            const formatToPlainStringResult = intl3.formatToPlainString(_modDef2553["s9u/E7"], obj4);
+            const formatToPlainStringResult = intl3.formatToPlainString(_modDef2597["s9u/E7"], obj4);
             cResult[23] = features.features.additional_sound_slots;
             cResult[24] = features.features.total_sound_slots;
             cResult[25] = formatToPlainStringResult;
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             totalStickers: features.features.total_sticker_slots,
             additionalStickers: features.features.additional_sticker_slots,
           };
-          const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2553.ZEvvPz, obj6);
+          const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2597.ZEvvPz, obj6);
           cResult[18] = features.features.additional_sticker_slots;
           cResult[19] = features.features.total_sticker_slots;
           cResult[20] = formatToPlainStringResult1;
@@ -141,14 +141,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           totalEmojis: features.features.total_emoji_slots,
           additionalEmojis: features.features.additional_emoji_slots,
         };
-        const formatToPlainStringResult2 = intl.formatToPlainString(_modDef2553["NXvV0+"], obj8);
+        const formatToPlainStringResult2 = intl.formatToPlainString(_modDef2597["NXvV0+"], obj8);
         cResult[13] = features.features.additional_emoji_slots;
         cResult[14] = features.features.total_emoji_slots;
         cResult[15] = formatToPlainStringResult2;
         tmp6 = formatToPlainStringResult2;
       }
     }
-  : (arg0) => {
+  : function useGuildPowerupLevelPerks(arg0) {
       closure_0 = arg0;
       let obj = arg1;
       if (arg1 === undefined) {
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             totalEmojis: closure_0.features.total_emoji_slots,
             additionalEmojis: closure_0.features.additional_emoji_slots,
           };
-          obj.description = intl.formatToPlainString(_modDef2553["NXvV0+"], obj2);
+          obj.description = intl.formatToPlainString(_modDef2597["NXvV0+"], obj2);
           items.push(obj);
         }
         if (includeStickers) {
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             totalStickers: closure_0.features.total_sticker_slots,
             additionalStickers: closure_0.features.additional_sticker_slots,
           };
-          obj3.description = intl2.formatToPlainString(_modDef2553.ZEvvPz, obj4);
+          obj3.description = intl2.formatToPlainString(_modDef2597.ZEvvPz, obj4);
           items.push(obj3);
         }
         if (includeSoundboards) {
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             totalSoundboards: closure_0.features.total_sound_slots,
             additionalSoundboards: closure_0.features.additional_sound_slots,
           };
-          obj5.description = intl3.formatToPlainString(_modDef2553["s9u/E7"], obj6);
+          obj5.description = intl3.formatToPlainString(_modDef2597["s9u/E7"], obj6);
           items.push(obj5);
         }
         const features = closure_0.features.features;

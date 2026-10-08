@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { disabledPermissionIcon: null };
 let size = {
   width: 24,
@@ -33,7 +33,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/BotPermissions.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (deniedPermissions) => {
+  ? function BotPermissions(deniedPermissions) {
       const cResult = permissions(onPermissionsChange[7]).c(39);
       ({ application, permissions } = deniedPermissions);
       deniedPermissions = deniedPermissions.deniedPermissions;
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = permissions(onPermissionsChange[7]);
       obj2 = noop;
     }
-  : (guild) => {
+  : function BotPermissions(guild) {
       ({ application, permissions } = guild);
       ({ deniedPermissions: importAll, onPermissionsChange } = guild);
       guild = guild.guild;

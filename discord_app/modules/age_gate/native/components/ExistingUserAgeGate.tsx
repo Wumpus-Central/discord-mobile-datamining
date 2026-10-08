@@ -12,18 +12,18 @@ const require = fn;
 const View = fn(17).View;
 const AgeGateConstants = fn(1110);
 ({ AgeGateAnalyticAction: closure_9, AgeGateSource: c10 } = AgeGateConstants);
-let closure_11 = fn(17475).ExistingUserAgeGateScreens;
+let closure_11 = fn(17757).ExistingUserAgeGateScreens;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, HelpdeskArticles: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_16 = createStyles.createStyles({ container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 8, textAlign: "center" }, body: { textAlign: "center", lineHeight: 20, marginBottom: 16 }, inputGroup: { marginBottom: 16, width: "100%" }, buttonWrapper: { width: "100%" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/components/ExistingUserAgeGate.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSuccess) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExistingUserAgeGate(onSuccess) {
   const cResult = require("c").c(66);
   onSuccess = onSuccess.onSuccess;
   _require = onSuccess;
@@ -600,7 +600,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSuccess) => {
   tmp23 = items4;
   tmp22 = Y;
   const tmpResult2 = require("initialize");
-}) : ((onSuccess) => {
+}) : (function ExistingUserAgeGate(onSuccess) {
   onSuccess = onSuccess.onSuccess;
   let onClose = onSuccess.onClose;
   const source = onSuccess.source;
@@ -733,7 +733,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSuccess) => {
             return obj3;
           } else {
             v1(38)(null != date, "Cannot submit null birthday.");
-            const diffResult = v1(4467)().diff(date, "years");
+            const diffResult = v1(4659)().diff(date, "years");
             if (diffResult < 18) {
               const obj4 = {
                 source,
@@ -749,7 +749,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSuccess) => {
               const obj5 = { value: submitBirthday(date), done: false };
               return obj5;
             }
-            const obj6 = v1(4467)();
+            const obj6 = v1(4659)();
           }
         } else if (arg0 === 1) {
           c0 = 3;
@@ -855,7 +855,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSuccess) => {
       }
       let obj4 = { top: true, style: tmp.container, children: null };
       let obj6 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult1 };
-      const items5 = [closure_14(tmp2(tmp3[23]).Text, obj6), , , ];
+      const items5 = [closure_14(tmp2(tmp3[23]).Heading, obj6), , , ];
       const obj8 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: stringResult };
       items5[1] = closure_14(tmp2(tmp3[23]).Text, obj8);
       const obj9 = { style: tmp.inputGroup, ref, label: null, date: null, onChangeDate: null, error: null };

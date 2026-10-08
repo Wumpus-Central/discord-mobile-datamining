@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/tooltip/useCanShowTooltip.tsx");
 
 export const useCanShowTooltip = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useCanShowTooltip(arg0, arg1, arg2) {
       _require = arg0;
       const cResult = require("c").c(9);
       closure_1 = tmp4;
@@ -58,7 +58,7 @@ export const useCanShowTooltip = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       tmp = _require;
     }
-  : (arg0) => {
+  : function useCanShowTooltip(arg0) {
       _require = arg0;
       let flag = arg1;
       if (arg1 === undefined) {

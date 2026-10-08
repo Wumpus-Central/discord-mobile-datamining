@@ -7,8 +7,8 @@ import ReanimatedRexportDefault from "../../../../modules/reanimated/ReanimatedR
 import Text_Text from "../../Text/native/Text.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
-import _modDef6059 from "../../../../../_runtime/metro/06059__.js";
+import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
+import _modDef6245 from "../../../../../_runtime/metro/06245__.js";
 import useInputClearButton from "../../Input/native/useInputClearButton.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let closure_10 = createStyles.createStyles(() => {
   const obj = {
     placeholder: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },
@@ -69,7 +69,7 @@ let closure_10 = createStyles.createStyles(() => {
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
 const colors = ["transparent", "black"];
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_14 = createStyles.createStyles(() => {
   const obj = { fill: { flex: 1 }, mask: null, leadingFade: null, leadingCover: null, maskRemainder: null };
   const obj2 = {};
@@ -92,7 +92,7 @@ const __initData2 = {
 };
 let ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (leadingFade) => {
+  ? function useLeadingFade(leadingFade) {
       const cResult = onScroll(horizontal[8]).c(13);
       ({ horizontal, onScroll } = leadingFade);
       const tmp4 = closure_14();
@@ -107,69 +107,54 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] === sharedValue) {
             let tmp6 = cResult[3];
           }
-          class I {
-            constructor() {
-              tmp = closure_0;
-              tmp2 = closure_2;
-              obj = closure_0(closure_2[10]);
-              num = 1;
-              if (closure_3.get()) {
-                num = 0;
-              }
-              obj1 = { opacity: obj.withSpring(num, tmp(tmp2[11]).springStandard, "animate-always") };
-              return obj1;
+          const fn2 = function x() {
+            let num = 1;
+            if (sharedValue.get()) {
+              num = 0;
             }
-          }
+            return { opacity: spring.withSpring(num, springPresets.springStandard, "animate-always") };
+          };
           let obj2 = {
             withSpring: onScroll(tmp2[10]).withSpring,
             scrolled: sharedValue,
             springStandard: onScroll(tmp2[11]).springStandard,
           };
-          I.__closure = obj2;
-          I.__workletHash = 4094668912184;
-          I.__initData = __initData;
-          const animatedStyle = onScroll(tmp2[9]).useAnimatedStyle(I);
+          fn2.__closure = obj2;
+          fn2.__workletHash = 4094668912184;
+          fn2.__initData = __initData;
+          const animatedStyle = onScroll(tmp2[9]).useAnimatedStyle(fn2);
           if (cResult[4] === animatedStyle) {
             if (cResult[5] === horizontal) {
               if (cResult[6] === tmp4) {
                 let tmp9 = cResult[7];
               }
-              class I {
-                constructor() {
-                  tmp = closure_0;
-                  tmp2 = closure_2;
-                  obj = closure_0(closure_2[10]);
-                  num = 1;
-                  if (closure_3.get()) {
-                    num = 0;
-                  }
-                  obj1 = { opacity: obj.withSpring(num, tmp(tmp2[11]).springStandard, "animate-always") };
-                  return obj1;
-                }
+              let tmp10 = horizontal;
+              if (!horizontal) {
+                tmp10 = null != onScroll;
               }
-              let tmp11;
-              if (horizontal) {
-                tmp11 = tmp6;
+              let tmp12;
+              if (tmp10) {
+                tmp12 = tmp6;
               }
               let num6;
-              if (horizontal) {
+              if (tmp10) {
                 num6 = 16;
               }
               let fill;
               if (horizontal) {
                 fill = tmp4.fill;
               }
-              if (cResult[8] === tmp11) {
+              if (cResult[8] === tmp12) {
                 if (cResult[9] === num6) {
                   if (cResult[10] === fill) {
                     if (cResult[11] === tmp9) {
-                      let tmp13 = cResult[12];
+                      let tmp14 = cResult[12];
                     }
-                    return tmp13;
+                    return tmp14;
                   }
                 }
               }
-              let obj3 = { onScroll: tmp11, scrollEventThrottle: num6, scrollerStyle: fill, wrap: tmp9 };
+              let obj3 = { onScroll: tmp12, scrollEventThrottle: num6, scrollerStyle: fill, wrap: tmp9 };
               class F {
                 constructor(arg0) {
                   tmp = leadingFade;
@@ -223,7 +208,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[10] = fill;
               cResult[11] = tmp9;
               cResult[12] = obj3;
-              tmp13 = obj3;
+              tmp14 = obj3;
             }
           }
           class F {
@@ -298,7 +283,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       const tmpResult = onScroll(horizontal[9]);
     }
-  : (leadingFade) => {
+  : function useLeadingFade(leadingFade) {
       ({ horizontal, onScroll } = leadingFade);
       horizontal = undefined;
       let sharedValue;
@@ -356,7 +341,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           obj2.children = items2;
           obj.maskElement = options(hasOwnProperty, obj2);
           obj.children = children;
-          tmp = closure_2_8(_modDef6059, obj);
+          tmp = closure_2_8(_modDef6245, obj);
         }
         return tmp;
       }, items1);
@@ -383,13 +368,13 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useTagListInputState(arg0, arg1) {
       closure_0 = arg1;
       const cResult = c.c(15);
-      const ref = noop.useRef(null);
-      const ref1 = noop.useRef("");
-      const ref2 = noop.useRef(false);
-      [tmp8, noop] = noop.useState(false);
+      noop.useRef(null);
+      noop.useRef("");
+      noop.useRef(false);
+      [tmp6, noop] = noop.useState(false);
       if (cResult[0] !== arg1) {
         const fn = function o(current, arg1) {
           ref2.current = true;
@@ -409,12 +394,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = arg1;
         cResult[1] = fn;
-        let tmp9 = fn;
+        let tmp7 = fn;
       } else {
-        tmp9 = cResult[1];
+        tmp7 = cResult[1];
       }
-      closure_5 = tmp9;
-      if (cResult[2] !== tmp9) {
+      closure_5 = tmp7;
+      if (cResult[2] !== tmp7) {
         const fn2 = function v() {
           return {
             blur() {
@@ -476,72 +461,56 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             },
           };
         };
-        cResult[2] = tmp9;
+        cResult[2] = tmp7;
         cResult[3] = fn2;
-        let tmp10 = fn2;
+        let tmp8 = fn2;
       } else {
-        tmp10 = cResult[3];
+        tmp8 = cResult[3];
       }
-      const imperativeHandle = noop.useImperativeHandle(arg0, tmp10);
+      const imperativeHandle = noop.useImperativeHandle(arg0, tmp8);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { clearable: true };
         cResult[4] = obj3;
-        let tmp12 = obj3;
+        let tmp10 = obj3;
       } else {
-        tmp12 = cResult[4];
+        tmp10 = cResult[4];
       }
-      if (cResult[5] !== tmp9) {
-        const fn3 = function b() {
-          return closure_5("", true);
-        };
-        const fn4 = function x(arg0) {
+      if (cResult[5] !== tmp7) {
+        class I {
+          constructor() {
+            return closure_5("", true);
+          }
+        }
+        const fn3 = function b(arg0) {
           return closure_5(arg0, true);
         };
-        cResult[5] = tmp9;
-        cResult[6] = fn3;
-        cResult[7] = fn4;
-        let tmp14 = fn4;
-        let tmp13 = fn3;
+        cResult[5] = tmp7;
+        cResult[6] = I;
+        cResult[7] = fn3;
+        let tmp12 = fn3;
       } else {
-        tmp13 = cResult[6];
-        tmp14 = cResult[7];
+        class I {
+          constructor() {
+            return closure_5("", true);
+          }
+        }
+        tmp12 = cResult[7];
       }
-      if (cResult[8] === tmp8) {
-        if (cResult[9] === tmp13) {
-          if (cResult[10] === tmp14) {
-            let tmp15 = cResult[11];
+      if (cResult[8] === tmp6) {
+        class I {
+          constructor() {
+            return closure_5("", true);
           }
-          ({ clearProps, clearState } = tmp15);
-          const inputClearButton = useInputClearButton.useInputClearButton(clearProps, clearState);
-          if (cResult[12] === inputClearButton) {
-            if (cResult[13] === tmp9) {
-              let tmp17 = cResult[14];
-            }
-            return tmp17;
-          }
-          const obj4 = {
-            clearButton: inputClearButton,
-            inputRef: ref,
-            inputValueRef: ref1,
-            inputUpdate: tmp9,
-            inputInitializedRef: ref2,
-          };
-          cResult[12] = inputClearButton;
-          cResult[13] = tmp9;
-          cResult[14] = obj4;
-          tmp17 = obj4;
-          const tmpResult = useInputClearButton;
         }
       }
-      const obj5 = { clearProps: tmp12, clearState: { hasValue: tmp8, clear: tmp13, setTextValue: tmp14 } };
-      cResult[8] = tmp8;
-      cResult[9] = tmp13;
-      cResult[10] = tmp14;
-      cResult[11] = obj5;
-      tmp15 = obj5;
-      const tmp7 = _slicedToArray(noop.useState(false), 2);
+      cResult[8] = tmp6;
+      cResult[9] = I;
+      cResult[10] = tmp12;
+      cResult[11] = { clearProps: tmp10, clearState: { hasValue: tmp6, clear: I, setTextValue: tmp12 } };
+      const obj4 = { clearProps: tmp10, clearState: { hasValue: tmp6, clear: I, setTextValue: tmp12 } };
+      const tmp5 = _slicedToArray(noop.useState(false), 2);
     }
-  : (arg0, arg1) => {
+  : function useTagListInputState(arg0, arg1) {
       closure_0 = arg1;
       const ref = noop.useRef(null);
       const ref1 = noop.useRef("");
@@ -690,29 +659,29 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   c14 = undefined;
   c17 = undefined;
   const tmp = c10();
-  const bound = Math.min(2, tags(5609).useFontScale());
-  const result = tags(6113).InputHeights.MD * bound;
+  const bound = Math.min(2, tags(5382).useFontScale());
+  const result = tags(6293).InputHeights.MD * bound;
   let tmp6 = closure_18(accessibilityHint.ref, onChangeText);
   const inputRef = tmp6.inputRef;
   const inputValueRef = tmp6.inputValueRef;
   const inputUpdate = tmp6.inputUpdate;
   const clearButton = tmp6.clearButton;
   inputRef.useRef({ start: 0, end: 0 });
-  let obj = tags(5609);
-  const keyboardBlurring = tags(6116).useKeyboardBlurring(inputRef);
-  const obj3 = tags(6116);
-  const focus = tags(4592).useFocus();
+  let obj = tags(5382);
+  const keyboardBlurring = tags(6295).useKeyboardBlurring(inputRef);
+  const obj3 = tags(6295);
+  const focus = tags(4784).useFocus();
   ({ focusProps: c8, isFocused } = focus);
-  const obj4 = tags(4592);
+  const obj4 = tags(4784);
   const tmp9 = focusOnAdd;
-  ({ onFocus: c9, onBlur: c10 } = focusOnAdd(6118)({ onFocus, onBlur }));
+  ({ onFocus: c9, onBlur: c10 } = focusOnAdd(6297)({ onFocus, onBlur }));
   const ref = inputRef.useRef(null);
-  const tmp10 = focusOnAdd(6118)({ onFocus, onBlur });
+  const tmp10 = focusOnAdd(6297)({ onFocus, onBlur });
   let tmp12 = autoClearInputOnTagAdd;
   [c12, c13] = autoClearInputOnTagAdd(inputRef.useState(null), 2);
   const tmp13 = autoClearInputOnTagAdd(inputRef.useState(null), 2);
   [tmp15, c14] = autoClearInputOnTagAdd(inputRef.useState(false), 2);
-  const tmp16 = focusOnAdd(5991)(tags);
+  const tmp16 = focusOnAdd(6174)(tags);
   const ref1 = inputRef.useRef(tags);
   const items = [focusOnAdd, inputUpdate, ref1, tags, inputRef, inputValueRef, autoClearInputOnTagAdd];
   const layoutEffect = inputRef.useLayoutEffect(() => {
@@ -768,14 +737,14 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     }
   }, items1);
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp2(6119).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp2(6298).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = inputUpdate;
   }
   if (inActionSheet) {
-    let BottomSheetTextInput = tmp2(9271).BottomSheetTextInput;
+    let BottomSheetTextInput = tmp2(8602).BottomSheetTextInput;
   } else {
-    BottomSheetTextInput = tmp9(9272);
+    BottomSheetTextInput = tmp9(8603);
   }
   const result1 = 33 * bound;
   const tmp14 = autoClearInputOnTagAdd(inputRef.useState(false), 2);
@@ -837,7 +806,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       tags = tag;
       closure_1 = index;
       return _undefined(
-        tags(9273).TagListInputTagComponent,
+        tags(8604).TagListInputTagComponent,
         {
           tag,
           selected: tag.id === c12,
@@ -912,7 +881,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   items6[2] = tmp30;
   obj9.style = items6;
   obj9.onChangeText = inputUpdate;
-  obj9.onKeyPress = function onKeyPress(nativeEvent) {
+  obj9.onKeyPress = function handleKeyPress(nativeEvent) {
     _undefined3(false);
     let tmp4 = 0 === ref.current.start;
     if (tmp4) {
@@ -973,7 +942,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       tmp2(arg0);
     }
   };
-  obj9.onPressIn = function onPressIn() {
+  obj9.onPressIn = function handlePressIn() {
     _undefined3(false);
     _undefined2(null);
   };
@@ -1007,7 +976,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   const obj12 = { size: "sm", disabled, isFocused, children: null };
   if (null == icon) {
     const obj13 = { style: tmp.iconLeft, size: "xs", color: "interactive-text-default" };
-    icon = tmp25(tmp2(6555).MagnifyingGlassIcon, obj13);
+    icon = tmp25(tmp2(6731).MagnifyingGlassIcon, obj13);
   }
   const items8 = [icon, obj5.wrap(c8(BottomSheetScrollView, obj6))];
   if (null == footer) {
@@ -1020,6 +989,6 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   }
   items8[2] = footer;
   obj12.children = items8;
-  obj11.children = c9(tags(6112).InputFieldContainer, obj12);
+  obj11.children = c9(tags(6292).InputFieldContainer, obj12);
   return c8(inputValueRef, obj11);
 });

@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   chip: {
     color: nativeDefault.colors.MENTION_FOREGROUND,
@@ -27,28 +27,47 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureSelectedMention.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const cResult = c.c(4);
-      ({ label, variant } = arg0);
+  ? function ConjureSelectedMention(arg0) {
+      const cResult = c.c(6);
+      ({ label, variant, onPress } = arg0);
       const tmp4 = closure_3();
       if (cResult[0] === label) {
-        if (cResult[1] === tmp4.chip) {
-          if (cResult[2] === variant) {
-            let tmp5 = cResult[3];
+        if (cResult[1] === onPress) {
+          if (cResult[2] === tmp4.chip) {
+            if (cResult[3] === str) {
+              if (cResult[4] === variant) {
+                let tmp5 = cResult[5];
+              }
+              return tmp5;
+            }
           }
-          return tmp5;
         }
       }
-      const tmp6 = jsx(Text_Text.Text, { variant, style: tmp4.chip, children: label });
+      const tmp6 = jsx(Text_Text.Text, {
+        variant,
+        style: tmp4.chip,
+        onPress,
+        accessibilityRole: "button",
+        children: label,
+      });
       cResult[0] = label;
-      cResult[1] = tmp4.chip;
-      cResult[2] = variant;
-      cResult[3] = tmp6;
+      cResult[1] = onPress;
+      cResult[2] = tmp4.chip;
+      cResult[3] = "button";
+      cResult[4] = variant;
+      cResult[5] = tmp6;
       tmp5 = tmp6;
-      const obj2 = { variant, style: tmp4.chip, children: label };
+      const obj2 = { variant, style: tmp4.chip, onPress, accessibilityRole: "button", children: label };
     }
-  : (arg0) => {
-      ({ label, variant } = arg0);
-      const tmp = closure_3();
-      return jsx(Text_Text.Text, { variant, style: closure_3().chip, children: label });
+  : function ConjureSelectedMention(onPress) {
+      onPress = onPress.onPress;
+      ({ label, variant } = onPress);
+      const obj = { variant, style: closure_3().chip, onPress, accessibilityRole: "button", children: label };
+      return jsx(Text_Text.Text, {
+        variant,
+        style: closure_3().chip,
+        onPress,
+        accessibilityRole: "button",
+        children: label,
+      });
     };

@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/hooks/useHighlightSettingItem.tsx");
 
 export const useHighlightSettingItem = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHighlightSettingItem(arg0) {
       closure_0 = arg0;
       const cResult = c.c(2);
       if (cResult[0] !== arg0) {
@@ -23,7 +23,7 @@ export const useHighlightSettingItem = ReactCompilerGating.isReactCompilerEnable
       }
       return UserSettingSearchStore.useState(tmp2);
     }
-  : (arg0) => {
+  : function useHighlightSettingItem(arg0) {
       closure_0 = arg0;
       return UserSettingSearchStore.useState((selected) => selected.selected === closure_0);
     };

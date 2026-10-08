@@ -33,7 +33,7 @@ let obj = {
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointHeaderButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function CheckpointHeaderButton(arg0) {
       const cResult = c.c(5);
       ({ accessibilityLabel, children, onPress } = arg0);
       const tmp3 = closure_5();
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children,
       };
     }
-  : (arg0) => {
+  : function CheckpointHeaderButton(arg0) {
       ({ accessibilityLabel, children, onPress } = arg0);
       return (
         <Pressable

@@ -1,6 +1,6 @@
 // discord_app/modules/avatar/useAvatarColor.tsx
 import c from "../../../_runtime/00576_c.js";
-import tinycolorDefault from "../../../_runtime/07076_tinycolor.js";
+import tinycolorDefault from "../../../_runtime/07262_tinycolor.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -178,11 +178,11 @@ const obj6 = module_570.create(() => ({ palette: {}, fetching: {} }));
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHasFetchedColors(arg0) {
       closure_0 = arg0;
       const cResult = c.c(2);
       if (cResult[0] !== arg0) {
-        const fn = function e(arg0) {
+        const fn = function t(arg0) {
           let tmp2 = null != closure_0;
           if (tmp2) {
             tmp2 = arg0.fetching[tmp];
@@ -197,7 +197,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return !obj6(tmp2);
     }
-  : (arg0) => {
+  : function useHasFetchedColors(arg0) {
       closure_0 = arg0;
       return !obj6((arg0) => {
         let tmp2 = null != closure_0;
@@ -209,7 +209,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useAvatarColors(arg0, arg1, arg2) {
       _require = arg0;
       const cResult = require("c").c(15);
       closure_1 = tmp4;
@@ -350,7 +350,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = stateFromStores;
         cResult[11] = undefined;
       }
-      fn2 = function v() {
+      fn2 = function p() {
         let tmp2 = null != closure_0;
         if (tmp2) {
           tmp2 = null == closure_2;
@@ -366,7 +366,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = items1;
       const tmpResult = require("initialize");
     }
-  : (arg0, arg1) => {
+  : function useAvatarColors(arg0, arg1) {
       _require = arg0;
       let flag = arg2;
       if (arg2 === undefined) {
@@ -407,11 +407,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (dependencyMap != null) {
           mapped = dependencyMap.map((item) => {
             [tmp, tmp2, tmp3] = item;
-            const obj = flag(7076)({ r: tmp, g: tmp2, b: tmp3 });
-            ({ h, s, l } = flag(7076)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
+            const obj = flag(7262)({ r: tmp, g: tmp2, b: tmp3 });
+            ({ h, s, l } = flag(7262)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
             const obj2 = { h, s: s * stateFromStores, l };
-            const toHslResult = flag(7076)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
-            return flag(7076)({ h, s: s * stateFromStores, l }).toHexString();
+            const toHslResult = flag(7262)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
+            return flag(7262)({ h, s: s * stateFromStores, l }).toHexString();
           });
         }
         return mapped;
@@ -427,14 +427,14 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/avatar/useAvatarColor.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
+  ? function useAvatarColor(arg0, arg1, arg2) {
       let tmp2 = undefined === arg2;
       if (!tmp2) {
         tmp2 = arg2;
       }
       return _slicedToArray(closure_12(arg0, arg1, tmp2), 1)[0];
     }
-  : (arg0, arg1) => {
+  : function useAvatarColor(arg0, arg1) {
       let flag = arg2;
       if (arg2 === undefined) {
         flag = true;

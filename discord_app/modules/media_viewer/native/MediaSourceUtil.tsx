@@ -7,15 +7,15 @@ import NativeMediaManagerModuleDefault from "../../../../discord_common/js/packa
 import utils_ImageUtilsDefault from "../../../utils/native/ImageUtils.tsx";
 import Server from "../../../flow/Server.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
+import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import MediaFormatTesters from "../../messages/MediaFormatTesters.tsx";
 import InteractionComponentUtils from "../../interaction_components/InteractionComponentUtils.tsx";
 import EmbedUtils from "../../../utils/EmbedUtils.tsx";
-import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
+import SpoilerChannelUtils from "../../spoiler_channels/SpoilerChannelUtils.tsx";
 import ObscuredMediaUtils from "../../explicit_media_redaction/ObscuredMediaUtils.tsx";
 import ExplicitMediaRedactionModels from "../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
-import SpoilerChannelUtils from "../../spoiler_channels/SpoilerChannelUtils.tsx";
-import renderMessageMarkupDefault from "../../messages/renderMessageMarkup.tsx";
 import renderer_EmbedUtils from "../../messages/native/renderer/EmbedUtils.tsx";
+import renderMessageMarkupDefault from "../../messages/renderMessageMarkup.tsx";
 import transformMessageComponents from "../../messages/native/renderer/transformMessageComponents.tsx";
 import RowGeneratorTypes from "../../messages/native/renderer/RowGeneratorTypes.tsx";
 import MediaViewerAnalyticsManager from "../MediaViewerAnalyticsManager.tsx";
@@ -1037,7 +1037,7 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
     return null;
   } else {
     const type = value.type;
-    if (tmp(1985).ComponentType.MEDIA_GALLERY === type) {
+    if (tmp(1997).ComponentType.MEDIA_GALLERY === type) {
       let num2 = 0;
       if (null != componentMediaIndex) {
         num2 = 0;
@@ -1058,9 +1058,9 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
         }
         return tmp;
       });
-      obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1375).isNotNullish) };
+      obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1387).isNotNullish) };
       return obj2;
-    } else if (tmp(1985).ComponentType.THUMBNAIL === type) {
+    } else if (tmp(1997).ComponentType.THUMBNAIL === type) {
       const tmp7 = toMediaSourceFromUnfurledMedia(message2, guild_id, value.media, value.description, value.spoiler);
       let tmp8 = null;
       if (null != tmp7) {
@@ -1172,7 +1172,7 @@ export const getSelectedMediaSource = function getSelectedMediaSource(mediaViewe
   return null;
 };
 export const useSelectedMediaSource = ReactCompilerGating.isReactCompilerEnabled()
-  ? (index) => {
+  ? function useSelectedMediaSource(index) {
       const cResult = c.c(3);
       const tmp2 = useStateFromSharedValueDefault(index.index);
       let tmp3 = null;
@@ -1203,7 +1203,7 @@ export const useSelectedMediaSource = ReactCompilerGating.isReactCompilerEnabled
       cResult[2] = items;
       tmp7 = items;
     }
-  : (index) => {
+  : function useSelectedMediaSource(index) {
       const tmp = useStateFromSharedValueDefault(index.index);
       closure_1 = tmp;
       const items = [index.sources, tmp];

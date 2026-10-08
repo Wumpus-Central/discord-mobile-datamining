@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useRefreshLinkCodeOnExpiry(arg0, arg1) {
       closure_0 = arg0;
       const cResult = c.c(4);
       const tmp2 = useStableCallbackDefault(arg1);
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = items;
       tmp3 = fn;
     }
-  : (arg0, arg1) => {
+  : function useRefreshLinkCodeOnExpiry(arg0, arg1) {
       closure_0 = arg0;
       const tmp = useStableCallbackDefault(arg1);
       closure_1 = tmp;

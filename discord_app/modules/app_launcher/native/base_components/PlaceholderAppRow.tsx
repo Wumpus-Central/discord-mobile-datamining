@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { loadingAppIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null };
 let size = {
   width: 32,
@@ -49,7 +49,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/PlaceholderAppRow.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function PlaceholderAppRow(arg0) {
       const cResult = c.c(19);
       ({ isFirstRow, isLastRow } = arg0);
       const tmp6 = closure_4();
@@ -94,21 +94,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            class L {
+            class A {
               constructor() {
                 return;
               }
             }
-            cResult[12] = L;
+            cResult[12] = A;
           } else {
-            class L {
+            class A {
               constructor() {
                 return;
               }
             }
           }
           if (cResult[13] === tmp4) {
-            class L {
+            class A {
               constructor() {
                 return;
               }
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             subLabelLineClamp: 1,
             start: tmp4,
             end: tmp5,
-            onPress: L,
+            onPress: A,
           };
           const tmp26 = jsx(TableRow.TableRow, {
             icon: tmp9,
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             subLabelLineClamp: 1,
             start: tmp4,
             end: tmp5,
-            onPress: L,
+            onPress: A,
           });
           cResult[13] = tmp4;
           cResult[14] = tmp5;
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = tmp16;
       const tmpResult2 = usePlaceholderSize;
     }
-  : (isFirstRow) => {
+  : function PlaceholderAppRow(isFirstRow) {
       let flag = isFirstRow.isFirstRow;
       if (flag === undefined) {
         flag = false;

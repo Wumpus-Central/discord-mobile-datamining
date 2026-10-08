@@ -259,12 +259,12 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
     excludeGuildPermissions,
   };
 }
-const ChannelRecord = fn(2055);
+const ChannelRecord = fn(2067);
 ({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
-const GuildRecord = fn(2070);
+const GuildRecord = fn(2082);
 ({ isGuildOwner: c10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
 const Permissions = fn(1085).Permissions;
-let closure_18 = fn(4519).MemberSafetyPagePermissions;
+let closure_18 = fn(4711).MemberSafetyPagePermissions;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -342,7 +342,7 @@ prototype["getGuildPermissionProps"] = function getGuildPermissionProps(guild) {
   };
   let tmp4 = null != currentUser;
   if (tmp4) {
-    tmp4 = v65535(guild, currentUser);
+    tmp4 = collapsed(guild, currentUser);
   }
   obj.isOwner = tmp4;
   let tmp6 = null != currentUser;
@@ -440,7 +440,7 @@ prototype["canManageUser"] = function canManageUser(BAN_MEMBERS, user, stateFrom
   if (user instanceof UserRecord) {
     id = user.id;
   }
-  if (v65535(stateFromStores, id)) {
+  if (collapsed(stateFromStores, id)) {
     return false;
   } else {
     const self = this;

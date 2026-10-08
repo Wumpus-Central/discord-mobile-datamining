@@ -3,16 +3,16 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import ClientThemesUtils from "../../../client_themes/ClientThemesUtils.tsx";
-import _modDef2751 from "../../../client_themes/intl/ClientThemes.messages.js";
+import _modDef2795 from "../../../client_themes/intl/ClientThemes.messages.js";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import useActiveTheme from "../../../client_themes/native/useActiveTheme.tsx";
 import ClientThemesBackgroundStore from "../../../client_themes/ClientThemesBackgroundStore.tsx";
 
 require = fn;
-const ActiveThemeType = fn(1196).ActiveThemeType;
+const ActiveThemeType = fn(1208).ActiveThemeType;
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useAppearanceSettingTrailing() {
       const cResult = c.c(9);
       const tmp5 = useThemeDefault();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -43,7 +43,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const intl2 = util.intl;
-          const stringResult = intl2.string(_modDef2751.KSBBpC);
+          const stringResult = intl2.string(_modDef2795.KSBBpC);
           cResult[4] = stringResult;
           let tmp19 = stringResult;
         } else {
@@ -87,7 +87,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult4 = useActiveTheme;
     }
-  : () => {
+  : function useAppearanceSettingTrailing() {
       const tmp3 = useThemeDefault();
       const items = [ClientThemesBackgroundStore];
       const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
@@ -95,7 +95,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const activeThemeType = useActiveTheme.useActiveThemeType();
       if (ActiveThemeType.CUSTOM === activeThemeType) {
         const intl2 = util.intl;
-        return intl2.string(_modDef2751.KSBBpC);
+        return intl2.string(_modDef2795.KSBBpC);
       } else if (ActiveThemeType.CLIENT === activeThemeType) {
         let name;
         if (stateFromStores != null) {
@@ -115,14 +115,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return ActiveThemeType.DEFAULT === activeThemeType ? themeName : undefined;
       }
     };
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(15095).PaintPaletteIcon,
+  IconComponent: fn(15357).PaintPaletteIcon,
   useTrailing: tmp2,
   screen: {
     route: fn(1085).UserSettingsSections.APPEARANCE,

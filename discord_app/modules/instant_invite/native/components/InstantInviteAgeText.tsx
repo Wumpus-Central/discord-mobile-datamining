@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({
   inviteAgeContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" },
 });
@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteAgeText.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (callbackActionSheet) => {
+  ? function InstantInviteAgeText(callbackActionSheet) {
       const cResult = channel(callbackActionSheet[6]).c(22);
       ({ style, channel } = callbackActionSheet);
       callbackActionSheet = callbackActionSheet.callbackActionSheet;
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult3 = channel(callbackActionSheet[8]);
     }
-  : (style) => {
+  : function InstantInviteAgeText(style) {
       ({ channel: require, callbackActionSheet: dependencyMap, canEditInvite } = style);
       if (canEditInvite === undefined) {
         canEditInvite = true;

@@ -4,7 +4,7 @@ import util from "../intl/index.native.tsx";
 import PremiumUtils from "PremiumUtils.tsx";
 import FileSizeUtils from "FileSizeUtils.tsx";
 import UploadUtils from "UploadUtils.tsx";
-import noConflictDefault from "../../_runtime/07284_noConflict.js";
+import noConflictDefault from "../../_runtime/07738_noConflict.js";
 import GuildStore from "../stores/GuildStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 
@@ -21,7 +21,7 @@ function getUploadFileSizeSum(arg0) {
 }
 const Constants = fn(1085);
 ({ GuildFeatures, MAX_ATTACHMENT_SIZE: hasOwnProperty } = Constants);
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 const PremiumTypes = PremiumConstants.PremiumTypes;
 let items = [
   { reType: /^image\/vnd.adobe.photoshop/, klass: "photoshop" },
@@ -65,9 +65,9 @@ export const transformNativeFile = function transformNativeFile(filename, arg1) 
   }
   return file;
 };
-export const makeFile = function makeFile(arg0, filename, type) {
+export const makeFile = function makeFile(arg0, arg1, type) {
   items = [arg0];
-  const file = new File(items, filename, { type });
+  const file = new File(items, arg1, { type });
   return file;
 };
 export const classifyFile = function classifyFile(file) {

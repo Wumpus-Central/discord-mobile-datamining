@@ -164,5 +164,7 @@ export const QuestContent = {
   [72]: "QUEST_HOME_SPECIAL_QUESTS_SECTION",
   CUSTOM_APP_STORE_OVERLAY: 73,
   [73]: "CUSTOM_APP_STORE_OVERLAY",
+  QUEST_BAR_HEADER: 74,
+  [74]: "QUEST_BAR_HEADER",
 };
 export const QuestContentSets = obj;

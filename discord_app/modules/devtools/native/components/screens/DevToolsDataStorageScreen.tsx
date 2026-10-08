@@ -2,7 +2,7 @@
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import Link from "../../../../../../_runtime/01491_Link.js";
+import Link from "../../../../../../_runtime/01503_Link.js";
 import DatabaseDaosDefault from "../../../../app_database/DatabaseDaos.tsx";
 import DatabaseManagerDefault from "../../../../app_database/system/DatabaseManager.tsx";
 import ToastActionCreatorsDefault from "../../../../toast/native/ToastActionCreators.tsx";
@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 let PersistedStore = fn(505).PersistedStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -49,7 +49,7 @@ let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_10 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function DatabaseDisableRow() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = {
@@ -83,8 +83,8 @@ let closure_10 = noop.memo(
         }
         return first;
       }
-    : () =>
-        jsx(TableRow.TableRow, {
+    : function DatabaseDisableRow() {
+        return jsx(TableRow.TableRow, {
           label: "Disable Database",
           start: true,
           onPress() {
@@ -95,12 +95,13 @@ let closure_10 = noop.memo(
               const tmpResult = ToastActionCreatorsDefault;
             }
           },
-        }),
+        });
+      },
 );
 ReactCompilerGating = fn(558);
 let closure_11 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function DatabaseCurrentRow() {
         const cResult = c.c(5);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [DatabaseManagerDefault, AuthenticationStore];
@@ -137,7 +138,7 @@ let closure_11 = noop.memo(
         tmp10 = tmp11;
         const tmpResult = initialize;
       }
-    : () => {
+    : function DatabaseCurrentRow() {
         const items = [DatabaseManagerDefault, AuthenticationStore];
         const stateFromStores = initialize.useStateFromStores(items, () => DatabaseManagerDefault.database(id.getId()));
         let str = "No active database.";
@@ -157,7 +158,7 @@ let closure_11 = noop.memo(
 ReactCompilerGating = fn(558);
 let closure_12 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function DisableDatabaseAndRemoveRow() {
         const cResult = c.c(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = {
@@ -187,8 +188,8 @@ let closure_12 = noop.memo(
         }
         return first;
       }
-    : () =>
-        jsx(TableRow.TableRow, {
+    : function DisableDatabaseAndRemoveRow() {
+        return jsx(TableRow.TableRow, {
           label: "Disable + Remove Database",
           onPress() {
             const result = DatabaseManagerDefault.replaceDisableAllDatabases("via UserSettingsDatabaseControls");
@@ -197,12 +198,13 @@ let closure_12 = noop.memo(
               content: "Database has been removed.",
             });
           },
-        }),
+        });
+      },
 );
 ReactCompilerGating = fn(558);
 let closure_13 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
+    ? function CacheStatsRow() {
         const cResult = c.c(2);
         const navigation = Link.useNavigation();
         if (cResult[0] !== navigation) {
@@ -228,7 +230,7 @@ let closure_13 = noop.memo(
         }
         return tmp5;
       }
-    : () => {
+    : function CacheStatsRow() {
         const navigation = Link.useNavigation();
         return jsx(TableRow.TableRow, {
           label: "View Cache Stats",
@@ -257,7 +259,7 @@ let obj4 = {
 };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (store) => {
+  ? function DevToolsPersistedStoresActionSheet(store) {
       const cResult = store(576).c(10);
       store = store.store;
       const close = store.close;
@@ -271,7 +273,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== tmp4) {
         const obj2 = { title: tmp4 };
-        const tmp8 = jsx(tmp(6651).BottomSheetTitleHeader, { title: tmp4 });
+        const tmp8 = jsx(tmp(6828).BottomSheetTitleHeader, { title: tmp4 });
         cResult[2] = tmp4;
         cResult[3] = tmp8;
         let tmp6 = tmp8;
@@ -289,7 +291,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp11;
         }
         const obj3 = { header: tmp6, children: tmp9 };
-        const tmp13 = jsx(tmp(6708).ActionSheet, { header: tmp6, children: tmp9 });
+        const tmp13 = jsx(tmp(6885).ActionSheet, { header: tmp6, children: tmp9 });
         cResult[7] = tmp6;
         cResult[8] = tmp9;
         cResult[9] = tmp13;
@@ -297,7 +299,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = {
         hasIcons: false,
-        children: jsx(store(6704).ActionSheetRow, {
+        children: jsx(store(6881).ActionSheetRow, {
           variant: "danger",
           label: "Clear persisted store",
           subLabel: "App restart required to re-init the cleared store",
@@ -311,9 +313,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           },
         }),
       };
-      const tmp10 = jsx(store(6704).ActionSheetRow.Group, {
+      const tmp10 = jsx(store(6881).ActionSheetRow.Group, {
         hasIcons: false,
-        children: jsx(store(6704).ActionSheetRow, {
+        children: jsx(store(6881).ActionSheetRow, {
           variant: "danger",
           label: "Clear persisted store",
           subLabel: "App restart required to re-init the cleared store",
@@ -346,13 +348,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         },
       };
     }
-  : (store) => {
+  : function DevToolsPersistedStoresActionSheet(store) {
       store = store.store;
       const close = store.close;
-      const obj = { header: jsx(store(6651).BottomSheetTitleHeader, { title: store.getName() }), children: null };
+      const obj = { header: jsx(store(6828).BottomSheetTitleHeader, { title: store.getName() }), children: null };
       const obj3 = {
         hasIcons: false,
-        children: jsx(store(6704).ActionSheetRow, {
+        children: jsx(store(6881).ActionSheetRow, {
           variant: "danger",
           label: "Clear persisted store",
           subLabel: "App restart required to re-init the cleared store",
@@ -366,9 +368,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           },
         }),
       };
-      obj.children = jsx(store(6704).ActionSheetRow.Group, {
+      obj.children = jsx(store(6881).ActionSheetRow.Group, {
         hasIcons: false,
-        children: jsx(store(6704).ActionSheetRow, {
+        children: jsx(store(6881).ActionSheetRow, {
           variant: "danger",
           label: "Clear persisted store",
           subLabel: "App restart required to re-init the cleared store",
@@ -382,8 +384,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           },
         }),
       });
-      return jsx(store(6708).ActionSheet, {
-        header: jsx(store(6651).BottomSheetTitleHeader, { title: store.getName() }),
+      return jsx(store(6885).ActionSheet, {
+        header: jsx(store(6828).BottomSheetTitleHeader, { title: store.getName() }),
         children: null,
       });
     };
@@ -391,7 +393,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDataStorageScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DevToolsDataStorageScreen() {
       const cResult = require("c").c(18);
       const tmp3 = closure_9();
       _require = tmp3;
@@ -406,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7 = useScaledSectionHeightDefault();
       const tmp8 = useFastestListTableRowPlaceholderConfigDefault();
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function _(arg0) {
+        const fn = function v(arg0) {
           closure_0 = arg0;
           PersistedStore = found(504).PersistedStore;
           const all = PersistedStore.getAll();
@@ -444,7 +446,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       importDefault = tmp9;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function w() {
+        const fn2 = function p() {
           return closure_1("");
         };
         cResult[2] = fn2;
@@ -746,7 +748,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         wrapChildren: true,
       });
     }
-  : () => {
+  : function DevToolsDataStorageScreen() {
       const tmp = closure_9();
       closure_0 = tmp;
       const tmp2 = callback(persistedStores[17])();

@@ -177,7 +177,7 @@ export const IosAttributionFeatureGate = apexExperiment3;
 export const MutedVideoQuestNewDefaultsVariant = obj9;
 export const MutedVideoQuestNewDefaultsExperiment = apexExperiment4;
 export const useQuestOrbsMultiplierMarketing = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useQuestOrbsMultiplierMarketing(location) {
       const cResult = c.c(4);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -205,7 +205,7 @@ export const useQuestOrbsMultiplierMarketing = ReactCompilerGating.isReactCompil
       }
       return tmp7;
     }
-  : (location) => {
+  : function useQuestOrbsMultiplierMarketing(location) {
       const questOrbMultiplierEligibility = QuestOrbMultiplierHooks.useQuestOrbMultiplierEligibility();
       const obj = { location };
       const tmp4 =

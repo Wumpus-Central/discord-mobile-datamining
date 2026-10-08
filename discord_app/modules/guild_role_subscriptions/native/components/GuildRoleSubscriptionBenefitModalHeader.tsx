@@ -16,7 +16,7 @@ const View = fn(17).View;
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   headerContainer: {
     alignItems: "center",
@@ -68,7 +68,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function GuildRoleSubscriptionBenefitModalHeader(arg0) {
       const cResult = c.c(39);
       ({ title, canSave, onSave, onClose } = arg0);
       const tmp4 = closure_8();
@@ -245,7 +245,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items4;
       tmp7 = items4;
     }
-  : (canSave) => {
+  : function GuildRoleSubscriptionBenefitModalHeader(canSave) {
       canSave = canSave.canSave;
       ({ title, onSave, onClose, listingId } = canSave);
       const tmp = closure_8();

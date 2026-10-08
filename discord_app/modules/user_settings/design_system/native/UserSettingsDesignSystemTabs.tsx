@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { margin: 16, flex: 1, alignItems: "center" },
   item: {
@@ -35,7 +35,7 @@ let obj2 = {
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useTabItems(arg0, arg1) {
       let sum;
       const cResult = c.c(4);
       const tmp2 = closure_9();
@@ -80,7 +80,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp3 = items;
     }
-  : (arg0, arg1) => {
+  : function useTabItems(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
       const tmp = closure_9();
@@ -120,7 +120,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useGradientColors() {
       const cResult = c.c(5);
       const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
       if (cResult[0] !== token) {
@@ -144,7 +144,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items;
       tmp7 = items;
     }
-  : () => {
+  : function useGradientColors() {
       const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
       const items = [token];
       items[1] = ColorUtils.hexWithOpacity(token, 0);
@@ -166,7 +166,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function UserSettingsDesignSystemTabs() {
       const cResult = c.c(47);
       [tmp5, require] = noop.useState(0);
       [first, closure_2] = noop.useState(3);
@@ -185,15 +185,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const segmentedControlState = SegmentedControlState.useSegmentedControlState(tmp16);
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          class D {
+          class M {
             constructor(arg0) {
               tmp = closure_0(arg0.nativeEvent.layout.width);
               return;
             }
           }
-          cResult[3] = D;
+          cResult[3] = M;
         } else {
-          class D {
+          class M {
             constructor(arg0) {
               tmp = closure_0(arg0.nativeEvent.layout.width);
               return;
@@ -202,14 +202,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmp21 = closure_11();
         if (cResult[4] === segmentedControlState) {
-          class D {
+          class M {
             constructor(arg0) {
               tmp = closure_0(arg0.nativeEvent.layout.width);
               return;
             }
           }
           if (cResult[7] === tmp21) {
-            class D {
+            class M {
               constructor(arg0) {
                 tmp = closure_0(arg0.nativeEvent.layout.width);
                 return;
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           let tmp26 = first2;
           if (first2) {
-            class D {
+            class M {
               constructor(arg0) {
                 tmp = closure_0(arg0.nativeEvent.layout.width);
                 return;
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp16 = obj4;
       const tmp12 = _slicedToArray(noop.useState(false), 2);
     }
-  : () => {
+  : function UserSettingsDesignSystemTabs() {
       const tmp = _slicedToArray(noop.useState(0), 2);
       closure_0 = tmp[1];
       [first, closure_2] = noop.useState(3);

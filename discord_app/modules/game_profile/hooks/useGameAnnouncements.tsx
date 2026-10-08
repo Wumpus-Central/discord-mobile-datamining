@@ -11,7 +11,7 @@ const useEffect = _mod19.useEffect;
 let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameAnnouncements.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, limit) => {
+  ? function useGameAnnouncements(arg0, limit) {
       _require = arg0;
       dependencyMap = limit;
       const cResult = require("c").c(16);
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function u() {
+        const fn = function l() {
           let announcements;
           if (null != closure_0) {
             announcements = GameProfileStore.getAnnouncements(closure_0);
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = fn2;
       const tmpResult = require("initialize");
     }
-  : (arg0, limit) => {
+  : function useGameAnnouncements(arg0, limit) {
       _require = arg0;
       dependencyMap = limit;
       const items = [GameProfileStore];

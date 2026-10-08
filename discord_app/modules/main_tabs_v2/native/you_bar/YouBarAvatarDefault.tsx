@@ -11,7 +11,7 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(14915);
+const YouBarConstants = fn(15177);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_4,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty,
@@ -24,7 +24,7 @@ const YouBarConstants = fn(14915);
 const StatusTypes = fn(1085).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = {
   placeholderAvatar: {
     borderRadius: nativeDefault.radii.round,
@@ -51,7 +51,7 @@ obj.avatarShadow = {};
 let closure_14 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AvatarDefault() {
       const cResult = c.c(18);
       const tmp4 = closure_14();
       const token = useToken.useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND);
@@ -182,7 +182,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = items3;
       tmp21 = items3;
     }
-  : () => {
+  : function AvatarDefault() {
       const tmp = closure_14();
       const token = useToken.useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND);
       let num = native.getStatusSize(hasOwnProperty);
@@ -235,7 +235,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function AvatarDefaultLarge() {
       const cResult = c.c(21);
       const tmp4 = closure_14();
       const token = useToken.useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND);
@@ -246,7 +246,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const result1 = size / 4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const diff1 = diff - result1 * 2;
-        const point = { shape: ClipView.CutoutShape.Circle, x: diff1 + v65535, y: diff1 + v65535, size: 2 * sum };
+        const point = { shape: ClipView.CutoutShape.Circle, x: diff1 + collapsed, y: diff1 + collapsed, size: 2 * sum };
         cResult[0] = point;
         let first = point;
       } else {
@@ -343,8 +343,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             };
             const rect = {
               position: "absolute",
-              right: timestampProducer - v65535,
-              bottom: timestampProducer - v65535,
+              right: timestampProducer - collapsed,
+              bottom: timestampProducer - collapsed,
             };
             obj5.style = rect;
             const tmp46 = __initData(native.Status, obj5);
@@ -388,14 +388,14 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = items4;
       tmp26 = items4;
     }
-  : () => {
+  : function AvatarDefaultLarge() {
       const tmp = closure_14();
       const token = useToken.useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND);
       const tmp3 = native.AVATAR_SIZE_MAP[React4];
       const result = size / 2;
       const sum = result + native.STATUS_PADDING;
       const diff = tmp3 - sum - (size / 4) * 2;
-      const point = { shape: ClipView.CutoutShape.Circle, x: diff + v65535, y: diff + v65535, size: 2 * sum };
+      const point = { shape: ClipView.CutoutShape.Circle, x: diff + collapsed, y: diff + collapsed, size: 2 * sum };
       const obj2 = { style: null, children: null };
       size = {
         height: native.AVATAR_SIZE_MAP[hasOwnProperty],
@@ -438,7 +438,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         streaming: false,
         style: null,
       };
-      const rect = { position: "absolute", right: timestampProducer - v65535, bottom: timestampProducer - v65535 };
+      const rect = {
+        position: "absolute",
+        right: timestampProducer - collapsed,
+        bottom: timestampProducer - collapsed,
+      };
       obj8.style = rect;
       items4[1] = __initData(native.Status, obj8);
       obj3.children = items4;
@@ -459,7 +463,7 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/You
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (isLarge) => {
+    ? function YouBarAvatarDefault(isLarge) {
         const cResult = c.c(2);
         isLarge = isLarge.isLarge;
         if (cResult[0] !== isLarge) {
@@ -470,5 +474,7 @@ export default noop.memo(
           return cResult[1];
         }
       }
-    : (isLarge) => __initData(isLarge.isLarge ? closure_16 : closure_15, {}),
+    : function YouBarAvatarDefault(isLarge) {
+        return __initData(isLarge.isLarge ? closure_16 : closure_15, {});
+      },
 );

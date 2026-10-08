@@ -12,7 +12,7 @@ const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function OrbOnboardingPill() {
       const cResult = c.c(4);
       const tmp4 = closure_5();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -45,7 +45,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp11;
     }
-  : () => {
+  : function OrbOnboardingPill() {
       const obj = { style: closure_5().container, children: null };
       const items = [React3(OrbsIcon.OrbsIcon, { size: "sm" })];
       const obj2 = { variant: "text-sm/semibold", color: "redesign-button-tertiary-text", children: null };
@@ -56,7 +56,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       return React4(View, obj);
     };
 tmp4.displayName = "OrbOnboardingPill";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj3 = {
   container: {
     height: 36,

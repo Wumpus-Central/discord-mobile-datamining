@@ -158,11 +158,11 @@ function getSocialPermissions(allServersSelected) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { loadingIndicator: { marginTop: nativeDefault.space.PX_32 }, emptyContainer: null };
 let obj3 = { marginTop: nativeDefault.space.PX_32 };
 obj2.emptyContainer = {
@@ -181,7 +181,7 @@ let obj4 = {
 };
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function DiscordPermissionsPage() {
       const cResult = c.c(9);
       const allServersOptionSelected = useUserSafetySettingsSelectedGuildId.useAllServersOptionSelected();
       const sensitiveContentFilterHelpArticle =
@@ -218,7 +218,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const obj8 = { node: tmp8 };
             items[1] = options(SettingLayoutDefault, obj8);
             obj7.children = items;
-            const tmp21 = closure_1_11(v65535, obj7);
+            const tmp21 = closure_1_11(collapsed, obj7);
             cResult[7] = tmp8;
             cResult[8] = tmp21;
             let tmp16 = tmp21;
@@ -239,7 +239,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         showMessageRequestsNotice: null != tinyBroncoMessageRequestsNoticeVariant,
       };
     }
-  : () => {
+  : function DiscordPermissionsPage() {
       allServersOptionSelected = allServersOptionSelected(
         tinyBroncoMessageRequestsNoticeVariant[15],
       ).useAllServersOptionSelected();
@@ -273,7 +273,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function ConnectedGamesPage() {
       const cResult = c.c(9);
       let loadingIndicator = closure_12();
       ({ showLoadingIndicator, slayerSdkApplications } = useAuthorizedSlayerApplicationsDefault());
@@ -360,7 +360,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp5 = useAuthorizedSlayerApplicationsDefault();
     }
-  : () => {
+  : function ConnectedGamesPage() {
       const tmp = closure_12();
       ({ showLoadingIndicator, slayerSdkApplications } = useAuthorizedSlayerApplicationsDefault());
       if (showLoadingIndicator) {
@@ -390,7 +390,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/ContentAndSocialScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (route) => {
+  ? function ContentAndSocialSettings(route) {
       const cResult = route(576).c(7);
       route = route.route;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -439,11 +439,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const first1 = _slicedToArray(noop.useState(tmp7), 1)[0];
       if (cResult[3] !== first1) {
         const obj2 = { defaultIndex: first1, settings: first };
-        const segmentedControl = route(11142).createSegmentedControl(obj2);
+        const segmentedControl = route(11262).createSegmentedControl(obj2);
         cResult[3] = first1;
         cResult[4] = segmentedControl;
         let tmp10 = segmentedControl;
-        const tmpResult = route(11142);
+        const tmpResult = route(11262);
       } else {
         tmp10 = cResult[4];
       }
@@ -458,7 +458,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp12;
     }
-  : (route) => {
+  : function ContentAndSocialSettings(route) {
       route = route.route;
       const memo = noop.useMemo(() => {
         const items = [,];

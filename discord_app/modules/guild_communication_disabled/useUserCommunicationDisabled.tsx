@@ -9,7 +9,7 @@ require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useUserCommunicationDisabled(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(7);
@@ -34,11 +34,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (prop == null) {
             prop = null;
           }
-          const items1 = [prop, tmp(4502).isMemberCommunicationDisabled(stateFromStores)];
+          const items1 = [prop, tmp(4694).isMemberCommunicationDisabled(stateFromStores)];
           cResult[5] = stateFromStores;
           cResult[6] = items1;
           let tmp9 = items1;
-          const tmpResult2 = tmp(4502);
+          const tmpResult2 = tmp(4694);
         } else {
           tmp9 = cResult[6];
         }
@@ -63,7 +63,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       const obj = require("c");
     }
-  : (arg0, arg1) => {
+  : function useUserCommunicationDisabled(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const items = [GuildMemberStore];
@@ -100,7 +100,7 @@ const result = size.fileFinishedImporting("modules/guild_communication_disabled/
 
 export default tmp3;
 export const useCurrentUserCommunicationDisabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useCurrentUserCommunicationDisabled(arg0) {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -121,7 +121,7 @@ export const useCurrentUserCommunicationDisabled = ReactCompilerGating.isReactCo
       }
       return closure_4(id, arg0);
     }
-  : (arg0) => {
+  : function useCurrentUserCommunicationDisabled(arg0) {
       const items = [UserStore];
       const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
       let id;

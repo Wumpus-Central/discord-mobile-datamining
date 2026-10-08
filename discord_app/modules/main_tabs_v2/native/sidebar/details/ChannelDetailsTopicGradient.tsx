@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useChannelTopicGradientBackground = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useChannelTopicGradientBackground() {
       const cResult = c.c(5);
       const token = useToken.useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
       if (cResult[0] !== token) {
@@ -38,8 +38,8 @@ export const useChannelTopicGradientBackground = ReactCompilerGating.isReactComp
       cResult[4] = items;
       tmp7 = items;
     }
-  : () => {
-      token = token(4586).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  : function useChannelTopicGradientBackground() {
+      token = token(4778).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
       let items = [token];
       return noop.useMemo(() => {
         const obj = _modDef683(token);

@@ -194,13 +194,13 @@ function buildConjurePlanWidgetRendererProps(widget_config, widget_preview, tmp1
   }
   tmp2 = entries[Symbol.iterator]();
 }
-const getAttachmentUrl = fn(12923).getAttachmentUrl;
+const getAttachmentUrl = fn(13072).getAttachmentUrl;
 const localizedStrings = [];
 let closure_8 = {};
 let c9 = 256;
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useConjureWidgetImageSrcs(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(4);
@@ -214,7 +214,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const effect = noop.useEffect(tmp4, tmp5);
         return tmp3;
       }
-      const fn = function u() {
+      const fn = function o() {
         let obj = closure_1;
         if (closure_1 == null) {
           obj = {};
@@ -257,7 +257,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn;
       const tmp2 = _slicedToArray(noop.useState(closure_8), 2);
     }
-  : (arg0, arg1) => {
+  : function useConjureWidgetImageSrcs(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
       const tmp = _slicedToArray(noop.useState(closure_8), 2);
@@ -303,13 +303,13 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanWidget.tsx");
 
 export const useConjurePlanWidget = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useConjurePlanWidget(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(13);
       ({ widget_config, widget_preview } = arg1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [LocaleStore];
-        const fn = function u() {
+        const fn = function o() {
           return locale.locale;
         };
         cResult[0] = items;
@@ -402,7 +402,7 @@ export const useConjurePlanWidget = ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = tmp16;
       const tmpResult2 = require("initialize");
     }
-  : (arg0, widget_config) => {
+  : function useConjurePlanWidget(arg0, widget_config) {
       _require = arg0;
       widget_config = widget_config.widget_config;
       const widget_preview = widget_config.widget_preview;

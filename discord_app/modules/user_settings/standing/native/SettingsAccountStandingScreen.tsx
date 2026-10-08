@@ -9,7 +9,7 @@ const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/user_settings/standing/native/SettingsAccountStandingScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function SettingsAccountStandingScreen() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp6 = jsx(SafetyHubPageDefault, { visible: true });
@@ -20,4 +20,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => jsx(SafetyHubPageDefault, { visible: true });
+  : function SettingsAccountStandingScreen() {
+      return jsx(SafetyHubPageDefault, { visible: true });
+    };

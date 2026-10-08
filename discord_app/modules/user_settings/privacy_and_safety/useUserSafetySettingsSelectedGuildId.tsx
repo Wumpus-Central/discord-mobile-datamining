@@ -2,28 +2,32 @@
 import GuildStore from "../../../stores/GuildStore.tsx";
 
 const require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(15815);
+const UserSettingsSafetySelectedGuildStore = fn(16074);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: c3, useUserSafetySettingsSelectedGuildStore: closure_4 } =
   UserSettingsSafetySelectedGuildStore);
 const GuildFeatures = fn(1085).GuildFeatures;
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const useUserSafetySettingsSelectedGuildId = () => React4().selectedGuildId;
+function useUserSafetySettingsSelectedGuildId() {
+  return React4().selectedGuildId;
+}
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-const fn2 = () => React4().selectedGuildId === React3;
+function useAllServersOptionSelected() {
+  return React4().selectedGuildId === React3;
+}
 const size = fn(2);
 const result2 = size.fileFinishedImporting(
   "modules/user_settings/privacy_and_safety/useUserSafetySettingsSelectedGuildId.tsx",
 );
 
 export { useUserSafetySettingsSelectedGuildId };
-export const useAllServersOptionSelected = fn2;
+export { useAllServersOptionSelected };
 export const useIsSelectedGuildAHub = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function useIsSelectedGuildAHub() {
       const cResult = selectedGuildId(576).c(5);
-      if (typeof fn === "function") {
+      if (typeof useUserSafetySettingsSelectedGuildId === "function") {
         selectedGuildId = closure_4().selectedGuildId;
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -34,7 +38,7 @@ export const useIsSelectedGuildAHub = ReactCompilerGating.isReactCompilerEnabled
           first = cResult[0];
         }
         if (cResult[1] !== selectedGuildId) {
-          fn = function u() {
+          const fn = function u() {
             return GuildStore.getGuild(selectedGuildId);
           };
           cResult[1] = selectedGuildId;
@@ -74,8 +78,8 @@ export const useIsSelectedGuildAHub = ReactCompilerGating.isReactCompilerEnabled
       const obj = selectedGuildId(576);
       tmp = selectedGuildId;
     }
-  : () => {
-      if (typeof fn === "function") {
+  : function useIsSelectedGuildAHub() {
+      if (typeof useUserSafetySettingsSelectedGuildId === "function") {
         const selectedGuildId = closure_4().selectedGuildId;
         const items = [GuildStore];
         const stateFromStores = selectedGuildId(504).useStateFromStores(items, () =>

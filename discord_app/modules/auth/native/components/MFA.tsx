@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/MFA.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ConnectedMFA(arg0) {
       const cResult = isMultiAccount(576).c(22);
       if (cResult[0] !== arg0) {
         let obj2 = arg0;
@@ -30,9 +30,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       ({ inContainer, isMultiAccount } = tmp4);
       const obj = isMultiAccount(576);
-      const navigation = isMultiAccount(1490).useNavigation();
+      const navigation = isMultiAccount(1502).useNavigation();
       if (inContainer) {
-        inContainer = navigation(6439)();
+        inContainer = navigation(6617)();
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AuthenticationStore];
@@ -51,30 +51,40 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[3];
         tmp9 = cResult[4];
       }
-      const tmpResult = isMultiAccount(1490);
+      const tmpResult = isMultiAccount(1502);
       const stateFromStores = isMultiAccount(504).useStateFromStores(tmp7, tmp8, tmp9, statesAreEqual);
       if (cResult[5] !== isMultiAccount) {
-        const fn2 = function y(arg0) {
-          ({ mfaType, data, ticket } = arg0);
-          return AuthenticationActionCreatorsDefault.loginMFAv2({ code: data, ticket, mfaType, isMultiAccount });
-        };
+        class C {
+          constructor(arg0) {
+            ({ mfaType, data, ticket } = arg0);
+            obj = closure_1(closure_2[9]);
+            obj1 = { code: data, ticket, mfaType, isMultiAccount };
+            return obj.loginMFAv2(obj1);
+          }
+        }
         cResult[5] = isMultiAccount;
-        cResult[6] = fn2;
-        let tmp12 = fn2;
+        cResult[6] = C;
       } else {
-        tmp12 = cResult[6];
+        class C {
+          constructor(arg0) {
+            ({ mfaType, data, ticket } = arg0);
+            obj = closure_1(closure_2[9]);
+            obj1 = { code: data, ticket, mfaType, isMultiAccount };
+            return obj.loginMFAv2(obj1);
+          }
+        }
       }
       if (cResult[7] !== navigation) {
-        class S {
+        class F {
           constructor() {
             goBackResult = closure_1.goBack();
             return;
           }
         }
         cResult[7] = navigation;
-        cResult[8] = S;
+        cResult[8] = F;
       } else {
-        class S {
+        class F {
           constructor() {
             goBackResult = closure_1.goBack();
             return;
@@ -82,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (inContainer) {
-        class S {
+        class F {
           constructor() {
             goBackResult = closure_1.goBack();
             return;
@@ -90,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (inContainer) {
-        class S {
+        class F {
           constructor() {
             goBackResult = closure_1.goBack();
             return;
@@ -98,14 +108,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[9] !== inContainer) {
-        class S {
+        class F {
           constructor() {
             goBackResult = closure_1.goBack();
             return;
           }
         }
         if (!inContainer) {
-          class S {
+          class F {
             constructor() {
               goBackResult = closure_1.goBack();
               return;
@@ -114,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[9] = inContainer;
           cResult[10] = undefined;
         } else {
-          class S {
+          class F {
             constructor() {
               goBackResult = closure_1.goBack();
               return;
@@ -128,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const tmp18 = obj5.isAndroid() ? space.PX_8 : space.PX_16;
         }
       } else {
-        class S {
+        class F {
           constructor() {
             goBackResult = closure_1.goBack();
             return;
@@ -136,14 +146,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[11] !== inContainer) {
-        class S {
+        class F {
           constructor() {
             goBackResult = closure_1.goBack();
             return;
           }
         }
         if (inContainer) {
-          class S {
+          class F {
             constructor() {
               goBackResult = closure_1.goBack();
               return;
@@ -155,15 +165,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = inContainer;
         cResult[12] = tmp22;
       } else {
-        class S {
+        class F {
           constructor() {
             goBackResult = closure_1.goBack();
             return;
           }
         }
       }
-      if (cResult[13] === tmp12) {
-        class S {
+      if (cResult[13] === C) {
+        class F {
           constructor() {
             goBackResult = closure_1.goBack();
             return;
@@ -171,28 +181,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult2 = isMultiAccount(504);
-      cResult[13] = tmp12;
-      cResult[14] = S;
+      cResult[13] = C;
+      cResult[14] = F;
       cResult[15] = inContainer;
       cResult[16] = stateFromStores;
       cResult[17] = tmp22;
       cResult[18] = undefined;
       cResult[19] = undefined;
       cResult[20] = tmp16;
-      cResult[21] = jsx(isMultiAccount(15515).MFAModal, {
+      cResult[21] = jsx(isMultiAccount(15777).MFAModal, {
         mfaChallenge: stateFromStores,
-        finish: tmp12,
-        handleOnClose: S,
+        finish: C,
+        handleOnClose: F,
         ignoreKeyboard: inContainer,
         containerStyle: undefined,
         headerStatusBarHeight: undefined,
         headerLeftContainerStyle: tmp16,
         headerRightContainerStyle: tmp22,
       });
-      const tmp23 = jsx(isMultiAccount(15515).MFAModal, {
+      const tmp23 = jsx(isMultiAccount(15777).MFAModal, {
         mfaChallenge: stateFromStores,
-        finish: tmp12,
-        handleOnClose: S,
+        finish: C,
+        handleOnClose: F,
         ignoreKeyboard: inContainer,
         containerStyle: undefined,
         headerStatusBarHeight: undefined,
@@ -200,17 +210,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         headerRightContainerStyle: tmp22,
       });
     }
-  : () => {
+  : function ConnectedMFA() {
       let obj = arg0;
       if (arg0 === undefined) {
         obj = {};
       }
       ({ inContainer, isMultiAccount } = obj);
-      const navigation = isMultiAccount(1490).useNavigation();
+      const navigation = isMultiAccount(1502).useNavigation();
       if (inContainer) {
-        inContainer = navigation(6439)();
+        inContainer = navigation(6617)();
       }
-      const obj2 = isMultiAccount(1490);
+      const obj2 = isMultiAccount(1502);
       const items = [AuthenticationStore];
       const items1 = [isMultiAccount];
       const stateFromStores = isMultiAccount(504).useStateFromStores(
@@ -255,15 +265,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp13 = obj4;
         }
         obj3.headerRightContainerStyle = tmp13;
-        return jsx(isMultiAccount(15515).MFAModal, obj3);
+        return jsx(isMultiAccount(15777).MFAModal, obj3);
       } else {
-        const tmpResult2 = isMultiAccount(1370);
+        const tmpResult2 = isMultiAccount(1382);
         tmp4(587).space;
-        const isAndroidResult = isMultiAccount(1370).isAndroid();
+        const isAndroidResult = isMultiAccount(1382).isAndroid();
         const space = { paddingLeft: null, paddingTop: null };
-        space.paddingLeft = isMultiAccount(1370).isAndroid() ? space.PX_8 : space.PX_16;
+        space.paddingLeft = isMultiAccount(1382).isAndroid() ? space.PX_8 : space.PX_16;
         space.paddingTop = tmp4(587).space.PX_12;
-        const tmp11 = isMultiAccount(1370).isAndroid() ? space.PX_8 : space.PX_16;
+        const tmp11 = isMultiAccount(1382).isAndroid() ? space.PX_8 : space.PX_16;
       }
       const tmpResult = isMultiAccount(504);
     };

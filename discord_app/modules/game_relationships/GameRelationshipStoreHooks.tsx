@@ -9,7 +9,7 @@ const RelationshipTypes = fn(1085).RelationshipTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useGameRelationshipsForUserByType(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(5);
@@ -26,7 +26,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp7 = cResult[4];
         }
         const tmpResult = tmp(504);
-        return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(5596).isVersionEqual), 1)[0];
+        return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(5962).isVersionEqual), 1)[0];
       }
       const fn = function u() {
         const items = [
@@ -44,7 +44,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
       const obj = require("c");
     }
-  : (arg0, arg1) => {
+  : function useGameRelationshipsForUserByType(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       let items = [GameRelationshipStore];
@@ -71,7 +71,7 @@ ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useGameRelationshipsByType(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -105,7 +105,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         1,
       )[0];
     }
-  : (arg0) => {
+  : function useGameRelationshipsByType(arg0) {
       _require = arg0;
       let items = [GameRelationshipStore];
       const items1 = [arg0];
@@ -127,7 +127,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useHasGameRelationshipsForUser(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -159,7 +159,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         1,
       )[0];
     }
-  : (arg0) => {
+  : function useHasGameRelationshipsForUser(arg0) {
       _require = arg0;
       let items = [GameRelationshipStore];
       const items1 = [arg0];
@@ -177,17 +177,21 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         1,
       )[0];
     };
-fn = (id) => closure_5(id, RelationshipTypes.FRIEND);
-const fn2 = (id) => closure_5(id, RelationshipTypes.PENDING_INCOMING);
+function useGameFriendsForUser(id) {
+  return closure_5(id, RelationshipTypes.FRIEND);
+}
+function useIncomingGameRelationshipsForUser(id) {
+  return closure_5(id, RelationshipTypes.PENDING_INCOMING);
+}
 const size = fn(2);
 const result2 = size.fileFinishedImporting("modules/game_relationships/GameRelationshipStoreHooks.tsx");
 
 export const useGameRelationshipsByType = tmp2;
-export const useGameFriendsForUser = fn;
-export const useIncomingGameRelationshipsForUser = fn2;
+export { useGameFriendsForUser };
+export { useIncomingGameRelationshipsForUser };
 export const useHasGameRelationshipsForUser = tmp5;
 export const useHasGameRelationshipsForUserByType = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? function useHasGameRelationshipsForUserByType(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(5);
@@ -204,7 +208,7 @@ export const useHasGameRelationshipsForUserByType = ReactCompilerGating.isReactC
           let tmp7 = cResult[4];
         }
         const tmpResult = tmp(504);
-        return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(5596).isVersionEqual), 1)[0];
+        return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(5962).isVersionEqual), 1)[0];
       }
       const fn = function u() {
         const gameRelationshipsForUserByType = GameRelationshipStore.getGameRelationshipsForUserByType(
@@ -223,7 +227,7 @@ export const useHasGameRelationshipsForUserByType = ReactCompilerGating.isReactC
       tmp6 = fn;
       const obj = require("c");
     }
-  : (arg0, arg1) => {
+  : function useHasGameRelationshipsForUserByType(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       let items = [GameRelationshipStore];

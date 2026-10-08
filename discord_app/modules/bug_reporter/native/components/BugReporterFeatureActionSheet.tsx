@@ -4,7 +4,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/05709_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../_runtime/06099_fuzzysearch.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { list: { paddingHorizontal: nativeDefault.space.PX_12 }, searchBar: null, sectionHeader: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.searchBar = { paddingHorizontal: nativeDefault.space.PX_12 };
@@ -22,7 +22,7 @@ let closure_8 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_9 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0) => {
+    ? function BugReporterFeatureHeader(arg0) {
         const cResult = c.c(10);
         ({ title, height } = arg0);
         const tmp4 = closure_8();
@@ -66,7 +66,7 @@ let closure_9 = noop.memo(
         cResult[4] = items;
         tmp6 = items;
       }
-    : (arg0) => {
+    : function BugReporterFeatureHeader(arg0) {
         ({ title, height } = arg0);
         const obj = { style: null, children: null };
         const items = [closure_8().sectionHeader, { height }];
@@ -82,35 +82,35 @@ let closure_9 = noop.memo(
 ReactCompilerGating = fn(558);
 let closure_10 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (item) => {
+    ? function BugReporterFeature(item) {
         const cResult = item(576).c(16);
         item = item.item;
         ({ feature, setFeature } = item);
         ({ start, end } = item);
         if (cResult[0] !== item) {
-          const featureId = tmp(12542).getFeatureId(item);
+          const featureId = tmp(12640).getFeatureId(item);
           cResult[0] = item;
           cResult[1] = featureId;
           let tmp4 = featureId;
-          const tmpResult = tmp(12542);
+          const tmpResult = tmp(12640);
         } else {
           tmp4 = cResult[1];
         }
         if (cResult[2] !== item) {
-          const featureId1 = tmp(12542).getFeatureId(item);
+          const featureId1 = tmp(12640).getFeatureId(item);
           cResult[2] = item;
           cResult[3] = featureId1;
           let tmp6 = featureId1;
-          const tmpResult3 = tmp(12542);
+          const tmpResult3 = tmp(12640);
         } else {
           tmp6 = cResult[3];
         }
         if (cResult[4] !== feature) {
-          const featureId2 = tmp(12542).getFeatureId(feature);
+          const featureId2 = tmp(12640).getFeatureId(feature);
           cResult[4] = feature;
           cResult[5] = featureId2;
           let tmp8 = featureId2;
-          const tmpResult4 = tmp(12542);
+          const tmpResult4 = tmp(12640);
         } else {
           tmp8 = cResult[5];
         }
@@ -140,7 +140,7 @@ let closure_10 = noop.memo(
             legacyCompat_selected: tmp6 === tmp8,
             legacyCompat_onPress: tmp10,
           };
-          const tmp14 = closure_6(tmp(6078).TableRadioRow, obj2);
+          const tmp14 = closure_6(tmp(6264).TableRadioRow, obj2);
           cResult[9] = end;
           cResult[10] = item.name;
           cResult[11] = start;
@@ -160,27 +160,27 @@ let closure_10 = noop.memo(
         tmp10 = fn;
         const obj = item(576);
       }
-    : (item) => {
+    : function BugReporterFeature(item) {
         item = item.item;
         const setFeature = item.setFeature;
         ({ feature, start, end } = item);
         const obj = {
           start,
           end,
-          value: item(12542).getFeatureId(item),
+          value: item(12640).getFeatureId(item),
           label: item.name,
           legacyCompat_selected: null,
           legacyCompat_onPress: null,
         };
-        const obj2 = item(12542);
-        const featureId = item(12542).getFeatureId(item);
-        const obj3 = item(12542);
-        obj.legacyCompat_selected = featureId === item(12542).getFeatureId(feature);
+        const obj2 = item(12640);
+        const featureId = item(12640).getFeatureId(item);
+        const obj3 = item(12640);
+        obj.legacyCompat_selected = featureId === item(12640).getFeatureId(feature);
         obj.legacyCompat_onPress = function legacyCompat_onPress() {
           setFeature(item);
           ActionSheetActionCreatorsDefault.hideActionSheet();
         };
-        return closure_6(item(6078).TableRadioRow, obj);
+        return closure_6(item(6264).TableRadioRow, obj);
       },
 );
 ReactCompilerGating = fn(558);
@@ -189,7 +189,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (setFeature) => {
+  ? function BugReporterFeatureActionSheet(setFeature) {
       const cResult = feature(first[7]).c(35);
       ({ features, feature } = setFeature);
       setFeature = setFeature.setFeature;
@@ -426,7 +426,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[3] !== first) {
-        class H {
+        class R {
           constructor(arg0) {
             tmp = null != setFeature.asana_inbox_id;
             if (tmp) {
@@ -472,9 +472,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return jsx(closure_9, obj);
           }
         }
-        cResult[4] = H;
+        cResult[4] = R;
       } else {
-        class H {
+        class R {
           constructor(arg0) {
             tmp = null != setFeature.asana_inbox_id;
             if (tmp) {
@@ -516,9 +516,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       let entries = globalThis;
-      const found = features.filter(H);
+      const found = features.filter(R);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        class H {
+        class R {
           constructor(arg0) {
             tmp = null != setFeature.asana_inbox_id;
             if (tmp) {
@@ -565,7 +565,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       } else {
-        class H {
+        class R {
           constructor(arg0) {
             tmp = null != setFeature.asana_inbox_id;
             if (tmp) {
@@ -614,7 +614,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = entries;
       const tmp7Result = setFeature(first[13]);
     }
-  : (features) => {
+  : function BugReporterFeatureActionSheet(features) {
       features = features.features;
       const feature = features.feature;
       const setFeature = features.setFeature;

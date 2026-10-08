@@ -17,7 +17,7 @@ let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/age_assurance/GoogleWalletExperiment.tsx");
 
 export const useIsGoogleWalletEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? (location) => {
+  ? function useIsGoogleWalletEnabled(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -29,7 +29,9 @@ export const useIsGoogleWalletEnabled = ReactCompilerGating.isReactCompilerEnabl
       }
       return closure_2.useConfig(tmp2).enabled;
     }
-  : (location) => closure_2.useConfig({ location }).enabled;
+  : function useIsGoogleWalletEnabled(location) {
+      return closure_2.useConfig({ location }).enabled;
+    };
 export const isGoogleWalletEnabled = function isGoogleWalletEnabled(age_verification_methods) {
   return closure_2.getConfig({ location: age_verification_methods }).enabled;
 };

@@ -11,15 +11,15 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { background: null, fill: null, dismissTextContainer: null, dismissTextBackground: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj3.backgroundColor = nativeDefault.colors.BLACK;
-obj3.opacity = fn(7423).BACKDROP_OPACITY;
+obj3.opacity = fn(7898).BACKDROP_OPACITY;
 obj2.background = obj3;
 let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
@@ -47,12 +47,12 @@ let closure_13 = {
 const __initData2 = {
   code: "function BurstReactionAnimationContainerTsx3(){const{animationData,showAnimation,withTiming,runOnJS,handleComponentFinish}=this.__closure;if(animationData==null){return{opacity:0};}if(!showAnimation){return{opacity:withTiming(0,{duration:300},'respect-motion-settings',function(finished){if(finished)runOnJS(handleComponentFinish)();})};}return{opacity:withTiming(1,{duration:300})};}",
 };
-const __initData3 = {
+let closure_15 = {
   code: "function BurstReactionAnimationContainerTsx4(finished){const{runOnJS,handleComponentFinish}=this.__closure;if(finished)runOnJS(handleComponentFinish)();}",
 };
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function BurstReactionAnimationContainerInner() {
       let tmp2 = dependencyMap;
       const cResult = fill(576).c(12);
       fill = closure_11();
@@ -69,7 +69,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             dependencyMap({ channelId: channelId.channelId, emoji: channelId.emoji, messageId: channelId.messageId });
             closure_1_4(true);
             ref.current = true;
-            const result = fill(4861).triggerHapticFeedback(first(4862).IMPACT_HEAVY);
+            const result = fill(5055).triggerHapticFeedback(first(5056).IMPACT_HEAVY);
           }
           const subscription = first(584).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
           return () => {
@@ -91,21 +91,21 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function v(fn) {
+        function handleAnimationFinish(fn) {
           closure_4(false);
           closure_5.current = false;
           if (fn != null) {
             fn();
           }
-        };
-        cResult[2] = fn2;
-        let tmp10 = fn2;
+        }
+        cResult[2] = handleAnimationFinish;
+        let tmp10 = handleAnimationFinish;
       } else {
         tmp10 = cResult[2];
       }
       closure_7 = tmp10;
       let obj = fill(576);
-      const fn3 = function x() {
+      const fn2 = function x() {
         if (null == first) {
           let obj2 = { opacity: 0 };
         } else {
@@ -133,23 +133,23 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return obj2;
       };
-      let tmpResult = fill(4618);
-      fn3.__closure = {
+      let tmpResult = fill(4810);
+      fn2.__closure = {
         animationData,
         showAnimation: dismissTextContainer,
-        withTiming: fill(4897).withTiming,
-        runOnJS: fill(4618).runOnJS,
+        withTiming: fill(5091).withTiming,
+        runOnJS: fill(4810).runOnJS,
         handleComponentFinish,
       };
-      fn3.__workletHash = 3096942457868;
-      fn3.__initData = __initData;
-      const animatedStyle = tmpResult.useAnimatedStyle(fn3);
+      fn2.__workletHash = 3096942457868;
+      fn2.__initData = __initData;
+      const animatedStyle = tmpResult.useAnimatedStyle(fn2);
       if (null == animationData) {
         return null;
       } else {
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          let items1 = [tmp(2036).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
+          let items1 = [tmp(2048).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
           cResult[3] = items1;
           let tmp12 = items1;
         } else {
@@ -176,7 +176,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             const items = [markAsDismissed.fill, animatedStyle];
             obj2.style = items;
             const obj3 = {
-              activeOpacity: fill(7423).BACKDROP_OPACITY,
+              activeOpacity: fill(7898).BACKDROP_OPACITY,
               onPress() {
                 return constants(() => markAsDismissed(constants.UNKNOWN));
               },
@@ -202,19 +202,19 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                   closure_1_7();
                 }
               };
-              tmpResult = animatedStyle(first(7465), obj7);
+              tmpResult = animatedStyle(first(7940), obj7);
             }
             obj5.children = tmpResult;
             items1[1] = animatedStyle(handleComponentFinish, obj5);
             let tmp6Result =
               markAsDismissed.visibleContent ===
-              fill(2036).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
+              fill(2048).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
             if (tmp6Result) {
               const obj8 = { children: null };
               const obj9 = { style: tmp4.dismissTextContainer, variant: "text-sm/medium", children: null };
               const intl = fill(1126).intl;
               obj9.children = intl.string(fill(1126).t.QpPMih);
-              const items2 = [animatedStyle(fill(4892).Text, obj9)];
+              const items2 = [animatedStyle(fill(5086).Text, obj9)];
               const obj17 = { style: tmp4.dismissTextBackground };
               items2[1] = animatedStyle(handleComponentFinish, obj17);
               obj8.children = items2;
@@ -223,11 +223,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             items1[2] = tmp6Result;
             obj3.children = items1;
             obj2.children = closure_1_10(closure_5, obj3);
-            obj.children = animatedStyle(first(4618).View, obj2);
-            return animatedStyle(fill(1188).OverlayView, obj);
+            obj.children = animatedStyle(first(4810).View, obj2);
+            return animatedStyle(fill(1200).OverlayView, obj);
           },
         };
-        tmp2 = animatedStyle(animationData(10367), obj4);
+        tmp2 = animatedStyle(animationData(9964), obj4);
         cResult[4] = animatedStyle;
         cResult[5] = animationData;
         cResult[6] = dismissTextContainer;
@@ -239,7 +239,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = tmp2;
       }
     }
-  : () => {
+  : function BurstReactionAnimationContainerInner() {
       function handleComponentFinish() {
         if (false === ref.current) {
           dependencyMap(null);
@@ -258,75 +258,57 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           dependencyMap({ channelId: channelId.channelId, emoji: channelId.emoji, messageId: channelId.messageId });
           closure_1_4(true);
           ref.current = true;
-          const result = handleEffectReceived(4861).triggerHapticFeedback(first(4862).IMPACT_HEAVY);
+          const result = handleEffectReceived(5055).triggerHapticFeedback(first(5056).IMPACT_HEAVY);
         }
         const subscription = first(584).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
         return () => {
           DispatcherDefault.unsubscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
         };
       }, []);
-      class R {
-        constructor() {
-          if (null == closure_1) {
-            obj1 = { opacity: 0 };
+      let fn = function b() {
+        if (null == first) {
+          let obj2 = { opacity: 0 };
+        } else {
+          const obj3 = { opacity: null };
+          const tmp11 = timing;
+          const withTiming = tmp11.withTiming;
+          const obj4 = { duration: 300 };
+          if (first1) {
+            obj3.opacity = withTiming(1, obj4);
+            obj2 = obj3;
           } else {
-            tmp8 = closure_3;
-            obj5 = { opacity: null };
-            tmp9 = closure_0;
-            tmp10 = closure_2;
-            tmp11 = closure_0(closure_2[14]);
-            withTiming = tmp11.withTiming;
-            obj6 = { duration: 300 };
-            if (closure_3) {
-              num3 = 1;
-              obj5.opacity = withTiming(1, obj6);
-              obj1 = obj5;
-            } else {
-              fn = function n(arg0) {
-                if (arg0) {
-                  closure_0(dependencyMap[13]).runOnJS(handleComponentFinish)();
-                  const obj = closure_0(dependencyMap[13]);
-                }
-              };
-              obj = { runOnJS: null, handleComponentFinish: null };
-              tmp = closure_0;
-              tmp2 = closure_2;
-              obj.runOnJS = closure_0(closure_2[13]).runOnJS;
-              tmp3 = handleComponentFinish;
-              obj.handleComponentFinish = handleComponentFinish;
-              fn.__closure = obj;
-              num = 9630692253462;
-              fn.__workletHash = 9630692253462;
-              tmp4 = closure_15;
-              fn.__initData = closure_15;
-              str = "respect-motion-settings";
-              num2 = 0;
-              tmp5 = tmp11;
-              tmp6 = obj6;
-              tmp7 = fn;
-              obj5.opacity = withTiming(0, obj6, "respect-motion-settings", fn);
-              obj1 = obj5;
-            }
+            const fn = function n(arg0) {
+              if (arg0) {
+                closure_0(dependencyMap[13]).runOnJS(handleComponentFinish)();
+                const obj = closure_0(dependencyMap[13]);
+              }
+            };
+            let obj = { runOnJS: ReanimatedRexport.runOnJS, handleComponentFinish };
+            fn.__closure = obj;
+            fn.__workletHash = 9630692253462;
+            fn.__initData = __initData;
+            obj3.opacity = withTiming(0, obj4, "respect-motion-settings", fn);
+            obj2 = obj3;
           }
-          return obj1;
         }
-      }
+        return obj2;
+      };
       let obj = require("ReanimatedRexport");
       const tmp6 = _require;
-      R.__closure = {
+      fn.__closure = {
         animationData,
         showAnimation: first1,
         withTiming: require("timing").withTiming,
         runOnJS: require("ReanimatedRexport").runOnJS,
         handleComponentFinish,
       };
-      R.__workletHash = 4291853011336;
-      R.__initData = __initData2;
-      closure_7 = obj.useAnimatedStyle(R);
+      fn.__workletHash = 4291853011336;
+      fn.__initData = __initData2;
+      closure_7 = obj.useAnimatedStyle(fn);
       let tmp8 = null;
       if (null != animationData) {
         let obj3 = { contentTypes: null, children: null };
-        let items = [tmp6(2036).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
+        let items = [tmp6(2048).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
         obj3.contentTypes = items;
         obj3.children = function children(markAsDismissed) {
           markAsDismissed = markAsDismissed.markAsDismissed;
@@ -335,7 +317,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           const items = [markAsDismissed.fill, closure_7];
           obj2.style = items;
           const obj3 = {
-            activeOpacity: closure_0(7423).BACKDROP_OPACITY,
+            activeOpacity: closure_0(7898).BACKDROP_OPACITY,
             onPress() {
               closure_4(false);
               closure_5.current = false;
@@ -364,19 +346,19 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 ref.current = false;
               }
             };
-            tmpResult = closure_1_8(first(7465), obj7);
+            tmpResult = closure_1_8(first(7940), obj7);
           }
           obj5.children = tmpResult;
           items1[1] = closure_1_8(handleComponentFinish, obj5);
           let tmp6Result =
             markAsDismissed.visibleContent ===
-            closure_0(2036).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
+            closure_0(2048).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
           if (tmp6Result) {
             const obj8 = { children: null };
             const obj9 = { style: tmp4.dismissTextContainer, variant: "text-sm/medium", children: null };
             const intl = closure_0(1126).intl;
             obj9.children = intl.string(closure_0(1126).t.QpPMih);
-            const items2 = [closure_1_8(closure_0(4892).Text, obj9)];
+            const items2 = [closure_1_8(closure_0(5086).Text, obj9)];
             const obj17 = { style: tmp4.dismissTextBackground };
             items2[1] = closure_1_8(handleComponentFinish, obj17);
             obj8.children = items2;
@@ -385,11 +367,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           items1[2] = tmp6Result;
           obj3.children = items1;
           obj2.children = closure_1_10(closure_5, obj3);
-          obj.children = closure_1_8(first(4618).View, obj2);
-          return closure_1_8(closure_0(1188).OverlayView, obj);
+          obj.children = closure_1_8(first(4810).View, obj2);
+          return closure_1_8(closure_0(1200).OverlayView, obj);
         };
-        tmp8 = closure_8(animationData(10367), obj3);
-        let tmp11 = animationData(10367);
+        tmp8 = closure_8(animationData(9964), obj3);
+        let tmp11 = animationData(9964);
       }
       return tmp8;
     };
@@ -398,7 +380,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimationContainer.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
+  ? function BurstReactionAnimationContainer() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { theme: nativeDefault.themes.DARK, children: closure_1_8(closure_16, {}) };
@@ -410,8 +392,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () =>
-      closure_1_8(native.ThemeContextProvider, {
+  : function BurstReactionAnimationContainer() {
+      return closure_1_8(native.ThemeContextProvider, {
         theme: nativeDefault.themes.DARK,
         children: closure_1_8(closure_16, {}),
       });
+    };

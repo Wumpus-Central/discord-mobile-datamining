@@ -159,13 +159,13 @@ function addCurrentGuildSection(items, stateFromStores1, arg2) {
     items.push(obj3);
   }
 }
-const SoundboardConstants = fn(5689);
+const SoundboardConstants = fn(5426);
 ({ DEFAULT_SOUND_GUILD_ID: closure_11, EMPTY_SOUND_LIST: closure_12 } = SoundboardConstants);
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (guild_id, arg1, arg2) => {
+  ? function useSoundGrid(guild_id, arg1, arg2) {
       _require = guild_id;
       const cResult = require("c").c(64);
       if (cResult[0] !== arg1) {
@@ -487,7 +487,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[23] = substr;
       const tmpResult12 = require("initialize");
     }
-  : (unlockedCustomSoundCount) => {
+  : function useSoundGrid(unlockedCustomSoundCount) {
       _require = unlockedCustomSoundCount;
       let obj = arg1;
       if (arg1 === undefined) {
@@ -703,7 +703,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           };
           const _Array = Array;
           obj6.potentialSoundIdsForSection = Array.from(size);
-          obj6.sectionType = tmp13(5812).SoundboardSoundGridSectionType.FAVORITES;
+          obj6.sectionType = tmp13(7039).SoundboardSoundGridSectionType.FAVORITES;
           obj6.sortSoundsFn = sortSoundsOldestToNewestCreationDate;
           _addSectionForPotentialSoundIds(obj6);
           if (tmp) {
@@ -730,10 +730,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             if (value5 == null) {
               value5 = __initData;
             }
-            const obj9 = { key: tmp13(5812).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
-            const obj10 = { type: tmp13(5812).SoundboardSoundGridSectionType.DEFAULTS };
+            const obj9 = { key: tmp13(7039).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
+            const obj10 = { type: tmp13(7039).SoundboardSoundGridSectionType.DEFAULTS };
             obj9.categoryInfo = obj10;
-            const sortSoundsOldestToNewestCreationDate2 = tmp13(17260).sortSoundsOldestToNewestCreationDate;
+            const sortSoundsOldestToNewestCreationDate2 = tmp13(17541).sortSoundsOldestToNewestCreationDate;
             let result1 = value5;
             if (null != sortSoundsOldestToNewestCreationDate2) {
               result1 = sortSoundsOldestToNewestCreationDate2(value5);
@@ -767,10 +767,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             if (value6 == null) {
               value6 = __initData;
             }
-            const obj12 = { key: tmp13(5812).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
-            const obj13 = { type: tmp13(5812).SoundboardSoundGridSectionType.DEFAULTS };
+            const obj12 = { key: tmp13(7039).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
+            const obj13 = { type: tmp13(7039).SoundboardSoundGridSectionType.DEFAULTS };
             obj12.categoryInfo = obj13;
-            const sortSoundsOldestToNewestCreationDate3 = tmp13(17260).sortSoundsOldestToNewestCreationDate;
+            const sortSoundsOldestToNewestCreationDate3 = tmp13(17541).sortSoundsOldestToNewestCreationDate;
             let result2 = value6;
             if (null != sortSoundsOldestToNewestCreationDate3) {
               result2 = sortSoundsOldestToNewestCreationDate3(value6);
@@ -806,7 +806,7 @@ let result = size.fileFinishedImporting("modules/soundboard/useSoundGrid.tsx");
 
 export default tmp3;
 export const useSearchCategories = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arr, arg2) => {
+  ? function useSearchCategories(arg0, arr, arg2) {
       let SEARCH = dependencyMap;
       const cResult = c.c(5);
       if (arg2.length <= 0) {
@@ -844,7 +844,7 @@ export const useSearchCategories = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-  : (arg0, arg1, arg2) => {
+  : function useSearchCategories(arg0, arg1, arg2) {
       closure_0 = arg0;
       closure_1 = arg1;
       let items = [arg0, arg2.length, arg1];

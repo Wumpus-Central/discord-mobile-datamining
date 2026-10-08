@@ -41,7 +41,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/profiling/ComponentProfiler.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function ComponentProfiler(arg0) {
       const cResult = c.c(4);
       ({ id, children } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp4;
       tmp3 = tmp4;
     }
-  : (arg0) => {
+  : function ComponentProfiler(arg0) {
       ({ id, children } = arg0);
       return (
         <noop.Profiler

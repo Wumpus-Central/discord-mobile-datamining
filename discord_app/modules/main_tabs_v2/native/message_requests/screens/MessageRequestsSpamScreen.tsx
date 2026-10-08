@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (navigation) => {
+  ? function MessageRequestsScreen(navigation) {
       const cResult = c.c(4);
       navigation = navigation.navigation;
       if (cResult[0] !== navigation) {
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     }
-  : (navigation) => {
+  : function MessageRequestsScreen(navigation) {
       navigation = navigation.navigation;
       const items = [navigation];
       const goToMessageRequestPreview = noop.useCallback(

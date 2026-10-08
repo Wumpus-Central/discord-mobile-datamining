@@ -2,13 +2,13 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import Link from "../../../../../_runtime/01491_Link.js";
+import Link from "../../../../../_runtime/01503_Link.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef11126 from "../../../../../_runtime/metro/11126__.js";
-import _modDef11127 from "../../../../../_runtime/metro/11127__.js";
+import _modDef11245 from "../../../../../_runtime/metro/11245__.js";
+import _modDef11246 from "../../../../../_runtime/metro/11246__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: {
@@ -38,15 +38,15 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/gift_code_modal/GiftCodeRedeemError.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (message) => {
+  ? function GiftCodeRedeemError(message) {
       const cResult = c.c(21);
       message = message.message;
       const tmp4 = closure_8();
       ({ container, body } = tmp4);
       if (obj2.useTheme().dark) {
-        let tmp5Result = _modDef11126;
+        let tmp5Result = _modDef11245;
       } else {
-        tmp5Result = _modDef11127;
+        tmp5Result = _modDef11246;
       }
       if (cResult[0] !== tmp5Result) {
         const obj3 = { source: tmp5Result };
@@ -160,15 +160,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2 = Link;
       const obj9 = { variant: "text-lg/medium", style: tmp4.message, children: message };
     }
-  : (children) => {
+  : function GiftCodeRedeemError(children) {
       const tmp = closure_8();
       const theme = Link.useTheme();
       const obj2 = { bottom: true, style: tmp.container, children: null };
       const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
       if (theme.dark) {
-        let tmp9Result = _modDef11126;
+        let tmp9Result = _modDef11245;
       } else {
-        tmp9Result = _modDef11127;
+        tmp9Result = _modDef11246;
       }
       const items = [timestampProducer(React3, { source: tmp9Result }), ,];
       const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };

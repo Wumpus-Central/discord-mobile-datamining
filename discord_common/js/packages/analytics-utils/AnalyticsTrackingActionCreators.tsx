@@ -6,7 +6,7 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/analyti
 export (dispatcher, TRACK_ACTION_NAME) => {
   closure_0 = dispatcher;
   closure_1 = TRACK_ACTION_NAME;
-  return (event, arg1, arg2) => {
+  return function track(event, arg1, arg2) {
     closure_1 = arg1;
     closure_2 = arg2;
     return new Promise((resolve) => {

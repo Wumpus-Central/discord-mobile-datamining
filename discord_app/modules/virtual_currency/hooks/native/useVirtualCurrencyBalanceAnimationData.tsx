@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useVirtualCurrencyBalanceAnimationData = ReactCompilerGating.isReactCompilerEnabled()
-  ? (initialRenderedBalance) => {
+  ? function useVirtualCurrencyBalanceAnimationData(initialRenderedBalance) {
       const cResult = initialRenderedBalance(stateFromStores[4]).c(29);
       initialRenderedBalance = initialRenderedBalance.initialRenderedBalance;
       const balance = initialRenderedBalance.balance;
@@ -42,51 +42,51 @@ export const useVirtualCurrencyBalanceAnimationData = ReactCompilerGating.isReac
       const tmp11 = first(noop.useState(null != initialRenderedBalance), 2);
       closure_10 = balance(stateFromStores[6])(balance);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            return;
-          }
-        }
-        cResult[2] = S;
-      } else {
-        class S {
-          constructor() {
-            return;
-          }
-        }
+        const fn2 = function y() {};
+        cResult[2] = fn2;
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
+        class M {
           constructor() {
+            closure_5.current = null;
+            tmp = closure_4(null);
             return;
           }
         }
-        cResult[3] = tmp17;
+        cResult[3] = M;
       } else {
-        class S {
+        class M {
           constructor() {
+            closure_5.current = null;
+            tmp = closure_4(null);
             return;
           }
         }
       }
       if (cResult[4] !== first) {
-        class S {
+        class M {
           constructor() {
+            closure_5.current = null;
+            tmp = closure_4(null);
             return;
           }
         }
         cResult[4] = first;
-        cResult[5] = tmp19;
+        cResult[5] = tmp18;
       } else {
-        class S {
+        class M {
           constructor() {
+            closure_5.current = null;
+            tmp = closure_4(null);
             return;
           }
         }
       }
       if (cResult[6] === balance) {
-        class S {
+        class M {
           constructor() {
+            closure_5.current = null;
+            tmp = closure_4(null);
             return;
           }
         }
@@ -115,17 +115,17 @@ export const useVirtualCurrencyBalanceAnimationData = ReactCompilerGating.isReac
           return;
         }
       }
-      const items1 = [initialRenderedBalance, balance, first1, stateFromStores, tmp18];
+      const items1 = [initialRenderedBalance, balance, first1, stateFromStores, tmp17];
       cResult[6] = balance;
       cResult[7] = first1;
       cResult[8] = initialRenderedBalance;
-      cResult[9] = tmp18;
+      cResult[9] = tmp17;
       cResult[10] = stateFromStores;
       cResult[11] = O;
       cResult[12] = items1;
       const tmp14 = balance(stateFromStores[6])(balance);
     }
-  : (initialRenderedBalance) => {
+  : function useVirtualCurrencyBalanceAnimationData(initialRenderedBalance) {
       initialRenderedBalance = initialRenderedBalance.initialRenderedBalance;
       const balance = initialRenderedBalance.balance;
       let stateFromStores;

@@ -18,7 +18,7 @@ const BotReportChooser = "BotReportChooser";
 fn(558);
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function ReportAppProfile(user) {
       const cResult = user(onSubmit[4]).c(7);
       user = user.user;
       const contextualGuildId = user.contextualGuildId;
@@ -80,7 +80,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         arrow: true,
       };
     }
-  : (arg0) => {
+  : function ReportAppProfile(arg0) {
       ({
         user: require,
         contextualGuildId: importDefault,
@@ -104,7 +104,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (user) => {
+  ? function ReportAppBehavior(user) {
       const cResult = user(contextualGuildId[4]).c(15);
       user = user.user;
       const entrypoint = user.entrypoint;
@@ -194,7 +194,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = fn2;
       tmp14 = fn2;
     }
-  : (arg0) => {
+  : function ReportAppBehavior(arg0) {
       ({
         user: require,
         entrypoint: importDefault,
@@ -229,7 +229,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/BotReportChooser.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function BotReportChooser(arg0) {
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { textAlign: "center" };
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     }
-  : (arg0) => {
+  : function BotReportChooser(arg0) {
       const obj = { header: null, children: null };
       const obj2 = { style: { textAlign: "center" }, variant: "redesign/heading-18/bold", children: null };
       const intl = util.intl;

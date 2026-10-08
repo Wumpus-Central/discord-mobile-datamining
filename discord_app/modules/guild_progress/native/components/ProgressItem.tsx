@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = {
   formCTAContainer: { marginBottom: 8 },
   formCTA: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT },
@@ -20,7 +20,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_progress/native/components/ProgressItem.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (isCompleted) => {
+  ? function ProgressItem(isCompleted) {
       const cResult = onPress(analyticsSetupType[7]).c(22);
       ({ title, source, onPress } = isCompleted);
       isCompleted = isCompleted.isCompleted;
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn = function s() {
+      const fn = function c() {
         let tmp2 = null != analyticsAction;
         if (tmp2) {
           tmp2 = null != analyticsSetupType;
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
       let obj = onPress(analyticsSetupType[7]);
     }
-  : (onPress) => {
+  : function ProgressItem(onPress) {
       onPress = onPress.onPress;
       const isCompleted = onPress.isCompleted;
       const analyticsSetupType = onPress.analyticsSetupType;

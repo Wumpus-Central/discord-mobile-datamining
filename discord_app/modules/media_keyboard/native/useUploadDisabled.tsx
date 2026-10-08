@@ -14,7 +14,7 @@ const DraftType = DraftStore.DraftType;
 const result = size.fileFinishedImporting("modules/media_keyboard/native/useUploadDisabled.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? function useUploadDisabled(arg0) {
       _require = arg0;
       const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -25,31 +25,58 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function u() {
-          let tmp = UploadAttachmentStore.getUploads(id.id, DraftType.ChannelMessage).length >= hasOwnProperty;
-          if (!tmp) {
-            let tmp4 = id.id === FakePlaceholderPrivateChannel.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
-            if (!tmp4) {
-              let isPrivateResult = id.isPrivate();
-              if (!isPrivateResult) {
-                isPrivateResult = PermissionStore.can(constants.ATTACH_FILES, id);
+        class A {
+          constructor() {
+            obj = closure_0;
+            tmp = closure_4.getUploads(closure_0.id, DraftType.ChannelMessage).length >= MAX_UPLOAD_COUNT;
+            if (!tmp) {
+              tmp2 = closure_0;
+              tmp3 = closure_1;
+              tmp4 = obj.id === closure_0(closure_1[6]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+              if (!tmp4) {
+                isPrivateResult = obj.isPrivate();
+                if (!isPrivateResult) {
+                  tmp6 = closure_3;
+                  tmp7 = Permissions;
+                  isPrivateResult = closure_3.can(Permissions.ATTACH_FILES, obj);
+                }
+                tmp4 = !isPrivateResult;
               }
-              tmp4 = !isPrivateResult;
+              tmp = tmp4;
             }
-            tmp = tmp4;
+            return tmp;
           }
-          return tmp;
-        };
+        }
         cResult[1] = arg0;
-        cResult[2] = fn;
-        let tmp7 = fn;
+        cResult[2] = A;
       } else {
-        tmp7 = cResult[2];
+        class A {
+          constructor() {
+            obj = closure_0;
+            tmp = closure_4.getUploads(closure_0.id, DraftType.ChannelMessage).length >= MAX_UPLOAD_COUNT;
+            if (!tmp) {
+              tmp2 = closure_0;
+              tmp3 = closure_1;
+              tmp4 = obj.id === closure_0(closure_1[6]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+              if (!tmp4) {
+                isPrivateResult = obj.isPrivate();
+                if (!isPrivateResult) {
+                  tmp6 = closure_3;
+                  tmp7 = Permissions;
+                  isPrivateResult = closure_3.can(Permissions.ATTACH_FILES, obj);
+                }
+                tmp4 = !isPrivateResult;
+              }
+              tmp = tmp4;
+            }
+            return tmp;
+          }
+        }
       }
       const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp7);
+      return require("initialize").useStateFromStores(first, A);
     }
-  : (arg0) => {
+  : function useUploadDisabled(arg0) {
       _require = arg0;
       const items = [PermissionStore, UploadAttachmentStore];
       return require("initialize").useStateFromStores(items, () => {
